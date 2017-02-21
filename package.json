@@ -1,0 +1,40 @@
+{
+  "name": "pedal-playground",
+  "version": "1.0.0",
+  "description": "A site to help you arrange pedals",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-gzip": "^1.2.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tehtrav/pedal-playground.git"
+  },
+  "keywords": [
+    "gulp",
+    "scss",
+    "front",
+    "end"
+  ],
+  "author": "Travis Lehman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tehtrav/pedal-playground/issues"
+  },
+  "homepage": "https://github.com/tehtrav/pedal-playground#readme"
+}
