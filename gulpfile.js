@@ -58,17 +58,17 @@ var reportError = function (error) {
 
 // SCSS
 gulp.task('styles', function () {
-    return gulp.src('app/scss/*.scss')
+    return gulp.src('app/stylesheets/*.scss')
     .pipe(plumber({
         errorHandler: reportError
     }))
     .pipe(sass())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('public/stylesheets'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('public/stylesheets'))
         .pipe(gzip(gzip_options))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('public/stylesheets'))
         .pipe(notify("SCSS Compiled!"))
         .on('error', reportError)
         .pipe(livereload());
@@ -77,22 +77,19 @@ gulp.task('styles', function () {
 // JS
 gulp.task('scripts', function() {
     return gulp.src([
-        'bower_components/modernizer/modernizr.js',
         'bower_components/jquery/dist/jquery.js',
-        'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
-        'bower_components/jquery-zoom/jquery.zoom.js',
-        'app/js/gallery.js',
-        'app/js/shop-menu.js'])
-      .pipe(concat('all.js'))
+        'bower_components/draggabilly/dist/draggabilly.pkgd.js',
+        'app/scripts/scripts.js'])
+      .pipe(concat('scripts.js'))
       .pipe(uglify())
-      .pipe(gulp.dest('dist/js/'))
+      .pipe(gulp.dest('public/scripts/'))
 });
 
 /* Watch Files For Changes */
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('app/scss/**', ['styles']);
-	gulp.watch('app/js/**', ['scripts']);
+    gulp.watch('app/stylesheets/**', ['styles']);
+	gulp.watch('app/scripts/**', ['scripts']);
     gulp.watch('*.php').on('change', livereload.changed);
     gulp.watch('includes/**').on('change', livereload.changed);
     gulp.watch('*.html').on('change', livereload.changed);

@@ -29,6 +29,7 @@
     "modernizer": "^2.8.2",
     "sass-flex-mixin": "^1.0.3",
     "jquery-zoom": "^1.7.18",
-    "draggabilly": "^2.1.1"
+    "draggabilly": "^2.1.1",
+    "jquery": "^3.1.1"
   }
 }

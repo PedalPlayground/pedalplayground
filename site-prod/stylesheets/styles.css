@@ -1,0 +1,11 @@
+.pedalboard {
+  background: #f9f9f9;
+  border: 3px solid #999;
+  width: 800px;
+  height: 600px; }
+
+.pedal {
+  background: #ccc;
+  width: 40px;
+  height: 100px;
+  float: left; }
