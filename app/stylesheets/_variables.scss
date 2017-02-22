@@ -1,0 +1,31 @@
+$site-max-width: 1600px;
+$site-padding-sm: 16px;
+$site-padding-md: 30px;
+
+
+/* Colors */
+$brand-color: #CB2532;
+$brand-yellow: #FFB760;
+$brand-gray: #616D80;
+$brand-white: #F9F9F9;
+$brand-buy: #EF1F38;
+
+$brand-gray-dark:  darken($brand-gray, 10%);
+$brand-gray-light: lighten($brand-gray, 32%);
+
+$brand-buy-color: saturate($brand-color, 10%);
+$brand-price-color: $brand-buy-color;
+
+$brand-border-color: rgba($brand-gray, .25);
+$border: 1px solid rgba($brand-gray, .25);
+
+$font-path:  "../../app/fonts/";
+$image-path: "../../app/img/";
+
+$box-shadow-base: 0 1px 3px rgba(black, .15);
+$box-shadow-popover: 0 2px 15px 0 rgba(0,0,0,0.09), 0 1px 4px 0 rgba(0,0,0,0.10);
+
+$trans-border-base: 1px solid rgba(black, .16);
+$trans-border-light: 1px solid rgba(black, .1);
+
+$button-padding-offset: 1;

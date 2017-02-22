@@ -1,17 +1,12 @@
-.pedalboard {
-	background: #f9f9f9;
-	border: 3px solid #999;
-	width: 800px;
-	height: 600px;
-}
+// Variables used in project
+@import 'variables';
 
-.pedal {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	width: 40px;
-	height: 100px;
-	float: left;
-	box-shadow: 0 1px 3px rgba(black, .3);
-	border-radius: 3px;
-}
+// Vendor
+@import 'vendor/bootstrap-variables';	// Set custom variable overrides
+@import 'vendor/bootstrap'; 			// Import only the files needed
+@import 'bower_components/sass-flex-mixin/flex';
+
+// Utilities
+@import 'mixins';
+@import 'reset';
+@import 'components';

@@ -1,0 +1,82 @@
+$border: 1px solid rgba(black, .13);
+
+.site-header {
+	background: #FFF;
+	border-bottom: $border;
+	padding: 12px;
+	h1 {
+		font-size: 22px;
+		text-transform: uppercase;
+		margin: 0;
+	}
+}
+
+.site-body {
+	min-height: 100vh;
+	@include flexbox;
+	.sidebar,
+	.canvas {
+		@include flex(1 1 auto);
+	}
+	.sidebar {
+		width: 200px;
+		max-width: 250px;
+		border-right: $border;
+		background: #FFF;
+		box-shadow: 0 1px 5px rgba(black, .16);
+		padding: 20px;
+	}
+	.canvas {
+		//position: relative;
+		background: #F8F8F8 url('../images/grid.png');
+		overflow: hidden;
+	}
+}
+
+
+.pedalboard {
+	//position: absolute;
+	//background: #f9f9f9;
+	//border: 3px solid #999;
+}
+
+.pedal {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	width: 40px;
+	height: 100px;
+	float: left;
+	//box-shadow: 0 1px 3px rgba(black, .3);
+	border-radius: 1px;
+	position: absolute;
+	a {
+		transition: all .2s;
+		opacity: 0;
+		@include square(19px);
+		position: absolute;
+		right: -8px;
+		top: -8px;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: 15px;
+		text-align: center;
+		line-height: 16px;
+		text-decoration: none;
+		font-size: 14px;
+		background: rgba(white, .8);
+		color: black;
+		&:before {
+			@extend .glyphicon;
+			@extend .glyphicon-remove;
+			font-size: 9px;
+			position: absolute;
+			line-height: 1;
+			left: 0;
+			right: 0;
+			top: 4px;
+		}
+	}
+	&:hover a {
+		opacity: 1;
+	}
+}
