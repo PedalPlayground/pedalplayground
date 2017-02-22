@@ -8,29 +8,25 @@
 </head>
 <!-- !Body -->
 <body>
-	<div class="sidebar">
-		<div class="sidebar__section">
-			<h4>Add a Pedal</h4>
-			<form id="add-pedal">
-				<select class="pedal-list">
-					<option id="bd-2" data-width="2.75" data-height="5" data-image="public/images/pedals/strymon-timeline.png">Blues Driver</option>
-					<?php /*<optgroup label="BOSS">
-						<option id="bd-2" data-width="2.75" data-height="5">Blues Driver</option>
-						<option id="dd-500" data-width="6.75" data-height="5.44">DD-500</option>
-						<option id="fv-30" data-width="3.15" data-height="7.56">FV-30L</option>
-					</optgroup>
-					<optgroup label="Strymon">
-						<option id="timeline" data-width="6.75" data-height="5">Timeline</option>
-						<option id="blue-sky" data-width="3.5" data-height="5.4">Blue Sky</option>
-					</optgroup>
-					*/ ?>
-				</select>
-				<button>Add Pedal</button>
-			</form>
+	<header class="site-header">
+		<h1><b>Pedal</b> Playground</h1>
+	</header>
+	<div class="site-body">
+		<div class="sidebar">
+			<div class="sidebar__section">
+				<h4>Add a Pedal</h4>
+				<form id="add-pedal">
+					<p><select class="pedal-list form-control"></select></p>
+					<button class="btn btn-primary btn-block">Add Pedal</button>
+				</form>
+			</div>
+		</div>
+		<div class="canvas">
+			<div class="pedalboard"></div>
 		</div>
 	</div>
-	<div class="pedalboard">
-		<div class="pedal"></div>
-	</div>
+	<header class="site-footer">
+		<h1>Thingy</h1>
+	</header>
 </body>
 </html>

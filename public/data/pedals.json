@@ -1,42 +1,74 @@
 [
-    {
+	{
+        "Type" : "Other",
+        "Brand" : "Pedaltrain",
+        "Name" : "Terra 42",
+        "Width" : 42,
+        "Height" : 14.5,
+        "Image" : "public/images/pedals/pedaltrain-terra42.png"
+    },
+	{
         "Type" : "Other",
         "Brand" : "Musicomlab",
         "Name" : "EFX III",
-        "Width" : "11",
-        "Height" : "4.9",
+        "Width" : 11,
+        "Height" : 4.9,
         "Image" : "public/images/pedals/musicomlab-efxiii.png"
     },
     {
         "Type" : "Other",
         "Brand" : "TrueTone",
         "Name" : "1 Spot Pro CS12",
-        "Width" : "8.12",
-        "Height" : "3.37",
+        "Width" : 8.12,
+        "Height" : 3.37,
         "Image" : "public/images/pedals/truetone-cs12.png"
     },
     {
         "Type" : "Delay",
         "Brand" : "Strymon",
         "Name" : "Timeline",
-        "Width" : "6.75",
-        "Height" : "5.1",
+        "Width" : 6.75,
+        "Height" : 5.1,
         "Image" : "public/images/pedals/strymon-timeline.png"
     },
     {
         "Type" : "OD/Distortion",
         "Brand" : "Paul C",
         "Name" : "Timmy",
-        "Width" : "2.75",
-        "Height" : "4.8",
+        "Width" : 2.75,
+        "Height" : 4.8,
         "Image" : "public/images/pedals/paulc-timmy.png"
     },
     {
         "Type" : "Reverb",
         "Brand" : "BOSS",
-        "Name" : "RV-5",
-        "Width" : "2.875",
-        "Height" : "5.125",
+        "Name" : "RV-5 Reverb",
+        "Width" : 2.875,
+        "Height" : 5.125,
         "Image" : "public/images/pedals/boss-rv5.png"
+    },
+    {
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "BD-2 Blues Driver",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-bd2.png"
+    },
+    {
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "DS-1 Distortion",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-ds1.png"
+    },
+    {
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "DD-5 Digital Delay",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-dd5.png"
     }
 ]

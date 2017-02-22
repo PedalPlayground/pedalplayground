@@ -1,0 +1,18 @@
+$global-layers:
+	default,
+	flag,
+	tooltips,
+	menu,
+	sticky,
+	popover,
+	modal,
+	notification
+;
+
+@function z($e, $l:$global-layers) {
+	$z-index: index($l, $e);
+	@if $z-index {
+		 @return $z-index;
+	}
+	@warn 'There is no item "#{$element}" in this list;
+	choose one of:#{$list}'; @return null; }
