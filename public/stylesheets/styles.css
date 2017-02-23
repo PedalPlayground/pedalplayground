@@ -232,8 +232,8 @@ th {
   src: url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
   src: url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
-.glyphicon, .pedal a:before,
-.pedalboard a:before {
+.glyphicon, .pedal .delete:before,
+.pedalboard .delete:before {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -302,8 +302,8 @@ th {
 .glyphicon-ok:before {
   content: "\e013"; }
 
-.glyphicon-remove:before, .pedal a:before,
-.pedalboard a:before {
+.glyphicon-remove:before, .pedal .delete:before,
+.pedalboard .delete:before {
   content: "\e014"; }
 
 .glyphicon-zoom-in:before {
@@ -5880,8 +5880,9 @@ strong, th {
   width: 40px;
   height: 100px;
   position: absolute; }
-  .pedal a,
-  .pedalboard a {
+  .pedal .delete,
+  .pedalboard .delete {
+    z-index: 2;
     transition: all .2s;
     opacity: 0;
     width: 19px;
@@ -5897,8 +5898,8 @@ strong, th {
     font-size: 14px;
     background: rgba(255, 255, 255, 0.8);
     color: black; }
-    .pedal a:before,
-    .pedalboard a:before {
+    .pedal .delete:before,
+    .pedalboard .delete:before {
       font-size: 9px;
       position: absolute;
       line-height: 1;
