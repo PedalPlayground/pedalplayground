@@ -5874,14 +5874,11 @@ strong, th {
 
 .pedal,
 .pedalboard {
-  z-index: 20;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
   width: 40px;
   height: 100px;
-  float: left;
-  border-radius: 1px;
   position: absolute; }
   .pedal a,
   .pedalboard a {
@@ -5911,6 +5908,15 @@ strong, th {
   .pedal:hover a,
   .pedalboard:hover a {
     opacity: 1; }
+
+.pedal {
+  z-index: 20; }
+  .pedal--custom {
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.22), 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    background-clip: border-box;
+    background-image: linear-gradient(to top left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)); }
 
 .pedalboard {
   z-index: 1; }

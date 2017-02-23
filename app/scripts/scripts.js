@@ -37,7 +37,7 @@ $(document).ready(function(){
 		var width  	  = $(selected).data("width") * multiplier;
 		var height    = $(selected).data("height") * multiplier;
 		var image  	  = $(selected).data("image");
-		var pedal     = '<div class="pedal" style="width:'+width+'px;height:'+height+'px; background-image:url('+image+')"><a href="#"></a></div>';
+		var pedal     = '<div class="pedal" style="width:'+width+'px;height:'+height+'px; background-image:url('+image+')"><a class="delete" href="#"></a></div>';
 		$('.canvas').append(pedal);
 		readyCanvas();
 		return false;
@@ -48,7 +48,7 @@ $(document).ready(function(){
 		var width  	  = $(selected).data("width") * multiplier;
 		var height    = $(selected).data("height") * multiplier;
 		var image  	  = $(selected).data("image");
-		var pedal     = '<div class="pedalboard" style="width:'+width+'px;height:'+height+'px; background-image:url('+image+')"><a href="#"></a></div>';
+		var pedal     = '<div class="pedalboard" style="width:'+width+'px;height:'+height+'px; background-image:url('+image+')"><a class="delete" href="#"></a></div>';
 
 		$('.canvas').append(pedal);
 		readyCanvas();
@@ -56,20 +56,20 @@ $(document).ready(function(){
 	});
 
 	// Add custom pedal
-	$('body').on('click', '#add-custom-pedal button', function(){
+	$('body').on('click', '#add-custom-pedal .btn', function(){
 		console.log("add custom pedal...");
 		var width  	  = $("#add-custom-pedal .custom-width").val() * multiplier;
 		var height    = $("#add-custom-pedal .custom-height").val() * multiplier;
 		var image  	  = $("#add-custom-pedal .custom-color").val();
-		var pedal     = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px; background-color:'+image+';"><a href="#"></a></div>';
+		var pedal     = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px; background-color:'+image+';"><a class="delete" href="#"></a></div>';
 
 		$('.canvas').append(pedal);
 		readyCanvas();
 		return false;
 	});
 
-	$('body').on('click', '.pedal__delete, .pedalboard__delete', function(){
-	    $(this).parents('.pedal').remove();
+	$('body').on('click', '.canvas .delete', function(){
+	    $(this).parents('.pedal, .pedalboard').remove();
 		readyCanvas();
 	});
 

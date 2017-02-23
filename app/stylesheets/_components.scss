@@ -43,15 +43,11 @@ $border: 1px solid rgba(black, .13);
 
 .pedal,
 .pedalboard {
-	z-index: 20;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;
 	width: 40px;
 	height: 100px;
-	float: left;
-	//box-shadow: 0 1px 3px rgba(black, .3);
-	border-radius: 1px;
 	position: absolute;
 	a {
 		transition: all .2s;
@@ -81,6 +77,17 @@ $border: 1px solid rgba(black, .13);
 	}
 	&:hover a {
 		opacity: 1;
+	}
+}
+
+.pedal {
+	z-index: 20;
+	&--custom {
+		border-radius: 4px;
+		border: 1px solid rgba(black, .3);
+		box-shadow: 1px 1px 4px rgba(black, .22), 0 1px 0 rgba(white, .2) inset;
+		background-clip: border-box;
+		background-image: linear-gradient( to top left, rgba(white, 0), rgba(white, .2) );
 	}
 }
 
