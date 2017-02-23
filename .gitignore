@@ -1,7 +1,5 @@
 .DS_Store
 Thumbs.db
-public/scripts/
-public/stylesheets/
 bower_components/
 node_modules/
 app/scss/.sass-cache/*
