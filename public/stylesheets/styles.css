@@ -232,7 +232,8 @@ th {
   src: url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
   src: url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
-.glyphicon, .pedal a:before {
+.glyphicon, .pedal a:before,
+.pedalboard a:before {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -301,7 +302,8 @@ th {
 .glyphicon-ok:before {
   content: "\e013"; }
 
-.glyphicon-remove:before, .pedal a:before {
+.glyphicon-remove:before, .pedal a:before,
+.pedalboard a:before {
   content: "\e014"; }
 
 .glyphicon-zoom-in:before {
@@ -5844,26 +5846,35 @@ strong, th {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
-  .site-body .sidebar,
-  .site-body .canvas {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -moz-box-flex: 1;
-    -moz-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto; }
-  .site-body .sidebar {
-    width: 200px;
-    max-width: 250px;
-    border-right: 1px solid rgba(0, 0, 0, 0.13);
-    background: #FFF;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
-    padding: 20px; }
-  .site-body .canvas {
-    background: #F8F8F8 url("../images/grid.png");
-    overflow: hidden; }
 
-.pedal {
+.sidebar,
+.canvas {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -moz-box-flex: 1;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto; }
+
+.sidebar {
+  width: 200px;
+  max-width: 250px;
+  border-right: 1px solid rgba(0, 0, 0, 0.13);
+  background: #FFF;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
+  padding: 20px; }
+  .sidebar__section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+    padding-bottom: 16px;
+    margin-bottom: 16px; }
+
+.canvas {
+  background: #F8F8F8 url("../images/grid.png");
+  overflow: hidden; }
+
+.pedal,
+.pedalboard {
+  z-index: 20;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -5872,7 +5883,8 @@ strong, th {
   float: left;
   border-radius: 1px;
   position: absolute; }
-  .pedal a {
+  .pedal a,
+  .pedalboard a {
     transition: all .2s;
     opacity: 0;
     width: 19px;
@@ -5888,12 +5900,17 @@ strong, th {
     font-size: 14px;
     background: rgba(255, 255, 255, 0.8);
     color: black; }
-    .pedal a:before {
+    .pedal a:before,
+    .pedalboard a:before {
       font-size: 9px;
       position: absolute;
       line-height: 1;
       left: 0;
       right: 0;
       top: 4px; }
-  .pedal:hover a {
+  .pedal:hover a,
+  .pedalboard:hover a {
     opacity: 1; }
+
+.pedalboard {
+  z-index: 1; }
