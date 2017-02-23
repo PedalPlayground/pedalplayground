@@ -1,65 +1,96 @@
 $(document).ready(function(){
 
+	// Populate Pedalboards and Pedals lists
 	GetPedalData();
+	GetPedalBoardData();
 
+	// Load canvas from localStorage if it has been saved prior
+	$(function() {
+		if (localStorage["pedalCanvas"] != null) {
+			var savedPedalCanvas = JSON.parse(localStorage["pedalCanvas"]);
+			$(".canvas").html(savedPedalCanvas);
+			console.log("Canvas restored!")
+		}
+	});
+
+	// Set the multiplier for converting inches to pixels
 	var multiplier = "20";
 
-	$('.canvas').css('background-size', multiplier + 'px')
+	// Set grid background to one inch
+	$('.canvas').css('background-size', multiplier + 'px');
 
-	var $draggable = $('.pedal').draggabilly({
+	// Make pedals draggable
+	var $draggable = $('.canvas .pedal, .canvas .pedalboard').draggabilly({
 		containment: '.canvas'
-	})
+	});
+
+	// Activate canvas features
+	readyCanvas();
+
+	$('body').on('click', '#clear-canvas', function(){
+		$(".canvas").empty();
+		savePedalCanvas();
+	});
 
 	$('body').on('click', '#add-pedal button', function(){
 		var selected  = $('#add-pedal').find(":selected");
 		var width  	  = $(selected).data("width") * multiplier;
 		var height    = $(selected).data("height") * multiplier;
 		var image  	  = $(selected).data("image");
-		var pedal     = '<div class="pedal p" style="width:'+width+'px;height:'+height+'px; background-image:url('+image+')"><a href="#"></a></div>';
-		//var pedal     = '<div class="pedal"></div>';
-
-		//$(pedal).css({
-		//	"width": width,
-		//	"height": height,
-		//	"background-image": 'url(' + image + ')'
-		//}).append('<a class="delete">&times;</a>');
-
+		var pedal     = '<div class="pedal" style="width:'+width+'px;height:'+height+'px; background-image:url('+image+')"><a href="#"></a></div>';
 		$('.canvas').append(pedal);
-
-		$('.pedal').draggabilly({
-			containment: '.canvas'
-		});
+		readyCanvas();
 		return false;
 	});
 
-	$('body').on('click', '.pedal a', function(){
-	    $(this).parents('.pedal').remove();
+	$('body').on('click', '#add-pedalboard button', function(){
+		var selected  = $('#add-pedalboard').find(":selected");
+		var width  	  = $(selected).data("width") * multiplier;
+		var height    = $(selected).data("height") * multiplier;
+		var image  	  = $(selected).data("image");
+		var pedal     = '<div class="pedalboard" style="width:'+width+'px;height:'+height+'px; background-image:url('+image+')"><a href="#"></a></div>';
+
+		$('.canvas').append(pedal);
+		readyCanvas();
+		return false;
 	});
 
 	// Add custom pedal
 	$('body').on('click', '#add-custom-pedal button', function(){
+		console.log("add custom pedal...");
 		var width  	  = $("#add-custom-pedal .custom-width").val() * multiplier;
 		var height    = $("#add-custom-pedal .custom-height").val() * multiplier;
 		var image  	  = $("#add-custom-pedal .custom-color").val();
-		var pedal     = '<div class="pedal p" style="width:'+width+'px;height:'+height+'px; background-color:'+image+';"><a href="#"></a></div>';
-		//var pedal     = '<div class="pedal"></div>';
-
-		//$(pedal).css({
-		//	"width": width,
-		//	"height": height,
-		//	"background-image": 'url(' + image + ')'
-		//}).append('<a class="delete">&times;</a>');
+		var pedal     = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px; background-color:'+image+';"><a href="#"></a></div>';
 
 		$('.canvas').append(pedal);
-
-		$('.pedal').draggabilly({
-			containment: '.canvas'
-		});
+		readyCanvas();
 		return false;
 	});
 
+	$('body').on('click', '.pedal__delete, .pedalboard__delete', function(){
+	    $(this).parents('.pedal').remove();
+		readyCanvas();
+	});
 
-});
+
+}); // End Document ready
+
+function readyCanvas() {
+	var $draggable = $('.canvas .pedal, .canvas .pedalboard').draggabilly({
+		containment: '.canvas'
+	});
+	$draggable.on( 'dragEnd', function() {
+		console.log('dragEnd');
+		savePedalCanvas();
+	});
+	savePedalCanvas();
+}
+
+function savePedalCanvas() {
+	console.log("Canvas Saved!");
+	localStorage["pedalCanvas"] = JSON.stringify($(".canvas").html());
+}
 
 window.Pedal = function( type, brand, name, width, height, image ){
 	this.Type = type || "";
@@ -89,8 +120,8 @@ window.GetPedalData = function(){
 					data[pedal].Image 	|| ""
 				));
 			}
+			console.log("Pedal data loaded");
 			RenderPedals(pedals);
-			console.log("ajax success");
 		}
 	});
 };
@@ -107,8 +138,7 @@ window.RenderPedals = function(pedals){
 	}
 }
 
-window.PedalBoard = function( type, brand, name, width, height, image ){
-	this.Type = type || "";
+window.PedalBoard = function( brand, name, width, height, image ){
 	this.Brand = brand || "";
 	this.Name = name || "";
 	this.Width = width || "";
@@ -117,26 +147,37 @@ window.PedalBoard = function( type, brand, name, width, height, image ){
 }
 
 window.GetPedalBoardData = function(){
-	console.log('GetPedalData');
+	console.log('GetPedalBoardData');
 	$.ajax({
 		url: "public/data/pedalboards.json",
 		dataType: 'text',
 		type: "GET",
 		success: function(data){
 			data = $.parseJSON(data.replace(/\r\n/g, "").replace(/\t/g, ""));
-			var pedals = [];
-			for(var pedal in data){
-				pedals.push( new Pedal(
-					data[pedal].Type 	|| "",
-					data[pedal].Brand 	|| "",
-					data[pedal].Name 	|| "",
-					data[pedal].Width 	|| "",
-					data[pedal].Height 	|| "",
-					data[pedal].Image 	|| ""
+			var pedalboards = [];
+			for(var pedalboard in data){
+				pedalboards.push( new PedalBoard(
+					data[pedalboard].Brand 	|| "",
+					data[pedalboard].Name 	|| "",
+					data[pedalboard].Width 	|| "",
+					data[pedalboard].Height 	|| "",
+					data[pedalboard].Image 	|| ""
 				));
 			}
-			RenderPedals(pedals);
-			console.log("ajax success");
+			console.log("Pedalboard data loaded");
+			RenderPedalBoards(pedalboards);
 		}
 	});
 };
+
+window.RenderPedalBoards = function(pedalboards){
+	console.log('RenderPedalBoards');
+	for(var i in pedalboards) {
+		var $pedalboard = $("<option>"+ pedalboards[i].Brand + " " + pedalboards[i].Name +"</option>").attr('id', pedalboards[i].Name.toLowerCase().replace(/\s+/g, "-").replace(/'/g, ''));
+		$pedalboard.data('width', pedalboards[i].Width);
+		$pedalboard.data('height', pedalboards[i].Height);
+		$pedalboard.data('height', pedalboards[i].Height);
+		$pedalboard.data('image', pedalboards[i].Image);
+		$pedalboard.appendTo('.pedalboard-list');
+	}
+}

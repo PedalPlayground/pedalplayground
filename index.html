@@ -14,38 +14,43 @@
 	<div class="site-body">
 		<div class="sidebar">
 			<div class="sidebar__section">
+				<h4>Add a Pedalboard</h4>
+				<form id="add-pedalboard">
+					<p><select class="pedalboard-list form-control"></select></p>
+					<button id="add-selected-pedalboard" class="btn btn-primary btn-block">Add Pedalboard</button>
+				</form>
+			</div>
+			<div class="sidebar__section">
 				<h4>Add a Pedal</h4>
 				<form id="add-pedal">
 					<p><select class="pedal-list form-control"></select></p>
-					<button class="btn btn-primary btn-block">Add Pedal</button>
+					<button id="add-selected-pedal" class="btn btn-primary btn-block">Add Pedal</button>
 				</form>
-				<hr>
+			</div>
+			<div class="sidebar__section">
 				<h4>Add Custom Pedal</h4>
 				<form id="add-custom-pedal">
 					<p>
-
-							<input type="number" class="custom-width form-control" placeholder="Width (inches.)">
-
-							<input type="number" class="custom-height form-control" placeholder="Height (inches)">
+						<input type="number" class="custom-width form-control" placeholder="Width (inches.)" required>
+						<input type="number" class="custom-height form-control" placeholder="Height (inches)" required>
 					</p>
-
 					<p>
 						<label>Color</label>
 						<div class="input-group">
 							<input class="custom-color " type="color" name="favcolor" value="#AC203B">
 						</div>
 					</p>
-
-					<button class="btn btn-primary btn-block">Add Pedal</button>
+					<!-- <button class="btn btn-primary btn-block">Add Pedal</button> -->
+					<input class="btn btn-primary btn-block" type="submit" name="" value="Add Pedal">
 				</form>
+			</div>
+			<div class="sidebar__section">
+				<button id="clear-canvas" class="btn btn-sm btn-danger btn-block">Clear</button>
 			</div>
 		</div>
 		<div class="canvas">
 			<div class="pedalboard"></div>
 		</div>
 	</div>
-	<header class="site-footer">
-		<h1>Thingy</h1>
-	</header>
 </body>
 </html>
