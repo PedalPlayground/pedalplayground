@@ -70,5 +70,54 @@
         "Width" : 2.875,
         "Height" : 5.125,
         "Image" : "public/images/pedals/boss-dd5.png"
+    },
+    {
+        "Type" : "Delay",
+        "Brand" : "BOSS",
+        "Name" : "DD-500",
+        "Width" : 6.69,
+        "Height" : 5.43,
+        "Image" : "public/images/pedals/boss-dd500.png"
+    },
+    {
+        "Type" : "Other",
+        "Brand" : "BOSS",
+        "Name" : "ES-5",
+        "Width" : 13.27,
+        "Height" : 3.82,
+        "Image" : "public/images/pedals/boss-es5.png"
+    },
+    {
+        "Type" : "OD/Distortion",
+        "Brand" : "Klon",
+        "Name" : "KTR",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/klon-ktr.png"
+    },
+    {
+        "Type" : "Volume",
+        "Brand" : "Lehle",
+        "Name" : "Mono Volume",
+        "Width" : 3.94,
+        "Height" : 10.24,
+        "Image" : "public/images/pedals/lehle-volume.png"
+    },
+    {
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Micro POG",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/ehx-micropog.png"
+    },
+    {
+        "Type" : "Volume",
+        "Brand" : "Boss",
+        "Name" : "FV-30L",
+        "Width" : 3.15,
+        "Height" : 7.56,
+        "Image" : "public/images/pedals/boss-fv30.png"
     }
+
 ]

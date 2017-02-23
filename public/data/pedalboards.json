@@ -5,5 +5,89 @@
         "Width" : 16,
         "Height" : 8,
         "Image" : "public/images/pedalboards/pedaltrain-metro16.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Nano",
+        "Width" : 14,
+        "Height" : 5.5,
+        "Image" : "public/images/pedalboards/pedaltrain-nano.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Nano+",
+        "Width" : 18,
+        "Height" : 5,
+        "Image" : "public/images/pedalboards/pedaltrain-nanoplus.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Metro 20",
+        "Width" : 20,
+        "Height" : 8,
+        "Image" : "public/images/pedalboards/pedaltrain-metro20.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Metro 24",
+        "Width" : 24,
+        "Height" : 8,
+        "Image" : "public/images/pedalboards/pedaltrain-metro24.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Novo 18",
+        "Width" : 18,
+        "Height" : 14.5,
+        "Image" : "public/images/pedalboards/pedaltrain-novo18.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Novo 24",
+        "Width" : 24,
+        "Height" : 14.5,
+        "Image" : "public/images/pedalboards/pedaltrain-novo24.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Novo 32",
+        "Width" : 32,
+        "Height" : 14.5,
+        "Image" : "public/images/pedalboards/pedaltrain-novo32.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Classic JR",
+        "Width" : 18,
+        "Height" : 12.5,
+        "Image" : "public/images/pedalboards/pedaltrain-jr.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Classic 1",
+        "Width" : 22,
+        "Height" : 12.5,
+        "Image" : "public/images/pedalboards/pedaltrain-1.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Classic 2",
+        "Width" : 24,
+        "Height" : 12.5,
+        "Image" : "public/images/pedalboards/pedaltrain-2.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Classic Pro",
+        "Width" : 32,
+        "Height" : 16,
+        "Image" : "public/images/pedalboards/pedaltrain-pro.png"
+    },
+    {
+        "Brand" : "Pedaltrain",
+        "Name" : "Terra 42",
+        "Width" : 42,
+        "Height" : 14.5,
+        "Image" : "public/images/pedalboards/pedaltrain-terra42.png"
     }
 ]

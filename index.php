@@ -19,6 +19,25 @@
 					<p><select class="pedal-list form-control"></select></p>
 					<button class="btn btn-primary btn-block">Add Pedal</button>
 				</form>
+				<hr>
+				<h4>Add Custom Pedal</h4>
+				<form id="add-custom-pedal">
+					<p>
+
+							<input type="number" class="custom-width form-control" placeholder="Width (inches.)">
+
+							<input type="number" class="custom-height form-control" placeholder="Height (inches)">
+					</p>
+
+					<p>
+						<label>Color</label>
+						<div class="input-group">
+							<input class="custom-color " type="color" name="favcolor" value="#AC203B">
+						</div>
+					</p>
+
+					<button class="btn btn-primary btn-block">Add Pedal</button>
+				</form>
 			</div>
 		</div>
 		<div class="canvas">

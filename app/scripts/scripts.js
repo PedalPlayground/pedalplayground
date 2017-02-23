@@ -36,6 +36,28 @@ $(document).ready(function(){
 	    $(this).parents('.pedal').remove();
 	});
 
+	// Add custom pedal
+	$('body').on('click', '#add-custom-pedal button', function(){
+		var width  	  = $("#add-custom-pedal .custom-width").val() * multiplier;
+		var height    = $("#add-custom-pedal .custom-height").val() * multiplier;
+		var image  	  = $("#add-custom-pedal .custom-color").val();
+		var pedal     = '<div class="pedal p" style="width:'+width+'px;height:'+height+'px; background-color:'+image+';"><a href="#"></a></div>';
+		//var pedal     = '<div class="pedal"></div>';
+
+		//$(pedal).css({
+		//	"width": width,
+		//	"height": height,
+		//	"background-image": 'url(' + image + ')'
+		//}).append('<a class="delete">&times;</a>');
+
+		$('.canvas').append(pedal);
+
+		$('.pedal').draggabilly({
+			containment: '.canvas'
+		});
+		return false;
+	});
+
 
 });
 
