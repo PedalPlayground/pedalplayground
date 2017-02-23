@@ -9,6 +9,7 @@ $(document).ready(function(){
 		if (localStorage["pedalCanvas"] != null) {
 			var savedPedalCanvas = JSON.parse(localStorage["pedalCanvas"]);
 			$(".canvas").html(savedPedalCanvas);
+			readyCanvas();
 			console.log("Canvas restored!")
 		}
 	});
@@ -19,13 +20,13 @@ $(document).ready(function(){
 	// Set grid background to one inch
 	$('.canvas').css('background-size', multiplier + 'px');
 
-	// Make pedals draggable
-	var $draggable = $('.canvas .pedal, .canvas .pedalboard').draggabilly({
-		containment: '.canvas'
-	});
+	// // Make pedals draggable
+	// var $draggable = $('.canvas .pedal, .canvas .pedalboard').draggabilly({
+	// 	containment: '.canvas'
+	// });
 
 	// Activate canvas features
-	readyCanvas();
+
 
 	$('body').on('click', '#clear-canvas', function(){
 		$(".canvas").empty();
@@ -61,7 +62,16 @@ $(document).ready(function(){
 		var width  	  = $("#add-custom-pedal .custom-width").val() * multiplier;
 		var height    = $("#add-custom-pedal .custom-height").val() * multiplier;
 		var image  	  = $("#add-custom-pedal .custom-color").val();
-		var pedal     = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px; background-color:'+image+';"><a class="delete" href="#"></a></div>';
+		var pedal     = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px;">\
+		<a class="delete" href="#"></a>\
+		<span class="pedal__box" style="background-color:'+image+';"></span>\
+		<span class="pedal__jack1"></span>\
+		<span class="pedal__jack2"></span>\
+		<span class="pedal__knob1"></span>\
+		<span class="pedal__knob2"></span>\
+		<span class="pedal__led"></span>\
+		<span class="pedal__switch"></span>\
+		</div>';
 
 		$('.canvas').append(pedal);
 		readyCanvas();
@@ -80,6 +90,11 @@ function readyCanvas() {
 	var $draggable = $('.canvas .pedal, .canvas .pedalboard').draggabilly({
 		containment: '.canvas'
 	});
+
+	$('.canvas .pedal, .canvas .pedalboard').draggabilly({
+		containment: '.canvas'
+	});
+
 	$draggable.on( 'dragEnd', function() {
 		console.log('dragEnd');
 		savePedalCanvas();

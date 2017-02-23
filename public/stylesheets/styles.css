@@ -5912,11 +5912,62 @@ strong, th {
 .pedal {
   z-index: 20; }
   .pedal--custom {
+    position: relative; }
+  .pedal__box {
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.22), 0 1px 0 rgba(255, 255, 255, 0.2) inset;
     background-clip: border-box;
-    background-image: linear-gradient(to top left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)); }
+    background-image: linear-gradient(to top left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    left: 3px;
+    right: 3px; }
+  .pedal__knob1, .pedal__knob2 {
+    border-radius: 40px;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.22), 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    background-clip: border-box;
+    background-image: linear-gradient(to top left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
+    position: absolute;
+    top: 15%; }
+  .pedal__knob1 {
+    left: 20%; }
+  .pedal__knob2 {
+    right: 15%; }
+  .pedal__jack1, .pedal__jack2 {
+    width: 3px;
+    height: 10px;
+    position: absolute;
+    background-color: #999;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    top: 50%; }
+  .pedal__jack1 {
+    left: 0;
+    border-radius: 2px 0 0 2px;
+    border-right: 0; }
+  .pedal__jack2 {
+    right: 0;
+    border-radius: 0 2px 2px 0;
+    border-left: 0; }
+  .pedal__switch {
+    position: absolute;
+    background-color: #999;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.22), 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    background-clip: border-box;
+    border-radius: 100px;
+    left: 50%;
+    margin-left: -5px;
+    width: 10px;
+    height: 10px;
+    bottom: 10%; }
 
 .pedalboard {
   z-index: 1; }

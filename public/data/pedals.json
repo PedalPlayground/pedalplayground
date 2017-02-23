@@ -1,11 +1,27 @@
 [
 	{
-        "Type" : "Other",
-        "Brand" : "Pedaltrain",
-        "Name" : "Terra 42",
-        "Width" : 42,
-        "Height" : 14.5,
-        "Image" : "public/images/pedals/pedaltrain-terra42.png"
+        "Type" : "Delay",
+        "Brand" : "Strymon",
+        "Name" : "Timeline",
+        "Width" : 6.75,
+        "Height" : 5.1,
+        "Image" : "public/images/pedals/strymon-timeline.png"
+    },
+	{
+        "Type" : "Modulation",
+        "Brand" : "Strymon",
+        "Name" : "Mobious",
+        "Width" : 6.75,
+        "Height" : 5.1,
+        "Image" : "public/images/pedals/strymon-mobious.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "Strymon",
+        "Name" : "Big Sky",
+        "Width" : 6.75,
+        "Height" : 5.1,
+        "Image" : "public/images/pedals/strymon-bigsky.png"
     },
 	{
         "Type" : "Other",
@@ -22,14 +38,6 @@
         "Width" : 8.12,
         "Height" : 3.37,
         "Image" : "public/images/pedals/truetone-cs12.png"
-    },
-    {
-        "Type" : "Delay",
-        "Brand" : "Strymon",
-        "Name" : "Timeline",
-        "Width" : 6.75,
-        "Height" : 5.1,
-        "Image" : "public/images/pedals/strymon-timeline.png"
     },
     {
         "Type" : "OD/Distortion",
