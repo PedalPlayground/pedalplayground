@@ -30,16 +30,20 @@
 			<div class="sidebar__section">
 				<h4>Add Custom Pedal</h4>
 				<form id="add-custom-pedal">
-					<p>
-						<input type="number" class="custom-width form-control" placeholder="Width (inches.)" required value="2.875" />
-						<input type="number" class="custom-height form-control" placeholder="Height (inches)" required value="5.125" />
-					</p>
-					<p>
+					<div class="form-element">
+						<label for="">Width <em>(inches)</em></label>
+						<input type="number" class="custom-width form-control" placeholder="2.75" required />
+					</div>
+					<div class="form-element">
+						<label for="">Height <em>(inches)</em></label>
+						<input type="number" class="custom-height form-control" placeholder="4.25" required />
+					</div>
+					<div class="form-element">
 						<label>Color</label>
 						<div class="input-group">
 							<input class="custom-color " type="color" name="favcolor" value="#AC203B">
 						</div>
-					</p>
+					</div>
 					<input class="btn btn-primary btn-block" type="submit" name="" value="Add Custom Pedal" />
 				</form>
 			</div>

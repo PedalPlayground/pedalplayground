@@ -22,8 +22,7 @@ $border: 1px solid rgba(black, .13);
 }
 
 .sidebar {
-	width: 200px;
-	max-width: 250px;
+	max-width: 260px;
 	border-right: $border;
 	background: #FFF;
 	box-shadow: 0 1px 5px rgba(black, .16);
@@ -44,57 +43,121 @@ $border: 1px solid rgba(black, .13);
 .pedal,
 .pedalboard {
 	animation: fade-grow .4s;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100% 100%;
-	width: 40px;
-	height: 100px;
 	position: absolute;
-	.delete {
-		z-index: 2;
-		transition: all .2s;
+	border: 1px solid transparent;
+	.artwork {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+		z-index: 1;
+		position: relative;
+		transition: all .4s;
+	}
+	.actions {
+		z-index: 1;
+		transition: all .4s;
 		opacity: 0;
-		@include square(19px);
+		background: white;
+		border: $border;
+		box-shadow: $box-shadow-base;
+		border-radius: 100px;
+		background-clip: padding-box;
 		position: absolute;
-		right: -8px;
-		top: -8px;
-		border: 1px solid rgba(0, 0, 0, 0.2);
-		border-radius: 15px;
-		text-align: center;
-		line-height: 16px;
-		text-decoration: none;
-		font-size: 14px;
-		background: rgba(white, .8);
-		color: black;
-		&:before {
-			@extend .glyphicon;
-			@extend .glyphicon-remove;
-			font-size: 9px;
-			position: absolute;
-			line-height: 1;
-			left: 0;
-			right: 0;
-			top: 4px;
+		left: 100%;
+		top: 0;
+		margin-left: -32px;
+		margin-top: -15px;
+		width: 66px;
+		a {
+			display: block;
+			float: left;
+			padding: 8px;
+			text-align: center;
+			width: 32px;
+			line-height: 10px;
+			&:before {
+				font-size: 10px;
+				line-height: 10px;
+				@extend .glyphicon;
+				@extend .glyphicon-remove;
+			}
+			&:first-child {
+				border-right: $border;
+				&:before {
+					@extend .glyphicon-refresh;
+					font-weight: bold;
+				}
+			}
 		}
 	}
-	&:hover a {
-		opacity: 1;
+	&:hover {
+		&:before {
+			$m: 4px;
+			z-index: 0;
+			content: " ";
+			border: 2px dashed rgba(#999, .5);
+			position: absolute;
+			left: 	$m;
+			top: 	$m;
+			right: 	$m;
+			bottom: $m;
+		}
+		.actions {
+			opacity: 1;
+		}
 	}
+
+
+	// .delete {
+	// 	z-index: 2;
+	// 	transition: all .2s;
+	// 	opacity: 0;
+	// 	@include square(19px);
+	// 	position: absolute;
+	// 	right: -8px;
+	// 	top: -8px;
+	// 	border: 1px solid rgba(0, 0, 0, 0.2);
+	// 	border-radius: 15px;
+	// 	text-align: center;
+	// 	line-height: 16px;
+	// 	text-decoration: none;
+	// 	font-size: 14px;
+	// 	background: rgba(white, .8);
+	// 	color: black;
+	// 	&:before {
+	// 		@extend .glyphicon;
+	// 		@extend .glyphicon-remove;
+	// 		font-size: 9px;
+	// 		position: absolute;
+	// 		line-height: 1;
+	// 		left: 0;
+	// 		right: 0;
+	// 		top: 4px;
+	// 	}
+	// }
+	// &:hover a {
+	// 	opacity: 1;
+	// }
 }
 
 .pedal {
 	z-index: 20;
 	min-width: 5px;
 	min-height: 5px;
-	background-color: rgba(black, .1);
 	&.rotate-90 {
-		@include rotate(90deg);
+		.artwork {
+			@include rotate(90deg);
+		}
 	}
 	&.rotate-180 {
-		@include rotate(180deg);
+		.artwork {
+			@include rotate(180deg);
+		}
 	}
 	&.rotate-270 {
-		@include rotate(270deg);
+		.artwork {
+			@include rotate(270deg);
+		}
 	}
 	&--custom {}
 	&__box {
@@ -161,4 +224,28 @@ $border: 1px solid rgba(black, .13);
 
 .pedalboard {
 	z-index: 1;
+}
+
+#add-custom-pedal {
+	.form-element {
+		float: left;
+		width: 50%;
+		margin-bottom: 15px;
+		label {
+			font-size: 12px;
+			em {
+				font-size: 10px;
+				font-style: normal;
+				font-weight: normal;
+				color: lighten($gray, 30%);
+			}
+		}
+	}
+	.custom-width {
+		border-radius: 4px 0 0 4px;
+	}
+	.custom-height {
+		border-radius: 0 4px 4px 0;
+		border-left: 0;
+	}
 }

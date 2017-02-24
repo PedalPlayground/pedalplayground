@@ -15,7 +15,7 @@ $(document).ready(function(){
 	});
 
 	// Set the multiplier for converting inches to pixels
-	var multiplier = "18";
+	var multiplier = "22";
 
 	// Set grid background to one inch
 	$('.canvas').css('background-size', multiplier + 'px');
@@ -37,10 +37,17 @@ $(document).ready(function(){
 		var selected  	= $('#add-pedal').find(":selected");
 		//var name 		= $(selected).text();
 		var shortname 	= $(selected).attr("id");
-		var width  	  	= $(selected).data("width") * multiplier;
-		var height    	= $(selected).data("height") * multiplier;
-		var image  	  	= $(selected).data("image");
-		var pedal     	= '<div class="pedal '+shortname+'" style="width:'+width+'px;height:'+height+'px; background-image:url('+image+')"><a class="delete" href="#"></a><a class="rotate" href="#"></a></div>';
+		var w	 	  	= $(selected).data("width") * multiplier;
+		var h   		= $(selected).data("height") * multiplier;
+		var i 	  		= $(selected).data("image");
+		var pedal     	= '\
+<div class="pedal '+shortname+'">\
+	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url('+i+')"></div>\
+	<div class="actions">\
+		<a class="rotate"></a>\
+		<a class="delete"></a>\
+	</div>\
+</div>';
 		$('.canvas').append(pedal);
 		readyCanvas();
 		return false;
@@ -48,10 +55,18 @@ $(document).ready(function(){
 
 	$('body').on('click', '#add-pedalboard button', function(){
 		var selected  = $('#add-pedalboard').find(":selected");
-		var width  	  = $(selected).data("width") * multiplier;
-		var height    = $(selected).data("height") * multiplier;
-		var image  	  = $(selected).data("image");
-		var pedal     = '<div class="pedalboard" style="width:'+width+'px;height:'+height+'px; background-image:url('+image+')"><a class="delete" href="#"></a></div>';
+		var shortname 	= $(selected).attr("id");
+		var w	 	  	= $(selected).data("width") * multiplier;
+		var h   		= $(selected).data("height") * multiplier;
+		var i 	  		= $(selected).data("image");
+		var pedal     	= '\
+<div class="pedalboard '+shortname+'">\
+	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url('+i+')"></div>\
+	<div class="actions">\
+		<a class="rotate"></a>\
+		<a class="delete"></a>\
+	</div>\
+</div>';
 
 		$('.canvas').append(pedal);
 		readyCanvas();
@@ -65,7 +80,6 @@ $(document).ready(function(){
 		var height    = $("#add-custom-pedal .custom-height").val() * multiplier;
 		var image  	  = $("#add-custom-pedal .custom-color").val();
 		var pedal     = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px;">\
-		<a class="delete" href="#"></a>\
 		<span class="pedal__box" style="background-color:'+image+';"></span>\
 		<span class="pedal__jack1"></span>\
 		<span class="pedal__jack2"></span>\
@@ -73,6 +87,10 @@ $(document).ready(function(){
 		<span class="pedal__knob2"></span>\
 		<span class="pedal__led"></span>\
 		<span class="pedal__switch"></span>\
+		<div class="actions">\
+			<a class="rotate"></a>\
+			<a class="delete"></a>\
+		</div>\
 		</div>';
 
 		$('.canvas').append(pedal);
@@ -81,10 +99,10 @@ $(document).ready(function(){
 	});
 
 	// Delete Pedals
-	$('body').on('click', '.canvas .delete', function(){
-	    $(this).parents('.pedal, .pedalboard').remove();
-		readyCanvas();
-	});
+	//$('body').on('click', '.canvas .delete', function(){
+	//    $(this).parents('.pedal, .pedalboard').remove();
+	//	readyCanvas();
+	//});
 
 	// Rotate Pedals
 	//$('body').on('click', '.pedal .rotate', function(){
@@ -119,8 +137,25 @@ function readyCanvas(pedal) {
 		console.log('dragEnd');
 		savePedalCanvas();
 	});
-	$draggable.on( 'staticClick', function() {
-		rotatePedal(this);
+	$draggable.on( 'staticClick', function(event) {
+		//rotatePedal(this);
+		var target = $(event.target);
+	    if(target.is('.delete')) {
+			deletePedal(this);
+	    } else if (target.is('.rotate')) {
+			//rotatePedal(this);
+			if ( $(this).hasClass("rotate-90") ) {
+				$(this).removeClass("rotate-90");
+				$(this).addClass("rotate-180");
+			} else if ( $(this).hasClass("rotate-180") ) {
+				$(this).removeClass("rotate-180");
+				$(this).addClass("rotate-270");
+			}  else if ( $(this).hasClass("rotate-270") ) {
+				$(this).removeClass("rotate-270");
+			} else {
+				$(this).addClass("rotate-90");
+			}
+	    }
 	});
 	savePedalCanvas();
 }
@@ -142,6 +177,11 @@ function rotatePedal(pedal) {
 	} else {
 		$(pedal).addClass("rotate-90");
 	}
+	savePedalCanvas();
+}
+
+function deletePedal(pedal) {
+	$(pedal).remove();
 	savePedalCanvas();
 }
 
@@ -229,7 +269,7 @@ window.GetPedalBoardData = function(){
 					data[pedalboard].Brand 	|| "",
 					data[pedalboard].Name 	|| "",
 					data[pedalboard].Width 	|| "",
-					data[pedalboard].Height 	|| "",
+					data[pedalboard].Height || "",
 					data[pedalboard].Image 	|| ""
 				));
 			}
