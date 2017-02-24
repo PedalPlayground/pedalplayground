@@ -43,6 +43,7 @@ $border: 1px solid rgba(black, .13);
 
 .pedal,
 .pedalboard {
+	animation: fade-grow .4s;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;
@@ -83,9 +84,19 @@ $border: 1px solid rgba(black, .13);
 
 .pedal {
 	z-index: 20;
-	&--custom {
-		position: relative;
+	min-width: 5px;
+	min-height: 5px;
+	background-color: rgba(black, .1);
+	&.rotate-90 {
+		@include rotate(90deg);
 	}
+	&.rotate-180 {
+		@include rotate(180deg);
+	}
+	&.rotate-270 {
+		@include rotate(270deg);
+	}
+	&--custom {}
 	&__box {
 		border-radius: 4px;
 		border: 1px solid rgba(black, .3);

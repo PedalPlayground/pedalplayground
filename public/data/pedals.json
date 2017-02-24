@@ -10,10 +10,10 @@
 	{
         "Type" : "Modulation",
         "Brand" : "Strymon",
-        "Name" : "Mobious",
+        "Name" : "Mobius",
         "Width" : 6.75,
         "Height" : 5.1,
-        "Image" : "public/images/pedals/strymon-mobious.png"
+        "Image" : "public/images/pedals/strymon-mobius.png"
     },
 	{
         "Type" : "Reverb",
@@ -112,6 +112,206 @@
         "Image" : "public/images/pedals/lehle-volume.png"
     },
     {
+        "Type" : "Volume",
+        "Brand" : "Boss",
+        "Name" : "FV-30L",
+        "Width" : 3.15,
+        "Height" : 7.56,
+        "Image" : "public/images/pedals/boss-fv30.png"
+    },
+    {
+        "Type" : "Volume",
+        "Brand" : "Ernie Ball",
+        "Name" : "VP Jr",
+        "Width" : 3.5,
+        "Height" : 10,
+        "Image" : "public/images/pedals/ernieball-vp.png"
+    },
+    {
+        "Type" : "OD/Distortion",
+        "Brand" : "Ibanez",
+        "Name" : "TS9 Tube Screamer",
+        "Width" : 3,
+        "Height" : 4.9,
+        "Image" : "public/images/pedals/ibanez-ts9.png"
+    },
+    {
+        "Type" : "OD/Distortion",
+        "Brand" : "Strymon",
+        "Name" : "Riverside",
+        "Width" : 4,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/strymon-riverside.png"
+    },
+    {
+        "Type" : "Delay",
+        "Brand" : "Strymon",
+        "Name" : "Dig",
+        "Width" : 4,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/strymon-dig.png"
+    },
+    {
+        "Type" : "Delay",
+        "Brand" : "Strymon",
+        "Name" : "El Capistan",
+        "Width" : 4,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/strymon-elcap.png"
+    },
+    {
+        "Type" : "Delay",
+        "Brand" : "Strymon",
+        "Name" : "Brigadier",
+        "Width" : 4,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/strymon-brig.png"
+    },
+    {
+        "Type" : "Modulation",
+        "Brand" : "Strymon",
+        "Name" : "Orbit",
+        "Width" : 4,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/strymon-orbit.png"
+    },
+    {
+        "Type" : "Modulation",
+        "Brand" : "Strymon",
+        "Name" : "Deco",
+        "Width" : 4,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/strymon-deco.png"
+    },
+    {
+        "Type" : "Modulation",
+        "Brand" : "Strymon",
+        "Name" : "Ola",
+        "Width" : 4,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/strymon-ola.png"
+    },
+    {
+        "Type" : "Modulation",
+        "Brand" : "Strymon",
+        "Name" : "Lex",
+        "Width" : 4,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/strymon-lex.png"
+    },
+    {
+        "Type" : "Modulation",
+        "Brand" : "Strymon",
+        "Name" : "Flint",
+        "Width" : 4,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/strymon-flint.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "Strymon",
+        "Name" : "OB.1",
+        "Width" : 4,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/strymon-ob1.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "TC Electronics",
+        "Name" : "Corona Chorus",
+        "Width" : 2.83,
+        "Height" : 4.8,
+        "Image" : "public/images/pedals/tc-corona.png"
+    },
+    {
+        "Type" : "Reverb",
+        "Brand" : "TC Electronics",
+        "Name" : "Hall of Fame",
+        "Width" : 2.83,
+        "Height" : 4.8,
+        "Image" : "public/images/pedals/tc-halloffame.png"
+    },
+    {
+        "Type" : "Delay",
+        "Brand" : "TC Electronics",
+        "Name" : "Flashback",
+        "Width" : 2.83,
+        "Height" : 4.8,
+        "Image" : "public/images/pedals/tc-flashback.png"
+    },
+    {
+        "Type" : "Noise Gate",
+        "Brand" : "TC Electronics",
+        "Name" : "Sentry",
+        "Width" : 2.83,
+        "Height" : 4.8,
+        "Image" : "public/images/pedals/tc-sentry.png"
+    },
+    {
+        "Type" : "Tuner",
+        "Brand" : "TC Electronics",
+        "Name" : "Polytune",
+        "Width" : 2.83,
+        "Height" : 4.8,
+        "Image" : "public/images/pedals/tc-polytune.png"
+    },
+	{
+        "Type" : "Loopers",
+        "Brand" : "TC Electronics",
+        "Name" : "Ditto Stereo",
+        "Width" : 2.83,
+        "Height" : 4.8,
+        "Image" : "public/images/pedals/tc-dittostereo.png"
+    },
+    {
+        "Type" : "Tuner",
+        "Brand" : "TC Electronics",
+        "Name" : "Polytune Mini",
+        "Width" : 2.01,
+        "Height" : 3.66,
+        "Image" : "public/images/pedals/tc-polytunemini.png"
+    },
+    {
+        "Type" : "Tuner",
+        "Brand" : "TC Electronics",
+        "Name" : "Polytune Mini Noir",
+        "Width" : 2.01,
+        "Height" : 3.66,
+        "Image" : "public/images/pedals/tc-poly2mini.png"
+    },
+	{
+        "Type" : "Tuner",
+        "Brand" : "TC Electronics",
+        "Name" : "Spark Boost",
+        "Width" : 2.01,
+        "Height" : 3.66,
+        "Image" : "public/images/pedals/tc-spark.png"
+    },
+    {
+        "Type" : "Modulation",
+        "Brand" : "TC Electronics",
+        "Name" : "Corona Mini",
+        "Width" : 2.01,
+        "Height" : 3.66,
+        "Image" : "public/images/pedals/tc-coronamini.png"
+    },
+    {
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Pitch Fork",
+        "Width" : 2.75,
+        "Height" : 4.5,
+		"Image" : "public/images/pedals/ehx-pitchfork.png"
+    },
+    {
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Nano Pog",
+        "Width" : 2.75,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/ehx-nanopog.png"
+    },
+	{
         "Type" : "Pitch",
         "Brand" : "Electro Harmonix",
         "Name" : "Micro POG",
@@ -119,13 +319,149 @@
         "Height" : 4.7,
         "Image" : "public/images/pedals/ehx-micropog.png"
     },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "POG2",
+        "Width" : 5.75,
+        "Height" : 4.75,
+        "Image" : "public/images/pedals/ehx-pog2.png"
+    },
     {
-        "Type" : "Volume",
-        "Brand" : "Boss",
-        "Name" : "FV-30L",
-        "Width" : 3.15,
-        "Height" : 7.56,
-        "Image" : "public/images/pedals/boss-fv30.png"
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Soul Food",
+        "Width" : 2.75,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/ehx-soulfood.png"
+    },
+    {
+        "Type" : "OD/Distorion",
+        "Brand" : "Fultone",
+        "Name" : "Full-drive 3",
+        "Width" : 4.81,
+        "Height" : 4,
+        "Image" : "public/images/pedals/fulltone-fulldrive3.png"
+    },
+    {
+        "Type" : "OD/Distorion",
+        "Brand" : "Fultone",
+        "Name" : "Full-drive 2",
+        "Width" : 5.75,
+        "Height" : 4,
+        "Image" : "public/images/pedals/fulltone-fulldrive2.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "JHS",
+        "Name" : "Pulp N Peel",
+        "Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/jhs-pulpnpeel.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "JHS",
+        "Name" : "Morning Glory",
+        "Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/jhs-morningglory.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "JHS",
+        "Name" : "Superbolt",
+        "Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/jhs-superbolt.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "JHS",
+        "Name" : "Angry Charlie",
+        "Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/jhs-angrycharlie.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "JHS",
+        "Name" : "Charlie Brown",
+        "Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/jhs-charliebrown.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "JHS",
+        "Name" : "@ Andy Timmons",
+        "Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/jhs-timmons.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "JHS",
+        "Name" : "VCR",
+		"Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/jhs-vcr.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "JHS",
+        "Name" : "Ruby Red",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/jhs-rr.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "JHS",
+        "Name" : "Double Barrel",
+        "Width" : 4.7,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/jhs-doublebarrel.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "JHS",
+        "Name" : "Sweet Tea",
+        "Width" : 4.7,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/jhs-sweettea.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "Way Huge",
+        "Name" : "Swollen Pickle",
+        "Width" : 3.75,
+        "Height" : 4.78,
+        "Image" : "public/images/pedals/wayhuge-swollenpickle.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "Way Huge",
+        "Name" : "Aqua Puss",
+        "Width" : 3.75,
+        "Height" : 4.78,
+        "Image" : "public/images/pedals/wayhuge-aquapuss.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "Way Huge",
+        "Name" : "Green Rhino",
+        "Width" : 3.75,
+        "Height" : 4.78,
+        "Image" : "public/images/pedals/wayhuge-greenrhino.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "Way Huge",
+        "Name" : "Pork Loin",
+        "Width" : 3.75,
+        "Height" : 4.78,
+        "Image" : "public/images/pedals/wayhuge-porkloin.png"
     }
 
 ]
