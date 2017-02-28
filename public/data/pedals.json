@@ -472,6 +472,22 @@
         "Image" : "public/images/pedals/empress-comp.png"
     },
     {
+        "Type" : "Overdrive",
+        "Brand" : "Xotic",
+        "Name" : "BB Preamp",
+		"Width" : 2.38,
+        "Height" : 4.39,
+        "Image" : "public/images/pedals/xotic-bb.png"
+    },
+	{
+        "Type" : "Compressor",
+        "Brand" : "Xotic",
+        "Name" : "SP Compressor",
+		"Width" : 1.5,
+        "Height" : 3.5,
+        "Image" : "public/images/pedals/xotic-sp.png"
+    },
+    {
         "Type" : "Fuzz",
         "Brand" : "Zvex",
         "Name" : "Fuzz Factory",
