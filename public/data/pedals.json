@@ -43,8 +43,8 @@
         "Type" : "OD/Distortion",
         "Brand" : "Paul C",
         "Name" : "Timmy",
-        "Width" : 2.75,
-        "Height" : 4.8,
+		"Width" : 2.4,
+        "Height" : 4.4,
         "Image" : "public/images/pedals/paulc-timmy.png"
     },
     {
@@ -335,6 +335,14 @@
         "Height" : 4.5,
         "Image" : "public/images/pedals/ehx-soulfood.png"
     },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Small Stone Nano",
+        "Width" : 2.75,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/ehx-nanosmallstone.png"
+    },
     {
         "Type" : "OD/Distorion",
         "Brand" : "Fultone",
@@ -475,8 +483,8 @@
         "Type" : "Overdrive",
         "Brand" : "Xotic",
         "Name" : "BB Preamp",
-		"Width" : 2.38,
-        "Height" : 4.39,
+		"Width" : 2.4,
+        "Height" : 4.4,
         "Image" : "public/images/pedals/xotic-bb.png"
     },
 	{
