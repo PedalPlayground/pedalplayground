@@ -5860,7 +5860,8 @@ strong, th {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  min-width: 1000px; }
 
 .sidebar,
 .canvas {

@@ -14,6 +14,7 @@ $border: 1px solid rgba(black, .13);
 .site-body {
 	min-height: 100vh;
 	@include flexbox;
+	min-width: 1000px;
 }
 
 .sidebar,

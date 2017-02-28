@@ -462,6 +462,22 @@
         "Width" : 3.75,
         "Height" : 4.78,
         "Image" : "public/images/pedals/wayhuge-porkloin.png"
+    },
+    {
+        "Type" : "Compression",
+        "Brand" : "Empress",
+        "Name" : "Compressor",
+        "Width" : 4.5,
+        "Height" : 3.5,
+        "Image" : "public/images/pedals/empress-comp.png"
+    },
+    {
+        "Type" : "Fuzz",
+        "Brand" : "Zvex",
+        "Name" : "Fuzz Factory",
+		"Width" : 4.3,
+        "Height" : 2.5,
+        "Image" : "public/images/pedals/zvex-fuzzfactory.png"
     }
 
 ]
