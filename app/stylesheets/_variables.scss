@@ -19,8 +19,9 @@ $brand-price-color: $brand-buy-color;
 $brand-border-color: rgba($brand-gray, .25);
 $border: 1px solid rgba($brand-gray, .25);
 
-$font-path:  "../../app/fonts/";
-$image-path: "../../app/img/";
+$font-path:  "../fonts/";
+$image-path: "../images/";
+$colorpicker-img-path: "#{$image-path}colorpicker";
 
 $box-shadow-base: 0 1px 3px rgba(black, .15);
 $box-shadow-popover: 0 2px 15px 0 rgba(0,0,0,0.09), 0 1px 4px 0 rgba(0,0,0,0.10);

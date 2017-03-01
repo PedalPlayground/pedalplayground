@@ -229,9 +229,11 @@ $border: 1px solid rgba(black, .13);
 
 #add-custom-pedal {
 	.form-element {
-		float: left;
-		width: 50%;
 		margin-bottom: 15px;
+		&.left {
+			float: left;
+			width: 50%;
+		}
 		label {
 			font-size: 12px;
 			em {
@@ -249,4 +251,10 @@ $border: 1px solid rgba(black, .13);
 		border-radius: 0 4px 4px 0;
 		border-left: 0;
 	}
+}
+
+.color-swatch {
+	border: 1px solid rgba(black, .2);
+	border-radius: 100px;
+	@include square(20px);
 }

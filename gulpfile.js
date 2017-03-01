@@ -79,10 +79,15 @@ gulp.task('scripts', function() {
     return gulp.src([
         'bower_components/jquery/dist/jquery.js',
         'bower_components/draggabilly/dist/draggabilly.pkgd.js',
+        'bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js',
+        'bower_components/select2/dist/js/select2.js',
         'app/scripts/scripts.js'])
       .pipe(concat('scripts.js'))
       .pipe(uglify())
       .pipe(gulp.dest('public/scripts/'))
+	  .pipe(notify("JS Compiled!"))
+	  .on('error', reportError)
+	  .pipe(livereload());
 });
 
 /* Watch Files For Changes */

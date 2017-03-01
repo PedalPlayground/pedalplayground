@@ -5,6 +5,8 @@
 @import 'vendor/bootstrap-variables';	// Set custom variable overrides
 @import 'vendor/bootstrap'; 			// Import only the files needed
 @import 'bower_components/sass-flex-mixin/flex';
+@import 'bower_components/bootstrap-colorpicker/src/sass/_colorpicker.scss';
+@import 'bower_components/select2/src/scss/core.scss';
 
 // Utilities
 @import 'mixins';
