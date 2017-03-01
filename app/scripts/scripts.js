@@ -24,7 +24,16 @@ $(document).ready(function(){
 	});
 
 	// Set the multiplier for converting inches to pixels
-	var multiplier = "22";
+	var multiplier = 16;
+	var screenSize = $(window).width();
+
+	if ( screenSize > 1023 ) {
+		var multiplier = 20;
+	} else if ( screenSize >= 1600 ) {
+		var multiplier = 24;
+	}
+
+	console.log("1 inch = " + multiplier + "px");
 
 	// Set grid background to one inch
 	$('.canvas').css('background-size', multiplier + 'px');
@@ -242,21 +251,30 @@ window.GetPedalData = function(){
 				));
 			}
 			console.log("Pedal data loaded");
-			RenderPedals(pedals);
+			pedals.forEach(RenderPedals);
 		}
 	});
 };
 
-window.RenderPedals = function(pedals){
-	console.log('RenderPedals');
-	for(var i in pedals) {
-		var $pedal = $("<option>"+ pedals[i].Brand + " " + pedals[i].Name +"</option>").attr('id', pedals[i].Name.toLowerCase().replace(/\s+/g, "-").replace(/'/g, ''));
-		$pedal.data('width', pedals[i].Width);
-		$pedal.data('height', pedals[i].Height);
-		$pedal.data('height', pedals[i].Height);
-		$pedal.data('image', pedals[i].Image);
-		$pedal.appendTo('.pedal-list');
-	}
+window.RenderPedals = function(pedals) {
+    var { Type, Brand, Name, Width, Height, Image } = pedals;
+    var option = $("<option>", {
+        text: `${Brand} ${Name}`,
+        id: `${Name.toLowerCase().replace(/(\s+)|(['"])/g, (m, p1, p2) => p1 ? "-" : "")}`,
+        data: {
+            width: Width,
+            height: Height,
+            image: Image
+        }
+    });
+    if ($("optgroup").is(`[label="${Brand}"]`)) {
+        $(`optgroup[label="${Brand}"]`).append(option);
+    } else {
+        $("<optgroup>", {
+            label: Brand,
+            html: option
+        }).appendTo(".pedal-list");
+    }
 }
 
 window.PedalBoard = function( brand, name, width, height, image ){

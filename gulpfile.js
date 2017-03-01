@@ -82,8 +82,11 @@ gulp.task('scripts', function() {
         'bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js',
         'bower_components/select2/dist/js/select2.js',
         'app/scripts/scripts.js'])
+		.pipe(plumber({
+	        errorHandler: reportError
+	    }))
       .pipe(concat('scripts.js'))
-      .pipe(uglify())
+      //.pipe(uglify())
       .pipe(gulp.dest('public/scripts/'))
 	  .pipe(notify("JS Compiled!"))
 	  .on('error', reportError)
