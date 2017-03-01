@@ -1,5 +1,93 @@
 [
 	{
+        "Type" : "Overdrive",
+        "Brand" : "Chase Bliss",
+        "Name" : "Brothers",
+		"Width" : 2.75,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/chasebliss-brothers.png"
+    },
+	{
+        "Type" : "Delay",
+        "Brand" : "Chase Bliss",
+        "Name" : "Tonal Recall",
+		"Width" : 2.75,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/chasebliss-tonalrecall.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Chase Bliss",
+        "Name" : "Spectre",
+		"Width" : 2.75,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/chasebliss-spectre.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Chase Bliss",
+        "Name" : "Gravitas",
+		"Width" : 2.75,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/chasebliss-gravitas.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Chase Bliss",
+        "Name" : "Warped Vinyl",
+		"Width" : 2.75,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/chasebliss-warpedvinyl.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Chase Bliss",
+        "Name" : "Wombtone",
+		"Width" : 2.75,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/chasebliss-wombtone.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Diamond",
+        "Name" : "Tremolo",
+		"Width" : 4.8,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/diamond-tremolo.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Diamond",
+        "Name" : "Counterpoint",
+		"Width" : 4.8,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/diamond-counterpoint.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Diamond",
+        "Name" : "Memory Lane Jr",
+		"Width" : 4.8,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/diamond-memorylanejr.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Diamond",
+        "Name" : "Compressor",
+		"Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/diamond-compressor.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Diamond",
+        "Name" : "Compressor JR",
+		"Width" : 2.75,
+        "Height" : 4.8,
+        "Image" : "public/images/pedals/diamond-compressorjr.png"
+    },
+	{
         "Type" : "Delay",
         "Brand" : "Strymon",
         "Name" : "Timeline",
@@ -335,6 +423,14 @@
         "Height" : 4.5,
         "Image" : "public/images/pedals/ehx-soulfood.png"
     },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Small Stone Nano",
+        "Width" : 2.75,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/ehx-nanosmallstone.png"
+    },
     {
         "Type" : "OD/Distorion",
         "Brand" : "Fultone",
@@ -470,6 +566,167 @@
         "Width" : 4.5,
         "Height" : 4.5,
         "Image" : "public/images/pedals/sa-nemesis.png"
+	},
+	{
+        "Type" : "Compression",
+        "Brand" : "Empress",
+        "Name" : "Compressor",
+        "Width" : 4.5,
+        "Height" : 3.5,
+        "Image" : "public/images/pedals/empress-comp.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "385 Overdrive",
+        "Width" : 2.6,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/walrus-385.png"
+    },
+	{
+        "Type" : "Compressor",
+        "Brand" : "Walrus",
+        "Name" : "Deep Six",
+        "Width" : 2.6,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/walrus-deepsix.png"
+    },
+	{
+        "Type" : "Compressor",
+        "Brand" : "Walrus",
+        "Name" : "Jupiter",
+        "Width" : 2.6,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/walrus-jupiter.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Voyager",
+        "Width" : 2.6,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/walrus-voyager.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Plainsman",
+        "Width" : 2.45,
+        "Height" : 4.39,
+        "Image" : "public/images/pedals/walrus-plainsman.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Messner",
+        "Width" : 2.6,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/walrus-messner.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "385 Mayflower",
+        "Width" : 2.6,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/walrus-mayflower.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Julia",
+        "Width" : 2.6,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/walrus-julia.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Iron Horse",
+        "Width" : 2.6,
+        "Height" : 4.77,
+        "Image" : "public/images/pedals/walrus-ironhorse.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Contraband",
+        "Width" : 2.45,
+        "Height" : 4.39,
+        "Image" : "public/images/pedals/walrus-contraband.png"
+    },
+	{
+        "Type" : "Modulation",
+        "Brand" : "Walrus",
+        "Name" : "Janus",
+        "Width" : 7.38,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/walrus-janus.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Bellwether",
+        "Width" : 5.625,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/walrus-bellwether.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Descent",
+        "Width" : 5.625,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/walrus-descent.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Vanguard",
+        "Width" : 5.625,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/walrus-vanguard.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Red",
+        "Width" : 3.68,
+        "Height" : 4.67,
+        "Image" : "public/images/pedals/walrus-red.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Walrus",
+        "Name" : "Luminary",
+        "Width" : 4.67,
+        "Height" : 3.68,
+        "Image" : "public/images/pedals/walrus-luminary.png"
+    },
+
+    {
+        "Type" : "Overdrive",
+        "Brand" : "Xotic",
+        "Name" : "BB Preamp",
+		"Width" : 2.4,
+        "Height" : 4.4,
+        "Image" : "public/images/pedals/xotic-bb.png"
+    },
+	{
+        "Type" : "Compressor",
+        "Brand" : "Xotic",
+        "Name" : "SP Compressor",
+		"Width" : 1.5,
+        "Height" : 3.5,
+        "Image" : "public/images/pedals/xotic-sp.png"
+    },
+    {
+        "Type" : "Fuzz",
+        "Brand" : "Zvex",
+        "Name" : "Fuzz Factory",
+		"Width" : 4.7,
+        "Height" : 2.38,
+        "Image" : "public/images/pedals/zvex-fuzzfactory.png"
     }
 
 ]

@@ -89,5 +89,12 @@
         "Width" : 42,
         "Height" : 14.5,
         "Image" : "public/images/pedalboards/pedaltrain-terra42.png"
+    },
+    {
+        "Brand" : "Trav's",
+        "Name" : "14.5 x 28 pedalboard",
+        "Width" : 28,
+        "Height" : 14.5,
+        "Image" : "public/images/pedalboards/tl-pb.png"
     }
 ]
