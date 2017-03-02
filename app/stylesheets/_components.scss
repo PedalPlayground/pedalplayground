@@ -258,3 +258,15 @@ $border: 1px solid rgba(black, .13);
 	border-radius: 100px;
 	@include square(20px);
 }
+
+.select2-dropdown {
+	font-size: 12px;
+}
+
+.select2-results__group {
+	font-weight: 700;
+}
+
+.select2-search__field {
+	border-radius: $border-radius-base;
+}

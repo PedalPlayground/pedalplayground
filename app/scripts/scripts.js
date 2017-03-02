@@ -4,13 +4,22 @@ $(document).ready(function(){
 	GetPedalData();
 	GetPedalBoardData();
 
+	// function formatPedal(pedal) {
+	// 	if (!pedal.id) { return state.text; }
+	//     var $pedal = $(
+	//         '<span><img src="vendor/images/flags/' + pedal.element.value.toLowerCase() + '.png" class="img-flag" /> ' + pedal.text + '</span>'
+	//     );
+	//     return $pedal;
+	// };
+
 	// Make lists searchable
 	$('.pedal-list').select2({
-		//placeholder: "Select a pedal"
+		placeholder: "Select a pedal",
+		//templateResult: formatPedal
 	});
 
 	$('.pedalboard-list').select2({
-		//placeholder: "Select a pedalboard"
+		placeholder: "Select a pedalboard"
 	});
 
 	// Load canvas from localStorage if it has been saved prior
@@ -49,7 +58,7 @@ $(document).ready(function(){
 		savePedalCanvas();
 	});
 
-	$('body').on('click', '#add-pedal button', function(){
+	$('body').on('click', '#add-pedal button', function(event){
 		var selected  	= $('#add-pedal').find(":selected");
 		//var name 		= $(selected).text();
 		var shortname 	= $(selected).attr("id");
@@ -66,10 +75,10 @@ $(document).ready(function(){
 </div>';
 		$('.canvas').append(pedal);
 		readyCanvas();
-		return false;
+		event.preventDefault();
 	});
 
-	$('body').on('click', '#add-pedalboard button', function(){
+	$('body').on('click', '#add-pedalboard button', function(event){
 		var selected  = $('#add-pedalboard').find(":selected");
 		var shortname 	= $(selected).attr("id");
 		var w	 	  	= $(selected).data("width") * multiplier;
@@ -86,7 +95,7 @@ $(document).ready(function(){
 
 	$('.canvas').append(pedal);
 		readyCanvas();
-		return false;
+		event.preventDefault();
 	});
 
 	// Activate color picker plugin on custom color field

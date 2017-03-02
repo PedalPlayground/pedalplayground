@@ -88,6 +88,70 @@
         "Image" : "public/images/pedals/diamond-compressorjr.png"
     },
 	{
+        "Type" : "Overdrive",
+        "Brand" : "Earthquaker Devices",
+        "Name" : "Afterneath",
+		"Width" : 2.5,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/earthquaker-afterneath.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Earthquaker Devices",
+        "Name" : "Space Spiral",
+		"Width" : 2.5,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/earthquaker-spacespiral.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Earthquaker Devices",
+        "Name" : "Levitation",
+		"Width" : 2.5,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/earthquaker-levitation.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Earthquaker Devices",
+        "Name" : "Bit Commander",
+		"Width" : 2.5,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/earthquaker-bitcommander.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Earthquaker Devices",
+        "Name" : "Hummingbird",
+		"Width" : 2.5,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/earthquaker-hummingbird.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Earthquaker Devices",
+        "Name" : "Dispatch Master",
+		"Width" : 2.37,
+        "Height" : 4.37,
+        "Image" : "public/images/pedals/earthquaker-dispatch.png"
+    },
+	{
+        "Type" : "Tuner",
+        "Brand" : "Sonic Research",
+        "Name" : "Turbo Tuner ST-300",
+		"Width" : 2.5,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/sonicresearch-st300.png"
+    },
+	{
+        "Type" : "Tuner",
+        "Brand" : "Sonic Research",
+        "Name" : "Turbo Tuner ST-300 Mini",
+		"Width" : 2.01,
+        "Height" : 3.66,
+        "Image" : "public/images/pedals/sonicresearch-st300mini.png"
+    },
+	{
         "Type" : "Delay",
         "Brand" : "Strymon",
         "Name" : "Timeline",
@@ -131,8 +195,8 @@
         "Type" : "OD/Distortion",
         "Brand" : "Paul C",
         "Name" : "Timmy",
-        "Width" : 2.75,
-        "Height" : 4.8,
+		"Width" : 2.5,
+        "Height" : 4.3,
         "Image" : "public/images/pedals/paulc-timmy.png"
     },
     {
@@ -201,7 +265,7 @@
     },
     {
         "Type" : "Volume",
-        "Brand" : "Boss",
+        "Brand" : "BOSS",
         "Name" : "FV-30L",
         "Width" : 3.15,
         "Height" : 7.56,
@@ -395,8 +459,8 @@
         "Type" : "Pitch",
         "Brand" : "Electro Harmonix",
         "Name" : "Nano Pog",
-        "Width" : 2.75,
-        "Height" : 4.5,
+		"Width" : 2.5,
+        "Height" : 4.3,
         "Image" : "public/images/pedals/ehx-nanopog.png"
     },
 	{
@@ -427,8 +491,8 @@
         "Type" : "Pitch",
         "Brand" : "Electro Harmonix",
         "Name" : "Small Stone Nano",
-        "Width" : 2.75,
-        "Height" : 4.5,
+		"Width" : 2.5,
+        "Height" : 4.3,
         "Image" : "public/images/pedals/ehx-nanosmallstone.png"
     },
     {
@@ -708,8 +772,8 @@
         "Type" : "Overdrive",
         "Brand" : "Xotic",
         "Name" : "BB Preamp",
-		"Width" : 2.4,
-        "Height" : 4.4,
+		"Width" : 2.5,
+        "Height" : 4.3,
         "Image" : "public/images/pedals/xotic-bb.png"
     },
 	{
