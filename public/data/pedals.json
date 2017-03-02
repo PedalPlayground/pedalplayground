@@ -1,6 +1,38 @@
 [
 	{
         "Type" : "Overdrive",
+        "Brand" : "Analogman",
+        "Name" : "King of Tone",
+		"Width" : 4.8,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/analogman-kingoftone.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Analogman",
+        "Name" : "Sunface",
+		"Width" : 2.5,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/analogman-sunface.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Analogman",
+        "Name" : "Peppermint Fuzz",
+		"Width" : 2.5,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/analogman-peppermint.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Analogman",
+        "Name" : "Prince of Tone",
+		"Width" : 2.5,
+        "Height" : 4.625,
+        "Image" : "public/images/pedals/analogman-princeoftone.png"
+    },
+	{
+        "Type" : "Overdrive",
         "Brand" : "Chase Bliss",
         "Name" : "Brothers",
 		"Width" : 2.75,
@@ -183,6 +215,22 @@
         "Height" : 4.9,
         "Image" : "public/images/pedals/musicomlab-efxiii.png"
     },
+	{
+        "Type" : "Other",
+        "Brand" : "Musicomlab",
+        "Name" : "EFX IV",
+        "Width" : 13.1,
+        "Height" : 5,
+        "Image" : "public/images/pedals/musicomlab-efxiv.png"
+    },
+	{
+        "Type" : "Other",
+        "Brand" : "Musicomlab",
+        "Name" : "EFX V",
+        "Width" : 16.5,
+        "Height" : 3.8,
+        "Image" : "public/images/pedals/musicomlab-efxv.png"
+    },
     {
         "Type" : "Other",
         "Brand" : "TrueTone",
@@ -255,6 +303,102 @@
         "Height" : 4.7,
         "Image" : "public/images/pedals/klon-ktr.png"
     },
+	{
+		"Type" : "Volume",
+		"Brand" : "BOSS",
+		"Name" : "FV-30L",
+		"Width" : 3.15,
+		"Height" : 7.56,
+		"Image" : "public/images/pedals/boss-fv30.png"
+	},
+	{
+		"Type" : "Multi Effects",
+		"Brand" : "Eventide",
+		"Name" : "H9",
+		"Width" : 4.65,
+		"Height" : 5.25,
+		"Image" : "public/images/pedals/eventide-h9.png"
+	},
+	{
+		"Type" : "Multi Effects",
+		"Brand" : "Eventide",
+		"Name" : "Space",
+		"Width" : 7.5,
+		"Height" : 4.8,
+		"Image" : "public/images/pedals/eventide-space.png"
+	},
+	{
+		"Type" : "Multi Effects",
+		"Brand" : "Eventide",
+		"Name" : "TimeFactor",
+		"Width" : 7.5,
+		"Height" : 4.8,
+		"Image" : "public/images/pedals/eventide-timefactor.png"
+	},
+	{
+		"Type" : "Reverb",
+		"Brand" : "FreeTheTone",
+		"Name" : "Ambi Space AS-1R",
+		"Width" : 4.72,
+		"Height" : 4.03,
+		"Image" : "public/images/pedals/freethetone-ambispace.png"
+	},
+	{
+		"Type" : "Chorus",
+		"Brand" : "FreeTheTone",
+		"Name" : "Tri Avatar TA-1H",
+		"Width" : 4.72,
+		"Height" : 4.03,
+		"Image" : "public/images/pedals/freethetone-triavatar.png"
+	},
+	{
+		"Type" : "Chorus",
+		"Brand" : "FreeTheTone",
+		"Name" : "Flight Time FT-1Y",
+		"Width" : 5.75,
+		"Height" : 4.744,
+		"Image" : "public/images/pedals/freethetone-flighttime.png"
+	},
+	{
+		"Type" : "Reverb",
+		"Brand" : "Meris",
+		"Name" : "Mercury7",
+		"Width" : 4.5,
+		"Height" : 4.85,
+		"Image" : "public/images/pedals/meris-mercury7.png"
+	},
+	{
+		"Type" : "Reverb",
+		"Brand" : "Meris",
+		"Name" : "Ottobit Jr.",
+		"Width" : 4.5,
+		"Height" : 4.85,
+		"Image" : "public/images/pedals/meris-ottobitjr.png"
+	},
+	{
+		"Type" : "Reverb",
+		"Brand" : "Neunaber",
+		"Name" : "WET",
+		"Width" : 2.5,
+        "Height" : 4.3,
+		"Image" : "public/images/pedals/neunaber-wet.png"
+	},
+	{
+		"Type" : "Reverb",
+		"Brand" : "Neunaber",
+		"Name" : "EXP",
+		"Width" : 4.3,
+        "Height" : 2.5,
+		"Image" : "public/images/pedals/neunaber-exp.png"
+	},
+	{
+		"Type" : "Distortion",
+		"Brand" : "Proco",
+		"Name" : "Rat",
+		"Width" : 3.5,
+        "Height" : 4,
+		"Image" : "public/images/pedals/proco-rat.png"
+	},
     {
         "Type" : "Volume",
         "Brand" : "Lehle",
@@ -263,13 +407,37 @@
         "Height" : 10.24,
         "Image" : "public/images/pedals/lehle-volume.png"
     },
-    {
-        "Type" : "Volume",
-        "Brand" : "BOSS",
-        "Name" : "FV-30L",
-        "Width" : 3.15,
-        "Height" : 7.56,
-        "Image" : "public/images/pedals/boss-fv30.png"
+	{
+        "Type" : "Multi Effects",
+        "Brand" : "Line6",
+        "Name" : "M5",
+        "Width" : 5.85,
+        "Height" : 6.5,
+        "Image" : "public/images/pedals/line6-m5.png"
+    },
+	{
+        "Type" : "Multi Effects",
+        "Brand" : "Line6",
+        "Name" : "M9",
+        "Width" : 10.5,
+        "Height" : 6.5,
+        "Image" : "public/images/pedals/line6-m9.png"
+    },
+	{
+        "Type" : "Multi Effects",
+        "Brand" : "Line6",
+        "Name" : "DL4 Delay",
+        "Width" : 10,
+        "Height" : 6,
+        "Image" : "public/images/pedals/line6-dl4.png"
+    },
+	{
+        "Type" : "Multi Effects",
+        "Brand" : "Line6",
+        "Name" : "Helix",
+        "Width" : 22.05,
+        "Height" : 11.85,
+        "Image" : "public/images/pedals/line6-helix.png"
     },
     {
         "Type" : "Volume",
@@ -799,6 +967,14 @@
 		"Width" : 1.5,
         "Height" : 3.5,
         "Image" : "public/images/pedals/xotic-sp.png"
+    },
+	{
+        "Type" : "Multi Effects",
+        "Brand" : "Zoom",
+        "Name" : "G3",
+		"Width" : 9.21,
+        "Height" : 6.69,
+        "Image" : "public/images/pedals/zoom-g3.png"
     },
     {
         "Type" : "Fuzz",
