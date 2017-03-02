@@ -4,18 +4,9 @@ $(document).ready(function(){
 	GetPedalData();
 	GetPedalBoardData();
 
-	// function formatPedal(pedal) {
-	// 	if (!pedal.id) { return state.text; }
-	//     var $pedal = $(
-	//         '<span><img src="vendor/images/flags/' + pedal.element.value.toLowerCase() + '.png" class="img-flag" /> ' + pedal.text + '</span>'
-	//     );
-	//     return $pedal;
-	// };
-
 	// Make lists searchable
 	$('.pedal-list').select2({
 		placeholder: "Select a pedal",
-		//templateResult: formatPedal
 	});
 
 	$('.pedalboard-list').select2({

@@ -7006,12 +7006,12 @@ strong, th {
 
 .site-body {
   min-height: 100vh;
+  min-width: 1000px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex;
-  min-width: 1000px; }
+  display: flex; }
 
 .sidebar,
 .canvas {
@@ -7201,12 +7201,3 @@ strong, th {
   border-radius: 100px;
   width: 20px;
   height: 20px; }
-
-.select2-dropdown {
-  font-size: 12px; }
-
-.select2-results__group {
-  font-weight: 700; }
-
-.select2-search__field {
-  border-radius: 4px; }

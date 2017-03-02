@@ -13,8 +13,12 @@ $border: 1px solid rgba(black, .13);
 
 .site-body {
 	min-height: 100vh;
-	@include flexbox;
 	min-width: 1000px;
+	@include flexbox;
+	//@include flex-direction(column);
+	@media (min-width: 769px) {
+		//@include flex-direction(row);
+	}
 }
 
 .sidebar,
@@ -257,16 +261,4 @@ $border: 1px solid rgba(black, .13);
 	border: 1px solid rgba(black, .2);
 	border-radius: 100px;
 	@include square(20px);
-}
-
-.select2-dropdown {
-	font-size: 12px;
-}
-
-.select2-results__group {
-	font-weight: 700;
-}
-
-.select2-search__field {
-	border-radius: $border-radius-base;
 }
