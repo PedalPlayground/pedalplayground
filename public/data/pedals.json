@@ -577,6 +577,22 @@
     },
 	{
         "Type" : "Overdrive",
+        "Brand" : "Thorpy",
+        "Name" : "Gunshot",
+        "Width" : 2.75,
+        "Height" : 5.7,
+        "Image" : "public/images/pedals/thorpy-gunshot.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Thorpy",
+        "Name" : "Peacekeeper",
+        "Width" : 2.75,
+        "Height" : 5.7,
+        "Image" : "public/images/pedals/thorpy-peacekeeper.png"
+    },
+	{
+        "Type" : "Overdrive",
         "Brand" : "Walrus",
         "Name" : "385 Overdrive",
         "Width" : 2.6,
