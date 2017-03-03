@@ -262,3 +262,29 @@ $border: 1px solid rgba(black, .13);
 	border-radius: 100px;
 	@include square(20px);
 }
+
+// Huge list of pedals, to find any broken links
+// #list-pedals {
+// 	@include flexbox();
+// 	@include flex-wrap(wrap);
+// 	.pedal-listing {
+// 		@include flex(1 1 200px);
+// 		@include flexbox();
+// 		@include align-items(center);
+// 		padding: 20px;
+// 		img {
+// 			margin: auto;
+// 		}
+// 	}
+// }
+
+#list-pedals {
+	.pedal-listing {
+		float: left;
+		margin: 20px;
+		img {
+			max-width: none !important;
+			width: initial !important;
+		}
+	}
+}

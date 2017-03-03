@@ -18832,11 +18832,10 @@ $(document).ready(function(){
 	// Set the multiplier for converting inches to pixels
 	var multiplier = 16;
 	var screenSize = $(window).width();
-
 	if ( screenSize > 1023 ) {
 		var multiplier = 20;
-	} else if ( screenSize >= 1600 ) {
-		var multiplier = 24;
+	} if ( screenSize > 1600 ) {
+		var multiplier = 25;
 	}
 
 	console.log("1 inch = " + multiplier + "px");
@@ -19058,6 +19057,7 @@ window.GetPedalData = function(){
 			}
 			console.log("Pedal data loaded");
 			pedals.forEach(RenderPedals);
+			listPedals(pedals);
 		}
 	});
 };
@@ -19124,5 +19124,25 @@ window.RenderPedalBoards = function(pedalboards){
 		$pedalboard.data('height', pedalboards[i].Height);
 		$pedalboard.data('image', pedalboards[i].Image);
 		$pedalboard.appendTo('.pedalboard-list');
+	}
+}
+
+// List pedals on page to find errors
+window.listPedals = function(pedals){
+	if ( $('#list-pedals').length ) {
+		console.log('List pedals...');
+		for(var i in pedals) {
+			multiplier = 40;
+			Width   = pedals[i].Width  * multiplier;
+			Height  = pedals[i].Height * multiplier;
+
+			var $pedalListing = $('<div class="pedal-listing">\
+				<img src="' + pedals[i].Image + '" alt="' + pedals[i].Brand + " " + pedals[i].Name + '" width="' + Width + '" height="' + Height + '"/>\
+			</div>');
+			// $pedalListing.css('width', pedals[i].Width);
+			// $pedalListing.css('height', pedals[i].Height);
+			// $pedalListing.css('background-image', "url(" + pedals[i].Image + ")" );
+			$pedalListing.appendTo('#list-pedals');
+		}
 	}
 }

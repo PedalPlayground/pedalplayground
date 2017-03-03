@@ -1,6 +1,110 @@
 [
 	{
         "Type" : "Overdrive",
+        "Brand" : "A",
+        "Name" : "Test Pedal",
+		"Width" : 2.5,
+        "Height" : 9.3,
+        "Image" : "public/images/pedals/alexander-jubilee.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "Jubilee",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/alexander-jubilee.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "Radical Delay",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/alexander-radical.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "F13 Flanger",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/alexander-flange.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "Sky Fi Reverb",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/alexander-skyfi.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "Golden Summer",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/alexander-goldensummer.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "Clang",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/alexander-clang.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "History Lesson",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/alexander-historylesson.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "Space Expander",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/alexander-spaceexpander.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "Chesapeake",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/alexander-chesapeake.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "Calavera",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/alexander-calavera.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "Super Radical Delay",
+		"Width" : 4.7,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/alexander-superradical.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Alexander",
+        "Name" : "Oblivion",
+		"Width" : 4.7,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/alexander-oblivion.png"
+    },
+	{
+        "Type" : "Overdrive",
         "Brand" : "Analogman",
         "Name" : "King of Tone",
 		"Width" : 4.8,
@@ -27,8 +131,8 @@
         "Type" : "Overdrive",
         "Brand" : "Analogman",
         "Name" : "Prince of Tone",
-		"Width" : 2.5,
-        "Height" : 4.625,
+		"Width" : 2.2,
+        "Height" : 4.2,
         "Image" : "public/images/pedals/analogman-princeoftone.png"
     },
 	{
@@ -213,7 +317,7 @@
         "Name" : "Dispatch Master",
 		"Width" : 2.37,
         "Height" : 4.37,
-        "Image" : "public/images/pedals/earthquaker-dispatch.png"
+        "Image" : "public/images/pedals/earthquakerdevices-dispatchmaster.png"
     },
 	{
         "Type" : "Tuner",
@@ -420,7 +524,7 @@
         "Brand" : "BOSS",
         "Name" : "TU-3s Chromatic Tuner",
         "Width" : 2.875,
-        "Height" : 5.125,
+        "Height" : 3.3125,
         "Image" : "public/images/pedals/boss-tu3s.png"
     },
 	{
@@ -584,6 +688,14 @@
 		"Image" : "public/images/pedals/digitech-whammy.png"
 	},
 	{
+        "Type" : "Reverb",
+        "Brand" : "Digitech",
+        "Name" : "Jamman Express",
+		"Width" : 2.75,
+		"Height" : 4.75,
+        "Image" : "public/images/pedals/digitech-jammanexpress.png"
+    },
+	{
 		"Type" : "Wah",
 		"Brand" : "Disaster Area",
 		"Name" : "DPC5",
@@ -630,6 +742,30 @@
 		"Width" : 3.6,
 		"Height" : 1.5,
 		"Image" : "public/images/pedals/disasterarea-dmc2.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Dr Scientist",
+		"Name" : "Frazz Dazzler",
+		"Width" : 2.4,
+        "Height" : 4.45,
+		"Image" : "public/images/pedals/drscientist-frazzdazzler.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Dr Scientist",
+		"Name" : "Bitquest",
+		"Width" : 2.4,
+        "Height" : 4.45,
+		"Image" : "public/images/pedals/drscientist-bitquest.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Dr Scientist",
+		"Name" : "Reverberator",
+		"Width" : 2.4,
+        "Height" : 4.45,
+		"Image" : "public/images/pedals/drscientist-reverberator.png"
 	},
 	{
 		"Type" : "Wah",
@@ -824,6 +960,62 @@
 		"Image" : "public/images/pedals/mission-vp1.png"
 	},
 	{
+		"Type" : "Volume",
+		"Brand" : "Mooer",
+		"Name" : "Tuner",
+		"Width" : 1.65,
+		"Height" : 3.7,
+		"Image" : "public/images/pedals/mooer-tuner.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "Mooer",
+		"Name" : "Pitch Box",
+		"Width" : 1.65,
+		"Height" : 3.7,
+		"Image" : "public/images/pedals/mooer-pitchbox.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "Mooer",
+		"Name" : "Trelicopter",
+		"Width" : 1.65,
+		"Height" : 3.7,
+		"Image" : "public/images/pedals/mooer-trelicopter.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "Mooer",
+		"Name" : "Reecho",
+		"Width" : 1.65,
+		"Height" : 3.7,
+		"Image" : "public/images/pedals/mooer-recho.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "Mooer",
+		"Name" : "Yellow Comp",
+		"Width" : 1.65,
+		"Height" : 3.7,
+		"Image" : "public/images/pedals/mooer-yellowcomp.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "Mooer",
+		"Name" : "Ninety Orange",
+		"Width" : 1.65,
+		"Height" : 3.7,
+		"Image" : "public/images/pedals/mooer-orange.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "Mooer",
+		"Name" : "Acoustikar",
+		"Width" : 1.65,
+		"Height" : 3.7,
+		"Image" : "public/images/pedals/mooer-acousticer.png"
+	},
+	{
 		"Type" : "Overdrive",
 		"Brand" : "MXR",
 		"Name" : "Micro Amp+",
@@ -922,6 +1114,30 @@
 	{
 		"Type" : "Reverb",
 		"Brand" : "Neunaber",
+		"Name" : "Expanse",
+		"Width" : 2.5,
+        "Height" : 4.3,
+		"Image" : "public/images/pedals/neunaber-expanse.png"
+	},
+	{
+		"Type" : "Reverb",
+		"Brand" : "Neunaber",
+		"Name" : "Immerse",
+		"Width" : 2.5,
+        "Height" : 4.3,
+		"Image" : "public/images/pedals/neunaber-immerse.png"
+	},
+	{
+		"Type" : "Reverb",
+		"Brand" : "Neunaber",
+		"Name" : "Iconoclast",
+		"Width" : 4.25,
+        "Height" : 2.3,
+		"Image" : "public/images/pedals/neunaber-iconoclast.png"
+	},
+	{
+		"Type" : "Reverb",
+		"Brand" : "Neunaber",
 		"Name" : "EXP",
 		"Width" : 4.3,
         "Height" : 2.5,
@@ -990,6 +1206,38 @@
         "Width" : 3,
         "Height" : 4.9,
         "Image" : "public/images/pedals/ibanez-ts9.png"
+    },
+	{
+        "Type" : "OD/Distortion",
+        "Brand" : "Red Panda",
+        "Name" : "Raster",
+        "Width" : 3.3,
+        "Height" : 4.4,
+        "Image" : "public/images/pedals/redpanda-raster.png"
+    },
+	{
+        "Type" : "OD/Distortion",
+        "Brand" : "Red Panda",
+        "Name" : "Particle",
+        "Width" : 3.3,
+        "Height" : 4.4,
+        "Image" : "public/images/pedals/redpanda-particle.png"
+    },
+	{
+        "Type" : "OD/Distortion",
+        "Brand" : "Red Panda",
+        "Name" : "Bitmap",
+        "Width" : 3.3,
+        "Height" : 4.4,
+        "Image" : "public/images/pedals/redpanda-bitmap.png"
+    },
+	{
+        "Type" : "OD/Distortion",
+        "Brand" : "Red Panda",
+        "Name" : "Context",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/redpanda-context.png"
     },
     {
         "Type" : "OD/Distortion",
@@ -1192,12 +1440,140 @@
         "Image" : "public/images/pedals/ehx-soulfood.png"
     },
 	{
+        "Type" : "Loop Sequencing",
+        "Brand" : "Electro Harmonix",
+        "Name" : "720 Stereo Looper",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/ehx-720.png"
+    },
+	{
+        "Type" : "Loop Sequencing",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Memory Boy",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/ehx-memoryboy.png"
+    },
+	{
+        "Type" : "Loop Sequencing",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Big Muff Pi",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/ehx-bigmuffpi.png"
+    },
+	{
+        "Type" : "Loop Sequencing",
+        "Brand" : "Electro Harmonix",
+        "Name" : "C9 Organ Machine",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/ehx-c9.png"
+    },
+	{
+        "Type" : "Loop Sequencing",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Synth9 Synth Machine",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/ehx-synth9.png"
+    },
+	{
+        "Type" : "Loop Sequencing",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Super Ego",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/ehx-superego.png"
+    },
+	{
+        "Type" : "Loop Sequencing",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Mel9 Tape Replay Machine",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/ehx-720.png"
+    },
+	{
         "Type" : "Pitch",
         "Brand" : "Electro Harmonix",
         "Name" : "Small Stone Nano",
 		"Width" : 2.5,
         "Height" : 4.3,
         "Image" : "public/images/pedals/ehx-nanosmallstone.png"
+    },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Silencer",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/ehx-silencer.png"
+    },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Memory Toy",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/ehx-memorytoy.png"
+    },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Freeze",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/ehx-freeze.png"
+    },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Canyon",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/ehx-canyon.png"
+    },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "22500 Dual Sterep Looper",
+        "Width" : 5.75,
+        "Height" : 4.75,
+        "Image" : "public/images/pedals/ehx-22500.png"
+    },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Deluxe Memory Man Tap Tempo",
+        "Width" : 5.75,
+        "Height" : 4.75,
+        "Image" : "public/images/pedals/ehx-memorymantap.png"
+    },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Deluxe Memory Man XO",
+        "Width" : 5.75,
+        "Height" : 4.75,
+        "Image" : "public/images/pedals/ehx-memorymannano.png"
+    },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Big Muff Pi (big box)",
+        "Width" : 5.9,
+        "Height" : 8.6,
+        "Image" : "public/images/pedals/ehx-bigmuffbox.png"
+    },
+	{
+        "Type" : "Pitch",
+        "Brand" : "Electro Harmonix",
+        "Name" : "Deluxe Memory Man (big box)",
+        "Width" : 7.875,
+        "Height" : 6.875,
+        "Image" : "public/images/pedals/ehx-ogmemoryman.png"
     },
     {
         "Type" : "OD/Distorion",
@@ -1214,6 +1590,134 @@
         "Width" : 5.75,
         "Height" : 4,
         "Image" : "public/images/pedals/fulltone-fulldrive2.png"
+    },
+	{
+        "Type" : "OD/Distorion",
+        "Brand" : "Fultone",
+        "Name" : "Supa-Trem 2",
+        "Width" : 5.25,
+        "Height" : 4,
+        "Image" : "public/images/pedals/fulltone-supatrem2.png"
+    },
+	{
+        "Type" : "OD/Distorion",
+        "Brand" : "Fultone",
+        "Name" : "Supa-Trem",
+        "Width" : 6,
+        "Height" : 3.25,
+        "Image" : "public/images/pedals/fulltone-supatrem.png"
+    },
+	{
+        "Type" : "OD/Distorion",
+        "Brand" : "Fultone",
+        "Name" : "OCD",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/fulltone-ocd.png"
+    },
+	{
+        "Type" : "OD/Distorion",
+        "Brand" : "Fultone",
+        "Name" : "Fat Boost FB-3",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/fulltone-fatboost.png"
+    },
+	{
+        "Type" : "OD/Distorion",
+        "Brand" : "Fultone",
+        "Name" : "Clyde Wah",
+        "Width" : 4.72,
+        "Height" : 10,
+        "Image" : "public/images/pedals/fulltone-clyde.png"
+    },
+	{
+        "Type" : "OD/Distorion",
+        "Brand" : "Digitech",
+        "Name" : "RV-7 Reverb",
+        "Width" : 3.5,
+        "Height" : 5.5,
+        "Image" : "public/images/pedals/digitech-rv7.png"
+    },
+	{
+        "Type" : "OD/Distorion",
+        "Brand" : "Digitech",
+        "Name" : "DL-8 Delay/Looper",
+        "Width" : 3.5,
+        "Height" : 5.5,
+        "Image" : "public/images/pedals/digitech-dl8.png"
+    },
+	{
+        "Type" : "OD/Distorion",
+        "Brand" : "Digitech",
+        "Name" : "Trio Looper",
+        "Width" : 3.25,
+        "Height" : 5.4,
+        "Image" : "public/images/pedals/digitech-trio.png"
+    },
+	{
+        "Type" : "OD/Distorion",
+        "Brand" : "Digitech",
+        "Name" : "Trio+ Looper",
+        "Width" : 4.25,
+        "Height" : 5.4,
+        "Image" : "public/images/pedals/digitech-trioplus.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Emerson",
+        "Name" : "Em-drive",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/emerson-emdrive.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Emerson",
+        "Name" : "Paramount",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/emerson-paramount.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Jackson Audio",
+        "Name" : "Prism",
+		"Width" : 2.5,
+        "Height" : 4.875,
+        "Image" : "public/images/pedals/jackson-prism.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Selah",
+        "Name" : "Feather Drive",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/selah-featherdrive.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Selah",
+        "Name" : "Misty Mountain Fuzz",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/selah-mistymountainfuzz.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Selah",
+        "Name" : "Quartz",
+		"Width" : 2.6,
+        "Height" : 4.8,
+        "Image" : "public/images/pedals/selah-quartz.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Selah",
+        "Name" : "Scarlett Love V2",
+		"Width" : 4.3,
+        "Height" : 2.5,
+        "Image" : "public/images/pedals/selah-scarlettlove2.png"
     },
     {
         "Type" : "Compression",
@@ -1607,8 +2111,199 @@
         "Height" : 3.68,
         "Image" : "public/images/pedals/walrus-luminary.png"
     },
-
-    {
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Tape Echo",
+        "Width" : 3.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-tapeecho.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Latitude",
+        "Width" : 3.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-latitude.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Pinnacle Deluxe",
+        "Width" : 3.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-pinnacledeluxe.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Plexi-Drive Deluxe",
+        "Width" : 3.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-plexideluxe.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Triple Wreck",
+        "Width" : 3.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-tapeecho.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Pinnacle",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-pinnacle.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Dracarys",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-Dracarys.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Ego",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-ego.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Latitude Standard",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-latitude.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Euphoria",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-Euphoria.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Velvet Fuzz",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-velvet.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Paisley",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-paisley.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Clarksdale",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-Clarksdale.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Plexi-Drive",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-plexidrive.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Sovereign",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-Sovereign.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "cataPulp",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-catapulp.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Tweed 57",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/wampler-tweed57.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Tumnus",
+        "Width" : 1.5,
+        "Height" : 3.5,
+        "Image" : "public/images/pedals/wampler-tumnus.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "Mini Ego",
+        "Width" : 1.5,
+        "Height" : 3.5,
+        "Image" : "public/images/pedals/wampler-miniego.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Wampler",
+        "Name" : "dB+",
+        "Width" : 1.5,
+        "Height" : 3.5,
+        "Image" : "public/images/pedals/wampler-db.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Xotic",
+        "Name" : "RC Booster",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/xotic-rcbooster.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Xotic",
+        "Name" : "AC Booster",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/xotic-acbooster.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Xotic",
+        "Name" : "AC+",
+		"Width" : 4.7,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/xotic-acplus.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Xotic",
+        "Name" : "BB+",
+		"Width" : 4.7,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/xotic-bbplus.png"
+    },
+	{
         "Type" : "Overdrive",
         "Brand" : "Xotic",
         "Name" : "BB Preamp",
@@ -1639,6 +2334,30 @@
 		"Width" : 4.7,
         "Height" : 2.38,
         "Image" : "public/images/pedals/zvex-fuzzfactory.png"
+    },
+    {
+        "Type" : "Fuzz",
+        "Brand" : "Zvex",
+        "Name" : "Box of Rock",
+		"Width" : 4.7,
+        "Height" : 2.38,
+        "Image" : "public/images/pedals/zvex-boxofrock.png"
+    },
+    {
+        "Type" : "Fuzz",
+        "Brand" : "Zvex",
+        "Name" : "Distortron",
+		"Width" : 4.7,
+        "Height" : 2.38,
+        "Image" : "public/images/pedals/zvex-distortron.png"
+    },
+    {
+        "Type" : "Fuzz",
+        "Brand" : "Zvex",
+        "Name" : "Instant Lofi Junky",
+		"Width" : 4.7,
+        "Height" : 2.38,
+        "Image" : "public/images/pedals/zvex-lofijunky.png"
     }
 
 ]

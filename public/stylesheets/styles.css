@@ -7201,3 +7201,10 @@ strong, th {
   border-radius: 100px;
   width: 20px;
   height: 20px; }
+
+#list-pedals .pedal-listing {
+  float: left;
+  margin: 20px; }
+  #list-pedals .pedal-listing img {
+    max-width: none !important;
+    width: initial !important; }
