@@ -33,6 +33,46 @@
     },
 	{
         "Type" : "Overdrive",
+        "Brand" : "Caroline",
+        "Name" : "Haymaker",
+		"Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/caroline-haymaker.png"
+    },
+	{
+        "Type" : "Delay",
+        "Brand" : "Caroline",
+        "Name" : "Kilobyte",
+		"Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/caroline-kilobyte.png"
+    },
+	{
+        "Type" : "Fuzz",
+        "Brand" : "Caroline",
+        "Name" : "Shigeharu",
+		"Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/caroline-shigeharu.png"
+    },
+	{
+        "Type" : "Distortion",
+        "Brand" : "Caroline",
+        "Name" : "Wave Cannon",
+		"Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/caroline-wavecannon.png"
+    },
+	{
+        "Type" : "Fuzz",
+        "Brand" : "Caroline",
+        "Name" : "Icarus",
+		"Width" : 2.6,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/caroline-icarus.png"
+    },
+	{
+        "Type" : "Overdrive",
         "Brand" : "Chase Bliss",
         "Name" : "Brothers",
 		"Width" : 2.75,
@@ -78,6 +118,14 @@
 		"Width" : 2.75,
         "Height" : 4.77,
         "Image" : "public/images/pedals/chasebliss-wombtone.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Crowther",
+        "Name" : "Hot Cake",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/crowther-hotcake.png"
     },
 	{
         "Type" : "Overdrive",
@@ -255,6 +303,30 @@
         "Height" : 5.125,
         "Image" : "public/images/pedals/boss-rv5.png"
     },
+	{
+        "Type" : "Compression",
+        "Brand" : "Bondi Effects",
+        "Name" : "2026 Compressor",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/bondi-2026.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Bondi Effects",
+        "Name" : "Sick As",
+		"Width" : 4.7,
+        "Height" : 3.7,
+        "Image" : "public/images/pedals/bondi-sickas.png"
+    },
+	{
+        "Type" : "Overdrive",
+        "Brand" : "Bondi Effects",
+        "Name" : "Del Mar",
+		"Width" : 2.5,
+        "Height" : 4.3,
+        "Image" : "public/images/pedals/bondi-delmar.png"
+    },
     {
         "Type" : "Reverb",
         "Brand" : "BOSS",
@@ -279,6 +351,182 @@
         "Height" : 5.125,
         "Image" : "public/images/pedals/boss-dd5.png"
     },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "RV-6 Reverb",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-rv6.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "TR-2 Tremolo",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-tr2.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "OD-1 Overdrive",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-od1.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "OD-1X Overdrive",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-od1x.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "TE-2 Tera Echo",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-te2.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "DM-2 Delay",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-dm2w.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "TU-3 Chromatic Tuner",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-tu3.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "TU-3w Chromatic Tuner",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-tu3w.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "TU-3s Chromatic Tuner",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-tu3s.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "CP-1X Compressor",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-cp1x.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "BF-3 Flanger",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-bf3.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "FZ-5 Fuzz",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-fz5.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "DS-1X",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-ds1x.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "DD-7 Digital Delay",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-dd7.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "RC-3 Loop Station",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-rc3.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "MT-2 Metal Zone",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-mt2.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "OS-2 Overdrive/Distortion",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-os2.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "PS-2 Pitch Shifter/Delay",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-ps2.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "NS-2 Noise Suppressor",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-ns2.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "OC-2 Octave",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-oc2.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "OD-1 Overdrive",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-od1.png"
+    },
+	{
+        "Type" : "Reverb",
+        "Brand" : "BOSS",
+        "Name" : "GE-6 Graphic Equalizer",
+        "Width" : 2.875,
+        "Height" : 5.125,
+        "Image" : "public/images/pedals/boss-ge6.png"
+    },
     {
         "Type" : "Delay",
         "Brand" : "BOSS",
@@ -302,6 +550,14 @@
 		"Width" : 3.15,
 		"Height" : 7.56,
 		"Image" : "public/images/pedals/boss-fv30.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "BOSS",
+		"Name" : "FV-500L",
+		"Width" : 4.4,
+		"Height" : 11.4,
+		"Image" : "public/images/pedals/boss-fv500.png"
 	},
 	{
 		"Type" : "Volume",
@@ -488,6 +744,22 @@
         "Image" : "public/images/pedals/klon-ktr.png"
     },
 	{
+        "Type" : "OD/Distortion",
+        "Brand" : "Klon",
+        "Name" : "Centaur",
+        "Width" : 6.5,
+        "Height" : 5,
+        "Image" : "public/images/pedals/klon-centaur.png"
+    },
+	{
+        "Type" : "OD/Distortion",
+        "Brand" : "Klon",
+        "Name" : "Centaur (Horsey)",
+		"Width" : 6.5,
+        "Height" : 5,
+        "Image" : "public/images/pedals/klon-centaurhorsey.png"
+    },
+	{
         "Type" : "Tuner",
         "Brand" : "Korg",
         "Name" : "Pitchblack",
@@ -627,8 +899,8 @@
 		"Type" : "Overdrive",
 		"Brand" : "MXR",
 		"Name" : "Phase 100",
-		"Width" : 4.5,
-		"Height" : 5.5,
+		"Width" : 3.7,
+        "Height" : 4.7,
 		"Image" : "public/images/pedals/mxr-phase100.png"
 	},
 	{
@@ -1023,6 +1295,14 @@
         "Height" : 3.7,
         "Image" : "public/images/pedals/jhs-sweettea.png"
     },
+	{
+        "Type" : "Volume",
+        "Brand" : "Tapestry Audio",
+        "Name" : "Bloomery",
+        "Width" : 2.25,
+        "Height" : 7.8,
+        "Image" : "public/images/pedals/tapestry-bloomery.png"
+    },
     {
         "Type" : "Compression",
         "Brand" : "Way Huge",
@@ -1062,6 +1342,118 @@
         "Width" : 4.5,
         "Height" : 4.5,
         "Image" : "public/images/pedals/sa-nemesis.png"
+	},
+	{
+        "Type" : "Reverb",
+        "Brand" : "Source Audio",
+        "Name" : "Dimension",
+        "Width" : 4.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-dimension.png"
+	},
+	{
+        "Type" : "Distortion",
+        "Brand" : "Source Audio",
+        "Name" : "Multiwave Distortion",
+        "Width" : 4.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-multiwave.png"
+	},
+	{
+        "Type" : "Reverb",
+        "Brand" : "Source Audio",
+        "Name" : "Orbital Modulator",
+        "Width" : 4.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-orbital.png"
+	},
+	{
+        "Type" : "Multi Effects",
+        "Brand" : "Source Audio",
+        "Name" : "OFD Guitar Micromodeler",
+        "Width" : 4.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-ofo.png"
+	},
+	{
+        "Type" : "Filter",
+        "Brand" : "Source Audio",
+        "Name" : "Stingray Multi-Filter",
+        "Width" : 4.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-stingray.png"
+	},
+	{
+        "Type" : "Tremolo",
+        "Brand" : "Source Audio",
+        "Name" : "Vertigo Tremolo",
+        "Width" : 2.75,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-vertigo.png"
+	},
+	{
+        "Type" : "Tremolo",
+        "Brand" : "Source Audio",
+        "Name" : "Lunar Phaser",
+        "Width" : 2.75,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-lunar.png"
+	},
+	{
+        "Type" : "Tremolo",
+        "Brand" : "Source Audio",
+        "Name" : "Mercury Flanger",
+        "Width" : 2.75,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-mercury.png"
+	},
+	{
+        "Type" : "Tremolo",
+        "Brand" : "Source Audio",
+        "Name" : "Gemini Chorus",
+        "Width" : 2.75,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-gemini.png"
+	},
+	{
+        "Type" : "Tremolo",
+        "Brand" : "Source Audio",
+        "Name" : "LA Lady Overdrive",
+        "Width" : 2.75,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-lalady.png"
+	},
+	{
+        "Type" : "Tremolo",
+        "Brand" : "Source Audio",
+        "Name" : "Kingmaker Fuzz",
+        "Width" : 2.75,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-kingmaker.png"
+	},
+	{
+        "Type" : "EQ",
+        "Brand" : "Source Audio",
+        "Name" : "Programmable EQ",
+        "Width" : 2.5,
+        "Height" : 4.5,
+        "Image" : "public/images/pedals/sourceaudio-eq.png"
+	},
+	{
+        "Type" : "Switching",
+        "Brand" : "Source Audio",
+        "Name" : "Soleman MIDI Controller",
+        "Width" : 10.5,
+        "Height" : 3.75,
+        "Image" : "public/images/pedals/sourceaudio-soleman.png"
+	},
+	{
+        "Type" : "Switching",
+        "Brand" : "Source Audio",
+        "Name" : "Tap Tempo Switch",
+        "Width" : 2.25,
+        "Height" : 2.5,
+        "Image" : "public/images/pedals/sourceaudio-tap.png"
 	},
 	{
         "Type" : "Compression",
