@@ -295,14 +295,6 @@
         "Height" : 3.82,
         "Image" : "public/images/pedals/boss-es5.png"
     },
-    {
-        "Type" : "OD/Distortion",
-        "Brand" : "Klon",
-        "Name" : "KTR",
-        "Width" : 3.7,
-        "Height" : 4.7,
-        "Image" : "public/images/pedals/klon-ktr.png"
-    },
 	{
 		"Type" : "Volume",
 		"Brand" : "BOSS",
@@ -310,6 +302,110 @@
 		"Width" : 3.15,
 		"Height" : 7.56,
 		"Image" : "public/images/pedals/boss-fv30.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "BOSS",
+		"Name" : "RE-20",
+		"Width" : 6.81,
+		"Height" : 6.25,
+		"Image" : "public/images/pedals/boss-re20.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "BOSS",
+		"Name" : "DD-20",
+		"Width" : 6.81,
+		"Height" : 6.25,
+		"Image" : "public/images/pedals/boss-dd20.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "DigiTech",
+		"Name" : "Whammy 5",
+		"Width" : 6.5,
+		"Height" : 7.75,
+		"Image" : "public/images/pedals/digitech-whammy.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Disaster Area",
+		"Name" : "DPC5",
+		"Width" : 10,
+		"Height" : 2.65,
+		"Image" : "public/images/pedals/disasterarea-dpc5.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Disaster Area",
+		"Name" : "DMC-8",
+		"Width" : 10,
+		"Height" : 2.65,
+		"Image" : "public/images/pedals/disasterarea-dmc8.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Disaster Area",
+		"Name" : "DMC-6",
+		"Width" : 7.4,
+		"Height" : 4.7,
+		"Image" : "public/images/pedals/disasterarea-dmc6.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Disaster Area",
+		"Name" : "DMC-4",
+		"Width" : 4.7,
+		"Height" : 3.7,
+		"Image" : "public/images/pedals/disasterarea-dmc4.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Disaster Area",
+		"Name" : "DMC-3XL",
+		"Width" : 4.8,
+		"Height" : 2.75,
+		"Image" : "public/images/pedals/disasterarea-dmc3xl.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Disaster Area",
+		"Name" : "DMC-2",
+		"Width" : 3.6,
+		"Height" : 1.5,
+		"Image" : "public/images/pedals/disasterarea-dmc2.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Dunlop",
+		"Name" : "Crybaby",
+		"Width" : 4,
+		"Height" : 10,
+		"Image" : "public/images/pedals/dunlop-wah.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Dunlop",
+		"Name" : "Crybaby Mini",
+		"Width" : 3,
+		"Height" : 5.25,
+		"Image" : "public/images/pedals/dunlop-crybabymini.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "Dunlop",
+		"Name" : "DVP4 Mini Volume",
+		"Width" : 2.97,
+		"Height" : 6,
+		"Image" : "public/images/pedals/dunlop-dvp4.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "Dunlop",
+		"Name" : "DVP3 Volume",
+		"Width" : 3.86,
+		"Height" : 10,
+		"Image" : "public/images/pedals/dunlop-dvp3.png"
 	},
 	{
 		"Type" : "Multi Effects",
@@ -360,6 +456,62 @@
 		"Image" : "public/images/pedals/freethetone-flighttime.png"
 	},
 	{
+		"Type" : "Delay",
+		"Brand" : "Ibanez",
+		"Name" : "DE7",
+		"Width" : 3,
+		"Height" : 5,
+		"Image" : "public/images/pedals/ibanez-de7.png"
+	},
+	{
+		"Type" : "Delay",
+		"Brand" : "Ibanez",
+		"Name" : "TS7",
+		"Width" : 3,
+		"Height" : 5,
+		"Image" : "public/images/pedals/ibanez-ts7.png"
+	},
+	{
+		"Type" : "Delay",
+		"Brand" : "Ibanez",
+		"Name" : "CF7",
+		"Width" : 3,
+		"Height" : 5,
+		"Image" : "public/images/pedals/ibanez-cf7.png"
+	},
+	{
+        "Type" : "OD/Distortion",
+        "Brand" : "Klon",
+        "Name" : "KTR",
+        "Width" : 3.7,
+        "Height" : 4.7,
+        "Image" : "public/images/pedals/klon-ktr.png"
+    },
+	{
+        "Type" : "Tuner",
+        "Brand" : "Korg",
+        "Name" : "Pitchblack",
+        "Width" : 2.68,
+        "Height" : 4.72,
+        "Image" : "public/images/pedals/korg-pitchblack.png"
+    },
+	{
+        "Type" : "Tuner",
+        "Brand" : "Korg",
+        "Name" : "Pitchblack Advance",
+        "Width" : 2.68,
+        "Height" : 4.37,
+        "Image" : "public/images/pedals/korg-pitchblackadvance.png"
+    },
+	{
+        "Type" : "Tuner",
+        "Brand" : "Korg",
+        "Name" : "Pitchblack Mini",
+        "Width" : 1.77,
+        "Height" : 3.66,
+        "Image" : "public/images/pedals/korg-pitchblackmini.png"
+    },
+	{
 		"Type" : "Reverb",
 		"Brand" : "Meris",
 		"Name" : "Mercury7",
@@ -374,6 +526,118 @@
 		"Width" : 4.5,
 		"Height" : 4.85,
 		"Image" : "public/images/pedals/meris-ottobitjr.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Morley",
+		"Name" : "Bad Horsie",
+		"Width" : 6,
+		"Height" : 9.25,
+		"Image" : "public/images/pedals/morley-wah.png"
+	},
+	{
+		"Type" : "Wah",
+		"Brand" : "Morley",
+		"Name" : "Mini Wah",
+		"Width" : 4.5,
+		"Height" : 6.75,
+		"Image" : "public/images/pedals/morley-miniwah.png"
+	},
+	{
+		"Type" : "Volume",
+		"Brand" : "Mission",
+		"Name" : "VM-PRO",
+		"Width" : 4,
+		"Height" : 10,
+		"Image" : "public/images/pedals/mission-vp1.png"
+	},
+	{
+		"Type" : "Overdrive",
+		"Brand" : "MXR",
+		"Name" : "Micro Amp+",
+		"Width" : 2.75,
+		"Height" : 4.75,
+		"Image" : "public/images/pedals/mxr-microamp.png"
+	},
+	{
+		"Type" : "Overdrive",
+		"Brand" : "MXR",
+		"Name" : "Dyna Comp",
+		"Width" : 2.75,
+		"Height" : 4.75,
+		"Image" : "public/images/pedals/mxr-dynacomp.png"
+	},
+	{
+		"Type" : "Delay",
+		"Brand" : "MXR",
+		"Name" : "Carbon Copy",
+		"Width" : 2.75,
+		"Height" : 4.75,
+		"Image" : "public/images/pedals/mxr-carboncopy.png"
+	},
+	{
+		"Type" : "Phaser",
+		"Brand" : "MXR",
+		"Name" : "Phase 90",
+		"Width" : 2.75,
+		"Height" : 4.75,
+		"Image" : "public/images/pedals/mxr-phase90.png"
+	},
+	{
+		"Type" : "Overdrive",
+		"Brand" : "MXR",
+		"Name" : "Micro Chorus",
+		"Width" : 2.75,
+		"Height" : 4.75,
+		"Image" : "public/images/pedals/mxr-microchorus.png"
+	},
+	{
+		"Type" : "Overdrive",
+		"Brand" : "MXR",
+		"Name" : "Reverb",
+		"Width" : 2.85,
+		"Height" : 4.75,
+		"Image" : "public/images/pedals/mxr-reverb.png"
+	},
+	{
+		"Type" : "Overdrive",
+		"Brand" : "MXR",
+		"Name" : "Six Band EQ",
+		"Width" : 2.75,
+		"Height" : 4.75,
+		"Image" : "public/images/pedals/mxr-eq.png"
+	},
+	{
+		"Type" : "Overdrive",
+		"Brand" : "MXR",
+		"Name" : "Ten Band EQ",
+		"Width" : 5.5,
+		"Height" : 4.5,
+		"Image" : "public/images/pedals/mxr-eq2.png"
+	},
+	{
+		"Type" : "Overdrive",
+		"Brand" : "MXR",
+		"Name" : "Stereo Chorus",
+		"Width" : 5.5,
+		"Height" : 4.5,
+		"Image" : "public/images/pedals/mxr-stereochorus.png"
+	},
+	{
+		"Type" : "Overdrive",
+		"Brand" : "MXR",
+		"Name" : "Phase 100",
+		"Width" : 4.5,
+		"Height" : 5.5,
+		"Image" : "public/images/pedals/mxr-phase100.png"
+	},
+	{
+		"Type" : "Overdrive",
+		"Brand" : "MXR",
+		"Name" : "Phase 95",
+		"Width" : 2,
+        "Height" : 3.66,
+		"Image" : "public/images/pedals/mxr-phase95.png"
 	},
 	{
 		"Type" : "Reverb",
