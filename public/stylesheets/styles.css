@@ -7034,6 +7034,7 @@ strong, th {
     margin-bottom: 16px; }
 
 .canvas {
+  position: relative;
   background: #F8F8F8 url("../images/grid.png");
   overflow: hidden; }
 
