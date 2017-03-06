@@ -1,14 +1,6 @@
 [
 	{
         "Type" : "Overdrive",
-        "Brand" : "A",
-        "Name" : "Test Pedal",
-		"Width" : 2.5,
-        "Height" : 9.3,
-        "Image" : "public/images/pedals/alexander-jubilee.png"
-    },
-	{
-        "Type" : "Overdrive",
         "Brand" : "Alexander",
         "Name" : "Jubilee",
 		"Width" : 2.5,
