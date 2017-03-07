@@ -376,6 +376,14 @@
         "Image" : "public/images/pedals/foxrox-paradoxtzf2.png"
     },
 	{
+        "Type" : "Switching",
+        "Brand" : "Kemper",
+        "Name" : "Remote",
+		"Width" : 16.5,
+        "Height" : 7,
+        "Image" : "public/images/pedals/kemper-remote.png"
+    },
+	{
         "Type" : "Tuner",
         "Brand" : "Sonic Research",
         "Name" : "Turbo Tuner ST-300",
