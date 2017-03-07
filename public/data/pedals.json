@@ -1,14 +1,6 @@
 [
 	{
         "Type" : "Overdrive",
-        "Brand" : "A",
-        "Name" : "Test Pedal",
-		"Width" : 2.5,
-        "Height" : 9.3,
-        "Image" : "public/images/pedals/alexander-jubilee.png"
-    },
-	{
-        "Type" : "Overdrive",
         "Brand" : "Alexander",
         "Name" : "Jubilee",
 		"Width" : 2.5,
@@ -1319,7 +1311,15 @@
         "Height" : 4.5,
         "Image" : "public/images/pedals/strymon-ob1.png"
     },
-    {
+	{
+        "Type" : "Delay",
+        "Brand" : "TC Electronics",
+        "Name" : "Alter Ego x4",
+        "Width" : 9.25,
+        "Height" : 5.70866,
+        "Image" : "public/images/pedals/tc-alteregox4.png"
+    },
+	{
         "Type" : "Compression",
         "Brand" : "TC Electronics",
         "Name" : "Corona Chorus",
