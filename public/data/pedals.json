@@ -2056,6 +2056,22 @@
         "Image" : "public/images/pedals/thorpy-peacekeeper.png"
     },
 	{
+        "Type" : "Wah",
+        "Brand" : "Vox",
+        "Name" : "V847 Wah",
+        "Width" : 4.01575,
+        "Height" : 9.92126,
+        "Image" : "public/images/pedals/vox-wah.png"
+    },
+	{
+        "Type" : "Wah",
+        "Brand" : "Vox",
+        "Name" : "Big Bad Wah",
+        "Width" : 5.12,
+        "Height" : 9.96,
+        "Image" : "public/images/pedals/vox-bigbadwah.png"
+    },
+	{
         "Type" : "Overdrive",
         "Brand" : "Walrus",
         "Name" : "385 Overdrive",
