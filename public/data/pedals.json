@@ -1161,6 +1161,13 @@
         "Height": 4.5,
         "Image": "public/images/pedals/strymon-elcap.png"
     },
+	{
+        "Brand": "Strymon",
+        "Name": "Blue Sky",
+        "Width": 4,
+        "Height": 4.5,
+        "Image": "public/images/pedals/strymon-bluesky.png"
+    },
     {
         "Brand": "Strymon",
         "Name": "Brigadier",
