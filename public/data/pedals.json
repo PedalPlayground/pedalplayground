@@ -97,7 +97,7 @@
     },
 	{
         "Type" : "Overdrive",
-        "Brand" : "Analogman",
+        "Brand" : "Analog.Man",
         "Name" : "King of Tone",
 		"Width" : 4.8,
         "Height" : 3.7,
@@ -105,7 +105,7 @@
     },
 	{
         "Type" : "Overdrive",
-        "Brand" : "Analogman",
+        "Brand" : "Analog.Man",
         "Name" : "Sunface",
 		"Width" : 2.5,
         "Height" : 4.625,
@@ -113,7 +113,7 @@
     },
 	{
         "Type" : "Overdrive",
-        "Brand" : "Analogman",
+        "Brand" : "Analog.Man",
         "Name" : "Peppermint Fuzz",
 		"Width" : 2.5,
         "Height" : 4.625,
@@ -121,7 +121,7 @@
     },
 	{
         "Type" : "Overdrive",
-        "Brand" : "Analogman",
+        "Brand" : "Analog.Man",
         "Name" : "Prince of Tone",
 		"Width" : 2.2,
         "Height" : 4.2,
@@ -753,7 +753,7 @@
 	},
 	{
         "Type" : "Reverb",
-        "Brand" : "Digitech",
+        "Brand" : "DigiTech",
         "Name" : "Jamman Express",
 		"Width" : 2.75,
 		"Height" : 4.75,
@@ -1649,7 +1649,7 @@
     },
     {
         "Type" : "OD/Distorion",
-        "Brand" : "Fultone",
+        "Brand" : "Fulltone",
         "Name" : "Full-drive 3",
         "Width" : 4.81,
         "Height" : 4,
@@ -1657,7 +1657,7 @@
     },
     {
         "Type" : "OD/Distorion",
-        "Brand" : "Fultone",
+        "Brand" : "Fulltone",
         "Name" : "Full-drive 2",
         "Width" : 5.75,
         "Height" : 4,
@@ -1665,7 +1665,7 @@
     },
 	{
         "Type" : "OD/Distorion",
-        "Brand" : "Fultone",
+        "Brand" : "Fulltone",
         "Name" : "Supa-Trem 2",
         "Width" : 5.25,
         "Height" : 4,
@@ -1673,7 +1673,7 @@
     },
 	{
         "Type" : "OD/Distorion",
-        "Brand" : "Fultone",
+        "Brand" : "Fulltone",
         "Name" : "Supa-Trem",
         "Width" : 6,
         "Height" : 3.25,
@@ -1681,7 +1681,7 @@
     },
 	{
         "Type" : "OD/Distorion",
-        "Brand" : "Fultone",
+        "Brand" : "Fulltone",
         "Name" : "OCD",
         "Width" : 2.5,
         "Height" : 4.5,
@@ -1689,7 +1689,7 @@
     },
 	{
         "Type" : "OD/Distorion",
-        "Brand" : "Fultone",
+        "Brand" : "Fulltone",
         "Name" : "Fat Boost FB-3",
         "Width" : 2.5,
         "Height" : 4.5,
@@ -1697,7 +1697,7 @@
     },
 	{
         "Type" : "OD/Distorion",
-        "Brand" : "Fultone",
+        "Brand" : "Fulltone",
         "Name" : "Clyde Wah",
         "Width" : 4.72,
         "Height" : 10,
@@ -1705,7 +1705,7 @@
     },
 	{
         "Type" : "OD/Distorion",
-        "Brand" : "Digitech",
+        "Brand" : "DigiTech",
         "Name" : "RV-7 Reverb",
         "Width" : 3.5,
         "Height" : 5.5,
@@ -1713,7 +1713,7 @@
     },
 	{
         "Type" : "OD/Distorion",
-        "Brand" : "Digitech",
+        "Brand" : "DigiTech",
         "Name" : "DL-8 Delay/Looper",
         "Width" : 3.5,
         "Height" : 5.5,
@@ -1721,7 +1721,7 @@
     },
 	{
         "Type" : "OD/Distorion",
-        "Brand" : "Digitech",
+        "Brand" : "DigiTech",
         "Name" : "Trio Looper",
         "Width" : 3.25,
         "Height" : 5.4,
@@ -1729,7 +1729,7 @@
     },
 	{
         "Type" : "OD/Distorion",
-        "Brand" : "Digitech",
+        "Brand" : "DigiTech",
         "Name" : "Trio+ Looper",
         "Width" : 4.25,
         "Height" : 5.4,
