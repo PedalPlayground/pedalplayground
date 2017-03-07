@@ -2122,14 +2122,14 @@
     {
         "Brand": "Xotic",
         "Name": "SP Compressor",
-        "Width": 1.5,
+        "Width": 2,
         "Height": 3.5,
         "Image": "public/images/pedals/xotic-sp.png"
     },
 	{
         "Brand": "Xotic",
         "Name": "EP Booster",
-        "Width": 1.5,
+        "Width": 2,
         "Height": 3.5,
         "Image": "public/images/pedals/xotic-ep.png"
     },
