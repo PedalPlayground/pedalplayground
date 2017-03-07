@@ -1819,6 +1819,34 @@
         "Height": 5.7,
         "Image": "public/images/pedals/thorpy-peacekeeper.png"
     },
+	{
+        "Brand": "TrueTone",
+        "Name": "Jekyll & Hyde V3",
+        "Width": 6,
+        "Height": 5,
+        "Image": "public/images/pedals/truetone-jekyll.png"
+    },
+	{
+        "Brand": "TrueTone",
+        "Name": "V3 H2O",
+        "Width": 6,
+        "Height": 5,
+        "Image": "public/images/pedals/truetone-h2o.png"
+    },
+	{
+        "Brand": "TrueTone",
+        "Name": "VS-XO",
+        "Width": 6,
+        "Height": 5,
+        "Image": "public/images/pedals/truetone-vsxo.png"
+    },
+	{
+        "Brand": "TrueTone",
+        "Name": "V3 Route 66",
+        "Width": 6,
+        "Height": 5,
+        "Image": "public/images/pedals/truetone-route66.png"
+    },
     {
         "Brand": "Vox",
         "Name": "V847 Wah",
