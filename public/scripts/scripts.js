@@ -19059,9 +19059,6 @@ window.GetPedalData = function(){
 					data[pedal].Image 	|| ""
 				));
 			}
-			pedals.sort(function(a, b) {
-				return parseFloat(a.brand) - parseFloat(b.brand);
-			});
 			console.log("Pedal data loaded");
 			pedals.forEach(RenderPedals);
 			listPedals(pedals);
