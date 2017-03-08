@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 	$('body').on('click', '#add-pedal button', function(event){
 		var selected  	= $('#add-pedal').find(":selected");
-		//var name 		= $(selected).text();
+		var name 		= $(selected).text();
 		var shortname 	= $(selected).attr("id");
 		var w	 	  	= $(selected).data("width") * multiplier;
 		var h   		= $(selected).data("height") * multiplier;
@@ -65,15 +65,13 @@ $(document).ready(function(){
 </div>';
 		$('.canvas').append(pedal);
 		readyCanvas();
-
-		// Send action to GA
-		ga('send', 'event', 'Pedal', 'added', shortname);
-
+		ga('send', 'event', 'Pedal', 'added', name);
 		event.preventDefault();
 	});
 
 	$('body').on('click', '#add-pedalboard button', function(event){
 		var selected  = $('#add-pedalboard').find(":selected");
+		var name 		= $(selected).text();
 		var shortname 	= $(selected).attr("id");
 		var w	 	  	= $(selected).data("width") * multiplier;
 		var h   		= $(selected).data("height") * multiplier;
@@ -89,7 +87,7 @@ $(document).ready(function(){
 
 		$('.canvas').append(pedal);
 		readyCanvas();
-		ga('send', 'event', 'Pedalboard', 'added', shortname);
+		ga('send', 'event', 'Pedalboard', 'added', name);
 		event.preventDefault();
 	});
 
@@ -165,6 +163,7 @@ function readyCanvas(pedal) {
 
 	$draggable.on( 'dragEnd', function() {
 		console.log('dragEnd');
+		ga('send', 'event', 'Canvas', 'moved', 'dragend');
 		savePedalCanvas();
 	});
 	$draggable.on( 'staticClick', function(event) {
@@ -196,6 +195,7 @@ function savePedalCanvas() {
 }
 
 function rotatePedal(pedal) {
+	ga('send', 'event', 'Pedal', 'clicked', "rotate");
 	if ( $(pedal).hasClass("rotate-90") ) {
 		$(pedal).removeClass("rotate-90");
 		$(pedal).addClass("rotate-180");
