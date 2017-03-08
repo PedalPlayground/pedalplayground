@@ -79,6 +79,7 @@ gulp.task('scripts', function() {
     return gulp.src([
         'bower_components/jquery/dist/jquery.js',
         'bower_components/draggabilly/dist/draggabilly.pkgd.js',
+        'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
         'bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js',
         'bower_components/select2/dist/js/select2.js',
         'app/scripts/scripts.js'])
