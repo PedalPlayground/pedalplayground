@@ -18873,7 +18873,7 @@ $(document).ready(function(){
 		readyCanvas();
 
 		// Send action to GA
-		ga('send', 'event', 'Actions', 'added', shortname);
+		ga('send', 'event', 'Pedal', 'added', shortname);
 
 		event.preventDefault();
 	});
@@ -18893,8 +18893,9 @@ $(document).ready(function(){
 	</div>\
 </div>';
 
-	$('.canvas').append(pedal);
+		$('.canvas').append(pedal);
 		readyCanvas();
+		ga('send', 'event', 'Pedalboard', 'added', shortname);
 		event.preventDefault();
 	});
 
@@ -18906,10 +18907,13 @@ $(document).ready(function(){
 	// Add custom pedal
 	$('body').on('click', '#add-custom-pedal .btn', function(event){
 		console.log("add custom pedal...");
-		var width  	  = $("#add-custom-pedal .custom-width").val() * multiplier;
-		var height    = $("#add-custom-pedal .custom-height").val() * multiplier;
-		var image  	  = $("#add-custom-pedal .custom-color").val();
-		var pedal     = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px;">\
+		var truewidth  = $("#add-custom-pedal .custom-width").val();
+		var trueheight = $("#add-custom-pedal .custom-height").val();
+		var width  	   = truewidth * multiplier;
+		var height     = trueheight * multiplier;
+		var dims  	   = truewidth + '" x ' + trueheight + '"';
+		var image  	   = $("#add-custom-pedal .custom-color").val();
+		var pedal      = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px;">\
 		<span class="pedal__box" style="background-color:'+image+';"></span>\
 		<span class="pedal__jack1"></span>\
 		<span class="pedal__jack2"></span>\
@@ -18925,6 +18929,8 @@ $(document).ready(function(){
 
 		$('.canvas').append(pedal);
 		readyCanvas();
+		console.log(dims);
+		ga('send', 'event', 'Pedal', 'added', dims);
 		event.preventDefault();
 	});
 
