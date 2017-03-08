@@ -1945,6 +1945,118 @@
         "Height": 3.5,
         "Image": "public/images/pedals/empress-comp.png"
     },
+	{
+        "Brand": "Empress",
+        "Name": "Tremolo 2",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-trem2.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Phaser",
+        "Width": 4.5,
+        "Height": 3.5,
+		"Image": "public/images/pedals/empress-phaser.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Multidrive",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-multidrive.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Heavy",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-heavy.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Para EQ",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-paraeq.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Nebulus",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-nebulus.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Tape Delay",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-tapedelay.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Superdelay",
+        "Width": 5.7,
+        "Height": 3.75,
+        "Image": "public/images/pedals/empress-superdelay.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Vintage Modified Superdelay",
+        "Width": 5.7,
+        "Height": 3.75,
+        "Image": "public/images/pedals/empress-superdelayvmod.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Reverb",
+        "Width": 5.7,
+        "Height": 3.75,
+        "Image": "public/images/pedals/empress-reverb.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Distortion",
+		"Width": 2.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-distortion.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Fuzz",
+		"Width": 2.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-fuzz.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Germ Drive",
+		"Width": 2.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-germdrive.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Buffer+",
+		"Width": 2.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-bufferplus.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Buffer",
+        "Width": 2.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-buffer.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Buffer+Stereo",
+        "Width": 3.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-stereobuffer.png"
+    },
     {
         "Brand": "Thorpy",
         "Name": "Gunshot",
