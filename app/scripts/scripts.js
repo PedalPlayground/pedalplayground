@@ -55,7 +55,7 @@ $(document).ready(function(){
 
 	$('body').on('click', '#add-pedal button', function(event){
 		var selected  	= $('#add-pedal').find(":selected");
-		//var name 		= $(selected).text();
+		var name 		= $(selected).text();
 		var shortname 	= $(selected).attr("id");
 		var w	 	  	= $(selected).data("width") * multiplier;
 		var h   		= $(selected).data("height") * multiplier;
@@ -70,11 +70,13 @@ $(document).ready(function(){
 </div>';
 		$('.canvas').append(pedal);
 		readyCanvas();
+		ga('send', 'event', 'Pedal', 'added', name);
 		event.preventDefault();
 	});
 
 	$('body').on('click', '#add-pedalboard button', function(event){
 		var selected  = $('#add-pedalboard').find(":selected");
+		var name 		= $(selected).text();
 		var shortname 	= $(selected).attr("id");
 		var w	 	  	= $(selected).data("width") * multiplier;
 		var h   		= $(selected).data("height") * multiplier;
@@ -88,8 +90,9 @@ $(document).ready(function(){
 	</div>\
 </div>';
 
-	$('.canvas').append(pedal);
+		$('.canvas').append(pedal);
 		readyCanvas();
+		ga('send', 'event', 'Pedalboard', 'added', name);
 		event.preventDefault();
 	});
 
@@ -101,10 +104,13 @@ $(document).ready(function(){
 	// Add custom pedal
 	$('body').on('click', '#add-custom-pedal .btn', function(event){
 		console.log("add custom pedal...");
-		var width  	  = $("#add-custom-pedal .custom-width").val() * multiplier;
-		var height    = $("#add-custom-pedal .custom-height").val() * multiplier;
-		var image  	  = $("#add-custom-pedal .custom-color").val();
-		var pedal     = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px;">\
+		var truewidth  = $("#add-custom-pedal .custom-width").val();
+		var trueheight = $("#add-custom-pedal .custom-height").val();
+		var width  	   = truewidth * multiplier;
+		var height     = trueheight * multiplier;
+		var dims  	   = truewidth + '" x ' + trueheight + '"';
+		var image  	   = $("#add-custom-pedal .custom-color").val();
+		var pedal      = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px;">\
 		<span class="pedal__box" style="background-color:'+image+';"></span>\
 		<span class="pedal__jack1"></span>\
 		<span class="pedal__jack2"></span>\
@@ -120,6 +126,8 @@ $(document).ready(function(){
 
 		$('.canvas').append(pedal);
 		readyCanvas();
+		console.log(dims);
+		ga('send', 'event', 'Pedal', 'added', dims);
 		event.preventDefault();
 	});
 
@@ -160,6 +168,7 @@ function readyCanvas(pedal) {
 
 	$draggable.on( 'dragEnd', function() {
 		console.log('dragEnd');
+		ga('send', 'event', 'Canvas', 'moved', 'dragend');
 		savePedalCanvas();
 	});
 	$draggable.on( 'staticClick', function(event) {
@@ -191,6 +200,7 @@ function savePedalCanvas() {
 }
 
 function rotatePedal(pedal) {
+	ga('send', 'event', 'Pedal', 'clicked', "rotate");
 	if ( $(pedal).hasClass("rotate-90") ) {
 		$(pedal).removeClass("rotate-90");
 		$(pedal).addClass("rotate-180");
@@ -337,6 +347,8 @@ window.listPedals = function(pedals){
 
 			var $pedalListing = $('<div class="pedal-listing">\
 				<img src="' + pedals[i].Image + '" alt="' + pedals[i].Brand + " " + pedals[i].Name + '" width="' + Width + '" height="' + Height + '"/>\
+				<p class="pedal-brand">' + pedals[i].Brand + '</p>\
+				<p class="pedal-name">' + pedals[i].Name + '</p>\
 			</div>');
 			// $pedalListing.css('width', pedals[i].Width);
 			// $pedalListing.css('height', pedals[i].Height);

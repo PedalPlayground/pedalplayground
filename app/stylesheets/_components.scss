@@ -264,27 +264,50 @@ $border: 1px solid rgba(black, .13);
 }
 
 // Huge list of pedals, to find any broken links
-// #list-pedals {
-// 	@include flexbox();
-// 	@include flex-wrap(wrap);
-// 	.pedal-listing {
-// 		@include flex(1 1 200px);
-// 		@include flexbox();
-// 		@include align-items(center);
-// 		padding: 20px;
-// 		img {
-// 			margin: auto;
-// 		}
-// 	}
-// }
-
 #list-pedals {
+	@include flexbox();
+	@include flex-wrap(wrap);
+	background: #222;
 	.pedal-listing {
-		float: left;
-		margin: 20px;
+		@include flex(1 1 150px);
+		@include flexbox();
+		//@include align-items(center);
+		@include justify-content(space-between);
+		@include flex-direction(column);
+		padding: 30px;
+		box-shadow: 1px 1px 0 0 rgba(white, .08);
 		img {
-			max-width: none !important;
-			width: initial !important;
+			margin: auto;
+			display: block;
+			margin-bottom: 10px;
+			max-height: 200px;
+			width: auto;
+		}
+		p {
+			margin-bottom: 0;
+			text-align: center;
+			color: white;
+		}
+		.pedal-brand {
+			opacity: .5;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: $font-size-base - 4;
+		}
+		.pedal-name {
+			opacity: .9;
+			font-size: $font-size-base - 1;
 		}
 	}
 }
+
+// #list-pedals {
+// 	.pedal-listing {
+// 		float: left;
+// 		margin: 20px;
+// 		img {
+// 			max-width: none !important;
+// 			width: initial !important;
+// 		}
+// 	}
+// }

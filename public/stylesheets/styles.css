@@ -7203,9 +7203,57 @@ strong, th {
   width: 20px;
   height: 20px; }
 
-#list-pedals .pedal-listing {
-  float: left;
-  margin: 20px; }
-  #list-pedals .pedal-listing img {
-    max-width: none !important;
-    width: initial !important; }
+#list-pedals {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #222; }
+  #list-pedals .pedal-listing {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 150px;
+    -moz-box-flex: 1;
+    -moz-flex: 1 1 150px;
+    -ms-flex: 1 1 150px;
+    flex: 1 1 150px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.08); }
+    #list-pedals .pedal-listing img {
+      margin: auto;
+      display: block;
+      margin-bottom: 10px;
+      max-height: 200px;
+      width: auto; }
+    #list-pedals .pedal-listing p {
+      margin-bottom: 0;
+      text-align: center;
+      color: white; }
+    #list-pedals .pedal-listing .pedal-brand {
+      opacity: .5;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 10px; }
+    #list-pedals .pedal-listing .pedal-name {
+      opacity: .9;
+      font-size: 13px; }
