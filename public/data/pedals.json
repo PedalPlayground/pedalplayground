@@ -146,6 +146,153 @@
         "Height": 4.3,
         "Image": "public/images/pedals/caroline-icarus.png"
     },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Dirty Little Secret",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-dirtylittlesecret.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Formula No. 55",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-formula55.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "SFT",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-SFT.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Galileo",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-Galileo.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Sabbra Cadabra",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-Sabbra.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Sabbra Cadabra",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-Sabbra.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Formula 5F6",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-Formula5f6.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "RAH",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-RAH.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Adineko",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-adineko.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Bicycle Delay",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-BicycleDelay.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "CSIDMAN",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-Discman.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Talisman",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-talisman.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Belle Epoch",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-belle.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Echorec",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-echorec.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Topanga",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-topanga.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Karma Suture (Ge)",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-GeKarma.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Karma Suture (Si)",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-SiKarma.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Antichthon",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-antichthon.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Valcoder",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-valcoder.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Zero Point",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-zeropoint.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Callisto",
+        "Width": 2.375,
+        "Height": 4.5,
+        "Image": "public/images/pedals/Catalinbread-callisto.png"
+    },
     {
         "Brand": "Chase Bliss",
         "Name": "Brothers",
