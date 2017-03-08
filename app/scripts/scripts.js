@@ -65,6 +65,10 @@ $(document).ready(function(){
 </div>';
 		$('.canvas').append(pedal);
 		readyCanvas();
+
+		// Send action to GA
+		ga('send', 'event', 'Actions', 'added', shortname);
+
 		event.preventDefault();
 	});
 
@@ -332,6 +336,8 @@ window.listPedals = function(pedals){
 
 			var $pedalListing = $('<div class="pedal-listing">\
 				<img src="' + pedals[i].Image + '" alt="' + pedals[i].Brand + " " + pedals[i].Name + '" width="' + Width + '" height="' + Height + '"/>\
+				<p class="pedal-brand">' + pedals[i].Brand + '</p>\
+				<p class="pedal-name">' + pedals[i].Name + '</p>\
 			</div>');
 			// $pedalListing.css('width', pedals[i].Width);
 			// $pedalListing.css('height', pedals[i].Height);

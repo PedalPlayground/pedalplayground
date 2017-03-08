@@ -2141,7 +2141,8 @@
         "Height": 3.7,
         "Image": "public/images/pedals/xotic-bbplus.png"
     },
-    {        "Brand": "Xotic",
+    {
+		"Brand": "Xotic",
         "Name": "BB Preamp",
         "Width": 2.5,
         "Height": 4.3,
