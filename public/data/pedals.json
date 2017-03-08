@@ -183,13 +183,6 @@
     },
 	{
         "Brand": "Catalinbread",
-        "Name": "Sabbra Cadabra",
-        "Width": 2.375,
-        "Height": 4.5,
-        "Image": "public/images/pedals/Catalinbread-Sabbra.png"
-    },
-	{
-        "Brand": "Catalinbread",
         "Name": "Formula 5F6",
         "Width": 2.375,
         "Height": 4.5,
