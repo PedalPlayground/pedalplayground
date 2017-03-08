@@ -2057,6 +2057,27 @@
         "Height": 4.5,
         "Image": "public/images/pedals/empress-stereobuffer.png"
     },
+	{
+        "Brand": "Skreddy",
+        "Name": "Screwdriver",
+		"Width": 2.75,
+        "Height": 4.3,
+        "Image": "public/images/pedals/skreddy-screwdriver.png"
+    },
+	{
+        "Brand": "Skreddy",
+        "Name": "Lunar Module",
+		"Width": 2.75,
+        "Height": 4.3,
+        "Image": "public/images/pedals/skreddy-lunarmodule.png"
+    },
+	{
+        "Brand": "Skreddy",
+        "Name": "Echo",
+		"Width": 4,
+        "Height": 5,
+        "Image": "public/images/pedals/skreddy-echo.png"
+    },
     {
         "Brand": "Thorpy",
         "Name": "Gunshot",
@@ -2393,7 +2414,8 @@
         "Height": 3.7,
         "Image": "public/images/pedals/xotic-bbplus.png"
     },
-    {        "Brand": "Xotic",
+    {
+		"Brand": "Xotic",
         "Name": "BB Preamp",
         "Width": 2.5,
         "Height": 4.3,
