@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+	var pedalImagePath 		= "public/images/pedals/";
+	var pedalboardImagePath = "public/images/pedalboards/";
+
 	// Populate Pedalboards and Pedals lists
 	GetPedalData();
 	GetPedalBoardData();
@@ -62,7 +65,7 @@ $(document).ready(function(){
 		var i 	  		= $(selected).data("image");
 		var pedal     	= '\
 <div class="pedal '+shortname+'">\
-	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url('+i+')"></div>\
+	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url('+ pedalImagePath + i +')"></div>\
 	<div class="actions">\
 		<a class="rotate"></a>\
 		<a class="delete"></a>\
@@ -83,7 +86,7 @@ $(document).ready(function(){
 		var i 	  		= $(selected).data("image");
 		var pedal     	= '\
 <div class="pedalboard '+shortname+'">\
-	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url('+i+')"></div>\
+	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url(' + pedalboardImagePath + i + ')"></div>\
 	<div class="actions">\
 		<a class="rotate"></a>\
 		<a class="delete"></a>\

@@ -17,6 +17,8 @@ var notify = require("gulp-notify");
 var gutil = require("gulp-util");
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var responsive = require('gulp-responsive');
 
 var gzip_options = {
     threshold: '1kb',
@@ -92,6 +94,20 @@ gulp.task('scripts', function() {
 	  .pipe(notify("JS Compiled!"))
 	  .on('error', reportError)
 	  .pipe(livereload());
+});
+
+gulp.task('images', function() {
+	return gulp.src('app/images/pedals/*')
+		.pipe(responsive({
+			'*.*': {
+				withoutEnlargement: false,
+				width: '300',
+				height: '300',
+				max: true
+			}
+		}))
+		.pipe(imagemin())
+		.pipe(gulp.dest('public/images/pedals/'))
 });
 
 /* Watch Files For Changes */

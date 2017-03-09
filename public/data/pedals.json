@@ -4,2512 +4,2512 @@
         "Name": "Cali76 Compact",
         "Width": 2.6,
         "Height": 5.59,
-        "Image": "public/images/pedals/origineffects-cali76.png"
+        "Image": "origineffects-cali76.png"
     },
 	{
         "Brand": "Alexander",
         "Name": "Jubilee",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/alexander-jubilee.png"
+        "Image": "alexander-jubilee.png"
     },
     {
         "Brand": "Alexander",
         "Name": "Radical Delay",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/alexander-radical.png"
+        "Image": "alexander-radical.png"
     },
     {
         "Brand": "Alexander",
         "Name": "F13 Flanger",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/alexander-flange.png"
+        "Image": "alexander-flange.png"
     },
     {
         "Brand": "Alexander",
         "Name": "Sky Fi Reverb",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/alexander-skyfi.png"
+        "Image": "alexander-skyfi.png"
     },
     {
         "Brand": "Alexander",
         "Name": "Golden Summer",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/alexander-goldensummer.png"
+        "Image": "alexander-goldensummer.png"
     },
     {
         "Brand": "Alexander",
         "Name": "Clang",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/alexander-clang.png"
+        "Image": "alexander-clang.png"
     },
     {
         "Brand": "Alexander",
         "Name": "History Lesson",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/alexander-historylesson.png"
+        "Image": "alexander-historylesson.png"
     },
     {
         "Brand": "Alexander",
         "Name": "Space Expander",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/alexander-spaceexpander.png"
+        "Image": "alexander-spaceexpander.png"
     },
     {
         "Brand": "Alexander",
         "Name": "Chesapeake",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/alexander-chesapeake.png"
+        "Image": "alexander-chesapeake.png"
     },
     {
         "Brand": "Alexander",
         "Name": "Calavera",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/alexander-calavera.png"
+        "Image": "alexander-calavera.png"
     },
     {
         "Brand": "Alexander",
         "Name": "Super Radical Delay",
         "Width": 4.7,
         "Height": 3.7,
-        "Image": "public/images/pedals/alexander-superradical.png"
+        "Image": "alexander-superradical.png"
     },
     {
         "Brand": "Alexander",
         "Name": "Oblivion",
         "Width": 4.7,
         "Height": 3.7,
-        "Image": "public/images/pedals/alexander-oblivion.png"
+        "Image": "alexander-oblivion.png"
     },
     {
         "Brand": "Analog.Man",
         "Name": "King of Tone",
         "Width": 4.8,
         "Height": 3.7,
-        "Image": "public/images/pedals/analogman-kingoftone.png"
+        "Image": "analogman-kingoftone.png"
     },
     {
         "Brand": "Analog.Man",
         "Name": "Sunface",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "public/images/pedals/analogman-sunface.png"
+        "Image": "analogman-sunface.png"
     },
     {
         "Brand": "Analog.Man",
         "Name": "Peppermint Fuzz",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "public/images/pedals/analogman-peppermint.png"
+        "Image": "analogman-peppermint.png"
     },
     {
         "Brand": "Analog.Man",
         "Name": "Prince of Tone",
         "Width": 2.2,
         "Height": 4.2,
-        "Image": "public/images/pedals/analogman-princeoftone.png"
+        "Image": "analogman-princeoftone.png"
     },
     {
         "Brand": "Caroline",
         "Name": "Haymaker",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/caroline-haymaker.png"
+        "Image": "caroline-haymaker.png"
     },
     {
         "Brand": "Caroline",
         "Name": "Kilobyte",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/caroline-kilobyte.png"
+        "Image": "caroline-kilobyte.png"
     },
     {
         "Brand": "Caroline",
         "Name": "Shigeharu",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/caroline-shigeharu.png"
+        "Image": "caroline-shigeharu.png"
     },
     {
         "Brand": "Caroline",
         "Name": "Wave Cannon",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/caroline-wavecannon.png"
+        "Image": "caroline-wavecannon.png"
     },
     {
         "Brand": "Caroline",
         "Name": "Icarus",
         "Width": 2.6,
         "Height": 4.3,
-        "Image": "public/images/pedals/caroline-icarus.png"
+        "Image": "caroline-icarus.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Dirty Little Secret",
         "Width": 2.375,
         "Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-dirtylittlesecret.png"
+        "Image": "catalinbread-dirtylittlesecret.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Formula No. 55",
         "Width": 2.375,
         "Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-formula55.png"
+        "Image": "catalinbread-formula55.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "SFT",
         "Width": 2.375,
         "Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-sft.png"
+        "Image": "catalinbread-sft.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Galileo",
         "Width": 2.375,
         "Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-galileo.png"
+        "Image": "catalinbread-galileo.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Sabbra Cadabra",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-Sabbra.png"
+        "Image": "catalinbread-Sabbra.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Formula 5F6",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-formula5f6.png"
+        "Image": "catalinbread-formula5f6.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "RAH",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-rah.png"
+        "Image": "catalinbread-rah.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Adineko",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-adineko.png"
+        "Image": "catalinbread-adineko.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Bicycle Delay",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-bicycledelay.png"
+        "Image": "catalinbread-bicycledelay.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "CSIDMAN",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-discman.png"
+        "Image": "catalinbread-discman.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Talisman",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-talisman.png"
+        "Image": "catalinbread-talisman.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Belle Epoch",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-belle.png"
+        "Image": "catalinbread-belle.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Echorec",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-echorec.png"
+        "Image": "catalinbread-echorec.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Topanga",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-topanga.png"
+        "Image": "catalinbread-topanga.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Karma Suture (Ge)",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-gekarma.png"
+        "Image": "catalinbread-gekarma.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Karma Suture (Si)",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-sikarma.png"
+        "Image": "catalinbread-sikarma.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Antichthon",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-antichthon.png"
+        "Image": "catalinbread-antichthon.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Valcoder",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-valcoder.png"
+        "Image": "catalinbread-valcoder.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Zero Point",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-zeropoint.png"
+        "Image": "catalinbread-zeropoint.png"
     },
 	{
         "Brand": "Catalinbread",
         "Name": "Callisto",
         "Width": 2.375,
 		"Height": 4.375,
-        "Image": "public/images/pedals/catalinbread-callisto.png"
+        "Image": "catalinbread-callisto.png"
     },
     {
         "Brand": "Chase Bliss",
         "Name": "Brothers",
         "Width": 2.75,
         "Height": 4.77,
-        "Image": "public/images/pedals/chasebliss-brothers.png"
+        "Image": "chasebliss-brothers.png"
     },
     {
         "Brand": "Chase Bliss",
         "Name": "Tonal Recall",
         "Width": 2.75,
         "Height": 4.77,
-        "Image": "public/images/pedals/chasebliss-tonalrecall.png"
+        "Image": "chasebliss-tonalrecall.png"
     },
     {
         "Brand": "Chase Bliss",
         "Name": "Spectre",
         "Width": 2.75,
         "Height": 4.77,
-        "Image": "public/images/pedals/chasebliss-spectre.png"
+        "Image": "chasebliss-spectre.png"
     },
     {
         "Brand": "Chase Bliss",
         "Name": "Gravitas",
         "Width": 2.75,
         "Height": 4.77,
-        "Image": "public/images/pedals/chasebliss-gravitas.png"
+        "Image": "chasebliss-gravitas.png"
     },
     {
         "Brand": "Chase Bliss",
         "Name": "Warped Vinyl",
         "Width": 2.75,
         "Height": 4.77,
-        "Image": "public/images/pedals/chasebliss-warpedvinyl.png"
+        "Image": "chasebliss-warpedvinyl.png"
     },
     {
         "Brand": "Chase Bliss",
         "Name": "Wombtone",
         "Width": 2.75,
         "Height": 4.77,
-        "Image": "public/images/pedals/chasebliss-wombtone.png"
+        "Image": "chasebliss-wombtone.png"
     },
     {
         "Brand": "Crowther",
         "Name": "Hot Cake",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/crowther-hotcake.png"
+        "Image": "crowther-hotcake.png"
     },
     {
         "Brand": "Diamond",
         "Name": "Tremolo",
         "Width": 4.8,
         "Height": 3.7,
-        "Image": "public/images/pedals/diamond-tremolo.png"
+        "Image": "diamond-tremolo.png"
     },
     {
         "Brand": "Diamond",
         "Name": "Counterpoint",
         "Width": 4.8,
         "Height": 3.7,
-        "Image": "public/images/pedals/diamond-counterpoint.png"
+        "Image": "diamond-counterpoint.png"
     },
     {
         "Brand": "Diamond",
         "Name": "Memory Lane Jr",
         "Width": 4.8,
         "Height": 3.7,
-        "Image": "public/images/pedals/diamond-memorylanejr.png"
+        "Image": "diamond-memorylanejr.png"
     },
     {
         "Brand": "Diamond",
         "Name": "Compressor",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/diamond-compressor.png"
+        "Image": "diamond-compressor.png"
     },
     {
         "Brand": "Diamond",
         "Name": "Compressor JR",
         "Width": 2.75,
         "Height": 4.8,
-        "Image": "public/images/pedals/diamond-compressorjr.png"
+        "Image": "diamond-compressorjr.png"
     },
     {
         "Brand": "Earthquaker Devices",
         "Name": "Afterneath",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "public/images/pedals/earthquaker-afterneath.png"
+        "Image": "earthquaker-afterneath.png"
     },
     {
         "Brand": "Earthquaker Devices",
         "Name": "Space Spiral",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "public/images/pedals/earthquaker-spacespiral.png"
+        "Image": "earthquaker-spacespiral.png"
     },
     {
         "Brand": "Earthquaker Devices",
         "Name": "Levitation",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "public/images/pedals/earthquaker-levitation.png"
+        "Image": "earthquaker-levitation.png"
     },
     {
         "Brand": "Earthquaker Devices",
         "Name": "Bit Commander",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "public/images/pedals/earthquaker-bitcommander.png"
+        "Image": "earthquaker-bitcommander.png"
     },
     {
         "Brand": "Earthquaker Devices",
         "Name": "Hummingbird",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "public/images/pedals/earthquaker-hummingbird.png"
+        "Image": "earthquaker-hummingbird.png"
     },
     {
         "Brand": "Earthquaker Devices",
         "Name": "Dispatch Master",
         "Width": 2.37,
         "Height": 4.37,
-        "Image": "public/images/pedals/earthquakerdevices-dispatchmaster.png"
+        "Image": "earthquakerdevices-dispatchmaster.png"
     },
     {
         "Brand": "Foxrox",
         "Name": "Paradox TZF2",
         "Width": 5.5,
         "Height": 5,
-        "Image": "public/images/pedals/foxrox-paradoxtzf2.png"
+        "Image": "foxrox-paradoxtzf2.png"
     },
     {
         "Brand": "Foxrox",
         "Name": "Festival",
         "Width": 5.5,
         "Height": 5,
-        "Image": "public/images/pedals/foxrox-festival.png"
+        "Image": "foxrox-festival.png"
     },
     {
         "Brand": "Foxrox",
         "Name": "Hot Silicon",
         "Width": 3.85,
         "Height": 5.15,
-        "Image": "public/images/pedals/foxrox-hotsilicon.png"
+        "Image": "foxrox-hotsilicon.png"
     },
     {
         "Brand": "Foxrox",
         "Name": "Aquavibe",
         "Width": 3.85,
         "Height": 5.15,
-        "Image": "public/images/pedals/foxrox-aquavibe.png"
+        "Image": "foxrox-aquavibe.png"
     },
     {
         "Brand": "Foxrox",
         "Name": "Octron",
         "Width": 3.85,
         "Height": 5.15,
-        "Image": "public/images/pedals/foxrox-octron.png"
+        "Image": "foxrox-octron.png"
     },
     {
         "Brand": "Foxrox",
         "Name": "Octron 2",
         "Width": 5.5,
         "Height": 5,
-        "Image": "public/images/pedals/foxrox-octron2.png"
+        "Image": "foxrox-octron2.png"
     },
     {
         "Brand": "Foxrox",
         "Name": "Octron 3",
         "Width": 3,
         "Height": 5,
-        "Image": "public/images/pedals/foxrox-octron3.png"
+        "Image": "foxrox-octron3.png"
     },
     {
         "Brand": "Foxrox",
         "Name": "Zim",
         "Width": 5.5,
         "Height": 5,
-        "Image": "public/images/pedals/foxrox-paradoxtzf2.png"
+        "Image": "foxrox-paradoxtzf2.png"
     },
     {
         "Brand": "Kemper",
         "Name": "Remote",
         "Width": 16.5,
         "Height": 7,
-        "Image": "public/images/pedals/kemper-remote.png"
+        "Image": "kemper-remote.png"
     },
     {
         "Brand": "Sonic Research",
         "Name": "Turbo Tuner ST-300",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "public/images/pedals/sonicresearch-st300.png"
+        "Image": "sonicresearch-st300.png"
     },
     {
         "Brand": "Sonic Research",
         "Name": "Turbo Tuner ST-300 Mini",
         "Width": 2.01,
         "Height": 3.66,
-        "Image": "public/images/pedals/sonicresearch-st300mini.png"
+        "Image": "sonicresearch-st300mini.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Timeline",
         "Width": 6.75,
         "Height": 5.1,
-        "Image": "public/images/pedals/strymon-timeline.png"
+        "Image": "strymon-timeline.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Mobius",
         "Width": 6.75,
         "Height": 5.1,
-        "Image": "public/images/pedals/strymon-mobius.png"
+        "Image": "strymon-mobius.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Big Sky",
         "Width": 6.75,
         "Height": 5.1,
-        "Image": "public/images/pedals/strymon-bigsky.png"
+        "Image": "strymon-bigsky.png"
     },
     {
         "Brand": "Musicomlab",
         "Name": "EFX III",
         "Width": 11,
         "Height": 4.9,
-        "Image": "public/images/pedals/musicomlab-efxiii.png"
+        "Image": "musicomlab-efxiii.png"
     },
     {
         "Brand": "Musicomlab",
         "Name": "EFX IV",
         "Width": 13.1,
         "Height": 5,
-        "Image": "public/images/pedals/musicomlab-efxiv.png"
+        "Image": "musicomlab-efxiv.png"
     },
     {
         "Brand": "Musicomlab",
         "Name": "EFX V",
         "Width": 16.5,
         "Height": 3.8,
-        "Image": "public/images/pedals/musicomlab-efxv.png"
+        "Image": "musicomlab-efxv.png"
     },
     {
         "Brand": "Truetone",
         "Name": "1 Spot Pro CS12",
         "Width": 8.12,
         "Height": 3.37,
-        "Image": "public/images/pedals/truetone-cs12.png"
+        "Image": "truetone-cs12.png"
     },
     {
         "Brand": "Paul C",
         "Name": "Timmy",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/paulc-timmy.png"
+        "Image": "paulc-timmy.png"
     },
     {
         "Brand": "BOSS",
         "Name": "RV-5 Reverb",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-rv5.png"
+        "Image": "boss-rv5.png"
     },
     {
         "Brand": "Bondi Effects",
         "Name": "2026 Compressor",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/bondi-2026.png"
+        "Image": "bondi-2026.png"
     },
     {
         "Brand": "Bondi Effects",
         "Name": "Sick As",
         "Width": 4.7,
         "Height": 3.7,
-        "Image": "public/images/pedals/bondi-sickas.png"
+        "Image": "bondi-sickas.png"
     },
     {
         "Brand": "Bondi Effects",
         "Name": "Del Mar",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/bondi-delmar.png"
+        "Image": "bondi-delmar.png"
     },
     {
         "Brand": "BOSS",
         "Name": "BD-2 Blues Driver",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-bd2.png"
+        "Image": "boss-bd2.png"
     },
     {
         "Brand": "BOSS",
         "Name": "DS-1 Distortion",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-ds1.png"
+        "Image": "boss-ds1.png"
     },
     {
         "Brand": "BOSS",
         "Name": "DD-5 Digital Delay",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-dd5.png"
+        "Image": "boss-dd5.png"
     },
     {
         "Brand": "BOSS",
         "Name": "RV-6 Reverb",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-rv6.png"
+        "Image": "boss-rv6.png"
     },
     {
         "Brand": "BOSS",
         "Name": "TR-2 Tremolo",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-tr2.png"
+        "Image": "boss-tr2.png"
     },
     {
         "Brand": "BOSS",
         "Name": "OD-1 Overdrive",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-od1.png"
+        "Image": "boss-od1.png"
     },
     {
         "Brand": "BOSS",
         "Name": "OD-1X Overdrive",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-od1x.png"
+        "Image": "boss-od1x.png"
     },
     {
         "Brand": "BOSS",
         "Name": "TE-2 Tera Echo",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-te2.png"
+        "Image": "boss-te2.png"
     },
     {
         "Brand": "BOSS",
         "Name": "DM-2 Delay",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-dm2w.png"
+        "Image": "boss-dm2w.png"
     },
     {
         "Brand": "BOSS",
         "Name": "TU-3 Chromatic Tuner",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-tu3.png"
+        "Image": "boss-tu3.png"
     },
     {
         "Brand": "BOSS",
         "Name": "TU-3w Chromatic Tuner",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-tu3w.png"
+        "Image": "boss-tu3w.png"
     },
     {
         "Brand": "BOSS",
         "Name": "TU-3s Chromatic Tuner",
         "Width": 2.875,
         "Height": 3.3125,
-        "Image": "public/images/pedals/boss-tu3s.png"
+        "Image": "boss-tu3s.png"
     },
     {
         "Brand": "BOSS",
         "Name": "CP-1X Compressor",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-cp1x.png"
+        "Image": "boss-cp1x.png"
     },
     {
         "Brand": "BOSS",
         "Name": "BF-3 Flanger",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-bf3.png"
+        "Image": "boss-bf3.png"
     },
     {
         "Brand": "BOSS",
         "Name": "FZ-5 Fuzz",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-fz5.png"
+        "Image": "boss-fz5.png"
     },
     {
         "Brand": "BOSS",
         "Name": "DS-1X",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-ds1x.png"
+        "Image": "boss-ds1x.png"
     },
     {
         "Brand": "BOSS",
         "Name": "DD-7 Digital Delay",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-dd7.png"
+        "Image": "boss-dd7.png"
     },
     {
         "Brand": "BOSS",
         "Name": "RC-3 Loop Station",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-rc3.png"
+        "Image": "boss-rc3.png"
     },
     {
         "Brand": "BOSS",
         "Name": "MT-2 Metal Zone",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-mt2.png"
+        "Image": "boss-mt2.png"
     },
     {
         "Brand": "BOSS",
         "Name": "OS-2 Overdrive/Distortion",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-os2.png"
+        "Image": "boss-os2.png"
     },
     {
         "Brand": "BOSS",
         "Name": "PS-2 Pitch Shifter/Delay",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-ps2.png"
+        "Image": "boss-ps2.png"
     },
     {
         "Brand": "BOSS",
         "Name": "NS-2 Noise Suppressor",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-ns2.png"
+        "Image": "boss-ns2.png"
     },
     {
         "Brand": "BOSS",
         "Name": "OC-2 Octave",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-oc2.png"
+        "Image": "boss-oc2.png"
     },
     {
         "Brand": "BOSS",
         "Name": "OD-1 Overdrive",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-od1.png"
+        "Image": "boss-od1.png"
     },
     {
         "Brand": "BOSS",
         "Name": "GE-6 Graphic Equalizer",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "public/images/pedals/boss-ge6.png"
+        "Image": "boss-ge6.png"
     },
     {
         "Brand": "BOSS",
         "Name": "DD-500",
         "Width": 6.69,
         "Height": 5.43,
-        "Image": "public/images/pedals/boss-dd500.png"
+        "Image": "boss-dd500.png"
     },
     {
         "Brand": "BOSS",
         "Name": "ES-5",
         "Width": 13.27,
         "Height": 3.82,
-        "Image": "public/images/pedals/boss-es5.png"
+        "Image": "boss-es5.png"
     },
     {
         "Brand": "BOSS",
         "Name": "FV-30L",
         "Width": 3.15,
         "Height": 7.56,
-        "Image": "public/images/pedals/boss-fv30.png"
+        "Image": "boss-fv30.png"
     },
     {
         "Brand": "BOSS",
         "Name": "FV-500L",
         "Width": 4.4,
         "Height": 11.4,
-        "Image": "public/images/pedals/boss-fv500.png"
+        "Image": "boss-fv500.png"
     },
     {
         "Brand": "BOSS",
         "Name": "RE-20",
         "Width": 6.81,
         "Height": 6.25,
-        "Image": "public/images/pedals/boss-re20.png"
+        "Image": "boss-re20.png"
     },
     {
         "Brand": "BOSS",
         "Name": "DD-20",
         "Width": 6.81,
         "Height": 6.25,
-        "Image": "public/images/pedals/boss-dd20.png"
+        "Image": "boss-dd20.png"
     },
     {
         "Brand": "DigiTech",
         "Name": "Whammy 5",
         "Width": 6.5,
         "Height": 7.75,
-        "Image": "public/images/pedals/digitech-whammy.png"
+        "Image": "digitech-whammy.png"
     },
     {
         "Brand": "DigiTech",
         "Name": "Jamman Express",
         "Width": 2.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/digitech-jammanexpress.png"
+        "Image": "digitech-jammanexpress.png"
     },
     {
         "Brand": "Disaster Area",
         "Name": "DPC5",
         "Width": 10,
         "Height": 2.65,
-        "Image": "public/images/pedals/disasterarea-dpc5.png"
+        "Image": "disasterarea-dpc5.png"
     },
     {
         "Brand": "Disaster Area",
         "Name": "DMC-8",
         "Width": 10,
         "Height": 2.65,
-        "Image": "public/images/pedals/disasterarea-dmc8.png"
+        "Image": "disasterarea-dmc8.png"
     },
     {
         "Brand": "Disaster Area",
         "Name": "DMC-6",
         "Width": 7.4,
         "Height": 4.7,
-        "Image": "public/images/pedals/disasterarea-dmc6.png"
+        "Image": "disasterarea-dmc6.png"
     },
     {
         "Brand": "Disaster Area",
         "Name": "DMC-4",
         "Width": 4.7,
         "Height": 3.7,
-        "Image": "public/images/pedals/disasterarea-dmc4.png"
+        "Image": "disasterarea-dmc4.png"
     },
     {
         "Brand": "Disaster Area",
         "Name": "DMC-3XL",
         "Width": 4.8,
         "Height": 2.75,
-        "Image": "public/images/pedals/disasterarea-dmc3xl.png"
+        "Image": "disasterarea-dmc3xl.png"
     },
     {
         "Brand": "Disaster Area",
         "Name": "DMC-2",
         "Width": 3.6,
         "Height": 1.5,
-        "Image": "public/images/pedals/disasterarea-dmc2.png"
+        "Image": "disasterarea-dmc2.png"
     },
     {
         "Brand": "Dr Scientist",
         "Name": "Frazz Dazzler",
         "Width": 2.4,
         "Height": 4.45,
-        "Image": "public/images/pedals/drscientist-frazzdazzler.png"
+        "Image": "drscientist-frazzdazzler.png"
     },
     {
         "Brand": "Dr Scientist",
         "Name": "Bitquest",
         "Width": 2.4,
         "Height": 4.45,
-        "Image": "public/images/pedals/drscientist-bitquest.png"
+        "Image": "drscientist-bitquest.png"
     },
     {
         "Brand": "Dr Scientist",
         "Name": "Reverberator",
         "Width": 2.4,
         "Height": 4.45,
-        "Image": "public/images/pedals/drscientist-reverberator.png"
+        "Image": "drscientist-reverberator.png"
     },
     {
         "Brand": "Dunlop",
         "Name": "Crybaby",
         "Width": 4,
         "Height": 10,
-        "Image": "public/images/pedals/dunlop-wah.png"
+        "Image": "dunlop-wah.png"
     },
     {
         "Brand": "Dunlop",
         "Name": "Crybaby Mini",
         "Width": 3,
         "Height": 5.25,
-        "Image": "public/images/pedals/dunlop-crybabymini.png"
+        "Image": "dunlop-crybabymini.png"
     },
     {
         "Brand": "Dunlop",
         "Name": "DVP4 Mini Volume",
         "Width": 2.97,
         "Height": 6,
-        "Image": "public/images/pedals/dunlop-dvp4.png"
+        "Image": "dunlop-dvp4.png"
     },
     {
         "Brand": "Dunlop",
         "Name": "DVP3 Volume",
         "Width": 3.86,
         "Height": 10,
-        "Image": "public/images/pedals/dunlop-dvp3.png"
+        "Image": "dunlop-dvp3.png"
     },
     {
         "Brand": "Eventide",
         "Name": "H9",
         "Width": 4.65,
         "Height": 5.25,
-        "Image": "public/images/pedals/eventide-h9.png"
+        "Image": "eventide-h9.png"
     },
     {
         "Brand": "Eventide",
         "Name": "Space",
         "Width": 7.5,
         "Height": 4.8,
-        "Image": "public/images/pedals/eventide-space.png"
+        "Image": "eventide-space.png"
     },
     {
         "Brand": "Eventide",
         "Name": "TimeFactor",
         "Width": 7.5,
         "Height": 4.8,
-        "Image": "public/images/pedals/eventide-timefactor.png"
+        "Image": "eventide-timefactor.png"
     },
     {
         "Brand": "FreeTheTone",
         "Name": "Ambi Space AS-1R",
         "Width": 4.72,
         "Height": 4.03,
-        "Image": "public/images/pedals/freethetone-ambispace.png"
+        "Image": "freethetone-ambispace.png"
     },
     {
         "Brand": "FreeTheTone",
         "Name": "Tri Avatar TA-1H",
         "Width": 4.72,
         "Height": 4.03,
-        "Image": "public/images/pedals/freethetone-triavatar.png"
+        "Image": "freethetone-triavatar.png"
     },
     {
         "Brand": "FreeTheTone",
         "Name": "Flight Time FT-1Y",
         "Width": 5.75,
         "Height": 4.744,
-        "Image": "public/images/pedals/freethetone-flighttime.png"
+        "Image": "freethetone-flighttime.png"
     },
     {
         "Brand": "Ibanez",
         "Name": "DE7",
         "Width": 3,
         "Height": 5,
-        "Image": "public/images/pedals/ibanez-de7.png"
+        "Image": "ibanez-de7.png"
     },
     {
         "Brand": "Ibanez",
         "Name": "TS7",
         "Width": 3,
         "Height": 5,
-        "Image": "public/images/pedals/ibanez-ts7.png"
+        "Image": "ibanez-ts7.png"
     },
     {
         "Brand": "Ibanez",
         "Name": "CF7",
         "Width": 3,
         "Height": 5,
-        "Image": "public/images/pedals/ibanez-cf7.png"
+        "Image": "ibanez-cf7.png"
     },
     {
         "Brand": "Klon",
         "Name": "KTR",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/klon-ktr.png"
+        "Image": "klon-ktr.png"
     },
     {
         "Brand": "Klon",
         "Name": "Centaur",
         "Width": 6.5,
         "Height": 5,
-        "Image": "public/images/pedals/klon-centaur.png"
+        "Image": "klon-centaur.png"
     },
     {
         "Brand": "Klon",
         "Name": "Centaur (Horsey)",
         "Width": 6.5,
         "Height": 5,
-        "Image": "public/images/pedals/klon-centaurhorsey.png"
+        "Image": "klon-centaurhorsey.png"
     },
     {
         "Brand": "Korg",
         "Name": "Pitchblack",
         "Width": 2.68,
         "Height": 4.72,
-        "Image": "public/images/pedals/korg-pitchblack.png"
+        "Image": "korg-pitchblack.png"
     },
     {
         "Brand": "Korg",
         "Name": "Pitchblack Advance",
         "Width": 2.68,
         "Height": 4.37,
-        "Image": "public/images/pedals/korg-pitchblackadvance.png"
+        "Image": "korg-pitchblackadvance.png"
     },
     {
         "Brand": "Korg",
         "Name": "Pitchblack Mini",
         "Width": 1.77,
         "Height": 3.66,
-        "Image": "public/images/pedals/korg-pitchblackmini.png"
+        "Image": "korg-pitchblackmini.png"
     },
     {
         "Brand": "Meris",
         "Name": "Mercury7",
         "Width": 4.5,
         "Height": 4.85,
-        "Image": "public/images/pedals/meris-mercury7.png"
+        "Image": "meris-mercury7.png"
     },
     {
         "Brand": "Meris",
         "Name": "Ottobit Jr.",
         "Width": 4.5,
         "Height": 4.85,
-        "Image": "public/images/pedals/meris-ottobitjr.png"
+        "Image": "meris-ottobitjr.png"
     },
     {
         "Brand": "Morley",
         "Name": "Bad Horsie",
         "Width": 6,
         "Height": 9.25,
-        "Image": "public/images/pedals/morley-wah.png"
+        "Image": "morley-wah.png"
     },
     {
         "Brand": "Morley",
         "Name": "Mini Wah",
         "Width": 4.5,
         "Height": 6.75,
-        "Image": "public/images/pedals/morley-miniwah.png"
+        "Image": "morley-miniwah.png"
     },
     {
         "Brand": "Mission",
         "Name": "VM-PRO",
         "Width": 4,
         "Height": 10,
-        "Image": "public/images/pedals/mission-vp1.png"
+        "Image": "mission-vp1.png"
     },
     {
         "Brand": "Mooer",
         "Name": "Tuner",
         "Width": 1.65,
         "Height": 3.7,
-        "Image": "public/images/pedals/mooer-tuner.png"
+        "Image": "mooer-tuner.png"
     },
     {
         "Brand": "Mooer",
         "Name": "Pitch Box",
         "Width": 1.65,
         "Height": 3.7,
-        "Image": "public/images/pedals/mooer-pitchbox.png"
+        "Image": "mooer-pitchbox.png"
     },
     {
         "Brand": "Mooer",
         "Name": "Trelicopter",
         "Width": 1.65,
         "Height": 3.7,
-        "Image": "public/images/pedals/mooer-trelicopter.png"
+        "Image": "mooer-trelicopter.png"
     },
     {
         "Brand": "Mooer",
         "Name": "Reecho",
         "Width": 1.65,
         "Height": 3.7,
-        "Image": "public/images/pedals/mooer-recho.png"
+        "Image": "mooer-recho.png"
     },
     {
         "Brand": "Mooer",
         "Name": "Yellow Comp",
         "Width": 1.65,
         "Height": 3.7,
-        "Image": "public/images/pedals/mooer-yellowcomp.png"
+        "Image": "mooer-yellowcomp.png"
     },
     {
         "Brand": "Mooer",
         "Name": "Ninety Orange",
         "Width": 1.65,
         "Height": 3.7,
-        "Image": "public/images/pedals/mooer-orange.png"
+        "Image": "mooer-orange.png"
     },
     {
         "Brand": "Mooer",
         "Name": "Acoustikar",
         "Width": 1.65,
         "Height": 3.7,
-        "Image": "public/images/pedals/mooer-acousticer.png"
+        "Image": "mooer-acousticer.png"
     },
     {
         "Brand": "MXR",
         "Name": "Micro Amp+",
         "Width": 2.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/mxr-microamp.png"
+        "Image": "mxr-microamp.png"
     },
     {
         "Brand": "MXR",
         "Name": "Dyna Comp",
         "Width": 2.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/mxr-dynacomp.png"
+        "Image": "mxr-dynacomp.png"
     },
     {
         "Brand": "MXR",
         "Name": "Carbon Copy",
         "Width": 2.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/mxr-carboncopy.png"
+        "Image": "mxr-carboncopy.png"
     },
     {
         "Brand": "MXR",
         "Name": "Phase 90",
         "Width": 2.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/mxr-phase90.png"
+        "Image": "mxr-phase90.png"
     },
     {
         "Brand": "MXR",
         "Name": "Micro Chorus",
         "Width": 2.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/mxr-microchorus.png"
+        "Image": "mxr-microchorus.png"
     },
     {
         "Brand": "MXR",
         "Name": "Reverb",
         "Width": 2.85,
         "Height": 4.75,
-        "Image": "public/images/pedals/mxr-reverb.png"
+        "Image": "mxr-reverb.png"
     },
     {
         "Brand": "MXR",
         "Name": "Six Band EQ",
         "Width": 2.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/mxr-eq.png"
+        "Image": "mxr-eq.png"
     },
     {
         "Brand": "MXR",
         "Name": "Ten Band EQ",
         "Width": 5.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/mxr-eq2.png"
+        "Image": "mxr-eq2.png"
     },
     {
         "Brand": "MXR",
         "Name": "Stereo Chorus",
         "Width": 5.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/mxr-stereochorus.png"
+        "Image": "mxr-stereochorus.png"
     },
     {
         "Brand": "MXR",
         "Name": "Phase 100",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/mxr-phase100.png"
+        "Image": "mxr-phase100.png"
     },
     {
         "Brand": "MXR",
         "Name": "Phase 95",
         "Width": 2,
         "Height": 3.66,
-        "Image": "public/images/pedals/mxr-phase95.png"
+        "Image": "mxr-phase95.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "WET",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/neunaber-wet.png"
+        "Image": "neunaber-wet.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "Expanse",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/neunaber-expanse.png"
+        "Image": "neunaber-expanse.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "Immerse",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/neunaber-immerse.png"
+        "Image": "neunaber-immerse.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "Iconoclast",
         "Width": 4.25,
         "Height": 2.3,
-        "Image": "public/images/pedals/neunaber-iconoclast.png"
+        "Image": "neunaber-iconoclast.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "EXP",
         "Width": 4.3,
         "Height": 2.5,
-        "Image": "public/images/pedals/neunaber-exp.png"
+        "Image": "neunaber-exp.png"
     },
     {
         "Brand": "Proco",
         "Name": "Rat",
         "Width": 3.5,
         "Height": 4,
-        "Image": "public/images/pedals/proco-rat.png"
+        "Image": "proco-rat.png"
     },
     {
         "Brand": "Lehle",
         "Name": "Mono Volume",
         "Width": 3.94,
         "Height": 10.24,
-        "Image": "public/images/pedals/lehle-volume.png"
+        "Image": "lehle-volume.png"
     },
     {
         "Brand": "Line6",
         "Name": "M5",
         "Width": 5.85,
         "Height": 6.5,
-        "Image": "public/images/pedals/line6-m5.png"
+        "Image": "line6-m5.png"
     },
     {
         "Brand": "Line6",
         "Name": "M9",
         "Width": 10.5,
         "Height": 6.5,
-        "Image": "public/images/pedals/line6-m9.png"
+        "Image": "line6-m9.png"
     },
     {
         "Brand": "Line6",
         "Name": "DL4 Delay",
         "Width": 10,
         "Height": 6,
-        "Image": "public/images/pedals/line6-dl4.png"
+        "Image": "line6-dl4.png"
     },
     {
         "Brand": "Line6",
         "Name": "Helix",
         "Width": 22.05,
         "Height": 11.85,
-        "Image": "public/images/pedals/line6-helix.png"
+        "Image": "line6-helix.png"
     },
     {
         "Brand": "Ernie Ball",
         "Name": "VP Jr",
         "Width": 3.5,
         "Height": 10,
-        "Image": "public/images/pedals/ernieball-vp.png"
+        "Image": "ernieball-vp.png"
     },
     {
         "Brand": "Ibanez",
         "Name": "TS9 Tube Screamer",
         "Width": 3,
         "Height": 4.9,
-        "Image": "public/images/pedals/ibanez-ts9.png"
+        "Image": "ibanez-ts9.png"
     },
     {
         "Brand": "Red Panda",
         "Name": "Raster",
         "Width": 3.3,
         "Height": 4.4,
-        "Image": "public/images/pedals/redpanda-raster.png"
+        "Image": "redpanda-raster.png"
     },
     {
         "Brand": "Red Panda",
         "Name": "Particle",
         "Width": 3.3,
         "Height": 4.4,
-        "Image": "public/images/pedals/redpanda-particle.png"
+        "Image": "redpanda-particle.png"
     },
     {
         "Brand": "Red Panda",
         "Name": "Bitmap",
         "Width": 3.3,
         "Height": 4.4,
-        "Image": "public/images/pedals/redpanda-bitmap.png"
+        "Image": "redpanda-bitmap.png"
     },
     {
         "Brand": "Red Panda",
         "Name": "Context",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/redpanda-context.png"
+        "Image": "redpanda-context.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Riverside",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-riverside.png"
+        "Image": "strymon-riverside.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Dig",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-dig.png"
+        "Image": "strymon-dig.png"
     },
     {
         "Brand": "Strymon",
         "Name": "El Capistan",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-elcap.png"
+        "Image": "strymon-elcap.png"
     },
 	{
         "Brand": "Strymon",
         "Name": "Blue Sky",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-bluesky.png"
+        "Image": "strymon-bluesky.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Brigadier",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-brig.png"
+        "Image": "strymon-brig.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Orbit",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-orbit.png"
+        "Image": "strymon-orbit.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Deco",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-deco.png"
+        "Image": "strymon-deco.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Ola",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-ola.png"
+        "Image": "strymon-ola.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Lex",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-lex.png"
+        "Image": "strymon-lex.png"
     },
     {
         "Brand": "Strymon",
         "Name": "Flint",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-flint.png"
+        "Image": "strymon-flint.png"
     },
     {
         "Brand": "Strymon",
         "Name": "OB.1",
         "Width": 4,
         "Height": 4.5,
-        "Image": "public/images/pedals/strymon-ob1.png"
+        "Image": "strymon-ob1.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Alter Ego x4",
         "Width": 9.25,
         "Height": 5.70866,
-        "Image": "public/images/pedals/tc-alteregox4.png"
+        "Image": "tc-alteregox4.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Corona Chorus",
         "Width": 2.83,
         "Height": 4.8,
-        "Image": "public/images/pedals/tc-corona.png"
+        "Image": "tc-corona.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Hall of Fame",
         "Width": 2.83,
         "Height": 4.8,
-        "Image": "public/images/pedals/tc-halloffame.png"
+        "Image": "tc-halloffame.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Flashback",
         "Width": 2.83,
         "Height": 4.8,
-        "Image": "public/images/pedals/tc-flashback.png"
+        "Image": "tc-flashback.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Sentry",
         "Width": 2.83,
         "Height": 4.8,
-        "Image": "public/images/pedals/tc-sentry.png"
+        "Image": "tc-sentry.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Polytune",
         "Width": 2.83,
         "Height": 4.8,
-        "Image": "public/images/pedals/tc-polytune.png"
+        "Image": "tc-polytune.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Ditto Stereo",
         "Width": 2.83,
         "Height": 4.8,
-        "Image": "public/images/pedals/tc-dittostereo.png"
+        "Image": "tc-dittostereo.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Polytune Mini",
         "Width": 2.01,
         "Height": 3.66,
-        "Image": "public/images/pedals/tc-polytunemini.png"
+        "Image": "tc-polytunemini.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Polytune Mini Noir",
         "Width": 2.01,
         "Height": 3.66,
-        "Image": "public/images/pedals/tc-poly2mini.png"
+        "Image": "tc-poly2mini.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Spark Boost",
         "Width": 2.01,
         "Height": 3.66,
-        "Image": "public/images/pedals/tc-spark.png"
+        "Image": "tc-spark.png"
     },
     {
         "Brand": "TC Electronics",
         "Name": "Corona Mini",
         "Width": 2.01,
         "Height": 3.66,
-        "Image": "public/images/pedals/tc-coronamini.png"
+        "Image": "tc-coronamini.png"
     },
 	{
         "Brand": "TC Electronics",
         "Name": "Nova Delay",
         "Width": 4.92,
         "Height": 5.19,
-        "Image": "public/images/pedals/tc-novadelay.png"
+        "Image": "tc-novadelay.png"
     },
 	{
         "Brand": "TC Electronics",
         "Name": "Nova Modulator",
         "Width": 4.92,
         "Height": 5.19,
-        "Image": "public/images/pedals/tc-novamodulator.png"
+        "Image": "tc-novamodulator.png"
     },
 	{
         "Brand": "TC Electronics",
         "Name": "Nova Reverb",
         "Width": 4.92,
         "Height": 5.19,
-        "Image": "public/images/pedals/tc-novareverb.png"
+        "Image": "tc-novareverb.png"
     },
 	{
         "Brand": "TC Electronics",
         "Name": "Nova Dynamics",
         "Width": 4.92,
         "Height": 5.19,
-        "Image": "public/images/pedals/tc-novadynamics.png"
+        "Image": "tc-novadynamics.png"
     },
 	{
         "Brand": "TC Electronics",
         "Name": "Nova Drive",
         "Width": 4.92,
         "Height": 5.19,
-        "Image": "public/images/pedals/tc-novadrive.png"
+        "Image": "tc-novadrive.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Pitch Fork",
         "Width": 2.75,
         "Height": 4.5,
-        "Image": "public/images/pedals/ehx-pitchfork.png"
+        "Image": "ehx-pitchfork.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Nano Pog",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/ehx-nanopog.png"
+        "Image": "ehx-nanopog.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Micro POG",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/ehx-micropog.png"
+        "Image": "ehx-micropog.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "POG2",
         "Width": 5.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/ehx-pog2.png"
+        "Image": "ehx-pog2.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Soul Food",
         "Width": 2.75,
         "Height": 4.5,
-        "Image": "public/images/pedals/ehx-soulfood.png"
+        "Image": "ehx-soulfood.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "720 Stereo Looper",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/ehx-720.png"
+        "Image": "ehx-720.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Memory Boy",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/ehx-memoryboy.png"
+        "Image": "ehx-memoryboy.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Big Muff Pi",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/ehx-bigmuffpi.png"
+        "Image": "ehx-bigmuffpi.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "C9 Organ Machine",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/ehx-c9.png"
+        "Image": "ehx-c9.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Synth9 Synth Machine",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/ehx-synth9.png"
+        "Image": "ehx-synth9.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Super Ego",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/ehx-superego.png"
+        "Image": "ehx-superego.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Mel9 Tape Replay Machine",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/ehx-720.png"
+        "Image": "ehx-720.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Small Stone Nano",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/ehx-nanosmallstone.png"
+        "Image": "ehx-nanosmallstone.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Silencer",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/ehx-silencer.png"
+        "Image": "ehx-silencer.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Memory Toy",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/ehx-memorytoy.png"
+        "Image": "ehx-memorytoy.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Freeze",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/ehx-freeze.png"
+        "Image": "ehx-freeze.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Canyon",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/ehx-canyon.png"
+        "Image": "ehx-canyon.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "22500 Dual Sterep Looper",
         "Width": 5.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/ehx-22500.png"
+        "Image": "ehx-22500.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Deluxe Memory Man Tap Tempo",
         "Width": 5.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/ehx-memorymantap.png"
+        "Image": "ehx-memorymantap.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Deluxe Memory Man XO",
         "Width": 5.75,
         "Height": 4.75,
-        "Image": "public/images/pedals/ehx-memorymannano.png"
+        "Image": "ehx-memorymannano.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Big Muff Pi (big box)",
         "Width": 5.9,
         "Height": 8.6,
-        "Image": "public/images/pedals/ehx-bigmuffbox.png"
+        "Image": "ehx-bigmuffbox.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Deluxe Memory Man (big box)",
         "Width": 7.875,
         "Height": 6.875,
-        "Image": "public/images/pedals/ehx-ogmemoryman.png"
+        "Image": "ehx-ogmemoryman.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "Full-drive 3",
         "Width": 4.81,
         "Height": 4,
-        "Image": "public/images/pedals/fulltone-fulldrive3.png"
+        "Image": "fulltone-fulldrive3.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "Full-drive 2",
         "Width": 5.75,
         "Height": 4,
-        "Image": "public/images/pedals/fulltone-fulldrive2.png"
+        "Image": "fulltone-fulldrive2.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "Supa-Trem 2",
         "Width": 5.25,
         "Height": 4,
-        "Image": "public/images/pedals/fulltone-supatrem2.png"
+        "Image": "fulltone-supatrem2.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "Supa-Trem",
         "Width": 6,
         "Height": 3.25,
-        "Image": "public/images/pedals/fulltone-supatrem.png"
+        "Image": "fulltone-supatrem.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "OCD",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/fulltone-ocd.png"
+        "Image": "fulltone-ocd.png"
     },
 	{
         "Brand": "Fulltone",
         "Name": "Soul-Bender",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/fulltone-soulbender.png"
+        "Image": "fulltone-soulbender.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "Fat Boost FB-3",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/fulltone-fatboost.png"
+        "Image": "fulltone-fatboost.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "Clyde Wah",
         "Width": 4.72,
         "Height": 10,
-        "Image": "public/images/pedals/fulltone-clyde.png"
+        "Image": "fulltone-clyde.png"
     },
     {
         "Brand": "DigiTech",
         "Name": "RV-7 Reverb",
         "Width": 3.5,
         "Height": 5.5,
-        "Image": "public/images/pedals/digitech-rv7.png"
+        "Image": "digitech-rv7.png"
     },
     {
         "Brand": "DigiTech",
         "Name": "DL-8 Delay/Looper",
         "Width": 3.5,
         "Height": 5.5,
-        "Image": "public/images/pedals/digitech-dl8.png"
+        "Image": "digitech-dl8.png"
     },
     {
         "Brand": "DigiTech",
         "Name": "Trio Looper",
         "Width": 3.25,
         "Height": 5.4,
-        "Image": "public/images/pedals/digitech-trio.png"
+        "Image": "digitech-trio.png"
     },
     {
         "Brand": "DigiTech",
         "Name": "Trio+ Looper",
         "Width": 4.25,
         "Height": 5.4,
-        "Image": "public/images/pedals/digitech-trioplus.png"
+        "Image": "digitech-trioplus.png"
     },
     {
         "Brand": "Emerson",
         "Name": "Em-drive",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/emerson-emdrive.png"
+        "Image": "emerson-emdrive.png"
     },
     {
         "Brand": "Emerson",
         "Name": "Paramount",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/emerson-paramount.png"
+        "Image": "emerson-paramount.png"
     },
     {
         "Brand": "Jackson Audio",
         "Name": "Prism",
         "Width": 2.5,
         "Height": 4.875,
-        "Image": "public/images/pedals/jackson-prism.png"
+        "Image": "jackson-prism.png"
     },
     {
         "Brand": "Moog",
         "Name": "Moogerfooger MF-102 Ring Modulator",
         "Width": 6,
         "Height": 9,
-        "Image": "public/images/pedals/moog-ringmod.png"
+        "Image": "moog-ringmod.png"
     },
     {
         "Brand": "Selah",
         "Name": "Feather Drive",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/selah-featherdrive.png"
+        "Image": "selah-featherdrive.png"
     },
     {
         "Brand": "Selah",
         "Name": "Misty Mountain Fuzz",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/selah-mistymountainfuzz.png"
+        "Image": "selah-mistymountainfuzz.png"
     },
     {
         "Brand": "Selah",
         "Name": "Quartz",
         "Width": 2.6,
         "Height": 4.8,
-        "Image": "public/images/pedals/selah-quartz.png"
+        "Image": "selah-quartz.png"
     },
     {
         "Brand": "Selah",
         "Name": "Scarlett Love V2",
         "Width": 4.3,
         "Height": 2.5,
-        "Image": "public/images/pedals/selah-scarlettlove2.png"
+        "Image": "selah-scarlettlove2.png"
     },
     {
         "Brand": "JHS",
         "Name": "Pulp N Peel",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/jhs-pulpnpeel.png"
+        "Image": "jhs-pulpnpeel.png"
     },
     {
         "Brand": "JHS",
         "Name": "Morning Glory",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/jhs-morningglory.png"
+        "Image": "jhs-morningglory.png"
     },
     {
         "Brand": "JHS",
         "Name": "Superbolt",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/jhs-superbolt.png"
+        "Image": "jhs-superbolt.png"
     },
     {
         "Brand": "JHS",
         "Name": "Angry Charlie",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/jhs-angrycharlie.png"
+        "Image": "jhs-angrycharlie.png"
     },
     {
         "Brand": "JHS",
         "Name": "Charlie Brown",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/jhs-charliebrown.png"
+        "Image": "jhs-charliebrown.png"
     },
     {
         "Brand": "JHS",
         "Name": "@ Andy Timmons",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/jhs-timmons.png"
+        "Image": "jhs-timmons.png"
     },
     {
         "Brand": "JHS",
         "Name": "VCR",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/jhs-vcr.png"
+        "Image": "jhs-vcr.png"
     },
     {
         "Brand": "JHS",
         "Name": "Ruby Red",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "public/images/pedals/jhs-rr.png"
+        "Image": "jhs-rr.png"
     },
     {
         "Brand": "JHS",
         "Name": "Double Barrel",
         "Width": 4.7,
         "Height": 3.7,
-        "Image": "public/images/pedals/jhs-doublebarrel.png"
+        "Image": "jhs-doublebarrel.png"
     },
     {
         "Brand": "JHS",
         "Name": "Sweet Tea",
         "Width": 4.7,
         "Height": 3.7,
-        "Image": "public/images/pedals/jhs-sweettea.png"
+        "Image": "jhs-sweettea.png"
     },
     {
         "Brand": "Tapestry Audio",
         "Name": "Bloomery",
         "Width": 2.25,
         "Height": 7.8,
-        "Image": "public/images/pedals/tapestry-bloomery.png"
+        "Image": "tapestry-bloomery.png"
     },
     {
         "Brand": "Way Huge",
         "Name": "Swollen Pickle",
         "Width": 3.75,
         "Height": 4.78,
-        "Image": "public/images/pedals/wayhuge-swollenpickle.png"
+        "Image": "wayhuge-swollenpickle.png"
     },
     {
         "Brand": "Way Huge",
         "Name": "Aqua Puss",
         "Width": 3.75,
         "Height": 4.78,
-        "Image": "public/images/pedals/wayhuge-aquapuss.png"
+        "Image": "wayhuge-aquapuss.png"
     },
     {
         "Brand": "Way Huge",
         "Name": "Green Rhino",
         "Width": 3.75,
         "Height": 4.78,
-        "Image": "public/images/pedals/wayhuge-greenrhino.png"
+        "Image": "wayhuge-greenrhino.png"
     },
     {
         "Brand": "Way Huge",
         "Name": "Pork Loin",
         "Width": 3.75,
         "Height": 4.78,
-        "Image": "public/images/pedals/wayhuge-porkloin.png"
+        "Image": "wayhuge-porkloin.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Nemesis",
         "Width": 4.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/sa-nemesis.png"
+        "Image": "sa-nemesis.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Dimension",
         "Width": 4.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-dimension.png"
+        "Image": "sourceaudio-dimension.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Multiwave Distortion",
         "Width": 4.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-multiwave.png"
+        "Image": "sourceaudio-multiwave.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Orbital Modulator",
         "Width": 4.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-orbital.png"
+        "Image": "sourceaudio-orbital.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "OFD Guitar Micromodeler",
         "Width": 4.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-ofo.png"
+        "Image": "sourceaudio-ofo.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Stingray Multi-Filter",
         "Width": 4.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-stingray.png"
+        "Image": "sourceaudio-stingray.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Vertigo Tremolo",
         "Width": 2.75,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-vertigo.png"
+        "Image": "sourceaudio-vertigo.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Lunar Phaser",
         "Width": 2.75,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-lunar.png"
+        "Image": "sourceaudio-lunar.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Mercury Flanger",
         "Width": 2.75,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-mercury.png"
+        "Image": "sourceaudio-mercury.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Gemini Chorus",
         "Width": 2.75,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-gemini.png"
+        "Image": "sourceaudio-gemini.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "LA Lady Overdrive",
         "Width": 2.75,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-lalady.png"
+        "Image": "sourceaudio-lalady.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Kingmaker Fuzz",
         "Width": 2.75,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-kingmaker.png"
+        "Image": "sourceaudio-kingmaker.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Programmable EQ",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/sourceaudio-eq.png"
+        "Image": "sourceaudio-eq.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Soleman MIDI Controller",
         "Width": 10.5,
         "Height": 3.75,
-        "Image": "public/images/pedals/sourceaudio-soleman.png"
+        "Image": "sourceaudio-soleman.png"
     },
     {
         "Brand": "Source Audio",
         "Name": "Tap Tempo Switch",
         "Width": 2.25,
         "Height": 2.5,
-        "Image": "public/images/pedals/sourceaudio-tap.png"
+        "Image": "sourceaudio-tap.png"
     },
     {
         "Brand": "Empress",
         "Name": "Compressor",
         "Width": 4.5,
         "Height": 3.5,
-        "Image": "public/images/pedals/empress-comp.png"
+        "Image": "empress-comp.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Tremolo 2",
         "Width": 4.5,
         "Height": 3.5,
-        "Image": "public/images/pedals/empress-trem2.png"
+        "Image": "empress-trem2.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Phaser",
         "Width": 4.5,
         "Height": 3.5,
-		"Image": "public/images/pedals/empress-phaser.png"
+		"Image": "empress-phaser.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Multidrive",
         "Width": 4.5,
         "Height": 3.5,
-        "Image": "public/images/pedals/empress-multidrive.png"
+        "Image": "empress-multidrive.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Heavy",
         "Width": 4.5,
         "Height": 3.5,
-        "Image": "public/images/pedals/empress-heavy.png"
+        "Image": "empress-heavy.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Para EQ",
         "Width": 4.5,
         "Height": 3.5,
-        "Image": "public/images/pedals/empress-paraeq.png"
+        "Image": "empress-paraeq.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Nebulus",
         "Width": 4.5,
         "Height": 3.5,
-        "Image": "public/images/pedals/empress-nebulus.png"
+        "Image": "empress-nebulus.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Tape Delay",
         "Width": 4.5,
         "Height": 3.5,
-        "Image": "public/images/pedals/empress-tapedelay.png"
+        "Image": "empress-tapedelay.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Superdelay",
         "Width": 5.7,
         "Height": 3.75,
-        "Image": "public/images/pedals/empress-superdelay.png"
+        "Image": "empress-superdelay.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Vintage Modified Superdelay",
         "Width": 5.7,
         "Height": 3.75,
-        "Image": "public/images/pedals/empress-superdelayvmod.png"
+        "Image": "empress-superdelayvmod.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Reverb",
         "Width": 5.7,
         "Height": 3.75,
-        "Image": "public/images/pedals/empress-reverb.png"
+        "Image": "empress-reverb.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Distortion",
 		"Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/empress-distortion.png"
+        "Image": "empress-distortion.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Fuzz",
 		"Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/empress-fuzz.png"
+        "Image": "empress-fuzz.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Germ Drive",
 		"Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/empress-germdrive.png"
+        "Image": "empress-germdrive.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Buffer+",
 		"Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/empress-bufferplus.png"
+        "Image": "empress-bufferplus.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Buffer",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/empress-buffer.png"
+        "Image": "empress-buffer.png"
     },
 	{
         "Brand": "Empress",
         "Name": "Buffer+Stereo",
         "Width": 3.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/empress-stereobuffer.png"
+        "Image": "empress-stereobuffer.png"
     },
 	{
         "Brand": "Skreddy",
         "Name": "Screwdriver",
 		"Width": 2.75,
         "Height": 4.3,
-        "Image": "public/images/pedals/skreddy-screwdriver.png"
+        "Image": "skreddy-screwdriver.png"
     },
 	{
         "Brand": "Skreddy",
         "Name": "Lunar Module",
 		"Width": 2.75,
         "Height": 4.3,
-        "Image": "public/images/pedals/skreddy-lunarmodule.png"
+        "Image": "skreddy-lunarmodule.png"
     },
 	{
         "Brand": "Skreddy",
         "Name": "Echo",
 		"Width": 4,
         "Height": 5,
-        "Image": "public/images/pedals/skreddy-echo.png"
+        "Image": "skreddy-echo.png"
     },
     {
         "Brand": "Thorpy",
         "Name": "Gunshot",
         "Width": 2.75,
         "Height": 5.7,
-        "Image": "public/images/pedals/thorpy-gunshot.png"
+        "Image": "thorpy-gunshot.png"
     },
     {
         "Brand": "Thorpy",
         "Name": "Peacekeeper",
         "Width": 2.75,
         "Height": 5.7,
-        "Image": "public/images/pedals/thorpy-peacekeeper.png"
+        "Image": "thorpy-peacekeeper.png"
     },
 	{
         "Brand": "Truetone",
         "Name": "Jekyll & Hyde V3",
         "Width": 6,
         "Height": 5,
-        "Image": "public/images/pedals/truetone-jekyll.png"
+        "Image": "truetone-jekyll.png"
     },
 	{
         "Brand": "Truetone",
         "Name": "V3 H2O",
         "Width": 6,
         "Height": 5,
-        "Image": "public/images/pedals/truetone-h2o.png"
+        "Image": "truetone-h2o.png"
     },
 	{
         "Brand": "Truetone",
         "Name": "VS-XO",
         "Width": 6,
         "Height": 5,
-        "Image": "public/images/pedals/truetone-vsxo.png"
+        "Image": "truetone-vsxo.png"
     },
 	{
         "Brand": "Truetone",
         "Name": "V3 Route 66",
         "Width": 6,
         "Height": 5,
-        "Image": "public/images/pedals/truetone-route66.png"
+        "Image": "truetone-route66.png"
     },
     {
         "Brand": "Vox",
         "Name": "V847 Wah",
         "Width": 4.01575,
         "Height": 9.92126,
-        "Image": "public/images/pedals/vox-wah.png"
+        "Image": "vox-wah.png"
     },
     {
         "Brand": "Vox",
         "Name": "Big Bad Wah",
         "Width": 5.12,
         "Height": 9.96,
-        "Image": "public/images/pedals/vox-bigbadwah.png"
+        "Image": "vox-bigbadwah.png"
     },
     {
         "Brand": "Walrus",
         "Name": "385 Overdrive",
         "Width": 2.6,
         "Height": 4.77,
-        "Image": "public/images/pedals/walrus-385.png"
+        "Image": "walrus-385.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Deep Six",
         "Width": 2.6,
         "Height": 4.77,
-        "Image": "public/images/pedals/walrus-deepsix.png"
+        "Image": "walrus-deepsix.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Jupiter",
         "Width": 2.6,
         "Height": 4.77,
-        "Image": "public/images/pedals/walrus-jupiter.png"
+        "Image": "walrus-jupiter.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Voyager",
         "Width": 2.6,
         "Height": 4.77,
-        "Image": "public/images/pedals/walrus-voyager.png"
+        "Image": "walrus-voyager.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Plainsman",
         "Width": 2.45,
         "Height": 4.39,
-        "Image": "public/images/pedals/walrus-plainsman.png"
+        "Image": "walrus-plainsman.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Messner",
         "Width": 2.6,
         "Height": 4.77,
-        "Image": "public/images/pedals/walrus-messner.png"
+        "Image": "walrus-messner.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Mayflower",
         "Width": 2.6,
         "Height": 4.77,
-        "Image": "public/images/pedals/walrus-mayflower.png"
+        "Image": "walrus-mayflower.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Julia",
         "Width": 2.6,
         "Height": 4.77,
-        "Image": "public/images/pedals/walrus-julia.png"
+        "Image": "walrus-julia.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Iron Horse",
         "Width": 2.6,
         "Height": 4.77,
-        "Image": "public/images/pedals/walrus-ironhorse.png"
+        "Image": "walrus-ironhorse.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Contraband",
         "Width": 2.45,
         "Height": 4.39,
-        "Image": "public/images/pedals/walrus-contraband.png"
+        "Image": "walrus-contraband.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Janus",
         "Width": 7.38,
         "Height": 4.7,
-        "Image": "public/images/pedals/walrus-janus.png"
+        "Image": "walrus-janus.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Bellwether",
         "Width": 5.625,
         "Height": 4.625,
-        "Image": "public/images/pedals/walrus-bellwether.png"
+        "Image": "walrus-bellwether.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Descent",
         "Width": 5.625,
         "Height": 4.625,
-        "Image": "public/images/pedals/walrus-descent.png"
+        "Image": "walrus-descent.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Vanguard",
         "Width": 5.625,
         "Height": 4.625,
-        "Image": "public/images/pedals/walrus-vanguard.png"
+        "Image": "walrus-vanguard.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Red",
         "Width": 3.68,
         "Height": 4.67,
-        "Image": "public/images/pedals/walrus-red.png"
+        "Image": "walrus-red.png"
     },
     {
         "Brand": "Walrus",
         "Name": "Luminary",
         "Width": 4.67,
         "Height": 3.68,
-        "Image": "public/images/pedals/walrus-luminary.png"
+        "Image": "walrus-luminary.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Tape Echo",
         "Width": 3.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-tapeecho.png"
+        "Image": "wampler-tapeecho.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Latitude",
         "Width": 3.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-latitude.png"
+        "Image": "wampler-latitude.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Pinnacle Deluxe",
         "Width": 3.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-pinnacledeluxe.png"
+        "Image": "wampler-pinnacledeluxe.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Plexi-Drive Deluxe",
         "Width": 3.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-plexideluxe.png"
+        "Image": "wampler-plexideluxe.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Triple Wreck",
         "Width": 3.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-tapeecho.png"
+        "Image": "wampler-tapeecho.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Pinnacle",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-pinnacle.png"
+        "Image": "wampler-pinnacle.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Dracarys",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-Dracarys.png"
+        "Image": "wampler-Dracarys.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Ego",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-ego.png"
+        "Image": "wampler-ego.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Latitude Standard",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-latitude.png"
+        "Image": "wampler-latitude.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Euphoria",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-Euphoria.png"
+        "Image": "wampler-Euphoria.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Velvet Fuzz",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-velvet.png"
+        "Image": "wampler-velvet.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Paisley",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-paisley.png"
+        "Image": "wampler-paisley.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Clarksdale",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-Clarksdale.png"
+        "Image": "wampler-Clarksdale.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Plexi-Drive",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-plexidrive.png"
+        "Image": "wampler-plexidrive.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Sovereign",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-Sovereign.png"
+        "Image": "wampler-Sovereign.png"
     },
     {
         "Brand": "Wampler",
         "Name": "cataPulp",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-catapulp.png"
+        "Image": "wampler-catapulp.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Tweed 57",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "public/images/pedals/wampler-tweed57.png"
+        "Image": "wampler-tweed57.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Tumnus",
         "Width": 1.5,
         "Height": 3.5,
-        "Image": "public/images/pedals/wampler-tumnus.png"
+        "Image": "wampler-tumnus.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Mini Ego",
         "Width": 1.5,
         "Height": 3.5,
-        "Image": "public/images/pedals/wampler-miniego.png"
+        "Image": "wampler-miniego.png"
     },
     {
         "Brand": "Wampler",
         "Name": "dB+",
         "Width": 1.5,
         "Height": 3.5,
-        "Image": "public/images/pedals/wampler-db.png"
+        "Image": "wampler-db.png"
     },
     {
         "Brand": "Xotic",
         "Name": "RC Booster",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/xotic-rcbooster.png"
+        "Image": "xotic-rcbooster.png"
     },
     {
         "Brand": "Xotic",
         "Name": "AC Booster",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/xotic-acbooster.png"
+        "Image": "xotic-acbooster.png"
     },
     {
         "Brand": "Xotic",
         "Name": "AC+",
         "Width": 4.7,
         "Height": 3.7,
-        "Image": "public/images/pedals/xotic-acplus.png"
+        "Image": "xotic-acplus.png"
     },
     {
         "Brand": "Xotic",
         "Name": "BB+",
         "Width": 4.7,
         "Height": 3.7,
-        "Image": "public/images/pedals/xotic-bbplus.png"
+        "Image": "xotic-bbplus.png"
     },
     {
 		"Brand": "Xotic",
         "Name": "BB Preamp",
         "Width": 2.5,
         "Height": 4.3,
-        "Image": "public/images/pedals/xotic-bb.png"
+        "Image": "xotic-bb.png"
     },
     {
         "Brand": "Xotic",
         "Name": "SP Compressor",
         "Width": 2,
         "Height": 3.5,
-        "Image": "public/images/pedals/xotic-sp.png"
+        "Image": "xotic-sp.png"
     },
 	{
         "Brand": "Xotic",
         "Name": "EP Booster",
         "Width": 2,
         "Height": 3.5,
-        "Image": "public/images/pedals/xotic-ep.png"
+        "Image": "xotic-ep.png"
     },
     {
         "Brand": "Zoom",
         "Name": "G3",
         "Width": 9.21,
         "Height": 6.69,
-        "Image": "public/images/pedals/zoom-g3.png"
+        "Image": "zoom-g3.png"
     },
     {
         "Brand": "Zvex",
         "Name": "Fuzz Factory",
         "Width": 4.7,
         "Height": 2.38,
-        "Image": "public/images/pedals/zvex-fuzzfactory.png"
+        "Image": "zvex-fuzzfactory.png"
     },
     {
         "Brand": "Zvex",
         "Name": "Box of Rock",
         "Width": 4.7,
         "Height": 2.38,
-        "Image": "public/images/pedals/zvex-boxofrock.png"
+        "Image": "zvex-boxofrock.png"
     },
     {
         "Brand": "Zvex",
         "Name": "Distortron",
         "Width": 4.7,
         "Height": 2.38,
-        "Image": "public/images/pedals/zvex-distortron.png"
+        "Image": "zvex-distortron.png"
     },
     {
         "Brand": "Zvex",
         "Name": "Instant Lofi Junky",
         "Width": 4.7,
         "Height": 2.38,
-        "Image": "public/images/pedals/zvex-lofijunky.png"
+        "Image": "zvex-lofijunky.png"
     }
 ]
