@@ -43,8 +43,13 @@ $(document).ready(function(){
 	// });
 
 	// Activate canvas features
-	$('body').on('click', '#clear-canvas', function(){
+	//$('body').on('click', '#clear-canvas', function(){
+	//	$('#clear-canvas-modal').modal('show');
+	//});
+
+	$('body').on('click', '#clear-canvas-confirmation', function(){
 		$(".canvas").empty();
+		$('#clear-canvas-modal').modal('hide')
 		savePedalCanvas();
 	});
 

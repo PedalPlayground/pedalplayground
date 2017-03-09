@@ -153,6 +153,146 @@
         "Height": 4.3,
         "Image": "public/images/pedals/caroline-icarus.png"
     },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Dirty Little Secret",
+        "Width": 2.375,
+        "Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-dirtylittlesecret.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Formula No. 55",
+        "Width": 2.375,
+        "Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-formula55.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "SFT",
+        "Width": 2.375,
+        "Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-sft.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Galileo",
+        "Width": 2.375,
+        "Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-galileo.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Sabbra Cadabra",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-Sabbra.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Formula 5F6",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-formula5f6.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "RAH",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-rah.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Adineko",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-adineko.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Bicycle Delay",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-bicycledelay.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "CSIDMAN",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-discman.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Talisman",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-talisman.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Belle Epoch",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-belle.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Echorec",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-echorec.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Topanga",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-topanga.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Karma Suture (Ge)",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-gekarma.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Karma Suture (Si)",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-sikarma.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Antichthon",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-antichthon.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Valcoder",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-valcoder.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Zero Point",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-zeropoint.png"
+    },
+	{
+        "Brand": "Catalinbread",
+        "Name": "Callisto",
+        "Width": 2.375,
+		"Height": 4.375,
+        "Image": "public/images/pedals/catalinbread-callisto.png"
+    },
     {
         "Brand": "Chase Bliss",
         "Name": "Brothers",
@@ -1846,6 +1986,139 @@
         "Width": 4.5,
         "Height": 3.5,
         "Image": "public/images/pedals/empress-comp.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Tremolo 2",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-trem2.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Phaser",
+        "Width": 4.5,
+        "Height": 3.5,
+		"Image": "public/images/pedals/empress-phaser.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Multidrive",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-multidrive.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Heavy",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-heavy.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Para EQ",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-paraeq.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Nebulus",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-nebulus.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Tape Delay",
+        "Width": 4.5,
+        "Height": 3.5,
+        "Image": "public/images/pedals/empress-tapedelay.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Superdelay",
+        "Width": 5.7,
+        "Height": 3.75,
+        "Image": "public/images/pedals/empress-superdelay.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Vintage Modified Superdelay",
+        "Width": 5.7,
+        "Height": 3.75,
+        "Image": "public/images/pedals/empress-superdelayvmod.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Reverb",
+        "Width": 5.7,
+        "Height": 3.75,
+        "Image": "public/images/pedals/empress-reverb.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Distortion",
+		"Width": 2.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-distortion.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Fuzz",
+		"Width": 2.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-fuzz.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Germ Drive",
+		"Width": 2.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-germdrive.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Buffer+",
+		"Width": 2.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-bufferplus.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Buffer",
+        "Width": 2.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-buffer.png"
+    },
+	{
+        "Brand": "Empress",
+        "Name": "Buffer+Stereo",
+        "Width": 3.5,
+        "Height": 4.5,
+        "Image": "public/images/pedals/empress-stereobuffer.png"
+    },
+	{
+        "Brand": "Skreddy",
+        "Name": "Screwdriver",
+		"Width": 2.75,
+        "Height": 4.3,
+        "Image": "public/images/pedals/skreddy-screwdriver.png"
+    },
+	{
+        "Brand": "Skreddy",
+        "Name": "Lunar Module",
+		"Width": 2.75,
+        "Height": 4.3,
+        "Image": "public/images/pedals/skreddy-lunarmodule.png"
+    },
+	{
+        "Brand": "Skreddy",
+        "Name": "Echo",
+		"Width": 4,
+        "Height": 5,
+        "Image": "public/images/pedals/skreddy-echo.png"
     },
     {
         "Brand": "Thorpy",
