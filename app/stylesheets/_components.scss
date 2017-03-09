@@ -225,6 +225,17 @@ $border: 1px solid rgba(black, .13);
 		@include square(10px);
 		bottom: 10%;
 	}
+	&__name {
+		font-size: 8px;
+		text-align: center;
+		display: block;
+		position: absolute;
+		top: 42%;
+		left: 0;
+		right: 0;
+		padding: 0 8px;
+		font-weight: bold;
+	}
 }
 
 .pedalboard {
