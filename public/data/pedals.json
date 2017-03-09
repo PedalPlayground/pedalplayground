@@ -1301,6 +1301,41 @@
         "Height": 3.66,
         "Image": "public/images/pedals/tc-coronamini.png"
     },
+	{
+        "Brand": "TC Electronics",
+        "Name": "Nova Delay",
+        "Width": 4.92,
+        "Height": 5.19,
+        "Image": "public/images/pedals/tc-novadelay.png"
+    },
+	{
+        "Brand": "TC Electronics",
+        "Name": "Nova Modulator",
+        "Width": 4.92,
+        "Height": 5.19,
+        "Image": "public/images/pedals/tc-novamodulator.png"
+    },
+	{
+        "Brand": "TC Electronics",
+        "Name": "Nova Reverb",
+        "Width": 4.92,
+        "Height": 5.19,
+        "Image": "public/images/pedals/tc-novareverb.png"
+    },
+	{
+        "Brand": "TC Electronics",
+        "Name": "Nova Dynamics",
+        "Width": 4.92,
+        "Height": 5.19,
+        "Image": "public/images/pedals/tc-novadynamics.png"
+    },
+	{
+        "Brand": "TC Electronics",
+        "Name": "Nova Drive",
+        "Width": 4.92,
+        "Height": 5.19,
+        "Image": "public/images/pedals/tc-novadrive.png"
+    },
     {
         "Brand": "Electro Harmonix",
         "Name": "Pitch Fork",
