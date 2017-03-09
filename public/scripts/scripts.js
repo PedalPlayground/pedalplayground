@@ -21324,7 +21324,7 @@ $(document).ready(function(){
 			$('.canvas').append(pedal);
 			readyCanvas();
 			console.log(dims);
-			ga('send', 'event', 'Pedal', 'added', dims + " " + name);
+			ga('send', 'event', 'CustomPedal', 'added', dims + " " + name);
 			event.preventDefault();
 		}
 	});
