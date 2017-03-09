@@ -311,3 +311,11 @@ $border: 1px solid rgba(black, .13);
 // 		}
 // 	}
 // }
+
+.invalid {
+	border: 1px solid $brand-danger;
+	&:focus {
+		border: 1px solid $brand-danger;
+		box-shadow: 0 0 5px $brand-danger;
+	}
+}

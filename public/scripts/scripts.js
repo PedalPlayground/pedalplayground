@@ -18904,32 +18904,45 @@ $(document).ready(function(){
 
 	// Add custom pedal
 	$('body').on('click', '#add-custom-pedal .btn', function(event){
-		console.log("add custom pedal...");
 		var truewidth  = $("#add-custom-pedal .custom-width").val();
 		var trueheight = $("#add-custom-pedal .custom-height").val();
-		var width  	   = truewidth * multiplier;
-		var height     = trueheight * multiplier;
-		var dims  	   = truewidth + '" x ' + trueheight + '"';
-		var image  	   = $("#add-custom-pedal .custom-color").val();
-		var pedal      = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px;">\
-		<span class="pedal__box" style="background-color:'+image+';"></span>\
-		<span class="pedal__jack1"></span>\
-		<span class="pedal__jack2"></span>\
-		<span class="pedal__knob1"></span>\
-		<span class="pedal__knob2"></span>\
-		<span class="pedal__led"></span>\
-		<span class="pedal__switch"></span>\
-		<div class="actions">\
+
+		$("#add-custom-pedal .invalid").removeClass("invalid");
+
+		if ( truewidth == "" || trueheight == "" ) {
+			$("#add-custom-pedal .custom-height, #add-custom-pedal .custom-width").addClass("invalid");
+			$("#add-custom-pedal .custom-width").focus();
+		} else if ( truewidth == "" ) {
+			$("#add-custom-pedal .custom-width").addClass("invalid").focus();
+		} else if ( trueheight == "" ) {
+			$("#add-custom-pedal .custom-height").addClass("invalid").focus();
+		} else {
+			console.log("add custom pedal...");
+			var width  	   = truewidth * multiplier;
+			var height     = trueheight * multiplier;
+			var dims  	   = truewidth + '" x ' + trueheight + '"';
+			var image  	   = $("#add-custom-pedal .custom-color").val();
+			var pedal      = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px;">\
+			<span class="pedal__box" style="background-color:'+image+';"></span>\
+			<span class="pedal__jack1"></span>\
+			<span class="pedal__jack2"></span>\
+			<span class="pedal__knob1"></span>\
+			<span class="pedal__knob2"></span>\
+			<span class="pedal__led"></span>\
+			<span class="pedal__switch"></span>\
+			<div class="actions">\
 			<a class="rotate"></a>\
 			<a class="delete"></a>\
-		</div>\
-		</div>';
+			</div>\
+			</div>';
 
-		$('.canvas').append(pedal);
-		readyCanvas();
-		console.log(dims);
-		ga('send', 'event', 'Pedal', 'added', dims);
-		event.preventDefault();
+			$('.canvas').append(pedal);
+			readyCanvas();
+			console.log(dims);
+			ga('send', 'event', 'Pedal', 'added', dims);
+			event.preventDefault();
+		}
+
 	});
 
 	// Delete Pedals

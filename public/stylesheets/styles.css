@@ -7257,3 +7257,9 @@ strong, th {
     #list-pedals .pedal-listing .pedal-name {
       opacity: .9;
       font-size: 13px; }
+
+.invalid {
+  border: 1px solid #d9534f; }
+  .invalid:focus {
+    border: 1px solid #d9534f;
+    box-shadow: 0 0 5px #d9534f; }
