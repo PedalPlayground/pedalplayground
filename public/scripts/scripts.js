@@ -21287,8 +21287,9 @@ $(document).ready(function(){
 
 	// Add custom pedal
 	$('body').on('click', '#add-custom-pedal .btn', function(event){
-		var truewidth  = $("#add-custom-pedal .custom-width").val();
-		var trueheight = $("#add-custom-pedal .custom-height").val();
+		var truewidth   = $("#add-custom-pedal .custom-width").val();
+		var trueheight  = $("#add-custom-pedal .custom-height").val();
+		var name 		= $("#add-custom-pedal .custom-name").val();
 
 		$("#add-custom-pedal .invalid").removeClass("invalid");
 
@@ -21305,8 +21306,9 @@ $(document).ready(function(){
 			var height     = trueheight * multiplier;
 			var dims  	   = truewidth + '" x ' + trueheight + '"';
 			var image  	   = $("#add-custom-pedal .custom-color").val();
-			var pedal      = '<div class="pedal pedal--custom" style="width:'+width+'px;height:'+height+'px;">\
-			<span class="pedal__box" style="background-color:'+image+';"></span>\
+			var pedal      = '<div class="pedal pedal--custom" style="width:' + width + 'px;height:' + height + 'px;">\
+			<span class="pedal__box" style="background-color:' + image + ';"></span>\
+			<span class="pedal__name">' + name + '</span>\
 			<span class="pedal__jack1"></span>\
 			<span class="pedal__jack2"></span>\
 			<span class="pedal__knob1"></span>\
@@ -21322,10 +21324,9 @@ $(document).ready(function(){
 			$('.canvas').append(pedal);
 			readyCanvas();
 			console.log(dims);
-			ga('send', 'event', 'Pedal', 'added', dims + " Custom Pedal");
+			ga('send', 'event', 'Pedal', 'added', dims + " " + name);
 			event.preventDefault();
 		}
-
 	});
 
 	// Delete Pedals
