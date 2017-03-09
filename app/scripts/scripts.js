@@ -138,7 +138,7 @@ $(document).ready(function(){
 			$('.canvas').append(pedal);
 			readyCanvas();
 			console.log(dims);
-			ga('send', 'event', 'Pedal', 'added', dims);
+			ga('send', 'event', 'Pedal', 'added', dims + " Custom Pedal");
 			event.preventDefault();
 		}
 
