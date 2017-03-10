@@ -16,7 +16,8 @@
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.6",
-    "gulp-watch": "^4.3.5"
+    "gulp-watch": "^4.3.5",
+    "gulp-responsive": "^2.7.0"
   },
   "devDependencies": {
     "gulp-responsive": "^2.7.0"
