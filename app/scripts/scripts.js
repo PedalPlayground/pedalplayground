@@ -1,7 +1,8 @@
+var pedalImagePath 		= "public/images/pedals/";
+var pedalboardImagePath = "public/images/pedalboards/";
+
 $(document).ready(function(){
 
-	var pedalImagePath 		= "public/images/pedals/";
-	var pedalboardImagePath = "public/images/pedalboards/";
 
 	// Populate Pedalboards and Pedals lists
 	GetPedalData();
@@ -363,7 +364,7 @@ window.listPedals = function(pedals){
 			Height  = pedals[i].Height * multiplier;
 
 			var $pedalListing = $('<div class="pedal-listing">\
-				<img src="' + pedals[i].Image + '" alt="' + pedals[i].Brand + " " + pedals[i].Name + '" width="' + Width + '" height="' + Height + '"/>\
+				<img src="' + pedalImagePath + pedals[i].Image + '" alt="' + pedals[i].Brand + " " + pedals[i].Name + '" width="' + Width + '" height="' + Height + '"/>\
 				<p class="pedal-brand">' + pedals[i].Brand + '</p>\
 				<p class="pedal-name">' + pedals[i].Name + '</p>\
 			</div>');
