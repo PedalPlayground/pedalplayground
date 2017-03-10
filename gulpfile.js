@@ -19,6 +19,8 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var responsive = require('gulp-responsive');
+var cache = require('gulp-cached');
+
 
 var gzip_options = {
     threshold: '1kb',
@@ -98,6 +100,7 @@ gulp.task('scripts', function() {
 
 gulp.task('images', function() {
 	return gulp.src('app/images/pedals/*')
+        .pipe(cache('images'))
 		.pipe(responsive({
 			'*.*': {
 				withoutEnlargement: false,

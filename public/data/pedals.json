@@ -1,5 +1,61 @@
 [
 	{
+        "Brand": "Pigtronix",
+        "Name": "Infinity Looper",
+        "Width": 7.4,
+        "Height": 4.6,
+        "Image": "pigtronix-infinity.png"
+    },
+	{
+        "Brand": "Pigtronix",
+        "Name": "Philosopher's Tone",
+        "Width": 4.4,
+        "Height": 2.55,
+        "Image": "pigtronix-philosopherstone.png"
+    },
+	{
+        "Brand": "Pigtronix",
+        "Name": "Philosopher's Tone Micro",
+        "Width": 1.75,
+        "Height": 3.75,
+        "Image": "pigtronix-philosopherstonemicro.png"
+    },
+	{
+        "Brand": "Pigtronix",
+        "Name": "Disnortion Pro Micro",
+		"Width": 1.75,
+        "Height": 3.75,
+        "Image": "pigtronix-disnortionpromicro.png"
+    },
+	{
+        "Brand": "Pigtronix",
+        "Name": "Tremvelope",
+        "Width": 5.7,
+        "Height": 4.7,
+        "Image": "pigtronix-tremvelope.png"
+    },
+	{
+        "Brand": "Pigtronix",
+        "Name": "Echolution 2 Ultra Pro",
+        "Width": 5.7,
+        "Height": 4.7,
+        "Image": "pigtronix-echolution2ultrapro.png"
+    },
+	{
+        "Brand": "Pigtronix",
+        "Name": "Echolution 2 Filter Pro",
+        "Width": 5.7,
+        "Height": 4.7,
+        "Image": "pigtronix-filterpro.png"
+    },
+	{
+        "Brand": "Pigtronix",
+        "Name": "Philosopher's King",
+		"Width": 7.4,
+        "Height": 4.6,
+        "Image": "pigtronix-philosophersking.png"
+    },
+	{
         "Brand": "Keeley",
         "Name": "30ms Tracker",
         "Width": 2.5,
