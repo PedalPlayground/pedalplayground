@@ -1,5 +1,211 @@
 [
 	{
+        "Brand": "Barber",
+        "Name": "Gain Changer",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "barber-gainchanger.png"
+    },
+	{
+        "Brand": "Barber",
+        "Name": "Direct Drive",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "barber-directdrive.png"
+    },
+	{
+        "Brand": "Barber",
+        "Name": "Tone Press",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "barber-tonepresssm.png"
+    },
+	{
+        "Brand": "Barber",
+        "Name": "Tone Press (old)",
+		"Width": 3.7,
+        "Height": 4.7,
+        "Image": "barber-tonepress.png"
+    },
+	{
+        "Brand": "Barber",
+        "Name": "LTD",
+		"Width": 3.7,
+        "Height": 4.7,
+        "Image": "barber-ltd.png"
+    },
+	{
+        "Brand": "Barber",
+		"Name": "1/2 Gainer",
+		"Width": 3.7,
+        "Height": 5.7,
+        "Image": "barber-halfgainer.png"
+    },
+	{
+        "Brand": "Barber",
+		"Name": "Burn Unit",
+		"Width": 3.7,
+        "Height": 5.7,
+        "Image": "barber-burnunit.png"
+    },
+
+
+
+	{
+        "Brand": "MI Audio",
+        "Name": "Crunchbox",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "miaudio-crunchbox.png"
+    },
+	{
+        "Brand": "GFI System",
+        "Name": "Specular Reverb V2",
+		"Width": 4.7,
+        "Height": 2.5,
+        "Image": "gfi-specularreverbv2.png"
+    },
+	{
+        "Brand": "Mad Professor",
+        "Name": "Deep Blue Delay",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "madprof-deepbluedelay.png"
+    },
+	{
+        "Brand": "Mad Professor",
+        "Name": "Silver Spring Reverb",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "madprof-silverspring.png"
+    },
+	{
+        "Brand": "Mad Professor",
+        "Name": "Forrest Green Compressor",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "madprof-forrestgreencomp.png"
+    },
+	{
+        "Brand": "Mad Professor",
+        "Name": "Royal Blue Overdrive",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "madprof-royalblue.png"
+    },
+	{
+        "Brand": "Mad Professor",
+        "Name": "Amber Overdrive",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "madprof-amber.png"
+    },
+	{
+        "Brand": "Mad Professor",
+        "Name": "Sweet Honey Overdrive",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "madprof-sweethoney.png"
+    },
+	{
+        "Brand": "Mad Professor",
+        "Name": "1 Overdrive",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "madprof-1od.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "Archer",
+        "Width": 2.5,
+        "Height": 4,
+        "Image": "jrockett-archersilver.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "Archer Ikon",
+        "Width": 2.5,
+        "Height": 4,
+        "Image": "jrockett-archerikon.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "Rockaway Archer",
+        "Width": 2.5,
+        "Height": 4,
+        "Image": "jrockett-rockawayarcher.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "45",
+        "Width": 2.5,
+        "Height": 4,
+        "Image": "jrockett-45.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "GTO",
+        "Width": 2.5,
+        "Height": 4,
+        "Image": "jrockett-gto.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "The Dude",
+        "Width": 2.5,
+        "Height": 4,
+        "Image": "jrockett-thedude.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "Boing Reverb",
+        "Width": 2.5,
+        "Height": 4,
+        "Image": "jrockett-boing.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "Blue Note",
+        "Width": 3,
+        "Height": 4.75,
+        "Image": "jrockett-bluenote.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "Flex Drive",
+        "Width": 3,
+        "Height": 4.75,
+        "Image": "jrockett-flexdrive.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "Alien",
+        "Width": 4.75,
+        "Height": 3,
+        "Image": "jrockett-alien.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "WTF",
+        "Width": 4.75,
+        "Height": 3,
+        "Image": "jrockett-wtf.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "Tim Pierce",
+        "Width": 4.75,
+        "Height": 3,
+        "Image": "jrockett-timpierce.png"
+    },
+	{
+        "Brand": "J. Rockett",
+        "Name": "Alan Holdsworth",
+        "Width": 4.75,
+        "Height": 3,
+        "Image": "jrockett-alanholdsworth.png"
+    },
+	{
         "Brand": "Pigtronix",
         "Name": "Infinity Looper",
         "Width": 7.4,
@@ -22,7 +228,7 @@
     },
 	{
         "Brand": "Pigtronix",
-        "Name": "Aria",
+        "Name": "Polysaturator",
         "Width": 4.4,
         "Height": 2.55,
         "Image": "pigtronix-polysaturator.png"
@@ -1455,6 +1661,13 @@
         "Height": 4.3,
         "Image": "neunaber-immerse.png"
     },
+	{
+        "Brand": "Neunaber",
+        "Name": "Seraphim",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "neunaber-seraphim.png"
+    },
     {
         "Brand": "Neunaber",
         "Name": "Iconoclast",
@@ -1678,6 +1891,20 @@
         "Width": 2.83,
         "Height": 4.8,
         "Image": "tc-dittostereo.png"
+    },
+	{
+        "Brand": "TC Electronics",
+        "Name": "Ditto x2",
+		"Width": 4.44,
+        "Height": 5.31,
+        "Image": "tc-ditto2.png"
+    },
+	{
+        "Brand": "TC Electronics",
+        "Name": "Ditto x4",
+		"Width": 9.25,
+        "Height": 5.70866,
+        "Image": "tc-ditto4.png"
     },
     {
         "Brand": "TC Electronics",
@@ -1952,12 +2179,103 @@
         "Height": 10,
         "Image": "fulltone-clyde.png"
     },
-    {
+	{
+        "Brand": "DigiTech",
+        "Name": "FreqOut",
+        "Width": 2.875,
+        "Height": 4.75,
+        "Image": "digitech-freqout.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "Luxe",
+        "Width": 2.875,
+        "Height": 4.75,
+        "Image": "digitech-luxe.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "The Drop",
+        "Width": 2.875,
+        "Height": 4.75,
+        "Image": "digitech-drop.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "The Mosaic",
+        "Width": 2.875,
+        "Height": 4.75,
+        "Image": "digitech-mosaic.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "Polara",
+        "Width": 2.65,
+        "Height": 4.40,
+        "Image": "digitech-polara.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "Ventura Vibe",
+        "Width": 2.65,
+        "Height": 4.40,
+        "Image": "digitech-ventura.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "Nautila",
+        "Width": 2.65,
+        "Height": 4.40,
+        "Image": "digitech-nautila.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "Obscura",
+        "Width": 2.65,
+        "Height": 4.40,
+        "Image": "digitech-obscura.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "Looking Glass",
+        "Width": 2.63,
+        "Height": 4.68,
+        "Image": "digitech-lookingglass.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "Boneshaker",
+        "Width": 2.63,
+        "Height": 4.68,
+        "Image": "digitech-boneshaker.png"
+    },
+	{
         "Brand": "DigiTech",
         "Name": "RV-7 Reverb",
         "Width": 3.5,
         "Height": 5.5,
         "Image": "digitech-rv7.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "CR-7 Stereo Chorus",
+        "Width": 3.5,
+        "Height": 5.5,
+        "Image": "digitech-cr7.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "Supernatural",
+        "Width": 3.5,
+        "Height": 5.5,
+        "Image": "digitech-supernatural.png"
+    },
+	{
+        "Brand": "DigiTech",
+        "Name": "Whammy 5",
+        "Width": 6.5,
+        "Height": 7.75,
+        "Image": "digitech-whammy.png"
     },
     {
         "Brand": "DigiTech",

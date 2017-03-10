@@ -104,6 +104,7 @@ gulp.task('images', function() {
 		.pipe(responsive({
 			'*.*': {
 				withoutEnlargement: false,
+                errorOnUnusedConfig: false,
 				width: '300',
 				height: '300',
 				max: true
@@ -116,6 +117,7 @@ gulp.task('images', function() {
 /* Watch Files For Changes */
 gulp.task('watch', function() {
     livereload.listen();
+    gulp.watch('app/images/pedals/**', ['images']);
     gulp.watch('app/stylesheets/**', ['styles']);
 	gulp.watch('app/scripts/**', ['scripts']);
     gulp.watch('*.php').on('change', livereload.changed);
@@ -123,4 +125,4 @@ gulp.task('watch', function() {
     gulp.watch('*.html').on('change', livereload.changed);
 });
 
-gulp.task('default', ['styles', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'images', 'watch']);
