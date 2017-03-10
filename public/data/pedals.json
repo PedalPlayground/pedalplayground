@@ -15,6 +15,20 @@
     },
 	{
         "Brand": "Pigtronix",
+        "Name": "Aria",
+        "Width": 4.4,
+        "Height": 2.55,
+        "Image": "pigtronix-aria.png"
+    },
+	{
+        "Brand": "Pigtronix",
+        "Name": "Aria",
+        "Width": 4.4,
+        "Height": 2.55,
+        "Image": "pigtronix-polysaturator.png"
+    },
+	{
+        "Brand": "Pigtronix",
         "Name": "Philosopher's Tone Micro",
         "Width": 1.75,
         "Height": 3.75,
