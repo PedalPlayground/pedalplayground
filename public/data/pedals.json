@@ -1,5 +1,19 @@
 [
 	{
+        "Brand": "Throbak",
+        "Name": "Fuzz Haze",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "throbak-fuzzhaze.png"
+    },
+	{
+        "Brand": "Throbak",
+        "Name": "sTonebender",
+		"Width": 2.5,
+        "Height": 4.3,
+        "Image": "throbak-stonebender.png"
+    },
+	{
         "Brand": "Barber",
         "Name": "Gain Changer",
 		"Width": 2.5,
@@ -957,8 +971,8 @@
     {
         "Brand": "Sonic Research",
         "Name": "Turbo Tuner ST-300",
-        "Width": 2.5,
-        "Height": 4.625,
+		"Width": 2.5,
+        "Height": 4.3,
         "Image": "sonicresearch-st300.png"
     },
     {
