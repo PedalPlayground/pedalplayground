@@ -1010,7 +1010,14 @@
         "Height": 4.9,
         "Image": "musicomlab-efxiii.png"
     },
-    {
+	{
+        "Brand": "Musicomlab",
+        "Name": "EFX Lite 6M",
+        "Width": 11.8,
+        "Height": 3.2,
+        "Image": "musicomlab-efxlite6m.png"
+    },
+	{
         "Brand": "Musicomlab",
         "Name": "EFX IV",
         "Width": 13.1,
