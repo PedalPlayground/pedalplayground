@@ -905,6 +905,13 @@
         "Height": 4.37,
         "Image": "earthquakerdevices-dispatchmaster.png"
     },
+	{
+        "Brand": "Elektron",
+        "Name": "Analog Drive",
+        "Width": 6.8,
+        "Height": 7.0,
+        "Image": "elektron-analogdrive.png"
+    },
     {
         "Brand": "Foxrox",
         "Name": "Paradox TZF2",
