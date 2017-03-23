@@ -117,7 +117,7 @@ gulp.task('images', function() {
 /* Watch Files For Changes */
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('app/images/pedals/**', ['images']);
+    gulp.watch('app/images/pedals/*.png', ['images']);
     gulp.watch('app/stylesheets/**', ['styles']);
 	gulp.watch('app/scripts/**', ['scripts']);
     gulp.watch('*.php').on('change', livereload.changed);
