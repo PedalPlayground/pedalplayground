@@ -989,7 +989,21 @@
         "Height": 3.66,
         "Image": "sonicresearch-st300mini.png"
     },
-    {
+	{
+        "Brand": "Strymon",
+        "Name": "Zuma",
+        "Width": 6.8,
+        "Height": 3.3,
+        "Image": "strymon-zuma.png"
+    },
+	{
+        "Brand": "Strymon",
+        "Name": "Ojai",
+        "Width": 3.2,
+        "Height": 2.3,
+        "Image": "strymon-ojai.png"
+    },
+	{
         "Brand": "Strymon",
         "Name": "Timeline",
         "Width": 6.75,
@@ -2774,7 +2788,42 @@
         "Height": 5,
         "Image": "truetone-route66.png"
     },
-    {
+	{
+        "Brand": "Voodoo Lab",
+        "Name": "Pedal Power ISO 5",
+        "Width": 4.9,
+        "Height": 3.4,
+        "Image": "voodoolab-iso5.png"
+    },
+	{
+        "Brand": "Voodoo Lab",
+        "Name": "Pedal Power Digital",
+        "Width": 4.9,
+        "Height": 3.4,
+        "Image": "voodoolab-digital.png"
+    },
+	{
+        "Brand": "Voodoo Lab",
+        "Name": "Pedal Power 2+",
+        "Width": 6,
+        "Height": 3.4,
+        "Image": "voodoolab-pp2.png"
+    },
+	{
+        "Brand": "Voodoo Lab",
+        "Name": "Pedal Power 4x4",
+        "Width": 7,
+        "Height": 3.4,
+        "Image": "voodoolab-4x4.png"
+    },
+	{
+        "Brand": "Voodoo Lab",
+        "Name": "Mondo",
+        "Width": 10.7,
+        "Height": 3.4,
+        "Image": "voodoolab-mondo.png"
+    },
+	{
         "Brand": "Vox",
         "Name": "V847 Wah",
         "Width": 4.01575,
