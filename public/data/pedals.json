@@ -1262,6 +1262,13 @@
         "Height": 3.82,
         "Image": "boss-es5.png"
     },
+	{
+        "Brand": "BOSS",
+        "Name": "ES-8",
+        "Width": 17.3125,
+        "Height": 5.4375,
+        "Image": "boss-es8.png"
+    },
     {
         "Brand": "BOSS",
         "Name": "FV-30L",
