@@ -62,9 +62,13 @@
         "Height": 5.7,
         "Image": "barber-burnunit.png"
     },
-
-
-
+	{
+		"Brand": "Bright Onion",
+		"Name": "12 Switcher",
+		"Width": 26.378,
+		"Height": 2.3622,
+		"Image": "brightonion-12switcher.png"
+	},
 	{
         "Brand": "MI Audio",
         "Name": "Crunchbox",
@@ -1654,7 +1658,14 @@
         "Height": 3.7,
         "Image": "mooer-acousticer.png"
     },
-    {
+	{
+        "Brand": "MXR",
+        "Name": "CAE MC-403",
+        "Width": 13.5,
+        "Height": 4,
+        "Image": "mxr-caemc403.png"
+    },
+	{
         "Brand": "MXR",
         "Name": "Micro Amp+",
         "Width": 2.75,
@@ -1856,6 +1867,20 @@
         "Width": 3.7,
         "Height": 4.7,
         "Image": "redpanda-context.png"
+    },
+    {
+        "Brand": "Sinvertek",
+        "Name": "Fluid Time MKII",
+        "Width": 2.618,
+        "Height": 4.78,
+        "Image": "sinvertek-fluidtimemkii.png"
+    },
+	{
+        "Brand": "Sinvertek",
+        "Name": "Distortion No 5",
+        "Width": 2.618,
+        "Height": 4.78,
+        "Image": "sinvertek-distortion.png"
     },
     {
         "Brand": "Strymon",
