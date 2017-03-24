@@ -1,5 +1,12 @@
 [
 	{
+        "Brand": "RJM",
+        "Name": "Mastermind PBC",
+		"Width": 17.5,
+        "Height": 5.5,
+        "Image": "rjm-mastermindpbc.png"
+    },
+	{
         "Brand": "Throbak",
         "Name": "Fuzz Haze",
 		"Width": 2.5,
@@ -1371,7 +1378,14 @@
         "Height": 3.46457,
         "Image": "cioks-schiz.png"
     },
-    {
+	{
+        "Brand": "DigiTech",
+        "Name": "DOD Mini Expression",
+        "Width": 3,
+        "Height": 5,
+        "Image": "dod-miniexpression.png"
+    },
+	{
         "Brand": "DigiTech",
         "Name": "Whammy 5",
         "Width": 6.5,
