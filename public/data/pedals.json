@@ -1318,6 +1318,48 @@
         "Height": 6.25,
         "Image": "boss-dd20.png"
     },
+	{
+        "Brand": "Cioks",
+        "Name": "DC10",
+        "Width": 6.22,
+        "Height": 3.858,
+        "Image": "cioks-dc10.png"
+    },
+	{
+        "Brand": "Cioks",
+        "Name": "Ciokolate",
+        "Width": 11.4961,
+        "Height": 3.858,
+        "Image": "cioks-ciokolate.png"
+    },
+	{
+        "Brand": "Cioks",
+        "Name": "DC8",
+        "Width": 5.74803,
+        "Height": 3.46457,
+        "Image": "cioks-dc8.png"
+    },
+	{
+        "Brand": "Cioks",
+        "Name": "DC5",
+        "Width": 5.11811,
+        "Height": 3.46457,
+        "Image": "cioks-dc5.png"
+    },
+	{
+        "Brand": "Cioks",
+        "Name": "Adam",
+        "Width": 4.52756,
+        "Height": 3.46457,
+        "Image": "cioks-adam.png"
+    },
+	{
+        "Brand": "Cioks",
+        "Name": "Schizo / Big John / AC Rider",
+        "Width": 5.11811,
+        "Height": 3.46457,
+        "Image": "cioks-schiz.png"
+    },
     {
         "Brand": "DigiTech",
         "Name": "Whammy 5",
