@@ -1063,6 +1063,13 @@
         "Height": 3.37,
         "Image": "truetone-cs12.png"
     },
+	{
+        "Brand": "Truetone",
+        "Name": "1 Spot Pro CS7",
+        "Width": 5.5,
+        "Height": 3.37,
+        "Image": "truetone-cs7.png"
+    },
     {
         "Brand": "Paul C",
         "Name": "Timmy",
@@ -2976,7 +2983,7 @@
     },
 	{
         "Brand": "Voodoo Lab",
-        "Name": "Mondo",
+        "Name": "Pedal Power Mondo",
         "Width": 10.7,
         "Height": 3.4,
         "Image": "voodoolab-mondo.png"
