@@ -21333,6 +21333,39 @@ $(document).ready(function(){
 		}
 	});
 
+
+	// Add custom pedalboard
+	$('body').on('click', '#add-custom-pedalboard .btn', function(event){
+		var truewidth   = $("#add-custom-pedalboard .custom-width").val();
+		var trueheight  = $("#add-custom-pedalboard .custom-height").val();
+
+		$("#add-custom-pedalboard .invalid").removeClass("invalid");
+
+		if ( truewidth == "" || trueheight == "" ) {
+			$("#add-custom-pedalboard .custom-height, #add-custom-pedalboard .custom-width").addClass("invalid");
+			$("#add-custom-pedalboard .custom-width").focus();
+		} else if ( truewidth == "" ) {
+			$("#add-custom-pedalboard .custom-width").addClass("invalid").focus();
+		} else if ( trueheight == "" ) {
+			$("#add-custom-pedalboard .custom-height").addClass("invalid").focus();
+		} else {
+			console.log("add custom pedalboard...");
+			var width  	   = truewidth * multiplier;
+			var height     = trueheight * multiplier;
+			var dims  	   = truewidth + '" x ' + trueheight + '"';
+			var pedalboard = '<div class="pedalboard pedalboard--custom" style="width:' + width + 'px;height:' + height + 'px; border-width:'+ multiplier / 2 +'px">\
+			<div class="actions">\
+			<a class="delete"></a>\
+			</div>\
+			</div>';
+
+			$('.canvas').append(pedalboard);
+			readyCanvas();
+			ga('send', 'event', 'CustomPedalboard', 'added', dims + " " + name);
+			event.preventDefault();
+		}
+	});
+
 	// Delete Pedals
 	//$('body').on('click', '.canvas .delete', function(){
 	//    $(this).parents('.pedal, .pedalboard').remove();

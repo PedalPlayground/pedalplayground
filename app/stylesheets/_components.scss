@@ -27,7 +27,7 @@ $border: 1px solid rgba(black, .13);
 }
 
 .sidebar {
-	max-width: 260px;
+	max-width: 290px;
 	border-right: $border;
 	background: #FFF;
 	box-shadow: 0 1px 5px rgba(black, .16);
@@ -86,7 +86,7 @@ $border: 1px solid rgba(black, .13);
 				@extend .glyphicon;
 				@extend .glyphicon-remove;
 			}
-			&:first-child {
+			&.rotate {
 				border-right: $border;
 				&:before {
 					@extend .glyphicon-refresh;
@@ -240,9 +240,22 @@ $border: 1px solid rgba(black, .13);
 
 .pedalboard {
 	z-index: 1;
+	&--custom {
+		border: 5px solid #ddd;
+		border-top-color: #ccc;
+		border-bottom-color: #ccc;
+		background: #222;
+	}
 }
 
-#add-custom-pedal {
+#custom-items {
+	.nav-tabs {
+		margin: 14px 0;
+		li a {
+			padding: 8px 13px;
+			font-size: 12px;
+		}
+	}
 	.form-element {
 		margin-bottom: 15px;
 		&.left {

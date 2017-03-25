@@ -354,8 +354,8 @@ th {
 .glyphicon-repeat:before {
   content: "\e030"; }
 
-.glyphicon-refresh:before, .pedal .actions a:first-child:before,
-.pedalboard .actions a:first-child:before {
+.glyphicon-refresh:before, .pedal .actions a.rotate:before,
+.pedalboard .actions a.rotate:before {
   content: "\e031"; }
 
 .glyphicon-list-alt:before {
@@ -7023,7 +7023,7 @@ strong, th {
   flex: 1 1 auto; }
 
 .sidebar {
-  max-width: 260px;
+  max-width: 290px;
   border-right: 1px solid rgba(0, 0, 0, 0.13);
   background: #FFF;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
@@ -7079,11 +7079,11 @@ strong, th {
       .pedalboard .actions a:before {
         font-size: 10px;
         line-height: 10px; }
-      .pedal .actions a:first-child,
-      .pedalboard .actions a:first-child {
+      .pedal .actions a.rotate,
+      .pedalboard .actions a.rotate {
         border-right: 1px solid rgba(0, 0, 0, 0.13); }
-        .pedal .actions a:first-child:before,
-        .pedalboard .actions a:first-child:before {
+        .pedal .actions a.rotate:before,
+        .pedalboard .actions a.rotate:before {
           font-weight: bold; }
   .pedal:hover:before,
   .pedalboard:hover:before {
@@ -7186,24 +7186,35 @@ strong, th {
 
 .pedalboard {
   z-index: 1; }
+  .pedalboard--custom {
+    border: 5px solid #ddd;
+    border-top-color: #ccc;
+    border-bottom-color: #ccc;
+    background: #222; }
 
-#add-custom-pedal .form-element {
+#custom-items .nav-tabs {
+  margin: 14px 0; }
+  #custom-items .nav-tabs li a {
+    padding: 8px 13px;
+    font-size: 12px; }
+
+#custom-items .form-element {
   margin-bottom: 15px; }
-  #add-custom-pedal .form-element.left {
+  #custom-items .form-element.left {
     float: left;
     width: 50%; }
-  #add-custom-pedal .form-element label {
+  #custom-items .form-element label {
     font-size: 12px; }
-    #add-custom-pedal .form-element label em {
+    #custom-items .form-element label em {
       font-size: 10px;
       font-style: normal;
       font-weight: normal;
       color: #a2a2a2; }
 
-#add-custom-pedal .custom-width {
+#custom-items .custom-width {
   border-radius: 4px 0 0 4px; }
 
-#add-custom-pedal .custom-height {
+#custom-items .custom-height {
   border-radius: 0 4px 4px 0;
   border-left: 0; }
 
