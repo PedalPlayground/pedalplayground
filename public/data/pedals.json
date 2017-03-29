@@ -1554,6 +1554,20 @@
         "Image": "freethetone-flighttime.png"
     },
     {
+        "Brand": "Friedman",
+        "Name": "BE-OD",
+        "Width": 2.75,
+        "Height": 4.625,
+        "Image": "friedman-beod.png"
+    },
+    {
+        "Brand": "Friedman",
+        "Name": "Sir-Compre",
+        "Width": 2.75,
+        "Height": 4.625,
+        "Image": "friedman-sircompre.png"
+    },
+    {
         "Brand": "Ibanez",
         "Name": "DE7",
         "Width": 3,
