@@ -1,5 +1,26 @@
 [
 	{
+        "Brand": "Goodwood Audio",
+        "Name": "Output V2",
+		"Width": 4.44882,
+        "Height": 2.952756,
+        "Image": "goodwood-outputv2.png"
+    },
+	{
+        "Brand": "Goodwood Audio",
+        "Name": "Input V2",
+		"Width": 4.44882,
+        "Height": 2.598425,
+        "Image": "goodwood-inputv2.png"
+    },
+	{
+        "Brand": "Goodwood Audio",
+        "Name": "Interfacer",
+        "Width": 3.031496,
+		"Height": 5,
+        "Image": "goodwood-interfacer.png"
+    },
+	{
         "Brand": "RJM",
         "Name": "Mastermind PBC",
 		"Width": 17.5,
