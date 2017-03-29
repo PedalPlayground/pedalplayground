@@ -2549,10 +2549,10 @@
     },
 	{
         "Brand": "Suhr",
-        "Name": "Dual Drive",
+        "Name": "Dual Boost",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "suhr-dualdrive.png"
+        "Image": "suhr-dualboost.png"
     },
 	{
         "Brand": "Suhr",
