@@ -2492,6 +2492,13 @@
         "Image": "selah-scarlettlove2.png"
     },
 	{
+        "Brand": "Selah",
+        "Name": "Scarlett Love V3",
+        "Width": 4.3,
+        "Height": 2.5,
+        "Image": "selah-scarlettelovev3.png"
+    },
+	{
         "Brand": "Suhr",
         "Name": "Eclipse",
         "Width": 4.875,
@@ -3175,7 +3182,7 @@
         "Name": "Dracarys",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "wampler-Dracarys.png"
+        "Image": "wampler-dracarys.png"
     },
     {
         "Brand": "Wampler",
@@ -3196,7 +3203,7 @@
         "Name": "Euphoria",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "wampler-Euphoria.png"
+        "Image": "wampler-euphoria.png"
     },
     {
         "Brand": "Wampler",
@@ -3217,7 +3224,7 @@
         "Name": "Clarksdale",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "wampler-Clarksdale.png"
+        "Image": "wampler-clarksdale.png"
     },
     {
         "Brand": "Wampler",
@@ -3231,7 +3238,7 @@
         "Name": "Sovereign",
         "Width": 2.5,
         "Height": 4.5,
-        "Image": "wampler-Sovereign.png"
+        "Image": "wampler-sovereign.png"
     },
     {
         "Brand": "Wampler",
