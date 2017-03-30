@@ -1652,6 +1652,13 @@
         "Image": "korg-pitchblackmini.png"
     },
     {
+        "Brand": "Loopi",
+        "Name": "Dual Footswitch",
+        "Width": 3.54,
+        "Height": 1.5748,
+        "Image": "loopi-dualfootswitch.png"
+    },
+    {
         "Brand": "Meris",
         "Name": "Mercury7",
         "Width": 4.5,
