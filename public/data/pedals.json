@@ -625,21 +625,21 @@
     {
         "Brand": "Analog.Man",
         "Name": "Sunface",
-        "Width": 2.5,
+        "Width": 2.6,
         "Height": 4.3,
         "Image": "analogman-sunface.png"
     },
     {
         "Brand": "Analog.Man",
         "Name": "Sunbender",
-        "Width": 2.5,
+        "Width": 2.6,
         "Height": 4.3,
         "Image": "analogman-sunbender.png"
     },
     {
         "Brand": "Analog.Man",
         "Name": "Peppermint Fuzz",
-        "Width": 2.5,
+        "Width": 2.6,
         "Height": 4.3,
         "Image": "analogman-peppermint.png"
     },
