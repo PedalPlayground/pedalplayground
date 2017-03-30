@@ -104,12 +104,26 @@
         "Height": 4.3,
         "Image": "miaudio-crunchbox.png"
     },
+		{
+        "Brand": "MI Audio",
+        "Name": "Super Crunch Box",
+		"Width": 2.59,
+        "Height": 4.3,
+        "Image": "miaudio-supercrunchbox.png"
+    },
 	{
         "Brand": "GFI System",
         "Name": "Specular Reverb V2",
 		"Width": 4.7,
         "Height": 2.5,
         "Image": "gfi-specularreverbv2.png"
+    },
+	{
+        "Brand": "Lovepedal",
+        "Name": "Kalamazoo Black Caucus",
+		"Width": 2.59,
+        "Height": 4.44,
+        "Image": "lovepedal-kalamazooblackcaucus.png"
     },
 	{
         "Brand": "Mad Professor",
@@ -1693,6 +1707,20 @@
         "Height": 10,
         "Image": "mission-vp1.png"
     },
+	{
+        "Brand": "Mooer",
+        "Name": "Black Secret",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-blacksecret.png"
+    },
+	{
+        "Brand": "Mooer",
+        "Name": "Pure Boost",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-pureboost.png"
+    },
     {
         "Brand": "Mooer",
         "Name": "Tuner",
@@ -2147,6 +2175,13 @@
         "Width": 2.01,
         "Height": 3.66,
         "Image": "tc-coronamini.png"
+    },
+	 {
+        "Brand": "TC Electronics",
+        "Name": "Flashback Mini",
+        "Width": 2.01,
+        "Height": 3.66,
+        "Image": "tc-flashbackmini.png"
     },
 	{
         "Brand": "TC Electronics",
