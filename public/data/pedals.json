@@ -1772,13 +1772,6 @@
     },
     {
         "Brand": "MXR",
-        "Name": "Phase 90",
-        "Width": 2.75,
-        "Height": 4.75,
-        "Image": "mxr-phase90.png"
-    },
-    {
-        "Brand": "MXR",
         "Name": "Micro Chorus",
         "Width": 2.75,
         "Height": 4.75,
@@ -1821,10 +1814,17 @@
     },
     {
         "Brand": "MXR",
-        "Name": "Phase 95",
-        "Width": 2,
-        "Height": 3.66,
+        "Name": "Phase 95 (mini)",
+        "Width": 1.5748,
+        "Height": 3.54,
         "Image": "mxr-phase95.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Phase 90",
+        "Width": 2.375,
+        "Height": 4.375,
+        "Image": "mxr-phase90.png"
     },
     {
         "Brand": "MXR",
