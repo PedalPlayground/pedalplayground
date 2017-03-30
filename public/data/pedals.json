@@ -1799,6 +1799,13 @@
         "Image": "mxr-phase95.png"
     },
     {
+        "Brand": "MXR",
+        "Name": "Univibe",
+        "Width": 2.75,
+        "Height": 4.75,
+        "Image": "mxr-univibe.png"
+    },
+    {
         "Brand": "Neunaber",
         "Name": "WET",
         "Width": 2.5,
@@ -2056,6 +2063,13 @@
         "Width": 2.83,
         "Height": 4.8,
         "Image": "tc-polytune.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "Ditto",
+        "Width": 2,
+        "Height": 3.5,
+        "Image": "tc-ditto.png"
     },
     {
         "Brand": "TC Electronics",
@@ -2353,6 +2367,20 @@
     },
 	{
         "Brand": "DigiTech",
+        "Name": "DOD 250",
+        "Width": 2.875,
+        "Height": 4.625,
+        "Image": "digitech-250.png"
+    },
+    {
+        "Brand": "DigiTech",
+        "Name": "DOD Carcosa",
+        "Width": 2.875,
+        "Height": 4.625,
+        "Image": "digitech-carcosa.png"
+    },
+	{
+        "Brand": "DigiTech",
         "Name": "FreqOut",
         "Width": 2.875,
         "Height": 4.75,
@@ -2490,6 +2518,34 @@
         "Width": 2.5,
         "Height": 4.875,
         "Image": "jackson-prism.png"
+    },
+    {
+        "Brand": "Mesa Boogie",
+        "Name": "Flux-Drive",
+        "Width": 2.75,
+        "Height": 4.75,
+        "Image": "mesaboogie-fluxdrive.png"
+    },
+    {
+        "Brand": "Mesa Boogie",
+        "Name": "Throttle Box",
+        "Width": 2.75,
+        "Height": 4.75,
+        "Image": "mesaboogie-throttlebox.png"
+    },
+    {
+        "Brand": "Mesa Boogie",
+        "Name": "Tone-Burst",
+        "Width": 2.75,
+        "Height": 4.75,
+        "Image": "mesaboogie-toneburst.png"
+    },
+    {
+        "Brand": "Mesa Boogie",
+        "Name": "Grid Slammer",
+        "Width": 2.75,
+        "Height": 4.75,
+        "Image": "mesaboogie-gridslammer.png"
     },
     {
         "Brand": "Moog",
