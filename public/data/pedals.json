@@ -617,10 +617,24 @@
     },
     {
         "Brand": "Analog.Man",
+        "Name": "Sunlion",
+        "Width": 4.8,
+        "Height": 3.7,
+        "Image": "analogman-sunlion.png"
+    },
+    {
+        "Brand": "Analog.Man",
         "Name": "Sunface",
         "Width": 2.5,
         "Height": 4.625,
         "Image": "analogman-sunface.png"
+    },
+    {
+        "Brand": "Analog.Man",
+        "Name": "Sunbender",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "analogman-sunbender.png"
     },
     {
         "Brand": "Analog.Man",
