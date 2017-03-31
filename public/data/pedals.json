@@ -1862,6 +1862,27 @@
         "Image": "mxr-univibe.png"
     },
     {
+        "Brand": "MXR",
+        "Name": "5150 Overdrive EVH",
+        "Width": 5,
+        "Height": 3.75,
+        "Image": "mxr-5150.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Phase 90 EVH",
+		"Width": 2.375,
+        "Height": 4.375,
+        "Image": "mxr-phase90evh.png"
+    },
+	{
+        "Brand": "MXR",
+        "Name": "Flanger EVH",
+		"Width": 5,
+        "Height": 3.75,
+        "Image": "mxr-flangerevh.png"
+    },
+    {
         "Brand": "Neunaber",
         "Name": "WET",
         "Width": 2.5,
