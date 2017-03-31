@@ -1,5 +1,12 @@
 [
 	{
+        "Brand": "AA",
+        "Name": "Germanium Fuzz",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "aa-germaniumfuzz.png"
+    },
+	{
         "Brand": "Goodwood Audio",
         "Name": "Output V2",
 		"Width": 4.44882,
@@ -1790,6 +1797,13 @@
         "Width": 1.65,
         "Height": 3.7,
         "Image": "mooer-blacksecret.png"
+    },
+	{
+        "Brand": "Mooer",
+        "Name": "Graphic Eq",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-eq.png"
     },
 	{
         "Brand": "Mooer",
