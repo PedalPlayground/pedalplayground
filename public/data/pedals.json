@@ -539,6 +539,20 @@
         "Image": "origineffects-cali76.png"
     },
 	{
+        "Brand": "Origin Effects",
+        "Name": "Cali76 Compact Deluxe",
+        "Width": 2.6,
+        "Height": 5.59,
+        "Image": "origineffects-cali76cd.png"
+    },
+	{
+        "Brand": "Origin Effects",
+        "Name": "Cali76 TX",
+        "Width": 8.07087,
+        "Height": 6.33858,
+        "Image": "origin-cali76l.png"
+    },
+	{
         "Brand": "Alexander",
         "Name": "Jubilee",
         "Width": 2.5,
