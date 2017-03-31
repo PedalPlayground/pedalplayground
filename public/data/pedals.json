@@ -617,6 +617,13 @@
     },
     {
         "Brand": "Analog.Man",
+        "Name": "Dual Analog Delay",
+        "Width": 4.6,
+        "Height": 5.5,
+        "Image": "analogman-dualanalogdelay.png"
+    },
+    {
+        "Brand": "Analog.Man",
         "Name": "Sunface",
         "Width": 2.5,
         "Height": 4.625,
@@ -937,7 +944,14 @@
         "Height": 4.37,
         "Image": "earthquakerdevices-dispatchmaster.png"
     },
-	{
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Park Fuzz Sound",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-parkfuzz.png"
+    },
+    {
         "Brand": "Elektron",
         "Name": "Analog Drive",
         "Width": 6.8,
@@ -1055,6 +1069,13 @@
         "Width": 6.75,
         "Height": 5.1,
         "Image": "strymon-bigsky.png"
+    },
+    {
+        "Brand": "Mr. Black",
+        "Name": "SuperMoon Chrome",
+        "Width": 2.25,
+        "Height": 4.25,
+        "Image": "mrblack-supermoonchrome.png"
     },
     {
         "Brand": "Musicomlab",
@@ -2497,6 +2518,13 @@
         "Width": 4.25,
         "Height": 5.4,
         "Image": "digitech-trioplus.png"
+    },
+    {
+        "Brand": "DigiTech",
+        "Name": "Ricochet",
+        "Width": 2.875,
+        "Height": 4.75,
+        "Image": "digitech-ricochet.png"
     },
     {
         "Brand": "Emerson",
