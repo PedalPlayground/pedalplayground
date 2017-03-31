@@ -104,12 +104,26 @@
         "Height": 4.3,
         "Image": "miaudio-crunchbox.png"
     },
+		{
+        "Brand": "MI Audio",
+        "Name": "Super Crunch Box",
+		"Width": 2.59,
+        "Height": 4.3,
+        "Image": "miaudio-supercrunchbox.png"
+    },
 	{
         "Brand": "GFI System",
         "Name": "Specular Reverb V2",
 		"Width": 4.7,
         "Height": 2.5,
         "Image": "gfi-specularreverbv2.png"
+    },
+	{
+        "Brand": "Lovepedal",
+        "Name": "Kalamazoo Black Caucus",
+		"Width": 2.59,
+        "Height": 4.44,
+        "Image": "lovepedal-kalamazooblackcaucus.png"
     },
 	{
         "Brand": "Mad Professor",
@@ -622,18 +636,31 @@
         "Height": 5.5,
         "Image": "analogman-dualanalogdelay.png"
     },
+        "Brand": "Analog.Man",
+        "Name": "Sunlion",
+        "Width": 4.8,
+        "Height": 3.7,
+        "Image": "analogman-sunlion.png"
+    },
     {
         "Brand": "Analog.Man",
         "Name": "Sunface",
-        "Width": 2.5,
-        "Height": 4.625,
+        "Width": 2.6,
+        "Height": 4.3,
         "Image": "analogman-sunface.png"
     },
     {
         "Brand": "Analog.Man",
+        "Name": "Sunbender",
+        "Width": 2.6,
+        "Height": 4.3,
+        "Image": "analogman-sunbender.png"
+    },
+    {
+        "Brand": "Analog.Man",
         "Name": "Peppermint Fuzz",
-        "Width": 2.5,
-        "Height": 4.625,
+        "Width": 2.6,
+        "Height": 4.3,
         "Image": "analogman-peppermint.png"
     },
     {
@@ -1127,13 +1154,6 @@
         "Image": "paulc-timmy.png"
     },
     {
-        "Brand": "BOSS",
-        "Name": "RV-5 Reverb",
-        "Width": 2.875,
-        "Height": 5.125,
-        "Image": "boss-rv5.png"
-    },
-    {
         "Brand": "Bondi Effects",
         "Name": "2026 Compressor",
         "Width": 2.5,
@@ -1153,6 +1173,13 @@
         "Width": 2.5,
         "Height": 4.3,
         "Image": "bondi-delmar.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "RV-5 Reverb",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-rv5.png"
     },
     {
         "Brand": "BOSS",
@@ -1370,6 +1397,13 @@
         "Width": 6.81,
         "Height": 6.25,
         "Image": "boss-re20.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "FS-7",
+        "Width": 2.5,
+        "Height": 5.1875,
+        "Image": "boss-fs7.png"
     },
     {
         "Brand": "BOSS",
@@ -1652,6 +1686,13 @@
         "Image": "korg-pitchblackmini.png"
     },
     {
+        "Brand": "Loopi",
+        "Name": "Dual Footswitch",
+        "Width": 3.54,
+        "Height": 1.5748,
+        "Image": "loopi-dualfootswitch.png"
+    },
+    {
         "Brand": "Meris",
         "Name": "Mercury7",
         "Width": 4.5,
@@ -1685,6 +1726,20 @@
         "Width": 4,
         "Height": 10,
         "Image": "mission-vp1.png"
+    },
+	{
+        "Brand": "Mooer",
+        "Name": "Black Secret",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-blacksecret.png"
+    },
+	{
+        "Brand": "Mooer",
+        "Name": "Pure Boost",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-pureboost.png"
     },
     {
         "Brand": "Mooer",
@@ -1765,13 +1820,6 @@
     },
     {
         "Brand": "MXR",
-        "Name": "Phase 90",
-        "Width": 2.75,
-        "Height": 4.75,
-        "Image": "mxr-phase90.png"
-    },
-    {
-        "Brand": "MXR",
         "Name": "Micro Chorus",
         "Width": 2.75,
         "Height": 4.75,
@@ -1814,10 +1862,17 @@
     },
     {
         "Brand": "MXR",
-        "Name": "Phase 95",
-        "Width": 2,
-        "Height": 3.66,
+        "Name": "Phase 95 (mini)",
+        "Width": 1.5748,
+        "Height": 3.54,
         "Image": "mxr-phase95.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Phase 90",
+        "Width": 2.375,
+        "Height": 4.375,
+        "Image": "mxr-phase90.png"
     },
     {
         "Brand": "MXR",
@@ -1825,6 +1880,27 @@
         "Width": 2.75,
         "Height": 4.75,
         "Image": "mxr-univibe.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "5150 Overdrive EVH",
+        "Width": 5,
+        "Height": 3.75,
+        "Image": "mxr-5150.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Phase 90 EVH",
+		"Width": 2.375,
+        "Height": 4.375,
+        "Image": "mxr-phase90evh.png"
+    },
+	{
+        "Brand": "MXR",
+        "Name": "Flanger EVH",
+		"Width": 5,
+        "Height": 3.75,
+        "Image": "mxr-flangerevh.png"
     },
     {
         "Brand": "Neunaber",
@@ -2140,6 +2216,13 @@
         "Width": 2.01,
         "Height": 3.66,
         "Image": "tc-coronamini.png"
+    },
+	 {
+        "Brand": "TC Electronics",
+        "Name": "Flashback Mini",
+        "Width": 2.01,
+        "Height": 3.66,
+        "Image": "tc-flashbackmini.png"
     },
 	{
         "Brand": "TC Electronics",
@@ -3287,7 +3370,7 @@
         "Name": "Triple Wreck",
         "Width": 3.5,
         "Height": 4.5,
-        "Image": "wampler-tapeecho.png"
+        "Image": "wampler-triplewreck.png"
     },
     {
         "Brand": "Wampler",

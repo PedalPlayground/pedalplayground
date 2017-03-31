@@ -90,6 +90,13 @@
         "Height" : 14.5,
         "Image" : "pedaltrain-terra42.png"
     },
+	{
+        "Brand" : "Pedaltrain",
+        "Name" : "Fly",
+        "Width" : 22,
+        "Height" : 14.5,
+        "Image" : "pedaltrain-fly.png"
+    },
     {
         "Brand" : "Trav's",
         "Name" : "14.5 x 28 pedalboard",
