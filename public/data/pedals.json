@@ -671,6 +671,48 @@
         "Height": 4.2,
         "Image": "analogman-princeoftone.png"
     },
+	{
+        "Brand": "Bogner",
+        "Name": "Ecstacy Blue",
+        "Width": 5.25,
+        "Height": 3.75,
+        "Image": "bogner-blue.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Ecstacy Red",
+        "Width": 5.25,
+        "Height": 3.75,
+        "Image": "bogner-red.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Uberschall",
+        "Width": 5.25,
+        "Height": 3.75,
+        "Image": "bogner-uberschall.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Wessex",
+        "Width": 2.5,
+        "Height": 4.75,
+        "Image": "bogner-wessex.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Harlow",
+		"Width": 2.5,
+        "Height": 4.75,
+        "Image": "bogner-harlow.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Burnley",
+		"Width": 2.5,
+        "Height": 4.75,
+        "Image": "bogner-burnley.png"
+    },
     {
         "Brand": "Caroline",
         "Name": "Haymaker",
