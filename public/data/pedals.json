@@ -1757,6 +1757,13 @@
         "Image": "loopi-dualfootswitch.png"
     },
     {
+        "Brand": "Loopi",
+        "Name": "2:2",
+        "Width": 3.54,
+        "Height": 1.57,
+        "Image": "loopi-22.png"
+    },
+    {
         "Brand": "Meris",
         "Name": "Mercury7",
         "Width": 4.5,
