@@ -1714,6 +1714,13 @@
         "Height": 3.7,
         "Image": "mooer-blacksecret.png"
     },
+    {
+        "Brand": "Mooer",
+        "Name": "Tender Octaver",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-tenderoctaver.png"
+    },
 	{
         "Brand": "Mooer",
         "Name": "Pure Boost",
