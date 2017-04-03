@@ -1,5 +1,12 @@
 [
 	{
+        "Brand": "AA",
+        "Name": "Germanium Fuzz",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "aa-germaniumfuzz.png"
+    },
+	{
         "Brand": "Goodwood Audio",
         "Name": "Output V2",
 		"Width": 4.44882,
@@ -539,6 +546,20 @@
         "Image": "origineffects-cali76.png"
     },
 	{
+        "Brand": "Origin Effects",
+        "Name": "Cali76 Compact Deluxe",
+        "Width": 2.6,
+        "Height": 5.59,
+        "Image": "origineffects-cali76cd.png"
+    },
+	{
+        "Brand": "Origin Effects",
+        "Name": "Cali76 TX",
+        "Width": 8.07087,
+        "Height": 6.33858,
+        "Image": "origin-cali76l.png"
+    },
+	{
         "Brand": "Alexander",
         "Name": "Jubilee",
         "Width": 2.5,
@@ -631,6 +652,13 @@
     },
     {
         "Brand": "Analog.Man",
+        "Name": "Dual Analog Delay",
+        "Width": 4.6,
+        "Height": 5.5,
+        "Image": "analogman-dualanalogdelay.png"
+    },
+	{
+        "Brand": "Analog.Man",
         "Name": "Sunlion",
         "Width": 4.8,
         "Height": 3.7,
@@ -663,6 +691,48 @@
         "Width": 2.2,
         "Height": 4.2,
         "Image": "analogman-princeoftone.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Ecstacy Blue",
+        "Width": 5.25,
+        "Height": 3.75,
+        "Image": "bogner-blue.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Ecstacy Red",
+        "Width": 5.25,
+        "Height": 3.75,
+        "Image": "bogner-red.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Uberschall",
+        "Width": 5.25,
+        "Height": 3.75,
+        "Image": "bogner-uberschall.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Wessex",
+        "Width": 2.5,
+        "Height": 4.75,
+        "Image": "bogner-wessex.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Harlow",
+		"Width": 2.5,
+        "Height": 4.75,
+        "Image": "bogner-harlow.png"
+    },
+	{
+        "Brand": "Bogner",
+        "Name": "Burnley",
+		"Width": 2.5,
+        "Height": 4.75,
+        "Image": "bogner-burnley.png"
     },
     {
         "Brand": "Caroline",
@@ -965,7 +1035,14 @@
         "Height": 4.37,
         "Image": "earthquakerdevices-dispatchmaster.png"
     },
-	{
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Park Fuzz Sound",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-parkfuzz.png"
+    },
+    {
         "Brand": "Elektron",
         "Name": "Analog Drive",
         "Width": 6.8,
@@ -1083,6 +1160,13 @@
         "Width": 6.75,
         "Height": 5.1,
         "Image": "strymon-bigsky.png"
+    },
+    {
+        "Brand": "Mr. Black",
+        "Name": "SuperMoon Chrome",
+        "Width": 2.25,
+        "Height": 4.25,
+        "Image": "mrblack-supermoonchrome.png"
     },
     {
         "Brand": "Musicomlab",
@@ -1673,6 +1757,13 @@
         "Image": "loopi-dualfootswitch.png"
     },
     {
+        "Brand": "Loopi",
+        "Name": "2:2",
+        "Width": 3.54,
+        "Height": 1.57,
+        "Image": "loopi-22.png"
+    },
+    {
         "Brand": "Meris",
         "Name": "Mercury7",
         "Width": 4.5,
@@ -1720,6 +1811,13 @@
         "Width": 1.65,
         "Height": 3.7,
         "Image": "mooer-tenderoctaver.png"
+    },
+	{
+        "Brand": "Mooer",
+        "Name": "Graphic Eq",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-eq.png"
     },
 	{
         "Brand": "Mooer",
@@ -1867,6 +1965,27 @@
         "Width": 2.75,
         "Height": 4.75,
         "Image": "mxr-univibe.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "5150 Overdrive EVH",
+        "Width": 5,
+        "Height": 3.75,
+        "Image": "mxr-5150.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Phase 90 EVH",
+		"Width": 2.375,
+        "Height": 4.375,
+        "Image": "mxr-phase90evh.png"
+    },
+	{
+        "Brand": "MXR",
+        "Name": "Flanger EVH",
+		"Width": 5,
+        "Height": 3.75,
+        "Image": "mxr-flangerevh.png"
     },
     {
         "Brand": "Neunaber",
@@ -2242,7 +2361,7 @@
     {
         "Brand": "Electro Harmonix",
         "Name": "Micro POG",
-        "Width": 3.7,
+        "Width": 3.9,
         "Height": 4.7,
         "Image": "ehx-micropog.png"
     },
@@ -2567,6 +2686,13 @@
         "Width": 4.25,
         "Height": 5.4,
         "Image": "digitech-trioplus.png"
+    },
+    {
+        "Brand": "DigiTech",
+        "Name": "Ricochet",
+        "Width": 2.875,
+        "Height": 4.75,
+        "Image": "digitech-ricochet.png"
     },
     {
         "Brand": "Emerson",
@@ -3329,7 +3455,7 @@
         "Name": "Triple Wreck",
         "Width": 3.5,
         "Height": 4.5,
-        "Image": "wampler-tapeecho.png"
+        "Image": "wampler-triplewreck.png"
     },
     {
         "Brand": "Wampler",
