@@ -3097,7 +3097,7 @@
         "Brand": "Empress",
         "Name": "Compressor",
         "Width": 4.5,
-        "Width": 3.625,
+        "Height": 3.625,
         "Image": "empress-comp.png"
     },
 	{
