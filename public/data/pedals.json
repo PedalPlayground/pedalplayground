@@ -692,6 +692,20 @@
         "Height": 4.5,
         "Image": "analogman-princeoftone.png"
     },
+    {
+        "Brand": "Atomic",
+        "Name": "Amplifire",
+        "Width": 8.5,
+        "Height": 6.5,
+        "Image": "atomic-amplifire.png"
+    },
+    {
+        "Brand": "Atomic",
+        "Name": "Amplifire 12",
+        "Width": 16.75,
+        "Height": 6.25,
+        "Image": "atomic-amplifire12.png"
+    },
 	{
         "Brand": "Bogner",
         "Name": "Ecstacy Blue",
@@ -1804,6 +1818,13 @@
         "Width": 1.65,
         "Height": 3.7,
         "Image": "mooer-blacksecret.png"
+    },
+    {
+        "Brand": "Mooer",
+        "Name": "Tender Octaver",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-tenderoctaver.png"
     },
 	{
         "Brand": "Mooer",
