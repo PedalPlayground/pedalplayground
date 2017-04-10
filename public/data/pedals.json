@@ -181,7 +181,14 @@
         "Height": 4.3,
         "Image": "madprof-1od.png"
     },
-	{
+    {
+        "Brand": "Joyo",
+        "Name": "American Sound",
+        "Width": 3.42,
+        "Height": 4.645669,
+        "Image": "joyo-americansound.png"
+    },
+    {
         "Brand": "J. Rockett",
         "Name": "Archer",
         "Width": 2.5,
