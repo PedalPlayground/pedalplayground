@@ -3361,6 +3361,13 @@
     },
     {
         "Brand": "Walrus",
+        "Name": "Phoenix",
+        "Width": 9.75,
+        "Height": 2.6,
+        "Image": "walrus-phoenix.png"
+    },
+    {
+        "Brand": "Walrus",
         "Name": "385 Overdrive",
         "Width": 2.6,
         "Height": 4.77,
