@@ -3354,6 +3354,13 @@
     },
     {
         "Brand": "Walrus",
+        "Name": "Aetos",
+        "Width": 4.7,
+        "Height": 3.7,
+        "Image": "walrus-aetos.png"
+    },
+    {
+        "Brand": "Walrus",
         "Name": "385 Overdrive",
         "Width": 2.6,
         "Height": 4.77,
