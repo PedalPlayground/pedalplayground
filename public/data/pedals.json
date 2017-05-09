@@ -1,5 +1,12 @@
 [
     {
+      "Brand": "Snouse Electronics",
+      "Name": "Black Box Overdrive 2",
+      "Width": 2.5,
+      "Height": 4.3,
+      "Image": "snouse-blackbox.png"
+    },
+    {
         "Brand": "AA",
         "Name": "Germanium Fuzz",
         "Width": 1.65,
