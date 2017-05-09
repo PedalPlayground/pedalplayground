@@ -1331,6 +1331,13 @@
     },
     {
         "Brand": "BOSS",
+        "Name": "SD-1 Super Overdrive",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-sd1.png"
+    },
+    {
+        "Brand": "BOSS",
         "Name": "TE-2 Tera Echo",
         "Width": 2.875,
         "Height": 5.125,
