@@ -3361,6 +3361,13 @@
     },
     {
         "Brand": "Walrus",
+        "Name": "Monument",
+        "Width": 4.67,
+        "Height": 3.68,
+        "Image": "walrus-monument.png"
+    },
+    {
+        "Brand": "Walrus",
         "Name": "Phoenix",
         "Width": 9.75,
         "Height": 2.6,
