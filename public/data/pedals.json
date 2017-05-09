@@ -3368,6 +3368,13 @@
     },
     {
         "Brand": "Walrus",
+        "Name": "Warhorn",
+        "Width": 2.6,
+        "Height": 4.77,
+        "Image": "walrus-warhorn.png"
+    },
+    {
+        "Brand": "Walrus",
         "Name": "Phoenix",
         "Width": 9.75,
         "Height": 2.6,
