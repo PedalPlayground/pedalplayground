@@ -1,5 +1,12 @@
 [
     {
+      "Brand": "Snouse Electronics",
+      "Name": "Black Box Overdrive 2",
+      "Width": 2.5,
+      "Height": 4.3,
+      "Image": "snouse-blackbox.png"
+    },
+    {
         "Brand": "AA",
         "Name": "Germanium Fuzz",
         "Width": 1.65,
@@ -1321,6 +1328,13 @@
         "Width": 2.875,
         "Height": 5.125,
         "Image": "boss-od1x.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "SD-1 Super Overdrive",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-sd1.png"
     },
     {
         "Brand": "BOSS",
@@ -3337,6 +3351,34 @@
         "Width": 5.12,
         "Height": 9.96,
         "Image": "vox-bigbadwah.png"
+    },
+    {
+        "Brand": "Walrus",
+        "Name": "Aetos",
+        "Width": 4.7,
+        "Height": 3.7,
+        "Image": "walrus-aetos.png"
+    },
+    {
+        "Brand": "Walrus",
+        "Name": "Monument",
+        "Width": 4.67,
+        "Height": 3.68,
+        "Image": "walrus-monument.png"
+    },
+    {
+        "Brand": "Walrus",
+        "Name": "Warhorn",
+        "Width": 2.6,
+        "Height": 4.77,
+        "Image": "walrus-warhorn.png"
+    },
+    {
+        "Brand": "Walrus",
+        "Name": "Phoenix",
+        "Width": 9.75,
+        "Height": 2.6,
+        "Image": "walrus-phoenix.png"
     },
     {
         "Brand": "Walrus",
