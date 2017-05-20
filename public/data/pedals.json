@@ -1037,6 +1037,13 @@
     },
     {
         "Brand": "Earthquaker Devices",
+        "Name": "Avalanche Run",
+        "Width": 3.7,
+        "Height": 4.625,
+        "Image": "eqd-avalancherun.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
         "Name": "Space Spiral",
         "Width": 2.5,
         "Height": 4.625,
@@ -1048,6 +1055,13 @@
         "Width": 2.5,
         "Height": 4.625,
         "Image": "earthquaker-levitation.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Dunes",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "eqd-dunes.png"
     },
     {
         "Brand": "Earthquaker Devices",
@@ -1230,6 +1244,20 @@
         "Width": 16.5,
         "Height": 3.8,
         "Image": "musicomlab-efxv.png"
+    },
+    {
+        "Brand": "Rimrock",
+        "Name": "Mythical Overdrive",
+        "Width": 4.7,
+        "Height": 3.7,
+        "Image": "rimrock-mythicaloverdrive.png"
+    },
+    {
+        "Brand": "Rimrock",
+        "Name": "Lil MO",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "rimrock-lilmo.png"
     },
     {
         "Brand": "Truetone",
