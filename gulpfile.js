@@ -125,4 +125,6 @@ gulp.task('watch', function() {
     gulp.watch('*.html').on('change', livereload.changed);
 });
 
-gulp.task('default', ['styles', 'scripts', 'images', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'watch']);
+
+gulp.task('all', ['styles', 'scripts', 'images', 'watch']);
