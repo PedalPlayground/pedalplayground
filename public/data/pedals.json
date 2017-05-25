@@ -1794,15 +1794,15 @@
     {
         "Brand": "Meris",
         "Name": "Mercury7",
-        "Width": 4.5,
-        "Height": 4.85,
+        "Width": 4.25,
+        "Height": 4.5,
         "Image": "meris-mercury7.png"
     },
     {
         "Brand": "Meris",
         "Name": "Ottobit Jr.",
-        "Width": 4.5,
-        "Height": 4.85,
+        "Width": 4.25,
+        "Height": 4.5,
         "Image": "meris-ottobitjr.png"
     },
     {
