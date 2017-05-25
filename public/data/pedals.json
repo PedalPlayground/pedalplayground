@@ -3276,6 +3276,13 @@
         "Image": "empress-stereobuffer.png"
     },
     {
+        "Brand": "Quiet Theory",
+        "Name": "Prelude",
+        "Width": 3.3,
+        "Height": 4.4,
+        "Image": "quiettheory-prelude.png"
+    },
+    {
         "Brand": "Skreddy",
         "Name": "Screwdriver",
         "Width": 2.75,
