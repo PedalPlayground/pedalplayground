@@ -1,5 +1,12 @@
 [
     {
+      "Brand": "NUX",
+      "Name": "Rotary",
+      "Width": 4.25197,
+      "Height": 4.92126,
+      "Image": "nux-roctary.png"
+    },
+    {
       "Brand": "Snouse Electronics",
       "Name": "Black Box Overdrive 2",
       "Width": 2.5,
