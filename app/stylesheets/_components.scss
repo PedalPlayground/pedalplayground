@@ -164,7 +164,17 @@ $border: 1px solid rgba(black, .13);
 			@include rotate(270deg);
 		}
 	}
-	&--custom {}
+	&.pedal--custom {
+        &.rotate-90 {
+			@include rotate(90deg);
+    	}
+    	&.rotate-180 {
+			@include rotate(180deg);
+    	}
+    	&.rotate-270 {
+			@include rotate(270deg);
+    	}
+    }
 	&__box {
 		border-radius: 4px;
 		border: 1px solid rgba(black, .3);
