@@ -792,6 +792,13 @@
     },
     {
         "Brand": "Bogner",
+        "Name": "La Grange",
+        "Width": 5.25,
+        "Height": 3.75,
+        "Image": "bogner-lagrange.png"
+    },
+    {
+        "Brand": "Bogner",
         "Name": "Wessex",
         "Width": 2.5,
         "Height": 4.75,
@@ -1321,6 +1328,34 @@
         "Width": 2.5,
         "Height": 4.3,
         "Image": "paulc-timmy.png"
+    },
+    {
+        "Brand": "Paul C",
+        "Name": "Tim",
+        "Width": 4.6,
+        "Height": 4.1,
+        "Image": "paulc-tim.png"
+    },
+    {
+        "Brand": "Kingsley",
+        "Name": "Maiden",
+        "Width": 3.875,
+        "Height": 4.75,
+        "Image": "kingsley-maiden.png"
+    },
+    {
+        "Brand": "Kingsley",
+        "Name": "Page",
+        "Width": 3.875,
+        "Height": 4.75,
+        "Image": "kingsley-page.png"
+    },
+    {
+        "Brand": "Kingsley",
+        "Name": "Jester",
+        "Width": 5.25,
+        "Height": 5,
+        "Image": "kingsley-jester.png"
     },
     {
         "Brand": "Bondi Effects",
