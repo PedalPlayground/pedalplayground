@@ -1,5 +1,12 @@
 [
     {
+      "Brand": "Altoids",
+      "Name": "Tin",
+      "Width": 3.8,
+      "Height": 2.437,
+      "Image": "altoids-tin.png"
+    },
+    {
       "Brand": "NUX",
       "Name": "Rotary",
       "Width": 4.25197,
@@ -117,6 +124,13 @@
         "Width": 26.378,
         "Height": 2.3622,
         "Image": "brightonion-12switcher.png"
+    },
+    {
+        "Brand": "Dawner Prince",
+        "Name": "Boonar",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "dawnerprince-boonar.png"
     },
     {
         "Brand": "MI Audio",
