@@ -364,6 +364,20 @@
         "Image": "pigtronix-philosophersking.png"
     },
     {
+        "Brand": "Gurus",
+        "Name": "1959 Doubledecker",
+        "Width": 8.66,
+        "Height": 4.92,
+        "Image": "gurus-doubledecker.png"
+    },
+    {
+        "Brand": "Gurus",
+        "Name": "Echosex 2",
+        "Width": 6.5,
+        "Height": 4.92,
+        "Image": "gurus-echosex2.png"
+    },
+    {
         "Brand": "Keeley",
         "Name": "30ms Tracker",
         "Width": 2.5,
