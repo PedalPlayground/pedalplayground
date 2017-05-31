@@ -3423,6 +3423,41 @@
         "Image": "truetone-route66.png"
     },
     {
+      "Brand": "VFE",
+      "Name": "Alpha Dog v3",
+      "Width": 2.59843,
+      "Height": 4.37008,
+      "Image": "vfe-alpha-dog-v3.png"
+    },
+    {
+      "Brand": "VFE",
+      "Name": "Blueprint v4",
+      "Width": 2.59843,
+      "Height": 4.37008,
+      "Image": "vfe-blueprint-v4.png"
+    },
+    {
+      "Brand": "VFE",
+      "Name": "Old School v3",
+      "Width": 2.59843,
+      "Height": 4.37008,
+      "Image": "vfe-old-school-v3.png"
+    },
+    {
+      "Brand": "VFE",
+      "Name": "Woodchipper",
+      "Width": 2.59843,
+      "Height": 4.37008,
+      "Image": "vfe-woodchipper.png"
+    },
+    {
+      "Brand": "VFE",
+      "Name": "Yodeler",
+      "Width": 2.59843,
+      "Height": 4.37008,
+      "Image": "vfe-yodeler.png"
+    },
+    {
         "Brand": "Voodoo Lab",
         "Name": "Pedal Power ISO 5",
         "Width": 4.9,
