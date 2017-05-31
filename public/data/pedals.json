@@ -147,6 +147,55 @@
         "Image": "miaudio-supercrunchbox.png"
     },
     {
+        "Brand": "Moog",
+        "Name": "MF Drive",
+        "Width": 3.25,
+        "Height": 5.75,
+        "Image": "moog-mfdrive.png"
+    },
+    {
+        "Brand": "Moog",
+        "Name": "MF Boost",
+        "Width": 3.25,
+        "Height": 5.75,
+        "Image": "moog-mfboost.png"
+    },
+    {
+        "Brand": "Moog",
+        "Name": "MF Chorus",
+        "Width": 3.25,
+        "Height": 5.75,
+        "Image": "moog-mfchorus.png"
+    },
+    {
+        "Brand": "Moog",
+        "Name": "MF Flange",
+        "Width": 3.25,
+        "Height": 5.75,
+        "Image": "moog-mfflange.png"
+    },
+    {
+        "Brand": "Moog",
+        "Name": "MF Ring",
+        "Width": 3.25,
+        "Height": 5.75,
+        "Image": "moog-mfring.png"
+    },
+    {
+        "Brand": "Moog",
+        "Name": "MF Trem",
+        "Width": 3.25,
+        "Height": 5.75,
+        "Image": "moog-mftrem.png"
+    },
+    {
+        "Brand": "Moog",
+        "Name": "MF Delay",
+        "Width": 3.25,
+        "Height": 5.75,
+        "Image": "moog-mfdelay.png"
+    },
+    {
         "Brand": "GFI System",
         "Name": "Specular Reverb V2",
         "Width": 4.7,
