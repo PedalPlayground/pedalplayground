@@ -1758,6 +1758,20 @@
     },
     {
         "Brand": "BOSS",
+        "Name": "DD-3 Digital Delay",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-dd3.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "PH-3 Phase Shifter",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-ph3.png"
+    },
+    {
+        "Brand": "BOSS",
         "Name": "RV-6 Reverb",
         "Width": 2.875,
         "Height": 5.125,
@@ -1769,6 +1783,13 @@
         "Width": 2.875,
         "Height": 5.125,
         "Image": "boss-tr2.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "VB-2w Vibrato",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-vb2w.png"
     },
     {
         "Brand": "BOSS",
