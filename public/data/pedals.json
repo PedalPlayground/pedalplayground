@@ -1,5 +1,26 @@
 [
     {
+      "Brand": "Hotone",
+      "Name": "Soul Press",
+      "Width": 2.46,
+      "Height": 5.43,
+      "Image": "hotone-soulpress.png"
+    },
+    {
+      "Brand": "Neo Instruments",
+      "Name": "Ventilator II",
+      "Width": 6.2,
+      "Height": 5.5,
+      "Image": "neo-vent2.png"
+    },
+    {
+      "Brand": "Neo Instruments",
+      "Name": "Mini Vent II",
+      "Width": 3.93,
+      "Height": 4.13,
+      "Image": "neo-minivent2.png"
+    },
+    {
       "Brand": "Altoids",
       "Name": "Tin",
       "Width": 3.8,
@@ -1128,6 +1149,13 @@
     },
     {
         "Brand": "Earthquaker Devices",
+        "Name": "Tentacle",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-tentacle.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
         "Name": "Acapulco Gold",
         "Width": 2.5,
         "Height": 4.625,
@@ -1365,6 +1393,13 @@
         "Image": "kemper-remote.png"
     },
     {
+        "Brand": "Morningstar",
+        "Name": "MC6",
+        "Width": 5.71,
+        "Height": 3.74,
+        "Image": "morningstar-mc6.png"
+    },
+    {
         "Brand": "Sonic Research",
         "Name": "Turbo Tuner ST-300",
         "Width": 2.5,
@@ -1377,6 +1412,41 @@
         "Width": 2.01,
         "Height": 3.66,
         "Image": "sonicresearch-st300mini.png"
+    },
+    {
+        "Brand": "Stone Deaf",
+        "Name": "Tremotron",
+        "Width": 3.3,
+        "Height": 5.2,
+        "Image": "stonedeaf-tremotron.png"
+    },
+    {
+        "Brand": "Supro",
+        "Name": "Tremolo",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "supro-tremolo.png"
+    },
+    {
+        "Brand": "Supro",
+        "Name": "Drive",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "supro-drive.png"
+    },
+    {
+        "Brand": "Supro",
+        "Name": "Fuzz",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "supro-fuzz.png"
+    },
+    {
+        "Brand": "Supro",
+        "Name": "Boost",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "supro-boost.png"
     },
     {
         "Brand": "Strymon",
@@ -1412,6 +1482,55 @@
         "Width": 6.75,
         "Height": 5.1,
         "Image": "strymon-bigsky.png"
+    },
+    {
+        "Brand": "T-rex",
+        "Name": "Tunemaster",
+        "Width": 2.4,
+        "Height": 4.6,
+        "Image": "trex-tunemaster.png"
+    },
+    {
+        "Brand": "T-rex",
+        "Name": "Tapster",
+        "Width": 3.9,
+        "Height": 4.7,
+        "Image": "trex-tapster.png"
+    },
+    {
+        "Brand": "T-rex",
+        "Name": "Duck Tail",
+        "Width": 3.9,
+        "Height": 4.7,
+        "Image": "trex-ducktail.png"
+    },
+    {
+        "Brand": "T-rex",
+        "Name": "Mudhoney II",
+        "Width": 3.9,
+        "Height": 4.7,
+        "Image": "trex-mudhoney.png"
+    },
+    {
+        "Brand": "T-rex",
+        "Name": "Reptile",
+        "Width": 3.9,
+        "Height": 4.7,
+        "Image": "trex-reptile.png"
+    },
+    {
+        "Brand": "T-rex",
+        "Name": "Squeezer",
+        "Width": 3.9,
+        "Height": 4.7,
+        "Image": "trex-squeezer.png"
+    },
+    {
+        "Brand": "T-rex",
+        "Name": "Moller2",
+        "Width": 3.9,
+        "Height": 4.7,
+        "Image": "trex-moller2.png"
     },
     {
         "Brand": "Mr. Black",
@@ -2727,7 +2846,7 @@
         "Name": "Mel9 Tape Replay Machine",
         "Width": 3.7,
         "Height": 4.7,
-        "Image": "ehx-720.png"
+        "Image": "ehx-mel9.png"
     },
     {
         "Brand": "Electro Harmonix",
@@ -3577,6 +3696,13 @@
         "Image": "truetone-route66.png"
     },
     {
+        "Brand": "Vemuram",
+        "Name": "Jan Ray",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "vemuram-janray.png"
+    },
+    {
       "Brand": "VFE",
       "Name": "Alpha Dog v3",
       "Width": 2.59843,
@@ -3939,6 +4065,20 @@
         "Width": 1.5,
         "Height": 3.5,
         "Image": "wampler-db.png"
+    },
+    {
+        "Brand": "Wren And Cuff",
+        "Name": "Box of War",
+        "Width": 3.46,
+        "Height": 5.65,
+        "Image": "wrenandcuff-boxofwar.png"
+    },
+    {
+        "Brand": "Wren And Cuff",
+        "Name": "Eye See Pi",
+        "Width": 3.46,
+        "Height": 5.65,
+        "Image": "wrenandcuff-eyeseepi.png"
     },
     {
         "Brand": "Xotic",
