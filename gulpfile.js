@@ -99,7 +99,7 @@ gulp.task('scripts', function() {
 	  .pipe(livereload());
 });
 
-gulp.task('images', function() {
+gulp.task('process-images', function() {
 	return gulp.src('app/images/pedals/*')
         .pipe(cache('images'))
 		.pipe(responsive({
@@ -118,7 +118,6 @@ gulp.task('images', function() {
 /* Watch Files For Changes */
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch(['app/images/pedals/*.png','!app/images/pedals/*_tmp*'], ['images']);
     gulp.watch('app/stylesheets/**', ['styles']);
 	gulp.watch('app/scripts/**', ['scripts']);
     gulp.watch('*.php').on('change', livereload.changed);
@@ -128,7 +127,7 @@ gulp.task('watch', function() {
 
 gulp.task('watch-all', function() {
     livereload.listen();
-    gulp.watch(['app/images/pedals/*.png','!app/images/pedals/*_tmp*'], ['images']);
+    gulp.watch(['app/images/pedals-new/*.png','!app/images/pedals-new/*_tmp*'], ['process-images']);
     gulp.watch('app/stylesheets/**', ['styles']);
 	gulp.watch('app/scripts/**', ['scripts']);
     gulp.watch('*.php').on('change', livereload.changed);
@@ -138,4 +137,4 @@ gulp.task('watch-all', function() {
 
 gulp.task('default', ['styles', 'scripts', 'watch']);
 
-gulp.task('all', ['styles', 'scripts', 'images', 'watch']);
+gulp.task('all', ['styles', 'scripts', 'process-images', 'watch-all']);
