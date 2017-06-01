@@ -20,8 +20,6 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var responsive = require('gulp-responsive');
 var cache = require('gulp-cached');
-var wait = require('gulp-wait');
-
 
 var gzip_options = {
     threshold: '1kb',
