@@ -20,6 +20,7 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var responsive = require('gulp-responsive');
 var cache = require('gulp-cached');
+var wait = require('gulp-wait');
 
 
 var gzip_options = {
@@ -117,7 +118,17 @@ gulp.task('images', function() {
 /* Watch Files For Changes */
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('app/images/pedals/*.png', ['images']);
+    gulp.watch(['app/images/pedals/*.png','!app/images/pedals/*_tmp*'], ['images']);
+    gulp.watch('app/stylesheets/**', ['styles']);
+	gulp.watch('app/scripts/**', ['scripts']);
+    gulp.watch('*.php').on('change', livereload.changed);
+    gulp.watch('includes/**').on('change', livereload.changed);
+    gulp.watch('*.html').on('change', livereload.changed);
+});
+
+gulp.task('watch-all', function() {
+    livereload.listen();
+    gulp.watch(['app/images/pedals/*.png','!app/images/pedals/*_tmp*'], ['images']);
     gulp.watch('app/stylesheets/**', ['styles']);
 	gulp.watch('app/scripts/**', ['scripts']);
     gulp.watch('*.php').on('change', livereload.changed);
