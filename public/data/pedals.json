@@ -2038,6 +2038,13 @@
     },
     {
         "Brand": "BOSS",
+        "Name": "MS-3",
+        "Width": 9.68,
+        "Height": 3.82,
+        "Image": "boss-ms3.png"
+    },
+    {
+        "Brand": "BOSS",
         "Name": "FV-30L",
         "Width": 3.15,
         "Height": 7.56,
