@@ -2626,6 +2626,13 @@
     },
     {
         "Brand": "TC Electronics",
+        "Name": "Alter Ego v2",
+        "Width": 2.83465,
+        "Height": 4.80315,
+        "Image": "tc-alter-ego-v2.png"
+    },
+    {
+        "Brand": "TC Electronics",
         "Name": "Alter Ego x4",
         "Width": 9.25,
         "Height": 5.70866,
@@ -2763,6 +2770,13 @@
         "Width": 4.92,
         "Height": 5.19,
         "Image": "tc-novadrive.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "Vortex Mini Flanger",
+        "Width": 1.88976,
+        "Height": 3.66142,
+        "Image": "tc-vortex-mini.png"
     },
     {
         "Brand": "Electro Harmonix",
@@ -4128,6 +4142,13 @@
         "Width": 2,
         "Height": 3.5,
         "Image": "xotic-ep.png"
+    },
+    {
+        "Brand": "Xotic",
+        "Name": "Wah XW-1",
+        "Width": 3.93701,
+        "Height": 8.26772,
+        "Image": "xotic-wah-xw1.png"
     },
     {
         "Brand": "Zoom",
