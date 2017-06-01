@@ -1737,6 +1737,13 @@
     },
     {
         "Brand": "BOSS",
+        "Name": "RV-6 Reverb",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-rv6.png"
+    },
+    {
+        "Brand": "BOSS",
         "Name": "BD-2 Blues Driver",
         "Width": 2.875,
         "Height": 5.125,
@@ -1772,10 +1779,10 @@
     },
     {
         "Brand": "BOSS",
-        "Name": "RV-6 Reverb",
+        "Name": "PS-5 Super Shifter",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "boss-rv6.png"
+        "Image": "boss-ps5.png"
     },
     {
         "Brand": "BOSS",
@@ -1797,6 +1804,48 @@
         "Width": 2.875,
         "Height": 5.125,
         "Image": "boss-od1.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "FZ-3 Fuzz",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-fz3.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "FZ-5 Fuzz",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-fz5.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "CE-2w Chorus",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-ce2w.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "CH-1 Super Chorus",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-ch1.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "CS-2 Compression Sustainer",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-cs2.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "CS-3 Compression Sustainer",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-cs3.png"
     },
     {
         "Brand": "BOSS",
