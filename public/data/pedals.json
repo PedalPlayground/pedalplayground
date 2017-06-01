@@ -1159,21 +1159,21 @@
         "Name": "Grand Orbiter",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "eqd-grandorbiter.png"
+        "Image": "earthquaker-grandorbiter.png"
     },
     {
         "Brand": "Earthquaker Devices",
         "Name": "Night Wire",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "eqd-nightwire.png"
+        "Image": "earthquaker-nightwire.png"
     },
     {
         "Brand": "Earthquaker Devices",
         "Name": "The Depths",
         "Width": 2.5,
         "Height": 4.625,
-        "Image": "eqd-thedepths.png"
+        "Image": "earthquaker-thedepths.png"
     },
     {
         "Brand": "Earthquaker Devices",
@@ -1184,10 +1184,66 @@
     },
     {
         "Brand": "Earthquaker Devices",
+        "Name": "Palisades",
+        "Width": 5.5,
+        "Height": 4.5,
+        "Image": "earthquaker-palisades.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
         "Name": "Avalanche Run",
         "Width": 3.7,
         "Height": 4.625,
         "Image": "eqd-avalancherun.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Arrows",
+        "Width": 2.75,
+        "Height": 4.37,
+        "Image": "earthquaker-arrows.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Disaster Transport",
+        "Width": 5.5,
+        "Height": 4.5,
+        "Image": "earthquaker-disastertransport.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Transmisser",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-transmisser.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Warden",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-warden.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Tone Job",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-tonejob.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Sea Machine",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-seamachine.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Rainbow Machine",
+        "Width": 3.7,
+        "Height": 4.625,
+        "Image": "earthquaker-rainbowmachine.png"
     },
     {
         "Brand": "Earthquaker Devices",
