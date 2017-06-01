@@ -1,5 +1,40 @@
 [
     {
+      "Brand": "Pettyjohn",
+      "Name": "Chime",
+      "Width": 2.7,
+      "Height": 4.72,
+      "Image": "pettyjohn-chime.png"
+    },
+    {
+      "Brand": "Pettyjohn",
+      "Name": "Fuze",
+      "Width": 2.7,
+      "Height": 4.72,
+      "Image": "pettyjohn-fuze.png"
+    },
+    {
+      "Brand": "Pettyjohn",
+      "Name": "Lift",
+      "Width": 2.7,
+      "Height": 4.72,
+      "Image": "pettyjohn-lift.png"
+    },
+    {
+      "Brand": "Pettyjohn",
+      "Name": "PreDrive",
+      "Width": 3.58,
+      "Height": 5.59,
+      "Image": "pettyjohn-predrive.png"
+    },
+    {
+      "Brand": "Pettyjohn",
+      "Name": "PettyDrive",
+      "Width": 5.472,
+      "Height": 4.76378,
+      "Image": "pettyjohn-pettydrive2.png"
+    },
+    {
       "Brand": "Hotone",
       "Name": "Soul Press",
       "Width": 2.46,
@@ -1484,6 +1519,20 @@
         "Image": "strymon-bigsky.png"
     },
     {
+        "Brand": "Tech21",
+        "Name": "Blonde",
+        "Width": 3.7,
+        "Height": 4.7,
+        "Image": "tech21-blonde.png"
+    },
+    {
+        "Brand": "Tech21",
+        "Name": "Leeds",
+        "Width": 3.7,
+        "Height": 4.7,
+        "Image": "tech21-leeds.png"
+    },
+    {
         "Brand": "T-rex",
         "Name": "Tunemaster",
         "Width": 2.4,
@@ -2626,13 +2675,6 @@
     },
     {
         "Brand": "TC Electronics",
-        "Name": "Alter Ego v2",
-        "Width": 2.83465,
-        "Height": 4.80315,
-        "Image": "tc-alter-ego-v2.png"
-    },
-    {
-        "Brand": "TC Electronics",
         "Name": "Alter Ego x4",
         "Width": 9.25,
         "Height": 5.70866,
@@ -2770,13 +2812,6 @@
         "Width": 4.92,
         "Height": 5.19,
         "Image": "tc-novadrive.png"
-    },
-    {
-        "Brand": "TC Electronics",
-        "Name": "Vortex Mini Flanger",
-        "Width": 1.88976,
-        "Height": 3.66142,
-        "Image": "tc-vortex-mini.png"
     },
     {
         "Brand": "Electro Harmonix",
@@ -4142,13 +4177,6 @@
         "Width": 2,
         "Height": 3.5,
         "Image": "xotic-ep.png"
-    },
-    {
-        "Brand": "Xotic",
-        "Name": "Wah XW-1",
-        "Width": 3.93701,
-        "Height": 8.26772,
-        "Image": "xotic-wah-xw1.png"
     },
     {
         "Brand": "Zoom",
