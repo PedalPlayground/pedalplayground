@@ -1996,6 +1996,27 @@
     },
     {
         "Brand": "BOSS",
+        "Name": "LS-2 Line Selector",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-ls2.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "PS-6 Harmonist",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-ps6.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "SP-1 Spectrum",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-sp1.png"
+    },
+    {
+        "Brand": "BOSS",
         "Name": "DD-500",
         "Width": 6.69,
         "Height": 5.43,
