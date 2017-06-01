@@ -204,6 +204,13 @@
     },
     {
         "Brand": "Moog",
+        "Name": "MF-102 Ring Modulator",
+        "Width": 6,
+        "Height": 9,
+        "Image": "moog-ringmod.png"
+    },
+    {
+        "Brand": "Moog",
         "Name": "MF Drive",
         "Width": 3.25,
         "Height": 5.75,
@@ -3309,13 +3316,6 @@
         "Width": 2.75,
         "Height": 4.75,
         "Image": "mesaboogie-gridslammer.png"
-    },
-    {
-        "Brand": "Moog",
-        "Name": "Moogerfooger MF-102 Ring Modulator",
-        "Width": 6,
-        "Height": 9,
-        "Image": "moog-ringmod.png"
     },
     {
         "Brand": "Selah",
