@@ -1079,6 +1079,55 @@
     },
     {
         "Brand": "Earthquaker Devices",
+        "Name": "Acapulco Gold",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-acapulcogold.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Cloven Hoof",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-clovenhoof.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Hoof",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-hoof.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Organizer",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "earthquaker-organizer.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Grand Orbiter",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "eqd-grandorbiter.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Night Wire",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "eqd-nightwire.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "The Depths",
+        "Width": 2.5,
+        "Height": 4.625,
+        "Image": "eqd-thedepths.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
         "Name": "Afterneath",
         "Width": 2.5,
         "Height": 4.625,
