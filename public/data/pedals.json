@@ -7,6 +7,13 @@
       "Image": "redwitch-fuzzgod.png"
     },
     {
+      "Brand": "Brunetti",
+      "Name": "Vanilla Soft Drive",
+      "Width": 3.93701,
+      "Height": 4.33071,
+      "Image": "brunetti-vanilladrive.png"
+    },
+    {
       "Brand": "Red Witch",
       "Name": "Empress Chorus",
       "Width": 4.64567,
@@ -2717,6 +2724,13 @@
     },
     {
         "Brand": "MXR",
+        "Name": "Iso Brick",
+        "Width": 2.976,
+        "Height": 4.764,
+        "Image": "mxr-isobrick.png"
+    },
+    {
+        "Brand": "MXR",
         "Name": "Micro Amp+",
         "Width": 2.5,
         "Height": 4.3,
@@ -2742,6 +2756,48 @@
         "Width": 2.5,
         "Height": 4.3,
         "Image": "mxr-microchorus.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Super Badass Variac Fuzz",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-sbvariacfuzz.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Super Badass Distortion",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-sbdistortion.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Il Torino Overdrive",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-iltorinood.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Studio Compressor",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-studiocompressor.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Micro Flanger",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-microflanger.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Bass Compressor",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-basscompressor.png"
     },
     {
         "Brand": "MXR",
@@ -2809,8 +2865,8 @@
     {
         "Brand": "MXR",
         "Name": "Phase 90 EVH",
-        "Width": 2.375,
-        "Height": 4.375,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-phase90evh.png"
     },
     {
