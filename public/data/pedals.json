@@ -1,5 +1,75 @@
 [
     {
+      "Brand": "Death By Audio",
+      "Name": "Interstellar Overdrive",
+      "Width": 3.66,
+      "Height": 4.65,
+      "Image": "deathbyaudio-interstellaroverdrive.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Reverberation Machine",
+      "Width": 3.58,
+      "Height": 4.8,
+      "Image": "deathbyaudio-reverberationmachine.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Echo Dream 2",
+      "Width": 4.65,
+      "Height": 5.67,
+      "Image": "deathbyaudio-echodream2.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Fuzz War",
+      "Width": 4.65,
+      "Height": 5.67,
+      "Image": "deathbyaudio-fuzzwar.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Robot",
+      "Width": 4.65,
+      "Height": 5.67,
+      "Image": "deathbyaudio-robot.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Ghost Delay",
+      "Width": 4.65,
+      "Height": 5.67,
+      "Image": "deathbyaudio-ghost.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Waveform Destroyer",
+      "Width": 4.65,
+      "Height": 5.67,
+      "Image": "deathbyaudio-waveformdestroyer.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Evil Filter",
+      "Width": 4.6,
+      "Height": 7.48,
+      "Image": "deathbyaudio-evilfilter.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Micro Dream Delay",
+      "Width": 2.56,
+      "Height": 4.69,
+      "Image": "deathbyaudio-microdream.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Supersonic Fuzz Gun",
+      "Width": 4.65,
+      "Height": 3.66,
+      "Image": "deathbyaudio-fuzzgun.png"
+    },
+    {
       "Brand": "Pettyjohn",
       "Name": "Chime",
       "Width": 2.7,
@@ -266,11 +336,53 @@
         "Image": "gfi-specularreverbv2.png"
     },
     {
+        "Brand": "GigRig",
+        "Name": "G2",
+        "Width": 17.33,
+        "Height": 5.12,
+        "Image": "gigrig-g2.png"
+    },
+    {
+        "Brand": "GigRig",
+        "Name": "Three 2 One",
+        "Width": 3.15,
+        "Height": 4.53,
+        "Image": "gigrig-three2one.png"
+    },
+    {
         "Brand": "Lovepedal",
         "Name": "Kalamazoo Black Caucus",
         "Width": 2.59,
         "Height": 4.44,
         "Image": "lovepedal-kalamazooblackcaucus.png"
+    },
+    {
+        "Brand": "Lovepedal",
+        "Name": "AMP11",
+        "Width": 4.72,
+        "Height": 2.6,
+        "Image": "lovepedal-amp11.png"
+    },
+    {
+        "Brand": "Lovepedal",
+        "Name": "Hermida Zendrive",
+        "Width": 2.5,
+        "Height": 4.37,
+        "Image": "lovepedal-hermidazendrive.png"
+    },
+    {
+        "Brand": "Lovepedal",
+        "Name": "Vibronaut",
+        "Width": 2.5,
+        "Height": 4.37,
+        "Image": "lovepedal-vibronaut.png"
+    },
+    {
+        "Brand": "Lovepedal",
+        "Name": "Tchula",
+        "Width": 4.6,
+        "Height": 2.36,
+        "Image": "lovepedal-tchula.png"
     },
     {
         "Brand": "Mad Professor",
@@ -4240,6 +4352,48 @@
         "Width": 1.5,
         "Height": 3.5,
         "Image": "wampler-db.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "JCM Drive",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-jcmdrive.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "JVM Drive",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-jvmdrive.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "Dumbledore",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-dumbledore.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "Morbid Drive",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-morbiddrive.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "Plexdrive",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-plexidrive.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "Helldrive",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-helldrive.png"
     },
     {
         "Brand": "Wren And Cuff",
