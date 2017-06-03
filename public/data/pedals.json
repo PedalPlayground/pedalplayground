@@ -1940,6 +1940,13 @@
     },
     {
         "Brand": "Kingsley",
+        "Name": "Minstrel",
+        "Width": 3.875,
+        "Height": 4.75,
+        "Image": "kingsley-minstrel.png"
+    },
+    {
+        "Brand": "Kingsley",
         "Name": "Page",
         "Width": 3.875,
         "Height": 4.75,
