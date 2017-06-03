@@ -2718,43 +2718,43 @@
     {
         "Brand": "MXR",
         "Name": "Micro Amp+",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-microamp.png"
     },
     {
         "Brand": "MXR",
         "Name": "Dyna Comp",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-dynacomp.png"
     },
     {
         "Brand": "MXR",
         "Name": "Carbon Copy",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-carboncopy.png"
     },
     {
         "Brand": "MXR",
         "Name": "Micro Chorus",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-microchorus.png"
     },
     {
         "Brand": "MXR",
         "Name": "Reverb",
-        "Width": 2.85,
-        "Height": 4.75,
+        "Width": 2.6,
+        "Height": 4.3,
         "Image": "mxr-reverb.png"
     },
     {
         "Brand": "MXR",
         "Name": "Six Band EQ",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-eq.png"
     },
     {
@@ -2788,22 +2788,22 @@
     {
         "Brand": "MXR",
         "Name": "Phase 90",
-        "Width": 2.375,
-        "Height": 4.375,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-phase90.png"
     },
     {
         "Brand": "MXR",
         "Name": "Univibe",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-univibe.png"
     },
     {
         "Brand": "MXR",
         "Name": "5150 Overdrive EVH",
-        "Width": 5,
-        "Height": 3.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-5150.png"
     },
     {
@@ -3722,6 +3722,13 @@
         "Width": 2.5,
         "Height": 4.3,
         "Image": "jhs-morningglory.png"
+    },
+    {
+        "Brand": "JHS",
+        "Name": "Muffaletta",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "jhs-muffaletta.png"
     },
     {
         "Brand": "JHS",
