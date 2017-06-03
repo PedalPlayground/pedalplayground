@@ -3473,6 +3473,20 @@
     },
     {
         "Brand": "DigiTech",
+        "Name": "Jamman Solo XT",
+        "Width": 3,
+        "Height": 4.865,
+        "Image": "digitech-jammansolo.png"
+    },
+    {
+        "Brand": "DigiTech",
+        "Name": "Digidelay",
+        "Width": 3,
+        "Height": 4.865,
+        "Image": "digitech-digidelay.png"
+    },
+    {
+        "Brand": "DigiTech",
         "Name": "RV-7 Reverb",
         "Width": 3.5,
         "Height": 5.5,
