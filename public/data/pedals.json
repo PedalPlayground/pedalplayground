@@ -1,5 +1,19 @@
 [
     {
+      "Brand": "Fractal Audio Systems",
+      "Name": "AX8",
+      "Width": 16.4,
+      "Height": 10.3,
+      "Image": "fractal-axe8.png"
+    },
+    {
+      "Brand": "GigRig",
+      "Name": "QuarterMaster",
+      "Width": 15.75,
+      "Height": 1.6,
+      "Image": "gigrig-quartermaster.png"
+    },
+    {
       "Brand": "SolidGoldFX",
       "Name": "Funkzilla",
       "Width": 4.67,
