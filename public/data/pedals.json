@@ -1,5 +1,138 @@
 [
     {
+      "Brand": "Mojo Hand FX",
+      "Name": "BMP-2",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-bmp2.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Bayou",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-bayou.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Speakeasy",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-speakeasy.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "DMBL",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-dmbl.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Iron Bell",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-ironbell.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Rook",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-rook.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Mirror Ball",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-mirrorball.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Rounder",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-rounder.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Extra Special",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-extraspecial.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Superlative",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-superlative.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Nebula",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-nebula.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Crosstown",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-crosstown.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Magpie",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-magpie.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Colossus",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-colossus.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Bluebonnet Special",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-bluebonnetspecial.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Nebula IV",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-nebulaiv.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Rook Royale",
+      "Width": 4.69,
+      "Height": 3.9,
+      "Image": "mojohand-rookroyale.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Magistrate",
+      "Width": 4.69,
+      "Height": 3.9,
+      "Image": "mojohand-magistrate.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Odessa",
+      "Width": 4.69,
+      "Height": 3.9,
+      "Image": "mojohand-odessa.png"
+    },
+    {
       "Brand": "MXR",
       "Name": "Talk Box",
       "Width": 4.33,
