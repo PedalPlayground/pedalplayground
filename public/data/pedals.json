@@ -1,5 +1,54 @@
 [
     {
+      "Brand": "SolidGoldFX",
+      "Name": "Funkzilla",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-funkzilla.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Zeta DLX",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-zetadlx.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Beta DLX",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-betadlx.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Apollo",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-apollo.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Formula 76",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-formula76.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Surf Rider III",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-surfrider.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Electroman",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-electroman.png"
+    },
+    {
       "Brand": "Arc Effects",
       "Name": "Klone V2",
       "Width": 4.67,
