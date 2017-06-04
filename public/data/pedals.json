@@ -1,5 +1,47 @@
 [
     {
+      "Brand": "Arc Effects",
+      "Name": "Klone V2",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "arc-klone.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Crimson King",
+      "Width": 3.62,
+      "Height": 4.96,
+      "Image": "arc-crimsonking.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Shepherd",
+      "Width": 3.62,
+      "Height": 4.96,
+      "Image": "arc-shepherd.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Gamut",
+      "Width": 3.62,
+      "Height": 4.96,
+      "Image": "arc-gamut.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Big Green",
+      "Width": 3.62,
+      "Height": 4.96,
+      "Image": "arc-biggreen.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Soothsayer",
+      "Width": 3.62,
+      "Height": 4.96,
+      "Image": "arc-soothsayer.png"
+    },
+    {
       "Brand": "Mojo Hand FX",
       "Name": "BMP-2",
       "Width": 2.66,
