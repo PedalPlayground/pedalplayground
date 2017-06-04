@@ -1,5 +1,26 @@
 [
     {
+      "Brand": "MXR",
+      "Name": "Talk Box",
+      "Width": 4.33,
+      "Height": 6.53,
+      "Image": "mxr-talkbox.png"
+    },
+    {
+      "Brand": "Chicago Iron",
+      "Name": "Octavian",
+      "Width": 3.11,
+      "Height": 5.276,
+      "Image": "chicagoiron-octavia.png"
+    },
+    {
+      "Brand": "Chicago Iron",
+      "Name": "Octavian Plus",
+      "Width": 3.11,
+      "Height": 5.276,
+      "Image": "chicagoiron-octavianplus.png"
+    },
+    {
       "Brand": "Red Witch",
       "Name": "Fuzz God",
       "Width": 4.64567,
@@ -2045,6 +2066,20 @@
     },
     {
         "Brand": "BOSS",
+        "Name": "AC-3 Acoustic Simulator",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-ac3.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "BC-1x Bass Compressor",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-bc1x.png"
+    },
+    {
+        "Brand": "BOSS",
         "Name": "VB-2w Vibrato",
         "Width": 2.875,
         "Height": 5.125,
@@ -2070,6 +2105,20 @@
         "Width": 2.875,
         "Height": 5.125,
         "Image": "boss-fz5.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "FZ-2 Hyper Fuzz",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-fz2.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "SG-1 Slow Gear",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-sg1.png"
     },
     {
         "Brand": "BOSS",
@@ -2112,6 +2161,20 @@
         "Width": 2.875,
         "Height": 5.125,
         "Image": "boss-sd1.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "FRV-1 63' Fender Reverb",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-frv1.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "FBM-1 59' Fender Bassman",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-fbm1.png"
     },
     {
         "Brand": "BOSS",
