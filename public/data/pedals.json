@@ -1,5 +1,460 @@
 [
     {
+      "Brand": "Fractal Audio Systems",
+      "Name": "AX8",
+      "Width": 16.4,
+      "Height": 10.3,
+      "Image": "fractal-axe8.png"
+    },
+    {
+      "Brand": "GigRig",
+      "Name": "QuarterMaster",
+      "Width": 15.75,
+      "Height": 1.6,
+      "Image": "gigrig-quartermaster.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Funkzilla",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-funkzilla.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Zeta DLX",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-zetadlx.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Beta DLX",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-betadlx.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Apollo",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-apollo.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Formula 76",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-formula76.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Surf Rider III",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-surfrider.png"
+    },
+    {
+      "Brand": "SolidGoldFX",
+      "Name": "Electroman",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "solidgoldfx-electroman.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Klone V2",
+      "Width": 4.67,
+      "Height": 3.68,
+      "Image": "arc-klone.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Crimson King",
+      "Width": 3.62,
+      "Height": 4.96,
+      "Image": "arc-crimsonking.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Shepherd",
+      "Width": 3.62,
+      "Height": 4.96,
+      "Image": "arc-shepherd.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Gamut",
+      "Width": 3.62,
+      "Height": 4.96,
+      "Image": "arc-gamut.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Big Green",
+      "Width": 3.62,
+      "Height": 4.96,
+      "Image": "arc-biggreen.png"
+    },
+    {
+      "Brand": "Arc Effects",
+      "Name": "Soothsayer",
+      "Width": 3.62,
+      "Height": 4.96,
+      "Image": "arc-soothsayer.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "BMP-2",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-bmp2.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Bayou",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-bayou.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Speakeasy",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-speakeasy.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "DMBL",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-dmbl.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Iron Bell",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-ironbell.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Rook",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-rook.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Mirror Ball",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-mirrorball.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Rounder",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-rounder.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Extra Special",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-extraspecial.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Superlative",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-superlative.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Nebula",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-nebula.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Crosstown",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-crosstown.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Magpie",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-magpie.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Colossus",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-colossus.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Bluebonnet Special",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-bluebonnetspecial.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Nebula IV",
+      "Width": 2.66,
+      "Height": 4.76,
+      "Image": "mojohand-nebulaiv.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Rook Royale",
+      "Width": 4.69,
+      "Height": 3.9,
+      "Image": "mojohand-rookroyale.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Magistrate",
+      "Width": 4.69,
+      "Height": 3.9,
+      "Image": "mojohand-magistrate.png"
+    },
+    {
+      "Brand": "Mojo Hand FX",
+      "Name": "Odessa",
+      "Width": 4.69,
+      "Height": 3.9,
+      "Image": "mojohand-odessa.png"
+    },
+    {
+      "Brand": "MXR",
+      "Name": "Talk Box",
+      "Width": 4.33,
+      "Height": 6.53,
+      "Image": "mxr-talkbox.png"
+    },
+    {
+      "Brand": "Chicago Iron",
+      "Name": "Octavian",
+      "Width": 3.11,
+      "Height": 5.276,
+      "Image": "chicagoiron-octavia.png"
+    },
+    {
+      "Brand": "Chicago Iron",
+      "Name": "Octavian Plus",
+      "Width": 3.11,
+      "Height": 5.276,
+      "Image": "chicagoiron-octavianplus.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Fuzz God",
+      "Width": 4.64567,
+      "Height": 3.70079,
+      "Image": "redwitch-fuzzgod.png"
+    },
+    {
+      "Brand": "Brunetti",
+      "Name": "Vanilla Soft Drive",
+      "Width": 3.93701,
+      "Height": 4.33071,
+      "Image": "brunetti-vanilladrive.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Empress Chorus",
+      "Width": 4.64567,
+      "Height": 3.70079,
+      "Image": "redwitch-empresschorus.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Dlx Moon Phaser",
+      "Width": 4.64567,
+      "Height": 3.70079,
+      "Image": "redwitch-dlxmoonphaser.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Factotum",
+      "Width": 4.64567,
+      "Height": 3.70079,
+      "Image": "redwitch-factotum.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Synthotron",
+      "Width": 4.64567,
+      "Height": 3.70079,
+      "Image": "redwitch-synthotron.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Zeus",
+      "Width": 4.64567,
+      "Height": 3.70079,
+      "Image": "redwitch-zeus.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Famulus",
+      "Width": 4.64567,
+      "Height": 3.70079,
+      "Image": "redwitch-famulus.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Titan",
+      "Width": 4.64567,
+      "Height": 3.70079,
+      "Image": "redwitch-titan.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Pentavocal Trem",
+      "Width": 4.64567,
+      "Height": 3.70079,
+      "Image": "redwitch-pentavocal.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Eve Tremolo",
+      "Width": 1.77165,
+      "Height": 3.543307,
+      "Image": "redwitch-eve.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Grace Compressor",
+      "Width": 1.77165,
+      "Height": 3.543307,
+      "Image": "redwitch-grace.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Joy Distortion",
+      "Width": 1.77165,
+      "Height": 3.543307,
+      "Image": "redwitch-joy.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Lily Boost",
+      "Width": 1.77165,
+      "Height": 3.543307,
+      "Image": "redwitch-lily.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Ruby Fuzz",
+      "Width": 1.77165,
+      "Height": 3.543307,
+      "Image": "redwitch-ruby.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Scarlett Overdrive",
+      "Width": 1.77165,
+      "Height": 3.543307,
+      "Image": "redwitch-scarlette.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Violet Delay",
+      "Width": 1.77165,
+      "Height": 3.543307,
+      "Image": "redwitch-violet.png"
+    },
+    {
+      "Brand": "Red Witch",
+      "Name": "Violetta Delay",
+      "Width": 1.82,
+      "Height": 3.543307,
+      "Image": "redwitch-violetta.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Interstellar Overdrive",
+      "Width": 3.66,
+      "Height": 4.65,
+      "Image": "deathbyaudio-interstellaroverdrive.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Reverberation Machine",
+      "Width": 3.58,
+      "Height": 4.8,
+      "Image": "deathbyaudio-reverberationmachine.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Echo Dream 2",
+      "Width": 4.65,
+      "Height": 5.67,
+      "Image": "deathbyaudio-echodream2.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Fuzz War",
+      "Width": 4.65,
+      "Height": 5.67,
+      "Image": "deathbyaudio-fuzzwar.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Robot",
+      "Width": 4.65,
+      "Height": 5.67,
+      "Image": "deathbyaudio-robot.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Ghost Delay",
+      "Width": 4.65,
+      "Height": 5.67,
+      "Image": "deathbyaudio-ghost.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Waveform Destroyer",
+      "Width": 4.65,
+      "Height": 5.67,
+      "Image": "deathbyaudio-waveformdestroyer.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Evil Filter",
+      "Width": 4.6,
+      "Height": 7.48,
+      "Image": "deathbyaudio-evilfilter.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Micro Dream Delay",
+      "Width": 2.56,
+      "Height": 4.69,
+      "Image": "deathbyaudio-microdream.png"
+    },
+    {
+      "Brand": "Death By Audio",
+      "Name": "Supersonic Fuzz Gun",
+      "Width": 4.65,
+      "Height": 3.66,
+      "Image": "deathbyaudio-fuzzgun.png"
+    },
+    {
       "Brand": "Pettyjohn",
       "Name": "Chime",
       "Width": 2.7,
@@ -266,11 +721,53 @@
         "Image": "gfi-specularreverbv2.png"
     },
     {
+        "Brand": "GigRig",
+        "Name": "G2",
+        "Width": 17.33,
+        "Height": 5.12,
+        "Image": "gigrig-g2.png"
+    },
+    {
+        "Brand": "GigRig",
+        "Name": "Three 2 One",
+        "Width": 3.15,
+        "Height": 4.53,
+        "Image": "gigrig-three2one.png"
+    },
+    {
         "Brand": "Lovepedal",
         "Name": "Kalamazoo Black Caucus",
         "Width": 2.59,
         "Height": 4.44,
         "Image": "lovepedal-kalamazooblackcaucus.png"
+    },
+    {
+        "Brand": "Lovepedal",
+        "Name": "AMP11",
+        "Width": 4.72,
+        "Height": 2.6,
+        "Image": "lovepedal-amp11.png"
+    },
+    {
+        "Brand": "Lovepedal",
+        "Name": "Hermida Zendrive",
+        "Width": 2.5,
+        "Height": 4.37,
+        "Image": "lovepedal-hermidazendrive.png"
+    },
+    {
+        "Brand": "Lovepedal",
+        "Name": "Vibronaut",
+        "Width": 2.5,
+        "Height": 4.37,
+        "Image": "lovepedal-vibronaut.png"
+    },
+    {
+        "Brand": "Lovepedal",
+        "Name": "Tchula",
+        "Width": 4.6,
+        "Height": 2.36,
+        "Image": "lovepedal-tchula.png"
     },
     {
         "Brand": "Mad Professor",
@@ -1702,6 +2199,13 @@
     },
     {
         "Brand": "Kingsley",
+        "Name": "Minstrel",
+        "Width": 3.875,
+        "Height": 4.75,
+        "Image": "kingsley-minstrel.png"
+    },
+    {
+        "Brand": "Kingsley",
         "Name": "Page",
         "Width": 3.875,
         "Height": 4.75,
@@ -1800,6 +2304,20 @@
     },
     {
         "Brand": "BOSS",
+        "Name": "AC-3 Acoustic Simulator",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-ac3.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "BC-1x Bass Compressor",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-bc1x.png"
+    },
+    {
+        "Brand": "BOSS",
         "Name": "VB-2w Vibrato",
         "Width": 2.875,
         "Height": 5.125,
@@ -1825,6 +2343,20 @@
         "Width": 2.875,
         "Height": 5.125,
         "Image": "boss-fz5.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "FZ-2 Hyper Fuzz",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-fz2.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "SG-1 Slow Gear",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-sg1.png"
     },
     {
         "Brand": "BOSS",
@@ -1867,6 +2399,20 @@
         "Width": 2.875,
         "Height": 5.125,
         "Image": "boss-sd1.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "FRV-1 63' Fender Reverb",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-frv1.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "FBM-1 59' Fender Bassman",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-fbm1.png"
     },
     {
         "Brand": "BOSS",
@@ -2486,44 +3032,93 @@
     },
     {
         "Brand": "MXR",
+        "Name": "Iso Brick",
+        "Width": 2.976,
+        "Height": 4.764,
+        "Image": "mxr-isobrick.png"
+    },
+    {
+        "Brand": "MXR",
         "Name": "Micro Amp+",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-microamp.png"
     },
     {
         "Brand": "MXR",
         "Name": "Dyna Comp",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-dynacomp.png"
     },
     {
         "Brand": "MXR",
         "Name": "Carbon Copy",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-carboncopy.png"
     },
     {
         "Brand": "MXR",
         "Name": "Micro Chorus",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-microchorus.png"
     },
     {
         "Brand": "MXR",
+        "Name": "Super Badass Variac Fuzz",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-sbvariacfuzz.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Super Badass Distortion",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-sbdistortion.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Il Torino Overdrive",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-iltorinood.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Studio Compressor",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-studiocompressor.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Micro Flanger",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-microflanger.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Bass Compressor",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "mxr-basscompressor.png"
+    },
+    {
+        "Brand": "MXR",
         "Name": "Reverb",
-        "Width": 2.85,
-        "Height": 4.75,
+        "Width": 2.6,
+        "Height": 4.3,
         "Image": "mxr-reverb.png"
     },
     {
         "Brand": "MXR",
         "Name": "Six Band EQ",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-eq.png"
     },
     {
@@ -2557,29 +3152,29 @@
     {
         "Brand": "MXR",
         "Name": "Phase 90",
-        "Width": 2.375,
-        "Height": 4.375,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-phase90.png"
     },
     {
         "Brand": "MXR",
         "Name": "Univibe",
-        "Width": 2.75,
-        "Height": 4.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-univibe.png"
     },
     {
         "Brand": "MXR",
         "Name": "5150 Overdrive EVH",
-        "Width": 5,
-        "Height": 3.75,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-5150.png"
     },
     {
         "Brand": "MXR",
         "Name": "Phase 90 EVH",
-        "Width": 2.375,
-        "Height": 4.375,
+        "Width": 2.5,
+        "Height": 4.3,
         "Image": "mxr-phase90evh.png"
     },
     {
@@ -3242,6 +3837,20 @@
     },
     {
         "Brand": "DigiTech",
+        "Name": "Jamman Solo XT",
+        "Width": 3,
+        "Height": 4.865,
+        "Image": "digitech-jammansolo.png"
+    },
+    {
+        "Brand": "DigiTech",
+        "Name": "Digidelay",
+        "Width": 3,
+        "Height": 4.865,
+        "Image": "digitech-digidelay.png"
+    },
+    {
+        "Brand": "DigiTech",
         "Name": "RV-7 Reverb",
         "Width": 3.5,
         "Height": 5.5,
@@ -3477,6 +4086,13 @@
         "Width": 2.5,
         "Height": 4.3,
         "Image": "jhs-morningglory.png"
+    },
+    {
+        "Brand": "JHS",
+        "Name": "Muffaletta",
+        "Width": 2.5,
+        "Height": 4.3,
+        "Image": "jhs-muffaletta.png"
     },
     {
         "Brand": "JHS",
@@ -4240,6 +4856,48 @@
         "Width": 1.5,
         "Height": 3.5,
         "Image": "wampler-db.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "JCM Drive",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-jcmdrive.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "JVM Drive",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-jvmdrive.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "Dumbledore",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-dumbledore.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "Morbid Drive",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-morbiddrive.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "Plexdrive",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-plexidrive.png"
+    },
+    {
+        "Brand": "Weehbo",
+        "Name": "Helldrive",
+        "Width": 4.72,
+        "Height": 3.74,
+        "Image": "weehbo-helldrive.png"
     },
     {
         "Brand": "Wren And Cuff",

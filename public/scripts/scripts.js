@@ -21499,7 +21499,21 @@ window.GetPedalData = function(){
 					data[pedal].Image 	|| ""
 				));
 			}
-			console.log("Pedal data loaded");
+			//Sort brands and pedals alphabetically
+			pedals.sort(function(a,b) {
+				if (a.Brand < b.Brand) {
+					return -1;
+				} else if (b.Brand < a.Brand) {
+					return 1;
+				} else {
+					if (a.Name < b.Name) {
+						return -1;
+					} else if (b.Name < a.Name) {
+						return 1;
+					}
+					return 0;
+				}
+			});
 			pedals.forEach(RenderPedals);
 			listPedals(pedals);
 		}
@@ -21554,6 +21568,21 @@ window.GetPedalBoardData = function(){
 				));
 			}
 			console.log("Pedalboard data loaded");
+			//Sort brands and pedals alphabetically
+			pedalboards.sort(function(a,b) {
+				if (a.Brand < b.Brand) {
+					return -1;
+				} else if (b.Brand < a.Brand) {
+					return 1;
+				} else {
+					if (a.Name < b.Name) {
+						return -1;
+					} else if (b.Name < a.Name) {
+						return 1;
+					}
+					return 0;
+				}
+			});
 			RenderPedalBoards(pedalboards);
 		}
 	});
