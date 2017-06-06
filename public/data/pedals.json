@@ -1,5 +1,12 @@
 [
     {
+      "Brand": "Boss",
+      "Name": "DC-2 Dimension C",
+      "Width": 2.875,
+      "Height": 5.125,
+      "Image": "boss-dimensionc.png"
+    },
+    {
       "Brand": "Fractal Audio Systems",
       "Name": "AX8",
       "Width": 16.4,
