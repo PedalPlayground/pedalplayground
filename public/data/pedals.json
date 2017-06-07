@@ -1,5 +1,33 @@
 [
     {
+      "Brand": "Zoom",
+      "Name": "MS-50G",
+      "Width": 3.051181,
+      "Height": 5.1299213,
+      "Image": "zoom-ms50g.png"
+    },
+    {
+      "Brand": "Zoom",
+      "Name": "MS-60B",
+      "Width": 3.051181,
+      "Height": 5.1299213,
+      "Image": "zoom-ms60b.png"
+    },
+    {
+      "Brand": "Zoom",
+      "Name": "MS-70CDR",
+      "Width": 3.051181,
+      "Height": 5.1299213,
+      "Image": "zoom-ms70cdr.png"
+    },
+    {
+      "Brand": "Zoom",
+      "Name": "MS-100BT",
+      "Width": 3.051181,
+      "Height": 5.1299213,
+      "Image": "zoom-ms100bt.png"
+    },
+    {
       "Brand": "Line6",
       "Name": "Relay Wireless G70",
       "Width": 4,
