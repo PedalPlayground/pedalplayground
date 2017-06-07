@@ -1,5 +1,12 @@
 [
     {
+      "Brand": "Line6",
+      "Name": "Relay Wireless G70",
+      "Width": 4,
+      "Height": 5.5,
+      "Image": "line6-g70relay.png"
+    },
+    {
       "Brand": "Boss",
       "Name": "DC-2 Dimension C",
       "Width": 2.875,
