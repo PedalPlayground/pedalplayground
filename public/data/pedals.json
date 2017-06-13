@@ -1,5 +1,12 @@
 [
     {
+      "Brand": "Korg",
+      "Name": "GA Custom Handheld Tuner",
+      "Width": 3.9,
+      "Height": 2.56,
+      "Image": "korg-gahandheldtuner.png"
+    },
+    {
       "Brand": "Zoom",
       "Name": "MS-50G",
       "Width": 3.051181,
