@@ -7143,9 +7143,7 @@ strong, th {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-    left: 3px;
-    right: 3px; }
+    left: 0; }
   .pedal__knob1, .pedal__knob2 {
     border-radius: 40px;
     width: 12px;
@@ -7162,6 +7160,7 @@ strong, th {
   .pedal__knob2 {
     right: 15%; }
   .pedal__jack1, .pedal__jack2 {
+    display: none;
     width: 3px;
     height: 10px;
     position: absolute;

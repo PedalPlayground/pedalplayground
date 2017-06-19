@@ -183,8 +183,8 @@ $border: 1px solid rgba(black, .13);
 		background-image: linear-gradient( to top left, rgba(white, 0), rgba(white, .2) );
 		position: absolute;
 		@include cover;
-		left: 3px;
-		right: 3px;
+		//left: 3px;
+		//right: 3px;
 	}
 	&__knob1,
 	&__knob2 {
@@ -206,6 +206,7 @@ $border: 1px solid rgba(black, .13);
 	}
 	&__jack1,
 	&__jack2 {
+        display: none;
 		width: 3px;
 		height: 10px;
 		position: absolute;
