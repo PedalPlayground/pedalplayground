@@ -1,5 +1,19 @@
 [
     {
+        "Brand": "BOSS",
+        "Name": "MD-500",
+        "Width": 6.69,
+        "Height": 5.43,
+        "Image": "boss-md500.png"
+    },
+    {
+        "Brand": "BOSS",
+        "Name": "RV-500",
+        "Width": 6.69,
+        "Height": 5.43,
+        "Image": "boss-rv500.png"
+    },
+    {
       "Brand": "Fractal Audio Systems",
       "Name": "AX8",
       "Width": 16.4,
