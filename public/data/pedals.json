@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "GFI System",
+        "Name": "Specular Tempus",
+        "Width": 4.70,
+        "Height": 3.50,
+        "Image": "gfi-speculartempus.png"
+        },
+    {
         "Brand": "BOSS",
         "Name": "MD-500",
         "Width": 6.69,
