@@ -1,11 +1,46 @@
 [
     {
+        "Brand": "Two Notes",
+        "Name": "Torpedo C.A.B.",
+        "Width": 7.00,
+        "Height": 5.03,
+        "Image": "twonotes-torpedocab.png"
+    },
+    {
+        "Brand": "Two Notes",
+        "Name": "Le Bass",
+        "Width": 4.88,
+        "Height": 7.44,
+        "Image": "twonotes-lebass.png"
+    },
+    {
+        "Brand": "Two Notes",
+        "Name": "Le Lead",
+        "Width": 4.88,
+        "Height": 7.44,
+        "Image": "twonotes-lelead.png"
+    },
+    {
+        "Brand": "Two Notes",
+        "Name": "Le Crunch",
+        "Width": 4.88,
+        "Height": 7.44,
+        "Image": "twonotes-lecrunch.png"
+    },
+    {
+        "Brand": "Two Notes",
+        "Name": "Le Clean",
+        "Width": 4.88,
+        "Height": 7.44,
+        "Image": "twonotes-leclean.png"
+    },
+    {
         "Brand": "GFI System",
         "Name": "Specular Tempus",
         "Width": 4.70,
         "Height": 3.50,
         "Image": "gfi-speculartempus.png"
-        },
+    },
     {
         "Brand": "BOSS",
         "Name": "MD-500",
