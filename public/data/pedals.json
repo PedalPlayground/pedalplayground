@@ -1,8 +1,29 @@
 [
     {
+        "Brand": "Pete Cornish",
+        "Name": "G-2",
+        "Width": 4.80,
+        "Height": 6.73,
+        "Image": "petecornish-g2.png"
+    },
+    {
+        "Brand": "Pete Cornish",
+        "Name": "P-1",
+        "Width": 4.80,
+        "Height": 6.73,
+        "Image": "petecornish-p1.png"
+    },
+    {
+        "Brand": "Pete Cornish",
+        "Name": "St-2",
+        "Width": 4.80,
+        "Height": 6.73,
+        "Image": "petecornish-st2.png"
+    },
+    {
         "Brand": "Subdecay",
         "Name": "Octasynth",
-        "Width": 2.30,
+        "Width": 2.45,
         "Height": 4.40,
         "Image": "subdecay-octasynth.png"
     },
