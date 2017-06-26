@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Boss",
+        "Name": "PS-3 Pitch Shifter/Delay",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-ps3.png"
+    },
+    {
         "Brand": "Subdecay",
         "Name": "Octasynth",
         "Width": 2.30,
