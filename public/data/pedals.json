@@ -37,7 +37,7 @@
     {
         "Brand": "Chase Bliss",
         "Name": "Faves",
-        "Width": 1.25,
+        "Width": 1.26,
         "Height": 3.63,
         "Image": "chasebliss-faves.png"
     },
@@ -128,28 +128,28 @@
     {
         "Brand": "Fulltone",
         "Name": "Octafuzz",
-        "Width": 2.50,
+        "Width": 2.80,
         "Height": 4.50,
         "Image": "fulltone-octafuzz.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "Plimsoul",
-        "Width": 2.50,
+        "Width": 2.80,
         "Height": 4.50,
         "Image": "fulltone-plimsoul.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "70",
-        "Width": 2.39,
+        "Width": 2.80,
         "Height": 4.34,
         "Image": "fulltone-70.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "69",
-        "Width": 2.39,
+        "Width": 2.80,
         "Height": 4.34,
         "Image": "fulltone-69.png"
     },
