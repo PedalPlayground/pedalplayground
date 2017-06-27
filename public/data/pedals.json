@@ -2142,6 +2142,20 @@
         "Image": "earthquaker-parkfuzz.png"
     },
     {
+        "Brand": "Earthquaker Devices",
+        "Name": "Gray Channel",
+        "Width": 3.7,
+        "Height": 4.625,
+        "Image": "earthquaker-graychannel.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Spires",
+        "Width": 3.7,
+        "Height": 4.625,
+        "Image": "earthquaker-spires.png"
+    },
+    {
         "Brand": "Elektron",
         "Name": "Analog Drive",
         "Width": 6.8,
@@ -4453,10 +4467,31 @@
     },
     {
         "Brand": "Way Huge",
-        "Name": "Green Rhino",
+        "Name": "Green Rhino Mk II",
         "Width": 3.75,
         "Height": 4.78,
         "Image": "wayhuge-greenrhino.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Green Rhino Mk IV",
+        "Width": 3.18,
+        "Height": 4.78,
+        "Image": "wayhuge-greenrhino-mkiv.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Red Llama",
+        "Width": 3.75,
+        "Height": 4.78,
+        "Image": "wayhuge-redllama.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Red Llama 25th Anniversary",
+        "Width": 3.18,
+        "Height": 4.78,
+        "Image": "wayhuge-redllama-anniv.png"
     },
     {
         "Brand": "Way Huge",
