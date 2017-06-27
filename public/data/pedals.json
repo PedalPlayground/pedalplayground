@@ -1,5 +1,26 @@
 [
     {
+        "Brand": "Pete Cornish",
+        "Name": "G-2",
+        "Width": 4.80,
+        "Height": 6.73,
+        "Image": "petecornish-g2.png"
+    },
+    {
+        "Brand": "Pete Cornish",
+        "Name": "P-1",
+        "Width": 4.80,
+        "Height": 6.73,
+        "Image": "petecornish-p1.png"
+    },
+    {
+        "Brand": "Pete Cornish",
+        "Name": "St-2",
+        "Width": 4.80,
+        "Height": 6.73,
+        "Image": "petecornish-st2.png"
+  },
+    {
         "Brand": "BOSS",
         "Name": "PS-3 Pitch Shifter/Delay",
         "Width": 2.875,
@@ -9,7 +30,7 @@
     {
         "Brand": "Subdecay",
         "Name": "Octasynth",
-        "Width": 2.30,
+        "Width": 2.45,
         "Height": 4.40,
         "Image": "subdecay-octasynth.png"
     },
@@ -45,7 +66,7 @@
         "Brand": "Chase Bliss",
         "Name": "Faves",
         "Width": 1.26,
-        "Height": 3.2,
+        "Height": 3.3,
         "Image": "chasebliss-faves.png"
     },
     {
@@ -135,28 +156,28 @@
     {
         "Brand": "Fulltone",
         "Name": "Octafuzz",
-        "Width": 2.50,
+        "Width": 2.80,
         "Height": 4.50,
         "Image": "fulltone-octafuzz.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "Plimsoul",
-        "Width": 2.50,
+        "Width": 2.80,
         "Height": 4.50,
         "Image": "fulltone-plimsoul.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "70",
-        "Width": 2.39,
+        "Width": 2.80,
         "Height": 4.34,
         "Image": "fulltone-70.png"
     },
     {
         "Brand": "Fulltone",
         "Name": "69",
-        "Width": 2.39,
+        "Width": 2.80,
         "Height": 4.34,
         "Image": "fulltone-69.png"
     },
