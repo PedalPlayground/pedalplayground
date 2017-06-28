@@ -1,5 +1,131 @@
 [
     {
+        "Brand": "Basic Audio",
+        "Name": "Spooky Tooth",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-spookytooth.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Throbby",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-throbby.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Gnarly",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-gnarly.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Fuzzmondo",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-fuzzmondo.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Tri/Ram Muff",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-triram.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Solar Myth",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-solarmyth.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Foxey Lady",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-foxeylady.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Zippy",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-zippy.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Zonk",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-zonk.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Fuzz Mutant",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-fuzzmutant.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Futureman",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-futureman.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Squarewave+",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-squarewaveplus.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Pale Rider",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-palerider.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Lucky Number",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-luckynumber.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Peak Freq",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-peakfreq.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Alter Destiny",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-alterdestiny.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Wildcat",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-wildcat.png"
+    },
+    {
+        "Brand": "Basic Audio",
+        "Name": "Orpheum",
+        "Width": 2.65,
+        "Height": 4.8,
+        "Image": "basicaudio-orpheum.png"
+    },
+    {
         "Brand": "Pete Cornish",
         "Name": "G-2",
         "Width": 4.80,
@@ -2312,29 +2438,29 @@
     {
         "Brand": "Supro",
         "Name": "Tremolo",
-        "Width": 3.2,
-        "Height": 4.9,
+        "Width": 2.6,
+        "Height": 4.8,
         "Image": "supro-tremolo.png"
     },
     {
         "Brand": "Supro",
         "Name": "Drive",
-        "Width": 3.2,
-        "Height": 4.9,
+        "Width": 2.6,
+        "Height": 4.8,
         "Image": "supro-drive.png"
     },
     {
         "Brand": "Supro",
         "Name": "Fuzz",
-        "Width": 3.2,
-        "Height": 4.9,
+        "Width": 2.6,
+        "Height": 4.8,
         "Image": "supro-fuzz.png"
     },
     {
         "Brand": "Supro",
         "Name": "Boost",
-        "Width": 3.2,
-        "Height": 4.9,
+        "Width": 2.6,
+        "Height": 4.8,
         "Image": "supro-boost.png"
     },
     {
