@@ -2424,29 +2424,29 @@
     {
         "Brand": "Supro",
         "Name": "Tremolo",
-        "Width": 3.2,
-        "Height": 4.9,
+        "Width": 2.6,
+        "Height": 4.8,
         "Image": "supro-tremolo.png"
     },
     {
         "Brand": "Supro",
         "Name": "Drive",
-        "Width": 3.2,
-        "Height": 4.9,
+        "Width": 2.6,
+        "Height": 4.8,
         "Image": "supro-drive.png"
     },
     {
         "Brand": "Supro",
         "Name": "Fuzz",
-        "Width": 3.2,
-        "Height": 4.9,
+        "Width": 2.6,
+        "Height": 4.8,
         "Image": "supro-fuzz.png"
     },
     {
         "Brand": "Supro",
         "Name": "Boost",
-        "Width": 3.2,
-        "Height": 4.9,
+        "Width": 2.6,
+        "Height": 4.8,
         "Image": "supro-boost.png"
     },
     {
