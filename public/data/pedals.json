@@ -1,5 +1,61 @@
 [
     {
+        "Brand": "Matthews Effects",
+        "Name": "The Whaler",
+        "Width": 2.62,
+        "Height": 4.78,
+        "Image": "matthews-thewhaler.png"
+    },
+    {
+        "Brand": "Matthews Effects",
+        "Name": "The Surgeon",
+        "Width": 2.62,
+        "Height": 4.78,
+        "Image": "matthews-thesurgeon.png"
+    },
+    {
+        "Brand": "Matthews Effects",
+        "Name": "The Harbinger",
+        "Width": 2.62,
+        "Height": 4.78,
+        "Image": "matthews-theharbinger.png"
+    },
+    {
+        "Brand": "Matthews Effects",
+        "Name": "The Chemist",
+        "Width": 2.62,
+        "Height": 4.78,
+        "Image": "matthews-thechemist.png"
+    },
+    {
+        "Brand": "Matthews Effects",
+        "Name": "The Cartographer",
+        "Width": 2.62,
+        "Height": 4.78,
+        "Image": "matthews-thecartographer.png"
+    },
+    {
+        "Brand": "Matthews Effects",
+        "Name": "The Cosmonaut",
+        "Width": 2.62,
+        "Height": 4.78,
+        "Image": "matthews-thecosmonaut.png"
+    },
+    {
+        "Brand": "Matthews Effects",
+        "Name": "The Architect",
+        "Width": 2.62,
+        "Height": 4.78,
+        "Image": "matthews-thearchitect.png"
+    },
+    {
+        "Brand": "Matthews Effects",
+        "Name": "The Astronomer",
+        "Width": 2.62,
+        "Height": 4.78,
+        "Image": "matthews-theastronomer.png"
+    },
+    {
         "Brand": "Basic Audio",
         "Name": "Spooky Tooth",
         "Width": 2.65,
