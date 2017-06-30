@@ -1,5 +1,61 @@
 [
     {
+        "Brand": "Foxpedal",
+        "Name": "The Wave",
+        "Width": 5.6,
+        "Height": 4.7,
+        "Image": "foxpedal-thewave.png"
+    },
+    {
+        "Brand": "Foxpedal",
+        "Name": "Wrath",
+        "Width": 2.6,
+        "Height": 4.7,
+        "Image": "foxpedal-wrath.png"
+    },
+    {
+        "Brand": "Foxpedal",
+        "Name": "The City",
+        "Width": 2.6,
+        "Height": 4.7,
+        "Image": "foxpedal-thecity.png"
+    },
+    {
+        "Brand": "Foxpedal",
+        "Name": "Refinery",
+        "Width": 2.6,
+        "Height": 4.7,
+        "Image": "foxpedal-refinery.png"
+    },
+    {
+        "Brand": "Foxpedal",
+        "Name": "Kingdom Combo V2",
+        "Width": 2.6,
+        "Height": 4.7,
+        "Image": "foxpedal-kingdomcombov2.png"
+    },
+    {
+        "Brand": "Foxpedal",
+        "Name": "Magnifica Deluxe",
+        "Width": 2.6,
+        "Height": 4.7,
+        "Image": "foxpedal-magnifica.png"
+    },
+    {
+        "Brand": "Foxpedal",
+        "Name": "Kingdom",
+        "Width": 2.6,
+        "Height": 4.7,
+        "Image": "foxpedal-kingdom.png"
+    },
+    {
+        "Brand": "Foxpedal",
+        "Name": "Defector",
+        "Width": 2.6,
+        "Height": 4.7,
+        "Image": "foxpedal-defector.png"
+    },
+    {
         "Brand": "Matthews Effects",
         "Name": "The Whaler",
         "Width": 2.62,
