@@ -4357,21 +4357,21 @@
         "Brand": "DigiTech",
         "Name": "RV-7 Reverb",
         "Width": 3.5,
-        "Height": 5.5,
+        "Height": 5.25,
         "Image": "digitech-rv7.png"
     },
     {
         "Brand": "DigiTech",
         "Name": "CR-7 Stereo Chorus",
         "Width": 3.5,
-        "Height": 5.5,
+        "Height": 5.25,
         "Image": "digitech-cr7.png"
     },
     {
         "Brand": "DigiTech",
         "Name": "Supernatural",
         "Width": 3.5,
-        "Height": 5.5,
+        "Height": 5.25,
         "Image": "digitech-supernatural.png"
     },
     {
@@ -4385,7 +4385,7 @@
         "Brand": "DigiTech",
         "Name": "DL-8 Delay/Looper",
         "Width": 3.5,
-        "Height": 5.5,
+        "Height": 5.25,
         "Image": "digitech-dl8.png"
     },
     {
