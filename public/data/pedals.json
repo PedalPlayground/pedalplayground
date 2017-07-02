@@ -1,5 +1,40 @@
 [
     {
+        "Brand": "Ibanez",
+        "Name": "FL-9 Flanger",
+        "Width": 2.9,
+        "Height": 4.85,
+        "Image": "ibanez-fl9.png"
+    },
+    {
+        "Brand": "Ibanez",
+        "Name": "AD-9 Analog Delay",
+        "Width": 2.9,
+        "Height": 4.85,
+        "Image": "ibanez-ad9.png"
+    },
+    {
+        "Brand": "Ibanez",
+        "Name": "Echo Shifter",
+        "Width": 4.7,
+        "Height": 6.3,
+        "Image": "ibanez-echoshifter.png"
+    },
+    {
+        "Brand": "Ibanez",
+        "Name": "AD-80 Analog Delay",
+        "Width": 2.9,
+        "Height": 4.89,
+        "Image": "ibanez-ad80.png"
+    },
+    {
+        "Brand": "Ibanez",
+        "Name": "TS808 Tubescreamer",
+        "Width": 2.9,
+        "Height": 4.89,
+        "Image": "ibanez-ts808.png"
+    },
+    {
         "Brand": "Foxpedal",
         "Name": "The Wave",
         "Width": 5.6,
