@@ -1,5 +1,68 @@
 [
     {
+        "Brand": "Blackout Effectors",
+        "Name": "Fix'D Fuzz Deluxe",
+        "Width": 3.7,
+        "Height": 4.75,
+        "Image": "blackout-fixdfuzz.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Musket",
+        "Width": 2.92,
+        "Height": 4.75,
+        "Image": "blackout-musket.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Fubar",
+        "Width": 2.92,
+        "Height": 4.75,
+        "Image": "blackout-fubar.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Mantra",
+        "Width": 2.92,
+        "Height": 4.75,
+        "Image": "blackout-mantra.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Blunderbuss",
+        "Width": 2.92,
+        "Height": 4.75,
+        "Image": "blackout-blunderbuss.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Twosome",
+        "Width": 5.63,
+        "Height": 4.63,
+        "Image": "blackout-twosome.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Crystal Dagger",
+        "Width": 5.63,
+        "Height": 4.63,
+        "Image": "blackout-crystaldagger.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Wetstone",
+        "Width": 5.63,
+        "Height": 4.63,
+        "Image": "blackout-wetstone.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Cadavernous ",
+        "Width": 5.63,
+        "Height": 4.63,
+        "Image": "blackout-cadavernous.png"
+    },
+    {
         "Brand": "Old Blood Noise Endeavors",
         "Name": "Fault",
         "Width": 4.7,
