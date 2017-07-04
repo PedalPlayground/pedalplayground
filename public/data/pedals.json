@@ -1,5 +1,33 @@
 [
     {
+        "Brand": "B.K. Butler",
+        "Name": "Tube Driver",
+        "Width": 4.13,
+        "Height": 7.2,
+        "Image": "bkbutler-tubedriver.png"
+    },
+    {
+        "Brand": "Rockbox",
+        "Name": "Super 763",
+        "Width": 2.6,
+        "Height": 4.8,
+        "Image": "rockbox-super763.png"
+    },
+    {
+        "Brand": "Rockbox",
+        "Name": "Baby Blues",
+        "Width": 2.6,
+        "Height": 4.8,
+        "Image": "rockbox-babyblues.png"
+    },
+    {
+        "Brand": "Rockbox",
+        "Name": "Boiling Point",
+        "Width": 2.6,
+        "Height": 4.8,
+        "Image": "rockbox-boilingpoint.png"
+    },
+    {
         "Brand": "Blackout Effectors",
         "Name": "Fix'D Fuzz Deluxe",
         "Width": 3.7,
