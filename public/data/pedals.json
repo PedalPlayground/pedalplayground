@@ -1,5 +1,145 @@
 [
     {
+        "Brand": "Skreddy",
+        "Name": "Little Miss Sunshine",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-littlemisssunshine.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "Swirl",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-swirl.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "Rust Rod",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-rustrod.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "BC 109",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-bc109.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "Mayo",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-mayo.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "P 19",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-p19.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "Hibrid Fuzz Driver",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-hibridfuzzdriver.png"
+    },
+    {
+        "Brand": "B.K. Butler",
+        "Name": "Tube Driver",
+        "Width": 4.13,
+        "Height": 7.2,
+        "Image": "bkbutler-tubedriver.png"
+    },
+    {
+        "Brand": "Rockbox",
+        "Name": "Super 763",
+        "Width": 2.6,
+        "Height": 4.8,
+        "Image": "rockbox-super763.png"
+    },
+    {
+        "Brand": "Rockbox",
+        "Name": "Baby Blues",
+        "Width": 2.6,
+        "Height": 4.8,
+        "Image": "rockbox-babyblues.png"
+    },
+    {
+        "Brand": "Rockbox",
+        "Name": "Boiling Point",
+        "Width": 2.6,
+        "Height": 4.8,
+        "Image": "rockbox-boilingpoint.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Fix'D Fuzz Deluxe",
+        "Width": 3.7,
+        "Height": 4.75,
+        "Image": "blackout-fixdfuzz.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Musket",
+        "Width": 2.92,
+        "Height": 4.75,
+        "Image": "blackout-musket.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Fubar",
+        "Width": 2.92,
+        "Height": 4.75,
+        "Image": "blackout-fubar.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Mantra",
+        "Width": 2.92,
+        "Height": 4.75,
+        "Image": "blackout-mantra.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Blunderbuss",
+        "Width": 2.92,
+        "Height": 4.75,
+        "Image": "blackout-blunderbuss.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Twosome",
+        "Width": 5.63,
+        "Height": 4.63,
+        "Image": "blackout-twosome.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Crystal Dagger",
+        "Width": 5.63,
+        "Height": 4.63,
+        "Image": "blackout-crystaldagger.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Wetstone",
+        "Width": 5.63,
+        "Height": 4.63,
+        "Image": "blackout-wetstone.png"
+    },
+    {
+        "Brand": "Blackout Effectors",
+        "Name": "Cadavernous ",
+        "Width": 5.63,
+        "Height": 4.63,
+        "Image": "blackout-cadavernous.png"
+    },
+    {
         "Brand": "Old Blood Noise Endeavors",
         "Name": "Fault",
         "Width": 4.7,
