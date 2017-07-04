@@ -1,5 +1,54 @@
 [
     {
+        "Brand": "Skreddy",
+        "Name": "Little Miss Sunshine",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-littlemisssunshine.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "Swirl",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-swirl.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "Rust Rod",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-rustrod.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "BC 109",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-bc109.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "Mayo",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-mayo.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "P 19",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-p19.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "Hibrid Fuzz Driver",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-hibridfuzzdriver.png"
+    },
+    {
         "Brand": "B.K. Butler",
         "Name": "Tube Driver",
         "Width": 4.13,
