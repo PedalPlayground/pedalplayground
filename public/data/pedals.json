@@ -1,5 +1,89 @@
 [
     {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "The Great Destroyer",
+        "Width": 2.9,
+        "Height": 4.80,
+        "Image": "dwarfcraft-thegreatdestroyer.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "Shefuzz",
+        "Width": 2.9,
+        "Height": 4.80,
+        "Image": "dwarfcraft-shefuzz.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "Baby Thunder",
+        "Width": 2.9,
+        "Height": 4.80,
+        "Image": "dwarfcraft-babythunder.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "ARF",
+        "Width": 5.7,
+        "Height": 4.80,
+        "Image": "dwarfcraft-arf.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "Eau Claire Thunder",
+        "Width": 5.7,
+        "Height": 4.80,
+        "Image": "dwarfcraft-eauclairethunder.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "Wizard of Pitch",
+        "Width": 2.85,
+        "Height": 4.80,
+        "Image": "dwarfcraft-wizardofpitch.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "Super Wizard",
+        "Width": 4.0,
+        "Height": 4.80,
+        "Image": "dwarfcraft-superwizard.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "Pitchgrinder",
+        "Width": 7.4,
+        "Height": 4.80,
+        "Image": "dwarfcraft-pitchgrinder.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "Minivan",
+        "Width": 2.8,
+        "Height": 4.80,
+        "Image": "dwarfcraft-minivan.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "Necromancer",
+        "Width": 4.0,
+        "Height": 4.80,
+        "Image": "dwarfcraft-necromancer.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "Twin Stags",
+        "Width": 3.8,
+        "Height": 4.9,
+        "Image": "dwarfcraft-twinstags.png"
+    },
+    {
+        "Brand": "Dwarfcraft Devices",
+        "Name": "Happiness",
+        "Width": 3.8,
+        "Height": 4.9,
+        "Image": "dwarfcraft-happiness.png"
+    },
+    {
         "Brand": "Skreddy",
         "Name": "Little Miss Sunshine",
         "Width": 2.75,
