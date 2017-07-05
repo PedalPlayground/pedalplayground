@@ -2934,6 +2934,13 @@
     },
     {
         "Brand": "T-rex",
+        "Name": "Quint",
+        "Width": 2.4,
+        "Height": 4.6,
+        "Image": "trex-quint.png"
+    },
+    {
+        "Brand": "T-rex",
         "Name": "Tapster",
         "Width": 3.9,
         "Height": 4.7,
@@ -4271,6 +4278,34 @@
     },
     {
         "Brand": "TC Electronics",
+        "Name": "Shaker Vibrato",
+        "Width": 2.83,
+        "Height": 4.8,
+        "Image": "tcelectronic-shaker.png"
+    },
+     {
+        "Brand": "TC Electronics",
+        "Name": "Sub'n'Up",
+        "Width": 2.83,
+        "Height": 4.8,
+        "Image": "tcelectronic-subnup.png"
+    },
+     {
+        "Brand": "TC Electronics",
+        "Name": "Viscous Vibe",
+        "Width": 2.83,
+        "Height": 4.8,
+        "Image": "tcelectronic-viscousvibe.png"
+    },
+     {
+        "Brand": "TC Electronics",
+        "Name": "Helix Phaser",
+        "Width": 2.83,
+        "Height": 4.8,
+        "Image": "tcelectronic-helix.png"
+    },
+    { 
+        "Brand": "TC Electronics",
         "Name": "Corona Chorus",
         "Width": 2.83,
         "Height": 4.8,
@@ -4366,6 +4401,27 @@
         "Width": 2.01,
         "Height": 3.66,
         "Image": "tc-flashbackmini.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "Shaker Mini",
+        "Width": 2.01,
+        "Height": 3.66,
+        "Image": "tc-shakermini.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "Sub'n'Up Mini",
+        "Width": 2.01,
+        "Height": 3.66,
+        "Image": "tcelectronic-subnupmini.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "Nova Repeater",
+        "Width": 4.92,
+        "Height": 5.19,
+        "Image": "tcelectronic-novarepeater.png"
     },
     {
         "Brand": "TC Electronics",
