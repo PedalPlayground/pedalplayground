@@ -2,28 +2,28 @@
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "The Great Destroyer",
-        "Width": 2.9,
+        "Width": 3.0,
         "Height": 4.80,
         "Image": "dwarfcraft-thegreatdestroyer.png"
     },
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "Shefuzz",
-        "Width": 2.9,
+        "Width": 3.0,
         "Height": 4.80,
         "Image": "dwarfcraft-shefuzz.png"
     },
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "Baby Thunder",
-        "Width": 2.9,
+        "Width": 3.0,
         "Height": 4.80,
         "Image": "dwarfcraft-babythunder.png"
     },
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "ARF",
-        "Width": 5.7,
+        "Width": 5.8,
         "Height": 4.80,
         "Image": "dwarfcraft-arf.png"
     },
@@ -37,14 +37,14 @@
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "Wizard of Pitch",
-        "Width": 2.85,
+        "Width": 3.0,
         "Height": 4.80,
         "Image": "dwarfcraft-wizardofpitch.png"
     },
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "Super Wizard",
-        "Width": 4.0,
+        "Width": 5.7,
         "Height": 4.80,
         "Image": "dwarfcraft-superwizard.png"
     },
@@ -72,7 +72,7 @@
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "Twin Stags",
-        "Width": 3.8,
+        "Width": 3.95,
         "Height": 4.9,
         "Image": "dwarfcraft-twinstags.png"
     },
@@ -4069,29 +4069,29 @@
     {
         "Brand": "Neunaber",
         "Name": "WET",
-        "Width": 2.5,
-        "Height": 4.3,
+        "Width": 2.8,
+        "Height": 4.5,
         "Image": "neunaber-wet.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "Expanse",
-        "Width": 2.5,
-        "Height": 4.3,
+        "Width": 2.8,
+        "Height": 4.5,
         "Image": "neunaber-expanse.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "Immerse",
-        "Width": 2.5,
-        "Height": 4.3,
+        "Width": 2.8,
+        "Height": 4.5,
         "Image": "neunaber-immerse.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "Seraphim",
-        "Width": 2.5,
-        "Height": 4.3,
+        "Width": 2.8,
+        "Height": 4.5,
         "Image": "neunaber-seraphim.png"
     },
     {
@@ -4104,8 +4104,8 @@
     {
         "Brand": "Neunaber",
         "Name": "EXP",
-        "Width": 4.3,
-        "Height": 2.5,
+        "Width": 4.5,
+        "Height": 2.75,
         "Image": "neunaber-exp.png"
     },
     {
@@ -4297,21 +4297,21 @@
         "Height": 4.8,
         "Image": "tcelectronic-shaker.png"
     },
-     {
+    {
         "Brand": "TC Electronics",
         "Name": "Sub'n'Up",
         "Width": 2.83,
         "Height": 4.8,
         "Image": "tcelectronic-subnup.png"
     },
-     {
+    {
         "Brand": "TC Electronics",
         "Name": "Viscous Vibe",
         "Width": 2.83,
         "Height": 4.8,
         "Image": "tcelectronic-viscousvibe.png"
     },
-     {
+    {
         "Brand": "TC Electronics",
         "Name": "Helix Phaser",
         "Width": 2.83,
@@ -4421,7 +4421,7 @@
         "Name": "Shaker Mini",
         "Width": 2.01,
         "Height": 3.66,
-        "Image": "tc-shakermini.png"
+        "Image": "tcelectronic-shakermini.png"
     },
     {
         "Brand": "TC Electronics",
@@ -4489,7 +4489,7 @@
     {
         "Brand": "Electro Harmonix",
         "Name": "Micro POG",
-        "Width": 3.9,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-micropog.png"
     },
@@ -4510,49 +4510,49 @@
     {
         "Brand": "Electro Harmonix",
         "Name": "720 Stereo Looper",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-720.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Memory Boy",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-memoryboy.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Big Muff Pi",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-bigmuffpi.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "C9 Organ Machine",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-c9.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Synth9 Synth Machine",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-synth9.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Super Ego",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-superego.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Mel9 Tape Replay Machine",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-mel9.png"
     },
