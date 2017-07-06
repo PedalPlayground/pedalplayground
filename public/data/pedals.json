@@ -2304,6 +2304,13 @@
     },
     {
         "Brand": "Caroline",
+        "Name": "Meteore",
+        "Width": 3.7,
+        "Height": 4.7,
+        "Image": "caroline-meteore.png"
+    },
+    {
+        "Brand": "Caroline",
         "Name": "Kilobyte",
         "Width": 3.7,
         "Height": 4.7,
