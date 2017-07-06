@@ -2,28 +2,28 @@
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "The Great Destroyer",
-        "Width": 2.9,
+        "Width": 3.0,
         "Height": 4.80,
         "Image": "dwarfcraft-thegreatdestroyer.png"
     },
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "Shefuzz",
-        "Width": 2.9,
+        "Width": 3.0,
         "Height": 4.80,
         "Image": "dwarfcraft-shefuzz.png"
     },
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "Baby Thunder",
-        "Width": 2.9,
+        "Width": 3.0,
         "Height": 4.80,
         "Image": "dwarfcraft-babythunder.png"
     },
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "ARF",
-        "Width": 5.7,
+        "Width": 5.8,
         "Height": 4.80,
         "Image": "dwarfcraft-arf.png"
     },
@@ -37,14 +37,14 @@
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "Wizard of Pitch",
-        "Width": 2.85,
+        "Width": 3.0,
         "Height": 4.80,
         "Image": "dwarfcraft-wizardofpitch.png"
     },
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "Super Wizard",
-        "Width": 4.0,
+        "Width": 5.7,
         "Height": 4.80,
         "Image": "dwarfcraft-superwizard.png"
     },
@@ -72,7 +72,7 @@
     {
         "Brand": "Dwarfcraft Devices",
         "Name": "Twin Stags",
-        "Width": 3.8,
+        "Width": 3.95,
         "Height": 4.9,
         "Image": "dwarfcraft-twinstags.png"
     },
@@ -4283,21 +4283,21 @@
         "Height": 4.8,
         "Image": "tcelectronic-shaker.png"
     },
-     {
+    {
         "Brand": "TC Electronics",
         "Name": "Sub'n'Up",
         "Width": 2.83,
         "Height": 4.8,
         "Image": "tcelectronic-subnup.png"
     },
-     {
+    {
         "Brand": "TC Electronics",
         "Name": "Viscous Vibe",
         "Width": 2.83,
         "Height": 4.8,
         "Image": "tcelectronic-viscousvibe.png"
     },
-     {
+    {
         "Brand": "TC Electronics",
         "Name": "Helix Phaser",
         "Width": 2.83,
@@ -4407,7 +4407,7 @@
         "Name": "Shaker Mini",
         "Width": 2.01,
         "Height": 3.66,
-        "Image": "tc-shakermini.png"
+        "Image": "tcelectronic-shakermini.png"
     },
     {
         "Brand": "TC Electronics",
