@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Shure",
+        "Name": "GLXD 6",
+        "Width": 3.7,
+        "Height": 5.3,
+        "Image": "shure-glxd6.png"
+    },
+    {
         "Brand": "Dwarfcraft Devices",
         "Name": "The Great Destroyer",
         "Width": 3.0,
@@ -3890,6 +3897,33 @@
         "Width": 1.65,
         "Height": 3.7,
         "Image": "mooer-acousticer.png"
+    },{
+        "Brand": "Mooer",
+        "Name": "Ocean Machine",
+        "Width": 8.47,
+        "Height": 4.8,
+        "Image": "mooer-oceanmachine.png"
+    },
+    {
+        "Brand": "Mooer",
+        "Name": "Ana Echo",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-anaecho.png"
+    },
+    {
+        "Brand": "Mooer",
+        "Name": "Blues Mood",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-bluesmood.png"
+    },
+    {
+        "Brand": "Mooer",
+        "Name": "E-lady",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-elady.png"
     },
     {
         "Brand": "MXR",
