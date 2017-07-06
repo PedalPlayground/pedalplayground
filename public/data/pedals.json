@@ -4055,29 +4055,29 @@
     {
         "Brand": "Neunaber",
         "Name": "WET",
-        "Width": 2.5,
-        "Height": 4.3,
+        "Width": 2.8,
+        "Height": 4.5,
         "Image": "neunaber-wet.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "Expanse",
-        "Width": 2.5,
-        "Height": 4.3,
+        "Width": 2.8,
+        "Height": 4.5,
         "Image": "neunaber-expanse.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "Immerse",
-        "Width": 2.5,
-        "Height": 4.3,
+        "Width": 2.8,
+        "Height": 4.5,
         "Image": "neunaber-immerse.png"
     },
     {
         "Brand": "Neunaber",
         "Name": "Seraphim",
-        "Width": 2.5,
-        "Height": 4.3,
+        "Width": 2.8,
+        "Height": 4.5,
         "Image": "neunaber-seraphim.png"
     },
     {
@@ -4090,8 +4090,8 @@
     {
         "Brand": "Neunaber",
         "Name": "EXP",
-        "Width": 4.3,
-        "Height": 2.5,
+        "Width": 4.5,
+        "Height": 2.75,
         "Image": "neunaber-exp.png"
     },
     {
@@ -4475,7 +4475,7 @@
     {
         "Brand": "Electro Harmonix",
         "Name": "Micro POG",
-        "Width": 3.9,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-micropog.png"
     },
@@ -4496,49 +4496,49 @@
     {
         "Brand": "Electro Harmonix",
         "Name": "720 Stereo Looper",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-720.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Memory Boy",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-memoryboy.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Big Muff Pi",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-bigmuffpi.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "C9 Organ Machine",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-c9.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Synth9 Synth Machine",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-synth9.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Super Ego",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-superego.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Mel9 Tape Replay Machine",
-        "Width": 3.7,
+        "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-mel9.png"
     },
