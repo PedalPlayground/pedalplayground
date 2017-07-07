@@ -1,5 +1,117 @@
 [
     {
+        "Brand": "Greer Amps",
+        "Name": "The Southland",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-southland.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Fish Press",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-fishpress.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Lightspeed",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-lightspeed.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Super Hornet",
+        "Width": 4.7,
+        "Height": 3.67,
+        "Image": "greer-superhornet.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Special Request",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-specialrequest.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Black Tiger",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-blacktiger.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Black Fuzz",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-blackfuzz.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Burning Goat",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-burninggoat.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Little Samson",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-littlesamson.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Tarpit",
+        "Width": 4.75,
+        "Height": 3.95,
+        "Image": "greer-tarpit.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Ghetto",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-ghetto.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Arbuckle Trem",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-arbucketrem.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Green Giant",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-greengiant.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Tone Smuggler",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-tonesmuggler.png"
+    },
+    {
+        "Brand": "Greer Amps",
+        "Name": "Lamplighter",
+        "Width": 3.2,
+        "Height": 4.9,
+        "Image": "greer-lamplighter.png"
+    },
+    {
+        "Brand": "Shure",
+        "Name": "GLXD 6",
+        "Width": 3.7,
+        "Height": 5.3,
+        "Image": "shure-glxd6.png"
+    },
+    {
         "Brand": "Dwarfcraft Devices",
         "Name": "The Great Destroyer",
         "Width": 3.0,
@@ -89,6 +201,13 @@
         "Width": 2.75,
         "Height": 4.4,
         "Image": "skreddy-littlemisssunshine.png"
+    },
+    {
+        "Brand": "Skreddy",
+        "Name": "Rover",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-rover.png"
     },
     {
         "Brand": "Skreddy",
@@ -579,6 +698,27 @@
         "Width": 2.875,
         "Height": 5.125,
         "Image": "boss-ps3.png"
+    },
+    {
+        "Brand": "Subdecay",
+        "Name": "Spring Theory",
+        "Width": 2.5,
+        "Height": 4.40,
+        "Image": "subdecay-springtheory.png"
+    },
+    {
+        "Brand": "Subdecay",
+        "Name": "Echobox V2",
+        "Width": 2.5,
+        "Height": 4.40,
+        "Image": "subdecay-echoboxv2.png"
+    },
+    {
+        "Brand": "Subdecay",
+        "Name": "Echobox V1",
+        "Width":3.7,
+        "Height": 4.8,
+        "Image": "subdecay-echoboxv1.png"
     },
     {
         "Brand": "Subdecay",
@@ -2297,6 +2437,13 @@
     },
     {
         "Brand": "Caroline",
+        "Name": "Meteore",
+        "Width": 3.7,
+        "Height": 4.7,
+        "Image": "caroline-meteore.png"
+    },
+    {
+        "Brand": "Caroline",
         "Name": "Kilobyte",
         "Width": 3.7,
         "Height": 4.7,
@@ -2896,6 +3043,13 @@
         "Width": 6.8,
         "Height": 3.3,
         "Image": "strymon-zuma.png"
+    },
+    {
+        "Brand": "Strymon",
+        "Name": "Mini Switch",
+        "Width": 2.0,
+        "Height": 2.28,
+        "Image": "strymon-miniswitch.png"
     },
     {
         "Brand": "Strymon",
@@ -3906,6 +4060,34 @@
         "Image": "mooer-acousticer.png"
     },
     {
+        "Brand": "Mooer",
+        "Name": "Ocean Machine",
+        "Width": 8.47,
+        "Height": 4.8,
+        "Image": "mooer-oceanmachine.png"
+    },
+    {
+        "Brand": "Mooer",
+        "Name": "Ana Echo",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-anaecho.png"
+    },
+    {
+        "Brand": "Mooer",
+        "Name": "Blues Mood",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-bluesmood.png"
+    },
+    {
+        "Brand": "Mooer",
+        "Name": "E-lady",
+        "Width": 1.65,
+        "Height": 3.7,
+        "Image": "mooer-elady.png"
+    },
+    {
         "Brand": "MXR",
         "Name": "CAE MC-403",
         "Width": 13.5,
@@ -4205,6 +4387,13 @@
         "Width": 2.618,
         "Height": 4.78,
         "Image": "sinvertek-distortion.png"
+    },
+    {
+        "Brand": "Strymon",
+        "Name": "Sunset",
+        "Width": 4,
+        "Height": 4.5,
+        "Image": "strymon-sunset.png"
     },
     {
         "Brand": "Strymon",
