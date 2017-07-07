@@ -204,6 +204,13 @@
     },
     {
         "Brand": "Skreddy",
+        "Name": "Rover",
+        "Width": 2.75,
+        "Height": 4.4,
+        "Image": "skreddy-rover.png"
+    },
+    {
+        "Brand": "Skreddy",
         "Name": "Swirl",
         "Width": 2.75,
         "Height": 4.4,
