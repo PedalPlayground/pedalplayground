@@ -694,6 +694,27 @@
     },
     {
         "Brand": "Subdecay",
+        "Name": "Spring Theory",
+        "Width": 2.5,
+        "Height": 4.40,
+        "Image": "subdecay-springtheory.png"
+    },
+    {
+        "Brand": "Subdecay",
+        "Name": "Echobox V2",
+        "Width": 2.5,
+        "Height": 4.40,
+        "Image": "subdecay-echoboxv2.png"
+    },
+    {
+        "Brand": "Subdecay",
+        "Name": "Echobox V1",
+        "Width":3.7,
+        "Height": 4.8,
+        "Image": "subdecay-echoboxv1.png"
+    },
+    {
+        "Brand": "Subdecay",
         "Name": "Octasynth",
         "Width": 2.45,
         "Height": 4.40,
