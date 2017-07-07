@@ -3004,6 +3004,13 @@
     },
     {
         "Brand": "Strymon",
+        "Name": "Mini Switch",
+        "Width": 2.0,
+        "Height": 2.28,
+        "Image": "strymon-miniswitch.png"
+    },
+    {
+        "Brand": "Strymon",
         "Name": "Ojai",
         "Width": 3.2,
         "Height": 2.3,
