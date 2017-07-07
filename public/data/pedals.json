@@ -4348,6 +4348,13 @@
     },
     {
         "Brand": "Strymon",
+        "Name": "Sunset",
+        "Width": 4,
+        "Height": 4.5,
+        "Image": "strymon-sunset.png"
+    },
+    {
+        "Brand": "Strymon",
         "Name": "Riverside",
         "Width": 4,
         "Height": 4.5,
