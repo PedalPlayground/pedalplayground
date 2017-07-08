@@ -1,5 +1,131 @@
 [
     {
+        "Brand": "Bearfoot Fx",
+        "Name": "Honey Bee OD",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-honeybeeod.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Dyna Red Dist.",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-dynareddist.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Sparkling Yellow OD1",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-sparklingyellowod1.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Emerald Green Distortion",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-emeraldgreendistortion.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Pale Green Compressor",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-palegreencompressor.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Artic White Fuzz",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-articwhitefuzz.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Mint Green Mini Vibe",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-mintgreenminivibe.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Baby Pink Booster",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-babypinkbooster.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Burgundy BossHorn Fuzz",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-burgundybosshornfuzz.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Model G",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-modelg.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Emerald Green OD",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-emeraldgreenod.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Model Hs",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-modelhs.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Little Red Trebler",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-littleredtrebler.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Sea Blue EQ",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-seablueeq.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Candy Apple Fuzz",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-candyapplefuzz.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": " Blue Berry BOD",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-blueberrybod.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Pink Purple Fuzz",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-pinkpurplefuzz.png"
+    },
+    {
+        "Brand": "Bearfoot Fx",
+        "Name": "Silver Bee OD",
+        "Width": 2.58,
+        "Height": 4.3,
+        "Image": "bearfoot-silverbeeod.png"
+    },
+    {
         "Brand": "Greer Amps",
         "Name": "The Southland",
         "Width": 2.9,
