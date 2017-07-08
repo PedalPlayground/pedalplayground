@@ -1771,6 +1771,13 @@
         "Image": "dawnerprince-boonar.png"
     },
     {
+        "Brand": "Dawner Prince",
+        "Name": "Starla",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "dawnerprince-starla.png"
+    },
+    {
         "Brand": "MI Audio",
         "Name": "Crunchbox",
         "Width": 2.5,
@@ -3819,6 +3826,13 @@
         "Name": "DOD Mini Expression",
         "Width": 3,
         "Height": 5,
+        "Image": "dod-rubberneck.png"
+    },
+    {
+        "Brand": "DigiTech",
+        "Name": "DOD Rubberneck",
+        "Width": 5,
+        "Height": 4.68,
         "Image": "dod-miniexpression.png"
     },
     {
