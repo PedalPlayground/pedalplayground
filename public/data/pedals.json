@@ -4,126 +4,126 @@
         "Name": "Honey Bee OD",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-honeybeeod.png"
+        "Image": "bearfootfx-honeybeeod.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Dyna Red Dist.",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-dynareddist.png"
+        "Image": "bearfootfx-dynareddist.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Sparkling Yellow OD1",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-sparklingyellowod1.png"
+        "Image": "bearfootfx-sparklingyellowod1.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Emerald Green Distortion",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-emeraldgreendistortion.png"
+        "Image": "bearfootfx-emeraldgreendistortion.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Pale Green Compressor",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-palegreencompressor.png"
+        "Image": "bearfootfx-palegreencompressor.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Artic White Fuzz",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-articwhitefuzz.png"
+        "Image": "bearfootfx-articwhitefuzz.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Mint Green Mini Vibe",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-mintgreenminivibe.png"
+        "Image": "bearfootfx-mintgreenminivibe.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Baby Pink Booster",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-babypinkbooster.png"
+        "Image": "bearfootfx-babypinkbooster.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Burgundy BossHorn Fuzz",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-burgundybosshornfuzz.png"
+        "Image": "bearfootfx-burgundybosshornfuzz.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Model G",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-modelg.png"
+        "Image": "bearfootfx-modelg.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Emerald Green OD",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-emeraldgreenod.png"
+        "Image": "bearfootfx-emeraldgreenod.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Model Hs",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-modelhs.png"
+        "Image": "bearfootfx-modelhs.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Little Red Trebler",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-littleredtrebler.png"
+        "Image": "bearfootfx-littleredtrebler.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Sea Blue EQ",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-seablueeq.png"
+        "Image": "bearfootfx-seablueeq.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Candy Apple Fuzz",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-candyapplefuzz.png"
+        "Image": "bearfootfx-candyapplefuzz.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": " Blue Berry BOD",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-blueberrybod.png"
+        "Image": "bearfootfx-blueberrybod.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Pink Purple Fuzz",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-pinkpurplefuzz.png"
+        "Image": "bearfootfx-pinkpurplefuzz.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Silver Bee OD",
         "Width": 2.58,
         "Height": 4.3,
-        "Image": "bearfoot-silverbeeod.png"
+        "Image": "bearfootfx-silverbeeod.png"
     },
     {
         "Brand": "Greer Amps",
@@ -1769,6 +1769,13 @@
         "Width": 4.7,
         "Height": 2.38,
         "Image": "dawnerprince-boonar.png"
+    },
+    {
+        "Brand": "Dawner Prince",
+        "Name": "Starla",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "dawnerprince-starla.png"
     },
     {
         "Brand": "MI Audio",
@@ -3834,6 +3841,13 @@
         "Width": 3,
         "Height": 5,
         "Image": "dod-miniexpression.png"
+    },
+    {
+        "Brand": "DigiTech",
+        "Name": "DOD Rubberneck",
+        "Width": 5,
+        "Height": 4.68,
+        "Image": "dod-rubberneck.png"
     },
     {
         "Brand": "DigiTech",
