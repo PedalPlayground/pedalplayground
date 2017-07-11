@@ -3826,14 +3826,14 @@
         "Name": "DOD Mini Expression",
         "Width": 3,
         "Height": 5,
-        "Image": "dod-rubberneck.png"
+        "Image": "dod-miniexpression.png"
     },
     {
         "Brand": "DigiTech",
         "Name": "DOD Rubberneck",
         "Width": 5,
         "Height": 4.68,
-        "Image": "dod-miniexpression.png"
+        "Image": "dod-rubberneck.png"
     },
     {
         "Brand": "DigiTech",
