@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "DigiTech",
+        "Name": "SDRUM",
+        "Width": 3.29,
+        "Height": 5.4,
+        "Image": "digitech-sdrum.png"
+    },
+    {
         "Brand": "Effectrode",
         "Name": "Tube Vibe",
         "Width": 7.5,
