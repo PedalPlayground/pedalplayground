@@ -1,5 +1,173 @@
 [
     {
+        "Brand": "Catalinbread",
+        "Name": "Belle Epoch Deluxe",
+        "Width": 5,
+        "Height": 4,
+        "Image": "catalinbread-balleepochdlx.png"
+    },
+    {
+        "Brand": "DigiTech",
+        "Name": "SDRUM",
+        "Width": 3.29,
+        "Height": 5.4,
+        "Image": "digitech-sdrum.png"
+    },
+    {
+        "Brand": "Effectrode",
+        "Name": "Tube Vibe",
+        "Width": 7.5,
+        "Height": 5.1,
+        "Image": "effectrode-tubevibe.png"
+    },
+    {
+        "Brand": "Effectrode",
+        "Name": "Tube Drive",
+        "Width": 6.8,
+        "Height": 4.52,
+        "Image": "effectrode-tubedrive.png"
+    },
+    {
+        "Brand": "Effectrode",
+        "Name": "Blackbird",
+        "Width": 7.5,
+        "Height": 5,
+        "Image": "effectrode-blackbird.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Real Tube Overdrive ",
+        "Width": 4.8,
+        "Height": 6,
+        "Image": "maxon-rto700.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Distortion Master DS830",
+        "Width": 4.8,
+        "Height": 6,
+        "Image": "maxon-ds830.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Overdrive Pro OD820",
+        "Width": 4.75,
+        "Height": 5.9,
+        "Image": "maxon-od820.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Analog Delay AD999",
+        "Width": 4.75,
+        "Height": 5.9,
+        "Image": "maxon-ad999.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Fuzz Elements Earth",
+        "Width": 2.79,
+        "Height": 4.5,
+        "Image": "maxon-fea10.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Fuzz Elements Water",
+        "Width": 2.79,
+        "Height": 4.5,
+        "Image": "maxon-fwa10.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Graphic Equalizer GE601",
+        "Width": 2.79,
+        "Height": 4.5,
+        "Image": "maxon-ge601.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Compressor CP101",
+        "Width": 2.79,
+        "Height": 4.5,
+        "Image": "maxon-cp101.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Phase Tone PT999",
+        "Width": 2.79,
+        "Height": 4.5,
+        "Image": "maxon-pt999.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Dual Booster DB10",
+        "Width": 2.79,
+        "Height": 4.5,
+        "Image": "maxon-db10.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Overdrive OD808",
+        "Width": 2.79,
+        "Height": 4.5,
+        "Image": "maxon-od808.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Overdrive Extreme OD808x",
+        "Width": 2.79,
+        "Height": 4.5,
+        "Image": "maxon-od808x.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Analog Delay AD10",
+        "Width": 2.79,
+        "Height": 4.5,
+        "Image": "maxon-ad10.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Stereo Chorus CS9PRO",
+        "Width": 2.93,
+        "Height": 4.88,
+        "Image": "maxon-cs9pro.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Overdrive OD9PRO+",
+        "Width": 2.93,
+        "Height": 4.88,
+        "Image": "maxon-od9pro.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Vintage Overdrive Pro",
+        "Width": 2.93,
+        "Height": 4.88,
+        "Image": "maxon-vop9.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Analog Delay AD9PRO",
+        "Width": 2.93,
+        "Height": 4.88,
+        "Image": "maxon-ad9pro.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Flanger FL9",
+        "Width": 2.93,
+        "Height": 4.88,
+        "Image": "maxon-fl9.png"
+    },
+    {
+        "Brand": "Maxon",
+        "Name": "Super Metal SM9PRO+",
+        "Width": 2.93,
+        "Height": 4.88,
+        "Image": "maxon-sm9pro.png"
+    },
+    {
         "Brand": "Bearfoot Fx",
         "Name": "Honey Bee OD",
         "Width": 2.58,
@@ -4401,6 +4569,13 @@
         "Width": 2.8,
         "Height": 4.5,
         "Image": "neunaber-expanse.png"
+    },
+    {
+        "Brand": "Neunaber",
+        "Name": "Inspire",
+        "Width": 2.8,
+        "Height": 4.5,
+        "Image": "neunaber-inspire.png"
     },
     {
         "Brand": "Neunaber",
