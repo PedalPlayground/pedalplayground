@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Catalinbread",
+        "Name": "Belle Epoch Deluxe",
+        "Width": 5,
+        "Height": 4,
+        "Image": "catalinbread-balleepochdlx.png"
+    },
+    {
         "Brand": "DigiTech",
         "Name": "SDRUM",
         "Width": 3.29,
