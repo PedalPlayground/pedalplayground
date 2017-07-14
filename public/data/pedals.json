@@ -4509,6 +4509,13 @@
     },
     {
         "Brand": "MXR",
+        "Name": "Booster (mini)",
+        "Width": 1.5748,
+        "Height": 3.54,
+        "Image": "mxr-booster.png"
+    },
+    {
+        "Brand": "MXR",
         "Name": "Phase 90",
         "Width": 2.5,
         "Height": 4.3,
@@ -6081,6 +6088,13 @@
         "Width": 2.6,
         "Height": 4.77,
         "Image": "walrus-julia.png"
+    },
+    {
+        "Brand": "Walrus",
+        "Name": "ARP-87",
+        "Width": 2.85,
+        "Height": 4.97,
+        "Image": "walrus-arp87.png"
     },
     {
         "Brand": "Walrus",
