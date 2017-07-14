@@ -4523,6 +4523,13 @@
     },
     {
         "Brand": "MXR",
+        "Name": "Booster (mini)",
+        "Width": 1.5748,
+        "Height": 3.54,
+        "Image": "mxr-booster.png"
+    },
+    {
+        "Brand": "MXR",
         "Name": "Phase 90",
         "Width": 2.5,
         "Height": 4.3,
@@ -4573,7 +4580,7 @@
     {
         "Brand": "Neunaber",
         "Name": "Inspire",
-        "Width": 2.8,
+        "Width": 2.55,
         "Height": 4.5,
         "Image": "neunaber-inspire.png"
     },
@@ -6119,6 +6126,13 @@
     },
     {
         "Brand": "Walrus",
+        "Name": "ARP-87",
+        "Width": 2.85,
+        "Height": 4.97,
+        "Image": "walrus-arp87.png"
+    },
+    {
+        "Brand": "Walrus",
         "Name": "Iron Horse",
         "Width": 2.6,
         "Height": 4.77,
@@ -6445,6 +6459,98 @@
         "Width": 4.7,
         "Height": 2.38,
         "Image": "zvex-distortron.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Super Hard On",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "zvex-superhardon.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Mastotron",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "zvex-mastotron.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Sonar",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "zvex-sonar.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Box of Metal",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "zvex-boxofmetal.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Double Rock",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "zvex-doublerock.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Jonny Octave",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "zvex-jonnyoctave.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "59 Sound",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "zvex-59sound.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Woolly Mammoth",
+        "Width": 4.7,
+        "Height": 2.38,
+        "Image": "zvex-woollymammoth.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Fuzz Factory 7",
+        "Width": 3.64,
+        "Height": 4.8,
+        "Image": "zvex-fuzzfactory7.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Probe Wah",
+        "Width": 4.7,
+        "Height": 7.5,
+        "Image": "zvex-probewah.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Super Seek Trem",
+        "Width": 5.94,
+        "Height": 4.73,
+        "Image": "zvex-superseektrem.png"
+    },
+    
+    {
+        "Brand": "Zvex",
+        "Name": "Super Seek Wah",
+        "Width": 5.94,
+        "Height": 4.73,
+        "Image": "zvex-superseekwah.png"
+    },
+    {
+        "Brand": "Zvex",
+        "Name": "Super Ringtone",
+        "Width": 5.94,
+        "Height": 4.73,
+        "Image": "zvex-superringtone.png"
     },
     {
         "Brand": "Zvex",
