@@ -5671,6 +5671,55 @@
     },
     {
         "Brand": "Way Huge",
+        "Name": "Camel Toe",
+        "Width": 6.4,
+        "Height": 4.78,
+        "Image": "wayhuge-cameltoe.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Supa Puss",
+        "Width": 4.18,
+        "Height": 4.88,
+        "Image": "wayhuge-supapuss.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Echo-Puss",
+        "Width": 3.75,
+        "Height": 4.78,
+        "Image": "wayhuge-echopuss.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Russian Pickle",
+        "Width": 3.25,
+        "Height": 5,
+        "Image": "wayhuge-swollenpickle.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Overrated Special",
+        "Width": 3.75,
+        "Height": 4.78,
+        "Image": "wayhuge-overratedspecial.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Saucy Box",
+        "Width": 3.75,
+        "Height": 4.78,
+        "Image": "wayhuge-saucybox.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Havalina",
+        "Width": 3.75,
+        "Height": 4.78,
+        "Image": "wayhuge-havalina.png"
+    },
+    {
+        "Brand": "Way Huge",
         "Name": "Swollen Pickle",
         "Width": 3.75,
         "Height": 4.78,
