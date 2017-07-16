@@ -1,5 +1,89 @@
 [
     {
+        "Brand": "Electro Faustus",
+        "Name": "Blackfly",
+        "Width": 5.55,
+        "Height": 4.8,
+        "Image": "electrofaustus-blackfly.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Carbon Copy Deluxe",
+        "Width": 5,
+        "Height": 3.81,
+        "Image": "mxr-carboncopydlx.png"
+    },
+    {
+        "Brand": "Boss",
+        "Name": "SY-300",
+        "Width": 10.03,
+        "Height": 7.17,
+        "Image": "boss-sy300.png"
+    },
+    {
+        "Brand": "Mission",
+        "Name": "Expressionator",
+        "Width": 4.37,
+        "Height": 2.53,
+        "Image": "mission-expressionator.png"
+    },
+    {
+        "Brand": "Blackstone",
+        "Name": "Mosfet Overdrive",
+        "Width": 4.37,
+        "Height": 2.57,
+        "Image": "blackstone-mosfetoverdrive.png"
+    },
+    {
+        "Brand": "WMD",
+        "Name": "Geiger Counter CI",
+        "Width": 4.97,
+        "Height": 2.36,
+        "Image": "wmd-geigercounterci.png"
+    },
+    {
+        "Brand": "WMD",
+        "Name": "Arcane Preamp",
+        "Width": 4.97,
+        "Height": 2.36,
+        "Image": "wmd-arcanepreamp.png"
+    },
+    {
+        "Brand": "WMD",
+        "Name": "Geiger Counter",
+        "Width": 3.5,
+        "Height": 4.57,
+        "Image": "wmd-geigercounter.png"
+    },
+    {
+        "Brand": "WMD",
+        "Name": "The Goldilocks Planet",
+        "Width": 2.5,
+        "Height": 4.79,
+        "Image": "wmd-thegoldilocks.png"
+    },
+    {
+        "Brand": "WMD",
+        "Name": "Protostar",
+        "Width": 4.9,
+        "Height": 3.9,
+        "Image": "wmd-protostar.png"
+    },
+    {
+        "Brand": "WMD",
+        "Name": "Utility Parametric EQ",
+        "Width": 2.69,
+        "Height": 4.33,
+        "Image": "wmd-utilityparametriceq.png"
+    },
+    {
+        "Brand": "WMD",
+        "Name": "Acoustic Trauma",
+        "Width": 4.78,
+        "Height": 3.58,
+        "Image": "wmd-acoustictrauma.png"
+    },
+    {
         "Brand": "Catalinbread",
         "Name": "Belle Epoch Deluxe",
         "Width": 5,
@@ -5598,6 +5682,55 @@
         "Width": 2.25,
         "Height": 7.8,
         "Image": "tapestry-bloomery.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Camel Toe",
+        "Width": 6.4,
+        "Height": 4.78,
+        "Image": "wayhuge-cameltoe.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Supa Puss",
+        "Width": 4.18,
+        "Height": 4.88,
+        "Image": "wayhuge-supapuss.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Echo-Puss",
+        "Width": 3.75,
+        "Height": 4.78,
+        "Image": "wayhuge-echopuss.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Russian Pickle",
+        "Width": 3.25,
+        "Height": 5,
+        "Image": "wayhuge-swollenpickle.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Overrated Special",
+        "Width": 3.75,
+        "Height": 4.78,
+        "Image": "wayhuge-overratedspecial.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Saucy Box",
+        "Width": 3.75,
+        "Height": 4.78,
+        "Image": "wayhuge-saucybox.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Havalina",
+        "Width": 3.75,
+        "Height": 4.78,
+        "Image": "wayhuge-havalina.png"
     },
     {
         "Brand": "Way Huge",
