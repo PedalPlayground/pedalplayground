@@ -14,7 +14,7 @@
         "Image": "mxr-carboncopydlx.png"
     },
     {
-        "Brand": "Boss",
+        "Brand": "BOSS",
         "Name": "SY-300",
         "Width": 10.03,
         "Height": 7.17,
@@ -5686,7 +5686,7 @@
     {
         "Brand": "Way Huge",
         "Name": "Echo-Puss",
-        "Width": 3.75,
+        "Width": 3.3,
         "Height": 4.78,
         "Image": "wayhuge-echopuss.png"
     },
@@ -5694,27 +5694,27 @@
         "Brand": "Way Huge",
         "Name": "Russian Pickle",
         "Width": 3.25,
-        "Height": 5,
-        "Image": "wayhuge-swollenpickle.png"
+        "Height": 4.78,
+        "Image": "wayhuge-russianpickle.png"
     },
     {
         "Brand": "Way Huge",
         "Name": "Overrated Special",
-        "Width": 3.75,
+        "Width": 3.3,
         "Height": 4.78,
         "Image": "wayhuge-overratedspecial.png"
     },
     {
         "Brand": "Way Huge",
         "Name": "Saucy Box",
-        "Width": 3.75,
+        "Width": 3.3,
         "Height": 4.78,
         "Image": "wayhuge-saucybox.png"
     },
     {
         "Brand": "Way Huge",
         "Name": "Havalina",
-        "Width": 3.75,
+        "Width": 3.3,
         "Height": 4.78,
         "Image": "wayhuge-havalina.png"
     },
