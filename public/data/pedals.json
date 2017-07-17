@@ -1262,8 +1262,8 @@
     {
         "Brand": "Source Audio",
         "Name": "Ventris",
-        "Width": 4.58,
-        "Height": 4.40,
+        "Width": 4.4,
+        "Height": 4.58,
         "Image": "sourceaudio-ventris.png"
     },
     {
@@ -5784,8 +5784,8 @@
     {
         "Brand": "Source Audio",
         "Name": "Nemesis",
-        "Width": 4.5,
-        "Height": 4.5,
+        "Width": 4.4,
+        "Height": 4.58,
         "Image": "sa-nemesis.png"
     },
     {
