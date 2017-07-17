@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Eventide",
+        "Name": "Mixing Link",
+        "Width": 2.75,
+        "Height": 3.7,
+        "Image": "eventide-mixinglink.png"
+    },
+    {
         "Brand": "Electro Faustus",
         "Name": "Blackfly",
         "Width": 5.55,
