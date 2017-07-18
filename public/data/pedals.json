@@ -1428,7 +1428,7 @@
         "Image": "line6-g70relay.png"
     },
     {
-        "Brand": "Boss",
+        "Brand": "BOSS",
         "Name": "DC-2 Dimension C",
         "Width": 2.875,
         "Height": 5.125,
@@ -4062,8 +4062,8 @@
     {
         "Brand": "BOSS",
         "Name": "MS-3",
-        "Width": 9.68,
-        "Height": 3.82,
+        "Width": 10.875,
+        "Height": 3.875,
         "Image": "boss-ms3.png"
     },
     {
