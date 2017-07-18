@@ -1,9 +1,58 @@
 [
     {
+        "Brand": "JangleBox",
+        "Name": "JB3",
+        "Width": 7.77,
+        "Height": 4.7,
+        "Image": "janglebox-jb3.png"
+    },
+    {
+        "Brand": "JangleBox",
+        "Name": "J-Boost",
+        "Width": 2.62,
+        "Height": 4.39,
+        "Image": "janglebox-jboost.png"
+    },
+    {
+        "Brand": "JangleBox",
+        "Name": "JB Nano Compressor",
+        "Width": 2.62,
+        "Height": 4.39,
+        "Image": "janglebox-jbnano.png"
+    },
+    {
+        "Brand": "JangleBox",
+        "Name": "The Byrds",
+        "Width": 3.68,
+        "Height": 4.82,
+        "Image": "janglebox-thebyrds.png"
+    },
+    {
+        "Brand": "JangleBox",
+        "Name": "Compressor",
+        "Width": 3.68,
+        "Height": 4.82,
+        "Image": "janglebox-compressor.png"
+    },
+    {
+        "Brand": "Dunlop",
+        "Name": "Echoplex",
+        "Width": 2.77,
+        "Height": 4.5,
+        "Image": "dunlop-echoplex.png"
+    },
+    {
+        "Brand": "Earthquaker Devices",
+        "Name": "Hoof Reaper",
+        "Width": 5.5,
+        "Height": 4.67,
+        "Image": "earthquaker-hoofreaper.png"
+    },
+    {
         "Brand": "Eventide",
         "Name": "Mixing Link",
-        "Width": 2.75,
-        "Height": 3.7,
+        "Width": 3.63,
+        "Height": 4.57,
         "Image": "eventide-mixinglink.png"
     },
     {
