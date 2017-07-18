@@ -21501,14 +21501,14 @@ window.GetPedalData = function(){
 			}
 			//Sort brands and pedals alphabetically
 			pedals.sort(function(a,b) {
-				if (a.Brand < b.Brand) {
+				if (a.Brand.toLowerCase() < b.Brand.toLowerCase()) {
 					return -1;
-				} else if (b.Brand < a.Brand) {
+				} else if (b.Brand.toLowerCase() < a.Brand.toLowerCase()) {
 					return 1;
 				} else {
-					if (a.Name < b.Name) {
+					if (a.Name.toLowerCase() < b.Name.toLowerCase()) {
 						return -1;
-					} else if (b.Name < a.Name) {
+					} else if (b.Name.toLowerCase() < a.Name.toLowerCase()) {
 						return 1;
 					}
 					return 0;
