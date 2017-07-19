@@ -1,5 +1,75 @@
 [
     {
+        "Brand": "CMAT Mods",
+        "Name": "Super Signa Drive",
+        "Width": 4.63,
+        "Height": 3.82,
+        "Image": "cmatmods-supersignadrive.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Signa Drive",
+        "Width": 2.97,
+        "Height": 4.78,
+        "Image": "cmatmods-signadrive.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Deluxe Signa Comp",
+        "Width": 2.96,
+        "Height": 4.78,
+        "Image": "cmatmods-dlxsignacomp.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Brownie",
+        "Width": 3.0,
+        "Height": 4.78,
+        "Image": "cmatmods-brownie.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Deeelay",
+        "Width": 3.0,
+        "Height": 4.78,
+        "Image": "cmatmods-deeelay.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Butah",
+        "Width": 2.99,
+        "Height": 4.78,
+        "Image": "cmatmods-butah.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Tremoglo",
+        "Width": 2.91,
+        "Height": 4.78,
+        "Image": "cmatmods-tremoglo.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Ratified",
+        "Width": 2.97,
+        "Height": 4.78,
+        "Image": "cmatmods-ratified.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Analog Chorus",
+        "Width": 2.94,
+        "Height": 4.78,
+        "Image": "cmatmods-analogchorus.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Analog Phaser",
+        "Width": 2.98,
+        "Height": 4.78,
+        "Image": "cmatmods-analogphaser.png"
+    },
+    {
         "Brand": "Line6",
         "Name": "Verbzilla",
         "Width": 3.29,
