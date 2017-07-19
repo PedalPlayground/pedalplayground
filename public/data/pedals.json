@@ -1,5 +1,19 @@
 [
     {
+        "Brand": "Line6",
+        "Name": "Verbzilla",
+        "Width": 3.29,
+        "Height": 5.63,
+        "Image": "line6-verbzilla.png"
+    },
+    {
+        "Brand": "Line6",
+        "Name": "Echo Park",
+        "Width": 3.37,
+        "Height": 5.63,
+        "Image": "line6-echopark.png"
+    },
+    {
         "Brand": "Fairfield Circuitry",
         "Name": "The Barbershop v1",
         "Width": 5.06,
