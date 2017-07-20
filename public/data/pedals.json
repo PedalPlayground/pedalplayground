@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Source Audio",
+        "Name": "Multiwave Distortion SA120",
+        "Width": 4.0,
+        "Height": 7.12,
+        "Image": "sourceaudio-multiwavedistsa120.png"
+    },
+    {
         "Brand": "CMAT Mods",
         "Name": "Super Signa Drive",
         "Width": 4.63,
