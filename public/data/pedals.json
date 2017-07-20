@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Disaster Area",
+        "Name": "DPC-8EZ gen3",
+        "Width": 10.0,
+        "Height": 2.88,
+        "Image": "disasterarea-dpc8ezgen3.png"
+    },
+    {
         "Brand": "Source Audio",
         "Name": "Multiwave Distortion SA120",
         "Width": 4.0,
