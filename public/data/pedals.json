@@ -1,5 +1,19 @@
 [
     {
+        "Brand": "DSM Noisemaker",
+        "Name": "Drive Maker",
+        "Width": 4.69,
+        "Height": 2.75,
+        "Image": "dsmnoisemaker-drivemaker.png"
+    },
+    {
+        "Brand": "DSM Noisemaker",
+        "Name": "OmniCabSim Deluxe",
+        "Width": 4.28,
+        "Height": 4.69,
+        "Image": "dsmnoisemaker-omnicabsim.png"
+    },
+    {
         "Brand": "One Control",
         "Name": "Salamandra Tail Loop",
         "Width": 4.33,
