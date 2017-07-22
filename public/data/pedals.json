@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "JHS",
+        "Name": "Prestige",
+        "Width": 1.79,
+        "Height": 3.6,
+        "Image": "jhs-prestige.png"
+    },
+    {
         "Brand": "DSM Noisemaker",
         "Name": "Drive Maker",
         "Width": 4.69,
