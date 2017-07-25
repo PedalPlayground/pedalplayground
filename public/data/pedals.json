@@ -1,5 +1,152 @@
 [
     {
+        "Brand": "JHS",
+        "Name": "Prestige",
+        "Width": 1.79,
+        "Height": 3.6,
+        "Image": "jhs-prestige.png"
+    },
+    {
+        "Brand": "DSM Noisemaker",
+        "Name": "Drive Maker",
+        "Width": 4.69,
+        "Height": 2.75,
+        "Image": "dsmnoisemaker-drivemaker.png"
+    },
+    {
+        "Brand": "DSM Noisemaker",
+        "Name": "OmniCabSim Deluxe",
+        "Width": 4.28,
+        "Height": 4.69,
+        "Image": "dsmnoisemaker-omnicabsim.png"
+    },
+    {
+        "Brand": "One Control",
+        "Name": "Salamandra Tail Loop",
+        "Width": 4.33,
+        "Height": 4.67,
+        "Image": "onecontrol-salamandra.png"
+    },
+    {
+        "Brand": "One Control",
+        "Name": "Chamaeleo Tail Loop MKII",
+        "Width": 17.32,
+        "Height": 2.57,
+        "Image": "onecontrol-chamaeleo.png"
+    },
+    {
+        "Brand": "One Control",
+        "Name": "Crocodile Tail Loop",
+        "Width": 18.2,
+        "Height": 4.13,
+        "Image": "onecontrol-crocodile.png"
+    },
+    {
+        "Brand": "One Control",
+        "Name": "Agamidae Tail Loop",
+        "Width": 13,
+        "Height": 1.54,
+        "Image": "onecontrol-agamidae.png"
+    },
+    {
+        "Brand": "One Control",
+        "Name": "Iguana Tail Loop MKII",
+        "Width": 14.37,
+        "Height": 1.69,
+        "Image": "onecontrol-iguana.png"
+    },
+    {
+        "Brand": "One Control",
+        "Name": "Xenagama Tail Loop 2",
+        "Width": 9.6,
+        "Height": 1.65,
+        "Image": "onecontrol-xenagama.png"
+    },
+    {
+        "Brand": "Disaster Area",
+        "Name": "DPC-8EZ gen3",
+        "Width": 10.0,
+        "Height": 2.88,
+        "Image": "disasterarea-dpc8ezgen3.png"
+    },
+    {
+        "Brand": "Source Audio",
+        "Name": "Multiwave Distortion SA120",
+        "Width": 4.0,
+        "Height": 7.12,
+        "Image": "sourceaudio-multiwavedistsa120.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Super Signa Drive",
+        "Width": 4.63,
+        "Height": 3.82,
+        "Image": "cmatmods-supersignadrive.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Signa Drive",
+        "Width": 2.97,
+        "Height": 4.78,
+        "Image": "cmatmods-signadrive.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Deluxe Signa Comp",
+        "Width": 2.96,
+        "Height": 4.78,
+        "Image": "cmatmods-dlxsignacomp.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Brownie",
+        "Width": 3.0,
+        "Height": 4.78,
+        "Image": "cmatmods-brownie.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Deeelay",
+        "Width": 3.0,
+        "Height": 4.78,
+        "Image": "cmatmods-deeelay.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Butah",
+        "Width": 2.99,
+        "Height": 4.78,
+        "Image": "cmatmods-butah.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Tremoglo",
+        "Width": 2.91,
+        "Height": 4.78,
+        "Image": "cmatmods-tremoglo.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Ratified",
+        "Width": 2.97,
+        "Height": 4.78,
+        "Image": "cmatmods-ratified.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Analog Chorus",
+        "Width": 2.94,
+        "Height": 4.78,
+        "Image": "cmatmods-analogchorus.png"
+    },
+    {
+        "Brand": "CMAT Mods",
+        "Name": "Analog Phaser",
+        "Width": 2.98,
+        "Height": 4.78,
+        "Image": "cmatmods-analogphaser.png"
+    },
+    {
         "Brand": "Line6",
         "Name": "Verbzilla",
         "Width": 3.29,
@@ -2756,6 +2903,13 @@
         "Width": 2.5,
         "Height": 4.3,
         "Image": "alexander-radical.png"
+    },
+    {
+        "Brand": "Alexander",
+        "Name": "Syntax Error",
+        "Width": 2.54,
+        "Height": 4.3,
+        "Image": "alexander-syntaxerror.png"
     },
     {
         "Brand": "Alexander",
