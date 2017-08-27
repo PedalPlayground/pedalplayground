@@ -1,5 +1,33 @@
 [
     {
+        "Brand": "Wampler",
+        "Name": "Dual Fusion V1",
+        "Width": 4.05,
+        "Height": 5,
+        "Image": "wampler-dualfusionv1.png"
+    },
+    {
+        "Brand": "Xotic",
+        "Name": "Ac/Rc-oz",
+        "Width": 4.95,
+        "Height": 3.7,
+        "Image": "xotic-acrcoz.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
+        "Name": "Blurst",
+        "Width": 3.97,
+        "Height": 4.55,
+        "Image": "ehx-blurst.png"
+    },
+    {
+        "Brand": "MXR",
+        "Name": "Dyna Comp Mini",
+        "Width": 1.63,
+        "Height": 3.55,
+        "Image": "mxr-dynacompmini.png"
+    },
+    {
         "Brand": "JHS",
         "Name": "Prestige",
         "Width": 1.79,
