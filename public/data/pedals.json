@@ -1,5 +1,61 @@
 [
     {
+        "Brand": "Keeley",
+        "Name": "Dyno my Roto",
+        "Width": 2.61,
+        "Height": 4.4,
+        "Image": "keeley-dynomyroto.png"
+    },
+    {
+        "Brand": "Hammond",
+        "Name": "Leslie G",
+        "Width": 3.61,
+        "Height": 4.75,
+        "Image": "hammond-leslieg.png"
+    },
+    {
+        "Brand": "Seymour Duncan",
+        "Name": "Vapor Trail",
+        "Width": 2.72,
+        "Height": 5.17,
+        "Image": "seymourduncan-vaportrail.png"
+    },
+    {
+        "Brand": "Custom Tones",
+        "Name": "Ethos Clean 2",
+        "Width": 4.99,
+        "Height": 3.75,
+        "Image": "customtones-ethosclean2.png"
+    },
+    {
+        "Brand": "Montreal Assembly",
+        "Name": "Count to Five",
+        "Width": 2.48,
+        "Height": 4.69,
+        "Image": "montreal-counttofive.png"
+    },
+    {
+        "Brand": "Amptweaker",
+        "Name": "Tight Drive Jr.",
+        "Width": 2.94,
+        "Height": 5.29,
+        "Image": "amptweaker-tightdrive.png"
+    },
+    {
+        "Brand": "Amptweaker",
+        "Name": "Tight Metal Jr.",
+        "Width": 2.94,
+        "Height": 5.29,
+        "Image": "amptweaker-tightmetal.png"
+    },
+    {
+        "Brand": "Amptweaker",
+        "Name": "Tight Rock Jr.",
+        "Width": 2.94,
+        "Height": 5.29,
+        "Image": "amptweaker-tightrock.png"
+    },
+    {
         "Brand": "Wampler",
         "Name": "Dual Fusion V1",
         "Width": 4.05,
