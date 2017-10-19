@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Line6",
+        "Name": "Helix LT",
+        "Width": 21,
+        "Height": 11.85,
+        "Image": "line6-helix-lt.png"
+    },
+    {
         "Brand": "Keeley",
         "Name": "Dyno my Roto",
         "Width": 2.61,
@@ -5284,7 +5291,7 @@
         "Height": 4.8,
         "Image": "tcelectronic-helix.png"
     },
-    { 
+    {
         "Brand": "TC Electronics",
         "Name": "Corona Chorus",
         "Width": 2.83,
@@ -7041,7 +7048,7 @@
         "Height": 4.73,
         "Image": "zvex-superseektrem.png"
     },
-    
+
     {
         "Brand": "Zvex",
         "Name": "Super Seek Wah",
