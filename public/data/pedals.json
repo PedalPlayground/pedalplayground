@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Atomic",
+        "Name": "Ampli-Firebox",
+        "Width": 3.7,
+        "Height": 4.7,
+        "Image": "atomic-amplifirebox.png"
+    },
+    {
         "Brand": "Line6",
         "Name": "Helix LT",
         "Width": 21,
