@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Wampler",
+        "Name": "Tumnus Deluxe",
+        "Width": 2.5,
+        "Height": 4.5,
+        "Image": "wampler-tumnus-deluxe.png"
+    },
+    {
         "Brand": "Atomic",
         "Name": "Ampli-Firebox",
         "Width": 3.95,
