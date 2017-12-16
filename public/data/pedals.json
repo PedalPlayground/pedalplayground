@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Meris",
+        "Name": "Polymoon",
+        "Width": 4.25,
+        "Height": 4.5,
+        "Image": "meris-polymoon.png"
+    },
+    {
         "Brand": "Wampler",
         "Name": "Tumnus Deluxe",
         "Width": 2.5,
