@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Headrush",
+        "Name": "Pedalboard",
+        "Width": 23.6,
+        "Height": 11.2,
+        "Image": "headrush-pedalboard.png"
+    },
+    {
         "Brand": "Chase Bliss",
         "Name": "Thermae",
         "Width": 2.75,
