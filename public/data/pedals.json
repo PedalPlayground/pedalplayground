@@ -1,5 +1,26 @@
 [
     {
+        "Brand": "Chase Bliss",
+        "Name": "Thermae",
+        "Width": 2.75,
+        "Height": 4.77,
+        "Image": "chasebliss-thermae.png"
+    },
+    {
+        "Brand": "Chase Bliss",
+        "Name": "Condor",
+        "Width": 2.75,
+        "Height": 4.77,
+        "Image": "chasebliss-condor.png"
+    },
+    {
+        "Brand": "Boss",
+        "Name": "GT-1000",
+        "Width": 18.187,
+        "Height": 9.812,
+        "Image": "boss-gt1000.png"
+    },
+    {
         "Brand": "Meris",
         "Name": "Polymoon",
         "Width": 4.25,
