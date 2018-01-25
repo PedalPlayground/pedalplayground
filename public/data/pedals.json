@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Line6",
+        "Name": "HX Effects",
+        "Width": 10.8,
+        "Height": 7.9,
+        "Image": "line6-hx-effects.png"
+    },
+    {
         "Brand": "Headrush",
         "Name": "Pedalboard",
         "Width": 23.6,
