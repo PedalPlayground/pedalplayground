@@ -4809,6 +4809,13 @@
         "Image": "mission-vp1.png"
     },
     {
+        "Brand": "Mission",
+        "Name": "EP1-L6",
+        "Width": 4,
+        "Height": 9,
+        "Image": "mission-ep1-l6.png"
+    },
+    {
         "Brand": "Mooer",
         "Name": "Black Secret",
         "Width": 1.65,
