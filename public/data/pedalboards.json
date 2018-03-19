@@ -1,5 +1,40 @@
 [
     {
+        "Brand" : "Mono",
+        "Name" : "Lite",
+        "Width" : 14,
+        "Height" : 5.65,
+        "Image" : "mono-lite.png"
+    },
+    {
+        "Brand" : "Mono",
+        "Name" : "Lite+",
+        "Width" : 18,
+        "Height" : 5.7,
+        "Image" : "mono-liteplus.png"
+    },
+    {
+        "Brand" : "Mono",
+        "Name" : "Small",
+        "Width" : 18,
+        "Height" : 12.3,
+        "Image" : "mono-small.png"
+    },
+    {
+        "Brand" : "Mono",
+        "Name" : "Medium",
+        "Width" : 24,
+        "Height" : 14.5,
+        "Image" : "mono-small.png"
+    },
+    {
+        "Brand" : "Mono",
+        "Name" : "Large",
+        "Width" : 32,
+        "Height" : 16,
+        "Image" : "mono-large.png"
+    },
+    {
         "Brand" : "Pedaltrain",
         "Name" : "Metro 16",
         "Width" : 16,
@@ -103,5 +138,12 @@
         "Width" : 28,
         "Height" : 14.5,
         "Image" : "tl-pb.png"
+    },
+    {
+        "Brand" : "Templeboards",
+        "Name" : "Solo 18",
+        "Width" : 18,
+        "Height" : 8.5,
+        "Image" : "templeboards-solo18.png"
     }
 ]
