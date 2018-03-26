@@ -1,5 +1,26 @@
 [
     {
+        "Brand": "Fender",
+        "Name": "Level Set Buffer",
+        "Width": 3.18,
+        "Height": 5.39,
+        "Image": "fender-levelsetbuffer.png"
+    },
+    {
+        "Brand": "Fender",
+        "Name": "Pugliest Distortion",
+        "Width": 4.26,
+        "Height": 5.39,
+        "Image": "fender-pugliest.png"
+    },
+    {
+        "Brand": "Fender",
+        "Name": "Level Set Buffer",
+        "Width": 2.9,
+        "Height": 4.9,
+        "Image": "fender-levelsetbuffer.png"
+    },
+    {
         "Brand": "Way Huge",
         "Name": "Smalls Aqua Puss",
         "Width": 2.4,
