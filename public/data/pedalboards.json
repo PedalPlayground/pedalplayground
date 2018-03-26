@@ -1,5 +1,26 @@
 [
     {
+        "Brand" : "Voodoo Lab",
+        "Name" : "Dingbat Small",
+        "Width" : 18,
+        "Height" : 7.75,
+        "Image" : "voodoo-small.png"
+    },
+    {
+        "Brand" : "Voodoo Lab",
+        "Name" : "Dingbat Medium",
+        "Width" : 22,
+        "Height" : 13.5,
+        "Image" : "voodoo-medium.png"
+    },
+    {
+        "Brand" : "Voodoo Lab",
+        "Name" : "Dingbat Large",
+        "Width" : 25,
+        "Height" : 15.75,
+        "Image" : "voodoo-Large.png"
+    },
+    {
         "Brand" : "Mono",
         "Name" : "Lite",
         "Width" : 14,

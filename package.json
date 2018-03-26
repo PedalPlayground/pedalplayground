@@ -7,21 +7,20 @@
     "gulp": "^3.9.0",
     "gulp-cached": "^1.1.1",
     "gulp-concat": "^2.6.1",
-    "gulp-gzip": "^1.2.0",
-    "gulp-imagemin": "^3.1.1",
+    "gulp-gzip": "^1.4.2",
+    "gulp-imagemin": "^3.4.0",
     "gulp-livereload": "^3.8.0",
     "gulp-minify-css": "^1.2.0",
     "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.1",
+    "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-responsive": "^2.7.0",
     "gulp-sass": "^2.0.4",
-    "gulp-uglify": "^2.0.0",
+    "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.5"
   },
   "devDependencies": {
-    "gulp-responsive": "^2.7.0"
+    "gulp-responsive": "^2.9.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

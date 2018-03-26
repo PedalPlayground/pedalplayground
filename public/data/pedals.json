@@ -1,5 +1,75 @@
 [
     {
+        "Brand": "TC Electronics",
+        "Name": "Cinders",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "tc-cinders.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "El Mocambo",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "tc-elmocambo.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "The Prophet",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "tc-prophet.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "3rd Dimension",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "tc-3rddimension.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "Tube Pilot",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "tc-tubepilot.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "Forcefield",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "tc-forcefield.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "Drip",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "tc-drip.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "Skysurfer",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "tc-skysurfer.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "Afterglow",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "tc-afterglow.png"
+    },
+    {
+        "Brand": "TC Electronics",
+        "Name": "BloodMoon",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "tc-bloodmoon.png"
+    },
+    {
         "Brand": "Line6",
         "Name": "HX Effects",
         "Width": 10.8,
