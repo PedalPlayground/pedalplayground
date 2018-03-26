@@ -1,5 +1,26 @@
 [
     {
+        "Brand": "Way Huge",
+        "Name": "Smalls Aqua Puss",
+        "Width": 2.4,
+        "Height": 4.1,
+        "Image": "wayhuge-aquapuss-small.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Smalls Blue Hippo",
+        "Width": 2.4,
+        "Height": 4.1,
+        "Image": "wayhuge-bluehippo-small.png"
+    },
+    {
+        "Brand": "Way Huge",
+        "Name": "Smalls Russian Pickle",
+        "Width": 2.4,
+        "Height": 4.1,
+        "Image": "wayhuge-russianpickle-small.png"
+    },
+    {
         "Brand": "TC Electronics",
         "Name": "Cinders",
         "Width": 2.9,
