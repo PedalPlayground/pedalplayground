@@ -21406,6 +21406,7 @@ function readyCanvas(pedal) {
 		ga('send', 'event', 'Canvas', 'moved', 'dragend');
 		savePedalCanvas();
 	});
+
 	$draggable.on( 'staticClick', function(event) {
 		//rotatePedal(this);
 		var target = $(event.target);
@@ -21501,14 +21502,14 @@ window.GetPedalData = function(){
 			}
 			//Sort brands and pedals alphabetically
 			pedals.sort(function(a,b) {
-				if (a.Brand.toLowerCase() < b.Brand.toLowerCase()) {
+				if (a.Brand < b.Brand) {
 					return -1;
-				} else if (b.Brand.toLowerCase() < a.Brand.toLowerCase()) {
+				} else if (b.Brand < a.Brand) {
 					return 1;
 				} else {
-					if (a.Name.toLowerCase() < b.Name.toLowerCase()) {
+					if (a.Name < b.Name) {
 						return -1;
-					} else if (b.Name.toLowerCase() < a.Name.toLowerCase()) {
+					} else if (b.Name < a.Name) {
 						return 1;
 					}
 					return 0;
