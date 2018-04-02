@@ -4089,6 +4089,13 @@
     },
     {
         "Brand": "Musicomlab",
+        "Name": "EFX-LE",
+        "Width": 12.6,
+        "Height": 3.8,
+        "Image": "musicomlab-efxle.png"
+    },
+    {
+        "Brand": "Musicomlab",
         "Name": "EFX III",
         "Width": 11,
         "Height": 4.9,
