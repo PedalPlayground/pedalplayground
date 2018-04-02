@@ -60,7 +60,7 @@ $border: 1px solid rgba(black, .13);
 	}
 	.actions {
 		z-index: 1;
-		transition: all .4s;
+		transition: all .28s;
 		opacity: 0;
 		background: white;
 		border: $border;
@@ -111,38 +111,12 @@ $border: 1px solid rgba(black, .13);
 			opacity: 1;
 		}
 	}
-
-
-	// .delete {
-	// 	z-index: 2;
-	// 	transition: all .2s;
-	// 	opacity: 0;
-	// 	@include square(19px);
-	// 	position: absolute;
-	// 	right: -8px;
-	// 	top: -8px;
-	// 	border: 1px solid rgba(0, 0, 0, 0.2);
-	// 	border-radius: 15px;
-	// 	text-align: center;
-	// 	line-height: 16px;
-	// 	text-decoration: none;
-	// 	font-size: 14px;
-	// 	background: rgba(white, .8);
-	// 	color: black;
-	// 	&:before {
-	// 		@extend .glyphicon;
-	// 		@extend .glyphicon-remove;
-	// 		font-size: 9px;
-	// 		position: absolute;
-	// 		line-height: 1;
-	// 		left: 0;
-	// 		right: 0;
-	// 		top: 4px;
-	// 	}
-	// }
-	// &:hover a {
-	// 	opacity: 1;
-	// }
+	// Hide controls while dragging
+	&.is-dragging {
+		.actions {
+			opacity: 0;
+		}
+	}
 }
 
 .pedal {

@@ -16,7 +16,6 @@ var livereload = require('gulp-livereload');
 var notify = require("gulp-notify");
 var gutil = require("gulp-util");
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var responsive = require('gulp-responsive');
 var cache = require('gulp-cached');

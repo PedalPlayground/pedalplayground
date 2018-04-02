@@ -222,6 +222,7 @@ function readyCanvas(pedal) {
 		ga('send', 'event', 'Canvas', 'moved', 'dragend');
 		savePedalCanvas();
 	});
+
 	$draggable.on( 'staticClick', function(event) {
 		//rotatePedal(this);
 		var target = $(event.target);

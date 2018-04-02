@@ -7054,7 +7054,7 @@ strong, th {
   .pedal .actions,
   .pedalboard .actions {
     z-index: 1;
-    transition: all .4s;
+    transition: all .28s;
     opacity: 0;
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.13);
@@ -7098,6 +7098,9 @@ strong, th {
   .pedal:hover .actions,
   .pedalboard:hover .actions {
     opacity: 1; }
+  .pedal.is-dragging .actions,
+  .pedalboard.is-dragging .actions {
+    opacity: 0; }
 
 .pedal {
   z-index: 20;
