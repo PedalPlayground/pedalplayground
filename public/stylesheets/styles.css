@@ -6998,11 +6998,17 @@ strong, th {
 .site-header {
   background: #FFF;
   border-bottom: 1px solid rgba(0, 0, 0, 0.13);
-  padding: 12px; }
+  padding: 12px;
+  position: relative; }
   .site-header h1 {
     font-size: 22px;
     text-transform: uppercase;
     margin: 0; }
+  .site-header .donate {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    margin-top: -10px; }
 
 .site-body {
   min-height: 100vh;
