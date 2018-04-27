@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Donner",
+        "Name": "Ripple",
+        "Width": 1.5,
+        "Height": 2.9,
+        "Image": "donner-ripple.png"
+    },
+    {
         "Brand": "Fender",
         "Name": "Level Set Buffer",
         "Width": 3.18,
