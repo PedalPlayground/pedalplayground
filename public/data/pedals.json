@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "TC Electronics",
+        "Name": "Mimiq Doubler",
+        "Width": 2.83,
+        "Height": 4.8,
+        "Image": "tc-mimiq.png"
+    },
+    {
         "Brand": "Fender",
         "Name": "Level Set Buffer",
         "Width": 3.18,
