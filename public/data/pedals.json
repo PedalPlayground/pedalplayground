@@ -7,6 +7,27 @@
         "Image": "tc-mimiq.png"
     },
     {
+        "Brand": "Joyo",
+        "Name": "Irontune",
+        "Width": 1.5,
+        "Height": 2.9,
+        "Image": "joyo-irontune.png"
+    },
+    {
+        "Brand": "Disaster Area",
+        "Name": "NNB",
+        "Width": 1.65,
+        "Height": 3.65,
+        "Image": "disaster-area-nnb.png"
+    },
+    {
+        "Brand": "Donner",
+        "Name": "Ripple",
+        "Width": 1.5,
+        "Height": 2.9,
+        "Image": "donner-ripple.png"
+    },
+    {
         "Brand": "Fender",
         "Name": "Level Set Buffer",
         "Width": 3.18,

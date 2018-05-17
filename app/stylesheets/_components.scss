@@ -4,10 +4,17 @@ $border: 1px solid rgba(black, .13);
 	background: #FFF;
 	border-bottom: $border;
 	padding: 12px;
+	position: relative;
 	h1 {
 		font-size: 22px;
 		text-transform: uppercase;
 		margin: 0;
+	}
+	.donate {
+		position: absolute;
+		right: 14px;
+		top: 50%;
+		margin-top: -10px;
 	}
 }
 
