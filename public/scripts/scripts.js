@@ -21197,8 +21197,26 @@ $(document).ready(function(){
 		placeholder: "Select a pedal",
 	});
 
+	$('.pedal-list').on('select2:select', function (e) {
+		$("#add-selected-pedal").click();
+		$(this).val(null).trigger('change').focus();
+	});
+
+	
 	$('.pedalboard-list').select2({
-		placeholder: "Select a pedalboard"
+		placeholder: "Select a pedalboard",
+	});
+	
+	$('.pedalboard-list').on('select2:select', function (e) {
+		$("#add-selected-pedalboard").click();
+		$(this).val(null).trigger('change').focus();
+	});
+
+	$("document").keypress(function(e){
+		if (e.which == 80)  {
+			$('.pedalboard-list').click();
+			alert("hey");
+		};
 	});
 
 	// Load canvas from localStorage if it has been saved prior

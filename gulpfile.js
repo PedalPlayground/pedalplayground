@@ -19,6 +19,7 @@ var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var responsive = require('gulp-responsive');
 var cache = require('gulp-cached');
+var minify = require('gulp-minify');
 
 var gzip_options = {
     threshold: '1kb',
@@ -89,7 +90,8 @@ gulp.task('scripts', function() {
 	        errorHandler: reportError
 	    }))
       .pipe(concat('scripts.js'))
-      //.pipe(uglify())
+      .pipe(minify())
+      .pipe(gzip(gzip_options))
       .pipe(gulp.dest('public/scripts/'))
 	  .pipe(notify("JS Compiled!"))
 	  .on('error', reportError)
