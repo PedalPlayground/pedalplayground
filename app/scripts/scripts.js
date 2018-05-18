@@ -28,13 +28,6 @@ $(document).ready(function(){
 		$(this).val(null).trigger('change').focus();
 	});
 
-	$("document").keypress(function(e){
-		if (e.which == 80)  {
-			$('.pedalboard-list').click();
-			alert("hey");
-		};
-	});
-
 	// Load canvas from localStorage if it has been saved prior
 	$(function() {
 		if (localStorage["pedalCanvas"] != null) {
