@@ -2444,6 +2444,13 @@
     },
     {
         "Brand": "Hotone",
+        "Name": "Binary Mod",
+        "Width": 4.76378,
+        "Height": 2.83465,
+        "Image": "hotone-binarymod.png"
+    },
+    {
+        "Brand": "Hotone",
         "Name": "Soul Press",
         "Width": 2.46,
         "Height": 5.43,
