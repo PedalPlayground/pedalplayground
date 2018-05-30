@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "Hammond",
+        "Name": "1590H",
+        "Width": 1.5,
+        "Height": 2.06,
+        "Image": "enclosure.png"
+    },
+    {
         "Brand": "Hughes & Kettner",
         "Name": "Tube Rotosphere MK II",
         "Width": 8,
