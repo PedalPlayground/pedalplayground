@@ -7093,22 +7093,22 @@
     {
         "Brand": "Wampler",
         "Name": "Tumnus",
-        "Width": 1.5,
-        "Height": 3.5,
+        "Width": 1.58,
+        "Height": 3.64,
         "Image": "wampler-tumnus.png"
     },
     {
         "Brand": "Wampler",
         "Name": "Mini Ego",
-        "Width": 1.65,
-        "Height": 3.7,
+        "Width": 1.58,
+        "Height": 3.64,
         "Image": "wampler-miniego.png"
     },
     {
         "Brand": "Wampler",
         "Name": "dB+",
-        "Width": 1.5,
-        "Height": 3.5,
+        "Width": 1.58,
+        "Height": 3.64,
         "Image": "wampler-db.png"
     },
     {
