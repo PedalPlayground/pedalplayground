@@ -7,6 +7,48 @@
         "Image": "hk-rotosphere-mkii.png"
     },
     {
+        "Brand": "JHS",
+        "Name": "Red Remote",
+        "Width": 2,
+        "Height": 2.24,
+        "Image": "jhs-red-remote.png"
+    },
+    {
+        "Brand": "Mammoth Electronics",
+        "Name": "125B",
+        "Width": 2.6,
+        "Height": 4.77,
+        "Image": "enclosure.png"
+    },
+    {
+        "Brand": "Mammoth Electronics",
+        "Name": "1590B",
+        "Width": 2.34,
+        "Height": 4.39,
+        "Image": "enclosure.png"
+    },
+    {
+        "Brand": "Mammoth Electronics",
+        "Name": "1590A",
+        "Width": 1.52,
+        "Height": 3.64,
+        "Image": "enclosure.png"
+    },
+    {
+        "Brand": "Mammoth Electronics",
+        "Name": "1590BB",
+        "Width": 3.68,
+        "Height": 4.67,
+        "Image": "enclosure.png"
+    },
+    {
+        "Brand": "Mammoth Electronics",
+        "Name": "1032L",
+        "Width": 9.75,
+        "Height": 2.65,
+        "Image": "enclosure-wide.png"
+    },
+    {
         "Brand": "TC Electronics",
         "Name": "Mimiq Doubler",
         "Width": 2.83,

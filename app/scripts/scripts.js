@@ -12,10 +12,11 @@ $(document).ready(function(){
 	$('.pedal-list').select2({
 		placeholder: "Select a pedal",
 	});
-
+	
 	$('.pedal-list').on('select2:select', function (e) {
 		$("#add-selected-pedal").click();
-		$(this).val(null).trigger('change').focus();
+		$(this).trigger('change').focus();
+		//$(this).val(null).trigger('change').focus();
 	});
 
 	
@@ -25,7 +26,8 @@ $(document).ready(function(){
 	
 	$('.pedalboard-list').on('select2:select', function (e) {
 		$("#add-selected-pedalboard").click();
-		$(this).val(null).trigger('change').focus();
+		$(this).trigger('change').focus();
+		//$(this).val(null).trigger('change').focus();
 	});
 
 	// Load canvas from localStorage if it has been saved prior

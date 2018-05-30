@@ -91,6 +91,7 @@ gulp.task('scripts', function() {
 	    }))
       .pipe(concat('scripts.js'))
       .pipe(minify())
+      .pipe(gulp.dest('public/scripts/'))
       .pipe(gzip(gzip_options))
       .pipe(gulp.dest('public/scripts/'))
 	  .pipe(notify("JS Compiled!"))
