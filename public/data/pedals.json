@@ -3122,6 +3122,20 @@
     },
     {
         "Brand": "Hammond",
+        "Name": "1590H Tap",
+        "Width": 1.5,
+        "Height": 2.21,
+        "Image": "mxr-tap.png"
+    },
+    {
+        "Brand": "Hammond",
+        "Name": "1590H",
+        "Width": 1.5,
+        "Height": 2.06,
+        "Image": "enclosure.png"
+    },
+    {
+        "Brand": "Hammond",
         "Name": "Leslie G",
         "Width": 3.61,
         "Height": 4.75,
@@ -7025,6 +7039,27 @@
         "Width": 4.72,
         "Height": 3.74,
         "Image": "weehbo-dumbledore.png"
+    },
+    {
+        "Brand": "Wampler",
+        "Name": "Tumnus",
+        "Width": 1.72,
+        "Height": 3.64,
+        "Image": "wampler-tumnus.png"
+    },
+    {
+        "Brand": "Wampler",
+        "Name": "Mini Ego",
+        "Width": 1.72,
+        "Height": 3.64,
+        "Image": "wampler-miniego.png"
+    },
+    {
+        "Brand": "Wampler",
+        "Name": "dB+",
+        "Width": 1.72,
+        "Height": 3.64,
+        "Image": "wampler-db.png"
     },
     {
         "Brand": "Weehbo",
