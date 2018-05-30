@@ -1,5 +1,12 @@
 [
     {
+        "Brand": "TC Electronics",
+        "Name": "Mimiq Doubler",
+        "Width": 2.83,
+        "Height": 4.8,
+        "Image": "tc-mimiq.png"
+    },
+    {
         "Brand": "Joyo",
         "Name": "Irontune",
         "Width": 1.5,
@@ -2434,6 +2441,13 @@
         "Width": 5.472,
         "Height": 4.76378,
         "Image": "pettyjohn-pettydrive2.png"
+    },
+    {
+        "Brand": "Hotone",
+        "Name": "Binary Mod",
+        "Width": 4.76378,
+        "Height": 2.83465,
+        "Image": "hotone-binarymod.png"
     },
     {
         "Brand": "Hotone",
