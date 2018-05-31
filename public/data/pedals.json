@@ -1878,8 +1878,8 @@
     {
         "Brand":"Disaster Area",
         "Name":"DMC Micro",
-        "Width":1.65,
-        "Height":3.65,
+        "Width":3.65,
+        "Height":1.65,
         "Image":"disasterarea-dmc-micro.png"
     },
     {
