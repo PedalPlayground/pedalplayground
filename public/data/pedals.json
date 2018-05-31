@@ -1877,6 +1877,13 @@
     },
     {
         "Brand":"Disaster Area",
+        "Name":"DMC Micro",
+        "Width":1.65,
+        "Height":3.65,
+        "Image":"disasterarea-dmc8.png"
+    },
+    {
+        "Brand":"Disaster Area",
         "Name":"DPC-8EZ gen3",
         "Width":10,
         "Height":2.88,
