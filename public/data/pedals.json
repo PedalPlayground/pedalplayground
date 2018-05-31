@@ -2464,6 +2464,62 @@
         "Image":"emerson-paramount.png"
     },
     {
+        "Brand":"Emma",
+        "Name":"DiscumBOBulator",
+        "Width":3.78,
+        "Height":4.8,
+        "Image":"emma-discumbobulator.png"
+    },
+    {
+        "Brand":"Emma",
+        "Name":"DiscumBOBulator v2",
+        "Width":3.78,
+        "Height":4.8,
+        "Image":"emma-discumbobulator-v2.png"
+    },
+    {
+        "Brand":"Emma",
+        "Name":"OKTO-NØJS",
+        "Width":3.78,
+        "Height":4.8,
+        "Image":"emma-oktonojs.png"
+    },
+    {
+        "Brand":"Emma",
+        "Name":"OnoMATOpoeia",
+        "Width":3.78,
+        "Height":4.8,
+        "Image":"emma-onomatopoeia.png"
+    },
+    {
+        "Brand":"Emma",
+        "Name":"PisdiYAUwot",
+        "Width":3.78,
+        "Height":4.8,
+        "Image":"emma-pisdiyauwot.png"
+    },
+    {
+        "Brand":"Emma",
+        "Name":"ReezaFRATzitz",
+        "Width":3.78,
+        "Height":4.8,
+        "Image":"emma-reezafratzitz.png"
+    },
+    {
+        "Brand":"Emma",
+        "Name":"StinkBug",
+        "Width":3.78,
+        "Height":4.8,
+        "Image":"emma-stinkbug.png"
+    },
+    {
+        "Brand":"Emma",
+        "Name":"TransMORGrifier",
+        "Width":3.78,
+        "Height":4.8,
+        "Image":"emma-transmorgrifier.png"
+    },
+    {
         "Brand":"Empress",
         "Name":"Buffer",
         "Width":2.5,
