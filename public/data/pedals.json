@@ -1519,6 +1519,13 @@
         "Image":"customtones-ethosclean2.png"
     },
     {
+        "Brand":"D'Addario",
+        "Name":"Tuner",
+        "Width":2.06,
+        "Height":4.9,
+        "Image":"daddario-tuner.png"
+    },
+    {
         "Brand":"DSM Noisemaker",
         "Name":"Drive Maker",
         "Width":4.69,
@@ -6925,13 +6932,6 @@
     {
         "Brand":"Wampler",
         "Name":"Mini Ego",
-        "Width":1.65,
-        "Height":3.7,
-        "Image":"wampler-miniego.png"
-    },
-    {
-        "Brand":"Wampler",
-        "Name":"Mini Ego",
         "Width":1.72,
         "Height":3.64,
         "Image":"wampler-miniego.png"
@@ -7001,13 +7001,6 @@
     },
     {
         "Brand":"Wampler",
-        "Name":"Tumnus",
-        "Width":1.5,
-        "Height":3.5,
-        "Image":"wampler-tumnus.png"
-    },
-    {
-        "Brand":"Wampler",
         "Name":"Tumnus Deluxe",
         "Width":2.5,
         "Height":4.5,
@@ -7033,13 +7026,6 @@
         "Width":2.5,
         "Height":4.5,
         "Image":"wampler-catapulp.png"
-    },
-    {
-        "Brand":"Wampler",
-        "Name":"dB+",
-        "Width":1.5,
-        "Height":3.5,
-        "Image":"wampler-db.png"
     },
     {
         "Brand":"Wampler",
