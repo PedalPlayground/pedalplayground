@@ -231,6 +231,13 @@
         "Image":"atomic-amplifire12.png"
     },
     {
+        "Brand":"Benson",
+        "Name":"Preamp",
+        "Width":4.67,
+        "Height":3.7,
+        "Image":"benson-preamp.png"
+    },
+    {
         "Brand":"B.K. Butler",
         "Name":"Tube Driver",
         "Width":4.13,
