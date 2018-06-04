@@ -5502,6 +5502,13 @@
         "Image":"rockbox-super763.png"
     },
     {
+        "Brand":"RYRA",
+        "Name":"Klone",
+        "Width":4.7,
+        "Height":3.7,
+        "Image":"ryra-klone.png"
+    },
+    {
         "Brand":"Selah",
         "Name":"Feather Drive",
         "Width":2.5,
