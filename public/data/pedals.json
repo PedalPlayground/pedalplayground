@@ -1526,6 +1526,13 @@
         "Image":"customtones-ethosclean2.png"
     },
     {
+        "Brand":"Custom Tones",
+        "Name":"Ethos Overdrive",
+        "Width":7.5,
+        "Height":4.75,
+        "Image":"customtones-ethosoverdrive.png"
+    },
+    {
         "Brand":"D'Addario",
         "Name":"Tuner",
         "Width":2.06,
