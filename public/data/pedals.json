@@ -3460,8 +3460,8 @@
     {
         "Brand":"JHS",
         "Name":"@ Andy Timmons",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.72,
+        "Height":4.87,
         "Image":"jhs-timmons.png"
     },
     {
@@ -3474,15 +3474,22 @@
     {
         "Brand":"JHS",
         "Name":"Angry Charlie",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.72,
+        "Height":4.87,
         "Image":"jhs-angrycharlie.png"
     },
     {
         "Brand":"JHS",
+        "Name":"Bonsai",
+        "Width":2.72,
+        "Height":4.87,
+        "Image":"jhs-bonsai.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"Charlie Brown",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.72,
+        "Height":4.87,
         "Image":"jhs-charliebrown.png"
     },
     {
@@ -3508,6 +3515,20 @@
     },
     {
         "Brand":"JHS",
+        "Name":"Haunting Mids",
+        "Width":2.72,
+        "Height":4.87,
+        "Image":"jhs-hauntingmids.png"
+    },
+    {
+        "Brand":"JHS",
+        "Name":"Kilt V2",
+        "Width":2.72,
+        "Height":4.87,
+        "Image":"jhs-kilt2.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"Milkman",
         "Width":4.8,
         "Height":2.64,
@@ -3515,16 +3536,23 @@
     },
     {
         "Brand":"JHS",
+        "Name":"Moonshine",
+        "Width":2.72,
+        "Height":4.87,
+        "Image":"jhs-moonshine.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"Morning Glory",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.72,
+        "Height":4.87,
         "Image":"jhs-morningglory.png"
     },
     {
         "Brand":"JHS",
         "Name":"Muffaletta",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.72,
+        "Height":4.87,
         "Image":"jhs-muffaletta.png"
     },
     {
@@ -3551,8 +3579,8 @@
     {
         "Brand":"JHS",
         "Name":"Pulp N Peel",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.72,
+        "Height":4.87,
         "Image":"jhs-pulpnpeel.png"
     },
     {
@@ -3572,8 +3600,8 @@
     {
         "Brand":"JHS",
         "Name":"Superbolt",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.72,
+        "Height":4.87,
         "Image":"jhs-superbolt.png"
     },
     {
@@ -6764,7 +6792,7 @@
     {
         "Brand":"Walrus",
         "Name":"ARP-87",
-        "Width":2.72,
+        "Width":2.65,
         "Height":4.87,
         "Image":"walrus-arp87.png"
     },
