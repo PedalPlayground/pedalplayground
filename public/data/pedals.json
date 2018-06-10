@@ -1094,15 +1094,22 @@
     {
         "Brand":"Bondi Effects",
         "Name":"2026 Compressor",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.773,
+        "Height":4.7,
         "Image":"bondi-2026.png"
     },
     {
         "Brand":"Bondi Effects",
+        "Name":"Breakers",
+        "Width":2.773,
+        "Height":4.7,
+        "Image":"bondi-delmar.png"
+    },
+    {
+        "Brand":"Bondi Effects",
         "Name":"Del Mar",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.773,
+        "Height":4.7,
         "Image":"bondi-delmar.png"
     },
     {
