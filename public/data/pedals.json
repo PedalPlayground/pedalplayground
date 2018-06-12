@@ -4145,6 +4145,13 @@
     },
     {
         "Brand":"MXR",
+        "Name":"CAE Buffer",
+        "Width":2.77,
+        "Height":3.073,
+        "Image":"mxr-cae-buffer.png"
+    },
+    {
+        "Brand":"MXR",
         "Name":"CAE MC-403",
         "Width":13.5,
         "Height":4,
