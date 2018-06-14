@@ -1045,7 +1045,7 @@
     {
         "Brand":"Bogner",
         "Name":"Burnley",
-        "Width":2.5,
+        "Width":2.7,
         "Height":4.75,
         "Image":"bogner-burnley.png"
     },
@@ -1066,7 +1066,7 @@
     {
         "Brand":"Bogner",
         "Name":"Harlow",
-        "Width":2.5,
+        "Width":2.7,
         "Height":4.75,
         "Image":"bogner-harlow.png"
     },
@@ -1087,7 +1087,7 @@
     {
         "Brand":"Bogner",
         "Name":"Wessex",
-        "Width":2.5,
+        "Width":2.7,
         "Height":4.75,
         "Image":"bogner-wessex.png"
     },
