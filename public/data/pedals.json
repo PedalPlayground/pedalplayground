@@ -673,6 +673,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"WL-50 Wireless System",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-wl50.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"VB-2w Vibrato",
         "Width":2.875,
         "Height":5.125,
