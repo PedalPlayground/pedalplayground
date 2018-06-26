@@ -1,5 +1,26 @@
 [
     {
+        "Brand":"Misc",
+        "Name":"Rug 1",
+        "Width":36,
+        "Height":20,
+        "Image":"rug-1.jpg"
+    },
+    {
+        "Brand":"Misc",
+        "Name":"Rug 2",
+        "Width":36,
+        "Height":20,
+        "Image":"rug-2.jpg"
+    },
+    {
+        "Brand":"Misc",
+        "Name":"Rug 3",
+        "Width":36,
+        "Height":20,
+        "Image":"rug-3.jpg"
+    },
+    {
         "Brand":"Gator",
         "Name":"Aluminum Large",
         "Width":23.75,
