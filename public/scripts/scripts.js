@@ -21425,32 +21425,37 @@ function readyCanvas(pedal) {
 		//rotatePedal(this);
 
 		var pedal       = $(this);
-		var pedalName   = $(this).find();
+		var pedalName   = $(this).attr('title');
+		var markup      = '<div class="panel">\
+			<div class="panel__name">'+pedalName+'</div>\
+			<a href="#rotate" class="panel__action">Rotate</a>\
+			<a href="#front" class="panel__action">Move Front</a>\
+			<a href="#back" class="panel__action">Move Back</a>\
+			<a href="#delete" class="panel__action">Delete</a>\
+		</div>'
 
 		$(pedal).addClass('selected');
-		$('.property-panel').remove();
+		$('.panel').addClass("remove").remove();
 		$('.canvas .selected').removeClass('selected');
 
-		$('.canvas').after('<div class="property-panel">\
-		<\
-</div>');
+		$('.canvas').after(markup);
 
-	    if(target.is('.delete')) {
-			deletePedal(this);
-	    } else if (target.is('.rotate')) {
-			//rotatePedal(this);
-			if ( $(this).hasClass("rotate-90") ) {
-				$(this).removeClass("rotate-90");
-				$(this).addClass("rotate-180");
-			} else if ( $(this).hasClass("rotate-180") ) {
-				$(this).removeClass("rotate-180");
-				$(this).addClass("rotate-270");
-			}  else if ( $(this).hasClass("rotate-270") ) {
-				$(this).removeClass("rotate-270");
-			} else {
-				$(this).addClass("rotate-90");
-			}
-	    }
+	    // if(target.is('.delete')) {
+		// 	deletePedal(this);
+	    // } else if (target.is('.rotate')) {
+		// 	//rotatePedal(this);
+		// 	if ( $(this).hasClass("rotate-90") ) {
+		// 		$(this).removeClass("rotate-90");
+		// 		$(this).addClass("rotate-180");
+		// 	} else if ( $(this).hasClass("rotate-180") ) {
+		// 		$(this).removeClass("rotate-180");
+		// 		$(this).addClass("rotate-270");
+		// 	}  else if ( $(this).hasClass("rotate-270") ) {
+		// 		$(this).removeClass("rotate-270");
+		// 	} else {
+		// 		$(this).addClass("rotate-90");
+		// 	}
+	    // }
 	});
 	savePedalCanvas();
 }
