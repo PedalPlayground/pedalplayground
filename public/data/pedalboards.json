@@ -2,21 +2,28 @@
     {
         "Brand":"Misc",
         "Name":"Rug 1",
-        "Width":36,
+        "Width":34,
+        "Height":20,
+        "Image":"rug-plush.png"
+    },
+    {
+        "Brand":"Misc",
+        "Name":"Rug 2",
+        "Width":34,
+        "Height":20,
+        "Image":"rug-plush2.png"
+    },
+    {
+        "Brand":"Misc",
+        "Name":"Rug 3",
+        "Width":34,
         "Height":20,
         "Image":"rug-1.jpg"
     },
     {
         "Brand":"Misc",
-        "Name":"Rug 2",
-        "Width":36,
-        "Height":20,
-        "Image":"rug-plush.jpg"
-    },
-    {
-        "Brand":"Misc",
-        "Name":"Rug 3",
-        "Width":36,
+        "Name":"Rug 4",
+        "Width":34,
         "Height":20,
         "Image":"rug-3.jpg"
     },
