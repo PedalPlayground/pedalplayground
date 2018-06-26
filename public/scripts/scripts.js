@@ -21262,7 +21262,7 @@ $(document).ready(function(){
 		var h   		= $(selected).data("height") * multiplier;
 		var i 	  		= $(selected).data("image");
 		var pedal     	= '\
-<div class="pedal '+shortname+'">\
+<div class="pedal '+shortname+'" title="'+name+'">\
 	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url('+ pedalImagePath + i +')"></div>\
 	<div class="shadow"></div>\
 	<div class="actions">\
@@ -21423,7 +21423,18 @@ function readyCanvas(pedal) {
 
 	$draggable.on( 'staticClick', function(event) {
 		//rotatePedal(this);
-		var target = $(event.target);
+
+		var pedal       = $(this);
+		var pedalName   = $(this).find();
+
+		$(pedal).addClass('selected');
+		$('.property-panel').remove();
+		$('.canvas .selected').removeClass('selected');
+
+		$('.canvas').after('<div class="property-panel">\
+		<\
+</div>');
+
 	    if(target.is('.delete')) {
 			deletePedal(this);
 	    } else if (target.is('.rotate')) {
