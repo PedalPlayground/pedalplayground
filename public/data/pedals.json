@@ -1,5 +1,12 @@
 [
     {
+        "Brand":"Misc",
+        "Name":"12 Inch Ruler",
+        "Width":12,
+        "Height":1,
+        "Image":"12-in-ruler.png"
+    },
+    {
         "Brand":"AA",
         "Name":"Germanium Fuzz",
         "Width":1.65,
