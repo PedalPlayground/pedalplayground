@@ -41,13 +41,13 @@ $(document).ready(function(){
 	});
 
 	// Set the multiplier for converting inches to pixels
-	var multiplier = 16;
-	var screenSize = $(window).width();
-	if ( screenSize > 1023 ) {
-		var multiplier = 20;
-	} if ( screenSize > 1600 ) {
-		var multiplier = 25;
-	}
+	var multiplier = 28;
+	// var screenSize = $(window).width();
+	// if ( screenSize > 1023 ) {
+	// 	var multiplier = 20;
+	// } if ( screenSize > 1600 ) {
+	// 	var multiplier = 25;
+	// }
 
 	console.log("1 inch = " + multiplier + "px");
 
@@ -80,6 +80,7 @@ $(document).ready(function(){
 		var pedal     	= '\
 <div class="pedal '+shortname+'">\
 	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url('+ pedalImagePath + i +')"></div>\
+	<div class="shadow"></div>\
 	<div class="actions">\
 		<a class="rotate"></a>\
 		<a class="delete"></a>\
