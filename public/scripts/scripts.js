@@ -21225,7 +21225,7 @@ $(document).ready(function(){
 	});
 
 	// Set the multiplier for converting inches to pixels
-	var multiplier = 28;
+	var multiplier = 26;
 	// var screenSize = $(window).width();
 	// if ( screenSize > 1023 ) {
 	// 	var multiplier = 20;
