@@ -176,30 +176,6 @@ $(document).ready(function(){
 		}
 	});
 
-	// Delete Pedals
-	//$('body').on('click', '.canvas .delete', function(){
-	//    $(this).parents('.pedal, .pedalboard').remove();
-	//	readyCanvas();
-	//});
-
-	// Rotate Pedals
-	//$('body').on('click', '.pedal .rotate', function(){
-	//	if ( $(this).hasClass("rotate-90") ) {
-	//		$(this).removeClass("rotate-90");
-	//		$(this).addClass("rotate-180");
-	//	} else if ( $(this).hasClass("rotate-180") ) {
-	//		$(this).removeClass("rotate-180");
-	//		$(this).addClass("rotate-270");
-	//	}  else if ( $(this).hasClass("rotate-270") ) {
-	//		$(this).removeClass("rotate-270");
-	//	} else {
-	//		$(this).addClass("rotate-90");
-	//	}
-	//	return false;
-	//});
-
-
-
 }); // End Document ready
 
 function readyCanvas(pedal) {
@@ -211,7 +187,7 @@ function readyCanvas(pedal) {
 		containment: '.canvas'
 	});
 
-	$draggable.on( 'dragEnd', function() {
+	$draggable.on( 'dragEnd', function(e) {
 		console.log('dragEnd');
 		ga('send', 'event', 'Canvas', 'moved', 'dragend');
 		savePedalCanvas();
@@ -237,6 +213,9 @@ function readyCanvas(pedal) {
 		// add stuff
 		$(pedal).addClass('selected');
 		$('.canvas').after(markup);
+
+		// Prevent bubble up to .canvas
+		e.stopPropagation();
 	});
 
 	$('body').on('click', 'a[href="#rotate"]', function(){
@@ -252,26 +231,35 @@ function readyCanvas(pedal) {
 		} else {
 			$(id).addClass("rotate-90");
 		}
-		return false;
+		savePedalCanvas();
 	});
 
 	$('body').on('click', 'a[href="#delete"]', function(){
 		var id = $(this).parents('.panel').data('id');
 		$(id).remove();
 		$('.panel').remove();
+		savePedalCanvas();
 		return false;
 	});
 	
 	$('body').on('click', 'a[href="#front"]', function(){
 		var id = $(this).parents('.panel').data('id');
 		$(id).next().insertBefore(id);
+		savePedalCanvas();
 		return false;
 	});
 	
 	$('body').on('click', 'a[href="#back"]', function(){
 		var id = $(this).parents('.panel').data('id');
 		$(id).prev().insertAfter(id);
+		savePedalCanvas();
 		return false;
+	});
+
+	$('body').on('click', '.canvas', function(){
+		// reset stuff
+		$('.panel').remove();
+		$('.canvas .selected').removeClass('selected');
 	});
 
 
