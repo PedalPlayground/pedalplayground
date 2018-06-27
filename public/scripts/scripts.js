@@ -21440,7 +21440,7 @@ function readyCanvas(pedal) {
 		return false;
 	});
 
-	$('body').on('click', '.canvas', function(){
+	$('body').click(function() {
 		// reset stuff
 		$('.panel').remove();
 		$('.canvas .selected').removeClass('selected');
@@ -21451,7 +21451,8 @@ function readyCanvas(pedal) {
 		var target = $(event.target);
 	    if(target.is('.delete')) {
 			deletePedal(this);
-	    } else if (target.is('.rotate')) { 
+			deselect();
+	    } else if (target.is('.rotate')) {
 			// rotatePedal(this);
 			// if ( $(this).hasClass("rotate-90") ) {
 			// 	$(this).removeClass("rotate-90");
@@ -21493,6 +21494,12 @@ function rotatePedal(pedal) {
 
 function deletePedal(pedal) {
 	$(pedal).remove();
+	savePedalCanvas();
+}
+
+function deselect() {
+	$(".canvas .panel").remove();
+	$(".canvas .selected").removeClass("selected");
 	savePedalCanvas();
 }
 

@@ -354,3 +354,27 @@ $border: 1px solid rgba(black, .13);
 		box-shadow: 0 0 5px $brand-danger;
 	}
 }
+
+.panel {
+	@media (min-width: 1024px) {
+		position: absolute;
+		top: 67px;
+		right: 20px;
+		border-radius: 10px;
+		box-shadow: 0 2px 6px rgba(black, .2);
+		width: 200px;
+		&__name {
+			font-size: 13px;
+			color: #999;
+			font-weight: 600;
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+		}
+		&__action {
+			font-size: 13px;
+			display: block;
+			padding: 10px;
+			border-bottom: 1px solid #ddd;
+		}
+	}
+}

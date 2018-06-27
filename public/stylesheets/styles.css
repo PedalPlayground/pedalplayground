@@ -7309,3 +7309,23 @@ strong, th {
   .invalid:focus {
     border: 1px solid #d9534f;
     box-shadow: 0 0 5px #d9534f; }
+
+@media (min-width: 1024px) {
+  .panel {
+    position: absolute;
+    top: 67px;
+    right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    width: 200px; }
+    .panel__name {
+      font-size: 13px;
+      color: #999;
+      font-weight: 600;
+      padding: 10px;
+      border-bottom: 1px solid #ddd; }
+    .panel__action {
+      font-size: 13px;
+      display: block;
+      padding: 10px;
+      border-bottom: 1px solid #ddd; } }
