@@ -84,7 +84,7 @@ $(document).ready(function(){
 		var h   		= $(selected).data("height") * multiplier;
 		var i 	  		= $(selected).data("image");
 		var pedal     	= '\
-<div id="item-'+serial+'" class="item pedalboard '+shortname+'">\
+<div id="item-'+serial+'" class="item pedalboard '+shortname+'" title="'+name+'">\
 	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url(' + pedalboardImagePath + i + ')"></div>\
 </div>';
 
@@ -218,7 +218,7 @@ function readyCanvas(pedal) {
 	});
 
 	// $draggable.on( 'staticClick', function(event) {
-	$('body').on('click', '.pedal', function(){
+	$('body').on('click', '.item', function(){
 		var pedal       = $(this);
 		var id   		= $(this).attr("id");
 		var pedalName   = $(this).attr('title');
