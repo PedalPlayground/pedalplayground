@@ -54,7 +54,7 @@ $border: 1px solid rgba(black, .13);
 
 .pedal,
 .pedalboard {
-	animation: fade-grow .4s;
+	// animation: fade-grow .4s;
 	position: absolute;
 	border: 1px solid transparent;
 	.artwork {
@@ -230,6 +230,13 @@ $border: 1px solid rgba(black, .13);
 		right: 0;
 		padding: 0 8px;
 		font-weight: bold;
+	}
+	&.selected {
+		.artwork {
+			$same: 0px 0px 5px rgba(blue, .5);
+			-webkit-filter: drop-shadow( $same );
+			filter: drop-shadow( $same );
+		}
 	}
 }
 

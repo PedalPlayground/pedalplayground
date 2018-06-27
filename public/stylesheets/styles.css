@@ -7046,7 +7046,6 @@ strong, th {
 
 .pedal,
 .pedalboard {
-  animation: fade-grow .4s;
   position: absolute;
   border: 1px solid transparent; }
   .pedal .artwork,
@@ -7209,6 +7208,9 @@ strong, th {
     right: 0;
     padding: 0 8px;
     font-weight: bold; }
+  .pedal.selected .artwork {
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 255, 0.5));
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 255, 0.5)); }
 
 .pedalboard {
   z-index: 1; }
