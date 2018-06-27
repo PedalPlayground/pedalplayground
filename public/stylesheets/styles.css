@@ -232,8 +232,7 @@ th {
   src: url("../fonts/glyphicons-halflings-regular.eot");
   src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
-.glyphicon, .pedal .actions a:before,
-.pedalboard .actions a:before {
+.glyphicon, .item .actions a:before {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -302,8 +301,7 @@ th {
 .glyphicon-ok:before {
   content: "\e013"; }
 
-.glyphicon-remove:before, .pedal .actions a:before,
-.pedalboard .actions a:before {
+.glyphicon-remove:before, .item .actions a:before {
   content: "\e014"; }
 
 .glyphicon-zoom-in:before {
@@ -354,8 +352,7 @@ th {
 .glyphicon-repeat:before {
   content: "\e030"; }
 
-.glyphicon-refresh:before, .pedal .actions a.rotate:before,
-.pedalboard .actions a.rotate:before {
+.glyphicon-refresh:before, .item .actions a.rotate:before {
   content: "\e031"; }
 
 .glyphicon-list-alt:before {
@@ -7041,15 +7038,13 @@ strong, th {
 
 .canvas {
   position: relative;
-  background: #F8F8F8 url("../images/grid.png");
+  background: #F8F8F8 url("../images/grid-fine.png");
   overflow: hidden; }
 
-.pedal,
-.pedalboard {
+.item {
   position: absolute;
   border: 1px solid transparent; }
-  .pedal .artwork,
-  .pedalboard .artwork {
+  .item .artwork {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -7058,8 +7053,7 @@ strong, th {
     transition: all .4s;
     -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
     filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4)); }
-  .pedal .actions,
-  .pedalboard .actions {
+  .item .actions {
     z-index: 1;
     transition: all .28s;
     opacity: 0;
@@ -7074,26 +7068,21 @@ strong, th {
     margin-left: -32px;
     margin-top: -15px;
     width: 66px; }
-    .pedal .actions a,
-    .pedalboard .actions a {
+    .item .actions a {
       display: block;
       float: left;
       padding: 8px;
       text-align: center;
       width: 32px;
       line-height: 10px; }
-      .pedal .actions a:before,
-      .pedalboard .actions a:before {
+      .item .actions a:before {
         font-size: 10px;
         line-height: 10px; }
-      .pedal .actions a.rotate,
-      .pedalboard .actions a.rotate {
+      .item .actions a.rotate {
         border-right: 1px solid rgba(0, 0, 0, 0.13); }
-        .pedal .actions a.rotate:before,
-        .pedalboard .actions a.rotate:before {
+        .item .actions a.rotate:before {
           font-weight: bold; }
-  .pedal:hover:before,
-  .pedalboard:hover:before {
+  .item:hover:before {
     z-index: 0;
     content: " ";
     border: 2px dashed rgba(153, 153, 153, 0.5);
@@ -7102,11 +7091,9 @@ strong, th {
     top: 4px;
     right: 4px;
     bottom: 4px; }
-  .pedal:hover .actions,
-  .pedalboard:hover .actions {
+  .item:hover .actions {
     opacity: 1; }
-  .pedal.is-dragging .actions,
-  .pedalboard.is-dragging .actions {
+  .item.is-dragging .actions {
     opacity: 0; }
 
 .pedal {
@@ -7211,6 +7198,16 @@ strong, th {
   .pedal.selected .artwork {
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 255, 0.5));
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 255, 0.5)); }
+  .pedal.selected:after {
+    position: absolute;
+    content: " ";
+    /* background: blue; */
+    left: -2px;
+    right: -2px;
+    bottom: -4px;
+    top: -4px;
+    border-radius: 4px;
+    border: 2px solid #8582FF; }
 
 .pedalboard {
   z-index: 1; }

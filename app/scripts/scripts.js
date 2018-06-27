@@ -262,7 +262,26 @@ function readyCanvas(pedal) {
 		$('.canvas .selected').removeClass('selected');
 	});
 
-
+	$draggable.on( 'staticClick', function(event) {
+		//rotatePedal(this);
+		var target = $(event.target);
+	    if(target.is('.delete')) {
+			deletePedal(this);
+	    } else if (target.is('.rotate')) {
+			// rotatePedal(this);
+			// if ( $(this).hasClass("rotate-90") ) {
+			// 	$(this).removeClass("rotate-90");
+			// 	$(this).addClass("rotate-180");
+			// } else if ( $(this).hasClass("rotate-180") ) {
+			// 	$(this).removeClass("rotate-180");
+			// 	$(this).addClass("rotate-270");
+			// }  else if ( $(this).hasClass("rotate-270") ) {
+			// 	$(this).removeClass("rotate-270");
+			// } else {
+			// 	$(this).addClass("rotate-90");
+			// }
+	    }
+	});
 
 	savePedalCanvas();
 }
