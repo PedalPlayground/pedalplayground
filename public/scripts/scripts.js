@@ -21187,7 +21187,6 @@ var pedalboardImagePath = "public/images/pedalboards/";
 
 $(document).ready(function(){
 
-
 	// Populate Pedalboards and Pedals lists
 	GetPedalData();
 	GetPedalBoardData();
@@ -21402,7 +21401,7 @@ function readyCanvas(pedal) {
 		e.stopPropagation();
 	});
 
-	$('body').on('click', 'a[href="#rotate"]', function(){
+	$('body').on('click', 'a[href="#rotate"]', function(e){
 		var id = $(this).parents('.panel').data('id');
 		if ( $(id).hasClass("rotate-90") ) {
 			$(id).removeClass("rotate-90");
@@ -21415,6 +21414,7 @@ function readyCanvas(pedal) {
 		} else {
 			$(id).addClass("rotate-90");
 		}
+		e.stopPropagation();
 		savePedalCanvas();
 	});
 
@@ -21423,21 +21423,20 @@ function readyCanvas(pedal) {
 		$(id).remove();
 		$('.panel').remove();
 		savePedalCanvas();
-		return false;
 	});
 	
-	$('body').on('click', 'a[href="#front"]', function(){
+	$('body').on('click', 'a[href="#front"]', function(e){
 		var id = $(this).parents('.panel').data('id');
 		$(id).next().insertBefore(id);
 		savePedalCanvas();
-		return false;
+		e.stopPropagation();
 	});
 	
-	$('body').on('click', 'a[href="#back"]', function(){
+	$('body').on('click', 'a[href="#back"]', function(e){
 		var id = $(this).parents('.panel').data('id');
 		$(id).prev().insertAfter(id);
 		savePedalCanvas();
-		return false;
+		e.stopPropagation();
 	});
 
 	$('body').click(function() {
@@ -21669,3 +21668,28 @@ window.listPedals = function(pedals){
 		}
 	}
 }
+
+$('body').on('click', 'a[href="#rotate"]', function(e){
+	
+	//mvital: in some cases click event is sent multiple times to the handler - no idea why
+	//mvital: seems calling stopImmediatePropagation() helps 
+	e.stopImmediatePropagation();
+
+	var id = $(this).parents('.panel').data('id');
+	if ( $(id).hasClass("rotate-90") ) {
+		$(id).removeClass("rotate-90");
+		$(id).addClass("rotate-180");
+		console.log('rotate 180')
+	} else if ( $(id).hasClass("rotate-180") ) {
+		$(id).removeClass("rotate-180");
+		$(id).addClass("rotate-270");
+		console.log('rotate 270')
+	}  else if ( $(id).hasClass("rotate-270") ) {
+		$(id).removeClass("rotate-270");
+		console.log('rotate 0')
+	} else {
+		$(id).addClass("rotate-90");
+		console.log('rotate 90')
+	}
+	savePedalCanvas();
+});
