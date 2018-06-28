@@ -259,6 +259,7 @@ function readyCanvas(pedal) {
 			} else {
 				$(this).addClass("rotate-90");
 			}
+			savePedalCanvas();
 	    }
 	});
 	savePedalCanvas();
