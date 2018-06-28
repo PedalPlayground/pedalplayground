@@ -64,8 +64,8 @@ $border: 1px solid rgba(black, .13);
 		transition: all .4s;
 		// Drop shadow that matches the background image!
 		$same: 1px 1px 3px rgba(black, .4);
-		-webkit-filter: drop-shadow( $same );
-		filter: drop-shadow( $same );
+		//-webkit-filter: drop-shadow( $same );
+		//filter: drop-shadow( $same );
 	}
 	.actions {
 		z-index: 1;
@@ -229,22 +229,31 @@ $border: 1px solid rgba(black, .13);
 		padding: 0 8px;
 		font-weight: bold;
 	}
+
+	// Selected state border
+	&:after {
+		position: absolute;
+		content: " ";
+		/* background: blue; */
+		$same: -6px;
+		left: $same;
+		right: $same;
+		bottom: $same;
+		top: $same;
+		border-radius: 4px;
+		border: 2px solid transparent;
+		pointer-events: none;
+		transition: all .15s;
+	}
+
 	&.selected {
 		.artwork {
 			$same: 0px 0px 5px rgba(blue, .5);
-			-webkit-filter: drop-shadow( $same );
-			filter: drop-shadow( $same );
+			//-webkit-filter: drop-shadow( $same );
+			//filter: drop-shadow( $same );
 		}
 		&:after {
-			position: absolute;
-			content: " ";
-			/* background: blue; */
-			left: -2px;
-			right: -2px;
-			bottom: -4px;
-			top: -4px;
-			border-radius: 4px;
-			border: 2px solid $brand-primary;
+			border-color: $brand-primary;
 		}
 	}
 }
