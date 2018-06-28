@@ -66,8 +66,8 @@ $border: 1px solid rgba(black, .13);
 		transition: all .4s;
 		// Drop shadow that matches the background image!
 		$same: 1px 1px 3px rgba(black, .4);
-		-webkit-filter: drop-shadow( $same );
-		filter: drop-shadow( $same );
+		//-webkit-filter: drop-shadow( $same );
+		//filter: drop-shadow( $same );
 	}
 	.actions {
 		z-index: 1;

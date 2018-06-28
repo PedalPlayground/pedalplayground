@@ -7056,9 +7056,7 @@ strong, th {
     background-size: 100% 100%;
     z-index: 1;
     position: relative;
-    transition: all .4s;
-    -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
-    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4)); }
+    transition: all .4s; }
   .pedal .actions,
   .pedalboard .actions {
     z-index: 1;
