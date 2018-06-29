@@ -21402,8 +21402,12 @@ function readyCanvas(pedal) {
 	    } else if (target.is('.rotate')) {
 
 			event.stopPropagation();
+
+			//mvital: in some cases click event is sent multiple times to the handler - no idea why
+			//mvital: seems calling stopImmediatePropagation() helps 
 			event.stopImmediatePropagation();
 
+			//rotatePedal(this);
 			if ( $(this).hasClass("rotate-90") ) {
 				$(this).removeClass("rotate-90");
 				$(this).addClass("rotate-180");
@@ -21641,7 +21645,7 @@ var GenRandom =  {
 };
 
 
-$('body').on('click', '.item', function(e){
+$('body').on('click', '.item', function(e){ 
 	var pedal       = $(this);
 	var id   		= $(this).attr("id");
 	var pedalName   = $(this).attr('title');
