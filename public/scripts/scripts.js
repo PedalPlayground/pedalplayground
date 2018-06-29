@@ -21236,22 +21236,26 @@ $(document).ready(function(){
 	});
 
 	$('body').on('click', '#add-pedal button', function(event){
-		var serial  	= $('.canvas .item').length + 1;
-		var selected  	= $('#add-pedal').find(":selected");
-		var name 		= $(selected).text();
-		var shortname 	= $(selected).attr("id");
-		var w	 	  	= $(selected).data("width") * multiplier;
-		var h   		= $(selected).data("height") * multiplier;
-		var i 	  		= $(selected).data("image");
-		var pedal     	= '\
-<div id="item-'+serial+'" class="item pedal '+shortname+'" title="'+name+'">\
-	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url('+ pedalImagePath + i +')"></div>\
+		var serial  	 = GenRandom.Job();
+		var selected  	 = $('#add-pedal').find(":selected");
+		var name 		 = $(selected).text();
+		var shortname 	 = $(selected).attr("id");
+		var width		 = $(selected).data("width");
+		var height   	 = $(selected).data("height");
+		var scaledWidth	 = $(selected).data("width") * multiplier;
+		var scaledHeight = $(selected).data("height") * multiplier;
+		var i 	  		 = $(selected).data("image");
+		var pedal     	 = '\
+<div id="item-'+serial+'" class="item pedal '+shortname+'" title="'+name+'" data-width="'+width+'" data-height="'+height+'" >\
+	<div class="artwork" style="width:'+scaledWidth+'px;height:'+scaledHeight+'px; background-image:url('+ pedalImagePath + i +')"></div>\
 	<div class="shadow"></div>\
 	<div class="actions">\
 		<a class="rotate"></a>\
 		<a class="delete"></a>\
 	</div>\
 </div>';
+		$(pedal).data("width", width);
+		$(pedal).data("height", height);
 		$('.canvas').append(pedal);
 		readyCanvas();
 		ga('send', 'event', 'Pedal', 'added', name);
@@ -21259,19 +21263,25 @@ $(document).ready(function(){
 	});
 
 	$('body').on('click', '#add-pedalboard button', function(event){
-		var serial  	= $('.canvas .item').length + 1;
-		var selected  = $('#add-pedalboard').find(":selected");
+		var serial  	= GenRandom.Job();
+		var selected    = $('#add-pedalboard').find(":selected");
 		var name 		= $(selected).text();
 		var shortname 	= $(selected).attr("id");
-		var w	 	  	= $(selected).data("width") * multiplier;
-		var h   		= $(selected).data("height") * multiplier;
+		var width		 = $(selected).data("width");
+		var height   	 = $(selected).data("height");
+		var scaledWidth	 = $(selected).data("width") * multiplier;
+		var scaledHeight = $(selected).data("height") * multiplier;
 		var i 	  		= $(selected).data("image");
 		var pedal     	= '\
-<div id="item-'+serial+'" class="item pedalboard '+shortname+'" title="'+name+'">\
-	<div class="artwork" style="width:'+w+'px;height:'+h+'px; background-image:url(' + pedalboardImagePath + i + ')"></div>\
+<div id="item-'+serial+'" class="item pedalboard '+shortname+'" title="'+name+'" data-width="'+width+'" data-height="'+height+'">\
+	<div class="artwork" style="width:'+scaledWidth+'px;height:'+scaledHeight+'px; background-image:url(' + pedalboardImagePath + i + ')"></div>\
+	<div class="actions">\
+		<a class="rotate"></a>\
+		<a class="delete"></a>\
+	</div>\
 </div>';
 
-		$('.canvas').append(pedal);
+		$('.canvas').prepend(pedal);
 		readyCanvas();
 		ga('send', 'event', 'Pedalboard', 'added', name);
 		event.preventDefault();
@@ -21284,40 +21294,41 @@ $(document).ready(function(){
 
 	// Add custom pedal
 	$('body').on('click', '#add-custom-pedal .btn', function(event){
-		var truewidth   = $("#add-custom-pedal .custom-width").val();
-		var trueheight  = $("#add-custom-pedal .custom-height").val();
-		var name 		= $("#add-custom-pedal .custom-name").val();
+		var serial  	 = GenRandom.Job();
+		var width   	 = $("#add-custom-pedal .custom-width").val();
+		var height  	 = $("#add-custom-pedal .custom-height").val();
+		var scaledWidth  = width * multiplier;
+		var scaledHeight = height * multiplier;
+		var dims  	     = width + '" x ' + height + '"';
+		var name 		 = $("#add-custom-pedal .custom-name").val();
+		var image  	     = $("#add-custom-pedal .custom-color").val();
+		var pedal        = '\
+<div id="item-'+serial+'" class="item pedal pedal--custom" style="width:' + scaledWidth + 'px;height:' + scaledHeight + 'px;" title="'+name+'" data-width="'+width+'" data-height="'+height+'">\
+	<span class="pedal__box" style="background-color:' + image + ';"></span>\
+	<span class="pedal__name">' + name + '</span>\
+	<span class="pedal__jack1"></span>\
+	<span class="pedal__jack2"></span>\
+	<span class="pedal__knob1"></span>\
+	<span class="pedal__knob2"></span>\
+	<span class="pedal__led"></span>\
+	<span class="pedal__switch"></span>\
+	<div class="actions">\
+		<a class="rotate"></a>\
+		<a class="delete"></a>\
+	</div>\
+</div>';
 
 		$("#add-custom-pedal .invalid").removeClass("invalid");
 
-		if ( truewidth == "" || trueheight == "" ) {
+		if ( width == "" || height == "" ) {
 			$("#add-custom-pedal .custom-height, #add-custom-pedal .custom-width").addClass("invalid");
 			$("#add-custom-pedal .custom-width").focus();
-		} else if ( truewidth == "" ) {
+		} else if ( width == "" ) {
 			$("#add-custom-pedal .custom-width").addClass("invalid").focus();
-		} else if ( trueheight == "" ) {
+		} else if ( height == "" ) {
 			$("#add-custom-pedal .custom-height").addClass("invalid").focus();
 		} else {
 			console.log("add custom pedal...");
-			var width  	   = truewidth * multiplier;
-			var height     = trueheight * multiplier;
-			var dims  	   = truewidth + '" x ' + trueheight + '"';
-			var image  	   = $("#add-custom-pedal .custom-color").val();
-			var pedal      = '<div class="pedal pedal--custom" style="width:' + width + 'px;height:' + height + 'px;">\
-			<span class="pedal__box" style="background-color:' + image + ';"></span>\
-			<span class="pedal__name">' + name + '</span>\
-			<span class="pedal__jack1"></span>\
-			<span class="pedal__jack2"></span>\
-			<span class="pedal__knob1"></span>\
-			<span class="pedal__knob2"></span>\
-			<span class="pedal__led"></span>\
-			<span class="pedal__switch"></span>\
-			<div class="actions">\
-			<a class="rotate"></a>\
-			<a class="delete"></a>\
-			</div>\
-			</div>';
-
 			$('.canvas').append(pedal);
 			readyCanvas();
 			console.log(dims);
@@ -21329,30 +21340,32 @@ $(document).ready(function(){
 
 	// Add custom pedalboard
 	$('body').on('click', '#add-custom-pedalboard .btn', function(event){
-		var truewidth   = $("#add-custom-pedalboard .custom-width").val();
-		var trueheight  = $("#add-custom-pedalboard .custom-height").val();
+		var serial  	= GenRandom.Job();
+		var width   	 = $("#add-custom-pedalboard .custom-width").val();
+		var height  	 = $("#add-custom-pedalboard .custom-height").val();
+		var scaledWidth  = width * multiplier;
+		var scaledHeight = height * multiplier;
 
 		$("#add-custom-pedalboard .invalid").removeClass("invalid");
 
-		if ( truewidth == "" || trueheight == "" ) {
+		if ( width == "" || height == "" ) {
 			$("#add-custom-pedalboard .custom-height, #add-custom-pedalboard .custom-width").addClass("invalid");
 			$("#add-custom-pedalboard .custom-width").focus();
-		} else if ( truewidth == "" ) {
+		} else if ( width == "" ) {
 			$("#add-custom-pedalboard .custom-width").addClass("invalid").focus();
-		} else if ( trueheight == "" ) {
+		} else if ( height == "" ) {
 			$("#add-custom-pedalboard .custom-height").addClass("invalid").focus();
 		} else {
 			console.log("add custom pedalboard...");
-			var width  	   = truewidth * multiplier;
-			var height     = trueheight * multiplier;
-			var dims  	   = truewidth + '" x ' + trueheight + '"';
-			var pedalboard = '<div class="pedalboard pedalboard--custom" style="width:' + width + 'px;height:' + height + 'px; border-width:'+ multiplier / 2 +'px">\
+			var dims  	   = width + '" x ' + height + '"';
+			var pedalboard = '<div id="item-'+serial+'" class="item pedalboard pedalboard--custom" style="width:' + scaledWidth + 'px;height:' + scaledHeight + 'px; border-width:'+ multiplier / 2 +'px" title="Custom Pedalboard" data-width="'+width+'" data-height="'+height+'">\
 			<div class="actions">\
 			<a class="delete"></a>\
+			<a class="rotate"></a>\
 			</div>\
 			</div>';
 
-			$('.canvas').append(pedalboard);
+			$('.canvas').prepend(pedalboard);
 			readyCanvas();
 			ga('send', 'event', 'CustomPedalboard', 'added', dims + " " + name);
 			event.preventDefault();
@@ -21377,73 +21390,7 @@ function readyCanvas(pedal) {
 	});
 
 	// $draggable.on( 'staticClick', function(event) {
-	$('body').on('click', '.item', function(){
-		var pedal       = $(this);
-		var id   		= $(this).attr("id");
-		var pedalName   = $(this).attr('title');
-		var markup      = '<div class="panel" data-id="#'+id+'">\
-			<div class="panel__name">'+pedalName+'</div>\
-			<a href="#rotate" class="panel__action">Rotate</a>\
-			<a href="#front" class="panel__action">Move Front</a>\
-			<a href="#back" class="panel__action">Move Back</a>\
-			<a href="#delete" class="panel__action">Delete</a>\
-		</div>'
-
-		// reset stuff
-		$('.panel').remove();
-		$('.canvas .selected').removeClass('selected');
-		
-		// add stuff
-		$(pedal).addClass('selected');
-		$('.canvas').after(markup);
-
-		// Prevent bubble up to .canvas
-		e.stopPropagation();
-	});
-
-	$('body').on('click', 'a[href="#rotate"]', function(e){
-		var id = $(this).parents('.panel').data('id');
-		if ( $(id).hasClass("rotate-90") ) {
-			$(id).removeClass("rotate-90");
-			$(id).addClass("rotate-180");
-		} else if ( $(id).hasClass("rotate-180") ) {
-			$(id).removeClass("rotate-180");
-			$(id).addClass("rotate-270");
-		}  else if ( $(id).hasClass("rotate-270") ) {
-			$(id).removeClass("rotate-270");
-		} else {
-			$(id).addClass("rotate-90");
-		}
-		e.stopPropagation();
-		savePedalCanvas();
-	});
-
-	$('body').on('click', 'a[href="#delete"]', function(){
-		var id = $(this).parents('.panel').data('id');
-		$(id).remove();
-		$('.panel').remove();
-		savePedalCanvas();
-	});
 	
-	$('body').on('click', 'a[href="#front"]', function(e){
-		var id = $(this).parents('.panel').data('id');
-		$(id).next().insertBefore(id);
-		savePedalCanvas();
-		e.stopPropagation();
-	});
-	
-	$('body').on('click', 'a[href="#back"]', function(e){
-		var id = $(this).parents('.panel').data('id');
-		$(id).prev().insertAfter(id);
-		savePedalCanvas();
-		e.stopPropagation();
-	});
-
-	$('body').click(function() {
-		// reset stuff
-		$('.panel').remove();
-		$('.canvas .selected').removeClass('selected');
-	});
 
 	$draggable.on( 'staticClick', function(event) {
 		//rotatePedal(this);
@@ -21451,19 +21398,24 @@ function readyCanvas(pedal) {
 	    if(target.is('.delete')) {
 			deletePedal(this);
 			deselect();
+			$('body').click();
 	    } else if (target.is('.rotate')) {
-			// rotatePedal(this);
-			// if ( $(this).hasClass("rotate-90") ) {
-			// 	$(this).removeClass("rotate-90");
-			// 	$(this).addClass("rotate-180");
-			// } else if ( $(this).hasClass("rotate-180") ) {
-			// 	$(this).removeClass("rotate-180");
-			// 	$(this).addClass("rotate-270");
-			// }  else if ( $(this).hasClass("rotate-270") ) {
-			// 	$(this).removeClass("rotate-270");
-			// } else {
-			// 	$(this).addClass("rotate-90");
-			// }
+
+			event.stopPropagation();
+			event.stopImmediatePropagation();
+
+			if ( $(this).hasClass("rotate-90") ) {
+				$(this).removeClass("rotate-90");
+				$(this).addClass("rotate-180");
+			} else if ( $(this).hasClass("rotate-180") ) {
+				$(this).removeClass("rotate-180");
+				$(this).addClass("rotate-270");
+			}  else if ( $(this).hasClass("rotate-270") ) {
+				$(this).removeClass("rotate-270");
+			} else {
+				$(this).addClass("rotate-90");
+			}
+			savePedalCanvas();
 	    }
 	});
 
@@ -21493,6 +21445,7 @@ function rotatePedal(pedal) {
 
 function deletePedal(pedal) {
 	$(pedal).remove();
+	deselect();
 	savePedalCanvas();
 }
 
@@ -21669,27 +21622,94 @@ window.listPedals = function(pedals){
 	}
 }
 
+var GenRandom =  {
+    Stored: [],
+	Job: function(){
+		var newId = Date.now().toString().substr(3); // or use any method that you want to achieve this string
+        if( !this.Check(newId) ){
+            this.Stored.push(newId);
+            return newId;
+        }
+        return this.Job();
+	},
+	Check: function(id){
+		for( var i = 0; i < this.Stored.length; i++ ){
+			if( this.Stored[i] == id ) return true;
+		}
+		return false;
+	}
+};
+
+
+$('body').on('click', '.item', function(e){
+	var pedal       = $(this);
+	var id   		= $(this).attr("id");
+	var pedalName   = $(this).attr('title');
+	var markup      = '<div class="panel" data-id="#'+id+'">\
+		<div class="panel__name">'+pedalName+'</div>\
+		<a href="#rotate" class="panel__action">Rotate</a>\
+		<a href="#front" class="panel__action">Move Front</a>\
+		<a href="#back" class="panel__action">Move Back</a>\
+		<a href="#delete" class="panel__action">Delete</a>\
+	</div>'
+
+	// reset stuff
+	$('.panel').remove();
+	$('.canvas .selected').removeClass('selected');
+	
+	// add stuff
+	$(pedal).addClass('selected');
+	$('.canvas').after(markup);
+
+	// Prevent bubble up to .canvas
+	e.stopPropagation();
+});
+
 $('body').on('click', 'a[href="#rotate"]', function(e){
 	
-	//mvital: in some cases click event is sent multiple times to the handler - no idea why
-	//mvital: seems calling stopImmediatePropagation() helps 
+	e.stopPropagation();
 	e.stopImmediatePropagation();
 
 	var id = $(this).parents('.panel').data('id');
 	if ( $(id).hasClass("rotate-90") ) {
 		$(id).removeClass("rotate-90");
 		$(id).addClass("rotate-180");
-		console.log('rotate 180')
 	} else if ( $(id).hasClass("rotate-180") ) {
 		$(id).removeClass("rotate-180");
 		$(id).addClass("rotate-270");
-		console.log('rotate 270')
 	}  else if ( $(id).hasClass("rotate-270") ) {
 		$(id).removeClass("rotate-270");
-		console.log('rotate 0')
 	} else {
 		$(id).addClass("rotate-90");
-		console.log('rotate 90')
 	}
 	savePedalCanvas();
+});
+
+$('body').on('click', 'a[href="#delete"]', function(){
+	var id = $(this).parents('.panel').data('id');
+	$(id).remove();
+	$('.panel').remove();
+	savePedalCanvas();
+});
+
+$('body').on('click', 'a[href="#front"]', function(e){
+	e.stopImmediatePropagation();
+	var id = $(this).parents('.panel').data('id');
+	$(id).next().insertBefore(id);
+	savePedalCanvas();
+	e.stopPropagation();
+});
+
+$('body').on('click', 'a[href="#back"]', function(e){
+	e.stopImmediatePropagation();
+	var id = $(this).parents('.panel').data('id');
+	$(id).prev().insertAfter(id);
+	savePedalCanvas();
+	e.stopPropagation();
+});
+
+$('body').click(function() {
+	// reset stuff
+	$('.panel').remove();
+	$('.canvas .selected').removeClass('selected');
 });

@@ -7051,6 +7051,50 @@ strong, th {
     z-index: 1;
     position: relative;
     transition: all .4s; }
+  .item:after {
+    position: absolute;
+    content: " ";
+    /* background: blue; */
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    top: -6px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    pointer-events: none;
+    transition: all .15s; }
+  .item.selected:after {
+    border-color: #8582FF; }
+  .item.rotate-90 .artwork {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .item.rotate-180 .artwork {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .item.rotate-270 .artwork {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  .item.pedal--custom.rotate-90, .item.pedalboard--custom.rotate-90 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .item.pedal--custom.rotate-180, .item.pedalboard--custom.rotate-180 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .item.pedal--custom.rotate-270, .item.pedalboard--custom.rotate-270 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg); }
   .item .actions {
     z-index: 1;
     transition: all .28s;
@@ -7095,7 +7139,7 @@ strong, th {
     opacity: 0; }
 
 .pedal {
-  z-index: 20;
+  z-index: 1;
   min-width: 5px;
   min-height: 5px; }
   .pedal.rotate-90 .artwork {
@@ -7109,21 +7153,6 @@ strong, th {
     -o-transform: rotate(180deg);
     transform: rotate(180deg); }
   .pedal.rotate-270 .artwork {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    transform: rotate(270deg); }
-  .pedal.pedal--custom.rotate-90 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg); }
-  .pedal.pedal--custom.rotate-180 {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg); }
-  .pedal.pedal--custom.rotate-270 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     -o-transform: rotate(270deg);
@@ -7193,20 +7222,6 @@ strong, th {
     right: 0;
     padding: 0 8px;
     font-weight: bold; }
-  .pedal:after {
-    position: absolute;
-    content: " ";
-    /* background: blue; */
-    left: -6px;
-    right: -6px;
-    bottom: -6px;
-    top: -6px;
-    border-radius: 4px;
-    border: 2px solid transparent;
-    pointer-events: none;
-    transition: all .15s; }
-  .pedal.selected:after {
-    border-color: #8582FF; }
 
 .pedalboard {
   z-index: 1; }
@@ -7309,22 +7324,24 @@ strong, th {
     border: 1px solid #d9534f;
     box-shadow: 0 0 5px #d9534f; }
 
-@media (min-width: 1024px) {
-  .panel {
-    position: absolute;
-    top: 67px;
-    right: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    width: 200px; }
-    .panel__name {
-      font-size: 13px;
-      color: #999;
-      font-weight: 600;
-      padding: 10px;
-      border-bottom: 1px solid #ddd; }
-    .panel__action {
-      font-size: 13px;
-      display: block;
-      padding: 10px;
-      border-bottom: 1px solid #ddd; } }
+.panel {
+  z-index: 3; }
+  @media (min-width: 1024px) {
+    .panel {
+      position: absolute;
+      top: 67px;
+      right: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      width: 200px; }
+      .panel__name {
+        font-size: 13px;
+        color: #999;
+        font-weight: 600;
+        padding: 10px;
+        border-bottom: 1px solid #ddd; }
+      .panel__action {
+        font-size: 13px;
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ddd; } }
