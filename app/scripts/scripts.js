@@ -40,7 +40,7 @@ $(document).ready(function(){
 	});
 
 	// Set the multiplier for converting inches to pixels
-	var multiplier = 26;
+	var multiplier = 25;
 
 	// Set grid background to one inch
 	$('.canvas').css('background-size', multiplier + 'px');
