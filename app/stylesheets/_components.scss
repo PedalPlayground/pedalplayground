@@ -67,6 +67,63 @@ $border: 1px solid rgba(black, .13);
 		//-webkit-filter: drop-shadow( $same );
 		//filter: drop-shadow( $same );
 	}
+
+	// Selected state border
+	&:after {
+		position: absolute;
+		content: " ";
+		/* background: blue; */
+		$same: -6px;
+		left: $same;
+		right: $same;
+		bottom: $same;
+		top: $same;
+		border-radius: 4px;
+		border: 2px solid transparent;
+		pointer-events: none;
+		transition: all .15s;
+	}
+
+	&.selected {
+		.artwork {
+			$same: 0px 0px 5px rgba(blue, .5);
+			//-webkit-filter: drop-shadow( $same );
+			//filter: drop-shadow( $same );
+		}
+		&:after {
+			border-color: $brand-primary;
+		}
+	}
+
+	&.rotate-90 {
+		.artwork {
+			@include rotate(90deg);
+		}
+	}
+	&.rotate-180 {
+		.artwork {
+			@include rotate(180deg);
+		}
+	}
+	&.rotate-270 {
+		.artwork {
+			@include rotate(270deg);
+		}
+	}
+
+	&.pedal--custom,
+	&.pedalboard--custom {
+        &.rotate-90 {
+			@include rotate(90deg);
+    	}
+    	&.rotate-180 {
+			@include rotate(180deg);
+    	}
+    	&.rotate-270 {
+			@include rotate(270deg);
+    	}
+	}
+
 	.actions {
 		z-index: 1;
 		transition: all .28s;
@@ -129,7 +186,7 @@ $border: 1px solid rgba(black, .13);
 }
 
 .pedal {
-	z-index: 20;
+	z-index: 1;
 	min-width: 5px;
 	min-height: 5px;
 	&.rotate-90 {
@@ -146,17 +203,6 @@ $border: 1px solid rgba(black, .13);
 		.artwork {
 			@include rotate(270deg);
 		}
-	}
-	&.pedal--custom {
-        &.rotate-90 {
-			@include rotate(90deg);
-    	}
-    	&.rotate-180 {
-			@include rotate(180deg);
-    	}
-    	&.rotate-270 {
-			@include rotate(270deg);
-    	}
 	}
 	&__box {
 		border-radius: 4px;
@@ -228,33 +274,6 @@ $border: 1px solid rgba(black, .13);
 		right: 0;
 		padding: 0 8px;
 		font-weight: bold;
-	}
-
-	// Selected state border
-	&:after {
-		position: absolute;
-		content: " ";
-		/* background: blue; */
-		$same: -6px;
-		left: $same;
-		right: $same;
-		bottom: $same;
-		top: $same;
-		border-radius: 4px;
-		border: 2px solid transparent;
-		pointer-events: none;
-		transition: all .15s;
-	}
-
-	&.selected {
-		.artwork {
-			$same: 0px 0px 5px rgba(blue, .5);
-			//-webkit-filter: drop-shadow( $same );
-			//filter: drop-shadow( $same );
-		}
-		&:after {
-			border-color: $brand-primary;
-		}
 	}
 }
 
@@ -365,6 +384,7 @@ $border: 1px solid rgba(black, .13);
 }
 
 .panel {
+	z-index: 3;
 	@media (min-width: 1024px) {
 		position: absolute;
 		top: 67px;
