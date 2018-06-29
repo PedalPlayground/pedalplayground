@@ -218,8 +218,12 @@ function readyCanvas(pedal) {
 	    } else if (target.is('.rotate')) {
 
 			event.stopPropagation();
+
+			//mvital: in some cases click event is sent multiple times to the handler - no idea why
+			//mvital: seems calling stopImmediatePropagation() helps 
 			event.stopImmediatePropagation();
 
+			//rotatePedal(this);
 			if ( $(this).hasClass("rotate-90") ) {
 				$(this).removeClass("rotate-90");
 				$(this).addClass("rotate-180");
