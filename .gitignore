@@ -4,3 +4,5 @@ bower_components/
 node_modules/
 workfiles/
 app/scss/.sass-cache/*
+pedals alias
+pedals-new alias

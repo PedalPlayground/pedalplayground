@@ -232,8 +232,7 @@ th {
   src: url("../fonts/glyphicons-halflings-regular.eot");
   src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 
-.glyphicon, .pedal .actions a:before,
-.pedalboard .actions a:before {
+.glyphicon, .item .actions a:before {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -302,8 +301,7 @@ th {
 .glyphicon-ok:before {
   content: "\e013"; }
 
-.glyphicon-remove:before, .pedal .actions a:before,
-.pedalboard .actions a:before {
+.glyphicon-remove:before, .item .actions a:before {
   content: "\e014"; }
 
 .glyphicon-zoom-in:before {
@@ -354,8 +352,7 @@ th {
 .glyphicon-repeat:before {
   content: "\e030"; }
 
-.glyphicon-refresh:before, .pedal .actions a.rotate:before,
-.pedalboard .actions a.rotate:before {
+.glyphicon-refresh:before, .item .actions a.rotate:before {
   content: "\e031"; }
 
 .glyphicon-list-alt:before {
@@ -7041,24 +7038,64 @@ strong, th {
 
 .canvas {
   position: relative;
-  background: #F8F8F8 url("../images/grid.png");
+  background: #F8F8F8 url("../images/grid-fine.png");
   overflow: hidden; }
 
-.pedal,
-.pedalboard {
-  animation: fade-grow .4s;
+.item {
   position: absolute;
   border: 1px solid transparent; }
-  .pedal .artwork,
-  .pedalboard .artwork {
+  .item .artwork {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
     z-index: 1;
     position: relative;
     transition: all .4s; }
-  .pedal .actions,
-  .pedalboard .actions {
+  .item:after {
+    position: absolute;
+    content: " ";
+    /* background: blue; */
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    top: -6px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    pointer-events: none;
+    transition: all .15s; }
+  .item.selected:after {
+    border-color: #8582FF; }
+  .item.rotate-90 .artwork {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .item.rotate-180 .artwork {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .item.rotate-270 .artwork {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  .item.pedal--custom.rotate-90, .item.pedalboard--custom.rotate-90 {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .item.pedal--custom.rotate-180, .item.pedalboard--custom.rotate-180 {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .item.pedal--custom.rotate-270, .item.pedalboard--custom.rotate-270 {
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  .item .actions {
     z-index: 1;
     transition: all .28s;
     opacity: 0;
@@ -7073,26 +7110,21 @@ strong, th {
     margin-left: -32px;
     margin-top: -15px;
     width: 66px; }
-    .pedal .actions a,
-    .pedalboard .actions a {
+    .item .actions a {
       display: block;
       float: left;
       padding: 8px;
       text-align: center;
       width: 32px;
       line-height: 10px; }
-      .pedal .actions a:before,
-      .pedalboard .actions a:before {
+      .item .actions a:before {
         font-size: 10px;
         line-height: 10px; }
-      .pedal .actions a.rotate,
-      .pedalboard .actions a.rotate {
+      .item .actions a.rotate {
         border-right: 1px solid rgba(0, 0, 0, 0.13); }
-        .pedal .actions a.rotate:before,
-        .pedalboard .actions a.rotate:before {
+        .item .actions a.rotate:before {
           font-weight: bold; }
-  .pedal:hover:before,
-  .pedalboard:hover:before {
+  .item:hover:before {
     z-index: 0;
     content: " ";
     border: 2px dashed rgba(153, 153, 153, 0.5);
@@ -7101,15 +7133,13 @@ strong, th {
     top: 4px;
     right: 4px;
     bottom: 4px; }
-  .pedal:hover .actions,
-  .pedalboard:hover .actions {
+  .item:hover .actions {
     opacity: 1; }
-  .pedal.is-dragging .actions,
-  .pedalboard.is-dragging .actions {
+  .item.is-dragging .actions {
     opacity: 0; }
 
 .pedal {
-  z-index: 20;
+  z-index: 1;
   min-width: 5px;
   min-height: 5px; }
   .pedal.rotate-90 .artwork {
@@ -7123,21 +7153,6 @@ strong, th {
     -o-transform: rotate(180deg);
     transform: rotate(180deg); }
   .pedal.rotate-270 .artwork {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    transform: rotate(270deg); }
-  .pedal.pedal--custom.rotate-90 {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg); }
-  .pedal.pedal--custom.rotate-180 {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg); }
-  .pedal.pedal--custom.rotate-270 {
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     -o-transform: rotate(270deg);
@@ -7308,3 +7323,25 @@ strong, th {
   .invalid:focus {
     border: 1px solid #d9534f;
     box-shadow: 0 0 5px #d9534f; }
+
+.panel {
+  z-index: 3; }
+  @media (min-width: 1024px) {
+    .panel {
+      position: absolute;
+      top: 67px;
+      right: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      width: 200px; }
+      .panel__name {
+        font-size: 13px;
+        color: #999;
+        font-weight: 600;
+        padding: 10px;
+        border-bottom: 1px solid #ddd; }
+      .panel__action {
+        font-size: 13px;
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ddd; } }
