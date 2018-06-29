@@ -21246,7 +21246,7 @@ $(document).ready(function(){
 		var scaledHeight = $(selected).data("height") * multiplier;
 		var i 	  		 = $(selected).data("image");
 		var pedal     	 = '\
-<div id="item-'+serial+'" class="item pedal '+shortname+'" title="'+name+'" data-width="'+width+'" data-height="'+height+'" >\
+<div id="item-'+serial+'" class="item pedal '+shortname+'" title="'+name+'" data-width="'+width+'" data-height="'+height+'" data-scale="'+multiplier+'">\
 	<div class="artwork" style="width:'+scaledWidth+'px;height:'+scaledHeight+'px; background-image:url('+ pedalImagePath + i +')"></div>\
 	<div class="shadow"></div>\
 	<div class="actions">\
@@ -21254,8 +21254,6 @@ $(document).ready(function(){
 		<a class="delete"></a>\
 	</div>\
 </div>';
-		$(pedal).data("width", width);
-		$(pedal).data("height", height);
 		$('.canvas').append(pedal);
 		readyCanvas();
 		ga('send', 'event', 'Pedal', 'added', name);
@@ -21273,7 +21271,7 @@ $(document).ready(function(){
 		var scaledHeight = $(selected).data("height") * multiplier;
 		var i 	  		= $(selected).data("image");
 		var pedal     	= '\
-<div id="item-'+serial+'" class="item pedalboard '+shortname+'" title="'+name+'" data-width="'+width+'" data-height="'+height+'">\
+<div id="item-'+serial+'" class="item pedalboard '+shortname+'" title="'+name+'" data-width="'+width+'" data-height="'+height+'" data-scale="'+multiplier+'">\
 	<div class="artwork" style="width:'+scaledWidth+'px;height:'+scaledHeight+'px; background-image:url(' + pedalboardImagePath + i + ')"></div>\
 	<div class="actions">\
 		<a class="rotate"></a>\
@@ -21303,7 +21301,7 @@ $(document).ready(function(){
 		var name 		 = $("#add-custom-pedal .custom-name").val();
 		var image  	     = $("#add-custom-pedal .custom-color").val();
 		var pedal        = '\
-<div id="item-'+serial+'" class="item pedal pedal--custom" style="width:' + scaledWidth + 'px;height:' + scaledHeight + 'px;" title="'+name+'" data-width="'+width+'" data-height="'+height+'">\
+<div id="item-'+serial+'" class="item pedal pedal--custom" style="width:' + scaledWidth + 'px;height:' + scaledHeight + 'px;" title="'+name+'" data-width="'+width+'" data-height="'+height+'" data-scale="'+multiplier+'">\
 	<span class="pedal__box" style="background-color:' + image + ';"></span>\
 	<span class="pedal__name">' + name + '</span>\
 	<span class="pedal__jack1"></span>\
@@ -21358,7 +21356,7 @@ $(document).ready(function(){
 		} else {
 			console.log("add custom pedalboard...");
 			var dims  	   = width + '" x ' + height + '"';
-			var pedalboard = '<div id="item-'+serial+'" class="item pedalboard pedalboard--custom" style="width:' + scaledWidth + 'px;height:' + scaledHeight + 'px; border-width:'+ multiplier / 2 +'px" title="Custom Pedalboard" data-width="'+width+'" data-height="'+height+'">\
+			var pedalboard = '<div id="item-'+serial+'" class="item pedalboard pedalboard--custom" style="width:' + scaledWidth + 'px;height:' + scaledHeight + 'px; border-width:'+ multiplier / 2 +'px" title="Custom Pedalboard" data-width="'+width+'" data-height="'+height+'" data-scale="'+multiplier+'">\
 			<div class="actions">\
 			<a class="delete"></a>\
 			<a class="rotate"></a>\
