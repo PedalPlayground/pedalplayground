@@ -2506,6 +2506,13 @@
         "Image":"ehx-synth9.png"
     },
     {
+        "Brand":"Electro Harmonix",
+        "Name":"Ocean 11",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"ehx-ocean11.png"
+    },
+    {
         "Brand":"Elektron",
         "Name":"Analog Drive",
         "Width":6.8,
@@ -4662,6 +4669,13 @@
         "Image":"maxon-vop9.png"
     },
     {
+        "Brand":"Maxon",
+        "Name":"Overdrive OD-9",
+        "Width":2.93,
+        "Height":4.88,
+        "Image":"maxon-overdrive-od-9.png"
+    },
+    {
         "Brand":"Meris",
         "Name":"Mercury7",
         "Width":4.25,
@@ -6455,6 +6469,13 @@
     },
     {
         "Brand":"TC Electronics",
+        "Name":"Hall of Fame 2",
+        "Width":2.83,
+        "Height":4.8,
+        "Image":"tc-halloffame2.png"
+    },
+    {
+        "Brand":"TC Electronics",
         "Name":"Helix Phaser",
         "Width":2.83,
         "Height":4.8,
@@ -6601,6 +6622,13 @@
         "Image":"tcelectronic-viscousvibe.png"
     },
     {
+        "Brand":"TC Electronics",
+        "Name":"Quintessence Harmony",
+        "Width":2.83,
+        "Height":4.8,
+        "Image":"tc-quintessence.png"
+    },
+    {
         "Brand":"Tapestry Audio",
         "Name":"Bloomery",
         "Width":2.25,
@@ -6634,6 +6662,13 @@
         "Width":2.75,
         "Height":5.7,
         "Image":"thorpy-peacekeeper.png"
+    },
+    {
+        "Brand":"Thorpy",
+        "Name":"Fallout Cloud",
+        "Width":2.75,
+        "Height":5.7,
+        "Image":"thorpy-fallout-cloud.png"
     },
     {
         "Brand":"Throbak",
