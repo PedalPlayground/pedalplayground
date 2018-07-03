@@ -6434,6 +6434,13 @@
     },
     {
         "Brand":"TC Electronics",
+        "Name":"Wiretap Riff Recorder",
+        "Width":2.01,
+        "Height":3.66,
+        "Image":"tc-wiretap.png"
+    },
+    {
+        "Brand":"TC Electronics",
         "Name":"Ditto",
         "Width":2,
         "Height":3.5,
