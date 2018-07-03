@@ -21201,7 +21201,6 @@ $(document).ready(function(){
 		$(this).trigger('change').focus();
 		//$(this).val(null).trigger('change').focus();
 	});
-
 	
 	$('.pedalboard-list').select2({
 		placeholder: "Select a pedalboard",
@@ -21221,10 +21220,33 @@ $(document).ready(function(){
 			readyCanvas();
 			console.log("Canvas restored!");
 		}
+		var multiplier 	 = $('#multiplier').val();
+		$('#canvas-scale').val(multiplier);
 	});
 
 	// Set the multiplier for converting inches to pixels
-	var multiplier = 25;
+	// var multiplier = 25;
+
+	
+	
+	$('#canvas-scale').change(function() {
+		var multiplier = $(this).val();
+		$('#multiplier').val(multiplier);
+		// alert(this);
+		
+		// Regular Pedals
+		$(".pedal").each(function() { 
+			var scaledWidth	 = $(this).data("width") * multiplier;
+			var scaledHeight = $(this).data("height") * multiplier;
+			console.log(scaledWidth);
+			// $(this).data("scale", multiplier);
+			// $(this).find('.artwork').css("width", scaledWidth).css("height", scaledHeight).data("scale", multiplier);
+			//$(this).find('.artwork').css("width", scaledWidth).css("height", scaledHeight);
+			$(this).attr("data-scale", multiplier).find('.artwork').css("width", scaledWidth).css("height", scaledHeight);
+		});
+
+	});
+
 
 	// Set grid background to one inch
 	$('.canvas').css('background-size', multiplier + 'px');
@@ -21236,6 +21258,7 @@ $(document).ready(function(){
 	});
 
 	$('body').on('click', '#add-pedal button', function(event){
+		var multiplier 	 = $('#canvas-scale').val();
 		var serial  	 = GenRandom.Job();
 		var selected  	 = $('#add-pedal').find(":selected");
 		var name 		 = $(selected).text();
@@ -21262,6 +21285,7 @@ $(document).ready(function(){
 
 	$('body').on('click', '#add-pedalboard button', function(event){
 		var serial  	= GenRandom.Job();
+		var multiplier 	 = $('#canvas-scale').val();
 		var selected    = $('#add-pedalboard').find(":selected");
 		var name 		= $(selected).text();
 		var shortname 	= $(selected).attr("id");
@@ -21293,6 +21317,7 @@ $(document).ready(function(){
 	// Add custom pedal
 	$('body').on('click', '#add-custom-pedal .btn', function(event){
 		var serial  	 = GenRandom.Job();
+		var multiplier 	 = $('#canvas-scale').val();
 		var width   	 = $("#add-custom-pedal .custom-width").val();
 		var height  	 = $("#add-custom-pedal .custom-height").val();
 		var scaledWidth  = width * multiplier;
@@ -21339,6 +21364,7 @@ $(document).ready(function(){
 	// Add custom pedalboard
 	$('body').on('click', '#add-custom-pedalboard .btn', function(event){
 		var serial  	= GenRandom.Job();
+		var multiplier 	 = $('#canvas-scale').val();
 		var width   	 = $("#add-custom-pedalboard .custom-width").val();
 		var height  	 = $("#add-custom-pedalboard .custom-height").val();
 		var scaledWidth  = width * multiplier;

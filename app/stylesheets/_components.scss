@@ -374,7 +374,7 @@ $border: 1px solid rgba(black, .13);
 
 .panel {
 	z-index: 3;
-	@media (min-width: 1024px) {
+	@media (min-width: 768px) {
 		position: absolute;
 		top: 67px;
 		right: 20px;

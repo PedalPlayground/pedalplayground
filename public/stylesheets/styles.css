@@ -7326,7 +7326,7 @@ strong, th {
 
 .panel {
   z-index: 3; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .panel {
       position: absolute;
       top: 67px;
