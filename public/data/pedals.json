@@ -1603,6 +1603,13 @@
         "Image":"dawnerprince-starla.png"
     },
     {
+        "Brand":"Dawner Prince",
+        "Name":"Diktator Overdrive",
+        "Width":4.4,
+        "Height":3.5,
+        "Image":"dawner-prince-diktator-od.png"
+    },
+    {
         "Brand":"Death By Audio",
         "Name":"Echo Dream 2",
         "Width":4.65,
@@ -2035,6 +2042,55 @@
         "Width":2.77,
         "Height":4.5,
         "Image":"dunlop-echoplex.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Jimi Hendrix Octavio Fuzz",
+        "Width":2.4,
+        "Height":4.3,
+        "Image":"dunlop-jimi-hendrix-octavio-fuzz.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Eric Johnson Fuzz Face",
+        "Width":7.0,
+        "Height":7.0,
+        "Image":"dunlop-fuzzface-eric-johnson.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Fuzz Face Classic Germanium",
+        "Width":7.0,
+        "Height":7.0,
+        "Image":"dunlop-fuzzface-germanium.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Jimi Hendrix Fuzz Face",
+        "Width":7.0,
+        "Height":7.0,
+        "Image":"dunlop-fuzzface-jimi-hendrix.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Fuzz Face Germanium Mini",
+        "Width":3.5,
+        "Height":3.5,
+        "Image":"dunlop-fuzzface-germanium-mini.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Jimi Hendrix Fuzz Face Mini",
+        "Width":3.5,
+        "Height":3.5,
+        "Image":"dunlop-fuzzface-jimi-hendrix-mini.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Silicon Fuzz Face Mini",
+        "Width":3.5,
+        "Height":3.5,
+        "Image":"dunlop-fuzzface-silicon-mini.png"
     },
     {
         "Brand":"Dwarfcraft Devices",
@@ -4233,6 +4289,13 @@
         "Width":2.59,
         "Height":4.3,
         "Image":"miaudio-supercrunchbox.png"
+    },
+    {
+        "Brand":"MI Audio",
+        "Name":"Super Crunch Box V2",
+        "Width":2.59,
+        "Height":4.3,
+        "Image":"mi-audio-super-crunch-box-v2.png"
     },
     {
         "Brand":"MXR",
