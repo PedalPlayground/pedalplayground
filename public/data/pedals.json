@@ -7190,6 +7190,27 @@
     },
     {
         "Brand":"Wampler",
+        "Name":"Dual Fusion V2",
+        "Width":4.5,
+        "Height":3.58,
+        "Image":"wampler-dualfusion.png"
+    },
+    {
+        "Brand":"Wampler",
+        "Name":"Hot Wired V2",
+        "Width":4.5,
+        "Height":3.58,
+        "Image":"wampler-hardwire.png"
+    },
+    {
+        "Brand":"Wampler",
+        "Name":"Paisley Deluxe",
+        "Width":4.66,
+        "Height":3.58,
+        "Image":"wampler-paisleydlx.png"
+    },
+    {
+        "Brand":"Wampler",
         "Name":"Ego",
         "Width":2.6,
         "Height":4.77,
