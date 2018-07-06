@@ -3502,7 +3502,7 @@
     {
         "Brand":"J. Rockett",
         "Name":"45",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-45.png"
     },
@@ -3523,14 +3523,14 @@
     {
         "Brand":"J. Rockett",
         "Name":"Archer",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-archersilver.png"
     },
     {
         "Brand":"J. Rockett",
         "Name":"Archer Ikon",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-archerikon.png"
     },
@@ -3544,7 +3544,7 @@
     {
         "Brand":"J. Rockett",
         "Name":"Boing Reverb",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-boing.png"
     },
@@ -3558,7 +3558,7 @@
     {
         "Brand":"J. Rockett",
         "Name":"GTO",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-gto.png"
     },
@@ -3572,14 +3572,14 @@
     {
         "Brand":"J. Rockett",
         "Name":"Rockaway Archer",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-rockawayarcher.png"
     },
     {
         "Brand":"J. Rockett",
         "Name":"The Dude",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-thedude.png"
     },
