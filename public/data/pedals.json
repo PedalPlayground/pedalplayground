@@ -5803,6 +5803,42 @@
         "Image":"seymourduncan-vaportrail.png"
     },
     {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Buzzz",
+        "Width":3.68,
+        "Height":4.75,
+        "Image":"smallsound-buzzz.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Fuck Overdrive",
+        "Width":3.68,
+        "Height":4.82,
+        "Image":"smallsound-fuck.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Team Awesome Fuzz Machine",
+        "Width":3.68,
+        "Height":4.82,
+        "Image":"smallsound-teamawesome.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Mini",
+        "Width":2.7,t
+        "Height":4.3,
+        "Image":"smallsound-mini.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Pretty Years",
+        "Width":4.7,
+        "Height":5.7,
+        "Image":"smallsound-prettyyears.png"
+    },
+
+    {
         "Brand":"Shure",
         "Name":"GLXD 6",
         "Width":3.7,
