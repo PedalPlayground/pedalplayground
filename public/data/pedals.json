@@ -5826,7 +5826,7 @@
     {
         "Brand":"Smallsound/Bigsound",
         "Name":"Mini",
-        "Width":2.7,t
+        "Width":2.7,
         "Height":4.3,
         "Image":"smallsound-mini.png"
     },
@@ -5837,7 +5837,6 @@
         "Height":5.7,
         "Image":"smallsound-prettyyears.png"
     },
-
     {
         "Brand":"Shure",
         "Name":"GLXD 6",
