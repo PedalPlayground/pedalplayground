@@ -1,5 +1,12 @@
 [
     {
+        "Brand":"1981 Inventions",
+        "Name":"DRV",
+        "Width":3.52,
+        "Height":4.3,
+        "Image":"1981-inventions.png"
+    },
+    {
         "Brand":"Misc",
         "Name":"12 Inch Ruler",
         "Width":12,
@@ -1603,6 +1610,13 @@
         "Image":"dawnerprince-starla.png"
     },
     {
+        "Brand":"Dawner Prince",
+        "Name":"Diktator Overdrive",
+        "Width":4.4,
+        "Height":3.5,
+        "Image":"dawner-prince-diktator-od.png"
+    },
+    {
         "Brand":"Death By Audio",
         "Name":"Echo Dream 2",
         "Width":4.65,
@@ -2035,6 +2049,55 @@
         "Width":2.77,
         "Height":4.5,
         "Image":"dunlop-echoplex.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Jimi Hendrix Octavio Fuzz",
+        "Width":2.4,
+        "Height":4.3,
+        "Image":"dunlop-jimi-hendrix-octavio-fuzz.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Eric Johnson Fuzz Face",
+        "Width":7.0,
+        "Height":7.0,
+        "Image":"dunlop-fuzzface-eric-johnson.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Fuzz Face Classic Germanium",
+        "Width":7.0,
+        "Height":7.0,
+        "Image":"dunlop-fuzzface-germanium.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Jimi Hendrix Fuzz Face",
+        "Width":7.0,
+        "Height":7.0,
+        "Image":"dunlop-fuzzface-jimi-hendrix.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Fuzz Face Germanium Mini",
+        "Width":3.5,
+        "Height":3.5,
+        "Image":"dunlop-fuzzface-germanium-mini.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Jimi Hendrix Fuzz Face Mini",
+        "Width":3.5,
+        "Height":3.5,
+        "Image":"dunlop-fuzzface-jimi-hendrix-mini.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Silicon Fuzz Face Mini",
+        "Width":3.5,
+        "Height":3.5,
+        "Image":"dunlop-fuzzface-silicon-mini.png"
     },
     {
         "Brand":"Dwarfcraft Devices",
@@ -2506,6 +2569,13 @@
         "Image":"ehx-synth9.png"
     },
     {
+        "Brand":"Electro Harmonix",
+        "Name":"Ocean 11",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"ehx-ocean11.png"
+    },
+    {
         "Brand":"Elektron",
         "Name":"Analog Drive",
         "Width":6.8,
@@ -2812,6 +2882,13 @@
         "Width":3.18,
         "Height":5.39,
         "Image":"fender-levelsetbuffer.png"
+    },
+    {
+        "Brand":"Fender",
+        "Name":"FVP-1 Volume",
+        "Width":3.5,
+        "Height":8.63,
+        "Image":"fender-fvp1.png"
     },
     {
         "Brand":"Fender",
@@ -3809,6 +3886,13 @@
     },
     {
         "Brand":"Keeley",
+        "Name":"Caverns V2",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"keeley-cavernsv2.png"
+    },
+    {
+        "Brand":"Keeley",
         "Name":"DS-9",
         "Width":2.5,
         "Height":4.41,
@@ -4219,6 +4303,13 @@
         "Width":2.59,
         "Height":4.3,
         "Image":"miaudio-supercrunchbox.png"
+    },
+    {
+        "Brand":"MI Audio",
+        "Name":"Super Crunch Box V2",
+        "Width":2.59,
+        "Height":4.3,
+        "Image":"mi-audio-super-crunch-box-v2.png"
     },
     {
         "Brand":"MXR",
@@ -4688,6 +4779,13 @@
         "Width":2.93,
         "Height":4.88,
         "Image":"maxon-vop9.png"
+    },
+    {
+        "Brand":"Maxon",
+        "Name":"Overdrive OD-9",
+        "Width":2.93,
+        "Height":4.88,
+        "Image":"maxon-overdrive-od-9.png"
     },
     {
         "Brand":"Meris",
@@ -6413,6 +6511,13 @@
     },
     {
         "Brand":"TC Electronics",
+        "Name":"Wiretap Riff Recorder",
+        "Width":2.01,
+        "Height":3.66,
+        "Image":"tc-wiretap.png"
+    },
+    {
+        "Brand":"TC Electronics",
         "Name":"Ditto",
         "Width":2,
         "Height":3.5,
@@ -6480,6 +6585,13 @@
         "Width":2.83,
         "Height":4.8,
         "Image":"tc-halloffame.png"
+    },
+    {
+        "Brand":"TC Electronics",
+        "Name":"Hall of Fame 2",
+        "Width":2.83,
+        "Height":4.8,
+        "Image":"tc-halloffame2.png"
     },
     {
         "Brand":"TC Electronics",
@@ -6629,6 +6741,13 @@
         "Image":"tcelectronic-viscousvibe.png"
     },
     {
+        "Brand":"TC Electronics",
+        "Name":"Quintessence Harmony",
+        "Width":2.83,
+        "Height":4.8,
+        "Image":"tc-quintessence.png"
+    },
+    {
         "Brand":"Tapestry Audio",
         "Name":"Bloomery",
         "Width":2.25,
@@ -6662,6 +6781,13 @@
         "Width":2.75,
         "Height":5.7,
         "Image":"thorpy-peacekeeper.png"
+    },
+    {
+        "Brand":"Thorpy",
+        "Name":"Fallout Cloud",
+        "Width":2.75,
+        "Height":5.7,
+        "Image":"thorpy-fallout-cloud.png"
     },
     {
         "Brand":"Throbak",
@@ -7061,6 +7187,27 @@
         "Width":4.05,
         "Height":5,
         "Image":"wampler-dualfusionv1.png"
+    },
+    {
+        "Brand":"Wampler",
+        "Name":"Dual Fusion V2",
+        "Width":4.5,
+        "Height":3.58,
+        "Image":"wampler-dualfusion.png"
+    },
+    {
+        "Brand":"Wampler",
+        "Name":"Hot Wired V2",
+        "Width":4.5,
+        "Height":3.58,
+        "Image":"wampler-hardwire.png"
+    },
+    {
+        "Brand":"Wampler",
+        "Name":"Paisley Deluxe",
+        "Width":4.66,
+        "Height":3.58,
+        "Image":"wampler-paisleydlx.png"
     },
     {
         "Brand":"Wampler",
