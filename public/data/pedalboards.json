@@ -175,6 +175,27 @@
         "Image":"temple-solo18.png"
     },
     {
+        "Brand":"Templeboards",
+        "Name":"Trio 21",
+        "Width":21,
+        "Height":16.5,
+        "Image":"temple-trio-21.png"
+    },
+    {
+        "Brand":"Templeboards",
+        "Name":"Trio 28",
+        "Width":28,
+        "Height":16.5,
+        "Image":"temple-trio-28.png"
+    },
+    {
+        "Brand":"Templeboards",
+        "Name":"Trio 43",
+        "Width":43,
+        "Height":16.5,
+        "Image":"temple-trio-43.png"
+    },
+    {
         "Brand":"Trav's",
         "Name":"14.5 x 28 pedalboard",
         "Width":28,

@@ -1954,6 +1954,20 @@
     },
     {
         "Brand":"Disaster Area",
+        "Name":"Micro Clock",
+        "Width":1.65,
+        "Height":3.65,
+        "Image":"disasterarea-microclock.png"
+    },
+    {
+        "Brand":"Disaster Area",
+        "Name":"Smart Clock",
+        "Width":2.85,
+        "Height":4.87,
+        "Image":"disasterarea-smartclock.png"
+    },
+    {
+        "Brand":"Disaster Area",
         "Name":"DPC-8EZ gen3",
         "Width":10,
         "Height":2.88,
@@ -3148,6 +3162,13 @@
         "Width":4.7,
         "Height":2.5,
         "Image":"gfi-specularreverbv2.png"
+    },
+    {
+        "Brand":"GFI System",
+        "Name":"Jonassus",
+        "Width":3.0315,
+        "Height":4.72441,
+        "Image":"gfi-jonassus.png"
     },
     {
         "Brand":"GFI System",
