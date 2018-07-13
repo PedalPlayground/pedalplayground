@@ -7,6 +7,13 @@
         "Image":"1981-inventions.png"
     },
     {
+        "Brand":"Laney",
+        "Name":"Black Country Customs Tony Iommi Boost",
+        "Width":2.6,
+        "Height":4.4,
+        "Image":"laney-black-country-boost.png"
+    },
+    {
         "Brand":"Misc",
         "Name":"12 Inch Ruler",
         "Width":12,
