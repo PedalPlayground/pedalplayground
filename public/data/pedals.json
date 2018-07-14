@@ -7,6 +7,13 @@
         "Image":"1981-inventions.png"
     },
     {
+        "Brand":"Laney",
+        "Name":"Black Country Customs Tony Iommi Boost",
+        "Width":2.6,
+        "Height":4.4,
+        "Image":"laney-black-country-boost.png"
+    },
+    {
         "Brand":"Misc",
         "Name":"12 Inch Ruler",
         "Width":12,
@@ -1954,6 +1961,20 @@
     },
     {
         "Brand":"Disaster Area",
+        "Name":"Micro Clock",
+        "Width":1.65,
+        "Height":3.65,
+        "Image":"disasterarea-microclock.png"
+    },
+    {
+        "Brand":"Disaster Area",
+        "Name":"Smart Clock",
+        "Width":2.85,
+        "Height":4.87,
+        "Image":"disasterarea-smartclock.png"
+    },
+    {
+        "Brand":"Disaster Area",
         "Name":"DPC-8EZ gen3",
         "Width":10,
         "Height":2.88,
@@ -3151,6 +3172,13 @@
     },
     {
         "Brand":"GFI System",
+        "Name":"Jonassus",
+        "Width":3.0315,
+        "Height":4.72441,
+        "Image":"gfi-jonassus.png"
+    },
+    {
+        "Brand":"GFI System",
         "Name":"Specular Reverb V3",
         "Width":4.7,
         "Height":2.5,
@@ -3502,7 +3530,7 @@
     {
         "Brand":"J. Rockett",
         "Name":"45",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-45.png"
     },
@@ -3523,14 +3551,14 @@
     {
         "Brand":"J. Rockett",
         "Name":"Archer",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-archersilver.png"
     },
     {
         "Brand":"J. Rockett",
         "Name":"Archer Ikon",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-archerikon.png"
     },
@@ -3544,7 +3572,7 @@
     {
         "Brand":"J. Rockett",
         "Name":"Boing Reverb",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-boing.png"
     },
@@ -3558,7 +3586,7 @@
     {
         "Brand":"J. Rockett",
         "Name":"GTO",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-gto.png"
     },
@@ -3572,14 +3600,14 @@
     {
         "Brand":"J. Rockett",
         "Name":"Rockaway Archer",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-rockawayarcher.png"
     },
     {
         "Brand":"J. Rockett",
         "Name":"The Dude",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-thedude.png"
     },
@@ -5801,6 +5829,41 @@
         "Width":2.72,
         "Height":5.17,
         "Image":"seymourduncan-vaportrail.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Buzzz",
+        "Width":3.68,
+        "Height":4.75,
+        "Image":"smallsound-buzzz.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Fuck Overdrive",
+        "Width":3.68,
+        "Height":4.82,
+        "Image":"smallsound-fuck.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Team Awesome Fuzz Machine",
+        "Width":3.68,
+        "Height":4.82,
+        "Image":"smallsound-teamawesome.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Mini",
+        "Width":2.7,
+        "Height":4.3,
+        "Image":"smallsound-mini.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Pretty Years",
+        "Width":4.7,
+        "Height":5.7,
+        "Image":"smallsound-prettyyears.png"
     },
     {
         "Brand":"Shure",
