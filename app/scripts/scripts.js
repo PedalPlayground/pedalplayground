@@ -14,7 +14,7 @@ $(document).ready(function(){
 	
 	$('.pedal-list').on('select2:select', function (e) {
 		$("#add-selected-pedal").click();
-		$(this).trigger('change').focus();
+		$(this).trigger('change').focus(); 
 		//$(this).val(null).trigger('change').focus();
 	});
 	
@@ -38,8 +38,8 @@ $(document).ready(function(){
 		
 		// If hidden multiplier value doesn't exist, create it
 		if($("#multiplier").length == 0) {
-			$('.canvas').append('<input id="multiplier" type="hidden" value="30">');
-			var multiplier = 30;
+			$('.canvas').append('<input id="multiplier" type="hidden" value="25">');
+			var multiplier = 25;
 		// If hidden multiplier value does exist set variable
 		} else {
 			var multiplier 	 = $('#multiplier').val();
@@ -57,7 +57,7 @@ $(document).ready(function(){
 		$('#multiplier').val(multiplier);
 		
 		// Update scale of bg image
-		$('.canvas').css('background-size', multiplier + 'px');
+		$('.canvas').css('background-size', multiplier + 'px'); 
 		
 		// Update all items with stored scale
 		$(".item").each(function() { 
