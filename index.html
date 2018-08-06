@@ -28,9 +28,15 @@
 	</header>
 	<div class="site-body">
 		<div class="sidebar">
-			<div class="sidebar__section">
-				<h5>Canvas Scale</h5>
-				<input id="canvas-scale" type="number" value="25">
+			<div id="canvas-scale-form" class="form-inline">
+				<div class="input-group">
+					<div class="input-group-addon input-sm">Scale</div>
+					<input class="form-control input-sm" id="canvas-scale" type="number" value="25">
+					
+				</div>
+				<a href="#" class="btn btn-sm" data-toggle="modal" data-target="#canvas-scale-modal">
+					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				</a>
 			</div>
 			<div class="sidebar__section">
 				<h4>Add a Pedalboard</h4>
@@ -99,28 +105,43 @@
 
 			<div class="sidebar__section">
 				<button id="clear-canvas" class="btn btn-sm btn-danger btn-block" data-toggle="modal" data-target="#clear-canvas-modal">Clear</button>
-
-				<div id="clear-canvas-modal" class="modal fade" tabindex="-1" role="dialog">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h4 class="modal-title">Clear Canvas</h4>
-							</div>
-							<div class="modal-body">
-								<p>Are you sure about this?</p>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-								<button type="button" class="btn btn-danger" id="clear-canvas-confirmation">Clear Canvas</button>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 		<div class="canvas">
 			<input id="multiplier" type="hidden" value="29">
+		</div>
+		<div id="clear-canvas-modal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Clear Canvas</h4>
+					</div>
+					<div class="modal-body">
+						<p>Are you sure about this?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-danger" id="clear-canvas-confirmation">Clear Canvas</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="canvas-scale-modal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Canvas Scale</h4>
+					</div>
+					<div class="modal-body">
+						<p>The canvas scale is the number of pixels on the canvas that equal 1 inch. Increasing the value will increase the size of everything on the canvas equally, but your layout will need some correcting.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
