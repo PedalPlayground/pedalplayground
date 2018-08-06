@@ -7321,3 +7321,24 @@ strong, th {
         display: block;
         padding: 10px;
         border-bottom: 1px solid #ddd; } }
+
+#canvas-scale-form {
+  display: none; }
+  @media (min-width: 1100px) {
+    #canvas-scale-form {
+      position: fixed;
+      z-index: 2;
+      bottom: 0;
+      right: 0;
+      padding: 7px;
+      margin: 0;
+      border: 0;
+      display: flex;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-top-left-radius: 5px; }
+      #canvas-scale-form input {
+        width: 50px; }
+      #canvas-scale-form h5 {
+        line-height: 20px;
+        margin: 3px 8px 0 0; } }

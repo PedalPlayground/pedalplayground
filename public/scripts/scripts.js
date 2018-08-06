@@ -21277,7 +21277,6 @@ $(document).ready(function(){
 		savePedalCanvas();
 
 	});
-	
 
 	$('body').on('click', '#clear-canvas-confirmation', function(){
 		$(".canvas").empty();
