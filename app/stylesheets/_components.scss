@@ -84,17 +84,6 @@ $border: 1px solid rgba(black, .13);
 		transition: all .15s;
 	}
 
-	&.selected {
-		.artwork {
-			$same: 0px 0px 5px rgba(blue, .5);
-			//-webkit-filter: drop-shadow( $same );
-			//filter: drop-shadow( $same );
-		}
-		&:after {
-			border-color: $brand-primary;
-		}
-	}
-
 	&.rotate-90 {
 		.artwork {
 			@include rotate(90deg);
@@ -161,22 +150,29 @@ $border: 1px solid rgba(black, .13);
 			}
 		}
 	}
+
+	// Hover state
 	&:hover {
-		&:before {
-			$m: 4px;
-			z-index: 0;
-			content: " ";
-			border: 2px dashed rgba(#999, .5);
-			position: absolute;
-			left: 	$m;
-			top: 	$m;
-			right: 	$m;
-			bottom: $m;
+		&:after {
+			border-color: rgba($brand-primary, .5);
 		}
 		.actions {
 			opacity: 1;
 		}
 	}
+
+	// Selected state
+	&.selected {
+		.artwork {
+			$same: 0px 0px 5px rgba(blue, .5);
+			//-webkit-filter: drop-shadow( $same );
+			//filter: drop-shadow( $same );
+		}
+		&:after {
+			border-color: $brand-primary;
+		}
+	}
+
 	// Hide controls while dragging
 	&.is-dragging {
 		.actions {
@@ -212,8 +208,8 @@ $border: 1px solid rgba(black, .13);
 		background-image: linear-gradient( to top left, rgba(white, 0), rgba(white, .2) );
 		position: absolute;
 		@include cover;
-		left: 3px;
-		right: 3px;
+		// left: 3px;
+		// right: 3px;
 	}
 	&__knob1,
 	&__knob2 {
@@ -232,25 +228,6 @@ $border: 1px solid rgba(black, .13);
 	}
 	&__knob2 {
 		right: 15%;
-	}
-	&__jack1,
-	&__jack2 {
-		width: 3px;
-		height: 10px;
-		position: absolute;
-		background-color: #999;
-		border: 1px solid rgba(black, .3);
-		top: 50%;
-	}
-	&__jack1 {
-		left: 0;
-		border-radius: 2px 0 0 2px;
-		border-right: 0;
-	}
-	&__jack2 {
-		right: 0;
-		border-radius:  0 2px 2px 0;
-		border-left: 0;
 	}
 	&__switch {
 		position: absolute;
@@ -374,7 +351,7 @@ $border: 1px solid rgba(black, .13);
 
 .panel {
 	z-index: 3;
-	@media (min-width: 1024px) {
+	@media (min-width: 768px) {
 		position: absolute;
 		top: 67px;
 		right: 20px;
@@ -393,6 +370,30 @@ $border: 1px solid rgba(black, .13);
 			display: block;
 			padding: 10px;
 			border-bottom: 1px solid #ddd;
+		}
+	}
+}
+
+#canvas-scale-form {
+	display: none;
+	@media (min-width: 1100px) {
+		position: fixed;
+		z-index: 2;
+		bottom: 0;
+		right: 0;
+		padding: 7px;
+		margin: 0;
+		border: 0;
+		display: flex;
+		background: rgba(white, .5);
+		border: 1px solid rgba(black, .12);
+		border-top-left-radius: 5px;
+		input {
+			width: 50px;
+		}
+		h5 {
+			line-height: 20px;
+			margin: 3px 8px 0 0;
 		}
 	}
 }
