@@ -10,6 +10,7 @@ $(document).ready(function(){
 	// Make lists searchable
 	$('.pedal-list').select2({
 		placeholder: "Select a pedal",
+		width: 'style',
 	});
 	
 	$('.pedal-list').on('select2:select', function (e) {
@@ -20,6 +21,7 @@ $(document).ready(function(){
 	
 	$('.pedalboard-list').select2({
 		placeholder: "Select a pedalboard",
+		width: 'style',
 	});
 	
 	$('.pedalboard-list').on('select2:select', function (e) {
@@ -50,6 +52,7 @@ $(document).ready(function(){
 	});
 
 	
+
 	// When user changes scale, update stuffs
 	$('#canvas-scale').change(function() {
 		// update var
@@ -94,6 +97,15 @@ $(document).ready(function(){
 
 	});
 	
+	$('body').on('click', '.sidebar-open', function(e){
+		$(".site-body").addClass("is-slid");
+		e.preventDefault();
+	});
+
+	$('body').on('click', '.sidebar-close', function(e){
+		$(".site-body").removeClass("is-slid");
+		e.preventDefault();
+	});
 
 	$('body').on('click', '#clear-canvas-confirmation', function(){
 		$(".canvas").empty();
