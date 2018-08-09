@@ -7019,7 +7019,7 @@ strong, th {
 
 .sidebar-close {
   display: none; }
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     .sidebar-close {
       display: block;
       position: absolute;
@@ -7041,7 +7041,7 @@ strong, th {
 
 .sidebar-open {
   display: none; }
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     .sidebar-open {
       display: block;
       position: fixed;
@@ -7395,10 +7395,12 @@ strong, th {
     box-shadow: 0 0 5px #d9534f; }
 
 .panel {
-  z-index: 3; }
+  z-index: 3;
+  display: none; }
   @media (min-width: 768px) {
     .panel {
-      position: absolute;
+      display: block;
+      position: fixed;
       top: 67px;
       right: 20px;
       border-radius: 10px;
