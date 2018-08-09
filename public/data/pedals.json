@@ -6217,10 +6217,31 @@
     },
     {
         "Brand":"Suhr",
+        "Name":"Alexa",
+        "Width":4.875,
+        "Height":3.875,
+        "Image":"suhr-alexa.png"
+    },
+    {
+        "Brand":"Suhr",
         "Name":"Jack Rabbit",
         "Width":2.5,
         "Height":4.5,
         "Image":"suhr-jackrabbit.png"
+    },
+    {
+        "Brand":"Suhr",
+        "Name":"Riot Mini",
+        "Width":1.65,
+        "Height":3.7,
+        "Image":"suhr-riot-mini.png"
+    },
+    {
+        "Brand":"Suhr",
+        "Name":"Shiba Mini",
+        "Width":1.65,
+        "Height":3.7,
+        "Image":"suhr-shiba-mini.png"
     },
     {
         "Brand":"Suhr",
