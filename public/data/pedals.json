@@ -1,5 +1,19 @@
 [
     {
+        "Brand":"1981 Inventions",
+        "Name":"DRV",
+        "Width":3.52,
+        "Height":4.3,
+        "Image":"1981-inventions.png"
+    },
+    {
+        "Brand":"Laney",
+        "Name":"Black Country Customs Tony Iommi Boost",
+        "Width":2.6,
+        "Height":4.4,
+        "Image":"laney-black-country-boost.png"
+    },
+    {
         "Brand":"Misc",
         "Name":"12 Inch Ruler",
         "Width":12,
@@ -1603,6 +1617,13 @@
         "Image":"dawnerprince-starla.png"
     },
     {
+        "Brand":"Dawner Prince",
+        "Name":"Diktator Overdrive",
+        "Width":4.4,
+        "Height":3.5,
+        "Image":"dawner-prince-diktator-od.png"
+    },
+    {
         "Brand":"Death By Audio",
         "Name":"Echo Dream 2",
         "Width":4.65,
@@ -1940,6 +1961,20 @@
     },
     {
         "Brand":"Disaster Area",
+        "Name":"Micro Clock",
+        "Width":1.65,
+        "Height":3.65,
+        "Image":"disasterarea-microclock.png"
+    },
+    {
+        "Brand":"Disaster Area",
+        "Name":"Smart Clock",
+        "Width":2.85,
+        "Height":4.87,
+        "Image":"disasterarea-smartclock.png"
+    },
+    {
+        "Brand":"Disaster Area",
         "Name":"DPC-8EZ gen3",
         "Width":10,
         "Height":2.88,
@@ -2035,6 +2070,55 @@
         "Width":2.77,
         "Height":4.5,
         "Image":"dunlop-echoplex.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Jimi Hendrix Octavio Fuzz",
+        "Width":2.4,
+        "Height":4.3,
+        "Image":"dunlop-jimi-hendrix-octavio-fuzz.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Eric Johnson Fuzz Face",
+        "Width":7.0,
+        "Height":7.0,
+        "Image":"dunlop-fuzzface-eric-johnson.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Fuzz Face Classic Germanium",
+        "Width":7.0,
+        "Height":7.0,
+        "Image":"dunlop-fuzzface-germanium.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Jimi Hendrix Fuzz Face",
+        "Width":7.0,
+        "Height":7.0,
+        "Image":"dunlop-fuzzface-jimi-hendrix.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Fuzz Face Germanium Mini",
+        "Width":3.5,
+        "Height":3.5,
+        "Image":"dunlop-fuzzface-germanium-mini.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Jimi Hendrix Fuzz Face Mini",
+        "Width":3.5,
+        "Height":3.5,
+        "Image":"dunlop-fuzzface-jimi-hendrix-mini.png"
+    },
+    {
+        "Brand":"Dunlop",
+        "Name":"Silicon Fuzz Face Mini",
+        "Width":3.5,
+        "Height":3.5,
+        "Image":"dunlop-fuzzface-silicon-mini.png"
     },
     {
         "Brand":"Dwarfcraft Devices",
@@ -2822,6 +2906,13 @@
     },
     {
         "Brand":"Fender",
+        "Name":"FVP-1 Volume",
+        "Width":3.5,
+        "Height":8.63,
+        "Image":"fender-fvp1.png"
+    },
+    {
+        "Brand":"Fender",
         "Name":"Level Set Buffer",
         "Width":2.9,
         "Height":4.9,
@@ -3078,6 +3169,13 @@
         "Width":4.7,
         "Height":2.5,
         "Image":"gfi-specularreverbv2.png"
+    },
+    {
+        "Brand":"GFI System",
+        "Name":"Jonassus",
+        "Width":3.0315,
+        "Height":4.72441,
+        "Image":"gfi-jonassus.png"
     },
     {
         "Brand":"GFI System",
@@ -3432,7 +3530,7 @@
     {
         "Brand":"J. Rockett",
         "Name":"45",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-45.png"
     },
@@ -3453,14 +3551,14 @@
     {
         "Brand":"J. Rockett",
         "Name":"Archer",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-archersilver.png"
     },
     {
         "Brand":"J. Rockett",
         "Name":"Archer Ikon",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-archerikon.png"
     },
@@ -3474,7 +3572,7 @@
     {
         "Brand":"J. Rockett",
         "Name":"Boing Reverb",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-boing.png"
     },
@@ -3488,7 +3586,7 @@
     {
         "Brand":"J. Rockett",
         "Name":"GTO",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-gto.png"
     },
@@ -3502,14 +3600,14 @@
     {
         "Brand":"J. Rockett",
         "Name":"Rockaway Archer",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-rockawayarcher.png"
     },
     {
         "Brand":"J. Rockett",
         "Name":"The Dude",
-        "Width":2.5,
+        "Width":2.3,
         "Height":4,
         "Image":"jrockett-thedude.png"
     },
@@ -3813,6 +3911,13 @@
         "Width":3.7,
         "Height":4.7,
         "Image":"keeley-dmdrive.png"
+    },
+    {
+        "Brand":"Keeley",
+        "Name":"Caverns V2",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"keeley-cavernsv2.png"
     },
     {
         "Brand":"Keeley",
@@ -4226,6 +4331,13 @@
         "Width":2.59,
         "Height":4.3,
         "Image":"miaudio-supercrunchbox.png"
+    },
+    {
+        "Brand":"MI Audio",
+        "Name":"Super Crunch Box V2",
+        "Width":2.59,
+        "Height":4.3,
+        "Image":"mi-audio-super-crunch-box-v2.png"
     },
     {
         "Brand":"MXR",
@@ -5719,6 +5831,41 @@
         "Image":"seymourduncan-vaportrail.png"
     },
     {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Buzzz",
+        "Width":3.68,
+        "Height":4.75,
+        "Image":"smallsound-buzzz.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Fuck Overdrive",
+        "Width":3.68,
+        "Height":4.82,
+        "Image":"smallsound-fuck.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Team Awesome Fuzz Machine",
+        "Width":3.68,
+        "Height":4.82,
+        "Image":"smallsound-teamawesome.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Mini",
+        "Width":2.7,
+        "Height":4.3,
+        "Image":"smallsound-mini.png"
+    },
+    {
+        "Brand":"Smallsound/Bigsound",
+        "Name":"Pretty Years",
+        "Width":4.7,
+        "Height":5.7,
+        "Image":"smallsound-prettyyears.png"
+    },
+    {
         "Brand":"Shure",
         "Name":"GLXD 6",
         "Width":3.7,
@@ -6448,6 +6595,13 @@
     },
     {
         "Brand":"TC Electronics",
+        "Name":"Wiretap Riff Recorder",
+        "Width":2.01,
+        "Height":3.66,
+        "Image":"tc-wiretap.png"
+    },
+    {
+        "Brand":"TC Electronics",
         "Name":"Ditto",
         "Width":2,
         "Height":3.5,
@@ -7117,6 +7271,27 @@
         "Width":4.05,
         "Height":5,
         "Image":"wampler-dualfusionv1.png"
+    },
+    {
+        "Brand":"Wampler",
+        "Name":"Dual Fusion V2",
+        "Width":4.5,
+        "Height":3.58,
+        "Image":"wampler-dualfusion.png"
+    },
+    {
+        "Brand":"Wampler",
+        "Name":"Hot Wired V2",
+        "Width":4.5,
+        "Height":3.58,
+        "Image":"wampler-hardwire.png"
+    },
+    {
+        "Brand":"Wampler",
+        "Name":"Paisley Deluxe",
+        "Width":4.66,
+        "Height":3.58,
+        "Image":"wampler-paisleydlx.png"
     },
     {
         "Brand":"Wampler",
