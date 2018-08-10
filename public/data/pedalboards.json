@@ -168,6 +168,27 @@
         "Image":"pedaltrain-terra42.png"
     },
     {
+        "Brand":"Rockboard by Warwick",
+        "Name":"Duo 2.1",
+        "Width":18.125,
+        "Height":5.75,
+        "Image":"rockboard-duo-21.png"
+    },
+    {
+        "Brand":"Rockboard by Warwick",
+        "Name":"Tres 3.1",
+        "Width":20.0625,
+        "Height":9.3125,
+        "Image":"rockboard-tres-31.png"
+    },
+    {
+        "Brand":"Rockboard by Warwick",
+        "Name":"Quad 2.1",
+        "Width":18.125,
+        "Height":12.8125,
+        "Image":"rockboard-quad-41.png"
+    },
+    {
         "Brand":"Templeboards",
         "Name":"Solo 18",
         "Width":18,
