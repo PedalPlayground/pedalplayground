@@ -183,10 +183,17 @@
     },
     {
         "Brand":"Rockboard by Warwick",
-        "Name":"Quad 2.1",
+        "Name":"Quad 4.1",
         "Width":18.125,
         "Height":12.8125,
         "Image":"rockboard-quad-41.png"
+    },
+    {
+        "Brand":"Rockboard by Warwick",
+        "Name":"Quad 4.2",
+        "Width":24,
+        "Height":12.8125,
+        "Image":"rockboard-quad-42.png"
     },
     {
         "Brand":"Templeboards",
