@@ -1585,7 +1585,7 @@
         "Brand":"D'Addario",
         "Name":"Tuner",
         "Width":2.06,
-        "Height":4.9,
+        "Height":4.85,
         "Image":"daddario-tuner.png"
     },
     {
@@ -7640,7 +7640,7 @@
         "Brand":"Xotic",
         "Name":"EP Booster",
         "Width":2,
-        "Height":3.5,
+        "Height":3.7,
         "Image":"xotic-ep.png"
     },
     {
@@ -7654,7 +7654,7 @@
         "Brand":"Xotic",
         "Name":"SP Compressor",
         "Width":2,
-        "Height":3.5,
+        "Height":3.7,
         "Image":"xotic-sp.png"
     },
     {
