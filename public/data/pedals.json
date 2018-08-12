@@ -3872,6 +3872,13 @@
     },
     {
         "Brand":"Keeley",
+        "Name":"Aria",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"keeley-aria.png"
+    },
+    {
+        "Brand":"Keeley",
         "Name":"Black Glass",
         "Width":2.5,
         "Height":4.41,
