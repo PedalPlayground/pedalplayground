@@ -2,7 +2,7 @@
     {
         "Brand":"AMT",
         "Name":"M-1",
-        "Width":2.44,
+        "Width":2.9,
         "Height":4.3,
         "Image":"amt-m1.png"
     },
@@ -16,7 +16,7 @@
     {
         "Brand":"AMT",
         "Name":"E-1",
-        "Width":2.44,
+        "Width":2.9,
         "Height":4.3,
         "Image":"amt-e1.png"
     },
@@ -171,7 +171,7 @@
         "Brand":"Analog.Man",
         "Name":"King of Tone",
         "Width":4.8,
-        "Height":3.7,
+        "Height":3.85,
         "Image":"analogman-kingoftone.png"
     },
     {
