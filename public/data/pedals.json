@@ -2,14 +2,14 @@
     {
         "Brand":"AMT",
         "Name":"M-1",
-        "Width":2.44,
+        "Width":2.9,
         "Height":4.3,
         "Image":"amt-m1.png"
     },
     {
         "Brand":"AMT",
         "Name":"E-1",
-        "Width":2.44,
+        "Width":2.9,
         "Height":4.3,
         "Image":"amt-e1.png"
     },
