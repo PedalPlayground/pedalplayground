@@ -7,6 +7,13 @@
         "Image":"amt-m1.png"
     },
     {
+        "Brand":"TC Electronic",
+        "Name":"Stereo Chorus Pitch Modulator & Flanger",
+        "Width":3.85,
+        "Height":4.9,
+        "Image":"tc-chorus-pitch-flanger.png"
+    },
+    {
         "Brand":"AMT",
         "Name":"E-1",
         "Width":2.44,
