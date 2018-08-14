@@ -3816,6 +3816,13 @@
     },
     {
         "Brand":"Jackson Audio",
+        "Name":"Bloom",
+        "Width":2.652,
+        "Height":4.8,
+        "Image":"jackson-bloom.png"
+    },
+    {
+        "Brand":"Jackson Audio",
         "Name":"Prism",
         "Width":2.5,
         "Height":4.875,
