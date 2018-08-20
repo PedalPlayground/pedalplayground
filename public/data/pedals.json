@@ -1723,6 +1723,20 @@
     },
     {
         "Brand":"Diamond",
+        "Name":"Vibrato",
+        "Width":4.75,
+        "Height":4.7,
+        "Image":"diamond-vibrato.png"
+    },
+    {
+        "Brand":"Diamond",
+        "Name":"Halo Chorus",
+        "Width":4.78,
+        "Height":4.75,
+        "Image":"diamond-halo-chorus.png"
+    },
+    {
+        "Brand":"Diamond",
         "Name":"Compressor JR",
         "Width":2.75,
         "Height":4.8,
@@ -3757,6 +3771,13 @@
         "Width":2.64,
         "Height":4.8,
         "Image":"jhs-pinkpanther.png"
+    },
+    {
+        "Brand":"JHS",
+        "Name":"Lucky Cat",
+        "Width":2.64,
+        "Height":4.8,
+        "Image":"jhs-luckycat.png"
     },
     {
         "Brand":"JHS",
