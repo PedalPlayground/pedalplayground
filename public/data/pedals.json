@@ -3760,6 +3760,20 @@
     },
     {
         "Brand":"JHS",
+        "Name":"Emperor V2",
+        "Width":2.64,
+        "Height":4.8,
+        "Image":"jhs-emperor-v2.png"
+    },
+    {
+        "Brand":"JHS",
+        "Name":"Panther Cub V2",
+        "Width":2.64,
+        "Height":4.8,
+        "Image":"jhs-panther-cup-2.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"Prestige",
         "Width":1.79,
         "Height":3.6,
