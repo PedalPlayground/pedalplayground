@@ -21,6 +21,13 @@
         "Image":"amt-e1.png"
     },
     {
+        "Brand":"AMT",
+        "Name":"GR-4",
+        "Width":10.3,
+        "Height":4.6,
+        "Image":"amt-gr4.png"
+    },
+    {
         "Brand":"1981 Inventions",
         "Name":"DRV",
         "Width":3.52,
@@ -299,6 +306,13 @@
         "Width":4.13,
         "Height":7.2,
         "Image":"bkbutler-tubedriver.png"
+    },
+    {
+        "Brand":"BluGuitar",
+        "Name":"Amp1",
+        "Width":9.65,
+        "Height":7.56,
+        "Image":"bluguitar-amp1.png"
     },
     {
         "Brand":"BOSS",
