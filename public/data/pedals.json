@@ -3901,8 +3901,8 @@
     {
         "Brand":"Joyo",
         "Name":"Wooden Sound",
-        "Width":1.5,
-        "Height":2.9,
+        "Width":1.72,
+        "Height":2.83,
         "Image":"joyo-woodensound.png"
     },
     {
@@ -4412,8 +4412,8 @@
     {
         "Brand":"MXR",
         "Name":"5150 Overdrive EVH",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":4.3,
+        "Height":2.5,
         "Image":"mxr-5150.png"
     },
     {
@@ -5322,8 +5322,8 @@
     {
         "Brand":"NUX",
         "Name":"Loop Core",
-        "Width":3.74,
-        "Height":5.19,
+        "Width":2.95,
+        "Height":4.72,
         "Image":"nux-loopcore.png"
     },
     {
