@@ -21,6 +21,13 @@
         "Image":"amt-e1.png"
     },
     {
+        "Brand":"AMT",
+        "Name":"GR-4",
+        "Width":10.3,
+        "Height":4.6,
+        "Image":"amt-gr4.png"
+    },
+    {
         "Brand":"1981 Inventions",
         "Name":"DRV",
         "Width":3.52,
@@ -299,6 +306,13 @@
         "Width":4.13,
         "Height":7.2,
         "Image":"bkbutler-tubedriver.png"
+    },
+    {
+        "Brand":"BluGuitar",
+        "Name":"Amp1",
+        "Width":9.65,
+        "Height":7.56,
+        "Image":"bluguitar-amp1.png"
     },
     {
         "Brand":"BOSS",
@@ -621,6 +635,13 @@
         "Width":2.875,
         "Height":5.125,
         "Image":"boss-rc3.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"RC-30 Loop Station",
+        "Width":6.81,
+        "Height":6.25,
+        "Image":"boss-rc30.png"
     },
     {
         "Brand":"BOSS",
@@ -3913,6 +3934,13 @@
         "Image":"joyo-irontune.png"
     },
     {
+        "Brand":"Joyo",
+        "Name":"Wooden Sound",
+        "Width":1.5,
+        "Height":2.9,
+        "Image":"joyo-woodensound.png"
+    },
+    {
         "Brand":"Keeley",
         "Name":"1962",
         "Width":2.5,
@@ -4387,6 +4415,13 @@
         "Width":2.5,
         "Height":4.37,
         "Image":"lovepedal-vibronaut.png"
+    },
+    {
+        "Brand":"Malekko",
+        "Name":"Spring",
+        "Width":1.77,
+        "Height":3.58,
+        "Image":"malekko-spring.png"
     },
     {
         "Brand":"MI Audio",
@@ -5321,6 +5356,13 @@
     },
     {
         "Brand":"NUX",
+        "Name":"Loop Core",
+        "Width":3.74,
+        "Height":5.19,
+        "Image":"nux-loopcore.png"
+    },
+    {
+        "Brand":"NUX",
         "Name":"Rotary",
         "Width":4.25197,
         "Height":4.92126,
@@ -5521,6 +5563,13 @@
         "Width":2.5,
         "Height":4.3,
         "Image":"paulc-timmy.png"
+    },
+    {
+        "Brand":"Pedal Pal FX",
+        "Name":"Gold Overdrive",
+        "Width":4.13,
+        "Height":4.60,
+        "Image":"pedalpalfx-goldoverdrive.png"
     },
     {
         "Brand":"Pete Cornish",
@@ -5941,6 +5990,13 @@
         "Width":3.7,
         "Height":5.3,
         "Image":"shure-glxd6.png"
+    },
+    {
+        "Brand":"Singular Sound",
+        "Name":"BeatBuddy",
+        "Width":3.58,
+        "Height":4.92,
+        "Image":"singularsound-beatbuddy.png"
     },
     {
         "Brand":"Sinvertek",
