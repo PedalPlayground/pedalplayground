@@ -4929,6 +4929,13 @@
     },
     {
         "Brand":"Meris",
+        "Name":"Enzo",
+        "Width":4.25,
+        "Height":4.5,
+        "Image":"meris-enzo.png"
+    },
+    {
+        "Brand":"Meris",
         "Name":"Ottobit Jr.",
         "Width":4.25,
         "Height":4.5,
