@@ -2263,15 +2263,15 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"Acapulco Gold",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.97,
         "Image":"earthquaker-acapulcogold.png"
     },
     {
         "Brand":"Earthquaker Devices",
         "Name":"Afterneath",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.93,
         "Image":"earthquaker-afterneath.png"
     },
     {
@@ -2291,15 +2291,15 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"Bit Commander",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.93,
         "Image":"earthquaker-bitcommander.png"
     },
     {
         "Brand":"Earthquaker Devices",
         "Name":"Cloven Hoof",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.97,
         "Image":"earthquaker-clovenhoof.png"
     },
     {
@@ -2312,8 +2312,8 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"Dispatch Master",
-        "Width":2.37,
-        "Height":4.37,
+        "Width":2.6,
+        "Height":4.93,
         "Image":"earthquakerdevices-dispatchmaster.png"
     },
     {
@@ -2326,8 +2326,8 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"Grand Orbiter",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.97,
         "Image":"earthquaker-grandorbiter.png"
     },
     {
@@ -2340,8 +2340,8 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"Hoof",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.97,
         "Image":"earthquaker-hoof.png"
     },
     {
@@ -2361,22 +2361,22 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"Levitation",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.93,
         "Image":"earthquaker-levitation.png"
     },
     {
         "Brand":"Earthquaker Devices",
         "Name":"Night Wire",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.93,
         "Image":"earthquaker-nightwire.png"
     },
     {
         "Brand":"Earthquaker Devices",
         "Name":"Organizer",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.93,
         "Image":"earthquaker-organizer.png"
     },
     {
@@ -2389,8 +2389,8 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"Park Fuzz Sound",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.97,
         "Image":"earthquaker-parkfuzz.png"
     },
     {
@@ -2403,15 +2403,15 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"Sea Machine",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.97,
         "Image":"earthquaker-seamachine.png"
     },
     {
         "Brand":"Earthquaker Devices",
         "Name":"Space Spiral",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.93,
         "Image":"earthquaker-spacespiral.png"
     },
     {
@@ -2431,29 +2431,29 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"The Depths",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.97,
         "Image":"earthquaker-thedepths.png"
     },
     {
         "Brand":"Earthquaker Devices",
         "Name":"Tone Job",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.97,
         "Image":"earthquaker-tonejob.png"
     },
     {
         "Brand":"Earthquaker Devices",
         "Name":"Transmisser",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.93,
         "Image":"earthquaker-transmisser.png"
     },
     {
         "Brand":"Earthquaker Devices",
         "Name":"Warden",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.97,
         "Image":"earthquaker-warden.png"
     },
     {
