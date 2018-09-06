@@ -2319,8 +2319,8 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"Dunes",
-        "Width":2.5,
-        "Height":4.625,
+        "Width":2.6,
+        "Height":4.97,
         "Image":"eqd-dunes.png"
     },
     {
@@ -4198,6 +4198,13 @@
         "Width":3.875,
         "Height":4.75,
         "Image":"kingsley-page.png"
+    },
+    {
+        "Brand":"Kingtone",
+        "Name":"Duelist",
+        "Width":4.67,
+        "Height":3.68,
+        "Image":"kingtone-duelist.png"
     },
     {
         "Brand":"Kliq",
@@ -6445,6 +6452,20 @@
         "Width":6.8,
         "Height":3.3,
         "Image":"strymon-zuma.png"
+    },
+    {
+        "Brand":"Strymon",
+        "Name":"Ojai R30",
+        "Width":6.8,
+        "Height":3.3,
+        "Image":"strymon-ojai-r30.png"
+    },
+    {
+        "Brand":"Strymon",
+        "Name":"Zuma R300",
+        "Width":6.8,
+        "Height":3.3,
+        "Image":"strymon-zumar300.png"
     },
     {
         "Brand":"Subdecay",
