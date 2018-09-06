@@ -7388,14 +7388,21 @@
         "Brand":"Wampler",
         "Name":"Clarksdale",
         "Width":2.6,
-        "Height":4.77,
+        "Height":4.93,
         "Image":"wampler-clarksdale.png"
+    },
+    {
+        "Brand":"Wampler",
+        "Name":"Pantheon",
+        "Width":2.6,
+        "Height":4.93,
+        "Image":"wampler-pantheon.png"
     },
     {
         "Brand":"Wampler",
         "Name":"Dracarys",
         "Width":2.6,
-        "Height":4.77,
+        "Height":4.93,
         "Image":"wampler-dracarys.png"
     },
     {
@@ -7430,14 +7437,14 @@
         "Brand":"Wampler",
         "Name":"Ego",
         "Width":2.6,
-        "Height":4.77,
+        "Height":4.93,
         "Image":"wampler-ego.png"
     },
     {
         "Brand":"Wampler",
         "Name":"Euphoria",
         "Width":2.6,
-        "Height":4.77,
+        "Height":4.93,
         "Image":"wampler-euphoria.png"
     },
     {
@@ -7451,7 +7458,7 @@
         "Brand":"Wampler",
         "Name":"Latitude Standard",
         "Width":2.6,
-        "Height":4.77,
+        "Height":4.93,
         "Image":"wampler-latitude.png"
     },
     {
@@ -7465,14 +7472,14 @@
         "Brand":"Wampler",
         "Name":"Paisley",
         "Width":2.6,
-        "Height":4.77,
+        "Height":4.93,
         "Image":"wampler-paisley.png"
     },
     {
         "Brand":"Wampler",
         "Name":"Pinnacle",
         "Width":2.6,
-        "Height":4.77,
+        "Height":4.93,
         "Image":"wampler-pinnacle.png"
     },
     {
@@ -7486,7 +7493,7 @@
         "Brand":"Wampler",
         "Name":"Plexi-Drive",
         "Width":2.6,
-        "Height":4.77,
+        "Height":4.93,
         "Image":"wampler-plexidrive.png"
     },
     {
@@ -7500,7 +7507,7 @@
         "Brand":"Wampler",
         "Name":"Sovereign",
         "Width":2.6,
-        "Height":4.77,
+        "Height":4.93,
         "Image":"wampler-sovereign.png"
     },
     {
