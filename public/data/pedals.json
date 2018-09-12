@@ -6979,6 +6979,97 @@
         "Image":"throbak-stonebender.png"
     },
     {
+        "Brand":"Tone City",
+        "Name":"All Spark",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-allspark.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Angel Wing",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-angelwing.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Bad Horse",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-badhorse.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Black Tea",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-blacktea.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Fuxx Fuzz",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-fuxxfuzz.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Golden Plexi",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-goldenplexi.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Kaffir Lime",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-kaffirlime.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Mandragora",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-mandragora.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Summer Orange",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-summerorange.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Sweet Cream",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-sweetcream.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Tape Machine",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-tapemachine.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Tiny Spring",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-tinyspring.png"
+    },
+    {
+        "Brand":"Tone City",
+        "Name":"Wild Fire",
+        "Width":1.73,
+        "Height":3.65,
+        "Image":"tonecity-wildfire.png"
+    },
+    {
         "Brand":"Truetone",
         "Name":"1 Spot Pro CS12",
         "Width":8.12,
