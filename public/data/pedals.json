@@ -2325,6 +2325,13 @@
     },
     {
         "Brand":"Earthquaker Devices",
+        "Name":"Westwood",
+        "Width":2.6,
+        "Height":4.97,
+        "Image":"eqd-westwood.png"
+    },
+    {
+        "Brand":"Earthquaker Devices",
         "Name":"Grand Orbiter",
         "Width":2.6,
         "Height":4.97,
