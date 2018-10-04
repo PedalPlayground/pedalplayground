@@ -4299,6 +4299,13 @@
     },
     {
         "Brand":"Line6",
+        "Name":"HX Stomp",
+        "Width":6.75,
+        "Height":5.1,
+        "Image":"line6-hxstomp.png"
+    },
+    {
+        "Brand":"Line6",
         "Name":"Helix",
         "Width":22.05,
         "Height":11.85,
