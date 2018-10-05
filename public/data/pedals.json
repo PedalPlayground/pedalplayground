@@ -3165,14 +3165,21 @@
     },
     {
         "Brand":"Fulltone",
-        "Name":"Full-drive 2",
+        "Name":"Full-drive FD-2",
         "Width":5.75,
         "Height":4,
         "Image":"fulltone-fulldrive2.png"
     },
     {
         "Brand":"Fulltone",
-        "Name":"Full-drive 3",
+        "Name":"Full-drive FD-1",
+        "Width":2.9,
+        "Height":4.8,
+        "Image":"fulltone-fd1.png"
+    },
+    {
+        "Brand":"Fulltone",
+        "Name":"Full-drive FD-3",
         "Width":4.81,
         "Height":4,
         "Image":"fulltone-fulldrive3.png"
