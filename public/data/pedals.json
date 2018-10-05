@@ -2325,6 +2325,13 @@
     },
     {
         "Brand":"Earthquaker Devices",
+        "Name":"Westwood",
+        "Width":2.6,
+        "Height":4.93,
+        "Image":"eqd-westwood.png"
+    },
+    {
+        "Brand":"Earthquaker Devices",
         "Name":"Grand Orbiter",
         "Width":2.6,
         "Height":4.97,
@@ -4296,6 +4303,13 @@
         "Width":10.8,
         "Height":7.9,
         "Image":"line6-hx-effects.png"
+    },
+    {
+        "Brand":"Line6",
+        "Name":"HX Stomp",
+        "Width":7,
+        "Height":5,
+        "Image":"line6-hxstomp.png"
     },
     {
         "Brand":"Line6",
