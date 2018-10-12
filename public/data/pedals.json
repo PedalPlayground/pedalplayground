@@ -3963,6 +3963,13 @@
     },
     {
         "Brand":"Keeley",
+        "Name":"Compressor Plus",
+        "Width":2.5,
+        "Height":4.41,
+        "Image":"keeley-compressor-plus.png"
+    },
+    {
+        "Brand":"Keeley",
         "Name":"30ms Tracker",
         "Width":2.5,
         "Height":4.41,
