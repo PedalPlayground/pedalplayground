@@ -3949,6 +3949,13 @@
     },
     {
         "Brand":"Joyo",
+        "Name":"PXL-4",
+        "Width":11.14,
+        "Height":3.22835,
+        "Image":"joyo-americansound.png"
+    },
+    {
+        "Brand":"Joyo",
         "Name":"Irontune",
         "Width":1.5,
         "Height":2.9,
