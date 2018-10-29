@@ -3291,6 +3291,13 @@
     },
     {
         "Brand":"GigRig",
+        "Name":"QuarterMaster QMX4",
+        "Width":11.02,
+        "Height":2.28,
+        "Image":"gigrig-qmx4.png"
+    },
+    {
+        "Brand":"GigRig",
         "Name":"Three 2 One",
         "Width":3.15,
         "Height":4.53,
