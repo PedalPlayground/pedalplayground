@@ -7,6 +7,22 @@ $(document).ready(function(){
 	GetPedalData();
 	GetPedalBoardData();
 
+	function save(canvas) {
+    	document.body.appendChild(canvas);
+    }
+
+	$('.share').click(function(e) {
+		e.preventDefault();
+		html2canvas( $('.canvas').get(0) , {
+			allowTaint: true,
+			logging: true,
+			taintTest: false,
+			taintTest: false,
+			ignoreElements: ( $('.actions').get(0) )
+		}).then(save);
+	}); 
+
+
 	// Make lists searchable
 	$('.pedal-list').select2({
 		placeholder: "Select a pedal",

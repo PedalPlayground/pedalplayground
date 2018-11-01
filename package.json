@@ -17,7 +17,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-util": "^3.0.6",
-    "gulp-watch": "^4.3.5"
+    "gulp-watch": "^4.3.5",
+    "html2canvas": "^1.0.0-alpha.12"
   },
   "devDependencies": {
     "gulp-responsive": "^2.9.0"

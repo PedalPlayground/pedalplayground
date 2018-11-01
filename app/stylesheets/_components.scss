@@ -168,7 +168,7 @@ $border: 1px solid rgba(black, .13);
 		background-size: 100% 100%;
 		z-index: 1;
 		position: relative;
-		transition: all .4s;
+		// transition: all .4s;
 		// Drop shadow that matches the background image!
 		$same: 1px 1px 3px rgba(black, .4);
 		//-webkit-filter: drop-shadow( $same );
@@ -222,7 +222,7 @@ $border: 1px solid rgba(black, .13);
 
 	.actions {
 		z-index: 1;
-		transition: all .28s;
+		// transition: all .28s;
 		opacity: 0;
 		background: white;
 		border: $border;

@@ -7143,8 +7143,7 @@ strong, th {
     background-position: center;
     background-size: 100% 100%;
     z-index: 1;
-    position: relative;
-    transition: all .4s; }
+    position: relative; }
   .item:after {
     position: absolute;
     content: " ";
@@ -7189,7 +7188,6 @@ strong, th {
     transform: rotate(270deg); }
   .item .actions {
     z-index: 1;
-    transition: all .28s;
     opacity: 0;
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.13);
