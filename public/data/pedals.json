@@ -3312,6 +3312,13 @@
     },
     {
         "Brand":"Goodwood Audio",
+        "Name":"Audition",
+        "Width":4.44882,
+        "Height":2.598425,
+        "Image":"goodwood-audition.png"
+    },
+    {
+        "Brand":"Goodwood Audio",
         "Name":"Interfacer",
         "Width":3.031496,
         "Height":5,
