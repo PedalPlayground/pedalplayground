@@ -2660,6 +2660,27 @@
         "Image":"ehx-ocean11.png"
     },
     {
+        "Brand":"Electro Harmonix",
+        "Name":"Green Russian Big Muff Pi",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"ehx-greenrussian.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
+        "Name":"Op-amp Big Muff Pi",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"ehx-opamp.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
+        "Name":"Nano Big Muff Pi",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"ehx-nanobigmuff.png"
+    },
+    {
         "Brand":"Elektron",
         "Name":"Analog Drive",
         "Width":6.8,
