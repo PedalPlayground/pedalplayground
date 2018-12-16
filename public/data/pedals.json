@@ -1996,6 +1996,13 @@
     },
     {
         "Brand":"Disaster Area",
+        "Name":"DMC-4 Gen3",
+        "Width":4.7,
+        "Height":3.7,
+        "Image":"disasterarea-dmc4g3.png"
+    },
+    {
+        "Brand":"Disaster Area",
         "Name":"DMC-6",
         "Width":7.4,
         "Height":4.7,
