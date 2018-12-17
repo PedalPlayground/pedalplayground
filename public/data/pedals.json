@@ -64,6 +64,13 @@
     },
     {
         "Brand":"Alexander",
+        "Name":"Quadrant",
+        "Width":2.85,
+        "Height":4.87,
+        "Image":"alexander-quadrant.png"
+    },
+    {
+        "Brand":"Alexander",
         "Name":"Chesapeake",
         "Width":2.5,
         "Height":4.3,
@@ -1999,7 +2006,7 @@
         "Name":"DMC-4 Gen3",
         "Width":4.7,
         "Height":3.7,
-        "Image":"disasterarea-dmc4g3.png"
+        "Image":"disasterarea-dmc4-3.png"
     },
     {
         "Brand":"Disaster Area",
@@ -2116,7 +2123,7 @@
     {
         "Brand":"Dunlop",
         "Name":"DVP3 Volume",
-        "Width":3.86,
+        "Width":3.858,
         "Height":10,
         "Image":"dunlop-dvp3.png"
     },
