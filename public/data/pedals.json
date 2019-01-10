@@ -6448,6 +6448,13 @@
     },
     {
         "Brand":"Strymon",
+        "Name":"Volante",
+        "Width":7,
+        "Height":4.5,
+        "Image":"strymon-volante.png"
+    },
+    {
+        "Brand":"Strymon",
         "Name":"Brigadier",
         "Width":4,
         "Height":4.5,
