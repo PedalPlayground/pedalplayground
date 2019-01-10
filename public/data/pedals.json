@@ -1499,6 +1499,13 @@
     },
     {
         "Brand":"Chase Bliss",
+        "Name":"Dark World",
+        "Width":2.75,
+        "Height":4.77,
+        "Image":"chasebliss-darkworld.png"
+    },
+    {
+        "Brand":"Chase Bliss",
         "Name":"Condor",
         "Width":2.75,
         "Height":4.77,
