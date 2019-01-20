@@ -3563,6 +3563,13 @@
         "Image":"hotone-soulpress.png"
     },
     {
+        "Brand":"Hotone",
+        "Name":"Xtomp Mini",
+        "Width":2.48,
+        "Height":4.45,
+        "Image":"hotone-xtomp-mini.png"
+    },
+    {
         "Brand":"Hughes & Kettner",
         "Name":"Tube Rotosphere MK II",
         "Width":8,
