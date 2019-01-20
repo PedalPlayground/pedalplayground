@@ -17,3 +17,16 @@
 * Add the dimensions of the pedals you add to `/public/data/pedals.json`
 * Input dimensions in inches, with decimals (rounding to nearest hundredth)
 * Dimensions recorded should include jacks and switches (if possible, most placed don't specify wether or not measurements do or do not)
+
+# Running Locally
+
+1. `npm install`
+2. `bower install`
+3. `gulp`
+4. Start Chrome with web security (CORS) disabled via:
+
+```
+/path/to/Chrome --user-data-dir=/tmp/chrome-dev --no-default-browser-check --no-first-run --disable-default-apps --disable-popup-blocking --disable-translate --disable-web-security
+```
+
+5. Navigate to file:///path/to/index.html.

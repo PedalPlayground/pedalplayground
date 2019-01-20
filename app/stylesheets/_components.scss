@@ -473,6 +473,9 @@ $border: 1px solid rgba(black, .13);
 			font-weight: 600;
 			padding: 10px;
 			border-bottom: 1px solid #ddd;
+      .panel__dimensions {
+        font-weight: normal;
+      }
 		}
 		&__action {
 			font-size: 13px;
