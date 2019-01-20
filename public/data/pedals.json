@@ -1821,6 +1821,13 @@
     },
     {
         "Brand":"DigiTech",
+        "Name":"HT-2 Chromatic Tuner",
+        "Width":3.5,
+        "Height":5.25,
+        "Image":"digitech-hardwire-ht-2-chromatic-tuner.png"
+    },
+    {
+        "Brand":"DigiTech",
         "Name":"DOD 250",
         "Width":2.875,
         "Height":4.625,
