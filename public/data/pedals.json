@@ -7091,6 +7091,13 @@
         "Image":"tc-quintessence.png"
     },
     {
+        "Brand":"TC Electronic",
+        "Name":"Trinity T2 Reverb",
+        "Width":2.8,
+        "Height":4.8,
+        "Image":"tc-electronic-trinity-t2-reverb.png"
+    },
+    {
         "Brand":"Tapestry Audio",
         "Name":"Bloomery",
         "Width":2.25,
