@@ -4326,6 +4326,13 @@
         "Image":"klon-ktr.png"
     },
     {
+        "Brand":"KMA Audio Machines",
+        "Name":"Horizont Phaser",
+        "Width":6.02,
+        "Height":4.92,
+        "Image":"kma-audio-machines-horizont-phaser.png"
+    },
+    {
         "Brand":"Korg",
         "Name":"GA Custom Handheld Tuner",
         "Width":3.9,
