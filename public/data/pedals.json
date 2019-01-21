@@ -2563,6 +2563,13 @@
     },
     {
         "Brand":"Electro Harmonix",
+        "Name":"Grand Canyon",
+        "Width":4.75,
+        "Height":4,
+        "Image":"ehx-grand-canyon.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
         "Name":"Deluxe Memory Man (big box)",
         "Width":7.875,
         "Height":6.875,
