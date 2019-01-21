@@ -2702,6 +2702,13 @@
         "Image":"ehx-nanobigmuff.png"
     },
     {
+        "Brand":"Electro Harmonix",
+        "Name":"Dual Expression Pedal",
+        "Width":3.5,
+        "Height":10,
+        "Image":"ehx-dual-expression-pedal.png"
+    },
+    {
         "Brand":"Elektron",
         "Name":"Analog Drive",
         "Width":6.8,
