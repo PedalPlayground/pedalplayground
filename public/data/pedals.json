@@ -2570,6 +2570,13 @@
     },
     {
         "Brand":"Electro Harmonix",
+        "Name":"Grand Canyon",
+        "Width":4.75,
+        "Height":4,
+        "Image":"ehx-grand-canyon.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
         "Name":"Deluxe Memory Man (big box)",
         "Width":7.875,
         "Height":6.875,
@@ -2707,6 +2714,13 @@
         "Width":2.75,
         "Height":4.5,
         "Image":"ehx-nanobigmuff.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
+        "Name":"Dual Expression Pedal",
+        "Width":3.5,
+        "Height":10,
+        "Image":"ehx-dual-expression-pedal.png"
     },
     {
         "Brand":"Elektron",
@@ -3568,6 +3582,13 @@
         "Width":2.46,
         "Height":5.43,
         "Image":"hotone-soulpress.png"
+    },
+    {
+        "Brand":"Hotone",
+        "Name":"Xtomp Mini",
+        "Width":2.48,
+        "Height":4.45,
+        "Image":"hotone-xtomp-mini.png"
     },
     {
         "Brand":"Hughes & Kettner",
@@ -5612,6 +5633,13 @@
         "Width":2.65,
         "Height":4.8,
         "Image":"oldbloodnoise-reflector.png"
+    },
+    {
+        "Brand":"Old Blood Noise Endeavors",
+        "Name":"Dweller Phase Repeater",
+        "Width":2.6,
+        "Height":4.72,
+        "Image": "old-blood-noise-endeavors-dweller-phase-repeater.png"
     },
     {
         "Brand":"One Control",
