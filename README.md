@@ -20,13 +20,7 @@
 
 # Running Locally
 
-1. `npm install`
-2. `bower install`
-3. `gulp`
-4. Start Chrome with web security (CORS) disabled via:
-
-```
-/path/to/Chrome --user-data-dir=/tmp/chrome-dev --no-default-browser-check --no-first-run --disable-default-apps --disable-popup-blocking --disable-translate --disable-web-security
-```
-
-5. Navigate to file:///path/to/index.html.
+1. Install dependencies via `npm install`
+2. Install client-side libraries via `bower install`
+3. Compile assets and watch for changes via `gulp`
+4. Start the local server via `npm run serve`. This will open a browser tab for you at localhost:8080.
