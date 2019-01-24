@@ -5664,6 +5664,13 @@
     },
     {
         "Brand":"Old Blood Noise Endeavors",
+        "Name":"Reflector V3",
+        "Width":2.65,
+        "Height":4.8,
+        "Image":"old-blood-reflector-v3.png"
+    },
+    {
+        "Brand":"Old Blood Noise Endeavors",
         "Name":"Dweller Phase Repeater",
         "Width":2.6,
         "Height":4.72,
