@@ -4053,6 +4053,13 @@
         "Image":"joyo-woodensound.png"
     },
     {
+        "Brand":"Joyo",
+        "Name":"Vintage Overdrive",
+        "Width":2,
+        "Height":4,
+        "Image":"joyo-vintage-overdrive.png"
+    },
+    {
         "Brand":"Keeley",
         "Name":"1962",
         "Width":2.5,
