@@ -4754,6 +4754,13 @@
     },
     {
         "Brand":"MXR",
+        "Name":"Modified O.D. Custom Badass",
+        "Width":2.5,
+        "Height":4.5,
+        "Image":"mxr-modified-od-custom-badass.png"
+    },
+    {
+        "Brand":"MXR",
         "Name":"Super Badass Variac Fuzz",
         "Width":2.5,
         "Height":4.3,
