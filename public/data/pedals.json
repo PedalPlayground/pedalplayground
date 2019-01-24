@@ -4687,7 +4687,14 @@
         "Name":"Micro Amp+",
         "Width":2.5,
         "Height":4.3,
-        "Image":"mxr-microamp.png"
+        "Image":"mxr-micro-amp-plus.png"
+    },
+    {
+        "Brand":"MXR",
+        "Name":"Micro Amp",
+        "Width":2.5,
+        "Height":4.5,
+        "Image":"mxr-micro-amp.png"
     },
     {
         "Brand":"MXR",
