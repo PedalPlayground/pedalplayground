@@ -2492,6 +2492,13 @@
         "Image":"earthquaker-warden.png"
     },
     {
+        "Brand":"Earthquaker Devices",
+        "Name":"Pyramids",
+        "Width":4.15,
+        "Height":4.65,
+        "Image":"earthquaker-devices-pyramids.png"
+    },
+    {
         "Brand":"Effectrode",
         "Name":"Blackbird",
         "Width":7.5,
