@@ -6664,6 +6664,13 @@
         "Image":"strymon-zumar300.png"
     },
     {
+        "Brand":"Strymon",
+        "Name":"Multiswitch",
+        "Width":6.63,
+        "Height":1.88,
+        "Image":"strymon-multiswitch.png"
+    },
+    {
         "Brand":"Subdecay",
         "Name":"Echobox V1",
         "Width":3.7,
