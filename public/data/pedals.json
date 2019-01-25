@@ -2499,6 +2499,13 @@
         "Image":"earthquaker-devices-pyramids.png"
     },
     {
+        "Brand":"Earthquaker Devices",
+        "Name":"Data Corrupter",
+        "Width":4.75,
+        "Height":5.65,
+        "Image":"earthquaker-data-corrupter.png"
+    },
+    {
         "Brand":"Effectrode",
         "Name":"Blackbird",
         "Width":7.5,
