@@ -20,9 +20,11 @@
     "gulp-watch": "^4.3.5"
   },
   "devDependencies": {
-    "gulp-responsive": "^2.9.0"
+    "gulp-responsive": "^2.9.0",
+    "http-server": "^0.11.1"
   },
   "scripts": {
+    "serve": "http-server ./ -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

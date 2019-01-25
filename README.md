@@ -17,3 +17,10 @@
 * Add the dimensions of the pedals you add to `/public/data/pedals.json`
 * Input dimensions in inches, with decimals (rounding to nearest hundredth)
 * Dimensions recorded should include jacks and switches (if possible, most placed don't specify wether or not measurements do or do not)
+
+# Running Locally
+
+1. Install dependencies via `npm install`
+2. Install client-side libraries via `bower install`
+3. Compile assets and watch for changes via `gulp`
+4. Start the local server via `npm run serve`. This will open a browser tab for you at localhost:8080.

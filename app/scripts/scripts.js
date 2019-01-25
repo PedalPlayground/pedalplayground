@@ -529,8 +529,13 @@ $('body').on('click', '.item', function(e){
 	var pedal       = $(this);
 	var id   		= $(this).attr("id");
 	var pedalName   = $(this).attr('title');
+  var width       = $(this).attr('data-width');
+  var height      = $(this).attr('data-height');
 	var markup      = '<div class="panel" data-id="#'+id+'">\
-		<div class="panel__name">'+pedalName+'</div>\
+    <div class="panel__name">'
+      +pedalName
+      +'<br><span class="panel__dimensions">('+width+' x '+height+')</span>\
+    </div>\
 		<a href="#rotate" class="panel__action">Rotate</a>\
 		<a href="#front" class="panel__action">Move Front</a>\
 		<a href="#back" class="panel__action">Move Back</a>\
