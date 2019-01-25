@@ -3886,6 +3886,13 @@
     },
     {
         "Brand":"JHS",
+        "Name":"Clover",
+        "Width":2.85,
+        "Height":4.87,
+        "Image":"jhs-clover.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"Muffaletta",
         "Width":2.85,
         "Height":4.87,
