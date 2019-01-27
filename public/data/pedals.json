@@ -2723,6 +2723,13 @@
         "Image":"ehx-opamp.png"
     },
     {
+        "Brand":"Nobels",
+        "Name":"ODR Mini",
+        "Width":1.61,
+        "Height":3.66,
+        "Image":"nobels-odrmini.png"
+    },
+    {
         "Brand":"Electro Harmonix",
         "Name":"Nano Big Muff Pi",
         "Width":2.75,
@@ -5743,7 +5750,7 @@
         "Brand":"Origin Effects",
         "Name":"Revival Drive",
         "Width":4.6,
-        "Height":6.49,
+        "Height":6.29,
         "Image":"origin-revivaldrive.png"
     },
     {
