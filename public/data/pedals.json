@@ -5692,6 +5692,13 @@
     },
     {
         "Brand":"Origin Effects",
+        "Name":"Revival Drive",
+        "Width":4.6,
+        "Height":6.49,
+        "Image":"origin-revivaldrive.png"
+    },
+    {
+        "Brand":"Origin Effects",
         "Name":"Cali76 Compact Deluxe",
         "Width":2.6,
         "Height":5.59,
