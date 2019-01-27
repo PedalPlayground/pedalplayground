@@ -2492,6 +2492,20 @@
         "Image":"earthquaker-warden.png"
     },
     {
+        "Brand":"Earthquaker Devices",
+        "Name":"Pyramids",
+        "Width":4.15,
+        "Height":4.65,
+        "Image":"earthquaker-devices-pyramids.png"
+    },
+    {
+        "Brand":"Earthquaker Devices",
+        "Name":"Data Corrupter",
+        "Width":4.75,
+        "Height":5.65,
+        "Image":"earthquaker-data-corrupter.png"
+    },
+    {
         "Brand":"Effectrode",
         "Name":"Blackbird",
         "Width":7.5,
@@ -3879,6 +3893,13 @@
     },
     {
         "Brand":"JHS",
+        "Name":"Clover",
+        "Width":2.85,
+        "Height":4.87,
+        "Image":"jhs-clover.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"Muffaletta",
         "Width":2.85,
         "Height":4.87,
@@ -4051,6 +4072,13 @@
         "Width":1.72,
         "Height":2.83,
         "Image":"joyo-woodensound.png"
+    },
+    {
+        "Brand":"Joyo",
+        "Name":"Vintage Overdrive",
+        "Width":2,
+        "Height":4,
+        "Image":"joyo-vintage-overdrive.png"
     },
     {
         "Brand":"Keeley",
@@ -4673,7 +4701,14 @@
         "Name":"Micro Amp+",
         "Width":2.5,
         "Height":4.3,
-        "Image":"mxr-microamp.png"
+        "Image":"mxr-micro-amp-plus.png"
+    },
+    {
+        "Brand":"MXR",
+        "Name":"Micro Amp",
+        "Width":2.5,
+        "Height":4.5,
+        "Image":"mxr-micro-amp.png"
     },
     {
         "Brand":"MXR",
@@ -4751,6 +4786,13 @@
         "Width":2.5,
         "Height":4.3,
         "Image":"mxr-sbdistortion.png"
+    },
+    {
+        "Brand":"MXR",
+        "Name":"Modified O.D. Custom Badass",
+        "Width":2.5,
+        "Height":4.5,
+        "Image":"mxr-modified-od-custom-badass.png"
     },
     {
         "Brand":"MXR",
@@ -5633,6 +5675,13 @@
         "Width":2.65,
         "Height":4.8,
         "Image":"oldbloodnoise-reflector.png"
+    },
+    {
+        "Brand":"Old Blood Noise Endeavors",
+        "Name":"Reflector V3",
+        "Width":2.65,
+        "Height":4.8,
+        "Image":"old-blood-reflector-v3.png"
     },
     {
         "Brand":"Old Blood Noise Endeavors",
@@ -6629,6 +6678,13 @@
         "Image":"strymon-zumar300.png"
     },
     {
+        "Brand":"Strymon",
+        "Name":"Multiswitch",
+        "Width":6.63,
+        "Height":1.88,
+        "Image":"strymon-multiswitch.png"
+    },
+    {
         "Brand":"Subdecay",
         "Name":"Echobox V1",
         "Width":3.7,
@@ -7551,6 +7607,20 @@
         "Width":2.82,
         "Height":4.87,
         "Image":"walrus-deepsix.png"
+    },
+    {
+        "Brand":"Walrus",
+        "Name":"Deep Six V3",
+        "Width":2.6,
+        "Height":4.93,
+        "Image":"walrus-deepsixv3.png"
+    },
+    {
+        "Brand":"Walrus",
+        "Name":"Lillian",
+        "Width":2.6,
+        "Height":4.93,
+        "Image":"walrus-lillian.png"
     },
     {
         "Brand":"Walrus",

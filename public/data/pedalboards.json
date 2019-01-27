@@ -285,5 +285,12 @@
         "Width":18,
         "Height":7.75,
         "Image":"voodoo-small.png"
+    },
+    {
+        "Brand":"Donner",
+        "Name":"DB-3",
+        "Width":20,
+        "Height":11.4,
+        "Image":"donner-db-3.png"
     }
 ]
