@@ -5936,6 +5936,20 @@
         "Image":"rjm-mastermindpbc.png"
     },
     {
+        "Brand":"RJM",
+        "Name":"Mastermind LT",
+        "Width":11.5,
+        "Height":5,
+        "Image":"rjm-pbclt.png"
+    },
+    {
+        "Brand":"RJM",
+        "Name":"Mastermind PBC/6X",
+        "Width":10.1,
+        "Height":4.4,
+        "Image":"rjm-pbc6x.png"
+    },
+    {
         "Brand":"Red Panda",
         "Name":"Bitmap",
         "Width":3.3,
