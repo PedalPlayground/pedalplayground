@@ -6155,8 +6155,8 @@
     {
         "Brand":"Selah",
         "Name":"Quartz",
-        "Width":2.6,
-        "Height":4.8,
+        "Width":2.85,
+        "Height":4.87,
         "Image":"selah-quartz.png"
     },
     {
@@ -7446,6 +7446,13 @@
         "Width":7,
         "Height":5.03,
         "Image":"twonotes-torpedocab.png"
+    },
+    {
+        "Brand":"Vertex",
+        "Name":"Ultraphonix OD",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-ultraphonix.png"
     },
     {
         "Brand":"VFE",
