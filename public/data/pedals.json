@@ -2535,7 +2535,7 @@
     },
     {
         "Brand":"Electro Harmonix",
-        "Name":"22500 Dual Sterep Looper",
+        "Name":"22500 Dual Stereo Looper",
         "Width":5.75,
         "Height":4.75,
         "Image":"ehx-22500.png"
@@ -2553,6 +2553,27 @@
         "Width":3.95,
         "Height":4.7,
         "Image":"ehx-bigmuffpi.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
+        "Name":"Bass Mono Synth",
+        "Width":3.95,
+        "Height":4.7,
+        "Image":"ehx-monosynth.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
+        "Name":"Mono Synth",
+        "Width":3.95,
+        "Height":4.7,
+        "Image":"ehx-bassmonosynth.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
+        "Name":"Attach Decay",
+        "Width":4.1,
+        "Height":4.7,
+        "Image":"ehx-attackdecay.png"
     },
     {
         "Brand":"Electro Harmonix",
