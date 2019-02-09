@@ -7476,6 +7476,41 @@
         "Image":"vertex-ultraphonix.png"
     },
     {
+        "Brand":"Vertex",
+        "Name":"Boost",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-boost.png"
+    },
+    {
+        "Brand":"Vertex",
+        "Name":"T-Drive",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-tdrive.png"
+    },
+    {
+        "Brand":"Vertex",
+        "Name":"Dynamic Distortion",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-dynamicdistortion.png"
+    },
+    {
+        "Brand":"Vertex",
+        "Name":"Steel String Clean Drive",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-steelstring.png"
+    },
+    {
+        "Brand":"Vertex",
+        "Name":"Tone Secret",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-tonesecret.png"
+    },
+    {
         "Brand":"VFE",
         "Name":"Alpha Dog v3",
         "Width":2.59843,
