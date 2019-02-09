@@ -162,6 +162,13 @@
     },
     {
         "Brand":"Pedaltrain",
+        "Name":"Mini",
+        "Width":20,
+        "Height":7,
+        "Image":"pedaltrain-mini.png"
+    },
+    {
+        "Brand":"Pedaltrain",
         "Name":"Nano",
         "Width":14,
         "Height":5.5,
