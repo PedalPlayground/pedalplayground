@@ -2548,6 +2548,13 @@
         "Image":"ehx-22500.png"
     },
     {
+        "Brand":"Pedaltrain",
+        "Name":"SST Space Saving Tuner",
+        "Width":.875,
+        "Height":4.135,
+        "Image":"pedaltrain-sst.png"
+    },
+    {
         "Brand":"Electro Harmonix",
         "Name":"720 Stereo Looper",
         "Width":3.95,
