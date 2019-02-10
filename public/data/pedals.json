@@ -6042,6 +6042,20 @@
     },
     {
         "Brand":"Red Panda",
+        "Name":"Particle V2",
+        "Width":3.05,
+        "Height":4.75,
+        "Image":"redpanda-particle2.png"
+    },
+    {
+        "Brand":"Red Panda",
+        "Name":"Tensor",
+        "Width":3.05,
+        "Height":4.75,
+        "Image":"redpanda-tensor.png"
+    },
+    {
+        "Brand":"Red Panda",
         "Name":"Bitmap",
         "Width":3.3,
         "Height":4.4,
