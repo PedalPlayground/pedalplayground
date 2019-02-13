@@ -8,6 +8,13 @@
     },
     {
         "Brand":"Creation Music Co",
+        "Name":"Aero 24x12.5",
+        "Width":24,
+        "Height":12.5,
+        "Image":"creation-aero-24-125.png"
+    },
+    {
+        "Brand":"Creation Music Co",
         "Name":"Elevation 32x16",
         "Width":32,
         "Height":16,
