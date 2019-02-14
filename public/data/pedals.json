@@ -8324,6 +8324,20 @@
     },
     {
         "Brand":"Xotic",
+        "Name":"Super Clean Buffer",
+        "Width":2,
+        "Height":3.7,
+        "Image":"xotic-superclean.png"
+    },
+    {
+        "Brand":"Xotic",
+        "Name":"Super Sweet Booster",
+        "Width":2,
+        "Height":3.7,
+        "Image":"xotic-supersweet.png"
+    },
+    {
+        "Brand":"Xotic",
         "Name":"RC Booster",
         "Width":2.5,
         "Height":4.3,
