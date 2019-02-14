@@ -2367,6 +2367,13 @@
     },
     {
         "Brand":"Earthquaker Devices",
+        "Name":"Black Ash Fuzz",
+        "Width":2.6,
+        "Height":4.97,
+        "Image":"eqd-blackash.png"
+    },
+    {
+        "Brand":"Earthquaker Devices",
         "Name":"Westwood",
         "Width":2.6,
         "Height":4.93,
