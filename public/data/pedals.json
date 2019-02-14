@@ -6062,6 +6062,27 @@
         "Image":"rjm-pbc6x.png"
     },
     {
+        "Brand":"Ramble FX",
+        "Name":"Marvel Drive",
+        "Width":2.61,
+        "Height":4.92,
+        "Image":"ramble-marvel.png"
+    },
+    {
+        "Brand":"Ramble FX",
+        "Name":"Twin Bender",
+        "Width":2.61,
+        "Height":4.92,
+        "Image":"ramble-twinbender.png"
+    },
+    {
+        "Brand":"Ramble FX",
+        "Name":"Kismet",
+        "Width":3.69,
+        "Height":4.81,
+        "Image":"ramble-kismet.png"
+    },
+    {
         "Brand":"Red Panda",
         "Name":"Particle V2",
         "Width":3.05,
