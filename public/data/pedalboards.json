@@ -1,6 +1,20 @@
 [
     {
         "Brand":"Creation Music Co",
+        "Name":"Aero 24x16",
+        "Width":24,
+        "Height":16,
+        "Image":"creation-aero-24-16.png"
+    },
+    {
+        "Brand":"Creation Music Co",
+        "Name":"Aero 24x12.5",
+        "Width":24,
+        "Height":12.5,
+        "Image":"creation-aero-24-125.png"
+    },
+    {
+        "Brand":"Creation Music Co",
         "Name":"Elevation 32x16",
         "Width":32,
         "Height":16,
@@ -159,6 +173,13 @@
         "Width":24,
         "Height":8,
         "Image":"pedaltrain-metro24.png"
+    },
+    {
+        "Brand":"Pedaltrain",
+        "Name":"Mini",
+        "Width":20,
+        "Height":7,
+        "Image":"pedaltrain-mini.png"
     },
     {
         "Brand":"Pedaltrain",

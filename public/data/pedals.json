@@ -2513,6 +2513,13 @@
         "Image":"earthquaker-data-corrupter.png"
     },
     {
+        "Brand":"Earthquaker Devices",
+        "Name":"Hoof Reaper v2",
+        "Width":5.5,
+        "Height":4.5,
+        "Image":"earthquaker-hoofreaper-v2.png"
+    },
+    {
         "Brand":"Effectrode",
         "Name":"Blackbird",
         "Width":7.5,
@@ -2548,6 +2555,13 @@
         "Image":"ehx-22500.png"
     },
     {
+        "Brand":"Pedaltrain",
+        "Name":"SST Space Saving Tuner",
+        "Width":0.875,
+        "Height":4.135,
+        "Image":"pedaltrain-sst.png"
+    },
+    {
         "Brand":"Electro Harmonix",
         "Name":"720 Stereo Looper",
         "Width":3.95,
@@ -2560,6 +2574,20 @@
         "Width":3.95,
         "Height":4.7,
         "Image":"ehx-bigmuffpi.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
+        "Name":"Deluxe Electric Mistress",
+        "Width":3.95,
+        "Height":4.7,
+        "Image":"ehx-mistress.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
+        "Name":"Stereo Electric Mistress",
+        "Width":3.95,
+        "Height":4.7,
+        "Image":"ehx-stereomistress.png"
     },
     {
         "Brand":"Electro Harmonix",
@@ -2770,6 +2798,13 @@
         "Width":3.5,
         "Height":10,
         "Image":"ehx-dual-expression-pedal.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
+        "Name":"Super Ego +",
+        "Width":5.75,
+        "Height":4.75,
+        "Image":"ehx-superego-plus.png"
     },
     {
         "Brand":"Elektron",
@@ -4424,6 +4459,13 @@
         "Image":"kma-audio-machines-horizont-phaser.png"
     },
     {
+        "Brand":"KMA Audio Machines",
+        "Name":"Tyler Frequency Splitter",
+        "Width":5.75,
+        "Height":4.76,
+        "Image":"kma-audio-machines-tyler-frequency-splitter.png"
+    },
+    {
         "Brand":"Korg",
         "Name":"GA Custom Handheld Tuner",
         "Width":3.9,
@@ -5166,6 +5208,13 @@
         "Image":"meris-polymoon.png"
     },
     {
+        "Brand":"Meris",
+        "Name":"MIDI I/O",
+        "Width":3.7,
+        "Height":2.6,
+        "Image":"meris-midi-io.png"
+    },
+    {
         "Brand":"Mesa Boogie",
         "Name":"Flux-Drive",
         "Width":2.75,
@@ -5206,6 +5255,13 @@
         "Width":4.37,
         "Height":2.53,
         "Image":"mission-expressionator.png"
+    },
+    {
+        "Brand":"Mission",
+        "Name":"Expressionator v2",
+        "Width":4.4,
+        "Height":2.5,
+        "Image":"mission-expressionator-v2.png"
     },
     {
         "Brand":"Mission",
@@ -5636,6 +5692,13 @@
     },
     {
         "Brand":"Neunaber",
+        "Name":"Immerse Mk II",
+        "Width":2.87,
+        "Height":4.6,
+        "Image":"neunaber-immerse-mkii.png"
+    },
+    {
+        "Brand":"Neunaber",
         "Name":"Inspire",
         "Width":2.55,
         "Height":4.5,
@@ -5724,6 +5787,13 @@
         "Width":2.6,
         "Height":4.72,
         "Image": "old-blood-noise-endeavors-dweller-phase-repeater.png"
+    },
+    {
+        "Brand":"Old Blood Noise Endeavors",
+        "Name":"Headphone Amp",
+        "Width":2.65,
+        "Height":4.8,
+        "Image":"oldbloodnoise-headphone-amp.png"
     },
     {
         "Brand":"One Control",
@@ -5976,6 +6046,20 @@
         "Width":10.1,
         "Height":4.4,
         "Image":"rjm-pbc6x.png"
+    },
+    {
+        "Brand":"Red Panda",
+        "Name":"Particle V2",
+        "Width":3.05,
+        "Height":4.75,
+        "Image":"redpanda-particle2.png"
+    },
+    {
+        "Brand":"Red Panda",
+        "Name":"Tensor",
+        "Width":3.05,
+        "Height":4.75,
+        "Image":"redpanda-tensor.png"
     },
     {
         "Brand":"Red Panda",
@@ -6375,6 +6459,13 @@
         "Width":4.67,
         "Height":3.68,
         "Image":"solidgoldfx-electroman.png"
+    },
+    {
+        "Brand":"SolidGoldFX",
+        "Name":"Electroman Mk II",
+        "Width":4.67,
+        "Height":3.68,
+        "Image":"solidgoldfx-electroman-mkii.png"
     },
     {
         "Brand":"SolidGoldFX",
@@ -7481,6 +7572,41 @@
         "Width":3.2,
         "Height":4.6,
         "Image":"vertex-ultraphonix.png"
+    },
+    {
+        "Brand":"Vertex",
+        "Name":"Boost",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-boost.png"
+    },
+    {
+        "Brand":"Vertex",
+        "Name":"T-Drive",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-tdrive.png"
+    },
+    {
+        "Brand":"Vertex",
+        "Name":"Dynamic Distortion",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-dynamicdistortion.png"
+    },
+    {
+        "Brand":"Vertex",
+        "Name":"Steel String Clean Drive",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-steelstring.png"
+    },
+    {
+        "Brand":"Vertex",
+        "Name":"Tone Secret",
+        "Width":3.2,
+        "Height":4.6,
+        "Image":"vertex-tonesecret.png"
     },
     {
         "Brand":"VFE",
