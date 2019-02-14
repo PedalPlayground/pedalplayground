@@ -29,6 +29,13 @@
     },
     {
         "Brand":"AMT",
+        "Name":"Little Loudmouth",
+        "Width":2.736,
+        "Height":4.33,
+        "Image":"amt-littleloudmouth.png"
+    },
+    {
+        "Brand":"AMT",
         "Name":"GR-4",
         "Width":10.3,
         "Height":4.6,
