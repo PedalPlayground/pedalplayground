@@ -161,6 +161,13 @@
         "Image":"alexander-syntaxerror.png"
     },
     {
+        "Brand":"Alexander",
+        "Name":"Space Race",
+        "Width":2.54,
+        "Height":4.3,
+        "Image":"alexander-space-race.png"
+    },
+    {
         "Brand":"Altoids",
         "Name":"Tin",
         "Width":3.8,
@@ -2084,6 +2091,13 @@
         "Width":10,
         "Height":2.65,
         "Image":"disasterarea-dpc5.png"
+    },
+    {
+        "Brand":"Disaster Area",
+        "Name":"qConnect",
+        "Width":4.8,
+        "Height":2.6,
+        "Image":"disasterarea-qconnect.png"
     },
     {
         "Brand":"Disaster Area",
@@ -7362,6 +7376,13 @@
         "Width":2.83,
         "Height":4.8,
         "Image":"tcelectronic-viscousvibe.png"
+    },
+    {
+        "Brand":"TC Electronic",
+        "Name":"Flashback Triple Delay",
+        "Width":9.25,
+        "Height":5.71,
+        "Image":"tc-electronic-flashback-triple-delay.png"
     },
     {
         "Brand":"TC Electronic",
