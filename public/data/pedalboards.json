@@ -134,6 +134,13 @@
     },
     {
         "Brand":"Pedaltrain",
+        "Name":"PT-3",
+        "Width":24,
+        "Height":16,
+        "Image":"pedaltrain-pt-3.png"
+    },
+    {
+        "Brand":"Pedaltrain",
         "Name":"Classic JR",
         "Width":18,
         "Height":12.5,
