@@ -22,6 +22,20 @@
     },
     {
         "Brand":"AMT",
+        "Name":"EX-50 Mini Expression",
+        "Width":2.611,
+        "Height":4.33,
+        "Image":"amt-expression.png"
+    },
+    {
+        "Brand":"AMT",
+        "Name":"Little Loudmouth",
+        "Width":2.736,
+        "Height":4.33,
+        "Image":"amt-littleloudmouth.png"
+    },
+    {
+        "Brand":"AMT",
         "Name":"GR-4",
         "Width":10.3,
         "Height":4.6,
@@ -145,6 +159,13 @@
         "Width":2.54,
         "Height":4.3,
         "Image":"alexander-syntaxerror.png"
+    },
+    {
+        "Brand":"Alexander",
+        "Name":"Space Race",
+        "Width":2.54,
+        "Height":4.3,
+        "Image":"alexander-space-race.png"
     },
     {
         "Brand":"Altoids",
@@ -2073,6 +2094,13 @@
     },
     {
         "Brand":"Disaster Area",
+        "Name":"qConnect",
+        "Width":4.8,
+        "Height":2.6,
+        "Image":"disasterarea-qconnect.png"
+    },
+    {
+        "Brand":"Disaster Area",
         "Name":"NNB",
         "Width":1.65,
         "Height":3.65,
@@ -2350,6 +2378,13 @@
         "Width":2.6,
         "Height":4.97,
         "Image":"eqd-dunes.png"
+    },
+    {
+        "Brand":"Earthquaker Devices",
+        "Name":"Black Ash Fuzz",
+        "Width":2.6,
+        "Height":4.97,
+        "Image":"eqd-blackash.png"
     },
     {
         "Brand":"Earthquaker Devices",
@@ -6041,6 +6076,27 @@
         "Image":"rjm-pbc6x.png"
     },
     {
+        "Brand":"Ramble FX",
+        "Name":"Marvel Drive",
+        "Width":2.61,
+        "Height":4.92,
+        "Image":"ramble-marvel.png"
+    },
+    {
+        "Brand":"Ramble FX",
+        "Name":"Twin Bender",
+        "Width":2.61,
+        "Height":4.92,
+        "Image":"ramble-twinbender.png"
+    },
+    {
+        "Brand":"Ramble FX",
+        "Name":"Kismet",
+        "Width":3.69,
+        "Height":4.81,
+        "Image":"ramble-kismet.png"
+    },
+    {
         "Brand":"Red Panda",
         "Name":"Particle V2",
         "Width":3.05,
@@ -7323,6 +7379,13 @@
     },
     {
         "Brand":"TC Electronic",
+        "Name":"Flashback Triple Delay",
+        "Width":9.25,
+        "Height":5.71,
+        "Image":"tc-electronic-flashback-triple-delay.png"
+    },
+    {
+        "Brand":"TC Electronic",
         "Name":"Quintessence Harmony",
         "Width":2.83,
         "Height":4.8,
@@ -8300,6 +8363,20 @@
         "Width":2,
         "Height":3.7,
         "Image":"xotic-ep.png"
+    },
+    {
+        "Brand":"Xotic",
+        "Name":"Super Clean Buffer",
+        "Width":2,
+        "Height":3.7,
+        "Image":"xotic-superclean.png"
+    },
+    {
+        "Brand":"Xotic",
+        "Name":"Super Sweet Booster",
+        "Width":2,
+        "Height":3.7,
+        "Image":"xotic-supersweet.png"
     },
     {
         "Brand":"Xotic",
