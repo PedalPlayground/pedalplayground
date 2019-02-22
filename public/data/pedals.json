@@ -5936,6 +5936,13 @@
         "Image":"petecornish-st2.png"
     },
     {
+        "Brand":"Peterson",
+        "Name":"Strobostomp HD",
+        "Width":2.598,
+        "Height":5.07,
+        "Image":"peterson-strobostomphd.png"
+    },
+    {
         "Brand":"Pettyjohn",
         "Name":"Chime",
         "Width":2.7,
