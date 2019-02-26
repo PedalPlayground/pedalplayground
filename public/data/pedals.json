@@ -49,6 +49,13 @@
         "Image":"1981-inventions.png"
     },
     {
+        "Brand":"1981 Inventions",
+        "Name":"DRV Sea Foam Green",
+        "Width":3.520,
+        "Height":4.3,
+        "Image":"1981-inventions-sfg.png"
+    },
+    {
         "Brand":"Laney",
         "Name":"Black Country Customs Tony Iommi Boost",
         "Width":2.6,
