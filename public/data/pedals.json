@@ -1,5 +1,27 @@
 [
     {
+        "Brand":"Fix Pedalboards",
+        "Name":"RS-2",
+        "Width":2.5,
+        "Height":4.375,
+        "Image":"rs-2.png"
+    },
+    {
+        "Brand":"Fix Pedalboards",
+        "Name":"RS-4",
+        "Width":5,
+        "Height":4.375,
+        "Image":"rs-4.png"
+    },
+    {
+        "Brand":"Fix Pedalboards",
+        "Name":"RS-5",
+        "Width":7,
+        "Height":4.375,
+        "Image":"rs-5.png"
+    },
+
+    {
         "Brand":"AMT",
         "Name":"M-1",
         "Width":2.9,
