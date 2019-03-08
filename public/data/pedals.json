@@ -3081,6 +3081,13 @@
         "Image":"ernieball-vp.png"
     },
     {
+        "Brand":"Ernie Ball",
+        "Name":"VP Jr Tuner",
+        "Width":3.5,
+        "Height":10,
+        "Image":"ernieball-vpjrtuner.png"
+    },
+    {
         "Brand":"Eventide",
         "Name":"H9",
         "Width":4.65,
