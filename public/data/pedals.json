@@ -583,6 +583,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"GE-7 Graphic Equalizer",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-ge7.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"LS-2 Line Selector",
         "Width":2.875,
         "Height":5.125,
