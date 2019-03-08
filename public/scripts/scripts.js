@@ -21436,9 +21436,40 @@ $(document).ready(function(){
 		}
 	});
 
-	$('body').on('keydown keyup',function(e){
-		if(e.which==68){
+	$('body').on('keydown keyup',function(event){
+		if(event.which==68){
+			console.log("D was pressed");
 			deleteSelected();
+			$(".canvas .panel").remove();
+		}
+	});
+
+	$('body').on('keydown',function(event){
+		if( event.which==17 || event.which==18 || event.which==91){
+			deselect();
+		}
+	});
+
+	$('body').on('keydown',function(event){
+
+		event.stopPropagation();
+
+		//mvital: in some cases click event is sent multiple times to the handler - no idea why
+		//mvital: seems calling stopImmediatePropagation() helps 
+		event.stopImmediatePropagation();
+
+		if(event.which==82){
+			if ( $('.canvas .selected').hasClass("rotate-90") ) {
+				$('.canvas .selected').removeClass("rotate-90");
+				$('.canvas .selected').addClass("rotate-180");
+			} else if ( $('.canvas .selected').hasClass("rotate-180") ) {
+				$('.canvas .selected').removeClass("rotate-180");
+				$('.canvas .selected').addClass("rotate-270");
+			}  else if ( $('.canvas .selected').hasClass("rotate-270") ) {
+				$('.canvas .selected').removeClass("rotate-270");
+			} else {
+				$('.canvas .selected').addClass("rotate-90");
+			}
 		}
 	});
 
@@ -21531,6 +21562,7 @@ function deselect() {
 
 function deleteSelected() {
 	$(".canvas .selected").remove();
+	$(".canvas .panel").remove();
 	savePedalCanvas();
 }
 
