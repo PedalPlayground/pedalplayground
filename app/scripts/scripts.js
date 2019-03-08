@@ -258,6 +258,12 @@ $(document).ready(function(){
 		}
 	});
 
+	$('body').on('keydown keyup',function(e){
+		if(e.which==82){
+			$('.canvas .selected .rotate').click();
+		}
+	});
+
 }); // End Document ready
 
 function readyCanvas(pedal) {
