@@ -252,6 +252,12 @@ $(document).ready(function(){
 		}
 	});
 
+	$('body').on('keydown keyup',function(e){
+		if(e.which==68){
+			deleteSelected();
+		}
+	});
+
 }); // End Document ready
 
 function readyCanvas(pedal) {
@@ -336,6 +342,11 @@ function deletePedal(pedal) {
 function deselect() {
 	$(".canvas .panel").remove();
 	$(".canvas .selected").removeClass("selected");
+	savePedalCanvas();
+}
+
+function deleteSelected() {
+	$(".canvas .selected").remove();
 	savePedalCanvas();
 }
 
