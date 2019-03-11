@@ -92,6 +92,20 @@
         "Image":"12-in-ruler.png"
     },
     {
+        "Brand":"Misc",
+        "Name":"Zip Tie Mount (28mm)",
+        "Width":1.1,
+        "Height":1.1,
+        "Image":"ziptiemount-lg.png"
+    },
+    {
+        "Brand":"Misc",
+        "Name":"Zip Tie Mount (25mm)",
+        "Width":0.98,
+        "Height":0.98,
+        "Image":"ziptiemount-sm.png"
+    },
+    {
         "Brand":"AA",
         "Name":"Germanium Fuzz",
         "Width":1.65,
