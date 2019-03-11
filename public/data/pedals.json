@@ -100,14 +100,21 @@
     },
     {
         "Brand":"Misc",
-        "Name":"Zip Tie Mount (28mm)",
+        "Name":"28mm Zip Tie Mount ",
         "Width":1.1,
         "Height":1.1,
         "Image":"ziptiemount-lg.png"
     },
     {
         "Brand":"Misc",
-        "Name":"Zip Tie Mount (25mm)",
+        "Name":"28mm Zip Tie Mount x 4",
+        "Width":4.1,
+        "Height":1.1,
+        "Image":"ziptiemount-lg-x4.png"
+    },
+    {
+        "Brand":"Misc",
+        "Name":"25mm Zip Tie Mount",
         "Width":0.98,
         "Height":0.98,
         "Image":"ziptiemount-sm.png"
@@ -3644,7 +3651,7 @@
         "Brand":"Greer Amps",
         "Name":"Lightspeed",
         "Width":2.9,
-        "Height":5,
+        "Height":4.87,
         "Image":"greer-lightspeed.png"
     },
     {
@@ -3679,7 +3686,7 @@
         "Brand":"Greer Amps",
         "Name":"The Southland",
         "Width":2.9,
-        "Height":5,
+        "Height":4.87,
         "Image":"greer-southland.png"
     },
     {
@@ -6555,8 +6562,8 @@
     {
         "Brand":"Snouse Electronics",
         "Name":"Black Box Overdrive 2",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.74,
+        "Height":4.46,
         "Image":"snouse-blackbox.png"
     },
     {
