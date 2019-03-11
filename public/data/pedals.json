@@ -72,6 +72,13 @@
     },
     {
         "Brand":"1981 Inventions",
+        "Name":"DRV Blackout",
+        "Width":3.520,
+        "Height":4.3,
+        "Image":"1981-inventions-black.png"
+    },
+    {
+        "Brand":"1981 Inventions",
         "Name":"DRV Sea Foam Green",
         "Width":3.520,
         "Height":4.3,
