@@ -267,6 +267,25 @@ $(document).ready(function(){
 	});
 
 	$('body').on('keydown',function(event){
+		if( event.which==17 || event.which==18 || event.which==91){
+			deselect();
+		}
+	});
+
+	// 37 - left
+	// 38 - up
+	// 39 - right
+	// 40 - down
+
+	$('body').on('keydown',function(event){
+		if ( event.which==37 ) {
+			var current = parseInt( $(".canvas .selected").css("left") );
+			$('.canvas .selected').css('left', current + 1);
+		}
+	});
+
+
+	$('body').on('keydown',function(event){
 
 		event.stopPropagation();
 
