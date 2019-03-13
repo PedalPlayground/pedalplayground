@@ -618,6 +618,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"JB-2 Angry Driver",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-jb2.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"LS-2 Line Selector",
         "Width":2.875,
         "Height":5.125,
@@ -643,6 +650,20 @@
         "Width":2.875,
         "Height":5.125,
         "Image":"boss-mt2.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"MT-2w Metal Zone",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-mt2w.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"SD-1w Super Overdrive",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-sd1w.png"
     },
     {
         "Brand":"BOSS",
@@ -6950,6 +6971,13 @@
         "Width":6.63,
         "Height":1.88,
         "Image":"strymon-multiswitch.png"
+    },
+    {
+        "Brand":"Strymon",
+        "Name":"Multiswitch Plus",
+        "Width":6.63,
+        "Height":1.88,
+        "Image":"strymon-multiswitchplus.png"
     },
     {
         "Brand":"Subdecay",
