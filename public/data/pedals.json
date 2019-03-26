@@ -4273,29 +4273,29 @@
     {
         "Brand":"Keeley",
         "Name":"1962",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-1962.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Compressor Plus",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-compressor-plus.png"
     },
     {
         "Brand":"Keeley",
         "Name":"30ms Tracker",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-30mstracker.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Abbey Chamber Verb",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-abbey.png"
     },
     {
@@ -4308,29 +4308,29 @@
     {
         "Brand":"Keeley",
         "Name":"Black Glass",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-blackglass.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Blacktop",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-blacktop.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Compressor",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-compressor.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Compressor (4 knob)",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-4knobcompressor.png"
     },
     {
@@ -4357,8 +4357,8 @@
     {
         "Brand":"Keeley",
         "Name":"DS-9",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-ds9.png"
     },
     {
@@ -4371,8 +4371,8 @@
     {
         "Brand":"Keeley",
         "Name":"Dynatrem",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-dynatrem.png"
     },
     {
@@ -4385,15 +4385,15 @@
     {
         "Brand":"Keeley",
         "Name":"Holy Fuzz",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-holyfuzz.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Java Boost",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-javaboost.png"
     },
     {
@@ -4406,43 +4406,43 @@
     {
         "Brand":"Keeley",
         "Name":"Mag Echo",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-magecho.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Memphis Sun",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-memphis.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Neutrino",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-neutrino.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Oxblood",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-oxblood.png"
     },
     {
         "Brand":"Keeley",
         "Name":"PSI",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-psi.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Phase 24",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-phase24.png"
     },
     {
@@ -4455,15 +4455,15 @@
     {
         "Brand":"Keeley",
         "Name":"Red Dirt",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-reddirtoverdrive.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Red Dirt Germanium",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-reddirtgermanium.png"
     },
     {
@@ -4476,15 +4476,15 @@
     {
         "Brand":"Keeley",
         "Name":"Stahlhammer",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-stahlhammer.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Super Phat Mod",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-superphatmod.png"
     },
     {
@@ -4497,8 +4497,8 @@
     {
         "Brand":"Keeley",
         "Name":"Vibe o Verb",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-vibeoverb.png"
     },
     {
