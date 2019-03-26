@@ -72,6 +72,13 @@
     },
     {
         "Brand":"1981 Inventions",
+        "Name":"DRV Blackout",
+        "Width":3.520,
+        "Height":4.3,
+        "Image":"1981-inventions-black.png"
+    },
+    {
+        "Brand":"1981 Inventions",
         "Name":"DRV Sea Foam Green",
         "Width":3.520,
         "Height":4.3,
@@ -90,6 +97,27 @@
         "Width":12,
         "Height":1,
         "Image":"12-in-ruler.png"
+    },
+    {
+        "Brand":"Misc",
+        "Name":"28mm Zip Tie Mount ",
+        "Width":1.1,
+        "Height":1.1,
+        "Image":"ziptiemount-lg.png"
+    },
+    {
+        "Brand":"Misc",
+        "Name":"28mm Zip Tie Mount x 4",
+        "Width":4.1,
+        "Height":1.1,
+        "Image":"ziptiemount-lg-x4.png"
+    },
+    {
+        "Brand":"Misc",
+        "Name":"25mm Zip Tie Mount",
+        "Width":0.98,
+        "Height":0.98,
+        "Image":"ziptiemount-sm.png"
     },
     {
         "Brand":"AA",
@@ -590,6 +618,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"JB-2 Angry Driver",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-jb2.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"LS-2 Line Selector",
         "Width":2.875,
         "Height":5.125,
@@ -615,6 +650,20 @@
         "Width":2.875,
         "Height":5.125,
         "Image":"boss-mt2.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"MT-2w Metal Zone",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-mt2w.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"SD-1w Super Overdrive",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-sd1w.png"
     },
     {
         "Brand":"BOSS",
@@ -3623,7 +3672,7 @@
         "Brand":"Greer Amps",
         "Name":"Lightspeed",
         "Width":2.9,
-        "Height":5,
+        "Height":4.87,
         "Image":"greer-lightspeed.png"
     },
     {
@@ -3658,7 +3707,7 @@
         "Brand":"Greer Amps",
         "Name":"The Southland",
         "Width":2.9,
-        "Height":5,
+        "Height":4.87,
         "Image":"greer-southland.png"
     },
     {
@@ -4245,29 +4294,29 @@
     {
         "Brand":"Keeley",
         "Name":"1962",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-1962.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Compressor Plus",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-compressor-plus.png"
     },
     {
         "Brand":"Keeley",
         "Name":"30ms Tracker",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-30mstracker.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Abbey Chamber Verb",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-abbey.png"
     },
     {
@@ -4280,29 +4329,29 @@
     {
         "Brand":"Keeley",
         "Name":"Black Glass",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-blackglass.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Blacktop",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-blacktop.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Compressor",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-compressor.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Compressor (4 knob)",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-4knobcompressor.png"
     },
     {
@@ -4329,8 +4378,8 @@
     {
         "Brand":"Keeley",
         "Name":"DS-9",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-ds9.png"
     },
     {
@@ -4343,8 +4392,8 @@
     {
         "Brand":"Keeley",
         "Name":"Dynatrem",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-dynatrem.png"
     },
     {
@@ -4357,15 +4406,15 @@
     {
         "Brand":"Keeley",
         "Name":"Holy Fuzz",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-holyfuzz.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Java Boost",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-javaboost.png"
     },
     {
@@ -4378,43 +4427,43 @@
     {
         "Brand":"Keeley",
         "Name":"Mag Echo",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-magecho.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Memphis Sun",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-memphis.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Neutrino",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-neutrino.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Oxblood",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-oxblood.png"
     },
     {
         "Brand":"Keeley",
         "Name":"PSI",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-psi.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Phase 24",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-phase24.png"
     },
     {
@@ -4427,15 +4476,15 @@
     {
         "Brand":"Keeley",
         "Name":"Red Dirt",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-reddirtoverdrive.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Red Dirt Germanium",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-reddirtgermanium.png"
     },
     {
@@ -4448,15 +4497,15 @@
     {
         "Brand":"Keeley",
         "Name":"Stahlhammer",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-stahlhammer.png"
     },
     {
         "Brand":"Keeley",
         "Name":"Super Phat Mod",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-superphatmod.png"
     },
     {
@@ -4469,8 +4518,8 @@
     {
         "Brand":"Keeley",
         "Name":"Vibe o Verb",
-        "Width":2.5,
-        "Height":4.41,
+        "Width":2.58,
+        "Height":4.3,
         "Image":"keeley-vibeoverb.png"
     },
     {
@@ -6555,8 +6604,8 @@
     {
         "Brand":"Snouse Electronics",
         "Name":"Black Box Overdrive 2",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.74,
+        "Height":4.46,
         "Image":"snouse-blackbox.png"
     },
     {
@@ -6943,6 +6992,13 @@
         "Width":6.63,
         "Height":1.88,
         "Image":"strymon-multiswitch.png"
+    },
+    {
+        "Brand":"Strymon",
+        "Name":"Multiswitch Plus",
+        "Width":6.63,
+        "Height":1.88,
+        "Image":"strymon-multiswitchplus.png"
     },
     {
         "Brand":"Subdecay",
@@ -7993,6 +8049,13 @@
         "Width":4.67,
         "Height":3.68,
         "Image":"walrus-monument.png"
+    },
+    {
+        "Brand":"Walrus",
+        "Name":"Monument V2",
+        "Width":2.68,
+        "Height":4.87,
+        "Image":"walrus-monumentv2.png"
     },
     {
         "Brand":"Walrus",
