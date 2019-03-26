@@ -4152,6 +4152,27 @@
         "Image":"jackson-prism.png"
     },
     {
+        "Brand":"Jackson Audio",
+        "Name":"Prism Red",
+        "Width":2.5,
+        "Height":4.875,
+        "Image":"jackson-prism-red.png"
+    },
+    {
+        "Brand":"Jackson Audio",
+        "Name":"Prism Black",
+        "Width":2.5,
+        "Height":4.875,
+        "Image":"jackson-prism-black.png"
+    },
+    {
+        "Brand":"Jackson Audio",
+        "Name":"Prism Purple",
+        "Width":2.5,
+        "Height":4.875,
+        "Image":"jackson-prism-purple.png"
+    },
+    {
         "Brand":"JangleBox",
         "Name":"Compressor",
         "Width":3.68,
