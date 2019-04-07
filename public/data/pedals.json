@@ -5748,6 +5748,13 @@
         "Image":"mrblack-supermoonchrome.png"
     },
     {
+        "Brand":"Mr. Black",
+        "Name":"Tapex 2",
+        "Width":3.82,
+        "Height":4.6,
+        "Image":"mrblack-tapex.png"
+    },
+    {
         "Brand":"Musicomlab",
         "Name":"EFX III",
         "Width":11,
