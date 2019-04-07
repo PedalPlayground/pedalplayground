@@ -4300,6 +4300,13 @@
     },
     {
         "Brand":"Keeley",
+        "Name":"Katana",
+        "Width":3.175,
+        "Height":4.39,
+        "Image":"keeley-katana.png"
+    },
+    {
+        "Brand":"Keeley",
         "Name":"Compressor Plus",
         "Width":2.58,
         "Height":4.3,
