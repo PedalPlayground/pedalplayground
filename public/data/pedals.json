@@ -702,6 +702,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"ODB-3 Bass Overdrive",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-odb3.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"OS-2 Overdrive/Distortion",
         "Width":2.875,
         "Height":5.125,
