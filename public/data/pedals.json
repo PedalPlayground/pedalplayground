@@ -527,6 +527,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"DS-2 Turbo Distortion",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-ds2.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"ES-5",
         "Width":13.27,
         "Height":3.82,
@@ -678,13 +685,6 @@
         "Width":2.875,
         "Height":5.125,
         "Image":"boss-oc2.png"
-    },
-    {
-        "Brand":"BOSS",
-        "Name":"OD-1 Overdrive",
-        "Width":2.875,
-        "Height":5.125,
-        "Image":"boss-od1.png"
     },
     {
         "Brand":"BOSS",
@@ -867,6 +867,13 @@
         "Width":2.875,
         "Height":5.125,
         "Image":"boss-vb2w.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"VO-1 Vocoder",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-vo1.png"
     },
     {
         "Brand":"Barber",
@@ -1321,6 +1328,13 @@
         "Name":"Sick As",
         "Width":4.7,
         "Height":3.7,
+        "Image":"bondi-sickas.png"
+    },
+    {
+        "Brand":"Bondi Effects",
+        "Name":"Art Van",
+        "Width":2.893,
+        "Height":4.88,
         "Image":"bondi-sickas.png"
     },
     {
@@ -3257,6 +3271,13 @@
     },
     {
         "Brand":"Fender",
+        "Name":"The Pinwheel",
+        "Width":3.75,
+        "Height":4.9,
+        "Image":"fender-thepinwheel.png"
+    },
+    {
+        "Brand":"Fender",
         "Name":"Pugliest Distortion",
         "Width":4.26,
         "Height":5.39,
@@ -3551,10 +3572,24 @@
     },
     {
         "Brand":"GigRig",
+        "Name":"Abybaby",
+        "Width":6.3,
+        "Height":2.28,
+        "Image":"gigrig-abybaby.png"
+    },
+    {
+        "Brand":"GigRig",
         "Name":"G2",
         "Width":17.33,
         "Height":5.12,
         "Image":"gigrig-g2.png"
+    },
+    {
+        "Brand":"GigRig",
+        "Name":"Humdinger",
+        "Width":2.05,
+        "Height":4.02,
+        "Image":"gigrig-humdinger.png"
     },
     {
         "Brand":"GigRig",
@@ -3569,6 +3604,27 @@
         "Width":11.02,
         "Height":2.28,
         "Image":"gigrig-qmx4.png"
+    },
+    {
+        "Brand":"GigRig",
+        "Name":"QuarterMaster QMX10",
+        "Width":26.77,
+        "Height":2.28,
+        "Image":"gigrig-qmx10.png"
+    },
+    {
+        "Brand":"GigRig",
+        "Name":"QuarterMaster QMX6",
+        "Width":16.14,
+        "Height":2.28,
+        "Image":"gigrig-qmx6.png"
+    },
+    {
+        "Brand":"GigRig",
+        "Name":"QuarterMaster QMX2",
+        "Width":6.30,
+        "Height":2.28,
+        "Image":"gigrig-qmx2.png"
     },
     {
         "Brand":"GigRig",
