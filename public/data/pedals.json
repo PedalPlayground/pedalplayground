@@ -4705,13 +4705,6 @@
         "Image":"korg-pitchblackmini.png"
     },
     {
-        "Brand":"Korg",
-        "Name":"Miku",
-        "Width":2.91,
-        "Height":4.72,
-        "Image":"korg-miku.png"
-    },
-    {
         "Brand":"Lehle",
         "Name":"Mono Volume",
         "Width":3.94,
@@ -5431,13 +5424,6 @@
         "Width":3.7,
         "Height":2.6,
         "Image":"meris-midi-io.png"
-    },
-    {
-        "Brand":"Meris",
-        "Name":"Preset Switch",
-        "Width":8.5,
-        "Height":2.25,
-        "Image":"meris-presetswitch.png"
     },
     {
         "Brand":"Mesa Boogie",
@@ -8700,13 +8686,6 @@
         "Width":3.64,
         "Height":4.8,
         "Image":"zvex-fuzzfactory7.png"
-    },
-    {
-        "Brand":"Zvex",
-        "Name":"Fuzz Factory Vertical",
-        "Width":2.625,
-        "Height":4.3125,
-        "Image":"zvex-fuzzfactoryvertical.png"
     },
     {
         "Brand":"Zvex",
