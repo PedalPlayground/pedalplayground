@@ -3586,6 +3586,13 @@
     },
     {
         "Brand":"Goodwood Audio",
+        "Name":"RMT",
+        "Width":1.52,
+        "Height":3.889,
+        "Image":"goodwood-rmt.png"
+    },
+    {
+        "Brand":"Goodwood Audio",
         "Name":"Audition",
         "Width":4.44882,
         "Height":2.598425,
@@ -6719,6 +6726,13 @@
         "Width":2.75,
         "Height":4.5,
         "Image":"sourceaudio-gemini.png"
+    },
+    {
+        "Brand":"Source Audio",
+        "Name":"True Spring Reverb",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"sourceaudio-truespring.png"
     },
     {
         "Brand":"Source Audio",
