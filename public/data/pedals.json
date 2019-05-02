@@ -4202,6 +4202,13 @@
     },
     {
         "Brand":"Jackson Audio",
+        "Name":"Broken Arrow",
+        "Width":2.652,
+        "Height":4.8,
+        "Image":"jackson-brokenarrow.png"
+    },
+    {
+        "Brand":"Jackson Audio",
         "Name":"Prism",
         "Width":2.5,
         "Height":4.875,
