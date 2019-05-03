@@ -471,6 +471,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"DC-2w Dimension C",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-dc2w.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"DD-20",
         "Width":6.81,
         "Height":6.25,
