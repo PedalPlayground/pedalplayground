@@ -267,6 +267,13 @@
     },
     {
         "Brand":"Templeboards",
+        "Name":"Duo 17",
+        "Width":17,
+        "Height":12.5,
+        "Image":"temple-duo17.png"
+    },
+    {
+        "Brand":"Templeboards",
         "Name":"Trio 21",
         "Width":21,
         "Height":16.5,
