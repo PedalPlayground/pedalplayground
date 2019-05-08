@@ -15,6 +15,13 @@
     },
     {
         "Brand":"Creation Music Co",
+        "Name":"Aero 17x12.5",
+        "Width":17,
+        "Height":12.5,
+        "Image":"creation-aero-17-125.png"
+    },
+    {
+        "Brand":"Creation Music Co",
         "Name":"Elevation 32x16",
         "Width":32,
         "Height":16,
