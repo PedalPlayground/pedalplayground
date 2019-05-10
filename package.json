@@ -4,6 +4,7 @@
   "description": "A site to help you arrange pedals",
   "main": "gulpfile.js",
   "dependencies": {
+    "bower": "^1.8.8",
     "gulp": "^3.9.0",
     "gulp-cached": "^1.1.1",
     "gulp-concat": "^2.6.1",

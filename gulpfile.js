@@ -100,7 +100,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('process-images', function() {
-	return gulp.src('app/images/pedals-new/*')
+	return gulp.src('app/images/pedals/*')
         .pipe(cache('images'))
 		.pipe(responsive({
 			'*.*': {
