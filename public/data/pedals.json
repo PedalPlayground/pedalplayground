@@ -5364,6 +5364,13 @@
     },
     {
         "Brand":"Meris",
+        "Name":"Hedra",
+        "Width":4.25,
+        "Height":4.5,
+        "Image":"meris-hedra.png"
+    },
+    {
+        "Brand":"Meris",
         "Name":"Enzo",
         "Width":4.25,
         "Height":4.5,
