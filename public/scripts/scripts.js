@@ -22186,6 +22186,7 @@ $(document).ready(function(){
 		if ( event.which==38 ) {
 			var current = parseInt( $(".canvas .selected").css("top") );
 			$('.canvas .selected').css('top', current - 1);
+			event.preventDefault();
 		}
 	});
 
@@ -22193,7 +22194,7 @@ $(document).ready(function(){
 	$('body').on('keydown',function(event){
 		if ( event.which==39 ) {
 			var current = parseInt( $(".canvas .selected").css("left") );
-			$('.canvas .selected').css('left', current - 1);
+			$('.canvas .selected').css('left', current + 1);
 		}
 	});
 	
@@ -22202,6 +22203,7 @@ $(document).ready(function(){
 		if ( event.which==40 ) {
 			var current = parseInt( $(".canvas .selected").css("top") );
 			$('.canvas .selected').css('top', current + 1);
+			event.preventDefault();
 		}
 	});
 
