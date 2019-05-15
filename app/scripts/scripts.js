@@ -253,8 +253,7 @@ $(document).ready(function(){
 	});
 
 	$('body').on('keydown keyup',function(event){
-		if(event.which==68){
-			console.log("D was pressed");
+		if(event.which==68 || event.which==8){
 			deleteSelected();
 			$(".canvas .panel").remove();
 		}
@@ -277,10 +276,37 @@ $(document).ready(function(){
 	// 39 - right
 	// 40 - down
 
+	// Move left
 	$('body').on('keydown',function(event){
 		if ( event.which==37 ) {
 			var current = parseInt( $(".canvas .selected").css("left") );
+			$('.canvas .selected').css('left', current - 1);
+		}
+	});
+	
+	// Move up
+	$('body').on('keydown',function(event){
+		if ( event.which==38 ) {
+			var current = parseInt( $(".canvas .selected").css("top") );
+			$('.canvas .selected').css('top', current - 1);
+			event.preventDefault();
+		}
+	});
+
+	// Move right
+	$('body').on('keydown',function(event){
+		if ( event.which==39 ) {
+			var current = parseInt( $(".canvas .selected").css("left") );
 			$('.canvas .selected').css('left', current + 1);
+		}
+	});
+	
+	// Move down
+	$('body').on('keydown',function(event){
+		if ( event.which==40 ) {
+			var current = parseInt( $(".canvas .selected").css("top") );
+			$('.canvas .selected').css('top', current + 1);
+			event.preventDefault();
 		}
 	});
 
