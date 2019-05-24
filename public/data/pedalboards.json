@@ -282,7 +282,7 @@
     {
         "Brand":"Templeboards",
         "Name":"Duo 24",
-        "Width":24,
+        "Width":24.5,
         "Height":12.5,
         "Image":"temple-duo24.png"
     },
@@ -303,14 +303,14 @@
     {
         "Brand":"Templeboards",
         "Name":"Trio 28",
-        "Width":28,
+        "Width":28.2,
         "Height":16.5,
         "Image":"temple-trio28.png"
     },
     {
         "Brand":"Templeboards",
         "Name":"Trio 43",
-        "Width":43,
+        "Width":43.2,
         "Height":16.5,
         "Image":"temple-trio43.png"
     },
