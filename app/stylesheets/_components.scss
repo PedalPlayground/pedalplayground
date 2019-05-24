@@ -1,5 +1,11 @@
 $border: 1px solid rgba(black, .13);
 
+$header-bg-dark: 	#232329;
+$panel-bg-dark: 	#1B1920;
+$canvas-bg-dark: 	#232329;
+$body-color-dark: 	#ccc;
+
+
 .site-header {
 	background: #FFF;
 	padding: 12px;
@@ -15,6 +21,60 @@ $border: 1px solid rgba(black, .13);
 		top: 50%;
 		margin-top: -10px;
 	}
+	.darkmode & {
+		background: $header-bg-dark;
+		color: #555;
+		h1 {
+			color: #f8f8f8;
+		}
+	}
+}
+
+.darkmode {
+	color: $body-color-dark;
+	background: $canvas-bg-dark;
+	.modal-content {
+		background: $panel-bg-dark;
+		.close {
+			text-shadow: none;
+			color: #ccc;
+		}
+	}
+	.modal-header,
+	.modal-footer {
+		border-color: rgba(white, .1);
+	}
+	.btn {
+		border: 0;
+	}
+	.select2-selection,
+	.form-control,
+	.input-group-addon,
+	.select2-dropdown {
+		border: 0;
+		background: $canvas-bg-dark;
+		border: 1px solid rgba(white, .1);
+	}
+	.input-group-addon,
+	.select2-search__field {
+		background: $canvas-bg-dark;
+		border-color: rgba(white, .1);
+	}
+	.nav-tabs {
+		border-color: rgba(white, .1);
+	}
+	.nav-tabs>li.active>a, 
+	.nav-tabs>li.active>a:focus, 
+	.nav-tabs>li.active>a:hover {
+		color: #999;
+		background: $canvas-bg-dark;
+		border-color: rgba(white, .1);
+	}
+	.nav-tabs>li>a:hover {
+		background: none;
+		color: white;
+		border-color: transparent;
+	}
 }
 
 .site-body {
@@ -29,6 +89,9 @@ $border: 1px solid rgba(black, .13);
 	}
 	&.is-slid {
 		//transform: translateX(290px);
+	}
+	.darkmode & {
+		border-color: rgba(white, .1);
 	}
 }
 
@@ -138,15 +201,22 @@ $border: 1px solid rgba(black, .13);
 	}
 	@media (min-width: 1024px) {
 		max-width: 290px;
-		border-right: $border;
-		background: #FFF;
 		box-shadow: 0 1px 5px rgba(black, .16);
 		padding: 20px;
+		background: #FFF;
+		border-right: $border;
+		.darkmode & {
+			background-color: $panel-bg-dark;
+			border-right-color: rgba(white, .1);
+		}
 	}
 	&__section {
 		border-bottom: $border;
 		padding-bottom: 16px;
 		margin-bottom: 16px;
+		.darkmode & {
+			border-bottom-color: rgba(white, .1);
+		}
 	}
 	h4 {
 		font-size: 15px;
@@ -155,8 +225,12 @@ $border: 1px solid rgba(black, .13);
 
 .canvas {
 	position: relative;
-	background: #F8F8F8 url('../images/grid-fine.png');
 	overflow: hidden;
+	background-image: url('../images/grid-fine.png');
+	background-color: #F8F8F8;
+	.darkmode & {
+		background-color: $canvas-bg-dark;
+	}
 }
 
 .item {
@@ -511,6 +585,10 @@ $border: 1px solid rgba(black, .13);
 		background: rgba(white, .5);
 		border: 1px solid rgba(black, .12);
 		border-top-left-radius: 5px;
+		.darkmode & {
+			background: $panel-bg-dark;
+			border-color: rgba(white, .12);
+		}
 		input {
 			width: 50px;
 		}

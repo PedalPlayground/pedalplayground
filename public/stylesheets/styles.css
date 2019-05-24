@@ -6975,6 +6975,48 @@ strong, th {
     right: 14px;
     top: 50%;
     margin-top: -10px; }
+  .darkmode .site-header {
+    background: #232329;
+    color: #555; }
+    .darkmode .site-header h1 {
+      color: #f8f8f8; }
+
+.darkmode {
+  color: #ccc;
+  background: #232329; }
+  .darkmode .modal-content {
+    background: #1B1920; }
+    .darkmode .modal-content .close {
+      text-shadow: none;
+      color: #ccc; }
+  .darkmode .modal-header,
+  .darkmode .modal-footer {
+    border-color: rgba(255, 255, 255, 0.1); }
+  .darkmode .btn {
+    border: 0; }
+  .darkmode .select2-selection,
+  .darkmode .form-control,
+  .darkmode .input-group-addon,
+  .darkmode .select2-dropdown {
+    border: 0;
+    background: #232329;
+    border: 1px solid rgba(255, 255, 255, 0.1); }
+  .darkmode .input-group-addon,
+  .darkmode .select2-search__field {
+    background: #232329;
+    border-color: rgba(255, 255, 255, 0.1); }
+  .darkmode .nav-tabs {
+    border-color: rgba(255, 255, 255, 0.1); }
+  .darkmode .nav-tabs > li.active > a,
+  .darkmode .nav-tabs > li.active > a:focus,
+  .darkmode .nav-tabs > li.active > a:hover {
+    color: #999;
+    background: #232329;
+    border-color: rgba(255, 255, 255, 0.1); }
+  .darkmode .nav-tabs > li > a:hover {
+    background: none;
+    color: white;
+    border-color: transparent; }
 
 .site-body {
   border-top: 1px solid rgba(0, 0, 0, 0.13);
@@ -6986,6 +7028,8 @@ strong, th {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
+  .darkmode .site-body {
+    border-color: rgba(255, 255, 255, 0.1); }
 
 .sidebar-close {
   display: none; }
@@ -7087,23 +7131,31 @@ strong, th {
 @media (min-width: 1024px) {
   .sidebar {
     max-width: 290px;
-    border-right: 1px solid rgba(0, 0, 0, 0.13);
-    background: #FFF;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
-    padding: 20px; } }
+    padding: 20px;
+    background: #FFF;
+    border-right: 1px solid rgba(0, 0, 0, 0.13); }
+    .darkmode .sidebar {
+      background-color: #1B1920;
+      border-right-color: rgba(255, 255, 255, 0.1); } }
 
 .sidebar__section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.13);
   padding-bottom: 16px;
   margin-bottom: 16px; }
+  .darkmode .sidebar__section {
+    border-bottom-color: rgba(255, 255, 255, 0.1); }
 
 .sidebar h4 {
   font-size: 15px; }
 
 .canvas {
   position: relative;
-  background: #F8F8F8 url("../images/grid-fine.png");
-  overflow: hidden; }
+  overflow: hidden;
+  background-image: url("../images/grid-fine.png");
+  background-color: #F8F8F8; }
+  .darkmode .canvas {
+    background-color: #232329; }
 
 .item {
   position: absolute;
@@ -7411,6 +7463,9 @@ strong, th {
     background: rgba(255, 255, 255, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-top-left-radius: 5px; }
+    .darkmode #canvas-scale-form {
+      background: #1B1920;
+      border-color: rgba(255, 255, 255, 0.12); }
     #canvas-scale-form input {
       width: 50px; }
     #canvas-scale-form h5 {
