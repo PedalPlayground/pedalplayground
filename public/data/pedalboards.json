@@ -281,24 +281,38 @@
     },
     {
         "Brand":"Templeboards",
+        "Name":"Duo 24",
+        "Width":24,
+        "Height":12.5,
+        "Image":"temple-duo24.png"
+    },
+    {
+        "Brand":"Templeboards",
+        "Name":"Duo 34",
+        "Width":34,
+        "Height":12.5,
+        "Image":"temple-duo34.png"
+    },
+    {
+        "Brand":"Templeboards",
         "Name":"Trio 21",
         "Width":21,
         "Height":16.5,
-        "Image":"temple-trio-21.png"
+        "Image":"temple-trio21.png"
     },
     {
         "Brand":"Templeboards",
         "Name":"Trio 28",
         "Width":28,
         "Height":16.5,
-        "Image":"temple-trio-28.png"
+        "Image":"temple-trio28.png"
     },
     {
         "Brand":"Templeboards",
         "Name":"Trio 43",
         "Width":43,
         "Height":16.5,
-        "Image":"temple-trio-43.png"
+        "Image":"temple-trio43.png"
     },
     {
         "Brand":"Trav's",
