@@ -5163,15 +5163,43 @@
         "Brand":"Matthews Effects",
         "Name":"The Architect",
         "Width":2.62,
-        "Height":4.78,
+        "Height":4.93,
         "Image":"matthews-thearchitect.png"
     },
     {
         "Brand":"Matthews Effects",
-        "Name":"The Astronomer",
+        "Name":"The Architect V3",
+        "Width":2.74,
+        "Height":4.93,
+        "Image":"matthews-architect-v3.png"
+    },
+    {
+        "Brand":"Matthews Effects",
+        "Name":"The Astronomer V2",
+        "Width":2.85,
+        "Height":4.93,
+        "Image":"matthews-astronomer-v2.png"
+    },
+    {
+        "Brand":"Matthews Effects",
+        "Name":"The Chemist V2",
+        "Width":2.85,
+        "Height":4.93,
+        "Image":"matthews-chemist-v2.png"
+    },
+    {
+        "Brand":"Matthews Effects",
+        "Name":"The Whaler V2",
         "Width":2.62,
+        "Height":4.93,
+        "Image":"matthews-whaler-v2.png"
+    },
+    {
+        "Brand":"Matthews Effects",
+        "Name":"The Cosmonaut",
+        "Width":2.85,
         "Height":4.78,
-        "Image":"matthews-theastronomer.png"
+        "Image":"matthews-cosmonaut-v2.png"
     },
     {
         "Brand":"Matthews Effects",
