@@ -5244,6 +5244,41 @@
         "Image":"matthews-thewhaler.png"
     },
     {
+        "Brand":"Mythos",
+        "Name":"Runestone",
+        "Width":2.62,
+        "Height":4.78,
+        "Image":"mythos-runestone.png"
+    },
+    {
+        "Brand":"Mythos",
+        "Name":"Mjolner",
+        "Width":2.62,
+        "Height":4.78,
+        "Image":"mythos-mjolner.png"
+    },
+    {
+        "Brand":"Mythos",
+        "Name":"Argo",
+        "Width":2.62,
+        "Height":4.78,
+        "Image":"mythos-argo.png"
+    },
+    {
+        "Brand":"Mythos",
+        "Name":"Chupacabra",
+        "Width":2.62,
+        "Height":4.78,
+        "Image":"mythos-chupacabra.png"
+    },
+    {
+        "Brand":"Mythos",
+        "Name":"Wildwood Edition Mjolnir",
+        "Width":4.67,
+        "Height":3.7,
+        "Image":"mythos-mjolner-wildwood.png"
+    },
+    {
         "Brand":"Maxon",
         "Name":"Analog Delay AD10",
         "Width":2.79,
