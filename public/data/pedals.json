@@ -8812,5 +8812,12 @@
         "Width":4.7,
         "Height":2.38,
         "Image":"zvex-woollymammoth.png"
+    },
+    {
+        "Brand":"Browne Amplification",
+        "Name":"Protein",
+        "Width":4.67,
+        "Height":3.68,
+        "Image":"browneamps-protein.png"
     }
 ]
