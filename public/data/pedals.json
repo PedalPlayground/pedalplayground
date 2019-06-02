@@ -20,7 +20,13 @@
         "Height":4.375,
         "Image":"rs-5.png"
     },
-
+    {
+        "Brand":"Browne Amplification",
+        "Name":"Protein",
+        "Width":4.67,
+        "Height":3.68,
+        "Image":"browneamps-protein.png"
+    },
     {
         "Brand":"AMT",
         "Name":"M-1",
@@ -8812,12 +8818,5 @@
         "Width":4.7,
         "Height":2.38,
         "Image":"zvex-woollymammoth.png"
-    },
-    {
-        "Brand":"Browne Amplification",
-        "Name":"Protein",
-        "Width":4.67,
-        "Height":3.68,
-        "Image":"browneamps-protein.png"
     }
 ]
