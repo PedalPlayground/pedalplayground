@@ -5247,28 +5247,28 @@
         "Brand":"Mythos",
         "Name":"Runestone",
         "Width":2.62,
-        "Height":4.78,
+        "Height":4.93,
         "Image":"mythos-runestone.png"
     },
     {
         "Brand":"Mythos",
         "Name":"Mjolner",
         "Width":2.62,
-        "Height":4.78,
+        "Height":4.93,
         "Image":"mythos-mjolner.png"
     },
     {
         "Brand":"Mythos",
         "Name":"Argo",
         "Width":2.62,
-        "Height":4.78,
+        "Height":4.93,
         "Image":"mythos-argo.png"
     },
     {
         "Brand":"Mythos",
         "Name":"Chupacabra",
         "Width":2.62,
-        "Height":4.78,
+        "Height":4.93,
         "Image":"mythos-chupacabra.png"
     },
     {
@@ -6562,8 +6562,8 @@
     {
         "Brand":"Selah",
         "Name":"Scarlett Love V3",
-        "Width":4.3,
-        "Height":2.5,
+        "Width":4.77,
+        "Height":2.62,
         "Image":"selah-scarlettelovev3.png"
     },
     {
