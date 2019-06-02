@@ -80,7 +80,7 @@ $body-color-dark: 	#ccc;
 .site-body {
 	border-top: $border;
 	min-height: 100vh;
-	min-width: 1500px;
+	min-width: 1400px;
 	position: relative;
 	@include flexbox;
 	//@include flex-direction(column);
