@@ -5027,7 +5027,7 @@
     },
     {
         "Brand":"MXR",
-        "Name":"Reverb",
+        "Name":"M300 Reverb",
         "Width":2.6,
         "Height":4.3,
         "Image":"mxr-reverb.png"
@@ -7295,7 +7295,7 @@
     },
     {
         "Brand":"Supro",
-        "Name":"Tremolo",
+        "Name":" Tremolo",
         "Width":2.6,
         "Height":4.8,
         "Image":"supro-tremolo.png"
