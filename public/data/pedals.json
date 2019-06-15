@@ -414,6 +414,34 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"DD-200 Digital Delay",
+        "Width":4,
+        "Height":5.4375,
+        "Image":"boss-dd200.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"MD-200 Modulation",
+        "Width":4,
+        "Height":5.4375,
+        "Image":"boss-md200.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"EQ-200 Grphic Equalizer",
+        "Width":4,
+        "Height":5.4375,
+        "Image":"boss-eq200.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"OD-200 Hybrid Drive",
+        "Width":4,
+        "Height":5.4375,
+        "Image":"boss-od200.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"BC-1x Bass Compressor",
         "Width":2.875,
         "Height":5.125,
