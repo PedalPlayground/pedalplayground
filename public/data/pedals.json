@@ -421,6 +421,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"RC-10R Rythm Loop Station",
+        "Width":4,
+        "Height":5.4375,
+        "Image":"boss-rc10r.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"MD-200 Modulation",
         "Width":4,
         "Height":5.4375,
