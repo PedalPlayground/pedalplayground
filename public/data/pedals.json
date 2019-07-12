@@ -1750,6 +1750,13 @@
         "Image": "boss-dimensionc.png"
     },
     {
+        "Brand": "Boss",
+        "Name": "SY-1 Synthesizer",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-sy1.png"
+    },
+    {
         "Brand": "Fractal Audio Systems",
         "Name": "AX8",
         "Width": 16.4,
