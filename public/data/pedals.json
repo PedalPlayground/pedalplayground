@@ -4110,6 +4110,13 @@
     },
     {
         "Brand":"JHS",
+        "Name":"Colour Box",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"jhs-colourbox.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"Double Barrel",
         "Width":4.7,
         "Height":3.7,
