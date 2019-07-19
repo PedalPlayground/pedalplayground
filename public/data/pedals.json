@@ -7931,6 +7931,13 @@
         "Image":"twonotes-torpedocab.png"
     },
     {
+        "Brand":"Two Notes",
+        "Name":"Torpedo C.A.B. M",
+        "Width":3.78,
+        "Height":4.76,
+        "Image":"twonotes-torpedocabm.png"
+    },
+    {
         "Brand":"Vertex",
         "Name":"Ultraphonix OD",
         "Width":3.2,
