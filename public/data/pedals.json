@@ -4613,6 +4613,13 @@
         "Image":"kemper-remote.png"
     },
     {
+        "Brand":"Kemper",
+        "Name":"Profiler Stage",
+        "Width":18.5,
+        "Height":10.24,
+        "Image":"kemper-stage.png"
+    },
+    {
         "Brand":"Kingsley",
         "Name":"Jester",
         "Width":5.25,
