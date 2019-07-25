@@ -421,6 +421,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"RC-10R Rythm Loop Station",
+        "Width":4,
+        "Height":5.4375,
+        "Image":"boss-rc10r.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"MD-200 Modulation",
         "Width":4,
         "Height":5.4375,
@@ -3183,6 +3190,13 @@
         "Width":5.7,
         "Height":3.75,
         "Image":"empress-superdelayvmod.png"
+    },
+    {
+        "Brand":"Empress",
+        "Name":"Zoia",
+        "Width":5.7,
+        "Height":3.75,
+        "Image":"empress-zoia.png"
     },
     {
         "Brand":"Ernie Ball",
