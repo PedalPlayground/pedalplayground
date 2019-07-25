@@ -7,6 +7,20 @@
         "Image":"jampedals-retrovibe1.png"
     },
     {
+        "Brand":"Roland",
+        "Name":"EV-5",
+        "Width":3.4375,
+        "Height":7.875,
+        "Image":"boss-ev5.png"
+    },
+    {
+        "Brand":"Boss",
+        "Name":"EV-5",
+        "Width":3.4375,
+        "Height":7.875,
+        "Image":"boss-ev5.png"
+    },
+    {
         "Brand":"Jam Pedals",
         "Name":"Rattler",
         "Width":2.7,
