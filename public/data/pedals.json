@@ -4826,7 +4826,7 @@
         "Brand":"Line6",
         "Name":"HX Stomp",
         "Width":7,
-        "Height":5,
+        "Height":4.96,
         "Image":"line6-hxstomp.png"
     },
     {
@@ -4881,7 +4881,7 @@
     {
         "Brand":"Loopi",
         "Name":"Mini Dual Latching Footswitch",
-        "Width":3.675,
+        "Width":3.68,
         "Height":1.6,
         "Image":"loopi-dualfootswitch.png"
     },
@@ -5328,6 +5328,13 @@
     },
     {
         "Brand":"Matthews Effects",
+        "Name":"The Astronomer v2",
+        "Width":2.5,
+        "Height":4.5,
+        "Image":"matthews-theastronomer-v2.png"
+    },
+    {
+        "Brand":"Matthews Effects",
         "Name":"The Cartographer",
         "Width":2.62,
         "Height":4.78,
@@ -5342,10 +5349,24 @@
     },
     {
         "Brand":"Matthews Effects",
+        "Name":"The Chemist v2",
+        "Width":2.5,
+        "Height":4.5,
+        "Image":"matthews-thechemist-v2.png"
+    },
+    {
+        "Brand":"Matthews Effects",
         "Name":"The Cosmonaut",
         "Width":2.62,
         "Height":4.78,
         "Image":"matthews-thecosmonaut.png"
+    },
+    {
+        "Brand":"Matthews Effects",
+        "Name":"The Cosmonaut v2",
+        "Width":2.5,
+        "Height":4.5,
+        "Image":"matthews-thecosmonaut-v2.png"
     },
     {
         "Brand":"Matthews Effects",
@@ -6238,9 +6259,16 @@
     },
     {
         "Brand":"Origin Effects",
+        "Name":"Cali76 Stacked Edition",
+        "Width":2.6,
+        "Height":5.59,
+        "Image":"origin-cali76-stacked.png"
+    },
+    {
+        "Brand":"Origin Effects",
         "Name":"Cali76 TX",
-        "Width":8.07087,
-        "Height":6.33858,
+        "Width":8.07,
+        "Height":6.33,
         "Image":"origin-cali76l.png"
     },
     {
@@ -8737,6 +8765,13 @@
     },
     {
         "Brand":"Xotic",
+        "Name":"BB Preamp v1.5",
+        "Width":2.5,
+        "Height":4.3,
+        "Image":"xotic-bb-preamp-v15.png"
+    },
+    {
+        "Brand":"Xotic",
         "Name":"BB+",
         "Width":4.7,
         "Height":3.7,
@@ -8776,6 +8811,13 @@
         "Width":2,
         "Height":3.7,
         "Image":"xotic-sp.png"
+    },
+    {
+        "Brand":"Xotic",
+        "Name":"Wah",
+        "Width":3.94,
+        "Height":8.27,
+        "Image":"xotic-wah.png"
     },
     {
         "Brand":"Zoom",
