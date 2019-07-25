@@ -1,4 +1,39 @@
-[
+[    
+    {
+        "Brand":"Jam Pedals",
+        "Name":"Retrovibe",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"jampedals-retrovibe1.png"
+    },
+    {
+        "Brand":"Jam Pedals",
+        "Name":"Rattler",
+        "Width":2.7,
+        "Height":4.3,
+        "Image":"jampedals-rattler1.png"
+    },
+    {
+        "Brand":"Jam Pedals",
+        "Name":"Waterfall",
+        "Width":2.9,
+        "Height":4.7,
+        "Image":"jampedals-waterfall1.png"
+    },
+    {
+        "Brand":"Jam Pedals",
+        "Name":"Ripply Fall",
+        "Width":5.1,
+        "Height":3.9,
+        "Image":"jampedals-ripplyfall1.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"RC-10R Rhythm Loop Station",
+        "Width":4,
+        "Height":5.4375,
+        "Image":"boss-rc10r.png"
+    },
     {
         "Brand":"Fix Pedalboards",
         "Name":"RS-2",
@@ -2938,6 +2973,20 @@
         "Width":3.95,
         "Height":4.7,
         "Image":"ehx-synth9.png"
+    },
+    {
+        "Brand": "Boss",
+        "Name": "SY-1 Synthesizer",
+        "Width": 2.875,
+        "Height": 5.125,
+        "Image": "boss-sy1.png"
+    },
+    {
+        "Brand": "Fractal Audio Systems",
+        "Name": "AX8",
+        "Width": 16.4,
+        "Height": 10.3,
+        "Image": "fractal-axe8.png"
     },
     {
         "Brand":"Electro Harmonix",
