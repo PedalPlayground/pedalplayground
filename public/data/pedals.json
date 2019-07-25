@@ -14,7 +14,7 @@
         "Image":"boss-ev5.png"
     },
     {
-        "Brand":"Boss",
+        "Brand":"BOSS",
         "Name":"EV-5",
         "Width":3.4375,
         "Height":7.875,
@@ -467,13 +467,6 @@
         "Width":4,
         "Height":5.4375,
         "Image":"boss-dd200.png"
-    },
-    {
-        "Brand":"BOSS",
-        "Name":"RC-10R Rythm Loop Station",
-        "Width":4,
-        "Height":5.4375,
-        "Image":"boss-rc10r.png"
     },
     {
         "Brand":"BOSS",
@@ -1421,7 +1414,7 @@
         "Image":"bondi-sickas.png"
     },
     {
-        "Brand":"Boss",
+        "Brand":"BOSS",
         "Name":"GT-1000",
         "Width":18.187,
         "Height":9.812,
@@ -2989,7 +2982,7 @@
         "Image":"ehx-synth9.png"
     },
     {
-        "Brand": "Boss",
+        "Brand": "BOSS",
         "Name": "SY-1 Synthesizer",
         "Width": 2.875,
         "Height": 5.125,
