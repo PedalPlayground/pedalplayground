@@ -11,14 +11,14 @@
         "Name":"EV-5",
         "Width":3.4375,
         "Height":7.875,
-        "Image":"boss-ev5.png"
+        "Image":"-ev5.png"
     },
     {
-        "Brand":"Boss",
+        "Brand":"BOSS",
         "Name":"EV-5",
         "Width":3.4375,
         "Height":7.875,
-        "Image":"boss-ev5.png"
+        "Image":"-ev5.png"
     },
     {
         "Brand":"Jam Pedals",
@@ -42,11 +42,11 @@
         "Image":"jampedals-ripplyfall1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"RC-10R Rhythm Loop Station",
         "Width":4,
         "Height":5.4375,
-        "Image":"boss-rc10r.png"
+        "Image":"-rc10r.png"
     },
     {
         "Brand":"Fix Pedalboards",
@@ -455,515 +455,515 @@
         "Image":"bluguitar-amp1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"AC-3 Acoustic Simulator",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ac3.png"
+        "Image":"-ac3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DD-200 Digital Delay",
         "Width":4,
         "Height":5.4375,
-        "Image":"boss-dd200.png"
+        "Image":"-dd200.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"RC-10R Rythm Loop Station",
         "Width":4,
         "Height":5.4375,
-        "Image":"boss-rc10r.png"
+        "Image":"-rc10r.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"MD-200 Modulation",
         "Width":4,
         "Height":5.4375,
-        "Image":"boss-md200.png"
+        "Image":"-md200.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"EQ-200 Grphic Equalizer",
         "Width":4,
         "Height":5.4375,
-        "Image":"boss-eq200.png"
+        "Image":"-eq200.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"OD-200 Hybrid Drive",
         "Width":4,
         "Height":5.4375,
-        "Image":"boss-od200.png"
+        "Image":"-od200.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"BC-1x Bass Compressor",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-bc1x.png"
+        "Image":"-bc1x.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"BD-2 Blues Driver",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-bd2.png"
+        "Image":"-bd2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"BF-3 Flanger",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-bf3.png"
+        "Image":"-bf3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"CE-2w Chorus",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ce2w.png"
+        "Image":"-ce2w.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"CH-1 Super Chorus",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ch1.png"
+        "Image":"-ch1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"CP-1X Compressor",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-cp1x.png"
+        "Image":"-cp1x.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"CS-2 Compression Sustainer",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-cs2.png"
+        "Image":"-cs2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"CS-3 Compression Sustainer",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-cs3.png"
+        "Image":"-cs3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DC-2 Dimension C",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-dimensionc.png"
+        "Image":"-dimensionc.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DC-2w Dimension C",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-dc2w.png"
+        "Image":"-dc2w.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DD-20",
         "Width":6.81,
         "Height":6.25,
-        "Image":"boss-dd20.png"
+        "Image":"-dd20.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DD-3 Digital Delay",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-dd3.png"
+        "Image":"-dd3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DD-5 Digital Delay",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-dd5.png"
+        "Image":"-dd5.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DD-500",
         "Width":6.69,
         "Height":5.43,
-        "Image":"boss-dd500.png"
+        "Image":"-dd500.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DD-7 Digital Delay",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-dd7.png"
+        "Image":"-dd7.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DM-2 Delay",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-dm2w.png"
+        "Image":"-dm2w.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DS-1 Distortion",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ds1.png"
+        "Image":"-ds1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"DS-1X",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ds1x.png"
+        "Image":"-ds1x.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"ES-5",
         "Width":13.27,
         "Height":3.82,
-        "Image":"boss-es5.png"
+        "Image":"-es5.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"ES-8",
         "Width":17.3125,
         "Height":5.4375,
-        "Image":"boss-es8.png"
+        "Image":"-es8.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"FBM-1 59' Fender Bassman",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-fbm1.png"
+        "Image":"-fbm1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"FRV-1 63' Fender Reverb",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-frv1.png"
+        "Image":"-frv1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"FS-7",
         "Width":2.5,
         "Height":5.1875,
-        "Image":"boss-fs7.png"
+        "Image":"-fs7.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"FV-30L",
         "Width":3.15,
         "Height":7.56,
-        "Image":"boss-fv30.png"
+        "Image":"-fv30.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"FV-500L",
         "Width":4.4,
         "Height":11.4,
-        "Image":"boss-fv500.png"
+        "Image":"-fv500.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"FZ-2 Hyper Fuzz",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-fz2.png"
+        "Image":"-fz2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"FZ-3 Fuzz",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-fz3.png"
+        "Image":"-fz3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"FZ-5 Fuzz",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-fz5.png"
+        "Image":"-fz5.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"FZ-5 Fuzz",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-fz5.png"
+        "Image":"-fz5.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"GE-6 Graphic Equalizer",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ge6.png"
+        "Image":"-ge6.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"GE-7 Graphic Equalizer",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ge7.png"
+        "Image":"-ge7.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"JB-2 Angry Driver",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-jb2.png"
+        "Image":"-jb2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"LS-2 Line Selector",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ls2.png"
+        "Image":"-ls2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"MD-500",
         "Width":6.69,
         "Height":5.43,
-        "Image":"boss-md500.png"
+        "Image":"-md500.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"MS-3",
         "Width":10.875,
         "Height":3.875,
-        "Image":"boss-ms3.png"
+        "Image":"-ms3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"MT-2 Metal Zone",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-mt2.png"
+        "Image":"-mt2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"MT-2w Metal Zone",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-mt2w.png"
+        "Image":"-mt2w.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"SD-1w Super Overdrive",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-sd1w.png"
+        "Image":"-sd1w.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"NS-2 Noise Suppressor",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ns2.png"
+        "Image":"-ns2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"OC-2 Octave",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-oc2.png"
+        "Image":"-oc2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"OD-1 Overdrive",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-od1.png"
+        "Image":"-od1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"OD-1 Overdrive",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-od1.png"
+        "Image":"-od1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"OD-1X Overdrive",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-od1x.png"
+        "Image":"-od1x.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"ODB-3 Bass Overdrive",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-odb3.png"
+        "Image":"-odb3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"OS-2 Overdrive/Distortion",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-os2.png"
+        "Image":"-os2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"PH-3 Phase Shifter",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ph3.png"
+        "Image":"-ph3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"PS-2 Pitch Shifter/Delay",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ps2.png"
+        "Image":"-ps2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"PS-3 Pitch Shifter/Delay",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ps3.png"
+        "Image":"-ps3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"PS-5 Super Shifter",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ps5.png"
+        "Image":"-ps5.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"PS-6 Harmonist",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-ps6.png"
+        "Image":"-ps6.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"RC-3 Loop Station",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-rc3.png"
+        "Image":"-rc3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"RC-30 Loop Station",
         "Width":6.81,
         "Height":6.25,
-        "Image":"boss-rc30.png"
+        "Image":"-rc30.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"RE-20",
         "Width":6.81,
         "Height":6.25,
-        "Image":"boss-re20.png"
+        "Image":"-re20.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"RV-5 Reverb",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-rv5.png"
+        "Image":"-rv5.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"RV-500",
         "Width":6.69,
         "Height":5.43,
-        "Image":"boss-rv500.png"
+        "Image":"-rv500.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"RV-6 Reverb",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-rv6.png"
+        "Image":"-rv6.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"SD-1 Super Overdrive",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-sd1.png"
+        "Image":"-sd1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"SG-1 Slow Gear",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-sg1.png"
+        "Image":"-sg1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"SP-1 Spectrum",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-sp1.png"
+        "Image":"-sp1.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"SY-300",
         "Width":10.03,
         "Height":7.17,
-        "Image":"boss-sy300.png"
+        "Image":"-sy300.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"TE-2 Tera Echo",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-te2.png"
+        "Image":"-te2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"TR-2 Tremolo",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-tr2.png"
+        "Image":"-tr2.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"TU-3 Chromatic Tuner",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-tu3.png"
+        "Image":"-tu3.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"TU-3s Chromatic Tuner",
         "Width":2.875,
         "Height":3.3125,
-        "Image":"boss-tu3s.png"
+        "Image":"-tu3s.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"TU-3w Chromatic Tuner",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-tu3w.png"
+        "Image":"-tu3w.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"WL-50 Wireless System",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-wl50.png"
+        "Image":"-wl50.png"
     },
     {
-        "Brand":"BOSS",
+        "Brand":"",
         "Name":"VB-2w Vibrato",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-vb2w.png"
+        "Image":"-vb2w.png"
     },
     {
         "Brand":"Barber",
@@ -1170,10 +1170,10 @@
     },
     {
         "Brand":"Bearfoot Fx",
-        "Name":"Burgundy BossHorn Fuzz",
+        "Name":"Burgundy Horn Fuzz",
         "Width":2.58,
         "Height":4.3,
-        "Image":"bearfootfx-burgundybosshornfuzz.png"
+        "Image":"bearfootfx-burgundyhornfuzz.png"
     },
     {
         "Brand":"Bearfoot Fx",
@@ -1421,11 +1421,11 @@
         "Image":"bondi-sickas.png"
     },
     {
-        "Brand":"Boss",
+        "Brand":"",
         "Name":"GT-1000",
         "Width":18.187,
         "Height":9.812,
-        "Image":"boss-gt1000.png"
+        "Image":"-gt1000.png"
     },
     {
         "Brand":"Bright Onion",
@@ -2989,11 +2989,11 @@
         "Image":"ehx-synth9.png"
     },
     {
-        "Brand": "Boss",
+        "Brand": "",
         "Name": "SY-1 Synthesizer",
         "Width": 2.875,
         "Height": 5.125,
-        "Image": "boss-sy1.png"
+        "Image": "-sy1.png"
     },
     {
         "Brand": "Fractal Audio Systems",
