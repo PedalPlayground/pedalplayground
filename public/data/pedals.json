@@ -4110,6 +4110,13 @@
     },
     {
         "Brand":"JHS",
+        "Name":"Colour Box",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"jhs-colourbox.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"Double Barrel",
         "Width":4.7,
         "Height":3.7,
@@ -7936,6 +7943,13 @@
         "Width":7,
         "Height":5.03,
         "Image":"twonotes-torpedocab.png"
+    },
+    {
+        "Brand":"Two Notes",
+        "Name":"Torpedo C.A.B. M",
+        "Width":3.78,
+        "Height":4.76,
+        "Image":"twonotes-torpedocabm.png"
     },
     {
         "Brand":"Vertex",
