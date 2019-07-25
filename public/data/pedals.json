@@ -6959,6 +6959,13 @@
     },
     {
         "Brand":"Source Audio",
+        "Name":"Reflex",
+        "Width":3.75,
+        "Height":10.5,
+        "Image":"sourceaudio-reflex.png"
+    },
+    {
+        "Brand":"Source Audio",
         "Name":"Dimension",
         "Width":4.5,
         "Height":4.5,
