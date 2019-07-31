@@ -1,4 +1,11 @@
-[    
+[      
+    {
+        "Brand":"Kingtone",
+        "Name":"Mini Fuzz",
+        "Width":2.9,
+        "Height":4.4,
+        "Image":"Toneking-minifuzz.png"
+    },
     {
         "Brand":"Jam Pedals",
         "Name":"Retrovibe",
