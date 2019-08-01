@@ -16,10 +16,10 @@ var livereload = require('gulp-livereload');
 var notify = require("gulp-notify");
 var gutil = require("gulp-util");
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var responsive = require('gulp-responsive');
 var cache = require('gulp-cached');
+var minify = require('gulp-minify');
 
 var gzip_options = {
     threshold: '1kb',
@@ -90,7 +90,9 @@ gulp.task('scripts', function() {
 	        errorHandler: reportError
 	    }))
       .pipe(concat('scripts.js'))
-      //.pipe(uglify())
+      .pipe(minify())
+      .pipe(gulp.dest('public/scripts/'))
+      .pipe(gzip(gzip_options))
       .pipe(gulp.dest('public/scripts/'))
 	  .pipe(notify("JS Compiled!"))
 	  .on('error', reportError)
@@ -98,14 +100,14 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('process-images', function() {
-	return gulp.src('app/images/pedals-new/*')
+	return gulp.src('app/images/pedals/*')
         .pipe(cache('images'))
 		.pipe(responsive({
 			'*.*': {
 				withoutEnlargement: false,
                 errorOnUnusedConfig: false,
-				width: '300',
-				height: '300',
+				width: '500',
+				height: '500',
 				max: true
 			}
 		}))
