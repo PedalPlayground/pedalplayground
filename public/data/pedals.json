@@ -1,4 +1,11 @@
-[    
+[      
+    {
+        "Brand":"Kingtone",
+        "Name":"Mini Fuzz",
+        "Width":2.9,
+        "Height":4.4,
+        "Image":"Toneking-minifuzz.png"
+    },
     {
         "Brand":"Jam Pedals",
         "Name":"Retrovibe",
@@ -173,6 +180,13 @@
         "Width":0.98,
         "Height":0.98,
         "Image":"ziptiemount-sm.png"
+    },
+    {
+        "Brand": "One Control",
+        "Name": "Agamidae Tail Loop",
+        "Width": 14.57,
+        "Height": 1.89,
+        "Image": "onecontrol-agamidae.png"
     },
     {
         "Brand":"AA",
