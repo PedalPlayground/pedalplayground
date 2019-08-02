@@ -2,8 +2,8 @@
     {
         "Brand":"Kingtone",
         "Name":"Mini Fuzz",
-        "Width":2.9,
-        "Height":4.4,
+        "Width":2.5,
+        "Height":4.3,
         "Image":"Toneking-minifuzz.png"
     },
     {
@@ -4160,7 +4160,7 @@
     {
         "Brand":"JHS",
         "Name":"Bonsai",
-        "Width":2.72,
+        "Width":2.85,
         "Height":4.87,
         "Image":"jhs-bonsai.png"
     },
