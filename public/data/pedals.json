@@ -1828,6 +1828,13 @@
     },
     {
         "Brand":"Cioks",
+        "Name":"4",
+        "Width":2.91,
+        "Height":3.46,
+        "Image":"cioks-4.png"
+    },
+    {
+        "Brand":"Cioks",
         "Name":"DC5",
         "Width":5.11811,
         "Height":3.46457,
