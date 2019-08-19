@@ -1,5 +1,19 @@
 [      
     {
+        "Brand":"Walrus",
+        "Name":"Fathom"
+        "Width":2.6,
+        "Height":4.77,
+        "Image":"wa-fathom-large.png"
+    },
+    {
+        "Brand":"Source Audio",
+        "Name":"Spectrum",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"sa-spectrum-large.png"
+    },
+    {
         "Brand":"Kingtone",
         "Name":"Mini Fuzz",
         "Width":2.5,
