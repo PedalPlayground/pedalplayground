@@ -2689,6 +2689,13 @@
     },
     {
         "Brand":"Earthquaker Devices",
+        "Name":"Plumes",
+        "Width":2.5,
+        "Height":4.75,
+        "Image":"earthquaker-plumes.png"
+    },
+    {
+        "Brand":"Earthquaker Devices",
         "Name":"Rainbow Machine",
         "Width":3.7,
         "Height":4.625,
