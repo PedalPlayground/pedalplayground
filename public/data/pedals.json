@@ -5629,6 +5629,13 @@
     },
     {
         "Brand":"Meris",
+        "Name":"Preset Switch",
+        "Width":8.5,
+        "Height":2.25,
+        "Image":"meris-preset-switch.png"
+    },
+    {
+        "Brand":"Meris",
         "Name":"MIDI I/O",
         "Width":3.7,
         "Height":2.6,
