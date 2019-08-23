@@ -2703,6 +2703,13 @@
     },
     {
         "Brand":"Earthquaker Devices",
+        "Name":"Plumes",
+        "Width":2.5,
+        "Height":4.75,
+        "Image":"earthquaker-plumes.png"
+    },
+    {
+        "Brand":"Earthquaker Devices",
         "Name":"Rainbow Machine",
         "Width":3.7,
         "Height":4.625,
@@ -5640,6 +5647,13 @@
         "Width":4.25,
         "Height":4.5,
         "Image":"meris-polymoon.png"
+    },
+    {
+        "Brand":"Meris",
+        "Name":"Preset Switch",
+        "Width":8.5,
+        "Height":2.25,
+        "Image":"meris-preset-switch.png"
     },
     {
         "Brand":"Meris",
