@@ -6161,6 +6161,13 @@
     },
     {
         "Brand":"Neunaber",
+        "Name":"Neuron",
+        "Width":2.8,
+        "Height":4.6,
+        "Image":"neunaber-neuron.png"
+    },
+    {
+        "Brand":"Neunaber",
         "Name":"Seraphim",
         "Width":2.8,
         "Height":4.5,
