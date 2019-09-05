@@ -1737,6 +1737,13 @@
     },
     {
         "Brand":"Chase Bliss",
+        "Name":"Blooper",
+        "Width":2.75,
+        "Height":4.77,
+        "Image":"chasebliss-blooper.png"
+    },
+    {
+        "Brand":"Chase Bliss",
         "Name":"Brothers",
         "Width":2.75,
         "Height":4.77,
@@ -1769,6 +1776,13 @@
         "Width":2.75,
         "Height":4.77,
         "Image":"chasebliss-gravitas.png"
+    },
+    {
+        "Brand":"Chase Bliss",
+        "Name":"MOOD",
+        "Width":2.75,
+        "Height":4.77,
+        "Image":"chasebliss-mood.png"
     },
     {
         "Brand":"Chase Bliss",
