@@ -7021,6 +7021,13 @@
         "Image":"sonicresearch-st300mini.png"
     },
     {
+        "Brand":"Sound Sculpture",
+        "Name":"Switchblade 8F",
+        "Width":9.25,
+        "Height":4.29,
+        "Image":"soundsculpture-switchblade8f.png"
+    },
+    {
         "Brand":"Source Audio",
         "Name":"Reflex",
         "Width":3.75,
