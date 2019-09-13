@@ -1,4 +1,4 @@
-[      
+[
     {
         "Brand":"Walrus",
         "Name":"Fathom",
@@ -4033,6 +4033,13 @@
     },
     {
         "Brand":"Ibanez",
+        "Name":"850 Fuzz Mini",
+        "Width":2,
+        "Height":3.65,
+        "Image":"ibanez-850-mini-fuzz.png"
+    },
+    {
+        "Brand":"Ibanez",
         "Name":"Mini Chorus",
         "Width":2,
         "Height":3.65,
@@ -5059,6 +5066,13 @@
         "Width":1.5748,
         "Height":3.54,
         "Image":"mxr-booster.png"
+    },
+    {
+        "Brand":"MXR",
+        "Name":"Sugar Drive",
+        "Width":1.5748,
+        "Height":3.54,
+        "Image":"mxr-sugardrive.png"
     },
     {
         "Brand":"MXR",
