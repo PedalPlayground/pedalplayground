@@ -1744,6 +1744,13 @@
     },
     {
         "Brand":"Chase Bliss",
+        "Name":"Blooper",
+        "Width":2.75,
+        "Height":4.77,
+        "Image":"chasebliss-blooper.png"
+    },
+    {
+        "Brand":"Chase Bliss",
         "Name":"Brothers",
         "Width":2.75,
         "Height":4.77,
@@ -1776,6 +1783,13 @@
         "Width":2.75,
         "Height":4.77,
         "Image":"chasebliss-gravitas.png"
+    },
+    {
+        "Brand":"Chase Bliss",
+        "Name":"MOOD",
+        "Width":2.75,
+        "Height":4.77,
+        "Image":"chasebliss-mood.png"
     },
     {
         "Brand":"Chase Bliss",
@@ -6062,6 +6076,13 @@
         "Image":"morningstar-mc6.png"
     },
     {
+        "Brand":"Morningstar",
+        "Name":"ML5",
+        "Width":6.3,
+        "Height":2.36,
+        "Image":"morningstar-ml5.png"
+    },
+    {
         "Brand":"Mr. Black",
         "Name":"SuperMoon Chrome",
         "Width":2.25,
@@ -7026,6 +7047,13 @@
         "Width":2.01,
         "Height":3.66,
         "Image":"sonicresearch-st300mini.png"
+    },
+    {
+        "Brand":"Sound Sculpture",
+        "Name":"Switchblade 8F",
+        "Width":9.25,
+        "Height":4.29,
+        "Image":"soundsculpture-switchblade8f.png"
     },
     {
         "Brand":"Source Audio",
