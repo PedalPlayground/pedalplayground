@@ -148,6 +148,13 @@
     },
     {
         "Brand":"1981 Inventions",
+        "Name":"DRV Hyperfade",
+        "Width":3.52,
+        "Height":4.3,
+        "Image":"drv-hyperfade.png"
+    },
+    {
+        "Brand":"1981 Inventions",
         "Name":"DRV Blackout",
         "Width":3.520,
         "Height":4.3,
