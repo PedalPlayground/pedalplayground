@@ -24,3 +24,11 @@
 2. Install client-side libraries via `bower install`
 3. Compile assets and watch for changes via `gulp`
 4. Start the local server via `npm run serve`. This will open a browser tab for you at localhost:8080.
+
+## Requesting Pedals
+
+If there is a pedal you're looking for, feel free to log an issue. Please follow the following rules when posting request issues:
+
+* Include a decent resolution image of the pedal (top-down view, white background)
+* Include the dimensions, in inches (make sure the dimensions are accurate and include jacks and other protrusions)
+* Post one issue for each pedal you're requesting
