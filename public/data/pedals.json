@@ -6350,6 +6350,13 @@
     },
     {
         "Brand":"Origin Effects",
+        "Name":"Revival Drive Compact",
+        "Width":2.6,
+        "Height":5.59,
+        "Image":"origin-revivaldrivecompact.png"
+    },
+    {
+        "Brand":"Origin Effects",
         "Name":"Revival Drive",
         "Width":4.6,
         "Height":6.29,
