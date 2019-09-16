@@ -8387,6 +8387,13 @@
     },
     {
         "Brand":"Walrus",
+        "Name":"Deep Six V3 LE",
+        "Width":2.6,
+        "Height":4.93,
+        "Image":"walrus-deepsix-v3.png"
+    },
+    {
+        "Brand":"Walrus",
         "Name":"Lillian",
         "Width":2.6,
         "Height":4.93,
