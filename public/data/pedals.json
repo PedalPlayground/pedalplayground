@@ -4376,6 +4376,13 @@
     },
     {
         "Brand":"JHS",
+        "Name":"Kilt V1",
+        "Width":3.86,
+        "Height":4.7,
+        "Image":"jhs-kilt-v1.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"Superbolt",
         "Width":2.72,
         "Height":4.87,
