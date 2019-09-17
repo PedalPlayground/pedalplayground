@@ -2998,7 +2998,7 @@
     {
         "Brand":"Electro Harmonix",
         "Name":"Nano Pog",
-        "Width": 2.79,
+        "Width": 2.75,
         "Height": 4.4,
         "Image":"ehx-nanopog.png"
     },
@@ -3026,15 +3026,15 @@
     {
         "Brand":"Electro Harmonix",
         "Name":"Small Stone Nano",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.59,
+        "Height":4.39,
         "Image":"ehx-nanosmallstone.png"
     },
     {
         "Brand":"Electro Harmonix",
         "Name":"Flat Iron Fuzz",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.64,
+        "Height":4.38,
         "Image":"ehx-flatiron.png"
     },
     {
@@ -6428,8 +6428,8 @@
     {
         "Brand":"Paul C",
         "Name":"Timmy",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.62,
+        "Height":4.5,
         "Image":"paulc-timmy.png"
     },
     {
@@ -8948,8 +8948,8 @@
     {
         "Brand":"Xotic",
         "Name":"BB Preamp",
-        "Width":2.5,
-        "Height":4.3,
+        "Width":2.6,
+        "Height":4.39,
         "Image":"xotic-bb.png"
     },
     {
