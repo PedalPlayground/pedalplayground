@@ -3326,6 +3326,13 @@
     },
     {
         "Brand":"Ernie Ball",
+        "Name":"Tap Tempo",
+        "Width":1.9,
+        "Height":3.6,
+        "Image":"ernieball-tap.png"
+    },
+    {
+        "Brand":"Ernie Ball",
         "Name":"VP Jr Tuner",
         "Width":3.5,
         "Height":10,
@@ -4352,6 +4359,20 @@
         "Width":1.79,
         "Height":3.6,
         "Image":"jhs-prestige.png"
+    },
+    {
+        "Brand":"JHS",
+        "Name":"Tidewater Tremolo",
+        "Width":1.79,
+        "Height":3.72,
+        "Image":"jhs-tidewater.png"
+    },
+    {
+        "Brand":"JHS",
+        "Name":"Whitey Tighty Compressor",
+        "Width":1.79,
+        "Height":3.72,
+        "Image":"jhs-whiteytighty.png"
     },
     {
         "Brand":"JHS",
@@ -7761,6 +7782,27 @@
         "Width":2.83,
         "Height":4.8,
         "Image":"tc-halloffame2.png"
+    },
+    {
+        "Brand":"TC Electronic",
+        "Name":"Flashback 2",
+        "Width":2.83,
+        "Height":4.8,
+        "Image":"tc-flashback2.png"
+    },
+    {
+        "Brand":"TC Electronic",
+        "Name":"Pipeline Tap Tremolo",
+        "Width":2.83,
+        "Height":4.8,
+        "Image":"tc-pipeline.png"
+    },
+    {
+        "Brand":"TC Electronic",
+        "Name":"Vortex Flanger",
+        "Width":2.83,
+        "Height":4.8,
+        "Image":"tc-vortex.png"
     },
     {
         "Brand":"TC Electronic",
