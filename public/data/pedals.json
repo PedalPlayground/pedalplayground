@@ -3032,6 +3032,13 @@
     },
     {
         "Brand":"Electro Harmonix",
+        "Name":"Flat Iron Fuzz",
+        "Width":2.5,
+        "Height":4.3,
+        "Image":"ehx-flatiron.png"
+    },
+    {
+        "Brand":"Electro Harmonix",
         "Name":"Soul Food",
         "Width":2.75,
         "Height":4.5,
