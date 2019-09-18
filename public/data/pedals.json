@@ -359,8 +359,8 @@
     {
         "Brand":"Analog.Man",
         "Name":"Peppermint Fuzz",
-        "Width":2.6,
-        "Height":4.3,
+        "Width":2.7,
+        "Height":4.39,
         "Image":"analogman-peppermint.png"
     },
     {
@@ -3026,7 +3026,7 @@
     {
         "Brand":"Electro Harmonix",
         "Name":"Small Stone Nano",
-        "Width":2.59,
+        "Width":2.65,
         "Height":4.39,
         "Image":"ehx-nanosmallstone.png"
     },
