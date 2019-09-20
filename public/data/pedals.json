@@ -8464,6 +8464,13 @@
     },
     {
         "Brand":"Walrus",
+        "Name":"Kangra",
+        "Width":2.68,
+        "Height":4.87,
+        "Image":"walrus-kangra.png"
+    },
+    {
+        "Brand":"Walrus",
         "Name":"Descent",
         "Width":5.625,
         "Height":4.625,
