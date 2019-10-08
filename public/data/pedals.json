@@ -4978,6 +4978,13 @@
     },
     {
         "Brand":"Line6",
+        "Name":"Relay Wireless G10S"
+        "Width":3.5,
+        "Height":5,
+        "Image":"line6-g10srelay.png"
+    },
+    {
+        "Brand":"Line6",
         "Name":"Relay Wireless G70",
         "Width":4,
         "Height":5.5,
@@ -8216,6 +8223,20 @@
         "Width":3.78,
         "Height":4.76,
         "Image":"twonotes-torpedocabm.png"
+    },
+    {
+        "Brand":"Universal Audio",
+        "Name":"Apollo Twin MkII",
+        "Width":6.31,
+        "Height":6.2,
+        "Image":"ua-apollo-twin.png"
+    },
+    {
+        "Brand":"Universal Audio",
+        "Name":"Arrow",
+        "Width":7.1,
+        "Height":4.8,
+        "Image":"ua-arrow.png"
     },
     {
         "Brand":"Vertex",
