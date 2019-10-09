@@ -6273,6 +6273,13 @@
     },
     {
         "Brand":"Old Blood Noise Endeavors",
+        "Name":"Rever",
+        "Width":4.69,
+        "Height":3.66,
+        "Image":"oldbloodnoise-rever.png"
+    },
+    {
+        "Brand":"Old Blood Noise Endeavors",
         "Name":"Dark Star",
         "Width":2.65,
         "Height":4.8,
@@ -9175,5 +9182,19 @@
         "Width":4.7,
         "Height":2.38,
         "Image":"zvex-woollymammoth.png"
+    },
+    {
+        "Brand":"Gamechanger Audio",
+        "Name":"Plus",
+        "Width":6,
+        "Height":13,
+        "Image":"gamechanger-audio-plus-sustain.png"
+    },
+    {
+        "Brand":"Gamechanger Audio",
+        "Name":"Wet",
+        "Width":2.3,
+        "Height":2.6,
+        "Image":"gamechanger-audio-wet.png"
     }
 ]
