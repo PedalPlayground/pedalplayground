@@ -455,7 +455,7 @@ window.Pedal = function( type, brand, name, width, height, image ){
 window.GetPedalData = function(){
 	// console.log('GetPedalData');
 	$.ajax({
-		url: "public/data/pedals.json",
+		url: "public/data/pedals.min.json",
 		dataType: 'text',
 		type: "GET",
 		success: function(data){
@@ -524,7 +524,7 @@ window.PedalBoard = function( brand, name, width, height, image ){
 window.GetPedalBoardData = function(){
 	// console.log('GetPedalBoardData');
 	$.ajax({
-		url: "public/data/pedalboards.json",
+		url: "public/data/pedalboards.min.json",
 		dataType: 'text',
 		type: "GET",
 		success: function(data){
