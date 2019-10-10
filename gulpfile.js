@@ -20,6 +20,7 @@ var imagemin = require('gulp-imagemin');
 var responsive = require('gulp-responsive');
 var cache = require('gulp-cached');
 var minify = require('gulp-minify');
+var jsonminify = require('gulp-jsonminify');
 
 var gzip_options = {
     threshold: '1kb',
@@ -99,6 +100,16 @@ gulp.task('scripts', function() {
 	  .pipe(livereload());
 });
 
+// JSON
+gulp.task('json', function() {
+    return gulp.src(['app/data/*.json'])
+        .pipe(rename(function(path) {
+            path.basename += '.min'
+        }))
+        .pipe(jsonminify())
+        .pipe(gulp.dest('public/data/'));
+});
+
 gulp.task('process-images', function() {
 	return gulp.src('app/images/pedals/*')
         .pipe(cache('images'))
@@ -136,6 +147,6 @@ gulp.task('watch-all', function() {
     gulp.watch('*.html').on('change', livereload.changed);
 });
 
-gulp.task('default', ['styles', 'scripts', 'watch']);
+gulp.task('default', ['styles', 'scripts', 'json', 'watch']);
 
-gulp.task('all', ['styles', 'scripts', 'process-images', 'watch-all']);
+gulp.task('all', ['styles', 'scripts', 'json', 'process-images', 'watch-all']);
