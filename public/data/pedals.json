@@ -7036,6 +7036,13 @@
     },
     {
         "Brand":"Source Audio",
+        "Name":"Collider",
+        "Width":4.4,
+        "Height":4.58,
+        "Image":"source audio - collider.png"
+    },
+    {
+        "Brand":"Source Audio",
         "Name":"Neuro Hub",
         "Width":3.8,
         "Height":2.1,
