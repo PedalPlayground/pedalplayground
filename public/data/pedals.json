@@ -6356,6 +6356,13 @@
         "Image":"oldbloodnoise-headphone-amp.png"
     },
     {
+        "Brand":"Old Blood Noise Endeavors",
+        "Name":"Whitecap",
+        "Width":4.65,
+        "Height":3.62,
+        "Image":"oldbloodnoise-whitecap.png"
+    },
+    {
         "Brand":"One Control",
         "Name":"Agamidae Tail Loop",
         "Width":13,
