@@ -7425,6 +7425,12 @@
         "Width":4,
         "Height":4.5,
         "Image":"strymon-sunset.png"
+    },{
+        "Brand":"Strymon",
+        "Name":"Iridium",
+        "Width":4,
+        "Height":4.5,
+        "Image":"strymon-iridium.png"
     },
     {
         "Brand":"Strymon",
