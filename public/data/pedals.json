@@ -35,6 +35,13 @@
         "Image":"boss-ev5.png"
     },
     {
+        "Brand":"Rolls",
+        "Name":" MX28 Stereo Mini-Mix VI",
+        "Width":4.25,
+        "Height":4.5,
+        "Image":"rolls-mx28.png"
+    },
+    {
         "Brand":"BOSS",
         "Name":"EV-5",
         "Width":3.4375,
@@ -6942,6 +6949,13 @@
         "Width":3.7,
         "Height":5.3,
         "Image":"shure-glxd6.png"
+    },
+    {
+        "Brand":"Singular Sound",
+        "Name":"Aeros",
+        "Width":7.8,
+        "Height":5.6,
+        "Image":"singularsound-aeros.png"
     },
     {
         "Brand":"Singular Sound",

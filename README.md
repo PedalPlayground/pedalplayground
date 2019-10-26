@@ -19,10 +19,21 @@
 
 ## Running Locally
 
+0. Install node v10, bower, and gulp
 1. Install dependencies via `npm install`
 2. Install client-side libraries via `bower install`
 3. Compile assets and watch for changes via `gulp`
 4. Start the local server via `npm run serve`. This will open a browser tab for you at localhost:8080.
+
+### MacOS Notes
+
+Under MacOS Mojave:
+- brew install node@10 bower
+- sudo npm install gulp-cli -g;
+- sudo npm rebuild node-sass -g
+- sudo npm install sharp -g;
+- npm install http-server -g
+
 
 # Requesting Pedals
 
