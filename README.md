@@ -32,7 +32,7 @@ Under MacOS Mojave:
 - sudo npm install gulp-cli -g;
 - sudo npm rebuild node-sass -g
 - sudo npm install sharp -g;
-- npm install http-server -g
+- sudo npm install http-server -g
 
 
 # Requesting Pedals
