@@ -6953,7 +6953,7 @@
     {
         "Brand":"Singular Sound",
         "Name":"Aeros",
-        "Width"8.375,
+        "Width":8.375,
         "Height":5.875,
         "Image":"singularsound-aeros.png"
     },
