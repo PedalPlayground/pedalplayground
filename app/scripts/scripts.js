@@ -12,18 +12,18 @@ $(document).ready(function(){
 		placeholder: "Select a pedal",
 		width: 'style',
 	});
-	
+
 	$('.pedal-list').on('select2:select', function (e) {
 		$("#add-selected-pedal").click();
-		$(this).trigger('change').focus(); 
+		$(this).trigger('change').focus();
 		//$(this).val(null).trigger('change').focus();
 	});
-	
+
 	$('.pedalboard-list').select2({
 		placeholder: "Select a pedalboard",
 		width: 'style',
 	});
-	
+
 	$('.pedalboard-list').on('select2:select', function (e) {
 		$("#add-selected-pedalboard").click();
 		$(this).trigger('change').focus();
@@ -37,7 +37,7 @@ $(document).ready(function(){
 			$(".canvas").html(savedPedalCanvas);
 			readyCanvas();
 		}
-		
+
 		// If hidden multiplier value doesn't exist, create it
 		if($("#multiplier").length == 0) {
 			$('.canvas').append('<input id="multiplier" type="hidden" value="25">');
@@ -51,43 +51,43 @@ $(document).ready(function(){
 		$('.canvas').css('background-size', multiplier + 'px');
 	});
 
-	
+
 
 	// When user changes scale, update stuffs
 	$('#canvas-scale').change(function() {
 		// update var
 		var multiplier = $(this).val();
 		$('#multiplier').val(multiplier);
-		
+
 		// Update scale of bg image
-		$('.canvas').css('background-size', multiplier + 'px'); 
-		
+		$('.canvas').css('background-size', multiplier + 'px');
+
 		// Update all items with stored scale
-		$(".item").each(function() { 
+		$(".item").each(function() {
 			$(this).attr("data-scale", multiplier);
 		});
-		
+
 		// Update regular Pedals
-		$(".pedalboard").each(function() { 
+		$(".pedalboard").each(function() {
 			var scaledWidth	 = $(this).data("width") * multiplier;
 			var scaledHeight = $(this).data("height") * multiplier;
 			$(this).find('.artwork').css("width", scaledWidth).css("height", scaledHeight);
 		});
 
 		// Update regular Pedals
-		$(".pedal, .pedalboard").each(function() { 
+		$(".pedal, .pedalboard").each(function() {
 			var scaledWidth	 = $(this).data("width") * multiplier;
 			var scaledHeight = $(this).data("height") * multiplier;
 			$(this).find('.artwork').css("width", scaledWidth).css("height", scaledHeight);
 		});
 
 		// Update custom pedals
-		$(".pedal--custom, .pedalboard--custom").each(function() { 
+		$(".pedal--custom, .pedalboard--custom").each(function() {
 			var scaledWidth	 = $(this).data("width") * multiplier;
 			var scaledHeight = $(this).data("height") * multiplier;
 			$(this).css("width", scaledWidth).css("height", scaledHeight);
 		});
-		$(".pedalboard--custom").each(function() { 
+		$(".pedalboard--custom").each(function() {
 			var scaledWidth	 = $(this).data("width") * multiplier;
 			var scaledHeight = $(this).data("height") * multiplier;
 			$(this).css({width: scaledWidth, height: scaledHeight, borderWidth: (multiplier * .5) });
@@ -96,7 +96,7 @@ $(document).ready(function(){
 		savePedalCanvas();
 
 	});
-	
+
 	$('body').on('click', '.sidebar-open', function(e){
 		$(".site-body").addClass("is-slid");
 		e.preventDefault();
@@ -252,6 +252,7 @@ $(document).ready(function(){
 		}
 	});
 
+	// On keydown of "D" or "delete" remove pedal
 	$('body').on('keydown keyup',function(event){
 		if(event.which==68 || event.which==8){
 			deleteSelected();
@@ -259,15 +260,17 @@ $(document).ready(function(){
 		}
 	});
 
-	$('body').on('keydown',function(event){
-		if( event.which==17 || event.which==18 || event.which==91){
-			deselect();
+	// On keydown of "[", move bedal back
+	$('body').on('keydown keyup',function(event){
+		if(event.which==219){
+			$(".panel a[href='#back']").click();
 		}
 	});
 
-	$('body').on('keydown',function(event){
-		if( event.which==17 || event.which==18 || event.which==91){
-			deselect();
+	// On keydown of "]", move bedal front
+	$('body').on('keydown keyup',function(event){
+		if(event.which==221){
+			$(".panel a[href='#front']").click();
 		}
 	});
 
@@ -283,7 +286,7 @@ $(document).ready(function(){
 			$('.canvas .selected').css('left', current - 1);
 		}
 	});
-	
+
 	// Move up
 	$('body').on('keydown',function(event){
 		if ( event.which==38 ) {
@@ -300,7 +303,7 @@ $(document).ready(function(){
 			$('.canvas .selected').css('left', current + 1);
 		}
 	});
-	
+
 	// Move down
 	$('body').on('keydown',function(event){
 		if ( event.which==40 ) {
@@ -316,7 +319,7 @@ $(document).ready(function(){
 		event.stopPropagation();
 
 		//mvital: in some cases click event is sent multiple times to the handler - no idea why
-		//mvital: seems calling stopImmediatePropagation() helps 
+		//mvital: seems calling stopImmediatePropagation() helps
 		event.stopImmediatePropagation();
 
 		if(event.which==82){
@@ -352,7 +355,7 @@ function readyCanvas(pedal) {
 	});
 
 	// $draggable.on( 'staticClick', function(event) {
-	
+
 
 	$draggable.on( 'staticClick', function(event) {
 		//rotatePedal(this);
@@ -366,7 +369,7 @@ function readyCanvas(pedal) {
 			event.stopPropagation();
 
 			//mvital: in some cases click event is sent multiple times to the handler - no idea why
-			//mvital: seems calling stopImmediatePropagation() helps 
+			//mvital: seems calling stopImmediatePropagation() helps
 			event.stopImmediatePropagation();
 
 			//rotatePedal(this);
@@ -624,16 +627,16 @@ $('body').on('click', '.item', function(e){
       +pedalName
       +'<br><span class="panel__dimensions">('+width+' x '+height+')</span>\
     </div>\
-		<a href="#rotate" class="panel__action">Rotate</a>\
-		<a href="#front" class="panel__action">Move Front</a>\
-		<a href="#back" class="panel__action">Move Back</a>\
-		<a href="#delete" class="panel__action">Delete</a>\
+		<a href="#rotate" class="panel__action">Rotate <i>R</i></a>\
+		<a href="#front" class="panel__action">Move Front <i>]</i></a>\
+		<a href="#back" class="panel__action">Move Back <i>[</i></a>\
+		<a href="#delete" class="panel__action">Delete <i>D</i></a>\
 	</div>'
 
 	// reset stuff
 	$('.panel').remove();
 	$('.canvas .selected').removeClass('selected');
-	
+
 	// add stuff
 	$(pedal).addClass('selected');
 	$('.canvas').after(markup);
@@ -643,7 +646,7 @@ $('body').on('click', '.item', function(e){
 });
 
 $('body').on('click', 'a[href="#rotate"]', function(e){
-	
+
 	e.stopPropagation();
 	e.stopImmediatePropagation();
 
