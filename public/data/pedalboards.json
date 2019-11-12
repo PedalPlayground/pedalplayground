@@ -91,6 +91,13 @@
         "Image":"gator-alum-large.png"
     },
     {
+        "Brand":"Gokko",
+        "Name":"Medium Pedalboard",
+        "Width":13.8,
+        "Height":11,
+        "Image":"gokko-medium.png"
+    },
+    {
         "Brand":"Mono",
         "Name":"Large",
         "Width":32,
