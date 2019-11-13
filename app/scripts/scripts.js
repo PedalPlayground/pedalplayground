@@ -256,7 +256,8 @@ $(document).ready(function(){
 	$('body').on('keydown keyup',function(event){
 		if(event.which==68 || event.which==8){
 			deleteSelected();
-			$(".canvas .panel").remove();
+			$(".site-body > .panel").remove();
+			savePedalCanvas();
 		}
 	});
 
@@ -264,6 +265,7 @@ $(document).ready(function(){
 	$('body').on('keydown keyup',function(event){
 		if(event.which==219){
 			$(".panel a[href='#back']").click();
+			savePedalCanvas();
 		}
 	});
 
@@ -271,6 +273,7 @@ $(document).ready(function(){
 	$('body').on('keydown keyup',function(event){
 		if(event.which==221){
 			$(".panel a[href='#front']").click();
+			savePedalCanvas();
 		}
 	});
 
@@ -284,6 +287,7 @@ $(document).ready(function(){
 		if ( event.which==37 ) {
 			var current = parseInt( $(".canvas .selected").css("left") );
 			$('.canvas .selected').css('left', current - 1);
+			savePedalCanvas();
 		}
 	});
 
@@ -293,6 +297,7 @@ $(document).ready(function(){
 			var current = parseInt( $(".canvas .selected").css("top") );
 			$('.canvas .selected').css('top', current - 1);
 			event.preventDefault();
+			savePedalCanvas();
 		}
 	});
 
@@ -301,6 +306,7 @@ $(document).ready(function(){
 		if ( event.which==39 ) {
 			var current = parseInt( $(".canvas .selected").css("left") );
 			$('.canvas .selected').css('left', current + 1);
+			savePedalCanvas();
 		}
 	});
 
@@ -310,6 +316,7 @@ $(document).ready(function(){
 			var current = parseInt( $(".canvas .selected").css("top") );
 			$('.canvas .selected').css('top', current + 1);
 			event.preventDefault();
+			savePedalCanvas();
 		}
 	});
 
@@ -334,6 +341,7 @@ $(document).ready(function(){
 			} else {
 				$('.canvas .selected').addClass("rotate-90");
 			}
+			savePedalCanvas();
 		}
 	});
 
