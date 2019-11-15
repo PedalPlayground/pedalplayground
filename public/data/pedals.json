@@ -1,5 +1,82 @@
 [
     {
+        "Brand":"Anasounds",
+        "Name":"Freq Up",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-frequp.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Feed Me",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-feedme.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Bumper",
+        "Width":1.97,
+        "Height":1.97,
+        "Image":"anasounds-bumper.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"High Voltage",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-highvoltage.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Lazy Comp",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-lazycomp.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Phase Lag",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-phaselag.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Utopia",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-utopia.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Savage",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-savage.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Ego Driver",
+        "Width":2.56,
+        "Height":5,
+        "Image":"anasounds-egodriver.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Cerberus",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-cerberus.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Bitoun Fuzz",
+        "Width":2.6,
+        "Height":4.72,
+        "Image":"anasounds-bitounfuzz.png"
+    },        
+    {
         "Brand":"Walrus",
         "Name":"Fathom",
         "Width":2.6,
