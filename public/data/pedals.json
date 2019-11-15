@@ -1,5 +1,54 @@
 [
     {
+        "Brand":"Xotic",
+        "Name":"SL Drive",
+        "Width":1.9,
+        "Height":3.5,
+        "Image":"xotic-sl.png"
+    },        
+    {
+        "Brand":"Xotic",
+        "Name":"SL Drive - LE Red",
+        "Width":1.9,
+        "Height":3.5,
+        "Image":"xotic-sl-red.png"
+    },   
+    {
+        "Brand":"Thorpy",
+        "Name":"The Dane",
+        "Width":3.94,
+        "Height":4.92,
+        "Image":"thorpyfx-thedane.png"
+    },        
+    {
+        "Brand":"Thorpy",
+        "Name":"Fallout Cloud V2",
+        "Width":2.56,
+        "Height":4.92,
+        "Image":"thorpyfx-fallout-cloud-v2.png"
+    },        
+    {
+        "Brand":"Thorpy",
+        "Name":"The Veteran",
+        "Width":3.94,
+        "Height":4.92,
+        "Image":"thorpyfx-theveteran.png"
+    },        
+    {
+        "Brand":"Walrus",
+        "Name":"SLO",
+        "Width":2.6,
+        "Height":4.77,
+        "Image":"walrus-slo.png"
+    },    
+    {
+        "Brand":"Walrus",
+        "Name":"Iron Horse V2",
+        "Width":2.9,
+        "Height":4.77,
+        "Image":"walrus-ironhorse-v2.png"
+    },    
+    {
         "Brand":"Sitek",
         "Name":"Caffeine",
         "Width":2.76,
