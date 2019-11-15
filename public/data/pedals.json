@@ -1,5 +1,33 @@
 [
     {
+        "Brand":"Sitek",
+        "Name":"Caffeine",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-caffeine.png"
+    },        
+    {
+        "Brand":"Sitek",
+        "Name":"Cocoa",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-cocoa.png"
+    },        
+    {
+        "Brand":"Sitek",
+        "Name":"Fuzzie",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-fuzzie.png"
+    },        
+    {
+        "Brand":"Sitek",
+        "Name":"Wuffy",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-wuffy.png"
+    },    
+    {
         "Brand":"Anasounds",
         "Name":"Freq Up",
         "Width":2.52,
