@@ -273,6 +273,13 @@
         "Image":"rockboard-quad-42.png"
     },
     {
+        "Brand":"Rockboard by Warwick",
+        "Name":"Cinque 5.2",
+        "Width":24.5,
+        "Height":16.625,
+        "Image":"rockboard-5.2.png"
+    },
+    {
         "Brand":"Templeboards",
         "Name":"Solo 18",
         "Width":18,
