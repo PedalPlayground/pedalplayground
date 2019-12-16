@@ -3746,6 +3746,13 @@
     },
     {
         "Brand":"GFI System",
+        "Name":"Synesthesia",
+        "Width":4.9,
+        "Height":4.72441,
+        "Image":"gfi-synesthesia.png"
+    },
+    {
+        "Brand":"GFI System",
         "Name":"Cabzeus",
         "Width":4.7,
         "Height":3.712,
