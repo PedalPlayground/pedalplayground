@@ -4453,6 +4453,27 @@
     },
     {
         "Brand":"Jackson Audio",
+        "Name":"Amp Mode",
+        "Width":1.8,
+        "Height":4,
+        "Image":"jackson-ampmode.png"
+    },
+    {
+        "Brand":"Jackson Audio",
+        "Name":"Blossom",
+        "Width":1.8,
+        "Height":4,
+        "Image":"jackson-blossom.png"
+    },
+    {
+        "Brand":"Jackson Audio",
+        "Name":"Belle Star",
+        "Width":2.2,
+        "Height":4.875,
+        "Image":"jackson-bellestar.png"
+    },
+    {
+        "Brand":"Jackson Audio",
         "Name":"Bloom",
         "Width":2.652,
         "Height":4.875,
