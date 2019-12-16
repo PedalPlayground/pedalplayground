@@ -820,10 +820,10 @@
     },
     {
         "Brand":"BOSS",
-        "Name":"OD-1 Overdrive",
+        "Name":"OD-3 Overdrive",
         "Width":2.875,
         "Height":5.125,
-        "Image":"boss-od1.png"
+        "Image":"boss-od3.png"
     },
     {
         "Brand":"BOSS",
@@ -6116,6 +6116,13 @@
         "Width":6,
         "Height":9.25,
         "Image":"morley-wah.png"
+    },
+    {
+        "Brand":"Morley",
+        "Name":"20/20 Lead Wah",
+        "Width":4.5,
+        "Height":6.85,
+        "Image":"morley-2020leadwah.png"
     },
     {
         "Brand":"Morley",
