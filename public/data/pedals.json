@@ -1,5 +1,159 @@
 [
     {
+        "Brand":"Xotic",
+        "Name":"SL Drive",
+        "Width":1.9,
+        "Height":3.5,
+        "Image":"xotic-sl.png"
+    },        
+    {
+        "Brand":"Xotic",
+        "Name":"SL Drive - LE Red",
+        "Width":1.9,
+        "Height":3.5,
+        "Image":"xotic-sl-red.png"
+    },   
+    {
+        "Brand":"Thorpy",
+        "Name":"The Dane",
+        "Width":3.94,
+        "Height":4.92,
+        "Image":"thorpyfx-thedane.png"
+    },        
+    {
+        "Brand":"Thorpy",
+        "Name":"Fallout Cloud V2",
+        "Width":2.56,
+        "Height":4.92,
+        "Image":"thorpyfx-fallout-cloud-v2.png"
+    },        
+    {
+        "Brand":"Thorpy",
+        "Name":"The Veteran",
+        "Width":3.94,
+        "Height":4.92,
+        "Image":"thorpyfx-theveteran.png"
+    },        
+    {
+        "Brand":"Walrus",
+        "Name":"SLO",
+        "Width":2.6,
+        "Height":4.77,
+        "Image":"walrus-slo.png"
+    },    
+    {
+        "Brand":"Walrus",
+        "Name":"Iron Horse V2",
+        "Width":2.9,
+        "Height":4.77,
+        "Image":"walrus-ironhorse-v2.png"
+    },    
+    {
+        "Brand":"Sitek",
+        "Name":"Caffeine",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-caffeine.png"
+    },        
+    {
+        "Brand":"Sitek",
+        "Name":"Cocoa",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-cocoa.png"
+    },        
+    {
+        "Brand":"Sitek",
+        "Name":"Fuzzie",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-fuzzie.png"
+    },        
+    {
+        "Brand":"Sitek",
+        "Name":"Wuffy",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-wuffy.png"
+    },    
+    {
+        "Brand":"Anasounds",
+        "Name":"Freq Up",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-frequp.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Feed Me",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-feedme.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Bumper",
+        "Width":1.97,
+        "Height":1.97,
+        "Image":"anasounds-bumper.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"High Voltage",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-highvoltage.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Lazy Comp",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-lazycomp.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Phase Lag",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-phaselag.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Utopia",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-utopia.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Savage",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-savage.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Ego Driver",
+        "Width":2.56,
+        "Height":5,
+        "Image":"anasounds-egodriver.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Cerberus",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-cerberus.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Bitoun Fuzz",
+        "Width":2.6,
+        "Height":4.72,
+        "Image":"anasounds-bitounfuzz.png"
+    },        
+    {
         "Brand":"Walrus",
         "Name":"Fathom",
         "Width":2.6,
