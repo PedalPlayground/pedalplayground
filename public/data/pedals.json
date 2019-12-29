@@ -1001,6 +1001,20 @@
         "Image":"boss-vb2w.png"
     },
     {
+        "Brand":"Boss",
+        "Name":"VE-8 Acoustic Singer",
+        "Width":8.5625,
+        "Height":6.375,
+        "Image":"Boss-VE-8.jpg"
+    },
+    {
+        "Brand":"Boss",
+        "Name":"VE-500 Vocal Performer",
+	"Width":6.75,
+        "Height":5.4375,
+        "Image":"Boss-VE-500.jpg"
+    },
+    {
         "Brand":"Barber",
         "Name":"1/2 Gainer",
         "Width":3.7,
