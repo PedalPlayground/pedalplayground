@@ -5503,6 +5503,13 @@
     },
     {
         "Brand":"MXR",
+        "Name":"Distortion III",
+        "Width":2.5,
+        "Height":4.3,
+        "Image":"mxr-distortion3.png"
+    },
+    {
+        "Brand":"MXR",
         "Name":"Modified O.D. Custom Badass",
         "Width":2.5,
         "Height":4.5,
