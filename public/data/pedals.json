@@ -6189,6 +6189,13 @@
     },
     {
         "Brand":"Mooer",
+        "Name":"Green Mile",
+        "Width":1.65,
+        "Height":3.7,
+        "Image":"mooer-greenmile.png"
+    },
+    {
+        "Brand":"Mooer",
         "Name":"Ninety Orange",
         "Width":1.65,
         "Height":3.7,
