@@ -3290,6 +3290,13 @@
         "Image":"ehx-superego-plus.png"
     },
     {
+        "Brand":"Electro Harmonix",
+        "Name":"Headphone Amp",
+        "Width":1.41,
+        "Height":3.62,
+        "Image":"ehx-headphone-amp.png"
+    },
+    {
         "Brand":"Elektron",
         "Name":"Analog Drive",
         "Width":6.8,
