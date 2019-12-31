@@ -9461,5 +9461,12 @@
         "Width":2.3,
         "Height":2.6,
         "Image":"gamechanger-audio-wet.png"
+    },
+    {
+        "Brand": "Behringer",
+        "Name": "NR300",
+        "Width": 2.755,
+        "Height": 4.842,
+        "Image": "behringer-nr300.png"
     }
 ]
