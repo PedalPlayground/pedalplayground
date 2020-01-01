@@ -3626,6 +3626,13 @@
         "Image":"fender-pugilist.png"
     },
     {
+        "Brand":"Fender",
+        "Name":"The Bends Compressor",
+        "Width":2.75,
+        "Height":4.9,
+        "Image":"fender-thebends.png"
+    },
+    {
         "Brand":"Foxpedal",
         "Name":"Defector",
         "Width":2.6,
