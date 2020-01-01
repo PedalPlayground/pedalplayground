@@ -7931,6 +7931,13 @@
     },
     {
         "Brand":"TC Electronic",
+        "Name":"Brainwaves Pitch Shifter",
+        "Width":2.83,
+        "Height":4.8,
+        "Image":"tc-brainwaves.png"
+    },
+    {
+        "Brand":"TC Electronic",
         "Name":"Cinders",
         "Width":2.9,
         "Height":5.2,
