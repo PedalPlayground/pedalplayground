@@ -3634,17 +3634,17 @@
     },
     {
         "Brand":"Fender",
-        "Name":"Level Set Buffer",
-        "Width":2.9,
-        "Height":4.9,
-        "Image":"fender-levelsetbuffer.png"
+        "Name":"Pugilist Distortion",
+        "Width":4.26,
+        "Height":5.39,
+        "Image":"fender-pugilist.png"
     },
     {
         "Brand":"Fender",
-        "Name":"Pugliest Distortion",
-        "Width":4.26,
-        "Height":5.39,
-        "Image":"fender-pugliest.png"
+        "Name":"The Bends Compressor",
+        "Width":2.75,
+        "Height":4.9,
+        "Image":"fender-thebends.png"
     },
     {
         "Brand":"Foxpedal",
