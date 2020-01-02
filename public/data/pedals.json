@@ -1037,6 +1037,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"RC-1 Loop Station",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-rc1.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"RC-3 Loop Station",
         "Width":2.875,
         "Height":5.125,
@@ -3283,6 +3290,13 @@
         "Image":"ehx-superego-plus.png"
     },
     {
+        "Brand":"Electro Harmonix",
+        "Name":"Headphone Amp",
+        "Width":1.41,
+        "Height":3.62,
+        "Image":"ehx-headphone-amp.png"
+    },
+    {
         "Brand":"Elektron",
         "Name":"Analog Drive",
         "Width":6.8,
@@ -5489,6 +5503,13 @@
     },
     {
         "Brand":"MXR",
+        "Name":"Distortion III",
+        "Width":2.5,
+        "Height":4.3,
+        "Image":"mxr-distortion3.png"
+    },
+    {
+        "Brand":"MXR",
         "Name":"Modified O.D. Custom Badass",
         "Width":2.5,
         "Height":4.5,
@@ -6172,6 +6193,13 @@
         "Width":1.65,
         "Height":3.7,
         "Image":"mooer-eq.png"
+    },
+    {
+        "Brand":"Mooer",
+        "Name":"Green Mile",
+        "Width":1.65,
+        "Height":3.7,
+        "Image":"mooer-greenmile.png"
     },
     {
         "Brand":"Mooer",
@@ -9440,5 +9468,12 @@
         "Width":2.3,
         "Height":2.6,
         "Image":"gamechanger-audio-wet.png"
+    },
+    {
+        "Brand": "Behringer",
+        "Name": "NR300",
+        "Width": 2.755,
+        "Height": 4.842,
+        "Image": "behringer-nr300.png"
     }
 ]
