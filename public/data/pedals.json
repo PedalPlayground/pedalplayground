@@ -1,5 +1,159 @@
 [
     {
+        "Brand":"Xotic",
+        "Name":"SL Drive",
+        "Width":1.9,
+        "Height":3.5,
+        "Image":"xotic-sl.png"
+    },        
+    {
+        "Brand":"Xotic",
+        "Name":"SL Drive - LE Red",
+        "Width":1.9,
+        "Height":3.5,
+        "Image":"xotic-sl-red.png"
+    },   
+    {
+        "Brand":"Thorpy",
+        "Name":"The Dane",
+        "Width":3.94,
+        "Height":4.92,
+        "Image":"thorpyfx-thedane.png"
+    },        
+    {
+        "Brand":"Thorpy",
+        "Name":"Fallout Cloud V2",
+        "Width":2.56,
+        "Height":4.92,
+        "Image":"thorpyfx-fallout-cloud-v2.png"
+    },        
+    {
+        "Brand":"Thorpy",
+        "Name":"The Veteran",
+        "Width":3.94,
+        "Height":4.92,
+        "Image":"thorpyfx-theveteran.png"
+    },        
+    {
+        "Brand":"Walrus",
+        "Name":"SLO",
+        "Width":2.6,
+        "Height":4.77,
+        "Image":"walrus-slo.png"
+    },    
+    {
+        "Brand":"Walrus",
+        "Name":"Iron Horse V2",
+        "Width":2.9,
+        "Height":4.77,
+        "Image":"walrus-ironhorse-v2.png"
+    },    
+    {
+        "Brand":"Sitek",
+        "Name":"Caffeine",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-caffeine.png"
+    },        
+    {
+        "Brand":"Sitek",
+        "Name":"Cocoa",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-cocoa.png"
+    },        
+    {
+        "Brand":"Sitek",
+        "Name":"Fuzzie",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-fuzzie.png"
+    },        
+    {
+        "Brand":"Sitek",
+        "Name":"Wuffy",
+        "Width":2.76,
+        "Height":4.53,
+        "Image":"sitek-wuffy.png"
+    },    
+    {
+        "Brand":"Anasounds",
+        "Name":"Freq Up",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-frequp.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Feed Me",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-feedme.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Bumper",
+        "Width":1.97,
+        "Height":1.97,
+        "Image":"anasounds-bumper.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"High Voltage",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-highvoltage.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Lazy Comp",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-lazycomp.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Phase Lag",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-phaselag.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Utopia",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-utopia.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Savage",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-savage.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Ego Driver",
+        "Width":2.56,
+        "Height":5,
+        "Image":"anasounds-egodriver.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Cerberus",
+        "Width":2.52,
+        "Height":4.65,
+        "Image":"anasounds-cerberus.png"
+    },        
+    {
+        "Brand":"Anasounds",
+        "Name":"Bitoun Fuzz",
+        "Width":2.6,
+        "Height":4.72,
+        "Image":"anasounds-bitounfuzz.png"
+    },        
+    {
         "Brand":"Walrus",
         "Name":"Fathom",
         "Width":2.6,
@@ -887,6 +1041,13 @@
         "Width":2.875,
         "Height":5.125,
         "Image":"boss-ps6.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"RC-1 Loop Station",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-rc1.png"
     },
     {
         "Brand":"BOSS",
@@ -3136,6 +3297,13 @@
         "Image":"ehx-superego-plus.png"
     },
     {
+        "Brand":"Electro Harmonix",
+        "Name":"Headphone Amp",
+        "Width":1.41,
+        "Height":3.62,
+        "Image":"ehx-headphone-amp.png"
+    },
+    {
         "Brand":"Elektron",
         "Name":"Analog Drive",
         "Width":6.8,
@@ -3473,17 +3641,17 @@
     },
     {
         "Brand":"Fender",
-        "Name":"Level Set Buffer",
-        "Width":2.9,
-        "Height":4.9,
-        "Image":"fender-levelsetbuffer.png"
+        "Name":"Pugilist Distortion",
+        "Width":4.26,
+        "Height":5.39,
+        "Image":"fender-pugilist.png"
     },
     {
         "Brand":"Fender",
-        "Name":"Pugliest Distortion",
-        "Width":4.26,
-        "Height":5.39,
-        "Image":"fender-pugliest.png"
+        "Name":"The Bends Compressor",
+        "Width":2.75,
+        "Height":4.9,
+        "Image":"fender-thebends.png"
     },
     {
         "Brand":"Foxpedal",
@@ -5342,6 +5510,13 @@
     },
     {
         "Brand":"MXR",
+        "Name":"Distortion III",
+        "Width":2.5,
+        "Height":4.3,
+        "Image":"mxr-distortion3.png"
+    },
+    {
+        "Brand":"MXR",
         "Name":"Modified O.D. Custom Badass",
         "Width":2.5,
         "Height":4.5,
@@ -6025,6 +6200,13 @@
         "Width":1.65,
         "Height":3.7,
         "Image":"mooer-eq.png"
+    },
+    {
+        "Brand":"Mooer",
+        "Name":"Green Mile",
+        "Width":1.65,
+        "Height":3.7,
+        "Image":"mooer-greenmile.png"
     },
     {
         "Brand":"Mooer",
@@ -7784,6 +7966,13 @@
     },
     {
         "Brand":"TC Electronic",
+        "Name":"Brainwaves Pitch Shifter",
+        "Width":2.83,
+        "Height":4.8,
+        "Image":"tc-brainwaves.png"
+    },
+    {
+        "Brand":"TC Electronic",
         "Name":"Cinders",
         "Width":2.9,
         "Height":5.2,
@@ -9283,8 +9472,8 @@
     {
         "Brand":"Gamechanger Audio",
         "Name":"Plus",
-        "Width":6,
-        "Height":13,
+        "Width":3.55,
+        "Height":7.7,
         "Image":"gamechanger-audio-plus-sustain.png"
     },
     {
@@ -9293,5 +9482,12 @@
         "Width":2.3,
         "Height":2.6,
         "Image":"gamechanger-audio-wet.png"
+    },
+    {
+        "Brand": "Behringer",
+        "Name": "NR300",
+        "Width": 2.755,
+        "Height": 4.842,
+        "Image": "behringer-nr300.png"
     }
 ]
