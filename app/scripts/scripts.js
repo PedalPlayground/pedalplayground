@@ -30,13 +30,36 @@ $(document).ready(function(){
 		//$(this).val(null).trigger('change').focus();
 	});
 
+	$('body').on('click', '#import-canvas', function(){
+		var input = document.createElement('input');
+		input.type = 'file';
+		
+		input.onchange = e => { 
+			// getting a hold of the file reference
+			var file = e.target.files[0];
+			// setting up the reader
+			var reader = new FileReader();
+			reader.readAsBinaryString(file); // this is reading as data url
+			// here we tell the reader what to do when it's done reading...
+			reader.onload = readerEvent => {
+			var content = readerEvent.target.result; // this is the content!
+			importPedalCanvas(content);
+		   }
+		}
+		input.click();
+	});
+
+	$('body').on('click', '#export-canvas', function() {
+		const file = exportPedalCanvas();
+		var link = document.createElement('a');
+		link.download = "pedal_playground_export.txt";
+		link.href = file;
+		link.click();
+	});
+
 	$(function() {
 		// Load canvas from localStorage if it has been saved prior
-		if (localStorage["pedalCanvas"] != null) {
-			var savedPedalCanvas = JSON.parse(localStorage["pedalCanvas"]);
-			$(".canvas").html(savedPedalCanvas);
-			readyCanvas();
-		}
+		loadPedalCanvas();
 
 		// If hidden multiplier value doesn't exist, create it
 		if($("#multiplier").length == 0) {
@@ -402,6 +425,45 @@ function readyCanvas(pedal) {
 function savePedalCanvas() {
 	console.log("Canvas Saved!");
 	localStorage["pedalCanvas"] = JSON.stringify($(".canvas").html());
+}
+
+function loadPedalCanvas() {
+	if (localStorage["pedalCanvas"] != null) {
+		var savedPedalCanvas = JSON.parse(localStorage["pedalCanvas"]);
+		$(".canvas").html(savedPedalCanvas);
+		readyCanvas();
+	}
+}
+
+function importPedalCanvas(pedalCanvas) {
+	try {
+		console.log('saving imported pedals to canvas');
+		localStorage["pedalCanvas"] = pedalCanvas;
+		loadPedalCanvas();
+	} catch (err) {
+		console.log("Error importing file");
+	}
+}
+
+function exportPedalCanvas() {
+	try {
+		console.log('Creating file to download');
+		var pedalCanvas = localStorage["pedalCanvas"];
+		var textFile = null;
+		var data = new Blob([pedalCanvas], {type: 'text/plain'});
+
+		// If we are replacing a previously generated file we need to
+		// manually revoke the object URL to avoid memory leaks.
+		if (textFile !== null) {
+		window.URL.revokeObjectURL(textFile);
+		}
+
+		textFile = window.URL.createObjectURL(data);
+
+		return textFile;
+	} catch (err) {
+		console.log("Error exporting file");
+	}
 }
 
 function rotatePedal(pedal) {
