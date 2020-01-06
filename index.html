@@ -120,7 +120,7 @@
 					</div>
 					<div class="sidebar__section">
 						<button id="import-canvas" class="btn btn-primary btn-block" data-target="#import-canvas-modal">Import</button>
-						<button id="export-canvas" class="btn btn-primary btn-block" data-target="#export-canvas-modal">Export</button>
+						<button id="export-canvas" class="btn btn-primary btn-block" data-toggle="modal" data-target="#download-exported-canvas-file">Export</button>
 						<button id="clear-canvas" class="btn btn-sm btn-danger btn-block" data-toggle="modal" data-target="#clear-canvas-modal">Clear</button>
 					</div>
 				</div><!-- sidebar__scroll -->
@@ -143,6 +143,23 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 						<button type="button" class="btn btn-danger" id="clear-canvas-confirmation">Clear Canvas</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="download-exported-canvas-file" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Download Export</h4>
+					</div>
+					<div class="modal-body">
+						<p>This will download a file to your computer, are you sure?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-danger" id="download-exported-canvas-file-confirmation">Confirm Download</button>
 					</div>
 				</div>
 			</div>
