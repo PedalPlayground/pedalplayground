@@ -37,13 +37,11 @@ $(document).ready(function(){
 		input.onchange = e => { 
 			// getting a hold of the file reference
 			var file = e.target.files[0];
-			// setting up the reader
 			var reader = new FileReader();
-			reader.readAsBinaryString(file); // this is reading as data url
-			// here we tell the reader what to do when it's done reading...
+			reader.readAsBinaryString(file);
 			reader.onload = readerEvent => {
-			var content = readerEvent.target.result; // this is the content!
-			importPedalCanvas(content);
+			var content = readerEvent.target.result;
+			setPedalCanvas(content);
 		   }
 		}
 		input.click();
@@ -435,7 +433,7 @@ function loadPedalCanvas() {
 	}
 }
 
-function importPedalCanvas(pedalCanvas) {
+function setPedalCanvas(pedalCanvas) {
 	try {
 		console.log('saving imported pedals to canvas');
 		localStorage["pedalCanvas"] = pedalCanvas;
