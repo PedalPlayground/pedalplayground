@@ -439,7 +439,7 @@ function setPedalCanvas(pedalCanvas) {
 		localStorage["pedalCanvas"] = pedalCanvas;
 		loadPedalCanvas();
 	} catch (err) {
-		console.log("Error importing file");
+		console.log("Error setting pedalCanvas");
 	}
 }
 
