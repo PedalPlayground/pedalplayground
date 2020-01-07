@@ -507,7 +507,7 @@ window.RenderPedals = function(pedals) {
     var { Type, Brand, Name, Width, Height, Image } = pedals;
     var option = $("<option>", {
         text: `${Brand} ${Name}`,
-        id: `${Name.toLowerCase().replace(/(\s+)|(['"])/g, (m, p1, p2) => p1 ? "-" : "")}`,
+        // id: `${Name.toLowerCase().replace(/(\s+)|(['"])/g, (m, p1, p2) => p1 ? "-" : "")}`,
         data: {
             width: Width,
             height: Height,
@@ -574,7 +574,8 @@ window.GetPedalBoardData = function(){
 window.RenderPedalBoards = function(pedalboards){
 	// console.log('RenderPedalBoards');
 	for(var i in pedalboards) {
-		var $pedalboard = $("<option>"+ pedalboards[i].Brand + " " + pedalboards[i].Name +"</option>").attr('id', pedalboards[i].Name.toLowerCase().replace(/\s+/g, "-").replace(/'/g, ''));
+		// var $pedalboard = $("<option>"+ pedalboards[i].Brand + " " + pedalboards[i].Name +"</option>").attr('id', pedalboards[i].Name.toLowerCase().replace(/\s+/g, "-").replace(/'/g, ''));
+		var $pedalboard = $("<option>"+ pedalboards[i].Brand + " " + pedalboards[i].Name +"</option>");
 		$pedalboard.data('width', pedalboards[i].Width);
 		$pedalboard.data('height', pedalboards[i].Height);
 		$pedalboard.data('height', pedalboards[i].Height);
