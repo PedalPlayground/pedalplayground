@@ -2235,8 +2235,8 @@
     {
         "Brand":"Diamond",
         "Name":"Compressor JR",
-        "Width":2.75,
-        "Height":4.8,
+		"Width":2.6,
+        "Height":4.93,
         "Image":"diamond-compressorjr.png"
     },
     {
