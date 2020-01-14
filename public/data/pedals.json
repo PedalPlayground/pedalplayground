@@ -7391,6 +7391,13 @@
         "Height":4.5,
         "Image":"sourceaudio-gemini.png"
     },
+	{
+        "Brand":"Source Audio",
+        "Name":"EQ2 Programmable EQ",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"sourceaudio-eq2.png"
+    },
     {
         "Brand":"Source Audio",
         "Name":"True Spring Reverb",
