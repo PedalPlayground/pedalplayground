@@ -5368,6 +5368,13 @@
         "Height":3.54,
         "Image":"mxr-sugardrive.png"
     },
+	{
+        "Brand":"MXR",
+        "Name":"Timmy",
+        "Width":1.5748,
+        "Height":3.54,
+        "Image":"mxr-timmy.png"
+    },
     {
         "Brand":"MXR",
         "Name":"CAE Buffer",
