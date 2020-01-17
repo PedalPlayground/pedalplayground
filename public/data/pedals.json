@@ -5776,6 +5776,13 @@
     },
     {
         "Brand":"Mythos",
+        "Name":"SusMaryOsep",
+		"Width":4.69,
+        "Height":3.66,
+        "Image":"mythos-susmaryosep.png"
+    },
+    {
+        "Brand":"Mythos",
         "Name":"Argo",
         "Width":2.62,
         "Height":4.93,
