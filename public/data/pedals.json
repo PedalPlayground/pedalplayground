@@ -5194,6 +5194,13 @@
         "Image":"line6-m9.png"
     },
     {
+	"Brand":"Line6",
+	"Name":"Relay Wireless G10",
+	"Width":3.88,
+	"Height":3.88,
+	"Image":"line6-g10relay.png"
+    },
+    {
         "Brand":"Line6",
         "Name":"Relay Wireless G10S",
         "Width":3.5,
@@ -6522,6 +6529,13 @@
         "Width":2.8,
         "Height":4.5,
         "Image":"neunaber-wet.png"
+    },
+    {
+	"Brand":"Neural DSP",
+	"Name":"Quad Cortex",
+	"Width":11.42,
+	"Height":7.48,
+	"Image":"neuraldsp-quadcortex.png"
     },
     {
         "Brand":"Old Blood Noise Endeavors",
