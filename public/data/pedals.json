@@ -6560,6 +6560,13 @@
     },
     {
         "Brand":"Old Blood Noise Endeavors",
+        "Name":"Minim",
+        "Width":4.69,
+        "Height":3.66,
+        "Image":"oldbloodnoise-minim.png"
+    },
+    {
+        "Brand":"Old Blood Noise Endeavors",
         "Name":"Dark Star",
         "Width":2.65,
         "Height":4.8,
