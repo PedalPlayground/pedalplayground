@@ -4571,6 +4571,13 @@
         "Image":"jhs-prestige.png"
     },
     {
+        "Brand":"Mythos",
+        "Name":"Golden Fleece",
+        "Width":1.79,
+        "Height":3.6,
+        "Image":"mythos-goldenfleecemini.png"
+    },
+    {
         "Brand":"JHS",
         "Name":"Tidewater Tremolo",
         "Width":1.75,
