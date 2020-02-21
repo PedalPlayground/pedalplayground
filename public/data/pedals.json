@@ -5614,6 +5614,13 @@
         "Image":"enclosure.png"
     },
     {
+        "Brand":"Travs",
+        "Name":"Patchbay",
+        "Width":2.97,
+        "Height":4.77,
+        "Image":"trav-patch-bay.png"
+    },
+    {
         "Brand":"Mammoth Electronics",
         "Name":"1590A",
         "Width":1.52,
