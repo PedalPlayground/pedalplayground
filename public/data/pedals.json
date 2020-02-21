@@ -4439,6 +4439,13 @@
     },
     {
         "Brand":"JHS",
+        "Name":"PG-14 Paul Gilbert Signature Distortion",
+        "Width":2.85,
+        "Height":4.87,
+        "Image":"jhs-pg14.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"Charlie Brown",
         "Width":2.85,
         "Height":4.87,
@@ -4562,6 +4569,13 @@
         "Width":1.79,
         "Height":3.6,
         "Image":"jhs-prestige.png"
+    },
+    {
+        "Brand":"Mythos",
+        "Name":"Golden Fleece",
+        "Width":1.79,
+        "Height":3.6,
+        "Image":"mythos-goldenfleecemini.png"
     },
     {
         "Brand":"JHS",
@@ -5187,6 +5201,13 @@
         "Image":"line6-m9.png"
     },
     {
+	"Brand":"Line6",
+	"Name":"Relay Wireless G10",
+	"Width":3.88,
+	"Height":3.88,
+	"Image":"line6-g10relay.png"
+    },
+    {
         "Brand":"Line6",
         "Name":"Relay Wireless G10S",
         "Width":3.5,
@@ -5248,6 +5269,13 @@
         "Width":4.39,
         "Height":2.546,
         "Image":"loopi-dual-latching.png"
+    },
+	{
+        "Brand":"Loopi",
+        "Name":"Strymon Aux Switcher Footswitch",
+        "Width":4.39,
+        "Height":2.546,
+        "Image":"loopi-aux3.png"
     },
     {
         "Brand":"Loopi",
@@ -5353,6 +5381,13 @@
         "Width":1.5748,
         "Height":3.54,
         "Image":"mxr-sugardrive.png"
+    },
+	{
+        "Brand":"MXR",
+        "Name":"Timmy",
+        "Width":1.5748,
+        "Height":3.54,
+        "Image":"mxr-timmy.png"
     },
     {
         "Brand":"MXR",
@@ -5759,6 +5794,13 @@
         "Width":2.62,
         "Height":4.93,
         "Image":"mythos-mjolner.png"
+    },
+    {
+        "Brand":"Mythos",
+        "Name":"SusMaryOsep",
+		"Width":4.69,
+        "Height":3.66,
+        "Image":"mythos-susmaryosep.png"
     },
     {
         "Brand":"Mythos",
@@ -6510,6 +6552,13 @@
         "Image":"neunaber-wet.png"
     },
     {
+	"Brand":"Neural DSP",
+	"Name":"Quad Cortex",
+	"Width":11.42,
+	"Height":7.48,
+	"Image":"neuraldsp-quadcortex.png"
+    },
+    {
         "Brand":"Old Blood Noise Endeavors",
         "Name":"Black Fountain",
         "Width":2.65,
@@ -6522,6 +6571,13 @@
         "Width":4.69,
         "Height":3.66,
         "Image":"oldbloodnoise-rever.png"
+    },
+    {
+        "Brand":"Old Blood Noise Endeavors",
+        "Name":"Minim",
+        "Width":4.69,
+        "Height":3.66,
+        "Image":"oldbloodnoise-minim.png"
     },
     {
         "Brand":"Old Blood Noise Endeavors",
@@ -7390,6 +7446,13 @@
         "Width":2.75,
         "Height":4.5,
         "Image":"sourceaudio-gemini.png"
+    },
+	{
+        "Brand":"Source Audio",
+        "Name":"EQ2 Programmable EQ",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"sourceaudio-eq2.png"
     },
     {
         "Brand":"Source Audio",
@@ -8754,6 +8817,13 @@
         "Width":2.6,
         "Height":4.93,
         "Image":"walrus-deepsix-v3.png"
+    },
+	{
+        "Brand":"Walrus",
+        "Name":"Julia V2",
+        "Width":2.6,
+        "Height":4.93,
+        "Image":"walrus-julia2.png"
     },
     {
         "Brand":"Walrus",

@@ -7156,6 +7156,11 @@ strong, th {
   background-color: #F8F8F8; }
   .darkmode .canvas {
     background-color: #232329; }
+  .canvas * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
 
 .item {
   position: absolute;

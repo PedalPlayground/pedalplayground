@@ -109,28 +109,28 @@
         "Name":"Lite",
         "Width":14,
         "Height":5.65,
-        "Image":"mono-lite.png"
+        "Image":"mono-lite-pedalboard.png"
     },
     {
         "Brand":"Mono",
         "Name":"Lite+",
         "Width":18,
         "Height":5.7,
-        "Image":"mono-liteplus.png"
+        "Image":"mono-liteplus-pedalboard.png"
     },
     {
         "Brand":"Mono",
         "Name":"Medium",
         "Width":24,
         "Height":14.5,
-        "Image":"mono-small.png"
+        "Image":"mono-medium-pedalboard.png"
     },
     {
         "Brand":"Mono",
         "Name":"Small",
         "Width":18,
         "Height":12.3,
-        "Image":"mono-small.png"
+        "Image":"mono-small-pedalboard.png"
     },
     {
         "Brand":"Pedaltrain",
@@ -144,7 +144,7 @@
         "Name":"Classic 2",
         "Width":24,
         "Height":12.5,
-        "Image":"pedaltrain-2.png"
+        "Image":"pedaltrain-classic2.png"
     },
     {
         "Brand":"Pedaltrain",
