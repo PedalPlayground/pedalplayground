@@ -4578,6 +4578,13 @@
         "Image":"jhs-prestige.png"
     },
     {
+        "Brand":"Mythos",
+        "Name":"Golden Fleece",
+        "Width":1.79,
+        "Height":3.6,
+        "Image":"mythos-goldenfleecemini.png"
+    },
+    {
         "Brand":"JHS",
         "Name":"Tidewater Tremolo",
         "Width":1.75,
@@ -5201,6 +5208,13 @@
         "Image":"line6-m9.png"
     },
     {
+	"Brand":"Line6",
+	"Name":"Relay Wireless G10",
+	"Width":3.88,
+	"Height":3.88,
+	"Image":"line6-g10relay.png"
+    },
+    {
         "Brand":"Line6",
         "Name":"Relay Wireless G10S",
         "Width":3.5,
@@ -5640,6 +5654,13 @@
         "Width":2.6,
         "Height":4.77,
         "Image":"enclosure.png"
+    },
+    {
+        "Brand":"Travs",
+        "Name":"Patchbay",
+        "Width":2.97,
+        "Height":4.77,
+        "Image":"trav-patch-bay.png"
     },
     {
         "Brand":"Mammoth Electronics",
@@ -6538,6 +6559,13 @@
         "Image":"neunaber-wet.png"
     },
     {
+	"Brand":"Neural DSP",
+	"Name":"Quad Cortex",
+	"Width":11.42,
+	"Height":7.48,
+	"Image":"neuraldsp-quadcortex.png"
+    },
+    {
         "Brand":"Old Blood Noise Endeavors",
         "Name":"Black Fountain",
         "Width":2.65,
@@ -6550,6 +6578,13 @@
         "Width":4.69,
         "Height":3.66,
         "Image":"oldbloodnoise-rever.png"
+    },
+    {
+        "Brand":"Old Blood Noise Endeavors",
+        "Name":"Minim",
+        "Width":4.69,
+        "Height":3.66,
+        "Image":"oldbloodnoise-minim.png"
     },
     {
         "Brand":"Old Blood Noise Endeavors",
