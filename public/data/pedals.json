@@ -1549,7 +1549,7 @@
     {
         "Brand":"Bogner",
         "Name":"Burnley",
-        "Width":2.7,
+        "Width":2.85,
         "Height":4.75,
         "Image":"bogner-burnley.png"
     },
@@ -1570,7 +1570,7 @@
     {
         "Brand":"Bogner",
         "Name":"Harlow",
-        "Width":2.7,
+        "Width":2.85,
         "Height":4.75,
         "Image":"bogner-harlow.png"
     },
@@ -1591,7 +1591,7 @@
     {
         "Brand":"Bogner",
         "Name":"Wessex",
-        "Width":2.7,
+        "Width":2.85,
         "Height":4.75,
         "Image":"bogner-wessex.png"
     },
@@ -4219,6 +4219,13 @@
         "Width":2.9,
         "Height":4.89,
         "Image":"ibanez-ad80.png"
+    },
+	{
+        "Brand":"Ibanez",
+        "Name":"TS-10 Tube Screamer",
+		"Width":2.875,
+        "Height":4.95,
+        "Image":"ibanez-ts10.png"
     },
     {
         "Brand":"Ibanez",
