@@ -3202,21 +3202,21 @@
         "Brand":"Electro Harmonix",
         "Name":"Silencer",
         "Width":2.5,
-        "Height":4.3,
+        "Height":4.4,
         "Image":"ehx-silencer.png"
     },
     {
         "Brand":"Electro Harmonix",
         "Name":"Small Stone Nano",
         "Width":2.65,
-        "Height":4.39,
+        "Height":4.4,
         "Image":"ehx-nanosmallstone.png"
     },
     {
         "Brand":"Electro Harmonix",
         "Name":"Flat Iron Fuzz",
         "Width":2.64,
-        "Height":4.38,
+        "Height":4.4,
         "Image":"ehx-flatiron.png"
     },
     {
@@ -5603,7 +5603,7 @@
         "Brand":"Mad Professor",
         "Name":"Little Green Wonder",
         "Width":2.5,
-        "Height":4.3,
+        "Height":4.4,
         "Image":"madprof-littlegreenwonder.png"
     },
     {
