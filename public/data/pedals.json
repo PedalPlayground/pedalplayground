@@ -9462,6 +9462,13 @@
         "Height":2.38,
         "Image":"zvex-boxofrock.png"
     },
+	{
+        "Brand":"Zvex",
+        "Name":"Box of Rock",
+		"Width":2.62,
+        "Height":4.5,
+        "Image":"zvex-boxofrockvertical.png"
+    },
     {
         "Brand":"Zvex",
         "Name":"Distortron",
