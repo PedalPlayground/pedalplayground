@@ -5680,7 +5680,7 @@
         "Brand":"Mammoth Electronics",
         "Name":"1590B",
         "Width":2.34,
-        "Height":4.39,
+        "Height":4.4375,
         "Image":"enclosure.png"
     },
     {
@@ -7129,7 +7129,7 @@
         "Brand":"Rimrock",
         "Name":"Lil MO",
         "Width":2.5,
-        "Height":4.3,
+        "Height":4.97,
         "Image":"rimrock-lilmo.png"
     },
     {
@@ -9464,9 +9464,9 @@
     },
 	{
         "Brand":"Zvex",
-        "Name":"Box of Rock",
-		"Width":2.62,
-        "Height":4.5,
+        "Name":"Box of Rock Vertical",
+		"Width":2.625,
+        "Height":4.4375,
         "Image":"zvex-boxofrockvertical.png"
     },
     {
