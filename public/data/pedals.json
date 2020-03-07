@@ -1185,15 +1185,15 @@
     {
         "Brand":"Barber",
         "Name":"Direct Drive",
-        "Width":2.5,
-        "Height":4.3,
+        "Width": 2.75,
+        "Height":4.4375,
         "Image":"barber-directdrive.png"
     },
     {
         "Brand":"Barber",
         "Name":"Gain Changer",
-        "Width":2.5,
-        "Height":4.3,
+        "Width": 2.75,
+        "Height":4.4375,
         "Image":"barber-gainchanger.png"
     },
     {
@@ -1206,8 +1206,8 @@
     {
         "Brand":"Barber",
         "Name":"Tone Press",
-        "Width":2.5,
-        "Height":4.3,
+        "Width": 2.75,
+        "Height":4.4375,
         "Image":"barber-tonepresssm.png"
     },
     {
@@ -6765,7 +6765,7 @@
         "Brand":"Paul C",
         "Name":"Timmy",
         "Width":2.62,
-        "Height":4.5,
+        "Height":4.4375,
         "Image":"paulc-timmy.png"
     },
     {
@@ -7128,8 +7128,8 @@
     {
         "Brand":"Rimrock",
         "Name":"Lil MO",
-        "Width":2.5,
-        "Height":4.97,
+		"Width":2.6,
+        "Height":4.93,
         "Image":"rimrock-lilmo.png"
     },
     {
