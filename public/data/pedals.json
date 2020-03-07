@@ -5599,6 +5599,13 @@
         "Height":4.3,
         "Image":"madprof-1od.png"
     },
+	{
+        "Brand":"Mad Professor",
+        "Name":"Little Green Wonder",
+        "Width":2.5,
+        "Height":4.3,
+        "Image":"madprof-littlegreenwonder.png"
+    },
     {
         "Brand":"Mad Professor",
         "Name":"Amber Overdrive",
