@@ -4024,6 +4024,13 @@
         "Height":4.64567,
         "Image":"goodwood-underfacer.png"
     },
+	{
+        "Brand":"Goodrich",
+        "Name":"Volume Pedal",
+        "Width":3.875,
+        "Height":10.75,
+        "Image":"goodrich-volume.png"
+    },
     {
         "Brand":"Greer Amps",
         "Name":"Arbuckle Trem",
