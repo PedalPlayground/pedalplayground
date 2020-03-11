@@ -5811,10 +5811,17 @@
     },
     {
         "Brand":"Mythos",
-        "Name":"Mjolner",
+        "Name":"Mjolnir",
         "Width":2.62,
         "Height":4.93,
         "Image":"mythos-mjolner.png"
+    },
+	{
+        "Brand":"Mythos",
+        "Name":"Mjolnir Joey Landreth Edition",
+        "Width":2.62,
+        "Height":4.93,
+        "Image":"mythos-mjolnirjl.png"
     },
     {
         "Brand":"Mythos",
