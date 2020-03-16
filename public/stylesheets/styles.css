@@ -7139,12 +7139,13 @@ strong, th {
       background-color: #1B1920;
       border-right-color: rgba(255, 255, 255, 0.1); } }
 
-.sidebar__section {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
-  padding-bottom: 16px;
-  margin-bottom: 16px; }
-  .darkmode .sidebar__section {
-    border-bottom-color: rgba(255, 255, 255, 0.1); }
+.sidebar__section + .sidebar__section {
+  border-top: 1px solid #ddd;
+  padding-top: 16px;
+  margin-top: 16px; }
+
+.darkmode .sidebar__section {
+  border-bottom-color: rgba(255, 255, 255, 0.1); }
 
 .sidebar h4 {
   font-size: 15px; }
@@ -7489,3 +7490,22 @@ strong, th {
       margin: 3px 8px 0 0; }
     #canvas-scale-form h4 {
       display: none; } }
+
+.sidebar__scroll {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+.sidebar__tgs {
+  padding-left: 10rem; }
+  .sidebar__tgs img {
+    float: left;
+    width: 8rem;
+    margin-left: -10rem; }
+  .sidebar__tgs p {
+    margin-bottom: .4rem; }
+  .sidebar__tgs a {
+    font-size: 1.25rem;
+    color: #444;
+    text-decoration: underline;
+    font-weight: 700; }
