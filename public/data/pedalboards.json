@@ -132,6 +132,41 @@
         "Height":12.3,
         "Image":"mono-small-pedalboard.png"
     },
+	{
+        "Brand":"Muzbay",
+        "Name":"Meridian 40",
+        "Width":15.7,
+        "Height":11.8,
+        "Image":"muzbay-meridian-40.png"
+    },
+	{
+        "Brand":"Muzbay",
+        "Name":"Meridian 50",
+        "Width":19.7,
+        "Height":11.8,
+        "Image":"muzbay-meridian-50.png"
+    },
+	{
+        "Brand":"Muzbay",
+        "Name":"Meridian 60",
+        "Width":23.6,
+        "Height":11.8,
+        "Image":"muzbay-meridian-60.png"
+    },
+	{
+        "Brand":"Muzbay",
+        "Name":"Sputnik 35",
+        "Width":13.8,
+        "Height":5.12,
+        "Image":"muzbay-sputnik-35.png"
+    },
+	{
+        "Brand":"Muzbay",
+        "Name":"Meridian 50",
+        "Width":19.7,
+		"Height":5.12,
+        "Image":"muzbay-sputnik-50.png"
+    },
     {
         "Brand":"Pedaltrain",
         "Name":"Classic 1",
