@@ -2766,6 +2766,13 @@
     },
     {
         "Brand":"Earthquaker Devices",
+        "Name":"Swiss Things",
+		"Width":5.75,
+        "Height":4.75,
+        "Image":"eqd-swissthings.png"
+    },
+    {
+        "Brand":"Earthquaker Devices",
         "Name":"Afterneath",
         "Width":2.6,
         "Height":4.93,
