@@ -9002,6 +9002,13 @@
     },
     {
         "Brand":"Wampler",
+        "Name":"Equator",
+        "Width":2.6,
+        "Height":4.93,
+        "Image":"wampler-equator.png"
+    },
+    {
+        "Brand":"Wampler",
         "Name":"Dracarys",
         "Width":2.6,
         "Height":4.93,
