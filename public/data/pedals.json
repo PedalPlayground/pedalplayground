@@ -4887,6 +4887,13 @@
     },
     {
         "Brand":"Keeley",
+        "Name":"DCR Drive Chorus Rotary",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"keeley-dcr.png"
+    },
+    {
+        "Brand":"Keeley",
         "Name":"Caverns V2",
         "Width":3.7,
         "Height":4.7,
@@ -7663,6 +7670,13 @@
         "Width":4,
         "Height":4.5,
         "Image":"strymon-bluesky.png"
+    },
+    {
+        "Brand":"Strymon",
+        "Name":"Compadre",
+        "Width":4,
+        "Height":4.5,
+        "Image":"strymon-compadre.png"
     },
     {
         "Brand":"Strymon",
