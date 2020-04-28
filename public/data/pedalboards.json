@@ -183,7 +183,14 @@
     },
     {
         "Brand":"Pedaltrain",
-        "Name":"PT-3",
+        "Name":"JR MAX",
+        "Width":28,
+        "Height":12.5,
+        "Image":"pedaltrain-jr-max.png"
+    },
+    {
+        "Brand":"Pedaltrain",
+        "Name":"Classic 3",
         "Width":24,
         "Height":16,
         "Image":"pedaltrain-pt-3.png"
@@ -202,6 +209,13 @@
         "Height":16,
         "Image":"pedaltrain-pro.png"
     },
+	{
+        "Brand":"Pedaltrain",
+        "Name":"Pro FX",
+        "Width":32,
+        "Height":16,
+        "Image":"pedaltrain-pro-fx.png"
+    },
     {
         "Brand":"Pedaltrain",
         "Name":"Fly",
@@ -213,6 +227,13 @@
         "Brand":"Pedaltrain",
         "Name":"Metro 16",
         "Width":16,
+        "Height":8,
+        "Image":"pedaltrain-metro16.png"
+    },
+    {
+        "Brand":"Pedaltrain",
+        "Name":"Metro MAX",
+        "Width":28,
         "Height":8,
         "Image":"pedaltrain-metro16.png"
     },
@@ -250,6 +271,13 @@
         "Width":18,
         "Height":5,
         "Image":"pedaltrain-nanoplus.png"
+    },
+    {
+        "Brand":"Pedaltrain",
+        "Name":"Nano MAX",
+        "Width":28,
+        "Height":5.5,
+        "Image":"pedaltrain-nano-max.png"
     },
     {
         "Brand":"Pedaltrain",
