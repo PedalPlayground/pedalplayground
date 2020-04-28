@@ -6455,6 +6455,13 @@
     },
     {
         "Brand":"Morningstar",
+        "Name":"MC8",
+        "Width":8.8189,
+        "Height":4.92126,
+        "Image":"morningstar-mc8.png"
+    },
+    {
+        "Brand":"Morningstar",
         "Name":"ML5",
         "Width":6.3,
         "Height":2.36,
