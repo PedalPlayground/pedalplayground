@@ -7,6 +7,13 @@
         "Image":"xotic-sl.png"
     },
     {
+        "Brand":"RadioShack",
+        "Name":"1.5in Knob",
+        "Width":1.5,
+        "Height":1.5,
+        "Image":"black-knob.png"
+    },
+    {
         "Brand":"Xotic",
         "Name":"SL Drive - LE Red",
         "Width":1.9,
