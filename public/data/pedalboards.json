@@ -158,14 +158,14 @@
         "Name":"Sputnik 35",
         "Width":13.8,
         "Height":5.12,
-        "Image":"muzbay-sputnik-35.png"
+        "Image":"muzbay-sputnik-50.png"
     },
 	{
         "Brand":"Muzbay",
         "Name":"Sputnik 50",
         "Width":19.7,
 		"Height":5.12,
-        "Image":"muzbay-sputnik-50.png"
+        "Image":"muzbay-sputnik-35.png"
     },
     {
         "Brand":"Pedaltrain",
