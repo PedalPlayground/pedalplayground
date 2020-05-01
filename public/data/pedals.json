@@ -4705,6 +4705,13 @@
     },
     {
         "Brand":"Jackson Audio",
+        "Name":"Golden Boy",
+        "Width":2.652,
+        "Height":4.875,
+        "Image":"jacksonaudio-goldenboy.png"
+    },
+    {
+        "Brand":"Jackson Audio",
         "Name":"Broken Arrow",
         "Width":2.652,
         "Height":4.875,
