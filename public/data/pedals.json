@@ -6924,6 +6924,13 @@
     },
     {
         "Brand":"Pigtronix",
+        "Name":"Infinity Looper 2",
+        "Width":4.5,
+        "Height":2.6,
+        "Image":"pigtronix-infinity-2.png"
+    },
+    {
+        "Brand":"Pigtronix",
         "Name":"Philosopher's King",
         "Width":7.4,
         "Height":4.6,
