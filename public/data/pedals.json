@@ -609,6 +609,13 @@
         "Image":"arc-soothsayer.png"
     },
     {
+	"Brand":"Arturia",
+	"Name":"KeyStep",
+	"Width":19,
+	"Height":5.7,
+	"Image":"arturia-keystep.png"
+    },
+    {
         "Brand":"Atomic",
         "Name":"Ampli-Firebox",
         "Width":3.95,
@@ -2865,8 +2872,8 @@
     {
         "Brand":"Earthquaker Devices",
         "Name":"Hoof",
-        "Width":2.6,
-        "Height":4.97,
+        "Width":2.36,
+        "Height":4.76,
         "Image":"earthquaker-hoof.png"
     },
     {
@@ -4485,6 +4492,13 @@
         "Width":3.7,
         "Height":4.7,
         "Image":"jhs-colourbox.png"
+    },
+    {
+	"Brand":"JHS",
+	"Name":"Colour Box V2",
+	"Width":3.75,
+	"Height":5.7,
+	"Image":"jhs-colourbox-v2.png"
     },
     {
         "Brand":"JHS",
@@ -6713,6 +6727,13 @@
         "Image":"oldbloodnoise-headphone-amp.png"
     },
     {
+	"Brand":"Old Blood Noise Endeavors",
+	"Name":"Signal Blender",
+	"Width":4.7,
+	"Height":3.7,
+	"Image":"oldbloodnoise-signalblender.png"
+    },
+    {
         "Brand":"Old Blood Noise Endeavors",
         "Name":"Whitecap",
         "Width":4.65,
@@ -6924,6 +6945,13 @@
     },
     {
         "Brand":"Pigtronix",
+        "Name":"Infinity Looper 2",
+        "Width":4.5,
+        "Height":2.6,
+        "Image":"pigtronix-infinity-2.png"
+    },
+    {
+        "Brand":"Pigtronix",
         "Name":"Philosopher's King",
         "Width":7.4,
         "Height":4.6,
@@ -6958,6 +6986,13 @@
         "Image":"pigtronix-tremvelope.png"
     },
     {
+	"Brand":"Poly Effects",
+	"Name":"Digit",
+	"Width":6,
+	"Height":5,
+	"Image":"poly-digit.png"
+    },
+    {
         "Brand":"Proco",
         "Name":"Rat",
         "Width":3.5,
@@ -6970,6 +7005,27 @@
         "Width":3.3,
         "Height":4.4,
         "Image":"quiettheory-prelude.png"
+    },
+    {
+	"Brand":"Radial Engineering",
+	"Name":"J48",
+	"Width":3.3,
+	"Height":5,
+	"Image":"radial-j48.png"
+    },
+    {
+	"Brand":"Radial Engineering",
+	"Name":"JDI",
+	"Width":3.3,
+	"Height":5,
+	"Image":"radial-jdi.png"
+    },
+    {
+	"Brand":"Radial Engineering",
+	"Name":"Key Largo",
+	"Width":8.4,
+	"Height":5,
+	"Image":"radial-key-largo.png"
     },
     {
         "Brand":"RJM",
@@ -8425,6 +8481,20 @@
         "Width":3.7,
         "Height":4.7,
         "Image":"tech21-leeds.png"
+    },
+    {
+	"Brand":"Teenage Engineering",
+	"Name":"OP-1",
+	"Width":11.1,
+	"Height":4,
+	"Image":"teenage-engineering-op-1.png"
+    },
+    {
+	"Brand":"Teenage Engineering",
+	"Name":"OP-Z",
+	"Width":8.37,
+	"Height":2.26,
+	"Image":"teenage-engineering-op-z.png"
     },
     {
         "Brand":"Thorpy",
