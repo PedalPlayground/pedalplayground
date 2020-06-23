@@ -4228,6 +4228,13 @@
         "Image":"hologram-infinitejets.png"
     },
     {
+        "Brand":"Hologram Electronics",
+        "Name":"Microcosm",
+        "Width":7.10,
+        "Height":4.70,
+        "Image":"hologram-microcosm.png"
+    },
+    {
         "Brand":"Hotone",
         "Name":"Binary Mod",
         "Width":4.76378,
