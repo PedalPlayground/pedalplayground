@@ -4467,6 +4467,13 @@
     },
     {
         "Brand":"JHS",
+        "Name":"Smiley Fuzz",
+        "Width":3.603,
+        "Height":5.68,
+        "Image":"jhs-smiley.png"
+    },
+    {
+        "Brand":"JHS",
         "Name":"@ Andy Timmons",
         "Width":2.85,
         "Height":4.87,
