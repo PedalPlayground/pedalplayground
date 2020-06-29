@@ -637,6 +637,20 @@
         "Image":"atomic-amplifire12.png"
     },
     {
+	"Brand":"Audio Kitchen",
+	"Name":"The Big Trees",
+	"Width":8.75,
+	"Height":5.75,
+	"Image":"audio-kitchen-tbt.png"
+    },
+    {
+	"Brand":"Audio Kitchen",
+	"Name":"The Small Trees",
+	"Width":4.6,
+	"Height":3.6,
+	"Image":"audio-kitchen-tst.png"
+    },
+    {
         "Brand":"Barefoot Buttons",
         "Name":"V1",
         "Width":1.125,
@@ -4212,6 +4226,13 @@
         "Width":7.37,
         "Height":4.69,
         "Image":"hologram-infinitejets.png"
+    },
+    {
+        "Brand":"Hologram Electronics",
+        "Name":"Microcosm",
+        "Width":7.10,
+        "Height":4.70,
+        "Image":"hologram-microcosm.png"
     },
     {
         "Brand":"Hotone",
@@ -7942,6 +7963,13 @@
         "Width":2.5,
         "Height":4.4,
         "Image":"subdecay-springtheory.png"
+    },
+    {
+	"Brand":"Suhr",
+	"Name":"ACE",
+	"Width":4.88,
+	"Height":3.88,
+	"Image":"suhr-ace.png"
     },
     {
         "Brand":"Suhr",
