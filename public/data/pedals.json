@@ -5138,6 +5138,13 @@
         "Image":"klon-centaur.png"
     },
     {
+        "Brand":"Ceriatone",
+        "Name":"Centura",
+        "Width":6.5,
+        "Height":5,
+        "Image":"ceriatone-centura.png"
+    },
+    {
         "Brand":"Klon",
         "Name":"Centaur (Horsey)",
         "Width":6.5,
