@@ -3699,14 +3699,21 @@
         "Brand":"Foxpedal",
         "Name":"Kingdom",
         "Width":2.6,
-        "Height":4.7,
+        "Height":4.95,
         "Image":"foxpedal-kingdom.png"
+    },
+    {
+        "Brand":"Foxpedal",
+        "Name":"Kingdom V2 - Gold Limited Edition",
+        "Width":2.6,
+        "Height":4.95,
+        "Image":"foxpedal-kingdom-gold.png"
     },
     {
         "Brand":"Foxpedal",
         "Name":"Kingdom Combo V2",
         "Width":2.6,
-        "Height":4.7,
+        "Height":4.95,
         "Image":"foxpedal-kingdomcombov2.png"
     },
     {
