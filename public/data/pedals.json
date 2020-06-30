@@ -8960,6 +8960,13 @@
     },
     {
         "Brand":"Walrus",
+        "Name":"Mako Series - D1 Stereo Delay",
+        "Width":2.85,
+        "Height":4.87,
+        "Image":"walrus-mako-d1.png"
+    },
+    {
+        "Brand":"Walrus",
         "Name":"Aetos",
         "Width":4.7,
         "Height":3.7,
