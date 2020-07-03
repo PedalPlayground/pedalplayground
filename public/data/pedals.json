@@ -6783,11 +6783,11 @@
         "Image":"oldbloodnoise-headphone-amp.png"
     },
     {
-	"Brand":"Old Blood Noise Endeavors",
-	"Name":"Signal Blender",
-	"Width":4.7,
-	"Height":3.7,
-	"Image":"oldbloodnoise-signalblender.png"
+        "Brand":"Old Blood Noise Endeavors",
+        "Name":"Signal Blender",
+        "Width":4.7,
+        "Height":3.7,
+        "Image":"oldbloodnoise-signalblender.png"
     },
     {
         "Brand":"Old Blood Noise Endeavors",
@@ -6795,6 +6795,13 @@
         "Width":4.65,
         "Height":3.62,
         "Image":"oldbloodnoise-whitecap.png"
+    },
+    {
+        "Brand":"Hamstead",
+        "Name":"Ascent",
+        "Width":2.75591,
+        "Height":5.11811,
+        "Image":"hamstead-ascent.png"
     },
     {
         "Brand":"One Control",
