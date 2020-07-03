@@ -3445,6 +3445,13 @@
     },
     {
         "Brand":"Empress",
+        "Name":"Compressor MkII",
+        "Width":2.6,
+        "Height":5.091,
+        "Image":"empress-compressor-mkii.png"
+    },
+    {
+        "Brand":"Empress",
         "Name":"Distortion",
         "Width":2.5,
         "Height":4.5,
