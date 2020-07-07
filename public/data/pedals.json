@@ -7378,6 +7378,13 @@
         "Image":"seymourduncan-vaportrail.png"
     },
     {
+        "Brand":"Seymour Duncan",
+        "Name":"805 Overdrive",
+        "Width":2.72,
+        "Height":5.17,
+        "Image":"seymour-duncan-805.png"
+    },
+    {
         "Brand":"Smallsound/Bigsound",
         "Name":"Buzzz",
         "Width":3.68,
