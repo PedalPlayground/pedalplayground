@@ -4249,6 +4249,13 @@
         "Image":"hologram-microcosm.png"
     },
     {
+        "Brand":"Jet",
+        "Name":"Micro HX",
+        "Width":3.64,
+        "Height":1.52,
+        "Image":"hotone-binarymod.png"
+    },
+    {
         "Brand":"Hotone",
         "Name":"Binary Mod",
         "Width":4.76378,
@@ -9235,7 +9242,7 @@
         "Brand":"Wampler",
         "Name":"Ego",
         "Width":2.6,
-        "Height":4.93,
+        "Height":4.77,
         "Image":"wampler-ego.png"
     },
     {
