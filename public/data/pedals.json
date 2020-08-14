@@ -9839,5 +9839,12 @@
         "Width": 2.755,
         "Height": 4.842,
         "Image": "behringer-nr300.png"
+    },
+    {
+        "Brand": "Harley Benton",
+        "Name": "PowerPlant Tuner",
+        "Width": 2.75,
+        "Height": 4.80,
+        "Image": "harley-benton-powerplant-tuner.png"
     }
 ]
