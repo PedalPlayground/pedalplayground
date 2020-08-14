@@ -4739,6 +4739,27 @@
         "Image":"jhs-vcr.png"
     },
     {
+        "Brand":"JHS",
+        "Name":"Lucky Cat (Pink)",
+        "Width":2.85,
+        "Height":4.93,
+        "Image":"jhs-luckycat-pink.png"
+    },
+    {
+        "Brand":"JHS",
+        "Name":"Kodiak",
+        "Width":2.85,
+        "Height":4.93,
+        "Image":"jhs-kodiak.png"
+    },
+    {
+        "Brand":"JHS",
+        "Name":"Spring Tank",
+        "Width":2.85,
+        "Height":4.93,
+        "Image":"jhs-springtank.png"
+    },
+    {
         "Brand":"Jackson Audio",
         "Name":"Amp Mode",
         "Width":1.8,
