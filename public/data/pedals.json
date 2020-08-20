@@ -175,6 +175,13 @@
         "Image":"sa-spectrum.png"
     },
     {
+        "Brand":"Source Audio",
+        "Name":"C4 Synth",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"c4synth.png"
+    },
+    {
         "Brand":"Kingtone",
         "Name":"Mini Fuzz",
         "Width":2.5,
@@ -1195,6 +1202,20 @@
         "Width":2.875,
         "Height":5.125,
         "Image":"boss-vb2w.png"
+    },
+    {
+        "Brand":"Boss",
+        "Name":"VE-8 Acoustic Singer",
+        "Width":8.5625,
+        "Height":6.375,
+        "Image":"Boss-VE-8.jpg"
+    },
+    {
+        "Brand":"Boss",
+        "Name":"VE-500 Vocal Performer",
+	"Width":6.75,
+        "Height":5.4375,
+        "Image":"Boss-VE-500.jpg"
     },
     {
         "Brand":"Barber",
