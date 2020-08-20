@@ -11,6 +11,13 @@
         "Name":"Spectrum",
         "Width":2.75,
         "Height":4.5,
+        "Image":"c4synth.png"
+    },
+    {
+        "Brand":"Source Audio",
+        "Name":"C4 Synth",
+        "Width":2.75,
+        "Height":4.5,
         "Image":"sa-spectrum.png"
     },
     {
