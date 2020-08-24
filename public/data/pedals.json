@@ -175,6 +175,13 @@
         "Image":"sa-spectrum.png"
     },
     {
+        "Brand":"Source Audio",
+        "Name":"C4 Synth",
+        "Width":2.75,
+        "Height":4.5,
+        "Image":"c4synth.png"
+    },
+    {
         "Brand":"Kingtone",
         "Name":"Mini Fuzz",
         "Width":2.5,
@@ -1195,6 +1202,20 @@
         "Width":2.875,
         "Height":5.125,
         "Image":"boss-vb2w.png"
+    },
+    {
+        "Brand":"Boss",
+        "Name":"VE-8 Acoustic Singer",
+        "Width":8.5625,
+        "Height":6.375,
+        "Image":"Boss-VE-8.jpg"
+    },
+    {
+        "Brand":"Boss",
+        "Name":"VE-500 Vocal Performer",
+	"Width":6.75,
+        "Height":5.4375,
+        "Image":"Boss-VE-500.jpg"
     },
     {
         "Brand":"Barber",
@@ -4739,6 +4760,27 @@
         "Image":"jhs-vcr.png"
     },
     {
+        "Brand":"JHS",
+        "Name":"Lucky Cat (Pink)",
+        "Width":2.85,
+        "Height":4.93,
+        "Image":"jhs-luckycat-pink.png"
+    },
+    {
+        "Brand":"JHS",
+        "Name":"Kodiak",
+        "Width":2.85,
+        "Height":4.93,
+        "Image":"jhs-kodiak.png"
+    },
+    {
+        "Brand":"JHS",
+        "Name":"Spring Tank",
+        "Width":2.85,
+        "Height":4.93,
+        "Image":"jhs-springtank.png"
+    },
+    {
         "Brand":"Jackson Audio",
         "Name":"Amp Mode",
         "Width":1.8,
@@ -7841,7 +7883,7 @@
     },
     {
         "Brand":"Strymon",
-        "Name":"Big Sky",
+        "Name":"BigSky",
         "Width":6.75,
         "Height":5.1,
         "Image":"strymon-bigsky.png"
@@ -9839,5 +9881,12 @@
         "Width": 2.755,
         "Height": 4.842,
         "Image": "behringer-nr300.png"
+    },
+    {
+        "Brand": "Harley Benton",
+        "Name": "PowerPlant Tuner",
+        "Width": 2.75,
+        "Height": 4.80,
+        "Image": "harley-benton-powerplant-tuner.png"
     }
 ]
