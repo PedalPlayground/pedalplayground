@@ -7063,11 +7063,11 @@
         "Image":"pigtronix-tremvelope.png"
     },
     {
-	"Brand":"Poly Effects",
-	"Name":"Digit",
-	"Width":6,
-	"Height":5,
-	"Image":"poly-digit.png"
+        "Brand":"Poly Effects",
+        "Name":"Digit",
+        "Width":6,
+        "Height":5,
+        "Image":"poly-digit.png"
     },
     {
         "Brand":"Proco",
@@ -7084,32 +7084,53 @@
         "Image":"quiettheory-prelude.png"
     },
     {
-	"Brand":"Radial Engineering",
-	"Name":"J48",
-	"Width":3.3,
-	"Height":5,
-	"Image":"radial-j48.png"
+        "Brand":"Radial Engineering",
+        "Name":"J48",
+        "Width":3.3,
+        "Height":5,
+        "Image":"radial-j48.png"
     },
     {
-	"Brand":"Radial Engineering",
-	"Name":"JDI",
-	"Width":3.3,
-	"Height":5,
-	"Image":"radial-jdi.png"
+        "Brand":"Radial Engineering",
+        "Name":"JDI",
+        "Width":3.3,
+        "Height":5,
+        "Image":"radial-jdi.png"
     },
     {
-	"Brand":"Radial Engineering",
-	"Name":"Key Largo",
-	"Width":8.4,
-	"Height":5,
-	"Image":"radial-key-largo.png"
+        "Brand":"Radial Engineering",
+        "Name":"Key Largo",
+        "Width":8.4,
+        "Height":5,
+        "Image":"radial-key-largo.png"
     },
     {
         "Brand":"RJM",
-        "Name":"Mastermind PBC",
+        "Name":"Mastermind PBC/10",
         "Width":17.5,
         "Height":5.5,
         "Image":"rjm-mastermindpbc.png"
+    },
+    {
+        "Brand":"RJM",
+        "Name":"Mastermind GT/10",
+        "Width":19.4,
+        "Height":8.1,
+        "Image":"rjm-gt10.png"
+    },
+    {
+        "Brand":"RJM",
+        "Name":"Mastermind GT/16",
+        "Width":19.4,
+        "Height":11.1,
+        "Image":"rjm-gt16.png"
+    },
+    {
+        "Brand":"RJM",
+        "Name":"Mastermind GT/22",
+        "Width":19.4,
+        "Height":11.1,
+        "Image":"rjm-gt22.png"
     },
     {
         "Brand":"RJM",
