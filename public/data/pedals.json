@@ -1968,6 +1968,13 @@
     },
     {
         "Brand":"Chase Bliss",
+        "Name":"Automatone Preamp MKII",
+        "Width":5.75,
+        "Height":6.5,
+        "Image":"chasebliss-automatone-pre.jpg"
+    },
+    {
+        "Brand":"Chase Bliss",
         "Name":"Blooper",
         "Width":2.75,
         "Height":4.77,
