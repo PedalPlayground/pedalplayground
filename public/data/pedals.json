@@ -4817,6 +4817,13 @@
     },
     {
         "Brand":"Jackson Audio",
+        "Name":"Bloom v2",
+        "Width":2.652,
+        "Height":4.875,
+        "Image":"jackson-bloom-v2.png"
+    },
+    {
+        "Brand":"Jackson Audio",
         "Name":"Golden Boy",
         "Width":2.652,
         "Height":4.875,
@@ -4835,6 +4842,13 @@
         "Width":2.652,
         "Height":4.875,
         "Image":"jackson-brokenarrow-black.png"
+    },
+    {
+        "Brand":"Jackson Audio",
+        "Name":"El Guapo",
+        "Width":2.652,
+        "Height":4.875,
+        "Image":"jackson-el-guapo.png"
     },
     {
         "Brand":"Jackson Audio",
@@ -4863,6 +4877,13 @@
         "Width":2.5,
         "Height":4.875,
         "Image":"jackson-prism-purple.png"
+    },
+    {
+        "Brand":"Jackson Audio",
+        "Name":"Prism Blue",
+        "Width":2.5,
+        "Height":4.875,
+        "Image":"jackson-prism-blue.png"
     },
     {
         "Brand":"JangleBox",
