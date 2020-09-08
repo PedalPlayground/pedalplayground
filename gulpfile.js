@@ -106,8 +106,8 @@ gulp.task('process-images', function() {
 			'*.*': {
 				withoutEnlargement: false,
                 errorOnUnusedConfig: false,
-				width: '500',
-				height: '500',
+				width: '700',
+				height: '700',
 				max: true
 			}
 		}))
