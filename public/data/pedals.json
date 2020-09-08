@@ -4950,6 +4950,27 @@
     },
     {
         "Brand":"Joyo",
+        "Name":"Gate of Kahn",
+        "Width":1.72,
+        "Height":2.83,
+        "Image":"joyo-gate-of-kahn.png"
+    },
+    {
+        "Brand":"Joyo",
+        "Name":"Pipe Bomb",
+        "Width":1.72,
+        "Height":2.83,
+        "Image":"joyo-pipe-bomb.png"
+    },
+    {
+        "Brand":"Joyo",
+        "Name":"Space Verb",
+        "Width":1.72,
+        "Height":2.83,
+        "Image":"joyo-space-verb.png"
+    },
+    {
+        "Brand":"Joyo",
         "Name":"Vintage Overdrive",
         "Width":2,
         "Height":4,
@@ -5521,6 +5542,13 @@
         "Width":1.77,
         "Height":3.58,
         "Image":"malekko-spring.png"
+    },
+    {
+        "Brand":"Mastro Valvola",
+        "Name":"LEM",
+        "Width":3.55,
+        "Height":4.35,
+        "Image":"mastro-valvola-lem"
     },
     {
         "Brand":"MI Audio",
