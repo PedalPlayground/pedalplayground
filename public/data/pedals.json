@@ -1208,14 +1208,14 @@
         "Name":"VE-8 Acoustic Singer",
         "Width":8.5625,
         "Height":6.375,
-        "Image":"Boss-VE-8.jpg"
+        "Image":"boss-ve-8.png"
     },
     {
         "Brand":"Boss",
         "Name":"VE-500 Vocal Performer",
 	"Width":6.75,
         "Height":5.4375,
-        "Image":"Boss-VE-500.jpg"
+        "Image":"boss-ve-500.png"
     },
     {
         "Brand":"Barber",
@@ -2609,6 +2609,13 @@
         "Width":1.5,
         "Height":2.9,
         "Image":"donner-ripple.png"
+    },
+    {
+        "Brand":"Donner",
+        "Name":"AB/Y",
+        "Width":1.5,
+        "Height":2.9,
+        "Image":"donner-aby.png"
     },
     {
         "Brand":"Dr Scientist",
@@ -4824,6 +4831,13 @@
     },
     {
         "Brand":"Jackson Audio",
+        "Name":"Bloom v2",
+        "Width":2.652,
+        "Height":4.875,
+        "Image":"jackson-bloom-v2.png"
+    },
+    {
+        "Brand":"Jackson Audio",
         "Name":"Golden Boy",
         "Width":2.652,
         "Height":4.875,
@@ -4842,6 +4856,13 @@
         "Width":2.652,
         "Height":4.875,
         "Image":"jackson-brokenarrow-black.png"
+    },
+    {
+        "Brand":"Jackson Audio",
+        "Name":"El Guapo",
+        "Width":2.652,
+        "Height":4.875,
+        "Image":"jackson-el-guapo.png"
     },
     {
         "Brand":"Jackson Audio",
@@ -4870,6 +4891,13 @@
         "Width":2.5,
         "Height":4.875,
         "Image":"jackson-prism-purple.png"
+    },
+    {
+        "Brand":"Jackson Audio",
+        "Name":"Prism Blue",
+        "Width":2.5,
+        "Height":4.875,
+        "Image":"jackson-prism-blue.png"
     },
     {
         "Brand":"JangleBox",
@@ -4933,6 +4961,27 @@
         "Width":1.72,
         "Height":2.83,
         "Image":"joyo-woodensound.png"
+    },
+    {
+        "Brand":"Joyo",
+        "Name":"Gate of Kahn",
+        "Width":1.72,
+        "Height":2.83,
+        "Image":"joyo-gate-of-kahn.png"
+    },
+    {
+        "Brand":"Joyo",
+        "Name":"Pipe Bomb",
+        "Width":1.72,
+        "Height":2.83,
+        "Image":"joyo-pipe-bomb.png"
+    },
+    {
+        "Brand":"Joyo",
+        "Name":"Space Verb",
+        "Width":1.72,
+        "Height":2.83,
+        "Image":"joyo-space-verb.png"
     },
     {
         "Brand":"Joyo",
@@ -5507,6 +5556,13 @@
         "Width":1.77,
         "Height":3.58,
         "Image":"malekko-spring.png"
+    },
+    {
+        "Brand":"Mastro Valvola",
+        "Name":"LEM",
+        "Width":3.55,
+        "Height":4.35,
+        "Image":"mastro-valvola-lem.png"
     },
     {
         "Brand":"MI Audio",
