@@ -3627,6 +3627,13 @@
     },
     {
         "Brand":"Eventide",
+        "Name":"Blackhole",
+        "Width":4,
+        "Height":4.25,
+        "Image":"eventide-blackhole.png"
+    },
+    {
+        "Brand":"Eventide",
         "Name":"TimeFactor",
         "Width":7.5,
         "Height":4.8,
