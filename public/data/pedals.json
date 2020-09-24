@@ -6665,6 +6665,13 @@
     },
     {
         "Brand":"Morningstar",
+        "Name":"MC3",
+        "Width":4.80,
+        "Height":2.83,
+        "Image":"morningstar-mc3.png"
+    },
+    {
+        "Brand":"Morningstar",
         "Name":"ML5",
         "Width":6.3,
         "Height":2.36,
@@ -9202,6 +9209,13 @@
         "Width":2.6,
         "Height":4.93,
         "Image":"walrus-julia2.png"
+    },
+    {
+        "Brand":"Walrus",
+        "Name":"Julianna",
+        "Width":2.85,
+        "Height":4.87,
+        "Image":"walrusaudio-julianna.png"
     },
     {
         "Brand":"Walrus",
