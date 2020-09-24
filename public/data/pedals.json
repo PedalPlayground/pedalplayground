@@ -1009,6 +1009,13 @@
     },
     {
         "Brand":"BOSS",
+        "Name":"OC-5 Octave",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-oc5.png"
+    },
+    {
+        "Brand":"BOSS",
         "Name":"OD-1 Overdrive",
         "Width":2.875,
         "Height":5.125,
