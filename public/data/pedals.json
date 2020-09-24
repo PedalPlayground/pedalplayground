@@ -21,6 +21,13 @@
         "Image":"xotic-sl-red.png"
     },
     {
+        "Brand":"Boomerang",
+        "Name":"III Phrase Sampler",
+        "Width":9.45,
+        "Height":5.9,
+        "Image":"boomerang-III-phrase-sampler.png"
+    },
+    {
         "Brand":"Thorpy",
         "Name":"The Dane",
         "Width":3.94,
@@ -313,6 +320,13 @@
         "Width":10.3,
         "Height":4.6,
         "Image":"amt-gr4.png"
+    },
+    {
+        "Brand":"AMT",
+        "Name":"F-Clean",
+        "Width":2.17,
+        "Height":3.74,
+        "Image":"amt-f-clean.png"
     },
     {
         "Brand":"1981 Inventions",
@@ -1006,6 +1020,13 @@
         "Width":2.875,
         "Height":5.125,
         "Image":"boss-oc2.png"
+    },
+    {
+        "Brand":"BOSS",
+        "Name":"OC-5 Octave",
+        "Width":2.875,
+        "Height":5.125,
+        "Image":"boss-oc5.png"
     },
     {
         "Brand":"BOSS",
@@ -3101,6 +3122,13 @@
         "Image":"ehx-22500.png"
     },
     {
+        "Brand":"Electro Harmonix",
+        "Name":"Tri Parallel Mixer",
+        "Width":5.75,
+        "Height":4.765,
+        "Image":"ehx-tri-parallel-mixer.png"
+    },
+    {
         "Brand":"Pedaltrain",
         "Name":"SST Space Saving Tuner",
         "Width":0.875,
@@ -4295,7 +4323,7 @@
         "Name":"Micro HX",
         "Width":3.64,
         "Height":1.52,
-        "Image":"hotone-binarymod.png"
+        "Image":"jet-micro.png"
     },
     {
         "Brand":"Hotone",
@@ -4303,6 +4331,20 @@
         "Width":4.76378,
         "Height":2.83465,
         "Image":"hotone-binarymod.png"
+    },
+    {
+        "Brand":"Hotone",
+        "Name":"Binary Amp",
+        "Width":4.76378,
+        "Height":2.83465,
+        "Image":"hotone-binary-amp.png"
+    },
+    {
+        "Brand":"Hotone",
+        "Name":"Binary IR Cab",
+        "Width":4.76378,
+        "Height":2.83465,
+        "Image":"hotone-binary-ir-cab.png"
     },
     {
         "Brand":"Hotone",
@@ -4317,6 +4359,13 @@
         "Width":2.48,
         "Height":4.45,
         "Image":"hotone-xtomp-mini.png"
+    },
+    {
+        "Brand":"Hotone",
+        "Name":"Wally+ Looper",
+        "Width":1.73,
+        "Height":2.91,
+        "Image":"hotone_wally_plus.png"
     },
     {
         "Brand":"Hughes & Kettner",
@@ -6543,6 +6592,13 @@
         "Width":1.65,
         "Height":3.7,
         "Image":"mooer-recho.png"
+    },
+    {
+        "Brand":"Mooer",
+        "Name":"Radar",
+        "Width":1.65,
+        "Height":3.7,
+        "Image":"mooer-radar.png"
     },
     {
         "Brand":"Mooer",
