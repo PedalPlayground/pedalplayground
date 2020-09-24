@@ -7981,6 +7981,13 @@
     },
     {
         "Brand":"Strymon",
+        "Name":"Nightsky",
+        "Width":7,
+        "Height":4.5,
+        "Image":"strymon-nightsky.png"
+    },
+    {
+        "Brand":"Strymon",
         "Name":"Brigadier",
         "Width":4,
         "Height":4.5,
