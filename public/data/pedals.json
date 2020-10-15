@@ -1680,6 +1680,13 @@
         "Image":"boss-gt1000.png"
     },
     {
+        "Brand":"BOSS",
+        "Name":"GT-1000CORE",
+        "Width":6.8125,
+        "Height":5.375,
+        "Image":"boss-gt-1000-core.png"
+    },
+    {
         "Brand":"Bright Onion",
         "Name":"12 Switcher",
         "Width":26.378,
