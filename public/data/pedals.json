@@ -2520,6 +2520,13 @@
         "Image":"digitech-whammy.png"
     },
     {
+        "Brand":"DigiTech",
+        "Name":"FS3X",
+        "Width":6,
+        "Height":3,
+        "Image":"digitech-fs3x.png"
+    },
+    {
         "Brand":"Disaster Area",
         "Name":"DMC-2",
         "Width":3.6,
