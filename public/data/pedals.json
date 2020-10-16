@@ -9254,6 +9254,13 @@
     },
     {
         "Brand":"Walrus",
+        "Name":"Ages",
+        "Width":2.6,
+        "Height":4.93,
+        "Image":"walrus-ages.png"
+    },
+    {
+        "Brand":"Walrus",
         "Name":"Deep Six V3 LE",
         "Width":2.6,
         "Height":4.93,
