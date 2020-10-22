@@ -6874,11 +6874,11 @@
         "Image":"neunaber-wet.png"
     },
     {
-	"Brand":"Neural DSP",
-	"Name":"Quad Cortex",
-	"Width":11.42,
-	"Height":7.48,
-	"Image":"neuraldsp-quadcortex.png"
+        "Brand":"Neural DSP",
+        "Name":"Quad Cortex",
+        "Width":11.42,
+        "Height":7.48,
+        "Image":"neuraldsp-quadcortex.png"
     },
     {
         "Brand":"Old Blood Noise Endeavors",
@@ -6907,6 +6907,13 @@
         "Width":2.65,
         "Height":4.8,
         "Image":"oldbloodnoise-darkstar.png"
+    },
+    {
+        "Brand":"Old Blood Noise Endeavors",
+        "Name":"Flat Light",
+        "Width":2.65,
+        "Height":4.8,
+        "Image":"oldblood-flatlight.png"
     },
     {
         "Brand":"Old Blood Noise Endeavors",
