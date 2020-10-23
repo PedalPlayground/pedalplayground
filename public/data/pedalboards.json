@@ -139,6 +139,125 @@
         "Height":12.3,
         "Image":"mono-small-pedalboard.png"
     },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Long Slant 16",
+        "Width":16.0,
+        "Height":12.0,
+        "Image":"morton-longslant16.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Long Slant 8",
+        "Width":8.0,
+        "Height":12.0,
+        "Image":"morton-longslant8.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Long Slant 4",
+        "Width":4.0,
+        "Height":12.0,
+        "Image":"morton-longslant4.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Long Flat 8",
+        "Width":8.0,
+        "Height":12.0,
+        "Image":"morton-longflat8.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Long Flat 4",
+        "Width":4.0,
+        "Height":12.0,
+        "Image":"morton-longflat4.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Front Slant 16",
+        "Width":16.0,
+        "Height":6.0,
+        "Image":"morton-frontslant16.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Front Slant 8",
+        "Width":8.0,
+        "Height":6.0,
+        "Image":"morton-frontslant8.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Front Flat 16",
+        "Width":16.0,
+        "Height":6.0,
+        "Image":"morton-frontflat16.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Front Flat 8",
+        "Width":8.0,
+        "Height":6.0,
+        "Image":"morton-frontflat8.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Rear Slant 16",
+        "Width":16.0,
+        "Height":6.0,
+        "Image":"morton-rearslant16.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Rear Slant 8",
+        "Width":8.0,
+        "Height":6.0,
+        "Image":"morton-rearslant8.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Rear Flat 16",
+        "Width":16.0,
+        "Height":6.0,
+        "Image":"morton-rearflat16.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Rear Flat 8",
+        "Width":8.0,
+        "Height":6.0,
+        "Image":"morton-rearflat8.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Side Tray 8",
+        "Width":8.6,
+        "Height":12.0,
+        "Image":"morton-sidetray8.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Side Tray 4",
+        "Width":4.6,
+        "Height":12.0,
+        "Image":"morton-sidetray4.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Front Tray 16",
+        "Width":16.0,
+        "Height":5.0,
+        "Image":"morton-fronttray16.png"
+    },
+    {
+        "Brand":"Morton Pedalboards",
+        "Name":"Front Tray 20",
+        "Width":20.0,
+        "Height":7.0,
+        "Image":"morton-fronttray20.png"
+    },
 	{
         "Brand":"Muzbay",
         "Name":"Meridian 40",
