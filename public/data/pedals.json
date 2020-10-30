@@ -1989,10 +1989,17 @@
     },
     {
         "Brand":"Chase Bliss",
-        "Name":"Automatone Preamp MKII",
+        "Name":"Preamp MKII",
         "Width":5.75,
         "Height":6.5,
         "Image":"chasebliss-automatone-pre.png"
+    },
+    {
+        "Brand":"Chase Bliss",
+        "Name":"CXM 1978",
+        "Width":5.75,
+        "Height":6.5,
+        "Image":"chasebliss-cxm1978.png"
     },
     {
         "Brand":"Chase Bliss",
