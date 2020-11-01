@@ -25,14 +25,14 @@
         "Name":"Outward",
 		"Width":3.7,
         "Height":4.85,
-        "Image":"cooper-arcades.png"
+        "Image":"cooper-outward.png"
     },
     {
         "Brand":"Cooper",
         "Name":"Generation Loss",
 		"Width":3.7,
         "Height":4.85,
-        "Image":"cooper-arcades.png"
+        "Image":"cooper-genloss.png"
     },
     {
         "Brand":"RadioShack",
