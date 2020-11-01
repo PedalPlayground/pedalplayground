@@ -7091,6 +7091,41 @@
         "Image":"origin-cali76l.png"
     },
     {
+        "Brand":"Pladask",
+        "Name":"Matrise",
+        "Width":5.75,
+        "Height":4.765,
+        "Image":"pladask-matrise.png"
+    },
+    {
+        "Brand":"Pladask",
+        "Name":"Draume",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"pladask-draume.png"
+    },
+    {
+        "Brand":"Pladask",
+        "Name":"Fabrikat",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"pladask-draume.png"
+    },
+    {
+        "Brand":"Pladask",
+        "Name":"Romferd",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"pladask-romferd.png"
+    },
+    {
+        "Brand":"Pladask",
+        "Name":"Taken",
+        "Width":3.9,
+        "Height":4.65,
+        "Image":"pladask-romferd.png"
+    },
+    {
         "Brand":"Paul C",
         "Name":"Tim",
         "Width":4.6,
