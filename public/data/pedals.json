@@ -549,7 +549,7 @@
         "Brand":"Analog.Man",
         "Name":"King of Tone",
         "Width":4.7,
-        "Height":3.95,
+        "Height":3.914,
         "Image":"analogman-kingoftone.png"
     },
     {
@@ -7096,6 +7096,13 @@
         "Width":5.75,
         "Height":4.765,
         "Image":"pladask-matrise.png"
+    },
+    {
+        "Brand":"Pladask",
+        "Name":"Bakfram",
+        "Width":2.6,
+        "Height":5.035,
+        "Image":"pladask-bakfram.png"
     },
     {
         "Brand":"Pladask",
