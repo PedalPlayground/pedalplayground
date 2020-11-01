@@ -7109,7 +7109,7 @@
         "Name":"Fabrikat",
         "Width":3.7,
         "Height":4.85,
-        "Image":"pladask-draume.png"
+        "Image":"pladask-fabrikat.png"
     },
     {
         "Brand":"Pladask",
@@ -7123,7 +7123,7 @@
         "Name":"Taken",
         "Width":3.85,
         "Height":4.7,
-        "Image":"pladask-romferd.png"
+        "Image":"pladask-taken.png"
     },
     {
         "Brand":"Paul C",
