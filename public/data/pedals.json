@@ -1819,6 +1819,13 @@
         "Height":4.7,
         "Image":"caroline-haymaker.png"
     },
+	{
+        "Brand":"Caroline",
+        "Name":"Somersault",
+        "Width":3.7,
+        "Height":4.7,
+        "Image":"caroline-somersault.png"
+    },
     {
         "Brand":"Caroline",
         "Name":"Icarus",
@@ -3159,8 +3166,8 @@
     {
         "Brand":"Electro Harmonix",
         "Name":"Tri Parallel Mixer",
-        "Width":5.75,
-        "Height":4.765,
+        "Width":5.9,
+        "Height":4.85,
         "Image":"ehx-tpm.png"
     },
     {
