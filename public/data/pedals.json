@@ -1816,8 +1816,15 @@
         "Brand":"Caroline",
         "Name":"Haymaker",
         "Width":3.7,
-        "Height":4.7,
+        "Height":4.875,
         "Image":"caroline-haymaker.png"
+    },
+	{
+        "Brand":"Caroline",
+        "Name":"Somersault",
+        "Width":3.7,
+        "Height":4.875,
+        "Image":"caroline-somersault.png"
     },
     {
         "Brand":"Caroline",
@@ -1830,28 +1837,28 @@
         "Brand":"Caroline",
         "Name":"Kilobyte",
         "Width":3.7,
-        "Height":4.7,
+        "Height":4.875,
         "Image":"caroline-kilobyte.png"
     },
     {
         "Brand":"Caroline",
         "Name":"Meteore",
         "Width":3.7,
-        "Height":4.7,
+        "Height":4.875,
         "Image":"caroline-meteore.png"
     },
     {
         "Brand":"Caroline",
         "Name":"Shigeharu",
         "Width":3.7,
-        "Height":4.7,
+        "Height":4.875,
         "Image":"caroline-shigeharu.png"
     },
     {
         "Brand":"Caroline",
         "Name":"Wave Cannon",
         "Width":3.7,
-        "Height":4.7,
+        "Height":4.875,
         "Image":"caroline-wavecannon.png"
     },
     {
@@ -3159,9 +3166,9 @@
     {
         "Brand":"Electro Harmonix",
         "Name":"Tri Parallel Mixer",
-        "Width":5.75,
-        "Height":4.765,
-        "Image":"ehx-tri-parallel-mixer.png"
+        "Width":5.9,
+        "Height":4.85,
+        "Image":"ehx-tpm.png"
     },
     {
         "Brand":"Pedaltrain",
