@@ -10249,5 +10249,11 @@
         "Width": 4.5,
         "Height": 3.8,
         "Image": "wampler-terraform.png"
+    }, {
+        "Brand": "Valeton",
+        "Name": "FP-10 FET Preamp",
+        "Width": 1.89,
+        "Height": 3.7,
+        "Image": "valeton_fp_10.png"
     }
 ]
