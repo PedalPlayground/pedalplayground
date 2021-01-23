@@ -5145,6 +5145,13 @@
     },
     {
         "Brand": "Keeley",
+        "Name": "Eccos",
+        "Width": 2.85,
+        "Height": 4.77,
+        "Image": "keeley-eccos.png"
+    },
+    {
+        "Brand": "Keeley",
         "Name": "Katana",
         "Width": 3.175,
         "Height": 4.39,
