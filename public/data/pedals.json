@@ -9379,10 +9379,24 @@
     },
     {
         "Brand": "Walrus",
-        "Name": "Mako Series - D1 Stereo Delay",
+        "Name": "MAKO Series: D1 Stereo Delay",
         "Width": 2.85,
         "Height": 4.87,
         "Image": "walrus-mako-d1.png"
+    },
+    {
+        "Brand": "Walrus",
+        "Name": "MAKO Series: R1 High-Fidelity Stereo Reverb",
+        "Width": 2.85,
+        "Height": 4.87,
+        "Image": "walrus-r1.png"
+    },
+    {
+        "Brand": "Walrus",
+        "Name": "MAKO Series: ACS1 Amp + Cab Simulator",
+        "Width": 2.85,
+        "Height": 4.87,
+        "Image": "walrus-acs1.png"
     },
     {
         "Brand": "Walrus",
@@ -9418,6 +9432,13 @@
         "Width": 2.6,
         "Height": 4.93,
         "Image": "walrus-deepsixv3.png"
+    },
+    {
+        "Brand": "Walrus",
+        "Name": "Emissary Parallel Boost",
+        "Width": 2.6,
+        "Height": 4.93,
+        "Image": "walrus-emissary.png"
     },
     {
         "Brand": "Walrus",
