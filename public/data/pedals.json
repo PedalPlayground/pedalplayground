@@ -10262,5 +10262,23 @@
         "Width": 1.89,
         "Height": 3.7,
         "Image": "valeton_fp_10.png"
+    }, {
+        "Brand": "Universal Audio",
+        "Name": "Astra Modulation Machine",
+        "Width": 3.3,
+        "Height": 5.294,
+        "Image": "ua-astra.png"
+    }, {
+        "Brand": "Universal Audio",
+        "Name": "Golden Reverberator",
+        "Width": 3.3,
+        "Height": 5.294,
+        "Image": "ua-starlight.png"
+    }, {
+        "Brand": "Universal Audio",
+        "Name": "Starlight Echo Station",
+        "Width": 3.3,
+        "Height": 5.294,
+        "Image": "ua-starlight.png"
     }
 ]
