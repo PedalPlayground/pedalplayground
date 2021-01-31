@@ -9239,6 +9239,13 @@
     },
     {
         "Brand": "Vertex",
+        "Name": "Steel String Clean Drive MKII",
+        "Width": 3.2,
+        "Height": 4.6,
+        "Image": "vertex-steelstring-mk2.png"
+    },
+    {
+        "Brand": "Vertex",
         "Name": "Tone Secret",
         "Width": 3.2,
         "Height": 4.6,
