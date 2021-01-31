@@ -3213,6 +3213,13 @@
     },
     {
         "Brand": "Electro Harmonix",
+        "Name": "Tone Corset",
+        "Width": 2.75,
+        "Height": 4.5,
+        "Image": "ehx-tone-corset.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
         "Name": "Bass Mono Synth",
         "Width": 3.95,
         "Height": 4.7,
