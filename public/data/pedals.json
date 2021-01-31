@@ -4535,6 +4535,13 @@
         "Image": "ibanez-tubescreamermini.png"
     },
     {
+        "Brand": "ISP Technologies",
+        "Name": "DECI-MATE",
+        "Width": 1.5,
+        "Height": 3.7,
+        "Image": "isp-deci-mate.png"
+    },
+    {
         "Brand": "J. Rockett",
         "Name": "45",
         "Width": 2.3,
