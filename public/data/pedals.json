@@ -3292,6 +3292,13 @@
     },
     {
         "Brand": "Electro Harmonix",
+        "Name": "Octavix",
+        "Width": 2.75,
+        "Height": 4.3,
+        "Image": "ehx-octavix.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
         "Name": "Grand Canyon",
         "Width": 4.75,
         "Height": 4,
