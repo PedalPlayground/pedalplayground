@@ -3285,6 +3285,13 @@
     },
     {
         "Brand": "Electro Harmonix",
+        "Name": "Mod 11 Modulator",
+        "Width": 2.75,
+        "Height": 4.3,
+        "Image": "ehx-mod11.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
         "Name": "Grand Canyon",
         "Width": 4.75,
         "Height": 4,
