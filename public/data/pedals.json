@@ -3753,6 +3753,13 @@
         "Image": "eventide-timefactor.png"
     },
     {
+        "Brand": "Eventide",
+        "Name": "PitchFactor",
+        "Width": 7.5,
+        "Height": 4.8,
+        "Image": "eventide-pitchfactor.png"
+    },
+    {
         "Brand": "Fairfield Circuitry",
         "Name": "Four Eyes",
         "Width": 3.88,
