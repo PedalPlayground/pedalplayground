@@ -2221,6 +2221,13 @@
     },
     {
         "Brand": "Custom Tones",
+        "Name": "Ethos TWE-1",
+        "Width": 2.69,
+        "Height": 4.42,
+        "Image": "ethos-twe1.png"
+    },
+    {
+        "Brand": "Custom Tones",
         "Name": "Ethos Clean 2",
         "Width": 4.99,
         "Height": 3.75,
