@@ -1,10 +1,26 @@
-[{
+[
+    {
         "Brand": "Xotic",
         "Name": "SL Drive",
         "Width": 1.9,
         "Height": 3.5,
         "Image": "xotic-sl.png"
     },
+    {
+        "Brand": "Pirate Midi",
+        "Name": "Bridge4",
+        "Width": 4.409,
+        "Height": 3.7,
+        "Image": "piratemidi-bridge4.png"
+    },
+    {
+        "Brand": "Pirate Midi",
+        "Name": "Bridge6",
+        "Width": 6.3,
+        "Height": 3.7,
+        "Image": "piratemidi-bridge6.png"
+    },
+    
     {
         "Brand": "Cooper",
         "Name": "Moment Machine",
@@ -6050,7 +6066,7 @@
         "Brand": "Mammoth Electronics",
         "Name": "1590A",
         "Width": 1.52,
-        "Height": 3.64,
+        "Height": 3.67,
         "Image": "enclosure.png"
     },
     {
@@ -6997,6 +7013,13 @@
         "Width": 4.69,
         "Height": 3.66,
         "Image": "oldbloodnoise-rever.png"
+    },
+    {
+        "Brand": "Old Blood Noise Endeavors",
+        "Name": "Expression Slider",
+        "Width": 1.52,
+        "Height": 3.889,
+        "Image": "obne-slider.png"
     },
     {
         "Brand": "Old Blood Noise Endeavors",
