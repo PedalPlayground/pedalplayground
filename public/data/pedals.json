@@ -8653,6 +8653,13 @@
     },
     {
         "Brand": "TC Electronic",
+        "Name": "Flashback x4",
+        "Width": 9.25,
+        "Height": 5.70866,
+        "Image": "tc-flashbackx4.png"
+    },
+    {
+        "Brand": "TC Electronic",
         "Name": "BloodMoon",
         "Width": 2.9,
         "Height": 5.2,
