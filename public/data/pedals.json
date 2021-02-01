@@ -9430,6 +9430,13 @@
     },
     {
         "Brand": "Walrus",
+        "Name": "EB-10 Preamp/EQ/Boost",
+        "Width": 3.84,
+        "Height": 4.6,
+        "Image": "walrus-eb10.png"
+    },
+    {
+        "Brand": "Walrus",
         "Name": "MAKO Series: D1 Stereo Delay",
         "Width": 2.85,
         "Height": 4.87,
