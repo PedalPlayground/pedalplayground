@@ -5035,6 +5035,13 @@
     },
     {
         "Brand": "Jackson Audio",
+        "Name": "Modular Fuzz",
+        "Width": 2.652,
+        "Height": 4.875,
+        "Image": "jackson-fuzz.png"
+    },
+    {
+        "Brand": "Jackson Audio",
         "Name": "Broken Arrow",
         "Width": 2.652,
         "Height": 4.875,
