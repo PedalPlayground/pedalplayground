@@ -3234,6 +3234,13 @@
     },
     {
         "Brand": "Electro Harmonix",
+        "Name": "Operation Overlord",
+        "Width": 4.13,
+        "Height": 4.75,
+        "Image": "ehx-operation-overlord.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
         "Name": "Bass Mono Synth",
         "Width": 3.95,
         "Height": 4.7,
