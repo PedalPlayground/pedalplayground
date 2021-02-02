@@ -3215,6 +3215,13 @@
     },
     {
         "Brand": "Electro Harmonix",
+        "Name": "1440 Stereo Looper",
+        "Width": 4.13,
+        "Height": 4.75,
+        "Image": "ehx-1440.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
         "Name": "Big Muff Pi",
         "Width": 3.95,
         "Height": 4.7,
@@ -3233,6 +3240,34 @@
         "Width": 3.95,
         "Height": 4.7,
         "Image": "ehx-stereomistress.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
+        "Name": "Tone Corset",
+        "Width": 2.75,
+        "Height": 4.5,
+        "Image": "ehx-tone-corset.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
+        "Name": "East River Drive",
+        "Width": 2.75,
+        "Height": 4.5,
+        "Image": "ehx-east-river-drive.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
+        "Name": "Operation Overlord",
+        "Width": 4.13,
+        "Height": 4.75,
+        "Image": "ehx-operation-overlord.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
+        "Name": "Nano Operation Overlord",
+        "Width": 2.75,
+        "Height": 4.5,
+        "Image": "ehx-nano-operation-overlord.png"
     },
     {
         "Brand": "Electro Harmonix",
@@ -4570,6 +4605,13 @@
         "Width": 2,
         "Height": 3.65,
         "Image": "ibanez-tubescreamermini.png"
+    },
+    {
+        "Brand": "ISP Technologies",
+        "Name": "DECI-MATE",
+        "Width": 1.5,
+        "Height": 3.7,
+        "Image": "isp-deci-mate.png"
     },
     {
         "Brand": "J. Rockett",
@@ -9287,6 +9329,13 @@
         "Width": 3.2,
         "Height": 4.6,
         "Image": "vertex-steelstring.png"
+    },
+    {
+        "Brand": "Vertex",
+        "Name": "Steel String Clean Drive MKII",
+        "Width": 3.2,
+        "Height": 4.6,
+        "Image": "vertex-steelstring-mk2.png"
     },
     {
         "Brand": "Vertex",
