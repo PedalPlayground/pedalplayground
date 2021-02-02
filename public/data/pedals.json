@@ -3192,6 +3192,13 @@
     },
     {
         "Brand": "Electro Harmonix",
+        "Name": "1440 Stereo Looper",
+        "Width": 4.13,
+        "Height": 4.75,
+        "Image": "ehx-1440.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
         "Name": "Big Muff Pi",
         "Width": 3.95,
         "Height": 4.7,
