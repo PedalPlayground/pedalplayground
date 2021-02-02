@@ -3227,6 +3227,13 @@
     },
     {
         "Brand": "Electro Harmonix",
+        "Name": "East River Drive",
+        "Width": 2.75,
+        "Height": 4.5,
+        "Image": "ehx-east-river-drive.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
         "Name": "Bass Mono Synth",
         "Width": 3.95,
         "Height": 4.7,
