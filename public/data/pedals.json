@@ -3245,14 +3245,14 @@
         "Brand": "Electro Harmonix",
         "Name": "Tone Corset",
         "Width": 2.75,
-        "Height": 4.5,
+        "Height": 4.4,
         "Image": "ehx-tone-corset.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "East River Drive",
         "Width": 2.75,
-        "Height": 4.5,
+        "Height": 4.4,
         "Image": "ehx-east-river-drive.png"
     },
     {
@@ -3266,7 +3266,7 @@
         "Brand": "Electro Harmonix",
         "Name": "Nano Operation Overlord",
         "Width": 2.75,
-        "Height": 4.5,
+        "Height": 4.4,
         "Image": "ehx-nano-operation-overlord.png"
     },
     {
@@ -3315,7 +3315,7 @@
         "Brand": "Electro Harmonix",
         "Name": "Canyon",
         "Width": 2.7,
-        "Height": 4.3,
+        "Height": 4.4,
         "Image": "ehx-canyon.png"
     },
     {
@@ -3329,7 +3329,7 @@
         "Brand": "Electro Harmonix",
         "Name": "Octavix",
         "Width": 2.75,
-        "Height": 4.3,
+        "Height": 4.4,
         "Image": "ehx-octavix.png"
     },
     {
@@ -3364,7 +3364,7 @@
         "Brand": "Electro Harmonix",
         "Name": "Freeze",
         "Width": 2.5,
-        "Height": 4.3,
+        "Height": 4.4,
         "Image": "ehx-freeze.png"
     },
     {
@@ -3385,7 +3385,7 @@
         "Brand": "Electro Harmonix",
         "Name": "Memory Toy",
         "Width": 2.5,
-        "Height": 4.3,
+        "Height": 4.4,
         "Image": "ehx-memorytoy.png"
     },
     {
@@ -3413,7 +3413,7 @@
         "Brand": "Electro Harmonix",
         "Name": "Pitch Fork",
         "Width": 2.75,
-        "Height": 4.5,
+        "Height": 4.4,
         "Image": "ehx-pitchfork.png"
     },
     {
@@ -3441,7 +3441,7 @@
         "Brand": "Electro Harmonix",
         "Name": "Soul Food",
         "Width": 2.75,
-        "Height": 4.5,
+        "Height": 4.4,
         "Image": "ehx-soulfood.png"
     },
     {
@@ -3469,21 +3469,21 @@
         "Brand": "Electro Harmonix",
         "Name": "Ocean 11",
         "Width": 2.75,
-        "Height": 4.5,
+        "Height": 4.4,
         "Image": "ehx-ocean11.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Green Russian Big Muff Pi",
         "Width": 2.75,
-        "Height": 4.5,
+        "Height": 4.4,
         "Image": "ehx-greenrussian.png"
     },
     {
         "Brand": "Electro Harmonix",
         "Name": "Op-amp Big Muff Pi",
         "Width": 2.75,
-        "Height": 4.5,
+        "Height": 4.4,
         "Image": "ehx-opamp.png"
     },
     {
@@ -4609,8 +4609,8 @@
     {
         "Brand": "ISP Technologies",
         "Name": "DECI-MATE",
-        "Width": 1.5,
-        "Height": 3.7,
+		"Width": 2.01,
+        "Height": 3.66,
         "Image": "isp-deci-mate.png"
     },
     {
