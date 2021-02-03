@@ -3,8 +3,10 @@
 ## Images
 
 * Find an image that is as close as possible to a perfect top-down angle.
+	* You can make it perfectly top-down/rectangular using GIMP perspective tool.
 * White background is preferred for best cutout quality, but if not available just cut them out best as possible
 * Isolate the pedal on a transparent background (do not cut off jacks or switches). In GIMP (2.10), open file, select magic wand tool and click background, Layer > Transparency > Add Alpha Channel, then Layer > Transparency > Color to Alpha, and finally Ok in the dialog prompt.
+You can also use https://onlinepngtools.com/create-transparent-png 
 * Crop the image to non-transparent pixels (in Photoshop Image > Trim > Transparent Pixels, in Gimp Image -> Crop to Content)
 * Save to two places with the following guidelines:
 	* `/app/images/pedals` - Save for Web as PNG-24, make width 800px or less (don't enlarge original image though)
