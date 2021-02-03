@@ -20,7 +20,7 @@
         "Height": 3.7,
         "Image": "piratemidi-bridge6.png"
     },
-    
+
     {
         "Brand": "Cooper",
         "Name": "Moment Machine",
@@ -5368,6 +5368,13 @@
         "Width": 2.58,
         "Height": 4.3,
         "Image": "keeley-holyfuzz.png"
+    },
+    {
+        "Brand": "Keeley",
+        "Name": "Hydra",
+        "Width": 2.85,
+        "Height": 4.77,
+        "Image": "keeley-hydra.png"
     },
     {
         "Brand": "Keeley",
