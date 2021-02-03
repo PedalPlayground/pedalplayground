@@ -2660,7 +2660,6 @@
         "Image": "disasterarea-dmc-micro.png"
     },
     {
-<<<<<<< HEAD
         "Brand":"DigiTech",
         "Name":"FS3X",
         "Width":6,
@@ -2673,13 +2672,13 @@
         "Width":3.6,
         "Height":1.5,
         "Image":"disasterarea-dmc2.png"
-=======
+	},
+	{
         "Brand": "Disaster Area",
         "Name": "Micro Clock",
         "Width": 1.65,
         "Height": 3.65,
         "Image": "disasterarea-microclock.png"
->>>>>>> 2f1a9aa07ccd0cb62c52e50f58ab2d4f9a8b3f56
     },
     {
         "Brand": "Disaster Area",
