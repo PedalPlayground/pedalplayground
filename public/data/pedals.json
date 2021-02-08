@@ -4229,6 +4229,20 @@
     },
     {
         "Brand": "GigRig",
+        "Name": "G3",
+        "Width": 17.33,
+        "Height": 5.12,
+        "Image": "gigrig-g3.png"
+    },
+	{
+        "Brand": "GigRig",
+        "Name": "G3 Atom",
+        "Width": 11.4173,
+        "Height": 5.12,
+        "Image": "gigrig-g3-atom.png"
+    },
+    {
+        "Brand": "GigRig",
         "Name": "QuarterMaster QMX8",
         "Width": 21.26,
         "Height": 2.28,
