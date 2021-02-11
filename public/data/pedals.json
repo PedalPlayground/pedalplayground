@@ -3424,6 +3424,13 @@
     },
     {
         "Brand": "Electro Harmonix",
+        "Name": "Nano Looper 360",
+        "Width": 2.75,
+        "Height": 4.5,
+        "Image": "ehx-360.png"
+    },
+    {
+        "Brand": "Electro Harmonix",
         "Name": "Nano Pog",
         "Width": 2.75,
         "Height": 4.4,
