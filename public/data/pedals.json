@@ -7309,6 +7309,20 @@
     },
     {
         "Brand": "Origin Effects",
+        "Name": "Magma57 Amp Vibrato & Drive",
+        "Width": 3.66,
+        "Height": 5.62,
+        "Image": "origineffects-magma57.png"
+    },
+    {
+        "Brand": "Origin Effects",
+        "Name": "RevivalTrem Bias Tremolo",
+        "Width": 3.66,
+        "Height": 5.62,
+        "Image": "origineffects-revivaltrem.png"
+    },
+    {
+        "Brand": "Origin Effects",
         "Name": "Cali76 Compact",
         "Width": 2.6,
         "Height": 5.59,
