@@ -618,8 +618,8 @@
     {
         "Brand": "Analog.Man",
         "Name": "Sunface",
-        "Width": 2.6,
-        "Height": 4.3,
+        "Width": 2.76,
+        "Height": 4.42,
         "Image": "analogman-sunface.png"
     },
     {
@@ -1332,260 +1332,260 @@
     {
         "Brand": "Basic Audio",
         "Name": "Alter Destiny",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.89,
+        "Height": 4.78,
         "Image": "basicaudio-alterdestiny.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Foxey Lady",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.8,
+        "Height": 4.78,
         "Image": "basicaudio-foxeylady.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Futureman",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.88,
+        "Height": 4.78,
         "Image": "basicaudio-futureman.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Fuzz Mutant",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.75,
+        "Height": 4.78,
         "Image": "basicaudio-fuzzmutant.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Fuzzmondo",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.91,
+        "Height": 4.78,
         "Image": "basicaudio-fuzzmondo.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Gnarly",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.86,
+        "Height": 4.78,
         "Image": "basicaudio-gnarly.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Lucky Number",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.84,
+        "Height": 4.78,
         "Image": "basicaudio-luckynumber.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Orpheum",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.6,
+        "Height": 4.78,
         "Image": "basicaudio-orpheum.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Pale Rider",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.8,
+        "Height": 4.78,
         "Image": "basicaudio-palerider.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Peak Freq",
-        "Width": 2.65,
+        "Width": 2.8,
         "Height": 4.8,
         "Image": "basicaudio-peakfreq.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Scarab Deluxe",
-        "Width": 2.63,
+        "Width": 2.8,
         "Height": 4.8,
         "Image": "basicaudio-scarabdeluxe.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Solar Myth",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.85,
+        "Height": 4.78,
         "Image": "basicaudio-solarmyth.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Spooky Tooth",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.76,
+        "Height": 4.78,
         "Image": "basicaudio-spookytooth.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Squarewave+",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.85,
+        "Height": 4.78,
         "Image": "basicaudio-squarewaveplus.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Throbby",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.78,
+        "Height": 4.78,
         "Image": "basicaudio-throbby.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Tri/Ram Muff",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.77,
+        "Height": 4.78,
         "Image": "basicaudio-triram.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Wildcat",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.84,
+        "Height": 4.78,
         "Image": "basicaudio-wildcat.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Zippy",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.81,
+        "Height": 4.78,
         "Image": "basicaudio-zippy.png"
     },
     {
         "Brand": "Basic Audio",
         "Name": "Zonk",
-        "Width": 2.65,
-        "Height": 4.8,
+        "Width": 2.81,
+        "Height": 4.78,
         "Image": "basicaudio-zonk.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": " Blue Berry BOD",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-blueberrybod.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Artic White Fuzz",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-articwhitefuzz.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Baby Pink Booster",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-babypinkbooster.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Burgundy BossHorn Fuzz",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-burgundybosshornfuzz.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Candy Apple Fuzz",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.6,
+        "Height": 4.4,
         "Image": "bearfootfx-candyapplefuzz.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Dyna Red Dist.",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-dynareddist.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Emerald Green Distortion",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-emeraldgreendistortion.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Emerald Green OD",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-emeraldgreenod.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Honey Bee OD",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-honeybeeod.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Little Red Trebler",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-littleredtrebler.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Mint Green Mini Vibe",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-mintgreenminivibe.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Model G",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.71,
+        "Height": 4.4,
         "Image": "bearfootfx-modelg.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Model Hs",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.62,
+        "Height": 4.4,
         "Image": "bearfootfx-modelhs.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Pale Green Compressor",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-palegreencompressor.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Pink Purple Fuzz",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfoot-pinkpurplefuzz.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Sea Blue EQ",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-seablueeq.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Silver Bee OD",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-silverbeeod.png"
     },
     {
         "Brand": "Bearfoot Fx",
         "Name": "Sparkling Yellow OD1",
-        "Width": 2.58,
-        "Height": 4.3,
+		"Width": 2.68,
+        "Height": 4.4,
         "Image": "bearfootfx-sparklingyellowod1.png"
     },
     {
@@ -6191,7 +6191,7 @@
         "Brand": "Mammoth Electronics",
         "Name": "125B",
         "Width": 2.6,
-        "Height": 4.77,
+        "Height": 4.78,
         "Image": "enclosure.png"
     },
     {
@@ -6211,8 +6211,8 @@
     {
         "Brand": "Mammoth Electronics",
         "Name": "1590B",
-        "Width": 2.34,
-        "Height": 4.4375,
+        "Width": 2.38,
+        "Height": 4.42,
         "Image": "enclosure.png"
     },
     {
@@ -7436,8 +7436,8 @@
     {
         "Brand": "Paul C",
         "Name": "Timmy",
-        "Width": 2.62,
-        "Height": 4.4375,
+        "Width": 2.65,
+        "Height": 4.54,
         "Image": "paulc-timmy.png"
     },
     {
