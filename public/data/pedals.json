@@ -8722,6 +8722,13 @@
     },
     {
         "Brand": "T-rex",
+        "Name": "Diva Drive",
+        "Width": 3,
+        "Height": 4.7,
+        "Image": "trex-diva.png"
+    },
+    {
+        "Brand": "T-rex",
         "Name": "Duck Tail",
         "Width": 3.9,
         "Height": 4.7,
