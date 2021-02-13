@@ -4096,6 +4096,13 @@
     },
     {
         "Brand": "Friedman",
+        "Name": "BE-OD deluxe",
+        "Width": 5.9,
+        "Height": 5,
+        "Image": "friedman-beod-deluxe.png"
+    },
+    {
+        "Brand": "Friedman",
         "Name": "Sir-Compre",
         "Width": 2.75,
         "Height": 4.625,
