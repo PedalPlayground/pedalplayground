@@ -6194,6 +6194,13 @@
         "Height": 4.3,
         "Image": "mxr-univibe.png"
     },
+	{
+        "Brand": "Gamechanger Audio",
+        "Name": "Plasma",
+        "Width": 3.8,
+        "Height": 5.8,
+        "Image": "gamechanger-plasma.png"
+    },
     {
         "Brand": "Mad Professor",
         "Name": "1 Overdrive",
