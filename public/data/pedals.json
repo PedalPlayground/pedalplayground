@@ -21,6 +21,13 @@
         "Image": "piratemidi-bridge6.png"
     },
     {
+        "Brand": "Cornerstone",
+        "Name": "Gladio",
+        "Width": 4.7,
+        "Height": 3.84,
+        "Image": "cornerstone-gladio.png"
+    },
+    {
         "Brand": "Cooper",
         "Name": "Moment Machine",
         "Width": 5.7,
@@ -598,7 +605,7 @@
         "Brand": "Analog.Man",
         "Name": "King of Tone",
         "Width": 4.7,
-        "Height": 3.914,
+        "Height": 4,
         "Image": "analogman-kingoftone.png"
     },
     {
@@ -632,8 +639,8 @@
     {
         "Brand": "Analog.Man",
         "Name": "Sunlion",
-        "Width": 4.8,
-        "Height": 3.7,
+        "Width": 4.7,
+        "Height": 3.97,
         "Image": "analogman-sunlion.png"
     },
     {
@@ -2771,6 +2778,20 @@
         "Height": 4.33,
         "Image": "drybell-vibemachine.png"
     },
+	{
+        "Brand": "Drybell",
+        "Name": "Unit67",
+        "Width": 2.64,
+        "Height": 4.33,
+        "Image": "drybell-unit67.png"
+    },
+	{
+        "Brand": "Drybell",
+        "Name": "The Engine",
+		"Width": 4.7,
+        "Height": 3.86,
+        "Image": "drybell-theengine.png"
+    },
     {
         "Brand": "Dunlop",
         "Name": "Crybaby",
@@ -3313,15 +3334,15 @@
     {
         "Brand": "Electro Harmonix",
         "Name": "Mono Synth",
-        "Width": 3.95,
+        "Width": 3.84,
         "Height": 4.7,
         "Image": "ehx-bassmonosynth.png"
     },
     {
         "Brand": "Electro Harmonix",
-        "Name": "Attach Decay",
-        "Width": 4.1,
-        "Height": 4.7,
+        "Name": "Attack Decay",
+        "Width": 4.2,
+        "Height": 4.71,
         "Image": "ehx-attackdecay.png"
     },
     {
@@ -3432,8 +3453,8 @@
     {
         "Brand": "Electro Harmonix",
         "Name": "Micro POG",
-        "Width": 3.86,
-        "Height": 4.6,
+        "Width": 3.96,
+        "Height": 4.7,
         "Image": "ehx-micropog.png"
     },
     {
@@ -3496,7 +3517,7 @@
         "Brand": "Electro Harmonix",
         "Name": "Super Ego",
         "Width": 3.82,
-        "Height": 4.6,
+        "Height": 4.7,
         "Image": "ehx-superego.png"
     },
     {
@@ -4896,21 +4917,14 @@
         "Brand": "JHS",
         "Name": "Double Barrel",
         "Width": 4.7,
-        "Height": 3.7,
+        "Height": 3.88,
         "Image": "jhs-doublebarrel.png"
     },
     {
         "Brand": "JHS",
-        "Name": "Double Barrel V4",
-        "Width": 4.5,
-        "Height": 3.8,
-        "Image": "jhs-doublebarrelv4.png"
-    },
-    {
-        "Brand": "JHS",
         "Name": "Emperor",
-        "Width": 4.69,
-        "Height": 3.66,
+        "Width": 4.85,
+        "Height": 3.9,
         "Image": "jhs-emperor.png"
     },
     {
@@ -4965,8 +4979,8 @@
     {
         "Brand": "JHS",
         "Name": "Panther Cub",
-        "Width": 4.69,
-        "Height": 3.66,
+        "Width": 4.99,
+        "Height": 3.88,
         "Image": "jhs-panthercub.png"
     },
     {
@@ -6232,8 +6246,8 @@
     {
         "Brand": "Mammoth Electronics",
         "Name": "1590BB",
-        "Width": 3.68,
-        "Height": 4.67,
+        "Width": 3.7,
+        "Height": 4.7,
         "Image": "enclosure.png"
     },
     {
@@ -10305,8 +10319,8 @@
     {
         "Brand": "Zoom",
         "Name": "MS-70CDR",
-        "Width": 3.051181,
-        "Height": 5.1299213,
+        "Width": 2.79,
+        "Height": 4.88,
         "Image": "zoom-ms70cdr.png"
     },
     {
