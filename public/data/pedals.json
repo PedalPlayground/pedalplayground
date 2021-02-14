@@ -5958,6 +5958,20 @@
     },
     {
         "Brand": "MXR",
+        "Name": "Carbon Copy Mini",
+        "Width": 1.5748,
+        "Height": 3.54,
+        "Image": "mxr-carboncopymini.png"
+    },
+	{
+        "Brand": "MXR",
+        "Name": "Clone Looper",
+        "Width": 4.4,
+        "Height": 2.46,
+        "Image": "mxr-clonelooper.png"
+    },
+    {
+        "Brand": "MXR",
         "Name": "CAE Buffer",
         "Width": 2.77,
         "Height": 3.073,
@@ -5976,6 +5990,13 @@
         "Width": 2.5,
         "Height": 4.3,
         "Image": "mxr-carboncopy.png"
+    },
+	{
+        "Brand": "MXR",
+        "Name": "Tremolo",
+        "Width": 2.65,
+        "Height": 4.4,
+        "Image": "mxr-tremolo.png"
     },
     {
         "Brand": "MXR",
@@ -8747,6 +8768,13 @@
         "Width": 4.66,
         "Height": 4.23,
         "Image": "sweetsound-mojovibe.png"
+    },
+    {
+        "Brand": "Swindler",
+        "Name": "Red Mountain",
+        "Width": 2.93,
+        "Height": 5.02,
+        "Image": "swindler-redmountain.png"
     },
     {
         "Brand": "T-rex",
