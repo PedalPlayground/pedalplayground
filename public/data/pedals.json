@@ -4677,8 +4677,15 @@
     },
     {
         "Brand": "ISP Technologies",
+        "Name": "Decimator G-string v2",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "isp-decimator-gstring-v2.png"
+    },
+    {
+        "Brand": "ISP Technologies",
         "Name": "DECI-MATE",
-		"Width": 2.01,
+        "Width": 2.01,
         "Height": 3.66,
         "Image": "isp-deci-mate.png"
     },
