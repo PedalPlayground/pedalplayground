@@ -2766,6 +2766,13 @@
     },
     {
         "Brand": "Dr Scientist",
+        "Name": "The Elements",
+        "Width": 2.75,
+        "Height": 5.1,
+        "Image": "dr-scientist-the-elements.png"
+    },
+    {
+        "Brand": "Dr Scientist",
         "Name": "The Tremolessence",
         "Width": 2.4,
         "Height": 4.8,
