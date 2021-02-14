@@ -21,6 +21,13 @@
         "Image": "piratemidi-bridge6.png"
     },
     {
+        "Brand": "CKK Electronic",
+        "Name": "Destruction Drive",
+        "Width": 2.36,
+        "Height": 4.41,
+        "Image": "ckk-electronic-destruction-drive.png"
+    },
+    {
         "Brand": "Cornerstone",
         "Name": "Gladio",
         "Width": 4.7,
@@ -2766,6 +2773,13 @@
     },
     {
         "Brand": "Dr Scientist",
+        "Name": "The Elements",
+        "Width": 2.75,
+        "Height": 5.1,
+        "Image": "dr-scientist-the-elements.png"
+    },
+    {
+        "Brand": "Dr Scientist",
         "Name": "The Tremolessence",
         "Width": 2.4,
         "Height": 4.8,
@@ -4698,8 +4712,15 @@
     },
     {
         "Brand": "ISP Technologies",
+        "Name": "Decimator G-string v2",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "isp-decimator-gstring-v2.png"
+    },
+    {
+        "Brand": "ISP Technologies",
         "Name": "DECI-MATE",
-		"Width": 2.01,
+        "Width": 2.01,
         "Height": 3.66,
         "Image": "isp-deci-mate.png"
     },
@@ -7985,6 +8006,13 @@
         "Width": 4.77,
         "Height": 2.62,
         "Image": "selah-scarlettelovev3.png"
+    },
+    {
+        "Brand": "Seymour Duncan",
+        "Name": "Palladium",
+        "Width": 5.6,
+        "Height": 4.7,
+        "Image": "seymour-duncan-palladium.png"
     },
     {
         "Brand": "Seymour Duncan",
