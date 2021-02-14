@@ -6210,6 +6210,13 @@
     },
     {
         "Brand": "Mad Professor",
+        "Name": "Twimble",
+		"Width": 4.7,
+        "Height": 3.8,
+        "Image": "madprof-twimble.png"
+    },
+    {
+        "Brand": "Mad Professor",
         "Name": "Amber Overdrive",
         "Width": 2.5,
         "Height": 4.3,
