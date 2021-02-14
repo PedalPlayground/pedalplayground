@@ -28,6 +28,13 @@
         "Image": "ckk-electronic-destruction-drive.png"
     },
     {
+        "Brand": "Cornerstone",
+        "Name": "Gladio",
+        "Width": 4.7,
+        "Height": 3.84,
+        "Image": "cornerstone-gladio.png"
+    },
+    {
         "Brand": "Cooper",
         "Name": "Moment Machine",
         "Width": 5.7,
@@ -605,7 +612,7 @@
         "Brand": "Analog.Man",
         "Name": "King of Tone",
         "Width": 4.7,
-        "Height": 3.914,
+        "Height": 4,
         "Image": "analogman-kingoftone.png"
     },
     {
@@ -639,8 +646,8 @@
     {
         "Brand": "Analog.Man",
         "Name": "Sunlion",
-        "Width": 4.8,
-        "Height": 3.7,
+        "Width": 4.7,
+        "Height": 3.97,
         "Image": "analogman-sunlion.png"
     },
     {
@@ -2766,6 +2773,13 @@
     },
     {
         "Brand": "Dr Scientist",
+        "Name": "The Elements",
+        "Width": 2.75,
+        "Height": 5.1,
+        "Image": "dr-scientist-the-elements.png"
+    },
+    {
+        "Brand": "Dr Scientist",
         "Name": "The Tremolessence",
         "Width": 2.4,
         "Height": 4.8,
@@ -2777,6 +2791,20 @@
         "Width": 2.64,
         "Height": 4.33,
         "Image": "drybell-vibemachine.png"
+    },
+	{
+        "Brand": "Drybell",
+        "Name": "Unit67",
+        "Width": 2.64,
+        "Height": 4.33,
+        "Image": "drybell-unit67.png"
+    },
+	{
+        "Brand": "Drybell",
+        "Name": "The Engine",
+		"Width": 4.7,
+        "Height": 3.86,
+        "Image": "drybell-theengine.png"
     },
     {
         "Brand": "Dunlop",
@@ -3320,15 +3348,15 @@
     {
         "Brand": "Electro Harmonix",
         "Name": "Mono Synth",
-        "Width": 3.95,
+        "Width": 3.84,
         "Height": 4.7,
         "Image": "ehx-bassmonosynth.png"
     },
     {
         "Brand": "Electro Harmonix",
-        "Name": "Attach Decay",
-        "Width": 4.1,
-        "Height": 4.7,
+        "Name": "Attack Decay",
+        "Width": 4.2,
+        "Height": 4.71,
         "Image": "ehx-attackdecay.png"
     },
     {
@@ -3439,8 +3467,8 @@
     {
         "Brand": "Electro Harmonix",
         "Name": "Micro POG",
-        "Width": 3.86,
-        "Height": 4.6,
+        "Width": 3.96,
+        "Height": 4.7,
         "Image": "ehx-micropog.png"
     },
     {
@@ -3503,7 +3531,7 @@
         "Brand": "Electro Harmonix",
         "Name": "Super Ego",
         "Width": 3.82,
-        "Height": 4.6,
+        "Height": 4.7,
         "Image": "ehx-superego.png"
     },
     {
@@ -4684,8 +4712,15 @@
     },
     {
         "Brand": "ISP Technologies",
+        "Name": "Decimator G-string v2",
+        "Width": 2.9,
+        "Height": 5.2,
+        "Image": "isp-decimator-gstring-v2.png"
+    },
+    {
+        "Brand": "ISP Technologies",
         "Name": "DECI-MATE",
-		"Width": 2.01,
+        "Width": 2.01,
         "Height": 3.66,
         "Image": "isp-deci-mate.png"
     },
@@ -4903,21 +4938,14 @@
         "Brand": "JHS",
         "Name": "Double Barrel",
         "Width": 4.7,
-        "Height": 3.7,
+        "Height": 3.88,
         "Image": "jhs-doublebarrel.png"
     },
     {
         "Brand": "JHS",
-        "Name": "Double Barrel V4",
-        "Width": 4.5,
-        "Height": 3.8,
-        "Image": "jhs-doublebarrelv4.png"
-    },
-    {
-        "Brand": "JHS",
         "Name": "Emperor",
-        "Width": 4.69,
-        "Height": 3.66,
+        "Width": 4.85,
+        "Height": 3.9,
         "Image": "jhs-emperor.png"
     },
     {
@@ -4972,8 +5000,8 @@
     {
         "Brand": "JHS",
         "Name": "Panther Cub",
-        "Width": 4.69,
-        "Height": 3.66,
+        "Width": 4.99,
+        "Height": 3.88,
         "Image": "jhs-panthercub.png"
     },
     {
@@ -5951,6 +5979,20 @@
     },
     {
         "Brand": "MXR",
+        "Name": "Carbon Copy Mini",
+        "Width": 1.5748,
+        "Height": 3.54,
+        "Image": "mxr-carboncopymini.png"
+    },
+	{
+        "Brand": "MXR",
+        "Name": "Clone Looper",
+        "Width": 4.4,
+        "Height": 2.46,
+        "Image": "mxr-clonelooper.png"
+    },
+    {
+        "Brand": "MXR",
         "Name": "CAE Buffer",
         "Width": 2.77,
         "Height": 3.073,
@@ -5969,6 +6011,13 @@
         "Width": 2.5,
         "Height": 4.3,
         "Image": "mxr-carboncopy.png"
+    },
+	{
+        "Brand": "MXR",
+        "Name": "Tremolo",
+        "Width": 2.65,
+        "Height": 4.4,
+        "Image": "mxr-tremolo.png"
     },
     {
         "Brand": "MXR",
@@ -6239,8 +6288,8 @@
     {
         "Brand": "Mammoth Electronics",
         "Name": "1590BB",
-        "Width": 3.68,
-        "Height": 4.67,
+        "Width": 3.7,
+        "Height": 4.7,
         "Image": "enclosure.png"
     },
     {
@@ -7953,6 +8002,13 @@
     },
     {
         "Brand": "Seymour Duncan",
+        "Name": "Palladium",
+        "Width": 5.6,
+        "Height": 4.7,
+        "Image": "seymour-duncan-palladium.png"
+    },
+    {
+        "Brand": "Seymour Duncan",
         "Name": "Vapor Trail",
         "Width": 2.72,
         "Height": 5.17,
@@ -8740,6 +8796,13 @@
         "Width": 4.66,
         "Height": 4.23,
         "Image": "sweetsound-mojovibe.png"
+    },
+    {
+        "Brand": "Swindler",
+        "Name": "Red Mountain",
+        "Width": 2.93,
+        "Height": 5.02,
+        "Image": "swindler-redmountain.png"
     },
     {
         "Brand": "T-rex",
@@ -10312,8 +10375,8 @@
     {
         "Brand": "Zoom",
         "Name": "MS-70CDR",
-        "Width": 3.051181,
-        "Height": 5.1299213,
+        "Width": 2.79,
+        "Height": 4.88,
         "Image": "zoom-ms70cdr.png"
     },
     {

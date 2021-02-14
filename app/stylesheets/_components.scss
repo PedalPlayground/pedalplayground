@@ -228,7 +228,7 @@ $body-color-dark: 	#ccc;
 .canvas {
 	position: relative;
 	overflow: hidden;
-	background-image: url('../images/grid-fine.png');
+	background-image: url('../images/grid-fine.svg');
 	background-color: #F8F8F8;
 	.darkmode & {
 		background-color: $canvas-bg-dark;
