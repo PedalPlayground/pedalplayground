@@ -22,7 +22,8 @@
   },
   "devDependencies": {
     "gulp-responsive": "^2.9.0",
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "prettier": "2.2.1"
   },
   "scripts": {
     "serve": "http-server ./ -o",
