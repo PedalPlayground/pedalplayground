@@ -1,14 +1,13 @@
 body {
-	
 }
 
 img {
 	max-width: 100%;
-    width: auto\9;
-    height: auto;
-    vertical-align: middle;
-    border: 0;
-    -ms-interpolation-mode: bicubic;
+	width: auto\9;
+	height: auto;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
 }
 
 h1,
@@ -25,6 +24,7 @@ h5,
 }
 
 // Use 500 instead of 600 for bold since it's a little nicer looking
-strong, th {
+strong,
+th {
 	font-weight: 500;
 }
