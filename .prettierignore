@@ -1,1 +1,4 @@
 public
+node_modules
+bower_components
+config.codekit3
