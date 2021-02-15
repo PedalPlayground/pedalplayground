@@ -1,78 +1,58 @@
 $border: 1px solid rgba(black, 0.13);
 
-$header-bg-dark: #232329;
-$panel-bg-dark: #1b1920;
-$canvas-bg-dark: #232329;
-$body-color-dark: #ccc;
+$dark: #1b1920;
+
+$panel-bg-dark: #282d30;
+$header-bg-dark: #25292c;
+$canvas-bg-dark: #2e3337;
+$body-color-dark: lighten($dark, 60%);
+
+body {
+	background: white;
+	@media (prefers-color-scheme: dark) {
+		background: $header-bg-dark;
+		color: $body-color-dark;
+	}
+}
 
 .site-header {
 	background: #fff;
 	padding: 12px;
 	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	h1 {
-		font-size: 22px;
 		text-transform: uppercase;
 		margin: 0;
+		font-size: 16px;
+		@media (min-width: 500px) {
+			font-size: 22px;
+		}
 	}
-	.donate {
-		position: absolute;
-		right: 14px;
-		top: 50%;
-		margin-top: -10px;
+	nav {
+		a {
+			text-decoration: underline;
+			margin-left: 1rem;
+			font-size: 1.3rem;
+			@media (min-width: 500px) {
+				font-size: 1.5rem;
+				text-decoration: none;
+				margin-left: 2rem;
+				font-weight: bold;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				color: lighten($header-bg-dark, 40%);
+			}
+		}
 	}
-	.darkmode & {
+	@media (prefers-color-scheme: dark) {
 		background: $header-bg-dark;
 		color: #555;
 		h1 {
 			color: #f8f8f8;
 		}
-	}
-}
-
-.darkmode {
-	color: $body-color-dark;
-	background: $canvas-bg-dark;
-	.modal-content {
-		background: $panel-bg-dark;
-		.close {
-			text-shadow: none;
-			color: #ccc;
-		}
-	}
-	.modal-header,
-	.modal-footer {
-		border-color: rgba(white, 0.1);
-	}
-	.btn {
-		border: 0;
-	}
-	.select2-selection,
-	.form-control,
-	.input-group-addon,
-	.select2-dropdown {
-		border: 0;
-		background: $canvas-bg-dark;
-		border: 1px solid rgba(white, 0.1);
-	}
-	.input-group-addon,
-	.select2-search__field {
-		background: $canvas-bg-dark;
-		border-color: rgba(white, 0.1);
-	}
-	.nav-tabs {
-		border-color: rgba(white, 0.1);
-	}
-	.nav-tabs > li.active > a,
-	.nav-tabs > li.active > a:focus,
-	.nav-tabs > li.active > a:hover {
-		color: #999;
-		background: $canvas-bg-dark;
-		border-color: rgba(white, 0.1);
-	}
-	.nav-tabs > li > a:hover {
-		background: none;
-		color: white;
-		border-color: transparent;
 	}
 }
 
@@ -82,15 +62,10 @@ $body-color-dark: #ccc;
 	min-width: 1400px;
 	position: relative;
 	@include flexbox;
-	//@include flex-direction(column);
-	@media (min-width: 769px) {
-		//@include flex-direction(row);
-	}
-	&.is-slid {
-		//transform: translateX(290px);
-	}
-	.darkmode & {
+	@media (prefers-color-scheme: dark) {
+		border-top: 1px solid #323037;
 		border-color: rgba(white, 0.1);
+		border: 0;
 	}
 }
 
@@ -133,6 +108,9 @@ $body-color-dark: #ccc;
 		border-radius: 50%;
 		font-size: 0;
 		box-shadow: 8px 8px 20px rgba($brand-primary, 0.5);
+		@media (prefers-color-scheme: dark) {
+			box-shadow: none;
+		}
 		&:before,
 		&:after {
 			content: " ";
@@ -159,35 +137,39 @@ $body-color-dark: #ccc;
 }
 
 .sidebar {
-	// display: none;
-
 	.select2-container {
 		width: 100%;
 	}
-
 	@media (max-width: 1023px) {
 		position: fixed;
 		top: 0;
 		right: 0;
 		left: 0;
 		bottom: 0;
-		background: rgba(black, 0.7);
 		width: 100%;
 		z-index: 5;
 		opacity: 0;
 		transition: all 0.3s;
 		pointer-events: none;
 		touch-events: none;
+		background: rgba(black, 0.7);
+		@media (prefers-color-scheme: dark) {
+			$tint: lighten($brand-primary, 0%);
+			background: rgba($tint, 0.5);
+		}
 		.sidebar__inner {
 			transition: all 0.3s;
 			position: absolute;
 			top: 100%;
-			background-color: #fff;
-			padding: 25px;
+			// padding: 25px;
 			border-radius: 10px 10px 0 0;
 			bottom: 0;
 			overflow: auto;
 			-webkit-overflow-scrolling: touch;
+			background-color: #fff;
+			@media (prefers-color-scheme: dark) {
+				background-color: $panel-bg-dark;
+			}
 		}
 
 		.is-slid & {
@@ -202,22 +184,25 @@ $body-color-dark: #ccc;
 	@media (min-width: 1024px) {
 		max-width: 290px;
 		box-shadow: 0 1px 5px rgba(black, 0.16);
-		padding: 20px;
+		// padding: 20px;
 		background: #fff;
 		border-right: $border;
-		.darkmode & {
+		@media (prefers-color-scheme: dark) {
+			/* Dark theme styles go here */
 			background-color: $panel-bg-dark;
 			border-right-color: rgba(white, 0.1);
+			border: 0;
 		}
 	}
 	&__section {
+		padding: 2rem;
 		& + & {
-			border-top: 1px solid #ddd;
-			padding-top: 16px;
-			margin-top: 16px;
-		}
-		.darkmode & {
-			border-bottom-color: rgba(white, 0.1);
+			border-top: 2px solid #ddd;
+			// padding-top: 16px;
+			// margin-top: 16px;
+			@media (prefers-color-scheme: dark) {
+				border-top-color: rgba(black, 0.2);
+			}
 		}
 	}
 	h4 {
@@ -228,10 +213,11 @@ $body-color-dark: #ccc;
 .canvas {
 	position: relative;
 	overflow: hidden;
-	background-image: url("../images/grid-fine.svg");
+	background-image: url("../images/grid.svg");
 	background-color: #f8f8f8;
-	.darkmode & {
+	@media (prefers-color-scheme: dark) {
 		background-color: $canvas-bg-dark;
+		background-image: url("../images/grid-dark.svg");
 	}
 	* {
 		-webkit-user-select: none;
@@ -253,8 +239,8 @@ $body-color-dark: #ccc;
 		transition: all 0.4s;
 		// Drop shadow that matches the background image!
 		$same: 1px 1px 3px rgba(black, 0.4);
-		//-webkit-filter: drop-shadow( $same );
-		//filter: drop-shadow( $same );
+		-webkit-filter: drop-shadow($same);
+		filter: drop-shadow($same);
 	}
 
 	// Selected state border
@@ -317,6 +303,7 @@ $body-color-dark: #ccc;
 		margin-left: -32px;
 		margin-top: -15px;
 		width: 67px;
+
 		a {
 			display: block;
 			float: left;
@@ -336,6 +323,13 @@ $body-color-dark: #ccc;
 					@extend .glyphicon-refresh;
 					font-weight: bold;
 				}
+			}
+		}
+		@media (prefers-color-scheme: dark) {
+			background: #111;
+			border-color: rgba(white, 0.2);
+			a {
+				color: white;
 			}
 		}
 	}
@@ -541,6 +535,14 @@ $body-color-dark: #ccc;
 .panel {
 	z-index: 3;
 	display: none;
+
+	@media (prefers-color-scheme: dark) {
+		background: $panel-bg-dark;
+		border: 1px solid rgba(white, 0.2);
+		border: 0;
+		box-shadow: none !important;
+	}
+
 	@media (min-width: 768px) {
 		display: block;
 		position: fixed;
@@ -554,7 +556,6 @@ $body-color-dark: #ccc;
 			color: #999;
 			font-weight: 600;
 			padding: 10px;
-			border-bottom: 1px solid #ddd;
 			.panel__dimensions {
 				font-weight: normal;
 			}
@@ -563,7 +564,10 @@ $body-color-dark: #ccc;
 			font-size: 13px;
 			display: block;
 			padding: 10px;
-			border-bottom: 1px solid #ddd;
+			border-top: 1px solid rgba(black, 0.2);
+			@media (prefers-color-scheme: dark) {
+				border-top: 1px solid rgba(white, 0.2);
+			}
 			i {
 				font-style: normal;
 				color: #999;
@@ -606,12 +610,12 @@ $body-color-dark: #ccc;
 		background: rgba(white, 0.5);
 		border: 1px solid rgba(black, 0.12);
 		border-top-left-radius: 5px;
-		.darkmode & {
+		@media (prefers-color-scheme: dark) {
 			background: $panel-bg-dark;
 			border-color: rgba(white, 0.12);
 		}
 		input {
-			width: 50px;
+			width: 85px;
 		}
 		h5 {
 			line-height: 20px;
@@ -646,5 +650,12 @@ $body-color-dark: #ccc;
 		color: #444;
 		text-decoration: underline;
 		font-weight: 700;
+		@media (prefers-color-scheme: dark) {
+			color: white;
+		}
 	}
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background: $brand-primary;
 }
