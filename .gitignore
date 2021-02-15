@@ -9,3 +9,5 @@ pedals-new alias
 config.codekit3
 0_pre
 1_post
+_post
+_pre
