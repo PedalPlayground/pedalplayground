@@ -1,8 +1,8 @@
-$block: 		$font-size-base; 		// 14px;
-$block-tight: 	$font-size-base * .5; 	// 7px
-$block-loose: 	$font-size-base * 2; 	// 28px
-$block-looser: 	$font-size-base * 2.5; 	// 35px
-$block-loosest: $font-size-base * 4; 	// 56px
+$block: $font-size-base; // 14px;
+$block-tight: $font-size-base * 0.5; // 7px
+$block-loose: $font-size-base * 2; // 28px
+$block-looser: $font-size-base * 2.5; // 35px
+$block-loosest: $font-size-base * 4; // 56px
 
 %block,
 .block {

@@ -15,8 +15,14 @@
 	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
 	border: 1px solid transparent;
 	white-space: nowrap;
-	box-shadow: 0 1px 2px rgba(black, .15), 0 1px 0 rgba(white, .3) inset;
-	@include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+	box-shadow: 0 1px 2px rgba(black, 0.15), 0 1px 0 rgba(white, 0.3) inset;
+	@include button-size(
+		$padding-base-vertical,
+		$padding-base-horizontal,
+		$font-size-base,
+		$line-height-base,
+		$btn-border-radius-base
+	);
 	@include user-select(none);
 
 	&,
@@ -39,14 +45,14 @@
 	&:active {
 		//outline: 0;
 		background-image: none;
-		@include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+		@include box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.125));
 	}
 
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
 		cursor: $cursor-disabled;
-		@include opacity(.65);
+		@include opacity(0.65);
 		@include box-shadow(none);
 	}
 	// [converter] extracted a& to a.btn
@@ -68,7 +74,7 @@ a.btn {
 
 .btn-light {
 	@include button-variant($btn-light-color, $btn-light-bg, $btn-light-border);
-	box-shadow: 0 1px 2px rgba(black, .15), 0 1px 0 #FFF inset;
+	box-shadow: 0 1px 2px rgba(black, 0.15), 0 1px 0 #fff inset;
 }
 
 .btn-primary {
@@ -96,7 +102,7 @@ a.btn {
 }
 
 .btn-buy {
-	@include button-variant(white, $brand-buy-color, darken($brand-buy-color, 5%) );
+	@include button-variant(white, $brand-buy-color, darken($brand-buy-color, 5%));
 }
 // Link buttons
 // -------------------------
@@ -143,16 +149,34 @@ a.btn {
 
 .btn-lg {
 	// line-height: ensure even-numbered height of button next to large input
-	@include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-base);
+	@include button-size(
+		$padding-large-vertical,
+		$padding-large-horizontal,
+		$font-size-large,
+		$line-height-large,
+		$btn-border-radius-base
+	);
 }
 
 .btn-sm {
 	// line-height: ensure proper height of button next to small input
-	@include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-base);
+	@include button-size(
+		$padding-small-vertical,
+		$padding-small-horizontal,
+		$font-size-small,
+		$line-height-small,
+		$btn-border-radius-base
+	);
 }
 
 .btn-xs {
-	@include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-base);
+	@include button-size(
+		$padding-xs-vertical,
+		$padding-xs-horizontal,
+		$font-size-small,
+		$line-height-small,
+		$btn-border-radius-base
+	);
 }
 // Block button
 // --------------------------------------------------

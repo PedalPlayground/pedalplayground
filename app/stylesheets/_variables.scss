@@ -2,31 +2,30 @@ $site-max-width: 1600px;
 $site-padding-sm: 16px;
 $site-padding-md: 30px;
 
-
 /* Colors */
-$brand-color: #CB2532;
-$brand-yellow: #FFB760;
-$brand-gray: #616D80;
-$brand-white: #F9F9F9;
-$brand-buy: #EF1F38;
+$brand-color: #cb2532;
+$brand-yellow: #ffb760;
+$brand-gray: #616d80;
+$brand-white: #f9f9f9;
+$brand-buy: #ef1f38;
 
-$brand-gray-dark:  darken($brand-gray, 10%);
+$brand-gray-dark: darken($brand-gray, 10%);
 $brand-gray-light: lighten($brand-gray, 32%);
 
 $brand-buy-color: saturate($brand-color, 10%);
 $brand-price-color: $brand-buy-color;
 
-$brand-border-color: rgba($brand-gray, .25);
-$border: 1px solid rgba($brand-gray, .25);
+$brand-border-color: rgba($brand-gray, 0.25);
+$border: 1px solid rgba($brand-gray, 0.25);
 
-$font-path:  "../fonts/";
+$font-path: "../fonts/";
 $image-path: "../images/";
 $colorpicker-img-path: "#{$image-path}colorpicker";
 
-$box-shadow-base: 0 1px 3px rgba(black, .15);
-$box-shadow-popover: 0 2px 15px 0 rgba(0,0,0,0.09), 0 1px 4px 0 rgba(0,0,0,0.10);
+$box-shadow-base: 0 1px 3px rgba(black, 0.15);
+$box-shadow-popover: 0 2px 15px 0 rgba(0, 0, 0, 0.09), 0 1px 4px 0 rgba(0, 0, 0, 0.1);
 
-$trans-border-base: 1px solid rgba(black, .16);
-$trans-border-light: 1px solid rgba(black, .1);
+$trans-border-base: 1px solid rgba(black, 0.16);
+$trans-border-light: 1px solid rgba(black, 0.1);
 
 $button-padding-offset: 1;

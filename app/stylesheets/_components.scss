@@ -1,13 +1,12 @@
-$border: 1px solid rgba(black, .13);
+$border: 1px solid rgba(black, 0.13);
 
-$header-bg-dark: 	#232329;
-$panel-bg-dark: 	#1B1920;
-$canvas-bg-dark: 	#232329;
-$body-color-dark: 	#ccc;
-
+$header-bg-dark: #232329;
+$panel-bg-dark: #1b1920;
+$canvas-bg-dark: #232329;
+$body-color-dark: #ccc;
 
 .site-header {
-	background: #FFF;
+	background: #fff;
 	padding: 12px;
 	position: relative;
 	h1 {
@@ -42,7 +41,7 @@ $body-color-dark: 	#ccc;
 	}
 	.modal-header,
 	.modal-footer {
-		border-color: rgba(white, .1);
+		border-color: rgba(white, 0.1);
 	}
 	.btn {
 		border: 0;
@@ -53,24 +52,24 @@ $body-color-dark: 	#ccc;
 	.select2-dropdown {
 		border: 0;
 		background: $canvas-bg-dark;
-		border: 1px solid rgba(white, .1);
+		border: 1px solid rgba(white, 0.1);
 	}
 	.input-group-addon,
 	.select2-search__field {
 		background: $canvas-bg-dark;
-		border-color: rgba(white, .1);
+		border-color: rgba(white, 0.1);
 	}
 	.nav-tabs {
-		border-color: rgba(white, .1);
+		border-color: rgba(white, 0.1);
 	}
-	.nav-tabs>li.active>a,
-	.nav-tabs>li.active>a:focus,
-	.nav-tabs>li.active>a:hover {
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover {
 		color: #999;
 		background: $canvas-bg-dark;
-		border-color: rgba(white, .1);
+		border-color: rgba(white, 0.1);
 	}
-	.nav-tabs>li>a:hover {
+	.nav-tabs > li > a:hover {
 		background: none;
 		color: white;
 		border-color: transparent;
@@ -91,7 +90,7 @@ $body-color-dark: 	#ccc;
 		//transform: translateX(290px);
 	}
 	.darkmode & {
-		border-color: rgba(white, .1);
+		border-color: rgba(white, 0.1);
 	}
 }
 
@@ -105,7 +104,9 @@ $body-color-dark: 	#ccc;
 		right: 0;
 		bottom: 70%;
 		opacity: 1;
-		.text {display: none;}
+		.text {
+			display: none;
+		}
 		.glyphicon {
 			color: white;
 			font-size: 30px;
@@ -131,8 +132,9 @@ $body-color-dark: 	#ccc;
 		z-index: 4;
 		border-radius: 50%;
 		font-size: 0;
-		box-shadow: 8px 8px 20px rgba($brand-primary, .5);
-		&:before,&:after {
+		box-shadow: 8px 8px 20px rgba($brand-primary, 0.5);
+		&:before,
+		&:after {
 			content: " ";
 			position: absolute;
 			background: white;
@@ -169,15 +171,15 @@ $body-color-dark: 	#ccc;
 		right: 0;
 		left: 0;
 		bottom: 0;
-		background: rgba(black, .7);
+		background: rgba(black, 0.7);
 		width: 100%;
 		z-index: 5;
 		opacity: 0;
-		transition: all .3s;
+		transition: all 0.3s;
 		pointer-events: none;
 		touch-events: none;
 		.sidebar__inner {
-			transition: all .3s;
+			transition: all 0.3s;
 			position: absolute;
 			top: 100%;
 			background-color: #fff;
@@ -194,20 +196,18 @@ $body-color-dark: 	#ccc;
 			touch-events: all;
 			.sidebar__inner {
 				top: 30%;
-
-
 			}
 		}
 	}
 	@media (min-width: 1024px) {
 		max-width: 290px;
-		box-shadow: 0 1px 5px rgba(black, .16);
+		box-shadow: 0 1px 5px rgba(black, 0.16);
 		padding: 20px;
-		background: #FFF;
+		background: #fff;
 		border-right: $border;
 		.darkmode & {
 			background-color: $panel-bg-dark;
-			border-right-color: rgba(white, .1);
+			border-right-color: rgba(white, 0.1);
 		}
 	}
 	&__section {
@@ -217,7 +217,7 @@ $body-color-dark: 	#ccc;
 			margin-top: 16px;
 		}
 		.darkmode & {
-			border-bottom-color: rgba(white, .1);
+			border-bottom-color: rgba(white, 0.1);
 		}
 	}
 	h4 {
@@ -228,8 +228,8 @@ $body-color-dark: 	#ccc;
 .canvas {
 	position: relative;
 	overflow: hidden;
-	background-image: url('../images/grid-fine.svg');
-	background-color: #F8F8F8;
+	background-image: url("../images/grid-fine.svg");
+	background-color: #f8f8f8;
 	.darkmode & {
 		background-color: $canvas-bg-dark;
 	}
@@ -250,9 +250,9 @@ $body-color-dark: 	#ccc;
 		background-size: 100% 100%;
 		z-index: 1;
 		position: relative;
-		transition: all .4s;
+		transition: all 0.4s;
 		// Drop shadow that matches the background image!
-		$same: 1px 1px 3px rgba(black, .4);
+		$same: 1px 1px 3px rgba(black, 0.4);
 		//-webkit-filter: drop-shadow( $same );
 		//filter: drop-shadow( $same );
 	}
@@ -270,7 +270,7 @@ $body-color-dark: 	#ccc;
 		border-radius: 4px;
 		border: 2px solid transparent;
 		pointer-events: none;
-		transition: all .15s;
+		transition: all 0.15s;
 	}
 
 	&.rotate-90 {
@@ -291,20 +291,20 @@ $body-color-dark: 	#ccc;
 
 	&.pedal--custom,
 	&.pedalboard--custom {
-        &.rotate-90 {
+		&.rotate-90 {
 			@include rotate(90deg);
-    	}
-    	&.rotate-180 {
+		}
+		&.rotate-180 {
 			@include rotate(180deg);
-    	}
-    	&.rotate-270 {
+		}
+		&.rotate-270 {
 			@include rotate(270deg);
-    	}
+		}
 	}
 
 	.actions {
 		z-index: 1;
-		transition: all .28s;
+		transition: all 0.28s;
 		opacity: 0;
 		background: white;
 		border: $border;
@@ -343,7 +343,7 @@ $body-color-dark: 	#ccc;
 	// Hover state
 	&:hover {
 		&:after {
-			border-color: rgba($brand-primary, .5);
+			border-color: rgba($brand-primary, 0.5);
 		}
 		.actions {
 			opacity: 1;
@@ -353,7 +353,7 @@ $body-color-dark: 	#ccc;
 	// Selected state
 	&.selected {
 		.artwork {
-			$same: 0px 0px 5px rgba(blue, .5);
+			$same: 0px 0px 5px rgba(blue, 0.5);
 			//-webkit-filter: drop-shadow( $same );
 			//filter: drop-shadow( $same );
 		}
@@ -391,10 +391,10 @@ $body-color-dark: 	#ccc;
 	}
 	&__box {
 		border-radius: 4px;
-		border: 1px solid rgba(black, .3);
-		box-shadow: 1px 1px 4px rgba(black, .22), 0 1px 0 rgba(white, .2) inset;
+		border: 1px solid rgba(black, 0.3);
+		box-shadow: 1px 1px 4px rgba(black, 0.22), 0 1px 0 rgba(white, 0.2) inset;
 		background-clip: border-box;
-		background-image: linear-gradient( to top left, rgba(white, 0), rgba(white, .2) );
+		background-image: linear-gradient(to top left, rgba(white, 0), rgba(white, 0.2));
 		position: absolute;
 		@include cover;
 		// left: 3px;
@@ -404,11 +404,11 @@ $body-color-dark: 	#ccc;
 	&__knob2 {
 		border-radius: 40px;
 		@include square(12px);
-		background-color: rgba(black, .8);
-		border: 1px solid rgba(black, .3);
-		box-shadow: 1px 1px 4px rgba(black, .22), 0 1px 0 rgba(white, .2) inset;
+		background-color: rgba(black, 0.8);
+		border: 1px solid rgba(black, 0.3);
+		box-shadow: 1px 1px 4px rgba(black, 0.22), 0 1px 0 rgba(white, 0.2) inset;
 		background-clip: border-box;
-		background-image: linear-gradient( to top left, rgba(white, 0), rgba(white, .2) );
+		background-image: linear-gradient(to top left, rgba(white, 0), rgba(white, 0.2));
 		position: absolute;
 		top: 15%;
 	}
@@ -421,8 +421,8 @@ $body-color-dark: 	#ccc;
 	&__switch {
 		position: absolute;
 		background-color: #999;
-		border: 1px solid rgba(black, .3);
-		box-shadow: 1px 1px 4px rgba(black, .22), 0 1px 0 rgba(white, .2) inset;
+		border: 1px solid rgba(black, 0.3);
+		box-shadow: 1px 1px 4px rgba(black, 0.22), 0 1px 0 rgba(white, 0.2) inset;
 		background-clip: border-box;
 		border-radius: 100px;
 		left: 50%;
@@ -487,7 +487,7 @@ $body-color-dark: 	#ccc;
 }
 
 .color-swatch {
-	border: 1px solid rgba(black, .2);
+	border: 1px solid rgba(black, 0.2);
 	border-radius: 100px;
 	@include square(20px);
 }
@@ -504,7 +504,7 @@ $body-color-dark: 	#ccc;
 		@include justify-content(space-between);
 		@include flex-direction(column);
 		padding: 30px;
-		box-shadow: 1px 1px 0 0 rgba(white, .08);
+		box-shadow: 1px 1px 0 0 rgba(white, 0.08);
 		img {
 			margin: auto;
 			display: block;
@@ -518,13 +518,13 @@ $body-color-dark: 	#ccc;
 			color: white;
 		}
 		.pedal-brand {
-			opacity: .5;
+			opacity: 0.5;
 			font-weight: bold;
 			text-transform: uppercase;
 			font-size: $font-size-base - 4;
 		}
 		.pedal-name {
-			opacity: .9;
+			opacity: 0.9;
 			font-size: $font-size-base - 1;
 		}
 	}
@@ -547,7 +547,7 @@ $body-color-dark: 	#ccc;
 		top: 67px;
 		right: 20px;
 		border-radius: 10px;
-		box-shadow: 0 2px 6px rgba(black, .2);
+		box-shadow: 0 2px 6px rgba(black, 0.2);
 		width: 200px;
 		&__name {
 			font-size: 13px;
@@ -555,9 +555,9 @@ $body-color-dark: 	#ccc;
 			font-weight: 600;
 			padding: 10px;
 			border-bottom: 1px solid #ddd;
-      .panel__dimensions {
-        font-weight: normal;
-      }
+			.panel__dimensions {
+				font-weight: normal;
+			}
 		}
 		&__action {
 			font-size: 13px;
@@ -603,12 +603,12 @@ $body-color-dark: 	#ccc;
 		margin: 0;
 		border: 0;
 		display: flex;
-		background: rgba(white, .5);
-		border: 1px solid rgba(black, .12);
+		background: rgba(white, 0.5);
+		border: 1px solid rgba(black, 0.12);
 		border-top-left-radius: 5px;
 		.darkmode & {
 			background: $panel-bg-dark;
-			border-color: rgba(white, .12);
+			border-color: rgba(white, 0.12);
 		}
 		input {
 			width: 50px;
@@ -639,7 +639,7 @@ $body-color-dark: 	#ccc;
 		margin-left: -10rem;
 	}
 	p {
-		margin-bottom: .4rem;
+		margin-bottom: 0.4rem;
 	}
 	a {
 		font-size: 1.25rem;
