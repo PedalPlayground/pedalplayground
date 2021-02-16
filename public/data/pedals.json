@@ -7743,6 +7743,13 @@
 	},
 	{
 		"Brand": "RJM",
+		"Name": "Overture",
+		"Width": 4.4,
+		"Height": 5.25,
+		"Image": "rjm-overture.png"
+	},
+	{
+		"Brand": "RJM",
 		"Name": "Mastermind PBC/10",
 		"Width": 17.5,
 		"Height": 5.5,
