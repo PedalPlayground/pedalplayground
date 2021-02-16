@@ -2268,6 +2268,13 @@
 		"Image": "customtones-ethosoverdrive.png"
 	},
 	{
+		"Brand": "Dr Z",
+		"Name": "Z-Drive",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "drz-zdrive.png"
+	},
+	{
 		"Brand": "D'Addario",
 		"Name": "Tuner",
 		"Width": 2.06,
@@ -5476,8 +5483,8 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Hydra",
-		"Width": 2.85,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.78,
 		"Image": "keeley-hydra.png"
 	},
 	{
@@ -5637,8 +5644,8 @@
 	{
 		"Brand": "Kingtone",
 		"Name": "Duellist",
-		"Width": 4.67,
-		"Height": 3.68,
+		"Width": 4.98,
+		"Height": 3.76,
 		"Image": "kingtone-duelist.png"
 	},
 	{
