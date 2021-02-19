@@ -229,7 +229,7 @@ body {
 
 .item {
 	position: absolute;
-	border: 1px solid transparent;
+	// border: 1px solid transparent;
 	.artwork {
 		background-repeat: no-repeat;
 		background-position: center;
@@ -238,7 +238,7 @@ body {
 		position: relative;
 		transition: all 0.4s;
 		// Drop shadow that matches the background image!
-		$same: 1px 1px 3px rgba(black, 0.4);
+		$same: 1px 2px 10px rgba(black, 0.25);
 		-webkit-filter: drop-shadow($same);
 		filter: drop-shadow($same);
 	}
@@ -385,7 +385,7 @@ body {
 	}
 	&__box {
 		border-radius: 4px;
-		border: 1px solid rgba(black, 0.3);
+		// border: 1px solid rgba(black, 0.3);
 		box-shadow: 1px 1px 4px rgba(black, 0.22), 0 1px 0 rgba(white, 0.2) inset;
 		background-clip: border-box;
 		background-image: linear-gradient(to top left, rgba(white, 0), rgba(white, 0.2));

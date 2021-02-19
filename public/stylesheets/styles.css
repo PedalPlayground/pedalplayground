@@ -7172,8 +7172,7 @@ body {
     user-select: none; }
 
 .item {
-  position: absolute;
-  border: 1px solid transparent; }
+  position: absolute; }
   .item .artwork {
     background-repeat: no-repeat;
     background-position: center;
@@ -7181,8 +7180,8 @@ body {
     z-index: 1;
     position: relative;
     transition: all 0.4s;
-    -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
-    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4)); }
+    -webkit-filter: drop-shadow(1px 2px 10px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(1px 2px 10px rgba(0, 0, 0, 0.25)); }
   .item:after {
     position: absolute;
     content: " ";
@@ -7290,7 +7289,6 @@ body {
     transform: rotate(270deg); }
   .pedal__box {
     border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.22), 0 1px 0 rgba(255, 255, 255, 0.2) inset;
     background-clip: border-box;
     background-image: linear-gradient(to top left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
