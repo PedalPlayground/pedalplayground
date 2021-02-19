@@ -8297,8 +8297,8 @@
 	{
 		"Brand": "Sonic Research",
 		"Name": "Turbo Tuner ST-300 Mini",
-		"Width": 2.01,
-		"Height": 3.66,
+		"Width": 1.93,
+		"Height": 3.72,
 		"Image": "sonicresearch-st300mini.png"
 	},
 	{
@@ -8835,6 +8835,13 @@
 	},
 	{
 		"Brand": "Supro",
+		"Name": "Chorus",
+		"Width": 2.6,
+		"Height": 4.8,
+		"Image": "supro-chorus.png"
+	},
+	{
+		"Brand": "Supro",
 		"Name": "Fuzz",
 		"Width": 2.6,
 		"Height": 4.8,
@@ -8965,6 +8972,13 @@
 		"Width": 2.83,
 		"Height": 4.8,
 		"Image": "tc-brainwaves.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "MojoMojo",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tc-mojomojo.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -10645,5 +10659,40 @@
 		"Width": 3.3,
 		"Height": 5.294,
 		"Image": "ua-starlight.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Tap-A-Whirl",
+		"Width": 4.7,
+		"Height": 4.04,
+		"Image": "cusack-tapawhirl.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Scream",
+		"Width": 1.73,
+		"Height": 3.67,
+		"Image": "cusack-scream.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "More Louder",
+		"Width": 1.95,
+		"Height": 3.67,
+		"Image": "cusack-morelouder.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Screamer",
+		"Width": 2.4,
+		"Height": 4.57,
+		"Image": "cusack-screamer.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Tremolo",
+		"Width": 2.4,
+		"Height": 4.66,
+		"Image": "cusack-tremolo.png"
 	}
 ]
