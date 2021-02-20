@@ -3333,6 +3333,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Eddy Analog Vibrato & Chorus",
+		"Width": 2.86,
+		"Height": 4.42,
+		"Image": "ehx-eddy.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Operation Overlord",
 		"Width": 4.13,
 		"Height": 4.75,
