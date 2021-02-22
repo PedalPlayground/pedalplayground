@@ -338,8 +338,8 @@
 	{
 		"Brand": "Browne Amplification",
 		"Name": "Protein",
-		"Width": 4.67,
-		"Height": 3.53,
+		"Width": 4.91,
+		"Height": 3.7,
 		"Image": "browneamps-protein.png"
 	},
 	{
@@ -1725,7 +1725,7 @@
 		"Brand": "Bogner",
 		"Name": "Wessex",
 		"Width": 2.623,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "bogner-wessex.png"
 	},
 	{
@@ -6890,8 +6890,8 @@
 	{
 		"Brand": "Montreal Assembly",
 		"Name": "Count to Five",
-		"Width": 2.48,
-		"Height": 4.69,
+		"Width": 2.64,
+		"Height": 4.99,
 		"Image": "montreal-counttofive.png"
 	},
 	{
@@ -8996,6 +8996,20 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Tailspin",
+		"Width": 2.9,
+		"Height": 5.2,
+		"Image": "tc-tailspin.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "June-60",
+		"Width": 3.4,
+		"Height": 5.34,
+		"Image": "tc-june60.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Corona Chorus",
 		"Width": 2.83,
 		"Height": 4.8,
@@ -10649,21 +10663,21 @@
 	{
 		"Brand": "Universal Audio",
 		"Name": "Astra Modulation Machine",
-		"Width": 3.3,
+		"Width": 4,
 		"Height": 5.294,
 		"Image": "ua-astra.png"
 	},
 	{
 		"Brand": "Universal Audio",
 		"Name": "Golden Reverberator",
-		"Width": 3.3,
+		"Width": 4,
 		"Height": 5.294,
 		"Image": "ua-starlight.png"
 	},
 	{
 		"Brand": "Universal Audio",
 		"Name": "Starlight Echo Station",
-		"Width": 3.3,
+		"Width": 4,
 		"Height": 5.294,
 		"Image": "ua-starlight.png"
 	},
