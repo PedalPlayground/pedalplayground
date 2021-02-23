@@ -2242,8 +2242,8 @@
 	{
 		"Brand": "Crowther",
 		"Name": "Hot Cake",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.64,
+		"Height": 4.42,
 		"Image": "crowther-hotcake.png"
 	},
 	{
@@ -10663,22 +10663,22 @@
 	{
 		"Brand": "Universal Audio",
 		"Name": "Astra Modulation Machine",
-		"Width": 4,
-		"Height": 5.294,
+		"Width": 3.5,
+		"Height": 5.6,
 		"Image": "ua-astra.png"
 	},
 	{
 		"Brand": "Universal Audio",
 		"Name": "Golden Reverberator",
-		"Width": 4,
-		"Height": 5.294,
+		"Width": 3.5,
+		"Height": 5.6,
 		"Image": "ua-starlight.png"
 	},
 	{
 		"Brand": "Universal Audio",
 		"Name": "Starlight Echo Station",
-		"Width": 4,
-		"Height": 5.294,
+		"Width": 3.5,
+		"Height": 5.6,
 		"Image": "ua-starlight.png"
 	},
 	{
