@@ -10715,5 +10715,12 @@
 		"Width": 2.4,
 		"Height": 4.66,
 		"Image": "cusack-tremolo.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Zuul Mini",
+		"Width": 1.52,
+		"Height": 3.64,
+		"Image": "fortin-zuul-mini.png"
 	}
 ]
