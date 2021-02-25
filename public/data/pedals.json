@@ -1,5 +1,12 @@
 [
 	{
+		"Brand": "TC Electronic",
+		"Name": "Gauss Tape Echo",
+		"Width": 29.13,
+		"Height": 51.97,
+		"Image": "gauss-tape-echo.png"
+	},
+	{
 		"Brand": "Xotic",
 		"Name": "SL Drive",
 		"Width": 1.9,
