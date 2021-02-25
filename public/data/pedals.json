@@ -10794,7 +10794,6 @@
 		"Image": "cusack-tremolo.png"
 	},
 	{
-
 		"Brand": "MXR",
 		"Name": "JHW1 Jimi Hendrix PSYCH SERIES FUZZ FACE",
 		"Width": 1.63,
@@ -10835,5 +10834,12 @@
 		"Width": 2.38,
 		"Height": 4.43,
 		"Image": "gladiosc.png"
+  },
+  {
+		"Brand": "Fortin",
+		"Name": "Roach",
+		"Width": 1.52,
+		"Height": 3.64,
+		"Image": "fortin-roach.png"
 	}
 ]
