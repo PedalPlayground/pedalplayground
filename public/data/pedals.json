@@ -1,4 +1,4 @@
-[
+﻿[
 	{
 		"Brand": "Xotic",
 		"Name": "SL Drive",
@@ -1174,6 +1174,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-rc3.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-5 Loop Station",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-rc5.png"
 	},
 	{
 		"Brand": "BOSS",
