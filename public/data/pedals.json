@@ -5174,10 +5174,10 @@
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Belle Star",
+		"Name": "Belle Starr",
 		"Width": 2.2,
-		"Height": 4.875,
-		"Image": "jackson-bellestar.png"
+		"Height": 5.02,
+		"Image": "jackson-bellestarr.png"
 	},
 	{
 		"Brand": "Jackson Audio",
@@ -5773,6 +5773,13 @@
 		"Width": 7,
 		"Height": 4.96,
 		"Image": "line6-hxstomp.png"
+	},
+	{
+		"Brand": "Line6",
+		"Name": "HX Stomp XL",
+		"Width": 12.8,
+		"Height": 4.96,
+		"Image": "line6-hxstompxl.png"
 	},
 	{
 		"Brand": "Line6",
