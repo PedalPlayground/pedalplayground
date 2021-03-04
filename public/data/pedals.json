@@ -581,6 +581,13 @@
 		"Image": "altoids-tin.png"
 	},
 	{
+		"Brand": "Altoids",
+		"Name": "Smalls Tin",
+		"Width": 1.375,
+		"Height": 2.125,
+		"Image": "altoids-smalls-tin.png"
+	},
+	{
 		"Brand": "Amptweaker",
 		"Name": "Tight Drive Jr.",
 		"Width": 2.94,
