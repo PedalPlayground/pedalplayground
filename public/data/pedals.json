@@ -10730,4 +10730,11 @@
 		"Height": 4.66,
 		"Image": "cusack-tremolo.png"
 	}
+	{
+		"Brand": "Kingtone",
+		"Name": "Soloist",
+		"Width": 2.38,
+		"Height": 4.43,
+		"Image": "kingtonesoloist.png"
+	},
 ]
