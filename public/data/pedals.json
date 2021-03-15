@@ -10793,4 +10793,18 @@
 		"Height": 3.64,
 		"Image": "fortin-zuul-mini.png"
 	}
+	{
+		"Brand": "Kingtone",
+		"Name": "Soloist",
+		"Width": 2.38,
+		"Height": 4.43,
+		"Image": "kingtonesoloist.png"
+	},
+	{
+		"Brand": "Cornerstone",
+		"Name": "Gladio SC",
+		"Width": 2.38,
+		"Height": 4.43,
+		"Image": "gladiosc.png"
+	}
 ]
