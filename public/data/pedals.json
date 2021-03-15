@@ -897,6 +897,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DD-3t Digital Delay",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dd3t.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "DD-5 Digital Delay",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -6088,6 +6095,13 @@
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "mxr-dynacomp.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Dyna Comp Deluxe",
+		"Width": 2.37,
+		"Height": 4.37,
+		"Image": "mxr-dynacomp-deluxe.png"
 	},
 	{
 		"Brand": "MXR",
