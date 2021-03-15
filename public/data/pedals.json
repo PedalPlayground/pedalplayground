@@ -1,4 +1,4 @@
-[
+﻿[
 	{
 		"Brand": "Xotic",
 		"Name": "SL Drive",
@@ -946,6 +946,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "EV-30",
+		"Width": 3.149,
+		"Height": 7.559,
+		"Image": "boss-ev30.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "FBM-1 59' Fender Bassman",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -1174,6 +1181,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-rc3.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-5 Loop Station",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-rc5.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2707,6 +2721,13 @@
 		"Width": 1.65,
 		"Height": 3.65,
 		"Image": "disasterarea-microclock.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "MIDI Baby 3",
+		"Width": 4.409,
+		"Height": 2.362,
+		"Image": "disasterarea-midibaby3.png"
 	},
 	{
 		"Brand": "Disaster Area",
