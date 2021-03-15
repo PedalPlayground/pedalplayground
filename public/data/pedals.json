@@ -7372,6 +7372,20 @@
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Alpha Haunt",
+		"Width": 5.59,
+		"Height": 4.45,
+		"Image": "oldbloodnoise-alphahaunt.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Alpha Haunt V2",
+		"Width": 4.57,
+		"Height": 3.62,
+		"Image": "oldbloodnoise-alphahaunt-v2.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Mondegreen",
 		"Width": 2.65,
 		"Height": 4.87,
