@@ -5776,6 +5776,13 @@
 	},
 	{
 		"Brand": "Line6",
+		"Name": "HX Stomp Blue Ltd",
+		"Width": 7,
+		"Height": 4.96,
+		"Image": "line6-hxstomp-ltd-blue.png"
+	},
+	{
+		"Brand": "Line6",
 		"Name": "HX Stomp XL",
 		"Width": 12.8,
 		"Height": 4.96,
@@ -10729,5 +10736,26 @@
 		"Width": 2.4,
 		"Height": 4.66,
 		"Image": "cusack-tremolo.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "JHW1 Jimi Hendrix PSYCH SERIES FUZZ FACE",
+		"Width": 1.63,
+		"Height": 3.55,
+		"Image": "mxr-jhw1-fuzz-facepng"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Valvenergy silk-drive",
+		"Width": 2.83,
+		"Height": 4.72,
+		"Image": "vox-valvenergy-silk-drive.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Ampero Switch",
+		"Width": 3.94,
+		"Height": 1.57,
+		"Image": "hotone-ampero-switch.png"
 	}
 ]
