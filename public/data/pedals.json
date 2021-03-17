@@ -5992,6 +5992,13 @@
 		"Image": "mastro-valvola-lem.png"
 	},
 	{
+		"Brand": "MeloAudio",
+		"Name": "EXP-001",
+		"Width": 2.20,
+		"Height": 5.51,
+		"Image": "meloaudio-exp-001.png"
+	},
+	{
 		"Brand": "MI Audio",
 		"Name": "Crunchbox",
 		"Width": 2.5,
