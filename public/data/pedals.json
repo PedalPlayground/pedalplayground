@@ -8554,6 +8554,13 @@
 		"Image": "sourceaudio-vertigo.png"
 	},
 	{
+		"Brand": "Source Audio",
+		"Name": "Ultrawave (Guitar)",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "sourceaudio-ultrawave.png"
+	},
+	{
 		"Brand": "Stone Deaf",
 		"Name": "Fig Fumb",
 		"Width": 4.45,
