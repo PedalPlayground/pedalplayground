@@ -1,4 +1,4 @@
-[
+﻿[
 	{
 		"Brand": "Xotic",
 		"Name": "SL Drive",
@@ -581,6 +581,13 @@
 		"Image": "altoids-tin.png"
 	},
 	{
+		"Brand": "Altoids",
+		"Name": "Smalls Tin",
+		"Width": 1.375,
+		"Height": 2.125,
+		"Image": "altoids-smalls-tin.png"
+	},
+	{
 		"Brand": "Amptweaker",
 		"Name": "Tight Drive Jr.",
 		"Width": 2.94,
@@ -890,6 +897,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DD-3t Digital Delay",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dd3t.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "DD-5 Digital Delay",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -943,6 +957,13 @@
 		"Width": 17.3125,
 		"Height": 5.4375,
 		"Image": "boss-es8.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "EV-30",
+		"Width": 3.149,
+		"Height": 7.559,
+		"Image": "boss-ev30.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -1174,6 +1195,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-rc3.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-5 Loop Station",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-rc5.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2707,6 +2735,13 @@
 		"Width": 1.65,
 		"Height": 3.65,
 		"Image": "disasterarea-microclock.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "MIDI Baby 3",
+		"Width": 4.409,
+		"Height": 2.362,
+		"Image": "disasterarea-midibaby3.png"
 	},
 	{
 		"Brand": "Disaster Area",
@@ -5783,6 +5818,13 @@
 	},
 	{
 		"Brand": "Line6",
+		"Name": "HX Stomp Blue Ltd",
+		"Width": 7,
+		"Height": 4.96,
+		"Image": "line6-hxstomp-ltd-blue.png"
+	},
+	{
+		"Brand": "Line6",
 		"Name": "HX Stomp XL",
 		"Width": 12.8,
 		"Height": 4.96,
@@ -5957,6 +5999,13 @@
 		"Image": "mastro-valvola-lem.png"
 	},
 	{
+		"Brand": "MeloAudio",
+		"Name": "EXP-001",
+		"Width": 2.20,
+		"Height": 5.51,
+		"Image": "meloaudio-exp-001.png"
+	},
+	{
 		"Brand": "MI Audio",
 		"Name": "Crunchbox",
 		"Width": 2.5,
@@ -6067,6 +6116,13 @@
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "mxr-dynacomp.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Dyna Comp Deluxe",
+		"Width": 2.37,
+		"Height": 4.37,
+		"Image": "mxr-dynacomp-deluxe.png"
 	},
 	{
 		"Brand": "MXR",
@@ -7348,6 +7404,20 @@
 		"Width": 2.65,
 		"Height": 4.87,
 		"Image": "oldbloodnoise-haunt.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Alpha Haunt",
+		"Width": 5.59,
+		"Height": 4.45,
+		"Image": "oldbloodnoise-alphahaunt.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Alpha Haunt V2",
+		"Width": 4.57,
+		"Height": 3.62,
+		"Image": "oldbloodnoise-alphahaunt-v2.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -10736,5 +10806,54 @@
 		"Width": 2.4,
 		"Height": 4.66,
 		"Image": "cusack-tremolo.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "JHW1 Jimi Hendrix PSYCH SERIES FUZZ FACE",
+		"Width": 1.63,
+		"Height": 3.55,
+		"Image": "mxr-jhw1-fuzz-facepng"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Valvenergy silk-drive",
+		"Width": 2.83,
+		"Height": 4.72,
+		"Image": "vox-valvenergy-silk-drive.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Ampero Switch",
+		"Width": 3.94,
+		"Height": 1.57,
+		"Image": "hotone-ampero-switch.png"
+  },
+	{
+		"Brand": "Fortin",
+		"Name": "Zuul Mini",
+		"Width": 1.52,
+		"Height": 3.64,
+		"Image": "fortin-zuul-mini.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Soloist",
+		"Width": 2.38,
+		"Height": 4.43,
+		"Image": "kingtonesoloist.png"
+	},
+	{
+		"Brand": "Cornerstone",
+		"Name": "Gladio SC",
+		"Width": 2.38,
+		"Height": 4.43,
+		"Image": "gladiosc.png"
+  },
+  {
+		"Brand": "Fortin",
+		"Name": "Roach",
+		"Width": 1.52,
+		"Height": 3.64,
+		"Image": "fortin-roach.png"
 	}
 ]
