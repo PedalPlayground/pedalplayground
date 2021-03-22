@@ -5994,7 +5994,7 @@
 	{
 		"Brand": "MeloAudio",
 		"Name": "EXP-001",
-		"Width": 2.20,
+		"Width": 2.2,
 		"Height": 5.51,
 		"Image": "meloaudio-exp-001.png"
 	},
@@ -8225,6 +8225,20 @@
 		"Image": "singularsound-beatbuddy.png"
 	},
 	{
+		"Brand": "Singular Sound",
+		"Name": "Midi Maestro",
+		"Width": 8.375,
+		"Height": 5.75,
+		"Image": "singularsound-midi-maestro.png"
+	},
+	{
+		"Brand": "Singular Sound",
+		"Name": "Footswitch+",
+		"Width": 5,
+		"Height": 3.5,
+		"Image": "singularsound-footswitch-plus.png"
+	},
+	{
 		"Brand": "Sinvertek",
 		"Name": "Distortion No 5",
 		"Width": 2.618,
@@ -9385,6 +9399,13 @@
 		"Width": 2.8,
 		"Height": 4.8,
 		"Image": "tc-electronic-trinity-t2-reverb.png"
+	},
+	{
+		"Brand": "TC Helicon",
+		"Name": "VoiceLive 3 Extreme",
+		"Width": 13.8,
+		"Height": 8.5,
+		"Image": "tchelicon-voicelive3extreme.png"
 	},
 	{
 		"Brand": "Tapestry Audio",
@@ -10820,7 +10841,7 @@
 		"Width": 3.94,
 		"Height": 1.57,
 		"Image": "hotone-ampero-switch.png"
-  },
+	},
 	{
 		"Brand": "Fortin",
 		"Name": "Zuul Mini",
@@ -10841,8 +10862,8 @@
 		"Width": 2.38,
 		"Height": 4.43,
 		"Image": "gladiosc.png"
-  },
-  {
+	},
+	{
 		"Brand": "Fortin",
 		"Name": "Roach",
 		"Width": 1.52,
