@@ -1,5 +1,12 @@
 [
 	{
+		"Brand": "Caseman",
+		"Name": "Gentleman Medium / Large",
+		"Width": 32.284,
+		"Height": 12.6,
+		"Image": "caseman-gentleman-medium.png"
+	},
+	{
 		"Brand": "Creation Music Co",
 		"Name": "Aero 24x16",
 		"Width": 24,
