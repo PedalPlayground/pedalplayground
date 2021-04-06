@@ -50,6 +50,13 @@
 	},
 	{
 		"Brand": "Cooper",
+		"Name": "Generation Loss V2",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "cooper-genloss2.png"
+	},
+	{
+		"Brand": "Cooper",
 		"Name": "Outward",
 		"Width": 3.7,
 		"Height": 4.85,
@@ -5230,6 +5237,13 @@
 	},
 	{
 		"Brand": "Jackson Audio",
+		"Name": "Asabi Overdrive Distortion",
+		"Width": 2.652,
+		"Height": 4.875,
+		"Image": "jackson-asabi.png"
+	},
+	{
+		"Brand": "Jackson Audio",
 		"Name": "Golden Boy",
 		"Width": 2.652,
 		"Height": 4.875,
@@ -5782,6 +5796,13 @@
 		"Image": "lehle-volume.png"
 	},
 	{
+		"Brand": "Lehle",
+		"Name": "Dual Expression",
+		"Width": 3.54331,
+		"Height": 7.87402,
+		"Image": "lehle-volume.png"
+	},
+	{
 		"Brand": "Line6",
 		"Name": "DL4 Delay",
 		"Width": 10,
@@ -5882,15 +5903,15 @@
 	{
 		"Brand": "Loopi",
 		"Name": "2:2",
-		"Width": 3.54,
-		"Height": 1.848,
+		"Width": 3.7,
+		"Height": 1.94,
 		"Image": "loopi-22.png"
 	},
 	{
 		"Brand": "Loopi",
 		"Name": "Mini Dual Latching Footswitch",
 		"Width": 3.68,
-		"Height": 1.6,
+		"Height": 1.72,
 		"Image": "loopi-dualfootswitch.png"
 	},
 	{
