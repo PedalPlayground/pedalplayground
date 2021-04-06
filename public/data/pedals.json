@@ -5874,21 +5874,28 @@
 	},
 	{
 		"Brand": "Line6",
-		"Name": "Relay Wireless G10",
+		"Name": "Relay G10 Wireless",
 		"Width": 3.88,
 		"Height": 3.88,
 		"Image": "line6-g10relay.png"
 	},
 	{
 		"Brand": "Line6",
-		"Name": "Relay Wireless G10S",
+		"Name": "Relay G30 Wireless",
+		"Width": 3.187,
+		"Height": 4.375,
+		"Image": "line6-g30relay.png"
+	},
+	{
+		"Brand": "Line6",
+		"Name": "Relay G10S Wireless",
 		"Width": 3.5,
 		"Height": 5,
 		"Image": "line6-g10srelay.png"
 	},
 	{
 		"Brand": "Line6",
-		"Name": "Relay Wireless G70",
+		"Name": "Relay G70 Wireless",
 		"Width": 4,
 		"Height": 5.5,
 		"Image": "line6-g70relay.png"
