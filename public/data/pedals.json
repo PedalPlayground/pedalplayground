@@ -4676,6 +4676,20 @@
 		"Image": "jet-micro.png"
 	},
 	{
+		"Brand": "Jet",
+		"Name": "Revelation Reverb 2.0 (White)",
+		"Width": 2.88,
+		"Height": 4.93,
+		"Image": "jet-revelationv2-white.png"
+	},
+	{
+		"Brand": "Jet",
+		"Name": "Revelation Reverb 2.0 (Purple)",
+		"Width": 2.88,
+		"Height": 4.93,
+		"Image": "jet-revelationv2-purple.png"
+	},
+	{
 		"Brand": "Hotone",
 		"Name": "Binary Mod",
 		"Width": 4.76378,
