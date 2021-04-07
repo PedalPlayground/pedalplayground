@@ -3697,6 +3697,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Nano Metal Muff",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "ehx-nano-metal-muff.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Dual Expression Pedal",
 		"Width": 3.5,
 		"Height": 10,
