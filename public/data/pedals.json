@@ -3054,9 +3054,23 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Avalanche Run",
-		"Width": 3.7,
-		"Height": 4.625,
+		"Width": 3.86,
+		"Height": 4.93,
 		"Image": "eqd-avalancherun.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Avalanche Run V2",
+		"Width": 4.15,
+		"Height": 4.85,
+		"Image": "eqd-avalancherunv2.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Astral Destiny",
+		"Width": 3.84,
+		"Height": 4.815,
+		"Image": "eqd-astraldestiny.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -3152,8 +3166,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Night Wire",
-		"Width": 2.6,
-		"Height": 4.93,
+		"Width": 2.63,
+		"Height": 4.87,
 		"Image": "earthquaker-nightwire.png"
 	},
 	{
@@ -3166,8 +3180,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Palisades",
-		"Width": 5.5,
-		"Height": 4.5,
+		"Width": 5.61,
+		"Height": 4.96,
 		"Image": "earthquaker-palisades.png"
 	},
 	{
@@ -4888,50 +4902,50 @@
 	{
 		"Brand": "JHS",
 		"Name": "3 Series Chorus",
-		"Width": 2.6,
-		"Height": 4.4,
+		"Width": 2.67,
+		"Height": 4.44,
 		"Image": "jhs-3serieschorus.png"
 	},
 	{
 		"Brand": "JHS",
 		"Name": "3 Series Delay",
-		"Width": 2.6,
-		"Height": 4.4,
+		"Width": 2.67,
+		"Height": 4.44,
 		"Image": "jhs-3seriesdelay.png"
 	},
 	{
 		"Brand": "JHS",
 		"Name": "3 Series Reverb",
-		"Width": 2.6,
-		"Height": 4.4,
+		"Width": 2.67,
+		"Height": 4.44,
 		"Image": "jhs-3seriesreverb.png"
 	},
 	{
 		"Brand": "JHS",
 		"Name": "3 Series Distortion",
-		"Width": 2.6,
-		"Height": 4.4,
+		"Width": 2.67,
+		"Height": 4.44,
 		"Image": "jhs-3seriesdist.png"
 	},
 	{
 		"Brand": "JHS",
 		"Name": "3 Series Fuzz",
-		"Width": 2.6,
-		"Height": 4.4,
+		"Width": 2.67,
+		"Height": 4.44,
 		"Image": "jhs-3seriesfuzz.png"
 	},
 	{
 		"Brand": "JHS",
 		"Name": "3 Series Overdrive",
-		"Width": 2.6,
-		"Height": 4.4,
+		"Width": 2.67,
+		"Height": 4.44,
 		"Image": "jhs-3seriesoverdrive.png"
 	},
 	{
 		"Brand": "JHS",
 		"Name": "3 Series Compressor",
-		"Width": 2.6,
-		"Height": 4.4,
+		"Width": 2.67,
+		"Height": 4.44,
 		"Image": "jhs-3seriescomp.png"
 	},
 	{
