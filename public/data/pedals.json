@@ -3655,6 +3655,13 @@
 	},
 	{
 		"Brand": "Nobels",
+		"Name": "ODR-1",
+		"Width": 2.68,
+		"Height": 4.92,
+		"Image": "nobels-odr-1.png"
+	},
+	{
+		"Brand": "Nobels",
 		"Name": "ODR Mini",
 		"Width": 1.98,
 		"Height": 3.66,
