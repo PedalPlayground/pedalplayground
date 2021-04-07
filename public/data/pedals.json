@@ -9227,6 +9227,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Echobrain",
+		"Width": 2.9,
+		"Height": 5.2,
+		"Image": "tc-echobrain.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "El Mocambo",
 		"Width": 2.9,
 		"Height": 5.2,
