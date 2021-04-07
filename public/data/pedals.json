@@ -9143,6 +9143,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Dark Matter",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tc-dark-matter.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Ditto",
 		"Width": 2,
 		"Height": 3.5,
