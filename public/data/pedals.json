@@ -4704,6 +4704,27 @@
 		"Image": "hotone_wally_plus.png"
 	},
 	{
+		"Brand": "Hudson",
+		"Name": "Broadcast",
+		"Width": 4.7,
+		"Height": 3.98,
+		"Image": "hudson-broadcast1.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast Dual Switch",
+		"Width": 4.7,
+		"Height": 3.85,
+		"Image": "hudson-broadcast.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Sidecar",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "hudson-sidecar.png"
+	},
+	{
 		"Brand": "Hughes & Kettner",
 		"Name": "Tube Rotosphere MK II",
 		"Width": 8,
