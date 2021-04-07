@@ -10670,9 +10670,16 @@
 	{
 		"Brand": "Xotic",
 		"Name": "RC Booster",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.66,
+		"Height": 4.42,
 		"Image": "xotic-rcbooster.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "RC Booster V2",
+		"Width": 2.61,
+		"Height": 4.42,
+		"Image": "xotic-rcboosterv2.png"
 	},
 	{
 		"Brand": "Xotic",
