@@ -5090,6 +5090,27 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Twin Twelve",
+		"Width": 2.89,
+		"Height": 4.87,
+		"Image": "jhs-twintwelve.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Crayon",
+		"Width": 2.89,
+		"Height": 4.87,
+		"Image": "jhs-crayon.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Cheese Ball",
+		"Width": 2.89,
+		"Height": 4.87,
+		"Image": "jhs-cheeseball.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Clover",
 		"Width": 2.85,
 		"Height": 4.87,
@@ -5224,9 +5245,16 @@
 	{
 		"Brand": "JHS",
 		"Name": "Lucky Cat (Pink)",
-		"Width": 2.85,
-		"Height": 4.93,
+		"Width": 2.83,
+		"Height": 4.9,
 		"Image": "jhs-luckycat-pink.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Unicorn V2",
+		"Width": 2.83,
+		"Height": 4.9,
+		"Image": "jhs-unicornv2.png"
 	},
 	{
 		"Brand": "JHS",
