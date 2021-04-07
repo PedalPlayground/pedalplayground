@@ -5482,6 +5482,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "PXL-LIVE",
+		"Width": 21.29921,
+		"Height": 2.637795,
+		"Image": "joyo-pxl-live.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "Irontune",
 		"Width": 1.5,
 		"Height": 2.9,
