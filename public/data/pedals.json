@@ -7841,6 +7841,13 @@
 	},
 	{
 		"Brand": "Pettyjohn",
+		"Name": "Rail",
+		"Width": 2.4,
+		"Height": 4.57,
+		"Image": "pettyjohn-rail.png"
+	},
+	{
+		"Brand": "Pettyjohn",
 		"Name": "Chime",
 		"Width": 2.7,
 		"Height": 4.72,
