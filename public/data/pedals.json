@@ -2563,6 +2563,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Bad Monkey",
+		"Width": 3,
+		"Height": 4.865,
+		"Image": "digitech-badmonkey.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "FreqOut",
 		"Width": 2.875,
 		"Height": 4.75,
@@ -2767,8 +2774,8 @@
 	{
 		"Brand": "Disaster Area",
 		"Name": "MIDI Baby 3",
-		"Width": 4.409,
-		"Height": 2.362,
+		"Width": 4.41,
+		"Height": 2.64,
 		"Image": "disasterarea-midibaby3.png"
 	},
 	{
