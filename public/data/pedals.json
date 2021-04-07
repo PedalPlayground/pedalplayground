@@ -2338,6 +2338,27 @@
 		"Image": "dsmnoisemaker-omnicabsim.png"
 	},
 	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes X",
+		"Width": 2.95,
+		"Height": 4.37,
+		"Image": "darkglass-microtubes-x.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes X7",
+		"Width": 4.21,
+		"Height": 4.72,
+		"Image": "darkglass-microtubes-x7.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes X Ultra",
+		"Width": 4.92,
+		"Height": 3.77,
+		"Image": "darkglass-microtubes-x-ultra.png"
+	},
+	{
 		"Brand": "Dawner Prince",
 		"Name": "Boonar",
 		"Width": 4.7,
@@ -10855,7 +10876,7 @@
 		"Width": 3.94,
 		"Height": 1.57,
 		"Image": "hotone-ampero-switch.png"
-  },
+	},
 	{
 		"Brand": "Fortin",
 		"Name": "Zuul Mini",
@@ -10876,8 +10897,8 @@
 		"Width": 2.38,
 		"Height": 4.43,
 		"Image": "gladiosc.png"
-  },
-  {
+	},
+	{
 		"Brand": "Fortin",
 		"Name": "Roach",
 		"Width": 1.52,
