@@ -6924,6 +6924,13 @@
 	},
 	{
 		"Brand": "Mesa Boogie",
+		"Name": "High-Wire Dual Buffer / Output Boost",
+		"Width": 2.6,
+		"Height": 4.48,
+		"Image": "mesa-highwire.png"
+	},
+	{
+		"Brand": "Mesa Boogie",
 		"Name": "Flux-Drive",
 		"Width": 2.75,
 		"Height": 4.75,
