@@ -2338,6 +2338,27 @@
 		"Image": "dsmnoisemaker-omnicabsim.png"
 	},
 	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes X",
+		"Width": 2.95,
+		"Height": 4.37,
+		"Image": "darkglass-microtubes-x.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes X7",
+		"Width": 4.21,
+		"Height": 4.72,
+		"Image": "darkglass-microtubes-x7.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes X Ultra",
+		"Width": 4.92,
+		"Height": 3.77,
+		"Image": "darkglass-microtubes-x-ultra.png"
+	},
+	{
 		"Brand": "Dawner Prince",
 		"Name": "Boonar",
 		"Width": 4.7,
@@ -3645,6 +3666,13 @@
 		"Width": 2.75,
 		"Height": 4.4,
 		"Image": "ehx-opamp.png"
+	},
+	{
+		"Brand": "Nobels",
+		"Name": "ODR-1",
+		"Width": 2.68,
+		"Height": 4.92,
+		"Image": "nobels-odr-1.png"
 	},
 	{
 		"Brand": "Nobels",
@@ -6036,7 +6064,7 @@
 	{
 		"Brand": "MeloAudio",
 		"Name": "EXP-001",
-		"Width": 2.20,
+		"Width": 2.2,
 		"Height": 5.51,
 		"Image": "meloaudio-exp-001.png"
 	},
@@ -8267,6 +8295,20 @@
 		"Image": "singularsound-beatbuddy.png"
 	},
 	{
+		"Brand": "Singular Sound",
+		"Name": "Midi Maestro",
+		"Width": 8.375,
+		"Height": 5.75,
+		"Image": "singularsound-midi-maestro.png"
+	},
+	{
+		"Brand": "Singular Sound",
+		"Name": "Footswitch+",
+		"Width": 5,
+		"Height": 3.5,
+		"Image": "singularsound-footswitch-plus.png"
+	},
+	{
 		"Brand": "Sinvertek",
 		"Name": "Distortion No 5",
 		"Width": 2.618,
@@ -8594,6 +8636,13 @@
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "sourceaudio-vertigo.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Ultrawave (Guitar)",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "sourceaudio-ultrawave.png"
 	},
 	{
 		"Brand": "Stone Deaf",
@@ -9157,6 +9206,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Dark Matter",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tc-dark-matter.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Ditto",
 		"Width": 2,
 		"Height": 3.5,
@@ -9189,6 +9245,13 @@
 		"Width": 2.9,
 		"Height": 5.2,
 		"Image": "tc-drip.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Echobrain",
+		"Width": 2.9,
+		"Height": 5.2,
+		"Image": "tc-echobrain.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -9427,6 +9490,13 @@
 		"Width": 2.8,
 		"Height": 4.8,
 		"Image": "tc-electronic-trinity-t2-reverb.png"
+	},
+	{
+		"Brand": "TC Helicon",
+		"Name": "VoiceLive 3 Extreme",
+		"Width": 13.8,
+		"Height": 8.5,
+		"Image": "tchelicon-voicelive3extreme.png"
 	},
 	{
 		"Brand": "Tapestry Audio",
@@ -10862,7 +10932,7 @@
 		"Width": 3.94,
 		"Height": 1.57,
 		"Image": "hotone-ampero-switch.png"
-  },
+	},
 	{
 		"Brand": "Fortin",
 		"Name": "Zuul Mini",
@@ -10883,8 +10953,8 @@
 		"Width": 2.38,
 		"Height": 4.43,
 		"Image": "gladiosc.png"
-  },
-  {
+	},
+	{
 		"Brand": "Fortin",
 		"Name": "Roach",
 		"Width": 1.52,
