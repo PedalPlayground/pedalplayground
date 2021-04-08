@@ -485,57 +485,57 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.84,
+		"Height": 4.79,
 		"Image": "alexander-calavera.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Quadrant",
-		"Width": 2.85,
-		"Height": 4.87,
+		"Width": 2.84,
+		"Height": 4.79,
 		"Image": "alexander-quadrant.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Chesapeake",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.96,
+		"Height": 4.79,
 		"Image": "alexander-chesapeake.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Clang",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.88,
+		"Height": 4.79,
 		"Image": "alexander-clang.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "F13 Flanger",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.88,
+		"Height": 4.79,
 		"Image": "alexander-flange.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Golden Summer",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.79,
+		"Height": 4.79,
 		"Image": "alexander-goldensummer.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "History Lesson",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.88,
+		"Height": 4.79,
 		"Image": "alexander-historylesson.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Jubilee",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.83,
+		"Height": 4.79,
 		"Image": "alexander-jubilee.png"
 	},
 	{
@@ -548,15 +548,15 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Radical Delay",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.88,
+		"Height": 4.79,
 		"Image": "alexander-radical.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Space Expander",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.86,
+		"Height": 4.79,
 		"Image": "alexander-spaceexpander.png"
 	},
 	{
@@ -569,16 +569,23 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Syntax Error",
-		"Width": 2.54,
-		"Height": 4.3,
+		"Width": 2.84,
+		"Height": 4.79,
 		"Image": "alexander-syntaxerror.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Space Race",
-		"Width": 2.54,
-		"Height": 4.3,
+		"Width": 2.88,
+		"Height": 4.79,
 		"Image": "alexander-space-race.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Wavelength",
+		"Width": 2.88,
+		"Height": 4.79,
+		"Image": "alexander-wavelength.png"
 	},
 	{
 		"Brand": "Altoids",
