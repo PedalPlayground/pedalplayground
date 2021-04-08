@@ -350,6 +350,13 @@
 		"Image": "browneamps-protein.png"
 	},
 	{
+		"Brand": "Browne Amplification",
+		"Name": "T4 Fuzz",
+		"Width": 2.85,
+		"Height": 4.78,
+		"Image": "browne-t4.png"
+	},
+	{
 		"Brand": "AMT",
 		"Name": "M-1",
 		"Width": 2.9,
@@ -1779,16 +1786,23 @@
 	},
 	{
 		"Brand": "Bondi Effects",
+		"Name": "Art Van Delay",
+		"Width": 2.81,
+		"Height": 4.8,
+		"Image": "bondi-artvan.png"
+	},
+	{
+		"Brand": "Bondi Effects",
 		"Name": "Breakers",
-		"Width": 2.773,
-		"Height": 4.7,
+		"Width": 2.83,
+		"Height": 4.78,
 		"Image": "bondi-breakers.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Del Mar",
-		"Width": 2.773,
-		"Height": 4.7,
+		"Width": 2.85,
+		"Height": 4.79,
 		"Image": "bondi-delmar.png"
 	},
 	{
@@ -2906,17 +2920,24 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "DVP3 Volume",
+		"Name": "DVP3 Volume X",
 		"Width": 3.858,
 		"Height": 10,
 		"Image": "dunlop-dvp3.png"
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "DVP4 Mini Volume",
+		"Name": "DVP4 Volume X Mini",
 		"Width": 2.97,
 		"Height": 6,
 		"Image": "dunlop-dvp4.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "DVP5 Volume X 8",
+		"Width": 3.858,
+		"Height": 8,
+		"Image": "dunlop-volume-x-8.png"
 	},
 	{
 		"Brand": "Dunlop",
