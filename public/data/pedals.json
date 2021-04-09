@@ -8778,6 +8778,83 @@
 		"Image": "sourceaudio-ultrawave.png"
 	},
 	{
+		"Brand": "Spaceman",
+		"Name": "Titan II",
+		"Width": 2.86,
+		"Height": 4.78,
+		"Image": "spaceman-titanii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Saturn VI",
+		"Width": 2.83,
+		"Height": 4.78,
+		"Image": "spaceman-saturnvi.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Apollo VII",
+		"Width": 2.83,
+		"Height": 4.78,
+		"Image": "spaceman-apollovii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Sputnik",
+		"Width": 2.83,
+		"Height": 4.78,
+		"Image": "spaceman-apollovii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Sputnik III",
+		"Width": 4,
+		"Height": 4.7,
+		"Image": "spaceman-sputnikiii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Gemini IV",
+		"Width": 3.98,
+		"Height": 4.7,
+		"Image": "spaceman-geminiiv.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Nebula",
+		"Width": 3.98,
+		"Height": 4.7,
+		"Image": "spaceman-nebula.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Polaris",
+		"Width": 3.99,
+		"Height": 4.7,
+		"Image": "spaceman-polaris.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Mission Control",
+		"Width": 4.98,
+		"Height": 3.7,
+		"Image": "spaceman-missioncontrol.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Sputnik II",
+		"Width": 6.45,
+		"Height": 4.75,
+		"Image": "spaceman-sputnikii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Orion",
+		"Width": 6.45,
+		"Height": 4.75,
+		"Image": "spaceman-orion.png"
+	},
+	{
 		"Brand": "Stone Deaf",
 		"Name": "Fig Fumb",
 		"Width": 4.45,
