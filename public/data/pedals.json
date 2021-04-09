@@ -8800,6 +8800,13 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Atlas III",
+		"Width": 2.83,
+		"Height": 4.78,
+		"Image": "spaceman-atlasiii.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Sputnik",
 		"Width": 2.83,
 		"Height": 4.78,
