@@ -11212,5 +11212,12 @@
 		"Width": 1.52,
 		"Height": 3.64,
 		"Image": "fortin-roach.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "CabZone X",
+		"Width": 4.33,
+		"Height": 2.83,
+		"Image": "shiftline-cabzonex.png"
 	}
 ]
