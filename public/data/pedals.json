@@ -2780,13 +2780,6 @@
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "DMC-2",
-		"Width": 3.6,
-		"Height": 1.5,
-		"Image": "disasterarea-dmc2.png"
-	},
-	{
-		"Brand": "Disaster Area",
 		"Name": "Micro Clock",
 		"Width": 1.65,
 		"Height": 3.65,
@@ -2798,6 +2791,20 @@
 		"Width": 4.41,
 		"Height": 2.64,
 		"Image": "disasterarea-midibaby3.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "MIDI Baby",
+		"Width": 2.346,
+		"Height": 2,
+		"Image": "disasterarea-midibaby.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "MIDI Box 4",
+		"Width": 4.42,
+		"Height": 2.64,
+		"Image": "disasterarea-midibox4.png"
 	},
 	{
 		"Brand": "Disaster Area",
@@ -2826,6 +2833,13 @@
 		"Width": 4.8,
 		"Height": 2.6,
 		"Image": "disasterarea-qconnect.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DPC.Micro",
+		"Width": 4.9,
+		"Height": 2.88,
+		"Image": "disasterarea-dpcmicro.png"
 	},
 	{
 		"Brand": "Disaster Area",
