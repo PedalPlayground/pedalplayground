@@ -1,5 +1,12 @@
 ﻿[
 	{
+		"Brand": "Analog Endeavors",
+		"Name": "Aux 3",
+		"Width": 4.78,
+		"Height": 2.76,
+		"Image": "analogendeavours-aux.png"
+	},
+	{
 		"Brand": "Xotic",
 		"Name": "SL Drive",
 		"Width": 1.9,
@@ -5957,6 +5964,13 @@
 		"Image": "korg-pitchblackmini.png"
 	},
 	{
+		"Brand": "Land Devices",
+		"Name": "HP-2",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "landdevices-hp2.png"
+	},
+	{
 		"Brand": "Lehle",
 		"Name": "Mono Volume",
 		"Width": 3.94,
@@ -5968,7 +5982,7 @@
 		"Name": "Dual Expression",
 		"Width": 3.54331,
 		"Height": 7.87402,
-		"Image": "lehle-volume.png"
+		"Image": "lehle-dualexpression.png"
 	},
 	{
 		"Brand": "Line6",
