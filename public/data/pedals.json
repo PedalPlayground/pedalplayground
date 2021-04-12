@@ -316,6 +316,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Lucydreamer",
+		"Width": 2.97,
+		"Height": 4.79,
+		"Image": "jam-lucydreamer.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Ripply Fall",
 		"Width": 5.1,
 		"Height": 3.9,
@@ -8583,6 +8590,13 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "NU-33 Vinyl Engine",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "solidgold-nu33.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Electroman",
 		"Width": 4.67,
 		"Height": 3.68,
@@ -8619,8 +8633,8 @@
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "Zeta DLX",
-		"Width": 4.67,
-		"Height": 3.68,
+		"Width": 4.7,
+		"Height": 3.7,
 		"Image": "solidgoldfx-zetadlx.png"
 	},
 	{

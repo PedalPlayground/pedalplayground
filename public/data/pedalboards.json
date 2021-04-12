@@ -312,7 +312,7 @@
 		"Name": "Classic 1",
 		"Width": 22,
 		"Height": 12.5,
-		"Image": "pedaltrain-1.png"
+		"Image": "pedaltrain-classic1.png"
 	},
 	{
 		"Brand": "Pedaltrain",
@@ -333,7 +333,7 @@
 		"Name": "Classic 3",
 		"Width": 24,
 		"Height": 16,
-		"Image": "pedaltrain-pt-3.png"
+		"Image": "pedaltrain-classic3.png"
 	},
 	{
 		"Brand": "Pedaltrain",
