@@ -7,6 +7,20 @@
 		"Image": "caseman-gentleman-medium.png"
 	},
 	{
+		"Brand": "Caseman",
+		"Name": "Gentleman Medium",
+		"Width": 23.9,
+		"Height": 12.6,
+		"Image": "caseman-medium.png"
+	},
+	{
+		"Brand": "Caseman",
+		"Name": "Gentleman Small",
+		"Width": 16,
+		"Height": 12.6,
+		"Image": "caseman-small.png"
+	},
+	{
 		"Brand": "Creation Music Co",
 		"Name": "Aero 24x16",
 		"Width": 24,
@@ -123,7 +137,7 @@
 		"Name": "Large",
 		"Width": 32,
 		"Height": 16,
-		"Image": "mono-large.png"
+		"Image": "mono-large-pedalboard.png"
 	},
 	{
 		"Brand": "Mono",

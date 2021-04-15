@@ -128,8 +128,8 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Iron Horse V2",
-		"Width": 2.9,
-		"Height": 4.77,
+		"Width": 2.79,
+		"Height": 4.84,
 		"Image": "walrus-ironhorse-v2.png"
 	},
 	{
@@ -248,7 +248,7 @@
 		"Brand": "Walrus",
 		"Name": "Fathom",
 		"Width": 2.6,
-		"Height": 4.77,
+		"Height": 4.99,
 		"Image": "wa-fathom.png"
 	},
 	{
@@ -280,6 +280,13 @@
 		"Image": "jampedals-retrovibe1.png"
 	},
 	{
+		"Brand": "Jam Pedals",
+		"Name": "Chill",
+		"Width": 2.75,
+		"Height": 4.42,
+		"Image": "jam-chilli.png"
+	},
+	{
 		"Brand": "Roland",
 		"Name": "EV-5",
 		"Width": 3.4375,
@@ -304,14 +311,14 @@
 		"Brand": "Jam Pedals",
 		"Name": "Rattler",
 		"Width": 2.7,
-		"Height": 4.3,
+		"Height": 4.42,
 		"Image": "jampedals-rattler1.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Waterfall",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 2.97,
+		"Height": 4.79,
 		"Image": "jampedals-waterfall1.png"
 	},
 	{
@@ -793,8 +800,8 @@
 	{
 		"Brand": "Benson",
 		"Name": "Preamp",
-		"Width": 4.67,
-		"Height": 3.7,
+		"Width": 4.69,
+		"Height": 3.85,
 		"Image": "benson-preamp.png"
 	},
 	{
@@ -2301,6 +2308,34 @@
 		"Width": 3.8189,
 		"Height": 8.66142,
 		"Image": "colorsound-powerboost.png"
+	},
+	{
+		"Brand": "Coppersound",
+		"Name": "Daedalus",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "coppersound-daedalus.png"
+	},
+	{
+		"Brand": "Coppersound",
+		"Name": "Foxcatcher",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "coppersound-foxcatcher.png"
+	},
+	{
+		"Brand": "Coppersound",
+		"Name": "Loma Prieta",
+		"Width": 4.7,
+		"Height": 4,
+		"Image": "coppersound-lomaprieta.png"
+	},
+	{
+		"Brand": "Coppersound",
+		"Name": "Polaris",
+		"Width": 4.7,
+		"Height": 3.90,
+		"Image": "coppersound-polaris.png"
 	},
 	{
 		"Brand": "Cioks",
@@ -4277,6 +4312,13 @@
 		"Image": "fractal-axe8.png"
 	},
 	{
+		"Brand": "Fractal Audio Systems",
+		"Name": "FM-3",
+		"Width": 11.063,
+		"Height": 9.29134,
+		"Image": "fractal-fm3.png"
+	},
+	{
 		"Brand": "FreeTheTone",
 		"Name": "Ambi Space AS-1R",
 		"Width": 4.72,
@@ -5609,8 +5651,8 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Compressor Plus",
-		"Width": 2.58,
-		"Height": 4.3,
+		"Width": 2.68,
+		"Height": 4.42,
 		"Image": "keeley-compressor-plus.png"
 	},
 	{
@@ -7462,6 +7504,13 @@
 		"Image": "musicomlab-efxle.png"
 	},
 	{
+		"Brand": "Nordvang",
+		"Name": "83' Drive",
+		"Width": 5.72,
+		"Height": 4.77,
+		"Image": "nordvang-83drive.png"
+	},
+	{
 		"Brand": "NUX",
 		"Name": "Loop Core",
 		"Width": 2.95,
@@ -7597,8 +7646,8 @@
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Dark Star",
-		"Width": 2.85,
-		"Height": 4.87,
+		"Width": 2.88,
+		"Height": 4.93,
 		"Image": "oldblood-darkstar.png"
 	},
 	{
@@ -10208,8 +10257,8 @@
 	{
 		"Brand": "Walrus",
 		"Name": "385 Overdrive",
-		"Width": 2.6,
-		"Height": 4.77,
+		"Width": 2.87,
+		"Height": 4.8,
 		"Image": "walrus-385.png"
 	},
 	{
@@ -10264,8 +10313,8 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Contraband",
-		"Width": 2.55,
-		"Height": 4.39,
+		"Width": 2.74,
+		"Height": 4.45,
 		"Image": "walrus-contraband.png"
 	},
 	{
@@ -10293,14 +10342,14 @@
 		"Brand": "Walrus",
 		"Name": "Ages",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 4.86,
 		"Image": "walrus-ages.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Deep Six V3 LE",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 4.86,
 		"Image": "walrus-deepsix-v3.png"
 	},
 	{
@@ -10356,7 +10405,7 @@
 		"Brand": "Walrus",
 		"Name": "Julia",
 		"Width": 2.85,
-		"Height": 4.87,
+		"Height": 5,
 		"Image": "walrus-julia.png"
 	},
 	{
