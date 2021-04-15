@@ -2165,7 +2165,7 @@
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Brothers",
-		"Width": 2.85,
+		"Width": 2.88,
 		"Height": 4.85,
 		"Image": "chasebliss-brothers.png"
 	},
@@ -3314,7 +3314,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Plumes",
 		"Width": 2.6,
-		"Height": 4.97,
+		"Height": 4.92,
 		"Image": "earthquaker-plumes.png"
 	},
 	{
@@ -5693,8 +5693,8 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Compressor",
-		"Width": 2.58,
-		"Height": 4.3,
+		"Width": 2.77,
+		"Height": 4.5,
 		"Image": "keeley-compressor.png"
 	},
 	{
@@ -6344,8 +6344,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "Carbon Copy",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.59,
+		"Height": 4.42,
 		"Image": "mxr-carboncopy.png"
 	},
 	{
@@ -6442,8 +6442,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "Phase 90",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.59,
+		"Height": 4.42,
 		"Image": "mxr-phase90.png"
 	},
 	{
@@ -10152,8 +10152,8 @@
 	{
 		"Brand": "Vemuram",
 		"Name": "Jan Ray",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.56,
+		"Height": 4.42,
 		"Image": "vemuram-janray.png"
 	},
 	{
