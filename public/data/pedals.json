@@ -3704,6 +3704,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Q-Tron+",
+		"Width": 5.75,
+		"Height": 4.75,
+		"Image": "ehx-qtronplus.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Pitch Fork",
 		"Width": 2.75,
 		"Height": 4.4,
