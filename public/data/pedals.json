@@ -5153,6 +5153,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Firefly",
+		"Width": 2.9,
+		"Height": 4.87,
+		"Image": "jhs-firefly.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Bonsai",
 		"Width": 2.85,
 		"Height": 4.87,
