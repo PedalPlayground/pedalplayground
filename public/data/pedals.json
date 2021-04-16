@@ -6378,6 +6378,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Analog Chorus",
+		"Width": 2.65,
+		"Height": 4.42,
+		"Image": "mxr-analogchorus.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Tremolo",
 		"Width": 2.65,
 		"Height": 4.4,
