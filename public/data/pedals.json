@@ -294,6 +294,13 @@
 		"Image": "boss-ev5.png"
 	},
 	{
+		"Brand": "Rawkworks",
+		"Name": "Light OD",
+		"Width": 2.62,
+		"Height": 4.91,
+		"Image": "rawkworks-lightod.png"
+	},
+	{
 		"Brand": "Rolls",
 		"Name": "MX28 Stereo Mini-Mix VI",
 		"Width": 4.25,
