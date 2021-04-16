@@ -308,6 +308,13 @@
 		"Image": "boss-ev5.png"
 	},
 	{
+		"Brand": "BOSS",
+		"Name": "GA-FC",
+		"Width": 15.45,
+		"Height": 3.22,
+		"Image": "boss-gafc.png"
+	},
+	{
 		"Brand": "Jam Pedals",
 		"Name": "Rattler",
 		"Width": 2.7,
