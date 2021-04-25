@@ -5622,6 +5622,27 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "R-01 Tauren",
+		"Width": 2.75,
+		"Height": 4.33,
+		"Image": "joyo-r01-tauren.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-03 Uzi",
+		"Width": 2.75,
+		"Height": 4.33,
+		"Image": "joyo-r03-uzi.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-05 Maximum",
+		"Width": 4.92,
+		"Height": 3.2,
+		"Image": "joyo-r05-maximum.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "Wooden Sound",
 		"Width": 1.72,
 		"Height": 2.83,
