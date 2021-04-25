@@ -11187,6 +11187,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "UC200",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-uc200.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "VD400",
 		"Width": 2.755,
 		"Height": 4.842,
