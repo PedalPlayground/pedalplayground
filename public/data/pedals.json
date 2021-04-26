@@ -379,10 +379,24 @@
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein",
+		"Name": "Protein (Black)",
 		"Width": 4.91,
 		"Height": 3.7,
-		"Image": "browneamps-protein.png"
+		"Image": "browneamps-protein-black.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein (Green)",
+		"Width": 4.91,
+		"Height": 3.7,
+		"Image": "browneamps-protein-green.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein (White)",
+		"Width": 4.91,
+		"Height": 3.7,
+		"Image": "browneamps-protein-white.png"
 	},
 	{
 		"Brand": "Browne Amplification",
@@ -1097,6 +1111,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ge7.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "HM-2 Heavy Metal",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-hm2.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2675,6 +2696,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Jamman Stereo",
+		"Width": 6.7,
+		"Height": 6.84,
+		"Image": "digitech-jamman-stereo.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Looking Glass",
 		"Width": 2.63,
 		"Height": 4.68,
@@ -3165,6 +3193,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Acqueduct",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "earthquaker-acqueduct.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Swiss Things",
 		"Width": 5.875,
 		"Height": 4.875,
@@ -3645,6 +3680,13 @@
 		"Width": 2.75,
 		"Height": 4.4,
 		"Image": "ehx-glove.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
+		"Name": "Holy Grail Nano",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "ehx-holy-grail-nano.png"
 	},
 	{
 		"Brand": "Electro Harmonix",
