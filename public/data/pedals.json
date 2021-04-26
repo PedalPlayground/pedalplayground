@@ -11221,6 +11221,41 @@
 		"Image": "behringer-nr300.png"
 	},
 	{
+		"Brand": "Behringer",
+		"Name": "SF300",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-sf300.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "TO800",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-to800.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "UC200",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-uc200.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "UV300",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-uv300.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "VD400",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-vd400.png"
+	},
+	{
 		"Brand": "Harley Benton",
 		"Name": "PowerPlant Tuner",
 		"Width": 2.75,
