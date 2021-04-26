@@ -2682,6 +2682,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Jamman Stereo",
+		"Width": 6.7,
+		"Height": 6.84,
+		"Image": "digitech-jamman-stereo.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Looking Glass",
 		"Width": 2.63,
 		"Height": 4.68,
