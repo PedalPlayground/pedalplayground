@@ -3662,6 +3662,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Holy Grail Nano",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "ehx-holy-grail-nano.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Mel9 Tape Replay Machine",
 		"Width": 3.95,
 		"Height": 4.7,
