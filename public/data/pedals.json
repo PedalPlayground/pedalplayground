@@ -1100,6 +1100,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "HM-2 Heavy Metal",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-hm2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "JB-2 Angry Driver",
 		"Width": 2.875,
 		"Height": 5.125,
