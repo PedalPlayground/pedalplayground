@@ -379,10 +379,24 @@
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein",
+		"Name": "Protein (Black)",
 		"Width": 4.91,
 		"Height": 3.7,
-		"Image": "browneamps-protein.png"
+		"Image": "browneamps-protein-black.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein (Green)",
+		"Width": 4.91,
+		"Height": 3.7,
+		"Image": "browneamps-protein-green.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein (White)",
+		"Width": 4.91,
+		"Height": 3.7,
+		"Image": "browneamps-protein-white.png"
 	},
 	{
 		"Brand": "Browne Amplification",
