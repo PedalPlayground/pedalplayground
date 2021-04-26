@@ -3165,6 +3165,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Acqueduct",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "earthquaker-acqueduct.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Swiss Things",
 		"Width": 5.875,
 		"Height": 4.875,
