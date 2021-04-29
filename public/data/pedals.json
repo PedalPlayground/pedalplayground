@@ -10725,6 +10725,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Ratsbane",
+		"Width": 1.72,
+		"Height": 3.64,
+		"Image": "wampler-ratsbane.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "Sovereign",
 		"Width": 2.6,
 		"Height": 4.93,
