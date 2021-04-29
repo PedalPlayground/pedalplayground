@@ -5671,6 +5671,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "R-02 Taichi",
+		"Width": 2.75,
+		"Height": 4.33,
+		"Image": "joyo-r02-taichi.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "R-03 Uzi",
 		"Width": 2.75,
 		"Height": 4.33,
