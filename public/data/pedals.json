@@ -995,6 +995,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DD-8 Digital Delay",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dd8.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "DM-2 Delay",
 		"Width": 2.875,
 		"Height": 5.125,
