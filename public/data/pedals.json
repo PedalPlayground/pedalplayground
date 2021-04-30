@@ -3697,6 +3697,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Hot Wax",
+		"Width": 4.25,
+		"Height": 4.75,
+		"Image": "ehx-hot-wax.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Mel9 Tape Replay Machine",
 		"Width": 3.95,
 		"Height": 4.7,
