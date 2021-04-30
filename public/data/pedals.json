@@ -7959,6 +7959,132 @@
 		"Image": "origin-cali76l.png"
 	},
 	{
+		"Brand": "Outlaw Effects",
+		"Name": "24K Reverb",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-24k.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Boilermaker Boost",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-boilermaker.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Cactus Juice Overdrive",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-cactus-juice.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Dead Man's Hand Overdrive",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-dead-mans-hand.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Deputy Marshal Distortion",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-deputy-marshal.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Dumbleweed Overdrive",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-dumbleweed.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Eldorado Echo",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-eldorado.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Five O'Clock Fuzz",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-five-oclock.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Hangman Overdrive",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-hangman.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Lasso Looper",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-lasso.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Lock Stock & Barrel Distortion",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-lock-stock-barrel.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Quick Draw Delay",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-quick-draw.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Rocker Box Tremolo",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-rocker-box.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Six Shooter II Tuner",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-six-shooter-2.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "The Wye ABY",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-the-wye.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Vigilante Chorus",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-vigilante.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Widow Maker Distortion",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-widow-maker.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "Wrangler Compressor",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-wrangler.png"
+	},
+	{
 		"Brand": "Pladask",
 		"Name": "Matrise",
 		"Width": 5.75,
