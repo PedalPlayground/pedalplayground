@@ -11236,6 +11236,27 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "EQ700",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-eq700.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "FC600",
+		"Width": 4.41,
+		"Height": 11.8,
+		"Image": "behringer-fc600.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "HM300",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-hm300.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "NR300",
 		"Width": 2.755,
 		"Height": 4.842,
