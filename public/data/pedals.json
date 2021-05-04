@@ -4249,6 +4249,13 @@
 		"Image": "fender-thebends.png"
 	},
 	{
+		"Brand": "Flower Pedals",
+		"Name": "Dandelion Tremolo V2",
+		"Width": 2.38,
+		"Height": 4.40,
+		"Image": "flower-pedals-dandelion-v2.png"
+	},
+	{
 		"Brand": "Foxpedal",
 		"Name": "Defector",
 		"Width": 2.6,
