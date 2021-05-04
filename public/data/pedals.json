@@ -455,6 +455,13 @@
 		"Image": "amt-f-clean.png"
 	},
 	{
+		"Brand": "AMT",
+		"Name": "WH-1 Optical WAH-WAH",
+		"Width": 2.82,
+		"Height": 4.33,
+		"Image": "amt-wh1.png"
+	},
+	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV",
 		"Width": 3.52,
