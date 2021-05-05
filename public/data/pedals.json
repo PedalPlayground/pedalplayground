@@ -3529,6 +3529,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Big Muff Pi Deluxe",
+		"Width": 5.75,
+		"Height": 4.75,
+		"Image": "ehx-bigmuffdeluxe.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Crayon",
 		"Width": 2.75,
 		"Height": 4.5,
@@ -5888,6 +5895,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Filaments",
+		"Width": 2.61,
+		"Height": 4.4,
+		"Image": "keeley-filaments.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Holy Fuzz",
 		"Width": 2.58,
 		"Height": 4.3,
@@ -6616,6 +6630,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Phase 90 EVH 35th Anniversary",
+		"Width": 2.5,
+		"Height": 4.3,
+		"Image": "mxr-phase90evh35th.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Phase 95 (mini)",
 		"Width": 1.5748,
 		"Height": 3.54,
@@ -6641,6 +6662,13 @@
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "mxr-eq.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Smartgate",
+		"Width": 2.5,
+		"Height": 4.3,
+		"Image": "mxr-smartgate.png"
 	},
 	{
 		"Brand": "MXR",
@@ -7670,6 +7698,13 @@
 		"Width": 12.6,
 		"Height": 3.8,
 		"Image": "musicomlab-efxle.png"
+	},
+	{
+		"Brand": "Mu-Tron",
+		"Name": "Micro-Tron IV",
+		"Width": 2.50,
+		"Height": 4.80,
+		"Image": "mu-tron-micro-tron-4.png"
 	},
 	{
 		"Brand": "Nordvang",
@@ -9665,6 +9700,13 @@
 		"Width": 2.83,
 		"Height": 4.8,
 		"Image": "tc-corona.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Corona Chorus 40th Anniversary",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tc-corona-chorus-plus.png"
 	},
 	{
 		"Brand": "TC Electronic",
