@@ -5040,6 +5040,13 @@
 		"Image": "ibanez-tubescreamermini.png"
 	},
 	{
+		"Brand": "Ibanez",
+		"Name": "WD7 Weeping Demon",
+		"Width": 6.10,
+		"Height": 10.20,
+		"Image": "ibanez-wd7.png"
+	},
+	{
 		"Brand": "ISP Technologies",
 		"Name": "Decimator G-string v2",
 		"Width": 2.9,
