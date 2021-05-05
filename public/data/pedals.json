@@ -3879,6 +3879,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Sovtek Deluxe Big Muff Pi",
+		"Width": 5.75,
+		"Height": 4.75,
+		"Image": "ehx-sovtek-deluxe-big-muff-pi.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Super Ego +",
 		"Width": 5.75,
 		"Height": 4.75,
