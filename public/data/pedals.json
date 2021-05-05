@@ -10304,6 +10304,13 @@
 		"Image": "vox-wah.png"
 	},
 	{
+		"Brand": "Whirlwind",
+		"Name": "Selector",
+		"Width": 4.50,
+		"Height": 3.50,
+		"Image": "whirlwind-selector.png"
+	},
+	{
 		"Brand": "WMD",
 		"Name": "Acoustic Trauma",
 		"Width": 4.78,
