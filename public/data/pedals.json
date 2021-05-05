@@ -3522,6 +3522,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Big Muff Pi Deluxe",
+		"Width": 5.75,
+		"Height": 4.75,
+		"Image": "ehx-bigmuffdeluxe.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Crayon",
 		"Width": 2.75,
 		"Height": 4.5,
