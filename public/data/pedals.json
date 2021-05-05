@@ -8436,6 +8436,13 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Gate Keeper",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-gate-keeper.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Infinity Looper",
 		"Width": 7.4,
 		"Height": 4.6,
