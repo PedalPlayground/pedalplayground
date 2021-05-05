@@ -6000,6 +6000,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Tesla MkIII Soviet Fuzz Bender",
+		"Width": 2.70,
+		"Height": 4.42,
+		"Image": "keeley-tesla-mk3.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Tone Workstation",
 		"Width": 4.7,
 		"Height": 3.7,
