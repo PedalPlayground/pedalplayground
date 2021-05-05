@@ -6125,6 +6125,13 @@
 		"Image": "lehle-dualexpression.png"
 	},
 	{
+		"Brand": "Little Robbie",
+		"Name": "Pilot",
+		"Width": 2.25,
+		"Height": 4.68,
+		"Image": "littlerobbie-pilot.png"
+	},
+	{
 		"Brand": "Line6",
 		"Name": "DL4 Delay",
 		"Width": 10,
