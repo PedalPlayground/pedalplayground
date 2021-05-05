@@ -1,4 +1,4 @@
-﻿[
+[
 	{
 		"Brand": "Analog Endeavors",
 		"Name": "Aux 3",
@@ -4668,6 +4668,13 @@
 		"Height": 4.53,
 		"Image": "gigrig-three2one.png"
 	},
+	{
+		"Brand": "Ground Control",
+		"Name": "Tsukuyomi",
+		"Width": 2.80,
+		"Height": 4.85,
+		"Image": "ground-control-tsukuyomi.png"
+  },
 	{
 		"Brand": "Ground Control",
 		"Name": "Amaterasu",
