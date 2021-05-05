@@ -4740,6 +4740,13 @@
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Soma",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "greer-soma.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Special Request",
 		"Width": 2.9,
 		"Height": 4.9,
