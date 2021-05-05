@@ -4781,6 +4781,20 @@
 		"Image": "greer-tonesmuggler.png"
 	},
 	{
+		"Brand": "Green Carrot Pedals",
+		"Name": "Infatuator (Blue)",
+		"Width": 4.85,
+		"Height": 4.20,
+		"Image": "gcp-infatuator-blue.png"
+	},
+	{
+		"Brand": "Green Carrot Pedals",
+		"Name": "Infatuator (Yellow)",
+		"Width": 4.85,
+		"Height": 4.20,
+		"Image": "gcp-infatuator-yellow.png"
+	},
+	{
 		"Brand": "Gurus",
 		"Name": "1959 Doubledecker",
 		"Width": 8.66,
