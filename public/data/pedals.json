@@ -5853,6 +5853,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Filaments",
+		"Width": 2.61,
+		"Height": 4.4,
+		"Image": "keeley-filaments.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Holy Fuzz",
 		"Width": 2.58,
 		"Height": 4.3,
