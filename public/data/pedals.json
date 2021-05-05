@@ -6482,6 +6482,13 @@
 		"Image": "mi-audio-super-crunch-box-v2.png"
 	},
 	{
+		"Brand": "Moen",
+		"Name": "Jimi Nova",
+		"Width": 2.80,
+		"Height": 4.5,
+		"Image": "moen-jimi-nova.png"
+	},
+	{
 		"Brand": "MXR",
 		"Name": "5150 Overdrive EVH",
 		"Width": 5,
