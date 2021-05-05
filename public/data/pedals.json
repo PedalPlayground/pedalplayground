@@ -6384,6 +6384,13 @@
 		"Image": "malekko-spring.png"
 	},
 	{
+		"Brand": "MarkBass",
+		"Name": "Ground Stereo Pre",
+		"Width": 9.25,
+		"Height": 5.71,
+		"Image": "markbass-ground-stereo-pre.png"
+	},
+	{
 		"Brand": "Mastro Valvola",
 		"Name": "LEM",
 		"Width": 3.55,
