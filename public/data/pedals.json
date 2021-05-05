@@ -6623,6 +6623,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Phase 99 Custom Shop",
+		"Width": 2.59,
+		"Height": 4.42,
+		"Image": "mxr-phase99-custom-shop.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "M300 Reverb",
 		"Width": 2.6,
 		"Height": 4.3,
