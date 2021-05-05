@@ -539,6 +539,13 @@
 		"Image": "aa-germaniumfuzz.png"
 	},
 	{
+		"Brand": "AirTurn",
+		"Name": "BT200S-2",
+		"Width": 4.50,
+		"Height": 2.75,
+		"Image": "airturn-bt200s-2.png"
+	},
+	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
 		"Width": 2.84,
