@@ -10542,6 +10542,13 @@
 		"Image": "vemuram-janray.png"
 	},
 	{
+		"Brand": "Vongon",
+		"Name": "Paragraphs",
+		"Width": 4.70,
+		"Height": 5.70,
+		"Image": "vongon-paragraphs.png"
+	},
+	{
 		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power 2+",
 		"Width": 6,
