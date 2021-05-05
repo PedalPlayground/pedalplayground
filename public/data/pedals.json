@@ -6588,6 +6588,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Smartgate",
+		"Width": 2.5,
+		"Height": 4.3,
+		"Image": "mxr-smartgate.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Stereo Chorus",
 		"Width": 5.5,
 		"Height": 4.5,
