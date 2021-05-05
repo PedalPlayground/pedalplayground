@@ -539,6 +539,13 @@
 		"Image": "aa-germaniumfuzz.png"
 	},
 	{
+		"Brand": "AirTurn",
+		"Name": "BT200S-2",
+		"Width": 4.50,
+		"Height": 2.75,
+		"Image": "airturn-bt200s-2.png"
+	},
+	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
 		"Width": 2.84,
@@ -4733,6 +4740,13 @@
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Soma",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "greer-soma.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Special Request",
 		"Width": 2.9,
 		"Height": 4.9,
@@ -4765,6 +4779,20 @@
 		"Width": 2.9,
 		"Height": 5,
 		"Image": "greer-tonesmuggler.png"
+	},
+	{
+		"Brand": "Green Carrot Pedals",
+		"Name": "Infatuator (Blue)",
+		"Width": 4.85,
+		"Height": 4.20,
+		"Image": "gcp-infatuator-blue.png"
+	},
+	{
+		"Brand": "Green Carrot Pedals",
+		"Name": "Infatuator (Yellow)",
+		"Width": 4.85,
+		"Height": 4.20,
+		"Image": "gcp-infatuator-yellow.png"
 	},
 	{
 		"Brand": "Gurus",
@@ -5024,6 +5052,13 @@
 		"Width": 2,
 		"Height": 3.65,
 		"Image": "ibanez-tubescreamermini.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "WD7 Weeping Demon",
+		"Width": 6.10,
+		"Height": 10.20,
+		"Image": "ibanez-wd7.png"
 	},
 	{
 		"Brand": "ISP Technologies",
@@ -5965,6 +6000,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Tesla MkIII Soviet Fuzz Bender",
+		"Width": 2.70,
+		"Height": 4.42,
+		"Image": "keeley-tesla-mk3.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Tone Workstation",
 		"Width": 4.7,
 		"Height": 3.7,
@@ -6123,6 +6165,13 @@
 		"Width": 3.54331,
 		"Height": 7.87402,
 		"Image": "lehle-dualexpression.png"
+	},
+	{
+		"Brand": "Little Robbie",
+		"Name": "Pilot",
+		"Width": 2.25,
+		"Height": 4.68,
+		"Image": "littlerobbie-pilot.png"
 	},
 	{
 		"Brand": "Line6",
@@ -6328,11 +6377,25 @@
 		"Image": "lovepedal-vibronaut.png"
 	},
 	{
+		"Brand": "LPD",
+		"Name": "Eighty7",
+		"Width": 2.75,
+		"Height": 4.50,
+		"Image": "lpd-eighty7.png"
+	},
+	{
 		"Brand": "Malekko",
 		"Name": "Spring",
 		"Width": 1.77,
 		"Height": 3.58,
 		"Image": "malekko-spring.png"
+	},
+	{
+		"Brand": "MarkBass",
+		"Name": "Ground Stereo Pre",
+		"Width": 9.25,
+		"Height": 5.71,
+		"Image": "markbass-ground-stereo-pre.png"
 	},
 	{
 		"Brand": "Mastro Valvola",
@@ -6557,6 +6620,13 @@
 		"Width": 1.5748,
 		"Height": 3.54,
 		"Image": "mxr-phase95.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Phase 99 Custom Shop",
+		"Width": 2.59,
+		"Height": 4.42,
+		"Image": "mxr-phase99-custom-shop.png"
 	},
 	{
 		"Brand": "MXR",
@@ -10302,6 +10372,13 @@
 		"Width": 4.01575,
 		"Height": 9.92126,
 		"Image": "vox-wah.png"
+	},
+	{
+		"Brand": "Whirlwind",
+		"Name": "Selector",
+		"Width": 4.50,
+		"Height": 3.50,
+		"Image": "whirlwind-selector.png"
 	},
 	{
 		"Brand": "WMD",
