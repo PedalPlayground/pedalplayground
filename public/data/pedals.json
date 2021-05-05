@@ -8484,6 +8484,27 @@
 		"Image": "radial-key-largo.png"
 	},
 	{
+		"Brand": "Revv",
+		"Name": "G2",
+		"Width": 2.75,
+		"Height": 4.70,
+		"Image": "revv-g2.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "G3",
+		"Width": 2.75,
+		"Height": 4.70,
+		"Image": "revv-g3.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "G4",
+		"Width": 2.75,
+		"Height": 4.70,
+		"Image": "revv-g4.png"
+	},
+	{
 		"Brand": "RJM",
 		"Name": "Overture",
 		"Width": 4.4,
