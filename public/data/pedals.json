@@ -6553,6 +6553,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Phase 90 EVH 35th Anniversary",
+		"Width": 2.5,
+		"Height": 4.3,
+		"Image": "mxr-phase90evh35th.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Phase 95 (mini)",
 		"Width": 1.5748,
 		"Height": 3.54,
