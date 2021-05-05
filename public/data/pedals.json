@@ -7623,6 +7623,13 @@
 		"Image": "musicomlab-efxle.png"
 	},
 	{
+		"Brand": "Mu-Tron",
+		"Name": "Micro-Tron IV",
+		"Width": 2.50,
+		"Height": 4.80,
+		"Image": "mu-tron-micro-tron-4.png"
+	},
+	{
 		"Brand": "Nordvang",
 		"Name": "83' Drive",
 		"Width": 5.72,
