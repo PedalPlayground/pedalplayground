@@ -3032,6 +3032,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Crybaby Junior",
+		"Width": 4.00,
+		"Height": 8.00,
+		"Image": "dunlop-crybaby-jr.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Crybaby Mini",
 		"Width": 3,
 		"Height": 5.25,
