@@ -9612,6 +9612,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Corona Chorus 40th Anniversary",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tc-corona-chorus-plus.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Corona Mini",
 		"Width": 2.01,
 		"Height": 3.66,
