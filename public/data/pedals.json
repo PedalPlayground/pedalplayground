@@ -9409,6 +9409,13 @@
 	},
 	{
 		"Brand": "Stone Deaf",
+		"Name": "EP-1 Expression Pedal",
+		"Width": 4.83,
+		"Height": 9.84,
+		"Image": "stonedeaf-ep1.png"
+	},
+	{
+		"Brand": "Stone Deaf",
 		"Name": "Fig Fumb",
 		"Width": 4.45,
 		"Height": 6.14,
