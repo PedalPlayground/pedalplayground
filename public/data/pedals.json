@@ -2199,6 +2199,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Midibox",
+		"Width": 3.47,
+		"Height": 1.58,
+		"Image": "chasebliss-midibox.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Preamp MKII",
 		"Width": 5.75,
 		"Height": 6.5,
