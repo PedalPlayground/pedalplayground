@@ -6686,6 +6686,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Noise Clamp",
+		"Width": 2.59,
+		"Height": 4.42,
+		"Image": "mxr-noiseclamp.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Phase 100",
 		"Width": 3.7,
 		"Height": 4.7,
