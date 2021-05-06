@@ -9423,6 +9423,13 @@
 	},
 	{
 		"Brand": "Stone Deaf",
+		"Name": "Syncopy",
+		"Width": 3.3,
+		"Height": 5.2,
+		"Image": "stonedeaf-syncopy.png"
+	},
+	{
+		"Brand": "Stone Deaf",
 		"Name": "Trashy Blonde",
 		"Width": 4.45,
 		"Height": 6.14,
