@@ -3242,10 +3242,17 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Arrows",
+		"Name": "Arrows V1",
 		"Width": 2.75,
 		"Height": 4.37,
 		"Image": "earthquaker-arrows.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Arrows V2",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "earthquaker-arrows-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
