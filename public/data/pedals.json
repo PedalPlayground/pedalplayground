@@ -9430,6 +9430,13 @@
 	},
 	{
 		"Brand": "Stone Deaf",
+		"Name": "PDF 1X",
+		"Width": 3.54,
+		"Height": 5.9,
+		"Image": "stonedeaf-pdf1x.png"
+	},
+	{
+		"Brand": "Stone Deaf",
 		"Name": "PDF 2",
 		"Width": 3.54,
 		"Height": 5.9,
