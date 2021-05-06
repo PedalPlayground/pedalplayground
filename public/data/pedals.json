@@ -8877,10 +8877,17 @@
 	},
 	{
 		"Brand": "Selah",
-		"Name": "Quartz",
+		"Name": "Quartz V2",
 		"Width": 2.85,
 		"Height": 4.87,
 		"Image": "selah-quartz.png"
+	},
+	{
+		"Brand": "Selah",
+		"Name": "Quartz V3",
+		"Width": 2.85,
+		"Height": 4.87,
+		"Image": "selah-quartz-v3.png"
 	},
 	{
 		"Brand": "Selah",
