@@ -11508,6 +11508,13 @@
 		"Image": "xvive-o1-tube-squasher.png"
 	},
 	{
+		"Brand": "Xvive",
+		"Name": "T1 Golden Brownie",
+		"Width": 1.81,
+		"Height": 3.70,
+		"Image": "xvive-t1-golden-brownie.png"
+	},
+	{
 		"Brand": "Zoom",
 		"Name": "G3",
 		"Width": 9.21,
