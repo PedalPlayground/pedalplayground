@@ -9416,6 +9416,13 @@
 	},
 	{
 		"Brand": "Stone Deaf",
+		"Name": "Kliptonite",
+		"Width": 4.01,
+		"Height": 5.98,
+		"Image": "stonedeaf-kliptonite.png"
+	},
+	{
+		"Brand": "Stone Deaf",
 		"Name": "PDF 2",
 		"Width": 3.54,
 		"Height": 5.9,
