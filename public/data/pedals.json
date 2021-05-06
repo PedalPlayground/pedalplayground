@@ -3242,10 +3242,17 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Arrows",
+		"Name": "Arrows V1",
 		"Width": 2.75,
 		"Height": 4.37,
 		"Image": "earthquaker-arrows.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Arrows V2",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "earthquaker-arrows-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -6686,6 +6693,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Noise Clamp",
+		"Width": 2.59,
+		"Height": 4.42,
+		"Image": "mxr-noiseclamp.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Phase 100",
 		"Width": 3.7,
 		"Height": 4.7,
@@ -8863,10 +8877,17 @@
 	},
 	{
 		"Brand": "Selah",
-		"Name": "Quartz",
+		"Name": "Quartz V2",
 		"Width": 2.85,
 		"Height": 4.87,
 		"Image": "selah-quartz.png"
+	},
+	{
+		"Brand": "Selah",
+		"Name": "Quartz V3",
+		"Width": 2.85,
+		"Height": 4.87,
+		"Image": "selah-quartz-v3.png"
 	},
 	{
 		"Brand": "Selah",
@@ -9402,6 +9423,13 @@
 	},
 	{
 		"Brand": "Stone Deaf",
+		"Name": "EP-1 Expression Pedal",
+		"Width": 4.83,
+		"Height": 9.84,
+		"Image": "stonedeaf-ep1.png"
+	},
+	{
+		"Brand": "Stone Deaf",
 		"Name": "Fig Fumb",
 		"Width": 4.45,
 		"Height": 6.14,
@@ -9409,10 +9437,31 @@
 	},
 	{
 		"Brand": "Stone Deaf",
+		"Name": "Kliptonite",
+		"Width": 4.01,
+		"Height": 5.98,
+		"Image": "stonedeaf-kliptonite.png"
+	},
+	{
+		"Brand": "Stone Deaf",
+		"Name": "PDF 1X",
+		"Width": 3.54,
+		"Height": 5.9,
+		"Image": "stonedeaf-pdf1x.png"
+	},
+	{
+		"Brand": "Stone Deaf",
 		"Name": "PDF 2",
 		"Width": 3.54,
 		"Height": 5.9,
 		"Image": "stonedeaf-pdf.png"
+	},
+	{
+		"Brand": "Stone Deaf",
+		"Name": "Syncopy",
+		"Width": 3.3,
+		"Height": 5.2,
+		"Image": "stonedeaf-syncopy.png"
 	},
 	{
 		"Brand": "Stone Deaf",
