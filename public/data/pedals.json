@@ -6902,6 +6902,13 @@
 		"Image": "madprof-sweethoney.png"
 	},
 	{
+		"Brand": "Teisco",
+		"Name": "Fuzz",
+		"Width": 3.00,
+		"Height": 5.20,
+		"Image": "teisco-fuzz.png"
+	},
+	{
 		"Brand": "Testing Blanks",
 		"Name": "125B",
 		"Width": 2.6,
