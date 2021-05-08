@@ -3375,6 +3375,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Life Pedal V2",
+		"Width": 3.8,
+		"Height": 4.625,
+		"Image": "earthquaker-lifepedal-v2.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Night Wire",
 		"Width": 2.63,
 		"Height": 4.87,
