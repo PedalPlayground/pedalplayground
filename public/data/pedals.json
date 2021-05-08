@@ -3410,10 +3410,17 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Rainbow Machine",
+		"Name": "Rainbow Machine V1",
 		"Width": 3.7,
 		"Height": 4.625,
 		"Image": "earthquaker-rainbowmachine.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Rainbow Machine V2",
+		"Width": 3.8,
+		"Height": 4.625,
+		"Image": "earthquaker-rainbowmachine-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
