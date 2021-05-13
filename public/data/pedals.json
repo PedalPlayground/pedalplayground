@@ -4488,6 +4488,13 @@
 	},
 	{
 		"Brand": "Friedman",
+		"Name": "Buxom Boost",
+		"Width": 2.75,
+		"Height": 4.625,
+		"Image": "friedman-buxom-boost.png"
+	},
+	{
+		"Brand": "Friedman",
 		"Name": "BE-OD deluxe",
 		"Width": 5.9,
 		"Height": 5,
@@ -4495,10 +4502,31 @@
 	},
 	{
 		"Brand": "Friedman",
+		"Name": "Dirty Shirley",
+		"Width": 2.95,
+		"Height": 4.625,
+		"Image": "friedman-dirty-shirley.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "Golden Pearl",
+		"Width": 2.75,
+		"Height": 4.625,
+		"Image": "friedman-golden-pearl.png"
+	},
+	{
+		"Brand": "Friedman",
 		"Name": "Sir-Compre",
 		"Width": 2.75,
 		"Height": 4.625,
 		"Image": "friedman-sircompre.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "Smallbox",
+		"Width": 2.95,
+		"Height": 4.625,
+		"Image": "friedman-smallbox.png"
 	},
 	{
 		"Brand": "Fulltone",
