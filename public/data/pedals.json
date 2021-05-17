@@ -6938,6 +6938,13 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Supreme Dual Overdrive",
+		"Width": 4.53,
+		"Height": 3.60,
+		"Image": "madprof-supremedualoverdrive.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Sweet Honey Overdrive",
 		"Width": 2.5,
 		"Height": 4.3,
