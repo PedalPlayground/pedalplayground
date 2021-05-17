@@ -1988,6 +1988,13 @@
 		"Image": "cmatmods-tremoglo.png"
 	},
 	{
+		"Brand": "CME",
+		"Name": "WIDI Jack",
+		"Width": 1.339,
+		"Height": 1.496,
+		"Image": "cme-widijack.png"
+	},
+	{
 		"Brand": "Caroline",
 		"Name": "Haymaker",
 		"Width": 3.7,
