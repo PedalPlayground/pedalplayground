@@ -4683,6 +4683,13 @@
 		"Image": "gfi-speculartempus.png"
 	},
 	{
+		"Brand": "GFI System",
+		"Name": "Specular Tempus (Black Edition)",
+		"Width": 4.7,
+		"Height": 3.6,
+		"Image": "gfi-speculartempus-black.png"
+	},
+	{
 		"Brand": "GigRig",
 		"Name": "G2",
 		"Width": 17.33,
@@ -8580,6 +8587,13 @@
 		"Width": 5.7,
 		"Height": 4.7,
 		"Image": "pigtronix-tremvelope.png"
+	},
+	{
+		"Brand": "Pinstripe Pedals",
+		"Name": "DISO Plus",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "pinstripepedals-disoplus.png"
 	},
 	{
 		"Brand": "Poly Effects",
