@@ -3795,6 +3795,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Ram's Head Big Muff Pi Nano",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "ehx-ramsheadbigmuffpinano.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Nano Pog",
 		"Width": 2.75,
 		"Height": 4.4,
