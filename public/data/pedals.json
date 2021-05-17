@@ -1,5 +1,12 @@
 [
 	{
+		"Brand": "3Leaf Audio",
+		"Name": "Wonderlove V2",
+		"Width": 4.84,
+		"Height": 3.94,
+		"Image": "3leaf-audio-wonderlove-v2.png"
+	},
+	{
 		"Brand": "Analog Endeavors",
 		"Name": "Aux 3",
 		"Width": 4.78,
@@ -3382,6 +3389,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Life Pedal V2",
+		"Width": 3.8,
+		"Height": 4.625,
+		"Image": "earthquaker-lifepedal-v2.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Night Wire",
 		"Width": 2.63,
 		"Height": 4.87,
@@ -3417,10 +3431,17 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Rainbow Machine",
+		"Name": "Rainbow Machine V1",
 		"Width": 3.7,
 		"Height": 4.625,
 		"Image": "earthquaker-rainbowmachine.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Rainbow Machine V2",
+		"Width": 3.8,
+		"Height": 4.625,
+		"Image": "earthquaker-rainbowmachine-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -6956,6 +6977,13 @@
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "madprof-sweethoney.png"
+	},
+	{
+		"Brand": "Teisco",
+		"Name": "Fuzz",
+		"Width": 3.00,
+		"Height": 5.20,
+		"Image": "teisco-fuzz.png"
 	},
 	{
 		"Brand": "Testing Blanks",
