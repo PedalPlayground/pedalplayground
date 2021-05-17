@@ -10675,6 +10675,34 @@
 		"Image": "vemuram-janray.png"
 	},
 	{
+		"Brand": "VS Audio",
+		"Name": "Aftermath",
+		"Width": 2.75,
+		"Height": 4.80,
+		"Image": "vsaudio-aftermath.png"
+	},
+	{
+		"Brand": "VS Audio",
+		"Name": "Royal Flush",
+		"Width": 4.72,
+		"Height": 3.80,
+		"Image": "vsaudio-royalflush.png"
+	},
+	{
+		"Brand": "VS Audio",
+		"Name": "Straight Flush",
+		"Width": 2.75,
+		"Height": 4.41,
+		"Image": "vsaudio-straightflush.png"
+	},
+	{
+		"Brand": "VS Audio",
+		"Name": "Vibler",
+		"Width": 3.75,
+		"Height": 4.60,
+		"Image": "vsaudio-vibler.png"
+	},
+	{
 		"Brand": "Vongon",
 		"Name": "Paragraphs",
 		"Width": 4.70,
