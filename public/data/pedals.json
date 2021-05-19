@@ -6630,6 +6630,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Classic 108 Fuzz mini",
+		"Width": 1.5748,
+		"Height": 3.54,
+		"Image": "mxr-classic108fuzzmini.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Sugar Drive",
 		"Width": 1.5748,
 		"Height": 3.54,
