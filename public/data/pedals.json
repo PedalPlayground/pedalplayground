@@ -8359,6 +8359,13 @@
 	},
 	{
 		"Brand": "Outlaw Effects",
+		"Name": "The General Fuzz",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-the-general.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
 		"Name": "The Wye ABY",
 		"Width": 1.65,
 		"Height": 3.75,
