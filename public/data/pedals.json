@@ -6728,6 +6728,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Fullbore Metal",
+		"Width": 2.65,
+		"Height": 4.42,
+		"Image": "mxr-fullbore-metal.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Il Torino Overdrive",
 		"Width": 2.5,
 		"Height": 4.3,
