@@ -7659,6 +7659,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Hustle Drive",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-hustledrive.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "L6 Controller",
 		"Width": 14.57,
 		"Height": 3.94,
