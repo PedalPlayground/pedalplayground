@@ -3914,6 +3914,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Oceans 12",
+		"Width": 4.75,
+		"Height": 4,
+		"Image": "ehx-oceans12.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Green Russian Big Muff Pi",
 		"Width": 2.75,
 		"Height": 4.4,
