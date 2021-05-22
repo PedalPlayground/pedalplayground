@@ -1842,6 +1842,13 @@
 	},
 	{
 		"Brand": "Bogner",
+		"Name": "Ecstasy Red mini",
+		"Width": 3.85,
+		"Height": 5.25,
+		"Image": "bogner-ecstasyredmini.png"
+	},
+	{
+		"Brand": "Bogner",
 		"Name": "Harlow",
 		"Width": 2.85,
 		"Height": 4.75,
