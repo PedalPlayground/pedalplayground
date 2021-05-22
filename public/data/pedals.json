@@ -1828,6 +1828,13 @@
 	},
 	{
 		"Brand": "Bogner",
+		"Name": "Ecstacy Blue mini",
+		"Width": 3.85,
+		"Height": 5.25,
+		"Image": "bogner-ecstasybluemini.png"
+	},
+	{
+		"Brand": "Bogner",
 		"Name": "Ecstacy Red",
 		"Width": 5.25,
 		"Height": 3.75,
