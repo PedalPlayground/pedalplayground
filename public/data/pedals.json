@@ -8590,6 +8590,13 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Octava",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-octava.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Philosopher's King",
 		"Width": 7.4,
 		"Height": 4.6,
