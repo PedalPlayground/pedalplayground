@@ -4355,10 +4355,24 @@
 	},
 	{
 		"Brand": "Flower Pedals",
+		"Name": "Castilleja Phaser",
+		"Width": 2.38,
+		"Height": 4.40,
+		"Image": "flower-pedals-castilleja.png"
+	},
+	{
+		"Brand": "Flower Pedals",
 		"Name": "Dandelion Tremolo V2",
 		"Width": 2.38,
 		"Height": 4.40,
 		"Image": "flower-pedals-dandelion-v2.png"
+	},
+	{
+		"Brand": "Flower Pedals",
+		"Name": "Hosta Wah Filter",
+		"Width": 2.38,
+		"Height": 4.40,
+		"Image": "flower-pedals-hosta.png"
 	},
 	{
 		"Brand": "Foxpedal",
