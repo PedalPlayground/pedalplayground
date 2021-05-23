@@ -8638,6 +8638,13 @@
 		"Image": "proco-rat.png"
 	},
 	{
+		"Brand": "Providence",
+		"Name": "Chrono",
+		"Width": 3.98,
+		"Height": 5.00,
+		"Image": "providence-chrono.png"
+	},
+	{
 		"Brand": "Quiet Theory",
 		"Name": "Prelude",
 		"Width": 3.3,
