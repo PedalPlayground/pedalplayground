@@ -5069,6 +5069,13 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Choir",
+		"Width": 1.73,
+		"Height": 2.91,
+		"Image": "hotone-choir.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Soul Press",
 		"Width": 2.46,
 		"Height": 5.43,
