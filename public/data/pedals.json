@@ -10740,8 +10740,29 @@
 	{
 		"Brand": "Cornerstone",
 		"Name": "Gladio SC",
-		"Width": 2.38,
-		"Height": 4.43,
+		"Width": 3.74,
+		"Height": 4.73,
 		"Image": "gladiosc.png"
+	}
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Harmonious Monk",
+		"Width": 3.74,
+		"Height": 4.73,
+		"Image": "jam_hm.png"
+	}
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Delay Llama",
+		"Width": 3.74,
+		"Height": 4.73,
+		"Image": "jam-delayllama.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "Kaluna",
+		"Width": 4.73,
+		"Height": 3.94,
+		"Image": "vahlbruch-kaluna.png"
 	}
 ]
