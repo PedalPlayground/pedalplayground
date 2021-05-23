@@ -6566,6 +6566,13 @@
 		"Image": "markbass-ground-stereo-pre.png"
 	},
 	{
+		"Brand": "MarkBass",
+		"Name": "Super Booster",
+		"Width": 4.33,
+		"Height": 5.51,
+		"Image": "markbass-super-booster.png"
+	},
+	{
 		"Brand": "Mastro Valvola",
 		"Name": "LEM",
 		"Width": 3.55,
