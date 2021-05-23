@@ -5482,6 +5482,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Mini Foot Fuzz v2",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "jhs-mini-foot.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Moonshine",
 		"Width": 2.85,
 		"Height": 4.87,
