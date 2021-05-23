@@ -5013,6 +5013,20 @@
 	},
 	{
 		"Brand": "Jet",
+		"Name": "Lamb",
+		"Width": 4.70,
+		"Height": 3.80,
+		"Image": "jetpedals-lamb.png"
+	},
+	{
+		"Brand": "Jet",
+		"Name": "Lion",
+		"Width": 4.70,
+		"Height": 3.80,
+		"Image": "jetpedals-lion.png"
+	},
+	{
+		"Brand": "Jet",
 		"Name": "Micro HX",
 		"Width": 3.64,
 		"Height": 1.52,
