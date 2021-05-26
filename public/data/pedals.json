@@ -10765,4 +10765,11 @@
 		"Height": 3.94,
 		"Image": "vahlbruch-kaluna.png"
 	}
+	{
+		"Brand": "Mythos",
+		"Name": "Oracle",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "mythos_oracle.png"
+	}
 ]
