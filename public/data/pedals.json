@@ -10772,4 +10772,11 @@
 		"Height": 3.7,
 		"Image": "mythos_oracle.png"
 	}
+	{
+		"Brand": "Fredric Pedals",
+		"Name": "Standard Fuzz",
+		"Width": 2.64,
+		"Height": 4.8,
+		"Image": "fredric_standardfuzz.png"
+	}
 ]
