@@ -7673,6 +7673,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "D7 Delay",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-d7-delay.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "E-lady",
 		"Width": 1.65,
 		"Height": 3.7,
@@ -7740,6 +7747,13 @@
 		"Width": 1.65,
 		"Height": 3.7,
 		"Image": "mooer-pureboost.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "R7 Reverb",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-r7-reverb.png"
 	},
 	{
 		"Brand": "Mooer",
