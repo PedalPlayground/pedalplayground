@@ -1743,6 +1743,13 @@
 		"Image": "bearfootfx-sparklingyellowod1.png"
 	},
 	{
+		"Brand": "Becos",
+		"Name": "CompIQ Stella",
+		"Width": 2.78,
+		"Height": 4.41,
+		"Image": "becos-compiq-stella.png"
+	},
+	{
 		"Brand": "Blackout Effectors",
 		"Name": "Blunderbuss",
 		"Width": 2.92,
