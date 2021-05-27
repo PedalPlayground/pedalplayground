@@ -7673,6 +7673,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Macro Power S12",
+		"Width": 8.95,
+		"Height": 3.46,
+		"Image": "mooer-macro-power-s12.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Ninety Orange",
 		"Width": 1.65,
 		"Height": 3.7,
