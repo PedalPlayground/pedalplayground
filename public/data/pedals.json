@@ -7645,6 +7645,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "E7 Synth",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-e7-synth.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Graphic Eq",
 		"Width": 1.65,
 		"Height": 3.7,
