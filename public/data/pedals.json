@@ -1744,10 +1744,38 @@
 	},
 	{
 		"Brand": "Becos",
+		"Name": "CompIQ Mini",
+		"Width": 1.85,
+		"Height": 3.62,
+		"Image": "becos-compiq-mini.png"
+	},
+	{
+		"Brand": "Becos",
+		"Name": "CompIQ One",
+		"Width": 1.85,
+		"Height": 3.62,
+		"Image": "becos-compiq-one.png"
+	},
+	{
+		"Brand": "Becos",
 		"Name": "CompIQ Stella",
 		"Width": 2.78,
 		"Height": 4.41,
 		"Image": "becos-compiq-stella.png"
+	},
+	{
+		"Brand": "Becos",
+		"Name": "CompIQ Twain",
+		"Width": 4.23,
+		"Height": 4.72,
+		"Image": "becos-compiq-twain.png"
+	},
+	{
+		"Brand": "Becos",
+		"Name": "TS8-MS Overdrive",
+		"Width": 2.70,
+		"Height": 4.72,
+		"Image": "becos-ts8-ms-overdrive.png"
 	},
 	{
 		"Brand": "Blackout Effectors",
