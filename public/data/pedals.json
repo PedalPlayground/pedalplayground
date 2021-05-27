@@ -7981,6 +7981,13 @@
 	},
 	{
 		"Brand": "Neunaber",
+		"Name": "Inspire Mk II",
+		"Width": 2.87,
+		"Height": 4.6,
+		"Image": "neunaber-inspire-mkii.png"
+	},
+	{
+		"Brand": "Neunaber",
 		"Name": "Neuron",
 		"Width": 2.8,
 		"Height": 4.6,
