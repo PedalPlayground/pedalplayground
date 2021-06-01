@@ -7624,6 +7624,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Baby Bomb",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-babybomb.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Black Secret",
 		"Width": 1.65,
 		"Height": 3.7,
