@@ -4355,10 +4355,24 @@
 	},
 	{
 		"Brand": "Flower Pedals",
+		"Name": "Castilleja Phaser",
+		"Width": 2.55,
+		"Height": 4.80,
+		"Image": "flower-pedals-castilleja.png"
+	},
+	{
+		"Brand": "Flower Pedals",
 		"Name": "Dandelion Tremolo V2",
-		"Width": 2.38,
-		"Height": 4.40,
+		"Width": 2.55,
+		"Height": 4.80,
 		"Image": "flower-pedals-dandelion-v2.png"
+	},
+	{
+		"Brand": "Flower Pedals",
+		"Name": "Hosta Wah Filter",
+		"Width": 2.55,
+		"Height": 4.80,
+		"Image": "flower-pedals-hosta.png"
 	},
 	{
 		"Brand": "Foxpedal",
@@ -5013,6 +5027,20 @@
 	},
 	{
 		"Brand": "Jet",
+		"Name": "Lamb",
+		"Width": 4.70,
+		"Height": 3.80,
+		"Image": "jetpedals-lamb.png"
+	},
+	{
+		"Brand": "Jet",
+		"Name": "Lion",
+		"Width": 4.70,
+		"Height": 3.80,
+		"Image": "jetpedals-lion.png"
+	},
+	{
+		"Brand": "Jet",
 		"Name": "Micro HX",
 		"Width": 3.64,
 		"Height": 1.52,
@@ -5052,6 +5080,13 @@
 		"Width": 4.76378,
 		"Height": 2.83465,
 		"Image": "hotone-binary-ir-cab.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Choir",
+		"Width": 1.73,
+		"Height": 2.91,
+		"Image": "hotone-choir.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -5479,6 +5514,13 @@
 		"Width": 4.8,
 		"Height": 2.64,
 		"Image": "jhs-milkman.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Mini Foot Fuzz v2",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "jhs-mini-foot.png"
 	},
 	{
 		"Brand": "JHS",
@@ -6564,6 +6606,13 @@
 		"Width": 9.25,
 		"Height": 5.71,
 		"Image": "markbass-ground-stereo-pre.png"
+	},
+	{
+		"Brand": "MarkBass",
+		"Name": "Super Booster",
+		"Width": 4.33,
+		"Height": 5.51,
+		"Image": "markbass-super-booster.png"
 	},
 	{
 		"Brand": "Mastro Valvola",
@@ -8636,6 +8685,13 @@
 		"Width": 3.5,
 		"Height": 4,
 		"Image": "proco-rat.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Chrono",
+		"Width": 3.98,
+		"Height": 5.00,
+		"Image": "providence-chrono.png"
 	},
 	{
 		"Brand": "Quiet Theory",
