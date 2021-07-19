@@ -43,6 +43,6 @@ jobs:
         
         with:
           # Relative file path under the repository of a JSON schema file to validate the other JSON files with.
-          schema: ./schema.json
+          schema: public/data/pedals.schema.json
           # One or more relative file paths under the repository (seperated by comma) of the JSON files to validate with the schema provided.
           json: public/data/pedals.json, public/data/pedalboards.json
