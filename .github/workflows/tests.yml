@@ -46,5 +46,5 @@ jobs:
       - name: Validate External API Json
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
-          INPUT_SCHEMA: public/data/pedals.schema.json
-          INPUT_JSONS: public/data/pedals.json, public/data/pedalboards.json
+          INPUT_SCHEMA: /public/data/pedals.schema.json
+          INPUT_JSONS: /public/data/pedals.json, /public/data/pedalboards.json
