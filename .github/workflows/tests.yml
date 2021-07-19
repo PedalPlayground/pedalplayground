@@ -40,11 +40,3 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: ocular-d/json-linter@7d3716a34bcd6fcc5b3b38141a21b9e02da6531d
         uses: ocular-d/json-linter@0.0.2
-
-
-      # 
-      - name: Validate External API Json
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: /public/data/pedals.schema.json
-          INPUT_JSONS: /public/data/pedals.json, /public/data/pedalboards.json
