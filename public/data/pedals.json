@@ -1743,6 +1743,41 @@
 		"Image": "bearfootfx-sparklingyellowod1.png"
 	},
 	{
+		"Brand": "Becos",
+		"Name": "CompIQ Mini",
+		"Width": 1.85,
+		"Height": 3.62,
+		"Image": "becos-compiq-mini.png"
+	},
+	{
+		"Brand": "Becos",
+		"Name": "CompIQ One",
+		"Width": 1.85,
+		"Height": 3.62,
+		"Image": "becos-compiq-one.png"
+	},
+	{
+		"Brand": "Becos",
+		"Name": "CompIQ Stella",
+		"Width": 2.78,
+		"Height": 4.41,
+		"Image": "becos-compiq-stella.png"
+	},
+	{
+		"Brand": "Becos",
+		"Name": "CompIQ Twain",
+		"Width": 4.23,
+		"Height": 4.72,
+		"Image": "becos-compiq-twain.png"
+	},
+	{
+		"Brand": "Becos",
+		"Name": "TS8-MS Overdrive",
+		"Width": 2.70,
+		"Height": 4.72,
+		"Image": "becos-ts8-ms-overdrive.png"
+	},
+	{
 		"Brand": "Blackout Effectors",
 		"Name": "Blunderbuss",
 		"Width": 2.92,
@@ -7722,10 +7757,24 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "D7 Delay",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-d7-delay.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "E-lady",
 		"Width": 1.65,
 		"Height": 3.7,
 		"Image": "mooer-elady.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "E7 Synth",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-e7-synth.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -7757,6 +7806,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Macro Power S12",
+		"Width": 8.95,
+		"Height": 3.46,
+		"Image": "mooer-macro-power-s12.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Ninety Orange",
 		"Width": 1.65,
 		"Height": 3.7,
@@ -7782,6 +7838,13 @@
 		"Width": 1.65,
 		"Height": 3.7,
 		"Image": "mooer-pureboost.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "R7 Reverb",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-r7-reverb.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -8062,6 +8125,13 @@
 		"Width": 2.55,
 		"Height": 4.5,
 		"Image": "neunaber-inspire.png"
+	},
+	{
+		"Brand": "Neunaber",
+		"Name": "Inspire Mk II",
+		"Width": 2.87,
+		"Height": 4.6,
+		"Image": "neunaber-inspire-mkii.png"
 	},
 	{
 		"Brand": "Neunaber",
