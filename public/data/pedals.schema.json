@@ -1,0 +1,60 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "array",
+	"items": [
+		{
+			"type": "object",
+			"properties": {
+				"Brand": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Width": {
+					"type": "number"
+				},
+				"Height": {
+					"type": "number"
+				},
+				"Image": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Brand",
+				"Name",
+				"Width",
+				"Height",
+				"Image"
+			]
+		},
+		{
+			"type": "object",
+			"properties": {
+				"Brand": {
+					"type": "string"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Width": {
+					"type": "number"
+				},
+				"Height": {
+					"type": "number"
+				},
+				"Image": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"Brand",
+				"Name",
+				"Width",
+				"Height",
+				"Image"
+			]
+		}
+	]
+}
