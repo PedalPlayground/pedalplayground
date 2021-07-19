@@ -1821,17 +1821,31 @@
 	},
 	{
 		"Brand": "Bogner",
-		"Name": "Ecstacy Blue",
+		"Name": "Ecstasy Blue",
 		"Width": 5.25,
 		"Height": 3.75,
 		"Image": "bogner-blue.png"
 	},
 	{
 		"Brand": "Bogner",
-		"Name": "Ecstacy Red",
+		"Name": "Ecstasy Blue mini",
+		"Width": 3.85,
+		"Height": 5.25,
+		"Image": "bogner-ecstasybluemini.png"
+	},
+	{
+		"Brand": "Bogner",
+		"Name": "Ecstasy Red",
 		"Width": 5.25,
 		"Height": 3.75,
 		"Image": "bogner-red.png"
+	},
+	{
+		"Brand": "Bogner",
+		"Name": "Ecstasy Red mini",
+		"Width": 3.85,
+		"Height": 5.25,
+		"Image": "bogner-ecstasyredmini.png"
 	},
 	{
 		"Brand": "Bogner",
@@ -3907,10 +3921,17 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
-		"Name": "Ocean 11",
+		"Name": "Oceans 11",
 		"Width": 2.75,
 		"Height": 4.4,
-		"Image": "ehx-ocean11.png"
+		"Image": "ehx-oceans11.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
+		"Name": "Oceans 12",
+		"Width": 4.75,
+		"Height": 4,
+		"Image": "ehx-oceans12.png"
 	},
 	{
 		"Brand": "Electro Harmonix",
@@ -8657,6 +8678,13 @@
 		"Width": 4.5,
 		"Height": 2.6,
 		"Image": "pigtronix-infinity-2.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Octava",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-octava.png"
 	},
 	{
 		"Brand": "Pigtronix",
