@@ -12210,8 +12210,8 @@
 	{
 		"Brand": "Cornerstone",
 		"Name": "Gladio SC",
-		"Width": 2.38,
-		"Height": 4.43,
+		"Width": 3.74,
+		"Height": 4.73,
 		"Image": "gladiosc.png"
 	},
 	{
@@ -12241,5 +12241,40 @@
 		"Width": 1.5,
 		"Height": 3.6,
 		"Image": "jhs-littleblackampbox.png"
+	}
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Harmonious Monk",
+		"Width": 3.74,
+		"Height": 4.73,
+		"Image": "jam_hm.png"
+	}
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Delay Llama",
+		"Width": 3.74,
+		"Height": 4.73,
+		"Image": "jam-delayllama.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "Kaluna",
+		"Width": 4.73,
+		"Height": 3.94,
+		"Image": "vahlbruch-kaluna.png"
+	}
+	{
+		"Brand": "Mythos",
+		"Name": "Oracle",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "mythos_oracle.png"
+	}
+	{
+		"Brand": "Fredric Pedals",
+		"Name": "Standard Fuzz",
+		"Width": 2.64,
+		"Height": 4.8,
+		"Image": "fredric_standardfuzz.png"
 	}
 ]
