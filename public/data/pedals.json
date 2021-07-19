@@ -6679,6 +6679,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Classic 108 Fuzz mini",
+		"Width": 1.5748,
+		"Height": 3.54,
+		"Image": "mxr-classic108fuzzmini.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Sugar Drive",
 		"Width": 1.5748,
 		"Height": 3.54,
@@ -6774,6 +6781,13 @@
 		"Width": 5,
 		"Height": 3.75,
 		"Image": "mxr-flangerevh.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Fullbore Metal",
+		"Width": 2.65,
+		"Height": 4.42,
+		"Image": "mxr-fullbore-metal.png"
 	},
 	{
 		"Brand": "MXR",
@@ -7708,6 +7722,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Hustle Drive",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-hustledrive.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "L6 Controller",
 		"Width": 14.57,
 		"Height": 3.94,
@@ -8398,6 +8419,13 @@
 		"Width": 1.65,
 		"Height": 3.75,
 		"Image": "outlaw-effects-six-shooter-2.png"
+	},
+	{
+		"Brand": "Outlaw Effects",
+		"Name": "The General Fuzz",
+		"Width": 1.65,
+		"Height": 3.75,
+		"Image": "outlaw-effects-the-general.png"
 	},
 	{
 		"Brand": "Outlaw Effects",
@@ -11163,6 +11191,13 @@
 		"Width": 2.55,
 		"Height": 4.39,
 		"Image": "walrus-plainsman.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Polychrome",
+		"Width": 2.6,
+		"Height": 4.93,
+		"Image": "walrus-polychrome.png"
 	},
 	{
 		"Brand": "Walrus",
