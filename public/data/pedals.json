@@ -4725,6 +4725,13 @@
 		"Image": "fulltone-supatrem2.png"
 	},
 	{
+		"Brand": "Fulltone",
+		"Name": "True-Path ABY-HT",
+		"Width": 5.25,
+		"Height": 4,
+		"Image": "fulltone-true-path-aby-ht.png"
+	},
+	{
 		"Brand": "GFI System",
 		"Name": "Specular Reverb V2",
 		"Width": 4.7,
