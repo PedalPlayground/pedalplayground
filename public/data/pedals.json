@@ -6399,10 +6399,10 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Fuzzy Bear Silicum Fuzz",
+		"Name": "Fuzzly Bear Silicium Fuzz",
 		"Width": 2.36,
 		"Height": 4.4,
-		"Image": "kma-audio-machines-fuzzy-bear-silicum-fuzz"
+		"Image": "kma-audio-machines-fuzzly-bear-silicium-fuzz.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
@@ -6424,6 +6424,13 @@
 		"Width": 3.54,
 		"Height": 4.72,
 		"Image": "kma-audio-machines-logan-transcend-drive.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Minos Germanium Fuzz",
+		"Width": 2.36,
+		"Height": 4.4,
+		"Image": "kma-audio-machines-minos-germanium-fuzz.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
