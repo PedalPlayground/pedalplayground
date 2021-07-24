@@ -7092,6 +7092,13 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Super Black",
+		"Width": 3.9,
+		"Height": 4.73,
+		"Image": "madprof-superblack.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Supreme Dual Overdrive",
 		"Width": 4.53,
 		"Height": 3.60,
