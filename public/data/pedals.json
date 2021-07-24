@@ -3865,6 +3865,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Neo Clone",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "ehx-neoclone.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Ram's Head Big Muff Pi Nano",
 		"Width": 2.75,
 		"Height": 4.4,
