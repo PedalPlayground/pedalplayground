@@ -10452,6 +10452,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Magus Pro",
+		"Width": 2.2,
+		"Height": 3.65,
+		"Image": "tc-maguspro.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Mimiq Doubler",
 		"Width": 2.83,
 		"Height": 4.8,
