@@ -2499,6 +2499,13 @@
 		"Image": "customtones-ethosoverdrive.png"
 	},
 	{
+		"Brand": "Danelectro",
+		"Name": "Cool Cat Tremolo",
+		"Width": 3.5,
+		"Height": 4.75,
+		"Image": "danelectro-coolcattremolo.png"
+	},
+	{
 		"Brand": "Dr Z",
 		"Name": "Z-Drive",
 		"Width": 4.7,
