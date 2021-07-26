@@ -2499,6 +2499,13 @@
 		"Image": "customtones-ethosoverdrive.png"
 	},
 	{
+		"Brand": "Danelectro",
+		"Name": "Cool Cat Tremolo",
+		"Width": 3.5,
+		"Height": 4.75,
+		"Image": "danelectro-coolcattremolo.png"
+	},
+	{
 		"Brand": "Dr Z",
 		"Name": "Z-Drive",
 		"Width": 4.7,
@@ -2735,6 +2742,13 @@
 		"Width": 2.875,
 		"Height": 4.625,
 		"Image": "digitech-carcosa.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Stereo Flanger FX75-B",
+		"Width": 3.31,
+		"Height": 5.125,
+		"Image": "dod-fx75b.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -3862,6 +3876,13 @@
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-360.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
+		"Name": "Neo Clone",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "ehx-neoclone.png"
 	},
 	{
 		"Brand": "Electro Harmonix",
@@ -7166,6 +7187,13 @@
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "madprof-silverspring.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Super Black",
+		"Width": 3.9,
+		"Height": 4.73,
+		"Image": "madprof-superblack.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -10512,6 +10540,13 @@
 		"Width": 2.83,
 		"Height": 4.8,
 		"Image": "tcelectronic-helix.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Magus Pro",
+		"Width": 2.2,
+		"Height": 3.65,
+		"Image": "tc-maguspro.png"
 	},
 	{
 		"Brand": "TC Electronic",
