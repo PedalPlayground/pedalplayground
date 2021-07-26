@@ -6378,17 +6378,94 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
+		"Name": "Astrospurt Phaser",
+		"Width": 3.54,
+		"Height": 4.72,
+		"Image": "kma-audio-machines-astrospurt-phaser.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Cirrus Delay and Reverb",
+		"Width": 3.54,
+		"Height": 4.72,
+		"Image": "kma-audio-machines-cirrus-delay-and-reverb.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Dead Stag Fuzz",
+		"Width": 3.54,
+		"Height": 4.72,
+		"Image": "kma-audio-machines-dead-stag-fuzz.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Fuzzly Bear Silicium Fuzz",
+		"Width": 2.36,
+		"Height": 4.4,
+		"Image": "kma-audio-machines-fuzzly-bear-silicium-fuzz.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Guardian of the Wurm",
+		"Width": 6.02,
+		"Height": 4.72,
+		"Image": "kma-audio-machines-guardian-of-the-wurm.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
 		"Name": "Horizont Phaser",
 		"Width": 6.02,
-		"Height": 4.92,
+		"Height": 4.72,
 		"Image": "kma-audio-machines-horizont-phaser.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Logan Transcend Drive",
+		"Width": 3.54,
+		"Height": 4.72,
+		"Image": "kma-audio-machines-logan-transcend-drive.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Minos Germanium Fuzz",
+		"Width": 2.36,
+		"Height": 4.4,
+		"Image": "kma-audio-machines-minos-germanium-fuzz.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Moai Maea Analog Octaver",
+		"Width": 5.75,
+		"Height": 4.72,
+		"Image": "kma-audio-machines-moai-maea-analog-octaver.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Queequeg Sub Octave",
+		"Width": 2.36,
+		"Height": 4.4,
+		"Image": "kma-audio-machines-queequeg-sub-octave.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Tyler Deluxe Frequency Splitter",
+		"Width": 5.75,
+		"Height": 4.72,
+		"Image": "kma-audio-machines-tyler-deluxe-frequency-splitter.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
 		"Name": "Tyler Frequency Splitter",
 		"Width": 5.75,
-		"Height": 4.76,
+		"Height": 4.72,
 		"Image": "kma-audio-machines-tyler-frequency-splitter.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Wurm Distortion",
+		"Width": 3.54,
+		"Height": 4.72,
+		"Image": "kma-audio-machines-wurm-distortion.png"
 	},
 	{
 		"Brand": "Korg",
