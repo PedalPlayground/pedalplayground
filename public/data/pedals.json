@@ -2052,51 +2052,79 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Hawaiian Pizza",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "caroline-hawaiian-pizza.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Haymaker",
 		"Width": 3.7,
-		"Height": 4.875,
+		"Height": 4.7,
 		"Image": "caroline-haymaker.png"
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Somersault",
+		"Name": "Icarus",
 		"Width": 3.7,
-		"Height": 4.875,
-		"Image": "caroline-somersault.png"
+		"Height": 4.7,
+		"Image": "caroline-icarus.png"
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Icarus",
-		"Width": 2.6,
-		"Height": 4.3,
-		"Image": "caroline-icarus.png"
+		"Name": "Icarus V2",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "caroline-icarus-v2.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Kilobyte",
 		"Width": 3.7,
-		"Height": 4.875,
+		"Height": 4.7,
 		"Image": "caroline-kilobyte.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Megabyte",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "caroline-megabyte.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Meteore",
 		"Width": 3.7,
-		"Height": 4.875,
+		"Height": 4.7,
 		"Image": "caroline-meteore.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Parabola",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "caroline-parabola.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Shigeharu",
 		"Width": 3.7,
-		"Height": 4.875,
+		"Height": 4.7,
 		"Image": "caroline-shigeharu.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Somersault",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "caroline-somersault.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Wave Cannon",
 		"Width": 3.7,
-		"Height": 4.875,
+		"Height": 4.7,
 		"Image": "caroline-wavecannon.png"
 	},
 	{
@@ -2245,6 +2273,41 @@
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "catalinbread-zeropoint.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Canny Fettle",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "champion-leccy-the-canny-fettle.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Fettle",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "champion-leccy-the-fettle.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Kilter",
+		"Width": 6.15,
+		"Height": 4.75,
+		"Image": "champion-leccy-the-kilter.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Skitter",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "champion-leccy-the-skitter.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Woozy",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "champion-leccy-the-woozy.png"
 	},
 	{
 		"Brand": "Chasetone",
@@ -4037,6 +4100,55 @@
 		"Width": 1.41,
 		"Height": 3.62,
 		"Image": "ehx-headphone-amp.png"
+	},
+	{
+		"Brand": "Electonic Audio Experiments",
+		"Name": "Beholder",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "electronic-audio-experiments-beholder.png"
+	},
+	{
+		"Brand": "Electonic Audio Experiments",
+		"Name": "Dagger",
+		"Width": 2.9,
+		"Height": 4.77,
+		"Image": "electronic-audio-experiments-dagger.png"
+	},
+	{
+		"Brand": "Electonic Audio Experiments",
+		"Name": "Halberd",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "electronic-audio-experiments-halberd.png"
+	},
+	{
+		"Brand": "Electonic Audio Experiments",
+		"Name": "Hypersleep",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "electronic-audio-experiments-hypersleep.png"
+	},
+	{
+		"Brand": "Electonic Audio Experiments",
+		"Name": "Longsword",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "electronic-audio-experiments-longsword.png"
+	},
+	{
+		"Brand": "Electonic Audio Experiments",
+		"Name": "Model feT",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "electronic-audio-experiments-model-fet.png"
+	},
+	{
+		"Brand": "Electonic Audio Experiments",
+		"Name": "Sending",
+		"Width": 5.7,
+		"Height": 4.7,
+		"Image": "electronic-audio-experiments-sending.png"
 	},
 	{
 		"Brand": "Elektron",
@@ -6379,22 +6491,22 @@
 	{
 		"Brand": "KMA Audio Machines",
 		"Name": "Astrospurt Phaser",
-		"Width": 3.54,
-		"Height": 4.72,
+		"Width": 3.7,
+		"Height": 4.7,
 		"Image": "kma-audio-machines-astrospurt-phaser.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
 		"Name": "Cirrus Delay and Reverb",
-		"Width": 3.54,
-		"Height": 4.72,
+		"Width": 3.7,
+		"Height": 4.7,
 		"Image": "kma-audio-machines-cirrus-delay-and-reverb.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
 		"Name": "Dead Stag Fuzz",
-		"Width": 3.54,
-		"Height": 4.72,
+		"Width": 3.7,
+		"Height": 4.7,
 		"Image": "kma-audio-machines-dead-stag-fuzz.png"
 	},
 	{
@@ -6407,22 +6519,22 @@
 	{
 		"Brand": "KMA Audio Machines",
 		"Name": "Guardian of the Wurm",
-		"Width": 6.02,
-		"Height": 4.72,
+		"Width": 6.0,
+		"Height": 4.7,
 		"Image": "kma-audio-machines-guardian-of-the-wurm.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
 		"Name": "Horizont Phaser",
-		"Width": 6.02,
-		"Height": 4.72,
+		"Width": 6.0,
+		"Height": 4.7,
 		"Image": "kma-audio-machines-horizont-phaser.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
 		"Name": "Logan Transcend Drive",
-		"Width": 3.54,
-		"Height": 4.72,
+		"Width": 3.7,
+		"Height": 4.7,
 		"Image": "kma-audio-machines-logan-transcend-drive.png"
 	},
 	{
@@ -6436,7 +6548,7 @@
 		"Brand": "KMA Audio Machines",
 		"Name": "Moai Maea Analog Octaver",
 		"Width": 5.75,
-		"Height": 4.72,
+		"Height": 4.7,
 		"Image": "kma-audio-machines-moai-maea-analog-octaver.png"
 	},
 	{
@@ -6450,21 +6562,21 @@
 		"Brand": "KMA Audio Machines",
 		"Name": "Tyler Deluxe Frequency Splitter",
 		"Width": 5.75,
-		"Height": 4.72,
+		"Height": 4.7,
 		"Image": "kma-audio-machines-tyler-deluxe-frequency-splitter.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
 		"Name": "Tyler Frequency Splitter",
 		"Width": 5.75,
-		"Height": 4.72,
+		"Height": 4.7,
 		"Image": "kma-audio-machines-tyler-frequency-splitter.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
 		"Name": "Wurm Distortion",
-		"Width": 3.54,
-		"Height": 4.72,
+		"Width": 3.7,
+		"Height": 4.7,
 		"Image": "kma-audio-machines-wurm-distortion.png"
 	},
 	{
