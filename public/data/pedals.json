@@ -562,58 +562,114 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
-		"Width": 2.84,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-calavera.png"
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Quadrant",
-		"Width": 2.84,
-		"Height": 4.79,
-		"Image": "alexander-quadrant.png"
-	},
-	{
-		"Brand": "Alexander",
 		"Name": "Chesapeake",
-		"Width": 2.96,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-chesapeake.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Clang",
-		"Width": 2.88,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-clang.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Colour Theory",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-colour-theory.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "F13 Flanger",
-		"Width": 2.88,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-flange.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "F13 NEO Flanger",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-f13-neo-flanger.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Golden Summer",
-		"Width": 2.79,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-goldensummer.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "History Lesson",
-		"Width": 2.88,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-historylesson.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "History Lesson Vol3",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-history-lesson-vol3.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Hot Pink Drive",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-hot-pink-drive.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Jubilee",
-		"Width": 2.83,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-jubilee.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Magnolia Vintage Overdrive",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-magnolia-vintage-overdrive.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Marshmallow",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-marshmallow.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Neo Footswitch",
+		"Width": 4,
+		"Height": 2,
+		"Image": "alexander-neo-link.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Neo-Link",
+		"Width": 2,
+		"Height": 2,
+		"Image": "alexander-neo-footswitch.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Neo-Matic",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-neo-matic.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -624,17 +680,59 @@
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Quadrant",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-quadrant.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Radical Delay",
-		"Width": 2.88,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-radical.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Radical Delay DX",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-radical-delay-dx.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Riff Instant Tone Sanitizer",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-riff-instant-tone-sanitizer.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Sky 5000",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-sky-5000.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Space Expander",
-		"Width": 2.86,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-spaceexpander.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Space Race",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-space-race.png"
+	},	
+	{
+		"Brand": "Alexander",
+		"Name": "Sugarcube",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-sugarcube.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -645,23 +743,23 @@
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Superball",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "alexander-superball.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Syntax Error",
-		"Width": 2.84,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-syntaxerror.png"
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Space Race",
-		"Width": 2.88,
-		"Height": 4.79,
-		"Image": "alexander-space-race.png"
-	},
-	{
-		"Brand": "Alexander",
 		"Name": "Wavelength",
-		"Width": 2.88,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "alexander-wavelength.png"
 	},
 	{
@@ -4102,49 +4200,49 @@
 		"Image": "ehx-headphone-amp.png"
 	},
 	{
-		"Brand": "Electonic Audio Experiments",
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Beholder",
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "electronic-audio-experiments-beholder.png"
 	},
 	{
-		"Brand": "Electonic Audio Experiments",
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Dagger",
-		"Width": 2.9,
-		"Height": 4.77,
+		"Width": 2.6,
+		"Height": 4.86,
 		"Image": "electronic-audio-experiments-dagger.png"
 	},
 	{
-		"Brand": "Electonic Audio Experiments",
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Halberd",
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "electronic-audio-experiments-halberd.png"
 	},
 	{
-		"Brand": "Electonic Audio Experiments",
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Hypersleep",
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "electronic-audio-experiments-hypersleep.png"
 	},
 	{
-		"Brand": "Electonic Audio Experiments",
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Longsword",
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "electronic-audio-experiments-longsword.png"
 	},
 	{
-		"Brand": "Electonic Audio Experiments",
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Model feT",
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "electronic-audio-experiments-model-fet.png"
 	},
 	{
-		"Brand": "Electonic Audio Experiments",
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Sending",
 		"Width": 5.7,
 		"Height": 4.7,
@@ -11065,6 +11163,13 @@
 		"Width": 3.2,
 		"Height": 4.6,
 		"Image": "vertex-boost.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Boost MkII",
+		"Width": 2.2,
+		"Height": 4.6,
+		"Image": "vertex-boost-mk2.png"
 	},
 	{
 		"Brand": "Vertex",
