@@ -133,6 +133,13 @@
 		"Image": "gator-alum-large.png"
 	},
 	{
+		"Brand": "Ghost Fire",
+		"Name": "Little 20",
+		"Width": 20,
+		"Height": 7,
+		"Image": "ghostfire-little20.png"
+	},
+	{
 		"Brand": "Gokko",
 		"Name": "Medium Pedalboard",
 		"Width": 13.8,
