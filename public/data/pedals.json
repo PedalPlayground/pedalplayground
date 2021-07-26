@@ -3704,6 +3704,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Speaker Cranker",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "earthquaker-speaker-cranker.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Spires",
 		"Width": 3.65,
 		"Height": 4.77,
