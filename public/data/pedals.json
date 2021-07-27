@@ -5013,17 +5013,45 @@
 	},
 	{
 		"Brand": "GFI System",
+		"Name": "Cabzeus",
+		"Width": 4.72,
+		"Height": 3.66,
+		"Image": "gfi-cabzeus.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Cabzeus Mono",
+		"Width": 2.95,
+		"Height": 3.75,
+		"Image": "gfi-cabzeus-mono.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Jonassus Drive",
+		"Width": 3.03,
+		"Height": 4.84,
+		"Image": "gfi-jonassus.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Orca",
+		"Width": 2.83,
+		"Height": 4.84,
+		"Image": "gfi-orca.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Skylar",
+		"Width": 2.83,
+		"Height": 4.84,
+		"Image": "gfi-skylar.png"
+	},
+	{
+		"Brand": "GFI System",
 		"Name": "Specular Reverb V2",
 		"Width": 4.7,
 		"Height": 2.5,
 		"Image": "gfi-specularreverbv2.png"
-	},
-	{
-		"Brand": "GFI System",
-		"Name": "Jonassus",
-		"Width": 3.0315,
-		"Height": 4.72441,
-		"Image": "gfi-jonassus.png"
 	},
 	{
 		"Brand": "GFI System",
@@ -5034,38 +5062,31 @@
 	},
 	{
 		"Brand": "GFI System",
-		"Name": "Synesthesia",
-		"Width": 4.9,
-		"Height": 4.72441,
-		"Image": "gfi-synesthesia.png"
-	},
-	{
-		"Brand": "GFI System",
-		"Name": "Cabzeus",
-		"Width": 4.7,
-		"Height": 3.712,
-		"Image": "gfi-cabzeus.png"
-	},
-	{
-		"Brand": "GFI System",
-		"Name": "Triple Switch",
-		"Width": 4.7,
-		"Height": 1.627,
-		"Image": "gfi-tripleswitch.png"
-	},
-	{
-		"Brand": "GFI System",
 		"Name": "Specular Tempus",
-		"Width": 4.7,
-		"Height": 3.5,
+		"Width": 4.72,
+		"Height": 3.66,
 		"Image": "gfi-speculartempus.png"
 	},
 	{
 		"Brand": "GFI System",
 		"Name": "Specular Tempus (Black Edition)",
-		"Width": 4.7,
-		"Height": 3.6,
+		"Width": 4.72,
+		"Height": 3.66,
 		"Image": "gfi-speculartempus-black.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Synesthesia",
+		"Width": 4.84,
+		"Height": 4.84,
+		"Image": "gfi-synesthesia.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Triple Switch",
+		"Width": 4.92,
+		"Height": 2.21,
+		"Image": "gfi-tripleswitch.png"
 	},
 	{
 		"Brand": "GigRig",
