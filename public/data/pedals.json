@@ -5131,20 +5131,6 @@
 		"Image": "gigrig-three2one.png"
 	},
 	{
-		"Brand": "Ground Control",
-		"Name": "Tsukuyomi",
-		"Width": 2.80,
-		"Height": 4.85,
-		"Image": "ground-control-tsukuyomi.png"
-  },
-	{
-		"Brand": "Ground Control",
-		"Name": "Amaterasu",
-		"Width": 2.80,
-		"Height": 4.85,
-		"Image": "ground-control-amaterasu.png"
-	},
-	{
 		"Brand": "Goodwood Audio",
 		"Name": "Input V2",
 		"Width": 4.44882,
@@ -5325,6 +5311,48 @@
 		"Width": 4.85,
 		"Height": 4.20,
 		"Image": "gcp-infatuator-yellow.png"
+	},
+	{
+		"Brand": "Ground Control",
+		"Name": "Amaterasu",
+		"Width": 2.92,
+		"Height": 4.84,
+		"Image": "ground-control-amaterasu.png"
+	},
+	{
+		"Brand": "Ground Control",
+		"Name": "Blood Oath",
+		"Width": 2.92,
+		"Height": 4.84,
+		"Image": "ground-control-blood-oath.png"
+	},
+	{
+		"Brand": "Ground Control",
+		"Name": "Locust",
+		"Width": 2.8,
+		"Height": 4.96,
+		"Image": "ground-control-locust.png"
+	},
+	{
+		"Brand": "Ground Control",
+		"Name": "Noodles",
+		"Width": 4.75,
+		"Height": 3.87,
+		"Image": "ground-control-noodles.png"
+	},
+	{
+		"Brand": "Ground Control",
+		"Name": "Serpens",
+		"Width": 2.92,
+		"Height": 4.84,
+		"Image": "ground-control-serpens.png"
+	},
+	{
+		"Brand": "Ground Control",
+		"Name": "Tsukuyomi",
+		"Width": 2.92,
+		"Height": 4.84,
+		"Image": "ground-control-tsukuyomi.png"
 	},
 	{
 		"Brand": "Gurus",
