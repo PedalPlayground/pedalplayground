@@ -4977,6 +4977,41 @@
 		"Image": "fulltone-true-path-aby-ht.png"
 	},
 	{
+		"Brand": "Gamechanger Audio",
+		"Name": "Light",
+		"Width": 4.13,
+		"Height": 7.6,
+		"Image": "gamechanger-light.png"
+	},
+	{
+		"Brand": "Gamechanger Audio",
+		"Name": "Plasma",
+		"Width": 3.8,
+		"Height": 5.94,
+		"Image": "gamechanger-plasma.png"
+	},
+	{
+		"Brand": "Gamechanger Audio",
+		"Name": "Plasma Coil",
+		"Width": 3.8,
+		"Height": 5.94,
+		"Image": "gamechanger-plasma-coil.png"
+	},
+	{
+		"Brand": "Gamechanger Audio",
+		"Name": "Plus",
+		"Width": 3.62,
+		"Height": 7.99,
+		"Image": "gamechanger-audio-plus-sustain.png"
+	},
+	{
+		"Brand": "Gamechanger Audio",
+		"Name": "Wet",
+		"Width": 2.2,
+		"Height": 2.6,
+		"Image": "gamechanger-audio-wet.png"
+	},
+	{
 		"Brand": "GFI System",
 		"Name": "Specular Reverb V2",
 		"Width": 4.7,
@@ -6792,9 +6827,16 @@
 	{
 		"Brand": "Line6",
 		"Name": "HX Stomp",
-		"Width": 7,
-		"Height": 4.96,
+		"Width": 7.25,
+		"Height": 5.08,
 		"Image": "line6-hxstomp.png"
+	},
+	{
+		"Brand": "Line6",
+		"Name": "HX Stomp (White)",
+		"Width": 7.25,
+		"Height": 5.08,
+		"Image": "line6-hxstomp-white.png"
 	},
 	{
 		"Brand": "Line6",
@@ -7350,13 +7392,6 @@
 		"Image": "mxr-univibe.png"
 	},
 	{
-		"Brand": "Gamechanger Audio",
-		"Name": "Plasma",
-		"Width": 3.8,
-		"Height": 5.8,
-		"Image": "gamechanger-plasma.png"
-	},
-	{
 		"Brand": "Mad Professor",
 		"Name": "1 Overdrive",
 		"Width": 2.5,
@@ -7614,6 +7649,13 @@
 		"Width": 2.62,
 		"Height": 4.78,
 		"Image": "matthews-thewhaler.png"
+	},
+	{
+		"Brand": "Matthews Effects",
+		"Name": "The Futurist",
+		"Width": 4,
+		"Height": 3.2,
+		"Image": "matthews-thefuturist.png"
 	},
 	{
 		"Brand": "Mythos",
@@ -8517,6 +8559,13 @@
 		"Width": 4.69,
 		"Height": 3.66,
 		"Image": "oldbloodnoise-rever.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper",
+		"Width": 1.52,
+		"Height": 3.889,
+		"Image": "obne-ramper.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -9955,87 +10004,101 @@
 	},
 	{
 		"Brand": "Spaceman",
-		"Name": "Titan II",
-		"Width": 2.86,
-		"Height": 4.78,
-		"Image": "spaceman-titanii.png"
-	},
-	{
-		"Brand": "Spaceman",
-		"Name": "Saturn VI",
-		"Width": 2.83,
-		"Height": 4.78,
-		"Image": "spaceman-saturnvi.png"
-	},
-	{
-		"Brand": "Spaceman",
 		"Name": "Apollo VII",
-		"Width": 2.83,
-		"Height": 4.78,
+		"Width": 3,
+		"Height": 4.75,
 		"Image": "spaceman-apollovii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Artemis",
+		"Width": 4.25,
+		"Height": 4.75,
+		"Image": "spaceman-artemis.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Atlas III",
-		"Width": 2.83,
-		"Height": 4.78,
+		"Width": 3,
+		"Height": 4.75,
 		"Image": "spaceman-atlasiii.png"
 	},
 	{
 		"Brand": "Spaceman",
-		"Name": "Sputnik",
-		"Width": 2.83,
-		"Height": 4.78,
-		"Image": "spaceman-apollovii.png"
-	},
-	{
-		"Brand": "Spaceman",
-		"Name": "Sputnik III",
-		"Width": 4,
-		"Height": 4.7,
-		"Image": "spaceman-sputnikiii.png"
+		"Name": "Aurora",
+		"Width": 4.25,
+		"Height": 4.75,
+		"Image": "spaceman-aurora.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Gemini IV",
-		"Width": 3.98,
-		"Height": 4.7,
+		"Width": 4.25,
+		"Height": 4.75,
 		"Image": "spaceman-geminiiv.png"
 	},
 	{
 		"Brand": "Spaceman",
-		"Name": "Nebula",
-		"Width": 3.98,
-		"Height": 4.7,
-		"Image": "spaceman-nebula.png"
-	},
-	{
-		"Brand": "Spaceman",
-		"Name": "Polaris",
-		"Width": 3.99,
-		"Height": 4.7,
-		"Image": "spaceman-polaris.png"
-	},
-	{
-		"Brand": "Spaceman",
 		"Name": "Mission Control",
-		"Width": 4.98,
-		"Height": 3.7,
+		"Width": 5,
+		"Height": 4,
 		"Image": "spaceman-missioncontrol.png"
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Nebula",
+		"Width": 4.25,
+		"Height": 4.75,
+		"Image": "spaceman-nebula.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Orion",
+		"Width": 6.5,
+		"Height": 4.75,
+		"Image": "spaceman-orion.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Polaris",
+		"Width": 4.25,
+		"Height": 4.75,
+		"Image": "spaceman-polaris.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Saturn VI",
+		"Width": 3,
+		"Height": 4.75,
+		"Image": "spaceman-saturnvi.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Sputnik",
+		"Width": 3,
+		"Height": 4.75,
+		"Image": "spaceman-apollovii.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Sputnik II",
-		"Width": 6.45,
+		"Width": 6.5,
 		"Height": 4.75,
 		"Image": "spaceman-sputnikii.png"
 	},
 	{
 		"Brand": "Spaceman",
-		"Name": "Orion",
-		"Width": 6.45,
+		"Name": "Sputnik III",
+		"Width": 4.25,
 		"Height": 4.75,
-		"Image": "spaceman-orion.png"
+		"Image": "spaceman-sputnikiii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Titan II",
+		"Width": 3,
+		"Height": 4.75,
+		"Image": "spaceman-titanii.png"
 	},
 	{
 		"Brand": "Stone Deaf",
@@ -12325,20 +12388,6 @@
 		"Width": 4.7,
 		"Height": 2.38,
 		"Image": "zvex-woollymammoth.png"
-	},
-	{
-		"Brand": "Gamechanger Audio",
-		"Name": "Plus",
-		"Width": 3.55,
-		"Height": 7.7,
-		"Image": "gamechanger-audio-plus-sustain.png"
-	},
-	{
-		"Brand": "Gamechanger Audio",
-		"Name": "Wet",
-		"Width": 2.3,
-		"Height": 2.6,
-		"Image": "gamechanger-audio-wet.png"
 	},
 	{
 		"Brand": "Behringer",
