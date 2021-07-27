@@ -3515,6 +3515,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Bellows",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "earthquaker-bellows.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Bit Commander",
 		"Width": 2.5,
 		"Height": 4.87,
@@ -3529,10 +3536,31 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Black Eye",
+		"Width": 2.75,
+		"Height": 4.75,
+		"Image": "earthquaker-black-eye.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Bows",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "earthquaker-bows.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Cloven Hoof",
 		"Width": 2.5,
 		"Height": 4.87,
 		"Image": "earthquaker-clovenhoof.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Crimson Drive",
+		"Width": 2.75,
+		"Height": 4.75,
+		"Image": "earthquaker-crimson-drive.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -3543,10 +3571,31 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Dirt Transmitter",
+		"Width": 2.75,
+		"Height": 4.75,
+		"Image": "earthquaker-dirt-transmitter.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Disaster Transport",
-		"Width": 3.65,
+		"Width": 3.75,
 		"Height": 4.87,
 		"Image": "earthquaker-disastertransport.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Disaster Transport Jr.",
+		"Width": 2.75,
+		"Height": 4.75,
+		"Image": "earthquaker-disastertransport-jr.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Disaster Transport SR",
+		"Width": 5.65,
+		"Height": 4.87,
+		"Image": "earthquaker-disastertransport-sr.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -3554,6 +3603,13 @@
 		"Width": 2.5,
 		"Height": 4.87,
 		"Image": "earthquakerdevices-dispatchmaster.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Dreamer Crusher",
+		"Width": 2.75,
+		"Height": 4.75,
+		"Image": "earthquaker-dream-crusher.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -3620,6 +3676,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Interstellar Orbiter",
+		"Width": 5.65,
+		"Height": 4.87,
+		"Image": "earthquaker-interstellar-orbiter.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Levitation",
 		"Width": 2.5,
 		"Height": 4.87,
@@ -3631,6 +3694,13 @@
 		"Width": 3.77,
 		"Height": 4.77,
 		"Image": "earthquaker-lifepedal-v2.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Monarch",
+		"Width": 2.75,
+		"Height": 4.75,
+		"Image": "earthquaker-monarch.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -3659,6 +3729,13 @@
 		"Width": 2.5,
 		"Height": 4.87,
 		"Image": "earthquaker-parkfuzz.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Pitch Bay",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "earthquaker-pitch-bay.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -3697,6 +3774,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Sound Shank",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "earthquaker-sound-shank.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Space Spiral",
 		"Width": 2.5,
 		"Height": 4.87,
@@ -3732,10 +3816,24 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Talons",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "earthquaker-talons.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Tentacle",
 		"Width": 2.5,
 		"Height": 4.87,
 		"Image": "earthquaker-tentacle.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Terminal",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "earthquaker-terminal.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -3746,10 +3844,24 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Time Shadows",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "earthquaker-time-shadows.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Tone Job",
 		"Width": 2.5,
 		"Height": 4.87,
 		"Image": "earthquaker-tonejob.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Tone Reaper",
+		"Width": 2.75,
+		"Height": 4.75,
+		"Image": "earthquaker-tone-reaper.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -3771,6 +3883,20 @@
 		"Width": 2.5,
 		"Height": 4.87,
 		"Image": "eqd-westwood.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "White Light",
+		"Width": 2.75,
+		"Height": 4.75,
+		"Image": "earthquaker-white-light.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Zap Machine V2",
+		"Width": 3.75,
+		"Height": 4.87,
+		"Image": "earthquaker-zap-machine-v2.png"
 	},
 	{
 		"Brand": "Effectrode",
