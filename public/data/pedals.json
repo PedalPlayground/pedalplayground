@@ -3564,6 +3564,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Fuzz Master General",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "earthquaker-fuzz-master-general.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Ghost Echo",
 		"Width": 2.5,
 		"Height": 4.87,
