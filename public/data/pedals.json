@@ -5110,6 +5110,34 @@
 		"Image": "fulltone-true-path-aby-ht.png"
 	},
 	{
+		"Brand": "Fuzzrocious Pedals",
+		"Name": "Cat King",
+		"Width": 5.71,
+		"Height": 4.84,
+		"Image": "fuzzrocious-pedals-cat-king.png"
+	},
+	{
+		"Brand": "Fuzzrocious Pedals",
+		"Name": "Croak",
+		"Width": 3.82,
+		"Height": 4.77,
+		"Image": "fuzzrocious-pedals-croak.png"
+	},
+	{
+		"Brand": "Fuzzrocious Pedals",
+		"Name": "Grey Stache",
+		"Width": 3.7,
+		"Height": 4.77,
+		"Image": "fuzzrocious-pedals-grey-stache.png"
+	},
+	{
+		"Brand": "Fuzzrocious Pedals",
+		"Name": "L'il Fella",
+		"Width": 2.64,
+		"Height": 4.92,
+		"Image": "fuzzrocious-pedals-lil-fella.png"
+	},
+	{
 		"Brand": "Gamechanger Audio",
 		"Name": "Light",
 		"Width": 4.13,
