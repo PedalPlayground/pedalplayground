@@ -10395,6 +10395,20 @@
 		"Image": "spaceman-titanii.png"
 	},
 	{
+		"Brand": "Spuce Effects",
+		"Name": "The Arborist",
+		"Width": 2.6,
+		"Height": 4.96,
+		"Image": "spruce-effects-the-arborist.png"
+	},
+	{
+		"Brand": "Spuce Effects",
+		"Name": "The Gale",
+		"Width": 2.6,
+		"Height": 4.96,
+		"Image": "spruce-effects-the-gale.png"
+	},
+	{
 		"Brand": "Stone Deaf",
 		"Name": "EP-1 Expression Pedal",
 		"Width": 4.83,
