@@ -5202,6 +5202,13 @@
 	},
 	{
 		"Brand": "GFI System",
+		"Name": "Rossie",
+		"Width": 2.83,
+		"Height": 4.84,
+		"Image": "gfi-rossie.png"
+	},
+	{
+		"Brand": "GFI System",
 		"Name": "Skylar",
 		"Width": 2.83,
 		"Height": 4.84,
