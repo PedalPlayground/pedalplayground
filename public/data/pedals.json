@@ -175,6 +175,41 @@
 		"Image": "abasi-pathos.png"
 	},
 	{
+		"Brand": "AC Noises",
+		"Name": "AMA",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "acn-ama.png"
+	},
+	{
+		"Brand": "AC Noises",
+		"Name": "Combatti",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "acn-combatti.png"
+	},
+	{
+		"Brand": "AC Noises",
+		"Name": "Esplora",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "acn-esplora.png"
+	},
+	{
+		"Brand": "AC Noises",
+		"Name": "Respira",
+		"Width": 3.7,
+		"Height": 4.82,
+		"Image": "acn-respira.png"
+	},
+	{
+		"Brand": "AC Noises",
+		"Name": "Vola",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "acn-vola.png"
+	},
+	{
 		"Brand": "Anasounds",
 		"Name": "Freq Up",
 		"Width": 2.52,
@@ -3452,7 +3487,7 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Acqueduct",
+		"Name": "Aqueduct",
 		"Width": 2.5,
 		"Height": 4.87,
 		"Image": "earthquaker-acqueduct.png"
@@ -3585,7 +3620,7 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Disaster Transport Jr.",
+		"Name": "Disaster Transport Jr",
 		"Width": 2.75,
 		"Height": 4.75,
 		"Image": "earthquaker-disastertransport-jr.png"
