@@ -4012,6 +4012,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Bad Stone",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "ehx-badstone.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Big Muff Pi",
 		"Width": 3.95,
 		"Height": 4.7,
