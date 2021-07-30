@@ -3712,8 +3712,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Interstellar Orbiter",
-		"Width": 5.65,
-		"Height": 4.87,
+		"Width": 4.75,
+		"Height": 5.77,
 		"Image": "earthquaker-interstellar-orbiter.png"
 	},
 	{
@@ -5287,8 +5287,8 @@
 	{
 		"Brand": "GFI System",
 		"Name": "Triple Switch",
-		"Width": 4.92,
-		"Height": 2.21,
+		"Width": 5,
+		"Height": 1.85,
 		"Image": "gfi-tripleswitch.png"
 	},
 	{
@@ -5603,14 +5603,14 @@
 		"Brand": "Heather Brown Electronicals",
 		"Name": "The Blessed Mother",
 		"Width": 5.14,
-		"Height": 4.33,
+		"Height": 3.7,
 		"Image": "hbe-the-blessed-mother.png"
 	},
 	{
 		"Brand": "Heather Brown Electronicals",
 		"Name": "The Blessed Mother: The Fuzz Assumption",
 		"Width": 5.14,
-		"Height": 4.33,
+		"Height": 3.7,
 		"Image": "hbe-the-blessed-mother-the-fuzz-assumption.png"
 	},
 	{
@@ -8837,7 +8837,7 @@
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Blackcap",
 		"Width": 4.6,
-		"Height": 3.86,
+		"Height": 4,
 		"Image": "obne-blackcap.png"
 	},
 	{
@@ -8886,7 +8886,7 @@
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Excess",
 		"Width": 4.6,
-		"Height": 3.86,
+		"Height": 4,
 		"Image": "obne-excess.png"
 	},
 	{
@@ -8949,14 +8949,14 @@
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Minim",
 		"Width": 4.6,
-		"Height": 3.74,
+		"Height": 4,
 		"Image": "oldbloodnoise-minim.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Mondegreen",
-		"Width": 2.65,
-		"Height": 4.87,
+		"Width": 2.87,
+		"Height": 4.96,
 		"Image": "oldbloodnoise-mondegreen.png"
 	},
 	{
@@ -9012,7 +9012,7 @@
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Whitecap",
 		"Width": 4.6,
-		"Height": 3.74,
+		"Height": 4,
 		"Image": "oldbloodnoise-whitecap.png"
 	},
 	{
