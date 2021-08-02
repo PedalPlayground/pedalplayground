@@ -1450,6 +1450,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RC-500 Loop Station",
+		"Width": 6.75,
+		"Height": 5.43,
+		"Image": "boss-rc500.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RE-20",
 		"Width": 6.81,
 		"Height": 6.25,
@@ -11097,8 +11104,8 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Ditto",
-		"Width": 2,
-		"Height": 3.5,
+		"Width": 2.15,
+		"Height": 3.7,
 		"Image": "tc-ditto.png"
 	},
 	{
@@ -11121,6 +11128,13 @@
 		"Width": 9.25,
 		"Height": 5.70866,
 		"Image": "tc-ditto4.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Ditto+",
+		"Width": 2.15,
+		"Height": 3.7,
+		"Image": "tc-ditto-plus.png"
 	},
 	{
 		"Brand": "TC Electronic",
