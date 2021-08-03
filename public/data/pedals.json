@@ -1862,6 +1862,20 @@
 		"Image": "bearfootfx-sparklingyellowod1.png"
 	},
 	{
+		"Brand": "Beautiful Noise Effects",
+		"Name": "Endless Sleeper",
+		"Width": 5.9,
+		"Height": 4.84,
+		"Image": "bne-endless-sleeper.png"
+	},
+	{
+		"Brand": "Beautiful Noise Effects",
+		"Name": "When The Sun Explodes",
+		"Width": 7.48,
+		"Height": 4.96,
+		"Image": "bne-when-the-sun-explodes.png"
+	},
+	{
 		"Brand": "Becos",
 		"Name": "CompIQ Mini",
 		"Width": 1.85,
@@ -2653,6 +2667,13 @@
 		"Image": "cioks-dc8.png"
 	},
 	{
+		"Brand": "Collision Devices",
+		"Name": "Black Hole Symmetry",
+		"Width": 7.44,
+		"Height": 4.84,
+		"Image": "collision-devices-black-hole-symmetry.png"
+	},
+	{
 		"Brand": "Colorsound",
 		"Name": "Power Boost",
 		"Width": 3.8189,
@@ -2721,6 +2742,13 @@
 		"Width": 7.5,
 		"Height": 4.75,
 		"Image": "customtones-ethosoverdrive.png"
+	},
+	{
+		"Brand": "Danelectro",
+		"Name": "Cool Cat Tremolo",
+		"Width": 3.5,
+		"Height": 4.75,
+		"Image": "danelectro-coolcattremolo.png"
 	},
 	{
 		"Brand": "Dr Z",
@@ -2801,23 +2829,44 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Absolute Destruction",
+		"Width": 2.61,
+		"Height": 4.95,
+		"Image": "deathbyaudio-absolute-destruction.png"
+	},
+	{
+		"Brand": "Death By Audio",
+		"Name": "Apocalypse",
+		"Width": 4.72,
+		"Height": 5.87,
+		"Image": "deathbyaudio-apocalypse.png"
+	},
+	{
+		"Brand": "Death By Audio",
+		"Name": "Deep Animation",
+		"Width": 4.72,
+		"Height": 5.92,
+		"Image": "deathbyaudio-deep-animation.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Echo Dream 2",
-		"Width": 4.65,
-		"Height": 5.67,
+		"Width": 4.72,
+		"Height": 5.87,
 		"Image": "deathbyaudio-echodream2.png"
 	},
 	{
 		"Brand": "Death By Audio",
 		"Name": "Evil Filter",
-		"Width": 4.6,
-		"Height": 7.48,
+		"Width": 4.72,
+		"Height": 7.75,
 		"Image": "deathbyaudio-evilfilter.png"
 	},
 	{
 		"Brand": "Death By Audio",
 		"Name": "Fuzz War",
-		"Width": 4.65,
-		"Height": 5.67,
+		"Width": 4.72,
+		"Height": 5.87,
 		"Image": "deathbyaudio-fuzzwar.png"
 	},
 	{
@@ -2829,44 +2878,79 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Harmonic Transformer",
+		"Width": 2.98,
+		"Height": 4.83,
+		"Image": "deathbyaudio-harmonic-transformer.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Interstellar Overdrive",
-		"Width": 3.66,
-		"Height": 4.65,
+		"Width": 4.05,
+		"Height": 4.75,
 		"Image": "deathbyaudio-interstellaroverdrive.png"
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Interstellar Overdrive Deluxe",
+		"Width": 4.89,
+		"Height": 5.71,
+		"Image": "deathbyaudio-interstellaroverdrive-deluxe.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Micro Dream Delay",
-		"Width": 2.56,
-		"Height": 4.69,
+		"Width": 2.61,
+		"Height": 4.95,
 		"Image": "deathbyaudio-microdream.png"
 	},
 	{
 		"Brand": "Death By Audio",
 		"Name": "Reverberation Machine",
-		"Width": 3.58,
-		"Height": 4.8,
+		"Width": 3.67,
+		"Height": 4.86,
 		"Image": "deathbyaudio-reverberationmachine.png"
 	},
 	{
 		"Brand": "Death By Audio",
 		"Name": "Robot",
-		"Width": 4.65,
-		"Height": 5.67,
+		"Width": 4.72,
+		"Height": 5.87,
 		"Image": "deathbyaudio-robot.png"
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Rooms",
+		"Width": 3.86,
+		"Height": 5.95,
+		"Image": "deathbyaudio-rooms.png"
+	},
+	{
+		"Brand": "Death By Audio",
+		"Name": "Soundwave Breakdown",
+		"Width": 3.67,
+		"Height": 4.86,
+		"Image": "deathbyaudio-soundwave-breakdown.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Supersonic Fuzz Gun",
-		"Width": 4.65,
-		"Height": 3.66,
+		"Width": 4.72,
+		"Height": 3.84,
 		"Image": "deathbyaudio-fuzzgun.png"
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Total Sonic Annihilation 2",
+		"Width": 2.69,
+		"Height": 4.83,
+		"Image": "deathbyaudio-total-sonic-annihilation-2.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Waveform Destroyer",
-		"Width": 4.65,
-		"Height": 5.67,
+		"Width": 4.72,
+		"Height": 5.87,
 		"Image": "deathbyaudio-waveformdestroyer.png"
 	},
 	{
@@ -2959,6 +3043,13 @@
 		"Width": 2.875,
 		"Height": 4.625,
 		"Image": "digitech-carcosa.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Stereo Flanger FX75-B",
+		"Width": 3.31,
+		"Height": 5.125,
+		"Image": "dod-fx75b.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -4261,6 +4352,13 @@
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-360.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
+		"Name": "Neo Clone",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "ehx-neoclone.png"
 	},
 	{
 		"Brand": "Electro Harmonix",
@@ -7750,6 +7848,13 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Super Black",
+		"Width": 3.9,
+		"Height": 4.73,
+		"Image": "madprof-superblack.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Supreme Dual Overdrive",
 		"Width": 4.53,
 		"Height": 3.60,
@@ -10137,13 +10242,6 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
-		"Name": "NU-33 Vinyl Engine",
-		"Width": 4.7,
-		"Height": 3.82,
-		"Image": "solidgold-nu33.png"
-	},
-	{
-		"Brand": "SolidGoldFX",
 		"Name": "Electroman",
 		"Width": 4.67,
 		"Height": 3.68,
@@ -10155,6 +10253,13 @@
 		"Width": 4.67,
 		"Height": 3.68,
 		"Image": "solidgoldfx-electroman-mkii.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "EM-III",
+		"Width": 4.72,
+		"Height": 2.76,
+		"Image": "solidgoldfx-em-iii.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
@@ -10172,6 +10277,27 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "Imperial Mk II",
+		"Width": 4.67,
+		"Height": 3.68,
+		"Image": "solidgoldfx-imperial-mk2.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "NU-33 Vinyl Engine",
+		"Width": 4.67,
+		"Height": 3.68,
+		"Image": "solidgold-nu33.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Oblivion",
+		"Width": 4.67,
+		"Height": 3.68,
+		"Image": "solidgoldfx-oblivion.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Surf Rider III",
 		"Width": 4.67,
 		"Height": 3.68,
@@ -10180,8 +10306,8 @@
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "Zeta DLX",
-		"Width": 4.7,
-		"Height": 3.7,
+		"Width": 4.67,
+		"Height": 3.68,
 		"Image": "solidgoldfx-zetadlx.png"
 	},
 	{
@@ -11205,6 +11331,13 @@
 		"Width": 2.83,
 		"Height": 4.8,
 		"Image": "tcelectronic-helix.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Magus Pro",
+		"Width": 2.2,
+		"Height": 3.65,
+		"Image": "tc-maguspro.png"
 	},
 	{
 		"Brand": "TC Electronic",
