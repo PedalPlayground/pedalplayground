@@ -2200,8 +2200,8 @@
 	{
 		"Brand": "Caroline",
 		"Name": "Icarus",
-		"Width": 3.7,
-		"Height": 4.7,
+		"Width": 2.84,
+		"Height": 4.77,
 		"Image": "caroline-icarus.png"
 	},
 	{
@@ -5353,6 +5353,20 @@
 		"Width": 2.95,
 		"Height": 3.75,
 		"Image": "gfi-cabzeus-mono.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Clockwork V2",
+		"Width": 4.7,
+		"Height": 2.5,
+		"Image": "gfi-clockwork-v2.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Clockwork V3",
+		"Width": 4.7,
+		"Height": 2.5,
+		"Image": "gfi-clockwork.png"
 	},
 	{
 		"Brand": "GFI System",
