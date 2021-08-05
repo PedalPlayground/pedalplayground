@@ -9674,11 +9674,25 @@
 		"Image": "poly-digit.png"
 	},
 	{
-		"Brand": "Proco",
+		"Brand": "Pro Co",
 		"Name": "Rat",
 		"Width": 3.5,
 		"Height": 4,
 		"Image": "proco-rat.png"
+	},
+	{
+		"Brand": "Pro Co",
+		"Name": "Rat 2",
+		"Width": 3.5,
+		"Height": 4,
+		"Image": "proco-rat-2.png"
+	},
+	{
+		"Brand": "Pro Co",
+		"Name": "Lil' Rat",
+		"Width": 2,
+		"Height": 3,
+		"Image": "proco-lil-rat.png"
 	},
 	{
 		"Brand": "Providence",
@@ -10505,6 +10519,41 @@
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "sourceaudio-ultrawave.png"
+	},
+	{
+		"Brand": "Southampton Pedals",
+		"Name": "Booster Fuzz",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "southampton-boosted-fuzz.png"
+	},
+	{
+		"Brand": "Southampton Pedals",
+		"Name": "Fifth Gear",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "southampton-fifth-gear.png"
+	},
+	{
+		"Brand": "Southampton Pedals",
+		"Name": "Ictenio",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "southampton-ictenio.png"
+	},
+	{
+		"Brand": "Southampton Pedals",
+		"Name": "Indie Dream",
+		"Width": 3.87,
+		"Height": 4.87,
+		"Image": "southampton-indie-dream.png"
+	},
+	{
+		"Brand": "Southampton Pedals",
+		"Name": "Utility Knife",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "southampton-utility-knife.png"
 	},
 	{
 		"Brand": "Spaceman",
