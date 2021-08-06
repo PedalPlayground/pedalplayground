@@ -4867,56 +4867,70 @@
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Four Eyes",
-		"Width": 3.88,
+		"Width": 4.04,
 		"Height": 4.7,
 		"Image": "fairfield-foureyes.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
+		"Name": "Hors d'Oeuvre?",
+		"Width": 4.7,
+		"Height": 3.92,
+		"Image": "fairfield-hors-d-oeuvre.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
+		"Name": "Long Life",
+		"Width": 3.92,
+		"Height": 4.82,
+		"Image": "fairfield-long-life.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
 		"Name": "Meet Maude",
-		"Width": 5.07,
+		"Width": 4.94,
 		"Height": 3.8,
 		"Image": "fairfield-meetmaude.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
-		"Name": "Modèle B (Barbershop)",
-		"Width": 3.9,
-		"Height": 1.7,
+		"Name": "Modèle B",
+		"Width": 3.75,
+		"Height": 1.62,
 		"Image": "fairfield-barbershopmodeleb.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Randy's Revenge",
 		"Width": 4.7,
-		"Height": 3.81,
+		"Height": 3.92,
 		"Image": "fairfield-randysrevenge.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Shallow Water",
 		"Width": 4.7,
-		"Height": 3.81,
+		"Height": 3.92,
 		"Image": "fairfield-shallowwater.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "The Accountant",
-		"Width": 1.81,
+		"Width": 1.74,
 		"Height": 3.7,
 		"Image": "fairfield-theaccountant.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
-		"Name": "The Barbershop v1",
-		"Width": 5.06,
+		"Name": "The Barbershop",
+		"Width": 4.82,
 		"Height": 3.8,
 		"Image": "fairfield-barbershop.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "The Barbershop v2",
-		"Width": 2.65,
+		"Width": 2.94,
 		"Height": 4.4,
 		"Image": "fairfield-barbershopv2.png"
 	},
@@ -4924,7 +4938,7 @@
 		"Brand": "Fairfield Circuitry",
 		"Name": "The Unpleasant Surprise",
 		"Width": 4.4,
-		"Height": 2.46,
+		"Height": 2.62,
 		"Image": "fairfield-unpleasantsurprise.png"
 	},
 	{
@@ -7190,10 +7204,31 @@
 	},
 	{
 		"Brand": "Land Devices",
+		"Name": "Domino",
+		"Width": 3.82,
+		"Height": 1.63,
+		"Image": "landdevices-domino.png"
+	},
+	{
+		"Brand": "Land Devices",
 		"Name": "HP-2",
-		"Width": 4.7,
-		"Height": 3.83,
+		"Width": 4.6,
+		"Height": 3.86,
 		"Image": "landdevices-hp2.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "Land Mixer",
+		"Width": 4.84,
+		"Height": 5.91,
+		"Image": "landdevices-land-mixer.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "Pre",
+		"Width": 3.82,
+		"Height": 1.75,
+		"Image": "landdevices-pre.png"
 	},
 	{
 		"Brand": "Lehle",
