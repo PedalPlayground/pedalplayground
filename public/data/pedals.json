@@ -960,6 +960,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Germanium Fuzz",
+		"Width": 4.69,
+		"Height": 3.85,
+		"Image": "benson-germanium-fuzz.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Preamp",
 		"Width": 4.69,
 		"Height": 3.85,
@@ -3929,9 +3936,23 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Sea Machine",
+		"Width": 3.65,
+		"Height": 4.77,
+		"Image": "earthquaker-seamachine.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Sea Machine V2",
 		"Width": 2.5,
 		"Height": 4.87,
-		"Image": "earthquaker-seamachine.png"
+		"Image": "earthquaker-seamachine-v2.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Sea Machine V3",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "earthquaker-seamachine-v3.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
