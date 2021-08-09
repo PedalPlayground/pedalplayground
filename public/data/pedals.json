@@ -3641,9 +3641,9 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Arrows V1",
-		"Width": 2.5,
-		"Height": 4.87,
+		"Name": "Arrows",
+		"Width": 3,
+		"Height": 4.75,
 		"Image": "earthquaker-arrows.png"
 	},
 	{
@@ -3698,7 +3698,7 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Black Eye",
-		"Width": 2.75,
+		"Width": 3,
 		"Height": 4.75,
 		"Image": "earthquaker-black-eye.png"
 	},
@@ -3719,7 +3719,7 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Crimson Drive",
-		"Width": 2.75,
+		"Width": 3,
 		"Height": 4.75,
 		"Image": "earthquaker-crimson-drive.png"
 	},
@@ -3733,7 +3733,7 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Dirt Transmitter",
-		"Width": 2.75,
+		"Width": 3,
 		"Height": 4.75,
 		"Image": "earthquaker-dirt-transmitter.png"
 	},
@@ -3747,7 +3747,7 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Disaster Transport Jr",
-		"Width": 2.75,
+		"Width": 3,
 		"Height": 4.75,
 		"Image": "earthquaker-disastertransport-jr.png"
 	},
@@ -3768,7 +3768,7 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Dreamer Crusher",
-		"Width": 2.75,
+		"Width": 3,
 		"Height": 4.75,
 		"Image": "earthquaker-dream-crusher.png"
 	},
@@ -3866,7 +3866,7 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Monarch",
-		"Width": 2.75,
+		"Width": 3,
 		"Height": 4.75,
 		"Image": "earthquaker-monarch.png"
 	},
@@ -4041,7 +4041,7 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Tone Reaper",
-		"Width": 2.75,
+		"Width": 3,
 		"Height": 4.75,
 		"Image": "earthquaker-tone-reaper.png"
 	},
@@ -4069,7 +4069,7 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "White Light",
-		"Width": 2.75,
+		"Width": 3,
 		"Height": 4.75,
 		"Image": "earthquaker-white-light.png"
 	},
