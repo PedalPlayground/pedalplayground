@@ -294,20 +294,6 @@
 		"Image": "Toneking-minifuzz.png"
 	},
 	{
-		"Brand": "Jam Pedals",
-		"Name": "Retrovibe",
-		"Width": 3.7,
-		"Height": 4.7,
-		"Image": "jampedals-retrovibe1.png"
-	},
-	{
-		"Brand": "Jam Pedals",
-		"Name": "Chill",
-		"Width": 2.75,
-		"Height": 4.42,
-		"Image": "jam-chilli.png"
-	},
-	{
 		"Brand": "Roland",
 		"Name": "EV-5",
 		"Width": 3.4375,
@@ -341,34 +327,6 @@
 		"Width": 15.45,
 		"Height": 3.22,
 		"Image": "boss-gafc.png"
-	},
-	{
-		"Brand": "Jam Pedals",
-		"Name": "Rattler",
-		"Width": 2.7,
-		"Height": 4.42,
-		"Image": "jampedals-rattler1.png"
-	},
-	{
-		"Brand": "Jam Pedals",
-		"Name": "Waterfall",
-		"Width": 2.97,
-		"Height": 4.79,
-		"Image": "jampedals-waterfall1.png"
-	},
-	{
-		"Brand": "Jam Pedals",
-		"Name": "Lucydreamer",
-		"Width": 2.97,
-		"Height": 4.79,
-		"Image": "jam-lucydreamer.png"
-	},
-	{
-		"Brand": "Jam Pedals",
-		"Name": "Ripply Fall",
-		"Width": 5.1,
-		"Height": 3.9,
-		"Image": "jampedals-ripplyfall1.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2441,6 +2399,13 @@
 		"Width": 3.7,
 		"Height": 4.82,
 		"Image": "champion-leccy-the-skitter.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Swan Hunter",
+		"Width": 6.15,
+		"Height": 4.75,
+		"Image": "champion-leccy-the-swan-hunter.png"
 	},
 	{
 		"Brand": "Champion Leccy",
@@ -6151,6 +6116,132 @@
 		"Width": 4.75,
 		"Height": 3,
 		"Image": "jrockett-wtf.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Chill",
+		"Width": 2.7,
+		"Height": 4.3,
+		"Image": "jam-chilli.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "CTRL BOX",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jam-ctrl-box.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Delay Llama",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jam-delayllama.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Delay Llama Xtreme",
+		"Width": 5.8,
+		"Height": 4.8,
+		"Image": "jam-delayllama-xtreme.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Double Dreamer",
+		"Width": 5.1,
+		"Height": 3.9,
+		"Image": "jam-double-dreamer.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Dyna-ssoR",
+		"Width": 2.7,
+		"Height": 4.3,
+		"Image": "jampedals-dyna-ssor.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Eureka!",
+		"Width": 2.7,
+		"Height": 4.3,
+		"Image": "jampedals-eureka.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Harmonious Monk",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jam_hm.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Lucydreamer",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jam-lucydreamer.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Pink Flow",
+		"Width": 15.7,
+		"Height": 6.7,
+		"Image": "jampedals-pink-flow.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Rattler",
+		"Width": 2.7,
+		"Height": 4.3,
+		"Image": "jampedals-rattler1.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Red Muck",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jam-red-muck.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Retrovibe",
+		"Width": 4.1,
+		"Height": 4.7,
+		"Image": "jampedals-retrovibe1.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Ripple",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jampedals-ripple.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Ripply Fall",
+		"Width": 5.1,
+		"Height": 3.9,
+		"Image": "jampedals-ripplyfall1.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Tube Dreamer",
+		"Width": 2.7,
+		"Height": 4.3,
+		"Image": "jampedals-tube-dreamer.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Waterfall",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jampedals-waterfall1.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Wahcko",
+		"Width": 4.7,
+		"Height": 10,
+		"Image": "jampedals-wahcko.png"
 	},
 	{
 		"Brand": "JHS",
@@ -13312,20 +13403,6 @@
 		"Width": 1.5,
 		"Height": 3.6,
 		"Image": "jhs-littleblackampbox.png"
-	},
-	{
-		"Brand": "Jam Pedals",
-		"Name": "Harmonious Monk",
-		"Width": 3.74,
-		"Height": 4.73,
-		"Image": "jam_hm.png"
-	},
-	{
-		"Brand": "Jam Pedals",
-		"Name": "Delay Llama",
-		"Width": 3.74,
-		"Height": 4.73,
-		"Image": "jam-delayllama.png"
 	},
 	{
 		"Brand": "Vahlbruch",
