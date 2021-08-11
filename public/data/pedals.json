@@ -154,6 +154,20 @@
 		"Image": "sitek-wuffy.png"
 	},
 	{
+		"Brand": "29 Pedals",
+		"Name": "EUNA",
+		"Width": 4.875,
+		"Height": 3.625,
+		"Image": "29pedals-euna.png"
+	},
+	{
+		"Brand": "29 Pedals",
+		"Name": "OAMP",
+		"Width": 4.875,
+		"Height": 3.625,
+		"Image": "29pedals-oamp.png"
+	},
+	{
 		"Brand": "Abasi",
 		"Name": "Pathos",
 		"Width": 2.5,
@@ -9850,6 +9864,20 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Class A Boost",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-class-a-boost.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Constellator",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-constellator.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Disnortion Pro Micro",
 		"Width": 1.75,
 		"Height": 3.75,
@@ -9892,6 +9920,27 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Infinity Looper 3",
+		"Width": 7.4,
+		"Height": 5,
+		"Image": "pigtronix-infinity-3.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Moon Pool",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-moon-pool.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Mothership 2",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "pigtronix-mothership-2.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Octava",
 		"Width": 1.75,
 		"Height": 3.75,
@@ -9913,6 +9962,13 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Philosopher's Tone Germanium Gold",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-philosopherstone-germanium-gold.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Philosopher's Tone Micro",
 		"Width": 1.75,
 		"Height": 3.75,
@@ -9927,10 +9983,24 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Space Rip",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-space-rip.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Tremvelope",
 		"Width": 5.7,
 		"Height": 4.7,
 		"Image": "pigtronix-tremvelope.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Universal Remote",
+		"Width": 4.5,
+		"Height": 2.85,
+		"Image": "pigtronix-universal-remote.png"
 	},
 	{
 		"Brand": "Pinstripe Pedals",
