@@ -10158,24 +10158,24 @@
 	},
 	{
 		"Brand": "Red Panda",
-		"Name": "Particle V2",
-		"Width": 3.05,
-		"Height": 4.75,
-		"Image": "redpanda-particle2.png"
-	},
-	{
-		"Brand": "Red Panda",
-		"Name": "Tensor",
-		"Width": 3.05,
-		"Height": 4.75,
-		"Image": "redpanda-tensor.png"
-	},
-	{
-		"Brand": "Red Panda",
 		"Name": "Bitmap",
 		"Width": 3.3,
 		"Height": 4.4,
 		"Image": "redpanda-bitmap.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Bitmap 2",
+		"Width": 3.05,
+		"Height": 4.75,
+		"Image": "redpanda-bitmap2.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Buffer",
+		"Width": 2.5,
+		"Height": 1.5,
+		"Image": "redpanda-buffer.png"
 	},
 	{
 		"Brand": "Red Panda",
@@ -10186,6 +10186,20 @@
 	},
 	{
 		"Brand": "Red Panda",
+		"Name": "Context 2",
+		"Width": 3.05,
+		"Height": 4.75,
+		"Image": "redpanda-context2.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Mixer",
+		"Width": 4.4,
+		"Height": 2.6,
+		"Image": "redpanda-mixer.png"
+	},
+	{
+		"Brand": "Red Panda",
 		"Name": "Particle",
 		"Width": 3.3,
 		"Height": 4.4,
@@ -10193,10 +10207,38 @@
 	},
 	{
 		"Brand": "Red Panda",
+		"Name": "Particle V2",
+		"Width": 3.05,
+		"Height": 4.75,
+		"Image": "redpanda-particle2.png"
+	},
+	{
+		"Brand": "Red Panda",
 		"Name": "Raster",
 		"Width": 3.3,
 		"Height": 4.4,
 		"Image": "redpanda-raster.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Raster 2",
+		"Width": 3.05,
+		"Height": 4.75,
+		"Image": "redpanda-raster2.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Remote 4",
+		"Width": 10,
+		"Height": 2.95,
+		"Image": "redpanda-remote4.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Tensor",
+		"Width": 3.05,
+		"Height": 4.75,
+		"Image": "redpanda-tensor.png"
 	},
 	{
 		"Brand": "Red Witch",
@@ -12167,13 +12209,6 @@
 	},
 	{
 		"Brand": "Vertex",
-		"Name": "Ultraphonix OD",
-		"Width": 3.2,
-		"Height": 4.6,
-		"Image": "vertex-ultraphonix.png"
-	},
-	{
-		"Brand": "Vertex",
 		"Name": "Boost",
 		"Width": 3.2,
 		"Height": 4.6,
@@ -12210,8 +12245,8 @@
 	{
 		"Brand": "Vertex",
 		"Name": "Steel String Clean Drive MKII",
-		"Width": 2.25,
-		"Height": 4.3,
+		"Width": 2.2,
+		"Height": 4.6,
 		"Image": "vertex-steelstring-mk2.png"
 	},
 	{
@@ -12220,6 +12255,20 @@
 		"Width": 3.2,
 		"Height": 4.6,
 		"Image": "vertex-tonesecret.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Ultraphonix Overdrive",
+		"Width": 3.2,
+		"Height": 4.6,
+		"Image": "vertex-ultraphonix.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Ultraphonix Overdrive MKII",
+		"Width": 2.2,
+		"Height": 4.6,
+		"Image": "vertex-ultraphonix-mk2.png"
 	},
 	{
 		"Brand": "VFE",
