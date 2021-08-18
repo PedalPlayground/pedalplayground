@@ -1836,8 +1836,8 @@
 	{
 		"Brand": "Beautiful Noise Effects",
 		"Name": "Endless Sleeper",
-		"Width": 5.9,
-		"Height": 4.84,
+		"Width": 4.84,
+		"Height": 5.9,
 		"Image": "bne-endless-sleeper.png"
 	},
 	{
@@ -2872,8 +2872,8 @@
 	{
 		"Brand": "Death By Audio",
 		"Name": "Interstellar Overdrive Deluxe",
-		"Width": 4.89,
-		"Height": 5.71,
+		"Width": 5.71,
+		"Height": 4.89,
 		"Image": "deathbyaudio-interstellaroverdrive-deluxe.png"
 	},
 	{
@@ -6134,8 +6134,8 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "CTRL BOX",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 3,
+		"Height": 4.8,
 		"Image": "jam-ctrl-box.png"
 	},
 	{
@@ -10768,8 +10768,8 @@
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "EM-III",
-		"Width": 4.72,
-		"Height": 2.76,
+		"Width": 2.76,
+		"Height": 4.72,
 		"Image": "solidgoldfx-em-iii.png"
 	},
 	{
@@ -12630,14 +12630,14 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Deep Six",
-		"Width": 2.84,
+		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "walrus-deepsix.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Deep Six V2",
-		"Width": 2.84,
+		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "walrus-deepsixv2.png"
 	},
@@ -12679,15 +12679,15 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Iron Horse",
-		"Width": 2.84,
+		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "walrus-ironhorse.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Iron Horse V2",
-		"Width": 2.6,
-		"Height": 4.89,
+		"Width": 2.72,
+		"Height": 4.77,
 		"Image": "walrus-ironhorse-v2.png"
 	},
 	{
@@ -12714,29 +12714,29 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Julianna",
-		"Width": 2.84,
+		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "walrusaudio-julianna.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Jupiter",
-		"Width": 2.84,
+		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "walrus-jupiter.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Jupiter V2",
-		"Width": 2.6,
-		"Height": 4.89,
+		"Width": 2.8,
+		"Height": 4.77,
 		"Image": "walrus-jupiter-v2.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Kangra",
 		"Width": 2.72,
-		"Height": 4.89,
+		"Height": 4.77,
 		"Image": "walrus-kangra.png"
 	},
 	{
@@ -12763,14 +12763,14 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Mayflower",
-		"Width": 2.84,
+		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "walrus-mayflower.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Messner",
-		"Width": 2.84,
+		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "walrus-messner.png"
 	},
@@ -12798,7 +12798,7 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Plainsman",
-		"Width": 2.84,
+		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "walrus-plainsman.png"
 	},
@@ -12812,7 +12812,7 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Red",
-		"Width": 3.92,
+		"Width": 3.68,
 		"Height": 4.67,
 		"Image": "walrus-red.png"
 	},
@@ -12840,15 +12840,15 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Voyager",
-		"Width": 2.6,
-		"Height": 4.89,
+		"Width": 2.72,
+		"Height": 4.77,
 		"Image": "walrus-voyager.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Warhorn",
-		"Width": 2.6,
-		"Height": 4.89,
+		"Width": 2.72,
+		"Height": 4.77,
 		"Image": "walrus-warhorn.png"
 	},
 	{
