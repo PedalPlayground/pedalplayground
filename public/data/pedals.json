@@ -4208,6 +4208,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Mainframe",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "ehx-mainframe.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Mel9 Tape Replay Machine",
 		"Width": 3.95,
 		"Height": 4.7,
