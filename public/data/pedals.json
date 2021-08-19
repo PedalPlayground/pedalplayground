@@ -4299,6 +4299,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Pitch Fork+",
+		"Width": 4.13,
+		"Height": 4.75,
+		"Image": "ehx-pitchfork-plus.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Silencer",
 		"Width": 2.5,
 		"Height": 4.4,
