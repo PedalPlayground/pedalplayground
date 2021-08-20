@@ -9388,73 +9388,122 @@
 	},
 	{
 		"Brand": "Neunaber",
+		"Name": "Chroma",
+		"Width": 2.9,
+		"Height": 4.6,
+		"Image": "neunaber-chroma.png"
+	},
+	{
+		"Brand": "Neunaber",
+		"Name": "Echelon",
+		"Width": 2.9,
+		"Height": 4.6,
+		"Image": "neunaber-echelon.png"
+	},
+	{
+		"Brand": "Neunaber",
+		"Name": "Echelon v2",
+		"Width": 2.6,
+		"Height": 4.6,
+		"Image": "neunaber-echelon-v2.png"
+	},
+	{
+		"Brand": "Neunaber",
 		"Name": "EXP",
-		"Width": 4.5,
-		"Height": 2.75,
+		"Width": 4.6,
+		"Height": 2.9,
 		"Image": "neunaber-exp.png"
 	},
 	{
 		"Brand": "Neunaber",
 		"Name": "Expanse",
-		"Width": 2.8,
-		"Height": 4.5,
+		"Width": 2.9,
+		"Height": 4.6,
 		"Image": "neunaber-expanse.png"
 	},
 	{
 		"Brand": "Neunaber",
 		"Name": "Iconoclast",
-		"Width": 4.25,
-		"Height": 2.3,
+		"Width": 4.6,
+		"Height": 2.8,
 		"Image": "neunaber-iconoclast.png"
 	},
 	{
 		"Brand": "Neunaber",
+		"Name": "Illumine",
+		"Width": 4.8,
+		"Height": 3.9,
+		"Image": "neunaber-illumine.png"
+	},
+	{
+		"Brand": "Neunaber",
 		"Name": "Immerse",
-		"Width": 2.8,
-		"Height": 4.5,
+		"Width": 2.9,
+		"Height": 4.6,
 		"Image": "neunaber-immerse.png"
 	},
 	{
 		"Brand": "Neunaber",
 		"Name": "Immerse Mk II",
-		"Width": 2.87,
+		"Width": 2.9,
 		"Height": 4.6,
 		"Image": "neunaber-immerse-mkii.png"
 	},
 	{
 		"Brand": "Neunaber",
 		"Name": "Inspire",
-		"Width": 2.55,
-		"Height": 4.5,
+		"Width": 2.9,
+		"Height": 4.6,
 		"Image": "neunaber-inspire.png"
 	},
 	{
 		"Brand": "Neunaber",
 		"Name": "Inspire Mk II",
-		"Width": 2.87,
+		"Width": 2.9,
 		"Height": 4.6,
 		"Image": "neunaber-inspire-mkii.png"
 	},
 	{
 		"Brand": "Neunaber",
 		"Name": "Neuron",
-		"Width": 2.8,
+		"Width": 2.9,
 		"Height": 4.6,
 		"Image": "neunaber-neuron.png"
 	},
 	{
 		"Brand": "Neunaber",
 		"Name": "Seraphim",
-		"Width": 2.8,
-		"Height": 4.5,
+		"Width": 2.9,
+		"Height": 4.6,
 		"Image": "neunaber-seraphim.png"
 	},
 	{
 		"Brand": "Neunaber",
-		"Name": "WET",
-		"Width": 2.8,
-		"Height": 4.5,
-		"Image": "neunaber-wet.png"
+		"Name": "Seraphim v2",
+		"Width": 2.6,
+		"Height": 4.6,
+		"Image": "neunaber-seraphim-v2.png"
+	},
+	{
+		"Brand": "Neunaber",
+		"Name": "Wet v2 Stereo (Reissue)",
+		"Width": 2.9,
+		"Height": 4.6,
+		"Image": "neunaber-wet-v2.png"
+	},
+	{
+		"Brand": "Neunaber",
+		"Name": "Wet v4",
+		"Width": 2.9,
+		"Height": 4.6,
+		"Image": "neunaber-wet-v4.png"
+	},
+	{
+		"Brand": "Neunaber",
+		"Name": "Wet v5",
+		"Width": 2.6,
+		"Height": 4.6,
+		"Image": "neunaber-wet-v5.png"
 	},
 	{
 		"Brand": "Neural DSP",
