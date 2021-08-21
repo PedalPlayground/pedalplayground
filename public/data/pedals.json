@@ -9632,6 +9632,34 @@
 		"Image": "onecontrol-xenagama.png"
 	},
 	{
+		"Brand": "Orange",
+		"Name": "Fur Coat",
+		"Width": "3.74",
+		"Height": "5.12",
+		"Image": "orange-fur-coat.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "Two Stroke",
+		"Width": "3.74",
+		"Height": "5.12",
+		"Image": "orange-two-stroke.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "Kongpressor",
+		"Width": "3.74",
+		"Height": "5.12",
+		"Image": "orange-kongpressor.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "Getaway Driver",
+		"Width": "3.74",
+		"Height": "5.12",
+		"Image": "orange-getaway-driver.png"
+	},
+	{
 		"Brand": "Origin Effects",
 		"Name": "Magma57 Amp Vibrato & Drive",
 		"Width": 3.66,
