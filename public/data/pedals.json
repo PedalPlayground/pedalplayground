@@ -2177,6 +2177,13 @@
 		"Image": "cme-widijack.png"
 	},
 	{
+		"Brand": "CME",
+		"Name": "WIDI Uhost",
+		"Width": 1.339,
+		"Height": 1.496,
+		"Image": "cme-widiuhost.png"
+	},
+	{
 		"Brand": "Caroline",
 		"Name": "Hawaiian Pizza",
 		"Width": 3.7,
