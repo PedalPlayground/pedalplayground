@@ -308,13 +308,6 @@
 		"Image": "Toneking-minifuzz.png"
 	},
 	{
-		"Brand": "Roland",
-		"Name": "EV-5",
-		"Width": 3.4375,
-		"Height": 7.875,
-		"Image": "boss-ev5.png"
-	},
-	{
 		"Brand": "Rawkworks",
 		"Name": "Light OD",
 		"Width": 2.62,
@@ -327,27 +320,6 @@
 		"Width": 4.25,
 		"Height": 4.5,
 		"Image": "rolls-mx28.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "EV-5",
-		"Width": 3.4375,
-		"Height": 7.875,
-		"Image": "boss-ev5.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "GA-FC",
-		"Width": 15.45,
-		"Height": 3.22,
-		"Image": "boss-gafc.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "RC-10R Rhythm Loop Station",
-		"Width": 4,
-		"Height": 5.4375,
-		"Image": "boss-rc10r.png"
 	},
 	{
 		"Brand": "Fix Pedalboards",
@@ -369,13 +341,6 @@
 		"Width": 7,
 		"Height": 4.375,
 		"Image": "rs-5.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "SY-1 Synthesizer",
-		"Width": 2.875,
-		"Height": 5.125,
-		"Image": "boss-sy1.png"
 	},
 	{
 		"Brand": "Browne Amplification",
@@ -967,38 +932,10 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "DD-200 Digital Delay",
-		"Width": 4,
-		"Height": 5.4375,
-		"Image": "boss-dd200.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "MD-200 Modulation",
-		"Width": 4,
-		"Height": 5.4375,
-		"Image": "boss-md200.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "EQ-200 Grphic Equalizer",
-		"Width": 4,
-		"Height": 5.4375,
-		"Image": "boss-eq200.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "OD-200 Hybrid Drive",
-		"Width": 4,
-		"Height": 5.4375,
-		"Image": "boss-od200.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "BC-1x Bass Compressor",
+		"Name": "AW-3 Dynamic Wah",
 		"Width": 2.875,
 		"Height": 5.125,
-		"Image": "boss-bc1x.png"
+		"Image": "boss-aw3.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -1009,6 +946,20 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "BD-2w Blues Driver (Waza Craft)",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-bd2w.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "BC-1x Bass Compressor",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-bc1x.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "BF-3 Flanger",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -1016,10 +967,17 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "CE-2w Chorus",
+		"Name": "CE-2w Chorus (Waza Craft)",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ce2w.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "CE-5 Chorus Ensemble",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ce5.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -1058,7 +1016,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "DC-2w Dimension C",
+		"Name": "DC-2w Dimension C (Waza Craft)",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-dc2w.png"
@@ -1093,9 +1051,16 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "DD-500",
-		"Width": 6.69,
-		"Height": 5.43,
+		"Name": "DD-200 Digital Delay",
+		"Width": 4,
+		"Height": 5.4375,
+		"Image": "boss-dd200.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "DD-500 Digital Delay",
+		"Width": 6.75,
+		"Height": 5.4375,
 		"Image": "boss-dd500.png"
 	},
 	{
@@ -1117,6 +1082,13 @@
 		"Name": "DM-2 Delay",
 		"Width": 2.875,
 		"Height": 5.125,
+		"Image": "boss-dm2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "DM-2w Delay (Waza Craft)",
+		"Width": 2.875,
+		"Height": 5.125,
 		"Image": "boss-dm2w.png"
 	},
 	{
@@ -1128,31 +1100,52 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "DS-1X",
+		"Name": "DS-1X Distortion",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ds1x.png"
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "ES-5",
-		"Width": 13.27,
-		"Height": 3.82,
+		"Name": "DS-2 Turbo Distortion",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ds2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "EQ-200 Grphic Equalizer",
+		"Width": 4,
+		"Height": 5.4375,
+		"Image": "boss-eq200.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "ES-5 Effects Switching System",
+		"Width": 13.3125,
+		"Height": 3.875,
 		"Image": "boss-es5.png"
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "ES-8",
+		"Name": "ES-8 Effects Switching System",
 		"Width": 17.3125,
 		"Height": 5.4375,
 		"Image": "boss-es8.png"
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "EV-30",
+		"Name": "EV-30 Dual Expression Pedal",
 		"Width": 3.149,
 		"Height": 7.559,
 		"Image": "boss-ev30.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "EV-5",
+		"Width": 3.4375,
+		"Height": 7.875,
+		"Image": "boss-ev5.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -1170,21 +1163,21 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "FS-7",
+		"Name": "FS-7 Dual Foot Switch",
 		"Width": 2.5,
 		"Height": 5.1875,
 		"Image": "boss-fs7.png"
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "FV-30L",
+		"Name": "FV-30L Foot Volume",
 		"Width": 3.15,
 		"Height": 7.56,
 		"Image": "boss-fv30.png"
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "FV-500L",
+		"Name": "FV-500L Volume Pedal",
 		"Width": 4.4,
 		"Height": 11.4,
 		"Image": "boss-fv500.png"
@@ -1212,10 +1205,10 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "FZ-5 Fuzz",
-		"Width": 2.875,
-		"Height": 5.125,
-		"Image": "boss-fz5.png"
+		"Name": "GA-FC Foot Controller",
+		"Width": 15.45,
+		"Height": 3.22,
+		"Image": "boss-gafc.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -1233,10 +1226,31 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GT-1000 Guitar Effects Processor",
+		"Width": 18.187,
+		"Height": 9.812,
+		"Image": "boss-gt1000.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "GT-1000CORE Guitar Effects Processor",
+		"Width": 6.8125,
+		"Height": 5.375,
+		"Image": "boss-gt-1000-core.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "HM-2 Heavy Metal",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-hm2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "HM-2w Heavy Metal (Waza Craft)",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-hm2w.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -1254,14 +1268,42 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "MD-500",
-		"Width": 6.69,
-		"Height": 5.43,
+		"Name": "MD-2 Mega Distortion",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-md2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "MD-200 Modulation",
+		"Width": 4,
+		"Height": 5.4375,
+		"Image": "boss-md200.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "MD-500 Modulation",
+		"Width": 6.75,
+		"Height": 5.4375,
 		"Image": "boss-md500.png"
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "MS-3",
+		"Name": "MD-L Metal Core",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ml2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "MO-2 Multi Overtone",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-mo2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "MS-3 Multieffects Switcher",
 		"Width": 10.875,
 		"Height": 3.875,
 		"Image": "boss-ms3.png"
@@ -1275,17 +1317,10 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "MT-2w Metal Zone",
+		"Name": "MT-2w Metal Zone (Waza Craft)",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-mt2w.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "SD-1w Super Overdrive",
-		"Width": 2.875,
-		"Height": 5.125,
-		"Image": "boss-sd1w.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -1317,6 +1352,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "OD-1X Overdrive",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-od1x.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "OD-3 Overdrive",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -1324,10 +1366,10 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "OD-1X Overdrive",
-		"Width": 2.875,
-		"Height": 5.125,
-		"Image": "boss-od1x.png"
+		"Name": "OD-200 Hybrid Drive",
+		"Width": 4,
+		"Height": 5.4375,
+		"Image": "boss-od200.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -1380,10 +1422,24 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "PW-3 Wah Pedal",
+		"Width": 3.1875,
+		"Height": 9.5625,
+		"Image": "boss-pw3.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RC-1 Loop Station",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-rc1.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-10R Rhythm Loop Station",
+		"Width": 4,
+		"Height": 5.4375,
+		"Image": "boss-rc10r.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -1402,7 +1458,7 @@
 	{
 		"Brand": "BOSS",
 		"Name": "RC-30 Loop Station",
-		"Width": 6.81,
+		"Width": 6.8125,
 		"Height": 6.25,
 		"Image": "boss-rc30.png"
 	},
@@ -1410,13 +1466,13 @@
 		"Brand": "BOSS",
 		"Name": "RC-500 Loop Station",
 		"Width": 6.75,
-		"Height": 5.43,
+		"Height": 5.4375,
 		"Image": "boss-rc500.png"
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "RE-20",
-		"Width": 6.81,
+		"Name": "RE-20 Space Echo",
+		"Width": 6.8125,
 		"Height": 6.25,
 		"Image": "boss-re20.png"
 	},
@@ -1429,9 +1485,9 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "RV-500",
-		"Width": 6.69,
-		"Height": 5.43,
+		"Name": "RV-500 Reverb",
+		"Width": 6.75,
+		"Height": 5.4375,
 		"Image": "boss-rv500.png"
 	},
 	{
@@ -1450,6 +1506,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "SD-1w Super Overdrive (Waza Craft)",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-sd1w.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "SG-1 Slow Gear",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -1464,7 +1527,21 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "SY-300",
+		"Name": "ST-2 Power Stack",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-st2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "SY-1 Synthesizer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-sy1.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "SY-300 Guitar Synthesizer",
 		"Width": 10.03,
 		"Height": 7.17,
 		"Image": "boss-sy300.png"
@@ -1499,7 +1576,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "TU-3w Chromatic Tuner",
+		"Name": "TU-3w Chromatic Tuner (Waza Craft)",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-tu3w.png"
@@ -1513,7 +1590,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "VB-2w Vibrato",
+		"Name": "VB-2w Vibrato (Waza Craft)",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-vb2w.png"
@@ -1531,6 +1608,13 @@
 		"Width": 6.75,
 		"Height": 5.4375,
 		"Image": "boss-ve-500.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "VO-1 Vocoder",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-vo1.png"
 	},
 	{
 		"Brand": "Barber",
@@ -2056,20 +2140,6 @@
 		"Width": 4.7,
 		"Height": 3.7,
 		"Image": "bondi-sickas.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "GT-1000",
-		"Width": 18.187,
-		"Height": 9.812,
-		"Image": "boss-gt1000.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "GT-1000CORE",
-		"Width": 6.8125,
-		"Height": 5.375,
-		"Image": "boss-gt-1000-core.png"
 	},
 	{
 		"Brand": "Bright Onion",
