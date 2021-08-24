@@ -6015,76 +6015,97 @@
 	{
 		"Brand": "Greer Amps",
 		"Name": "Arbuckle Trem",
-		"Width": 2.9,
-		"Height": 5,
+		"Width": 2.84,
+		"Height": 4.9,
 		"Image": "greer-arbuckletrem.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Black Fuzz",
-		"Width": 2.8,
-		"Height": 4.9,
+		"Width": 2.84,
+		"Height": 4.77,
 		"Image": "greer-blackfuzz.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Black Tiger",
-		"Width": 2.9,
-		"Height": 5,
+		"Width": 2.84,
+		"Height": 4.9,
 		"Image": "greer-blacktiger.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Burning Goat",
-		"Width": 2.9,
-		"Height": 5,
+		"Width": 2.84,
+		"Height": 4.9,
 		"Image": "greer-burninggoat.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Fish Press",
-		"Width": 2.9,
-		"Height": 5,
+		"Width": 2.84,
+		"Height": 4.9,
 		"Image": "greer-fishpress.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Ghetto",
-		"Width": 3,
-		"Height": 5,
+		"Width": 2.96,
+		"Height": 4.77,
 		"Image": "greer-ghetto.png"
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Gorilla Warfare MKII",
+		"Width": 2.84,
+		"Height": 4.9,
+		"Image": "greer-gorilla-warfare-mkii.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Green Giant",
-		"Width": 2.9,
-		"Height": 5,
+		"Width": 2.84,
+		"Height": 4.9,
 		"Image": "greer-greengiant.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Lamplighter",
-		"Width": 2.75,
+		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "greer-lamplighter.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Lightspeed",
-		"Width": 2.9,
-		"Height": 4.87,
+		"Width": 2.84,
+		"Height": 4.9,
 		"Image": "greer-lightspeed.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Little Samson",
-		"Width": 2.9,
-		"Height": 5,
+		"Width": 2.84,
+		"Height": 4.9,
 		"Image": "greer-littlesamson.png"
 	},
 	{
 		"Brand": "Greer Amps",
-		"Name": "Soma",
+		"Name": "Moonshot",
+		"Width": 2.84,
+		"Height": 4.9,
+		"Image": "greer-moonshot.png"
+	},
+	{
+		"Brand": "Greer Amps",
+		"Name": "Royal Velvet",
+		"Width": 2.84,
+		"Height": 4.9,
+		"Image": "greer-royal-velvet.png"
+	},
+	{
+		"Brand": "Greer Amps",
+		"Name": "Soma 63",
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "greer-soma.png"
@@ -6092,36 +6113,50 @@
 	{
 		"Brand": "Greer Amps",
 		"Name": "Special Request",
-		"Width": 2.9,
-		"Height": 4.9,
+		"Width": 2.84,
+		"Height": 4.77,
 		"Image": "greer-specialrequest.png"
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Supa Cobra",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "greer-supa-cobra.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Super Hornet",
-		"Width": 4.7,
-		"Height": 3.67,
+		"Width": 4.9,
+		"Height": 3.8,
 		"Image": "greer-superhornet.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Tarpit",
-		"Width": 4.75,
-		"Height": 3.95,
+		"Width": 4.67,
+		"Height": 3.8,
 		"Image": "greer-tarpit.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "The Southland",
-		"Width": 2.9,
-		"Height": 4.87,
+		"Width": 2.84,
+		"Height": 4.9,
 		"Image": "greer-southland.png"
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Tomahawk",
+		"Width": 2.84,
+		"Height": 4.77,
+		"Image": "greer-tomahawk.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Tone Smuggler",
-		"Width": 2.9,
-		"Height": 5,
+		"Width": 2.84,
+		"Height": 4.9,
 		"Image": "greer-tonesmuggler.png"
 	},
 	{
@@ -10155,6 +10190,13 @@
 		"Width": 4.4,
 		"Height": 2.93,
 		"Image": "obne-split-meld.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Sunlight",
+		"Width": 2.87,
+		"Height": 4.96,
+		"Image": "obne-sunlight.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
