@@ -939,6 +939,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "BB-1X Bass Driver",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-bb1x.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "BD-2 Blues Driver",
 		"Width": 2.875,
 		"Height": 5.125,
