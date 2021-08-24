@@ -11831,6 +11831,13 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Delta II",
+		"Width": 2.6,
+		"Height": 4.73,
+		"Image": "spaceman-deltaii.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Gemini IV",
 		"Width": 4.25,
 		"Height": 4.75,
