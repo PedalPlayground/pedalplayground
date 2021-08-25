@@ -5482,10 +5482,45 @@
 	},
 	{
 		"Brand": "Fender",
-		"Name": "Level Set Buffer",
-		"Width": 3.18,
-		"Height": 5.39,
-		"Image": "fender-levelsetbuffer.png"
+		"Name": "Acoustic Preverb",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-acoustic-preverb.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Bubbler Chorus",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-bubbler.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Compugilist Compressor/Distortion",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-compugilist.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Duel Marine Layer Reverb",
+		"Width": 6.7,
+		"Height": 5,
+		"Image": "fender-dual-marine-layer.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Duel Pugilist Distortion",
+		"Width": 6.7,
+		"Height": 5,
+		"Image": "fender-dual-pugilist.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Engager Boost",
+		"Width": 2.95,
+		"Height": 5,
+		"Image": "fender-engager.png"
 	},
 	{
 		"Brand": "Fender",
@@ -5496,17 +5531,143 @@
 	},
 	{
 		"Brand": "Fender",
+		"Name": "Full Moon Distortion",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-full-moon.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Level Set Buffer",
+		"Width": 2.95,
+		"Height": 5,
+		"Image": "fender-levelsetbuffer.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Lost Highway Phaser",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-lost-highway.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Marine Layer Reverb",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-marine-layer.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Mirror Image Delay",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-mirror-image.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "MTG Tube Distortion",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-mtg-tube.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "MTG Tube Tremolo",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-mtg-tube-tremolo.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "MTG:LA Tube Distortion",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-mtgla-tube.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Pour Over Env Filter",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-pour-over.png"
+	},
+	{
+		"Brand": "Fender",
 		"Name": "Pugilist Distortion",
-		"Width": 4.26,
-		"Height": 5.39,
+		"Width": 3.95,
+		"Height": 5,
 		"Image": "fender-pugilist.png"
 	},
 	{
 		"Brand": "Fender",
+		"Name": "Reflecting Pool Delay & Reverb",
+		"Width": 6.7,
+		"Height": 5,
+		"Image": "fender-reflecting-pool.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Santa Ana Distortion",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-santa-ana.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Smolder Acoustic OD",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-smolder.png"
+	},
+	{
+		"Brand": "Fender",
 		"Name": "The Bends Compressor",
-		"Width": 2.75,
-		"Height": 4.9,
+		"Width": 2.95,
+		"Height": 5,
 		"Image": "fender-thebends.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "The Pelt Fuzz",
+		"Width": 2.95,
+		"Height": 5,
+		"Image": "fender-the-pelt.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "The Pinwheel Rotary Speaker Emulator",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-the-pinwheel.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "The Trapper Dual Fuzz",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-the-trapper.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Tread-Light Volume/Expression",
+		"Width": 3.45,
+		"Height": 8.25,
+		"Image": "fender-tread-light-vol.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Tread-Light Wah Pedal",
+		"Width": 3.45,
+		"Height": 8.25,
+		"Image": "fender-tread-light-wah.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Treverb Tremolo/Reverb",
+		"Width": 3.95,
+		"Height": 5,
+		"Image": "fender-treverb.png"
 	},
 	{
 		"Brand": "Flower Pedals",
