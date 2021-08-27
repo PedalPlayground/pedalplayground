@@ -127,17 +127,31 @@
 	},
 	{
 		"Brand": "Gator",
+		"Name": "Aluminum Extra Large",
+		"Width": 32,
+		"Height": 17,
+		"Image": "gator-alum-xlarge.png"
+	},
+	{
+		"Brand": "Gator",
 		"Name": "Aluminum Large",
 		"Width": 23.75,
 		"Height": 10.66,
 		"Image": "gator-alum-large.png"
 	},
 	{
+		"Brand": "Gator",
+		"Name": "Aluminum Small",
+		"Width": 15.75,
+		"Height": 7,
+		"Image": "gator-alum-small.png"
+	},
+	{
 		"Brand": "Ghost Fire",
 		"Name": "Little 20",
 		"Width": 20,
 		"Height": 7,
-		"Image": "ghostfire-little20.png"
+		"Image": "pedaltrain-mini.png"
 	},
 	{
 		"Brand": "Gokko",
@@ -477,6 +491,13 @@
 	},
 	{
 		"Brand": "Rockboard by Warwick",
+		"Name": "Duo 2.0",
+		"Width": 12.5,
+		"Height": 5.75,
+		"Image": "rockboard-duo-20.png"
+	},
+	{
+		"Brand": "Rockboard by Warwick",
 		"Name": "Duo 2.1",
 		"Width": 18.125,
 		"Height": 5.75,
@@ -484,45 +505,73 @@
 	},
 	{
 		"Brand": "Rockboard by Warwick",
+		"Name": "Duo 2.2",
+		"Width": 24.5,
+		"Height": 5.75,
+		"Image": "rockboard-duo-22.png"
+	},
+	{
+		"Brand": "Rockboard by Warwick",
+		"Name": "Tres 3.0",
+		"Width": 17.4,
+		"Height": 9.3,
+		"Image": "rockboard-tres-30.png"
+	},
+	{
+		"Brand": "Rockboard by Warwick",
 		"Name": "Tres 3.1",
-		"Width": 20.0625,
-		"Height": 9.3125,
+		"Width": 20.55,
+		"Height": 9.3,
 		"Image": "rockboard-tres-31.png"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
+		"Name": "Tres 3.2",
+		"Width": 23.55,
+		"Height": 9.3,
+		"Image": "rockboard-tres-32.png"
+	},
+	{
+		"Brand": "Rockboard by Warwick",
 		"Name": "Quad 4.1",
-		"Width": 18.125,
-		"Height": 12.8125,
+		"Width": 18.5,
+		"Height": 13,
 		"Image": "rockboard-quad-41.png"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Quad 4.2",
-		"Width": 24,
-		"Height": 12.8125,
+		"Width": 24.5,
+		"Height": 13,
 		"Image": "rockboard-quad-42.png"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
-		"Name": "Cinque 5.3",
-		"Width": 32.36,
-		"Height": 16.62,
-		"Image": "rockboard-cinque-53.png"
-	},
-	{
-		"Brand": "Rockboard by Warwick",
-		"Name": "Cinque 5.4",
-		"Width": 39.45,
-		"Height": 16.62,
-		"Image": "rockboard-cinque-54.png"
+		"Name": "Quad 4.3",
+		"Width": 32.6,
+		"Height": 13,
+		"Image": "rockboard-quad-43.png"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Cinque 5.2",
 		"Width": 24.5,
-		"Height": 16.625,
-		"Image": "rockboard-5.2.png"
+		"Height": 16.7,
+		"Image": "rockboard-cinque-52.png"
+	},
+	{
+		"Brand": "Rockboard by Warwick",
+		"Name": "Cinque 5.3",
+		"Width": 32.3,
+		"Height": 16.7,
+		"Image": "rockboard-cinque-53.png"
+	},
+	{
+		"Brand": "Rockboard by Warwick",
+		"Name": "Cinque 5.4",
+		"Width": 39.5,
+		"Height": 16.7,
+		"Image": "rockboard-cinque-54.png"
 	},
 	{
 		"Brand": "Templeboards",

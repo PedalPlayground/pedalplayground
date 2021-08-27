@@ -1142,7 +1142,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "EQ-200 Grphic Equalizer",
+		"Name": "EQ-200 Graphic Equalizer",
 		"Width": 4,
 		"Height": 5.4375,
 		"Image": "boss-eq200.png"
@@ -6350,6 +6350,13 @@
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Lightspeed (White)",
+		"Width": 2.84,
+		"Height": 4.9,
+		"Image": "greer-lightspeed-white.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Little Samson",
 		"Width": 2.84,
 		"Height": 4.9,
@@ -8286,6 +8293,13 @@
 		"Width": 7.25,
 		"Height": 5.08,
 		"Image": "line6-hxstomp.png"
+	},
+	{
+		"Brand": "Line6",
+		"Name": "HX Stomp (Red)",
+		"Width": 7.25,
+		"Height": 5.08,
+		"Image": "line6-hxstomp-red.png"
 	},
 	{
 		"Brand": "Line6",
@@ -10669,38 +10683,10 @@
 	},
 	{
 		"Brand": "Origin Effects",
-		"Name": "Magma57 Amp Vibrato & Drive",
-		"Width": 3.66,
-		"Height": 5.62,
-		"Image": "origineffects-magma57.png"
-	},
-	{
-		"Brand": "Origin Effects",
-		"Name": "RevivalTrem Bias Tremolo",
-		"Width": 3.66,
-		"Height": 5.62,
-		"Image": "origineffects-revivaltrem.png"
-	},
-	{
-		"Brand": "Origin Effects",
 		"Name": "Cali76 Compact",
 		"Width": 2.6,
 		"Height": 5.59,
 		"Image": "origineffects-cali76.png"
-	},
-	{
-		"Brand": "Origin Effects",
-		"Name": "Revival Drive Compact",
-		"Width": 2.6,
-		"Height": 5.59,
-		"Image": "origin-revivaldrivecompact.png"
-	},
-	{
-		"Brand": "Origin Effects",
-		"Name": "Revival Drive",
-		"Width": 4.6,
-		"Height": 6.29,
-		"Image": "origin-revivaldrive.png"
 	},
 	{
 		"Brand": "Origin Effects",
@@ -10729,6 +10715,62 @@
 		"Width": 8.07,
 		"Height": 6.33,
 		"Image": "origin-cali76l.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "MAGMA57 Amp Vibrato & Drive",
+		"Width": 3.66,
+		"Height": 5.62,
+		"Image": "origineffects-magma57.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Revival Footswitch",
+		"Width": 4.52,
+		"Height": 1.62,
+		"Image": "origin-revival-footswitch.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "RevivalDRIVE",
+		"Width": 4.6,
+		"Height": 6.29,
+		"Image": "origin-revivaldrive.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "RevivalDRIVE Compact",
+		"Width": 2.6,
+		"Height": 5.59,
+		"Image": "origin-revivaldrivecompact.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "RevivalDRIVE Compact Hot Rod",
+		"Width": 2.6,
+		"Height": 5.59,
+		"Image": "origin-revival-drive-hot-rod.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "RevivalDRIVE Switcher Interface",
+		"Width": 4.52,
+		"Height": 2.55,
+		"Image": "origin-revivaldrive-switcher-interface.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "RevivalTREM Bias Tremolo",
+		"Width": 3.66,
+		"Height": 5.62,
+		"Image": "origineffects-revivaltrem.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "SlideRIG Compact Deluxe MK2",
+		"Width": 2.6,
+		"Height": 5.59,
+		"Image": "origin-sliderig-compact-deluxe-mk2.png"
 	},
 	{
 		"Brand": "Outlaw Effects",
