@@ -3760,6 +3760,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Avalanche Run V2 (Purple Sparkle)",
+		"Width": 4.27,
+		"Height": 4.77,
+		"Image": "eqd-avalancherunv2-purple.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Bellows",
 		"Width": 2.5,
 		"Height": 4.75,
