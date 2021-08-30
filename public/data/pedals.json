@@ -2339,6 +2339,13 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Somersault (Silver)",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "caroline-somersault-silver.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Wave Cannon",
 		"Width": 3.7,
 		"Height": 4.7,
