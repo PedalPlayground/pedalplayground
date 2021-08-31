@@ -5537,6 +5537,20 @@
 		"Image": "gigrig-three2one.png"
 	},
 	{
+		"Brand": "GigRig",
+		"Name": "Isolator",
+		"Width": 2.56,
+		"Height": 1.18,
+		"Image": "gigrig-isolator.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "Distributor",
+		"Width": 2.56,
+		"Height": 1.18,
+		"Image": "gigrig-distributor.png"
+	},
+	{
 		"Brand": "Goodwood Audio",
 		"Name": "Input V2",
 		"Width": 4.44882,
@@ -12279,10 +12293,24 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Polytune Mini Noir",
+		"Name": "Polytune 2 Noir",
 		"Width": 2.01,
 		"Height": 3.66,
 		"Image": "tc-poly2mini.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Polytune 3 Mini",
+		"Width": 2.01,
+		"Height": 3.66,
+		"Image": "tc-poly3mini.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Polytune 3 Noir",
+		"Width": 2.01,
+		"Height": 3.66,
+		"Image": "tc-poly3noir.png"
 	},
 	{
 		"Brand": "TC Electronic",
