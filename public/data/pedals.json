@@ -5195,6 +5195,13 @@
 	},
 	{
 		"Brand": "Emerson",
+		"Name": "Concorde V2",
+		"Width": 3.7,
+		"Height": 1.7,
+		"Image": "emerson-concorde-v2.png"
+	},
+	{
+		"Brand": "Emerson",
 		"Name": "Em-drive",
 		"Width": 2.5,
 		"Height": 4.3,
@@ -5757,63 +5764,84 @@
 		"Brand": "Foxpedal",
 		"Name": "Defector",
 		"Width": 2.6,
-		"Height": 4.7,
+		"Height": 5,
 		"Image": "foxpedal-defector.png"
+	},
+	{
+		"Brand": "Foxpedal",
+		"Name": "Ebenezer",
+		"Width": 1.9,
+		"Height": 3.7,
+		"Image": "foxpedal-ebenezer.png"
+	},
+	{
+		"Brand": "Foxpedal",
+		"Name": "K-Buffer",
+		"Width": 1.85,
+		"Height": 3.7,
+		"Image": "foxpedal-k-buffer.png"
 	},
 	{
 		"Brand": "Foxpedal",
 		"Name": "Kingdom",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5,
 		"Image": "foxpedal-kingdom.png"
 	},
 	{
 		"Brand": "Foxpedal",
 		"Name": "Kingdom V2 - Gold Limited Edition",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5,
 		"Image": "foxpedal-kingdom-gold.png"
 	},
 	{
 		"Brand": "Foxpedal",
 		"Name": "Kingdom Combo V2",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5,
 		"Image": "foxpedal-kingdomcombov2.png"
 	},
 	{
 		"Brand": "Foxpedal",
 		"Name": "Magnifica Deluxe",
 		"Width": 2.6,
-		"Height": 4.7,
+		"Height": 5,
 		"Image": "foxpedal-magnifica.png"
 	},
 	{
 		"Brand": "Foxpedal",
 		"Name": "Refinery",
 		"Width": 2.6,
-		"Height": 4.7,
+		"Height": 5,
 		"Image": "foxpedal-refinery.png"
 	},
 	{
 		"Brand": "Foxpedal",
 		"Name": "The City",
 		"Width": 2.6,
-		"Height": 4.7,
+		"Height": 5,
 		"Image": "foxpedal-thecity.png"
 	},
 	{
 		"Brand": "Foxpedal",
 		"Name": "The Wave",
 		"Width": 5.6,
-		"Height": 4.7,
+		"Height": 4.77,
 		"Image": "foxpedal-thewave.png"
+	},
+	{
+		"Brand": "Foxpedal",
+		"Name": "Vixen",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "foxpedal-vixen.png"
 	},
 	{
 		"Brand": "Foxpedal",
 		"Name": "Wrath",
 		"Width": 2.6,
-		"Height": 4.7,
+		"Height": 5,
 		"Image": "foxpedal-wrath.png"
 	},
 	{
@@ -13361,6 +13389,20 @@
 		"Width": 1.73,
 		"Height": 3.65,
 		"Image": "tonecity-wildfire.png"
+	},
+	{
+		"Brand": "Triungulo Lab",
+		"Name": "CE-1 Ensemble Crunch",
+		"Width": 2.6,
+		"Height": 4.37,
+		"Image": "triungulo-ce1-ensemble-crunch.png"
+	},
+	{
+		"Brand": "Triungulo Lab",
+		"Name": "Chorus Ensemble",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "triungulo-chorus-ensemble.png"
 	},
 	{
 		"Brand": "Truetone",
