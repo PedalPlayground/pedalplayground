@@ -42,13 +42,6 @@
 		"Image": "ckk-electronic-destruction-drive.png"
 	},
 	{
-		"Brand": "Cornerstone",
-		"Name": "Gladio",
-		"Width": 4.7,
-		"Height": 3.84,
-		"Image": "cornerstone-gladio.png"
-	},
-	{
 		"Brand": "Cooper",
 		"Name": "Moment Machine",
 		"Width": 5.7,
@@ -2805,6 +2798,34 @@
 		"Width": 4.7,
 		"Height": 3.90,
 		"Image": "coppersound-polaris.png"
+	},
+	{
+		"Brand": "Cornerstone",
+		"Name": "Antique",
+		"Width": 2.64,
+		"Height": 5,
+		"Image": "cornerstone-antique.png"
+	},
+	{
+		"Brand": "Cornerstone",
+		"Name": "Gladio",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "cornerstone-gladio.png"
+	},
+	{
+		"Brand": "Cornerstone",
+		"Name": "Gladio SC",
+		"Width": 2.64,
+		"Height": 5,
+		"Image": "cornerstone-gladio-sc.png"
+	},
+	{
+		"Brand": "Cornerstone",
+		"Name": "Zefiro",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "cornerstone-zefiro.png"
 	},
 	{
 		"Brand": "Cioks",
@@ -14901,13 +14922,6 @@
 		"Width": 2.38,
 		"Height": 4.43,
 		"Image": "kingtonesoloist.png"
-	},
-	{
-		"Brand": "Cornerstone",
-		"Name": "Gladio SC",
-		"Width": 3.74,
-		"Height": 4.73,
-		"Image": "gladiosc.png"
 	},
 	{
 		"Brand": "Fortin",
