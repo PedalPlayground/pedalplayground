@@ -169,6 +169,27 @@
 	},
 	{
 		"Brand": "Mono",
+		"Name": "Carbon Large",
+		"Width": 30.87,
+		"Height": 14.84,
+		"Image": "mono-carbon-large.png"
+	},
+	{
+		"Brand": "Mono",
+		"Name": "Carbon Medium",
+		"Width": 23.82,
+		"Height": 14.33,
+		"Image": "mono-carbon-medium.png"
+	},
+	{
+		"Brand": "Mono",
+		"Name": "Carbon Small",
+		"Width": 16.85,
+		"Height": 11.85,
+		"Image": "mono-carbon-small.png"
+	},
+	{
+		"Brand": "Mono",
 		"Name": "Large",
 		"Width": 32,
 		"Height": 16,
