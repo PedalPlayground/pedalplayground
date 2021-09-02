@@ -11123,6 +11123,83 @@
 		"Image": "pladask-taken.png"
 	},
 	{
+		"Brand": "Pastfx",
+		"Name": "Chorus Ensemble",
+		"Width": 4.72,
+		"Height": 3.7,
+		"Image": "pastfx-chorus-ensemble.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "Chorus Ensemble Mini",
+		"Width": 2.56,
+		"Height": 4.4,
+		"Image": "pastfx-chorus-ensemble-mini.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "Chorus Ensemble MN3007",
+		"Width": 4.72,
+		"Height": 3.7,
+		"Image": "pastfx-chorus-ensemble-mn3007.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "Chorus Ensemble MN3007 Mini",
+		"Width": 2.56,
+		"Height": 4.4,
+		"Image": "pastfx-chorus-ensemble-mn3007-mini.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "Chorus Ensemble Preamp Crunch",
+		"Width": 2.56,
+		"Height": 4.4,
+		"Image": "pastfx-chorus-ensemble-preamp-crunch.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "Chorus Ensemble Preamp Crunch+",
+		"Width": 2.56,
+		"Height": 4.4,
+		"Image": "pastfx-chorus-ensemble-preamp-crunch-plus.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "Foot Phaser Deluxe",
+		"Width": 2.56,
+		"Height": 4.4,
+		"Image": "pastfx-foot-phaser-deluxe.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "Jet Phaser",
+		"Width": 4.72,
+		"Height": 3.7,
+		"Image": "pastfx-jet-phaser.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "Nick James Foot Phaser",
+		"Width": 2.56,
+		"Height": 4.4,
+		"Image": "pastfx-nick-james-foot-phaser.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "Phase V",
+		"Width": 4.72,
+		"Height": 3.7,
+		"Image": "pastfx-phase-v.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "TD-Y",
+		"Width": 2.56,
+		"Height": 4.4,
+		"Image": "pastfx-td-y.png"
+	},
+	{
 		"Brand": "Paul C",
 		"Name": "Tim",
 		"Width": 4.6,
@@ -13319,6 +13396,13 @@
 		"Width": 2.8,
 		"Height": 4.8,
 		"Image": "tc-electronic-trinity-t2-reverb.png"
+	},
+	{
+		"Brand": "TC Helicon",
+		"Name": "Switch-6",
+		"Width": 15.25,
+		"Height": 3.24,
+		"Image": "tchelicon-switch6.png"
 	},
 	{
 		"Brand": "TC Helicon",
