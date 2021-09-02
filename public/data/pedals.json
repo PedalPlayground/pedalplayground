@@ -2347,148 +2347,239 @@
 	{
 		"Brand": "Catalinbread",
 		"Name": "Adineko",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-adineko.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Antichthon",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-antichthon.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Belle Epoch",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-belle.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe",
-		"Width": 5,
-		"Height": 4,
+		"Width": 4.68,
+		"Height": 3.77,
 		"Image": "catalinbread-belleepochdlx.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Bicycle Delay",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-bicycledelay.png"
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Blood Donor",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-blood-donor.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "CSIDMAN",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-discman.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Callisto",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-callisto.png"
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Coriolis Effect",
+		"Width": 4.68,
+		"Height": 3.77,
+		"Image": "catalinbread-coriolis-effect.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Dirty Little Secret",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-dirtylittlesecret.png"
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Dirty Little Secret Red",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-dirtylittlesecret-red.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Dreamcoat",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-dreamcoat.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Echorec",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-echorec.png"
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Epoch Boost",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-epoch-boost.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Formula 5F6",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-formula5f6.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Formula No. 55",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-formula55.png"
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Fuzzrite",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-fuzzrite.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Galileo",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-galileo.png"
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Giygas",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-giygas.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Karma Suture (Ge)",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-gekarma.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Karma Suture (Si)",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-sikarma.png"
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Katzenkönig",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-katzenkonig.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Naga Viper",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-naga-viper.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Nic Compressor",
+		"Width": 3.75,
+		"Height": 4.6,
+		"Image": "catalinbread-nic-compressor.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Octopussy",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-octopussy.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Perseus",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-perseus.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "RAH",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-rah.png"
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Sabbra Cadabra",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-sabbra-cadabra.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "SFT",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-sft.png"
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Sabbra Cadabra",
-		"Width": 2.5,
-		"Height": 4.3,
-		"Image": "catalinbread-sabbra.png"
+		"Name": "Skewer",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-skewer.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Talisman",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-talisman.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Topanga",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-topanga.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Valcoder",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-valcoder.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Zero Point",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "catalinbread-zeropoint.png"
 	},
 	{
@@ -3337,6 +3428,13 @@
 		"Width": 6.5,
 		"Height": 7.75,
 		"Image": "digitech-whammy.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Whammy DT",
+		"Width": 8.5,
+		"Height": 7.75,
+		"Image": "digitech-whammy-dt.png"
 	},
 	{
 		"Brand": "Disaster Area",
