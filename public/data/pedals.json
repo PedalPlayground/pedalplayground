@@ -5307,10 +5307,45 @@
 	},
 	{
 		"Brand": "Emerson",
+		"Name": "Em-drive Mach 2",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "emerson-emdrive-mach2.png"
+	},
+	{
+		"Brand": "Emerson",
+		"Name": "Em-drive Mach 2 (Turquoise)",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "emerson-emdrive-mach2-turquoise.png"
+	},
+	{
+		"Brand": "Emerson",
 		"Name": "Paramount",
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "emerson-paramount.png"
+	},
+	{
+		"Brand": "Emerson",
+		"Name": "Paramount Mk.2",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "emerson-paramount-mk2.png"
+	},
+	{
+		"Brand": "Emerson",
+		"Name": "Scranton Screamer",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "emerson-scranton-screamer.png"
+	},
+	{
+		"Brand": "Emerson",
+		"Name": "Scranton Screamer (Whiteout)",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "emerson-scranton-screamer-whiteout.png"
 	},
 	{
 		"Brand": "Emma",
