@@ -85,6 +85,13 @@
 	},
 	{
 		"Brand": "Emerson Custom",
+		"Name": "18x12",
+		"Width": 19.25,
+		"Height": 12.25,
+		"Image": "emerson-18x12.png"
+	},
+	{
+		"Brand": "Emerson Custom",
 		"Name": "24x12",
 		"Width": 25.25,
 		"Height": 12.25,
