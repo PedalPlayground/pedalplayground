@@ -14120,6 +14120,13 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Eras",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "walrus-eras.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Deep Six",
 		"Width": 2.72,
 		"Height": 4.77,
