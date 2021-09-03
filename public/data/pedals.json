@@ -6042,10 +6042,31 @@
 	},
 	{
 		"Brand": "Fractal Audio Systems",
+		"Name": "FC12",
+		"Width": 20.2,
+		"Height": 9.2,
+		"Image": "fractal-fc12.png"
+	},
+	{
+		"Brand": "Fractal Audio Systems",
+		"Name": "FC6",
+		"Width": 11.2,
+		"Height": 9.2,
+		"Image": "fractal-fc6.png"
+	},
+	{
+		"Brand": "Fractal Audio Systems",
 		"Name": "FM3",
-		"Width": 11.063,
-		"Height": 9.29134,
+		"Width": 11.1,
+		"Height": 9.3,
 		"Image": "fractal-fm3.png"
+	},
+	{
+		"Brand": "Fractal Audio Systems",
+		"Name": "FM9",
+		"Width": 20.2,
+		"Height": 9.2,
+		"Image": "fractal-fm9.png"
 	},
 	{
 		"Brand": "FreeTheTone",
@@ -6399,10 +6420,24 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "QuarterMaster QMX10",
+		"Width": 26.77,
+		"Height": 2.28,
+		"Image": "gigrig-qmx10.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "QuarterMaster QMX8",
 		"Width": 21.26,
 		"Height": 2.28,
 		"Image": "gigrig-quartermaster.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "QuarterMaster QMX6",
+		"Width": 16.14,
+		"Height": 2.28,
+		"Image": "gigrig-qmx6.png"
 	},
 	{
 		"Brand": "GigRig",
@@ -6413,10 +6448,17 @@
 	},
 	{
 		"Brand": "GigRig",
-		"Name": "Three 2 One",
-		"Width": 3.15,
-		"Height": 4.53,
-		"Image": "gigrig-three2one.png"
+		"Name": "QuarterMaster QMX4",
+		"Width": 11.02,
+		"Height": 2.28,
+		"Image": "gigrig-qmx4.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "Remote Loopy 2",
+		"Width": 4.84,
+		"Height": 2.68,
+		"Image": "gigrig-remote-loopy-2.png"
 	},
 	{
 		"Brand": "GigRig",
@@ -6434,51 +6476,58 @@
 	},
 	{
 		"Brand": "Goodwood Audio",
-		"Name": "Input V2",
-		"Width": 4.44882,
-		"Height": 2.598425,
-		"Image": "goodwood-inputv2.png"
-	},
-	{
-		"Brand": "Goodwood Audio",
-		"Name": "RMT",
-		"Width": 1.52,
-		"Height": 3.889,
-		"Image": "goodwood-rmt.png"
-	},
-	{
-		"Brand": "Goodwood Audio",
 		"Name": "Audition",
-		"Width": 4.44882,
-		"Height": 2.598425,
+		"Width": 4.45,
+		"Height": 2.6,
 		"Image": "goodwood-audition.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
+		"Name": "Input V2",
+		"Width": 4.45,
+		"Height": 2.6,
+		"Image": "goodwood-inputv2.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
 		"Name": "Interfacer",
-		"Width": 3.031496,
+		"Width": 3,
 		"Height": 5,
 		"Image": "goodwood-interfacer.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
 		"Name": "Interfacer TX",
-		"Width": 3.031496,
+		"Width": 3,
 		"Height": 5,
 		"Image": "goodwood-interfacer-tx.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
+		"Name": "LongLine",
+		"Width": 4,
+		"Height": 4.72,
+		"Image": "goodwood-longline.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
 		"Name": "Output V2",
-		"Width": 4.44882,
-		"Height": 2.952756,
+		"Width": 4.45,
+		"Height": 2.95,
 		"Image": "goodwood-outputv2.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
+		"Name": "RMT",
+		"Width": 1.52,
+		"Height": 3.9,
+		"Image": "goodwood-rmt.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
 		"Name": "Underfacer",
-		"Width": 3.9370079,
-		"Height": 4.64567,
+		"Width": 3.94,
+		"Height": 4.65,
 		"Image": "goodwood-underfacer.png"
 	},
 	{
