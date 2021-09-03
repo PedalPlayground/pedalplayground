@@ -6399,6 +6399,13 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "ABY Baby",
+		"Width": 6.3,
+		"Height": 2.28,
+		"Image": "gigrig-aby-baby.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "G2",
 		"Width": 17.33,
 		"Height": 5.12,
