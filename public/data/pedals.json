@@ -2829,6 +2829,13 @@
 	},
 	{
 		"Brand": "Cioks",
+		"Name": "8",
+		"Width": 4.72,
+		"Height": 3.46,
+		"Image": "cioks-8.png"
+	},
+	{
+		"Brand": "Cioks",
 		"Name": "DC5",
 		"Width": 5.11811,
 		"Height": 3.46457,
@@ -2847,6 +2854,13 @@
 		"Width": 5.74803,
 		"Height": 3.46457,
 		"Image": "cioks-dc8.png"
+	},
+	{
+		"Brand": "Cioks",
+		"Name": "Schizo / Big John / AC Rider",
+		"Width": 5.11811,
+		"Height": 3.46457,
+		"Image": "cioks-schiz.png"
 	},
 	{
 		"Brand": "Collision Devices",
@@ -2919,13 +2933,6 @@
 		"Image": "cornerstone-zefiro.png"
 	},
 	{
-		"Brand": "Cioks",
-		"Name": "Schizo / Big John / AC Rider",
-		"Width": 5.11811,
-		"Height": 3.46457,
-		"Image": "cioks-schiz.png"
-	},
-	{
 		"Brand": "Crowther",
 		"Name": "Hot Cake",
 		"Width": 2.64,
@@ -2952,6 +2959,20 @@
 		"Width": 7.5,
 		"Height": 4.75,
 		"Image": "customtones-ethosoverdrive.png"
+	},
+	{
+		"Brand": "DAeLECTRONICS",
+		"Name": "iCtrl-R Mini",
+		"Width": 4.37,
+		"Height": 3.70,
+		"Image": "daelectronics-ictrl-r-mini.png"
+	},
+	{
+		"Brand": "DAeLECTRONICS",
+		"Name": "iCtrl-R DS",
+		"Width": 4.37,
+		"Height": 3.70,
+		"Image": "daelectronics-ictrl-r-DS.png"
 	},
 	{
 		"Brand": "Danelectro",
@@ -2987,6 +3008,20 @@
 		"Width": 4.53,
 		"Height": 2.7,
 		"Image": "dsm-simplifier.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier DLX",
+		"Width": 5.41,
+		"Height": 4.41,
+		"Image": "dsm-simplifier-dlx.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier DLX Footswitch",
+		"Width": 3.70,
+		"Height": 1.54,
+		"Image": "dsm-simplifier-dlx-fs.png"
 	},
 	{
 		"Brand": "DSM Noisemaker",
@@ -5222,6 +5257,13 @@
 		"Image": "ehx-wailer-wah.png"
 	},
 	{
+		"Brand": "Electrosmith",
+		"Name": "Daisy Petal",
+		"Width": 7.41,
+		"Height": 4.98,
+		"Image": "electrosmith-daisy-petal.png"
+	},
+	{
 		"Brand": "Nobels",
 		"Name": "ODR-1",
 		"Width": 2.68,
@@ -6830,6 +6872,13 @@
 		"Width": 1.73,
 		"Height": 2.91,
 		"Image": "hotone-choir.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Jogg",
+		"Width": 2.24,
+		"Height": 3.97,
+		"Image": "hotone-jogg.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -8506,6 +8555,13 @@
 	},
 	{
 		"Brand": "Line6",
+		"Name": "HX Stomp (Gray)",
+		"Width": 7.25,
+		"Height": 5.08,
+		"Image": "line6-hxstomp-gray.png"
+	},
+	{
+		"Brand": "Line6",
 		"Name": "HX Stomp (Red)",
 		"Width": 7.25,
 		"Height": 5.08,
@@ -8538,6 +8594,13 @@
 		"Width": 22.05,
 		"Height": 11.85,
 		"Image": "line6-helix.png"
+	},
+	{
+		"Brand": "Line6",
+		"Name": "Helix (Gray)",
+		"Width": 22.05,
+		"Height": 11.85,
+		"Image": "line6-helix-gray.png"
 	},
 	{
 		"Brand": "Line6",
@@ -8699,6 +8762,13 @@
 		"Width": 2.75,
 		"Height": 4.50,
 		"Image": "lpd-eighty7.png"
+	},
+	{
+		"Brand": "M-Audio",
+		"Name": "EX-P",
+		"Width": 3.75,
+		"Height": 8.5,
+		"Image": "m-audio-ex-p.png"
 	},
 	{
 		"Brand": "Malekko",
@@ -9532,6 +9602,13 @@
 		"Width": 1.65,
 		"Height": 3.7,
 		"Image": "mooer-e7-synth.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Expline",
+		"Width": 2.17,
+		"Height": 3.67,
+		"Image": "mooer-expline.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -12650,6 +12727,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Conduit",
+		"Width": 3.50,
+		"Height": 2.66,
+		"Image": "strymon-conduit.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Deco",
 		"Width": 4,
 		"Height": 4.5,
@@ -12752,6 +12836,13 @@
 		"Width": 6.75,
 		"Height": 5.1,
 		"Image": "strymon-timeline.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Zelzah",
+		"Width": 4,
+		"Height": 4.5,
+		"Image": "strymon-zelzah.png"
 	},
 	{
 		"Brand": "Strymon",
