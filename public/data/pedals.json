@@ -764,6 +764,13 @@
 	},
 	{
 		"Brand": "Analog.Man",
+		"Name": "Mini Beano Boost",
+		"Width": 1.74,
+		"Height": 3.6,
+		"Image": "analogman-mini-beano.png"
+	},
+	{
+		"Brand": "Analog.Man",
 		"Name": "Dual Analog Delay",
 		"Width": 4.6,
 		"Height": 5.5,
@@ -1559,6 +1566,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-sy1.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "SY-1000 Guitar Synthesizer",
+		"Width": 13.625,
+		"Height": 9.6875,
+		"Image": "boss-sy1000.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -7064,7 +7078,7 @@
 	},
 	{
 		"Brand": "J. Rockett",
-		"Name": "45",
+		"Name": ".45 Caliber",
 		"Width": 2.3,
 		"Height": 4,
 		"Image": "jrockett-45.png"
@@ -7072,7 +7086,7 @@
 	{
 		"Brand": "J. Rockett",
 		"Name": "Alan Holdsworth",
-		"Width": 4.75,
+		"Width": 4.9,
 		"Height": 3,
 		"Image": "jrockett-alanholdsworth.png"
 	},
@@ -7085,10 +7099,38 @@
 	},
 	{
 		"Brand": "J. Rockett",
+		"Name": "Animal OD",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-animal.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Animal Overdrive Pro",
+		"Width": 3.12,
+		"Height": 4.75,
+		"Image": "jrockett-animal-pro.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Ape",
+		"Width": 2.6,
+		"Height": 4,
+		"Image": "jrockett-ape.png"
+	},
+	{
+		"Brand": "J. Rockett",
 		"Name": "Archer",
 		"Width": 2.3,
 		"Height": 4,
 		"Image": "jrockett-archersilver.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Archer Clean",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-archer-clean.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -7100,16 +7142,37 @@
 	{
 		"Brand": "J. Rockett",
 		"Name": "Blue Note",
-		"Width": 3,
+		"Width": 3.12,
 		"Height": 4.75,
 		"Image": "jrockett-bluenote.png"
 	},
 	{
 		"Brand": "J. Rockett",
-		"Name": "Boing Reverb",
+		"Name": "Blue Note Tour Series",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-bluenote-tour.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Boing",
 		"Width": 2.3,
 		"Height": 4,
 		"Image": "jrockett-boing.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Broverdrive",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-broverdrive.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Clockwork",
+		"Width": 5.25,
+		"Height": 4.75,
+		"Image": "jrockett-clockwork.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -7127,6 +7190,41 @@
 	},
 	{
 		"Brand": "J. Rockett",
+		"Name": "Hooligan",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-hooligan.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Hot Rubber Monkey",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-hot-rubber-monkey.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Juice Joint",
+		"Width": 4,
+		"Height": 1.25,
+		"Image": "jrockett-juice-joint.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "I.Q. Compressor",
+		"Width": 2.35,
+		"Height": 4,
+		"Image": "jrockett-iq-compressor.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Immortal Echo",
+		"Width": 2,
+		"Height": 4,
+		"Image": "jrockett-immortal-echo.png"
+	},
+	{
+		"Brand": "J. Rockett",
 		"Name": "Led Boots",
 		"Width": 4.92,
 		"Height": 2.95,
@@ -7134,10 +7232,59 @@
 	},
 	{
 		"Brand": "J. Rockett",
-		"Name": "Rockaway Archer",
+		"Name": "Lenny",
 		"Width": 2.3,
 		"Height": 4,
+		"Image": "jrockett-lenny.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Majestic",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-majestic.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Monkeyman",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-monkeyman.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Mr. Moto",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-mr-moto.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Rockaway Archer",
+		"Width": 2.35,
+		"Height": 4,
 		"Image": "jrockett-rockawayarcher.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "SOS",
+		"Width": 2.65,
+		"Height": 2.77,
+		"Image": "jrockett-sos.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Squeegee Compressor",
+		"Width": 2,
+		"Height": 4,
+		"Image": "jrockett-squeegee.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Steampunk Boost/Buffer",
+		"Width": 2,
+		"Height": 4,
+		"Image": "jrockett-steampunk.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -7148,10 +7295,38 @@
 	},
 	{
 		"Brand": "J. Rockett",
+		"Name": "The Dude V2",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-thedude-v2.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "The Melody Overdrive",
+		"Width": 2.35,
+		"Height": 4,
+		"Image": "jrockett-melody.png"
+	},
+	{
+		"Brand": "J. Rockett",
 		"Name": "Tim Pierce",
-		"Width": 4.75,
+		"Width": 4.9,
 		"Height": 3,
 		"Image": "jrockett-timpierce.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Touch Overdrive",
+		"Width": 2,
+		"Height": 4,
+		"Image": "jrockett-touch.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "Tranquilizer",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-tranquilizer.png"
 	},
 	{
 		"Brand": "J. Rockett",
