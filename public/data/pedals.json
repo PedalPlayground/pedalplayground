@@ -764,10 +764,24 @@
 	},
 	{
 		"Brand": "Analog.Man",
-		"Name": "Mini Beano Boost",
-		"Width": 1.74,
-		"Height": 3.6,
-		"Image": "analogman-mini-beano.png"
+		"Name": "Beano Boost",
+		"Width": 2.65,
+		"Height": 4.65,
+		"Image": "analogman-beano-boost.png"
+	},
+	{
+		"Brand": "Analog.Man",
+		"Name": "Bi-Chorus",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "analogman-bi-chorus.png"
+	},
+	{
+		"Brand": "Analog.Man",
+		"Name": "Bi-Comprossor",
+		"Width": 4.1,
+		"Height": 4.7,
+		"Image": "analogman-bi-comprossor.png"
 	},
 	{
 		"Brand": "Analog.Man",
@@ -780,35 +794,56 @@
 		"Brand": "Analog.Man",
 		"Name": "King of Tone",
 		"Width": 4.7,
-		"Height": 4,
+		"Height": 4.1,
 		"Image": "analogman-kingoftone.png"
 	},
 	{
 		"Brand": "Analog.Man",
+		"Name": "Mini Beano Boost",
+		"Width": 1.85,
+		"Height": 3.6,
+		"Image": "analogman-mini-beano.png"
+	},
+	{
+		"Brand": "Analog.Man",
+		"Name": "Mini Bi-Comp",
+		"Width": 2.85,
+		"Height": 4.65,
+		"Image": "analogman-mini-bi-comp.png"
+	},
+	{
+		"Brand": "Analog.Man",
 		"Name": "Peppermint Fuzz",
-		"Width": 2.7,
-		"Height": 4.39,
+		"Width": 2.85,
+		"Height": 4.65,
 		"Image": "analogman-peppermint.png"
 	},
 	{
 		"Brand": "Analog.Man",
 		"Name": "Prince of Tone",
 		"Width": 2.5,
-		"Height": 4.65,
+		"Height": 4.85,
 		"Image": "analogman-princeoftone.png"
 	},
 	{
 		"Brand": "Analog.Man",
 		"Name": "Sunbender",
-		"Width": 2.6,
-		"Height": 4.3,
+		"Width": 2.85,
+		"Height": 4.65,
 		"Image": "analogman-sunbender.png"
 	},
 	{
 		"Brand": "Analog.Man",
+		"Name": "Sunbender MkIV",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "analogman-sunbender-mk4.png"
+	},
+	{
+		"Brand": "Analog.Man",
 		"Name": "Sunface",
-		"Width": 2.76,
-		"Height": 4.42,
+		"Width": 2.85,
+		"Height": 4.65,
 		"Image": "analogman-sunface.png"
 	},
 	{
