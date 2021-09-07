@@ -385,6 +385,20 @@
 		"Image": "muzbay-sputnik-35.png"
 	},
 	{
+		"Brand": "Onstage",
+		"Name": "GPB2000",
+		"Width": 18.75,
+		"Height": 6,
+		"Image": "onstage-gpb2000.png"
+	},
+	{
+		"Brand": "Onstage",
+		"Name": "GPB3000",
+		"Width": 18.75,
+		"Height": 9,
+		"Image": "onstage-gpb3000.png"
+	},
+	{
 		"Brand": "Pedaltrain",
 		"Name": "Classic 1",
 		"Width": 22,
