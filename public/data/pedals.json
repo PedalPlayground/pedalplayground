@@ -1583,6 +1583,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "SL-20 Slicer",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-sl20.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "SP-1 Spectrum",
 		"Width": 2.875,
 		"Height": 5.125,
