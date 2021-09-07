@@ -4838,6 +4838,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Holy Grail",
+		"Width": 3.375,
+		"Height": 5.375,
+		"Image": "ehx-holy-grail.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Holy Grail Max",
 		"Width": 4,
 		"Height": 4.75,
@@ -5787,6 +5794,13 @@
 		"Width": 7.5,
 		"Height": 4.8,
 		"Image": "eventide-pitchfactor.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
+		"Name": "~900",
+		"Width": 4.4,
+		"Height": 2.66,
+		"Image": "fairfield-900.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
@@ -8671,6 +8685,13 @@
 		"Width": 4.98,
 		"Height": 3.76,
 		"Image": "kingtone-duelist.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Duellist (Silver)",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "kingtone-duelist-silver.png"
 	},
 	{
 		"Brand": "Kliq",
@@ -13860,6 +13881,13 @@
 		"Image": "tc-electronic-trinity-t2-reverb.png"
 	},
 	{
+		"Brand": "TC Electronic",
+		"Name": "Zeus Drive",
+		"Width": 2.34,
+		"Height": 3.9,
+		"Image": "tc-electronic-zeus-drive.png"
+	},
+	{
 		"Brand": "TC Helicon",
 		"Name": "Switch-6",
 		"Width": 15.25,
@@ -14670,6 +14698,13 @@
 		"Width": 2.6,
 		"Height": 4.89,
 		"Image": "walrus-slo.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "SLO (Red)",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "walrus-slo-red.png"
 	},
 	{
 		"Brand": "Walrus",
