@@ -2975,6 +2975,139 @@
 		"Image": "cioks-schiz.png"
 	},
 	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Black Magic mkII",
+		"Width": 3.74,
+		"Height": 4.88,
+		"Image": "ctc-black-magic-mk2.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Constellation",
+		"Width": 2.83,
+		"Height": 4.5,
+		"Image": "ctc-constellation.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Cyclone",
+		"Width": 2.83,
+		"Height": 4.5,
+		"Image": "ctc-cyclone.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Deranged",
+		"Width": 5.06,
+		"Height": 3.74,
+		"Image": "ctc-deranged.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Falcon",
+		"Width": 2.83,
+		"Height": 4.5,
+		"Image": "ctc-falcon.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Killer V",
+		"Width": 2.6,
+		"Height": 4.72,
+		"Image": "ctc-killer-v.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Limelight",
+		"Width": 2.83,
+		"Height": 4.5,
+		"Image": "ctc-limelight.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Locomotive",
+		"Width": 3.74,
+		"Height": 4.88,
+		"Image": "ctc-locomotive.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Magnifier",
+		"Width": 1.86,
+		"Height": 3.6,
+		"Image": "ctc-magnifier.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Memphis",
+		"Width": 2.83,
+		"Height": 4.5,
+		"Image": "ctc-memphis.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Planet B Plus",
+		"Width": 4.74,
+		"Height": 3.88,
+		"Image": "ctc-planet-b-plus.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Sidekick",
+		"Width": 5.67,
+		"Height": 4.84,
+		"Image": "ctc-sidekick.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Space Charged V2",
+		"Width": 3.74,
+		"Height": 4.88,
+		"Image": "ctc-space-charged-v2.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Splash",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "ctc-splash.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Stardust",
+		"Width": 2.83,
+		"Height": 4.5,
+		"Image": "ctc-stardust.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Starlight",
+		"Width": 2.83,
+		"Height": 4.5,
+		"Image": "ctc-starlight.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Time mkIII",
+		"Width": 2.6,
+		"Height": 4.68,
+		"Image": "ctc-time-mk3.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "White Whale",
+		"Width": 6.7,
+		"Height": 4.77,
+		"Image": "ctc-white-whale.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Ziggy V2",
+		"Width": 2.83,
+		"Height": 4.72,
+		"Image": "ctc-ziggy-v2.png"
+	},
+	{
 		"Brand": "Crowther",
 		"Name": "Hot Cake",
 		"Width": 2.64,
