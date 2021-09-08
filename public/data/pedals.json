@@ -7211,17 +7211,17 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "850 Fuzz Mini",
+		"Width": 1.96,
+		"Height": 3.65,
+		"Image": "ibanez-850-mini-fuzz.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "AD-80 Analog Delay",
 		"Width": 2.9,
 		"Height": 4.89,
 		"Image": "ibanez-ad80.png"
-	},
-	{
-		"Brand": "Ibanez",
-		"Name": "TS-10 Tube Screamer",
-		"Width": 2.875,
-		"Height": 4.95,
-		"Image": "ibanez-ts10.png"
 	},
 	{
 		"Brand": "Ibanez",
@@ -7232,14 +7232,42 @@
 	},
 	{
 		"Brand": "Ibanez",
-		"Name": "CF7",
+		"Name": "Analog Delay Mini",
+		"Width": 1.96,
+		"Height": 3.65,
+		"Image": "ibanez-analogdelaymini.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "Big Mini Tuner",
+		"Width": 2.03,
+		"Height": 3.68,
+		"Image": "ibanez-big-mini-tuner.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "Booster Mini",
+		"Width": 1.96,
+		"Height": 3.65,
+		"Image": "ibanez-booster-mini.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "CF7 Chorus/Flanger",
 		"Width": 3,
 		"Height": 5,
 		"Image": "ibanez-cf7.png"
 	},
 	{
 		"Brand": "Ibanez",
-		"Name": "DE7",
+		"Name": "Chorus Mini",
+		"Width": 1.96,
+		"Height": 3.65,
+		"Image": "ibanez-minichorus.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "DE7 Delay/Echo",
 		"Width": 3,
 		"Height": 5,
 		"Image": "ibanez-de7.png"
@@ -7260,35 +7288,42 @@
 	},
 	{
 		"Brand": "Ibanez",
-		"Name": "Mini Analog Delay",
-		"Width": 2,
+		"Name": "Flanger Mini",
+		"Width": 1.96,
 		"Height": 3.65,
-		"Image": "ibanez-analogdelaymini.png"
+		"Image": "ibanez-flanger-mini.png"
 	},
 	{
 		"Brand": "Ibanez",
-		"Name": "850 Fuzz Mini",
-		"Width": 2,
+		"Name": "Phaser Mini",
+		"Width": 1.96,
 		"Height": 3.65,
-		"Image": "ibanez-850-mini-fuzz.png"
-	},
-	{
-		"Brand": "Ibanez",
-		"Name": "Mini Chorus",
-		"Width": 2,
-		"Height": 3.65,
-		"Image": "ibanez-minichorus.png"
+		"Image": "ibanez-phaser-mini.png"
 	},
 	{
 		"Brand": "Ibanez",
 		"Name": "Super Metal Mini",
-		"Width": 2,
+		"Width": 1.96,
 		"Height": 3.65,
 		"Image": "ibanez-supermetalmini.png"
 	},
 	{
 		"Brand": "Ibanez",
-		"Name": "TS7",
+		"Name": "Tremolo Mini",
+		"Width": 1.96,
+		"Height": 3.65,
+		"Image": "ibanez-tremolo-mini.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "TS-10 Tube Screamer",
+		"Width": 2.875,
+		"Height": 4.95,
+		"Image": "ibanez-ts10.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "TS7 Tube Screamer",
 		"Width": 3,
 		"Height": 5,
 		"Image": "ibanez-ts7.png"
@@ -7302,6 +7337,20 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "TS808DX Tube Screamer",
+		"Width": 5.38,
+		"Height": 4.72,
+		"Image": "ibanez-ts808dx.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "TS808HW Handwired Tubescreamer",
+		"Width": 3.13,
+		"Height": 4.9,
+		"Image": "ibanez-ts808hw.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "TS9 Tube Screamer",
 		"Width": 3,
 		"Height": 4.9,
@@ -7309,8 +7358,22 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "TS9B Tube Screamer",
+		"Width": 3,
+		"Height": 4.9,
+		"Image": "ibanez-ts9b.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "TS9DX Tube Screamer",
+		"Width": 3,
+		"Height": 4.9,
+		"Image": "ibanez-ts9dx.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "Tube Screamer Mini",
-		"Width": 2,
+		"Width": 1.96,
 		"Height": 3.65,
 		"Image": "ibanez-tubescreamermini.png"
 	},
@@ -7320,6 +7383,13 @@
 		"Width": 6.10,
 		"Height": 10.20,
 		"Image": "ibanez-wd7.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "WH10 V3 Wah",
+		"Width": 3.83,
+		"Height": 7.95,
+		"Image": "ibanez-wh10-v3.png"
 	},
 	{
 		"Brand": "ISP Technologies",
