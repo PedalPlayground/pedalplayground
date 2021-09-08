@@ -3227,6 +3227,48 @@
 		"Image": "dawner-prince-diktator-od.png"
 	},
 	{
+		"Brand": "Deadbeat",
+		"Name": "Delay Lay Lay",
+		"Width": 2.36,
+		"Height": 3.78,
+		"Image": "deadbeat-delay-lay-lay.png"
+	},
+	{
+		"Brand": "Deadbeat",
+		"Name": "Playback",
+		"Width": 1.63,
+		"Height": 3.75,
+		"Image": "deadbeat-playback.png"
+	},
+	{
+		"Brand": "Deadbeat",
+		"Name": "Thank You",
+		"Width": 7.8,
+		"Height": 5.59,
+		"Image": "deadbeat-thank-you.png"
+	},
+	{
+		"Brand": "Deadbeat",
+		"Name": "The Void",
+		"Width": 2.36,
+		"Height": 3.78,
+		"Image": "deadbeat-the-void.png"
+	},
+	{
+		"Brand": "Deadbeat",
+		"Name": "Wet Dreams",
+		"Width": 2.36,
+		"Height": 3.78,
+		"Image": "deadbeat-wet-dreams.png"
+	},
+	{
+		"Brand": "Deadbeat",
+		"Name": "Visible Overdrive",
+		"Width": 2.38,
+		"Height": 4.5,
+		"Image": "deadbeat-visible-overdrive.png"
+	},
+	{
 		"Brand": "Death By Audio",
 		"Name": "Absolute Destruction",
 		"Width": 2.61,
@@ -5739,6 +5781,13 @@
 		"Height": 3.75,
 		"Image": "empress-zoia.png"
 	},
+	{
+		"Brand": "Erica Synths",
+		"Name": "Zen Delay",
+		"Width": 8.27,
+		"Height": 5.91,
+		"Image": "erica-synths-zen-delay.png"
+	}
 	{
 		"Brand": "Ernie Ball",
 		"Name": "VP Jr",
@@ -12383,6 +12432,13 @@
 		"Image": "seymour-duncan-805.png"
 	},
 	{
+		"Brand": "Seymour Duncan",
+		"Name": "Studio Bass",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "seymour-duncan-studio-bass.png"
+	},
+	{
 		"Brand": "Smallsound/Bigsound",
 		"Name": "Buzzz",
 		"Width": 3.68,
@@ -15391,6 +15447,13 @@
 		"Width": 4.7,
 		"Height": 2.38,
 		"Image": "zvex-fuzzfactory.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Fuzz Factory Vertical",
+		"Width": 2.625,
+		"Height": 4.3125,
+		"Image": "zvex-fuzzfactory-vertical.png"
 	},
 	{
 		"Brand": "Zvex",
