@@ -2051,6 +2051,48 @@
 		"Image": "becos-ts8-ms-overdrive.png"
 	},
 	{
+		"Brand": "Beetronics",
+		"Name": "Fatbee",
+		"Width": 3.52,
+		"Height": 5.5,
+		"Image": "beetronics-fatbee.png"
+	},
+	{
+		"Brand": "Beetronics",
+		"Name": "Octahive",
+		"Width": 3.76,
+		"Height": 5.5,
+		"Image": "beetronics-octahive.png"
+	},
+	{
+		"Brand": "Beetronics",
+		"Name": "Overhive",
+		"Width": 3.77,
+		"Height": 5.5,
+		"Image": "beetronics-overhive.png"
+	},
+	{
+		"Brand": "Beetronics",
+		"Name": "Royal Jelly",
+		"Width": 6.125,
+		"Height": 5,
+		"Image": "beetronics-royal-jelly.png"
+	},
+	{
+		"Brand": "Beetronics",
+		"Name": "Swarm",
+		"Width": 3.99,
+		"Height": 5.5,
+		"Image": "beetronics-swarm.png"
+	},
+	{
+		"Brand": "Beetronics",
+		"Name": "Vezzpa",
+		"Width": 3.42,
+		"Height": 5.5,
+		"Image": "beetronics-vezzpa.png"
+	},
+	{
 		"Brand": "Blackout Effectors",
 		"Name": "Blunderbuss",
 		"Width": 2.92,
@@ -2320,14 +2362,14 @@
 		"Brand": "Caroline",
 		"Name": "Hawaiian Pizza",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-hawaiian-pizza.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Haymaker",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-haymaker.png"
 	},
 	{
@@ -2341,63 +2383,70 @@
 		"Brand": "Caroline",
 		"Name": "Icarus V2",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-icarus-v2.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Kilobyte",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-kilobyte.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Megabyte",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-megabyte.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Meteore",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-meteore.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Parabola",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-parabola.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Shigeharu",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-shigeharu.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Somersault",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-somersault.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Somersault (Silver)",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-somersault-silver.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "The Blues",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "caroline-the-blues.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Wave Cannon",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.94,
 		"Image": "caroline-wavecannon.png"
 	},
 	{
@@ -12960,14 +13009,14 @@
 		"Brand": "Spruce Effects",
 		"Name": "The Arborist",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 5.07,
 		"Image": "spruce-effects-the-arborist.png"
 	},
 	{
 		"Brand": "Spruce Effects",
 		"Name": "The Gale",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 5.07,
 		"Image": "spruce-effects-the-gale.png"
 	},
 	{
