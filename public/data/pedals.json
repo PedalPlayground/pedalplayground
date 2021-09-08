@@ -952,6 +952,27 @@
 		"Image": "barefoot-button.png"
 	},
 	{
+		"Brand": "Barn3",
+		"Name": "OX",
+		"Width": 7.84,
+		"Height": 1,
+		"Image": "barn3-ox.png"
+	},
+	{
+		"Brand": "Barn3",
+		"Name": "OX9",
+		"Width": 4.88,
+		"Height": 1,
+		"Image": "barn3-ox9.png"
+	},
+	{
+		"Brand": "Barn3",
+		"Name": "Tesla Tap",
+		"Width": 1.75,
+		"Height": 1.9,
+		"Image": "barn3-tesla-tap.png"
+	},
+	{
 		"Brand": "Benson",
 		"Name": "Germanium Fuzz",
 		"Width": 4.69,
