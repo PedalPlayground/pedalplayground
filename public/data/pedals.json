@@ -10984,6 +10984,13 @@
 	},
 	{
 		"Brand": "NUX",
+		"Name": "Brownie (NDS-2)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-brownie.png"
+	},
+	{
+		"Brand": "NUX",
 		"Name": "Drive Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
@@ -10991,10 +10998,45 @@
 	},
 	{
 		"Brand": "NUX",
+		"Name": "HD Pitch (NTU-2)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-hd-pitch.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Horseman (NOD-1)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-horseman.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "JTS (NDL-2)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-jts.png"
+	},
+	{
+		"Brand": "NUX",
 		"Name": "Komp Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-komp-core.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Konsequent (NDD-2)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-konsequent.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Lacerate (NFB-2)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-lacerate.png"
 	},
 	{
 		"Brand": "NUX",
@@ -11019,10 +11061,38 @@
 	},
 	{
 		"Brand": "NUX",
+		"Name": "Mini Studio (NSS-3)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-mini-studio.png"
+	},
+	{
+		"Brand": "NUX",
 		"Name": "Mod Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-mod-core.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Monterey (NCH-1)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-monterey.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Morning Star (NOD-3)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-morning-star.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Oceanic (NRV-2)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-oceanic.png"
 	},
 	{
 		"Brand": "NUX",
@@ -11033,10 +11103,17 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "PT-6 Pedal Tuner",
+		"Name": "Pedal Tuner (PT-6)",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-pt6.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Rivulet (NCH-2)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-rivulet.png"
 	},
 	{
 		"Brand": "NUX",
@@ -11044,6 +11121,13 @@
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-scream-bass.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Sculpture (NCP-2)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-sculpture.png"
 	},
 	{
 		"Brand": "NUX",
@@ -11058,6 +11142,13 @@
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-time-core.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Tube Man (NOD-2)",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-tube-man.png"
 	},
 	{
 		"Brand": "NUX",
