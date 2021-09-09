@@ -10977,10 +10977,87 @@
 	},
 	{
 		"Brand": "NUX",
+		"Name": "Boost Core Deluxe",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "nux-boost-core.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Drive Core Deluxe",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "nux-drive-core.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Komp Core Deluxe",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "nux-komp-core.png"
+	},
+	{
+		"Brand": "NUX",
 		"Name": "Loop Core",
 		"Width": 2.95,
-		"Height": 4.72,
+		"Height": 4.8,
+		"Image": "nux-loop-core.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Loop Core Deluxe",
+		"Width": 2.95,
+		"Height": 4.8,
 		"Image": "nux-loopcore.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Metal Core Deluxe",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "nux-metal-core.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Mod Core Deluxe",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "nux-mod-core.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Octave Loop",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "nux-octave-loop.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "PT-6 Pedal Tuner",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "nux-pt6.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Scream Bass",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "nux-scream-bass.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Tape Core Deluxe",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "nux-tape-core.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Time Core Deluxe",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "nux-time-core.png"
 	},
 	{
 		"Brand": "NUX",
