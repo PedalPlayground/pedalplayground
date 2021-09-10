@@ -10977,6 +10977,20 @@
 	},
 	{
 		"Brand": "NUX",
+		"Name": "Analog Chorus",
+		"Width": 2.98,
+		"Height": 4.76,
+		"Image": "nux-analog-chorus.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Analog Delay",
+		"Width": 2.98,
+		"Height": 4.76,
+		"Image": "nux-analog-delay.png"
+	},
+	{
+		"Brand": "NUX",
 		"Name": "Boost Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
@@ -11110,10 +11124,31 @@
 	},
 	{
 		"Brand": "NUX",
+		"Name": "Plexi Crunch",
+		"Width": 2.98,
+		"Height": 4.76,
+		"Image": "nux-plexi-crunch.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Rec To Distortion",
+		"Width": 2.98,
+		"Height": 4.76,
+		"Image": "nux-rec-to.png"
+	},
+	{
+		"Brand": "NUX",
 		"Name": "Rivulet (NCH-2)",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-rivulet.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Rotary",
+		"Width": 4.25197,
+		"Height": 4.92126,
+		"Image": "nux-roctary.png"
 	},
 	{
 		"Brand": "NUX",
@@ -11128,6 +11163,13 @@
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-sculpture.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Steel Singer Drive",
+		"Width": 2.98,
+		"Height": 4.76,
+		"Image": "nux-steel-singer.png"
 	},
 	{
 		"Brand": "NUX",
@@ -11152,10 +11194,10 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Rotary",
-		"Width": 4.25197,
-		"Height": 4.92126,
-		"Image": "nux-roctary.png"
+		"Name": "XTC OD",
+		"Width": 2.98,
+		"Height": 4.76,
+		"Image": "nux-xtc-od.png"
 	},
 	{
 		"Brand": "Neo Instruments",
