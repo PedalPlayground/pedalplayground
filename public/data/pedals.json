@@ -10977,6 +10977,13 @@
 	},
 	{
 		"Brand": "NUX",
+		"Name": "Ace of Tone",
+		"Width": 4.13,
+		"Height": 4.52,
+		"Image": "nux-ace-of-tone.png"
+	},
+	{
+		"Brand": "NUX",
 		"Name": "Analog Chorus",
 		"Width": 2.98,
 		"Height": 4.76,
@@ -10991,6 +10998,13 @@
 	},
 	{
 		"Brand": "NUX",
+		"Name": "Atlantic",
+		"Width": 4.13,
+		"Height": 4.52,
+		"Image": "nux-atlantic.png"
+	},
+	{
+		"Brand": "NUX",
 		"Name": "Boost Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
@@ -10998,7 +11012,7 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Brownie (NDS-2)",
+		"Name": "Brownie",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-brownie.png"
@@ -11012,24 +11026,45 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "HD Pitch (NTU-2)",
+		"Name": "Duotime",
+		"Width": 4.13,
+		"Height": 4.52,
+		"Image": "nux-duotime.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Fireman",
+		"Width": 4.13,
+		"Height": 4.52,
+		"Image": "nux-fireman.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "HD Pitch",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-hd-pitch.png"
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Horseman (NOD-1)",
+		"Name": "Horseman",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-horseman.png"
 	},
 	{
 		"Brand": "NUX",
-		"Name": "JTS (NDL-2)",
+		"Name": "JTC",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-jts.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "JTC Pro",
+		"Width": 4.13,
+		"Height": 4.52,
+		"Image": "nux-jtc-pro.png"
 	},
 	{
 		"Brand": "NUX",
@@ -11040,7 +11075,7 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Konsequent (NDD-2)",
+		"Name": "Konsequent",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-konsequent.png"
@@ -11068,6 +11103,13 @@
 	},
 	{
 		"Brand": "NUX",
+		"Name": "Masamune",
+		"Width": 4.13,
+		"Height": 4.52,
+		"Image": "nux-masamune.png"
+	},
+	{
+		"Brand": "NUX",
 		"Name": "Metal Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
@@ -11075,10 +11117,17 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Mini Studio (NSS-3)",
+		"Name": "Mini Studio",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-mini-studio.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "MLD Bass Preamp + DI",
+		"Width": 4.19,
+		"Height": 4.52,
+		"Image": "nux-mld-bass-preamp.png"
 	},
 	{
 		"Brand": "NUX",
@@ -11089,21 +11138,21 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Monterey (NCH-1)",
+		"Name": "Monterey",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-monterey.png"
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Morning Star (NOD-3)",
+		"Name": "Morning Star",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-morning-star.png"
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Oceanic (NRV-2)",
+		"Name": "Oceanic",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-oceanic.png"
@@ -11117,7 +11166,14 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Pedal Tuner (PT-6)",
+		"Name": "Optima Air",
+		"Width": 4.19,
+		"Height": 4.52,
+		"Image": "nux-optima-air.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Pedal Tuner",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-pt6.png"
@@ -11138,7 +11194,7 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Rivulet (NCH-2)",
+		"Name": "Rivulet",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-rivulet.png"
@@ -11146,8 +11202,8 @@
 	{
 		"Brand": "NUX",
 		"Name": "Rotary",
-		"Width": 4.25197,
-		"Height": 4.92126,
+		"Width": 4.25,
+		"Height": 5.08,
 		"Image": "nux-roctary.png"
 	},
 	{
@@ -11159,10 +11215,24 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Sculpture (NCP-2)",
+		"Name": "Sculpture",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-sculpture.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Solid Studio",
+		"Width": 4.19,
+		"Height": 4.52,
+		"Image": "nux-solid-studio.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "Stageman Floor",
+		"Width": 4.19,
+		"Height": 4.52,
+		"Image": "nux-stageman-floor.png"
 	},
 	{
 		"Brand": "NUX",
@@ -11187,7 +11257,7 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Tube Man (NOD-2)",
+		"Name": "Tube Man",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-tube-man.png"
