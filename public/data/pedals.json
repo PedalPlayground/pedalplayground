@@ -5945,7 +5945,7 @@
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "The Barbershop v2",
-		"Width": 2.94,
+		"Width": 2.63,
 		"Height": 4.4,
 		"Image": "fairfield-barbershopv2.png"
 	},
@@ -14600,6 +14600,13 @@
 		"Width": 6,
 		"Height": 5,
 		"Image": "truetone-jekyll.png"
+	},
+	{
+		"Brand": "Truetone",
+		"Name": "Pure Tone Buffer",
+		"Width": 2.48,
+		"Height": 2.36,
+		"Image": "truetone-pure-tone-buffer.png"
 	},
 	{
 		"Brand": "Truetone",
