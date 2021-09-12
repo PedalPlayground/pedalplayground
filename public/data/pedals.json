@@ -6413,21 +6413,28 @@
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "2B",
+		"Width": 2.19,
+		"Height": 4.8,
+		"Image": "fulltone-2b.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "69",
-		"Width": 2.8,
-		"Height": 4.34,
+		"Width": 2.82,
+		"Height": 4.5,
 		"Image": "fulltone-69.png"
 	},
 	{
 		"Brand": "Fulltone",
 		"Name": "70",
-		"Width": 2.8,
-		"Height": 4.34,
+		"Width": 2.82,
+		"Height": 4.5,
 		"Image": "fulltone-70.png"
 	},
 	{
 		"Brand": "Fulltone",
-		"Name": "Clyde Wah",
+		"Name": "Clyde",
 		"Width": 4.72,
 		"Height": 10,
 		"Image": "fulltone-clyde.png"
@@ -6441,51 +6448,58 @@
 	},
 	{
 		"Brand": "Fulltone",
-		"Name": "Full-drive FD-2",
-		"Width": 5.75,
-		"Height": 4,
-		"Image": "fulltone-fulldrive2.png"
-	},
-	{
-		"Brand": "Fulltone",
 		"Name": "Full-drive FD-1",
-		"Width": 2.9,
+		"Width": 2.98,
 		"Height": 4.8,
 		"Image": "fulltone-fd1.png"
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "Full-drive FD-2",
+		"Width": 4.95,
+		"Height": 4,
+		"Image": "fulltone-fulldrive2.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "Full-drive FD-3",
-		"Width": 4.81,
+		"Width": 4.95,
 		"Height": 4,
 		"Image": "fulltone-fulldrive3.png"
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "Mas Malo",
+		"Width": 2.98,
+		"Height": 4.8,
+		"Image": "fulltone-mas-malo.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "OCD",
-		"Width": 2.5,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "fulltone-ocd.png"
 	},
 	{
 		"Brand": "Fulltone",
 		"Name": "Octafuzz",
-		"Width": 2.8,
+		"Width": 2.82,
 		"Height": 4.5,
 		"Image": "fulltone-octafuzz.png"
 	},
 	{
 		"Brand": "Fulltone",
 		"Name": "Plimsoul",
-		"Width": 2.8,
-		"Height": 4.5,
+		"Width": 2.98,
+		"Height": 4.8,
 		"Image": "fulltone-plimsoul.png"
 	},
 	{
 		"Brand": "Fulltone",
 		"Name": "Soul-Bender",
-		"Width": 2.5,
-		"Height": 4.5,
+		"Width": 2.56,
+		"Height": 4.65,
 		"Image": "fulltone-soulbender.png"
 	},
 	{
@@ -6504,10 +6518,66 @@
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "Supa-Trem Jr",
+		"Width": 3.93,
+		"Height": 4,
+		"Image": "fulltone-supatrem-jr.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "True-Path ABY-HT",
 		"Width": 5.25,
 		"Height": 4,
 		"Image": "fulltone-true-path-aby-ht.png"
+	},
+	{
+		"Brand": "Fulltone Custom Shop",
+		"Name": "CS-Ranger",
+		"Width": 2.98,
+		"Height": 4.8,
+		"Image": "fulltonecustom-cs-ranger.png"
+	},
+	{
+		"Brand": "Fulltone Custom Shop",
+		"Name": "Deja'Vibe",
+		"Width": 3.77,
+		"Height": 4.1,
+		"Image": "fulltonecustom-deja-vibe.png"
+	},
+	{
+		"Brand": "Fulltone Custom Shop",
+		"Name": "OCD-Ge",
+		"Width": 2.82,
+		"Height": 4.5,
+		"Image": "fulltonecustom-ocd-ge.png"
+	},
+	{
+		"Brand": "Fulltone Custom Shop",
+		"Name": "Queen Bee",
+		"Width": 2.98,
+		"Height": 4.8,
+		"Image": "fulltonecustom-queen-bee.png"
+	},
+	{
+		"Brand": "Fulltone Custom Shop",
+		"Name": "RTO",
+		"Width": 2.82,
+		"Height": 4.5,
+		"Image": "fulltonecustom-rto.png"
+	},
+	{
+		"Brand": "Fulltone Custom Shop",
+		"Name": "Supa-Trem 2",
+		"Width": 4.44,
+		"Height": 4,
+		"Image": "fulltonecustom-supa-trem-2.png"
+	},
+	{
+		"Brand": "Fulltone Custom Shop",
+		"Name": "Wah Full",
+		"Width": 4.37,
+		"Height": 4.1,
+		"Image": "fulltonecustom-wah-full.png"
 	},
 	{
 		"Brand": "Fuzzrocious Pedals",
