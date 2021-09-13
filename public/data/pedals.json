@@ -3297,6 +3297,62 @@
 		"Image": "dawner-prince-diktator-od.png"
 	},
 	{
+		"Brand": "Deadbeat Sound",
+		"Name": "Delay Lay Lay",
+		"Width": 2.36,
+		"Height": 3.84,
+		"Image": "deadbeat-delay-lay-lay.png"
+	},
+	{
+		"Brand": "Deadbeat Sound",
+		"Name": "Echolation Station",
+		"Width": 5,
+		"Height": 5.75,
+		"Image": "deadbeat-echolation-station.png"
+	},
+	{
+		"Brand": "Deadbeat Sound",
+		"Name": "Modulation Station",
+		"Width": 5,
+		"Height": 5.75,
+		"Image": "deadbeat-modulation-station.png"
+	},
+	{
+		"Brand": "Deadbeat Sound",
+		"Name": "Playback",
+		"Width": 1.98,
+		"Height": 3.7,
+		"Image": "deadbeat-playback.png"
+	},
+	{
+		"Brand": "Deadbeat Sound",
+		"Name": "Reverberation Station",
+		"Width": 5,
+		"Height": 5.75,
+		"Image": "deadbeat-reverberation-station.png"
+	},
+	{
+		"Brand": "Deadbeat Sound",
+		"Name": "Thank You",
+		"Width": 4.4,
+		"Height": 6,
+		"Image": "deadbeat-thank-you.png"
+	},
+	{
+		"Brand": "Deadbeat Sound",
+		"Name": "The Void",
+		"Width": 2.36,
+		"Height": 3.84,
+		"Image": "deadbeat-the-void.png"
+	},
+	{
+		"Brand": "Deadbeat Sound",
+		"Name": "Wet Dreams",
+		"Width": 2.36,
+		"Height": 3.84,
+		"Image": "deadbeat-wet-dreams.png"
+	},
+	{
 		"Brand": "Death By Audio",
 		"Name": "Absolute Destruction",
 		"Width": 2.61,
@@ -15032,7 +15088,7 @@
 		"Brand": "Walrus",
 		"Name": "ARP-87",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-arp87.png"
 	},
 	{
@@ -15074,7 +15130,7 @@
 		"Brand": "Walrus",
 		"Name": "Ages",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-ages.png"
 	},
 	{
@@ -15095,7 +15151,7 @@
 		"Brand": "Walrus",
 		"Name": "Eras",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-eras.png"
 	},
 	{
@@ -15116,14 +15172,14 @@
 		"Brand": "Walrus",
 		"Name": "Deep Six V3",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-deepsixv3.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Deep Six V3 LE",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-deepsix-v3.png"
 	},
 	{
@@ -15137,14 +15193,14 @@
 		"Brand": "Walrus",
 		"Name": "Emissary Parallel Boost",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-emissary.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Fathom",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "wa-fathom.png"
 	},
 	{
@@ -15179,7 +15235,7 @@
 		"Brand": "Walrus",
 		"Name": "Julia V2",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-julia2.png"
 	},
 	{
@@ -15214,7 +15270,7 @@
 		"Brand": "Walrus",
 		"Name": "Lillian",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-lillian.png"
 	},
 	{
@@ -15256,7 +15312,7 @@
 		"Brand": "Walrus",
 		"Name": "Monument V2",
 		"Width": 2.72,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-monumentv2.png"
 	},
 	{
@@ -15277,7 +15333,7 @@
 		"Brand": "Walrus",
 		"Name": "Polychrome",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-polychrome.png"
 	},
 	{
@@ -15298,14 +15354,14 @@
 		"Brand": "Walrus",
 		"Name": "Slö",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-slo.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Slö (Red)",
 		"Width": 2.6,
-		"Height": 4.89,
+		"Height": 4.96,
 		"Image": "walrus-slo-red.png"
 	},
 	{
