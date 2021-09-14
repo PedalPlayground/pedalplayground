@@ -3347,6 +3347,13 @@
 	},
 	{
 		"Brand": "Deadbeat Sound",
+		"Name": "The Visible Overdrive",
+		"Width": 2.64,
+		"Height": 4.5,
+		"Image": "deadbeat-the-visible-overdrive.png"
+	},
+	{
+		"Brand": "Deadbeat Sound",
 		"Name": "The Void",
 		"Width": 2.36,
 		"Height": 3.84,
@@ -12563,6 +12570,69 @@
 		"Width": 4.5,
 		"Height": 2.85,
 		"Image": "pigtronix-universal-remote.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Crooked Teeth",
+		"Width": 5.63,
+		"Height": 4.82,
+		"Image": "pbc-crooked-teeth.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Deep",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "pbc-deep.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Far",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "pbc-far.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Motel",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "pbc-motel.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Siren",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "pbc-siren.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Sirens",
+		"Width": 3.68,
+		"Height": 4.82,
+		"Image": "pbc-sirens.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Sleepwalkin",
+		"Width": 5.63,
+		"Height": 4.82,
+		"Image": "pbc-sleepwalkin.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Tall",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "pbc-tall.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Wide",
+		"Width": 2.6,
+		"Height": 10.15,
+		"Image": "pbc-wide.png"
 	},
 	{
 		"Brand": "Pinstripe Pedals",
