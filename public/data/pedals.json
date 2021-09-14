@@ -2684,15 +2684,22 @@
 		"Brand": "Champion Leccy",
 		"Name": "The Fettle",
 		"Width": 2.5,
-		"Height": 4.82,
+		"Height": 4.65,
 		"Image": "champion-leccy-the-fettle.png"
 	},
 	{
 		"Brand": "Champion Leccy",
 		"Name": "The Kilter",
-		"Width": 6.15,
-		"Height": 4.75,
+		"Width": 5.88,
+		"Height": 5,
 		"Image": "champion-leccy-the-kilter.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Rockstar Fuzz",
+		"Width": 2.5,
+		"Height": 4.65,
+		"Image": "champion-leccy-the-rockstar-fuzz.png"
 	},
 	{
 		"Brand": "Champion Leccy",
@@ -2704,8 +2711,8 @@
 	{
 		"Brand": "Champion Leccy",
 		"Name": "The Swan Hunter",
-		"Width": 6.15,
-		"Height": 4.75,
+		"Width": 5.88,
+		"Height": 5,
 		"Image": "champion-leccy-the-swan-hunter.png"
 	},
 	{
