@@ -3327,23 +3327,44 @@
 	{
 		"Brand": "Dawner Prince",
 		"Name": "Boonar",
-		"Width": 4.7,
-		"Height": 2.38,
+		"Width": 4.71,
+		"Height": 2.3,
 		"Image": "dawnerprince-boonar.png"
 	},
 	{
 		"Brand": "Dawner Prince",
-		"Name": "Starla",
+		"Name": "Diktator",
 		"Width": 4.7,
-		"Height": 2.38,
+		"Height": 3.5,
+		"Image": "dawner-prince-diktator-od.png"
+	},
+	{
+		"Brand": "Dawner Prince",
+		"Name": "Pulse",
+		"Width": 4.7,
+		"Height": 3.5,
+		"Image": "dawner-prince-pulse.png"
+	},
+	{
+		"Brand": "Dawner Prince",
+		"Name": "Red Rox",
+		"Width": 2.61,
+		"Height": 4.4,
+		"Image": "dawnerprince-red-rox.png"
+	},
+	{
+		"Brand": "Dawner Prince",
+		"Name": "Starla",
+		"Width": 4.71,
+		"Height": 2.3,
 		"Image": "dawnerprince-starla.png"
 	},
 	{
 		"Brand": "Dawner Prince",
-		"Name": "Diktator Overdrive",
-		"Width": 4.4,
-		"Height": 3.5,
-		"Image": "dawner-prince-diktator-od.png"
+		"Name": "Viberator",
+		"Width": 2.61,
+		"Height": 4.4,
+		"Image": "dawnerprince-viberator.png"
 	},
 	{
 		"Brand": "Deadbeat Sound",
