@@ -2702,6 +2702,27 @@
 		"Image": "danelectro-coolcattremolo.png"
 	},
 	{
+		"Brand": "Decibelics",
+		"Name": "Angry Swede",
+		"Width": 2.10,
+		"Height": 3.74,
+		"Image": "decibelics-angry-swede.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "Golden Horse",
+		"Width": 1.92,
+		"Height": 3.74,
+		"Image": "decibelics-golden-horse.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "Golden Royale",
+		"Width": 4.72,
+		"Height": 3.85,
+		"Image": "decibelics-golden-royale.png"
+	},
+	{
 		"Brand": "Dr Z",
 		"Name": "Z-Drive",
 		"Width": 4.7,
