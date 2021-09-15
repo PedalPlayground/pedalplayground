@@ -9058,13 +9058,6 @@
 		"Image": "kliq-tinytune.png"
 	},
 	{
-		"Brand": "Klon",
-		"Name": "Centaur",
-		"Width": 6.5,
-		"Height": 5,
-		"Image": "klon-centaur.png"
-	},
-	{
 		"Brand": "Ceriatone",
 		"Name": "Centura",
 		"Width": 6.5,
@@ -9073,16 +9066,23 @@
 	},
 	{
 		"Brand": "Klon",
+		"Name": "Centaur",
+		"Width": 6.5,
+		"Height": 5.03,
+		"Image": "klon-centaur.png"
+	},
+	{
+		"Brand": "Klon",
 		"Name": "Centaur (Horsey)",
 		"Width": 6.5,
-		"Height": 5,
+		"Height": 5.03,
 		"Image": "klon-centaurhorsey.png"
 	},
 	{
 		"Brand": "Klon",
 		"Name": "KTR",
-		"Width": 3.625,
-		"Height": 4.7,
+		"Width": 4.95,
+		"Height": 3.74,
 		"Image": "klon-ktr.png"
 	},
 	{
