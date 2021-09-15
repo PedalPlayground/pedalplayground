@@ -952,6 +952,48 @@
 		"Image": "benson-preamp.png"
 	},
 	{
+		"Brand": "Big Ear Pedals",
+		"Name": "Albie",
+		"Width": 2.75,
+		"Height": 4.69,
+		"Image": "bigear-albie.png"
+	},
+	{
+		"Brand": "Big Ear Pedals",
+		"Name": "Black Betty",
+		"Width": 1.76,
+		"Height": 3.7,
+		"Image": "bigear-black-betty.png"
+	},
+	{
+		"Brand": "Big Ear Pedals",
+		"Name": "Elle",
+		"Width": 2.75,
+		"Height": 4.69,
+		"Image": "bigear-elle.png"
+	},
+	{
+		"Brand": "Big Ear Pedals",
+		"Name": "Loaf",
+		"Width": 2.75,
+		"Height": 4.69,
+		"Image": "bigear-loaf.png"
+	},
+	{
+		"Brand": "Big Ear Pedals",
+		"Name": "Shake",
+		"Width": 2.75,
+		"Height": 4.69,
+		"Image": "bigear-shake.png"
+	},
+	{
+		"Brand": "Big Ear Pedals",
+		"Name": "Wood Cutter",
+		"Width": 2.75,
+		"Height": 4.69,
+		"Image": "bigear-wood-cutter.png"
+	},
+	{
 		"Brand": "B.K. Butler",
 		"Name": "Tube Driver",
 		"Width": 4.13,
