@@ -1345,6 +1345,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "IR-200 Amp & IR Cabinet",
+		"Width": 4.06,
+		"Height": 5.4375,
+		"Image": "boss-ir200.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "JB-2 Angry Driver",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -1643,6 +1650,13 @@
 		"Width": 13.625,
 		"Height": 9.6875,
 		"Image": "boss-sy1000.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "SY-200 Synthesizer",
+		"Width": 4,
+		"Height": 5.4375,
+		"Image": "boss-sy200.png"
 	},
 	{
 		"Brand": "BOSS",
