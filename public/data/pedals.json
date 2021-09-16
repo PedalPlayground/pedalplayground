@@ -13905,98 +13905,119 @@
 		"Brand": "Strymon",
 		"Name": "BigSky",
 		"Width": 6.75,
-		"Height": 5.1,
+		"Height": 4.9,
 		"Image": "strymon-bigsky.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Blue Sky",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-bluesky.png"
-	},
-	{
-		"Brand": "Strymon",
-		"Name": "Compadre",
-		"Width": 4,
-		"Height": 4.5,
-		"Image": "strymon-compadre.png"
-	},
-	{
-		"Brand": "Strymon",
-		"Name": "Volante",
-		"Width": 7,
-		"Height": 4.5,
-		"Image": "strymon-volante.png"
-	},
-	{
-		"Brand": "Strymon",
-		"Name": "Nightsky",
-		"Width": 7,
-		"Height": 4.5,
-		"Image": "strymon-nightsky.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Brigadier",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-brig.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Compadre",
+		"Width": 4,
+		"Height": 4.46,
+		"Image": "strymon-compadre.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Conduit",
+		"Width": 3.5,
+		"Height": 2.64,
+		"Image": "strymon-conduit.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Deco",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-deco.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Dig",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-dig.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "El Capistan",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-elcap.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Flint",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-flint.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Iridium",
+		"Width": 4,
+		"Height": 4.46,
+		"Image": "strymon-iridium.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Lex",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-lex.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Mini Switch",
 		"Width": 2,
-		"Height": 2.28,
+		"Height": 2.29,
 		"Image": "strymon-miniswitch.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Mobius",
 		"Width": 6.75,
-		"Height": 5.1,
+		"Height": 4.9,
 		"Image": "strymon-mobius.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Multiswitch",
+		"Width": 6.625,
+		"Height": 1.88,
+		"Image": "strymon-multiswitch.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Multiswitch Plus",
+		"Width": 6.625,
+		"Height": 2.32,
+		"Image": "strymon-multiswitchplus.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Nightsky",
+		"Width": 7,
+		"Height": 4.41,
+		"Image": "strymon-nightsky.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "OB.1",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-ob1.png"
 	},
 	{
@@ -14008,45 +14029,59 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Ojai R30",
+		"Width": 5.1,
+		"Height": 2.3,
+		"Image": "strymon-ojai-r30.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Ola",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-ola.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Orbit",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-orbit.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Riverside",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-riverside.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Sunset",
 		"Width": 4,
-		"Height": 4.5,
+		"Height": 4.46,
 		"Image": "strymon-sunset.png"
-	},
-	{
-		"Brand": "Strymon",
-		"Name": "Iridium",
-		"Width": 4,
-		"Height": 4.5,
-		"Image": "strymon-iridium.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Timeline",
 		"Width": 6.75,
-		"Height": 5.1,
+		"Height": 4.9,
 		"Image": "strymon-timeline.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Volante",
+		"Width": 7,
+		"Height": 4.41,
+		"Image": "strymon-volante.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Zetzah",
+		"Width": 4,
+		"Height": 4.46,
+		"Image": "strymon-zetzah.png"
 	},
 	{
 		"Brand": "Strymon",
@@ -14057,31 +14092,10 @@
 	},
 	{
 		"Brand": "Strymon",
-		"Name": "Ojai R30",
-		"Width": 5.1,
-		"Height": 2.3,
-		"Image": "strymon-ojai-r30.png"
-	},
-	{
-		"Brand": "Strymon",
 		"Name": "Zuma R300",
 		"Width": 6.8,
 		"Height": 3.3,
 		"Image": "strymon-zumar300.png"
-	},
-	{
-		"Brand": "Strymon",
-		"Name": "Multiswitch",
-		"Width": 6.63,
-		"Height": 1.88,
-		"Image": "strymon-multiswitch.png"
-	},
-	{
-		"Brand": "Strymon",
-		"Name": "Multiswitch Plus",
-		"Width": 6.63,
-		"Height": 1.88,
-		"Image": "strymon-multiswitchplus.png"
 	},
 	{
 		"Brand": "Subdecay",
