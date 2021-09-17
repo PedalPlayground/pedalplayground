@@ -7301,6 +7301,48 @@
 		"Image": "hbe-the-blessed-mother-the-fuzz-assumption.png"
 	},
 	{
+		"Brand": "Hilbish Designs",
+		"Name": "Compressimiser",
+		"Width": 4,
+		"Height": 6.04,
+		"Image": "hilbish-compressimiser.png"
+	},
+	{
+		"Brand": "Hilbish Designs",
+		"Name": "Deathimizer",
+		"Width": 4,
+		"Height": 6.04,
+		"Image": "hilbish-deathimizer.png"
+	},
+	{
+		"Brand": "Hilbish Designs",
+		"Name": "Pessimiser",
+		"Width": 4,
+		"Height": 6.04,
+		"Image": "hilbish-pessimiser.png"
+	},
+	{
+		"Brand": "Hilbish Designs",
+		"Name": "Red Fang Night Destroyer",
+		"Width": 7.95,
+		"Height": 6.04,
+		"Image": "hilbish-red-fang-night-destroyer.png"
+	},
+	{
+		"Brand": "Hilbish Designs",
+		"Name": "Sol Invictus",
+		"Width": 7.95,
+		"Height": 6.04,
+		"Image": "hilbish-sol-invictus.png"
+	},
+	{
+		"Brand": "Hilbish Designs",
+		"Name": "T-Fuzz",
+		"Width": 4,
+		"Height": 6.04,
+		"Image": "hilbish-t-fuzz.png"
+	},
+	{
 		"Brand": "Hologram Electronics",
 		"Name": "Dream Sequence",
 		"Width": 7.37,
@@ -9297,6 +9339,13 @@
 	},
 	{
 		"Brand": "Line6",
+		"Name": "HX Stomp (Blue)",
+		"Width": 7,
+		"Height": 4.96,
+		"Image": "line6-hxstomp-ltd-blue.png"
+	},
+	{
+		"Brand": "Line6",
 		"Name": "HX Stomp (Red)",
 		"Width": 7.25,
 		"Height": 5.08,
@@ -9308,13 +9357,6 @@
 		"Width": 7.25,
 		"Height": 5.08,
 		"Image": "line6-hxstomp-white.png"
-	},
-	{
-		"Brand": "Line6",
-		"Name": "HX Stomp Blue Ltd",
-		"Width": 7,
-		"Height": 4.96,
-		"Image": "line6-hxstomp-ltd-blue.png"
 	},
 	{
 		"Brand": "Line6",
