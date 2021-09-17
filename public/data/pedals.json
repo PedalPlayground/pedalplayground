@@ -9241,6 +9241,13 @@
 	},
 	{
 		"Brand": "Korg",
+		"Name": "Miku Stomp",
+		"Width": 2.91,
+		"Height": 4.72,
+		"Image": "korg-miku-stomp.png"
+	},
+	{
+		"Brand": "Korg",
 		"Name": "Pitchblack",
 		"Width": 2.68,
 		"Height": 4.72,
@@ -16276,52 +16283,115 @@
 	},
 	{
 		"Brand": "Zvex",
-		"Name": "59 Sound",
-		"Width": 4.7,
+		"Name": "'59 Sound",
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-59sound.png"
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "'59 Sound Vertical",
+		"Width": 2.58,
+		"Height": 4.31,
+		"Image": "zvex-59sound-vertical.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Basstortion",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-basstortion.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Box of Metal",
-		"Width": 4.7,
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-boxofmetal.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Box of Rock",
-		"Width": 4.7,
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-boxofrock.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Box of Rock Vertical",
-		"Width": 2.625,
-		"Height": 4.4375,
+		"Width": 2.58,
+		"Height": 4.31,
 		"Image": "zvex-boxofrockvertical.png"
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "Box of Rock Vexter",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-boxofrock-vexter.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Channel 2",
+		"Width": 1.82,
+		"Height": 3.7,
+		"Image": "zvex-channel2.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Distortron",
-		"Width": 4.7,
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-distortron.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Double Rock",
-		"Width": 4.7,
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-doublerock.png"
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "Double Rock Vexter",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-doublerock-vexter.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Fat Fuzz Factory",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-fat-fuzzfactory.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Fat Fuzz Factory Vexter",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-fat-fuzzfactory-vexter.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Fuzz Factory",
-		"Width": 4.7,
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-fuzzfactory.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Fuzz Factory Vertical",
+		"Width": 2.58,
+		"Height": 4.31,
+		"Image": "zvex-fuzzfactory-vertical.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Fuzz Factory Vexter",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-fuzzfactory-vexter.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -16332,24 +16402,73 @@
 	},
 	{
 		"Brand": "Zvex",
-		"Name": "Instant Lofi Junky",
-		"Width": 4.7,
+		"Name": "Fuzzolo",
+		"Width": 1.82,
+		"Height": 3.7,
+		"Image": "zvex-fuzzolo.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Instant Lo-Fi Junky",
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-lofijunky.png"
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "Instant Lo-Fi Junky Vertical",
+		"Width": 2.58,
+		"Height": 4.31,
+		"Image": "zvex-lofijunky-vertical.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Instant Lo-Fi Junky Vexter",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-lofijunky-vexter.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Jonny Octave",
-		"Width": 4.7,
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-jonnyoctave.png"
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "Lo-Fi Loop Junky",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-lofiloopjunky.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Loop Gate",
+		"Width": 4.68,
+		"Height": 2.46,
+		"Image": "zvex-loopgate.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Machine",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-machine.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Mastotron",
-		"Width": 4.7,
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-mastotron.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Octane",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-octane.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -16361,44 +16480,86 @@
 	{
 		"Brand": "Zvex",
 		"Name": "Sonar",
-		"Width": 4.7,
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-sonar.png"
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "Sonar Vexter",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-sonar-vexter.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Super Duper 2-in-1",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-superduper2in1.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Super Hard On",
-		"Width": 4.7,
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-superhardon.png"
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "Super Hard On Vexter",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-superhardon-vexter.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Super Ringtone",
 		"Width": 5.94,
-		"Height": 4.73,
+		"Height": 4.87,
 		"Image": "zvex-superringtone.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Super Seek Trem",
 		"Width": 5.94,
-		"Height": 4.73,
+		"Height": 4.87,
 		"Image": "zvex-superseektrem.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Super Seek Wah",
 		"Width": 5.94,
-		"Height": 4.73,
+		"Height": 4.87,
 		"Image": "zvex-superseekwah.png"
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "Vibrophase",
+		"Width": 2.58,
+		"Height": 4.31,
+		"Image": "zvex-vibrophase.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Woolly Mammoth",
-		"Width": 4.7,
+		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-woollymammoth.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Woolly Mammoth 7",
+		"Width": 3.64,
+		"Height": 4.8,
+		"Image": "zvex-woollymammoth7.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Woolly Mammoth Vexter",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-woollymammoth-vexter.png"
 	},
 	{
 		"Brand": "Behringer",
