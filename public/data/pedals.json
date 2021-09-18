@@ -324,29 +324,36 @@
 	{
 		"Brand": "Browne Amplification",
 		"Name": "Protein (Black)",
-		"Width": 4.91,
-		"Height": 3.7,
+		"Width": 5,
+		"Height": 3.97,
 		"Image": "browneamps-protein-black.png"
 	},
 	{
 		"Brand": "Browne Amplification",
 		"Name": "Protein (Green)",
-		"Width": 4.91,
-		"Height": 3.7,
+		"Width": 5,
+		"Height": 3.97,
 		"Image": "browneamps-protein-green.png"
 	},
 	{
 		"Brand": "Browne Amplification",
+		"Name": "Protein (Pink`)",
+		"Width": 5,
+		"Height": 3.97,
+		"Image": "browneamps-protein-pink.png"
+	},
+	{
+		"Brand": "Browne Amplification",
 		"Name": "Protein (White)",
-		"Width": 4.91,
-		"Height": 3.7,
+		"Width": 5,
+		"Height": 3.97,
 		"Image": "browneamps-protein-white.png"
 	},
 	{
 		"Brand": "Browne Amplification",
 		"Name": "T4 Fuzz",
 		"Width": 2.85,
-		"Height": 4.78,
+		"Height": 5.07,
 		"Image": "browne-t4.png"
 	},
 	{
