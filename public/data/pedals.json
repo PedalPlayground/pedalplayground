@@ -168,6 +168,13 @@
 		"Image": "acn-vola.png"
 	},
 	{
+		"Brand": "Aerospace Audio",
+		"Name": "Atmosphere",
+		"Width": 4.85,
+		"Height": 5.9,
+		"Image": "aerospace-atmosphere.png"
+	},
+	{
 		"Brand": "Aguilar",
 		"Name": "DB599",
 		"Width": 1.75,
@@ -15230,6 +15237,34 @@
 		"Width": 2.56,
 		"Height": 4.42,
 		"Image": "vemuram-janray.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Copper",
+		"Width": 8.86,
+		"Height": 5.54,
+		"Image": "victory-v4-the-copper.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Jack",
+		"Width": 8.86,
+		"Height": 5.54,
+		"Image": "victory-v4-the-jack.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Kraken",
+		"Width": 8.86,
+		"Height": 5.54,
+		"Image": "victory-v4-the-kraken.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Sheriff",
+		"Width": 8.86,
+		"Height": 5.54,
+		"Image": "victory-v4-the-sheriff.png"
 	},
 	{
 		"Brand": "VS Audio",
