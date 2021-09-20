@@ -7436,22 +7436,29 @@
 	{
 		"Brand": "Hotone",
 		"Name": "Binary Mod",
-		"Width": 4.76378,
-		"Height": 2.83465,
+		"Width": 4.76,
+		"Height": 2.8,
 		"Image": "hotone-binarymod.png"
 	},
 	{
 		"Brand": "Hotone",
 		"Name": "Binary Amp",
-		"Width": 4.76378,
-		"Height": 2.83465,
+		"Width": 4.76,
+		"Height": 2.8,
 		"Image": "hotone-binary-amp.png"
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Binary Eko",
+		"Width": 4.76,
+		"Height": 2.8,
+		"Image": "hotone-binary-eko.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Binary IR Cab",
-		"Width": 4.76378,
-		"Height": 2.83465,
+		"Width": 4.76,
+		"Height": 2.8,
 		"Image": "hotone-binary-ir-cab.png"
 	},
 	{
