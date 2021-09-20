@@ -1562,6 +1562,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RC-300 Loop Station",
+		"Width": 21.125,
+		"Height": 8.83,
+		"Image": "boss-rc300.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RC-5 Loop Station",
 		"Width": 2.875,
 		"Height": 5.125,
