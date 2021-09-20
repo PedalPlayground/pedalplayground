@@ -7338,15 +7338,15 @@
 	{
 		"Brand": "Hilbish Designs",
 		"Name": "Red Fang Night Destroyer",
-		"Width": 7.95,
-		"Height": 6.04,
+		"Width": 8,
+		"Height": 6.08,
 		"Image": "hilbish-red-fang-night-destroyer.png"
 	},
 	{
 		"Brand": "Hilbish Designs",
 		"Name": "Sol Invictus",
-		"Width": 7.95,
-		"Height": 6.04,
+		"Width": 8,
+		"Height": 6.08,
 		"Image": "hilbish-sol-invictus.png"
 	},
 	{
@@ -7414,6 +7414,27 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Ampero Control",
+		"Width": 10.18,
+		"Height": 2.14,
+		"Image": "hotone-ampero-control.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Ampero Press",
+		"Width": 3.1,
+		"Height": 6.38,
+		"Image": "hotone-ampero-press.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Ampero Switch",
+		"Width": 3.94,
+		"Height": 1.55,
+		"Image": "hotone-ampero-switch.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Binary Mod",
 		"Width": 4.76378,
 		"Height": 2.83465,
@@ -7442,17 +7463,31 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Patch Kommander",
+		"Width": 15.87,
+		"Height": 2.11,
+		"Image": "hotone-patch-kommander.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Soul Press",
-		"Width": 2.46,
+		"Width": 2.38,
 		"Height": 5.43,
 		"Image": "hotone-soulpress.png"
 	},
 	{
 		"Brand": "Hotone",
-		"Name": "Xtomp Mini",
-		"Width": 2.48,
-		"Height": 4.45,
-		"Image": "hotone-xtomp-mini.png"
+		"Name": "Soul Press II",
+		"Width": 3.1,
+		"Height": 6.38,
+		"Image": "hotone-soul-press-2.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Vow Press",
+		"Width": 2.38,
+		"Height": 5.43,
+		"Image": "hotone-vow-press.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -7460,6 +7495,20 @@
 		"Width": 1.73,
 		"Height": 2.91,
 		"Image": "hotone_wally_plus.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Xtomp",
+		"Width": 2.88,
+		"Height": 4.96,
+		"Image": "hotone-xtomp.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Xtomp Mini",
+		"Width": 2.43,
+		"Height": 4.4,
+		"Image": "hotone-xtomp-mini.png"
 	},
 	{
 		"Brand": "Hudson",
@@ -16770,13 +16819,6 @@
 		"Width": 2.83,
 		"Height": 4.72,
 		"Image": "vox-valvenergy-silk-drive.png"
-	},
-	{
-		"Brand": "Hotone",
-		"Name": "Ampero Switch",
-		"Width": 3.94,
-		"Height": 1.57,
-		"Image": "hotone-ampero-switch.png"
 	},
 	{
 		"Brand": "Fortin",
