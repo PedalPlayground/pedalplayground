@@ -14498,17 +14498,24 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Alter Ego x4",
-		"Width": 9.25,
-		"Height": 5.70866,
+		"Name": "Alter Ego v2 Vintage Echo",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-alterego-v2.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Alter Ego x4 Vintage Echo",
+		"Width": 9.3,
+		"Height": 5.65,
 		"Image": "tc-alteregox4.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Flashback x4",
-		"Width": 9.25,
-		"Height": 5.70866,
-		"Image": "tc-flashbackx4.png"
+		"Name": "Arena Reverb",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-arena.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14519,8 +14526,22 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "BodyRez Acoustic Pickup Enhancer",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-bondyrez.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Bonafide Buffer",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-bonafide.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Brainwaves Pitch Shifter",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-brainwaves.png"
 	},
@@ -14541,22 +14562,22 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Corona Chorus",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-corona.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Corona Chorus 40th Anniversary",
-		"Width": 2.83,
+		"Name": "Corona Chorus + Trichorus & Toneprint",
+		"Width": 2.86,
 		"Height": 4.8,
-		"Image": "tc-corona-chorus-plus.png"
+		"Image": "tc-corona-trichorus.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Corona Mini",
-		"Width": 2.01,
-		"Height": 3.66,
+		"Name": "Corona Mini Chorus",
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tc-coronamini.png"
 	},
 	{
@@ -14569,43 +14590,50 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Dark Matter",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-dark-matter.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Ditto",
-		"Width": 2.15,
-		"Height": 3.7,
+		"Name": "Ditto Looper",
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tc-ditto.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Ditto Stereo",
-		"Width": 2.83,
+		"Name": "Ditto Stereo Looper",
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-dittostereo.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Ditto x2",
-		"Width": 4.44,
-		"Height": 5.31,
+		"Name": "Ditto Jam X2 Looper",
+		"Width": 4.4,
+		"Height": 5.25,
+		"Image": "tc-ditto2-jam.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Ditto X2 Looper",
+		"Width": 4.4,
+		"Height": 5.25,
 		"Image": "tc-ditto2.png"
 	},
 	{
 		"Brand": "TC Electronic",
 		"Name": "Ditto x4",
-		"Width": 9.25,
-		"Height": 5.70866,
+		"Width": 9.3,
+		"Height": 5.65,
 		"Image": "tc-ditto4.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Ditto+",
-		"Width": 2.15,
-		"Height": 3.7,
+		"Name": "Ditto+ Looper",
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tc-ditto-plus.png"
 	},
 	{
@@ -14645,31 +14673,52 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Flashback",
-		"Width": 2.83,
+		"Name": "Flashback Delay",
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-flashback.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Flashback 2",
-		"Width": 2.83,
+		"Name": "Flashback II Delay",
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-flashback2.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Flashback Mini",
-		"Width": 2.01,
-		"Height": 3.66,
+		"Name": "Flashback II x4 Delay",
+		"Width": 9.3,
+		"Height": 5.65,
+		"Image": "tc-flashback2x4.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Flashback Mini Delay",
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tc-flashbackmini.png"
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Flashback II Mini Delay",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-flashback2mini.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Flashback Triple Delay",
-		"Width": 9.25,
-		"Height": 5.71,
+		"Width": 9.3,
+		"Height": 5.65,
 		"Image": "tc-electronic-flashback-triple-delay.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Flashback x4 Delay",
+		"Width": 9.3,
+		"Height": 5.65,
+		"Image": "tc-flashbackx4.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14687,6 +14736,20 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "G-System",
+		"Width": 20.2,
+		"Height": 10.64,
+		"Image": "tc-g-system.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "G-System iB Modified",
+		"Width": 20.2,
+		"Height": 10.64,
+		"Image": "tc-g-system-ib-mod.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Gauss Tape Echo",
 		"Width": 2.9,
 		"Height": 5.15,
@@ -14701,29 +14764,43 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Hall of Fame",
-		"Width": 2.83,
+		"Name": "Hall of Fame Reverb",
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-halloffame.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Hall of Fame 2",
-		"Width": 2.83,
+		"Name": "Hall of Fame 2 Mini Reverb",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-hof2-mini.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Hall of Fame 2 Reverb",
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-halloffame2.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Hall of Fame mini",
+		"Name": "Hall of Fame Mini Reverb",
 		"Width": 2,
 		"Height": 3.7,
 		"Image": "tc-hof-mini.png"
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Hall of Fame x4 Reverb",
+		"Width": 9.3,
+		"Height": 5.65,
+		"Image": "tc-hof-x4.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Helix Phaser",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tcelectronic-helix.png"
 	},
@@ -14736,6 +14813,20 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Hypergravity Compressor",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-hypergravity.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Hypergravity Mini Compressor",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-hypergravity-mini.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Iron Curtain Noise Gate",
 		"Width": 2.9,
 		"Height": 5.15,
@@ -14745,8 +14836,15 @@
 		"Brand": "TC Electronic",
 		"Name": "June-60",
 		"Width": 3.4,
-		"Height": 5.34,
+		"Height": 5.45,
 		"Image": "tc-june60.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "June-60 v2",
+		"Width": 3.4,
+		"Height": 5.45,
+		"Image": "tc-june60-v2.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14758,14 +14856,28 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Mimiq Doubler",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-mimiq.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "MojoMojo",
-		"Width": 2.83,
+		"Name": "Mimiq Mini Doubler",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-mimiq-mini.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Mojomojo Paul Gilbert Overdrive",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-paulgilbert-mojomojo.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Mojomojo Overdrive",
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-mojomojo.png"
 	},
@@ -14778,9 +14890,9 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Nova Delay",
+		"Name": "ND-1 Nova Delay",
 		"Width": 4.92,
-		"Height": 5.19,
+		"Height": 5.14,
 		"Image": "tc-novadelay.png"
 	},
 	{
@@ -14821,7 +14933,7 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Pipeline Tap Tremolo",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-pipeline.png"
 	},
@@ -14835,42 +14947,63 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Polytune",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-polytune.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Polytune Mini",
-		"Width": 2.01,
-		"Height": 3.66,
-		"Image": "tc-polytunemini.png"
+		"Name": "Polytune 2",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-polytune-2.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Polytune 2 Noir",
-		"Width": 2.01,
-		"Height": 3.66,
+		"Name": "Polytune 3",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-polytune-3.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Polytune 2 Mini",
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tc-poly2mini.png"
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Polytune 2 Mini Noir",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-poly2mini-noir.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Polytune 3 Mini",
-		"Width": 2.01,
-		"Height": 3.66,
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tc-poly3mini.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Polytune 3 Noir",
-		"Width": 2.01,
-		"Height": 3.66,
+		"Name": "Polytune 3 Mini Noir",
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tc-poly3noir.png"
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Polytune Mini",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-polytunemini.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Quintessence Harmony",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-quintessence.png"
 	},
@@ -14890,22 +15023,22 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Sentry",
-		"Width": 2.83,
+		"Name": "Sentry Noise Gate",
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-sentry.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Shaker Mini",
-		"Width": 2.01,
-		"Height": 3.66,
+		"Name": "Shaker Mini Vibrato",
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tcelectronic-shakermini.png"
 	},
 	{
 		"Brand": "TC Electronic",
 		"Name": "Shaker Vibrato",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tcelectronic-shaker.png"
 	},
@@ -14925,17 +15058,31 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Spark Boost",
-		"Width": 2.01,
-		"Height": 3.66,
+		"Name": "Spark Booster",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-spark-booster.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Spark Mini Booster",
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tc-spark.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Spark Boost",
-		"Width": 2.7,
-		"Height": 4.72,
-		"Image": "tc-spark-booster.png"
+		"Name": "Spectra Comp Bass Compressor",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-spectra-comp.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Spectra Drive Bass Preamp",
+		"Width": 4.44,
+		"Height": 5.25,
+		"Image": "tc-spectra-drive.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14946,16 +15093,16 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Sub'n'Up",
-		"Width": 2.83,
+		"Name": "Sub 'N' Up Octaver",
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tcelectronic-subnup.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Sub'n'Up Mini",
-		"Width": 2.01,
-		"Height": 3.66,
+		"Name": "Sub 'N' Up Mini Octaver",
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tcelectronic-subnupmini.png"
 	},
 	{
@@ -14964,6 +15111,13 @@
 		"Width": 2.9,
 		"Height": 5.15,
 		"Image": "tc-tailspin.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "The Dreamscape",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-thedreamscape.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14981,8 +15135,15 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Trinity Reverb",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-trinity.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Trinity T2 Reverb",
-		"Width": 2.8,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-electronic-trinity-t2-reverb.png"
 	},
@@ -15003,22 +15164,29 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Viscous Vibe",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tcelectronic-viscousvibe.png"
 	},
 	{
 		"Brand": "TC Electronic",
 		"Name": "Vortex Flanger",
-		"Width": 2.83,
+		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-vortex.png"
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Vortex Mini Flanger",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-vortex-mini.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Wiretap Riff Recorder",
-		"Width": 2.01,
-		"Height": 3.66,
+		"Width": 2,
+		"Height": 3.75,
 		"Image": "tc-wiretap.png"
 	},
 	{
