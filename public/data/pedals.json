@@ -16462,5 +16462,12 @@
 		"Width": 6.8,
 		"Height": 5.7,
 		"Image": "ikm-xvibe.png"
+	},
+	{
+		"Brand": "AMT ",
+		"Name": "BULAVA SS-30",
+		"Width": 4.17,
+		"Height": 4.92,
+		"Image": "amt-bulava-ss30.png"
 	}
 ]
