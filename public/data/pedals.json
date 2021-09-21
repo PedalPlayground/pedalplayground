@@ -9409,6 +9409,13 @@
 	},
 	{
 		"Brand": "Line6",
+		"Name": "EX-1",
+		"Width": 3.5,
+		"Height": 8.56,
+		"Image": "line6-ex1.png"
+	},
+	{
+		"Brand": "Line6",
 		"Name": "HX Effects",
 		"Width": 10.8,
 		"Height": 7.9,
@@ -14716,8 +14723,8 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Magus Pro",
-		"Width": 2.2,
-		"Height": 3.65,
+		"Width": 2.34,
+		"Height": 3.9,
 		"Image": "tc-maguspro.png"
 	},
 	{
