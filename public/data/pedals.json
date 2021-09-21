@@ -371,13 +371,6 @@
 		"Image": "amt-m1.png"
 	},
 	{
-		"Brand": "TC Electronic",
-		"Name": "Stereo Chorus Pitch Modulator & Flanger",
-		"Width": 3.85,
-		"Height": 4.9,
-		"Image": "tc-chorus-pitch-flanger.png"
-	},
-	{
 		"Brand": "AMT",
 		"Name": "E-1",
 		"Width": 2.9,
@@ -14491,16 +14484,16 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "3rd Dimension",
+		"Name": "3rd Dimension Chorus",
 		"Width": 2.9,
-		"Height": 5.2,
+		"Height": 5.15,
 		"Image": "tc-3rddimension.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Afterglow",
+		"Name": "Afterglow Chorus",
 		"Width": 2.9,
-		"Height": 5.2,
+		"Height": 5.15,
 		"Image": "tc-afterglow.png"
 	},
 	{
@@ -14519,9 +14512,9 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "BloodMoon",
+		"Name": "BloodMoon Phaser",
 		"Width": 2.9,
-		"Height": 5.2,
+		"Height": 5.15,
 		"Image": "tc-bloodmoon.png"
 	},
 	{
@@ -14533,31 +14526,17 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "MojoMojo",
-		"Width": 2.83,
-		"Height": 4.8,
-		"Image": "tc-mojomojo.png"
+		"Name": "Choka Tremolo",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-choka.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Cinders",
+		"Name": "Cinders Overdrive",
 		"Width": 2.9,
-		"Height": 5.2,
+		"Height": 5.15,
 		"Image": "tc-cinders.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "Tailspin",
-		"Width": 2.9,
-		"Height": 5.2,
-		"Image": "tc-tailspin.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "June-60",
-		"Width": 3.4,
-		"Height": 5.34,
-		"Image": "tc-june60.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14582,10 +14561,10 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Wiretap Riff Recorder",
-		"Width": 2.01,
-		"Height": 3.66,
-		"Image": "tc-wiretap.png"
+		"Name": "Crescendo Auto Swell",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-crescendo.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14631,24 +14610,38 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Drip",
+		"Name": "Drip Spring Reverb",
 		"Width": 2.9,
-		"Height": 5.2,
+		"Height": 5.15,
 		"Image": "tc-drip.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Echobrain",
+		"Name": "Echobrain Analog Delay",
 		"Width": 2.9,
-		"Height": 5.2,
+		"Height": 5.15,
 		"Image": "tc-echobrain.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "El Mocambo",
+		"Name": "El Cambo Overdrive",
 		"Width": 2.9,
-		"Height": 5.2,
-		"Image": "tc-elmocambo.png"
+		"Height": 5.15,
+		"Image": "tc-el-cambo.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Eyemaster Metal Distortion",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-eyemaster.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Fangs Metal Distortion",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-fangs.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14659,6 +14652,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Flashback 2",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tc-flashback2.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Flashback Mini",
 		"Width": 2.01,
 		"Height": 3.66,
@@ -14666,10 +14666,38 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Forcefield",
+		"Name": "Flashback Triple Delay",
+		"Width": 9.25,
+		"Height": 5.71,
+		"Image": "tc-electronic-flashback-triple-delay.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Flourescence Shimmer Reverb",
 		"Width": 2.9,
-		"Height": 5.2,
+		"Height": 5.15,
+		"Image": "tc-flourescence.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Forcefield Compressor",
+		"Width": 2.9,
+		"Height": 5.15,
 		"Image": "tc-forcefield.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Gauss Tape Echo",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-gauss.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Grand Magus Distortion",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-grand-magus.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14694,27 +14722,6 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Flashback 2",
-		"Width": 2.83,
-		"Height": 4.8,
-		"Image": "tc-flashback2.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "Pipeline Tap Tremolo",
-		"Width": 2.83,
-		"Height": 4.8,
-		"Image": "tc-pipeline.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "Vortex Flanger",
-		"Width": 2.83,
-		"Height": 4.8,
-		"Image": "tc-vortex.png"
-	},
-	{
-		"Brand": "TC Electronic",
 		"Name": "Helix Phaser",
 		"Width": 2.83,
 		"Height": 4.8,
@@ -14722,8 +14729,29 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Honey Pot Fuzz",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-honey-pot.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Iron Curtain Noise Gate",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-iron-curtain.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "June-60",
+		"Width": 3.4,
+		"Height": 5.34,
+		"Image": "tc-june60.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Magus Pro",
-		"Width": 2.34,
+		"Width": 2.40,
 		"Height": 3.9,
 		"Image": "tc-maguspro.png"
 	},
@@ -14733,6 +14761,20 @@
 		"Width": 2.83,
 		"Height": 4.8,
 		"Image": "tc-mimiq.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "MojoMojo",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tc-mojomojo.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Nether Octaver",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-nether.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14778,6 +14820,20 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Pipeline Tap Tremolo",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tc-pipeline.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Plethora x5",
+		"Width": 11.8,
+		"Height": 4.78,
+		"Image": "tc-plethora.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Polytune",
 		"Width": 2.83,
 		"Height": 4.8,
@@ -14813,6 +14869,27 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Quintessence Harmony",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tc-quintessence.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Rush Booster",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-rush.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Rusty Fuzz",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-rusty.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Sentry",
 		"Width": 2.83,
 		"Height": 4.8,
@@ -14834,10 +14911,17 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Skysurfer",
+		"Name": "Skysurfer Reverb",
 		"Width": 2.9,
-		"Height": 5.2,
+		"Height": 5.15,
 		"Image": "tc-skysurfer.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Skysurfer Mini Reverb",
+		"Width": 2.40,
+		"Height": 3.9,
+		"Image": "tc-skysurfer-mini.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14845,6 +14929,20 @@
 		"Width": 2.01,
 		"Height": 3.66,
 		"Image": "tc-spark.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Spark Boost",
+		"Width": 2.7,
+		"Height": 4.72,
+		"Image": "tc-spark-booster.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Stereo Chorus Pitch Modulator & Flanger",
+		"Width": 3.85,
+		"Height": 4.9,
+		"Image": "tc-chorus-pitch-flanger.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14862,38 +14960,24 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "The Prophet",
+		"Name": "Tailspin Vibrato",
 		"Width": 2.9,
-		"Height": 5.2,
+		"Height": 5.15,
+		"Image": "tc-tailspin.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "The Prophet Digital Delay",
+		"Width": 2.9,
+		"Height": 5.15,
 		"Image": "tc-prophet.png"
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Tube Pilot",
+		"Name": "Thunderstorm Flanger",
 		"Width": 2.9,
-		"Height": 5.2,
-		"Image": "tc-tubepilot.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "Viscous Vibe",
-		"Width": 2.83,
-		"Height": 4.8,
-		"Image": "tcelectronic-viscousvibe.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "Flashback Triple Delay",
-		"Width": 9.25,
-		"Height": 5.71,
-		"Image": "tc-electronic-flashback-triple-delay.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "Quintessence Harmony",
-		"Width": 2.83,
-		"Height": 4.8,
-		"Image": "tc-quintessence.png"
+		"Height": 5.15,
+		"Image": "tc-thunderstorm.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -14904,8 +14988,43 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Tube Pilot Overdrive",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-tubepilot.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Vibraclone Rotary",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-vibraclone.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Viscous Vibe",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tcelectronic-viscousvibe.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Vortex Flanger",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "tc-vortex.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Wiretap Riff Recorder",
+		"Width": 2.01,
+		"Height": 3.66,
+		"Image": "tc-wiretap.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Zeus Drive",
-		"Width": 2.34,
+		"Width": 2.40,
 		"Height": 3.9,
 		"Image": "tc-electronic-zeus-drive.png"
 	},
@@ -16749,20 +16868,6 @@
 		"Width": 2.75,
 		"Height": 4.8,
 		"Image": "harley-benton-powerplant-tuner.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "Plethora x5",
-		"Width": 11.8,
-		"Height": 4.78,
-		"Image": "tc-plethora.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "Spark Boost",
-		"Width": 2.7,
-		"Height": 4.72,
-		"Image": "tc-spark-booster.png"
 	},
 	{
 		"Brand": "Wampler",
