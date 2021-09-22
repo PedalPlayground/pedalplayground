@@ -16469,5 +16469,12 @@
 		"Width": 4.17,
 		"Height": 4.92,
 		"Image": "amt-bulava-ss30.png"
-	}
+	},
+	{
+        "Brand": "AMT ",
+		"Name": "HR-1 Heater",
+		"Width": 2.91,
+		"Height": 4.48,
+		"Image": "amt-heater.png"
+    }
 ]
