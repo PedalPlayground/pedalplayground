@@ -8814,6 +8814,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Compressor Mini",
+		"Width": 1.82,
+		"Height": 3.7,
+		"Image": "keeley-compressor-mini.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Compressor Plus",
 		"Width": 2.6,
 		"Height": 4.4,
