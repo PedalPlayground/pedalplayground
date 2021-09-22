@@ -5666,42 +5666,49 @@
 		"Brand": "Electronic Audio Experiments",
 		"Name": "Beholder",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.95,
 		"Image": "electronic-audio-experiments-beholder.png"
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
 		"Name": "Dagger",
 		"Width": 2.6,
-		"Height": 4.86,
+		"Height": 5.05,
 		"Image": "electronic-audio-experiments-dagger.png"
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
 		"Name": "Halberd",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.95,
 		"Image": "electronic-audio-experiments-halberd.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
+		"Name": "Halberd v2",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "electronic-audio-experiments-halberd-v2.png"
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
 		"Name": "Hypersleep",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.95,
 		"Image": "electronic-audio-experiments-hypersleep.png"
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
 		"Name": "Longsword",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.95,
 		"Image": "electronic-audio-experiments-longsword.png"
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
 		"Name": "Model feT",
 		"Width": 3.7,
-		"Height": 4.7,
+		"Height": 4.95,
 		"Image": "electronic-audio-experiments-model-fet.png"
 	},
 	{
