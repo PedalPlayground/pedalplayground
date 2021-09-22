@@ -826,6 +826,20 @@
 		"Image": "analogman-sunlion.png"
 	},
 	{
+		"Brand": "Animals Pedals",
+		"Name": "Dawn Ocean Meditation Booster (Custom Painted 039)",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-dawn-meditation-039.png"
+	},
+	{
+		"Brand": "Animals Pedals",
+		"Name": "Surfing Bear Overdrive (Custom Painted 038)",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-surfing-bear-038.png"
+	},
+	{
 		"Brand": "Arc Effects",
 		"Name": "Big Green",
 		"Width": 3.62,
@@ -10815,6 +10829,13 @@
 		"Image": "mrblack-tapex.png"
 	},
 	{
+		"Brand": "Music Box Pedals",
+		"Name": "Lyla Drive",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "musicbox-lyla-drive.png"
+	},
+	{
 		"Brand": "Musicomlab",
 		"Name": "EFX III",
 		"Width": 11,
@@ -15566,6 +15587,13 @@
 		"Width": 2.2,
 		"Height": 4.6,
 		"Image": "vertex-steelstring-mk2.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Steel String Supreme",
+		"Width": 3.2,
+		"Height": 4.6,
+		"Image": "vertex-steelstringsupreme.png"
 	},
 	{
 		"Brand": "Vertex",
