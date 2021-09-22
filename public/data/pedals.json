@@ -16483,5 +16483,12 @@
 		"Width": 1.65,
 		"Height": 3.66,
 		"Image": "mooer-modfactory-mkii.png"
+    },
+    {
+        "Brand": "Shift Line",
+		"Name": "A+ Astronaut III",
+		"Width": 2.63,
+		"Height": 4.33,
+		"Image": "astronaut-III.png"
     }
 ]
