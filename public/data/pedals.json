@@ -16490,5 +16490,12 @@
 		"Width": 2.63,
 		"Height": 4.33,
 		"Image": "astronaut-III.png"
+    },
+    {
+        "Brand": "AMT",
+		"Name": "PANGAEA CP-100 IR",
+		"Width": 3.77,
+		"Height": 1.69,
+		"Image": "amt-pangaeacp100.png"
     }
 ]
