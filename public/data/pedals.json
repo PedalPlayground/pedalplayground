@@ -16464,17 +16464,24 @@
 		"Image": "ikm-xvibe.png"
 	},
 	{
-		"Brand": "AMT ",
+		"Brand": "AMT",
 		"Name": "BULAVA SS-30",
 		"Width": 4.17,
 		"Height": 4.92,
 		"Image": "amt-bulava-ss30.png"
 	},
 	{
-        "Brand": "AMT ",
+        "Brand": "AMT",
 		"Name": "HR-1 Heater",
 		"Width": 2.91,
 		"Height": 4.48,
 		"Image": "amt-heater.png"
+    },
+    {
+        "Brand": "Mooer",
+		"Name": "Mod Factory MK II",
+		"Width": 1.65,
+		"Height": 3.66,
+		"Image": "mooer-modfactory-mkii.png"
     }
 ]
