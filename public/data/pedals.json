@@ -12903,9 +12903,16 @@
 	{
 		"Brand": "Pinstripe Pedals",
 		"Name": "DISO Plus",
-		"Width": 4.7,
-		"Height": 3.7,
-		"Image": "pinstripepedals-disoplus.png"
+		"Width": 4.8,
+		"Height": 4,
+		"Image": "pinstripepedals-miso.png"
+	},
+	{
+		"Brand": "Pinstripe Pedals",
+		"Name": "MISO",
+		"Width": 4.78,
+		"Height": 2.96,
+		"Image": "pinstripepedals-miso.png"
 	},
 	{
 		"Brand": "Poly Effects",
