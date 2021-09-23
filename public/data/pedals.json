@@ -3683,6 +3683,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Dirty Robot",
+		"Width": 2.64,
+		"Height": 4.4,
+		"Image": "digitech-dirty-robot.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DL-8 Delay/Looper",
 		"Width": 3.5,
 		"Height": 5.25,
@@ -9381,10 +9388,24 @@
 	},
 	{
 		"Brand": "Korg",
+		"Name": "Pitchblack Custom",
+		"Width": 2.65,
+		"Height": 4.45,
+		"Image": "korg-pitchblack-custom.png"
+	},
+	{
+		"Brand": "Korg",
 		"Name": "Pitchblack Mini",
 		"Width": 1.77,
 		"Height": 3.66,
 		"Image": "korg-pitchblackmini.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Pitchblack Plus",
+		"Width": 5.04,
+		"Height": 4.86,
+		"Image": "korg-pitchblack-plus.png"
 	},
 	{
 		"Brand": "Land Devices",
@@ -11695,6 +11716,13 @@
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-xtc-od.png"
+	},
+	{
+		"Brand": "Neo Instruments",
+		"Name": "Micro Vent",
+		"Width": 2.63,
+		"Height": 4.45,
+		"Image": "neo-micro-vent.png"
 	},
 	{
 		"Brand": "Neo Instruments",
