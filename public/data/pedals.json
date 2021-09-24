@@ -6365,23 +6365,37 @@
 	{
 		"Brand": "Flower Pedals",
 		"Name": "Castilleja Phaser",
-		"Width": 2.55,
-		"Height": 4.80,
+		"Width": 2.69,
+		"Height": 4.95,
 		"Image": "flower-pedals-castilleja.png"
 	},
 	{
 		"Brand": "Flower Pedals",
-		"Name": "Dandelion Tremolo V2",
-		"Width": 2.55,
-		"Height": 4.80,
+		"Name": "Dandelion Tremolo",
+		"Width": 2.69,
+		"Height": 4.95,
 		"Image": "flower-pedals-dandelion-v2.png"
 	},
 	{
 		"Brand": "Flower Pedals",
+		"Name": "Geranium Germanium Drive",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "flower-pedals-geranium.png"
+	},
+	{
+		"Brand": "Flower Pedals",
 		"Name": "Hosta Wah Filter",
-		"Width": 2.55,
-		"Height": 4.80,
+		"Width": 2.69,
+		"Height": 4.95,
 		"Image": "flower-pedals-hosta.png"
+	},
+	{
+		"Brand": "Flower Pedals",
+		"Name": "Poppy Dual Boost",
+		"Width": 4.86,
+		"Height": 2.74,
+		"Image": "flower-pedals-poppy.png"
 	},
 	{
 		"Brand": "Foxpedal",
@@ -12766,6 +12780,13 @@
 		"Width": 5.7,
 		"Height": 4.7,
 		"Image": "pigtronix-echolution2ultrapro.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Gamma Drive",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-gamma-drive.png"
 	},
 	{
 		"Brand": "Pigtronix",
