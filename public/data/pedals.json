@@ -826,6 +826,20 @@
 		"Image": "analogman-sunlion.png"
 	},
 	{
+		"Brand": "Animals Pedals",
+		"Name": "Dawn Ocean Meditation Booster (Custom Painted 039)",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-dawn-meditation-039.png"
+	},
+	{
+		"Brand": "Animals Pedals",
+		"Name": "Surfing Bear Overdrive (Custom Painted 038)",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-surfing-bear-038.png"
+	},
+	{
 		"Brand": "Arc Effects",
 		"Name": "Big Green",
 		"Width": 3.62,
@@ -3669,6 +3683,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Dirty Robot",
+		"Width": 2.64,
+		"Height": 4.4,
+		"Image": "digitech-dirty-robot.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DL-8 Delay/Looper",
 		"Width": 3.5,
 		"Height": 5.25,
@@ -6344,23 +6365,37 @@
 	{
 		"Brand": "Flower Pedals",
 		"Name": "Castilleja Phaser",
-		"Width": 2.55,
-		"Height": 4.80,
+		"Width": 2.69,
+		"Height": 4.95,
 		"Image": "flower-pedals-castilleja.png"
 	},
 	{
 		"Brand": "Flower Pedals",
-		"Name": "Dandelion Tremolo V2",
-		"Width": 2.55,
-		"Height": 4.80,
+		"Name": "Dandelion Tremolo",
+		"Width": 2.69,
+		"Height": 4.95,
 		"Image": "flower-pedals-dandelion-v2.png"
 	},
 	{
 		"Brand": "Flower Pedals",
+		"Name": "Geranium Germanium Drive",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "flower-pedals-geranium.png"
+	},
+	{
+		"Brand": "Flower Pedals",
 		"Name": "Hosta Wah Filter",
-		"Width": 2.55,
-		"Height": 4.80,
+		"Width": 2.69,
+		"Height": 4.95,
 		"Image": "flower-pedals-hosta.png"
+	},
+	{
+		"Brand": "Flower Pedals",
+		"Name": "Poppy Dual Boost",
+		"Width": 4.86,
+		"Height": 2.74,
+		"Image": "flower-pedals-poppy.png"
 	},
 	{
 		"Brand": "Foxpedal",
@@ -9367,10 +9402,24 @@
 	},
 	{
 		"Brand": "Korg",
+		"Name": "Pitchblack Custom",
+		"Width": 2.65,
+		"Height": 4.45,
+		"Image": "korg-pitchblack-custom.png"
+	},
+	{
+		"Brand": "Korg",
 		"Name": "Pitchblack Mini",
 		"Width": 1.77,
 		"Height": 3.66,
 		"Image": "korg-pitchblackmini.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Pitchblack Plus",
+		"Width": 5.04,
+		"Height": 4.86,
+		"Image": "korg-pitchblack-plus.png"
 	},
 	{
 		"Brand": "Land Devices",
@@ -10815,6 +10864,13 @@
 		"Image": "mrblack-tapex.png"
 	},
 	{
+		"Brand": "Music Box Pedals",
+		"Name": "Lyla Drive",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "musicbox-lyla-drive.png"
+	},
+	{
 		"Brand": "Musicomlab",
 		"Name": "EFX III",
 		"Width": 11,
@@ -11674,6 +11730,13 @@
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-xtc-od.png"
+	},
+	{
+		"Brand": "Neo Instruments",
+		"Name": "Micro Vent",
+		"Width": 2.63,
+		"Height": 4.45,
+		"Image": "neo-micro-vent.png"
 	},
 	{
 		"Brand": "Neo Instruments",
@@ -12720,6 +12783,13 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Gamma Drive",
+		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-gamma-drive.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Gate Keeper",
 		"Width": 1.75,
 		"Height": 3.75,
@@ -12882,9 +12952,16 @@
 	{
 		"Brand": "Pinstripe Pedals",
 		"Name": "DISO Plus",
-		"Width": 4.7,
-		"Height": 3.7,
-		"Image": "pinstripepedals-disoplus.png"
+		"Width": 4.8,
+		"Height": 4,
+		"Image": "pinstripepedals-miso.png"
+	},
+	{
+		"Brand": "Pinstripe Pedals",
+		"Name": "MISO",
+		"Width": 4.78,
+		"Height": 2.96,
+		"Image": "pinstripepedals-miso.png"
 	},
 	{
 		"Brand": "Poly Effects",
@@ -15566,6 +15643,13 @@
 		"Width": 2.2,
 		"Height": 4.6,
 		"Image": "vertex-steelstring-mk2.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Steel String Supreme",
+		"Width": 3.2,
+		"Height": 4.6,
+		"Image": "vertex-steelstringsupreme.png"
 	},
 	{
 		"Brand": "Vertex",
