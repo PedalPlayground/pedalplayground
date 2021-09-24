@@ -17325,10 +17325,38 @@
 		"Image": "ikm-xvibe.png"
 	},
 	{
-		"Brand": "AMT ",
+		"Brand": "AMT",
 		"Name": "BULAVA SS-30",
 		"Width": 4.17,
 		"Height": 4.92,
-		"Image": "amt-bulava-ss30.png"
-	}
+		"Image": "amt-bulava.png"
+	},
+	{
+        "Brand": "AMT",
+		"Name": "HR-1 Heater",
+		"Width": 2.91,
+		"Height": 4.48,
+		"Image": "amt-heater.png"
+    },
+    {
+        "Brand": "Mooer",
+		"Name": "Mod Factory MK II",
+		"Width": 1.65,
+		"Height": 3.66,
+		"Image": "mooer-modfactory-mkii.png"
+    },
+    {
+        "Brand": "Shift Line",
+		"Name": "A+ Astronaut III",
+		"Width": 2.63,
+		"Height": 4.33,
+		"Image": "astronaut-III.png"
+    },
+    {
+        "Brand": "AMT",
+		"Name": "PANGAEA CP-100 IR",
+		"Width": 3.77,
+		"Height": 1.69,
+		"Image": "amt-pangaeacp100.png"
+    }
 ]
