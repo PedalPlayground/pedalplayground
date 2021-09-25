@@ -4294,13 +4294,13 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Afterneath",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-afterneath.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Afterneath V3",
-		"Width": 2.62,
+		"Width": 2.66,
 		"Height": 4.75,
 		"Image": "earthquaker-afterneath-v3.png"
 	},
@@ -4314,8 +4314,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Arrows",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-arrows.png"
 	},
 	{
@@ -4335,22 +4335,22 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Avalanche Run",
-		"Width": 3.77,
-		"Height": 4.77,
+		"Width": 3.82,
+		"Height": 4.94,
 		"Image": "eqd-avalancherun.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Avalanche Run V2",
-		"Width": 4.27,
-		"Height": 4.77,
+		"Width": 4.28,
+		"Height": 4.8,
 		"Image": "eqd-avalancherunv2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Avalanche Run V2 (Purple Sparkle)",
-		"Width": 4.27,
-		"Height": 4.77,
+		"Width": 4.28,
+		"Height": 4.8,
 		"Image": "eqd-avalancherunv2-purple.png"
 	},
 	{
@@ -4377,8 +4377,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Black Eye",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-black-eye.png"
 	},
 	{
@@ -4398,43 +4398,43 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Crimson Drive",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-crimson-drive.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Data Corrupter",
 		"Width": 4.75,
-		"Height": 5.77,
+		"Height": 5.80,
 		"Image": "earthquaker-data-corrupter.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Dirt Transmitter",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-dirt-transmitter.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Disaster Transport",
-		"Width": 3.75,
-		"Height": 4.75,
+		"Width": 3.7,
+		"Height": 4.92,
 		"Image": "earthquaker-disastertransport.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Disaster Transport Jr",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.33,
 		"Image": "earthquaker-disastertransport-jr.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Disaster Transport SR",
 		"Width": 5.65,
-		"Height": 4.75,
+		"Height": 4.77,
 		"Image": "earthquaker-disastertransport-sr.png"
 	},
 	{
@@ -4446,9 +4446,9 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Dreamer Crusher",
-		"Width": 3,
-		"Height": 4.75,
+		"Name": "Dream Crusher",
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-dream-crusher.png"
 	},
 	{
@@ -4469,7 +4469,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Fuzz Master General",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-fuzz-master-general.png"
 	},
 	{
@@ -4489,8 +4489,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Gray Channel",
-		"Width": 3.65,
-		"Height": 4.77,
+		"Width": 3.7,
+		"Height": 4.8,
 		"Image": "earthquaker-graychannel.png"
 	},
 	{
@@ -4504,20 +4504,20 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Hoof Reaper",
 		"Width": 5.65,
-		"Height": 4.75,
+		"Height": 4.8,
 		"Image": "earthquaker-hoofreaper.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Hoof Reaper v2",
 		"Width": 5.65,
-		"Height": 4.75,
+		"Height": 4.76,
 		"Image": "earthquaker-hoofreaper-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Hummingbird",
-		"Width": 2.62,
+		"Width": 2.66,
 		"Height": 4.75,
 		"Image": "earthquaker-hummingbird.png"
 	},
@@ -4525,7 +4525,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Interstellar Orbiter",
 		"Width": 4.75,
-		"Height": 5.77,
+		"Height": 5.95,
 		"Image": "earthquaker-interstellar-orbiter.png"
 	},
 	{
@@ -4538,15 +4538,15 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Life Pedal V2",
-		"Width": 3.77,
-		"Height": 4.77,
+		"Width": 3.82,
+		"Height": 4.8,
 		"Image": "earthquaker-lifepedal-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Monarch",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-monarch.png"
 	},
 	{
@@ -4567,7 +4567,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Palisades",
 		"Width": 5.65,
-		"Height": 4.75,
+		"Height": 4.77,
 		"Image": "earthquaker-palisades.png"
 	},
 	{
@@ -4581,7 +4581,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Pitch Bay",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-pitch-bay.png"
 	},
 	{
@@ -4594,36 +4594,36 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Pyramids",
-		"Width": 4.27,
-		"Height": 4.77,
+		"Width": 4.28,
+		"Height": 4.8,
 		"Image": "earthquaker-devices-pyramids.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Rainbow Machine V1",
-		"Width": 3.77,
-		"Height": 4.77,
+		"Width": 3.7,
+		"Height": 4.88,
 		"Image": "earthquaker-rainbowmachine.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Rainbow Machine V2",
-		"Width": 3.77,
-		"Height": 4.77,
+		"Width": 3.82,
+		"Height": 4.80,
 		"Image": "earthquaker-rainbowmachine-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Sea Machine",
-		"Width": 3.65,
-		"Height": 4.77,
+		"Width": 3.7,
+		"Height": 4.93,
 		"Image": "earthquaker-seamachine.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Sea Machine V2",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-seamachine-v2.png"
 	},
 	{
@@ -4637,7 +4637,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Sound Shank",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-sound-shank.png"
 	},
 	{
@@ -4664,8 +4664,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Spires",
-		"Width": 3.65,
-		"Height": 4.77,
+		"Width": 3.7,
+		"Height": 4.8,
 		"Image": "earthquaker-spires.png"
 	},
 	{
@@ -4679,7 +4679,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Talons",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-talons.png"
 	},
 	{
@@ -4707,7 +4707,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Time Shadows",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.77,
 		"Image": "earthquaker-time-shadows.png"
 	},
 	{
@@ -4720,14 +4720,14 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Tone Reaper",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-tone-reaper.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Transmisser",
-		"Width": 2.62,
+		"Width": 2.66,
 		"Height": 4.75,
 		"Image": "earthquaker-transmisser.png"
 	},
@@ -4748,15 +4748,15 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "White Light",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.33,
 		"Image": "earthquaker-white-light.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Zap Machine V2",
-		"Width": 3.75,
-		"Height": 4.75,
+		"Width": 3.7,
+		"Height": 4.95,
 		"Image": "earthquaker-zap-machine-v2.png"
 	},
 	{
