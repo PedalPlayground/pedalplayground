@@ -12012,6 +12012,13 @@
 		"Image": "selah-scarlettelovev3.png"
 	},
 	{
+		"Brand": "Sennheiser",
+		"Name": "XSW-D",
+		"Width": 3.23,
+		"Height": 5.12,
+		"Image": "sennheiser-xsw-d-pedalboard.png"
+	},
+	{
 		"Brand": "Seymour Duncan",
 		"Name": "Palladium",
 		"Width": 5.6,
@@ -12727,13 +12734,6 @@
 	},
 	{
 		"Brand": "Strymon",
-		"Name": "Conduit",
-		"Width": 3.50,
-		"Height": 2.66,
-		"Image": "strymon-conduit.png"
-	},
-	{
-		"Brand": "Strymon",
 		"Name": "Deco",
 		"Width": 4,
 		"Height": 4.5,
@@ -12836,13 +12836,6 @@
 		"Width": 6.75,
 		"Height": 5.1,
 		"Image": "strymon-timeline.png"
-	},
-	{
-		"Brand": "Strymon",
-		"Name": "Zelzah",
-		"Width": 4,
-		"Height": 4.5,
-		"Image": "strymon-zelzah.png"
 	},
 	{
 		"Brand": "Strymon",
