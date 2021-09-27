@@ -11732,6 +11732,41 @@
 		"Image": "nux-xtc-od.png"
 	},
 	{
+		"Brand": "Native Audio",
+		"Name": "Ghost Ridge V1.5",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "nativeaudio-ghost-ridge.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Kiaayo",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "nativeaudio-kiaayo.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Midnight V2",
+		"Width": 2.71,
+		"Height": 5,
+		"Image": "nativeaudio-midnight-v2.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Rising Sun",
+		"Width": 2.71,
+		"Height": 5,
+		"Image": "nativeaudio-rising-sun.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Wilderness V1.5",
+		"Width": 2.71,
+		"Height": 5,
+		"Image": "nativeaudio-wilderness.png"
+	},
+	{
 		"Brand": "Neo Instruments",
 		"Name": "Micro Vent",
 		"Width": 2.63,
