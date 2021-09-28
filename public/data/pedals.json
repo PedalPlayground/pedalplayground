@@ -4186,6 +4186,55 @@
 		"Image": "dunlop-fuzzface-silicon-mini.png"
 	},
 	{
+		"Brand": "Dusky Electronics",
+		"Name": "Augustus",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "dusky-augustus.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "Hypatia",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "dusky-hypatia.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "Mandorla",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "dusky-mandorla.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "More Me Boost",
+		"Width": 2.81,
+		"Height": 4.37,
+		"Image": "dusky-more-me.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "Octomotron Fuzz",
+		"Width": 2.81,
+		"Height": 4.37,
+		"Image": "dusky-octomotron.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "Toasted Drive",
+		"Width": 2.81,
+		"Height": 4.37,
+		"Image": "dusky-toasted.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "Toasted V2",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "dusky-toasted-v2.png"
+	},
+	{
 		"Brand": "Dwarfcraft Devices",
 		"Name": "ARF",
 		"Width": 5.8,
