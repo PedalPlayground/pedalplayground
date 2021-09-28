@@ -287,13 +287,6 @@
 		"Image": "c4synth.png"
 	},
 	{
-		"Brand": "Kingtone",
-		"Name": "Mini Fuzz",
-		"Width": 2.5,
-		"Height": 4.3,
-		"Image": "Toneking-minifuzz.png"
-	},
-	{
 		"Brand": "Rawkworks",
 		"Name": "Light OD",
 		"Width": 2.62,
@@ -9234,6 +9227,20 @@
 	},
 	{
 		"Brand": "Kingtone",
+		"Name": "1968",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "kingtone-1968.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Blues Power",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "kingtone-blues-power.png"
+	},
+	{
+		"Brand": "Kingtone",
 		"Name": "Duellist",
 		"Width": 4.98,
 		"Height": 3.76,
@@ -9241,10 +9248,66 @@
 	},
 	{
 		"Brand": "Kingtone",
+		"Name": "Duellist (Top Jacks)",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "kingtone-duelist-top.png"
+	},
+	{
+		"Brand": "Kingtone",
 		"Name": "Duellist (Silver)",
 		"Width": 4.7,
 		"Height": 3.88,
 		"Image": "kingtone-duelist-silver.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Heavyhand",
+		"Width": 2.38,
+		"Height": 4.53,
+		"Image": "kingtone-heavyhand.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Mini Fuzz",
+		"Width": 2.61,
+		"Height": 4.3,
+		"Image": "Toneking-minifuzz.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Mini Fuzz SI",
+		"Width": 2.61,
+		"Height": 4.3,
+		"Image": "kingtone-minifuzz-si.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Soloist",
+		"Width": 2.38,
+		"Height": 4.53,
+		"Image": "kingtonesoloist.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "The Octaland",
+		"Width": 5.09,
+		"Height": 3.7,
+		"Image": "kingtone-the-octaland.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "The Octaland Mini",
+		"Width": 2.38,
+		"Height": 4.53,
+		"Image": "kingtone-the-octaland-mini.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Vintage Fuzz",
+		"Width": 5.09,
+		"Height": 3.7,
+		"Image": "kingtone-vintage-fuzz.png"
 	},
 	{
 		"Brand": "Kliq",
@@ -17274,13 +17337,6 @@
 		"Width": 1.52,
 		"Height": 3.64,
 		"Image": "fortin-zuul-mini.png"
-	},
-	{
-		"Brand": "Kingtone",
-		"Name": "Soloist",
-		"Width": 2.38,
-		"Height": 4.43,
-		"Image": "kingtonesoloist.png"
 	},
 	{
 		"Brand": "Fortin",
