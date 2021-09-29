@@ -8564,113 +8564,120 @@
 		"Brand": "Jackson Audio",
 		"Name": "Amp Mode",
 		"Width": 1.8,
-		"Height": 4,
+		"Height": 4.08,
 		"Image": "jackson-ampmode.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Blossom",
-		"Width": 1.8,
-		"Height": 4,
-		"Image": "jackson-blossom.png"
+		"Name": "Asabi Overdrive Distortion",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-asabi.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Belle Starr",
 		"Width": 2.2,
-		"Height": 5.02,
-		"Image": "jackson-bellestarr.png"
+		"Height": 4.76,
+		"Image": "jackson-bellestar.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Bloom",
-		"Width": 2.652,
-		"Height": 4.875,
+		"Width": 2.7,
+		"Height": 5.13,
 		"Image": "jackson-bloom.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Bloom v2",
-		"Width": 2.652,
-		"Height": 4.875,
+		"Name": "Bloom (Black)",
+		"Width": 2.7,
+		"Height": 5.13,
 		"Image": "jackson-bloom-v2.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Asabi Overdrive Distortion",
-		"Width": 2.652,
-		"Height": 4.875,
-		"Image": "jackson-asabi.png"
+		"Name": "Bloom (Red)",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-bloom-red.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Golden Boy",
-		"Width": 2.652,
-		"Height": 4.875,
-		"Image": "jacksonaudio-goldenboy.png"
-	},
-	{
-		"Brand": "Jackson Audio",
-		"Name": "Modular Fuzz",
-		"Width": 2.652,
-		"Height": 4.875,
-		"Image": "jackson-fuzz.png"
+		"Name": "Blossom",
+		"Width": 1.8,
+		"Height": 4.08,
+		"Image": "jackson-blossom.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Broken Arrow",
-		"Width": 2.652,
-		"Height": 4.875,
+		"Width": 2.7,
+		"Height": 5.13,
 		"Image": "jackson-brokenarrow.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Broken Arrow (Black)",
-		"Width": 2.652,
-		"Height": 4.875,
+		"Width": 2.7,
+		"Height": 5.13,
 		"Image": "jackson-brokenarrow-black.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "El Guapo",
-		"Width": 2.652,
-		"Height": 4.875,
+		"Width": 2.7,
+		"Height": 5.13,
 		"Image": "jackson-el-guapo.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "Golden Boy",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jacksonaudio-goldenboy.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "Modular Fuzz",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-fuzz.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Prism",
 		"Width": 2.5,
-		"Height": 4.875,
+		"Height": 4.96,
 		"Image": "jackson-prism.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Prism Red",
+		"Name": "Prism (Black)",
 		"Width": 2.5,
-		"Height": 4.875,
-		"Image": "jackson-prism-red.png"
-	},
-	{
-		"Brand": "Jackson Audio",
-		"Name": "Prism Black",
-		"Width": 2.5,
-		"Height": 4.875,
+		"Height": 4.96,
 		"Image": "jackson-prism-black.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Prism Purple",
+		"Name": "Prism (Blue)",
 		"Width": 2.5,
-		"Height": 4.875,
+		"Height": 4.96,
+		"Image": "jackson-prism-blue.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "Prism (Purple)",
+		"Width": 2.5,
+		"Height": 4.96,
 		"Image": "jackson-prism-purple.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Prism Blue",
+		"Name": "Prism (Red)",
 		"Width": 2.5,
-		"Height": 4.875,
-		"Image": "jackson-prism-blue.png"
+		"Height": 4.96,
+		"Image": "jackson-prism-red.png"
 	},
 	{
 		"Brand": "JangleBox",
