@@ -84,34 +84,6 @@
 		"Image": "thorpyfx-theveteran.png"
 	},
 	{
-		"Brand": "Sitek",
-		"Name": "Caffeine",
-		"Width": 2.76,
-		"Height": 4.53,
-		"Image": "sitek-caffeine.png"
-	},
-	{
-		"Brand": "Sitek",
-		"Name": "Cocoa",
-		"Width": 2.76,
-		"Height": 4.53,
-		"Image": "sitek-cocoa.png"
-	},
-	{
-		"Brand": "Sitek",
-		"Name": "Fuzzie",
-		"Width": 2.76,
-		"Height": 4.53,
-		"Image": "sitek-fuzzie.png"
-	},
-	{
-		"Brand": "Sitek",
-		"Name": "Wuffy",
-		"Width": 2.76,
-		"Height": 4.53,
-		"Image": "sitek-wuffy.png"
-	},
-	{
 		"Brand": "29 Pedals",
 		"Name": "EUNA",
 		"Width": 4.875,
@@ -13035,6 +13007,13 @@
 	},
 	{
 		"Brand": "Pine-Box Customs",
+		"Name": "Ahab",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "pbc-ahab.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
 		"Name": "Crooked Teeth",
 		"Width": 5.63,
 		"Height": 4.82,
@@ -13704,6 +13683,83 @@
 		"Width": 2.6,
 		"Height": 4.96,
 		"Image": "siren-midnight-train.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Caffeine",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-caffeine.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Cocoa",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-cocoa.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Freya",
+		"Width": 3.09,
+		"Height": 4.7,
+		"Image": "sitek-freya.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Fuzzie",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-fuzzie.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Nudist",
+		"Width": 3.74,
+		"Height": 1.74,
+		"Image": "sitek-nudist.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Nursie",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-nursie.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Pandora",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-pandora.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Phasia",
+		"Width": 3.09,
+		"Height": 4.7,
+		"Image": "sitek-phasia.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Sirena",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-sirena.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Vixen",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-vixen.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Wuffy",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-wuffy.png"
 	},
 	{
 		"Brand": "Skreddy",
