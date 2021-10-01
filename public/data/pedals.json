@@ -750,6 +750,13 @@
 	},
 	{
 		"Brand": "Analog.Man",
+		"Name": "Mini Chorus",
+		"Width": 2.5,
+		"Height": 4.77,
+		"Image": "analogman-mini-chorus.png"
+	},
+	{
+		"Brand": "Analog.Man",
 		"Name": "Peppermint Fuzz",
 		"Width": 2.85,
 		"Height": 4.65,
@@ -922,6 +929,13 @@
 		"Width": 1.75,
 		"Height": 1.9,
 		"Image": "barn3-tesla-tap.png"
+	},
+	{
+		"Brand": "Benson",
+		"Name": "Germanium Boost",
+		"Width": 2.71,
+		"Height": 4.5,
+		"Image": "benson-germanium-boost.png"
 	},
 	{
 		"Brand": "Benson",
@@ -3669,16 +3683,65 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "DOD 250",
-		"Width": 2.875,
-		"Height": 4.625,
+		"Name": "DOD Bifet Boost 410",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-410.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Compressor 280",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-280.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Envelope Filter 440",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-440.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Gonkulator Ringmod",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-gonkulator.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Gunslinger Mosfet Distortion",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-gunslinger.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Meatbox Subsynth",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-meatbox.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Overdrive Preamp 250",
+		"Width": 3.05,
+		"Height": 4.88,
 		"Image": "digitech-250.png"
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD Phasor 201",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-201.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Carcosa",
-		"Width": 2.875,
-		"Height": 4.625,
+		"Width": 3.05,
+		"Height": 4.88,
 		"Image": "digitech-carcosa.png"
 	},
 	{
@@ -3699,7 +3762,7 @@
 		"Brand": "DigiTech",
 		"Name": "DOD Rubberneck",
 		"Width": 5,
-		"Height": 4.68,
+		"Height": 4.69,
 		"Image": "dod-rubberneck.png"
 	},
 	{
@@ -16021,6 +16084,13 @@
 		"Width": 10.7,
 		"Height": 3.4,
 		"Image": "voodoolab-mondo.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "Tremolo",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "voodoolab-tremolo.png"
 	},
 	{
 		"Brand": "Vox",
