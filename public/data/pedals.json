@@ -10486,6 +10486,20 @@
 		"Image": "mesaboogie-toneburst.png"
 	},
 	{
+		"Brand": "Milkman Sound",
+		"Name": "F-Stop (Black)",
+		"Width": 3.6,
+		"Height": 4.98,
+		"Image": "milkman-fstop-black.png"
+	},
+	{
+		"Brand": "Milkman Sound",
+		"Name": "F-Stop (White)",
+		"Width": 3.6,
+		"Height": 4.98,
+		"Image": "milkman-fstop-white.png"
+	},
+	{
 		"Brand": "Mission",
 		"Name": "EP1-L6",
 		"Width": 4,
