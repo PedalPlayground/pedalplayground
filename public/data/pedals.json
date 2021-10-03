@@ -485,91 +485,105 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-calavera.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Chesapeake",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-chesapeake.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Clang",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-clang.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Colour Theory",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-colour-theory.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Dusk",
+		"Width": 2.7,
+		"Height": 4.9,
+		"Image": "alexander-dusk.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "F13 Flanger",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-flange.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "F13 NEO Flanger",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-f13-neo-flanger.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Frazz Dazzler",
+		"Width": 2.7,
+		"Height": 4.9,
+		"Image": "alexander-frazz-dazzler.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Golden Summer",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-goldensummer.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "History Lesson",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-historylesson.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "History Lesson Vol3",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-history-lesson-vol3.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Hot Pink Drive",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-hot-pink-drive.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Jubilee",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-jubilee.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Magnolia Vintage Overdrive",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-magnolia-vintage-overdrive.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Marshmallow",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-marshmallow.png"
 	},
@@ -589,13 +603,6 @@
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Neo-Matic",
-		"Width": 2.6,
-		"Height": 4.7,
-		"Image": "alexander-neo-matic.png"
-	},
-	{
-		"Brand": "Alexander",
 		"Name": "Oblivion",
 		"Width": 4.7,
 		"Height": 3.7,
@@ -611,28 +618,28 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Radical Delay",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-radical.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Radical Delay DX",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-radical-delay-dx.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Riff Instant Tone Sanitizer",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-riff-instant-tone-sanitizer.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Sky 5000",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-sky-5000.png"
 	},
@@ -646,16 +653,23 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Space Race",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-space-race.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Sugarcube",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-sugarcube.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Super Neo-Matic",
+		"Width": 2.8,
+		"Height": 4.7,
+		"Image": "alexander-neo-matic.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -667,21 +681,21 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Superball",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-superball.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Syntax Error",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-syntaxerror.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Wavelength",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-wavelength.png"
 	},
@@ -6147,10 +6161,24 @@
 	},
 	{
 		"Brand": "Eventide",
-		"Name": "H9",
+		"Name": "Blackhole",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "eventide-blackhole.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "H9 Max",
 		"Width": 4.65,
-		"Height": 5.25,
+		"Height": 5.20,
 		"Image": "eventide-h9.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "MicroPitch Delay",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "eventide-micropitch.png"
 	},
 	{
 		"Brand": "Eventide",
@@ -6161,31 +6189,45 @@
 	},
 	{
 		"Brand": "Eventide",
-		"Name": "Space",
+		"Name": "ModFactor",
 		"Width": 7.5,
-		"Height": 4.8,
-		"Image": "eventide-space.png"
-	},
-	{
-		"Brand": "Eventide",
-		"Name": "Blackhole",
-		"Width": 4,
-		"Height": 4.25,
-		"Image": "eventide-blackhole.png"
-	},
-	{
-		"Brand": "Eventide",
-		"Name": "TimeFactor",
-		"Width": 7.5,
-		"Height": 4.8,
-		"Image": "eventide-timefactor.png"
+		"Height": 4.9,
+		"Image": "eventide-modfactor.png"
 	},
 	{
 		"Brand": "Eventide",
 		"Name": "PitchFactor",
 		"Width": 7.5,
-		"Height": 4.8,
+		"Height": 4.9,
 		"Image": "eventide-pitchfactor.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "Rose",
+		"Width": 4.75,
+		"Height": 5.04,
+		"Image": "eventide-rose.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "Space",
+		"Width": 7.5,
+		"Height": 4.9,
+		"Image": "eventide-space.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "TimeFactor",
+		"Width": 7.5,
+		"Height": 4.9,
+		"Image": "eventide-timefactor.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "UltraTap",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "eventide-ultratap.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
