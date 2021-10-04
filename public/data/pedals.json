@@ -9976,6 +9976,13 @@
 	},
 	{
 		"Brand": "Moen",
+		"Name": "GEC8 JR V2",
+		"Width": 18.90,
+		"Height": 2.35,
+		"Image": "moen-gec8jr-v2.png"
+	},
+	{
+		"Brand": "Moen",
 		"Name": "Jimi Nova",
 		"Width": 2.80,
 		"Height": 4.5,
