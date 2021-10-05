@@ -3816,6 +3816,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Death Metal",
+		"Width": 3.12,
+		"Height": 4.865,
+		"Image": "digitech-deathmetal.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "FreqOut",
 		"Width": 2.875,
 		"Height": 4.75,
@@ -4135,6 +4142,34 @@
 		"Width": 2.4,
 		"Height": 4.8,
 		"Image": "drscientist-thetremolessence.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Darkness",
+		"Width": 3.94,
+		"Height": 5.61,
+		"Image": "dreadbox-darkness.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Kinematic",
+		"Width": 3.94,
+		"Height": 5.61,
+		"Image": "dreadbox-kinematic.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Komorebi",
+		"Width": 3.94,
+		"Height": 5.61,
+		"Image": "dreadbox-komorebi.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Lethargy",
+		"Width": 3.94,
+		"Height": 5.61,
+		"Image": "dreadbox-lethargy.png"
 	},
 	{
 		"Brand": "Drybell",
@@ -6221,6 +6256,13 @@
 		"Width": 7.5,
 		"Height": 4.9,
 		"Image": "eventide-timefactor.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "Tricerachorus",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "eventide-tricerachorus.png"
 	},
 	{
 		"Brand": "Eventide",
@@ -12836,6 +12878,69 @@
 		"Width": 3.85,
 		"Height": 4.7,
 		"Image": "pladask-taken.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Arquitecto",
+		"Width": 3.7,
+		"Height": 4.83,
+		"Image": "paradox-arquitecto.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Carmesi",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "paradox-carmesi.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Fortissimo",
+		"Width": 2.8,
+		"Height": 4.65,
+		"Image": "paradox-fortissimo.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Futura",
+		"Width": 2.5,
+		"Height": 4.74,
+		"Image": "paradox-futura.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Fuzz-E Cat",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "paradox-fuzz-e-cat.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Ionizer",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "paradox-ionizer.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Obsidiana",
+		"Width": 3.7,
+		"Height": 4.87,
+		"Image": "paradox-obsidiana.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Oniric",
+		"Width": 4.44,
+		"Height": 3.83,
+		"Image": "paradox-oniric.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Terran",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "paradox-terran.png"
 	},
 	{
 		"Brand": "Pastfx",
