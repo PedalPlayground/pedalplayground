@@ -8624,13 +8624,6 @@
 		"Image": "jhs-prestige.png"
 	},
 	{
-		"Brand": "Mythos",
-		"Name": "Golden Fleece",
-		"Width": 1.79,
-		"Height": 3.6,
-		"Image": "mythos-goldenfleecemini.png"
-	},
-	{
 		"Brand": "JHS",
 		"Name": "Tidewater Tremolo",
 		"Width": 1.75,
@@ -10305,52 +10298,80 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Argo",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "mythos-argo.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Argonaut",
+		"Width": 1.8,
+		"Height": 3.6,
+		"Image": "mythos-argonaut.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Chupacabra",
+		"Width": 2.6,
+		"Height": 4.98,
+		"Image": "mythos-chupacabra.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Golden Fleece",
+		"Width": 1.75,
+		"Height": 3.6,
+		"Image": "mythos-goldenfleecemini.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Herculean",
+		"Width": 2.6,
+		"Height": 4.91,
+		"Image": "mythos-herculean.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Mjolnir",
+		"Width": 2.6,
+		"Height": 4.91,
+		"Image": "mythos-mjolner.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Mjolnir (Joey Landreth Edition)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "mythos-mjolnirjl.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Mjolnir (Wildwood Edition)",
+		"Width": 4.6,
+		"Height": 3.71,
+		"Image": "mythos-mjolner-wildwood.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Oracle",
+		"Width": 3.7,
+		"Height": 4.6,
+		"Image": "mythos_oracle.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Runestone",
-		"Width": 2.62,
+		"Width": 2.6,
 		"Height": 4.93,
 		"Image": "mythos-runestone.png"
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Mjolnir",
-		"Width": 2.62,
-		"Height": 4.93,
-		"Image": "mythos-mjolner.png"
-	},
-	{
-		"Brand": "Mythos",
-		"Name": "Mjolnir Joey Landreth Edition",
-		"Width": 2.62,
-		"Height": 4.93,
-		"Image": "mythos-mjolnirjl.png"
-	},
-	{
-		"Brand": "Mythos",
 		"Name": "SusMaryOsep",
-		"Width": 4.69,
-		"Height": 3.66,
+		"Width": 4.6,
+		"Height": 3.73,
 		"Image": "mythos-susmaryosep.png"
-	},
-	{
-		"Brand": "Mythos",
-		"Name": "Argo",
-		"Width": 2.62,
-		"Height": 4.93,
-		"Image": "mythos-argo.png"
-	},
-	{
-		"Brand": "Mythos",
-		"Name": "Chupacabra",
-		"Width": 2.62,
-		"Height": 4.93,
-		"Image": "mythos-chupacabra.png"
-	},
-	{
-		"Brand": "Mythos",
-		"Name": "Wildwood Edition Mjolnir",
-		"Width": 4.67,
-		"Height": 3.7,
-		"Image": "mythos-mjolner-wildwood.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -17750,13 +17771,6 @@
 		"Width": 4.73,
 		"Height": 3.94,
 		"Image": "vahlbruch-kaluna.png"
-	},
-	{
-		"Brand": "Mythos",
-		"Name": "Oracle",
-		"Width": 4.7,
-		"Height": 3.7,
-		"Image": "mythos_oracle.png"
 	},
 	{
 		"Brand": "Fredric Pedals",
