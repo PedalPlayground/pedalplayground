@@ -7848,6 +7848,13 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "CS9 Stereo Chorus",
+		"Width": 3,
+		"Height": 4.9,
+		"Image": "ibanez-cs9.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "DE7 Delay/Echo",
 		"Width": 3,
 		"Height": 5,
@@ -16374,45 +16381,10 @@
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "385 Overdrive",
-		"Width": 2.84,
-		"Height": 4.77,
+		"Name": "385",
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-385.png"
-	},
-	{
-		"Brand": "Walrus",
-		"Name": "ARP-87",
-		"Width": 2.6,
-		"Height": 4.96,
-		"Image": "walrus-arp87.png"
-	},
-	{
-		"Brand": "Walrus",
-		"Name": "EB-10 Preamp/EQ/Boost",
-		"Width": 3.84,
-		"Height": 4.6,
-		"Image": "walrus-eb10.png"
-	},
-	{
-		"Brand": "Walrus",
-		"Name": "MAKO Series: D1 Stereo Delay",
-		"Width": 2.85,
-		"Height": 4.87,
-		"Image": "walrus-mako-d1.png"
-	},
-	{
-		"Brand": "Walrus",
-		"Name": "MAKO Series: R1 High-Fidelity Stereo Reverb",
-		"Width": 2.85,
-		"Height": 4.87,
-		"Image": "walrus-r1.png"
-	},
-	{
-		"Brand": "Walrus",
-		"Name": "MAKO Series: ACS1 Amp + Cab Simulator",
-		"Width": 2.85,
-		"Height": 4.87,
-		"Image": "walrus-acs1.png"
 	},
 	{
 		"Brand": "Walrus",
@@ -16425,182 +16397,245 @@
 		"Brand": "Walrus",
 		"Name": "Ages",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-ages.png"
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "ARP-87",
+		"Width": 2.72,
+		"Height": 4.95,
+		"Image": "walrus-arp87.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Bellwether",
-		"Width": 5.75,
+		"Width": 5.69,
 		"Height": 4.75,
 		"Image": "walrus-bellwether.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Contraband",
-		"Width": 2.49,
-		"Height": 4.39,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "walrus-contraband.png"
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Eras",
-		"Width": 2.6,
-		"Height": 4.96,
-		"Image": "walrus-eras.png"
-	},
-	{
-		"Brand": "Walrus",
 		"Name": "Deep Six",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-deepsix.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Deep Six V2",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-deepsixv2.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Deep Six V3",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-deepsixv3.png"
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Deep Six V3 LE",
+		"Name": "Deep Six V3 (LE)",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-deepsix-v3.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Descent",
 		"Width": 5.625,
-		"Height": 4.75,
+		"Height": 4.73,
 		"Image": "walrus-descent.png"
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Emissary Parallel Boost",
+		"Name": "EB-10",
+		"Width": 3.9,
+		"Height": 4.67,
+		"Image": "walrus-eb10.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Emissary",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-emissary.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Eras",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-eras.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Fathom",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "wa-fathom.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Iron Horse",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-ironhorse.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Iron Horse V2",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-ironhorse-v2.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Janus",
-		"Width": 7.62,
+		"Width": 7.93,
 		"Height": 4.7,
 		"Image": "walrus-janus.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Julia",
-		"Width": 2.84,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-julia.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Julia (1016 LE)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-julia-1016.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Julia (Enchantress LE)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-julia-enchantress.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Julia (LE)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-julia-le.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Julia V2",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-julia2.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Julia V2 (Gold Edition)",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-julia2-gold.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Julianna",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrusaudio-julianna.png"
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Julianna (Gold Edition)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrusaudio-julianna-gold.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Jupiter",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-jupiter.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Jupiter V2",
-		"Width": 2.8,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-jupiter-v2.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Kangra",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.6,
+		"Height": 4.95,
 		"Image": "walrus-kangra.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Lillian",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-lillian.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Luminary",
 		"Width": 4.67,
-		"Height": 3.8,
+		"Height": 3.83,
 		"Image": "walrus-luminary.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Luminary V2",
 		"Width": 4.67,
-		"Height": 3.8,
+		"Height": 3.77,
 		"Image": "walrus-luminary-v2.png"
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "MAKO Series: ACS1 Amp + Cab Simulator",
+		"Width": 2.87,
+		"Height": 4.9,
+		"Image": "walrus-acs1.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "MAKO Series: D1 Stereo Delay",
+		"Width": 2.87,
+		"Height": 4.9,
+		"Image": "walrus-mako-d1.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "MAKO Series: R1 High-Fidelity Stereo Reverb",
+		"Width": 2.87,
+		"Height": 4.9,
+		"Image": "walrus-r1.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Mayflower",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-mayflower.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Messner",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-messner.png"
 	},
 	{
@@ -16614,7 +16649,7 @@
 		"Brand": "Walrus",
 		"Name": "Monument V2",
 		"Width": 2.72,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-monumentv2.png"
 	},
 	{
@@ -16627,21 +16662,21 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Plainsman",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-plainsman.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Polychrome",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-polychrome.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Red",
-		"Width": 3.68,
+		"Width": 3.88,
 		"Height": 4.67,
 		"Image": "walrus-red.png"
 	},
@@ -16649,21 +16684,21 @@
 		"Brand": "Walrus",
 		"Name": "SLARP",
 		"Width": 5.625,
-		"Height": 4.75,
+		"Height": 4.82,
 		"Image": "walrus-slarp.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Slö",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-slo.png"
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Slö (Red)",
+		"Name": "Slö (Red Edition)",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-slo-red.png"
 	},
 	{
@@ -16676,22 +16711,22 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Voyager",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-voyager.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Warhorn",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-warhorn.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Warhorn / Ages Dual Drive",
 		"Width": 5.625,
-		"Height": 4.75,
+		"Height": 4.52,
 		"Image": "walrus-warhorn-ages-dual-drive.png"
 	},
 	{
