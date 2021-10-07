@@ -6545,6 +6545,41 @@
 		"Image": "fender-treverb.png"
 	},
 	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Berserk",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-berserk.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Bifrost",
+		"Width": 3.66,
+		"Height": 4.78,
+		"Image": "fjord-bifrost.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Embla",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-embla.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Fenris",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-fenris.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Odin",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-odin.png"
+	},
+	{
 		"Brand": "Flower Pedals",
 		"Name": "Castilleja Phaser",
 		"Width": 2.69,
