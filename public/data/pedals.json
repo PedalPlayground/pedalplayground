@@ -9871,6 +9871,13 @@
 	},
 	{
 		"Brand": "Line6",
+		"Name": "POD HD500X",
+		"Width": 29.75,
+		"Height": 14.47,
+		"Image": "line6-pod-hd500x.png"
+	},
+	{
+		"Brand": "Line6",
 		"Name": "Relay G10 Wireless",
 		"Width": 3.88,
 		"Height": 3.88,
