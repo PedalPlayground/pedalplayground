@@ -2311,37 +2311,37 @@
 	},
 	{
 		"Brand": "Bondi Effects",
-		"Name": "2026 Compressor",
-		"Width": 2.773,
-		"Height": 4.7,
+		"Name": "2026",
+		"Width": 2.86,
+		"Height": 4.8,
 		"Image": "bondi-2026.png"
 	},
 	{
 		"Brand": "Bondi Effects",
-		"Name": "Art Van Delay",
-		"Width": 2.81,
-		"Height": 4.8,
+		"Name": "Art Van",
+		"Width": 2.84,
+		"Height": 4.88,
 		"Image": "bondi-artvan.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Breakers",
-		"Width": 2.83,
-		"Height": 4.78,
+		"Width": 2.86,
+		"Height": 4.8,
 		"Image": "bondi-breakers.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Del Mar",
-		"Width": 2.85,
-		"Height": 4.79,
+		"Width": 2.86,
+		"Height": 4.8,
 		"Image": "bondi-delmar.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Sick As",
 		"Width": 4.7,
-		"Height": 3.7,
+		"Height": 3.81,
 		"Image": "bondi-sickas.png"
 	},
 	{
