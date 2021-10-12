@@ -17988,5 +17988,12 @@
 		"Width": 3.77,
 		"Height": 1.69,
 		"Image": "amt-pangaeacp100.png"
+    },
+    {
+    	"Brand": "Lake Effects",
+    	"Name": "FVD",
+    	"Width": 3.68,
+    	"Height": 4.67,
+    	"Image": "lake-effects-fvd.png"
     }
 ]
