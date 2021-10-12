@@ -694,6 +694,13 @@
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Syntax Error 2",
+		"Width": 4.7,
+		"Height": 3.95,
+		"Image": "alexander-syntaxerror2.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Wavelength",
 		"Width": 2.8,
 		"Height": 4.7,
