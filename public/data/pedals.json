@@ -13909,6 +13909,13 @@
 		"Image": "sourceaudio-ultrawave.png"
 	},
 	{
+		"Brand": "Source Audio",
+		"Name": "Ultrawave (Bass)",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "sourceaudio-ultrawave-bass.png"
+	},
+	{
 		"Brand": "Southampton Pedals",
 		"Name": "Booster Fuzz",
 		"Width": 2.6,
@@ -17363,13 +17370,13 @@
         "Brand": "KHDK",
 		"Name": "Unicorn Blood II",
 		"Width": 4.37,
-		"Height": 3.35,
+		"Height": 3.37,
 		"Image": "khdk-unicorn-blood-2.png"
     }
 {
         "Brand": "KHDK",
 		"Name": "Abyss",
-		"Width": 2.56,
+		"Width": 2.59,
 		"Height": 4.73,
 		"Image": "khdk-abyss.png"
     }
@@ -17377,20 +17384,20 @@
         "Brand": "KHDK",
 		"Name": "Dark Blood",
 		"Width": 2.56,
-		"Height": 4.73,
+		"Height": 4.75,
 		"Image": "khdk-dark-blood.png"
     }
 {
         "Brand": "KHDK",
 		"Name": "Fallout bass overdrive",
 		"Width": 2.56,
-		"Height": 4.73,
+		"Height": 4.75,
 		"Image": "khdk-fallout-bass-overdrive.png"
     }
 {
         "Brand": "KHDK",
 		"Name": "Ghoul screamer",
-		"Width": 2.56,
+		"Width": 2.59,
 		"Height": 4.73,
 		"Image": "khdk-ghoul-screamer.png"
     }
@@ -17398,20 +17405,20 @@
         "Brand": "KHDK",
 		"Name": "My big fat hawk",
 		"Width": 2.56,
-		"Height": 4.73,
+		"Height": 4.75,
 		"Image": "khdk-my-big-fat-rawk.png"
     }
 {
         "Brand": "KHDK",
 		"Name": "NO2",
-		"Width": 2.56,
+		"Width": 2.59,
 		"Height": 4.73,
 		"Image": "khdk-no-2.png"
     }
 {
         "Brand": "KHDK",
 		"Name": "NO1",
-		"Width": 2.56,
+		"Width": 2.59,
 		"Height": 4.73,
 		"Image": "khdk-no1.png"
     }
@@ -17419,20 +17426,20 @@
         "Brand": "KHDK",
 		"Name": "Scuzz box",
 		"Width": 2.56,
-		"Height": 4.73,
+		"Height": 4.75,
 		"Image": "khdk-scuzz-box.png"
     }
 {
         "Brand": "KHDK",
 		"Name": "Ghoul Jr.",
-		"Width": 1.50,
+		"Width": 1.53,
 		"Height": 3.63,
 		"Image": "khdk-ghoul-jr.png"
     }
 {
         "Brand": "KHDK",
 		"Name": "Paranormal",
-		"Width": 3.35,
+		"Width": 3.37,
 		"Height": 4.37,
 		"Image": "khdk-paranormal.png"
     }
@@ -17440,7 +17447,7 @@
         "Brand": "KHDK",
 		"Name": "Scott Ian SGT D",
 		"Width": 4.37,
-		"Height": 3.35,
+		"Height": 3.37,
 		"Image": "khdk-scott-ian-sgt-d.png"
     }
 ]
