@@ -5475,6 +5475,13 @@
 	},
 	{
 		"Brand": "Electro Harmonix",
+		"Name": "Nano Deluxe Memory Man",
+		"Width": 2.90,
+		"Height": 4.5,
+		"Image": "ehx-nano-deluxe-memory-man.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
 		"Name": "Nano Looper 360",
 		"Width": 2.75,
 		"Height": 4.5,
@@ -13242,6 +13249,13 @@
 		"Width": 5.7,
 		"Height": 4.7,
 		"Image": "pigtronix-echolution2ultrapro.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Echolution 3",
+		"Width": 4.5,
+		"Height": 3.12,
+		"Image": "pigtronix-echolution3.png"
 	},
 	{
 		"Brand": "Pigtronix",
