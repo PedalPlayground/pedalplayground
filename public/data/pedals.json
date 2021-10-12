@@ -3367,18 +3367,32 @@
 		"Image": "daddario-tuner.png"
 	},
 	{
-		"Brand": "DSM Noisemaker",
-		"Name": "Drive Maker",
-		"Width": 4.69,
-		"Height": 2.75,
-		"Image": "dsmnoisemaker-drivemaker.png"
-	},
-	{
 		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier",
 		"Width": 4.53,
 		"Height": 2.7,
 		"Image": "dsm-simplifier.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier DLX",
+		"Width": 4.07,
+		"Height": 5.1,
+		"Image": "dsm-simplifier-dlx.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier DLX Footswitch",
+		"Width": 3.75,
+		"Height": 1.5,
+		"Image": "dsm-simplifier-dlx-footswitch.png"
+	},
+	{
+		"Brand": "DSM Noisemaker",
+		"Name": "Drive Maker",
+		"Width": 4.69,
+		"Height": 2.75,
+		"Image": "dsmnoisemaker-drivemaker.png"
 	},
 	{
 		"Brand": "DSM Noisemaker",
@@ -9735,6 +9749,13 @@
 		"Width": 5.04,
 		"Height": 4.86,
 		"Image": "korg-pitchblack-plus.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "SDD-3000",
+		"Width": 10.24,
+		"Height": 6.62,
+		"Image": "korg-sdd-3000.png"
 	},
 	{
 		"Brand": "Land Devices",
