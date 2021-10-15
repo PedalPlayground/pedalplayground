@@ -84,34 +84,6 @@
 		"Image": "thorpyfx-theveteran.png"
 	},
 	{
-		"Brand": "Sitek",
-		"Name": "Caffeine",
-		"Width": 2.76,
-		"Height": 4.53,
-		"Image": "sitek-caffeine.png"
-	},
-	{
-		"Brand": "Sitek",
-		"Name": "Cocoa",
-		"Width": 2.76,
-		"Height": 4.53,
-		"Image": "sitek-cocoa.png"
-	},
-	{
-		"Brand": "Sitek",
-		"Name": "Fuzzie",
-		"Width": 2.76,
-		"Height": 4.53,
-		"Image": "sitek-fuzzie.png"
-	},
-	{
-		"Brand": "Sitek",
-		"Name": "Wuffy",
-		"Width": 2.76,
-		"Height": 4.53,
-		"Image": "sitek-wuffy.png"
-	},
-	{
 		"Brand": "29 Pedals",
 		"Name": "EUNA",
 		"Width": 4.875,
@@ -287,13 +259,6 @@
 		"Image": "c4synth.png"
 	},
 	{
-		"Brand": "Kingtone",
-		"Name": "Mini Fuzz",
-		"Width": 2.5,
-		"Height": 4.3,
-		"Image": "Toneking-minifuzz.png"
-	},
-	{
 		"Brand": "Rawkworks",
 		"Name": "Light OD",
 		"Width": 2.62,
@@ -415,30 +380,51 @@
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV",
-		"Width": 3.52,
-		"Height": 4.3,
+		"Width": 3.7,
+		"Height": 4.57,
 		"Image": "1981-inventions.png"
 	},
 	{
 		"Brand": "1981 Inventions",
-		"Name": "DRV Hyperfade",
-		"Width": 3.52,
-		"Height": 4.3,
+		"Name": "DRV (Hyperfade)",
+		"Width": 3.7,
+		"Height": 4.57,
 		"Image": "drv-hyperfade.png"
 	},
 	{
 		"Brand": "1981 Inventions",
-		"Name": "DRV Blackout",
-		"Width": 3.52,
-		"Height": 4.3,
+		"Name": "DRV (Blackout)",
+		"Width": 3.7,
+		"Height": 4.57,
 		"Image": "1981-inventions-black.png"
 	},
 	{
 		"Brand": "1981 Inventions",
-		"Name": "DRV Sea Foam Green",
-		"Width": 3.52,
-		"Height": 4.3,
+		"Name": "DRV (Pink)",
+		"Width": 3.7,
+		"Height": 4.57,
+		"Image": "1981-drv-pink.png"
+	},
+	{
+		"Brand": "1981 Inventions",
+		"Name": "DRV (Seafoam Green)",
+		"Width": 3.7,
+		"Height": 4.57,
 		"Image": "1981-inventions-sfg.png"
+	},
+	{
+		"Brand": "1981 Inventions",
+		"Name": "DRV (Teal)",
+		"Width": 3.7,
+		"Height": 4.57,
+		"Image": "1981-drv-teal.png"
+	},
+	{
+		"Brand": "1981 Inventions",
+		"Name": "DRV (White No3)",
+		"Width": 3.7,
+		"Height": 4.57,
+		"Image": "1981-drv-whiteno3.png"
 	},
 	{
 		"Brand": "Laney",
@@ -506,91 +492,105 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-calavera.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Chesapeake",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-chesapeake.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Clang",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-clang.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Colour Theory",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-colour-theory.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Dusk",
+		"Width": 2.7,
+		"Height": 4.9,
+		"Image": "alexander-dusk.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "F13 Flanger",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-flange.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "F13 NEO Flanger",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-f13-neo-flanger.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Frazz Dazzler",
+		"Width": 2.7,
+		"Height": 4.9,
+		"Image": "alexander-frazz-dazzler.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Golden Summer",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-goldensummer.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "History Lesson",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-historylesson.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "History Lesson Vol3",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-history-lesson-vol3.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Hot Pink Drive",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-hot-pink-drive.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Jubilee",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-jubilee.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Magnolia Vintage Overdrive",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-magnolia-vintage-overdrive.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Marshmallow",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-marshmallow.png"
 	},
@@ -610,13 +610,6 @@
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Neo-Matic",
-		"Width": 2.6,
-		"Height": 4.7,
-		"Image": "alexander-neo-matic.png"
-	},
-	{
-		"Brand": "Alexander",
 		"Name": "Oblivion",
 		"Width": 4.7,
 		"Height": 3.7,
@@ -632,28 +625,28 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Radical Delay",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-radical.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Radical Delay DX",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-radical-delay-dx.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Riff Instant Tone Sanitizer",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-riff-instant-tone-sanitizer.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Sky 5000",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-sky-5000.png"
 	},
@@ -667,16 +660,23 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Space Race",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-space-race.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Sugarcube",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-sugarcube.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Super Neo-Matic",
+		"Width": 2.8,
+		"Height": 4.7,
+		"Image": "alexander-neo-matic.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -688,21 +688,28 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Superball",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-superball.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Syntax Error",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-syntaxerror.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Syntax Error 2",
+		"Width": 4.7,
+		"Height": 3.95,
+		"Image": "alexander-syntaxerror2.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Wavelength",
-		"Width": 2.6,
+		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-wavelength.png"
 	},
@@ -789,6 +796,13 @@
 		"Width": 2.85,
 		"Height": 4.65,
 		"Image": "analogman-mini-bi-comp.png"
+	},
+	{
+		"Brand": "Analog.Man",
+		"Name": "Mini Chorus",
+		"Width": 2.5,
+		"Height": 4.77,
+		"Image": "analogman-mini-chorus.png"
 	},
 	{
 		"Brand": "Analog.Man",
@@ -1139,6 +1153,13 @@
 		"Width": 1.75,
 		"Height": 1.9,
 		"Image": "barn3-tesla-tap.png"
+	},
+	{
+		"Brand": "Benson",
+		"Name": "Germanium Boost",
+		"Width": 2.71,
+		"Height": 4.5,
+		"Image": "benson-germanium-boost.png"
 	},
 	{
 		"Brand": "Benson",
@@ -2479,37 +2500,37 @@
 	},
 	{
 		"Brand": "Bondi Effects",
-		"Name": "2026 Compressor",
-		"Width": 2.773,
-		"Height": 4.7,
+		"Name": "2026",
+		"Width": 2.86,
+		"Height": 4.8,
 		"Image": "bondi-2026.png"
 	},
 	{
 		"Brand": "Bondi Effects",
-		"Name": "Art Van Delay",
-		"Width": 2.81,
-		"Height": 4.8,
+		"Name": "Art Van",
+		"Width": 2.84,
+		"Height": 4.88,
 		"Image": "bondi-artvan.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Breakers",
-		"Width": 2.83,
-		"Height": 4.78,
+		"Width": 2.86,
+		"Height": 4.8,
 		"Image": "bondi-breakers.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Del Mar",
-		"Width": 2.85,
-		"Height": 4.79,
+		"Width": 2.86,
+		"Height": 4.8,
 		"Image": "bondi-delmar.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Sick As",
 		"Width": 4.7,
-		"Height": 3.7,
+		"Height": 3.81,
 		"Image": "bondi-sickas.png"
 	},
 	{
@@ -3327,134 +3348,141 @@
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Black Magic mkII",
-		"Width": 3.74,
-		"Height": 4.88,
+		"Width": 3.7,
+		"Height": 4.89,
 		"Image": "ctc-black-magic-mk2.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Constellation",
-		"Width": 2.83,
-		"Height": 4.5,
+		"Width": 2.95,
+		"Height": 4.77,
 		"Image": "ctc-constellation.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Cyclone",
-		"Width": 2.83,
-		"Height": 4.5,
+		"Width": 2.87,
+		"Height": 4.8,
 		"Image": "ctc-cyclone.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Deranged",
-		"Width": 5.06,
-		"Height": 3.74,
+		"Width": 5.03,
+		"Height": 3.7,
 		"Image": "ctc-deranged.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Falcon",
-		"Width": 2.83,
-		"Height": 4.5,
+		"Width": 3.01,
+		"Height": 4.8,
 		"Image": "ctc-falcon.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Golden Rule",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "ctc-golden-rule.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Killer V",
 		"Width": 2.6,
-		"Height": 4.72,
+		"Height": 4.92,
 		"Image": "ctc-killer-v.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Limelight",
-		"Width": 2.83,
-		"Height": 4.5,
+		"Width": 2.93,
+		"Height": 4.8,
 		"Image": "ctc-limelight.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Locomotive",
-		"Width": 3.74,
-		"Height": 4.88,
+		"Width": 3.7,
+		"Height": 4.87,
 		"Image": "ctc-locomotive.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Magnifier",
-		"Width": 1.86,
+		"Width": 1.87,
 		"Height": 3.6,
 		"Image": "ctc-magnifier.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Memphis",
-		"Width": 2.83,
-		"Height": 4.5,
+		"Width": 2.91,
+		"Height": 4.8,
 		"Image": "ctc-memphis.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Planet B Plus",
-		"Width": 4.74,
-		"Height": 3.88,
+		"Width": 4.7,
+		"Height": 3.87,
 		"Image": "ctc-planet-b-plus.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Sidekick",
-		"Width": 5.67,
-		"Height": 4.84,
+		"Width": 5.625,
+		"Height": 4.82,
 		"Image": "ctc-sidekick.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Space Charged V2",
-		"Width": 3.74,
-		"Height": 4.88,
+		"Width": 3.7,
+		"Height": 4.83,
 		"Image": "ctc-space-charged-v2.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Splash",
-		"Width": 2.76,
-		"Height": 4.72,
+		"Width": 2.74,
+		"Height": 4.96,
 		"Image": "ctc-splash.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Stardust",
-		"Width": 2.83,
-		"Height": 4.5,
+		"Width": 2.95,
+		"Height": 4.77,
 		"Image": "ctc-stardust.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Starlight",
-		"Width": 2.83,
-		"Height": 4.5,
+		"Width": 2.88,
+		"Height": 4.8,
 		"Image": "ctc-starlight.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
-		"Name": "Time mkIII",
+		"Name": "TI:ME mkIII",
 		"Width": 2.6,
-		"Height": 4.68,
+		"Height": 4.94,
 		"Image": "ctc-time-mk3.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "White Whale",
 		"Width": 6.7,
-		"Height": 4.77,
+		"Height": 4.78,
 		"Image": "ctc-white-whale.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Ziggy V2",
-		"Width": 2.83,
-		"Height": 4.72,
+		"Width": 2.98,
+		"Height": 4.94,
 		"Image": "ctc-ziggy-v2.png"
 	},
 	{
@@ -3528,18 +3556,32 @@
 		"Image": "daddario-tuner.png"
 	},
 	{
-		"Brand": "DSM Noisemaker",
-		"Name": "Drive Maker",
-		"Width": 4.69,
-		"Height": 2.75,
-		"Image": "dsmnoisemaker-drivemaker.png"
-	},
-	{
 		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier",
 		"Width": 4.53,
 		"Height": 2.7,
 		"Image": "dsm-simplifier.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier DLX",
+		"Width": 4.07,
+		"Height": 5.1,
+		"Image": "dsm-simplifier-dlx.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier DLX Footswitch",
+		"Width": 3.75,
+		"Height": 1.5,
+		"Image": "dsm-simplifier-dlx-footswitch.png"
+	},
+	{
+		"Brand": "DSM Noisemaker",
+		"Name": "Drive Maker",
+		"Width": 4.69,
+		"Height": 2.75,
+		"Image": "dsmnoisemaker-drivemaker.png"
 	},
 	{
 		"Brand": "DSM Noisemaker",
@@ -3568,6 +3610,13 @@
 		"Width": 4.92,
 		"Height": 3.77,
 		"Image": "darkglass-microtubes-x-ultra.png"
+	},
+{
+		"Brand": "Darkglass",
+		"Name": "Adam",
+		"Width": 7.09,
+		"Height": 4.73,
+		"Image": "darkglass-adam.png"
 	},
 	{
 		"Brand": "Dawner Prince",
@@ -3781,6 +3830,13 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Speed Tripper",
+		"Width": 2.61,
+		"Height": 5.15,
+		"Image": "deathbyaudio-speed-tripper.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Supersonic Fuzz Gun",
 		"Width": 4.72,
 		"Height": 3.84,
@@ -3893,16 +3949,65 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "DOD 250",
-		"Width": 2.875,
-		"Height": 4.625,
+		"Name": "DOD Bifet Boost 410",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-410.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Compressor 280",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-280.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Envelope Filter 440",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-440.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Gonkulator Ringmod",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-gonkulator.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Gunslinger Mosfet Distortion",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-gunslinger.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Meatbox Subsynth",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-meatbox.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Overdrive Preamp 250",
+		"Width": 3.05,
+		"Height": 4.88,
 		"Image": "digitech-250.png"
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD Phasor 201",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-201.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Carcosa",
-		"Width": 2.875,
-		"Height": 4.625,
+		"Width": 3.05,
+		"Height": 4.88,
 		"Image": "digitech-carcosa.png"
 	},
 	{
@@ -3923,7 +4028,7 @@
 		"Brand": "DigiTech",
 		"Name": "DOD Rubberneck",
 		"Width": 5,
-		"Height": 4.68,
+		"Height": 4.69,
 		"Image": "dod-rubberneck.png"
 	},
 	{
@@ -3939,6 +4044,13 @@
 		"Width": 3,
 		"Height": 4.865,
 		"Image": "digitech-badmonkey.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Death Metal",
+		"Width": 3.12,
+		"Height": 4.865,
+		"Image": "digitech-deathmetal.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -4263,6 +4375,34 @@
 		"Image": "drscientist-thetremolessence.png"
 	},
 	{
+		"Brand": "Dreadbox",
+		"Name": "Darkness",
+		"Width": 3.94,
+		"Height": 5.61,
+		"Image": "dreadbox-darkness.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Kinematic",
+		"Width": 3.94,
+		"Height": 5.61,
+		"Image": "dreadbox-kinematic.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Komorebi",
+		"Width": 3.94,
+		"Height": 5.61,
+		"Image": "dreadbox-komorebi.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Lethargy",
+		"Width": 3.94,
+		"Height": 5.61,
+		"Image": "dreadbox-lethargy.png"
+	},
+	{
 		"Brand": "Drybell",
 		"Name": "Vibe Machine V2",
 		"Width": 2.64,
@@ -4382,6 +4522,55 @@
 		"Image": "dunlop-fuzzface-silicon-mini.png"
 	},
 	{
+		"Brand": "Dusky Electronics",
+		"Name": "Augustus",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "dusky-augustus.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "Hypatia",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "dusky-hypatia.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "Mandorla",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "dusky-mandorla.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "More Me Boost",
+		"Width": 2.81,
+		"Height": 4.37,
+		"Image": "dusky-more-me.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "Octomotron Fuzz",
+		"Width": 2.81,
+		"Height": 4.37,
+		"Image": "dusky-octomotron.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "Toasted Drive",
+		"Width": 2.81,
+		"Height": 4.37,
+		"Image": "dusky-toasted.png"
+	},
+	{
+		"Brand": "Dusky Electronics",
+		"Name": "Toasted V2",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "dusky-toasted-v2.png"
+	},
+	{
 		"Brand": "Dwarfcraft Devices",
 		"Name": "ARF",
 		"Width": 5.8,
@@ -4483,13 +4672,13 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Afterneath",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-afterneath.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Afterneath V3",
-		"Width": 2.62,
+		"Width": 2.66,
 		"Height": 4.75,
 		"Image": "earthquaker-afterneath-v3.png"
 	},
@@ -4503,8 +4692,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Arrows",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-arrows.png"
 	},
 	{
@@ -4524,22 +4713,22 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Avalanche Run",
-		"Width": 3.77,
-		"Height": 4.77,
+		"Width": 3.82,
+		"Height": 4.94,
 		"Image": "eqd-avalancherun.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Avalanche Run V2",
-		"Width": 4.27,
-		"Height": 4.77,
+		"Width": 4.28,
+		"Height": 4.8,
 		"Image": "eqd-avalancherunv2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Avalanche Run V2 (Purple Sparkle)",
-		"Width": 4.27,
-		"Height": 4.77,
+		"Width": 4.28,
+		"Height": 4.8,
 		"Image": "eqd-avalancherunv2-purple.png"
 	},
 	{
@@ -4566,8 +4755,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Black Eye",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-black-eye.png"
 	},
 	{
@@ -4587,43 +4776,43 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Crimson Drive",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-crimson-drive.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Data Corrupter",
 		"Width": 4.75,
-		"Height": 5.77,
+		"Height": 5.80,
 		"Image": "earthquaker-data-corrupter.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Dirt Transmitter",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-dirt-transmitter.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Disaster Transport",
-		"Width": 3.75,
-		"Height": 4.75,
+		"Width": 3.7,
+		"Height": 4.92,
 		"Image": "earthquaker-disastertransport.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Disaster Transport Jr",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.33,
 		"Image": "earthquaker-disastertransport-jr.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Disaster Transport SR",
 		"Width": 5.65,
-		"Height": 4.75,
+		"Height": 4.77,
 		"Image": "earthquaker-disastertransport-sr.png"
 	},
 	{
@@ -4635,9 +4824,9 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Dreamer Crusher",
-		"Width": 3,
-		"Height": 4.75,
+		"Name": "Dream Crusher",
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-dream-crusher.png"
 	},
 	{
@@ -4658,7 +4847,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Fuzz Master General",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-fuzz-master-general.png"
 	},
 	{
@@ -4678,8 +4867,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Gray Channel",
-		"Width": 3.65,
-		"Height": 4.77,
+		"Width": 3.7,
+		"Height": 4.8,
 		"Image": "earthquaker-graychannel.png"
 	},
 	{
@@ -4693,20 +4882,20 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Hoof Reaper",
 		"Width": 5.65,
-		"Height": 4.75,
+		"Height": 4.8,
 		"Image": "earthquaker-hoofreaper.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Hoof Reaper v2",
 		"Width": 5.65,
-		"Height": 4.75,
+		"Height": 4.76,
 		"Image": "earthquaker-hoofreaper-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Hummingbird",
-		"Width": 2.62,
+		"Width": 2.66,
 		"Height": 4.75,
 		"Image": "earthquaker-hummingbird.png"
 	},
@@ -4714,7 +4903,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Interstellar Orbiter",
 		"Width": 4.75,
-		"Height": 5.77,
+		"Height": 5.95,
 		"Image": "earthquaker-interstellar-orbiter.png"
 	},
 	{
@@ -4727,15 +4916,15 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Life Pedal V2",
-		"Width": 3.77,
-		"Height": 4.77,
+		"Width": 3.82,
+		"Height": 4.8,
 		"Image": "earthquaker-lifepedal-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Monarch",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-monarch.png"
 	},
 	{
@@ -4756,7 +4945,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Palisades",
 		"Width": 5.65,
-		"Height": 4.75,
+		"Height": 4.77,
 		"Image": "earthquaker-palisades.png"
 	},
 	{
@@ -4770,7 +4959,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Pitch Bay",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-pitch-bay.png"
 	},
 	{
@@ -4783,36 +4972,36 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Pyramids",
-		"Width": 4.27,
-		"Height": 4.77,
+		"Width": 4.28,
+		"Height": 4.8,
 		"Image": "earthquaker-devices-pyramids.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Rainbow Machine V1",
-		"Width": 3.77,
-		"Height": 4.77,
+		"Width": 3.7,
+		"Height": 4.88,
 		"Image": "earthquaker-rainbowmachine.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Rainbow Machine V2",
-		"Width": 3.77,
-		"Height": 4.77,
+		"Width": 3.82,
+		"Height": 4.80,
 		"Image": "earthquaker-rainbowmachine-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Sea Machine",
-		"Width": 3.65,
-		"Height": 4.77,
+		"Width": 3.7,
+		"Height": 4.93,
 		"Image": "earthquaker-seamachine.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Sea Machine V2",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-seamachine-v2.png"
 	},
 	{
@@ -4826,7 +5015,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Sound Shank",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-sound-shank.png"
 	},
 	{
@@ -4853,8 +5042,8 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Spires",
-		"Width": 3.65,
-		"Height": 4.77,
+		"Width": 3.7,
+		"Height": 4.8,
 		"Image": "earthquaker-spires.png"
 	},
 	{
@@ -4868,7 +5057,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Talons",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.78,
 		"Image": "earthquaker-talons.png"
 	},
 	{
@@ -4896,7 +5085,7 @@
 		"Brand": "Earthquaker Devices",
 		"Name": "Time Shadows",
 		"Width": 2.5,
-		"Height": 4.75,
+		"Height": 4.77,
 		"Image": "earthquaker-time-shadows.png"
 	},
 	{
@@ -4909,14 +5098,14 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Tone Reaper",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.37,
 		"Image": "earthquaker-tone-reaper.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Transmisser",
-		"Width": 2.62,
+		"Width": 2.66,
 		"Height": 4.75,
 		"Image": "earthquaker-transmisser.png"
 	},
@@ -4937,15 +5126,15 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "White Light",
-		"Width": 3,
-		"Height": 4.75,
+		"Width": 2.75,
+		"Height": 4.33,
 		"Image": "earthquaker-white-light.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Zap Machine V2",
-		"Width": 3.75,
-		"Height": 4.75,
+		"Width": 3.7,
+		"Height": 4.95,
 		"Image": "earthquaker-zap-machine-v2.png"
 	},
 	{
@@ -5500,6 +5689,13 @@
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-nano-clone.png"
+	},
+	{
+		"Brand": "Electro Harmonix",
+		"Name": "Nano Deluxe Memory Man",
+		"Width": 2.90,
+		"Height": 4.5,
+		"Image": "ehx-nano-deluxe-memory-man.png"
 	},
 	{
 		"Brand": "Electro Harmonix",
@@ -6245,10 +6441,24 @@
 	},
 	{
 		"Brand": "Eventide",
-		"Name": "H9",
+		"Name": "Blackhole",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "eventide-blackhole.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "H9 Max",
 		"Width": 4.65,
-		"Height": 5.25,
+		"Height": 5.20,
 		"Image": "eventide-h9.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "MicroPitch Delay",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "eventide-micropitch.png"
 	},
 	{
 		"Brand": "Eventide",
@@ -6259,31 +6469,52 @@
 	},
 	{
 		"Brand": "Eventide",
-		"Name": "Space",
+		"Name": "ModFactor",
 		"Width": 7.5,
-		"Height": 4.8,
-		"Image": "eventide-space.png"
-	},
-	{
-		"Brand": "Eventide",
-		"Name": "Blackhole",
-		"Width": 4,
-		"Height": 4.25,
-		"Image": "eventide-blackhole.png"
-	},
-	{
-		"Brand": "Eventide",
-		"Name": "TimeFactor",
-		"Width": 7.5,
-		"Height": 4.8,
-		"Image": "eventide-timefactor.png"
+		"Height": 4.9,
+		"Image": "eventide-modfactor.png"
 	},
 	{
 		"Brand": "Eventide",
 		"Name": "PitchFactor",
 		"Width": 7.5,
-		"Height": 4.8,
+		"Height": 4.9,
 		"Image": "eventide-pitchfactor.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "Rose",
+		"Width": 4.75,
+		"Height": 5.04,
+		"Image": "eventide-rose.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "Space",
+		"Width": 7.5,
+		"Height": 4.9,
+		"Image": "eventide-space.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "TimeFactor",
+		"Width": 7.5,
+		"Height": 4.9,
+		"Image": "eventide-timefactor.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "Tricerachorus",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "eventide-tricerachorus.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "UltraTap",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "eventide-ultratap.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
@@ -6557,6 +6788,41 @@
 		"Width": 3.95,
 		"Height": 5,
 		"Image": "fender-treverb.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Berserk",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-berserk.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Bifrost",
+		"Width": 3.66,
+		"Height": 4.78,
+		"Image": "fjord-bifrost.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Embla",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-embla.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Fenris",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-fenris.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Odin",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-odin.png"
 	},
 	{
 		"Brand": "Flower Pedals",
@@ -7862,6 +8128,13 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "CS9 Stereo Chorus",
+		"Width": 3,
+		"Height": 4.9,
+		"Image": "ibanez-cs9.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "DE7 Delay/Echo",
 		"Width": 3,
 		"Height": 5,
@@ -8638,13 +8911,6 @@
 		"Image": "jhs-prestige.png"
 	},
 	{
-		"Brand": "Mythos",
-		"Name": "Golden Fleece",
-		"Width": 1.79,
-		"Height": 3.6,
-		"Image": "mythos-goldenfleecemini.png"
-	},
-	{
 		"Brand": "JHS",
 		"Name": "Tidewater Tremolo",
 		"Width": 1.75,
@@ -8746,113 +9012,120 @@
 		"Brand": "Jackson Audio",
 		"Name": "Amp Mode",
 		"Width": 1.8,
-		"Height": 4,
+		"Height": 4.08,
 		"Image": "jackson-ampmode.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Blossom",
-		"Width": 1.8,
-		"Height": 4,
-		"Image": "jackson-blossom.png"
+		"Name": "Asabi Overdrive Distortion",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-asabi.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Belle Starr",
 		"Width": 2.2,
-		"Height": 5.02,
-		"Image": "jackson-bellestarr.png"
+		"Height": 4.76,
+		"Image": "jackson-bellestar.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Bloom",
-		"Width": 2.652,
-		"Height": 4.875,
+		"Width": 2.7,
+		"Height": 5.13,
 		"Image": "jackson-bloom.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Bloom v2",
-		"Width": 2.652,
-		"Height": 4.875,
+		"Name": "Bloom (Black)",
+		"Width": 2.7,
+		"Height": 5.13,
 		"Image": "jackson-bloom-v2.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Asabi Overdrive Distortion",
-		"Width": 2.652,
-		"Height": 4.875,
-		"Image": "jackson-asabi.png"
+		"Name": "Bloom (Red)",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-bloom-red.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Golden Boy",
-		"Width": 2.652,
-		"Height": 4.875,
-		"Image": "jacksonaudio-goldenboy.png"
-	},
-	{
-		"Brand": "Jackson Audio",
-		"Name": "Modular Fuzz",
-		"Width": 2.652,
-		"Height": 4.875,
-		"Image": "jackson-fuzz.png"
+		"Name": "Blossom",
+		"Width": 1.8,
+		"Height": 4.08,
+		"Image": "jackson-blossom.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Broken Arrow",
-		"Width": 2.652,
-		"Height": 4.875,
+		"Width": 2.7,
+		"Height": 5.13,
 		"Image": "jackson-brokenarrow.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Broken Arrow (Black)",
-		"Width": 2.652,
-		"Height": 4.875,
+		"Width": 2.7,
+		"Height": 5.13,
 		"Image": "jackson-brokenarrow-black.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "El Guapo",
-		"Width": 2.652,
-		"Height": 4.875,
+		"Width": 2.7,
+		"Height": 5.13,
 		"Image": "jackson-el-guapo.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "Golden Boy",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jacksonaudio-goldenboy.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "Modular Fuzz",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-fuzz.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Prism",
 		"Width": 2.5,
-		"Height": 4.875,
+		"Height": 4.96,
 		"Image": "jackson-prism.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Prism Red",
+		"Name": "Prism (Black)",
 		"Width": 2.5,
-		"Height": 4.875,
-		"Image": "jackson-prism-red.png"
-	},
-	{
-		"Brand": "Jackson Audio",
-		"Name": "Prism Black",
-		"Width": 2.5,
-		"Height": 4.875,
+		"Height": 4.96,
 		"Image": "jackson-prism-black.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Prism Purple",
+		"Name": "Prism (Blue)",
 		"Width": 2.5,
-		"Height": 4.875,
+		"Height": 4.96,
+		"Image": "jackson-prism-blue.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "Prism (Purple)",
+		"Width": 2.5,
+		"Height": 4.96,
 		"Image": "jackson-prism-purple.png"
 	},
 	{
 		"Brand": "Jackson Audio",
-		"Name": "Prism Blue",
+		"Name": "Prism (Red)",
 		"Width": 2.5,
-		"Height": 4.875,
-		"Image": "jackson-prism-blue.png"
+		"Height": 4.96,
+		"Image": "jackson-prism-red.png"
 	},
 	{
 		"Brand": "JangleBox",
@@ -9479,6 +9752,20 @@
 	},
 	{
 		"Brand": "Kingtone",
+		"Name": "1968",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "kingtone-1968.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Blues Power",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "kingtone-blues-power.png"
+	},
+	{
+		"Brand": "Kingtone",
 		"Name": "Duellist",
 		"Width": 4.98,
 		"Height": 3.76,
@@ -9486,10 +9773,66 @@
 	},
 	{
 		"Brand": "Kingtone",
+		"Name": "Duellist (Top Jacks)",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "kingtone-duelist-top.png"
+	},
+	{
+		"Brand": "Kingtone",
 		"Name": "Duellist (Silver)",
 		"Width": 4.7,
 		"Height": 3.88,
 		"Image": "kingtone-duelist-silver.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Heavyhand",
+		"Width": 2.38,
+		"Height": 4.53,
+		"Image": "kingtone-heavyhand.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Mini Fuzz",
+		"Width": 2.61,
+		"Height": 4.3,
+		"Image": "Toneking-minifuzz.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Mini Fuzz SI",
+		"Width": 2.61,
+		"Height": 4.3,
+		"Image": "kingtone-minifuzz-si.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Soloist",
+		"Width": 2.38,
+		"Height": 4.53,
+		"Image": "kingtonesoloist.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "The Octaland",
+		"Width": 5.09,
+		"Height": 3.7,
+		"Image": "kingtone-the-octaland.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "The Octaland Mini",
+		"Width": 2.38,
+		"Height": 4.53,
+		"Image": "kingtone-the-octaland-mini.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Vintage Fuzz",
+		"Width": 5.09,
+		"Height": 3.7,
+		"Image": "kingtone-vintage-fuzz.png"
 	},
 	{
 		"Brand": "Kliq",
@@ -9667,6 +10010,13 @@
 		"Image": "korg-pitchblack-plus.png"
 	},
 	{
+		"Brand": "Korg",
+		"Name": "SDD-3000",
+		"Width": 10.24,
+		"Height": 6.62,
+		"Image": "korg-sdd-3000.png"
+	},
+	{
 		"Brand": "Land Devices",
 		"Name": "Domino",
 		"Width": 3.82,
@@ -9746,29 +10096,36 @@
 	{
 		"Brand": "Line6",
 		"Name": "HX Stomp",
-		"Width": 7.25,
-		"Height": 5.08,
+		"Width": 7.44,
+		"Height": 5.3,
 		"Image": "line6-hxstomp.png"
 	},
 	{
 		"Brand": "Line6",
 		"Name": "HX Stomp (Blue)",
-		"Width": 7,
-		"Height": 4.96,
+		"Width": 7.44,
+		"Height": 5.3,
 		"Image": "line6-hxstomp-ltd-blue.png"
 	},
 	{
 		"Brand": "Line6",
+		"Name": "HX Stomp (Cosmic Gray)",
+		"Width": 7.44,
+		"Height": 5.3,
+		"Image": "line6-hxstomp-gray.png"
+	},
+	{
+		"Brand": "Line6",
 		"Name": "HX Stomp (Red)",
-		"Width": 7.25,
-		"Height": 5.08,
+		"Width": 7.44,
+		"Height": 5.3,
 		"Image": "line6-hxstomp-red.png"
 	},
 	{
 		"Brand": "Line6",
 		"Name": "HX Stomp (White)",
-		"Width": 7.25,
-		"Height": 5.08,
+		"Width": 7.44,
+		"Height": 5.3,
 		"Image": "line6-hxstomp-white.png"
 	},
 	{
@@ -9805,6 +10162,13 @@
 		"Width": 10.5,
 		"Height": 6.5,
 		"Image": "line6-m9.png"
+	},
+	{
+		"Brand": "Line6",
+		"Name": "POD HD500X",
+		"Width": 29.75,
+		"Height": 14.47,
+		"Image": "line6-pod-hd500x.png"
 	},
 	{
 		"Brand": "Line6",
@@ -10001,6 +10365,13 @@
 		"Width": 2.59,
 		"Height": 4.3,
 		"Image": "mi-audio-super-crunch-box-v2.png"
+	},
+	{
+		"Brand": "Moen",
+		"Name": "GEC8 JR V2",
+		"Width": 18.90,
+		"Height": 2.35,
+		"Image": "moen-gec8jr-v2.png"
 	},
 	{
 		"Brand": "Moen",
@@ -10284,52 +10655,80 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Argo",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "mythos-argo.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Argonaut",
+		"Width": 1.8,
+		"Height": 3.6,
+		"Image": "mythos-argonaut.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Chupacabra",
+		"Width": 2.6,
+		"Height": 4.98,
+		"Image": "mythos-chupacabra.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Golden Fleece",
+		"Width": 1.75,
+		"Height": 3.6,
+		"Image": "mythos-goldenfleecemini.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Herculean",
+		"Width": 2.6,
+		"Height": 4.91,
+		"Image": "mythos-herculean.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Mjolnir",
+		"Width": 2.6,
+		"Height": 4.91,
+		"Image": "mythos-mjolner.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Mjolnir (Joey Landreth Edition)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "mythos-mjolnirjl.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Mjolnir (Wildwood Edition)",
+		"Width": 4.6,
+		"Height": 3.71,
+		"Image": "mythos-mjolner-wildwood.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Oracle",
+		"Width": 3.7,
+		"Height": 4.6,
+		"Image": "mythos_oracle.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Runestone",
-		"Width": 2.62,
+		"Width": 2.6,
 		"Height": 4.93,
 		"Image": "mythos-runestone.png"
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Mjolnir",
-		"Width": 2.62,
-		"Height": 4.93,
-		"Image": "mythos-mjolner.png"
-	},
-	{
-		"Brand": "Mythos",
-		"Name": "Mjolnir Joey Landreth Edition",
-		"Width": 2.62,
-		"Height": 4.93,
-		"Image": "mythos-mjolnirjl.png"
-	},
-	{
-		"Brand": "Mythos",
 		"Name": "SusMaryOsep",
-		"Width": 4.69,
-		"Height": 3.66,
+		"Width": 4.6,
+		"Height": 3.73,
 		"Image": "mythos-susmaryosep.png"
-	},
-	{
-		"Brand": "Mythos",
-		"Name": "Argo",
-		"Width": 2.62,
-		"Height": 4.93,
-		"Image": "mythos-argo.png"
-	},
-	{
-		"Brand": "Mythos",
-		"Name": "Chupacabra",
-		"Width": 2.62,
-		"Height": 4.93,
-		"Image": "mythos-chupacabra.png"
-	},
-	{
-		"Brand": "Mythos",
-		"Name": "Wildwood Edition Mjolnir",
-		"Width": 4.67,
-		"Height": 3.7,
-		"Image": "mythos-mjolner-wildwood.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -10561,6 +10960,20 @@
 		"Width": 2.75,
 		"Height": 4.75,
 		"Image": "mesaboogie-toneburst.png"
+	},
+	{
+		"Brand": "Milkman Sound",
+		"Name": "F-Stop (Black)",
+		"Width": 3.6,
+		"Height": 4.98,
+		"Image": "milkman-fstop-black.png"
+	},
+	{
+		"Brand": "Milkman Sound",
+		"Name": "F-Stop (White)",
+		"Width": 3.6,
+		"Height": 4.98,
+		"Image": "milkman-fstop-white.png"
 	},
 	{
 		"Brand": "Mission",
@@ -11991,6 +12404,41 @@
 		"Image": "nux-xtc-od.png"
 	},
 	{
+		"Brand": "Native Audio",
+		"Name": "Ghost Ridge V1.5",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "nativeaudio-ghost-ridge.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Kiaayo",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "nativeaudio-kiaayo.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Midnight V2",
+		"Width": 2.71,
+		"Height": 5,
+		"Image": "nativeaudio-midnight-v2.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Rising Sun",
+		"Width": 2.71,
+		"Height": 5,
+		"Image": "nativeaudio-rising-sun.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Wilderness V1.5",
+		"Width": 2.71,
+		"Height": 5,
+		"Image": "nativeaudio-wilderness.png"
+	},
+	{
 		"Brand": "Neo Instruments",
 		"Name": "Micro Vent",
 		"Width": 2.63,
@@ -12824,6 +13272,69 @@
 		"Image": "pladask-taken.png"
 	},
 	{
+		"Brand": "Paradox Effects",
+		"Name": "Arquitecto",
+		"Width": 3.7,
+		"Height": 4.83,
+		"Image": "paradox-arquitecto.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Carmesi",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "paradox-carmesi.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Fortissimo",
+		"Width": 2.8,
+		"Height": 4.65,
+		"Image": "paradox-fortissimo.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Futura",
+		"Width": 2.5,
+		"Height": 4.74,
+		"Image": "paradox-futura.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Fuzz-E Cat",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "paradox-fuzz-e-cat.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Ionizer",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "paradox-ionizer.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Obsidiana",
+		"Width": 3.7,
+		"Height": 4.87,
+		"Image": "paradox-obsidiana.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Oniric",
+		"Width": 4.44,
+		"Height": 3.83,
+		"Image": "paradox-oniric.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Terran",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "paradox-terran.png"
+	},
+	{
 		"Brand": "Pastfx",
 		"Name": "Chorus Ensemble",
 		"Width": 4.72,
@@ -12952,7 +13463,7 @@
 	{
 		"Brand": "Peterson",
 		"Name": "Strobostomp HD",
-		"Width": 3,
+		"Width": 2.94,
 		"Height": 5.07,
 		"Image": "peterson-strobostomphd.png"
 	},
@@ -13039,6 +13550,13 @@
 		"Width": 5.7,
 		"Height": 4.7,
 		"Image": "pigtronix-echolution2ultrapro.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Echolution 3",
+		"Width": 4.5,
+		"Height": 3.12,
+		"Image": "pigtronix-echolution3.png"
 	},
 	{
 		"Brand": "Pigtronix",
@@ -13144,6 +13662,13 @@
 		"Width": 4.5,
 		"Height": 2.85,
 		"Image": "pigtronix-universal-remote.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Ahab",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "pbc-ahab.png"
 	},
 	{
 		"Brand": "Pine-Box Customs",
@@ -13636,6 +14161,13 @@
 		"Image": "ryra-klone-seafoam.png"
 	},
 	{
+		"Brand": "Santono",
+		"Name": "Etched Pick Tin",
+		"Width": 2,
+		"Height": 2,
+		"Image": "santono-etched-pick-tin.png"
+	},
+	{
 		"Brand": "Selah",
 		"Name": "Feather Drive",
 		"Width": 2.5,
@@ -13837,6 +14369,83 @@
 		"Width": 2.6,
 		"Height": 4.96,
 		"Image": "siren-midnight-train.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Caffeine",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-caffeine.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Cocoa",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-cocoa.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Freya",
+		"Width": 3.09,
+		"Height": 4.7,
+		"Image": "sitek-freya.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Fuzzie",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-fuzzie.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Nudist",
+		"Width": 3.74,
+		"Height": 1.74,
+		"Image": "sitek-nudist.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Nursie",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-nursie.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Pandora",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-pandora.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Phasia",
+		"Width": 3.09,
+		"Height": 4.7,
+		"Image": "sitek-phasia.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Sirena",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-sirena.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Vixen",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-vixen.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Wuffy",
+		"Width": 2.68,
+		"Height": 4.53,
+		"Image": "sitek-wuffy.png"
 	},
 	{
 		"Brand": "Skreddy",
@@ -16100,6 +16709,13 @@
 		"Image": "voodoolab-mondo.png"
 	},
 	{
+		"Brand": "Voodoo Lab",
+		"Name": "Tremolo",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "voodoolab-tremolo.png"
+	},
+	{
 		"Brand": "Vox",
 		"Name": "Big Bad Wah",
 		"Width": 5.12,
@@ -16171,45 +16787,10 @@
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "385 Overdrive",
-		"Width": 2.84,
-		"Height": 4.77,
+		"Name": "385",
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-385.png"
-	},
-	{
-		"Brand": "Walrus",
-		"Name": "ARP-87",
-		"Width": 2.6,
-		"Height": 4.96,
-		"Image": "walrus-arp87.png"
-	},
-	{
-		"Brand": "Walrus",
-		"Name": "EB-10 Preamp/EQ/Boost",
-		"Width": 3.84,
-		"Height": 4.6,
-		"Image": "walrus-eb10.png"
-	},
-	{
-		"Brand": "Walrus",
-		"Name": "MAKO Series: D1 Stereo Delay",
-		"Width": 2.85,
-		"Height": 4.87,
-		"Image": "walrus-mako-d1.png"
-	},
-	{
-		"Brand": "Walrus",
-		"Name": "MAKO Series: R1 High-Fidelity Stereo Reverb",
-		"Width": 2.85,
-		"Height": 4.87,
-		"Image": "walrus-r1.png"
-	},
-	{
-		"Brand": "Walrus",
-		"Name": "MAKO Series: ACS1 Amp + Cab Simulator",
-		"Width": 2.85,
-		"Height": 4.87,
-		"Image": "walrus-acs1.png"
 	},
 	{
 		"Brand": "Walrus",
@@ -16222,175 +16803,245 @@
 		"Brand": "Walrus",
 		"Name": "Ages",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-ages.png"
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "ARP-87",
+		"Width": 2.72,
+		"Height": 4.95,
+		"Image": "walrus-arp87.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Bellwether",
-		"Width": 5.75,
+		"Width": 5.69,
 		"Height": 4.75,
 		"Image": "walrus-bellwether.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Contraband",
-		"Width": 2.49,
-		"Height": 4.39,
+		"Width": 2.6,
+		"Height": 4.33,
 		"Image": "walrus-contraband.png"
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Eras",
-		"Width": 2.6,
-		"Height": 4.96,
-		"Image": "walrus-eras.png"
-	},
-	{
-		"Brand": "Walrus",
 		"Name": "Deep Six",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-deepsix.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Deep Six V2",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-deepsixv2.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Deep Six V3",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-deepsixv3.png"
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Deep Six V3 LE",
+		"Name": "Deep Six V3 (LE)",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-deepsix-v3.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Descent",
 		"Width": 5.625,
-		"Height": 4.75,
+		"Height": 4.73,
 		"Image": "walrus-descent.png"
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Emissary Parallel Boost",
+		"Name": "EB-10",
+		"Width": 3.9,
+		"Height": 4.67,
+		"Image": "walrus-eb10.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Emissary",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-emissary.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Eras",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-eras.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Fathom",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "wa-fathom.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Iron Horse",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-ironhorse.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Iron Horse V2",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-ironhorse-v2.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Janus",
-		"Width": 7.62,
+		"Width": 7.93,
 		"Height": 4.7,
 		"Image": "walrus-janus.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Julia",
-		"Width": 2.84,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-julia.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Julia (1016 LE)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-julia-1016.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Julia (Enchantress LE)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-julia-enchantress.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Julia (LE)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-julia-le.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Julia V2",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-julia2.png"
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Julia V2 (Gold Edition)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-julia2-gold.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Julianna",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrusaudio-julianna.png"
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Julianna (Gold Edition)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrusaudio-julianna-gold.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Jupiter",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-jupiter.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Jupiter V2",
-		"Width": 2.8,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-jupiter-v2.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Kangra",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.6,
+		"Height": 4.95,
 		"Image": "walrus-kangra.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Lillian",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-lillian.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Luminary",
 		"Width": 4.67,
-		"Height": 3.8,
+		"Height": 3.83,
 		"Image": "walrus-luminary.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Luminary V2",
 		"Width": 4.67,
-		"Height": 3.8,
+		"Height": 3.77,
 		"Image": "walrus-luminary-v2.png"
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "MAKO Series: ACS1 Amp + Cab Simulator",
+		"Width": 2.87,
+		"Height": 4.9,
+		"Image": "walrus-acs1.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "MAKO Series: D1 Stereo Delay",
+		"Width": 2.87,
+		"Height": 4.9,
+		"Image": "walrus-mako-d1.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "MAKO Series: R1 High-Fidelity Stereo Reverb",
+		"Width": 2.87,
+		"Height": 4.9,
+		"Image": "walrus-r1.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Mayflower",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-mayflower.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Messner",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-messner.png"
 	},
 	{
@@ -16404,7 +17055,7 @@
 		"Brand": "Walrus",
 		"Name": "Monument V2",
 		"Width": 2.72,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-monumentv2.png"
 	},
 	{
@@ -16417,21 +17068,21 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Plainsman",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-plainsman.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Polychrome",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-polychrome.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Red",
-		"Width": 3.68,
+		"Width": 3.88,
 		"Height": 4.67,
 		"Image": "walrus-red.png"
 	},
@@ -16439,21 +17090,21 @@
 		"Brand": "Walrus",
 		"Name": "SLARP",
 		"Width": 5.625,
-		"Height": 4.75,
+		"Height": 4.82,
 		"Image": "walrus-slarp.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Slö",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-slo.png"
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Slö (Red)",
+		"Name": "Slö (Red Edition)",
 		"Width": 2.6,
-		"Height": 4.96,
+		"Height": 4.95,
 		"Image": "walrus-slo-red.png"
 	},
 	{
@@ -16466,22 +17117,22 @@
 	{
 		"Brand": "Walrus",
 		"Name": "Voyager",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-voyager.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Warhorn",
-		"Width": 2.72,
-		"Height": 4.77,
+		"Width": 2.88,
+		"Height": 4.84,
 		"Image": "walrus-warhorn.png"
 	},
 	{
 		"Brand": "Walrus",
 		"Name": "Warhorn / Ages Dual Drive",
 		"Width": 5.625,
-		"Height": 4.75,
+		"Height": 4.52,
 		"Image": "walrus-warhorn-ages-dual-drive.png"
 	},
 	{
@@ -17528,13 +18179,6 @@
 		"Image": "fortin-zuul-mini.png"
 	},
 	{
-		"Brand": "Kingtone",
-		"Name": "Soloist",
-		"Width": 2.38,
-		"Height": 4.43,
-		"Image": "kingtonesoloist.png"
-	},
-	{
 		"Brand": "Fortin",
 		"Name": "Roach",
 		"Width": 1.52,
@@ -17568,13 +18212,6 @@
 		"Width": 4.73,
 		"Height": 3.94,
 		"Image": "vahlbruch-kaluna.png"
-	},
-	{
-		"Brand": "Mythos",
-		"Name": "Oracle",
-		"Width": 4.7,
-		"Height": 3.7,
-		"Image": "mythos_oracle.png"
 	},
 	{
 		"Brand": "Fredric Pedals",
@@ -17652,5 +18289,12 @@
 		"Width": 3.77,
 		"Height": 1.69,
 		"Image": "amt-pangaeacp100.png"
+    },
+    {
+    	"Brand": "Lake Effects",
+    	"Name": "FVD",
+    	"Width": 3.68,
+    	"Height": 4.67,
+    	"Image": "lake-effects-fvd.png"
     }
 ]
