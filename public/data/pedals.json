@@ -483,6 +483,13 @@
 		"Image": "airturn-bt200s-2.png"
 	},
 	{
+		"Brand": "AirTurn",
+		"Name": "Duo 200",
+		"Width": 7.00,
+		"Height": 4.5,
+		"Image": "airturn-duo-200.png"
+	},
+	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
 		"Width": 2.8,
@@ -840,6 +847,90 @@
 		"Image": "analogman-sunlion.png"
 	},
 	{
+		"Brand": "Animals Pedal",
+		"Name": "Dawn Ocean Meditation",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-dawn-ocean.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Fishing Is As Fun As Fuzz",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-fishing.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Major Overdrive",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-major-overdrive.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Push & Pull",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-push-pull.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Relaxing Walrus Delay",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-relaxing-walrus.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Rover Fuzz",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-rover.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Rust Rod Fuzz",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-rust-rod.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Sunday Afternoon Is Infinity",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-sunday-afternoon.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Surfing Polar Bear",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-surfing-polar-bear.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Tioga Road Cycling",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-tioga-road.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Vintage Van Driving is Very Fun",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-vintage-van.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "1927 Home Run Comp",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-1927.png"
+  },
+  {
 		"Brand": "Animals Pedals",
 		"Name": "Dawn Ocean Meditation Booster (Custom Painted 039)",
 		"Width": 2.54,
@@ -901,6 +992,97 @@
 		"Width": 19,
 		"Height": 5.7,
 		"Image": "arturia-keystep.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "Macchiato",
+		"Width": 4.25197,
+		"Height": 4.72441,
+		"Image": "ashdown-macchiato.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "Norman Watt-Roy Pre-DI",
+		"Width": 7.204724,
+		"Height": 4.64567,
+		"Image": "ashdown-norman-watt-roy.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "OriginAL Valve Pre-DI",
+		"Width": 7.204724,
+		"Height": 4.64567,
+		"Image": "ashdown-original-valve.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "Studio Compressor",
+		"Width": 4.25197,
+		"Height": 4.72441,
+		"Image": "ashdown-studio-comp.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "Triple Shot",
+		"Width": 4.25197,
+		"Height": 4.72441,
+		"Image": "ashdown-triple-shot.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "Type 23 Dynamic Filter",
+		"Width": 4.25197,
+		"Height": 4.72441,
+		"Image": "ashdown-type-23.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "PRO-FX-Double Shot",
+		"Width": 2.87402,
+		"Height": 4.52756,
+		"Image": "ashdown-double-shot.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "PRO-FX-Pro Drive",
+		"Width": 2.87402,
+		"Height": 4.52756,
+		"Image": "ashdown-pro-drive.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "PRO-FX-Retro Drive",
+		"Width": 2.87402,
+		"Height": 4.52756,
+		"Image": "ashdown-retro-drive.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "PRO-FX-Sub Harmonic Generator",
+		"Width": 2.87402,
+		"Height": 4.52756,
+		"Image": "ashdown-sub-harmonic.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "PRO-FX-Two Band Boost",
+		"Width": 2.87402,
+		"Height": 4.52756,
+		"Image": "ashdown-two-band.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "PRO-FX-Vintage Fuzz",
+		"Width": 2.87402,
+		"Height": 4.52756,
+		"Image": "ashdown-vintage-fuzz.png"
+	},
+	{
+		"Brand": "Ashdown",
+		"Name": "Velvet Compressor",
+		"Width": 4.25197,
+		"Height": 4.72441,
+		"Image": "ashdown-velvet-comp.png"
 	},
 	{
 		"Brand": "Atomic",
@@ -3675,6 +3857,13 @@
 		"Image": "deathbyaudio-waveformdestroyer.png"
 	},
 	{
+		"Brand": "Demedash",
+		"Name": "T-120 Video Tape Echo",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "demedash-t-120.png"
+	},
+	{
 		"Brand": "Diamond",
 		"Name": "Compressor",
 		"Width": 3.7,
@@ -6221,6 +6410,13 @@
 		"Width": 5.7,
 		"Height": 3.75,
 		"Image": "empress-zoia.png"
+	},
+	{
+		"Brand": "Erica Synths",
+		"Name": "Zen Delay",
+		"Width": 8.27,
+		"Height": 5.91,
+		"Image": "erica-synths-zen.png"
 	},
 	{
 		"Brand": "Ernie Ball",
@@ -8954,6 +9150,13 @@
 	},
 	{
 		"Brand": "JangleBox",
+		"Name": "JBX",
+		"Width": 5.625,
+		"Height": 4.625,
+		"Image": "janglebox-jbx.png"
+	},
+	{
+		"Brand": "JangleBox",
 		"Name": "JB3",
 		"Width": 7.77,
 		"Height": 4.7,
@@ -8965,6 +9168,48 @@
 		"Width": 3.68,
 		"Height": 4.82,
 		"Image": "janglebox-thebyrds.png"
+	},
+	{
+		"Brand": "Joe Gore",
+		"Name": "Cult",
+		"Width": 2.6,
+		"Height": 4.77,
+		"Image": "joe-gore-cult.png"
+	},
+	{
+		"Brand": "Joe Gore",
+		"Name": "Duh",
+		"Width": 2.6,
+		"Height": 4.77,
+		"Image": "joe-gore-duh.png"
+	},
+	{
+		"Brand": "Joe Gore",
+		"Name": "Filth",
+		"Width": 4.625,
+		"Height": 5.625,
+		"Image": "joe-gore-filth.png"
+	},
+	{
+		"Brand": "Joe Gore",
+		"Name": "Gross Distortion",
+		"Width": 4.625,
+		"Height": 5.625,
+		"Image": "joe-gore-gross.png"
+	},
+	{
+		"Brand": "Joe Gore",
+		"Name": "Porkolator",
+		"Width": 2.6,
+		"Height": 4.77,
+		"Image": "joe-gore-porkolator.png"
+	},
+	{
+		"Brand": "Joe Gore",
+		"Name": "Screech",
+		"Width": 2.6,
+		"Height": 4.77,
+		"Image": "joe-gore-screech.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -10690,6 +10935,13 @@
 	},
 	{
 		"Brand": "Mesa Boogie",
+		"Name": "Mark V Footswitch",
+		"Width": 13.625,
+		"Height": 5.625,
+		"Image": "mesa-boogie-mark-v.png"
+	},
+	{
+		"Brand": "Mesa Boogie",
 		"Name": "Grid Slammer",
 		"Width": 2.75,
 		"Height": 4.75,
@@ -11338,6 +11590,13 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-analogchorus.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Chorus Deluxe",
+		"Height": 2.56,
+		"Width": 4.33,
+		"Image": "mxr-bass-chorus-deluxe.png"
 	},
 	{
 		"Brand": "MXR",
@@ -13552,6 +13811,13 @@
 		"Image": "radial-key-largo.png"
 	},
 	{
+		"Brand": "Radial Engineering",
+		"Name": "Twin-City",
+		"Width": 3.5,
+		"Height": 4.4,
+		"Image": "radial-twin-city.png"
+	},
+	{
 		"Brand": "Revv",
 		"Name": "G2",
 		"Width": 2.75,
@@ -13881,6 +14147,13 @@
 		"Image": "rockbox-super763.png"
 	},
 	{
+		"Brand": "Rocktron",
+		"Name": "Blank Cat Moan",
+		"Width": 6,
+		"Height": 12,
+		"Image": "rocktron-black-cat-moan.png"
+	},
+	{
 		"Brand": "RYRA",
 		"Name": "Klone",
 		"Width": 4.67,
@@ -13942,6 +14215,13 @@
 		"Width": 5.6,
 		"Height": 4.7,
 		"Image": "seymour-duncan-palladium.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Studio Bass",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "seymour-duncan-studio-bass.png"
 	},
 	{
 		"Brand": "Seymour Duncan",
@@ -15930,6 +16210,13 @@
 		"Width": 13.8,
 		"Height": 8.5,
 		"Image": "tchelicon-voicelive3extreme.png"
+	},
+	{
+		"Brand": "TC Helicon",
+		"Name": "VoiceLive Play Acoustic",
+		"Width": 7.9,
+		"Height": 6.1,
+		"Image": "tc-helicon-voicelive-play-acoustic.png"
 	},
 	{
 		"Brand": "Tapestry Audio",
@@ -17962,7 +18249,14 @@
 		"Image": "ikm-xvibe.png"
 	},
 	{
-		"Brand": "AMT",
+		"Brand": "Zeppelin Design Labs",
+		"Name": "Quaverato",
+		"Width": 5,
+		"Height": 4.1875,
+		"Image": "zeppelin-quaverato.png"
+  },
+  {
+		"Brand": "AMT ",
 		"Name": "BULAVA SS-30",
 		"Width": 4.17,
 		"Height": 4.92,
