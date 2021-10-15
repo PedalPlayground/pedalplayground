@@ -9024,6 +9024,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "R-09 Vision",
+		"Width": 5.12,
+		"Height": 4.43,
+		"Image": "joyo-r09-vision.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "Wooden Sound",
 		"Width": 1.72,
 		"Height": 2.83,
