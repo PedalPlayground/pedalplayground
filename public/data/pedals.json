@@ -4236,6 +4236,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "BG95 Buddy Guy Signature Cry Baby",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-bg95.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Crybaby",
 		"Width": 4,
 		"Height": 10,
