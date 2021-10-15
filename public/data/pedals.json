@@ -840,14 +840,14 @@
 		"Image": "analogman-sunlion.png"
 	},
 	{
-		"Brand": "Animals Pedals",
+		"Brand": "Animals Pedal",
 		"Name": "Dawn Ocean Meditation Booster (Custom Painted 039)",
 		"Width": 2.54,
 		"Height": 4.4,
 		"Image": "animals-dawn-meditation-039.png"
 	},
 	{
-		"Brand": "Animals Pedals",
+		"Brand": "Animals Pedal",
 		"Name": "Surfing Bear Overdrive (Custom Painted 038)",
 		"Width": 2.54,
 		"Height": 4.4,
@@ -7085,31 +7085,52 @@
 	},
 	{
 		"Brand": "Fuzzrocious Pedals",
+		"Name": "420 Fuzz",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "fuzzrocious-pedals-420-fuzz.png"
+	},
+	{
+		"Brand": "Fuzzrocious Pedals",
 		"Name": "Cat King",
-		"Width": 5.71,
-		"Height": 4.84,
+		"Width": 5.70,
+		"Height": 4.83,
 		"Image": "fuzzrocious-pedals-cat-king.png"
 	},
 	{
 		"Brand": "Fuzzrocious Pedals",
 		"Name": "Croak",
-		"Width": 3.82,
-		"Height": 4.77,
+		"Width": 3.9,
+		"Height": 5,
 		"Image": "fuzzrocious-pedals-croak.png"
+	},
+	{
+		"Brand": "Fuzzrocious Pedals",
+		"Name": "Electric Ocean",
+		"Width": 4.7,
+		"Height": 5.79,
+		"Image": "fuzzrocious-pedals-electric-ocean.png"
 	},
 	{
 		"Brand": "Fuzzrocious Pedals",
 		"Name": "Grey Stache",
 		"Width": 3.7,
-		"Height": 4.77,
+		"Height": 4.94,
 		"Image": "fuzzrocious-pedals-grey-stache.png"
 	},
 	{
 		"Brand": "Fuzzrocious Pedals",
 		"Name": "L'il Fella",
 		"Width": 2.64,
-		"Height": 4.92,
+		"Height": 5.13,
 		"Image": "fuzzrocious-pedals-lil-fella.png"
+	},
+	{
+		"Brand": "Fuzzrocious Pedals",
+		"Name": "The Demon",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "fuzzrocious-pedals-the-demon.png"
 	},
 	{
 		"Brand": "Gamechanger Audio",
