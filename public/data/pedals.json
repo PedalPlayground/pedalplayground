@@ -9220,6 +9220,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "D-Seed",
+		"Width": 3.92,
+		"Height": 4.13,
+		"Image": "joyo-d-seed.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "PXL-4",
 		"Width": 11.14,
 		"Height": 3.22835,
