@@ -10711,10 +10711,45 @@
 	},
 	{
 		"Brand": "Teisco",
+		"Name": "Boost",
+		"Width": 2.96,
+		"Height": 5.2,
+		"Image": "teisco-boost.png"
+	},
+	{
+		"Brand": "Teisco",
+		"Name": "Delay",
+		"Width": 3.83,
+		"Height": 5.2,
+		"Image": "teisco-delay.png"
+	},
+	{
+		"Brand": "Teisco",
+		"Name": "Distortion",
+		"Width": 3.83,
+		"Height": 5.2,
+		"Image": "teisco-distortion.png"
+	},
+	{
+		"Brand": "Teisco",
 		"Name": "Fuzz",
-		"Width": 3.00,
-		"Height": 5.20,
+		"Width": 2.96,
+		"Height": 5.2,
 		"Image": "teisco-fuzz.png"
+	},
+	{
+		"Brand": "Teisco",
+		"Name": "Interface",
+		"Width": 2.96,
+		"Height": 5.2,
+		"Image": "teisco-interface.png"
+	},
+	{
+		"Brand": "Teisco",
+		"Name": "Overdrive",
+		"Width": 2.96,
+		"Height": 5.2,
+		"Image": "teisco-overdrive.png"
 	},
 	{
 		"Brand": "Testing Blanks",
