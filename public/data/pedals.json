@@ -4278,13 +4278,6 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "Whammy 5",
-		"Width": 6.5,
-		"Height": 7.75,
-		"Image": "digitech-whammy.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "Whammy DT",
 		"Width": 8.5,
 		"Height": 7.75,
