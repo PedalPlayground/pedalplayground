@@ -246,6 +246,13 @@
 	},
 	{
 		"Brand": "Source Audio",
+		"Name": "Aftershock bass distortion",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "source-audio-aftershock-bass-distortion.png"
+	},
+	{
+		"Brand": "Source Audio",
 		"Name": "Spectrum",
 		"Width": 2.75,
 		"Height": 4.5,
@@ -3612,6 +3619,90 @@
 		"Image": "darkglass-microtubes-x-ultra.png"
 	},
 {
+		"Brand": "Darkglass",
+		"Name": "B3K",
+		"Width": 2.95,
+		"Height": 4.37,
+		"Image": "darkglass-b3k.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "B7K",
+		"Width": 4.21,
+		"Height": 4.72,
+		"Image": "darkglass-microtubes-b7k.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "B7K Ultra",
+		"Width": 4.92,
+		"Height": 3.77,
+		"Image": "darkglass-microtubes-b7k-ultra.png"
+	},
+{
+		"Brand": "Darkglass",
+		"Name": "Vintage Microtubes",
+		"Width": 2.95,
+		"Height": 4.37,
+		"Image": "darkglass-vintage-microtubes.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Vintage Deluxe",
+		"Width": 4.21,
+		"Height": 4.72,
+		"Image": "darkglass-vintage-deluxe.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Vintage Ultra",
+		"Width": 4.92,
+		"Height": 3.77,
+		"Image": "darkglass-vintage-ultra.png"
+	},
+{
+		"Brand": "Darkglass",
+		"Name": "Alpha Omnicron",
+		"Width": 2.95,
+		"Height": 4.37,
+		"Image": "darkglass-alpha-omicron.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Alpha Omega",
+		"Width": 4.21,
+		"Height": 4.72,
+		"Image": "darkglass-alpha-omega.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Alpha Omega Ultra Ultra",
+		"Width": 4.92,
+		"Height": 3.77,
+		"Image": "darkglass-alpha-omega-ultra.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Super Symmetry",
+		"Width": 3.7,
+		"Height": 4.77,
+		"Image": "darkglass-adam.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Element",
+		"Width": 3,
+		"Height": 4.4,
+		"Image": "darkglass-adam.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Hyper Luminal",
+		"Width": 3,
+		"Height": 4.4,
+		"Image": "darkglass-adam.png"
+	},
+	{
 		"Brand": "Darkglass",
 		"Name": "Adam",
 		"Width": 7.09,
@@ -16252,6 +16343,27 @@
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "tech21-leeds.png"
+	},
+	{
+		"Brand": "Tech21",
+		"Name": "Sansamp Paradriver",
+		"Width": 3.6,
+		"Height": 4.5,
+		"Image": "tech21-paradrive-bass-di.png"
+	},
+	{
+		"Brand": "Tech21",
+		"Name": "Sansamp YYZ",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "tech21-ssansamp-geddy-lee-yyz.png"
+	},
+	{
+		"Brand": "Tech21",
+		"Name": "DI 2112",
+		"Width": 6.37,
+		"Height": 4,
+		"Image": "tech21-ssansamp-geddy-lee-yyz.png"
 	},
 	{
 		"Brand": "Teenage Engineering",
