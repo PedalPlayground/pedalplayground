@@ -16639,6 +16639,13 @@
 		"Image": "teenage-engineering-op-z.png"
 	},
 	{
+		"Brand": "The Pill",
+		"Name": "Stereo",
+		"Width": 4.7047244,
+		"Height": 3.70079,
+		"Image": "pill-stereo.png"
+	},
+	{
 		"Brand": "Thorpy",
 		"Name": "Gunshot",
 		"Width": 2.75,
