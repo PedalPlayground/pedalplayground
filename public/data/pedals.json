@@ -316,7 +316,7 @@
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein (Pink`)",
+		"Name": "Protein (Pink)",
 		"Width": 5,
 		"Height": 3.97,
 		"Image": "browneamps-protein-pink.png"
@@ -1804,6 +1804,13 @@
 		"Width": 6.75,
 		"Height": 5.4375,
 		"Image": "boss-rc500.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-600 Loop Station",
+		"Width": 17.125,
+		"Height": 6.29,
+		"Image": "boss-rc600.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -15778,67 +15785,305 @@
 		"Image": "swindler-redmountain.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
+		"Name": "Alberta",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-alberta.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Alberta (Danish)",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-alberta-danish.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Alberta II",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-alberta-2.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Bass Juice",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-bass-juice.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Bloody Mary",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-bloody-mary.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Comp-Nova",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-comp-nova.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Creamer",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "trex-creamer.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Diva Drive",
-		"Width": 3,
-		"Height": 4.7,
+		"Width": 2.71,
+		"Height": 4.65,
 		"Image": "trex-diva.png"
 	},
 	{
-		"Brand": "T-rex",
-		"Name": "Duck Tail",
+		"Brand": "T-Rex Effects",
+		"Name": "Dr. Swamp",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
+		"Image": "trex-dr-swamp.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Duck Tail",
+		"Width": 4.28,
+		"Height": 4.83,
 		"Image": "trex-ducktail.png"
 	},
 	{
-		"Brand": "T-rex",
-		"Name": "Moller2",
+		"Brand": "T-Rex Effects",
+		"Name": "Fat Shuga",
+		"Width": 2.71,
+		"Height": 4.65,
+		"Image": "trex-fat-shuga.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Hobo Drive",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
+		"Image": "trex-hobo-drive.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Image Looper",
+		"Width": 3.9,
+		"Height": 4.92,
+		"Image": "trex-image-looper.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Junior Roommate",
+		"Width": 4.28,
+		"Height": 4.83,
+		"Image": "trex-junior-roommate.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Karma",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "trex-karma.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "MAB",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-mab.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Møller",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-moller.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Møller 2",
+		"Width": 3.9,
+		"Height": 4.83,
 		"Image": "trex-moller2.png"
 	},
 	{
-		"Brand": "T-rex",
-		"Name": "Mudhoney II",
+		"Brand": "T-Rex Effects",
+		"Name": "Mudhoney",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
 		"Image": "trex-mudhoney.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
+		"Name": "Mudhoney II",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-mudhoney-2.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Neocomp",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "trex-neocomp.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Nitros",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "trex-nitros.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Octavius",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-octavius.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Quint",
 		"Width": 2.4,
-		"Height": 4.6,
+		"Height": 4.65,
 		"Image": "trex-quint.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
+		"Name": "Replay Box",
+		"Width": 4.5,
+		"Height": 2.56,
+		"Image": "trex-replay-box.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Replica",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-replica.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Replicator",
+		"Width": 9.25,
+		"Height": 6.82,
+		"Image": "trex-replicator.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Replicator D'Luxe",
+		"Width": 6.85,
+		"Height": 6.72,
+		"Image": "trex-replicator-dluxe.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Replicator Junior",
+		"Width": 6.85,
+		"Height": 6.64,
+		"Image": "trex-replicator-junior.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Reptile",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
 		"Image": "trex-reptile.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
+		"Name": "Reptile 2",
+		"Width": 4.28,
+		"Height": 4.83,
+		"Image": "trex-reptile-2.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Room-Mate",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-room-mate.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Soulmate Acoustic",
+		"Width": 15.75,
+		"Height": 5.96,
+		"Image": "trex-soulmate-acoustic.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Squeezer",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
 		"Image": "trex-squeezer.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
 		"Name": "Tapster",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
 		"Image": "trex-tapster.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
+		"Name": "The Sweeper",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-the-sweeper.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Tremonti Phaser",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-tremonti-phaser.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Tremster",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-tremster.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Tunemaster",
 		"Width": 2.4,
-		"Height": 4.6,
+		"Height": 4.87,
 		"Image": "trex-tunemaster.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Twin Boost",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-twin-boost.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Twister 2",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-twister-2.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Viper",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-viper.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Vulture",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "trex-vulture.png"
 	},
 	{
 		"Brand": "TC Electronic",
