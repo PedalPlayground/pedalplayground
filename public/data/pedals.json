@@ -6378,15 +6378,29 @@
 	},
 	{
 		"Brand": "Empress",
+		"Name": "Bass Compressor (Blue Sparkle)",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "empress-bass-compressor-blue.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "Bass Compressor (Silver Sparkle)",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "empress-bass-compressor-silver.png"
+	},
+	{
+		"Brand": "Empress",
 		"Name": "Buffer",
-		"Width": 2.5,
+		"Width": 2.61,
 		"Height": 4.5,
 		"Image": "empress-buffer.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Buffer+",
-		"Width": 2.5,
+		"Width": 2.56,
 		"Height": 4.5,
 		"Image": "empress-bufferplus.png"
 	},
@@ -6400,21 +6414,28 @@
 	{
 		"Brand": "Empress",
 		"Name": "Compressor",
-		"Width": 4.5,
-		"Height": 3.625,
+		"Width": 4.68,
+		"Height": 3.5,
 		"Image": "empress-comp.png"
 	},
 	{
 		"Brand": "Empress",
-		"Name": "Compressor MkII",
+		"Name": "Compressor MKII (Blue Sparkle)",
 		"Width": 2.6,
-		"Height": 5.091,
-		"Image": "empress-compressor-mkii.png"
+		"Height": 5.09,
+		"Image": "empress-compressor-mkii-blue.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "Compressor MKII (Silver Sparkle)",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "empress-compressor-mkii-silver.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Distortion",
-		"Width": 2.5,
+		"Width": 2.63,
 		"Height": 4.5,
 		"Image": "empress-distortion.png"
 	},
@@ -6422,55 +6443,62 @@
 		"Brand": "Empress",
 		"Name": "Echosystem",
 		"Width": 5.7,
-		"Height": 3.75,
+		"Height": 3.93,
 		"Image": "empress-echosystem.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Fuzz",
-		"Width": 2.5,
+		"Width": 2.63,
 		"Height": 4.5,
 		"Image": "empress-fuzz.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Germ Drive",
-		"Width": 2.5,
+		"Width": 2.63,
 		"Height": 4.5,
 		"Image": "empress-germdrive.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Heavy",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-heavy.png"
 	},
 	{
 		"Brand": "Empress",
-		"Name": "Multidrive",
+		"Name": "Midibox2",
 		"Width": 4.5,
+		"Height": 2.62,
+		"Image": "empress-midibox2.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "Multidrive",
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-multidrive.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Nebulus",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-nebulus.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Para EQ",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-paraeq.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Phaser",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-phaser.png"
 	},
@@ -6478,42 +6506,42 @@
 		"Brand": "Empress",
 		"Name": "Reverb",
 		"Width": 5.7,
-		"Height": 3.75,
+		"Height": 3.93,
 		"Image": "empress-reverb.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Superdelay",
 		"Width": 5.7,
-		"Height": 3.75,
+		"Height": 3.87,
 		"Image": "empress-superdelay.png"
 	},
 	{
 		"Brand": "Empress",
+		"Name": "Superdelay (Vintage Modified)",
+		"Width": 5.7,
+		"Height": 3.98,
+		"Image": "empress-superdelayvmod.png"
+	},
+	{
+		"Brand": "Empress",
 		"Name": "Tape Delay",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-tapedelay.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Tremolo 2",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-trem2.png"
 	},
 	{
 		"Brand": "Empress",
-		"Name": "Vintage Modified Superdelay",
-		"Width": 5.7,
-		"Height": 3.75,
-		"Image": "empress-superdelayvmod.png"
-	},
-	{
-		"Brand": "Empress",
 		"Name": "Zoia",
 		"Width": 5.7,
-		"Height": 3.75,
+		"Height": 3.93,
 		"Image": "empress-zoia.png"
 	},
 	{
