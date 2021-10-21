@@ -526,13 +526,6 @@
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Dusk",
-		"Width": 2.7,
-		"Height": 4.9,
-		"Image": "alexander-dusk.png"
-	},
-	{
-		"Brand": "Alexander",
 		"Name": "F13 Flanger",
 		"Width": 2.8,
 		"Height": 4.7,
@@ -544,13 +537,6 @@
 		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-f13-neo-flanger.png"
-	},
-	{
-		"Brand": "Alexander",
-		"Name": "Frazz Dazzler",
-		"Width": 2.7,
-		"Height": 4.9,
-		"Image": "alexander-frazz-dazzler.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -855,10 +841,24 @@
 	},
 	{
 		"Brand": "Animals Pedal",
+		"Name": "1927 Home Run Comp",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-1927.png"
+  },
+	{
+		"Brand": "Animals Pedal",
 		"Name": "Dawn Ocean Meditation",
 		"Width": 2.54,
 		"Height": 4.4,
 		"Image": "animals-pedal-dawn-ocean.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Dawn Ocean Meditation (Custom Painted 039)",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-dawn-meditation-039.png"
 	},
 	{
 		"Brand": "Animals Pedal",
@@ -911,6 +911,13 @@
 	},
 	{
 		"Brand": "Animals Pedal",
+		"Name": "Surfing Bear (Custom Painted 038)",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-surfing-bear-038.png"
+	},
+	{
+		"Brand": "Animals Pedal",
 		"Name": "Surfing Polar Bear",
 		"Width": 2.54,
 		"Height": 4.4,
@@ -929,27 +936,6 @@
 		"Width": 2.54,
 		"Height": 4.4,
 		"Image": "animals-pedal-vintage-van.png"
-	},
-	{
-		"Brand": "Animals Pedal",
-		"Name": "1927 Home Run Comp",
-		"Width": 2.54,
-		"Height": 4.4,
-		"Image": "animals-pedal-1927.png"
-  },
-  {
-		"Brand": "Animals Pedals",
-		"Name": "Dawn Ocean Meditation Booster (Custom Painted 039)",
-		"Width": 2.54,
-		"Height": 4.4,
-		"Image": "animals-dawn-meditation-039.png"
-	},
-	{
-		"Brand": "Animals Pedal",
-		"Name": "Surfing Bear Overdrive (Custom Painted 038)",
-		"Width": 2.54,
-		"Height": 4.4,
-		"Image": "animals-surfing-bear-038.png"
 	},
 	{
 		"Brand": "Arc Effects",
@@ -4440,16 +4426,23 @@
 	{
 		"Brand": "Dr Scientist",
 		"Name": "Bitquest",
-		"Width": 2.5,
-		"Height": 4.45,
+		"Width": 2.75,
+		"Height": 5.08,
 		"Image": "drscientist-bitquest.png"
 	},
 	{
 		"Brand": "Dr Scientist",
+		"Name": "Dusk",
+		"Width": 2.75,
+		"Height": 5.08,
+		"Image": "drscientist-dusk.png"
+	},
+	{
+		"Brand": "Dr Scientist",
 		"Name": "Frazz Dazzler",
-		"Width": 2.5,
-		"Height": 4.45,
-		"Image": "drscientist-frazzdazzler.png"
+		"Width": 2.75,
+		"Height": 5.08,
+		"Image": "drscientist-frazz-dazzler.png"
 	},
 	{
 		"Brand": "Dr Scientist",
@@ -4460,9 +4453,16 @@
 	},
 	{
 		"Brand": "Dr Scientist",
+		"Name": "The Atmosphere",
+		"Width": 2.75,
+		"Height": 4.95,
+		"Image": "dr-scientist-the-atmosphere.png"
+	},
+	{
+		"Brand": "Dr Scientist",
 		"Name": "The Elements",
 		"Width": 2.75,
-		"Height": 5.1,
+		"Height": 4.99,
 		"Image": "dr-scientist-the-elements.png"
 	},
 	{
@@ -11807,6 +11807,13 @@
 		"Width": 6.3,
 		"Height": 2.36,
 		"Image": "morningstar-ml5.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Dual Switch",
+		"Width": 3.66,
+		"Height": 1.66,
+		"Image": "mosky-dual-switch.png"
 	},
 	{
 		"Brand": "Mr. Black",
