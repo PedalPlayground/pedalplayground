@@ -5250,6 +5250,69 @@
 		"Image": "earthquaker-zap-machine-v2.png"
 	},
 	{
+		"Brand": "EBS",
+		"Name": "BassIQ",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-bassiq.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "DPhaser",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-multicomp.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "DynaVerb",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-dynaverb.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "MetalDrive",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-metaldrive.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "MultiComp",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-multicomp.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "MultiDrive",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-multidrive.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "OctaBass",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-octabass.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "TremoLo",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-tremolo.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "UniChorus",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-unichorus.png"
+	},
+	{
 		"Brand": "Effectrode",
 		"Name": "Blackbird",
 		"Width": 7.5,
