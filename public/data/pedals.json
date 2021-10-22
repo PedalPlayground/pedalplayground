@@ -169,59 +169,31 @@
 	},
 	{
 		"Brand": "Anasounds",
-		"Name": "Freq Up",
+		"Name": "Ages",
 		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-frequp.png"
+		"Height": 4.91,
+		"Image": "anasounds-ages.png"
 	},
 	{
 		"Brand": "Anasounds",
-		"Name": "Feed Me",
+		"Name": "Bitoun",
 		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-feedme.png"
+		"Height": 4.91,
+		"Image": "anasounds-bitounfuzz.png"
 	},
 	{
 		"Brand": "Anasounds",
 		"Name": "Bumper",
-		"Width": 1.97,
-		"Height": 1.97,
+		"Width": 2.38,
+		"Height": 2.125,
 		"Image": "anasounds-bumper.png"
 	},
 	{
 		"Brand": "Anasounds",
-		"Name": "High Voltage",
+		"Name": "Cerberus",
 		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-highvoltage.png"
-	},
-	{
-		"Brand": "Anasounds",
-		"Name": "Lazy Comp",
-		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-lazycomp.png"
-	},
-	{
-		"Brand": "Anasounds",
-		"Name": "Phase Lag",
-		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-phaselag.png"
-	},
-	{
-		"Brand": "Anasounds",
-		"Name": "Utopia",
-		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-utopia.png"
-	},
-	{
-		"Brand": "Anasounds",
-		"Name": "Savage",
-		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-savage.png"
+		"Height": 4.91,
+		"Image": "anasounds-cerberus.png"
 	},
 	{
 		"Brand": "Anasounds",
@@ -232,17 +204,73 @@
 	},
 	{
 		"Brand": "Anasounds",
-		"Name": "Cerberus",
+		"Name": "Freq Up",
 		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-cerberus.png"
+		"Height": 4.91,
+		"Image": "anasounds-frequp.png"
 	},
 	{
 		"Brand": "Anasounds",
-		"Name": "Bitoun Fuzz",
-		"Width": 2.6,
-		"Height": 4.72,
-		"Image": "anasounds-bitounfuzz.png"
+		"Name": "Feed Me",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-feedme.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "High Voltage",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-highvoltage.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Lazy Comp",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-lazycomp.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Phase Lag",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-phaselag.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Savage",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-savage.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Spinner",
+		"Width": 3.9,
+		"Height": 5.75,
+		"Image": "anasounds-spinner.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Tap",
+		"Width": 2,
+		"Height": 2.1,
+		"Image": "anasounds-tap.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Trémolo",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-tremolo.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Utopia",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-utopia.png"
 	},
 	{
 		"Brand": "Source Audio",
