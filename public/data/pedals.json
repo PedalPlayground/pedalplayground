@@ -1289,6 +1289,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "BF-2 Flanger",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-bf2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "BF-3 Flanger",
 		"Width": 2.875,
 		"Height": 5.125,
