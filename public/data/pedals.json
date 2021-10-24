@@ -4586,10 +4586,17 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "Echoplex",
+		"Name": "Echoplex Delay",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "dunlop-echoplex.png"
+		"Image": "dunlop-echoplex-delay.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Echoplex Preamp",
+		"Width": 2.77,
+		"Height": 4.5,
+		"Image": "dunlop-echoplex-preamp.png"
 	},
 	{
 		"Brand": "Dunlop",
