@@ -11621,6 +11621,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Baby Tuner",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-tuner.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Black Secret",
 		"Width": 1.65,
 		"Height": 3.7,
@@ -11751,13 +11758,6 @@
 		"Width": 1.65,
 		"Height": 3.7,
 		"Image": "mooer-trelicopter.png"
-	},
-	{
-		"Brand": "Mooer",
-		"Name": "Tuner",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "mooer-tuner.png"
 	},
 	{
 		"Brand": "Mooer",
