@@ -169,59 +169,31 @@
 	},
 	{
 		"Brand": "Anasounds",
-		"Name": "Freq Up",
+		"Name": "Ages",
 		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-frequp.png"
+		"Height": 4.91,
+		"Image": "anasounds-ages.png"
 	},
 	{
 		"Brand": "Anasounds",
-		"Name": "Feed Me",
+		"Name": "Bitoun",
 		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-feedme.png"
+		"Height": 4.91,
+		"Image": "anasounds-bitounfuzz.png"
 	},
 	{
 		"Brand": "Anasounds",
 		"Name": "Bumper",
-		"Width": 1.97,
-		"Height": 1.97,
+		"Width": 2.38,
+		"Height": 2.125,
 		"Image": "anasounds-bumper.png"
 	},
 	{
 		"Brand": "Anasounds",
-		"Name": "High Voltage",
+		"Name": "Cerberus",
 		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-highvoltage.png"
-	},
-	{
-		"Brand": "Anasounds",
-		"Name": "Lazy Comp",
-		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-lazycomp.png"
-	},
-	{
-		"Brand": "Anasounds",
-		"Name": "Phase Lag",
-		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-phaselag.png"
-	},
-	{
-		"Brand": "Anasounds",
-		"Name": "Utopia",
-		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-utopia.png"
-	},
-	{
-		"Brand": "Anasounds",
-		"Name": "Savage",
-		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-savage.png"
+		"Height": 4.91,
+		"Image": "anasounds-cerberus.png"
 	},
 	{
 		"Brand": "Anasounds",
@@ -232,17 +204,73 @@
 	},
 	{
 		"Brand": "Anasounds",
-		"Name": "Cerberus",
+		"Name": "Freq Up",
 		"Width": 2.52,
-		"Height": 4.65,
-		"Image": "anasounds-cerberus.png"
+		"Height": 4.91,
+		"Image": "anasounds-frequp.png"
 	},
 	{
 		"Brand": "Anasounds",
-		"Name": "Bitoun Fuzz",
-		"Width": 2.6,
-		"Height": 4.72,
-		"Image": "anasounds-bitounfuzz.png"
+		"Name": "Feed Me",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-feedme.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "High Voltage",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-highvoltage.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Lazy Comp",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-lazycomp.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Phase Lag",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-phaselag.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Savage",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-savage.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Spinner",
+		"Width": 3.9,
+		"Height": 5.75,
+		"Image": "anasounds-spinner.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Tap",
+		"Width": 2,
+		"Height": 2.1,
+		"Image": "anasounds-tap.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Trémolo",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-tremolo.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Utopia",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-utopia.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -316,7 +344,7 @@
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein (Pink`)",
+		"Name": "Protein (Pink)",
 		"Width": 5,
 		"Height": 3.97,
 		"Image": "browneamps-protein-pink.png"
@@ -526,13 +554,6 @@
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Dusk",
-		"Width": 2.7,
-		"Height": 4.9,
-		"Image": "alexander-dusk.png"
-	},
-	{
-		"Brand": "Alexander",
 		"Name": "F13 Flanger",
 		"Width": 2.8,
 		"Height": 4.7,
@@ -544,13 +565,6 @@
 		"Width": 2.8,
 		"Height": 4.7,
 		"Image": "alexander-f13-neo-flanger.png"
-	},
-	{
-		"Brand": "Alexander",
-		"Name": "Frazz Dazzler",
-		"Width": 2.7,
-		"Height": 4.9,
-		"Image": "alexander-frazz-dazzler.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -855,10 +869,24 @@
 	},
 	{
 		"Brand": "Animals Pedal",
+		"Name": "1927 Home Run Comp",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-1927.png"
+  },
+	{
+		"Brand": "Animals Pedal",
 		"Name": "Dawn Ocean Meditation",
 		"Width": 2.54,
 		"Height": 4.4,
 		"Image": "animals-pedal-dawn-ocean.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Dawn Ocean Meditation (Custom Painted 039)",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-dawn-meditation-039.png"
 	},
 	{
 		"Brand": "Animals Pedal",
@@ -911,6 +939,13 @@
 	},
 	{
 		"Brand": "Animals Pedal",
+		"Name": "Surfing Bear (Custom Painted 038)",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-surfing-bear-038.png"
+	},
+	{
+		"Brand": "Animals Pedal",
 		"Name": "Surfing Polar Bear",
 		"Width": 2.54,
 		"Height": 4.4,
@@ -929,27 +964,6 @@
 		"Width": 2.54,
 		"Height": 4.4,
 		"Image": "animals-pedal-vintage-van.png"
-	},
-	{
-		"Brand": "Animals Pedal",
-		"Name": "1927 Home Run Comp",
-		"Width": 2.54,
-		"Height": 4.4,
-		"Image": "animals-pedal-1927.png"
-  },
-  {
-		"Brand": "Animals Pedals",
-		"Name": "Dawn Ocean Meditation Booster (Custom Painted 039)",
-		"Width": 2.54,
-		"Height": 4.4,
-		"Image": "animals-dawn-meditation-039.png"
-	},
-	{
-		"Brand": "Animals Pedal",
-		"Name": "Surfing Bear Overdrive (Custom Painted 038)",
-		"Width": 2.54,
-		"Height": 4.4,
-		"Image": "animals-surfing-bear-038.png"
 	},
 	{
 		"Brand": "Arc Effects",
@@ -1804,6 +1818,13 @@
 		"Width": 6.75,
 		"Height": 5.4375,
 		"Image": "boss-rc500.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-600 Loop Station",
+		"Width": 17.125,
+		"Height": 6.29,
+		"Image": "boss-rc600.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -4433,16 +4454,23 @@
 	{
 		"Brand": "Dr Scientist",
 		"Name": "Bitquest",
-		"Width": 2.5,
-		"Height": 4.45,
+		"Width": 2.75,
+		"Height": 5.08,
 		"Image": "drscientist-bitquest.png"
 	},
 	{
 		"Brand": "Dr Scientist",
+		"Name": "Dusk",
+		"Width": 2.75,
+		"Height": 5.08,
+		"Image": "drscientist-dusk.png"
+	},
+	{
+		"Brand": "Dr Scientist",
 		"Name": "Frazz Dazzler",
-		"Width": 2.5,
-		"Height": 4.45,
-		"Image": "drscientist-frazzdazzler.png"
+		"Width": 2.75,
+		"Height": 5.08,
+		"Image": "drscientist-frazz-dazzler.png"
 	},
 	{
 		"Brand": "Dr Scientist",
@@ -4453,9 +4481,16 @@
 	},
 	{
 		"Brand": "Dr Scientist",
+		"Name": "The Atmosphere",
+		"Width": 2.75,
+		"Height": 4.95,
+		"Image": "dr-scientist-the-atmosphere.png"
+	},
+	{
+		"Brand": "Dr Scientist",
 		"Name": "The Elements",
 		"Width": 2.75,
-		"Height": 5.1,
+		"Height": 4.99,
 		"Image": "dr-scientist-the-elements.png"
 	},
 	{
@@ -6371,15 +6406,29 @@
 	},
 	{
 		"Brand": "Empress",
+		"Name": "Bass Compressor (Blue Sparkle)",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "empress-bass-compressor-blue.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "Bass Compressor (Silver Sparkle)",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "empress-bass-compressor-silver.png"
+	},
+	{
+		"Brand": "Empress",
 		"Name": "Buffer",
-		"Width": 2.5,
+		"Width": 2.61,
 		"Height": 4.5,
 		"Image": "empress-buffer.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Buffer+",
-		"Width": 2.5,
+		"Width": 2.56,
 		"Height": 4.5,
 		"Image": "empress-bufferplus.png"
 	},
@@ -6393,21 +6442,28 @@
 	{
 		"Brand": "Empress",
 		"Name": "Compressor",
-		"Width": 4.5,
-		"Height": 3.625,
+		"Width": 4.68,
+		"Height": 3.5,
 		"Image": "empress-comp.png"
 	},
 	{
 		"Brand": "Empress",
-		"Name": "Compressor MkII",
+		"Name": "Compressor MKII (Blue Sparkle)",
 		"Width": 2.6,
-		"Height": 5.091,
-		"Image": "empress-compressor-mkii.png"
+		"Height": 5.09,
+		"Image": "empress-compressor-mkii-blue.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "Compressor MKII (Silver Sparkle)",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "empress-compressor-mkii-silver.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Distortion",
-		"Width": 2.5,
+		"Width": 2.63,
 		"Height": 4.5,
 		"Image": "empress-distortion.png"
 	},
@@ -6415,55 +6471,62 @@
 		"Brand": "Empress",
 		"Name": "Echosystem",
 		"Width": 5.7,
-		"Height": 3.75,
+		"Height": 3.93,
 		"Image": "empress-echosystem.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Fuzz",
-		"Width": 2.5,
+		"Width": 2.63,
 		"Height": 4.5,
 		"Image": "empress-fuzz.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Germ Drive",
-		"Width": 2.5,
+		"Width": 2.63,
 		"Height": 4.5,
 		"Image": "empress-germdrive.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Heavy",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-heavy.png"
 	},
 	{
 		"Brand": "Empress",
-		"Name": "Multidrive",
+		"Name": "Midibox2",
 		"Width": 4.5,
+		"Height": 2.62,
+		"Image": "empress-midibox2.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "Multidrive",
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-multidrive.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Nebulus",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-nebulus.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Para EQ",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-paraeq.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Phaser",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-phaser.png"
 	},
@@ -6471,42 +6534,42 @@
 		"Brand": "Empress",
 		"Name": "Reverb",
 		"Width": 5.7,
-		"Height": 3.75,
+		"Height": 3.93,
 		"Image": "empress-reverb.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Superdelay",
 		"Width": 5.7,
-		"Height": 3.75,
+		"Height": 3.87,
 		"Image": "empress-superdelay.png"
 	},
 	{
 		"Brand": "Empress",
+		"Name": "Superdelay (Vintage Modified)",
+		"Width": 5.7,
+		"Height": 3.98,
+		"Image": "empress-superdelayvmod.png"
+	},
+	{
+		"Brand": "Empress",
 		"Name": "Tape Delay",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-tapedelay.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Tremolo 2",
-		"Width": 4.5,
+		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-trem2.png"
 	},
 	{
 		"Brand": "Empress",
-		"Name": "Vintage Modified Superdelay",
-		"Width": 5.7,
-		"Height": 3.75,
-		"Image": "empress-superdelayvmod.png"
-	},
-	{
-		"Brand": "Empress",
 		"Name": "Zoia",
 		"Width": 5.7,
-		"Height": 3.75,
+		"Height": 3.93,
 		"Image": "empress-zoia.png"
 	},
 	{
@@ -10711,10 +10774,45 @@
 	},
 	{
 		"Brand": "Teisco",
+		"Name": "Boost",
+		"Width": 2.96,
+		"Height": 5.2,
+		"Image": "teisco-boost.png"
+	},
+	{
+		"Brand": "Teisco",
+		"Name": "Delay",
+		"Width": 3.83,
+		"Height": 5.2,
+		"Image": "teisco-delay.png"
+	},
+	{
+		"Brand": "Teisco",
+		"Name": "Distortion",
+		"Width": 3.83,
+		"Height": 5.2,
+		"Image": "teisco-distortion.png"
+	},
+	{
+		"Brand": "Teisco",
 		"Name": "Fuzz",
-		"Width": 3.00,
-		"Height": 5.20,
+		"Width": 2.96,
+		"Height": 5.2,
 		"Image": "teisco-fuzz.png"
+	},
+	{
+		"Brand": "Teisco",
+		"Name": "Interface",
+		"Width": 2.96,
+		"Height": 5.2,
+		"Image": "teisco-interface.png"
+	},
+	{
+		"Brand": "Teisco",
+		"Name": "Overdrive",
+		"Width": 2.96,
+		"Height": 5.2,
+		"Image": "teisco-overdrive.png"
 	},
 	{
 		"Brand": "Testing Blanks",
@@ -11765,6 +11863,13 @@
 		"Width": 6.3,
 		"Height": 2.36,
 		"Image": "morningstar-ml5.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Dual Switch",
+		"Width": 3.66,
+		"Height": 1.66,
+		"Image": "mosky-dual-switch.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -13990,7 +14095,7 @@
 		"Name": "DISO Plus",
 		"Width": 4.8,
 		"Height": 4,
-		"Image": "pinstripepedals-miso.png"
+		"Image": "pinstripepedals-disoplus.png"
 	},
 	{
 		"Brand": "Pinstripe Pedals",
@@ -15743,67 +15848,305 @@
 		"Image": "swindler-redmountain.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
+		"Name": "Alberta",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-alberta.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Alberta (Danish)",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-alberta-danish.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Alberta II",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-alberta-2.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Bass Juice",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-bass-juice.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Bloody Mary",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-bloody-mary.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Comp-Nova",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-comp-nova.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Creamer",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "trex-creamer.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Diva Drive",
-		"Width": 3,
-		"Height": 4.7,
+		"Width": 2.71,
+		"Height": 4.65,
 		"Image": "trex-diva.png"
 	},
 	{
-		"Brand": "T-rex",
-		"Name": "Duck Tail",
+		"Brand": "T-Rex Effects",
+		"Name": "Dr. Swamp",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
+		"Image": "trex-dr-swamp.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Duck Tail",
+		"Width": 4.28,
+		"Height": 4.83,
 		"Image": "trex-ducktail.png"
 	},
 	{
-		"Brand": "T-rex",
-		"Name": "Moller2",
+		"Brand": "T-Rex Effects",
+		"Name": "Fat Shuga",
+		"Width": 2.71,
+		"Height": 4.65,
+		"Image": "trex-fat-shuga.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Hobo Drive",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
+		"Image": "trex-hobo-drive.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Image Looper",
+		"Width": 3.9,
+		"Height": 4.92,
+		"Image": "trex-image-looper.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Junior Roommate",
+		"Width": 4.28,
+		"Height": 4.83,
+		"Image": "trex-junior-roommate.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Karma",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "trex-karma.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "MAB",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-mab.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Møller",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-moller.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Møller 2",
+		"Width": 3.9,
+		"Height": 4.83,
 		"Image": "trex-moller2.png"
 	},
 	{
-		"Brand": "T-rex",
-		"Name": "Mudhoney II",
+		"Brand": "T-Rex Effects",
+		"Name": "Mudhoney",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
 		"Image": "trex-mudhoney.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
+		"Name": "Mudhoney II",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-mudhoney-2.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Neocomp",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "trex-neocomp.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Nitros",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "trex-nitros.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Octavius",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-octavius.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Quint",
 		"Width": 2.4,
-		"Height": 4.6,
+		"Height": 4.65,
 		"Image": "trex-quint.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
+		"Name": "Replay Box",
+		"Width": 4.5,
+		"Height": 2.56,
+		"Image": "trex-replay-box.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Replica",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-replica.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Replicator",
+		"Width": 9.25,
+		"Height": 6.82,
+		"Image": "trex-replicator.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Replicator D'Luxe",
+		"Width": 6.85,
+		"Height": 6.72,
+		"Image": "trex-replicator-dluxe.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Replicator Junior",
+		"Width": 6.85,
+		"Height": 6.64,
+		"Image": "trex-replicator-junior.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Reptile",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
 		"Image": "trex-reptile.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
+		"Name": "Reptile 2",
+		"Width": 4.28,
+		"Height": 4.83,
+		"Image": "trex-reptile-2.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Room-Mate",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-room-mate.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Soulmate Acoustic",
+		"Width": 15.75,
+		"Height": 5.96,
+		"Image": "trex-soulmate-acoustic.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Squeezer",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
 		"Image": "trex-squeezer.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
 		"Name": "Tapster",
 		"Width": 3.9,
-		"Height": 4.7,
+		"Height": 4.83,
 		"Image": "trex-tapster.png"
 	},
 	{
-		"Brand": "T-rex",
+		"Brand": "T-Rex Effects",
+		"Name": "The Sweeper",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-the-sweeper.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Tremonti Phaser",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-tremonti-phaser.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Tremster",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-tremster.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Tunemaster",
 		"Width": 2.4,
-		"Height": 4.6,
+		"Height": 4.87,
 		"Image": "trex-tunemaster.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Twin Boost",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-twin-boost.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Twister 2",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-twister-2.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Viper",
+		"Width": 3.9,
+		"Height": 4.83,
+		"Image": "trex-viper.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
+		"Name": "Vulture",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "trex-vulture.png"
 	},
 	{
 		"Brand": "TC Electronic",
