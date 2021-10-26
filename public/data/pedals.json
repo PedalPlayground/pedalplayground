@@ -15842,6 +15842,14 @@
 		"Image": "subdecay-springtheory.png"
 	},
 	{
+		"Brand": "Subdecay",
+		"Name": "Vagabond",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "subdecay-vagabond.png"
+
+	},
+	{
 		"Brand": "Suhr",
 		"Name": "ACE",
 		"Width": 4.88,
@@ -18969,14 +18977,6 @@
 		"Width": 4.5,
 		"Height": 3.8,
 		"Image": "wampler-terraform.png"
-	},
-	{
-		"Brand": "Subdecay",
-		"Name": "Vagabond",
-		"Width": 2.75,
-		"Height": 4.4,
-		"Image": "subdecay-vagabond.png"
-
 	},
 	{
 		"Brand": "Valeton",
