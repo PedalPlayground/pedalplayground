@@ -280,27 +280,6 @@
 		"Image": "ada-pbf-flanger.png"
 	},
 	{
-		"Brand": "Source Audio",
-		"Name": "Aftershock bass distortion",
-		"Width": 2.75,
-		"Height": 4.5,
-		"Image": "source-audio-aftershock-bass-distortion.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Spectrum",
-		"Width": 2.75,
-		"Height": 4.5,
-		"Image": "sa-spectrum.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "C4 Synth",
-		"Width": 2.75,
-		"Height": 4.5,
-		"Image": "c4synth.png"
-	},
-	{
 		"Brand": "Rawkworks",
 		"Name": "Light OD",
 		"Width": 2.62,
@@ -15198,10 +15177,25 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Reflex",
-		"Width": 3.75,
-		"Height": 10.5,
-		"Image": "sourceaudio-reflex.png"
+		"Name": "Aftershock bass distortion",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "source-audio-aftershock-bass-distortion.png"
+	},
+
+	{
+		"Brand": "Source Audio",
+		"Name": "Collider",
+		"Width": 4.4,
+		"Height": 4.58,
+		"Image": "sa-collider.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "C4 Synth",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "c4synth.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15212,13 +15206,6 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Gemini Chorus",
-		"Width": 2.75,
-		"Height": 4.5,
-		"Image": "sourceaudio-gemini.png"
-	},
-	{
-		"Brand": "Source Audio",
 		"Name": "EQ2 Programmable EQ",
 		"Width": 2.75,
 		"Height": 4.5,
@@ -15226,10 +15213,10 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "True Spring Reverb",
+		"Name": "Gemini Chorus",
 		"Width": 2.75,
 		"Height": 4.5,
-		"Image": "sourceaudio-truespring.png"
+		"Image": "sourceaudio-gemini.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15261,13 +15248,6 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Multiwave Distortion",
-		"Width": 4.5,
-		"Height": 4.5,
-		"Image": "sourceaudio-multiwave.png"
-	},
-	{
-		"Brand": "Source Audio",
 		"Name": "Multiwave Distortion SA120",
 		"Width": 4,
 		"Height": 7.12,
@@ -15282,31 +15262,10 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Collider",
-		"Width": 4.4,
-		"Height": 4.58,
-		"Image": "sa-collider.png"
-	},
-	{
-		"Brand": "Source Audio",
 		"Name": "Neuro Hub",
 		"Width": 3.8,
 		"Height": 2.1,
 		"Image": "sourceaudio-neurohub.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "OFD Guitar Micromodeler",
-		"Width": 4.5,
-		"Height": 4.5,
-		"Image": "sourceaudio-ofo.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Orbital Modulator",
-		"Width": 4.5,
-		"Height": 4.5,
-		"Image": "sourceaudio-orbital.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15317,6 +15276,13 @@
 	},
 	{
 		"Brand": "Source Audio",
+		"Name": "Reflex",
+		"Width": 3.75,
+		"Height": 10.5,
+		"Image": "sourceaudio-reflex.png"
+	},
+	{
+		"Brand": "Source Audio",
 		"Name": "Soleman MIDI Controller",
 		"Width": 10.5,
 		"Height": 3.75,
@@ -15324,10 +15290,59 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Stingray Multi-Filter",
+		"Name": "Soundblox 2 Manta Bass Filter",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-stingray.png"
+		"Image": "sourceaudio-sb2-manta.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 Multiwave Bass Distortion",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-multiwave-bass.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 Multiwave Distortion",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-multiwave.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 OFD Bass microModeler",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-odf-bass.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 OFD Guitar microModeler",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-ofd.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 Orbital Modulator",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-orbital.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 Stingray Multi-Filter",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-stingray.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Spectrum",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "sa-spectrum.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15335,6 +15350,13 @@
 		"Width": 2.25,
 		"Height": 2.5,
 		"Image": "sourceaudio-tap.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "True Spring Reverb",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "sourceaudio-truespring.png"
 	},
 	{
 		"Brand": "Source Audio",
