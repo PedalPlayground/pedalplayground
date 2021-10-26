@@ -18971,6 +18971,14 @@
 		"Image": "wampler-terraform.png"
 	},
 	{
+		"Brand": "Subdecay",
+		"Name": "Vagabond",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "subdecay-vagabond.png"
+
+	},
+	{
 		"Brand": "Valeton",
 		"Name": "FP-10 FET Preamp",
 		"Width": 1.89,
