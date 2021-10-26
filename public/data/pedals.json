@@ -15828,10 +15828,59 @@
 	},
 	{
 		"Brand": "Supro",
-		"Name": " Tremolo",
+		"Name": "Tremolo",
 		"Width": 2.6,
 		"Height": 4.8,
 		"Image": "supro-tremolo.png"
+	},
+	{
+		"Brand": "Surfy Industries",
+		"Name": "Blossom Point",
+		"Width": 2.46,
+		"Height": 4.33,
+		"Image": "surfy-blossom-point.png"
+	},
+	{
+		"Brand": "Surfy Industries",
+		"Name": "SurfyBear Classic",
+		"Width": 17.94,
+		"Height": 7.5,
+		"Image": "surfy-surfybear-classic.png"
+	},
+	{
+		"Brand": "Surfy Industries",
+		"Name": "SurfyBear Compact",
+		"Width": 9.5,
+		"Height": 4.74,
+		"Image": "surfy-surfybear-compact.png"
+	},
+	{
+		"Brand": "Surfy Industries",
+		"Name": "SurfyBear Metal",
+		"Width": 17.5,
+		"Height": 6.6,
+		"Image": "surfy-surfybear-metal.png"
+	},
+	{
+		"Brand": "Surfy Industries",
+		"Name": "SurfyDrip",
+		"Width": 2.46,
+		"Height": 4.33,
+		"Image": "surfy-surfydrip.png"
+	},
+	{
+		"Brand": "Surfy Industries",
+		"Name": "SurfyTrem",
+		"Width": 2.46,
+		"Height": 4.33,
+		"Image": "surfy-surfytrem.png"
+	},
+	{
+		"Brand": "Surfy Industries",
+		"Name": "SurfyVibe",
+		"Width": 2.46,
+		"Height": 4.33,
+		"Image": "surfy-surfyvibe.png"
 	},
 	{
 		"Brand": "Sweetsound",
