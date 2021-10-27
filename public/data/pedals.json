@@ -1940,6 +1940,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "TB-2w Tone Bender",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-tb2w.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "TE-2 Tera Echo",
 		"Width": 2.875,
 		"Height": 5.125,
