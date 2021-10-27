@@ -3564,6 +3564,13 @@
 	},
 	{
 		"Brand": "Danelectro",
+		"Name": "Back Talk",
+		"Width": 2.31,
+		"Height": 4.37,
+		"Image": "danelectro-back-talk.png"
+	},
+	{
+		"Brand": "Danelectro",
 		"Name": "Cool Cat Tremolo",
 		"Width": 3.5,
 		"Height": 4.75,
