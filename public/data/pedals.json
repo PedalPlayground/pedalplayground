@@ -1940,7 +1940,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "TB-2w Tone Bender",
+		"Name": "TB-2w Tone Bender (Waza Craft)",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-tb2w.png"
@@ -17836,6 +17836,13 @@
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-ironhorse-v2.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Iron Horse V3",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-ironhorse-v3.png"
 	},
 	{
 		"Brand": "Walrus",
