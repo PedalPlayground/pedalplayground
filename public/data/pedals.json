@@ -4579,21 +4579,7 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "Crybaby",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-wah.png"
-	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Crybaby Junior",
-		"Width": 4.00,
-		"Height": 8.00,
-		"Image": "dunlop-crybaby-jr.png"
-	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Crybaby Mini",
+		"Name": "CBM95 Cry Baby Mini Wah",
 		"Width": 3,
 		"Height": 5.25,
 		"Image": "dunlop-crybabymini.png"
@@ -4635,6 +4621,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "GCB95 Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-wah.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Jimi Hendrix Octavio Fuzz",
 		"Width": 2.4,
 		"Height": 4.3,
@@ -4656,13 +4649,6 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "Jimi Hendrix Fuzz Face",
-		"Width": 7.0,
-		"Height": 7.0,
-		"Image": "dunlop-fuzzface-jimi-hendrix.png"
-	},
-	{
-		"Brand": "Dunlop",
 		"Name": "Fuzz Face Germanium Mini",
 		"Width": 3.5,
 		"Height": 3.5,
@@ -4670,10 +4656,24 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Jimi Hendrix Fuzz Face",
+		"Width": 7.0,
+		"Height": 7.0,
+		"Image": "dunlop-fuzzface-jimi-hendrix.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Jimi Hendrix Fuzz Face Mini",
 		"Width": 3.5,
 		"Height": 3.5,
 		"Image": "dunlop-fuzzface-jimi-hendrix-mini.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Mini 535Q Wah",
+		"Width": 3.13,
+		"Height": 5.24,
+		"Image": "dunlop-mini-535q.png"
 	},
 	{
 		"Brand": "Dunlop",
