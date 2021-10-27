@@ -3054,29 +3054,29 @@
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Ayahuasca",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-ayahuasca.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Blooper",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.95,
 		"Image": "chasebliss-blooper.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Brothers",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-brothers.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Condor",
-		"Width": 2.85,
-		"Height": 4.85,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-condor.png"
 	},
 	{
@@ -3089,8 +3089,8 @@
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Dark World",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-darkworld.png"
 	},
 	{
@@ -3103,15 +3103,15 @@
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Generation Loss",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-generation-loss.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Gravitas",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-gravitas.png"
 	},
 	{
@@ -3124,8 +3124,8 @@
 	{
 		"Brand": "Chase Bliss",
 		"Name": "MOOD",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-mood.png"
 	},
 	{
@@ -3138,64 +3138,64 @@
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Spectre",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-spectre.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Thermae",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-thermae.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Tonal Recall",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-tonalrecall.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Tonal Recall RKM",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-tonalrecall-rkm.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Warped Vinyl",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-warpedvinyl.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Warped Vinyl HiFi",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-warpedvinyl-hifi.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Warped Vinyl MKII",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-warpedvinyl-mk2.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Wombtone",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-wombtone.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Wombtone MKII",
-		"Width": 2.65,
-		"Height": 4.75,
+		"Width": 2.86,
+		"Height": 4.86,
 		"Image": "chasebliss-wombtone-mk2.png"
 	},
 	{
@@ -18313,10 +18313,73 @@
 	},
 	{
 		"Brand": "Wren And Cuff",
+		"Name": "47/73 Classic",
+		"Width": 2.64,
+		"Height": 4.64,
+		"Image": "wrenandcuff-4773-classic.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Ace Octave Fuzz",
+		"Width": 2.64,
+		"Height": 4.42,
+		"Image": "wrenandcuff-ace-octave-fuzz.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
 		"Name": "Box of War",
-		"Width": 3.46,
-		"Height": 5.65,
+		"Width": 3.5,
+		"Height": 5.62,
 		"Image": "wrenandcuff-boxofwar.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Box of War (Small Foot)",
+		"Width": 2.64,
+		"Height": 4.64,
+		"Image": "wrenandcuff-boxofwar-small-foot.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Caprid OG",
+		"Width": 5.5,
+		"Height": 7.1,
+		"Image": "wrenandcuff-caprid.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Caprid OG (Black Violet)",
+		"Width": 5.5,
+		"Height": 7.1,
+		"Image": "wrenandcuff-caprid-blackviolet.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Caprid OG (Blue Violet)",
+		"Width": 5.5,
+		"Height": 7.1,
+		"Image": "wrenandcuff-caprid-blueviolet.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Caprid (Small Foot)",
+		"Width": 2.64,
+		"Height": 4.64,
+		"Image": "wrenandcuff-caprid-small-foot.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Elephant Skin",
+		"Width": 4.72,
+		"Height": 4,
+		"Image": "wrenandcuff-elephant-skin.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Eye See '78",
+		"Width": 2.64,
+		"Height": 4.46,
+		"Image": "wrenandcuff-eyesee78.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
@@ -18327,10 +18390,115 @@
 	},
 	{
 		"Brand": "Wren And Cuff",
+		"Name": "Eye See Pi (Small Foot)",
+		"Width": 2.64,
+		"Height": 4.64,
+		"Image": "wrenandcuff-eyeseepi-small-foot.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Gold Comp Compressor",
+		"Width": 2.64,
+		"Height": 4.42,
+		"Image": "wrenandcuff-gold-comp.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "J Mascis Garbage Face",
+		"Width": 5.08,
+		"Height": 4,
+		"Image": "wrenandcuff-garbage-face.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "MKII Germanium Bender V2",
+		"Width": 2.64,
+		"Height": 4.64,
+		"Image": "wrenandcuff-mk2-germanium-bender-v2.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Pickle Pie B",
+		"Width": 2.99,
+		"Height": 4.51,
+		"Image": "wrenandcuff-pickle-pie-b.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
 		"Name": "Phat Phuck B",
-		"Width": 2.65,
+		"Width": 2.64,
 		"Height": 4.42,
 		"Image": "wrenandcuff-phatphuckb.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Sonder",
+		"Width": 5.08,
+		"Height": 4,
+		"Image": "wrenandcuff-sonder.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Suppa Phat Phuk",
+		"Width": 2.64,
+		"Height": 4.64,
+		"Image": "wrenandcuff-suppa-phat-phuk.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Super Russian",
+		"Width": 4.72,
+		"Height": 4,
+		"Image": "wrenandcuff-super-russian.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Tall Font Russian",
+		"Width": 2.64,
+		"Height": 4.51,
+		"Image": "wrenandcuff-tall-font-russian.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Tri Pie '70",
+		"Width": 2.64,
+		"Height": 4.51,
+		"Image": "wrenandcuff-tri-pie-70.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Two-Five Drive Boost",
+		"Width": 2.64,
+		"Height": 4.64,
+		"Image": "wrenandcuff-two-five-drive-boost.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Violet World Fuzz",
+		"Width": 2.64,
+		"Height": 4.51,
+		"Image": "wrenandcuff-violet-world.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "White Elk (Small Foot)",
+		"Width": 2.64,
+		"Height": 4.64,
+		"Image": "wrenandcuff-white-elk-small-foot.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Your Face 60's",
+		"Width": 2.64,
+		"Height": 4.51,
+		"Image": "wrenandcuff-yourface-60s.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Your Face 70's",
+		"Width": 2.64,
+		"Height": 4.46,
+		"Image": "wrenandcuff-yourface-70s.png"
 	},
 	{
 		"Brand": "Xotic",
