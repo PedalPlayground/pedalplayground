@@ -15492,6 +15492,13 @@
 	},
 	{
 		"Brand": "Source Audio",
+		"Name": "Soundblox 2 Dimension Reverb",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-dimreverb.png"
+	},
+	{
+		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Multiwave Distortion",
 		"Width": 4.5,
 		"Height": 4.5,
