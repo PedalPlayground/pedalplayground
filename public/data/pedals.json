@@ -273,25 +273,11 @@
 		"Image": "anasounds-utopia.png"
 	},
 	{
-		"Brand": "Source Audio",
-		"Name": "Aftershock bass distortion",
-		"Width": 2.75,
+		"Brand": "A/DA",
+		"Name": "PBF Flanger",
+		"Width": 2.5,
 		"Height": 4.5,
-		"Image": "source-audio-aftershock-bass-distortion.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Spectrum",
-		"Width": 2.75,
-		"Height": 4.5,
-		"Image": "sa-spectrum.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "C4 Synth",
-		"Width": 2.75,
-		"Height": 4.5,
-		"Image": "c4synth.png"
+		"Image": "ada-pbf-flanger.png"
 	},
 	{
 		"Brand": "Rawkworks",
@@ -966,6 +952,27 @@
 		"Image": "animals-pedal-vintage-van.png"
 	},
 	{
+		"Brand": "Animals Pedal",
+		"Name": "1927 Home Run Comp",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-1927.png"
+  },
+  {
+		"Brand": "Animals Pedal",
+		"Name": "Dawn Ocean Meditation Booster (Custom Painted 039)",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-dawn-meditation-039.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Surfing Bear Overdrive (Custom Painted 038)",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-surfing-bear-038.png"
+	},
+	{
 		"Brand": "Arc Effects",
 		"Name": "Big Green",
 		"Width": 3.62,
@@ -1293,6 +1300,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-bc1x.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "BF-2 Flanger",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-bf2.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -1965,6 +1979,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-wl50.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "WL-60 Wireless System",
+		"Width": 2.75591,
+		"Height": 4.72441,
+		"Image": "boss-wl60.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2658,6 +2679,13 @@
 		"Width": 1.339,
 		"Height": 1.496,
 		"Image": "cme-widiuhost.png"
+	},
+	{
+		"Brand": "Carl Martin",
+		"Name": "PlexiRanger",
+		"Width": 4.72,
+		"Height": 3.74,
+		"Image": "carl-martin-plexiranger.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -4299,13 +4327,6 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "Whammy 5",
-		"Width": 6.5,
-		"Height": 7.75,
-		"Image": "digitech-whammy.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "Whammy DT",
 		"Width": 8.5,
 		"Height": 7.75,
@@ -4600,10 +4621,17 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "Echoplex",
+		"Name": "Echoplex Delay",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "dunlop-echoplex.png"
+		"Image": "dunlop-echoplex-delay.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Echoplex Preamp",
+		"Width": 2.77,
+		"Height": 4.5,
+		"Image": "dunlop-echoplex-preamp.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -5269,6 +5297,69 @@
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "earthquaker-zap-machine-v2.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "BassIQ",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-bassiq.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "DPhaser",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-multicomp.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "DynaVerb",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-dynaverb.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "MetalDrive",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-metaldrive.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "MultiComp",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-multicomp.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "MultiDrive",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-multidrive.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "OctaBass",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-octabass.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "TremoLo",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-tremolo.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "UniChorus",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "ebs-unichorus.png"
 	},
 	{
 		"Brand": "Effectrode",
@@ -10746,10 +10837,24 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Snow White Auto Wah",
+		"Width": 2.6,
+		"Height": 4.45,
+		"Image": "madprof-snowwhite.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Silver Spring Reverb",
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "madprof-silverspring.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Simble",
+		"Width": 2.5,
+		"Height": 4.3,
+		"Image": "madprof-simble.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -11614,6 +11719,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Baby Tuner",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-tuner.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Black Secret",
 		"Width": 1.65,
 		"Height": 3.7,
@@ -11747,17 +11859,17 @@
 	},
 	{
 		"Brand": "Mooer",
-		"Name": "Tuner",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "mooer-tuner.png"
-	},
-	{
-		"Brand": "Mooer",
 		"Name": "Yellow Comp",
 		"Width": 1.65,
 		"Height": 3.7,
 		"Image": "mooer-yellowcomp.png"
+	},
+	{
+		"Brand": "Moog",
+		"Name": "EP-3",
+		"Width": 3.5,
+		"Height": 9.5,
+		"Image": "moog-ep3.png"
 	},
 	{
 		"Brand": "Moog",
@@ -14175,6 +14287,13 @@
 		"Image": "radial-twin-city.png"
 	},
 	{
+		"Brand": "Reuss",
+		"Name": "Evil Twin ET-01",
+		"Width": 4.72,
+		"Height": 3.74,
+		"Image": "reuss-evil-twin.png"
+	},
+	{
 		"Brand": "Retro-Sonic",
 		"Name": "Analog Delay",
 		"Width": 4.7,
@@ -15058,10 +15177,25 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Reflex",
-		"Width": 3.75,
-		"Height": 10.5,
-		"Image": "sourceaudio-reflex.png"
+		"Name": "Aftershock bass distortion",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "source-audio-aftershock-bass-distortion.png"
+	},
+
+	{
+		"Brand": "Source Audio",
+		"Name": "Collider",
+		"Width": 4.4,
+		"Height": 4.58,
+		"Image": "sa-collider.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "C4 Synth",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "c4synth.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15072,13 +15206,6 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Gemini Chorus",
-		"Width": 2.75,
-		"Height": 4.5,
-		"Image": "sourceaudio-gemini.png"
-	},
-	{
-		"Brand": "Source Audio",
 		"Name": "EQ2 Programmable EQ",
 		"Width": 2.75,
 		"Height": 4.5,
@@ -15086,10 +15213,10 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "True Spring Reverb",
+		"Name": "Gemini Chorus",
 		"Width": 2.75,
 		"Height": 4.5,
-		"Image": "sourceaudio-truespring.png"
+		"Image": "sourceaudio-gemini.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15121,13 +15248,6 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Multiwave Distortion",
-		"Width": 4.5,
-		"Height": 4.5,
-		"Image": "sourceaudio-multiwave.png"
-	},
-	{
-		"Brand": "Source Audio",
 		"Name": "Multiwave Distortion SA120",
 		"Width": 4,
 		"Height": 7.12,
@@ -15142,31 +15262,10 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Collider",
-		"Width": 4.4,
-		"Height": 4.58,
-		"Image": "sa-collider.png"
-	},
-	{
-		"Brand": "Source Audio",
 		"Name": "Neuro Hub",
 		"Width": 3.8,
 		"Height": 2.1,
 		"Image": "sourceaudio-neurohub.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "OFD Guitar Micromodeler",
-		"Width": 4.5,
-		"Height": 4.5,
-		"Image": "sourceaudio-ofo.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Orbital Modulator",
-		"Width": 4.5,
-		"Height": 4.5,
-		"Image": "sourceaudio-orbital.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15177,6 +15276,13 @@
 	},
 	{
 		"Brand": "Source Audio",
+		"Name": "Reflex",
+		"Width": 3.75,
+		"Height": 10.5,
+		"Image": "sourceaudio-reflex.png"
+	},
+	{
+		"Brand": "Source Audio",
 		"Name": "Soleman MIDI Controller",
 		"Width": 10.5,
 		"Height": 3.75,
@@ -15184,10 +15290,59 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Stingray Multi-Filter",
+		"Name": "Soundblox 2 Manta Bass Filter",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-stingray.png"
+		"Image": "sourceaudio-sb2-manta.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 Multiwave Bass Distortion",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-multiwave-bass.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 Multiwave Distortion",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-multiwave.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 OFD Bass microModeler",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-odf-bass.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 OFD Guitar microModeler",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-ofd.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 Orbital Modulator",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-orbital.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox 2 Stingray Multi-Filter",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-stingray.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Spectrum",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "sa-spectrum.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15195,6 +15350,13 @@
 		"Width": 2.25,
 		"Height": 2.5,
 		"Image": "sourceaudio-tap.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "True Spring Reverb",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "sourceaudio-truespring.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15678,6 +15840,14 @@
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "subdecay-springtheory.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Vagabond",
+		"Width": 2.75,
+		"Height": 4.4,
+		"Image": "subdecay-vagabond.png"
+
 	},
 	{
 		"Brand": "Suhr",
@@ -16989,6 +17159,13 @@
 		"Image": "teenage-engineering-op-z.png"
 	},
 	{
+		"Brand": "The Pill",
+		"Name": "Stereo",
+		"Width": 4.7047244,
+		"Height": 3.70079,
+		"Image": "pill-stereo.png"
+	},
+	{
 		"Brand": "Thorpy",
 		"Name": "Gunshot",
 		"Width": 2.75,
@@ -17456,6 +17633,13 @@
 		"Width": 5.12,
 		"Height": 9.96,
 		"Image": "vox-bigbadwah.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Satchurator",
+		"Width": 5.63,
+		"Height": 4.76,
+		"Image": "vox-satchurator.png"
 	},
 	{
 		"Brand": "Vox",
@@ -18030,6 +18214,13 @@
 		"Width": 3.5,
 		"Height": 4.5,
 		"Image": "wampler-triplewreck.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Thirty Something",
+		"Width": 3.5,
+		"Height": 4.5,
+		"Image": "wampler-thirty-something.png"
 	},
 	{
 		"Brand": "Wampler",
