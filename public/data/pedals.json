@@ -6686,6 +6686,13 @@
 	},
 	{
 		"Brand": "Ernie Ball",
+		"Name": "Volt",
+		"Width": 3.5,
+		"Height": 2.3,
+		"Image": "ernieball-volt.png"
+	},
+	{
+		"Brand": "Ernie Ball",
 		"Name": "VP Jr Tuner",
 		"Width": 3.5,
 		"Height": 10,
