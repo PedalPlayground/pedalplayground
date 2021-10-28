@@ -11361,13 +11361,6 @@
 	},
 	{
 		"Brand": "Mesa Boogie",
-		"Name": "High-Wire Dual Buffer / Output Boost",
-		"Width": 2.6,
-		"Height": 4.48,
-		"Image": "mesa-highwire.png"
-	},
-	{
-		"Brand": "Mesa Boogie",
 		"Name": "Flux-Drive",
 		"Width": 2.75,
 		"Height": 4.75,
@@ -11375,17 +11368,24 @@
 	},
 	{
 		"Brand": "Mesa Boogie",
-		"Name": "Mark V Footswitch",
-		"Width": 13.625,
-		"Height": 5.625,
-		"Image": "mesa-boogie-mark-v.png"
-	},
-	{
-		"Brand": "Mesa Boogie",
 		"Name": "Grid Slammer",
 		"Width": 2.75,
 		"Height": 4.75,
 		"Image": "mesaboogie-gridslammer.png"
+	},
+	{
+		"Brand": "Mesa Boogie",
+		"Name": "High-Wire Dual Buffer / Output Boost",
+		"Width": 2.6,
+		"Height": 4.48,
+		"Image": "mesaboogie-highwire.png"
+	},
+	{
+		"Brand": "Mesa Boogie",
+		"Name": "Mark V Footswitch",
+		"Width": 13.625,
+		"Height": 5.625,
+		"Image": "mesaboogie-mark-v.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
@@ -11400,6 +11400,13 @@
 		"Width": 2.75,
 		"Height": 4.75,
 		"Image": "mesaboogie-toneburst.png"
+	},
+	{
+		"Brand": "Mesa Boogie",
+		"Name": "Triple Rectifier Footswitch",
+		"Width": 10.125,
+		"Height": 5.5625,
+		"Image": "mesaboogie-triplerec.png"
 	},
 	{
 		"Brand": "MI Audio",
