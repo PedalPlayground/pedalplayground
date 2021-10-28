@@ -11830,6 +11830,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Leveline",
+		"Width": 2.16,
+		"Height": 5.03,
+		"Image": "mooer-l6.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Macro Power S12",
 		"Width": 8.95,
 		"Height": 3.46,
