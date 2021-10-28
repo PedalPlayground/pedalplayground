@@ -15457,13 +15457,6 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Multiwave Distortion SA120",
-		"Width": 4,
-		"Height": 7.12,
-		"Image": "sourceaudio-multiwavedistsa120.png"
-	},
-	{
-		"Brand": "Source Audio",
 		"Name": "Nemesis",
 		"Width": 4.4,
 		"Height": 4.58,
@@ -15499,6 +15492,13 @@
 	},
 	{
 		"Brand": "Source Audio",
+		"Name": "Soundblox 2 Dimension Reverb",
+		"Width": 4.5,
+		"Height": 4.5,
+		"Image": "sourceaudio-sb2-dimreverb.png"
+	},
+	{
+		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Manta Bass Filter",
 		"Width": 4.5,
 		"Height": 4.5,
@@ -15510,13 +15510,6 @@
 		"Width": 4.5,
 		"Height": 4.5,
 		"Image": "sourceaudio-sb2-multiwave-bass.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Soundblox 2 Dimension Reverb",
-		"Width": 4.5,
-		"Height": 4.5,
-		"Image": "sourceaudio-sb2-dimreverb.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15545,6 +15538,55 @@
 		"Width": 4.5,
 		"Height": 4.5,
 		"Image": "sourceaudio-sb2-stingray.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox Bass Envelope Filter",
+		"Width": 4,
+		"Height": 7	,
+		"Image": "sourceaudio-sb-bassenv.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox Guitar Envelope Filter",
+		"Width": 4,
+		"Height": 7	,
+		"Image": "sourceaudio-sb-guitarenv.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox Classic Distortion",
+		"Width": 4,
+		"Height": 7	,
+		"Image": "sourceaudio-sb-classic.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox Multiwave Bass Distortion",
+		"Width": 4,
+		"Height": 7,
+		"Image": "sourceaudio-sb-multiwave-bass.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox Multiwave Distortion",
+		"Width": 4,
+		"Height": 7	,
+		"Image": "sourceaudio-sb-multiwave.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox Tri-Mod phaser",
+		"Width": 4,
+		"Height": 7	,
+		"Image": "sourceaudio-sb-trimod-phaser.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox Tri-Mod Wah",
+		"Width": 4,
+		"Height": 7	,
+		"Image": "sourceaudio-sb-trimod-wah.png"
 	},
 	{
 		"Brand": "Source Audio",
