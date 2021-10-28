@@ -1831,7 +1831,7 @@
 		"Name": "DC-2 Dimension C",
 		"Width": 2.875,
 		"Height": 5.125,
-		"Image": "boss-dimensionc.png"
+		"Image": "boss-dc1.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2055,7 +2055,7 @@
 		"Name": "GT-1000CORE Guitar Effects Processor",
 		"Width": 6.8125,
 		"Height": 5.375,
-		"Image": "boss-gt-1000-core.png"
+		"Image": "boss-gt1000core.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2468,14 +2468,14 @@
 		"Name": "VE-8 Acoustic Singer",
 		"Width": 8.5625,
 		"Height": 6.375,
-		"Image": "boss-ve-8.png"
+		"Image": "boss-ve8.png"
 	},
 	{
 		"Brand": "BOSS",
 		"Name": "VE-500 Vocal Performer",
 		"Width": 6.75,
 		"Height": 5.4375,
-		"Image": "boss-ve-500.png"
+		"Image": "boss-ve500.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -18984,6 +18984,13 @@
 		"Height": 4.1875,
 		"Image": "zeppelin-quaverato.png"
     },
+	{
+		"Brand": "Zoom",
+		"Name": "G1x Four",
+		"Width": 6.14173,
+		"Height": 5.11811,
+		"Image": "zoom-g1x-four.png"
+	},
 	{
 		"Brand": "Zoom",
 		"Name": "G3",
