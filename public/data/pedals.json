@@ -10626,17 +10626,31 @@
 	},
 	{
 		"Brand": "Lehle",
-		"Name": "Mono Volume",
-		"Width": 3.94,
-		"Height": 10.24,
-		"Image": "lehle-volume.png"
+		"Name": "D.Loop",
+		"Width": 15.5,
+		"Height": 10.3,
+		"Image": "lehle-dloop.png"
 	},
 	{
 		"Brand": "Lehle",
 		"Name": "Dual Expression",
 		"Width": 3.54331,
 		"Height": 7.87402,
-		"Image": "lehle-dualexpression.png"
+		"Image": "lehle-dual-expression.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "Little Dual II",
+		"Width": 12.2,
+		"Height": 9.9,
+		"Image": "lehle-little-dual-ii.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "Mono Volume",
+		"Width": 3.94,
+		"Height": 10.24,
+		"Image": "lehle-volume.png"
 	},
 	{
 		"Brand": "Little Robbie",
