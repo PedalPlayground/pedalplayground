@@ -15548,17 +15548,17 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Soundblox Guitar Envelope Filter",
-		"Width": 4,
-		"Height": 7	,
-		"Image": "sourceaudio-sb-guitarenv.png"
-	},
-	{
-		"Brand": "Source Audio",
 		"Name": "Soundblox Classic Distortion",
 		"Width": 4,
 		"Height": 7	,
 		"Image": "sourceaudio-sb-classic.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Soundblox Guitar Envelope Filter",
+		"Width": 4,
+		"Height": 7	,
+		"Image": "sourceaudio-sb-guitarenv.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -15576,7 +15576,7 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Soundblox Tri-Mod phaser",
+		"Name": "Soundblox Tri-Mod Phaser",
 		"Width": 4,
 		"Height": 7	,
 		"Image": "sourceaudio-sb-trimod-phaser.png"
