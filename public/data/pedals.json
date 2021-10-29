@@ -12237,6 +12237,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Deep Phase",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-deepphase.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Distortion III",
 		"Width": 2.56,
 		"Height": 4.33,
