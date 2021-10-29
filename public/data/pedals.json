@@ -3319,6 +3319,13 @@
 	},
 	{
 		"Brand": "Cooper FX",
+		"Name": "Exp Gen",
+		"Width": 2.73,
+		"Height": 4.5,
+		"Image": "cooper-exp-gen.png"
+	},
+	{
+		"Brand": "Cooper FX",
 		"Name": "Generation Loss",
 		"Width": 3.7,
 		"Height": 4.85,
@@ -3344,6 +3351,13 @@
 		"Width": 3.7,
 		"Height": 4.85,
 		"Image": "cooper-outward.png"
+	},
+	{
+		"Brand": "Cooper FX",
+		"Name": "Signal Path Selector",
+		"Width": 5.08,
+		"Height": 3.7,
+		"Image": "cooper-signal-path-selector.png"
 	},
 	{
 		"Brand": "Coppersound",
@@ -15100,85 +15114,148 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "76",
+		"Width": 2.79,
+		"Height": 4.77,
+		"Image": "solidgoldfx-76.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "76 Plus",
+		"Width": 4.89,
+		"Height": 3.68,
+		"Image": "solidgoldfx-76plus.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Apollo",
-		"Width": 4.67,
+		"Width": 4.89,
 		"Height": 3.68,
 		"Image": "solidgoldfx-apollo.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "Beta DLX",
-		"Width": 4.67,
+		"Width": 4.89,
 		"Height": 3.68,
 		"Image": "solidgoldfx-betadlx.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "Beta MKII",
+		"Width": 2.79,
+		"Height": 4.77,
+		"Image": "solidgoldfx-beta-mk2.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Counter Current",
+		"Width": 4.89,
+		"Height": 3.68,
+		"Image": "solidgoldfx-counter-current.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Electroman",
-		"Width": 4.67,
+		"Width": 4.89,
 		"Height": 3.68,
 		"Image": "solidgoldfx-electroman.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "Electroman Mk II",
-		"Width": 4.67,
+		"Width": 4.89,
 		"Height": 3.68,
 		"Image": "solidgoldfx-electroman-mkii.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "EM-III",
-		"Width": 2.76,
-		"Height": 4.72,
+		"Width": 2.6,
+		"Height": 4.88,
 		"Image": "solidgoldfx-em-iii.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "Formula 76",
-		"Width": 4.67,
+		"Width": 4.89,
 		"Height": 3.68,
 		"Image": "solidgoldfx-formula76.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "Funkzilla",
-		"Width": 4.67,
+		"Width": 4.89,
 		"Height": 3.68,
 		"Image": "solidgoldfx-funkzilla.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "If 6 Was 9",
+		"Width": 2.79,
+		"Height": 4.77,
+		"Image": "solidgoldfx-if6was9.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Lysis",
+		"Width": 4.67,
+		"Height": 3.74,
+		"Image": "solidgoldfx-lysis.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Imperial Mk II",
 		"Width": 4.67,
-		"Height": 3.68,
+		"Height": 3.74,
 		"Image": "solidgoldfx-imperial-mk2.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "NU-33 Vinyl Engine",
 		"Width": 4.67,
-		"Height": 3.68,
+		"Height": 3.75,
 		"Image": "solidgold-nu33.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "Oblivion",
 		"Width": 4.67,
-		"Height": 3.68,
+		"Height": 3.74,
 		"Image": "solidgoldfx-oblivion.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
-		"Name": "Surf Rider III",
+		"Name": "Rosie",
+		"Width": 2.79,
+		"Height": 4.77,
+		"Image": "solidgoldfx-rosie.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Spanish Castle",
 		"Width": 4.67,
+		"Height": 3.74,
+		"Image": "solidgoldfx-spanish-castle.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Supa Funk",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "solidgoldfx-supafunk.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Surf Rider III",
+		"Width": 4.89,
 		"Height": 3.68,
 		"Image": "solidgoldfx-surfrider.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
 		"Name": "Zeta DLX",
-		"Width": 4.67,
+		"Width": 4.89,
 		"Height": 3.68,
 		"Image": "solidgoldfx-zetadlx.png"
 	},
