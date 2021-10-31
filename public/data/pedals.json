@@ -17837,6 +17837,34 @@
 		"Image": "twonotes-torpedocabm.png"
 	},
 	{
+		"Brand": "Union Tube & Transistor",
+		"Name": "More",
+		"Width": 4.82,
+		"Height": 3.7,
+		"Image": "union-more.png"
+	},
+	{
+		"Brand": "Union Tube & Transistor",
+		"Name": "Sone Bender",
+		"Width": 4.82,
+		"Height": 3.7,
+		"Image": "union-sone-bender.png"
+	},
+	{
+		"Brand": "Union Tube & Transistor",
+		"Name": "Third Man Bumble Buzz",
+		"Width": 4.82,
+		"Height": 3.7,
+		"Image": "union-bumble-buzz.png"
+	},
+	{
+		"Brand": "Union Tube & Transistor",
+		"Name": "Tour Bender",
+		"Width": 4.82,
+		"Height": 3.7,
+		"Image": "union-tour-bender.png"
+	},
+	{
 		"Brand": "Universal Audio",
 		"Name": "Apollo Twin MkII",
 		"Width": 6.31,
