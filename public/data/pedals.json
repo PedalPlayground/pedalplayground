@@ -19299,5 +19299,12 @@
     	"Width": 3.68,
     	"Height": 4.67,
     	"Image": "lake-effects-fvd.png"
+    },
+    {
+    	"Brand": "G-LAB",
+    	"Name": "Wowee-Wah",
+    	"Width": 3.89,
+    	"Height": 9.84,
+    	"Image": "g-lab-wowee-wah.png"
     }
 ]
