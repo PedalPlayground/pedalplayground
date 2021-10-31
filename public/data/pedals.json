@@ -134,21 +134,70 @@
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "DB599",
+		"Name": "DB925 Bass Preamp",
+		"Width": 1.75,
+		"Height": 3.65,
+		"Image": "aguilar-db925.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "DB599 Bass Compressor",
 		"Width": 1.75,
 		"Height": 3.65,
 		"Image": "aguilar-db599.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Filter Twin",
+		"Name": "Agro Bass Overdrive",
+		"Width": 2.7,
+		"Height": 5.5,
+		"Image": "aguilar-agro.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Chorusaurus Bass Chorus",
+		"Width": 2.7,
+		"Height": 5.5,
+		"Image": "aguilar-chorusaurus.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Filter Twin Dual Envelope Filter",
 		"Width": 2.7,
 		"Height": 5.5,
 		"Image": "aguilar-filter-twin.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Tone Hammer",
+		"Name": "Fuzzistor Bass Fuzz",
+		"Width": 2.7,
+		"Height": 5.5,
+		"Image": "aguilar-fuzzistor.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Grape Phaser Bass Phase",
+		"Width": 2.7,
+		"Height": 5.5,
+		"Image": "aguilar-grape-phaser.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Octamizer Analog Octave",
+		"Width": 2.7,
+		"Height": 5.5,
+		"Image": "aguilar-octamizer.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "TLC Compressor",
+		"Width": 2.7,
+		"Height": 5.5,
+		"Image": "aguilar-tlc.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Tone Hammer Preamp/Direct Box",
 		"Width": 4.4,
 		"Height": 5.5,
 		"Image": "aguilar-tone-hammer.png"
