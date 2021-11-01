@@ -17865,6 +17865,13 @@
 		"Image": "union-tour-bender.png"
 	},
 	{
+		"Brand": "Union Tube & Transistor",
+		"Name": "Tsar Bomba",
+		"Width": 4.82,
+		"Height": 3.7,
+		"Image": "union-tsar-bomba.png"
+	},
+	{
 		"Brand": "Universal Audio",
 		"Name": "Apollo Twin MkII",
 		"Width": 6.31,
