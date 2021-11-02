@@ -302,10 +302,24 @@
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Marshmallow",
+		"Name": "Marshmallow [Chibi Blue]",
 		"Width": 2.8,
 		"Height": 4.7,
-		"Image": "alexander-marshmallow.png"
+		"Image": "alexander-marshmallow-blue.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Marshmallow [Chibi Pink]",
+		"Width": 2.8,
+		"Height": 4.7,
+		"Image": "alexander-marshmallow-pink.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Marshmallow [Rainbow Pride]",
+		"Width": 2.8,
+		"Height": 4.7,
+		"Image": "alexander-marshmallow-rainbow.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -379,10 +393,17 @@
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Sugarcube",
+		"Name": "Sugarcube [Crystal White]",
 		"Width": 2.8,
 		"Height": 4.7,
-		"Image": "alexander-sugarcube.png"
+		"Image": "alexander-sugarcube-white.png"
+	},
+	{
+		"Brand": "Alexander",
+		"Name": "Sugarcube [Saccharine Pink]",
+		"Width": 2.8,
+		"Height": 4.7,
+		"Image": "alexander-sugarcube-pink.png"
 	},
 	{
 		"Brand": "Alexander",
