@@ -3027,7 +3027,7 @@
 		"Brand": "Champion Leccy",
 		"Name": "The Canny Fettle",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.81,
 		"Image": "champion-leccy-the-canny-fettle.png"
 	},
 	{
@@ -3041,7 +3041,7 @@
 		"Brand": "Champion Leccy",
 		"Name": "The Kilter",
 		"Width": 5.88,
-		"Height": 5,
+		"Height": 5.02,
 		"Image": "champion-leccy-the-kilter.png"
 	},
 	{
@@ -3053,23 +3053,44 @@
 	},
 	{
 		"Brand": "Champion Leccy",
-		"Name": "The Skitter",
+		"Name": "The Skitter (Black)",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.81,
 		"Image": "champion-leccy-the-skitter.png"
 	},
 	{
 		"Brand": "Champion Leccy",
-		"Name": "The Swan Hunter",
+		"Name": "The Skitter (Foam Green)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitter-foamgreen.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Skitter (Pink Sherbet)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitter-pink.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Swan Hunter (Black)",
 		"Width": 5.88,
-		"Height": 5,
+		"Height": 5.02,
+		"Image": "champion-leccy-the-swan-hunter-black.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Swan Hunter (Evening Blue)",
+		"Width": 5.88,
+		"Height": 5.02,
 		"Image": "champion-leccy-the-swan-hunter.png"
 	},
 	{
 		"Brand": "Champion Leccy",
 		"Name": "The Woozy",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.81,
 		"Image": "champion-leccy-the-woozy.png"
 	},
 	{
