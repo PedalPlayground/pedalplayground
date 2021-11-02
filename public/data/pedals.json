@@ -11270,6 +11270,13 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Compressor/Limiter CP9Pro+",
+		"Width": 2.79,
+		"Height": 4.5,
+		"Image": "maxon-cp9pro+.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Compressor CP101",
 		"Width": 2.79,
 		"Height": 4.5,
