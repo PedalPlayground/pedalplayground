@@ -19642,8 +19642,15 @@
 		"Width": 4.37,
 		"Height": 3.37,
 		"Image": "khdk-scott-ian-sgt-d.png"
-  },
-    {
+ 	},
+{
+        "Brand": "Fredric Effects",
+		"Name": "Blue Monarch",
+		"Width": 2.625,
+		"Height": 4.25,
+		"Image": "fredric-effects-blue-monarch.png"
+    },
+{
     	"Brand": "Lake Effects",
     	"Name": "FVD",
     	"Width": 3.68,
