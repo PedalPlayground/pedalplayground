@@ -11410,6 +11410,13 @@
 	},
 	{
 		"Brand": "Mesa Boogie",
+		"Name": "Rosette Footswitch",
+		"Width": 2.25,
+		"Height": 4.375,
+		"Image": "mesaboogie-rosette.png"
+	},
+	{
+		"Brand": "Mesa Boogie",
 		"Name": "Throttle Box",
 		"Width": 2.75,
 		"Height": 4.75,
