@@ -1253,6 +1253,13 @@
 		"Image": "bkbutler-tubedriver.png"
 	},
 	{
+		"Brand": "BLAMMO! Electronics",
+		"Name": "Zap Master",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "blammo-zapmaster.png"
+	},
+	{
 		"Brand": "BluGuitar",
 		"Name": "Amp1",
 		"Width": 9.65,
@@ -19453,6 +19460,13 @@
 		"Width": 4.33,
 		"Height": 2.83,
 		"Image": "shiftline-cabzonex.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "FS-1 Mini Footswitch",
+		"Width": "1.5",
+		"Height": "3.66",
+		"Image": "orange-fs1-mini.png"
 	},
 	{
 		"Brand": "Orange",
