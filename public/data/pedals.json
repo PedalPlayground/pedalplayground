@@ -3354,6 +3354,13 @@
 	},
 	{
 		"Brand": "Classic Audio Effects",
+		"Name": "Cliffside",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "cae-cliffside.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
 		"Name": "Expression Roller",
 		"Width": 2.7,
 		"Height": 5.08,
