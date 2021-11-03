@@ -3777,21 +3777,21 @@
 		"Name": "Super Symmetry",
 		"Width": 3.7,
 		"Height": 4.77,
-		"Image": "darkglass-adam.png"
+		"Image": "darkglass-super-symmetry.png"
 	},
 	{
 		"Brand": "Darkglass",
 		"Name": "Element",
 		"Width": 3,
 		"Height": 4.4,
-		"Image": "darkglass-adam.png"
+		"Image": "darkglass-element.png"
 	},
 	{
 		"Brand": "Darkglass",
 		"Name": "Hyper Luminal",
 		"Width": 3,
 		"Height": 4.4,
-		"Image": "darkglass-adam.png"
+		"Image": "darkglass-hyper-luminal.png"
 	},
 	{
 		"Brand": "Darkglass",
@@ -17287,8 +17287,8 @@
 	{
 		"Brand": "Tech21",
 		"Name": "Sansamp Paradriver",
-		"Width": 3.6,
-		"Height": 4.5,
+		"Width": 4.5,
+		"Height": 3.6,
 		"Image": "tech21-paradrive-bass-di.png"
 	},
 	{
