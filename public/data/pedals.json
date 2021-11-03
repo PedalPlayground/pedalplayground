@@ -3158,6 +3158,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "EXP",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "chasebliss-exp.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Faves",
 		"Width": 1.26,
 		"Height": 3.74,
@@ -3323,6 +3330,76 @@
 		"Width": 5.74803,
 		"Height": 3.46457,
 		"Image": "cioks-dc8.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Aloft",
+		"Width": 2.6,
+		"Height": 5.08,
+		"Image": "cae-aloft.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Amethyst",
+		"Width": 4.84,
+		"Height": 3.87,
+		"Image": "cae-amethyst.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Amethyst Mini",
+		"Width": 2.78,
+		"Height": 5.04,
+		"Image": "cae-amethyst-mini.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Expression Roller",
+		"Width": 2.7,
+		"Height": 5.08,
+		"Image": "cae-expression-roller.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Foothills",
+		"Width": 2.7,
+		"Height": 5.26,
+		"Image": "cae-foothills.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Passive Volume Roller G2",
+		"Width": 2.7,
+		"Height": 5.08,
+		"Image": "cae-passive-volume-roller-g2.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Stump House",
+		"Width": 3.33,
+		"Height": 5.08,
+		"Image": "cae-stump-house.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Transponder",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "cae-transponder.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Transponder Delay Roller",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "cae-transponder-delay-roller.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Yukon",
+		"Width": 2.7,
+		"Height": 5.08,
+		"Image": "cae-yukon.png"
 	},
 	{
 		"Brand": "Collision Devices",
