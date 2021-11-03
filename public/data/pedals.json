@@ -483,7 +483,7 @@
 		"Image": "amptweaker-tightrock.png"
 	},
 	{
-		"Brand": "AMT ",
+		"Brand": "AMT",
 		"Name": "BULAVA SS-30",
 		"Width": 4.17,
 		"Height": 4.92,
@@ -8280,20 +8280,6 @@
 		"Image": "hologram-microcosm.png"
 	},
 	{
-		"Brand": "IK Multimedia",
-		"Name": "X-Drive",
-		"Width": 6.8,
-		"Height": 5.7,
-		"Image": "ikm-xdrive.png"
-	},
-	{
-		"Brand": "IK Multimedia",
-		"Name": "X-Space",
-		"Width": 6.8,
-		"Height": 5.7,
-		"Image": "ikm-xspace.png"
-	},
-	{
 		"Brand": "Jet",
 		"Name": "Lamb",
 		"Width": 4.70,
@@ -8670,6 +8656,20 @@
 		"Width": 6.10,
 		"Height": 10.20,
 		"Image": "ibanez-wd7.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "X-Drive",
+		"Width": 6.8,
+		"Height": 5.7,
+		"Image": "ikm-xdrive.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "X-Space",
+		"Width": 6.8,
+		"Height": 5.7,
+		"Image": "ikm-xspace.png"
 	},
 	{
 		"Brand": "Ibanez",
@@ -10281,16 +10281,6 @@
 		"Height": 10.24,
 		"Image": "kemper-stage.png"
 	},
-
-
-
-
-
-
-
-
-
-
 	{
         "Brand": "KHDK",
 		"Name": "Scott Ian SGT D",
@@ -13629,6 +13619,13 @@
 		"Width": 9.6,
 		"Height": 1.65,
 		"Image": "onecontrol-xenagama.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "FS-1 Mini Footswitch",
+		"Width": "1.5",
+		"Height": "3.66",
+		"Image": "orange-fs1-mini.png"
 	},
 	{
 		"Brand": "Orange",
@@ -19665,152 +19662,5 @@
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-woollymammoth-vexter.png"
-	},
-	{
-		"Brand": "Wampler",
-		"Name": "Terraform",
-		"Width": 4.5,
-		"Height": 3.8,
-		"Image": "wampler-terraform.png"
-	},
-	{
-		"Brand": "Valeton",
-		"Name": "FP-10 FET Preamp",
-		"Width": 1.89,
-		"Height": 3.7,
-		"Image": "valeton_fp_10.png"
-	},
-	{
-		"Brand": "Cusack Music",
-		"Name": "Scream",
-		"Width": 1.73,
-		"Height": 3.67,
-		"Image": "cusack-scream.png"
-	},
-	{
-		"Brand": "Cusack Music",
-		"Name": "More Louder",
-		"Width": 1.95,
-		"Height": 3.67,
-		"Image": "cusack-morelouder.png"
-	},
-	{
-		"Brand": "Cusack Music",
-		"Name": "Screamer",
-		"Width": 2.4,
-		"Height": 4.57,
-		"Image": "cusack-screamer.png"
-	},
-	{
-		"Brand": "Cusack Music",
-		"Name": "Tremolo",
-		"Width": 2.4,
-		"Height": 4.66,
-		"Image": "cusack-tremolo.png"
-	},
-	{
-		"Brand": "Vox",
-		"Name": "Valvenergy silk-drive",
-		"Width": 2.83,
-		"Height": 4.72,
-		"Image": "vox-valvenergy-silk-drive.png"
-	},
-	{
-		"Brand": "Fortin",
-		"Name": "Zuul Mini",
-		"Width": 1.52,
-		"Height": 3.64,
-		"Image": "fortin-zuul-mini.png"
-	},
-	{
-		"Brand": "Fortin",
-		"Name": "Roach",
-		"Width": 1.52,
-		"Height": 3.64,
-		"Image": "fortin-roach.png"
-	},
-	{
-		"Brand": "Shift Line",
-		"Name": "CabZone X",
-		"Width": 4.33,
-		"Height": 2.83,
-		"Image": "shiftline-cabzonex.png"
-	},
-	{
-		"Brand": "Orange",
-		"Name": "FS-1 Mini Footswitch",
-		"Width": "1.5",
-		"Height": "3.66",
-		"Image": "orange-fs1-mini.png"
-	},
-	{
-		"Brand": "Orange",
-		"Name": "Terror Stamp",
-		"Width": 5.4,
-		"Height": 3.9,
-		"Image": "orange-terrorstamp.png"
-	},
-	{
-		"Brand": "Vahlbruch",
-		"Name": "Kaluna",
-		"Width": 4.73,
-		"Height": 3.94,
-		"Image": "vahlbruch-kaluna.png"
-	},
-	{
-		"Brand": "IK Multimedia",
-		"Name": "X-Drive",
-		"Width": 6.8,
-		"Height": 5.7,
-		"Image": "ikm-xdrive.png"
-	},
-	{
-		"Brand": "IK Multimedia",
-		"Name": "X-Space",
-		"Width": 6.8,
-		"Height": 5.7,
-		"Image": "ikm-xspace.png"
-	},
-  	{
-		"Brand": "AMT ",
-		"Name": "BULAVA SS-30",
-		"Width": 4.17,
-		"Height": 4.92,
-		"Image": "amt-bulava.png"
-	},
-	{
-        "Brand": "AMT",
-		"Name": "HR-1 Heater",
-		"Width": 2.91,
-		"Height": 4.48,
-		"Image": "amt-heater.png"
-    },
-    {
-        "Brand": "Mooer",
-		"Name": "Mod Factory MK II",
-		"Width": 1.65,
-		"Height": 3.66,
-		"Image": "mooer-modfactory-mkii.png"
-    },
-    {
-        "Brand": "Shift Line",
-		"Name": "A+ Astronaut III",
-		"Width": 2.63,
-		"Height": 4.33,
-		"Image": "astronaut-III.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "Unicorn Blood II",
-		"Width": 4.37,
-		"Height": 3.37,
-		"Image": "khdk-unicorn-blood-2.png"
-    },
-	{
-        "Brand": "KHDK",
-		"Name": "Scott Ian SGT D",
-		"Width": 4.37,
-		"Height": 3.37,
-		"Image": "khdk-scott-ian-sgt-d.png"
-  	}
+	}
 ]
