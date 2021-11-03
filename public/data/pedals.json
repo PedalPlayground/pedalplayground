@@ -10591,7 +10591,7 @@
 		"Width": 10.24,
 		"Height": 6.62,
 		"Image": "korg-sdd-3000.png"
-	},,
+	},
 	{
 		"Brand": "Land Devices",
 		"Name": "Domino",
@@ -19812,5 +19812,5 @@
 		"Width": 4.37,
 		"Height": 3.37,
 		"Image": "khdk-scott-ian-sgt-d.png"
-  	},
+  	}
 ]
