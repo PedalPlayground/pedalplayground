@@ -8267,6 +8267,34 @@
 		"Image": "jet-revelationv2-purple.png"
 	},
 	{
+		"Brand": "Horizon Devices",
+		"Name": "Apex Preamp",
+		"Width": 4.75,
+		"Height": 3.62,
+		"Image": "horizon-apex-preamp.png"
+	},
+	{
+		"Brand": "Horizon Devices",
+		"Name": "Flux Echo",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "horizon-flux-echo.png"
+	},
+	{
+		"Brand": "Horizon Devices",
+		"Name": "Nano Attack",
+		"Width": 1.61,
+		"Height": 3.6,
+		"Image": "horizon-nano-attack.png"
+	},
+	{
+		"Brand": "Horizon Devices",
+		"Name": "Precision Drive",
+		"Width": 2.40,
+		"Height": 4.25,
+		"Image": "horizon-precision-drive.png"
+	},
+	{
 		"Brand": "Hotone",
 		"Name": "Ampero Control",
 		"Width": 10.18,
