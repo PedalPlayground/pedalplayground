@@ -5167,6 +5167,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Hizumitas",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "earthquaker-hizumitas.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Hoof",
 		"Width": 2.5,
 		"Height": 4.75,
