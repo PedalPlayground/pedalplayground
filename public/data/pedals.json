@@ -18000,6 +18000,13 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "ARP-87 (Platinum LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-arp87-platinum.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Bellwether",
 		"Width": 5.69,
 		"Height": 4.75,
@@ -18140,10 +18147,17 @@
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Julia V2 (Gold Edition)",
+		"Name": "Julia V2 (Gold LE)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-julia2-gold.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Julia V2 (Platinum LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-julia2-platinum.png"
 	},
 	{
 		"Brand": "Walrus",
