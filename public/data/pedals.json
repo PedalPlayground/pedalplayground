@@ -859,7 +859,7 @@
 		"Width": 2.54,
 		"Height": 4.4,
 		"Image": "animals-pedal-1927.png"
-  },
+  	},
 	{
 		"Brand": "Animals Pedal",
 		"Name": "Dawn Ocean Meditation",
@@ -957,8 +957,8 @@
 		"Width": 2.54,
 		"Height": 4.4,
 		"Image": "animals-pedal-1927.png"
-  },
-  {
+  	},
+  	{
 		"Brand": "Animals Pedal",
 		"Name": "Dawn Ocean Meditation Booster (Custom Painted 039)",
 		"Width": 2.54,
@@ -3716,7 +3716,7 @@
 		"Height": 3.77,
 		"Image": "darkglass-microtubes-x-ultra.png"
 	},
-{
+	{
 		"Brand": "Darkglass",
 		"Name": "B3K",
 		"Width": 2.95,
@@ -3737,7 +3737,7 @@
 		"Height": 3.77,
 		"Image": "darkglass-microtubes-b7k-ultra.png"
 	},
-{
+	{
 		"Brand": "Darkglass",
 		"Name": "Vintage Microtubes",
 		"Width": 2.95,
@@ -3758,7 +3758,7 @@
 		"Height": 3.77,
 		"Image": "darkglass-vintage-ultra.png"
 	},
-{
+	{
 		"Brand": "Darkglass",
 		"Name": "Alpha Omnicron",
 		"Width": 2.95,
@@ -5081,9 +5081,9 @@
 		"Height": 4.8,
 		"Image": "earthquaker-graychannel.png"
 	},
-		{
+	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Hizumitas",
+		"Name": "Hizumitas Fuzz Sustainar",
 		"Width": 2.5,
 		"Height": 4.75,
 		"Image": "earthquaker-hizumitas.png"
@@ -19530,8 +19530,8 @@
 		"Width": 5,
 		"Height": 4.1875,
 		"Image": "zeppelin-quaverato.png"
-  },
-  {
+  	},
+  	{
 		"Brand": "AMT ",
 		"Name": "BULAVA SS-30",
 		"Width": 4.17,
@@ -19539,122 +19539,122 @@
 		"Image": "amt-bulava.png"
 	},
 	{
-        "Brand": "AMT",
+		"Brand": "AMT",
 		"Name": "HR-1 Heater",
 		"Width": 2.91,
 		"Height": 4.48,
 		"Image": "amt-heater.png"
-    },
-    {
-        "Brand": "Mooer",
+	},
+    	{
+        	"Brand": "Mooer",
 		"Name": "Mod Factory MK II",
 		"Width": 1.65,
 		"Height": 3.66,
 		"Image": "mooer-modfactory-mkii.png"
-    },
-    {
-        "Brand": "Shift Line",
+   	},
+   	{
+        	"Brand": "Shift Line",
 		"Name": "A+ Astronaut III",
 		"Width": 2.63,
 		"Height": 4.33,
 		"Image": "astronaut-III.png"
-    },
-    {
-        "Brand": "AMT",
+   	},
+  	{
+        	"Brand": "AMT",
 		"Name": "PANGAEA CP-100 IR",
 		"Width": 3.77,
 		"Height": 1.69,
 		"Image": "amt-pangaeacp100.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "Unicorn Blood II",
 		"Width": 4.37,
 		"Height": 3.37,
 		"Image": "khdk-unicorn-blood-2.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "Abyss",
 		"Width": 2.59,
 		"Height": 4.73,
 		"Image": "khdk-abyss.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "Dark Blood",
 		"Width": 2.56,
 		"Height": 4.75,
 		"Image": "khdk-dark-blood.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "Fallout bass overdrive",
 		"Width": 2.56,
 		"Height": 4.75,
 		"Image": "khdk-fallout-bass-overdrive.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "Ghoul screamer",
 		"Width": 2.59,
 		"Height": 4.73,
 		"Image": "khdk-ghoul-screamer.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "My big fat hawk",
 		"Width": 2.56,
 		"Height": 4.75,
 		"Image": "khdk-my-big-fat-rawk.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "NO2",
 		"Width": 2.59,
 		"Height": 4.73,
 		"Image": "khdk-no-2.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "NO1",
 		"Width": 2.59,
 		"Height": 4.73,
 		"Image": "khdk-no1.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "Scuzz box",
 		"Width": 2.56,
 		"Height": 4.75,
 		"Image": "khdk-scuzz-box.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "Ghoul Jr.",
 		"Width": 1.53,
 		"Height": 3.63,
 		"Image": "khdk-ghoul-jr.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "Paranormal",
 		"Width": 3.37,
 		"Height": 4.37,
 		"Image": "khdk-paranormal.png"
-    },
-{
-        "Brand": "KHDK",
+    	},
+	{
+        	"Brand": "KHDK",
 		"Name": "Scott Ian SGT D",
 		"Width": 4.37,
 		"Height": 3.37,
 		"Image": "khdk-scott-ian-sgt-d.png"
-  },
-    {
-    	"Brand": "Lake Effects",
-    	"Name": "FVD",
-    	"Width": 3.68,
-    	"Height": 4.67,
-    	"Image": "lake-effects-fvd.png"
+  	},
+    	{
+		"Brand": "Lake Effects",
+		"Name": "FVD",
+		"Width": 3.68,
+		"Height": 4.67,
+		"Image": "lake-effects-fvd.png"
     }
 ]
