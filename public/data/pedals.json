@@ -1541,6 +1541,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "FZ-1w Fuzz",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-fz1w.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "FZ-2 Hyper Fuzz",
 		"Width": 2.875,
 		"Height": 5.125,
