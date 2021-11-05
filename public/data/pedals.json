@@ -2443,6 +2443,27 @@
 		"Image": "beetronics-vezzpa.png"
 	},
 	{
+		"Brand": "Black Mass Electronics",
+		"Name": "1312 Distortion V3",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "blackmass-1312-v3.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "Missionary Fuzz V2",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "blackmass-missionary-v2.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "The First Herald",
+		"Width": 3.7,
+		"Height": 4.82,
+		"Image": "blackmass-thefirstherald.png"
+	},
+	{
 		"Brand": "Blackout Effectors",
 		"Name": "Blunderbuss",
 		"Width": 2.92,
