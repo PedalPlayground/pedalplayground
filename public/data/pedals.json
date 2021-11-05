@@ -8196,6 +8196,13 @@
 		"Image": "hamstead-ascent.png"
 	},
 	{
+		"Brand": "Hamstead",
+		"Name": "Odyssey",
+		"Width": 2.75591,
+		"Height": 5.11811,
+		"Image": "hamstead-odyssey.png"
+	},
+	{
 		"Brand": "Headrush",
 		"Name": "Pedalboard",
 		"Width": 23.6,
@@ -18647,6 +18654,13 @@
 		"Width": 2.6,
 		"Height": 4.93,
 		"Image": "wampler-euphoria.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Fuzztration",
+		"Width": 4.5,
+		"Height": 3.5,
+		"Image": "wampler-fuzztration.png"
 	},
 	{
 		"Brand": "Wampler",
