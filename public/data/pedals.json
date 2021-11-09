@@ -246,6 +246,13 @@
 	},
 	{
 		"Brand": "Anasounds",
+		"Name": "Savage Originale MK1 Reissue",
+		"Width": 4.7,
+		"Height": 3.87,
+		"Image": "anasounds-savage-mk1ri.png"
+	},
+	{
+		"Brand": "Anasounds",
 		"Name": "Spinner",
 		"Width": 3.9,
 		"Height": 5.75,
@@ -2362,8 +2369,29 @@
 		"Brand": "Beautiful Noise Effects",
 		"Name": "When The Sun Explodes",
 		"Width": 7.48,
-		"Height": 4.96,
+		"Height": 5.03,
 		"Image": "bne-when-the-sun-explodes.png"
+	},
+	{
+		"Brand": "Beautiful Noise Effects",
+		"Name": "When The Sun Explodes (Pastel Pink)",
+		"Width": 7.48,
+		"Height": 5.03,
+		"Image": "bne-when-the-sun-explodes-pink.png"
+	},
+	{
+		"Brand": "Beautiful Noise Effects",
+		"Name": "When The Sun Explodes (Powder Blue)",
+		"Width": 7.48,
+		"Height": 5.03,
+		"Image": "bne-when-the-sun-explodes-blue.png"
+	},
+	{
+		"Brand": "Beautiful Noise Effects",
+		"Name": "When The Sun Explodes (Seafoam Green)",
+		"Width": 7.48,
+		"Height": 5.03,
+		"Image": "bne-when-the-sun-explodes-seafoam.png"
 	},
 	{
 		"Brand": "Becos",
@@ -2630,6 +2658,20 @@
 		"Width": 4.7,
 		"Height": 3.81,
 		"Image": "bondi-sickas.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As (Custom Black)",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "bondi-sickas-black.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As (Custom Blue)",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "bondi-sickas-blue.png"
 	},
 	{
 		"Brand": "Bright Onion",
