@@ -7518,24 +7518,122 @@
 		"Image": "fractal-fm9.png"
 	},
 	{
-		"Brand": "FreeTheTone",
+		"Brand": "Free The Tone",
 		"Name": "Ambi Space AS-1R",
 		"Width": 4.72,
-		"Height": 4.03,
+		"Height": 4,
 		"Image": "freethetone-ambispace.png"
 	},
 	{
-		"Brand": "FreeTheTone",
+		"Brand": "Free The Tone",
+		"Name": "Black Vehicle BV-1V",
+		"Width": 4.88,
+		"Height": 3.71,
+		"Image": "freethetone-black-vehicle.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Crunch Chime CC-1B",
+		"Width": 2.8,
+		"Height": 4.53,
+		"Image": "freethetone-crunch-chime.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Direct Volume DVL-1",
+		"Width": 3.55,
+		"Height": 9.69,
+		"Image": "freethetone-dvl1.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Final Booster FB-2",
+		"Width": 2.78,
+		"Height": 4.53,
+		"Image": "freethetone-final-booster.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Fire Mist FM-1V",
+		"Width": 3.86,
+		"Height": 4.75,
+		"Image": "freethetone-fire-mist.png"
+	},
+	{
+		"Brand": "Free The Tone",
 		"Name": "Flight Time FT-1Y",
-		"Width": 5.75,
-		"Height": 4.744,
+		"Width": 5.72,
+		"Height": 4.68,
 		"Image": "freethetone-flighttime.png"
 	},
 	{
-		"Brand": "FreeTheTone",
-		"Name": "Tri Avatar TA-1H",
+		"Brand": "Free The Tone",
+		"Name": "Future Factory FF-1Y",
+		"Width": 5.72,
+		"Height": 4.68,
+		"Image": "freethetone-future-factory.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Heat Blaster HB-2",
+		"Width": 3.94,
+		"Height": 4.88,
+		"Image": "freethetone-heat-blaster.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Motion Loop ML-1L",
+		"Width": 2.6,
+		"Height": 4.64,
+		"Image": "freethetone-motion-loop.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Overdrive SOV-2",
+		"Width": 2.78,
+		"Height": 4.53,
+		"Image": "freethetone-sov2-overdrive.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Programmable Analog 10 Band EQ PA-1QG",
 		"Width": 4.72,
-		"Height": 4.03,
+		"Height": 4,
+		"Image": "freethetone-pa10beq.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Quad Arrow QA-2",
+		"Width": 3.94,
+		"Height": 4.88,
+		"Image": "freethetone-quad-arrow.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Silky Comp SC-1",
+		"Width": 2.78,
+		"Height": 4.53,
+		"Image": "freethetone-silky-comp.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Silky Groove SG-1C",
+		"Width": 2.8,
+		"Height": 4.53,
+		"Image": "freethetone-silky-groove.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "String Slinger SS-1V",
+		"Width": 3.86,
+		"Height": 4.75,
+		"Image": "freethetone-string-slinger.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Tri Avatar TA-2H",
+		"Width": 4.72,
+		"Height": 4,
 		"Image": "freethetone-triavatar.png"
 	},
 	{
