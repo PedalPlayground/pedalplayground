@@ -15506,6 +15506,13 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "Ether",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "solidgoldfx-ether.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Formula 76",
 		"Width": 4.89,
 		"Height": 3.68,
