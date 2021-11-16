@@ -5600,6 +5600,90 @@
 		"Image": "effectrode-tubevibe.png"
 	},
 	{
+		"Brand": "Effects Bakery",
+		"Name": "An Bread DI",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-an-bread-di.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "An Butter Coppe Drive",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-an-butter-coppe.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Bagel Overdrive",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-bagel-overdrive.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Choco Cornet EQ",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-choco-cornet-eq.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Cream Pan Booster",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-cream-pan-booster.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Croissant Distortion",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-croissant-distortion.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Curry Bread Junction Box",
+		"Width": 3.5,
+		"Height": 1.68,
+		"Image": "effectsbakery-curry-bread-junction-box.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "French Bread Delay",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-french-bread-delay.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Melon Pan Chorus",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-melon-pan-chorus.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "New Ginger Fuzz",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-new-ginger-fuzz.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Plain Bread Compressor",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-plain-bread-compressor.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Sandwich Fuzz",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-sandwich-fuzz.png"
+	},
+	{
 		"Brand": "Electro Faustus",
 		"Name": "Blackfly",
 		"Width": 5.55,
