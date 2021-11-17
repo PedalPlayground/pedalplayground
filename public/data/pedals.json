@@ -7014,14 +7014,14 @@
 	},
 	{
 		"Brand": "Fender",
-		"Name": "Duel Marine Layer Reverb",
+		"Name": "Dual Marine Layer Reverb",
 		"Width": 6.7,
 		"Height": 5,
 		"Image": "fender-dual-marine-layer.png"
 	},
 	{
 		"Brand": "Fender",
-		"Name": "Duel Pugilist Distortion",
+		"Name": "Dual Pugilist Distortion",
 		"Width": 6.7,
 		"Height": 5,
 		"Image": "fender-dual-pugilist.png"
@@ -7035,17 +7035,17 @@
 	},
 	{
 		"Brand": "Fender",
-		"Name": "FVP-1 Volume",
-		"Width": 3.5,
-		"Height": 8.63,
-		"Image": "fender-fvp1.png"
-	},
-	{
-		"Brand": "Fender",
 		"Name": "Full Moon Distortion",
 		"Width": 3.95,
 		"Height": 5,
 		"Image": "fender-full-moon.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "FVP-1 Volume",
+		"Width": 3.5,
+		"Height": 8.63,
+		"Image": "fender-fvp1.png"
 	},
 	{
 		"Brand": "Fender",
