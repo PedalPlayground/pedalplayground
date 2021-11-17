@@ -19677,5 +19677,12 @@
 		"Width": 2.38,
 		"Height": 4.63,
 		"Image": "kingtone_soloist_red.png"
+	},
+	{
+		"Brand": "Peterson",
+		"Name": "Stomp Classic",
+		"Width": 3.34,
+		"Height": 6.07,
+		"Image": "peterson_stomp_classic.png"
 	}
 ]
