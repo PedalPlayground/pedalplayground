@@ -19649,5 +19649,12 @@
     	"Width": 3.68,
     	"Height": 4.67,
     	"Image": "lake-effects-fvd.png"
-    }
+    },
+	{
+		"Brand": "Vemuram",
+		"Name": "Shanks ODS-1",
+		"Width": 2.75,
+		"Height": 4.47,
+		"Image": "vemuram_shanks_ods-1.png"
+	}
 ]
