@@ -19656,5 +19656,12 @@
 		"Width": 2.75,
 		"Height": 4.47,
 		"Image": "vemuram_shanks_ods-1.png"
+	},
+	{
+		"Brand": "Ceriatone",
+		"Name": "Centura (raw)",
+		"Width": 6.62,
+		"Height": 5.22,
+		"Image": "ceriatone_centura_raw.png"
 	}
 ]
