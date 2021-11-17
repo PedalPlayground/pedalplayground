@@ -539,6 +539,13 @@
 		"Image": "amt-m1.png"
 	},
 	{
+        "Brand": "AMT",
+		"Name": "PANGAEA CP-100 IR",
+		"Width": 3.77,
+		"Height": 1.69,
+		"Image": "amt-pangaeacp100.png"
+    },
+	{
 		"Brand": "AMT",
 		"Name": "WH-1 Optical WAH-WAH",
 		"Width": 2.82,
@@ -3634,17 +3641,17 @@
 	},
 	{
 		"Brand": "Cusack Music",
-		"Name": "Scream",
-		"Width": 1.73,
-		"Height": 3.67,
-		"Image": "cusack-scream.png"
-	},
-	{
-		"Brand": "Cusack Music",
 		"Name": "More Louder",
 		"Width": 1.95,
 		"Height": 3.67,
 		"Image": "cusack-morelouder.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Scream",
+		"Width": 1.73,
+		"Height": 3.67,
+		"Image": "cusack-scream.png"
 	},
 	{
 		"Brand": "Cusack Music",
