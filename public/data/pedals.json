@@ -19691,5 +19691,12 @@
 		"Width": 4,
 		"Height": 10,
 		"Image": "mission_engineering_ep1-kp.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "NF-1 Noise Gate",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-nf1.png"
 	}
 ]
