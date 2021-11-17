@@ -799,6 +799,13 @@
 	},
 	{
 		"Brand": "Analog.Man",
+		"Name": "Envelope Filter",
+		"Width": 2.90,
+		"Height": 4.65,
+		"Image": "analogman-envelope-filter.png"
+	},
+	{
+		"Brand": "Analog.Man",
 		"Name": "King of Tone",
 		"Width": 4.7,
 		"Height": 4.1,
@@ -11436,6 +11443,13 @@
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "enclosure.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "Blues Breaker",
+		"Width": 5.11,
+		"Height": 5.7,
+		"Image": "marshall-blues-breaker.png"
 	},
 	{
 		"Brand": "Mattoverse",
