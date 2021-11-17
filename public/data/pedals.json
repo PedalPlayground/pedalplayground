@@ -19670,5 +19670,12 @@
 		"Width": 6.3,
 		"Height": 3.46,
 		"Image": "cioks_8.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Soloist (red)",
+		"Width": 2.38,
+		"Height": 4.63,
+		"Image": "kingtone_soloist_red.png"
 	}
 ]
