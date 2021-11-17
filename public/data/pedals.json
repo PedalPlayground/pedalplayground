@@ -19684,5 +19684,12 @@
 		"Width": 3.34,
 		"Height": 6.07,
 		"Image": "peterson_stomp_classic.png"
+	},
+	{
+		"Brand": "Mission",
+		"Name": "EP1-KP",
+		"Width": 4,
+		"Height": 10,
+		"Image": "mission_engineering_ep1-kp.png"
 	}
 ]
