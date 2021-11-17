@@ -19663,5 +19663,12 @@
 		"Width": 6.62,
 		"Height": 5.22,
 		"Image": "ceriatone_centura_raw.png"
+	},
+	{
+		"Brand": "Cioks",
+		"Name": "8",
+		"Width": 6.3,
+		"Height": 3.46,
+		"Image": "cioks_8.png"
 	}
 ]
