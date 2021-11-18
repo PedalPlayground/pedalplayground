@@ -13364,6 +13364,13 @@
 	},
 	{
 		"Brand": "Native Audio",
+		"Name": "Pretty Bird Woman",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "nativeaudio-pretty-bird-woman.png"
+	},
+	{
+		"Brand": "Native Audio",
 		"Name": "Rising Sun",
 		"Width": 2.71,
 		"Height": 5,
@@ -17997,6 +18004,13 @@
 		"Width": 3.2,
 		"Height": 4.6,
 		"Image": "vertex-steelstringsupreme.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Steel String Supreme SRV",
+		"Width": 3.2,
+		"Height": 4.6,
+		"Image": "vertex-steelstringsupreme-srv.png"
 	},
 	{
 		"Brand": "Vertex",
