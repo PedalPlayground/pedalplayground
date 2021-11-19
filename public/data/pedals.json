@@ -8390,49 +8390,7 @@
 		"Width": 4.70,
 		"Height": 3.80,
 		"Image": "jetpedals-lamb.png"
-	},
-	{
-		"Brand": "Jet",
-		"Name": "Lion",
-		"Width": 4.70,
-		"Height": 3.80,
-		"Image": "jetpedals-lion.png"
-	},
-	{
-		"Brand": "Jet",
-		"Name": "Micro HX",
-		"Width": 3.64,
-		"Height": 1.52,
-		"Image": "jet-micro.png"
-	},
-	{
-		"Brand": "Jet",
-		"Name": "Revelation Reverb 2.0 (White)",
-		"Width": 2.88,
-		"Height": 4.93,
-		"Image": "jet-revelationv2-white.png"
-	},
-	{
-		"Brand": "Jet",
-		"Name": "Revelation Reverb 2.0 (Purple)",
-		"Width": 2.88,
-		"Height": 4.93,
-		"Image": "jet-revelationv2-purple.png"
-	},
-	{
-		"Brand": "IK Multimedia",
-		"Name": "X-Time",
-		"Width": 6.8,
-		"Height": 5.7,
-		"Image": "ikm-xtime.png"
-	},
-	{
-		"Brand": "IK Multimedia",
-		"Name": "X-Vibe",
-		"Width": 6.8,
-		"Height": 5.7,
-		"Image": "ikm-xvibe.png"
-	},
+	},	
 	{
 		"Brand": "Horizon Devices",
 		"Name": "Apex Preamp",
@@ -8789,6 +8747,20 @@
 		"Width": 6.8,
 		"Height": 5.7,
 		"Image": "ikm-xspace.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "X-Time",
+		"Width": 6.8,
+		"Height": 5.7,
+		"Image": "ikm-xtime.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "X-Vibe",
+		"Width": 6.8,
+		"Height": 5.7,
+		"Image": "ikm-xvibe.png"
 	},
 	{
 		"Brand": "Ibanez",
@@ -9356,6 +9328,34 @@
 		"Width": 3.68,
 		"Height": 4.82,
 		"Image": "janglebox-thebyrds.png"
+	},
+	{
+		"Brand": "Jet",
+		"Name": "Lion",
+		"Width": 4.70,
+		"Height": 3.80,
+		"Image": "jetpedals-lion.png"
+	},
+	{
+		"Brand": "Jet",
+		"Name": "Micro HX",
+		"Width": 3.64,
+		"Height": 1.52,
+		"Image": "jet-micro.png"
+	},
+	{
+		"Brand": "Jet",
+		"Name": "Revelation Reverb 2.0 (White)",
+		"Width": 2.88,
+		"Height": 4.93,
+		"Image": "jet-revelationv2-white.png"
+	},
+	{
+		"Brand": "Jet",
+		"Name": "Revelation Reverb 2.0 (Purple)",
+		"Width": 2.88,
+		"Height": 4.93,
+		"Image": "jet-revelationv2-purple.png"
 	},
 	{
 		"Brand": "JHS",
