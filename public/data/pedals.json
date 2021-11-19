@@ -9415,6 +9415,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "3 Series Flanger",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3seriesflanger.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "3 Series Fuzz",
 		"Width": 2.68,
 		"Height": 4.42,
@@ -9422,10 +9429,24 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "3 Series Hall Reverb",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3serieshall.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "3 Series Overdrive",
 		"Width": 2.68,
 		"Height": 4.42,
 		"Image": "jhs-3seriesoverdrive.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "3 Series Phaser",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3seriesphaser.png"
 	},
 	{
 		"Brand": "JHS",
