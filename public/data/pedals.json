@@ -3074,6 +3074,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Bliss Factory",
+		"Width": 2.86,
+		"Height": 4.95,
+		"Image": "chasebliss-factory.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Blooper",
 		"Width": 2.86,
 		"Height": 4.95,
@@ -17359,6 +17366,13 @@
 		"Width": 4.92,
 		"Height": 5.14,
 		"Image": "tc-novadelay.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "ND-1 Nova Delay IB Modified",
+		"Width": 4.92,
+		"Height": 5.14,
+		"Image": "tc-novadelay-ibmod.png"
 	},
 	{
 		"Brand": "TC Electronic",
