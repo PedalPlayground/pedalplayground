@@ -5515,6 +5515,13 @@
 		"Image": "ebs-unichorus.png"
 	},
 	{
+		"Brand": "Eden Amps",
+		"Name": "I90 Bass Chorus",
+		"Width": 4.8,
+		"Height": 3.5,
+		"Image": "eden-i90.png"
+	},
+	{
 		"Brand": "Effectrode",
 		"Name": "Blackbird",
 		"Width": 7.5,
