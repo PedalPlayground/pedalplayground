@@ -693,6 +693,104 @@
 		"Image": "tl-pb.png"
 	},
 	{
+		"Brand": "Vertex Effects",
+		"Name": "TC Tour Compact",
+		"Width": 26,
+		"Height": 14,
+		"Image": "vertex-tour-compact.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TC1 Riser",
+		"Width": 26.6,
+		"Height": 8,
+		"Image": "vertex-tc1.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TC2 Riser",
+		"Width": 21.6,
+		"Height": 8,
+		"Image": "vertex-tc2.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TC3 Riser",
+		"Width": 18.1,
+		"Height": 8,
+		"Image": "vertex-tc3.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TE Tour Elite",
+		"Width": 29,
+		"Height": 15,
+		"Image": "vertex-tour-elite.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TE1 Riser",
+		"Width": 29.6,
+		"Height": 9,
+		"Image": "vertex-te1.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TE2 Riser",
+		"Width": 24.6,
+		"Height": 9,
+		"Image": "vertex-te2.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TE3 Riser",
+		"Width": 19.6,
+		"Height": 9,
+		"Image": "vertex-te3.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TL Travel Lite",
+		"Width": 17,
+		"Height": 10,
+		"Image": "vertex-travel-lite.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TL1 Riser",
+		"Width": 17.6,
+		"Height": 5.6,
+		"Image": "vertex-tl1.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TL2 Riser",
+		"Width": 12.6,
+		"Height": 5.6,
+		"Image": "vertex-tl2.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TP Travel Plus",
+		"Width": 20,
+		"Height": 11,
+		"Image": "vertex-travel-plus.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TP1 Riser",
+		"Width": 20.6,
+		"Height": 6,
+		"Image": "vertex-tp1.png"
+	},
+	{
+		"Brand": "Vertex Effects",
+		"Name": "TP2 Riser",
+		"Width": 15.6,
+		"Height": 6,
+		"Image": "vertex-tp2.png"
+	},
+	{
 		"Brand": "Voodoo Lab",
 		"Name": "Dingbat Large",
 		"Width": 25,

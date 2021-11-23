@@ -575,10 +575,17 @@
 	},
 	{
 		"Brand": "Analog.Man",
-		"Name": "Bi-Comprossor",
+		"Name": "Bi-CompROSSor",
 		"Width": 4.1,
 		"Height": 4.7,
 		"Image": "analogman-bi-comprossor.png"
+	},
+	{
+		"Brand": "Analog.Man",
+		"Name": "Bi-CompROSSor REV5",
+		"Width": 4.7,
+		"Height": 3.87,
+		"Image": "analogman-bi-comprossor-rev5.png"
 	},
 	{
 		"Brand": "Analog.Man",
@@ -733,6 +740,13 @@
 		"Width": 2.52,
 		"Height": 4.91,
 		"Image": "anasounds-savage.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Savage Originale MK1 Reissue",
+		"Width": 4.7,
+		"Height": 3.87,
+		"Image": "anasounds-savage-mk1ri.png"
 	},
 	{
 		"Brand": "Anasounds",
@@ -1396,8 +1410,29 @@
 		"Brand": "Beautiful Noise Effects",
 		"Name": "When The Sun Explodes",
 		"Width": 7.48,
-		"Height": 4.96,
+		"Height": 5.03,
 		"Image": "bne-when-the-sun-explodes.png"
+	},
+	{
+		"Brand": "Beautiful Noise Effects",
+		"Name": "When The Sun Explodes (Pastel Pink)",
+		"Width": 7.48,
+		"Height": 5.03,
+		"Image": "bne-when-the-sun-explodes-pink.png"
+	},
+	{
+		"Brand": "Beautiful Noise Effects",
+		"Name": "When The Sun Explodes (Powder Blue)",
+		"Width": 7.48,
+		"Height": 5.03,
+		"Image": "bne-when-the-sun-explodes-blue.png"
+	},
+	{
+		"Brand": "Beautiful Noise Effects",
+		"Name": "When The Sun Explodes (Seafoam Green)",
+		"Width": 7.48,
+		"Height": 5.03,
+		"Image": "bne-when-the-sun-explodes-seafoam.png"
 	},
 	{
 		"Brand": "Becos",
@@ -1617,6 +1652,27 @@
 		"Image": "bkbutler-tubedriver.png"
 	},
 	{
+		"Brand": "Black Mass Electronics",
+		"Name": "1312 Distortion V3",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "blackmass-1312-v3.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "Missionary Fuzz V2",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "blackmass-missionary-v2.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "The First Herald",
+		"Width": 3.7,
+		"Height": 4.82,
+		"Image": "blackmass-thefirstherald.png"
+	},
+	{
 		"Brand": "Blackout Effectors",
 		"Name": "Blunderbuss",
 		"Width": 2.92,
@@ -1797,6 +1853,20 @@
 		"Width": 4.7,
 		"Height": 3.81,
 		"Image": "bondi-sickas.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As (Custom Black)",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "bondi-sickas-black.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As (Custom Blue)",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "bondi-sickas-blue.png"
 	},
 	{
 		"Brand": "Boomerang",
@@ -2098,6 +2168,13 @@
 		"Width": 4.4,
 		"Height": 11.4,
 		"Image": "boss-fv500.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "FZ-1w Fuzz",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-fz1w.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3116,6 +3193,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "EXP",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "chasebliss-exp.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Faves",
 		"Width": 1.26,
 		"Height": 3.74,
@@ -3295,6 +3379,83 @@
 		"Width": 2.36,
 		"Height": 4.41,
 		"Image": "ckk-electronic-destruction-drive.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Aloft",
+		"Width": 2.6,
+		"Height": 5.08,
+		"Image": "cae-aloft.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Amethyst",
+		"Width": 4.84,
+		"Height": 3.87,
+		"Image": "cae-amethyst.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Amethyst Mini",
+		"Width": 2.78,
+		"Height": 5.04,
+		"Image": "cae-amethyst-mini.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Cliffside",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "cae-cliffside.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Expression Roller",
+		"Width": 2.7,
+		"Height": 5.08,
+		"Image": "cae-expression-roller.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Foothills",
+		"Width": 2.7,
+		"Height": 5.26,
+		"Image": "cae-foothills.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Passive Volume Roller G2",
+		"Width": 2.7,
+		"Height": 5.08,
+		"Image": "cae-passive-volume-roller-g2.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Stump House",
+		"Width": 3.33,
+		"Height": 5.08,
+		"Image": "cae-stump-house.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Transponder",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "cae-transponder.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Transponder Delay Roller",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "cae-transponder-delay-roller.png"
+	},
+	{
+		"Brand": "Classic Audio Effects",
+		"Name": "Yukon",
+		"Width": 2.7,
+		"Height": 5.08,
+		"Image": "cae-yukon.png"
 	},
 	{
 		"Brand": "CMAT Mods",
@@ -5187,6 +5348,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Hizumitas",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "earthquaker-hizumitas.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Hoof",
 		"Width": 2.5,
 		"Height": 4.75,
@@ -5534,6 +5702,90 @@
 		"Width": 7.5,
 		"Height": 5.1,
 		"Image": "effectrode-tubevibe.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "An Bread DI",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-an-bread-di.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "An Butter Coppe Drive",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-an-butter-coppe.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Bagel Overdrive",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-bagel-overdrive.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Choco Cornet EQ",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-choco-cornet-eq.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Cream Pan Booster",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-cream-pan-booster.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Croissant Distortion",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-croissant-distortion.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Curry Bread Junction Box",
+		"Width": 3.5,
+		"Height": 1.68,
+		"Image": "effectsbakery-curry-bread-junction-box.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "French Bread Delay",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-french-bread-delay.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Melon Pan Chorus",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-melon-pan-chorus.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "New Ginger Fuzz",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-new-ginger-fuzz.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Plain Bread Compressor",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-plain-bread-compressor.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Sandwich Fuzz",
+		"Width": 1.71,
+		"Height": 3.5,
+		"Image": "effectsbakery-sandwich-fuzz.png"
 	},
 	{
 		"Brand": "Electro Faustus",
@@ -7485,21 +7737,119 @@
 		"Brand": "Free The Tone",
 		"Name": "Ambi Space AS-1R",
 		"Width": 4.72,
-		"Height": 4.03,
+		"Height": 4,
 		"Image": "freethetone-ambispace.png"
 	},
 	{
 		"Brand": "Free The Tone",
+		"Name": "Black Vehicle BV-1V",
+		"Width": 4.88,
+		"Height": 3.71,
+		"Image": "freethetone-black-vehicle.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Crunch Chime CC-1B",
+		"Width": 2.8,
+		"Height": 4.53,
+		"Image": "freethetone-crunch-chime.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Direct Volume DVL-1",
+		"Width": 3.55,
+		"Height": 9.69,
+		"Image": "freethetone-dvl1.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Final Booster FB-2",
+		"Width": 2.78,
+		"Height": 4.53,
+		"Image": "freethetone-final-booster.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Fire Mist FM-1V",
+		"Width": 3.86,
+		"Height": 4.75,
+		"Image": "freethetone-fire-mist.png"
+	},
+	{
+		"Brand": "Free The Tone",
 		"Name": "Flight Time FT-1Y",
-		"Width": 5.75,
-		"Height": 4.744,
+		"Width": 5.72,
+		"Height": 4.68,
 		"Image": "freethetone-flighttime.png"
 	},
 	{
 		"Brand": "Free The Tone",
-		"Name": "Tri Avatar TA-1H",
+		"Name": "Future Factory FF-1Y",
+		"Width": 5.72,
+		"Height": 4.68,
+		"Image": "freethetone-future-factory.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Heat Blaster HB-2",
+		"Width": 3.94,
+		"Height": 4.88,
+		"Image": "freethetone-heat-blaster.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Motion Loop ML-1L",
+		"Width": 2.6,
+		"Height": 4.64,
+		"Image": "freethetone-motion-loop.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Overdrive SOV-2",
+		"Width": 2.78,
+		"Height": 4.53,
+		"Image": "freethetone-sov2-overdrive.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Programmable Analog 10 Band EQ PA-1QG",
 		"Width": 4.72,
-		"Height": 4.03,
+		"Height": 4,
+		"Image": "freethetone-pa10beq.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Quad Arrow QA-2",
+		"Width": 3.94,
+		"Height": 4.88,
+		"Image": "freethetone-quad-arrow.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Silky Comp SC-1",
+		"Width": 2.78,
+		"Height": 4.53,
+		"Image": "freethetone-silky-comp.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Silky Groove SG-1C",
+		"Width": 2.8,
+		"Height": 4.53,
+		"Image": "freethetone-silky-groove.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "String Slinger SS-1V",
+		"Width": 3.86,
+		"Height": 4.75,
+		"Image": "freethetone-string-slinger.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Tri Avatar TA-2H",
+		"Width": 4.72,
+		"Height": 4,
 		"Image": "freethetone-triavatar.png"
 	},
 	{
@@ -8397,7 +8747,7 @@
 		"Width": 4.70,
 		"Height": 3.80,
 		"Image": "jetpedals-lamb.png"
-	},	
+	},
 	{
 		"Brand": "Horizon Devices",
 		"Name": "Apex Preamp",
@@ -11276,6 +11626,13 @@
 		"Image": "markbass-super-booster.png"
 	},
 	{
+		"Brand": "Marshall",
+		"Name": "Blues Breaker",
+		"Width": 5.11,
+		"Height": 5.7,
+		"Image": "marshall-blues-breaker.png"
+	},
+	{
 		"Brand": "Mastro Valvola",
 		"Name": "LEM",
 		"Width": 3.55,
@@ -11291,108 +11648,115 @@
 	},
 	{
 		"Brand": "Matthews Effects",
-		"Name": "The Architect",
-		"Width": 2.62,
-		"Height": 4.93,
+		"Name": "The Architect V2",
+		"Width": 2.5,
+		"Height": 4.76,
 		"Image": "matthews-thearchitect.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Architect V3",
-		"Width": 2.74,
-		"Height": 4.93,
+		"Width": 2.63,
+		"Height": 4.76,
 		"Image": "matthews-architect-v3.png"
 	},
 	{
 		"Brand": "Matthews Effects",
+		"Name": "The Astronomer",
+		"Width": 2.5,
+		"Height": 4.76,
+		"Image": "matthews-astronomer.png"
+	},
+	{
+		"Brand": "Matthews Effects",
 		"Name": "The Astronomer V2",
-		"Width": 2.85,
-		"Height": 4.93,
+		"Width": 2.76,
+		"Height": 4.76,
 		"Image": "matthews-astronomer-v2.png"
 	},
 	{
 		"Brand": "Matthews Effects",
-		"Name": "The Whaler V2",
-		"Width": 2.62,
-		"Height": 4.93,
-		"Image": "matthews-whaler-v2.png"
-	},
-	{
-		"Brand": "Matthews Effects",
-		"Name": "The Cosmonaut",
-		"Width": 2.85,
-		"Height": 4.78,
-		"Image": "matthews-cosmonaut-v2.png"
-	},
-	{
-		"Brand": "Matthews Effects",
-		"Name": "The Astronomer v2",
+		"Name": "The Broker",
 		"Width": 2.5,
-		"Height": 4.5,
-		"Image": "matthews-theastronomer-v2.png"
+		"Height": 4.76,
+		"Image": "matthews-broker.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Cartographer",
-		"Width": 2.62,
-		"Height": 4.78,
+		"Width": 2.5,
+		"Height": 4.76,
 		"Image": "matthews-thecartographer.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Chemist",
-		"Width": 2.62,
-		"Height": 4.78,
+		"Width": 2.63,
+		"Height": 4.76,
 		"Image": "matthews-thechemist.png"
 	},
 	{
 		"Brand": "Matthews Effects",
-		"Name": "The Chemist v2",
-		"Width": 2.5,
-		"Height": 4.5,
-		"Image": "matthews-thechemist-v2.png"
+		"Name": "The Chemist V2",
+		"Width": 2.76,
+		"Height": 4.76,
+		"Image": "matthews-chemist-v2.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Cosmonaut",
-		"Width": 2.62,
-		"Height": 4.78,
+		"Width": 2.5,
+		"Height": 4.76,
 		"Image": "matthews-thecosmonaut.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Cosmonaut v2",
-		"Width": 2.5,
-		"Height": 4.5,
+		"Width": 2.76,
+		"Height": 4.76,
 		"Image": "matthews-thecosmonaut-v2.png"
 	},
 	{
 		"Brand": "Matthews Effects",
+		"Name": "The Futurist",
+		"Width": 3.96,
+		"Height": 3.2,
+		"Image": "matthews-thefuturist.png"
+	},
+	{
+		"Brand": "Matthews Effects",
+		"Name": "The Ghoul",
+		"Width": 2.5,
+		"Height": 4.76,
+		"Image": "matthews-ghoul.png"
+	},
+	{
+		"Brand": "Matthews Effects",
 		"Name": "The Harbinger",
-		"Width": 2.62,
-		"Height": 4.78,
+		"Width": 2.5,
+		"Height": 4.76,
 		"Image": "matthews-theharbinger.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Surgeon",
-		"Width": 2.62,
-		"Height": 4.78,
+		"Width": 2.5,
+		"Height": 4.76,
 		"Image": "matthews-thesurgeon.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Whaler",
-		"Width": 2.62,
-		"Height": 4.78,
+		"Width": 2.5,
+		"Height": 4.76,
 		"Image": "matthews-thewhaler.png"
 	},
 	{
 		"Brand": "Matthews Effects",
-		"Name": "The Futurist",
-		"Width": 4,
-		"Height": 3.2,
-		"Image": "matthews-thefuturist.png"
+		"Name": "The Whaler V2",
+		"Width": 2.5,
+		"Height": 4.76,
+		"Image": "matthews-whaler-v2.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -13311,6 +13675,13 @@
 		"Width": 2.71,
 		"Height": 5,
 		"Image": "nativeaudio-midnight-v2.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Pretty Bird Woman",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "nativeaudio-pretty-bird-woman.png"
 	},
 	{
 		"Brand": "Native Audio",
@@ -15614,6 +15985,13 @@
 		"Width": 2.6,
 		"Height": 4.88,
 		"Image": "solidgoldfx-em-iii.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Ether",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "solidgoldfx-ether.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
@@ -18496,6 +18874,13 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "ARP-87 (Platinum LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-arp87-platinum.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Bellwether",
 		"Width": 5.69,
 		"Height": 4.75,
@@ -18636,10 +19021,17 @@
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Julia V2 (Gold Edition)",
+		"Name": "Julia V2 (Gold LE)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-julia2-gold.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Julia V2 (Platinum LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-julia2-platinum.png"
 	},
 	{
 		"Brand": "Walrus",
@@ -18650,7 +19042,7 @@
 	},
 	{
 		"Brand": "Walrus",
-		"Name": "Julianna (Gold Edition)",
+		"Name": "Julianna (Gold LE)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrusaudio-julianna-gold.png"
