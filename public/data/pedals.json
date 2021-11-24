@@ -1799,6 +1799,20 @@
 		"Image": "bondi-sickas.png"
 	},
 	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As [Custom Black]",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "bondi-sickas-black.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As [Custom Blue]",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "bondi-sickas-blue.png"
+	},
+	{
 		"Brand": "Boomerang",
 		"Name": "III Phrase Sampler",
 		"Width": 9.45,
