@@ -2724,6 +2724,13 @@
 	},
 	{
 		"Brand": "Carl Martin",
+		"Name": "Panama",
+		"Width": 4.33,
+		"Height": 2.36,
+		"Image": "carl-martin-panama.png"
+	},
+	{
+		"Brand": "Carl Martin",
 		"Name": "PlexiRanger",
 		"Width": 4.72,
 		"Height": 3.74,
