@@ -2836,6 +2836,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Belle Epoch (Black Edition)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-belle-black.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe",
 		"Width": 4.68,
 		"Height": 3.77,
@@ -2868,6 +2875,13 @@
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-callisto.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Cloak",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-cloak.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -2910,6 +2924,13 @@
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-epoch-boost.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Epoch Boost (Black Edition)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-epoch-boost-black.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -6311,6 +6332,13 @@
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-muff-od.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Nano Bass Big Muff Pi",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "ehx-nano-bass-big-muff-pi.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
