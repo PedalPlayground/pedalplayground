@@ -7436,8 +7436,8 @@
 	{
 		"Brand": "Fender",
 		"Name": "The Bends Compressor",
-		"Width": 2.95,
-		"Height": 5,
+		"Width": 2.75,
+		"Height": 4.87,
 		"Image": "fender-thebends.png"
 	},
 	{
@@ -12434,8 +12434,8 @@
 	{
 		"Brand": "Mooer",
 		"Name": "Baby Tuner",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "mooer-tuner.png"
 	},
 	{
