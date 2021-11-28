@@ -2346,6 +2346,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "OC-3 Super Octave",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-oc3.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "OC-5 Octave",
 		"Width": 2.875,
 		"Height": 5.125,
