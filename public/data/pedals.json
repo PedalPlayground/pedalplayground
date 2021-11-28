@@ -18769,6 +18769,13 @@
 		"Image": "vongon-paragraphs.png"
 	},
 	{
+		"Brand": "Vongon",
+		"Name": "Ultrasheer",
+		"Width": 6.5,
+		"Height": 5.5,
+		"Image": "vongon-ultasheer.png"
+	},
+	{
 		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power 2+",
 		"Width": 6,
