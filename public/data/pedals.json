@@ -7918,6 +7918,13 @@
 	},
 	{
 		"Brand": "Friedman",
+		"Name": "Gold-72",
+		"Width": 3.97,
+		"Height": 9.95,
+		"Image": "friedman-golden-pearl.png"
+	},
+	{
+		"Brand": "Friedman",
 		"Name": "Golden Pearl",
 		"Width": 2.75,
 		"Height": 4.625,
