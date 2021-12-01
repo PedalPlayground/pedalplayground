@@ -15085,6 +15085,13 @@
 		"Image": "piratemidi-bridge6.png"
 	},
 	{
+		"Brand": "PolarBear",
+		"Name": "Drowner",
+		"Width": 3.62,
+		"Height": 4.6,
+		"Image": "poly-digit.png"
+	},
+	{
 		"Brand": "Poly Effects",
 		"Name": "Digit",
 		"Width": 6,
