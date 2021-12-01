@@ -456,10 +456,17 @@
 	},
 	{
 		"Brand": "Altoids",
-		"Name": "Tin",
-		"Width": 3.8,
-		"Height": 2.437,
+		"Name": "Peppermint Tin",
+		"Width": 3.75,
+		"Height": 2.37,
 		"Image": "altoids-tin.png"
+	},
+	{
+		"Brand": "Altoids",
+		"Name": "Wintergreen Tin",
+		"Width": 3.75,
+		"Height": 2.37,
+		"Image": "altoids-tin-wintergreen.png"
 	},
 	{
 		"Brand": "Amptweaker",
