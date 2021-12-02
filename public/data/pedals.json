@@ -8954,6 +8954,13 @@
 	},
 	{
 		"Brand": "Hughes & Kettner",
+		"Name": "FSM-432 MKIII",
+		"Width": 18.11,
+		"Height": 5.28,
+		"Image": "hk-fsm-432-mkiii.png"
+	},
+	{
+		"Brand": "Hughes & Kettner",
 		"Name": "Tube Rotosphere MK II",
 		"Width": 8,
 		"Height": 8.5,
@@ -15089,7 +15096,7 @@
 		"Name": "Drowner",
 		"Width": 3.62,
 		"Height": 4.6,
-		"Image": "poly-digit.png"
+		"Image": "polarbear-drowner.png"
 	},
 	{
 		"Brand": "Poly Effects",
