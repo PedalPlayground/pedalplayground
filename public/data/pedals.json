@@ -792,109 +792,438 @@
 	},
 	{
 		"Brand": "Animals Pedal",
-		"Name": "1927 Home Run Comp",
-		"Width": 2.54,
+		"Name": "1927 Home Run Comp.",
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-1927.png"
   },
 	{
 		"Brand": "Animals Pedal",
-		"Name": "Dawn Ocean Meditation",
-		"Width": 2.54,
+		"Name": "Bath Time Reverb",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-bath-time.png"
+  },
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Car Crush Chorus/Vibe",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-car-crush.png"
+  },
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Dawn Ocean Meditation Booster",
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-dawn-ocean.png"
 	},
 	{
 		"Brand": "Animals Pedal",
-		"Name": "Dawn Ocean Meditation (Custom Painted 039)",
-		"Width": 2.54,
+		"Name": "Diamond Peak Hybrid Over Drive",
+		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-pedal-dawn-meditation-039.png"
+		"Image": "animals-pedal-diamond-peak.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Firewood Acoustic D.I.",
+		"Width": 5.2,
+		"Height": 4,
+		"Image": "animals-pedal-firewood.png"
 	},
 	{
 		"Brand": "Animals Pedal",
 		"Name": "Fishing Is As Fun As Fuzz",
-		"Width": 2.54,
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-fishing.png"
 	},
 	{
 		"Brand": "Animals Pedal",
+		"Name": "Foxes Talking of Dreamy Fuzz",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-foxes-talking.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "I Was A Wolf In The Forest Distortion",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-i-was-a-wolf.png"
+	},
+	{
+		"Brand": "Animals Pedal",
 		"Name": "Major Overdrive",
-		"Width": 2.54,
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-major-overdrive.png"
 	},
 	{
 		"Brand": "Animals Pedal",
-		"Name": "Push & Pull",
-		"Width": 2.54,
+		"Name": "Push & Pull Distortion",
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-push-pull.png"
 	},
 	{
 		"Brand": "Animals Pedal",
 		"Name": "Relaxing Walrus Delay",
-		"Width": 2.54,
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-relaxing-walrus.png"
 	},
 	{
 		"Brand": "Animals Pedal",
 		"Name": "Rover Fuzz",
-		"Width": 2.54,
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-rover.png"
 	},
 	{
 		"Brand": "Animals Pedal",
 		"Name": "Rust Rod Fuzz",
-		"Width": 2.54,
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-rust-rod.png"
 	},
 	{
 		"Brand": "Animals Pedal",
-		"Name": "Sunday Afternoon Is Infinity",
-		"Width": 2.54,
+		"Name": "Sunday Afternoon Is Infinity Bender",
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-sunday-afternoon.png"
 	},
 	{
 		"Brand": "Animals Pedal",
-		"Name": "Surfing Bear (Custom Painted 038)",
-		"Width": 2.54,
+		"Name": "Surfing Bear Overdrive",
+		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-pedal-surfing-bear-038.png"
+		"Image": "animals-pedal-surfing-bear.png"
 	},
 	{
 		"Brand": "Animals Pedal",
-		"Name": "Surfing Polar Bear",
-		"Width": 2.54,
+		"Name": "Surfing Polar Bear Bass Overdrive",
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-surfing-polar-bear.png"
 	},
 	{
 		"Brand": "Animals Pedal",
-		"Name": "Tioga Road Cycling",
-		"Width": 2.54,
+		"Name": "Tioga Road Cycling Distortion",
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-tioga-road.png"
 	},
 	{
 		"Brand": "Animals Pedal",
 		"Name": "Vintage Van Driving is Very Fun",
-		"Width": 2.54,
+		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-vintage-van.png"
 	},
 	{
-		"Brand": "Animals Pedal",
-		"Name": "1927 Home Run Comp",
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "001 Surfing Bear Overdrive",
 		"Width": 2.54,
 		"Height": 4.4,
-		"Image": "animals-pedal-1927.png"
-    },
+		"Image": "animals-pedal-surfing-bear-001.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "002 Surfing Bear Overdrive",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-surfing-bear-002.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "003 Surfing Bear Overdrive",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-surfing-bear-003.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "004 Fishing Is As Fun As Fuzz",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-fishing-004.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "005 Fishing Is As Fun As Fuzz",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-fishing-005.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "006 Fishing Is As Fun As Fuzz",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-fishing-006.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "007 Major Overdrive",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-major-overdrive-007.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "008 Major Overdrive",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-major-overdrive-008.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "009 Major Overdrive",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-major-overdrive-009.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "010 Major Overdrive",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-major-overdrive-010.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "011 Major Overdrive",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-major-overdrive-011.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "012 Major Overdrive",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-major-overdrive-012.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "013 Major Overdrive",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-major-overdrive-013.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "014 Major Overdrive",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-major-overdrive-014.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "015 Dawn Ocean Meditation Booster",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-dawn-meditation-015.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "016 Vintage Van Driving is Very Fun",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-vintage-van-016.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "017 Rust Rod Fuzz",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-rust-rod-017.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "018 Rust Rod Fuzz",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-rust-rod-018.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "019 Car Crush Chorus/Vibe",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-car-crush-019.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "020 Car Crush Chorus/Vibe",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-car-crush-020.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "021 Rover Fuzz",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-rover-021.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "022 Vintage Van Driving is Very Fun",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-vintage-van-022.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "023 Vintage Van Driving is Very Fun",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-vintage-van-023.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "024 I Was A Wolf In The Forest Distortion",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-i-was-a-wolf-024.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "025 I Was A Wolf In The Forest Distortion",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-i-was-a-wolf-025.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "026 Relaxing Walrus Delay",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-relaxing-walrus-026.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "027 1927 Home Run Comp.",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-1927-027.png"
+  },
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "028 Car Crush Chorus/Vibe",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-car-crush-028.png"
+  },
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "029 Surfing Bear Overdrive",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-surfing-bear-029.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "030 Bath Time Reverb",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-bath-time-030.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "031 Relaxing Walrus Delay",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-relaxing-walrus-031.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "032 1927 Home Run Comp.",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-1927-032.png"
+  },
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "033 1927 Home Run Comp.",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-1927-033.png"
+  },
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "034 Tioga Road Cycling Distortion",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-tioga-road-cycling-034.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "035 Tioga Road Cycling Distortion",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-tioga-road-cycling-035.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "036 I Was A Wolf In The Forest Distortion",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-i-was-a-wolf-036.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "037 Relaxing Walrus Delay",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-relaxing-walrus-037.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "038 Surfing Bear Overdrive",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-surfing-bear-038.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "039 Dawn Ocean Meditation Booster",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-dawn-meditation-039.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "040 Sunday Afternoon Is Infinity Bender",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-sunday-afternoon-040.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "042 Omoide Road Cycling Distortion",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-omoide-road-cycling-042.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "Over Print / A Wolf Distortion",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-op-a-wolf.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "Over Print / Surfing Bear Overdrive",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-op-surfing-bear.png"
+	},
 	{
 		"Brand": "Arc Effects",
 		"Name": "Big Green",
@@ -4226,6 +4555,13 @@
 		"Width": 2.61,
 		"Height": 4.95,
 		"Image": "deathbyaudio-microdream.png"
+	},
+	{
+		"Brand": "Death By Audio",
+		"Name": "Pinned",
+		"Width": 4.5,
+		"Height": 5.62,
+		"Image": "deathbyaudio-pinned.png"
 	},
 	{
 		"Brand": "Death By Audio",
@@ -18522,7 +18858,7 @@
 		"Width": 2.87402,
 		"Height": 4.84252,
 		"Image": "tsakalis-room40.png"
-	}, 
+	},
 	{
 		"Brand": "Two Notes",
 		"Name": "Le Bass",
