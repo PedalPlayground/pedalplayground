@@ -2339,6 +2339,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "NF-1 Noise Gate",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-nf1.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "NS-2 Noise Suppressor",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -3108,6 +3115,13 @@
 		"Image": "ceriatone-centura.png"
 	},
 	{
+		"Brand": "Ceriatone",
+		"Name": "Centura (raw)",
+		"Width": 6.62,
+		"Height": 5.22,
+		"Image": "ceriatone_centura_raw.png"
+	},
+	{
 		"Brand": "Champion Leccy",
 		"Name": "The Canny Fettle",
 		"Width": 3.7,
@@ -3365,6 +3379,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-wombtone-mk2.png"
+	},
+	{
+		"Brand": "Cioks",
+		"Name": "8",
+		"Width": 6.3,
+		"Height": 3.46,
+		"Image": "cioks_8.png"
 	},
 	{
 		"Brand": "Cioks",
@@ -8197,6 +8218,13 @@
 		"Image": "fuzzrocious-pedals-the-demon.png"
 	},
 	{
+    	"Brand": "G-LAB",
+    	"Name": "Wowee-Wah",
+    	"Width": 3.89,
+   	 	"Height": 9.84,
+    	"Image": "g-lab-wowee-wah.png"
+ 	},
+	{
 		"Brand": "Gamechanger Audio",
 		"Name": "Light",
 		"Width": 4.13,
@@ -11047,6 +11075,13 @@
 	},
 	{
 		"Brand": "Kingtone",
+		"Name": "Soloist (red)",
+		"Width": 2.38,
+		"Height": 4.63,
+		"Image": "kingtone_soloist_red.png"
+	},
+	{
+		"Brand": "Kingtone",
 		"Name": "The Octaland",
 		"Width": 5.09,
 		"Height": 3.7,
@@ -12178,6 +12213,13 @@
 		"Width": 0.98,
 		"Height": 0.98,
 		"Image": "ziptiemount-sm.png"
+	},
+	{
+		"Brand": "Mission",
+		"Name": "EP1-KP",
+		"Width": 4,
+		"Height": 10,
+		"Image": "mission_engineering_ep1-kp.png"
 	},
 	{
 		"Brand": "Mission",
@@ -14824,6 +14866,13 @@
 		"Width": 4.8,
 		"Height": 6.73,
 		"Image": "petecornish-st2.png"
+	},
+	{
+		"Brand": "Peterson",
+		"Name": "Stomp Classic",
+		"Width": 3.34,
+		"Height": 6.07,
+		"Image": "peterson_stomp_classic.png"
 	},
 	{
 		"Brand": "Peterson",
@@ -18762,6 +18811,13 @@
 		"Image": "vemuram-janray.png"
 	},
 	{
+		"Brand": "Vemuram",
+		"Name": "Shanks ODS-1",
+		"Width": 2.75,
+		"Height": 4.47,
+		"Image": "vemuram_shanks_ods-1.png"
+	},
+	{
 		"Brand": "Victory Amps",
 		"Name": "V4 The Copper",
 		"Width": 8.86,
@@ -18831,6 +18887,7 @@
 		"Height": 5.5,
 		"Image": "vongon-ultrasheer.png"
 	},
+	
 	{
 		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power 2+",
@@ -20426,187 +20483,5 @@
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-woollymammoth-vexter.png"
-  },
-  {
-
-    "Brand": "G-LAB",
-    "Name": "Wowee-Wah",
-    "Width": 3.89,
-    "Height": 9.84,
-    "Image": "g-lab-wowee-wah.png"
-  },
-		"Brand": "AMT ",
-		"Name": "BULAVA SS-30",
-		"Width": 4.17,
-		"Height": 4.92,
-		"Image": "amt-bulava.png"
-	},
-	{
-        "Brand": "AMT",
-		"Name": "HR-1 Heater",
-		"Width": 2.91,
-		"Height": 4.48,
-		"Image": "amt-heater.png"
     },
-    {
-        "Brand": "Mooer",
-		"Name": "Mod Factory MK II",
-		"Width": 1.65,
-		"Height": 3.66,
-		"Image": "mooer-modfactory-mkii.png"
-    },
-    {
-        "Brand": "Shift Line",
-		"Name": "A+ Astronaut III",
-		"Width": 2.63,
-		"Height": 4.33,
-		"Image": "astronaut-III.png"
-    },
-    {
-        "Brand": "AMT",
-		"Name": "PANGAEA CP-100 IR",
-		"Width": 3.77,
-		"Height": 1.69,
-		"Image": "amt-pangaeacp100.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "Unicorn Blood II",
-		"Width": 4.37,
-		"Height": 3.37,
-		"Image": "khdk-unicorn-blood-2.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "Abyss",
-		"Width": 2.59,
-		"Height": 4.73,
-		"Image": "khdk-abyss.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "Dark Blood",
-		"Width": 2.56,
-		"Height": 4.75,
-		"Image": "khdk-dark-blood.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "Fallout bass overdrive",
-		"Width": 2.56,
-		"Height": 4.75,
-		"Image": "khdk-fallout-bass-overdrive.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "Ghoul screamer",
-		"Width": 2.59,
-		"Height": 4.73,
-		"Image": "khdk-ghoul-screamer.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "My big fat hawk",
-		"Width": 2.56,
-		"Height": 4.75,
-		"Image": "khdk-my-big-fat-rawk.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "NO2",
-		"Width": 2.59,
-		"Height": 4.73,
-		"Image": "khdk-no-2.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "NO1",
-		"Width": 2.59,
-		"Height": 4.73,
-		"Image": "khdk-no1.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "Scuzz box",
-		"Width": 2.56,
-		"Height": 4.75,
-		"Image": "khdk-scuzz-box.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "Ghoul Jr.",
-		"Width": 1.53,
-		"Height": 3.63,
-		"Image": "khdk-ghoul-jr.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "Paranormal",
-		"Width": 3.37,
-		"Height": 4.37,
-		"Image": "khdk-paranormal.png"
-    },
-{
-        "Brand": "KHDK",
-		"Name": "Scott Ian SGT D",
-		"Width": 4.37,
-		"Height": 3.37,
-		"Image": "khdk-scott-ian-sgt-d.png"
-  },
-    {
-    	"Brand": "Lake Effects",
-    	"Name": "FVD",
-    	"Width": 3.68,
-    	"Height": 4.67,
-    	"Image": "lake-effects-fvd.png"
-    },
-	{
-		"Brand": "Vemuram",
-		"Name": "Shanks ODS-1",
-		"Width": 2.75,
-		"Height": 4.47,
-		"Image": "vemuram_shanks_ods-1.png"
-	},
-	{
-		"Brand": "Ceriatone",
-		"Name": "Centura (raw)",
-		"Width": 6.62,
-		"Height": 5.22,
-		"Image": "ceriatone_centura_raw.png"
-	},
-	{
-		"Brand": "Cioks",
-		"Name": "8",
-		"Width": 6.3,
-		"Height": 3.46,
-		"Image": "cioks_8.png"
-	},
-	{
-		"Brand": "Kingtone",
-		"Name": "Soloist (red)",
-		"Width": 2.38,
-		"Height": 4.63,
-		"Image": "kingtone_soloist_red.png"
-	},
-	{
-		"Brand": "Peterson",
-		"Name": "Stomp Classic",
-		"Width": 3.34,
-		"Height": 6.07,
-		"Image": "peterson_stomp_classic.png"
-	},
-	{
-		"Brand": "Mission",
-		"Name": "EP1-KP",
-		"Width": 4,
-		"Height": 10,
-		"Image": "mission_engineering_ep1-kp.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "NF-1 Noise Gate",
-		"Width": 2.875,
-		"Height": 5.125,
-		"Image": "boss-nf1.png"
-	}
 ]
