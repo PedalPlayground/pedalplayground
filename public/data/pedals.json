@@ -20313,5 +20313,12 @@
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-woollymammoth-vexter.png"
+  },
+  {
+    "Brand": "G-LAB",
+    "Name": "Wowee-Wah",
+    "Width": 3.89,
+    "Height": 9.84,
+    "Image": "g-lab-wowee-wah.png"
 	}
 ]
