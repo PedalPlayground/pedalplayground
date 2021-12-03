@@ -450,16 +450,23 @@
 	{
 		"Brand": "Altoids",
 		"Name": "Smalls Tin",
-		"Width": 1.375,
-		"Height": 2.125,
+		"Width": 2.25,
+		"Height": 1.49,
 		"Image": "altoids-smalls-tin.png"
 	},
 	{
 		"Brand": "Altoids",
-		"Name": "Tin",
-		"Width": 3.8,
-		"Height": 2.437,
+		"Name": "Peppermint Tin",
+		"Width": 3.75,
+		"Height": 2.37,
 		"Image": "altoids-tin.png"
+	},
+	{
+		"Brand": "Altoids",
+		"Name": "Wintergreen Tin",
+		"Width": 3.75,
+		"Height": 2.37,
+		"Image": "altoids-tin-wintergreen.png"
 	},
 	{
 		"Brand": "Amptweaker",
@@ -1773,8 +1780,8 @@
 	{
 		"Brand": "Bogner",
 		"Name": "Ecstasy Blue mini",
-		"Width": 3.85,
-		"Height": 5.25,
+		"Width": 2.86,
+		"Height": 4,
 		"Image": "bogner-ecstasybluemini.png"
 	},
 	{
@@ -2836,6 +2843,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Belle Epoch (Black Edition)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-belle-black.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe",
 		"Width": 4.68,
 		"Height": 3.77,
@@ -2868,6 +2882,13 @@
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-callisto.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Cloak",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-cloak.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -2910,6 +2931,13 @@
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-epoch-boost.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Epoch Boost (Black Edition)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-epoch-boost-black.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -6311,6 +6339,13 @@
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-muff-od.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Nano Bass Big Muff Pi",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "ehx-nano-bass-big-muff-pi.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
