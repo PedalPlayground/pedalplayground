@@ -11193,24 +11193,31 @@
 /*jshint browser: true, strict: true, undef: true, unused: true */
 /*global define: false, module: false, console: false */
 
-( function( window, factory ) {
-  'use strict';
+(
+	function(window, factory) {
+		'use strict';
 
-  if ( typeof define == 'function' && define.amd ) {
-    // AMD
-    define( 'get-size/get-size',[],function() {
-      return factory();
-    });
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory();
-  } else {
-    // browser global
-    window.getSize = factory();
-  }
-
-})( window, function factory() {
-'use strict';
+		if (typeof define == 'function' && define.amd) {
+			// AMD
+			define(
+				'get-size/get-size',[],function() {
+					return factory();
+				}
+			);
+		} 
+		
+		else if (typeof module == 'object' && module.exports) {
+			// CommonJS
+			module.exports = factory();
+		} 
+		
+		else {
+			// browser global
+			window.getSize = factory();
+		}
+	}
+)(window, function factory() {
+	'use strict';
 
 // -------------------------- helpers -------------------------- //
 
