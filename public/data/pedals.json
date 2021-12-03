@@ -20483,5 +20483,376 @@
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-woollymammoth-vexter.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "EQ700",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-eq700.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "FC600",
+		"Width": 4.41,
+		"Height": 11.8,
+		"Image": "behringer-fc600.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "HM300",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-hm300.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "NR300",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-nr300.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "SF300",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-sf300.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "TO800",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-to800.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "UC200",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-uc200.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "UM300",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-um300.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "UV300",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-uv300.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "VD400",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-vd400.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "PowerPlant Tuner",
+		"Width": 2.75,
+		"Height": 4.8,
+		"Image": "harley-benton-powerplant-tuner.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Terraform",
+		"Width": 4.5,
+		"Height": 3.8,
+		"Image": "wampler-terraform.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "FP-10 FET Preamp",
+		"Width": 1.89,
+		"Height": 3.7,
+		"Image": "valeton_fp_10.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Astra Modulation Machine",
+		"Width": 3.5,
+		"Height": 5.6,
+		"Image": "ua-astra.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Golden Reverberator",
+		"Width": 3.5,
+		"Height": 5.6,
+		"Image": "ua-golden.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Starlight Echo Station",
+		"Width": 3.5,
+		"Height": 5.6,
+		"Image": "ua-starlight.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Tap-A-Whirl",
+		"Width": 4.7,
+		"Height": 4.04,
+		"Image": "cusack-tapawhirl.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Scream",
+		"Width": 1.73,
+		"Height": 3.67,
+		"Image": "cusack-scream.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "More Louder",
+		"Width": 1.95,
+		"Height": 3.67,
+		"Image": "cusack-morelouder.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Screamer",
+		"Width": 2.4,
+		"Height": 4.57,
+		"Image": "cusack-screamer.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Tremolo",
+		"Width": 2.4,
+		"Height": 4.66,
+		"Image": "cusack-tremolo.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Valvenergy silk-drive",
+		"Width": 2.83,
+		"Height": 4.72,
+		"Image": "vox-valvenergy-silk-drive.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Zuul Mini",
+		"Width": 1.52,
+		"Height": 3.64,
+		"Image": "fortin-zuul-mini.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Roach",
+		"Width": 1.52,
+		"Height": 3.64,
+		"Image": "fortin-roach.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "CabZone X",
+		"Width": 4.33,
+		"Height": 2.83,
+		"Image": "shiftline-cabzonex.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "FS-1 Mini Footswitch",
+		"Width": "1.5",
+		"Height": "3.66",
+		"Image": "orange-fs1-mini.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "Terror Stamp",
+		"Width": 5.4,
+		"Height": 3.9,
+		"Image": "orange-terrorstamp.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "Kaluna",
+		"Width": 4.73,
+		"Height": 3.94,
+		"Image": "vahlbruch-kaluna.png"
+	},
+	{
+		"Brand": "Fredric Pedals",
+		"Name": "Standard Fuzz",
+		"Width": 2.64,
+		"Height": 4.8,
+		"Image": "fredric_standardfuzz.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "X-Drive",
+		"Width": 6.8,
+		"Height": 5.7,
+		"Image": "ikm-xdrive.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "X-Space",
+		"Width": 6.8,
+		"Height": 5.7,
+		"Image": "ikm-xspace.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "X-Time",
+		"Width": 6.8,
+		"Height": 5.7,
+		"Image": "ikm-xtime.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "X-Vibe",
+		"Width": 6.8,
+		"Height": 5.7,
+		"Image": "ikm-xvibe.png"
+	},
+	{
+		"Brand": "Zeppelin Design Labs",
+		"Name": "Quaverato",
+		"Width": 5,
+		"Height": 4.1875,
+		"Image": "zeppelin-quaverato.png"
+  },
+  {
+		"Brand": "AMT ",
+		"Name": "BULAVA SS-30",
+		"Width": 4.17,
+		"Height": 4.92,
+		"Image": "amt-bulava.png"
+	},
+	{
+        "Brand": "AMT",
+		"Name": "HR-1 Heater",
+		"Width": 2.91,
+		"Height": 4.48,
+		"Image": "amt-heater.png"
+    },
+    {
+        "Brand": "Mooer",
+		"Name": "Mod Factory MK II",
+		"Width": 1.65,
+		"Height": 3.66,
+		"Image": "mooer-modfactory-mkii.png"
+    },
+    {
+        "Brand": "Shift Line",
+		"Name": "A+ Astronaut III",
+		"Width": 2.63,
+		"Height": 4.33,
+		"Image": "astronaut-III.png"
+    },
+    {
+        "Brand": "AMT",
+		"Name": "PANGAEA CP-100 IR",
+		"Width": 3.77,
+		"Height": 1.69,
+		"Image": "amt-pangaeacp100.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "Unicorn Blood II",
+		"Width": 4.37,
+		"Height": 3.37,
+		"Image": "khdk-unicorn-blood-2.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "Abyss",
+		"Width": 2.59,
+		"Height": 4.73,
+		"Image": "khdk-abyss.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "Dark Blood",
+		"Width": 2.56,
+		"Height": 4.75,
+		"Image": "khdk-dark-blood.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "Fallout bass overdrive",
+		"Width": 2.56,
+		"Height": 4.75,
+		"Image": "khdk-fallout-bass-overdrive.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "Ghoul screamer",
+		"Width": 2.59,
+		"Height": 4.73,
+		"Image": "khdk-ghoul-screamer.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "My big fat hawk",
+		"Width": 2.56,
+		"Height": 4.75,
+		"Image": "khdk-my-big-fat-rawk.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "NO2",
+		"Width": 2.59,
+		"Height": 4.73,
+		"Image": "khdk-no-2.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "NO1",
+		"Width": 2.59,
+		"Height": 4.73,
+		"Image": "khdk-no1.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "Scuzz box",
+		"Width": 2.56,
+		"Height": 4.75,
+		"Image": "khdk-scuzz-box.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "Ghoul Jr.",
+		"Width": 1.53,
+		"Height": 3.63,
+		"Image": "khdk-ghoul-jr.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "Paranormal",
+		"Width": 3.37,
+		"Height": 4.37,
+		"Image": "khdk-paranormal.png"
+    },
+{
+        "Brand": "KHDK",
+		"Name": "Scott Ian SGT D",
+		"Width": 4.37,
+		"Height": 3.37,
+		"Image": "khdk-scott-ian-sgt-d.png"
+ 	},
+{
+        "Brand": "Fredric Effects",
+		"Name": "Blue Monarch",
+		"Width": 2.625,
+		"Height": 4.25,
+		"Image": "fredric-effects-blue-monarch.png"
+    },
+{
+    	"Brand": "Lake Effects",
+    	"Name": "FVD",
+    	"Width": 3.68,
+    	"Height": 4.67,
+    	"Image": "lake-effects-fvd.png"
     }
 ]
