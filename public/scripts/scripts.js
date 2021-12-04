@@ -11216,190 +11216,201 @@
 			window.getSize = factory();
 		}
 	}
-)(window, function factory() {
-	'use strict';
+)(
+	window, function factory() {
+		'use strict';
 
-// -------------------------- helpers -------------------------- //
+		// -------------------------- helpers -------------------------- //
 
-// get a number from a string, not a percentage
-function getStyleSize( value ) {
-  var num = parseFloat( value );
-  // not a percent like '100%', and a number
-  var isValid = value.indexOf('%') == -1 && !isNaN( num );
-  return isValid && num;
-}
+		// get a number from a string, not a percentage
+		function getStyleSize(value) {
+			var num = parseFloat(value);
+			// not a percent like '100%', and a number
+			var isValid = value.indexOf('%') == -1 && !isNaN(num);
+			return isValid && num;
+		}
 
-function noop() {}
+		function noop() {}
 
-var logError = typeof console == 'undefined' ? noop :
-  function( message ) {
-    console.error( message );
-  };
+		var logError = typeof console == 'undefined' ? noop:
+			function(message) {
+				console.error(message);
+			};
 
-// -------------------------- measurements -------------------------- //
+		// -------------------------- measurements -------------------------- //
 
-var measurements = [
-  'paddingLeft',
-  'paddingRight',
-  'paddingTop',
-  'paddingBottom',
-  'marginLeft',
-  'marginRight',
-  'marginTop',
-  'marginBottom',
-  'borderLeftWidth',
-  'borderRightWidth',
-  'borderTopWidth',
-  'borderBottomWidth'
-];
+		var measurements = [
+			'paddingLeft',
+			'paddingRight',
+			'paddingTop',
+			'paddingBottom',
+			'marginLeft',
+			'marginRight',
+			'marginTop',
+			'marginBottom',
+			'borderLeftWidth',
+			'borderRightWidth',
+			'borderTopWidth',
+			'borderBottomWidth'
+		];
 
-var measurementsLength = measurements.length;
+		var measurementsLength = measurements.length;
 
-function getZeroSize() {
-  var size = {
-    width: 0,
-    height: 0,
-    innerWidth: 0,
-    innerHeight: 0,
-    outerWidth: 0,
-    outerHeight: 0
-  };
-  for ( var i=0; i < measurementsLength; i++ ) {
-    var measurement = measurements[i];
-    size[ measurement ] = 0;
-  }
-  return size;
-}
+		function getZeroSize() {
+			var size = {
+				width: 0,
+				height: 0,
+				innerWidth: 0,
+				innerHeight: 0,
+				outerWidth: 0,
+				outerHeight: 0
+			};
 
-// -------------------------- getStyle -------------------------- //
+			for (var i=0; i < measurementsLength; i++) {
+				var measurement = measurements[i];
 
-/**
- * getStyle, get style of element, check for Firefox bug
- * https://bugzilla.mozilla.org/show_bug.cgi?id=548397
- */
-function getStyle( elem ) {
-  var style = getComputedStyle( elem );
-  if ( !style ) {
-    logError( 'Style returned ' + style +
-      '. Are you running this code in a hidden iframe on Firefox? ' +
-      'See http://bit.ly/getsizebug1' );
-  }
-  return style;
-}
+				size[measurement] = 0;
+			}
 
-// -------------------------- setup -------------------------- //
+			return size;
+		}
 
-var isSetup = false;
+		// -------------------------- getStyle -------------------------- //
 
-var isBoxSizeOuter;
+		/**
+		 * getStyle, get style of element, check for Firefox bug
+		 * https://bugzilla.mozilla.org/show_bug.cgi?id=548397
+		 */
+		function getStyle( elem ) {
+			var style = getComputedStyle(elem);
 
-/**
- * setup
- * check isBoxSizerOuter
- * do on first getSize() rather than on page load for Firefox bug
- */
-function setup() {
-  // setup once
-  if ( isSetup ) {
-    return;
-  }
-  isSetup = true;
+			if (!style) {
+				logError(
+					'Style returned ' + style + '. Are you running this code in a hidden iframe on Firefox? ' + 'See http://bit.ly/getsizebug1'
+				);
+			}
 
-  // -------------------------- box sizing -------------------------- //
+			return style;
+		}
 
-  /**
-   * WebKit measures the outer-width on style.width on border-box elems
-   * IE & Firefox<29 measures the inner-width
-   */
-  var div = document.createElement('div');
-  div.style.width = '200px';
-  div.style.padding = '1px 2px 3px 4px';
-  div.style.borderStyle = 'solid';
-  div.style.borderWidth = '1px 2px 3px 4px';
-  div.style.boxSizing = 'border-box';
+		// -------------------------- setup -------------------------- //
 
-  var body = document.body || document.documentElement;
-  body.appendChild( div );
-  var style = getStyle( div );
+		var isSetup = false;
 
-  getSize.isBoxSizeOuter = isBoxSizeOuter = getStyleSize( style.width ) == 200;
-  body.removeChild( div );
+		var isBoxSizeOuter;
 
-}
+		/**
+		 * setup
+		 * check isBoxSizerOuter
+		 * do on first getSize() rather than on page load for Firefox bug
+		 */
+		function setup() {
+			// setup once
+			if (isSetup) {
+				return;
+			}
 
-// -------------------------- getSize -------------------------- //
+			isSetup = true;
 
-function getSize( elem ) {
-  setup();
+			// -------------------------- box sizing -------------------------- //
 
-  // use querySeletor if elem is string
-  if ( typeof elem == 'string' ) {
-    elem = document.querySelector( elem );
-  }
+			/**
+			 * WebKit measures the outer-width on style.width on border-box elems
+			 * IE & Firefox<29 measures the inner-width
+			 */
+			var div = document.createElement('div');
 
-  // do not proceed on non-objects
-  if ( !elem || typeof elem != 'object' || !elem.nodeType ) {
-    return;
-  }
+			div.style.width = '200px';
+			div.style.padding = '1px 2px 3px 4px';
+			div.style.borderStyle = 'solid';
+			div.style.borderWidth = '1px 2px 3px 4px';
+			div.style.boxSizing = 'border-box';
 
-  var style = getStyle( elem );
+			var body = document.body || document.documentElement;
+			body.appendChild(div);
+			var style = getStyle(div);
 
-  // if hidden, everything is 0
-  if ( style.display == 'none' ) {
-    return getZeroSize();
-  }
+			getSize.isBoxSizeOuter = isBoxSizeOuter = getStyleSize(style.width) == 200;
+			body.removeChild(div);
 
-  var size = {};
-  size.width = elem.offsetWidth;
-  size.height = elem.offsetHeight;
+		}
 
-  var isBorderBox = size.isBorderBox = style.boxSizing == 'border-box';
+		// -------------------------- getSize -------------------------- //
 
-  // get all measurements
-  for ( var i=0; i < measurementsLength; i++ ) {
-    var measurement = measurements[i];
-    var value = style[ measurement ];
-    var num = parseFloat( value );
-    // any 'auto', 'medium' value will be 0
-    size[ measurement ] = !isNaN( num ) ? num : 0;
-  }
+		function getSize(elem) {
+			setup();
 
-  var paddingWidth = size.paddingLeft + size.paddingRight;
-  var paddingHeight = size.paddingTop + size.paddingBottom;
-  var marginWidth = size.marginLeft + size.marginRight;
-  var marginHeight = size.marginTop + size.marginBottom;
-  var borderWidth = size.borderLeftWidth + size.borderRightWidth;
-  var borderHeight = size.borderTopWidth + size.borderBottomWidth;
+			// use querySeletor if elem is string
+			if (typeof elem == 'string') {
+				elem = document.querySelector(elem);
+			}
 
-  var isBorderBoxSizeOuter = isBorderBox && isBoxSizeOuter;
+			// do not proceed on non-objects
+			if (!elem || typeof elem != 'object' || !elem.nodeType) {
+				return;
+			}
 
-  // overwrite width and height if we can get it from style
-  var styleWidth = getStyleSize( style.width );
-  if ( styleWidth !== false ) {
-    size.width = styleWidth +
-      // add padding and border unless it's already including it
-      ( isBorderBoxSizeOuter ? 0 : paddingWidth + borderWidth );
-  }
+			var style = getStyle(elem);
 
-  var styleHeight = getStyleSize( style.height );
-  if ( styleHeight !== false ) {
-    size.height = styleHeight +
-      // add padding and border unless it's already including it
-      ( isBorderBoxSizeOuter ? 0 : paddingHeight + borderHeight );
-  }
+			// if hidden, everything is 0
+			if (style.display == 'none') {
+				return getZeroSize();
+			}
 
-  size.innerWidth = size.width - ( paddingWidth + borderWidth );
-  size.innerHeight = size.height - ( paddingHeight + borderHeight );
+			var size = {};
+			size.width = elem.offsetWidth;
+			size.height = elem.offsetHeight;
 
-  size.outerWidth = size.width + marginWidth;
-  size.outerHeight = size.height + marginHeight;
+			var isBorderBox = size.isBorderBox = style.boxSizing == 'border-box';
 
-  return size;
-}
+			// get all measurements
+			for (var i=0; i < measurementsLength; i++) {
+				var measurement = measurements[i];
+				var value = style[measurement];
+				var num = parseFloat(value);
+				// any 'auto', 'medium' value will be 0
+				size[measurement] = !isNaN(num) ? num: 0;
+			}
 
-return getSize;
+			var paddingWidth = size.paddingLeft + size.paddingRight;
+			var paddingHeight = size.paddingTop + size.paddingBottom;
+			var marginWidth = size.marginLeft + size.marginRight;
+			var marginHeight = size.marginTop + size.marginBottom;
+			var borderWidth = size.borderLeftWidth + size.borderRightWidth;
+			var borderHeight = size.borderTopWidth + size.borderBottomWidth;
 
-});
+			var isBorderBoxSizeOuter = isBorderBox && isBoxSizeOuter;
+
+			// overwrite width and height if we can get it from style
+			var styleWidth = getStyleSize(style.width);
+
+			if (styleWidth !== false) {
+				size.width = styleWidth +
+				// add padding and border unless it's already including it
+				(isBorderBoxSizeOuter ? 0: paddingWidth + borderWidth);
+			}
+
+			var styleHeight = getStyleSize(style.height);
+
+			if (styleHeight !== false) {
+				size.height = styleHeight +
+				// add padding and border unless it's already including it
+				(isBorderBoxSizeOuter ? 0 : paddingHeight + borderHeight);
+			}
+
+			size.innerWidth = size.width - (paddingWidth + borderWidth);
+			size.innerHeight = size.height - (paddingHeight + borderHeight);
+
+			size.outerWidth = size.width + marginWidth;
+			size.outerHeight = size.height + marginHeight;
+
+			return size;
+		}
+
+		return getSize;
+	}
+);
+
 
 /**
  * EvEmitter v1.1.0
