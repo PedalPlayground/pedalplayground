@@ -6455,6 +6455,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Nano Q-Tron",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "ehx-nano-qtron.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Neo Clone",
 		"Width": 2.75,
 		"Height": 4.5,
