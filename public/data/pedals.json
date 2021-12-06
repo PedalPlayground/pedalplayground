@@ -3081,6 +3081,13 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Crom",
+		"Width": 3.7,
+		"Height": 4.82,
+		"Image": "caroline-crom.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Hawaiian Pizza",
 		"Width": 3.7,
 		"Height": 4.82,
@@ -6767,6 +6774,13 @@
 		"Width": 2.87,
 		"Height": 4.5,
 		"Image": "ehx-nanopog.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Nano Q-Tron",
+		"Width": 2.87,
+		"Height": 4.5,
+		"Image": "ehx-nanoqtron.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
