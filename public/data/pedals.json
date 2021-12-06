@@ -13560,6 +13560,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Power 50",
+		"Width": 5,
+		"Height": 3.8,
+		"Image": "mxr-power50.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Raijin Drive",
 		"Width": 2.56,
 		"Height": 4.33,
