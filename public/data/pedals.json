@@ -15415,6 +15415,13 @@
 	},
 	{
 		"Brand": "Pine-Box Customs",
+		"Name": "Fever Dream",
+		"Width": 4.88,
+		"Height": 7.5,
+		"Image": "pbc-fever-dream.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
 		"Name": "Motel",
 		"Width": 2.6,
 		"Height": 5.1,
