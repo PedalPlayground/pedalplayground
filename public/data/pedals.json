@@ -19695,7 +19695,7 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Belle",
-		"Width": 1.72,
+		"Width": 1.82,
 		"Height": 3.64,
 		"Image": "wampler-belle.png"
 	},
@@ -19703,20 +19703,20 @@
 		"Brand": "Wampler",
 		"Name": "cataPulp",
 		"Width": 2.6,
-		"Height": 4.77,
+		"Height": 5,
 		"Image": "wampler-catapulp.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Clarksdale",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "wampler-clarksdale.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "dB+",
-		"Width": 1.72,
+		"Width": 1.78,
 		"Height": 3.64,
 		"Image": "wampler-db.png"
 	},
@@ -19724,7 +19724,7 @@
 		"Brand": "Wampler",
 		"Name": "Dracarys",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "wampler-dracarys.png"
 	},
 	{
@@ -19738,125 +19738,153 @@
 		"Brand": "Wampler",
 		"Name": "Dual Fusion V2",
 		"Width": 4.5,
-		"Height": 3.58,
+		"Height": 3.65,
 		"Image": "wampler-dualfusion.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Ego",
 		"Width": 2.6,
-		"Height": 4.77,
+		"Height": 5,
 		"Image": "wampler-ego.png"
 	},
 	{
 		"Brand": "Wampler",
-		"Name": "Equator",
+		"Name": "EQuator",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "wampler-equator.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Ethereal",
+		"Width": 2.79,
+		"Height": 5,
+		"Image": "wampler-ethereal.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Euphoria",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "wampler-euphoria.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Fuzztration",
 		"Width": 4.5,
-		"Height": 3.5,
+		"Height": 3.65,
 		"Image": "wampler-fuzztration.png"
 	},
 	{
 		"Brand": "Wampler",
-		"Name": "Hot Wired V2",
+		"Name": "Gearbox",
 		"Width": 4.5,
-		"Height": 3.58,
-		"Image": "wampler-hardwire.png"
+		"Height": 3.65,
+		"Image": "wampler-gearbox.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Hot Wired v2",
+		"Width": 4.5,
+		"Height": 3.65,
+		"Image": "wampler-hardwired-v2.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Latitude",
-		"Width": 3.5,
-		"Height": 4.5,
-		"Image": "wampler-latitude.png"
-	},
-	{
-		"Brand": "Wampler",
-		"Name": "Latitude Standard",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "wampler-latitudestandard.png"
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Latitude Deluxe",
+		"Width": 3.5,
+		"Height": 4.68,
+		"Image": "wampler-latitude.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "Mini Ego",
-		"Width": 1.72,
+		"Width": 1.78,
 		"Height": 3.64,
 		"Image": "wampler-miniego.png"
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Mini Faux Spring Reverb",
+		"Width": 1.78,
+		"Height": 3.64,
+		"Image": "wampler-minifaux.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "Paisley",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "wampler-paisley.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Paisley Deluxe",
-		"Width": 4.66,
-		"Height": 3.58,
+		"Width": 4.94,
+		"Height": 3.65,
 		"Image": "wampler-paisleydlx.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Pantheon",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "wampler-pantheon.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Pantheon Dual Overdrive Deluxe",
+		"Width": 4.5,
+		"Height": 3.65,
+		"Image": "wampler-pantheon-dual.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Pinnacle",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "wampler-pinnacle.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Pinnacle Deluxe",
-		"Width": 3.5,
-		"Height": 4.5,
+		"Width": 3.61,
+		"Height": 4.68,
 		"Image": "wampler-pinnacledeluxe.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Plexi-Drive",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "wampler-plexidrive.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Plexi-Drive Deluxe",
 		"Width": 3.5,
-		"Height": 4.5,
+		"Height": 4.68,
 		"Image": "wampler-plexideluxe.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Plexi-Drive Mini",
-		"Width": 1.72,
+		"Width": 1.78,
 		"Height": 3.64,
 		"Image": "wampler-plexidrive-mini.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Ratsbane",
-		"Width": 1.72,
+		"Width": 1.78,
 		"Height": 3.64,
 		"Image": "wampler-ratsbane.png"
 	},
@@ -19864,20 +19892,20 @@
 		"Brand": "Wampler",
 		"Name": "Sovereign",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "wampler-sovereign.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Tape Echo",
 		"Width": 3.5,
-		"Height": 4.5,
+		"Height": 4.68,
 		"Image": "wampler-tapeecho.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Terraform",
-		"Width": 4.5,
+		"Width": 4.71,
 		"Height": 3.8,
 		"Image": "wampler-terraform.png"
 	},
@@ -19885,42 +19913,42 @@
 		"Brand": "Wampler",
 		"Name": "Thirty Something",
 		"Width": 3.5,
-		"Height": 4.5,
+		"Height": 4.68,
 		"Image": "wampler-thirty-something.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Triple Wreck",
 		"Width": 3.5,
-		"Height": 4.5,
+		"Height": 4.68,
 		"Image": "wampler-triplewreck.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Tumnus",
-		"Width": 1.72,
+		"Width": 1.78,
 		"Height": 3.64,
 		"Image": "wampler-tumnus.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Tumnus Deluxe",
-		"Width": 2.6,
-		"Height": 4.93,
+		"Width": 2.79,
+		"Height": 5,
 		"Image": "wampler-tumnus-deluxe.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Tweed 57",
 		"Width": 2.6,
-		"Height": 4.77,
+		"Height": 5,
 		"Image": "wampler-tweed57.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Velvet Fuzz",
 		"Width": 2.6,
-		"Height": 4.77,
+		"Height": 5,
 		"Image": "wampler-velvet.png"
 	},
 	{
