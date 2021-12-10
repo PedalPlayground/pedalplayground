@@ -4061,6 +4061,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Crossfire",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "ctc-crossfire.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "Cyclone",
 		"Width": 2.87,
 		"Height": 4.8,
