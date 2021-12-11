@@ -1555,6 +1555,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "Octave Divider",
+		"Width": 3.9,
+		"Height": 6.9,
+		"Image": "behringer-octave-divider.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "SF300",
 		"Width": 2.755,
 		"Height": 4.842,
