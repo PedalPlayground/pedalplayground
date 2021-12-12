@@ -1590,6 +1590,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "UO300 Ultra Octave",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-uo300.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "UV300 Ultra Vibrato",
 		"Width": 2.755,
 		"Height": 4.842,
