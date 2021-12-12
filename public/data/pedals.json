@@ -1527,28 +1527,28 @@
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "EQ700",
+		"Name": "EQ700 Graphic Equalizer",
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-eq700.png"
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "FC600",
+		"Name": "FC600 Volume and Expression Control",
 		"Width": 4.41,
 		"Height": 11.8,
 		"Image": "behringer-fc600.png"
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "HM300",
+		"Name": "HM300 Heavy Metal",
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-hm300.png"
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "NR300",
+		"Name": "NR300 Noise Reducer",
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-nr300.png"
@@ -1562,42 +1562,42 @@
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "SF300",
+		"Name": "SF300 Super Fuzz",
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-sf300.png"
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "TO800",
+		"Name": "TO800 Vintage Tube Overdrive",
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-to800.png"
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "UC200",
+		"Name": "UC200 Ultra Chorus",
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-uc200.png"
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "UM300",
+		"Name": "UM300 Ultra Metal",
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-um300.png"
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "UV300",
+		"Name": "UV300 Ultra Vibrato",
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-uv300.png"
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "VD400",
+		"Name": "VD400 Vintage Delay",
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-vd400.png"
