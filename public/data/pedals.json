@@ -212,15 +212,15 @@
 	{
 		"Brand": "Aion FX",
 		"Name": "Azimuth Dynamic Overdrive",
-		"Width": 4.80315,
-		"Height": 2.59843,
+		"Width": 2.59843,
+		"Height": 4.80315,
 		"Image": "aion-azimuth.png"
 	},
 	{
 		"Brand": "Aion FX",
 		"Name": "Luna Optical Tremolo",
-		"Width": 4.80315,
-		"Height": 2.59843,
+		"Width": 2.59843,
+		"Height": 4.80315,
 		"Image": "aion-luna.png"
 	},
 	{
