@@ -210,6 +210,20 @@
 		"Image": "aguilar-tone-hammer.png"
 	},
 	{
+		"Brand": "Aion FX",
+		"Name": "Azimuth Dynamic Overdrive",
+		"Width": 4.80315,
+		"Height": 2.59843,
+		"Image": "aion-azimuth.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Luna Optical Tremolo",
+		"Width": 4.80315,
+		"Height": 2.59843,
+		"Image": "aion-luna.png"
+	},
+	{
 		"Brand": "AirTurn",
 		"Name": "BT200S-2",
 		"Width": 4.50,
