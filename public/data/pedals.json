@@ -18685,6 +18685,13 @@
 		"Image": "tsakalis-room40.png"
 	}, 
 	{
+		"Brand": "Twinote",
+		"Name": "BBD Chorus",
+		"Width": 2.55906,
+		"Height": 4.72441,
+		"Image": "twinote-chorus.png"
+	},
+	{
 		"Brand": "Two Notes",
 		"Name": "Le Bass",
 		"Width": 4.88,
