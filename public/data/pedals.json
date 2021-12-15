@@ -8568,6 +8568,13 @@
 		"Image": "goodrich-volume.png"
 	},
 	{
+		"Brand": "Grace Design",
+		"Name": "Felix",
+		"Width": 9.5,
+		"Height": 5.5,
+		"Image": "grace-design-felix.png"
+	},
+	{
 		"Brand": "Green Carrot Pedals",
 		"Name": "Infatuator (Blue)",
 		"Width": 4.85,
@@ -11424,140 +11431,147 @@
 		"Image": "littlerobbie-pilot.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "DL4 Delay",
 		"Width": 10,
 		"Height": 6,
 		"Image": "line6-dl4.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "Echo Park",
 		"Width": 3.37,
 		"Height": 5.63,
 		"Image": "line6-echopark.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "EX-1",
 		"Width": 3.4375,
 		"Height": 8,
 		"Image": "line6-ex1.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "HX Effects",
 		"Width": 10.8,
 		"Height": 7.9,
 		"Image": "line6-hx-effects.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "HX Stomp",
 		"Width": 7.02,
 		"Height": 5,
 		"Image": "line6-hxstomp.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "HX Stomp (Blue)",
 		"Width": 7.02,
 		"Height": 5,
 		"Image": "line6-hxstomp-ltd-blue.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "HX Stomp (Cosmic Gray)",
 		"Width": 7.02,
 		"Height": 5,
 		"Image": "line6-hxstomp-gray.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "HX Stomp (Red)",
 		"Width": 7.02,
 		"Height": 5,
 		"Image": "line6-hxstomp-red.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "HX Stomp (White)",
 		"Width": 7.02,
 		"Height": 5,
 		"Image": "line6-hxstomp-white.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "HX Stomp XL",
 		"Width": 12.5,
 		"Height": 4.96,
 		"Image": "line6-hxstompxl.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "Helix",
 		"Width": 22.05,
 		"Height": 11.85,
 		"Image": "line6-helix.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "Helix LT",
 		"Width": 21,
 		"Height": 11.85,
 		"Image": "line6-helix-lt.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "M5",
 		"Width": 5.85,
 		"Height": 6.5,
 		"Image": "line6-m5.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "M9",
 		"Width": 10.5,
 		"Height": 6.5,
 		"Image": "line6-m9.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
+		"Name": "MM4 Modulation Modeler",
+		"Width": 7.02,
+		"Height": 5,
+		"Image": "line6-mm4.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "POD HD500X",
 		"Width": 29.75,
 		"Height": 14.47,
 		"Image": "line6-pod-hd500x.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "Relay G10 Wireless",
 		"Width": 3.88,
 		"Height": 3.88,
 		"Image": "line6-g10relay.png"
 	},
 	{
-		"Brand": "Line6",
-		"Name": "Relay G30 Wireless",
-		"Width": 3.187,
-		"Height": 4.375,
-		"Image": "line6-g30relay.png"
-	},
-	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "Relay G10S Wireless",
 		"Width": 3.5,
 		"Height": 5,
 		"Image": "line6-g10srelay.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
+		"Name": "Relay G30 Wireless",
+		"Width": 3.187,
+		"Height": 4.375,
+		"Image": "line6-g30relay.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "Relay G70 Wireless",
 		"Width": 4,
 		"Height": 5.5,
 		"Image": "line6-g70relay.png"
 	},
 	{
-		"Brand": "Line6",
+		"Brand": "Line 6",
 		"Name": "Verbzilla",
 		"Width": 3.29,
 		"Height": 5.63,
