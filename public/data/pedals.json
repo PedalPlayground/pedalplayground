@@ -12901,6 +12901,13 @@
 		"Image": "mrblack-tapex.png"
 	},
 	{
+		"Brand": "Mr. Black",
+		"Name": "Vintage Ensemble Stereo",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "mrblack-vintage-ensemble.png"
+	},
+	{
 		"Brand": "Music Box Pedals",
 		"Name": "Lyla Drive",
 		"Width": 2.6,
@@ -15344,6 +15351,27 @@
 		"Image": "black-knob.png"
 	},
 	{
+		"Brand": "Ramble FX",
+		"Name": "Kismet",
+		"Width": 3.69,
+		"Height": 4.81,
+		"Image": "ramble-kismet.png"
+	},
+	{
+		"Brand": "Ramble FX",
+		"Name": "Marvel Drive",
+		"Width": 2.61,
+		"Height": 4.92,
+		"Image": "ramble-marvel.png"
+	},
+	{
+		"Brand": "Ramble FX",
+		"Name": "Twin Bender",
+		"Width": 2.61,
+		"Height": 4.92,
+		"Image": "ramble-twinbender.png"
+	},
+	{
 		"Brand": "Rawkworks",
 		"Name": "Light OD",
 		"Width": 2.62,
@@ -15412,97 +15440,6 @@
 		"Width": 4.72,
 		"Height": 3.74,
 		"Image": "reuss-evil-twin.png"
-	},
-	{
-		"Brand": "Revv",
-		"Name": "G2",
-		"Width": 2.75,
-		"Height": 4.70,
-		"Image": "revv-g2.png"
-	},
-	{
-		"Brand": "Revv",
-		"Name": "G3",
-		"Width": 2.75,
-		"Height": 4.70,
-		"Image": "revv-g3.png"
-	},
-	{
-		"Brand": "Revv",
-		"Name": "G4",
-		"Width": 2.75,
-		"Height": 4.70,
-		"Image": "revv-g4.png"
-	},
-	{
-		"Brand": "RJM",
-		"Name": "Mastermind PBC/10",
-		"Width": 17.5,
-		"Height": 5.5,
-		"Image": "rjm-mastermindpbc.png"
-	},
-	{
-		"Brand": "RJM",
-		"Name": "Mastermind GT/10",
-		"Width": 19.4,
-		"Height": 8.1,
-		"Image": "rjm-gt10.png"
-	},
-	{
-		"Brand": "RJM",
-		"Name": "Mastermind GT/16",
-		"Width": 19.4,
-		"Height": 11.1,
-		"Image": "rjm-gt16.png"
-	},
-	{
-		"Brand": "RJM",
-		"Name": "Mastermind GT/22",
-		"Width": 19.4,
-		"Height": 14.1,
-		"Image": "rjm-gt22.png"
-	},
-	{
-		"Brand": "RJM",
-		"Name": "Mastermind LT",
-		"Width": 11.5,
-		"Height": 5,
-		"Image": "rjm-pbclt.png"
-	},
-	{
-		"Brand": "RJM",
-		"Name": "Mastermind PBC/6X",
-		"Width": 10.1,
-		"Height": 4.4,
-		"Image": "rjm-pbc6x.png"
-	},
-	{
-		"Brand": "RJM",
-		"Name": "Overture",
-		"Width": 4.4,
-		"Height": 5.25,
-		"Image": "rjm-overture.png"
-	},
-	{
-		"Brand": "Ramble FX",
-		"Name": "Kismet",
-		"Width": 3.69,
-		"Height": 4.81,
-		"Image": "ramble-kismet.png"
-	},
-	{
-		"Brand": "Ramble FX",
-		"Name": "Marvel Drive",
-		"Width": 2.61,
-		"Height": 4.92,
-		"Image": "ramble-marvel.png"
-	},
-	{
-		"Brand": "Ramble FX",
-		"Name": "Twin Bender",
-		"Width": 2.61,
-		"Height": 4.92,
-		"Image": "ramble-twinbender.png"
 	},
 	{
 		"Brand": "Red Panda",
@@ -15708,6 +15645,27 @@
 		"Image": "redwitch-zeus.png"
 	},
 	{
+		"Brand": "Revv",
+		"Name": "G2",
+		"Width": 2.75,
+		"Height": 4.70,
+		"Image": "revv-g2.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "G3",
+		"Width": 2.75,
+		"Height": 4.70,
+		"Image": "revv-g3.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "G4",
+		"Width": 2.75,
+		"Height": 4.70,
+		"Image": "revv-g4.png"
+	},
+	{
 		"Brand": "Rimrock",
 		"Name": "Lil MO",
 		"Width": 2.6,
@@ -15720,6 +15678,55 @@
 		"Width": 4.7,
 		"Height": 3.7,
 		"Image": "rimrock-mythicaloverdrive.png"
+	},
+	{
+		"Brand": "RJM",
+		"Name": "Mastermind PBC/10",
+		"Width": 17.5,
+		"Height": 5.5,
+		"Image": "rjm-mastermindpbc.png"
+	},
+	{
+		"Brand": "RJM",
+		"Name": "Mastermind GT/10",
+		"Width": 19.4,
+		"Height": 8.1,
+		"Image": "rjm-gt10.png"
+	},
+	{
+		"Brand": "RJM",
+		"Name": "Mastermind GT/16",
+		"Width": 19.4,
+		"Height": 11.1,
+		"Image": "rjm-gt16.png"
+	},
+	{
+		"Brand": "RJM",
+		"Name": "Mastermind GT/22",
+		"Width": 19.4,
+		"Height": 14.1,
+		"Image": "rjm-gt22.png"
+	},
+	{
+		"Brand": "RJM",
+		"Name": "Mastermind LT",
+		"Width": 11.5,
+		"Height": 5,
+		"Image": "rjm-pbclt.png"
+	},
+	{
+		"Brand": "RJM",
+		"Name": "Mastermind PBC/6X",
+		"Width": 10.1,
+		"Height": 4.4,
+		"Image": "rjm-pbc6x.png"
+	},
+	{
+		"Brand": "RJM",
+		"Name": "Overture",
+		"Width": 4.4,
+		"Height": 5.25,
+		"Image": "rjm-overture.png"
 	},
 	{
 		"Brand": "Rockbox",
@@ -15867,6 +15874,20 @@
 		"Width": 4.33,
 		"Height": 2.83,
 		"Image": "shiftline-cabzonex.png"
+	},
+	{
+		"Brand": "Shin-ei",
+		"Name": "FY-6",
+		"Width": 3.78,
+		"Height": 6.57,
+		"Image": "shin-ei-fy-6.png"
+	},
+	{
+		"Brand": "Shin-ei",
+		"Name": "Vibe-Bro",
+		"Width": 8.5,
+		"Height": 5.5,
+		"Image": "shin-ei-vibe-bro.png"
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
