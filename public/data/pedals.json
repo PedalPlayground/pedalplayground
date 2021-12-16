@@ -3662,10 +3662,24 @@
 	},
 	{
 		"Brand": "Colorsound",
+		"Name": "Fuzz Sound",
+		"Width": 3.8189,
+		"Height": 8.66142,
+		"Image": "colorsound-fuzz-sound.png"
+	},
+	{
+		"Brand": "Colorsound",
 		"Name": "Power Boost",
 		"Width": 3.8189,
 		"Height": 8.66142,
 		"Image": "colorsound-powerboost.png"
+	},
+	{
+		"Brand": "Colorsound",
+		"Name": "Tremolo",
+		"Width": 3.8189,
+		"Height": 8.66142,
+		"Image": "colorsound-tremolo.png"
 	},
 	{
 		"Brand": "Cooper FX",
@@ -16196,6 +16210,20 @@
 		"Width": 2.74,
 		"Height": 4.46,
 		"Image": "snouse-blackbox.png"
+	},
+	{
+		"Brand": "Sola Sound",
+		"Name": "MKI Tone Bender",
+		"Width": 5.90551,
+		"Height": 11.811,
+		"Image": "solar-sound-mki.png"
+	},
+	{
+		"Brand": "Sola Sound",
+		"Name": "The Yellow Hybrid",
+		"Width": 3.75,
+		"Height": 8.6,
+		"Image": "sola-sound-yellow-hybrid.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
