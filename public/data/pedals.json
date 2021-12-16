@@ -11666,7 +11666,14 @@
 		"Name": "Kalamazoo Black Caucus",
 		"Width": 2.59,
 		"Height": 4.44,
-		"Image": "lovepedal-kalamazooblackcaucus.png"
+		"Image": "lovepedal-kalamazoo-black-caucus.png"
+	},
+	{
+		"Brand": "Lovepedal",
+		"Name": "Kalamazoo Gold",
+		"Width": 2.59,
+		"Height": 4.44,
+		"Image": "lovepedal-kalamazoo-gold.png"
 	},
 	{
 		"Brand": "Lovepedal",
