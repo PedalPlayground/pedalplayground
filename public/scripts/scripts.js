@@ -12530,9 +12530,9 @@
 			* @param {Event} event
 			* @param {Event or Touch} pointer
 			*/
-			proto.onPointerUp = function( event, pointer ) {
-			this.element.classList.remove('is-pointer-down');
-			this.dispatchJQueryEvent( 'pointerUp', event, [ pointer ] );
+			proto.onPointerUp = function(event, pointer) {
+				this.element.classList.remove('is-pointer-down');
+				this.dispatchJQueryEvent('pointerUp', event, [pointer]);
 			};
 
 			/**
@@ -12540,49 +12540,49 @@
 			* @param {Event} event
 			* @param {Event or Touch} pointer
 			*/
-			proto.dragEnd = function( event, pointer ) {
-			if ( !this.isEnabled ) {
-				return;
-			}
-			// use top left position when complete
-			this.element.style.transform = '';
-			this.setLeftTop();
-			this.element.classList.remove('is-dragging');
-			this.dispatchEvent( 'dragEnd', event, [ pointer ] );
+			proto.dragEnd = function(event, pointer) {
+				if (!this.isEnabled) {
+					return;
+				}
+
+				// use top left position when complete
+				this.element.style.transform = '';
+				this.setLeftTop();
+				this.element.classList.remove('is-dragging');
+				this.dispatchEvent('dragEnd', event, [pointer]);
 			};
 
 			// -------------------------- animation -------------------------- //
 
 			proto.animate = function() {
-			// only render and animate if dragging
-			if ( !this.isDragging ) {
-				return;
-			}
+				// only render and animate if dragging
+				if (!this.isDragging) {
+					return;
+				}
 
-			this.positionDrag();
+				this.positionDrag();
 
-			var _this = this;
-			requestAnimationFrame( function animateFrame() {
-				_this.animate();
-			});
+				var _this = this;
 
+				requestAnimationFrame(
+					function animateFrame() {
+						_this.animate();
+					}
+				);
 			};
 
 			// left/top positioning
 			proto.setLeftTop = function() {
-			this.element.style.left = this.position.x + 'px';
-			this.element.style.top  = this.position.y + 'px';
+				this.element.style.left = this.position.x + 'px';
+				this.element.style.top  = this.position.y + 'px';
 			};
 
-			proto.positionDrag = function() {
-			this.element.style.transform = 'translate3d( ' + this.dragPoint.x +
-				'px, ' + this.dragPoint.y + 'px, 0)';
-			};
+			proto.positionDrag = function() {this.element.style.transform = 'translate3d( ' + this.dragPoint.x + 'px, ' + this.dragPoint.y + 'px, 0)';};
 
 			// ----- staticClick ----- //
 
-			proto.staticClick = function( event, pointer ) {
-			this.dispatchEvent( 'staticClick', event, [ pointer ] );
+			proto.staticClick = function(event, pointer) {
+				this.dispatchEvent('staticClick', event, [pointer]);
 			};
 
 			// ----- methods ----- //
@@ -12591,36 +12591,39 @@
 			* @param {Number} x
 			* @param {Number} y
 			*/
-			proto.setPosition = function( x, y ) {
-			this.position.x = x;
-			this.position.y = y;
-			this.setLeftTop();
+			proto.setPosition = function(x, y) {
+				this.position.x = x;
+				this.position.y = y;
+				this.setLeftTop();
 			};
 
 			proto.enable = function() {
-			this.isEnabled = true;
+				this.isEnabled = true;
 			};
 
 			proto.disable = function() {
-			this.isEnabled = false;
-			if ( this.isDragging ) {
-				this.dragEnd();
-			}
+				this.isEnabled = false;
+				if (this.isDragging) {
+					this.dragEnd();
+				}
 			};
 
 			proto.destroy = function() {
-			this.disable();
-			// reset styles
-			this.element.style.transform = '';
-			this.element.style.left = '';
-			this.element.style.top = '';
-			this.element.style.position = '';
-			// unbind handles
-			this.unbindHandles();
-			// remove jQuery data
-			if ( this.$element ) {
-				this.$element.removeData('draggabilly');
-			}
+				this.disable();
+
+				// reset styles
+				this.element.style.transform = '';
+				this.element.style.left = '';
+				this.element.style.top = '';
+				this.element.style.position = '';
+
+				// unbind handles
+				this.unbindHandles();
+
+				// remove jQuery data
+				if (this.$element) {
+					this.$element.removeData('draggabilly');
+				}
 			};
 
 			// ----- jQuery bridget ----- //
@@ -12628,15 +12631,16 @@
 			// required for jQuery bridget
 			proto._init = noop;
 
-			if ( jQuery && jQuery.bridget ) {
-			jQuery.bridget( 'draggabilly', Draggabilly );
+			if (jQuery && jQuery.bridget) {
+				jQuery.bridget('draggabilly', Draggabilly);
 			}
 
 			// -----  ----- //
 
 			return Draggabilly;
-
-}));
+		}
+	)
+);
 
 
 /*!
