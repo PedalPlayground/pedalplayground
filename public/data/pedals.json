@@ -6259,6 +6259,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "95000 Performance Loop Laboratory",
+		"Width": 12.75,
+		"Height": 5.9,
+		"Image": "ehx-95000.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Analogizer",
 		"Width": 2.75,
 		"Height": 4.5,
