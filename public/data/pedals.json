@@ -7157,7 +7157,7 @@
 		"Brand": "Electronic Audio Experiments",
 		"Name": "Dagger",
 		"Width": 2.6,
-		"Height": 5.05,
+		"Height": 4.99,
 		"Image": "electronic-audio-experiments-dagger.png"
 	},
 	{
@@ -8982,6 +8982,13 @@
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Sure Shot",
+		"Width": 1.78,
+		"Height": 3.64,
+		"Image": "greer-sureshot.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Tarpit",
 		"Width": 4.67,
 		"Height": 3.8,
@@ -10498,6 +10505,13 @@
 		"Width": 2.93,
 		"Height": 4.98,
 		"Image": "jhs-muffaletta.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Muffaletta (Green)",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-muffaletta-green.png"
 	},
 	{
 		"Brand": "JHS",
@@ -19344,6 +19358,13 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "385 (Nat. Parks LE)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-385-parks.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Aetos",
 		"Width": 4.7,
 		"Height": 3.7,
@@ -19358,10 +19379,31 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Ages (Nat. Parks LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-ages-parks.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "ARP-87",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-arp87.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "ARP-87 (Nat. Parks LE)",
+		"Width": 2.72,
+		"Height": 4.95,
+		"Image": "walrus-arp87-parks.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "ARP-87 (Nautical LE)",
+		"Width": 2.72,
+		"Height": 4.95,
+		"Image": "walrus-arp87-nautical.png"
 	},
 	{
 		"Brand": "Walrus",
@@ -19414,6 +19456,20 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Deep Six V3 (Nat. Parks LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-deepsixv3-parks.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Deep Six V3 (Nautical LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-deepsixv3-nautical.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Descent",
 		"Width": 5.625,
 		"Height": 4.73,
@@ -19442,10 +19498,31 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Eras (Nat. Parks LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-eras-parks.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Fathom",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "wa-fathom.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Fathom (Nat. Parks LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "wa-fathom-parks.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Fathom (Nautical LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "wa-fathom-nautical.png"
 	},
 	{
 		"Brand": "Walrus",
@@ -19519,6 +19596,13 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Julia V2 (Nat. Parks LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-julia2-parks.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Julia V2 (Platinum LE)",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -19537,6 +19621,13 @@
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrusaudio-julianna-gold.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Julianna (Nat. Parks LE)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrusaudio-julianna-parks.png"
 	},
 	{
 		"Brand": "Walrus",
@@ -19565,6 +19656,13 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-lillian.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Lillian (Nat. Parks LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-lillian-parks.png"
 	},
 	{
 		"Brand": "Walrus",
@@ -19631,6 +19729,13 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Monument V2 (Nat. Parks LE)",
+		"Width": 2.72,
+		"Height": 4.95,
+		"Image": "walrus-monumentv2-parks.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Phoenix",
 		"Width": 9.75,
 		"Height": 3,
@@ -19680,6 +19785,13 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Slötvå (Nat. Parks LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-slotva-parks.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Vanguard",
 		"Width": 5.625,
 		"Height": 4.75,
@@ -19691,6 +19803,13 @@
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-voyager.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Voyager (10 Year Anniversary LE)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-voyager-10.png"
 	},
 	{
 		"Brand": "Walrus",
