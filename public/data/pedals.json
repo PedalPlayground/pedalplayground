@@ -15792,6 +15792,13 @@
 		"Image": "rolls-mx28.png"
 	},
 	{
+		"Brand": "Rowin",
+		"Name": "Noise Gate",
+		"Width": 1.65,
+		"Height": 3.66,
+		"Image": "rowin-noise-gate.png"
+	},
+	{
 		"Brand": "RYRA",
 		"Name": "Klone",
 		"Width": 4.67,
