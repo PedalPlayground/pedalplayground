@@ -8,19 +8,24 @@
 				"Brand": {
 					"type": "string"
 				},
+
 				"Name": {
 					"type": "string"
 				},
+
 				"Width": {
 					"type": "number"
 				},
+
 				"Height": {
 					"type": "number"
 				},
+
 				"Image": {
 					"type": "string"
 				}
 			},
+
 			"required": [
 				"Brand",
 				"Name",
@@ -29,25 +34,31 @@
 				"Image"
 			]
 		},
+
 		{
 			"type": "object",
 			"properties": {
 				"Brand": {
 					"type": "string"
 				},
+
 				"Name": {
 					"type": "string"
 				},
+
 				"Width": {
 					"type": "number"
 				},
+
 				"Height": {
 					"type": "number"
 				},
+
 				"Image": {
 					"type": "string"
 				}
 			},
+
 			"required": [
 				"Brand",
 				"Name",

@@ -3676,6 +3676,13 @@
 	},
 	{
 		"Brand": "Colorsound",
+		"Name": "Overdriver",
+		"Width": 3.8189,
+		"Height": 8.66142,
+		"Image": "colorsound-overdriver.png"
+	},
+	{
+		"Brand": "Colorsound",
 		"Name": "Tremolo",
 		"Width": 3.8189,
 		"Height": 8.66142,
@@ -16224,6 +16231,13 @@
 		"Width": 5.90551,
 		"Height": 11.811,
 		"Image": "solar-sound-mki.png"
+	},
+	{
+		"Brand": "Sola Sound",
+		"Name": "SCB Tone Bender",
+		"Width": 5.90551,
+		"Height": 11.811,
+		"Image": "solar-sound-scb.png"
 	},
 	{
 		"Brand": "Sola Sound",
