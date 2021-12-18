@@ -12338,7 +12338,7 @@
 		"Name": "EP1-KP",
 		"Width": 4,
 		"Height": 10,
-		"Image": "mission_engineering_ep1-kp.png"
+		"Image": "mission-ep1-kp.png"
 	},
 	{
 		"Brand": "Mission",
@@ -13819,16 +13819,16 @@
 	},
 	{
 		"Brand": "NUX",
-		"Name": "Pedal Tuner",
-		"Width": 2.95,
-		"Height": 4.8,
-		"Image": "nux-pt6.png"
-	},
-	{
-		"Brand": "NUX",
 		"Name": "Plexi Crunch",
 		"Width": 2.98,
 		"Height": 4.76,
+		"Image": "nux-plexi-crunch.png"
+	},
+	{
+		"Brand": "NUX",
+		"Name": "PT-6 Pedal Tuner",
+		"Width": 2.83465,
+		"Height": 4.80315,
 		"Image": "nux-plexi-crunch.png"
 	},
 	{
@@ -14998,14 +14998,14 @@
 		"Name": "Stomp Classic",
 		"Width": 3.34,
 		"Height": 6.07,
-		"Image": "peterson_stomp_classic.png"
+		"Image": "peterson-stomp-classic.png"
 	},
 	{
 		"Brand": "Peterson",
 		"Name": "Strobostomp HD",
 		"Width": 2.94,
 		"Height": 5.07,
-		"Image": "peterson-strobostomphd.png"
+		"Image": "peterson-strobostomp-hd.png"
 	},
 	{
 		"Brand": "Pettyjohn",
@@ -18878,7 +18878,7 @@
 		"Name": "FP-10 FET Preamp",
 		"Width": 1.89,
 		"Height": 3.7,
-		"Image": "valeton_fp_10.png"
+		"Image": "valeton-fp-10.png"
 	},
 	{
 		"Brand": "Vertex",
@@ -18997,7 +18997,7 @@
 		"Name": "Shanks ODS-1",
 		"Width": 2.75,
 		"Height": 4.47,
-		"Image": "vemuram_shanks_ods-1.png"
+		"Image": "vemuram-shanks-ods-1.png"
 	},
 	{
 		"Brand": "Victory Amps",
