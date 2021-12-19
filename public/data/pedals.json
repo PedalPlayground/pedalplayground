@@ -2423,6 +2423,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "OD-2 Turbo Overdrive",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-od2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "OD-3 Overdrive",
 		"Width": 2.875,
 		"Height": 5.125,
