@@ -3668,6 +3668,13 @@
 		"Image": "collision-devices-black-hole-symmetry.png"
 	},
 	{
+		"Brand": "Collision Devices",
+		"Name": "Nocturnal",
+		"Width": 4.68504,
+		"Height": 4.566929,
+		"Image": "collision-devices-nocturnal.png"
+	},
+	{
 		"Brand": "Colorsound",
 		"Name": "Fuzz Sound",
 		"Width": 3.8189,
