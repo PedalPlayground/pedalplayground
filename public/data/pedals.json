@@ -3083,7 +3083,7 @@
 		"Brand": "Caroline",
 		"Name": "Crom",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.93,
 		"Image": "caroline-crom.png"
 	},
 	{
@@ -3137,6 +3137,20 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Meteore (Cosmic Purple)",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "caroline-meteore-purple.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Meteore (Throwback Can)",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "caroline-meteore-throwback.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Parabola",
 		"Width": 3.7,
 		"Height": 4.82,
@@ -3158,7 +3172,7 @@
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Somersault (Silver)",
+		"Name": "Somersault (Silver/Navy Throwback)",
 		"Width": 3.7,
 		"Height": 4.82,
 		"Image": "caroline-somersault-silver.png"
