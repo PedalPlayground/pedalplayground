@@ -2800,6 +2800,13 @@
 		"Image": "carl-martin-plexiranger.png"
 	},
 	{
+		"Brand": "Carl Martin",
+		"Name": "Octa-Switch MK3",
+		"Width": 2.36,
+		"Height": 4.33,
+		"Image": "carl-martin-octa-mk3.png"
+	},
+	{
 		"Brand": "Caroline",
 		"Name": "Hawaiian Pizza",
 		"Width": 3.7,
