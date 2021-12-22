@@ -12076,10 +12076,115 @@
 	},
 	{
 		"Brand": "Malekko",
+		"Name": "B:Assmaster",
+		"Width": 6,
+		"Height": 5.14,
+		"Image": "malekko-bassmaster.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Ekko 616 MKII FE",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-ekko616-mk2.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Charlie Foxtrot",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-charlie-foxtrot.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Diabolik",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-diabolik.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Downer",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-downer.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Fetish MKII",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-fetish-mk2.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Goatkeeper",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-goatkeeper.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Helium MKII",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-helium-mk2.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Lil Buddy",
+		"Width": 2,
+		"Height": 2.19,
+		"Image": "malekko-lil-buddy.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Polyamorator",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-polyamorator.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Scrutator",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-scrutator.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Sloika MKII",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-sloika-mk2.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Sneak Attack",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-sneak-attack.png"
+	},
+	{
+		"Brand": "Malekko",
 		"Name": "Spring",
 		"Width": 1.77,
 		"Height": 3.58,
 		"Image": "malekko-spring.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Thicken",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-thicken.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Unity MKII",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-unity-mk2.png"
 	},
 	{
 		"Brand": "Mammoth Electronics",
