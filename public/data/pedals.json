@@ -9136,6 +9136,13 @@
 	},
 	{
 		"Brand": "Hughes & Kettner",
+		"Name": "Black Spirit 200 Floor",
+		"Width": 18.50394,
+		"Height": 10.0394,
+		"Image": "hk-black-spirit-200-floor.png"
+	},
+	{
+		"Brand": "Hughes & Kettner",
 		"Name": "FSM-432 MKIII",
 		"Width": 18.11,
 		"Height": 5.28,
