@@ -9072,6 +9072,34 @@
 		"Image": "ground-control-tsukuyomi.png"
 	},
 	{
+		"Brand": "Ground FX",
+		"Name": "Boneflower",
+		"Width": 2.6,
+		"Height": 5.17,
+		"Image": "groundfx-boneflower.png"
+	},
+	{
+		"Brand": "Ground FX",
+		"Name": "Burning Sunn",
+		"Width": 2.6,
+		"Height": 5.17,
+		"Image": "groundfx-burning-sunn.png"
+	},
+	{
+		"Brand": "Ground FX",
+		"Name": "Grayskull",
+		"Width": 2.6,
+		"Height": 5.17,
+		"Image": "groundfx-grayskull.png"
+	},
+	{
+		"Brand": "Ground FX",
+		"Name": "Keto",
+		"Width": 2.6,
+		"Height": 5.17,
+		"Image": "groundfx-keto.png"
+	},
+	{
 		"Brand": "Gurus",
 		"Name": "1959 Doubledecker",
 		"Width": 8.66,
