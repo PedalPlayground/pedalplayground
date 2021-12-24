@@ -5720,6 +5720,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Dispatch Master (Black)",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "earthquakerdevices-dispatchmaster-black.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Dream Crusher",
 		"Width": 2.75,
 		"Height": 4.37,
@@ -8934,14 +8941,42 @@
 	{
 		"Brand": "Greer Amps",
 		"Name": "Lightspeed",
-		"Width": 2.84,
+		"Width": 2.82,
 		"Height": 4.9,
 		"Image": "greer-lightspeed.png"
 	},
 	{
 		"Brand": "Greer Amps",
-		"Name": "Lightspeed (White)",
-		"Width": 2.84,
+		"Name": "Lightspeed (Gameday Black)",
+		"Width": 2.82,
+		"Height": 4.9,
+		"Image": "greer-lightspeed-gamedayblack.png"
+	},
+	{
+		"Brand": "Greer Amps",
+		"Name": "Lightspeed (Pink/White)",
+		"Width": 2.82,
+		"Height": 4.9,
+		"Image": "greer-lightspeed-pinkwhite.png"
+	},
+	{
+		"Brand": "Greer Amps",
+		"Name": "Lightspeed (Reverse Daphne)",
+		"Width": 2.82,
+		"Height": 4.9,
+		"Image": "greer-lightspeed-revdaphne.png"
+	},
+	{
+		"Brand": "Greer Amps",
+		"Name": "Lightspeed (White/Green/Black)",
+		"Width": 2.82,
+		"Height": 4.9,
+		"Image": "greer-lightspeed-whitegreenblack.png"
+	},
+	{
+		"Brand": "Greer Amps",
+		"Name": "Lightspeed (White/Teal/Black)",
+		"Width": 2.82,
 		"Height": 4.9,
 		"Image": "greer-lightspeed-white.png"
 	},
