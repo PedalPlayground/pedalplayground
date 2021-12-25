@@ -4614,6 +4614,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Bass Whammy",
+		"Width": 6.5,
+		"Height": 7.75,
+		"Image": "digitech-bass-whammy.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Death Metal",
 		"Width": 3.12,
 		"Height": 4.865,
