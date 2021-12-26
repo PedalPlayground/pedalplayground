@@ -8120,6 +8120,83 @@
 		"Image": "friedman-smallbox.png"
 	},
 	{
+		"Brand": "FTelettronica",
+		"Name": "Animato",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-animato.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Brain Damage",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-brain-damage.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Dubstep Siren",
+		"Width": 4.96063,
+		"Height": 3.93701,
+		"Image": "ftelettronica-dubstep.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Envelope Filter",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-env-filter.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Mars Compressor",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-mars-comp.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Octave Fuzz",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-oct-fuzz.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Optical Compressor",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-opt-comp.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Overacter",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-overacter.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Psycho Delay",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-psycho-delay.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Soft Sustain Distortion",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-soft-sus-dist.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Spring Reverb",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-spring-reverb.png"
+	},
+	{
 		"Brand": "Fulltone",
 		"Name": "2B",
 		"Width": 2.19,
