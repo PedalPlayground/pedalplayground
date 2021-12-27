@@ -8135,6 +8135,13 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Bubble Box Chorus",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-bubble-box.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Dubstep Siren",
 		"Width": 4.96063,
 		"Height": 3.93701,
@@ -8146,6 +8153,13 @@
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-env-filter.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Helvetisk Motorsag II Distortion",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-helvet-motorsag-ii.png"
 	},
 	{
 		"Brand": "FTelettronica",
