@@ -10906,6 +10906,69 @@
 		"Image": "joyo-vintage-overdrive.png"
 	},
 	{
+		"Brand": "JPTR FX",
+		"Name": "Add Violence",
+		"Width": 2.5,
+		"Height": 4.84,
+		"Image": "jptrfx-add-violence.png"
+	},
+	{
+		"Brand": "JPTR FX",
+		"Name": "Fernweh",
+		"Width": 4.72,
+		"Height": 5.9,
+		"Image": "jptrfx-fernweh.png"
+	},
+	{
+		"Brand": "JPTR FX",
+		"Name": "Jive",
+		"Width": 2.5,
+		"Height": 4.84,
+		"Image": "jptrfx-jive.png"
+	},
+	{
+		"Brand": "JPTR FX",
+		"Name": "Kaleidoscope",
+		"Width": 4.72,
+		"Height": 5.9,
+		"Image": "jptrfx-kaleidoscope.png"
+	},
+	{
+		"Brand": "JPTR FX",
+		"Name": "Katastrophe",
+		"Width": 4.72,
+		"Height": 5.9,
+		"Image": "jptrfx-katastrophe.png"
+	},
+	{
+		"Brand": "JPTR FX",
+		"Name": "Silvermachine",
+		"Width": 5,
+		"Height": 10.46,
+		"Image": "jptrfx-silvermachine.png"
+	},
+	{
+		"Brand": "JPTR FX",
+		"Name": "Super Weirdo",
+		"Width": 4.72,
+		"Height": 5.9,
+		"Image": "jptrfx-super-weirdo.png"
+	},
+	{
+		"Brand": "JPTR FX",
+		"Name": "Tesla Wolf V2",
+		"Width": 2.5,
+		"Height": 4.84,
+		"Image": "jptrfx-tesla-wolf-v2.png"
+	},
+	{
+		"Brand": "JPTR FX",
+		"Name": "Warlow",
+		"Width": 4.72,
+		"Height": 5.9,
+		"Image": "jptrfx-warlow.png"
+	},
+	{
 		"Brand": "Keeley",
 		"Name": "1962",
 		"Width": 2.6,
