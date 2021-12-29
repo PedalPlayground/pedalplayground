@@ -10606,6 +10606,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "Atmosphere",
+		"Width": 2.6378,
+		"Height": 4.29134,
+		"Image": "joyo-atmosphere.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "D-Seed",
 		"Width": 3.92,
 		"Height": 4.13,
