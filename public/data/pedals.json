@@ -11851,6 +11851,48 @@
 		"Image": "lovepedal-vibronaut.png"
 	},
 	{
+		"Brand": "Lovetone",
+		"Name": "Cheese Source",
+		"Width": 7.48,
+		"Height": 7.87,
+		"Image": "lovetone-cheese-source.png"
+	},
+	{
+		"Brand": "Lovetone",
+		"Name": "Doppelganger",
+		"Width": 7.48,
+		"Height": 7.87,
+		"Image": "lovetone-doppelganger.png"
+	},
+	{
+		"Brand": "Lovetone",
+		"Name": "Flange",
+		"Width": 7.48,
+		"Height": 7.87,
+		"Image": "lovetone-flange.png"
+	},
+	{
+		"Brand": "Lovetone",
+		"Name": "Meatball",
+		"Width": 7.48,
+		"Height": 7.87,
+		"Image": "lovetone-meatball.png"
+	},
+	{
+		"Brand": "Lovetone",
+		"Name": "Ring Stinger",
+		"Width": 7.48,
+		"Height": 7.87,
+		"Image": "lovetone-ring-stinger.png"
+	},
+	{
+		"Brand": "Lovetone",
+		"Name": "Wobulator",
+		"Width": 7.48,
+		"Height": 7.87,
+		"Image": "lovetone-wobulator.png"
+	},
+	{
 		"Brand": "LPD",
 		"Name": "Eighty7",
 		"Width": 2.75,
