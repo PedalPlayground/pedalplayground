@@ -6280,7 +6280,14 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Green Russian Big Muff Pi",
+		"Name": "Black Russian Big Muff Pi",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "ehx-black-russian.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Green Russian Big Muff Pi Reissue",
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-green-russian.png"
