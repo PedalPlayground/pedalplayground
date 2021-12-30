@@ -5166,6 +5166,13 @@
 		"Image": "dunlop-jimi-hendrix-octavio-fuzz.png"
 	},
 	{
+		"Brand": "Dunlop",
+		"Name": "KH95 Kirk Hammett Crybaby",
+		"Width": 3.858,
+		"Height": 10,
+		"Image": "dunlop-kh95.png"
+	},
+	{
     	"Brand": "Dunlop",
     	"Name": "Mini 535Q Wah",
 		"Width": 3.13,
