@@ -18944,46 +18944,102 @@
 		"Image": "pill-stereo.png"
 	},
 	{
-		"Brand": "Thorpy",
-		"Name": "Fallout Cloud",
-		"Width": 2.75,
-		"Height": 5.7,
-		"Image": "thorpy-fallout-cloud.png"
+		"Brand": "ThorpyFx",
+		"Name": "Camoflange",
+		"Width": 4.04,
+		"Height": 4.92,
+		"Image": "thorpyfx-camoflange.png"
 	},
 	{
-		"Brand": "Thorpy",
-		"Name": "Fallout Cloud V2",
-		"Width": 2.56,
+		"Brand": "ThorpyFx",
+		"Name": "Fallout Cloud",
+		"Width": 2.76,
 		"Height": 4.92,
 		"Image": "thorpyfx-fallout-cloud-v2.png"
 	},
 	{
-		"Brand": "Thorpy",
+		"Brand": "ThorpyFx",
 		"Name": "Gunshot",
-		"Width": 2.75,
-		"Height": 5.7,
+		"Width": 2.76,
+		"Height": 4.92,
 		"Image": "thorpy-gunshot.png"
 	},
 	{
-		"Brand": "Thorpy",
+		"Brand": "ThorpyFx",
+		"Name": "Heavy Water",
+		"Width": 2.76,
+		"Height": 4.92,
+		"Image": "thorpyfx-heavy-water.png"
+	},
+	{
+		"Brand": "ThorpyFx",
 		"Name": "Peacekeeper",
-		"Width": 2.75,
-		"Height": 5.7,
+		"Width": 2.76,
+		"Height": 4.92,
 		"Image": "thorpy-peacekeeper.png"
 	},
 	{
-		"Brand": "Thorpy",
+		"Brand": "ThorpyFx",
+		"Name": "Pulse Doppler",
+		"Width": 4.04,
+		"Height": 4.92,
+		"Image": "thorpyfx-pulse-doppler.png"
+	},
+	{
+		"Brand": "ThorpyFx",
+		"Name": "Team Medic",
+		"Width": 2.76,
+		"Height": 4.92,
+		"Image": "thorpyfx-team-medic.png"
+	},
+	{
+		"Brand": "ThorpyFx",
+		"Name": "The Bunker",
+		"Width": 2.76,
+		"Height": 4.92,
+		"Image": "thorpyfx-bunker.png"
+	},
+	{
+		"Brand": "ThorpyFx",
 		"Name": "The Dane",
-		"Width": 3.94,
+		"Width": 4.04,
 		"Height": 4.92,
 		"Image": "thorpyfx-thedane.png"
 	},
 	{
-		"Brand": "Thorpy",
+		"Brand": "ThorpyFx",
+		"Name": "The Deep Oggin",
+		"Width": 4.04,
+		"Height": 4.92,
+		"Image": "thorpyfx-deep-oggin.png"
+	},
+	{
+		"Brand": "ThorpyFx",
+		"Name": "The Fat General",
+		"Width": 2.76,
+		"Height": 4.92,
+		"Image": "thorpyfx-fat-general.png"
+	},
+	{
+		"Brand": "ThorpyFx",
+		"Name": "The Field Marshall",
+		"Width": 2.76,
+		"Height": 4.92,
+		"Image": "thorpyfx-field-marshall.png"
+	},
+	{
+		"Brand": "ThorpyFx",
 		"Name": "The Veteran",
-		"Width": 3.94,
+		"Width": 4.04,
 		"Height": 4.92,
 		"Image": "thorpyfx-theveteran.png"
+	},
+	{
+		"Brand": "ThorpyFx",
+		"Name": "Warthog",
+		"Width": 2.76,
+		"Height": 4.92,
+		"Image": "thorpyfx-warthog.png"
 	},
 	{
 		"Brand": "Throbak",
