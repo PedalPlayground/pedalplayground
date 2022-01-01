@@ -4670,17 +4670,38 @@
 	},
 	{
 		"Brand": "Demedash",
-		"Name": "T-120 Video Tape Echo",
+		"Name": "112+",
 		"Width": 2.5,
-		"Height": 4.7,
-		"Image": "demedash-t-120.png"
+		"Height": 4.79,
+		"Image": "demedash-112plus.png"
 	},
 	{
 		"Brand": "Demedash",
-		"Name": "T-120 Video Tape Echo",
+		"Name": "Spidola",
 		"Width": 2.5,
-		"Height": 4.7,
-		"Image": "demedash-t-120.png"
+		"Height": 4.79,
+		"Image": "demedash-spidola.png"
+	},
+	{
+		"Brand": "Demedash",
+		"Name": "T-60",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "demedash-t-60.png"
+	},
+	{
+		"Brand": "Demedash",
+		"Name": "T-120 V2",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "demedash-t-120-v2.png"
+	},
+	{
+		"Brand": "Demedash",
+		"Name": "T-120 DLX V2",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "demedash-t-120-dlx-v2.png"
 	},
 	{
 		"Brand": "Diamond",
