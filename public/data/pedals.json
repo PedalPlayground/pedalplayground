@@ -17194,6 +17194,13 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Explorer",
+		"Width": 2.92,
+		"Height": 4.75,
+		"Image": "spaceman-explorer.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Gemini IV",
 		"Width": 3.99,
 		"Height": 4.75,
