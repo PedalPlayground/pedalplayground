@@ -16387,6 +16387,13 @@
 		"Image": "selah-scarlettelovev3.png"
 	},
 	{
+		"Brand": "Sennheiser",
+		"Name": "XSW-D",
+		"Width": 3.22,
+		"Height": 5.12,
+		"Image": "sennheiser-xswd.png"
+	},
+	{
 		"Brand": "Seymour Duncan",
 		"Name": "805 Overdrive",
 		"Width": 2.6,
@@ -18914,6 +18921,13 @@
 		"Width": 4.5,
 		"Height": 3.6,
 		"Image": "tech21-paradrive-bass-di.png"
+	},
+	{
+		"Brand": "Tech21",
+		"Name": "VT Bass DI",
+		"Width": 4.5,
+		"Height": 3.6,
+		"Image": "tech21-vtbassdi.png"
 	},
 	{
 		"Brand": "Tech21",
