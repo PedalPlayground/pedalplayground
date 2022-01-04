@@ -3137,6 +3137,13 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Megabyte (Black)",
+		"Width": 3.7,
+		"Height": 4.82,
+		"Image": "caroline-megabyte-black.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Meteore",
 		"Width": 3.7,
 		"Height": 4.82,
@@ -3246,6 +3253,13 @@
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-blood-donor.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "CB Tap",
+		"Width": 1.59,
+		"Height": 3.75,
+		"Image": "catalinbread-cb-tap.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -4216,9 +4230,23 @@
 	{
 		"Brand": "Crowther",
 		"Name": "Hot Cake",
-		"Width": 2.64,
-		"Height": 4.42,
+		"Width": 2.76,
+		"Height": 4.49,
 		"Image": "crowther-hotcake.png"
+	},
+	{
+		"Brand": "Crowther",
+		"Name": "Double Hot Cake",
+		"Width": 5.12,
+		"Height": 3.7,
+		"Image": "crowther-doublehotcake.png"
+	},
+	{
+		"Brand": "Crowther",
+		"Name": "Prunes & Custard",
+		"Width": 4.06,
+		"Height": 4.72,
+		"Image": "crowther-prunesandcustard.png"
 	},
 	{
 		"Brand": "Cusack Music",
