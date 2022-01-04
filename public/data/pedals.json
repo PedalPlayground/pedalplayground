@@ -2990,6 +2990,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "VB-2 Vibrato",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-vb2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "VB-2w Vibrato (Waza Craft)",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -17146,56 +17153,56 @@
 	{
 		"Brand": "Spaceman",
 		"Name": "Apollo VII",
-		"Width": 3,
+		"Width": 2.81,
 		"Height": 4.75,
 		"Image": "spaceman-apollovii.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Artemis",
-		"Width": 4.25,
+		"Width": 4.11,
 		"Height": 4.75,
 		"Image": "spaceman-artemis.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Atlas III",
-		"Width": 3,
+		"Width": 2.81,
 		"Height": 4.75,
 		"Image": "spaceman-atlasiii.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Aurora",
-		"Width": 4.25,
+		"Width": 3.99,
 		"Height": 4.75,
 		"Image": "spaceman-aurora.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Delta II",
-		"Width": 2.6,
-		"Height": 4.73,
+		"Width": 2.92,
+		"Height": 4.75,
 		"Image": "spaceman-deltaii.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Gemini IV",
-		"Width": 4.25,
+		"Width": 3.99,
 		"Height": 4.75,
 		"Image": "spaceman-geminiiv.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Mission Control",
-		"Width": 5,
-		"Height": 4,
+		"Width": 5.1,
+		"Height": 3.8,
 		"Image": "spaceman-missioncontrol.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Nebula",
-		"Width": 4.25,
+		"Width": 3.99,
 		"Height": 4.75,
 		"Image": "spaceman-nebula.png"
 	},
@@ -17209,23 +17216,23 @@
 	{
 		"Brand": "Spaceman",
 		"Name": "Polaris",
-		"Width": 4.25,
+		"Width": 4.11,
 		"Height": 4.75,
 		"Image": "spaceman-polaris.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Saturn VI",
-		"Width": 3,
+		"Width": 2.81,
 		"Height": 4.75,
 		"Image": "spaceman-saturnvi.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Sputnik",
-		"Width": 3,
+		"Width": 2.81,
 		"Height": 4.75,
-		"Image": "spaceman-apollovii.png"
+		"Image": "spaceman-sputnik.png"
 	},
 	{
 		"Brand": "Spaceman",
@@ -17237,14 +17244,14 @@
 	{
 		"Brand": "Spaceman",
 		"Name": "Sputnik III",
-		"Width": 4.25,
+		"Width": 3.99,
 		"Height": 4.75,
 		"Image": "spaceman-sputnikiii.png"
 	},
 	{
 		"Brand": "Spaceman",
 		"Name": "Titan II",
-		"Width": 3,
+		"Width": 2.81,
 		"Height": 4.75,
 		"Image": "spaceman-titanii.png"
 	},
