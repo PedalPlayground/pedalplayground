@@ -18889,6 +18889,13 @@
 	},
 	{
 		"Brand": "Tech21",
+		"Name": "VT Bass DI",
+		"Width": 4.5,
+		"Height": 3.6,
+		"Image": "tech21-vtbassdi.png"
+	},
+	{
+		"Brand": "Tech21",
 		"Name": "Sansamp YYZ",
 		"Width": 3.7,
 		"Height": 4.7,
