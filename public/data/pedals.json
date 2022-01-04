@@ -16415,6 +16415,20 @@
 		"Image": "shiftline-cabzonex.png"
 	},
 	{
+		"Brand": "Shift Line",
+		"Name": "Twin MkIIIS",
+		"Width": 4.88,
+		"Height": 4.09,
+		"Image": "shiftline-twin-mkiiis.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Olympic MkIIIS",
+		"Width": 4.88,
+		"Height": 4.09,
+		"Image": "shiftline-olympic-mkiiis.png"
+	},
+	{
 		"Brand": "Smallsound/Bigsound",
 		"Name": "Buzzz",
 		"Width": 3.68,
