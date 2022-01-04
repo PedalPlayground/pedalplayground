@@ -2016,6 +2016,13 @@
 		"Image": "bigear-wood-cutter.png"
 	},
 	{
+		"Brand": "Big Joe",
+		"Name": "Analog Chorus",
+		"Width": 2.95,
+		"Height": 4.8,
+		"Image": "big-joe-analog-chorus.png"
+	},
+	{
 		"Brand": "B.K. Butler",
 		"Name": "Tube Driver",
 		"Width": 4.13,
@@ -5536,6 +5543,13 @@
 		"Height": 10,
 		"Image": "dunlop-wah.png"
 	},
+	{
+		"Brand": "Dunlop",
+	 	"Name": "JC95 Jerry Cantrell Cry Baby",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "dunlop-jerry-cantrell.png"
+ 	},
   	{
 		"Brand": "Dunlop",
 		"Name": "Jimi Hendrix Fuzz Face",
@@ -5559,7 +5573,7 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "KH95 Kirk Hammett Crybaby",
+		"Name": "KH95 Kirk Hammett Cry Baby",
 		"Width": 3.858,
 		"Height": 10,
 		"Image": "dunlop-kh95.png"
@@ -9140,6 +9154,13 @@
 		"Width": 3.875,
 		"Height": 10.75,
 		"Image": "goodrich-volume.png"
+	},
+	{
+		"Brand": "Grace Design",
+		"Name": "ALiX",
+		"Width": 6.2,
+		"Height": 5.5,
+		"Image": "grace-design-alix.png"
 	},
 	{
 		"Brand": "Grace Design",
@@ -13774,6 +13795,13 @@
 		"Width": 3.66,
 		"Height": 1.66,
 		"Image": "mosky-dual-switch.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Pana-Trem",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "mrblack-pana-trem.png"
 	},
 	{
 		"Brand": "Mr. Black",
