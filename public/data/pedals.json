@@ -16394,19 +16394,19 @@
 		"Image": "seymourduncan-vaportrail.png"
 	},
 	{
-        "Brand": "Shift Line",
+		"Brand": "Shift Line",
 		"Name": "A+ Astronaut III",
 		"Width": 2.63,
 		"Height": 4.33,
 		"Image": "astronaut-III.png"
-    },
+	},
 	{
-        "Brand": "Shift Line",
+		"Brand": "Shift Line",
 		"Name": "A+ Buzz V.2",
 		"Width": 2.63,
 		"Height": 4.33,
 		"Image": "shiftline-buzz-v2.png"
-    },
+	},
 	{
 		"Brand": "Shift Line",
 		"Name": "CabZone X",
