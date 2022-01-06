@@ -21697,6 +21697,13 @@
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "Silicon Fuzz Factory",
+		"Width": 2.58,
+		"Height": 4.31,
+		"Image": "zvex-si-fuzz-factory.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Sonar",
 		"Width": 4.68,
 		"Height": 2.38,
