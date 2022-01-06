@@ -5937,6 +5937,34 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Plumes (Black/Teal)",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "earthquaker-plumes-blackteal.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Plumes (Black Sparkle)",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "earthquaker-plumes-blacksparkle.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Plumes (Purple Sparkle)",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "earthquaker-plumes-purplesparkle.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Plumes (Yellow/Green)",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "earthquaker-plumes-yellowgreen.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Pyramids",
 		"Width": 4.28,
 		"Height": 4.8,
@@ -12409,6 +12437,13 @@
 		"Width": 3.55,
 		"Height": 4.35,
 		"Image": "mastro-valvola-lem.png"
+	},
+	{
+		"Brand": "MAS Effects",
+		"Name": "Sona Fuzz",
+		"Width": 2.5,
+		"Height": 4.95,
+		"Image": "mas-sona.png"
 	},
 	{
 		"Brand": "Mattoverse",
