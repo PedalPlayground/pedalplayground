@@ -19484,6 +19484,13 @@
 	},
 	{
 		"Brand": "Vertex",
+		"Name": "Nyle",
+		"Width": 3.2,
+		"Height": 4.6,
+		"Image": "vertex-nyle.png"
+	},
+	{
+		"Brand": "Vertex",
 		"Name": "Steel String Clean Drive",
 		"Width": 3.2,
 		"Height": 4.6,
