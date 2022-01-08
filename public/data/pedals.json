@@ -1974,6 +1974,13 @@
 		"Image": "benson-preamp.png"
 	},
 	{
+		"Brand": "Benson",
+		"Name": "Preamp [Pink]",
+		"Width": 4.69,
+		"Height": 3.85,
+		"Image": "benson-preamp-pink.png"
+	},
+	{
 		"Brand": "Big Ear Pedals",
 		"Name": "Albie",
 		"Width": 2.75,
@@ -12405,6 +12412,13 @@
 	},
 	{
 		"Brand": "Lovepedal",
+		"Name": "High Powered Tweed Twin",
+		"Width": 2.5,
+		"Height": 4.6,
+		"Image": "lovepedal-hp-tweed-twin.png"
+	},
+	{
+		"Brand": "Lovepedal",
 		"Name": "Kalamazoo Black Caucus",
 		"Width": 2.59,
 		"Height": 4.44,
@@ -18272,6 +18286,13 @@
 		"Image": "swindler-redmountain.png"
 	},
 	{
+		"Brand": "Swindler",
+		"Name": "The Gulf (Limited Edition)",
+		"Width": 2.93,
+		"Height": 5.02,
+		"Image": "swindler-gulf-le.png"
+	},
+	{
 		"Brand": "T-Rex Effects",
 		"Name": "Alberta",
 		"Width": 3.9,
@@ -19596,6 +19617,13 @@
 	},
 	{
 		"Brand": "Tone City",
+		"Name": "Durple",
+		"Width": 1.65354,
+		"Height": 3.66142,
+		"Image": "tonecity-durple.png"
+	},
+	{
+		"Brand": "Tone City",
 		"Name": "Fuxx Fuzz",
 		"Width": 1.73,
 		"Height": 3.65,
@@ -19656,6 +19684,13 @@
 		"Width": 1.73,
 		"Height": 3.65,
 		"Image": "tonecity-wildfire.png"
+	},
+	{
+		"Brand": "Tone City",
+		"Name": "Wild Fro",
+		"Width": 1.65354,
+		"Height": 3.66142,
+		"Image": "tonecity-wild-fro.png"
 	},
 	{
 		"Brand": "Triungulo Lab",
