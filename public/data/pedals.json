@@ -1942,8 +1942,43 @@
 		"Brand": "Benson",
 		"Name": "Preamp",
 		"Width": 4.69,
-		"Height": 3.85,
+		"Height": 3.77,
 		"Image": "benson-preamp.png"
+	},
+	{
+		"Brand": "Benson",
+		"Name": "Preamp (Green)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-green.png"
+	},
+	{
+		"Brand": "Benson",
+		"Name": "Preamp (Pink)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-pink.png"
+	},
+	{
+		"Brand": "Benson",
+		"Name": "Preamp (Powder Blue)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-powderblue.png"
+	},
+	{
+		"Brand": "Benson",
+		"Name": "Preamp (Seafoam)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-seafoam.png"
+	},
+	{
+		"Brand": "Benson",
+		"Name": "Preamp (White)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-white.png"
 	},
 	{
 		"Brand": "Big Ear Pedals",
@@ -3533,13 +3568,6 @@
 		"Width": 3.7,
 		"Height": 4.81,
 		"Image": "champion-leccy-the-skitter-bullfrog.png"
-	},
-	{
-		"Brand": "Champion Leccy",
-		"Name": "The Skitter (Black)",
-		"Width": 3.7,
-		"Height": 4.81,
-		"Image": "champion-leccy-the-skitter.png"
 	},
 	{
 		"Brand": "Champion Leccy",
