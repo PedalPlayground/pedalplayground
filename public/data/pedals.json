@@ -3494,10 +3494,17 @@
 	},
 	{
 		"Brand": "Champion Leccy",
-		"Name": "The Kilter",
+		"Name": "The Kilter (Pink)",
 		"Width": 5.88,
 		"Height": 5.02,
 		"Image": "champion-leccy-the-kilter.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Kilter (Yellow)",
+		"Width": 5.88,
+		"Height": 5.02,
+		"Image": "champion-leccy-the-kilter-yellow.png"
 	},
 	{
 		"Brand": "Champion Leccy",
@@ -3508,6 +3515,13 @@
 	},
 	{
 		"Brand": "Champion Leccy",
+		"Name": "The Skitter (Bare)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitter-bare.png"
+	},
+	{
+		"Brand": "Champion Leccy",
 		"Name": "The Skitter (Black)",
 		"Width": 3.7,
 		"Height": 4.81,
@@ -3515,7 +3529,21 @@
 	},
 	{
 		"Brand": "Champion Leccy",
-		"Name": "The Skitter (Foam Green)",
+		"Name": "The Skitter (Bullfrog Belly)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitter-bullfrog.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Skitter (Black)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitter.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Skitter (Seafoam)",
 		"Width": 3.7,
 		"Height": 4.81,
 		"Image": "champion-leccy-the-skitter-foamgreen.png"
@@ -3543,10 +3571,17 @@
 	},
 	{
 		"Brand": "Champion Leccy",
-		"Name": "The Woozy",
+		"Name": "The Woozy (Blue)",
 		"Width": 3.7,
 		"Height": 4.81,
 		"Image": "champion-leccy-the-woozy.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Woozy (Red)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-woozy-red.png"
 	},
 	{
 		"Brand": "Chasetone",
@@ -19465,77 +19500,77 @@
 		"Brand": "Vertex",
 		"Name": "Boost",
 		"Width": 3.2,
-		"Height": 4.6,
+		"Height": 4.47,
 		"Image": "vertex-boost.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Boost MkII",
 		"Width": 2.2,
-		"Height": 4.6,
+		"Height": 4.2,
 		"Image": "vertex-boost-mk2.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Dynamic Distortion",
 		"Width": 3.2,
-		"Height": 4.6,
+		"Height": 4.47,
 		"Image": "vertex-dynamicdistortion.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Nyle",
 		"Width": 3.2,
-		"Height": 4.6,
+		"Height": 4.47,
 		"Image": "vertex-nyle.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Steel String Clean Drive",
 		"Width": 3.2,
-		"Height": 4.6,
+		"Height": 4.47,
 		"Image": "vertex-steelstring.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Steel String Clean Drive MKII",
 		"Width": 2.2,
-		"Height": 4.6,
+		"Height": 4.2,
 		"Image": "vertex-steelstring-mk2.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Steel String Supreme",
 		"Width": 3.2,
-		"Height": 4.6,
+		"Height": 4.47,
 		"Image": "vertex-steelstringsupreme.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "T-Drive",
 		"Width": 3.2,
-		"Height": 4.6,
+		"Height": 4.47,
 		"Image": "vertex-tdrive.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Tone Secret",
 		"Width": 3.2,
-		"Height": 4.6,
+		"Height": 4.47,
 		"Image": "vertex-tonesecret.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Ultraphonix Overdrive",
 		"Width": 3.2,
-		"Height": 4.6,
+		"Height": 4.47,
 		"Image": "vertex-ultraphonix.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Ultraphonix Overdrive MKII",
 		"Width": 2.2,
-		"Height": 4.6,
+		"Height": 4.2,
 		"Image": "vertex-ultraphonix-mk2.png"
 	},
 	{
