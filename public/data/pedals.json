@@ -18861,10 +18861,17 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Stereo Chorus Pitch Modulator & Flanger",
-		"Width": 3.85,
-		"Height": 4.9,
+		"Name": "Stereo Chorus+ Pitch Modulator & Flanger",
+		"Width": 3.7,
+		"Height": 4.8,
 		"Image": "tc-chorus-pitch-flanger.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Stereo Chorus+ Pitch Modulator & Flanger Gold",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "tc-chorus-pitch-flanger-gold.png"
 	},
 	{
 		"Brand": "TC Electronic",
