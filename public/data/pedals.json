@@ -3677,8 +3677,8 @@
 	{
 		"Brand": "Chase Bliss",
 		"Name": "EXP",
-		"Width": 2.6,
-		"Height": 5.02,
+		"Width": 2.56,
+		"Height": 4.94,
 		"Image": "chasebliss-exp.png"
 	},
 	{
@@ -3743,6 +3743,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-spectre.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "Spectre (Blue Knobs)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-spectre-blue.png"
 	},
 	{
 		"Brand": "Chase Bliss",
