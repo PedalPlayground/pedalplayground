@@ -18588,6 +18588,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Infinite Sample Sustainer",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-infinite.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Iron Curtain Noise Gate",
 		"Width": 2.9,
 		"Height": 5.15,
