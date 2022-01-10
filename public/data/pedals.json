@@ -4032,6 +4032,13 @@
 		"Image": "collision-devices-black-hole-symmetry.png"
 	},
 	{
+		"Brand": "Collision Devices",
+		"Name": "Nocturnal",
+		"Width": 7.44,
+		"Height": 4.84,
+		"Image": "collision-devices-nocturnal.png"
+	},
+	{
 		"Brand": "Colorsound",
 		"Name": "Power Boost",
 		"Width": 3.8189,
