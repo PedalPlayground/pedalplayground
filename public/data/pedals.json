@@ -13126,6 +13126,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Audiofile",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-audiofile.png"
+	},	
+	{
+		"Brand": "Mooer",
 		"Name": "Baby Bomb",
 		"Width": 1.65,
 		"Height": 3.7,
