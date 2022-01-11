@@ -20303,6 +20303,13 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "Slötvå",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-slotva.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "Slötvå (Nat. Parks LE)",
 		"Width": 2.6,
 		"Height": 4.95,
