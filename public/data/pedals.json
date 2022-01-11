@@ -9766,6 +9766,13 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "TS9 Tube Screamer (40th Anniversary)",
+		"Width": 3,
+		"Height": 4.9,
+		"Image": "ibanez-ts9-40th.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "TS9B Tube Screamer",
 		"Width": 3,
 		"Height": 4.9,
@@ -9791,6 +9798,13 @@
 		"Width": 6.10,
 		"Height": 10.20,
 		"Image": "ibanez-wd7.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "WH10 V3 Wah",
+		"Width": 3.83,
+		"Height": 7.95,
+		"Image": "ibanez-wh10-v3.png"
 	},
 	{
 		"Brand": "IK Multimedia",
@@ -9819,13 +9833,6 @@
 		"Width": 6.8,
 		"Height": 5.7,
 		"Image": "ikm-xvibe.png"
-	},
-	{
-		"Brand": "Ibanez",
-		"Name": "WH10 V3 Wah",
-		"Width": 3.83,
-		"Height": 7.95,
-		"Image": "ibanez-wh10-v3.png"
 	},
 	{
 		"Brand": "ISP Technologies",
