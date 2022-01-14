@@ -11928,12 +11928,12 @@
 		"Image": "korg-sdd-3000.png"
 	},
 	{
-    	"Brand": "Lake Effects",
-    	"Name": "FVD",
-    	"Width": 3.68,
-    	"Height": 4.67,
-    	"Image": "lake-effects-fvd.png"
-    },
+    "Brand": "Lake Effects",
+    "Name": "FVD",
+    "Width": 3.68,
+    "Height": 4.67,
+    "Image": "lake-effects-fvd.png"
+  },
 	{
 		"Brand": "Land Devices",
 		"Name": "Domino",
@@ -12517,10 +12517,80 @@
 	},
 	{
 		"Brand": "Mastro Valvola",
+		"Name": "Attila",
+		"Width": 3.54,
+		"Height": 4.29,
+		"Image": "mastro-valvola-attila.png"
+	},
+	{
+		"Brand": "Mastro Valvola",
+		"Name": "Area",
+		"Width": 3.54,
+		"Height": 4.29,
+		"Image": "mastro-valvola-area.png"
+	},
+	{
+		"Brand": "Mastro Valvola",
 		"Name": "LEM",
-		"Width": 3.55,
-		"Height": 4.35,
+		"Width": 3.54,
+		"Height": 4.29,
 		"Image": "mastro-valvola-lem.png"
+	},
+	{
+		"Brand": "Mastro Valvola",
+		"Name": "LEM (White)",
+		"Width": 3.54,
+		"Height": 4.29,
+		"Image": "mastro-valvola-lem-white.png"
+	},
+	{
+		"Brand": "Mastro Valvola",
+		"Name": "LFO",
+		"Width": 3.54,
+		"Height": 4.29,
+		"Image": "mastro-valvola-lfo.png"
+	},
+	{
+		"Brand": "Mastro Valvola",
+		"Name": "Love Buzz",
+		"Width": 3.54,
+		"Height": 4.29,
+		"Image": "mastro-valvola-love-buzz.png"
+	},
+	{
+		"Brand": "Mastro Valvola",
+		"Name": "Millibar",
+		"Width": 3.54,
+		"Height": 4.29,
+		"Image": "mastro-valvola-millibar.png"
+	},
+	{
+		"Brand": "Mastro Valvola",
+		"Name": "OFF1",
+		"Width": 3.54,
+		"Height": 4.29,
+		"Image": "mastro-valvola-off1.png"
+	},
+	{
+		"Brand": "Mastro Valvola",
+		"Name": "Smog",
+		"Width": 3.54,
+		"Height": 4.29,
+		"Image": "mastro-valvola-smog.png"
+	},
+	{
+		"Brand": "Mastro Valvola",
+		"Name": "Tempesta",
+		"Width": 3.54,
+		"Height": 4.29,
+		"Image": "mastro-valvola-tempesta.png"
+	},
+	{
+		"Brand": "Mastro Valvola",
+		"Name": "Timelab",
+		"Width": 3.54,
+		"Height": 4.39,
+		"Image": "mastro-valvola-timelab.png"
 	},
 	{
 		"Brand": "MAS Effects",
@@ -12528,6 +12598,13 @@
 		"Width": 2.5,
 		"Height": 4.95,
 		"Image": "mas-sona.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Black Math",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "mask-black-math.png"
 	},
 	{
 		"Brand": "Mattoverse",
