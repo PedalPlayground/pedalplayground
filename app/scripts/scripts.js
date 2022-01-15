@@ -343,8 +343,7 @@ $(document).ready(function () {
 		var name = $(this).find("#save-board-name").val();
 		UpdateSavedBoardData(name, {
 			canvas: $(".canvas").html(),
-			scale: $("#canvas-scale").val(),
-		})
+		});
 		$("#save-board-modal").modal("hide");
 	});
 
@@ -355,7 +354,7 @@ $(document).ready(function () {
 	$("body").on("click", "#load-board", function (e) {
 		var selected = $("#load-saved-board").find(":selected");
 		loadCanvas(selected.val());
-		setScale(selected.data('scale'));
+		setScale($("#multiplier").val());
 	});
 
 	// On keydown of "D" or "delete" remove pedal
@@ -700,7 +699,6 @@ window.LoadSavedBoardData = function () {
 			Object.entries(JSON.parse(boards))
 			.map(function (board) {
 				return $("<option>", {
-					data: { scale: board[1].scale },
 					value: board[1].canvas,
 					text: board[0],
 				})
