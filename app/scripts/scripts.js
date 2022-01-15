@@ -117,6 +117,7 @@ $(document).ready(function () {
 	});
 
 	$("body").on("click", "#clear-canvas-confirmation", function () {
+		$(".saved-board-list").val(null).trigger("change");
 		$(".canvas").empty().append('<input id="multiplier" type="hidden" value="' + $("#canvas-scale").val() + '">');
 		$("#clear-canvas-modal").modal("hide");
 		savePedalCanvas();
