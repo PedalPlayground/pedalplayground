@@ -346,13 +346,10 @@ $(document).ready(function () {
 			scale: $("#canvas-scale").val(),
 		})
 		$("#save-board-modal").modal("hide");
-
-
 	});
 
 	$("body").on("click", "#load-board", function (e) {
 		var selected = $("#load-saved-board").find(":selected");
-		console.log(selected);
 		loadCanvas(selected.val());
 		setScale(selected.data('scale'));
 	});
@@ -705,7 +702,6 @@ window.LoadSavedBoardData = function () {
 };
 
 window.UpdateSavedBoardData = function (name, data) {
-	console.log(name, data);
 	var boards = localStorage["savedCanvases"];
 
 	var boardData = boards == null
