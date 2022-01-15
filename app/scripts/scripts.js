@@ -655,6 +655,21 @@ window.GetPedalBoardData = function () {
 	});
 };
 
+window.UpdateSavedBoardData = function (name, data) {
+	console.log(name, data);
+	var boards = localStorage["savedCanvases"];
+
+	var boardData = boards == null
+		? {}
+		: JSON.parse(boards);
+
+	boardData[name] = data;
+
+	localStorage["savedCanvases"] = JSON.stringify(boardData);
+
+	LoadSavedBoardData();
+}
+
 window.RenderPedalBoards = function (pedalboards) {
 	// console.log('RenderPedalBoards');
 	for (var i in pedalboards) {
