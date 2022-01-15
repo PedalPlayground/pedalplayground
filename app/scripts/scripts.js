@@ -672,8 +672,7 @@ window.LoadSavedBoardData = function () {
 			})
 		})
 	);
-}
-
+};
 
 window.UpdateSavedBoardData = function (name, data) {
 	console.log(name, data);
@@ -688,7 +687,7 @@ window.UpdateSavedBoardData = function (name, data) {
 	localStorage["savedCanvases"] = JSON.stringify(boardData);
 
 	LoadSavedBoardData();
-}
+};
 
 window.RenderPedalBoards = function (pedalboards) {
 	// console.log('RenderPedalBoards');
