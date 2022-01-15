@@ -29,6 +29,16 @@ $(document).ready(function () {
 		//$(this).val(null).trigger('change').focus();
 	});
 
+	$(".saved-board-list").select2({
+		placeholder: "Select a saved board",
+		width: "style"
+	});
+
+	$(".saved-board-list").on("select2:select", function (e) {
+		$("#load-board").click();
+		$(this).trigger("change").focus();
+	});
+
 	$(function () {
 		// Load canvas from localStorage if it has been saved prior
 		if (localStorage["pedalCanvas"] != null) {
