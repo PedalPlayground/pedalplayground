@@ -327,6 +327,25 @@ $(document).ready(function () {
 		}
 	});
 
+	$("body").on("submit", "#save-board-form", function (e) {
+		e.preventDefault();
+		var name = $(this).find("#save-board-name").val();
+		UpdateSavedBoardData(name, {
+			canvas: $(".canvas").html(),
+			scale: $("#canvas-scale").val(),
+		})
+		$("#save-board-modal").modal("hide");
+
+
+	});
+
+	$("body").on("click", "#load-board", function (e) {
+		var selected = $("#load-saved-board").find(":selected");
+		console.log(selected);
+		loadCanvas(selected.val());
+		setScale(selected.data('scale'));
+	});
+
 	// On keydown of "D" or "delete" remove pedal
 	$("body").on("keydown keyup", function (event) {
 		if (event.which == 68 || event.which == 8) {
