@@ -421,6 +421,16 @@ $(document).ready(function () {
 	});
 }); // End Document ready
 
+function loadCanvas(canvas) {
+	$(".canvas").html(canvas);
+	readyCanvas();
+}
+
+function setScale(scale) {
+	$("#canvas-scale").val(scale);
+	$(".canvas").css("background-size", scale + "px");
+}
+
 function readyCanvas(pedal) {
 	var $draggable = $(".canvas .pedal, .canvas .pedalboard").draggabilly({
 		containment: ".canvas",
