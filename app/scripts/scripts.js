@@ -348,6 +348,10 @@ $(document).ready(function () {
 		$("#save-board-modal").modal("hide");
 	});
 
+	$("body").on("click", "#save-board", function (e) {
+		$("#save-board-name").val($("#load-saved-board").find(":selected").text());
+	});
+
 	$("body").on("click", "#load-board", function (e) {
 		var selected = $("#load-saved-board").find(":selected");
 		loadCanvas(selected.val());
