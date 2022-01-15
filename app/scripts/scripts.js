@@ -33,8 +33,7 @@ $(document).ready(function () {
 		// Load canvas from localStorage if it has been saved prior
 		if (localStorage["pedalCanvas"] != null) {
 			var savedPedalCanvas = JSON.parse(localStorage["pedalCanvas"]);
-			$(".canvas").html(savedPedalCanvas);
-			readyCanvas();
+			loadCanvas(savedPedalCanvas);
 		}
 
 		// If hidden multiplier value doesn't exist, create it
@@ -46,8 +45,7 @@ $(document).ready(function () {
 			var multiplier = $("#multiplier").val();
 		}
 		// Set canvas scale input and bg size to match scale
-		$("#canvas-scale").val(multiplier);
-		$(".canvas").css("background-size", multiplier + "px");
+		setScale(multiplier);
 	});
 
 	// When user changes scale, update stuffs
