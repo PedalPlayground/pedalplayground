@@ -693,16 +693,19 @@ window.LoadSavedBoardData = function () {
 		return;
 	}
 
-	$(".saved-board-list").empty().append(
-		Object.entries(JSON.parse(boards))
-		.map(function (board) {
-			return $("<option>", {
-				data: { scale: board[1].scale },
-				value: board[1].canvas,
-				text: board[0],
+	$(".saved-board-list")
+		.empty()
+		.append("<option>")
+		.append(
+			Object.entries(JSON.parse(boards))
+			.map(function (board) {
+				return $("<option>", {
+					data: { scale: board[1].scale },
+					value: board[1].canvas,
+					text: board[0],
+				})
 			})
-		})
-	);
+		);
 };
 
 window.UpdateSavedBoardData = function (name, data) {
