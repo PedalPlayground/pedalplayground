@@ -151,7 +151,7 @@
 												placeholder="Bozz FM-2 Face Melter"
 											/>
 										</div>
-										
+
 										<div class="form-element left">
 											<label for="">Width <em>(inches)</em></label>
 											<input
@@ -200,6 +200,29 @@
 							</div>
 						</div>
 
+						<div class="sidebar__section">
+							<h4>Load Saved Board</h4>
+							<form id="load-saved-board">
+								<p><select class="form-control saved-board-list"></select></p>
+								<button
+									id="save-board"
+									class="btn btn-primary col-sm-6"
+									data-toggle="modal"
+									data-target="#save-board-modal"
+								>
+									Save Current
+								</button>
+
+								<button
+									type="submit"
+									id="load-board"
+									class="btn btn-primary col-sm-6"
+								>
+									Load Selected
+								</button>
+							</form>
+						</div>
+
 						<div id="canvas-scale-form" class="sidebar__section form-inline">
 							<h4>Canvas Scale</h4>
 							<div class="input-group">
@@ -211,7 +234,7 @@
 									value="25"
 								/>
 							</div>
-							
+
 							<a
 								href="#"
 								class="btn btn-sm"
@@ -312,6 +335,50 @@
 								Close
 							</button>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="save-board-modal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+
+						<h4 class="modal-title">Save Pedalboard</h4>
+					</div>
+
+					<div class="modal-body">
+						<form id="save-board-form" class="form-horizontal">
+							<div class="form-group">
+								<label for="save-board-name" class="col-sm-3 control-label">Name</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="save-board-name" placeholder="My Board" required>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Cancel
+						</button>
+
+						<button
+							type="submit"
+							form="save-board-form"
+							class="btn btn-primary"
+						>
+							Save
+						</button>
 					</div>
 				</div>
 			</div>
