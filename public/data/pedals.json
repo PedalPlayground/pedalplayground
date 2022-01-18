@@ -11203,7 +11203,7 @@
 		"Brand": "Keeley",
 		"Name": "Caverns V2",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.88,
 		"Image": "keeley-cavernsv2.png"
 	},
 	{
@@ -11219,6 +11219,13 @@
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "keeley-cavernsv2-blacksparkle.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Caverns V2 (Waves)",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "keeley-cavernsv2-waves.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -12353,6 +12360,41 @@
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "madprof-sweethoney.png"
+	},
+	{
+		"Brand": "Maestro",
+		"Name": "Comet Chorus",
+		"Width": 3.45,
+		"Height": 5.13,
+		"Image": "maestro-comet-chorus.png"
+	},
+	{
+		"Brand": "Maestro",
+		"Name": "Discoverer Delay",
+		"Width": 3.45,
+		"Height": 5.13,
+		"Image": "maestro-discoverer-delay.png"
+	},
+	{
+		"Brand": "Maestro",
+		"Name": "Fuzz Tone FZ-M",
+		"Width": 3.45,
+		"Height": 5.13,
+		"Image": "maestro-fuzz-tone.png"
+	},
+	{
+		"Brand": "Maestro",
+		"Name": "Invader Distortion",
+		"Width": 3.45,
+		"Height": 5.13,
+		"Image": "maestro-invader-distortion.png"
+	},
+	{
+		"Brand": "Maestro",
+		"Name": "Ranger Overdrive",
+		"Width": 3.45,
+		"Height": 5.13,
+		"Image": "maestro-ranger-overdrive.png"
 	},
 	{
 		"Brand": "Malekko",
