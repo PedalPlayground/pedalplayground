@@ -19169,6 +19169,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "SCF Gold Chorus/Flanger",
+		"Width": 3.7,
+		"Height": 5,
+		"Image": "tc-scf.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Sentry Noise Gate",
 		"Width": 2.86,
 		"Height": 4.8,
@@ -21652,6 +21659,13 @@
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-fat-fuzzfactory-vexter.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Full of Hell Fuzz Factory",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-fuzz-factory-foh.png"
 	},
 	{
 		"Brand": "Zvex",
