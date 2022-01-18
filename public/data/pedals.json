@@ -15638,60 +15638,11 @@
 		"Image": "outlaw-effects-wrangler.png"
 	},
 	{
-		"Brand": "Pladask",
-		"Name": "Bakfram",
-		"Width": 2.6,
-		"Height": 5.035,
-		"Image": "pladask-bakfram.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Draume",
-		"Width": 3.7,
-		"Height": 4.85,
-		"Image": "pladask-draume.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Fabrikat",
-		"Width": 3.7,
-		"Height": 4.85,
-		"Image": "pladask-fabrikat.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Falma",
-		"Width": 2.6,
-		"Height": 5.035,
-		"Image": "pladask-falma.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Kniv",
-		"Width": 4.7,
-		"Height": 2.735,
-		"Image": "pladask-kniv.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Matrise",
-		"Width": 5.75,
-		"Height": 4.765,
-		"Image": "pladask-matrise.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Romferd",
-		"Width": 3.7,
-		"Height": 4.85,
-		"Image": "pladask-romferd.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Taken",
-		"Width": 3.85,
-		"Height": 4.7,
-		"Image": "pladask-taken.png"
+		"Brand": "Panda Audio",
+		"Name": "Future Impact",
+		"Width": 4.9,
+		"Height": 6.1,
+		"Image": "panda-audio-future-impact"
 	},
 	{
 		"Brand": "Paradox Effects",
@@ -16203,6 +16154,62 @@
 		"Width": 6.3,
 		"Height": 3.7,
 		"Image": "piratemidi-bridge6.png"
+	},
+	{
+		"Brand": "Pladask",
+		"Name": "Bakfram",
+		"Width": 2.6,
+		"Height": 5.035,
+		"Image": "pladask-bakfram.png"
+	},
+	{
+		"Brand": "Pladask",
+		"Name": "Draume",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "pladask-draume.png"
+	},
+	{
+		"Brand": "Pladask",
+		"Name": "Fabrikat",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "pladask-fabrikat.png"
+	},
+	{
+		"Brand": "Pladask",
+		"Name": "Falma",
+		"Width": 2.6,
+		"Height": 5.035,
+		"Image": "pladask-falma.png"
+	},
+	{
+		"Brand": "Pladask",
+		"Name": "Kniv",
+		"Width": 4.7,
+		"Height": 2.735,
+		"Image": "pladask-kniv.png"
+	},
+	{
+		"Brand": "Pladask",
+		"Name": "Matrise",
+		"Width": 5.75,
+		"Height": 4.765,
+		"Image": "pladask-matrise.png"
+	},
+	{
+		"Brand": "Pladask",
+		"Name": "Romferd",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "pladask-romferd.png"
+	},
+	{
+		"Brand": "Pladask",
+		"Name": "Taken",
+		"Width": 3.85,
+		"Height": 4.7,
+		"Image": "pladask-taken.png"
 	},
 	{
 		"Brand": "PolarBear",
