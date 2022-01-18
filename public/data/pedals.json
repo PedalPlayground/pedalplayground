@@ -11208,6 +11208,20 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Caverns V2 (Black Neon)",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "keeley-cavernsv2-blacksneon.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Caverns V2 (Black Sparkle)",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "keeley-cavernsv2-blacksparkle.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Compressor",
 		"Width": 2.6,
 		"Height": 4.5,
