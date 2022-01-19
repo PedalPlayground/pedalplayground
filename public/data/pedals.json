@@ -2031,10 +2031,24 @@
 	},
 	{
 		"Brand": "Black Mass Electronics",
-		"Name": "1312 Distortion V3",
+		"Name": "1312 Distortion",
 		"Width": 2.6,
 		"Height": 4.92,
+		"Image": "blackmass-1312.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "1312 Distortion V3",
+		"Width": 2.6,
+		"Height": 4.95,
 		"Image": "blackmass-1312-v3.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "1312 Distortion V3 (White)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "blackmass-1312-v3-white.png"
 	},
 	{
 		"Brand": "Black Mass Electronics",
@@ -10330,6 +10344,13 @@
 		"Width": 5.1,
 		"Height": 3.9,
 		"Image": "jampedals-ripplyfall1.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Seagull",
+		"Width": 2.85,
+		"Height": 4.7,
+		"Image": "jam-seagull.png"
 	},
 	{
 		"Brand": "Jam Pedals",
