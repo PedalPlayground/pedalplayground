@@ -4677,6 +4677,13 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Germanium Filter",
+		"Width": 2.5,
+		"Height": 4.92,
+		"Image": "deathbyaudio-germanium-filter.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Ghost Delay",
 		"Width": 4.65,
 		"Height": 5.67,
