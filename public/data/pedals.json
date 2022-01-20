@@ -20380,6 +20380,13 @@
 	},
 	{
 		"Brand": "Walrus",
+		"Name": "MAKO Series: M1 High-Fidelity Modulation Machine",
+		"Width": 2.87,
+		"Height": 4.9,
+		"Image": "walrus-mako-m1.png"
+	},
+	{
+		"Brand": "Walrus",
 		"Name": "MAKO Series: R1 High-Fidelity Stereo Reverb",
 		"Width": 2.87,
 		"Height": 4.9,
