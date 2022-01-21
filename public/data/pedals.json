@@ -21494,6 +21494,13 @@
 	},
 	{
 		"Brand": "Xotic",
+		"Name": "Volume Pedal",
+		"Width": 3.94,
+		"Height": 8.27,
+		"Image": "xotic-volume.png"
+	},
+	{
+		"Brand": "Xotic",
 		"Name": "Wah XW-1",
 		"Width": 3.94,
 		"Height": 8.27,
