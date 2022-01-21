@@ -14183,6 +14183,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Poly Blue Octave",
+		"Width": 2.61,
+		"Height": 4.33,
+		"Image": "mxr-poly-blue-octave.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Power 50",
 		"Width": 5,
 		"Height": 3.8,
