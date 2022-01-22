@@ -3088,6 +3088,13 @@
 	},
 	{
 		"Brand": "Browne Amplification",
+		"Name": "Carbon",
+		"Width": 5,
+		"Height": 3.97,
+		"Image": "browneamps-carbon.png"
+	},
+	{
+		"Brand": "Browne Amplification",
 		"Name": "Protein (Black)",
 		"Width": 5,
 		"Height": 3.97,
