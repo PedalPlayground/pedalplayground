@@ -5331,28 +5331,28 @@
 		"Name": "Bitquest",
 		"Width": 2.75,
 		"Height": 5.08,
-		"Image": "drscientist-bitquest.png"
+		"Image": "dr-scientist-bitquest.png"
 	},
 	{
 		"Brand": "Dr Scientist",
 		"Name": "Dusk",
 		"Width": 2.75,
 		"Height": 5.08,
-		"Image": "drscientist-dusk.png"
+		"Image": "dr-scientist-dusk.png"
 	},
 	{
 		"Brand": "Dr Scientist",
 		"Name": "Frazz Dazzler",
 		"Width": 2.75,
 		"Height": 5.08,
-		"Image": "drscientist-frazz-dazzler.png"
+		"Image": "dr-scientist-frazz-dazzler.png"
 	},
 	{
 		"Brand": "Dr Scientist",
 		"Name": "Reverberator",
 		"Width": 2.5,
 		"Height": 4.45,
-		"Image": "drscientist-reverberator.png"
+		"Image": "dr-scientist-reverberator.png"
 	},
 	{
 		"Brand": "Dr Scientist",
@@ -5373,7 +5373,7 @@
 		"Name": "The Tremolessence",
 		"Width": 2.4,
 		"Height": 4.8,
-		"Image": "drscientist-thetremolessence.png"
+		"Image": "dr-scientist-the-tremolessence.png"
 	},
 	{
 		"Brand": "Dr Z",
