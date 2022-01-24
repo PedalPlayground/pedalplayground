@@ -6591,7 +6591,7 @@
 		"Name": "Deluxe Memory Boy",
 		"Width": 5.75,
 		"Height": 4.75,
-		"Image": "ehx-memory-boy.png"
+		"Image": "ehx-deluxe-memory-boy.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -6605,7 +6605,7 @@
 		"Name": "Deluxe Memory Man 1100-TT",
 		"Width": 5.75,
 		"Height": 4.75,
-		"Image": "ehx-memorymantap.png"
+		"Image": "ehx-memory-man-tap.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
