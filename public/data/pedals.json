@@ -3305,6 +3305,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Belle Epoch Deluxe (Black Edition)",
+		"Width": 4.68,
+		"Height": 3.77,
+		"Image": "catalinbread-belleepochdlx-black.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Bicycle Delay",
 		"Width": 2.6,
 		"Height": 4.33,
@@ -10262,6 +10269,13 @@
 		"Image": "jackson-prism-red.png"
 	},
 	{
+		"Brand": "Jackson Audio",
+		"Name": "The Optimist",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-the-optimist.png"
+	},
+	{
 		"Brand": "Jam Pedals",
 		"Name": "Chill",
 		"Width": 2.7,
@@ -10281,6 +10295,13 @@
 		"Width": 2.9,
 		"Height": 4.7,
 		"Image": "jam-delayllama.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Delay Llama mk3",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jam-delayllama-mk3.png"
 	},
 	{
 		"Brand": "Jam Pedals",
