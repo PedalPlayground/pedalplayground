@@ -16689,6 +16689,13 @@
 	},
 	{
 		"Brand": "Selah",
+		"Name": "Q:Expander",
+		"Width": 3.66,
+		"Height": 1.63,
+		"Image": "selah-qexpander.png"
+	},
+	{
+		"Brand": "Selah",
 		"Name": "Quartz",
 		"Width": 2.64,
 		"Height": 4.37,
