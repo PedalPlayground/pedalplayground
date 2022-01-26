@@ -9277,22 +9277,22 @@
 	{
 		"Brand": "Ground Control",
 		"Name": "Amaterasu",
-		"Width": 2.92,
+		"Width": 2.73,
 		"Height": 4.84,
 		"Image": "ground-control-amaterasu.png"
 	},
 	{
 		"Brand": "Ground Control",
 		"Name": "Blood Oath",
-		"Width": 2.92,
+		"Width": 2.73,
 		"Height": 4.84,
 		"Image": "ground-control-blood-oath.png"
 	},
 	{
 		"Brand": "Ground Control",
 		"Name": "Locust",
-		"Width": 2.8,
-		"Height": 4.96,
+		"Width": 2.62,
+		"Height": 4.98,
 		"Image": "ground-control-locust.png"
 	},
 	{
@@ -9305,14 +9305,14 @@
 	{
 		"Brand": "Ground Control",
 		"Name": "Serpens",
-		"Width": 2.92,
+		"Width": 2.73,
 		"Height": 4.84,
 		"Image": "ground-control-serpens.png"
 	},
 	{
 		"Brand": "Ground Control",
 		"Name": "Tsukuyomi",
-		"Width": 2.92,
+		"Width": 2.73,
 		"Height": 4.84,
 		"Image": "ground-control-tsukuyomi.png"
 	},
@@ -16689,16 +16689,23 @@
 	},
 	{
 		"Brand": "Selah",
-		"Name": "Quartz V2",
-		"Width": 2.85,
-		"Height": 4.87,
+		"Name": "Quartz",
+		"Width": 2.64,
+		"Height": 4.37,
 		"Image": "selah-quartz.png"
 	},
 	{
 		"Brand": "Selah",
+		"Name": "Quartz V2",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "selah-quartz-v2.png"
+	},
+	{
+		"Brand": "Selah",
 		"Name": "Quartz V3",
-		"Width": 2.85,
-		"Height": 4.87,
+		"Width": 2.86,
+		"Height": 4.8,
 		"Image": "selah-quartz-v3.png"
 	},
 	{
