@@ -3866,9 +3866,16 @@
 	{
 		"Brand": "Cioks",
 		"Name": "4",
-		"Width": 2.91,
-		"Height": 3.46,
+		"Width": 2.96,
+		"Height": 3.5,
 		"Image": "cioks-4.png"
+	},
+	{
+		"Brand": "Cioks",
+		"Name": "8",
+		"Width": 4.89,
+		"Height": 3.5,
+		"Image": "cioks-8.png"
 	},
 	{
 		"Brand": "Cioks",
@@ -3880,8 +3887,8 @@
 	{
 		"Brand": "Cioks",
 		"Name": "DC7",
-		"Width": 6.3,
-		"Height": 3.46,
+		"Width": 6.4,
+		"Height": 3.5,
 		"Image": "cioks-dc7.png"
 	},
 	{
