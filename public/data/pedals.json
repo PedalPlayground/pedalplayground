@@ -11880,6 +11880,13 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
+		"Name": "Chief Disruptor Fundamental Fuzz",
+		"Width": 3.91,
+		"Height": 4.89,
+		"Image": "kma-audio-machines-chief-disruptor.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
 		"Name": "Cirrus Delay and Reverb",
 		"Width": 3.85,
 		"Height": 4.85,
