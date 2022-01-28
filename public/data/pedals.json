@@ -19511,6 +19511,13 @@
 		"Image": "pill-stereo.png"
 	},
 	{
+		"Brand": "Third Man",
+		"Name": "Triplegraph (Black)",
+		"Width": 7.38,
+		"Height": 4.7,
+		"Image": "third-man-triplegraph-black.png"
+	},
+	{
 		"Brand": "ThorpyFx",
 		"Name": "Camoflange",
 		"Width": 4.04,
@@ -19789,6 +19796,13 @@
 		"Width": 6,
 		"Height": 5,
 		"Image": "truetone-vsxo.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "AudioWorks Six",
+		"Width": 2.34,
+		"Height": 4.41,
+		"Image": "tsakalis-audioworks-six.png"
 	},
 	{
 		"Brand": "Tsakalis",
