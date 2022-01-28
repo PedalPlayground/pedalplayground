@@ -7722,18 +7722,25 @@
 	},
 	{
 		"Brand": "Ernie Ball",
+		"Name": "Ambient Delay",
+		"Width": 3.5,
+		"Height": 10,
+		"Image": "ernieball-amb-delay.png"
+	},
+	{
+		"Brand": "Ernie Ball",
 		"Name": "Tap Tempo",
 		"Width": 1.6,
 		"Height": 3.68,
 		"Image": "ernieball-tap.png"
 	},
-  {
-    "Brand": "Ernie Ball",
-    "Name": "Volt",
+ 	{
+    	"Brand": "Ernie Ball",
+    	"Name": "Volt",
 		"Width": 3.5,
 		"Height": 2.3,
 		"Image": "ernieball-volt.png"
-  },
+  	},
 	{
 		"Brand": "Ernie Ball",
 		"Name": "VP Jr",
@@ -20090,6 +20097,20 @@
 		"Width": 8.86,
 		"Height": 5.54,
 		"Image": "victory-v4-the-sheriff.png"
+	},
+	{
+		"Brand": "Visual Sound",
+		"Name": "Dual Tap Tempo",
+		"Width": 9.1,
+		"Height": 5.1,
+		"Image": "vis-sound-dual-tempo.png"
+	},
+	{
+		"Brand": "Visual Sound",
+		"Name": "H2O Chorus - Echo",
+		"Width": 5.11,
+		"Height": 4.45,
+		"Image": "vis-sound-h2o.png"
 	},
 	{
 		"Brand": "VS Audio",
