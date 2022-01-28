@@ -15596,58 +15596,86 @@
 		"Image": "outlaw-effects-wrangler.png"
 	},
 	{
-		"Brand": "Pladask",
+		"Brand": "Pladask Elektrisk",
+		"Name": "Baklengs (Green)",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "pladask-baklengs-green.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Baklengs (White)",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "pladask-baklengs-white.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
 		"Name": "Bakfram",
 		"Width": 2.6,
-		"Height": 5.035,
+		"Height": 5.01,
 		"Image": "pladask-bakfram.png"
 	},
 	{
-		"Brand": "Pladask",
+		"Brand": "Pladask Elektrisk",
 		"Name": "Draume",
 		"Width": 3.7,
-		"Height": 4.85,
+		"Height": 4.86,
 		"Image": "pladask-draume.png"
 	},
 	{
-		"Brand": "Pladask",
+		"Brand": "Pladask Elektrisk",
 		"Name": "Fabrikat",
 		"Width": 3.7,
-		"Height": 4.85,
+		"Height": 4.86,
 		"Image": "pladask-fabrikat.png"
 	},
 	{
-		"Brand": "Pladask",
+		"Brand": "Pladask Elektrisk",
 		"Name": "Falma",
 		"Width": 2.6,
-		"Height": 5.035,
+		"Height": 5.01,
 		"Image": "pladask-falma.png"
 	},
 	{
-		"Brand": "Pladask",
+		"Brand": "Pladask Elektrisk",
+		"Name": "Feber",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "pladask-feber.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
 		"Name": "Kniv",
-		"Width": 4.7,
-		"Height": 2.735,
+		"Width": 4.82,
+		"Height": 2.84,
 		"Image": "pladask-kniv.png"
 	},
 	{
-		"Brand": "Pladask",
+		"Brand": "Pladask Elektrisk",
 		"Name": "Matrise",
-		"Width": 5.75,
-		"Height": 4.765,
+		"Width": 5.96,
+		"Height": 4.95,
 		"Image": "pladask-matrise.png"
 	},
 	{
-		"Brand": "Pladask",
-		"Name": "Romferd",
+		"Brand": "Pladask Elektrisk",
+		"Name": "Romferd (Green)",
 		"Width": 3.7,
-		"Height": 4.85,
-		"Image": "pladask-romferd.png"
+		"Height": 4.86,
+		"Image": "pladask-romferd-green.png"
 	},
 	{
-		"Brand": "Pladask",
-		"Name": "Taken",
-		"Width": 3.85,
+		"Brand": "Pladask Elektrisk",
+		"Name": "Romferd (White)",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "pladask-romferd-white.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Tåken",
+		"Width": 3.87,
 		"Height": 4.7,
 		"Image": "pladask-taken.png"
 	},
