@@ -9031,6 +9031,13 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "Distributor",
+		"Width": 2.56,
+		"Height": 1.18,
+		"Image": "gigrig-distributor.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "G2",
 		"Width": 17.33,
 		"Height": 5.12,
@@ -9052,31 +9059,17 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "Isolator",
+		"Width": 2.56,
+		"Height": 1.18,
+		"Image": "gigrig-isolator.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "QuarterMaster QMX10",
 		"Width": 26.77,
 		"Height": 2.28,
 		"Image": "gigrig-qmx10.png"
-	},
-	{
-		"Brand": "GigRig",
-		"Name": "QuarterMaster QMX8",
-		"Width": 21.26,
-		"Height": 2.28,
-		"Image": "gigrig-quartermaster.png"
-	},
-	{
-		"Brand": "GigRig",
-		"Name": "QuarterMaster QMX6",
-		"Width": 16.14,
-		"Height": 2.28,
-		"Image": "gigrig-qmx6.png"
-	},
-	{
-		"Brand": "GigRig",
-		"Name": "QuarterMaster QMX4",
-		"Width": 11.02,
-		"Height": 2.28,
-		"Image": "gigrig-qmx4.png"
 	},
 	{
 		"Brand": "GigRig",
@@ -9087,6 +9080,27 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "QuarterMaster QMX4",
+		"Width": 11.02,
+		"Height": 2.28,
+		"Image": "gigrig-qmx4.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "QuarterMaster QMX6",
+		"Width": 16.14,
+		"Height": 2.28,
+		"Image": "gigrig-qmx6.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "QuarterMaster QMX8",
+		"Width": 21.26,
+		"Height": 2.28,
+		"Image": "gigrig-quartermaster.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "Remote Loopy 2",
 		"Width": 4.84,
 		"Height": 2.68,
@@ -9094,17 +9108,10 @@
 	},
 	{
 		"Brand": "GigRig",
-		"Name": "Isolator",
-		"Width": 2.56,
-		"Height": 1.18,
-		"Image": "gigrig-isolator.png"
-	},
-	{
-		"Brand": "GigRig",
-		"Name": "Distributor",
-		"Width": 2.56,
-		"Height": 1.18,
-		"Image": "gigrig-distributor.png"
+		"Name": "Wetter Box",
+		"Width": 2.59,
+		"Height": 5.32,
+		"Image": "gigrig-wetter.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
@@ -15342,6 +15349,13 @@
 		"Width": 1.89,
 		"Height": 3.86,
 		"Image": "onecontrol-midi-solo-stereo-loop.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series USB Porter",
+		"Width": 1.535,
+		"Height": 3.267,
+		"Image": "onecontrol-min-usb.png"
 	},
 	{
 		"Brand": "One Control",
