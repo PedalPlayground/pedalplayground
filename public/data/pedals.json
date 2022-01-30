@@ -13791,6 +13791,20 @@
 	},
 	{
 		"Brand": "Morningstar",
+		"Name": "MC3",
+		"Width": 4.8,
+		"Height": 2.83,
+		"Image": "morningstar-mc3.png"
+	},
+	{
+		"Brand": "Morningstar",
+		"Name": "ML5",
+		"Width": 6.3,
+		"Height": 2.36,
+		"Image": "morningstar-ml5.png"
+	},
+	{
+		"Brand": "Morningstar",
 		"Name": "MC6",
 		"Width": 5.71,
 		"Height": 3.74,
@@ -13805,17 +13819,10 @@
 	},
 	{
 		"Brand": "Morningstar",
-		"Name": "MC3",
-		"Width": 4.8,
-		"Height": 2.83,
-		"Image": "morningstar-mc3.png"
-	},
-	{
-		"Brand": "Morningstar",
-		"Name": "ML5",
-		"Width": 6.3,
-		"Height": 2.36,
-		"Image": "morningstar-ml5.png"
+		"Name": "MIDI Box",
+		"Width": 4.6,
+		"Height": 1.6,
+		"Image": "morningstar-midi.png"
 	},
 	{
 		"Brand": "Mosky",
