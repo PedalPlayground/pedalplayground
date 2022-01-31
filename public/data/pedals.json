@@ -14806,6 +14806,13 @@
 	},
 	{
 		"Brand": "Native Audio",
+		"Name": "Rising Sun V2",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "nativeaudio-rising-sun-v2.png"
+	},
+	{
+		"Brand": "Native Audio",
 		"Name": "Wilderness V1.5",
 		"Width": 2.71,
 		"Height": 5,
