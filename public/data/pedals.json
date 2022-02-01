@@ -21443,6 +21443,69 @@
 		"Image": "xvive-t1-golden-brownie.png"
 	},
 	{
+		"Brand": "Zander Circuitry",
+		"Name": "American Geek",
+		"Width": 2.64,
+		"Height": 5.1,
+		"Image": "zander-american-geek.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
+		"Name": "Cranium",
+		"Width": 2.64,
+		"Height": 5.1,
+		"Image": "zander-cranium.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
+		"Name": "Duplo",
+		"Width": 7.09,
+		"Height": 4.7,
+		"Image": "zander-duplo.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
+		"Name": "Foxxton Woods",
+		"Width": 2.64,
+		"Height": 5.1,
+		"Image": "zander-foxxton-woods.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
+		"Name": "SiClone",
+		"Width": 2.64,
+		"Height": 5.1,
+		"Image": "zander-siclone.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
+		"Name": "Siva",
+		"Width": 2.64,
+		"Height": 5.1,
+		"Image": "zander-siva.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
+		"Name": "Sono",
+		"Width": 2.64,
+		"Height": 5.1,
+		"Image": "zander-sono.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
+		"Name": "Surplus",
+		"Width": 2.64,
+		"Height": 5.1,
+		"Image": "zander-surplus.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
+		"Name": "Templo",
+		"Width": 7.09,
+		"Height": 4.7,
+		"Image": "zander-templo.png"
+	},
+	{
 		"Brand": "Zeppelin Design Labs",
 		"Name": "Quaverato",
 		"Width": 5,
