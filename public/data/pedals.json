@@ -2325,6 +2325,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "CE-2 Chorus",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ce2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "CE-2w Chorus (Waza Craft)",
 		"Width": 2.875,
 		"Height": 5.125,
