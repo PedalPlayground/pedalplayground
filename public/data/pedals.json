@@ -21472,6 +21472,13 @@
 	},
 	{
 		"Brand": "Zander Circuitry",
+		"Name": "Junipero",
+		"Width": 7.09,
+		"Height": 4.7,
+		"Image": "zander-junipero.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
 		"Name": "SiClone",
 		"Width": 2.64,
 		"Height": 5.1,
