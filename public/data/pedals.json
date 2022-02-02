@@ -7850,13 +7850,13 @@
 		"Brand": "Fairfield Circuitry",
 		"Name": "~900",
 		"Width": 4.4,
-		"Height": 2.66,
+		"Height": 2.54,
 		"Image": "fairfield-900.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Four Eyes",
-		"Width": 4.04,
+		"Width": 3.91,
 		"Height": 4.7,
 		"Image": "fairfield-foureyes.png"
 	},
@@ -7864,56 +7864,56 @@
 		"Brand": "Fairfield Circuitry",
 		"Name": "Hors d'Oeuvre?",
 		"Width": 4.7,
-		"Height": 3.92,
+		"Height": 3.8,
 		"Image": "fairfield-hors-d-oeuvre.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Long Life",
-		"Width": 3.92,
-		"Height": 4.82,
+		"Width": 3.8,
+		"Height": 4.81,
 		"Image": "fairfield-long-life.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Meet Maude",
-		"Width": 4.94,
-		"Height": 3.8,
+		"Width": 4.89,
+		"Height": 3.7,
 		"Image": "fairfield-meetmaude.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Modèle B",
-		"Width": 3.75,
-		"Height": 1.62,
+		"Width": 3.9,
+		"Height": 1.68,
 		"Image": "fairfield-barbershopmodeleb.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Randy's Revenge",
 		"Width": 4.7,
-		"Height": 3.92,
+		"Height": 3.83,
 		"Image": "fairfield-randysrevenge.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Shallow Water",
 		"Width": 4.7,
-		"Height": 3.92,
+		"Height": 3.79,
 		"Image": "fairfield-shallowwater.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "The Accountant",
-		"Width": 1.74,
-		"Height": 3.7,
+		"Width": 1.77,
+		"Height": 3.6,
 		"Image": "fairfield-theaccountant.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "The Barbershop",
-		"Width": 4.82,
-		"Height": 3.8,
+		"Width": 4.96,
+		"Height": 3.7,
 		"Image": "fairfield-barbershop.png"
 	},
 	{
