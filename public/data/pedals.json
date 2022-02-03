@@ -17396,8 +17396,8 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Aftershock bass distortion",
-		"Width": 2.75,
+		"Name": "Aftershock",
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "source-audio-aftershock-bass-distortion.png"
 	},
@@ -17405,71 +17405,64 @@
 	{
 		"Brand": "Source Audio",
 		"Name": "Collider",
-		"Width": 4.4,
-		"Height": 4.58,
+		"Width": 4.53,
+		"Height": 4.5,
 		"Image": "sa-collider.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "C4 Synth",
-		"Width": 2.75,
+		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "c4synth.png"
+		"Image": "sa-c4synth.png"
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Dimension",
-		"Width": 4.5,
-		"Height": 4.5,
-		"Image": "sourceaudio-dimension.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "EQ2 Programmable EQ",
-		"Width": 2.75,
+		"Name": "EQ2",
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sourceaudio-eq2.png"
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Gemini Chorus",
-		"Width": 2.75,
+		"Name": "Gemini",
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sourceaudio-gemini.png"
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Kingmaker Fuzz",
-		"Width": 2.75,
+		"Name": "Kingmaker",
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sourceaudio-kingmaker.png"
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "LA Lady Overdrive",
-		"Width": 2.75,
+		"Name": "LA Lady",
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sourceaudio-lalady.png"
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Lunar Phaser",
-		"Width": 2.75,
+		"Name": "Lunar",
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sourceaudio-lunar.png"
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Mercury Flanger",
-		"Width": 2.75,
+		"Name": "Mercury",
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sourceaudio-mercury.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Nemesis",
-		"Width": 4.4,
-		"Height": 4.58,
+		"Width": 4.53,
+		"Height": 4.5,
 		"Image": "sa-nemesis.png"
 	},
 	{
@@ -17601,7 +17594,7 @@
 	{
 		"Brand": "Source Audio",
 		"Name": "Spectrum",
-		"Width": 2.75,
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sa-spectrum.png"
 	},
@@ -17614,38 +17607,45 @@
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "True Spring Reverb",
-		"Width": 2.75,
+		"Name": "True Spring",
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sourceaudio-truespring.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Ventris",
-		"Width": 4.4,
-		"Height": 4.58,
+		"Width": 4.53,
+		"Height": 4.5,
 		"Image": "sourceaudio-ventris.png"
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Vertigo Tremolo",
-		"Width": 2.75,
+		"Name": "Vertigo",
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sourceaudio-vertigo.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Ultrawave (Guitar)",
-		"Width": 2.75,
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sourceaudio-ultrawave.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Ultrawave (Bass)",
-		"Width": 2.75,
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "sourceaudio-ultrawave-bass.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Zio",
+		"Width": 2.94,
+		"Height": 4.5,
+		"Image": "sourceaudio-zio.png"
 	},
 	{
 		"Brand": "Southampton Pedals",
