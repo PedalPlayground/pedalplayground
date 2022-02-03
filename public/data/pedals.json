@@ -9515,7 +9515,7 @@
 	{
 		"Brand": "Horizon Devices",
 		"Name": "Precision Drive",
-		"Width": 2.40,
+		"Width": 2.4,
 		"Height": 4.25,
 		"Image": "horizon-precision-drive.png"
 	},
@@ -18728,6 +18728,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Bucket Brigade Analog Delay",
+		"Width": 2.4,
+		"Height": 3.95,
+		"Image": "tc-electronic-bucket-brigade.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Choka Tremolo",
 		"Width": 2.9,
 		"Height": 5.15,
@@ -19037,7 +19044,7 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Magus Pro",
-		"Width": 2.40,
+		"Width": 2.4,
 		"Height": 3.9,
 		"Image": "tc-maguspro.png"
 	},
@@ -19247,7 +19254,7 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Skysurfer Mini Reverb",
-		"Width": 2.40,
+		"Width": 2.4,
 		"Height": 3.9,
 		"Image": "tc-skysurfer-mini.png"
 	},
@@ -19394,7 +19401,7 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Zeus Drive",
-		"Width": 2.40,
+		"Width": 2.4,
 		"Height": 3.9,
 		"Image": "tc-electronic-zeus-drive.png"
 	},
