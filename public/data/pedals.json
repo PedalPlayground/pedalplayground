@@ -10290,6 +10290,13 @@
 		"Image": "jackson-the-optimist.png"
 	},
 	{
+		"Brand": "Jackson Audio",
+		"Name": "The Optimist (Warp)",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-the-optimist-warp.png"
+	},
+	{
 		"Brand": "Jam Pedals",
 		"Name": "Chill",
 		"Width": 2.7,
@@ -15058,10 +15065,24 @@
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Excess v2",
+		"Width": 2.87,
+		"Height": 4.96,
+		"Image": "obne-excess-v2.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Expression Ramper",
 		"Width": 1.63,
 		"Height": 3.76,
 		"Image": "obne-ramper.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Excess)",
+		"Width": 1.63,
+		"Height": 3.72,
+		"Image": "obne-ramper-excess.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -17873,6 +17894,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "BigSky (LE Midnight)",
+		"Width": 6.75,
+		"Height": 4.9,
+		"Image": "strymon-bigsky-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Blue Sky",
 		"Width": 4,
 		"Height": 4.46,
@@ -17908,6 +17936,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Deco (LE Midnight)",
+		"Width": 4,
+		"Height": 4.46,
+		"Image": "strymon-deco-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Dig",
 		"Width": 4,
 		"Height": 4.46,
@@ -17922,6 +17957,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "El Capistan (LE Midnight)",
+		"Width": 4,
+		"Height": 4.46,
+		"Image": "strymon-elcap-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Flint",
 		"Width": 4,
 		"Height": 4.46,
@@ -17933,6 +17975,13 @@
 		"Width": 4,
 		"Height": 4.46,
 		"Image": "strymon-iridium.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Iridium (Silver)",
+		"Width": 4,
+		"Height": 4.46,
+		"Image": "strymon-iridium-silver.png"
 	},
 	{
 		"Brand": "Strymon",
