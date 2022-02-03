@@ -14105,6 +14105,13 @@
 		"Image": "nobels-odrmini.png"
 	},
 	{
+		"Brand": "Noble Amplification",
+		"Name": "Preamp/DI",
+		"Width": 7.5,
+		"Height": 5,
+		"Image": "noblepreamp350.png"
+	},
+	{
 		"Brand": "Nordvang",
 		"Name": "83' Drive",
 		"Width": 5.72,
