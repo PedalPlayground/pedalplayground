@@ -817,14 +817,14 @@
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-bath-time.png"
-  },
+  	},
 	{
 		"Brand": "Animals Pedal",
 		"Name": "Car Crush Chorus/Vibe",
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-car-crush.png"
-  },
+  	},
 	{
 		"Brand": "Animals Pedal",
 		"Name": "Dawn Ocean Meditation Booster",
@@ -1279,6 +1279,27 @@
 		"Width": 3.62,
 		"Height": 4.96,
 		"Image": "arc-soothsayer.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "SCH-1 Stereo Chorus",
+		"Width": 2.87,
+		"Height": 5,
+		"Image": "arion-sch1.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "SCH-Z Stereo Chorus",
+		"Width": 2.87,
+		"Height": 5,
+		"Image": "arion-schz.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "SCH-Z Stereo Chorus EWS Mod",
+		"Width": 2.87,
+		"Height": 5,
+		"Image": "arion-schz-ews.png"
 	},
 	{
 		"Brand": "Arturia",
