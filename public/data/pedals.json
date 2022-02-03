@@ -7988,6 +7988,69 @@
 	},
 	{
 		"Brand": "Fender",
+		"Name": "Hammertone Chorus",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-chorus.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Hammertone Delay",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-delay.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Hammertone Distortion",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-distortion.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Hammertone Flanger",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-flanger.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Hammertone Fuzz",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-fuzz.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Hammertone Metal",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-metal.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Hammertone Overdrive",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-overdrive.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Hammertone Reverb",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-reverb.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Hammertone Space Delay",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-space-delay.png"
+	},
+	{
+		"Brand": "Fender",
 		"Name": "Level Set Buffer",
 		"Width": 2.95,
 		"Height": 5,
