@@ -16789,32 +16789,109 @@
 		"Brand": "Seymour Duncan",
 		"Name": "805 Overdrive",
 		"Width": 2.6,
-		"Height": 5.08,
+		"Height": 5.14,
 		"Image": "seymour-duncan-805.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Andromeda",
+		"Width": 5.6,
+		"Height": 5.07,
+		"Image": "seymour-duncan-andromeda.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Catalina",
+		"Width": 3.5,
+		"Height": 5,
+		"Image": "seymour-duncan-catalina.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Diamondhead",
+		"Width": 3.5,
+		"Height": 4.91,
+		"Image": "seymour-duncan-diamonhead.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Dark Sun",
+		"Width": 5.6,
+		"Height": 5.07,
+		"Image": "seymour-duncan-dark-sun.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Fooz",
+		"Width": 5.6,
+		"Height": 5.01,
+		"Image": "seymour-duncan-fooz.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Forza",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "seymour-duncan-forza.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Killing Floor",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "seymour-duncan-killing-floor.png"
 	},
 	{
 		"Brand": "Seymour Duncan",
 		"Name": "Palladium",
 		"Width": 5.6,
-		"Height": 4.7,
+		"Height": 4.78,
 		"Image": "seymour-duncan-palladium.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Pickup Booster",
+		"Width": 2.6,
+		"Height": 5.21,
+		"Image": "seymour-duncan-pickup-booster.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Polarion",
+		"Width": 3.5,
+		"Height": 4.94,
+		"Image": "seymour-duncan-polarion.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Shapeshifter",
+		"Width": 3.5,
+		"Height": 5.08,
+		"Image": "seymour-duncan-shapeshifter.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Silver Lake",
+		"Width": 5.6,
+		"Height": 5.08,
+		"Image": "seymour-duncan-silver-lake.png"
 	},
 	{
 		"Brand": "Seymour Duncan",
 		"Name": "Studio Bass",
 		"Width": 2.6,
-		"Height": 5,
+		"Height": 5.18,
 		"Image": "seymour-duncan-studio-bass.png"
 	},
 	{
 		"Brand": "Seymour Duncan",
 		"Name": "Vapor Trail",
-		"Width": 2.72,
-		"Height": 5.17,
+		"Width": 2.74,
+		"Height": 5.18,
 		"Image": "seymourduncan-vaportrail.png"
 	},
 	{
-        "Brand": "Shift Line",
+    "Brand": "Shift Line",
 		"Name": "A+ Astronaut III",
 		"Width": 2.63,
 		"Height": 4.33,
