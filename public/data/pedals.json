@@ -3560,7 +3560,7 @@
 		"Name": "Centura (raw)",
 		"Width": 6.62,
 		"Height": 5.22,
-		"Image": "ceriatone_centura_raw.png"
+		"Image": "ceriatone-centura-raw.png"
 	},
 	{
 		"Brand": "Ceriatone",
@@ -3833,7 +3833,7 @@
 		"Name": "8",
 		"Width": 6.3,
 		"Height": 3.46,
-		"Image": "cioks_8.png"
+		"Image": "cioks-8.png"
 	},
 	{
 		"Brand": "Cioks",
@@ -8418,7 +8418,7 @@
 		"Name": "Standard Fuzz",
 		"Width": 2.64,
 		"Height": 4.8,
-		"Image": "fredric_standardfuzz.png"
+		"Image": "fredric-standard-fuzz.png"
 	},
 	{
 		"Brand": "Free The Tone",
@@ -9748,7 +9748,7 @@
 		"Name": "Wally+ Looper",
 		"Width": 1.73,
 		"Height": 2.91,
-		"Image": "hotone_wally_plus.png"
+		"Image": "hotone-wally-plus.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -10469,7 +10469,7 @@
 		"Name": "Harmonious Monk",
 		"Width": 2.9,
 		"Height": 4.7,
-		"Image": "jam_hm.png"
+		"Image": "jam-hm.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -11939,7 +11939,7 @@
 		"Name": "Soloist (red)",
 		"Width": 2.38,
 		"Height": 4.63,
-		"Image": "kingtone_soloist_red.png"
+		"Image": "kingtone-soloist-red.png"
 	},
 	{
 		"Brand": "Kingtone",
@@ -14494,7 +14494,7 @@
 		"Name": "Golden Fleece",
 		"Width": 1.75,
 		"Height": 3.6,
-		"Image": "mythos-goldenfleecemini.png"
+		"Image": "mythos-golden-fleece-mini.png"
 	},
 	{
 		"Brand": "Mythos",
@@ -14529,7 +14529,7 @@
 		"Name": "Oracle",
 		"Width": 3.7,
 		"Height": 4.6,
-		"Image": "mythos_oracle.png"
+		"Image": "mythos-oracle.png"
 	},
 	{
 		"Brand": "Mythos",
