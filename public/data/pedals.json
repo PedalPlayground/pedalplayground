@@ -455,6 +455,48 @@
 		"Image": "alexander-wavelength.png"
 	},
 	{
+		"Brand": "All-Pedal",
+		"Name": "Alcmene",
+		"Width": 1.7,
+		"Height": 3.7,
+		"Image": "allpedal-alcmene.png"
+	},
+	{
+		"Brand": "All-Pedal",
+		"Name": "Galactavise",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "allpedal-galactavise.png"
+	},
+	{
+		"Brand": "All-Pedal",
+		"Name": "Love Machine",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "allpedal-lovemachine.png"
+	},
+	{
+		"Brand": "All-Pedal",
+		"Name": "Macrodose",
+		"Width": 3.8,
+		"Height": 4.88,
+		"Image": "allpedal-macrodose.png"
+	},
+	{
+		"Brand": "All-Pedal",
+		"Name": "Slamurai",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "allpedal-slamurai.png"
+	},
+	{
+		"Brand": "All-Pedal",
+		"Name": "Slamurai (Parlor Edition)",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "allpedal-slamurai-parlor.png"
+	},
+	{
 		"Brand": "Altoids",
 		"Name": "Smalls Tin",
 		"Width": 2.25,
@@ -715,17 +757,24 @@
 	},
 	{
 		"Brand": "Anasounds",
+		"Name": "Feed Me MK2",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-feedme.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Feed Me MK3",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-feedme-mk3.png"
+	},
+	{
+		"Brand": "Anasounds",
 		"Name": "Freq Up",
 		"Width": 2.52,
 		"Height": 4.91,
 		"Image": "anasounds-frequp.png"
-	},
-	{
-		"Brand": "Anasounds",
-		"Name": "Feed Me",
-		"Width": 2.52,
-		"Height": 4.91,
-		"Image": "anasounds-feedme.png"
 	},
 	{
 		"Brand": "Anasounds",
