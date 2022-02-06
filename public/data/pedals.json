@@ -6512,9 +6512,16 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Bad Stone",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-bad-stone.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Bassballs",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "ehx-bassballs.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -6599,6 +6606,13 @@
 		"Width": 5.75,
 		"Height": 4.75,
 		"Image": "ehx-deluxe-big-muff.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Deluxe Bass Big Muff Pi",
+		"Width": 5.75,
+		"Height": 4.75,
+		"Image": "ehx-deluxe-bass-big-muff.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -9826,6 +9840,13 @@
 		"Width": 2.9,
 		"Height": 4.85,
 		"Image": "ibanez-ad9.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "AF2 Airplane Flanger",
+		"Width": 7.09,
+		"Height": 5.28,
+		"Image": "ibanez-af2.png"
 	},
 	{
 		"Brand": "Ibanez",
@@ -13846,6 +13867,13 @@
 		"Image": "morningstar-midi.png"
 	},
 	{
+		"Brand": "Morningstar",
+		"Name": "Relay Interface",
+		"Width": 1.634,
+		"Height": 3.267,
+		"Image": "morningstar-relay.png"
+	},
+	{
 		"Brand": "Mosky",
 		"Name": "Dual Switch",
 		"Width": 3.66,
@@ -13956,6 +13984,20 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-basscompressor.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass DI+",
+		"Width": 4.9,
+		"Height": 3.6,
+		"Image": "mxr-m80.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Octave Deluxe",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m288.png"
 	},
 	{
 		"Brand": "MXR",
@@ -14117,6 +14159,13 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-dynacomp-script.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Dyna Comp Bass",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-m282.png"
 	},
 	{
 		"Brand": "MXR",
