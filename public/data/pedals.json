@@ -518,6 +518,13 @@
 		"Image": "altoids-tin-wintergreen.png"
 	},
 	{
+		"Brand": "American Loopers",
+		"Name": "Aux Switch (3-Button)",
+		"Width": 4.39,
+		"Height": 2.57,
+		"Image": "american-loopers-aux3.png"
+	},
+	{
 		"Brand": "Amptweaker",
 		"Name": "Tight Drive Jr.",
 		"Width": 2.94,
@@ -3687,6 +3694,13 @@
 		"Width": 5.88,
 		"Height": 5.02,
 		"Image": "champion-leccy-the-swan-hunter.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Swan Hunter (Purple Dusk)",
+		"Width": 5.88,
+		"Height": 5.02,
+		"Image": "champion-leccy-the-swan-hunter-purple.png"
 	},
 	{
 		"Brand": "Champion Leccy",
@@ -7827,10 +7841,24 @@
 	},
 	{
 		"Brand": "Eventide",
-		"Name": "H9 Max",
+		"Name": "H9",
 		"Width": 4.65,
-		"Height": 5.20,
+		"Height": 5.17,
 		"Image": "eventide-h9.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "H9 (Dark)",
+		"Width": 4.65,
+		"Height": 5.17,
+		"Image": "eventide-h9-dark.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "H9 (Red)",
+		"Width": 4.65,
+		"Height": 5.17,
+		"Image": "eventide-h9-red.png"
 	},
 	{
 		"Brand": "Eventide",
@@ -9126,6 +9154,20 @@
 		"Width": 2.56,
 		"Height": 1.18,
 		"Image": "gigrig-distributor.png"
+	},
+	{
+		"Brand": "Glou-Glou",
+		"Name": "Loupé (Blue)",
+		"Width": 7.28,
+		"Height": 7.46,
+		"Image": "glou-glou-loupe-blue.png"
+	},
+	{
+		"Brand": "Glou-Glou",
+		"Name": "Loupé (White)",
+		"Width": 7.28,
+		"Height": 7.46,
+		"Image": "glou-glou-loupe-white.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
@@ -13333,6 +13375,20 @@
 		"Width": 4.4,
 		"Height": 2.5,
 		"Image": "mission-expressionator-v2.png"
+	},
+	{
+		"Brand": "Mission",
+		"Name": "TT-2",
+		"Width": 3.6,
+		"Height": 1.64,
+		"Image": "mission-tt2.png"
+	},
+	{
+		"Brand": "Mission",
+		"Name": "VM-PRO",
+		"Width": 4,
+		"Height": 10,
+		"Image": "mission-vp1.png"
 	},
 	{
 		"Brand": "Mission",
