@@ -1268,6 +1268,27 @@
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "043 Bath Time Reverb",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-bath-time-043.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "044 Surfing Bear Overdrive",
+		"Width": 2.54,
+		"Height": 4.4,
+		"Image": "animals-pedal-surfing-bear-044.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "045 Push & Pull Distortion",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-push-pull-045.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
 		"Name": "Over Print / A Wolf Distortion",
 		"Width": 2.5,
 		"Height": 4.4,
@@ -16094,6 +16115,13 @@
 	},
 	{
 		"Brand": "Pettyjohn",
+		"Name": "Edge",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "pettyjohn-edge.png"
+	},
+	{
+		"Brand": "Pettyjohn",
 		"Name": "Fuze",
 		"Width": 2.7,
 		"Height": 4.72,
@@ -16105,6 +16133,13 @@
 		"Width": 2.7,
 		"Height": 4.72,
 		"Image": "pettyjohn-lift.png"
+	},
+	{
+		"Brand": "Pettyjohn",
+		"Name": "Odi",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "pettyjohn-odi.png"
 	},
 	{
 		"Brand": "Pettyjohn",
@@ -16123,9 +16158,16 @@
 	{
 		"Brand": "Pettyjohn",
 		"Name": "Rail",
-		"Width": 2.4,
-		"Height": 4.57,
+		"Width": 2.5,
+		"Height": 4.8,
 		"Image": "pettyjohn-rail.png"
+	},
+	{
+		"Brand": "Pettyjohn",
+		"Name": "Rous",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "pettyjohn-rous.png"
 	},
 	{
 		"Brand": "Pigtronix",
