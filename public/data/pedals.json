@@ -526,6 +526,34 @@
 	},
 	{
 		"Brand": "Amptweaker",
+		"Name": "Big Rock Pro II",
+		"Width": 6.47,
+		"Height": 5.29,
+		"Image": "amptweaker-bigrockpro-2.png"
+	},
+	{
+		"Brand": "Amptweaker",
+		"Name": "Fat Metal Pro II",
+		"Width": 6.47,
+		"Height": 5.29,
+		"Image": "amptweaker-fatmetalpro-2.png"
+	},
+	{
+		"Brand": "Amptweaker",
+		"Name": "Tight Metal Pro II",
+		"Width": 6.47,
+		"Height": 5.29,
+		"Image": "amptweaker-tightmetalpro-2.png"
+	},
+	{
+		"Brand": "Amptweaker",
+		"Name": "Tight Drive II",
+		"Width": 2.89,
+		"Height": 4.65,
+		"Image": "amptweaker-tightdrive-2.png"
+	},
+	{
+		"Brand": "Amptweaker",
 		"Name": "Tight Drive Jr.",
 		"Width": 2.94,
 		"Height": 5.29,
@@ -533,10 +561,24 @@
 	},
 	{
 		"Brand": "Amptweaker",
+		"Name": "Tight Metal II",
+		"Width": 2.89,
+		"Height": 4.65,
+		"Image": "amptweaker-tightmetal-2.png"
+	},
+	{
+		"Brand": "Amptweaker",
 		"Name": "Tight Metal Jr.",
 		"Width": 2.94,
 		"Height": 5.29,
 		"Image": "amptweaker-tightmetal.png"
+	},
+	{
+		"Brand": "Amptweaker",
+		"Name": "Tight Rock II",
+		"Width": 2.89,
+		"Height": 4.65,
+		"Image": "amptweaker-tightrock-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
