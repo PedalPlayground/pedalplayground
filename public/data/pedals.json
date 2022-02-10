@@ -11831,6 +11831,13 @@
 	},
 	{
 		"Brand": "Lehle",
+		"Name": "3at1 SGoS",
+		"Width": 6.1,
+		"Height": 4,
+		"Image": "lehle-3at1-sgos.png"
+	},	
+	{
+		"Brand": "Lehle",
 		"Name": "D.Loop",
 		"Width": 6.1,
 		"Height": 4,
