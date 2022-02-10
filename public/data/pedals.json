@@ -13245,6 +13245,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Preamp Live",
+		"Width": 9.06,
+		"Height": 4.92,
+		"Image": "mooer-preamp-live.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Pure Boost",
 		"Width": 1.65,
 		"Height": 3.7,
