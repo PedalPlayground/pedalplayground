@@ -11852,6 +11852,13 @@
 	},
 	{
 		"Brand": "Lehle",
+		"Name": "P Split III",
+		"Width": 3.6,
+		"Height": 3.55,
+		"Image": "lehle-psplit-iii.png"
+	},	
+	{
+		"Brand": "Lehle",
 		"Name": "Mono Volume",
 		"Width": 3.94,
 		"Height": 10.24,
