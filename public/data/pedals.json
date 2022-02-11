@@ -9618,6 +9618,20 @@
 		"Image": "glou-glou-loupe-white.png"
 	},
 	{
+		"Brand": "Glou-Glou",
+		"Name": "Loupé (Blue)",
+		"Width": 7.28,
+		"Height": 7.46,
+		"Image": "glou-glou-loupe-blue.png"
+	},
+	{
+		"Brand": "Glou-Glou",
+		"Name": "Loupé (White)",
+		"Width": 7.28,
+		"Height": 7.46,
+		"Image": "glou-glou-loupe-white.png"
+	},
+	{
 		"Brand": "Goodwood Audio",
 		"Name": "Audition",
 		"Width": 4.45,
