@@ -703,7 +703,7 @@
 		"Brand": "Analog.Man",
 		"Name": "King of Tone",
 		"Width": 4.7,
-		"Height": 4.1,
+		"Height": 3.86,
 		"Image": "analogman-kingoftone.png"
 	},
 	{
@@ -9908,21 +9908,42 @@
 		"Brand": "Hudson",
 		"Name": "Broadcast",
 		"Width": 4.7,
-		"Height": 3.98,
-		"Image": "hudson-broadcast1.png"
+		"Height": 3.84,
+		"Image": "hudson-broadcast.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast-AP",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "hudson-broadcast-ap.png"
 	},
 	{
 		"Brand": "Hudson",
 		"Name": "Broadcast Dual Switch",
 		"Width": 4.7,
-		"Height": 3.85,
-		"Image": "hudson-broadcast.png"
+		"Height": 3.84,
+		"Image": "hudson-broadcast-dual.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast Dual Switch (Black)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "hudson-broadcast-dual-black.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast Dual Switch (Mint Turquise)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "hudson-broadcast-dual-mint.png"
 	},
 	{
 		"Brand": "Hudson",
 		"Name": "Sidecar",
 		"Width": 4.7,
-		"Height": 3.86,
+		"Height": 3.84,
 		"Image": "hudson-sidecar.png"
 	},
 	{
@@ -17218,6 +17239,13 @@
 		"Width": 2.74,
 		"Height": 5.18,
 		"Image": "seymourduncan-vaportrail.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Vapor Trail (Silver)",
+		"Width": 2.74,
+		"Height": 5.18,
+		"Image": "seymourduncan-vaportrail-silver.png"
 	},
 	{
     "Brand": "Shift Line",
