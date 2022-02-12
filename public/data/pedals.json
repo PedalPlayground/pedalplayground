@@ -2570,7 +2570,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "DD-20",
+		"Name": "DD-20 Giga Delay",
 		"Width": 6.81,
 		"Height": 6.25,
 		"Image": "boss-dd20.png"
@@ -2689,7 +2689,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "EV-5",
+		"Name": "EV-5 Expression Pedal",
 		"Width": 3.4375,
 		"Height": 7.875,
 		"Image": "boss-ev5.png"
@@ -6939,7 +6939,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Canyon",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-canyon.png"
 	},
@@ -6974,7 +6974,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Crayon",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-crayon.png"
 	},
@@ -7051,7 +7051,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Eddy Analog Vibrato & Chorus",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-eddy.png"
 	},
@@ -7128,8 +7128,8 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Black Russian Big Muff Pi",
-		"Width": 2.75,
-		"Height": 4.5,
+		"Width": 4.75,
+		"Height": 6.5,
 		"Image": "ehx-black-russian.png"
 	},
 	{
@@ -7177,7 +7177,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Holy Grail Nano",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-holy-grail-nano.png"
 	},
@@ -7275,7 +7275,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Mainframe",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-mainframe.png"
 	},
@@ -7331,7 +7331,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Mod 11 Modulator",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-mod11.png"
 	},
@@ -7380,7 +7380,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Deluxe Memory Man",
-		"Width": 2.90,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-nano-deluxe-memory-man.png"
 	},
@@ -7394,21 +7394,21 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Metal Muff",
-		"Width": 3,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-nano-metal-muff.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Operation Overlord",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-nano-operation-overlord.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Pog",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-nano-pog.png"
 	},
@@ -7422,7 +7422,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Q-Tron",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-nanoqtron.png"
 	},
@@ -7492,7 +7492,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Pitch Fork",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-pitchfork.png"
 	},
@@ -7555,7 +7555,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Ripped Speaker Fuzz",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-ripped-speaker.png"
 	},
@@ -7723,7 +7723,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Tone Corset",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-tone-corset.png"
 	},
