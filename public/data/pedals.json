@@ -5670,6 +5670,13 @@
 		"Image": "disaster-area-nnb.png"
 	},
 	{
+		"Brand": "DMB",
+		"Name": "Lunar Echo",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "dmb-lunar-echo.png"
+	},
+	{
 		"Brand": "Donner",
 		"Name": "AB/Y",
 		"Width": 1.5,
