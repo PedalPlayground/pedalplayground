@@ -2521,10 +2521,24 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "CE-3 Chorus",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ce3.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "CE-5 Chorus Ensemble",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ce5.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "CEB-3 Bass Chorus",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ceb3.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2794,7 +2808,14 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "GE-7 Graphic Equalizer",
+		"Name": "GEB-7 Bass Equalizer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-geb7.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "GEB-7 Graphic Equalizer",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ge7.png"
@@ -2840,6 +2861,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-jb2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "LMB-3 Bass Limiter Enhancer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-lmb3.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2997,6 +3025,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "PN-2 Tremolo/Pan",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-pn2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "PS-2 Pitch Shifter/Delay",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -3022,6 +3057,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ps6.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "PSM-5 Power Supply & Master Switch",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-psm5.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3197,6 +3239,13 @@
 		"Width": 10.03,
 		"Height": 7.17,
 		"Image": "boss-sy300.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "SYB-5 Bass Synthesizer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-syb5.png"
 	},
     {
     	"Brand": "BOSS",
@@ -14673,6 +14722,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Bass Fuzz Deluxe",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m84.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Bass Octave Deluxe",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -21330,6 +21386,13 @@
 		"Width": 2.69,
 		"Height": 4.33,
 		"Image": "wmd-utilityparametriceq.png"
+	},
+	{
+		"Brand": "Warm Audio",
+		"Name": "Jet Phaser",
+		"Width": 10.25,
+		"Height": 6.5,
+		"Image": "warm-audio-jet-phaser.png"
 	},
 	{
 		"Brand": "Walrus",
