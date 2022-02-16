@@ -18118,6 +18118,13 @@
 		"Image": "trex-vulture.png"
 	},
 	{
+		"Brand": "Taylor",
+		"Name": "A/B/Both Box",
+		"Width": 4.6,
+		"Height": 3.62,
+		"Image": "taylor-a-b-both-box.png"
+	},	
+	{
 		"Brand": "TC Electronic",
 		"Name": "3rd Dimension Chorus",
 		"Width": 2.9,
