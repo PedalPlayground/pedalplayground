@@ -17339,6 +17339,13 @@
 		"Image": "shure-glxd6.png"
 	},
 	{
+		"Brand": "Silktone",
+		"Name": "Fuzz",
+		"Width": 4.7,
+		"Height": 3.75,
+		"Image": "silktone-fuzz.png"
+	},
+	{
 		"Brand": "Singular Sound",
 		"Name": "Aeros",
 		"Width": 8.375,
