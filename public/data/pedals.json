@@ -2584,6 +2584,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DF-2 Super Feedbacker & Distortion",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-df2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "DM-2 Delay",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -12402,7 +12409,7 @@
 		"Width": 6.1,
 		"Height": 4,
 		"Image": "lehle-3at1-sgos.png"
-	},	
+	},
 	{
 		"Brand": "Lehle",
 		"Name": "D.Loop",
@@ -12430,7 +12437,7 @@
 		"Width": 3.6,
 		"Height": 3.55,
 		"Image": "lehle-psplit-iii.png"
-	},	
+	},
 	{
 		"Brand": "Lehle",
 		"Name": "Mono Volume",
