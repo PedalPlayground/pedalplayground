@@ -2640,6 +2640,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DF-2 Super Feedbacker & Distortion",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-df2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "DM-2 Delay",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -13809,6 +13816,13 @@
 		"Width": 2.93,
 		"Height": 4.88,
 		"Image": "maxon-overdrive-od-9.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Blackdrive OD-9",
+		"Width": 2.93,
+		"Height": 4.88,
+		"Image": "maxon-blackdrive-od-9.png"
 	},
 	{
 		"Brand": "MeloAudio",
