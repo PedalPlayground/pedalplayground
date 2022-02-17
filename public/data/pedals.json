@@ -12818,6 +12818,13 @@
 	},
 	{
 		"Brand": "Lehle",
+		"Name": "3at1 SGoS",
+		"Width": 6.1,
+		"Height": 4,
+		"Image": "lehle-3at1-sgos.png"
+	},	
+	{
+		"Brand": "Lehle",
 		"Name": "D.Loop",
 		"Width": 6.1,
 		"Height": 4,
@@ -12837,6 +12844,13 @@
 		"Height": 3.9,
 		"Image": "lehle-little-dual-ii.png"
 	},
+	{
+		"Brand": "Lehle",
+		"Name": "P Split III",
+		"Width": 3.6,
+		"Height": 3.55,
+		"Image": "lehle-psplit-iii.png"
+	},	
 	{
 		"Brand": "Lehle",
 		"Name": "Mono Volume",
@@ -15398,6 +15412,13 @@
 		"Width": 2.36,
 		"Height": 4.13,
 		"Image": "nordland-odr-cc-black.png"
+  },
+  {
+		"Brand": "Noble Amplification",
+		"Name": "Preamp/DI",
+		"Width": 7.5,
+		"Height": 5,
+		"Image": "noblepreamp350.png"
 	},
 	{
 		"Brand": "Nordvang",
