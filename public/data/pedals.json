@@ -6020,6 +6020,13 @@
 		"Image": "dunlop-mini-535q.png"
 	},
 	{
+    	"Brand": "Dunlop",
+    	"Name": "Rotovibe",
+		"Width": 4,
+	 	"Height": 10,
+		"Image": "dunlop-jd4s.png"
+	},
+	{
 		"Brand": "Dunlop",
 		"Name": "Silicon Fuzz Face Mini",
 		"Width": 3.5,
@@ -14645,6 +14652,13 @@
 	},
 	{
 		"Brand": "Musicomlab",
+		"Name": "EFX-ME",
+		"Width": 10.1,
+		"Height": 3.8,
+		"Image": "musicomlab-efx-me.png"
+	},
+	{
+		"Brand": "Musicomlab",
 		"Name": "EFX III",
 		"Width": 11,
 		"Height": 4.9,
@@ -15349,6 +15363,27 @@
 		"Width": 1.98,
 		"Height": 3.66,
 		"Image": "nobels-odrmini.png"
+	},
+	{
+		"Brand": "Nordland",
+		"Name": "ODR-C",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "nordland-odr-c.png"
+	},
+	{
+		"Brand": "Nordland",
+		"Name": "ODR-CC+",
+		"Width": 2.36,
+		"Height": 4.13,
+		"Image": "nordland-odr-cc.png"
+	},
+	{
+		"Brand": "Nordland",
+		"Name": "ODR-CC+ (Black Edition)",
+		"Width": 2.36,
+		"Height": 4.13,
+		"Image": "nordland-odr-cc-black.png"
 	},
 	{
 		"Brand": "Nordvang",
