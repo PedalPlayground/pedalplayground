@@ -14,3 +14,7 @@ _pre
 app/images/pedals/.pedals-public.lnk
 public/images/pedals/.pedals-app.lnk
 cmd.lnk
+app/images/desktop.ini
+app/images/pedals/desktop.ini
+app/images/pedals/desktop.ini
+*.ini
