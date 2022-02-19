@@ -92,37 +92,51 @@
 	},
 	{
 		"Brand": "AC Noises",
-		"Name": "AMA",
+		"Name": "Ama",
 		"Width": 2.6,
-		"Height": 4.9,
+		"Height": 5.02,
 		"Image": "acn-ama.png"
+	},
+	{
+		"Brand": "AC Noises",
+		"Name": "Ama v2",
+		"Width": 2.77,
+		"Height": 5.02,
+		"Image": "acn-ama-v2.png"
+	},
+	{
+		"Brand": "AC Noises",
+		"Name": "Arpiona",
+		"Width": 5.7,
+		"Height": 4.88,
+		"Image": "acn-arpiona.png"
 	},
 	{
 		"Brand": "AC Noises",
 		"Name": "Combatti",
 		"Width": 2.6,
-		"Height": 4.9,
+		"Height": 5.02,
 		"Image": "acn-combatti.png"
 	},
 	{
 		"Brand": "AC Noises",
 		"Name": "Esplora",
 		"Width": 2.6,
-		"Height": 4.9,
+		"Height": 5.02,
 		"Image": "acn-esplora.png"
 	},
 	{
 		"Brand": "AC Noises",
 		"Name": "Respira",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.88,
 		"Image": "acn-respira.png"
 	},
 	{
 		"Brand": "AC Noises",
 		"Name": "Vola",
 		"Width": 2.6,
-		"Height": 4.9,
+		"Height": 5.02,
 		"Image": "acn-vola.png"
 	},
 	{
