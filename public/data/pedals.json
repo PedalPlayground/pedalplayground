@@ -3172,6 +3172,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RE-2 Space Echo",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-re2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RE-20 Space Echo",
 		"Width": 6.8125,
 		"Height": 6.25,
@@ -14148,6 +14155,13 @@
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "1979 (Peach)",
+		"Width": 4.7,
+		"Height": 3.93,
+		"Image": "mojohand-1979-peach.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "BMP-2",
 		"Width": 2.84,
 		"Height": 4.8,
@@ -14267,6 +14281,20 @@
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "Mister-O v2",
+		"Width": 2.85,
+		"Height": 4.8,
+		"Image": "mojohand-mister-o-v2.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
+		"Name": "Mister-O",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "mojohand-mister-o.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "Nebula",
 		"Width": 2.87,
 		"Height": 4.8,
@@ -14334,6 +14362,13 @@
 		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-sacred-cow.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
+		"Name": "Sericon",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "mojohand-sericon.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
