@@ -2024,6 +2024,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "FX600 Multi-FX",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-fx600.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "HM300 Heavy Metal",
 		"Width": 2.755,
 		"Height": 4.842,
