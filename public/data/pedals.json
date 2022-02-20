@@ -10326,6 +10326,13 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Jogg",
+		"Width": 2.28,
+		"Height": 3.98,
+		"Image": "hotone-jogg.png"
+	},	
+	{
+		"Brand": "Hotone",
 		"Name": "Patch Kommander",
 		"Width": 15.87,
 		"Height": 2.11,
