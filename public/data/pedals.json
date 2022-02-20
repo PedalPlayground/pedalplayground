@@ -92,37 +92,51 @@
 	},
 	{
 		"Brand": "AC Noises",
-		"Name": "AMA",
+		"Name": "Ama",
 		"Width": 2.6,
-		"Height": 4.9,
+		"Height": 5.02,
 		"Image": "acn-ama.png"
+	},
+	{
+		"Brand": "AC Noises",
+		"Name": "Ama v2",
+		"Width": 2.77,
+		"Height": 5.02,
+		"Image": "acn-ama-v2.png"
+	},
+	{
+		"Brand": "AC Noises",
+		"Name": "Arpiona",
+		"Width": 5.7,
+		"Height": 4.88,
+		"Image": "acn-arpiona.png"
 	},
 	{
 		"Brand": "AC Noises",
 		"Name": "Combatti",
 		"Width": 2.6,
-		"Height": 4.9,
+		"Height": 5.02,
 		"Image": "acn-combatti.png"
 	},
 	{
 		"Brand": "AC Noises",
 		"Name": "Esplora",
 		"Width": 2.6,
-		"Height": 4.9,
+		"Height": 5.02,
 		"Image": "acn-esplora.png"
 	},
 	{
 		"Brand": "AC Noises",
 		"Name": "Respira",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.88,
 		"Image": "acn-respira.png"
 	},
 	{
 		"Brand": "AC Noises",
 		"Name": "Vola",
 		"Width": 2.6,
-		"Height": 4.9,
+		"Height": 5.02,
 		"Image": "acn-vola.png"
 	},
 	{
@@ -717,7 +731,7 @@
 		"Brand": "Analog.Man",
 		"Name": "King of Tone",
 		"Width": 4.7,
-		"Height": 4.1,
+		"Height": 3.86,
 		"Image": "analogman-kingoftone.png"
 	},
 	{
@@ -2024,6 +2038,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "FX600 Multi-FX",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-fx600.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "HM300 Heavy Metal",
 		"Width": 2.755,
 		"Height": 4.842,
@@ -2157,6 +2178,13 @@
 	},
 	{
 		"Brand": "Big Ear Pedals",
+		"Name": "Betty White",
+		"Width": 1.77,
+		"Height": 3.7,
+		"Image": "bigear-betty-white.png"
+	},
+	{
+		"Brand": "Big Ear Pedals",
 		"Name": "Black Betty",
 		"Width": 1.76,
 		"Height": 3.7,
@@ -2182,6 +2210,20 @@
 		"Width": 2.75,
 		"Height": 4.69,
 		"Image": "bigear-shake.png"
+	},
+	{
+		"Brand": "Big Ear Pedals",
+		"Name": "Slice of Pie",
+		"Width": 3.4,
+		"Height": 5.58,
+		"Image": "bigear-slice-of-pie.png"
+	},
+	{
+		"Brand": "Big Ear Pedals",
+		"Name": "Slice of Pie (Cheese)",
+		"Width": 3.4,
+		"Height": 5.58,
+		"Image": "bigear-slice-of-pie-cheese.png"
 	},
 	{
 		"Brand": "Big Ear Pedals",
@@ -2829,17 +2871,17 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GE-7 Graphic Equalizer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ge7.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GEB-7 Bass Equalizer",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-geb7.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "GEB-7 Graphic Equalizer",
-		"Width": 2.875,
-		"Height": 5.125,
-		"Image": "boss-ge7.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3179,6 +3221,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RE-2 Space Echo",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-re2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RE-20 Space Echo",
 		"Width": 6.8125,
 		"Height": 6.25,
@@ -3411,8 +3460,8 @@
 	{
 		"Brand": "Browne Amplification",
 		"Name": "Carbon",
-		"Width": 5,
-		"Height": 3.97,
+		"Width": 2.86,
+		"Height": 4.8,
 		"Image": "browneamps-carbon.png"
 	},
 	{
@@ -6939,36 +6988,36 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "#1 Echo",
-		"Width": 4,
+		"Width": 3.92,
 		"Height": 4.75,
 		"Image": "ehx-1-echo.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "1440 Stereo Looper",
-		"Width": 4.13,
+		"Width": 4.19,
 		"Height": 4.75,
 		"Image": "ehx-1440.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "15Watt Howitzer",
-		"Width": 4,
+		"Width": 3.89,
 		"Height": 4.75,
 		"Image": "ehx-15watt-howitzer.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "2020 Tuner",
-		"Width": 1.81,
+		"Width": 1.79,
 		"Height": 3.63,
 		"Image": "ehx-2020-tuner.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "22500 Dual Stereo Looper",
-		"Width": 6,
-		"Height": 5,
+		"Width": 6.25,
+		"Height": 5.19,
 		"Image": "ehx-22500.png"
 	},
 	{
@@ -6981,7 +7030,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "720 Stereo Looper",
-		"Width": 4.13,
+		"Width": 4.16,
 		"Height": 4.75,
 		"Image": "ehx-720.png"
 	},
@@ -6995,49 +7044,49 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Analogizer",
-		"Width": 2.87,
+		"Width": 2.68,
 		"Height": 4.5,
 		"Image": "ehx-analogizer.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Attack Decay",
-		"Width": 4.13,
+		"Width": 4.21,
 		"Height": 4.75,
 		"Image": "ehx-attack-decay.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "B9 Organ Machine",
-		"Width": 4,
+		"Width": 4.01,
 		"Height": 4.75,
 		"Image": "ehx-b9.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Bad Stone",
-		"Width": 2.87,
+		"Width": 2.86,
 		"Height": 4.5,
 		"Image": "ehx-bad-stone.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Bassballs",
-		"Width": 2.87,
+		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "ehx-bassballs.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Bass Mono Synth",
-		"Width": 3.95,
-		"Height": 4.7,
+		"Width": 3.87,
+		"Height": 4.75,
 		"Image": "ehx-bass-mono-synth.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi",
-		"Width": 4,
+		"Width": 4.09,
 		"Height": 4.75,
 		"Image": "ehx-big-muff-pi.png"
 	},
@@ -7045,13 +7094,13 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi (Big Box)",
 		"Width": 5.5,
-		"Height": 6.8,
+		"Height": 6.93,
 		"Image": "ehx-big-muff-box.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Blurst",
-		"Width": 4.13,
+		"Width": 4.18,
 		"Height": 4.75,
 		"Image": "ehx-blurst.png"
 	},
@@ -7065,14 +7114,14 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Canyon",
-		"Width": 2.87,
+		"Width": 2.85,
 		"Height": 4.5,
 		"Image": "ehx-canyon.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Cathedral",
-		"Width": 5.75,
+		"Width": 5.98,
 		"Height": 4.75,
 		"Image": "ehx-cathedral.png"
 	},
@@ -7086,14 +7135,14 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Cock Fight",
-		"Width": 4,
+		"Width": 3.96,
 		"Height": 4.75,
 		"Image": "ehx-cock-fight.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Cock Fight Plus",
-		"Width": 4.25,
+		"Width": 4.01,
 		"Height": 9.92,
 		"Image": "ehx-cock-fight-plus.png"
 	},
@@ -7107,133 +7156,133 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Big Muff Pi",
-		"Width": 5.75,
+		"Width": 5.98,
 		"Height": 4.75,
 		"Image": "ehx-deluxe-big-muff.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Bass Big Muff Pi",
-		"Width": 5.75,
+		"Width": 5.87,
 		"Height": 4.75,
 		"Image": "ehx-deluxe-bass-big-muff.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Electric Mistress",
-		"Width": 4,
+		"Width": 3.92,
 		"Height": 4.75,
 		"Image": "ehx-mistress.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Memory Boy",
-		"Width": 5.75,
+		"Width": 5.98,
 		"Height": 4.75,
 		"Image": "ehx-deluxe-memory-boy.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Memory Man (big box)",
-		"Width": 7.875,
-		"Height": 6.875,
+		"Width": 7.88,
+		"Height": 6.72,
 		"Image": "ehx-og-memory-man.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Memory Man 1100-TT",
-		"Width": 5.75,
+		"Width": 5.85,
 		"Height": 4.75,
 		"Image": "ehx-memory-man-tap.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Memory Man 550-TT",
-		"Width": 5.75,
+		"Width": 5.98,
 		"Height": 4.75,
 		"Image": "ehx-memory-man-550-tt.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Memory Man XO",
-		"Width": 5.75,
+		"Width": 5.98,
 		"Height": 4.75,
 		"Image": "ehx-memory-man-xo.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Dual Expression Pedal",
-		"Width": 3.5,
+		"Width": 3.7,
 		"Height": 10,
 		"Image": "ehx-dual-expression-pedal.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "East River Drive",
-		"Width": 2.87,
+		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "ehx-east-river-drive.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Eddy Analog Vibrato & Chorus",
-		"Width": 2.87,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "ehx-eddy.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "EHX Tortion",
-		"Width": 5.75,
+		"Width": 6.03,
 		"Height": 4.75,
 		"Image": "ehx-ehx-tortion.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Epitome",
-		"Width": 5.75,
+		"Width": 5.98,
 		"Height": 4.75,
 		"Image": "ehx-epitome.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Flat Iron Fuzz",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-flat-iron.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Freeze",
-		"Width": 2.87,
+		"Width": 2.72,
 		"Height": 4.5,
 		"Image": "ehx-freeze.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Frequency Analyzer",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-frequency-analyzer.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Germanium Big Muff Pi",
-		"Width": 5.75,
+		"Width": 6,
 		"Height": 4.75,
 		"Image": "ehx-germanium-big-muff-pi.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Germanium OD",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-germanium-od.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Good Vibes",
-		"Width": 4.13,
+		"Width": 3.98,
 		"Height": 4.75,
 		"Image": "ehx-good-vibes.png"
 	},
@@ -7241,13 +7290,13 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Grand Canyon",
 		"Width": 4.75,
-		"Height": 4,
+		"Height": 3.96,
 		"Image": "ehx-grand-canyon.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Graphic Fuzz",
-		"Width": 5.75,
+		"Width": 5.97,
 		"Height": 4.75,
 		"Image": "ehx-graphic-fuzz.png"
 	},
@@ -7255,13 +7304,13 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Black Russian Big Muff Pi",
 		"Width": 4.75,
-		"Height": 6.5,
+		"Height": 6.62,
 		"Image": "ehx-black-russian.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Green Russian Big Muff Pi Reissue",
-		"Width": 2.87,
+		"Width": 2.73,
 		"Height": 4.5,
 		"Image": "ehx-green-russian.png"
 	},
@@ -7276,76 +7325,76 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Hog2",
 		"Width": 9.5,
-		"Height": 6.5,
+		"Height": 6.38,
 		"Image": "ehx-hog2.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Hog2 Foot Controller",
 		"Width": 4.5,
-		"Height": 2.75,
+		"Height": 2.56,
 		"Image": "ehx-hog2-foot-controller.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Holy Grail",
 		"Width": 3.375,
-		"Height": 5.375,
+		"Height": 5.42,
 		"Image": "ehx-holy-grail.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Holy Grail Max",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-holy-grail-max.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Holy Grail Nano",
-		"Width": 2.87,
+		"Width": 2.68,
 		"Height": 4.5,
 		"Image": "ehx-holy-grail-nano.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Holy Grail Neo",
-		"Width": 2.87,
+		"Width": 2.85,
 		"Height": 4.5,
 		"Image": "ehx-holy-grail-neo.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Holy Grail Plus",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-holy-grail-plus.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Holy Stain",
-		"Width": 5.75,
+		"Width": 5.98,
 		"Height": 4.75,
 		"Image": "ehx-holy-stain.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Hot Tubes",
-		"Width": 2.87,
+		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "ehx-hot-tubes.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Hot Wax",
-		"Width": 4.13,
+		"Width": 4.18,
 		"Height": 4.75,
 		"Image": "ehx-hot-wax.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Hum Debugger",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-hum-debugger.png"
 	},
@@ -7359,182 +7408,182 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Key9 Electic Piano Machine",
-		"Width": 4,
+		"Width": 4.01,
 		"Height": 4.75,
 		"Image": "ehx-key9.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Knockout",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-knockout.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Lester G",
-		"Width": 5.75,
+		"Width": 5.86,
 		"Height": 4.75,
 		"Image": "ehx-lester-g.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Lester K",
-		"Width": 4,
+		"Width": 4.01,
 		"Height": 4.75,
 		"Image": "ehx-lester-k.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Little Big Muff Pi",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-little-big-muff-pi.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "LPB-1",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-lpb1.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Mainframe",
-		"Width": 2.87,
+		"Width": 2.91,
 		"Height": 4.5,
 		"Image": "ehx-mainframe.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Mel9 Tape Replay Machine",
-		"Width": 4,
+		"Width": 3.89,
 		"Height": 4.75,
 		"Image": "ehx-mel9.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Memory Boy",
-		"Width": 4,
+		"Width": 3.92,
 		"Height": 4.75,
 		"Image": "ehx-memory-boy.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Memory Toy",
-		"Width": 2.87,
+		"Width": 2.72,
 		"Height": 4.5,
 		"Image": "ehx-memory-toy.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Metal Muff",
-		"Width": 5.75,
+		"Width": 5.99,
 		"Height": 4.75,
 		"Image": "ehx-metal-muff.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Micro POG",
-		"Width": 4,
+		"Width": 4.01,
 		"Height": 4.75,
 		"Image": "ehx-micro-pog.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Micro Q-Tron",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-micro-q-tron.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Micro Synth",
-		"Width": 5.75,
+		"Width": 5.98,
 		"Height": 4.75,
 		"Image": "ehx-micro-synth.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Mod 11 Modulator",
-		"Width": 2.87,
+		"Width": 2.92,
 		"Height": 4.5,
 		"Image": "ehx-mod11.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Mod Rex",
-		"Width": 5.75,
+		"Width": 5.86,
 		"Height": 4.75,
 		"Image": "ehx-mod-rex.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Mono Synth",
-		"Width": 4,
+		"Width": 3.87,
 		"Height": 4.75,
 		"Image": "ehx-mono-synth.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Muff Overdrive",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-muff-od.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Bass Big Muff Pi",
-		"Width": 2.87,
+		"Width": 2.72,
 		"Height": 4.5,
 		"Image": "ehx-nano-bass-big-muff-pi.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Big Muff Pi",
-		"Width": 2.87,
+		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "ehx-nano-big-muff-pi.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Clone",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-nano-clone.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Deluxe Memory Man",
-		"Width": 2.87,
+		"Width": 2.9,
 		"Height": 4.5,
 		"Image": "ehx-nano-deluxe-memory-man.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Looper 360",
-		"Width": 2.87,
+		"Width": 2.62,
 		"Height": 4.5,
 		"Image": "ehx-360.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Metal Muff",
-		"Width": 2.87,
+		"Width": 2.94,
 		"Height": 4.5,
 		"Image": "ehx-nano-metal-muff.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Operation Overlord",
-		"Width": 2.87,
+		"Width": 2.91,
 		"Height": 4.5,
 		"Image": "ehx-nano-operation-overlord.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Nano Pog",
-		"Width": 2.87,
+		"Width": 2.82,
 		"Height": 4.5,
 		"Image": "ehx-nano-pog.png"
 	},
@@ -7547,22 +7596,29 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Nano Small Stone",
+		"Width": 2.73,
+		"Height": 4.5,
+		"Image": "ehx-nano-small-stone.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Neo Clone",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-neo-clone.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Neo Mistress",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-neo-mistress.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Oceans 11",
-		"Width": 2.87,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "ehx-oceans-11.png"
 	},
@@ -7570,132 +7626,132 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Oceans 12",
 		"Width": 4.75,
-		"Height": 4,
+		"Height": 3.94,
 		"Image": "ehx-oceans-12.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Octave Multiplexer",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-octave-multiplexer.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Octavix",
-		"Width": 2.87,
+		"Width": 2.82,
 		"Height": 4.5,
 		"Image": "ehx-octavix.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "OD Glove",
-		"Width": 2.87,
+		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "ehx-glove.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Op-amp Big Muff Pi",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-opamp.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Operation Overlord",
-		"Width": 4.13,
+		"Width": 4.12,
 		"Height": 4.75,
 		"Image": "ehx-operation-overlord.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Pitch Fork",
-		"Width": 2.87,
+		"Width": 2.85,
 		"Height": 4.5,
 		"Image": "ehx-pitchfork.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Pitch Fork+",
-		"Width": 4.13,
+		"Width": 4.18,
 		"Height": 4.75,
 		"Image": "ehx-pitchfork-plus.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Platform",
-		"Width": 4.13,
+		"Width": 4.16,
 		"Height": 4.75,
 		"Image": "ehx-platform.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "POG2",
-		"Width": 5.75,
+		"Width": 5.93,
 		"Height": 4.75,
 		"Image": "ehx-pog2.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Q-Tron+",
-		"Width": 5.75,
+		"Width": 5.98,
 		"Height": 4.75,
 		"Image": "ehx-qtronplus.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Ram's Head Big Muff Pi Nano",
-		"Width": 2.87,
+		"Width": 2.74,
 		"Height": 4.5,
 		"Image": "ehx-rams-head-big-muff-pi-nano.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Ravished Sitar",
-		"Width": 5.75,
+		"Width": 6.05,
 		"Height": 4.75,
 		"Image": "ehx-ravished-sitar.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Riddle",
-		"Width": 5.75,
+		"Width": 6.06,
 		"Height": 4.75,
 		"Image": "ehx-riddle.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Ring Thing",
-		"Width": 5.75,
+		"Width": 6.05,
 		"Height": 4.75,
 		"Image": "ehx-ring-thing.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Ripped Speaker Fuzz",
-		"Width": 2.87,
+		"Width": 2.96,
 		"Height": 4.5,
 		"Image": "ehx-ripped-speaker.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Satisfaction",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-satisfaction.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Signal Pad",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-signal-pad.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Silencer",
-		"Width": 2.87,
+		"Width": 2.86,
 		"Height": 4.5,
 		"Image": "ehx-silencer.png"
 	},
@@ -7703,104 +7759,97 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Small Clone",
 		"Width": 3.38,
-		"Height": 5.25,
+		"Height": 5.37,
 		"Image": "ehx-small-clone.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Small Stone",
-		"Width": 2.87,
+		"Width": 2.72,
 		"Height": 4.5,
 		"Image": "ehx-small-stone.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Small Stone Nano",
-		"Width": 2.87,
-		"Height": 4.5,
-		"Image": "ehx-nano-small-stone.png"
-	},
-	{
-		"Brand": "Electro-Harmonix",
 		"Name": "Soul Food",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-soul-food.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Soul Pog",
-		"Width": 5.75,
+		"Width": 6.1,
 		"Height": 4.75,
 		"Image": "ehx-soul-pog.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Soul Preacher",
-		"Width": 2.87,
+		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "ehx-soul-preacher.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Sovtek Deluxe Big Muff Pi",
-		"Width": 5.75,
+		"Width": 6,
 		"Height": 4.75,
 		"Image": "ehx-sovtek-deluxe-big-muff-pi.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Stereo Clone Theory",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-stereo-clone-theory.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Stereo Electric Mistress",
-		"Width": 4,
+		"Width": 4.01,
 		"Height": 4.75,
 		"Image": "ehx-stereo-mistress.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Stereo Memory Man",
-		"Width": 5.75,
+		"Width": 6.06,
 		"Height": 4.75,
 		"Image": "ehx-stereo-memory-man.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Stereo Polychorus",
-		"Width": 5.75,
+		"Width": 6.06,
 		"Height": 4.75,
 		"Image": "ehx-stereo-polychorus.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Stereo Pulsar",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-stereo-pulsar.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Super Ego",
-		"Width": 4,
+		"Width": 3.96,
 		"Height": 4.75,
 		"Image": "ehx-superego.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Super Ego +",
-		"Width": 5.75,
+		"Width": 5.96,
 		"Height": 4.75,
 		"Image": "ehx-superego-plus.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Super Pulsar",
-		"Width": 5.75,
+		"Width": 6.1,
 		"Height": 4.75,
 		"Image": "ehx-super-pulsar.png"
 	},
@@ -7808,14 +7857,14 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Super Switcher",
 		"Width": 19,
-		"Height": 6,
+		"Height": 5.87,
 		"Image": "ehx-super-switcher.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Switch Blade Plus",
 		"Width": 4.5,
-		"Height": 2.75,
+		"Height": 2.64,
 		"Image": "ehx-switch-blade-plus.png"
 	},
 	{
@@ -7828,28 +7877,28 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Synth9 Synth Machine",
-		"Width": 4,
+		"Width": 4.08,
 		"Height": 4.75,
 		"Image": "ehx-synth9.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "The Worm",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 4.75,
 		"Image": "ehx-the-worm.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Tone Corset",
-		"Width": 2.87,
+		"Width": 2.9,
 		"Height": 4.5,
 		"Image": "ehx-tone-corset.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Tone Tattoo",
-		"Width": 5.75,
+		"Width": 6.06,
 		"Height": 4.75,
 		"Image": "ehx-tone-tattoo.png"
 	},
@@ -7857,7 +7906,7 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Triple Foot Controller",
 		"Width": 4.5,
-		"Height": 2.75,
+		"Height": 2.57,
 		"Image": "ehx-triple-foot-controller.png"
 	},
 	{
@@ -7870,28 +7919,28 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Triangle Big Muff Pi",
-		"Width": 2.87,
+		"Width": 2.74,
 		"Height": 4.5,
 		"Image": "ehx-triangle-big-muff-pi.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Turnip Greens",
-		"Width": 5.75,
+		"Width": 6.05,
 		"Height": 4.75,
 		"Image": "ehx-turnip-greens.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Volume Pedal",
-		"Width": 3.6,
+		"Width": 3.39,
 		"Height": 9.92,
 		"Image": "ehx-volume-pedal.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Wailer Wah",
-		"Width": 3.4,
+		"Width": 3.36,
 		"Height": 9.92,
 		"Image": "ehx-wailer-wah.png"
 	},
@@ -10375,6 +10424,13 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Jogg",
+		"Width": 2.28,
+		"Height": 3.98,
+		"Image": "hotone-jogg.png"
+	},	
+	{
+		"Brand": "Hotone",
 		"Name": "Patch Kommander",
 		"Width": 15.87,
 		"Height": 2.11,
@@ -10426,21 +10482,42 @@
 		"Brand": "Hudson",
 		"Name": "Broadcast",
 		"Width": 4.7,
-		"Height": 3.98,
-		"Image": "hudson-broadcast1.png"
+		"Height": 3.84,
+		"Image": "hudson-broadcast.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast-AP",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "hudson-broadcast-ap.png"
 	},
 	{
 		"Brand": "Hudson",
 		"Name": "Broadcast Dual Switch",
 		"Width": 4.7,
-		"Height": 3.85,
-		"Image": "hudson-broadcast.png"
+		"Height": 3.84,
+		"Image": "hudson-broadcast-dual.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast Dual Switch (Black)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "hudson-broadcast-dual-black.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast Dual Switch (Mint Turquise)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "hudson-broadcast-dual-mint.png"
 	},
 	{
 		"Brand": "Hudson",
 		"Name": "Sidecar",
 		"Width": 4.7,
-		"Height": 3.86,
+		"Height": 3.84,
 		"Image": "hudson-sidecar.png"
 	},
 	{
@@ -12920,7 +12997,7 @@
 		"Width": 6.1,
 		"Height": 4,
 		"Image": "lehle-3at1-sgos.png"
-	},	
+	},
 	{
 		"Brand": "Lehle",
 		"Name": "D.Loop",
@@ -12948,7 +13025,7 @@
 		"Width": 3.6,
 		"Height": 3.55,
 		"Image": "lehle-psplit-iii.png"
-	},	
+	},
 	{
 		"Brand": "Lehle",
 		"Name": "Mono Volume",
@@ -14190,6 +14267,13 @@
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "1979 (Peach)",
+		"Width": 4.7,
+		"Height": 3.93,
+		"Image": "mojohand-1979-peach.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "BMP-2",
 		"Width": 2.84,
 		"Height": 4.8,
@@ -14309,6 +14393,20 @@
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "Mister-O v2",
+		"Width": 2.85,
+		"Height": 4.8,
+		"Image": "mojohand-mister-o-v2.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
+		"Name": "Mister-O",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "mojohand-mister-o.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "Nebula",
 		"Width": 2.87,
 		"Height": 4.8,
@@ -14379,6 +14477,13 @@
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "Sericon",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "mojohand-sericon.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "Speakeasy",
 		"Width": 2.92,
 		"Height": 4.8,
@@ -14433,6 +14538,13 @@
 		"Height": 3.7,
 		"Image": "mooer-anaecho.png"
 	},
+	{
+		"Brand": "Mooer",
+		"Name": "Audiofile",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-audiofile.png"
+	},	
 	{
 		"Brand": "Mooer",
 		"Name": "Baby Bomb",
@@ -14558,6 +14670,13 @@
 		"Width": 1.65,
 		"Height": 3.7,
 		"Image": "mooer-pitchbox.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Preamp Live",
+		"Width": 9.06,
+		"Height": 4.92,
+		"Image": "mooer-preamp-live.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -14740,6 +14859,13 @@
 		"Width": 3.66,
 		"Height": 1.66,
 		"Image": "mosky-dual-switch.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Dual Switch (Jinx)",
+		"Width": 3.66,
+		"Height": 1.66,
+		"Image": "mosky-dual-switch-jinx.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -18095,6 +18221,13 @@
 		"Image": "seymourduncan-vaportrail.png"
 	},
 	{
+		"Brand": "Seymour Duncan",
+		"Name": "Vapor Trail (Silver)",
+		"Width": 2.74,
+		"Height": 5.18,
+		"Image": "seymourduncan-vaportrail-silver.png"
+	},
+	{
     "Brand": "Shift Line",
 		"Name": "A+ Astronaut III",
 		"Width": 2.63,
@@ -18163,6 +18296,13 @@
 		"Width": 3.7,
 		"Height": 5.3,
 		"Image": "shure-glxd6.png"
+	},
+	{
+		"Brand": "Silktone",
+		"Name": "Fuzz",
+		"Width": 4.7,
+		"Height": 3.75,
+		"Image": "silktone-fuzz.png"
 	},
 	{
 		"Brand": "Singular Sound",
@@ -19574,6 +19714,13 @@
 		"Image": "sweetsound-mojovibe.png"
 	},
 	{
+		"Brand": "Swiff Audio",
+		"Name": "C10 Tuner",
+		"Width": 1.79,
+		"Height": 1.65,
+		"Image": "swiff-c10.png"
+	},
+	{
 		"Brand": "Swindler",
 		"Name": "Red Mountain",
 		"Width": 2.93,
@@ -19888,6 +20035,13 @@
 		"Height": 4.65,
 		"Image": "trex-vulture.png"
 	},
+	{
+		"Brand": "Taylor",
+		"Name": "A/B/Both Box",
+		"Width": 4.6,
+		"Height": 3.62,
+		"Image": "taylor-a-b-both-box.png"
+	},	
 	{
 		"Brand": "TC Electronic",
 		"Name": "3rd Dimension Chorus",
@@ -21442,7 +21596,7 @@
 		"Height": 5.5,
 		"Image": "vongon-ultrasheer.png"
 	},
-	
+
 	{
 		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power 2+",
