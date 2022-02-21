@@ -232,10 +232,38 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Deimos Germanium Fuzz",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-deimos.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Flare Fuzz Machine",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-flare.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Luna Optical Tremolo",
 		"Width": 2.59843,
 		"Height": 4.80315,
 		"Image": "aion-luna.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Penumbra Bass Fuzz",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-penumbra.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Stratus Classic Overdrive",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-stratus.png"
 	},
 	{
 		"Brand": "AirTurn",
@@ -2038,6 +2066,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "FX600 Multi-FX",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-fx600.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "HM300 Heavy Metal",
 		"Width": 2.755,
 		"Height": 4.842,
@@ -2556,6 +2591,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "CE-20 Chorus Ensemble",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-ce20.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "CE-3 Chorus",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -2717,6 +2759,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "EQ-20 Advanced EQ",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-eq20.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "EQ-200 Graphic Equalizer",
 		"Width": 4,
 		"Height": 5.4375,
@@ -2864,6 +2913,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GP-20 Amp Factory",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-gp20.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GT-1000 Guitar Effects Processor",
 		"Width": 18.187,
 		"Height": 9.812,
@@ -2997,6 +3053,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "OC-20G Poly Octave",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-oc20g.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "OC-3 Super Octave",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -3029,6 +3092,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-od2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "OD-20 Drive Zone",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-od20.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3130,6 +3200,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RC-20 Loop Station",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-rc20.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RC-3 Loop Station",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -3183,6 +3260,13 @@
 		"Width": 6.8125,
 		"Height": 6.25,
 		"Image": "boss-re20.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RT-20 Rotary",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-rt20.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3337,6 +3421,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-tu3w.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "WP-20G Wave Processor",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-wp20g.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -9633,10 +9724,24 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "Cinco Cinco Patch Bay",
+		"Width": 4.33,
+		"Height": 2.95,
+		"Image": "gigrig-cinco.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "Distributor",
 		"Width": 2.56,
 		"Height": 1.18,
 		"Image": "gigrig-distributor.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "G2/G3 Bank Manager",
+		"Width": 1.77,
+		"Height": 2.36,
+		"Image": "gigrig-bank-man.png"
 	},
 	{
 		"Brand": "GigRig",
@@ -9661,10 +9766,31 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "Grumpybot Buffer",
+		"Width": 2.75591,
+		"Height": 1.5748,
+		"Image": "gigrig-grumpybot.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "Humdinger",
+		"Width": 2.05,
+		"Height": 4.02,
+		"Image": "gigrig-humdinger.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "Isolator",
 		"Width": 2.56,
 		"Height": 1.18,
 		"Image": "gigrig-isolator.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "MIDI Cinco Patch Bay",
+		"Width": 4.92,
+		"Height": 3.03,
+		"Image": "gigrig-cinco-midi.png"
 	},
 	{
 		"Brand": "GigRig",
@@ -9710,8 +9836,15 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "Three 2 One",
+		"Width": 3.15,
+		"Height": 4.52,
+		"Image": "gigrig-three-two-one.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "Wetter Box",
-		"Width": 2.59,
+		"Width": 2.95,
 		"Height": 5.32,
 		"Image": "gigrig-wetter.png"
 	},
@@ -10324,6 +10457,13 @@
 		"Height": 2.91,
 		"Image": "hotone-choir.png"
 	},
+	{
+		"Brand": "Hotone",
+		"Name": "Jogg",
+		"Width": 2.28,
+		"Height": 3.98,
+		"Image": "hotone-jogg.png"
+	},	
 	{
 		"Brand": "Hotone",
 		"Name": "Patch Kommander",
@@ -13036,8 +13176,8 @@
 	{
 		"Brand": "Line 6",
 		"Name": "MM4 Modulation Modeler",
-		"Width": 7.02,
-		"Height": 5,
+		"Width": 10,
+		"Height": 6,
 		"Image": "line6-mm4.png"
 	},
 	{
@@ -14435,6 +14575,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Audiofile",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "mooer-audiofile.png"
+	},	
+	{
+		"Brand": "Mooer",
 		"Name": "Baby Bomb",
 		"Width": 1.65,
 		"Height": 3.7,
@@ -14558,6 +14705,13 @@
 		"Width": 1.65,
 		"Height": 3.7,
 		"Image": "mooer-pitchbox.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Preamp Live",
+		"Width": 9.06,
+		"Height": 4.92,
+		"Image": "mooer-preamp-live.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -15523,7 +15677,7 @@
 		"Name": "Preamp/DI",
 		"Width": 7.5,
 		"Height": 5,
-		"Image": "noblepreamp350.png"
+		"Image": "noble-preamp-350.png"
 	},
 	{
 		"Brand": "Nordvang",
@@ -16395,6 +16549,13 @@
 	},
 	{
 		"Brand": "One Control",
+		"Name": "Sonic Silver Peg",
+		"Width": 1.54,
+		"Height": 3.94,
+		"Image": "onecontrol-sonic-silver-peg.png"
+	},	
+	{
+		"Brand": "One Control",
 		"Name": "Tuner with BJF Buffer",
 		"Width": 1.74,
 		"Height": 3.86,
@@ -16462,6 +16623,13 @@
 		"Width": 2.6,
 		"Height": 5.59,
 		"Image": "origineffects-cali76.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Cali76 Compact Bass",
+		"Width": 2.6,
+		"Height": 5.59,
+		"Image": "origineffects-cali76-bass.png"
 	},
 	{
 		"Brand": "Origin Effects",
@@ -16685,7 +16853,7 @@
 		"Name": "Future Impact",
 		"Width": 4.9,
 		"Height": 6.1,
-		"Image": "panda-audio-future-impact"
+		"Image": "panda-audio-future-impact.png"
 	},
 	{
 		"Brand": "Pladask Elektrisk",
@@ -18094,20 +18262,27 @@
 		"Height": 5.18,
 		"Image": "seymourduncan-vaportrail.png"
 	},
-	{
-		"Brand": "Seymour Duncan",
+  {
+    "Brand": "Seymour Duncan",
 		"Name": "Vapor Trail (Silver)",
 		"Width": 2.74,
 		"Height": 5.18,
 		"Image": "seymourduncan-vaportrail-silver.png"
-	},
+  },
 	{
-    "Brand": "Shift Line",
+		"Brand": "Shift Line",
 		"Name": "A+ Astronaut III",
 		"Width": 2.63,
 		"Height": 4.33,
 		"Image": "astronaut-III.png"
-    },
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "A+ Buzz V.2",
+		"Width": 2.63,
+		"Height": 4.33,
+		"Image": "shiftline-buzz-v2.png"
+	},
 	{
 		"Brand": "Shift Line",
 		"Name": "CabZone X",
@@ -18116,7 +18291,21 @@
 		"Image": "shiftline-cabzonex.png"
 	},
 	{
-		"Brand": "Shin-ei",
+		"Brand": "Shift Line",
+		"Name": "Twin MkIIIS",
+		"Width": 4.88,
+		"Height": 4.09,
+		"Image": "shiftline-twin-mkiiis.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Olympic MkIIIS",
+		"Width": 4.88,
+		"Height": 4.09,
+		"Image": "shiftline-olympic-mkiiis.png"
+  },
+	{
+    "Brand": "Shin-ei",
 		"Name": "FY-6",
 		"Width": 3.78,
 		"Height": 6.57,
@@ -19910,6 +20099,13 @@
 		"Image": "trex-vulture.png"
 	},
 	{
+		"Brand": "Taylor",
+		"Name": "A/B/Both Box",
+		"Width": 4.6,
+		"Height": 3.62,
+		"Image": "taylor-a-b-both-box.png"
+	},	
+	{
 		"Brand": "TC Electronic",
 		"Name": "3rd Dimension Chorus",
 		"Width": 2.9,
@@ -20729,6 +20925,13 @@
 		"Image": "tech21-ssansamp-geddy-lee-yyz.png"
 	},
 	{
+		"Brand": "Tech21",
+		"Name": "Q\\Strip",
+		"Width": 4.5,
+		"Height": 3.5,
+		"Image": "tech21-qstrip.png"
+	},
+	{
 		"Brand": "Teenage Engineering",
 		"Name": "OP-1",
 		"Width": 11.1,
@@ -20937,6 +21140,13 @@
 		"Width": 2.8,
 		"Height": 4.3,
 		"Image": "throbak-stonebender.png"
+	},
+	{
+		"Brand": "TONE.ELECTRONIX",
+		"Name": "Animalizzer",
+		"Width": 4.04,
+		"Height": 4.8,
+		"Image": "toneelec-animalizzer.png"
 	},
 	{
 		"Brand": "Tone City",
