@@ -18255,20 +18255,27 @@
 		"Height": 5.18,
 		"Image": "seymourduncan-vaportrail.png"
 	},
-	{
-		"Brand": "Seymour Duncan",
+  {
+    "Brand": "Seymour Duncan",
 		"Name": "Vapor Trail (Silver)",
 		"Width": 2.74,
 		"Height": 5.18,
 		"Image": "seymourduncan-vaportrail-silver.png"
-	},
+  },
 	{
-    "Brand": "Shift Line",
+		"Brand": "Shift Line",
 		"Name": "A+ Astronaut III",
 		"Width": 2.63,
 		"Height": 4.33,
 		"Image": "astronaut-III.png"
-    },
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "A+ Buzz V.2",
+		"Width": 2.63,
+		"Height": 4.33,
+		"Image": "shiftline-buzz-v2.png"
+	},
 	{
 		"Brand": "Shift Line",
 		"Name": "CabZone X",
@@ -18277,7 +18284,21 @@
 		"Image": "shiftline-cabzonex.png"
 	},
 	{
-		"Brand": "Shin-ei",
+		"Brand": "Shift Line",
+		"Name": "Twin MkIIIS",
+		"Width": 4.88,
+		"Height": 4.09,
+		"Image": "shiftline-twin-mkiiis.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Olympic MkIIIS",
+		"Width": 4.88,
+		"Height": 4.09,
+		"Image": "shiftline-olympic-mkiiis.png"
+  },
+	{
+    "Brand": "Shin-ei",
 		"Name": "FY-6",
 		"Width": 3.78,
 		"Height": 6.57,
