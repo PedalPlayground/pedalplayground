@@ -259,6 +259,13 @@
 		"Image": "aion-penumbra.png"
 	},
 	{
+		"Brand": "Aion FX",
+		"Name": "Stratus Classic Overdrive",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-stratus.png"
+	},
+	{
 		"Brand": "AirTurn",
 		"Name": "BT200S-2",
 		"Width": 4.50,
