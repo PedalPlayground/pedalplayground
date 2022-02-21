@@ -232,10 +232,38 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Deimos Germanium Fuzz",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-deimos.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Flare Fuzz Machine",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-flare.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Luna Optical Tremolo",
 		"Width": 2.59843,
 		"Height": 4.80315,
 		"Image": "aion-luna.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Penumbra Bass Fuzz",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-penumbra.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Stratus Classic Overdrive",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-stratus.png"
 	},
 	{
 		"Brand": "AirTurn",
