@@ -2563,6 +2563,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "CE-20 Chorus Ensemble",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-ce20.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "CE-3 Chorus",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -2724,6 +2731,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "EQ-20 Advanced EQ",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-eq20.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "EQ-200 Graphic Equalizer",
 		"Width": 4,
 		"Height": 5.4375,
@@ -2871,6 +2885,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GP-20 Amp Factory",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-gp20.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GT-1000 Guitar Effects Processor",
 		"Width": 18.187,
 		"Height": 9.812,
@@ -3004,6 +3025,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "OC-20G Poly Octave",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-oc20g.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "OC-3 Super Octave",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -3036,6 +3064,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-od2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "OD-20 Drive Zone",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-od20.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3137,6 +3172,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RC-20 Loop Station",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-rc20.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RC-3 Loop Station",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -3190,6 +3232,13 @@
 		"Width": 6.8125,
 		"Height": 6.25,
 		"Image": "boss-re20.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RT-20 Rotary",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-rt20.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3344,6 +3393,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-tu3w.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "WP-20G Wave Processor",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-wp20g.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -9633,10 +9689,24 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "Cinco Cinco Patch Bay",
+		"Width": 4.33,
+		"Height": 2.95,
+		"Image": "gigrig-cinco.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "Distributor",
 		"Width": 2.56,
 		"Height": 1.18,
 		"Image": "gigrig-distributor.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "G2/G3 Bank Manager",
+		"Width": 1.77,
+		"Height": 2.36,
+		"Image": "gigrig-bank-man.png"
 	},
 	{
 		"Brand": "GigRig",
@@ -9661,10 +9731,31 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "Grumpybot Buffer",
+		"Width": 2.75591,
+		"Height": 1.5748,
+		"Image": "gigrig-grumpybot.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "Humdinger",
+		"Width": 2.05,
+		"Height": 4.02,
+		"Image": "gigrig-humdinger.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "Isolator",
 		"Width": 2.56,
 		"Height": 1.18,
 		"Image": "gigrig-isolator.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "MIDI Cinco Patch Bay",
+		"Width": 4.92,
+		"Height": 3.03,
+		"Image": "gigrig-cinco-midi.png"
 	},
 	{
 		"Brand": "GigRig",
@@ -9710,8 +9801,15 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "Three 2 One",
+		"Width": 3.15,
+		"Height": 4.52,
+		"Image": "gigrig-three-two-one.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "Wetter Box",
-		"Width": 2.59,
+		"Width": 2.95,
 		"Height": 5.32,
 		"Image": "gigrig-wetter.png"
 	},
@@ -13043,8 +13141,8 @@
 	{
 		"Brand": "Line 6",
 		"Name": "MM4 Modulation Modeler",
-		"Width": 7.02,
-		"Height": 5,
+		"Width": 10,
+		"Height": 6,
 		"Image": "line6-mm4.png"
 	},
 	{
@@ -15544,7 +15642,7 @@
 		"Name": "Preamp/DI",
 		"Width": 7.5,
 		"Height": 5,
-		"Image": "noblepreamp350.png"
+		"Image": "noble-preamp-350.png"
 	},
 	{
 		"Brand": "Nordvang",
@@ -16486,6 +16584,13 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "Cali76 Compact Bass",
+		"Width": 2.6,
+		"Height": 5.59,
+		"Image": "origineffects-cali76-bass.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "Cali76 Compact Deluxe",
 		"Width": 2.6,
 		"Height": 5.59,
@@ -16706,7 +16811,7 @@
 		"Name": "Future Impact",
 		"Width": 4.9,
 		"Height": 6.1,
-		"Image": "panda-audio-future-impact"
+		"Image": "panda-audio-future-impact.png"
 	},
 	{
 		"Brand": "Pladask Elektrisk",
@@ -20958,6 +21063,13 @@
 		"Width": 2.8,
 		"Height": 4.3,
 		"Image": "throbak-stonebender.png"
+	},
+	{
+		"Brand": "TONE.ELECTRONIX",
+		"Name": "Animalizzer",
+		"Width": 4.04,
+		"Height": 4.8,
+		"Image": "toneelec-animalizzer.png"
 	},
 	{
 		"Brand": "Tone City",
