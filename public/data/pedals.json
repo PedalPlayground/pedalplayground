@@ -20883,6 +20883,13 @@
 		"Image": "tech21-ssansamp-geddy-lee-yyz.png"
 	},
 	{
+		"Brand": "Tech21",
+		"Name": "Q\\Strip",
+		"Width": 4.5,
+		"Height": 3.5,
+		"Image": "tech21-qstrip.png"
+	},
+	{
 		"Brand": "Teenage Engineering",
 		"Name": "OP-1",
 		"Width": 11.1,
