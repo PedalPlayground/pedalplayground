@@ -232,6 +232,13 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Deimos Germanium Fuzz",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-deimos.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Flare Fuzz Machine",
 		"Width": 2.59843,
 		"Height": 4.80315,
