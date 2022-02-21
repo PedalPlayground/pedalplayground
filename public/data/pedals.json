@@ -5909,6 +5909,13 @@
 	},
 	{
 		"Brand": "DSM & Humboldt",
+		"Name": "Silver Linings",
+		"Width": 3.74,
+		"Height": 5.03,
+		"Image": "dsm-silver-linings.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier",
 		"Width": 4.53,
 		"Height": 2.7,
@@ -20251,6 +20258,13 @@
 		"Width": 2,
 		"Height": 3.75,
 		"Image": "tc-hypergravity-mini.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Impulse IR Loader",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-impulser-ir-loader.png"
 	},
 	{
 		"Brand": "TC Electronic",
