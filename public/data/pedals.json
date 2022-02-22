@@ -4970,6 +4970,20 @@
 		"Image": "danelectro-coolcattremolo.png"
 	},
 	{
+		"Brand": "Danelectro",
+		"Name": "DD1 Fab Tone Distortion",
+		"Width": 4.25,
+		"Height": 5.94,
+		"Image": "danelectro-fab-tone.png"
+	},	
+	{
+		"Brand": "Danelectro",
+		"Name": "DO1 Daddy-O Overdrive",
+		"Width": 4.25,
+		"Height": 5.94,
+		"Image": "danelectro-daddy-o.png"
+	},		
+	{
 		"Brand": "Darkglass",
 		"Name": "Microtubes X",
 		"Width": 2.95,
