@@ -2097,7 +2097,7 @@
 		"Name": "OD-300 Overdrive / Distortion",
 		"Width": 4.75,
 		"Height": 3.00,
-		"Image": "TBD"
+		"Image": "behringer-od300.png"
 	}
 	{
 		"Brand": "Behringer",
@@ -2153,7 +2153,7 @@
 		"Name": "VT999 Vintage Tube Monster",
 		"Width": 7.916,
 		"Height": 6.75,
-		"Image": "TBD"
+		"Image": "behringer-vt999"
 	},
 	{
 		"Brand": "Benson",
