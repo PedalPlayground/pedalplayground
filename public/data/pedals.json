@@ -8016,6 +8016,20 @@
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
+		"Name": "Limelight",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "electronic-audio-experiments-limelight.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
+		"Name": "Limelight v2",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "electronic-audio-experiments-limelight-v2.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Longsword",
 		"Width": 3.7,
 		"Height": 4.95,
