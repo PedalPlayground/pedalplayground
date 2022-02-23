@@ -2171,6 +2171,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Preamp (Orange)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-orange.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Preamp (Pink)",
 		"Width": 4.69,
 		"Height": 3.77,
