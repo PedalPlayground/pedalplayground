@@ -12923,6 +12923,13 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
+		"Name": "Pylon ATB Noise Gate",
+		"Width": 2.92,
+		"Height": 5,
+		"Image": "kma-audio-machines-pylon-atb-noise-gate.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
 		"Name": "Queequeg Sub Octave",
 		"Width": 2.59,
 		"Height": 4.4,
