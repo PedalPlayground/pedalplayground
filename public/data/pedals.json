@@ -11789,6 +11789,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Overdrive Preamp",
+		"Width": 3.96,
+		"Height": 4.7,
+		"Image": "jhs-overdrive-preamp.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "PackRat",
 		"Width": 2.93,
 		"Height": 4.89,
