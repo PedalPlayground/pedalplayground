@@ -2171,6 +2171,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Preamp (Orange)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-orange.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Preamp (Pink)",
 		"Width": 4.69,
 		"Height": 3.77,
@@ -8016,6 +8023,20 @@
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
+		"Name": "Limelight",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "electronic-audio-experiments-limelight.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
+		"Name": "Limelight v2",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "electronic-audio-experiments-limelight-v2.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Longsword",
 		"Width": 3.7,
 		"Height": 4.95,
@@ -11768,6 +11789,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Overdrive Preamp",
+		"Width": 3.96,
+		"Height": 4.7,
+		"Image": "jhs-overdrive-preamp.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "PackRat",
 		"Width": 2.93,
 		"Height": 4.89,
@@ -12899,6 +12927,13 @@
 		"Width": 5.75,
 		"Height": 4.9,
 		"Image": "kma-audio-machines-moai-maea-analog-octaver.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Pylon ATB Noise Gate",
+		"Width": 2.92,
+		"Height": 5,
+		"Image": "kma-audio-machines-pylon-atb-noise-gate.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
