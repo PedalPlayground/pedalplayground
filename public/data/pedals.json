@@ -2142,6 +2142,13 @@
 		"Image": "behringer-vd400.png"
 	},
 	{
+		"Brand": "Behringer",
+		"Name": "VM1 Vintage Time Machine",
+		"Width": 8.7,
+		"Height": 6.7,
+		"Image": "behringer-vm1.png"
+	},
+	{
 		"Brand": "Benson",
 		"Name": "Germanium Boost",
 		"Width": 2.71,
@@ -2563,6 +2570,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "BC-2 Combo Drive",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-bc2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "BF-2 Flanger",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -2658,6 +2672,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-dc2w.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "DC-3 Digital Dimension",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dc3.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2812,6 +2833,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-fbm1.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "FDR-1 '65 Deluxe Reverb",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-fdr1.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3400,6 +3428,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-tr2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "TU-12EX Chromatic Tuner",
+		"Width": 5.8125,
+		"Height": 2.125,
+		"Image": "boss-tu12ex.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -6179,6 +6214,13 @@
 		"Width": 3.5,
 		"Height": 3.5,
 		"Image": "dunlop-fuzzface-silicon-mini.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "UV-1 Uni-Vibe",
+		"Width": 5,
+		"Height": 5.5,
+		"Image": "dunlop-uv1.png"
 	},
 	{
 		"Brand": "Dusky Electronics",
