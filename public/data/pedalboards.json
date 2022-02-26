@@ -645,10 +645,38 @@
 	},
 	{
 		"Brand": "Templeboards",
+		"Name": "Duo 17 (Gray)",
+		"Width": 17,
+		"Height": 12.5,
+		"Image": "temple-duo17-gray.png"
+	},
+	{
+		"Brand": "Templeboards",
+		"Name": "Duo 17 (White)",
+		"Width": 17,
+		"Height": 12.5,
+		"Image": "temple-duo17-white.png"
+	},
+	{
+		"Brand": "Templeboards",
 		"Name": "Duo 24",
 		"Width": 24.5,
 		"Height": 12.5,
 		"Image": "temple-duo24.png"
+	},
+	{
+		"Brand": "Templeboards",
+		"Name": "Duo 24 (Gray)",
+		"Width": 24.5,
+		"Height": 12.5,
+		"Image": "temple-duo24-gray.png"
+	},
+	{
+		"Brand": "Templeboards",
+		"Name": "Duo 24 (White)",
+		"Width": 24.5,
+		"Height": 12.5,
+		"Image": "temple-duo24-white.png"
 	},
 	{
 		"Brand": "Templeboards",
@@ -659,10 +687,38 @@
 	},
 	{
 		"Brand": "Templeboards",
+		"Name": "Duo 34 (Gray)",
+		"Width": 34,
+		"Height": 12.5,
+		"Image": "temple-duo34-gray.png"
+	},
+	{
+		"Brand": "Templeboards",
+		"Name": "Duo 34 (White)",
+		"Width": 34,
+		"Height": 12.5,
+		"Image": "temple-duo34-white.png"
+	},
+	{
+		"Brand": "Templeboards",
 		"Name": "Solo 18",
 		"Width": 18,
 		"Height": 8.5,
 		"Image": "temple-solo18.png"
+	},
+	{
+		"Brand": "Templeboards",
+		"Name": "Solo 18 (Gray)",
+		"Width": 18,
+		"Height": 8.5,
+		"Image": "temple-solo18-gray.png"
+	},
+	{
+		"Brand": "Templeboards",
+		"Name": "Solo 18 (White)",
+		"Width": 18,
+		"Height": 8.5,
+		"Image": "temple-solo18-white.png"
 	},
 	{
 		"Brand": "Templeboards",
@@ -673,6 +729,20 @@
 	},
 	{
 		"Brand": "Templeboards",
+		"Name": "Trio 21 (Gray)",
+		"Width": 21,
+		"Height": 16.5,
+		"Image": "temple-trio21-gray.png"
+	},
+	{
+		"Brand": "Templeboards",
+		"Name": "Trio 21 (White)",
+		"Width": 21,
+		"Height": 16.5,
+		"Image": "temple-trio21-white.png"
+	},
+	{
+		"Brand": "Templeboards",
 		"Name": "Trio 28",
 		"Width": 28.2,
 		"Height": 16.5,
@@ -680,10 +750,38 @@
 	},
 	{
 		"Brand": "Templeboards",
+		"Name": "Trio 28 (Gray)",
+		"Width": 28.2,
+		"Height": 16.5,
+		"Image": "temple-trio28-gray.png"
+	},
+	{
+		"Brand": "Templeboards",
+		"Name": "Trio 28 (White)",
+		"Width": 28.2,
+		"Height": 16.5,
+		"Image": "temple-trio28-white.png"
+	},
+	{
+		"Brand": "Templeboards",
 		"Name": "Trio 43",
 		"Width": 43.2,
 		"Height": 16.5,
 		"Image": "temple-trio43.png"
+	},
+	{
+		"Brand": "Templeboards",
+		"Name": "Trio 43 (Gray)",
+		"Width": 43.2,
+		"Height": 16.5,
+		"Image": "temple-trio43-gray.png"
+	},
+	{
+		"Brand": "Templeboards",
+		"Name": "Trio 43 (White)",
+		"Width": 43.2,
+		"Height": 16.5,
+		"Image": "temple-trio43-white.png"
 	},
 	{
 		"Brand": "Trav's",
