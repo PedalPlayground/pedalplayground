@@ -9332,11 +9332,39 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Absynthe Guitar Analog Synth",
+		"Width": 7.87402,
+		"Height": 4.96063,
+		"Image": "ftelettronica-absynthe.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Active A/B Switcher",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-ab.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Active ABY Switcher",
+		"Width": 4.92126,
+		"Height": 3.97638,
+		"Image": "ftelettronica-aby.png"
+	},	
+	{
+		"Brand": "FTelettronica",
 		"Name": "Animato",
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-animato.png"
 	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Bass Fuckin’ Drive",
+		"Width": 5.07874,
+		"Height": 3.89764,
+		"Image": "ftelettronica-bass-fuckin-drive.png"
+	},	
 	{
 		"Brand": "FTelettronica",
 		"Name": "Brain Damage",
@@ -9374,10 +9402,38 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Hypoxia Analog Chorus",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-hypoxia.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Inner Peace Optical Compressor",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-inner-peace.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Looper/Blender",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-looper.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Mars Compressor",
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-mars-comp.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Naked Lunch Tap Tempo Tremolo",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-naked-lunch.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -9409,6 +9465,27 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Red Right Hand Overdrive",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-red-right-hand.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "RF-20 Resonant Filter",
+		"Width": 5.19685,
+		"Height": 5.90551,
+		"Image": "ftelettronica-rf20.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Schumann PLL",
+		"Width": 7.87402,
+		"Height": 4.96063,
+		"Image": "ftelettronica-schumann.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Soft Sustain Distortion",
 		"Width": 2.79528,
 		"Height": 4.6063,
@@ -9420,6 +9497,13 @@
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-spring-reverb.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Spring Reverb Deluxe",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-spring-reverb-deluxe.png"
 	},
 	{
 		"Brand": "Fulltone",
