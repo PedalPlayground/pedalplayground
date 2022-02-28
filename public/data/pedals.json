@@ -890,6 +890,20 @@
 	},
 	{
 		"Brand": "Anasounds",
+		"Name": "K+ Daughterboard",
+		"Width": 4.19,
+		"Height": 3.25,
+		"Image": "anasounds-kplus-daughterboard.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "K+ Motherboard",
+		"Width": 7.51,
+		"Height": 3.25,
+		"Image": "anasounds-kplus-motherboard.png"
+	},
+	{
+		"Brand": "Anasounds",
 		"Name": "Lazy Comp",
 		"Width": 2.52,
 		"Height": 4.91,
