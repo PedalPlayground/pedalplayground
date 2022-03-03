@@ -2955,6 +2955,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GX-100 Guitar Effects Processor",
+		"Width": 18.125,
+		"Height": 7.42,
+		"Image": "boss-gx100.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "HM-2 Heavy Metal",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -19385,6 +19392,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Blue Sky (LE Midnight)",
+		"Width": 4,
+		"Height": 4.46,
+		"Image": "strymon-bluesky-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Brigadier",
 		"Width": 4,
 		"Height": 4.46,
@@ -19424,6 +19438,13 @@
 		"Width": 4,
 		"Height": 4.46,
 		"Image": "strymon-dig.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Dig (LE Midnight)",
+		"Width": 4,
+		"Height": 4.46,
+		"Image": "strymon-dig-midnight.png"
 	},
 	{
 		"Brand": "Strymon",
@@ -19480,6 +19501,13 @@
 		"Width": 6.75,
 		"Height": 4.9,
 		"Image": "strymon-mobius.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Mobius (LE Midnight)",
+		"Width": 6.75,
+		"Height": 4.9,
+		"Image": "strymon-mobius-midnight.png"
 	},
 	{
 		"Brand": "Strymon",
@@ -19557,6 +19585,13 @@
 		"Width": 6.75,
 		"Height": 4.9,
 		"Image": "strymon-timeline.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Timeline (LE Midnight)",
+		"Width": 6.75,
+		"Height": 4.9,
+		"Image": "strymon-timeline-midnight.png"
 	},
 	{
 		"Brand": "Strymon",
