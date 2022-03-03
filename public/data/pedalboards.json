@@ -14,6 +14,20 @@
 		"Image": "blackbird-tolex-1530.png"
 	},
 	{
+		"Brand": "BOSS",
+		"Name": "BCB-30X",
+		"Width": 13.32,
+		"Height": 12.125,
+		"Image": "boss-bcb-30x.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "BCB-90X",
+		"Width": 26.8,
+		"Height": 15.125,
+		"Image": "boss-bcb-90x.png"
+	},
+	{
 		"Brand": "Caseman",
 		"Name": "Gentleman Medium / Large",
 		"Width": 32.284,
