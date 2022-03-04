@@ -12839,6 +12839,13 @@
 	},
 	{
 		"Brand": "Kingsley",
+		"Name": "Bard",
+		"Width": 3.875,
+		"Height": 4.75,
+		"Image": "kingsley-bard.png"
+	},
+	{
+		"Brand": "Kingsley",
 		"Name": "Jester",
 		"Width": 5.25,
 		"Height": 5,
@@ -15090,6 +15097,13 @@
 		"Width": 3.82,
 		"Height": 4.6,
 		"Image": "mrblack-tapex.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Thunderclaw",
+		"Width": 2.63,
+		"Height": 4.37,
+		"Image": "mrblack-thunderclaw.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -19490,7 +19504,7 @@
 	},
 	{
 		"Brand": "Strymon",
-		"Name": "Blue Sky",
+		"Name": "blueSky",
 		"Width": 4,
 		"Height": 4.46,
 		"Image": "strymon-bluesky.png"
