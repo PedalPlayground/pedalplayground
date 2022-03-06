@@ -8023,6 +8023,20 @@
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
+		"Name": "Dagger (Bubblegum)",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "electronic-audio-experiments-dagger-bubblegum.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
+		"Name": "Eldritch Blast",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-eldritch-blast.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Halberd",
 		"Width": 3.7,
 		"Height": 4.95,
@@ -8034,6 +8048,13 @@
 		"Width": 2.6,
 		"Height": 5.05,
 		"Image": "electronic-audio-experiments-halberd-v2.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
+		"Name": "Halberd v2 (Green Dragon)",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "electronic-audio-experiments-halberd-v2-green.png"
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
@@ -8062,6 +8083,13 @@
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-longsword.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
+		"Name": "Longsword (Rose Gold)",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-longsword-rose.png"
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
