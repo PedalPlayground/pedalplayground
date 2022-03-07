@@ -140,6 +140,27 @@
 		"Image": "emerson-32x12.png"
 	},
 	{
+		"Brand": "Fender",
+		"Name": "Professional (Large)",
+		"Width": 32,
+		"Height": 16.01,
+		"Image": "fender-pro-large.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Professional (Medium)",
+		"Width": 24,
+		"Height": 13.06,
+		"Image": "fender-pro-medium.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Professional (Small)",
+		"Width": 18,
+		"Height": 12.82,
+		"Image": "fender-pro-small.png"
+	},
+	{
 		"Brand": "Gator",
 		"Name": "Aluminum Extra Large",
 		"Width": 32,
