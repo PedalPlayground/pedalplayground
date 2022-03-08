@@ -6168,6 +6168,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+	 	"Name": "JB95 Jerry Cantrell Cry Baby",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "dunlop-jb95.png"
+ 	},
+	{
+		"Brand": "Dunlop",
 	 	"Name": "JC95 Jerry Cantrell Cry Baby",
 	 	"Width": 4,
 	 	"Height": 10,
