@@ -3956,6 +3956,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Many Worlds",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-manyworlds.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Naga Viper",
 		"Width": 2.6,
 		"Height": 4.33,
