@@ -7659,6 +7659,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Nano Pulsar",
+		"Width": 2.84,
+		"Height": 4.5,
+		"Image": "ehx-nano-pulsar.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Nano Q-Tron",
 		"Width": 2.87,
 		"Height": 4.5,
