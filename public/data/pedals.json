@@ -323,6 +323,13 @@
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Fever Pitch",
+		"Width": 4.7,
+		"Height": 3.87,
+		"Image": "alexander-feverpitch.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Golden Summer",
 		"Width": 2.8,
 		"Height": 4.7,
