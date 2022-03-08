@@ -11621,6 +11621,20 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "AT",
+		"Width": 2.93,
+		"Height": 5.07,
+		"Image": "jhs-at.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "AT+",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-timmons.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "AT+",
 		"Width": 2.93,
 		"Height": 4.98,
