@@ -3570,6 +3570,13 @@
 		"Image": "brunetti-vanilladrive.png"
 	},
 	{
+		"Brand": "Calico Effects",
+		"Name": "Antlers",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "calico-antlers.png"
+	},
+	{
 		"Brand": "Carl Martin",
 		"Name": "Panama",
 		"Width": 2.36,
@@ -15813,294 +15820,301 @@
 		"Image": "nordvang-83drive.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Ace of Tone",
 		"Width": 4.13,
 		"Height": 4.52,
 		"Image": "nux-ace-of-tone.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Analog Chorus",
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-analog-chorus.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Analog Delay",
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-analog-delay.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Atlantic",
 		"Width": 4.13,
 		"Height": 4.52,
 		"Image": "nux-atlantic.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Boost Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-boost-core.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Brownie",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-brownie.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Drive Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-drive-core.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Duotime",
 		"Width": 4.13,
 		"Height": 4.52,
 		"Image": "nux-duotime.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Fireman",
 		"Width": 4.13,
 		"Height": 4.52,
 		"Image": "nux-fireman.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "HD Pitch",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-hd-pitch.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Horseman",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-horseman.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "JTC",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-jts.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "JTC Pro",
 		"Width": 4.13,
 		"Height": 4.52,
 		"Image": "nux-jtc-pro.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Komp Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-komp-core.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Konsequent",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-konsequent.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Lacerate (NFB-2)",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-lacerate.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Loop Core",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-loop-core.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Loop Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-loopcore.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Masamune",
 		"Width": 4.13,
 		"Height": 4.52,
 		"Image": "nux-masamune.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Metal Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-metal-core.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Mini Studio",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-mini-studio.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "MLD Bass Preamp + DI",
 		"Width": 4.19,
 		"Height": 4.52,
 		"Image": "nux-mld-bass-preamp.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Mod Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-mod-core.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Monterey",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-monterey.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Morning Star",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-morning-star.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Oceanic",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-oceanic.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Octave Loop",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-octave-loop.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Optima Air",
 		"Width": 4.19,
 		"Height": 4.52,
 		"Image": "nux-optima-air.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Plexi Crunch",
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-plexi-crunch.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "PT-6 Pedal Tuner",
-		"Width": 2.83465,
-		"Height": 4.80315,
+		"Width": 2.83,
+		"Height": 4.80,
 		"Image": "nux-pt-6.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Rec To Distortion",
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-rec-to.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Rivulet",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-rivulet.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Rotary",
 		"Width": 4.25,
 		"Height": 5.08,
 		"Image": "nux-roctary.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Scream Bass",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-scream-bass.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Sculpture",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-sculpture.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Solid Studio",
 		"Width": 4.19,
 		"Height": 4.52,
 		"Image": "nux-solid-studio.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Stageman Floor",
 		"Width": 4.19,
 		"Height": 4.52,
 		"Image": "nux-stageman-floor.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Steel Singer Drive",
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-steel-singer.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Tape Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-tape-core.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
+		"Name": "Tape Echo",
+		"Width": 4.13,
+		"Height": 4.49,
+		"Image": "nux-tape-echo.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Time Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-time-core.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "Tube Man",
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-tube-man.png"
 	},
 	{
-		"Brand": "NUX",
+		"Brand": "NuX",
 		"Name": "XTC OD",
 		"Width": 2.98,
 		"Height": 4.76,
