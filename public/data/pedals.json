@@ -2864,6 +2864,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "FS-6 Dual Foot Switch",
+		"Width": 7.4,
+		"Height": 3.5,
+		"Image": "boss-fs6.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "FS-7 Dual Foot Switch",
 		"Width": 2.5,
 		"Height": 5.1875,
