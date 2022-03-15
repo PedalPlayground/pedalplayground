@@ -1561,6 +1561,13 @@
 		"Image": "ashdown-velvet-comp.png"
 	},
 	{
+		"Brand": "Asheville Music Tools",
+		"Name": "ADG-1",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "asheville-adg1.png"
+	},
+	{
 		"Brand": "Atomic",
 		"Name": "Ampli-Firebox",
 		"Width": 3.95,
@@ -10841,6 +10848,13 @@
 		"Width": 1.96,
 		"Height": 3.65,
 		"Image": "ibanez-supermetalmini.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "TK999 Tube King",
+		"Width": 4.3,
+		"Height": 6.3,
+		"Image": "ibanez-tk999.png"
 	},
 	{
 		"Brand": "Ibanez",
