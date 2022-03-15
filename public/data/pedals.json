@@ -8954,6 +8954,13 @@
 	},
 	{
 		"Brand": "Fjord Fuzz",
+		"Name": "Kvasir",
+		"Width": 2.52,
+		"Height": 4.75,
+		"Image": "fjord-kvasir.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
 		"Name": "Odin",
 		"Width": 2.52,
 		"Height": 4.78,
@@ -13121,8 +13128,15 @@
     "Brand": "Lake Effects",
     "Name": "FVD",
     "Width": 3.68,
-    "Height": 4.67,
+    "Height": 4.89,
     "Image": "lake-effects-fvd.png"
+  },
+	{
+    "Brand": "Lake Effects",
+    "Name": "FVD (White)",
+    "Width": 3.68,
+    "Height": 4.89,
+    "Image": "lake-effects-fvd-white.png"
   },
 	{
 		"Brand": "Land Devices",
@@ -13914,6 +13928,20 @@
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "mask-black-math.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Black Math (Gold)",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "mask-black-math-gold.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Civil Math",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "mask-civil-math.png"
 	},
 	{
 		"Brand": "Mattoverse",
@@ -18824,6 +18852,13 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "Commodore",
+		"Width": 4.67,
+		"Height": 3.73,
+		"Image": "solidgoldfx-commodore.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Counter Current",
 		"Width": 4.89,
 		"Height": 3.68,
@@ -21441,6 +21476,13 @@
 		"Width": 4.7,
 		"Height": 3.7,
 		"Image": "triungulo-chorus-ensemble.png"
+	},
+	{
+		"Brand": "Triungulo Lab",
+		"Name": "Scar Fuzz",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "triungulo-scar-fuzz.png"
 	},
 	{
 		"Brand": "Truetone",
