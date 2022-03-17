@@ -22404,6 +22404,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Ego Mini",
+		"Width": 1.5,
+		"Height": 3.5,
+		"Image": "wampler-ego-mini.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "EQuator",
 		"Width": 2.6,
 		"Height": 5,
