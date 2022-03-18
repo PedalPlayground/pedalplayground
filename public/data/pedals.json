@@ -8954,6 +8954,13 @@
 	},
 	{
 		"Brand": "Fjord Fuzz",
+		"Name": "Kvasir",
+		"Width": 2.52,
+		"Height": 4.75,
+		"Image": "fjord-kvasir.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
 		"Name": "Odin",
 		"Width": 2.52,
 		"Height": 4.78,
@@ -13921,6 +13928,20 @@
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "mask-black-math.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Black Math (Gold)",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "mask-black-math-gold.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Civil Math",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "mask-civil-math.png"
 	},
 	{
 		"Brand": "Mattoverse",
