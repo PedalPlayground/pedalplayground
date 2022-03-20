@@ -19686,6 +19686,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "PS-124",
+		"Width": 4.2,
+		"Height": 2,
+		"Image": "strymon-ps124.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Riverside",
 		"Width": 4,
 		"Height": 4.46,
