@@ -10830,6 +10830,13 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "TS808 Tubescreamer (Tamura Mod)",
+		"Width": 2.9,
+		"Height": 4.89,
+		"Image": "ibanez-ts808-tamura.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "TS808DX Tube Screamer",
 		"Width": 5.38,
 		"Height": 4.72,
@@ -13235,6 +13242,13 @@
 		"Width": 10,
 		"Height": 6,
 		"Image": "line6-dl4.png"
+	},
+	{
+		"Brand": "Line 6",
+		"Name": "DL4 Delay MkII",
+		"Width": 9.25,
+		"Height": 4.5,
+		"Image": "line6-dl4-mk2.png"
 	},
 	{
 		"Brand": "Line 6",
