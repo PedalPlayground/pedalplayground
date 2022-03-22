@@ -15737,10 +15737,31 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Argo (2022)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-argo-2022.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Argonaut",
 		"Width": 1.8,
 		"Height": 3.6,
 		"Image": "mythos-argonaut.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Argonaut (2022)",
+		"Width": 1.78,
+		"Height": 3.6,
+		"Image": "mythos-argonaut-2022.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Cestus",
+		"Width": 1.78,
+		"Height": 3.6,
+		"Image": "mythos-cestus.png"
 	},
 	{
 		"Brand": "Mythos",
@@ -15751,6 +15772,13 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Chupacabra (2022)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-chupacabra-2022.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Golden Fleece",
 		"Width": 1.75,
 		"Height": 3.6,
@@ -15758,17 +15786,45 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Golden Fleece (2022)",
+		"Width": 1.78,
+		"Height": 3.6,
+		"Image": "mythos-golden-fleece-2022.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Golden Fleece (Au79)",
+		"Width": 1.78,
+		"Height": 3.6,
+		"Image": "mythos-golden-fleece-au79.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Herculean",
 		"Width": 2.6,
-		"Height": 4.91,
+		"Height": 4.94,
 		"Image": "mythos-herculean.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "High Road",
+		"Width": 1.78,
+		"Height": 3.6,
+		"Image": "mythos-high-road.png"
 	},
 	{
 		"Brand": "Mythos",
 		"Name": "Mjolnir",
 		"Width": 2.6,
-		"Height": 4.91,
-		"Image": "mythos-mjolner.png"
+		"Height": 4.94,
+		"Image": "mythos-mjolnir.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Mjolnir (2022)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-mjolnir-2022.png"
 	},
 	{
 		"Brand": "Mythos",
@@ -15786,9 +15842,16 @@
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Oracle",
+		"Name": "Olympus",
 		"Width": 3.7,
-		"Height": 4.6,
+		"Height": 4.83,
+		"Image": "mythos-olympus.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Oracle",
+		"Width": 3.97,
+		"Height": 4.83,
 		"Image": "mythos-oracle.png"
 	},
 	{
