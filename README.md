@@ -23,8 +23,18 @@
 -   Add the dimensions of the pedals you add to `/public/data/pedals.json`
 -   Input dimensions in inches, with decimals (rounding to nearest hundredth)
 -   Dimensions recorded should include any jacks and protrusions, otherwise your pedal may appear elongated or squished,
--   The width x height proportions should match exactly between your png image and your stated dimension in inches.
-    -   If you have a measurement for the side that has no protrusions, you can find the actual measurement of the side with jacks with just a bit of simple algebra: `((length of side with jacks in png / length of side without jacks in png) * official measurement of side without jacks in inches) = x`
+-   If you have an official measurement for the side that has no protrusions, you can find the actual measurement of the side with jacks with just a bit of algebra:
+    ```
+    ((a / b) * y) = x
+
+    a = length of side in image with jacks in pixels
+    b = length of side in image without jacks in pixels
+    y = official measurement of side without jacks in inches
+    ```
+-   To find the dimensions of your png:
+    -   GIMP: `shift + s`
+    -   Photoshop: `ctrl + i`
+
 
 ## Running Locally
 
