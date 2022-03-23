@@ -24,7 +24,7 @@
 -   Input dimensions in inches, with decimals (rounding to nearest hundredth)
 -   Dimensions recorded should include any jacks and protrusions, otherwise your pedal may appear elongated or squished,
 -   The width x height proportions should match exactly between your png image and your stated dimension in inches.
-    -   If you have a measurement for the side that has no protrusions, you can find the actual measurement of the side with jacks with just a bit of simple algebra: `((side with jacks in pixels / side without jacks in pixels) * side without jacks in inches)`
+    -   If you have a measurement for the side that has no protrusions, you can find the actual measurement of the side with jacks with just a bit of simple algebra: `((length of side with jacks in png / length of side without jacks in png) * official measurement of side without jacks in inches) = x`
 
 ## Running Locally
 
