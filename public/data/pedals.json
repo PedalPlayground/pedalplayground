@@ -3305,6 +3305,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RE-202 Space Echo",
+		"Width": 7.56,
+		"Height": 5.23,
+		"Image": "boss-re202.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RT-20 Rotary",
 		"Width": 6.8125,
 		"Height": 6.25,
