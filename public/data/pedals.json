@@ -1582,6 +1582,13 @@
 		"Image": "ashdown-velvet-comp.png"
 	},
 	{
+		"Brand": "Asheville Music Tools",
+		"Name": "ADG-1",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "asheville-adg1.png"
+	},
+	{
 		"Brand": "Atomic",
 		"Name": "Ampli-Firebox",
 		"Width": 3.95,
@@ -2171,6 +2178,13 @@
 	},
 	{
 		"Brand": "Behringer",
+
+		"Name": "VM1 Vintage Time Machine",
+		"Width": 8.7,
+		"Height": 6.7,
+		"Image": "behringer-vm1.png"
+  },
+	{
 		"Name": "VT999 Vintage Tube Monster",
 		"Width": 7.916,
 		"Height": 6.75,
@@ -2605,10 +2619,24 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "BC-2 Combo Drive",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-bc2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "BF-2 Flanger",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-bf2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "BF-2B Bass Flanger",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-bf2b.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2623,6 +2651,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ce2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "CE-2B Bass Chorus",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ce2b.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2700,6 +2735,20 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-dc2w.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "DC-3 Digital Dimension",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dc3.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "DD-2 Digital Delay",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dd2.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -2854,6 +2903,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-fbm1.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "FDR-1 '65 Deluxe Reverb",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-fdr1.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3463,6 +3519,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-tr2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "TU-12EX Chromatic Tuner",
+		"Width": 5.8125,
+		"Height": 2.125,
+		"Image": "boss-tu12ex.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -6217,6 +6280,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+	 	"Name": "JB95 Jerry Cantrell Cry Baby",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "dunlop-jb95.png"
+ 	},
+	{
+		"Brand": "Dunlop",
 	 	"Name": "JC95 Jerry Cantrell Cry Baby",
 	 	"Width": 4,
 	 	"Height": 10,
@@ -6270,6 +6340,13 @@
 		"Width": 3.5,
 		"Height": 3.5,
 		"Image": "dunlop-fuzzface-silicon-mini.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "UV-1 Uni-Vibe",
+		"Width": 5,
+		"Height": 5.5,
+		"Image": "dunlop-uv1.png"
 	},
 	{
 		"Brand": "Dusky Electronics",
@@ -9416,11 +9493,39 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Absynthe Guitar Analog Synth",
+		"Width": 7.87402,
+		"Height": 4.96063,
+		"Image": "ftelettronica-absynthe.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Active A/B Switcher",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-ab.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Active ABY Switcher",
+		"Width": 4.92126,
+		"Height": 3.97638,
+		"Image": "ftelettronica-aby.png"
+	},	
+	{
+		"Brand": "FTelettronica",
 		"Name": "Animato",
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-animato.png"
 	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Bass Fuckin’ Drive",
+		"Width": 5.07874,
+		"Height": 3.89764,
+		"Image": "ftelettronica-bass-fuckin-drive.png"
+	},	
 	{
 		"Brand": "FTelettronica",
 		"Name": "Brain Damage",
@@ -9458,10 +9563,38 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Hypoxia Analog Chorus",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-hypoxia.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Inner Peace Optical Compressor",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-inner-peace.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Looper/Blender",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-looper.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Mars Compressor",
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-mars-comp.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Naked Lunch Tap Tempo Tremolo",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-naked-lunch.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -9493,6 +9626,27 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Red Right Hand Overdrive",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-red-right-hand.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "RF-20 Resonant Filter",
+		"Width": 5.19685,
+		"Height": 5.90551,
+		"Image": "ftelettronica-rf20.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Schumann PLL",
+		"Width": 7.87402,
+		"Height": 4.96063,
+		"Image": "ftelettronica-schumann.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Soft Sustain Distortion",
 		"Width": 2.79528,
 		"Height": 4.6063,
@@ -9504,6 +9658,13 @@
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-spring-reverb.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Spring Reverb Deluxe",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-spring-reverb-deluxe.png"
 	},
 	{
 		"Brand": "Fulltone",
@@ -10834,6 +10995,13 @@
 		"Width": 1.96,
 		"Height": 3.65,
 		"Image": "ibanez-supermetalmini.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "TK999 Tube King",
+		"Width": 4.3,
+		"Height": 6.3,
+		"Image": "ibanez-tk999.png"
 	},
 	{
 		"Brand": "Ibanez",
@@ -12857,6 +13025,13 @@
 		"Width": 4.37,
 		"Height": 3.37,
 		"Image": "khdk-unicorn-blood-2.png"
+	},
+	{
+		"Brand": "Kingsley",
+		"Name": "Bard",
+		"Width": 3.875,
+		"Height": 4.75,
+		"Image": "kingsley-bard.png"
 	},
 	{
 		"Brand": "Kingsley",
@@ -15149,6 +15324,13 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "Thunderclaw",
+		"Width": 2.63,
+		"Height": 4.37,
+		"Image": "mrblack-thunderclaw.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "Vintage Ensemble Stereo",
 		"Width": 3.7,
 		"Height": 4.7,
@@ -15244,6 +15426,13 @@
 		"Width": 4.9,
 		"Height": 3.6,
 		"Image": "mxr-m80.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Distortion",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m85.png"
 	},
 	{
 		"Brand": "MXR",
@@ -15783,6 +15972,13 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-univibe.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Vintage Bass Octave",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-m280.png"
 	},
 	{
 		"Brand": "Mythos",
@@ -19623,7 +19819,7 @@
 	},
 	{
 		"Brand": "Strymon",
-		"Name": "Blue Sky",
+		"Name": "blueSky",
 		"Width": 4,
 		"Height": 4.46,
 		"Image": "strymon-bluesky.png"
