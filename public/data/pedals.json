@@ -2094,6 +2094,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "OD-300 Overdrive / Distortion",
+		"Width": 4.75,
+		"Height": 3.00,
+		"Image": "behringer-od300.png"
+	}
+	{
+		"Brand": "Behringer",
 		"Name": "SF300 Super Fuzz",
 		"Width": 2.755,
 		"Height": 4.842,
@@ -2140,6 +2147,13 @@
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-vd400.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "VT999 Vintage Tube Monster",
+		"Width": 7.916,
+		"Height": 6.75,
+		"Image": "behringer-vt999.png"
 	},
 	{
 		"Brand": "Benson",
