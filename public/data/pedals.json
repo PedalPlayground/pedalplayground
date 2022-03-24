@@ -13888,6 +13888,13 @@
 		"Image": "marshall-blues-breaker.png"
 	},
 	{
+		"Brand": "Marshall",
+		"Name": "Jackhammer",
+		"Width": 2.69,
+		"Height": 4.78,
+		"Image": "marshall-jackhammer.png"
+	},
+	{
 		"Brand": "Mastro Valvola",
 		"Name": "Attila",
 		"Width": 3.54,
