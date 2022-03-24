@@ -2,22 +2,39 @@
 
 ## Images
 
--   Find an image that is as close as possible to a perfect top-down angle.
-    -   You can make it perfectly top-down/rectangular using GIMP perspective tool.
+-   Find an image that is as close as possible to a perfect top-down angle,
+    -   GIMP: use the perspective tool to make any necessary adjustments,
+    -   Photoshop: use the free transform tools (perspective, skew) to make any necessary adjustments,
 -   White background is preferred for best cutout quality, but if not available just cut them out best as possible
--   Isolate the pedal on a transparent background (do not cut off jacks or switches). In GIMP (2.10), open file, select magic wand tool and click background, Layer > Transparency > Add Alpha Channel, then Layer > Transparency > Color to Alpha, and finally Ok in the dialog prompt.
-    You can also use https://onlinepngtools.com/create-transparent-png
--   Crop the image to non-transparent pixels (in Photoshop Image > Trim > Transparent Pixels, in Gimp Image -> Crop to Content)
--   Save to two places with the following guidelines:
-    -   `/app/images/pedals` - Save for Web as PNG-24, make width 800px or less (don't enlarge original image though)
-    -   `/public/images/pedals` - Save for web as PNG-24, make width 350px or less
+-   Isolate the pedal on a transparent background (do not cut off jacks or switches):
+    -   GIMP: open file, select magic wand tool and click background, Layer > Transparency > Add Alpha Channel, then Layer > Transparency > Color to Alpha, and finally Ok in the dialog prompt.
+    -   Photoshop: open file, select magic wand tool (can help to adjust the tolerance to 12-18) and click background, Layer > Layer Mask > Hide Selection
+    -   You can also use https://onlinepngtools.com/create-transparent-png
+-   Crop the image to non-transparent pixels:
+    -   Gimp: Image > Crop to Content,
+    -   Photoshop: Image > Trim > Transparent Pixels.
+-   Save to **two places** with the following guidelines:
+    -   `/app/images/pedals` - Save for Web as PNG-24, make width **800px** or less (don't enlarge original image though)
+    -   `/public/images/pedals` - Save for web as PNG-24, make width **350px** or less
     -   Please make sure file names use all lower-case letters and no spaces
 
 ## Dimensions
 
 -   Add the dimensions of the pedals you add to `/public/data/pedals.json`
 -   Input dimensions in inches, with decimals (rounding to nearest hundredth)
--   Dimensions recorded should include jacks and switches (if possible, most placed don't specify wether or not measurements do or do not)
+-   Dimensions recorded should include any jacks and protrusions, otherwise your pedal may appear elongated or squished,
+-   If you have an official measurement for the side that has no protrusions, you can find the actual measurement of the side with jacks with just a bit of algebra:
+    ```
+    ((a / b) * y) = x
+
+    a = length of side in image with jacks in pixels
+    b = length of side in image without jacks in pixels
+    y = official measurement of side without jacks in inches
+    ```
+-   To find the dimensions of your png:
+    -   GIMP: `shift + s`
+    -   Photoshop: `ctrl + i`
+
 
 ## Running Locally
 

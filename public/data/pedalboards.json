@@ -14,6 +14,20 @@
 		"Image": "blackbird-tolex-1530.png"
 	},
 	{
+		"Brand": "BOSS",
+		"Name": "BCB-30X",
+		"Width": 13.32,
+		"Height": 12.125,
+		"Image": "boss-bcb-30x.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "BCB-90X",
+		"Width": 26.8,
+		"Height": 15.125,
+		"Image": "boss-bcb-90x.png"
+	},
+	{
 		"Brand": "Caseman",
 		"Name": "Gentleman Medium / Large",
 		"Width": 32.284,
@@ -124,6 +138,27 @@
 		"Width": 33.25,
 		"Height": 12.25,
 		"Image": "emerson-32x12.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Professional (Large)",
+		"Width": 32,
+		"Height": 16.01,
+		"Image": "fender-pro-large.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Professional (Medium)",
+		"Width": 24,
+		"Height": 13.06,
+		"Image": "fender-pro-medium.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Professional (Small)",
+		"Width": 18,
+		"Height": 12.82,
+		"Image": "fender-pro-small.png"
 	},
 	{
 		"Brand": "Gator",
