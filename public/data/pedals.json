@@ -7289,9 +7289,9 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi with Tone Wicker",
-		"Width": 4.09,
-		"Height": 4.75,
-		"Image": "ehx-big-muff-pi.png"
+		"Width": 3.93,
+		"Height": 4.7,
+		"Image": "ehx-big-muff-pi-tone-wicker.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -19248,6 +19248,13 @@
 		"Width": 4.67,
 		"Height": 3.75,
 		"Image": "solidgold-nu33.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "NU-33 Vinyl Engine (Chess Blue)",
+		"Width": 4.67,
+		"Height": 3.75,
+		"Image": "solidgold-nu33-chessblue.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
