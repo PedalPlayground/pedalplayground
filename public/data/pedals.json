@@ -5115,14 +5115,14 @@
 		"Width": 4.25,
 		"Height": 5.94,
 		"Image": "danelectro-fab-tone.png"
-	},	
+	},
 	{
 		"Brand": "Danelectro",
 		"Name": "DO1 Daddy-O Overdrive",
 		"Width": 4.25,
 		"Height": 5.94,
 		"Image": "danelectro-daddy-o.png"
-	},		
+	},
 	{
 		"Brand": "Darkglass",
 		"Name": "Microtubes X",
@@ -6280,7 +6280,7 @@
 	},
 	{
 		"Brand": "Dunlop",
-	 	"Name": "JB95 Jerry Cantrell Cry Baby",
+	 	"Name": "JB95 Joe Bonamassa Cry Baby",
 	 	"Width": 4,
 	 	"Height": 10,
 	 	"Image": "dunlop-jb95.png"
@@ -7288,10 +7288,10 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Big Muff Pi",
-		"Width": 4.09,
-		"Height": 4.75,
-		"Image": "ehx-big-muff-pi.png"
+		"Name": "Big Muff Pi with Tone Wicker",
+		"Width": 3.93,
+		"Height": 4.7,
+		"Image": "ehx-big-muff-pi-tone-wicker.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -9518,7 +9518,7 @@
 		"Width": 4.92126,
 		"Height": 3.97638,
 		"Image": "ftelettronica-aby.png"
-	},	
+	},
 	{
 		"Brand": "FTelettronica",
 		"Name": "Animato",
@@ -9532,7 +9532,7 @@
 		"Width": 5.07874,
 		"Height": 3.89764,
 		"Image": "ftelettronica-bass-fuckin-drive.png"
-	},	
+	},
 	{
 		"Brand": "FTelettronica",
 		"Name": "Brain Damage",
@@ -19258,6 +19258,13 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "NU-33 Vinyl Engine (Chess Blue)",
+		"Width": 4.67,
+		"Height": 3.75,
+		"Image": "solidgold-nu33-chessblue.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Oblivion",
 		"Width": 4.67,
 		"Height": 3.74,
@@ -23671,6 +23678,13 @@
 	},
 	{
 		"Brand": "Zander Circuitry",
+		"Name": "Cafetiere",
+		"Width": 2.64,
+		"Height": 5.1,
+		"Image": "zander-cafetiere.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
 		"Name": "Cranium",
 		"Width": 2.64,
 		"Height": 5.1,
@@ -23731,6 +23745,13 @@
 		"Width": 7.09,
 		"Height": 4.7,
 		"Image": "zander-templo.png"
+	},
+	{
+		"Brand": "Zander Circuitry",
+		"Name": "Terra Firma",
+		"Width": 2.64,
+		"Height": 5.1,
+		"Image": "zander-terrafirma.png"
 	},
 	{
 		"Brand": "Zeppelin Design Labs",
