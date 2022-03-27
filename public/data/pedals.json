@@ -5601,6 +5601,20 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Bad Monkey",
+		"Width": 3,
+		"Height": 4.865,
+		"Image": "digitech-badmonkey.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Bass Whammy",
+		"Width": 6.5,
+		"Height": 7.75,
+		"Image": "digitech-bass-whammy.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Boneshaker",
 		"Width": 2.63,
 		"Height": 4.68,
@@ -5608,10 +5622,24 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Death Metal",
+		"Width": 3.12,
+		"Height": 4.865,
+		"Image": "digitech-deathmetal.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "CR-7 Stereo Chorus",
 		"Width": 3.5,
 		"Height": 5.25,
 		"Image": "digitech-cr7.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Digidelay",
+		"Width": 3,
+		"Height": 4.865,
+		"Image": "digitech-digidelay.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -5629,13 +5657,6 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "HT-2 Chromatic Tuner",
-		"Width": 3.5,
-		"Height": 5.25,
-		"Image": "digitech-hardwire-ht-2-chromatic-tuner.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "DOD Bifet Boost 410",
 		"Width": 3.05,
 		"Height": 4.88,
@@ -5643,10 +5664,24 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD Carcosa",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-carcosa.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Compressor 280",
 		"Width": 3.05,
 		"Height": 4.88,
 		"Image": "digitech-280.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Deep Freeze FX-63",
+		"Width": 3.31,
+		"Height": 5.125,
+		"Image": "dod-fx63.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -5678,6 +5713,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD Mini Expression",
+		"Width": 3,
+		"Height": 5,
+		"Image": "dod-miniexpression.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Overdrive Preamp 250",
 		"Width": 3.05,
 		"Height": 4.88,
@@ -5692,10 +5734,10 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "DOD Carcosa",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-carcosa.png"
+		"Name": "DOD Rubberneck",
+		"Width": 5,
+		"Height": 4.69,
+		"Image": "dod-rubberneck.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -5706,52 +5748,17 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "DOD Mini Expression",
-		"Width": 3,
-		"Height": 5,
-		"Image": "dod-miniexpression.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Rubberneck",
-		"Width": 5,
-		"Height": 4.69,
-		"Image": "dod-rubberneck.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "Digidelay",
-		"Width": 3,
-		"Height": 4.865,
-		"Image": "digitech-digidelay.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "Bad Monkey",
-		"Width": 3,
-		"Height": 4.865,
-		"Image": "digitech-badmonkey.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "Bass Whammy",
-		"Width": 6.5,
-		"Height": 7.75,
-		"Image": "digitech-bass-whammy.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "Death Metal",
-		"Width": 3.12,
-		"Height": 4.865,
-		"Image": "digitech-deathmetal.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "FreqOut",
 		"Width": 2.875,
 		"Height": 4.75,
 		"Image": "digitech-freqout.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "HT-2 Chromatic Tuner",
+		"Width": 3.5,
+		"Height": 5.25,
+		"Image": "digitech-hardwire-ht-2-chromatic-tuner.png"
 	},
 	{
 		"Brand": "DigiTech",
