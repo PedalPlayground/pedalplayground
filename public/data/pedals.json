@@ -3487,6 +3487,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "SYB-3 Bass Synthesizer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-syb3.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "SY-300 Guitar Synthesizer",
 		"Width": 10.03,
 		"Height": 7.17,
@@ -13494,6 +13501,13 @@
 		"Width": 3.4375,
 		"Height": 8,
 		"Image": "line6-ex1.png"
+	},
+	{
+		"Brand": "Line 6",
+		"Name": "FM4 Filter Modeler",
+		"Width": 10,
+		"Height": 6,
+		"Image": "line6-fm4.png"
 	},
 	{
 		"Brand": "Line 6",
