@@ -21499,6 +21499,13 @@
 		"Image": "teenage-engineering-op-z.png"
 	},
 	{
+		"Brand": "TEFI Vintage Lab",
+		"Name": "Golden Era",
+		"Width": 4.08,
+		"Height": 4.9,
+		"Image": "tefi-golden-era.png"
+	},
+	{
 		"Brand": "Teisco",
 		"Name": "Boost",
 		"Width": 2.96,
