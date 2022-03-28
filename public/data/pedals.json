@@ -19174,6 +19174,13 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "Communication Breakdown",
+		"Width": 4.67,
+		"Height": 3.67,
+		"Image": "solidgoldfx-communication-breakdown.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Counter Current",
 		"Width": 4.89,
 		"Height": 3.68,
