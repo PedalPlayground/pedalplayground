@@ -16192,6 +16192,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "Amp Academy",
+		"Width": 4.2,
+		"Height": 4.52,
+		"Image": "nux-amp-academy.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Analog Chorus",
 		"Width": 2.98,
 		"Height": 4.76,
