@@ -17256,6 +17256,13 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "DELUXE61",
+		"Width": 3.6,
+		"Height": 5.76,
+		"Image": "origin-deluxe61.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "MAGMA57 Amp Vibrato & Drive",
 		"Width": 3.66,
 		"Height": 5.62,
