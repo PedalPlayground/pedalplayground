@@ -3704,6 +3704,13 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Fck Ptn Pizza Shite",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "caroline-fck-ptn.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Hawaiian Pizza",
 		"Width": 3.7,
 		"Height": 4.93,
@@ -4366,6 +4373,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-gravitas.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "Habit",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-habit.png"
 	},
 	{
 		"Brand": "Chase Bliss",
@@ -13189,35 +13203,35 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Astrospurt Phaser",
+		"Name": "Astrospurt",
 		"Width": 4.04,
 		"Height": 4.87,
 		"Image": "kma-audio-machines-astrospurt-phaser.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Chief Disruptor Fundamental Fuzz",
+		"Name": "Chief Disruptor",
 		"Width": 3.91,
 		"Height": 4.89,
 		"Image": "kma-audio-machines-chief-disruptor.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Cirrus Delay and Reverb",
+		"Name": "Cirrus",
 		"Width": 3.85,
 		"Height": 4.85,
 		"Image": "kma-audio-machines-cirrus-delay-and-reverb.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Dead Stag Fuzz",
+		"Name": "Dead Stag",
 		"Width": 4.04,
 		"Height": 4.8,
 		"Image": "kma-audio-machines-dead-stag-fuzz.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Fuzzly Bear Silicium Fuzz",
+		"Name": "Fuzzly Bear",
 		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "kma-audio-machines-fuzzly-bear-silicium-fuzz.png"
@@ -13231,66 +13245,73 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Horizont Phaser",
+		"Name": "Horizont",
 		"Width": 5.99,
 		"Height": 4.93,
 		"Image": "kma-audio-machines-horizont-phaser.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Logan Transcend Drive",
+		"Name": "Logan",
 		"Width": 3.85,
 		"Height": 4.89,
 		"Image": "kma-audio-machines-logan-transcend-drive.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Minos Germanium Fuzz",
+		"Name": "Minos",
 		"Width": 2.61,
 		"Height": 4.4,
 		"Image": "kma-audio-machines-minos-germanium-fuzz.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Moai Maea Analog Octaver",
+		"Name": "Moai Maea",
 		"Width": 5.75,
 		"Height": 4.9,
 		"Image": "kma-audio-machines-moai-maea-analog-octaver.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Pylon ATB Noise Gate",
+		"Name": "Pylon",
 		"Width": 2.92,
 		"Height": 5,
 		"Image": "kma-audio-machines-pylon-atb-noise-gate.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Queequeg Sub Octave",
+		"Name": "Queequeg",
 		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "kma-audio-machines-queequeg-sub-octave.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Tyler Deluxe Frequency Splitter",
-		"Width": 5.96,
-		"Height": 4.93,
-		"Image": "kma-audio-machines-tyler-deluxe-frequency-splitter.png"
-	},
-	{
-		"Brand": "KMA Audio Machines",
-		"Name": "Tyler Frequency Splitter",
+		"Name": "Tyler",
 		"Width": 6,
 		"Height": 4.93,
 		"Image": "kma-audio-machines-tyler-frequency-splitter.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
-		"Name": "Wurm Distortion",
+		"Name": "Tyler Deluxe",
+		"Width": 5.96,
+		"Height": 4.93,
+		"Image": "kma-audio-machines-tyler-deluxe-frequency-splitter.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Wurm",
 		"Width": 3.98,
 		"Height": 4.87,
 		"Image": "kma-audio-machines-wurm-distortion.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Wurm 2",
+		"Width": 2.59,
+		"Height": 4.9,
+		"Image": "kma-audio-machines-wurm2-distortion.png"
 	},
 	{
 		"Brand": "Korg",
@@ -16182,6 +16203,13 @@
 		"Width": 4.13,
 		"Height": 4.52,
 		"Image": "nux-ace-of-tone.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Amp Academy",
+		"Width": 4.2,
+		"Height": 4.52,
+		"Image": "nux-amp-academy.png"
 	},
 	{
 		"Brand": "NuX",
@@ -19181,6 +19209,13 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "Communication Breakdown",
+		"Width": 4.67,
+		"Height": 3.67,
+		"Image": "solidgoldfx-communication-breakdown.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Counter Current",
 		"Width": 4.89,
 		"Height": 3.68,
@@ -21490,6 +21525,13 @@
 		"Width": 8.37,
 		"Height": 2.26,
 		"Image": "teenage-engineering-op-z.png"
+	},
+	{
+		"Brand": "TEFI Vintage Lab",
+		"Name": "Golden Era",
+		"Width": 4.08,
+		"Height": 4.9,
+		"Image": "tefi-golden-era.png"
 	},
 	{
 		"Brand": "Teisco",
