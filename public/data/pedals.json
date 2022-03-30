@@ -14177,9 +14177,16 @@
 	{
 		"Brand": "MAS Effects",
 		"Name": "Sona Fuzz",
-		"Width": 2.5,
-		"Height": 4.95,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "mas-sona.png"
+	},
+	{
+		"Brand": "MAS Effects",
+		"Name": "Sona Fuzz (Sparkle)",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mas-sona-sparkle.png"
 	},
 	{
 		"Brand": "Mask Audio Electronics",
