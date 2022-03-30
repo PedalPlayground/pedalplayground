@@ -1002,6 +1002,13 @@
 	},
 	{
 		"Brand": "Animals Pedal",
+		"Name": "Double Spy Mission Is Impossible Filter",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-pedal-double-spy.png"
+	},
+	{
+		"Brand": "Animals Pedal",
 		"Name": "Firewood Acoustic D.I.",
 		"Width": 5.2,
 		"Height": 4,
@@ -1405,6 +1412,27 @@
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-push-pull-045.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "046 Sunday Afternoon Is Infinity Bender",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-sunday-afternoon-046.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "047 Diamond Peak Hybrid Over Drive",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-diamond-peak-047.png"
+	},
+	{
+		"Brand": "Animals Pedal Custom Illustration",
+		"Name": "048 Relaxing Walrus Delay",
+		"Width": 2.5,
+		"Height": 4.4,
+		"Image": "animals-relaxing-walrus-048.png"
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
@@ -14205,9 +14233,16 @@
 	{
 		"Brand": "MAS Effects",
 		"Name": "Sona Fuzz",
-		"Width": 2.5,
-		"Height": 4.95,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "mas-sona.png"
+	},
+	{
+		"Brand": "MAS Effects",
+		"Name": "Sona Fuzz (Sparkle)",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mas-sona-sparkle.png"
 	},
 	{
 		"Brand": "Mask Audio Electronics",
@@ -17249,6 +17284,13 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "DELUXE61",
+		"Width": 3.6,
+		"Height": 5.76,
+		"Image": "origin-deluxe61.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "MAGMA57 Amp Vibrato & Drive",
 		"Width": 3.66,
 		"Height": 5.62,
@@ -17977,10 +18019,24 @@
 	},
 	{
 		"Brand": "Pine-Box Customs",
+		"Name": "Deep v2",
+		"Width": 2.6,
+		"Height": 4.98,
+		"Image": "pbc-deep-v2.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
 		"Name": "Far",
 		"Width": 2.6,
 		"Height": 5.1,
 		"Image": "pbc-far.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Far v2",
+		"Width": 2.6,
+		"Height": 4.98,
+		"Image": "pbc-far-v2.png"
 	},
 	{
 		"Brand": "Pine-Box Customs",
@@ -18012,6 +18068,13 @@
 	},
 	{
 		"Brand": "Pine-Box Customs",
+		"Name": "Sirens v2",
+		"Width": 3.68,
+		"Height": 4.85,
+		"Image": "pbc-sirens-v2.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
 		"Name": "Sleepwalkin",
 		"Width": 5.63,
 		"Height": 4.82,
@@ -18023,6 +18086,13 @@
 		"Width": 2.6,
 		"Height": 5.1,
 		"Image": "pbc-tall.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Tall v2",
+		"Width": 2.6,
+		"Height": 4.98,
+		"Image": "pbc-tall-v2.png"
 	},
 	{
 		"Brand": "Pine-Box Customs",
@@ -23458,6 +23528,13 @@
 		"Width": 4.72,
 		"Height": 3.74,
 		"Image": "weehbo-plexidrive.png"
+	},
+	{
+		"Brand": "Wonderful Audio Technology",
+		"Name": "Ancient Echos",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "wat-ancient-echos.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
