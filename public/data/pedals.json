@@ -4376,6 +4376,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Habit",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-habit.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Midibox",
 		"Width": 3.47,
 		"Height": 1.58,
