@@ -3487,6 +3487,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "SYB-3 Bass Synthesizer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-syb3.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "SY-300 Guitar Synthesizer",
 		"Width": 10.03,
 		"Height": 7.17,
@@ -5510,10 +5517,17 @@
 	},
 	{
 		"Brand": "Decibelics",
-		"Name": "Golden Horse",
+		"Name": "Golden Horse (Black)",
 		"Width": 1.92,
 		"Height": 3.74,
-		"Image": "decibelics-golden-horse.png"
+		"Image": "decibelics-golden-horse-black.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "Golden Horse (White)",
+		"Width": 1.92,
+		"Height": 3.74,
+		"Image": "decibelics-golden-horse-white.png"
 	},
 	{
 		"Brand": "Decibelics",
@@ -5615,6 +5629,20 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Bad Monkey",
+		"Width": 3,
+		"Height": 4.865,
+		"Image": "digitech-badmonkey.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Bass Whammy",
+		"Width": 6.5,
+		"Height": 7.75,
+		"Image": "digitech-bass-whammy.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Boneshaker",
 		"Width": 2.63,
 		"Height": 4.68,
@@ -5622,10 +5650,24 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Death Metal",
+		"Width": 3.12,
+		"Height": 4.865,
+		"Image": "digitech-deathmetal.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "CR-7 Stereo Chorus",
 		"Width": 3.5,
 		"Height": 5.25,
 		"Image": "digitech-cr7.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Digidelay",
+		"Width": 3,
+		"Height": 4.865,
+		"Image": "digitech-digidelay.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -5643,13 +5685,6 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "HT-2 Chromatic Tuner",
-		"Width": 3.5,
-		"Height": 5.25,
-		"Image": "digitech-hardwire-ht-2-chromatic-tuner.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "DOD Bifet Boost 410",
 		"Width": 3.05,
 		"Height": 4.88,
@@ -5657,10 +5692,24 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD Carcosa",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-carcosa.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Compressor 280",
 		"Width": 3.05,
 		"Height": 4.88,
 		"Image": "digitech-280.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD Deep Freeze FX-63",
+		"Width": 3.31,
+		"Height": 5.125,
+		"Image": "dod-fx63.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -5692,6 +5741,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD Mini Expression",
+		"Width": 3,
+		"Height": 5,
+		"Image": "dod-miniexpression.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Overdrive Preamp 250",
 		"Width": 3.05,
 		"Height": 4.88,
@@ -5706,10 +5762,10 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "DOD Carcosa",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-carcosa.png"
+		"Name": "DOD Rubberneck",
+		"Width": 5,
+		"Height": 4.69,
+		"Image": "dod-rubberneck.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -5720,52 +5776,17 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "DOD Mini Expression",
-		"Width": 3,
-		"Height": 5,
-		"Image": "dod-miniexpression.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Rubberneck",
-		"Width": 5,
-		"Height": 4.69,
-		"Image": "dod-rubberneck.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "Digidelay",
-		"Width": 3,
-		"Height": 4.865,
-		"Image": "digitech-digidelay.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "Bad Monkey",
-		"Width": 3,
-		"Height": 4.865,
-		"Image": "digitech-badmonkey.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "Bass Whammy",
-		"Width": 6.5,
-		"Height": 7.75,
-		"Image": "digitech-bass-whammy.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "Death Metal",
-		"Width": 3.12,
-		"Height": 4.865,
-		"Image": "digitech-deathmetal.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "FreqOut",
 		"Width": 2.875,
 		"Height": 4.75,
 		"Image": "digitech-freqout.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "HT-2 Chromatic Tuner",
+		"Width": 3.5,
+		"Height": 5.25,
+		"Image": "digitech-hardwire-ht-2-chromatic-tuner.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -13504,6 +13525,13 @@
 	},
 	{
 		"Brand": "Line 6",
+		"Name": "FM4 Filter Modeler",
+		"Width": 10,
+		"Height": 6,
+		"Image": "line6-fm4.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "HX Effects",
 		"Width": 10.8,
 		"Height": 7.9,
@@ -15457,6 +15485,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Bass DI",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m81.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Bass DI+",
 		"Width": 4.9,
 		"Height": 3.6,
@@ -15471,6 +15506,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Bass Envelope Filter",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m82.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Bass Fuzz Deluxe",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -15482,6 +15524,13 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-m288.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Overdrive",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m89.png"
 	},
 	{
 		"Brand": "MXR",
@@ -15933,6 +15982,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Sub Octave Bass Fuzz",
+		"Width": 5,
+		"Height": 3.8,
+		"Image": "mxr-m287.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Super Badass Distortion",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -15986,6 +16042,13 @@
 		"Width": 5,
 		"Height": 3.87,
 		"Image": "mxr-eq2-2.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Thump",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-m281.png"
 	},
 	{
 		"Brand": "MXR",
@@ -19882,7 +19945,7 @@
 	},
 	{
 		"Brand": "Strymon",
-		"Name": "Blue Sky (LE Midnight)",
+		"Name": "blueSky (LE Midnight)",
 		"Width": 4,
 		"Height": 4.46,
 		"Image": "strymon-bluesky-midnight.png"
