@@ -11705,6 +11705,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Retrovibe mk3",
+		"Width": 4.01,
+		"Height": 4.7,
+		"Image": "jampedals-retrovibe-mk3.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Ripple",
 		"Width": 2.9,
 		"Height": 4.7,
@@ -16105,6 +16112,13 @@
 		"Width": 1.74,
 		"Height": 3.63,
 		"Image": "mxr-m280.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Il Diavolo Overdrive",
+		"Width": 2.51,
+		"Height": 4.33,
+		"Image": "mxr-csp036.png"
 	},
 	{
 		"Brand": "Mythos",
