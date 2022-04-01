@@ -2276,6 +2276,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Preamp (Turqoise)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-turqoise.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Preamp (White)",
 		"Width": 4.69,
 		"Height": 3.77,
