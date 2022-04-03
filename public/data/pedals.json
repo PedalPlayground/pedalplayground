@@ -13462,10 +13462,24 @@
 	},
 	{
 		"Brand": "Land Devices",
-		"Name": "HP-2",
-		"Width": 4.6,
-		"Height": 3.86,
+		"Name": "HP-2 (Olive)",
+		"Width": 4.7,
+		"Height": 3.84,
 		"Image": "landdevices-hp2.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "HP-2 (Orange)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "landdevices-hp2-orange.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "HP-2 (Blue)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "landdevices-hp2-blue.png"
 	},
 	{
 		"Brand": "Land Devices",
