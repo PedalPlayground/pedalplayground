@@ -9,7 +9,7 @@
 	"homepage": "https://github.com/tehtrav/pedal-playground#readme",
 	"ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
 	"dependencies": {
-		"bootstrap-sass": "^3.3.7",
+		"bootstrap-sass": "3.4.1",
 		"modernizer": "^2.8.2",
 		"sass-flex-mixin": "^1.0.3",
 		"jquery-zoom": "^1.7.18",
