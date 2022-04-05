@@ -66,7 +66,7 @@ var reportError = function (error) {
 // SCSS
 gulp.task("styles", function () {
 	return gulp
-		.src("app/stylesheets/*.scss")
+		.src(["app/stylesheets/*.scss", "app/stylesheets/jquery.switchButton.css"])
 		.pipe(
 			plumber({
 				errorHandler: reportError,
@@ -89,11 +89,13 @@ gulp.task("scripts", function () {
 	return gulp
 		.src([
 			"bower_components/jquery/dist/jquery.js",
+			"bower_components/jquery-ui/ui/jquery-ui.js",
 			"bower_components/draggabilly/dist/draggabilly.pkgd.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
 			"bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js",
 			"bower_components/select2/dist/js/select2.js",
 			"app/scripts/scripts.js",
+			"app/scripts/jquery.switchButton.js"
 		])
 		.pipe(
 			plumber({

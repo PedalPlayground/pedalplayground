@@ -15,6 +15,7 @@
 		"jquery-zoom": "^1.7.18",
 		"draggabilly": "^2.1.1",
 		"jquery": "3.1.1",
+		"jquery-ui": "1.10.3",
 		"select2": "4.0.3",
 		"bootstrap-colorpicker": "^2.5.1",
 		"chosen": "^1.6.2"

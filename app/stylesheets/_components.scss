@@ -659,3 +659,8 @@ body {
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
 	background: $brand-primary;
 }
+
+div.input-unit {
+	margin: 10px 0;
+	padding: 0 50px;
+}

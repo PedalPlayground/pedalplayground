@@ -1,6 +1,9 @@
 var pedalImagePath = "public/images/pedals/";
 var pedalboardImagePath = "public/images/pedalboards/";
 
+const UNITS_IN = 'in.';
+const UNITS_MM = 'mm.';
+
 $(document).ready(function () {
 	// Populate Pedalboards and Pedals lists
 	GetPedalData();
@@ -30,6 +33,24 @@ $(document).ready(function () {
 	});
 
 	$(function () {
+		$("#input-unit-pb").switchButton({
+			checked: true,
+			on_label: UNITS_IN,
+			off_label: UNITS_MM,
+			width: 50,
+			height: 12,
+			button_width: 35,
+		})
+
+		$("#input-unit-pd").switchButton({
+			checked: true,
+			on_label: UNITS_IN,
+			off_label: UNITS_MM,
+			width: 50,
+			height: 12,
+			button_width: 35,
+		})
+
 		// Load canvas from localStorage if it has been saved prior
 		if (localStorage["pedalCanvas"] != null) {
 			var savedPedalCanvas = JSON.parse(localStorage["pedalCanvas"]);
@@ -214,8 +235,8 @@ $(document).ready(function () {
 	$("body").on("click", "#add-custom-pedal .btn", function (event) {
 		var serial = GenRandom.Job();
 		var multiplier = $("#canvas-scale").val();
-		var width = $("#add-custom-pedal .custom-width").val();
-		var height = $("#add-custom-pedal .custom-height").val();
+		var width = convertUnitsIfNeeded('pd', $("#add-custom-pedal .custom-width").val());
+		var height = convertUnitsIfNeeded('pd', $("#add-custom-pedal .custom-height").val());
 		var scaledWidth = width * multiplier;
 		var scaledHeight = height * multiplier;
 		var dims = width + '" x ' + height + '"';
@@ -281,8 +302,8 @@ $(document).ready(function () {
 	$("body").on("click", "#add-custom-pedalboard .btn", function (event) {
 		var serial = GenRandom.Job();
 		var multiplier = $("#canvas-scale").val();
-		var width = $("#add-custom-pedalboard .custom-width").val();
-		var height = $("#add-custom-pedalboard .custom-height").val();
+		var width = convertUnitsIfNeeded('pb', $("#add-custom-pedalboard .custom-width").val());
+		var height = convertUnitsIfNeeded('pb',$("#add-custom-pedalboard .custom-height").val());
 		var scaledWidth = width * multiplier;
 		var scaledHeight = height * multiplier;
 
@@ -420,6 +441,21 @@ $(document).ready(function () {
 		}
 	});
 }); // End Document ready
+
+function convertUnitsIfNeeded(type, value) {
+	switch(type) {
+		case 'pb':
+			return ($('#input-unit-pb-wrapper span.on').text() === UNITS_IN) ? value : mmToIn(value);
+		case 'pd':
+			return ($('#input-unit-pd-wrapper span.on').text() === UNITS_IN) ? value : mmToIn(value);
+		default:
+			break;
+	}
+}
+
+function mmToIn(value) {
+	return Math.round((value * 0.0393701) * 100) / 100;
+}
 
 function readyCanvas(pedal) {
 	var $draggable = $(".canvas .pedal, .canvas .pedalboard").draggabilly({

@@ -8,6 +8,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
 		/>
+		<link rel="stylesheet" href="public/stylesheets/jquery.switchButton.min.css" />
 		<link rel="stylesheet" href="public/stylesheets/styles.min.css" />
 
 		<!-- meta info -->
@@ -108,8 +109,9 @@
 							<div class="tab-content">
 								<div role="tabpanel" class="tab-pane active" id="custom-pedalboard">
 									<form id="add-custom-pedalboard">
+
 										<div class="form-element left">
-											<label for="">Width <em>(inches)</em></label>
+											<label for="">Width</label>
 											<input
 												type="number"
 												class="custom-width form-control"
@@ -120,7 +122,7 @@
 										</div>
 
 										<div class="form-element left">
-											<label for="">Height <em>(inches)</em></label>
+											<label for="">Height</label>
 											<input
 												type="number"
 												class="custom-height form-control"
@@ -128,6 +130,12 @@
 												value=""
 												required
 											/>
+										</div>
+
+										<div id="input-unit-pb-wrapper" class="input-unit">
+											<div id="input-unit-pb">
+												<input id="toggle-input-unit-pb" type="checkbox" value="1" checked>
+											</div>
 										</div>
 
 										<input
@@ -153,7 +161,7 @@
 										</div>
 										
 										<div class="form-element left">
-											<label for="">Width <em>(inches)</em></label>
+											<label for="">Width</label>
 											<input
 												type="number"
 												class="custom-width form-control"
@@ -164,7 +172,7 @@
 										</div>
 
 										<div class="form-element left">
-											<label for="">Height <em>(inches)</em></label>
+											<label for="">Height</label>
 											<input
 												type="number"
 												class="custom-height form-control"
@@ -172,6 +180,12 @@
 												value=""
 												required
 											/>
+										</div>
+
+										<div id="input-unit-pd-wrapper" class="input-unit">
+											<div id="input-unit-pd">
+												<input id="toggle-input-unit-pd" type="checkbox" value="1" checked>
+											</div>
 										</div>
 
 										<div class="form-element">
@@ -198,26 +212,7 @@
 									</form>
 								</div>
 							</div>
-						</div>
-
-						<div class="sidebar__section">
-							<h4>Preferences</h4>
-							<strong>Displayed Units</strong>
-							<form id="prefer-unit">
-								<div class="btn-group">
-									<button
-										id="prefer-unit-in"
-										class="btn btn-primary"
-										value="in."
-									>inches</button>
-									<button
-									id="prefer-unit-mm"
-									class="btn btn-primary"
-									value="mm."
-									>millimeters</button>
-								</div>
-							</form>
-						</div>
+						</div>								
 
 						<div id="canvas-scale-form" class="sidebar__section form-inline">
 							<h4>Canvas Scale</h4>
