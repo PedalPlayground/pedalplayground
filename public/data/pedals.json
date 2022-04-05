@@ -9751,6 +9751,13 @@
 		"Image": "ftelettronica-spring-reverb-deluxe.png"
 	},
 	{
+		"Brand": "FTelettronica",
+		"Name": "Third Mind Distortion",
+		"Width": 2.79528,
+		"Height": 4.8063,
+		"Image": "ftelettronica-third-mind.png"
+	},
+	{
 		"Brand": "Fulltone",
 		"Name": "2B",
 		"Width": 2.19,
@@ -15972,6 +15979,13 @@
 		"Width": 5,
 		"Height": 3.8,
 		"Image": "mxr-power50.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Prime Distortion",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m69.png"
 	},
 	{
 		"Brand": "MXR",
