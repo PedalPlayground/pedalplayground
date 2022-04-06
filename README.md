@@ -39,6 +39,7 @@
 ## Running Locally
 
 0. Install node v10, bower, and gulp
+    - To maintain multiple installations of `node`, install `nvm`. While working in this repo, execute `nvm use`, and it will reference this repo's `.nvmrc` file which states version 10.0.0.
 1. Install dependencies via `npm install`
 2. Install client-side libraries via `bower install`
 3. Compile assets and watch for changes via `gulp`
@@ -48,11 +49,11 @@
 
 Under MacOS Mojave:
 
--   brew install node@10 bower
--   sudo npm install gulp-cli -g;
--   sudo npm rebuild node-sass -g
--   sudo npm install sharp -g;
--   sudo npm install http-server -g
+-   `brew install node@10 bower`
+-   `sudo npm install gulp-cli -g`
+-   `sudo npm rebuild node-sass -g`
+-   `sudo npm install sharp -g`
+-   `sudo npm install http-server -g`
 
 # Requesting Pedals
 
