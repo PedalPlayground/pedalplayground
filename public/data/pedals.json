@@ -3865,6 +3865,13 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Meteore (Rose Gold)",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "caroline-meteore-rosegold.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Meteore (Throwback Can)",
 		"Width": 3.7,
 		"Height": 4.88,
@@ -5097,38 +5104,150 @@
 	},
 	{
 		"Brand": "Cusack Music",
+		"Name": "Carolina Reaper",
+		"Width": 3.69,
+		"Height": 4.79,
+		"Image": "cusack-carolina-reaper.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Delay",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "cusack-delay.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Louder",
+		"Width": 1.76,
+		"Height": 3.67,
+		"Image": "cusack-louder.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Meta Plexi",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "cusack-meta-plexi.png"
+	},
+	{
+		"Brand": "Cusack Music",
 		"Name": "More Louder",
-		"Width": 1.95,
+		"Width": 1.98,
 		"Height": 3.67,
 		"Image": "cusack-morelouder.png"
 	},
 	{
 		"Brand": "Cusack Music",
+		"Name": "Resound",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "cusack-resound.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Resound (Night Sky)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "cusack-resound-nightsky.png"
+	},
+	{
+		"Brand": "Cusack Music",
 		"Name": "Scream",
-		"Width": 1.73,
+		"Width": 1.76,
 		"Height": 3.67,
 		"Image": "cusack-scream.png"
 	},
 	{
 		"Brand": "Cusack Music",
-		"Name": "Screamer",
+		"Name": "Scream Bass",
+		"Width": 1.76,
+		"Height": 3.67,
+		"Image": "cusack-scream-bass.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Screamer v2",
 		"Width": 2.4,
-		"Height": 4.57,
+		"Height": 4.71,
 		"Image": "cusack-screamer.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Screamer Bass",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "cusack-screamer-bass.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Screamer Fuzz v3",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "cusack-screamer-fuzz.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Screamer Fuzz Bass",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "cusack-screamer-fuzz-bass.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Screamer Fuzz Germanium",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "cusack-screamer-fuzz-germanium.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Scruzz",
+		"Width": 1.76,
+		"Height": 3.67,
+		"Image": "cusack-scruzz.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Sub Fuzz",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "cusack-sub-fuzz.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Tap-A-Delay",
+		"Width": 4.7,
+		"Height": 4.01,
+		"Image": "cusack-tapadelay.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Tap-A-Delay Deluxe",
+		"Width": 4.7,
+		"Height": 4.01,
+		"Image": "cusack-tapadelay-deluxe.png"
 	},
 	{
 		"Brand": "Cusack Music",
 		"Name": "Tap-A-Whirl",
 		"Width": 4.7,
-		"Height": 4.04,
+		"Height": 4.01,
 		"Image": "cusack-tapawhirl.png"
 	},
 	{
 		"Brand": "Cusack Music",
 		"Name": "Tremolo",
 		"Width": 2.4,
-		"Height": 4.66,
+		"Height": 4.71,
 		"Image": "cusack-tremolo.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Twirl",
+		"Width": 1.76,
+		"Height": 4.05,
+		"Image": "cusack-twirl.png"
 	},
 	{
 		"Brand": "Custom Tones",
