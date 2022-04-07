@@ -21822,6 +21822,13 @@
 	},
 	{
 		"Brand": "ThorpyFx",
+		"Name": "Boneyard",
+		"Width": 2.76,
+		"Height": 4.92,
+		"Image": "thorpyfx-boneyard.png"
+	},
+	{
+		"Brand": "ThorpyFx",
 		"Name": "Camoflange",
 		"Width": 4.04,
 		"Height": 4.92,
