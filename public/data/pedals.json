@@ -13364,6 +13364,13 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
+		"Name": "Queequeg 2",
+		"Width": 2.59,
+		"Height": 4.97,
+		"Image": "kma-audio-machines-queequeg-2.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
 		"Name": "Tyler",
 		"Width": 6,
 		"Height": 4.93,
