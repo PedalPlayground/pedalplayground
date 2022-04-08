@@ -8463,63 +8463,77 @@
 		"Image": "elektron-analogdrive.png"
 	},
 	{
-		"Brand": "Emerson",
+		"Brand": "Emerson Custom",
 		"Name": "Concorde V2",
 		"Width": 3.7,
 		"Height": 1.7,
 		"Image": "emerson-concorde-v2.png"
 	},
 	{
-		"Brand": "Emerson",
+		"Brand": "Emerson Custom",
 		"Name": "Concorde V2 (Side)",
 		"Width": 3.7,
 		"Height": 1.13,
 		"Image": "emerson-concorde-v2-side.png"
 	},
 	{
-		"Brand": "Emerson",
+		"Brand": "Emerson Custom",
 		"Name": "Em-drive",
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "emerson-emdrive.png"
 	},
 	{
-		"Brand": "Emerson",
+		"Brand": "Emerson Custom",
 		"Name": "Em-drive Mach 2",
 		"Width": 2.5,
 		"Height": 4.75,
 		"Image": "emerson-emdrive-mach2.png"
 	},
 	{
-		"Brand": "Emerson",
+		"Brand": "Emerson Custom",
 		"Name": "Em-drive Mach 2 (Turquoise)",
 		"Width": 2.5,
 		"Height": 4.75,
 		"Image": "emerson-emdrive-mach2-turquoise.png"
 	},
 	{
-		"Brand": "Emerson",
+		"Brand": "Emerson Custom",
 		"Name": "Paramount",
 		"Width": 2.5,
 		"Height": 4.3,
 		"Image": "emerson-paramount.png"
 	},
 	{
-		"Brand": "Emerson",
+		"Brand": "Emerson Custom",
 		"Name": "Paramount Mk.2",
 		"Width": 2.5,
 		"Height": 4.75,
 		"Image": "emerson-paramount-mk2.png"
 	},
 	{
-		"Brand": "Emerson",
+		"Brand": "Emerson Custom",
+		"Name": "Pomeroy",
+		"Width": 5.25,
+		"Height": 4.53,
+		"Image": "emerson-pomeroy.png"
+	},
+	{
+		"Brand": "Emerson Custom",
+		"Name": "Pomeroy (Black)",
+		"Width": 5.25,
+		"Height": 4.53,
+		"Image": "emerson-pomeroy-black.png"
+	},
+	{
+		"Brand": "Emerson Custom",
 		"Name": "Scranton Screamer",
 		"Width": 2.5,
 		"Height": 4.75,
 		"Image": "emerson-scranton-screamer.png"
 	},
 	{
-		"Brand": "Emerson",
+		"Brand": "Emerson Custom",
 		"Name": "Scranton Screamer (Whiteout)",
 		"Width": 2.5,
 		"Height": 4.75,
