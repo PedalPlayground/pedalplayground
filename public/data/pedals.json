@@ -63,6 +63,13 @@
 		"Image": "29pedals-oamp.png"
 	},
 	{
+		"Brand": "3Degrees Audio",
+		"Name": "Bygones V3",
+		"Width": 2.95,
+		"Height": 3.85,
+		"Image": "3degrees-bygones-v3.png"
+	},
+	{
 		"Brand": "3Leaf Audio",
 		"Name": "Wonderlove V2",
 		"Width": 4.84,
@@ -6694,7 +6701,7 @@
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Afterneath V3",
-		"Width": 2.66,
+		"Width": 2.6,
 		"Height": 4.75,
 		"Image": "earthquaker-afterneath-v3.png"
 	},
@@ -12062,6 +12069,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "3 Series Screamer",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3seriesscreamer.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Active A/B/Y",
 		"Width": 4.42,
 		"Height": 2.49,
@@ -17039,6 +17053,20 @@
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Black Fountain v3 (Chicago Blue)",
+		"Width": 2.87,
+		"Height": 4.96,
+		"Image": "obne-black-fountain-v3-chicago.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Black Fountain v3 (Sage)",
+		"Width": 2.87,
+		"Height": 4.96,
+		"Image": "obne-black-fountain-v3-sage.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Dark Star",
 		"Width": 2.87,
 		"Height": 4.96,
@@ -17050,6 +17078,13 @@
 		"Width": 2.87,
 		"Height": 4.96,
 		"Image": "obne-dark-star-v2.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Dark Star v2 (Sage)",
+		"Width": 2.87,
+		"Height": 4.96,
+		"Image": "obne-dark-star-v2-sage.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -22800,6 +22835,13 @@
 		"Width": 5.69,
 		"Height": 4.75,
 		"Image": "walrus-bellwether.png"
+	},
+	{
+		"Brand": "Walrus",
+		"Name": "Canvas Stereo Direct Injection Box",
+		"Width": 2.65,
+		"Height": 4.93,
+		"Image": "walrus-canvasstereo.png"
 	},
 	{
 		"Brand": "Walrus",
