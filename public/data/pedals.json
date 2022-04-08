@@ -7491,6 +7491,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Battalion",
+		"Width": 6.16,
+		"Height": 4.75,
+		"Image": "ehx-batallion.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi with Tone Wicker",
 		"Width": 3.93,
 		"Height": 4.7,
