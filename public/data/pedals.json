@@ -11229,6 +11229,13 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "SD9 Sonic Distortion",
+		"Width": 3,
+		"Height": 4.9,
+		"Image": "ibanez-sd9.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "Super Metal Mini",
 		"Width": 1.96,
 		"Height": 3.65,
