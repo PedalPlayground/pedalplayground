@@ -15596,6 +15596,13 @@
 		"Image": "mosky-dual-switch-jinx.png"
 	},
 	{
+		"Brand": "Mosky",
+		"Name": "Golden Horse",
+		"Width": 1.86,
+		"Height": 3.66,
+		"Image": "mosky-golden-horse.png"
+	},
+	{
 		"Brand": "Mr. Black",
 		"Name": "Pana-Trem",
 		"Width": 3.7,
