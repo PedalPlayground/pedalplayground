@@ -2248,6 +2248,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Preamp (Black/Ocean Turquoise)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-blackoceanturquoise.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Preamp (Green)",
 		"Width": 4.69,
 		"Height": 3.77,
@@ -11376,9 +11383,16 @@
 	},
 	{
 		"Brand": "ISP Technologies",
-		"Name": "Decimator G-string v2",
-		"Width": 2.9,
-		"Height": 5.2,
+		"Name": "Decimator",
+		"Width": 2.875,
+		"Height": 5.21,
+		"Image": "isp-decimator.png"
+	},
+	{
+		"Brand": "ISP Technologies",
+		"Name": "Decimator II G-String",
+		"Width": 2.875,
+		"Height": 5.21,
 		"Image": "isp-decimator-gstring-v2.png"
 	},
 	{
@@ -22001,6 +22015,13 @@
 		"Width": 4.7047244,
 		"Height": 3.70079,
 		"Image": "pill-stereo.png"
+	},
+	{
+		"Brand": "The Sound of Justice FX",
+		"Name": "Son of Ben",
+		"Width": 2.6,
+		"Height": 5.07,
+		"Image": "tsoj-son-of-ben.png"
 	},
 	{
 		"Brand": "Third Man",
