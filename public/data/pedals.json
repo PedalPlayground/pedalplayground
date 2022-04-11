@@ -23686,9 +23686,16 @@
 	{
 		"Brand": "Way Huge",
 		"Name": "Pork & Pickle",
+		"Width": 3.26,
+		"Height": 5,
+		"Image": "wayhuge-pork-pickle.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Pork & Pickle (Smalls)",
 		"Width": 2.4,
 		"Height": 4.1,
-		"Image": "wayhuge-pork-pickle.png"
+		"Image": "wayhuge-pork-pickle-small.png"
 	},
 	{
 		"Brand": "Way Huge",
