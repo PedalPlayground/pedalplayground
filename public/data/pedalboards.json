@@ -406,6 +406,20 @@
 		"Image": "muzbay-sputnik-35.png"
 	},
 	{
+		"Brand": "NuX",
+		"Name": "Bumblebee NPB-S",
+		"Width": 12.2,
+		"Height": 9.506,
+		"Image": "nux-bumblebee.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Bumblebee NPB-S (Riser)",
+		"Width": 12.2,
+		"Height": 3.9,
+		"Image": "nux-bumblebee-top.png"
+	},
+	{
 		"Brand": "Onstage",
 		"Name": "GPB2000",
 		"Width": 18.75,

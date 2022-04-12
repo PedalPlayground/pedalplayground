@@ -6714,6 +6714,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Afterneath V3 (Raw)",
+		"Width": 2.6,
+		"Height": 4.75,
+		"Image": "earthquaker-afterneath-v3-raw.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Aqueduct",
 		"Width": 2.5,
 		"Height": 4.75,
