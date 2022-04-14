@@ -5755,66 +5755,122 @@
   },
 	{
 		"Brand": "Diamond",
-		"Name": "Compressor",
-		"Width": 3.7,
-		"Height": 4.7,
-		"Image": "diamond-compressor.png"
-	},
-	{
-		"Brand": "Diamond",
-		"Name": "Vibrato",
-		"Width": 4.75,
-		"Height": 4.7,
-		"Image": "diamond-vibrato.png"
-	},
-	{
-		"Brand": "Diamond",
-		"Name": "Halo Chorus",
-		"Width": 4.78,
-		"Height": 4.75,
-		"Image": "diamond-halo-chorus.png"
+		"Name": "Bass Comp",
+		"Width": 3.92,
+		"Height": 4.9,
+		"Image": "diamond-bass-comp.png"
 	},
 	{
 		"Brand": "Diamond",
 		"Name": "Bass Comp Jr",
 		"Width": 2.44,
-		"Height": 4.69,
+		"Height": 4.63,
 		"Image": "diamond-bass-comp-jr.png"
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Blaze",
+		"Width": 5.01,
+		"Height": 3.82,
+		"Image": "diamond-blaze.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Compressor",
+		"Width": 3.92,
+		"Height": 4.9,
+		"Image": "diamond-compressor.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Compressor JR",
-		"Width": 2.6,
-		"Height": 4.93,
+		"Width": 2.44,
+		"Height": 4.63,
 		"Image": "diamond-compressorjr.png"
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Cornerstone",
+		"Width": 2.44,
+		"Height": 4.63,
+		"Image": "diamond-cornerstone.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Counterpoint",
-		"Width": 4.8,
-		"Height": 3.7,
+		"Width": 5.01,
+		"Height": 3.82,
 		"Image": "diamond-counterpoint.png"
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "F-Octave",
+		"Width": 2.44,
+		"Height": 4.63,
+		"Image": "diamond-f-octave.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Fireburst",
+		"Width": 5.01,
+		"Height": 3.82,
+		"Image": "diamond-fireburst.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Halo Chorus",
+		"Width": 5.01,
+		"Height": 4.88,
+		"Image": "diamond-halo-chorus.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "J-Drive",
+		"Width": 5.01,
+		"Height": 3.82,
+		"Image": "diamond-j-drive.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Marquis",
-		"Width": 2.72,
-		"Height": 4.65,
+		"Width": 2.62,
+		"Height": 4.63,
 		"Image": "diamond-marquis.png"
 	},
 	{
 		"Brand": "Diamond",
 		"Name": "Memory Lane Jr",
-		"Width": 4.8,
-		"Height": 3.7,
+		"Width": 5.01,
+		"Height": 3.82,
 		"Image": "diamond-memorylanejr.png"
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Nine Zero Two",
+		"Width": 2.44,
+		"Height": 4.63,
+		"Image": "diamond-902.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Quantum Leap",
+		"Width": 5.01,
+		"Height": 3.82,
+		"Image": "diamond-quantum-leap.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Tremolo",
-		"Width": 4.8,
-		"Height": 3.7,
+		"Width": 5.01,
+		"Height": 3.82,
 		"Image": "diamond-tremolo.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Vibrato",
+		"Width": 5.01,
+		"Height": 4.88,
+		"Image": "diamond-vibrato.png"
 	},
 	{
 		"Brand": "DigiTech",
