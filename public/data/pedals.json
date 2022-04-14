@@ -7561,10 +7561,17 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Bassballs",
-		"Width": 2.69,
+		"Name": "Bass Big Muff Pi",
+		"Width": 3.93,
+		"Height": 4.7,
+		"Image": "ehx-bass-big-muff-pi.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Bass Clone",
+		"Width": 2.75,
 		"Height": 4.5,
-		"Image": "ehx-bassballs.png"
+		"Image": "ehx-bass-clone.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -7575,11 +7582,32 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Bass Preacher",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "ehx-bass-preacher.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Bass Soul Food",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "ehx-bass-soul-food.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Bassballs",
+		"Width": 2.69,
+		"Height": 4.5,
+		"Image": "ehx-bassballs.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Battalion",
 		"Width": 6.16,
 		"Height": 4.75,
 		"Image": "ehx-batallion.png"
-	},
+  },
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi with Tone Wicker",
@@ -8034,6 +8062,13 @@
 		"Width": 2.72,
 		"Height": 4.5,
 		"Image": "ehx-nano-bass-big-muff-pi.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Nano Battalion",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "ehx-nano-battalion.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -9987,6 +10022,13 @@
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-spring-reverb-deluxe.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Third Mind Distortion",
+		"Width": 2.79528,
+		"Height": 4.8063,
+		"Image": "ftelettronica-third-mind.png"
 	},
 	{
 		"Brand": "Fulltone",
@@ -16248,6 +16290,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Prime Distortion",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m69.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Raijin Drive",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -19632,14 +19681,14 @@
 		"Name": "MKI Tone Bender",
 		"Width": 5.90551,
 		"Height": 11.811,
-		"Image": "solar-sound-mki.png"
+		"Image": "sola-sound-mki.png"
 	},
 	{
 		"Brand": "Sola Sound",
 		"Name": "SCB Tone Bender",
 		"Width": 5.90551,
 		"Height": 11.811,
-		"Image": "solar-sound-scb.png"
+		"Image": "sola-sound-scb.png"
 	},
 	{
 		"Brand": "Sola Sound",
