@@ -5776,6 +5776,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Bass Comp Jr",
+		"Width": 2.44,
+		"Height": 4.69,
+		"Image": "diamond-bass-comp-jr.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Compressor JR",
 		"Width": 2.6,
 		"Height": 4.93,
@@ -5787,6 +5794,13 @@
 		"Width": 4.8,
 		"Height": 3.7,
 		"Image": "diamond-counterpoint.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Marquis",
+		"Width": 2.72,
+		"Height": 4.65,
+		"Image": "diamond-marquis.png"
 	},
 	{
 		"Brand": "Diamond",
