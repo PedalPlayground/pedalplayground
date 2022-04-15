@@ -4215,6 +4215,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Tribute",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-tribute.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Valcoder",
 		"Width": 2.6,
 		"Height": 4.33,
@@ -18457,6 +18464,13 @@
 		"Width": 4.88,
 		"Height": 7.5,
 		"Image": "pbc-fever-dream.png"
+	},
+	{
+		"Brand": "Pine-Box Customs",
+		"Name": "Free Shit",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "pbc-free-shit.png"
 	},
 	{
 		"Brand": "Pine-Box Customs",
