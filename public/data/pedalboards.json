@@ -406,6 +406,48 @@
 		"Image": "muzbay-sputnik-35.png"
 	},
 	{
+		"Brand": "NuX",
+		"Name": "Bumblebee NPB-L",
+		"Width": 17.5,
+		"Height": 12.63,
+		"Image": "nux-bumblebee-l.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Bumblebee NPB-M",
+		"Width": 17.5,
+		"Height": 9.56,
+		"Image": "nux-bumblebee-m.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Bumblebee NPB-S",
+		"Width": 12.2,
+		"Height": 9.56,
+		"Image": "nux-bumblebee-s.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Bumblebee NPB-L (Riser)",
+		"Width": 17.5,
+		"Height": 5.39,
+		"Image": "nux-bumblebee-l-top.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Bumblebee NPB-M (Riser)",
+		"Width": 17.5,
+		"Height": 3.9,
+		"Image": "nux-bumblebee-m-top.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Bumblebee NPB-S (Riser)",
+		"Width": 12.2,
+		"Height": 3.9,
+		"Image": "nux-bumblebee-s-top.png"
+	},
+	{
 		"Brand": "Onstage",
 		"Name": "GPB2000",
 		"Width": 18.75,
