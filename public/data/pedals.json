@@ -10647,6 +10647,13 @@
 		"Image": "grace-design-felix.png"
 	},
 	{
+		"Brand": "Great Eastern FX Co.",
+		"Name": "Small Speaker Overdrive",
+		"Width": 2.5625
+		"Height": 4.8125,
+		"Image": "great-eastern-sso.png"
+	},
+	{
 		"Brand": "Green Carrot Pedals",
 		"Name": "Infatuator (Blue)",
 		"Width": 4.85,
@@ -15050,6 +15057,13 @@
 		"Image": "milkman-fstop-white.png"
 	},
 	{
+		"Brand": "Milkman Sound",
+		"Name": "The Amp (50W)",
+		"Width": 8.5,
+		"Height": 6.75,
+		"Image": "milkman-the-amp.png"
+	},
+	{
 		"Brand": "Misc",
 		"Name": "12 Inch Ruler",
 		"Width": 12,
@@ -19173,6 +19187,13 @@
 		"Image": "santono-etched-pick-tin-pink.png"
 	},
 	{
+		"Brand": "Saturnworks",
+		"Name": "Compact Looper (Horizontal)",
+		"Width": 4,
+		"Height": 1.75,
+		"Image": "saturnworks-looper-horiz.png"
+	},
+	{
 		"Brand": "Selah",
 		"Name": "Feather Drive",
 		"Width": 2.5,
@@ -22898,6 +22919,13 @@
 		"Width": 5.63,
 		"Height": 4.76,
 		"Image": "vox-satchurator.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "V810 Valvetone",
+		"Width": 3.375,
+		"Height": 5.8125,
+		"Image": "vox-v810.png"
 	},
 	{
 		"Brand": "Vox",
