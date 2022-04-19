@@ -9486,10 +9486,10 @@
 	},
 	{
 		"Brand": "Fortin",
-		"Name": "Zuul Mini",
-		"Width": 1.52,
-		"Height": 3.64,
-		"Image": "fortin-zuul-mini.png"
+		"Name": "33",
+		"Width": 2.3622,
+		"Height": 4.40945,
+		"Image": "fortin-33.png"
 	},
 	{
 		"Brand": "Fortin",
@@ -9497,6 +9497,13 @@
 		"Width": 1.52,
 		"Height": 3.64,
 		"Image": "fortin-roach.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Zuul Mini",
+		"Width": 1.52,
+		"Height": 3.64,
+		"Image": "fortin-zuul-mini.png"
 	},
 	{
 		"Brand": "Foxpedal",
