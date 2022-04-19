@@ -15880,21 +15880,21 @@
 		"Name": "Analog Chorus",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m234.png"
+		"Image": "mxr-analogchorus.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Bass Chorus Deluxe",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m83.png"
+		"Image": "mxr-bass-chorus-deluxe.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Bass Compressor",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m87.png"
+		"Image": "mxr-basscompressor.png"
 	},
 	{
 		"Brand": "MXR",
@@ -15978,7 +15978,7 @@
 		"Name": "CAE Boost/Overdrive",
 		"Width": 5.24,
 		"Height": 3.75,
-		"Image": "mxr-mc402.png"
+		"Image": "mxr-cae-boost-overdrive.png"
 	},
 	{
 		"Brand": "MXR",
@@ -15999,7 +15999,7 @@
 		"Name": "Carbon Copy",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m169.png"
+		"Image": "mxr-carboncopy.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16020,7 +16020,7 @@
 		"Name": "Carbon Copy Deluxe",
 		"Width": 5,
 		"Height": 3.87,
-		"Image": "mxr-m292.png"
+		"Image": "mxr-carboncopydlx.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16097,14 +16097,14 @@
 		"Name": "Dyna Comp",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m102.png"
+		"Image": "mxr-dynacomp.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dyna Comp (Script)",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-csp102sl.png"
+		"Image": "mxr-dynacomp-script.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16118,14 +16118,14 @@
 		"Name": "Dyna Comp Deluxe",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m228.png"
+		"Image": "mxr-dynacomp-deluxe.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dyna Comp Mini",
 		"Width": 1.74,
 		"Height": 3.63,
-		"Image": "mxr-m291.png"
+		"Image": "mxr-dynacompmini.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16153,7 +16153,7 @@
 		"Name": "EVH Phase 90",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-evh90.png"
+		"Image": "mxr-phase90evh.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16216,7 +16216,7 @@
 		"Name": "Micro Amp",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m133.png"
+		"Image": "mxr-micro-amp.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16230,14 +16230,14 @@
 		"Name": "Micro Chorus",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m148.png"
+		"Image": "mxr-microchorus.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Micro Flanger",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m152.png"
+		"Image": "mxr-microflanger.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16265,7 +16265,7 @@
 		"Name": "Phase 100",
 		"Width": 3.86,
 		"Height": 4.84,
-		"Image": "mxr-m107.png"
+		"Image": "mxr-phase100.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16279,14 +16279,14 @@
 		"Name": "Phase 90",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m101.png"
+		"Image": "mxr-phase90.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Phase 90 ('74 Vintage)",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-csp026.png"
+		"Image": "mxr-phase90-74vintage.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16300,7 +16300,7 @@
 		"Name": "Phase 95",
 		"Width": 1.74,
 		"Height": 3.63,
-		"Image": "mxr-m290.png"
+		"Image": "mxr-phase95.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16314,7 +16314,7 @@
 		"Name": "Poly Blue Octave",
 		"Width": 2.61,
 		"Height": 4.33,
-		"Image": "mxr-m306.png"
+		"Image": "mxr-poly-blue-octave.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16349,7 +16349,7 @@
 		"Name": "Reverb",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m300.png"
+		"Image": "mxr-reverb.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16363,7 +16363,7 @@
 		"Name": "Six Band EQ",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m109s.png"
+		"Image": "mxr-eq-2.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16384,7 +16384,7 @@
 		"Name": "Stereo Chorus",
 		"Width": 5.24,
 		"Height": 3.75,
-		"Image": "mxr-m134.png"
+		"Image": "mxr-stereochorus.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16398,7 +16398,7 @@
 		"Name": "Sub Machine",
 		"Width": 5.24,
 		"Height": 3.75,
-		"Image": "mxr-m225.png"
+		"Image": "mxr-sub-machine.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16419,14 +16419,14 @@
 		"Name": "Super Comp",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m132.png"
+		"Image": "mxr-super-comp.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Sugar Drive",
 		"Width": 1.74,
 		"Height": 3.63,
-		"Image": "mxr-m294.png"
+		"Image": "mxr-sugardrive.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16440,7 +16440,7 @@
 		"Name": "Talk Box",
 		"Width": 4.33,
 		"Height": 6.53,
-		"Image": "mxr-m222.png"
+		"Image": "mxr-talkbox.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16461,7 +16461,7 @@
 		"Name": "Ten Band EQ",
 		"Width": 5,
 		"Height": 3.87,
-		"Image": "mxr-m108s.png"
+		"Image": "mxr-eq2-2.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16475,21 +16475,21 @@
 		"Name": "Timmy",
 		"Width": 1.74,
 		"Height": 3.63,
-		"Image": "mxr-csp027.png"
+		"Image": "mxr-timmy.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Tremolo",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m305.png"
+		"Image": "mxr-tremolo.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Univibe",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "mxr-m68.png"
+		"Image": "mxr-univibe.png"
 	},
 	{
 		"Brand": "MXR",
