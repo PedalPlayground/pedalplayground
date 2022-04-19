@@ -11656,6 +11656,13 @@
 	},
 	{
 		"Brand": "J. Rockett",
+		"Name": "Hombre",
+		"Width": 2.3,
+		"Height": 4.02,
+		"Image": "jrockett-hombre.png"
+	},
+	{
+		"Brand": "J. Rockett",
 		"Name": "Hooligan",
 		"Width": 2.3,
 		"Height": 4,
@@ -12605,6 +12612,13 @@
 		"Width": 2.82,
 		"Height": 5,
 		"Image": "jhs-springtank.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Stutter Switch",
+		"Width": 2.38,
+		"Height": 2,
+		"Image": "jhs-stutter-switch.png"
 	},
 	{
 		"Brand": "JHS",
@@ -16763,6 +16777,13 @@
 		"Width": 4.13,
 		"Height": 4.52,
 		"Image": "nux-fireman.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Flow",
+		"Width": 1.86,
+		"Height": 3.83,
+		"Image": "nux-flow.png"
 	},
 	{
 		"Brand": "NuX",
