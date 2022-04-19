@@ -2213,13 +2213,13 @@
 	},
 	{
 		"Brand": "Behringer",
-
 		"Name": "VM1 Vintage Time Machine",
 		"Width": 8.7,
 		"Height": 6.7,
 		"Image": "behringer-vm1.png"
-  },
+  	},
 	{
+		"Brand": "Behringer",
 		"Name": "VT999 Vintage Tube Monster",
 		"Width": 7.916,
 		"Height": 6.75,
