@@ -20939,6 +20939,20 @@
 		"Image": "surfy-surfyvibe.png"
 	},
 	{
+		"Brand": "Swamp Witch",
+		"Name": "Silver Birch (Ash)",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "swampwitch-silver-birch-ash.png"
+	},
+	{
+		"Brand": "Swamp Witch",
+		"Name": "Silver Birch (Bone)",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "swampwitch-silver-birch.png"
+	},
+	{
 		"Brand": "Sweetsound",
 		"Name": "Mojo Vibe",
 		"Width": 4.66,
