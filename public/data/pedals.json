@@ -10277,6 +10277,13 @@
  	},
 	{
 		"Brand": "Gamechanger Audio",
+		"Name": "Bigsby Pedal",
+		"Width": 4.3,
+		"Height": 8.54,
+		"Image": "gamechanger-bigsby.png"
+	},
+	{
+		"Brand": "Gamechanger Audio",
 		"Name": "Light",
 		"Width": 4.13,
 		"Height": 7.6,
@@ -13648,6 +13655,13 @@
 		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "kma-audio-machines-fuzzly-bear-silicium-fuzz.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Fuzzly Bear 2",
+		"Width": 2.59,
+		"Height": 4.94,
+		"Image": "kma-audio-machines-fuzzly-bear-2.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
