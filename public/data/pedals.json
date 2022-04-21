@@ -13217,6 +13217,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Moon",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "keeley-moon.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Neutrino",
 		"Width": 2.6,
 		"Height": 4.4,
