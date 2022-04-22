@@ -17102,6 +17102,13 @@
 	},
 	{
 		"Brand": "Native Audio",
+		"Name": "War Party",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "nativeaudio-war-party.png"
+	},
+	{
+		"Brand": "Native Audio",
 		"Name": "Wilderness V1.5",
 		"Width": 2.71,
 		"Height": 5,
