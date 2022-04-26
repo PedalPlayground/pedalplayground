@@ -7527,8 +7527,8 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "22500 Dual Stereo Looper",
-		"Width": 6.25,
-		"Height": 5.19,
+		"Width": 6.07,
+		"Height": 5.04,
 		"Image": "ehx-22500.png"
 	},
 	{
@@ -7639,7 +7639,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Battalion",
-		"Width": 6.16,
+		"Width": 6.15,
 		"Height": 4.75,
 		"Image": "ehx-batallion.png"
   },
@@ -7681,7 +7681,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Cathedral",
-		"Width": 5.98,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-cathedral.png"
 	},
@@ -7716,14 +7716,14 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Big Muff Pi",
-		"Width": 5.98,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-deluxe-big-muff.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Bass Big Muff Pi",
-		"Width": 5.87,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-deluxe-bass-big-muff.png"
 	},
@@ -7737,7 +7737,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Memory Boy",
-		"Width": 5.98,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-deluxe-memory-boy.png"
 	},
@@ -7751,21 +7751,21 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Memory Man 1100-TT",
-		"Width": 5.85,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-memory-man-tap.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Memory Man 550-TT",
-		"Width": 5.98,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-memory-man-550-tt.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Memory Man XO",
-		"Width": 5.98,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-memory-man-xo.png"
 	},
@@ -7793,14 +7793,14 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "EHX Tortion",
-		"Width": 6.03,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-ehx-tortion.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Epitome",
-		"Width": 5.98,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-epitome.png"
 	},
@@ -7828,7 +7828,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Germanium Big Muff Pi",
-		"Width": 6,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-germanium-big-muff-pi.png"
 	},
@@ -7856,7 +7856,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Graphic Fuzz",
-		"Width": 5.97,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-graphic-fuzz.png"
 	},
@@ -7933,7 +7933,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Holy Stain",
-		"Width": 5.98,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-holy-stain.png"
 	},
@@ -7982,7 +7982,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Lester G",
-		"Width": 5.86,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-lester-g.png"
 	},
@@ -8038,7 +8038,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Metal Muff",
-		"Width": 5.99,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-metal-muff.png"
 	},
@@ -8059,7 +8059,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Micro Synth",
-		"Width": 5.98,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-micro-synth.png"
 	},
@@ -8073,7 +8073,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Mod Rex",
-		"Width": 5.86,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-mod-rex.png"
 	},
@@ -8262,14 +8262,14 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "POG2",
-		"Width": 5.93,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-pog2.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Q-Tron+",
-		"Width": 5.98,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-qtronplus.png"
 	},
@@ -8282,22 +8282,22 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Ravished Sitar",
-		"Width": 6.05,
+		"Name": "Ravish Sitar",
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-ravished-sitar.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Riddle",
-		"Width": 6.06,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-riddle.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Ring Thing",
-		"Width": 6.05,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-ring-thing.png"
 	},
@@ -8353,7 +8353,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Soul Pog",
-		"Width": 6.1,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-soul-pog.png"
 	},
@@ -8367,7 +8367,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Sovtek Deluxe Big Muff Pi",
-		"Width": 6,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-sovtek-deluxe-big-muff-pi.png"
 	},
@@ -8388,14 +8388,14 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Stereo Memory Man",
-		"Width": 6.06,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-stereo-memory-man.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Stereo Polychorus",
-		"Width": 6.06,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-stereo-polychorus.png"
 	},
@@ -8408,22 +8408,22 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Super Ego",
+		"Name": "Superego",
 		"Width": 4.19,
 		"Height": 4.75,
 		"Image": "ehx-superego.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Super Ego +",
-		"Width": 5.96,
+		"Name": "Superego+",
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-superego-plus.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Super Pulsar",
-		"Width": 6.1,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-super-pulsar.png"
 	},
@@ -8472,7 +8472,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Tone Tattoo",
-		"Width": 6.06,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-tone-tattoo.png"
 	},
@@ -8486,8 +8486,8 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Tri Parallel Mixer",
-		"Width": 5.9,
-		"Height": 4.85,
+		"Width": 6.25,
+		"Height": 4.98,
 		"Image": "ehx-tpm.png"
 	},
 	{
@@ -8500,7 +8500,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Turnip Greens",
-		"Width": 6.05,
+		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-turnip-greens.png"
 	},
