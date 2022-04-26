@@ -7850,7 +7850,7 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Grand Canyon",
 		"Width": 4.75,
-		"Height": 3.96,
+		"Height": 3.94,
 		"Image": "ehx-grand-canyon.png"
 	},
 	{
@@ -18166,6 +18166,13 @@
 	},
 	{
 		"Brand": "Pastfx",
+		"Name": "Elastic Mattress",
+		"Width": 2.56,
+		"Height": 4.4,
+		"Image": "pastfx-elastic-mattress.png"
+	},
+	{
+		"Brand": "Pastfx",
 		"Name": "Foot Phaser Deluxe",
 		"Width": 2.56,
 		"Height": 4.4,
@@ -18191,6 +18198,13 @@
 		"Width": 4.72,
 		"Height": 3.7,
 		"Image": "pastfx-phase-v.png"
+	},
+	{
+		"Brand": "Pastfx",
+		"Name": "Reticon Flanger",
+		"Width": 2.56,
+		"Height": 4.4,
+		"Image": "pastfx-reticon.png"
 	},
 	{
 		"Brand": "Pastfx",
