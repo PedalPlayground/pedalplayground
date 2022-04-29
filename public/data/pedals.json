@@ -16955,6 +16955,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "Cerberus",
+		"Width": 12.6,
+		"Height": 4.62,
+		"Image": "nux-cerberus.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Drive Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
