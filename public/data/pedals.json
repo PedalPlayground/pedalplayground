@@ -7337,6 +7337,20 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Special Cranker (JPN Only Black Sparkle)",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "earthquaker-special-cranker-jp-black.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Special Cranker (JPN Only Yellow Sparkle)",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "earthquaker-special-cranker-jp-yellow.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Spires",
 		"Width": 3.7,
 		"Height": 4.8,
