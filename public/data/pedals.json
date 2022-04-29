@@ -8800,6 +8800,13 @@
 	},
 	{
 		"Brand": "Emerson Custom",
+		"Name": "Em-drive Mach 2 (Origin Edition)",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "emerson-emdrive-mach2-origin.png"
+	},
+	{
+		"Brand": "Emerson Custom",
 		"Name": "Em-drive Mach 2 (Turquoise)",
 		"Width": 2.5,
 		"Height": 4.75,
