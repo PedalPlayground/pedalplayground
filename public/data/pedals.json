@@ -7330,6 +7330,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Special Cranker",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "earthquaker-special-cranker.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Spires",
 		"Width": 3.7,
 		"Height": 4.8,
