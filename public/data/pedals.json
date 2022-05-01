@@ -2829,6 +2829,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "CE-1 Chorus Ensemble",
+		"Width": 10.2,
+		"Height": 6.9,
+		"Image": "boss-ce1.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "CE-2 Chorus",
 		"Width": 2.875,
 		"Height": 5.125,
