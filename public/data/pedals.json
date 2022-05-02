@@ -14000,6 +14000,13 @@
     "Image": "lake-effects-fvd-white.png"
   },
 	{
+		"Brand": "Land + Vongon",
+		"Name": "Onset",
+		"Width": 2.87,
+		"Height": 5.4,
+		"Image": "land-vongon-onset.png"
+	},
+	{
 		"Brand": "Land Devices",
 		"Name": "Domino",
 		"Width": 3.82,
@@ -18807,62 +18814,6 @@
 		"Width": 6.3,
 		"Height": 3.7,
 		"Image": "piratemidi-bridge6.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Bakfram",
-		"Width": 2.6,
-		"Height": 5.035,
-		"Image": "pladask-bakfram.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Draume",
-		"Width": 3.7,
-		"Height": 4.85,
-		"Image": "pladask-draume.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Fabrikat",
-		"Width": 3.7,
-		"Height": 4.85,
-		"Image": "pladask-fabrikat.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Falma",
-		"Width": 2.6,
-		"Height": 5.035,
-		"Image": "pladask-falma.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Kniv",
-		"Width": 4.7,
-		"Height": 2.735,
-		"Image": "pladask-kniv.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Matrise",
-		"Width": 5.75,
-		"Height": 4.765,
-		"Image": "pladask-matrise.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Romferd",
-		"Width": 3.7,
-		"Height": 4.85,
-		"Image": "pladask-romferd.png"
-	},
-	{
-		"Brand": "Pladask",
-		"Name": "Taken",
-		"Width": 3.85,
-		"Height": 4.7,
-		"Image": "pladask-taken.png"
 	},
 	{
 		"Brand": "PolarBear",
