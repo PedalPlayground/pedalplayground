@@ -20491,6 +20491,13 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Redstone",
+		"Width": 2.85,
+		"Height": 4.75,
+		"Image": "spaceman-redstone.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Saturn VI",
 		"Width": 2.81,
 		"Height": 4.75,
@@ -23044,6 +23051,41 @@
 		"Width": 3.75,
 		"Height": 4.60,
 		"Image": "vsaudio-vibler.png"
+	},
+	{
+		"Brand": "Volta",
+		"Name": "1987 v2",
+		"Width": 5.12,
+		"Height": 3.79,
+		"Image": "volta-1987-v2.png"
+	},
+	{
+		"Brand": "Volta",
+		"Name": "Black Tweed",
+		"Width": 5.12,
+		"Height": 3.79,
+		"Image": "volta-black-tweed.png"
+	},
+	{
+		"Brand": "Volta",
+		"Name": "Black Tweed Plus",
+		"Width": 5.12,
+		"Height": 3.79,
+		"Image": "volta-black-tweed-plus.png"
+	},
+	{
+		"Brand": "Volta",
+		"Name": "Expressor",
+		"Width": 4.03,
+		"Height": 4.79,
+		"Image": "volta-expressor.png"
+	},
+	{
+		"Brand": "Volta",
+		"Name": "The Blue",
+		"Width": 5.12,
+		"Height": 3.79,
+		"Image": "volta-the-blue.png"
 	},
 	{
 		"Brand": "Vongon",
