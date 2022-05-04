@@ -3857,6 +3857,69 @@
 		"Image": "brunetti-vanilladrive.png"
 	},
 	{
+		"Brand": "Buffalo FX",
+		"Name": "Carrera",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "buffalo-carrera.png"
+	},
+	{
+		"Brand": "Buffalo FX",
+		"Name": "Evolution",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "buffalo-evolution.png"
+	},
+	{
+		"Brand": "Buffalo FX",
+		"Name": "Germanium Fuzz",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "buffalo-germanium-fuzz.png"
+	},
+	{
+		"Brand": "Buffalo FX",
+		"Name": "M-1",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "buffalo-m1.png"
+	},
+	{
+		"Brand": "Buffalo FX",
+		"Name": "Patriot MkII",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "buffalo-patriot.png"
+	},
+	{
+		"Brand": "Buffalo FX",
+		"Name": "Power Boosterr",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "buffalo-power-booster.png"
+	},
+	{
+		"Brand": "Buffalo FX",
+		"Name": "Propeller",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "buffalo-propeller.png"
+	},
+	{
+		"Brand": "Buffalo FX",
+		"Name": "Supa Driver",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "buffalo-supa-driver.png"
+	},
+	{
+		"Brand": "Buffalo FX",
+		"Name": "TD-X",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "buffalo-tdx.png"
+	},
+	{
 		"Brand": "Calico Effects",
 		"Name": "Antlers",
 		"Width": 2.6,
