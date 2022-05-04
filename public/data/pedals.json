@@ -6532,6 +6532,13 @@
 	},
 	{
 		"Brand": "Dreadbox",
+		"Name": "Disorder",
+		"Width": 3.94,
+		"Height": 5.61,
+		"Image": "dreadbox-disorder.png"
+	},
+	{
+		"Brand": "Dreadbox",
 		"Name": "Kinematic",
 		"Width": 3.94,
 		"Height": 5.61,
@@ -14730,9 +14737,16 @@
 	{
 		"Brand": "Marshall",
 		"Name": "Blues Breaker",
-		"Width": 5.11,
-		"Height": 5.7,
+		"Width": 4.33,
+		"Height": 5.67,
 		"Image": "marshall-blues-breaker.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "Guv'nor mk1",
+		"Width": 4.4,
+		"Height": 5.18,
+		"Image": "marshall-guvnor-mk1.png"
 	},
 	{
 		"Brand": "Marshall",
