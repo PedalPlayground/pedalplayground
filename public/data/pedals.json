@@ -20208,7 +20208,13 @@
 		"Height": 4.5,
 		"Image": "source-audio-aftershock-bass-distortion.png"
 	},
-
+	{
+		"Brand": "Source Audio",
+		"Name": "Atlas",
+		"Width": 2.94,
+		"Height": 4.5,
+		"Image": "source-audio-atlas.png"
+	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Collider",
