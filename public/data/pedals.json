@@ -22,6 +22,13 @@
 	},
 	{
 		"Brand": "1981 Inventions",
+		"Name": "DRV (Outline)",
+		"Width": 3.7,
+		"Height": 4.57,
+		"Image": "1981-drv-outline.png"
+	},
+	{
+		"Brand": "1981 Inventions",
 		"Name": "DRV (Pink)",
 		"Width": 3.7,
 		"Height": 4.57,
@@ -6490,6 +6497,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "CAE Wah",
+		"Width": 3,
+		"Height": 5.25,
+		"Image": "dunlop-mc404.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "CBM95 Cry Baby Mini Wah",
 		"Width": 3,
 		"Height": 5.25,
@@ -11219,6 +11233,13 @@
 		"Width": 4.7,
 		"Height": 3.84,
 		"Image": "hudson-broadcast.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast (Orange)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "hudson-broadcast-orange.png"
 	},
 	{
 		"Brand": "Hudson",
