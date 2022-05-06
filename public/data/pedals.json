@@ -6182,6 +6182,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD Looking Glass",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-lookingglass.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Meatbox Subsynth",
 		"Width": 3.05,
 		"Height": 4.88,
@@ -6256,13 +6263,6 @@
 		"Width": 6.7,
 		"Height": 6.84,
 		"Image": "digitech-jamman-stereo.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "Looking Glass",
-		"Width": 2.63,
-		"Height": 4.68,
-		"Image": "digitech-lookingglass.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -11233,6 +11233,13 @@
 		"Width": 23.6,
 		"Height": 11.2,
 		"Image": "headrush-pedalboard.png"
+	},
+	{
+		"Brand": "Heather Brown Electronicals",
+		"Name": "Sensation Fuzzdrive",
+		"Width": 3,
+		"Height": 4.92,
+		"Image": "hbe-sensation-fuzzdrive.png"
 	},
 	{
 		"Brand": "Heather Brown Electronicals",
