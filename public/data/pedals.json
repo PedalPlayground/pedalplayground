@@ -736,6 +736,20 @@
 	},
 	{
 		"Brand": "Analog.Man",
+		"Name": "Astro Tone (Black)",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "analogman-astrotone-black.png"
+	},
+	{
+		"Brand": "Analog.Man",
+		"Name": "Astro Tone (White)",
+		"Width": 2.61,
+		"Height": 4.88,
+		"Image": "analogman-astrotone-white.png"
+	},
+	{
+		"Brand": "Analog.Man",
 		"Name": "Beano Boost",
 		"Width": 2.65,
 		"Height": 4.65,
