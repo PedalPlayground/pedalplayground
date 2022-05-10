@@ -18629,14 +18629,14 @@
 	{
 		"Brand": "Pigtronix",
 		"Name": "Class A Boost",
-		"Width": 1.75,
+		"Width": 1.73,
 		"Height": 3.75,
 		"Image": "pigtronix-class-a-boost.png"
 	},
 	{
 		"Brand": "Pigtronix",
 		"Name": "Constellator",
-		"Width": 1.75,
+		"Width": 1.74,
 		"Height": 3.75,
 		"Image": "pigtronix-constellator.png"
 	},
@@ -18670,8 +18670,15 @@
 	},
 	{
 		"Brand": "Pigtronix",
-		"Name": "Gamma Drive",
+		"Name": "Emanator",
 		"Width": 1.75,
+		"Height": 3.75,
+		"Image": "pigtronix-emanator.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Gamma Drive",
+		"Width": 1.88,
 		"Height": 3.75,
 		"Image": "pigtronix-gamma-drive.png"
 	},
@@ -18706,16 +18713,23 @@
 	{
 		"Brand": "Pigtronix",
 		"Name": "Moon Pool",
-		"Width": 1.75,
+		"Width": 1.71,
 		"Height": 3.75,
 		"Image": "pigtronix-moon-pool.png"
 	},
 	{
 		"Brand": "Pigtronix",
 		"Name": "Octava",
-		"Width": 1.75,
+		"Width": 1.74,
 		"Height": 3.75,
 		"Image": "pigtronix-octava.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Phase Ranger",
+		"Width": 1.78,
+		"Height": 3.75,
+		"Image": "pigtronix-phase-ranger.png"
 	},
 	{
 		"Brand": "Pigtronix",
@@ -18734,7 +18748,7 @@
 	{
 		"Brand": "Pigtronix",
 		"Name": "Philosopher's Tone Germanium Gold",
-		"Width": 1.75,
+		"Width": 1.72,
 		"Height": 3.75,
 		"Image": "pigtronix-philosopherstone-germanium-gold.png"
 	},
@@ -18758,6 +18772,13 @@
 		"Width": 1.75,
 		"Height": 3.75,
 		"Image": "pigtronix-space-rip.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Tide Rider",
+		"Width": 1.76,
+		"Height": 3.75,
+		"Image": "pigtronix-tide-rider.png"
 	},
 	{
 		"Brand": "Pigtronix",
