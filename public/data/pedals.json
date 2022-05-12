@@ -10361,16 +10361,23 @@
 	},
 	{
 		"Brand": "Fulltone",
-		"Name": "Full-drive FD-2",
-		"Width": 4.95,
-		"Height": 4,
+		"Name": "Full-drive FD-2 V2",
+		"Width": 4.84,
+		"Height": 4.25,
 		"Image": "fulltone-fulldrive2.png"
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "Full-drive FD-2 MOSFET",
+		"Width": 5.79,
+		"Height": 4.16,
+		"Image": "fulltone-fulldrive2-mosfet.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "Full-drive FD-3",
-		"Width": 4.95,
-		"Height": 4,
+		"Width": 5.23,
+		"Height": 4.22,
 		"Image": "fulltone-fulldrive3.png"
 	},
 	{
