@@ -9194,7 +9194,7 @@
 		"Brand": "Ernie Ball",
 		"Name": "Ambient Delay",
 		"Width": 3.5,
-		"Height": 10,
+		"Height": 7.46,
 		"Image": "ernieball-amb-delay.png"
 	},
 	{
@@ -9205,25 +9205,32 @@
 		"Image": "ernieball-tap.png"
 	},
  	{
-    	"Brand": "Ernie Ball",
-    	"Name": "Volt",
+    "Brand": "Ernie Ball",
+    "Name": "Volt",
 		"Width": 3.5,
 		"Height": 2.3,
 		"Image": "ernieball-volt.png"
-  	},
+  },
+	{
+		"Brand": "Ernie Ball",
+		"Name": "VP",
+		"Width": 4,
+		"Height": 11,
+		"Image": "ernieball-vp.png"
+	},
 	{
 		"Brand": "Ernie Ball",
 		"Name": "VP Jr",
 		"Width": 3.5,
-		"Height": 10,
+		"Height": 9.65,
 		"Image": "ernieball-vp.png"
 	},
 	{
 		"Brand": "Ernie Ball",
 		"Name": "VP Jr Tuner",
 		"Width": 3.5,
-		"Height": 10,
-		"Image": "ernieball-vpjrtuner.png"
+		"Height": 9.65,
+		"Image": "ernieball-vpjrtuner-black.png"
 	},
 	{
 		"Brand": "Eventide",
