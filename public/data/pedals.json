@@ -8793,6 +8793,13 @@
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
+		"Name": "Dude Incredible",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-dude-incredible.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Eldritch Blast",
 		"Width": 3.7,
 		"Height": 4.95,
@@ -23211,6 +23218,13 @@
 		"Width": 5.11,
 		"Height": 4.45,
 		"Image": "vis-sound-h2o.png"
+	},
+	{
+		"Brand": "Visual Sound",
+		"Name": "Visual Volume VV10",
+		"Width": 5.81,
+		"Height": 9.06,
+		"Image": "vis-sound-vv10.png"
 	},
 	{
 		"Brand": "VS Audio",
