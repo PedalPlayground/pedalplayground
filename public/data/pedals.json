@@ -148,10 +148,24 @@
 	},
 	{
 		"Brand": "Aclam",
+		"Name": "Cinnamon Drive",
+		"Width": 5.4,
+		"Height": 3.59,
+		"Image": "aclam-cinnamondrive.png"
+	},
+	{
+		"Brand": "Aclam",
 		"Name": "Dr. Robert",
 		"Width": 5.4,
-		"Height": 3.4,
+		"Height": 3.59,
 		"Image": "aclam-drrobert.png"
+	},
+	{
+		"Brand": "Aclam",
+		"Name": "Windmiller Preamp",
+		"Width": 5.4,
+		"Height": 3.59,
+		"Image": "aclam-windmiller.png"
 	},
 	{
 		"Brand": "Aerospace Audio",
