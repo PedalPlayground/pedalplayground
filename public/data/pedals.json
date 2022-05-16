@@ -3655,6 +3655,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "SD-1-4A Anniversary Super Overdrive",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-sd14a.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "SG-1 Slow Gear",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -4576,6 +4583,20 @@
 		"Width": 3.7,
 		"Height": 4.81,
 		"Image": "champion-leccy-the-woozy.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Woozy (Night Blue)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-woozy-night.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Woozy (North Sea)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-woozy-north.png"
 	},
 	{
 		"Brand": "Champion Leccy",
@@ -15121,6 +15142,13 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Auto Filter AF-9",
+		"Width": 2.93,
+		"Height": 4.88,
+		"Image": "maxon-af9.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Analog Delay AD10",
 		"Width": 2.79,
 		"Height": 4.5,
@@ -20078,15 +20106,15 @@
 	{
 		"Brand": "Sola Sound",
 		"Name": "MKI Tone Bender",
-		"Width": 5.90551,
-		"Height": 11.811,
+		"Width": 4.66,
+		"Height": 8.5,
 		"Image": "sola-sound-mki.png"
 	},
 	{
 		"Brand": "Sola Sound",
 		"Name": "SCB Tone Bender",
-		"Width": 5.90551,
-		"Height": 11.811,
+		"Width": 4.4,
+		"Height": 8.5,
 		"Image": "sola-sound-scb.png"
 	},
 	{
