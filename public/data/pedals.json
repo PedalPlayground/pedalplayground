@@ -15317,10 +15317,10 @@
 	},
 	{
 		"Brand": "Meris",
-		"Name": "Mercury7",
+		"Name": "Enzo",
 		"Width": 4.25,
 		"Height": 4.5,
-		"Image": "meris-mercury7.png"
+		"Image": "meris-enzo.png"
 	},
 	{
 		"Brand": "Meris",
@@ -15331,10 +15331,24 @@
 	},
 	{
 		"Brand": "Meris",
-		"Name": "Enzo",
+		"Name": "LVX",
+		"Width": 7.25,
+		"Height": 4.5,
+		"Image": "meris-lvx.png"
+	},
+	{
+		"Brand": "Meris",
+		"Name": "Mercury7",
 		"Width": 4.25,
 		"Height": 4.5,
-		"Image": "meris-enzo.png"
+		"Image": "meris-mercury7.png"
+	},
+	{
+		"Brand": "Meris",
+		"Name": "MIDI I/O",
+		"Width": 3.7,
+		"Height": 2.66,
+		"Image": "meris-midi-io.png"
 	},
 	{
 		"Brand": "Meris",
@@ -15354,15 +15368,8 @@
 		"Brand": "Meris",
 		"Name": "Preset Switch",
 		"Width": 8.5,
-		"Height": 2.25,
+		"Height": 2.32,
 		"Image": "meris-preset-switch.png"
-	},
-	{
-		"Brand": "Meris",
-		"Name": "MIDI I/O",
-		"Width": 3.7,
-		"Height": 2.6,
-		"Image": "meris-midi-io.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
