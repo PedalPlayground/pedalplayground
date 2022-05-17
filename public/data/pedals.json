@@ -141,6 +141,13 @@
 	},
 	{
 		"Brand": "AC Noises",
+		"Name": "Urla",
+		"Width": 2.76,
+		"Height": 5.02,
+		"Image": "acn-urla.png"
+	},
+	{
+		"Brand": "AC Noises",
 		"Name": "Vola",
 		"Width": 2.6,
 		"Height": 5.02,
