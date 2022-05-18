@@ -56,7 +56,7 @@ Under MacOS Mojave:
 
 # Requesting Pedals
 
-If there is a pedal you're looking for, feel free to log an issue. Please follow the following rules when posting request issues:
+If there is a pedal you're looking for, feel free to [log an issue](https://github.com/PedalPlayground/PedalPlayground.github.io/issues). Please follow the following rules when posting request issues:
 
 -   Include a decent resolution image of the pedal (top-down view, white background)
 -   Include the dimensions, in inches (make sure the dimensions are accurate and include jacks and other protrusions)
