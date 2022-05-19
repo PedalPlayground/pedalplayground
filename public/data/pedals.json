@@ -19449,22 +19449,50 @@
 		"Brand": "Revv",
 		"Name": "G2",
 		"Width": 2.75,
-		"Height": 4.70,
+		"Height": 4.87,
 		"Image": "revv-g2.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "G2 (Gold)",
+		"Width": 2.75,
+		"Height": 4.87,
+		"Image": "revv-g2-gold.png"
 	},
 	{
 		"Brand": "Revv",
 		"Name": "G3",
 		"Width": 2.75,
-		"Height": 4.70,
+		"Height": 4.87,
 		"Image": "revv-g3.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "G3 (Red)",
+		"Width": 2.75,
+		"Height": 4.87,
+		"Image": "revv-g3-red.png"
 	},
 	{
 		"Brand": "Revv",
 		"Name": "G4",
 		"Width": 2.75,
-		"Height": 4.70,
+		"Height": 4.87,
 		"Image": "revv-g4.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "G8",
+		"Width": 3.02,
+		"Height": 4.87,
+		"Image": "revv-g8.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "Tilt",
+		"Width": 4.87,
+		"Height": 4.87,
+		"Image": "revv-tilt.png"
 	},
 	{
 		"Brand": "Rimrock",
