@@ -15470,6 +15470,27 @@
 		"Image": "milkman-fstop-white.png"
 	},
 	{
+		"Brand": "Milkman Sound",
+		"Name": "Pop Top",
+		"Width": 2.7,
+		"Height": 4.75,
+		"Image": "milkman-poptop.png"
+	},
+	{
+		"Brand": "Milkman Sound",
+		"Name": "The Amp",
+		"Width": 8.5,
+		"Height": 6.56,
+		"Image": "milkman-theamp.png"
+	},
+	{
+		"Brand": "Milkman Sound",
+		"Name": "The Amp (Black)",
+		"Width": 8.5,
+		"Height": 6.56,
+		"Image": "milkman-theamp-black.png"
+	},
+	{
 		"Brand": "Misc",
 		"Name": "12 Inch Ruler",
 		"Width": 12,
