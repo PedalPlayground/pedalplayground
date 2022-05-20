@@ -5328,6 +5328,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Super Conductor",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "ctc-super-conductor.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "TI:ME mkIII",
 		"Width": 2.6,
 		"Height": 4.94,
