@@ -12216,6 +12216,13 @@
 	},
 	{
 		"Brand": "Jackson Audio",
+		"Name": "Bloom (Monochrome)",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-bloom-monochrome.png"
+	},
+	{
+		"Brand": "Jackson Audio",
 		"Name": "Bloom (Red)",
 		"Width": 2.7,
 		"Height": 5.13,
@@ -12265,6 +12272,13 @@
 	},
 	{
 		"Brand": "Jackson Audio",
+		"Name": "Modular Fuzz (Monochrome)",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-fuzz-monochrome.png"
+	},
+	{
+		"Brand": "Jackson Audio",
 		"Name": "Prism",
 		"Width": 2.5,
 		"Height": 4.96,
@@ -12283,6 +12297,13 @@
 		"Width": 2.5,
 		"Height": 4.96,
 		"Image": "jackson-prism-blue.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "Prism (Gold)",
+		"Width": 2.5,
+		"Height": 4.96,
+		"Image": "jackson-prism-gold.png"
 	},
 	{
 		"Brand": "Jackson Audio",
