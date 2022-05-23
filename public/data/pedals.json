@@ -16353,69 +16353,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Bass Chorus Deluxe",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-bass-chorus-deluxe.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Compressor",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-basscompressor.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass DI",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m81.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass DI+",
-		"Width": 4.9,
-		"Height": 3.6,
-		"Image": "mxr-m80.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Distortion",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m85.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Envelope Filter",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m82.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Fuzz Deluxe",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m84.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Octave Deluxe",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m288.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Overdrive",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m89.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Blue Box Fuzz",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -16427,13 +16364,6 @@
 		"Width": 1.74,
 		"Height": 3.63,
 		"Image": "mxr-booster.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Brown Acid Fuzz",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-brown-acid-fuzz.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16574,13 +16504,6 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-dynacomp-script.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Dyna Comp Bass",
-		"Width": 1.74,
-		"Height": 3.63,
-		"Image": "mxr-m282.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16773,13 +16696,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Phase 99 Custom Shop",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-phase99-custom-shop.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Poly Blue Octave",
 		"Width": 2.61,
 		"Height": 4.33,
@@ -16798,13 +16714,6 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-m69.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Raijin Drive",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-raijin-drive.png"
 	},
 	{
 		"Brand": "MXR",
@@ -16871,13 +16780,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Sub Octave Bass Fuzz",
-		"Width": 5,
-		"Height": 3.8,
-		"Image": "mxr-m287.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Super Badass Distortion",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -16934,20 +16836,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Thump",
-		"Width": 1.74,
-		"Height": 3.63,
-		"Image": "mxr-m281.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Timmy",
-		"Width": 1.74,
-		"Height": 3.63,
-		"Image": "mxr-timmy.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Tremolo",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -16961,7 +16849,91 @@
 		"Image": "mxr-univibe.png"
 	},
 	{
-		"Brand": "MXR",
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Chorus Deluxe",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-bass-chorus-deluxe.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Compressor",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-basscompressor.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass DI",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m81.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass DI+",
+		"Width": 4.9,
+		"Height": 3.6,
+		"Image": "mxr-m80.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Distortion",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m85.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Envelope Filter",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m82.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Fuzz Deluxe",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m84.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Octave Deluxe",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m288.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Overdrive",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m89.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Dyna Comp Bass",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-m282.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Sub Octave Bass Fuzz",
+		"Width": 5,
+		"Height": 3.8,
+		"Image": "mxr-m287.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Thump",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-m281.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
 		"Name": "Vintage Bass Octave",
 		"Width": 1.74,
 		"Height": 3.63,
@@ -16969,10 +16941,38 @@
 	},
 	{
 		"Brand": "MXR Custom Shop",
+		"Name": "Brown Acid Fuzz",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-brown-acid-fuzz.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
 		"Name": "Il Diavolo Overdrive",
 		"Width": 2.51,
 		"Height": 4.33,
 		"Image": "mxr-csp036.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Phase 99 Custom Shop",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-csp099.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Raijin Drive",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-raijin-drive.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Timmy",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-timmy.png"
 	},
 	{
 		"Brand": "Mythos",
