@@ -15898,100 +15898,226 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "@Wah",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-awah.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "A7",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-a7.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Acoustikar",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "mooer-acousticer.png"
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-acoustikar.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "Ana Echo",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-anaecho.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "Audiofile",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-audiofile.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "Baby Bomb",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-babybomb.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "Baby Tuner",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-tuner.png"
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Baby Water",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-baby-water.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Black Secret",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-blacksecret.png"
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Blade",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-blade.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Blues Crab",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-blues-crab.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Blues Mood",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-bluesmood.png"
 	},
 	{
 		"Brand": "Mooer",
-		"Name": "D7 Delay",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "mooer-d7-delay.png"
+		"Name": "Cab X2",
+		"Width": 2.85,
+		"Height": 4.53,
+		"Image": "mooer-cab-x2.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Cruncher",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-cruncher.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "D7",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-d7.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Delay D7 X2",
+		"Width": 2.85,
+		"Height": 4.53,
+		"Image": "mooer-delay-d7-x2.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "E-lady",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-elady.png"
 	},
 	{
 		"Brand": "Mooer",
-		"Name": "E7 Synth",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "mooer-e7-synth.png"
+		"Name": "E7",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-e7.png"
 	},
 	{
 		"Brand": "Mooer",
-		"Name": "Graphic Eq",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "mooer-eq.png"
+		"Name": "Echolizer",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-echolizer.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Echoverb",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-echoverb.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Ensemble King",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-ensemble-king.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Ensemble Queen",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-ensemble-queen.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Envelope",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-envelope.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Flex Boost",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-flex-boost.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Funky Monkey",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-funky-monkey.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Graphic B",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-graphic-b.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Graphic G",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-graphic-g.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "Green Mile",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-greenmile.png"
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Groove Loop",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-groove-loop.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Groove Loop X2",
+		"Width": 2.85,
+		"Height": 4.53,
+		"Image": "mooer-groove-loop-x2.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Hustle Drive",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-hustledrive.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "Jet Engine",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-jet-engine.png"
 	},
 	{
@@ -16010,24 +16136,101 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Liquid",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-liquid.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Lofi Machine",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-lofi-machine.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Macro Power S12",
 		"Width": 8.95,
 		"Height": 3.46,
 		"Image": "mooer-macro-power-s12.png"
 	},
 	{
-        "Brand": "Mooer",
+		"Brand": "Mooer",
+		"Name": "Micro ABY MKII",
+		"Width": 1.85,
+		"Height": 3.75,
+		"Image": "mooer-micro-aby-mk2.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Micro Buffer",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-micro-buffer.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Micro DI",
+		"Width": 1.72,
+		"Height": 3.75,
+		"Image": "mooer-micro-di.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Micro Drummer",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-micro-drummer.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Micro Looper",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-micro-looper.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Micro Power",
+		"Width": 1.5,
+		"Height": 3.75,
+		"Image": "mooer-micro-power.png"
+	},
+	{
+    "Brand": "Mooer",
 		"Name": "Mod Factory MK II",
-		"Width": 1.65,
-		"Height": 3.66,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-modfactory-mkii.png"
-    },
+  },
+	{
+    "Brand": "Mooer",
+		"Name": "Mod Factory Pro",
+		"Width": 4.17,
+		"Height": 3.7,
+		"Image": "mooer-modfactory-pro.png"
+  },
+	{
+		"Brand": "Mooer",
+		"Name": "Modverb",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-modverb.png"
+	},
 	{
 		"Brand": "Mooer",
 		"Name": "Ninety Orange",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "mooer-orange.png"
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-ninety-orange.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Noise Killer",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-noise-killer.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -16039,8 +16242,8 @@
 	{
 		"Brand": "Mooer",
 		"Name": "Pitch Box",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-pitchbox.png"
 	},
 	{
@@ -16052,51 +16255,184 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Preamp Model X2",
+		"Width": 2.85,
+		"Height": 4.53,
+		"Image": "mooer-preamp-model-x2.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Pure Boost",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-pureboost.png"
 	},
 	{
 		"Brand": "Mooer",
-		"Name": "R7 Reverb",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "mooer-r7-reverb.png"
+		"Name": "Pure Octave",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-pure-octave.png"
 	},
 	{
 		"Brand": "Mooer",
-		"Name": "Reecho",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "mooer-recho.png"
+		"Name": "R7",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-r7.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "Radar",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-radar.png"
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Rage Machine",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-rage-machine.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Reecho",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-recho.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Repeater",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-repeater.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Reverb R7 X2",
+		"Width": 2.85,
+		"Height": 4.53,
+		"Image": "mooer-reverb-r7-x2.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Shimverb",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-shimverb.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Skyverb",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-skyverb.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Slow Engine",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-slow-engine.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Solo",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-solo.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Soul Shiver",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-soul-shiver.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Sweeper",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-sweeper.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Tender Octaver",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-tenderoctaver.png"
 	},
 	{
 		"Brand": "Mooer",
-		"Name": "Trelicopter",
-		"Width": 1.65,
+		"Name": "Tender Octaver Pro",
+		"Width": 4.17,
 		"Height": 3.7,
+		"Image": "mooer-tenderoctaver-pro.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Tone Capture GTR",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-tone-capture-gtr.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Trelicopter",
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-trelicopter.png"
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "TresCab",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-trescab.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Triangle Buff",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-triangle-buff.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Triangolo",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-triangolo.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Ultra Drive",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-ultra-drive.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Varimolo",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-varimolo.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Woodverb",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-woodverb.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Yellow Comp",
-		"Width": 1.65,
-		"Height": 3.7,
+		"Width": 1.67,
+		"Height": 3.75,
 		"Image": "mooer-yellowcomp.png"
 	},
 	{
