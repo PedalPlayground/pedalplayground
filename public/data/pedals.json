@@ -16124,14 +16124,14 @@
 		"Brand": "Mooer",
 		"Name": "L6 Controller",
 		"Width": 14.57,
-		"Height": 3.94,
+		"Height": 3.87,
 		"Image": "mooer-l6.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "Leveline",
-		"Width": 2.16,
-		"Height": 5.03,
+		"Width": 2.25,
+		"Height": 5.35,
 		"Image": "mooer-leveline.png"
 	},
 	{
@@ -16151,8 +16151,8 @@
 	{
 		"Brand": "Mooer",
 		"Name": "Macro Power S12",
-		"Width": 8.95,
-		"Height": 3.46,
+		"Width": 8.86,
+		"Height": 3.48,
 		"Image": "mooer-macro-power-s12.png"
 	},
 	{
@@ -16250,7 +16250,7 @@
 		"Brand": "Mooer",
 		"Name": "Preamp Live",
 		"Width": 9.06,
-		"Height": 4.92,
+		"Height": 5.06,
 		"Image": "mooer-preamp-live.png"
 	},
 	{
