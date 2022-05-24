@@ -23332,6 +23332,20 @@
 		"Image": "vemuram-shanks-ods-1.png"
 	},
 	{
+		"Brand": "Vick Audio",
+		"Name": "'73 Ram's Head"
+		"Width": 2.25,
+		"Height": 4.25,
+		"Image": "vick-73-rams-head.png"
+	},
+	{
+		"Brand": "Vick Audio",
+		"Name": "1861",
+		"Width": 2.25,
+		"Height": 4.25,
+		"Image": "vick-1861.png"
+	},
+	{
 		"Brand": "Victory Amps",
 		"Name": "V4 The Copper",
 		"Width": 8.86,
