@@ -310,42 +310,42 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-calavera.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Chesapeake",
-		"Width": 2.8,
+		"Width": 2.84,
 		"Height": 4.7,
 		"Image": "alexander-chesapeake.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Clang",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-clang.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Colour Theory",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-colour-theory.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "F13 Flanger",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-flange.png"
+		"Image": "alexander-flanger.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "F13 NEO Flanger",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-f13-neo-flanger.png"
 	},
@@ -359,71 +359,78 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Golden Summer",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-goldensummer.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "History Lesson",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-historylesson.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "History Lesson Vol2",
+		"Width": 2.84,
+		"Height": 4.7,
+		"Image": "alexander-history-lesson-vol2.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "History Lesson Vol3",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-history-lesson-vol3.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Hot Pink Drive",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-hot-pink-drive.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Jubilee",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-jubilee.png"
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Magnolia Vintage Overdrive",
-		"Width": 2.8,
+		"Name": "Magnolia",
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-magnolia-vintage-overdrive.png"
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Marshmallow [Chibi Blue]",
-		"Width": 2.8,
+		"Name": "Marshmallow (Chibi Blue)",
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-marshmallow-blue.png"
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Marshmallow [Chibi Pink]",
-		"Width": 2.8,
+		"Name": "Marshmallow (Chibi Pink)",
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-marshmallow-pink.png"
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Marshmallow [Rainbow Pride]",
-		"Width": 2.8,
+		"Name": "Marshmallow (Rainbow Pride)",
+		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-marshmallow-rainbow.png"
+		"Image": "alexander-marshmallow.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Neo Footswitch",
 		"Width": 4,
-		"Height": 2,
+		"Height": 2.36,
 		"Image": "alexander-neo-link.png"
 	},
 	{
@@ -443,70 +450,84 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Quadrant",
-		"Width": 2.6,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-quadrant.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Radical Delay",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-radical.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Radical Delay DX",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-radical-delay-dx.png"
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Riff Instant Tone Sanitizer",
-		"Width": 2.8,
+		"Name": "Riff",
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-riff-instant-tone-sanitizer.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Sky 5000",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-sky-5000.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Sky Fi",
+		"Width": 2.78,
+		"Height": 4.7,
+		"Image": "alexander-skyfi.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Space Expander",
-		"Width": 2.6,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-spaceexpander.png"
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Space Force",
+		"Width": 2.78,
+		"Height": 4.7,
+		"Image": "alexander-spaceforce.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Space Race",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-space-race.png"
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Sugarcube [Crystal White]",
-		"Width": 2.8,
+		"Name": "Sugarcube (Crystal White)",
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-sugarcube-white.png"
 	},
 	{
 		"Brand": "Alexander",
-		"Name": "Sugarcube [Saccharine Pink]",
-		"Width": 2.8,
+		"Name": "Sugarcube (Saccharine Pink)",
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-sugarcube-pink.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Super Neo-Matic",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-neo-matic.png"
 	},
@@ -520,14 +541,14 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Superball",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-superball.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Syntax Error",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-syntaxerror.png"
 	},
@@ -541,7 +562,7 @@
 	{
 		"Brand": "Alexander",
 		"Name": "Wavelength",
-		"Width": 2.8,
+		"Width": 2.78,
 		"Height": 4.7,
 		"Image": "alexander-wavelength.png"
 	},
