@@ -2478,6 +2478,48 @@
 		"Image": "blackmass-thefirstherald.png"
 	},
 	{
+		"Brand": "Blackstar",
+		"Name": "HT Dual",
+		"Width": 6.72,
+		"Height": 4.8,
+		"Image": "blackstar-ht-dual.png"
+	},
+	{
+		"Brand": "Blackstar",
+		"Name": "LT Boost",
+		"Width": 2.61,
+		"Height": 4.8,
+		"Image": "blackstar-lt-boost.png"
+	},
+	{
+		"Brand": "Blackstar",
+		"Name": "LT Dist",
+		"Width": 2.61,
+		"Height": 4.8,
+		"Image": "blackstar-lt-dist.png"
+	},
+	{
+		"Brand": "Blackstar",
+		"Name": "LT Drive",
+		"Width": 2.61,
+		"Height": 4.8,
+		"Image": "blackstar-lt-drive.png"
+	},
+	{
+		"Brand": "Blackstar",
+		"Name": "LT Dual",
+		"Width": 3.74,
+		"Height": 4.8,
+		"Image": "blackstar-lt-dual.png"
+	},
+	{
+		"Brand": "Blackstar",
+		"Name": "LT Metal",
+		"Width": 2.61,
+		"Height": 4.8,
+		"Image": "blackstar-lt-metal.png"
+	},
+	{
 		"Brand": "Blackout Effectors",
 		"Name": "Blunderbuss",
 		"Width": 2.92,
