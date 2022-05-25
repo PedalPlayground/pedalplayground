@@ -17746,6 +17746,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "OD-3",
+		"Width": 3.03,
+		"Height": 4.76,
+		"Image": "nux-od3.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Optima Air",
 		"Width": 4.19,
 		"Height": 4.52,
