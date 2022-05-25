@@ -353,7 +353,7 @@
 		"Brand": "Alexander",
 		"Name": "Fever Pitch",
 		"Width": 4.7,
-		"Height": 3.87,
+		"Height": 3.86,
 		"Image": "alexander-feverpitch.png"
 	},
 	{
@@ -444,7 +444,7 @@
 		"Brand": "Alexander",
 		"Name": "Oblivion",
 		"Width": 4.7,
-		"Height": 3.7,
+		"Height": 3.78,
 		"Image": "alexander-oblivion.png"
 	},
 	{
@@ -535,7 +535,7 @@
 		"Brand": "Alexander",
 		"Name": "Super Radical Delay",
 		"Width": 4.7,
-		"Height": 3.7,
+		"Height": 3.78,
 		"Image": "alexander-superradical.png"
 	},
 	{
@@ -556,7 +556,7 @@
 		"Brand": "Alexander",
 		"Name": "Syntax Error 2",
 		"Width": 4.7,
-		"Height": 3.95,
+		"Height": 3.86,
 		"Image": "alexander-syntaxerror2.png"
 	},
 	{
@@ -23517,7 +23517,7 @@
 		"Brand": "Universal Audio",
 		"Name": "Apollo Twin MkII",
 		"Width": 6.31,
-		"Height": 6.2,
+		"Height": 5.9,
 		"Image": "ua-apollo-twin.png"
 	},
 	{
@@ -23529,24 +23529,45 @@
 	},
 	{
 		"Brand": "Universal Audio",
-		"Name": "Astra Modulation Machine",
+		"Name": "Astra",
 		"Width": 3.5,
-		"Height": 5.6,
+		"Height": 5.62,
 		"Image": "ua-astra.png"
 	},
 	{
 		"Brand": "Universal Audio",
-		"Name": "Golden Reverberator",
+		"Name": "Dream",
 		"Width": 3.5,
-		"Height": 5.6,
+		"Height": 5.62,
+		"Image": "ua-dream.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Golden",
+		"Width": 3.5,
+		"Height": 5.62,
 		"Image": "ua-golden.png"
 	},
 	{
 		"Brand": "Universal Audio",
-		"Name": "Starlight Echo Station",
+		"Name": "Ruby",
 		"Width": 3.5,
-		"Height": 5.6,
+		"Height": 5.62,
+		"Image": "ua-ruby.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Starlight",
+		"Width": 3.5,
+		"Height": 5.62,
 		"Image": "ua-starlight.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Woodrow",
+		"Width": 3.5,
+		"Height": 5.62,
+		"Image": "ua-woodrow.png"
 	},
 	{
 		"Brand": "Vahlbruch",
