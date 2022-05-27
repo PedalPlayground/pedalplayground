@@ -18119,28 +18119,35 @@
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "AB/Y Switcher",
 		"Width": 4.40,
-		"Height": 2.8,
+		"Height": 2.52,
 		"Image": "obne-aby-switcher.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "AB/Y Switcher (Beta Blue)",
+		"Width": 4.40,
+		"Height": 2.52,
+		"Image": "obne-aby-switcher-betablue.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Alpha Haunt",
-		"Width": 5.63,
-		"Height": 4.88,
-		"Image": "oldbloodnoise-alphahaunt.png"
+		"Width": 5.7,
+		"Height": 4.85,
+		"Image": "obne-alphahaunt.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Alpha Haunt V2",
-		"Width": 4.6,
-		"Height": 3.74,
-		"Image": "oldbloodnoise-alphahaunt-v2.png"
+		"Width": 4.7,
+		"Height": 4.12,
+		"Image": "obne-alphahaunt-v2.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Blackcap",
-		"Width": 4.6,
-		"Height": 4,
+		"Width": 4.7,
+		"Height": 4.12,
 		"Image": "obne-blackcap.png"
 	},
 	{
@@ -18148,7 +18155,14 @@
 		"Name": "Black Fountain",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "oldbloodnoise-blackfountain.png"
+		"Image": "obne-blackfountain.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Black Fountain v2",
+		"Width": 2.87,
+		"Height": 4.96,
+		"Image": "obne-blackfountain-v2.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -18176,7 +18190,7 @@
 		"Name": "Dark Star",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "oldblood-darkstar.png"
+		"Image": "obne-darkstar.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -18194,23 +18208,30 @@
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Dark Star v2 (White)",
+		"Width": 2.87,
+		"Height": 4.96,
+		"Image": "obne-dark-star-v2-white.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Dweller Phase Repeater",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "old-blood-noise-endeavors-dweller-phase-repeater.png"
+		"Image": "obne-dweller-phase-repeater.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "EQ + Buffer",
-		"Width": 2.93,
-		"Height": 4.40,
-		"Image": "oldbloodnoise-eqbuffer.png"
+		"Width": 2.63,
+		"Height": 4.4,
+		"Image": "obne-eqbuffer.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Excess",
-		"Width": 4.6,
-		"Height": 4,
+		"Width": 4.7,
+		"Height": 4.12,
 		"Image": "obne-excess.png"
 	},
 	{
@@ -18244,15 +18265,15 @@
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Fault",
-		"Width": 4.6,
-		"Height": 3.74,
-		"Image": "oldbloodnoise-fault.png"
+		"Width": 4.7,
+		"Height": 4.12,
+		"Image": "obne-fault.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Fault v2",
-		"Width": 4.6,
-		"Height": 3.74,
+		"Width": 4.7,
+		"Height": 3.85,
 		"Image": "obne-fault-v2.png"
 	},
 	{
@@ -18260,83 +18281,97 @@
 		"Name": "Flat Light",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "oldblood-flatlight.png"
+		"Image": "obne-flatlight.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Haunt",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "oldbloodnoise-haunt.png"
+		"Image": "obne-haunt.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Headphone Amp",
-		"Width": 2.93,
-		"Height": 4.40,
-		"Image": "oldbloodnoise-headphone-amp.png"
+		"Width": 2.63,
+		"Height": 4.4,
+		"Image": "obne-headphone-amp.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "MAW XLR Pedal",
-		"Width": 5.84,
-		"Height": 4.57,
+		"Width": 5.95,
+		"Height": 4.88,
 		"Image": "obne-maw-xlr.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Minim",
-		"Width": 4.6,
-		"Height": 4,
-		"Image": "oldbloodnoise-minim.png"
+		"Width": 4.7,
+		"Height": 4.12,
+		"Image": "obne-minim.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Minim (Beta Blue)",
+		"Width": 4.7,
+		"Height": 4.12,
+		"Image": "obne-minim-betablue.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Mondegreen",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "oldbloodnoise-mondegreen.png"
+		"Image": "obne-mondegreen.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Procession Reverb",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "oldbloodnoise-procession.png"
+		"Image": "obne-procession.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Reflector",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "oldbloodnoise-reflector.png"
+		"Image": "obne-reflector.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Reflector V3",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "old-blood-reflector-v3.png"
+		"Image": "obne-reflector-v3.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Rever",
-		"Width": 4.6,
-		"Height": 3.74,
-		"Image": "oldbloodnoise-rever.png"
+		"Width": 4.7,
+		"Height": 4.12,
+		"Image": "obne-rever.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Screen Violence",
+		"Width": 4.85,
+		"Height": 5.92,
+		"Image": "obne-screenviolence.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Signal Blender",
-		"Width": 4.6,
-		"Height": 3.74,
-		"Image": "oldbloodnoise-signalblender.png"
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "obne-signalblender.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Split | Meld",
 		"Width": 4.4,
-		"Height": 2.93,
+		"Height": 2.63,
 		"Image": "obne-split-meld.png"
 	},
 	{
@@ -18356,9 +18391,9 @@
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Whitecap",
-		"Width": 4.6,
-		"Height": 4,
-		"Image": "oldbloodnoise-whitecap.png"
+		"Width": 4.7,
+		"Height": 4.12,
+		"Image": "obne-whitecap.png"
 	},
 	{
 		"Brand": "One Control",
@@ -22770,6 +22805,13 @@
 		"Width": 2,
 		"Height": 3.75,
 		"Image": "tc-polytunemini.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Plethora X3",
+		"Width": 7,
+		"Height": 4.56,
+		"Image": "tc-plethora-x3.png"
 	},
 	{
 		"Brand": "TC Electronic",
