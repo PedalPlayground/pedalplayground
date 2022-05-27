@@ -2135,6 +2135,13 @@
 		"Image": "becos-ts8-ms-overdrive.png"
 	},
 	{
+		"Brand": "Becos",
+		"Name": "Ziffer Overdrive",
+		"Width": 1.53543,
+		"Height": 3.62205,
+		"Image": "becos-ziffer.png"
+	},
+	{
 		"Brand": "Beetronics",
 		"Name": "Fatbee",
 		"Width": 3.52,
@@ -17000,7 +17007,14 @@
 		"Name": "Jimi Hendrix Psych Series Fuzz Face",
 		"Width": 1.74,
 		"Height": 3.63,
-		"Image": "mxr-jhw1-fuzz-face.png"
+		"Image": "mxr-jhw1.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Jimi Hendrix Uni-Vibe",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-jhm3.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20067,6 +20081,13 @@
 		"Width": 1.65,
 		"Height": 3.66,
 		"Image": "rowin-noise-gate.png"
+	},
+	{
+		"Brand": "Rowin",
+		"Name": "Tuner",
+		"Width": 1.43,
+		"Height": 3.64,
+		"Image": "rowin-tuner.png"
 	},
 	{
 		"Brand": "RYRA",
