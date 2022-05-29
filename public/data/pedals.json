@@ -6728,6 +6728,13 @@
 	},
 	{
 		"Brand": "Dreadbox",
+		"Name": "Hypnosis",
+		"Width": 10.6,
+		"Height": 6.85,
+		"Image": "dreadbox-hypnosis.png"
+	},
+	{
+		"Brand": "Dreadbox",
 		"Name": "Kinematic",
 		"Width": 3.94,
 		"Height": 5.61,
