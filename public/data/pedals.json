@@ -15107,6 +15107,13 @@
 	},
 	{
 		"Brand": "MAS Effects",
+		"Name": "Expanse",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "mas-expanse.png"
+	},
+	{
+		"Brand": "MAS Effects",
 		"Name": "Sona Fuzz",
 		"Width": 2.6,
 		"Height": 5,
@@ -20823,6 +20830,13 @@
 		"Width": 2.79,
 		"Height": 4.77,
 		"Image": "solidgoldfx-if6was9.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "If 6 Was 9 Mk II",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "solidgoldfx-if6was9-mk2.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
