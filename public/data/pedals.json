@@ -3076,7 +3076,7 @@
 		"Brand": "BOSS",
 		"Name": "DD-500 Digital Delay",
 		"Width": 6.75,
-		"Height": 5.4375,
+		"Height": 5.4,
 		"Image": "boss-dd500.png"
 	},
 	{
@@ -3391,7 +3391,7 @@
 		"Brand": "BOSS",
 		"Name": "MD-500 Modulation",
 		"Width": 6.75,
-		"Height": 5.4375,
+		"Height": 5.4,
 		"Image": "boss-md500.png"
 	},
 	{
@@ -3699,7 +3699,7 @@
 		"Brand": "BOSS",
 		"Name": "RV-500 Reverb",
 		"Width": 6.75,
-		"Height": 5.4375,
+		"Height": 5.4,
 		"Image": "boss-rv500.png"
 	},
 	{
@@ -15150,113 +15150,120 @@
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Architect V2",
-		"Width": 2.5,
-		"Height": 4.76,
+		"Width": 2.6,
+		"Height": 4.94,
 		"Image": "matthews-thearchitect.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Architect V3",
-		"Width": 2.63,
-		"Height": 4.76,
+		"Width": 2.73,
+		"Height": 4.94,
 		"Image": "matthews-architect-v3.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Astronomer",
-		"Width": 2.5,
-		"Height": 4.76,
+		"Width": 2.6,
+		"Height": 4.94,
 		"Image": "matthews-astronomer.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Astronomer V2",
-		"Width": 2.76,
-		"Height": 4.76,
+		"Width": 2.87,
+		"Height": 4.94,
 		"Image": "matthews-astronomer-v2.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Broker",
-		"Width": 2.5,
-		"Height": 4.76,
+		"Width": 2.6,
+		"Height": 4.94,
 		"Image": "matthews-broker.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Cartographer",
-		"Width": 2.5,
-		"Height": 4.76,
+		"Width": 2.6,
+		"Height": 4.94,
 		"Image": "matthews-thecartographer.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Chemist",
-		"Width": 2.63,
-		"Height": 4.76,
+		"Width": 2.73,
+		"Height": 4.94,
 		"Image": "matthews-thechemist.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Chemist V2",
-		"Width": 2.76,
-		"Height": 4.76,
+		"Width": 2.87,
+		"Height": 4.94,
 		"Image": "matthews-chemist-v2.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Cosmonaut",
-		"Width": 2.5,
-		"Height": 4.76,
+		"Width": 2.6,
+		"Height": 4.94,
 		"Image": "matthews-thecosmonaut.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Cosmonaut v2",
-		"Width": 2.76,
-		"Height": 4.76,
+		"Width": 2.87,
+		"Height": 4.94,
 		"Image": "matthews-thecosmonaut-v2.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Futurist",
-		"Width": 3.96,
+		"Width": 4.02,
 		"Height": 3.2,
 		"Image": "matthews-thefuturist.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Ghoul",
-		"Width": 2.5,
-		"Height": 4.76,
+		"Width": 2.6,
+		"Height": 4.94,
 		"Image": "matthews-ghoul.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Harbinger",
-		"Width": 2.5,
-		"Height": 4.76,
+		"Width": 2.6,
+		"Height": 4.94,
 		"Image": "matthews-theharbinger.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Surgeon",
-		"Width": 2.5,
-		"Height": 4.76,
+		"Width": 2.6,
+		"Height": 4.94,
 		"Image": "matthews-thesurgeon.png"
 	},
 	{
 		"Brand": "Matthews Effects",
+		"Name": "The Surgeon V2",
+		"Width": 2.83,
+		"Height": 4.91,
+		"Image": "matthews-thesurgeon-v2.png"
+	},
+	{
+		"Brand": "Matthews Effects",
 		"Name": "The Whaler",
-		"Width": 2.5,
-		"Height": 4.76,
+		"Width": 2.6,
+		"Height": 4.94,
 		"Image": "matthews-thewhaler.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Whaler V2",
-		"Width": 2.5,
-		"Height": 4.76,
+		"Width": 2.6,
+		"Height": 4.94,
 		"Image": "matthews-whaler-v2.png"
 	},
 	{
