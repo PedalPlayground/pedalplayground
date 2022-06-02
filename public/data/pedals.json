@@ -24475,6 +24475,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Lore",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "walrus-lore.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Luminary",
 		"Width": 4.67,
 		"Height": 3.83,
