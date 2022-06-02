@@ -15597,6 +15597,13 @@
 	},
 	{
 		"Brand": "Misc",
+		"Name": "10cm Ruler",
+		"Width": 4,
+		"Height": 1,
+		"Image": "10cm-ruler.png"
+	},
+	{
+		"Brand": "Misc",
 		"Name": "12 Inch Ruler",
 		"Width": 12,
 		"Height": 1,
