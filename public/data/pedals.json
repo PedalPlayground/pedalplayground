@@ -11893,6 +11893,13 @@
 		"Image": "ibanez-wh10-v3.png"
 	},
 	{
+		"Brand": "Idiotbox",
+		"Name": "No Moon",
+		"Width": 7.38,
+		"Height": 4.88,
+		"Image": "idiotbox-no-moon.png"
+	},
+	{
 		"Brand": "IK Multimedia",
 		"Name": "X-Drive",
 		"Width": 6.8,
