@@ -15009,10 +15009,24 @@
 	},
 	{
 		"Brand": "Marshall",
+		"Name": "BB-2 Blues Breaker",
+		"Width": 2.7,
+		"Height": 4.7,
+		"Image": "marshall-blues-breaker-bb2.png"
+	},
+	{
+		"Brand": "Marshall",
 		"Name": "Blues Breaker",
 		"Width": 4.33,
 		"Height": 5.67,
 		"Image": "marshall-blues-breaker.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "EH-1 Echohead",
+		"Width": 2.7,
+		"Height": 4.7,
+		"Image": "marshall-echohead-eh1.png"
 	},
 	{
 		"Brand": "Marshall",
@@ -15023,10 +15037,38 @@
 	},
 	{
 		"Brand": "Marshall",
-		"Name": "Jackhammer",
-		"Width": 2.69,
-		"Height": 4.78,
+		"Name": "GV-2 Guv'nor Plus",
+		"Width": 2.7,
+		"Height": 4.7,
+		"Image": "marshall-guvnor-gv2.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "JH-1 Jackhammer",
+		"Width": 2.7,
+		"Height": 4.7,
 		"Image": "marshall-jackhammer.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "RF-1 Reflector",
+		"Width": 2.7,
+		"Height": 4.7,
+		"Image": "marshall-reflector-rf1.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "RG-1 Regenerator",
+		"Width": 2.7,
+		"Height": 4.7,
+		"Image": "marshall-regenerator-rg1.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "VT-1 Vibratrem",
+		"Width": 2.7,
+		"Height": 4.7,
+		"Image": "marshall-vibratrem-vt1.png"
 	},
 	{
 		"Brand": "Mastro Valvola",
