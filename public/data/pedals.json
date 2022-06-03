@@ -6350,6 +6350,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD Stereo Chorus FX-65",
+		"Width": 3.35,
+		"Height": 5,
+		"Image": "dod-fx65.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Stereo Flanger FX75-B",
 		"Width": 3.31,
 		"Height": 5.125,
