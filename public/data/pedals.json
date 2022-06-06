@@ -10790,21 +10790,21 @@
 		"Brand": "GFI System",
 		"Name": "Orca",
 		"Width": 2.83,
-		"Height": 4.84,
+		"Height": 4.74,
 		"Image": "gfi-orca.png"
 	},
 	{
 		"Brand": "GFI System",
 		"Name": "Rossie",
 		"Width": 2.83,
-		"Height": 4.84,
+		"Height": 4.74,
 		"Image": "gfi-rossie.png"
 	},
 	{
 		"Brand": "GFI System",
 		"Name": "Skylar",
 		"Width": 2.83,
-		"Height": 4.84,
+		"Height": 4.74,
 		"Image": "gfi-skylar.png"
 	},
 	{
@@ -10838,9 +10838,16 @@
 	{
 		"Brand": "GFI System",
 		"Name": "Synesthesia",
-		"Width": 4.84,
-		"Height": 4.84,
+		"Width": 4.95,
+		"Height": 4.75,
 		"Image": "gfi-synesthesia.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Synesthesia (White)",
+		"Width": 4.95,
+		"Height": 4.75,
+		"Image": "gfi-synesthesia-white.png"
 	},
 	{
 		"Brand": "GFI System",
