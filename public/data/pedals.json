@@ -24045,7 +24045,6 @@
 		"Height": 5.5,
 		"Image": "vongon-ultrasheer.png"
 	},
-
 	{
 		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power 2+",
@@ -24080,6 +24079,13 @@
 		"Width": 10.7,
 		"Height": 3.4,
 		"Image": "voodoolab-mondo.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "PX-8 Plus",
+		"Width": 21.5,
+		"Height": 2.8,
+		"Image": "voodoolab-px8-plus.png"
 	},
 	{
 		"Brand": "Voodoo Lab",
