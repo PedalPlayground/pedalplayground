@@ -6371,6 +6371,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD Stereo Chorus FX-65",
+		"Width": 3.35,
+		"Height": 5,
+		"Image": "dod-fx65.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Stereo Flanger FX75-B",
 		"Width": 3.31,
 		"Height": 5.125,
@@ -10825,21 +10832,21 @@
 		"Brand": "GFI System",
 		"Name": "Orca",
 		"Width": 2.83,
-		"Height": 4.84,
+		"Height": 4.74,
 		"Image": "gfi-orca.png"
 	},
 	{
 		"Brand": "GFI System",
 		"Name": "Rossie",
 		"Width": 2.83,
-		"Height": 4.84,
+		"Height": 4.74,
 		"Image": "gfi-rossie.png"
 	},
 	{
 		"Brand": "GFI System",
 		"Name": "Skylar",
 		"Width": 2.83,
-		"Height": 4.84,
+		"Height": 4.74,
 		"Image": "gfi-skylar.png"
 	},
 	{
@@ -10873,9 +10880,16 @@
 	{
 		"Brand": "GFI System",
 		"Name": "Synesthesia",
-		"Width": 4.84,
-		"Height": 4.84,
+		"Width": 4.95,
+		"Height": 4.75,
 		"Image": "gfi-synesthesia.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Synesthesia (White)",
+		"Width": 4.95,
+		"Height": 4.75,
+		"Image": "gfi-synesthesia-white.png"
 	},
 	{
 		"Brand": "GFI System",
@@ -24122,7 +24136,6 @@
 		"Height": 5.5,
 		"Image": "vongon-ultrasheer.png"
 	},
-
 	{
 		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power 2+",
@@ -24157,6 +24170,13 @@
 		"Width": 10.7,
 		"Height": 3.4,
 		"Image": "voodoolab-mondo.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "PX-8 Plus",
+		"Width": 21.5,
+		"Height": 2.8,
+		"Image": "voodoolab-px8-plus.png"
 	},
 	{
 		"Brand": "Voodoo Lab",
