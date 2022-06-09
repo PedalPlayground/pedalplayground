@@ -6819,6 +6819,13 @@
 	},
 	{
 		"Brand": "DSM & Humboldt",
+		"Name": "Clearcomp 1078",
+		"Width": 2.94,
+		"Height": 4.72,
+		"Image": "dsm-clearcomp-1078.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
 		"Name": "Silver Linings",
 		"Width": 3.74,
 		"Height": 5.03,
@@ -8986,6 +8993,13 @@
 		"Width": 2.6,
 		"Height": 5.05,
 		"Image": "electronic-audio-experiments-halberd-v2.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
+		"Name": "Halberd v2 (Acid Etched)",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "electronic-audio-experiments-halberd-v2-acid.png"
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
@@ -23442,6 +23456,13 @@
 		"Width": 4.04,
 		"Height": 4.92,
 		"Image": "thorpyfx-pulse-doppler.png"
+	},
+	{
+		"Brand": "ThorpyFx",
+		"Name": "Scarlet Tunic",
+		"Width": 4.04,
+		"Height": 4.92,
+		"Image": "thorpyfx-scarlet-tunic.png"
 	},
 	{
 		"Brand": "ThorpyFx",
