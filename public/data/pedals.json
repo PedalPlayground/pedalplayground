@@ -6784,6 +6784,13 @@
 	},
 	{
 		"Brand": "DSM & Humboldt",
+		"Name": "Clearcomp 1078",
+		"Width": 2.94,
+		"Height": 4.72,
+		"Image": "dsm-clearcomp-1078.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
 		"Name": "Silver Linings",
 		"Width": 3.74,
 		"Height": 5.03,
