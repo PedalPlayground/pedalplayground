@@ -8947,6 +8947,13 @@
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
+		"Name": "Halberd v2 (Acid Etched)",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "electronic-audio-experiments-halberd-v2-acid.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Halberd v2 (Green Dragon)",
 		"Width": 2.6,
 		"Height": 5.05,
@@ -23372,6 +23379,13 @@
 		"Width": 4.04,
 		"Height": 4.92,
 		"Image": "thorpyfx-pulse-doppler.png"
+	},
+	{
+		"Brand": "ThorpyFx",
+		"Name": "Scarlet Tunic",
+		"Width": 4.04,
+		"Height": 4.92,
+		"Image": "thorpyfx-scarlet-tunic.png"
 	},
 	{
 		"Brand": "ThorpyFx",
