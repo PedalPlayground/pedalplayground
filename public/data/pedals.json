@@ -22,6 +22,13 @@
 	},
 	{
 		"Brand": "1981 Inventions",
+		"Name": "DRV (Outline)",
+		"Width": 3.7,
+		"Height": 4.57,
+		"Image": "1981-drv-outline.png"
+	},
+	{
+		"Brand": "1981 Inventions",
 		"Name": "DRV (Pink)",
 		"Width": 3.7,
 		"Height": 4.57,
@@ -2126,6 +2133,13 @@
 		"Width": 2.70,
 		"Height": 4.72,
 		"Image": "becos-ts8-ms-overdrive.png"
+	},
+	{
+		"Brand": "Becos",
+		"Name": "Ziffer Overdrive",
+		"Width": 1.53543,
+		"Height": 3.62205,
+		"Image": "becos-ziffer.png"
 	},
 	{
 		"Brand": "Beetronics",
@@ -5117,6 +5131,13 @@
 		"Image": "cme-widiuhost.png"
 	},
 	{
+		"Brand": "Collaboration Devices",
+		"Name": "The Compressor (Black)",
+		"Width": 4.75,
+		"Height": 3.75,
+		"Image": "collab-dev-comp-black.png"
+	},
+	{
 		"Brand": "Collision Devices",
 		"Name": "Black Hole Symmetry",
 		"Width": 7.44,
@@ -6642,6 +6663,20 @@
 		"Height": 2.9,
 		"Image": "donner-aby.png"
 	},
+    {
+		"Brand": "Donner",
+		"Name": "Jet Convolution",
+		"Width": 1.43,
+		"Height": 3.64,
+		"Image": "donner-jet-conv.png"
+	},
+    {
+		"Brand": "Donner",
+		"Name": "Noiser Killer",
+		"Width": 1.43,
+		"Height": 3.64,
+		"Image": "donner-noise-killer.png"
+	},
 	{
 		"Brand": "Donner",
 		"Name": "Ripple",
@@ -6844,6 +6879,13 @@
 		"Width": 4,
 		"Height": 10,
 		"Image": "dunlop-bg95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "CAE Wah",
+		"Width": 3,
+		"Height": 5.25,
+		"Image": "dunlop-mc404.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -11684,6 +11726,13 @@
 	},
 	{
 		"Brand": "Hudson",
+		"Name": "Broadcast (Orange)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "hudson-broadcast-orange.png"
+	},
+	{
+		"Brand": "Hudson",
 		"Name": "Broadcast-AP",
 		"Width": 3.7,
 		"Height": 4.91,
@@ -15681,6 +15730,13 @@
 	},
 	{
 		"Brand": "Misc",
+		"Name": "10cm Ruler",
+		"Width": 4,
+		"Height": 1,
+		"Image": "10cm-ruler.png"
+	},
+	{
+		"Brand": "Misc",
 		"Name": "12 Inch Ruler",
 		"Width": 12,
 		"Height": 1,
@@ -16836,69 +16892,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Bass Chorus Deluxe",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-bass-chorus-deluxe.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Compressor",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-basscompressor.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass DI",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m81.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass DI+",
-		"Width": 4.9,
-		"Height": 3.6,
-		"Image": "mxr-m80.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Distortion",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m85.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Envelope Filter",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m82.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Fuzz Deluxe",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m84.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Octave Deluxe",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m288.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Overdrive",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m89.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Blue Box Fuzz",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -16910,13 +16903,6 @@
 		"Width": 1.74,
 		"Height": 3.63,
 		"Image": "mxr-booster.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Brown Acid Fuzz",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-brown-acid-fuzz.png"
 	},
 	{
 		"Brand": "MXR",
@@ -17060,13 +17046,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Dyna Comp Bass",
-		"Width": 1.74,
-		"Height": 3.63,
-		"Image": "mxr-m282.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Dyna Comp Deluxe",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -17161,7 +17140,14 @@
 		"Name": "Jimi Hendrix Psych Series Fuzz Face",
 		"Width": 1.74,
 		"Height": 3.63,
-		"Image": "mxr-jhw1-fuzz-face.png"
+		"Image": "mxr-jhw1.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Jimi Hendrix Uni-Vibe",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-jhm3.png"
 	},
 	{
 		"Brand": "MXR",
@@ -17256,13 +17242,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Phase 99 Custom Shop",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-phase99-custom-shop.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Poly Blue Octave",
 		"Width": 2.61,
 		"Height": 4.33,
@@ -17281,13 +17260,6 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-m69.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Raijin Drive",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-raijin-drive.png"
 	},
 	{
 		"Brand": "MXR",
@@ -17354,13 +17326,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Sub Octave Bass Fuzz",
-		"Width": 5,
-		"Height": 3.8,
-		"Image": "mxr-m287.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Super Badass Distortion",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -17417,20 +17382,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Thump",
-		"Width": 1.74,
-		"Height": 3.63,
-		"Image": "mxr-m281.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Timmy",
-		"Width": 1.74,
-		"Height": 3.63,
-		"Image": "mxr-timmy.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Tremolo",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -17444,7 +17395,91 @@
 		"Image": "mxr-univibe.png"
 	},
 	{
-		"Brand": "MXR",
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Chorus Deluxe",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-bass-chorus-deluxe.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Compressor",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-basscompressor.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass DI",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m81.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass DI+",
+		"Width": 4.9,
+		"Height": 3.6,
+		"Image": "mxr-m80.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Distortion",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m85.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Envelope Filter",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m82.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Fuzz Deluxe",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m84.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Octave Deluxe",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m288.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Overdrive",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-m89.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Dyna Comp Bass",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-m282.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Sub Octave Bass Fuzz",
+		"Width": 5,
+		"Height": 3.8,
+		"Image": "mxr-m287.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Thump",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-m281.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
 		"Name": "Vintage Bass Octave",
 		"Width": 1.74,
 		"Height": 3.63,
@@ -17452,10 +17487,38 @@
 	},
 	{
 		"Brand": "MXR Custom Shop",
+		"Name": "Brown Acid Fuzz",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-brown-acid-fuzz.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
 		"Name": "Il Diavolo Overdrive",
 		"Width": 2.51,
 		"Height": 4.33,
 		"Image": "mxr-csp036.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Phase 99 Custom Shop",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-csp099.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Raijin Drive",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-raijin-drive.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Timmy",
+		"Width": 1.74,
+		"Height": 3.63,
+		"Image": "mxr-timmy.png"
 	},
 	{
 		"Brand": "Mythos",
@@ -20207,6 +20270,13 @@
 		"Width": 1.65,
 		"Height": 3.66,
 		"Image": "rowin-noise-gate.png"
+	},
+	{
+		"Brand": "Rowin",
+		"Name": "Tuner",
+		"Width": 1.43,
+		"Height": 3.64,
+		"Image": "rowin-tuner.png"
 	},
 	{
 		"Brand": "RYRA",
@@ -23920,6 +23990,27 @@
 		"Image": "vemuram-shanks-ods-1.png"
 	},
 	{
+		"Brand": "Vick Audio",
+		"Name": "'73 Ram's Head",
+		"Width": 2.25,
+		"Height": 4.25,
+		"Image": "vick-73-rams-head.png"
+	},
+	{
+		"Brand": "Vick Audio",
+		"Name": "1861",
+		"Width": 2.25,
+		"Height": 4.25,
+		"Image": "vick-1861.png"
+	},
+    {
+		"Brand": "Vick Audio",
+		"Name": "V-2",
+		"Width": 2.25,
+		"Height": 4.25,
+		"Image": "vick-v2.png"
+	},
+	{
 		"Brand": "Victory Amps",
 		"Name": "V4 The Copper",
 		"Width": 8.86,
@@ -24891,6 +24982,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "wampler-plexidrive.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Plexi-Drive (Original Design)",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "wampler-plexidrive-og.png"
 	},
 	{
 		"Brand": "Wampler",
