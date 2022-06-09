@@ -17732,10 +17732,31 @@
 	},
 	{
 		"Brand": "Nordvang",
-		"Name": "83' Drive",
-		"Width": 5.72,
-		"Height": 4.77,
-		"Image": "nordvang-83drive.png"
+		"Name": "83' Drive 2.0",
+		"Width": 5.7,
+		"Height": 4.9,
+		"Image": "nordvang-83drive-2.png"
+	},
+	{
+		"Brand": "Nordvang",
+		"Name": "Gravity v2.0",
+		"Width": 5.7,
+		"Height": 4.9,
+		"Image": "nordvang-gravity-2.png"
+	},
+	{
+		"Brand": "Nordvang",
+		"Name": "No.1 Signature",
+		"Width": 4.7,
+		"Height": 3.85,
+		"Image": "nordvang-no1-signature.png"
+	},
+	{
+		"Brand": "Nordvang",
+		"Name": "Wingman v2.0",
+		"Width": 5.7,
+		"Height": 4.9,
+		"Image": "nordvang-wingman-2.png"
 	},
 	{
 		"Brand": "NuX",
