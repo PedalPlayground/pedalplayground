@@ -7014,15 +7014,15 @@
 		"Image": "dunlop-kh95.png"
 	},
 	{
-    "Brand": "Dunlop",
-    "Name": "Mini 535Q Wah",
+    	"Brand": "Dunlop",
+    	"Name": "Mini 535Q Wah",
 		"Width": 3.13,
 		"Height": 5.24,
 		"Image": "dunlop-mini-535q.png"
 	},
 	{
-    "Brand": "Dunlop",
-    "Name": "Rotovibe",
+    	"Brand": "Dunlop",
+    	"Name": "Rotovibe",
 		"Width": 4,
 	 	"Height": 10,
 		"Image": "dunlop-jd4s.png"
@@ -17159,8 +17159,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "Jimi Hendrix Uni-Vibe",
-		"Width": 1.74,
-		"Height": 3.63,
+		"Width": 2.56,
+		"Height": 4.33,
 		"Image": "mxr-jhm3.png"
 	},
 	{
@@ -24013,22 +24013,22 @@
 	{
 		"Brand": "Vick Audio",
 		"Name": "'73 Ram's Head",
-		"Width": 2.25,
-		"Height": 4.25,
+		"Width": 3.7,
+		"Height": 4.72,
 		"Image": "vick-73-rams-head.png"
 	},
 	{
 		"Brand": "Vick Audio",
 		"Name": "1861",
-		"Width": 2.25,
-		"Height": 4.25,
+		"Width": 3.7,
+		"Height": 4.72,
 		"Image": "vick-1861.png"
 	},
     {
 		"Brand": "Vick Audio",
 		"Name": "V-2",
-		"Width": 2.25,
-		"Height": 4.25,
+		"Width": 3.7,
+		"Height": 4.72,
 		"Image": "vick-v2.png"
 	},
 	{
@@ -25000,8 +25000,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Plexi-Drive",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.5,
 		"Image": "wampler-plexidrive.png"
 	},
 	{
