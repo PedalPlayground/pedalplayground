@@ -24103,30 +24103,58 @@
 	},
 	{
 		"Brand": "VS Audio",
+		"Name": "Alchemy MKII",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "vsaudio-alchemy-mk2.png"
+	},
+	{
+		"Brand": "VS Audio",
 		"Name": "Aftermath",
-		"Width": 2.75,
-		"Height": 4.80,
+		"Width": 2.86,
+		"Height": 4.88,
 		"Image": "vsaudio-aftermath.png"
 	},
 	{
 		"Brand": "VS Audio",
+		"Name": "Blackbird",
+		"Width": 2.79,
+		"Height": 4.4,
+		"Image": "vsaudio-blackbird.png"
+	},
+	{
+		"Brand": "VS Audio",
+		"Name": "Pandora",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "vsaudio-pandora.png"
+	},
+	{
+		"Brand": "VS Audio",
+		"Name": "Project Diana",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "vsaudio-project-diana.png"
+	},
+	{
+		"Brand": "VS Audio",
 		"Name": "Royal Flush",
-		"Width": 4.72,
-		"Height": 3.80,
+		"Width": 4.7,
+		"Height": 3.85,
 		"Image": "vsaudio-royalflush.png"
 	},
 	{
 		"Brand": "VS Audio",
 		"Name": "Straight Flush",
-		"Width": 2.75,
-		"Height": 4.41,
+		"Width": 2.79,
+		"Height": 4.4,
 		"Image": "vsaudio-straightflush.png"
 	},
 	{
 		"Brand": "VS Audio",
 		"Name": "Vibler",
-		"Width": 3.75,
-		"Height": 4.60,
+		"Width": 3.79,
+		"Height": 4.85,
 		"Image": "vsaudio-vibler.png"
 	},
 	{
