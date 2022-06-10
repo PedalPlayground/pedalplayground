@@ -13700,6 +13700,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Halo",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "keeley-halo.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Holy Fuzz",
 		"Width": 2.6,
 		"Height": 4.4,
@@ -13732,6 +13739,13 @@
 		"Width": 3.15,
 		"Height": 4.4,
 		"Image": "keeley-katana.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Katana (Outdoorsman)",
+		"Width": 3.19,
+		"Height": 4.4,
+		"Image": "keeley-katana-outdoorsman.png"
 	},
 	{
 		"Brand": "Keeley",
