@@ -6582,7 +6582,7 @@
 	{
 		"Brand": "Disaster Area",
 		"Name": "Micro Clock",
-		"Width": 1.65,
+		"Width": 1.73,
 		"Height": 3.65,
 		"Image": "disasterarea-microclock.png"
 	},
@@ -6610,7 +6610,7 @@
 	{
 		"Brand": "Disaster Area",
 		"Name": "Smart Clock",
-		"Width": 2.85,
+		"Width": 2.81,
 		"Height": 4.87,
 		"Image": "disasterarea-smartclock.png"
 	},
@@ -13491,28 +13491,28 @@
 	{
 		"Brand": "Keeley",
 		"Name": "1962",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-1962.png"
 	},
 	{
 		"Brand": "Keeley",
-		"Name": "30ms Tracker",
-		"Width": 2.6,
+		"Name": "30ms Double Tracker",
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-30mstracker.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Abbey Chamber Verb",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-abbey.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Aurora",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-aurora.png"
 	},
@@ -13525,30 +13525,44 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Bassist Compressor",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-bassist-compressor.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Black Glass",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-blackglass.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Blacktop",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-blacktop.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Bubble Tron",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-bubble-tron.png"
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Bubble Tron (Ler)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-bubble-tron-ler.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Caverns",
-		"Width": 2.62,
-		"Height": 4.94,
+		"Width": 2.64,
+		"Height": 5.15,
 		"Image": "keeley-caverns.png"
 	},
 	{
@@ -13603,7 +13617,7 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Compressor Plus",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-compressor-plus.png"
 	},
@@ -13638,7 +13652,7 @@
 	{
 		"Brand": "Keeley",
 		"Name": "DS-9",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-ds9.png"
 	},
@@ -13652,35 +13666,77 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Dynatrem",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-dynatrem.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Dyno my Roto",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-dynomyroto.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Eccos",
-		"Width": 2.88,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "keeley-eccos.png"
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Eccos (20 for 20)",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "keeley-eccos-20for20.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Eccos (Black)",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "keeley-eccos-black.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Eccos (Shell Pink)",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "keeley-eccos-shellpink.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "El Rey Dorado",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-el-rey-dorado.png"
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "El Rey Dorado (20 of 20)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-el-rey-dorado-20of20.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "El Rey Dorado (Blackout)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-el-rey-dorado-blackout.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "El Rey Dorado (Custom Shop)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-el-rey-dorado-custom.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Filaments",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-filaments.png"
 	},
@@ -13694,7 +13750,7 @@
 	{
 		"Brand": "Keeley",
 		"Name": "GC-2",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-gc2.png"
 	},
@@ -13708,35 +13764,49 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Holy Fuzz",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-holyfuzz.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Hooke Reverb",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-hooke-reverb.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Hydra",
-		"Width": 2.88,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "keeley-hydra.png"
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Hydra (Ariel Posen)",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "keeley-hydra-arielposen.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Hydra (Custom Shop)",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "keeley-hydra-custom.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Java Boost",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-javaboost.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Katana",
-		"Width": 3.15,
+		"Width": 3.19,
 		"Height": 4.4,
 		"Image": "keeley-katana.png"
 	},
@@ -13750,7 +13820,7 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Katana (Throwback White)",
-		"Width": 3.15,
+		"Width": 3.19,
 		"Height": 4.4,
 		"Image": "keeley-katana-throwback-white.png"
 	},
@@ -13764,7 +13834,7 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Mag Echo",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-magecho.png"
 	},
@@ -13778,9 +13848,23 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Memphis Sun",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-memphis.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Mesmer Astral Delay (Custom Shop)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-mesmer-custom.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Mesmer Astral Delay (Cyanosic Purple)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-mesmer-cyanosic.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -13792,51 +13876,58 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Moon",
-		"Width": 2.65,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-moon.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Neutrino",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-neutrino.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Nocturner",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-nocturner.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Omni",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-omni.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Oxblood",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-oxblood.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "PSI",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-psi.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Phase 24",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-phase24.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Phaser (Daniel Donato)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-phaser-donato.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -13847,15 +13938,22 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Realizer Reverberator",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-realizer.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Red Dirt",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-reddirtoverdrive.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Red Dirt Germanium",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-reddirtgermanium.png"
 	},
@@ -13868,15 +13966,22 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Roto Sonic",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-rotosonic.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Seafoam",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-seafoam.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Stahlhammer",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-stahlhammer.png"
 	},
@@ -13890,9 +13995,23 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Super Phat Mod",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-superphatmod.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Super Phat Mod (Custom Shop)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-superphatmod-custom.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Super Phat Mod (Germanium)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-superphatmod-germanium.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -13904,7 +14023,7 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Tesla MkIII Soviet Fuzz Bender",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-tesla-mk3.png"
 	},
@@ -13917,8 +14036,15 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Vibe o Trem",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-vibeotrem.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Vibe o Verb",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-vibeoverb.png"
 	},
@@ -13931,10 +14057,24 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "XVIII Germanium Overdrive",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-xviii-germanium-od.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "XVIII Phaser",
-		"Width": 2.6,
+		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-xviii-phaser.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "XVIII Phaser (Classic)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-xviii-phaser-classic.png"
 	},
 	{
 		"Brand": "Kemper",
