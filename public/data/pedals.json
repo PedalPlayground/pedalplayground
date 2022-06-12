@@ -13520,7 +13520,7 @@
 		"Brand": "Keeley",
 		"Name": "Aria",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.9,
 		"Image": "keeley-aria.png"
 	},
 	{
@@ -13569,29 +13569,36 @@
 		"Brand": "Keeley",
 		"Name": "Caverns V2",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.9,
 		"Image": "keeley-cavernsv2.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Caverns V2 (Bad Snacks)",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "keeley-cavernsv2-badsnacks.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Caverns V2 (Black Neon)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.9,
 		"Image": "keeley-cavernsv2-blacksneon.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Caverns V2 (Black Sparkle)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.9,
 		"Image": "keeley-cavernsv2-blacksparkle.png"
 	},
 	{
 		"Brand": "Keeley",
-		"Name": "Caverns V2 (Waves)",
+		"Name": "Caverns V2 (Bohemian Bunny)",
 		"Width": 3.7,
-		"Height": 4.88,
-		"Image": "keeley-cavernsv2-waves.png"
+		"Height": 4.9,
+		"Image": "keeley-cavernsv2-bohobunny.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -13632,21 +13639,21 @@
 		"Brand": "Keeley",
 		"Name": "D&M Drive",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.9,
 		"Image": "keeley-dmdrive.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "DCR Drive Chorus Rotary",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.9,
 		"Image": "keeley-dcr.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "DDR Drive Delay Reverb",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.9,
 		"Image": "keeley-ddr.png"
 	},
 	{
@@ -13658,10 +13665,24 @@
 	},
 	{
 		"Brand": "Keeley",
-		"Name": "Darkside",
+		"Name": "Dark Side",
 		"Width": 4.7,
-		"Height": 3.82,
+		"Height": 3.79,
 		"Image": "keeley-darksideworkstation.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Dark Side (20 for 20)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "keeley-darkside-20for20.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Dark Side (Dank Side)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "keeley-darkside-dankside.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -13744,8 +13765,15 @@
 		"Brand": "Keeley",
 		"Name": "Fuzz Bender",
 		"Width": 4.7,
-		"Height": 3.82,
+		"Height": 3.79,
 		"Image": "keeley-fuzz-bender.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Fuzz Bender (Ghost Prism)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "keeley-fuzz-bender-ghostprism.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -13828,8 +13856,15 @@
 		"Brand": "Keeley",
 		"Name": "Loomer",
 		"Width": 4.7,
-		"Height": 3.82,
+		"Height": 3.79,
 		"Image": "keeley-loomer.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Loomer (Sarah Lipstate)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "keeley-loomer-sarahlipstate.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -13837,13 +13872,6 @@
 		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-magecho.png"
-	},
-	{
-		"Brand": "Keeley",
-		"Name": "Monterey",
-		"Width": 4.7,
-		"Height": 3.82,
-		"Image": "keeley-monterey.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -13869,9 +13897,23 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Mini Katana",
-		"Width": 1.74,
+		"Width": 1.77,
 		"Height": 3.62,
 		"Image": "keeley-mini-katana.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Monterey",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "keeley-monterey.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Monterey (Celisse)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "keeley-monterey-celisse.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -14016,9 +14058,16 @@
 	{
 		"Brand": "Keeley",
 		"Name": "Synth-1",
-		"Width": 3.82,
-		"Height": 4.82,
+		"Width": 3.84,
+		"Height": 4.9,
 		"Image": "keeley-synth-1.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Synth-1 (Nick Reinhart)",
+		"Width": 3.84,
+		"Height": 4.9,
+		"Image": "keeley-synth-1-nickreinhart.png"
 	},
 	{
 		"Brand": "Keeley",
