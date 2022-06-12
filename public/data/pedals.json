@@ -6518,6 +6518,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Whammy Ricochet",
+		"Width": 2.96,
+		"Height": 4.75,
+		"Image": "digitech-whammy-ricochet.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Whammy DT",
 		"Width": 8.5,
 		"Height": 7.75,
