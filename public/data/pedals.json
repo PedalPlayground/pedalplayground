@@ -967,6 +967,13 @@
 	},
 	{
 		"Brand": "Anasounds",
+		"Name": "Full Story",
+		"Width": 5.7,
+		"Height": 4.88,
+		"Image": "anasounds-full-story.png"
+	},
+	{
+		"Brand": "Anasounds",
 		"Name": "K+ Daughterboard",
 		"Width": 4.19,
 		"Height": 3.25,
