@@ -15744,6 +15744,20 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Phaser PT9",
+		"Width": 2.93,
+		"Height": 4.88,
+		"Image": "maxon-pt9.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Phaser PT9PRO+",
+		"Width": 2.93,
+		"Height": 4.88,
+		"Image": "maxon-pt9pro.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Real Tube Overdrive ",
 		"Width": 4.8,
 		"Height": 6,
