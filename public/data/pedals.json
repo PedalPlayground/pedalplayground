@@ -11922,6 +11922,13 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "PT9 Phaser",
+		"Width": 2.93,
+		"Height": 4.88,
+		"Image": "ibanez-pt9.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "SD9 Sonic Distortion",
 		"Width": 3,
 		"Height": 4.9,
@@ -15741,13 +15748,6 @@
 		"Width": 2.79,
 		"Height": 4.5,
 		"Image": "maxon-pt999.png"
-	},
-	{
-		"Brand": "Maxon",
-		"Name": "Phaser PT9",
-		"Width": 2.93,
-		"Height": 4.88,
-		"Image": "maxon-pt9.png"
 	},
 	{
 		"Brand": "Maxon",
