@@ -24200,6 +24200,13 @@
 		"Image": "ua-woodrow.png"
 	},
 	{
+		"Brand": "Vaderin",
+		"Name": "HP-X",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "vaderin-hpx.png"
+	},
+	{
 		"Brand": "Vahlbruch",
 		"Name": "Kaluna",
 		"Width": 4.73,
