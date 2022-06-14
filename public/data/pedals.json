@@ -4059,6 +4059,27 @@
 		"Height": 4.72,
 		"Image": "carl-martin-plexiranger.png"
 	},
+	{	
+		"Brand": "Carl Martin",
+		"Name": "PlexiTone",
+		"Width": 7.31,
+		"Height": 4.72,
+		"Image": "carl-martin-plexitone.png"
+	},
+	{	
+		"Brand": "Carl Martin",
+		"Name": "PlexiTone - Single Channel",
+		"Width": 2.83,
+		"Height": 4.41,
+		"Image": "carl-martin-plexitone-single-channel.png"
+	},
+	{	
+		"Brand": "Carl Martin",
+		"Name": "PlexiTone - Single Channel Lo-Gain",
+		"Width": 2.83,
+		"Height": 4.41,
+		"Image": "carl-martin-plexitone-single-channel-lo-gain.png"
+	},
 	{
 		"Brand": "Carl Martin",
 		"Name": "Octa-Switch MK3",
@@ -5285,6 +5306,20 @@
 		"Image": "cornerstone-zefiro.png"
 	},
 	{
+		"Brand": "Costalab",
+		"Name": "Buffer",
+		"Width": 1.50,
+		"Height": 3.85,
+		"Image": "costalab-buffer.png"
+	},
+	{
+		"Brand": "Costalab",
+		"Name": "Custom Muff",
+		"Width": 2.36,
+		"Height": 4.64,
+		"Image": "costalab-custom-muff.png"
+	},
+	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Black Magic mkII",
 		"Width": 3.7,
@@ -5633,6 +5668,13 @@
 		"Width": 7.5,
 		"Height": 4.75,
 		"Image": "customtones-ethosoverdrive.png"
+	},
+	{
+		"Brand": "Cuvave",
+		"Name": "Cube Baby",
+		"Width": 6.37,
+		"Height": 2.40,
+		"Image": "cuvave-cube-baby.png"
 	},
 	{
 		"Brand": "D'Addario",
@@ -13315,6 +13357,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "Crunch Distortion",
+		"Width": 2.83,
+		"Height": 4.72,
+		"Image": "joyo-crunch-distortion.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "D-Seed",
 		"Width": 3.92,
 		"Height": 4.13,
@@ -13326,6 +13375,13 @@
 		"Width": 11.14,
 		"Height": 3.22835,
 		"Image": "joyo-pxl4.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "PXL-8",
+		"Width": 17.83,
+		"Height": 2.637795,
+		"Image": "joyo-pxl8.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -23876,6 +23932,13 @@
 		"Width": 4.73,
 		"Height": 3.94,
 		"Image": "vahlbruch-kaluna.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "Coral Amp",
+		"Width": 1.65,
+		"Height": 3.68,
+		"Image": "valeton-coral-amp.png"
 	},
 	{
 		"Brand": "Valeton",
