@@ -6300,6 +6300,34 @@
 		"Image": "diamond-vibrato.png"
 	},
 	{
+		"Brand": "Diezel",
+		"Name": "Herbert",
+		"Width": 5,
+		"Height": 7.25,
+		"Image": "diezel-herbert.png"
+	},
+	{
+		"Brand": "Diezel",
+		"Name": "VH4",
+		"Width": 5,
+		"Height": 7.25,
+		"Image": "diezel-vh4.png"
+	},
+	{
+		"Brand": "Diezel",
+		"Name": "VH4-2",
+		"Width": 5,
+		"Height": 7.25,
+		"Image": "diezel-vh4-2.png"
+	},
+	{
+		"Brand": "Diezel",
+		"Name": "Zerrer",
+		"Width": 12.5,
+		"Height": 7.07,
+		"Image": "diezel-zerrer.png"
+	},
+	{
 		"Brand": "DigiTech",
 		"Name": "Bad Monkey",
 		"Width": 3,
