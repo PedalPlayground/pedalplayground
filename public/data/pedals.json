@@ -2254,6 +2254,13 @@
 		"Image": "beetronics-vezzpa.png"
 	},
 	{
+		"Brand": "Beetronics",
+		"Name": "Zzombee",
+		"Width": 3.57,
+		"Height": 5.5,
+		"Image": "beetronics-zzombee.png"
+	},
+	{
 		"Brand": "Behringer",
 		"Name": "EQ700 Graphic Equalizer",
 		"Width": 2.755,
