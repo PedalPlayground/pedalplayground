@@ -1569,24 +1569,87 @@
 	},
 	{
 		"Brand": "Arion",
+		"Name": "DDM-1 Digital Delay",
+		"Width": 3,
+		"Height": 5,
+		"Image": "arion-ddm1.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "HU-8500 Stage Tuner",
+		"Width": 3,
+		"Height": 5,
+		"Image": "arion-hu8500.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "MDI-2 Bass Distortion",
+		"Width": 3,
+		"Height": 5,
+		"Image": "arion-mdi1.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "MTE-1 Tubulator",
+		"Width": 3,
+		"Height": 5,
+		"Image": "arion-mte1.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "MEQ-1 Equalizer",
+		"Width": 3,
+		"Height": 5,
+		"Image": "arion-meq1.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "MOC-1 Octave",
+		"Width": 3,
+		"Height": 5,
+		"Image": "arion-moc1.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "SAD-3 Stereo Delay",
+		"Width": 3,
+		"Height": 5,
+		"Image": "arion-sad3.png"
+	},
+	{
+		"Brand": "Arion",
 		"Name": "SCH-1 Stereo Chorus",
-		"Width": 2.87,
+		"Width": 3,
 		"Height": 5,
 		"Image": "arion-sch1.png"
 	},
 	{
 		"Brand": "Arion",
 		"Name": "SCH-Z Stereo Chorus",
-		"Width": 2.87,
+		"Width": 3,
 		"Height": 5,
 		"Image": "arion-schz.png"
 	},
 	{
 		"Brand": "Arion",
 		"Name": "SCH-Z Stereo Chorus EWS Mod",
-		"Width": 2.87,
+		"Width": 3,
 		"Height": 5,
 		"Image": "arion-schz-ews.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "SCO-1 Compressor",
+		"Width": 3,
+		"Height": 5,
+		"Image": "arion-sco1.png"
+	},
+	{
+		"Brand": "Arion",
+		"Name": "SMM-1 Metal Master",
+		"Width": 3,
+		"Height": 5,
+		"Image": "arion-smm1.png"
 	},
 	{
 		"Brand": "Arturia",
