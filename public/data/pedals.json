@@ -2940,6 +2940,13 @@
 		"Image": "bondi-sickas-blue.png"
 	},
 	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As MK3",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "bondi-sickas-mk3.png"
+	},
+	{
 		"Brand": "Boomerang",
 		"Name": "III Phrase Sampler",
 		"Width": 9.45,
@@ -4849,6 +4856,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-generation-loss.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "Generation Loss MKII",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-generation-loss-mk2.png"
 	},
 	{
 		"Brand": "Chase Bliss",
@@ -8846,6 +8860,13 @@
 		"Width": 2.82,
 		"Height": 4.5,
 		"Image": "ehx-ripped-speaker.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "S9 String Ensemble",
+		"Width": 4.19,
+		"Height": 4.75,
+		"Image": "ehx-s9.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
