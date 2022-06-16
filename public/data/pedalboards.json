@@ -448,6 +448,13 @@
 		"Image": "nux-bumblebee-s-top.png"
 	},
 	{
+		"Brand": "NYC Cases",
+		"Name": "2nd Level Riser (20 inches)",
+		"Width": 20,
+		"Height": 6.5,
+		"Image": "nyccases-riser20.png"
+	},
+	{
 		"Brand": "Onstage",
 		"Name": "GPB2000",
 		"Width": 18.75,

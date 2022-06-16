@@ -20182,6 +20182,13 @@
 	},
 	{
 		"Brand": "Radial Engineering",
+		"Name": "Headlight",
+		"Width": 5,
+		"Height": 4.75,
+		"Image": "radial-headlight.png"
+	},
+	{
+		"Brand": "Radial Engineering",
 		"Name": "JDI",
 		"Width": 3.3,
 		"Height": 5,
