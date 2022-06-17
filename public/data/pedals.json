@@ -4063,21 +4063,21 @@
 		"Brand": "Carl Martin",
 		"Name": "PlexiTone",
 		"Width": 7.31,
-		"Height": 4.72,
+		"Height": 4.82,
 		"Image": "carl-martin-plexitone.png"
 	},
 	{	
 		"Brand": "Carl Martin",
 		"Name": "PlexiTone - Single Channel",
-		"Width": 2.83,
-		"Height": 4.41,
+		"Width": 3.14,
+		"Height": 4.42,
 		"Image": "carl-martin-plexitone-single-channel.png"
 	},
 	{	
 		"Brand": "Carl Martin",
 		"Name": "PlexiTone - Single Channel Lo-Gain",
-		"Width": 2.83,
-		"Height": 4.41,
+		"Width": 3.22,
+		"Height": 4.47,
 		"Image": "carl-martin-plexitone-single-channel-lo-gain.png"
 	},
 	{
@@ -5308,15 +5308,15 @@
 	{
 		"Brand": "Costalab",
 		"Name": "Buffer",
-		"Width": 1.50,
+		"Width": 1.88,
 		"Height": 3.85,
 		"Image": "costalab-buffer.png"
 	},
 	{
 		"Brand": "Costalab",
 		"Name": "Custom Muff",
-		"Width": 2.36,
-		"Height": 4.64,
+		"Width": 2.73,
+		"Height": 4.66,
 		"Image": "costalab-custom-muff.png"
 	},
 	{
@@ -5672,8 +5672,8 @@
 	{
 		"Brand": "Cuvave",
 		"Name": "Cube Baby",
-		"Width": 6.37,
-		"Height": 2.40,
+		"Width": 6.38,
+		"Height": 2.56,
 		"Image": "cuvave-cube-baby.png"
 	},
 	{
@@ -6708,15 +6708,15 @@
     {
 		"Brand": "Donner",
 		"Name": "Jet Convolution",
-		"Width": 1.43,
-		"Height": 3.64,
+		"Width": 1.62,
+		"Height": 3.74,
 		"Image": "donner-jet-conv.png"
 	},
     {
 		"Brand": "Donner",
 		"Name": "Noiser Killer",
-		"Width": 1.43,
-		"Height": 3.64,
+		"Width": 1.63,
+		"Height": 3.69,
 		"Image": "donner-noise-killer.png"
 	},
 	{
@@ -13358,7 +13358,7 @@
 	{
 		"Brand": "Joyo",
 		"Name": "Crunch Distortion",
-		"Width": 2.83,
+		"Width": 3.02,
 		"Height": 4.72,
 		"Image": "joyo-crunch-distortion.png"
 	},
@@ -13379,7 +13379,7 @@
 	{
 		"Brand": "Joyo",
 		"Name": "PXL-8",
-		"Width": 17.83,
+		"Width": 18,
 		"Height": 2.637795,
 		"Image": "joyo-pxl8.png"
 	},
@@ -20344,8 +20344,8 @@
 	{
 		"Brand": "Rowin",
 		"Name": "Tuner",
-		"Width": 1.43,
-		"Height": 3.64,
+		"Width": 1.60,
+		"Height": 3.68,
 		"Image": "rowin-tuner.png"
 	},
 	{
