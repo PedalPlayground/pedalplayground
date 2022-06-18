@@ -6797,6 +6797,13 @@
 		"Image": "dreadbox-lethargy.png"
 	},
 	{
+		"Brand": "Drolo",
+		"Name": "Stamme[n] v4",
+		"Width": 3.94,
+		"Height": 4.92,
+		"Image": "drolo_stammen_v4.png"
+	},	
+	{
 		"Brand": "Drybell",
 		"Name": "Vibe Machine V2",
 		"Width": 2.64,
