@@ -91,6 +91,48 @@
 		"Image": "ada-pbf-flanger.png"
 	},
 	{
+		"Brand": "A3 Stompbox",
+		"Name": "Angel",
+		"Width": 2.48,
+		"Height": 4.74,
+		"Image": "a3-angel.png"
+	},
+	{
+		"Brand": "A3 Stompbox",
+		"Name": "Awesome",
+		"Width": 2.48,
+		"Height": 4.74,
+		"Image": "a3-awesome.png"
+	},
+	{
+		"Brand": "A3 Stompbox",
+		"Name": "Custom Expression Pedal (Black)",
+		"Width": 3.24,
+		"Height": 7.08,
+		"Image": "a3-expression-black.png"
+	},
+	{
+		"Brand": "A3 Stompbox",
+		"Name": "Custom Volume Pedal (Black)",
+		"Width": 3.24,
+		"Height": 8.04,
+		"Image": "a3-volume-black.png"
+	},
+	{
+		"Brand": "A3 Stompbox",
+		"Name": "Groovim",
+		"Width": 2.48,
+		"Height": 4.74,
+		"Image": "a3-groovim.png"
+	},
+	{
+		"Brand": "A3 Stompbox",
+		"Name": "Louis Chorus",
+		"Width": 3.28,
+		"Height": 4.92,
+		"Image": "a3-louis.png"
+	},
+	{
 		"Brand": "AA",
 		"Name": "Germanium Fuzz",
 		"Width": 1.65,
