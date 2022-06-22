@@ -5769,10 +5769,17 @@
 	},
 	{
 		"Brand": "D'Addario",
-		"Name": "Tuner",
-		"Width": 2.06,
-		"Height": 4.85,
-		"Image": "daddario-tuner.png"
+		"Name": "CT-20 Tuner",
+		"Width": 2.19,
+		"Height": 4.8,
+		"Image": "daddario-ct20.png"
+	},
+	{
+		"Brand": "D'Addario",
+		"Name": "CT-23 Tuner",
+		"Width": 2.19,
+		"Height": 4.8,
+		"Image": "daddario-ct23.png"
 	},
 	{
 		"Brand": "Danelectro",
@@ -7057,13 +7064,6 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "CAE Wah",
-		"Width": 3,
-		"Height": 5.25,
-		"Image": "dunlop-mc404.png"
-	},
-	{
-		"Brand": "Dunlop",
 		"Name": "CBM95 Cry Baby Mini Wah",
 		"Width": 3,
 		"Height": 5.25,
@@ -7180,6 +7180,13 @@
 		"Width": 3.858,
 		"Height": 10,
 		"Image": "dunlop-kh95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "MC404 CAE Wah",
+		"Width": 4.41,
+		"Height": 10,
+		"Image": "dunlop-mc404.png"
 	},
 	{
     	"Brand": "Dunlop",
