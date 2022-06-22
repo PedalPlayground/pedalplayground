@@ -7189,15 +7189,15 @@
 		"Image": "dunlop-mc404.png"
 	},
 	{
-    	"Brand": "Dunlop",
-    	"Name": "Mini 535Q Wah",
+    "Brand": "Dunlop",
+    "Name": "Mini 535Q Wah",
 		"Width": 3.13,
 		"Height": 5.24,
 		"Image": "dunlop-mini-535q.png"
 	},
 	{
-    	"Brand": "Dunlop",
-    	"Name": "Rotovibe",
+    "Brand": "Dunlop",
+    "Name": "Rotovibe",
 		"Width": 4,
 	 	"Height": 10,
 		"Image": "dunlop-jd4s.png"
@@ -19990,6 +19990,13 @@
 		"Width": 1.75,
 		"Height": 3.75,
 		"Image": "pigtronix-space-rip.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Star Eater",
+		"Width": 4.75,
+		"Height": 3.99,
+		"Image": "pigtronix-star-eater.png"
 	},
 	{
 		"Brand": "Pigtronix",
