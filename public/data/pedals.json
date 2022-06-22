@@ -22787,6 +22787,13 @@
 	},
 	{
 		"Brand": "T-Rex Effects",
+		"Name": "Replica v2",
+		"Width": 3.9,
+		"Height": 4.95,
+		"Image": "trex-replica-v2.png"
+	},
+	{
+		"Brand": "T-Rex Effects",
 		"Name": "Replicator",
 		"Width": 9.25,
 		"Height": 6.82,
