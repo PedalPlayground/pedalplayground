@@ -24579,6 +24579,13 @@
 	},
 	{
 		"Brand": "VS Audio",
+		"Name": "Blackbird Deluxe",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "vsaudio-blackbird-deluxe.png"
+	},
+	{
+		"Brand": "VS Audio",
 		"Name": "Pandora",
 		"Width": 2.86,
 		"Height": 4.88,
