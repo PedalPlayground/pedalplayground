@@ -2184,6 +2184,13 @@
 		"Image": "beetronics-vezzpa.png"
 	},
 	{
+		"Brand": "Beetronics",
+		"Name": "Zzombie",
+		"Width": 2.75,
+		"Height": 5.5,
+		"Image": "beetronics-zzombie.png"
+	},
+	{
 		"Brand": "Behringer",
 		"Name": "EQ700 Graphic Equalizer",
 		"Width": 2.755,
@@ -25640,6 +25647,20 @@
 		"Width": 3.94,
 		"Height": 8.27,
 		"Image": "xotic-wah.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Atomic Overdrive",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "xts-atomic.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Preamp",
+		"Width": 7.4,
+		"Height": 4.7,
+		"Image": "xts-preamp.png"
 	},
 	{
 		"Brand": "Xvive",
