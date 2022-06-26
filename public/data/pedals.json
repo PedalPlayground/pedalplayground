@@ -20938,13 +20938,6 @@
 	},
 	{
 		"Brand": "Seymour Duncan",
-		"Name": "PowerStage 200",
-		"Width": 6.2,
-		"Height": 5,
-		"Image": "seymour-duncan-powerstage-200.png"
-	},
-	{
-		"Brand": "Seymour Duncan",
 		"Name": "Pickup Booster",
 		"Width": 2.6,
 		"Height": 5.21,
@@ -20956,6 +20949,20 @@
 		"Width": 3.5,
 		"Height": 4.94,
 		"Image": "seymour-duncan-polarion.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "PowerStage 170",
+		"Width": 5,
+		"Height": 5.19,
+		"Image": "seymour-duncan-powerstage-170.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "PowerStage 200",
+		"Width": 6.2,
+		"Height": 5,
+		"Image": "seymour-duncan-powerstage-200.png"
 	},
 	{
 		"Brand": "Seymour Duncan",
