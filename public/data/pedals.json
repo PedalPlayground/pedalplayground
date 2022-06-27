@@ -26202,6 +26202,104 @@
 		"Image": "xotic-wah.png"
 	},
 	{
+		"Brand": "XTS",
+		"Name": "Atomic Overdrive",
+		"Width": 3.7,
+		"Height": 4.97,
+		"Image": "xts-atomic.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Dual Precision/Pegasus",
+		"Width": 3.7,
+		"Height": 4.97,
+		"Image": "xts-dual.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Fermata Optical Compressor",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "xts-fermata.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "GE-7 Midrange Graphic Modded",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "xts-gt7.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Imperial Overdrive",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "xts-imperial.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Pegasus Boost",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "xts-pegasus.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Preamp",
+		"Width": 7.4,
+		"Height": 4.9,
+		"Image": "xts-preamp.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Precision Multi-Drive",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "xts-precision.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Shapechanger",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "xts-shapechanger.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Tejas Boost",
+		"Width": 3.7,
+		"Height": 4.97,
+		"Image": "xts-tejas-boost.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Tejas Drive",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "xts-tejas.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Tejas Overdriver",
+		"Width": 3.7,
+		"Height": 4.97,
+		"Image": "xts-tejas-overdriver.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "TR-2 Multi-mode Mod",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "xts-tr2.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Winford Drive",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "xts-winford.png"
+	},
+	{
 		"Brand": "Xvive",
 		"Name": "O1 Tube Squasher",
 		"Width": 1.81,
