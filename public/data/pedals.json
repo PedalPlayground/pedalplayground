@@ -25510,6 +25510,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Metaverse",
+		"Width": 4.8,
+		"Height": 3.83,
+		"Image": "wampler-metaverse.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "Mini Ego",
 		"Width": 1.78,
 		"Height": 3.64,
@@ -25616,8 +25623,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Terraform",
-		"Width": 4.71,
-		"Height": 3.8,
+		"Width": 4.8,
+		"Height": 3.83,
 		"Image": "wampler-terraform.png"
 	},
 	{
