@@ -13728,6 +13728,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "1962x",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-1962x.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "30ms Double Tracker",
 		"Width": 2.67,
 		"Height": 4.4,
