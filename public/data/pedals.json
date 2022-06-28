@@ -11670,6 +11670,13 @@
 	},
 	{
 		"Brand": "Guyatone",
+		"Name": "PS-006 Analog Echo",
+		"Width": 3,
+		"Height": 4.72,
+		"Image": "guyatone-ps006.png"
+	},
+	{
+		"Brand": "Guyatone",
 		"Name": "VT3 Vintage Tremolo",
 		"Width": 3.5,
 		"Height": 5.19,
