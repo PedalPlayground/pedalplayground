@@ -11670,6 +11670,13 @@
 	},
 	{
 		"Brand": "Guyatone",
+		"Name": "PS-006 Analog Echo",
+		"Width": 3,
+		"Height": 4.72,
+		"Image": "guyatone-ps006.png"
+	},
+	{
+		"Brand": "Guyatone",
 		"Name": "VT3 Vintage Tremolo",
 		"Width": 3.5,
 		"Height": 5.19,
@@ -22151,28 +22158,35 @@
 		"Brand": "Strymon",
 		"Name": "blueSky",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-bluesky.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "blueSky (LE Midnight)",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-bluesky-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "blueSky v2",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "strymon-bluesky-v2.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Brigadier",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-brig.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Compadre",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-compadre.png"
 	},
 	{
@@ -22186,71 +22200,106 @@
 		"Brand": "Strymon",
 		"Name": "Deco",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-deco.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Deco (LE Midnight)",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-deco-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Deco v2",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "strymon-deco-v2.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Dig",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-dig.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Dig (LE Midnight)",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-dig-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Dig v2",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "strymon-dig-v2.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "El Capistan",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-elcap.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "El Capistan (LE Midnight)",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-elcap-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "El Capistan v2",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "strymon-elcap-v2.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Flint",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-flint.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Flint v2",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "strymon-flint-v2.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Iridium",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-iridium.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Iridium (Silver)",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-iridium-silver.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Lex",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-lex.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Lex v2",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "strymon-lex-v2.png"
 	},
 	{
 		"Brand": "Strymon",
@@ -22291,14 +22340,14 @@
 		"Brand": "Strymon",
 		"Name": "Nightsky",
 		"Width": 7,
-		"Height": 4.41,
+		"Height": 4.55,
 		"Image": "strymon-nightsky.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "OB.1",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-ob1.png"
 	},
 	{
@@ -22319,14 +22368,14 @@
 		"Brand": "Strymon",
 		"Name": "Ola",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-ola.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Orbit",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-orbit.png"
 	},
 	{
@@ -22340,14 +22389,14 @@
 		"Brand": "Strymon",
 		"Name": "Riverside",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-riverside.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Sunset",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-sunset.png"
 	},
 	{
@@ -22368,14 +22417,14 @@
 		"Brand": "Strymon",
 		"Name": "Volante",
 		"Width": 7,
-		"Height": 4.41,
+		"Height": 4.55,
 		"Image": "strymon-volante.png"
 	},
 	{
 		"Brand": "Strymon",
 		"Name": "Zelzah",
 		"Width": 4,
-		"Height": 4.46,
+		"Height": 4.55,
 		"Image": "strymon-zelzah.png"
 	},
 	{
