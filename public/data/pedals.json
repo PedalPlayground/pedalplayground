@@ -20644,6 +20644,13 @@
 	},
 	{
 		"Brand": "Revv",
+		"Name": "G2 (Canadian Edition)",
+		"Width": 2.79,
+		"Height": 4.96,
+		"Image": "revv-g2-canada.png"
+	},
+	{
+		"Brand": "Revv",
 		"Name": "G2 (Gold)",
 		"Width": 2.75,
 		"Height": 4.87,
@@ -21547,6 +21554,13 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "Los Calientes",
+		"Width": 2.77,
+		"Height": 4.78,
+		"Image": "solidgoldfx-los-calientes.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "NU-33 Vinyl Engine",
 		"Width": 4.67,
 		"Height": 3.75,
@@ -21586,6 +21600,13 @@
 		"Width": 4.67,
 		"Height": 3.74,
 		"Image": "solidgoldfx-spanish-castle.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Stutter-Lite",
+		"Width": 2.58,
+		"Height": 4.38,
+		"Image": "solidgoldfx-stutter-lite.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
@@ -21897,6 +21918,13 @@
 	},
 	{
 		"Brand": "Southampton Pedals",
+		"Name": "All Things Equal",
+		"Width": 2.37,
+		"Height": 4.60,
+		"Image": "southampton-all-things-equal.png"
+	},
+	{
+		"Brand": "Southampton Pedals",
 		"Name": "Booster Fuzz",
 		"Width": 2.6,
 		"Height": 4.89,
@@ -21922,6 +21950,13 @@
 		"Width": 3.87,
 		"Height": 4.87,
 		"Image": "southampton-indie-dream.png"
+	},
+	{
+		"Brand": "Southampton Pedals",
+		"Name": "The Imposter",
+		"Width": 2.37,
+		"Height": 4.60,
+		"Image": "southampton-imposter-fuzz.png"
 	},
 	{
 		"Brand": "Southampton Pedals",
@@ -26802,5 +26837,12 @@
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-woollymammoth-vexter.png"
+	},
+	{
+		"Brand": "Lurch Audio",
+		"Name": "Sorghum",
+		"Width": 3.50,
+		"Height": 4.80,
+		"Image": "lurch-audio-sorghum.png"
 	}
 ]
