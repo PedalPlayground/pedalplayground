@@ -18028,7 +18028,7 @@
 		"Brand": "Mythos",
 		"Name": "Air Lane Drive",
 		"Width": 4.7,
-		"Height": 3.72,
+		"Height": 3.8,
 		"Image": "mythos-air-lane-drive.png"
 	},
 	{
@@ -18139,8 +18139,8 @@
 	{
 		"Brand": "Mythos",
 		"Name": "Mjolnir (Wildwood Edition)",
-		"Width": 4.6,
-		"Height": 3.71,
+		"Width": 4.7,
+		"Height": 3.8,
 		"Image": "mythos-mjolner-wildwood.png"
 	},
 	{
@@ -18167,9 +18167,16 @@
 	{
 		"Brand": "Mythos",
 		"Name": "SusMaryOsep",
-		"Width": 4.6,
-		"Height": 3.73,
+		"Width": 4.7,
+		"Height": 3.81,
 		"Image": "mythos-susmaryosep.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "SusMaryOsep v2",
+		"Width": 4.7,
+		"Height": 3.8,
+		"Image": "mythos-susmaryosep-v2.png"
 	},
 	{
 		"Brand": "Nobels",
