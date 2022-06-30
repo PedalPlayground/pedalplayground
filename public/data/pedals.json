@@ -23872,6 +23872,20 @@
 	},
 	{
 		"Brand": "Tech21",
+		"Name": "Sansamp Classic",
+		"Width": 3.79,
+		"Height": 4.5,
+		"Image": "tech21-sansamp-classic.png"
+	},
+	{
+		"Brand": "Tech21",
+		"Name": "Sansamp GT2",
+		"Width": 3.86,
+		"Height": 4.5,
+		"Image": "tech21-sansamp-gt2.png"
+	},
+	{
+		"Brand": "Tech21",
 		"Name": "Sansamp Paradriver",
 		"Width": 4.5,
 		"Height": 3.6,
