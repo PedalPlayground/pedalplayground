@@ -25776,9 +25776,9 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Aqua Puss Mk III",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Name": "Aqua Puss mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-aqua=puss-mk3.png"
 	},
 	{
@@ -25790,9 +25790,9 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Blue Hippo Mk III",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Name": "Blue Hippo mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-blue-hippo-mk3.png"
 	},
 	{
@@ -25805,8 +25805,8 @@
 	{
 		"Brand": "Way Huge",
 		"Name": "Conspiracy Theory",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-conspiracy-theory.png"
 	},
 	{
@@ -25818,23 +25818,23 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Green Rhino Mk II",
+		"Name": "Green Rhino mkII",
 		"Width": 3.86,
 		"Height": 5,
 		"Image": "wayhuge-greenrhino.png"
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Green Rhino Mk IV",
+		"Name": "Green Rhino mkIV",
 		"Width": 3.26,
 		"Height": 5,
 		"Image": "wayhuge-greenrhino-mkiv.png"
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Green Rhino Mk V",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Name": "Green Rhino mkV",
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-greenrhino-mkv.png"
 	},
 	{
@@ -25868,8 +25868,8 @@
 	{
 		"Brand": "Way Huge",
 		"Name": "Pork & Pickle (Smalls)",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-pork-pickle-small.png"
 	},
 	{
@@ -25895,6 +25895,13 @@
 	},
 	{
 		"Brand": "Way Huge",
+		"Name": "Red Llama mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
+		"Image": "wayhuge-redllama-mk3.png"
+	},
+	{
+		"Brand": "Way Huge",
 		"Name": "Russian Pickle",
 		"Width": 3.26,
 		"Height": 5,
@@ -25902,7 +25909,14 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Saffron Squeeze Mk II",
+		"Name": "Russian Pickle mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
+		"Image": "wayhuge-russianpickle-small.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Saffron Squeeze mkII",
 		"Width": 3.26,
 		"Height": 5,
 		"Image": "wayhuge-saffron-squeeze-mk2.png"
@@ -25916,23 +25930,16 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Russian Pickle",
-		"Width": 2.4,
-		"Height": 4.1,
-		"Image": "wayhuge-russianpickle-small.png"
-	},
-	{
-		"Brand": "Way Huge",
 		"Name": "STO",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-sto.png"
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Supa-Lead Mk III",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Name": "Supa-Lead mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-supa-lead-mk3.png"
 	},
 	{
@@ -25951,16 +25958,16 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Swollen Pickle Mk IIs",
+		"Name": "Swollen Pickle mkIIs",
 		"Width": 3.26,
 		"Height": 5,
 		"Image": "wayhuge-swollenpickle-mk2s.png"
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Swollen Pickle Mk III",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Name": "Swollen Pickle mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-swollenpickle-mk3.png"
 	},
 	{
