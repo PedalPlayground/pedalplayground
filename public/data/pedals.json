@@ -20286,6 +20286,13 @@
 		"Image": "proco-turbo-rat.png"
 	},
 	{
+		"Brand": "ProAnalog Devices",
+		"Name": "Manticore",
+		"Width": 4.7,
+		"Height": 3.76,
+		"Image": "proanalog-manticore.png"
+	},
+	{
 		"Brand": "Providence",
 		"Name": "Chrono",
 		"Width": 3.98,
