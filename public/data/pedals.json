@@ -2612,6 +2612,13 @@
 	},
 	{
 		"Brand": "Blackstar",
+		"Name": "Dept. 10 Dual Distortion",
+		"Width": 6.18,
+		"Height": 4.6,
+		"Image": "blackstar-dept10-dual-dist.png"
+	},
+	{
+		"Brand": "Blackstar",
 		"Name": "HT Dual",
 		"Width": 6.72,
 		"Height": 4.8,
@@ -10925,6 +10932,13 @@
 		"Width": 4.37,
 		"Height": 4.1,
 		"Image": "fulltonecustom-wah-full.png"
+	},
+	{
+		"Brand": "Funny Little Boxes",
+		"Name": "1991",
+		"Width": 2.4,
+		"Height": 4.53,
+		"Image": "flb-1991.png"
 	},
 	{
 		"Brand": "Fuzzrocious Pedals",
