@@ -4495,6 +4495,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Callisto MKII",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-callisto-mk2.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Cloak",
 		"Width": 2.6,
 		"Height": 4.33,
@@ -10971,8 +10978,8 @@
 	{
 		"Brand": "Funny Little Boxes",
 		"Name": "1991",
-		"Width": 2.4,
-		"Height": 4.53,
+		"Width": 2.5,
+		"Height": 4.84,
 		"Image": "flb-1991.png"
 	},
 	{
