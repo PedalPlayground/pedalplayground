@@ -218,6 +218,13 @@
 	},
 	{
 		"Brand": "Aclam",
+		"Name": "The Woman Tone",
+		"Width": 5.4,
+		"Height": 3.59,
+		"Image": "aclam-thewomantone.png"
+	},
+	{
+		"Brand": "Aclam",
 		"Name": "Windmiller Preamp",
 		"Width": 5.4,
 		"Height": 3.59,
