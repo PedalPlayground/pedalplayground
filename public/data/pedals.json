@@ -2619,6 +2619,13 @@
 	},
 	{
 		"Brand": "Blackstar",
+		"Name": "Dept. 10 Dual Distortion",
+		"Width": 6.18,
+		"Height": 4.6,
+		"Image": "blackstar-dept10-dual-dist.png"
+	},
+	{
+		"Brand": "Blackstar",
 		"Name": "HT Dual",
 		"Width": 6.72,
 		"Height": 4.8,
@@ -4697,6 +4704,13 @@
 		"Image": "catalinbread-zeropoint.png"
 	},
 	{
+		"Brand": "Caveman",
+		"Name": "DST1",
+		"Width": 4.33,
+		"Height": 5.71,
+		"Image": "caveman-dst1.png"
+	},
+	{
 		"Brand": "Ceriatone",
 		"Name": "Centura",
 		"Width": 6.5,
@@ -5931,8 +5945,8 @@
 	{
 		"Brand": "Darkglass",
 		"Name": "Hyper Luminal",
-		"Width": 3,
-		"Height": 4.4,
+		"Width": 3.05,
+		"Height": 4.37,
 		"Image": "darkglass-hyper-luminal.png"
 	},
 	{
@@ -10955,6 +10969,13 @@
 		"Image": "fulltonecustom-wah-full.png"
 	},
 	{
+		"Brand": "Funny Little Boxes",
+		"Name": "1991",
+		"Width": 2.4,
+		"Height": 4.53,
+		"Image": "flb-1991.png"
+	},
+	{
 		"Brand": "Fuzzrocious Pedals",
 		"Name": "420 Fuzz",
 		"Width": 3.7,
@@ -11405,7 +11426,7 @@
 	{
 		"Brand": "Great Eastern FX Co.",
 		"Name": "Small Speaker Overdrive",
-	         "Width": 2.5625,
+	    "Width": 2.5625,
 		"Height": 4.8125,
 		"Image": "great-eastern-sso.png"
 	},
@@ -11422,6 +11443,20 @@
 		"Width": 4.85,
 		"Height": 4.20,
 		"Image": "gcp-infatuator-yellow.png"
+	},
+	{
+		"Brand": "Greenhouse Effects",
+		"Name": "Retro Sky Delay",
+		"Width": 2.38,
+		"Height": 4.5,
+		"Image": "greenhouse-retro-sky.png"
+	},
+	{
+		"Brand": "Greenhouse Effects",
+		"Name": "Stonefish Analog Chorus/Vibrato",
+		"Width": 2.38,
+		"Height": 4.5,
+		"Image": "greenhouse-stonefish.png"
 	},
 	{
 		"Brand": "Greer Amps",
@@ -24685,15 +24720,15 @@
 	{
 		"Brand": "Vick Audio",
 		"Name": "'73 Ram's Head",
-		"Width": 3.7,
-		"Height": 4.72,
+		"Width": 2.25,
+		"Height": 4.25,
 		"Image": "vick-73-rams-head.png"
 	},
 	{
 		"Brand": "Vick Audio",
 		"Name": "1861",
-		"Width": 3.7,
-		"Height": 4.72,
+		"Width": 2.25,
+		"Height": 4.25,
 		"Image": "vick-1861.png"
 	},
     {
@@ -26366,7 +26401,7 @@
 		"Brand": "XTS",
 		"Name": "Atomic Overdrive",
 		"Width": 3.7,
-		"Height": 4.97,
+		"Height": 4.7,
 		"Image": "xts-atomic.png"
 	},
 	{
@@ -26810,6 +26845,14 @@
 		"Height": 7.5,
 		"Image": "zvex-probewah.png"
 	},
+	{
+		"Brand": "Zvex",
+		"Name": "Russian Fuzz Factory",
+		"Width": 2.58,
+		"Height": 4.31,
+		"Image": "zvex-russian-fuzz-factory.png"
+	},
+
 	{
 		"Brand": "Zvex",
 		"Name": "Silicon Fuzz Factory",
