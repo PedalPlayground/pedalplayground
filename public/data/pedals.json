@@ -218,6 +218,13 @@
 	},
 	{
 		"Brand": "Aclam",
+		"Name": "The Woman Tone",
+		"Width": 5.4,
+		"Height": 3.59,
+		"Image": "aclam-thewomantone.png"
+	},
+	{
+		"Brand": "Aclam",
 		"Name": "Windmiller Preamp",
 		"Width": 5.4,
 		"Height": 3.59,
@@ -6161,6 +6168,13 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Space Bender",
+		"Width": 2.5,
+		"Height": 4.82,
+		"Image": "deathbyaudio-space-bender.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Speed Tripper",
 		"Width": 2.61,
 		"Height": 5.15,
@@ -10076,7 +10090,7 @@
 		"Brand": "Fjord Fuzz",
 		"Name": "Berserk",
 		"Width": 2.52,
-		"Height": 4.78,
+		"Height": 4.8,
 		"Image": "fjord-berserk.png"
 	},
 	{
@@ -10090,28 +10104,42 @@
 		"Brand": "Fjord Fuzz",
 		"Name": "Embla",
 		"Width": 2.52,
-		"Height": 4.78,
+		"Height": 4.8,
 		"Image": "fjord-embla.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Fenris",
 		"Width": 2.52,
-		"Height": 4.78,
+		"Height": 4.8,
 		"Image": "fjord-fenris.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Frei",
+		"Width": 2.52,
+		"Height": 4.93,
+		"Image": "fjord-frei.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Freia",
+		"Width": 2.52,
+		"Height": 4.8,
+		"Image": "fjord-freia.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Kvasir",
 		"Width": 2.52,
-		"Height": 4.75,
+		"Height": 4.8,
 		"Image": "fjord-kvasir.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Odin",
 		"Width": 2.52,
-		"Height": 4.78,
+		"Height": 4.8,
 		"Image": "fjord-odin.png"
 	},
 	{
@@ -18007,7 +18035,7 @@
 		"Brand": "Mythos",
 		"Name": "Air Lane Drive",
 		"Width": 4.7,
-		"Height": 3.72,
+		"Height": 3.8,
 		"Image": "mythos-air-lane-drive.png"
 	},
 	{
@@ -18118,8 +18146,8 @@
 	{
 		"Brand": "Mythos",
 		"Name": "Mjolnir (Wildwood Edition)",
-		"Width": 4.6,
-		"Height": 3.71,
+		"Width": 4.7,
+		"Height": 3.8,
 		"Image": "mythos-mjolner-wildwood.png"
 	},
 	{
@@ -18128,6 +18156,13 @@
 		"Width": 3.7,
 		"Height": 4.83,
 		"Image": "mythos-olympus.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Olympus (2022)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-olympus-2022.png"
 	},
 	{
 		"Brand": "Mythos",
@@ -18146,9 +18181,16 @@
 	{
 		"Brand": "Mythos",
 		"Name": "SusMaryOsep",
-		"Width": 4.6,
-		"Height": 3.73,
+		"Width": 4.7,
+		"Height": 3.81,
 		"Image": "mythos-susmaryosep.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "SusMaryOsep v2",
+		"Width": 4.7,
+		"Height": 3.8,
+		"Image": "mythos-susmaryosep-v2.png"
 	},
 	{
 		"Brand": "Nobels",
@@ -18902,22 +18944,50 @@
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Expression Ramper",
-		"Width": 1.63,
-		"Height": 3.76,
+		"Width": 1.69,
+		"Height": 3.88,
 		"Image": "obne-ramper.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
-		"Name": "Expression Ramper (Excess)",
-		"Width": 1.63,
-		"Height": 3.72,
+		"Name": "Expression Ramper (Excess Pink)",
+		"Width": 1.69,
+		"Height": 3.88,
 		"Image": "obne-ramper-excess.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Neon Blue)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-neonblue.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Neon Green)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-neongreen.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Neon Pink)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-neonpink.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Screen Violence)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-screenviolence.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Expression Slider",
-		"Width": 1.51,
-		"Height": 3.76,
+		"Width": 1.5,
+		"Height": 3.88,
 		"Image": "obne-slider.png"
 	},
 	{
@@ -20256,6 +20326,13 @@
 		"Width": 3.5,
 		"Height": 4,
 		"Image": "proco-turbo-rat.png"
+	},
+	{
+		"Brand": "ProAnalog Devices",
+		"Name": "Manticore",
+		"Width": 4.7,
+		"Height": 3.76,
+		"Image": "proanalog-manticore.png"
 	},
 	{
 		"Brand": "Providence",
@@ -22156,21 +22233,21 @@
 	},
 	{
 		"Brand": "Strymon",
-		"Name": "blueSky",
+		"Name": "BlueSky",
 		"Width": 4,
 		"Height": 4.55,
 		"Image": "strymon-bluesky.png"
 	},
 	{
 		"Brand": "Strymon",
-		"Name": "blueSky (LE Midnight)",
+		"Name": "BlueSky (LE Midnight)",
 		"Width": 4,
 		"Height": 4.55,
 		"Image": "strymon-bluesky-midnight.png"
 	},
 	{
 		"Brand": "Strymon",
-		"Name": "blueSky v2",
+		"Name": "BlueSky v2",
 		"Width": 4,
 		"Height": 4.55,
 		"Image": "strymon-bluesky-v2.png"
@@ -23841,6 +23918,20 @@
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "tech21-leeds.png"
+	},
+	{
+		"Brand": "Tech21",
+		"Name": "Sansamp Classic",
+		"Width": 3.79,
+		"Height": 4.5,
+		"Image": "tech21-sansamp-classic.png"
+	},
+	{
+		"Brand": "Tech21",
+		"Name": "Sansamp GT2",
+		"Width": 3.86,
+		"Height": 4.5,
+		"Image": "tech21-sansamp-gt2.png"
 	},
 	{
 		"Brand": "Tech21",
@@ -25727,9 +25818,9 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Aqua Puss Mk III",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Name": "Aqua Puss mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-aqua=puss-mk3.png"
 	},
 	{
@@ -25741,9 +25832,9 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Blue Hippo Mk III",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Name": "Blue Hippo mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-blue-hippo-mk3.png"
 	},
 	{
@@ -25756,8 +25847,8 @@
 	{
 		"Brand": "Way Huge",
 		"Name": "Conspiracy Theory",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-conspiracy-theory.png"
 	},
 	{
@@ -25769,23 +25860,23 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Green Rhino Mk II",
+		"Name": "Green Rhino mkII",
 		"Width": 3.86,
 		"Height": 5,
 		"Image": "wayhuge-greenrhino.png"
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Green Rhino Mk IV",
+		"Name": "Green Rhino mkIV",
 		"Width": 3.26,
 		"Height": 5,
 		"Image": "wayhuge-greenrhino-mkiv.png"
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Green Rhino Mk V",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Name": "Green Rhino mkV",
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-greenrhino-mkv.png"
 	},
 	{
@@ -25819,8 +25910,8 @@
 	{
 		"Brand": "Way Huge",
 		"Name": "Pork & Pickle (Smalls)",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-pork-pickle-small.png"
 	},
 	{
@@ -25846,6 +25937,13 @@
 	},
 	{
 		"Brand": "Way Huge",
+		"Name": "Red Llama mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
+		"Image": "wayhuge-redllama-mk3.png"
+	},
+	{
+		"Brand": "Way Huge",
 		"Name": "Russian Pickle",
 		"Width": 3.26,
 		"Height": 5,
@@ -25853,7 +25951,14 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Saffron Squeeze Mk II",
+		"Name": "Russian Pickle mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
+		"Image": "wayhuge-russianpickle-small.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Saffron Squeeze mkII",
 		"Width": 3.26,
 		"Height": 5,
 		"Image": "wayhuge-saffron-squeeze-mk2.png"
@@ -25867,23 +25972,16 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Russian Pickle",
-		"Width": 2.4,
-		"Height": 4.1,
-		"Image": "wayhuge-russianpickle-small.png"
-	},
-	{
-		"Brand": "Way Huge",
 		"Name": "STO",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-sto.png"
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Supa-Lead Mk III",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Name": "Supa-Lead mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-supa-lead-mk3.png"
 	},
 	{
@@ -25902,16 +26000,16 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Swollen Pickle Mk IIs",
+		"Name": "Swollen Pickle mkIIs",
 		"Width": 3.26,
 		"Height": 5,
 		"Image": "wayhuge-swollenpickle-mk2s.png"
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Swollen Pickle Mk III",
-		"Width": 2.4,
-		"Height": 4.1,
+		"Name": "Swollen Pickle mkIII",
+		"Width": 2.5,
+		"Height": 4.37,
 		"Image": "wayhuge-swollenpickle-mk3.png"
 	},
 	{
