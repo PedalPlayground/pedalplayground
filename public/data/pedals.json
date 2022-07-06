@@ -18152,6 +18152,13 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Olympus (2022)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-olympus-2022.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Oracle",
 		"Width": 3.97,
 		"Height": 4.83,
@@ -18930,22 +18937,50 @@
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Expression Ramper",
-		"Width": 1.63,
-		"Height": 3.76,
+		"Width": 1.69,
+		"Height": 3.88,
 		"Image": "obne-ramper.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
-		"Name": "Expression Ramper (Excess)",
-		"Width": 1.63,
-		"Height": 3.72,
+		"Name": "Expression Ramper (Excess Pink)",
+		"Width": 1.69,
+		"Height": 3.88,
 		"Image": "obne-ramper-excess.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Neon Blue)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-neonblue.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Neon Green)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-neongreen.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Neon Pink)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-neonpink.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Screen Violence)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-screenviolence.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Expression Slider",
-		"Width": 1.51,
-		"Height": 3.76,
+		"Width": 1.5,
+		"Height": 3.88,
 		"Image": "obne-slider.png"
 	},
 	{
