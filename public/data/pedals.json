@@ -11432,9 +11432,16 @@
 	},
 	{
 		"Brand": "Great Eastern FX Co.",
+		"Name": "Design-A-Drive",
+	  "Width": 2.6,
+		"Height": 5,
+		"Image": "great-eastern-dad.png"
+	},
+	{
+		"Brand": "Great Eastern FX Co.",
 		"Name": "Small Speaker Overdrive",
-	    "Width": 2.5625,
-		"Height": 4.8125,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "great-eastern-sso.png"
 	},
 	{
