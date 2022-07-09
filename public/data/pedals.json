@@ -4447,15 +4447,15 @@
 	{
 		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe",
-		"Width": 4.68,
-		"Height": 3.77,
+		"Width": 4.7,
+		"Height": 3.82,
 		"Image": "catalinbread-belleepochdlx.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe (Black Edition)",
-		"Width": 4.68,
-		"Height": 3.77,
+		"Width": 4.7,
+		"Height": 3.82,
 		"Image": "catalinbread-belleepochdlx-black.png"
 	},
 	{
@@ -4475,8 +4475,8 @@
 	{
 		"Brand": "Catalinbread",
 		"Name": "CB Tap",
-		"Width": 1.59,
-		"Height": 3.75,
+		"Width": 1.64,
+		"Height": 3.81,
 		"Image": "catalinbread-cb-tap.png"
 	},
 	{
@@ -4510,8 +4510,8 @@
 	{
 		"Brand": "Catalinbread",
 		"Name": "Coriolis Effect",
-		"Width": 4.68,
-		"Height": 3.77,
+		"Width": 4.7,
+		"Height": 3.82,
 		"Image": "catalinbread-coriolis-effect.png"
 	},
 	{
@@ -4551,10 +4551,10 @@
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Epoch Boost (Black Edition)",
-		"Width": 2.6,
-		"Height": 4.33,
-		"Image": "catalinbread-epoch-boost-black.png"
+		"Name": "Epoch Pre",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "catalinbread-epoch-pre.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -4621,6 +4621,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Montavillian",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-montavillian.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Naga Viper",
 		"Width": 2.6,
 		"Height": 4.33,
@@ -4684,10 +4691,24 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Talisman (Gallery Series)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-talisman-gallery.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Topanga",
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-topanga.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Topanga (Burnside)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-topanga-burnside.png"
 	},
 	{
 		"Brand": "Catalinbread",
