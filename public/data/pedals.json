@@ -5461,9 +5461,16 @@
 	},
 	{
 		"Brand": "Cornerstone",
+		"Name": "Aquarium",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "cornerstone-aquarium.png"
+	},
+	{
+		"Brand": "Cornerstone",
 		"Name": "Gladio",
 		"Width": 4.7,
-		"Height": 3.7,
+		"Height": 3.82,
 		"Image": "cornerstone-gladio.png"
 	},
 	{
