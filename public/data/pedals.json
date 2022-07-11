@@ -5455,8 +5455,8 @@
 	{
 		"Brand": "Cornerstone",
 		"Name": "Antique",
-		"Width": 2.64,
-		"Height": 5,
+		"Width": 2.6,
+		"Height": 4.99,
 		"Image": "cornerstone-antique.png"
 	},
 	{
@@ -5476,8 +5476,8 @@
 	{
 		"Brand": "Cornerstone",
 		"Name": "Gladio SC",
-		"Width": 2.64,
-		"Height": 5,
+		"Width": 2.6,
+		"Height": 4.99,
 		"Image": "cornerstone-gladio-sc.png"
 	},
 	{
