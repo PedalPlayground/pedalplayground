@@ -20421,9 +20421,30 @@
 	{
 		"Brand": "Quiet Theory",
 		"Name": "Prelude",
-		"Width": 3.3,
-		"Height": 4.4,
+		"Width": 3.7,
+		"Height": 4.89,
 		"Image": "quiettheory-prelude.png"
+	},
+	{
+		"Brand": "Quiet Theory",
+		"Name": "Prelude (Pink)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "quiettheory-prelude-pink.png"
+	},
+	{
+		"Brand": "Quiet Theory",
+		"Name": "Prelude (Purple)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "quiettheory-prelude-purple.png"
+	},
+	{
+		"Brand": "Quiet Theory",
+		"Name": "Prelude (White)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "quiettheory-prelude-white.png"
 	},
 	{
 		"Brand": "Quilter Labs",
