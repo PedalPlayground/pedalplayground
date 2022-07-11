@@ -11804,16 +11804,51 @@
 	{
 		"Brand": "Hamstead",
 		"Name": "Ascent",
-		"Width": 2.75591,
-		"Height": 5.11811,
+		"Width": 2.76,
+		"Height": 5.13,
 		"Image": "hamstead-ascent.png"
 	},
 	{
 		"Brand": "Hamstead",
+		"Name": "Comet",
+		"Width": 2.76,
+		"Height": 5.13,
+		"Image": "hamstead-comet.png"
+	},
+	{
+		"Brand": "Hamstead",
 		"Name": "Odyssey",
-		"Width": 2.75591,
-		"Height": 5.11811,
+		"Width": 2.76,
+		"Height": 5.13,
 		"Image": "hamstead-odyssey.png"
+	},
+	{
+		"Brand": "Hamstead",
+		"Name": "Signature",
+		"Width": 2.76,
+		"Height": 5.13,
+		"Image": "hamstead-signature.png"
+	},
+	{
+		"Brand": "Hamstead",
+		"Name": "Subspace",
+		"Width": 2.76,
+		"Height": 5.13,
+		"Image": "hamstead-subspace.png"
+	},
+	{
+		"Brand": "Hamstead",
+		"Name": "Subspace GE",
+		"Width": 2.76,
+		"Height": 5.13,
+		"Image": "hamstead-subspace-ge.png"
+	},
+	{
+		"Brand": "Hamstead",
+		"Name": "Zenith",
+		"Width": 2.76,
+		"Height": 5.13,
+		"Image": "hamstead-zenith.png"
 	},
 	{
 		"Brand": "Harley Benton",
