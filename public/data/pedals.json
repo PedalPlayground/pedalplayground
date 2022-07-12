@@ -20413,10 +20413,17 @@
 	},
 	{
 		"Brand": "Radial Engineering",
-		"Name": "J48",
-		"Width": 3.3,
+		"Name": "EXTC-SA",
+		"Width": 6.3,
 		"Height": 5,
-		"Image": "radial-j48.png"
+		"Image": "radial-extc-sa.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "EXTC Stereo",
+		"Width": 6.3,
+		"Height": 5,
+		"Image": "radial-extc-stereo.png"
 	},
 	{
 		"Brand": "Radial Engineering",
@@ -20427,6 +20434,13 @@
 	},
 	{
 		"Brand": "Radial Engineering",
+		"Name": "J48",
+		"Width": 3.3,
+		"Height": 5,
+		"Image": "radial-j48.png"
+	},
+	{
+		"Brand": "Radial Engineering",
 		"Name": "JDI",
 		"Width": 3.3,
 		"Height": 5,
@@ -20434,10 +20448,24 @@
 	},
 	{
 		"Brand": "Radial Engineering",
+		"Name": "JDI Duplex",
+		"Width": 6.3,
+		"Height": 5,
+		"Image": "radial-jdi-duplex.png"
+	},
+	{
+		"Brand": "Radial Engineering",
 		"Name": "Key Largo",
 		"Width": 8.4,
 		"Height": 5,
 		"Image": "radial-key-largo.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "Phazer",
+		"Width": 6.3,
+		"Height": 5,
+		"Image": "radial-phazer.png"
 	},
 	{
 		"Brand": "Radial Engineering",
