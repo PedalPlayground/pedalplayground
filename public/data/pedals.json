@@ -7120,6 +7120,13 @@
 	},
 	{
     "Brand": "Dunlop",
+    "Name": "Cry Baby 105Q Bass Wah",
+		"Width": 4.07,
+		"Height": 10,
+		"Image": "dunlop-105q.png"
+	},
+	{
+    "Brand": "Dunlop",
     "Name": "Cry Baby 535Q Mult-Wah",
 		"Width": 4.75,
 		"Height": 10,
@@ -7134,24 +7141,66 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "BG95 Buddy Guy Signature Cry Baby",
+		"Name": "Cry Baby BG95 Buddy Guy Signature Wah",
 		"Width": 4,
 		"Height": 10,
 		"Image": "dunlop-bg95.png"
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "CBM95 Cry Baby Mini Wah",
+		"Name": "Cry Baby CBJ95 Junior Wah",
+		"Width": 4.00,
+		"Height": 8.00,
+		"Image": "dunlop-crybaby-jr.png"
+	},
+	{
+   	"Brand": "Dunlop",
+    "Name": "Cry Baby CBM105Q Mini Bass Wah",
+		"Width": 3.08,
+		"Height": 5.25,
+		"Image": "dunlop-cbm105q.png"
+	},
+	{
+    "Brand": "Dunlop",
+    "Name": "Cry Baby CBM535Q Mini Wah",
+		"Width": 3.13,
+		"Height": 5.24,
+		"Image": "dunlop-mini-535q.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby CBM95 Mini Wah",
 		"Width": 3,
 		"Height": 5.25,
 		"Image": "dunlop-crybabymini.png"
 	},
 	{
+   	"Brand": "Dunlop",
+    "Name": "Cry Baby GCB95 Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-wah.png"
+	},
+	{
 		"Brand": "Dunlop",
-		"Name": "Crybaby Junior",
-		"Width": 4.00,
-		"Height": 8.00,
-		"Image": "dunlop-crybaby-jr.png"
+	 	"Name": "Cry Baby JB95 Joe Bonamassa Wah",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "dunlop-jb95.png"
+ 	},
+	{
+		"Brand": "Dunlop",
+	 	"Name": "Cry Baby JC95 Jerry Cantrell Wah",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "dunlop-jerry-cantrell.png"
+ 	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby KH95 Kirk Hammett Wah",
+		"Width": 3.858,
+		"Height": 10,
+		"Image": "dunlop-kh95.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -7209,28 +7258,7 @@
 		"Height": 3.5,
 		"Image": "dunlop-fuzzface-germanium-mini.png"
 	},
-  	{
-   		"Brand": "Dunlop",
-    	"Name": "GCB95 Cry Baby Wah",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-wah.png"
-	},
-	{
-		"Brand": "Dunlop",
-	 	"Name": "JB95 Joe Bonamassa Cry Baby",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "dunlop-jb95.png"
- 	},
-	{
-		"Brand": "Dunlop",
-	 	"Name": "JC95 Jerry Cantrell Cry Baby",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "dunlop-jerry-cantrell.png"
- 	},
-  	{
+  {
 		"Brand": "Dunlop",
 		"Name": "Jimi Hendrix Fuzz Face",
 		"Width": 7.0,
@@ -7253,24 +7281,10 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "KH95 Kirk Hammett Cry Baby",
-		"Width": 3.858,
-		"Height": 10,
-		"Image": "dunlop-kh95.png"
-	},
-	{
-		"Brand": "Dunlop",
 		"Name": "MC404 CAE Wah",
 		"Width": 4.41,
 		"Height": 10,
 		"Image": "dunlop-mc404.png"
-	},
-	{
-    "Brand": "Dunlop",
-    "Name": "Mini 535Q Wah",
-		"Width": 3.13,
-		"Height": 5.24,
-		"Image": "dunlop-mini-535q.png"
 	},
 	{
     "Brand": "Dunlop",
