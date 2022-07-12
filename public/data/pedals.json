@@ -20439,6 +20439,27 @@
 		"Height": 5,
 		"Image": "radial-key-largo.png"
 	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "StageBug SB-1",
+		"Width": 4.5,
+		"Height": 1.85,
+		"Image": "radial-sb1.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "StageBug SB-2",
+		"Width": 4.5,
+		"Height": 1.85,
+		"Image": "radial-sb2.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "StageBug SB-4",
+		"Width": 4.5,
+		"Height": 1.85,
+		"Image": "radial-sb4.png"
+	},
  	{
 		"Brand": "Radial Engineering",
 		"Name": "Twin-City",
