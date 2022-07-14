@@ -5433,6 +5433,13 @@
 	},
 	{
 		"Brand": "Cornerstone",
+		"Name": "Aquarium",
+		"Width": 4.527559,
+		"Height": 3.54331,
+		"Image": "cornerstone-aquarium.png"
+	},
+	{
+		"Brand": "Cornerstone",
 		"Name": "Gladio",
 		"Width": 4.7,
 		"Height": 3.7,
@@ -20333,6 +20340,13 @@
 		"Width": 6,
 		"Height": 5,
 		"Image": "poly-digit.png"
+	},
+	{
+		"Brand": "Pro Co",
+		"Name": "Deucetone Rat",
+		"Width": 8.19,
+		"Height": 4.57,
+		"Image": "proco-deucetone-rat.png"
 	},
 	{
 		"Brand": "Pro Co",
