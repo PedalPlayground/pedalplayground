@@ -4447,15 +4447,15 @@
 	{
 		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe",
-		"Width": 4.68,
-		"Height": 3.77,
+		"Width": 4.7,
+		"Height": 3.82,
 		"Image": "catalinbread-belleepochdlx.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe (Black Edition)",
-		"Width": 4.68,
-		"Height": 3.77,
+		"Width": 4.7,
+		"Height": 3.82,
 		"Image": "catalinbread-belleepochdlx-black.png"
 	},
 	{
@@ -4475,8 +4475,8 @@
 	{
 		"Brand": "Catalinbread",
 		"Name": "CB Tap",
-		"Width": 1.59,
-		"Height": 3.75,
+		"Width": 1.64,
+		"Height": 3.81,
 		"Image": "catalinbread-cb-tap.png"
 	},
 	{
@@ -4495,6 +4495,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Callisto MKII",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-callisto-mk2.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Cloak",
 		"Width": 2.6,
 		"Height": 4.33,
@@ -4503,8 +4510,8 @@
 	{
 		"Brand": "Catalinbread",
 		"Name": "Coriolis Effect",
-		"Width": 4.68,
-		"Height": 3.77,
+		"Width": 4.7,
+		"Height": 3.82,
 		"Image": "catalinbread-coriolis-effect.png"
 	},
 	{
@@ -4544,10 +4551,10 @@
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Epoch Boost (Black Edition)",
-		"Width": 2.6,
-		"Height": 4.33,
-		"Image": "catalinbread-epoch-boost-black.png"
+		"Name": "Epoch Pre",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "catalinbread-epoch-pre.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -4614,6 +4621,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Montavillian",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-montavillian.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Naga Viper",
 		"Width": 2.6,
 		"Height": 4.33,
@@ -4677,10 +4691,24 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Talisman (Gallery Series)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-talisman-gallery.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Topanga",
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-topanga.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Topanga (Burnside)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-topanga-burnside.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -5427,22 +5455,29 @@
 	{
 		"Brand": "Cornerstone",
 		"Name": "Antique",
-		"Width": 2.64,
-		"Height": 5,
+		"Width": 2.6,
+		"Height": 4.99,
 		"Image": "cornerstone-antique.png"
+	},
+	{
+		"Brand": "Cornerstone",
+		"Name": "Aquarium",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "cornerstone-aquarium.png"
 	},
 	{
 		"Brand": "Cornerstone",
 		"Name": "Gladio",
 		"Width": 4.7,
-		"Height": 3.7,
+		"Height": 3.82,
 		"Image": "cornerstone-gladio.png"
 	},
 	{
 		"Brand": "Cornerstone",
 		"Name": "Gladio SC",
-		"Width": 2.64,
-		"Height": 5,
+		"Width": 2.6,
+		"Height": 4.99,
 		"Image": "cornerstone-gladio-sc.png"
 	},
 	{
@@ -7085,6 +7120,13 @@
 	},
 	{
     "Brand": "Dunlop",
+    "Name": "Cry Baby 105Q Bass Wah",
+		"Width": 4.07,
+		"Height": 10,
+		"Image": "dunlop-105q.png"
+	},
+	{
+    "Brand": "Dunlop",
     "Name": "Cry Baby 535Q Mult-Wah",
 		"Width": 4.75,
 		"Height": 10,
@@ -7099,24 +7141,66 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "BG95 Buddy Guy Signature Cry Baby",
+		"Name": "Cry Baby BG95 Buddy Guy Signature Wah",
 		"Width": 4,
 		"Height": 10,
 		"Image": "dunlop-bg95.png"
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "CBM95 Cry Baby Mini Wah",
+		"Name": "Cry Baby CBJ95 Junior Wah",
+		"Width": 4.00,
+		"Height": 8.00,
+		"Image": "dunlop-crybaby-jr.png"
+	},
+	{
+   	"Brand": "Dunlop",
+    "Name": "Cry Baby CBM105Q Mini Bass Wah",
+		"Width": 3.08,
+		"Height": 5.25,
+		"Image": "dunlop-cbm105q.png"
+	},
+	{
+    "Brand": "Dunlop",
+    "Name": "Cry Baby CBM535Q Mini Wah",
+		"Width": 3.13,
+		"Height": 5.24,
+		"Image": "dunlop-mini-535q.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby CBM95 Mini Wah",
 		"Width": 3,
 		"Height": 5.25,
 		"Image": "dunlop-crybabymini.png"
 	},
 	{
+   	"Brand": "Dunlop",
+    "Name": "Cry Baby GCB95 Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-wah.png"
+	},
+	{
 		"Brand": "Dunlop",
-		"Name": "Crybaby Junior",
-		"Width": 4.00,
-		"Height": 8.00,
-		"Image": "dunlop-crybaby-jr.png"
+	 	"Name": "Cry Baby JB95 Joe Bonamassa Wah",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "dunlop-jb95.png"
+ 	},
+	{
+		"Brand": "Dunlop",
+	 	"Name": "Cry Baby JC95 Jerry Cantrell Wah",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "dunlop-jerry-cantrell.png"
+ 	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby KH95 Kirk Hammett Wah",
+		"Width": 3.858,
+		"Height": 10,
+		"Image": "dunlop-kh95.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -7174,28 +7258,7 @@
 		"Height": 3.5,
 		"Image": "dunlop-fuzzface-germanium-mini.png"
 	},
-  	{
-   		"Brand": "Dunlop",
-    	"Name": "GCB95 Cry Baby Wah",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-wah.png"
-	},
-	{
-		"Brand": "Dunlop",
-	 	"Name": "JB95 Joe Bonamassa Cry Baby",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "dunlop-jb95.png"
- 	},
-	{
-		"Brand": "Dunlop",
-	 	"Name": "JC95 Jerry Cantrell Cry Baby",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "dunlop-jerry-cantrell.png"
- 	},
-  	{
+  {
 		"Brand": "Dunlop",
 		"Name": "Jimi Hendrix Fuzz Face",
 		"Width": 7.0,
@@ -7218,24 +7281,10 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "KH95 Kirk Hammett Cry Baby",
-		"Width": 3.858,
-		"Height": 10,
-		"Image": "dunlop-kh95.png"
-	},
-	{
-		"Brand": "Dunlop",
 		"Name": "MC404 CAE Wah",
 		"Width": 4.41,
 		"Height": 10,
 		"Image": "dunlop-mc404.png"
-	},
-	{
-    "Brand": "Dunlop",
-    "Name": "Mini 535Q Wah",
-		"Width": 3.13,
-		"Height": 5.24,
-		"Image": "dunlop-mini-535q.png"
 	},
 	{
     "Brand": "Dunlop",
@@ -10971,8 +11020,8 @@
 	{
 		"Brand": "Funny Little Boxes",
 		"Name": "1991",
-		"Width": 2.4,
-		"Height": 4.53,
+		"Width": 2.5,
+		"Height": 4.84,
 		"Image": "flb-1991.png"
 	},
 	{
@@ -11425,9 +11474,16 @@
 	},
 	{
 		"Brand": "Great Eastern FX Co.",
+		"Name": "Design-A-Drive",
+	  "Width": 2.6,
+		"Height": 5,
+		"Image": "great-eastern-dad.png"
+	},
+	{
+		"Brand": "Great Eastern FX Co.",
 		"Name": "Small Speaker Overdrive",
-	    "Width": 2.5625,
-		"Height": 4.8125,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "great-eastern-sso.png"
 	},
 	{
@@ -11762,16 +11818,51 @@
 	{
 		"Brand": "Hamstead",
 		"Name": "Ascent",
-		"Width": 2.75591,
-		"Height": 5.11811,
+		"Width": 2.76,
+		"Height": 5.13,
 		"Image": "hamstead-ascent.png"
 	},
 	{
 		"Brand": "Hamstead",
+		"Name": "Comet",
+		"Width": 2.76,
+		"Height": 5.13,
+		"Image": "hamstead-comet.png"
+	},
+	{
+		"Brand": "Hamstead",
 		"Name": "Odyssey",
-		"Width": 2.75591,
-		"Height": 5.11811,
+		"Width": 2.76,
+		"Height": 5.13,
 		"Image": "hamstead-odyssey.png"
+	},
+	{
+		"Brand": "Hamstead",
+		"Name": "Signature",
+		"Width": 2.76,
+		"Height": 5.13,
+		"Image": "hamstead-signature.png"
+	},
+	{
+		"Brand": "Hamstead",
+		"Name": "Subspace",
+		"Width": 2.76,
+		"Height": 5.13,
+		"Image": "hamstead-subspace.png"
+	},
+	{
+		"Brand": "Hamstead",
+		"Name": "Subspace GE",
+		"Width": 2.76,
+		"Height": 5.13,
+		"Image": "hamstead-subspace-ge.png"
+	},
+	{
+		"Brand": "Hamstead",
+		"Name": "Zenith",
+		"Width": 2.76,
+		"Height": 5.13,
+		"Image": "hamstead-zenith.png"
 	},
 	{
 		"Brand": "Harley Benton",
@@ -20379,9 +20470,30 @@
 	{
 		"Brand": "Quiet Theory",
 		"Name": "Prelude",
-		"Width": 3.3,
-		"Height": 4.4,
+		"Width": 3.7,
+		"Height": 4.89,
 		"Image": "quiettheory-prelude.png"
+	},
+	{
+		"Brand": "Quiet Theory",
+		"Name": "Prelude (Pink)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "quiettheory-prelude-pink.png"
+	},
+	{
+		"Brand": "Quiet Theory",
+		"Name": "Prelude (Purple)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "quiettheory-prelude-purple.png"
+	},
+	{
+		"Brand": "Quiet Theory",
+		"Name": "Prelude (White)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "quiettheory-prelude-white.png"
 	},
 	{
 		"Brand": "Quilter Labs",
