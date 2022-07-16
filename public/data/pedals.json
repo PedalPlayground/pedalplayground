@@ -7160,7 +7160,7 @@
 		"Height": 4.69,
 		"Image": "dsmnoisemaker-omnicabsim.png"
 	},
-  {
+  	{
 		"Brand": "Dunlop",
 		"Name": "BG95 Buddy Guy Signature Cry Baby",
 		"Width": 4,
@@ -7217,8 +7217,8 @@
 		"Image": "dunlop-crybabymini.png"
 	},
 	{
-   	"Brand": "Dunlop",
-    "Name": "Cry Baby GCB95 Wah",
+   		"Brand": "Dunlop",
+    	"Name": "Cry Baby GCB95 Wah",
 		"Width": 4,
 		"Height": 10,
 		"Image": "dunlop-wah.png"
