@@ -4230,9 +4230,16 @@
 	{
 		"Brand": "Caroline",
 		"Name": "Crom",
-		"Width": 3.7,
+		"Width": 3.78,
 		"Height": 4.88,
 		"Image": "caroline-crom.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Crom (Black)",
+		"Width": 3.78,
+		"Height": 4.88,
+		"Image": "caroline-crom-black.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -4996,6 +5003,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-mood.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "MOOD (Bauhaus Limited Edition)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-mood-bauhaus.png"
 	},
 	{
 		"Brand": "Chicago Iron",
