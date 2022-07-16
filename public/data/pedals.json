@@ -4223,14 +4223,14 @@
 	{	
 		"Brand": "Carl Martin",
 		"Name": "PlexiTone - Single Channel",
-		"Width": 3.14,
+		"Width": 2.83,
 		"Height": 4.42,
 		"Image": "carl-martin-plexitone-single-channel.png"
 	},
 	{	
 		"Brand": "Carl Martin",
 		"Name": "PlexiTone - Single Channel Lo-Gain",
-		"Width": 3.22,
+		"Width": 2.90,
 		"Height": 4.47,
 		"Image": "carl-martin-plexitone-single-channel-lo-gain.png"
 	},
@@ -6966,7 +6966,7 @@
 	},
     {
 		"Brand": "Donner",
-		"Name": "Noiser Killer",
+		"Name": "Noise Killer",
 		"Width": 1.63,
 		"Height": 3.69,
 		"Image": "donner-noise-killer.png"
@@ -13750,7 +13750,7 @@
 	{
 		"Brand": "Joyo",
 		"Name": "Crunch Distortion",
-		"Width": 3.02,
+		"Width": 2.83,
 		"Height": 4.72,
 		"Image": "joyo-crunch-distortion.png"
 	},
@@ -24895,21 +24895,21 @@
 	{
 		"Brand": "Vick Audio",
 		"Name": "'73 Ram's Head",
-		"Width": 2.25,
-		"Height": 4.25,
+		"Width": 2.60,
+		"Height": 4.28,
 		"Image": "vick-73-rams-head.png"
 	},
 	{
 		"Brand": "Vick Audio",
 		"Name": "1861",
-		"Width": 2.25,
+		"Width": 2.60,
 		"Height": 4.25,
 		"Image": "vick-1861.png"
 	},
     {
 		"Brand": "Vick Audio",
 		"Name": "V-2",
-		"Width": 3.7,
+		"Width": 4.04,
 		"Height": 4.72,
 		"Image": "vick-v2.png"
 	},
