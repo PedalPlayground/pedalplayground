@@ -364,6 +364,13 @@
 		"Image": "airturn-duo-200.png"
 	},
 	{
+		"Brand": "Akai Professional",
+		"Name": "G-Drive",
+		"Width": 5.433071,
+		"Height": 6.850394,
+		"Image": "akai-pro-d2g.png"
+	},
+	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
 		"Width": 2.78,
@@ -16364,6 +16371,13 @@
 		"Width": 2.25,
 		"Height": 4.375,
 		"Image": "mesaboogie-rosette.png"
+	},
+	{
+		"Brand": "Mesa Boogie",
+		"Name": "Subway+ Bass DI-Preamp",
+		"Width": 8,
+		"Height": 5.5,
+		"Image": "mesaboogie-subway-plus.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
