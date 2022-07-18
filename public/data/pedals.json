@@ -7112,6 +7112,13 @@
 		"Image": "dreadbox-lethargy.png"
 	},
 	{
+		"Brand": "Drolo",
+		"Name": "Stamme[n] v4",
+		"Width": 3.94,
+		"Height": 4.92,
+		"Image": "drolo_stammen_v4.png"
+	},	
+	{
 		"Brand": "Drybell",
 		"Name": "Vibe Machine V2",
 		"Width": 2.64,
@@ -24381,6 +24388,14 @@
 		"Height": 4.7,
 		"Image": "blank.png"
 	},
+	{
+		"Brand": "The King of Gear",
+		"Name": "Mini Glitch",
+		"Width": 2.36,
+		"Height": 4.61138,
+		"Image": "tkog_mini_glitch.png"
+	},
+	
 	{
 		"Brand": "The Pill",
 		"Name": "Stereo",
