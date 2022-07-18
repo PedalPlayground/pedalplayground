@@ -11971,10 +11971,108 @@
 	},
 	{
 		"Brand": "Harley Benton",
+		"Name": "AC TrueTone",
+		"Width": 3.57,
+		"Height": 4.64,
+		"Image": "harley-benton-ac-truetone.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "American TrueTone",
+		"Width": 3.59,
+		"Height": 4.64,
+		"Image": "harley-benton-american-truetone.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "British TrueTone",
+		"Width": 3.61,
+		"Height": 4.64,
+		"Image": "harley-benton-british-truetone.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Classic Chorus",
+		"Width": 3.6,
+		"Height": 4.64,
+		"Image": "harley-benton-classic-chorus.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Crunch Distortion",
+		"Width": 2.71,
+		"Height": 4.64,
+		"Image": "harley-benton-crunch-distortion.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Digital Delay",
+		"Width": 3.59,
+		"Height": 4.64,
+		"Image": "harley-benton-digital-delay.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Dyna Compressor",
+		"Width": 2.71,
+		"Height": 4.64,
+		"Image": "harley-benton-dyna-compressor.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Extreme Metal",
+		"Width": 3.59,
+		"Height": 4.64,
+		"Image": "harley-benton-extreme-metal.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "PowerPlant ISO-2 Pro",
+		"Width": 5.51,
+		"Height": 2.805,
+		"Image": "harley-benton-power-plant-iso-2-pro.png"
+	},
+	{
+		"Brand": "Harley Benton",
 		"Name": "PowerPlant Tuner",
 		"Width": 2.75,
 		"Height": 4.8,
 		"Image": "harley-benton-powerplant-tuner.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Tap Tempo Switch",
+		"Width": 1.72,
+		"Height": 3.70,
+		"Image": "harley-benton-tap-switch.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Ultimate Drive",
+		"Width": 2.68,
+		"Height": 4.64,
+		"Image": "harley-benton-ultimate-drive.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Vintage Overdrive",
+		"Width": 2.85,
+		"Height": 4.64,
+		"Image": "harley-benton-vintage-overdrive.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Vintage Phase",
+		"Width": 2.60,
+		"Height": 4.64,
+		"Image": "harley-benton-vintage-phase.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Vintage Tremolo",
+		"Width": 2.60,
+		"Height": 4.64,
+		"Image": "harley-benton-vintage-tremolo.png"
 	},
 	{
 		"Brand": "Headrush",
@@ -13813,8 +13911,8 @@
 	{
 		"Brand": "Joyo",
 		"Name": "Crunch Distortion",
-		"Width": 2.83,
-		"Height": 4.72,
+		"Width": 2.69,
+		"Height": 4.65,
 		"Image": "joyo-crunch-distortion.png"
 	},
 	{
@@ -13826,6 +13924,34 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "Gate of Kahn",
+		"Width": 1.72,
+		"Height": 2.83,
+		"Image": "joyo-gate-of-kahn.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "Irontune",
+		"Width": 1.5,
+		"Height": 2.9,
+		"Image": "joyo-irontune.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "Pipe Bomb",
+		"Width": 1.72,
+		"Height": 2.83,
+		"Image": "joyo-pipe-bomb.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "Power Supply 2",
+		"Width": 5.90,
+		"Height": 2.14,
+		"Image": "joyo-power-supply-2.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "PXL-4",
 		"Width": 11.14,
 		"Height": 3.22835,
@@ -13834,8 +13960,8 @@
 	{
 		"Brand": "Joyo",
 		"Name": "PXL-8",
-		"Width": 18,
-		"Height": 2.637795,
+		"Width": 17.35,
+		"Height": 2.725,
 		"Image": "joyo-pxl8.png"
 	},
 	{
@@ -13844,13 +13970,6 @@
 		"Width": 21.29921,
 		"Height": 2.637795,
 		"Image": "joyo-pxl-live.png"
-	},
-	{
-		"Brand": "Joyo",
-		"Name": "Irontune",
-		"Width": 1.5,
-		"Height": 2.9,
-		"Image": "joyo-irontune.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -13889,27 +14008,6 @@
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "Wooden Sound",
-		"Width": 1.72,
-		"Height": 2.83,
-		"Image": "joyo-woodensound.png"
-	},
-	{
-		"Brand": "Joyo",
-		"Name": "Gate of Kahn",
-		"Width": 1.72,
-		"Height": 2.83,
-		"Image": "joyo-gate-of-kahn.png"
-	},
-	{
-		"Brand": "Joyo",
-		"Name": "Pipe Bomb",
-		"Width": 1.72,
-		"Height": 2.83,
-		"Image": "joyo-pipe-bomb.png"
-	},
-	{
-		"Brand": "Joyo",
 		"Name": "Space Verb",
 		"Width": 1.72,
 		"Height": 2.83,
@@ -13918,18 +14016,25 @@
 	{
 		"Brand": "Joyo",
 		"Name": "Vintage Overdrive",
-		"Width": 2,
-		"Height": 4,
+		"Width": 2.63,
+		"Height": 4.65,
 		"Image": "joyo-vintage-overdrive.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "Vintage Phase",
-		"Width": 2.51969,
-		"Height": 4.645669,
+		"Width": 2.73,
+		"Height": 4.65,
 		"Image": "joyo-vintage-phase.png"
-  },
-  {
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "Wooden Sound",
+		"Width": 1.72,
+		"Height": 2.83,
+		"Image": "joyo-woodensound.png"
+	},
+	{
 		"Brand": "JPTR FX",
 		"Name": "Add Violence",
 		"Width": 2.5,
@@ -18835,6 +18940,13 @@
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-time-core.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Time Force",
+		"Width": 4.25,
+		"Height": 5.07,
+		"Image": "nux-time-force.png"
 	},
 	{
 		"Brand": "NuX",
@@ -24285,6 +24397,13 @@
 	},
 	{
 		"Brand": "Tech21",
+		"Name": "Flyrig 5 Plexi",
+		"Width": 12.52,
+		"Height": 3.08,
+		"Image": "tech21-flyrig-5-plexi.png"
+	},
+	{
+		"Brand": "Tech21",
 		"Name": "Leeds",
 		"Width": 3.7,
 		"Height": 4.7,
@@ -25333,6 +25452,13 @@
 		"Width": 2.83,
 		"Height": 4.72,
 		"Image": "vox-valvenergy-silk-drive.png"
+	},
+	{
+		"Brand": "Whirlwind",
+		"Name": "Red Box",
+		"Width": 2.61,
+		"Height": 4.25,
+		"Image": "whirlwind-red-box.png"
 	},
 	{
 		"Brand": "Whirlwind",
