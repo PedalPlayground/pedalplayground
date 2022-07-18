@@ -7117,7 +7117,7 @@
 		"Width": 3.94,
 		"Height": 4.92,
 		"Image": "drolo_stammen_v4.png"
-	},	
+	},
 	{
 		"Brand": "Drybell",
 		"Name": "Vibe Machine V2",
@@ -7188,13 +7188,6 @@
 		"Height": 4.69,
 		"Image": "dsmnoisemaker-omnicabsim.png"
 	},
-  	{
-		"Brand": "Dunlop",
-		"Name": "BG95 Buddy Guy Signature Cry Baby",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-bg95.png"
-	},
 	{
     "Brand": "Dunlop",
     "Name": "Cry Baby 105Q Bass Wah",
@@ -7215,6 +7208,13 @@
 		"Width": 4.75,
 		"Height": 10,
 		"Image": "dunlop-535q-chrome.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby BG95 Buddy Guy Signature",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-bg95.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -7245,15 +7245,15 @@
 		"Image": "dunlop-crybabymini.png"
 	},
 	{
-   		"Brand": "Dunlop",
-    	"Name": "Cry Baby GCB95 Wah",
+   	"Brand": "Dunlop",
+    "Name": "Cry Baby GCB95 Standard Wah",
 		"Width": 4,
 		"Height": 10,
 		"Image": "dunlop-wah.png"
 	},
 	{
 		"Brand": "Dunlop",
-	 	"Name": "Cry Baby JB95 Joe Bonamassa Wah",
+	 	"Name": "Cry Baby JB95 Joe Bonamassa Signature Wah",
 	 	"Width": 4,
 	 	"Height": 10,
 	 	"Image": "dunlop-jb95.png"
@@ -7328,28 +7328,7 @@
 		"Height": 3.5,
 		"Image": "dunlop-fuzzface-germanium-mini.png"
 	},
-  	{
-   		"Brand": "Dunlop",
-    	"Name": "GCB95 Cry Baby Wah",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-wah.png"
-	},
-	{
-		"Brand": "Dunlop",
-	 	"Name": "Joe Bonamassa Cry Baby",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "dunlop-jb95.png"
- 	},
-	{
-		"Brand": "Dunlop",
-	 	"Name": "JC95 Jerry Cantrell Cry Baby",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "dunlop-jerry-cantrell.png"
- 	},
-  	{
+  {
 		"Brand": "Dunlop",
 		"Name": "Jimi Hendrix Fuzz Face",
 		"Width": 7.0,
@@ -24430,7 +24409,7 @@
 		"Height": 4.61138,
 		"Image": "tkog_mini_glitch.png"
 	},
-	
+
 	{
 		"Brand": "The Pill",
 		"Name": "Stereo",
