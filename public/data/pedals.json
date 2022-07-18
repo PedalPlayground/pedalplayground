@@ -4213,21 +4213,21 @@
 		"Height": 4.72,
 		"Image": "carl-martin-plexiranger.png"
 	},
-	{	
+	{
 		"Brand": "Carl Martin",
 		"Name": "PlexiTone",
 		"Width": 7.31,
 		"Height": 4.82,
 		"Image": "carl-martin-plexitone.png"
 	},
-	{	
+	{
 		"Brand": "Carl Martin",
 		"Name": "PlexiTone - Single Channel",
 		"Width": 3.14,
 		"Height": 4.42,
 		"Image": "carl-martin-plexitone-single-channel.png"
 	},
-	{	
+	{
 		"Brand": "Carl Martin",
 		"Name": "PlexiTone - Single Channel Lo-Gain",
 		"Width": 3.22,
@@ -4251,9 +4251,16 @@
 	{
 		"Brand": "Caroline",
 		"Name": "Crom",
-		"Width": 3.7,
+		"Width": 3.78,
 		"Height": 4.88,
 		"Image": "caroline-crom.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Crom (Black)",
+		"Width": 3.78,
+		"Height": 4.88,
+		"Image": "caroline-crom-black.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -5017,6 +5024,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-mood.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "MOOD (Bauhaus Limited Edition)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-mood-bauhaus.png"
 	},
 	{
 		"Brand": "Chicago Iron",
@@ -21026,6 +21040,13 @@
 		"Width": 4.4,
 		"Height": 5.25,
 		"Image": "rjm-overture.png"
+	},
+	{
+		"Brand": "Rock Stock",
+		"Name": "Nano Tuner",
+		"Width": 1.79,
+		"Height": 1.65,
+		"Image": "rock-stock-nano.png"
 	},
 	{
 		"Brand": "Rockbox",
