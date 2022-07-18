@@ -364,6 +364,13 @@
 		"Image": "airturn-duo-200.png"
 	},
 	{
+		"Brand": "Akai Professional",
+		"Name": "G-Drive",
+		"Width": 5.433071,
+		"Height": 6.850394,
+		"Image": "akai-pro-d2g.png"
+	},
+	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
 		"Width": 2.78,
@@ -7174,6 +7181,13 @@
 		"Height": 4.69,
 		"Image": "dsmnoisemaker-omnicabsim.png"
 	},
+  	{
+		"Brand": "Dunlop",
+		"Name": "BG95 Buddy Guy Signature Cry Baby",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-bg95.png"
+	},
 	{
     "Brand": "Dunlop",
     "Name": "Cry Baby 105Q Bass Wah",
@@ -7182,25 +7196,18 @@
 		"Image": "dunlop-105q.png"
 	},
 	{
-    "Brand": "Dunlop",
-    "Name": "Cry Baby 535Q Mult-Wah",
+		"Brand": "Dunlop",
+		"Name": "Cry Baby 535Q Mult-Wah",
 		"Width": 4.75,
 		"Height": 10,
 		"Image": "dunlop-535q.png"
 	},
 	{
-    "Brand": "Dunlop",
-    "Name": "Cry Baby 535Q Mult-Wah (Chrome)",
+		"Brand": "Dunlop",
+		"Name": "Cry Baby 535Q Mult-Wah (Chrome)",
 		"Width": 4.75,
 		"Height": 10,
 		"Image": "dunlop-535q-chrome.png"
-	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Cry Baby BG95 Buddy Guy Signature Wah",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-bg95.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -7231,8 +7238,8 @@
 		"Image": "dunlop-crybabymini.png"
 	},
 	{
-   	"Brand": "Dunlop",
-    "Name": "Cry Baby GCB95 Wah",
+   		"Brand": "Dunlop",
+    	"Name": "Cry Baby GCB95 Wah",
 		"Width": 4,
 		"Height": 10,
 		"Image": "dunlop-wah.png"
@@ -7314,7 +7321,28 @@
 		"Height": 3.5,
 		"Image": "dunlop-fuzzface-germanium-mini.png"
 	},
-  {
+  	{
+   		"Brand": "Dunlop",
+    	"Name": "GCB95 Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-wah.png"
+	},
+	{
+		"Brand": "Dunlop",
+	 	"Name": "Joe Bonamassa Cry Baby",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "dunlop-jb95.png"
+ 	},
+	{
+		"Brand": "Dunlop",
+	 	"Name": "JC95 Jerry Cantrell Cry Baby",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "dunlop-jerry-cantrell.png"
+ 	},
+  	{
 		"Brand": "Dunlop",
 		"Name": "Jimi Hendrix Fuzz Face",
 		"Width": 7.0,
@@ -7341,6 +7369,13 @@
 		"Width": 4.41,
 		"Height": 10,
 		"Image": "dunlop-mc404.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Mini 535Q Wah",
+		"Width": 3.13,
+		"Height": 5.24,
+		"Image": "dunlop-mini-535q.png"
 	},
 	{
     "Brand": "Dunlop",
@@ -9091,6 +9126,13 @@
 		"Width": 3.38,
 		"Height": 5.37,
 		"Image": "ehx-small-clone.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Small Stone V4",
+		"Width": 3.38,
+		"Height": 5.37,
+		"Image": "ehx-small-stone-v4.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -16346,6 +16388,13 @@
 	},
 	{
 		"Brand": "Mesa Boogie",
+		"Name": "Subway+ Bass DI-Preamp",
+		"Width": 8,
+		"Height": 5.5,
+		"Image": "mesaboogie-subway-plus.png"
+	},
+	{
+		"Brand": "Mesa Boogie",
 		"Name": "Throttle Box",
 		"Width": 2.75,
 		"Height": 4.75,
@@ -20497,6 +20546,13 @@
 	},
 	{
 		"Brand": "Pro Co",
+		"Name": "Deucetone Rat",
+		"Width": 8.19,
+		"Height": 4.57,
+		"Image": "proco-deucetone-rat.png"
+	},
+	{
+		"Brand": "Pro Co",
 		"Name": "Lil' Rat",
 		"Width": 2,
 		"Height": 3,
@@ -20595,10 +20651,17 @@
 	},
 	{
 		"Brand": "Radial Engineering",
-		"Name": "J48",
-		"Width": 3.3,
+		"Name": "EXTC-SA",
+		"Width": 6.3,
 		"Height": 5,
-		"Image": "radial-j48.png"
+		"Image": "radial-extc-sa.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "EXTC Stereo",
+		"Width": 6.3,
+		"Height": 5,
+		"Image": "radial-extc-stereo.png"
 	},
 	{
 		"Brand": "Radial Engineering",
@@ -20609,6 +20672,13 @@
 	},
 	{
 		"Brand": "Radial Engineering",
+		"Name": "J48",
+		"Width": 3.3,
+		"Height": 5,
+		"Image": "radial-j48.png"
+	},
+	{
+		"Brand": "Radial Engineering",
 		"Name": "JDI",
 		"Width": 3.3,
 		"Height": 5,
@@ -20616,10 +20686,45 @@
 	},
 	{
 		"Brand": "Radial Engineering",
+		"Name": "JDI Duplex",
+		"Width": 6.3,
+		"Height": 5,
+		"Image": "radial-jdi-duplex.png"
+	},
+	{
+		"Brand": "Radial Engineering",
 		"Name": "Key Largo",
 		"Width": 8.4,
 		"Height": 5,
 		"Image": "radial-key-largo.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "Phazer",
+		"Width": 6.3,
+		"Height": 5,
+		"Image": "radial-phazer.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "StageBug SB-1",
+		"Width": 4.5,
+		"Height": 1.85,
+		"Image": "radial-sb1.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "StageBug SB-2",
+		"Width": 4.5,
+		"Height": 1.85,
+		"Image": "radial-sb2.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "StageBug SB-4",
+		"Width": 4.5,
+		"Height": 1.85,
+		"Image": "radial-sb4.png"
 	},
  	{
 		"Brand": "Radial Engineering",
@@ -25952,8 +26057,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Plexi-Drive (Original Design)",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.5,
 		"Image": "wampler-plexidrive-og.png"
 	},
 	{
