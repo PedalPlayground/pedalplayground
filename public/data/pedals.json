@@ -6376,6 +6376,13 @@
 		"Height": 4.79,
 		"Image": "demedash-t-120-dlx-v2.png"
 	},
+	{
+		"Brand": "Demonic Machines",
+		"Name": "HTR",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "demonicmachines-htr.png"
+	},
   {
 		"Brand": "Devi Ever: FX",
 		"Name": "Torn's Peaker",
@@ -8002,7 +8009,7 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Terminal",
+		"Name": "Terminal V2",
 		"Width": 2.5,
 		"Height": 4.75,
 		"Image": "earthquaker-terminal.png"
@@ -14870,8 +14877,8 @@
 	{
 		"Brand": "Klon",
 		"Name": "KTR",
-		"Width": 4.95,
-		"Height": 3.74,
+		"Width": 4.85,
+		"Height": 3.7,
 		"Image": "klon-ktr.png"
 	},
 	{
