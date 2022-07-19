@@ -14869,6 +14869,13 @@
 	},
 	{
 		"Brand": "Klon",
+		"Name": "Centaur (Gold)",
+		"Width": 6.5,
+		"Height": 5.03,
+		"Image": "klon-centaurgold.png"
+	},
+	{
+		"Brand": "Klon",
 		"Name": "Centaur (Horsey)",
 		"Width": 6.5,
 		"Height": 5.03,
