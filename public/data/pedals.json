@@ -10948,6 +10948,13 @@
 		"Image": "ftelettronica-third-mind.png"
 	},
 	{
+		"Brand": "Fuchs",
+		"Name": "Royal Plush Compressor",
+		"Width": 2.9,
+		"Height": 4.72,
+		"Image": "fuchs-royal-plush-compressor.png"
+	},
+	{
 		"Brand": "Fulltone",
 		"Name": "2B",
 		"Width": 2.19,
@@ -12262,6 +12269,13 @@
 		"Width": 1.73,
 		"Height": 2.91,
 		"Image": "hotone-choir.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Harmony",
+		"Width": 1.73,
+		"Height": 2.91,
+		"Image": "hotone-harmony.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -16525,6 +16539,13 @@
 		"Width": 10.125,
 		"Height": 5.5625,
 		"Image": "mesaboogie-triplerec.png"
+	},
+	{
+		"Brand": "MI Audio",
+		"Name": "Blues Pro Overdrive",
+		"Width": 2.52,
+		"Height": 4.29,
+		"Image": "mi-audio-blues-pro-overdrive.png"
 	},
 	{
 		"Brand": "MI Audio",
@@ -26985,6 +27006,13 @@
 		"Width": 1.81,
 		"Height": 3.70,
 		"Image": "xvive-t1-golden-brownie.png"
+	},
+	{
+		"Brand": "Yamaha",
+		"Name": "FL-10MII",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "yamaha-fl-10mii.png"
 	},
 	{
 		"Brand": "Zander Circuitry",
