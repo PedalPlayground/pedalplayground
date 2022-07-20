@@ -20714,6 +20714,55 @@
 	},
 	{
 		"Brand": "Radial Engineering",
+		"Name": "Pro48",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-pro48.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProAV1",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-proav1.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProAV2",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-proav2.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProD2",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-prod2.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProDI",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-prodi.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProMS2",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-proms2.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProRMP Reamp",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-prormp.png"
+	},
+	{
+		"Brand": "Radial Engineering",
 		"Name": "StageBug SB-1",
 		"Width": 4.5,
 		"Height": 1.85,
