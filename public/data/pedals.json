@@ -19047,11 +19047,81 @@
 		"Image": "neuraldsp-quadcortex.png"
 	},
 	{
-		"Brand": "Okko",
+		"Brand": "Okko FX",
 		"Name": "Basstard",
-		"Width": 3.97,
-		"Height": 4.74,
+		"Width": 4.05,
+		"Height": 4.81,
 		"Image": "okko-basstard.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Black Beast",
+		"Width": 4.05,
+		"Height": 4.81,
+		"Image": "okko-blackbeast.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Cocaine",
+		"Width": 4.05,
+		"Height": 4.81,
+		"Image": "okko-cocaine.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Coca Comp MKII",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "okko-coca-mk2.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Diablo",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "okko-diablo.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Diablo Dual",
+		"Width": 4.05,
+		"Height": 4.81,
+		"Image": "okko-diablodual.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Diablo GH Signature",
+		"Width": 4.05,
+		"Height": 4.81,
+		"Image": "okko-diabloghsignature.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Dominator",
+		"Width": 4.05,
+		"Height": 4.81,
+		"Image": "okko-dominator.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Holy Grit",
+		"Width": 2.76,
+		"Height": 4.86,
+		"Image": "okko-holygrit.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Motörbass",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "okko-motorbass.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "T3 Tremolo",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "okko-t3.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
