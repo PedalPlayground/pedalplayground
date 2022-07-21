@@ -4137,6 +4137,13 @@
 		"Image": "brunetti-vanilladrive.png"
 	},
 	{
+		"Brand": "BSS",
+		"Name": "AR-133",
+		"Width": 5.63,
+		"Height": 4.88,
+		"Image": "bss-ar133.png"
+	},
+	{
 		"Brand": "Buffalo FX",
 		"Name": "Carrera",
 		"Width": 3.7,
@@ -16556,6 +16563,13 @@
 	},
 	{
 		"Brand": "MI Audio",
+		"Name": "Crunchbox V2",
+		"Width": 2.52,
+		"Height": 4.3,
+		"Image": "miaudio-crunch-box-v2.png"
+	},
+	{
+		"Brand": "MI Audio",
 		"Name": "Super Crunch Box",
 		"Width": 2.59,
 		"Height": 4.3,
@@ -19969,6 +19983,20 @@
 		"Width": 1.65,
 		"Height": 3.75,
 		"Image": "outlaw-effects-wrangler.png"
+	},
+	{
+		"Brand": "Palmer",
+		"Name": "PAN-01",
+		"Width": 2.87,
+		"Height": 4.33,
+		"Image": "Palmer PAN-01.png"
+	},
+	{
+		"Brand": "Palmer",
+		"Name": "PAN-02",
+		"Width": 2.87,
+		"Height": 4.33,
+		"Image": "Palmer PAN-02.png"
 	},
 	{
 		"Brand": "Panda Audio",
@@ -25197,9 +25225,16 @@
 	{
 		"Brand": "Vemuram",
 		"Name": "Jan Ray",
-		"Width": 2.56,
+		"Width": 2.70,
 		"Height": 4.42,
 		"Image": "vemuram-janray.png"
+	},
+	{
+		"Brand": "Vemuram",
+		"Name": "Myriad Fuzz",
+		"Width": 2.74,
+		"Height": 4.50,
+		"Image": "vemuram-myriad-fuzz.png"
 	},
 	{
 		"Brand": "Vemuram",
