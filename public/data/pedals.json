@@ -21456,6 +21456,13 @@
 	},
 	{
 		"Brand": "Shift Line",
+		"Name": "Flex",
+		"Width": 4.88,
+		"Height": 4.09,
+		"Image": "shiftline-flex.png"
+	},
+	{
+		"Brand": "Shift Line",
 		"Name": "Twin MkIIIS",
 		"Width": 4.88,
 		"Height": 4.09,
