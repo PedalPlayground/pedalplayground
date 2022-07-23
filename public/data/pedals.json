@@ -778,7 +778,7 @@
 	},
 	{
 		"Brand": "AMT",
-		"Name": "EX-50 Mini Expression",
+		"Name": "EX-50 Mini Expression Pedal",
 		"Width": 2.611,
 		"Height": 4.33,
 		"Image": "amt-expression.png"
@@ -798,18 +798,25 @@
 		"Image": "amt-gr4.png"
 	},
 	{
-        "Brand": "AMT",
+        	"Brand": "AMT",
 		"Name": "HR-1 Heater",
 		"Width": 2.91,
 		"Height": 4.48,
 		"Image": "amt-heater.png"
-    },
+	},
 	{
 		"Brand": "AMT",
-		"Name": "Little Loudmouth",
+		"Name": "LLM-2 ZERO Little Loudmouth",
 		"Width": 2.736,
 		"Height": 4.33,
 		"Image": "amt-littleloudmouth.png"
+	},
+	{
+		"Brand": "AMT",
+		"Name": "NG-1 Incinerator",
+		"Width": 2.8,
+		"Height": 3.83,
+		"Image": "amt-incinerator.png"
 	},
 	{
 		"Brand": "AMT",
@@ -819,12 +826,12 @@
 		"Image": "amt-m1.png"
 	},
 	{
-        "Brand": "AMT",
+        	"Brand": "AMT",
 		"Name": "PANGAEA CP-100 IR",
 		"Width": 3.77,
 		"Height": 1.69,
 		"Image": "amt-pangaeacp100.png"
-    },
+   	},
 	{
 		"Brand": "AMT",
 		"Name": "WH-1 Optical WAH-WAH",
@@ -10577,17 +10584,24 @@
 		"Image": "fractal-fm9.png"
 	},
 	{
-        "Brand": "Fredric Effects",
+        	"Brand": "Fredric Effects",
 		"Name": "Blue Monarch",
-		"Width": 2.625,
-		"Height": 4.25,
+		"Width": 2.92,
+		"Height": 4.30,
 		"Image": "fredric-effects-blue-monarch.png"
-    },
+    	},
 	{
-		"Brand": "Fredric Pedals",
-		"Name": "Standard Fuzz",
-		"Width": 2.64,
-		"Height": 4.8,
+		"Brand": "Fredric Effects",
+		"Name": "Regent 150 preamp",
+		"Width": 2.95,
+		"Height": 4.29,
+		"Image": "fredric-effects-regent-150.png"
+	},
+	{
+		"Brand": "Fredric Effects",
+		"Name": "Standard Fuzz Machine",
+		"Width": 2.95,
+		"Height": 4.29,
 		"Image": "fredric-standard-fuzz.png"
 	},
 	{
@@ -12006,10 +12020,24 @@
 	},
 	{
 		"Brand": "Harley Benton",
+		"Name": "California TrueTone",
+		"Width": 3.58,
+		"Height": 4.64,
+		"Image": "harley-benton-california-truetone.png"
+	},
+	{
+		"Brand": "Harley Benton",
 		"Name": "Classic Chorus",
 		"Width": 3.6,
 		"Height": 4.64,
 		"Image": "harley-benton-classic-chorus.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Classic Flanger",
+		"Width": 3.55,
+		"Height": 4.64,
+		"Image": "harley-benton-classic-flanger.png"
 	},
 	{
 		"Brand": "Harley Benton",
@@ -13924,10 +13952,10 @@
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "Atmosphere",
-		"Width": 2.6378,
-		"Height": 4.29134,
-		"Image": "joyo-atmosphere.png"
+		"Name": "Classic Flanger",
+		"Width": 3.57,
+		"Height": 4.64,
+		"Image": "joyo-classic-flanger.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -14026,6 +14054,13 @@
 		"Width": 5.12,
 		"Height": 4.43,
 		"Image": "joyo-r09-vision.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-14 Atmosphere",
+		"Width": 2.6378,
+		"Height": 4.29134,
+		"Image": "joyo-atmosphere.png"
 	},
 	{
 		"Brand": "Joyo",
