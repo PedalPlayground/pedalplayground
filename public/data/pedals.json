@@ -78,6 +78,34 @@
 	},
 	{
 		"Brand": "3Leaf Audio",
+		"Name": "Chromatron",
+		"Width": 4.7,
+		"Height": 3.87,
+		"Image": "3leaf-audio-chromatron.png"
+	},
+	{
+		"Brand": "3Leaf Audio",
+		"Name": "Doom 2",
+		"Width": 2.5,
+		"Height": 4.56,
+		"Image": "3leaf-audio-doom2.png"
+	},
+	{
+		"Brand": "3Leaf Audio",
+		"Name": "Octabvre",
+		"Width": 2.5,
+		"Height": 4.56,
+		"Image": "3leaf-audio-octabvre.png"
+	},
+	{
+		"Brand": "3Leaf Audio",
+		"Name": "Proton",
+		"Width": 2.5,
+		"Height": 4.56,
+		"Image": "3leaf-audio-proton.png"
+	},
+	{
+		"Brand": "3Leaf Audio",
 		"Name": "Wonderlove V2",
 		"Width": 4.84,
 		"Height": 3.94,
