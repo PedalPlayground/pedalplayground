@@ -23991,6 +23991,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Polytune 2 BlackLight",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-polytune-2-blacklight.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Polytune 3",
 		"Width": 2.86,
 		"Height": 4.8,
