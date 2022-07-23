@@ -7323,6 +7323,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "FFM6 Band of Gypsys Fuzz Face",
+		"Width": 3.5,
+		"Height": 3.58,
+		"Image": "dunlop-ffm6.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Fuzz Face Classic Germanium",
 		"Width": 7.0,
 		"Height": 7.0,
