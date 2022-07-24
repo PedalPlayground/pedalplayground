@@ -4074,6 +4074,13 @@
 		"Image": "brightonion-12switcher.png"
 	},
 	{
+		"Brand": "Broughton",
+		"Name": "High Pass Filter",
+		"Width": 1.6,
+		"Height": 3.7,
+		"Image": "broughton-hpf.png"
+	},
+	{
 		"Brand": "Browne Amplification",
 		"Name": "Carbon",
 		"Width": 2.86,
@@ -14742,6 +14749,13 @@
 		"Image": "khdk-unicorn-blood-2.png"
 	},
 	{
+		"Brand": "KSR",
+		"Name": "Ceres (Black Sparkle)",
+		"Width": 5.7,
+		"Height": 4.7,
+		"Image": "ksr-ceres-blackspark.png"
+	},
+	{
 		"Brand": "Kingsley",
 		"Name": "Bard",
 		"Width": 3.875,
@@ -17164,19 +17178,19 @@
 		"Image": "mooer-micro-power.png"
 	},
 	{
-    "Brand": "Mooer",
+    	"Brand": "Mooer",
 		"Name": "Mod Factory MK II",
 		"Width": 1.67,
 		"Height": 3.75,
 		"Image": "mooer-modfactory-mkii.png"
-  },
+  	},
 	{
-    "Brand": "Mooer",
+    	"Brand": "Mooer",
 		"Name": "Mod Factory Pro",
 		"Width": 4.17,
 		"Height": 3.7,
 		"Image": "mooer-modfactory-pro.png"
-  },
+  	},
 	{
 		"Brand": "Mooer",
 		"Name": "Modverb",
@@ -26908,6 +26922,13 @@
 		"Width": 1.81,
 		"Height": 3.70,
 		"Image": "xvive-t1-golden-brownie.png"
+	},
+	{
+		"Brand": "Yamaha",
+		"Name": "CH-01 Chorus",
+		"Width": 2.75591,
+		"Height": 5.07874,
+		"Image": "yamaha-ch01.png"
 	},
 	{
 		"Brand": "Zander Circuitry",
