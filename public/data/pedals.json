@@ -12517,6 +12517,20 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "Tube King Distortion",
+		"Width": 8,
+		"Height": 8,
+		"Image": "ibanez-tk999ht.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "Tube King Overdrive",
+		"Width": 8,
+		"Height": 8,
+		"Image": "ibanez-tk999od.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "Tube Screamer Mini",
 		"Width": 1.96,
 		"Height": 3.65,
@@ -15499,6 +15513,13 @@
 	},
 	{
 		"Brand": "Lovetone",
+		"Name": "Big Cheese",
+		"Width": 7.48,
+		"Height": 7.87,
+		"Image": "lovetone-big-cheese.png"
+	},
+	{
+		"Brand": "Lovetone",
 		"Name": "Cheese Source",
 		"Width": 7.48,
 		"Height": 7.87,
@@ -16595,6 +16616,13 @@
 		"Width": 18.90,
 		"Height": 2.35,
 		"Image": "moen-gec8jr-v2.png"
+	},
+	{
+		"Brand": "Moen",
+		"Name": "GEC9",
+		"Width": 16.9291,
+		"Height": 3.74016,
+		"Image": "moen-gec9.png"
 	},
 	{
 		"Brand": "Moen",
@@ -25378,10 +25406,59 @@
 	},
 	{
 		"Brand": "Vox",
+		"Name": "Cooltron Big Ben Overdrive",
+		"Width": 6.63,
+		"Height": 6.12,
+		"Image": "vox-cooltron-big-ben.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Cooltron Brit Boost",
+		"Width": 6.63,
+		"Height": 6.12,
+		"Image": "vox-cooltron-brit-boost.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Cooltron Bulldog Distortion",
+		"Width": 6.63,
+		"Height": 6.12,
+		"Image": "vox-cooltron-bulldog-dist.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Double Dera Delay",
+		"Width": 3.43,
+		"Height": 5.2,
+		"Image": "vox-double-dera.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Flat 4 Boost",
+		"Width": 3.43,
+		"Height": 5.2,
+		"Image": "vox-flat-4.png"
+	},
+	{
+		"Brand": "Vox",
 		"Name": "Satchurator",
 		"Width": 5.63,
 		"Height": 4.76,
 		"Image": "vox-satchurator.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Straight 6 Drive",
+		"Width": 3.43,
+		"Height": 5.2,
+		"Image": "vox-straight-6.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Trike Fuzz",
+		"Width": 3.43,
+		"Height": 5.2,
+		"Image": "vox-trike.png"
 	},
 	{
 		"Brand": "Vox",
@@ -25396,6 +25473,13 @@
 		"Width": 4.01575,
 		"Height": 9.92126,
 		"Image": "vox-wah.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "V8 Distortion",
+		"Width": 3.43,
+		"Height": 5.2,
+		"Image": "vox-v8.png"
 	},
 	{
 		"Brand": "Vox",
