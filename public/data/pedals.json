@@ -3025,6 +3025,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "AD-2 Acoustic Preamp",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ad2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "AW-3 Dynamic Wah",
 		"Width": 2.875,
 		"Height": 5.125,
