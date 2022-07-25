@@ -17893,6 +17893,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Fat Sugar",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-fatsugar.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Flanger",
 		"Width": 5.24,
 		"Height": 3.75,
