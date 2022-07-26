@@ -6049,7 +6049,7 @@
 	},
 {
 		"Brand": "Darkglass",
-		"Name": "Alpha Omnicron",
+		"Name": "Alpha Omicron",
 		"Width": 2.95,
 		"Height": 4.37,
 		"Image": "darkglass-alpha-omicron.png"
@@ -21771,6 +21771,13 @@
 	},
 	{
 		"Brand": "Shift Line",
+		"Name": "Flex",
+		"Width": 4.88,
+		"Height": 4.09,
+		"Image": "shiftline-flex.png"
+	},
+	{
+		"Brand": "Shift Line",
 		"Name": "Twin MkIIIS",
 		"Width": 4.88,
 		"Height": 4.09,
@@ -24303,6 +24310,13 @@
 		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-polytune-2.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Polytune 2 BlackLight",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-polytune-2-blacklight.png"
 	},
 	{
 		"Brand": "TC Electronic",
