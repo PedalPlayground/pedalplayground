@@ -78,6 +78,34 @@
 	},
 	{
 		"Brand": "3Leaf Audio",
+		"Name": "Chromatron",
+		"Width": 4.7,
+		"Height": 3.87,
+		"Image": "3leaf-audio-chromatron.png"
+	},
+	{
+		"Brand": "3Leaf Audio",
+		"Name": "Doom 2",
+		"Width": 2.5,
+		"Height": 4.56,
+		"Image": "3leaf-audio-doom2.png"
+	},
+	{
+		"Brand": "3Leaf Audio",
+		"Name": "Octabvre",
+		"Width": 2.5,
+		"Height": 4.56,
+		"Image": "3leaf-audio-octabvre.png"
+	},
+	{
+		"Brand": "3Leaf Audio",
+		"Name": "Proton",
+		"Width": 2.5,
+		"Height": 4.56,
+		"Image": "3leaf-audio-proton.png"
+	},
+	{
+		"Brand": "3Leaf Audio",
 		"Name": "Wonderlove V2",
 		"Width": 4.84,
 		"Height": 3.94,
@@ -6376,6 +6404,13 @@
 		"Height": 4.79,
 		"Image": "demedash-t-120-dlx-v2.png"
 	},
+	{
+		"Brand": "Demonic Machines",
+		"Name": "HTR",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "demonicmachines-htr.png"
+	},
   {
 		"Brand": "Devi Ever: FX",
 		"Name": "Torn's Peaker",
@@ -7117,7 +7152,7 @@
 		"Width": 3.94,
 		"Height": 4.92,
 		"Image": "drolo_stammen_v4.png"
-	},	
+	},
 	{
 		"Brand": "Drybell",
 		"Name": "Vibe Machine V2",
@@ -7188,13 +7223,6 @@
 		"Height": 4.69,
 		"Image": "dsmnoisemaker-omnicabsim.png"
 	},
-  	{
-		"Brand": "Dunlop",
-		"Name": "BG95 Buddy Guy Signature Cry Baby",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-bg95.png"
-	},
 	{
     "Brand": "Dunlop",
     "Name": "Cry Baby 105Q Bass Wah",
@@ -7215,6 +7243,13 @@
 		"Width": 4.75,
 		"Height": 10,
 		"Image": "dunlop-535q-chrome.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby BG95 Buddy Guy Signature",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-bg95.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -7245,15 +7280,15 @@
 		"Image": "dunlop-crybabymini.png"
 	},
 	{
-   		"Brand": "Dunlop",
-    	"Name": "Cry Baby GCB95 Wah",
+   	"Brand": "Dunlop",
+    "Name": "Cry Baby GCB95 Standard Wah",
 		"Width": 4,
 		"Height": 10,
 		"Image": "dunlop-wah.png"
 	},
 	{
 		"Brand": "Dunlop",
-	 	"Name": "Cry Baby JB95 Joe Bonamassa Wah",
+	 	"Name": "Cry Baby JB95 Joe Bonamassa Signature Wah",
 	 	"Width": 4,
 	 	"Height": 10,
 	 	"Image": "dunlop-jb95.png"
@@ -7316,6 +7351,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "FFM6 Band of Gypsys Fuzz Face",
+		"Width": 3.5,
+		"Height": 3.58,
+		"Image": "dunlop-ffm6.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Fuzz Face Classic Germanium",
 		"Width": 7.0,
 		"Height": 7.0,
@@ -7328,28 +7370,7 @@
 		"Height": 3.5,
 		"Image": "dunlop-fuzzface-germanium-mini.png"
 	},
-  	{
-   		"Brand": "Dunlop",
-    	"Name": "GCB95 Cry Baby Wah",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-wah.png"
-	},
-	{
-		"Brand": "Dunlop",
-	 	"Name": "Joe Bonamassa Cry Baby",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "dunlop-jb95.png"
- 	},
-	{
-		"Brand": "Dunlop",
-	 	"Name": "JC95 Jerry Cantrell Cry Baby",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "dunlop-jerry-cantrell.png"
- 	},
-  	{
+  {
 		"Brand": "Dunlop",
 		"Name": "Jimi Hendrix Fuzz Face",
 		"Width": 7.0,
@@ -8023,7 +8044,7 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
-		"Name": "Terminal",
+		"Name": "Terminal V2",
 		"Width": 2.5,
 		"Height": 4.75,
 		"Image": "earthquaker-terminal.png"
@@ -14883,6 +14904,13 @@
 	},
 	{
 		"Brand": "Klon",
+		"Name": "Centaur (Gold)",
+		"Width": 6.5,
+		"Height": 5.03,
+		"Image": "klon-centaurgold.png"
+	},
+	{
+		"Brand": "Klon",
 		"Name": "Centaur (Horsey)",
 		"Width": 6.5,
 		"Height": 5.03,
@@ -14891,8 +14919,8 @@
 	{
 		"Brand": "Klon",
 		"Name": "KTR",
-		"Width": 4.95,
-		"Height": 3.74,
+		"Width": 4.85,
+		"Height": 3.7,
 		"Image": "klon-ktr.png"
 	},
 	{
@@ -17489,42 +17517,49 @@
 		"Brand": "Morningstar",
 		"Name": "MC3",
 		"Width": 4.8,
-		"Height": 2.83,
+		"Height": 2.97,
 		"Image": "morningstar-mc3.png"
 	},
 	{
 		"Brand": "Morningstar",
-		"Name": "ML5",
-		"Width": 6.3,
-		"Height": 2.36,
-		"Image": "morningstar-ml5.png"
-	},
-	{
-		"Brand": "Morningstar",
-		"Name": "MC6",
-		"Width": 5.71,
-		"Height": 3.74,
+		"Name": "MC6 MKII",
+		"Width": 5.7,
+		"Height": 3.9,
 		"Image": "morningstar-mc6.png"
 	},
 	{
 		"Brand": "Morningstar",
 		"Name": "MC8",
-		"Width": 8.8189,
-		"Height": 4.92126,
+		"Width": 8.82,
+		"Height": 4.82,
 		"Image": "morningstar-mc8.png"
 	},
 	{
 		"Brand": "Morningstar",
 		"Name": "MIDI Box",
 		"Width": 4.6,
-		"Height": 1.6,
+		"Height": 1.56,
 		"Image": "morningstar-midi.png"
 	},
 	{
 		"Brand": "Morningstar",
+		"Name": "ML5",
+		"Width": 6.5,
+		"Height": 2.64,
+		"Image": "morningstar-ml5.png"
+	},
+	{
+		"Brand": "Morningstar",
+		"Name": "ML10X",
+		"Width": 6.65,
+		"Height": 2.49,
+		"Image": "morningstar-ml10x.png"
+	},
+	{
+		"Brand": "Morningstar",
 		"Name": "Relay Interface",
-		"Width": 1.634,
-		"Height": 3.267,
+		"Width": 3.27,
+		"Height": 1.79,
 		"Image": "morningstar-relay.png"
 	},
 	{
@@ -17855,6 +17890,13 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-phase90evh35th.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Fat Sugar",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-fatsugar.png"
 	},
 	{
 		"Brand": "MXR",
@@ -18469,8 +18511,15 @@
 		"Brand": "Nordland",
 		"Name": "ODR-C",
 		"Width": 2.6,
-		"Height": 4.92,
+		"Height": 5.03,
 		"Image": "nordland-odr-c.png"
+	},
+	{
+		"Brand": "Nordland",
+		"Name": "ODR-C (Black Edition)",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "nordland-odr-c-black.png"
 	},
 	{
 		"Brand": "Nordland",
@@ -19054,11 +19103,81 @@
 		"Image": "neuraldsp-quadcortex.png"
 	},
 	{
-		"Brand": "Okko",
+		"Brand": "Okko FX",
 		"Name": "Basstard",
-		"Width": 3.97,
-		"Height": 4.74,
+		"Width": 4.05,
+		"Height": 4.81,
 		"Image": "okko-basstard.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Black Beast",
+		"Width": 4.05,
+		"Height": 4.81,
+		"Image": "okko-blackbeast.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Cocaine",
+		"Width": 4.05,
+		"Height": 4.81,
+		"Image": "okko-cocaine.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Coca Comp MKII",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "okko-coca-mk2.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Diablo",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "okko-diablo.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Diablo Dual",
+		"Width": 4.05,
+		"Height": 4.81,
+		"Image": "okko-diablodual.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Diablo GH Signature",
+		"Width": 4.05,
+		"Height": 4.81,
+		"Image": "okko-diabloghsignature.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Dominator",
+		"Width": 4.05,
+		"Height": 4.81,
+		"Image": "okko-dominator.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Holy Grit",
+		"Width": 2.76,
+		"Height": 4.86,
+		"Image": "okko-holygrit.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Motörbass",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "okko-motorbass.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "T3 Tremolo",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "okko-t3.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -24430,7 +24549,7 @@
 		"Height": 4.61138,
 		"Image": "tkog_mini_glitch.png"
 	},
-	
+
 	{
 		"Brand": "The Pill",
 		"Name": "Stereo",
