@@ -28,6 +28,13 @@
 		"Image": "boss-bcb-90x.png"
 	},
 	{
+		"Brand": "BOSS",
+		"Name": "BCB-1000",
+		"Width": 22,
+		"Height": 13.87,
+		"Image": "boss-bcb-1000.png"
+	},
+	{
 		"Brand": "Caseman",
 		"Name": "Gentleman Medium / Large",
 		"Width": 32.284,
