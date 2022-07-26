@@ -3327,8 +3327,8 @@
 	{
 		"Brand": "BOSS",
 		"Name": "EV-30 Dual Expression Pedal",
-		"Width": 3.149,
-		"Height": 7.559,
+		"Width": 3.1875,
+		"Height": 7.5625,
 		"Image": "boss-ev30.png"
 	},
 	{
@@ -3397,8 +3397,8 @@
 	{
 		"Brand": "BOSS",
 		"Name": "FV-30L Foot Volume",
-		"Width": 3.15,
-		"Height": 7.56,
+		"Width": 3.1875,
+		"Height": 7.5625,
 		"Image": "boss-fv30.png"
 	},
 	{
@@ -3741,7 +3741,7 @@
 		"Brand": "BOSS",
 		"Name": "PW-3 Wah Pedal",
 		"Width": 3.1875,
-		"Height": 9.5625,
+		"Height": 7.5625,
 		"Image": "boss-pw3.png"
 	},
 	{
