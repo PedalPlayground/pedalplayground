@@ -26275,15 +26275,15 @@
 	{
 		"Brand": "Wampler",
 		"Name": "cataPulp",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-catapulp.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Clarksdale",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-clarksdale.png"
 	},
 	{
@@ -26296,8 +26296,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Dracarys",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-dracarys.png"
 	},
 	{
@@ -26317,8 +26317,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Ego",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-ego.png"
 	},
 	{
@@ -26331,22 +26331,22 @@
 	{
 		"Brand": "Wampler",
 		"Name": "EQuator",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-equator.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Ethereal",
-		"Width": 2.79,
-		"Height": 5,
+		"Width": 2.69,
+		"Height": 4.81,
 		"Image": "wampler-ethereal.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Euphoria",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-euphoria.png"
 	},
 	{
@@ -26373,8 +26373,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Latitude",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-latitudestandard.png"
 	},
 	{
@@ -26408,8 +26408,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Paisley",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-paisley.png"
 	},
 	{
@@ -26422,8 +26422,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Pantheon",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-pantheon.png"
 	},
 	{
@@ -26436,8 +26436,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Pinnacle",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-pinnacle.png"
 	},
 	{
@@ -26451,7 +26451,7 @@
 		"Brand": "Wampler",
 		"Name": "Plexi-Drive",
 		"Width": 2.5,
-		"Height": 4.5,
+		"Height": 4.81,
 		"Image": "wampler-plexidrive.png"
 	},
 	{
@@ -26485,8 +26485,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Sovereign",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-sovereign.png"
 	},
 	{
@@ -26527,22 +26527,22 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Tumnus Deluxe",
-		"Width": 2.79,
-		"Height": 5,
+		"Width": 2.69,
+		"Height": 4.81,
 		"Image": "wampler-tumnus-deluxe.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Tweed 57",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-tweed57.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Velvet Fuzz",
-		"Width": 2.6,
-		"Height": 5,
+		"Width": 2.5,
+		"Height": 4.81,
 		"Image": "wampler-velvet.png"
 	},
 	{
