@@ -3060,6 +3060,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "AD-2 Acoustic Preamp",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ad2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "AW-3 Dynamic Wah",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -4107,6 +4114,13 @@
 		"Width": 26.378,
 		"Height": 2.3622,
 		"Image": "brightonion-12switcher.png"
+	},
+	{
+		"Brand": "Broughton",
+		"Name": "High Pass Filter",
+		"Width": 1.6,
+		"Height": 3.7,
+		"Image": "broughton-hpf.png"
 	},
 	{
 		"Brand": "Browne Amplification",
@@ -12671,6 +12685,20 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "Tube King Distortion",
+		"Width": 8,
+		"Height": 8,
+		"Image": "ibanez-tk999ht.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "Tube King Overdrive",
+		"Width": 8,
+		"Height": 8,
+		"Image": "ibanez-tk999od.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "Tube Screamer Mini",
 		"Width": 1.96,
 		"Height": 3.65,
@@ -14924,6 +14952,13 @@
 		"Image": "khdk-unicorn-blood-2.png"
 	},
 	{
+		"Brand": "KSR",
+		"Name": "Ceres (Black Sparkle)",
+		"Width": 5.7,
+		"Height": 4.7,
+		"Image": "ksr-ceres-blackspark.png"
+	},
+	{
 		"Brand": "Kingsley",
 		"Name": "Bard",
 		"Width": 3.875,
@@ -15664,6 +15699,13 @@
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "lovepedal-vibronaut.png"
+	},
+	{
+		"Brand": "Lovetone",
+		"Name": "Big Cheese",
+		"Width": 7.48,
+		"Height": 7.87,
+		"Image": "lovetone-big-cheese.png"
 	},
 	{
 		"Brand": "Lovetone",
@@ -16780,6 +16822,13 @@
 	},
 	{
 		"Brand": "Moen",
+		"Name": "GEC9",
+		"Width": 16.9291,
+		"Height": 3.74016,
+		"Image": "moen-gec9.png"
+	},
+	{
+		"Brand": "Moen",
 		"Name": "Jimi Nova",
 		"Width": 2.80,
 		"Height": 4.5,
@@ -17367,19 +17416,19 @@
 		"Image": "mooer-micro-power.png"
 	},
 	{
-    "Brand": "Mooer",
+    	"Brand": "Mooer",
 		"Name": "Mod Factory MK II",
 		"Width": 1.67,
 		"Height": 3.75,
 		"Image": "mooer-modfactory-mkii.png"
-  },
+  	},
 	{
-    "Brand": "Mooer",
+    	"Brand": "Mooer",
 		"Name": "Mod Factory Pro",
 		"Width": 4.17,
 		"Height": 3.7,
 		"Image": "mooer-modfactory-pro.png"
-  },
+  	},
 	{
 		"Brand": "Mooer",
 		"Name": "Modverb",
@@ -21026,6 +21075,55 @@
 		"Width": 6.3,
 		"Height": 5,
 		"Image": "radial-phazer.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "Pro48",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-pro48.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProAV1",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-proav1.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProAV2",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-proav2.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProD2",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-prod2.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProDI",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-prodi.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProMS2",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-proms2.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "ProRMP Reamp",
+		"Width": 4.25197,
+		"Height": 2.75591,
+		"Image": "radial-prormp.png"
 	},
 	{
 		"Brand": "Radial Engineering",
@@ -25651,10 +25749,59 @@
 	},
 	{
 		"Brand": "Vox",
+		"Name": "Cooltron Big Ben Overdrive",
+		"Width": 6.63,
+		"Height": 6.12,
+		"Image": "vox-cooltron-big-ben.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Cooltron Brit Boost",
+		"Width": 6.63,
+		"Height": 6.12,
+		"Image": "vox-cooltron-brit-boost.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Cooltron Bulldog Distortion",
+		"Width": 6.63,
+		"Height": 6.12,
+		"Image": "vox-cooltron-bulldog-dist.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Double Dera Delay",
+		"Width": 3.43,
+		"Height": 5.2,
+		"Image": "vox-double-dera.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Flat 4 Boost",
+		"Width": 3.43,
+		"Height": 5.2,
+		"Image": "vox-flat-4.png"
+	},
+	{
+		"Brand": "Vox",
 		"Name": "Satchurator",
 		"Width": 5.63,
 		"Height": 4.76,
 		"Image": "vox-satchurator.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Straight 6 Drive",
+		"Width": 3.43,
+		"Height": 5.2,
+		"Image": "vox-straight-6.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Trike Fuzz",
+		"Width": 3.43,
+		"Height": 5.2,
+		"Image": "vox-trike.png"
 	},
 	{
 		"Brand": "Vox",
@@ -25669,6 +25816,13 @@
 		"Width": 4.01575,
 		"Height": 9.92126,
 		"Image": "vox-wah.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "V8 Distortion",
+		"Width": 3.43,
+		"Height": 5.2,
+		"Image": "vox-v8.png"
 	},
 	{
 		"Brand": "Vox",
@@ -27212,6 +27366,12 @@
 	},
 	{
 		"Brand": "Yamaha",
+		"Name": "CH-01 Chorus",
+		"Width": 2.75591,
+		"Height": 5.07874,
+		"Image": "yamaha-ch01.png"
+  },
+  {
 		"Name": "FL-10MII",
 		"Width": 2.6,
 		"Height": 4.9,
