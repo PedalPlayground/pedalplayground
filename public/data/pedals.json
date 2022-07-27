@@ -16612,6 +16612,13 @@
 	},
 	{
 		"Brand": "MI Audio",
+		"Name": "Blues Pro",
+		"Width": 2.62,
+		"Height": 4.3,
+		"Image": "miaudio-bluespro.png"
+	},
+	{
+		"Brand": "MI Audio",
 		"Name": "Boost 'n' Buff",
 		"Width": 2.62,
 		"Height": 4.3,
