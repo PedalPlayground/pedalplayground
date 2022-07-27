@@ -842,7 +842,7 @@
 	{
 		"Brand": "AMT",
 		"Name": "NG-1 Incinerator",
-		"Width": 2.8,
+		"Width": 2.40,
 		"Height": 3.83,
 		"Image": "amt-incinerator.png"
 	},
@@ -10621,21 +10621,21 @@
 	{
         	"Brand": "Fredric Effects",
 		"Name": "Blue Monarch",
-		"Width": 2.92,
+		"Width": 2.68,
 		"Height": 4.30,
 		"Image": "fredric-effects-blue-monarch.png"
     	},
 	{
 		"Brand": "Fredric Effects",
 		"Name": "Regent 150 preamp",
-		"Width": 2.95,
+		"Width": 2.68,
 		"Height": 4.29,
 		"Image": "fredric-effects-regent-150.png"
 	},
 	{
 		"Brand": "Fredric Effects",
 		"Name": "Standard Fuzz Machine",
-		"Width": 2.95,
+		"Width": 2.68,
 		"Height": 4.29,
 		"Image": "fredric-standard-fuzz.png"
 	},
@@ -12133,7 +12133,7 @@
 	{
 		"Brand": "Harley Benton",
 		"Name": "Vintage Overdrive",
-		"Width": 2.85,
+		"Width": 2.65,
 		"Height": 4.64,
 		"Image": "harley-benton-vintage-overdrive.png"
 	},
@@ -20192,14 +20192,14 @@
 		"Name": "PAN-01",
 		"Width": 2.87,
 		"Height": 4.33,
-		"Image": "Palmer PAN-01.png"
+		"Image": "palmer-pan-01.png"
 	},
 	{
 		"Brand": "Palmer",
 		"Name": "PAN-02",
 		"Width": 2.87,
 		"Height": 4.33,
-		"Image": "Palmer PAN-02.png"
+		"Image": "palmer-pan-02.png"
 	},
 	{
 		"Brand": "Panda Audio",
