@@ -16612,36 +16612,57 @@
 	},
 	{
 		"Brand": "MI Audio",
-		"Name": "Blues Pro Overdrive",
-		"Width": 2.52,
-		"Height": 4.29,
-		"Image": "mi-audio-blues-pro-overdrive.png"
+		"Name": "Boost 'n' Buff",
+		"Width": 2.62,
+		"Height": 4.3,
+		"Image": "miaudio-boostnbuff.png"
+	},
+	{
+		"Brand": "MI Audio",
+		"Name": "Cross Over V2",
+		"Width": 2.62,
+		"Height": 4.3,
+		"Image": "miaudio-cross-over-v2.png"
 	},
 	{
 		"Brand": "MI Audio",
 		"Name": "Crunchbox",
-		"Width": 2.5,
+		"Width": 2.62,
 		"Height": 4.3,
 		"Image": "miaudio-crunchbox.png"
 	},
 	{
 		"Brand": "MI Audio",
 		"Name": "Crunchbox V2",
-		"Width": 2.52,
+		"Width": 2.62,
 		"Height": 4.3,
 		"Image": "miaudio-crunch-box-v2.png"
 	},
 	{
 		"Brand": "MI Audio",
+		"Name": "Lo-Fi Delay",
+		"Width": 2.62,
+		"Height": 4.3,
+		"Image": "miaudio-lofi-delay.png"
+	},
+	{
+		"Brand": "MI Audio",
+		"Name": "Super Blues Pro",
+		"Width": 2.62,
+		"Height": 4.3,
+		"Image": "mi-audio-blues-pro-overdrive.png"
+	},
+	{
+		"Brand": "MI Audio",
 		"Name": "Super Crunch Box",
-		"Width": 2.59,
+		"Width": 2.62,
 		"Height": 4.3,
 		"Image": "miaudio-supercrunchbox.png"
 	},
 	{
 		"Brand": "MI Audio",
 		"Name": "Super Crunch Box V2",
-		"Width": 2.59,
+		"Width": 2.62,
 		"Height": 4.3,
 		"Image": "mi-audio-super-crunch-box-v2.png"
 	},
