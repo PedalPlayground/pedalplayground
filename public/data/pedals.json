@@ -19587,6 +19587,13 @@
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Float)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-float.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Expression Ramper (Neon Blue)",
 		"Width": 1.69,
 		"Height": 3.88,
@@ -19622,6 +19629,13 @@
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Slider (Float)",
+		"Width": 1.5,
+		"Height": 3.88,
+		"Image": "obne-slider-float.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Fault",
 		"Width": 4.7,
 		"Height": 4.12,
@@ -19640,6 +19654,13 @@
 		"Width": 2.87,
 		"Height": 4.96,
 		"Image": "obne-flatlight.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Float",
+		"Width": 4.84,
+		"Height": 3.86,
+		"Image": "obne-float.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
