@@ -27510,7 +27510,14 @@
 		"Width": 5,
 		"Height": 4.1875,
 		"Image": "zeppelin-quaverato.png"
-    },
+ 	},
+	{
+		"Brand": "Zoom",
+		"Name": "G1x",
+		"Width": 9.21,
+		"Height": 6.50,
+		"Image": "zoom-g1x.png"
+	},
 	{
 		"Brand": "Zoom",
 		"Name": "G1x Four",
