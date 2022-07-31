@@ -13525,10 +13525,24 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "808",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-808.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Active A/B/Y",
 		"Width": 4.42,
 		"Height": 2.49,
 		"Image": "jhs-active-aby.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "All American",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-all-american.png"
 	},
 	{
 		"Brand": "JHS",
@@ -13543,6 +13557,13 @@
 		"Width": 2.93,
 		"Height": 4.98,
 		"Image": "jhs-angrycharlie-v3.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Astro Mess Fuzz",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-astro-mess.png"
 	},
 	{
 		"Brand": "JHS",
@@ -13823,6 +13844,13 @@
 		"Width": 2.75,
 		"Height": 4.88,
 		"Image": "jhs-pinkpanther.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Pollinator V2",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-pollinator-v2.png"
 	},
 	{
 		"Brand": "JHS",
