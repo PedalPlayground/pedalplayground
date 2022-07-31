@@ -3052,6 +3052,13 @@
 		"Image": "boomerang-III-phrase-sampler.png"
 	},
 	{
+		"Brand": "Boots & Boards",
+		"Name": "Pick Tin",
+		"Width": 2.5,
+		"Height": 1.75,
+		"Image": "boots-boards-tin.png"
+	},
+	{
 		"Brand": "BOSS",
 		"Name": "AC-3 Acoustic Simulator",
 		"Width": 2.875,
@@ -25172,6 +25179,20 @@
 		"Width": 2.6,
 		"Height": 5.01,
 		"Image": "triungulo-scar-fuzz.png"
+	},
+	{
+		"Brand": "Tru-Fi Effects",
+		"Name": "Colordriver 18V",
+		"Width": 4,
+		"Height": 5.5,
+		"Image": "tru-fi-colordriver-18v.png"
+	},
+	{
+		"Brand": "Tru-Fi Effects",
+		"Name": "Colordriver 9V",
+		"Width": 4,
+		"Height": 5.5,
+		"Image": "tru-fi-colordriver-9v.png"
 	},
 	{
 		"Brand": "Truetone",
