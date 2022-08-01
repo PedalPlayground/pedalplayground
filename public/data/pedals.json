@@ -2640,6 +2640,20 @@
 	},
 	{
 		"Brand": "Black Mass Electronics",
+		"Name": "1312 Distortion V3 (Antique Gold)",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "blackmass-1312-v3-gold.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "1312 Distortion V3 (Blurple)",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "blackmass-1312-v3-blurple.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
 		"Name": "1312 Distortion V3 (White)",
 		"Width": 2.6,
 		"Height": 4.97,
