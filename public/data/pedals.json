@@ -26379,6 +26379,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Mira",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-mira.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Monument",
 		"Width": 4.67,
 		"Height": 3.8,
