@@ -16887,104 +16887,118 @@
 		"Brand": "Mojo Hand FX",
 		"Name": "1979",
 		"Width": 4.7,
-		"Height": 3.80,
+		"Height": 3.92,
 		"Image": "mojohand-1979.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "1979 (Peach)",
 		"Width": 4.7,
-		"Height": 3.93,
+		"Height": 3.92,
 		"Image": "mojohand-1979-peach.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "1979 (Graphite)",
+		"Width": 4.7,
+		"Height": 3.92,
+		"Image": "mojohand-1979-graphite.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "BMP-2",
-		"Width": 2.86,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-bmp2.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Bayou",
-		"Width": 2.82,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-bayou.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "Bluebonnet",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "mojohand-bluebonnet.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "Bluebonnet Special",
-		"Width": 2.81,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-bluebonnetspecial.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Clarity",
-		"Width": 2.61,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-clarity.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Colossus",
-		"Width": 2.83,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-colossus.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Crosstown",
-		"Width": 2.79,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-crosstown.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Dewdrop",
-		"Width": 2.92,
+		"Width": 2.9,
 		"Height": 4.8,
 		"Image": "mojohand-dewdrop.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "DMBL",
-		"Width": 2.81,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-dmbl.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Dream Mender",
-		"Width": 2.61,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-dream-mender.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "El Guapo",
-		"Width": 2.81,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-el-guapo.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Extra Special",
-		"Width": 2.92,
+		"Width": 2.9,
 		"Height": 4.8,
 		"Image": "mojohand-extraspecial.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Iron Bell",
-		"Width": 2.83,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-ironbell.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Little Wonder",
-		"Width": 2.61,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-little-wonder.png"
 	},
@@ -16992,20 +17006,20 @@
 		"Brand": "Mojo Hand FX",
 		"Name": "Magistrate",
 		"Width": 4.7,
-		"Height": 3.77,
+		"Height": 3.85,
 		"Image": "mojohand-magistrate.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Magpie",
-		"Width": 2.82,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-magpie.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Mirror Ball",
-		"Width": 2.77,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-mirrorball.png"
 	},
@@ -17019,42 +17033,49 @@
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Mister-O v2",
-		"Width": 2.62,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-mister-o-v2.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Nebula",
-		"Width": 2.87,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-nebula.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Nebula IV",
-		"Width": 2.93,
+		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "mojohand-nebulaiv.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "Octaverse",
+		"Width": 2.59,
+		"Height": 4.4,
+		"Image": "mojohand-octaverse.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "Odessa",
 		"Width": 4.7,
-		"Height": 3.89,
+		"Height": 3.92,
 		"Image": "mojohand-odessa.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "One Ton Bee",
-		"Width": 2.83,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-one-ton-bee.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Park Theater",
-		"Width": 2.62,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-park-theater.png"
 	},
@@ -17068,28 +17089,28 @@
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Rook Royale",
-		"Width": 5.02,
-		"Height": 3.73,
+		"Width": 4.7,
+		"Height": 3.8,
 		"Image": "mojohand-rookroyale.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Rounder",
-		"Width": 2.81,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-rounder.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "RVT",
-		"Width": 2.62,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-rvt.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Sacred Cow",
-		"Width": 2.83,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-sacred-cow.png"
 	},
@@ -17097,27 +17118,27 @@
 		"Brand": "Mojo Hand FX",
 		"Name": "Sericon",
 		"Width": 4.7,
-		"Height": 4.01,
+		"Height": 3.92,
 		"Image": "mojohand-sericon.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Speakeasy",
-		"Width": 2.87,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-speakeasy.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Superlative",
-		"Width": 2.81,
-		"Height": 4.8,
+		"Width": 2.59,
+		"Height": 4.4,
 		"Image": "mojohand-superlative.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Swim Team",
-		"Width": 2.65,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-swim-team.png"
 	},
