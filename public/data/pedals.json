@@ -5446,6 +5446,13 @@
 		"Image": "cme-widiuhost.png"
 	},
 	{
+		"Brand": "Coffee Shop Pedals",
+		"Name": "Affogato",
+		"Width": 2.81,
+		"Height": 4.7,
+		"Image": "coffeshoppedals-affogato.png"
+	},
+	{
 		"Brand": "Collaboration Devices",
 		"Name": "The Compressor (Black)",
 		"Width": 4.75,
