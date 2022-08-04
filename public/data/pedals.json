@@ -232,6 +232,13 @@
 	},
 	{
 		"Brand": "Aclam",
+		"Name": "360° Fastener",
+		"Width": 0.87,
+		"Height": 1.06,
+		"Image": "aclam-360-fastener.png"
+	},
+	{
+		"Brand": "Aclam",
 		"Name": "Cinnamon Drive",
 		"Width": 5.4,
 		"Height": 3.59,
