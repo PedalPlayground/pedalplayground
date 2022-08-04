@@ -155,6 +155,13 @@
 	},
 	{
 		"Brand": "A3 Stompbox",
+		"Name": "J",
+		"Width": 2.48,
+		"Height": 4.74,
+		"Image": "a3-j.png"
+	},
+	{
+		"Brand": "A3 Stompbox",
 		"Name": "Louis Chorus",
 		"Width": 3.28,
 		"Height": 4.92,
