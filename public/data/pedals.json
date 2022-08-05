@@ -11712,6 +11712,13 @@
 	},
 	{
 		"Brand": "Greenhouse Effects",
+		"Name": "Middle Man Boost",
+		"Width": 2.38,
+		"Height": 4.5,
+		"Image": "greenhouse-middle-man-boost.png"
+	},
+	{
+		"Brand": "Greenhouse Effects",
 		"Name": "Retro Sky Delay",
 		"Width": 2.38,
 		"Height": 4.5,
@@ -21265,6 +21272,13 @@
 		"Height": 1.85,
 		"Image": "radial-sb4.png"
 	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "Tonebone Trimode",
+		"Width": 7.8,
+		"Height": 4.5,
+		"Image": "radial-tonebone-trimode.png"
+	},
  	{
 		"Brand": "Radial Engineering",
 		"Name": "Twin-City",
@@ -27496,9 +27510,10 @@
 		"Width": 2.75591,
 		"Height": 5.07874,
 		"Image": "yamaha-ch01.png"
-  },
-  {
-		"Name": "FL-10MII",
+  	},
+  	{
+		"Brand": "Yamaha",
+		"Name": "FL-10MII Flanger",
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "yamaha-fl-10mii.png"
@@ -27593,7 +27608,14 @@
 		"Width": 5,
 		"Height": 4.1875,
 		"Image": "zeppelin-quaverato.png"
-    },
+ 	},
+	{
+		"Brand": "Zoom",
+		"Name": "G1x",
+		"Width": 9.21,
+		"Height": 6.50,
+		"Image": "zoom-g1x.png"
+	},
 	{
 		"Brand": "Zoom",
 		"Name": "G1x Four",
