@@ -15808,72 +15808,177 @@
 	{
 		"Brand": "Mad Professor",
 		"Name": "1 Overdrive",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.52,
+		"Height": 4.33,
 		"Image": "madprof-1od.png"
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Little Green Wonder",
-		"Width": 2.5,
-		"Height": 4.4,
-		"Image": "madprof-littlegreenwonder.png"
-	},
-	{
-		"Brand": "Mad Professor",
-		"Name": "Twimble",
-		"Width": 4.7,
-		"Height": 3.8,
-		"Image": "madprof-twimble.png"
-	},
-	{
-		"Brand": "Mad Professor",
 		"Name": "Amber Overdrive",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.52,
+		"Height": 4.33,
 		"Image": "madprof-amber.png"
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Big Tweedy Drive",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-bigtweedydrive.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Blueberry Bass Overdrive",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-blueberrybass.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Bluebird Overdrive",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-bluebird.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Deep Blue Delay",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.52,
+		"Height": 4.33,
 		"Image": "madprof-deepbluedelay.png"
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Double Moon",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-doublemoon.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Electric Blue Chorus",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-electricblue.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Electric Blue II Chorus ~ Vibrato",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-electricblue2.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Evolution Orange Underdrive",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-evolutionorange.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Fire Red Fuzz",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-firered.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Forrest Green Compressor",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.52,
+		"Height": 4.33,
 		"Image": "madprof-forrestgreencomp.png"
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Golden Cello",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-goldencello.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Little Green Wonder",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-littlegreenwonder.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Little Tweedy Drive",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-littletweedydrive.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Kozmoz",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-kozmoz.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Mellow Yellow Tremolo",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-melowyellow.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Mighty Red Distortion",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-mightyred.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Royal Blue Overdrive",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.52,
+		"Height": 4.33,
 		"Image": "madprof-royalblue.png"
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Snow White Auto Wah",
-		"Width": 2.6,
-		"Height": 4.45,
-		"Image": "madprof-snowwhite.png"
+		"Name": "Ruby Red Booster",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-rubyred.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Silver Spring Reverb",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.52,
+		"Height": 4.33,
 		"Image": "madprof-silverspring.png"
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Simble",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Name": "Simble Overdrive",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-simbleod.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Simble Predriver",
+		"Width": 2.52,
+		"Height": 4.33,
 		"Image": "madprof-simble.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Snow White AutoWah",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-snowwhite.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Stone Grey Distortion",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-stonegrey.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -15892,9 +15997,37 @@
 	{
 		"Brand": "Mad Professor",
 		"Name": "Sweet Honey Overdrive",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.52,
+		"Height": 4.33,
 		"Image": "madprof-sweethoney.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Sweet Honey Overdrive Deluxe",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-sweethoney-deluxe.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "The Green Wonder",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-thegreenwonder.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Tiny Orange Phaser",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-tinyorange.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Twimble",
+		"Width": 4.7,
+		"Height": 3.8,
+		"Image": "madprof-twimble.png"
 	},
 	{
 		"Brand": "Maestro",
@@ -20774,6 +20907,13 @@
 		"Width": 1.75,
 		"Height": 3.75,
 		"Image": "pigtronix-gate-keeper.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Gloamer",
+		"Width": 4.75,
+		"Height": 3.95,
+		"Image": "pigtronix-gloamer.png"
 	},
 	{
 		"Brand": "Pigtronix",
