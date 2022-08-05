@@ -15821,6 +15821,13 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Amber Overdrive (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-amber-hw.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Big Tweedy Drive",
 		"Width": 2.52,
 		"Height": 4.33,
@@ -15846,6 +15853,20 @@
 		"Width": 2.52,
 		"Height": 4.33,
 		"Image": "madprof-deepbluedelay.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Deep Blue Delay (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-deepbluedelay-hw.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Dual Blue Delay",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "madprof-dualbluedelay.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -15884,10 +15905,24 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Fire Red Fuzz (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-firered-hw.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Forrest Green Compressor",
 		"Width": 2.52,
 		"Height": 4.33,
 		"Image": "madprof-forrestgreencomp.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Forrest Green Compressor (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-forrestgreencomp-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -15905,10 +15940,24 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Little Green Wonder (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-littlegreenwonder-hw.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Little Tweedy Drive",
 		"Width": 2.52,
 		"Height": 4.33,
 		"Image": "madprof-littletweedydrive.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Loud 'n Proud",
+		"Width": 3.94,
+		"Height": 4.7,
+		"Image": "madprof-loudnproud.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -15926,10 +15975,24 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Mellow Yellow Tremolo (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-melowyellow-hw.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Mighty Red Distortion",
 		"Width": 2.52,
 		"Height": 4.33,
 		"Image": "madprof-mightyred.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Mighty Red Distortion (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-mightyred-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -15968,10 +16031,31 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Sky Blue (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-skyblue-hw.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Snow White AutoWah",
 		"Width": 2.52,
 		"Height": 4.33,
 		"Image": "madprof-snowwhite.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Snow White AutoWah (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-snowwhite-hw.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Snow White Bass AutoWah (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-snowwhitebass-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -15983,15 +16067,15 @@
 	{
 		"Brand": "Mad Professor",
 		"Name": "Super Black",
-		"Width": 3.9,
-		"Height": 4.73,
+		"Width": 3.94,
+		"Height": 4.7,
 		"Image": "madprof-superblack.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Supreme Dual Overdrive",
-		"Width": 4.53,
-		"Height": 3.60,
+		"Width": 4.7,
+		"Height": 3.83,
 		"Image": "madprof-supremedualoverdrive.png"
 	},
 	{
@@ -16000,6 +16084,13 @@
 		"Width": 2.52,
 		"Height": 4.33,
 		"Image": "madprof-sweethoney.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Sweet Honey Overdrive (Handwired)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "madprof-sweethoney-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -16024,9 +16115,16 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Tiny Orange Phaser (Handwired)",
+		"Width": 2.52,
+		"Height": 4.33,
+		"Image": "madprof-tinyorange-hw.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Twimble",
 		"Width": 4.7,
-		"Height": 3.8,
+		"Height": 3.83,
 		"Image": "madprof-twimble.png"
 	},
 	{
