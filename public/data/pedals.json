@@ -155,6 +155,13 @@
 	},
 	{
 		"Brand": "A3 Stompbox",
+		"Name": "J",
+		"Width": 2.48,
+		"Height": 4.74,
+		"Image": "a3-j.png"
+	},
+	{
+		"Brand": "A3 Stompbox",
 		"Name": "Louis Chorus",
 		"Width": 3.28,
 		"Height": 4.92,
@@ -229,6 +236,13 @@
 		"Width": 2.6,
 		"Height": 5.02,
 		"Image": "acn-vola.png"
+	},
+	{
+		"Brand": "Aclam",
+		"Name": "360° Fastener",
+		"Width": 0.87,
+		"Height": 1.06,
+		"Image": "aclam-360-fastener.png"
 	},
 	{
 		"Brand": "Aclam",
@@ -2635,36 +2649,57 @@
 		"Brand": "Black Mass Electronics",
 		"Name": "1312 Distortion",
 		"Width": 2.6,
-		"Height": 4.92,
+		"Height": 4.97,
 		"Image": "blackmass-1312.png"
 	},
 	{
 		"Brand": "Black Mass Electronics",
 		"Name": "1312 Distortion V3",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 4.97,
 		"Image": "blackmass-1312-v3.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "1312 Distortion V3 (Antique Gold)",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "blackmass-1312-v3-gold.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "1312 Distortion V3 (Blurple)",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "blackmass-1312-v3-blurple.png"
 	},
 	{
 		"Brand": "Black Mass Electronics",
 		"Name": "1312 Distortion V3 (White)",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 4.97,
 		"Image": "blackmass-1312-v3-white.png"
 	},
 	{
 		"Brand": "Black Mass Electronics",
 		"Name": "Missionary Fuzz V2",
 		"Width": 2.6,
-		"Height": 4.92,
+		"Height": 4.97,
 		"Image": "blackmass-missionary-v2.png"
 	},
 	{
 		"Brand": "Black Mass Electronics",
 		"Name": "The First Herald",
 		"Width": 3.7,
-		"Height": 4.82,
+		"Height": 4.89,
 		"Image": "blackmass-thefirstherald.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "The First Herald V2",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "blackmass-thefirstherald-v2.png"
 	},
 	{
 		"Brand": "Blackstar",
@@ -5437,6 +5472,13 @@
 		"Width": 1.339,
 		"Height": 1.496,
 		"Image": "cme-widiuhost.png"
+	},
+	{
+		"Brand": "Coffee Shop Pedals",
+		"Name": "Affogato",
+		"Width": 2.81,
+		"Height": 4.7,
+		"Image": "coffeshoppedals-affogato.png"
 	},
 	{
 		"Brand": "Collaboration Devices",
@@ -11684,6 +11726,13 @@
 	},
 	{
 		"Brand": "Greenhouse Effects",
+		"Name": "Middle Man Boost",
+		"Width": 2.38,
+		"Height": 4.5,
+		"Image": "greenhouse-middle-man-boost.png"
+	},
+	{
+		"Brand": "Greenhouse Effects",
 		"Name": "Retro Sky Delay",
 		"Width": 2.38,
 		"Height": 4.5,
@@ -16908,104 +16957,118 @@
 		"Brand": "Mojo Hand FX",
 		"Name": "1979",
 		"Width": 4.7,
-		"Height": 3.80,
+		"Height": 3.92,
 		"Image": "mojohand-1979.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "1979 (Peach)",
 		"Width": 4.7,
-		"Height": 3.93,
+		"Height": 3.92,
 		"Image": "mojohand-1979-peach.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "1979 (Graphite)",
+		"Width": 4.7,
+		"Height": 3.92,
+		"Image": "mojohand-1979-graphite.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "BMP-2",
-		"Width": 2.86,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-bmp2.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Bayou",
-		"Width": 2.82,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-bayou.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "Bluebonnet",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "mojohand-bluebonnet.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "Bluebonnet Special",
-		"Width": 2.81,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-bluebonnetspecial.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Clarity",
-		"Width": 2.61,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-clarity.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Colossus",
-		"Width": 2.83,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-colossus.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Crosstown",
-		"Width": 2.79,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-crosstown.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Dewdrop",
-		"Width": 2.92,
+		"Width": 2.9,
 		"Height": 4.8,
 		"Image": "mojohand-dewdrop.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "DMBL",
-		"Width": 2.81,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-dmbl.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Dream Mender",
-		"Width": 2.61,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-dream-mender.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "El Guapo",
-		"Width": 2.81,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-el-guapo.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Extra Special",
-		"Width": 2.92,
+		"Width": 2.9,
 		"Height": 4.8,
 		"Image": "mojohand-extraspecial.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Iron Bell",
-		"Width": 2.83,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-ironbell.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Little Wonder",
-		"Width": 2.61,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-little-wonder.png"
 	},
@@ -17013,20 +17076,20 @@
 		"Brand": "Mojo Hand FX",
 		"Name": "Magistrate",
 		"Width": 4.7,
-		"Height": 3.77,
+		"Height": 3.85,
 		"Image": "mojohand-magistrate.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Magpie",
-		"Width": 2.82,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-magpie.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Mirror Ball",
-		"Width": 2.77,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-mirrorball.png"
 	},
@@ -17040,42 +17103,49 @@
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Mister-O v2",
-		"Width": 2.62,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-mister-o-v2.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Nebula",
-		"Width": 2.87,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-nebula.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Nebula IV",
-		"Width": 2.93,
+		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "mojohand-nebulaiv.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "Octaverse",
+		"Width": 2.59,
+		"Height": 4.4,
+		"Image": "mojohand-octaverse.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "Odessa",
 		"Width": 4.7,
-		"Height": 3.89,
+		"Height": 3.92,
 		"Image": "mojohand-odessa.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "One Ton Bee",
-		"Width": 2.83,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-one-ton-bee.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Park Theater",
-		"Width": 2.62,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-park-theater.png"
 	},
@@ -17089,28 +17159,28 @@
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Rook Royale",
-		"Width": 5.02,
-		"Height": 3.73,
+		"Width": 4.7,
+		"Height": 3.8,
 		"Image": "mojohand-rookroyale.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Rounder",
-		"Width": 2.81,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-rounder.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "RVT",
-		"Width": 2.62,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-rvt.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Sacred Cow",
-		"Width": 2.83,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-sacred-cow.png"
 	},
@@ -17118,27 +17188,27 @@
 		"Brand": "Mojo Hand FX",
 		"Name": "Sericon",
 		"Width": 4.7,
-		"Height": 4.01,
+		"Height": 3.92,
 		"Image": "mojohand-sericon.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Speakeasy",
-		"Width": 2.87,
+		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-speakeasy.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Superlative",
-		"Width": 2.81,
-		"Height": 4.8,
+		"Width": 2.59,
+		"Height": 4.4,
 		"Image": "mojohand-superlative.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Swim Team",
-		"Width": 2.65,
+		"Width": 2.59,
 		"Height": 4.4,
 		"Image": "mojohand-swim-team.png"
 	},
@@ -19629,6 +19699,13 @@
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Ramper (Float)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-float.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Expression Ramper (Neon Blue)",
 		"Width": 1.69,
 		"Height": 3.88,
@@ -19664,6 +19741,13 @@
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Expression Slider (Float)",
+		"Width": 1.5,
+		"Height": 3.88,
+		"Image": "obne-slider-float.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Fault",
 		"Width": 4.7,
 		"Height": 4.12,
@@ -19682,6 +19766,13 @@
 		"Width": 2.87,
 		"Height": 4.96,
 		"Image": "obne-flatlight.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Float",
+		"Width": 4.84,
+		"Height": 3.86,
+		"Image": "obne-float.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -20067,6 +20158,13 @@
 		"Width": 3.6,
 		"Height": 5.76,
 		"Image": "origin-deluxe61.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Halcyon Green",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-halcyon-green.png"
 	},
 	{
 		"Brand": "Origin Effects",
@@ -21313,6 +21411,13 @@
 		"Width": 3.3,
 		"Height": 5,
 		"Image": "radial-trim-two.png"
+  },
+  {
+		"Brand": "Radial Engineering",
+		"Name": "Tonebone Trimode",
+		"Width": 7.8,
+		"Height": 4.5,
+		"Image": "radial-tonebone-trimode.png"
 	},
  	{
 		"Brand": "Radial Engineering",
@@ -26498,6 +26603,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Mira",
+		"Width": 2.66,
+		"Height": 4.95,
+		"Image": "walrus-mira.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Monument",
 		"Width": 4.67,
 		"Height": 3.8,
@@ -27566,9 +27678,10 @@
 		"Width": 2.75591,
 		"Height": 5.07874,
 		"Image": "yamaha-ch01.png"
-  },
-  {
-		"Name": "FL-10MII",
+  	},
+  	{
+		"Brand": "Yamaha",
+		"Name": "FL-10MII Flanger",
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "yamaha-fl-10mii.png"
@@ -27663,7 +27776,14 @@
 		"Width": 5,
 		"Height": 4.1875,
 		"Image": "zeppelin-quaverato.png"
-    },
+ 	},
+	{
+		"Brand": "Zoom",
+		"Name": "G1x",
+		"Width": 9.21,
+		"Height": 6.50,
+		"Image": "zoom-g1x.png"
+	},
 	{
 		"Brand": "Zoom",
 		"Name": "G1x Four",
