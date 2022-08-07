@@ -18929,6 +18929,13 @@
 	},
 	{
 		"Brand": "Nordvang",
+		"Name": "Triple Gain",
+		"Width": 7.4,
+		"Height": 4.72,
+		"Image": "nordvang-triple-gain.png"
+	},
+	{
+		"Brand": "Nordvang",
 		"Name": "Wingman v2.0",
 		"Width": 5.7,
 		"Height": 4.9,
@@ -25809,6 +25816,20 @@
 		"Width": 2.75,
 		"Height": 4.47,
 		"Image": "vemuram-shanks-ods-1.png"
+	},
+	{
+		"Brand": "VFE Pedals",
+		"Name": "Blues King",
+		"Width": 2.6,
+		"Height": 4.4,
+		"Image": "vfe-blues-king.png"
+	},
+	{
+		"Brand": "VFE Pedals",
+		"Name": "Merman",
+		"Width": 2.6,
+		"Height": 4.4,
+		"Image": "vfe-merman.png"
 	},
 	{
 		"Brand": "Vick Audio",
