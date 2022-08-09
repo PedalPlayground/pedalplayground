@@ -26946,6 +26946,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Moxie",
+		"Width": 1.82,
+		"Height": 3.64,
+		"Image": "wampler-moxie.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "Paisley",
 		"Width": 2.5,
 		"Height": 4.81,
