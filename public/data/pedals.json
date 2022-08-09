@@ -7077,13 +7077,20 @@
 		"Image": "dmb-lunar-echo.png"
 	},
 	{
+		"Brand": "Does It Doom",
+		"Name": "Aghartha",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "doesitdoom-aghartha.png"
+	},
+	{
 		"Brand": "Donner",
 		"Name": "AB/Y",
 		"Width": 1.5,
 		"Height": 2.9,
 		"Image": "donner-aby.png"
 	},
-    {
+  {
 		"Brand": "Donner",
 		"Name": "Jet Convolution",
 		"Width": 1.62,
