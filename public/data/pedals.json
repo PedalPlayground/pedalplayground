@@ -4691,6 +4691,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Formula 5F6",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-formula5f6.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Formula No. 55",
 		"Width": 2.6,
 		"Height": 4.33,
@@ -4702,6 +4709,13 @@
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-fuzzrite.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Fuzzrite (Germanium)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-fuzzrite-germanium.png"
 	},
 	{
 		"Brand": "Catalinbread",
