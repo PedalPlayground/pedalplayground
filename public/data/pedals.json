@@ -10423,6 +10423,139 @@
 		"Image": "fjord-odin.png"
 	},
 	{
+		"Brand": "Flamma",
+		"Name": "FC01 Drum Loop",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc01.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC02 Reverb",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc02.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC03 Delay",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc03.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC05 Mod",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc05.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC06 Dist",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc06.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC07 Drive",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc07.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC10 Gate",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc10.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC11 Envelope",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc11.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC14 Analog Chorus",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc14.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC15 Analog Flanger",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc15.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC16 Optical Tremolo",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc16.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FS01 Drum Loop",
+		"Width": 2.75,
+		"Height": 4.8,
+		"Image": "flamma-fs01.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FS02 Reverb",
+		"Width": 2.75,
+		"Height": 4.8,
+		"Image": "flamma-fs02.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FS03 Delay",
+		"Width": 2.75,
+		"Height": 4.8,
+		"Image": "flamma-fs03.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FS05 Modulation",
+		"Width": 2.75,
+		"Height": 4.8,
+		"Image": "flamma-fs05.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FS06 Preamp",
+		"Width": 2.75,
+		"Height": 4.8,
+		"Image": "flamma-fs06.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FS07 Cab",
+		"Width": 2.75,
+		"Height": 4.8,
+		"Image": "flamma-fs07.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FS21 Looped & Drum",
+		"Width": 3.5,
+		"Height": 4.8,
+		"Image": "flamma-fs21.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FS22 Ekoverb",
+		"Width": 3.5,
+		"Height": 4.8,
+		"Image": "flamma-fs22.png"
+	},
+	{
 		"Brand": "Flower Pedals",
 		"Name": "Castilleja",
 		"Width": 2.73,
