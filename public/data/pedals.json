@@ -2437,6 +2437,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "TU300 Chromatic Tuner",
+		"Width": 2.755,
+		"Height": 4.842,
+		"Image": "behringer-tu300.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "UC200 Ultra Chorus",
 		"Width": 2.755,
 		"Height": 4.842,
@@ -14211,6 +14218,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "Splinter",
+		"Width": 3.8189,
+		"Height": 4.72441,
+		"Image": "joyo-splinter.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "Vintage Overdrive",
 		"Width": 2.63,
 		"Height": 4.65,
@@ -25683,6 +25697,20 @@
 		"Width": 1.89,
 		"Height": 3.7,
 		"Image": "valeton-fp-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "Surge EP-1",
+		"Width": 2.57874,
+		"Height": 5.8464567,
+		"Image": "valeton-ep-1.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "Surge EP-2",
+		"Width": 2.57874,
+		"Height": 5.8464567,
+		"Image": "valeton-ep-2.png"
 	},
 	{
 		"Brand": "Vertex",
