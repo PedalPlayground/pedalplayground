@@ -14057,6 +14057,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Solo Boost",
+		"Width": 1.82,
+		"Height": 3.8,
+		"Image": "jhs-solo-boost.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Space Commander",
 		"Width": 4,
 		"Height": 4.85,
