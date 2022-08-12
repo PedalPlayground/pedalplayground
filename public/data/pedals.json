@@ -9555,6 +9555,20 @@
 		"Image": "elektron-analogdrive.png"
 	},
 	{
+		"Brand": "Elektron",
+		"Name": "Digitakt",
+		"Width": 8.5,
+		"Height": 7.01,
+		"Image": "elektron-digitakt.png"
+	},
+	{
+		"Brand": "Elektron",
+		"Name": "Digitone",
+		"Width": 8.5,
+		"Height": 7.01,
+		"Image": "elektron-digitone.png"
+	},
+	{
 		"Brand": "Emerson Custom",
 		"Name": "Concorde V2",
 		"Width": 3.7,
