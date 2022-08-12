@@ -4,7 +4,7 @@
 
 -   Find an image that is as close as possible to a perfect top-down angle,
     -   GIMP: use the perspective tool to make any necessary adjustments,
-    -   Photoshop: use the free transform tools (perspective, skew) to make any necessary adjustments,
+    -   Photoshop: use the camera raw (`shift + ctrl + a`) perspective tool (`'shift + t`) to make any necessary adjustments,
 -   White background is preferred for best cutout quality, but if not available just cut them out best as possible
 -   Isolate the pedal on a transparent background (do not cut off jacks or switches):
     -   GIMP: open file, select magic wand tool and click background, Layer > Transparency > Add Alpha Channel, then Layer > Transparency > Color to Alpha, and finally Ok in the dialog prompt.
@@ -58,6 +58,7 @@ Under MacOS Mojave:
 
 If there is a pedal you're looking for, feel free to [log an issue](https://github.com/PedalPlayground/PedalPlayground.github.io/issues). Please follow the following rules when posting request issues:
 
--   Include a decent resolution image of the pedal (top-down view, white background)
+-   Double check to see if the pedal isn't already in the database!
+-   Include a decent resolution image of the pedal (top-down view, preferably white background)
 -   Include the dimensions, in inches (make sure the dimensions are accurate and include jacks and other protrusions)
 -   Post one issue for each pedal you're requesting
