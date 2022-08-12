@@ -22,10 +22,24 @@
 	},
 	{
 		"Brand": "Aclam",
+		"Name": "Smart Track S1 (Top)",
+		"Width": 23.2,
+		"Height": 5.9,
+		"Image": "aclam-s1-top.png"
+	},
+	{
+		"Brand": "Aclam",
 		"Name": "Smart Track S2 (Top)",
 		"Width": 23.2,
 		"Height": 11.8,
 		"Image": "aclam-s2-top.png"
+	},
+	{
+		"Brand": "Aclam",
+		"Name": "Smart Track XS1 (Top)",
+		"Width": 16.5,
+		"Height": 5.9,
+		"Image": "aclam-xs1-top.png"
 	},
 	{
 		"Brand": "Aclam",
