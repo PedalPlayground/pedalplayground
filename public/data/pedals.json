@@ -7249,7 +7249,14 @@
 		"Name": "Vibe Machine V2",
 		"Width": 2.64,
 		"Height": 4.33,
-		"Image": "drybell-vibemachine.png"
+		"Image": "drybell-vibe-machine-v2.png"
+	},
+	{
+		"Brand": "Drybell",
+		"Name": "Vibe Machine V3",
+		"Width": 2.64,
+		"Height": 4.33,
+		"Image": "drybell-vibe-machine-v3.png"
 	},
 	{
 		"Brand": "Drybell",
@@ -20398,90 +20405,6 @@
 		"Image": "panda-audio-future-impact.png"
 	},
 	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Baklengs (Green)",
-		"Width": 2.6,
-		"Height": 5.01,
-		"Image": "pladask-baklengs-green.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Baklengs (White)",
-		"Width": 2.6,
-		"Height": 5.01,
-		"Image": "pladask-baklengs-white.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Bakfram",
-		"Width": 2.6,
-		"Height": 5.01,
-		"Image": "pladask-bakfram.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Draume",
-		"Width": 3.7,
-		"Height": 4.86,
-		"Image": "pladask-draume.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Fabrikat",
-		"Width": 3.7,
-		"Height": 4.86,
-		"Image": "pladask-fabrikat.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Falma",
-		"Width": 2.6,
-		"Height": 5.01,
-		"Image": "pladask-falma.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Feber",
-		"Width": 3.7,
-		"Height": 4.86,
-		"Image": "pladask-feber.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Kniv",
-		"Width": 4.82,
-		"Height": 2.84,
-		"Image": "pladask-kniv.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Matrise",
-		"Width": 5.96,
-		"Height": 4.95,
-		"Image": "pladask-matrise.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Romferd (Green)",
-		"Width": 3.7,
-		"Height": 4.86,
-		"Image": "pladask-romferd-green.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Romferd (White)",
-		"Width": 3.7,
-		"Height": 4.86,
-		"Image": "pladask-romferd-white.png"
-	},
-	{
-		"Brand": "Pladask Elektrisk",
-		"Name": "Tåken",
-		"Width": 3.87,
-		"Height": 4.7,
-		"Image": "pladask-taken.png"
-	},
-	{
 		"Brand": "Paradox Effects",
 		"Name": "Arquitecto",
 		"Width": 3.7,
@@ -20683,6 +20606,13 @@
 		"Width": 4.8,
 		"Height": 6.73,
 		"Image": "petecornish-p1.png"
+	},
+	{
+		"Brand": "Pete Cornish",
+		"Name": "SS-3",
+		"Width": 3.74016,
+		"Height": 5.70866,
+		"Image": "pete-cornish-ss-3.png"
 	},
 	{
 		"Brand": "Pete Cornish",
@@ -21089,6 +21019,90 @@
 		"Width": 6.3,
 		"Height": 3.7,
 		"Image": "piratemidi-bridge6.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Baklengs (Green)",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "pladask-baklengs-green.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Baklengs (White)",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "pladask-baklengs-white.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Bakfram",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "pladask-bakfram.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Draume",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "pladask-draume.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Fabrikat",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "pladask-fabrikat.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Falma",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "pladask-falma.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Feber",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "pladask-feber.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Kniv",
+		"Width": 4.82,
+		"Height": 2.84,
+		"Image": "pladask-kniv.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Matrise",
+		"Width": 5.96,
+		"Height": 4.95,
+		"Image": "pladask-matrise.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Romferd (Green)",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "pladask-romferd-green.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Romferd (White)",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "pladask-romferd-white.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Tåken",
+		"Width": 3.87,
+		"Height": 4.7,
+		"Image": "pladask-taken.png"
 	},
 	{
 		"Brand": "PolarBear",
