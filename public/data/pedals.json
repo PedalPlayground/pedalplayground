@@ -10689,12 +10689,12 @@
 		"Image": "fractal-fm9.png"
 	},
 	{
-        "Brand": "Fredric Effects",
+    	"Brand": "Fredric Effects",
 		"Name": "Blue Monarch",
 		"Width": 2.68,
 		"Height": 4.30,
 		"Image": "fredric-effects-blue-monarch.png"
-    },
+	},
 	{
 		"Brand": "Fredric Effects",
 		"Name": "Regent 150 preamp",
