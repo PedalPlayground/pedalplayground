@@ -18691,13 +18691,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Jimi Hendrix Fuzz Face (Limited Edition)",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-jimi-hendrix-fuzz-face-le.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "GT-OD",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -18723,6 +18716,13 @@
 		"Width": 2.9,
 		"Height": 4.7,
 		"Image": "mxr-isobrick.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Jimi Hendrix Fuzz Face (Limited Edition)",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-jimi-hendrix-fuzz-face-le.png"
 	},
 	{
 		"Brand": "MXR",
@@ -27359,7 +27359,7 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Aqua Puss mkIII",
+		"Name": "Aqua Puss mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-aqua=puss-mk3.png"
@@ -27373,7 +27373,7 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Blue Hippo mkIII",
+		"Name": "Blue Hippo mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-blue-hippo-mk3.png"
@@ -27387,7 +27387,14 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Conspiracy Theory",
+		"Name": "Conquistador",
+		"Width": 3.26,
+		"Height": 5.04,
+		"Image": "wayhuge-conquistador.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Conspiracy Theory (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-conspiracy-theory.png"
@@ -27398,6 +27405,13 @@
 		"Width": 3.26,
 		"Height": 5,
 		"Image": "wayhuge-echopuss.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Geisha Drive",
+		"Width": 3.26,
+		"Height": 5.04,
+		"Image": "wayhuge-geisha.png"
 	},
 	{
 		"Brand": "Way Huge",
@@ -27415,7 +27429,7 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Green Rhino mkV",
+		"Name": "Green Rhino mkV (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-greenrhino-mkv.png"
@@ -27433,6 +27447,13 @@
 		"Width": 3.26,
 		"Height": 5,
 		"Image": "wayhuge-overratedspecial.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Overrated Special (Smalls)",
+		"Width": 2.5,
+		"Height": 4.37,
+		"Image": "wayhuge-overratedspecial-smalls.png"
 	},
 	{
 		"Brand": "Way Huge",
@@ -27478,7 +27499,7 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Red Llama mkIII",
+		"Name": "Red Llama mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-redllama-mk3.png"
@@ -27492,7 +27513,7 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Russian Pickle mkIII",
+		"Name": "Russian Pickle mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-russianpickle-small.png"
@@ -27513,14 +27534,14 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "STO",
+		"Name": "STO (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-sto.png"
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Supa-Lead mkIII",
+		"Name": "Supa-Lead mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-supa-lead-mk3.png"
@@ -27548,7 +27569,7 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Swollen Pickle mkIII",
+		"Name": "Swollen Pickle mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-swollenpickle-mk3.png"
