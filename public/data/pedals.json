@@ -18426,14 +18426,77 @@
 	{
 		"Brand": "MXR",
 		"Name": "Analog Chorus",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-analogchorus.png"
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Bass Chorus Deluxe",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-bass-chorus-deluxe.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Compressor",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-basscompressor.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass DI+",
+		"Width": 4.9,
+		"Height": 3.6,
+		"Image": "mxr-m80.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Distortion",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m85.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Envelope Filter",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m82.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Fuzz Deluxe",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m84.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Octave Deluxe",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m288.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Overdrive",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m89.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Preamp",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m81.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Blue Box Fuzz",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-blue-box-fuzz.png"
 	},
@@ -18441,13 +18504,13 @@
 		"Brand": "MXR",
 		"Name": "Booster Mini",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-booster.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "CAE Boost/Line Driver",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-cae-boost-line-driver.png"
 	},
@@ -18475,21 +18538,14 @@
 	{
 		"Brand": "MXR",
 		"Name": "Carbon Copy",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-carboncopy.png"
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Carbon Copy Analog",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-carboncopy-analog.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Carbon Copy Analog (10th Anniversary)",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-carboncopy-analog-10.png"
 	},
@@ -18497,7 +18553,7 @@
 		"Brand": "MXR",
 		"Name": "Carbon Copy Mini",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-carboncopymini.png"
 	},
 	{
@@ -18518,7 +18574,7 @@
 		"Brand": "MXR",
 		"Name": "Classic 108 Fuzz Mini",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-classic108fuzzmini.png"
 	},
 	{
@@ -18531,14 +18587,14 @@
 	{
 		"Brand": "MXR",
 		"Name": "Custom Badass '78 Distortion",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-custom-badass-78distortion.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Custom Badass Modified O.D.",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-modified-od-custom-badass.png"
 	},
@@ -18553,69 +18609,76 @@
 		"Brand": "MXR",
 		"Name": "Deep Phase",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-deepphase.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Distortion III",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-distortion3.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Distortion+",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-distortion-plus.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dookie Drive",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-dookie-drive.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dookie Drive V2",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-dookie-drive-v2.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dookie Drive V3",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-dookie-drive-v3.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Double-Double Overdrive",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-double-double.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dyna Comp",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-dynacomp.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dyna Comp (Script)",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-dynacomp-script.png"
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Dyna Comp Bass",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-m282.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Dyna Comp Deluxe",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-dynacomp-deluxe.png"
 	},
@@ -18623,7 +18686,7 @@
 		"Brand": "MXR",
 		"Name": "Dyna Comp Mini",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-dynacompmini.png"
 	},
 	{
@@ -18650,21 +18713,21 @@
 	{
 		"Brand": "MXR",
 		"Name": "EVH Phase 90",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-phase90evh.png"
 	},
 	{
 		"Brand": "MXR",
-		"Name": "EVH Phase 90 35th Anniversary",
-		"Width": 2.56,
+		"Name": "EVH Phase 90 (35th Anniversary)",
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-phase90evh35th.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Fat Sugar",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-fatsugar.png"
 	},
@@ -18678,35 +18741,28 @@
 	{
 		"Brand": "MXR",
 		"Name": "FOD",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-fod.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Fullbore Metal",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-fullbore-metal.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "GT-OD",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-gtod.png"
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Il Torino Overdrive",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-iltorinood.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "ILOVEDUST Carbon Copy Analog Delay",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-ilovedust-carbon-copy.png"
 	},
@@ -18720,7 +18776,7 @@
 	{
 		"Brand": "MXR",
 		"Name": "Jimi Hendrix Fuzz Face (Limited Edition)",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-jimi-hendrix-fuzz-face-le.png"
 	},
@@ -18755,9 +18811,16 @@
 	{
 		"Brand": "MXR",
 		"Name": "Jimi Hendrix Uni-Vibe",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-jhm3.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Jimi Hendrix Uni-Vibe (Limited Edition)",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-jhm7.png"
 	},
 	{
 		"Brand": "MXR",
@@ -18769,28 +18832,28 @@
 	{
 		"Brand": "MXR",
 		"Name": "Micro Amp",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-micro-amp.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Micro Amp+",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-micro-amp-plus.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Micro Chorus",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-microchorus.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Micro Flanger",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-microflanger.png"
 	},
@@ -18804,14 +18867,14 @@
 	{
 		"Brand": "MXR",
 		"Name": "Noise Clamp",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-noiseclamp.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Octavio",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-octavio.png"
 	},
@@ -18824,29 +18887,22 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Phase 45 ('75 Vintage)",
-		"Width": 2.80,
-		"Height": 4.33,
-		"Image": "mxr-phase45-75vintage.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Phase 90",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-phase90.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Phase 90 ('74 Vintage)",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-phase90-74vintage.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Phase 90 (Script LED)",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-phase90-script-led.png"
 	},
@@ -18854,13 +18910,13 @@
 		"Brand": "MXR",
 		"Name": "Phase 95",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-phase95.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Poly Blue Octave",
-		"Width": 2.61,
+		"Width": 2.64,
 		"Height": 4.33,
 		"Image": "mxr-poly-blue-octave.png"
 	},
@@ -18874,7 +18930,7 @@
 	{
 		"Brand": "MXR",
 		"Name": "Prime Distortion",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-m69.png"
 	},
@@ -18882,27 +18938,27 @@
 		"Brand": "MXR",
 		"Name": "Raw Dog",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-raw-dog.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Reverb",
-		"Width": 2.56,
+		"Width": 2.64,
 		"Height": 4.33,
 		"Image": "mxr-reverb.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Six Band EQ",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-eq.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Six Band EQ",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-eq-2.png"
 	},
@@ -18916,7 +18972,7 @@
 	{
 		"Brand": "MXR",
 		"Name": "Smartgate",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-smartgate.png"
 	},
@@ -18930,7 +18986,7 @@
 	{
 		"Brand": "MXR",
 		"Name": "Studio Compressor",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-studiocompressor.png"
 	},
@@ -18943,15 +18999,22 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Sub Octave Bass Fuzz",
+		"Width": 5,
+		"Height": 3.8,
+		"Image": "mxr-m287.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Super Badass Distortion",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-sbdistortion.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Super Comp",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-super-comp.png"
 	},
@@ -18959,13 +19022,13 @@
 		"Brand": "MXR",
 		"Name": "Sugar Drive",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-sugardrive.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Super Badass Variac Fuzz",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-sbvariacfuzz.png"
 	},
@@ -18999,134 +19062,85 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Thump",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-m281.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Tremolo",
-		"Width": 2.56,
+		"Width": 2.64,
 		"Height": 4.33,
 		"Image": "mxr-tremolo.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Univibe",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-univibe.png"
 	},
 	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Chorus Deluxe",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-bass-chorus-deluxe.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Compressor",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-basscompressor.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass DI",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m81.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass DI+",
-		"Width": 4.9,
-		"Height": 3.6,
-		"Image": "mxr-m80.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Distortion",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m85.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Envelope Filter",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m82.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Fuzz Deluxe",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m84.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Octave Deluxe",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m288.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Overdrive",
-		"Width": 2.56,
-		"Height": 4.33,
-		"Image": "mxr-m89.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Dyna Comp Bass",
-		"Width": 1.74,
-		"Height": 3.63,
-		"Image": "mxr-m282.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Sub Octave Bass Fuzz",
-		"Width": 5,
-		"Height": 3.8,
-		"Image": "mxr-m287.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Thump",
-		"Width": 1.74,
-		"Height": 3.63,
-		"Image": "mxr-m281.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
+		"Brand": "MXR",
 		"Name": "Vintage Bass Octave",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-m280.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
 		"Name": "Brown Acid Fuzz",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-brown-acid-fuzz.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
+		"Name": "Dyna Comp (Script)",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-csp102sl.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
 		"Name": "Il Diavolo Overdrive",
-		"Width": 2.51,
+		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-csp036.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
-		"Name": "Phase 99 Custom Shop",
-		"Width": 2.56,
+		"Name": "Il Torino Overdrive",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-iltorinood.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Phase 45 ('75 Vintage)",
+		"Width": 2.71,
+		"Height": 4.33,
+		"Image": "mxr-csp105.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Phase 90 ('74 Vintage)",
+		"Width": 2.71,
+		"Height": 4.33,
+		"Image": "mxr-csp026.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Phase 99",
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-csp099.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
 		"Name": "Raijin Drive",
-		"Width": 2.56,
+		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-raijin-drive.png"
 	},
@@ -19134,7 +19148,7 @@
 		"Brand": "MXR Custom Shop",
 		"Name": "Timmy",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-timmy.png"
 	},
 	{
