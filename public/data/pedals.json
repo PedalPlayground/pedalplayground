@@ -18488,6 +18488,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Carbon Copy Analog (10th Anniversary)",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-carboncopy-analog-10.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Carbon Copy Mini",
 		"Width": 1.74,
 		"Height": 3.63,
@@ -18569,6 +18576,27 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-dookie-drive.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Dookie Drive V2",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-dookie-drive-v2.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Dookie Drive V3",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-dookie-drive-v3.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Double-Double Overdrive",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-double-double.png"
 	},
 	{
 		"Brand": "MXR",
@@ -18663,6 +18691,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Jimi Hendrix Fuzz Face (Limited Edition)",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-jimi-hendrix-fuzz-face-le.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "GT-OD",
 		"Width": 2.56,
 		"Height": 4.33,
@@ -18677,6 +18712,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "ILOVEDUST Carbon Copy Analog Delay",
+		"Width": 2.56,
+		"Height": 4.33,
+		"Image": "mxr-ilovedust-carbon-copy.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Iso Brick",
 		"Width": 2.9,
 		"Height": 4.7,
@@ -18686,8 +18728,29 @@
 		"Brand": "MXR",
 		"Name": "Jimi Hendrix Psych Series Fuzz Face",
 		"Width": 1.74,
-		"Height": 3.63,
+		"Height": 3.7,
 		"Image": "mxr-jhw1.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Jimi Hendrix Psych Series Octavio Fuzz",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-jhw2.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Jimi Hendrix Psych Series Uni-Vibe Chorus/Vibrato",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-jhw3.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Jimi Hendrix Psych Series Band of Gypsys Fuzz",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-jhw4.png"
 	},
 	{
 		"Brand": "MXR",
@@ -18695,6 +18758,13 @@
 		"Width": 2.56,
 		"Height": 4.33,
 		"Image": "mxr-jhm3.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Kerry King Ten Band EQ",
+		"Width": 5,
+		"Height": 3.83,
+		"Image": "mxr-kfk1.png"
 	},
 	{
 		"Brand": "MXR",
