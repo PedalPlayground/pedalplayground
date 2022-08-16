@@ -15583,6 +15583,13 @@
 	},
 	{
 		"Brand": "Korg",
+		"Name": "DT-10",
+		"Width": 4.09,
+		"Height": 4.53,
+		"Image": "korg-dt-10.png"
+	},
+	{
+		"Brand": "Korg",
 		"Name": "GA Custom Handheld Tuner",
 		"Width": 3.9,
 		"Height": 2.56,
