@@ -24201,6 +24201,13 @@
 	},
 	{
 		"Brand": "Surfy Industries",
+		"Name": "SurfyTrem Deluxe",
+		"Width": 4.25,
+		"Height": 4.54,
+		"Image": "surfy-surfytrem-dlx.png"
+	},
+	{
+		"Brand": "Surfy Industries",
 		"Name": "SurfyVibe",
 		"Width": 2.46,
 		"Height": 4.33,
