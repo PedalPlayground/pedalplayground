@@ -10816,6 +10816,27 @@
 	},
 	{
 		"Brand": "Fractal Audio Systems",
+		"Name": "EV-1 Black",
+		"Width": 4.1,
+		"Height": 11.5,
+		"Image": "fractal-ev1-black.png"
+	},
+	{
+		"Brand": "Fractal Audio Systems",
+		"Name": "EV-1 Silver",
+		"Width": 4.1,
+		"Height": 11.5,
+		"Image": "fractal-ev1-silver.png"
+	},
+	{
+		"Brand": "Fractal Audio Systems",
+		"Name": "EV-2",
+		"Width": 3.2,
+		"Height": 7.5,
+		"Image": "fractal-ev2.png"
+	},
+	{
+		"Brand": "Fractal Audio Systems",
 		"Name": "FC12",
 		"Width": 20.2,
 		"Height": 9.2,
@@ -12983,6 +13004,83 @@
 		"Width": 6.8,
 		"Height": 5.7,
 		"Image": "ikm-xvibe.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "Arcing Prisms",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "ironether-arcing-prisms.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "Divaricator",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "ironether-divaricator.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "Dubterranea",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "ironether-dubterranea.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "Dubterrograph",
+		"Width": 5.7,
+		"Height": 5,
+		"Image": "ironether-dubterrograph.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "FMeron",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "ironether-fmeron.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "FrantaBit",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "ironether-frantabit.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "Nimbus Special Edition",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "ironether-nimbus-special-edition.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "Nimbus",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "ironether-nimbus.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "Polytope",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "ironether-polytope.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "Xerograph Deluxe",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "ironether-xerograph-deluxe.png"
+	},
+	{
+		"Brand": "Iron Ether",
+		"Name": "Xerograph",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "ironether-xerograph.png"
 	},
 	{
 		"Brand": "ISP Technologies",
@@ -18236,10 +18334,24 @@
 	},
 	{
 		"Brand": "Moog",
+		"Name": "MF-101 Low Pass Filter",
+		"Width": 6,
+		"Height": 9,
+		"Image": "moog-mf-101-low-pass-filter.png"
+	},
+	{
+		"Brand": "Moog",
 		"Name": "MF-102 Ring Modulator",
 		"Width": 6,
 		"Height": 9,
-		"Image": "moog-ringmod.png"
+		"Image": "moog-mf-102-ring-modulator.png"
+	},
+	{
+		"Brand": "Moog",
+		"Name": "MF-103 12-Stage Phaser",
+		"Width": 6,
+		"Height": 9,
+		"Image": "moog-mf-103-12-stage-phaser.png"
 	},
 	{
 		"Brand": "Morley",
@@ -18418,10 +18530,101 @@
 	},
 	{
 		"Brand": "Mu-Tron",
+		"Name": "Bi-Phase",
+		"Width": 7.25,
+		"Height": 4.75,
+		"Image": "mu-tron-bi-phase.png"
+	},
+	{
+		"Brand": "Mu-Tron",
+		"Name": "Boostron II",
+		"Width": 2.25,
+		"Height": 4.75,
+		"Image": "mu-tron-boostron-ii.png"
+	},
+	{
+		"Brand": "Mu-Tron",
 		"Name": "Micro-Tron IV",
 		"Width": 2.50,
 		"Height": 4.80,
 		"Image": "mu-tron-micro-tron-4.png"
+	},
+	{
+		"Brand": "Mu-Tron",
+		"Name": "Octavider+",
+		"Width": 2.25,
+		"Height": 4.75,
+		"Image": "mu-tron-octavider+.png"
+	},
+	{
+		"Brand": "Mu-Tron",
+		"Name": "Phasor III",
+		"Width": 2.25,
+		"Height": 4.75,
+		"Image": "mu-tron-phasor-iii.png"
+	},
+	{
+		"Brand": "Mu-Tron",
+		"Name": "Ripper",
+		"Width": 2.25,
+		"Height": 4.75,
+		"Image": "mu-tron-ripper.png"
+	},
+	{
+		"Brand": "Mu-Tron",
+		"Name": "Tremu-Tron",
+		"Width": 2.25,
+		"Height": 4.75,
+		"Image": "mu-tron-tremu-tron.png"
+	},
+	{
+		"Brand": "Mu-Tron",
+		"Name": "TubeTron",
+		"Width": 2.25,
+		"Height": 4.75,
+		"Image": "mu-tron-tubetron.png"
+	},
+	{
+		"Brand": "MWFX",
+		"Name": "Glitch",
+		"Width": 3.54,
+		"Height": 4.72,
+		"Image": "mwfx-glitch.png"
+	},
+	{
+		"Brand": "MWFX",
+		"Name": "Judder 2022",
+		"Width": 3.70,
+		"Height": 4.72,
+		"Image": "mwfx-judder-2022.png"
+	},
+	{
+		"Brand": "MWFX",
+		"Name": "Judder (Wooden)",
+		"Width": 3.94,
+		"Height": 5.12,
+		"Image": "mwfx-judder-wood.png"
+	},
+	{
+		"Brand": "MWFX",
+		"Name": "Judder",
+		"Width": 3.70,
+		"Height": 4.72,
+		"Image": "mwfx-judder.png"
+	},
+	{
+		"Brand": "MWFX",
+		"Name": "Mini Judder",
+		"Width": 2.36,
+		"Height": 4.33,
+		"Image": "mwfx-mini-judder.png"
+	},
+	{
+		"Brand": "MWFX",
+		"Name": "Tremolo",
+		"Width": 3.54,
+		"Height": 4.72,
+		"Image": "mwfx-tremolo.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20571,6 +20774,13 @@
 		"Width": "3.74",
 		"Height": "5.12",
 		"Image": "orange-kongpressor.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "OMEC Teleport",
+		"Width": 1.5,
+		"Height": 3.5,
+		"Image": "orange-omec-teleport.png"
 	},
 	{
 		"Brand": "Orange",
