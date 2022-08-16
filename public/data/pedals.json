@@ -18419,8 +18419,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "A/B Box",
-		"Width": 5,
-		"Height": 3.87,
+		"Width": 4.75,
+		"Height": 3.65,
 		"Image": "mxr-abbox.png"
 	},
 	{
@@ -18447,8 +18447,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "Bass DI+",
-		"Width": 4.9,
-		"Height": 3.6,
+		"Width": 4.95,
+		"Height": 3.54,
 		"Image": "mxr-m80.png"
 	},
 	{
@@ -18517,8 +18517,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "CAE Boost/Overdrive",
-		"Width": 5.24,
-		"Height": 3.75,
+		"Width": 4.95,
+		"Height": 3.54,
 		"Image": "mxr-cae-boost-overdrive.png"
 	},
 	{
@@ -18559,15 +18559,15 @@
 	{
 		"Brand": "MXR",
 		"Name": "Carbon Copy Deluxe",
-		"Width": 5,
-		"Height": 3.87,
+		"Width": 4.75,
+		"Height": 3.65,
 		"Image": "mxr-carboncopydlx.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Classic 108 Fuzz",
-		"Width": 3.62,
-		"Height": 4.96,
+		"Width": 3.6,
+		"Height": 4.97,
 		"Image": "mxr-classic108fuzz.png"
 	},
 	{
@@ -18580,8 +18580,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "Clone Looper",
-		"Width": 4.37,
-		"Height": 2.62,
+		"Width": 4.33,
+		"Height": 2.46,
 		"Image": "mxr-clonelooper.png"
 	},
 	{
@@ -18692,22 +18692,22 @@
 	{
 		"Brand": "MXR",
 		"Name": "EVH 5150 Overdrive",
-		"Width": 5,
-		"Height": 3.87,
+		"Width": 4.75,
+		"Height": 3.65,
 		"Image": "mxr-5150.png"
 	},
 	{
 		"Brand": "MXR",
-		"Name": "EVH Chorus",
-		"Width": 5,
-		"Height": 3.87,
+		"Name": "EVH 5150 Chorus",
+		"Width": 4.75,
+		"Height": 3.65,
 		"Image": "mxr-evh-chorus.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "EVH Flanger",
-		"Width": 5,
-		"Height": 3.87,
+		"Width": 4.95,
+		"Height": 3.54,
 		"Image": "mxr-flangerevh.png"
 	},
 	{
@@ -18734,8 +18734,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "Flanger",
-		"Width": 5.24,
-		"Height": 3.75,
+		"Width": 4.95,
+		"Height": 3.54,
 		"Image": "mxr-flanger.png"
 	},
 	{
@@ -18825,8 +18825,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "Kerry King Ten Band EQ",
-		"Width": 5,
-		"Height": 3.83,
+		"Width": 4.75,
+		"Height": 3.65,
 		"Image": "mxr-kfk1.png"
 	},
 	{
@@ -18881,7 +18881,7 @@
 	{
 		"Brand": "MXR",
 		"Name": "Phase 100",
-		"Width": 3.86,
+		"Width": 3.85,
 		"Height": 4.84,
 		"Image": "mxr-phase100.png"
 	},
@@ -18923,8 +18923,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "Power 50",
-		"Width": 5,
-		"Height": 3.8,
+		"Width": 4.75,
+		"Height": 3.65,
 		"Image": "mxr-power50.png"
 	},
 	{
@@ -18965,8 +18965,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "Slash Octave Fuzz",
-		"Width": 5.24,
-		"Height": 3.75,
+		"Width": 4.95,
+		"Height": 3.54,
 		"Image": "mxr-slash-octave-fuzz.png"
 	},
 	{
@@ -18979,8 +18979,8 @@
 	{
 		"Brand": "MXR",
 		"Name": "Stereo Chorus",
-		"Width": 5.24,
-		"Height": 3.75,
+		"Width": 4.95,
+		"Height": 3.54,
 		"Image": "mxr-stereochorus.png"
 	},
 	{
@@ -18993,15 +18993,15 @@
 	{
 		"Brand": "MXR",
 		"Name": "Sub Machine",
-		"Width": 5.24,
-		"Height": 3.75,
+		"Width": 4.95,
+		"Height": 3.54,
 		"Image": "mxr-sub-machine.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Sub Octave Bass Fuzz",
-		"Width": 5,
-		"Height": 3.8,
+		"Width": 4.95,
+		"Height": 3.54,
 		"Image": "mxr-m287.png"
 	},
 	{
@@ -19043,21 +19043,21 @@
 		"Brand": "MXR",
 		"Name": "Tap Tempo Switch",
 		"Width": 1.5,
-		"Height": 2.12,
+		"Height": 2.16,
 		"Image": "mxr-tap.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Ten Band EQ",
-		"Width": 5,
-		"Height": 3.87,
+		"Width": 4.75,
+		"Height": 3.65,
 		"Image": "mxr-eq2.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Ten Band EQ",
-		"Width": 5,
-		"Height": 3.87,
+		"Width": 4.75,
+		"Height": 3.65,
 		"Image": "mxr-eq2-2.png"
 	},
 	{
@@ -19143,6 +19143,13 @@
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-raijin-drive.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Smartgate Pro",
+		"Width": 4.75,
+		"Height": 3.68,
+		"Image": "mxr-m235.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
