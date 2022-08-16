@@ -840,7 +840,7 @@
 		"Image": "amt-gr4.png"
 	},
 	{
-        	"Brand": "AMT",
+        "Brand": "AMT",
 		"Name": "HR-1 Heater",
 		"Width": 2.91,
 		"Height": 4.48,
@@ -868,7 +868,7 @@
 		"Image": "amt-m1.png"
 	},
 	{
-        	"Brand": "AMT",
+        "Brand": "AMT",
 		"Name": "PANGAEA CP-100 IR",
 		"Width": 3.77,
 		"Height": 1.69,
@@ -1475,14 +1475,14 @@
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-1927-027.png"
-  },
+  	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
 		"Name": "028 Car Crush Chorus/Vibe",
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-car-crush-028.png"
-  },
+  	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
 		"Name": "029 Surfing Bear Overdrive",
@@ -1510,14 +1510,14 @@
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-1927-032.png"
-  },
+  	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
 		"Name": "033 1927 Home Run Comp.",
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-1927-033.png"
-  },
+  	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
 		"Name": "034 Tioga Road Cycling Distortion",
@@ -2563,10 +2563,10 @@
 	},
 	{
 		"Brand": "Benson",
-		"Name": "Preamp (Turqoise)",
+		"Name": "Preamp (Turquoise)",
 		"Width": 4.69,
 		"Height": 3.77,
-		"Image": "benson-preamp-turqoise.png"
+		"Image": "benson-preamp-turquoise.png"
 	},
 	{
 		"Brand": "Benson",
@@ -2766,7 +2766,7 @@
 	},
 	{
 		"Brand": "Blackout Effectors",
-		"Name": "Cadavernous ",
+		"Name": "Cadavernous",
 		"Width": 5.63,
 		"Height": 4.63,
 		"Image": "blackout-cadavernous.png"
@@ -3284,7 +3284,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "DC-3 Digital Dimension",
+		"Name": "DC-3 Digital Space-D",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-dc3.png"
@@ -3396,6 +3396,27 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DSD-2 Digital Sampler/Delay",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dsd2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "DSD-3 Digital Sampler/Delay",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dsd3.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "EH-2 Enhancer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-eh2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "EQ-20 Advanced EQ",
 		"Width": 6.8125,
 		"Height": 6.25,
@@ -3452,7 +3473,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "FDR-1 '65 Deluxe Reverb",
+		"Name": "FDR-1 Fender '65 Deluxe Reverb",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-fdr1.png"
@@ -3491,6 +3512,13 @@
 		"Width": 2.5,
 		"Height": 5.1875,
 		"Image": "boss-fs7.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "FT-2 Dynamic Filter",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ft2.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3592,6 +3620,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "HF-2 Hi Band Flanger",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-hf2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "HM-2 Heavy Metal",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -3687,6 +3722,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-mt2w.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "MZ-2 Digital Metalizer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-mz2.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -3788,6 +3830,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "PH-1 Phaser",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ph1.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "PH-3 Phase Shifter",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -3799,6 +3848,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-pn2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "PQ-3B Bass Parametric Equalizer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-pq3b.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -4107,6 +4163,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-tu3w.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "TW-1 T Wah",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-tw1.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -5152,20 +5215,6 @@
 		"Image": "chasebliss-mood-bauhaus.png"
 	},
 	{
-		"Brand": "Chicago Iron",
-		"Name": "Octavian",
-		"Width": 3.11,
-		"Height": 5.276,
-		"Image": "chicagoiron-octavia.png"
-	},
-	{
-		"Brand": "Chicago Iron",
-		"Name": "Octavian Plus",
-		"Width": 3.11,
-		"Height": 5.276,
-		"Image": "chicagoiron-octavianplus.png"
-	},
-	{
 		"Brand": "Chase Bliss",
 		"Name": "Preamp MKII",
 		"Width": 5.75,
@@ -5241,6 +5290,20 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-wombtone-mk2.png"
+	},
+	{
+		"Brand": "Chicago Iron",
+		"Name": "Octavian",
+		"Width": 3.11,
+		"Height": 5.276,
+		"Image": "chicagoiron-octavia.png"
+	},
+	{
+		"Brand": "Chicago Iron",
+		"Name": "Octavian Plus",
+		"Width": 3.11,
+		"Height": 5.276,
+		"Image": "chicagoiron-octavianplus.png"
 	},
 	{
 		"Brand": "Cioks",
@@ -15419,14 +15482,14 @@
     "Width": 3.68,
     "Height": 4.89,
     "Image": "lake-effects-fvd.png"
-  },
+  	},
 	{
-    "Brand": "Lake Effects",
-    "Name": "FVD (White)",
-    "Width": 3.68,
-    "Height": 4.89,
-    "Image": "lake-effects-fvd-white.png"
-  },
+    	"Brand": "Lake Effects",
+    	"Name": "FVD (White)",
+    	"Width": 3.68,
+    	"Height": 4.89,
+    	"Image": "lake-effects-fvd-white.png"
+  	},
 	{
 		"Brand": "Land + Vongon",
 		"Name": "Onset",
@@ -15867,6 +15930,13 @@
 		"Width": 2.75,
 		"Height": 4.50,
 		"Image": "lpd-eighty7.png"
+	},
+	{
+		"Brand": "Lurch Audio",
+		"Name": "Sorghum",
+		"Width": 3.50,
+		"Height": 4.80,
+		"Image": "lurch-audio-sorghum.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -28190,12 +28260,5 @@
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-woollymammoth-vexter.png"
-	},
-	{
-		"Brand": "Lurch Audio",
-		"Name": "Sorghum",
-		"Width": 3.50,
-		"Height": 4.80,
-		"Image": "lurch-audio-sorghum.png"
 	}
 ]
