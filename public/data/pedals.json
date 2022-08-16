@@ -15701,8 +15701,15 @@
 		"Image": "landdevices-pre.png"
 	},
 	{
-		"Brand": "Laney",
-		"Name": "Black Country Customs Tony Iommi Boost",
+		"Brand": "Laney Black Country Customs",
+		"Name": "The Difference Engine",
+		"Width": 5.96,
+		"Height": 4.8,
+		"Image": "laney-thedifferenceengine.png"
+	},
+	{
+		"Brand": "Laney Black Country Customs",
+		"Name": "Tony Iommi Boost",
 		"Width": 2.6,
 		"Height": 4.4,
 		"Image": "laney-black-country-boost.png"
