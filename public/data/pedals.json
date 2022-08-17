@@ -22540,6 +22540,27 @@
 		"Image": "santono-etched-pick-tin-pink.png"
 	},
 	{
+		"Brand": "Sarno Music Solutions",
+		"Name": "Doozy Boost",
+		"Width": 2.9,
+		"Height": 5.13,
+		"Image": "sarno-doozy-boost.png"
+	},
+	{
+		"Brand": "Sarno Music Solutions",
+		"Name": "Earth Drive",
+		"Width": 2.9,
+		"Height": 5.13,
+		"Image": "sarno-earth-drive.png"
+	},
+	{
+		"Brand": "Sarno Music Solutions",
+		"Name": "Solar Flare",
+		"Width": 2.9,
+		"Height": 5.13,
+		"Image": "sarno-solar-flare.png"
+	},
+	{
 		"Brand": "Saturnworks",
 		"Name": "Compact Looper (Horizontal)",
 		"Width": 4,
