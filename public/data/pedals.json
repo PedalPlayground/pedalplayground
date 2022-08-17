@@ -16109,9 +16109,16 @@
 	{
 		"Brand": "LPD",
 		"Name": "Eighty7",
-		"Width": 2.75,
-		"Height": 4.50,
+		"Width": 2.62,
+		"Height": 4.41,
 		"Image": "lpd-eighty7.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Eighty7 Deluxe",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "lpd-eighty7-dlx.png"
 	},
 	{
 		"Brand": "M-Audio",
