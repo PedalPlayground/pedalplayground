@@ -2416,6 +2416,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "CC300 Corus Space-C",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-cc300.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "CL9 Compressor/Limiter",
 		"Width": 2.76,
 		"Height": 4.84,
