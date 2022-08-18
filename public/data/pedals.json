@@ -18474,6 +18474,160 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "Ambience",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-ambience.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "BloodMoon",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-bloodmoon.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "DarkEcho",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-darkecho.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "DeluxePlus",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-deluxeplus.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "DeluxePlus Plus",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-deluxeplus-plus.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "DoubleChorus",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-doublechorus.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "DoomStick II",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-doomstick2.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Downward Spiral (Special Edition)",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-downwardspiral-se.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Eterna",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-eterna.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Eterna Custom",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-eterna-custom.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Eterna Gold Modified",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-eterna-gold.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "FwonkBeta",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-fwonkbeta.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Gilamondo",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-gilamondo.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "JDS-50",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-jds50.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Mini Echo-Delay",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "mrblack-mini-echo-delay.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Mini Flanger",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "mrblack-mini-flanger.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Mini Octaves",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "mrblack-mini-octaves.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Mini OD-503",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "mrblack-mini-od-503.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Mini Phaser",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "mrblack-mini-phaser.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Mini Reverb",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "mrblack-mini-reverb.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Mini Tremolo",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "mrblack-mini-tremolo.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Mini Vintage Chorus",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "mrblack-mini-vintage-chorus.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "Pana-Trem",
 		"Width": 3.7,
 		"Height": 4.7,
@@ -18481,10 +18635,38 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "Shepard's End",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-shepardsend.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Shepard's End Sub-Zero",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-shepardsend-subzero.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "SuperMoon",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-supermoon.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "SuperMoon Chrome",
-		"Width": 2.25,
-		"Height": 4.25,
+		"Width": 2.62,
+		"Height": 4.33,
 		"Image": "mrblack-supermoonchrome.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Super Swell",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-superswell.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -18496,8 +18678,8 @@
 	{
 		"Brand": "Mr. Black",
 		"Name": "Thunderclaw",
-		"Width": 2.63,
-		"Height": 4.37,
+		"Width": 2.62,
+		"Height": 4.33,
 		"Image": "mrblack-thunderclaw.png"
 	},
 	{
