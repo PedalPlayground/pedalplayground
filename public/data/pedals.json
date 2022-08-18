@@ -8016,6 +8016,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Plumes (White Vein)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-plumes-whitevein.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Plumes (Yellow/Green)",
 		"Width": 2.6,
 		"Height": 4.94,
