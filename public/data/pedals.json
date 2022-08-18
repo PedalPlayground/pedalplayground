@@ -8318,99 +8318,113 @@
 	{
 		"Brand": "Effects Bakery",
 		"Name": "An Bread DI",
-		"Width": 1.79,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-an-bread-di.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "An Butter Coppe Drive",
-		"Width": 1.79,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-an-butter-coppe.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "Bagel Overdrive",
-		"Width": 1.79,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-bagel-overdrive.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "Choco Cornet EQ",
-		"Width": 1.79,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-choco-cornet-eq.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "Cream Pan Booster",
-		"Width": 1.79,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-cream-pan-booster.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "Croissant Distortion",
-		"Width": 1.79,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-croissant-distortion.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "Curry Bread Junction Box",
-		"Width": 3.66,
-		"Height": 1.76,
+		"Width": 3.7,
+		"Height": 1.78,
 		"Image": "effectsbakery-curry-bread-junction-box.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "French Bread Delay",
-		"Width": 1.79,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-french-bread-delay.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "Maritozzo Bass EQ",
-		"Width": 1.80,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-maritozzo.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "Melon Pan Chorus",
-		"Width": 1.79,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-melon-pan-chorus.png"
 	},
 	{
 		"Brand": "Effects Bakery",
+		"Name": "Muffin Reverb",
+		"Width": 1.82,
+		"Height": 3.7,
+		"Image": "effectsbakery-muffin-reverb.png"
+	},
+	{
+		"Brand": "Effects Bakery",
 		"Name": "New Ginger Fuzz",
-		"Width": 1.79,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-new-ginger-fuzz.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "Plain Bread Compressor",
-		"Width": 1.80,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-plain-bread-compressor.png"
 	},
 	{
 		"Brand": "Effects Bakery",
+		"Name": "Power Supply Hoden Sentai Donuts",
+		"Width": 3.7,
+		"Height": 1.52,
+		"Image": "effectsbakery-powersupply-donuts.png"
+	},
+	{
+		"Brand": "Effects Bakery",
 		"Name": "Sandwich Fuzz",
-		"Width": 1.79,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-sandwich-fuzz.png"
 	},
 	{
 		"Brand": "Effects Bakery",
 		"Name": "Suguru's Big Katsu Distortion",
-		"Width": 1.80,
-		"Height": 3.66,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "effectsbakery-sugurus-big-katsu.png"
 	},
 	{
