@@ -2381,9 +2381,72 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "ADI21 Acoustic DI Box",
+		"Width": 3.94,
+		"Height": 4.96,
+		"Image": "behringer-adi21.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "BDI21 Bass DI Box",
+		"Width": 3.94,
+		"Height": 4.96,
+		"Image": "behringer-bdi21.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "BEQ700 Bass Graphic Equalizer",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-beq700.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "BLE400 Bass Limiter Enhancer",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-ble400.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "BOD400 Bass Overdrive",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-bod400.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "CL9 Compressor/Limiter",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-cl9.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "CS400 Compressor Sustainer",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-cs400.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "DD600 Digital Delay",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-dd600.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "DR600 Digital Reverb",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-dr600.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "EQ700 Graphic Equalizer",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-eq700.png"
 	},
 	{
@@ -2395,100 +2458,142 @@
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "FX600 Multi-FX",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Name": "FX600 Digital Multi-FX",
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-fx600.png"
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "GDI21 Guitar DI Box",
+		"Width": 3.94,
+		"Height": 4.96,
+		"Image": "behringer-gdi21.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "HD300 Heavy Distortion",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-hd300.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "HM300 Heavy Metal",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-hm300.png"
 	},
 	{
 		"Brand": "Behringer",
 		"Name": "NR300 Noise Reducer",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-nr300.png"
 	},
 	{
 		"Brand": "Behringer",
 		"Name": "Octave Divider",
 		"Width": 3.9,
-		"Height": 6.9,
+		"Height": 6.83,
 		"Image": "behringer-octave-divider.png"
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "OD-300 Overdrive / Distortion",
-		"Width": 4.75,
-		"Height": 3.00,
+		"Name": "OD300 Overdrive Distortion",
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-od300.png"
 	},
 	{
 		"Brand": "Behringer",
 		"Name": "SF300 Super Fuzz",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-sf300.png"
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "TM300 Tube Amp Modeler",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-tm300.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "TO800 Vintage Tube Overdrive",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-to800.png"
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "TU300 Chromatic Tuner",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-tu300.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "UC200 Ultra Chorus",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-uc200.png"
 	},
 	{
 		"Brand": "Behringer",
 		"Name": "UM300 Ultra Metal",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-um300.png"
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "UO300 Ultra Octave",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Name": "UO300 Ultra Octaver",
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-uo300.png"
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "UT300 Ultra Tremolo",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-ut300.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "UV300 Ultra Vibrato",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-uv300.png"
 	},
 	{
 		"Brand": "Behringer",
 		"Name": "VD400 Vintage Delay",
-		"Width": 2.755,
-		"Height": 4.842,
+		"Width": 2.76,
+		"Height": 4.84,
 		"Image": "behringer-vd400.png"
 	},
 	{
 		"Brand": "Behringer",
 		"Name": "VM1 Vintage Time Machine",
-		"Width": 8.7,
-		"Height": 6.7,
+		"Width": 8.66,
+		"Height": 7.42,
 		"Image": "behringer-vm1.png"
-  	},
+  },
+	{
+		"Brand": "Behringer",
+		"Name": "VP1 Vintage Phaser",
+		"Width": 3.39,
+		"Height": 5.45,
+		"Image": "behringer-vp1.png"
+  },
 	{
 		"Brand": "Behringer",
 		"Name": "VT999 Vintage Tube Monster",
-		"Width": 7.916,
-		"Height": 6.75,
+		"Width": 8.66,
+		"Height": 7.55,
 		"Image": "behringer-vt999.png"
 	},
 	{
