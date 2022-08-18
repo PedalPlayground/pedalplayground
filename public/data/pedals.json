@@ -18481,6 +18481,13 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "Analog Chorus/Vibrato Deluxe",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "mrblack-analogchorusvibrato-dlx.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "BloodMoon",
 		"Width": 2.62,
 		"Height": 4.33,
@@ -18488,10 +18495,24 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "BloodMoon Blood & Chrome",
+		"Width": 3.98,
+		"Height": 4.7,
+		"Image": "mrblack-bloodmoon-bc.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "DarkEcho",
 		"Width": 2.62,
 		"Height": 4.33,
 		"Image": "mrblack-darkecho.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Deluxe DeluxePlus",
+		"Width": 4.33,
+		"Height": 2.46,
+		"Image": "mrblack-dlx-deluxeplus.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -18629,7 +18650,7 @@
 	{
 		"Brand": "Mr. Black",
 		"Name": "Pana-Trem",
-		"Width": 3.7,
+		"Width": 3.98,
 		"Height": 4.7,
 		"Image": "mrblack-pana-trem.png"
 	},
@@ -18649,6 +18670,13 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "Stereo Vintage Ensemble",
+		"Width": 3.98,
+		"Height": 4.7,
+		"Image": "mrblack-stereovintageensemble.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "SuperMoon",
 		"Width": 2.62,
 		"Height": 4.33,
@@ -18663,6 +18691,13 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "SuperMoon Eclipse",
+		"Width": 3.98,
+		"Height": 4.7,
+		"Image": "mrblack-supermoon-eclipse.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "Super Swell",
 		"Width": 2.62,
 		"Height": 4.33,
@@ -18671,8 +18706,8 @@
 	{
 		"Brand": "Mr. Black",
 		"Name": "Tapex 2",
-		"Width": 3.82,
-		"Height": 4.6,
+		"Width": 3.98,
+		"Height": 4.7,
 		"Image": "mrblack-tapex.png"
 	},
 	{
@@ -18684,10 +18719,10 @@
 	},
 	{
 		"Brand": "Mr. Black",
-		"Name": "Vintage Ensemble Stereo",
-		"Width": 3.7,
+		"Name": "Twin Lazers",
+		"Width": 3.98,
 		"Height": 4.7,
-		"Image": "mrblack-vintage-ensemble.png"
+		"Image": "mrblack-twinlazers.png"
 	},
 	{
 		"Brand": "Music Box Pedals",
