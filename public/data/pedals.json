@@ -2115,13 +2115,6 @@
 	},
 	{
 		"Brand": "Bearfoot Fx",
-		"Name": " Blue Berry BOD",
-		"Width": 2.68,
-		"Height": 4.4,
-		"Image": "bearfootfx-blueberrybod.png"
-	},
-	{
-		"Brand": "Bearfoot Fx",
 		"Name": "Artic White Fuzz",
 		"Width": 2.68,
 		"Height": 4.4,
@@ -2133,6 +2126,20 @@
 		"Width": 2.68,
 		"Height": 4.4,
 		"Image": "bearfootfx-babypinkbooster.png"
+	},
+	{
+		"Brand": "Bearfoot Fx",
+		"Name": "Blue Berry BOD",
+		"Width": 2.68,
+		"Height": 4.4,
+		"Image": "bearfootfx-blueberrybod.png"
+	},
+	{
+		"Brand": "Bearfoot Fx",
+		"Name": "Bumble Bee",
+		"Width": 2.6,
+		"Height": 4.4,
+		"Image": "bearfootfx-bumble-bee.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
@@ -2367,13 +2374,6 @@
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "CC300 Chorus Space-C",
-		"Width": 2.755,
-		"Height": 4.842,
-		"Image": "behringer-cc300.png"
-	},
-	{
-		"Brand": "Behringer",
 		"Name": "EQ700 Graphic Equalizer",
 		"Width": 2.755,
 		"Height": 4.842,
@@ -2434,13 +2434,6 @@
 		"Width": 2.755,
 		"Height": 4.842,
 		"Image": "behringer-to800.png"
-	},
-	{
-		"Brand": "Behringer",
-		"Name": "TU300 Chromatic Tuner",
-		"Width": 2.755,
-		"Height": 4.842,
-		"Image": "behringer-tu300.png"
 	},
 	{
 		"Brand": "Behringer",
@@ -6140,68 +6133,12 @@
 	},
 	{
 		"Brand": "Darkglass",
-		"Name": "Microtubes X",
-		"Width": 2.95,
-		"Height": 4.37,
-		"Image": "darkglass-microtubes-x.png"
+		"Name": "Adam",
+		"Width": 7.09,
+		"Height": 4.73,
+		"Image": "darkglass-adam.png"
 	},
 	{
-		"Brand": "Darkglass",
-		"Name": "Microtubes X7",
-		"Width": 4.21,
-		"Height": 4.72,
-		"Image": "darkglass-microtubes-x7.png"
-	},
-	{
-		"Brand": "Darkglass",
-		"Name": "Microtubes X Ultra",
-		"Width": 4.92,
-		"Height": 3.77,
-		"Image": "darkglass-microtubes-x-ultra.png"
-	},
-{
-		"Brand": "Darkglass",
-		"Name": "B3K",
-		"Width": 2.95,
-		"Height": 4.37,
-		"Image": "darkglass-b3k.png"
-	},
-	{
-		"Brand": "Darkglass",
-		"Name": "B7K",
-		"Width": 4.21,
-		"Height": 4.72,
-		"Image": "darkglass-microtubes-b7k.png"
-	},
-	{
-		"Brand": "Darkglass",
-		"Name": "B7K Ultra",
-		"Width": 4.92,
-		"Height": 3.77,
-		"Image": "darkglass-microtubes-b7k-ultra.png"
-	},
-{
-		"Brand": "Darkglass",
-		"Name": "Vintage Microtubes",
-		"Width": 2.95,
-		"Height": 4.37,
-		"Image": "darkglass-vintage-microtubes.png"
-	},
-	{
-		"Brand": "Darkglass",
-		"Name": "Vintage Deluxe",
-		"Width": 4.21,
-		"Height": 4.72,
-		"Image": "darkglass-vintage-deluxe.png"
-	},
-	{
-		"Brand": "Darkglass",
-		"Name": "Vintage Ultra",
-		"Width": 4.92,
-		"Height": 3.77,
-		"Image": "darkglass-vintage-ultra.png"
-	},
-{
 		"Brand": "Darkglass",
 		"Name": "Alpha Omicron",
 		"Width": 2.95,
@@ -6224,10 +6161,24 @@
 	},
 	{
 		"Brand": "Darkglass",
-		"Name": "Super Symmetry",
-		"Width": 3.7,
-		"Height": 4.77,
-		"Image": "darkglass-super-symmetry.png"
+		"Name": "B3K",
+		"Width": 2.95,
+		"Height": 4.37,
+		"Image": "darkglass-b3k.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "B7K",
+		"Width": 4.21,
+		"Height": 4.72,
+		"Image": "darkglass-microtubes-b7k.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "B7K Ultra",
+		"Width": 4.92,
+		"Height": 3.77,
+		"Image": "darkglass-microtubes-b7k-ultra.png"
 	},
 	{
 		"Brand": "Darkglass",
@@ -6245,10 +6196,52 @@
 	},
 	{
 		"Brand": "Darkglass",
-		"Name": "Adam",
-		"Width": 7.09,
-		"Height": 4.73,
-		"Image": "darkglass-adam.png"
+		"Name": "Microtubes X",
+		"Width": 2.95,
+		"Height": 4.37,
+		"Image": "darkglass-microtubes-x.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes X7",
+		"Width": 4.21,
+		"Height": 4.72,
+		"Image": "darkglass-microtubes-x7.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes X Ultra",
+		"Width": 4.92,
+		"Height": 3.77,
+		"Image": "darkglass-microtubes-x-ultra.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Super Symmetry",
+		"Width": 3.7,
+		"Height": 4.77,
+		"Image": "darkglass-super-symmetry.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Vintage Deluxe",
+		"Width": 4.21,
+		"Height": 4.72,
+		"Image": "darkglass-vintage-deluxe.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Vintage Microtubes",
+		"Width": 2.95,
+		"Height": 4.37,
+		"Image": "darkglass-vintage-microtubes.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Vintage Ultra",
+		"Width": 4.92,
+		"Height": 3.77,
+		"Image": "darkglass-vintage-ultra.png"
 	},
 	{
 		"Brand": "Dawner Prince",
