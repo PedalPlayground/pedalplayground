@@ -7008,6 +7008,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Turbo Flange",
+		"Width": 3.13,
+		"Height": 4.94,
+		"Image": "digitech-turbo-flange.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Ventura Vibe",
 		"Width": 2.65,
 		"Height": 4.4,
