@@ -23493,10 +23493,31 @@
 	},
 	{
 		"Brand": "Snouse Electronics",
-		"Name": "Black Box Overdrive 2",
-		"Width": 2.74,
-		"Height": 4.46,
+		"Name": "Black Box Overdrive",
+		"Width": 2.71,
+		"Height": 4.38,
 		"Image": "snouse-blackbox.png"
+	},
+	{
+		"Brand": "Snouse Electronics",
+		"Name": "Black Box Overdrive 2",
+		"Width": 2.71,
+		"Height": 4.38,
+		"Image": "snouse-blackbox2.png"
+	},
+	{
+		"Brand": "Snouse Electronics",
+		"Name": "Black Box Overdrive 2 (External Switch Mod)",
+		"Width": 3.07,
+		"Height": 4.38,
+		"Image": "snouse-blackbox2-externalswitch.png"
+	},
+	{
+		"Brand": "Snouse Electronics",
+		"Name": "Black Box Overdrive 2 (Stage Pro Mod)",
+		"Width": 3.07,
+		"Height": 4.38,
+		"Image": "snouse-blackbox2-stagepro.png"
 	},
 	{
 		"Brand": "Sola Sound",
