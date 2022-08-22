@@ -6546,13 +6546,6 @@
 	},
 	{
 		"Brand": "Demedash",
-		"Name": "T-60",
-		"Width": 2.5,
-		"Height": 4.79,
-		"Image": "demedash-t-60.png"
-	},
-	{
-		"Brand": "Demedash",
 		"Name": "T-120 V2",
 		"Width": 2.5,
 		"Height": 4.79,
@@ -6564,6 +6557,13 @@
 		"Width": 2.5,
 		"Height": 4.79,
 		"Image": "demedash-t-120-dlx-v2.png"
+	},
+	{
+		"Brand": "Demedash",
+		"Name": "T-60",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "demedash-t-60.png"
 	},
 	{
 		"Brand": "Demonic Machines",
@@ -7188,7 +7188,7 @@
 		"Height": 2.9,
 		"Image": "donner-aby.png"
 	},
-  {
+  	{
 		"Brand": "Donner",
 		"Name": "Jet Convolution",
 		"Width": 1.62,
@@ -7333,7 +7333,7 @@
 		"Name": "Stamme[n] v4",
 		"Width": 3.94,
 		"Height": 4.92,
-		"Image": "drolo_stammen_v4.png"
+		"Image": "drolo-stammen-v4.png"
 	},
 	{
 		"Brand": "Drybell",
@@ -7413,8 +7413,8 @@
 		"Image": "dsmnoisemaker-omnicabsim.png"
 	},
 	{
-    "Brand": "Dunlop",
-    "Name": "Cry Baby 105Q Bass Wah",
+    	"Brand": "Dunlop",
+    	"Name": "Cry Baby 105Q Bass Wah",
 		"Width": 4.07,
 		"Height": 10,
 		"Image": "dunlop-105q.png"
@@ -7448,15 +7448,15 @@
 		"Image": "dunlop-crybaby-jr.png"
 	},
 	{
-   	"Brand": "Dunlop",
-    "Name": "Cry Baby CBM105Q Mini Bass Wah",
+   		"Brand": "Dunlop",
+    	"Name": "Cry Baby CBM105Q Mini Bass Wah",
 		"Width": 3.08,
 		"Height": 5.25,
 		"Image": "dunlop-cbm105q.png"
 	},
 	{
-    "Brand": "Dunlop",
-    "Name": "Cry Baby CBM535Q Mini Wah",
+    	"Brand": "Dunlop",
+    	"Name": "Cry Baby CBM535Q Mini Wah",
 		"Width": 3.13,
 		"Height": 5.24,
 		"Image": "dunlop-mini-535q.png"
@@ -7469,8 +7469,8 @@
 		"Image": "dunlop-crybabymini.png"
 	},
 	{
-   	"Brand": "Dunlop",
-    "Name": "Cry Baby GCB95 Standard Wah",
+   		"Brand": "Dunlop",
+   		"Name": "Cry Baby GCB95 Standard Wah",
 		"Width": 4,
 		"Height": 10,
 		"Image": "dunlop-wah.png"
@@ -7595,8 +7595,8 @@
 		"Image": "dunlop-mini-535q.png"
 	},
 	{
-    "Brand": "Dunlop",
-    "Name": "Rotovibe",
+    	"Brand": "Dunlop",
+    	"Name": "Rotovibe",
 		"Width": 4,
 	 	"Height": 10,
 		"Image": "dunlop-jd4s.png"
@@ -7781,7 +7781,7 @@
 		"Name": "Aqueduct",
 		"Width": 2.5,
 		"Height": 4.75,
-		"Image": "earthquaker-acqueduct.png"
+		"Image": "earthquaker-aqueduct.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
