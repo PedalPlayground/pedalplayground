@@ -18608,8 +18608,8 @@
 	{
 		"Brand": "Mosky",
 		"Name": "Dual Switch (Jinx)",
-		"Width": 3.66,
-		"Height": 1.66,
+		"Width": 3.7,
+		"Height": 1.68,
 		"Image": "mosky-dual-switch-jinx.png"
 	},
 	{
@@ -24141,6 +24141,13 @@
 		"Width": 2.92,
 		"Height": 4.75,
 		"Image": "spaceman-deltaii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Equinox",
+		"Width": 5.95,
+		"Height": 4.74,
+		"Image": "spaceman-equinox.png"
 	},
 	{
 		"Brand": "Spaceman",
