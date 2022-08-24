@@ -21604,92 +21604,99 @@
 	{
 		"Brand": "Pastfx",
 		"Name": "Chorus Ensemble",
-		"Width": 4.72,
+		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-chorus-ensemble.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "Chorus Ensemble Mini",
-		"Width": 2.56,
-		"Height": 4.4,
+		"Width": 2.57,
+		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-mini.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "Chorus Ensemble MN3007",
-		"Width": 4.72,
+		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-chorus-ensemble-mn3007.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "Chorus Ensemble MN3007 Mini",
-		"Width": 2.56,
-		"Height": 4.4,
+		"Width": 2.57,
+		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-mn3007-mini.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "Chorus Ensemble Preamp Crunch",
-		"Width": 2.56,
-		"Height": 4.4,
+		"Width": 2.57,
+		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-preamp-crunch.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "Chorus Ensemble Preamp Crunch+",
-		"Width": 2.56,
-		"Height": 4.4,
+		"Width": 2.57,
+		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-preamp-crunch-plus.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "Elastic Mattress",
-		"Width": 2.56,
-		"Height": 4.4,
+		"Width": 2.57,
+		"Height": 4.33,
 		"Image": "pastfx-elastic-mattress.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "Foot Phaser Deluxe",
-		"Width": 2.56,
-		"Height": 4.4,
+		"Width": 2.57,
+		"Height": 4.33,
 		"Image": "pastfx-foot-phaser-deluxe.png"
 	},
 	{
 		"Brand": "Pastfx",
+		"Name": "Hot For Flanger",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "pastfx-hot-for-flanger.png"
+	},
+	{
+		"Brand": "Pastfx",
 		"Name": "Jet Phaser",
-		"Width": 4.72,
+		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-jet-phaser.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "Nick James Foot Phaser",
-		"Width": 2.56,
-		"Height": 4.4,
+		"Width": 2.57,
+		"Height": 4.33,
 		"Image": "pastfx-nick-james-foot-phaser.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "Phase V",
-		"Width": 4.72,
+		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-phase-v.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "Reticon Flanger",
-		"Width": 2.56,
-		"Height": 4.4,
+		"Width": 2.57,
+		"Height": 4.33,
 		"Image": "pastfx-reticon.png"
 	},
 	{
 		"Brand": "Pastfx",
 		"Name": "TD-Y",
-		"Width": 2.56,
-		"Height": 4.4,
+		"Width": 2.57,
+		"Height": 4.33,
 		"Image": "pastfx-td-y.png"
 	},
 	{
