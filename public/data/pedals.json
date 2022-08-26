@@ -2964,8 +2964,8 @@
   	"Brand": "BLAMMO! Electronics",
 		"Name": "Fuzz Detonator",
 		"Width": 3.7,
-		"Height": 4.9,
-		"Image": "blammo-fuxx-detonator.png"
+		"Height": 4.92,
+		"Image": "blammo-fuzz-detonator.png"
 	},
 	{
   	"Brand": "BLAMMO! Electronics",
@@ -3043,6 +3043,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-tomb-sender.png"
+	},
+	{
+  	"Brand": "BLAMMO! Electronics",
+		"Name": "Total Garbage Fuzz",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "blammo-total-garbage.png"
 	},
 	{
   	"Brand": "BLAMMO! Electronics",
