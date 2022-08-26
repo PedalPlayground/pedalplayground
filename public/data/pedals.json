@@ -4698,6 +4698,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Belle Epoch (Japanese Edition)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-belle-japanese.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe",
 		"Width": 4.7,
 		"Height": 3.82,
