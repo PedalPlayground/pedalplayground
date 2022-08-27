@@ -21211,6 +21211,20 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "Bassrig Super Vintage",
+		"Width": 3.6,
+		"Height": 5.8,
+		"Image": "origineffects-bassrig.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Bassrig '64 Black Panel'",
+		"Width": 3.6,
+		"Height": 5.8,
+		"Image": "origineffects-bassrig64.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "Cali76 Compact",
 		"Width": 2.6,
 		"Height": 5.59,
