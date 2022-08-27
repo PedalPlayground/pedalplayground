@@ -21269,7 +21269,7 @@
 		"Brand": "Origin Effects",
 		"Name": "DELUXE61",
 		"Width": 3.6,
-		"Height": 5.76,
+		"Height": 5.8,
 		"Image": "origin-deluxe61.png"
 	},
 	{
@@ -21282,8 +21282,8 @@
 	{
 		"Brand": "Origin Effects",
 		"Name": "MAGMA57 Amp Vibrato & Drive",
-		"Width": 3.66,
-		"Height": 5.62,
+		"Width": 3.6,
+		"Height": 5.8,
 		"Image": "origineffects-magma57.png"
 	},
 	{
@@ -21297,7 +21297,7 @@
 		"Brand": "Origin Effects",
 		"Name": "RevivalDRIVE",
 		"Width": 4.6,
-		"Height": 6.29,
+		"Height": 6.01,
 		"Image": "origin-revivaldrive.png"
 	},
 	{
@@ -21324,8 +21324,8 @@
 	{
 		"Brand": "Origin Effects",
 		"Name": "RevivalTREM Bias Tremolo",
-		"Width": 3.66,
-		"Height": 5.62,
+		"Width": 3.6,
+		"Height": 5.8,
 		"Image": "origineffects-revivaltrem.png"
 	},
 	{
