@@ -9766,44 +9766,51 @@
 	},
 	{
 		"Brand": "Emerson Custom",
+		"Name": "Duke Silver Compressor",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "emerson-duke-silver-comp.png"
+	},
+	{
+		"Brand": "Emerson Custom",
 		"Name": "Em-drive",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.56,
+		"Height": 4.33,
 		"Image": "emerson-emdrive.png"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "Em-drive Mach 2",
-		"Width": 2.5,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5.04,
 		"Image": "emerson-emdrive-mach2.png"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "Em-drive Mach 2 (Origin Edition)",
-		"Width": 2.5,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5.04,
 		"Image": "emerson-emdrive-mach2-origin.png"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "Em-drive Mach 2 (Turquoise)",
-		"Width": 2.5,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5.04,
 		"Image": "emerson-emdrive-mach2-turquoise.png"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "Paramount",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.56,
+		"Height": 4.33,
 		"Image": "emerson-paramount.png"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "Paramount Mk.2",
-		"Width": 2.5,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5.04,
 		"Image": "emerson-paramount-mk2.png"
 	},
 	{
@@ -9823,15 +9830,15 @@
 	{
 		"Brand": "Emerson Custom",
 		"Name": "Scranton Screamer",
-		"Width": 2.5,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5.04,
 		"Image": "emerson-scranton-screamer.png"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "Scranton Screamer (Whiteout)",
-		"Width": 2.5,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5.04,
 		"Image": "emerson-scranton-screamer-whiteout.png"
 	},
 	{
