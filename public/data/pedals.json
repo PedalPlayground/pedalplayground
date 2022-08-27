@@ -15295,6 +15295,34 @@
 		"Image": "ksr-ceres-blackspark.png"
 	},
 	{
+		"Brand": "King Pedals",
+		"Name": "1612 Pro",
+		"Width": 2.95,
+		"Height": 5.11,
+		"Image": "king-pedals-1612-pro.png"
+	},
+	{
+		"Brand": "King Pedals",
+		"Name": "Eden Pro",
+		"Width": 2.95,
+		"Height": 5.11,
+		"Image": "king-pedals-eden-pro.png"
+	},
+	{
+		"Brand": "King Pedals",
+		"Name": "Eve Pro",
+		"Width": 2.95,
+		"Height": 5.11,
+		"Image": "king-pedals-eve-pro.png"
+	},
+	{
+		"Brand": "King Pedals",
+		"Name": "Genesis Pro",
+		"Width": 2.95,
+		"Height": 5.11,
+		"Image": "king-pedals-genesis-pro.png"
+	},
+	{
 		"Brand": "Kingsley",
 		"Name": "Bard",
 		"Width": 3.875,
