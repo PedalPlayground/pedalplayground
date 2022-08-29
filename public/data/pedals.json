@@ -6181,6 +6181,34 @@
 		"Image": "daddario-ct23.png"
 	},
 	{
+		"Brand": "DanDrive",
+		"Name": "Austin Pride Fuzz",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "dandrive-austinpride.png"
+	},
+	{
+		"Brand": "DanDrive",
+		"Name": "Secret Machine Fuzz",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "dandrive-secretmachine.png"
+	},
+	{
+		"Brand": "DanDrive",
+		"Name": "Secret Weapon Fuzz",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "dandrive-secretweapon.png"
+	},
+	{
+		"Brand": "DanDrive",
+		"Name": "Tweedy Overdrive",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "dandrive-tweedy.png"
+	},
+	{
 		"Brand": "Danelectro",
 		"Name": "Back Talk",
 		"Width": 2.31,
