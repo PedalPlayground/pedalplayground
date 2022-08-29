@@ -18579,6 +18579,13 @@
 	},
 	{
 		"Brand": "Morley",
+		"Name": "20/20 Lead Wah Boost",
+		"Width": 4.5,
+		"Height": 7.24,
+		"Image": "morley-2020leadwahboost.png"
+	},
+	{
+		"Brand": "Morley",
 		"Name": "Mini Wah",
 		"Width": 4.5,
 		"Height": 6.75,
@@ -27209,6 +27216,13 @@
 		"Width": 2.83,
 		"Height": 4.72,
 		"Image": "vox-valvenergy-silk-drive.png"
+	},
+	{
+		"Brand": "VTR",
+		"Name": "Helios Overdrive v2",
+		"Width": 2.68,
+		"Height": 4.89,
+		"Image": "vtr-helios-V2.png"
 	},
 	{
 		"Brand": "Whirlwind",
