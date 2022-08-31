@@ -8240,6 +8240,13 @@
 	},
 	{
 		"Brand": "EBS",
+		"Name": "MicroBass 3",
+		"Width": 6.6,
+		"Height": 4.9,
+		"Image": "ebs-microbass3.png"
+	},
+	{
+		"Brand": "EBS",
 		"Name": "MultiComp",
 		"Width": 2.8,
 		"Height": 4.5,
