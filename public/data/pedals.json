@@ -22282,6 +22282,20 @@
 	},
 	{
 		"Brand": "Poly Effects",
+		"Name": "Beebo (Blue)",
+		"Width": 5.98,
+		"Height": 5.04,
+		"Image": "poly-beebo-blue.png"
+	},
+	{
+		"Brand": "Poly Effects",
+		"Name": "Beebo (Pink)",
+		"Width": 5.98,
+		"Height": 5.04,
+		"Image": "poly-beebo-pink.png"
+	},
+	{
+		"Brand": "Poly Effects",
 		"Name": "Digit",
 		"Width": 6,
 		"Height": 5,
