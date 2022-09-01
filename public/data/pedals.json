@@ -13595,6 +13595,13 @@
 	},
 	{
 		"Brand": "Jackson Audio",
+		"Name": "1484 Twin Twelve",
+		"Width": 4.7,
+		"Height": 4.01,
+		"Image": "jackson-1484.png"
+	},
+	{
+		"Brand": "Jackson Audio",
 		"Name": "Amp Mode",
 		"Width": 1.8,
 		"Height": 4.08,
