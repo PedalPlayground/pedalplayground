@@ -19783,6 +19783,13 @@
 	},
 	{
 		"Brand": "MXR Custom Shop",
+		"Name": "Duke of Tone",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-cspo39.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
 		"Name": "Dyna Comp (Script)",
 		"Width": 2.57,
 		"Height": 4.33,
