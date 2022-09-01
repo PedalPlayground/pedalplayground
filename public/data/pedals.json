@@ -592,21 +592,21 @@
 		"Name": "Sky Fi",
 		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-skyfi.png"
+		"Image": "alexander-sky-fi.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Space Expander",
 		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-spaceexpander.png"
+		"Image": "alexander-space-expander.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Space Force",
 		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-spaceforce.png"
+		"Image": "alexander-space-force.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -641,7 +641,7 @@
 		"Name": "Super Radical Delay",
 		"Width": 4.7,
 		"Height": 3.78,
-		"Image": "alexander-superradical.png"
+		"Image": "alexander-super-radical.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -690,7 +690,7 @@
 		"Name": "Love Machine",
 		"Width": 2.6,
 		"Height": 5.09,
-		"Image": "allpedal-lovemachine.png"
+		"Image": "allpedal-love-machine.png"
 	},
 	{
 		"Brand": "All-Pedal",
@@ -872,7 +872,7 @@
 		"Name": "PANGAEA CP-100 IR",
 		"Width": 3.77,
 		"Height": 1.69,
-		"Image": "amt-pangaeacp100.png"
+		"Image": "amt-pangaea-cp100.png"
    	},
 	{
 		"Brand": "AMT",
@@ -886,7 +886,7 @@
 		"Name": "Aux 3",
 		"Width": 4.78,
 		"Height": 2.76,
-		"Image": "analogendeavours-aux.png"
+		"Image": "analogendeavors-aux.png"
 	},
 	{
 		"Brand": "Analog.Man",
@@ -1866,7 +1866,7 @@
 		"Name": "Ampli-Firebox",
 		"Width": 3.95,
 		"Height": 4.7,
-		"Image": "atomic-amplifirebox.png"
+		"Image": "atomic-ampli-firebox.png"
 	},
 	{
 		"Brand": "Atomic",
@@ -4260,7 +4260,7 @@
 		"Name": "Protein (Forest Green)",
 		"Width": 4.7,
 		"Height": 3.82,
-		"Image": "browneamps-protein-forestgreen.png"
+		"Image": "browneamps-protein-forest-green.png"
 	},
 	{
 		"Brand": "Browne Amplification",
@@ -4295,7 +4295,7 @@
 		"Name": "Vanilla Soft Drive",
 		"Width": 3.93701,
 		"Height": 4.33071,
-		"Image": "brunetti-vanilladrive.png"
+		"Image": "brunetti-vanilla-drive.png"
 	},
 	{
 		"Brand": "BSS",
