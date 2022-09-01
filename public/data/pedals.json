@@ -172,7 +172,7 @@
 		"Name": "Germanium Fuzz",
 		"Width": 1.65,
 		"Height": 3.7,
-		"Image": "aa-germaniumfuzz.png"
+		"Image": "aa-germanium-fuzz.png"
 	},
 	{
 		"Brand": "Abasi",
@@ -249,21 +249,21 @@
 		"Name": "Cinnamon Drive",
 		"Width": 5.4,
 		"Height": 3.59,
-		"Image": "aclam-cinnamondrive.png"
+		"Image": "aclam-cinnamon-drive.png"
 	},
 	{
 		"Brand": "Aclam",
 		"Name": "Dr. Robert",
 		"Width": 5.4,
 		"Height": 3.59,
-		"Image": "aclam-drrobert.png"
+		"Image": "aclam-dr-robert.png"
 	},
 	{
 		"Brand": "Aclam",
 		"Name": "The Woman Tone",
 		"Width": 5.4,
 		"Height": 3.59,
-		"Image": "aclam-thewomantone.png"
+		"Image": "aclam-woman-tone.png"
 	},
 	{
 		"Brand": "Aclam",
@@ -459,21 +459,21 @@
 		"Name": "Fever Pitch",
 		"Width": 4.7,
 		"Height": 3.86,
-		"Image": "alexander-feverpitch.png"
+		"Image": "alexander-fever-pitch.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Golden Summer",
 		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-goldensummer.png"
+		"Image": "alexander-golden-summer.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "History Lesson",
 		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-historylesson.png"
+		"Image": "alexander-history-lesson.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -1153,7 +1153,7 @@
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-1927.png"
-  },
+  	},
 	{
 		"Brand": "Animals Pedal",
 		"Name": "Bath Time Reverb",
@@ -2115,10 +2115,10 @@
 	},
 	{
 		"Brand": "Bearfoot Fx",
-		"Name": "Artic White Fuzz",
+		"Name": "Arctic White Fuzz",
 		"Width": 2.68,
 		"Height": 4.4,
-		"Image": "bearfootfx-articwhitefuzz.png"
+		"Image": "bearfootfx-arctic-white-fuzz.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
@@ -2846,7 +2846,7 @@
 		"Name": "Fuzz Detonator",
 		"Width": 3.7,
 		"Height": 4.9,
-		"Image": "blammo-fuxx-detonator.png"
+		"Image": "blammo-fuzz-detonator.png"
 	},
 	{
   		"Brand": "BLAMMO! Electronics",
@@ -4341,7 +4341,7 @@
 	},
 	{
 		"Brand": "Buffalo FX",
-		"Name": "Power Boosterr",
+		"Name": "Power Booster",
 		"Width": 3.7,
 		"Height": 4.84,
 		"Image": "buffalo-power-booster.png"
@@ -8642,8 +8642,8 @@
 		"Name": "Battalion",
 		"Width": 6.15,
 		"Height": 4.75,
-		"Image": "ehx-batallion.png"
-  },
+		"Image": "ehx-battalion.png"
+  	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi with Tone Wicker",
@@ -8975,7 +8975,7 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Key9 Electic Piano Machine",
+		"Name": "Key9 Electric Piano Machine",
 		"Width": 4.19,
 		"Height": 4.75,
 		"Image": "ehx-key9.png"
@@ -10003,12 +10003,12 @@
 		"Image": "ernieball-tap.png"
 	},
  	{
-    "Brand": "Ernie Ball",
-    "Name": "Volt",
+    	"Brand": "Ernie Ball",
+    	"Name": "Volt",
 		"Width": 3.5,
 		"Height": 2.3,
 		"Image": "ernieball-volt.png"
-  },
+  	},
 	{
 		"Brand": "Ernie Ball",
 		"Name": "VP",
@@ -10896,7 +10896,7 @@
 		"Name": "Zim",
 		"Width": 5.5,
 		"Height": 5,
-		"Image": "foxrox-paradoxtzf2.png"
+		"Image": "foxrox-zim.png"
 	},
 	{
 		"Brand": "Fractal Audio Systems",
