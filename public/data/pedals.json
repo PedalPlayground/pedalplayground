@@ -7610,6 +7610,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Cry Baby Q Zone Fixed Wah",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-qz1.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "DVP3 Volume X",
 		"Width": 3.858,
 		"Height": 10,
@@ -19650,13 +19657,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Cry Baby Q Zone Fixed Wah",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-qz1.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Raw Dog",
 		"Width": 1.74,
 		"Height": 3.7,
@@ -19815,6 +19815,13 @@
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-brown-acid-fuzz.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Cry Baby Q Zone Fixed Wah",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-csp030.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
