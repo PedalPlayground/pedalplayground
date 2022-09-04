@@ -3,56 +3,77 @@
 		"Brand": "1981 Inventions",
 		"Name": "DRV",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-inventions.png"
+	},
+	{
+		"Brand": "1981 Inventions",
+		"Name": "DRV (Alt Universe)",
+		"Width": 3.7,
+		"Height": 4.58,
+		"Image": "1981-inventions-altuni.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Blackout)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-inventions-black.png"
+	},
+	{
+		"Brand": "1981 Inventions",
+		"Name": "DRV (Fractured)",
+		"Width": 3.7,
+		"Height": 4.58,
+		"Image": "1981-inventions-fractured.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Hyperfade)",
 		"Width": 3.7,
-		"Height": 4.57,
-		"Image": "drv-hyperfade.png"
+		"Height": 4.58,
+		"Image": "1981-inventions-hyperfade.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Outline)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-drv-outline.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Pink)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-drv-pink.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Seafoam Green)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-inventions-sfg.png"
+	},
+	{
+		"Brand": "1981 Inventions",
+		"Name": "DRV (Sky Blue Sky)",
+		"Width": 3.7,
+		"Height": 4.58,
+		"Image": "1981-inventions-skyblue.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Teal)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-drv-teal.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (White No3)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-drv-whiteno3.png"
 	},
 	{
@@ -7589,6 +7610,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Cry Baby Q Zone Fixed Wah",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-qz1.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "DVP3 Volume X",
 		"Width": 3.858,
 		"Height": 10,
@@ -8916,6 +8944,13 @@
 		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-ehx-tortion.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "English Muff'N",
+		"Width": 4.85,
+		"Height": 7.89,
+		"Image": "ehx-english-muffn.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -13592,6 +13627,13 @@
 		"Width": 4.75,
 		"Height": 3,
 		"Image": "jrockett-wtf.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "1484 Twin Twelve",
+		"Width": 4.7,
+		"Height": 4.01,
+		"Image": "jackson-1484.png"
 	},
 	{
 		"Brand": "Jackson Audio",
@@ -19615,13 +19657,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Cry Baby Q Zone Fixed Wah",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-qz1.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Raw Dog",
 		"Width": 1.74,
 		"Height": 3.7,
@@ -19780,6 +19815,20 @@
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-brown-acid-fuzz.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Cry Baby Q Zone Fixed Wah",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-csp030.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Duke of Tone",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-cspo39.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
