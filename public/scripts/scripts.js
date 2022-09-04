@@ -188,7 +188,7 @@
 
 			map: function(callback) {
 				return this.pushStack(jQuery.map(this, function(elem, i) {
-					return callback.call( elem, i, elem );
+					return callback.call(elem, i, elem);
 				}));
 			},
 

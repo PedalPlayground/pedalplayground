@@ -338,7 +338,7 @@ $(document).ready(function () {
 		}
 	});
 
-	// On keydown of "[", move bedal back
+	// On keydown of "[", move pedal back
 	$("body").on("keydown keyup", function (event) {
 		if (event.which == 219) {
 			$(".panel a[href='#back']").click();
@@ -346,7 +346,7 @@ $(document).ready(function () {
 		}
 	});
 
-	// On keydown of "]", move bedal front
+	// On keydown of "]", move pedal front
 	$("body").on("keydown keyup", function (event) {
 		if (event.which == 221) {
 			$(".panel a[href='#front']").click();
