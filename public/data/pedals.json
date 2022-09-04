@@ -746,35 +746,35 @@
 		"Name": "Big Rock Pro II",
 		"Width": 6.47,
 		"Height": 5.29,
-		"Image": "amptweaker-bigrockpro-2.png"
+		"Image": "amptweaker-big-rock-pro-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
 		"Name": "Fat Metal Pro II",
 		"Width": 6.47,
 		"Height": 5.29,
-		"Image": "amptweaker-fatmetalpro-2.png"
+		"Image": "amptweaker-fat-metal-pro-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
 		"Name": "Tight Metal Pro II",
 		"Width": 6.47,
 		"Height": 5.29,
-		"Image": "amptweaker-tightmetalpro-2.png"
+		"Image": "amptweaker-tight-metal-pro-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
 		"Name": "Tight Drive II",
 		"Width": 2.89,
 		"Height": 4.65,
-		"Image": "amptweaker-tightdrive-2.png"
+		"Image": "amptweaker-tight-drive-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
 		"Name": "Tight Drive Jr.",
 		"Width": 2.94,
 		"Height": 5.29,
-		"Image": "amptweaker-tightdrive.png"
+		"Image": "amptweaker-tight-drive.png"
 	},
 	{
 		"Brand": "Amptweaker",
@@ -788,21 +788,21 @@
 		"Name": "Tight Metal Jr.",
 		"Width": 2.94,
 		"Height": 5.29,
-		"Image": "amptweaker-tightmetal.png"
+		"Image": "amptweaker-tight-metal.png"
 	},
 	{
 		"Brand": "Amptweaker",
 		"Name": "Tight Rock II",
 		"Width": 2.89,
 		"Height": 4.65,
-		"Image": "amptweaker-tightrock-2.png"
+		"Image": "amptweaker-tight-rock-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
 		"Name": "Tight Rock Jr.",
 		"Width": 2.94,
 		"Height": 5.29,
-		"Image": "amptweaker-tightrock.png"
+		"Image": "amptweaker-tight-rock.png"
 	},
 	{
 		"Brand": "AMT",
@@ -851,7 +851,7 @@
 		"Name": "LLM-2 ZERO Little Loudmouth",
 		"Width": 2.736,
 		"Height": 4.33,
-		"Image": "amt-littleloudmouth.png"
+		"Image": "amt-llm2.png"
 	},
 	{
 		"Brand": "AMT",
@@ -893,14 +893,14 @@
 		"Name": "Astro Tone (Black)",
 		"Width": 2.6,
 		"Height": 4.97,
-		"Image": "analogman-astrotone-black.png"
+		"Image": "analogman-astro-tone-black.png"
 	},
 	{
 		"Brand": "Analog.Man",
 		"Name": "Astro Tone (White)",
 		"Width": 2.61,
 		"Height": 4.88,
-		"Image": "analogman-astrotone-white.png"
+		"Image": "analogman-astro-tone-white.png"
 	},
 	{
 		"Brand": "Analog.Man",
@@ -935,14 +935,14 @@
 		"Name": "Dual Analog Delay",
 		"Width": 4.6,
 		"Height": 5.5,
-		"Image": "analogman-dualanalogdelay.png"
+		"Image": "analogman-dual-analog-delay.png"
 	},
 	{
 		"Brand": "Analog.Man",
 		"Name": "King of Tone",
 		"Width": 4.7,
 		"Height": 3.86,
-		"Image": "analogman-kingoftone.png"
+		"Image": "analogman-king-of-tone.png"
 	},
 	{
 		"Brand": "Analog.Man",
@@ -977,7 +977,7 @@
 		"Name": "Prince of Tone",
 		"Width": 2.5,
 		"Height": 4.85,
-		"Image": "analogman-princeoftone.png"
+		"Image": "analogman-prince-of-tone.png"
 	},
 	{
 		"Brand": "Analog.Man",
@@ -1663,14 +1663,14 @@
 		"Name": "Big Green",
 		"Width": 3.62,
 		"Height": 4.96,
-		"Image": "arc-biggreen.png"
+		"Image": "arc-big-green.png"
 	},
 	{
 		"Brand": "Arc Effects",
 		"Name": "Crimson King",
 		"Width": 3.62,
 		"Height": 4.96,
-		"Image": "arc-crimsonking.png"
+		"Image": "arc-crimson-king.png"
 	},
 	{
 		"Brand": "Arc Effects",
@@ -3106,6 +3106,13 @@
 		"Width": 9.65,
 		"Height": 7.56,
 		"Image": "bluguitar-amp1.png"
+	},
+	{
+		"Brand": "BluGuitar",
+		"Name": "Amp X",
+		"Width": 16.7,
+		"Height": 7.8,
+		"Image": "bluguitar-amp-x.png"
 	},
 	{
 		"Brand": "BluGuitar",
@@ -10960,6 +10967,13 @@
 		"Width": 2.87,
 		"Height": 4.85,
 		"Image": "flower-pedals-sunflower.png"
+	},
+	{
+		"Brand": "Formula 6",
+		"Name": "Fuzz Rangers",
+		"Width": 2.25,
+		"Height": 4.25,
+		"Image": "formula6-fuzz-rangers.png"
 	},
 	{
 		"Brand": "Fortin",
@@ -24169,6 +24183,13 @@
 		"Width": 4.89,
 		"Height": 3.68,
 		"Image": "solidgoldfx-zetadlx.png"
+	},
+	{
+		"Brand": "SoloDallas",
+		"Name": "The Schaffer Replica",
+		"Width": 3.5,
+		"Height": 4.49,
+		"Image": "solodallas-tsr.png"
 	},
 	{
 		"Brand": "Sonic Research",
