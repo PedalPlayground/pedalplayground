@@ -3,56 +3,77 @@
 		"Brand": "1981 Inventions",
 		"Name": "DRV",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-inventions.png"
+	},
+	{
+		"Brand": "1981 Inventions",
+		"Name": "DRV (Alt Universe)",
+		"Width": 3.7,
+		"Height": 4.58,
+		"Image": "1981-inventions-altuni.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Blackout)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-inventions-black.png"
+	},
+	{
+		"Brand": "1981 Inventions",
+		"Name": "DRV (Fractured)",
+		"Width": 3.7,
+		"Height": 4.58,
+		"Image": "1981-inventions-fractured.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Hyperfade)",
 		"Width": 3.7,
-		"Height": 4.57,
-		"Image": "drv-hyperfade.png"
+		"Height": 4.58,
+		"Image": "1981-inventions-hyperfade.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Outline)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-drv-outline.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Pink)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-drv-pink.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Seafoam Green)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-inventions-sfg.png"
+	},
+	{
+		"Brand": "1981 Inventions",
+		"Name": "DRV (Sky Blue Sky)",
+		"Width": 3.7,
+		"Height": 4.58,
+		"Image": "1981-inventions-skyblue.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Teal)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-drv-teal.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (White No3)",
 		"Width": 3.7,
-		"Height": 4.57,
+		"Height": 4.58,
 		"Image": "1981-drv-whiteno3.png"
 	},
 	{
