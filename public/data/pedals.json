@@ -16325,6 +16325,13 @@
 	},
 	{
 		"Brand": "Line 6",
+		"Name": "Relay G50 Wireless",
+		"Width": 3.4,
+		"Height": 5.25,
+		"Image": "line6-g50relay.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "Relay G10S Wireless",
 		"Width": 3.5,
 		"Height": 5,
