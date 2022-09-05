@@ -14638,6 +14638,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "JP-05 Power Supply 5",
+		"Width": 5.75,
+		"Height": 2.7,
+		"Image": "joyo-jp05.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "Pipe Bomb",
 		"Width": 1.72,
 		"Height": 2.83,
