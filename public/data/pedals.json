@@ -21939,6 +21939,13 @@
 	},
 	{
 		"Brand": "Pastfx",
+		"Name": "Stereo Chorus PX65",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "pastfx-px65.png"
+	},
+	{
+		"Brand": "Pastfx",
 		"Name": "TD-Y",
 		"Width": 2.57,
 		"Height": 4.33,
