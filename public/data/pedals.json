@@ -22527,6 +22527,13 @@
 	},
 	{
 		"Brand": "Pro Co",
+		"Name": "Big Box Vintage Rat",
+		"Width": 5,
+		"Height": 4.14,
+		"Image": "proco-bigbox-rat.png"
+	},
+	{
+		"Brand": "Pro Co",
 		"Name": "Deucetone Rat",
 		"Width": 8.19,
 		"Height": 4.57,
