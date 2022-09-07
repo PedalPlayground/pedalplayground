@@ -7500,14 +7500,14 @@
 		"Brand": "Dreadbox",
 		"Name": "Darkness",
 		"Width": 3.94,
-		"Height": 5.61,
+		"Height": 5.58,
 		"Image": "dreadbox-darkness.png"
 	},
 	{
 		"Brand": "Dreadbox",
 		"Name": "Disorder",
 		"Width": 3.94,
-		"Height": 5.61,
+		"Height": 5.58,
 		"Image": "dreadbox-disorder.png"
 	},
 	{
@@ -7521,22 +7521,29 @@
 		"Brand": "Dreadbox",
 		"Name": "Kinematic",
 		"Width": 3.94,
-		"Height": 5.61,
+		"Height": 5.58,
 		"Image": "dreadbox-kinematic.png"
 	},
 	{
 		"Brand": "Dreadbox",
 		"Name": "Komorebi",
 		"Width": 3.94,
-		"Height": 5.61,
+		"Height": 5.58,
 		"Image": "dreadbox-komorebi.png"
 	},
 	{
 		"Brand": "Dreadbox",
 		"Name": "Lethargy",
 		"Width": 3.94,
-		"Height": 5.61,
+		"Height": 5.58,
 		"Image": "dreadbox-lethargy.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Treminator",
+		"Width": 3.94,
+		"Height": 5.58,
+		"Image": "dreadbox-treminator.png"
 	},
 	{
 		"Brand": "Drolo",
