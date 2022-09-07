@@ -5083,6 +5083,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Soft Focus Reverb",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-softfocus.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Talisman",
 		"Width": 2.6,
 		"Height": 4.33,
