@@ -15709,6 +15709,20 @@
 	},
 	{
 		"Brand": "King Pedals",
+		"Name": "Black Horse Evo",
+		"Width": 2.95,
+		"Height": 5.11,
+		"Image": "king-pedals-black-horse-evo.png"
+	},
+	{
+		"Brand": "King Pedals",
+		"Name": "Blue Diamond Evo",
+		"Width": 2.95,
+		"Height": 5.11,
+		"Image": "king-pedals-blue-diamond-evo.png"
+	},
+	{
+		"Brand": "King Pedals",
 		"Name": "Eden Pro",
 		"Width": 2.95,
 		"Height": 5.11,
@@ -15723,10 +15737,24 @@
 	},
 	{
 		"Brand": "King Pedals",
+		"Name": "Genesis Neo",
+		"Width": 2.36,
+		"Height": 4.33,
+		"Image": "king-pedals-genesis-neo.png"
+	},
+	{
+		"Brand": "King Pedals",
 		"Name": "Genesis Pro",
 		"Width": 2.95,
 		"Height": 5.11,
 		"Image": "king-pedals-genesis-pro.png"
+	},
+	{
+		"Brand": "King Pedals",
+		"Name": "Panda Neo",
+		"Width": 2.36,
+		"Height": 4.33,
+		"Image": "king-pedals-panda-neo.png"
 	},
 	{
 		"Brand": "Kingsley",
