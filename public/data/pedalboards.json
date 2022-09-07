@@ -249,7 +249,7 @@
 		"Name": "Little 20",
 		"Width": 20,
 		"Height": 7,
-		"Image": "pedaltrain-mini.png"
+		"Image": "ghostfire-little20.png"
 	},
 	{
 		"Brand": "Gokko",
@@ -319,119 +319,119 @@
 		"Name": "Front Flat 16",
 		"Width": 16.0,
 		"Height": 6.0,
-		"Image": "morton-frontflat16.png"
+		"Image": "morton-front-flat-16.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Flat 8",
 		"Width": 8.0,
 		"Height": 6.0,
-		"Image": "morton-frontflat8.png"
+		"Image": "morton-front-flat-8.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Slant 16",
 		"Width": 16.0,
 		"Height": 6.0,
-		"Image": "morton-frontslant16.png"
+		"Image": "morton-front-slant-16.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Slant 8",
 		"Width": 8.0,
 		"Height": 6.0,
-		"Image": "morton-frontslant8.png"
+		"Image": "morton-front-slant-8.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Tray 16",
 		"Width": 16.0,
 		"Height": 5.0,
-		"Image": "morton-fronttray16.png"
+		"Image": "morton-front-tray-16.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Tray 20",
 		"Width": 20.0,
 		"Height": 7.0,
-		"Image": "morton-fronttray20.png"
+		"Image": "morton-front-tray-20.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Long Flat 4",
 		"Width": 4.0,
 		"Height": 12.0,
-		"Image": "morton-longflat4.png"
+		"Image": "morton-long-flat-4.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Long Flat 8",
 		"Width": 8.0,
 		"Height": 12.0,
-		"Image": "morton-longflat8.png"
+		"Image": "morton-long-flat-8.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Long Slant 16",
 		"Width": 16.0,
 		"Height": 12.0,
-		"Image": "morton-longslant16.png"
+		"Image": "morton-long-slant-16.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Long Slant 4",
 		"Width": 4.0,
 		"Height": 12.0,
-		"Image": "morton-longslant4.png"
+		"Image": "morton-long-slant-4.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Long Slant 8",
 		"Width": 8.0,
 		"Height": 12.0,
-		"Image": "morton-longslant8.png"
+		"Image": "morton-long-slant-8.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Rear Flat 16",
 		"Width": 16.0,
 		"Height": 6.0,
-		"Image": "morton-rearflat16.png"
+		"Image": "morton-rear-flat-16.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Rear Flat 8",
 		"Width": 8.0,
 		"Height": 6.0,
-		"Image": "morton-rearflat8.png"
+		"Image": "morton-rear-flat-8.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Rear Slant 16",
 		"Width": 16.0,
 		"Height": 6.0,
-		"Image": "morton-rearslant16.png"
+		"Image": "morton-rear-slant-16.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Rear Slant 8",
 		"Width": 8.0,
 		"Height": 6.0,
-		"Image": "morton-rearslant8.png"
+		"Image": "morton-rear-slant-8.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Side Tray 4",
 		"Width": 4.6,
 		"Height": 12.0,
-		"Image": "morton-sidetray4.png"
+		"Image": "morton-side-tray-4.png"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Side Tray 8",
 		"Width": 8.6,
 		"Height": 12.0,
-		"Image": "morton-sidetray8.png"
+		"Image": "morton-side-tray-8.png"
 	},
 	{
 		"Brand": "Muzbay",
