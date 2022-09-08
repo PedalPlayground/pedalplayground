@@ -1985,14 +1985,14 @@
 		"Name": "Tone Press",
 		"Width": 2.75,
 		"Height": 4.4375,
-		"Image": "barber-tonepresssm.png"
+		"Image": "barber-tone-press-modern.png"
 	},
 	{
 		"Brand": "Barber",
 		"Name": "Tone Press (old)",
 		"Width": 3.7,
 		"Height": 4.7,
-		"Image": "barber-tonepress.png"
+		"Image": "barber-tone-press-old.png"
 	},
 	{
 		"Brand": "Barefoot Buttons",
@@ -2034,14 +2034,14 @@
 		"Name": "Alter Destiny",
 		"Width": 2.89,
 		"Height": 4.78,
-		"Image": "basicaudio-alterdestiny.png"
+		"Image": "basicaudio-alter-destiny.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Foxey Lady",
 		"Width": 2.8,
 		"Height": 4.78,
-		"Image": "basicaudio-foxeylady.png"
+		"Image": "basicaudio-foxey-lady.png"
 	},
 	{
 		"Brand": "Basic Audio",
@@ -2055,7 +2055,7 @@
 		"Name": "Fuzz Mutant",
 		"Width": 2.75,
 		"Height": 4.78,
-		"Image": "basicaudio-fuzzmutant.png"
+		"Image": "basicaudio-fuzz-mutant.png"
 	},
 	{
 		"Brand": "Basic Audio",
@@ -2076,7 +2076,7 @@
 		"Name": "Lucky Number",
 		"Width": 2.84,
 		"Height": 4.78,
-		"Image": "basicaudio-luckynumber.png"
+		"Image": "basicaudio-lucky-number.png"
 	},
 	{
 		"Brand": "Basic Audio",
@@ -2090,42 +2090,42 @@
 		"Name": "Pale Rider",
 		"Width": 2.8,
 		"Height": 4.78,
-		"Image": "basicaudio-palerider.png"
+		"Image": "basicaudio-pale-rider.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Peak Freq",
 		"Width": 2.8,
 		"Height": 4.8,
-		"Image": "basicaudio-peakfreq.png"
+		"Image": "basicaudio-peak-freq.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Scarab Deluxe",
 		"Width": 2.8,
 		"Height": 4.8,
-		"Image": "basicaudio-scarabdeluxe.png"
+		"Image": "basicaudio-scarab-deluxe.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Solar Myth",
 		"Width": 2.85,
 		"Height": 4.78,
-		"Image": "basicaudio-solarmyth.png"
+		"Image": "basicaudio-solar-myth.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Spooky Tooth",
 		"Width": 2.76,
 		"Height": 4.78,
-		"Image": "basicaudio-spookytooth.png"
+		"Image": "basicaudio-spooky-tooth.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Squarewave+",
 		"Width": 2.85,
 		"Height": 4.78,
-		"Image": "basicaudio-squarewaveplus.png"
+		"Image": "basicaudio-squarewave-plus.png"
 	},
 	{
 		"Brand": "Basic Audio",
@@ -2458,7 +2458,7 @@
 	},
 	{
 		"Brand": "Behringer",
-		"Name": "CC300 Corus Space-C",
+		"Name": "CC300 Chorus Space-C",
 		"Width": 2.76,
 		"Height": 4.84,
 		"Image": "behringer-cc300.png"
@@ -6406,6 +6406,13 @@
 	},
 	{
 		"Brand": "Darkglass",
+		"Name": "Microtubes Infinity",
+		"Width": 7.08661,
+		"Height": 4.72441,
+		"Image": "darkglass-microtubes-infinity.png"
+	},
+	{
+		"Brand": "Darkglass",
 		"Name": "Microtubes X",
 		"Width": 2.95,
 		"Height": 4.37,
@@ -6782,13 +6789,13 @@
 		"Height": 3.83,
 		"Image": "demonicmachines-htr.png"
 	},
-  {
+  	{
 		"Brand": "Devi Ever: FX",
 		"Name": "Torn's Peaker",
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "devi-ever-torns-peaker.png"
-  },
+  	},
 	{
 		"Brand": "Diamond",
 		"Name": "Bass Comp",
@@ -18530,6 +18537,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "PC-6 Connector",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-pc-6.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Pitch Box",
 		"Width": 1.67,
 		"Height": 3.75,
@@ -23308,6 +23322,13 @@
 		"Width": 1.79,
 		"Height": 1.65,
 		"Image": "rock-stock-nano.png"
+	},
+	{
+		"Brand": "Rockboard",
+		"Name": "S Connector",
+		"Width": 1.78,
+		"Height": 0.52,
+		"Image": "rockboard-s-connector.png"
 	},
 	{
 		"Brand": "Rockbox",
