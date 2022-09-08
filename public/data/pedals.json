@@ -1040,7 +1040,7 @@
 		"Name": "Bitoun",
 		"Width": 2.52,
 		"Height": 4.91,
-		"Image": "anasounds-bitounfuzz.png"
+		"Image": "anasounds-bitoun.png"
 	},
 	{
 		"Brand": "Anasounds",
@@ -1950,28 +1950,28 @@
 		"Name": "1/2 Gainer",
 		"Width": 3.7,
 		"Height": 5.7,
-		"Image": "barber-halfgainer.png"
+		"Image": "barber-half-gainer.png"
 	},
 	{
 		"Brand": "Barber",
 		"Name": "Burn Unit",
 		"Width": 3.7,
 		"Height": 5.7,
-		"Image": "barber-burnunit.png"
+		"Image": "barber-burn-unit.png"
 	},
 	{
 		"Brand": "Barber",
 		"Name": "Direct Drive",
 		"Width": 2.75,
 		"Height": 4.4375,
-		"Image": "barber-directdrive.png"
+		"Image": "barber-direct-drive.png"
 	},
 	{
 		"Brand": "Barber",
 		"Name": "Gain Changer",
 		"Width": 2.75,
 		"Height": 4.4375,
-		"Image": "barber-gainchanger.png"
+		"Image": "barber-gain-changer.png"
 	},
 	{
 		"Brand": "Barber",
@@ -5219,7 +5219,7 @@
 		"Name": "The Skitter (Seafoam)",
 		"Width": 3.7,
 		"Height": 4.81,
-		"Image": "champion-leccy-the-skitter-foamgreen.png"
+		"Image": "champion-leccy-the-skitter-foam-green.png"
 	},
 	{
 		"Brand": "Champion Leccy",
@@ -5723,14 +5723,14 @@
 		"Name": "WIDI Jack",
 		"Width": 1.339,
 		"Height": 1.496,
-		"Image": "cme-widijack.png"
+		"Image": "cme-widi-jack.png"
 	},
 	{
 		"Brand": "CME",
 		"Name": "WIDI Uhost",
 		"Width": 1.339,
 		"Height": 1.496,
-		"Image": "cme-widiuhost.png"
+		"Image": "cme-widi-uhost.png"
 	},
 	{
 		"Brand": "Coffee Shop Pedals",
@@ -5856,7 +5856,7 @@
 		"Name": "Loma Prieta",
 		"Width": 4.7,
 		"Height": 4,
-		"Image": "coppersound-lomaprieta.png"
+		"Image": "coppersound-loma-prieta.png"
 	},
 	{
 		"Brand": "Coppersound",
@@ -6080,21 +6080,21 @@
 		"Name": "Hotcake V2",
 		"Width": 2.76,
 		"Height": 4.49,
-		"Image": "crowther-hotcake.png"
+		"Image": "crowther-hotcake-v2.png"
 	},
 	{
 		"Brand": "Crowther",
 		"Name": "Double Hotcake",
 		"Width": 5.12,
 		"Height": 3.7,
-		"Image": "crowther-doublehotcake.png"
+		"Image": "crowther-double-hotcake.png"
 	},
 	{
 		"Brand": "Crowther",
 		"Name": "Prunes & Custard",
 		"Width": 4.06,
 		"Height": 4.72,
-		"Image": "crowther-prunesandcustard.png"
+		"Image": "crowther-prunes-custard.png"
 	},
 	{
 		"Brand": "Cusack Music",
@@ -6465,7 +6465,7 @@
 		"Name": "Diktator",
 		"Width": 4.7,
 		"Height": 3.5,
-		"Image": "dawner-prince-diktator-od.png"
+		"Image": "dawner-prince-diktator.png"
 	},
 	{
 		"Brand": "Dawner Prince",
@@ -13454,6 +13454,13 @@
 		"Image": "ironether-xerograph.png"
 	},
 	{
+		"Brand": "ISET",
+		"Name": "Sandwich Compressor",
+		"Width": 1.4,
+		"Height": 3.5,
+		"Image": "iset-sandwich-comp.png"
+	},
+	{
 		"Brand": "ISP Technologies",
 		"Name": "Decimator",
 		"Width": 2.875,
@@ -16014,6 +16021,13 @@
 		"Width": 2.91,
 		"Height": 4.72,
 		"Image": "korg-miku-stomp.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "OD-S",
+		"Width": 4.80315,
+		"Height": 3.77953,
+		"Image": "korg-od-s.png"
 	},
 	{
 		"Brand": "Korg",
@@ -26656,7 +26670,20 @@
 		"Height": 4.61138,
 		"Image": "tkog-mini-glitch.png"
 	},
-
+	{
+		"Brand": "The King of Gear",
+		"Name": "Oxford Drive V1",
+		"Width": 2.3622,
+		"Height": 4.52756,
+		"Image": "tkog-oxford-drive-v1.png"
+	},
+	{
+		"Brand": "The King of Gear",
+		"Name": "Oxford Drive V2",
+		"Width": 2.3622,
+		"Height": 4.52756,
+		"Image": "tkog-oxford-drive-v2.png"
+	},
 	{
 		"Brand": "The Pill",
 		"Name": "Stereo",
@@ -27013,6 +27040,13 @@
 		"Width": 2.87402,
 		"Height": 4.84252,
 		"Image": "tsakalis-room40.png"
+	},
+	{
+		"Brand": "Tube Works",
+		"Name": "BK Butler Real Tube",
+		"Width": 3.2,
+		"Height": 5,
+		"Image": "tubeworks-bk-butler-real-tube.png"
 	},
 	{
 		"Brand": "Twinote",
