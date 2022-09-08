@@ -1061,28 +1061,28 @@
 		"Name": "Ego Driver",
 		"Width": 2.56,
 		"Height": 5,
-		"Image": "anasounds-egodriver.png"
+		"Image": "anasounds-ego-driver.png"
 	},
 	{
 		"Brand": "Anasounds",
 		"Name": "Feed Me MK2",
 		"Width": 2.52,
 		"Height": 4.91,
-		"Image": "anasounds-feedme.png"
+		"Image": "anasounds-feed-me-mk2.png"
 	},
 	{
 		"Brand": "Anasounds",
 		"Name": "Feed Me MK3",
 		"Width": 2.52,
 		"Height": 4.91,
-		"Image": "anasounds-feedme-mk3.png"
+		"Image": "anasounds-feed-me-mk3.png"
 	},
 	{
 		"Brand": "Anasounds",
 		"Name": "Freq Up",
 		"Width": 2.52,
 		"Height": 4.91,
-		"Image": "anasounds-frequp.png"
+		"Image": "anasounds-freq-up.png"
 	},
 	{
 		"Brand": "Anasounds",
@@ -1103,14 +1103,14 @@
 		"Name": "Full Story (FX Teacher)",
 		"Width": 2.52,
 		"Height": 4.91,
-		"Image": "anasounds-fullstory-fxteacher.png"
+		"Image": "anasounds-full-story-teacher.png"
 	},
 	{
 		"Brand": "Anasounds",
 		"Name": "High Voltage",
 		"Width": 2.52,
 		"Height": 4.91,
-		"Image": "anasounds-highvoltage.png"
+		"Image": "anasounds-high-voltage.png"
 	},
 	{
 		"Brand": "Anasounds",
@@ -1131,14 +1131,14 @@
 		"Name": "Lazy Comp",
 		"Width": 2.52,
 		"Height": 4.91,
-		"Image": "anasounds-lazycomp.png"
+		"Image": "anasounds-lazy-comp.png"
 	},
 	{
 		"Brand": "Anasounds",
 		"Name": "Phase Lag",
 		"Width": 2.52,
 		"Height": 4.91,
-		"Image": "anasounds-phaselag.png"
+		"Image": "anasounds-phase-lag.png"
 	},
 	{
 		"Brand": "Anasounds",
@@ -6507,7 +6507,7 @@
 		"Name": "Echolation Station",
 		"Width": 5,
 		"Height": 5.75,
-		"Image": "deadbeat-echolation-station.png"
+		"Image": "deadbeat-echolation.png"
 	},
 	{
 		"Brand": "Deadbeat Sound",
@@ -7169,13 +7169,6 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "Ricochet",
-		"Width": 2.875,
-		"Height": 4.75,
-		"Image": "digitech-ricochet.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "SDRUM",
 		"Width": 3.29,
 		"Height": 5.4,
@@ -7242,7 +7235,7 @@
 		"Name": "Whammy Ricochet",
 		"Width": 2.96,
 		"Height": 4.75,
-		"Image": "digitech-whammy-ricochet.png"
+		"Image": "digitech-ricochet.png"
 	},
 	{
 		"Brand": "DigiTech",
