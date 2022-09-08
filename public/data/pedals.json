@@ -2174,14 +2174,14 @@
 		"Name": "Baby Pink Booster",
 		"Width": 2.68,
 		"Height": 4.4,
-		"Image": "bearfootfx-babypinkbooster.png"
+		"Image": "bearfootfx-baby-pink.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
-		"Name": "Blue Berry BOD",
+		"Name": "BlueBerry",
 		"Width": 2.68,
 		"Height": 4.4,
-		"Image": "bearfootfx-blueberrybod.png"
+		"Image": "bearfootfx-blueberry.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
@@ -2195,42 +2195,42 @@
 		"Name": "Burgundy BossHorn Fuzz",
 		"Width": 2.68,
 		"Height": 4.4,
-		"Image": "bearfootfx-burgundybosshornfuzz.png"
+		"Image": "bearfootfx-burgundy-bosshorn.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
 		"Name": "Candy Apple Fuzz",
 		"Width": 2.6,
 		"Height": 4.4,
-		"Image": "bearfootfx-candyapplefuzz.png"
+		"Image": "bearfootfx-candy-apple.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
 		"Name": "Dyna Red Dist.",
 		"Width": 2.68,
 		"Height": 4.4,
-		"Image": "bearfootfx-dynareddist.png"
+		"Image": "bearfootfx-dyna-red.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
 		"Name": "Emerald Green Distortion",
 		"Width": 2.68,
 		"Height": 4.4,
-		"Image": "bearfootfx-emeraldgreendistortion.png"
+		"Image": "bearfootfx-emerald-green-dist.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
 		"Name": "Emerald Green OD",
 		"Width": 2.68,
 		"Height": 4.4,
-		"Image": "bearfootfx-emeraldgreenod.png"
+		"Image": "bearfootfx-emerald-green-od.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
-		"Name": "Honey Bee OD",
+		"Name": "Honey Bee",
 		"Width": 2.68,
 		"Height": 4.4,
-		"Image": "bearfootfx-honeybeeod.png"
+		"Image": "bearfootfx-honey-bee.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
@@ -2251,14 +2251,14 @@
 		"Name": "Model G",
 		"Width": 2.71,
 		"Height": 4.4,
-		"Image": "bearfootfx-modelg.png"
+		"Image": "bearfootfx-model-g.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
 		"Name": "Model Hs",
 		"Width": 2.62,
 		"Height": 4.4,
-		"Image": "bearfootfx-modelhs.png"
+		"Image": "bearfootfx-model-hs.png"
 	},
 	{
 		"Brand": "Bearfoot Fx",
@@ -2671,7 +2671,7 @@
 		"Name": "Preamp (Black/Ocean Turquoise)",
 		"Width": 4.69,
 		"Height": 3.77,
-		"Image": "benson-preamp-blackoceanturquoise.png"
+		"Image": "benson-preamp-black-ocean-turquoise.png"
 	},
 	{
 		"Brand": "Benson",
@@ -2699,7 +2699,7 @@
 		"Name": "Preamp (Powder Blue)",
 		"Width": 4.69,
 		"Height": 3.77,
-		"Image": "benson-preamp-powderblue.png"
+		"Image": "benson-preamp-powder-blue.png"
 	},
 	{
 		"Brand": "Benson",
@@ -2804,7 +2804,7 @@
 		"Name": "Tube Driver",
 		"Width": 4.13,
 		"Height": 7.2,
-		"Image": "bkbutler-tubedriver.png"
+		"Image": "bkbutler-tube-driver.png"
 	},
 	{
 		"Brand": "Black Mass Electronics",
@@ -3217,7 +3217,7 @@
 		"Name": "Art Van",
 		"Width": 2.84,
 		"Height": 4.88,
-		"Image": "bondi-artvan.png"
+		"Image": "bondi-art-van.png"
 	},
 	{
 		"Brand": "Bondi Effects",
@@ -3231,35 +3231,35 @@
 		"Name": "Del Mar",
 		"Width": 2.86,
 		"Height": 4.8,
-		"Image": "bondi-delmar.png"
+		"Image": "bondi-del-mar.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Sick As",
 		"Width": 4.7,
 		"Height": 3.81,
-		"Image": "bondi-sickas.png"
+		"Image": "bondi-sick-as.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Sick As (Custom Black)",
 		"Width": 4.7,
 		"Height": 3.81,
-		"Image": "bondi-sickas-black.png"
+		"Image": "bondi-sick-as-black.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Sick As (Custom Blue)",
 		"Width": 4.7,
 		"Height": 3.81,
-		"Image": "bondi-sickas-blue.png"
+		"Image": "bondi-sick-as-blue.png"
 	},
 	{
 		"Brand": "Bondi Effects",
 		"Name": "Sick As MK3",
 		"Width": 4.7,
 		"Height": 3.9,
-		"Image": "bondi-sickas-mk3.png"
+		"Image": "bondi-sick-as-mk3.png"
 	},
 	{
 		"Brand": "Boomerang",
@@ -7638,14 +7638,14 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "Cry Baby 535Q Mult-Wah",
+		"Name": "Cry Baby 535Q Multi-Wah",
 		"Width": 4.75,
 		"Height": 10,
 		"Image": "dunlop-535q.png"
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "Cry Baby 535Q Mult-Wah (Chrome)",
+		"Name": "Cry Baby 535Q Multi-Wah (Chrome)",
 		"Width": 4.75,
 		"Height": 10,
 		"Image": "dunlop-535q-chrome.png"
@@ -14330,6 +14330,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Charlie Brown V4 Handpainted (You're a Good Man, Charlie Brown)",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-charliebrown-v4-hp-yagm.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Cheese Ball",
 		"Width": 2.93,
 		"Height": 5,
@@ -14488,6 +14495,27 @@
 		"Width": 2.93,
 		"Height": 4.98,
 		"Image": "jhs-morningglory-v4.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Morning Glory V4 (Pearl and Gold Edition)",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-morning-glory-v4-pearl-gold.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Morning Glory V4 Handpainted (Sakura Tree)",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-morning-glory-v4-hp-sakura.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Morning Glory V4 Handpainted (Tulip Gramophone)",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-morning-glory-v4-hp-tulip.png"
 	},
 	{
 		"Brand": "JHS",
@@ -19317,7 +19345,7 @@
 		"Name": "A/B Box",
 		"Width": 4.75,
 		"Height": 3.65,
-		"Image": "mxr-abbox.png"
+		"Image": "mxr-m196.png"
 	},
 	{
 		"Brand": "MXR",
@@ -19779,14 +19807,14 @@
 		"Name": "Phase 100",
 		"Width": 3.85,
 		"Height": 4.84,
-		"Image": "mxr-phase100.png"
+		"Image": "mxr-m107.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Phase 90",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-phase90.png"
+		"Image": "mxr-m101.png"
 	},
 	{
 		"Brand": "MXR",
@@ -19814,7 +19842,7 @@
 		"Name": "Poly Blue Octave",
 		"Width": 2.64,
 		"Height": 4.33,
-		"Image": "mxr-poly-blue-octave.png"
+		"Image": "mxr-m306.png"
 	},
 	{
 		"Brand": "MXR",
@@ -19968,7 +19996,7 @@
 		"Name": "Tremolo",
 		"Width": 2.64,
 		"Height": 4.33,
-		"Image": "mxr-tremolo.png"
+		"Image": "mxr-m305.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20066,7 +20094,7 @@
 		"Name": "Timmy",
 		"Width": 1.74,
 		"Height": 3.7,
-		"Image": "mxr-timmy.png"
+		"Image": "mxr-cspo27.png"
 	},
 	{
 		"Brand": "Mythos",
