@@ -11,7 +11,7 @@
 		"Name": "DRV (Alt Universe)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-altuni.png"
+		"Image": "1981-inventions-alt-uni.png"
 	},
 	{
 		"Brand": "1981 Inventions",
@@ -60,7 +60,7 @@
 		"Name": "DRV (Sky Blue Sky)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-skyblue.png"
+		"Image": "1981-inventions-sky-blue.png"
 	},
 	{
 		"Brand": "1981 Inventions",
@@ -802,7 +802,7 @@
 		"Name": "Tight Metal II",
 		"Width": 2.89,
 		"Height": 4.65,
-		"Image": "amptweaker-tightmetal-2.png"
+		"Image": "amptweaker-tight-metal-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
@@ -5485,14 +5485,14 @@
 		"Name": "Octavian",
 		"Width": 3.11,
 		"Height": 5.276,
-		"Image": "chicagoiron-octavia.png"
+		"Image": "chicagoiron-octavian.png"
 	},
 	{
 		"Brand": "Chicago Iron",
 		"Name": "Octavian Plus",
 		"Width": 3.11,
 		"Height": 5.276,
-		"Image": "chicagoiron-octavianplus.png"
+		"Image": "chicagoiron-octavian-plus.png"
 	},
 	{
 		"Brand": "Cioks",
@@ -5562,7 +5562,7 @@
 		"Name": "Schizo / Big John / AC Rider",
 		"Width": 5.11811,
 		"Height": 3.46457,
-		"Image": "cioks-schiz.png"
+		"Image": "cioks-schizo.png"
 	},
 	{
 		"Brand": "CKK Electronic",
@@ -7544,6 +7544,13 @@
 		"Width": 3.94,
 		"Height": 4.92,
 		"Image": "drolo-stammen-v4.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Bat Cold War V2",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "drunkbeaver-bcw-v2.png"
 	},
 	{
 		"Brand": "Drybell",
