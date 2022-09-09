@@ -3175,7 +3175,7 @@
 		"Name": "Ecstasy Red mini",
 		"Width": 3.85,
 		"Height": 5.25,
-		"Image": "bogner-ecstasyredmini.png"
+		"Image": "bogner-ecstasy-red-mini.png"
 	},
 	{
 		"Brand": "Bogner",
@@ -4715,7 +4715,7 @@
 		"Name": "Meteore (Cosmic Purple)",
 		"Width": 3.7,
 		"Height": 4.88,
-		"Image": "caroline-meteore-cosmicpurple.png"
+		"Image": "caroline-meteore-cosmic-purple.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -4729,7 +4729,7 @@
 		"Name": "Meteore (Rose Gold)",
 		"Width": 3.7,
 		"Height": 4.88,
-		"Image": "caroline-meteore-rosegold.png"
+		"Image": "caroline-meteore-rose-gold.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -6129,7 +6129,7 @@
 		"Name": "More Louder",
 		"Width": 1.98,
 		"Height": 3.67,
-		"Image": "cusack-morelouder.png"
+		"Image": "cusack-more-louder.png"
 	},
 	{
 		"Brand": "Cusack Music",
