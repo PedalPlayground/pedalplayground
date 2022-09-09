@@ -2853,14 +2853,14 @@
 		"Name": "The First Herald",
 		"Width": 3.7,
 		"Height": 4.89,
-		"Image": "blackmass-thefirstherald.png"
+		"Image": "blackmass-first-herald.png"
 	},
 	{
 		"Brand": "Black Mass Electronics",
 		"Name": "The First Herald V2",
 		"Width": 2.6,
 		"Height": 4.97,
-		"Image": "blackmass-thefirstherald-v2.png"
+		"Image": "blackmass-first-herald-v2.png"
 	},
 	{
 		"Brand": "Blackstar",
@@ -2930,14 +2930,14 @@
 		"Name": "Crystal Dagger",
 		"Width": 5.63,
 		"Height": 4.63,
-		"Image": "blackout-crystaldagger.png"
+		"Image": "blackout-crystal-dagger.png"
 	},
 	{
 		"Brand": "Blackout Effectors",
 		"Name": "Fix'D Fuzz Deluxe",
 		"Width": 3.7,
 		"Height": 4.75,
-		"Image": "blackout-fixdfuzz.png"
+		"Image": "blackout-fixd-fuzz.png"
 	},
 	{
 		"Brand": "Blackout Effectors",
@@ -2979,7 +2979,7 @@
 		"Name": "Mosfet Overdrive",
 		"Width": 4.37,
 		"Height": 2.57,
-		"Image": "blackstone-mosfetoverdrive.png"
+		"Image": "blackstone-mosfet-overdrive.png"
 	},
 	{
   		"Brand": "BLAMMO! Electronics",
@@ -3112,7 +3112,7 @@
 		"Name": "Zap Master",
 		"Width": 2.6,
 		"Height": 5,
-		"Image": "blammo-zapmaster.png"
+		"Image": "blammo-zap-master.png"
 	},
 	{
   		"Brand": "BLAMMO! Electronics",
@@ -3161,7 +3161,7 @@
 		"Name": "Ecstasy Blue mini",
 		"Width": 2.86,
 		"Height": 4,
-		"Image": "bogner-ecstasybluemini.png"
+		"Image": "bogner-ecstasy-blue-mini.png"
 	},
 	{
 		"Brand": "Bogner",
@@ -16248,6 +16248,13 @@
 	},
 	{
 		"Brand": "Line 6",
+		"Name": "DM4 Distortion",
+		"Width": 10,
+		"Height": 6,
+		"Image": "line6-dm4.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "Echo Park",
 		"Width": 3.37,
 		"Height": 5.63,
@@ -16329,6 +16336,13 @@
 		"Width": 21,
 		"Height": 11,
 		"Image": "line6-helix-lt.png"
+	},
+	{
+		"Brand": "Line 6",
+		"Name": "JM4 Looper",
+		"Width": 10,
+		"Height": 6,
+		"Image": "line6-jm4.png"
 	},
 	{
 		"Brand": "Line 6",
@@ -29609,6 +29623,13 @@
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-lofijunky.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Instant Lo-Fi Junky (Little Box Exclusive)",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-lofi-junky-little-box.png"
 	},
 	{
 		"Brand": "Zvex",
