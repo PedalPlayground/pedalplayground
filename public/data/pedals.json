@@ -4792,7 +4792,7 @@
 		"Name": "Wave Cannon",
 		"Width": 3.7,
 		"Height": 4.88,
-		"Image": "caroline-wavecannon.png"
+		"Image": "caroline-wave-cannon.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -4834,21 +4834,21 @@
 		"Name": "Belle Epoch Deluxe",
 		"Width": 4.7,
 		"Height": 3.82,
-		"Image": "catalinbread-belleepochdlx.png"
+		"Image": "catalinbread-belle-epoch-dlx.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe (Black Edition)",
 		"Width": 4.7,
 		"Height": 3.82,
-		"Image": "catalinbread-belleepochdlx-black.png"
+		"Image": "catalinbread-belle-epoch-dlx-black.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Bicycle Delay",
 		"Width": 2.6,
 		"Height": 4.33,
-		"Image": "catalinbread-bicycledelay.png"
+		"Image": "catalinbread-bicycle-delay.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -4904,14 +4904,14 @@
 		"Name": "Dirty Little Secret",
 		"Width": 2.6,
 		"Height": 4.33,
-		"Image": "catalinbread-dirtylittlesecret.png"
+		"Image": "catalinbread-dirty-little-secret.png"
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Dirty Little Secret Red",
+		"Name": "Dirty Little Secret (Red)",
 		"Width": 2.6,
 		"Height": 4.33,
-		"Image": "catalinbread-dirtylittlesecret-red.png"
+		"Image": "catalinbread-dirty-little-secret-red.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -4995,14 +4995,14 @@
 		"Name": "Karma Suture (Ge)",
 		"Width": 2.6,
 		"Height": 4.33,
-		"Image": "catalinbread-gekarma.png"
+		"Image": "catalinbread-karma-ge.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Karma Suture (Si)",
 		"Width": 2.6,
 		"Height": 4.33,
-		"Image": "catalinbread-sikarma.png"
+		"Image": "catalinbread-karma-si.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -5016,7 +5016,7 @@
 		"Name": "Many Worlds",
 		"Width": 2.6,
 		"Height": 4.33,
-		"Image": "catalinbread-manyworlds.png"
+		"Image": "catalinbread-many-worlds.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -5128,7 +5128,7 @@
 		"Name": "Zero Point",
 		"Width": 2.6,
 		"Height": 4.33,
-		"Image": "catalinbread-zeropoint.png"
+		"Image": "catalinbread-zero-point.png"
 	},
 	{
 		"Brand": "Caveman",
@@ -5338,7 +5338,7 @@
 		"Name": "Dark World",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-darkworld.png"
+		"Image": "chasebliss-dark-world.png"
 	},
 	{
 		"Brand": "Chase Bliss",
@@ -5408,7 +5408,7 @@
 		"Name": "Preamp MKII",
 		"Width": 5.75,
 		"Height": 6.5,
-		"Image": "chasebliss-automatone-pre.png"
+		"Image": "chasebliss-preamp-mkii.png"
 	},
 	{
 		"Brand": "Chase Bliss",
