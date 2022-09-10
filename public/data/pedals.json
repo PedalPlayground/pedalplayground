@@ -5436,35 +5436,35 @@
 		"Name": "Tonal Recall",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-tonalrecall.png"
+		"Image": "chasebliss-tonal-recall.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Tonal Recall RKM",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-tonalrecall-rkm.png"
+		"Image": "chasebliss-tonal-recall-rkm.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Warped Vinyl",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-warpedvinyl.png"
+		"Image": "chasebliss-warped-vinyl.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Warped Vinyl HiFi",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-warpedvinyl-hifi.png"
+		"Image": "chasebliss-warped-vinyl-hifi.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Warped Vinyl MKII",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-warpedvinyl-mk2.png"
+		"Image": "chasebliss-warped-vinyl-mk2.png"
 	},
 	{
 		"Brand": "Chase Bliss",
@@ -7403,7 +7403,7 @@
 		"Name": "Jet Convolution",
 		"Width": 1.62,
 		"Height": 3.74,
-		"Image": "donner-jet-conv.png"
+		"Image": "donner-jet-convolution.png"
 	},
     {
 		"Brand": "Donner",
@@ -8033,28 +8033,28 @@
 		"Name": "Astral Destiny",
 		"Width": 3.77,
 		"Height": 4.77,
-		"Image": "eqd-astraldestiny.png"
+		"Image": "earthquaker-astral-destiny.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Avalanche Run",
 		"Width": 3.82,
 		"Height": 4.94,
-		"Image": "eqd-avalancherun.png"
+		"Image": "earthquaker-avalanche-run.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Avalanche Run V2",
 		"Width": 4.28,
 		"Height": 4.8,
-		"Image": "eqd-avalancherunv2.png"
+		"Image": "earthquaker-avalanche-run-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Avalanche Run V2 (Purple Sparkle)",
 		"Width": 4.28,
 		"Height": 4.8,
-		"Image": "eqd-avalancherunv2-purple.png"
+		"Image": "earthquaker-avalanche-run-v2-purple.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8075,7 +8075,7 @@
 		"Name": "Black Ash",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "eqd-blackash.png"
+		"Image": "earthquaker-black-ash.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8145,14 +8145,14 @@
 		"Name": "Dispatch Master",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquakerdevices-dispatchmaster.png"
+		"Image": "earthquaker-dispatchmaster.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Dispatch Master (Black)",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquakerdevices-dispatchmaster-black.png"
+		"Image": "earthquaker-dispatchmaster-black.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8166,14 +8166,14 @@
 		"Name": "Dunes",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "eqd-dunes.png"
+		"Image": "earthquaker-dunes.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Erupter",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "eqd-erupter.png"
+		"Image": "earthquaker-erupter.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8187,7 +8187,7 @@
 		"Name": "Ghost Echo",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquakerdevices-ghost-echo.png"
+		"Image": "earthquaker-ghost-echo.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8348,7 +8348,7 @@
 		"Name": "Pyramids",
 		"Width": 4.28,
 		"Height": 4.8,
-		"Image": "earthquaker-devices-pyramids.png"
+		"Image": "earthquaker-pyramids.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8453,7 +8453,7 @@
 		"Name": "Swiss Things",
 		"Width": 5.9,
 		"Height": 4.875,
-		"Image": "eqd-swissthings.png"
+		"Image": "earthquaker-swiss-things.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8523,7 +8523,7 @@
 		"Name": "Westwood",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "eqd-westwood.png"
+		"Image": "earthquaker-westwood.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -11460,6 +11460,13 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Anonymous Flange",
+		"Width": 7.87402,
+		"Height": 5,
+		"Image": "ftelettronica-anonymous-flange.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Animato",
 		"Width": 2.79528,
 		"Height": 4.6063,
@@ -11467,10 +11474,24 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Atrocity Exhibition Distortion",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-atrocity-exhibition.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Bass Fuckin’ Drive",
 		"Width": 5.07874,
 		"Height": 3.89764,
 		"Image": "ftelettronica-bass-fuckin-drive.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Black Hole Analog Octaver",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-black-hole.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -11488,10 +11509,45 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Catastrophizer Distortion",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-catastrophizer.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Cotton Candy Digital Reverb",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-cotton-candy.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Das Model",
+		"Width": 6.1811,
+		"Height": 5,
+		"Image": "ftelettronica-das-model.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Dubstep Siren",
 		"Width": 4.96063,
 		"Height": 3.93701,
 		"Image": "ftelettronica-dubstep.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Dystopian Fuzz",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-dystopian.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Echo Maniac Kid",
+		"Width": 5.94488,
+		"Height": 5,
+		"Image": "ftelettronica-echo-maniac-kid.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -14320,6 +14376,13 @@
 		"Width": 3.7,
 		"Height": 1.78,
 		"Image": "jhs-buffered-splitter.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Calhoun V2",
+		"Width": 4,
+		"Height": 4.85,
+		"Image": "jhs-calhoun-v2.png"
 	},
 	{
 		"Brand": "JHS",
