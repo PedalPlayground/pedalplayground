@@ -4834,14 +4834,14 @@
 		"Name": "Belle Epoch Deluxe",
 		"Width": 4.7,
 		"Height": 3.82,
-		"Image": "catalinbread-belle-epoch-dlx.png"
+		"Image": "catalinbread-belle-epoch-deluxe.png"
 	},
 	{
 		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe (Black Edition)",
 		"Width": 4.7,
 		"Height": 3.82,
-		"Image": "catalinbread-belle-epoch-dlx-black.png"
+		"Image": "catalinbread-belle-epoch-deluxe-black.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -5688,7 +5688,7 @@
 		"Name": "Deluxe Signa Comp",
 		"Width": 2.96,
 		"Height": 4.78,
-		"Image": "cmatmods-dlxsignacomp.png"
+		"Image": "cmatmods-deluxe-signa-comp.png"
 	},
 	{
 		"Brand": "CMAT Mods",
@@ -5709,7 +5709,7 @@
 		"Name": "Super Signa Drive",
 		"Width": 4.63,
 		"Height": 3.82,
-		"Image": "cmatmods-supersignadrive.png"
+		"Image": "cmatmods-super-signa-drive.png"
 	},
 	{
 		"Brand": "CMAT Mods",
@@ -5772,7 +5772,7 @@
 		"Name": "Power Boost",
 		"Width": 3.8189,
 		"Height": 8.66142,
-		"Image": "colorsound-powerboost.png"
+		"Image": "colorsound-power-boost.png"
 	},
 	{
 		"Brand": "Colorsound",
@@ -5807,21 +5807,21 @@
 		"Name": "Generation Loss",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "cooper-genloss.png"
+		"Image": "cooper-generation-loss.png"
 	},
 	{
 		"Brand": "Cooper FX",
 		"Name": "Generation Loss V2",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "cooper-genloss2.png"
+		"Image": "cooper-generation-loss-v2.png"
 	},
 	{
 		"Brand": "Cooper FX",
 		"Name": "Moment Machine",
 		"Width": 5.7,
 		"Height": 4.84,
-		"Image": "cooper-momentmachine.png"
+		"Image": "cooper-moment-machine.png"
 	},
 	{
 		"Brand": "Cooper FX",
@@ -6097,8 +6097,8 @@
 		"Image": "crowther-prunes-custard.png"
 	},
 	{
-    	"Brand": "Cry Baby",
-    	"Name": "Bass Wah",
+		"Brand": "Cry Baby",
+		"Name": "Bass Wah",
 		"Width": 4.07,
 		"Height": 10,
 		"Image": "cry-baby-105q.png"
@@ -6109,6 +6109,13 @@
 		"Width": 4,
 		"Height": 10,
 		"Image": "cry-baby-bg95.png"
+	},
+	{
+		"Brand": "Cry Baby",
+		"Name": "CAE Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "cry-baby-mc404.png"
 	},
 	{
 		"Brand": "Cry Baby",
@@ -6139,15 +6146,15 @@
 		"Image": "cry-baby-105q.png"
 	},
 	{
-    	"Brand": "Cry Baby",
-    	"Name": "Mini 535Q Wah",
+		"Brand": "Cry Baby",
+		"Name": "Mini 535Q Wah",
 		"Width": 3.13,
 		"Height": 5.24,
 		"Image": "cry-baby-cbm535q.png"
 	},
 	{
 		"Brand": "Cry Baby",
-    	"Name": "Mini Bass Wah",
+		"Name": "Mini Bass Wah",
 		"Width": 3.08,
 		"Height": 5.25,
 		"Image": "cry-baby-cbm105q.png"
@@ -6234,7 +6241,7 @@
 		"Name": "Resound (Night Sky)",
 		"Width": 4.7,
 		"Height": 3.84,
-		"Image": "cusack-resound-nightsky.png"
+		"Image": "cusack-resound-night-sky.png"
 	},
 	{
 		"Brand": "Cusack Music",
@@ -6304,21 +6311,21 @@
 		"Name": "Tap-A-Delay",
 		"Width": 4.7,
 		"Height": 4.01,
-		"Image": "cusack-tapadelay.png"
+		"Image": "cusack-tap-a-delay.png"
 	},
 	{
 		"Brand": "Cusack Music",
 		"Name": "Tap-A-Delay Deluxe",
 		"Width": 4.7,
 		"Height": 4.01,
-		"Image": "cusack-tapadelay-deluxe.png"
+		"Image": "cusack-tap-a-delay-deluxe.png"
 	},
 	{
 		"Brand": "Cusack Music",
 		"Name": "Tap-A-Whirl",
 		"Width": 4.7,
 		"Height": 4.01,
-		"Image": "cusack-tapawhirl.png"
+		"Image": "cusack-tap-a-whirl.png"
 	},
 	{
 		"Brand": "Cusack Music",
@@ -6416,7 +6423,7 @@
 		"Name": "Cool Cat Tremolo",
 		"Width": 3.5,
 		"Height": 4.75,
-		"Image": "danelectro-coolcattremolo.png"
+		"Image": "danelectro-cool-cat.png"
 	},
 	{
 		"Brand": "Danelectro",
@@ -11554,7 +11561,35 @@
 		"Name": "Envelope Filter",
 		"Width": 2.79528,
 		"Height": 4.6063,
-		"Image": "ftelettronica-env-filter.png"
+		"Image": "ftelettronica-envelope-filter.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Envelope Follower/Triggered Filter",
+		"Width": 7.87402,
+		"Height": 5.03937,
+		"Image": "ftelettronica-envelope-follower.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "EvenHarmonicsEmphasizer",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-even-harmonics.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Fet Amp",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-fet-amp.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Heisenberg Fuzz Meth",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-heisenberg.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -11562,6 +11597,20 @@
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-helvet-motorsag-ii.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Hypnotizer",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-hypnotizer.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Hypnotizer II",
+		"Width": 4.80315,
+		"Height": 5.51181,
+		"Image": "ftelettronica-hypnotizer-2.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -11576,6 +11625,13 @@
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-inner-peace.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Instrument Voicing Preamplifier",
+		"Width": 7.87402,
+		"Height": 5,
+		"Image": "ftelettronica-instrument-voicing.png"
 	},
 	{
 		"Brand": "FTelettronica",
