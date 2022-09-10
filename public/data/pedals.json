@@ -5653,14 +5653,14 @@
 		"Name": "Analog Chorus",
 		"Width": 2.94,
 		"Height": 4.78,
-		"Image": "cmatmods-analogchorus.png"
+		"Image": "cmatmods-analog-chorus.png"
 	},
 	{
 		"Brand": "CMAT Mods",
 		"Name": "Analog Phaser",
 		"Width": 2.98,
 		"Height": 4.78,
-		"Image": "cmatmods-analogphaser.png"
+		"Image": "cmatmods-analog-phaser.png"
 	},
 	{
 		"Brand": "CMAT Mods",
@@ -5702,7 +5702,7 @@
 		"Name": "Signa Drive",
 		"Width": 2.97,
 		"Height": 4.78,
-		"Image": "cmatmods-signadrive.png"
+		"Image": "cmatmods-signa-drive.png"
 	},
 	{
 		"Brand": "CMAT Mods",
@@ -6095,6 +6095,97 @@
 		"Width": 4.06,
 		"Height": 4.72,
 		"Image": "crowther-prunes-custard.png"
+	},
+	{
+    	"Brand": "Cry Baby",
+    	"Name": "Bass Wah",
+		"Width": 4.07,
+		"Height": 10,
+		"Image": "cry-baby-105q.png"
+	},
+	{
+		"Brand": "Cry Baby",
+		"Name": "Buddy Guy Signature",
+		"Width": 4,
+		"Height": 10,
+		"Image": "cry-baby-bg95.png"
+	},
+	{
+		"Brand": "Cry Baby",
+	 	"Name": "Jerry Cantrell Rainier Fog Wah",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "cry-baby-jc95b.png"
+ 	},
+	{
+		"Brand": "Cry Baby",
+	 	"Name": "Joe Bonamassa Signature Wah",
+	 	"Width": 4,
+	 	"Height": 10,
+	 	"Image": "cry-baby-jb95.png"
+ 	},
+	{
+		"Brand": "Cry Baby",
+		"Name": "Junior Wah",
+		"Width": 4.00,
+		"Height": 8.00,
+		"Image": "cry-baby-cbj95.png"
+	},
+	{
+		"Brand": "Cry Baby",
+		"Name": "Kirk Hammett Wah",
+		"Width": 3.858,
+		"Height": 10,
+		"Image": "cry-baby-105q.png"
+	},
+	{
+    	"Brand": "Cry Baby",
+    	"Name": "Mini 535Q Wah",
+		"Width": 3.13,
+		"Height": 5.24,
+		"Image": "cry-baby-cbm535q.png"
+	},
+	{
+		"Brand": "Cry Baby",
+    	"Name": "Mini Bass Wah",
+		"Width": 3.08,
+		"Height": 5.25,
+		"Image": "cry-baby-cbm105q.png"
+	},
+	{
+		"Brand": "Cry Baby",
+		"Name": "Mini Wah",
+		"Width": 3,
+		"Height": 5.25,
+		"Image": "cry-baby-cbm95.png"
+	},
+	{
+		"Brand": "Cry Baby",
+		"Name": "Multi-Wah",
+		"Width": 4.75,
+		"Height": 10,
+		"Image": "cry-baby-535q.png"
+	},
+	{
+		"Brand": "Cry Baby",
+		"Name": "Multi-Wah (Chrome)",
+		"Width": 4.75,
+		"Height": 10,
+		"Image": "cry-baby-535q-chrome.png"
+	},
+	{
+		"Brand": "Cry Baby",
+		"Name": "Q Zone Fixed Wah",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "cry-baby-qz1.png"
+	},
+	{
+		"Brand": "Cry Baby",
+		"Name": "Standard Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "cry-baby-gcb95.png"
 	},
 	{
 		"Brand": "Cusack Music",
@@ -7630,95 +7721,11 @@
 		"Image": "dsmnoisemaker-omnicabsim.png"
 	},
 	{
-    	"Brand": "Dunlop",
-    	"Name": "Cry Baby 105Q Bass Wah",
-		"Width": 4.07,
-		"Height": 10,
-		"Image": "dunlop-105q.png"
-	},
-	{
 		"Brand": "Dunlop",
-		"Name": "Cry Baby 535Q Multi-Wah",
-		"Width": 4.75,
-		"Height": 10,
-		"Image": "dunlop-535q.png"
-	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Cry Baby 535Q Multi-Wah (Chrome)",
-		"Width": 4.75,
-		"Height": 10,
-		"Image": "dunlop-535q-chrome.png"
-	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Cry Baby BG95 Buddy Guy Signature",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-bg95.png"
-	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Cry Baby CBJ95 Junior Wah",
-		"Width": 4.00,
-		"Height": 8.00,
-		"Image": "dunlop-crybaby-jr.png"
-	},
-	{
-   		"Brand": "Dunlop",
-    	"Name": "Cry Baby CBM105Q Mini Bass Wah",
-		"Width": 3.08,
-		"Height": 5.25,
-		"Image": "dunlop-cbm105q.png"
-	},
-	{
-    	"Brand": "Dunlop",
-    	"Name": "Cry Baby CBM535Q Mini Wah",
-		"Width": 3.13,
-		"Height": 5.24,
-		"Image": "dunlop-mini-535q.png"
-	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Cry Baby CBM95 Mini Wah",
-		"Width": 3,
-		"Height": 5.25,
-		"Image": "dunlop-crybabymini.png"
-	},
-	{
-   		"Brand": "Dunlop",
-   		"Name": "Cry Baby GCB95 Standard Wah",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-wah.png"
-	},
-	{
-		"Brand": "Dunlop",
-	 	"Name": "Cry Baby JB95 Joe Bonamassa Signature Wah",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "dunlop-jb95.png"
- 	},
-	{
-		"Brand": "Dunlop",
-	 	"Name": "Cry Baby JC95 Jerry Cantrell Wah",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "dunlop-jerry-cantrell.png"
- 	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Cry Baby KH95 Kirk Hammett Wah",
-		"Width": 3.858,
-		"Height": 10,
-		"Image": "dunlop-kh95.png"
-	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Cry Baby Q Zone Fixed Wah",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-qz1.png"
+		"Name": "Band of Gypsys Fuzz Face",
+		"Width": 3.5,
+		"Height": 3.5,
+		"Image": "dunlop-ffm6.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -7746,56 +7753,49 @@
 		"Name": "Echoplex Delay",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "dunlop-echoplex-delay.png"
+		"Image": "dunlop-ep103.png"
 	},
 	{
 		"Brand": "Dunlop",
 		"Name": "Echoplex Preamp",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "dunlop-echoplex-preamp.png"
+		"Image": "dunlop-ep101.png"
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "Eric Johnson Fuzz Face",
+		"Name": "Eric Johnson Signature Fuzz Face",
 		"Width": 7.0,
 		"Height": 7.0,
-		"Image": "dunlop-fuzzface-eric-johnson.png"
+		"Image": "dunlop-ejf1.png"
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "FFM6 Band of Gypsys Fuzz Face",
-		"Width": 3.5,
-		"Height": 3.58,
-		"Image": "dunlop-ffm6.png"
-	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Fuzz Face Classic Germanium",
+		"Name": "Fuzz Face Distortion",
 		"Width": 7.0,
 		"Height": 7.0,
-		"Image": "dunlop-fuzzface-germanium.png"
+		"Image": "dunlop-jdf2.png"
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "Fuzz Face Germanium Mini",
+		"Name": "Germanium Fuzz Face Mini",
 		"Width": 3.5,
 		"Height": 3.5,
-		"Image": "dunlop-fuzzface-germanium-mini.png"
+		"Image": "dunlop-ffm2.png"
 	},
-  {
+  	{
 		"Brand": "Dunlop",
 		"Name": "Jimi Hendrix Fuzz Face",
 		"Width": 7.0,
 		"Height": 7.0,
-		"Image": "dunlop-fuzzface-jimi-hendrix.png"
+		"Image": "dunlop-jhf1.png"
 	},
 	{
 		"Brand": "Dunlop",
 		"Name": "Jimi Hendrix Fuzz Face Mini",
 		"Width": 3.5,
 		"Height": 3.5,
-		"Image": "dunlop-fuzzface-jimi-hendrix-mini.png"
+		"Image": "dunlop-ffm3.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -7830,7 +7830,7 @@
 		"Name": "Silicon Fuzz Face Mini",
 		"Width": 3.5,
 		"Height": 3.5,
-		"Image": "dunlop-fuzzface-silicon-mini.png"
+		"Image": "dunlop-ffm1.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -28719,21 +28719,21 @@
 		"Name": "Aqua Puss mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
-		"Image": "wayhuge-aqua=puss-mk3.png"
+		"Image": "wayhuge-wm71.png"
 	},
 	{
 		"Brand": "Way Huge",
 		"Name": "Atreides",
 		"Width": 3.26,
 		"Height": 5,
-		"Image": "wayhuge-atreides.png"
+		"Image": "wayhuge-whe900.png"
 	},
 	{
 		"Brand": "Way Huge",
 		"Name": "Blue Hippo mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
-		"Image": "wayhuge-blue-hippo-mk3.png"
+		"Image": "wayhuge-wm61.png"
 	},
 	{
 		"Brand": "Way Huge",
@@ -28754,7 +28754,7 @@
 		"Name": "Conspiracy Theory (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
-		"Image": "wayhuge-conspiracy-theory.png"
+		"Image": "wayhuge-wm20.png"
 	},
 	{
 		"Brand": "Way Huge",
@@ -28782,14 +28782,14 @@
 		"Name": "Green Rhino mkIV",
 		"Width": 3.26,
 		"Height": 5,
-		"Image": "wayhuge-greenrhino-mkiv.png"
+		"Image": "wayhuge-whe207.png"
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "Green Rhino mkV (Smalls)",
+		"Name": "Green Rhino MkV (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
-		"Image": "wayhuge-greenrhino-mkv.png"
+		"Image": "wayhuge-wm22.png"
 	},
 	{
 		"Brand": "Way Huge",
@@ -28831,7 +28831,7 @@
 		"Name": "Pork & Pickle (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
-		"Image": "wayhuge-pork-pickle-small.png"
+		"Image": "wayhuge-wm91.png"
 	},
 	{
 		"Brand": "Way Huge",
@@ -28859,7 +28859,7 @@
 		"Name": "Red Llama mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
-		"Image": "wayhuge-redllama-mk3.png"
+		"Image": "wayhuge-wm23.png"
 	},
 	{
 		"Brand": "Way Huge",
@@ -28891,24 +28891,24 @@
 	},
 	{
 		"Brand": "Way Huge",
-		"Name": "STO (Smalls)",
+		"Name": "STO",
 		"Width": 2.5,
 		"Height": 4.37,
-		"Image": "wayhuge-sto.png"
+		"Image": "wayhuge-wm25.png"
 	},
 	{
 		"Brand": "Way Huge",
 		"Name": "Supa-Lead mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
-		"Image": "wayhuge-supa-lead-mk3.png"
+		"Image": "wayhuge-wm31.png"
 	},
 	{
 		"Brand": "Way Huge",
 		"Name": "Supa Puss",
 		"Width": 4.4,
 		"Height": 5,
-		"Image": "wayhuge-supapuss.png"
+		"Image": "wayhuge-whe707.png"
 	},
 	{
 		"Brand": "Way Huge",
@@ -28922,14 +28922,14 @@
 		"Name": "Swollen Pickle mkIIs",
 		"Width": 3.26,
 		"Height": 5,
-		"Image": "wayhuge-swollenpickle-mk2s.png"
+		"Image": "wayhuge-whe401s.png"
 	},
 	{
 		"Brand": "Way Huge",
 		"Name": "Swollen Pickle mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
-		"Image": "wayhuge-swollenpickle-mk3.png"
+		"Image": "wayhuge-wm41.png"
 	},
 	{
 		"Brand": "Weehbo",
