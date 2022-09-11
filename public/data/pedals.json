@@ -2630,14 +2630,14 @@
 		"Width": 8.66,
 		"Height": 7.42,
 		"Image": "behringer-vm1.png"
-  },
+  	},
 	{
 		"Brand": "Behringer",
 		"Name": "VP1 Vintage Phaser",
 		"Width": 3.39,
 		"Height": 5.45,
 		"Image": "behringer-vp1.png"
-  },
+  	},
 	{
 		"Brand": "Behringer",
 		"Name": "VT999 Vintage Tube Monster",
@@ -6353,7 +6353,7 @@
 		"Name": "Ethos Clean 2",
 		"Width": 4.99,
 		"Height": 3.75,
-		"Image": "customtones-ethosclean2.png"
+		"Image": "customtones-ethos-clean-2.png"
 	},
 	{
 		"Brand": "Custom Tones",
@@ -6388,21 +6388,21 @@
 		"Name": "Austin Pride Fuzz",
 		"Width": 2.6,
 		"Height": 4.89,
-		"Image": "dandrive-austinpride.png"
+		"Image": "dandrive-austin-pride.png"
 	},
 	{
 		"Brand": "DanDrive",
 		"Name": "Secret Machine Fuzz",
 		"Width": 2.6,
 		"Height": 4.89,
-		"Image": "dandrive-secretmachine.png"
+		"Image": "dandrive-secret-machine.png"
 	},
 	{
 		"Brand": "DanDrive",
 		"Name": "Secret Weapon Fuzz",
 		"Width": 2.6,
 		"Height": 4.89,
-		"Image": "dandrive-secretweapon.png"
+		"Image": "dandrive-secret-weapon.png"
 	},
 	{
 		"Brand": "DanDrive",
@@ -6689,21 +6689,21 @@
 		"Name": "Echo Dream 2",
 		"Width": 4.72,
 		"Height": 5.87,
-		"Image": "deathbyaudio-echodream2.png"
+		"Image": "deathbyaudio-echo-dream-2.png"
 	},
 	{
 		"Brand": "Death By Audio",
 		"Name": "Evil Filter",
 		"Width": 4.72,
 		"Height": 7.75,
-		"Image": "deathbyaudio-evilfilter.png"
+		"Image": "deathbyaudio-evil-filter.png"
 	},
 	{
 		"Brand": "Death By Audio",
 		"Name": "Fuzz War",
 		"Width": 4.72,
 		"Height": 5.87,
-		"Image": "deathbyaudio-fuzzwar.png"
+		"Image": "deathbyaudio-fuzz-war.png"
 	},
 	{
 		"Brand": "Death By Audio",
@@ -6731,21 +6731,21 @@
 		"Name": "Interstellar Overdrive",
 		"Width": 4.05,
 		"Height": 4.75,
-		"Image": "deathbyaudio-interstellaroverdrive.png"
+		"Image": "deathbyaudio-interstellar-overdrive.png"
 	},
 	{
 		"Brand": "Death By Audio",
 		"Name": "Interstellar Overdrive Deluxe",
 		"Width": 5.71,
 		"Height": 4.89,
-		"Image": "deathbyaudio-interstellaroverdrive-deluxe.png"
+		"Image": "deathbyaudio-interstellar-overdrive-deluxe.png"
 	},
 	{
 		"Brand": "Death By Audio",
 		"Name": "Micro Dream Delay",
 		"Width": 2.61,
 		"Height": 4.95,
-		"Image": "deathbyaudio-microdream.png"
+		"Image": "deathbyaudio-micro-dream.png"
 	},
 	{
 		"Brand": "Death By Audio",
@@ -6759,7 +6759,7 @@
 		"Name": "Reverberation Machine",
 		"Width": 3.67,
 		"Height": 4.86,
-		"Image": "deathbyaudio-reverberationmachine.png"
+		"Image": "deathbyaudio-reverberation-machine.png"
 	},
 	{
 		"Brand": "Death By Audio",
@@ -6801,7 +6801,7 @@
 		"Name": "Supersonic Fuzz Gun",
 		"Width": 4.72,
 		"Height": 3.84,
-		"Image": "deathbyaudio-fuzzgun.png"
+		"Image": "deathbyaudio-fuzz-gun.png"
 	},
 	{
 		"Brand": "Death By Audio",
@@ -6815,7 +6815,7 @@
 		"Name": "Waveform Destroyer",
 		"Width": 4.72,
 		"Height": 5.87,
-		"Image": "deathbyaudio-waveformdestroyer.png"
+		"Image": "deathbyaudio-waveform-destroyer.png"
 	},
 	{
 		"Brand": "Decibelics",
@@ -6927,7 +6927,7 @@
 		"Name": "Compressor JR",
 		"Width": 2.44,
 		"Height": 4.63,
-		"Image": "diamond-compressorjr.png"
+		"Image": "diamond-compressor-jr.png"
 	},
 	{
 		"Brand": "Diamond",
@@ -6983,7 +6983,7 @@
 		"Name": "Memory Lane Jr",
 		"Width": 5.01,
 		"Height": 3.82,
-		"Image": "diamond-memorylanejr.png"
+		"Image": "diamond-memory-lane-jr.png"
 	},
 	{
 		"Brand": "Diamond",
@@ -7046,7 +7046,7 @@
 		"Name": "Bad Monkey",
 		"Width": 3,
 		"Height": 4.865,
-		"Image": "digitech-badmonkey.png"
+		"Image": "digitech-bad-monkey.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -7067,7 +7067,7 @@
 		"Name": "Death Metal",
 		"Width": 3.12,
 		"Height": 4.865,
-		"Image": "digitech-deathmetal.png"
+		"Image": "digitech-death-metal.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -7151,7 +7151,7 @@
 		"Name": "DOD Looking Glass",
 		"Width": 3.05,
 		"Height": 4.88,
-		"Image": "digitech-lookingglass.png"
+		"Image": "digitech-looking-glass.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -7165,7 +7165,7 @@
 		"Name": "DOD Mini Expression",
 		"Width": 3,
 		"Height": 5,
-		"Image": "dod-miniexpression.png"
+		"Image": "dod-mini-expression.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -7221,14 +7221,14 @@
 		"Name": "Jamman Express",
 		"Width": 2.75,
 		"Height": 4.75,
-		"Image": "digitech-jammanexpress.png"
+		"Image": "digitech-jamman-express.png"
 	},
 	{
 		"Brand": "DigiTech",
 		"Name": "Jamman Solo XT",
 		"Width": 3,
 		"Height": 4.865,
-		"Image": "digitech-jammansolo.png"
+		"Image": "digitech-jamman-solo.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -7312,7 +7312,7 @@
 		"Name": "Trio+ Looper",
 		"Width": 4.25,
 		"Height": 5.4,
-		"Image": "digitech-trioplus.png"
+		"Image": "digitech-trio-plus.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -9965,28 +9965,28 @@
 		"Name": "Em-drive",
 		"Width": 2.56,
 		"Height": 4.33,
-		"Image": "emerson-emdrive.png"
+		"Image": "emerson-em-drive.png"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "Em-drive Mach 2",
 		"Width": 2.6,
 		"Height": 5.04,
-		"Image": "emerson-emdrive-mach2.png"
+		"Image": "emerson-em-drive-mach-2.png"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "Em-drive Mach 2 (Origin Edition)",
 		"Width": 2.6,
 		"Height": 5.04,
-		"Image": "emerson-emdrive-mach2-origin.png"
+		"Image": "emerson-em-drive-mach-2-origin.png"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "Em-drive Mach 2 (Turquoise)",
 		"Width": 2.6,
 		"Height": 5.04,
-		"Image": "emerson-emdrive-mach2-turquoise.png"
+		"Image": "emerson-em-drive-mach-2-turquoise.png"
 	},
 	{
 		"Brand": "Emerson Custom",
