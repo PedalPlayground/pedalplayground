@@ -8082,7 +8082,7 @@
 		"Name": "Bit Commander",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-bitcommander.png"
+		"Image": "earthquaker-bit-commander.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8138,21 +8138,21 @@
 		"Name": "Disaster Transport",
 		"Width": 3.7,
 		"Height": 4.92,
-		"Image": "earthquaker-disastertransport.png"
+		"Image": "earthquaker-disaster-transport.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Disaster Transport Jr",
 		"Width": 2.75,
 		"Height": 4.33,
-		"Image": "earthquaker-disastertransport-jr.png"
+		"Image": "earthquaker-disaster-transport-jr.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Disaster Transport SR",
 		"Width": 5.65,
 		"Height": 4.77,
-		"Image": "earthquaker-disastertransport-sr.png"
+		"Image": "earthquaker-disaster-transport-sr.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -11092,7 +11092,7 @@
 		"Name": "Kingdom Combo V2",
 		"Width": 2.6,
 		"Height": 5,
-		"Image": "foxpedal-kingdomcombov2.png"
+		"Image": "foxpedal-kingdom-combo-v2.png"
 	},
 	{
 		"Brand": "Foxpedal",
@@ -11705,10 +11705,24 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Pachyderm Fuzz",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-pachyderm.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Psycho Delay",
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-psycho-delay.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Psycho Delay Tap Tempo",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-psycho-delay-tap-tempo.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -11730,6 +11744,13 @@
 		"Width": 7.87402,
 		"Height": 4.96063,
 		"Image": "ftelettronica-schumann.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Shock Wave Fuzz",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-shock-wave.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -12338,7 +12359,7 @@
 		"Name": "Input V2",
 		"Width": 4.45,
 		"Height": 2.6,
-		"Image": "goodwood-inputv2.png"
+		"Image": "goodwood-input-v2.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
@@ -12366,7 +12387,7 @@
 		"Name": "Output V2",
 		"Width": 4.45,
 		"Height": 2.95,
-		"Image": "goodwood-outputv2.png"
+		"Image": "goodwood-output-v2.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
@@ -16367,6 +16388,13 @@
 	},
 	{
 		"Brand": "Lehle",
+		"Name": "Mono Volume",
+		"Width": 3.94,
+		"Height": 10.24,
+		"Image": "lehle-volume.png"
+	},
+	{
+		"Brand": "Lehle",
 		"Name": "P Split III",
 		"Width": 3.6,
 		"Height": 3.55,
@@ -16374,10 +16402,10 @@
 	},
 	{
 		"Brand": "Lehle",
-		"Name": "Mono Volume",
-		"Width": 3.94,
-		"Height": 10.24,
-		"Image": "lehle-volume.png"
+		"Name": "RMI Acouswitch Junior",
+		"Width": 6.3,
+		"Height": 5.9,
+		"Image": "lehle-rmi-acouswitch-junior.png"
 	},
 	{
 		"Brand": "Little Robbie",
