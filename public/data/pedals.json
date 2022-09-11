@@ -8110,7 +8110,7 @@
 		"Name": "Cloven Hoof",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-clovenhoof.png"
+		"Image": "earthquaker-cloven-hoof.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8159,14 +8159,14 @@
 		"Name": "Dispatch Master",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-dispatchmaster.png"
+		"Image": "earthquaker-dispatch-master.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Dispatch Master (Black)",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-dispatchmaster-black.png"
+		"Image": "earthquaker-dispatch-master-black.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -10616,7 +10616,7 @@
 		"Name": "Level Set Buffer",
 		"Width": 2.95,
 		"Height": 5,
-		"Image": "fender-levelsetbuffer.png"
+		"Image": "fender-level-set-buffer.png"
 	},
 	{
 		"Brand": "Fender",
@@ -10700,7 +10700,7 @@
 		"Name": "The Bends Compressor",
 		"Width": 2.75,
 		"Height": 4.87,
-		"Image": "fender-thebends.png"
+		"Image": "fender-bends.png"
 	},
 	{
 		"Brand": "Fender",
@@ -11642,6 +11642,20 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Kurtz 2308",
+		"Width": 7.67717,
+		"Height": 4.92126,
+		"Image": "ftelettronica-kurtz-2308.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Limbic System Digital Reverb",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-limbic-system.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Looper/Blender",
 		"Width": 2.79528,
 		"Height": 4.6063,
@@ -11653,6 +11667,13 @@
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-mars-comp.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Mixtur Ring Modulator",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-mixtur.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -11737,6 +11758,13 @@
 		"Width": 2.79528,
 		"Height": 4.8063,
 		"Image": "ftelettronica-third-mind.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Weird Sound Generator",
+		"Width": 4.17323,
+		"Height": 4.92126,
+		"Image": "ftelettronica-weird-sound-generator.png"
 	},
 	{
 		"Brand": "Fuchs",
@@ -19492,21 +19520,21 @@
 		"Name": "Analog Chorus",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-analogchorus.png"
+		"Image": "mxr-m234.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Bass Chorus Deluxe",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-bass-chorus-deluxe.png"
+		"Image": "mxr-m83.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Bass Compressor",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-basscompressor.png"
+		"Image": "mxr-m87.png"
 	},
 	{
 		"Brand": "MXR",
@@ -19562,14 +19590,14 @@
 		"Name": "Blue Box Fuzz",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-blue-box-fuzz.png"
+		"Image": "mxr-m103.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Booster Mini",
 		"Width": 1.74,
 		"Height": 3.7,
-		"Image": "mxr-booster.png"
+		"Image": "mxr-m293.png"
 	},
 	{
 		"Brand": "MXR",
@@ -19793,7 +19821,7 @@
 		"Name": "Fat Sugar",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-fatsugar.png"
+		"Image": "mxr-m94se.png"
 	},
 	{
 		"Brand": "MXR",
@@ -19961,7 +19989,7 @@
 		"Name": "Phase 90 ('74 Vintage)",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-phase90-74vintage.png"
+		"Image": "mxr-cspo26.png"
 	},
 	{
 		"Brand": "MXR",
@@ -24897,6 +24925,13 @@
 		"Width": 2.81,
 		"Height": 4.75,
 		"Image": "spaceman-titanii.png"
+	},
+	{
+		"Brand": "Spiral Electric FX",
+		"Name": "Yellow Spiral Drive",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "spiral-yellow-spiral-drive.png"
 	},
 	{
 		"Brand": "Spruce Effects",
