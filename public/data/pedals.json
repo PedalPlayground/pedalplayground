@@ -7260,6 +7260,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "PDS 2000 Digital Sampler",
+		"Width": 6,
+		"Height": 5,
+		"Image": "digitech-pds-2000.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Polara",
 		"Width": 2.65,
 		"Height": 4.4,
@@ -7410,21 +7417,21 @@
 		"Name": "Micro Clock",
 		"Width": 1.73,
 		"Height": 3.65,
-		"Image": "disasterarea-microclock.png"
+		"Image": "disasterarea-micro-clock.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "MIDI Baby 3",
 		"Width": 4.41,
 		"Height": 2.64,
-		"Image": "disasterarea-midibaby3.png"
+		"Image": "disasterarea-midi-baby-3.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "MIDI Baby",
 		"Width": 2.346,
 		"Height": 2,
-		"Image": "disasterarea-midibaby.png"
+		"Image": "disasterarea-midi-baby.png"
 	},
 	{
 		"Brand": "Disaster Area",
@@ -7438,14 +7445,14 @@
 		"Name": "Smart Clock",
 		"Width": 2.81,
 		"Height": 4.87,
-		"Image": "disasterarea-smartclock.png"
+		"Image": "disasterarea-smart-clock.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "DPC-8EZ gen3",
 		"Width": 10,
 		"Height": 2.88,
-		"Image": "disasterarea-dpc8ezgen3.png"
+		"Image": "disasterarea-dpc-8ez-gen3.png"
 	},
 	{
 		"Brand": "Disaster Area",
@@ -7466,7 +7473,7 @@
 		"Name": "DPC.Micro",
 		"Width": 4.9,
 		"Height": 2.88,
-		"Image": "disasterarea-dpcmicro.png"
+		"Image": "disasterarea-dpc-micro.png"
 	},
 	{
 		"Brand": "Disaster Area",
@@ -7487,7 +7494,7 @@
 		"Name": "Aghartha",
 		"Width": 2.6,
 		"Height": 5.01,
-		"Image": "doesitdoom-aghartha.png"
+		"Image": "does-it-doom-aghartha.png"
 	},
 	{
 		"Brand": "Donner",
@@ -7585,7 +7592,7 @@
 		"Name": "Z-Drive",
 		"Width": 4.7,
 		"Height": 3.86,
-		"Image": "drz-zdrive.png"
+		"Image": "drz-z-drive.png"
 	},
 	{
 		"Brand": "Dr.No Effects",
@@ -7676,7 +7683,7 @@
 		"Name": "The Engine",
 		"Width": 4.7,
 		"Height": 3.86,
-		"Image": "drybell-theengine.png"
+		"Image": "drybell-engine.png"
 	},
 	{
 		"Brand": "DSM & Humboldt",
@@ -7718,7 +7725,7 @@
 		"Name": "Drive Maker",
 		"Width": 4.69,
 		"Height": 2.75,
-		"Image": "dsmnoisemaker-drivemaker.png"
+		"Image": "dsmnoisemaker-drive-maker.png"
 	},
 	{
 		"Brand": "DSM Noisemaker",
@@ -7907,14 +7914,14 @@
 		"Name": "Baby Thunder",
 		"Width": 3,
 		"Height": 4.8,
-		"Image": "dwarfcraft-babythunder.png"
+		"Image": "dwarfcraft-baby-thunder.png"
 	},
 	{
 		"Brand": "Dwarfcraft Devices",
 		"Name": "Eau Claire Thunder",
 		"Width": 5.7,
 		"Height": 4.8,
-		"Image": "dwarfcraft-eauclairethunder.png"
+		"Image": "dwarfcraft-eau-claire-thunder.png"
 	},
 	{
 		"Brand": "Dwarfcraft Devices",
@@ -7956,35 +7963,35 @@
 		"Name": "Super Wizard",
 		"Width": 5.7,
 		"Height": 4.8,
-		"Image": "dwarfcraft-superwizard.png"
+		"Image": "dwarfcraft-super-wizard.png"
 	},
 	{
 		"Brand": "Dwarfcraft Devices",
 		"Name": "The Great Destroyer",
 		"Width": 3,
 		"Height": 4.8,
-		"Image": "dwarfcraft-thegreatdestroyer.png"
+		"Image": "dwarfcraft-great-destroyer.png"
 	},
 	{
 		"Brand": "Dwarfcraft Devices",
 		"Name": "Twin Stags",
 		"Width": 3.95,
 		"Height": 4.9,
-		"Image": "dwarfcraft-twinstags.png"
+		"Image": "dwarfcraft-twin-stags.png"
 	},
 	{
 		"Brand": "Dwarfcraft Devices",
 		"Name": "Wizard of Pitch",
 		"Width": 3,
 		"Height": 4.8,
-		"Image": "dwarfcraft-wizardofpitch.png"
+		"Image": "dwarfcraft-wizard-of-pitch.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Acapulco Gold",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-acapulcogold.png"
+		"Image": "earthquaker-acapulco-gold.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -11397,17 +11404,17 @@
 	},
 	{
 		"Brand": "Friedman",
+		"Name": "BE-OD Deluxe",
+		"Width": 5.9,
+		"Height": 5,
+		"Image": "friedman-beod-deluxe.png"
+	},
+	{
+		"Brand": "Friedman",
 		"Name": "Buxom Boost",
 		"Width": 2.75,
 		"Height": 4.625,
 		"Image": "friedman-buxom-boost.png"
-	},
-	{
-		"Brand": "Friedman",
-		"Name": "BE-OD deluxe",
-		"Width": 5.9,
-		"Height": 5,
-		"Image": "friedman-beod-deluxe.png"
 	},
 	{
 		"Brand": "Friedman",
@@ -11596,7 +11603,7 @@
 		"Name": "Helvetisk Motorsag II Distortion",
 		"Width": 2.79528,
 		"Height": 4.6063,
-		"Image": "ftelettronica-helvet-motorsag-ii.png"
+		"Image": "ftelettronica-helvetisk-motorsag-ii.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -12371,7 +12378,7 @@
 	{
 		"Brand": "Great Eastern FX Co.",
 		"Name": "Design-A-Drive",
-	  "Width": 2.6,
+		"Width": 2.6,
 		"Height": 5,
 		"Image": "great-eastern-dad.png"
 	},
