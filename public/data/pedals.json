@@ -781,7 +781,7 @@
 		"Name": "Tight Metal Pro II",
 		"Width": 6.47,
 		"Height": 5.29,
-		"Image": "amptweaker-tight-metal-pro-2.png"
+		"Image": "amptweaker-tightmetalpro-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
@@ -802,7 +802,7 @@
 		"Name": "Tight Metal II",
 		"Width": 2.89,
 		"Height": 4.65,
-		"Image": "amptweaker-tightmetal-2.png"
+		"Image": "amptweaker-tight-metal-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
@@ -8902,7 +8902,14 @@
 		"Width": 6.15,
 		"Height": 4.75,
 		"Image": "ehx-battalion.png"
-  	},
+  },
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Big Muff Pi Hardware Plugin",
+		"Width": 4.19,
+		"Height": 4.87,
+		"Image": "ehx-big-muff-pi-hardware-plugin.png"
+	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi with Tone Wicker",
