@@ -781,7 +781,7 @@
 		"Name": "Tight Metal Pro II",
 		"Width": 6.47,
 		"Height": 5.29,
-		"Image": "amptweaker-tight-metal-pro-2.png"
+		"Image": "amptweaker-tightmetalpro-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
@@ -802,7 +802,7 @@
 		"Name": "Tight Metal II",
 		"Width": 2.89,
 		"Height": 4.65,
-		"Image": "amptweaker-tightmetal-2.png"
+		"Image": "amptweaker-tight-metal-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
@@ -5083,6 +5083,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Soft Focus Reverb",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-softfocus.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Talisman",
 		"Width": 2.6,
 		"Height": 4.33,
@@ -7500,14 +7507,14 @@
 		"Brand": "Dreadbox",
 		"Name": "Darkness",
 		"Width": 3.94,
-		"Height": 5.61,
+		"Height": 5.58,
 		"Image": "dreadbox-darkness.png"
 	},
 	{
 		"Brand": "Dreadbox",
 		"Name": "Disorder",
 		"Width": 3.94,
-		"Height": 5.61,
+		"Height": 5.58,
 		"Image": "dreadbox-disorder.png"
 	},
 	{
@@ -7521,22 +7528,29 @@
 		"Brand": "Dreadbox",
 		"Name": "Kinematic",
 		"Width": 3.94,
-		"Height": 5.61,
+		"Height": 5.58,
 		"Image": "dreadbox-kinematic.png"
 	},
 	{
 		"Brand": "Dreadbox",
 		"Name": "Komorebi",
 		"Width": 3.94,
-		"Height": 5.61,
+		"Height": 5.58,
 		"Image": "dreadbox-komorebi.png"
 	},
 	{
 		"Brand": "Dreadbox",
 		"Name": "Lethargy",
 		"Width": 3.94,
-		"Height": 5.61,
+		"Height": 5.58,
 		"Image": "dreadbox-lethargy.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Treminator",
+		"Width": 3.94,
+		"Height": 5.58,
+		"Image": "dreadbox-treminator.png"
 	},
 	{
 		"Brand": "Drolo",
@@ -7711,7 +7725,7 @@
 		"Name": "Cry Baby Q Zone Fixed Wah",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-qz1.png"
+		"Image": "dunlop-qz1.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -8888,7 +8902,14 @@
 		"Width": 6.15,
 		"Height": 4.75,
 		"Image": "ehx-battalion.png"
-  	},
+  },
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Big Muff Pi Hardware Plugin",
+		"Width": 4.19,
+		"Height": 4.87,
+		"Image": "ehx-big-muff-pi-hardware-plugin.png"
+	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi with Tone Wicker",
@@ -14771,6 +14792,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "JP-05 Power Supply 5",
+		"Width": 5.75,
+		"Height": 2.7,
+		"Image": "joyo-jp05.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "Pipe Bomb",
 		"Width": 1.72,
 		"Height": 2.83,
@@ -16315,6 +16343,13 @@
 		"Width": 3.88,
 		"Height": 3.88,
 		"Image": "line6-g10relay.png"
+	},
+	{
+		"Brand": "Line 6",
+		"Name": "Relay G50 Wireless",
+		"Width": 3.4,
+		"Height": 5.25,
+		"Image": "line6-g50relay.png"
 	},
 	{
 		"Brand": "Line 6",
@@ -21925,6 +21960,13 @@
 	},
 	{
 		"Brand": "Pastfx",
+		"Name": "Stereo Chorus PX65",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "pastfx-px65.png"
+	},
+	{
+		"Brand": "Pastfx",
 		"Name": "TD-Y",
 		"Width": 2.57,
 		"Height": 4.33,
@@ -22510,6 +22552,13 @@
 		"Width": 6,
 		"Height": 5,
 		"Image": "poly-digit.png"
+	},
+	{
+		"Brand": "Pro Co",
+		"Name": "Big Box Vintage Rat",
+		"Width": 5,
+		"Height": 4.14,
+		"Image": "proco-bigbox-rat.png"
 	},
 	{
 		"Brand": "Pro Co",
