@@ -5387,7 +5387,7 @@
 						if (
 							(mappedTypes || origType === handleObj.origType) &&
 							(!handler || handler.guid === handleObj.guid) &&
-							(!tmp || tmp.test( handleObj.namespace)) &&
+							(!tmp || tmp.test(handleObj.namespace)) &&
 							(!selector || selector === handleObj.selector ||
 							selector === "**" && handleObj.selector) 
 						) {
