@@ -778,13 +778,6 @@
 	},
 	{
 		"Brand": "Amptweaker",
-		"Name": "Tight Metal Pro II",
-		"Width": 6.47,
-		"Height": 5.29,
-		"Image": "amptweaker-tightmetalpro-2.png"
-	},
-	{
-		"Brand": "Amptweaker",
 		"Name": "Tight Drive II",
 		"Width": 2.89,
 		"Height": 4.65,
@@ -810,6 +803,13 @@
 		"Width": 2.94,
 		"Height": 5.29,
 		"Image": "amptweaker-tight-metal.png"
+	},
+	{
+		"Brand": "Amptweaker",
+		"Name": "Tight Metal Pro II",
+		"Width": 6.47,
+		"Height": 5.29,
+		"Image": "amptweaker-tight-metal-pro-2.png"
 	},
 	{
 		"Brand": "Amptweaker",
@@ -5086,7 +5086,7 @@
 		"Name": "Soft Focus Reverb",
 		"Width": 2.6,
 		"Height": 4.33,
-		"Image": "catalinbread-softfocus.png"
+		"Image": "catalinbread-soft-focus.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -7092,6 +7092,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Digiverb Digital Reverb",
+		"Width": 3.13,
+		"Height": 4.94,
+		"Image": "digitech-digiverb.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Dirty Robot",
 		"Width": 2.64,
 		"Height": 4.4,
@@ -7218,10 +7225,24 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Hot Rod Rock Distortion",
+		"Width": 3.13,
+		"Height": 4.94,
+		"Image": "digitech-hot-rod.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "HT-2 Chromatic Tuner",
 		"Width": 3.5,
 		"Height": 5.25,
 		"Image": "digitech-hardwire-ht-2-chromatic-tuner.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Hyper Phase Stereo Phaser",
+		"Width": 3.13,
+		"Height": 4.94,
+		"Image": "digitech-hyper-phase.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -7250,6 +7271,27 @@
 		"Width": 2.875,
 		"Height": 4.75,
 		"Image": "digitech-luxe.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Main Squeeze Compressor/Sustainer",
+		"Width": 3.13,
+		"Height": 4.94,
+		"Image": "digitech-main-squeeze.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Metal Master Heavy Metal Distortion",
+		"Width": 3.13,
+		"Height": 4.94,
+		"Image": "digitech-metal-master.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Multi Chorus",
+		"Width": 3.13,
+		"Height": 4.94,
+		"Image": "digitech-multi-chorus.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -7302,6 +7344,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Synth Wah Envelope Filter",
+		"Width": 3.13,
+		"Height": 4.94,
+		"Image": "digitech-synth-wah.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "The Drop",
 		"Width": 2.875,
 		"Height": 4.75,
@@ -7313,6 +7362,20 @@
 		"Width": 2.875,
 		"Height": 4.75,
 		"Image": "digitech-mosaic.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "The Weapon",
+		"Width": 3.13,
+		"Height": 4.94,
+		"Image": "digitech-weapon.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Tone Driver Overdrive",
+		"Width": 3.13,
+		"Height": 4.94,
+		"Image": "digitech-tone-driver.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -8222,14 +8285,14 @@
 		"Name": "Grand Orbiter",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-grandorbiter.png"
+		"Image": "earthquaker-grand-orbiter.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Gray Channel",
 		"Width": 3.7,
 		"Height": 4.8,
-		"Image": "earthquaker-graychannel.png"
+		"Image": "earthquaker-gray-channel.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8250,14 +8313,14 @@
 		"Name": "Hoof Reaper",
 		"Width": 5.65,
 		"Height": 4.8,
-		"Image": "earthquaker-hoofreaper.png"
+		"Image": "earthquaker-hoof-reaper.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Hoof Reaper v2",
 		"Width": 5.65,
 		"Height": 4.76,
-		"Image": "earthquaker-hoofreaper-v2.png"
+		"Image": "earthquaker-hoof-reaper-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -11772,6 +11835,13 @@
 		"Width": 2.79528,
 		"Height": 4.6063,
 		"Image": "ftelettronica-shock-wave.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Six Band Equalizer",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-six-band-equalizer.png"
 	},
 	{
 		"Brand": "FTelettronica",
