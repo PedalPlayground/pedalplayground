@@ -7547,6 +7547,13 @@
 	},
 	{
 		"Brand": "Dreadbox",
+		"Name": "Raindrops",
+		"Width": 3.94,
+		"Height": 5.58,
+		"Image": "dreadbox-raindrops.png"
+	},
+	{
+		"Brand": "Dreadbox",
 		"Name": "Treminator",
 		"Width": 3.94,
 		"Height": 5.58,
@@ -15909,6 +15916,13 @@
 		"Width": 5.09,
 		"Height": 3.7,
 		"Image": "kingtone-vintage-fuzz.png"
+	},
+	{
+		"Brand": "Kinotone",
+		"Name": "Ribbons",
+		"Width": 2.94,
+		"Height": 4.9,
+		"Image": "kinotone-ribbons.png"
 	},
 	{
 		"Brand": "Kliq",
