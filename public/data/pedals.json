@@ -16504,7 +16504,7 @@
 		"Width": 3.98,
 		"Height": 3.54,
 		"Image": "lehle-sunday-driver-sw-ii.png"
-	},	
+	},
 	{
 		"Brand": "Lehle",
 		"Name": "Sunday Driver SW",
@@ -16525,28 +16525,28 @@
 		"Width": 3.94,
 		"Height": 10.24,
 		"Image": "lehle-volume.png"
-	},	
+	},
 		{
 		"Brand": "asdf",
 		"Name": "Mono Volume",
 		"Width": 3.94,
 		"Height": 10.24,
 		"Image": "lehle-volume.png"
-	},	
+	},
 		{
 		"Brand": "asdf",
 		"Name": "Mono Volume",
 		"Width": 3.94,
 		"Height": 10.24,
 		"Image": "lehle-volume.png"
-	},	
+	},
 		{
 		"Brand": "asdf",
 		"Name": "Mono Volume",
 		"Width": 3.94,
 		"Height": 10.24,
 		"Image": "lehle-volume.png"
-	},	
+	},
 	{
 		"Brand": "Little Robbie",
 		"Name": "Pilot",
@@ -27393,6 +27393,13 @@
 	},
 	{
 		"Brand": "Truetone",
+		"Name": "1 Spot Pro CS6",
+		"Width": 6.3,
+		"Height": 3.46,
+		"Image": "truetone-cs6.png"
+	},
+	{
+		"Brand": "Truetone",
 		"Name": "1 Spot Pro CS7",
 		"Width": 5.5,
 		"Height": 3.37,
@@ -28108,30 +28115,37 @@
 	{
     "Brand": "VTR Effects",
 		"Name": "Antares Modulation V1",
-		"Width": 2.55,
-		"Height": 4.84,
+		"Width": 2.69,
+		"Height": 4.9,
 		"Image": "vtr-antares-modulation-v1.png"
 	},
 	{
 		"Brand": "VTR Effects",
 		"Name": "Dream Machine Delay V2",
-		"Width": 2.55,
-		"Height": 4.84,
+		"Width": 2.69,
+		"Height": 4.9,
 		"Image": "vtr-dream-machine-v2.png"
 	},
 	{
 		"Brand": "VTR Effects",
 		"Name": "Helios Overdrive V2",
-		"Width": 2.55,
-		"Height": 4.84,
+		"Width": 2.69,
+		"Height": 4.9,
 		"Image": "vtr-helios-overdrive-v2.png"
 	},
 	{
 		"Brand": "VTR Effects",
 		"Name": "Indigo Reverb V2",
-		"Width": 2.55,
-		"Height": 4.84,
+		"Width": 2.69,
+		"Height": 4.9,
 		"Image": "vtr-indigo-reverb-v2.png"
+	},
+	{
+		"Brand": "VTR Effects",
+		"Name": "Venator Distortion",
+		"Width": 3.32,
+		"Height": 4.9,
+		"Image": "vtr-venator.png"
 	},
 	{
 		"Brand": "Whirlwind",
