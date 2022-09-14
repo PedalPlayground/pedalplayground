@@ -8348,7 +8348,7 @@
 		"Name": "Life Pedal V2",
 		"Width": 3.82,
 		"Height": 4.8,
-		"Image": "earthquaker-lifepedal-v2.png"
+		"Image": "earthquaker-life-pedal-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8362,7 +8362,7 @@
 		"Name": "Night Wire",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-nightwire.png"
+		"Image": "earthquaker-night-wire.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8383,7 +8383,7 @@
 		"Name": "Park Fuzz Sound",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-parkfuzz.png"
+		"Image": "earthquaker-park-fuzz.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8404,35 +8404,35 @@
 		"Name": "Plumes (Black/Teal)",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-plumes-blackteal.png"
+		"Image": "earthquaker-plumes-black-teal.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Plumes (Black Sparkle)",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-plumes-blacksparkle.png"
+		"Image": "earthquaker-plumes-black-sparkle.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Plumes (Purple Sparkle)",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-plumes-purplesparkle.png"
+		"Image": "earthquaker-plumes-purple-sparkle.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Plumes (White Vein)",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-plumes-whitevein.png"
+		"Image": "earthquaker-plumes-white-vein.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Plumes (Yellow/Green)",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-plumes-yellowgreen.png"
+		"Image": "earthquaker-plumes-yellow-green.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8446,35 +8446,35 @@
 		"Name": "Rainbow Machine V1",
 		"Width": 3.7,
 		"Height": 4.88,
-		"Image": "earthquaker-rainbowmachine.png"
+		"Image": "earthquaker-rainbow-machine.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Rainbow Machine V2",
 		"Width": 3.82,
 		"Height": 4.80,
-		"Image": "earthquaker-rainbowmachine-v2.png"
+		"Image": "earthquaker-rainbow-machine-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Sea Machine",
 		"Width": 3.7,
 		"Height": 4.93,
-		"Image": "earthquaker-seamachine.png"
+		"Image": "earthquaker-sea-machine.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Sea Machine V2",
 		"Width": 2.6,
 		"Height": 4.97,
-		"Image": "earthquaker-seamachine-v2.png"
+		"Image": "earthquaker-sea-machine-v2.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
 		"Name": "Sea Machine V3",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-seamachine-v3.png"
+		"Image": "earthquaker-sea-machine-v3.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8488,7 +8488,7 @@
 		"Name": "Space Spiral",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-spacespiral.png"
+		"Image": "earthquaker-space-spiral.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8516,7 +8516,7 @@
 		"Name": "Special Cranker (Purple Sparkle)",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-special-cranker-purpsparkle.png"
+		"Image": "earthquaker-special-cranker-purple-sparkle.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8572,7 +8572,7 @@
 		"Name": "The Depths",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-thedepths.png"
+		"Image": "earthquaker-depths.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8586,7 +8586,7 @@
 		"Name": "Tone Job",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "earthquaker-tonejob.png"
+		"Image": "earthquaker-tone-job.png"
 	},
 	{
 		"Brand": "Earthquaker Devices",
@@ -8712,14 +8712,14 @@
 		"Name": "Tube Drive",
 		"Width": 6.8,
 		"Height": 4.52,
-		"Image": "effectrode-tubedrive.png"
+		"Image": "effectrode-tube-drive.png"
 	},
 	{
 		"Brand": "Effectrode",
 		"Name": "Tube Vibe",
 		"Width": 7.5,
 		"Height": 5.1,
-		"Image": "effectrode-tubevibe.png"
+		"Image": "effectrode-tube-vibe.png"
 	},
 	{
 		"Brand": "Effects Bakery",
@@ -8817,7 +8817,7 @@
 		"Name": "Power Supply Hoden Sentai Donuts",
 		"Width": 3.7,
 		"Height": 1.52,
-		"Image": "effectsbakery-powersupply-donuts.png"
+		"Image": "effectsbakery-power-supply-donuts.png"
 	},
 	{
 		"Brand": "Effects Bakery",
@@ -8838,7 +8838,7 @@
 		"Name": "Blackfly",
 		"Width": 5.55,
 		"Height": 4.8,
-		"Image": "electrofaustus-blackfly.png"
+		"Image": "electro-faustus-blackfly.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -9328,7 +9328,7 @@
 		"Name": "J Mascis Ram's Head Big Muff Pi",
 		"Width": 2.82,
 		"Height": 4.5,
-		"Image": "ehx-rams-head-big-muff-pi-nano-jmascis.png"
+		"Image": "ehx-rams-head-big-muff-pi-j-mascis.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -9531,7 +9531,7 @@
 		"Name": "Nano Q-Tron",
 		"Width": 2.82,
 		"Height": 4.5,
-		"Image": "ehx-nano-qtron.png"
+		"Image": "ehx-nano-q-tron.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -12863,7 +12863,7 @@
 		"Name": "Leslie G",
 		"Width": 3.61,
 		"Height": 4.75,
-		"Image": "hammond-leslieg.png"
+		"Image": "hammond-leslie-g.png"
 	},
 	{
 		"Brand": "Hamstead",
@@ -13108,14 +13108,14 @@
 		"Name": "Dream Sequence",
 		"Width": 7.37,
 		"Height": 4.69,
-		"Image": "hologram-dreamsequence.png"
+		"Image": "hologram-dream-sequence.png"
 	},
 	{
 		"Brand": "Hologram Electronics",
 		"Name": "Infinite Jets",
 		"Width": 7.37,
 		"Height": 4.69,
-		"Image": "hologram-infinitejets.png"
+		"Image": "hologram-infinite-jets.png"
 	},
 	{
 		"Brand": "Hologram Electronics",
@@ -13322,7 +13322,7 @@
 	},
 	{
 		"Brand": "Hudson",
-		"Name": "Broadcast Dual Switch (Mint Turquise)",
+		"Name": "Broadcast Dual Switch (Mint Turquoise)",
 		"Width": 4.7,
 		"Height": 3.84,
 		"Image": "hudson-broadcast-dual-mint.png"
@@ -13437,7 +13437,7 @@
 		"Name": "Echo Shifter",
 		"Width": 4.7,
 		"Height": 6.3,
-		"Image": "ibanez-echoshifter.png"
+		"Image": "ibanez-echo-shifter.png"
 	},
 	{
 		"Brand": "Ibanez",
@@ -14032,7 +14032,7 @@
 		"Name": "Belle Starr",
 		"Width": 2.2,
 		"Height": 4.76,
-		"Image": "jackson-bellestar.png"
+		"Image": "jackson-belle-star.png"
 	},
 	{
 		"Brand": "Jackson Audio",
@@ -14214,14 +14214,14 @@
 		"Name": "Dyna-ssoR",
 		"Width": 2.7,
 		"Height": 4.3,
-		"Image": "jampedals-dyna-ssor.png"
+		"Image": "jam-dyna-ssor.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Eureka!",
 		"Width": 2.7,
 		"Height": 4.3,
-		"Image": "jampedals-eureka.png"
+		"Image": "jam-eureka.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -14242,14 +14242,14 @@
 		"Name": "Pink Flow",
 		"Width": 15.7,
 		"Height": 6.7,
-		"Image": "jampedals-pink-flow.png"
+		"Image": "jam-pink-flow.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Rattler",
 		"Width": 2.7,
 		"Height": 4.3,
-		"Image": "jampedals-rattler1.png"
+		"Image": "jam-rattler.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -14263,28 +14263,28 @@
 		"Name": "Retrovibe",
 		"Width": 4.1,
 		"Height": 4.7,
-		"Image": "jampedals-retrovibe1.png"
+		"Image": "jam-retrovibe.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Retrovibe mk3",
 		"Width": 4.01,
 		"Height": 4.7,
-		"Image": "jampedals-retrovibe-mk3.png"
+		"Image": "jam-retrovibe-mk3.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Ripple",
 		"Width": 2.9,
 		"Height": 4.7,
-		"Image": "jampedals-ripple.png"
+		"Image": "jam-ripple.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Ripply Fall",
 		"Width": 5.1,
 		"Height": 3.9,
-		"Image": "jampedals-ripplyfall1.png"
+		"Image": "jam-ripply-fall.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -14298,21 +14298,21 @@
 		"Name": "Tube Dreamer",
 		"Width": 2.7,
 		"Height": 4.3,
-		"Image": "jampedals-tube-dreamer.png"
+		"Image": "jam-tube-dreamer.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Waterfall",
 		"Width": 2.9,
 		"Height": 4.7,
-		"Image": "jampedals-waterfall1.png"
+		"Image": "jam-waterfall.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Wahcko",
 		"Width": 4.7,
 		"Height": 10,
-		"Image": "jampedals-wahcko.png"
+		"Image": "jam-wahcko.png"
 	},
 	{
 		"Brand": "JangleBox",
@@ -14361,7 +14361,7 @@
 		"Name": "Lion",
 		"Width": 4.70,
 		"Height": 3.80,
-		"Image": "jetpedals-lion.png"
+		"Image": "jet-lion.png"
 	},
 	{
 		"Brand": "Jet",
@@ -14372,17 +14372,17 @@
 	},
 	{
 		"Brand": "Jet",
-		"Name": "Revelation Reverb 2.0 (White)",
-		"Width": 2.88,
-		"Height": 4.93,
-		"Image": "jet-revelationv2-white.png"
-	},
-	{
-		"Brand": "Jet",
 		"Name": "Revelation Reverb 2.0 (Purple)",
 		"Width": 2.88,
 		"Height": 4.93,
-		"Image": "jet-revelationv2-purple.png"
+		"Image": "jet-revelation-v2-purple.png"
+	},
+	{
+		"Brand": "Jet",
+		"Name": "Revelation Reverb 2.0 (White)",
+		"Width": 2.88,
+		"Height": 4.93,
+		"Image": "jet-revelation-v2-white.png"
 	},
 	{
 		"Brand": "JHS",
