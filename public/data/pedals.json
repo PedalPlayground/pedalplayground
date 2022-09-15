@@ -10539,21 +10539,21 @@
 		"Name": "Randy's Revenge",
 		"Width": 4.7,
 		"Height": 3.83,
-		"Image": "fairfield-randysrevenge.png"
+		"Image": "fairfield-randys-revenge.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Shallow Water",
 		"Width": 4.7,
 		"Height": 3.79,
-		"Image": "fairfield-shallowwater.png"
+		"Image": "fairfield-shallow-water.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "The Accountant",
 		"Width": 1.77,
 		"Height": 3.6,
-		"Image": "fairfield-theaccountant.png"
+		"Image": "fairfield-accountant.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
@@ -10567,7 +10567,7 @@
 		"Name": "The Barbershop v2",
 		"Width": 2.63,
 		"Height": 4.4,
-		"Image": "fairfield-barbershopv2.png"
+		"Image": "fairfield-barbershop-v2.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
@@ -11246,7 +11246,7 @@
 		"Name": "Hot Silicon",
 		"Width": 3.85,
 		"Height": 5.15,
-		"Image": "foxrox-hotsilicon.png"
+		"Image": "foxrox-hot-silicon.png"
 	},
 	{
 		"Brand": "Foxrox",
@@ -11274,7 +11274,7 @@
 		"Name": "Paradox TZF2",
 		"Width": 5.5,
 		"Height": 5,
-		"Image": "foxrox-paradoxtzf2.png"
+		"Image": "foxrox-paradox-tzf2.png"
 	},
 	{
 		"Brand": "Foxrox",
@@ -11365,7 +11365,7 @@
 		"Name": "Ambi Space AS-1R",
 		"Width": 4.72,
 		"Height": 4,
-		"Image": "freethetone-ambispace.png"
+		"Image": "free-the-tone-ambi-space.png"
 	},
 	{
 		"Brand": "Free The Tone",
@@ -11407,7 +11407,7 @@
 		"Name": "Flight Time FT-1Y",
 		"Width": 5.72,
 		"Height": 4.68,
-		"Image": "freethetone-flighttime.png"
+		"Image": "free-the-tone-flight-time.png"
 	},
 	{
 		"Brand": "Free The Tone",
@@ -11484,7 +11484,7 @@
 		"Name": "Tri Avatar TA-2H",
 		"Width": 4.72,
 		"Height": 4,
-		"Image": "freethetone-triavatar.png"
+		"Image": "free-the-tone-tri-avatar.png"
 	},
 	{
 		"Brand": "Friedman",
@@ -11908,10 +11908,38 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Tempus Fugit Analog Delay",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-tempus-fugit.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Tetractave Analog Octaver",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-tetractave.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Third Mind Distortion",
 		"Width": 2.79528,
 		"Height": 4.8063,
 		"Image": "ftelettronica-third-mind.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Triple Booster",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-triple-booster.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Twin Oscillator Phaser/Vibrato",
+		"Width": 7.87402,
+		"Height": 5,
+		"Image": "ftelettronica-twin-oscillator.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -11974,21 +12002,21 @@
 		"Name": "Full-drive FD-2 V2",
 		"Width": 4.84,
 		"Height": 4.25,
-		"Image": "fulltone-fulldrive2.png"
+		"Image": "fulltone-full-drive-v2.png"
 	},
 	{
 		"Brand": "Fulltone",
 		"Name": "Full-drive FD-2 MOSFET",
 		"Width": 5.79,
 		"Height": 4.16,
-		"Image": "fulltone-fulldrive2-mosfet.png"
+		"Image": "fulltone-full-drive-v2-mosfet.png"
 	},
 	{
 		"Brand": "Fulltone",
 		"Name": "Full-drive FD-3",
 		"Width": 5.23,
 		"Height": 4.22,
-		"Image": "fulltone-fulldrive3.png"
+		"Image": "fulltone-full-drive-fd-3.png"
 	},
 	{
 		"Brand": "Fulltone",
@@ -12317,7 +12345,7 @@
 		"Name": "Triple Switch",
 		"Width": 5,
 		"Height": 1.85,
-		"Image": "gfi-tripleswitch.png"
+		"Image": "gfi-triple-switch.png"
 	},
 	{
 		"Brand": "GigRig",
@@ -13829,7 +13857,7 @@
 		"Name": "Archer",
 		"Width": 2.3,
 		"Height": 4,
-		"Image": "jrockett-archersilver.png"
+		"Image": "jrockett-archer.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -13843,21 +13871,21 @@
 		"Name": "Archer Ikon",
 		"Width": 2.3,
 		"Height": 4,
-		"Image": "jrockett-archerikon.png"
+		"Image": "jrockett-archer-ikon.png"
 	},
 	{
 		"Brand": "J. Rockett",
 		"Name": "Blue Note",
 		"Width": 3.12,
 		"Height": 4.75,
-		"Image": "jrockett-bluenote.png"
+		"Image": "jrockett-blue-note.png"
 	},
 	{
 		"Brand": "J. Rockett",
 		"Name": "Blue Note Tour Series",
 		"Width": 2.3,
 		"Height": 4,
-		"Image": "jrockett-bluenote-tour.png"
+		"Image": "jrockett-blue-note-tour.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -13885,7 +13913,7 @@
 		"Name": "Flex Drive",
 		"Width": 3,
 		"Height": 4.75,
-		"Image": "jrockett-flexdrive.png"
+		"Image": "jrockett-flex-drive.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -13941,7 +13969,7 @@
 		"Name": "Led Boots",
 		"Width": 4.92,
 		"Height": 2.95,
-		"Image": "jrockett-ledboots.png"
+		"Image": "jrockett-led-boots.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -13976,7 +14004,7 @@
 		"Name": "Rockaway Archer",
 		"Width": 2.35,
 		"Height": 4,
-		"Image": "jrockett-rockawayarcher.png"
+		"Image": "jrockett-rockaway-archer.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -14004,14 +14032,14 @@
 		"Name": "The Dude",
 		"Width": 2.3,
 		"Height": 4,
-		"Image": "jrockett-thedude.png"
+		"Image": "jrockett-dude.png"
 	},
 	{
 		"Brand": "J. Rockett",
 		"Name": "The Dude V2",
 		"Width": 2.3,
 		"Height": 4,
-		"Image": "jrockett-thedude-v2.png"
+		"Image": "jrockett-dude-v2.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -14060,7 +14088,7 @@
 		"Name": "Amp Mode",
 		"Width": 1.8,
 		"Height": 4.08,
-		"Image": "jackson-ampmode.png"
+		"Image": "jackson-amp-mode.png"
 	},
 	{
 		"Brand": "Jackson Audio",
@@ -14228,21 +14256,21 @@
 		"Name": "Delay Llama",
 		"Width": 2.9,
 		"Height": 4.7,
-		"Image": "jam-delayllama.png"
+		"Image": "jam-delay-llama.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Delay Llama mk3",
 		"Width": 2.9,
 		"Height": 4.7,
-		"Image": "jam-delayllama-mk3.png"
+		"Image": "jam-delay-llama-mk3.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Delay Llama Xtreme",
 		"Width": 5.8,
 		"Height": 4.8,
-		"Image": "jam-delayllama-xtreme.png"
+		"Image": "jam-delay-llama-xtreme.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -15933,7 +15961,7 @@
 	},
 	{
 		"Brand": "Keeley",
-		"Name": "VoT Reverb and Tremelo Workstation",
+		"Name": "VoT Reverb and Tremolo Workstation",
 		"Width": 4.7,
 		"Height": 3.82,
 		"Image": "keeley-vot-workstation.png"
@@ -16003,7 +16031,7 @@
     },
 	{
 		"Brand": "KHDK",
-		"Name": "My big fat hawk",
+		"Name": "My big fat rawk",
 		"Width": 2.56,
 		"Height": 4.75,
 		"Image": "khdk-my-big-fat-rawk.png"
@@ -16062,7 +16090,7 @@
 		"Name": "Ceres (Black Sparkle)",
 		"Width": 5.7,
 		"Height": 4.7,
-		"Image": "ksr-ceres-blackspark.png"
+		"Image": "ksr-ceres-black-sparkle.png"
 	},
 	{
 		"Brand": "King Pedals",
@@ -16171,24 +16199,24 @@
 	},
 	{
 		"Brand": "Kingtone",
-		"Name": "Duellist",
+		"Name": "The Duellist",
 		"Width": 4.98,
 		"Height": 3.76,
-		"Image": "kingtone-duelist.png"
+		"Image": "kingtone-duellist.png"
 	},
 	{
 		"Brand": "Kingtone",
-		"Name": "Duellist (Top Jacks)",
+		"Name": "The Duellist (Top Jacks)",
 		"Width": 4.7,
 		"Height": 3.88,
-		"Image": "kingtone-duelist-top.png"
+		"Image": "kingtone-duellist-top.png"
 	},
 	{
 		"Brand": "Kingtone",
-		"Name": "Duellist (Silver)",
+		"Name": "The Duellist (Silver)",
 		"Width": 4.7,
 		"Height": 3.88,
-		"Image": "kingtone-duelist-silver.png"
+		"Image": "kingtone-duellist-silver.png"
 	},
 	{
 		"Brand": "Kingtone",
@@ -16202,7 +16230,7 @@
 		"Name": "miniFUZZ GE",
 		"Width": 2.61,
 		"Height": 4.3,
-		"Image": "Toneking-minifuzz-ge.png"
+		"Image": "kingtone-minifuzz-ge.png"
 	},
 	{
 		"Brand": "Kingtone",
@@ -16213,14 +16241,14 @@
 	},
 	{
 		"Brand": "Kingtone",
-		"Name": "Soloist",
+		"Name": "The Soloist",
 		"Width": 2.38,
 		"Height": 4.53,
-		"Image": "kingtonesoloist.png"
+		"Image": "kingtone-soloist.png"
 	},
 	{
 		"Brand": "Kingtone",
-		"Name": "Soloist (red)",
+		"Name": "The Soloist (red)",
 		"Width": 2.38,
 		"Height": 4.63,
 		"Image": "kingtone-soloist-red.png"
@@ -16230,14 +16258,14 @@
 		"Name": "The Octaland",
 		"Width": 5.09,
 		"Height": 3.7,
-		"Image": "kingtone-the-octaland.png"
+		"Image": "kingtone-octaland.png"
 	},
 	{
 		"Brand": "Kingtone",
 		"Name": "The Octaland Mini",
 		"Width": 2.38,
 		"Height": 4.53,
-		"Image": "kingtone-the-octaland-mini.png"
+		"Image": "kingtone-octaland-mini.png"
 	},
 	{
 		"Brand": "Kingtone",
@@ -16314,7 +16342,7 @@
 		"Name": "Fuzzly Bear",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "kma-audio-machines-fuzzly-bear-silicium-fuzz.png"
+		"Image": "kma-audio-machines-fuzzly-bear.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
@@ -16356,7 +16384,7 @@
 		"Name": "Moai Maea",
 		"Width": 5.75,
 		"Height": 4.9,
-		"Image": "kma-audio-machines-moai-maea-analog-octaver.png"
+		"Image": "kma-audio-machines-moai-maea.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
@@ -16370,7 +16398,7 @@
 		"Name": "Queequeg",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "kma-audio-machines-queequeg-sub-octave.png"
+		"Image": "kma-audio-machines-queequeg.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
@@ -16384,14 +16412,14 @@
 		"Name": "Tyler",
 		"Width": 6,
 		"Height": 4.93,
-		"Image": "kma-audio-machines-tyler-frequency-splitter.png"
+		"Image": "kma-audio-machines-tyler.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
 		"Name": "Tyler Deluxe",
 		"Width": 5.96,
 		"Height": 4.93,
-		"Image": "kma-audio-machines-tyler-deluxe-frequency-splitter.png"
+		"Image": "kma-audio-machines-tyler-deluxe.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
@@ -16419,7 +16447,7 @@
 		"Name": "GA Custom Handheld Tuner",
 		"Width": 3.9,
 		"Height": 2.56,
-		"Image": "korg-gahandheldtuner.png"
+		"Image": "korg-ga-handheld-tuner.png"
 	},
 	{
 		"Brand": "Korg",
@@ -16678,7 +16706,7 @@
 		"Name": "Echo Park",
 		"Width": 3.37,
 		"Height": 5.63,
-		"Image": "line6-echopark.png"
+		"Image": "line6-echo-park.png"
 	},
 	{
 		"Brand": "Line 6",
@@ -16706,42 +16734,42 @@
 		"Name": "HX Stomp",
 		"Width": 7.13,
 		"Height": 5,
-		"Image": "line6-hxstomp.png"
+		"Image": "line6-hx-stomp.png"
 	},
 	{
 		"Brand": "Line 6",
 		"Name": "HX Stomp (Blue)",
 		"Width": 7.13,
 		"Height": 5,
-		"Image": "line6-hxstomp-ltd-blue.png"
+		"Image": "line6-hx-stomp-blue.png"
 	},
 	{
 		"Brand": "Line 6",
 		"Name": "HX Stomp (Cosmic Gray)",
 		"Width": 7.13,
 		"Height": 5,
-		"Image": "line6-hxstomp-gray.png"
+		"Image": "line6-hx-stomp-gray.png"
 	},
 	{
 		"Brand": "Line 6",
 		"Name": "HX Stomp (Red)",
 		"Width": 7.13,
 		"Height": 5,
-		"Image": "line6-hxstomp-red.png"
+		"Image": "line6-hx-stomp-red.png"
 	},
 	{
 		"Brand": "Line 6",
 		"Name": "HX Stomp (White)",
 		"Width": 7.13,
 		"Height": 5,
-		"Image": "line6-hxstomp-white.png"
+		"Image": "line6-hx-stomp-white.png"
 	},
 	{
 		"Brand": "Line 6",
 		"Name": "HX Stomp XL",
 		"Width": 12.91,
 		"Height": 5,
-		"Image": "line6-hxstompxl.png"
+		"Image": "line6-hx-stomp-xl.png"
 	},
 	{
 		"Brand": "Line 6",
@@ -16811,7 +16839,7 @@
 		"Name": "Relay G10S Wireless",
 		"Width": 3.5,
 		"Height": 5,
-		"Image": "line6-g10srelay.png"
+		"Image": "line6-relay-g10s.png"
 	},
 	{
 		"Brand": "Line 6",
@@ -16962,7 +16990,7 @@
 	},
 	{
 		"Brand": "Lovetone",
-		"Name": "Doppelganger",
+		"Name": "Doppelgänger",
 		"Width": 7.48,
 		"Height": 7.87,
 		"Image": "lovetone-doppelganger.png"
@@ -26987,10 +27015,17 @@
 	},
 	{
 		"Brand": "TC Helicon",
+		"Name": "Switch-3",
+		"Width": 15.25,
+		"Height": 3.24,
+		"Image": "tc-helicon-switch-3.png"
+	},
+	{
+		"Brand": "TC Helicon",
 		"Name": "Switch-6",
 		"Width": 15.25,
 		"Height": 3.24,
-		"Image": "tchelicon-switch6.png"
+		"Image": "tc-helicon-switch-6.png"
 	},
 	{
 		"Brand": "TC Helicon",
