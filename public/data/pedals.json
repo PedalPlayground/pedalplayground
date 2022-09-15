@@ -20287,13 +20287,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Super Badass Distortion",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-sbdistortion.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Super Comp",
 		"Width": 2.57,
 		"Height": 4.33,
@@ -20305,6 +20298,20 @@
 		"Width": 1.74,
 		"Height": 3.7,
 		"Image": "mxr-sugardrive.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Super Badass Distortion",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-sbdistortion.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Super Badass Dynamic Overdrive",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-sbdoverdrive.png"
 	},
 	{
 		"Brand": "MXR",
