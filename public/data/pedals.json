@@ -13458,7 +13458,7 @@
 		"Name": "Chorus Mini",
 		"Width": 1.96,
 		"Height": 3.65,
-		"Image": "ibanez-minichorus.png"
+		"Image": "ibanez-chorus-mini.png"
 	},
 	{
 		"Brand": "Ibanez",
@@ -13521,7 +13521,7 @@
 		"Name": "Super Metal Mini",
 		"Width": 1.96,
 		"Height": 3.65,
-		"Image": "ibanez-supermetalmini.png"
+		"Image": "ibanez-super-metal-mini.png"
 	},
 	{
 		"Brand": "Ibanez",
@@ -15327,7 +15327,7 @@
 		"Name": "30ms Double Tracker",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-30mstracker.png"
+		"Image": "keeley-30ms-double-tracker.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -15397,35 +15397,42 @@
 		"Name": "Caverns V2",
 		"Width": 3.7,
 		"Height": 4.9,
-		"Image": "keeley-cavernsv2.png"
+		"Image": "keeley-caverns-v2.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Caverns V2 (Bad Snacks)",
 		"Width": 3.7,
 		"Height": 4.9,
-		"Image": "keeley-cavernsv2-badsnacks.png"
+		"Image": "keeley-caverns-v2-bad-snacks.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Caverns V2 (Black Neon)",
 		"Width": 3.7,
 		"Height": 4.9,
-		"Image": "keeley-cavernsv2-blacksneon.png"
+		"Image": "keeley-caverns-v2-black-neon.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Caverns V2 (Black Sparkle)",
 		"Width": 3.7,
 		"Height": 4.9,
-		"Image": "keeley-cavernsv2-blacksparkle.png"
+		"Image": "keeley-caverns-v2-black-sparkle.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Caverns V2 (Bohemian Bunny)",
 		"Width": 3.7,
 		"Height": 4.9,
-		"Image": "keeley-cavernsv2-bohobunny.png"
+		"Image": "keeley-caverns-v2-bohemian-bunny.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Caverns V2 (Waves)",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "keeley-caverns-v2-waves.png"
 	},
 	{
 		"Brand": "Keeley",
