@@ -21848,6 +21848,13 @@
 	},
 	{
 		"Brand": "Orange",
+		"Name": "Distortion",
+		"Width": 3.62,
+		"Height": 4.75,
+		"Image": "orange-distortion.png"
+	},
+	{
+		"Brand": "Orange",
 		"Name": "FS-1 Mini Footswitch",
 		"Width": "1.5",
 		"Height": "3.66",
@@ -21880,6 +21887,20 @@
 		"Width": 1.5,
 		"Height": 3.5,
 		"Image": "orange-omec-teleport.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "Phaser",
+		"Width": 3.62,
+		"Height": 4.75,
+		"Image": "orange-phaser.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "Sustain",
+		"Width": 3.62,
+		"Height": 4.75,
+		"Image": "orange-sustain.png"
 	},
 	{
 		"Brand": "Orange",
