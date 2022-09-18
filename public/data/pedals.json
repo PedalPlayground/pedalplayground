@@ -7023,22 +7023,22 @@
 	{
 		"Brand": "Diezel",
 		"Name": "Herbert",
-		"Width": 5,
-		"Height": 7.25,
+		"Width": 4.5,
+		"Height": 6.5,
 		"Image": "diezel-herbert.png"
 	},
 	{
 		"Brand": "Diezel",
 		"Name": "VH4",
-		"Width": 5,
-		"Height": 7.25,
+		"Width": 4.5,
+		"Height": 6.5,
 		"Image": "diezel-vh4.png"
 	},
 	{
 		"Brand": "Diezel",
 		"Name": "VH4-2",
-		"Width": 5,
-		"Height": 7.25,
+		"Width": 4.5,
+		"Height": 6.5,
 		"Image": "diezel-vh4-2.png"
 	},
 	{
@@ -11204,14 +11204,14 @@
 		"Name": "The City",
 		"Width": 2.6,
 		"Height": 5,
-		"Image": "foxpedal-thecity.png"
+		"Image": "foxpedal-city.png"
 	},
 	{
 		"Brand": "Foxpedal",
 		"Name": "The Wave",
 		"Width": 5.6,
 		"Height": 4.77,
-		"Image": "foxpedal-thewave.png"
+		"Image": "foxpedal-wave.png"
 	},
 	{
 		"Brand": "Foxpedal",
@@ -11533,7 +11533,7 @@
 		"Name": "Sir-Compre",
 		"Width": 2.75,
 		"Height": 4.625,
-		"Image": "friedman-sircompre.png"
+		"Image": "friedman-sir-compre.png"
 	},
 	{
 		"Brand": "Friedman",
@@ -12051,28 +12051,28 @@
 		"Name": "Soul-Bender",
 		"Width": 2.56,
 		"Height": 4.65,
-		"Image": "fulltone-soulbender.png"
+		"Image": "fulltone-soul-bender.png"
 	},
 	{
 		"Brand": "Fulltone",
 		"Name": "Supa-Trem",
 		"Width": 6,
 		"Height": 3.25,
-		"Image": "fulltone-supatrem.png"
+		"Image": "fulltone-supa-trem.png"
 	},
 	{
 		"Brand": "Fulltone",
 		"Name": "Supa-Trem 2",
 		"Width": 5.25,
 		"Height": 4,
-		"Image": "fulltone-supatrem2.png"
+		"Image": "fulltone-supa-trem-2.png"
 	},
 	{
 		"Brand": "Fulltone",
 		"Name": "Supa-Trem Jr",
 		"Width": 3.93,
 		"Height": 4,
-		"Image": "fulltone-supatrem-jr.png"
+		"Image": "fulltone-supa-trem-jr.png"
 	},
 	{
 		"Brand": "Fulltone",
@@ -13262,7 +13262,7 @@
 		"Name": "Binary Mod",
 		"Width": 4.76,
 		"Height": 2.8,
-		"Image": "hotone-binarymod.png"
+		"Image": "hotone-binary-mod.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -14053,7 +14053,7 @@
 		"Name": "Tim Pierce",
 		"Width": 4.9,
 		"Height": 3,
-		"Image": "jrockett-timpierce.png"
+		"Image": "jrockett-tim-pierce.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -16482,7 +16482,7 @@
 		"Name": "Pitchblack Advance",
 		"Width": 2.68,
 		"Height": 4.37,
-		"Image": "korg-pitchblackadvance.png"
+		"Image": "korg-pitchblack-advance.png"
 	},
 	{
 		"Brand": "Korg",
@@ -16678,7 +16678,7 @@
 		"Name": "Pilot",
 		"Width": 2.25,
 		"Height": 4.68,
-		"Image": "littlerobbie-pilot.png"
+		"Image": "little-robbie-pilot.png"
 	},
 	{
 		"Brand": "Line 6",
@@ -16874,7 +16874,7 @@
 		"Name": "Mini Dual Latching Footswitch",
 		"Width": 3.68,
 		"Height": 1.72,
-		"Image": "loopi-dualfootswitch.png"
+		"Image": "loopi-dual-footswitch.png"
 	},
 	{
 		"Brand": "Loopi",
@@ -16937,7 +16937,7 @@
 		"Name": "Hermida Zendrive",
 		"Width": 2.5,
 		"Height": 4.37,
-		"Image": "lovepedal-hermidazendrive.png"
+		"Image": "lovepedal-hermida-zendrive.png"
 	},
 	{
 		"Brand": "Lovepedal",
@@ -17049,7 +17049,7 @@
 		"Name": "M-Audio EX-P",
 		"Width": 3.75,
 		"Height": 8.63,
-		"Image": "maudio-expression.png"
+		"Image": "m-audio-expression.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -17091,7 +17091,7 @@
 		"Name": "Bluebird Overdrive",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "m7adprof-bluebird.png"
+		"Image": "mad-professor-bluebird.png"
 	},
 	{
 		"Brand": "Mad Professor",
