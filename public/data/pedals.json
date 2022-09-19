@@ -12772,7 +12772,7 @@
 		"Name": "Special Request",
 		"Width": 2.84,
 		"Height": 4.77,
-		"Image": "greer-specialrequest.png"
+		"Image": "greer-special-request.png"
 	},
 	{
 		"Brand": "Greer Amps",
@@ -12786,14 +12786,14 @@
 		"Name": "Super Hornet",
 		"Width": 4.9,
 		"Height": 3.8,
-		"Image": "greer-superhornet.png"
+		"Image": "greer-super-hornet.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Sure Shot",
 		"Width": 1.79,
 		"Height": 3.64,
-		"Image": "greer-sureshot.png"
+		"Image": "greer-sure-shot.png"
 	},
 	{
 		"Brand": "Greer Amps",
@@ -12821,7 +12821,7 @@
 		"Name": "Tone Smuggler",
 		"Width": 2.84,
 		"Height": 4.9,
-		"Image": "greer-tonesmuggler.png"
+		"Image": "greer-tone-smuggler.png"
 	},
 	{
 		"Brand": "Ground Control",
@@ -13199,7 +13199,7 @@
 		"Name": "Lamb",
 		"Width": 4.70,
 		"Height": 3.80,
-		"Image": "jetpedals-lamb.png"
+		"Image": "jet-lamb.png"
 	},
 	{
 		"Brand": "Horizon Devices",
@@ -13458,7 +13458,7 @@
 		"Name": "Analog Delay Mini",
 		"Width": 1.96,
 		"Height": 3.65,
-		"Image": "ibanez-analogdelaymini.png"
+		"Image": "ibanez-analog-delay-mini.png"
 	},
 	{
 		"Brand": "Ibanez",
@@ -14718,7 +14718,7 @@
 		"Name": "Double Barrel V4",
 		"Width": 4.7,
 		"Height": 3.96,
-		"Image": "jhs-doublebarrel-v4.png"
+		"Image": "jhs-double-barrel-v4.png"
 	},
 	{
 		"Brand": "JHS",
@@ -17056,21 +17056,21 @@
 		"Name": "1 Overdrive",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-1od.png"
+		"Image": "mad-professor-1-od.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Amber Overdrive",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-amber.png"
+		"Image": "mad-professor-amber.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Amber Overdrive (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-amber-hw.png"
+		"Image": "mad-professor-amber-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -27016,8 +27016,8 @@
 	{
 		"Brand": "TC Helicon",
 		"Name": "Switch-3",
-		"Width": 15.25,
-		"Height": 3.24,
+		"Width": 7,
+		"Height": 3,
 		"Image": "tc-helicon-switch-3.png"
 	},
 	{
