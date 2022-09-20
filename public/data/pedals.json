@@ -10195,7 +10195,7 @@
 		"Brand": "Empress",
 		"Name": "Echosystem",
 		"Width": 5.7,
-		"Height": 3.93,
+		"Height": 3.91,
 		"Image": "empress-echosystem.png"
 	},
 	{
@@ -10221,9 +10221,16 @@
 	},
 	{
 		"Brand": "Empress",
+		"Name": "Midibox",
+		"Width": 4.5,
+		"Height": 2.61,
+		"Image": "empress-midibox.png"
+	},
+	{
+		"Brand": "Empress",
 		"Name": "Midibox2",
 		"Width": 4.5,
-		"Height": 2.62,
+		"Height": 2.61,
 		"Image": "empress-midibox2.png"
 	},
 	{
@@ -10258,7 +10265,7 @@
 		"Brand": "Empress",
 		"Name": "Reverb",
 		"Width": 5.7,
-		"Height": 3.93,
+		"Height": 3.91,
 		"Image": "empress-reverb.png"
 	},
 	{
