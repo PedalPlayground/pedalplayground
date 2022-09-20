@@ -11957,10 +11957,45 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Venomous Octopus",
+		"Width": 5.03937,
+		"Height": 5.98425,
+		"Image": "ftelettronica-venomous-octopus.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Wave Reflector",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-wave-reflector.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Weird Sound Generator",
 		"Width": 4.17323,
 		"Height": 4.92126,
 		"Image": "ftelettronica-weird-sound-generator.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Weird Sound Generator Elite",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-weird-sound-generator-elite.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Zero Sum Game",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-zero-sum-game.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Zeroth Law",
+		"Width": 4.13386,
+		"Height": 4.92126,
+		"Image": "ftelettronica-zeroth-law.png"
 	},
 	{
 		"Brand": "Fuchs",
@@ -14410,14 +14445,14 @@
 		"Name": "J-Boost",
 		"Width": 2.62,
 		"Height": 4.39,
-		"Image": "janglebox-jboost.png"
+		"Image": "janglebox-j-boost.png"
 	},
 	{
 		"Brand": "JangleBox",
 		"Name": "JB Nano Compressor",
 		"Width": 2.62,
 		"Height": 4.39,
-		"Image": "janglebox-jbnano.png"
+		"Image": "janglebox-jb-nano.png"
 	},
 	{
 		"Brand": "JangleBox",
@@ -15705,7 +15740,7 @@
 		"Name": "Java Boost",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-javaboost.png"
+		"Image": "keeley-java-boost.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -16016,6 +16051,13 @@
 		"Image": "kemper-stage.png"
 	},
 	{
+		"Brand": "Kernom",
+		"Name": "Ridge",
+		"Width": 6.5,
+		"Height": 4.4,
+		"Image": "kernom-ridge.png"
+	},
+	{
 		"Brand": "KHDK",
 		"Name": "Abyss",
 		"Width": 2.59,
@@ -16307,14 +16349,14 @@
 		"Name": "Centaur (Gold)",
 		"Width": 6.5,
 		"Height": 5.03,
-		"Image": "klon-centaurgold.png"
+		"Image": "klon-centaur-gold.png"
 	},
 	{
 		"Brand": "Klon",
 		"Name": "Centaur (Horsey)",
 		"Width": 6.5,
 		"Height": 5.03,
-		"Image": "klon-centaurhorsey.png"
+		"Image": "klon-centaur-horsey.png"
 	},
 	{
 		"Brand": "Klon",
@@ -16510,7 +16552,7 @@
 		"Name": "Pitchblack Mini",
 		"Width": 1.77,
 		"Height": 3.66,
-		"Image": "korg-pitchblackmini.png"
+		"Image": "korg-pitchblack-mini.png"
 	},
 	{
 		"Brand": "Korg",
