@@ -4768,6 +4768,13 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Somersault (Black LE)",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "caroline-somersault-black.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Somersault (Cosmic Purple)",
 		"Width": 3.7,
 		"Height": 4.88,
