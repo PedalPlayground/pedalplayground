@@ -11936,10 +11936,24 @@
 	},
 	{
 		"Brand": "FTelettronica",
+		"Name": "Tuwat Resonant Envelope Filter",
+		"Width": 5.19685,
+		"Height": 5.98425,
+		"Image": "ftelettronica-tuwat.png"
+	},
+	{
+		"Brand": "FTelettronica",
 		"Name": "Twin Oscillator Phaser/Vibrato",
 		"Width": 7.87402,
 		"Height": 5,
 		"Image": "ftelettronica-twin-oscillator.png"
+	},
+	{
+		"Brand": "FTelettronica",
+		"Name": "Utopian Fuzz",
+		"Width": 2.79528,
+		"Height": 4.6063,
+		"Image": "ftelettronica-utopian-fuzz.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -11988,7 +12002,7 @@
 		"Name": "Fat Boost FB-3",
 		"Width": 2.65,
 		"Height": 4.5,
-		"Image": "fulltone-fatboost.png"
+		"Image": "fulltone-fat-boost.png"
 	},
 	{
 		"Brand": "Fulltone",
@@ -14746,7 +14760,7 @@
 		"Name": "Haunting Mids",
 		"Width": 2.93,
 		"Height": 4.98,
-		"Image": "jhs-hauntingmids.png"
+		"Image": "jhs-haunting-mids.png"
 	},
 	{
 		"Brand": "JHS",
@@ -14788,14 +14802,14 @@
 		"Name": "Lucky Cat",
 		"Width": 2.82,
 		"Height": 5,
-		"Image": "jhs-luckycat.png"
+		"Image": "jhs-lucky-cat-pink.png"
 	},
 	{
 		"Brand": "JHS",
 		"Name": "Lucky Cat (Blackout)",
 		"Width": 2.82,
 		"Height": 5,
-		"Image": "jhs-luckycat-blackout.png"
+		"Image": "jhs-lucky-cat-blackout.png"
 	},
 	{
 		"Brand": "JHS",
@@ -14830,7 +14844,7 @@
 		"Name": "Morning Glory V4",
 		"Width": 2.93,
 		"Height": 4.98,
-		"Image": "jhs-morningglory-v4.png"
+		"Image": "jhs-morning-glory-v4.png"
 	},
 	{
 		"Brand": "JHS",
@@ -14893,7 +14907,7 @@
 		"Name": "Panther Cub",
 		"Width": 4.99,
 		"Height": 3.88,
-		"Image": "jhs-panthercub.png"
+		"Image": "jhs-panther-cub.png"
 	},
 	{
 		"Brand": "JHS",
@@ -14914,7 +14928,7 @@
 		"Name": "Pink Panther",
 		"Width": 2.75,
 		"Height": 4.88,
-		"Image": "jhs-pinkpanther.png"
+		"Image": "jhs-pink-panther.png"
 	},
 	{
 		"Brand": "JHS",
@@ -14935,7 +14949,7 @@
 		"Name": "Pulp n' Peel V4",
 		"Width": 2.93,
 		"Height": 4.98,
-		"Image": "jhs-pulpnpeel-v4.png"
+		"Image": "jhs-pulp-n-peel-v4.png"
 	},
 	{
 		"Brand": "JHS",
@@ -14977,7 +14991,7 @@
 		"Name": "Spring Tank",
 		"Width": 2.82,
 		"Height": 5,
-		"Image": "jhs-springtank.png"
+		"Image": "jhs-spring-tank.png"
 	},
 	{
 		"Brand": "JHS",
@@ -15635,7 +15649,7 @@
 		"Name": "Fuzz Bender (Ghost Prism)",
 		"Width": 4.7,
 		"Height": 3.79,
-		"Image": "keeley-fuzz-bender-ghostprism.png"
+		"Image": "keeley-fuzz-bender-ghost-prism.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -15901,21 +15915,21 @@
 		"Name": "Super Phat Mod",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-superphatmod.png"
+		"Image": "keeley-super-phat-mod.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Super Phat Mod (Custom Shop)",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-superphatmod-custom.png"
+		"Image": "keeley-super-phat-mod-custom.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Super Phat Mod (Germanium)",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-superphatmod-germanium.png"
+		"Image": "keeley-super-phat-mod-germanium.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -16580,7 +16594,7 @@
 		"Name": "The Difference Engine",
 		"Width": 5.96,
 		"Height": 4.8,
-		"Image": "laney-thedifferenceengine.png"
+		"Image": "laney-difference-engine.png"
 	},
 	{
 		"Brand": "Laney Black Country Customs",
@@ -17266,14 +17280,14 @@
 		"Name": "Simble Overdrive",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-simbleod.png"
+		"Image": "mad-professor-simble-od.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Simble Predriver",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-simble.png"
+		"Image": "mad-professor-simble-predriver.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -17287,21 +17301,21 @@
 		"Name": "Snow White AutoWah",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-snowwhite.png"
+		"Image": "mad-professor-snow-white.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Snow White AutoWah (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-snowwhite-hw.png"
+		"Image": "mad-professor-snow-white-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Snow White Bass AutoWah (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-snowwhitebass-hw.png"
+		"Image": "mad-professor-snow-white-bass-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -17329,21 +17343,21 @@
 		"Name": "Sweet Honey Overdrive",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-sweethoney.png"
+		"Image": "mad-professor-sweet-honey.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Sweet Honey Overdrive (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-sweethoney-hw.png"
+		"Image": "mad-professor-sweet-honey-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Sweet Honey Overdrive Deluxe",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-sweethoney-deluxe.png"
+		"Image": "mad-professor-sweet-honey-deluxe.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -17417,13 +17431,6 @@
 	},
 	{
 		"Brand": "Malekko",
-		"Name": "Ekko 616 MKII FE",
-		"Width": 2.72,
-		"Height": 4.5,
-		"Image": "malekko-ekko616-mk2.png"
-	},
-	{
-		"Brand": "Malekko",
 		"Name": "Charlie Foxtrot",
 		"Width": 2.72,
 		"Height": 4.5,
@@ -17442,6 +17449,13 @@
 		"Width": 2.72,
 		"Height": 4.5,
 		"Image": "malekko-downer.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Ekko 616 MKII FE",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "malekko-ekko-616-mk2.png"
 	},
 	{
 		"Brand": "Malekko",
@@ -22146,6 +22160,27 @@
 		"Width": 2.6,
 		"Height": 5.59,
 		"Image": "origin-sliderig-compact-deluxe-mk2.png"
+	},
+	{
+		"Brand": "Oto Machines",
+		"Name": "Bam",
+		"Width": 5.71,
+		"Height": 5.92,
+		"Image": "oto-machines-bam.png"
+	},
+	{
+		"Brand": "Oto Machines",
+		"Name": "Bim",
+		"Width": 5.71,
+		"Height": 5.92,
+		"Image": "oto-machines-bim.png"
+	},
+	{
+		"Brand": "Oto Machines",
+		"Name": "Boum",
+		"Width": 5.71,
+		"Height": 5.92,
+		"Image": "oto-machines-boum.png"
 	},
 	{
 		"Brand": "Outlaw Effects",
