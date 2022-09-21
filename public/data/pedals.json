@@ -596,6 +596,13 @@
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Rewind",
+		"Width": 2.78,
+		"Height": 4.7,
+		"Image": "alexander-rewind.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Riff",
 		"Width": 2.78,
 		"Height": 4.7,
@@ -15874,6 +15881,13 @@
 		"Width": 18.5,
 		"Height": 10.24,
 		"Image": "kemper-stage.png"
+	},
+	{
+		"Brand": "Kernom",
+		"Name": "Ridge",
+		"Width": 6.46,
+		"Height": 4.47,
+		"Image": "kernom-ridge.png"
 	},
 	{
     "Brand": "KHDK",
