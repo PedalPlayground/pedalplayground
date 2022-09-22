@@ -11334,6 +11334,13 @@
 	},
 	{
 		"Brand": "Free The Tone",
+		"Name": "Cosmic Wave CW-1Y",
+		"Width": 2.6,
+		"Height": 4.66,
+		"Image": "freethetone-cosmic-wave.png"
+	},
+	{
+		"Brand": "Free The Tone",
 		"Name": "Crunch Chime CC-1B",
 		"Width": 2.8,
 		"Height": 4.53,
@@ -11384,8 +11391,8 @@
 	{
 		"Brand": "Free The Tone",
 		"Name": "Motion Loop ML-1L",
-		"Width": 2.6,
-		"Height": 4.64,
+		"Width": 2.61,
+		"Height": 4.66,
 		"Image": "freethetone-motion-loop.png"
 	},
 	{
@@ -19315,8 +19322,8 @@
 	{
 		"Brand": "Mosky",
 		"Name": "Dual Switch (Jinx)",
-		"Width": 3.7,
-		"Height": 1.68,
+		"Width": 1.68,
+		"Height": 3.7,
 		"Image": "mosky-dual-switch-jinx.png"
 	},
 	{
