@@ -14428,6 +14428,20 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "3 Series Harmonic Trem",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3seriesharmonictrem.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "3 Series Octave Reverb",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3seriesoctavereverb.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "3 Series Overdrive",
 		"Width": 2.68,
 		"Height": 4.42,
