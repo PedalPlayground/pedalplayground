@@ -25938,36 +25938,50 @@
 	{
 		"Brand": "Supro",
 		"Name": "Boost",
-		"Width": 2.6,
-		"Height": 4.8,
+		"Width": 2.65,
+		"Height": 4.9,
 		"Image": "supro-boost.png"
 	},
 	{
 		"Brand": "Supro",
 		"Name": "Chorus",
-		"Width": 2.6,
+		"Width": 2.58,
 		"Height": 4.8,
 		"Image": "supro-chorus.png"
 	},
 	{
 		"Brand": "Supro",
+		"Name": "Delay",
+		"Width": 2.65,
+		"Height": 4.9,
+		"Image": "supro-delay.png"
+	},
+	{
+		"Brand": "Supro",
 		"Name": "Drive",
-		"Width": 2.6,
-		"Height": 4.8,
+		"Width": 2.65,
+		"Height": 4.9,
 		"Image": "supro-drive.png"
 	},
 	{
 		"Brand": "Supro",
-		"Name": "Fuzz",
-		"Width": 2.6,
+		"Name": "Flanger",
+		"Width": 2.58,
 		"Height": 4.8,
+		"Image": "supro-flanger.png"
+	},
+	{
+		"Brand": "Supro",
+		"Name": "Fuzz",
+		"Width": 2.65,
+		"Height": 4.9,
 		"Image": "supro-fuzz.png"
 	},
 	{
 		"Brand": "Supro",
 		"Name": "Tremolo",
-		"Width": 2.6,
-		"Height": 4.8,
+		"Width": 2.65,
+		"Height": 4.9,
 		"Image": "supro-tremolo.png"
 	},
 	{
