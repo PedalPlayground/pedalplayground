@@ -3774,6 +3774,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GT-8 Guitar Effects Processor",
+		"Width": 20.28,
+		"Height": 9.92,
+		"Image": "boss-gt8.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GT-1000 Guitar Effects Processor",
 		"Width": 18.187,
 		"Height": 9.812,
