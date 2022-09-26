@@ -12280,8 +12280,8 @@
 	{
 		"Brand": "Garage Tone",
 		"Name": "Drive Train",
-		"Width": 4.13,
-		"Height": 7.6,
+		"Width": 3.14961,
+		"Height": 4.72441,
 		"Image": "garage-tone-drive-train.png"
 	},
 	{
@@ -13794,7 +13794,7 @@
 		"Name": "FrantaBit",
 		"Width": 2.5,
 		"Height": 4.7,
-		"Image": "ironether-frantabit.png"
+		"Image": "iron-ether-frantabit.png"
 	},
 	{
 		"Brand": "Iron Ether",
