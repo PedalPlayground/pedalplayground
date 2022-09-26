@@ -12278,6 +12278,13 @@
 		"Image": "gamechanger-audio-wet.png"
 	},
 	{
+		"Brand": "Garage Tone",
+		"Name": "Drive Train",
+		"Width": 4.13,
+		"Height": 7.6,
+		"Image": "garage-tone-drive-train.png"
+	},
+	{
 		"Brand": "Gecko Pedals",
 		"Name": "Geckoplex EP-5",
 		"Width": 7.4,
@@ -12751,28 +12758,28 @@
 		"Name": "Lightspeed (Gameday Black)",
 		"Width": 2.82,
 		"Height": 4.9,
-		"Image": "greer-lightspeed-gamedayblack.png"
+		"Image": "greer-lightspeed-gameday-black.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Lightspeed (Pink/White)",
 		"Width": 2.82,
 		"Height": 4.9,
-		"Image": "greer-lightspeed-pinkwhite.png"
+		"Image": "greer-lightspeed-pink-white.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Lightspeed (Reverse Daphne)",
 		"Width": 2.82,
 		"Height": 4.9,
-		"Image": "greer-lightspeed-revdaphne.png"
+		"Image": "greer-lightspeed-reverse-daphne.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Lightspeed (White/Green/Black)",
 		"Width": 2.82,
 		"Height": 4.9,
-		"Image": "greer-lightspeed-whitegreenblack.png"
+		"Image": "greer-lightspeed-white-green-black.png"
 	},
 	{
 		"Brand": "Greer Amps",
@@ -15971,7 +15978,7 @@
 		"Name": "Synth-1 (Nick Reinhart)",
 		"Width": 3.84,
 		"Height": 4.9,
-		"Image": "keeley-synth-1-nickreinhart.png"
+		"Image": "keeley-synth-1-nick-reinhart.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -18260,7 +18267,7 @@
 		"Name": "Lo-Fi Delay",
 		"Width": 2.62,
 		"Height": 4.3,
-		"Image": "miaudio-lofi-delay.png"
+		"Image": "mi-audio-lo-fi-delay.png"
 	},
 	{
 		"Brand": "MI Audio",
@@ -18309,14 +18316,14 @@
 		"Name": "The Amp",
 		"Width": 8.5,
 		"Height": 6.56,
-		"Image": "milkman-theamp.png"
+		"Image": "milkman-the-amp.png"
 	},
 	{
 		"Brand": "Milkman Sound",
 		"Name": "The Amp (Black)",
 		"Width": 8.5,
 		"Height": 6.56,
-		"Image": "milkman-theamp-black.png"
+		"Image": "milkman-the-amp-black.png"
 	},
 	{
 		"Brand": "Minotaur Sonic Terrors",
@@ -18344,28 +18351,28 @@
 		"Name": "28mm Zip Tie Mount ",
 		"Width": 1.1,
 		"Height": 1.1,
-		"Image": "ziptiemount-lg.png"
+		"Image": "zip-tie-mount-lg.png"
 	},
 	{
 		"Brand": "Misc",
 		"Name": "20mm Zip Tie Mount ",
 		"Width": 0.75,
 		"Height": 0.75,
-		"Image": "ziptiemount-lg.png"
+		"Image": "zip-tie-mount-lg.png"
 	},
 	{
 		"Brand": "Misc",
 		"Name": "28mm Zip Tie Mount x 4",
 		"Width": 4.1,
 		"Height": 1.1,
-		"Image": "ziptiemount-lg-x4.png"
+		"Image": "zip-tie-mount-lg-x4.png"
 	},
 	{
 		"Brand": "Misc",
 		"Name": "25mm Zip Tie Mount",
 		"Width": 0.98,
 		"Height": 0.98,
-		"Image": "ziptiemount-sm.png"
+		"Image": "zip-tie-mount-sm.png"
 	},
 	{
 		"Brand": "Mission",
