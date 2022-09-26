@@ -7903,20 +7903,6 @@
 		"Image": "dunlop-ffm4.png"
 	},
 	{
-		"Brand": "Dunlop",
-		"Name": "MC404 CAE Wah",
-		"Width": 4.41,
-		"Height": 10,
-		"Image": "dunlop-mc404.png"
-	},
-	{
-		"Brand": "Dunlop",
-		"Name": "Mini 535Q Wah",
-		"Width": 3.13,
-		"Height": 5.24,
-		"Image": "dunlop-mini-535q.png"
-	},
-	{
     	"Brand": "Dunlop",
     	"Name": "Rotovibe",
 		"Width": 4,
@@ -12366,14 +12352,14 @@
 		"Name": "Specular Tempus",
 		"Width": 4.72,
 		"Height": 3.66,
-		"Image": "gfi-speculartempus.png"
+		"Image": "gfi-specular-tempus.png"
 	},
 	{
 		"Brand": "GFI System",
 		"Name": "Specular Tempus (Black Edition)",
 		"Width": 4.72,
 		"Height": 3.66,
-		"Image": "gfi-speculartempus-black.png"
+		"Image": "gfi-specular-tempus-black.png"
 	},
 	{
 		"Brand": "GFI System",
@@ -14193,14 +14179,14 @@
 		"Name": "Broken Arrow",
 		"Width": 2.7,
 		"Height": 5.13,
-		"Image": "jackson-brokenarrow.png"
+		"Image": "jackson-broken-arrow.png"
 	},
 	{
 		"Brand": "Jackson Audio",
 		"Name": "Broken Arrow (Black)",
 		"Width": 2.7,
 		"Height": 5.13,
-		"Image": "jackson-brokenarrow-black.png"
+		"Image": "jackson-broken-arrow-black.png"
 	},
 	{
 		"Brand": "Jackson Audio",
@@ -14214,7 +14200,7 @@
 		"Name": "Golden Boy",
 		"Width": 2.7,
 		"Height": 5.13,
-		"Image": "jacksonaudio-goldenboy.png"
+		"Image": "jackson-golden-boy.png"
 	},
 	{
 		"Brand": "Jackson Audio",
@@ -14473,7 +14459,7 @@
 		"Name": "The Byrds",
 		"Width": 3.68,
 		"Height": 4.82,
-		"Image": "janglebox-thebyrds.png"
+		"Image": "janglebox-byrds.png"
 	},
 	{
 		"Brand": "Jet",
@@ -15082,7 +15068,7 @@
 		"Name": "Twin Twelve V2",
 		"Width": 2.93,
 		"Height": 4.98,
-		"Image": "jhs-twintwelve-v2.png"
+		"Image": "jhs-twin-twelve-v2.png"
 	},
 	{
 		"Brand": "JHS",
@@ -15159,7 +15145,7 @@
 		"Name": "American Sound",
 		"Width": 3.42,
 		"Height": 4.645669,
-		"Image": "joyo-americansound.png"
+		"Image": "joyo-american-sound.png"
 	},
 	{
 		"Brand": "Joyo",
