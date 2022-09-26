@@ -431,7 +431,14 @@
 		"Name": "G-Drive",
 		"Width": 5.433071,
 		"Height": 6.850394,
-		"Image": "akai-pro-d2g.png"
+		"Image": "akai-g-drive.png"
+	},
+	{
+		"Brand": "Akai Professional",
+		"Name": "E2 Headrush",
+		"Width": 5.51,
+		"Height": 7.22,
+		"Image": "akai-e2-headrush.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -12338,14 +12345,14 @@
 		"Name": "Specular Reverb V2",
 		"Width": 4.7,
 		"Height": 2.5,
-		"Image": "gfi-specularreverbv2.png"
+		"Image": "gfi-specular-reverb-v2.png"
 	},
 	{
 		"Brand": "GFI System",
 		"Name": "Specular Reverb V3",
 		"Width": 4.7,
 		"Height": 2.5,
-		"Image": "gfi-specularreverbv3.png"
+		"Image": "gfi-specular-reverb-v3.png"
 	},
 	{
 		"Brand": "GFI System",
@@ -12674,35 +12681,35 @@
 		"Name": "Arbuckle Trem",
 		"Width": 2.84,
 		"Height": 4.9,
-		"Image": "greer-arbuckletrem.png"
+		"Image": "greer-arbuckle-trem.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Black Fuzz",
 		"Width": 2.84,
 		"Height": 4.77,
-		"Image": "greer-blackfuzz.png"
+		"Image": "greer-black-fuzz.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Black Tiger",
 		"Width": 2.84,
 		"Height": 4.9,
-		"Image": "greer-blacktiger.png"
+		"Image": "greer-black-tiger.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Burning Goat",
 		"Width": 2.84,
 		"Height": 4.9,
-		"Image": "greer-burninggoat.png"
+		"Image": "greer-burning-goat.png"
 	},
 	{
 		"Brand": "Greer Amps",
 		"Name": "Fish Press",
 		"Width": 2.84,
 		"Height": 4.9,
-		"Image": "greer-fishpress.png"
+		"Image": "greer-fish-press.png"
 	},
 	{
 		"Brand": "Greer Amps",
@@ -15691,7 +15698,7 @@
 		"Name": "Holy Fuzz",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-holyfuzz.png"
+		"Image": "keeley-holy-fuzz.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -15712,7 +15719,7 @@
 		"Name": "Hydra (Ariel Posen)",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "keeley-hydra-arielposen.png"
+		"Image": "keeley-hydra-ariel-posen.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -18134,7 +18141,7 @@
 		"Name": "Ottobit Jr.",
 		"Width": 4.25,
 		"Height": 4.5,
-		"Image": "meris-ottobitjr.png"
+		"Image": "meris-ottobit-jr.png"
 	},
 	{
 		"Brand": "Meris",
@@ -18155,14 +18162,14 @@
 		"Name": "Flux-Drive",
 		"Width": 2.75,
 		"Height": 4.75,
-		"Image": "mesaboogie-fluxdrive.png"
+		"Image": "mesa-boogie-flux-drive.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
 		"Name": "Grid Slammer",
 		"Width": 2.75,
 		"Height": 4.75,
-		"Image": "mesaboogie-gridslammer.png"
+		"Image": "mesa-boogie-grid-slammer.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
@@ -18176,7 +18183,7 @@
 		"Name": "Mark V Footswitch",
 		"Width": 13.625,
 		"Height": 5.625,
-		"Image": "mesaboogie-mark-v.png"
+		"Image": "mesa-boogie-mark-v.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
@@ -18204,7 +18211,7 @@
 		"Name": "Tone-Burst",
 		"Width": 2.75,
 		"Height": 4.75,
-		"Image": "mesaboogie-toneburst.png"
+		"Image": "mesa-boogie-tone-burst.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
@@ -18218,7 +18225,7 @@
 		"Name": "Blues Pro",
 		"Width": 2.62,
 		"Height": 4.3,
-		"Image": "miaudio-bluespro.png"
+		"Image": "mi-audio-blues-pro.png"
 	},
 	{
 		"Brand": "MI Audio",
@@ -18246,7 +18253,7 @@
 		"Name": "Crunchbox V2",
 		"Width": 2.62,
 		"Height": 4.3,
-		"Image": "miaudio-crunch-box-v2.png"
+		"Image": "mi-audio-crunchbox-v2.png"
 	},
 	{
 		"Brand": "MI Audio",
