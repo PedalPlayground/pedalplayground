@@ -6133,6 +6133,13 @@
 	},
 	{
 		"Brand": "Cry Baby",
+		"Name": "Custom Badass Dual Inductor Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "cry-baby-gcb65.png"
+	},
+	{
+		"Brand": "Cry Baby",
 	 	"Name": "Jerry Cantrell Rainier Fog Wah",
 	 	"Width": 4,
 	 	"Height": 10,
@@ -12737,7 +12744,7 @@
 		"Name": "Green Giant",
 		"Width": 2.84,
 		"Height": 4.9,
-		"Image": "greer-greengiant.png"
+		"Image": "greer-green-giant.png"
 	},
 	{
 		"Brand": "Greer Amps",
@@ -13367,7 +13374,7 @@
 		"Name": "Soul Press",
 		"Width": 2.38,
 		"Height": 5.43,
-		"Image": "hotone-soulpress.png"
+		"Image": "hotone-soul-press.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -13759,28 +13766,28 @@
 		"Name": "Arcing Prisms",
 		"Width": 2.5,
 		"Height": 4.7,
-		"Image": "ironether-arcing-prisms.png"
+		"Image": "iron-ether-arcing-prisms.png"
 	},
 	{
 		"Brand": "Iron Ether",
 		"Name": "Divaricator",
 		"Width": 2.5,
 		"Height": 4.7,
-		"Image": "ironether-divaricator.png"
+		"Image": "iron-ether-divaricator.png"
 	},
 	{
 		"Brand": "Iron Ether",
 		"Name": "Dubterranea",
 		"Width": 2.5,
 		"Height": 4.7,
-		"Image": "ironether-dubterranea.png"
+		"Image": "iron-ether-dubterranea.png"
 	},
 	{
 		"Brand": "Iron Ether",
 		"Name": "Dubterrograph",
 		"Width": 5.7,
 		"Height": 5,
-		"Image": "ironether-dubterrograph.png"
+		"Image": "iron-ether-dubterrograph.png"
 	},
 	{
 		"Brand": "Iron Ether",
@@ -13801,35 +13808,35 @@
 		"Name": "Nimbus Special Edition",
 		"Width": 2.5,
 		"Height": 4.7,
-		"Image": "ironether-nimbus-special-edition.png"
+		"Image": "iron-ether-nimbus-special-edition.png"
 	},
 	{
 		"Brand": "Iron Ether",
 		"Name": "Nimbus",
 		"Width": 2.5,
 		"Height": 4.7,
-		"Image": "ironether-nimbus.png"
+		"Image": "iron-ether-nimbus.png"
 	},
 	{
 		"Brand": "Iron Ether",
 		"Name": "Polytope",
 		"Width": 2.5,
 		"Height": 4.7,
-		"Image": "ironether-polytope.png"
+		"Image": "iron-ether-polytope.png"
 	},
 	{
 		"Brand": "Iron Ether",
 		"Name": "Xerograph Deluxe",
 		"Width": 2.5,
 		"Height": 4.7,
-		"Image": "ironether-xerograph-deluxe.png"
+		"Image": "iron-ether-xerograph-deluxe.png"
 	},
 	{
 		"Brand": "Iron Ether",
 		"Name": "Xerograph",
 		"Width": 2.5,
 		"Height": 4.7,
-		"Image": "ironether-xerograph.png"
+		"Image": "iron-ether-xerograph.png"
 	},
 	{
 		"Brand": "ISET",
@@ -15096,7 +15103,7 @@
 		"Name": "Unicorn V2",
 		"Width": 2.82,
 		"Height": 5,
-		"Image": "jhs-unicornv2.png"
+		"Image": "jhs-unicorn-v2.png"
 	},
 	{
 		"Brand": "JHS",
@@ -15110,7 +15117,7 @@
 		"Name": "Whitey Tighty",
 		"Width": 1.82,
 		"Height": 3.8,
-		"Image": "jhs-whiteytighty.png"
+		"Image": "jhs-whitey-tighty.png"
 	},
 	{
 		"Brand": "Joe Gore",
@@ -15579,21 +15586,21 @@
 		"Name": "Dark Side",
 		"Width": 4.7,
 		"Height": 3.79,
-		"Image": "keeley-darksideworkstation.png"
+		"Image": "keeley-dark-side.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Dark Side (20 for 20)",
 		"Width": 4.7,
 		"Height": 3.79,
-		"Image": "keeley-darkside-20for20.png"
+		"Image": "keeley-dark-side-20-for-20.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Dark Side (Dank Side)",
 		"Width": 4.7,
 		"Height": 3.79,
-		"Image": "keeley-darkside-dankside.png"
+		"Image": "keeley-dark-side-dank-side.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -15607,7 +15614,7 @@
 		"Name": "Dyno my Roto",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-dynomyroto.png"
+		"Image": "keeley-dyno-my-roto.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -15635,7 +15642,7 @@
 		"Name": "Eccos (Shell Pink)",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "keeley-eccos-shellpink.png"
+		"Image": "keeley-eccos-shell-pink.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -15775,14 +15782,14 @@
 		"Name": "Loomer (Sarah Lipstate)",
 		"Width": 4.7,
 		"Height": 3.79,
-		"Image": "keeley-loomer-sarahlipstate.png"
+		"Image": "keeley-loomer-sarah-lipstate.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Mag Echo",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-magecho.png"
+		"Image": "keeley-mag-echo.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -15901,28 +15908,28 @@
 		"Name": "Red Dirt",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-reddirtoverdrive.png"
+		"Image": "keeley-red-dirt.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Red Dirt Germanium",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-reddirtgermanium.png"
+		"Image": "keeley-red-dirt-germanium.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Red Dirt Mini",
 		"Width": 1.74,
 		"Height": 3.62,
-		"Image": "keeley-reddirtoverdrivemini.png"
+		"Image": "keeley-red-dirt-mini.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Roto Sonic",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-rotosonic.png"
+		"Image": "keeley-roto-sonic.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -17406,14 +17413,14 @@
 		"Name": "Tiny Orange Phaser",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-tinyorange.png"
+		"Image": "mad-professor-tiny-orange.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Tiny Orange Phaser (Handwired)",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-tinyorange-hw.png"
+		"Image": "mad-professor-tiny-orange-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -17910,21 +17917,21 @@
 		"Name": "The Surgeon",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "matthews-thesurgeon.png"
+		"Image": "matthews-surgeon.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Surgeon V2",
 		"Width": 2.83,
 		"Height": 4.91,
-		"Image": "matthews-thesurgeon-v2.png"
+		"Image": "matthews-surgeon-v2.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Whaler",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "matthews-thewhaler.png"
+		"Image": "matthews-whaler.png"
 	},
 	{
 		"Brand": "Matthews Effects",
@@ -18183,7 +18190,7 @@
 		"Name": "High-Wire Dual Buffer / Output Boost",
 		"Width": 2.6,
 		"Height": 4.48,
-		"Image": "mesaboogie-highwire.png"
+		"Image": "mesa-boogie-high-wire.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
@@ -18197,7 +18204,7 @@
 		"Name": "Rosette Footswitch",
 		"Width": 2.25,
 		"Height": 4.375,
-		"Image": "mesaboogie-rosette.png"
+		"Image": "mesa-boogie-rosette.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
@@ -18635,10 +18642,10 @@
 	},
 	{
 		"Brand": "Mojo Hand FX",
-		"Name": "Park Theater",
+		"Name": "Park Theatre",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "mojohand-park-theater.png"
+		"Image": "mojo-hand-park-theatre.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
@@ -18771,7 +18778,7 @@
 		"Name": "Ana Echo",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-anaecho.png"
+		"Image": "mooer-ana-echo.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -18785,14 +18792,14 @@
 		"Name": "Baby Bomb",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-babybomb.png"
+		"Image": "mooer-baby-bomb.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "Baby Tuner",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-tuner.png"
+		"Image": "mooer-baby-tuner.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -18806,7 +18813,7 @@
 		"Name": "Black Secret",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-blacksecret.png"
+		"Image": "mooer-black-secret.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -18827,7 +18834,7 @@
 		"Name": "Blues Mood",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-bluesmood.png"
+		"Image": "mooer-blues-mood.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -19156,7 +19163,7 @@
 		"Name": "Reecho",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-recho.png"
+		"Image": "mooer-reecho.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -19219,14 +19226,14 @@
 		"Name": "Tender Octaver",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-tenderoctaver.png"
+		"Image": "mooer-tender-octaver.png"
 	},
 	{
 		"Brand": "Mooer",
 		"Name": "Tender Octaver Pro",
 		"Width": 4.17,
 		"Height": 3.7,
-		"Image": "mooer-tenderoctaver-pro.png"
+		"Image": "mooer-tender-octaver-pro.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -19289,7 +19296,7 @@
 		"Name": "Yellow Comp",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-yellowcomp.png"
+		"Image": "mooer-yellow-comp.png"
 	},
 	{
 		"Brand": "Moog",
