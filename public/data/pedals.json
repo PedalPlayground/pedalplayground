@@ -9129,6 +9129,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Double Muff",
+		"Width": 2.82,
+		"Height": 4.5,
+		"Image": "ehx-double-muff.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Dual Expression Pedal",
 		"Width": 3.7,
 		"Height": 10,
@@ -15551,7 +15558,7 @@
 		"Name": "Compressor Pro",
 		"Width": 4.7,
 		"Height": 3.82,
-		"Image": "keeley-compressorpro.png"
+		"Image": "keeley-compressor-pro.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -18869,7 +18876,7 @@
 		"Name": "E-lady",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-elady.png"
+		"Image": "mooer-e-lady.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -19310,49 +19317,49 @@
 		"Name": "MF Boost",
 		"Width": 3.25,
 		"Height": 5.75,
-		"Image": "moog-mfboost.png"
+		"Image": "moog-mf-boost.png"
 	},
 	{
 		"Brand": "Moog",
 		"Name": "MF Chorus",
 		"Width": 3.25,
 		"Height": 5.75,
-		"Image": "moog-mfchorus.png"
+		"Image": "moog-mf-chorus.png"
 	},
 	{
 		"Brand": "Moog",
 		"Name": "MF Delay",
 		"Width": 3.25,
 		"Height": 5.75,
-		"Image": "moog-mfdelay.png"
+		"Image": "moog-mf-delay.png"
 	},
 	{
 		"Brand": "Moog",
 		"Name": "MF Drive",
 		"Width": 3.25,
 		"Height": 5.75,
-		"Image": "moog-mfdrive.png"
+		"Image": "moog-mf-drive.png"
 	},
 	{
 		"Brand": "Moog",
 		"Name": "MF Flange",
 		"Width": 3.25,
 		"Height": 5.75,
-		"Image": "moog-mfflange.png"
+		"Image": "moog-mf-flange.png"
 	},
 	{
 		"Brand": "Moog",
 		"Name": "MF Ring",
 		"Width": 3.25,
 		"Height": 5.75,
-		"Image": "moog-mfring.png"
+		"Image": "moog-mf-ring.png"
 	},
 	{
 		"Brand": "Moog",
 		"Name": "MF Trem",
 		"Width": 3.25,
 		"Height": 5.75,
-		"Image": "moog-mftrem.png"
+		"Image": "moog-mf-trem.png"
 	},
 	{
 		"Brand": "Moog",
