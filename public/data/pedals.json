@@ -15537,7 +15537,7 @@
 		"Name": "Compressor (4 knob)",
 		"Width": 2.6,
 		"Height": 4.5,
-		"Image": "keeley-4knobcompressor.png"
+		"Image": "keeley-compressor-4-knob.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -19065,14 +19065,14 @@
 		"Name": "Mod Factory MK II",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-modfactory-mkii.png"
+		"Image": "mooer-mod-factory-mkii.png"
   	},
 	{
     	"Brand": "Mooer",
 		"Name": "Mod Factory Pro",
 		"Width": 4.17,
 		"Height": 3.7,
-		"Image": "mooer-modfactory-pro.png"
+		"Image": "mooer-mod-factory-pro.png"
   	},
 	{
 		"Brand": "Mooer",
@@ -19408,7 +19408,7 @@
 		"Name": "Mini Wah",
 		"Width": 4.5,
 		"Height": 6.75,
-		"Image": "morley-miniwah.png"
+		"Image": "morley-mini-wah.png"
 	},
 	{
 		"Brand": "Morningstar",
@@ -19527,14 +19527,14 @@
 		"Name": "DeluxePlus",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-deluxeplus.png"
+		"Image": "mr-black-deluxe-plus.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "DeluxePlus Plus",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-deluxeplus-plus.png"
+		"Image": "mr-black-deluxe-plus-plus.png"
 	},
 	{
 		"Brand": "Mr. Black",
