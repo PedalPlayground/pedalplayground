@@ -23261,6 +23261,27 @@
 		"Image": "providence-chrono.png"
 	},
 	{
+		"Brand": "PRS Guitars",
+		"Name": "Horsemeat",
+		"Width": 3.7,
+		"Height": 4.98,
+		"Image": "prs-horsemeat.png"
+	},
+	{
+		"Brand": "PRS Guitars",
+		"Name": "Mary Cries",
+		"Width": 3.7,
+		"Height": 4.98,
+		"Image": "prs-mary-cries.png"
+	},
+	{
+		"Brand": "PRS Guitars",
+		"Name": "Wind Through The Trees",
+		"Width": 5.5,
+		"Height": 4.75,
+		"Image": "prs-wind-through-the-trees.png"
+	},
+	{
 		"Brand": "Quiet Theory",
 		"Name": "Prelude",
 		"Width": 3.7,
