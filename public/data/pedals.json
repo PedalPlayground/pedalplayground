@@ -21295,6 +21295,13 @@
 	},
 	{
 		"Brand": "Native Audio",
+		"Name": "Makoyii",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "nativeaudio-makoyii.png"
+	},
+	{
+		"Brand": "Native Audio",
 		"Name": "Midnight V2",
 		"Width": 2.71,
 		"Height": 5,
@@ -28667,6 +28674,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Eons",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-eons.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Eras",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -29612,6 +29626,13 @@
 	},
 	{
 		"Brand": "Wren And Cuff",
+		"Name": "Anna",
+		"Width": 4.72,
+		"Height": 3.85,
+		"Image": "wrenandcuff-anna.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
 		"Name": "Box of War",
 		"Width": 3.5,
 		"Height": 5.62,
@@ -29742,6 +29763,13 @@
 		"Width": 2.64,
 		"Height": 4.51,
 		"Image": "wrenandcuff-tall-font-russian.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "The Good One",
+		"Width": 3.54,
+		"Height": 5.8,
+		"Image": "wrenandcuff-the-good-one.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
