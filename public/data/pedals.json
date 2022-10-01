@@ -9129,13 +9129,6 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Double Muff",
-		"Width": 2.82,
-		"Height": 4.5,
-		"Image": "ehx-double-muff.png"
-	},
-	{
-		"Brand": "Electro-Harmonix",
 		"Name": "Dual Expression Pedal",
 		"Width": 3.7,
 		"Height": 10,
@@ -16699,7 +16692,7 @@
 		"Name": "P Split III",
 		"Width": 3.6,
 		"Height": 3.55,
-		"Image": "lehle-psplit-iii.png"
+		"Image": "lehle-p-split-iii.png"
 	},
 	{
 		"Brand": "Lehle",
@@ -19061,14 +19054,14 @@
 		"Image": "mooer-micro-power.png"
 	},
 	{
-    	"Brand": "Mooer",
+		"Brand": "Mooer",
 		"Name": "Mod Factory MK II",
 		"Width": 1.67,
 		"Height": 3.75,
 		"Image": "mooer-mod-factory-mkii.png"
   	},
 	{
-    	"Brand": "Mooer",
+		"Brand": "Mooer",
 		"Name": "Mod Factory Pro",
 		"Width": 4.17,
 		"Height": 3.7,
@@ -19394,14 +19387,14 @@
 		"Name": "20/20 Lead Wah",
 		"Width": 4.5,
 		"Height": 6.85,
-		"Image": "morley-2020leadwah.png"
+		"Image": "morley-20-20-lead-wah.png"
 	},
 	{
 		"Brand": "Morley",
 		"Name": "20/20 Lead Wah Boost",
 		"Width": 4.5,
 		"Height": 7.24,
-		"Image": "morley-2020leadwahboost.png"
+		"Image": "morley-20-20-lead-wah-boost.png"
 	},
 	{
 		"Brand": "Morley",
