@@ -15558,7 +15558,7 @@
 		"Name": "D&M Drive",
 		"Width": 3.7,
 		"Height": 4.9,
-		"Image": "keeley-dmdrive.png"
+		"Image": "keeley-dm-drive.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -15999,21 +15999,21 @@
 		"Name": "Tone Workstation",
 		"Width": 4.7,
 		"Height": 3.82,
-		"Image": "keeley-toneworkstation.png"
+		"Image": "keeley-tone-workstation.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Vibe o Trem",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-vibeotrem.png"
+		"Image": "keeley-vibe-o-trem.png"
 	},
 	{
 		"Brand": "Keeley",
 		"Name": "Vibe o Verb",
 		"Width": 2.67,
 		"Height": 4.4,
-		"Image": "keeley-vibeoverb.png"
+		"Image": "keeley-vibe-o-verb.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -16594,42 +16594,42 @@
 		"Name": "Domino",
 		"Width": 3.82,
 		"Height": 1.63,
-		"Image": "landdevices-domino.png"
-	},
-	{
-		"Brand": "Land Devices",
-		"Name": "HP-2 (Olive)",
-		"Width": 4.7,
-		"Height": 3.84,
-		"Image": "landdevices-hp2.png"
-	},
-	{
-		"Brand": "Land Devices",
-		"Name": "HP-2 (Orange)",
-		"Width": 4.7,
-		"Height": 3.84,
-		"Image": "landdevices-hp2-orange.png"
+		"Image": "land-devices-domino.png"
 	},
 	{
 		"Brand": "Land Devices",
 		"Name": "HP-2 (Blue)",
 		"Width": 4.7,
 		"Height": 3.84,
-		"Image": "landdevices-hp2-blue.png"
+		"Image": "land-devices-hp2-blue.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "HP-2 (Olive)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "land-devices-hp2-olive.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "HP-2 (Orange)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "land-devices-hp2-orange.png"
 	},
 	{
 		"Brand": "Land Devices",
 		"Name": "Land Mixer",
 		"Width": 4.84,
 		"Height": 5.91,
-		"Image": "landdevices-land-mixer.png"
+		"Image": "land-devices-land-mixer.png"
 	},
 	{
 		"Brand": "Land Devices",
 		"Name": "Pre",
 		"Width": 3.82,
 		"Height": 1.75,
-		"Image": "landdevices-pre.png"
+		"Image": "land-devices-pre.png"
 	},
 	{
 		"Brand": "Laney Black Country Customs",
@@ -18736,7 +18736,7 @@
 		"Name": "Too Positive",
 		"Width": 3.7,
 		"Height": 4.95,
-		"Image": "montreal-toopositive.png"
+		"Image": "montreal-too-positive.png"
 	},
 	{
 		"Brand": "Montreal Assembly",
@@ -18946,7 +18946,7 @@
 		"Name": "Green Mile",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-greenmile.png"
+		"Image": "mooer-green-mile.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -23241,6 +23241,13 @@
 	},
 	{
 		"Brand": "Radial Engineering",
+		"Name": "AC-Driver",
+		"Width": 3.75,
+		"Height": 4.75,
+		"Image": "radial-ac-driver.png"
+	},
+	{
+		"Brand": "Radial Engineering",
 		"Name": "BT-Pro V2",
 		"Width": 3.3,
 		"Height": 5,
@@ -24205,13 +24212,20 @@
 		"Height": 5.18,
 		"Image": "seymourduncan-vaportrail.png"
 	},
-  {
-    "Brand": "Seymour Duncan",
+	{
+		"Brand": "Seymour Duncan",
 		"Name": "Vapor Trail (Silver)",
 		"Width": 2.74,
 		"Height": 5.18,
 		"Image": "seymourduncan-vaportrail-silver.png"
-  },
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Vapor Trail Deluxe",
+		"Width": 2.74,
+		"Height": 5.18,
+		"Image": "seymour-duncan-vapor-trail-deluxe.png"
+	},
 	{
 		"Brand": "Shift Line",
 		"Name": "A+ Astronaut III",
