@@ -17151,9 +17151,16 @@
 	},
 	{
 		"Brand": "LPD",
+		"Name": "109° Distortion",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "lpd-109-distortion.png"
+	},
+	{
+		"Brand": "LPD",
 		"Name": "Eighty7",
-		"Width": 2.62,
-		"Height": 4.41,
+		"Width": 2.68,
+		"Height": 4.5,
 		"Image": "lpd-eighty7.png"
 	},
 	{
@@ -17162,6 +17169,76 @@
 		"Width": 4.7,
 		"Height": 3.86,
 		"Image": "lpd-eighty7-dlx.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Embers Overdrive",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "lpd-embers-overdrive.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Fifty5",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "lpd-fifty7.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Mach I Distortion",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "lpd-mach-i-distortion.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Offset Delay",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "lpd-offset-delay.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Seventy4",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "lpd-seventy4.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Seventy4 Deluxe",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "lpd-seventy4-deluxe.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Sixty8",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "lpd-sixty8.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Sixty8 Deluxe",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "lpd-sixty8-deluxe.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Sixty8 Stacked",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "lpd-sixty8-stacked.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Tidal Chorus",
+		"Width": 2.5,
+		"Height": 4.87,
+		"Image": "lpd-tidal-chorus.png"
 	},
 	{
 		"Brand": "Lurch Audio",
