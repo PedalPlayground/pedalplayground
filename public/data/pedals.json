@@ -16387,6 +16387,20 @@
 		"Image": "kinotone-ribbons.png"
 	},
 	{
+		"Brand": "kittycasterFX",
+		"Name": "Groovy Wizard",
+		"Width": 3.39,
+		"Height": 5.36,
+		"Image": "kittycasterfx-groovy-wizard.png"
+	},
+	{
+		"Brand": "kittycasterFX",
+		"Name": "Tremdriver",
+		"Width": 3.39,
+		"Height": 5.36,
+		"Image": "kittycasterfx-tremdriver.png"
+	},
+	{
 		"Brand": "Kliq",
 		"Name": "TinyTune",
 		"Width": 1.65,
