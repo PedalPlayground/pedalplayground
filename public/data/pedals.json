@@ -16298,36 +16298,57 @@
 	{
 		"Brand": "Kingtone",
 		"Name": "Heavyhand",
-		"Width": 2.38,
-		"Height": 4.53,
+		"Width": 2.33,
+		"Height": 4.43,
 		"Image": "kingtone-heavyhand.png"
 	},
 	{
 		"Brand": "Kingtone",
 		"Name": "miniFUZZ GE",
 		"Width": 2.61,
-		"Height": 4.3,
+		"Height": 4.33,
 		"Image": "kingtone-minifuzz-ge.png"
 	},
 	{
 		"Brand": "Kingtone",
 		"Name": "miniFUZZ SI",
-		"Width": 2.61,
-		"Height": 4.3,
+		"Width": 2.63,
+		"Height": 4.33,
 		"Image": "kingtone-minifuzz-si.png"
 	},
 	{
 		"Brand": "Kingtone",
+		"Name": "miniFUZZ V2",
+		"Width": 2.64,
+		"Height": 4.5,
+		"Image": "kingtone-minifuzz-v2.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "miniFUZZ V2 (Silver)",
+		"Width": 2.64,
+		"Height": 4.5,
+		"Image": "kingtone-minifuzz-v2-silver.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Rise",
+		"Width": 2.5,
+		"Height": 4.66,
+		"Image": "kingtone-rise.png"
+	},
+	{
+		"Brand": "Kingtone",
 		"Name": "The Soloist",
-		"Width": 2.38,
-		"Height": 4.53,
+		"Width": 2.33,
+		"Height": 4.43,
 		"Image": "kingtone-soloist.png"
 	},
 	{
 		"Brand": "Kingtone",
 		"Name": "The Soloist (red)",
-		"Width": 2.38,
-		"Height": 4.63,
+		"Width": 2.33,
+		"Height": 4.47,
 		"Image": "kingtone-soloist-red.png"
 	},
 	{
@@ -16339,9 +16360,16 @@
 	},
 	{
 		"Brand": "Kingtone",
+		"Name": "The Octaland V2",
+		"Width": 2.64,
+		"Height": 4.5,
+		"Image": "kingtone-octaland-v2.png"
+	},
+	{
+		"Brand": "Kingtone",
 		"Name": "The Octaland Mini",
-		"Width": 2.38,
-		"Height": 4.53,
+		"Width": 2.33,
+		"Height": 4.43,
 		"Image": "kingtone-octaland-mini.png"
 	},
 	{
