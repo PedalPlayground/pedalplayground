@@ -4950,6 +4950,27 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Elements Distortion",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "catalinbread-elements-distortion.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Elements Fuzz",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "catalinbread-elements-fuzz.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Elements Overdrive",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "catalinbread-elements-overdrive.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Epoch Boost",
 		"Width": 2.6,
 		"Height": 4.33,
@@ -10498,6 +10519,20 @@
 		"Width": 7.5,
 		"Height": 4.9,
 		"Image": "eventide-pitchfactor.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "PowerMax",
+		"Width": 6.4,
+		"Height": 3.5,
+		"Image": "eventide-powermax.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "PowerMini",
+		"Width": 3.5,
+		"Height": 2.96,
+		"Image": "eventide-powermini.png"
 	},
 	{
 		"Brand": "Eventide",
