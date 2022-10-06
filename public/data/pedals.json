@@ -5351,14 +5351,14 @@
 		"Brand": "Chase Bliss",
 		"Name": "Bliss Factory",
 		"Width": 2.86,
-		"Height": 4.95,
+		"Height": 4.86,
 		"Image": "chasebliss-factory.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Bliss Factory (Silver)",
 		"Width": 2.86,
-		"Height": 4.95,
+		"Height": 4.86,
 		"Image": "chasebliss-factory-silver.png"
 	},
 	{
@@ -5399,15 +5399,15 @@
 	{
 		"Brand": "Chase Bliss",
 		"Name": "EXP",
-		"Width": 2.56,
-		"Height": 4.94,
+		"Width": 2.52,
+		"Height": 4.87,
 		"Image": "chasebliss-exp.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Faves",
-		"Width": 1.26,
-		"Height": 3.74,
+		"Width": 1.4,
+		"Height": 3.61,
 		"Image": "chasebliss-faves.png"
 	},
 	{
