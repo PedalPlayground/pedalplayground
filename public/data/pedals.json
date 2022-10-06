@@ -3554,6 +3554,12 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ds1.png"
+	},{
+		"Brand": "BOSS",
+		"Name": "DS-1W Distortion",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ds1w.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -17203,14 +17209,14 @@
 		"Name": "Fire Red Fuzz",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-firered.png"
+		"Image": "mad-professor-fire-red.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Fire Red Fuzz (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-firered-hw.png"
+		"Image": "mad-professor-fire-red-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -17910,7 +17916,7 @@
 		"Name": "The Harbinger",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "matthews-theharbinger.png"
+		"Image": "matthews-harbinger.png"
 	},
 	{
 		"Brand": "Matthews Effects",
@@ -19660,14 +19666,14 @@
 		"Name": "Shepard's End",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-shepardsend.png"
+		"Image": "mr-black-shepards-end.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Shepard's End Sub-Zero",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-shepardsend-subzero.png"
+		"Image": "mr-black-shepards-end-sub-zero.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -19776,10 +19782,10 @@
 	},
 	{
 		"Brand": "Mu-Tron",
-		"Name": "Bi-Phase",
+		"Name": "Bi-Phase II",
 		"Width": 7.25,
 		"Height": 4.75,
-		"Image": "mu-tron-bi-phase.png"
+		"Image": "mu-tron-bi-phase-ii.png"
 	},
 	{
 		"Brand": "Mu-Tron",
@@ -19968,161 +19974,161 @@
 		"Name": "CAE Boost/Line Driver",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-cae-boost-line-driver.png"
+		"Image": "mxr-mc401.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "CAE Boost/Overdrive",
 		"Width": 4.95,
 		"Height": 3.54,
-		"Image": "mxr-cae-boost-overdrive.png"
+		"Image": "mxr-mc402.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "CAE Buffer",
 		"Width": 2.74,
 		"Height": 2.87,
-		"Image": "mxr-cae-buffer.png"
+		"Image": "mxr-mc406.png"
 	},
 	{
 		"Brand": "MXR",
-		"Name": "CAE MC-403 Power System",
+		"Name": "CAE Power System",
 		"Width": 13.5,
 		"Height": 4,
-		"Image": "mxr-caemc403.png"
+		"Image": "mxr-mc403.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Carbon Copy",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-carboncopy.png"
+		"Image": "mxr-m169.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Carbon Copy Analog (10th Anniversary)",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-carboncopy-analog-10.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Carbon Copy Mini",
-		"Width": 1.74,
-		"Height": 3.7,
-		"Image": "mxr-carboncopymini.png"
+		"Image": "mxr-m169a.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Carbon Copy Deluxe",
 		"Width": 4.75,
 		"Height": 3.65,
-		"Image": "mxr-carboncopydlx.png"
+		"Image": "mxr-m292.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Carbon Copy Mini",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-m299.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Classic 108 Fuzz",
 		"Width": 3.6,
 		"Height": 4.97,
-		"Image": "mxr-classic108fuzz.png"
+		"Image": "mxr-m173.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Classic 108 Fuzz Mini",
 		"Width": 1.74,
 		"Height": 3.7,
-		"Image": "mxr-classic108fuzzmini.png"
+		"Image": "mxr-m296.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Clone Looper",
 		"Width": 4.33,
 		"Height": 2.46,
-		"Image": "mxr-clonelooper.png"
+		"Image": "mxr-303.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Custom Badass '78 Distortion",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-custom-badass-78distortion.png"
+		"Image": "mxr-m78.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Custom Badass Modified O.D.",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-modified-od-custom-badass.png"
+		"Image": "mxr-m77.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "DC Brick",
 		"Width": 2.3,
 		"Height": 4.25,
-		"Image": "mxr-dc-brick.png"
+		"Image": "mxr-m237.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Deep Phase",
 		"Width": 1.74,
 		"Height": 3.7,
-		"Image": "mxr-deepphase.png"
+		"Image": "mxr-m279.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Distortion III",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-distortion3.png"
+		"Image": "mxr-m115.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Distortion+",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-distortion-plus.png"
+		"Image": "mxr-m104.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dookie Drive",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-dookie-drive.png"
+		"Image": "mxr-dd25.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dookie Drive V2",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-dookie-drive-v2.png"
+		"Image": "mxr-dd25v2.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dookie Drive V3",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-dookie-drive-v3.png"
+		"Image": "mxr-dd25v3.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Double-Double Overdrive",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-double-double.png"
+		"Image": "mxr-m250.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dyna Comp",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-dynacomp.png"
+		"Image": "mxr-m102.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dyna Comp (Script)",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-dynacomp-script.png"
+		"Image": "mxr-csp102sl.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20136,49 +20142,49 @@
 		"Name": "Dyna Comp Deluxe",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-dynacomp-deluxe.png"
+		"Image": "mxr-m228.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Dyna Comp Mini",
 		"Width": 1.74,
 		"Height": 3.7,
-		"Image": "mxr-dynacompmini.png"
+		"Image": "mxr-m291.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "EVH 5150 Overdrive",
 		"Width": 4.75,
 		"Height": 3.65,
-		"Image": "mxr-5150.png"
+		"Image": "mxr-evh5150.png"
 	},
 	{
 		"Brand": "MXR",
-		"Name": "EVH 5150 Chorus",
+		"Name": "EVH 30 Chorus",
 		"Width": 4.75,
 		"Height": 3.65,
-		"Image": "mxr-evh-chorus.png"
+		"Image": "mxr-evh30.png"
 	},
 	{
 		"Brand": "MXR",
-		"Name": "EVH Flanger",
+		"Name": "EVH 117 Flanger",
 		"Width": 4.95,
 		"Height": 3.54,
-		"Image": "mxr-flangerevh.png"
+		"Image": "mxr-evh117.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "EVH Phase 90",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-phase90evh.png"
+		"Image": "mxr-evh90.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "EVH Phase 90 (35th Anniversary)",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-phase90evh35th.png"
+		"Image": "mxr-evh90se.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20192,14 +20198,14 @@
 		"Name": "Flanger",
 		"Width": 4.95,
 		"Height": 3.54,
-		"Image": "mxr-flanger.png"
+		"Image": "mxr-m117r.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "FOD",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-fod.png"
+		"Image": "mxr-m251.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20360,7 +20366,7 @@
 		"Name": "Phase 90 (Script LED)",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-phase90-script-led.png"
+		"Image": "mxr-csp101sl.png"
 	},
 	{
 		"Brand": "MXR",
