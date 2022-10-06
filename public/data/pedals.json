@@ -5356,6 +5356,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Bliss Factory (Silver)",
+		"Width": 2.86,
+		"Height": 4.95,
+		"Image": "chasebliss-factory-silver.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Blooper",
 		"Width": 2.86,
 		"Height": 4.95,
