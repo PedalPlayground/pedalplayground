@@ -13203,6 +13203,13 @@
 	},
 	{
 		"Brand": "Harley Benton",
+		"Name": "D-Seed",
+		"Width": 3.96,
+		"Height": 4.13,
+		"Image": "harley-benton-d-seed.png"
+	},
+	{
+		"Brand": "Harley Benton",
 		"Name": "Digital Delay",
 		"Width": 3.65,
 		"Height": 4.65,
@@ -13249,6 +13256,13 @@
 		"Width": 3.65,
 		"Height": 4.65,
 		"Image": "harley-benton-extreme-metal.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Mini Looper",
+		"Width": 1.8,
+		"Height": 3.7,
+		"Image": "harley-benton-mini-looper.png"
 	},
 	{
 		"Brand": "Harley Benton",
@@ -13340,6 +13354,20 @@
 		"Width": 1.64,
 		"Height": 3.62,
 		"Image": "harley-benton-ministomp-hot-mod.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Intersection",
+		"Width": 1.69,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-intersection.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Magnum D.I.",
+		"Width": 1.77,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-magnum-di.png"
 	},
 	{
 		"Brand": "Harley Benton",
@@ -13442,8 +13470,8 @@
 	{
 		"Brand": "Harley Benton",
 		"Name": "Tap Tempo Switch",
-		"Width": 1.72,
-		"Height": 3.70,
+		"Width": 1.64,
+		"Height": 3.7,
 		"Image": "harley-benton-tap-switch.png"
 	},
 	{
