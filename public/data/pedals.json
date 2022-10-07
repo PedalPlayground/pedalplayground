@@ -3557,6 +3557,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DS-1w Distortion",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ds1w.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "DS-1X Distortion",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -13085,72 +13092,331 @@
 	{
 		"Brand": "Harley Benton",
 		"Name": "AC TrueTone",
-		"Width": 3.57,
-		"Height": 4.64,
+		"Width": 3.65,
+		"Height": 4.65,
 		"Image": "harley-benton-ac-truetone.png"
 	},
 	{
 		"Brand": "Harley Benton",
 		"Name": "American TrueTone",
-		"Width": 3.59,
-		"Height": 4.64,
+		"Width": 3.65,
+		"Height": 4.65,
 		"Image": "harley-benton-american-truetone.png"
 	},
 	{
 		"Brand": "Harley Benton",
 		"Name": "British TrueTone",
-		"Width": 3.61,
-		"Height": 4.64,
+		"Width": 3.65,
+		"Height": 4.65,
 		"Image": "harley-benton-british-truetone.png"
 	},
 	{
 		"Brand": "Harley Benton",
 		"Name": "California TrueTone",
-		"Width": 3.58,
-		"Height": 4.64,
+		"Width": 3.65,
+		"Height": 4.65,
 		"Image": "harley-benton-california-truetone.png"
 	},
 	{
 		"Brand": "Harley Benton",
 		"Name": "Classic Chorus",
-		"Width": 3.6,
-		"Height": 4.64,
+		"Width": 3.65,
+		"Height": 4.65,
 		"Image": "harley-benton-classic-chorus.png"
 	},
 	{
 		"Brand": "Harley Benton",
 		"Name": "Classic Flanger",
-		"Width": 3.55,
-		"Height": 4.64,
+		"Width": 3.65,
+		"Height": 4.65,
 		"Image": "harley-benton-classic-flanger.png"
 	},
 	{
 		"Brand": "Harley Benton",
 		"Name": "Crunch Distortion",
-		"Width": 2.71,
-		"Height": 4.64,
+		"Width": 2.68,
+		"Height": 4.65,
 		"Image": "harley-benton-crunch-distortion.png"
 	},
 	{
 		"Brand": "Harley Benton",
+		"Name": "Custom Line Acoustic Preamp",
+		"Width": 5.02,
+		"Height": 3.62,
+		"Image": "harley-benton-custom-line-acoustic-preamp.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Custom Line AW-5 Auto Wah",
+		"Width": 4.72,
+		"Height": 3.66,
+		"Image": "harley-benton-custom-line-aw5-auto-wah.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Custom Line Bass DI-Expander",
+		"Width": 5.02,
+		"Height": 3.62,
+		"Image": "harley-benton-custom-line-bass-di-expander.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Custom Line CH-5 Chorus",
+		"Width": 4.72,
+		"Height": 3.66,
+		"Image": "harley-benton-custom-line-ch5-chorus.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Custom Line CS-5 Compressor",
+		"Width": 4.72,
+		"Height": 3.66,
+		"Image": "harley-benton-custom-line-cs5-compressor.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Custom Line DL-5 Delay",
+		"Width": 4.72,
+		"Height": 3.66,
+		"Image": "harley-benton-custom-line-dl5-delay.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Custom Line Bass Dual Loop Switch",
+		"Width": 5.02,
+		"Height": 3.68,
+		"Image": "harley-benton-custom-line-dual-loop-switch.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Custom Line OD-5 Overdrive",
+		"Width": 4.72,
+		"Height": 3.66,
+		"Image": "harley-benton-custom-line-od5-overdrive.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Custom Line Thunder 99",
+		"Width": 2.83,
+		"Height": 4.88,
+		"Image": "harley-benton-custom-line-thunder-99.png"
+	},
+	{
+		"Brand": "Harley Benton",
 		"Name": "Digital Delay",
-		"Width": 3.59,
-		"Height": 4.64,
+		"Width": 3.65,
+		"Height": 4.65,
 		"Image": "harley-benton-digital-delay.png"
 	},
 	{
 		"Brand": "Harley Benton",
+		"Name": "Double Rammer",
+		"Width": 3.79,
+		"Height": 4.60,
+		"Image": "harley-benton-double-rammer.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Double Vision",
+		"Width": 3.79,
+		"Height": 4.60,
+		"Image": "harley-benton-double-vision.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Duality",
+		"Width": 3.79,
+		"Height": 4.60,
+		"Image": "harley-benton-duality.png"
+	},
+	{
+		"Brand": "Harley Benton",
 		"Name": "Dyna Compressor",
-		"Width": 2.71,
-		"Height": 4.64,
+		"Width": 2.68,
+		"Height": 4.65,
 		"Image": "harley-benton-dyna-compressor.png"
 	},
 	{
 		"Brand": "Harley Benton",
+		"Name": "Evil Twin",
+		"Width": 3.79,
+		"Height": 4.60,
+		"Image": "harley-benton-evil-twin.png"
+	},
+	{
+		"Brand": "Harley Benton",
 		"Name": "Extreme Metal",
-		"Width": 3.59,
-		"Height": 4.64,
+		"Width": 3.65,
+		"Height": 4.65,
 		"Image": "harley-benton-extreme-metal.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp 5-Band",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-5band.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Alien Signal",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-alien-signal.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Big Fur",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-big-fur.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Copy Paste",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-copy-paste.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Dealbreaker",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-dealbreaker.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Deep Blue",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-deep-blue.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Dr. D",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-dr-d.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Drop Kick",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-drop-kick.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Edgy",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-edgy.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Fast Lane",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-fast-lane.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Fuzzy Logic",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-fuzzy-logic.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Green Tint",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-green-tint.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Hot Mod",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-hot-mod.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp MicroCAB",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-microcab.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Plexicon",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-plexicon.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Rodent",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-rodent.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Shaft",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-shaft.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Silly Fuzz",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-silly-fuzz.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Spinner",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-spinner.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Sucker Punch",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-sucker-punch.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp The Deep",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-the-deep.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp The Heat",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-the-heat.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp Troubadour",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-troubadour.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "MiniStomp True Grit",
+		"Width": 1.64,
+		"Height": 3.62,
+		"Image": "harley-benton-ministomp-true-grit.png"
 	},
 	{
 		"Brand": "Harley Benton",
@@ -13162,9 +13428,16 @@
 	{
 		"Brand": "Harley Benton",
 		"Name": "PowerPlant Tuner",
-		"Width": 2.75,
-		"Height": 4.8,
+		"Width": 2.68,
+		"Height": 4.72,
 		"Image": "harley-benton-powerplant-tuner.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "Sugar & Spice",
+		"Width": 3.79,
+		"Height": 4.60,
+		"Image": "harley-benton-sugar-spice.png"
 	},
 	{
 		"Brand": "Harley Benton",
@@ -13175,30 +13448,37 @@
 	},
 	{
 		"Brand": "Harley Benton",
+		"Name": "Twoface",
+		"Width": 3.79,
+		"Height": 4.60,
+		"Image": "harley-benton-twoface.png"
+	},
+	{
+		"Brand": "Harley Benton",
 		"Name": "Ultimate Drive",
 		"Width": 2.68,
-		"Height": 4.64,
+		"Height": 4.65,
 		"Image": "harley-benton-ultimate-drive.png"
 	},
 	{
 		"Brand": "Harley Benton",
 		"Name": "Vintage Overdrive",
-		"Width": 2.65,
-		"Height": 4.64,
+		"Width": 2.68,
+		"Height": 4.65,
 		"Image": "harley-benton-vintage-overdrive.png"
 	},
 	{
 		"Brand": "Harley Benton",
 		"Name": "Vintage Phase",
-		"Width": 2.60,
-		"Height": 4.64,
+		"Width": 2.68,
+		"Height": 4.65,
 		"Image": "harley-benton-vintage-phase.png"
 	},
 	{
 		"Brand": "Harley Benton",
 		"Name": "Vintage Tremolo",
-		"Width": 2.60,
-		"Height": 4.64,
+		"Width": 2.68,
+		"Height": 4.65,
 		"Image": "harley-benton-vintage-tremolo.png"
 	},
 	{
@@ -20795,6 +21075,13 @@
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-csp030.png"
+	},
+	{
+		"Brand": "MXR Custom Shop",
+		"Name": "Custom Comp",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-csp202.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
