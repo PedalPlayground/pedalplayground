@@ -17192,11 +17192,11 @@
 		"Image": "lehle-sunday-driver.png"
 	},
 	{
-		"Brand": "Little Robbie",
-		"Name": "Pilot",
-		"Width": 2.25,
-		"Height": 4.68,
-		"Image": "little-robbie-pilot.png"
+		"Brand": "Lightning Wave",
+		"Name": "Ghost",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "lightningwave-ghost.png"
 	},
 	{
 		"Brand": "Line 6",
@@ -17379,6 +17379,13 @@
 		"Width": 3.29,
 		"Height": 5.63,
 		"Image": "line6-verbzilla.png"
+	},
+	{
+		"Brand": "Little Robbie",
+		"Name": "Pilot",
+		"Width": 2.25,
+		"Height": 4.68,
+		"Image": "little-robbie-pilot.png"
 	},
 	{
 		"Brand": "Loopi",
@@ -28811,6 +28818,13 @@
 		"Width": 4.7,
 		"Height": 5.7,
 		"Image": "vongon-paragraphs.png"
+	},
+	{
+		"Brand": "Vongon",
+		"Name": "Polyphrase",
+		"Width": 5.5,
+		"Height": 4.72,
+		"Image": "vongon-polyphrase.png"
 	},
 	{
 		"Brand": "Vongon",
