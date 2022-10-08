@@ -3557,7 +3557,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "DS-1W Distortion",
+		"Name": "DS-1w Distortion",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ds1w.png"
@@ -3974,6 +3974,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-od2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "OD-2R Turbo Overdrive",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-od2r.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -16658,6 +16665,13 @@
 		"Width": 6,
 		"Height": 5.14,
 		"Image": "latent-lemon-brassmaster.png"
+	},
+	{
+		"Brand": "Lauren Audio",
+		"Name": "Mustang",
+		"Width": 6,
+		"Height": 5.14,
+		"Image": "lauren-mustang.png"
 	},
 	{
 		"Brand": "Lehle",
