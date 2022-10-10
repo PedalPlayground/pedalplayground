@@ -7843,14 +7843,21 @@
 		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier",
 		"Width": 4.53,
-		"Height": 2.7,
+		"Height": 3.06,
 		"Image": "dsm-simplifier.png"
 	},
 	{
 		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier Bass Station",
+		"Width": 4.53,
+		"Height": 3.06,
+		"Image": "dsm-simplifier-bass-station.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier DLX",
-		"Width": 4.07,
-		"Height": 5.1,
+		"Width": 5.1,
+		"Height": 4.06,
 		"Image": "dsm-simplifier-dlx.png"
 	},
 	{
