@@ -13266,6 +13266,13 @@
 	},
 	{
 		"Brand": "Harley Benton",
+		"Name": "Good Cop / Bad Cop",
+		"Width": 3.79,
+		"Height": 4.60,
+		"Image": "harley-benton-good-cop-bad-cop.png"
+	},
+	{
+		"Brand": "Harley Benton",
 		"Name": "Mini Looper",
 		"Width": 1.8,
 		"Height": 3.7,
