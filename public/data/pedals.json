@@ -28842,6 +28842,13 @@
 	},
 	{
 		"Brand": "Voodoo Lab",
+		"Name": "Ground Control Pro",
+		"Width": 17,
+		"Height": 10.96,
+		"Image": "voodoolab-ground-control-pro.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power 2+",
 		"Width": 6,
 		"Height": 3.4,
