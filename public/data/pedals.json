@@ -7856,14 +7856,14 @@
 	{
 		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier DLX",
-		"Width": 5.1,
-		"Height": 4.06,
+		"Width": 5.38,
+		"Height": 4.28,
 		"Image": "dsm-simplifier-dlx.png"
 	},
 	{
 		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier DLX Footswitch",
-		"Width": 3.75,
+		"Width": 3.73,
 		"Height": 1.5,
 		"Image": "dsm-simplifier-dlx-footswitch.png"
 	},
