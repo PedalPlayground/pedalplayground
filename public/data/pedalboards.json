@@ -456,6 +456,20 @@
 	},
 	{
 		"Brand": "Muzbay",
+		"Name": "Orbita 40",
+		"Width": 15.8,
+		"Height": 8.7,
+		"Image": "muzbay-orbita-40.png"
+	},
+	{
+		"Brand": "Muzbay",
+		"Name": "Orbita 50",
+		"Width": 19.7,
+		"Height": 8.7,
+		"Image": "muzbay-orbita-50.png"
+	},
+	{
+		"Brand": "Muzbay",
 		"Name": "Sputnik 35",
 		"Width": 13.8,
 		"Height": 5.12,
