@@ -29870,6 +29870,13 @@
 		"Image": "yamaha-fl-10mii.png"
 	},
 	{
+		"Brand": "Yellowcake",
+		"Name": "Furry Burrito",
+		"Width": 2.54,
+		"Height": 4.9,
+		"Image": "yellowcake-furry-burrito.png"
+	},
+	{
 		"Brand": "Zander Circuitry",
 		"Name": "American Geek",
 		"Width": 2.64,
