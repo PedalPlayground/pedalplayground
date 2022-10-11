@@ -25243,6 +25243,13 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "76 MKII",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "solidgoldfx-76-mk2.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "76 Plus",
 		"Width": 4.89,
 		"Height": 3.68,
