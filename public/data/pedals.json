@@ -10675,6 +10675,13 @@
 		"Image": "fairfield-unpleasant-surprise.png"
 	},
 	{
+		"Brand": "Farm Pedals",
+		"Name": "Fly Agaric",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "farmpedals-fly-agaric.png"
+	},
+	{
 		"Brand": "Fender",
 		"Name": "Acoustic Preverb",
 		"Width": 3.95,
