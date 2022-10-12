@@ -2885,6 +2885,13 @@
 	},
 	{
 		"Brand": "Blackstar",
+		"Name": "Live Logic MIDI Controller",
+		"Width": 15.6,
+		"Height": 3.11,
+		"Image": "blackstar-live-logic.png"
+	},
+	{
+		"Brand": "Blackstar",
 		"Name": "LT Boost",
 		"Width": 2.61,
 		"Height": 4.8,
