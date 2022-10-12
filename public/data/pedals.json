@@ -24108,6 +24108,41 @@
 		"Image": "black-knob.png"
 	},
 	{
+		"Brand": "Rainger FX",
+		"Name": "Bleep",
+		"Width": 1.7,
+		"Height": 4.15,
+		"Image": "raingerfx-bleep.png"
+	},
+	{
+		"Brand": "Rainger FX",
+		"Name": "Deep Space Pulsar",
+		"Width": 1.7,
+		"Height": 4.15,
+		"Image": "raingerfx-deep-space-pulsar.png"
+	},
+	{
+		"Brand": "Rainger FX",
+		"Name": "Echo-X",
+		"Width": 1.7,
+		"Height": 4.15,
+		"Image": "raingerfx-echo-x.png"
+	},
+	{
+		"Brand": "Rainger FX",
+		"Name": "Minibar",
+		"Width": 1.7,
+		"Height": 4.15,
+		"Image": "raingerfx-minibar.png"
+	},
+	{
+		"Brand": "Rainger FX",
+		"Name": "Reverb-X",
+		"Width": 1.7,
+		"Height": 4.15,
+		"Image": "raingerfx-reverb-x.png"
+	},
+	{
 		"Brand": "Ramble FX",
 		"Name": "Kismet",
 		"Width": 3.69,
