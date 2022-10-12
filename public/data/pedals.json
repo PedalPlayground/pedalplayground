@@ -4047,6 +4047,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "PQ-4 Parametric Equalizer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-pq4.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "PS-2 Pitch Shifter/Delay",
 		"Width": 2.875,
 		"Height": 5.125,
