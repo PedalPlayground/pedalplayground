@@ -12635,6 +12635,125 @@
 		"Image": "glou-glou-loupe-white.png"
 	},
 	{
+		"Brand": "Gokko",
+		"Name": "AC BOX",
+		"Width": 3.86,
+		"Height": 4.77,
+		"Image": "gokko-acbox.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Angel",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "gokko-angel.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Creepy",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "gokko-creepy.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Dripping",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "gokko-dripping.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Hi Gain Box",
+		"Width": 3.86,
+		"Height": 4.77,
+		"Image": "gokko-high-gain-box.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Kult",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "gokko-kult.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Octave Fuzz",
+		"Width": 4.99,
+		"Height": 3.79,
+		"Image": "gokko-octave-fuzz.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Plexi Box",
+		"Width": 3.86,
+		"Height": 4.77,
+		"Image": "gokko-plexi-box.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Repeater",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "gokko-repeater.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Rocket",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "gokko-rocket.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "SonicBone",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "gokko-sonicbone.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "SonicFire",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "gokko-sonicfire.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "SonicFire Plus",
+		"Width": 4.99,
+		"Height": 3.79,
+		"Image": "gokko-sonicfire-plus.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "SonicFlame",
+		"Width": 3.86,
+		"Height": 4.77,
+		"Image": "gokko-sonicflame.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "SonicFuel",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "gokko-sonicfuel.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "SpanishFly",
+		"Width": 4.99,
+		"Height": 3.79,
+		"Image": "gokko-spanishfly.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Vintage Box",
+		"Width": 3.86,
+		"Height": 4.77,
+		"Image": "gokko-vintage-box.png"
+	},
+	{
 		"Brand": "Goodwood Audio",
 		"Name": "Audition",
 		"Width": 4.45,
