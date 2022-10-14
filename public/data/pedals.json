@@ -16676,8 +16676,8 @@
 	{
 		"Brand": "Lauren Audio",
 		"Name": "Mustang",
-		"Width": 6,
-		"Height": 5.14,
+		"Width": 3.5,
+		"Height": 5.32,
 		"Image": "lauren-mustang.png"
 	},
 	{
@@ -20234,35 +20234,35 @@
 		"Name": "Fullbore Metal",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-fullbore-metal.png"
+		"Image": "mxr-m116.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "GT-OD",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-gtod.png"
+		"Image": "mxr-m193.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "ILOVEDUST Carbon Copy Analog Delay",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-ilovedust-carbon-copy.png"
+		"Image": "mxr-ild169.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Iso Brick",
 		"Width": 2.9,
 		"Height": 4.7,
-		"Image": "mxr-isobrick.png"
+		"Image": "mxr-m238.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Jimi Hendrix Fuzz Face (Limited Edition)",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-jimi-hendrix-fuzz-face-le.png"
+		"Image": "mxr-jhf1le.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20318,49 +20318,49 @@
 		"Name": "Micro Amp",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-micro-amp.png"
+		"Image": "mxr-m133.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Micro Amp+",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-micro-amp-plus.png"
+		"Image": "mxr-m233.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Micro Chorus",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-microchorus.png"
+		"Image": "mxr-m148.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Micro Flanger",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-microflanger.png"
+		"Image": "mxr-m152.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Mini Iso-Brick",
 		"Width": 1.5,
 		"Height": 3.6,
-		"Image": "mxr-mini-iso-brick.png"
+		"Image": "mxr-m239.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Noise Clamp",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-noiseclamp.png"
+		"Image": "mxr-m195.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Octavio",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-octavio.png"
+		"Image": "mxr-m267.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20381,7 +20381,7 @@
 		"Name": "Phase 90 ('74 Vintage)",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-cspo26.png"
+		"Image": "mxr-csp026.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20395,7 +20395,7 @@
 		"Name": "Phase 95",
 		"Width": 1.74,
 		"Height": 3.7,
-		"Image": "mxr-phase95.png"
+		"Image": "mxr-m290.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20406,10 +20406,10 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Power 50",
+		"Name": "Tom Morello Power 50",
 		"Width": 4.75,
 		"Height": 3.65,
-		"Image": "mxr-power50.png"
+		"Image": "mxr-tbm1.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20423,42 +20423,42 @@
 		"Name": "Raw Dog",
 		"Width": 1.74,
 		"Height": 3.7,
-		"Image": "mxr-raw-dog.png"
+		"Image": "mxr-eg74.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Reverb",
 		"Width": 2.64,
 		"Height": 4.33,
-		"Image": "mxr-reverb.png"
+		"Image": "mxr-m300.png"
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Six Band EQ",
+		"Name": "Six Band EQ (Black)",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-eq.png"
+		"Image": "mxr-m109-black.png"
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Six Band EQ",
+		"Name": "Six Band EQ (Silver)",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-eq-2.png"
+		"Image": "mxr-m109s.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Slash Octave Fuzz",
 		"Width": 4.95,
 		"Height": 3.54,
-		"Image": "mxr-slash-octave-fuzz.png"
+		"Image": "mxr-sf01.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Smartgate",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-smartgate.png"
+		"Image": "mxr-m135.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20532,17 +20532,17 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Ten Band EQ",
+		"Name": "Ten Band EQ (Black)",
 		"Width": 4.75,
 		"Height": 3.65,
-		"Image": "mxr-eq2.png"
+		"Image": "mxr-m108-black.png"
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Ten Band EQ",
+		"Name": "Ten Band EQ (Silver)",
 		"Width": 4.75,
 		"Height": 3.65,
-		"Image": "mxr-eq2-2.png"
+		"Image": "mxr-m108s.png"
 	},
 	{
 		"Brand": "MXR",
