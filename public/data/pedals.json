@@ -8709,6 +8709,27 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "White Light Reissue",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-white-light-reissue.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "White Light Reissue (Blue)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-white-light-reissue-blue.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "White Light Reissue (Silver)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-white-light-reissue-silver.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Zap Machine V2",
 		"Width": 3.7,
 		"Height": 4.95,
