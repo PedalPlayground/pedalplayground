@@ -5911,29 +5911,50 @@
 		"Brand": "Coppersound",
 		"Name": "Daedalus",
 		"Width": 4.7,
-		"Height": 3.86,
+		"Height": 3.87,
 		"Image": "coppersound-daedalus.png"
 	},
 	{
 		"Brand": "Coppersound",
 		"Name": "Foxcatcher",
 		"Width": 4.7,
-		"Height": 3.89,
+		"Height": 3.87,
 		"Image": "coppersound-foxcatcher.png"
+	},
+	{
+		"Brand": "Coppersound",
+		"Name": "Gravity Bomb",
+		"Width": 1.94,
+		"Height": 3.65,
+		"Image": "coppersound-gravity-bomb.png"
+	},
+	{
+		"Brand": "Coppersound",
+		"Name": "Gravity Bomb V2",
+		"Width": 1.76,
+		"Height": 3.65,
+		"Image": "coppersound-gravity-bomb-v2.png"
 	},
 	{
 		"Brand": "Coppersound",
 		"Name": "Loma Prieta",
 		"Width": 4.7,
-		"Height": 4,
+		"Height": 3.95,
 		"Image": "coppersound-loma-prieta.png"
 	},
 	{
 		"Brand": "Coppersound",
 		"Name": "Polaris",
 		"Width": 4.7,
-		"Height": 3.90,
+		"Height": 3.87,
 		"Image": "coppersound-polaris.png"
+	},
+	{
+		"Brand": "Coppersound",
+		"Name": "Renegade",
+		"Width": 1.76,
+		"Height": 3.65,
+		"Image": "coppersound-renegade.png"
 	},
 	{
 		"Brand": "Cornerstone",
