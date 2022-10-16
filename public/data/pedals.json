@@ -4817,10 +4817,17 @@
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Wave Cannon",
+		"Name": "Wave Cannon MKI",
 		"Width": 3.7,
 		"Height": 4.88,
-		"Image": "caroline-wave-cannon.png"
+		"Image": "caroline-wave-cannon-mki.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Wave Cannon MKII",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "caroline-wave-cannon-mkii.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -6368,6 +6375,13 @@
 		"Width": 4.7,
 		"Height": 4.01,
 		"Image": "cusack-tap-a-whirl.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Tap-A-Whirl (Red)",
+		"Width": 4.7,
+		"Height": 4.01,
+		"Image": "cusack-tap-a-whirl-red.png"
 	},
 	{
 		"Brand": "Cusack Music",
@@ -18459,6 +18473,20 @@
 		"Image": "mission-vp1.png"
 	},
 	{
+		"Brand": "MJM FX",
+		"Name": "London Fuzz",
+		"Width": 2.71,
+		"Height": 4.41,
+		"Image": "mjm-london-fuzz.png"
+	},
+	{
+		"Brand": "MJM FX",
+		"Name": "Phantom Overdrive",
+		"Width": 2.91,
+		"Height": 4.8,
+		"Image": "mjm-phantom.png"
+	},
+	{
 		"Brand": "Moen",
 		"Name": "GEC8 JR V2",
 		"Width": 18.90,
@@ -20465,21 +20493,21 @@
 		"Name": "Stereo Chorus",
 		"Width": 4.95,
 		"Height": 3.54,
-		"Image": "mxr-stereochorus.png"
+		"Image": "mxr-m134.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Studio Compressor",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-studiocompressor.png"
+		"Image": "mxr-m76.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Sub Machine",
 		"Width": 4.95,
 		"Height": 3.54,
-		"Image": "mxr-sub-machine.png"
+		"Image": "mxr-m225.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20490,38 +20518,38 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Super Badass Distortion",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-sbdistortion.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Super Comp",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-super-comp.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Sugar Drive",
 		"Width": 1.74,
 		"Height": 3.7,
-		"Image": "mxr-sugardrive.png"
+		"Image": "mxr-m294.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Super Badass Distortion",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m75.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Super Badass Variac Fuzz",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-sbvariacfuzz.png"
+		"Image": "mxr-m236.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Super Comp",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m132.png"
 	},
 	{
 		"Brand": "MXR",
 		"Name": "Talk Box",
 		"Width": 4.33,
 		"Height": 6.53,
-		"Image": "mxr-talkbox.png"
+		"Image": "mxr-m222.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20773,7 +20801,7 @@
 		"Name": "Mjolnir (Wildwood Edition)",
 		"Width": 4.7,
 		"Height": 3.8,
-		"Image": "mythos-mjolner-wildwood.png"
+		"Image": "mythos-mjolnir-wildwood.png"
 	},
 	{
 		"Brand": "Mythos",
