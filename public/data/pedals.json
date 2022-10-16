@@ -13000,6 +13000,13 @@
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Lightspeed (Moonshot Silver)",
+		"Width": 2.82,
+		"Height": 4.9,
+		"Image": "greer-lightspeed-moonshot.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Lightspeed (Pink/White)",
 		"Width": 2.82,
 		"Height": 4.9,
@@ -13007,10 +13014,24 @@
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Lightspeed (Purpink)",
+		"Width": 2.82,
+		"Height": 4.9,
+		"Image": "greer-lightspeed-purpink.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Lightspeed (Reverse Daphne)",
 		"Width": 2.82,
 		"Height": 4.9,
 		"Image": "greer-lightspeed-revdaphne.png"
+	},
+	{
+		"Brand": "Greer Amps",
+		"Name": "Lightspeed (Snowblind)",
+		"Width": 2.82,
+		"Height": 4.9,
+		"Image": "greer-lightspeed-snowblind.png"
 	},
 	{
 		"Brand": "Greer Amps",
@@ -16703,10 +16724,24 @@
 	},
 	{
 		"Brand": "KSR",
-		"Name": "Ceres (Black Sparkle)",
+		"Name": "Ceres",
 		"Width": 5.7,
-		"Height": 4.7,
-		"Image": "ksr-ceres-black-sparkle.png"
+		"Height": 4.84,
+		"Image": "ksr-ceres.png"
+	},
+	{
+		"Brand": "KSR",
+		"Name": "Eros",
+		"Width": 2.37,
+		"Height": 4.6,
+		"Image": "ksr-eros.png"
+	},
+	{
+		"Brand": "KSR",
+		"Name": "Vesta",
+		"Width": 5.7,
+		"Height": 4.84,
+		"Image": "ksr-vesta.png"
 	},
 	{
 		"Brand": "King Pedals",
