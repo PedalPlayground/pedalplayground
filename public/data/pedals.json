@@ -2857,6 +2857,13 @@
 	},
 	{
 		"Brand": "Black Mass Electronics",
+		"Name": "Kill Chain",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "blackmass-kill-chain.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
 		"Name": "Missionary Fuzz V2",
 		"Width": 2.6,
 		"Height": 4.97,
