@@ -294,6 +294,13 @@
 		"Image": "aclam-windmiller.png"
 	},
 	{
+		"Brand": "Acorn Amplification",
+		"Name": "Mind Killer",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "acorn-mind-killer.png"
+	},
+	{
 		"Brand": "Aerospace Audio",
 		"Name": "Atmosphere",
 		"Width": 4.85,
@@ -29182,6 +29189,13 @@
 		"Width": 3.7,
 		"Height": 4.89,
 		"Image": "voodoolab-tremolo.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "Wahzoo",
+		"Width": 5.15,
+		"Height": 9.61,
+		"Image": "voodoolab-wahzoo.png"
 	},
 	{
 		"Brand": "Vox",
