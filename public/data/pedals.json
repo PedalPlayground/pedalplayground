@@ -4693,7 +4693,7 @@
 		"Brand": "Caroline",
 		"Name": "Icarus V2 (White)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.94,
 		"Image": "caroline-icarus-white.png"
 	},
 	{
@@ -4826,8 +4826,22 @@
 		"Brand": "Caroline",
 		"Name": "Wave Cannon",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.94,
 		"Image": "caroline-wave-cannon.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Wave Cannon MkII",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "caroline-wave-cannon-mk2.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Wave Cannon MkII (1985 Throwback)",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "caroline-wave-cannon-mk2-1985.png"
 	},
 	{
 		"Brand": "Catalinbread",
