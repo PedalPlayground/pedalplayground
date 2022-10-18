@@ -28627,15 +28627,22 @@
 		"Brand": "Two Notes",
 		"Name": "Torpedo C.A.B.",
 		"Width": 7,
-		"Height": 5.03,
+		"Height": 4.97,
 		"Image": "twonotes-torpedocab.png"
 	},
 	{
 		"Brand": "Two Notes",
 		"Name": "Torpedo C.A.B. M",
-		"Width": 3.78,
+		"Width": 4.21,
 		"Height": 4.76,
 		"Image": "twonotes-torpedocabm.png"
+	},
+	{
+		"Brand": "Two Notes",
+		"Name": "Torpedo C.A.B. M+",
+		"Width": 4.21,
+		"Height": 4.76,
+		"Image": "twonotes-torpedocabmplus.png"
 	},
 	{
 		"Brand": "Union Tube & Transistor",
