@@ -4817,13 +4817,6 @@
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Wave Cannon MKI",
-		"Width": 3.7,
-		"Height": 4.88,
-		"Image": "caroline-wave-cannon-mki.png"
-	},
-	{
-		"Brand": "Caroline",
 		"Name": "Wave Cannon MKII",
 		"Width": 3.7,
 		"Height": 4.88,
@@ -20556,7 +20549,7 @@
 		"Name": "Tap Tempo Switch",
 		"Width": 1.5,
 		"Height": 2.16,
-		"Image": "mxr-tap.png"
+		"Image": "mxr-m199.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20591,7 +20584,7 @@
 		"Name": "Univibe",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-univibe.png"
+		"Image": "mxr-m68.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20605,21 +20598,14 @@
 		"Name": "Brown Acid Fuzz",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-brown-acid-fuzz.png"
-	},
-	{
-		"Brand": "MXR Custom Shop",
-		"Name": "Cry Baby Q Zone Fixed Wah",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-csp030.png"
+		"Image": "mxr-csp038.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
 		"Name": "Duke of Tone",
 		"Width": 1.74,
 		"Height": 3.7,
-		"Image": "mxr-cspo39.png"
+		"Image": "mxr-csp039.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
@@ -20640,7 +20626,7 @@
 		"Name": "Il Torino Overdrive",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-iltorinood.png"
+		"Image": "mxr-csp033.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
@@ -20668,7 +20654,7 @@
 		"Name": "Raijin Drive",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-raijin-drive.png"
+		"Image": "mxr-csp037.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
@@ -20682,7 +20668,7 @@
 		"Name": "Timmy",
 		"Width": 1.74,
 		"Height": 3.7,
-		"Image": "mxr-cspo27.png"
+		"Image": "mxr-csp027.png"
 	},
 	{
 		"Brand": "Mythos",
