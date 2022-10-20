@@ -24571,121 +24571,170 @@
 	},
 	{
 		"Brand": "Red Witch",
-		"Name": "Dlx Moon Phaser",
-		"Width": 4.64567,
-		"Height": 3.70079,
+		"Name": "Deluxe Moon Phaser",
+		"Width": 5,
+		"Height": 3.77,
 		"Image": "redwitch-dlxmoonphaser.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Empress Chorus",
-		"Width": 4.64567,
-		"Height": 3.70079,
+		"Width": 5,
+		"Height": 3.77,
 		"Image": "redwitch-empresschorus.png"
 	},
 	{
 		"Brand": "Red Witch",
-		"Name": "Eve Tremolo",
-		"Width": 1.77165,
-		"Height": 3.543307,
-		"Image": "redwitch-eve.png"
+		"Name": "Empress Chorus Deus",
+		"Width": 5,
+		"Height": 3.77,
+		"Image": "redwitch-empresschorus-deus.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Factotum",
-		"Width": 4.64567,
-		"Height": 3.70079,
+		"Width": 5,
+		"Height": 3.77,
 		"Image": "redwitch-factotum.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Famulus",
-		"Width": 4.64567,
-		"Height": 3.70079,
+		"Width": 5,
+		"Height": 3.77,
 		"Image": "redwitch-famulus.png"
 	},
 	{
 		"Brand": "Red Witch",
-		"Name": "Fuzz God",
-		"Width": 4.64567,
-		"Height": 3.70079,
-		"Image": "redwitch-fuzzgod.png"
+		"Name": "Fuzz God II",
+		"Width": 5,
+		"Height": 3.77,
+		"Image": "redwitch-fuzzgod-ii.png"
 	},
 	{
 		"Brand": "Red Witch",
-		"Name": "Grace Compressor",
-		"Width": 1.77165,
-		"Height": 3.543307,
+		"Name": "Fuzz God III",
+		"Width": 1.77,
+		"Height": 3.43,
+		"Image": "redwitch-fuzzgod-iii.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Fuzz God IV",
+		"Width": 5,
+		"Height": 3.77,
+		"Image": "redwitch-fuzzgod-iv.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "SS Eve Tremolo",
+		"Width": 1.77,
+		"Height": 3.43,
+		"Image": "redwitch-eve.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "SS Grace Compressor",
+		"Width": 1.77,
+		"Height": 3.43,
 		"Image": "redwitch-grace.png"
 	},
 	{
 		"Brand": "Red Witch",
-		"Name": "Joy Distortion",
-		"Width": 1.77165,
-		"Height": 3.543307,
+		"Name": "SS Joy Distortion",
+		"Width": 1.77,
+		"Height": 3.43,
 		"Image": "redwitch-joy.png"
 	},
 	{
 		"Brand": "Red Witch",
-		"Name": "Lily Boost",
-		"Width": 1.77165,
-		"Height": 3.543307,
+		"Name": "SS Lily Boost",
+		"Width": 1.77,
+		"Height": 3.43,
 		"Image": "redwitch-lily.png"
 	},
 	{
 		"Brand": "Red Witch",
-		"Name": "Pentavocal Trem",
-		"Width": 4.64567,
-		"Height": 3.70079,
-		"Image": "redwitch-pentavocal.png"
-	},
-	{
-		"Brand": "Red Witch",
-		"Name": "Ruby Fuzz",
-		"Width": 1.77165,
-		"Height": 3.543307,
+		"Name": "SS Ruby Fuzz",
+		"Width": 1.77,
+		"Height": 3.43,
 		"Image": "redwitch-ruby.png"
 	},
 	{
 		"Brand": "Red Witch",
-		"Name": "Scarlett Overdrive",
-		"Width": 1.77165,
-		"Height": 3.543307,
+		"Name": "SS Scarlett Overdrive",
+		"Width": 1.77,
+		"Height": 3.43,
 		"Image": "redwitch-scarlette.png"
 	},
 	{
 		"Brand": "Red Witch",
-		"Name": "Synthotron",
-		"Width": 4.64567,
-		"Height": 3.70079,
+		"Name": "SS Violet Delay",
+		"Width": 1.77,
+		"Height": 3.43,
+		"Image": "redwitch-violet.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "SS Violetta Delay",
+		"Width": 1.84,
+		"Height": 3.43,
+		"Image": "redwitch-violetta.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Medusa Chorus Tremolo",
+		"Width": 5,
+		"Height": 3.77,
+		"Image": "redwitch-medusa.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Omnia Germanium Amplifier",
+		"Width": 3.98,
+		"Height": 1.96,
+		"Image": "redwitch-omnia.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Opia Fuzz Engine",
+		"Width": 3.98,
+		"Height": 1.64,
+		"Image": "redwitch-opia.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Pentavocal Tremolo",
+		"Width": 5,
+		"Height": 3.77,
+		"Image": "redwitch-pentavocal.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Synthotron II",
+		"Width": 5,
+		"Height": 3.77,
 		"Image": "redwitch-synthotron.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Titan",
-		"Width": 4.64567,
-		"Height": 3.70079,
+		"Width": 5,
+		"Height": 3.77,
 		"Image": "redwitch-titan.png"
 	},
 	{
 		"Brand": "Red Witch",
-		"Name": "Violet Delay",
-		"Width": 1.77165,
-		"Height": 3.543307,
-		"Image": "redwitch-violet.png"
-	},
-	{
-		"Brand": "Red Witch",
-		"Name": "Violetta Delay",
-		"Width": 1.82,
-		"Height": 3.543307,
-		"Image": "redwitch-violetta.png"
+		"Name": "Xenia Overdrive Engine",
+		"Width": 3.98,
+		"Height": 1.96,
+		"Image": "redwitch-xenia.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Zeus",
-		"Width": 4.64567,
-		"Height": 3.70079,
+		"Width": 5,
+		"Height": 3.77,
 		"Image": "redwitch-zeus.png"
 	},
 	{
