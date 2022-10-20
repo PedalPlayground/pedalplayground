@@ -24627,6 +24627,34 @@
 	},
 	{
 		"Brand": "Red Witch",
+		"Name": "Medusa Chorus Tremolo",
+		"Width": 5,
+		"Height": 3.77,
+		"Image": "redwitch-medusa.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Omnia Germanium Amplifier",
+		"Width": 3.98,
+		"Height": 1.96,
+		"Image": "redwitch-omnia.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Opia Fuzz Engine",
+		"Width": 3.98,
+		"Height": 1.64,
+		"Image": "redwitch-opia.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Pentavocal Tremolo",
+		"Width": 5,
+		"Height": 3.77,
+		"Image": "redwitch-pentavocal.png"
+	},
+	{
+		"Brand": "Red Witch",
 		"Name": "SS Eve Tremolo",
 		"Width": 1.77,
 		"Height": 3.43,
@@ -24680,34 +24708,6 @@
 		"Width": 1.84,
 		"Height": 3.43,
 		"Image": "redwitch-violetta.png"
-	},
-	{
-		"Brand": "Red Witch",
-		"Name": "Medusa Chorus Tremolo",
-		"Width": 5,
-		"Height": 3.77,
-		"Image": "redwitch-medusa.png"
-	},
-	{
-		"Brand": "Red Witch",
-		"Name": "Omnia Germanium Amplifier",
-		"Width": 3.98,
-		"Height": 1.96,
-		"Image": "redwitch-omnia.png"
-	},
-	{
-		"Brand": "Red Witch",
-		"Name": "Opia Fuzz Engine",
-		"Width": 3.98,
-		"Height": 1.64,
-		"Image": "redwitch-opia.png"
-	},
-	{
-		"Brand": "Red Witch",
-		"Name": "Pentavocal Tremolo",
-		"Width": 5,
-		"Height": 3.77,
-		"Image": "redwitch-pentavocal.png"
 	},
 	{
 		"Brand": "Red Witch",
