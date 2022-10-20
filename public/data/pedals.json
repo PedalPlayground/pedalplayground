@@ -85,6 +85,13 @@
 	},
 	{
 		"Brand": "29 Pedals",
+		"Name": "FLWR",
+		"Width": 3.41,
+		"Height": 3.88,
+		"Image": "29pedals-flwr.png"
+	},
+	{
+		"Brand": "29 Pedals",
 		"Name": "OAMP",
 		"Width": 4.88,
 		"Height": 3.88,
