@@ -105,6 +105,13 @@
 		"Image": "3degrees-bygones-v3.png"
 	},
 	{
+		"Brand": "3Degrees Audio",
+		"Name": "Rewire",
+		"Width": 5.63,
+		"Height": 4.72,
+		"Image": "3degrees-rewire.png"
+	},
+	{
 		"Brand": "3Leaf Audio",
 		"Name": "Chromatron",
 		"Width": 4.7,
@@ -5854,16 +5861,44 @@
 	{
 		"Brand": "Collision Devices",
 		"Name": "Black Hole Symmetry",
-		"Width": 7.44,
-		"Height": 4.84,
+		"Width": 7.61,
+		"Height": 4.88,
 		"Image": "collision-devices-black-hole-symmetry.png"
 	},
 	{
 		"Brand": "Collision Devices",
+		"Name": "Black Hole Symmetry (Dark)",
+		"Width": 7.61,
+		"Height": 4.88,
+		"Image": "collision-devices-black-hole-symmetry-dark.png"
+	},
+	{
+		"Brand": "Collision Devices",
+		"Name": "Black Hole Symmetry (Pink)",
+		"Width": 7.61,
+		"Height": 4.88,
+		"Image": "collision-devices-black-hole-symmetry-pink.png"
+	},
+	{
+		"Brand": "Collision Devices",
+		"Name": "Black Hole Symmetry (White)",
+		"Width": 7.61,
+		"Height": 4.88,
+		"Image": "collision-devices-black-hole-symmetry-white.png"
+	},
+	{
+		"Brand": "Collision Devices",
 		"Name": "Nocturnal",
-		"Width": 7.44,
-		"Height": 4.84,
+		"Width": 7.61,
+		"Height": 4.88,
 		"Image": "collision-devices-nocturnal.png"
+	},
+	{
+		"Brand": "Collision Devices",
+		"Name": "Nocturnal (Pink)",
+		"Width": 7.61,
+		"Height": 4.88,
+		"Image": "collision-devices-nocturnal-pink.png"
 	},
 	{
 		"Brand": "Colorsound",
@@ -8555,6 +8590,27 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Plumes (El Dorado)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-plumes-el-dorado.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Plumes (Pastel Purple)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-plumes-pastel-purple.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
+		"Name": "Plumes (Purple)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-plumes-purple.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Plumes (Purple Sparkle)",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -9063,6 +9119,13 @@
 		"Width": 4.19,
 		"Height": 4.75,
 		"Image": "ehx-720.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "8 Step Program",
+		"Width": 6.07,
+		"Height": 4.75,
+		"Image": "ehx-8-step-program.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -14600,6 +14663,13 @@
 		"Width": 2.3,
 		"Height": 4,
 		"Image": "jrockett-hot-rubber-monkey.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "JB Archer",
+		"Width": 2.3,
+		"Height": 3.97,
+		"Image": "jrockett-jb-archer.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -25873,6 +25943,13 @@
 	},
 	{
 		"Brand": "Source Audio",
+		"Name": "Dual Expression Pedal",
+		"Width": 3.96,
+		"Height": 10,
+		"Image": "sourceaudio-dual-expression.png"
+	},
+	{
+		"Brand": "Source Audio",
 		"Name": "EQ2",
 		"Width": 2.94,
 		"Height": 4.5,
@@ -26269,6 +26346,13 @@
 		"Width": 3.99,
 		"Height": 4.75,
 		"Image": "spaceman-sputnikiii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Sputnik III (White)",
+		"Width": 3.99,
+		"Height": 4.75,
+		"Image": "spaceman-sputnikiii-white.png"
 	},
 	{
 		"Brand": "Spaceman",
