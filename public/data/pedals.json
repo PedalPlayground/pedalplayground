@@ -4599,6 +4599,34 @@
 		"Image": "buffalo-tdx.png"
 	},
 	{
+		"Brand": "Bugera",
+		"Name": "FSB102",
+		"Width": 5.28,
+		"Height": 4.46,
+		"Image": "bugera-fsb102.png"
+	},
+	{
+		"Brand": "Bugera",
+		"Name": "FSB102A",
+		"Width": 5.28,
+		"Height": 4.46,
+		"Image": "bugera-fsb102a.png"
+	},
+	{
+		"Brand": "Bugera",
+		"Name": "FSB102B",
+		"Width": 5.28,
+		"Height": 4.46,
+		"Image": "bugera-fsb102b.png"
+	},
+	{
+		"Brand": "Bugera",
+		"Name": "FSB106A",
+		"Width": 15.77,
+		"Height": 4.46,
+		"Image": "bugera-fsb106a.png"
+	},
+	{
 		"Brand": "Calico Effects",
 		"Name": "Antlers",
 		"Width": 2.6,
@@ -15437,8 +15465,8 @@
 	{
 		"Brand": "JHS",
 		"Name": "Colour Box",
-		"Width": 3.7,
-		"Height": 4.7,
+		"Width": 3.89,
+		"Height": 4.84,
 		"Image": "jhs-colour-box.png"
 	},
 	{
