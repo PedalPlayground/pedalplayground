@@ -15338,6 +15338,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Artificial Blonde",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "jhs-artificial-blonde.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Astro Mess Fuzz",
 		"Width": 2.93,
 		"Height": 4.98,
