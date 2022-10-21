@@ -6713,6 +6713,13 @@
 		"Image": "deadbeat-wet-dreams.png"
 	},
 	{
+		"Brand": "Deadbug Circuits",
+		"Name": "1968",
+		"Width": 2.5,
+		"Height": 4.75,
+		"Image": "deadbug-1968.png"
+	},	
+	{
 		"Brand": "Death By Audio",
 		"Name": "Absolute Destruction",
 		"Width": 2.61,
@@ -17371,7 +17378,7 @@
 		"Name": "Sky Blue (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-skyblue-hw.png"
+		"Image": "mad-professor-sky-blue-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -19937,69 +19944,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Bass Chorus Deluxe",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-m83.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Compressor",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-m87.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass DI+",
-		"Width": 4.95,
-		"Height": 3.54,
-		"Image": "mxr-m80.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Distortion",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-m85.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Envelope Filter",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-m82.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Fuzz Deluxe",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-m84.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Octave Deluxe",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-m288.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Overdrive",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-m89.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Bass Preamp",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-m81.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Blue Box Fuzz",
 		"Width": 2.57,
 		"Height": 4.33,
@@ -20172,13 +20116,6 @@
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-csp102sl.png"
-	},
-	{
-		"Brand": "MXR",
-		"Name": "Dyna Comp Bass",
-		"Width": 1.74,
-		"Height": 3.7,
-		"Image": "mxr-m282.png"
 	},
 	{
 		"Brand": "MXR",
@@ -20504,13 +20441,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Sub Octave Bass Fuzz",
-		"Width": 4.95,
-		"Height": 3.54,
-		"Image": "mxr-m287.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Sugar Drive",
 		"Width": 1.74,
 		"Height": 3.7,
@@ -20567,13 +20497,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Thump",
-		"Width": 1.74,
-		"Height": 3.7,
-		"Image": "mxr-m281.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Tremolo",
 		"Width": 2.64,
 		"Height": 4.33,
@@ -20587,7 +20510,91 @@
 		"Image": "mxr-m68.png"
 	},
 	{
-		"Brand": "MXR",
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Chorus Deluxe",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m83.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Compressor",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m87.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass DI+",
+		"Width": 4.95,
+		"Height": 3.54,
+		"Image": "mxr-m80.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Distortion",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m85.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Envelope Filter",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m82.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Fuzz Deluxe",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m84.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Octave Deluxe",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m288.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Overdrive",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m89.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Bass Preamp",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-m81.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Dyna Comp Bass",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-m282.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Sub Octave Bass Fuzz",
+		"Width": 4.95,
+		"Height": 3.54,
+		"Image": "mxr-m287.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
+		"Name": "Thump",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-m281.png"
+	},
+	{
+		"Brand": "MXR Bass Innovations",
 		"Name": "Vintage Bass Octave",
 		"Width": 1.74,
 		"Height": 3.7,
@@ -21176,7 +21183,7 @@
 	},
 	{
 		"Brand": "NuX",
-		"Name": "Rotary",
+		"Name": "Roctary",
 		"Width": 4.25,
 		"Height": 5.08,
 		"Image": "nux-roctary.png"
