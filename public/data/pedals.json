@@ -21466,7 +21466,7 @@
 		"Name": "Quad Cortex",
 		"Width": 11.42,
 		"Height": 7.8,
-		"Image": "neuraldsp-quadcortex.png"
+		"Image": "neural-dsp-quad-cortex.png"
 	},
 	{
 		"Brand": "Okko FX",
@@ -28013,6 +28013,13 @@
 		"Width": 2.59843,
 		"Height": 4.37008,
 		"Image": "vfe-blueprint-v4.png"
+	},
+	{
+		"Brand": "VFE",
+		"Name": "Klein Bottle 2022",
+		"Width": 2.59843,
+		"Height": 4.37008,
+		"Image": "vfe-klein-bottle-2022.png"
 	},
 	{
 		"Brand": "VFE",
