@@ -7911,10 +7911,52 @@
 	},
 	{
 		"Brand": "Drolo",
+		"Name": "Giant Hogweed",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "drolo-giant-hogweed.png"
+	},
+	{
+		"Brand": "Drolo",
+		"Name": "Lilac Cloud",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "drolo-lilac-cloud.png"
+	},
+	{
+		"Brand": "Drolo",
+		"Name": "Molecular Disruptor",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "drolo-molecular-disruptor.png"
+	},
+	{
+		"Brand": "Drolo",
+		"Name": "Moon Rabbit",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "drolo-moon-rabbit.png"
+	},
+	{
+		"Brand": "Drolo",
 		"Name": "Stamme[n] v4",
-		"Width": 3.94,
-		"Height": 4.92,
+		"Width": 3.77,
+		"Height": 4.95,
 		"Image": "drolo-stammen-v4.png"
+	},
+	{
+		"Brand": "Drolo",
+		"Name": "Stretch Weaver",
+		"Width": 3.91,
+		"Height": 4.95,
+		"Image": "drolo-stretch-weaver.png"
+	},
+	{
+		"Brand": "Drolo",
+		"Name": "Twin Peaks v5",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "drolo-twin-peaks-v5.png"
 	},
 	{
 		"Brand": "Drunk Beaver",
