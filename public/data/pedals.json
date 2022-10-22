@@ -133,6 +133,13 @@
 		"Image": "3leaf-audio-wonderlove-v2.png"
 	},
 	{
+		"Brand": "3rd Power",
+		"Name": "Roosevelt Drive",
+		"Width": 4.84,
+		"Height": 3.94,
+		"Image": "3rd-power-roosevelt-drive.png"
+	},
+	{
 		"Brand": "A/DA",
 		"Name": "PBF Flanger",
 		"Width": 2.5,
@@ -19275,7 +19282,7 @@
 		"Name": "Pitch Box",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-pitchbox.png"
+		"Image": "mooer-pitch-box.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -19296,7 +19303,7 @@
 		"Name": "Pure Boost",
 		"Width": 1.67,
 		"Height": 3.75,
-		"Image": "mooer-pureboost.png"
+		"Image": "mooer-pure-boost.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -21382,7 +21389,7 @@
 		"Name": "Ghost Ridge V1.5",
 		"Width": 2.6,
 		"Height": 5,
-		"Image": "nativeaudio-ghost-ridge.png"
+		"Image": "native-audio-ghost-ridge.png"
 	},
 	{
 		"Brand": "Native Audio",
