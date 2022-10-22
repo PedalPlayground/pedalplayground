@@ -22030,6 +22030,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "MG-30",
+		"Width": 12.3,
+		"Height": 6.7,
+		"Image": "nux-mg30.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Mini Studio",
 		"Width": 2.06,
 		"Height": 3.7,
@@ -22062,6 +22069,13 @@
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-morning-star.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "NMP-2 Dual Foot Switch",
+		"Width": 4,
+		"Height": 2.19,
+		"Image": "nux-npm2.png"
 	},
 	{
 		"Brand": "NuX",
