@@ -372,10 +372,31 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Andromeda Natural Overdrive",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-andromeda.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Azimuth Dynamic Overdrive",
 		"Width": 2.59843,
 		"Height": 4.80315,
 		"Image": "aion-azimuth.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Cerulean Amp Overdrive",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-cerulean.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Convex Parallel Compressor",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-convex.png"
 	},
 	{
 		"Brand": "Aion FX",
@@ -386,10 +407,45 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Equinox Amp Overdrive",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-equinox.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Flare Fuzz Machine",
 		"Width": 2.59843,
 		"Height": 4.80315,
 		"Image": "aion-flare.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Graviton Metal Distortion",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-graviton.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Halo Distortion/Sustainer",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-halo.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Helios Vintage Distortion",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-helios.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Lumin Sonic Enhancer",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-lumin.png"
 	},
 	{
 		"Brand": "Aion FX",
@@ -407,10 +463,66 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Phobos Germanium Fuzz",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-phobos.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Quantum MOSFET Distortion",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-quantum.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Radian Germanium Boost",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-radian.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Refractor Professional Overdrive",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-refractor.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Rift Octave Fuzz",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-rift.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Solaris Germanium Fuzz",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-solaris.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Solstice",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-solstice.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Stratus Classic Overdrive",
 		"Width": 2.59843,
 		"Height": 4.80315,
 		"Image": "aion-stratus.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Vector Ambient Delay",
+		"Width": 2.59843,
+		"Height": 4.80315,
+		"Image": "aion-vector.png"
 	},
 	{
 		"Brand": "AirTurn",
