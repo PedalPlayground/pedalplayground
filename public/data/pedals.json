@@ -8142,6 +8142,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Justin Chancellor Wah",
+		"Width": 5.26,
+		"Height": 9.6,
+		"Image": "dunlop-justin-chancellor-wah.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Joe Bonamassa Fuzz Face Mini",
 		"Width": 3.5,
 		"Height": 3.5,
@@ -8162,8 +8169,8 @@
 		"Image": "dunlop-mini-535q.png"
 	},
 	{
-    	"Brand": "Dunlop",
-    	"Name": "Rotovibe",
+    "Brand": "Dunlop",
+    "Name": "Rotovibe",
 		"Width": 4,
 	 	"Height": 10,
 		"Image": "dunlop-jd4s.png"
