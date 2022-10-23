@@ -21925,6 +21925,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "Damp Reverb",
+		"Width": 2.09,
+		"Height": 3.7,
+		"Image": "nux-damp-reverb.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Drive Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
@@ -21936,6 +21943,13 @@
 		"Width": 4.13,
 		"Height": 4.52,
 		"Image": "nux-duotime.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Edge Delay",
+		"Width": 2.09,
+		"Height": 3.7,
+		"Image": "nux-edge-delay.png"
 	},
 	{
 		"Brand": "NuX",
@@ -22037,6 +22051,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "Mini SCF",
+		"Width": 2.09,
+		"Height": 3.7,
+		"Image": "nux-mini-scf.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Mini Studio",
 		"Width": 2.06,
 		"Height": 3.7,
@@ -22118,6 +22139,13 @@
 		"Width": 2.83,
 		"Height": 4.80,
 		"Image": "nux-pt-6.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Pulse",
+		"Width": 2.09,
+		"Height": 3.7,
+		"Image": "nux-pulse.png"
 	},
 	{
 		"Brand": "NuX",
@@ -22209,6 +22237,20 @@
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-tube-man.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Ukiyo-E Chorus",
+		"Width": 2.09,
+		"Height": 3.7,
+		"Image": "nux-ukiyo-e-chorus.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Voodoo Vibe",
+		"Width": 2.09,
+		"Height": 3.7,
+		"Image": "nux-voodoo-vibe.png"
 	},
 	{
 		"Brand": "NuX",
@@ -30554,6 +30596,13 @@
 		"Width": 3.26,
 		"Height": 5,
 		"Image": "wayhuge-havalina.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Overdrive",
+		"Width": 3.26,
+		"Height": 5.04,
+		"Image": "wayhuge-overdrive.png"
 	},
 	{
 		"Brand": "Way Huge",
