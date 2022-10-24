@@ -17378,14 +17378,14 @@
 		"Name": "Forrest Green Compressor",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-forrestgreencomp.png"
+		"Image": "mad-professor-forrest-green.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Forrest Green Compressor (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-forrestgreencomp-hw.png"
+		"Image": "mad-professor-forrest-green-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -17434,14 +17434,14 @@
 		"Name": "Mellow Yellow Tremolo",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-melowyellow.png"
+		"Image": "mad-professor-mellow-yellow.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Mellow Yellow Tremolo (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-melowyellow-hw.png"
+		"Image": "mad-professor-mellow-yellow-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -17525,7 +17525,7 @@
 		"Name": "Stone Grey Distortion",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-stonegrey.png"
+		"Image": "mad-professor-stone-grey.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -21452,14 +21452,14 @@
 		"Name": "Mini Vent II",
 		"Width": 3.93,
 		"Height": 4.13,
-		"Image": "neo-minivent2.png"
+		"Image": "neo-mini-vent-ii.png"
 	},
 	{
 		"Brand": "Neo Instruments",
 		"Name": "Ventilator II",
 		"Width": 6.2,
 		"Height": 5.5,
-		"Image": "neo-vent2.png"
+		"Image": "neo-vent-ii.png"
 	},
 	{
 		"Brand": "Neunaber",
@@ -21599,7 +21599,7 @@
 		"Name": "Black Beast",
 		"Width": 4.05,
 		"Height": 4.81,
-		"Image": "okko-blackbeast.png"
+		"Image": "okko-black-beast.png"
 	},
 	{
 		"Brand": "Okko FX",
@@ -21683,14 +21683,14 @@
 		"Name": "Alpha Haunt",
 		"Width": 5.7,
 		"Height": 4.85,
-		"Image": "obne-alphahaunt.png"
+		"Image": "obne-alpha-haunt.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Alpha Haunt V2",
 		"Width": 4.7,
 		"Height": 4.12,
-		"Image": "obne-alphahaunt-v2.png"
+		"Image": "obne-alpha-haunt-v2.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -21746,7 +21746,7 @@
 		"Name": "Dark Star",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "obne-darkstar.png"
+		"Image": "obne-dark-star.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -27470,9 +27470,16 @@
 	},
 	{
 		"Brand": "The King of Gear",
+		"Name": "Feral Glitch",
+		"Width": 2.3622,
+		"Height": 4.52756,
+		"Image": "tkog-feral-glitch.png"
+	},
+	{
+		"Brand": "The King of Gear",
 		"Name": "Mini Glitch",
-		"Width": 2.36,
-		"Height": 4.61138,
+		"Width": 2.3622,
+		"Height": 4.52756,
 		"Image": "tkog-mini-glitch.png"
 	},
 	{
