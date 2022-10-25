@@ -12307,6 +12307,13 @@
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "Ultimate Octave",
+		"Width": 5.91,
+		"Height": 3.17,
+		"Image": "fulltone-ultimate-octave.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "2B",
 		"Width": 2.19,
 		"Height": 4.8,
