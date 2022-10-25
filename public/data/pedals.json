@@ -25137,6 +25137,34 @@
 		"Image": "rocktron-black-cat-moan.png"
 	},
 	{
+		"Brand": "Roland",
+		"Name": "SPD::ONE Electro",
+		"Width": 5.51,
+		"Height": 6.3,
+		"Image": "roland_spd_one_electro.png"
+	},
+	{
+		"Brand": "Roland",
+		"Name": "SPD::ONE Kick",
+		"Width": 5.51,
+		"Height": 6.3,
+		"Image": "roland_spd_one_kick.png"
+	},	
+	{
+		"Brand": "Roland",
+		"Name": "SPD::ONE Percussion",
+		"Width": 5.51,
+		"Height": 6.3,
+		"Image": "roland_spd_one_percussion.png"
+	},	
+	{
+		"Brand": "Roland",
+		"Name": "SPD::ONE Wav",
+		"Width": 5.51,
+		"Height": 6.3,
+		"Image": "roland_spd_one_wav.png"
+	},	
+	{
 		"Brand": "Rolls",
 		"Name": "MX28 Stereo Mini-Mix VI",
 		"Width": 4.25,
