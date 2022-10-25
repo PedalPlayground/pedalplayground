@@ -12524,6 +12524,13 @@
 	},
 	{
 		"Brand": "Fuzzrocious Pedals",
+		"Name": "Blast Furnace",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "fuzzrocious-blast-furnace.png"
+	},
+	{
+		"Brand": "Fuzzrocious Pedals",
 		"Name": "L'il Fella",
 		"Width": 2.64,
 		"Height": 5.13,
@@ -15121,6 +15128,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Lucydreamer Bass",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jam-lucydreamer-bass.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Pink Flow",
 		"Width": 15.7,
 		"Height": 6.7,
@@ -17386,6 +17400,13 @@
 		"Width": 2.68,
 		"Height": 4.72,
 		"Image": "korg-pitchblack.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Pitchblack X",
+		"Width": 2.71,
+		"Height": 4.33,
+		"Image": "korg-pitchblack-x.png"
 	},
 	{
 		"Brand": "Korg",
