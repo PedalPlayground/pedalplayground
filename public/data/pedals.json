@@ -21861,6 +21861,41 @@
 		"Image": "noble-preamp-350.png"
 	},
 	{
+		"Brand": "Noise Space Audio",
+		"Name": "5 Fuzz",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "noisespaceaudio-5-fuzz.png"
+	},
+	{
+		"Brand": "Noise Space Audio",
+		"Name": "Brass Fuzz",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "noisespaceaudio-brass-fuzz.png"
+	},
+	{
+		"Brand": "Noise Space Audio",
+		"Name": "Harm",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "noisespaceaudio-harm.png"
+	},
+	{
+		"Brand": "Noise Space Audio",
+		"Name": "IVP",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "noisespaceaudio-ivp.png"
+	},
+	{
+		"Brand": "Noise Space Audio",
+		"Name": "Klone",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "noisespaceaudio-klone.png"
+	},
+	{
 		"Brand": "Nordvang",
 		"Name": "83' Drive v2.0",
 		"Width": 5.7,
@@ -25149,21 +25184,21 @@
 		"Width": 5.51,
 		"Height": 6.3,
 		"Image": "roland_spd_one_kick.png"
-	},	
+	},
 	{
 		"Brand": "Roland",
 		"Name": "SPD::ONE Percussion",
 		"Width": 5.51,
 		"Height": 6.3,
 		"Image": "roland_spd_one_percussion.png"
-	},	
+	},
 	{
 		"Brand": "Roland",
 		"Name": "SPD::ONE Wav",
 		"Width": 5.51,
 		"Height": 6.3,
 		"Image": "roland_spd_one_wav.png"
-	},	
+	},
 	{
 		"Brand": "Rolls",
 		"Name": "MX28 Stereo Mini-Mix VI",
@@ -29073,10 +29108,59 @@
 	},
 	{
 		"Brand": "Vaderin",
+		"Name": "Atomizer",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-atomizer.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "Cherry Fuzz",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-cherry-fuzz.png"
+	},
+	{
+		"Brand": "Vaderin",
 		"Name": "HP-X",
 		"Width": 2.6,
-		"Height": 4.99,
+		"Height": 5.01,
 		"Image": "vaderin-hpx.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "Kroaked",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-kroaked.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "Laser I",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-laser-i.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "Radio Dirtman",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-radio-dirtman.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "SAF",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-saf.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "Tone Fox",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-tone-fox.png"
 	},
 	{
 		"Brand": "Vahlbruch",
@@ -29738,10 +29822,31 @@
 	},
 	{
 		"Brand": "Warm Audio",
+		"Name": "Centavo",
+		"Width": 6.75,
+		"Height": 5.28,
+		"Image": "warm-audio-centavo.png"
+	},
+	{
+		"Brand": "Warm Audio",
+		"Name": "Foxy Tone Box",
+		"Width": 4.75,
+		"Height": 3.42,
+		"Image": "warm-audio-foxy-tone-box.png"
+	},
+	{
+		"Brand": "Warm Audio",
 		"Name": "Jet Phaser",
 		"Width": 10.25,
-		"Height": 6.5,
+		"Height": 6.7,
 		"Image": "warm-audio-jet-phaser.png"
+	},
+	{
+		"Brand": "Warm Audio",
+		"Name": "Warmdrive",
+		"Width": 2.88,
+		"Height": 4.75,
+		"Image": "warm-audio-warmdrive.png"
 	},
 	{
 		"Brand": "Walrus Audio",
