@@ -8611,6 +8611,13 @@
 	},
 	{
 		"Brand": "Earthquaker Devices",
+		"Name": "Life Pedal V3",
+		"Width": 5.75,
+		"Height": 4.87,
+		"Image": "earthquaker-life-pedal-v3.png"
+	},
+	{
+		"Brand": "Earthquaker Devices",
 		"Name": "Monarch",
 		"Width": 2.75,
 		"Height": 4.37,
