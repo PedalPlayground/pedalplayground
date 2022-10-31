@@ -17403,13 +17403,6 @@
 	},
 	{
 		"Brand": "Korg",
-		"Name": "Pitchblack X",
-		"Width": 2.71,
-		"Height": 4.33,
-		"Image": "korg-pitchblack-x.png"
-	},
-	{
-		"Brand": "Korg",
 		"Name": "Pitchblack Advance",
 		"Width": 2.68,
 		"Height": 4.37,
@@ -17435,6 +17428,20 @@
 		"Width": 5.04,
 		"Height": 4.86,
 		"Image": "korg-pitchblack-plus.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Pitchblack X",
+		"Width": 2.71,
+		"Height": 4.33,
+		"Image": "korg-pitchblack-x.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Pitchblack XS",
+		"Width": 2.71,
+		"Height": 3.15,
+		"Image": "korg-pitchblack-xs.png"
 	},
 	{
 		"Brand": "Korg",
