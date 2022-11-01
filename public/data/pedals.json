@@ -4418,6 +4418,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "SL-2 Slicer",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-sl2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "SL-20 Slicer",
 		"Width": 6.8125,
 		"Height": 6.25,
@@ -11057,7 +11064,7 @@
 		"Name": "Fly Agaric",
 		"Width": 2.6,
 		"Height": 5.02,
-		"Image": "farmpedals-fly-agaric.png"
+		"Image": "farm-pedals-fly-agaric.png"
 	},
 	{
 		"Brand": "Fender",
@@ -13073,7 +13080,7 @@
 		"Name": "AC BOX",
 		"Width": 3.86,
 		"Height": 4.77,
-		"Image": "gokko-acbox.png"
+		"Image": "gokko-ac-box.png"
 	},
 	{
 		"Brand": "Gokko",
