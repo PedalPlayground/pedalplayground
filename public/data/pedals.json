@@ -20385,6 +20385,13 @@
 	},
 	{
 		"Brand": "Morley",
+		"Name": "AFX-1",
+		"Width": 12,
+		"Height": 7.09,
+		"Image": "morley-afx1.png"
+	},
+	{
+		"Brand": "Morley",
 		"Name": "Bad Horsie",
 		"Width": 6,
 		"Height": 9.25,
