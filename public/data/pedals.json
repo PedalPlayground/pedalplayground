@@ -21792,6 +21792,13 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Positron",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-positron.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Runestone",
 		"Width": 2.6,
 		"Height": 4.93,
@@ -25877,6 +25884,13 @@
 		"Width": 3.75,
 		"Height": 8.6,
 		"Image": "sola-sound-yellow-hybrid.png"
+	},
+	{
+		"Brand": "Soldano",
+		"Name": "Super Lead Overdrive",
+		"Width": 2.63,
+		"Height": 4.45,
+		"Image": "soldano-super-lead-overdrive.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
