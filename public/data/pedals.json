@@ -10496,14 +10496,14 @@
 		"Brand": "Empress",
 		"Name": "Bass Compressor (Blue Sparkle)",
 		"Width": 2.6,
-		"Height": 5.09,
+		"Height": 5.14,
 		"Image": "empress-bass-compressor-blue.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Bass Compressor (Silver Sparkle)",
 		"Width": 2.6,
-		"Height": 5.09,
+		"Height": 5.14,
 		"Image": "empress-bass-compressor-silver.png"
 	},
 	{
@@ -10538,14 +10538,14 @@
 		"Brand": "Empress",
 		"Name": "Compressor MKII (Blue Sparkle)",
 		"Width": 2.6,
-		"Height": 5.09,
+		"Height": 5.14,
 		"Image": "empress-compressor-mkii-blue.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Compressor MKII (Silver Sparkle)",
 		"Width": 2.6,
-		"Height": 5.09,
+		"Height": 5.14,
 		"Image": "empress-compressor-mkii-silver.png"
 	},
 	{
@@ -10613,10 +10613,24 @@
 	},
 	{
 		"Brand": "Empress",
-		"Name": "Para EQ",
+		"Name": "ParaEQ",
 		"Width": 4.68,
 		"Height": 3.5,
 		"Image": "empress-para-eq.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "ParaEQ MKII",
+		"Width": 2.6,
+		"Height": 5.14,
+		"Image": "empress-para-eq-mk2.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "ParaEQ MKII Deluxe",
+		"Width": 2.6,
+		"Height": 5.14,
+		"Image": "empress-para-eq-mk2-deluxe.png"
 	},
 	{
 		"Brand": "Empress",
