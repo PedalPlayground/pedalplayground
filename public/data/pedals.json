@@ -21955,14 +21955,14 @@
 		"Brand": "NuX",
 		"Name": "Ace of Tone",
 		"Width": 4.13,
-		"Height": 4.52,
+		"Height": 4.47,
 		"Image": "nux-ace-of-tone.png"
 	},
 	{
 		"Brand": "NuX",
 		"Name": "Amp Academy",
-		"Width": 4.2,
-		"Height": 4.52,
+		"Width": 4.21,
+		"Height": 4.47,
 		"Image": "nux-amp-academy.png"
 	},
 	{
@@ -21983,7 +21983,7 @@
 		"Brand": "NuX",
 		"Name": "Atlantic",
 		"Width": 4.13,
-		"Height": 4.52,
+		"Height": 4.47,
 		"Image": "nux-atlantic.png"
 	},
 	{
@@ -22025,7 +22025,7 @@
 		"Brand": "NuX",
 		"Name": "Duotime",
 		"Width": 4.13,
-		"Height": 4.52,
+		"Height": 4.47,
 		"Image": "nux-duotime.png"
 	},
 	{
@@ -22039,7 +22039,7 @@
 		"Brand": "NuX",
 		"Name": "Fireman",
 		"Width": 4.13,
-		"Height": 4.52,
+		"Height": 4.47,
 		"Image": "nux-fireman.png"
 	},
 	{
@@ -22074,7 +22074,7 @@
 		"Brand": "NuX",
 		"Name": "JTC Pro",
 		"Width": 4.13,
-		"Height": 4.52,
+		"Height": 4.47,
 		"Image": "nux-jtc-pro.png"
 	},
 	{
@@ -22116,7 +22116,7 @@
 		"Brand": "NuX",
 		"Name": "Masamune",
 		"Width": 4.13,
-		"Height": 4.52,
+		"Height": 4.47,
 		"Image": "nux-masamune.png"
 	},
 	{
@@ -22150,8 +22150,8 @@
 	{
 		"Brand": "NuX",
 		"Name": "MLD Bass Preamp + DI",
-		"Width": 4.19,
-		"Height": 4.52,
+		"Width": 4.21,
+		"Height": 4.47,
 		"Image": "nux-mld-bass-preamp.png"
 	},
 	{
@@ -22206,8 +22206,8 @@
 	{
 		"Brand": "NuX",
 		"Name": "Optima Air",
-		"Width": 4.19,
-		"Height": 4.52,
+		"Width": 4.21,
+		"Height": 4.47,
 		"Image": "nux-optima-air.png"
 	},
 	{
@@ -22230,6 +22230,13 @@
 		"Width": 2.09,
 		"Height": 3.7,
 		"Image": "nux-pulse.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Queen of Tone",
+		"Width": 4.13,
+		"Height": 4.47,
+		"Image": "nux-queen-of-tone.png"
 	},
 	{
 		"Brand": "NuX",
@@ -22269,15 +22276,15 @@
 	{
 		"Brand": "NuX",
 		"Name": "Solid Studio",
-		"Width": 4.19,
-		"Height": 4.52,
+		"Width": 4.21,
+		"Height": 4.47,
 		"Image": "nux-solid-studio.png"
 	},
 	{
 		"Brand": "NuX",
 		"Name": "Stageman Floor",
-		"Width": 4.19,
-		"Height": 4.52,
+		"Width": 4.21,
+		"Height": 4.47,
 		"Image": "nux-stageman-floor.png"
 	},
 	{
@@ -22298,7 +22305,7 @@
 		"Brand": "NuX",
 		"Name": "Tape Echo",
 		"Width": 4.13,
-		"Height": 4.49,
+		"Height": 4.47,
 		"Image": "nux-tape-echo.png"
 	},
 	{
