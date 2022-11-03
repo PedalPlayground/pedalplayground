@@ -25103,9 +25103,16 @@
 	},
 	{
 		"Brand": "Revv",
+		"Name": "Northern Mauler",
+		"Width": 4.25,
+		"Height": 4.32,
+		"Image": "revv-northern-mauler.png"
+	},
+	{
+		"Brand": "Revv",
 		"Name": "Tilt",
-		"Width": 4.87,
-		"Height": 4.87,
+		"Width": 4.25,
+		"Height": 4.32,
 		"Image": "revv-tilt.png"
 	},
 	{
