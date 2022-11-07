@@ -386,6 +386,13 @@
 	},
 	{
 		"Brand": "Aguilar",
+		"Name": "Storm King Distortion / Fuzz",
+		"Width": 1.75,
+		"Height": 3.65,
+		"Image": "aguilar-storm-king.png"
+	},
+	{
+		"Brand": "Aguilar",
 		"Name": "TLC Compressor",
 		"Width": 2.7,
 		"Height": 5.5,
@@ -4779,6 +4786,13 @@
 		"Width": 2.6,
 		"Height": 5.02,
 		"Image": "calico-antlers.png"
+	},
+	{
+		"Brand": "Caline",
+		"Name": "Pure Sky",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "caline-pure-sky.png"
 	},
 	{
 		"Brand": "Carl Martin",
@@ -21617,13 +21631,6 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Sub Octave Bass Fuzz",
-		"Width": 4.95,
-		"Height": 3.54,
-		"Image": "mxr-m287.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Super Comp",
 		"Width": 2.57,
 		"Height": 4.33,
@@ -21645,17 +21652,10 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Super Badass Distortion",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "mxr-sbdistortion.png"
-	},
-	{
-		"Brand": "MXR",
 		"Name": "Super Badass Dynamic Overdrive",
 		"Width": 2.57,
 		"Height": 4.33,
-		"Image": "mxr-sbdoverdrive.png"
+		"Image": "mxr-m249.png"
 	},
 	{
 		"Brand": "MXR",
