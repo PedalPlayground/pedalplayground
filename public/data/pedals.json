@@ -4684,6 +4684,13 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Arigato",
+		"Width": 3.78,
+		"Height": 4.88,
+		"Image": "caroline-arigato.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Crom",
 		"Width": 3.78,
 		"Height": 4.88,
