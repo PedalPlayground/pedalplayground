@@ -805,6 +805,13 @@
 		"Image": "rug-4.png"
 	},
 	{
+		"Brand": "SKB Cases",
+		"Name": "Injection Molded",
+		"Width": 17.63,
+		"Height": 12.33,
+		"Image": "skb-injection-molded.png"
+	},
+	{
 		"Brand": "Templeboards",
 		"Name": "Duo 17",
 		"Width": 17,

@@ -58,7 +58,8 @@ Under MacOS Mojave:
 
 If there is a pedal you're looking for, feel free to [log an issue](https://github.com/PedalPlayground/PedalPlayground.github.io/issues). Please follow the following rules when posting request issues:
 
--   Double check to see if the pedal isn't already in the database!
--   Include a decent resolution image of the pedal (top-down view, preferably white background)
--   Include the dimensions, in inches (make sure the dimensions are accurate and include jacks and other protrusions)
+-   Double check to see if the pedal isn't already in the database.
+-   Also check to see if the pedal hasn't already been included in a [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by our contributors.  New releases from popular builders are usually added right away.
+-   Include a high resolution image of the pedal (top-down view, preferably white background, straight on perspective)
+-   Include the dimensions of the pedal in inches (make sure the dimensions are accurate and include jacks and other protrusions)
 -   Post one issue for each pedal you're requesting
