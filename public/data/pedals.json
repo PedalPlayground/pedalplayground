@@ -22068,7 +22068,7 @@
 		"Name": "ODR Mini",
 		"Width": 1.99,
 		"Height": 3.66,
-		"Image": "nobels-odrmini.png"
+		"Image": "nobels-odr-mini.png"
 	},
 	{
 		"Brand": "Nordland",
@@ -22139,6 +22139,13 @@
 		"Width": 5.7,
 		"Height": 4.9,
 		"Image": "nordvang-wingman-2.png"
+	},
+	{
+		"Brand": "Nuñez Amps",
+		"Name": "Tetra-Fet Drive (2020 CME Pink)",
+		"Width": 2.59,
+		"Height": 4.94,
+		"Image": "nunez-tetra-fet-drive-pink.png"
 	},
 	{
 		"Brand": "NuX",
@@ -25408,6 +25415,13 @@
 		"Width": 6,
 		"Height": 12,
 		"Image": "rocktron-black-cat-moan.png"
+	},
+	{
+		"Brand": "Rocktron",
+		"Name": "MIDI Raider",
+		"Width": 15.5,
+		"Height": 10.5,
+		"Image": "rocktron-midi-raider.png"
 	},
 	{
 		"Brand": "Roland",
