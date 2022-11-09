@@ -10774,6 +10774,13 @@
 	},
 	{
 		"Brand": "Eventide",
+		"Name": "H90",
+		"Width": 6.66,
+		"Height": 5.34,
+		"Image": "eventide-h90.png"
+	},
+	{
+		"Brand": "Eventide",
 		"Name": "MicroPitch Delay",
 		"Width": 4,
 		"Height": 4.55,
