@@ -10782,8 +10782,8 @@
 	{
 		"Brand": "Eventide",
 		"Name": "H90",
-		"Width": 6.66,
-		"Height": 5.34,
+		"Width": 6.5,
+		"Height": 5.21,
 		"Image": "eventide-h90.png"
 	},
 	{
@@ -15125,6 +15125,13 @@
 		"Width": 2.9,
 		"Height": 4.7,
 		"Image": "jam-delay-llama-mk3.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Delay Llama Supreme",
+		"Width": 7.73,
+		"Height": 4.7,
+		"Image": "jam-delay-llama-supreme.png"
 	},
 	{
 		"Brand": "Jam Pedals",
