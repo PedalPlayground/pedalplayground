@@ -4476,42 +4476,28 @@
 		"Brand": "Browne Amplification",
 		"Name": "Protein (Black)",
 		"Width": 4.7,
-		"Height": 3.82,
+		"Height": 3.79,
 		"Image": "browneamps-protein-black.png"
 	},
 	{
 		"Brand": "Browne Amplification",
 		"Name": "Protein (Green)",
 		"Width": 4.7,
-		"Height": 3.82,
+		"Height": 3.79,
 		"Image": "browneamps-protein-green.png"
-	},
-	{
-		"Brand": "Browne Amplification",
-		"Name": "Protein (Forest Green)",
-		"Width": 4.7,
-		"Height": 3.82,
-		"Image": "browneamps-protein-forest-green.png"
 	},
 	{
 		"Brand": "Browne Amplification",
 		"Name": "Protein (Pink)",
 		"Width": 4.7,
-		"Height": 3.82,
+		"Height": 3.79,
 		"Image": "browneamps-protein-pink.png"
-	},
-	{
-		"Brand": "Browne Amplification",
-		"Name": "Protein (Red)",
-		"Width": 4.7,
-		"Height": 3.82,
-		"Image": "browneamps-protein-red.png"
 	},
 	{
 		"Brand": "Browne Amplification",
 		"Name": "Protein (White)",
 		"Width": 4.7,
-		"Height": 3.82,
+		"Height": 3.79,
 		"Image": "browneamps-protein-white.png"
 	},
 	{
@@ -18509,38 +18495,73 @@
 	},
 	{
 		"Brand": "Maestro",
+		"Name": "Agena Envelope Filter",
+		"Width": 3.54,
+		"Height": 5.28,
+		"Image": "maestro-agena-envelope-filter.png"
+	},
+	{
+		"Brand": "Maestro",
+		"Name": "Arcas Compressor Sustainer",
+		"Width": 3.54,
+		"Height": 5.28,
+		"Image": "maestro-arcas-compressor.png"
+	},
+	{
+		"Brand": "Maestro",
 		"Name": "Comet Chorus",
-		"Width": 3.45,
-		"Height": 5.13,
+		"Width": 3.54,
+		"Height": 5.28,
 		"Image": "maestro-comet-chorus.png"
 	},
 	{
 		"Brand": "Maestro",
 		"Name": "Discoverer Delay",
-		"Width": 3.45,
-		"Height": 5.13,
+		"Width": 3.54,
+		"Height": 5.28,
 		"Image": "maestro-discoverer-delay.png"
 	},
 	{
 		"Brand": "Maestro",
 		"Name": "Fuzz Tone FZ-M",
-		"Width": 3.45,
-		"Height": 5.13,
+		"Width": 3.54,
+		"Height": 5.28,
 		"Image": "maestro-fuzz-tone.png"
 	},
 	{
 		"Brand": "Maestro",
 		"Name": "Invader Distortion",
-		"Width": 3.45,
-		"Height": 5.13,
+		"Width": 3.54,
+		"Height": 5.28,
 		"Image": "maestro-invader-distortion.png"
 	},
 	{
 		"Brand": "Maestro",
+		"Name": "Mariner Tremolo",
+		"Width": 3.54,
+		"Height": 5.28,
+		"Image": "maestro-mariner-tremolo.png"
+	},
+	{
+		"Brand": "Maestro",
+		"Name": "Orbit Phaser",
+		"Width": 3.54,
+		"Height": 5.28,
+		"Image": "maestro-orbit-phaser.png"
+	},
+	{
+		"Brand": "Maestro",
 		"Name": "Ranger Overdrive",
-		"Width": 3.45,
-		"Height": 5.13,
+		"Width": 3.54,
+		"Height": 5.28,
 		"Image": "maestro-ranger-overdrive.png"
+	},
+	{
+		"Brand": "Maestro",
+		"Name": "Titan Boost",
+		"Width": 3.54,
+		"Height": 5.28,
+		"Image": "maestro-titan-boost.png"
 	},
 	{
 		"Brand": "Malekko",
