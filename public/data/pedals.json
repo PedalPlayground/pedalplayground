@@ -3451,6 +3451,13 @@
 		"Image": "boots-boards-tin.png"
 	},
 	{
+		"Brand": "Boredbrain",
+		"Name": "Pick Tin",
+		"Width": 2.5,
+		"Height": 1.75,
+		"Image": "boredbrain-terminal-v2.png"
+	},
+	{
 		"Brand": "BOSS",
 		"Name": "AC-3 Acoustic Simulator",
 		"Width": 2.875,
@@ -3834,6 +3841,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-frv1.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "FS-1-WL Wireless Footswitch",
+		"Width": 8.1875,
+		"Height": 3.0625,
+		"Image": "boss-fs1wl.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -17129,7 +17143,7 @@
 		"Image": "kernom-ridge.png"
 	},
 	{
-    "Brand": "KHDK",
+		"Brand": "KHDK",
 		"Name": "Abyss",
 		"Width": 2.59,
 		"Height": 4.73,
@@ -17717,60 +17731,60 @@
 		"Image": "korg-sdd-3000.png"
 	},
 	{
-    	"Brand": "L.R. Baggs",
+		"Brand": "L.R. Baggs",
 		"Name": "Align Series Active DI",
-    	"Width": 3.34,
-    	"Height": 5.06,
-    	"Image": "lrbaggs-align-activedi.png"
+		"Width": 3.34,
+		"Height": 5.06,
+		"Image": "lrbaggs-align-activedi.png"
 	},
 	{
-    	"Brand": "L.R. Baggs",
-    	"Name": "Align Series Chorus",
-    	"Width": 3.34,
-    	"Height": 5,
-    	"Image": "lrbaggs-align-chorus.png"
+		"Brand": "L.R. Baggs",
+		"Name": "Align Series Chorus",
+		"Width": 3.34,
+		"Height": 5,
+		"Image": "lrbaggs-align-chorus.png"
 	},
 	{
-    	"Brand": "L.R. Baggs",
-    	"Name": "Align Series Delay",
-    	"Width": 3.34,
-    	"Height": 5.06,
-    	"Image": "lrbaggs-align-delay.png"
+		"Brand": "L.R. Baggs",
+		"Name": "Align Series Delay",
+		"Width": 3.34,
+		"Height": 5.06,
+		"Image": "lrbaggs-align-delay.png"
 	},
 	{
-    	"Brand": "L.R. Baggs",
-    	"Name": "Align Series Equalizer",
-    	"Width": 3.34,
-    	"Height": 5,
-    	"Image": "lrbaggs-align-equalizer.png"
+		"Brand": "L.R. Baggs",
+		"Name": "Align Series Equalizer",
+		"Width": 3.34,
+		"Height": 5,
+		"Image": "lrbaggs-align-equalizer.png"
 	},
 	{
-    	"Brand": "L.R. Baggs",
-    	"Name": "Align Series Reverb",
-    	"Width": 3.34,
-    	"Height": 5,
-    	"Image": "lrbaggs-align-reverb.png"
+		"Brand": "L.R. Baggs",
+		"Name": "Align Series Reverb",
+		"Width": 3.34,
+		"Height": 5,
+		"Image": "lrbaggs-align-reverb.png"
 	},
 	{
-    	"Brand": "L.R. Baggs",
-    	"Name": "Align Series Session",
-    	"Width": 3.34,
-    	"Height": 5,
-    	"Image": "lrbaggs-align-session.png"
+		"Brand": "L.R. Baggs",
+		"Name": "Align Series Session",
+		"Width": 3.34,
+		"Height": 5,
+		"Image": "lrbaggs-align-session.png"
 	},
 	{
-    	"Brand": "Lake Effects",
-    	"Name": "FVD",
-    	"Width": 3.68,
-    	"Height": 4.89,
-    	"Image": "lake-effects-fvd.png"
+		"Brand": "Lake Effects",
+		"Name": "FVD",
+		"Width": 3.68,
+		"Height": 4.89,
+		"Image": "lake-effects-fvd.png"
 	},
 	{
-  		"Brand": "Lake Effects",
-  		"Name": "FVD (White)",
-  		"Width": 3.68,
-  		"Height": 4.89,
-  		"Image": "lake-effects-fvd-white.png"
+		"Brand": "Lake Effects",
+		"Name": "FVD (White)",
+		"Width": 3.68,
+		"Height": 4.89,
+		"Image": "lake-effects-fvd-white.png"
 	},
 	{
 		"Brand": "Land + Vongon",
@@ -24722,6 +24736,13 @@
 		"Width": 3.75,
 		"Height": 4.75,
 		"Image": "radial-ac-driver.png"
+	},
+	{
+		"Brand": "Radial Engineering",
+		"Name": "BigShot ABY",
+		"Width": 3.6,
+		"Height": 4,
+		"Image": "radial-bigshot-aby.png"
 	},
 	{
 		"Brand": "Radial Engineering",
