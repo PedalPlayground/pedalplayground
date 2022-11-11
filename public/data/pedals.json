@@ -11214,6 +11214,20 @@
 		"Image": "fender-treverb.png"
 	},
 	{
+		"Brand": "Fishman",
+		"Name": "Aura Spectrum DI Preamp",
+		"Width": 5.37,
+		"Height": 5.6,
+		"Image": "fishman-aura-spectrum.png"
+	},
+	{
+		"Brand": "Fishman",
+		"Name": "Aura Spectrum Jerry Douglas Signature",
+		"Width": 3.93,
+		"Height": 5.6,
+		"Image": "fishman-aura-jerry-douglas.png"
+	},
+	{
 		"Brand": "Fix Pedalboards",
 		"Name": "RS-2",
 		"Width": 2.5,
@@ -17542,6 +17556,13 @@
     "Image": "lrbaggs-align-session.png"
   },
 	{
+    "Brand": "L.R. Baggs",
+    "Name": "Venue DI",
+    "Width": 7.625,
+    "Height": 7.32,
+    "Image": "lrbaggs-venue-di.png"
+  },
+	{
     "Brand": "Lake Effects",
     "Name": "FVD",
     "Width": 3.68,
@@ -19255,6 +19276,13 @@
 		"Width": 13.625,
 		"Height": 5.625,
 		"Image": "mesaboogie-mark-v.png"
+	},
+	{
+		"Brand": "Mesa Boogie",
+		"Name": "Rosette DI-Preamp",
+		"Width": 8.15,
+		"Height": 5.67,
+		"Image": "mesaboogie-rosette-di-preamp.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
