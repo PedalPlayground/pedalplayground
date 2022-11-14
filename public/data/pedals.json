@@ -29514,13 +29514,6 @@
 	},
 	{
 		"Brand": "Victory Amps",
-		"Name": "V4 The Copper",
-		"Width": 8.86,
-		"Height": 5.54,
-		"Image": "victory-v4-the-copper.png"
-	},
-	{
-		"Brand": "Victory Amps",
 		"Name": "V1 The Duchess",
 		"Width": 2.59,
 		"Height": 5.02,
@@ -29535,24 +29528,10 @@
 	},
 	{
 		"Brand": "Victory Amps",
-		"Name": "V4 The Jack",
-		"Width": 8.86,
-		"Height": 5.54,
-		"Image": "victory-v4-the-jack.png"
-	},
-	{
-		"Brand": "Victory Amps",
 		"Name": "V1 The Kraken",
 		"Width": 2.59,
 		"Height": 5.02,
 		"Image": "victory-v1-the-kraken.png"
-	},
-	{
-		"Brand": "Victory Amps",
-		"Name": "V4 The Kraken",
-		"Width": 8.86,
-		"Height": 5.54,
-		"Image": "victory-v4-the-kraken.png"
 	},
 	{
 		"Brand": "Victory Amps",
@@ -29563,10 +29542,66 @@
 	},
 	{
 		"Brand": "Victory Amps",
-		"Name": "V4 The Sheriff",
-		"Width": 8.86,
-		"Height": 5.54,
-		"Image": "victory-v4-the-sheriff.png"
+		"Name": "V4 The Copper Amp",
+		"Width": 10.25,
+		"Height": 7.11,
+		"Image": "victory-v4-the-copper-amp.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Copper Preamp",
+		"Width": 8.96,
+		"Height": 5.66,
+		"Image": "victory-v4-the-copper-preamp.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Duchess Amp",
+		"Width": 10.25,
+		"Height": 7.11,
+		"Image": "victory-v4-the-duchess-amp.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Jack Amp",
+		"Width": 10.25,
+		"Height": 7.11,
+		"Image": "victory-v4-the-jack-amp.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Jack Preamp",
+		"Width": 8.96,
+		"Height": 5.66,
+		"Image": "victory-v4-the-jack-preamp.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Kraken Amp",
+		"Width": 10.25,
+		"Height": 7.11,
+		"Image": "victory-v4-the-kraken-amp.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Kraken Preamp",
+		"Width": 8.96,
+		"Height": 5.66,
+		"Image": "victory-v4-the-kraken-preamp.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Sheriff Amp",
+		"Width": 10.25,
+		"Height": 7.11,
+		"Image": "victory-v4-the-sheriff-amp.png"
+	},
+	{
+		"Brand": "Victory Amps",
+		"Name": "V4 The Sheriff Preamp",
+		"Width": 8.96,
+		"Height": 5.66,
+		"Image": "victory-v4-the-sheriff-preamp.png"
 	},
 	{
 		"Brand": "Visual Sound",
