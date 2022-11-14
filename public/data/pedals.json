@@ -7295,6 +7295,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "CM-2 Tube Overdrive",
+		"Width": 3.5,
+		"Height": 5.25,
+		"Image": "digitech-cm2.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Digidelay",
 		"Width": 3,
 		"Height": 4.865,
