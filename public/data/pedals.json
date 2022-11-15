@@ -20888,6 +20888,13 @@
 		"Image": "mu-tron-tubetron.png"
 	},
 	{
+		"Brand": "M-VAVE",
+		"Name": "Chocolate BT",
+		"Width": 8.35,
+		"Height": 1.51,
+		"Image": "mvave-chocolate.png"
+	},
+	{
 		"Brand": "MWFX",
 		"Name": "Glitch",
 		"Width": 3.54,
