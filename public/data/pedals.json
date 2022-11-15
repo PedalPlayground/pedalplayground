@@ -17945,7 +17945,7 @@
 		"Name": "Ghost",
 		"Width": 3.7,
 		"Height": 4.86,
-		"Image": "lightningwave-ghost.png"
+		"Image": "lightning-wave-ghost.png"
 	},
 	{
 		"Brand": "Line 6",
@@ -18449,14 +18449,14 @@
 		"Name": "Deep Blue Delay",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-deepbluedelay.png"
+		"Image": "mad-professor-deep-blue.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Deep Blue Delay (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-deepbluedelay-hw.png"
+		"Image": "mad-professor-deep-blue-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -18477,14 +18477,14 @@
 		"Name": "Electric Blue Chorus",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-electricblue.png"
+		"Image": "mad-professor-electric-blue.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Electric Blue II Chorus ~ Vibrato",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-electricblue2.png"
+		"Image": "mad-professor-electric-blue-2.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -18561,7 +18561,7 @@
 		"Name": "Kozmoz",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-kozmoz.png"
+		"Image": "mad-professor-kozmoz.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -18582,14 +18582,14 @@
 		"Name": "Mighty Red Distortion",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-mightyred.png"
+		"Image": "mad-professor-mighty-red.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Mighty Red Distortion (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-mightyred-hw.png"
+		"Image": "mad-professor-mighty-red-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -19114,7 +19114,7 @@
 		"Name": "Inflection Point",
 		"Width": 2.66,
 		"Height": 4.966,
-		"Image": "mattoverse-inflectionpoint.png"
+		"Image": "mattoverse-inflection-point.png"
 	},
 	{
 		"Brand": "Matthews Effects",
@@ -20402,7 +20402,7 @@
 		"Name": "Ocean Machine",
 		"Width": 8.47,
 		"Height": 4.8,
-		"Image": "mooer-oceanmachine.png"
+		"Image": "mooer-ocean-machine.png"
 	},
 	{
 		"Brand": "Mooer",
