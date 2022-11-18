@@ -29341,78 +29341,99 @@
 		"Brand": "Vertex",
 		"Name": "Boost",
 		"Width": 3.2,
-		"Height": 4.47,
+		"Height": 4.53,
 		"Image": "vertex-boost.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Boost MkII",
 		"Width": 2.2,
-		"Height": 4.2,
+		"Height": 4.23,
 		"Image": "vertex-boost-mk2.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Dynamic Distortion",
 		"Width": 3.2,
-		"Height": 4.47,
+		"Height": 4.53,
 		"Image": "vertex-dynamicdistortion.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Nyle",
 		"Width": 3.2,
-		"Height": 4.47,
+		"Height": 4.53,
 		"Image": "vertex-nyle.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Steel String Clean Drive",
 		"Width": 3.2,
-		"Height": 4.47,
+		"Height": 4.53,
 		"Image": "vertex-steelstring.png"
 	},
 	{
 		"Brand": "Vertex",
-		"Name": "Steel String Clean Drive MKII",
+		"Name": "Steel String Clean Drive MkII",
 		"Width": 2.2,
-		"Height": 4.2,
+		"Height": 4.23,
 		"Image": "vertex-steelstring-mk2.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Steel String SRV Mini",
+		"Width": 2.2,
+		"Height": 4.23,
+		"Image": "vertex-ss-srv-mini.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Steel String Supreme",
 		"Width": 3.2,
-		"Height": 4.47,
+		"Height": 4.53,
 		"Image": "vertex-steelstringsupreme.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Steel String Supreme (SRV)",
+		"Width": 3.2,
+		"Height": 4.53,
+		"Image": "vertex-sss-srv.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "T-Drive",
 		"Width": 3.2,
-		"Height": 4.47,
+		"Height": 4.53,
 		"Image": "vertex-tdrive.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Tone Secret",
 		"Width": 3.2,
-		"Height": 4.47,
+		"Height": 4.53,
 		"Image": "vertex-tonesecret.png"
 	},
 	{
 		"Brand": "Vertex",
 		"Name": "Ultraphonix Overdrive",
 		"Width": 3.2,
-		"Height": 4.47,
+		"Height": 4.53,
 		"Image": "vertex-ultraphonix.png"
 	},
 	{
 		"Brand": "Vertex",
-		"Name": "Ultraphonix Overdrive MKII",
+		"Name": "Ultraphonix Overdrive MkII",
 		"Width": 2.2,
-		"Height": 4.2,
+		"Height": 4.23,
 		"Image": "vertex-ultraphonix-mk2.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Ultra-Phonix HRM",
+		"Width": 3.2,
+		"Height": 4.53,
+		"Image": "vertex-ultra-phonix-hrm.png"
 	},
 	{
 		"Brand": "VFE",
