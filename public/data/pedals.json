@@ -2913,6 +2913,13 @@
 	},
 	{
 		"Brand": "Blackstar",
+		"Name": "Dept. 10 Boost",
+		"Width": 3.03,
+		"Height": 2.99,
+		"Image": "blackstar-dept10-boost.png"
+	},
+	{
+		"Brand": "Blackstar",
 		"Name": "HT Dual",
 		"Width": 6.72,
 		"Height": 4.8,
