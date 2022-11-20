@@ -12530,56 +12530,63 @@
 		"Image": "flb-1991.png"
 	},
 	{
-		"Brand": "Fuzzrocious Pedals",
+		"Brand": "Fuzzrocious",
 		"Name": "420 Fuzz",
 		"Width": 3.7,
 		"Height": 4.94,
 		"Image": "fuzzrocious-pedals-420-fuzz.png"
 	},
 	{
-		"Brand": "Fuzzrocious Pedals",
+		"Brand": "Fuzzrocious",
 		"Name": "Cat King",
-		"Width": 5.70,
+		"Width": 5.7,
 		"Height": 4.83,
 		"Image": "fuzzrocious-pedals-cat-king.png"
 	},
 	{
-		"Brand": "Fuzzrocious Pedals",
+		"Brand": "Fuzzrocious",
+		"Name": "Cat Tail",
+		"Width": 3.7,
+		"Height": 5.24,
+		"Image": "fuzzrocious-pedals-cat-tail.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
 		"Name": "Croak",
 		"Width": 3.9,
 		"Height": 5,
 		"Image": "fuzzrocious-pedals-croak.png"
 	},
 	{
-		"Brand": "Fuzzrocious Pedals",
+		"Brand": "Fuzzrocious",
 		"Name": "Electric Ocean",
 		"Width": 4.7,
 		"Height": 5.79,
 		"Image": "fuzzrocious-pedals-electric-ocean.png"
 	},
 	{
-		"Brand": "Fuzzrocious Pedals",
+		"Brand": "Fuzzrocious",
 		"Name": "Grey Stache",
 		"Width": 3.7,
 		"Height": 4.94,
 		"Image": "fuzzrocious-pedals-grey-stache.png"
 	},
 	{
-		"Brand": "Fuzzrocious Pedals",
+		"Brand": "Fuzzrocious",
 		"Name": "Blast Furnace",
 		"Width": 3.7,
 		"Height": 4.94,
 		"Image": "fuzzrocious-blast-furnace.png"
 	},
 	{
-		"Brand": "Fuzzrocious Pedals",
+		"Brand": "Fuzzrocious",
 		"Name": "L'il Fella",
 		"Width": 2.64,
 		"Height": 5.13,
 		"Image": "fuzzrocious-pedals-lil-fella.png"
 	},
 	{
-		"Brand": "Fuzzrocious Pedals",
+		"Brand": "Fuzzrocious",
 		"Name": "The Demon",
 		"Width": 3.7,
 		"Height": 4.94,
