@@ -23402,6 +23402,13 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "M-EQ Driver",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-m-eq-driver.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "MAGMA57 Amp Vibrato & Drive",
 		"Width": 3.6,
 		"Height": 5.8,
