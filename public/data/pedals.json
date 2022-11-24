@@ -9269,6 +9269,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Bass Machine",
+		"Width": 4.19,
+		"Height": 4.75,
+		"Image": "ehx-bass-machine.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Bass Mono Synth",
 		"Width": 4.19,
 		"Height": 4.75,
