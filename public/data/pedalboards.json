@@ -78,6 +78,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "BCB-60",
+		"Width": 26.44,
+		"Height": 14.96,
+		"Image": "boss-bcb-60.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "BCB-90X",
 		"Width": 26.8,
 		"Height": 15.125,
