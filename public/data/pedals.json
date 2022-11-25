@@ -18491,7 +18491,7 @@
 		"Name": "Evolution Orange Underdrive",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-evolutionorange.png"
+		"Image": "mad-professor-evolution-orange.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -18533,14 +18533,14 @@
 		"Name": "Little Green Wonder",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-littlegreenwonder.png"
+		"Image": "mad-professor-little-green-wonder.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Little Green Wonder (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
-		"Image": "madprof-littlegreenwonder-hw.png"
+		"Image": "mad-professor-little-green-wonder-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -19121,7 +19121,7 @@
 		"Name": "The Architect V2",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "matthews-thearchitect.png"
+		"Image": "matthews-architect-v2.png"
 	},
 	{
 		"Brand": "Matthews Effects",
@@ -19555,7 +19555,7 @@
 		"Name": "Crunchbox",
 		"Width": 2.62,
 		"Height": 4.3,
-		"Image": "miaudio-crunchbox.png"
+		"Image": "mi-audio-crunchbox.png"
 	},
 	{
 		"Brand": "MI Audio",
@@ -21046,7 +21046,7 @@
 		"Name": "Lyla Drive",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "musicbox-lyla-drive.png"
+		"Image": "music-box-lyla-drive.png"
 	},
 	{
 		"Brand": "Musicomlab",
@@ -21060,35 +21060,35 @@
 		"Name": "EFX III",
 		"Width": 11,
 		"Height": 4.9,
-		"Image": "musicomlab-efxiii.png"
+		"Image": "musicomlab-efx-iii.png"
 	},
 	{
 		"Brand": "Musicomlab",
 		"Name": "EFX IV",
 		"Width": 13.1,
 		"Height": 5,
-		"Image": "musicomlab-efxiv.png"
+		"Image": "musicomlab-efx-iv.png"
 	},
 	{
 		"Brand": "Musicomlab",
 		"Name": "EFX Lite 6M",
 		"Width": 11.8,
 		"Height": 3.2,
-		"Image": "musicomlab-efxlite6m.png"
+		"Image": "musicomlab-efx-lite-6m.png"
 	},
 	{
 		"Brand": "Musicomlab",
 		"Name": "EFX V",
 		"Width": 16.5,
 		"Height": 3.8,
-		"Image": "musicomlab-efxv.png"
+		"Image": "musicomlab-efx-v.png"
 	},
 	{
 		"Brand": "Musicomlab",
 		"Name": "EFX-LE",
 		"Width": 12.6,
 		"Height": 3.8,
-		"Image": "musicomlab-efxle.png"
+		"Image": "musicomlab-efx-le.png"
 	},
 	{
 		"Brand": "Mu-Tron",
@@ -30291,6 +30291,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Ages (Kamakura Series)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-ages-kamakura.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Ages (Nat. Parks LE)",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -30302,6 +30309,13 @@
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-arp87.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "ARP-87 (Kamakura Series)",
+		"Width": 2.72,
+		"Height": 4.95,
+		"Image": "walrus-arp87-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
@@ -30438,6 +30452,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Eras (Kamakura Series)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-eras-kamakura.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Eras (Nat. Parks LE)",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -30462,21 +30483,28 @@
 		"Name": "Fathom",
 		"Width": 2.6,
 		"Height": 4.95,
-		"Image": "wa-fathom.png"
+		"Image": "walrus-fathom.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Fathom (Kamakura Series)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-fathom-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
 		"Name": "Fathom (Nat. Parks LE)",
 		"Width": 2.6,
 		"Height": 4.95,
-		"Image": "wa-fathom-parks.png"
+		"Image": "walrus-fathom-parks.png"
 	},
 	{
 		"Brand": "Walrus Audio",
 		"Name": "Fathom (Nautical LE)",
 		"Width": 2.6,
 		"Height": 4.95,
-		"Image": "wa-fathom-nautical.png"
+		"Image": "walrus-fathom-nautical.png"
 	},
 	{
 		"Brand": "Walrus Audio",
@@ -30550,6 +30578,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Julia V2 (Kamakura Series)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-julia2-kamakura.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Julia V2 (Nat. Parks LE)",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -30567,21 +30602,28 @@
 		"Name": "Julianna",
 		"Width": 2.88,
 		"Height": 4.84,
-		"Image": "walrusaudio-julianna.png"
+		"Image": "walrus-julianna.png"
 	},
 	{
 		"Brand": "Walrus Audio",
 		"Name": "Julianna (Gold LE)",
 		"Width": 2.88,
 		"Height": 4.84,
-		"Image": "walrusaudio-julianna-gold.png"
+		"Image": "walrus-julianna-gold.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Julianna (Kamakura Series)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-julianna-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
 		"Name": "Julianna (Nat. Parks LE)",
 		"Width": 2.88,
 		"Height": 4.84,
-		"Image": "walrusaudio-julianna-parks.png"
+		"Image": "walrus-julianna-parks.png"
 	},
 	{
 		"Brand": "Walrus Audio",
@@ -30631,6 +30673,13 @@
 		"Width": 3.7,
 		"Height": 4.85,
 		"Image": "walrus-lore.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Lore (Kamakura Series)",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "walrus-lore-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
@@ -30718,6 +30767,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Monument V2 (Kamakura Series)",
+		"Width": 2.72,
+		"Height": 4.95,
+		"Image": "walrus-monumentv2-kamakura.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Monument V2 (Nat. Parks LE)",
 		"Width": 2.72,
 		"Height": 4.95,
@@ -30753,6 +30809,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Polychrome (Kamakura Series)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-polychrome-kamakura.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Red",
 		"Width": 3.88,
 		"Height": 4.67,
@@ -30785,6 +30848,13 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-slotva.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Slötvå (Kamakura Series)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-slotva-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
