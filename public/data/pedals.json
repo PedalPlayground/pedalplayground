@@ -9269,10 +9269,10 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Bass Machine",
+		"Name": "Bass9 Bass Machine",
 		"Width": 4.19,
 		"Height": 4.75,
-		"Image": "ehx-bass-machine.png"
+		"Image": "ehx-bass9.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -22779,6 +22779,13 @@
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
+		"Name": "BL-44",
+		"Width": 2.64,
+		"Height": 4.33,
+		"Image": "obne-bl-44.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Blackcap",
 		"Width": 4.7,
 		"Height": 4.12,
@@ -23084,6 +23091,13 @@
 		"Width": 2.87,
 		"Height": 4.96,
 		"Image": "obne-sunlight.png"
+	},
+	{
+		"Brand": "Old Blood Noise Endeavors",
+		"Name": "Triple Expression Ramper",
+		"Width": 4.7,
+		"Height": 4.12,
+		"Image": "obne-triple-expression-ramper.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -24099,6 +24113,13 @@
 		"Width": 4.4,
 		"Height": 2.55,
 		"Image": "pigtronix-polysaturator.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Quantum",
+		"Width": 2.96,
+		"Height": 4.4,
+		"Image": "pigtronix-quantum.png"
 	},
 	{
 		"Brand": "Pigtronix",
