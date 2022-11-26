@@ -917,7 +917,7 @@
 		"Image": "amt-m1.png"
 	},
 	{
-        "Brand": "AMT",
+    "Brand": "AMT",
 		"Name": "PANGAEA CP-100 IR",
 		"Width": 3.77,
 		"Height": 1.69,
@@ -1706,6 +1706,20 @@
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-op-surfing-bear.png"
+	},
+	{
+		"Brand": "Apple",
+		"Name": "Macbook Pro 14",
+		"Width": 15.15,
+		"Height": 8.99,
+		"Image": "apple-macbook-pro-14.png"
+	},
+	{
+		"Brand": "Apple",
+		"Name": "Macbook Pro 16",
+		"Width": 16.77,
+		"Height": 10.03,
+		"Image": "apple-macbook-pro-16.png"
 	},
 	{
 		"Brand": "Arc Effects",
