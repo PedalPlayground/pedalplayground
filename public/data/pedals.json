@@ -1947,9 +1947,16 @@
 	},
 	{
 		"Brand": "Asheville Music Tools",
+		"Name": "ACV-1",
+		"Width": 3.7,
+		"Height": 4.96,
+		"Image": "asheville-acv1.png"
+	},
+	{
+		"Brand": "Asheville Music Tools",
 		"Name": "ADG-1",
 		"Width": 3.7,
-		"Height": 4.9,
+		"Height": 4.96,
 		"Image": "asheville-adg1.png"
 	},
 	{
