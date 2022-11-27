@@ -25305,6 +25305,14 @@
 		"Image": "ryra-klone-seafoam.png"
 	},
 	{
+		"Brand": "RYRA",
+		"Name": "Klone (gold)",
+		"Width": 4.67,
+		"Height": 3.7,
+		"Image": "ryra-klone-gold.png"
+	},
+
+	{
 		"Brand": "Santono",
 		"Name": "Etched Pick Tin",
 		"Width": 2,
