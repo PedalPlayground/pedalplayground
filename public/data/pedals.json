@@ -29269,6 +29269,13 @@
 	},
 	{
 		"Brand": "Valeton",
+		"Name": "valeton GP-200LT",
+		"Width": 9.961,
+		"Height": 6.496,
+		"Image": "valeton-gp-200lt.png"
+	},
+	{
+		"Brand": "Valeton",
 		"Name": "Surge EP-1",
 		"Width": 2.57874,
 		"Height": 5.8464567,
