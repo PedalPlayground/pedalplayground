@@ -7828,50 +7828,57 @@
 	{
 		"Brand": "Dr Scientist",
 		"Name": "Bitquest",
-		"Width": 2.75,
-		"Height": 5.08,
+		"Width": 2.71,
+		"Height": 5.03,
 		"Image": "dr-scientist-bitquest.png"
 	},
 	{
 		"Brand": "Dr Scientist",
 		"Name": "Dusk",
-		"Width": 2.75,
-		"Height": 5.08,
+		"Width": 2.71,
+		"Height": 5.03,
 		"Image": "dr-scientist-dusk.png"
 	},
 	{
 		"Brand": "Dr Scientist",
 		"Name": "Frazz Dazzler",
-		"Width": 2.75,
-		"Height": 5.08,
+		"Width": 2.71,
+		"Height": 5.03,
 		"Image": "dr-scientist-frazz-dazzler.png"
 	},
 	{
 		"Brand": "Dr Scientist",
 		"Name": "Reverberator",
 		"Width": 2.5,
-		"Height": 4.45,
+		"Height": 4.89,
 		"Image": "dr-scientist-reverberator.png"
 	},
 	{
 		"Brand": "Dr Scientist",
+		"Name": "Sunny Day Delay",
+		"Width": 2.71,
+		"Height": 5.03,
+		"Image": "dr-scientist-sunny-day-delay.png"
+	},
+	{
+		"Brand": "Dr Scientist",
 		"Name": "The Atmosphere",
-		"Width": 2.75,
-		"Height": 4.95,
+		"Width": 2.71,
+		"Height": 5.03,
 		"Image": "dr-scientist-the-atmosphere.png"
 	},
 	{
 		"Brand": "Dr Scientist",
 		"Name": "The Elements",
-		"Width": 2.75,
-		"Height": 4.99,
+		"Width": 2.71,
+		"Height": 4.91,
 		"Image": "dr-scientist-the-elements.png"
 	},
 	{
 		"Brand": "Dr Scientist",
 		"Name": "The Tremolessence",
-		"Width": 2.4,
-		"Height": 4.8,
+		"Width": 2.71,
+		"Height": 4.91,
 		"Image": "dr-scientist-the-tremolessence.png"
 	},
 	{
