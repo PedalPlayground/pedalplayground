@@ -3732,6 +3732,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DS-1-4A Anniversary Distortion",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ds14a.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "DS-1w Distortion",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -7999,6 +8006,13 @@
 		"Width": 1.5,
 		"Height": 2.9,
 		"Image": "donner-ripple.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Soph Gate",
+		"Width": 2.51969,
+		"Height": 4.4685039,
+		"Image": "donner-soph-gate.png"
 	},
 	{
 		"Brand": "Donner",
@@ -14519,6 +14533,20 @@
 	},
 	{
 		"Brand": "Hughes & Kettner",
+		"Name": "Tube Factor",
+		"Width": 6.299,
+		"Height": 8.465,
+		"Image": "hk-tube-factor.png"
+	},
+	{
+		"Brand": "Hughes & Kettner",
+		"Name": "Tube Replex",
+		"Width": 6.299,
+		"Height": 8.465,
+		"Image": "hk-tube-replex.png"
+	},
+	{
+		"Brand": "Hughes & Kettner",
 		"Name": "Tube Rotosphere MK II",
 		"Width": 8,
 		"Height": 8.5,
@@ -19611,21 +19639,21 @@
 		"Name": "F-Stop (Black)",
 		"Width": 3.6,
 		"Height": 4.98,
-		"Image": "milkman-fstop-black.png"
+		"Image": "milkman-f-stop-black.png"
 	},
 	{
 		"Brand": "Milkman Sound",
 		"Name": "F-Stop (White)",
 		"Width": 3.6,
 		"Height": 4.98,
-		"Image": "milkman-fstop-white.png"
+		"Image": "milkman-f-stop-white.png"
 	},
 	{
 		"Brand": "Milkman Sound",
 		"Name": "Pop Top",
 		"Width": 2.7,
 		"Height": 4.75,
-		"Image": "milkman-poptop.png"
+		"Image": "milkman-pop-top.png"
 	},
 	{
 		"Brand": "Milkman Sound",
@@ -23538,7 +23566,7 @@
 		"Name": "Terror Stamp",
 		"Width": 5.4,
 		"Height": 3.9,
-		"Image": "orange-terrorstamp.png"
+		"Image": "orange-terror-stamp.png"
 	},
 	{
 		"Brand": "Orange",
@@ -23552,42 +23580,42 @@
 		"Name": "Bassrig Super Vintage",
 		"Width": 3.6,
 		"Height": 5.8,
-		"Image": "origineffects-bassrig.png"
+		"Image": "origin-bassrig.png"
 	},
 	{
 		"Brand": "Origin Effects",
 		"Name": "Bassrig '64 Black Panel'",
 		"Width": 3.6,
 		"Height": 5.8,
-		"Image": "origineffects-bassrig64.png"
+		"Image": "origin-bassrig-64.png"
 	},
 	{
 		"Brand": "Origin Effects",
 		"Name": "Cali76 Compact",
 		"Width": 2.6,
 		"Height": 5.59,
-		"Image": "origineffects-cali76.png"
+		"Image": "origin-cali76.png"
 	},
 	{
 		"Brand": "Origin Effects",
 		"Name": "Cali76 Compact Bass",
 		"Width": 2.6,
 		"Height": 5.59,
-		"Image": "origineffects-cali76-bass.png"
+		"Image": "origin-cali76-bass.png"
 	},
 	{
 		"Brand": "Origin Effects",
 		"Name": "Cali76 Compact Deluxe",
 		"Width": 2.6,
 		"Height": 5.59,
-		"Image": "origineffects-cali76cd.png"
+		"Image": "origin-cali76-compact-deluxe.png"
 	},
 	{
 		"Brand": "Origin Effects",
 		"Name": "Cali76 Compact Deluxe - Blackout",
 		"Width": 2.6,
 		"Height": 5.59,
-		"Image": "origineffects-cali76cd-le.png"
+		"Image": "origin-cali76-compact-deluxe-le.png"
 	},
 	{
 		"Brand": "Origin Effects",
@@ -23622,7 +23650,7 @@
 		"Name": "MAGMA57 Amp Vibrato & Drive",
 		"Width": 3.6,
 		"Height": 5.8,
-		"Image": "origineffects-magma57.png"
+		"Image": "origin-magma57.png"
 	},
 	{
 		"Brand": "Origin Effects",
@@ -23678,7 +23706,7 @@
 		"Name": "RevivalTREM Bias Tremolo",
 		"Width": 3.6,
 		"Height": 5.8,
-		"Image": "origineffects-revivaltrem.png"
+		"Image": "origin-revivaltrem.png"
 	},
 	{
 		"Brand": "Origin Effects",
@@ -23926,105 +23954,105 @@
 		"Image": "paradox-terran.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Chorus Ensemble",
 		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-chorus-ensemble.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Chorus Ensemble Mini",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-mini.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Chorus Ensemble MN3007",
 		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-chorus-ensemble-mn3007.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Chorus Ensemble MN3007 Mini",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-mn3007-mini.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Chorus Ensemble Preamp Crunch",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-preamp-crunch.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Chorus Ensemble Preamp Crunch+",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-preamp-crunch-plus.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Elastic Mattress",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-elastic-mattress.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Foot Phaser Deluxe",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-foot-phaser-deluxe.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Hot For Flanger",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-hot-for-flanger.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Jet Phaser",
 		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-jet-phaser.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Nick James Foot Phaser",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-nick-james-foot-phaser.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Phase V",
 		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-phase-v.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Reticon Flanger",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-reticon.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "Stereo Chorus PX65",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-px65.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFx",
 		"Name": "TD-Y",
 		"Width": 2.57,
 		"Height": 4.33,
@@ -24056,7 +24084,7 @@
 		"Name": "Gold Overdrive",
 		"Width": 4.13,
 		"Height": 4.6,
-		"Image": "pedalpalfx-goldoverdrive.png"
+		"Image": "pedal-pal-fx-gold-overdrive.png"
 	},
 	{
 		"Brand": "Pedaltrain",
