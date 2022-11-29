@@ -17641,6 +17641,13 @@
 	},
 	{
 		"Brand": "Lehle",
+		"Name": "Julian",
+		"Width": 4.8,
+		"Height": 3.9,
+		"Image": "lehle-julian.png"
+	},
+	{
+		"Brand": "Lehle",
 		"Name": "Little Dual II",
 		"Width": 4.8,
 		"Height": 3.9,
