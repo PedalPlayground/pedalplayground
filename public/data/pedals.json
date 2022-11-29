@@ -29248,6 +29248,13 @@
 	},
 	{
 		"Brand": "Two Notes",
+		"Name": "ReVolt",
+		"Width": 7.6,
+		"Height": 4.75,
+		"Image": "twonotes-revolt.png"
+	},
+	{
+		"Brand": "Two Notes",
 		"Name": "Torpedo C.A.B.",
 		"Width": 7,
 		"Height": 4.97,
