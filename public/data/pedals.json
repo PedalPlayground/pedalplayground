@@ -2353,6 +2353,13 @@
 	},
 	{
 		"Brand": "Beautiful Noise Effects",
+		"Name": "Exploder",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "bne-exploder.png"
+	},
+	{
+		"Brand": "Beautiful Noise Effects",
 		"Name": "When The Sun Explodes",
 		"Width": 7.48,
 		"Height": 5.03,
