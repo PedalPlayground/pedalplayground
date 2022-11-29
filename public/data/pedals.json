@@ -23843,6 +23843,13 @@
 	},
 	{
 		"Brand": "Pastfx",
+		"Name": "Revolution",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "pastfx-revolution.png"
+	},
+	{
+		"Brand": "Pastfx",
 		"Name": "Stereo Chorus PX65",
 		"Width": 2.57,
 		"Height": 4.33,
