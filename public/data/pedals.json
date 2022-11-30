@@ -5069,17 +5069,17 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Wave Cannon",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "caroline-wave-cannon.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Wave Cannon MKII",
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "caroline-wave-cannon-mkii.png"
-	},
-	{
-		"Brand": "Caroline",
-		"Name": "Wave Cannon MkII",
-		"Width": 3.7,
-		"Height": 4.88,
-		"Image": "caroline-wave-cannon-mk2.png"
 	},
 	{
 		"Brand": "Caroline",
