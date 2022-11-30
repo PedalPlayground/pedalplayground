@@ -16052,27 +16052,6 @@
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "American Sound",
-		"Width": 3.76,
-		"Height": 4.7,
-		"Image": "joyo-americansound.png"
-	},
-	{
-		"Brand": "Joyo",
-		"Name": "Classic Flanger",
-		"Width": 3.57,
-		"Height": 4.64,
-		"Image": "joyo-classic-flanger.png"
-	},
-	{
-		"Brand": "Joyo",
-		"Name": "Crunch Distortion",
-		"Width": 2.69,
-		"Height": 4.65,
-		"Image": "joyo-crunch-distortion.png"
-	},
-	{
-		"Brand": "Joyo",
 		"Name": "D-Seed",
 		"Width": 3.92,
 		"Height": 4.13,
@@ -16080,17 +16059,276 @@
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "Gate of Kahn",
-		"Width": 1.72,
-		"Height": 2.83,
-		"Image": "joyo-gate-of-kahn.png"
+		"Name": "JF-01 Vintage Overdrive",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf01.png"
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "Irontune",
+		"Name": "JF-02 Ultimate Drive",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf02.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-03 Crunch Distortion",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf03.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-04 High Gain Distortion",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf04.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-05 Classic Chorus",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf05.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-06 Vintage Phase",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf06.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-07 Classic Flanger",
+		"Width": 3.57,
+		"Height": 4.64,
+		"Image": "joyo-jf07.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-08 Digital Delay",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf08.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-09 Tremolo",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf09.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-10 Dynamic Compressor",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf10.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-11 6 Band EQ",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf11.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-12 Voodoo Octave",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf12.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-13 AC Tone",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf13.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-14 American Sound",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf14.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-15 California Sound",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf15.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-16 British Sound",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf16.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-17 Extreme Metal",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf17.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-18R Power Tune",
+		"Width": 2.77,
+		"Height": 4.73,
+		"Image": "joyo-jf18r.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-19 Buffer Tuner",
+		"Width": 2.77,
+		"Height": 4.83,
+		"Image": "joyo-jf19.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-20 Moist Reverb",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf20.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-21 Splinter",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf21.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-22 Oxford Sound",
+		"Width": 3.76,
+		"Height": 4.7,
+		"Image": "joyo-jf22.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-23 Argos Overdrive",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf23.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-30 A/B Switch",
+		"Width": 2.61,
+		"Height": 4.65,
+		"Image": "joyo-jf30.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-31 Noise Gate",
+		"Width": 2.61,
+		"Height": 4.65,
+		"Image": "joyo-jf31.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-32 Hot Plexi",
+		"Width": 2.61,
+		"Height": 4.65,
+		"Image": "joyo-jf32.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-33 Analog Delay",
+		"Width": 2.61,
+		"Height": 4.65,
+		"Image": "joyo-jf33.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-34 US Dream",
+		"Width": 2.61,
+		"Height": 4.65,
+		"Image": "joyo-jf34.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-35 Pocket Metal",
+		"Width": 2.61,
+		"Height": 4.65,
+		"Image": "joyo-jf35.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-36 Sweet Baby Overdrive",
+		"Width": 2.61,
+		"Height": 4.65,
+		"Image": "joyo-jf36.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-37 Analog Chorus",
+		"Width": 2.61,
+		"Height": 4.65,
+		"Image": "joyo-jf37.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-38 Roll Boost",
+		"Width": 2.61,
+		"Height": 4.65,
+		"Image": "joyo-jf38.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-39 Deluxe Crunch",
+		"Width": 2.61,
+		"Height": 4.65,
+		"Image": "joyo-jf39.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-312 Pipebomb",
+		"Width": 1.72,
+		"Height": 2.83,
+		"Image": "joyo-jf312.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-317 Space Verb",
+		"Width": 1.72,
+		"Height": 2.83,
+		"Image": "joyo-jf317.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-323 Wooden Sound",
+		"Width": 1.72,
+		"Height": 2.83,
+		"Image": "joyo-jf323.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-324 Gate of Kahn",
+		"Width": 1.72,
+		"Height": 2.83,
+		"Image": "joyo-jf324.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-326 Irontune",
 		"Width": 1.5,
 		"Height": 2.9,
-		"Image": "joyo-irontune.png"
+		"Image": "joyo-jf326.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JP-02 Power Supply 2",
+		"Width": 5.90,
+		"Height": 2.14,
+		"Image": "joyo-jp02.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -16098,20 +16336,6 @@
 		"Width": 5.75,
 		"Height": 2.7,
 		"Image": "joyo-jp05.png"
-	},
-	{
-		"Brand": "Joyo",
-		"Name": "Pipe Bomb",
-		"Width": 1.72,
-		"Height": 2.83,
-		"Image": "joyo-pipe-bomb.png"
-	},
-	{
-		"Brand": "Joyo",
-		"Name": "Power Supply 2",
-		"Width": 5.90,
-		"Height": 2.14,
-		"Image": "joyo-power-supply-2.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -16137,79 +16361,135 @@
 	{
 		"Brand": "Joyo",
 		"Name": "R-01 Tauren",
-		"Width": 2.75,
-		"Height": 4.33,
-		"Image": "joyo-r01-tauren.png"
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r01.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "R-02 Taichi",
-		"Width": 2.75,
-		"Height": 4.33,
-		"Image": "joyo-r02-taichi.png"
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r02.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "R-03 Uzi",
-		"Width": 2.75,
-		"Height": 4.33,
-		"Image": "joyo-r03-uzi.png"
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r03.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-04 Zip Amp",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r04.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "R-05 Maximum",
-		"Width": 4.92,
-		"Height": 3.2,
-		"Image": "joyo-r05-maximum.png"
+		"Width": 5.12,
+		"Height": 3.31,
+		"Image": "joyo-r05.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-06 O.M.B.",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r06.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-07 Aquarius",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r07.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-08 Cab Box",
+		"Width": 5.16,
+		"Height": 4.37,
+		"Image": "joyo-r08.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "R-09 Vision",
 		"Width": 5.12,
-		"Height": 4.43,
-		"Image": "joyo-r09-vision.png"
+		"Height": 4.37,
+		"Image": "joyo-r09.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-10 Nascar Delay",
+		"Width": 5.12,
+		"Height": 3.31,
+		"Image": "joyo-r10.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-11 Baatsin",
+		"Width": 5.12,
+		"Height": 3.31,
+		"Image": "joyo-r11.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-12 Band Controller",
+		"Width": 5.12,
+		"Height": 3.31,
+		"Image": "joyo-r12.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-13 XVI",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r13.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "R-14 Atmosphere",
-		"Width": 2.6378,
-		"Height": 4.29134,
-		"Image": "joyo-atmosphere.png"
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r14.png"
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "Space Verb",
-		"Width": 1.72,
-		"Height": 2.83,
-		"Image": "joyo-space-verb.png"
+		"Name": "R-15 Preamp House",
+		"Width": 5.16,
+		"Height": 4.37,
+		"Image": "joyo-r15.png"
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "Splinter",
-		"Width": 3.8189,
-		"Height": 4.72441,
-		"Image": "joyo-splinter.png"
+		"Name": "R-17 Dark Flame",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r17.png"
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "Vintage Overdrive",
-		"Width": 2.63,
-		"Height": 4.65,
-		"Image": "joyo-vintage-overdrive.png"
+		"Name": "R-18 Chopper-Z",
+		"Width": 5.12,
+		"Height": 4.37,
+		"Image": "joyo-r18.png"
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "Vintage Phase",
-		"Width": 2.73,
-		"Height": 4.65,
-		"Image": "joyo-vintage-phase.png"
+		"Name": "R-19 Avallon",
+		"Width": 5.12,
+		"Height": 4.37,
+		"Image": "joyo-r19.png"
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "Wooden Sound",
-		"Width": 1.72,
-		"Height": 2.83,
-		"Image": "joyo-wooden-sound.png"
+		"Name": "R-20 King of Kings",
+		"Width": 5.12,
+		"Height": 4.37,
+		"Image": "joyo-r20.png"
 	},
 	{
 		"Brand": "JPTR FX",
