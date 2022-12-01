@@ -16291,37 +16291,51 @@
 	{
 		"Brand": "Joyo",
 		"Name": "JF-312 Pipebomb",
-		"Width": 1.72,
-		"Height": 2.83,
+		"Width": 1.66,
+		"Height": 2.87,
 		"Image": "joyo-jf312.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "JF-317 Space Verb",
-		"Width": 1.72,
-		"Height": 2.83,
+		"Width": 1.66,
+		"Height": 2.87,
 		"Image": "joyo-jf317.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "JF-323 Wooden Sound",
-		"Width": 1.72,
-		"Height": 2.83,
+		"Width": 1.66,
+		"Height": 2.87,
 		"Image": "joyo-jf323.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "JF-324 Gate of Kahn",
-		"Width": 1.72,
-		"Height": 2.83,
+		"Width": 1.66,
+		"Height": 2.87,
 		"Image": "joyo-jf324.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "JF-326 Irontune",
-		"Width": 1.5,
-		"Height": 2.9,
+		"Width": 1.66,
+		"Height": 2.87,
 		"Image": "joyo-jf326.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-330 Ocho",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf330.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-332 Moon Base",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf332.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -31152,6 +31166,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Phenom Distortion",
+		"Width": 2.5,
+		"Height": 4.58,
+		"Image": "wampler-phenom.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "Pinnacle",
 		"Width": 2.5,
 		"Height": 4.81,
@@ -31233,6 +31254,13 @@
 		"Width": 3.5,
 		"Height": 4.68,
 		"Image": "wampler-triplewreck.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Triumph Overdrive",
+		"Width": 2.5,
+		"Height": 4.58,
+		"Image": "wampler-triumph.png"
 	},
 	{
 		"Brand": "Wampler",
