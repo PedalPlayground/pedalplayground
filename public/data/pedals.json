@@ -16290,6 +16290,83 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "JF-301 Rated Boost",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf301.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-302 Wild Boost",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf302.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-303 Little Blaster",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf303.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-304 Time Magic",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf304.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-305 AT Drive",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf305.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-306 Rushing Train",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf306.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-307 Clean Glass",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf307.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-308 Golden Fleece",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf308.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-309 Boogie Master",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf309.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-310 Orange Juice",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf310.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-311 Blue Rain",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf311.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "JF-312 Pipebomb",
 		"Width": 1.66,
 		"Height": 2.87,
@@ -16297,10 +16374,73 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "JF-313 Old School",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf313.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-314 Husky Drive",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf314.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-315 MetalHead",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf315.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-316 Future Chorus",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf316.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "JF-317 Space Verb",
 		"Width": 1.66,
 		"Height": 2.87,
 		"Image": "joyo-jf317.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-318 Quattro",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf318.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-319 Green Legend",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf319.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-320 Purple Storm",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf320.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-321 Bullet Metal",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf321.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-322 Wow Wah",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf322.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -16318,6 +16458,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "JF-325 Molo-Trem",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf325.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "JF-326 Irontune",
 		"Width": 1.66,
 		"Height": 2.87,
@@ -16325,10 +16472,38 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "JF-327 Raptor Flanger",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf327.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-328 Nebulous",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf328.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-329 Ironloop",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf329.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "JF-330 Ocho",
 		"Width": 1.66,
 		"Height": 2.87,
 		"Image": "joyo-jf330.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-331 F.O.H.",
+		"Width": 1.66,
+		"Height": 2.87,
+		"Image": "joyo-jf331.png"
 	},
 	{
 		"Brand": "Joyo",
