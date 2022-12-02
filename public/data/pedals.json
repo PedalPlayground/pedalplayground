@@ -22471,10 +22471,17 @@
 	},
 	{
 		"Brand": "Nordland",
-		"Name": "ODR-C (Black Edition)",
+		"Name": "ODR-C (Black)",
 		"Width": 2.6,
 		"Height": 5.03,
 		"Image": "nordland-odr-c-black.png"
+	},
+	{
+		"Brand": "Nordland",
+		"Name": "ODR-C (White)",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "nordland-odr-c-white.png"
 	},
 	{
 		"Brand": "Nordland",
