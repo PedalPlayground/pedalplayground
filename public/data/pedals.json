@@ -19849,7 +19849,7 @@
 		"Name": "Bluebonnet Special",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-bluebonnetspecial.png"
+		"Image": "mojo-hand-bluebonnet-special.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
@@ -24063,21 +24063,21 @@
 		"Name": "Tim",
 		"Width": 4.6,
 		"Height": 4.1,
-		"Image": "paulc-tim.png"
+		"Image": "paul-c-tim.png"
 	},
 	{
 		"Brand": "Paul C",
 		"Name": "Timmy",
 		"Width": 2.65,
 		"Height": 4.54,
-		"Image": "paulc-timmy.png"
+		"Image": "paul-c-timmy.png"
 	},
 	{
 		"Brand": "Paul C",
 		"Name": "Timmy V3 15th Anniversary",
 		"Width": 2.70,
 		"Height": 4.60,
-		"Image": "paulc-timmy-v3-15th.png"
+		"Image": "paul-c-timmy-v3-15th.png"
 	},
 	{
 		"Brand": "Pedal Pal FX",
@@ -24322,7 +24322,7 @@
 		"Name": "Philosopher's King",
 		"Width": 7.4,
 		"Height": 4.6,
-		"Image": "pigtronix-philosophersking.png"
+		"Image": "pigtronix-philosophers-king.png"
 	},
 	{
 		"Brand": "Pigtronix",
