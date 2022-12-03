@@ -25410,6 +25410,27 @@
 		"Image": "sennheiser-xswd.png"
 	},
 	{
+		"Brand": "Sentimental Bob Electronics",
+		"Name": "Albert",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "sentimental-bob-electronics-albert.png"
+	},
+	{
+		"Brand": "Sentimental Bob Electronics",
+		"Name": "Tacana",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "sentimental-bob-electronics-tacana.png"
+	},
+	{
+		"Brand": "Sentimental Bob Electronics",
+		"Name": "Tephra",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "sentimental-bob-electronics-tephra.png"
+	},
+	{
 		"Brand": "Seymour Duncan",
 		"Name": "805 Overdrive",
 		"Width": 2.6,
