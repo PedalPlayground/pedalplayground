@@ -27476,6 +27476,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Compadre (LE Midnight)",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "strymon-compadre-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Conduit",
 		"Width": 3.5,
 		"Height": 2.64,
@@ -27630,6 +27637,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Nightsky (LE Midnight)",
+		"Width": 7,
+		"Height": 4.55,
+		"Image": "strymon-nightsky-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "OB.1",
 		"Width": 4,
 		"Height": 4.55,
@@ -27679,10 +27693,24 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Riverside (LE Midnight)",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "strymon-riverside-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Sunset",
 		"Width": 4,
 		"Height": 4.55,
 		"Image": "strymon-sunset.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Sunset (LE Midnight)",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "strymon-sunset-midnight.png"
 	},
 	{
 		"Brand": "Strymon",
@@ -27707,10 +27735,24 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Volante (LE Midnight)",
+		"Width": 7,
+		"Height": 4.55,
+		"Image": "strymon-volante-midnight.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Zelzah",
 		"Width": 4,
 		"Height": 4.55,
 		"Image": "strymon-zelzah.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Zelzah (LE Midnight)",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "strymon-zelzah-midnight.png"
 	},
 	{
 		"Brand": "Strymon",
