@@ -11432,6 +11432,34 @@
 	},
 	{
 		"Brand": "Flamma",
+		"Name": "FC18 Booster",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc18.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC19 Black Dist",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc19.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC20 Brit Dist",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc20.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC21 Analog Comp",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc21.png"
+	},
+	{
+		"Brand": "Flamma",
 		"Name": "FS01 Drum Loop",
 		"Width": 2.75,
 		"Height": 4.8,
