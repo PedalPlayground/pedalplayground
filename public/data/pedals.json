@@ -14098,6 +14098,34 @@
 		"Image": "hologram-microcosm.png"
 	},
 	{
+		"Brand": "Horrothia FX",
+		"Name": "Berkeley",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "horrothiafx-berkeley.png"
+	},
+	{
+		"Brand": "Horrothia FX",
+		"Name": "Teeth",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "horrothiafx-teeth.png"
+	},
+	{
+		"Brand": "Horrothia FX",
+		"Name": "Triage",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "horrothiafx-triage.png"
+	},
+	{
+		"Brand": "Horrothia FX",
+		"Name": "Type One",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "horrothiafx-type-one.png"
+	},
+	{
 		"Brand": "Jet",
 		"Name": "Lamb",
 		"Width": 4.70,
