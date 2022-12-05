@@ -20868,6 +20868,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "The Wahter",
+		"Width": 2.25,
+		"Height": 5.35,
+		"Image": "mooer-leveline.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Tone Capture GTR",
 		"Width": 1.67,
 		"Height": 3.75,
@@ -25072,6 +25079,20 @@
 		"Width": 6.5,
 		"Height": 4.25,
 		"Image": "quilter-labs-superblock-us.png"
+	},
+	{
+		"Brand": "R Weaver FX",
+		"Name": "Midnight Vibe",
+		"Width": 8.38,
+		"Height": 5.04,
+		"Image": "rweaverfx-midnight-vibe.png"
+	},
+	{
+		"Brand": "R Weaver FX",
+		"Name": "Violet Vibe",
+		"Width": 8.38,
+		"Height": 5.04,
+		"Image": "rweaverfx-violet-vibe.png"
 	},
 	{
 		"Brand": "Radial Engineering",
