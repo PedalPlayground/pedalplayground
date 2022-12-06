@@ -6083,6 +6083,13 @@
 		"Image": "coppersound-renegade.png"
 	},
 	{
+		"Brand": "Coppersound",
+		"Name": "Telegraph V2",
+		"Width": 2.75,
+		"Height": 5.24,
+		"Image": "coppersound-telegraph-v2.png"
+	},
+	{
 		"Brand": "Cornerstone",
 		"Name": "Antique",
 		"Width": 2.6,
@@ -6284,6 +6291,13 @@
 		"Width": 2.5,
 		"Height": 4.72,
 		"Image": "ctc-time-mk3.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Unobtanium",
+		"Width": 4.83,
+		"Height": 3.78,
+		"Image": "ctc-unobtanium.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
