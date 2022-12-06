@@ -19502,6 +19502,13 @@
 		"Image": "mattoverse-inflectionpoint.png"
 	},
 	{
+		"Brand": "Mattoverse",
+		"Name": "Tetrastep MKII",
+		"Width": 4.7,
+		"Height": 5.84,
+		"Image": "mattoverse-tetrastep-mk2.png"
+	},
+	{
 		"Brand": "Matthews Effects",
 		"Name": "The Architect V2",
 		"Width": 2.6,
