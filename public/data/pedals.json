@@ -10291,6 +10291,13 @@
 	},
 	{
 		"Brand": "Electronic Audio Experiments",
+		"Name": "Citadel",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-citadel.png"
+	},
+	{
+		"Brand": "Electronic Audio Experiments",
 		"Name": "Dagger",
 		"Width": 2.6,
 		"Height": 4.99,
