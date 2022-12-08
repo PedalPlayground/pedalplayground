@@ -8744,6 +8744,13 @@
 	},
 	{
 		"Brand": "Earthquaker",
+		"Name": "Plumes (Cream)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-plumes-cream.png"
+	},
+	{
+		"Brand": "Earthquaker",
 		"Name": "Plumes (El Dorado)",
 		"Width": 2.6,
 		"Height": 4.94,
