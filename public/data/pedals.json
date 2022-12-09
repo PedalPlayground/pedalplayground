@@ -7190,6 +7190,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Compressor JR (Black)",
+		"Width": 2.44,
+		"Height": 4.63,
+		"Image": "diamond-compressor-jr-black.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Cornerstone",
 		"Width": 2.44,
 		"Height": 4.63,
