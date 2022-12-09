@@ -22379,6 +22379,20 @@
 		"Image": "mxr-cspo27.png"
 	},
 	{
+		"Brand": "MXR Custom Shop x Third Man Hardware",
+		"Name": "Double Down",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-double-down.png"
+	},
+	{
+		"Brand": "MXR Custom Shop x Third Man Hardware",
+		"Name": "Double Down (Yellow)",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "mxr-double-down-yellow.png"
+	},
+	{
 		"Brand": "Mythos",
 		"Name": "Air Lane Drive",
 		"Width": 4.7,
