@@ -18470,14 +18470,14 @@
 		"Name": "Big Tweedy Drive",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-bigtweedydrive.png"
+		"Image": "mad-professor-big-tweedy.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Blueberry Bass Overdrive",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-blueberrybass.png"
+		"Image": "mad-professor-blueberry.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -19205,7 +19205,7 @@
 		"Name": "The Chemist",
 		"Width": 2.73,
 		"Height": 4.94,
-		"Image": "matthews-thechemist.png"
+		"Image": "matthews-chemist.png"
 	},
 	{
 		"Brand": "Matthews Effects",
@@ -19219,14 +19219,14 @@
 		"Name": "The Cosmonaut",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "matthews-thecosmonaut.png"
+		"Image": "matthews-cosmonaut.png"
 	},
 	{
 		"Brand": "Matthews Effects",
 		"Name": "The Cosmonaut v2",
 		"Width": 2.87,
 		"Height": 4.94,
-		"Image": "matthews-thecosmonaut-v2.png"
+		"Image": "matthews-cosmonaut-v2.png"
 	},
 	{
 		"Brand": "Matthews Effects",
@@ -22460,7 +22460,7 @@
 		"Name": "Loop Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
-		"Image": "nux-loopcore.png"
+		"Image": "nux-loop-core-deluxe.png"
 	},
 	{
 		"Brand": "NuX",
@@ -24329,21 +24329,21 @@
 		"Name": "Philosopher's Tone",
 		"Width": 4.4,
 		"Height": 2.55,
-		"Image": "pigtronix-philosopherstone.png"
+		"Image": "pigtronix-philosophers-tone.png"
 	},
 	{
 		"Brand": "Pigtronix",
 		"Name": "Philosopher's Tone Germanium Gold",
 		"Width": 1.72,
 		"Height": 3.75,
-		"Image": "pigtronix-philosopherstone-germanium-gold.png"
+		"Image": "pigtronix-philosophers-tone-germanium-gold.png"
 	},
 	{
 		"Brand": "Pigtronix",
 		"Name": "Philosopher's Tone Micro",
 		"Width": 1.75,
 		"Height": 3.75,
-		"Image": "pigtronix-philosopherstonemicro.png"
+		"Image": "pigtronix-philosophers-tone-micro.png"
 	},
 	{
 		"Brand": "Pigtronix",
@@ -24518,7 +24518,7 @@
 		"Name": "Bridge4",
 		"Width": 4.409,
 		"Height": 3.7,
-		"Image": "piratemidi-bridge4.png"
+		"Image": "pirate-midi-bridge4.png"
 	},
 	{
 		"Brand": "Pirate Midi",
@@ -24644,7 +24644,7 @@
 		"Name": "Big Box Vintage Rat",
 		"Width": 5,
 		"Height": 4.14,
-		"Image": "proco-bigbox-rat.png"
+		"Image": "pro-co-big-box-rat.png"
 	},
 	{
 		"Brand": "Pro Co",
