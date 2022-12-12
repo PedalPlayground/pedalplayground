@@ -15793,6 +15793,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Germanium Boost",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-germanium-boost.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Haunting Mids",
 		"Width": 2.93,
 		"Height": 4.98,
