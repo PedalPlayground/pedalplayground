@@ -7246,6 +7246,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Memory Lane 2",
+		"Width": 7.35,
+		"Height": 4.95,
+		"Image": "diamond-memory-lane-2.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Memory Lane Jr",
 		"Width": 5.01,
 		"Height": 3.82,
@@ -7257,6 +7264,13 @@
 		"Width": 2.44,
 		"Height": 4.63,
 		"Image": "diamond-902.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Phase",
+		"Width": 5.01,
+		"Height": 4.88,
+		"Image": "diamond-phase.png"
 	},
 	{
 		"Brand": "Diamond",
