@@ -13525,6 +13525,13 @@
 	},
 	{
 		"Brand": "Ground Control",
+		"Name": "Bread Oath",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "ground-control-bread-oath.png"
+	},
+	{
+		"Brand": "Ground Control",
 		"Name": "Locust",
 		"Width": 2.62,
 		"Height": 4.98,
