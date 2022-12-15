@@ -18726,6 +18726,13 @@
 	},
 	{
 		"Brand": "Marshall",
+		"Name": "PEDL-00045 Footswitch",
+		"Width": 11.25,
+		"Height": 4.45,
+		"Image": "marshall-pedl-00045-footswitch.png"
+	},
+	{
+		"Brand": "Marshall",
 		"Name": "RF-1 Reflector",
 		"Width": 2.7,
 		"Height": 4.7,
