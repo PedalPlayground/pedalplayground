@@ -2002,6 +2002,13 @@
 		"Image": "audio-kitchen-tst.png"
 	},
 	{
+		"Brand": "Audio Sprockets",
+		"Name": "Tone Dexter",
+		"Width": 6.3,
+		"Height": 6.09,
+		"Image": "audio-sprockets-tone-dexter.png"
+	},
+	{
 		"Brand": "Barber",
 		"Name": "1/2 Gainer",
 		"Width": 3.7,
@@ -23336,6 +23343,13 @@
 		"Width": 11.42,
 		"Height": 7.8,
 		"Image": "neuraldsp-quadcortex.png"
+	},
+	{
+		"Brand": "Ohmless Pedals",
+		"Name": "AKC-4 Drive",
+		"Width": 2.75,
+		"Height": 5,
+		"Image": "ohmless-akc4.png"
 	},
 	{
 		"Brand": "Okko FX",
