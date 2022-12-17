@@ -6448,6 +6448,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Unobtainium",
+		"Width": 5.787402,
+		"Height": 4.055118,
+		"Image": "ctc-unobtainium.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "White Whale",
 		"Width": 6.7,
 		"Height": 4.78,
@@ -7982,9 +7989,16 @@
 	{
 		"Brand": "Donner",
 		"Name": "AB/Y",
-		"Width": 1.5,
-		"Height": 2.9,
+		"Width": 1.62,
+		"Height": 3.74,
 		"Image": "donner-aby.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Blues Drive",
+		"Width": 1.62,
+		"Height": 3.74,
+		"Image": "donner-blues-drive.png"
 	},
 	{
 		"Brand": "Donner",
@@ -18505,14 +18519,14 @@
 		"Name": "Dual Blue Delay",
 		"Width": 4.7,
 		"Height": 3.83,
-		"Image": "madprof-dualbluedelay.png"
+		"Image": "mad-professor-dual-blue.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Double Moon",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-doublemoon.png"
+		"Image": "mad-professor-double-moon.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -18568,7 +18582,7 @@
 		"Name": "Golden Cello",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-goldencello.png"
+		"Image": "mad-professor-golden-cello.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -22528,8 +22542,8 @@
 	{
 		"Brand": "NuX",
 		"Name": "NMP-2 Dual Foot Switch",
-		"Width": 4,
-		"Height": 2.19,
+		"Width": 3.74016,
+		"Height": 1.81102,
 		"Image": "nux-npm2.png"
 	},
 	{
@@ -24525,7 +24539,7 @@
 		"Name": "Bridge6",
 		"Width": 6.3,
 		"Height": 3.7,
-		"Image": "piratemidi-bridge6.png"
+		"Image": "pirate-midi-bridge6.png"
 	},
 	{
 		"Brand": "Pladask Elektrisk",
@@ -25099,70 +25113,70 @@
 		"Name": "Twin Bender",
 		"Width": 2.61,
 		"Height": 4.92,
-		"Image": "ramble-twinbender.png"
+		"Image": "ramble-twin-bender.png"
 	},
 	{
 		"Brand": "Rawkworks",
 		"Name": "Light OD",
 		"Width": 2.62,
 		"Height": 4.91,
-		"Image": "rawkworks-lightod.png"
+		"Image": "rawkworks-light-od.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Analog Delay",
 		"Width": 4.7,
 		"Height": 3.81,
-		"Image": "retrosonic-analog-delay.png"
+		"Image": "retro-sonic-analog-delay.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Chorus",
 		"Width": 4.7,
 		"Height": 3.81,
-		"Image": "retrosonic-chorus.png"
+		"Image": "retro-sonic-chorus.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Compressor",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-compressor.png"
+		"Image": "retro-sonic-compressor.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Distortion",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-distortion.png"
+		"Image": "retro-sonic-distortion.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Flanger",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-flanger.png"
+		"Image": "retro-sonic-flanger.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Overdrive",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-overdrive.png"
+		"Image": "retro-sonic-overdrive.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Phaser",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-phaser.png"
+		"Image": "retro-sonic-phaser.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Preamp",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-preamp.png"
+		"Image": "retro-sonic-preamp.png"
 	},
 	{
 		"Brand": "Reuss",
@@ -28825,6 +28839,13 @@
 		"Width": 15.25,
 		"Height": 3.24,
 		"Image": "tc-helicon-switch-6.png"
+	},
+	{
+		"Brand": "TC Helicon",
+		"Name": "VoiceLive 3",
+		"Width": 13.8,
+		"Height": 8.5,
+		"Image": "tchelicon-voicelive3.png"
 	},
 	{
 		"Brand": "TC Helicon",
