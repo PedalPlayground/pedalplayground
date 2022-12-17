@@ -18201,6 +18201,13 @@
   },
 	{
     "Brand": "L.R. Baggs",
+    "Name": "Session DI",
+    "Width": 3.66,
+    "Height": 6.25,
+    "Image": "lrbaggs-session-di.png"
+  },
+	{
+    "Brand": "L.R. Baggs",
     "Name": "Venue DI",
     "Width": 7.625,
     "Height": 7.32,
