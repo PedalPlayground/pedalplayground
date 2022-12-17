@@ -6448,13 +6448,6 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
-		"Name": "Unobtainium",
-		"Width": 5.787402,
-		"Height": 4.055118,
-		"Image": "ctc-unobtainium.png"
-	},
-	{
-		"Brand": "Crazy Tube Circuits",
 		"Name": "White Whale",
 		"Width": 6.7,
 		"Height": 4.78,
@@ -18603,14 +18596,14 @@
 		"Name": "Little Tweedy Drive",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-littletweedydrive.png"
+		"Image": "mad-professor-little-tweedy.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Loud 'n Proud",
 		"Width": 3.94,
 		"Height": 4.7,
-		"Image": "madprof-loudnproud.png"
+		"Image": "mad-professor-loud-n-proud.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -18652,21 +18645,21 @@
 		"Name": "Royal Blue Overdrive",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-royalblue.png"
+		"Image": "mad-professor-royal-blue.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Ruby Red Booster",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-rubyred.png"
+		"Image": "mad-professor-ruby-red.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Silver Spring Reverb",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-silverspring.png"
+		"Image": "mad-professor-silver-spring.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -18722,14 +18715,14 @@
 		"Name": "Super Black",
 		"Width": 3.94,
 		"Height": 4.7,
-		"Image": "madprof-superblack.png"
+		"Image": "mad-professor-super-black.png"
 	},
 	{
 		"Brand": "Mad Professor",
 		"Name": "Supreme Dual Overdrive",
 		"Width": 4.7,
 		"Height": 3.83,
-		"Image": "madprof-supremedualoverdrive.png"
+		"Image": "mad-professor-supreme.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -18757,7 +18750,7 @@
 		"Name": "The Green Wonder",
 		"Width": 2.52,
 		"Height": 4.33,
-		"Image": "madprof-thegreenwonder.png"
+		"Image": "mad-professor-the-green-wonder.png"
 	},
 	{
 		"Brand": "Mad Professor",
@@ -18778,7 +18771,7 @@
 		"Name": "Twimble",
 		"Width": 4.7,
 		"Height": 3.83,
-		"Image": "madprof-twimble.png"
+		"Image": "mad-professor-twimble.png"
 	},
 	{
 		"Brand": "Maestro",
@@ -19597,14 +19590,14 @@
 		"Name": "Boost 'n' Buff",
 		"Width": 2.62,
 		"Height": 4.3,
-		"Image": "miaudio-boostnbuff.png"
+		"Image": "mi-audio-boost-n-buff.png"
 	},
 	{
 		"Brand": "MI Audio",
 		"Name": "Cross Over V2",
 		"Width": 2.62,
 		"Height": 4.3,
-		"Image": "miaudio-cross-over-v2.png"
+		"Image": "mi-audio-cross-over-v2.png"
 	},
 	{
 		"Brand": "MI Audio",
@@ -22542,8 +22535,8 @@
 	{
 		"Brand": "NuX",
 		"Name": "NMP-2 Dual Foot Switch",
-		"Width": 3.74016,
-		"Height": 1.81102,
+		"Width": 4,
+		"Height": 2.19,
 		"Image": "nux-npm2.png"
 	},
 	{
@@ -23363,7 +23356,7 @@
 		"Name": "AB Box",
 		"Width": 2.13,
 		"Height": 3.98,
-		"Image": "onecontrol-abbox.png"
+		"Image": "one-control-ab-box.png"
 	},
 	{
 		"Brand": "One Control",
@@ -24735,28 +24728,28 @@
 		"Name": "Prelude",
 		"Width": 3.7,
 		"Height": 4.89,
-		"Image": "quiettheory-prelude.png"
+		"Image": "quiet-theory-prelude.png"
 	},
 	{
 		"Brand": "Quiet Theory",
 		"Name": "Prelude (Pink)",
 		"Width": 3.7,
 		"Height": 4.89,
-		"Image": "quiettheory-prelude-pink.png"
+		"Image": "quiet-theory-prelude-pink.png"
 	},
 	{
 		"Brand": "Quiet Theory",
 		"Name": "Prelude (Purple)",
 		"Width": 3.7,
 		"Height": 4.89,
-		"Image": "quiettheory-prelude-purple.png"
+		"Image": "quiet-theory-prelude-purple.png"
 	},
 	{
 		"Brand": "Quiet Theory",
 		"Name": "Prelude (White)",
 		"Width": 3.7,
 		"Height": 4.89,
-		"Image": "quiettheory-prelude-white.png"
+		"Image": "quiet-theory-prelude-white.png"
 	},
 	{
 		"Brand": "Quilter Labs",
@@ -25393,7 +25386,7 @@
 		"Name": "SS Scarlett Overdrive",
 		"Width": 1.77,
 		"Height": 3.43,
-		"Image": "redwitch-scarlette.png"
+		"Image": "red-witch-ss-scarlett.png"
 	},
 	{
 		"Brand": "Red Witch",
