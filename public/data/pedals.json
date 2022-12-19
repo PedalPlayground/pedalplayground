@@ -18201,10 +18201,24 @@
   },
 	{
     "Brand": "L.R. Baggs",
+    "Name": "Para Acoustic DI",
+		"Width": 3.6,
+    "Height": 5.68,
+    "Image": "lrbaggs-para-acoustic-di.png"
+  },
+	{
+    "Brand": "L.R. Baggs",
     "Name": "Session DI",
-    "Width": 3.66,
+		"Width": 3.95,
     "Height": 6.25,
     "Image": "lrbaggs-session-di.png"
+  },
+	{
+    "Brand": "L.R. Baggs",
+    "Name": "Stadium DI",
+    "Width": 3.95,
+    "Height": 6.25,
+    "Image": "lrbaggs-stadium-di.png"
   },
 	{
     "Brand": "L.R. Baggs",
@@ -18212,6 +18226,13 @@
     "Width": 7.625,
     "Height": 7.32,
     "Image": "lrbaggs-venue-di.png"
+  },
+	{
+    "Brand": "L.R. Baggs",
+    "Name": "Voiceprint DI",
+    "Width": 5,
+    "Height": 5.24,
+    "Image": "lrbaggs-voiceprint-di.png"
   },
 	{
     "Brand": "Lake Effects",
