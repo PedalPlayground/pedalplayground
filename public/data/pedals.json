@@ -2940,6 +2940,13 @@
 		"Image": "blackmass-first-herald-v2.png"
 	},
 	{
+		"Brand": "Black Mass Electronics",
+		"Name": "The First Herald V2 (Blue)",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "blackmass-first-herald-v2-blue.png"
+	},
+	{
 		"Brand": "Blackstar",
 		"Name": "Dept. 10 Dual Distortion",
 		"Width": 6.18,
@@ -26539,16 +26546,44 @@
 	{
 		"Brand": "Sinvertek",
 		"Name": "Distortion No 5",
-		"Width": 2.618,
-		"Height": 4.78,
+		"Width": 2.8,
+		"Height": 4.8,
 		"Image": "sinvertek-distortion.png"
 	},
 	{
 		"Brand": "Sinvertek",
+		"Name": "Drive N5",
+		"Width": 2.8,
+		"Height": 4.8,
+		"Image": "sinvertek-drive-n5.png"
+	},
+	{
+		"Brand": "Sinvertek",
+		"Name": "Drive N5 Plus",
+		"Width": 2.8,
+		"Height": 4.8,
+		"Image": "sinvertek-drive-n5-plus.png"
+	},
+	{
+		"Brand": "Sinvertek",
 		"Name": "Fluid Time MKII",
-		"Width": 2.618,
-		"Height": 4.78,
+		"Width": 2.8,
+		"Height": 4.8,
 		"Image": "sinvertek-fluidtimemkii.png"
+	},
+	{
+		"Brand": "Sinvertek",
+		"Name": "N5 + 3D Standard",
+		"Width": 2.8,
+		"Height": 4.8,
+		"Image": "sinvertek-n5-3d-standard.png"
+	},
+	{
+		"Brand": "Sinvertek",
+		"Name": "N5 MGAT-1",
+		"Width": 2.8,
+		"Height": 4.8,
+		"Image": "sinvertek-n5-mgat-1.png"
 	},
 	{
 		"Brand": "Siren Pedals",
