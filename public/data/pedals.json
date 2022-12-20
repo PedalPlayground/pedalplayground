@@ -18165,6 +18165,13 @@
 		"Image": "korg-sdd-3000.png"
 	},
 	{
+		"Brand": "Kuro Custom Audio",
+		"Name": "T120 V2",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "kuro-t120-v2.png"
+	},
+	{
     "Brand": "L.R. Baggs",
     "Name": "Align Series Active DI",
     "Width": 3.34,
