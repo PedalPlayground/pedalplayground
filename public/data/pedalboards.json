@@ -252,6 +252,27 @@
 		"Image": "gator-alum-small.png"
 	},
 	{
+		"Brand": "Gator",
+		"Name": "G-Tour Extra Large",
+		"Width": 36,
+		"Height": 19,
+		"Image": "gator-gtour-xlarge.png"
+	},
+	{
+		"Brand": "Gator",
+		"Name": "G-Tour Large",
+		"Width": 26,
+		"Height": 13,
+		"Image": "gator-gtour-large.png"
+	},
+	{
+		"Brand": "Gator",
+		"Name": "G-Tour Small",
+		"Width": 19,
+		"Height": 13,
+		"Image": "gator-gtour-small.png"
+	},
+	{
 		"Brand": "Ghost Fire",
 		"Name": "Little 20",
 		"Width": 20,
