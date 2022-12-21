@@ -287,6 +287,13 @@
 		"Image": "gokko-medium.png"
 	},
 	{
+		"Brand": "Holeyboard",
+		"Name": "Mini",
+		"Width": 13,
+		"Height": 7.75,
+		"Image": "holeyboard-mini.png"
+	},
+	{
 		"Brand": "Mono",
 		"Name": "Carbon Large",
 		"Width": 30.87,
