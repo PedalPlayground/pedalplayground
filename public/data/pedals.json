@@ -3087,130 +3087,158 @@
 		"Image": "blammo-blues-blaster.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "fAUX Tone Machine",
 		"Width": 4.83,
 		"Height": 2.77,
 		"Image": "blammo-faux-tone-machine.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Fuzz Detonator",
 		"Width": 3.7,
 		"Height": 4.92,
 		"Image": "blammo-fuzz-detonator.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Harmonic Perkolator",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-harmonic-perkolator.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "P2P Tone Bender MKi",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-p2p-tone-bender-mk1.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "P2P Tone Bender MKii",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-p2p-tone-bender-mk2.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Shadderbox",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-shadderbox.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Shrew",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-shrew.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Skrambler",
 		"Width": 3.3,
 		"Height": 4.87,
 		"Image": "blammo-skrambler.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Slob",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-slob.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "The Big Duff",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-the-big-duff.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "The Psychclops",
 		"Width": 2.88,
 		"Height": 5.32,
 		"Image": "blammo-the-psychclops.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "The Goodbye Kitty",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-the-goodbye-kitty.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Tomb Sender",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-tomb-sender.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Total Garbage Fuzz",
 		"Width": 3.7,
 		"Height": 4.92,
 		"Image": "blammo-total-garbage.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Tunebender MK1.5",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-tunebender-15.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Voltage Booster",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-voltage-booster.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Zap Master",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-zap-master.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Zonch Machine",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-zonch-machine.png"
+	},
+	{
+		"Brand": "Blue Colander",
+		"Name": "Crooked Axis",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "bluecolander-crooked-axis.png"
+	},
+	{
+		"Brand": "Blue Colander",
+		"Name": "FFAS",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "bluecolander-ffas.png"
+	},
+	{
+		"Brand": "Blue Colander",
+		"Name": "Tibetan Quaalude",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "bluecolander-tibetan-quaalude.png"
+	},
+	{
+		"Brand": "Blue Colander",
+		"Name": "Tremond",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "bluecolander-tremond.png"
 	},
 	{
 		"Brand": "BluGuitar",
@@ -26418,6 +26446,13 @@
 		"Image": "seymourduncan-vaportrail-silver.png"
   },
 	{
+		"Brand": "Seymour Duncan",
+		"Name": "Vapor Trail Deluxe",
+		"Width": 3.82,
+		"Height": 5.26,
+		"Image": "seymourduncan-vapor-trail-deluxe.png"
+	},
+	{
 		"Brand": "Shift Line",
 		"Name": "A+ Astronaut III",
 		"Width": 2.63,
@@ -29910,6 +29945,13 @@
 		"Width": 4,
 		"Height": 5.5,
 		"Image": "tru-fi-colordriver-18v.png"
+	},
+	{
+		"Brand": "Tronographic",
+		"Name": "Rusty Box",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "tronographic-rusty-box.png"
 	},
 	{
 		"Brand": "Tru-Fi Effects",
