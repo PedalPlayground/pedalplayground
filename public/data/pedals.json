@@ -18445,6 +18445,62 @@
 		"Image": "lehle-sunday-driver.png"
 	},
 	{
+		"Brand": "Lichtlaerm Audio",
+		"Name": "Aesahaettr",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-aesahaettr.png"
+	},
+	{
+		"Brand": "Lichtlaerm Audio",
+		"Name": "Altar",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-altar.png"
+	},
+	{
+		"Brand": "Lichtlaerm Audio",
+		"Name": "Amber Spyglass",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-amber-spyglass.png"
+	},
+	{
+		"Brand": "Lichtlaerm Audio",
+		"Name": "Aquaria",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-aquaria.png"
+	},
+	{
+		"Brand": "Lichtlaerm Audio",
+		"Name": "Gehenna",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-gehenna.png"
+	},
+	{
+		"Brand": "Lichtlaerm Audio",
+		"Name": "Kassandra",
+		"Width": 2.88,
+		"Height": 4.95,
+		"Image": "lichtlaerm-kassandra.png"
+	},
+	{
+		"Brand": "Lichtlaerm Audio",
+		"Name": "Ritual",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-ritual.png"
+	},
+	{
+		"Brand": "Lichtlaerm Audio",
+		"Name": "The Key and the Gate",
+		"Width": 2.74,
+		"Height": 4.95,
+		"Image": "lichtlaerm-the-key-and-the-gate.png"
+	},
+	{
 		"Brand": "Lightning Wave",
 		"Name": "Ghost",
 		"Width": 3.7,
