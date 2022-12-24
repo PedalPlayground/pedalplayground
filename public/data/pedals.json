@@ -19205,7 +19205,7 @@
 		"Name": "The Cartographer",
 		"Width": 2.6,
 		"Height": 4.94,
-		"Image": "matthews-thecartographer.png"
+		"Image": "matthews-cartographer.png"
 	},
 	{
 		"Brand": "Matthews Effects",
@@ -19240,7 +19240,7 @@
 		"Name": "The Futurist",
 		"Width": 4.02,
 		"Height": 3.2,
-		"Image": "matthews-thefuturist.png"
+		"Image": "matthews-futurist.png"
 	},
 	{
 		"Brand": "Matthews Effects",
@@ -22978,7 +22978,7 @@
 		"Name": "Holy Grit",
 		"Width": 2.76,
 		"Height": 4.86,
-		"Image": "okko-holygrit.png"
+		"Image": "okko-holy-grit.png"
 	},
 	{
 		"Brand": "Okko FX",
@@ -23041,14 +23041,14 @@
 		"Name": "Black Fountain v2",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "obne-blackfountain-v2.png"
+		"Image": "obne-black-fountain-v2.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Black Fountain v2 (Reverse)",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "obne-blackfountain-v2-reverse.png"
+		"Image": "obne-black-fountain-v2-reverse.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -25498,7 +25498,7 @@
 		"Name": "Lil MO",
 		"Width": 2.6,
 		"Height": 4.93,
-		"Image": "rimrock-lilmo.png"
+		"Image": "rimrock-lil-mo.png"
 	},
 	{
 		"Brand": "Rimrock",
@@ -25701,7 +25701,7 @@
 		"Name": "Compact Looper (Horizontal)",
 		"Width": 4,
 		"Height": 1.75,
-		"Image": "saturnworks-looper-horiz.png"
+		"Image": "saturnworks-looper-horizontal.png"
 	},
 	{
 		"Brand": "Selah",
@@ -25792,7 +25792,7 @@
 		"Name": "Diamondhead",
 		"Width": 3.5,
 		"Height": 4.91,
-		"Image": "seymour-duncan-diamonhead.png"
+		"Image": "seymour-duncan-diamondhead.png"
 	},
 	{
 		"Brand": "Seymour Duncan",
@@ -28888,6 +28888,13 @@
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "tech21-leeds.png"
+	},
+	{
+		"Brand": "Tech21",
+		"Name": "Sansamp Bass Driver Programmable",
+		"Width": 7.25,
+		"Height": 5.25,
+		"Image": "tech21-sansamp-bass-driver.png"
 	},
 	{
 		"Brand": "Tech21",
