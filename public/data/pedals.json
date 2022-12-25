@@ -7470,13 +7470,6 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "DOD Deep Freeze FX-63",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx63.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "DOD Envelope Filter 440",
 		"Width": 3.05,
 		"Height": 4.88,
@@ -7484,17 +7477,38 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD FX63 Deep Freeze",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx63.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD FX65 Stereo Chorus",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx65.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD FX69 Grunge",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx69.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "DOD FX75-V Stereo Flanger",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx75b.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Gonkulator Ringmod",
 		"Width": 3.05,
 		"Height": 4.88,
 		"Image": "digitech-gonkulator.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Grunge FX-69",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx69.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -7544,20 +7558,6 @@
 		"Width": 5,
 		"Height": 4.69,
 		"Image": "dod-rubberneck.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Stereo Chorus FX-65",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx65.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Stereo Flanger FX75-B",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx75b.png"
 	},
 	{
 		"Brand": "DigiTech",
