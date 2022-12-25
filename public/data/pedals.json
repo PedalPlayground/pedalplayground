@@ -20140,6 +20140,13 @@
 	},
 	{
 		"Brand": "Mesa Boogie",
+		"Name": "Switch-Track",
+		"Width": 4.75,
+		"Height": 3.82,
+		"Image": "mesaboogie-switch-track.png"
+	},
+	{
+		"Brand": "Mesa Boogie",
 		"Name": "Throttle Box",
 		"Width": 2.75,
 		"Height": 4.75,
