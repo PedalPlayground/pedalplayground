@@ -2884,6 +2884,13 @@
 		"Image": "blackarts-pharoah.png"
 	},
 	{
+		"Brand": "Black Arts Toneworks",
+		"Name": "Raw Heart",
+		"Width": 4.7,
+		"Height": 5.88,
+		"Image": "blackarts-raw-heart.png"
+	},
+	{
 		"Brand": "Black Mass Electronics",
 		"Name": "1312 Distortion",
 		"Width": 2.6,
@@ -3232,6 +3239,13 @@
 		"Width": 3.7,
 		"Height": 4.85,
 		"Image": "bluecolander-ffas.png"
+	},
+	{
+		"Brand": "Blue Colander",
+		"Name": "Fuxi",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "bluecolander-fuxi.png"
 	},
 	{
 		"Brand": "Blue Colander",
