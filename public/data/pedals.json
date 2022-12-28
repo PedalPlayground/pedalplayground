@@ -16961,6 +16961,13 @@
 		"Image": "kartakou-warmer.png"
 	},
 	{
+		"Brand": "Kasleder FX",
+		"Name": "Toxic Twins",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "kasleder-toxic-twins.png"
+	},
+	{
 		"Brand": "Keeley",
 		"Name": "1962",
 		"Width": 2.67,
@@ -18205,6 +18212,13 @@
 		"Width": 2.71,
 		"Height": 4.33,
 		"Image": "korg-pitchblack-x.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Pitchblack X Mini",
+		"Width": 1.92,
+		"Height": 3.66,
+		"Image": "korg-pitchblack-x-mini.png"
 	},
 	{
 		"Brand": "Korg",
@@ -20312,6 +20326,13 @@
 		"Width": 0.98,
 		"Height": 0.98,
 		"Image": "ziptiemount-sm.png"
+	},
+	{
+		"Brand": "Mission",
+		"Name": "EP1",
+		"Width": 3.57,
+		"Height": 9,
+		"Image": "mission-ep1.png"
 	},
 	{
 		"Brand": "Mission",
@@ -27193,6 +27214,13 @@
 		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "solidgoldfx-rosie.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Sasori",
+		"Width": 2.72,
+		"Height": 4.77,
+		"Image": "solidgoldfx-sasori.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
