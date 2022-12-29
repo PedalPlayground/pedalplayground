@@ -4719,6 +4719,13 @@
 	},
 	{
 		"Brand": "Carl Martin",
+		"Name": "Ampster",
+		"Width": 5.7,
+		"Height": 4.87,
+		"Image": "carl-martin-ampster.png"
+	},
+	{
+		"Brand": "Carl Martin",
 		"Name": "Panama",
 		"Width": 2.36,
 		"Height": 4.33,
