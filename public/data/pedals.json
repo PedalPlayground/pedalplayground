@@ -4564,6 +4564,41 @@
 		"Image": "broughton-hpf.png"
 	},
 	{
+		"Brand": "Broughton",
+		"Name": "Low + High Pass Filter",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "broughton-low-high-pass-filter.png"
+	},
+	{
+		"Brand": "Broughton",
+		"Name": "Omnicomp",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "broughton-omnicomp.png"
+	},
+	{
+		"Brand": "Broughton",
+		"Name": "Scorpion",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "broughton-scorpion.png"
+	},
+	{
+		"Brand": "Broughton",
+		"Name": "SV-Pre",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "broughton-sv-pre.png"
+	},
+	{
+		"Brand": "Broughton",
+		"Name": "Synth Voice Deluxe",
+		"Width": 3.7,
+		"Height": 4.87,
+		"Image": "broughton-synth-voice-deluxe.png"
+	},
+	{
 		"Brand": "Browne Amplification",
 		"Name": "Carbon",
 		"Width": 2.86,
