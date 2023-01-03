@@ -32034,6 +32034,13 @@
 	},
 	{
 		"Brand": "Way Huge",
+		"Name": "Attack Vector",
+		"Width": 2.5,
+		"Height": 4.37,
+		"Image": "wayhuge-wm92.png"
+	},
+	{
+		"Brand": "Way Huge",
 		"Name": "Blue Hippo mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
