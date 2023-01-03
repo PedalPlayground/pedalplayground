@@ -792,24 +792,24 @@
 	},
 	{
 		"Brand": "Ammoon",
-		"Name": "Pocketdist",
+		"Name": "Pockdist",
 		"Width": 2.73,
 		"Height": 4.58,
-		"Image": "ammoon-pocketdist.png"
+		"Image": "ammoon-pockdist.png"
 	},
 	{
 		"Brand": "Ammoon",
-		"Name": "Pocketecho",
+		"Name": "Pockecho",
 		"Width": 2.73,
 		"Height": 4.58,
-		"Image": "ammoon-pocketecho.png"
+		"Image": "ammoon-pockecho.png"
 	},
 	{
 		"Brand": "Ammoon",
-		"Name": "Pocketverb",
+		"Name": "Pockverb",
 		"Width": 2.73,
 		"Height": 4.58,
-		"Image": "ammoon-pocketverb.png"
+		"Image": "ammoon-pockverb.png"
 	},
 	{
 		"Brand": "Amptweaker",
