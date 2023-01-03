@@ -791,6 +791,27 @@
 		"Image": "american-loopers-aux3.png"
 	},
 	{
+		"Brand": "Ammoon",
+		"Name": "Pocketdist",
+		"Width": 2.73,
+		"Height": 4.58,
+		"Image": "ammoon-pocketdist.png"
+	},
+	{
+		"Brand": "Ammoon",
+		"Name": "Pocketecho",
+		"Width": 2.73,
+		"Height": 4.58,
+		"Image": "ammoon-pocketecho.png"
+	},
+	{
+		"Brand": "Ammoon",
+		"Name": "Pocketverb",
+		"Width": 2.73,
+		"Height": 4.58,
+		"Image": "ammoon-pocketverb.png"
+	},
+	{
 		"Brand": "Amptweaker",
 		"Name": "Big Rock Pro II",
 		"Width": 6.47,
@@ -15403,7 +15424,7 @@
 		"Brand": "Jam Pedals",
 		"Name": "Delay Llama",
 		"Width": 2.9,
-		"Height": 4.7,
+		"Height": 4.86,
 		"Image": "jam-delay-llama.png"
 	},
 	{
@@ -24631,6 +24652,13 @@
 		"Width": 2.5,
 		"Height": 4.79,
 		"Image": "paradox-terran.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Vitral",
+		"Width": 2.58,
+		"Height": 4.74,
+		"Image": "paradox-vitral.png"
 	},
 	{
 		"Brand": "Pastfx",
