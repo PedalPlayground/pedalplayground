@@ -5223,10 +5223,17 @@
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Formula 5F6",
+		"Name": "Formula 51 (Foundation)",
 		"Width": 2.6,
 		"Height": 4.33,
-		"Image": "catalinbread-formula5f6.png"
+		"Image": "catalinbread-formula51-foundation.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Formula 55 (Foundation)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-formula55-foundation.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -5234,6 +5241,13 @@
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-formula5f6.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Formula 5F6 (Foundation)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-formula5f6-foundation.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -6081,6 +6095,20 @@
 		"Width": 7.61,
 		"Height": 4.88,
 		"Image": "collision-devices-nocturnal-pink.png"
+	},
+	{
+		"Brand": "Collision Devices",
+		"Name": "The Ranch",
+		"Width": 3.94,
+		"Height": 5.09,
+		"Image": "collision-devices-the-ranch.png"
+	},
+	{
+		"Brand": "Collision Devices",
+		"Name": "The Ranch (Industrial Era)",
+		"Width": 3.94,
+		"Height": 5.16,
+		"Image": "collision-devices-the-ranch-industrial-era.png"
 	},
 	{
 		"Brand": "Colorsound",
