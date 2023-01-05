@@ -11133,20 +11133,20 @@
 		"Brand": "Fairfield Circuitry",
 		"Name": "Hors d'Oeuvre?",
 		"Width": 4.7,
-		"Height": 3.8,
+		"Height": 3.84,
 		"Image": "fairfield-hors-d-oeuvre.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Long Life",
-		"Width": 3.8,
-		"Height": 4.81,
+		"Width": 3.84,
+		"Height": 4.88,
 		"Image": "fairfield-long-life.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Meet Maude",
-		"Width": 4.89,
+		"Width": 5.03,
 		"Height": 3.7,
 		"Image": "fairfield-meet-maude.png"
 	},
@@ -11161,14 +11161,21 @@
 		"Brand": "Fairfield Circuitry",
 		"Name": "Randy's Revenge",
 		"Width": 4.7,
-		"Height": 3.83,
+		"Height": 3.84,
 		"Image": "fairfield-randys-revenge.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
+		"Name": "Roger That",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "fairfield-roger-that.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "Shallow Water",
 		"Width": 4.7,
-		"Height": 3.79,
+		"Height": 3.84,
 		"Image": "fairfield-shallow-water.png"
 	},
 	{
