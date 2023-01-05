@@ -19814,21 +19814,21 @@
 		"Name": "1979",
 		"Width": 4.7,
 		"Height": 3.92,
-		"Image": "mojohand-1979.png"
+		"Image": "mojo-hand-1979.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "1979 (Peach)",
 		"Width": 4.7,
 		"Height": 3.92,
-		"Image": "mojohand-1979-peach.png"
+		"Image": "mojo-hand-1979-peach.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "1979 (Graphite)",
 		"Width": 4.7,
 		"Height": 3.92,
-		"Image": "mojohand-1979-graphite.png"
+		"Image": "mojo-hand-1979-graphite.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
@@ -19975,7 +19975,7 @@
 		"Name": "Nebula IV",
 		"Width": 2.95,
 		"Height": 4.8,
-		"Image": "mojohand-nebulaiv.png"
+		"Image": "mojo-hand-nebula-iv.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
@@ -20850,7 +20850,7 @@
 		"Name": "Analog Chorus/Vibrato Deluxe",
 		"Width": 4.7,
 		"Height": 3.84,
-		"Image": "mrblack-analogchorusvibrato-dlx.png"
+		"Image": "mr-black-analog-chorus-vibrato-deluxe.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -21722,7 +21722,7 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Smartgate",
+		"Name": "Smart Gate",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "mxr-m135.png"
@@ -25764,7 +25764,7 @@
 		"Name": "XSW-D",
 		"Width": 3.22,
 		"Height": 5.12,
-		"Image": "sennheiser-xswd.png"
+		"Image": "sennheiser-xsw-d.png"
 	},
 	{
 		"Brand": "Seymour Duncan",
@@ -25932,7 +25932,7 @@
 		"Name": "Twin MkIIIS",
 		"Width": 4.88,
 		"Height": 4.09,
-		"Image": "shiftline-twin-mkiiis.png"
+		"Image": "shift-line-twin-mkiiis.png"
 	},
 	{
 		"Brand": "Shift Line",
@@ -29431,8 +29431,8 @@
 	{
 		"Brand": "Twinote",
 		"Name": "BBD Chorus",
-		"Width": 2.55906,
-		"Height": 4.72441,
+		"Width": 2.6,
+		"Height": 4.7,
 		"Image": "twinote-chorus.png"
 	},
 	{
