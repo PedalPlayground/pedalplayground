@@ -1,5 +1,26 @@
 [
 	{
+		"Brand": "Acetone Audio",
+		"Name": "Acetone S (Space Black)",
+		"Width": 17.2,
+		"Height": 6.82,
+		"Image": "AcetoneS-space_black.png"
+	},
+	{
+		"Brand": "Acetone Audio",
+		"Name": "Acetone M (Sea Blue)",
+		"Width": 17.2,
+		"Height": 12.52,
+		"Image": "AcetoneM-sea-blue.png"
+	},
+	{
+		"Brand": "Acetone Audio",
+		"Name": "Acetone L (Forest Green)",
+		"Width": 23.96,
+		"Height": 12.52,
+		"Image": "AcetoneL-forest_green.png"
+	},
+	{
 		"Brand": "Aclam",
 		"Name": "Smart Track L2 (Free)",
 		"Width": 32.7,
