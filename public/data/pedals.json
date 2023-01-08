@@ -7526,13 +7526,6 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "DOD Bifet Boost 410",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-410.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "DOD Carcosa",
 		"Width": 3.05,
 		"Height": 4.88,
@@ -7971,6 +7964,13 @@
 		"Width": 4.7,
 		"Height": 3.7,
 		"Image": "dmb-lunar-echo.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Bifet Boost 410",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-410.png"
 	},
 	{
 		"Brand": "Does It Doom",
@@ -14624,6 +14624,13 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "CSL Stereo Chorus",
+		"Width": 3,
+		"Height": 4.9,
+		"Image": "ibanez-csl.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "CS9 Stereo Chorus",
 		"Width": 3,
 		"Height": 4.9,
@@ -20080,7 +20087,7 @@
 		"Name": "Count to Five",
 		"Width": 2.68,
 		"Height": 4.95,
-		"Image": "montreal-counttofive.png"
+		"Image": "montreal-count-to-five.png"
 	},
 	{
 		"Brand": "Montreal Assembly",
@@ -25575,7 +25582,7 @@
 		"Name": "Baby Blues",
 		"Width": 2.6,
 		"Height": 4.8,
-		"Image": "rockbox-babyblues.png"
+		"Image": "rockbox-baby-blues.png"
 	},
 	{
 		"Brand": "Rockbox",
@@ -25722,7 +25729,7 @@
 		"Name": "Q:Expander",
 		"Width": 3.66,
 		"Height": 1.63,
-		"Image": "selah-qexpander.png"
+		"Image": "selah-q-expander.png"
 	},
 	{
 		"Brand": "Selah",
@@ -25750,14 +25757,14 @@
 		"Name": "Scarlett Love V2",
 		"Width": 4.3,
 		"Height": 2.5,
-		"Image": "selah-scarlettlove2.png"
+		"Image": "selah-scarlett-love-v2.png"
 	},
 	{
 		"Brand": "Selah",
 		"Name": "Scarlett Love V3",
 		"Width": 4.77,
 		"Height": 2.62,
-		"Image": "selah-scarlettelovev3.png"
+		"Image": "selah-scarlett-love-v3.png"
 	},
 	{
 		"Brand": "Sennheiser",
@@ -25995,7 +26002,7 @@
 		"Name": "GLXD 6",
 		"Width": 3.7,
 		"Height": 5.3,
-		"Image": "shure-glxd6.png"
+		"Image": "shure-glxd-6.png"
 	},
 	{
 		"Brand": "Silktone",
@@ -26009,28 +26016,28 @@
 		"Name": "Aeros",
 		"Width": 8.375,
 		"Height": 5.875,
-		"Image": "singularsound-aeros.png"
+		"Image": "singular-sound-aeros.png"
 	},
 	{
 		"Brand": "Singular Sound",
 		"Name": "BeatBuddy",
 		"Width": 3.58,
 		"Height": 4.92,
-		"Image": "singularsound-beatbuddy.png"
+		"Image": "singular-sound-beat-buddy.png"
 	},
 	{
 		"Brand": "Singular Sound",
 		"Name": "Footswitch+",
 		"Width": 5,
 		"Height": 3.5,
-		"Image": "singularsound-footswitch-plus.png"
+		"Image": "singular-sound-footswitch-plus.png"
 	},
 	{
 		"Brand": "Singular Sound",
 		"Name": "Midi Maestro",
 		"Width": 8.375,
 		"Height": 5.75,
-		"Image": "singularsound-midi-maestro.png"
+		"Image": "singular-sound-midi-maestro.png"
 	},
 	{
 		"Brand": "Sinvertek",
