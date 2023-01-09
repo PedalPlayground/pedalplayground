@@ -12860,6 +12860,13 @@
 	},
 	{
 		"Brand": "Fuzzrocious",
+		"Name": "Dark Driving V3",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "fuzzrocious-pedals-dark-driving-v3.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
 		"Name": "Electric Ocean",
 		"Width": 4.7,
 		"Height": 5.79,
@@ -12894,14 +12901,14 @@
 		"Image": "fuzzrocious-pedals-the-demon.png"
 	},
 	{
-    	"Brand": "G-LAB",
-    	"Name": "Wowee-Wah",
-    	"Width": 3.89,
-   	 	"Height": 9.84,
-    	"Image": "g-lab-wowee-wah.png"
+    "Brand": "G-LAB",
+    "Name": "Wowee-Wah",
+    "Width": 3.89,
+   	"Height": 9.84,
+    "Image": "g-lab-wowee-wah.png"
  	},
 	{
-		"Brand": "Gamechanger Audio",
+    "Brand": "Gamechanger Audio",
 		"Name": "Bigsby Pedal",
 		"Width": 4.3,
 		"Height": 8.54,
@@ -29702,73 +29709,80 @@
 		"Image": "tapestry-bloomery.png"
 	},
 	{
-		"Brand": "Tech21",
+		"Brand": "Tech 21 NYC",
+		"Name": "Bass Driver DI",
+		"Width": 5.03,
+		"Height": 3.7,
+		"Image": "tech21-bass-driver-di.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
 		"Name": "Blonde",
-		"Width": 3.7,
+		"Width": 3.89,
 		"Height": 4.7,
 		"Image": "tech21-blonde.png"
 	},
 	{
-		"Brand": "Tech21",
+		"Brand": "Tech 21 NYC",
 		"Name": "DI 2112",
-		"Width": 6.37,
-		"Height": 4,
-		"Image": "tech21-ssansamp-geddy-lee-yyz.png"
+		"Width": 6.38,
+		"Height": 3.97,
+		"Image": "tech21-di2112.png"
 	},
-	{
-		"Brand": "Tech21",
+  {
+		"Brand": "Tech 21 NYC",
 		"Name": "Flyrig 5 Plexi",
 		"Width": 12.52,
 		"Height": 3.08,
 		"Image": "tech21-flyrig-5-plexi.png"
 	},
 	{
-		"Brand": "Tech21",
+		"Brand": "Tech 21 NYC",
 		"Name": "Leeds",
-		"Width": 3.7,
+		"Width": 3.89,
 		"Height": 4.7,
 		"Image": "tech21-leeds.png"
 	},
 	{
-		"Brand": "Tech21",
+		"Brand": "Tech 21 NYC",
 		"Name": "Sansamp Classic",
 		"Width": 3.79,
 		"Height": 4.5,
 		"Image": "tech21-sansamp-classic.png"
 	},
 	{
-		"Brand": "Tech21",
+		"Brand": "Tech 21 NYC",
 		"Name": "Sansamp GT2",
 		"Width": 3.86,
 		"Height": 4.5,
 		"Image": "tech21-sansamp-gt2.png"
 	},
 	{
-		"Brand": "Tech21",
+		"Brand": "Tech 21 NYC",
 		"Name": "Sansamp Paradriver",
-		"Width": 4.5,
-		"Height": 3.6,
-		"Image": "tech21-paradrive-bass-di.png"
+		"Width": 5.03,
+		"Height": 3.7,
+		"Image": "tech21-paradriver.png"
 	},
 	{
-		"Brand": "Tech21",
+		"Brand": "Tech 21 NYC",
 		"Name": "VT Bass DI",
-		"Width": 4.5,
-		"Height": 3.6,
+		"Width": 5.03,
+		"Height": 3.7,
 		"Image": "tech21-vtbassdi.png"
 	},
 	{
-		"Brand": "Tech21",
+		"Brand": "Tech 21 NYC",
 		"Name": "Sansamp YYZ",
-		"Width": 3.7,
+		"Width": 3.89,
 		"Height": 4.7,
 		"Image": "tech21-ssansamp-geddy-lee-yyz.png"
 	},
 	{
-		"Brand": "Tech21",
+		"Brand": "Tech 21 NYC",
 		"Name": "Q\\Strip",
-		"Width": 4.5,
-		"Height": 3.5,
+		"Width": 5.03,
+		"Height": 3.7,
 		"Image": "tech21-qstrip.png"
 	},
 	{
