@@ -6848,120 +6848,148 @@
 	{
 		"Brand": "Darkglass",
 		"Name": "Adam",
-		"Width": 7.09,
-		"Height": 4.73,
+		"Width": 7.14,
+		"Height": 4.78,
 		"Image": "darkglass-adam.png"
 	},
 	{
 		"Brand": "Darkglass",
 		"Name": "Alpha Omicron",
-		"Width": 2.95,
+		"Width": 2.92,
 		"Height": 4.37,
 		"Image": "darkglass-alpha-omicron.png"
 	},
 	{
 		"Brand": "Darkglass",
 		"Name": "Alpha Omega",
-		"Width": 4.21,
+		"Width": 4.1,
 		"Height": 4.72,
 		"Image": "darkglass-alpha-omega.png"
 	},
 	{
 		"Brand": "Darkglass",
-		"Name": "Alpha Omega Ultra Ultra",
-		"Width": 4.92,
-		"Height": 3.77,
+		"Name": "Alpha Omega Ultra",
+		"Width": 4.89,
+		"Height": 3.79,
 		"Image": "darkglass-alpha-omega-ultra.png"
 	},
 	{
 		"Brand": "Darkglass",
-		"Name": "B3K",
-		"Width": 2.95,
-		"Height": 4.37,
-		"Image": "darkglass-b3k.png"
+		"Name": "Alpha Omega Φhoton",
+		"Width": 7.14,
+		"Height": 4.78,
+		"Image": "darkglass-alpha-omega-photon.png"
 	},
 	{
 		"Brand": "Darkglass",
-		"Name": "B7K",
-		"Width": 4.21,
-		"Height": 4.72,
-		"Image": "darkglass-microtubes-b7k.png"
-	},
-	{
-		"Brand": "Darkglass",
-		"Name": "B7K Ultra",
-		"Width": 4.92,
-		"Height": 3.77,
-		"Image": "darkglass-microtubes-b7k-ultra.png"
+		"Name": "Duality Fuzz DFZ",
+		"Width": 2.14,
+		"Height": 3.94,
+		"Image": "darkglass-dfz.png"
 	},
 	{
 		"Brand": "Darkglass",
 		"Name": "Element",
-		"Width": 3,
-		"Height": 4.4,
+		"Width": 2.87,
+		"Height": 4.37,
 		"Image": "darkglass-element.png"
 	},
 	{
 		"Brand": "Darkglass",
+		"Name": "Harmonic Booster",
+		"Width": 2.92,
+		"Height": 4.37,
+		"Image": "darkglass-harmonic-booster.png"
+	},
+	{
+		"Brand": "Darkglass",
 		"Name": "Hyper Luminal",
-		"Width": 3.05,
+		"Width": 2.92,
 		"Height": 4.37,
 		"Image": "darkglass-hyper-luminal.png"
 	},
 	{
 		"Brand": "Darkglass",
+		"Name": "Microtubes B1K",
+		"Width": 2.14,
+		"Height": 3.94,
+		"Image": "darkglass-b1k.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes B3K",
+		"Width": 2.92,
+		"Height": 4.37,
+		"Image": "darkglass-b3k.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes B7K",
+		"Width": 4.1,
+		"Height": 4.72,
+		"Image": "darkglass-microtubes-b7k.png"
+	},
+	{
+		"Brand": "Darkglass",
+		"Name": "Microtubes B7K Ultra",
+		"Width": 4.89,
+		"Height": 3.79,
+		"Image": "darkglass-microtubes-b7k-ultra.png"
+	},
+	{
+		"Brand": "Darkglass",
 		"Name": "Microtubes Infinity",
-		"Width": 7.08661,
-		"Height": 4.72441,
+		"Width": 7.14,
+		"Height": 4.78,
 		"Image": "darkglass-microtubes-infinity.png"
 	},
 	{
 		"Brand": "Darkglass",
 		"Name": "Microtubes X",
-		"Width": 2.95,
+		"Width": 2.92,
 		"Height": 4.37,
 		"Image": "darkglass-microtubes-x.png"
 	},
 	{
 		"Brand": "Darkglass",
+		"Name": "Microtubes X Ultra",
+		"Width": 4.89,
+		"Height": 3.79,
+		"Image": "darkglass-microtubes-x-ultra.png"
+	},
+	{
+		"Brand": "Darkglass",
 		"Name": "Microtubes X7",
-		"Width": 4.21,
+		"Width": 4.1,
 		"Height": 4.72,
 		"Image": "darkglass-microtubes-x7.png"
 	},
 	{
 		"Brand": "Darkglass",
-		"Name": "Microtubes X Ultra",
-		"Width": 4.92,
-		"Height": 3.77,
-		"Image": "darkglass-microtubes-x-ultra.png"
-	},
-	{
-		"Brand": "Darkglass",
 		"Name": "Super Symmetry",
-		"Width": 3.7,
-		"Height": 4.77,
+		"Width": 3.72,
+		"Height": 4.94,
 		"Image": "darkglass-super-symmetry.png"
 	},
 	{
 		"Brand": "Darkglass",
 		"Name": "Vintage Deluxe",
-		"Width": 4.21,
+		"Width": 4.1,
 		"Height": 4.72,
 		"Image": "darkglass-vintage-deluxe.png"
 	},
 	{
 		"Brand": "Darkglass",
 		"Name": "Vintage Microtubes",
-		"Width": 2.95,
+		"Width": 2.92,
 		"Height": 4.37,
 		"Image": "darkglass-vintage-microtubes.png"
 	},
 	{
 		"Brand": "Darkglass",
 		"Name": "Vintage Ultra",
-		"Width": 4.92,
-		"Height": 3.77,
+		"Width": 4.89,
+		"Height": 3.79,
 		"Image": "darkglass-vintage-ultra.png"
 	},
 	{
