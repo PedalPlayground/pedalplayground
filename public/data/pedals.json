@@ -15450,6 +15450,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Big Chill",
+		"Width": 5.14,
+		"Height": 3.95,
+		"Image": "jam-big-chill.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Chill",
 		"Width": 2.7,
 		"Height": 4.3,
