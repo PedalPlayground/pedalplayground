@@ -10963,6 +10963,13 @@
 	},
 	{
 		"Brand": "Fender",
+		"Name": "Blender",
+		"Width": 7.17,
+		"Height": 4.64,
+		"Image": "fender-blender.png"
+	},
+	{
+		"Brand": "Fender",
 		"Name": "Bubbler Chorus",
 		"Width": 3.95,
 		"Height": 5,
