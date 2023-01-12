@@ -21694,6 +21694,13 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "Heaven's Gate",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mrblack-heavens-gate.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "JDS-50",
 		"Width": 2.62,
 		"Height": 4.33,
@@ -30085,6 +30092,13 @@
 		"Width": 2.8,
 		"Height": 4.3,
 		"Image": "throbak-stonebender.png"
+	},
+	{
+		"Brand": "Tinsley Audio",
+		"Name": "Sir Henry",
+		"Width": 8.12,
+		"Height": 4.89,
+		"Image": "tinsley-sir-henry.png"
 	},
 	{
 		"Brand": "TONE.ELECTRONIX",
