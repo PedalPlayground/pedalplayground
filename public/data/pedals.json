@@ -18536,6 +18536,90 @@
 		"Image": "laney-black-country-boost.png"
 	},
 	{
+		"Brand": "LastGasp",
+		"Name": "88 Super Oscillo",
+		"Width": 2.81,
+		"Height": 4.53,
+		"Image": "lastgasp-88-super-oscillo-fuzz.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Angelring",
+		"Width": 2.81,
+		"Height": 4.6,
+		"Image": "lastgasp-angelring-clean-boost.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Deviltail",
+		"Width": 2.81,
+		"Height": 4.6,
+		"Image": "lastgasp-deviltail-deathtortion-distortion.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Gomorrah",
+		"Width": 2.81,
+		"Height": 4.53,
+		"Image": "lastgasp-gomorrah-subharmonic-fuzz.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Lluna",
+		"Width": 2.81,
+		"Height": 4.53,
+		"Image": "lastgasp-lluna-fuzz-voltage-dropper.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Misty Cave",
+		"Width": 4.72,
+		"Height": 3.86,
+		"Image": "lastgasp-misty-cave-resonance-echo.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Octavella",
+		"Width": 2.81,
+		"Height": 4.53,
+		"Image": "lastgasp-octavella-octave-feedback-fuzz.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Sandstorm",
+		"Width": 4.72,
+		"Height": 3.86,
+		"Image": "lastgasp-sandstorm-envelope-noise-generator.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Sooper Fuzz 46",
+		"Width": 2.81,
+		"Height": 4.53,
+		"Image": "lastgasp-sooper-fuzz-46.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Thunder Box",
+		"Width": 2.81,
+		"Height": 4.6,
+		"Image": "lastgasp-thunder-box-donsharizer-boost.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Tone Axe",
+		"Width": 2.81,
+		"Height": 4.6,
+		"Image": "lastgasp-tone-axe-frequency-divider-fuzz.png"
+	},
+	{
+		"Brand": "LastGasp",
+		"Name": "Toxic Plant",
+		"Width": 2.81,
+		"Height": 4.53,
+		"Image": "lastgasp-toxic-plant-disharmonic-distortion.png"
+	},
+	{
 		"Brand": "Latent Lemon Audio",
 		"Name": "Bass Brassmaster",
 		"Width": 6,
