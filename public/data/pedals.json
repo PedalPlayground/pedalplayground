@@ -169,18 +169,32 @@
 	},
 	{
 		"Brand": "A3 Stompbox",
-		"Name": "Custom Expression Pedal (Black)",
-		"Width": 3.24,
-		"Height": 7.08,
+		"Name": "Custom Expression (Medium)",
+		"Width": 4.04,
+		"Height": 8.86,
 		"Image": "a3-expression-black.png"
+	},
+  {
+		"Brand": "A3 Stompbox",
+		"Name": "Custom Volume (Large)",
+		"Width": 4.04,
+		"Height": 10.45,
+		"Image": "a3-volume-black.png"
 	},
 	{
 		"Brand": "A3 Stompbox",
-		"Name": "Custom Volume Pedal (Black)",
-		"Width": 3.24,
-		"Height": 8.04,
-		"Image": "a3-volume-black.png"
-	},
+		"Name": "Custom Volume (Mini)",
+		"Width": 3.15,
+		"Height": 7.64,
+		"Image": "a3-volume-mini.png"
+  },
+	{
+		"Brand": "A3 Stompbox",
+		"Name": "Custom Volume w/ TC Polytune Tuner (Mini)",
+		"Width": 3.32,
+		"Height": 7.64,
+		"Image": "a3-volume-mini-tuner.png"
+  },
 	{
 		"Brand": "A3 Stompbox",
 		"Name": "Groovim",
@@ -32486,6 +32500,27 @@
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "wat-ancient-echos.png"
+	},
+	{
+		"Brand": "Wonderful Audio Technology",
+		"Name": "Apex Distortion",
+		"Width": 2.6,
+		"Height": 4.91,
+		"Image": "wat-apex-distortion.png"
+	},
+	{
+		"Brand": "Wonderful Audio Technology",
+		"Name": "Fuzz Lands",
+		"Width": 2.6,
+		"Height": 4.91,
+		"Image": "wat-fuzz-lands.png"
+	},
+	{
+		"Brand": "Wonderful Audio Technology",
+		"Name": "Nivicola",
+		"Width": 2.6,
+		"Height": 4.91,
+		"Image": "wat-nivicola.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
