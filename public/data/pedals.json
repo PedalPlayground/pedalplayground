@@ -402,8 +402,15 @@
 		"Brand": "Aguilar",
 		"Name": "Tone Hammer Preamp/Direct Box",
 		"Width": 4.4,
-		"Height": 5.5,
+		"Height": 5.31,
 		"Image": "aguilar-tone-hammer.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Tone Hammer Preamp/Direct Box (Silver)",
+		"Width": 4.4,
+		"Height": 5.31,
+		"Image": "aguilar-tone-hammer-silver.png"
 	},
 	{
 		"Brand": "Aion FX",
@@ -8912,6 +8919,13 @@
 	},
 	{
 		"Brand": "Earthquaker",
+		"Name": "Life Pedal V3 (Silver)",
+		"Width": 5.7,
+		"Height": 4.83,
+		"Image": "earthquaker-life-pedal-v3-silver.png"
+	},
+	{
+		"Brand": "Earthquaker",
 		"Name": "Monarch",
 		"Width": 2.78,
 		"Height": 4.4,
@@ -11256,6 +11270,13 @@
 		"Image": "farmpedals-fly-agaric.png"
 	},
 	{
+		"Brand": "FEA Labs",
+		"Name": "DB-CL",
+		"Width": 3.88,
+		"Height": 4.85,
+		"Image": "fea-db-cl.png"
+	},
+	{
 		"Brand": "Fender",
 		"Name": "Acoustic Preverb",
 		"Width": 3.95,
@@ -13447,6 +13468,13 @@
 		"Image": "goodrich-volume.png"
 	},
 	{
+		"Brand": "GR Bass",
+		"Name": "Dual Pre",
+		"Width": 11.59,
+		"Height": 5.51,
+		"Image": "grbass-dual-pre.png"
+	},
+	{
 		"Brand": "Grace Design",
 		"Name": "ALiX",
 		"Width": 6.2,
@@ -15629,6 +15657,13 @@
 		"Width": 5.1,
 		"Height": 3.9,
 		"Image": "jam-ripply-fall.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Ripply Fall Bass",
+		"Width": 5.02,
+		"Height": 3.84,
+		"Image": "jam-ripply-fall-bass.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -30473,6 +30508,13 @@
 	},
 	{
 		"Brand": "Two Notes",
+		"Name": "ReVolt Bass",
+		"Width": 7.6,
+		"Height": 4.75,
+		"Image": "twonotes-revolt-bass.png"
+	},
+	{
+		"Brand": "Two Notes",
 		"Name": "Torpedo C.A.B.",
 		"Width": 7,
 		"Height": 4.97,
@@ -32769,6 +32811,13 @@
 	},
 	{
 		"Brand": "Xotic",
+		"Name": "Bass RC Booster V2",
+		"Width": 2.65,
+		"Height": 4.39,
+		"Image": "xotic-bass-rcboosterv2.png"
+	},
+	{
+		"Brand": "Xotic",
 		"Name": "EP Booster",
 		"Width": 2,
 		"Height": 3.7,
@@ -32784,8 +32833,8 @@
 	{
 		"Brand": "Xotic",
 		"Name": "RC Booster V2",
-		"Width": 2.61,
-		"Height": 4.42,
+		"Width": 2.65,
+		"Height": 4.39,
 		"Image": "xotic-rcboosterv2.png"
 	},
 	{
@@ -33196,13 +33245,6 @@
 	},
 	{
 		"Brand": "Zvex",
-		"Name": "Full of Hell Fuzz Factory",
-		"Width": 4.68,
-		"Height": 2.38,
-		"Image": "zvex-fuzz-factory-foh.png"
-	},
-	{
-		"Brand": "Zvex",
 		"Name": "Fuzz Factory",
 		"Width": 4.68,
 		"Height": 2.38,
@@ -33221,6 +33263,13 @@
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-fuzzfactory-vexter.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Fuzz Factory Vexter (Silver)",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-fuzzfactory-vexter-silver.png"
 	},
 	{
 		"Brand": "Zvex",
