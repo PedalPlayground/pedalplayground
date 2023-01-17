@@ -18326,6 +18326,13 @@
 		"Image": "kma-audio-machines-wurm2-distortion.png"
 	},
 	{
+		"Brand": "Komet",
+		"Name": "K.O.D.A.",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "komet-koda.png"
+	},
+	{
 		"Brand": "Korg",
 		"Name": "DT-10",
 		"Width": 4.09,
@@ -31758,6 +31765,13 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-lillian.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Lillian (Purple)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-lillian-purple.png"
 	},
 	{
 		"Brand": "Walrus Audio",
