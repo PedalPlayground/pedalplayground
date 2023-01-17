@@ -31845,6 +31845,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Melee",
+		"Width": 3.95,
+		"Height": 4.7,
+		"Image": "walrus-melee.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Messner",
 		"Width": 2.88,
 		"Height": 4.84,
