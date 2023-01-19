@@ -17641,6 +17641,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Parallax",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "keeley-parallax.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Phase 24",
 		"Width": 2.67,
 		"Height": 4.4,
@@ -17687,6 +17694,41 @@
 		"Width": 1.74,
 		"Height": 3.62,
 		"Image": "keeley-reddirtoverdrivemini.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Remote Switcher (Dream)",
+		"Width": 4.4,
+		"Height": 2.55,
+		"Image": "keeley-remote-switcher-dream.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Remote Switcher (Eccos)",
+		"Width": 4.4,
+		"Height": 2.55,
+		"Image": "keeley-remote-switcher-eccos.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Remote Switcher (Halo Black)",
+		"Width": 4.4,
+		"Height": 2.55,
+		"Image": "keeley-remote-switcher-halo-black.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Remote Switcher (Halo Red)",
+		"Width": 4.4,
+		"Height": 2.55,
+		"Image": "keeley-remote-switcher-halo-red.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Remote Switcher (Hydra)",
+		"Width": 4.4,
+		"Height": 2.55,
+		"Image": "keeley-remote-switcher-hydra.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -21152,6 +21194,13 @@
 		"Width": 1.67,
 		"Height": 3.75,
 		"Image": "mooer-flex-boost.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Free Step",
+		"Width": 2.96,
+		"Height": 6.08,
+		"Image": "mooer-free-step.png"
 	},
 	{
 		"Brand": "Mooer",
