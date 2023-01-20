@@ -8470,6 +8470,13 @@
 		"Image": "dunlop-mini-535q.png"
 	},
 	{
+		"Brand": "Dunlop",
+		"Name": "Octavio JH-OC1",
+		"Width": 3.54,
+		"Height": 7.05,
+		"Image": "dunlop-jhoc1.png"
+	},
+	{
     "Brand": "Dunlop",
     "Name": "Rotovibe",
 		"Width": 4,
@@ -11261,6 +11268,13 @@
 		"Width": 4.4,
 		"Height": 2.47,
 		"Image": "fairfield-unpleasant-surprise.png"
+	},
+	{
+		"Brand": "Fame Fernfeld",
+		"Name": "7 Band Equalizer",
+		"Width": 1.77,
+		"Height": 3.75,
+		"Image": "fame-fernfeld-7-band-eq.png"
 	},
 	{
 		"Brand": "Farm Pedals",
