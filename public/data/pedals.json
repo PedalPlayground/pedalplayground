@@ -19842,7 +19842,7 @@
 		"Name": "BMP-2",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-bmp2.png"
+		"Image": "mojo-hand-bmp-2.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
@@ -19870,7 +19870,7 @@
 		"Name": "Clarity",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "mojohand-clarity.png"
+		"Image": "mojo-hand-clarity.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
@@ -28897,7 +28897,7 @@
 		"Image": "tech21-leeds.png"
 	},
 	{
-		"Brand": "Tech21",
+		"Brand": "Tech 21 NYC",
 		"Name": "Sansamp Bass Driver Programmable",
 		"Width": 7.25,
 		"Height": 5.25,
@@ -29767,8 +29767,8 @@
 	{
 		"Brand": "VFE",
 		"Name": "Klein Bottle 2022",
-		"Width": 2.59843,
-		"Height": 4.37008,
+		"Width": 5.625,
+		"Height": 4.63,
 		"Image": "vfe-klein-bottle-2022.png"
 	},
 	{
