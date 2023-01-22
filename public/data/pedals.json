@@ -2654,6 +2654,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "Dual-Phase",
+		"Width": 7.87,
+		"Height": 6.87,
+		"Image": "behringer-dual-phase.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "EQ700 Graphic Equalizer",
 		"Width": 2.76,
 		"Height": 4.84,
