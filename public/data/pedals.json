@@ -18376,6 +18376,13 @@
 	},
 	{
 		"Brand": "LPD",
+		"Name": "Eighty7 (Black)",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "lpd-eighty7-black.png"
+	},
+	{
+		"Brand": "LPD",
 		"Name": "Eighty7 Deluxe",
 		"Width": 4.7,
 		"Height": 3.86,
@@ -24119,14 +24126,14 @@
 		"Name": "G-2",
 		"Width": 4.8,
 		"Height": 6.73,
-		"Image": "petecornish-g2.png"
+		"Image": "pete-cornish-g-2.png"
 	},
 	{
 		"Brand": "Pete Cornish",
 		"Name": "P-1",
 		"Width": 4.8,
 		"Height": 6.73,
-		"Image": "petecornish-p1.png"
+		"Image": "pete-cornish-p-1.png"
 	},
 	{
 		"Brand": "Pete Cornish",
@@ -24137,10 +24144,10 @@
 	},
 	{
 		"Brand": "Pete Cornish",
-		"Name": "St-2",
+		"Name": "ST-2",
 		"Width": 4.8,
 		"Height": 6.73,
-		"Image": "petecornish-st2.png"
+		"Image": "pete-cornish-st-2.png"
 	},
 	{
 		"Brand": "Peterson",
@@ -26205,21 +26212,21 @@
 		"Name": "Hibrid Fuzz Driver",
 		"Width": 2.75,
 		"Height": 4.4,
-		"Image": "skreddy-hibridfuzzdriver.png"
+		"Image": "skreddy-hibrid-fuzz-driver.png"
 	},
 	{
 		"Brand": "Skreddy",
 		"Name": "Little Miss Sunshine",
 		"Width": 2.75,
 		"Height": 4.4,
-		"Image": "skreddy-littlemisssunshine.png"
+		"Image": "skreddy-little-miss-sunshine.png"
 	},
 	{
 		"Brand": "Skreddy",
 		"Name": "Lunar Module",
 		"Width": 2.75,
 		"Height": 4.3,
-		"Image": "skreddy-lunarmodule.png"
+		"Image": "skreddy-lunar-module.png"
 	},
 	{
 		"Brand": "Skreddy",
@@ -26247,7 +26254,7 @@
 		"Name": "Rust Rod",
 		"Width": 2.75,
 		"Height": 4.4,
-		"Image": "skreddy-rustrod.png"
+		"Image": "skreddy-rust-rod.png"
 	},
 	{
 		"Brand": "Skreddy",
@@ -26268,14 +26275,14 @@
 		"Name": "Fuzz Pedal",
 		"Width": 3.74,
 		"Height": 4.85,
-		"Image": "smfuzz-fuzz.png"
+		"Image": "sm-fuzz-fuzz.png"
 	},
 	{
 		"Brand": "SM Fuzz",
 		"Name": "Octave Fuzz Pedal",
 		"Width": 4.7,
 		"Height": 3.83,
-		"Image": "smfuzz-octave-fuzz.png"
+		"Image": "sm-fuzz-octave-fuzz.png"
 	},
 	{
 		"Brand": "Snouse Electronics",
