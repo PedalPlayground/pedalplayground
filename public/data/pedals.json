@@ -181,7 +181,7 @@
 		"Height": 8.86,
 		"Image": "a3-expression-black.png"
 	},
-  {
+	{
 		"Brand": "A3 Stompbox",
 		"Name": "Custom Volume (Large)",
 		"Width": 4.04,
@@ -194,14 +194,14 @@
 		"Width": 3.15,
 		"Height": 7.64,
 		"Image": "a3-volume-mini.png"
-  },
+	},
 	{
 		"Brand": "A3 Stompbox",
 		"Name": "Custom Volume w/ TC Polytune Tuner (Mini)",
 		"Width": 3.32,
 		"Height": 7.64,
 		"Image": "a3-volume-mini-tuner.png"
-  },
+	},
 	{
 		"Brand": "A3 Stompbox",
 		"Name": "Groovim",
@@ -3060,10 +3060,10 @@
 	},
 	{
 		"Brand": "Black Arts Toneworks",
-		"Name": "Pharoah",
+		"Name": "Pharaoh",
 		"Width": 3.7,
 		"Height": 4.97,
-		"Image": "blackarts-pharoah.png"
+		"Image": "black-arts-pharaoh.png"
 	},
 	{
 		"Brand": "Black Arts Toneworks",
@@ -3290,7 +3290,7 @@
 		"Image": "blammo-faux-tone-machine.png"
 	},
 	{
-  	"Brand": "BLAMMO! Electronics",
+		"Brand": "BLAMMO! Electronics",
 		"Name": "Fuzz Detonator",
 		"Width": 3.7,
 		"Height": 4.92,
@@ -8701,8 +8701,8 @@
 		"Image": "dunlop-jhoc1.png"
 	},
 	{
-    "Brand": "Dunlop",
-    "Name": "Rotovibe",
+		"Brand": "Dunlop",
+		"Name": "Rotovibe",
 		"Width": 4,
 	 	"Height": 10,
 		"Image": "dunlop-jd4s.png"
@@ -13272,7 +13272,7 @@
 		"Image": "g-lab-wowee-wah.png"
  	},
 	{
-    "Brand": "Gamechanger Audio",
+		"Brand": "Gamechanger Audio",
 		"Name": "Bigsby Pedal",
 		"Width": 4.3,
 		"Height": 8.54,
@@ -16777,8 +16777,8 @@
 		"Width": 3.42,
 		"Height": 4.645669,
 		"Image": "joyo-american-sound.png"
-  },
-  {
+	},
+	{
 		"Name": "D-Seed",
 		"Width": 3.92,
 		"Height": 4.13,
@@ -26541,8 +26541,8 @@
 		"Width": 2.77,
 		"Height": 4.5,
 		"Image": "retro-sonic-preamp.png"
-  },
-  {
+	},
+	{
 		"Brand": "Redbeard Effects",
 		"Name": "Angry Rhubarb MkII",
 		"Width": 2.75,
@@ -30428,7 +30428,7 @@
 		"Height": 3.97,
 		"Image": "tech21-di2112.png"
 	},
-  {
+	{
 		"Brand": "Tech 21 NYC",
 		"Name": "Flyrig 5 Plexi",
 		"Width": 12.52,
