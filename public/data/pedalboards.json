@@ -78,6 +78,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "BCB-60",
+		"Width": 26.44,
+		"Height": 14.96,
+		"Image": "boss-bcb-60.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "BCB-90X",
 		"Width": 26.8,
 		"Height": 15.125,
@@ -245,6 +252,27 @@
 		"Image": "gator-alum-small.png"
 	},
 	{
+		"Brand": "Gator",
+		"Name": "G-Tour Extra Large",
+		"Width": 36,
+		"Height": 19,
+		"Image": "gator-gtour-xlarge.png"
+	},
+	{
+		"Brand": "Gator",
+		"Name": "G-Tour Large",
+		"Width": 26,
+		"Height": 13,
+		"Image": "gator-gtour-large.png"
+	},
+	{
+		"Brand": "Gator",
+		"Name": "G-Tour Small",
+		"Width": 19,
+		"Height": 13,
+		"Image": "gator-gtour-small.png"
+	},
+	{
 		"Brand": "Ghost Fire",
 		"Name": "Little 20",
 		"Width": 20,
@@ -257,6 +285,13 @@
 		"Width": 13.8,
 		"Height": 11,
 		"Image": "gokko-medium.png"
+	},
+	{
+		"Brand": "Holeyboard",
+		"Name": "Mini",
+		"Width": 13,
+		"Height": 7.75,
+		"Image": "holeyboard-mini.png"
 	},
 	{
 		"Brand": "Mono",
