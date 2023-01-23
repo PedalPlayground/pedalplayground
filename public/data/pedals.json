@@ -28751,6 +28751,20 @@
 	},
 	{
 		"Brand": "Supro",
+		"Name": "SF1 Footswitch",
+		"Width": 2.33,
+		"Height": 4.61,
+		"Image": "supro-sf1.png"
+	},
+	{
+		"Brand": "Supro",
+		"Name": "SF2 Footswitch",
+		"Width": 4.4,
+		"Height": 2.55,
+		"Image": "supro-sf2.png"
+	},
+	{
+		"Brand": "Supro",
 		"Name": "Tremolo",
 		"Width": 2.65,
 		"Height": 4.9,
