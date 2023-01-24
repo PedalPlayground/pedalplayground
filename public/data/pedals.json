@@ -13574,6 +13574,13 @@
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Black Mountain Drive",
+		"Width": 2.62,
+		"Height": 4.4,
+		"Image": "greer-black-mountain-drive.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Black Tiger",
 		"Width": 2.84,
 		"Height": 4.9,
@@ -14527,9 +14534,16 @@
 	{
 		"Brand": "Hotone",
 		"Name": "Ampero II Stomp",
-		"Width": 7.28346,
-		"Height": 5.70866,
+		"Width": 7.28,
+		"Height": 5.58,
 		"Image": "hotone-ampero-ii-stomp.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Ampero II Stomp (LE)",
+		"Width": 7.28,
+		"Height": 5.58,
+		"Image": "hotone-ampero-ii-stomp-le.png"
 	},
 	{
 		"Brand": "Hotone",
