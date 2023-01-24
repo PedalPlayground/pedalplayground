@@ -20077,6 +20077,13 @@
 	},
 	{
 		"Brand": "Mask Audio Electronics",
+		"Name": "Cascader",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "mask-black-cascader.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
 		"Name": "Civil Math",
 		"Width": 3.7,
 		"Height": 4.88,
@@ -20672,7 +20679,14 @@
 	},
 	{
 		"Brand": "Mission",
-		"Name": "EP1",
+		"Name": "EP1 (Black)",
+		"Width": 3.57,
+		"Height": 9,
+		"Image": "mission-ep1-black.png"
+	},
+	{
+		"Brand": "Mission",
+		"Name": "EP1 (White)",
 		"Width": 3.57,
 		"Height": 9,
 		"Image": "mission-ep1.png"
@@ -20680,16 +20694,30 @@
 	{
 		"Brand": "Mission",
 		"Name": "EP1-KP",
-		"Width": 4,
+		"Width": 4.01,
 		"Height": 10,
 		"Image": "mission-ep1-kp.png"
 	},
 	{
 		"Brand": "Mission",
 		"Name": "EP1-L6",
-		"Width": 4,
+		"Width": 3.97,
 		"Height": 10,
 		"Image": "mission-ep1-l6.png"
+	},
+	{
+		"Brand": "Mission",
+		"Name": "EP-25K (Black)",
+		"Width": 3.57,
+		"Height": 9,
+		"Image": "mission-ep1-black.png"
+	},
+	{
+		"Brand": "Mission",
+		"Name": "EP-25K (White)",
+		"Width": 3.57,
+		"Height": 9,
+		"Image": "mission-ep1.png"
 	},
 	{
 		"Brand": "Mission",
@@ -20715,14 +20743,7 @@
 	{
 		"Brand": "Mission",
 		"Name": "VM-PRO",
-		"Width": 4,
-		"Height": 10,
-		"Image": "mission-vp1.png"
-	},
-	{
-		"Brand": "Mission",
-		"Name": "VM-PRO",
-		"Width": 4,
+		"Width": 4.01,
 		"Height": 10,
 		"Image": "mission-vp1.png"
 	},
