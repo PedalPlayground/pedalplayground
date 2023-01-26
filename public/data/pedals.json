@@ -3796,15 +3796,15 @@
 	{
 		"Brand": "BOSS",
 		"Name": "ES-5 Effects Switching System",
-		"Width": 13.3125,
-		"Height": 3.875,
+		"Width": 13.31,
+		"Height": 3.66,
 		"Image": "boss-es5.png"
 	},
 	{
 		"Brand": "BOSS",
 		"Name": "ES-8 Effects Switching System",
-		"Width": 17.3125,
-		"Height": 5.4375,
+		"Width": 17.31,
+		"Height": 5.29,
 		"Image": "boss-es8.png"
 	},
 	{
@@ -4076,8 +4076,8 @@
 	{
 		"Brand": "BOSS",
 		"Name": "MS-3 Multieffects Switcher",
-		"Width": 10.875,
-		"Height": 3.875,
+		"Width": 10.88,
+		"Height": 3.75,
 		"Image": "boss-ms3.png"
 	},
 	{
