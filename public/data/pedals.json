@@ -16970,23 +16970,30 @@
 	{
 		"Brand": "Joyo",
 		"Name": "PXL-4",
-		"Width": 11.14,
-		"Height": 3.22835,
+		"Width": 11.8,
+		"Height": 2.72,
 		"Image": "joyo-pxl4.png"
 	},
 	{
 		"Brand": "Joyo",
 		"Name": "PXL-8",
-		"Width": 17.35,
-		"Height": 2.725,
+		"Width": 18.09,
+		"Height": 2.72,
 		"Image": "joyo-pxl8.png"
 	},
 	{
 		"Brand": "Joyo",
-		"Name": "PXL-LIVE",
-		"Width": 21.29921,
-		"Height": 2.637795,
+		"Name": "PXL-Live",
+		"Width": 21.47,
+		"Height": 2.72,
 		"Image": "joyo-pxl-live.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "PXL-Pro",
+		"Width": 21.47,
+		"Height": 2.72,
+		"Image": "joyo-pxl-pro.png"
 	},
 	{
 		"Brand": "Joyo",
