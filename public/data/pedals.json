@@ -2899,6 +2899,13 @@
 	},
 	{
 		"Brand": "Big Ear Pedals",
+		"Name": "Whac-A",
+		"Width": 3.9,
+		"Height": 4.8,
+		"Image": "bigear-whac-a.png"
+	},
+	{
+		"Brand": "Big Ear Pedals",
 		"Name": "Wood Cutter",
 		"Width": 2.75,
 		"Height": 4.69,
@@ -6690,6 +6697,13 @@
 		"Width": 2.4,
 		"Height": 4.71,
 		"Image": "cusack-screamer.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Screamer v3",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "cusack-screamer-v3.png"
 	},
 	{
 		"Brand": "Cusack Music",
