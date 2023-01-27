@@ -33215,12 +33215,19 @@
 		"Height": 5.07874,
 		"Image": "yamaha-ch01.png"
   	},
-  	{
+  {
 		"Brand": "Yamaha",
 		"Name": "FL-10MII Flanger",
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "yamaha-fl-10mii.png"
+	},
+	{
+		"Brand": "Yamaha",
+		"Name": "UB-99 MagicStomp",
+		"Width": 6.46,
+		"Height": 7.17,
+		"Image": "yamaha-ub99.png"
 	},
 	{
 		"Brand": "Zander Circuitry",
