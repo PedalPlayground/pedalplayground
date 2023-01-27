@@ -3136,14 +3136,14 @@
 		"Image": "blackstone-mosfet-overdrive.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Bad Bluff",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-bad-bluff.png"
 	},
 	{
-  		"Brand": "BLAMMO! Electronics",
+  	"Brand": "BLAMMO! Electronics",
 		"Name": "Blues Blaster",
 		"Width": 2.6,
 		"Height": 5,
@@ -3260,6 +3260,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-voltage-booster.png"
+	},
+	{
+  	"Brand": "BLAMMO! Electronics",
+		"Name": "Voltage Driver",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-voltage-driver.png"
 	},
 	{
   	"Brand": "BLAMMO! Electronics",
@@ -14803,6 +14810,13 @@
 		"Width": 1.96,
 		"Height": 3.65,
 		"Image": "ibanez-chorus-mini.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "CS505 Stereo Chorus",
+		"Width": 2.9,
+		"Height": 4.89,
+		"Image": "ibanez-cs505.png"
 	},
 	{
 		"Brand": "Ibanez",
