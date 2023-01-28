@@ -12363,10 +12363,10 @@
 	},
 	{
 		"Brand": "FTelettronica",
-		"Name": "Bass Fuckin’ Drive",
+		"Name": "Bass ######’ Drive",
 		"Width": 5.07874,
 		"Height": 3.89764,
-		"Image": "ftelettronica-bass-fuckin-drive.png"
+		"Image": "ftelettronica-bass-######-drive.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -23899,7 +23899,7 @@
 	},
 	{
 		"Brand": "Okko FX",
-		"Name": "Basstard",
+		"Name": "########",
 		"Width": 4.05,
 		"Height": 4.81,
 		"Image": "okko-basstard.png"
@@ -25467,7 +25467,7 @@
 	},
 	{
 		"Brand": "Pine-Box Customs",
-		"Name": "Free Shit",
+		"Name": "Free ####",
 		"Width": 3.7,
 		"Height": 4.92,
 		"Image": "pbc-free-shit.png"
@@ -27007,7 +27007,7 @@
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
-		"Name": "Fuck Overdrive",
+		"Name": "#### Overdrive",
 		"Width": 3.7,
 		"Height": 4.97,
 		"Image": "smallsound-fuck.png"
@@ -28140,6 +28140,13 @@
 		"Image": "spruce-effects-the-gale.png"
 	},
 	{
+		"Brand": "Stomp Audio Labs",
+		"Name": "Octopus",
+		"Width": 2.68,
+		"Height": 4.41,
+		"Image": "sal-octopus-399.png"
+	},
+	{	
 		"Brand": "Stone Deaf FX",
 		"Name": "EP-1",
 		"Width": 4.66,
@@ -32825,7 +32832,7 @@
 	},
 	{
 		"Brand": "Wren And Cuff",
-		"Name": "Phat Phuck B",
+		"Name": "Phat ##### B",
 		"Width": 2.64,
 		"Height": 4.42,
 		"Image": "wrenandcuff-phatphuckb.png"
@@ -32839,7 +32846,7 @@
 	},
 	{
 		"Brand": "Wren And Cuff",
-		"Name": "Suppa Phat Phuk",
+		"Name": "Suppa Phat ####",
 		"Width": 2.64,
 		"Height": 4.64,
 		"Image": "wrenandcuff-suppa-phat-phuk.png"
