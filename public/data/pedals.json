@@ -6455,6 +6455,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Splash MK3 Stereo",
+		"Width": 5.7,
+		"Height": 4.84,
+		"Image": "ctc-splash-mk3-stereo.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "Stardust",
 		"Width": 2.58,
 		"Height": 4.33,
@@ -30613,17 +30620,136 @@
 	},
 	{
 		"Brand": "Tsakalis",
-		"Name": "AudioWorks Six",
-		"Width": 2.34,
+		"Name": "Crown",
+		"Width": 2.62,
 		"Height": 4.41,
-		"Image": "tsakalis-audioworks-six.png"
+		"Image": "tsakalis-crown.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Experience",
+		"Width": 3.95,
+		"Height": 4.78,
+		"Image": "tsakalis-experience.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Galactic",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "tsakalis-galactic.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Gravity Spot",
+		"Width": 7.78,
+		"Height": 4.78,
+		"Image": "tsakalis-gravity-spot.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Hubble",
+		"Width": 1.88,
+		"Height": 3.7,
+		"Image": "tsakalis-hubble.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Molecular Boost",
+		"Width": 1.88,
+		"Height": 3.79,
+		"Image": "tsakalis-molecular-boost.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "MultiCab 4",
+		"Width": 5.1,
+		"Height": 3.7,
+		"Image": "tsakalis-multicab-4.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "MultiCab MK2",
+		"Width": 2.34,
+		"Height": 4.79,
+		"Image": "tsakalis-multicab-mk2.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "MultiCab MK3.5",
+		"Width": 5.1,
+		"Height": 3.7,
+		"Image": "tsakalis-multicab-mk35.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Nerve MK2",
+		"Width": 3.95,
+		"Height": 4.78,
+		"Image": "tsakalis-nerve-mk2.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Ocean V2",
+		"Width": 2.77,
+		"Height": 4.41,
+		"Image": "tsakalis-ocean-v2.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Phonkify",
+		"Width": 4.41,
+		"Height": 2.5,
+		"Image": "tsakalis-phonkify.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Riff Raff MK2",
+		"Width": 5.07,
+		"Height": 3.78,
+		"Image": "tsakalis-riff-raff-mk2.png"
 	},
 	{
 		"Brand": "Tsakalis",
 		"Name": "Room #40",
-		"Width": 2.87402,
-		"Height": 4.84252,
+		"Width": 2.9,
+		"Height": 4.84,
 		"Image": "tsakalis-room40.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Six",
+		"Width": 2.64,
+		"Height": 4.41,
+		"Image": "tsakalis-six.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Six MA1S",
+		"Width": 2.64,
+		"Height": 4.41,
+		"Image": "tsakalis-six-ma1s.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Ti.Lay",
+		"Width": 2.62,
+		"Height": 4.41,
+		"Image": "tsakalis-tilay.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Tremmatic",
+		"Width": 2.72,
+		"Height": 4.41,
+		"Image": "tsakalis-tremmatic.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Zipper MK2",
+		"Width": 2.62,
+		"Height": 4.41,
+		"Image": "tsakalis-zipper-mk2.png"
 	},
 	{
 		"Brand": "Tube Works",
