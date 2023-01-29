@@ -21849,8 +21849,8 @@
 	{
 		"Brand": "Mosky",
 		"Name": "Dual Switch (Jinx)",
-		"Width": 1.68,
-		"Height": 3.7,
+		"Width": 3.7,
+		"Height": 1.68,
 		"Image": "mosky-dual-switch-jinx.png"
 	},
 	{
@@ -32706,45 +32706,115 @@
 	},
 	{
 		"Brand": "Weehbo",
+		"Name": "Bastard",
+		"Width": 2.67,
+		"Height": 4.41,
+		"Image": "weehbo-bastard.png"
+	},
+	{
+		"Brand": "Weehbo",
 		"Name": "Dumbledore",
 		"Width": 4.72,
-		"Height": 3.74,
+		"Height": 3.91,
 		"Image": "weehbo-dumbledore.png"
 	},
 	{
 		"Brand": "Weehbo",
 		"Name": "Helldrive",
 		"Width": 4.72,
-		"Height": 3.74,
+		"Height": 3.91,
 		"Image": "weehbo-helldrive.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "Hellfire",
+		"Width": 2.67,
+		"Height": 4.41,
+		"Image": "weehbo-hellfire.png"
 	},
 	{
 		"Brand": "Weehbo",
 		"Name": "JCM Drive",
 		"Width": 4.72,
-		"Height": 3.74,
+		"Height": 3.91,
 		"Image": "weehbo-jcmdrive.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "JCM Drive LTD",
+		"Width": 4.72,
+		"Height": 3.91,
+		"Image": "weehbo-jcmdrive-ltd.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "JMP Drive",
+		"Width": 2.67,
+		"Height": 4.41,
+		"Image": "weehbo-jmp-drive.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "JTM Drive",
+		"Width": 2.67,
+		"Height": 4.41,
+		"Image": "weehbo-jtm-drive.png"
 	},
 	{
 		"Brand": "Weehbo",
 		"Name": "JVM Drive",
 		"Width": 4.72,
-		"Height": 3.74,
+		"Height": 3.91,
 		"Image": "weehbo-jvmdrive.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "JVM Drive (Black)",
+		"Width": 4.72,
+		"Height": 3.91,
+		"Image": "weehbo-jvmdrive-black.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "Mastiff Distortion",
+		"Width": 2.67,
+		"Height": 4.41,
+		"Image": "weehbo-mastiff-distortion.png"
 	},
 	{
 		"Brand": "Weehbo",
 		"Name": "Morbid Drive",
 		"Width": 4.72,
-		"Height": 3.74,
+		"Height": 3.91,
 		"Image": "weehbo-morbiddrive.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "Plexface",
+		"Width": 4.72,
+		"Height": 3.91,
+		"Image": "weehbo-plexface.png"
 	},
 	{
 		"Brand": "Weehbo",
 		"Name": "Plexdrive",
 		"Width": 4.72,
-		"Height": 3.74,
+		"Height": 3.91,
 		"Image": "weehbo-plexidrive.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "Slo Drive",
+		"Width": 4.72,
+		"Height": 3.91,
+		"Image": "weehbo-slo-drive.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "Tackleberry",
+		"Width": 2.55,
+		"Height": 4.87,
+		"Image": "weehbo-tackleberry.png"
 	},
 	{
 		"Brand": "Wonderful Audio Technology",
