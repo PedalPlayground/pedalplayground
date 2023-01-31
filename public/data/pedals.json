@@ -32294,8 +32294,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Belle",
-		"Width": 1.82,
-		"Height": 3.64,
+		"Width": 1.85,
+		"Height": 3.7,
 		"Image": "wampler-belle.png"
 	},
 	{
@@ -32315,8 +32315,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "dB+",
-		"Width": 1.78,
-		"Height": 3.64,
+		"Width": 1.81,
+		"Height": 3.7,
 		"Image": "wampler-db.png"
 	},
 	{
@@ -32346,13 +32346,6 @@
 		"Width": 2.5,
 		"Height": 4.81,
 		"Image": "wampler-ego.png"
-	},
-	{
-		"Brand": "Wampler",
-		"Name": "Ego Mini",
-		"Width": 1.63,
-		"Height": 3.5,
-		"Image": "wampler-ego-mini.png"
 	},
 	{
 		"Brand": "Wampler",
@@ -32420,22 +32413,22 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Mini Ego",
-		"Width": 1.78,
-		"Height": 3.64,
+		"Width": 1.81,
+		"Height": 3.7,
 		"Image": "wampler-miniego.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Mini Faux Spring Reverb",
-		"Width": 1.78,
-		"Height": 3.64,
+		"Width": 1.81,
+		"Height": 3.7,
 		"Image": "wampler-minifaux.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Moxie",
-		"Width": 1.82,
-		"Height": 3.64,
+		"Width": 1.85,
+		"Height": 3.7,
 		"Image": "wampler-moxie.png"
 	},
 	{
@@ -32511,15 +32504,15 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Plexi-Drive Mini",
-		"Width": 1.78,
-		"Height": 3.64,
+		"Width": 1.81,
+		"Height": 3.7,
 		"Image": "wampler-plexidrive-mini.png"
 	},
 	{
 		"Brand": "Wampler",
 		"Name": "Ratsbane",
-		"Width": 1.78,
-		"Height": 3.64,
+		"Width": 1.81,
+		"Height": 3.7,
 		"Image": "wampler-ratsbane.png"
 	},
 	{
@@ -32567,8 +32560,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Tumnus",
-		"Width": 1.78,
-		"Height": 3.64,
+		"Width": 1.81,
+		"Height": 3.7,
 		"Image": "wampler-tumnus.png"
 	},
 	{
@@ -32654,6 +32647,13 @@
 		"Width": 3.26,
 		"Height": 5.04,
 		"Image": "wayhuge-echopuss.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Fat Sandwich",
+		"Width": 3.84,
+		"Height": 5.04,
+		"Image": "wayhuge-fat-sandwich.png"
 	},
 	{
 		"Brand": "Way Huge",
