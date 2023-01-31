@@ -9143,6 +9143,13 @@
 	},
 	{
 		"Brand": "Earthquaker",
+		"Name": "Special Cranker (Pink)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-special-cranker-pink.png"
+	},
+	{
+		"Brand": "Earthquaker",
 		"Name": "Special Cranker (Purple Sparkle)",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -27690,6 +27697,13 @@
 		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "solidgoldfx-stutter-lite.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Stutterbox",
+		"Width": 4.84,
+		"Height": 3.93,
+		"Image": "solidgoldfx-stutterbox.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
