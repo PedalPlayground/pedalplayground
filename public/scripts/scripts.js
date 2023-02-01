@@ -93,6 +93,12 @@ var
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
 
+			map: function(callback) {
+				return this.pushStack(jQuery.map(this, function(elem, i) {
+					return callback.call(elem, i, elem);
+				}));
+			},
+
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
 		return new jQuery.fn.init( selector, context );
@@ -4337,6 +4343,24 @@ jQuery.fn.extend( {
 			} );
 		}, null, value, arguments.length > 1, null, true );
 	},
+					special = jQuery.event.special[type] || {};
+					type = (selector ? special.delegateType : special.bindType) || type;
+					handlers = events[type] || [];
+					tmp = tmp[2] && new RegExp("(^|\\.)" + namespaces.join("\\.(?:.*\\.|)") + "(\\.|$)");
+
+					// Remove matching events
+					origCount = j = handlers.length;
+					while (j--) {
+						handleObj = handlers[j];
+
+						if (
+							(mappedTypes || origType === handleObj.origType) &&
+							(!handler || handler.guid === handleObj.guid) &&
+							(!tmp || tmp.test(handleObj.namespace)) &&
+							(!selector || selector === handleObj.selector ||
+							selector === "**" && handleObj.selector) 
+						) {
+							handlers.splice(j, 1);
 
 	removeData: function( key ) {
 		return this.each( function() {
