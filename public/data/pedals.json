@@ -9529,7 +9529,7 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "2020 Tuner",
-		"Width": 1.79,
+		"Width": 1.8,
 		"Height": 3.63,
 		"Image": "ehx-2020-tuner.png"
 	},
@@ -9718,8 +9718,8 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Cntl Knob",
-		"Width": 1.75,
-		"Height": 3.63,
+		"Width": 1.76,
+		"Height": 3.65,
 		"Image": "ehx-cntl-knob.png"
 	},
 	{
@@ -9921,8 +9921,8 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Headphone Amp",
-		"Width": 1.41,
-		"Height": 3.62,
+		"Width": 1.42,
+		"Height": 3.65,
 		"Image": "ehx-headphone-amp.png"
 	},
 	{
@@ -10379,6 +10379,13 @@
 		"Width": 2.82,
 		"Height": 4.5,
 		"Image": "ehx-signal-pad.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Slap-Back Echo",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-slap-back-echo.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -28369,6 +28376,13 @@
 		"Width": 4,
 		"Height": 4.55,
 		"Image": "strymon-brig.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Cloudburst",
+		"Width": 2.83,
+		"Height": 4.53,
+		"Image": "strymon-cloudburst.png"
 	},
 	{
 		"Brand": "Strymon",
