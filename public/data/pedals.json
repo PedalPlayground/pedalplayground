@@ -3431,6 +3431,13 @@
 	},
 	{
 		"Brand": "Bondi Effects",
+		"Name": "Del Mar MK2",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "bondi-del-mar-mk2.png"
+	},
+	{
+		"Brand": "Bondi Effects",
 		"Name": "Sick As",
 		"Width": 4.7,
 		"Height": 3.81,
@@ -18048,9 +18055,23 @@
 	{
 		"Brand": "KSR",
 		"Name": "Eros",
-		"Width": 2.37,
-		"Height": 4.6,
+		"Width": 2.6,
+		"Height": 5.01,
 		"Image": "ksr-eros.png"
+	},
+	{
+		"Brand": "KSR",
+		"Name": "EX5",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "ksr-ex5.png"
+	},
+	{
+		"Brand": "KSR",
+		"Name": "Hera",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "ksr-hera.png"
 	},
 	{
 		"Brand": "KSR",
