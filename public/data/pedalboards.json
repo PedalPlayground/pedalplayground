@@ -728,6 +728,20 @@
 		"Image": "pedaltrain-terra42.png"
 	},
 	{
+		"Brand": "Pivotal",
+		"Name": "X26 Lower",
+		"Width": 28.35,
+		"Height": 15.65,
+		"Image": "pivotal-x26-lower.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "X26 Upper (Single Cutaway)",
+		"Width": 26.25,
+		"Height": 13.25,
+		"Image": "pivotal-x26-upper-single-cutaway.png"
+	},
+	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Cinque 5.2",
 		"Width": 24.5,
