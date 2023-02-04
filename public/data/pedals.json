@@ -8338,6 +8338,13 @@
 	},
 	{
 		"Brand": "DSM & Humboldt",
+		"Name": "Black Clouds",
+		"Width": 3.74,
+		"Height": 5.06,
+		"Image": "dsm-black-clouds.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
 		"Name": "Clearcomp 1078",
 		"Width": 2.94,
 		"Height": 4.72,
