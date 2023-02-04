@@ -9717,6 +9717,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Chill Switch",
+		"Width": 2.82,
+		"Height": 4.5,
+		"Image": "ehx-chill-switch.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Cntl Knob",
 		"Width": 1.76,
 		"Height": 3.65,
@@ -33557,6 +33564,13 @@
 		"Width": 2.64,
 		"Height": 5.1,
 		"Image": "zander-terrafirma.png"
+	},
+	{
+		"Brand": "ZCat Pedals",
+		"Name": "Hold-Reverb",
+		"Width": 4.71,
+		"Height": 2.38,
+		"Image": "zcat-hold-reverb.png"
 	},
 	{
 		"Brand": "Zeppelin Design Labs",
