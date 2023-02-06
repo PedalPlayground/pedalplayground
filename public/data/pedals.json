@@ -7343,6 +7343,13 @@
 		"Image": "decibelics-golden-royale.png"
 	},
 	{
+		"Brand": "Deepspace Devices",
+		"Name": "Red Ghost",
+		"Width": 2.9,
+		"Height": 4.8,
+		"Image": "deepspace-red-ghost.png"
+	},
+	{
 		"Brand": "Demedash",
 		"Name": "112+",
 		"Width": 2.5,
