@@ -11978,6 +11978,13 @@
 	},
 	{
 		"Brand": "Fortin",
+		"Name": "Zuul+",
+		"Width": 2.47,
+		"Height": 4.51,
+		"Image": "fortin-zuul-plus.png"
+	},
+	{
+		"Brand": "Fortin",
 		"Name": "Zuul Mini",
 		"Width": 1.52,
 		"Height": 3.64,
@@ -28260,9 +28267,16 @@
 	},
 	{
 		"Brand": "Spiral Electric FX",
+		"Name": "Secret Chord",
+		"Width": 4.7,
+		"Height": 3.85,
+		"Image": "spiral-yellow-spiral-secret-chord.png"
+	},
+	{
+		"Brand": "Spiral Electric FX",
 		"Name": "Yellow Spiral Drive",
 		"Width": 4.7,
-		"Height": 3.7,
+		"Height": 3.85,
 		"Image": "spiral-yellow-spiral-drive.png"
 	},
 	{
