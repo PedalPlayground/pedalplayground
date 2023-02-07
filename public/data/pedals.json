@@ -21911,6 +21911,13 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Black Rat",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-black-rat.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Dual Switch",
 		"Width": 3.66,
 		"Height": 1.66,
@@ -21926,9 +21933,16 @@
 	{
 		"Brand": "Mosky",
 		"Name": "Golden Horse",
-		"Width": 1.86,
+		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-golden-horse.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Silver Horse",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-silver-horse.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -25695,6 +25709,13 @@
 		"Width": 6.3,
 		"Height": 3.7,
 		"Image": "piratemidi-bridge6.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "I/O Patch Bay",
+		"Width": 2.79,
+		"Height": 4.8,
+		"Image": "pivotal-io-patch-bay.png"
 	},
 	{
 		"Brand": "Pladask Elektrisk",

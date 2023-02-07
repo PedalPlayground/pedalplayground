@@ -736,6 +736,20 @@
 	},
 	{
 		"Brand": "Pivotal",
+		"Name": "X26 Upper (Double Cutaway)",
+		"Width": 26.25,
+		"Height": 13.25,
+		"Image": "pivotal-x26-upper-double-cutaway.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "X26 Upper (Full Deck)",
+		"Width": 26.25,
+		"Height": 13.25,
+		"Image": "pivotal-x26-full-deck.png"
+	},
+	{
+		"Brand": "Pivotal",
 		"Name": "X26 Upper (Single Cutaway)",
 		"Width": 26.25,
 		"Height": 13.25,
