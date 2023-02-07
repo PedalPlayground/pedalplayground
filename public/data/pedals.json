@@ -7666,6 +7666,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD FX64 Ice Box Stereo Chorus",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx64.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD FX65 Stereo Chorus",
 		"Width": 3.3,
 		"Height": 5.13,
