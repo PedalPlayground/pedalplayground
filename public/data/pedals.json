@@ -13147,6 +13147,13 @@
 	},
 	{
 		"Brand": "GFI System",
+		"Name": "Duophony",
+		"Width": 4.15,
+		"Height": 4.8,
+		"Image": "gfi-duophony.png"
+	},
+	{
+		"Brand": "GFI System",
 		"Name": "Clockwork V3",
 		"Width": 4.7,
 		"Height": 2.5,
@@ -22272,6 +22279,13 @@
 		"Width": 2.25,
 		"Height": 4.75,
 		"Image": "mu-tron-boostron-ii.png"
+	},
+	{
+		"Brand": "Mu-Tron",
+		"Name": "C-200 Volume/Wah",
+		"Width": 3.75,
+		"Height": 10.96,
+		"Image": "mu-tron-c200.png"
 	},
 	{
 		"Brand": "Mu-Tron",
