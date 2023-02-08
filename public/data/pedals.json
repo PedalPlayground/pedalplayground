@@ -4663,6 +4663,13 @@
 	},
 	{
 		"Brand": "Browne Amplification",
+		"Name": "Atom",
+		"Width": 2.91,
+		"Height": 4.8,
+		"Image": "browneamps-atom.png"
+	},
+	{
+		"Brand": "Browne Amplification",
 		"Name": "Carbon",
 		"Width": 2.86,
 		"Height": 4.8,
@@ -13147,17 +13154,17 @@
 	},
 	{
 		"Brand": "GFI System",
-		"Name": "Duophony",
-		"Width": 4.15,
-		"Height": 4.8,
-		"Image": "gfi-duophony.png"
-	},
-	{
-		"Brand": "GFI System",
 		"Name": "Clockwork V3",
 		"Width": 4.7,
 		"Height": 2.5,
 		"Image": "gfi-clockwork.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Duophony",
+		"Width": 4.08,
+		"Height": 4.72,
+		"Image": "gfi-duophony.png"
 	},
 	{
 		"Brand": "GFI System",
@@ -21005,6 +21012,13 @@
 		"Width": 2.9,
 		"Height": 4.8,
 		"Image": "mojohand-extraspecial.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
+		"Name": "GRRRocker",
+		"Width": 2.59,
+		"Height": 4.4,
+		"Image": "mojohand-grrrocker.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
