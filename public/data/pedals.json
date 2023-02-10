@@ -7106,6 +7106,13 @@
 	},
 	{
 		"Brand": "Darkglass",
+		"Name": "Chorus Machine",
+		"Width": 2.92,
+		"Height": 4.37,
+		"Image": "darkglass-chorus-machine.png"
+	},
+	{
+		"Brand": "Darkglass",
 		"Name": "Duality Fuzz DFZ",
 		"Width": 2.14,
 		"Height": 3.94,
