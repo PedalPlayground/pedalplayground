@@ -13162,7 +13162,7 @@
 	{
 		"Brand": "GFI System",
 		"Name": "Duophony",
-		"Width": 4.08,
+		"Width": 4.02,
 		"Height": 4.72,
 		"Image": "gfi-duophony.png"
 	},
@@ -33837,6 +33837,13 @@
 		"Width": 3.64,
 		"Height": 4.8,
 		"Image": "zvex-fuzzfactory7.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Fuzz Factory 7 Vexter",
+		"Width": 3.64,
+		"Height": 4.8,
+		"Image": "zvex-fuzzfactory7-vexter.png"
 	},
 	{
 		"Brand": "Zvex",
