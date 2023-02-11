@@ -20091,6 +20091,13 @@
 	},
 	{
 		"Brand": "Marshall",
+		"Name": "PEDL-91016 Footswitch",
+		"Width": 16,
+		"Height": 4.37,
+		"Image": "marshall-pedl-91016.png"
+	},
+	{
+		"Brand": "Marshall",
 		"Name": "RG-1 Regenerator",
 		"Width": 2.7,
 		"Height": 4.7,
