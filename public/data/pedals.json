@@ -3070,7 +3070,7 @@
 		"Name": "Raw Heart",
 		"Width": 4.7,
 		"Height": 5.88,
-		"Image": "blackarts-raw-heart.png"
+		"Image": "black-arts-raw-heart.png"
 	},
 	{
 		"Brand": "Black Mass Electronics",
@@ -7106,13 +7106,6 @@
 	},
 	{
 		"Brand": "Darkglass",
-		"Name": "Chorus Machine",
-		"Width": 2.92,
-		"Height": 4.37,
-		"Image": "darkglass-chorus-machine.png"
-	},
-	{
-		"Brand": "Darkglass",
 		"Name": "Duality Fuzz DFZ",
 		"Width": 2.14,
 		"Height": 3.94,
@@ -8705,7 +8698,7 @@
 		"Name": "Octavio JH-OC1",
 		"Width": 3.54,
 		"Height": 7.05,
-		"Image": "dunlop-jhoc1.png"
+		"Image": "dunlop-jh-oc1.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -24510,7 +24503,7 @@
 		"Name": "Flat Light",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "obne-flatlight.png"
+		"Image": "obne-flat-light.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
