@@ -27833,6 +27833,13 @@
 	},
 	{
 		"Brand": "SolidGoldFX",
+		"Name": "Supa Funk (Giocomo Turra)",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "solidgoldfx-supafunk-gt.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
 		"Name": "Surf Rider III",
 		"Width": 4.89,
 		"Height": 3.68,
