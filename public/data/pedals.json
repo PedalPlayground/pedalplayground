@@ -833,6 +833,13 @@
 		"Image": "ammoon-pockverb.png"
 	},
 	{
+		"Brand": "Ampeg",
+		"Name": "Classic Analog Bass Preamp",
+		"Width": 2.75,
+		"Height": 4.48,
+		"Image": "ampeg-classic-analog-bass-preamp.png"
+	},
+	{
 		"Brand": "Amptweaker",
 		"Name": "Big Rock Pro II",
 		"Width": 6.47,
@@ -931,7 +938,7 @@
 		"Image": "amt-gr4.png"
 	},
 	{
-        "Brand": "AMT",
+    "Brand": "AMT",
 		"Name": "HR-1 Heater",
 		"Width": 2.91,
 		"Height": 4.48,
@@ -5853,72 +5860,72 @@
 	},
 	{
 		"Brand": "Cioks",
+		"Name": "4",
+		"Width": 2.93,
+		"Height": 3.46,
+		"Image": "cioks-4.png"
+	},
+	{
+		"Brand": "Cioks",
 		"Name": "8",
-		"Width": 6.3,
+		"Width": 4.82,
 		"Height": 3.46,
 		"Image": "cioks-8.png"
 	},
 	{
 		"Brand": "Cioks",
 		"Name": "Adam",
-		"Width": 4.52756,
-		"Height": 3.46457,
+		"Width": 4.89,
+		"Height": 3.46,
 		"Image": "cioks-adam.png"
 	},
 	{
 		"Brand": "Cioks",
 		"Name": "Ciokolate",
-		"Width": 11.4961,
-		"Height": 3.858,
+		"Width": 11.38,
+		"Height": 3.86,
 		"Image": "cioks-ciokolate.png"
 	},
 	{
 		"Brand": "Cioks",
-		"Name": "DC10",
-		"Width": 6.22,
-		"Height": 3.858,
-		"Image": "cioks-dc10.png"
-	},
-	{
-		"Brand": "Cioks",
-		"Name": "4",
-		"Width": 2.96,
-		"Height": 3.5,
-		"Image": "cioks-4.png"
-	},
-	{
-		"Brand": "Cioks",
-		"Name": "8",
-		"Width": 4.89,
-		"Height": 3.5,
-		"Image": "cioks-8.png"
-	},
-	{
-		"Brand": "Cioks",
 		"Name": "DC5",
-		"Width": 5.11811,
-		"Height": 3.46457,
+		"Width": 5.17,
+		"Height": 3.46,
 		"Image": "cioks-dc5.png"
 	},
 	{
 		"Brand": "Cioks",
 		"Name": "DC7",
-		"Width": 6.4,
-		"Height": 3.5,
+		"Width": 6.31,
+		"Height": 3.46,
 		"Image": "cioks-dc7.png"
 	},
 	{
 		"Brand": "Cioks",
 		"Name": "DC8",
-		"Width": 5.74803,
-		"Height": 3.46457,
+		"Width": 5.7,
+		"Height": 3.46,
 		"Image": "cioks-dc8.png"
 	},
 	{
 		"Brand": "Cioks",
+		"Name": "DC10",
+		"Width": 6.08,
+		"Height": 3.86,
+		"Image": "cioks-dc10.png"
+	},
+	{
+		"Brand": "Cioks",
+		"Name": "Sol",
+		"Width": 5.15,
+		"Height": 3.46,
+		"Image": "cioks-sol.png"
+	},
+	{
+		"Brand": "Cioks",
 		"Name": "Schizo / Big John / AC Rider",
-		"Width": 5.11811,
-		"Height": 3.46457,
+		"Width": 5.14,
+		"Height": 3.46,
 		"Image": "cioks-schizo.png"
 	},
 	{
