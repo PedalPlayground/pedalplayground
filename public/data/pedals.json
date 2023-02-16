@@ -5896,7 +5896,7 @@
 	{
 		"Brand": "Cioks",
 		"Name": "DC7",
-		"Width": 6.31,
+		"Width": 6.33,
 		"Height": 3.46,
 		"Image": "cioks-dc7.png"
 	},
@@ -15093,30 +15093,37 @@
 	},
 	{
 		"Brand": "IK Multimedia",
+		"Name": "TONEX",
+		"Width": 6.88,
+		"Height": 5.55,
+		"Image": "ikm-tonex.png"
+	},
+	{
+		"Brand": "IK Multimedia",
 		"Name": "X-Drive",
-		"Width": 6.8,
-		"Height": 5.7,
+		"Width": 6.88,
+		"Height": 5.55,
 		"Image": "ikm-x-drive.png"
 	},
 	{
 		"Brand": "IK Multimedia",
 		"Name": "X-Space",
-		"Width": 6.8,
-		"Height": 5.7,
+		"Width": 6.88,
+		"Height": 5.55,
 		"Image": "ikm-x-space.png"
 	},
 	{
 		"Brand": "IK Multimedia",
 		"Name": "X-Time",
-		"Width": 6.8,
-		"Height": 5.7,
+		"Width": 6.88,
+		"Height": 5.55,
 		"Image": "ikm-x-time.png"
 	},
 	{
 		"Brand": "IK Multimedia",
 		"Name": "X-Vibe",
-		"Width": 6.8,
-		"Height": 5.7,
+		"Width": 6.88,
+		"Height": 5.55,
 		"Image": "ikm-x-vibe.png"
 	},
 	{
