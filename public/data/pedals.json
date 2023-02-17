@@ -19018,6 +19018,20 @@
 		"Image": "latent-lemon-brassmaster.png"
 	},
 	{
+		"Brand": "Latent Lemon Audio",
+		"Name": "Hurts",
+		"Width": 6,
+		"Height": 5.14,
+		"Image": "latent-lemon-hurts.png"
+	},
+	{
+		"Brand": "Latent Lemon Audio",
+		"Name": "Hurts (Bare Metal)",
+		"Width": 6,
+		"Height": 5.14,
+		"Image": "latent-lemon-hurts-bare-metal.png"
+	},
+	{
 		"Brand": "Lauren Audio",
 		"Name": "Mustang",
 		"Width": 3.5,
