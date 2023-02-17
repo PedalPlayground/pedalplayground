@@ -12251,7 +12251,7 @@
 	},
 	{
 		"Brand": "Free The Tone",
-		"Name": "Crunch Chime CC-1B",
+		"Name": "Crunchy Chime CC-1B",
 		"Width": 2.8,
 		"Height": 4.53,
 		"Image": "freethetone-crunch-chime.png"
@@ -12297,6 +12297,20 @@
 		"Width": 3.94,
 		"Height": 4.88,
 		"Image": "freethetone-heat-blaster.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Integrated Gate IG-1N",
+		"Width": 2.8,
+		"Height": 4.53,
+		"Image": "freethetone-integrated-gate.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Iron Forest IF-1D",
+		"Width": 2.79,
+		"Height": 4.68,
+		"Image": "freethetone-iron-forest.png"
 	},
 	{
 		"Brand": "Free The Tone",
@@ -14936,6 +14950,13 @@
 		"Width": 1.96,
 		"Height": 3.65,
 		"Image": "ibanez-flanger-mini.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "Pentatone Preamp",
+		"Width": 5.75,
+		"Height": 4.99,
+		"Image": "ibanez-pentatone-preamp.png"
 	},
 	{
 		"Brand": "Ibanez",
