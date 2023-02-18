@@ -26937,6 +26937,13 @@
 	},
 	{
 		"Brand": "Rowin",
+		"Name": "DAP-2",
+		"Width": 8.62,
+		"Height": 2.65,
+		"Image": "rowin-dap-2.png"
+	},
+	{
+		"Brand": "Rowin",
 		"Name": "Noise Gate",
 		"Width": 1.65,
 		"Height": 3.66,
