@@ -3977,6 +3977,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GP-10 Guitar Processor",
+		"Width": 9.88,
+		"Height": 7.94,
+		"Image": "boss-gp10.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GP-20 Amp Factory",
 		"Width": 6.8125,
 		"Height": 6.25,
@@ -17456,6 +17463,13 @@
 		"Width": 3.7,
 		"Height": 4.9,
 		"Image": "keeley-caverns-v2-bohemian-bunny.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Caverns V2 (Catverns)",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "keeley-caverns-v2-catverns.png"
 	},
 	{
 		"Brand": "Keeley",
