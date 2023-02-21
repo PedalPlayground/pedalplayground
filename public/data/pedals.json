@@ -15646,6 +15646,13 @@
 	},
 	{
 		"Brand": "Jackson Audio",
+		"Name": "New Wave",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-new-wave.png"
+	},
+	{
+		"Brand": "Jackson Audio",
 		"Name": "Prism",
 		"Width": 2.5,
 		"Height": 4.96,
@@ -23486,6 +23493,13 @@
 	},
 	{
 		"Brand": "Noise Space Audio",
+		"Name": "Brass Space",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "noisespaceaudio-brass-space.png"
+	},
+	{
+		"Brand": "Noise Space Audio",
 		"Name": "Harm",
 		"Width": 2.6,
 		"Height": 4.99,
@@ -23504,6 +23518,20 @@
 		"Width": 4.7,
 		"Height": 3.82,
 		"Image": "noisespaceaudio-klone.png"
+	},
+	{
+		"Brand": "Noise Space Audio",
+		"Name": "Klone (Small)",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "noisespaceaudio-klone-small.png"
+	},
+	{
+		"Brand": "Noise Space Audio",
+		"Name": "Piggy",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "noisespaceaudio-piggy.png"
 	},
 	{
 		"Brand": "Nordvang",
