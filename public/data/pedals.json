@@ -13433,6 +13433,13 @@
 		"Image": "glou-glou-loupe-white.png"
 	},
 	{
+		"Brand": "God City Instruments",
+		"Name": "Jugendstil",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "godcity-jugendstil.png"
+	},
+	{
 		"Brand": "Gokko",
 		"Name": "AC BOX",
 		"Width": 3.86,
@@ -13662,6 +13669,13 @@
 		"Width": 4.85,
 		"Height": 4.20,
 		"Image": "gcp-infatuator-yellow.png"
+	},
+	{
+		"Brand": "Greenhouse Effects",
+		"Name": "Logos",
+		"Width": 2.5,
+		"Height": 4.82,
+		"Image": "greenhouse-logos.png"
 	},
 	{
 		"Brand": "Greenhouse Effects",
