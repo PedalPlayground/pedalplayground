@@ -26412,6 +26412,13 @@
 	},
 	{
 		"Brand": "Rainger FX",
+		"Name": "Flanger-X",
+		"Width": 1.7,
+		"Height": 4.15,
+		"Image": "raingerfx-flanger-x.png"
+	},
+	{
+		"Brand": "Rainger FX",
 		"Name": "Minibar",
 		"Width": 1.7,
 		"Height": 4.15,
