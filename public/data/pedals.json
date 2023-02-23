@@ -8730,6 +8730,13 @@
 	},
 	{
 		"Brand": "Earthquaker",
+		"Name": "Afterneath V3 (Pastel Purple)",
+		"Width": 2.7,
+		"Height": 4.94,
+		"Image": "earthquaker-afterneath-v3-pastelpurple.png"
+	},
+	{
+		"Brand": "Earthquaker",
 		"Name": "Afterneath V3 (Raw)",
 		"Width": 2.7,
 		"Height": 4.94,
@@ -21992,6 +21999,13 @@
 		"Width": 5.7,
 		"Height": 3.9,
 		"Image": "morningstar-mc6.png"
+	},
+	{
+		"Brand": "Morningstar",
+		"Name": "MC6 Pro",
+		"Width": 7.09,
+		"Height": 3.73,
+		"Image": "morningstar-mc6-pro.png"
 	},
 	{
 		"Brand": "Morningstar",
