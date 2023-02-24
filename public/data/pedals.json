@@ -20141,9 +20141,16 @@
 	{
 		"Brand": "Marshall",
 		"Name": "Blues Breaker",
-		"Width": 4.33,
-		"Height": 5.67,
+		"Width": 4.41,
+		"Height": 5.7,
 		"Image": "marshall-blues-breaker.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "Drive Master",
+		"Width": 4.41,
+		"Height": 5.7,
+		"Image": "marshall-drive-master.png"
 	},
 	{
 		"Brand": "Marshall",
@@ -20193,6 +20200,13 @@
 		"Width": 2.7,
 		"Height": 4.7,
 		"Image": "marshall-regenerator-rg1.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "Shred Master",
+		"Width": 4.41,
+		"Height": 5.7,
+		"Image": "marshall-shred-master.png"
 	},
 	{
 		"Brand": "Marshall",
