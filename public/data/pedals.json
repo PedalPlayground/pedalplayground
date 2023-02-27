@@ -16186,9 +16186,16 @@
 	{
 		"Brand": "JHS",
 		"Name": "Bender",
-		"Width": 3.61,
-		"Height": 5.68,
+		"Width": 3.76,
+		"Height": 6.07,
 		"Image": "jhs-bender.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Berkeley",
+		"Width": 3.76,
+		"Height": 6.07,
+		"Image": "jhs-berkeley.png"
 	},
 	{
 		"Brand": "JHS",
@@ -16263,8 +16270,8 @@
 	{
 		"Brand": "JHS",
 		"Name": "Crimson",
-		"Width": 3.61,
-		"Height": 5.68,
+		"Width": 3.76,
+		"Height": 6.07,
 		"Image": "jhs-crimson.png"
 	},
 	{
@@ -16357,6 +16364,13 @@
 		"Width": 2.82,
 		"Height": 5,
 		"Image": "jhs-luckycat-blackout.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Mary-K",
+		"Width": 3.76,
+		"Height": 6.07,
+		"Image": "jhs-mary-k.png"
 	},
 	{
 		"Brand": "JHS",
@@ -16479,6 +16493,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Plugin",
+		"Width": 3.76,
+		"Height": 6.07,
+		"Image": "jhs-plugin.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Pollinator V2",
 		"Width": 2.93,
 		"Height": 4.98,
@@ -16515,8 +16536,8 @@
 	{
 		"Brand": "JHS",
 		"Name": "Smiley",
-		"Width": 3.61,
-		"Height": 5.68,
+		"Width": 3.76,
+		"Height": 6.07,
 		"Image": "jhs-smiley.png"
 	},
 	{
@@ -16550,8 +16571,8 @@
 	{
 		"Brand": "JHS",
 		"Name": "Supreme",
-		"Width": 3.61,
-		"Height": 5.68,
+		"Width": 3.76,
+		"Height": 6.07,
 		"Image": "jhs-supreme.png"
 	},
 	{
