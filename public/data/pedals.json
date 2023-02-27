@@ -16919,6 +16919,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Volture",
+		"Width": 1.82,
+		"Height": 3.8,
+		"Image": "jhs-volture.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Whitey Tighty",
 		"Width": 1.82,
 		"Height": 3.8,
