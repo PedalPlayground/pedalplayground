@@ -7112,6 +7112,20 @@
 		"Image": "dawnerprince-viberator.png"
 	},
 	{
+		"Brand": "Dead Air Studios",
+		"Name": "Feral",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "deadair-feral.png"
+	},
+	{
+		"Brand": "Dead Air Studios",
+		"Name": "Feral+",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "deadair-feral-plus.png"
+	},
+	{
 		"Brand": "Deadbeat Sound",
 		"Name": "Delay Lay Lay",
 		"Width": 2.36,
@@ -15143,7 +15157,7 @@
 	{
 		"Brand": "IK Multimedia",
 		"Name": "TONEX",
-		"Width": 6.88,
+		"Width": 7,
 		"Height": 5.55,
 		"Image": "ikm-tonex.png"
 	},
@@ -19006,6 +19020,13 @@
 	},
 	{
 		"Brand": "Lehle",
+		"Name": "Little Lehle III",
+		"Width": 3.8,
+		"Height": 3.54,
+		"Image": "lehle-little-lehle-iii.png"
+	},
+	{
+		"Brand": "Lehle",
 		"Name": "Mono Volume",
 		"Width": 3.94,
 		"Height": 10.24,
@@ -20161,13 +20182,6 @@
 	},
 	{
 		"Brand": "Marshall",
-		"Name": "Guv'nor mk1",
-		"Width": 4.4,
-		"Height": 5.18,
-		"Image": "marshall-guvnor-mk1.png"
-	},
-	{
-		"Brand": "Marshall",
 		"Name": "GV-2 Guv'nor Plus",
 		"Width": 2.7,
 		"Height": 4.7,
@@ -20207,6 +20221,13 @@
 		"Width": 4.41,
 		"Height": 5.7,
 		"Image": "marshall-shred-master.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "The Guv'nor",
+		"Width": 4.4,
+		"Height": 5.24,
+		"Image": "marshall-guvnor-mk1.png"
 	},
 	{
 		"Brand": "Marshall",
