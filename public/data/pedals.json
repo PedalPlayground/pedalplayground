@@ -23332,6 +23332,13 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "1347",
+		"Width": 3.7,
+		"Height": 4.83,
+		"Image": "mythos-1347.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Air Lane Drive",
 		"Width": 4.7,
 		"Height": 3.8,
