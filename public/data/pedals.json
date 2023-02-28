@@ -28463,6 +28463,13 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Ixion",
+		"Width": 4.11,
+		"Height": 4.75,
+		"Image": "spaceman-ixion.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Mission Control",
 		"Width": 5.1,
 		"Height": 3.8,
