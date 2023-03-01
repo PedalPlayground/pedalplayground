@@ -27246,56 +27246,56 @@
 		"Name": "Analog Delay",
 		"Width": 4.7,
 		"Height": 3.81,
-		"Image": "retrosonic-analog-delay.png"
+		"Image": "retro-sonic-analog-delay.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Chorus",
 		"Width": 4.7,
 		"Height": 3.81,
-		"Image": "retrosonic-chorus.png"
+		"Image": "retro-sonic-chorus.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Compressor",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-compressor.png"
+		"Image": "retro-sonic-compressor.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Distortion",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-distortion.png"
+		"Image": "retro-sonic-distortion.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Flanger",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-flanger.png"
+		"Image": "retro-sonic-flanger.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Overdrive",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-overdrive.png"
+		"Image": "retro-sonic-overdrive.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Phaser",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-phaser.png"
+		"Image": "retro-sonic-phaser.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Preamp",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-preamp.png"
+		"Image": "retro-sonic-preamp.png"
 	},
 	{
 		"Brand": "Reuss",
