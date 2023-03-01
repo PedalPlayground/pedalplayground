@@ -149,8 +149,8 @@
 	{
 		"Brand": "3rd Power",
 		"Name": "Roosevelt Drive",
-		"Width": 4.84,
-		"Height": 3.94,
+		"Width": 2.6,
+		"Height": 4.72,
 		"Image": "3rd-power-roosevelt-drive.png"
 	},
 	{
@@ -3628,8 +3628,8 @@
 	{
 		"Brand": "Boredbrain",
 		"Name": "Terminal V2",
-		"Width": 2.5,
-		"Height": 1.75,
+		"Width": 2.56,
+		"Height": 4.33,
 		"Image": "boredbrain-terminal-v2.png"
 	},
 	{
@@ -4629,8 +4629,8 @@
 	{
 		"Brand": "BOSS",
 		"Name": "SL-2 Slicer",
-		"Width": 6.8125,
-		"Height": 6.25,
+		"Width": 2.875,
+		"Height": 5.125,
 		"Image": "boss-sl2.png"
 	},
 	{
@@ -6854,6 +6854,13 @@
 	},
 	{
 		"Brand": "Cry Baby",
+		"Name": "Q Zone Auto Wah",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "cry-baby-csp030.png"
+	},
+	{
+		"Brand": "Cry Baby",
 		"Name": "Q Zone Fixed Wah",
 		"Width": 2.57,
 		"Height": 4.33,
@@ -7397,7 +7404,7 @@
 		"Width": 2.5,
 		"Height": 4.75,
 		"Image": "deadbug-1968.png"
-	},	
+	},
 	{
 		"Brand": "Death By Audio",
 		"Name": "Absolute Destruction",
@@ -15185,7 +15192,7 @@
 	{
 		"Brand": "Hughes & Kettner",
 		"Name": "Tube Replex",
-		"Width": 6.299,
+		"Width": 10.2,
 		"Height": 8.465,
 		"Image": "hk-tube-replex.png"
 	},
@@ -16955,8 +16962,8 @@
 	{
 		"Brand": "JHS",
 		"Name": "Volture",
-		"Width": 1.82,
-		"Height": 3.8,
+		"Width": 1.5,
+		"Height": 3.64,
 		"Image": "jhs-volture.png"
 	},
 	{
@@ -17007,13 +17014,6 @@
 		"Width": 2.6,
 		"Height": 4.77,
 		"Image": "joe-gore-screech.png"
-	},
-	{
-		"Brand": "Joyo",
-		"Name": "American Sound",
-		"Width": 3.42,
-		"Height": 4.645669,
-		"Image": "joyo-american-sound.png"
 	},
 	{
 		"Name": "D-Seed",
@@ -21184,7 +21184,7 @@
 		"Name": "Super Blues Pro",
 		"Width": 2.62,
 		"Height": 4.3,
-		"Image": "mi-audio-blues-pro-overdrive.png"
+		"Image": "mi-audio-super-blues-pro.png"
 	},
 	{
 		"Brand": "MI Audio",
@@ -23989,7 +23989,7 @@
 	{
 		"Brand": "Nuñez Amps",
 		"Name": "Tetra-Fet Drive (2020 CME Pink)",
-		"Width": 2.59,
+		"Width": 2.95,
 		"Height": 4.94,
 		"Image": "nunez-tetra-fet-drive-pink.png"
 	},
@@ -27469,7 +27469,7 @@
 		"Brand": "Rocktron",
 		"Name": "MIDI Raider",
 		"Width": 15.5,
-		"Height": 10.5,
+		"Height": 9.4,
 		"Image": "rocktron-midi-raider.png"
 	},
 	{
@@ -27769,14 +27769,7 @@
 	{
 		"Brand": "Seymour Duncan",
 		"Name": "Vapor Trail Deluxe",
-		"Width": 2.74,
-		"Height": 5.18,
-		"Image": "seymour-duncan-vapor-trail-deluxe.png"
-	},
-	{
-		"Brand": "Seymour Duncan",
-		"Name": "Vapor Trail Deluxe",
-		"Width": 3.82,
+		"Width": 3.84,
 		"Height": 5.26,
 		"Image": "seymourduncan-vapor-trail-deluxe.png"
 	},
@@ -32040,8 +32033,8 @@
 	{
 		"Brand": "VFE",
 		"Name": "Klein Bottle 2022",
-		"Width": 5.625,
-		"Height": 4.63,
+		"Width": 6.07,
+		"Height": 4.88,
 		"Image": "vfe-klein-bottle-2022.png"
 	},
 	{
@@ -32957,8 +32950,8 @@
 	{
 		"Brand": "Walrus Audio",
 		"Name": "Julia V2 (Kamakura Series)",
-		"Width": 2.88,
-		"Height": 4.84,
+		"Width": 2.6,
+		"Height": 4.95,
 		"Image": "walrus-julia2-kamakura.png"
 	},
 	{
