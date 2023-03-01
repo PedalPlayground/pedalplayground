@@ -20714,6 +20714,13 @@
 	},
 	{
 		"Brand": "Mesa Boogie",
+		"Name": "Flux-Five",
+		"Width": 5.78,
+		"Height": 4.76,
+		"Image": "mesaboogie-fluxfive.png"
+	},	
+	{
+		"Brand": "Mesa Boogie",
 		"Name": "Grid Slammer",
 		"Width": 2.75,
 		"Height": 4.75,
@@ -20768,6 +20775,13 @@
 		"Height": 4.75,
 		"Image": "mesaboogie-throttlebox.png"
 	},
+	{
+		"Brand": "Mesa Boogie",
+		"Name": "Throttle Box EQ",
+		"Width": 5.78,
+		"Height": 4.76,
+		"Image": "mesaboogie-throttleboxeq.png"
+	},	
 	{
 		"Brand": "Mesa Boogie",
 		"Name": "Tone-Burst",
