@@ -3434,35 +3434,35 @@
 		"Name": "Crooked Axis",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "bluecolander-crooked-axis.png"
+		"Image": "blue-colander-crooked-axis.png"
 	},
 	{
 		"Brand": "Blue Colander",
 		"Name": "FFAS",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "bluecolander-ffas.png"
+		"Image": "blue-colander-ffas.png"
 	},
 	{
 		"Brand": "Blue Colander",
 		"Name": "Fuxi",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "bluecolander-fuxi.png"
+		"Image": "blue-colander-fuxi.png"
 	},
 	{
 		"Brand": "Blue Colander",
 		"Name": "Tibetan Quaalude",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "bluecolander-tibetan-quaalude.png"
+		"Image": "blue-colander-tibetan-quaalude.png"
 	},
 	{
 		"Brand": "Blue Colander",
 		"Name": "Tremond",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "bluecolander-tremond.png"
+		"Image": "blue-colander-tremond.png"
 	},
 	{
 		"Brand": "BluGuitar",
@@ -9013,7 +9013,7 @@
 		"Name": "Afterneath V3 (Pastel Purple)",
 		"Width": 2.7,
 		"Height": 4.94,
-		"Image": "earthquaker-afterneath-v3-pastelpurple.png"
+		"Image": "earthquaker-afterneath-v3-pastel-purple.png"
 	},
 	{
 		"Brand": "Earthquaker",
@@ -13794,7 +13794,7 @@
 		"Name": "Jugendstil",
 		"Width": 2.5,
 		"Height": 4.8,
-		"Image": "godcity-jugendstil.png"
+		"Image": "god-city-jugendstil.png"
 	},
 	{
 		"Brand": "Gokko",
@@ -13983,7 +13983,7 @@
 		"Name": "Dual Pre",
 		"Width": 11.59,
 		"Height": 5.51,
-		"Image": "grbass-dual-pre.png"
+		"Image": "gr-bass-dual-pre.png"
 	},
 	{
 		"Brand": "Grace Design",
@@ -14963,28 +14963,28 @@
 		"Name": "Berkeley",
 		"Width": 3.7,
 		"Height": 4.94,
-		"Image": "horrothiafx-berkeley.png"
+		"Image": "horrothia-fx-berkeley.png"
 	},
 	{
 		"Brand": "Horrothia FX",
 		"Name": "Teeth",
 		"Width": 3.7,
 		"Height": 4.94,
-		"Image": "horrothiafx-teeth.png"
+		"Image": "horrothia-fx-teeth.png"
 	},
 	{
 		"Brand": "Horrothia FX",
 		"Name": "Triage",
 		"Width": 3.7,
 		"Height": 4.94,
-		"Image": "horrothiafx-triage.png"
+		"Image": "horrothia-fx-triage.png"
 	},
 	{
 		"Brand": "Horrothia FX",
 		"Name": "Type One",
 		"Width": 3.7,
 		"Height": 4.94,
-		"Image": "horrothiafx-type-one.png"
+		"Image": "horrothia-fx-type-one.png"
 	},
 	{
 		"Brand": "Jet",
@@ -24817,7 +24817,7 @@
 		"Name": "EQ + Buffer",
 		"Width": 2.63,
 		"Height": 4.4,
-		"Image": "obne-eqbuffer.png"
+		"Image": "obne-eq-buffer.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -24859,28 +24859,28 @@
 		"Name": "Expression Ramper (Neon Blue)",
 		"Width": 1.69,
 		"Height": 3.88,
-		"Image": "obne-ramper-neonblue.png"
+		"Image": "obne-ramper-neon-blue.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Expression Ramper (Neon Green)",
 		"Width": 1.69,
 		"Height": 3.88,
-		"Image": "obne-ramper-neongreen.png"
+		"Image": "obne-ramper-neon-green.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Expression Ramper (Neon Pink)",
 		"Width": 1.69,
 		"Height": 3.88,
-		"Image": "obne-ramper-neonpink.png"
+		"Image": "obne-ramper-neon-pink.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Expression Ramper (Screen Violence)",
 		"Width": 1.69,
 		"Height": 3.88,
-		"Image": "obne-ramper-screenviolence.png"
+		"Image": "obne-ramper-screen-violence.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -25986,21 +25986,21 @@
 		"Name": "Disnortion Pro Micro",
 		"Width": 1.75,
 		"Height": 3.75,
-		"Image": "pigtronix-disnortionpromicro.png"
+		"Image": "pigtronix-disnortion-pro-micro.png"
 	},
 	{
 		"Brand": "Pigtronix",
 		"Name": "Echolution 2 Filter Pro",
 		"Width": 5.7,
 		"Height": 4.7,
-		"Image": "pigtronix-filterpro.png"
+		"Image": "pigtronix-echolution-2-filter-pro.png"
 	},
 	{
 		"Brand": "Pigtronix",
 		"Name": "Echolution 2 Ultra Pro",
 		"Width": 5.7,
 		"Height": 4.7,
-		"Image": "pigtronix-echolution2ultrapro.png"
+		"Image": "pigtronix-echolution-2-ultra-pro.png"
 	},
 	{
 		"Brand": "Pigtronix",
@@ -26560,14 +26560,14 @@
 		"Name": "Midnight Vibe",
 		"Width": 8.38,
 		"Height": 5.04,
-		"Image": "rweaverfx-midnight-vibe.png"
+		"Image": "r-weaver-fx-midnight-vibe.png"
 	},
 	{
 		"Brand": "R Weaver FX",
 		"Name": "Violet Vibe",
 		"Width": 8.38,
 		"Height": 5.04,
-		"Image": "rweaverfx-violet-vibe.png"
+		"Image": "r-weaver-fx-violet-vibe.png"
 	},
 	{
 		"Brand": "Radial Engineering",
@@ -27078,7 +27078,7 @@
 		"Name": "Deluxe Moon Phaser",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-dlxmoonphaser.png"
+		"Image": "red-witch-dlx-moon-phaser.png"
 	},
 	{
 		"Brand": "Red Witch",
