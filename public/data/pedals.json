@@ -7862,118 +7862,6 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "DOD Carcosa",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-carcosa.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Compressor 280",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-280.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Envelope Filter 440",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-440.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX63 Deep Freeze",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx63.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX64 Ice Box Stereo Chorus",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx64.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX65 Stereo Chorus",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx65.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX69 Grunge",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx69.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX75-V Stereo Flanger",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx75b.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Gonkulator Ringmod",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-gonkulator.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Gunslinger Mosfet Distortion",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-gunslinger.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Looking Glass",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-looking-glass.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Meatbox Subsynth",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-meatbox.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Mini Expression",
-		"Width": 3,
-		"Height": 5,
-		"Image": "dod-mini-expression.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Overdrive Preamp 250",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-250.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Phasor 201",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-201.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Rubberneck",
-		"Width": 5,
-		"Height": 4.69,
-		"Image": "dod-rubberneck.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "FreqOut",
 		"Width": 2.875,
 		"Height": 4.75,
@@ -8321,6 +8209,118 @@
 		"Width": 3.05,
 		"Height": 4.88,
 		"Image": "dod-410.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Carcosa",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-carcosa.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Compressor 280",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "digitech-280.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Envelope Filter 440",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-440.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Deep Freeze FX63",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx63.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Gonkulator Ringmod",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-gonkulator.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Grunge FX69",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx69.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Gunslinger Mosfet Distortion",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-gunslinger.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Ice Box Stereo Chorus FX64",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx64.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Looking Glass",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-looking-glass.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Meatbox Subsynth",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-meatbox.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Mini Expression",
+		"Width": 3,
+		"Height": 5,
+		"Image": "dod-mini-expression.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Overdrive Preamp 250",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-250.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Phasor 201",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-201.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Rubberneck",
+		"Width": 5,
+		"Height": 4.69,
+		"Image": "dod-rubberneck.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Stereo Chorus FX65",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx65.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Stereo Flanger FX75-B",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx75b.png"
 	},
 	{
 		"Brand": "Does It Doom",
