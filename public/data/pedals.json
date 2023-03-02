@@ -344,64 +344,106 @@
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "DB925 Bass Preamp",
-		"Width": 1.75,
+		"Name": "DB925",
+		"Width": 1.73,
 		"Height": 3.65,
 		"Image": "aguilar-db925.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "DB599 Bass Compressor",
-		"Width": 1.75,
+		"Name": "DB599",
+		"Width": 1.73,
 		"Height": 3.65,
 		"Image": "aguilar-db599.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Agro Bass Overdrive",
+		"Name": "Agro",
 		"Width": 2.7,
 		"Height": 5.5,
 		"Image": "aguilar-agro.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Chorusaurus Bass Chorus",
+		"Name": "Agro Mk2",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "aguilar-agro-mk2.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Chorusaurus",
 		"Width": 2.7,
 		"Height": 5.5,
 		"Image": "aguilar-chorusaurus.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Filter Twin Dual Envelope Filter",
+		"Name": "Chorusaurus Mk2",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "aguilar-chorusaurus-mk2.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Filter Twin",
 		"Width": 2.7,
 		"Height": 5.5,
 		"Image": "aguilar-filter-twin.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Fuzzistor Bass Fuzz",
+		"Name": "Filter Twin Mk2",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "aguilar-filter-twin-mk2.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Fuzzistor",
 		"Width": 2.7,
 		"Height": 5.5,
 		"Image": "aguilar-fuzzistor.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Grape Phaser Bass Phase",
+		"Name": "Fuzzistor Mk2",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "aguilar-fuzzistor-mk2.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Grape Phaser",
 		"Width": 2.7,
 		"Height": 5.5,
 		"Image": "aguilar-grape-phaser.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Octamizer Analog Octave",
+		"Name": "Grape Phaser Mk2",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "aguilar-grape-phaser-mk2.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Octamizer",
 		"Width": 2.7,
 		"Height": 5.5,
 		"Image": "aguilar-octamizer.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Storm King Distortion / Fuzz",
-		"Width": 1.75,
+		"Name": "Octamizer Mk2",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "aguilar-octamizer-mk2.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Storm King",
+		"Width": 1.73,
 		"Height": 3.65,
 		"Image": "aguilar-storm-king.png"
 	},
@@ -414,14 +456,21 @@
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Tone Hammer Preamp/Direct Box",
+		"Name": "TLC Compressor Mk2",
+		"Width": 2.5,
+		"Height": 4.8,
+		"Image": "aguilar-tlc-mk2.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Tone Hammer",
 		"Width": 4.4,
 		"Height": 5.31,
 		"Image": "aguilar-tone-hammer.png"
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "Tone Hammer Preamp/Direct Box (Silver)",
+		"Name": "Tone Hammer (Silver)",
 		"Width": 4.4,
 		"Height": 5.31,
 		"Image": "aguilar-tone-hammer-silver.png"
