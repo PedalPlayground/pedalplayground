@@ -9787,6 +9787,13 @@
 	},
 	{
 		"Brand": "Effects Bakery",
+		"Name": "Japanese Butter Roll Vibe",
+		"Width": 1.82,
+		"Height": 3.7,
+		"Image": "effectsbakery-japanese-butter-roll-vibe.png"
+	},
+	{
+		"Brand": "Effects Bakery",
 		"Name": "Maritozzo Bass EQ",
 		"Width": 1.82,
 		"Height": 3.7,
@@ -9840,6 +9847,13 @@
 		"Width": 1.82,
 		"Height": 3.7,
 		"Image": "effectsbakery-sugurus-big-katsu.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Uguisu Bread Tremolo",
+		"Width": 1.82,
+		"Height": 3.7,
+		"Image": "effectsbakery-uguisu-bread-tremolo.png"
 	},
 	{
 		"Brand": "Electro Faustus",

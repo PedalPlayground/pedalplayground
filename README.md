@@ -65,4 +65,4 @@ If there is a pedal you're looking for, feel free to [log an issue](https://gith
 -   Include a high resolution image of the pedal (top-down view, preferably white background, straight on perspective)
 -   Include the dimensions of the pedal in inches (make sure the dimensions are accurate and include jacks and other protrusions)
 -   Post one issue for each pedal you're requesting and **do not** bump/repost open issues
--   **Please remain patient**  Even if your request is marked to be closed it can still sometimes take several weeks for updates to get pulled into the main project.
+-   **Please remain patient!!**  Even if your request is marked to be closed it can still sometimes take several weeks for updates to get pulled into the main project.
