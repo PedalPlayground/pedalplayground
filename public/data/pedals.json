@@ -19231,7 +19231,7 @@
 		"Name": "88 Super Oscillo",
 		"Width": 2.81,
 		"Height": 4.53,
-		"Image": "lastgasp-88-super-oscillo-fuzz.png"
+		"Image": "lastgasp-88-super-oscillo.png"
 	},
 	{
 		"Brand": "LastGasp",
@@ -23781,7 +23781,7 @@
 		"Name": "Mjolnir (Joey Landreth Edition)",
 		"Width": 2.6,
 		"Height": 4.95,
-		"Image": "mythos-mjolnirjl.png"
+		"Image": "mythos-mjolnir-joey-landreth.png"
 	},
 	{
 		"Brand": "Mythos",
@@ -24957,7 +24957,7 @@
 		"Name": "Minim (Beta Blue)",
 		"Width": 4.7,
 		"Height": 4.12,
-		"Image": "obne-minim-betablue.png"
+		"Image": "obne-minim-beta-blue.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -26273,14 +26273,14 @@
 		"Name": "DISO Plus",
 		"Width": 4.8,
 		"Height": 4,
-		"Image": "pinstripepedals-disoplus.png"
+		"Image": "pinstripe-pedals-diso-plus.png"
 	},
 	{
 		"Brand": "Pinstripe Pedals",
 		"Name": "MISO",
 		"Width": 4.78,
 		"Height": 2.96,
-		"Image": "pinstripepedals-miso.png"
+		"Image": "pinstripe-pedals-miso.png"
 	},
 	{
 		"Brand": "Pirate Midi",

@@ -13,8 +13,7 @@
 -   Crop the image to non-transparent pixels:
     -   Gimp: Image > Crop to Content,
     -   Photoshop: Image > Trim > Transparent Pixels.
--   Save to **two places** with the following guidelines:
-    -   `/app/images/pedals` - Save for Web as PNG-24, make width **800px** or less (don't enlarge original image though)
+-   Save to **the following place** with the following guidelines:
     -   `/public/images/pedals` - Save for web as PNG-24, make width **350px** or less
     -   Please make sure file names use all lower-case letters and no spaces
 
