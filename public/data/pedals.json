@@ -18482,14 +18482,14 @@
 		"Name": "Quadruple I/O",
 		"Width": 6.76,
 		"Height": 2.6,
-		"Image": "kgmidi-quadruple.png"
+		"Image": "kg-midi-quadruple.png"
 	},
 	{
 		"Brand": "KG MIDI Controllers",
 		"Name": "Triple I/O",
 		"Width": 6.76,
 		"Height": 2.6,
-		"Image": "kgmidi-triple.png"
+		"Image": "kg-midi-triple.png"
 	},
 	{
 		"Brand": "KHDK",
@@ -21107,7 +21107,7 @@
 		"Name": "Rosette DI-Preamp",
 		"Width": 8.15,
 		"Height": 5.67,
-		"Image": "mesaboogie-rosette-di-preamp.png"
+		"Image": "mesa-boogie-rosette-di-preamp.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
@@ -21128,7 +21128,7 @@
 		"Name": "Switch-Track",
 		"Width": 4.75,
 		"Height": 3.82,
-		"Image": "mesaboogie-switch-track.png"
+		"Image": "mesa-boogie-switch-track.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
@@ -26347,6 +26347,13 @@
 	},
 	{
 		"Brand": "Pladask Elektrisk",
+		"Name": "Falma V2",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "pladask-falma-v2.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
 		"Name": "Feber",
 		"Width": 3.7,
 		"Height": 4.86,
@@ -27484,28 +27491,28 @@
 		"Name": "SPD::ONE Electro",
 		"Width": 5.51,
 		"Height": 6.3,
-		"Image": "roland_spd_one_electro.png"
+		"Image": "roland-spd-one-electro.png"
 	},
 	{
 		"Brand": "Roland",
 		"Name": "SPD::ONE Kick",
 		"Width": 5.51,
 		"Height": 6.3,
-		"Image": "roland_spd_one_kick.png"
+		"Image": "roland-spd-one-kick.png"
 	},
 	{
 		"Brand": "Roland",
 		"Name": "SPD::ONE Percussion",
 		"Width": 5.51,
 		"Height": 6.3,
-		"Image": "roland_spd_one_percussion.png"
+		"Image": "roland-spd-one-percussion.png"
 	},
 	{
 		"Brand": "Roland",
 		"Name": "SPD::ONE Wav",
 		"Width": 5.51,
 		"Height": 6.3,
-		"Image": "roland_spd_one_wav.png"
+		"Image": "roland-spd-one-wav.png"
 	},
 	{
 		"Brand": "Rolls",
