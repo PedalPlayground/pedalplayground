@@ -15309,6 +15309,7 @@
 		"Image": "ibanez-csl.png"
 	},
 	{
+		"Brand": "Ibanez",
 		"Name": "CS505 Stereo Chorus",
 		"Width": 2.9,
 		"Height": 4.89,
@@ -17037,6 +17038,7 @@
 		"Image": "joyo-american-sound.png"
 	},
 	{
+		"Brand": "Joyo",
 		"Name": "D-Seed",
 		"Width": 3.92,
 		"Height": 4.13,
