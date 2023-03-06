@@ -1,0 +1,151 @@
+// Grid Mixins
+
+// Thumbnail Grid Mixin
+// Just specify how many columns and a percent
+// width gutter and it will calculate the rest
+@mixin percent-grid($columns, $gutter) {
+	float: left;
+	width: (100 - ($gutter * ($columns - 1))) / $columns;
+	margin-right: $gutter;
+	margin-bottom: $gutter;
+	// Reset any clears & margins defined earlier in cascade
+	// Empty nth rule is needed to equal specificity on rules below
+	&:nth-child(n) {
+		clear: initial;
+		margin-right: $gutter;
+	}
+	&:nth-of-type(#{$columns}n) {
+		margin-right: 0;
+	}
+	&:nth-of-type(#{$columns}n + 1) {
+		clear: left;
+	}
+}
+
+@mixin block-reset {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin list-reset {
+	padding: 0;
+	list-style: none;
+	li {
+		margin-left: 0;
+	}
+}
+
+@mixin fluid-image {
+	width: 100%;
+	max-width: 100%;
+}
+
+@mixin column-count($x) {
+	-webkit-column-count: $x;
+	-moz-column-count: $x;
+	column-count: $x;
+}
+
+@mixin column-gap($x) {
+	-webkit-column-gap: $x;
+	-moz-column-gap: $x;
+	column-gap: $x;
+}
+
+@mixin padding-h($p) {
+	padding-left: $p;
+	padding-right: $p;
+}
+
+@mixin padding-v($p) {
+	padding-top: $p;
+	padding-bottom: $p;
+}
+
+@mixin margin-h($m) {
+	margin-left: $m;
+	margin-right: $m;
+}
+
+@mixin margin-v($m) {
+	margin-top: $m;
+	margin-bottom: $m;
+}
+
+@mixin cover {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+// https://css-tricks.com/snippets/sass/css-triangle-mixin/
+@function opposite-direction($directions) {
+	$opposite-directions: ();
+	$direction-map: (
+		"top": "bottom",
+		"right": "left",
+		"bottom": "top",
+		"left": "right",
+		"center": "center",
+		"ltr": "rtl",
+		"rtl": "ltr",
+	);
+	@each $direction in $directions {
+		$direction: to-lower-case($direction);
+		@if map-has-key($direction-map, $direction) {
+			$opposite-directions: append(
+				$opposite-directions,
+				unquote(map-get($direction-map, $direction))
+			);
+		} @else {
+			@warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
+		}
+	}
+	@return $opposite-directions;
+}
+
+/// Triangle helper mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Color} $color [currentcolor] - Triangle color
+/// @param {Length} $size [1em] - Triangle size
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+	@if not index(top right bottom left, $direction) {
+		@error "Direction must be either `top`, `right`, `bottom` or `left`.";
+	}
+	width: 0;
+	height: 0;
+	content: " ";
+	z-index: 2;
+	border-#{opposite-direction($direction)}: ($size * 1.5) solid $color;
+	$perpendicular-borders: $size solid transparent;
+
+	@if $direction == top or $direction == bottom {
+		border-left: $perpendicular-borders;
+		border-right: $perpendicular-borders;
+	} @else if $direction == right or $direction == left {
+		border-bottom: $perpendicular-borders;
+		border-top: $perpendicular-borders;
+	}
+}
+
+%box {
+	border: 1px solid $brand-border-color;
+	box-shadow: 0 1px 2px rgba($brand-gray, 0.12);
+	border-radius: $border-radius-base;
+}
+
+%box-active {
+	border: 1px solid saturate($brand-primary, 10%);
+	box-shadow: 0 0 5px rgba(saturate($brand-primary, 100%), 0.65);
+}
+
+/// Slightly lighten a color
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+@function shade($color, $percentage) {
+	@return mix(black, $color, $percentage);
+}

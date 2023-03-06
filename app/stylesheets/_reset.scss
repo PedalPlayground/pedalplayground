@@ -1,0 +1,30 @@
+body {
+}
+
+img {
+	max-width: 100%;
+	width: auto\9;
+	height: auto;
+	vertical-align: middle;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+	margin-top: 0;
+}
+
+// Use 500 instead of 600 for bold since it's a little nicer looking
+strong,
+th {
+	font-weight: 500;
+}

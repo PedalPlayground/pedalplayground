@@ -1,0 +1,661 @@
+$border: 1px solid rgba(black, 0.13);
+
+$dark: #1b1920;
+
+$panel-bg-dark: #282d30;
+$header-bg-dark: #25292c;
+$canvas-bg-dark: #2e3337;
+$body-color-dark: lighten($dark, 60%);
+
+body {
+	background: white;
+	@media (prefers-color-scheme: dark) {
+		background: $header-bg-dark;
+		color: $body-color-dark;
+	}
+}
+
+.site-header {
+	background: #fff;
+	padding: 12px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	h1 {
+		text-transform: uppercase;
+		margin: 0;
+		font-size: 16px;
+		@media (min-width: 500px) {
+			font-size: 22px;
+		}
+	}
+	nav {
+		a {
+			text-decoration: underline;
+			margin-left: 1rem;
+			font-size: 1.3rem;
+			@media (min-width: 500px) {
+				font-size: 1.5rem;
+				text-decoration: none;
+				margin-left: 2rem;
+				font-weight: bold;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				color: lighten($header-bg-dark, 40%);
+			}
+		}
+	}
+	@media (prefers-color-scheme: dark) {
+		background: $header-bg-dark;
+		color: #555;
+		h1 {
+			color: #f8f8f8;
+		}
+	}
+}
+
+.site-body {
+	border-top: $border;
+	min-height: 100vh;
+	min-width: 1400px;
+	position: relative;
+	@include flexbox;
+	@media (prefers-color-scheme: dark) {
+		border-top: 1px solid #323037;
+		border-color: rgba(white, 0.1);
+		border: 0;
+	}
+}
+
+.sidebar-close {
+	display: none;
+	@media (max-width: 1023px) {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 70%;
+		opacity: 1;
+		.text {
+			display: none;
+		}
+		.glyphicon {
+			color: white;
+			font-size: 30px;
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			top: 100%;
+			margin-top: -40px;
+		}
+	}
+}
+
+.sidebar-open {
+	display: none;
+	@media (max-width: 1023px) {
+		display: block;
+		position: fixed;
+		@include square(64px);
+		background: $brand-primary;
+		left: 50%;
+		margin-left: -32px;
+		bottom: 30px;
+		z-index: 4;
+		border-radius: 50%;
+		font-size: 0;
+		box-shadow: 8px 8px 20px rgba($brand-primary, 0.5);
+		@media (prefers-color-scheme: dark) {
+			box-shadow: none;
+		}
+		&:before,
+		&:after {
+			content: " ";
+			position: absolute;
+			background: white;
+			border-radius: 3px;
+		}
+		&:before {
+			@include size(4px, 30px);
+			left: 30px;
+			top: 17px;
+		}
+		&:after {
+			@include size(30px, 4px);
+			left: 17px;
+			top: 30px;
+		}
+	}
+}
+
+.sidebar,
+.canvas {
+	@include flex(1 1 auto);
+}
+
+.sidebar {
+	.select2-container {
+		width: 100%;
+	}
+	@media (max-width: 1023px) {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 5;
+		opacity: 0;
+		transition: all 0.3s;
+		pointer-events: none;
+		touch-events: none;
+		background: rgba(black, 0.7);
+		@media (prefers-color-scheme: dark) {
+			$tint: lighten($brand-primary, 0%);
+			background: rgba($tint, 0.5);
+		}
+		.sidebar__inner {
+			transition: all 0.3s;
+			position: absolute;
+			top: 100%;
+			// padding: 25px;
+			border-radius: 10px 10px 0 0;
+			bottom: 0;
+			overflow: auto;
+			-webkit-overflow-scrolling: touch;
+			background-color: #fff;
+			@media (prefers-color-scheme: dark) {
+				background-color: $panel-bg-dark;
+			}
+		}
+
+		.is-slid & {
+			opacity: 1;
+			pointer-events: all;
+			touch-events: all;
+			.sidebar__inner {
+				top: 30%;
+			}
+		}
+	}
+	@media (min-width: 1024px) {
+		max-width: 290px;
+		box-shadow: 0 1px 5px rgba(black, 0.16);
+		// padding: 20px;
+		background: #fff;
+		border-right: $border;
+		@media (prefers-color-scheme: dark) {
+			/* Dark theme styles go here */
+			background-color: $panel-bg-dark;
+			border-right-color: rgba(white, 0.1);
+			border: 0;
+		}
+	}
+	&__section {
+		padding: 2rem;
+		& + & {
+			border-top: 2px solid #ddd;
+			// padding-top: 16px;
+			// margin-top: 16px;
+			@media (prefers-color-scheme: dark) {
+				border-top-color: rgba(black, 0.2);
+			}
+		}
+	}
+	h4 {
+		font-size: 15px;
+	}
+}
+
+.canvas {
+	position: relative;
+	overflow: hidden;
+	background-image: url("../images/grid.svg");
+	background-color: #f8f8f8;
+	@media (prefers-color-scheme: dark) {
+		background-color: $canvas-bg-dark;
+		background-image: url("../images/grid-dark.svg");
+	}
+	* {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+}
+
+.item {
+	position: absolute;
+	// border: 1px solid transparent;
+	.artwork {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+		z-index: 1;
+		position: relative;
+		transition: all 0.4s;
+		// Drop shadow that matches the background image!
+		$same: 1px 2px 10px rgba(black, 0.25);
+		-webkit-filter: drop-shadow($same);
+		filter: drop-shadow($same);
+	}
+
+	// Selected state border
+	&:after {
+		position: absolute;
+		content: " ";
+		/* background: blue; */
+		$same: -6px;
+		left: $same;
+		right: $same;
+		bottom: $same;
+		top: $same;
+		border-radius: 4px;
+		border: 2px solid transparent;
+		pointer-events: none;
+		transition: all 0.15s;
+	}
+
+	&.rotate-90 {
+		.artwork {
+			@include rotate(90deg);
+		}
+	}
+	&.rotate-180 {
+		.artwork {
+			@include rotate(180deg);
+		}
+	}
+	&.rotate-270 {
+		.artwork {
+			@include rotate(270deg);
+		}
+	}
+
+	&.pedal--custom,
+	&.pedalboard--custom {
+		&.rotate-90 {
+			@include rotate(90deg);
+		}
+		&.rotate-180 {
+			@include rotate(180deg);
+		}
+		&.rotate-270 {
+			@include rotate(270deg);
+		}
+	}
+
+	.actions {
+		z-index: 1;
+		transition: all 0.28s;
+		opacity: 0;
+		background: white;
+		border: $border;
+		box-shadow: $box-shadow-base;
+		border-radius: 100px;
+		background-clip: padding-box;
+		position: absolute;
+		left: 100%;
+		top: 0;
+		margin-left: -32px;
+		margin-top: -15px;
+		width: 67px;
+
+		a {
+			display: block;
+			float: left;
+			padding: 8px;
+			text-align: center;
+			width: 32px;
+			line-height: 10px;
+			&:before {
+				font-size: 10px;
+				line-height: 10px;
+				@extend .glyphicon;
+				@extend .glyphicon-remove;
+			}
+			&.rotate {
+				border-right: $border;
+				&:before {
+					@extend .glyphicon-refresh;
+					font-weight: bold;
+				}
+			}
+		}
+		@media (prefers-color-scheme: dark) {
+			background: #111;
+			border-color: rgba(white, 0.2);
+			a {
+				color: white;
+			}
+		}
+	}
+
+	// Hover state
+	&:hover {
+		&:after {
+			border-color: rgba($brand-primary, 0.5);
+		}
+		.actions {
+			opacity: 1;
+		}
+	}
+
+	// Selected state
+	&.selected {
+		.artwork {
+			$same: 0px 0px 5px rgba(blue, 0.5);
+			//-webkit-filter: drop-shadow( $same );
+			//filter: drop-shadow( $same );
+		}
+		&:after {
+			border-color: $brand-primary;
+		}
+	}
+
+	// Hide controls while dragging
+	&.is-dragging {
+		.actions {
+			opacity: 0;
+		}
+	}
+}
+
+.pedal {
+	z-index: 1;
+	min-width: 5px;
+	min-height: 5px;
+	&.rotate-90 {
+		.artwork {
+			@include rotate(90deg);
+		}
+	}
+	&.rotate-180 {
+		.artwork {
+			@include rotate(180deg);
+		}
+	}
+	&.rotate-270 {
+		.artwork {
+			@include rotate(270deg);
+		}
+	}
+	&__box {
+		border-radius: 4px;
+		// border: 1px solid rgba(black, 0.3);
+		box-shadow: 1px 1px 4px rgba(black, 0.22), 0 1px 0 rgba(white, 0.2) inset;
+		background-clip: border-box;
+		background-image: linear-gradient(to top left, rgba(white, 0), rgba(white, 0.2));
+		position: absolute;
+		@include cover;
+		// left: 3px;
+		// right: 3px;
+	}
+	&__knob1,
+	&__knob2 {
+		border-radius: 40px;
+		@include square(12px);
+		background-color: rgba(black, 0.8);
+		border: 1px solid rgba(black, 0.3);
+		box-shadow: 1px 1px 4px rgba(black, 0.22), 0 1px 0 rgba(white, 0.2) inset;
+		background-clip: border-box;
+		background-image: linear-gradient(to top left, rgba(white, 0), rgba(white, 0.2));
+		position: absolute;
+		top: 15%;
+	}
+	&__knob1 {
+		left: 20%;
+	}
+	&__knob2 {
+		right: 15%;
+	}
+	&__switch {
+		position: absolute;
+		background-color: #999;
+		border: 1px solid rgba(black, 0.3);
+		box-shadow: 1px 1px 4px rgba(black, 0.22), 0 1px 0 rgba(white, 0.2) inset;
+		background-clip: border-box;
+		border-radius: 100px;
+		left: 50%;
+		margin-left: -5px;
+		@include square(10px);
+		bottom: 10%;
+	}
+	&__name {
+		font-size: 8px;
+		text-align: center;
+		display: block;
+		position: absolute;
+		top: 42%;
+		left: 0;
+		right: 0;
+		padding: 0 8px;
+		font-weight: bold;
+	}
+}
+
+.pedalboard {
+	z-index: 1;
+	&--custom {
+		border: 5px solid #ddd;
+		border-top-color: #ccc;
+		border-bottom-color: #ccc;
+		background: #222;
+	}
+}
+
+#custom-items {
+	.nav-tabs {
+		margin: 14px 0;
+		li a {
+			padding: 8px 13px;
+			font-size: 12px;
+		}
+	}
+	.form-element {
+		margin-bottom: 15px;
+		&.left {
+			float: left;
+			width: 50%;
+		}
+		label {
+			font-size: 12px;
+			em {
+				font-size: 10px;
+				font-style: normal;
+				font-weight: normal;
+				color: lighten($gray, 30%);
+			}
+		}
+	}
+	.custom-width {
+		border-radius: 4px 0 0 4px;
+	}
+	.custom-height {
+		border-radius: 0 4px 4px 0;
+		border-left: 0;
+	}
+}
+
+.color-swatch {
+	border: 1px solid rgba(black, 0.2);
+	border-radius: 100px;
+	@include square(20px);
+}
+
+// Huge list of pedals, to find any broken links
+#list-pedals {
+	@include flexbox();
+	@include flex-wrap(wrap);
+	background: #222;
+	.pedal-listing {
+		@include flex(1 1 150px);
+		@include flexbox();
+		//@include align-items(center);
+		@include justify-content(space-between);
+		@include flex-direction(column);
+		padding: 30px;
+		box-shadow: 1px 1px 0 0 rgba(white, 0.08);
+		img {
+			margin: auto;
+			display: block;
+			margin-bottom: 10px;
+			max-height: 200px;
+			width: auto;
+		}
+		p {
+			margin-bottom: 0;
+			text-align: center;
+			color: white;
+		}
+		.pedal-brand {
+			opacity: 0.5;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: $font-size-base - 4;
+		}
+		.pedal-name {
+			opacity: 0.9;
+			font-size: $font-size-base - 1;
+		}
+	}
+}
+
+.invalid {
+	border: 1px solid $brand-danger;
+	&:focus {
+		border: 1px solid $brand-danger;
+		box-shadow: 0 0 5px $brand-danger;
+	}
+}
+
+.panel {
+	z-index: 3;
+	display: none;
+
+	@media (prefers-color-scheme: dark) {
+		background: $panel-bg-dark;
+		border: 1px solid rgba(white, 0.2);
+		border: 0;
+		box-shadow: none !important;
+	}
+
+	@media (min-width: 768px) {
+		display: block;
+		position: fixed;
+		top: 67px;
+		right: 20px;
+		border-radius: 10px;
+		box-shadow: 0 2px 6px rgba(black, 0.2);
+		width: 200px;
+		&__name {
+			font-size: 13px;
+			color: #999;
+			font-weight: 600;
+			padding: 10px;
+			.panel__dimensions {
+				font-weight: normal;
+			}
+		}
+		&__action {
+			font-size: 13px;
+			display: block;
+			padding: 10px;
+			border-top: 1px solid rgba(black, 0.2);
+			@media (prefers-color-scheme: dark) {
+				border-top: 1px solid rgba(white, 0.2);
+			}
+			i {
+				font-style: normal;
+				color: #999;
+				// border: 1px solid #ddd;
+				float: right;
+				border-radius: 3px;
+				font-family: menlo, inconsolata, monospace;
+				padding: 1px 6px;
+				position: relative;
+				top: -2px;
+				color: #ccc;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+#canvas-scale-form {
+	//display: none;
+	@media (max-width: 1099px) {
+		.input-group-addon {
+			display: none;
+		}
+		input {
+			border-radius: $border-radius-base;
+		}
+		.btn-sm {
+			display: none;
+		}
+	}
+	@media (min-width: 1100px) {
+		position: fixed;
+		z-index: 2;
+		bottom: 0;
+		right: 0;
+		padding: 7px;
+		margin: 0;
+		border: 0;
+		display: flex;
+		background: rgba(white, 0.5);
+		border: 1px solid rgba(black, 0.12);
+		border-top-left-radius: 5px;
+		@media (prefers-color-scheme: dark) {
+			background: $panel-bg-dark;
+			border-color: rgba(white, 0.12);
+		}
+		input {
+			width: 85px;
+		}
+		h5 {
+			line-height: 20px;
+			margin: 3px 8px 0 0;
+		}
+		h4 {
+			display: none;
+		}
+	}
+}
+
+.sidebar {
+	&__scroll {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+}
+
+.sidebar__tgs {
+	padding-left: 10rem;
+	img {
+		float: left;
+		width: 8rem;
+		margin-left: -10rem;
+	}
+	p {
+		margin-bottom: 0.4rem;
+	}
+	a {
+		font-size: 1.25rem;
+		color: #444;
+		text-decoration: underline;
+		font-weight: 700;
+		@media (prefers-color-scheme: dark) {
+			color: white;
+		}
+	}
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background: $brand-primary;
+}

@@ -1,0 +1,78 @@
+%small-text,
+.small-text {
+	font-size: $font-size-base - 1;
+}
+
+%smaller-text,
+.smaller-text {
+	font-size: $font-size-base - 2;
+}
+
+%smallest-text,
+.smallest-text {
+	font-size: $font-size-base - 3;
+}
+
+%normal-text,
+.normal-text {
+	font-size: $font-size-base;
+}
+
+%large-text,
+.large-text {
+	font-size: $font-size-base + 1;
+}
+
+%larger-text,
+.larger-text {
+	font-size: $font-size-base + 2;
+}
+
+%largest-text,
+.largest-text {
+	font-size: $font-size-base + 3;
+}
+
+.font-weight-thin {
+	font-weight: 300;
+}
+
+.font-weight-normal {
+	font-weight: 400;
+}
+
+.font-weight-bold {
+	font-weight: 600;
+}
+
+.font-weight-semibold {
+	font-weight: 500;
+}
+
+.font-weight-extrabold {
+	font-weight: 700;
+}
+
+.font-style-italic {
+	font-style: italic;
+}
+
+.font-muted {
+	color: lighten($brand-gray, 20%);
+}
+
+.font-airy {
+	line-height: 1.8;
+}
+
+.font-align-right {
+	text-align: right;
+}
+
+.font-align-left {
+	text-align: left;
+}
+
+.font-loud {
+	text-transform: uppercase;
+}

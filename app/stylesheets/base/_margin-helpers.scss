@@ -1,0 +1,35 @@
+$block: $font-size-base; // 14px;
+$block-tight: $font-size-base * 0.5; // 7px
+$block-loose: $font-size-base * 2; // 28px
+$block-looser: $font-size-base * 2.5; // 35px
+$block-loosest: $font-size-base * 4; // 56px
+
+%block,
+.block {
+	margin-bottom: $block;
+}
+
+%block-tightest,
+.block-tightest {
+	margin-bottom: 0;
+}
+
+%block-tight,
+.block-tight {
+	margin-bottom: $block-tight;
+}
+
+%block-loose,
+.block-loose {
+	margin-bottom: $block-loose;
+}
+
+%block-looser,
+.block-looser {
+	margin-bottom: $block-looser;
+}
+
+%block-loosest,
+.block-loosest {
+	margin-bottom: $block-loosest;
+}
