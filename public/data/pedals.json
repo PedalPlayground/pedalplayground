@@ -26227,112 +26227,133 @@
 		"Image": "pigtronix-universal-remote.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Ahab",
 		"Width": 2.6,
 		"Height": 5.1,
 		"Image": "pbc-ahab.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
+		"Name": "Coyote Brother",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "pbc-coyote-brother.png"
+	},
+	{
+		"Brand": "Pine Box Customs",
 		"Name": "Crooked Teeth",
 		"Width": 5.63,
 		"Height": 4.82,
 		"Image": "pbc-crooked-teeth.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Deep",
 		"Width": 2.6,
 		"Height": 5.1,
 		"Image": "pbc-deep.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Deep v2",
 		"Width": 2.6,
 		"Height": 4.98,
 		"Image": "pbc-deep-v2.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Far",
 		"Width": 2.6,
 		"Height": 5.1,
 		"Image": "pbc-far.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Far v2",
 		"Width": 2.6,
 		"Height": 4.98,
 		"Image": "pbc-far-v2.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Fever Dream",
 		"Width": 4.88,
 		"Height": 7.5,
 		"Image": "pbc-fever-dream.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Free Shit",
 		"Width": 3.7,
 		"Height": 4.92,
 		"Image": "pbc-free-shit.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
+		"Name": "Good/Bad",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "pbc-good-bad.png"
+	},
+	{
+		"Brand": "Pine Box Customs",
+		"Name": "Instant",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "pbc-instant.png"
+	},
+	{
+		"Brand": "Pine Box Customs",
 		"Name": "Motel",
 		"Width": 2.6,
 		"Height": 5.1,
 		"Image": "pbc-motel.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Siren",
 		"Width": 2.6,
 		"Height": 5.1,
 		"Image": "pbc-siren.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Sirens",
 		"Width": 3.68,
 		"Height": 4.82,
 		"Image": "pbc-sirens.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Sirens v2",
 		"Width": 3.68,
 		"Height": 4.85,
 		"Image": "pbc-sirens-v2.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Sleepwalkin",
 		"Width": 5.63,
 		"Height": 4.82,
 		"Image": "pbc-sleepwalkin.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Tall",
 		"Width": 2.6,
 		"Height": 5.1,
 		"Image": "pbc-tall.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Tall v2",
 		"Width": 2.6,
 		"Height": 4.98,
 		"Image": "pbc-tall-v2.png"
 	},
 	{
-		"Brand": "Pine-Box Customs",
+		"Brand": "Pine Box Customs",
 		"Name": "Wide",
 		"Width": 2.6,
 		"Height": 10.15,
