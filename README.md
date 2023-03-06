@@ -61,7 +61,7 @@ If there is a pedal you're looking for, feel free to [log an issue](https://gith
 -   New releases from all popular builders are added automatically.  There is no need to make a request for those.
 -   Double check to see if the pedal isn't already in the database.
 -   Also check to see if the pedal hasn't already been included in a [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors.
--   We're sorry, but please no requests for alternate colorways.
+-   We're sorry, but please no requests for alternate colourways.
 -   Include a high resolution image of the pedal (top-down view, preferably white background, straight on perspective)
 -   Include the dimensions of the pedal in inches (make sure the dimensions are accurate and include jacks and other protrusions)
 -   Post one issue for each pedal you're requesting and **do not** bump/repost open issues
