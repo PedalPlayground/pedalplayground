@@ -32970,6 +32970,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Fable",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "walrus-fable.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Fathom",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -33168,7 +33175,7 @@
 		"Brand": "Walrus Audio",
 		"Name": "Lore",
 		"Width": 3.7,
-		"Height": 4.85,
+		"Height": 4.84,
 		"Image": "walrus-lore.png"
 	},
 	{
