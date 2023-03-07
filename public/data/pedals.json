@@ -24658,14 +24658,14 @@
 		"Name": "Diablo Dual",
 		"Width": 4.05,
 		"Height": 4.81,
-		"Image": "okko-diablodual.png"
+		"Image": "okko-diablo-dual.png"
 	},
 	{
 		"Brand": "Okko FX",
 		"Name": "Diablo GH Signature",
 		"Width": 4.05,
 		"Height": 4.81,
-		"Image": "okko-diabloghsignature.png"
+		"Image": "okko-diablo-gh-signature.png"
 	},
 	{
 		"Brand": "Okko FX",
@@ -24707,7 +24707,7 @@
 		"Name": "AB/Y Switcher (Beta Blue)",
 		"Width": 4.40,
 		"Height": 2.52,
-		"Image": "obne-aby-switcher-betablue.png"
+		"Image": "obne-aby-switcher-beta-blue.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -24742,7 +24742,7 @@
 		"Name": "Black Fountain",
 		"Width": 2.87,
 		"Height": 4.96,
-		"Image": "obne-blackfountain.png"
+		"Image": "obne-black-fountain.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -24959,7 +24959,7 @@
 		"Name": "Minim (Beta Blue)",
 		"Width": 4.7,
 		"Height": 4.12,
-		"Image": "obne-minim-betablue.png"
+		"Image": "obne-minim-beta-blue.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -25015,14 +25015,14 @@
 		"Name": "Screen Violence",
 		"Width": 4.85,
 		"Height": 5.92,
-		"Image": "obne-screenviolence.png"
+		"Image": "obne-screen-violence.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
 		"Name": "Signal Blender",
 		"Width": 4.7,
 		"Height": 3.7,
-		"Image": "obne-signalblender.png"
+		"Image": "obne-signal-blender.png"
 	},
 	{
 		"Brand": "Old Blood Noise Endeavors",
@@ -27388,7 +27388,7 @@
 		"Name": "Mythical Overdrive",
 		"Width": 4.7,
 		"Height": 3.7,
-		"Image": "rimrock-mythicaloverdrive.png"
+		"Image": "rimrock-mythical-overdrive.png"
 	},
 	{
 		"Brand": "RJM",
@@ -27465,7 +27465,7 @@
 		"Name": "Boiling Point",
 		"Width": 2.6,
 		"Height": 4.8,
-		"Image": "rockbox-boilingpoint.png"
+		"Image": "rockbox-boiling-point.png"
 	},
 	{
 		"Brand": "Rockbox",
