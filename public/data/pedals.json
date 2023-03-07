@@ -15022,13 +15022,6 @@
 		"Image": "horrothiafx-type-one.png"
 	},
 	{
-		"Brand": "Jet",
-		"Name": "Lamb",
-		"Width": 4.70,
-		"Height": 3.80,
-		"Image": "jet-lamb.png"
-	},
-	{
 		"Brand": "Horizon Devices",
 		"Name": "Apex Preamp",
 		"Width": 4.75,
@@ -16351,32 +16344,60 @@
 		"Image": "janglebox-byrds.png"
 	},
 	{
-		"Brand": "Jet",
+		"Brand": "Jet Pedals",
+		"Name": "Black Jet MCX",
+		"Width": 3.65,
+		"Height": 1.5,
+		"Image": "jet-black-jet-mcx.png"
+	},
+	{
+		"Brand": "Jet Pedals",
+		"Name": "Eternity",
+		"Width": 2.89,
+		"Height": 5.03,
+		"Image": "jet-eternity.png"
+	},
+	{
+		"Brand": "Jet Pedals",
+		"Name": "Lamb",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "jet-lamb.png"
+	},
+	{
+		"Brand": "Jet Pedals",
 		"Name": "Lion",
-		"Width": 4.70,
-		"Height": 3.80,
+		"Width": 4.7,
+		"Height": 3.82,
 		"Image": "jet-lion.png"
 	},
 	{
-		"Brand": "Jet",
+		"Brand": "Jet Pedals",
 		"Name": "Micro HX",
-		"Width": 3.64,
-		"Height": 1.52,
+		"Width": 3.65,
+		"Height": 1.5,
 		"Image": "jet-micro.png"
 	},
 	{
-		"Brand": "Jet",
-		"Name": "Revelation Reverb 2.0 (Purple)",
-		"Width": 2.88,
-		"Height": 4.93,
-		"Image": "jet-revelation-v2-purple.png"
+		"Brand": "Jet Pedals",
+		"Name": "Mr Jax",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "jet-mr-jax.png"
 	},
 	{
-		"Brand": "Jet",
-		"Name": "Revelation Reverb 2.0 (White)",
-		"Width": 2.88,
-		"Height": 4.93,
-		"Image": "jet-revelation-v2-white.png"
+		"Brand": "Jet Pedals",
+		"Name": "Red Sea",
+		"Width": 2.89,
+		"Height": 5.17,
+		"Image": "jet-red-sea.png"
+	},
+	{
+		"Brand": "Jet Pedals",
+		"Name": "Revelation v2.0",
+		"Width": 2.89,
+		"Height": 5.03,
+		"Image": "jet-revelation-v2.png"
 	},
 	{
 		"Brand": "JHS",
