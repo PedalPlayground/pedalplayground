@@ -23834,6 +23834,13 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Cestus (2022)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-cestus-2022.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Chupacabra",
 		"Width": 2.6,
 		"Height": 4.98,
@@ -23880,6 +23887,13 @@
 		"Width": 1.78,
 		"Height": 3.6,
 		"Image": "mythos-high-road.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Luxury Drive",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-luxury-drive.png"
 	},
 	{
 		"Brand": "Mythos",
