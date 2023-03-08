@@ -5887,17 +5887,24 @@
 		"Image": "champion-leccy-the-woozy-red.png"
 	},
 	{
-		"Brand": "Chasetone",
+		"Brand": "Chase Tone",
 		"Name": "68 Red Velvet Fuzz",
 		"Width": 2.34,
-		"Height": 4.55,
+		"Height": 4.5,
 		"Image": "chasetone-68.png"
 	},
 	{
-		"Brand": "Chasetone",
+		"Brand": "Chase Tone",
+		"Name": "Fuzz Fella",
+		"Width": 2.34,
+		"Height": 4.5,
+		"Image": "chasetone-fuzz-fella.png"
+	},
+	{
+		"Brand": "Chase Tone",
 		"Name": "Secret Preamp",
 		"Width": 2.34,
-		"Height": 4.55,
+		"Height": 4.5,
 		"Image": "chasetone-preamp.png"
 	},
 	{
