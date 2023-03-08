@@ -3220,6 +3220,13 @@
 		"Image": "blackstar-dept10-dual-dist.png"
 	},
 	{
+		"Brand": "Blackskycraft",
+		"Name": "Unusual EAS",
+		"Width": 3.7,
+		"Height": 5.98,
+		"Image": "blackskycraft-unusual-eas.png"
+	},
+	{
 		"Brand": "Blackstar",
 		"Name": "HT Dual",
 		"Width": 6.72,
@@ -22445,6 +22452,13 @@
 		"Width": 6,
 		"Height": 9,
 		"Image": "moog-mf-103-12-stage-phaser.png"
+	},
+	{
+		"Brand": "Moose Electronics",
+		"Name": "Sledge Hammer",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "moose-electronics-sledge-hammer.png"
 	},
 	{
 		"Brand": "Morley",
