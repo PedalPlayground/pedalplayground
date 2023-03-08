@@ -12775,6 +12775,13 @@
 		"Image": "friedman-smallbox.png"
 	},
 	{
+		"Brand": "Frost Giant Electronics",
+		"Name": "Osiris",
+		"Width": 2.6,
+		"Height": 5.08,
+		"Image": "frost-giant-osiris.png"
+	},
+	{
 		"Brand": "FTelettronica",
 		"Name": "Absynthe Guitar Analog Synth",
 		"Width": 7.87402,
@@ -29709,43 +29716,43 @@
 	{
 		"Brand": "Supro",
 		"Name": "Boost",
-		"Width": 2.65,
-		"Height": 4.9,
+		"Width": 2.84,
+		"Height": 5.21,
 		"Image": "supro-boost.png"
 	},
 	{
 		"Brand": "Supro",
 		"Name": "Chorus",
-		"Width": 2.58,
-		"Height": 4.8,
+		"Width": 2.76,
+		"Height": 5.18,
 		"Image": "supro-chorus.png"
 	},
 	{
 		"Brand": "Supro",
 		"Name": "Delay",
-		"Width": 2.65,
-		"Height": 4.9,
+		"Width": 2.84,
+		"Height": 5.21,
 		"Image": "supro-delay.png"
 	},
 	{
 		"Brand": "Supro",
 		"Name": "Drive",
-		"Width": 2.65,
-		"Height": 4.9,
+		"Width": 2.84,
+		"Height": 5.21,
 		"Image": "supro-drive.png"
 	},
 	{
 		"Brand": "Supro",
 		"Name": "Flanger",
-		"Width": 2.58,
-		"Height": 4.8,
+		"Width": 2.76,
+		"Height": 5.18,
 		"Image": "supro-flanger.png"
 	},
 	{
 		"Brand": "Supro",
 		"Name": "Fuzz",
-		"Width": 2.65,
-		"Height": 4.9,
+		"Width": 2.84,
+		"Height": 5.21,
 		"Image": "supro-fuzz.png"
 	},
 	{
@@ -29765,8 +29772,8 @@
 	{
 		"Brand": "Supro",
 		"Name": "Tremolo",
-		"Width": 2.65,
-		"Height": 4.9,
+		"Width": 2.84,
+		"Height": 5.21,
 		"Image": "supro-tremolo.png"
 	},
 	{
