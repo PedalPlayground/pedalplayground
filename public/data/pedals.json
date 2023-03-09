@@ -12496,6 +12496,13 @@
 	},
 	{
 		"Brand": "Foxrox",
+		"Name": "Octron 4",
+		"Width": 5.6,
+		"Height": 4.85,
+		"Image": "foxrox-octron4.png"
+	},
+	{
+		"Brand": "Foxrox",
 		"Name": "Paradox TZF2",
 		"Width": 5.5,
 		"Height": 5,
@@ -23806,7 +23813,7 @@
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Argo (2022)",
+		"Name": "Argo V2",
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "mythos-argo-2022.png"
@@ -23820,7 +23827,7 @@
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Argonaut (2022)",
+		"Name": "Argonaut V2",
 		"Width": 1.78,
 		"Height": 3.6,
 		"Image": "mythos-argonaut-2022.png"
@@ -23834,7 +23841,7 @@
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Cestus (2022)",
+		"Name": "Cestus V2",
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "mythos-cestus-2022.png"
@@ -23848,7 +23855,7 @@
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Chupacabra (2022)",
+		"Name": "Chupacabra V2",
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "mythos-chupacabra-2022.png"
@@ -23862,7 +23869,7 @@
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Golden Fleece (2022)",
+		"Name": "Golden Fleece V2",
 		"Width": 1.78,
 		"Height": 3.6,
 		"Image": "mythos-golden-fleece-2022.png"
@@ -23904,7 +23911,7 @@
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Mjolnir (2022)",
+		"Name": "Mjolnir V2",
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "mythos-mjolnir-2022.png"
@@ -23932,7 +23939,7 @@
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Olympus (2022)",
+		"Name": "Olympus V2",
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "mythos-olympus-2022.png"
@@ -23967,7 +23974,7 @@
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "SusMaryOsep v2",
+		"Name": "SusMaryOsep V2",
 		"Width": 4.7,
 		"Height": 3.8,
 		"Image": "mythos-susmaryosep-v2.png"
