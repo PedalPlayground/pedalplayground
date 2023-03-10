@@ -14413,6 +14413,13 @@
 		"Image": "groundfx-keto.png"
 	},
 	{
+		"Brand": "GUPTech",
+		"Name": "Donut Distortion",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "guptech-donut.png"
+	},
+	{
 		"Brand": "Gurus",
 		"Name": "1959 Doubledecker",
 		"Width": 8.66,
@@ -28668,6 +28675,13 @@
 		"Width": 3.5,
 		"Height": 4.49,
 		"Image": "solodallas-tsr.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Sonicbar RockStage",
+		"Width": 10.32,
+		"Height": 2.48,
+		"Image": "sonicake-sonicbar-rockstage.png"
 	},
 	{
 		"Brand": "Sonic Research",
