@@ -18704,6 +18704,13 @@
 		"Image": "kingsley-page.png"
 	},
 	{
+		"Brand": "Kingsley",
+		"Name": "Page TS",
+		"Width": 3.875,
+		"Height": 4.75,
+		"Image": "kingsley-page-ts.png"
+	},
+	{
 		"Brand": "Kingtone",
 		"Name": "1968",
 		"Width": 4.7,
