@@ -19233,56 +19233,56 @@
 		"Name": "88 Super Oscillo",
 		"Width": 2.81,
 		"Height": 4.53,
-		"Image": "lastgasp-88-super-oscillo-fuzz.png"
+		"Image": "lastgasp-88-super-oscillo.png"
 	},
 	{
 		"Brand": "LastGasp",
 		"Name": "Angelring",
 		"Width": 2.81,
 		"Height": 4.6,
-		"Image": "lastgasp-angelring-clean-boost.png"
+		"Image": "lastgasp-angelring.png"
 	},
 	{
 		"Brand": "LastGasp",
 		"Name": "Deviltail",
 		"Width": 2.81,
 		"Height": 4.6,
-		"Image": "lastgasp-deviltail-deathtortion-distortion.png"
+		"Image": "lastgasp-deviltail.png"
 	},
 	{
 		"Brand": "LastGasp",
 		"Name": "Gomorrah",
 		"Width": 2.81,
 		"Height": 4.53,
-		"Image": "lastgasp-gomorrah-subharmonic-fuzz.png"
+		"Image": "lastgasp-gomorrah.png"
 	},
 	{
 		"Brand": "LastGasp",
 		"Name": "Lluna",
 		"Width": 2.81,
 		"Height": 4.53,
-		"Image": "lastgasp-lluna-fuzz-voltage-dropper.png"
+		"Image": "lastgasp-lluna.png"
 	},
 	{
 		"Brand": "LastGasp",
 		"Name": "Misty Cave",
 		"Width": 4.72,
 		"Height": 3.86,
-		"Image": "lastgasp-misty-cave-resonance-echo.png"
+		"Image": "lastgasp-misty-cave.png"
 	},
 	{
 		"Brand": "LastGasp",
 		"Name": "Octavella",
 		"Width": 2.81,
 		"Height": 4.53,
-		"Image": "lastgasp-octavella-octave-feedback-fuzz.png"
+		"Image": "lastgasp-octavella.png"
 	},
 	{
 		"Brand": "LastGasp",
 		"Name": "Sandstorm",
 		"Width": 4.72,
 		"Height": 3.86,
-		"Image": "lastgasp-sandstorm-envelope-noise-generator.png"
+		"Image": "lastgasp-sandstorm.png"
 	},
 	{
 		"Brand": "LastGasp",
@@ -19296,21 +19296,21 @@
 		"Name": "Thunder Box",
 		"Width": 2.81,
 		"Height": 4.6,
-		"Image": "lastgasp-thunder-box-donsharizer-boost.png"
+		"Image": "lastgasp-thunder-box.png"
 	},
 	{
 		"Brand": "LastGasp",
 		"Name": "Tone Axe",
 		"Width": 2.81,
 		"Height": 4.6,
-		"Image": "lastgasp-tone-axe-frequency-divider-fuzz.png"
+		"Image": "lastgasp-tone-axe.png"
 	},
 	{
 		"Brand": "LastGasp",
 		"Name": "Toxic Plant",
 		"Width": 2.81,
 		"Height": 4.53,
-		"Image": "lastgasp-toxic-plant-disharmonic-distortion.png"
+		"Image": "lastgasp-toxic-plant.png"
 	},
 	{
 		"Brand": "Latent Lemon Audio",
@@ -27122,21 +27122,21 @@
 		"Name": "Fuzz God II",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-fuzzgod-ii.png"
+		"Image": "red-witch-fuzz-god-ii.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Fuzz God III",
 		"Width": 1.77,
 		"Height": 3.43,
-		"Image": "redwitch-fuzzgod-iii.png"
+		"Image": "red-witch-fuzz-god-iii.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Fuzz God IV",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-fuzzgod-iv.png"
+		"Image": "red-witch-fuzz-god-iv.png"
 	},
 	{
 		"Brand": "Red Witch",
