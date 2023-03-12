@@ -23790,7 +23790,7 @@
 		"Name": "Mjolnir (Joey Landreth Edition)",
 		"Width": 2.6,
 		"Height": 4.95,
-		"Image": "mythos-mjolnirjl.png"
+		"Image": "mythos-mjolnir-joey-landreth-edition.png"
 	},
 	{
 		"Brand": "Mythos",
@@ -23916,56 +23916,56 @@
 		"Name": "5 Fuzz",
 		"Width": 2.6,
 		"Height": 4.99,
-		"Image": "noisespaceaudio-5-fuzz.png"
+		"Image": "noise-space-audio-5-fuzz.png"
 	},
 	{
 		"Brand": "Noise Space Audio",
 		"Name": "Brass Fuzz",
 		"Width": 2.6,
 		"Height": 4.99,
-		"Image": "noisespaceaudio-brass-fuzz.png"
+		"Image": "noise-space-audio-brass-fuzz.png"
 	},
 	{
 		"Brand": "Noise Space Audio",
 		"Name": "Brass Space",
 		"Width": 3.7,
 		"Height": 4.95,
-		"Image": "noisespaceaudio-brass-space.png"
+		"Image": "noise-space-audio-brass-space.png"
 	},
 	{
 		"Brand": "Noise Space Audio",
 		"Name": "Harm",
 		"Width": 2.6,
 		"Height": 4.99,
-		"Image": "noisespaceaudio-harm.png"
+		"Image": "noise-space-audio-harm.png"
 	},
 	{
 		"Brand": "Noise Space Audio",
 		"Name": "IVP",
 		"Width": 2.6,
 		"Height": 4.99,
-		"Image": "noisespaceaudio-ivp.png"
-	},
-	{
-		"Brand": "Noise Space Audio",
-		"Name": "Klone",
-		"Width": 4.7,
-		"Height": 3.82,
-		"Image": "noisespaceaudio-klone.png"
+		"Image": "noise-space-audio-ivp.png"
 	},
 	{
 		"Brand": "Noise Space Audio",
 		"Name": "Klone (Small)",
 		"Width": 2.6,
 		"Height": 4.99,
-		"Image": "noisespaceaudio-klone-small.png"
+		"Image": "noise-space-audio-klone-small.png"
+	},
+	{
+		"Brand": "Noise Space Audio",
+		"Name": "Klone",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "noise-space-audio-klone.png"
 	},
 	{
 		"Brand": "Noise Space Audio",
 		"Name": "Piggy",
 		"Width": 2.6,
 		"Height": 4.99,
-		"Image": "noisespaceaudio-piggy.png"
+		"Image": "noise-space-audio-piggy.png"
 	},
 	{
 		"Brand": "Nordvang",
@@ -26282,14 +26282,14 @@
 		"Name": "DISO Plus",
 		"Width": 4.8,
 		"Height": 4,
-		"Image": "pinstripepedals-disoplus.png"
+		"Image": "pinstripe-pedals-diso-plus.png"
 	},
 	{
 		"Brand": "Pinstripe Pedals",
 		"Name": "MISO",
 		"Width": 4.78,
 		"Height": 2.96,
-		"Image": "pinstripepedals-miso.png"
+		"Image": "pinstripe-pedals-miso.png"
 	},
 	{
 		"Brand": "Pirate Midi",
@@ -27007,17 +27007,17 @@
 	},
 	{
 		"Brand": "Red Panda",
-		"Name": "Bitmap",
-		"Width": 3.3,
-		"Height": 4.4,
-		"Image": "redpanda-bitmap.png"
-	},
-	{
-		"Brand": "Red Panda",
 		"Name": "Bitmap 2",
 		"Width": 3.05,
 		"Height": 4.75,
 		"Image": "redpanda-bitmap2.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Bitmap",
+		"Width": 3.3,
+		"Height": 4.4,
+		"Image": "redpanda-bitmap.png"
 	},
 	{
 		"Brand": "Red Panda",
@@ -27028,17 +27028,17 @@
 	},
 	{
 		"Brand": "Red Panda",
-		"Name": "Context",
-		"Width": 3.7,
-		"Height": 4.7,
-		"Image": "redpanda-context.png"
-	},
-	{
-		"Brand": "Red Panda",
 		"Name": "Context 2",
 		"Width": 3.05,
 		"Height": 4.75,
-		"Image": "redpanda-context2.png"
+		"Image": "red-panda-context-2.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Context",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "red-panda-context.png"
 	},
 	{
 		"Brand": "Red Panda",
