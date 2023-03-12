@@ -22488,7 +22488,7 @@
 		"Name": "Ambience",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-ambience.png"
+		"Image": "mr-black-ambience.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -22502,28 +22502,28 @@
 		"Name": "BloodMoon",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-bloodmoon.png"
+		"Image": "mr-black-bloodmoon.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "BloodMoon Blood & Chrome",
 		"Width": 3.98,
 		"Height": 4.7,
-		"Image": "mrblack-bloodmoon-bc.png"
+		"Image": "mr-black-bloodmoon-bc.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "DarkEcho",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-darkecho.png"
+		"Image": "mr-black-darkecho.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Deluxe DeluxePlus",
 		"Width": 4.33,
 		"Height": 2.46,
-		"Image": "mrblack-dlx-deluxeplus.png"
+		"Image": "mr-black-deluxe-deluxeplus.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -22537,140 +22537,140 @@
 		"Name": "DeluxePlus Plus",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mr-black-deluxe-plus-plus.png"
-	},
-	{
-		"Brand": "Mr. Black",
-		"Name": "DoubleChorus",
-		"Width": 2.62,
-		"Height": 4.33,
-		"Image": "mrblack-doublechorus.png"
+		"Image": "mr-black-deluxeplus-plus.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "DoomStick II",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-doomstick2.png"
+		"Image": "mr-black-doomstick-ii.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "DoubleChorus",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mr-black-doublechorus.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Downward Spiral (Special Edition)",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-downwardspiral-se.png"
-	},
-	{
-		"Brand": "Mr. Black",
-		"Name": "Eterna",
-		"Width": 2.62,
-		"Height": 4.33,
-		"Image": "mrblack-eterna.png"
+		"Image": "mr-black-downward-spiral-se.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Eterna Custom",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-eterna-custom.png"
+		"Image": "mr-black-eterna-custom.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Eterna Gold Modified",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-eterna-gold.png"
+		"Image": "mr-black-eterna-gold.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Eterna",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mr-black-eterna.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "FwonkBeta",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-fwonkbeta.png"
+		"Image": "mr-black-fwonkbeta.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Gilamondo",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-gilamondo.png"
+		"Image": "mr-black-gilamondo.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Heaven's Gate",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-heavens-gate.png"
+		"Image": "mr-black-heavens-gate.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "JDS-50",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-jds50.png"
+		"Image": "mr-black-jds50.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Mini Echo-Delay",
 		"Width": 1.78,
 		"Height": 3.7,
-		"Image": "mrblack-mini-echo-delay.png"
+		"Image": "mr-black-mini-echo-delay.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Mini Flanger",
 		"Width": 1.78,
 		"Height": 3.7,
-		"Image": "mrblack-mini-flanger.png"
+		"Image": "mr-black-mini-flanger.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Mini Octaves",
 		"Width": 1.78,
 		"Height": 3.7,
-		"Image": "mrblack-mini-octaves.png"
+		"Image": "mr-black-mini-octaves.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Mini OD-503",
 		"Width": 1.78,
 		"Height": 3.7,
-		"Image": "mrblack-mini-od-503.png"
+		"Image": "mr-black-mini-od-503.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Mini Phaser",
 		"Width": 1.78,
 		"Height": 3.7,
-		"Image": "mrblack-mini-phaser.png"
+		"Image": "mr-black-mini-phaser.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Mini Reverb",
 		"Width": 1.78,
 		"Height": 3.7,
-		"Image": "mrblack-mini-reverb.png"
+		"Image": "mr-black-mini-reverb.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Mini Tremolo",
 		"Width": 1.78,
 		"Height": 3.7,
-		"Image": "mrblack-mini-tremolo.png"
+		"Image": "mr-black-mini-tremolo.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Mini Vintage Chorus",
 		"Width": 1.78,
 		"Height": 3.7,
-		"Image": "mrblack-mini-vintage-chorus.png"
+		"Image": "mr-black-mini-vintage-chorus.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Pana-Trem",
 		"Width": 3.98,
 		"Height": 4.7,
-		"Image": "mrblack-pana-trem.png"
+		"Image": "mr-black-pana-trem.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -22691,56 +22691,56 @@
 		"Name": "Stereo Vintage Ensemble",
 		"Width": 3.98,
 		"Height": 4.7,
-		"Image": "mrblack-stereovintageensemble.png"
-	},
-	{
-		"Brand": "Mr. Black",
-		"Name": "SuperMoon",
-		"Width": 2.62,
-		"Height": 4.33,
-		"Image": "mrblack-supermoon.png"
+		"Image": "mr-black-stereo-vintage-ensemble.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "SuperMoon Chrome",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-supermoonchrome.png"
+		"Image": "mr-black-supermoon-chrome.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "SuperMoon Eclipse",
 		"Width": 3.98,
 		"Height": 4.7,
-		"Image": "mrblack-supermoon-eclipse.png"
+		"Image": "mr-black-supermoon-eclipse.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "SuperMoon",
+		"Width": 2.62,
+		"Height": 4.33,
+		"Image": "mr-black-supermoon.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Super Swell",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-superswell.png"
+		"Image": "mr-black-super-swell.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Tapex 2",
 		"Width": 3.98,
 		"Height": 4.7,
-		"Image": "mrblack-tapex.png"
+		"Image": "mr-black-tapex-2.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Thunderclaw",
 		"Width": 2.62,
 		"Height": 4.33,
-		"Image": "mrblack-thunderclaw.png"
+		"Image": "mr-black-thunderclaw.png"
 	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Twin Lazers",
 		"Width": 3.98,
 		"Height": 4.7,
-		"Image": "mrblack-twinlazers.png"
+		"Image": "mr-black-twin-lazers.png"
 	},
 	{
 		"Brand": "Music Box Pedals",
@@ -25435,7 +25435,7 @@
 		"Name": "RevivalDRIVE Compact",
 		"Width": 2.6,
 		"Height": 5.59,
-		"Image": "origin-revivaldrivecompact.png"
+		"Image": "origin-revivaldrive-compact.png"
 	},
 	{
 		"Brand": "Origin Effects",
@@ -27101,14 +27101,14 @@
 		"Name": "Empress Chorus",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-empresschorus.png"
+		"Image": "red-witch-empress-chorus.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Empress Chorus Deus",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-empresschorus-deus.png"
+		"Image": "red-witch-empress-chorus-deus.png"
 	},
 	{
 		"Brand": "Red Witch",
@@ -27402,42 +27402,42 @@
 		"Name": "Mastermind GT/10",
 		"Width": 19.4,
 		"Height": 8.1,
-		"Image": "rjm-gt10.png"
+		"Image": "rjm-mastermind-gt10.png"
 	},
 	{
 		"Brand": "RJM",
 		"Name": "Mastermind GT/16",
 		"Width": 19.4,
 		"Height": 11.1,
-		"Image": "rjm-gt16.png"
+		"Image": "rjm-mastermind-gt16.png"
 	},
 	{
 		"Brand": "RJM",
 		"Name": "Mastermind GT/22",
 		"Width": 19.4,
 		"Height": 14.1,
-		"Image": "rjm-gt22.png"
+		"Image": "rjm-mastermind-gt22.png"
 	},
 	{
 		"Brand": "RJM",
 		"Name": "Mastermind LT",
 		"Width": 11.5,
 		"Height": 5.24,
-		"Image": "rjm-pbclt.png"
+		"Image": "rjm-mastermind-lt.png"
 	},
 	{
 		"Brand": "RJM",
 		"Name": "Mastermind PBC/10",
 		"Width": 17.5,
 		"Height": 5.32,
-		"Image": "rjm-mastermindpbc.png"
+		"Image": "rjm-mastermind-pbc10.png"
 	},
 	{
 		"Brand": "RJM",
 		"Name": "Mastermind PBC/6X",
 		"Width": 10.1,
 		"Height": 4.15,
-		"Image": "rjm-pbc6x.png"
+		"Image": "rjm-mastermind-pbc6x.png"
 	},
 	{
 		"Brand": "RJM",
