@@ -13294,6 +13294,13 @@
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "Custom Shop Supa-Wah",
+		"Width": 4.91,
+		"Height": 10,
+		"Image": "fulltone-custom-shop-supa-wah.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "Fat Boost FB-3",
 		"Width": 2.65,
 		"Height": 4.5,
