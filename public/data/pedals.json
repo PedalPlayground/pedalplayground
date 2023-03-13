@@ -21445,14 +21445,14 @@
 		"Name": "Bayou",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-bayou.png"
+		"Image": "mojo-hand-bayou.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Bluebonnet",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-bluebonnet.png"
+		"Image": "mojo-hand-bluebonnet.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
@@ -21473,112 +21473,105 @@
 		"Name": "Colossus",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-colossus.png"
+		"Image": "mojo-hand-colossus.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Crosstown",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-crosstown.png"
+		"Image": "mojo-hand-crosstown.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Dewdrop",
 		"Width": 2.9,
 		"Height": 4.8,
-		"Image": "mojohand-dewdrop.png"
+		"Image": "mojo-hand-dewdrop.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "DMBL",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-dmbl.png"
+		"Image": "mojo-hand-dmbl.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Dream Mender",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "mojohand-dream-mender.png"
+		"Image": "mojo-hand-dream-mender.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "El Guapo",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-el-guapo.png"
+		"Image": "mojo-hand-el-guapo.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Extra Special",
 		"Width": 2.9,
 		"Height": 4.8,
-		"Image": "mojohand-extraspecial.png"
+		"Image": "mojo-hand-extra-special.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "GRRRocker",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "mojohand-grrrocker.png"
+		"Image": "mojo-hand-grrrocker.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Iron Bell",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-ironbell.png"
+		"Image": "mojo-hand-iron-bell.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Little Wonder",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "mojohand-little-wonder.png"
+		"Image": "mojo-hand-little-wonder.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Magistrate",
 		"Width": 4.7,
 		"Height": 3.85,
-		"Image": "mojohand-magistrate.png"
+		"Image": "mojo-hand-magistrate.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Magpie",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-magpie.png"
+		"Image": "mojo-hand-magpie.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Mirror Ball",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-mirrorball.png"
-	},
-	{
-		"Brand": "Mojo Hand FX",
-		"Name": "Mister-O",
-		"Width": 2.59,
-		"Height": 4.4,
-		"Image": "mojohand-mister-o.png"
+		"Image": "mojo-hand-mirror-ball.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Mister-O v2",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "mojohand-mister-o-v2.png"
+		"Image": "mojo-hand-mister-o-v2.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
-		"Name": "Nebula",
-		"Width": 2.84,
-		"Height": 4.8,
-		"Image": "mojohand-nebula.png"
+		"Name": "Mister-O",
+		"Width": 2.59,
+		"Height": 4.4,
+		"Image": "mojo-hand-mister-o.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
@@ -21589,24 +21582,31 @@
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "Nebula",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "mojo-hand-nebula.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "Octaverse",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "mojohand-octaverse.png"
+		"Image": "mojo-hand-octaverse.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Odessa",
 		"Width": 4.7,
 		"Height": 3.92,
-		"Image": "mojohand-odessa.png"
+		"Image": "mojo-hand-odessa.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "One Ton Bee",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-one-ton-bee.png"
+		"Image": "mojo-hand-one-ton-bee.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
@@ -21620,63 +21620,63 @@
 		"Name": "Rook",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-rook.png"
+		"Image": "mojo-hand-rook.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Rook Royale",
 		"Width": 4.7,
 		"Height": 3.8,
-		"Image": "mojohand-rookroyale.png"
+		"Image": "mojo-hand-rook-royale.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Rounder",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-rounder.png"
+		"Image": "mojo-hand-rounder.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "RVT",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "mojohand-rvt.png"
+		"Image": "mojo-hand-rvt.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Sacred Cow",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-sacred-cow.png"
+		"Image": "mojo-hand-sacred-cow.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Sericon",
 		"Width": 4.7,
 		"Height": 3.92,
-		"Image": "mojohand-sericon.png"
+		"Image": "mojo-hand-sericon.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Speakeasy",
 		"Width": 2.84,
 		"Height": 4.8,
-		"Image": "mojohand-speakeasy.png"
+		"Image": "mojo-hand-speakeasy.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Superlative",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "mojohand-superlative.png"
+		"Image": "mojo-hand-superlative.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
 		"Name": "Swim Team",
 		"Width": 2.59,
 		"Height": 4.4,
-		"Image": "mojohand-swim-team.png"
+		"Image": "mojo-hand-swim-team.png"
 	},
 	{
 		"Brand": "Montreal Assembly",
@@ -25078,7 +25078,7 @@
 		"Name": "1Loop Box",
 		"Width": 2.13,
 		"Height": 3.98,
-		"Image": "onecontrol-1loop-box.png"
+		"Image": "one-control-1loop-box.png"
 	},
 	{
 		"Brand": "One Control",
@@ -25092,161 +25092,161 @@
 		"Name": "Agamidae Tail Loop",
 		"Width": 14.57,
 		"Height": 1.61,
-		"Image": "onecontrol-agamidae.png"
+		"Image": "one-control-agamidae.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Basilisk",
 		"Width": 4.29,
 		"Height": 3.38,
-		"Image": "onecontrol-basilisk.png"
-	},
-	{
-		"Brand": "One Control",
-		"Name": "BJF Buffer",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "onecontrol-bjf-buffer.png"
+		"Image": "one-control-basilisk.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "BJF Buffer Split",
 		"Width": 2.13,
 		"Height": 3.98,
-		"Image": "onecontrol-bjf-buffer-split.png"
+		"Image": "one-control-bjf-buffer-split.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "BJF Buffer",
+		"Width": 1.65,
+		"Height": 3.7,
+		"Image": "one-control-bjf-buffer.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Black Loop",
 		"Width": 4.72,
 		"Height": 2.56,
-		"Image": "onecontrol-black-loop.png"
+		"Image": "one-control-black-loop.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Caiman Tail Loop",
 		"Width": 17.32,
 		"Height": 2.44,
-		"Image": "onecontrol-caiman-tail-loop.png"
+		"Image": "one-control-caiman.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Chamaeleo Tail Loop MkII",
 		"Width": 17.32,
 		"Height": 2.6,
-		"Image": "onecontrol-chamaeleo.png"
+		"Image": "one-control-chamaeleo.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Croc Eye",
 		"Width": 3.7,
 		"Height": 1.48,
-		"Image": "onecontrol-croc-eye.png"
+		"Image": "one-control-croc-eye.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Crocodile Tail Loop OC10",
 		"Width": 18.2,
 		"Height": 4.35,
-		"Image": "onecontrol-crocodile.png"
+		"Image": "one-control-crocodile.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Crocodile Tail Loop Wing OC10W",
 		"Width": 17.32,
 		"Height": 3.72,
-		"Image": "onecontrol-crocodile-wing.png"
+		"Image": "one-control-crocodile-wing.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Gecko MkIII",
 		"Width": 4.72,
 		"Height": 2.56,
-		"Image": "onecontrol-gecko-mk3.png"
+		"Image": "one-control-gecko-mkiii.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Iguana Tail Loop 2",
 		"Width": 14.37,
 		"Height": 1.77,
-		"Image": "onecontrol-iguana.png"
+		"Image": "one-control-iguana.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Junction Box",
 		"Width": 3.7,
 		"Height": 1.73,
-		"Image": "onecontrol-junction-box.png"
+		"Image": "one-control-junction-box.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "LX Tuner with BJF Buffer",
 		"Width": 2.73,
 		"Height": 4.58,
-		"Image": "onecontrol-lx-tuner.png"
+		"Image": "one-control-lx-tuner.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "MIDI Solo Stereo Loop",
 		"Width": 1.89,
 		"Height": 3.86,
-		"Image": "onecontrol-midi-solo-stereo-loop.png"
+		"Image": "one-control-midi-solo-stereo-loop.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Minimal Series USB Porter",
 		"Width": 1.535,
 		"Height": 3.267,
-		"Image": "onecontrol-min-usb.png"
+		"Image": "one-control-minimal-usb.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Mosquito Blender Trail with BJF Buffer",
 		"Width": 1.89,
 		"Height": 3.7,
-		"Image": "onecontrol-mosquito-blender.png"
+		"Image": "one-control-mosquito-blender.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Pedal Board Junction Box 4M",
 		"Width": 4.45,
 		"Height": 2.56,
-		"Image": "onecontrol-pedal-board-junction-box-4m.png"
+		"Image": "one-control-pedal-board-junction-box-4m.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Salamandra Tail Loop",
 		"Width": 4.33,
 		"Height": 4.67,
-		"Image": "onecontrol-salamandra.png"
+		"Image": "one-control-salamandra.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Sonic Silver Peg",
 		"Width": 1.85,
 		"Height": 3.94,
-		"Image": "onecontrol-sonic-silver-peg.png"
+		"Image": "one-control-sonic-silver-peg.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Tuner with BJF Buffer",
 		"Width": 1.74,
 		"Height": 3.86,
-		"Image": "onecontrol-tuner.png"
+		"Image": "one-control-tuner.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "White Loop",
 		"Width": 4.72,
 		"Height": 2.56,
-		"Image": "onecontrol-white-loop.png"
+		"Image": "one-control-white-loop.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Xenagama Tail Loop 2",
 		"Width": 9.6,
 		"Height": 1.65,
-		"Image": "onecontrol-xenagama.png"
+		"Image": "one-control-xenagama.png"
 	},
 	{
 		"Brand": "Orange",
