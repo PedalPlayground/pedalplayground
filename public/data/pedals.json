@@ -27007,17 +27007,17 @@
 	},
 	{
 		"Brand": "Red Panda",
-		"Name": "Bitmap 2",
-		"Width": 3.05,
-		"Height": 4.75,
-		"Image": "red-panda-bitmap-2.png"
-	},
-	{
-		"Brand": "Red Panda",
 		"Name": "Bitmap",
 		"Width": 3.3,
 		"Height": 4.4,
 		"Image": "red-panda-bitmap.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Bitmap 2",
+		"Width": 3.05,
+		"Height": 4.75,
+		"Image": "red-panda-bitmap-2.png"
 	},
 	{
 		"Brand": "Red Panda",
