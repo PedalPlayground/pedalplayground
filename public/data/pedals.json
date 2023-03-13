@@ -24420,56 +24420,56 @@
 		"Name": "Kiaayo",
 		"Width": 2.6,
 		"Height": 5,
-		"Image": "nativeaudio-kiaayo.png"
+		"Image": "native-audio-kiaayo.png"
 	},
 	{
 		"Brand": "Native Audio",
 		"Name": "Makoyii",
 		"Width": 2.6,
 		"Height": 5,
-		"Image": "nativeaudio-makoyii.png"
+		"Image": "native-audio-makoyii.png"
 	},
 	{
 		"Brand": "Native Audio",
 		"Name": "Midnight V2",
 		"Width": 2.71,
 		"Height": 5,
-		"Image": "nativeaudio-midnight-v2.png"
+		"Image": "native-audio-midnight-v2.png"
 	},
 	{
 		"Brand": "Native Audio",
 		"Name": "Pretty Bird Woman",
 		"Width": 2.6,
 		"Height": 5,
-		"Image": "nativeaudio-pretty-bird-woman.png"
-	},
-	{
-		"Brand": "Native Audio",
-		"Name": "Rising Sun",
-		"Width": 2.71,
-		"Height": 5,
-		"Image": "nativeaudio-rising-sun.png"
+		"Image": "native-audio-pretty-bird-woman.png"
 	},
 	{
 		"Brand": "Native Audio",
 		"Name": "Rising Sun V2",
 		"Width": 2.6,
 		"Height": 5,
-		"Image": "nativeaudio-rising-sun-v2.png"
+		"Image": "native-audio-rising-sun-v2.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Rising Sun",
+		"Width": 2.71,
+		"Height": 5,
+		"Image": "native-audio-rising-sun.png"
 	},
 	{
 		"Brand": "Native Audio",
 		"Name": "War Party",
 		"Width": 2.6,
 		"Height": 5,
-		"Image": "nativeaudio-war-party.png"
+		"Image": "native-audio-war-party.png"
 	},
 	{
 		"Brand": "Native Audio",
 		"Name": "Wilderness V1.5",
 		"Width": 2.71,
 		"Height": 5,
-		"Image": "nativeaudio-wilderness.png"
+		"Image": "native-audio-wilderness.png"
 	},
 	{
 		"Brand": "Neo Instruments",
@@ -27010,21 +27010,21 @@
 		"Name": "Bitmap 2",
 		"Width": 3.05,
 		"Height": 4.75,
-		"Image": "redpanda-bitmap2.png"
+		"Image": "red-panda-bitmap-2.png"
 	},
 	{
 		"Brand": "Red Panda",
 		"Name": "Bitmap",
 		"Width": 3.3,
 		"Height": 4.4,
-		"Image": "redpanda-bitmap.png"
+		"Image": "red-panda-bitmap.png"
 	},
 	{
 		"Brand": "Red Panda",
 		"Name": "Buffer",
 		"Width": 2.5,
 		"Height": 1.5,
-		"Image": "redpanda-buffer.png"
+		"Image": "red-panda-buffer.png"
 	},
 	{
 		"Brand": "Red Panda",
@@ -27045,49 +27045,49 @@
 		"Name": "Mixer",
 		"Width": 4.4,
 		"Height": 2.6,
-		"Image": "redpanda-mixer.png"
-	},
-	{
-		"Brand": "Red Panda",
-		"Name": "Particle",
-		"Width": 3.3,
-		"Height": 4.4,
-		"Image": "redpanda-particle.png"
+		"Image": "red-panda-mixer.png"
 	},
 	{
 		"Brand": "Red Panda",
 		"Name": "Particle V2",
 		"Width": 3.05,
 		"Height": 4.75,
-		"Image": "redpanda-particle2.png"
+		"Image": "red-panda-particle-v2.png"
 	},
 	{
 		"Brand": "Red Panda",
-		"Name": "Raster",
+		"Name": "Particle",
 		"Width": 3.3,
 		"Height": 4.4,
-		"Image": "redpanda-raster.png"
+		"Image": "red-panda-particle.png"
 	},
 	{
 		"Brand": "Red Panda",
 		"Name": "Raster 2",
 		"Width": 3.05,
 		"Height": 4.75,
-		"Image": "redpanda-raster2.png"
+		"Image": "red-panda-raster-2.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Raster",
+		"Width": 3.3,
+		"Height": 4.4,
+		"Image": "red-panda-raster.png"
 	},
 	{
 		"Brand": "Red Panda",
 		"Name": "Remote 4",
 		"Width": 10,
 		"Height": 2.95,
-		"Image": "redpanda-remote4.png"
+		"Image": "red-panda-remote-4.png"
 	},
 	{
 		"Brand": "Red Panda",
 		"Name": "Tensor",
 		"Width": 3.05,
 		"Height": 4.75,
-		"Image": "redpanda-tensor.png"
+		"Image": "red-panda-tensor.png"
 	},
 	{
 		"Brand": "Red Witch",
@@ -27115,14 +27115,14 @@
 		"Name": "Factotum",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-factotum.png"
+		"Image": "red-witch-factotum.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Famulus",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-famulus.png"
+		"Image": "red-witch-famulus.png"
 	},
 	{
 		"Brand": "Red Witch",
@@ -27150,63 +27150,63 @@
 		"Name": "Medusa Chorus Tremolo",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-medusa.png"
+		"Image": "red-witch-medusa.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Omnia Germanium Amplifier",
 		"Width": 3.98,
 		"Height": 1.96,
-		"Image": "redwitch-omnia.png"
+		"Image": "red-witch-omnia.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Opia Fuzz Engine",
 		"Width": 3.98,
 		"Height": 1.64,
-		"Image": "redwitch-opia.png"
+		"Image": "red-witch-opia.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Pentavocal Tremolo",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-pentavocal.png"
+		"Image": "red-witch-pentavocal.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "SS Eve Tremolo",
 		"Width": 1.77,
 		"Height": 3.43,
-		"Image": "redwitch-eve.png"
+		"Image": "red-witch-ss-eve.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "SS Grace Compressor",
 		"Width": 1.77,
 		"Height": 3.43,
-		"Image": "redwitch-grace.png"
+		"Image": "red-witch-ss-grace.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "SS Joy Distortion",
 		"Width": 1.77,
 		"Height": 3.43,
-		"Image": "redwitch-joy.png"
+		"Image": "red-witch-ss-joy.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "SS Lily Boost",
 		"Width": 1.77,
 		"Height": 3.43,
-		"Image": "redwitch-lily.png"
+		"Image": "red-witch-ss-lily.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "SS Ruby Fuzz",
 		"Width": 1.77,
 		"Height": 3.43,
-		"Image": "redwitch-ruby.png"
+		"Image": "red-witch-ss-ruby.png"
 	},
 	{
 		"Brand": "Red Witch",
@@ -27220,42 +27220,42 @@
 		"Name": "SS Violet Delay",
 		"Width": 1.77,
 		"Height": 3.43,
-		"Image": "redwitch-violet.png"
+		"Image": "red-witch-ss-violet.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "SS Violetta Delay",
 		"Width": 1.84,
 		"Height": 3.43,
-		"Image": "redwitch-violetta.png"
+		"Image": "red-witch-ss-violetta.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Synthotron II",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-synthotron.png"
+		"Image": "red-witch-synthotron-ii.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Titan",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-titan.png"
+		"Image": "red-witch-titan.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Xenia Overdrive Engine",
 		"Width": 3.98,
 		"Height": 1.96,
-		"Image": "redwitch-xenia.png"
+		"Image": "red-witch-xenia.png"
 	},
 	{
 		"Brand": "Red Witch",
 		"Name": "Zeus",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-zeus.png"
+		"Image": "red-witch-zeus.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
