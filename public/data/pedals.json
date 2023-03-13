@@ -29729,24 +29729,17 @@
 	},
 	{
 		"Brand": "Suhr",
-		"Name": "Riot Mini",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "suhr-riot-mini.png"
-	},
-	{
-		"Brand": "Suhr",
-		"Name": "Shiba Mini",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "suhr-shiba-mini.png"
-	},
-	{
-		"Brand": "Suhr",
 		"Name": "Riot",
 		"Width": 2.5,
 		"Height": 4.5,
 		"Image": "suhr-riot.png"
+	},
+	{
+		"Brand": "Suhr",
+		"Name": "Riot Mini",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "suhr-riot-mini.png"
 	},
 	{
 		"Brand": "Suhr",
@@ -29782,6 +29775,20 @@
 		"Width": 2.5,
 		"Height": 4.5,
 		"Image": "suhr-shibadrivereloaded.png"
+	},
+	{
+		"Brand": "Suhr",
+		"Name": "Shiba Drive Reloaded Mini",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "suhr-shiba-mini.png"
+	},
+	{
+		"Brand": "Suhr",
+		"Name": "Woodshed",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "suhr-woodshed.png"
 	},
 	{
 		"Brand": "Supro",
