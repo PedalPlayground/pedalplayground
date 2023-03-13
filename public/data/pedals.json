@@ -19858,6 +19858,13 @@
 	},
 	{
 		"Brand": "Lovepedal",
+		"Name": "Eternity Kanji",
+		"Width": 2.66,
+		"Height": 4.4,
+		"Image": "lovepedal-eternity-kanji.png"
+	},
+	{
+		"Brand": "Lovepedal",
 		"Name": "Hermida Zendrive",
 		"Width": 2.5,
 		"Height": 4.37,
