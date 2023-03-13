@@ -4,98 +4,98 @@
 		"Name": "DRV",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions.png"
+		"Image": "1981-inventions-drv.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Alt Universe)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-alt-uni.png"
+		"Image": "1981-inventions-drv-alt-universe.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Blackout)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-black.png"
+		"Image": "1981-inventions-drv-blackout.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Fractured)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-fractured.png"
+		"Image": "1981-inventions-drv-fractured.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Hyperfade)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-hyperfade.png"
+		"Image": "1981-inventions-drv-hyperfade.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Outline)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-drv-outline.png"
+		"Image": "1981-inventions-drv-outline.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Pink)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-drv-pink.png"
+		"Image": "1981-inventions-drv-pink.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Seafoam Green)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-sfg.png"
+		"Image": "1981-inventions-drv-seafoam-green.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Sky Blue Sky)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-sky-blue.png"
+		"Image": "1981-inventions-drv-sky-blue-sky.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Teal)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-drv-teal.png"
+		"Image": "1981-inventions-drv-teal.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (White No3)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-drv-whiteno3.png"
+		"Image": "1981-inventions-drv-white-no3.png"
 	},
 	{
 		"Brand": "29 Pedals",
 		"Name": "EUNA",
 		"Width": 4.88,
 		"Height": 3.88,
-		"Image": "29pedals-euna.png"
+		"Image": "29-pedals-euna.png"
 	},
 	{
 		"Brand": "29 Pedals",
 		"Name": "FLWR",
 		"Width": 3.41,
 		"Height": 3.88,
-		"Image": "29pedals-flwr.png"
+		"Image": "29-pedals-flwr.png"
 	},
 	{
 		"Brand": "29 Pedals",
 		"Name": "OAMP",
 		"Width": 4.88,
 		"Height": 3.88,
-		"Image": "29pedals-oamp.png"
+		"Image": "29-pedals-oamp.png"
 	},
 	{
 		"Brand": "3Degrees Audio",
@@ -123,7 +123,7 @@
 		"Name": "Doom 2",
 		"Width": 2.5,
 		"Height": 4.56,
-		"Image": "3leaf-audio-doom2.png"
+		"Image": "3leaf-audio-doom-2.png"
 	},
 	{
 		"Brand": "3Leaf Audio",
@@ -732,14 +732,14 @@
 		"Name": "Neo Footswitch",
 		"Width": 4,
 		"Height": 2.36,
-		"Image": "alexander-neo-link.png"
+		"Image": "alexander-neo-footswitch.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Neo-Link",
 		"Width": 2,
 		"Height": 2,
-		"Image": "alexander-neo-footswitch.png"
+		"Image": "alexander-neo-link.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -781,7 +781,7 @@
 		"Name": "Riff",
 		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-riff-instant-tone-sanitizer.png"
+		"Image": "alexander-riff.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -823,14 +823,14 @@
 		"Name": "Sugarcube (Crystal White)",
 		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-sugarcube-white.png"
+		"Image": "alexander-sugarcube-crystal-white.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Sugarcube (Saccharine Pink)",
 		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-sugarcube-pink.png"
+		"Image": "alexander-sugarcube-saccharine-pink.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -858,14 +858,14 @@
 		"Name": "Syntax Error",
 		"Width": 2.78,
 		"Height": 4.7,
-		"Image": "alexander-syntaxerror.png"
+		"Image": "alexander-syntax-error.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Syntax Error 2",
 		"Width": 4.7,
 		"Height": 3.86,
-		"Image": "alexander-syntaxerror2.png"
+		"Image": "alexander-syntax-error-2.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -879,42 +879,42 @@
 		"Name": "Alcmene",
 		"Width": 1.7,
 		"Height": 3.7,
-		"Image": "allpedal-alcmene.png"
+		"Image": "all-pedal-alcmene.png"
 	},
 	{
 		"Brand": "All-Pedal",
 		"Name": "Galactavise",
 		"Width": 2.6,
 		"Height": 5.09,
-		"Image": "allpedal-galactavise.png"
+		"Image": "all-pedal-galactavise.png"
 	},
 	{
 		"Brand": "All-Pedal",
 		"Name": "Love Machine",
 		"Width": 2.6,
 		"Height": 5.09,
-		"Image": "allpedal-love-machine.png"
+		"Image": "all-pedal-love-machine.png"
 	},
 	{
 		"Brand": "All-Pedal",
 		"Name": "Macrodose",
 		"Width": 3.8,
 		"Height": 4.88,
-		"Image": "allpedal-macrodose.png"
+		"Image": "all-pedal-macrodose.png"
 	},
 	{
 		"Brand": "All-Pedal",
 		"Name": "Slamurai",
 		"Width": 2.6,
 		"Height": 5.09,
-		"Image": "allpedal-slamurai.png"
+		"Image": "all-pedal-slamurai.png"
 	},
 	{
 		"Brand": "All-Pedal",
 		"Name": "Slamurai (Parlor Edition)",
 		"Width": 2.6,
 		"Height": 5.09,
-		"Image": "allpedal-slamurai-parlor.png"
+		"Image": "all-pedal-slamurai-parlor.png"
 	},
 	{
 		"Brand": "Altoids",
@@ -1117,7 +1117,7 @@
 		"Name": "Aux 3",
 		"Width": 4.78,
 		"Height": 2.76,
-		"Image": "analogendeavors-aux.png"
+		"Image": "analog-endeavors-aux.png"
 	},
 	{
 		"Brand": "Analog.Man",
@@ -1418,7 +1418,7 @@
 		"Name": "Car Crush Chorus/Vibe",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-car-crush.png"
+		"Image": "animals-pedal-car-crush.png"
 	},
 	{
 		"Brand": "Animals Pedal",
@@ -1467,7 +1467,7 @@
 		"Name": "I Was A Wolf In The Forest Distortion",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-i-was-a-wolf.png"
+		"Image": "animals-pedal-i-was-a-wolf.png"
 	},
 	{
 		"Brand": "Animals Pedal",
@@ -1530,14 +1530,14 @@
 		"Name": "Tioga Road Cycling Distortion",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-pedal-tioga-road.png"
+		"Image": "animals-pedal-tioga-road-cycling.png"
 	},
 	{
 		"Brand": "Animals Pedal",
 		"Name": "Vintage Van Driving is Very Fun",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-pedal-vintage-van.png"
+		"Image": "animals-pedal-vintage-van-driving.png"
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
@@ -1656,28 +1656,28 @@
 		"Name": "017 Rust Rod Fuzz",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-rust-rod-017.png"
+		"Image": "animals-pedal-rust-rod-017.png"
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
 		"Name": "018 Rust Rod Fuzz",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-rust-rod-018.png"
+		"Image": "animals-pedal-rust-rod-018.png"
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
 		"Name": "019 Car Crush Chorus/Vibe",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-car-crush-019.png"
+		"Image": "animals-pedal-car-crush-019.png"
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
 		"Name": "020 Car Crush Chorus/Vibe",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-car-crush-020.png"
+		"Image": "animals-pedal-car-crush-020.png"
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
@@ -1705,14 +1705,14 @@
 		"Name": "024 I Was A Wolf In The Forest Distortion",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-i-was-a-wolf-024.png"
+		"Image": "animals-pedal-i-was-a-wolf-024.png"
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
 		"Name": "025 I Was A Wolf In The Forest Distortion",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-i-was-a-wolf-025.png"
+		"Image": "animals-pedal-i-was-a-wolf-025.png"
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
@@ -1733,7 +1733,7 @@
 		"Name": "028 Car Crush Chorus/Vibe",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-car-crush-028.png"
+		"Image": "animals-pedal-car-crush-028.png"
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
@@ -1789,7 +1789,7 @@
 		"Name": "036 I Was A Wolf In The Forest Distortion",
 		"Width": 2.5,
 		"Height": 4.4,
-		"Image": "animals-i-was-a-wolf-036.png"
+		"Image": "animals-pedal-i-was-a-wolf-036.png"
 	},
 	{
 		"Brand": "Animals Pedal Custom Illustration",
@@ -1898,14 +1898,14 @@
 	},
 	{
 		"Brand": "Apple",
-		"Name": "Macbook Pro 14",
+		"Name": "MacBook Pro 14",
 		"Width": 15.15,
 		"Height": 8.99,
 		"Image": "apple-macbook-pro-14.png"
 	},
 	{
 		"Brand": "Apple",
-		"Name": "Macbook Pro 16",
+		"Name": "MacBook Pro 16",
 		"Width": 16.77,
 		"Height": 10.03,
 		"Image": "apple-macbook-pro-16.png"
@@ -4813,7 +4813,7 @@
 		"Name": "12 Switcher",
 		"Width": 26.378,
 		"Height": 2.3622,
-		"Image": "brightonion-12switcher.png"
+		"Image": "bright-onion-12-switcher.png"
 	},
 	{
 		"Brand": "Broughton",
@@ -4911,7 +4911,7 @@
 		"Name": "Vanilla Soft Drive",
 		"Width": 3.93701,
 		"Height": 4.33071,
-		"Image": "brunetti-vanilla-drive.png"
+		"Image": "brunetti-vanilla-soft-drive.png"
 	},
 	{
 		"Brand": "BSS",
@@ -5380,7 +5380,7 @@
 		"Name": "CSIDMAN",
 		"Width": 2.6,
 		"Height": 4.33,
-		"Image": "catalinbread-discman.png"
+		"Image": "catalinbread-csidman.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -5699,7 +5699,7 @@
 	},
 	{
 		"Brand": "Ceriatone",
-		"Name": "Centura (raw)",
+		"Name": "Centura (Raw)",
 		"Width": 6.62,
 		"Height": 5.22,
 		"Image": "ceriatone-centura-raw.png"
@@ -25103,17 +25103,17 @@
 	},
 	{
 		"Brand": "One Control",
-		"Name": "BJF Buffer Split",
-		"Width": 2.13,
-		"Height": 3.98,
-		"Image": "one-control-bjf-buffer-split.png"
-	},
-	{
-		"Brand": "One Control",
 		"Name": "BJF Buffer",
 		"Width": 1.65,
 		"Height": 3.7,
 		"Image": "one-control-bjf-buffer.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "BJF Buffer Split",
+		"Width": 2.13,
+		"Height": 3.98,
+		"Image": "one-control-bjf-buffer-split.png"
 	},
 	{
 		"Brand": "One Control",
@@ -27028,17 +27028,17 @@
 	},
 	{
 		"Brand": "Red Panda",
-		"Name": "Context 2",
-		"Width": 3.05,
-		"Height": 4.75,
-		"Image": "red-panda-context-2.png"
-	},
-	{
-		"Brand": "Red Panda",
 		"Name": "Context",
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "red-panda-context.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Context 2",
+		"Width": 3.05,
+		"Height": 4.75,
+		"Image": "red-panda-context-2.png"
 	},
 	{
 		"Brand": "Red Panda",
@@ -27049,13 +27049,6 @@
 	},
 	{
 		"Brand": "Red Panda",
-		"Name": "Particle V2",
-		"Width": 3.05,
-		"Height": 4.75,
-		"Image": "red-panda-particle-v2.png"
-	},
-	{
-		"Brand": "Red Panda",
 		"Name": "Particle",
 		"Width": 3.3,
 		"Height": 4.4,
@@ -27063,10 +27056,10 @@
 	},
 	{
 		"Brand": "Red Panda",
-		"Name": "Raster 2",
+		"Name": "Particle V2",
 		"Width": 3.05,
 		"Height": 4.75,
-		"Image": "red-panda-raster-2.png"
+		"Image": "red-panda-particle-v2.png"
 	},
 	{
 		"Brand": "Red Panda",
@@ -27074,6 +27067,13 @@
 		"Width": 3.3,
 		"Height": 4.4,
 		"Image": "red-panda-raster.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Raster 2",
+		"Width": 3.05,
+		"Height": 4.75,
+		"Image": "red-panda-raster-2.png"
 	},
 	{
 		"Brand": "Red Panda",
@@ -34599,14 +34599,14 @@
 		"Name": "'59 Sound",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-59sound.png"
+		"Image": "zvex-59-sound.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "'59 Sound Vertical",
 		"Width": 2.58,
 		"Height": 4.31,
-		"Image": "zvex-59sound-vertical.png"
+		"Image": "zvex-59-sound-vertical.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -34620,21 +34620,21 @@
 		"Name": "Box of Metal",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-boxofmetal.png"
+		"Image": "zvex-box-of-metal.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Box of Rock",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-boxofrock.png"
+		"Image": "zvex-box-of-rock.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Box of Rock Vertical",
 		"Width": 2.58,
 		"Height": 4.31,
-		"Image": "zvex-boxofrockvertical.png"
+		"Image": "zvex-box-of-rock-vertical.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -34648,7 +34648,7 @@
 		"Name": "Channel 2",
 		"Width": 1.82,
 		"Height": 3.7,
-		"Image": "zvex-channel2.png"
+		"Image": "zvex-channel-2.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -34662,70 +34662,70 @@
 		"Name": "Double Rock",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-doublerock.png"
+		"Image": "zvex-double-rock.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Double Rock Vexter",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-doublerock-vexter.png"
+		"Image": "zvex-double-rock-vexter.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Fat Fuzz Factory",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-fat-fuzzfactory.png"
+		"Image": "zvex-fat-fuzz-factory.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Fat Fuzz Factory Vexter",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-fat-fuzzfactory-vexter.png"
+		"Image": "zvex-fat-fuzz-factory-vexter.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Fuzz Factory",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-fuzzfactory.png"
+		"Image": "zvex-fuzz-factory.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Fuzz Factory Vertical",
 		"Width": 2.58,
 		"Height": 4.31,
-		"Image": "zvex-fuzzfactory-vertical.png"
+		"Image": "zvex-fuzz-factory-vertical.png"
 	},
 	{
 		"Brand": "Zvex",
-		"Name": "Fuzz Factory Vexter",
+		"Name": "Fuzz Factory Vexter (25th Anniversary)",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-fuzzfactory-vexter.png"
+		"Image": "zvex-fuzz-factory-vexter.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Fuzz Factory Vexter (Silver)",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-fuzzfactory-vexter-silver.png"
+		"Image": "zvex-fuzz-factory-vexter-silver.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Fuzz Factory 7",
 		"Width": 3.64,
 		"Height": 4.8,
-		"Image": "zvex-fuzzfactory7.png"
+		"Image": "zvex-fuzz-factory-7.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Fuzz Factory 7 Vexter",
 		"Width": 3.64,
 		"Height": 4.8,
-		"Image": "zvex-fuzzfactory7-vexter.png"
+		"Image": "zvex-fuzz-factory-7-vexter.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -34739,49 +34739,49 @@
 		"Name": "Instant Lo-Fi Junky",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-lofijunky.png"
+		"Image": "zvex-instant-lo-fi-junky.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Instant Lo-Fi Junky (Little Box Exclusive)",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-lofi-junky-little-box.png"
+		"Image": "zvex-instant-lo-fi-junky-little-box.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Instant Lo-Fi Junky Vertical",
 		"Width": 2.58,
 		"Height": 4.31,
-		"Image": "zvex-lofijunky-vertical.png"
+		"Image": "zvex-instant-lo-fi-junky-vertical.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Instant Lo-Fi Junky Vexter",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-lofijunky-vexter.png"
+		"Image": "zvex-instant-lo-fi-junky-vexter.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Jonny Octave",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-jonnyoctave.png"
+		"Image": "zvex-jonny-octave.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Lo-Fi Loop Junky",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-lofiloopjunky.png"
+		"Image": "zvex-lo-fi-loop-junky.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Loop Gate",
 		"Width": 4.68,
 		"Height": 2.46,
-		"Image": "zvex-loopgate.png"
+		"Image": "zvex-loop-gate.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -34809,7 +34809,7 @@
 		"Name": "Probe Wah",
 		"Width": 4.7,
 		"Height": 7.5,
-		"Image": "zvex-probewah.png"
+		"Image": "zvex-probe-wah.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -34845,42 +34845,42 @@
 		"Name": "Super Duper 2-in-1",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-superduper2in1.png"
+		"Image": "zvex-super-duper-2-in-1.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Super Hard On",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-superhardon.png"
+		"Image": "zvex-super-hard-on.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Super Hard On Vexter",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-superhardon-vexter.png"
+		"Image": "zvex-super-hard-on-vexter.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Super Ringtone",
 		"Width": 5.94,
 		"Height": 4.87,
-		"Image": "zvex-superringtone.png"
+		"Image": "zvex-super-ringtone.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Super Seek Trem",
 		"Width": 5.94,
 		"Height": 4.87,
-		"Image": "zvex-superseektrem.png"
+		"Image": "zvex-super-seek-trem.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Super Seek Wah",
 		"Width": 5.94,
 		"Height": 4.87,
-		"Image": "zvex-superseekwah.png"
+		"Image": "zvex-super-seek-wah.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -34894,20 +34894,20 @@
 		"Name": "Woolly Mammoth",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-woollymammoth.png"
+		"Image": "zvex-woolly-mammoth.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Woolly Mammoth 7",
 		"Width": 3.64,
 		"Height": 4.8,
-		"Image": "zvex-woollymammoth7.png"
+		"Image": "zvex-woolly-mammoth-7.png"
 	},
 	{
 		"Brand": "Zvex",
 		"Name": "Woolly Mammoth Vexter",
 		"Width": 4.68,
 		"Height": 2.38,
-		"Image": "zvex-woollymammoth-vexter.png"
+		"Image": "zvex-woolly-mammoth-vexter.png"
 	}
 ]
