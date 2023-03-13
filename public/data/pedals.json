@@ -25934,6 +25934,13 @@
 	},
 	{
 		"Brand": "PastFx",
+		"Name": "New Division",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "pastfx-new-division.png"
+	},
+	{
+		"Brand": "PastFx",
 		"Name": "Nick James Foot Phaser",
 		"Width": 2.57,
 		"Height": 4.33,
@@ -25959,6 +25966,13 @@
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-revolution.png"
+	},
+	{
+		"Brand": "PastFx",
+		"Name": "Rotary Phaser",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "pastfx-rotary-phaser.png"
 	},
 	{
 		"Brand": "Pastfx",
@@ -29662,7 +29676,6 @@
 		"Width": 2.75,
 		"Height": 4.4,
 		"Image": "subdecay-vagabond.png"
-
 	},
 	{
 		"Brand": "Suhr",
