@@ -2710,6 +2710,13 @@
 	},
 	{
 		"Brand": "Beetronics",
+		"Name": "Seabee",
+		"Width": 3.55,
+		"Height": 5.5,
+		"Image": "beetronics-seabee.png"
+	},
+	{
+		"Brand": "Beetronics",
 		"Name": "Swarm",
 		"Width": 3.99,
 		"Height": 5.5,
