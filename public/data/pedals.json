@@ -24030,6 +24030,13 @@
 	},
 	{
 		"Brand": "Nobels",
+		"Name": "TR-X",
+		"Width": 2.89,
+		"Height": 5.08,
+		"Image": "nobels-tr-x.png"
+	},
+	{
+		"Brand": "Nobels",
 		"Name": "ODR Mini",
 		"Width": 1.99,
 		"Height": 3.66,
