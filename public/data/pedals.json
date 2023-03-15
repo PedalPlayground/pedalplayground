@@ -6042,6 +6042,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "MOOD MKII",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-mood-mk2.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Preamp MKII",
 		"Width": 5.75,
 		"Height": 6.5,
