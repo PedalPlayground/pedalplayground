@@ -9751,6 +9751,13 @@
 		"Image": "eden-i90.png"
 	},
 	{
+		"Brand": "Eden Amps",
+		"Name": "WTDI Preamp",
+		"Width": 4.74,
+		"Height": 3.56,
+		"Image": "eden-wtdi.png"
+	},
+	{
 		"Brand": "Effectrode",
 		"Name": "Blackbird",
 		"Width": 7.5,
