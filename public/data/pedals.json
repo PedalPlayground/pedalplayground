@@ -14339,7 +14339,7 @@
 		"Brand": "Greer Amps",
 		"Name": "Supa Cobra",
 		"Width": 2.6,
-		"Height": 4.9,
+		"Height": 4.93,
 		"Image": "greer-supa-cobra.png"
 	},
 	{
@@ -14558,6 +14558,27 @@
 		"Width": 2.76,
 		"Height": 5.13,
 		"Image": "hamstead-zenith.png"
+	},
+	{
+		"Brand": "Harby",
+		"Name": "BMF",
+		"Width": 2.91,
+		"Height": 4.86,
+		"Image": "harby-bmf.png"
+	},
+	{
+		"Brand": "Harby",
+		"Name": "Centauri",
+		"Width": 2.91,
+		"Height": 4.86,
+		"Image": "harby-centauri.png"
+	},
+	{
+		"Brand": "Harby",
+		"Name": "Noble Tone",
+		"Width": 2.91,
+		"Height": 4.86,
+		"Image": "harby-noble-tone.png"
 	},
 	{
 		"Brand": "Harley Benton",
