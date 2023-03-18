@@ -7693,6 +7693,13 @@
 		"Image": "decibelics-golden-royale.png"
 	},
 	{
+		"Brand": "Deep Trip",
+		"Name": "Hellbender",
+		"Width": 4.7,
+		"Height": 6.06,
+		"Image": "deep-trip-hellbender.png"
+	},
+	{
 		"Brand": "Deepspace Devices",
 		"Name": "Red Ghost",
 		"Width": 2.9,
