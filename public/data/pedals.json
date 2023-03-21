@@ -6742,6 +6742,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Motherload",
+		"Width": 2.5,
+		"Height": 4.72,
+		"Image": "ctc-motherload.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "Planet B Plus",
 		"Width": 4.7,
 		"Height": 3.78,
