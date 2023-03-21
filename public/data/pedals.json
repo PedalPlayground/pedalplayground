@@ -28076,30 +28076,79 @@
 	},
 	{
 		"Brand": "Shift Line",
-		"Name": "A+ Astronaut III",
+		"Name": "Astronaut V.2",
 		"Width": 2.63,
-		"Height": 4.33,
-		"Image": "astronaut-III.png"
+		"Height": 4.37,
+		"Image": "shiftline-astronaut-v2.png"
 	},
 	{
 		"Brand": "Shift Line",
-		"Name": "A+ Buzz V.2",
+		"Name": "Astronaut III",
+		"Width": 2.7,
+		"Height": 4.32,
+		"Image": "shiftline-astronaut-3.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Astronaut V",
+		"Width": 4.1,
+		"Height": 4.39,
+		"Image": "shiftline-astronaut-5.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Buzz",
 		"Width": 2.63,
-		"Height": 4.33,
+		"Height": 4.37,
+		"Image": "shiftline-buzz.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Buzz V.2",
+		"Width": 2.7,
+		"Height": 4.32,
 		"Image": "shiftline-buzz-v2.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "CabZone Bass",
+		"Width": 4.33,
+		"Height": 2.85,
+		"Image": "shiftline-cabzone-bass.png"
 	},
 	{
 		"Brand": "Shift Line",
 		"Name": "CabZone X",
 		"Width": 4.33,
-		"Height": 2.83,
+		"Height": 2.85,
 		"Image": "shiftline-cabzonex.png"
 	},
 	{
 		"Brand": "Shift Line",
+		"Name": "Everest",
+		"Width": 2.63,
+		"Height": 4.37,
+		"Image": "shiftline-everest.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Everest II",
+		"Width": 4.1,
+		"Height": 4.39,
+		"Image": "shiftline-everest-2.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Everest II (Black)",
+		"Width": 4.1,
+		"Height": 4.39,
+		"Image": "shiftline-everest-2-black.png"
+	},
+	{
+		"Brand": "Shift Line",
 		"Name": "Flex",
-		"Width": 4.88,
-		"Height": 4.09,
+		"Width": 4.9,
+		"Height": 3.95,
 		"Image": "shiftline-flex.png"
 	},
 	{
@@ -28107,14 +28156,63 @@
 		"Name": "Twin MkIIIS",
 		"Width": 4.88,
 		"Height": 4.09,
-		"Image": "shift-line-twin-mkiiis.png"
+		"Image": "shiftline-twin-mkiiis.png"
 	},
 	{
 		"Brand": "Shift Line",
-		"Name": "Olympic MkIIIS",
-		"Width": 4.88,
-		"Height": 4.09,
-		"Image": "shiftline-olympic-mkiiis.png"
+		"Name": "Olympic Mk II",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "shiftline-olympic-mk2.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Olympic Mk IIIS",
+		"Width": 4.9,
+		"Height": 4.23,
+		"Image": "shiftline-olympic-mk3s.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Prism",
+		"Width": 2.63,
+		"Height": 4.37,
+		"Image": "shiftline-prism.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Prism II",
+		"Width": 4.1,
+		"Height": 4.39,
+		"Image": "shiftline-prism-2.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Prism II (Black)",
+		"Width": 4.1,
+		"Height": 4.39,
+		"Image": "shiftline-prism-2-black.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Stages",
+		"Width": 2.7,
+		"Height": 4.21,
+		"Image": "shiftline-stages.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Twin Mk II",
+		"Width": 4.86,
+		"Height": 3.84,
+		"Image": "shiftline-twin-mk2.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Twin Mk IIIS",
+		"Width": 4.9,
+		"Height": 4.23,
+		"Image": "shiftline-twin-mk3s.png"
 	},
 	{
 		"Brand": "Shin-ei",
