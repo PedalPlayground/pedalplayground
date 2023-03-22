@@ -27501,6 +27501,14 @@
 		"Image": "ryra-klone-seafoam.png"
 	},
 	{
+		"Brand": "RYRA",
+		"Name": "Klone (gold)",
+		"Width": 4.67,
+		"Height": 3.7,
+		"Image": "ryra-klone-gold.png"
+	},
+
+	{
 		"Brand": "Santono",
 		"Name": "Etched Pick Tin",
 		"Width": 2,
@@ -31875,6 +31883,13 @@
 		"Width": 1.89,
 		"Height": 3.7,
 		"Image": "valeton-fp-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-200LT",
+		"Width": 9.961,
+		"Height": 6.496,
+		"Image": "valeton-gp-200lt.png"
 	},
 	{
 		"Brand": "Valeton",
