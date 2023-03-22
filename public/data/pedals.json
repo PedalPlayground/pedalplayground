@@ -9626,6 +9626,13 @@
 	},
 	{
 		"Brand": "EBS",
+		"Name": "Red Twister",
+		"Width": 3.06,
+		"Height": 4.38,
+		"Image": "ebs-red-twister.png"
+	},
+	{
+		"Brand": "EBS",
 		"Name": "TremoLo",
 		"Width": 2.8,
 		"Height": 4.5,
