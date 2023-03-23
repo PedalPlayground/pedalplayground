@@ -7841,6 +7841,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "CM-2 Tube Overdrive",
+		"Width": 3.5,
+		"Height": 5.25,
+		"Image": "digitech-cm2.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Digidelay",
 		"Width": 3,
 		"Height": 4.865,
@@ -9679,6 +9686,13 @@
 		"Width": 2.8,
 		"Height": 4.5,
 		"Image": "ebs-octabass.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "Red Twister",
+		"Width": 3.06,
+		"Height": 4.38,
+		"Image": "ebs-red-twister.png"
 	},
 	{
 		"Brand": "EBS",
@@ -22862,6 +22876,13 @@
 		"Image": "mu-tron-tubetron.png"
 	},
 	{
+		"Brand": "M-VAVE",
+		"Name": "Chocolate BT",
+		"Width": 8.35,
+		"Height": 1.51,
+		"Image": "mvave-chocolate.png"
+	},
+	{
 		"Brand": "MWFX",
 		"Name": "Glitch",
 		"Width": 3.54,
@@ -27566,6 +27587,14 @@
 		"Image": "ryra-klone-seafoam.png"
 	},
 	{
+		"Brand": "RYRA",
+		"Name": "Klone (gold)",
+		"Width": 4.67,
+		"Height": 3.7,
+		"Image": "ryra-klone-gold.png"
+	},
+
+	{
 		"Brand": "Santono",
 		"Name": "Etched Pick Tin",
 		"Width": 2,
@@ -29036,6 +29065,13 @@
 		"Image": "spruce-effects-the-gale.png"
 	},
 	{
+		"Brand": "Stomp Audio Labs",
+		"Name": "Octopus",
+		"Width": 2.68,
+		"Height": 4.41,
+		"Image": "sal-octopus-399.png"
+	},
+	{	
 		"Brand": "Stone Deaf FX",
 		"Name": "EP-1",
 		"Width": 4.66,
@@ -31933,6 +31969,13 @@
 		"Width": 1.89,
 		"Height": 3.7,
 		"Image": "valeton-fp-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-200LT",
+		"Width": 9.961,
+		"Height": 6.496,
+		"Image": "valeton-gp-200lt.png"
 	},
 	{
 		"Brand": "Valeton",
