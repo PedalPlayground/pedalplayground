@@ -2941,6 +2941,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Preamp (Kicker Blue)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-kicker-blue.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Preamp (Orange)",
 		"Width": 4.69,
 		"Height": 3.77,
