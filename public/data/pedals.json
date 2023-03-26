@@ -28307,6 +28307,13 @@
 		"Image": "silktone-fuzz.png"
 	},
 	{
+		"Brand": "Simple Switch",
+		"Name": "Vertical Tap Tempo",
+		"Width": 1.1,
+		"Height": 1.91,
+		"Image": "simpleswitch-vertical-tap.png"
+	},
+	{
 		"Brand": "Singular Sound",
 		"Name": "Aeros",
 		"Width": 8.375,
@@ -29447,7 +29454,7 @@
 		"Height": 4.41,
 		"Image": "sal-octopus-399.png"
 	},
-	{	
+	{
 		"Brand": "Stone Deaf FX",
 		"Name": "EP-1",
 		"Width": 4.66,
