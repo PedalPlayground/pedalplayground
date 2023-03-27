@@ -28582,6 +28582,13 @@
 		"Image": "sonicresearch-st300mini.png"
 	},
 	{
+		"Brand": "Sonuus",
+		"Name": "Voluum",
+		"Width": 7.2,
+		"Height": 8.3,
+		"Image": "sonuus-voluum.png"
+	},
+	{
 		"Brand": "Sound Sculpture",
 		"Name": "Switchblade 8F",
 		"Width": 9.25,
