@@ -14371,6 +14371,13 @@
 		"Image": "groundfx-keto.png"
 	},
 	{
+		"Brand": "GUPTech",
+		"Name": "SUN Noise Gate",
+		"Width": 3,
+		"Height": 5,
+		"Image": "guptech-sun.png"
+	},
+	{
 		"Brand": "Gurus",
 		"Name": "1959 Doubledecker",
 		"Width": 8.66,
@@ -22503,6 +22510,20 @@
 		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-silver-horse.png"
+	},
+	{
+		"Brand": "MOYO",
+		"Name": "Mini Expression",
+		"Width": 2.125,
+		"Height": 6,
+		"Image": "moyo-mini-expression.png"
+	},
+	{
+		"Brand": "MOYO",
+		"Name": "Mini Volume",
+		"Width": 2.125,
+		"Height": 6,
+		"Image": "moyo-mini-volume.png"
 	},
 	{
 		"Brand": "Mr. Black",
