@@ -2464,6 +2464,13 @@
 		"Image": "basicaudio-zonk.png"
 	},
 	{
+		"Brand": "BBE",
+		"Name": "Sonic Stomp",
+		"Width": 4.15,
+		"Height": 4.7,
+		"Image": "bbe-sonic-stomp.png"
+	},
+	{
 		"Brand": "Bearfoot Fx",
 		"Name": "Arctic White Fuzz",
 		"Width": 2.68,
