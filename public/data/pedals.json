@@ -15883,6 +15883,13 @@
 	},
 	{
 		"Brand": "J. Rockett",
+		"Name": "Archer Select",
+		"Width": 2.82,
+		"Height": 4.15,
+		"Image": "jrockett-archer-select.png"
+	},
+	{
+		"Brand": "J. Rockett",
 		"Name": "Blue Note",
 		"Width": 3.12,
 		"Height": 4.75,
