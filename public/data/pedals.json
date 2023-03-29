@@ -5734,6 +5734,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "STS-88",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-sts88.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Talisman",
 		"Width": 2.6,
 		"Height": 4.33,
