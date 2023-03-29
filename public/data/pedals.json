@@ -336,6 +336,13 @@
 		"Image": "acorn-mind-killer.png"
 	},
 	{
+		"Brand": "Acorn Amplification",
+		"Name": "Solid State Preamplifier",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "acorn-solid-state.png"
+	},
+	{
 		"Brand": "Aerospace Audio",
 		"Name": "Atmosphere",
 		"Width": 4.85,
@@ -24031,6 +24038,13 @@
 	{
 		"Brand": "Mythos",
 		"Name": "High Road",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-high-road-v1.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "High Road V2",
 		"Width": 1.78,
 		"Height": 3.6,
 		"Image": "mythos-high-road.png"
