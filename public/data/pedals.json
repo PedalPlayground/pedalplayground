@@ -5615,6 +5615,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Sabbra Cadabra (Clearwell Edition)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-sabbra-cadabra-clearwell.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "SFT",
 		"Width": 2.6,
 		"Height": 4.33,
@@ -5633,6 +5640,13 @@
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-soft-focus.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Soft Focus Reverb (Shoegaze Purple)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-soft-focus-shoegaze-purple.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -9492,6 +9506,13 @@
 		"Image": "earthquaker-special-cranker.png"
 	},
 	{
+		"Brand": "EarthQuaker Devices",
+		"Name": "Special Cranker (Blue Steel)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-special-cranker-blue-steel.png"
+	},
+	{
 		"Brand": "Earthquaker",
 		"Name": "Special Cranker (Pink)",
 		"Width": 2.6,
@@ -12713,10 +12734,24 @@
 	},
 	{
 		"Brand": "Friedman",
+		"Name": "BE-OD (Artisan Edition)",
+		"Width": 2.75,
+		"Height": 4.625,
+		"Image": "friedman-be-od-artisan.png"
+	},
+	{
+		"Brand": "Friedman",
 		"Name": "BE-OD Deluxe",
 		"Width": 5.9,
 		"Height": 5,
 		"Image": "friedman-be-od-deluxe.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "BE-OD Deluxe (Clockworks Edition)",
+		"Width": 5.9,
+		"Height": 5,
+		"Image": "friedman-be-od-deluxe-clockworks.png"
 	},
 	{
 		"Brand": "Friedman",
@@ -12752,6 +12787,13 @@
 		"Width": 2.75,
 		"Height": 4.625,
 		"Image": "friedman-sir-compre.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "Sir-Compre (Artisan Edition)",
+		"Width": 2.75,
+		"Height": 4.625,
+		"Image": "friedman-sir-compre-artisan.png"
 	},
 	{
 		"Brand": "Friedman",
@@ -15821,13 +15863,6 @@
 	},
 	{
 		"Brand": "J. Rockett",
-		"Name": "JB Archer",
-		"Width": 2.3,
-		"Height": 3.97,
-		"Image": "jrockett-jb-archer.png"
-	},
-	{
-		"Brand": "J. Rockett",
 		"Name": "Juice Joint",
 		"Width": 4,
 		"Height": 1.25,
@@ -15923,6 +15958,20 @@
 		"Width": 2.3,
 		"Height": 4,
 		"Image": "jrockett-dude-v2.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "The Jeff Archer",
+		"Width": 2.3,
+		"Height": 3.97,
+		"Image": "jrockett-the-jeff-archer.png"
+	},
+	{
+		"Brand": "J. Rockett",
+		"Name": "The Jeff Archer (Copper Plated)",
+		"Width": 2.3,
+		"Height": 3.97,
+		"Image": "jrockett-the-jeff-archer-copper-plated.png"
 	},
 	{
 		"Brand": "J. Rockett",
@@ -16049,6 +16098,13 @@
 		"Width": 2.7,
 		"Height": 5.13,
 		"Image": "jackson-golden-boy.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "Golden Boy (Rose)",
+		"Width": 2.7,
+		"Height": 5.13,
+		"Image": "jackson-golden-boy-rose.png"
 	},
 	{
 		"Brand": "Jackson Audio",
@@ -18110,6 +18166,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Halo (Andy Apple Red)",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "keeley-halo-apple-red.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Holy Fuzz",
 		"Width": 2.67,
 		"Height": 4.4,
@@ -18156,6 +18219,13 @@
 		"Width": 3.19,
 		"Height": 4.4,
 		"Image": "keeley-katana.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Katana (New Light Pink)",
+		"Width": 3.19,
+		"Height": 4.4,
+		"Image": "keeley-katana-new-light-pink.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -19612,6 +19682,13 @@
 		"Width": 22.05,
 		"Height": 11.79,
 		"Image": "line6-helix.png"
+	},
+	{
+		"Brand": "Line 6",
+		"Name": "Helix (Space Gray)",
+		"Width": 22.05,
+		"Height": 11.79,
+		"Image": "line-6-helix-space-gray.png"
 	},
 	{
 		"Brand": "Line 6",
