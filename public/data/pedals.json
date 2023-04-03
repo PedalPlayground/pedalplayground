@@ -15212,6 +15212,13 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Ampero",
+		"Width": 12.6,
+		"Height": 5.82,
+		"Image": "hotone-ampero.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Ampero Control",
 		"Width": 10.18,
 		"Height": 2.14,
