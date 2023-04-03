@@ -16765,13 +16765,6 @@
 	},
 	{
 		"Brand": "JHS",
-		"Name": "Bat-Sim",
-		"Width": 2.93,
-		"Height": 4.98,
-		"Image": "jhs-bat-sim.png"
-	},
-	{
-		"Brand": "JHS",
 		"Name": "Bender",
 		"Width": 3.76,
 		"Height": 6.07,
@@ -28760,6 +28753,13 @@
 		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "solidgoldfx-beta-mk2.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Beta-V",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "solidgoldfx-beta-v.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
