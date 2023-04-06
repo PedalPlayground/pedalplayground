@@ -33418,6 +33418,62 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Fundamental Chorus",
+		"Width": 2.31,
+		"Height": 4.44,
+		"Image": "walrus-fundamental-chorus.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Fundamental Delay",
+		"Width": 2.31,
+		"Height": 4.44,
+		"Image": "walrus-fundamental-delay.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Fundamental Distortion",
+		"Width": 2.31,
+		"Height": 4.44,
+		"Image": "walrus-fundamental-distortion.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Fundamental Drive",
+		"Width": 2.31,
+		"Height": 4.44,
+		"Image": "walrus-fundamental-drive.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Fundamental Fuzz",
+		"Width": 2.31,
+		"Height": 4.44,
+		"Image": "walrus-fundamental-fuzz.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Fundamental Phaser",
+		"Width": 2.31,
+		"Height": 4.44,
+		"Image": "walrus-fundamental-phaser.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Fundamental Reverb",
+		"Width": 2.31,
+		"Height": 4.44,
+		"Image": "walrus-fundamental-reverb.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Fundamental Tremolo",
+		"Width": 2.31,
+		"Height": 4.44,
+		"Image": "walrus-fundamental-tremolo.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Iron Horse",
 		"Width": 2.88,
 		"Height": 4.84,
