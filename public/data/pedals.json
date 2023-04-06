@@ -25052,6 +25052,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "BL-82",
+		"Width": 2.64,
+		"Height": 4.33,
+		"Image": "obne-bl-82.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Blackcap",
 		"Width": 4.7,
 		"Height": 4.12,
@@ -28494,6 +28501,13 @@
 		"Width": 2.68,
 		"Height": 4.53,
 		"Image": "sitek-cocoa.png"
+	},
+	{
+		"Brand": "Sitek",
+		"Name": "Cristal",
+		"Width": 1.89,
+		"Height": 3.74,
+		"Image": "sitek-cristal.png"
 	},
 	{
 		"Brand": "Sitek",
