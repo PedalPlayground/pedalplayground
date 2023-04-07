@@ -9087,6 +9087,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Aurelius",
+		"Width": 2.7,
+		"Height": 4.94,
+		"Image": "earthquaker-aurelius.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Avalanche Run",
 		"Width": 3.81,
 		"Height": 4.81,
