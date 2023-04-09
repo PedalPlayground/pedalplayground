@@ -1023,10 +1023,31 @@
 	},
 	{
 		"Brand": "Ampeg",
-		"Name": "Classic Analog Bass Preamp",
-		"Width": 2.75,
+		"Name": "Classic",
+		"Width": 2.78,
 		"Height": 4.48,
 		"Image": "ampeg-classic-analog-bass-preamp.png"
+	},
+	{
+		"Brand": "Ampeg",
+		"Name": "Liquifier",
+		"Width": 2.78,
+		"Height": 4.48,
+		"Image": "ampeg-liquifier.png"
+	},
+	{
+		"Brand": "Ampeg",
+		"Name": "Octo Comp",
+		"Width": 2.78,
+		"Height": 4.48,
+		"Image": "ampeg-octo-comp.png"
+	},
+	{
+		"Brand": "Ampeg",
+		"Name": "Scrambler",
+		"Width": 2.78,
+		"Height": 4.48,
+		"Image": "ampeg-scrambler.png"
 	},
 	{
 		"Brand": "Amptweaker",
@@ -9168,6 +9189,13 @@
 		"Width": 3.81,
 		"Height": 4.81,
 		"Image": "earthquaker-astral-destiny.png"
+	},
+	{
+		"Brand": "Earthquaker",
+		"Name": "Aurelius",
+		"Width": 2.7,
+		"Height": 4.94,
+		"Image": "earthquaker-aurelius.png"
 	},
 	{
 		"Brand": "Earthquaker",
