@@ -18975,6 +18975,13 @@
 		"Image": "kingsley-page.png"
 	},
 	{
+		"Brand": "Kingsley",
+		"Name": "Squire",
+		"Width": 3.88,
+		"Height": 4.85,
+		"Image": "kingsley-squire.png"
+	},
+	{
 		"Brand": "Kingtone",
 		"Name": "1968",
 		"Width": 4.7,
