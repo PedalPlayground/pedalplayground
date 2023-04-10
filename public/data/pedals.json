@@ -8512,6 +8512,13 @@
 		"Image": "does-it-doom-aghartha.png"
 	},
 	{
+		"Brand": "Dominion",
+		"Name": "Fuzz",
+		"Width": 3,
+		"Height": 4.73,
+		"Image": "dominion-fuzz.png"
+	},
+	{
 		"Brand": "Donner",
 		"Name": "AB/Y",
 		"Width": 1.62,
