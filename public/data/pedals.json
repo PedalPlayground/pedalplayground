@@ -8834,6 +8834,13 @@
 		"Image": "dsm-simplifier-dlx-footswitch.png"
 	},
 	{
+		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier MK-II",
+		"Width": 4.74,
+		"Height": 3.13,
+		"Image": "dsm-simplifier-mk2.png"
+	},
+	{
 		"Brand": "DSM Noisemaker",
 		"Name": "Drive Maker",
 		"Width": 4.69,
@@ -16412,6 +16419,13 @@
 		"Width": 2.9,
 		"Height": 4.7,
 		"Image": "jam-hm.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Harmonious Monk mk2",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jam-harmonious-monk-mk2.png"
 	},
 	{
 		"Brand": "Jam Pedals",
