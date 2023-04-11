@@ -10578,6 +10578,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Lizard Queen",
+		"Width": 2.82,
+		"Height": 4.5,
+		"Image": "ehx-lizard-queen.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "LPB-1",
 		"Width": 2.82,
 		"Height": 4.5,
@@ -32375,6 +32382,13 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Del-Verb",
+		"Width": 3.5,
+		"Height": 5.62,
+		"Image": "ua-del-verb.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Dream",
 		"Width": 3.5,
 		"Height": 5.62,
@@ -32382,10 +32396,24 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Galaxy",
+		"Width": 3.5,
+		"Height": 5.62,
+		"Image": "ua-galaxy.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Golden",
 		"Width": 3.5,
 		"Height": 5.62,
 		"Image": "ua-golden.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Max",
+		"Width": 3.5,
+		"Height": 5.62,
+		"Image": "ua-max.png"
 	},
 	{
 		"Brand": "Universal Audio",
