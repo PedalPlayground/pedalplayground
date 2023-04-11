@@ -21167,6 +21167,13 @@
 	},
 	{
 		"Brand": "Matthews Effects",
+		"Name": "The Traveler",
+		"Width": 2.65,
+		"Height": 4.94,
+		"Image": "matthews-traveler.png"
+	},
+	{
+		"Brand": "Matthews Effects",
 		"Name": "The Whaler",
 		"Width": 2.6,
 		"Height": 4.94,
