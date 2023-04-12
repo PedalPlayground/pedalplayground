@@ -10445,6 +10445,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Lizard Queen (Big Box)",
+		"Width": 5.5,
+		"Height": 6.875,
+		"Image": "ehx-lizard-queen-big-box.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "LPB-1",
 		"Width": 2.82,
 		"Height": 4.5,
@@ -13333,6 +13340,13 @@
 		"Width": 5.23,
 		"Height": 4.22,
 		"Image": "fulltone-full-drive-fd-3.png"
+	},
+	{
+		"Brand": "Fulltone",
+		"Name": "GT-500",
+		"Width": 5.75,
+		"Height": 3.87,
+		"Image": "fulltone-gt-500.png"
 	},
 	{
 		"Brand": "Fulltone",
@@ -25844,112 +25858,126 @@
 		"Image": "paradox-vitral.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFX",
 		"Name": "Chorus Ensemble",
 		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-chorus-ensemble.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "Chorus Ensemble Mini",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-mini.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "Chorus Ensemble MN3007",
 		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-chorus-ensemble-mn3007.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "Chorus Ensemble MN3007 Mini",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-mn3007-mini.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "Chorus Ensemble Preamp Crunch",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-preamp-crunch.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "Chorus Ensemble Preamp Crunch+",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-chorus-ensemble-preamp-crunch-plus.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "Elastic Mattress",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-elastic-mattress.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "Foot Phaser Deluxe",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-foot-phaser-deluxe.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "Hot For Flanger",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-hot-for-flanger.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "Jet Phaser",
 		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-jet-phaser.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "Nick James Foot Phaser",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-nick-james-foot-phaser.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
+		"Name": "Patriarch",
+		"Width": 4.4,
+		"Height": 2.36,
+		"Image": "pastfx-patriarch.png"
+	},
+	{
+		"Brand": "PastFX",
 		"Name": "Phase V",
 		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-phase-v.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
+		"Name": "Powerbooster",
+		"Width": 4.4,
+		"Height": 2.36,
+		"Image": "pastfx-powerbooster.png"
+	},
+	{
+		"Brand": "PastFX",
 		"Name": "Reticon Flanger",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-reticon.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFX",
 		"Name": "Revolution",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-revolution.png"
 	},
 	{
-		"Brand": "Pastfx",
+		"Brand": "PastFX",
 		"Name": "Stereo Chorus PX65",
 		"Width": 2.57,
 		"Height": 4.33,
 		"Image": "pastfx-px65.png"
 	},
 	{
-		"Brand": "PastFx",
+		"Brand": "PastFX",
 		"Name": "TD-Y",
 		"Width": 2.57,
 		"Height": 4.33,
