@@ -27809,6 +27809,13 @@
 		"Image": "revv-tilt.png"
 	},
 	{
+		"Brand": "Revv",
+		"Name": "Tilt Boost",
+		"Width": 2.63,
+		"Height": 4.44,
+		"Image": "revv-tilt-boost.png"
+	},
+	{
 		"Brand": "Rimrock",
 		"Name": "Lil MO",
 		"Width": 2.6,
