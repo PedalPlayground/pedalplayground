@@ -18969,9 +18969,9 @@
 	},
 	{
 		"Brand": "Kingsley",
-		"Name": "Bard",
-		"Width": 3.875,
-		"Height": 4.75,
+		"Name": "Bard V3",
+		"Width": 3.88,
+		"Height": 4.85,
 		"Image": "kingsley-bard.png"
 	},
 	{
@@ -18990,23 +18990,23 @@
 	},
 	{
 		"Brand": "Kingsley",
-		"Name": "Maiden",
-		"Width": 3.875,
-		"Height": 4.75,
+		"Name": "Maiden V2",
+		"Width": 3.88,
+		"Height": 4.85,
 		"Image": "kingsley-maiden.png"
 	},
 	{
 		"Brand": "Kingsley",
-		"Name": "Minstrel",
-		"Width": 3.875,
-		"Height": 4.75,
+		"Name": "Minstrel V3",
+		"Width": 3.88,
+		"Height": 4.85,
 		"Image": "kingsley-minstrel.png"
 	},
 	{
 		"Brand": "Kingsley",
 		"Name": "Page",
-		"Width": 3.875,
-		"Height": 4.75,
+		"Width": 3.88,
+		"Height": 4.85,
 		"Image": "kingsley-page.png"
 	},
 	{
