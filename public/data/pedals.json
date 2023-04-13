@@ -30339,9 +30339,16 @@
 	{
 		"Brand": "Swindler",
 		"Name": "Red Mountain",
-		"Width": 2.93,
-		"Height": 5.02,
+		"Width": 2.91,
+		"Height": 5.11,
 		"Image": "swindler-redmountain.png"
+	},
+	{
+		"Brand": "Swindler",
+		"Name": "The Gulf",
+		"Width": 2.91,
+		"Height": 5.11,
+		"Image": "swindler-the-gulf.png"
 	},
 	{
 		"Brand": "Swindler",
