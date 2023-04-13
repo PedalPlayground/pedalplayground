@@ -18976,6 +18976,13 @@
 	},
 	{
 		"Brand": "Kingsley",
+		"Name": "Harlot V3",
+		"Width": 3.88,
+		"Height": 4.85,
+		"Image": "kingsley-harlot-v3.png"
+	},
+	{
+		"Brand": "Kingsley",
 		"Name": "Jester",
 		"Width": 5.25,
 		"Height": 5,
