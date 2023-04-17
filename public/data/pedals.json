@@ -4937,9 +4937,16 @@
 	{
 		"Brand": "Broughton",
 		"Name": "High Pass Filter",
-		"Width": 1.6,
-		"Height": 3.7,
+		"Width": 1.95,
+		"Height": 3.79,
 		"Image": "broughton-hpf.png"
+	},
+	{
+		"Brand": "Broughton",
+		"Name": "High Pass Filter (Always On)",
+		"Width": 3.7,
+		"Height": 2.14,
+		"Image": "broughton-hpf-ao.png"
 	},
 	{
 		"Brand": "Broughton",
@@ -20376,14 +20383,14 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Forrest Green Compressor",
+		"Name": "Forest Green Compressor",
 		"Width": 2.52,
 		"Height": 4.33,
 		"Image": "mad-professor-forrest-green.png"
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Forrest Green Compressor (Handwired)",
+		"Name": "Forest Green Compressor (Handwired)",
 		"Width": 2.59,
 		"Height": 4.33,
 		"Image": "mad-professor-forrest-green-hw.png"
