@@ -26325,6 +26325,13 @@
 		"Image": "peterson-strobostomp-le.png"
 	},
 	{
+		"Brand": "Peterson",
+		"Name": "Strobostomp Mini",
+		"Width": 1.95,
+		"Height": 3.77,
+		"Image": "peterson-strobostomp-mini.png"
+	},
+	{
 		"Brand": "Pettyjohn",
 		"Name": "Chime",
 		"Width": 2.7,
