@@ -15127,21 +15127,28 @@
 		"Image": "headrush-pedalboard.png"
 	},
 	{
-		"Brand": "Heather Brown Electronicals",
+		"Brand": "Heather Brown",
 		"Name": "Sensation Fuzzdrive",
 		"Width": 3,
 		"Height": 4.92,
 		"Image": "hbe-sensation-fuzzdrive.png"
 	},
 	{
-		"Brand": "Heather Brown Electronicals",
+		"Brand": "Heather Brown",
+		"Name": "Spirit in the Sky",
+		"Width": 4.09,
+		"Height": 4.7,
+		"Image": "hbe-spirit-in-the-sky.png"
+	},
+	{
+		"Brand": "Heather Brown",
 		"Name": "The Blessed Mother",
 		"Width": 5.14,
 		"Height": 3.7,
 		"Image": "hbe-the-blessed-mother.png"
 	},
 	{
-		"Brand": "Heather Brown Electronicals",
+		"Brand": "Heather Brown",
 		"Name": "The Blessed Mother: The Fuzz Assumption",
 		"Width": 5.14,
 		"Height": 3.7,
