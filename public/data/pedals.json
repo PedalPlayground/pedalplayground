@@ -973,6 +973,13 @@
 		"Image": "ampeg-classic-analog-bass-preamp.png"
 	},
 	{
+		"Brand": "Ampeg",
+		"Name": "SGT-DI",
+		"Width": 7.4,
+		"Height": 4.9,
+		"Image": "ampeg-sgt-di.png"
+	},
+	{
 		"Brand": "Amptweaker",
 		"Name": "Big Rock Pro II",
 		"Width": 6.47,
