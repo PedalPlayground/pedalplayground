@@ -34132,6 +34132,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Cory Wong Compressor",
+		"Width": 2.85,
+		"Height": 4.81,
+		"Image": "wampler-cory-wong-compressor.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "dB+",
 		"Width": 1.81,
 		"Height": 3.7,
