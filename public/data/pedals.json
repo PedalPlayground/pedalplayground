@@ -25801,6 +25801,20 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "DCX Bass",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-dcx-bass.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "DCX Boost",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-dcx-boost.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "DELUXE61",
 		"Width": 3.6,
 		"Height": 5.8,
