@@ -33145,6 +33145,20 @@
 	},
 	{
 		"Brand": "Vox",
+		"Name": "Copperhead Drive",
+		"Width": 2.71,
+		"Height": 4.72,
+		"Image": "vox-copperhead.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Cutting Edge",
+		"Width": 2.71,
+		"Height": 4.72,
+		"Image": "vox-cutting-edge.png"
+	},
+	{
+		"Brand": "Vox",
 		"Name": "Double Dera Delay",
 		"Width": 3.43,
 		"Height": 5.2,
@@ -33159,10 +33173,52 @@
 	},
 	{
 		"Brand": "Vox",
+		"Name": "Mystic Edge",
+		"Width": 2.71,
+		"Height": 4.72,
+		"Image": "vox-mystic-edge.png"
+	},
+	{
+		"Brand": "Vox",
 		"Name": "Satchurator",
 		"Width": 5.63,
 		"Height": 4.76,
 		"Image": "vox-satchurator.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Silk Drive",
+		"Width": 2.71,
+		"Height": 4.72,
+		"Image": "vox-silk-drive.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Stomplab 1B",
+		"Width": 5.7,
+		"Height": 4.8,
+		"Image": "vox-stomplab-1b.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Stomplab 1G",
+		"Width": 5.7,
+		"Height": 4.8,
+		"Image": "vox-stomplab-1g.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Stomplab 2B",
+		"Width": 8.15,
+		"Height": 4.87,
+		"Image": "vox-stomplab-2b.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Stomplab 2G",
+		"Width": 8.15,
+		"Height": 4.87,
+		"Image": "vox-stomplab-2g.png"
 	},
 	{
 		"Brand": "Vox",
