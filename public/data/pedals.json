@@ -27991,6 +27991,62 @@
 		"Image": "rocktron-midi-raider.png"
 	},
 	{
+		"Brand": "Rodenberg",
+		"Name": "BL 800",
+		"Width": 3.96,
+		"Height": 4.77,
+		"Image": "rodenberg-bl800.png"
+	},
+	{
+		"Brand": "Rodenberg",
+		"Name": "BL Deluxe",
+		"Width": 3.96,
+		"Height": 4.77,
+		"Image": "rodenberg-bldeluxe.png"
+	},
+	{
+		"Brand": "Rodenberg",
+		"Name": "GAS",
+		"Width": 3.96,
+		"Height": 4.77,
+		"Image": "rodenberg-gas.png"
+	},
+	{
+		"Brand": "Rodenberg",
+		"Name": "LDP",
+		"Width": 3.96,
+		"Height": 4.77,
+		"Image": "rodenberg-ldp.png"
+	},
+	{
+		"Brand": "Rodenberg",
+		"Name": "LDP Deluxe",
+		"Width": 5.88,
+		"Height": 4.7,
+		"Image": "rodenberg-ldp-deluxe.png"
+	},
+	{
+		"Brand": "Rodenberg",
+		"Name": "LUKE",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "rodenberg-luke.png"
+	},
+	{
+		"Brand": "Rodenberg",
+		"Name": "SL-OD",
+		"Width": 5.88,
+		"Height": 4.7,
+		"Image": "rodenberg-sl-od.png"
+	},
+	{
+		"Brand": "Rodenberg",
+		"Name": "TB Drive",
+		"Width": 3.96,
+		"Height": 4.77,
+		"Image": "rodenberg-tb-drive.png"
+	},
+	{
 		"Brand": "Roland",
 		"Name": "SPD::ONE Electro",
 		"Width": 5.51,
