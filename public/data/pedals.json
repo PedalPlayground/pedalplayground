@@ -4935,6 +4935,13 @@
 		"Image": "brightonion-12switcher.png"
 	},
 	{
+		"Brand": "Bright Onion",
+		"Name": "HXFS",
+		"Width": 3.7,
+		"Height": 1.68,
+		"Image": "brightonion-hxfs.png"
+	},
+	{
 		"Brand": "Broughton",
 		"Name": "High Pass Filter",
 		"Width": 1.95,
@@ -22820,8 +22827,8 @@
 	{
 		"Brand": "Mosky",
 		"Name": "Dual Switch",
-		"Width": 3.66,
-		"Height": 1.66,
+		"Width": 3.7,
+		"Height": 1.68,
 		"Image": "mosky-dual-switch.png"
 	},
 	{
