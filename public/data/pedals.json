@@ -19766,60 +19766,74 @@
 		"Image": "lehle-sunday-driver.png"
 	},
 	{
-		"Brand": "Lichtlaerm Audio",
+		"Brand": "Lichtlaerm",
 		"Name": "Aesahaettr",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "lichtlaerm-aesahaettr.png"
 	},
 	{
-		"Brand": "Lichtlaerm Audio",
+		"Brand": "Lichtlaerm",
 		"Name": "Altar",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "lichtlaerm-altar.png"
 	},
 	{
-		"Brand": "Lichtlaerm Audio",
+		"Brand": "Lichtlaerm",
 		"Name": "Amber Spyglass",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "lichtlaerm-amber-spyglass.png"
 	},
 	{
-		"Brand": "Lichtlaerm Audio",
+		"Brand": "Lichtlaerm",
 		"Name": "Aquaria",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "lichtlaerm-aquaria.png"
 	},
 	{
-		"Brand": "Lichtlaerm Audio",
+		"Brand": "Lichtlaerm",
 		"Name": "Gehenna",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "lichtlaerm-gehenna.png"
 	},
 	{
-		"Brand": "Lichtlaerm Audio",
+		"Brand": "Lichtlaerm",
 		"Name": "Kassandra",
 		"Width": 2.88,
 		"Height": 4.95,
 		"Image": "lichtlaerm-kassandra.png"
 	},
 	{
-		"Brand": "Lichtlaerm Audio",
+		"Brand": "Lichtlaerm",
 		"Name": "Ritual",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "lichtlaerm-ritual.png"
 	},
 	{
-		"Brand": "Lichtlaerm Audio",
+		"Brand": "Lichtlaerm",
 		"Name": "The Key and the Gate",
 		"Width": 2.74,
 		"Height": 4.95,
 		"Image": "lichtlaerm-the-key-and-the-gate.png"
+	},
+	{
+		"Brand": "Lichtlaerm",
+		"Name": "Transcendence",
+		"Width": 2.88,
+		"Height": 4.95,
+		"Image": "lichtlaerm-transcendence.png"
+	},
+	{
+		"Brand": "Lichtlaerm",
+		"Name": "Untiefe",
+		"Width": 2.88,
+		"Height": 4.95,
+		"Image": "lichtlaerm-untiefe.png"
 	},
 	{
 		"Brand": "Lightning Wave",
