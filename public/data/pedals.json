@@ -7085,6 +7085,13 @@
 	},
 	{
 		"Brand": "Cusack Music",
+		"Name": "Resound v2",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "cusack-resound-v2.png"
+	},
+	{
+		"Brand": "Cusack Music",
 		"Name": "Scream",
 		"Width": 1.76,
 		"Height": 3.67,
@@ -7169,6 +7176,13 @@
 	},
 	{
 		"Brand": "Cusack Music",
+		"Name": "Tap-A-Phase",
+		"Width": 4.7,
+		"Height": 4.01,
+		"Image": "cusack-tap-a-phase.png"
+	},
+	{
+		"Brand": "Cusack Music",
 		"Name": "Tap-A-Whirl",
 		"Width": 4.7,
 		"Height": 4.01,
@@ -7180,6 +7194,13 @@
 		"Width": 4.7,
 		"Height": 4.01,
 		"Image": "cusack-tap-a-whirl-red.png"
+	},
+	{
+		"Brand": "Cusack Music",
+		"Name": "Tap-A-Whirl v4",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "cusack-tap-a-whirl-v4.png"
 	},
 	{
 		"Brand": "Cusack Music",
@@ -7586,6 +7607,13 @@
 		"Width": 4.72,
 		"Height": 5.92,
 		"Image": "deathbyaudio-deep-animation.png"
+	},
+	{
+		"Brand": "Death By Audio",
+		"Name": "Disturbance",
+		"Width": 3.94,
+		"Height": 4.94,
+		"Image": "deathbyaudio-disturbance.png"
 	},
 	{
 		"Brand": "Death By Audio",
@@ -15582,6 +15610,7 @@
 		"Image": "ibanez-csl.png"
 	},
 	{
+		"Brand": "Ibanez",
 		"Name": "CS505 Stereo Chorus",
 		"Width": 2.9,
 		"Height": 4.89,
@@ -17366,6 +17395,7 @@
 		"Image": "joe-gore-screech.png"
 	},
 	{
+		"Brand": "Joyo",
 		"Name": "D-Seed",
 		"Width": 3.92,
 		"Height": 4.13,
