@@ -56,13 +56,13 @@ Under MacOS Mojave:
 
 # Requesting Pedals
 
-If there is a pedal you're looking for, feel free to [log an issue](https://github.com/PedalPlayground/PedalPlayground.github.io/issues). Please follow the following rules when posting request issues:
+If there is a pedal you're looking for, feel free to [log an issue](https://github.com/PedalPlayground/PedalPlayground.github.io/issues). Please keep the following guidelines in mind:
 
--   New releases from all popular builders (BOSS, EHX, Walrus, TC, EQD, Electro-Harmonix, Wampler, MXR, Chase Bliss, Catalinbread, JHS, DBA, OBNE, etc) are added automatically.  There is no need to make a request for those.
+-   New releases from all popular builders are added automatically.  There is no need to make a request for those.
 -   Double check to see if the pedal isn't already in the database.
 -   Also check to see if the pedal hasn't already been included in a [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors.
 -   We're sorry, but please no requests for alternate colorways.
 -   Include a high resolution image of the pedal (top-down view, preferably white background, straight on perspective)
 -   Include the dimensions of the pedal in inches (make sure the dimensions are accurate and include jacks and other protrusions)
--   Post one issue for each pedal you're requesting
--   Please remain patient.  It sometimes takes several weeks for requests to get pulled into the main project.
+-   Post one issue for each pedal you're requesting and **do not** bump/repost open issues
+-   **Please remain patient!!**  Even if your request is marked to be closed it can still sometimes take several weeks for updates to get pulled into the main project.
