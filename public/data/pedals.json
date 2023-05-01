@@ -19201,14 +19201,14 @@
 		"Image": "kinotone-ribbons.png"
 	},
 	{
-		"Brand": "kittycasterFX",
+		"Brand": "KittycasterFX",
 		"Name": "Groovy Wizard",
 		"Width": 3.39,
 		"Height": 5.36,
 		"Image": "kittycasterfx-groovy-wizard.png"
 	},
 	{
-		"Brand": "kittycasterFX",
+		"Brand": "KittycasterFX",
 		"Name": "Tremdriver",
 		"Width": 3.39,
 		"Height": 5.36,
@@ -33560,7 +33560,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Ages (Kamakura Series)",
+		"Name": "Ages (Kamakura LE)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-ages-kamakura.png"
@@ -33581,7 +33581,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "ARP-87 (Kamakura Series)",
+		"Name": "ARP-87 (Kamakura LE)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-arp87-kamakura.png"
@@ -33602,7 +33602,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "ARP-87 (Obsidian Series)",
+		"Name": "ARP-87 (Obsidian LE)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-arp87-obisidian.png"
@@ -33721,7 +33721,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Eras (Kamakura Series)",
+		"Name": "Eras (Kamakura LE)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-eras-kamakura.png"
@@ -33735,7 +33735,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Eras (Obsidian Series)",
+		"Name": "Eras (Obsidian LE)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-eras-obsidian.png"
@@ -33763,7 +33763,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Fathom (Kamakura Series)",
+		"Name": "Fathom (Kamakura LE)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-fathom-kamakura.png"
@@ -33910,7 +33910,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julia V2 (Kamakura Series)",
+		"Name": "Julia V2 (Kamakura LE)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-julia2-kamakura.png"
@@ -33945,7 +33945,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julianna (Kamakura Series)",
+		"Name": "Julianna (Kamakura LE)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-julianna-kamakura.png"
@@ -33959,7 +33959,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julianna (Obsidian Series)",
+		"Name": "Julianna (Obsidian LE)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-julianna-obsidian.png"
@@ -34015,9 +34015,9 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Lore (Kamakura Series)",
+		"Name": "Lore (Kamakura LE)",
 		"Width": 3.7,
-		"Height": 4.85,
+		"Height": 4.84,
 		"Image": "walrus-lore-kamakura.png"
 	},
 	{
@@ -34113,7 +34113,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Monument V2 (Kamakura Series)",
+		"Name": "Monument V2 (Kamakura LE)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-monumentv2-kamakura.png"
@@ -34127,7 +34127,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Monument V2 (Obsidian Series)",
+		"Name": "Monument V2 (Obsidian LE)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-monument-v2-obsidian.png"
@@ -34155,7 +34155,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Polychrome (Kamakura Series)",
+		"Name": "Polychrome (Kamakura LE)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-polychrome-kamakura.png"
@@ -34197,7 +34197,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Slötvå (Kamakura Series)",
+		"Name": "Slötvå (Kamakura LE)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-slotva-kamakura.png"
@@ -34211,7 +34211,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Slötvå (Obsidian Series)",
+		"Name": "Slötvå (Obsidian LE)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-slotva-obsidian.png"
