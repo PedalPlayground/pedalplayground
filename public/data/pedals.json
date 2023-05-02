@@ -7259,6 +7259,20 @@
 		"Image": "daddario-ct23.png"
 	},
 	{
+		"Brand": "Damnation Audio",
+		"Name": "Curmudgeon Dist 2",
+		"Width": 2.5,
+		"Height": 4.96,
+		"Image": "damnation-curmudgeon-dist-2.png"
+	},
+	{
+		"Brand": "Damnation Audio",
+		"Name": "MBD2",
+		"Width": 2.5,
+		"Height": 4.96,
+		"Image": "damnation-mbd2.png"
+	},
+	{
 		"Brand": "DanDrive",
 		"Name": "Austin Pride Fuzz",
 		"Width": 2.6,
@@ -29804,7 +29818,7 @@
 		"Name": "Octopus",
 		"Width": 2.68,
 		"Height": 4.41,
-		"Image": "sal-octopus-399.png"
+		"Image": "sal-octopus.png"
 	},
 	{
 		"Brand": "Stone Deaf FX",
