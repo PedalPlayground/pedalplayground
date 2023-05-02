@@ -484,6 +484,13 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Achilles",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-achilles.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Andromeda",
 		"Width": 2.6,
 		"Height": 4.97,
@@ -491,150 +498,199 @@
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Azimuth Dynamic Overdrive",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Aphelion",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-aphelion.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Aurora",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-aurora.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Azimuthe",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-azimuth.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Cerulean Amp Overdrive",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Cerulean",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-cerulean.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Convex Parallel Compressor",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Convex",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-convex.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Deimos Germanium Fuzz",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Corvus",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-corvus.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Deimos",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-deimos.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Equinox Amp Overdrive",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Equinox",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-equinox.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Flare Fuzz Machine",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Flare",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-flare.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Graviton Metal Distortion",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Graviton",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-graviton.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Halo Distortion/Sustainer",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Halo",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-halo.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Helios Vintage Distortion",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Helios",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-helios.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Lumin Sonic Enhancer",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Lumin",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-lumin.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Luna Optical Tremolo",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Luna",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-luna.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Penumbra Bass Fuzz",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Maelstrom",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-maelstrom.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Penumbra",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-penumbra.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Phobos Germanium Fuzz",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Phobos",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-phobos.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Quantum MOSFET Distortion",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Prism",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-prism.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Quantum",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-quantum.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Radian Germanium Boost",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Radian",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-radian.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Refractor Professional Overdrive",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Refractor",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-refractor.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Rift Octave Fuzz",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Rift",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-rift.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Solaris Germanium Fuzz",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Solaris",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-solaris.png"
 	},
 	{
 		"Brand": "Aion FX",
 		"Name": "Solstice",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-solstice.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Stratus Classic Overdrive",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Stratus",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-stratus.png"
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Vector Ambient Delay",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Name": "Theseus",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "aion-theseus.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Vector",
+		"Width": 2.6,
+		"Height": 4.97,
 		"Image": "aion-vector.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Vulcan",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-vulcan.png"
 	},
 	{
 		"Brand": "AirTurn",
