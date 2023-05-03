@@ -25621,9 +25621,16 @@
 	},
 	{
 		"Brand": "Oneder Effects",
+		"Name": "Old Blue",
+		"Width": 2.6,
+		"Height": 4.93,
+		"Image": "oneder-old-blue.png"
+	},
+	{
+		"Brand": "Oneder Effects",
 		"Name": "Red Ryder",
 		"Width": 2.6,
-		"Height": 4.97,
+		"Height": 4.93,
 		"Image": "oneder-red-ryder.png"
 	},
 	{
