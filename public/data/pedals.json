@@ -26446,6 +26446,27 @@
 		"Image": "paul-c-timmy-v3-15th.png"
 	},
 	{
+		"Brand": "Pedal Brainz",
+		"Name": "3rd Eye",
+		"Width": 2.75,
+		"Height": 2.37,
+		"Image": "pedal-brainz-3rd-eye.png"
+	},
+	{
+		"Brand": "Pedal Brainz",
+		"Name": "Left Brain",
+		"Width": 2.75,
+		"Height": 2.37,
+		"Image": "pedal-brainz-left-brain.png"
+	},
+	{
+		"Brand": "Pedal Brainz",
+		"Name": "No-Brainer",
+		"Width": 2.75,
+		"Height": 2.37,
+		"Image": "pedal-brainz-no-brainer.png"
+	},
+	{
 		"Brand": "Pedal Pal FX",
 		"Name": "Gold Overdrive",
 		"Width": 4.13,
