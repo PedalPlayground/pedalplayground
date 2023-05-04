@@ -5916,6 +5916,13 @@
 	},
 	{
 		"Brand": "Champion Leccy",
+		"Name": "The Dunsh",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-dunsh.png"
+	},
+	{
+		"Brand": "Champion Leccy",
 		"Name": "The Fettle",
 		"Width": 2.5,
 		"Height": 4.65,
