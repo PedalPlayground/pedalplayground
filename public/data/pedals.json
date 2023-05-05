@@ -29374,10 +29374,66 @@
 	},
 	{
 		"Brand": "Sonicake",
+		"Name": "Fazy Cream",
+		"Width": 1.66,
+		"Height": 3.78,
+		"Image": "sonicake-fazy-cream.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Noise Wiper",
+		"Width": 1.66,
+		"Height": 3.78,
+		"Image": "sonicake-noise-wiper.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Octaver",
+		"Width": 1.66,
+		"Height": 3.78,
+		"Image": "sonicake-octaver.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Rude Mouse",
+		"Width": 1.66,
+		"Height": 3.78,
+		"Image": "sonicake-rude-mouse.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Sonic Ambience",
+		"Width": 1.66,
+		"Height": 3.78,
+		"Image": "sonicake-sonic-ambience.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Sonic Dub",
+		"Width": 1.66,
+		"Height": 3.78,
+		"Image": "sonicake-sonic-dub.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Sonic IR",
+		"Width": 1.66,
+		"Height": 3.78,
+		"Image": "sonicake-sonic-ir.png"
+	},
+	{
+		"Brand": "Sonicake",
 		"Name": "Sonicbar RockStage",
 		"Width": 10.32,
 		"Height": 2.48,
 		"Image": "sonicake-sonicbar-rockstage.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Wave Crush",
+		"Width": 1.66,
+		"Height": 3.78,
+		"Image": "sonicake-wave-crush.png"
 	},
 	{
 		"Brand": "Sonic Research",
