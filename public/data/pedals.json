@@ -31838,6 +31838,13 @@
 	},
 	{
 		"Brand": "TC Helicon",
+		"Name": "Harmony-G XT",
+		"Width": 5,
+		"Height": 5.24,
+		"Image": "tc-helicon-harmony-g-xt.png"
+	},
+	{
+		"Brand": "TC Helicon",
 		"Name": "Switch-3",
 		"Width": 7,
 		"Height": 3,
