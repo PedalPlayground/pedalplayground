@@ -16325,6 +16325,13 @@
 	},
 	{
 		"Brand": "J. Rockett",
+		"Name": "Uni-Verb",
+		"Width": 5.25,
+		"Height": 4.9,
+		"Image": "jrockett-uni-verb.png"
+	},
+	{
+		"Brand": "J. Rockett",
 		"Name": "WTF",
 		"Width": 4.75,
 		"Height": 3,
@@ -26713,6 +26720,13 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Mothership 2",
+		"Width": 2.76,
+		"Height": 4.5,
+		"Image": "pigtronix-mothership-2.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Octava",
 		"Width": 1.74,
 		"Height": 3.75,
@@ -26766,6 +26780,13 @@
 		"Width": 2.96,
 		"Height": 4.4,
 		"Image": "pigtronix-quantum.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Resotron",
+		"Width": 2.76,
+		"Height": 4.5,
+		"Image": "pigtronix-resotron.png"
 	},
 	{
 		"Brand": "Pigtronix",
