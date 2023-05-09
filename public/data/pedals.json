@@ -813,6 +813,13 @@
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Luminous",
+		"Width": 2.78,
+		"Height": 4.7,
+		"Image": "alexander-luminous.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Magnolia",
 		"Width": 2.78,
 		"Height": 4.7,
