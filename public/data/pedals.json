@@ -3102,6 +3102,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Preamp (Kicker Blue)",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-preamp-kicker-blue.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Preamp (Orange)",
 		"Width": 4.69,
 		"Height": 3.77,
@@ -18380,6 +18387,13 @@
 		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-compressor-plus.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Compressor Plus (Sweetwater)",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-compressor-plus-sweetwater.png"
 	},
 	{
 		"Brand": "Keeley",
