@@ -10354,6 +10354,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Black Russian Big Muff Pi",
+		"Width": 4.75,
+		"Height": 6.62,
+		"Image": "ehx-black-russian.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Blurst",
 		"Width": 4.19,
 		"Height": 4.75,
@@ -10578,13 +10585,6 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Black Russian Big Muff Pi",
-		"Width": 4.75,
-		"Height": 6.62,
-		"Image": "ehx-black-russian.png"
-	},
-	{
-		"Brand": "Electro-Harmonix",
 		"Name": "Green Russian Big Muff Pi Reissue",
 		"Width": 2.82,
 		"Height": 4.5,
@@ -10596,6 +10596,13 @@
 		"Width": 1.42,
 		"Height": 3.65,
 		"Image": "ehx-headphone-amp.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Hell Melter",
+		"Width": 4.75,
+		"Height": 3.94,
+		"Image": "ehx-hell-melter.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
