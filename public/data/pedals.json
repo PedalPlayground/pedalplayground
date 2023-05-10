@@ -5874,6 +5874,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Tremolo8",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-tremolo8.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Tribute",
 		"Width": 2.6,
 		"Height": 4.33,
