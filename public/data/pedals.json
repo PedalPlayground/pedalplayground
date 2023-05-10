@@ -11677,6 +11677,13 @@
 	},
 	{
 		"Brand": "Empress",
+		"Name": "Heavy Menace",
+		"Width": 2.6,
+		"Height": 5.14,
+		"Image": "empress-heavy-menace.png"
+	},
+	{
+		"Brand": "Empress",
 		"Name": "Midibox",
 		"Width": 4.5,
 		"Height": 2.61,
