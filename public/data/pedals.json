@@ -35624,6 +35624,13 @@
 		"Image": "yamaha-ub99.png"
 	},
 	{
+		"Brand": "Yellowcake",
+		"Name": "Furry Burrito",
+		"Width": 2.5,
+		"Height": 4.96,
+		"Image": "yellowcake-furry-burrito.png"
+	},
+	{
 		"Brand": "Zander Circuitry",
 		"Name": "American Geek",
 		"Width": 2.64,
