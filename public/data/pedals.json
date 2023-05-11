@@ -32391,6 +32391,13 @@
 	},
 	{
 		"Brand": "Tone City",
+		"Name": "King of Blues",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "tonecity-king-of-blues.png"
+	},
+	{
+		"Brand": "Tone City",
 		"Name": "Mandragora",
 		"Width": 1.75,
 		"Height": 3.66,
@@ -32409,6 +32416,13 @@
 		"Width": 1.75,
 		"Height": 3.66,
 		"Image": "tonecity-mickey.png"
+	},
+	{
+		"Brand": "Tone City",
+		"Name": "Model M",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "tonecity-model-m.png"
 	},
 	{
 		"Brand": "Tone City",
