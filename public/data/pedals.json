@@ -7974,6 +7974,20 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Boost-EQ",
+		"Width": 3.92,
+		"Height": 4.9,
+		"Image": "diamond-boost-eq.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Boost-EQ 2",
+		"Width": 2.44,
+		"Height": 4.63,
+		"Image": "diamond-boost-eq-2.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Compressor",
 		"Width": 3.92,
 		"Height": 4.9,
@@ -19542,6 +19556,13 @@
 		"Width": 3.9,
 		"Height": 2.56,
 		"Image": "korg-ga-handheld-tuner.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "HD-S",
+		"Width": 4.7,
+		"Height": 3.67,
+		"Image": "korg-hd-s.png"
 	},
 	{
 		"Brand": "Korg",
