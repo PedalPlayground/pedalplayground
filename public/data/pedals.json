@@ -18495,6 +18495,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Delay Workstation",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "keeley-delay-workstation.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Dynatrem",
 		"Width": 2.67,
 		"Height": 4.4,
@@ -24533,6 +24540,13 @@
 		"Width": 2.36,
 		"Height": 4.13,
 		"Image": "nordland-odr-cc-black.png"
+	},
+	{
+		"Brand": "Nordland",
+		"Name": "ODR-CS",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "nordland-odr-cs.png"
 	},
 	{
 		"Brand": "Noble Amplification",
