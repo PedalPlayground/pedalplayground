@@ -28400,6 +28400,13 @@
 		"Image": "santono-etched-pick-tin.png"
 	},
 	{
+		"Brand": "Sabbadius",
+		"Name": "Funky Vibe",
+		"Width": 7.16,
+		"Height": 5.28,
+		"Image": "sabbadius-funky-vibe.png"
+	},
+	{
 		"Brand": "Santono",
 		"Name": "Etched Pick Tin (Pink)",
 		"Width": 2,
