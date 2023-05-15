@@ -58,7 +58,7 @@ Under MacOS Mojave:
 
 If there is a pedal that you'd like to see added to our database please feel free to [log an issue](https://github.com/PedalPlayground/PedalPlayground.github.io/issues).
 
-Please keep the following guidelines in mind:
+**Please keep the following guidelines in mind:**
 
 -   Include the pedal brand and name in the title of your request
 -   Include a high resolution image of the pedal (top-down view, preferably white background, straight on perspective)
@@ -67,4 +67,4 @@ Please keep the following guidelines in mind:
 
 New releases from all popular builders are added automatically -- there is no need to make a request for those.  Also before you submit your request, please double check if the pedal isn't already in the database, or hasn't already been added to a recent [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors.  Also we apologize but we are no longer accepting requests for alternate colorways.
 
-**Please remain patient!!**  Even if your request is marked to be closed it man still take several weeks for updates to get pulled into the main project.
+Please remain patient!  Even if your request is marked to be closed it can still take several weeks for updates to get pulled into the main project.

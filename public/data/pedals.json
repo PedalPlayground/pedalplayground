@@ -1001,42 +1001,56 @@
 		"Image": "alexander-wavelength.png"
 	},
 	{
-		"Brand": "All-Pedal",
+		"Brand": "AllPedal",
+		"Name": "1987",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "allpedal-1987.png"
+	},
+	{
+		"Brand": "AllPedal",
 		"Name": "Alcmene",
-		"Width": 1.7,
-		"Height": 3.7,
+		"Width": 1.71,
+		"Height": 3.72,
 		"Image": "allpedal-alcmene.png"
 	},
 	{
-		"Brand": "All-Pedal",
+		"Brand": "AllPedal",
+		"Name": "Devil's Triad",
+		"Width": 5.7,
+		"Height": 4.78,
+		"Image": "allpedal-devils-triad.png"
+	},
+	{
+		"Brand": "AllPedal",
 		"Name": "Galactavise",
 		"Width": 2.6,
 		"Height": 5.09,
 		"Image": "allpedal-galactavise.png"
 	},
 	{
-		"Brand": "All-Pedal",
+		"Brand": "AllPedal",
 		"Name": "Love Machine",
 		"Width": 2.6,
 		"Height": 5.09,
 		"Image": "allpedal-love-machine.png"
 	},
 	{
-		"Brand": "All-Pedal",
+		"Brand": "AllPedal",
 		"Name": "Macrodose",
 		"Width": 3.8,
 		"Height": 4.88,
 		"Image": "allpedal-macrodose.png"
 	},
 	{
-		"Brand": "All-Pedal",
+		"Brand": "AllPedal",
 		"Name": "Slamurai",
 		"Width": 2.6,
 		"Height": 5.09,
 		"Image": "allpedal-slamurai.png"
 	},
 	{
-		"Brand": "All-Pedal",
+		"Brand": "AllPedal",
 		"Name": "Slamurai (Parlor Edition)",
 		"Width": 2.6,
 		"Height": 5.09,
@@ -18891,6 +18905,13 @@
 		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-stahlhammer.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Super AT Mod",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "keeley-super-at-mod.png"
 	},
 	{
 		"Brand": "Keeley",
