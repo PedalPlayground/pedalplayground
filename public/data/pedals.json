@@ -350,6 +350,13 @@
 		"Image": "aerospace-atmosphere.png"
 	},
 	{
+		"Brand": "Aerospace Audio",
+		"Name": "Atmosphere V2",
+		"Width": 4.7,
+		"Height": 5.87,
+		"Image": "aerospace-atmosphere-v2.png"
+	},
+	{
 		"Brand": "Aguilar",
 		"Name": "DB925",
 		"Width": 1.73,
@@ -28401,7 +28408,7 @@
 	},
 	{
 		"Brand": "Sabbadius",
-		"Name": "Funky Vibe",
+		"Name": "Funky-Vibe",
 		"Width": 7.16,
 		"Height": 5.28,
 		"Image": "sabbadius-funky-vibe.png"
