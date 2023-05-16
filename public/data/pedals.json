@@ -7981,6 +7981,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Bass Comp/EQ (2023)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-bass-comp-eq.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Bass Comp Jr",
 		"Width": 2.44,
 		"Height": 4.63,
@@ -8030,6 +8037,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Comp/EQ (2023)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-comp-eq.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Cornerstone",
 		"Width": 2.44,
 		"Height": 4.63,
@@ -8041,6 +8055,13 @@
 		"Width": 5.01,
 		"Height": 3.82,
 		"Image": "diamond-counterpoint.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Drive (2023)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-drive.png"
 	},
 	{
 		"Brand": "Diamond",
@@ -8093,6 +8114,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Memory Lane (2023)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-memory-lane-2023.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Nine Zero Two",
 		"Width": 2.44,
 		"Height": 4.63,
@@ -8118,6 +8146,13 @@
 		"Width": 5.01,
 		"Height": 3.82,
 		"Image": "diamond-tremolo.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Tremolo (2023)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-tremolo-2023.png"
 	},
 	{
 		"Brand": "Diamond",
