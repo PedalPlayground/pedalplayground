@@ -7848,6 +7848,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Bass Comp/EQ",
+		"Width": 2.64,
+		"Height": 4.8,
+		"Image": "diamond-bass-comp-eq.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Bass Comp",
 		"Width": 3.92,
 		"Height": 4.9,
@@ -7866,6 +7873,13 @@
 		"Width": 5.01,
 		"Height": 3.82,
 		"Image": "diamond-blaze.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Comp/EQ",
+		"Width": 2.64,
+		"Height": 4.8,
+		"Image": "diamond-comp-eq.png"
 	},
 	{
 		"Brand": "Diamond",
@@ -7904,6 +7918,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Diamond Drive",
+		"Width": 2.64,
+		"Height": 4.8,
+		"Image": "diamond-diamond-drive.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "F-Octave",
 		"Width": 2.44,
 		"Height": 4.63,
@@ -7936,6 +7957,13 @@
 		"Width": 2.62,
 		"Height": 4.63,
 		"Image": "diamond-marquis.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Memory Lane (Redesign)",
+		"Width": 2.64,
+		"Height": 4.8,
+		"Image": "diamond-memory-lane-redesign.png"
 	},
 	{
 		"Brand": "Diamond",
@@ -7978,6 +8006,13 @@
 		"Width": 5.01,
 		"Height": 3.82,
 		"Image": "diamond-tremolo.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Tremolo (Redesign)",
+		"Width": 2.64,
+		"Height": 4.8,
+		"Image": "diamond-tremolo-redesign.png"
 	},
 	{
 		"Brand": "Diamond",
