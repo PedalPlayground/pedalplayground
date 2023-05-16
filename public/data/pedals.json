@@ -3178,6 +3178,13 @@
 		"Image": "benson-preamp-white.png"
 	},
 	{
+		"Brand": "Benson",
+		"Name": "Stonk Box",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-stonk-box.png"
+	},
+	{
 		"Brand": "Big Ear Pedals",
 		"Name": "Albie",
 		"Width": 2.75,
