@@ -13930,6 +13930,48 @@
 		"Image": "g-lab-wowee-wah.png"
  	},
 	{
+		"Brand": "Gamma",
+		"Name": "Atlas",
+		"Width": 2.75,
+		"Height": 4.64,
+		"Image": "gamma-atlas.png"
+ 	},
+	{
+		"Brand": "Gamma",
+		"Name": "Bacchus",
+		"Width": 2.75,
+		"Height": 4.64,
+		"Image": "gamma-bacchus.png"
+ 	},
+	{
+		"Brand": "Gamma",
+		"Name": "Cumulus",
+		"Width": 2.75,
+		"Height": 4.64,
+		"Image": "gamma-cumulus.png"
+ 	},
+	{
+		"Brand": "Gamma",
+		"Name": "Eros",
+		"Width": 2.75,
+		"Height": 4.64,
+		"Image": "gamma-eros.png"
+ 	},
+	{
+		"Brand": "Gamma",
+		"Name": "Hades",
+		"Width": 2.75,
+		"Height": 4.64,
+		"Image": "gamma-hades.png"
+ 	},
+	{
+		"Brand": "Gamma",
+		"Name": "Narcissus",
+		"Width": 2.75,
+		"Height": 4.64,
+		"Image": "gamma-narcissus.png"
+ 	},
+	{
 		"Brand": "Gamechanger Audio",
 		"Name": "Bigsby Pedal",
 		"Width": 4.3,
