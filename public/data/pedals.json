@@ -3094,6 +3094,13 @@
 		"Image": "benson-germanium-boost.png"
 	},
 	{
+		"Brand": "Benevale",
+		"Name": "Colt 45",
+		"Width": 3.15,
+		"Height": 4.9,
+		"Image": "benevale-colt-45.png"
+	},
+	{
 		"Brand": "Benson",
 		"Name": "Germanium Fuzz",
 		"Width": 4.69,
@@ -24774,6 +24781,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "'6ixty5ive'",
+		"Width": 2.98,
+		"Height": 4.76,
+		"Image": "nux-6ixty5ive.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Ace of Tone",
 		"Width": 4.13,
 		"Height": 4.47,
@@ -24876,6 +24890,13 @@
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-hd-pitch.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Hook",
+		"Width": 2.06,
+		"Height": 3.7,
+		"Image": "nux-hook.png"
 	},
 	{
 		"Brand": "NuX",
@@ -25020,7 +25041,7 @@
 	{
 		"Brand": "NuX",
 		"Name": "OD-3",
-		"Width": 3.03,
+		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-od3.png"
 	},
@@ -25061,7 +25082,7 @@
 	},
 	{
 		"Brand": "NuX",
-		"Name": "Rec To Distortion",
+		"Name": "REC TO Distortion",
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-rec-to.png"
