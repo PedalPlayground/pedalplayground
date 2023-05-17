@@ -35577,121 +35577,149 @@
 	{
 		"Brand": "Xotic",
 		"Name": "AC Booster",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.62,
+		"Height": 4.39,
 		"Image": "xotic-acbooster.png"
 	},
 	{
 		"Brand": "Xotic",
-		"Name": "AC+",
-		"Width": 4.7,
+		"Name": "AC Plus",
+		"Width": 4.97,
 		"Height": 3.7,
 		"Image": "xotic-acplus.png"
 	},
 	{
 		"Brand": "Xotic",
-		"Name": "Ac/Rc-oz",
-		"Width": 4.95,
+		"Name": "AC/RC Oz",
+		"Width": 4.97,
 		"Height": 3.7,
 		"Image": "xotic-acrcoz.png"
 	},
 	{
 		"Brand": "Xotic",
+		"Name": "BB Plus",
+		"Width": 4.97,
+		"Height": 3.7,
+		"Image": "xotic-bbplus.png"
+	},
+	{
+		"Brand": "Xotic",
 		"Name": "BB Preamp",
-		"Width": 2.6,
+		"Width": 2.62,
 		"Height": 4.39,
 		"Image": "xotic-bb.png"
 	},
 	{
 		"Brand": "Xotic",
 		"Name": "BB Preamp v1.5",
-		"Width": 2.5,
-		"Height": 4.3,
+		"Width": 2.62,
+		"Height": 4.39,
 		"Image": "xotic-bb-preamp-v15.png"
 	},
 	{
 		"Brand": "Xotic",
-		"Name": "BB+",
-		"Width": 4.7,
-		"Height": 3.7,
-		"Image": "xotic-bbplus.png"
-	},
-	{
-		"Brand": "Xotic",
 		"Name": "Bass RC Booster V2",
-		"Width": 2.65,
+		"Width": 2.62,
 		"Height": 4.39,
 		"Image": "xotic-bass-rcboosterv2.png"
 	},
 	{
 		"Brand": "Xotic",
 		"Name": "EP Booster",
-		"Width": 2,
+		"Width": 1.9,
 		"Height": 3.7,
 		"Image": "xotic-ep.png"
 	},
 	{
 		"Brand": "Xotic",
 		"Name": "RC Booster",
-		"Width": 2.66,
-		"Height": 4.42,
+		"Width": 2.62,
+		"Height": 4.39,
 		"Image": "xotic-rcbooster.png"
 	},
 	{
 		"Brand": "Xotic",
 		"Name": "RC Booster V2",
-		"Width": 2.65,
+		"Width": 2.62,
 		"Height": 4.39,
 		"Image": "xotic-rcboosterv2.png"
 	},
 	{
 		"Brand": "Xotic",
+		"Name": "Robotalk 2",
+		"Width": 4.97,
+		"Height": 3.7,
+		"Image": "xotic-robotalk-2.png"
+	},
+	{
+		"Brand": "Xotic",
 		"Name": "SL Drive",
 		"Width": 1.9,
-		"Height": 3.5,
+		"Height": 3.7,
 		"Image": "xotic-sl.png"
 	},
 	{
 		"Brand": "Xotic",
-		"Name": "SL Drive - LE Red",
+		"Name": "SL Drive (Red)",
 		"Width": 1.9,
-		"Height": 3.5,
+		"Height": 3.7,
 		"Image": "xotic-sl-red.png"
 	},
 	{
 		"Brand": "Xotic",
+		"Name": "Soul Driven",
+		"Width": 2.62,
+		"Height": 4.39,
+		"Image": "xotic-soul-driven.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "SP Compressor",
+		"Width": 1.9,
+		"Height": 3.7,
+		"Image": "xotic-sp.png"
+	},
+	{
+		"Brand": "Xotic",
 		"Name": "Super Clean Buffer",
-		"Width": 2,
+		"Width": 1.9,
 		"Height": 3.7,
 		"Image": "xotic-superclean.png"
 	},
 	{
 		"Brand": "Xotic",
 		"Name": "Super Sweet Booster",
-		"Width": 2,
+		"Width": 1.9,
 		"Height": 3.7,
 		"Image": "xotic-supersweet.png"
 	},
 	{
 		"Brand": "Xotic",
-		"Name": "SP Compressor",
-		"Width": 2,
-		"Height": 3.7,
-		"Image": "xotic-sp.png"
-	},
-	{
-		"Brand": "Xotic",
-		"Name": "Volume Pedal",
+		"Name": "XVP-25K Volume Pedal",
 		"Width": 3.94,
 		"Height": 8.27,
 		"Image": "xotic-volume.png"
 	},
 	{
 		"Brand": "Xotic",
-		"Name": "Wah XW-1",
+		"Name": "XVP-250K Volume Pedal",
 		"Width": 3.94,
 		"Height": 8.27,
+		"Image": "xotic-xvp-250k.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "XW-1 Wah Pedal (Blue)",
+		"Width": 3.83,
+		"Height": 8.27,
 		"Image": "xotic-wah.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "X-Blender",
+		"Width": 4.97,
+		"Height": 3.7,
+		"Image": "xotic-x-blender.png"
 	},
 	{
 		"Brand": "XTS",
