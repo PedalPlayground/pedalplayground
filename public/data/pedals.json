@@ -30263,6 +30263,13 @@
 	},
 	{
 		"Brand": "Stone Deaf FX",
+		"Name": "QBoost (LE)",
+		"Width": 2.83,
+		"Height": 4.53,
+		"Image": "stone-deaf-qboost-le.png"
+	},
+	{
+		"Brand": "Stone Deaf FX",
 		"Name": "Syncopy",
 		"Width": 3.43,
 		"Height": 5.2,
