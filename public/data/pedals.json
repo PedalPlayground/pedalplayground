@@ -4845,6 +4845,20 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "SDE-3000D Dual Digital Delay",
+		"Width": 7.875,
+		"Height": 5.17,
+		"Image": "boss-sde3000d.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "SDE-3000EVH Dual Digital Delay",
+		"Width": 7.875,
+		"Height": 5.17,
+		"Image": "boss-sde3000evh.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "SG-1 Slow Gear",
 		"Width": 2.875,
 		"Height": 5.125,
