@@ -33581,6 +33581,13 @@
 	},
 	{
 		"Brand": "VS Audio",
+		"Name": "Platinum",
+		"Width": 2.6,
+		"Height": 4.93,
+		"Image": "vsaudio-platinum.png"
+	},
+	{
+		"Brand": "VS Audio",
 		"Name": "Project Diana",
 		"Width": 2.86,
 		"Height": 4.88,
