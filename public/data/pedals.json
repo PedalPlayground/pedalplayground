@@ -8828,6 +8828,13 @@
 	},
 	{
 		"Brand": "Dr Scientist",
+		"Name": "BoostBot",
+		"Width": 2.84,
+		"Height": 2,
+		"Image": "dr-scientist-boostbot.png"
+	},
+	{
+		"Brand": "Dr Scientist",
 		"Name": "Dusk",
 		"Width": 2.71,
 		"Height": 5.03,
@@ -11884,6 +11891,13 @@
 		"Width": 5.7,
 		"Height": 3.91,
 		"Image": "empress-zoia.png"
+	},
+	{
+		"Brand": "Eno Music",
+		"Name": "EX EQ 7",
+		"Width": 1.8,
+		"Height": 3.77,
+		"Image": "eno-ex-eq-7.png"
 	},
 	{
 		"Brand": "Erica Synths",
@@ -26090,6 +26104,13 @@
 	},
 	{
 		"Brand": "Orange",
+		"Name": "Amp Detonator",
+		"Width": 3.74,
+		"Height": 5.12,
+		"Image": "orange-amp-detonator.png"
+	},
+	{
+		"Brand": "Orange",
 		"Name": "Distortion",
 		"Width": 3.62,
 		"Height": 4.75,
@@ -26098,29 +26119,29 @@
 	{
 		"Brand": "Orange",
 		"Name": "FS-1 Mini Footswitch",
-		"Width": "1.5",
-		"Height": "3.66",
+		"Width": 1.5,
+		"Height": 3.66,
 		"Image": "orange-fs1-mini.png"
 	},
 	{
 		"Brand": "Orange",
 		"Name": "Fur Coat",
-		"Width": "3.74",
-		"Height": "5.12",
+		"Width": 3.74,
+		"Height": 5.12,
 		"Image": "orange-fur-coat.png"
 	},
 	{
 		"Brand": "Orange",
 		"Name": "Getaway Driver",
-		"Width": "3.74",
-		"Height": "5.12",
+		"Width": 3.74,
+		"Height": 5.12,
 		"Image": "orange-getaway-driver.png"
 	},
 	{
 		"Brand": "Orange",
 		"Name": "Kongpressor",
-		"Width": "3.74",
-		"Height": "5.12",
+		"Width": 3.74,
+		"Height": 5.12,
 		"Image": "orange-kongpressor.png"
 	},
 	{
@@ -26154,8 +26175,8 @@
 	{
 		"Brand": "Orange",
 		"Name": "Two Stroke",
-		"Width": "3.74",
-		"Height": "5.12",
+		"Width": 3.74,
+		"Height": 5.12,
 		"Image": "orange-two-stroke.png"
 	},
 	{
