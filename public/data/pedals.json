@@ -24718,6 +24718,13 @@
 	},
 	{
 		"Brand": "Noise Space Audio",
+		"Name": "Elephant",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "noisespaceaudio-elephant.png"
+	},
+	{
+		"Brand": "Noise Space Audio",
 		"Name": "Harm",
 		"Width": 2.6,
 		"Height": 4.99,
@@ -24743,6 +24750,13 @@
 		"Width": 2.6,
 		"Height": 4.99,
 		"Image": "noisespaceaudio-klone-small.png"
+	},
+	{
+		"Brand": "Noise Space Audio",
+		"Name": "OTA",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "noisespaceaudio-ota.png"
 	},
 	{
 		"Brand": "Noise Space Audio",
