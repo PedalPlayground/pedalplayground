@@ -25215,6 +25215,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "Trident",
+		"Width": 12.28,
+		"Height": 6.35,
+		"Image": "nux-trident.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Tube Man",
 		"Width": 2.06,
 		"Height": 3.7,
