@@ -16933,6 +16933,13 @@
 		"Image": "janglebox-byrds.png"
 	},
 	{
+		"Brand": "JDM",
+		"Name": "Humdinger",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "jdm-humdinger.png"
+	},
+	{
 		"Brand": "Jet Pedals",
 		"Name": "Black Jet MCX",
 		"Width": 3.65,
