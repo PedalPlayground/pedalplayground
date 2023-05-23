@@ -15533,6 +15533,13 @@
 		"Image": "hilbish-t-fuzz.png"
 	},
 	{
+		"Brand": "HiWatt",
+		"Name": "Filter Fuzz MKII",
+		"Width": 3.7,
+		"Height": 4.87,
+		"Image": "hiwatt-filter-fuzz-mk2.png"
+	},
+	{
 		"Brand": "Hologram Electronics",
 		"Name": "Dream Sequence",
 		"Width": 7.37,
@@ -16714,6 +16721,13 @@
 		"Width": 5.14,
 		"Height": 3.95,
 		"Image": "jam-big-chill.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Boomster mk2",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jam-bioomster-mk2.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -36109,8 +36123,8 @@
 	{
 		"Brand": "Zvex",
 		"Name": "'59 Sound Vertical",
-		"Width": 2.58,
-		"Height": 4.31,
+		"Width": 2.59,
+		"Height": 4.33,
 		"Image": "zvex-59sound-vertical.png"
 	},
 	{
@@ -36137,9 +36151,16 @@
 	{
 		"Brand": "Zvex",
 		"Name": "Box of Rock Vertical",
-		"Width": 2.58,
-		"Height": 4.31,
+		"Width": 2.59,
+		"Height": 4.33,
 		"Image": "zvex-boxofrockvertical.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Box of Rock Vertical (Yvette)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "zvex-boxofrockvertical-yvette.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -36199,10 +36220,31 @@
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "Fuzz Factory 7",
+		"Width": 3.64,
+		"Height": 4.8,
+		"Image": "zvex-fuzzfactory7.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Fuzz Factory 7 Vexter",
+		"Width": 3.64,
+		"Height": 4.8,
+		"Image": "zvex-fuzzfactory7-vexter.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Fuzz Factory Vertical",
-		"Width": 2.58,
-		"Height": 4.31,
+		"Width": 2.59,
+		"Height": 4.33,
 		"Image": "zvex-fuzzfactory-vertical.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Fuzz Factory Vertical (Russian Hybrid)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "zvex-russian-fuzz-factory.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -36220,20 +36262,6 @@
 	},
 	{
 		"Brand": "Zvex",
-		"Name": "Fuzz Factory 7",
-		"Width": 3.64,
-		"Height": 4.8,
-		"Image": "zvex-fuzzfactory7.png"
-	},
-	{
-		"Brand": "Zvex",
-		"Name": "Fuzz Factory 7 Vexter",
-		"Width": 3.64,
-		"Height": 4.8,
-		"Image": "zvex-fuzzfactory7-vexter.png"
-	},
-	{
-		"Brand": "Zvex",
 		"Name": "Fuzzolo",
 		"Width": 1.82,
 		"Height": 3.7,
@@ -36248,7 +36276,7 @@
 	},
 	{
 		"Brand": "Zvex",
-		"Name": "Instant Lo-Fi Junky (Little Box Exclusive)",
+		"Name": "Instant Lo-Fi Junky (Little Box)",
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-lofi-junky-little-box.png"
@@ -36256,9 +36284,16 @@
 	{
 		"Brand": "Zvex",
 		"Name": "Instant Lo-Fi Junky Vertical",
-		"Width": 2.58,
-		"Height": 4.31,
+		"Width": 2.59,
+		"Height": 4.33,
 		"Image": "zvex-lofijunky-vertical.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Instant Lo-Fi Junky Vertical (Yvette)",
+		"Width": 2.59,
+		"Height": 4.33,
+		"Image": "zvex-lofijunky-vertical-yvette.png"
 	},
 	{
 		"Brand": "Zvex",
@@ -36318,17 +36353,9 @@
 	},
 	{
 		"Brand": "Zvex",
-		"Name": "Russian Fuzz Factory",
-		"Width": 2.58,
-		"Height": 4.31,
-		"Image": "zvex-russian-fuzz-factory.png"
-	},
-
-	{
-		"Brand": "Zvex",
 		"Name": "Silicon Fuzz Factory",
-		"Width": 2.58,
-		"Height": 4.31,
+		"Width": 2.59,
+		"Height": 4.33,
 		"Image": "zvex-si-fuzz-factory.png"
 	},
 	{
@@ -36390,8 +36417,8 @@
 	{
 		"Brand": "Zvex",
 		"Name": "Vibrophase",
-		"Width": 2.58,
-		"Height": 4.31,
+		"Width": 2.59,
+		"Height": 4.33,
 		"Image": "zvex-vibrophase.png"
 	},
 	{
