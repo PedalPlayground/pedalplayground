@@ -11410,119 +11410,133 @@
 		"Image": "ehx-wailer-wah.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
+		"Name": "0xEAE Boost",
+		"Width": 3.5,
+		"Height": 6.9,
+		"Image": "electronic-audio-experiments-0xeae-boost.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "0xEAE Fuzz",
+		"Width": 3.5,
+		"Height": 6.9,
+		"Image": "electronic-audio-experiments-0xeae-fuzz.png"
+	},
+	{
+		"Brand": "EAE",
 		"Name": "Beholder",
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-beholder.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Citadel",
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-citadel.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Dagger",
 		"Width": 2.6,
 		"Height": 4.99,
 		"Image": "electronic-audio-experiments-dagger.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Dagger (Bubblegum)",
 		"Width": 2.6,
 		"Height": 4.99,
 		"Image": "electronic-audio-experiments-dagger-bubblegum.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Dude Incredible",
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-dude-incredible.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Eldritch Blast",
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-eldritch-blast.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Halberd",
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-halberd.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Halberd v2",
 		"Width": 2.6,
 		"Height": 5.05,
 		"Image": "electronic-audio-experiments-halberd-v2.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Halberd v2 (Acid Etched)",
 		"Width": 2.6,
 		"Height": 5.05,
 		"Image": "electronic-audio-experiments-halberd-v2-acid.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Halberd v2 (Green Dragon)",
 		"Width": 2.6,
 		"Height": 5.05,
 		"Image": "electronic-audio-experiments-halberd-v2-green.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Hypersleep",
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-hypersleep.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Limelight",
 		"Width": 4.7,
 		"Height": 3.81,
 		"Image": "electronic-audio-experiments-limelight.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Limelight v2",
 		"Width": 3.7,
 		"Height": 4.94,
 		"Image": "electronic-audio-experiments-limelight-v2.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Longsword",
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-longsword.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Longsword (Rose Gold)",
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-longsword-rose.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Model feT",
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-model-fet.png"
 	},
 	{
-		"Brand": "Electronic Audio Experiments",
+		"Brand": "EAE",
 		"Name": "Sending",
 		"Width": 5.7,
 		"Height": 4.7,
