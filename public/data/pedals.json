@@ -22183,6 +22183,13 @@
 		"Image": "moen-gec8jr-v2.png"
 	},
 	{
+		"Brand": "Mod Audio",
+		"Name": "Dwarf",
+		"Width": 7.95,
+		"Height": 4.11,
+		"Image": "mod-audio-dwarf.png"
+	},
+	{
 		"Brand": "Moen",
 		"Name": "GEC9",
 		"Width": 16.9291,
