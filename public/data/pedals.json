@@ -31446,7 +31446,7 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "BloodMoon Phaser",
+		"Name": "Blood Moon Phaser",
 		"Width": 2.9,
 		"Height": 5.15,
 		"Image": "tc-bloodmoon.png"
@@ -31502,7 +31502,7 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Corona Chorus + Trichorus & Toneprint",
+		"Name": "Corona Chorus+ Trichorus & Toneprint",
 		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-corona-trichorus.png"
@@ -31523,7 +31523,7 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Dark Matter",
+		"Name": "Dark Matter Distortion",
 		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-dark-matter.png"
@@ -31775,6 +31775,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Infinite Mini Sample Sustainer",
+		"Width": 2,
+		"Height": 3.75,
+		"Image": "tc-infinite-mini.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Iron Curtain Noise Gate",
 		"Width": 2.9,
 		"Height": 5.15,
@@ -31789,7 +31796,7 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "June-60 v2",
+		"Name": "June-60 V2",
 		"Width": 3.4,
 		"Height": 5.45,
 		"Image": "tc-june60-v2.png"
@@ -31817,7 +31824,7 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Mojomojo Paul Gilbert Overdrive",
+		"Name": "Mojomojo Paul Gilbert Edition",
 		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-paulgilbert-mojomojo.png"
@@ -31828,13 +31835,6 @@
 		"Width": 2.86,
 		"Height": 4.8,
 		"Image": "tc-mojomojo.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "Nether Octaver",
-		"Width": 2.9,
-		"Height": 5.15,
-		"Image": "tc-nether.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -31849,6 +31849,13 @@
 		"Width": 4.92,
 		"Height": 5.14,
 		"Image": "tc-novadelay-ibmod.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Nether Octaver",
+		"Width": 2.9,
+		"Height": 5.15,
+		"Image": "tc-nether.png"
 	},
 	{
 		"Brand": "TC Electronic",
