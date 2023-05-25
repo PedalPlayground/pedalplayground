@@ -1282,6 +1282,13 @@
 	},
 	{
 		"Brand": "Analog.Man",
+		"Name": "ARDX20 Dual Analog Delay",
+		"Width": 4.7,
+		"Height": 5.66,
+		"Image": "analogman-ardx20.png"
+	},
+	{
+		"Brand": "Analog.Man",
 		"Name": "Astro Tone (Black)",
 		"Width": 2.6,
 		"Height": 4.97,
@@ -1333,8 +1340,15 @@
 		"Brand": "Analog.Man",
 		"Name": "King of Tone",
 		"Width": 4.7,
-		"Height": 3.86,
+		"Height": 3.84,
 		"Image": "analogman-king-of-tone.png"
+	},
+	{
+		"Brand": "Analog.Man",
+		"Name": "King of Tone (White)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "analogman-king-of-tone-white.png"
 	},
 	{
 		"Brand": "Analog.Man",
@@ -1367,8 +1381,8 @@
 	{
 		"Brand": "Analog.Man",
 		"Name": "Prince of Tone",
-		"Width": 2.5,
-		"Height": 4.85,
+		"Width": 2.6,
+		"Height": 4.86,
 		"Image": "analogman-prince-of-tone.png"
 	},
 	{
