@@ -7547,6 +7547,13 @@
 	},
 	{
 		"Brand": "Darkglass",
+		"Name": "Hyper Luminal (Black)",
+		"Width": 2.92,
+		"Height": 4.37,
+		"Image": "darkglass-hyper-luminal-black.png"
+	},
+	{
+		"Brand": "Darkglass",
 		"Name": "Microtubes B1K",
 		"Width": 2.14,
 		"Height": 3.94,
