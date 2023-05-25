@@ -3451,6 +3451,13 @@
 		"Image": "black-bobbin-boost-white.png"
 	},
 	{
+		"Brand": "Blackhawk",
+		"Name": "Balrog V3",
+		"Width": 2.6,
+		"Height": 5.08,
+		"Image": "blackhawk-balrog-v3.png"
+	},
+	{
 		"Brand": "Blackout Effectors",
 		"Name": "Blunderbuss",
 		"Width": 2.92,
