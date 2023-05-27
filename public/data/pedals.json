@@ -1674,7 +1674,14 @@
 	},
 	{
 		"Brand": "Animals Pedal",
-		"Name": "Rover Fuzz",
+		"Name": "Rover Fuzz V1",
+		"Width": 2.53,
+		"Height": 4.4,
+		"Image": "animals-pedal-rover-v1.png"
+	},
+	{
+		"Brand": "Animals Pedal",
+		"Name": "Rover Fuzz V2",
 		"Width": 2.5,
 		"Height": 4.4,
 		"Image": "animals-pedal-rover.png"
