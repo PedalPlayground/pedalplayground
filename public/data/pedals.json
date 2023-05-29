@@ -32418,6 +32418,27 @@
 		"Image": "teisco-overdrive.png"
 	},
 	{
+		"Brand": "Templo Devices",
+		"Name": "Model 33",
+		"Width": 2.6,
+		"Height": 4.46,
+		"Image": "templo-model-33.png"
+	},
+	{
+		"Brand": "Templo Devices",
+		"Name": "Reel Dealuxe",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "templo-reel-dealuxe.png"
+	},
+	{
+		"Brand": "Templo Devices",
+		"Name": "Splyce",
+		"Width": 3.2,
+		"Height": 3.56,
+		"Image": "templo-splyce.png"
+	},
+	{
 		"Brand": "Testing Blanks",
 		"Name": "125B",
 		"Width": 2.6,
