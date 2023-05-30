@@ -29072,10 +29072,80 @@
 	},
 	{
 		"Brand": "Shnobel Tone",
+		"Name": "Boost",
+		"Width": 2.31,
+		"Height": 4.59,
+		"Image": "shnobel-tone-boost.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Buffer",
+		"Width": 2.52,
+		"Height": 2.33,
+		"Image": "shnobel-tone-buffer.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Buffer Fuzz Interface",
+		"Width": 2.84,
+		"Height": 4.4,
+		"Image": "shnobel-tone-buffer-fuzz-interface.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Compressor",
+		"Width": 3.7,
+		"Height": 4.99,
+		"Image": "shnobel-tone-compressor.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
 		"Name": "Daily Driver",
 		"Width": 3.7,
-		"Height": 4.86,
+		"Height": 4.99,
 		"Image": "shnobel-tone-daily-driver.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Daily Driver Stereo",
+		"Width": 3.7,
+		"Height": 4.99,
+		"Image": "shnobel-tone-daily-driver-stereo.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Dunlop Mini Volume+",
+		"Width": 2.97,
+		"Height": 6,
+		"Image": "shnobel-dunlop-mini-volume-plus.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Horse Power",
+		"Width": 3.7,
+		"Height": 4.99,
+		"Image": "shnobel-horse-power.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Mid Driver",
+		"Width": 3.7,
+		"Height": 4.99,
+		"Image": "shnobel-mid-driver.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Ratatouille",
+		"Width": 3.7,
+		"Height": 4.99,
+		"Image": "shnobel-ratatouille.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Volume/Expression Selector Box",
+		"Width": 1.5,
+		"Height": 3.81,
+		"Image": "shnobel-volume-expression-selector-box.png"
 	},
 	{
 		"Brand": "Shin-ei",
