@@ -28671,7 +28671,6 @@
 		"Height": 3.7,
 		"Image": "ryra-klone-gold.png"
 	},
-
 	{
 		"Brand": "Santono",
 		"Name": "Etched Pick Tin",
@@ -29063,6 +29062,13 @@
 		"Width": 3.78,
 		"Height": 6.57,
 		"Image": "shin-ei-fy-6.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Daily Driver",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "shnobel-tone-daily-driver.png"
 	},
 	{
 		"Brand": "Shin-ei",
