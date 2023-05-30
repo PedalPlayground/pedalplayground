@@ -15617,6 +15617,13 @@
 		"Image": "hologram-microcosm.png"
 	},
 	{
+		"Brand": "Homebrew Electronics",
+		"Name": "Power Screamer",
+		"Width": 5.07,
+		"Height": 3.7,
+		"Image": "homebrew-power-screamer.png"
+	},
+	{
 		"Brand": "Horrothia FX",
 		"Name": "Berkeley",
 		"Width": 3.7,
