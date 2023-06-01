@@ -9605,6 +9605,13 @@
 	},
 	{
 		"Brand": "Earthquaker",
+		"Name": "Disaster Transport (Reissue)",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "earthquaker-disaster-transport-reissue.png"
+	},
+	{
+		"Brand": "Earthquaker",
 		"Name": "Disaster Transport Jr",
 		"Width": 2.78,
 		"Height": 4.4,
