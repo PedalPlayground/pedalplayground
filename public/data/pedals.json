@@ -25936,6 +25936,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "MTET",
+		"Width": 4.4,
+		"Height": 2.67,
+		"Image": "obne-mtet.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Procession",
 		"Width": 2.87,
 		"Height": 4.96,
