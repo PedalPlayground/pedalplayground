@@ -15709,6 +15709,13 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Ampero Mini",
+		"Width": 5.28,
+		"Height": 4.67,
+		"Image": "hotone-ampero-mini.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Ampero II Stomp",
 		"Width": 7.28,
 		"Height": 5.58,
