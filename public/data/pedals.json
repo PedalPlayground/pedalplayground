@@ -26929,6 +26929,48 @@
 		"Image": "pedal-pal-fx-gold-overdrive.png"
 	},
 	{
+		"Brand": "Pedal Pawn",
+		"Name": "Chicken Quiff",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "pedal-pawn-chicken-quiff.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
+		"Name": "Fuzz",
+		"Width": 2.7,
+		"Height": 4.33,
+		"Image": "pedal-pawn-fuzz.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
+		"Name": "Germanium Fuzz",
+		"Width": 2.7,
+		"Height": 4.33,
+		"Image": "pedal-pawn-germanium-fuzz.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
+		"Name": "Gypsy Vibe",
+		"Width": 7.28,
+		"Height": 4.69,
+		"Image": "pedal-pawn-gypsy-vibe.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
+		"Name": "Octone",
+		"Width": 2.7,
+		"Height": 4.4,
+		"Image": "pedal-pawn-octone.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
+		"Name": "Texas Twang",
+		"Width": 2.7,
+		"Height": 4.33,
+		"Image": "pedal-pawn-texas-twang.png"
+	},
+	{
 		"Brand": "Pedaltrain",
 		"Name": "SST Space Saving Tuner",
 		"Width": 0.875,
