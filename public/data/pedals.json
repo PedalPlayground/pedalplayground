@@ -9345,6 +9345,13 @@
 		"Image": "dusky-toasted-v2.png"
 	},
 	{
+		"Brand": "Dut Beardy",
+		"Name": "Admiral",
+		"Width": 4.33,
+		"Height": 2.75,
+		"Image": "dut-beardy-admiral.png"
+	},
+	{
 		"Brand": "Dwarfcraft Devices",
 		"Name": "ARF",
 		"Width": 5.8,
@@ -34301,7 +34308,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "385 (Nat. Parks LE)",
+		"Name": "385 (Nat. Parks)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-385-parks.png"
@@ -34322,14 +34329,14 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Ages (Kamakura LE)",
+		"Name": "Ages (Kamakura)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-ages-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Ages (Nat. Parks LE)",
+		"Name": "Ages (Nat. Parks)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-ages-parks.png"
@@ -34343,35 +34350,35 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "ARP-87 (Kamakura LE)",
+		"Name": "ARP-87 (Kamakura)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-arp87-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "ARP-87 (Nat. Parks LE)",
+		"Name": "ARP-87 (Nat. Parks)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-arp87-parks.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "ARP-87 (Nautical LE)",
+		"Name": "ARP-87 (Nautical)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-arp87-nautical.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "ARP-87 (Obsidian LE)",
+		"Name": "ARP-87 (Obsidian)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-arp87-obisidian.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "ARP-87 (Platinum LE)",
+		"Name": "ARP-87 (Platinum)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-arp87-platinum.png"
@@ -34434,14 +34441,14 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Deep Six V3 (Nat. Parks LE)",
+		"Name": "Deep Six V3 (Nat. Parks)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-deepsixv3-parks.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Deep Six V3 (Nautical LE)",
+		"Name": "Deep Six V3 (Nautical)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-deepsixv3-nautical.png"
@@ -34483,28 +34490,28 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Eras (Kamakura LE)",
+		"Name": "Eras (Kamakura)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-eras-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Eras (Nat. Parks LE)",
+		"Name": "Eras (Nat. Parks)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-eras-parks.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Eras (Obsidian LE)",
+		"Name": "Eras (Obsidian)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-eras-obsidian.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Eras (Retro Edition)",
+		"Name": "Eras (Retro)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-eras-retro.png"
@@ -34525,21 +34532,21 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Fathom (Kamakura LE)",
+		"Name": "Fathom (Kamakura)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-fathom-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Fathom (Nat. Parks LE)",
+		"Name": "Fathom (Nat. Parks)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-fathom-parks.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Fathom (Nautical LE)",
+		"Name": "Fathom (Nautical)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-fathom-nautical.png"
@@ -34637,14 +34644,14 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julia (1016 LE)",
+		"Name": "Julia (1016)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-julia-1016.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julia (Enchantress LE)",
+		"Name": "Julia (Enchantress)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-julia-enchantress.png"
@@ -34665,28 +34672,28 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julia V2 (Gold LE)",
+		"Name": "Julia V2 (Gold)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-julia2-gold.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julia V2 (Kamakura LE)",
+		"Name": "Julia V2 (Kamakura)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-julia2-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julia V2 (Nat. Parks LE)",
+		"Name": "Julia V2 (Nat. Parks)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-julia2-parks.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julia V2 (Platinum LE)",
+		"Name": "Julia V2 (Platinum)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-julia2-platinum.png"
@@ -34700,28 +34707,28 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julianna (Gold LE)",
+		"Name": "Julianna (Gold)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-julianna-gold.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julianna (Kamakura LE)",
+		"Name": "Julianna (Kamakura)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-julianna-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julianna (Nat. Parks LE)",
+		"Name": "Julianna (Nat. Parks)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-julianna-parks.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Julianna (Obsidian LE)",
+		"Name": "Julianna (Obsidian)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-julianna-obsidian.png"
@@ -34763,7 +34770,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Lillian (Nat. Parks LE)",
+		"Name": "Lillian (Nat. Parks)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-lillian-parks.png"
@@ -34777,7 +34784,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Lore (Kamakura LE)",
+		"Name": "Lore (Kamakura)",
 		"Width": 3.7,
 		"Height": 4.84,
 		"Image": "walrus-lore-kamakura.png"
@@ -34798,35 +34805,35 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "MAKO Series: ACS1 Amp + Cab Simulator",
+		"Name": "MAKO Series: ACS1",
 		"Width": 2.87,
 		"Height": 4.9,
 		"Image": "walrus-acs1.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "MAKO Series: D1 Stereo Delay",
+		"Name": "MAKO Series: D1",
 		"Width": 2.87,
 		"Height": 4.9,
 		"Image": "walrus-mako-d1.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "MAKO Series: D1 Stereo Delay V2",
+		"Name": "MAKO Series: D1 V2",
 		"Width": 2.87,
 		"Height": 4.9,
 		"Image": "walrus-mako-d1-v2.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "MAKO Series: M1 High-Fidelity Modulation Machine",
+		"Name": "MAKO Series: M1",
 		"Width": 2.87,
 		"Height": 4.9,
 		"Image": "walrus-mako-m1.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "MAKO Series: R1 High-Fidelity Stereo Reverb",
+		"Name": "MAKO Series: R1",
 		"Width": 2.87,
 		"Height": 4.9,
 		"Image": "walrus-r1.png"
@@ -34875,21 +34882,21 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Monument V2 (Kamakura LE)",
+		"Name": "Monument V2 (Kamakura)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-monumentv2-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Monument V2 (Nat. Parks LE)",
+		"Name": "Monument V2 (Nat. Parks)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-monumentv2-parks.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Monument V2 (Obsidian LE)",
+		"Name": "Monument V2 (Obsidian)",
 		"Width": 2.72,
 		"Height": 4.95,
 		"Image": "walrus-monument-v2-obsidian.png"
@@ -34917,7 +34924,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Polychrome (Kamakura LE)",
+		"Name": "Polychrome (Kamakura)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-polychrome-kamakura.png"
@@ -34945,7 +34952,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Slö (Red Edition)",
+		"Name": "Slö (Red)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-slo-red.png"
@@ -34959,21 +34966,21 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Slötvå (Kamakura LE)",
+		"Name": "Slötvå (Kamakura)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-slotva-kamakura.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Slötvå (Nat. Parks LE)",
+		"Name": "Slötvå (Nat. Parks)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-slotva-parks.png"
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Slötvå (Obsidian LE)",
+		"Name": "Slötvå (Obsidian)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-slotva-obsidian.png"
@@ -34994,7 +35001,7 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Voyager (10 Year Anniversary LE)",
+		"Name": "Voyager (Anniversary)",
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-voyager-10.png"
