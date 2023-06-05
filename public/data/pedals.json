@@ -5160,6 +5160,13 @@
 	},
 	{
 		"Brand": "Browne Amplification",
+		"Name": "Gritador",
+		"Width": 2.91,
+		"Height": 4.8,
+		"Image": "browneamps-gritador.png"
+	},
+	{
+		"Brand": "Browne Amplification",
 		"Name": "Protein (Black)",
 		"Width": 4.7,
 		"Height": 3.79,
