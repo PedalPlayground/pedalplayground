@@ -1338,6 +1338,13 @@
 	},
 	{
 		"Brand": "Analog.Man",
+		"Name": "Envelope Filter",
+		"Width": 2.73,
+		"Height": 4.4,
+		"Image": "analogman-envelope-filter.png"
+	},
+	{
+		"Brand": "Analog.Man",
 		"Name": "King of Tone",
 		"Width": 4.7,
 		"Height": 3.84,
