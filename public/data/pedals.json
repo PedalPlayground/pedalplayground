@@ -16254,6 +16254,27 @@
 		"Image": "ifanem-second-voice.png"
 	},
 	{
+		"Brand": "Interstellar Audio Machines",
+		"Name": "Fuzzsquatch Fuzzdrive",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "iam-fuzzsquatch.png"
+	},
+	{
+		"Brand": "Interstellar Audio Machines",
+		"Name": "Marsling Octafuzzdrive",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "iam-marsling.png"
+	},
+	{
+		"Brand": "Interstellar Audio Machines",
+		"Name": "Octonaut Hyperdrive",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "iam-octonaut.png"
+	},
+	{
 		"Brand": "Iron Ether",
 		"Name": "Arcing Prisms",
 		"Width": 2.5,
