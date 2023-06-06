@@ -77,6 +77,13 @@
 		"Image": "1981-drv-whiteno3.png"
 	},
 	{
+		"Brand": "1981 Inventions",
+		"Name": "LVL",
+		"Width": 2.71,
+		"Height": 4.58,
+		"Image": "1981-lvl.png"
+	},
+	{
 		"Brand": "29 Pedals",
 		"Name": "EUNA",
 		"Width": 4.88,
