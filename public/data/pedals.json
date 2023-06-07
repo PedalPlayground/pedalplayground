@@ -10627,6 +10627,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Deluxe Electric Mistress (Big Box)",
+		"Width": 8,
+		"Height": 6.87,
+		"Image": "ehx-deluxe-mistress-big.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Memory Boy",
 		"Width": 6.07,
 		"Height": 4.75,
@@ -11198,6 +11205,13 @@
 		"Width": 6.07,
 		"Height": 4.75,
 		"Image": "ehx-pog2.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Q-Tron (Big Box)",
+		"Width": 8,
+		"Height": 6.87,
+		"Image": "ehx-q-tron-big.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -26689,6 +26703,13 @@
 		"Width": 2.87,
 		"Height": 4.33,
 		"Image": "palmer-pan-02.png"
+	},
+	{
+		"Brand": "Palmer",
+		"Name": "Pocket Amp MK2",
+		"Width": 3.94,
+		"Height": 4.12,
+		"Image": "palmer-pocket-amp-mk2.png"
 	},
 	{
 		"Brand": "Panda Audio",
