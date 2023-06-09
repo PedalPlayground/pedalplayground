@@ -27896,6 +27896,13 @@
 	},
 	{
 		"Brand": "Radial Engineering",
+		"Name": "JDX Direct Drive",
+		"Width": 3.63,
+		"Height": 4.7,
+		"Image": "radial-jdx-direct-drive.png"
+	},
+	{
+		"Brand": "Radial Engineering",
 		"Name": "JPC",
 		"Width": 3.3,
 		"Height": 5,
