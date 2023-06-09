@@ -3725,6 +3725,13 @@
 	},
 	{
 		"Brand": "Blue Colander",
+		"Name": "Pig",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "bluecolander-pig.png"
+	},
+	{
+		"Brand": "Blue Colander",
 		"Name": "Tibetan Quaalude",
 		"Width": 3.7,
 		"Height": 4.85,
@@ -8818,6 +8825,13 @@
 		"Width": 2.6,
 		"Height": 5.01,
 		"Image": "does-it-doom-aghartha.png"
+	},
+	{
+		"Brand": "Does It Doom",
+		"Name": "Doomcaster",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "does-it-doom-doomcaster.png"
 	},
 	{
 		"Brand": "Dominion",
