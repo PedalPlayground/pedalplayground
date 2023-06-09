@@ -25676,6 +25676,13 @@
 		"Image": "neural-dsp-quad-cortex.png"
 	},
 	{
+		"Brand": "O.C.E. Pedals",
+		"Name": "Wrench Fuzz",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "oce-wrench-fuzz.png"
+	},
+	{
 		"Brand": "Ohmless Pedals",
 		"Name": "AKC-4 Drive",
 		"Width": 2.75,
