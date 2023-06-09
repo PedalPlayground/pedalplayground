@@ -24739,6 +24739,20 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Hephaestus",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "mythos-hephaestus.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Hephaestus V2",
+		"Width": 1.78,
+		"Height": 3.6,
+		"Image": "mythos-hephaestus-v2.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Herculean",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -24781,14 +24795,14 @@
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Mjolnir (Joey Landreth Edition)",
+		"Name": "Mjolnir (Joey Landreth)",
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "mythos-mjolnirjl.png"
 	},
 	{
 		"Brand": "Mythos",
-		"Name": "Mjolnir (Wildwood Edition)",
+		"Name": "Mjolnir (Wildwood)",
 		"Width": 4.7,
 		"Height": 3.8,
 		"Image": "mythos-mjolnir-wildwood.png"
