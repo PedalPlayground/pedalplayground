@@ -3585,6 +3585,13 @@
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
+		"Name": "P2P Buzz Tone",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-p2p-buzz-tone.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
 		"Name": "P2P Tone Bender MKi",
 		"Width": 2.6,
 		"Height": 5,

@@ -65,6 +65,12 @@ If there is a pedal that you'd like to see added to our database please feel fre
 -   Include the dimensions of the pedal in inches (make sure the dimensions are accurate and include jacks and other protrusions)
 -   Post one issue for each pedal you're requesting
 
-New releases from all popular builders are added automatically -- there is no need to make a request for those.  Also before you submit your request, please double check if the pedal isn't already in the database, or hasn't already been added to a recent [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors.  Also we apologize but we are no longer accepting requests for alternate colorways.
+New releases from all popular builders are added automatically -- there is no need to make a request for those.  
+
+Also before you submit your request, please double check if the pedal isn't already in the database, or hasn't already been added to a recent [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors.
+
+Also we apologize but we are no longer accepting requests for alternate colorways.
 
 Please remain patient!  Even if your request is marked to be closed it can still take several weeks for updates to get pulled into the main project.
+
+Please do not bump/repost old requests.  If we haven't addressed your request it is probably due to a lack of quality photos available.
