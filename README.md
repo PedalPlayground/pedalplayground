@@ -58,19 +58,18 @@ Under MacOS Mojave:
 
 If there is a pedal that you'd like to see added to our database please feel free to [log an issue](https://github.com/PedalPlayground/PedalPlayground.github.io/issues).
 
-**Please keep the following guidelines in mind:**
+**Requests should include the following or they could be ignored:**
 
 -   Include the pedal brand and name in the title of your request
 -   Include a high resolution image of the pedal (top-down view, preferably white background, straight on perspective)
 -   Include the dimensions of the pedal in inches (make sure the dimensions are accurate and include jacks and other protrusions)
 -   Post one issue for each pedal you're requesting
 
-New releases from all popular builders are added automatically -- there is no need to make a request for those.  
+**Before you submit, please check for the following:**
 
-Also before you submit your request, please double check if the pedal isn't already in the database, or hasn't already been added to a recent [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors.
+-   Is your pedal a new releases from a popular builder?  If so, those are added automatically -- there is no need to make a request.
+-   Is your pedal an alternative colorway of something that's already in the database?  If so, we're sorry but we're no longer accepting requests for alternate colorways to help keep the project size manageable.
+-   Has your pedal already been added to a recent [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors?  Please check for that.
+-   Has your pedal already been [requested by somebody else](https://github.com/PedalPlayground/PedalPlayground.github.io/issues)?  Please do not bump old requests, it does not help get them completed faster.
 
-Also we apologize but we are no longer accepting requests for alternate colorways.
-
-Please remain patient!  Even if your request is marked to be closed it can still take several weeks for updates to get pulled into the main project.
-
-Please do not bump/repost old requests.  If we haven't addressed your request it is probably due to a lack of quality photos available.
+Please remain patient!  Even if your request is marked to be closed it can still take several weeks for updates to get pulled into the main project.  And if we haven't addressed your request it is probably due to a lack of quality photos available, not because we forgot about it.
