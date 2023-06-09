@@ -58,7 +58,7 @@ Under MacOS Mojave:
 
 If there is a pedal that you'd like to see added to our database please feel free to [log an issue](https://github.com/PedalPlayground/PedalPlayground.github.io/issues).
 
-**Requests should include the following or they could be ignored:**
+**Requests must include the following:**
 
 -   Include the pedal brand and name in the title of your request
 -   Include a high resolution image of the pedal (top-down view, preferably white background, straight on perspective)
@@ -70,6 +70,10 @@ If there is a pedal that you'd like to see added to our database please feel fre
 -   Is your pedal a new releases from a popular builder?  If so, those are added automatically -- there is no need to make a request.
 -   Is your pedal an alternative colorway of something that's already in the database?  If so, we're sorry but we're no longer accepting requests for alternate colorways to help keep the project size manageable.
 -   Has your pedal already been added to a recent [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors?  Please check for that.
--   Has your pedal already been [requested by somebody else](https://github.com/PedalPlayground/PedalPlayground.github.io/issues)?  Please do not bump old requests, it does not help get them completed faster.
+-   Has your pedal already been [requested by somebody else](https://github.com/PedalPlayground/PedalPlayground.github.io/issues)?  If so, please do not bump old requests, it does not help.
 
-Please remain patient!  Even if your request is marked to be closed it can still take several weeks for updates to get pulled into the main project.  And if we haven't addressed your request it is probably due to a lack of quality photos available, not because we forgot about it.
+**Please remain patient!**  
+
+If we haven't addressed your request it is probably due to a lack of quality photos available, not because we've overlooked it.
+
+Even if your request is marked to be closed it can still take several weeks for updates to get pulled into the main project.
