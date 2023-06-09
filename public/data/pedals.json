@@ -17178,6 +17178,13 @@
 		"Image": "jet-revelation-v2.png"
 	},
 	{
+		"Brand": "Jetter",
+		"Name": "Red Square",
+		"Width": 4.8,
+		"Height": 4.38,
+		"Image": "jetter-red-square.png"
+	},
+	{
 		"Brand": "JHS",
 		"Name": "1966 Series Bender",
 		"Width": 2.99,
