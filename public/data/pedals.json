@@ -3748,8 +3748,15 @@
 		"Brand": "BluGuitar",
 		"Name": "Amp1",
 		"Width": 9.65,
-		"Height": 7.56,
+		"Height": 7.31,
 		"Image": "bluguitar-amp1.png"
+	},
+	{
+		"Brand": "BluGuitar",
+		"Name": "Amp1 Iridium Edition",
+		"Width": 9.65,
+		"Height": 7.31,
+		"Image": "bluguitar-amp1-iridium.png"
 	},
 	{
 		"Brand": "BluGuitar",
