@@ -14379,6 +14379,20 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "Generator",
+		"Width": 4.33,
+		"Height": 2.41,
+		"Image": "gigrig-generator.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "GenX14",
+		"Width": 6.22,
+		"Height": 3.23,
+		"Image": "gigrig-genx14.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "Grumpybot Buffer",
 		"Width": 2.75591,
 		"Height": 1.5748,
@@ -26539,13 +26553,6 @@
 	{
 		"Brand": "Origin Effects",
 		"Name": "RevivalDRIVE",
-		"Width": 4.6,
-		"Height": 6.05,
-		"Image": "origin-revivaldrive.png"
-	},
-	{
-		"Brand": "Origin Effects",
-		"Name": "RevivalDRIVE (Custom)",
 		"Width": 4.6,
 		"Height": 6.05,
 		"Image": "origin-revivaldrive.png"
