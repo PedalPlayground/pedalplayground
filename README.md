@@ -68,7 +68,7 @@ Please post a new issue for each pedal you are requesting!
 
 **Before you submit, please consider the following:**
 
--   New releases from a popular builder are added to the database automatically -- there is no need to make a request for those,
+-   New releases from all major builders are added to the database automatically -- there is no need to make a request for those,
 -   Please do not request alternative colorways.  To help keep the project size manageable we will no longer be accepting those requests,
 -   Please check to see if your pedal request hasn't already been covered by a [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors,
 -   Please check if your pedal hasn't already been [requested by somebody else](https://github.com/PedalPlayground/PedalPlayground.github.io/issues).

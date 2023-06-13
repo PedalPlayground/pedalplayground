@@ -14331,15 +14331,22 @@
 	{
 		"Brand": "GigRig",
 		"Name": "ABY Baby",
-		"Width": 6.3,
-		"Height": 2.28,
+		"Width": 6.45,
+		"Height": 2.45,
 		"Image": "gigrig-aby-baby.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "Bank Manager",
+		"Width": 1.77,
+		"Height": 2.83,
+		"Image": "gigrig-bank-man.png"
 	},
 	{
 		"Brand": "GigRig",
 		"Name": "Cinco Cinco Patch Bay",
 		"Width": 4.33,
-		"Height": 2.95,
+		"Height": 2.79,
 		"Image": "gigrig-cinco.png"
 	},
 	{
@@ -14348,13 +14355,6 @@
 		"Width": 2.56,
 		"Height": 1.18,
 		"Image": "gigrig-distributor.png"
-	},
-	{
-		"Brand": "GigRig",
-		"Name": "G2/G3 Bank Manager",
-		"Width": 1.77,
-		"Height": 2.36,
-		"Image": "gigrig-bank-man.png"
 	},
 	{
 		"Brand": "GigRig",
@@ -14394,14 +14394,14 @@
 	{
 		"Brand": "GigRig",
 		"Name": "Grumpybot Buffer",
-		"Width": 2.75591,
-		"Height": 1.5748,
+		"Width": 2.82,
+		"Height": 1.66,
 		"Image": "gigrig-grumpybot.png"
 	},
 	{
 		"Brand": "GigRig",
 		"Name": "Humdinger",
-		"Width": 2.05,
+		"Width": 2.34,
 		"Height": 4.02,
 		"Image": "gigrig-humdinger.png"
 	},
@@ -14415,9 +14415,16 @@
 	{
 		"Brand": "GigRig",
 		"Name": "MIDI Cinco Patch Bay",
-		"Width": 4.92,
-		"Height": 3.03,
+		"Width": 4.49,
+		"Height": 2.79,
 		"Image": "gigrig-cinco-midi.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "MIDI Driver",
+		"Width": 2.68,
+		"Height": 2.16,
+		"Image": "gigrig-midi-driver.png"
 	},
 	{
 		"Brand": "GigRig",
@@ -14463,9 +14470,9 @@
 	},
 	{
 		"Brand": "GigRig",
-		"Name": "Three 2 One",
-		"Width": 3.15,
-		"Height": 4.52,
+		"Name": "Three 2 One V2",
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "gigrig-three-two-one.png"
 	},
 	{
