@@ -60,21 +60,23 @@ If there is a pedal that you'd like to see added to our database please feel fre
 
 **Requests must include the following:**
 
-1.  The pedal brand and name in the title of your request
-2.  A high resolution image of the pedal (top-down view, preferably white background, straight on perspective)
-3.  The dimensions of the pedal in inches (make sure the dimensions are accurate and include jacks and other protrusions)
+1.  The pedal brand and name in the title of your request,
+2.  A high resolution image of the pedal (top-down view, preferably white background, straight on perspective),
+3.  The dimensions of the pedal in inches (make sure the dimensions are accurate and include jacks and other protrusions).
 
-Post one issue for each pedal you're requesting
+Please post a new issue for each pedal you are requesting!
 
-**Before you submit, please check for the following:**
+**Before you submit, please consider the following:**
 
--   Is your pedal a new releases from a popular builder?  If so, those are added automatically -- there is no need to make a request.
--   Is your pedal an alternative colorway of something that's already in the database?  If so, we're sorry but we're no longer accepting requests for alternate colorways to help keep the project size manageable.
--   Has your pedal already been added to a recent [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors?
--   Has your pedal already been [requested by somebody else](https://github.com/PedalPlayground/PedalPlayground.github.io/issues)?
+-   New releases from a popular builder are added to the database automatically -- there is no need to make a request for those,
+-   Please do not request alternative colorways.  To help keep the project size manageable we will no longer be accepting those requests,
+-   Please check to see if your pedal request hasn't already been covered by a [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors,
+-   Please check if your pedal hasn't already been [requested by somebody else](https://github.com/PedalPlayground/PedalPlayground.github.io/issues).
 
-### Please remain patient! ###
+### PLEASE REMAIN PATIENT ###
 
-Even if your request is marked to be closed it can still take several weeks for updates to get pulled into the main project.
+Even if your request has been completed and linked to a pull request it may still take several weeks for updates to get pulled into the main project.  The individual contributors have no control over that so please remain patient.
 
-Please **do not** bump/repost pedal requests.  It does not help.  If we haven't addressed your request it is probably due to a lack of quality photos available, not because we've overlooked it.  Thank you.
+Please **do not** bump/repost pedal requests!
+
+If we haven't gotten to your request yet there is probably a good reason for it (insufficient image quality, lack of published dimensions, etc).
