@@ -5727,6 +5727,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Carbide",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-carbide.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Cloak",
 		"Width": 2.6,
 		"Height": 4.33,
