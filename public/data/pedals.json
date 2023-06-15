@@ -22828,6 +22828,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Drummed X2",
+		"Width": 2.85,
+		"Height": 4.53,
+		"Image": "mooer-drummer-x2.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "E-lady",
 		"Width": 1.67,
 		"Height": 3.75,
@@ -22975,6 +22982,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Looper X2",
+		"Width": 2.85,
+		"Height": 4.53,
+		"Image": "mooer-looper-x2.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Macro Power S12",
 		"Width": 8.86,
 		"Height": 3.48,
@@ -23010,10 +23024,24 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Micro Drummer II",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-micro-drummer-2.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Micro Looper",
 		"Width": 1.67,
 		"Height": 3.75,
 		"Image": "mooer-micro-looper.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Micro Looper II",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-micro-looper-2.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -34102,6 +34130,13 @@
 		"Width": 3.79,
 		"Height": 4.85,
 		"Image": "vsaudio-vibler.png"
+	},
+	{
+		"Brand": "Volta",
+		"Name": "1987 Pro",
+		"Width": 5.12,
+		"Height": 3.79,
+		"Image": "volta-1987-pro.png"
 	},
 	{
 		"Brand": "Volta",
