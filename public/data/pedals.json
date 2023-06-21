@@ -8401,6 +8401,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD FX50 Overdrive Preamp",
+		"Width": 3.3,
+		"Height": 5.05,
+		"Image": "dod-fx50.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD FX63 Deep Freeze",
 		"Width": 3.3,
 		"Height": 5.13,
@@ -19339,6 +19346,13 @@
 		"Width": 2.67,
 		"Height": 4.4,
 		"Image": "keeley-tesla-mk3.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Time Machine Boost",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "keeley-time-machine-boost.png"
 	},
 	{
 		"Brand": "Keeley",
