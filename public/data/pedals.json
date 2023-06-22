@@ -4180,6 +4180,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DM-101 Delay Machine",
+		"Width": 7.56,
+		"Height": 5.23,
+		"Image": "boss-re101.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "DM-2 Delay",
 		"Width": 2.875,
 		"Height": 5.125,
