@@ -3710,6 +3710,13 @@
 		"Image": "blammo-zonch-machine.png"
 	},
 	{
+		"Brand": "Bleak District Electric",
+		"Name": "Tapescape",
+		"Width": 4.7,
+		"Height": 3.98,
+		"Image": "bde-tapescape.png"
+	},
+	{
 		"Brand": "Blue Colander",
 		"Name": "Crooked Axis",
 		"Width": 3.7,
@@ -28712,6 +28719,13 @@
 		"Width": 4.72,
 		"Height": 3.74,
 		"Image": "reuss-evil-twin.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "Chat Breaker",
+		"Width": 2.63,
+		"Height": 4.44,
+		"Image": "revv-chat-breaker.png"
 	},
 	{
 		"Brand": "Revv",
