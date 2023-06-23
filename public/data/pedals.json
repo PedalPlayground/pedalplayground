@@ -11600,6 +11600,13 @@
 	},
 	{
 		"Brand": "EAE",
+		"Name": "Dagger (Black)",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "electronic-audio-experiments-dagger-black.png"
+	},
+	{
+		"Brand": "EAE",
 		"Name": "Dagger (Bubblegum)",
 		"Width": 2.6,
 		"Height": 4.99,
@@ -27172,6 +27179,20 @@
 		"Width": 2.7,
 		"Height": 4.33,
 		"Image": "pedal-pawn-texas-twang.png"
+	},
+	{
+		"Brand": "Pedaltrain",
+		"Name": "Daylight",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "pedaltrain-daylight.png"
+	},
+	{
+		"Brand": "Pedaltrain",
+		"Name": "Nightlight",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "pedaltrain-nightlight.png"
 	},
 	{
 		"Brand": "Pedaltrain",
