@@ -27147,6 +27147,13 @@
 	},
 	{
 		"Brand": "Paul C",
+		"Name": "Tim V3",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "paul-c-tim-v3.png"
+	},
+	{
+		"Brand": "Paul C",
 		"Name": "Timmy",
 		"Width": 2.65,
 		"Height": 4.54,
