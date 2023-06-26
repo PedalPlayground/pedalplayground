@@ -33362,11 +33362,18 @@
 		"Image": "tronographic-rusty-box.png"
 	},
 	{
-		"Brand": "Tru-Fi Effects",
+		"Brand": "Tru-Fi",
 		"Name": "Colordriver 9V",
 		"Width": 4,
 		"Height": 5.5,
 		"Image": "tru-fi-colordriver-9v.png"
+	},
+	{
+		"Brand": "Tru-Fi",
+		"Name": "Floyd Fuzz",
+		"Width": 3.67,
+		"Height": 5.56,
+		"Image": "tru-fi-floyd-fuzz.png"
 	},
 	{
 		"Brand": "Truetone",
