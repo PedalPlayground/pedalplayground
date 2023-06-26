@@ -18613,6 +18613,48 @@
 		"Image": "joyo-r20.png"
 	},
 	{
+		"Brand": "Joyo",
+		"Name": "R-21 Tornado",
+		"Width": 5.12,
+		"Height": 3.31,
+		"Image": "joyo-r21.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-22 Narcissus",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r22.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-24 Rigel Preamp",
+		"Width": 5.12,
+		"Height": 3.31,
+		"Image": "joyo-r24.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-26 Monomyth",
+		"Width": 5.16,
+		"Height": 4.37,
+		"Image": "joyo-r26.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-27 Scylla",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r27.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-28 Double Thruster",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r28.png"
+	},
+	{
 		"Brand": "JPTR FX",
 		"Name": "Add Violence",
 		"Width": 2.5,
