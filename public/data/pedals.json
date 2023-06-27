@@ -2857,6 +2857,13 @@
 	},
 	{
 		"Brand": "Beetronics",
+		"Name": "Octahive 2",
+		"Width": 3.52,
+		"Height": 5.6,
+		"Image": "beetronics-octahive-2.png"
+	},
+	{
+		"Brand": "Beetronics",
 		"Name": "Overhive",
 		"Width": 3.77,
 		"Height": 5.5,
