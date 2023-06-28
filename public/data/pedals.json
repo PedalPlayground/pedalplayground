@@ -31991,6 +31991,27 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Ampworx Combo Deluxe 65'",
+		"Width": 4.2,
+		"Height": 5.03,
+		"Image": "tc-ampworx-combo-deluxe-65.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Ampworx DC30",
+		"Width": 4.2,
+		"Height": 5.03,
+		"Image": "tc-ampworx-dc30.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Ampworx Jims 45",
+		"Width": 4.2,
+		"Height": 5.03,
+		"Image": "tc-ampworx-jims-45.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Arena Reverb",
 		"Width": 2.86,
 		"Height": 4.8,
