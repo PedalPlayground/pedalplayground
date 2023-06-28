@@ -30261,6 +30261,13 @@
 		"Image": "solodallas-tsr.png"
 	},
 	{
+		"Brand": "Soma",
+		"Name": "Cosmos",
+		"Width": 13.46,
+		"Height": 5.91,
+		"Image": "soma-cosmos.png"
+	},
+	{
 		"Brand": "Sonicake",
 		"Name": "Fazy Cream",
 		"Width": 1.66,
@@ -34669,6 +34676,20 @@
 		"Width": 10.25,
 		"Height": 6.7,
 		"Image": "warm-audio-jet-phaser.png"
+	},
+	{
+		"Brand": "Warm Audio",
+		"Name": "Mutation Phasor II",
+		"Width": 3.6,
+		"Height": 6.76,
+		"Image": "warm-audio-mutation-phasor-2.png"
+	},
+	{
+		"Brand": "Warm Audio",
+		"Name": "ODD Box",
+		"Width": 2.84,
+		"Height": 4.5,
+		"Image": "warm-audio-odd-box.png"
 	},
 	{
 		"Brand": "Warm Audio",
