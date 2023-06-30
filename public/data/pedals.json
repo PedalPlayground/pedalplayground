@@ -6903,6 +6903,13 @@
 	},
 	{
 		"Brand": "Cornerstone",
+		"Name": "Colosseum",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "cornerstone-colosseum.png"
+	},
+	{
+		"Brand": "Cornerstone",
 		"Name": "Gladio",
 		"Width": 4.7,
 		"Height": 3.82,
