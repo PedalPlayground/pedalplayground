@@ -27958,6 +27958,13 @@
 		"Image": "providence-chrono.png"
 	},
 	{
+		"Brand": "Providence",
+		"Name": "System Tuner STV-1JB",
+		"Width": 2.97,
+		"Height": 4.53,
+		"Image": "providence-stv1jb.png"
+	},
+	{
 		"Brand": "PRS Guitars",
 		"Name": "Horsemeat",
 		"Width": 3.7,
