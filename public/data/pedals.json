@@ -13343,6 +13343,13 @@
 	},
 	{
 		"Brand": "Free The Tone",
+		"Name": "PHV-1",
+		"Width": 3.68,
+		"Height": 2.07,
+		"Image": "freethetone-phv1.png"
+	},
+	{
+		"Brand": "Free The Tone",
 		"Name": "Programmable Analog 10 Band EQ PA-1QG",
 		"Width": 4.72,
 		"Height": 4,
@@ -20998,6 +21005,13 @@
 		"Width": 3.50,
 		"Height": 4.80,
 		"Image": "lurch-audio-sorghum.png"
+	},
+	{
+		"Brand": "Lwave",
+		"Name": "Tiny Tap",
+		"Width": 1.26,
+		"Height": 1.18,
+		"Image": "lwave-tiny-tap.png"
 	},
 	{
 		"Brand": "M-Audio",
@@ -29020,6 +29034,13 @@
 		"Width": 3.96,
 		"Height": 4.77,
 		"Image": "rodenberg-tb-drive.png"
+	},
+	{
+		"Brand": "Roger Mayer",
+		"Name": "Voodoo Vibe",
+		"Width": 8.66,
+		"Height": 5.83,
+		"Image": "roger-mayer-voodoo-vibe.png"
 	},
 	{
 		"Brand": "Roland",
