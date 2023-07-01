@@ -6504,6 +6504,13 @@
 	},
 	{
 		"Brand": "Cioks",
+		"Name": "DC10 Link",
+		"Width": 9.46,
+		"Height": 3.86,
+		"Image": "cioks-dc10-link.png"
+	},
+	{
+		"Brand": "Cioks",
 		"Name": "Sol",
 		"Width": 5.15,
 		"Height": 3.46,
