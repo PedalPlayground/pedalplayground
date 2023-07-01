@@ -814,7 +814,7 @@
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Duo 2.1",
-		"Width": 18.125,
+		"Width": 18.13,
 		"Height": 5.75,
 		"Image": "rockboard-duo-21.png"
 	},
@@ -866,6 +866,13 @@
 		"Width": 23.55,
 		"Height": 9.3,
 		"Image": "rockboard-tres-32.png"
+	},
+	{
+		"Brand": "Rockboard by Warwick",
+		"Name": "Tres 3.3",
+		"Width": 28.42,
+		"Height": 9.3,
+		"Image": "rockboard-tres-33.png"
 	},
 	{
 		"Brand": "Rug",
