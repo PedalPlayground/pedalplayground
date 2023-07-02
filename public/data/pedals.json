@@ -23940,6 +23940,13 @@
 		"Image": "musicomlab-efx-le.png"
 	},
 	{
+		"Brand": "Musicomlab",
+		"Name": "Parallelizer",
+		"Width": 6.3,
+		"Height": 3.77,
+		"Image": "musicomlab-parallelizer.png"
+	},
+	{
 		"Brand": "Mu-Tron",
 		"Name": "Bi-Phase II",
 		"Width": 7.25,
