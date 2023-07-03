@@ -8344,6 +8344,13 @@
 		"Image": "diezel-zerrer.png"
 	},
 	{
+		"Brand": "Diffractor Soundings",
+		"Name": "Arboretum",
+		"Width": 7.4,
+		"Height": 5.01,
+		"Image": "diffractor-soundings-arboretum.png"
+	},
+	{
 		"Brand": "DigiTech",
 		"Name": "Bad Monkey",
 		"Width": 3,
@@ -15045,8 +15052,8 @@
 	{
 		"Brand": "Greer Amps",
 		"Name": "Sure Shot",
-		"Width": 1.79,
-		"Height": 3.64,
+		"Width": 1.8,
+		"Height": 3.7,
 		"Image": "greer-sure-shot.png"
 	},
 	{
@@ -15062,6 +15069,13 @@
 		"Width": 2.84,
 		"Height": 4.9,
 		"Image": "greer-southland.png"
+	},
+	{
+		"Brand": "Greer Amps",
+		"Name": "The Southland (Black/Teal)",
+		"Width": 2.84,
+		"Height": 4.9,
+		"Image": "greer-southland-teal.png"
 	},
 	{
 		"Brand": "Greer Amps",
