@@ -16696,6 +16696,13 @@
 	},
 	{
 		"Brand": "J. Rockett",
+		"Name": "Hot Rubber Monkey V2",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-hot-rubber-monkey-v2.png"
+	},
+	{
+		"Brand": "J. Rockett",
 		"Name": "JB Archer",
 		"Width": 2.3,
 		"Height": 3.97,
