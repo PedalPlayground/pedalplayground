@@ -4383,10 +4383,17 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "MD-L Metal Core",
+		"Name": "ML-2 Metal Core",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ml2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "ME-90 Guitar Multiple Effects",
+		"Width": 17.5,
+		"Height": 8.6875,
+		"Image": "boss-me90.png"
 	},
 	{
 		"Brand": "BOSS",
