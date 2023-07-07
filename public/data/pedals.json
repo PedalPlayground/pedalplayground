@@ -16941,6 +16941,20 @@
 	},
 	{
 		"Brand": "Jackson Audio",
+		"Name": "Golden Boy Mini",
+		"Width": 2.5,
+		"Height": 4.11,
+		"Image": "jackson-golden-boy-mini.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "Golden Boy Mini (Black)",
+		"Width": 2.5,
+		"Height": 4.11,
+		"Image": "jackson-golden-boy-mini-black.png"
+	},
+	{
+		"Brand": "Jackson Audio",
 		"Name": "Modular Fuzz",
 		"Width": 2.7,
 		"Height": 5.13,
