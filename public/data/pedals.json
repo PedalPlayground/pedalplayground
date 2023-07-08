@@ -33698,6 +33698,20 @@
 		"Image": "tubeworks-bk-butler-real-tube.png"
 	},
 	{
+		"Brand": "Twilight Pulse Audioworks",
+		"Name": "Konstante",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "twilight-pulse-konstante.png"
+	},
+	{
+		"Brand": "Twilight Pulse Audioworks",
+		"Name": "Proxima",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "twilight-pulse-proxima.png"
+	},
+	{
 		"Brand": "Twinote",
 		"Name": "BBD Chorus",
 		"Width": 2.6,
