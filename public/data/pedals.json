@@ -2506,6 +2506,13 @@
 		"Image": "bbe-sonic-stomp.png"
 	},
 	{
+		"Brand": "BBE",
+		"Name": "Sonic Stomp Mini",
+		"Width": 1.25,
+		"Height": 3.5,
+		"Image": "bbe-sonic-stomp-mini.png"
+	},
+	{
 		"Brand": "Bearfoot Fx",
 		"Name": "Arctic White Fuzz",
 		"Width": 2.68,
