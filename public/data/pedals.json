@@ -1366,9 +1366,16 @@
 	},
 	{
 		"Brand": "Analog.Man",
+		"Name": "Mini Bad Bob",
+		"Width": 1.9,
+		"Height": 3.76,
+		"Image": "analogman-bad-bob-mini.png"
+	},
+	{
+		"Brand": "Analog.Man",
 		"Name": "Mini Beano Boost",
-		"Width": 1.85,
-		"Height": 3.6,
+		"Width": 1.9,
+		"Height": 3.76,
 		"Image": "analogman-mini-beano.png"
 	},
 	{
@@ -29668,9 +29675,16 @@
 	{
 		"Brand": "Smallsound/Bigsound",
 		"Name": "Mini",
-		"Width": 2.7,
-		"Height": 4.3,
+		"Width": 2.6,
+		"Height": 4.4,
 		"Image": "smallsound-mini.png"
+	},
+	{
+		"Brand": "Smallsound/Bigsound",
+		"Name": "Mini (Top Jacks)",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "smallsound-mini-top.png"
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
