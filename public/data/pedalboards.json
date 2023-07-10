@@ -721,6 +721,20 @@
 		"Image": "pedaltrain-terra42.png"
 	},
 	{
+		"Brand": "Pedaltrain",
+		"Name": "XD-18",
+		"Width": 18,
+		"Height": 17.5,
+		"Image": "pedaltrain-xd-18.png"
+	},
+	{
+		"Brand": "Pedaltrain",
+		"Name": "XD-24",
+		"Width": 24,
+		"Height": 17.5,
+		"Image": "pedaltrain-xd-24.png"
+	},
+	{
 		"Brand": "Pivotal",
 		"Name": "X14",
 		"Width": 15.85,

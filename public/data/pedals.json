@@ -32053,6 +32053,27 @@
 		"Image": "trex-vulture.png"
 	},
 	{
+		"Brand": "Tape Audio Co.",
+		"Name": "One (Black)",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "tapeaudioco-one.png"
+	},
+	{
+		"Brand": "Tape Audio Co.",
+		"Name": "Two (Black)",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "tapeaudioco-two.png"
+	},
+	{
+		"Brand": "Tape Audio Co.",
+		"Name": "Two (White)",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "tapeaudioco-two-white.png"
+	},
+	{
 		"Brand": "Taylor",
 		"Name": "A/B/Both Box",
 		"Width": 4.6,
