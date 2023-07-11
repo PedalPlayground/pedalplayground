@@ -31417,7 +31417,14 @@
 	},
 	{
 		"Brand": "Subdecay",
-		"Name": "Echobox V1",
+		"Name": "Anamnesis Echo",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-anamnesis-echo.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Echobox",
 		"Width": 3.7,
 		"Height": 4.8,
 		"Image": "subdecay-echoboxv1.png"
@@ -31425,30 +31432,163 @@
 	{
 		"Brand": "Subdecay",
 		"Name": "Echobox V2",
-		"Width": 2.5,
+		"Width": 2.65,
 		"Height": 4.4,
 		"Image": "subdecay-echoboxv2.png"
 	},
 	{
 		"Brand": "Subdecay",
+		"Name": "Harmonic Antagonizer",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-harmonic-antagonizer.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Liquid Sunshine",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-liquid-sunshine.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "M3",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-m3.png"
+	},
+	{
+		"Brand": "Subdecay",
 		"Name": "Octasynth",
-		"Width": 2.45,
+		"Width": 2.65,
 		"Height": 4.4,
 		"Image": "subdecay-octasynth.png"
 	},
 	{
 		"Brand": "Subdecay",
+		"Name": "Octave Theory",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-octave-theory.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Pixelwave",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-pixelwave.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Prometheus 3",
+		"Width": 3.87,
+		"Height": 4.9,
+		"Image": "subdecay-prometheus-3.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Prometheus DLX",
+		"Width": 3.87,
+		"Height": 4.9,
+		"Image": "subdecay-prometheus-dlx.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Proteus",
+		"Width": 4.4,
+		"Height": 2.51,
+		"Image": "subdecay-proteus.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Quasar",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-quasar.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Quasar DLX",
+		"Width": 3.87,
+		"Height": 4.9,
+		"Image": "subdecay-quasar-dlx.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Siren",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-siren.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Starlight",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-starlight.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Starlight DLX",
+		"Width": 4.85,
+		"Height": 5.84,
+		"Image": "subdecay-starlight-dlx.png"
+	},
+	{
+		"Brand": "Subdecay",
 		"Name": "Spring Theory",
-		"Width": 2.5,
+		"Width": 2.65,
 		"Height": 4.4,
 		"Image": "subdecay-springtheory.png"
 	},
 	{
 		"Brand": "Subdecay",
+		"Name": "Super Spring Theory",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-super-spring-theory.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Supernova Drive",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-supernova-drive.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "TremCoder",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-tremcoder.png"
+	},
+	{
+		"Brand": "Subdecay",
 		"Name": "Vagabond",
-		"Width": 2.75,
+		"Width": 2.65,
 		"Height": 4.4,
 		"Image": "subdecay-vagabond.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Variac",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-variac.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Vector",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-vector.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Vitruvian Mod",
+		"Width": 2.65,
+		"Height": 4.4,
+		"Image": "subdecay-vitruvian-mod.png"
 	},
 	{
 		"Brand": "Suhr",
@@ -31673,6 +31813,13 @@
 		"Width": 2.46,
 		"Height": 4.33,
 		"Image": "surfy-surfydrip.png"
+	},
+	{
+		"Brand": "Surfy Industries",
+		"Name": "SurfyFuzz",
+		"Width": 4.25,
+		"Height": 4.54,
+		"Image": "surfy-surfyfuzz.png"
 	},
 	{
 		"Brand": "Surfy Industries",
