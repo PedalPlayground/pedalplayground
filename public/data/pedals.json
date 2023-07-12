@@ -6322,6 +6322,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Generation Loss MKII (LE)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-generation-loss-mk2-le.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Gravitas",
 		"Width": 2.86,
 		"Height": 4.86,
@@ -6350,7 +6357,7 @@
 	},
 	{
 		"Brand": "Chase Bliss",
-		"Name": "MOOD (Bauhaus Limited Edition)",
+		"Name": "MOOD (LE)",
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-mood-bauhaus.png"
@@ -6361,6 +6368,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-mood-mk2.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "MOOD MKII (LE)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-mood-mk2-le.png"
 	},
 	{
 		"Brand": "Chase Bliss",
