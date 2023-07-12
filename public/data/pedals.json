@@ -12625,7 +12625,14 @@
 		"Name": "Fuzz Rangers",
 		"Width": 2.25,
 		"Height": 4.25,
-		"Image": "formula6-fuzz-rangers.png"
+		"Image": "formula-6-fuzz-rangers.png"
+	},
+	{
+		"Brand": "Formula B",
+		"Name": "Supa Tank",
+		"Width": 3.15,
+		"Height": 5.51,
+		"Image": "formula-b-supa-tank.png"
 	},
 	{
 		"Brand": "Fortin",
