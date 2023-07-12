@@ -16436,6 +16436,27 @@
 		"Image": "ifanem-second-voice.png"
 	},
 	{
+		"Brand": "Intensive Care Audio",
+		"Name": "Death Drive",
+		"Width": 3.9,
+		"Height": 4.9,
+		"Image": "ica-death-drive.png"
+	},
+	{
+		"Brand": "Intensive Care Audio",
+		"Name": "Fideleater",
+		"Width": 3.9,
+		"Height": 4.9,
+		"Image": "ica-fideleater.png"
+	},
+	{
+		"Brand": "Intensive Care Audio",
+		"Name": "Vena Cava Filter",
+		"Width": 3.9,
+		"Height": 4.9,
+		"Image": "ica-vena-cava-filter.png"
+	},
+	{
 		"Brand": "Interstellar Audio Machines",
 		"Name": "Fuzzsquatch Fuzzdrive",
 		"Width": 2.6,
@@ -17113,6 +17134,13 @@
 		"Width": 2.7,
 		"Height": 4.3,
 		"Image": "jam-eureka.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Fuzz Phrase Ltd",
+		"Width": 2.84,
+		"Height": 4.7,
+		"Image": "jam-fuzz-phrase-ltd.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -31561,6 +31589,13 @@
 		"Width": 2.65,
 		"Height": 4.4,
 		"Image": "subdecay-tremcoder.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "TremCoder mkII",
+		"Width": 3.87,
+		"Height": 4.9,
+		"Image": "subdecay-tremcoder-mk2.png"
 	},
 	{
 		"Brand": "Subdecay",
