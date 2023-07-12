@@ -6889,6 +6889,20 @@
 	},
 	{
 		"Brand": "Coppersound",
+		"Name": "Iris",
+		"Width": 1.76,
+		"Height": 3.65,
+		"Image": "coppersound-iris.png"
+	},
+	{
+		"Brand": "Coppersound",
+		"Name": "Kingpin",
+		"Width": 1.76,
+		"Height": 3.65,
+		"Image": "coppersound-kingpin.png"
+	},
+	{
+		"Brand": "Coppersound",
 		"Name": "Loma Prieta",
 		"Width": 4.7,
 		"Height": 3.95,
@@ -11756,8 +11770,15 @@
 		"Brand": "EAE",
 		"Name": "Sending",
 		"Width": 5.7,
-		"Height": 4.7,
+		"Height": 4.8,
 		"Image": "electronic-audio-experiments-sending.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Sending v2",
+		"Width": 5.7,
+		"Height": 5,
+		"Image": "electronic-audio-experiments-sending-v2.png"
 	},
 	{
 		"Brand": "Elektron",
@@ -19602,15 +19623,15 @@
 	{
 		"Brand": "KG MIDI Controllers",
 		"Name": "Quadruple I/O",
-		"Width": 6.76,
-		"Height": 2.6,
+		"Width": 6.66,
+		"Height": 2.56,
 		"Image": "kgmidi-quadruple.png"
 	},
 	{
 		"Brand": "KG MIDI Controllers",
 		"Name": "Triple I/O",
-		"Width": 6.76,
-		"Height": 2.6,
+		"Width": 6.66,
+		"Height": 2.56,
 		"Image": "kgmidi-triple.png"
 	},
 	{
