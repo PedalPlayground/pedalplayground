@@ -3585,6 +3585,13 @@
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
+		"Name": "Deth Pedal",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "blammo-deth-pedal.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
 		"Name": "fAUX Tone Machine",
 		"Width": 4.83,
 		"Height": 2.77,
@@ -11632,6 +11639,13 @@
 		"Width": 3.36,
 		"Height": 9.92,
 		"Image": "ehx-wailer-wah.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Walking on the Moon",
+		"Width": 4.19,
+		"Height": 4.75,
+		"Image": "ehx-walking-on-the-moon.png"
 	},
 	{
 		"Brand": "EAE",
