@@ -19600,6 +19600,13 @@
 		"Image": "keeley-xviii-phaser-classic.png"
 	},
 	{
+		"Brand": "Keith McMillen Instruments",
+		"Name": "12 Step",
+		"Width": 17,
+		"Height": 4.1,
+		"Image": "kmi-12-step.png"
+	},
+	{
 		"Brand": "Kemper",
 		"Name": "Remote",
 		"Width": 16.5,
@@ -36447,6 +36454,13 @@
 		"Width": 2.55,
 		"Height": 4.87,
 		"Image": "weehbo-tackleberry.png"
+	},
+	{
+		"Brand": "Westerlund",
+		"Name": "One",
+		"Width": 3.99,
+		"Height": 4.7,
+		"Image": "westerlund-one.png"
 	},
 	{
 		"Brand": "Wonderful Audio Technology",
