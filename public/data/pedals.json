@@ -12327,6 +12327,13 @@
 		"Image": "eventide-ultratap.png"
 	},
 	{
+		"Brand": "E.W.S. Japan",
+		"Name": "Little Fuzzy Drive",
+		"Width": 1.89,
+		"Height": 3.64,
+		"Image": "ews-japan-little-fuzzy-drive.png"
+	},
+	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "~900",
 		"Width": 4.4,
@@ -15804,6 +15811,13 @@
 		"Width": 5.14,
 		"Height": 3.7,
 		"Image": "hbe-the-blessed-mother-the-fuzz-assumption.png"
+	},
+	{
+		"Brand": "Hello Sailor Effects",
+		"Name": "Rangemaster",
+		"Width": 3.5,
+		"Height": 4.78,
+		"Image": "hello-sailor-effects-rangemaster.png"
 	},
 	{
 		"Brand": "Hilbish Designs",
@@ -22622,6 +22636,13 @@
 		"Width": 2.91,
 		"Height": 4.8,
 		"Image": "mjm-phantom.png"
+	},
+	{
+		"Brand": "Moen",
+		"Name": "GEC5",
+		"Width": 10.24,
+		"Height": 3.72,
+		"Image": "moen-gec5.png"
 	},
 	{
 		"Brand": "Moen",
@@ -29762,6 +29783,13 @@
 		"Width": 2.6,
 		"Height": 4.4,
 		"Image": "smallsound-mini.png"
+	},
+	{
+		"Brand": "Smallsound/Bigsound",
+		"Name": "Mini (Pink)",
+		"Width": 2.6,
+		"Height": 4.4,
+		"Image": "smallsound-mini-pink.png"
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
