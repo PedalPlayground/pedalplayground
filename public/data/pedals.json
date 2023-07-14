@@ -7630,6 +7630,76 @@
 		"Image": "danelectro-daddy-o.png"
 	},
 	{
+		"Brand": "Daredevil",
+		"Name": "Almighty Bass",
+		"Width": 4.08,
+		"Height": 4.7,
+		"Image": "daredevil-almighty-bass.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Atomic Cock",
+		"Width": 2.87,
+		"Height": 4.63,
+		"Image": "daredevil-atomic-cock.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Bootleg Dirty Delay V2",
+		"Width": 2.87,
+		"Height": 4.63,
+		"Image": "daredevil-bootleg-v2.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Cocked & Fearless",
+		"Width": 4.08,
+		"Height": 4.91,
+		"Image": "daredevil-cocked-and-fearless.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Daisho",
+		"Width": 4.08,
+		"Height": 4.7,
+		"Image": "daredevil-daisho.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Drive-Bi",
+		"Width": 2.87,
+		"Height": 4.63,
+		"Image": "daredevil-drive-bi.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Northern Creeper",
+		"Width": 2.87,
+		"Height": 4.63,
+		"Image": "daredevil-northern-creeper.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Premium Overdrive",
+		"Width": 2.87,
+		"Height": 4.63,
+		"Image": "daredevil-premium-overdrive.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Real Cool Fuzz",
+		"Width": 2.87,
+		"Height": 4.63,
+		"Image": "daredevil-real-cool-fuzz.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Silver Solo",
+		"Width": 2.87,
+		"Height": 4.63,
+		"Image": "daredevil-silver-solo.png"
+	},
+	{
 		"Brand": "Darkglass",
 		"Name": "Adam",
 		"Width": 7.14,
