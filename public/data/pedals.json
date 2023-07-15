@@ -13174,6 +13174,13 @@
 		"Image": "fortin-zuul-mini.png"
 	},
 	{
+		"Brand": "Foxgear",
+		"Name": "T7E Baby",
+		"Width": 5,
+		"Height": 3.73,
+		"Image": "foxgear-t7e-baby.png"
+	},
+	{
 		"Brand": "Foxpedal",
 		"Name": "Defector",
 		"Width": 2.6,
@@ -14269,14 +14276,35 @@
 		"Brand": "Fuzzrocious",
 		"Name": "420 Fuzz",
 		"Width": 3.7,
-		"Height": 4.94,
+		"Height": 4.98,
 		"Image": "fuzzrocious-pedals-420-fuzz.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
+		"Name": "Afterlife",
+		"Width": 2.6,
+		"Height": 5.08,
+		"Image": "fuzzrocious-afterlife.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
+		"Name": "Baby Blast Furnace",
+		"Width": 2.6,
+		"Height": 5.08,
+		"Image": "fuzzrocious-baby-blast-furnace.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
+		"Name": "Blast Furnace",
+		"Width": 3.7,
+		"Height": 4.98,
+		"Image": "fuzzrocious-blast-furnace.png"
 	},
 	{
 		"Brand": "Fuzzrocious",
 		"Name": "Cat King",
 		"Width": 5.7,
-		"Height": 4.83,
+		"Height": 4.91,
 		"Image": "fuzzrocious-pedals-cat-king.png"
 	},
 	{
@@ -14289,51 +14317,79 @@
 	{
 		"Brand": "Fuzzrocious",
 		"Name": "Croak",
-		"Width": 3.9,
-		"Height": 5,
+		"Width": 3.87,
+		"Height": 4.98,
 		"Image": "fuzzrocious-pedals-croak.png"
 	},
 	{
 		"Brand": "Fuzzrocious",
 		"Name": "Dark Driving V3",
 		"Width": 2.6,
-		"Height": 5.06,
+		"Height": 5.08,
 		"Image": "fuzzrocious-pedals-dark-driving-v3.png"
 	},
 	{
 		"Brand": "Fuzzrocious",
 		"Name": "Electric Ocean",
 		"Width": 4.7,
-		"Height": 5.79,
+		"Height": 5.91,
 		"Image": "fuzzrocious-pedals-electric-ocean.png"
 	},
 	{
 		"Brand": "Fuzzrocious",
 		"Name": "Grey Stache",
 		"Width": 3.7,
-		"Height": 4.94,
+		"Height": 4.98,
 		"Image": "fuzzrocious-pedals-grey-stache.png"
 	},
 	{
 		"Brand": "Fuzzrocious",
-		"Name": "Blast Furnace",
+		"Name": "Heliotropic",
 		"Width": 3.7,
-		"Height": 4.94,
-		"Image": "fuzzrocious-blast-furnace.png"
+		"Height": 4.98,
+		"Image": "fuzzrocious-pedals-heliotropic.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
+		"Name": "Knob Jawn",
+		"Width": 2.6,
+		"Height": 5.08,
+		"Image": "fuzzrocious-knob-jawn.png"
 	},
 	{
 		"Brand": "Fuzzrocious",
 		"Name": "L'il Fella",
-		"Width": 2.64,
-		"Height": 5.13,
+		"Width": 2.6,
+		"Height": 5.08,
 		"Image": "fuzzrocious-pedals-lil-fella.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
+		"Name": "M.O.T.H.",
+		"Width": 3.7,
+		"Height": 4.98,
+		"Image": "fuzzrocious-pedals-moth.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
+		"Name": "Playing Mantis",
+		"Width": 3.87,
+		"Height": 4.98,
+		"Image": "fuzzrocious-pedals-playing-mantis.png"
 	},
 	{
 		"Brand": "Fuzzrocious",
 		"Name": "The Demon",
 		"Width": 3.7,
-		"Height": 4.94,
+		"Height": 4.98,
 		"Image": "fuzzrocious-pedals-the-demon.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
+		"Name": "Tyrannochorus",
+		"Width": 3.7,
+		"Height": 4.98,
+		"Image": "fuzzrocious-tyrannochorus.png"
 	},
 	{
 		"Brand": "G-LAB",
