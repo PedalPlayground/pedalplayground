@@ -15905,6 +15905,13 @@
 	},
 	{
 		"Brand": "Headrush",
+		"Name": "MX5",
+		"Width": 11.6,
+		"Height": 5.94,
+		"Image": "headrush-mx5.png"
+	},
+	{
+		"Brand": "Headrush",
 		"Name": "Pedalboard",
 		"Width": 23.6,
 		"Height": 11.2,
@@ -34407,9 +34414,16 @@
 	{
 		"Brand": "Vahlbruch",
 		"Name": "Kaluna",
-		"Width": 4.73,
-		"Height": 3.94,
+		"Width": 4.7,
+		"Height": 3.86,
 		"Image": "vahlbruch-kaluna.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "Kaluna (Black)",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "vahlbruch-kaluna-black.png"
 	},
 	{
 		"Brand": "Valeton",
