@@ -21099,6 +21099,13 @@
 	},
 	{
 		"Brand": "Lovepedal",
+		"Name": "Hermida Tiki Drive",
+		"Width": 2.74,
+		"Height": 4.4,
+		"Image": "lovepedal-hermida-tiki-drive.png"
+	},
+	{
+		"Brand": "Lovepedal",
 		"Name": "Hermida Zendrive",
 		"Width": 2.5,
 		"Height": 4.37,
@@ -30266,6 +30273,20 @@
 		"Width": 4.7,
 		"Height": 3.83,
 		"Image": "sm-fuzz-octave-fuzz.png"
+	},
+	{
+		"Brand": "Snake Oil Fine Instruments",
+		"Name": "Marvellous Engine",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "sofi-marvellous-engine.png"
+	},
+	{
+		"Brand": "Snake Oil Fine Instruments",
+		"Name": "The Very Thing",
+		"Width": 2.67,
+		"Height": 4.4,
+		"Image": "sofi-the-very-thing.png"
 	},
 	{
 		"Brand": "Snouse Electronics",
