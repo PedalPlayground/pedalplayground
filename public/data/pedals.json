@@ -23877,6 +23877,13 @@
 		"Image": "morningstar-relay.png"
 	},
 	{
+		"Brand": "Mortrix",
+		"Name": "Mortrix",
+		"Width": 9.06,
+		"Height": 6.14,
+		"Image": "mortrix.png"
+	},
+	{
 		"Brand": "Mosky",
 		"Name": "Black Rat",
 		"Width": 1.84,
@@ -31227,6 +31234,13 @@
 		"Image": "sal-octopus.png"
 	},
 	{
+		"Brand": "Stomp Under Foot",
+		"Name": "Silverfish",
+		"Width": 4.7,
+		"Height": 3.87,
+		"Image": "stomp-under-foot-silverfish.png"
+	},
+	{
 		"Brand": "Stone Deaf FX",
 		"Name": "EP-1",
 		"Width": 4.66,
@@ -34420,7 +34434,7 @@
 	},
 	{
 		"Brand": "Vahlbruch",
-		"Name": "Kaluna (Black)",
+		"Name": "Kaluna (High Gain)",
 		"Width": 4.7,
 		"Height": 3.86,
 		"Image": "vahlbruch-kaluna-black.png"

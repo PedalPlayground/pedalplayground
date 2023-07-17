@@ -182,6 +182,34 @@
 		"Image": "donner-db-3.png"
 	},
 	{
+		"Brand": "D’Addario",
+		"Name": "XPND 1",
+		"Width": 14,
+		"Height": 6.03,
+		"Image": "daddario-xpnd-1.png"
+	},
+	{
+		"Brand": "D’Addario",
+		"Name": "XPND 1 (Extension)",
+		"Width": 10.75,
+		"Height": 5.5,
+		"Image": "daddario-xpnd-1-extension.png"
+	},
+	{
+		"Brand": "D’Addario",
+		"Name": "XPND 2",
+		"Width": 17.25,
+		"Height": 12.98,
+		"Image": "daddario-xpnd-2.png"
+	},
+	{
+		"Brand": "D’Addario",
+		"Name": "XPND 2 (Extension)",
+		"Width": 14.5,
+		"Height": 12.44,
+		"Image": "daddario-xpnd-2-extension.png"
+	},
+	{
 		"Brand": "Emerson Custom",
 		"Name": "18x12",
 		"Width": 19.25,
