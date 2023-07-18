@@ -31382,10 +31382,17 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Brig",
+		"Width": 2.7,
+		"Height": 4.43,
+		"Image": "strymon-brig.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Brigadier",
 		"Width": 4,
 		"Height": 4.55,
-		"Image": "strymon-brig.png"
+		"Image": "strymon-brigadier.png"
 	},
 	{
 		"Brand": "Strymon",
@@ -35950,6 +35957,13 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-slo-red.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Slöer",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "walrus-sloer.png"
 	},
 	{
 		"Brand": "Walrus Audio",
