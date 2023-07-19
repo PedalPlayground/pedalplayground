@@ -16045,6 +16045,13 @@
 	},
 	{
 		"Brand": "Horrothia FX",
+		"Name": "Teeth MKII",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "horrothiafx-teeth-mk2.png"
+	},
+	{
+		"Brand": "Horrothia FX",
 		"Name": "Triage",
 		"Width": 3.7,
 		"Height": 4.94,
@@ -35964,6 +35971,13 @@
 		"Width": 4.7,
 		"Height": 3.81,
 		"Image": "walrus-sloer.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Slöer (Black)",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "walrus-sloer-black.png"
 	},
 	{
 		"Brand": "Walrus Audio",

@@ -652,6 +652,13 @@
 	},
 	{
 		"Brand": "Pedaltrain",
+		"Name": "Grande",
+		"Width": 42,
+		"Height": 16,
+		"Image": "pedaltrain-grande.png"
+	},
+	{
+		"Brand": "Pedaltrain",
 		"Name": "JR MAX",
 		"Width": 28,
 		"Height": 12.5,
@@ -683,7 +690,7 @@
 		"Name": "Metro MAX",
 		"Width": 28,
 		"Height": 8,
-		"Image": "pedaltrain-metro16.png"
+		"Image": "pedaltrain-metro-max.png"
 	},
 	{
 		"Brand": "Pedaltrain",
