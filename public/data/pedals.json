@@ -4467,6 +4467,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GM-800 Guitar Synthesizer",
+		"Width": 9.69,
+		"Height": 5.18,
+		"Image": "boss-gm800.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GP-10 Guitar Processor",
 		"Width": 9.88,
 		"Height": 7.94,
@@ -4574,7 +4581,7 @@
 		"Brand": "BOSS",
 		"Name": "MD-500 Modulation",
 		"Width": 6.75,
-		"Height": 5.4,
+		"Height": 5.39,
 		"Image": "boss-md500.png"
 	},
 	{
@@ -4854,7 +4861,7 @@
 		"Brand": "BOSS",
 		"Name": "RC-500 Loop Station",
 		"Width": 6.75,
-		"Height": 5.4375,
+		"Height": 5.47,
 		"Image": "boss-rc500.png"
 	},
 	{
@@ -5141,7 +5148,7 @@
 		"Brand": "BOSS",
 		"Name": "VE-500 Vocal Performer",
 		"Width": 6.75,
-		"Height": 5.4375,
+		"Height": 5.38,
 		"Image": "boss-ve500.png"
 	},
 	{

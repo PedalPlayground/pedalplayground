@@ -603,9 +603,9 @@
 	},
 	{
 		"Brand": "Palmer",
-		"Name": "Pedalbay 60 ",
-		"Width": 23.8189,
-		"Height": 12.00787,
+		"Name": "Pedalbay 60",
+		"Width": 23.82,
+		"Height": 12.01,
 		"Image": "palmer-pedalbay-60.png"
 	},
 	{
@@ -957,6 +957,13 @@
 		"Width": 17.63,
 		"Height": 12.33,
 		"Image": "skb-injection-molded.png"
+	},
+	{
+		"Brand": "Stompbox EX",
+		"Name": "Portable 20",
+		"Width": 20,
+		"Height": 7.25,
+		"Image": "stompbox-ex-portable-20.png"
 	},
 	{
 		"Brand": "Templeboards",
