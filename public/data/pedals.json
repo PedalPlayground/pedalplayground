@@ -20526,44 +20526,65 @@
 	{
 		"Brand": "Land Devices",
 		"Name": "Domino",
-		"Width": 3.82,
-		"Height": 1.63,
+		"Width": 3.9,
+		"Height": 1.66,
 		"Image": "land-devices-domino.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "EP-5",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "land-devices-ep5.png"
 	},
 	{
 		"Brand": "Land Devices",
 		"Name": "HP-2 (Blue)",
 		"Width": 4.7,
-		"Height": 3.84,
+		"Height": 3.83,
 		"Image": "land-devices-hp2-blue.png"
 	},
 	{
 		"Brand": "Land Devices",
-		"Name": "HP-2 (Olive)",
+		"Name": "HP-2 (Olive Drab)",
 		"Width": 4.7,
-		"Height": 3.84,
+		"Height": 3.83,
 		"Image": "land-devices-hp2-olive.png"
 	},
 	{
 		"Brand": "Land Devices",
-		"Name": "HP-2 (Orange)",
+		"Name": "HP-2 (White)",
 		"Width": 4.7,
-		"Height": 3.84,
-		"Image": "land-devices-hp2-orange.png"
+		"Height": 3.83,
+		"Image": "land-devices-hp2-white.png"
 	},
 	{
 		"Brand": "Land Devices",
 		"Name": "Land Mixer",
-		"Width": 4.84,
-		"Height": 5.91,
+		"Width": 4.83,
+		"Height": 5.85,
 		"Image": "land-devices-land-mixer.png"
 	},
 	{
 		"Brand": "Land Devices",
+		"Name": "No Masters",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "land-devices-no-masters.png"
+	},
+	{
+		"Brand": "Land Devices",
 		"Name": "Pre",
-		"Width": 3.82,
-		"Height": 1.75,
+		"Width": 3.9,
+		"Height": 1.83,
 		"Image": "land-devices-pre.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "Pre (Black)",
+		"Width": 3.9,
+		"Height": 1.83,
+		"Image": "land-devices-pre-black.png"
 	},
 	{
 		"Brand": "Laney Black Country Customs",
