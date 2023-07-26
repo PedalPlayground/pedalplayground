@@ -6399,6 +6399,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Reverse Mode C",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-reverse-mood-c.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Spectre",
 		"Width": 2.86,
 		"Height": 4.86,
@@ -11394,6 +11401,13 @@
 		"Width": 4.19,
 		"Height": 4.75,
 		"Image": "ehx-operation-overlord.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico POG",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-pog.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -20567,6 +20581,13 @@
 	},
 	{
 		"Brand": "Land Devices",
+		"Name": "Multi-Box",
+		"Width": 3.7,
+		"Height": 1.83,
+		"Image": "land-devices-multi-box.png"
+	},
+	{
+		"Brand": "Land Devices",
 		"Name": "No Masters",
 		"Width": 4.7,
 		"Height": 3.83,
@@ -24088,6 +24109,13 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "JDD-3000",
+		"Width": 3.98,
+		"Height": 4.7,
+		"Image": "mrblack-jdd3000.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "JDS-50",
 		"Width": 2.72,
 		"Height": 4.5,
@@ -26360,6 +26388,13 @@
 		"Width": 4.7,
 		"Height": 3.86,
 		"Image": "obne-alpha-haunt-v2.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "BL-37",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "obne-bl-37.png"
 	},
 	{
 		"Brand": "OBNE",
