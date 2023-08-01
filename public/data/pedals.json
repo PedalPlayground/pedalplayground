@@ -23962,6 +23962,13 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Ch-Vibe",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-ch-vibe.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Dual Switch",
 		"Width": 3.7,
 		"Height": 1.68,

@@ -365,6 +365,27 @@
 	},
 	{
 		"Brand": "Mono",
+		"Name": "Rail (Large)",
+		"Width": 32,
+		"Height": 16.7,
+		"Image": "mono-rail-large.png"
+	},
+	{
+		"Brand": "Mono",
+		"Name": "Rail (Medium)",
+		"Width": 24,
+		"Height": 14.4,
+		"Image": "mono-rail-medium.png"
+	},
+	{
+		"Brand": "Mono",
+		"Name": "Rail (Small)",
+		"Width": 18,
+		"Height": 13.3,
+		"Image": "mono-rail-small.png"
+	},
+	{
+		"Brand": "Mono",
 		"Name": "Small",
 		"Width": 18,
 		"Height": 12.3,
