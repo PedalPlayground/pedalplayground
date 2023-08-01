@@ -5405,6 +5405,20 @@
 	},
 	{
 		"Brand": "Carl Martin",
+		"Name": "Octa-Switch MK3",
+		"Width": 12.23,
+		"Height": 6,
+		"Image": "carl-martin-octa-mk3.png"
+	},
+	{
+		"Brand": "Carl Martin",
+		"Name": "Octa-Switch The Strip",
+		"Width": 22.8346,
+		"Height": 3.34646,
+		"Image": "carl-martin-octa-strip.png"
+	},
+	{
+		"Brand": "Carl Martin",
 		"Name": "Panama",
 		"Width": 2.36,
 		"Height": 4.33,
@@ -5440,17 +5454,10 @@
 	},
 	{
 		"Brand": "Carl Martin",
-		"Name": "Octa-Switch MK3",
-		"Width": 12.23,
-		"Height": 6,
-		"Image": "carl-martin-octa-mk3.png"
-	},
-	{
-		"Brand": "Carl Martin",
-		"Name": "Octa-Switch The Strip",
-		"Width": 22.8346,
-		"Height": 3.34646,
-		"Image": "carl-martin-octa-strip.png"
+		"Name": "Purple Moon",
+		"Width": 2.36,
+		"Height": 4.43,
+		"Image": "carl-martin-purple-moon.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -37175,6 +37182,13 @@
 		"Width": 4.97,
 		"Height": 3.7,
 		"Image": "xotic-x-blender.png"
+	},
+	{
+		"Brand": "Xsonic",
+		"Name": "Airstep",
+		"Width": 11.81,
+		"Height": 3.65,
+		"Image": "xsonic-airstep.png"
 	},
 	{
 		"Brand": "XTS",
