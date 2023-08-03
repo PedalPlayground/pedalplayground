@@ -323,6 +323,13 @@
 	},
 	{
 		"Brand": "Aclam",
+		"Name": "Dr. Robert (Unknown Pleasures)",
+		"Width": 5.4,
+		"Height": 3.59,
+		"Image": "aclam-dr-robert-up.png"
+	},
+	{
+		"Brand": "Aclam",
 		"Name": "The Woman Tone",
 		"Width": 5.4,
 		"Height": 3.59,
@@ -9973,6 +9980,13 @@
 		"Width": 4.7,
 		"Height": 5.89,
 		"Image": "earthquaker-interstellar-orbiter.png"
+	},
+	{
+		"Brand": "Earthquaker",
+		"Name": "Ledges",
+		"Width": 2.7,
+		"Height": 4.94,
+		"Image": "earthquaker-ledges.png"
 	},
 	{
 		"Brand": "Earthquaker",
@@ -23147,6 +23161,27 @@
 		"Width": 2.65,
 		"Height": 4.5,
 		"Image": "mojohand-swim-team.png"
+	},
+	{
+		"Brand": "Mono",
+		"Name": "Power Supply (Large)",
+		"Width": 11.71,
+		"Height": 2.26,
+		"Image": "mono-power-supply-large.png"
+	},
+	{
+		"Brand": "Mono",
+		"Name": "Power Supply (Medium)",
+		"Width": 8,
+		"Height": 2.26,
+		"Image": "mono-power-supply-medium.png"
+	},
+	{
+		"Brand": "Mono",
+		"Name": "Power Supply (Small)",
+		"Width": 5.62,
+		"Height": 2.2,
+		"Image": "mono-power-supply-small.png"
 	},
 	{
 		"Brand": "Montreal Assembly",
