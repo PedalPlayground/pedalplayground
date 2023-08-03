@@ -22716,17 +22716,24 @@
 	},
 	{
 		"Brand": "Milkman Sound",
-		"Name": "The Amp",
+		"Name": "The Amp 50",
 		"Width": 8.5,
-		"Height": 6.56,
+		"Height": 6.74,
 		"Image": "milkman-the-amp.png"
 	},
 	{
 		"Brand": "Milkman Sound",
-		"Name": "The Amp (Black)",
+		"Name": "The Amp 100",
 		"Width": 8.5,
-		"Height": 6.56,
+		"Height": 6.74,
 		"Image": "milkman-the-amp-black.png"
+	},
+	{
+		"Brand": "Milkman Sound",
+		"Name": "The Amp Stereo",
+		"Width": 8.5,
+		"Height": 6.74,
+		"Image": "milkman-the-amp-stereo.png"
 	},
 	{
 		"Brand": "Minotaur Sonic Terrors",
@@ -34641,6 +34648,13 @@
 		"Width": 2.57874,
 		"Height": 5.8464567,
 		"Image": "valeton-ep-2.png"
+	},
+	{
+		"Brand": "Van Weelden",
+		"Name": "Royal Overdrive",
+		"Width": 9.29,
+		"Height": 6.14,
+		"Image": "van-weelden-royal-overdrive.png"
 	},
 	{
 		"Brand": "Vertex",
