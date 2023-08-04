@@ -5412,6 +5412,13 @@
 	},
 	{
 		"Brand": "Carl Martin",
+		"Name": "Compressor Limiter",
+		"Width": 3.93,
+		"Height": 4.7,
+		"Image": "carl-martin-compressor-limiter.png"
+	},
+	{
+		"Brand": "Carl Martin",
 		"Name": "Octa-Switch MK3",
 		"Width": 12.23,
 		"Height": 6,
