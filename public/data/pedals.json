@@ -34854,6 +34854,13 @@
 	},
 	{
 		"Brand": "Vick Audio",
+		"Name": "Tree of Life",
+		"Width": 2.83,
+		"Height": 4.5,
+		"Image": "vick-tree-of-life.png"
+	},
+	{
+		"Brand": "Vick Audio",
 		"Name": "V-2",
 		"Width": 4.04,
 		"Height": 4.72,
