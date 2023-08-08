@@ -11544,6 +11544,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Pico Platform",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-platform.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Pico POG",
 		"Width": 1.99,
 		"Height": 3.65,
