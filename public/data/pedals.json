@@ -10430,6 +10430,13 @@
 		"Image": "ebs-unichorus.png"
 	},
 	{
+		"Brand": "Echo Fix",
+		"Name": "Spring Reverb",
+		"Width": 6.3,
+		"Height": 5.52,
+		"Image": "echo-fix-spring-reverb.png"
+	},
+	{
 		"Brand": "Eden Amps",
 		"Name": "I90 Bass Chorus",
 		"Width": 4.8,
@@ -24053,10 +24060,24 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Mini Muff",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-mini-muff.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Silver Horse",
 		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-silver-horse.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Spring Reverb",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-spring-reverb.png"
 	},
 	{
 		"Brand": "Mr. Black",
