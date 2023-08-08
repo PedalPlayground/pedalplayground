@@ -17844,6 +17844,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Bun Runner",
+		"Width": 5.12,
+		"Height": 3.82,
+		"Image": "jhs-bun-runner.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Buffered Splitter",
 		"Width": 3.7,
 		"Height": 1.78,
@@ -27165,6 +27172,13 @@
 		"Width": 3.6,
 		"Height": 5.8,
 		"Image": "origin-deluxe61.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Halcyon Gold",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-halcyon-gold.png"
 	},
 	{
 		"Brand": "Origin Effects",
