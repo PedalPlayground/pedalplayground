@@ -32740,6 +32740,13 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Ampworx 550",
+		"Width": 4.2,
+		"Height": 5.03,
+		"Image": "tc-ampworx-550.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Ampworx Combo Deluxe 65'",
 		"Width": 4.2,
 		"Height": 5.03,
@@ -32754,10 +32761,24 @@
 	},
 	{
 		"Brand": "TC Electronic",
+		"Name": "Ampworx Dual Wreck",
+		"Width": 4.2,
+		"Height": 5.03,
+		"Image": "tc-ampworx-dual-wreck.png"
+	},
+	{
+		"Brand": "TC Electronic",
 		"Name": "Ampworx Jims 45",
 		"Width": 4.2,
 		"Height": 5.03,
 		"Image": "tc-ampworx-jims-45.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Ampworx Jims 800",
+		"Width": 4.2,
+		"Height": 5.03,
+		"Image": "tc-ampworx-jims-800.png"
 	},
 	{
 		"Brand": "TC Electronic",
@@ -33378,8 +33399,8 @@
 	{
 		"Brand": "TC Electronic",
 		"Name": "Spectra Drive Bass Preamp",
-		"Width": 4.44,
-		"Height": 5.25,
+		"Width": 4.22,
+		"Height": 5.03,
 		"Image": "tc-spectra-drive.png"
 	},
 	{
