@@ -4404,6 +4404,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "FV-100 Guitar Volume",
+		"Width": 4.41,
+		"Height": 13.07,
+		"Image": "boss-fv100.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "FV-30L Foot Volume",
 		"Width": 3.1875,
 		"Height": 7.5625,
@@ -12852,6 +12859,13 @@
 		"Image": "fender-treverb.png"
 	},
 	{
+		"Brand": "Fire Custom",
+		"Name": "Ariete Booster",
+		"Width": 2.61,
+		"Height": 4.52,
+		"Image": "fire-custom-ariete.png"
+	},
+	{
 		"Brand": "Fishman",
 		"Name": "Aura Spectrum DI Preamp",
 		"Width": 5.37,
@@ -20792,8 +20806,8 @@
 	{
 		"Brand": "Lehle",
 		"Name": "Dual Expression",
-		"Width": 3.54331,
-		"Height": 7.87402,
+		"Width": 3.54,
+		"Height": 7.87,
 		"Image": "lehle-dual-expression.png"
 	},
 	{
@@ -20816,6 +20830,13 @@
 		"Width": 3.94,
 		"Height": 10.24,
 		"Image": "lehle-volume.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "Mono Volume S",
+		"Width": 3.54,
+		"Height": 7.78,
+		"Image": "lehle-volume-s.png"
 	},
 	{
 		"Brand": "Lehle",
@@ -29513,6 +29534,13 @@
 	},
 	{
 		"Brand": "Rodenberg",
+		"Name": "GAS 707B",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "rodenberg-gas707b.png"
+	},
+	{
+		"Brand": "Rodenberg",
 		"Name": "LDP",
 		"Width": 3.96,
 		"Height": 4.77,
@@ -29867,6 +29895,13 @@
 		"Width": 3.84,
 		"Height": 5.26,
 		"Image": "seymourduncan-vapor-trail-deluxe.png"
+	},
+	{
+		"Brand": "Shark",
+		"Name": "Warzy Drive",
+		"Width": 5.18,
+		"Height": 3.7,
+		"Image": "shark-warzy-drive.png"
 	},
 	{
 		"Brand": "Shift Line",
