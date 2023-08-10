@@ -16269,6 +16269,13 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Krunch",
+		"Width": 1.7,
+		"Height": 2.91,
+		"Image": "hotone-krunch.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Patch Kommander",
 		"Width": 15.87,
 		"Height": 2.11,
@@ -35057,6 +35064,20 @@
 	},
 	{
 		"Brand": "Visual Sound",
+		"Name": "Angry Fuzz",
+		"Width": 3.03,
+		"Height": 5.67,
+		"Image": "visual-sound-angry-fuzz.png"
+	},
+	{
+		"Brand": "Visual Sound",
+		"Name": "Double Trouble",
+		"Width": 5.06,
+		"Height": 6,
+		"Image": "visual-sound-double-trouble.png"
+	},
+	{
+		"Brand": "Visual Sound",
 		"Name": "Dual Tap Tempo",
 		"Width": 9.1,
 		"Height": 5.1,
@@ -35068,6 +35089,27 @@
 		"Width": 5.11,
 		"Height": 4.45,
 		"Image": "vis-sound-h2o.png"
+	},
+	{
+		"Brand": "Visual Sound",
+		"Name": "Route 66",
+		"Width": 5.06,
+		"Height": 6,
+		"Image": "visual-sound-route-66.png"
+	},
+	{
+		"Brand": "Visual Sound",
+		"Name": "Son of Hyde",
+		"Width": 3.03,
+		"Height": 5.67,
+		"Image": "visual-sound-son-of-hyde.png"
+	},
+	{
+		"Brand": "Visual Sound",
+		"Name": "Truetone Clean Boost",
+		"Width": 3.03,
+		"Height": 5.67,
+		"Image": "visual-sound-truetone-clean-boost.png"
 	},
 	{
 		"Brand": "Visual Sound",
