@@ -28513,29 +28513,29 @@
 	{
 		"Brand": "Quilter Labs",
 		"Name": "InterBass",
-		"Width": 5,
-		"Height": 4,
+		"Width": 4.94,
+		"Height": 3.81,
 		"Image": "quilter-labs-interbass.png"
 	},
 	{
 		"Brand": "Quilter Labs",
 		"Name": "Phantom Block",
-		"Width": 4.375,
-		"Height": 2.375,
+		"Width": 4.5,
+		"Height": 2.4,
 		"Image": "quilter-labs-phantom.png"
 	},
 	{
 		"Brand": "Quilter Labs",
 		"Name": "SuperBlock UK",
 		"Width": 6.5,
-		"Height": 4.25,
+		"Height": 4.48,
 		"Image": "quilter-labs-superblock-uk.png"
 	},
 	{
 		"Brand": "Quilter Labs",
 		"Name": "SuperBlock US",
 		"Width": 6.5,
-		"Height": 4.25,
+		"Height": 4.48,
 		"Image": "quilter-labs-superblock-us.png"
 	},
 	{
