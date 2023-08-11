@@ -15113,6 +15113,13 @@
 		"Image": "greenhouse-stonefish.png"
 	},
 	{
+		"Brand": "Greenhouse Effects",
+		"Name": "Sonic Orb Phaser",
+		"Width": 2.38,
+		"Height": 4.5,
+		"Image": "greenhouse-sonic-orb.png"
+	},
+	{
 		"Brand": "Greer Amps",
 		"Name": "Arbuckle Trem",
 		"Width": 2.84,
@@ -27699,6 +27706,13 @@
 		"Image": "pedal-pal-fx-gold-overdrive.png"
 	},
 	{
+		"Brand": "Pedaltank",
+		"Name": "Bass Booster",
+		"Width": 2.73,
+		"Height": 4.17,
+		"Image": "pedaltank-bass-booster.png"
+  },
+	{
 		"Brand": "Pedal Pawn",
 		"Name": "Chicken Quiff",
 		"Width": 2.76,
@@ -37371,6 +37385,13 @@
 		"Width": 1.81,
 		"Height": 3.70,
 		"Image": "xvive-o1-tube-squasher.png"
+	},
+	{
+		"Brand": "Xvive",
+		"Name": "Echoman",
+		"Width": 2.28,
+		"Height": 3.74,
+		"Image": "xvive-echoman.png"
 	},
 	{
 		"Brand": "Xvive",
