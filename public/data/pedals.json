@@ -10612,11 +10612,18 @@
 		"Image": "electro-faustus-blackfly.png"
 	},
 	{
-		"Brand": "Electrode",
+		"Brand": "Effectrode",
 		"Name": "Mercury Tube Fuzz",
 		"Width": 3.7,
 		"Height": 5,
 		"Image": "electrode-mercury-tube-fuzz.png"
+	},
+	{
+		"Brand": "Effectrode",
+		"Name": "Leveling Amplifier",
+		"Width": 7.5,
+		"Height": 4.94,
+		"Image": "electrode-leveling-amplifier.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
