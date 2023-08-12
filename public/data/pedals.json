@@ -1,5 +1,26 @@
 [
 	{
+		"Brand": "Pedaltank",
+		"Name": "Bass Booster",
+		"Width": 2.73,
+		"Height": 4.17,
+		"Image": "pedaltank-bass-booster.png"
+	},
+	{
+		"Brand": "Greenhouse Effects",
+		"Name": "Sonic Orb Phaser",
+		"Width": 2.38,
+		"Height": 4.5,
+		"Image": "greenhouse-sonic-orb.png"
+	},
+	{
+		"Brand": "Xvive",
+		"Name": "Echoman",
+		"Width": 1.74,
+		"Height": 3.70,
+		"Image": "xvive-echoman.png"
+	},
+	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV",
 		"Width": 3.7,
