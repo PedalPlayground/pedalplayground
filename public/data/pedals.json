@@ -6832,6 +6832,13 @@
 		"Image": "collision-devices-the-ranch-industrial-era.png"
 	},
 	{
+		"Brand": "Colombo Audio Electronics",
+		"Name": "Rocker 83",
+		"Width": 2.79,
+		"Height": 4.5,
+		"Image": "colombo-rocker-83.png"
+	},
+	{
 		"Brand": "Colorsound",
 		"Name": "Fuzz Sound",
 		"Width": 3.8189,
@@ -20200,6 +20207,13 @@
 		"Width": 4.7,
 		"Height": 3.88,
 		"Image": "kingtone-1968.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "1968 V2",
+		"Width": 6.04,
+		"Height": 4,
+		"Image": "kingtone-1968-v2.png"
 	},
 	{
 		"Brand": "Kingtone",
