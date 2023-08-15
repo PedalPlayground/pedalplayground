@@ -23759,6 +23759,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Purer Octave",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-purer-octave.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "R7",
 		"Width": 1.67,
 		"Height": 3.75,
@@ -29685,6 +29692,41 @@
 		"Width": 4.25,
 		"Height": 4.5,
 		"Image": "rolls-mx28.png"
+	},
+	{
+		"Brand": "Ross",
+		"Name": "Chorus",
+		"Width": 3.57,
+		"Height": 5.21,
+		"Image": "ross-chorus.png"
+	},
+	{
+		"Brand": "Ross",
+		"Name": "Compressor",
+		"Width": 3.57,
+		"Height": 5.21,
+		"Image": "ross-compressor.png"
+	},
+	{
+		"Brand": "Ross",
+		"Name": "Distortion",
+		"Width": 3.57,
+		"Height": 5.21,
+		"Image": "ross-distortion.png"
+	},
+	{
+		"Brand": "Ross",
+		"Name": "Fuzz",
+		"Width": 3.57,
+		"Height": 5.21,
+		"Image": "ross-fuzz.png"
+	},
+	{
+		"Brand": "Ross",
+		"Name": "Phaser",
+		"Width": 3.57,
+		"Height": 5.21,
+		"Image": "ross-phaser.png"
 	},
 	{
 		"Brand": "Rowin",
