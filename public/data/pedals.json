@@ -16177,6 +16177,13 @@
 		"Image": "homebrew-power-screamer.png"
 	},
 	{
+		"Brand": "Homenoise",
+		"Name": "More or Less",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "homenoise-more-or-less.png"
+	},
+	{
 		"Brand": "Horrothia FX",
 		"Name": "Berkeley",
 		"Width": 3.7,
@@ -22783,6 +22790,13 @@
 		"Width": 2.62,
 		"Height": 4.3,
 		"Image": "mi-audio-super-crunch-box-v2.png"
+	},
+	{
+		"Brand": "Mile End Effects",
+		"Name": "Echolette NG-51 Pre-amp",
+		"Width": 4.7,
+		"Height": 4.07,
+		"Image": "mile-end-ng51.png"
 	},
 	{
 		"Brand": "Milkman Sound",
