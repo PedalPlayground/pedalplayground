@@ -36961,6 +36961,13 @@
 	},
 	{
 		"Brand": "Way Huge",
+		"Name": "Stone Burner",
+		"Width": 2.5,
+		"Height": 4.37,
+		"Image": "wayhuge-wm81.png"
+	},
+	{
+		"Brand": "Way Huge",
 		"Name": "Supa-Lead mkIII (Smalls)",
 		"Width": 2.5,
 		"Height": 4.37,
