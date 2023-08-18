@@ -16156,6 +16156,13 @@
 		"Image": "hilbish-t-fuzz.png"
 	},
 	{
+		"Brand": "Hilton Electronics",
+		"Name": "Pro Guitar Volume",
+		"Width": 3.96,
+		"Height": 10.75,
+		"Image": "hilton-pro-guitar-volume.png"
+	},
+	{
 		"Brand": "HiWatt",
 		"Name": "Filter Fuzz MKII",
 		"Width": 3.7,
@@ -20935,6 +20942,13 @@
 		"Width": 3.8,
 		"Height": 3.54,
 		"Image": "lehle-little-lehle-iii.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "MIDI Junction",
+		"Width": 3.94,
+		"Height": 1.33,
+		"Image": "lehle-midi-junction.png"
 	},
 	{
 		"Brand": "Lehle",
@@ -29545,6 +29559,13 @@
 		"Width": 10.1,
 		"Height": 4.15,
 		"Image": "rjm-pbc6x.png"
+	},
+	{
+		"Brand": "RJM",
+		"Name": "Multibox",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "rjm-multibox.png"
 	},
 	{
 		"Brand": "RJM",
