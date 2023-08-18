@@ -6140,6 +6140,13 @@
 	},
 	{
 		"Brand": "Champion Leccy",
+		"Name": "The Divvy",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "champion-leccy-the-divvy.png"
+	},
+	{
+		"Brand": "Champion Leccy",
 		"Name": "The Dunsh",
 		"Width": 3.7,
 		"Height": 4.81,
@@ -6147,10 +6154,17 @@
 	},
 	{
 		"Brand": "Champion Leccy",
-		"Name": "The Fettle",
-		"Width": 2.5,
-		"Height": 4.65,
+		"Name": "The Fettle Boost",
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "champion-leccy-the-fettle.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Fettle Boost V2",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "champion-leccy-the-fettle-v2.png"
 	},
 	{
 		"Brand": "Champion Leccy",
