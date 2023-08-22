@@ -34763,6 +34763,13 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "1176",
+		"Width": 2.58,
+		"Height": 4.77,
+		"Image": "ua-1176.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Apollo Twin MkII",
 		"Width": 6.31,
 		"Height": 5.9,
@@ -34798,6 +34805,13 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Evermore",
+		"Width": 2.58,
+		"Height": 4.77,
+		"Image": "ua-evermore.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Galaxy",
 		"Width": 3.5,
 		"Height": 5.62,
@@ -34812,10 +34826,24 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Heavenly",
+		"Width": 2.58,
+		"Height": 4.77,
+		"Image": "ua-heavenly.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Max",
 		"Width": 3.5,
 		"Height": 5.62,
 		"Image": "ua-max.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Orion",
+		"Width": 2.58,
+		"Height": 4.77,
+		"Image": "ua-orion.png"
 	},
 	{
 		"Brand": "Universal Audio",
