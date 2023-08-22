@@ -20006,6 +20006,13 @@
 		"Image": "kgmidi-triple.png"
 	},
 	{
+		"Brand": "Khan",
+		"Name": "DI",
+		"Width": 4.38,
+		"Height": 7.67,
+		"Image": "khan-di.png"
+	},
+	{
 		"Brand": "KHDK",
 		"Name": "Abyss",
 		"Width": 2.59,
@@ -25999,6 +26006,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "Loop Core Stereo",
+		"Width": 3.01,
+		"Height": 4.8,
+		"Image": "nux-loop-core-stereo.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Masamune",
 		"Width": 4.13,
 		"Height": 4.47,
@@ -26010,6 +26024,13 @@
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-metal-core.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Metal Core Deluxe MKII",
+		"Width": 3.01,
+		"Height": 4.8,
+		"Image": "nux-metal-core-mk2.png"
 	},
 	{
 		"Brand": "NuX",
@@ -26045,6 +26066,13 @@
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-mod-core.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Mod Core Deluxe MKII",
+		"Width": 3.01,
+		"Height": 4.8,
+		"Image": "nux-mod-core-deluxe-mk2.png"
 	},
 	{
 		"Brand": "NuX",
@@ -26209,6 +26237,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "Time Core Deluxe MKII",
+		"Width": 3.01,
+		"Height": 4.8,
+		"Image": "nux-time-core-deluxe-mk2.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Time Force",
 		"Width": 4.25,
 		"Height": 5.07,
@@ -26234,6 +26269,13 @@
 		"Width": 2.09,
 		"Height": 3.7,
 		"Image": "nux-ukiyo-e-chorus.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Verb Core Deluxe",
+		"Width": 3.01,
+		"Height": 4.8,
+		"Image": "nux-verb-core-deluxe.png"
 	},
 	{
 		"Brand": "NuX",
