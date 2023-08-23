@@ -12496,6 +12496,13 @@
 	},
 	{
 		"Brand": "E.W.S. Japan",
+		"Name": "Brute Drive",
+		"Width": 4.5,
+		"Height": 2.55,
+		"Image": "ews-japan-brute-drive.png"
+	},
+	{
+		"Brand": "E.W.S. Japan",
 		"Name": "Little Fuzzy Drive",
 		"Width": 1.89,
 		"Height": 3.64,
@@ -12885,6 +12892,13 @@
 		"Width": 3.95,
 		"Height": 5,
 		"Image": "fender-treverb.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Yngwie Malmsteen Overdrive",
+		"Width": 2.89,
+		"Height": 4.75,
+		"Image": "fender-yngwie-od.png"
 	},
 	{
 		"Brand": "Fire Custom",
