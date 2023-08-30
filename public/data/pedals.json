@@ -12894,6 +12894,13 @@
 		"Image": "fender-yngwie-od.png"
 	},
 	{
+		"Brand": "Fender",
+		"Name": "Waylon Jennings Phaser",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-waylon-jennings-phaser.png"
+	},
+	{
 		"Brand": "Fire Custom",
 		"Name": "Ariete Booster",
 		"Width": 2.61,
@@ -27748,6 +27755,13 @@
 		"Image": "paradox-vitral.png"
 	},
 	{
+		"Brand": "PastFx",
+		"Name": "80/A Flanger",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-80a-flanger.png"
+	},
+	{
 		"Brand": "Pastfx",
 		"Name": "Chorus Ensemble",
 		"Width": 5.01,
@@ -34179,6 +34193,13 @@
 		"Width": 4.04,
 		"Height": 4.92,
 		"Image": "thorpyfx-thedane.png"
+	},
+	{
+		"Brand": "ThorpyFx",
+		"Name": "The Dane MkII",
+		"Width": 2.78,
+		"Height": 4.92,
+		"Image": "thorpyfx-thedane-mk2.png"
 	},
 	{
 		"Brand": "ThorpyFx",
