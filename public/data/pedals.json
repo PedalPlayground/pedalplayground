@@ -9542,13 +9542,6 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "Mini 535Q Wah",
-		"Width": 3.13,
-		"Height": 5.24,
-		"Image": "dunlop-mini-535q.png"
-	},
-	{
-		"Brand": "Dunlop",
 		"Name": "Octavio JH-OC1",
 		"Width": 3.54,
 		"Height": 7.05,
@@ -16520,6 +16513,13 @@
 		"Image": "hk-rotosphere-mkii.png"
 	},
 	{
+		"Brand": "Humanoid",
+		"Name": "The Goblin",
+		"Width": 2.75,
+		"Height": 4.62,
+		"Image": "humanoid-the-goblin.png"
+	},
+	{
 		"Brand": "Ibanez",
 		"Name": "850 Fuzz Mini",
 		"Width": 1.96,
@@ -17589,6 +17589,13 @@
 		"Width": 2.7,
 		"Height": 4.3,
 		"Image": "jam-rattler.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Rattler Bass",
+		"Width": 2.7,
+		"Height": 4.3,
+		"Image": "jam-rattler-bass.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -27028,10 +27035,38 @@
 	},
 	{
 		"Brand": "Oneder Effects",
+		"Name": "Fuzzhausen MKII",
+		"Width": 3.7,
+		"Height": 1.64,
+		"Image": "oneder-fuzzhausen-mk2.png"
+	},
+	{
+		"Brand": "Oneder Effects",
+		"Name": "Heckboy",
+		"Width": 3.7,
+		"Height": 1.64,
+		"Image": "oneder-heckboy.png"
+	},
+	{
+		"Brand": "Oneder Effects",
 		"Name": "Old Blue",
 		"Width": 2.6,
 		"Height": 4.93,
 		"Image": "oneder-old-blue.png"
+	},
+	{
+		"Brand": "Oneder Effects",
+		"Name": "Onederbolt",
+		"Width": 2.6,
+		"Height": 4.93,
+		"Image": "oneder-onederbolt.png"
+	},
+	{
+		"Brand": "Oneder Effects",
+		"Name": "Onederwall",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "oneder-onederwall.png"
 	},
 	{
 		"Brand": "Oneder Effects",
@@ -32919,6 +32954,20 @@
 		"Width": 2.4,
 		"Height": 4.65,
 		"Image": "trex-vulture.png"
+	},
+	{
+		"Brand": "Tallon Electic",
+		"Name": "Dual Drive",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "tallon-electric-dual-drive.png"
+	},
+	{
+		"Brand": "Tallon Electic",
+		"Name": "The Hog",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "tallon--electric-the-hog.png"
 	},
 	{
 		"Brand": "Tape Audio Co.",
