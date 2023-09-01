@@ -25683,6 +25683,13 @@
 		"Image": "mythos-susmaryosep-v2.png"
 	},
 	{
+		"Brand": "Mythos",
+		"Name": "The Fates",
+		"Width": 3.7,
+		"Height": 4.83,
+		"Image": "mythos-the-fates.png"
+	},
+	{
 		"Brand": "Nobels",
 		"Name": "ODR-1",
 		"Width": 2.89,
@@ -28516,6 +28523,13 @@
 		"Width": 6.3,
 		"Height": 3.7,
 		"Image": "pirate-midi-bridge6.png"
+	},
+	{
+		"Brand": "Pirate Midi",
+		"Name": "uLoop",
+		"Width": 5.08,
+		"Height": 2.56,
+		"Image": "pirate-midi-uloop.png"
 	},
 	{
 		"Brand": "Pivotal",
