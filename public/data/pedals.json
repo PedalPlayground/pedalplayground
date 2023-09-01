@@ -16541,6 +16541,55 @@
 		"Image": "humanoid-the-goblin.png"
 	},
 	{
+		"Brand": "Hungry Robot",
+		"Name": "El Castillo",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "hungry-robot-el-castillo.png"
+	},
+	{
+		"Brand": "Hungry Robot",
+		"Name": "The Lumen",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "hungry-robot-the-lumen.png"
+	},
+	{
+		"Brand": "Hungry Robot",
+		"Name": "The Monastery",
+		"Width": 3.01,
+		"Height": 4.8,
+		"Image": "hungry-robot-the-monastery.png"
+	},
+	{
+		"Brand": "Hungry Robot",
+		"Name": "The Wardenclyffe",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "hungry-robot-the-wardenclyffe.png"
+	},
+	{
+		"Brand": "Hungry Robot",
+		"Name": "The Wardenclyffe Deluxe",
+		"Width": 5.7,
+		"Height": 4.95,
+		"Image": "hungry-robot-the-wardenclyffe-deluxe.png"
+	},
+	{
+		"Brand": "Hungry Robot",
+		"Name": "The Wardenclyffe Mini",
+		"Width": 3.01,
+		"Height": 4.8,
+		"Image": "hungry-robot-the-wardenclyffe-mini.png"
+	},
+	{
+		"Brand": "Hungry Robot",
+		"Name": "The Wash",
+		"Width": 3.91,
+		"Height": 4.95,
+		"Image": "hungry-robot-the-wash.png"
+	},
+	{
 		"Brand": "Ibanez",
 		"Name": "850 Fuzz Mini",
 		"Width": 1.96,
