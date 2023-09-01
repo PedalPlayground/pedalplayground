@@ -6833,6 +6833,13 @@
 	},
 	{
 		"Brand": "Collision Devices",
+		"Name": "Tars",
+		"Width": 4.1,
+		"Height": 4.86,
+		"Image": "collision-devices-tars.png"
+	},
+	{
+		"Brand": "Collision Devices",
 		"Name": "The Ranch",
 		"Width": 3.94,
 		"Height": 5.09,
@@ -8923,6 +8930,13 @@
 		"Width": 8.5,
 		"Height": 7.75,
 		"Image": "digitech-whammy-dt.png"
+	},
+	{
+		"Brand": "Dirge",
+		"Name": "Slowly Melting",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "dirge-slowly-melting.png"
 	},
 	{
 		"Brand": "Disaster Area",
