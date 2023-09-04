@@ -16724,6 +16724,13 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "SC-10 Stereo Chorus",
+		"Width": 2.76,
+		"Height": 5.02,
+		"Image": "ibanez-sc10.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "SD9 Sonic Distortion",
 		"Width": 3,
 		"Height": 4.9,
@@ -16753,8 +16760,8 @@
 	{
 		"Brand": "Ibanez",
 		"Name": "TS-10 Tube Screamer",
-		"Width": 2.875,
-		"Height": 4.95,
+		"Width": 2.76,
+		"Height": 5.02,
 		"Image": "ibanez-ts10.png"
 	},
 	{
