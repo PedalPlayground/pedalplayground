@@ -5832,6 +5832,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Dirty Little Secret Deluxe",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "catalinbread-dirty-little-secret-deluxe.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Dreamcoat",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -6830,6 +6837,13 @@
 		"Width": 7.61,
 		"Height": 4.88,
 		"Image": "collision-devices-nocturnal-pink.png"
+	},
+	{
+		"Brand": "Collision Devices",
+		"Name": "Singularity",
+		"Width": 4.75,
+		"Height": 4.77,
+		"Image": "collision-devices-singularity.png"
 	},
 	{
 		"Brand": "Collision Devices",
@@ -37497,6 +37511,13 @@
 		"Width": 2.7,
 		"Height": 4.52,
 		"Image": "wrenandcuff-eyesee78.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Eye See '78 OG",
+		"Width": 5.5,
+		"Height": 7.16,
+		"Image": "wrenandcuff-eyesee78og.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
