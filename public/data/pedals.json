@@ -29890,6 +29890,13 @@
 		"Image": "rodenberg-tb-drive.png"
 	},
 	{
+		"Brand": "Roger Lin Design",
+		"Name": "AdrenaLinn III",
+		"Width": 7.5,
+		"Height": 4.75,
+		"Image": "roger-linn-design-adrenalinn-3.png"
+	},
+	{
 		"Brand": "Roger Mayer",
 		"Name": "Voodoo Vibe",
 		"Width": 8.66,
@@ -35936,6 +35943,13 @@
 		"Width": 4.97,
 		"Height": 2.36,
 		"Image": "wmd-geigercounterci.png"
+	},
+	{
+		"Brand": "WMD",
+		"Name": "Geiger Counter Pro",
+		"Width": 5.7,
+		"Height": 4.97,
+		"Image": "wmd-geigercounterpro.png"
 	},
 	{
 		"Brand": "WMD",
