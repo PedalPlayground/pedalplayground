@@ -6902,6 +6902,27 @@
 		"Image": "colorsound-tremolo.png"
 	},
 	{
+		"Brand": "Colortone",
+		"Name": "Lo-Fi Delay",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "colortone-lofi-delay.png"
+	},
+	{
+		"Brand": "Colortone",
+		"Name": "Roundhouse",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "colortone-roundhouse.png"
+	},
+	{
+		"Brand": "Colortone",
+		"Name": "Spring Reverb II",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "colortone-spring-reverb-2.png"
+	},
+	{
 		"Brand": "Cooper FX",
 		"Name": "Arcades",
 		"Width": 3.7,
