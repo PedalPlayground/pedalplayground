@@ -31704,6 +31704,13 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Charon",
+		"Width": 2.81,
+		"Height": 4.75,
+		"Image": "spaceman-charon.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Delta II",
 		"Width": 2.92,
 		"Height": 4.75,
@@ -35124,6 +35131,13 @@
 		"Width": 2.6,
 		"Height": 5.01,
 		"Image": "vaderin-saf.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "Super Muff",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-super-muff.png"
 	},
 	{
 		"Brand": "Vaderin",
