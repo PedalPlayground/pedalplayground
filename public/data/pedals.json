@@ -34832,6 +34832,83 @@
 		"Image": "tubeworks-bk-butler-real-tube.png"
 	},
 	{
+		"Brand": "TWA",
+		"Name": "Dynamorph",
+		"Width": 3.97,
+		"Height": 4.7,
+		"Image": "twa-dynamorph.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "Hot Sake",
+		"Width": 2.89,
+		"Height": 4.5,
+		"Image": "twa-hot-sake.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "Krytical Mass",
+		"Width": 3.97,
+		"Height": 4.7,
+		"Image": "twa-krytical-mass.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "Ladditude",
+		"Width": 3.97,
+		"Height": 4.7,
+		"Image": "twa-ladditude.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "Microchasm",
+		"Width": 2.89,
+		"Height": 4.5,
+		"Image": "twa-microchasm.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "Minimorph",
+		"Width": 2.89,
+		"Height": 4.5,
+		"Image": "twa-minimorph.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "SH9",
+		"Width": 2.89,
+		"Height": 4.5,
+		"Image": "twa-sh9.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "Side Step",
+		"Width": 4.5,
+		"Height": 2.61,
+		"Image": "twa-side-step.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "Triskelion 3.0",
+		"Width": 2.89,
+		"Height": 4.5,
+		"Image": "twa-triskelion-30.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "Wahxidizer",
+		"Width": 3.97,
+		"Height": 4.7,
+		"Image": "twa-wahxidizer.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "WR-3 Wah Rocker",
+		"Width": 2.89,
+		"Height": 4.5,
+		"Image": "twa-wr3.png"
+	},
+	{
 		"Brand": "Twilight Pulse Audioworks",
 		"Name": "Konstante",
 		"Width": 2.6,
