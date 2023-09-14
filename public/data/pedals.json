@@ -19363,10 +19363,66 @@
 	},
 	{
 		"Brand": "Kasleder FX",
+		"Name": "Albatross",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-albatross.png"
+	},
+	{
+		"Brand": "Kasleder FX",
+		"Name": "Dirty Little Thing",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-dirty-little-thing.png"
+	},
+	{
+		"Brand": "Kasleder FX",
+		"Name": "Freaky Stone",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-freaky-stone.png"
+	},
+	{
+		"Brand": "Kasleder FX",
+		"Name": "Jellyfish",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-jellyfish.png"
+	},
+	{
+		"Brand": "Kasleder FX",
+		"Name": "Mean Bone",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-mean-bone.png"
+	},
+	{
+		"Brand": "Kasleder FX",
+		"Name": "Pipergate",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-pipergate.png"
+	},
+	{
+		"Brand": "Kasleder FX",
+		"Name": "Time Trap",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-time-trap.png"
+	},
+	{
+		"Brand": "Kasleder FX",
 		"Name": "Toxic Twins",
 		"Width": 4.7,
-		"Height": 3.83,
+		"Height": 3.89,
 		"Image": "kasleder-toxic-twins.png"
+	},
+	{
+		"Brand": "Kasleder FX",
+		"Name": "Vintage King",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-vintage-king.png"
 	},
 	{
 		"Brand": "Keeley",
