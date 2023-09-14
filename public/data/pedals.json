@@ -4670,6 +4670,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "NS-1X Noise Suppressor",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ns1x.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "NS-2 Noise Suppressor",
 		"Width": 2.875,
 		"Height": 5.125,
