@@ -13857,7 +13857,7 @@
 		"Name": "Anonymous Flange",
 		"Width": 7.87402,
 		"Height": 5,
-		"Image": "ftelettronica-anonymous-flange.png"
+		"Image": "ftelettronica-anonymous.png"
 	},
 	{
 		"Brand": "FTelettronica",
@@ -13910,10 +13910,10 @@
 	},
 	{
 		"Brand": "FTelettronica",
-		"Name": "Cotton Candy Digital Reverb",
+		"Name": "Cotton Crown Digital Reverb",
 		"Width": 4.13386,
 		"Height": 4.92126,
-		"Image": "ftelettronica-cotton-candy.png"
+		"Image": "ftelettronica-cotton-crown.png"
 	},
 	{
 		"Brand": "FTelettronica",
