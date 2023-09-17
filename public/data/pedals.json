@@ -7961,43 +7961,50 @@
 	{
 		"Brand": "Dawner Prince",
 		"Name": "Boonar",
-		"Width": 4.71,
-		"Height": 2.3,
+		"Width": 4.81,
+		"Height": 2.44,
 		"Image": "dawnerprince-boonar.png"
 	},
 	{
 		"Brand": "Dawner Prince",
 		"Name": "Diktator",
-		"Width": 4.7,
-		"Height": 3.5,
+		"Width": 5.01,
+		"Height": 3.7,
 		"Image": "dawner-prince-diktator.png"
 	},
 	{
 		"Brand": "Dawner Prince",
+		"Name": "Diktator MKII",
+		"Width": 5.01,
+		"Height": 3.7,
+		"Image": "dawner-prince-diktator-mk2.png"
+	},
+	{
+		"Brand": "Dawner Prince",
 		"Name": "Pulse",
-		"Width": 4.7,
-		"Height": 3.5,
+		"Width": 5.01,
+		"Height": 3.7,
 		"Image": "dawner-prince-pulse.png"
 	},
 	{
 		"Brand": "Dawner Prince",
 		"Name": "Red Rox",
-		"Width": 2.61,
-		"Height": 4.4,
+		"Width": 2.71,
+		"Height": 4.5,
 		"Image": "dawnerprince-red-rox.png"
 	},
 	{
 		"Brand": "Dawner Prince",
 		"Name": "Starla",
-		"Width": 4.71,
-		"Height": 2.3,
+		"Width": 4.81,
+		"Height": 2.44,
 		"Image": "dawnerprince-starla.png"
 	},
 	{
 		"Brand": "Dawner Prince",
 		"Name": "Viberator",
-		"Width": 2.61,
-		"Height": 4.4,
+		"Width": 2.71,
+		"Height": 4.5,
 		"Image": "dawnerprince-viberator.png"
 	},
 	{
