@@ -7163,15 +7163,15 @@
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Golden Ratio",
-		"Width": 2.5,
-		"Height": 4.72,
+		"Width": 2.6,
+		"Height": 4.9,
 		"Image": "ctc-golden-ratio.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Killer V",
-		"Width": 2.5,
-		"Height": 4.72,
+		"Width": 2.6,
+		"Height": 4.9,
 		"Image": "ctc-killer-v.png"
 	},
 	{
@@ -7205,8 +7205,8 @@
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Motherload",
-		"Width": 2.5,
-		"Height": 4.72,
+		"Width": 2.6,
+		"Height": 4.9,
 		"Image": "ctc-motherload.png"
 	},
 	{
@@ -7225,6 +7225,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Sidekick JR",
+		"Width": 2.71,
+		"Height": 4.9,
+		"Image": "ctc-sidekick-jr.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "Space Charged V2",
 		"Width": 3.7,
 		"Height": 4.85,
@@ -7233,8 +7240,8 @@
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Splash",
-		"Width": 2.62,
-		"Height": 4.62,
+		"Width": 2.71,
+		"Height": 4.9,
 		"Image": "ctc-splash.png"
 	},
 	{
@@ -7254,8 +7261,8 @@
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Stardust mkIII",
-		"Width": 2.5,
-		"Height": 4.72,
+		"Width": 2.6,
+		"Height": 4.9,
 		"Image": "ctc-stardust-mk3.png"
 	},
 	{
@@ -7268,15 +7275,15 @@
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Super Conductor",
-		"Width": 2.5,
-		"Height": 4.72,
+		"Width": 2.6,
+		"Height": 4.9,
 		"Image": "ctc-super-conductor.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "TI:ME mkIII",
-		"Width": 2.5,
-		"Height": 4.72,
+		"Width": 2.6,
+		"Height": 4.9,
 		"Image": "ctc-time-mk3.png"
 	},
 	{
@@ -19913,6 +19920,13 @@
 		"Width": 2.73,
 		"Height": 4.5,
 		"Image": "keeley-neutrino.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Noble Screamer",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-noble-screamer.png"
 	},
 	{
 		"Brand": "Keeley",
