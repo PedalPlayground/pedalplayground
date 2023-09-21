@@ -1065,6 +1065,13 @@
 	},
 	{
 		"Brand": "AllPedal",
+		"Name": "Microdose",
+		"Width": 3.82,
+		"Height": 4.71,
+		"Image": "allpedal-microdose.png"
+	},
+	{
+		"Brand": "AllPedal",
 		"Name": "Slamurai",
 		"Width": 2.6,
 		"Height": 5.09,
@@ -7302,6 +7309,20 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "XT",
+		"Width": 2,
+		"Height": 2.14,
+		"Image": "ctc-xt.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "XT (Sidekick)",
+		"Width": 2,
+		"Height": 2.14,
+		"Image": "ctc-xt-sidekick.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "Ziggy V2",
 		"Width": 2.76,
 		"Height": 4.62,
@@ -11537,10 +11558,59 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Pico Attack Decay",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-attack-decay.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico Canyon Echo",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-canyon-echo.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico Deep Freeze",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-deep-freeze.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico Pitch Fork",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-pitch-fork.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Pico POG",
 		"Width": 1.99,
 		"Height": 3.65,
 		"Image": "ehx-pico-pog.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico Oceans 3-Verb",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-oceans-3verb.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico Rerun",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-rerun.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico Triboro Bridge",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-triboro-bridge.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
