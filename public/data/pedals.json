@@ -37024,6 +37024,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Black '65 Limited Edition",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "wampler-black65.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "cataPulp",
 		"Width": 2.5,
 		"Height": 4.81,
@@ -37304,10 +37311,17 @@
 	},
 	{
 		"Brand": "Wampler",
-		"Name": "Tweed 57",
+		"Name": "Tweed '57",
 		"Width": 2.5,
 		"Height": 4.81,
 		"Image": "wampler-tweed57.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Tweed '57 Limited Edition",
+		"Width": 2.5,
+		"Height": 4.7,
+		"Image": "wampler-tweed57-le.png"
 	},
 	{
 		"Brand": "Wampler",
