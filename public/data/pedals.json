@@ -28421,6 +28421,13 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Cosmosis",
+		"Width": 4.5,
+		"Height": 3.12,
+		"Image": "pigtronix-cosmosis.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Disnortion Pro Micro",
 		"Width": 1.75,
 		"Height": 3.75,
@@ -32425,6 +32432,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Ultraviolet",
+		"Width": 2.7,
+		"Height": 4.43,
+		"Image": "strymon-ultraviolet.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Volante",
 		"Width": 7,
 		"Height": 4.55,
@@ -35292,6 +35306,13 @@
 		"Width": 2.58,
 		"Height": 4.77,
 		"Image": "ua-orion.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "OX Stomp",
+		"Width": 3.5,
+		"Height": 5.62,
+		"Image": "ua-ox-stomp.png"
 	},
 	{
 		"Brand": "Universal Audio",
