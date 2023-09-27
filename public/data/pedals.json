@@ -13820,57 +13820,64 @@
 	{
 		"Brand": "Friedman",
 		"Name": "BE-OD",
-		"Width": 2.75,
-		"Height": 4.625,
+		"Width": 2.78,
+		"Height": 4.75,
 		"Image": "friedman-be-od.png"
 	},
 	{
 		"Brand": "Friedman",
 		"Name": "BE-OD Deluxe",
-		"Width": 5.9,
-		"Height": 5,
+		"Width": 5.7,
+		"Height": 4.88,
 		"Image": "friedman-be-od-deluxe.png"
 	},
 	{
 		"Brand": "Friedman",
 		"Name": "Buxom Boost",
-		"Width": 2.75,
-		"Height": 4.625,
+		"Width": 2.78,
+		"Height": 4.75,
 		"Image": "friedman-buxom-boost.png"
 	},
 	{
 		"Brand": "Friedman",
 		"Name": "Dirty Shirley",
-		"Width": 2.95,
-		"Height": 4.625,
+		"Width": 2.92,
+		"Height": 4.75,
 		"Image": "friedman-dirty-shirley.png"
 	},
 	{
 		"Brand": "Friedman",
 		"Name": "Gold-72",
-		"Width": 3.97,
+		"Width": 3.93,
 		"Height": 9.95,
 		"Image": "friedman-gold-72.png"
 	},
 	{
 		"Brand": "Friedman",
 		"Name": "Golden Pearl",
-		"Width": 2.75,
-		"Height": 4.625,
+		"Width": 2.78,
+		"Height": 4.75,
 		"Image": "friedman-golden-pearl.png"
 	},
 	{
 		"Brand": "Friedman",
+		"Name": "IR-X",
+		"Width": 6.5,
+		"Height": 5.44,
+		"Image": "friedman-irx.png"
+	},
+	{
+		"Brand": "Friedman",
 		"Name": "Sir-Compre",
-		"Width": 2.75,
-		"Height": 4.625,
+		"Width": 2.78,
+		"Height": 4.75,
 		"Image": "friedman-sir-compre.png"
 	},
 	{
 		"Brand": "Friedman",
 		"Name": "Smallbox",
-		"Width": 2.95,
-		"Height": 4.625,
+		"Width": 2.92,
+		"Height": 4.75,
 		"Image": "friedman-smallbox.png"
 	},
 	{
