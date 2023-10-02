@@ -16226,6 +16226,55 @@
 		"Image": "harley-benton-vintage-tremolo.png"
 	},
 	{
+		"Brand": "Haunted Labs",
+		"Name": "Dark Aura",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "haunted-labs-dark-aura.png"
+	},
+	{
+		"Brand": "Haunted Labs",
+		"Name": "Frost Bite",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "haunted-labs-frost-bite.png"
+	},
+	{
+		"Brand": "Haunted Labs",
+		"Name": "Old Ruin",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "haunted-labs-old-ruin.png"
+	},
+	{
+		"Brand": "Haunted Labs",
+		"Name": "Paranormal Fuzz",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "haunted-labs-paranormal-fuzz.png"
+	},
+	{
+		"Brand": "Haunted Labs",
+		"Name": "Scorched Earth",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "haunted-labs-scorched-earth.png"
+	},
+	{
+		"Brand": "Haunted Labs",
+		"Name": "Shadow Winds",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "haunted-labs-shadow-winds.png"
+	},
+	{
+		"Brand": "Haunted Labs",
+		"Name": "Witch Hammer",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "haunted-labs-witch-hammer.png"
+	},
+	{
 		"Brand": "Headrush",
 		"Name": "MX5",
 		"Width": 11.6,
@@ -25800,6 +25849,13 @@
 		"Width": 1.75,
 		"Height": 3.6,
 		"Image": "mythos-golden-fleece-mini.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Golden Fleece (Blackout)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-golden-fleece-blackout.png"
 	},
 	{
 		"Brand": "Mythos",
