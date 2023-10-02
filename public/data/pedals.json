@@ -11411,6 +11411,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Pico POG",
+		"Width": 2.00,
+		"Height": 3.65,
+		"Image": "ehx-picopog.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "OD Glove",
 		"Width": 2.82,
 		"Height": 4.5,
