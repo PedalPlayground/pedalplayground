@@ -29876,6 +29876,13 @@
 		"Image": "reuss-evil-twin.png"
 	},
 	{
+		"Brand": "Reuss",
+		"Name": "Square One",
+		"Width": 2.84,
+		"Height": 4.5,
+		"Image": "reuss-square-one.png"
+	},
+	{
 		"Brand": "Revv",
 		"Name": "Chat Breaker",
 		"Width": 2.63,
