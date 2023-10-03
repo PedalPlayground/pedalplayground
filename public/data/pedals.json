@@ -10858,6 +10858,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Pico Deep Freeze",
+		"Width": 2.00,
+		"Height": 3.65,
+		"Image": "ehx-deepfreeze.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Deluxe Big Muff Pi",
 		"Width": 6.07,
 		"Height": 4.75,
