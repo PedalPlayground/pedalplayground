@@ -25159,6 +25159,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Dookie Drive V4",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-dd25v4.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Double-Double Overdrive",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -25583,6 +25590,27 @@
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "mxr-m68.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Wylde Audio Chorus",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-wa38.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Wylde Audio Overdrive",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-wa44.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Wylde Audio Phase",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-wa90.png"
 	},
 	{
 		"Brand": "MXR Bass Innovations",
