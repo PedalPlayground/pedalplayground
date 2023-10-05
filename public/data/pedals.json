@@ -13007,6 +13007,13 @@
 	},
 	{
 		"Brand": "Fender",
+		"Name": "Tone Master Pro",
+		"Width": 14.6,
+		"Height": 10.2,
+		"Image": "fender-tone-master-pro.png"
+	},
+	{
+		"Brand": "Fender",
 		"Name": "Tread-Light Volume/Expression",
 		"Width": 3.45,
 		"Height": 8.25,
@@ -26969,6 +26976,13 @@
 		"Width": 3.7,
 		"Height": 4.9,
 		"Image": "okko-t3.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Twinsonic",
+		"Width": 3.67,
+		"Height": 4.81,
+		"Image": "okko-twinsonic.png"
 	},
 	{
 		"Brand": "OBNE",
