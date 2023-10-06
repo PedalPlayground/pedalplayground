@@ -21848,6 +21848,13 @@
 	},
 	{
 		"Brand": "LPD",
+		"Name": "Lucent Overdrive",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "lpd-lucent.png"
+	},
+	{
+		"Brand": "LPD",
 		"Name": "Mach I Distortion",
 		"Width": 2.68,
 		"Height": 4.5,
@@ -31894,8 +31901,8 @@
 	{
 		"Brand": "Source Audio",
 		"Name": "Zio",
-		"Width": 2.94,
-		"Height": 4.5,
+		"Width": 2.55,
+		"Height": 4.1,
 		"Image": "sourceaudio-zio.png"
 	},
 	{
