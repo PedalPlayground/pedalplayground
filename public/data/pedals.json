@@ -17655,6 +17655,13 @@
 	},
 	{
 		"Brand": "Jackson Audio",
+		"Name": "Hour Glass",
+		"Width": 2.76,
+		"Height": 4.11,
+		"Image": "jackson-hour-glass.png"
+	},
+	{
+		"Brand": "Jackson Audio",
 		"Name": "Modular Fuzz",
 		"Width": 2.7,
 		"Height": 5.13,
