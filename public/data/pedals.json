@@ -34874,6 +34874,27 @@
 		"Image": "tonecity-wild-fro.png"
 	},
 	{
+		"Brand": "Tonewave",
+		"Name": "Borealis",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "tonewave-borealis.png"
+	},
+	{
+		"Brand": "Tonewave",
+		"Name": "Caramel",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "tonewave-caramel.png"
+	},
+	{
+		"Brand": "Tonewave",
+		"Name": "Preset",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "tonewave-preset.png"
+	},
+	{
 		"Brand": "Travs",
 		"Name": "Patchbay",
 		"Width": 2.97,
