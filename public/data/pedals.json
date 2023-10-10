@@ -23024,6 +23024,13 @@
 	},
 	{
 		"Brand": "Meris",
+		"Name": "MercuryX",
+		"Width": 7.25,
+		"Height": 4.5,
+		"Image": "meris-mercuryx.png"
+	},
+	{
+		"Brand": "Meris",
 		"Name": "MIDI I/O",
 		"Width": 3.7,
 		"Height": 2.66,
