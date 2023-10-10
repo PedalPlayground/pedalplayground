@@ -3165,6 +3165,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Delay",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-delay.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Germanium Boost",
 		"Width": 2.71,
 		"Height": 4.5,
