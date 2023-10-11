@@ -11675,8 +11675,8 @@
 		"Height": 4.75,
 		"Image": "ehx-operation-overlord.png"
 	},
-  {
-    "Brand": "Electro-Harmonix",
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Pico Attack Decay",
 		"Width": 1.99,
 		"Height": 3.65,
@@ -11703,13 +11703,13 @@
 		"Height": 3.65,
 		"Image": "ehx-pico-pitch-fork.png"
 	},
-  {
+	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Pico Platform",
 		"Width": 1.99,
 		"Height": 3.65,
 		"Image": "ehx-pico-platform.png"
-  },
+	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Pico POG",
@@ -17848,9 +17848,9 @@
 		"Width": 2.7,
 		"Height": 5.13,
 		"Image": "jackson-golden-boy-rose.png"
-  },
-  {
-    "Brand": "Jackson Audio",
+	},
+	{
+		"Brand": "Jackson Audio",
 		"Name": "Hour Glass",
 		"Width": 2.76,
 		"Height": 4.11,
@@ -24800,7 +24800,7 @@
 		"Height": 3.66,
 		"Image": "mosky-silver-horse.png"
 	},
-  {
+	{
 		"Brand": "Mosky",
 		"Name": "Spring Reverb",
 		"Width": 1.84,
@@ -24820,7 +24820,7 @@
 		"Width": 2.125,
 		"Height": 6,
 		"Image": "moyo-mini-volume.png"
-  },
+	},
 	{
 		"Brand": "Mr. Black",
 		"Name": "Ambience",
