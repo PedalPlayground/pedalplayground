@@ -12526,7 +12526,7 @@
 		"Brand": "Eventide",
 		"Name": "Blackhole",
 		"Width": 4,
-		"Height": 4.55,
+		"Height": 4.54,
 		"Image": "eventide-blackhole.png"
 	},
 	{
@@ -12561,7 +12561,7 @@
 		"Brand": "Eventide",
 		"Name": "MicroPitch Delay",
 		"Width": 4,
-		"Height": 4.55,
+		"Height": 4.54,
 		"Image": "eventide-micropitch.png"
 	},
 	{
@@ -12601,6 +12601,13 @@
 	},
 	{
 		"Brand": "Eventide",
+		"Name": "Riptide",
+		"Width": 4,
+		"Height": 4.54,
+		"Image": "eventide-riptide.png"
+	},
+	{
+		"Brand": "Eventide",
 		"Name": "Rose",
 		"Width": 4.75,
 		"Height": 5.04,
@@ -12624,14 +12631,14 @@
 		"Brand": "Eventide",
 		"Name": "Tricerachorus",
 		"Width": 4,
-		"Height": 4.55,
+		"Height": 4.54,
 		"Image": "eventide-tricerachorus.png"
 	},
 	{
 		"Brand": "Eventide",
 		"Name": "UltraTap",
 		"Width": 4,
-		"Height": 4.55,
+		"Height": 4.54,
 		"Image": "eventide-ultratap.png"
 	},
 	{
