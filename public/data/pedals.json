@@ -36478,6 +36478,20 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "385 MKII",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-385-mk2.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "385 MKII (Black)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-385-mk2-black.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "385 (Nat. Parks)",
 		"Width": 2.88,
 		"Height": 4.84,
