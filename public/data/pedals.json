@@ -5797,6 +5797,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "CBX",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-cbx.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "CSIDMAN",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -12465,6 +12472,13 @@
 		"Width": 5.7,
 		"Height": 3.91,
 		"Image": "empress-zoia.png"
+	},
+	{
+		"Brand": "Endorphines",
+		"Name": "Ghost",
+		"Width": 7.48,
+		"Height": 4.89,
+		"Image": "endorphines-ghost.png"
 	},
 	{
 		"Brand": "Engl",
@@ -27081,6 +27095,13 @@
 		"Width": 4.7,
 		"Height": 3.86,
 		"Image": "obne-alpha-haunt-v2.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Beam Splitter",
+		"Width": 5.79,
+		"Height": 4.88,
+		"Image": "obne-beam-splitter.png"
 	},
 	{
 		"Brand": "OBNE",
