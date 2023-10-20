@@ -7717,15 +7717,22 @@
 		"Brand": "Damnation Audio",
 		"Name": "Curmudgeon Dist 2",
 		"Width": 2.5,
-		"Height": 4.96,
+		"Height": 5.02,
 		"Image": "damnation-curmudgeon-dist-2.png"
 	},
 	{
 		"Brand": "Damnation Audio",
 		"Name": "MBD2",
 		"Width": 2.5,
-		"Height": 4.96,
+		"Height": 5.02,
 		"Image": "damnation-mbd2.png"
+	},
+	{
+		"Brand": "Damnation Audio",
+		"Name": "MBD3",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "damnation-mbd3.png"
 	},
 	{
 		"Brand": "DanDrive",
@@ -10743,6 +10750,13 @@
 		"Width": 7.5,
 		"Height": 4.94,
 		"Image": "electrode-leveling-amplifier.png"
+	},
+	{
+		"Brand": "Electric Love",
+		"Name": "Aquatone",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "electric-love-aquatone.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -26159,9 +26173,9 @@
 		"Image": "nordland-odr-cs.png"
 	},
 	{
-		"Brand": "Noble Amplification",
-		"Name": "Preamp/DI",
-		"Width": 7.5,
+		"Brand": "Noble",
+		"Name": "Dual Vacuum Tube Preamp/DI",
+		"Width": 8.33,
 		"Height": 5,
 		"Image": "noble-preamp-350.png"
 	},
