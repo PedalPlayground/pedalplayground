@@ -2878,6 +2878,13 @@
 	},
 	{
 		"Brand": "Beetronics",
+		"Name": "Nectar",
+		"Width": 3.42,
+		"Height": 5.5,
+		"Image": "beetronics-nectar.png"
+	},
+	{
+		"Brand": "Beetronics",
 		"Name": "Octahive",
 		"Width": 3.76,
 		"Height": 5.5,
@@ -17150,6 +17157,13 @@
 		"Image": "ikm-x-vibe.png"
 	},
 	{
+		"Brand": "Industrialectric",
+		"Name": "RM-1N",
+		"Width": 5.7,
+		"Height": 3.87,
+		"Image": "industrialectric-rm1n.png"
+	},
+	{
 		"Brand": "Instruments For A New Electric Music",
 		"Name": "Second Voice",
 		"Width": 3.68,
@@ -21544,6 +21558,13 @@
 		"Width": 10.8,
 		"Height": 7.4,
 		"Image": "line6-hx-effects.png"
+	},
+	{
+		"Brand": "Line 6",
+		"Name": "HX One",
+		"Width": 3.92,
+		"Height": 5.1,
+		"Image": "line6-hx-one.png"
 	},
 	{
 		"Brand": "Line 6",
@@ -29912,6 +29933,13 @@
 	},
 	{
 		"Brand": "Red Witch",
+		"Name": "Synthotron III",
+		"Width": 5.95,
+		"Height": 4.93,
+		"Image": "redwitch-synthotron-3.png"
+	},
+	{
+		"Brand": "Red Witch",
 		"Name": "Titan",
 		"Width": 5,
 		"Height": 3.77,
@@ -29949,7 +29977,7 @@
 		"Brand": "Retro-Sonic",
 		"Name": "Compressor",
 		"Width": 2.77,
-		"Height": 4.5,
+		"Height": 47.5,
 		"Image": "retrosonic-compressor.png"
 	},
 	{
@@ -35463,6 +35491,13 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Brigade",
+		"Width": 2.58,
+		"Height": 4.77,
+		"Image": "ua-brigade.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Del-Verb",
 		"Width": 3.5,
 		"Height": 5.62,
@@ -35484,6 +35519,13 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Flow",
+		"Width": 2.58,
+		"Height": 4.77,
+		"Image": "ua-flow.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Galaxy",
 		"Width": 3.5,
 		"Height": 5.62,
@@ -35502,6 +35544,13 @@
 		"Width": 2.58,
 		"Height": 4.77,
 		"Image": "ua-heavenly.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Lion",
+		"Width": 3.5,
+		"Height": 5.62,
+		"Image": "ua-lion.png"
 	},
 	{
 		"Brand": "Universal Audio",
@@ -35537,6 +35586,13 @@
 		"Width": 3.5,
 		"Height": 5.62,
 		"Image": "ua-starlight.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Teletronix",
+		"Width": 2.58,
+		"Height": 4.77,
+		"Image": "ua-teletronix.png"
 	},
 	{
 		"Brand": "Universal Audio",
