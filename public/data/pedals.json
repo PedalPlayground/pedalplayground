@@ -2878,6 +2878,13 @@
 	},
 	{
 		"Brand": "Beetronics",
+		"Name": "Nectar",
+		"Width": 3.42,
+		"Height": 5.5,
+		"Image": "beetronics-nectar.png"
+	},
+	{
+		"Brand": "Beetronics",
 		"Name": "Octahive",
 		"Width": 3.76,
 		"Height": 5.5,
@@ -3162,6 +3169,13 @@
 		"Width": 8.66,
 		"Height": 7.55,
 		"Image": "behringer-vt999.png"
+	},
+	{
+		"Brand": "Benson",
+		"Name": "Delay",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-delay.png"
 	},
 	{
 		"Brand": "Benson",
@@ -4051,6 +4065,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-bf3.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "BP-1w Booster/Preamp (Waza Craft)",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-bp1w.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -5787,6 +5808,13 @@
 		"Width": 1.64,
 		"Height": 3.81,
 		"Image": "catalinbread-cb-tap.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "CBX",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-cbx.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -7703,15 +7731,22 @@
 		"Brand": "Damnation Audio",
 		"Name": "Curmudgeon Dist 2",
 		"Width": 2.5,
-		"Height": 4.96,
+		"Height": 5.02,
 		"Image": "damnation-curmudgeon-dist-2.png"
 	},
 	{
 		"Brand": "Damnation Audio",
 		"Name": "MBD2",
 		"Width": 2.5,
-		"Height": 4.96,
+		"Height": 5.02,
 		"Image": "damnation-mbd2.png"
+	},
+	{
+		"Brand": "Damnation Audio",
+		"Name": "MBD3",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "damnation-mbd3.png"
 	},
 	{
 		"Brand": "DanDrive",
@@ -10731,6 +10766,13 @@
 		"Image": "electrode-leveling-amplifier.png"
 	},
 	{
+		"Brand": "Electric Love",
+		"Name": "Aquatone",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "electric-love-aquatone.png"
+	},
+	{
 		"Brand": "Electro-Harmonix",
 		"Name": "#1 Echo",
 		"Width": 4.19,
@@ -11782,6 +11824,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Spruce Goose",
+		"Width": 2.82,
+		"Height": 4.5,
+		"Image": "ehx-spruce-goose.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Stereo The Clone Theory",
 		"Width": 4.19,
 		"Height": 4.75,
@@ -12453,6 +12502,13 @@
 		"Image": "empress-zoia.png"
 	},
 	{
+		"Brand": "Endorphines",
+		"Name": "Ghost",
+		"Width": 7.48,
+		"Height": 4.89,
+		"Image": "endorphines-ghost.png"
+	},
+	{
 		"Brand": "Engl",
 		"Name": "Cabloader",
 		"Width": 3.88,
@@ -12519,7 +12575,7 @@
 		"Brand": "Eventide",
 		"Name": "Blackhole",
 		"Width": 4,
-		"Height": 4.55,
+		"Height": 4.54,
 		"Image": "eventide-blackhole.png"
 	},
 	{
@@ -12554,7 +12610,7 @@
 		"Brand": "Eventide",
 		"Name": "MicroPitch Delay",
 		"Width": 4,
-		"Height": 4.55,
+		"Height": 4.54,
 		"Image": "eventide-micropitch.png"
 	},
 	{
@@ -12594,6 +12650,13 @@
 	},
 	{
 		"Brand": "Eventide",
+		"Name": "Riptide",
+		"Width": 4,
+		"Height": 4.54,
+		"Image": "eventide-riptide.png"
+	},
+	{
+		"Brand": "Eventide",
 		"Name": "Rose",
 		"Width": 4.75,
 		"Height": 5.04,
@@ -12617,14 +12680,14 @@
 		"Brand": "Eventide",
 		"Name": "Tricerachorus",
 		"Width": 4,
-		"Height": 4.55,
+		"Height": 4.54,
 		"Image": "eventide-tricerachorus.png"
 	},
 	{
 		"Brand": "Eventide",
 		"Name": "UltraTap",
 		"Width": 4,
-		"Height": 4.55,
+		"Height": 4.54,
 		"Image": "eventide-ultratap.png"
 	},
 	{
@@ -17108,6 +17171,13 @@
 		"Image": "ikm-x-vibe.png"
 	},
 	{
+		"Brand": "Industrialectric",
+		"Name": "RM-1N",
+		"Width": 5.7,
+		"Height": 3.87,
+		"Image": "industrialectric-rm1n.png"
+	},
+	{
 		"Brand": "Instruments For A New Electric Music",
 		"Name": "Second Voice",
 		"Width": 3.68,
@@ -21505,6 +21575,13 @@
 	},
 	{
 		"Brand": "Line 6",
+		"Name": "HX One",
+		"Width": 3.92,
+		"Height": 5.1,
+		"Image": "line6-hx-one.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "HX Stomp",
 		"Width": 7.13,
 		"Height": 5,
@@ -23028,6 +23105,13 @@
 		"Width": 4.25,
 		"Height": 4.5,
 		"Image": "meris-mercury7.png"
+	},
+	{
+		"Brand": "Meris",
+		"Name": "MercuryX",
+		"Width": 7.25,
+		"Height": 4.5,
+		"Image": "meris-mercuryx.png"
 	},
 	{
 		"Brand": "Meris",
@@ -26124,9 +26208,9 @@
 		"Image": "nordland-odr-cs.png"
 	},
 	{
-		"Brand": "Noble Amplification",
-		"Name": "Preamp/DI",
-		"Width": 7.5,
+		"Brand": "Noble",
+		"Name": "Dual Vacuum Tube Preamp/DI",
+		"Width": 8.33,
 		"Height": 5,
 		"Image": "noble-preamp-350.png"
 	},
@@ -27060,6 +27144,13 @@
 		"Width": 4.7,
 		"Height": 3.86,
 		"Image": "obne-alpha-haunt-v2.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Beam Splitter",
+		"Width": 5.79,
+		"Height": 4.88,
+		"Image": "obne-beam-splitter.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -29856,6 +29947,13 @@
 	},
 	{
 		"Brand": "Red Witch",
+		"Name": "Synthotron III",
+		"Width": 5.95,
+		"Height": 4.93,
+		"Image": "redwitch-synthotron-3.png"
+	},
+	{
+		"Brand": "Red Witch",
 		"Name": "Titan",
 		"Width": 5,
 		"Height": 3.77,
@@ -29893,7 +29991,7 @@
 		"Brand": "Retro-Sonic",
 		"Name": "Compressor",
 		"Width": 2.77,
-		"Height": 4.5,
+		"Height": 47.5,
 		"Image": "retrosonic-compressor.png"
 	},
 	{
@@ -35407,6 +35505,13 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Brigade",
+		"Width": 2.58,
+		"Height": 4.77,
+		"Image": "ua-brigade.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Del-Verb",
 		"Width": 3.5,
 		"Height": 5.62,
@@ -35428,6 +35533,13 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Flow",
+		"Width": 2.58,
+		"Height": 4.77,
+		"Image": "ua-flow.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Galaxy",
 		"Width": 3.5,
 		"Height": 5.62,
@@ -35446,6 +35558,13 @@
 		"Width": 2.58,
 		"Height": 4.77,
 		"Image": "ua-heavenly.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Lion",
+		"Width": 3.5,
+		"Height": 5.62,
+		"Image": "ua-lion.png"
 	},
 	{
 		"Brand": "Universal Audio",
@@ -35481,6 +35600,13 @@
 		"Width": 3.5,
 		"Height": 5.62,
 		"Image": "ua-starlight.png"
+	},
+	{
+		"Brand": "Universal Audio",
+		"Name": "Teletronix",
+		"Width": 2.58,
+		"Height": 4.77,
+		"Image": "ua-teletronix.png"
 	},
 	{
 		"Brand": "Universal Audio",
@@ -36461,6 +36587,20 @@
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-385.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "385 MKII",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-385-mk2.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "385 MKII (Black)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-385-mk2-black.png"
 	},
 	{
 		"Brand": "Walrus Audio",
