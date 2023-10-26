@@ -4068,6 +4068,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "BP-1w Booster/Preamp (Waza Craft)",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-bp1w.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "CE-1 Chorus Ensemble",
 		"Width": 10.2,
 		"Height": 6.9,
