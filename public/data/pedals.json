@@ -778,6 +778,13 @@
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Dynaflanger Model 213",
+		"Width": 2.78,
+		"Height": 4.7,
+		"Image": "alexander-dynaflanger-model-213.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "F13 Flanger",
 		"Width": 2.78,
 		"Height": 4.7,
@@ -19633,6 +19640,13 @@
 		"Width": 4.7,
 		"Height": 3.89,
 		"Image": "kasleder-mean-bone.png"
+	},
+	{
+		"Brand": "Kasleder FX",
+		"Name": "Pelion",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-pelion.png"
 	},
 	{
 		"Brand": "Kasleder FX",
