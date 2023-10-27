@@ -16408,6 +16408,13 @@
 		"Image": "hello-sailor-effects-rangemaster.png"
 	},
 	{
+		"Brand": "Henretta",
+		"Name": "Orange Whip",
+		"Width": 2.38,
+		"Height": 2,
+		"Image": "henretta-orange-whip.png"
+	},
+	{
 		"Brand": "Hilbish Designs",
 		"Name": "Compressimiser",
 		"Width": 4,
@@ -33556,6 +33563,14 @@
 		"Width": 4.6,
 		"Height": 3.62,
 		"Image": "taylor-a-b-both-box.png"
+	},
+
+	{
+		"Brand": "TC Electronic",
+		"Name": "2290 P Dynamic Digital Delay",
+		"Width": 8.8,
+		"Height": 5.4,
+		"Image": "tc-2290p.png"
 	},
 	{
 		"Brand": "TC Electronic",
