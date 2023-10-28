@@ -28456,6 +28456,13 @@
 	},
 	{
 		"Brand": "Pedal Pawn",
+		"Name": "Bluesprint",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "pedal-pawn-bluesprint.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
 		"Name": "Chicken Quiff",
 		"Width": 2.76,
 		"Height": 4.5,
@@ -28481,6 +28488,13 @@
 		"Width": 7.28,
 		"Height": 4.69,
 		"Image": "pedal-pawn-gypsy-vibe.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
+		"Name": "Gypsy Vibe V2",
+		"Width": 7.28,
+		"Height": 4.82,
+		"Image": "pedal-pawn-gypsy-vibe-v2.png"
 	},
 	{
 		"Brand": "Pedal Pawn",
