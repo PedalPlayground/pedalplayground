@@ -21854,6 +21854,13 @@
 		"Image": "lovepedal-kalamazoo-gold.png"
 	},
 	{
+		"Brand":"Lovepedal",
+		"Name":"Rubber Chicken",
+		"Width":2.59,
+		"Height":4.37,
+		"Image":"lovepedal-rubberchicken.png"
+	},
+	{
 		"Brand": "Lovepedal",
 		"Name": "Tchula",
 		"Width": 4.6,
