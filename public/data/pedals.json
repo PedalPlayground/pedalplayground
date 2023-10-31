@@ -8730,6 +8730,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "DOD Chthonic Fuzz",
+		"Width": 3,
+		"Height": 4.88,
+		"Image": "digitech-chthonic-fuzz.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "DOD Compressor 280",
 		"Width": 3.05,
 		"Height": 4.88,
@@ -13452,6 +13459,13 @@
 		"Width": 1.75,
 		"Height": 3.62,
 		"Image": "flower-pedals-lupine.png"
+	},
+	{
+		"Brand": "Flower Pedals",
+		"Name": "Lupine (Dual)",
+		"Width": 4.85,
+		"Height": 2.74,
+		"Image": "flower-pedals-lupine-dual.png"
 	},
 	{
 		"Brand": "Flower Pedals",
@@ -22832,6 +22846,13 @@
 		"Width": 2.87,
 		"Height": 4.94,
 		"Image": "matthews-astronomer-v2.png"
+	},
+	{
+		"Brand": "Matthews Effects",
+		"Name": "The Botanist",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "matthews-botanist.png"
 	},
 	{
 		"Brand": "Matthews Effects",
