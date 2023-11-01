@@ -9150,6 +9150,13 @@
 	},
 	{
 		"Brand": "DOD",
+		"Name": "Chthonic Fuzz",
+		"Width": 3,
+		"Height": 4.88,
+		"Image": "dod-chthonic.png"
+	},
+	{
+		"Brand": "DOD",
 		"Name": "Envelope Filter 440",
 		"Width": 3.05,
 		"Height": 4.88,
