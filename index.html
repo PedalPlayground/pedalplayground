@@ -28,6 +28,8 @@
 		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#8576f7" />
 		<meta name="msapplication-TileColor" content="#2d89ef" />
 		<meta name="theme-color" content="#ffffff" />
+		
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8665257118994115" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
@@ -37,11 +39,11 @@
 				<a href="https://github.com/PedalPlayground/PedalPlayground.github.io/">Change Log</a>
 				<a href="https://www.paypal.me/travlehman" target="_blank">Donate</a>
 				<!--<a
-					class="hidden-xs"
-					href="https://github.com/PedalPlayground/PedalPlayground.github.io#contributing"
-					target="_blank"
-					>Contribute
-				</a>-->
+									class="hidden-xs"
+									href="https://github.com/PedalPlayground/PedalPlayground.github.io#contributing"
+									target="_blank"
+									>Contribute
+								</a>-->
 			</nav>
 		</header>
 
@@ -151,7 +153,7 @@
 												placeholder="Bozz FM-2 Face Melter"
 											/>
 										</div>
-										
+
 										<div class="form-element left">
 											<label for="">Width <em>(inches)</em></label>
 											<input
@@ -203,15 +205,16 @@
 						<div id="canvas-scale-form" class="sidebar__section form-inline">
 							<h4>Canvas Scale</h4>
 							<div class="input-group">
-								<div class="input-group-addon input-sm">Scale</div>
+								<div class="input-group-addon input-sm">Resolution</div>
 								<input
 									class="form-control input-sm"
 									id="canvas-scale"
 									type="number"
 									value="25"
 								/>
+								<div class="input-group-addon input-sm">PPI</div>
 							</div>
-							
+
 							<a
 								href="#"
 								class="btn btn-sm"
@@ -219,7 +222,7 @@
 								data-target="#canvas-scale-modal"
 							>
 								<span
-									class="glyphicon glyphicon-exclamation-sign"
+									class="glyphicon glyphicon-info-sign"
 									aria-hidden="true"
 								></span>
 							</a>
@@ -287,15 +290,18 @@
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
-							
-							<h4 class="modal-title">Canvas Scale</h4>
+
+							<h4 class="modal-title">Adjust screen resolution</h4>
 						</div>
 
 						<div class="modal-body">
 							<p>
-								The canvas scale is the number of pixels on the canvas that equal 1
-								inch. Increasing the value will increase the size of everything on
-								the canvas equally, but your layout will need some correcting.
+								Enter your <a href="http://whatismyscreenresolution.net/" target="_blank">screen resolution</a> to more accurately scale your layout. 
+							</p>
+							<p>
+								<strong>Note:</strong> Modifying this will change the appearance and scale of 
+								all of the components (pedals, pedalboards, etc.) on your canvas. Therefore,
+								you may need to adjust your layout accordingly.
 							</p>
 						</div>
 
