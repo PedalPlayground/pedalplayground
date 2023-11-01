@@ -778,6 +778,13 @@
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Dynaflanger Model 213",
+		"Width": 2.78,
+		"Height": 4.7,
+		"Image": "alexander-dynaflanger-model-213.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "F13 Flanger",
 		"Width": 2.78,
 		"Height": 4.7,
@@ -13574,6 +13581,13 @@
 	},
 	{
 		"Brand": "Flower Pedals",
+		"Name": "Lupine (Dual)",
+		"Width": 4.85,
+		"Height": 2.74,
+		"Image": "flower-pedals-lupine-dual.png"
+	},
+	{
+		"Brand": "Flower Pedals",
 		"Name": "Poppy",
 		"Width": 1.75,
 		"Height": 3.62,
@@ -16574,6 +16588,13 @@
 		"Width": 3.5,
 		"Height": 4.78,
 		"Image": "hello-sailor-effects-rangemaster.png"
+	},
+	{
+		"Brand": "Henretta",
+		"Name": "Orange Whip",
+		"Width": 2.38,
+		"Height": 2,
+		"Image": "henretta-orange-whip.png"
 	},
 	{
 		"Brand": "Hilbish Designs",
@@ -19839,6 +19860,13 @@
 	},
 	{
 		"Brand": "Kasleder FX",
+		"Name": "Pelion",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-pelion.png"
+	},
+	{
+		"Brand": "Kasleder FX",
 		"Name": "Pipergate",
 		"Width": 4.7,
 		"Height": 3.89,
@@ -22064,6 +22092,13 @@
 		"Image": "lovepedal-kalamazoo-gold.png"
 	},
 	{
+		"Brand":"Lovepedal",
+		"Name":"Rubber Chicken",
+		"Width":2.59,
+		"Height":4.37,
+		"Image":"lovepedal-rubberchicken.png"
+	},
+	{
 		"Brand": "Lovepedal",
 		"Name": "Tchula",
 		"Width": 4.6,
@@ -23035,6 +23070,13 @@
 		"Width": 2.87,
 		"Height": 4.94,
 		"Image": "matthews-astronomer-v2.png"
+	},
+	{
+		"Brand": "Matthews Effects",
+		"Name": "The Botanist",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "matthews-botanist.png"
 	},
 	{
 		"Brand": "Matthews Effects",
@@ -28694,6 +28736,13 @@
 	},
 	{
 		"Brand": "Pedal Pawn",
+		"Name": "Bluesprint",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "pedal-pawn-bluesprint.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
 		"Name": "Chicken Quiff",
 		"Width": 2.76,
 		"Height": 4.5,
@@ -28719,6 +28768,13 @@
 		"Width": 7.28,
 		"Height": 4.69,
 		"Image": "pedal-pawn-gypsy-vibe.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
+		"Name": "Gypsy Vibe V2",
+		"Width": 7.28,
+		"Height": 4.82,
+		"Image": "pedal-pawn-gypsy-vibe-v2.png"
 	},
 	{
 		"Brand": "Pedal Pawn",
@@ -33815,6 +33871,14 @@
 		"Width": 4.6,
 		"Height": 3.62,
 		"Image": "taylor-a-b-both-box.png"
+	},
+
+	{
+		"Brand": "TC Electronic",
+		"Name": "2290 P Dynamic Digital Delay",
+		"Width": 8.8,
+		"Height": 5.4,
+		"Image": "tc-2290p.png"
 	},
 	{
 		"Brand": "TC Electronic",
