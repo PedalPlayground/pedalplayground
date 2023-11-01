@@ -13129,7 +13129,7 @@
 		"Name": "Waylon Jennings Phaser",
 		"Width": 2.44,
 		"Height": 4.55,
-		"Image": "fender-waylon-jennings-phaser.png"
+		"Image": "fender-waylon-jennings-phase.png"
 	},
 	{
 		"Brand": "Fire Custom",
@@ -34719,6 +34719,13 @@
 		"Width": 2.6,
 		"Height": 5.07,
 		"Image": "tsoj-son-of-ben.png"
+	},
+	{
+		"Brand": "Thermion",
+		"Name": "Freeway",
+		"Width": 6.39,
+		"Height": 5.26,
+		"Image": "thermion-freeway.png"
 	},
 	{
 		"Brand": "Third Man",
