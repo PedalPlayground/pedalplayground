@@ -36780,6 +36780,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Canvas Tuner",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "walrus-canvas-tuner.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Contraband",
 		"Width": 2.7,
 		"Height": 4.5,
