@@ -182,6 +182,34 @@
 		"Image": "donner-db-3.png"
 	},
 	{
+		"Brand": "D’Addario",
+		"Name": "XPND 1",
+		"Width": 14,
+		"Height": 6.03,
+		"Image": "daddario-xpnd-1.png"
+	},
+	{
+		"Brand": "D’Addario",
+		"Name": "XPND 1 (Extension)",
+		"Width": 10.75,
+		"Height": 5.5,
+		"Image": "daddario-xpnd-1-extension.png"
+	},
+	{
+		"Brand": "D’Addario",
+		"Name": "XPND 2",
+		"Width": 17.25,
+		"Height": 12.98,
+		"Image": "daddario-xpnd-2.png"
+	},
+	{
+		"Brand": "D’Addario",
+		"Name": "XPND 2 (Extension)",
+		"Width": 14.5,
+		"Height": 12.44,
+		"Image": "daddario-xpnd-2-extension.png"
+	},
+	{
 		"Brand": "Emerson Custom",
 		"Name": "18x12",
 		"Width": 19.25,
@@ -334,6 +362,27 @@
 		"Width": 24,
 		"Height": 14.5,
 		"Image": "mono-medium-pedalboard.png"
+	},
+	{
+		"Brand": "Mono",
+		"Name": "Rail (Large)",
+		"Width": 32,
+		"Height": 16.7,
+		"Image": "mono-rail-large.png"
+	},
+	{
+		"Brand": "Mono",
+		"Name": "Rail (Medium)",
+		"Width": 24,
+		"Height": 14.4,
+		"Image": "mono-rail-medium.png"
+	},
+	{
+		"Brand": "Mono",
+		"Name": "Rail (Small)",
+		"Width": 18,
+		"Height": 13.3,
+		"Image": "mono-rail-small.png"
 	},
 	{
 		"Brand": "Mono",
@@ -575,9 +624,9 @@
 	},
 	{
 		"Brand": "Palmer",
-		"Name": "Pedalbay 60 ",
-		"Width": 23.8189,
-		"Height": 12.00787,
+		"Name": "Pedalbay 60",
+		"Width": 23.82,
+		"Height": 12.01,
 		"Image": "palmer-pedalbay-60.png"
 	},
 	{
@@ -624,6 +673,13 @@
 	},
 	{
 		"Brand": "Pedaltrain",
+		"Name": "Grande",
+		"Width": 42,
+		"Height": 16,
+		"Image": "pedaltrain-grande.png"
+	},
+	{
+		"Brand": "Pedaltrain",
 		"Name": "JR MAX",
 		"Width": 28,
 		"Height": 12.5,
@@ -655,7 +711,7 @@
 		"Name": "Metro MAX",
 		"Width": 28,
 		"Height": 8,
-		"Image": "pedaltrain-metro16.png"
+		"Image": "pedaltrain-metro-max.png"
 	},
 	{
 		"Brand": "Pedaltrain",
@@ -719,6 +775,20 @@
 		"Width": 42,
 		"Height": 14.5,
 		"Image": "pedaltrain-terra42.png"
+	},
+	{
+		"Brand": "Pedaltrain",
+		"Name": "XD-18",
+		"Width": 18,
+		"Height": 17.5,
+		"Image": "pedaltrain-xd-18.png"
+	},
+	{
+		"Brand": "Pedaltrain",
+		"Name": "XD-24",
+		"Width": 24,
+		"Height": 17.5,
+		"Image": "pedaltrain-xd-24.png"
 	},
 	{
 		"Brand": "Pivotal",
@@ -814,7 +884,7 @@
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Duo 2.1",
-		"Width": 18.125,
+		"Width": 18.13,
 		"Height": 5.75,
 		"Image": "rockboard-duo-21.png"
 	},
@@ -868,6 +938,13 @@
 		"Image": "rockboard-tres-32.png"
 	},
 	{
+		"Brand": "Rockboard by Warwick",
+		"Name": "Tres 3.3",
+		"Width": 28.42,
+		"Height": 9.3,
+		"Image": "rockboard-tres-33.png"
+	},
+	{
 		"Brand": "Rug",
 		"Name": "1",
 		"Width": 34,
@@ -901,6 +978,13 @@
 		"Width": 17.63,
 		"Height": 12.33,
 		"Image": "skb-injection-molded.png"
+	},
+	{
+		"Brand": "Stompbox EX",
+		"Name": "Portable 20",
+		"Width": 20,
+		"Height": 7.25,
+		"Image": "stompbox-ex-portable-20.png"
 	},
 	{
 		"Brand": "Templeboards",
@@ -1156,23 +1240,30 @@
 	},
 	{
 		"Brand": "Voodoo Lab",
-		"Name": "Dingbat Large",
+		"Name": "Dingbat (Large)",
 		"Width": 25,
 		"Height": 15.75,
 		"Image": "voodoo-large.png"
 	},
 	{
 		"Brand": "Voodoo Lab",
-		"Name": "Dingbat Medium",
+		"Name": "Dingbat (Medium)",
 		"Width": 22,
 		"Height": 13.5,
 		"Image": "voodoo-medium.png"
 	},
 	{
 		"Brand": "Voodoo Lab",
-		"Name": "Dingbat Small",
+		"Name": "Dingbat (Small)",
 		"Width": 18,
 		"Height": 7.75,
 		"Image": "voodoo-small.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "Dingbat (Tiny)",
+		"Width": 14.5,
+		"Height": 6.4,
+		"Image": "voodoo-tiny.png"
 	}
 ]
