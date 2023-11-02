@@ -10514,6 +10514,13 @@
 		"Image": "earthquaker-zap-machine-v2.png"
 	},
 	{
+		"Brand": "Earthquaker",
+		"Name": "Zoar",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-zoar.png"
+	},
+	{
 		"Brand": "EBS",
 		"Name": "BassIQ",
 		"Width": 2.8,
