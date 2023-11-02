@@ -8009,6 +8009,13 @@
 	},
 	{
 		"Brand": "Darkglass",
+		"Name": "NSG",
+		"Width": 1.9685,
+		"Height": 3.93701,
+		"Image": "darkglass-nsg.png"
+	},
+	{
+		"Brand": "Darkglass",
 		"Name": "Super Symmetry",
 		"Width": 3.72,
 		"Height": 4.94,
