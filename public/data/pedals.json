@@ -35380,6 +35380,13 @@
 	},
 	{
 		"Brand": "TWA",
+		"Name": "Octoverdrive",
+		"Width": 3.97,
+		"Height": 4.7,
+		"Image": "twa-octoverdrive.png"
+	},
+	{
+		"Brand": "TWA",
 		"Name": "SH9",
 		"Width": 2.89,
 		"Height": 4.5,
@@ -36784,6 +36791,13 @@
 		"Width": 2.65,
 		"Height": 4.93,
 		"Image": "walrus-canvasstereo.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Canvas Tuner",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "walrus-canvas-tuner.png"
 	},
 	{
 		"Brand": "Walrus Audio",
