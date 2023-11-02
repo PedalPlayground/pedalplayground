@@ -31910,252 +31910,252 @@
 		"Name": "Collider",
 		"Width": 4.53,
 		"Height": 4.5,
-		"Image": "sa-collider.png"
+		"Image": "source-audio-collider.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "C4 Synth",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sa-c4synth.png"
+		"Image": "source-audio-c4.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Dual Expression Pedal",
 		"Width": 3.96,
 		"Height": 10,
-		"Image": "sourceaudio-dual-expression.png"
+		"Image": "source-audio-dual-expression.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "EQ2",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-eq2.png"
+		"Image": "source-audio-eq2.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Gemini",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-gemini.png"
+		"Image": "source-audio-gemini.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Kingmaker",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-kingmaker.png"
+		"Image": "source-audio-kingmaker.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "LA Lady",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-lalady.png"
+		"Image": "source-audio-la-lady.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Lunar",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-lunar.png"
+		"Image": "source-audio-lunar.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Mercury",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-mercury.png"
+		"Image": "source-audio-mercury.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Nemesis",
 		"Width": 4.53,
 		"Height": 4.5,
-		"Image": "sa-nemesis.png"
+		"Image": "source-audio-nemesis.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Neuro Hub",
 		"Width": 3.8,
 		"Height": 2.1,
-		"Image": "sourceaudio-neurohub.png"
+		"Image": "source-audio-neurohub.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Programmable EQ",
 		"Width": 2.75,
 		"Height": 4.5,
-		"Image": "sourceaudio-eq.png"
+		"Image": "source-audio-eq.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Reflex",
 		"Width": 3.75,
 		"Height": 10.5,
-		"Image": "sourceaudio-reflex.png"
+		"Image": "source-audio-reflex.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soleman MIDI Controller",
 		"Width": 10.5,
 		"Height": 3.75,
-		"Image": "sourceaudio-soleman.png"
+		"Image": "source-audio-soleman.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Dimension Reverb",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-dimreverb.png"
+		"Image": "source-audio-sb2-dimension-reverb.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Manta Bass Filter",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-manta.png"
+		"Image": "source-audio-sb2-manta.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Multiwave Bass Distortion",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-multiwave-bass.png"
+		"Image": "source-audio-sb2-multiwave-bass.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Multiwave Distortion",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-multiwave.png"
+		"Image": "source-audio-sb2-multiwave.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 OFD Guitar microModeler",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-ofd.png"
+		"Image": "source-audio-sb2-ofd.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Orbital Modulator",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-orbital.png"
+		"Image": "source-audio-sb2-orbital.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Stingray Multi-Filter",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-stingray.png"
+		"Image": "source-audio-sb2-stingray.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Bass Envelope Filter",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-bassenv.png"
+		"Image": "source-audio-sb-bass-env.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Classic Distortion",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-classic.png"
+		"Image": "source-audio-sb-classic.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Guitar Envelope Filter",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-guitarenv.png"
+		"Image": "source-audio-sb-guitar-env.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Multiwave Bass Distortion",
 		"Width": 4,
 		"Height": 7,
-		"Image": "sourceaudio-sb-multiwave-bass.png"
+		"Image": "source-audio-sb-multiwave-bass.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Multiwave Distortion",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-multiwave.png"
+		"Image": "source-audio-sb-multiwave.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Tri-Mod Phaser",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-trimod-phaser.png"
+		"Image": "source-audio-sb-tri-mod-phaser.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Tri-Mod Wah",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-trimod-wah.png"
+		"Image": "source-audio-sb-tri-mod-wah.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Spectrum",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sa-spectrum.png"
+		"Image": "source-audio-spectrum.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Tap Tempo Switch",
 		"Width": 2.25,
 		"Height": 2.5,
-		"Image": "sourceaudio-tap.png"
+		"Image": "source-audio-tap.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "True Spring",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-truespring.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Ventris",
-		"Width": 4.53,
-		"Height": 4.5,
-		"Image": "sourceaudio-ventris.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Vertigo",
-		"Width": 2.94,
-		"Height": 4.5,
-		"Image": "sourceaudio-vertigo.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Ultrawave (Guitar)",
-		"Width": 2.94,
-		"Height": 4.5,
-		"Image": "sourceaudio-ultrawave.png"
+		"Image": "source-audio-true-spring.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Ultrawave (Bass)",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-ultrawave-bass.png"
+		"Image": "source-audio-ultrawave-bass.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Ultrawave (Guitar)",
+		"Width": 2.94,
+		"Height": 4.5,
+		"Image": "source-audio-ultrawave.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Ventris",
+		"Width": 4.53,
+		"Height": 4.5,
+		"Image": "source-audio-ventris.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Vertigo",
+		"Width": 2.94,
+		"Height": 4.5,
+		"Image": "source-audio-vertigo.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Zio",
 		"Width": 2.55,
 		"Height": 4.1,
-		"Image": "sourceaudio-zio.png"
+		"Image": "source-audio-zio.png"
 	},
 	{
 		"Brand": "Southampton Pedals",
