@@ -5439,6 +5439,13 @@
 		"Image": "bugera-fsb106a.png"
 	},
 	{
+		"Brand": "BYW",
+		"Name": "Blacky' Blower",
+		"Width": 3.94,
+		"Height": 4.65,
+		"Image": "byw-blacky-blower.png"
+	},
+	{
 		"Brand": "Calico Effects",
 		"Name": "Antlers",
 		"Width": 2.6,
@@ -22533,6 +22540,20 @@
 		"Image": "maestro-titan-boost.png"
 	},
 	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Hulk",
+		"Width": 2.52,
+		"Height": 4.57,
+		"Image": "mantic-conceptual-hulk.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Vitriol",
+		"Width": 3.70,
+		"Height": 4.88,
+		"Image": "mantic-conceptual-vitriol.png"
+	},
+	{
 		"Brand": "Malekko",
 		"Name": "B:Assmaster",
 		"Width": 6,
@@ -35209,6 +35230,13 @@
 		"Width": 4.7,
 		"Height": 3.83,
 		"Image": "tronographic-rusty-box.png"
+	},
+	{
+		"Brand": "Tronographic",
+		"Name": "Rusty Box Limited Grey/Black",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "tronographic-rusty-box-limited-grey-black.png"
 	},
 	{
 		"Brand": "Tru-Fi",
