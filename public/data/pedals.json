@@ -3784,21 +3784,21 @@
 		"Name": "Crooked Axis",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "bluecolander-crooked-axis.png"
+		"Image": "blue-colander-crooked-axis.png"
 	},
 	{
 		"Brand": "Blue Colander",
 		"Name": "FFAS",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "bluecolander-ffas.png"
+		"Image": "blue-colander-ffas.png"
 	},
 	{
 		"Brand": "Blue Colander",
 		"Name": "Fuxi",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "bluecolander-fuxi.png"
+		"Image": "blue-colander-fuxi.png"
 	},
 	{
 		"Brand": "Blue Colander",
@@ -3812,14 +3812,14 @@
 		"Name": "Tibetan Quaalude",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "bluecolander-tibetan-quaalude.png"
+		"Image": "blue-colander-tibetan-quaalude.png"
 	},
 	{
 		"Brand": "Blue Colander",
 		"Name": "Tremond",
 		"Width": 3.7,
 		"Height": 4.85,
-		"Image": "bluecolander-tremond.png"
+		"Image": "blue-colander-tremond.png"
 	},
 	{
 		"Brand": "BluGuitar",
@@ -8009,6 +8009,13 @@
 	},
 	{
 		"Brand": "Darkglass",
+		"Name": "NSG",
+		"Width": 1.9685,
+		"Height": 3.93701,
+		"Image": "darkglass-nsg.png"
+	},
+	{
+		"Brand": "Darkglass",
 		"Name": "Super Symmetry",
 		"Width": 3.72,
 		"Height": 4.94,
@@ -8723,132 +8730,6 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "DOD Carcosa",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-carcosa.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Chthonic Fuzz",
-		"Width": 3,
-		"Height": 4.88,
-		"Image": "digitech-chthonic-fuzz.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Compressor 280",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-280.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Envelope Filter 440",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-440.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX50 Overdrive Preamp",
-		"Width": 3.3,
-		"Height": 5.05,
-		"Image": "dod-fx50.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX63 Deep Freeze",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx63.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX64 Ice Box Stereo Chorus",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx64.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX65 Stereo Chorus",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx65.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX69 Grunge",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx69.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD FX75-V Stereo Flanger",
-		"Width": 3.3,
-		"Height": 5.13,
-		"Image": "dod-fx75b.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Gonkulator Ringmod",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-gonkulator.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Gunslinger Mosfet Distortion",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-gunslinger.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Looking Glass",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-looking-glass.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Meatbox Subsynth",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-meatbox.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Mini Expression",
-		"Width": 3,
-		"Height": 5,
-		"Image": "dod-mini-expression.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Overdrive Preamp 250",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-250.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Phasor 201",
-		"Width": 3.05,
-		"Height": 4.88,
-		"Image": "digitech-201.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "DOD Rubberneck",
-		"Width": 5,
-		"Height": 4.69,
-		"Image": "dod-rubberneck.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "FreqOut",
 		"Width": 2.875,
 		"Height": 4.75,
@@ -9205,6 +9086,125 @@
 		"Image": "dod-410.png"
 	},
 	{
+		"Brand": "DOD",
+		"Name": "Carcosa",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-carcosa.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Compressor 280",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-280.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Chthonic Fuzz",
+		"Width": 3,
+		"Height": 4.88,
+		"Image": "dod-chthonic.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Envelope Filter 440",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-440.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Deep Freeze FX63",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx63.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Gonkulator Ringmod",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-gonkulator.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Grunge FX69",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx69.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Gunslinger Mosfet Distortion",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-gunslinger.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Ice Box Stereo Chorus FX64",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx64.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Looking Glass",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-looking-glass.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Meatbox Subsynth",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-meatbox.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Mini Expression",
+		"Width": 3,
+		"Height": 5,
+		"Image": "dod-mini-expression.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Overdrive Preamp 250",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-250.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Phasor 201",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-201.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Rubberneck",
+		"Width": 5,
+		"Height": 4.69,
+		"Image": "dod-rubberneck.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Stereo Chorus FX65",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx65.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Stereo Flanger FX75-B",
+		"Width": 3.3,
+		"Height": 5.13,
+		"Image": "dod-fx75b.png"
+	},
+	{
 		"Brand": "Does It Doom",
 		"Name": "Aghartha",
 		"Width": 2.6,
@@ -9241,10 +9241,59 @@
 	},
 	{
 		"Brand": "Donner",
+		"Name": "Circle Looper",
+		"Width": 3.89764,
+		"Height": 4.76378,
+		"Image": "donner-circle-looper.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Dark Mouse",
+		"Width": 1.62,
+		"Height": 3.74,
+		"Image": "donner-dark-mouse.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Dumbal Drive",
+		"Width": 2.51969,
+		"Height": 4.4685039,
+		"Image": "donner-dumbal-drive.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Extreme Driver",
+		"Width": 1.62,
+		"Height": 3.74,
+		"Image": "donner-extreme-driver.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Golden Tremolo",
+		"Width": 1.62,
+		"Height": 3.74,
+		"Image": "donner-golden-tremolo.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Island Delay",
+		"Width": 2.51969,
+		"Height": 4.4685039,
+		"Image": "donner-island-delay.png"
+	},
+	{
+		"Brand": "Donner",
 		"Name": "Jet Convolution",
 		"Width": 1.62,
 		"Height": 3.74,
 		"Image": "donner-jet-convolution.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Morpher",
+		"Width": 1.62,
+		"Height": 3.74,
+		"Image": "donner-morpher.png"
 	},
 	{
 		"Brand": "Donner",
@@ -9273,6 +9322,13 @@
 		"Width": 1.62,
 		"Height": 3.74,
 		"Image": "donner-tutti.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Vintaverb",
+		"Width": 2.51969,
+		"Height": 4.4685039,
+		"Image": "donner-vintaverb.png"
 	},
 	{
 		"Brand": "Donner",
@@ -9874,7 +9930,7 @@
 		"Name": "Afterneath V3 (Pastel Purple)",
 		"Width": 2.7,
 		"Height": 4.94,
-		"Image": "earthquaker-afterneath-v3-pastelpurple.png"
+		"Image": "earthquaker-afterneath-v3-pastel-purple.png"
 	},
 	{
 		"Brand": "Earthquaker",
@@ -15173,7 +15229,7 @@
 		"Name": "Jugendstil",
 		"Width": 2.5,
 		"Height": 4.8,
-		"Image": "godcity-jugendstil.png"
+		"Image": "god-city-jugendstil.png"
 	},
 	{
 		"Brand": "Gokko",
@@ -15362,7 +15418,7 @@
 		"Name": "Dual Pre",
 		"Width": 11.59,
 		"Height": 5.51,
-		"Image": "grbass-dual-pre.png"
+		"Image": "gr-bass-dual-pre.png"
 	},
 	{
 		"Brand": "Grace Design",
@@ -16538,14 +16594,14 @@
 		"Name": "Berkeley",
 		"Width": 3.7,
 		"Height": 4.94,
-		"Image": "horrothiafx-berkeley.png"
+		"Image": "horrothia-fx-berkeley.png"
 	},
 	{
 		"Brand": "Horrothia FX",
 		"Name": "Teeth",
 		"Width": 3.7,
 		"Height": 4.94,
-		"Image": "horrothiafx-teeth.png"
+		"Image": "horrothia-fx-teeth.png"
 	},
 	{
 		"Brand": "Horrothia FX",
@@ -16559,14 +16615,14 @@
 		"Name": "Triage",
 		"Width": 3.7,
 		"Height": 4.94,
-		"Image": "horrothiafx-triage.png"
+		"Image": "horrothia-fx-triage.png"
 	},
 	{
 		"Brand": "Horrothia FX",
 		"Name": "Type One",
 		"Width": 3.7,
 		"Height": 4.94,
-		"Image": "horrothiafx-type-one.png"
+		"Image": "horrothia-fx-type-one.png"
 	},
 	{
 		"Brand": "Horizon Devices",
@@ -20479,14 +20535,14 @@
 		"Name": "Quadruple I/O",
 		"Width": 6.66,
 		"Height": 2.56,
-		"Image": "kgmidi-quadruple.png"
+		"Image": "kg-midi-quadruple.png"
 	},
 	{
 		"Brand": "KG MIDI Controllers",
 		"Name": "Triple I/O",
 		"Width": 6.66,
 		"Height": 2.56,
-		"Image": "kgmidi-triple.png"
+		"Image": "kg-midi-triple.png"
 	},
 	{
 		"Brand": "Khan",
@@ -20711,6 +20767,13 @@
 		"Width": 3.88,
 		"Height": 4.85,
 		"Image": "kingsley-page.png"
+	},
+	{
+		"Brand": "Kingsley",
+		"Name": "Page TS",
+		"Width": 3.875,
+		"Height": 4.75,
+		"Image": "kingsley-page-ts.png"
 	},
 	{
 		"Brand": "Kingsley",
@@ -23237,7 +23300,7 @@
 		"Name": "Rosette DI-Preamp",
 		"Width": 8.15,
 		"Height": 5.67,
-		"Image": "mesaboogie-rosette-di-preamp.png"
+		"Image": "mesa-boogie-rosette-di-preamp.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
@@ -23258,7 +23321,7 @@
 		"Name": "Switch-Track",
 		"Width": 4.75,
 		"Height": 3.82,
-		"Image": "mesaboogie-switch-track.png"
+		"Image": "mesa-boogie-switch-track.png"
 	},
 	{
 		"Brand": "Mesa Boogie",
@@ -27325,7 +27388,7 @@
 		"Name": "EQ + Buffer",
 		"Width": 2.69,
 		"Height": 4.5,
-		"Image": "obne-eqbuffer.png"
+		"Image": "obne-eq-buffer.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -27367,28 +27430,28 @@
 		"Name": "Expression Ramper (Neon Blue)",
 		"Width": 1.69,
 		"Height": 3.88,
-		"Image": "obne-ramper-neonblue.png"
+		"Image": "obne-ramper-neon-blue.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Expression Ramper (Neon Green)",
 		"Width": 1.69,
 		"Height": 3.88,
-		"Image": "obne-ramper-neongreen.png"
+		"Image": "obne-ramper-neon-green.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Expression Ramper (Neon Pink)",
 		"Width": 1.69,
 		"Height": 3.88,
-		"Image": "obne-ramper-neonpink.png"
+		"Image": "obne-ramper-neon-pink.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Expression Ramper (Screen Violence)",
 		"Width": 1.69,
 		"Height": 3.88,
-		"Image": "obne-ramper-screenviolence.png"
+		"Image": "obne-ramper-screen-violence.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -28725,21 +28788,21 @@
 		"Name": "Disnortion Pro Micro",
 		"Width": 1.75,
 		"Height": 3.75,
-		"Image": "pigtronix-disnortionpromicro.png"
+		"Image": "pigtronix-disnortion-pro-micro.png"
 	},
 	{
 		"Brand": "Pigtronix",
 		"Name": "Echolution 2 Filter Pro",
 		"Width": 5.7,
 		"Height": 4.7,
-		"Image": "pigtronix-filterpro.png"
+		"Image": "pigtronix-echolution-2-filter-pro.png"
 	},
 	{
 		"Brand": "Pigtronix",
 		"Name": "Echolution 2 Ultra Pro",
 		"Width": 5.7,
 		"Height": 4.7,
-		"Image": "pigtronix-echolution2ultrapro.png"
+		"Image": "pigtronix-echolution-2-ultra-pro.png"
 	},
 	{
 		"Brand": "Pigtronix",
@@ -29128,6 +29191,13 @@
 	},
 	{
 		"Brand": "Pladask Elektrisk",
+		"Name": "Falma V2",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "pladask-falma-v2.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
 		"Name": "Feber",
 		"Width": 3.7,
 		"Height": 4.86,
@@ -29348,14 +29418,14 @@
 		"Name": "Midnight Vibe",
 		"Width": 8.38,
 		"Height": 5.04,
-		"Image": "rweaverfx-midnight-vibe.png"
+		"Image": "r-weaver-fx-midnight-vibe.png"
 	},
 	{
 		"Brand": "R Weaver FX",
 		"Name": "Violet Vibe",
 		"Width": 8.38,
 		"Height": 5.04,
-		"Image": "rweaverfx-violet-vibe.png"
+		"Image": "r-weaver-fx-violet-vibe.png"
 	},
 	{
 		"Brand": "Radial Engineering",
@@ -29880,7 +29950,7 @@
 		"Name": "Deluxe Moon Phaser",
 		"Width": 5,
 		"Height": 3.77,
-		"Image": "redwitch-dlxmoonphaser.png"
+		"Image": "red-witch-dlx-moon-phaser.png"
 	},
 	{
 		"Brand": "Red Witch",
@@ -30055,56 +30125,56 @@
 		"Name": "Analog Delay",
 		"Width": 4.7,
 		"Height": 3.81,
-		"Image": "retrosonic-analog-delay.png"
+		"Image": "retro-sonic-analog-delay.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Chorus",
 		"Width": 4.7,
 		"Height": 3.81,
-		"Image": "retrosonic-chorus.png"
+		"Image": "retro-sonic-chorus.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Compressor",
 		"Width": 2.77,
 		"Height": 47.5,
-		"Image": "retrosonic-compressor.png"
+		"Image": "retro-sonic-compressor.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Distortion",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-distortion.png"
+		"Image": "retro-sonic-distortion.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Flanger",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-flanger.png"
+		"Image": "retro-sonic-flanger.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Overdrive",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-overdrive.png"
+		"Image": "retro-sonic-overdrive.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Phaser",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-phaser.png"
+		"Image": "retro-sonic-phaser.png"
 	},
 	{
 		"Brand": "Retro-Sonic",
 		"Name": "Preamp",
 		"Width": 2.77,
 		"Height": 4.5,
-		"Image": "retrosonic-preamp.png"
+		"Image": "retro-sonic-preamp.png"
 	},
 	{
 		"Brand": "Reuss",
@@ -30398,28 +30468,28 @@
 		"Name": "SPD::ONE Electro",
 		"Width": 5.51,
 		"Height": 6.3,
-		"Image": "roland_spd_one_electro.png"
+		"Image": "roland-spd-one-electro.png"
 	},
 	{
 		"Brand": "Roland",
 		"Name": "SPD::ONE Kick",
 		"Width": 5.51,
 		"Height": 6.3,
-		"Image": "roland_spd_one_kick.png"
+		"Image": "roland-spd-one-kick.png"
 	},
 	{
 		"Brand": "Roland",
 		"Name": "SPD::ONE Percussion",
 		"Width": 5.51,
 		"Height": 6.3,
-		"Image": "roland_spd_one_percussion.png"
+		"Image": "roland-spd-one-percussion.png"
 	},
 	{
 		"Brand": "Roland",
 		"Name": "SPD::ONE Wav",
 		"Width": 5.51,
 		"Height": 6.3,
-		"Image": "roland_spd_one_wav.png"
+		"Image": "roland-spd-one-wav.png"
 	},
 	{
 		"Brand": "Rolls",
@@ -31822,6 +31892,13 @@
 		"Image": "soundlad-scran.png"
 	},
 	{
+		"Brand": "Sonuus",
+		"Name": "Voluum",
+		"Width": 7.2,
+		"Height": 8.3,
+		"Image": "sonuus-voluum.png"
+	},
+	{
 		"Brand": "Sound Sculpture",
 		"Name": "Switchblade 8F",
 		"Width": 9.25,
@@ -31847,252 +31924,252 @@
 		"Name": "Collider",
 		"Width": 4.53,
 		"Height": 4.5,
-		"Image": "sa-collider.png"
+		"Image": "source-audio-collider.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "C4 Synth",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sa-c4synth.png"
+		"Image": "source-audio-c4.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Dual Expression Pedal",
 		"Width": 3.96,
 		"Height": 10,
-		"Image": "sourceaudio-dual-expression.png"
+		"Image": "source-audio-dual-expression.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "EQ2",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-eq2.png"
+		"Image": "source-audio-eq2.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Gemini",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-gemini.png"
+		"Image": "source-audio-gemini.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Kingmaker",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-kingmaker.png"
+		"Image": "source-audio-kingmaker.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "LA Lady",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-lalady.png"
+		"Image": "source-audio-la-lady.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Lunar",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-lunar.png"
+		"Image": "source-audio-lunar.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Mercury",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-mercury.png"
+		"Image": "source-audio-mercury.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Nemesis",
 		"Width": 4.53,
 		"Height": 4.5,
-		"Image": "sa-nemesis.png"
+		"Image": "source-audio-nemesis.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Neuro Hub",
 		"Width": 3.8,
 		"Height": 2.1,
-		"Image": "sourceaudio-neurohub.png"
+		"Image": "source-audio-neurohub.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Programmable EQ",
 		"Width": 2.75,
 		"Height": 4.5,
-		"Image": "sourceaudio-eq.png"
+		"Image": "source-audio-eq.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Reflex",
 		"Width": 3.75,
 		"Height": 10.5,
-		"Image": "sourceaudio-reflex.png"
+		"Image": "source-audio-reflex.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soleman MIDI Controller",
 		"Width": 10.5,
 		"Height": 3.75,
-		"Image": "sourceaudio-soleman.png"
+		"Image": "source-audio-soleman.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Dimension Reverb",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-dimreverb.png"
+		"Image": "source-audio-sb2-dimension-reverb.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Manta Bass Filter",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-manta.png"
+		"Image": "source-audio-sb2-manta.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Multiwave Bass Distortion",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-multiwave-bass.png"
+		"Image": "source-audio-sb2-multiwave-bass.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Multiwave Distortion",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-multiwave.png"
+		"Image": "source-audio-sb2-multiwave.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 OFD Guitar microModeler",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-ofd.png"
+		"Image": "source-audio-sb2-ofd.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Orbital Modulator",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-orbital.png"
+		"Image": "source-audio-sb2-orbital.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Stingray Multi-Filter",
 		"Width": 4.5,
 		"Height": 4.5,
-		"Image": "sourceaudio-sb2-stingray.png"
+		"Image": "source-audio-sb2-stingray.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Bass Envelope Filter",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-bassenv.png"
+		"Image": "source-audio-sb-bass-env.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Classic Distortion",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-classic.png"
+		"Image": "source-audio-sb-classic.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Guitar Envelope Filter",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-guitarenv.png"
+		"Image": "source-audio-sb-guitar-env.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Multiwave Bass Distortion",
 		"Width": 4,
 		"Height": 7,
-		"Image": "sourceaudio-sb-multiwave-bass.png"
+		"Image": "source-audio-sb-multiwave-bass.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Multiwave Distortion",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-multiwave.png"
+		"Image": "source-audio-sb-multiwave.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Tri-Mod Phaser",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-trimod-phaser.png"
+		"Image": "source-audio-sb-tri-mod-phaser.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Tri-Mod Wah",
 		"Width": 4,
 		"Height": 7	,
-		"Image": "sourceaudio-sb-trimod-wah.png"
+		"Image": "source-audio-sb-tri-mod-wah.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Spectrum",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sa-spectrum.png"
+		"Image": "source-audio-spectrum.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Tap Tempo Switch",
 		"Width": 2.25,
 		"Height": 2.5,
-		"Image": "sourceaudio-tap.png"
+		"Image": "source-audio-tap.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "True Spring",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-truespring.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Ventris",
-		"Width": 4.53,
-		"Height": 4.5,
-		"Image": "sourceaudio-ventris.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Vertigo",
-		"Width": 2.94,
-		"Height": 4.5,
-		"Image": "sourceaudio-vertigo.png"
-	},
-	{
-		"Brand": "Source Audio",
-		"Name": "Ultrawave (Guitar)",
-		"Width": 2.94,
-		"Height": 4.5,
-		"Image": "sourceaudio-ultrawave.png"
+		"Image": "source-audio-true-spring.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Ultrawave (Bass)",
 		"Width": 2.94,
 		"Height": 4.5,
-		"Image": "sourceaudio-ultrawave-bass.png"
+		"Image": "source-audio-ultrawave-bass.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Ultrawave (Guitar)",
+		"Width": 2.94,
+		"Height": 4.5,
+		"Image": "source-audio-ultrawave.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Ventris",
+		"Width": 4.53,
+		"Height": 4.5,
+		"Image": "source-audio-ventris.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Vertigo",
+		"Width": 2.94,
+		"Height": 4.5,
+		"Image": "source-audio-vertigo.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Zio",
 		"Width": 2.55,
 		"Height": 4.1,
-		"Image": "sourceaudio-zio.png"
+		"Image": "source-audio-zio.png"
 	},
 	{
 		"Brand": "Southampton Pedals",
