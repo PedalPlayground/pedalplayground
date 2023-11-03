@@ -1,26 +1,5 @@
 [
 	{
-		"Brand": "Pedaltank",
-		"Name": "Bass Booster",
-		"Width": 2.73,
-		"Height": 4.17,
-		"Image": "pedaltank-bass-booster.png"
-	},
-	{
-		"Brand": "Greenhouse Effects",
-		"Name": "Sonic Orb Phaser",
-		"Width": 2.38,
-		"Height": 4.5,
-		"Image": "greenhouse-sonic-orb.png"
-	},
-	{
-		"Brand": "Xvive",
-		"Name": "Echoman",
-		"Width": 1.74,
-		"Height": 3.70,
-		"Image": "xvive-echoman.png"
-	},
-	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV",
 		"Width": 3.7,
@@ -1100,17 +1079,17 @@
 	},
 	{
 		"Brand": "AllPedal",
-		"Name": "Slamurai",
-		"Width": 2.6,
-		"Height": 5.09,
-		"Image": "allpedal-slamurai.png"
-	},
-	{
-		"Brand": "AllPedal",
 		"Name": "Slamurai (Parlor Edition)",
 		"Width": 2.6,
 		"Height": 5.09,
 		"Image": "allpedal-slamurai-parlor.png"
+	},
+	{
+		"Brand": "AllPedal",
+		"Name": "Slamurai",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "allpedal-slamurai.png"
 	},
 	{
 		"Brand": "Altoids",
@@ -5877,7 +5856,7 @@
 		"Name": "CSIDMAN",
 		"Width": 2.7,
 		"Height": 4.5,
-		"Image": "catalinbread-discman.png"
+		"Image": "catalinbread-csidman.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -6626,14 +6605,14 @@
 		"Name": "Octavian",
 		"Width": 3.11,
 		"Height": 5.276,
-		"Image": "chicagoiron-octavian.png"
+		"Image": "chicago-iron-octavian.png"
 	},
 	{
 		"Brand": "Chicago Iron",
 		"Name": "Octavian Plus",
 		"Width": 3.11,
 		"Height": 5.276,
-		"Image": "chicagoiron-octavian-plus.png"
+		"Image": "chicago-iron-octavian-plus.png"
 	},
 	{
 		"Brand": "Cioks",
@@ -15531,6 +15510,13 @@
 		"Width": 2.38,
 		"Height": 4.5,
 		"Image": "greenhouse-retro-sky.png"
+	},
+	{
+		"Brand": "Greenhouse Effects",
+		"Name": "Sonic Orb Phaser",
+		"Width": 2.38,
+		"Height": 4.5,
+		"Image": "greenhouse-sonic-orb.png"
 	},
 	{
 		"Brand": "Greenhouse Effects",
@@ -28707,6 +28693,13 @@
 		"Image": "pedal-pawn-texas-twang.png"
 	},
 	{
+		"Brand": "Pedaltank",
+		"Name": "Bass Booster",
+		"Width": 2.73,
+		"Height": 4.17,
+		"Image": "pedaltank-bass-booster.png"
+	},
+	{
 		"Brand": "Pedaltrain",
 		"Name": "Daylight",
 		"Width": 2.6,
@@ -30541,7 +30534,7 @@
 		"Image": "rodenberg-tb-drive.png"
 	},
 	{
-		"Brand": "Roger Lin Design",
+		"Brand": "Roger Linn Design",
 		"Name": "AdrenaLinn III",
 		"Width": 7.5,
 		"Height": 4.75,
@@ -38814,6 +38807,13 @@
 		"Width": 2.6,
 		"Height": 5.03,
 		"Image": "xts-winford.png"
+	},
+	{
+		"Brand": "Xvive",
+		"Name": "Echoman",
+		"Width": 1.74,
+		"Height": 3.70,
+		"Image": "xvive-echoman.png"
 	},
 	{
 		"Brand": "Xvive",
