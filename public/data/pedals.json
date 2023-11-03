@@ -4,84 +4,84 @@
 		"Name": "DRV",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions.png"
+		"Image": "1981-inventions-drv.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Alt Universe)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-alt-uni.png"
+		"Image": "1981-inventions-drv-alt-universe.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Blackout)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-black.png"
+		"Image": "1981-inventions-drv-blackout.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Fractured)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-fractured.png"
+		"Image": "1981-inventions-drv-fractured.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Hyperfade)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-hyperfade.png"
+		"Image": "1981-inventions-drv-hyperfade.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Outline)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-drv-outline.png"
+		"Image": "1981-inventions-drv-outline.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Pink)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-drv-pink.png"
+		"Image": "1981-inventions-drv-pink.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Seafoam Green)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-sfg.png"
+		"Image": "1981-inventions-drv-seafoam-green.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Sky Blue Sky)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-inventions-sky-blue.png"
+		"Image": "1981-inventions-drv-sky-blue-sky.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (Teal)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-drv-teal.png"
+		"Image": "1981-inventions-drv-teal.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV (White No3)",
 		"Width": 3.7,
 		"Height": 4.58,
-		"Image": "1981-drv-whiteno3.png"
+		"Image": "1981-inventions-drv-white-no3.png"
 	},
 	{
 		"Brand": "1981 Inventions",
 		"Name": "LVL",
 		"Width": 2.71,
 		"Height": 4.58,
-		"Image": "1981-lvl.png"
+		"Image": "1981-inventions-lvl.png"
 	},
 	{
 		"Brand": "29 Pedals",
@@ -2136,14 +2136,14 @@
 	},
 	{
 		"Brand": "Apple",
-		"Name": "Macbook Pro 14",
+		"Name": "MacBook Pro 14",
 		"Width": 15.15,
 		"Height": 8.99,
 		"Image": "apple-macbook-pro-14.png"
 	},
 	{
 		"Brand": "Apple",
-		"Name": "Macbook Pro 16",
+		"Name": "MacBook Pro 16",
 		"Width": 16.77,
 		"Height": 10.03,
 		"Image": "apple-macbook-pro-16.png"
@@ -2412,7 +2412,7 @@
 		"Name": "Amplifire 12",
 		"Width": 16.75,
 		"Height": 6.25,
-		"Image": "atomic-amplifire12.png"
+		"Image": "atomic-amplifire-12.png"
 	},
 	{
 		"Brand": "Audio Kitchen",
