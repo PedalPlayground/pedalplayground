@@ -1,15 +1,19 @@
 // Variables used in project
 @import "variables";
 
-// Vendor
+// // Vendor
 @import "vendor/bootstrap-variables"; // Set custom variable overrides
 @import "vendor/bootstrap"; // Import only the files needed
-@import "bower_components/sass-flex-mixin/flex";
-@import "bower_components/bootstrap-colorpicker/src/sass/_colorpicker.scss";
-@import "bower_components/select2/src/scss/core.scss";
-@import "vendor/chosen";
 
-// Utilities
+// @import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+// @import "bower_components/sass-flex-mixin/flex";
+@import "../../node_modules/bootstrap-colorpicker/src/sass/_colorpicker.scss";
+// @import "bower_components/select2/src/scss/core.scss";
+// @import "vendor/chosen";
+
+// // Utilities
 @import "mixins";
 @import "reset";
 @import "animations";

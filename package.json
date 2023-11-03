@@ -1,53 +1,48 @@
 {
-	"name": "pedal-playground",
+	"name": "PedalPlayground",
 	"version": "1.0.0",
 	"description": "A site to help you arrange pedals",
 	"main": "gulpfile.js",
-	"dependencies": {
-		"bower": "^1.8.8",
-		"gulp": "^3.9.0",
-		"gulp-cached": "^1.1.1",
-		"gulp-concat": "^2.6.1",
-		"gulp-gzip": "^1.4.2",
-		"gulp-imagemin": "^3.4.0",
-		"gulp-livereload": "^3.8.0",
-		"gulp-minify": "^2.1.0",
-		"gulp-minify-css": "^1.2.0",
-		"gulp-notify": "^2.2.0",
-		"gulp-plumber": "^1.2.0",
-		"gulp-rename": "^1.2.2",
-		"gulp-sass": "^2.0.4",
-		"gulp-util": "^3.0.6",
-		"gulp-watch": "^4.3.5"
-	},
-
 	"devDependencies": {
-		"gulp-responsive": "^2.9.0",
-		"http-server": "^0.11.1",
-		"prettier": "2.2.1"
+		"gulp": "^4.0.2"
 	},
-
 	"scripts": {
-		"serve": "http-server ./ -o",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "npm-run-all --parallel watch serve",
+		"build:sass": "sass  --no-source-map app/stylesheets:public/stylesheets",
+		"watch:sass": "sass  --no-source-map --watch app/stylesheets:public/stylesheets",
+		"watch:js": "rollup app/scripts/scripts.js -o public/scripts/scripts.js -f cjs",
+		"watch": "npm-run-all --parallel watch:*",
+		"serve": "browser-sync start --files app public --server ",
+		"build": "npm-run-all build:*",
+		"postbuild": "postcss public/stylesheets/*.css -u autoprefixer cssnano -r --no-map"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/tehtrav/pedal-playground.git"
+		"url": "git+https://github.com/PedalPlayground/pedalplayground.git"
 	},
-
 	"keywords": [
 		"gulp",
 		"scss",
 		"front",
 		"end"
 	],
-
 	"author": "Travis Lehman",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/tehtrav/pedal-playground/issues"
+		"url": "https://github.com/PedalPlayground/pedalplayground/issues"
 	},
-	
-	"homepage": "https://github.com/tehtrav/pedal-playground#readme"
+	"homepage": "https://github.com/PedalPlayground/pedalplayground#readme",
+	"dependencies": {
+		"autoprefixer": "^10.4.2",
+		"bootstrap-colorpicker": "^2.5.2",
+		"bootstrap-sass": "^3.4.1",
+		"browser-sync": "^2.27.7",
+		"copyfiles": "^2.4.1",
+		"cssnano": "^5.0.17",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^7.1.0",
+		"postcss-cli": "^9.1.0",
+		"sass": "^1.49.8",
+		"select2": "^4.1.0-rc.0"
+	}
 }

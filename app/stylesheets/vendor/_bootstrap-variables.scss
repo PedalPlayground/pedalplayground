@@ -9,16 +9,16 @@ $bootstrap-sass-asset-helper: false !default;
 
 $gray-base: #000 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
-$gray-dark: lighten($gray-base, 20%) !default; // #333
+$gray-dark: lighten($gray-base, 23%) !default; // #333
 $gray: lighten($gray-base, 33.5%) !default; // #555
 $gray-light: lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary: #8582ff; // #337ab7
+$brand-primary: #5C62FC; // #337ab7
 $brand-success: #5cb85c !default;
 $brand-info: #5bc0de !default;
 $brand-warning: #f0ad4e !default;
-$brand-danger: #d9534f !default;
+$brand-danger: #BC0913 !default;
 
 //== Scaffolding
 //
@@ -30,9 +30,9 @@ $body-bg: #fff !default;
 $text-color: $gray-dark !default;
 
 //** Global textual link color.
-$link-color: $brand-primary !default;
+$link-color: desaturate(darken($brand-primary, 5%), 30%);
 //** Link hover color set via `darken()` function.
-$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-color: darken($link-color, 10%) !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
 
@@ -40,7 +40,9 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+// $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "Inter", sans-serif;
+
 $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -497,7 +499,7 @@ $state-warning-text: #8a6d3b !default;
 $state-warning-bg: #fcf8e3 !default;
 $state-warning-border: darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text: #a94442 !default;
+$state-danger-text: #BC0913 !default;
 $state-danger-bg: #f2dede !default;
 $state-danger-border: darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
