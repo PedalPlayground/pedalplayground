@@ -38,27 +38,32 @@
 
 ## Running Locally
 
-0. Install node v10, bower, and gulp
 1. Install dependencies via `npm install`
-2. Install client-side libraries via `bower install`
-3. Compile assets and watch for changes via `gulp`
-4. Start the local server via `npm run serve`. This will open a browser tab for you at localhost:8080.
-
-### MacOS Notes
-
-Under MacOS Mojave:
-
--   brew install node@10 bower
--   sudo npm install gulp-cli -g;
--   sudo npm rebuild node-sass -g
--   sudo npm install sharp -g;
--   sudo npm install http-server -g
+2. Start the local server and compile resources via `npm start`. This will open a browser tab for you at localhost:3000.
 
 # Requesting Pedals
 
-If there is a pedal you're looking for, feel free to [log an issue](https://github.com/PedalPlayground/PedalPlayground.github.io/issues). Please follow the following rules when posting request issues:
+If there is a pedal that you'd like to see added to our database please feel free to [log an issue](https://github.com/PedalPlayground/PedalPlayground.github.io/issues).
 
--   Double check to see if the pedal isn't already in the database!
--   Include a decent resolution image of the pedal (top-down view, preferably white background)
--   Include the dimensions, in inches (make sure the dimensions are accurate and include jacks and other protrusions)
--   Post one issue for each pedal you're requesting
+**Requests must include the following:**
+
+1.  The pedal brand and name in the title of your request,
+2.  A high resolution image of the pedal (top-down view, preferably white background, straight on perspective),
+3.  The dimensions of the pedal in inches (make sure the dimensions are accurate and include jacks and other protrusions).
+
+Please post a new issue for each pedal you are requesting!
+
+**Before you submit, please consider the following:**
+
+-   New releases from all major builders are added to the database automatically -- there is no need to make a request for those,
+-   Please do not request alternative colorways.  To help keep the project size manageable we will no longer be accepting those requests,
+-   Please check to see if your pedal request hasn't already been covered by a [pending pull](https://github.com/PedalPlayground/PedalPlayground.github.io/pulls) by one of our contributors,
+-   Please check if your pedal hasn't already been [requested by somebody else](https://github.com/PedalPlayground/PedalPlayground.github.io/issues).
+
+### PLEASE REMAIN PATIENT ###
+
+Even if your request has been completed and linked to a pull request it may still take several weeks for updates to get pulled into the main project.  The individual contributors have no control over that so please remain patient.
+
+Please **do not** bump/repost pedal requests!
+
+If we haven't gotten to your request yet there is probably a good reason for it (insufficient image quality, lack of published dimensions, etc).
