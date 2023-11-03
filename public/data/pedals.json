@@ -1,5 +1,26 @@
 [
 	{
+		"Brand": "Pedaltank",
+		"Name": "Bass Booster",
+		"Width": 2.73,
+		"Height": 4.17,
+		"Image": "pedaltank-bass-booster.png"
+	},
+	{
+		"Brand": "Greenhouse Effects",
+		"Name": "Sonic Orb Phaser",
+		"Width": 2.38,
+		"Height": 4.5,
+		"Image": "greenhouse-sonic-orb.png"
+	},
+	{
+		"Brand": "Xvive",
+		"Name": "Echoman",
+		"Width": 1.74,
+		"Height": 3.70,
+		"Image": "xvive-echoman.png"
+	},
+	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV",
 		"Width": 3.7,
@@ -2793,6 +2814,13 @@
 		"Image": "bearfootfx-sparkling-yellow-od1.png"
 	},
 	{
+		"Brand": "Beat Bars",
+		"Name": "FS3",
+		"Width": 5.91,
+		"Height": 3.94,
+		"Image": "beatbars-fs3.png"
+	},
+	{
 		"Brand": "Beautiful Noise Effects",
 		"Name": "Endless Sleeper",
 		"Width": 4.84,
@@ -3470,6 +3498,20 @@
 		"Width": 3.7,
 		"Height": 5.98,
 		"Image": "blackskycraft-unusual-eas.png"
+	},
+	{
+		"Brand": "Blackstar",
+		"Name": "Dept. 10 Dual Drive",
+		"Width": 6.18,
+		"Height": 4.6,
+		"Image": "blackstar-dept10-dual-drive.png"
+	},
+	{
+		"Brand": "Blackstar",
+		"Name": "Dept. 10 Boost",
+		"Width": 3.03,
+		"Height": 2.99,
+		"Image": "blackstar-dept10-boost.png"
 	},
 	{
 		"Brand": "Blackstar",
@@ -5437,6 +5479,13 @@
 		"Width": 15.77,
 		"Height": 4.46,
 		"Image": "bugera-fsb106a.png"
+	},
+	{
+		"Brand": "BYW",
+		"Name": "Blacky' Blower",
+		"Width": 3.94,
+		"Height": 4.65,
+		"Image": "byw-blacky-blower.png"
 	},
 	{
 		"Brand": "Calico Effects",
@@ -10568,6 +10617,13 @@
 		"Width": 3.7,
 		"Height": 5.02,
 		"Image": "earthquaker-zap-machine-v2.png"
+	},
+	{
+		"Brand": "Earthquaker",
+		"Name": "Zoar",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-zoar.png"
 	},
 	{
 		"Brand": "EBS",
@@ -21477,6 +21533,13 @@
 	},
 	{
 		"Brand": "Lehle",
+		"Name": "Julian",
+		"Width": 4.8,
+		"Height": 3.9,
+		"Image": "lehle-julian.png"
+	},
+	{
+		"Brand": "Lehle",
 		"Name": "Little Dual II",
 		"Width": 4.8,
 		"Height": 3.9,
@@ -22526,6 +22589,20 @@
 		"Image": "maestro-titan-boost.png"
 	},
 	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Hulk",
+		"Width": 2.52,
+		"Height": 4.57,
+		"Image": "mantic-conceptual-hulk.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Vitriol",
+		"Width": 3.70,
+		"Height": 4.88,
+		"Image": "mantic-conceptual-vitriol.png"
+	},
+	{
 		"Brand": "Malekko",
 		"Name": "B:Assmaster",
 		"Width": 6,
@@ -22692,6 +22769,13 @@
 		"Width": 2.7,
 		"Height": 4.7,
 		"Image": "marshall-jackhammer.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "PEDL-00045 Footswitch",
+		"Width": 11.25,
+		"Height": 4.45,
+		"Image": "marshall-pedl-00045-footswitch.png"
 	},
 	{
 		"Brand": "Marshall",
@@ -23269,6 +23353,13 @@
 	},
 	{
 		"Brand": "Mesa Boogie",
+		"Name": "Flux-Five",
+		"Width": 5.78,
+		"Height": 4.76,
+		"Image": "mesaboogie-fluxfive.png"
+	},	
+	{
+		"Brand": "Mesa Boogie",
 		"Name": "Grid Slammer",
 		"Width": 2.75,
 		"Height": 4.75,
@@ -23323,6 +23414,13 @@
 		"Height": 4.75,
 		"Image": "mesa-boogie-throttle-box.png"
 	},
+	{
+		"Brand": "Mesa Boogie",
+		"Name": "Throttle Box EQ",
+		"Width": 5.78,
+		"Height": 4.76,
+		"Image": "mesaboogie-throttleboxeq.png"
+	},	
 	{
 		"Brand": "Mesa Boogie",
 		"Name": "Tone-Burst",
@@ -30674,6 +30772,27 @@
 		"Image": "sennheiser-xsw-d.png"
 	},
 	{
+		"Brand": "Sentimental Bob Electronics",
+		"Name": "Albert",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "sentimental-bob-electronics-albert.png"
+	},
+	{
+		"Brand": "Sentimental Bob Electronics",
+		"Name": "Tacana",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "sentimental-bob-electronics-tacana.png"
+	},
+	{
+		"Brand": "Sentimental Bob Electronics",
+		"Name": "Tephra",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "sentimental-bob-electronics-tephra.png"
+	},
+	{
 		"Brand": "Seymour Duncan",
 		"Name": "805 Overdrive",
 		"Width": 2.6,
@@ -35204,6 +35323,13 @@
 		"Image": "tronographic-rusty-box.png"
 	},
 	{
+		"Brand": "Tronographic",
+		"Name": "Rusty Box Limited Grey/Black",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "tronographic-rusty-box-limited-grey-black.png"
+	},
+	{
 		"Brand": "Tru-Fi",
 		"Name": "Colordriver 9V",
 		"Width": 4,
@@ -35457,6 +35583,13 @@
 	},
 	{
 		"Brand": "TWA",
+		"Name": "Octoverdrive",
+		"Width": 3.97,
+		"Height": 4.7,
+		"Image": "twa-octoverdrive.png"
+	},
+	{
+		"Brand": "TWA",
 		"Name": "SH9",
 		"Width": 2.89,
 		"Height": 4.5,
@@ -35538,6 +35671,13 @@
 		"Width": 4.88,
 		"Height": 7.44,
 		"Image": "twonotes-lelead.png"
+	},
+	{
+		"Brand": "Two Notes",
+		"Name": "Opus",
+		"Width": 4.02,
+		"Height": 4.76,
+		"Image": "twonotes-opus.png"
 	},
 	{
 		"Brand": "Two Notes",
@@ -36375,8 +36515,8 @@
 	{
 		"Brand": "Vongon",
 		"Name": "Polyphrase",
-		"Width": 5.5,
-		"Height": 4.72,
+		"Width": 6.5,
+		"Height": 5.5,
 		"Image": "vongon-polyphrase.png"
 	},
 	{
@@ -36861,6 +37001,13 @@
 		"Width": 2.65,
 		"Height": 4.93,
 		"Image": "walrus-canvasstereo.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Canvas Tuner",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "walrus-canvas-tuner.png"
 	},
 	{
 		"Brand": "Walrus Audio",
@@ -38856,6 +39003,13 @@
 		"Width": 3.05,
 		"Height": 5.13,
 		"Image": "zoom-ms70cdr.png"
+	},
+	{
+		"Brand": "Zorg",
+		"Name": "Blow!",
+		"Width": 2.56,
+		"Height": 4.72,
+		"Image": "zorg-blow.png"
 	},
 	{
 		"Brand": "Zvex",

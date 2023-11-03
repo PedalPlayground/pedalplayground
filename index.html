@@ -8,7 +8,12 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
 		/>
-		<link rel="stylesheet" href="public/stylesheets/styles.min.css" />
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="public/stylesheets/styles.css" />
+
+		<!-- HTML in your document's head -->
+		<link rel="preconnect" href="https://rsms.me/">
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
 		<!-- meta info -->
 		<meta
@@ -28,6 +33,22 @@
 		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#8576f7" />
 		<meta name="msapplication-TileColor" content="#2d89ef" />
 		<meta name="theme-color" content="#ffffff" />
+
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://pedalplayground.com">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Pedal Playground">
+		<meta property="og:description" content="PedalPlayground.com is an interactive planning tool for planning your guitar effects pedalboard.">
+		<meta property="og:image" content="https://pedalplayground.com/public/images/social.jpg">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content="pedalplayground.com">
+		<meta property="twitter:url" content="https://pedalplayground.com">
+		<meta name="twitter:title" content="Pedal Playground">
+		<meta name="twitter:description" content="PedalPlayground.com is an interactive planning tool for planning your guitar effects pedalboard.">
+		<meta name="twitter:image" content="https://pedalplayground.com/public/images/social.jpg">
 		
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8665257118994115" crossorigin="anonymous"></script>
 	</head>
@@ -57,7 +78,7 @@
 				<div class="sidebar__inner">
 					<div class="sidebar__scroll">
 						<div class="sidebar__section">
-							<h4>Add a Pedalboard</h4>
+							<h2 class="h4">Add a Pedalboard</h2>
 							<form id="add-pedalboard">
 								<p><select class="pedalboard-list form-control"></select></p>
 								<button
@@ -70,7 +91,7 @@
 						</div>
 
 						<div class="sidebar__section">
-							<h4>Add a Pedal</h4>
+							<h2 class="h4">Add a Pedal</h2>
 							<form id="add-pedal">
 								<p><select class="pedal-list form-control"></select></p>
 								<button id="add-selected-pedal" class="btn btn-primary btn-block">
@@ -80,7 +101,7 @@
 						</div>
 
 						<div class="sidebar__section" id="custom-items">
-							<h4>Add Custom Item</h4>
+							<h2 class="h4">Add Custom Item</h2>
 
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs" role="tablist">
@@ -229,17 +250,18 @@
 						</div>
 
 						<div class="sidebar__section">
-							<button
-								id="clear-canvas"
-								class="btn btn-sm btn-danger btn-block"
-								data-toggle="modal"
-								data-target="#clear-canvas-modal"
-							>
-								Clear
+							<button id="clear-canvas" class="btn-reset text-danger" data-toggle="modal" data-target="#clear-canvas-modal">
+								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+								Reset Playground
 							</button>
 						</div>
+
+
 					</div>
 					<!-- sidebar__scroll -->
+				</div>
+				<div class="author">
+					Made with love, by <a target="_blank" href="https://www.threads.net/@tehtrav">@tehtrav</a>
 				</div>
 				<!-- sidebar__inner -->
 			</div>
@@ -247,69 +269,69 @@
 			<!-- sidebar -->
 			<a href="" class="sidebar-open">Toggle Sidebar</a>
 			<div class="canvas">
-				<input id="multiplier" type="hidden" value="29" />
+				<input id="multiplier" type="hidden" value="32" />
 			</div>
+		</div>
 
-			<div id="clear-canvas-modal" class="modal fade" tabindex="-1" role="dialog">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button
-								type="button"
-								class="close"
-								data-dismiss="modal"
-								aria-label="Close"
-							>
-								<span aria-hidden="true">&times;</span>
-							</button>
+		<div id="clear-canvas-modal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
 
-							<h4 class="modal-title">Clear Canvas</h4>
-						</div>
+						<h4 class="modal-title">Clear Playground</h4>
+					</div>
 
-						<div class="modal-body">
-							<p>Are you sure about this?</p>
-						</div>
+					<div class="modal-body">
+						<div>This will remove all items and start from a clean slate.</div>
+					</div>
 
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">
-								Cancel
-							</button>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Cancel
+						</button>
 
-							<button type="button" class="btn btn-danger" id="clear-canvas-confirmation">
-								Clear Canvas
-							</button>
-						</div>
+						<button type="button" class="btn btn-danger" id="clear-canvas-confirmation">
+							Reset
+						</button>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div id="canvas-scale-modal" class="modal fade" tabindex="-1" role="dialog">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
+		<div id="canvas-scale-modal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
 
-							<h4 class="modal-title">Adjust screen resolution</h4>
-						</div>
+						<h4 class="modal-title">Adjust screen resolution</h4>
+					</div>
 
-						<div class="modal-body">
-							<p>
-								Enter your <a href="http://whatismyscreenresolution.net/" target="_blank">screen resolution</a> to more accurately scale your layout. 
-							</p>
-							<p>
-								<strong>Note:</strong> Modifying this will change the appearance and scale of 
-								all of the components (pedals, pedalboards, etc.) on your canvas. Therefore,
-								you may need to adjust your layout accordingly.
-							</p>
-						</div>
+					<div class="modal-body">
+						<p>
+							Enter your <a href="http://whatismyscreenresolution.net/" target="_blank">screen resolution</a> to more accurately scale your layout. 
+						</p>
+						<p>
+							<strong>Note:</strong> Modifying this will change the appearance and scale of 
+							all of the components (pedals, pedalboards, etc.) on your canvas. Therefore,
+							you may need to adjust your layout accordingly.
+						</p>
+					</div>
 
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">
-								Close
-							</button>
-						</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Close
+						</button>
 					</div>
 				</div>
 			</div>

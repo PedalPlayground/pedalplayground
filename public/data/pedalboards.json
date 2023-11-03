@@ -238,6 +238,41 @@
 		"Image": "emerson-32x12.png"
 	},
 	{
+		"Brand": "Fame",
+		"Name": "Spaceboard 40",
+		"Width": 17.7165,
+		"Height": 12.0079,
+		"Image": "fame-spaceboard-40.png"
+	},
+	{
+		"Brand": "Fame",
+		"Name": "Spaceboard 50",
+		"Width": 19.685,
+		"Height": 5.31496,
+		"Image": "fame-spaceboard-50.png"
+	},
+	{
+		"Brand": "Fame",
+		"Name": "Spaceboard 60",
+		"Width": 23.8189,
+		"Height": 12.00787,
+		"Image": "fame-spaceboard-60.png"
+	},
+	{
+		"Brand": "Fame",
+		"Name": "Spaceboard 60L",
+		"Width": 23.622,
+		"Height": 15.3543,
+		"Image": "fame-spaceboard-60L.png"
+	},
+	{
+		"Brand": "Fame",
+		"Name": "Spaceboard 80",
+		"Width": 31.4961,
+		"Height": 15.3543,
+		"Image": "fame-spaceboard-80.png"
+	},
+	{
 		"Brand": "Fender",
 		"Name": "Professional (Large)",
 		"Width": 32,
@@ -308,6 +343,48 @@
 		"Image": "gokko-medium.png"
 	},
 	{
+		"Brand": "Harley Benton",
+		"Name": "SpaceShip 40",
+		"Width": 17.7165,
+		"Height": 12.0079,
+		"Image": "harley-benton-spaceship-40.png"
+	},
+	{
+		"Brand": "Palmer",
+		"Name": "SpaceShip 50C",
+		"Width": 19.685,
+		"Height": 5.31496,
+		"Image": "harley-benton-spaceship-50C.png"
+	},
+	{
+		"Brand": "Palmer",
+		"Name": "SpaceShip 60",
+		"Width": 23.8189,
+		"Height": 12.00787,
+		"Image": "harley-benton-spaceship-60.png"
+	},
+	{
+		"Brand": "Palmer",
+		"Name": "SpaceShip 60XL",
+		"Width": 23.622,
+		"Height": 15.3543,
+		"Image": "harley-benton-spaceship-60XL.png"
+	},
+	{
+		"Brand": "Palmer",
+		"Name": "SpaceShip 80",
+		"Width": 31.4961,
+		"Height": 15.3543,
+		"Image": "harley-benton-spaceship-80.png"
+  },
+  {
+		"Brand": "Harvey Benton",
+		"Name": "SpaceShip 50M",
+		"Width": 19.88,
+		"Height": 6.89,
+		"Image": "harvey-benton-spaceship-50m.png"
+  },
+  {
 		"Brand": "Holeyboard",
 		"Name": "Mini",
 		"Width": 13,
@@ -631,10 +708,38 @@
 	},
 	{
 		"Brand": "Palmer",
+		"Name": "Pedalbay 40",
+		"Width": 17.7165,
+		"Height": 12.0079,
+		"Image": "palmer-pedalbay-40.png"
+	},
+	{
+		"Brand": "Palmer",
+		"Name": "Pedalbay 50 S",
+		"Width": 19.685,
+		"Height": 5.31496,
+		"Image": "palmer-pedalbay-50-S.png"
+	},
+	{
+		"Brand": "Palmer",
 		"Name": "Pedalbay 60",
 		"Width": 23.82,
 		"Height": 12.01,
 		"Image": "palmer-pedalbay-60.png"
+	},
+	{
+		"Brand": "Palmer",
+		"Name": "Pedalbay 60 L",
+		"Width": 23.622,
+		"Height": 15.3543,
+		"Image": "palmer-pedalbay-60-L.png"
+	},
+	{
+		"Brand": "Palmer",
+		"Name": "Pedalbay 80",
+		"Width": 31.4961,
+		"Height": 15.3543,
+		"Image": "palmer-pedalbay-80.png"
 	},
 	{
 		"Brand": "Pedaltrain",
