@@ -2793,6 +2793,13 @@
 		"Image": "bearfootfx-sparkling-yellow-od1.png"
 	},
 	{
+		"Brand": "Beat Bars",
+		"Name": "FS3",
+		"Width": 5.91,
+		"Height": 3.94,
+		"Image": "beatbars-fs3.png"
+	},
+	{
 		"Brand": "Beautiful Noise Effects",
 		"Name": "Endless Sleeper",
 		"Width": 4.84,
@@ -38912,6 +38919,13 @@
 		"Width": 3.05,
 		"Height": 5.13,
 		"Image": "zoom-ms70cdr.png"
+	},
+	{
+		"Brand": "Zorg",
+		"Name": "Blow!",
+		"Width": 2.56,
+		"Height": 4.72,
+		"Image": "zorg-blow.png"
 	},
 	{
 		"Brand": "Zvex",
