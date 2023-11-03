@@ -10514,6 +10514,13 @@
 		"Image": "earthquaker-zap-machine-v2.png"
 	},
 	{
+		"Brand": "Earthquaker",
+		"Name": "Zoar",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-zoar.png"
+	},
+	{
 		"Brand": "EBS",
 		"Name": "BassIQ",
 		"Width": 2.8,
@@ -35471,6 +35478,13 @@
 	},
 	{
 		"Brand": "Two Notes",
+		"Name": "Opus",
+		"Width": 4.02,
+		"Height": 4.76,
+		"Image": "twonotes-opus.png"
+	},
+	{
+		"Brand": "Two Notes",
 		"Name": "ReVolt",
 		"Width": 7.6,
 		"Height": 4.75,
@@ -36305,8 +36319,8 @@
 	{
 		"Brand": "Vongon",
 		"Name": "Polyphrase",
-		"Width": 5.5,
-		"Height": 4.72,
+		"Width": 6.5,
+		"Height": 5.5,
 		"Image": "vongon-polyphrase.png"
 	},
 	{
