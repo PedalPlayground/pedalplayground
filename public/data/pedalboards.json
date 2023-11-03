@@ -392,6 +392,13 @@
 		"Image": "mono-small-pedalboard.png"
 	},
 	{
+		"Brand": "Mooer",
+		"Name": "TF-16S",
+		"Width": 19.2913,
+		"Height": 11.232283,
+		"Image": "mooer-tf-16s.png"
+	},
+	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Flat 16",
 		"Width": 16.0,
