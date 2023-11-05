@@ -1,12 +1,13 @@
-'use strict';
-
 var pedalImagePath = "public/images/pedals/";
 var pedalboardImagePath = "public/images/pedalboards/";
+var units = 'in';
 
 $(document).ready(function () {
+	
 	// Populate Pedalboards and Pedals lists
 	GetPedalData();
 	GetPedalBoardData();
+	convertUnits();
 
 	// Make lists searchable
 	$(".pedal-list").select2({
@@ -41,15 +42,20 @@ $(document).ready(function () {
 
 		// If hidden multiplier value doesn't exist, create it
 		if ($("#multiplier").length == 0) {
-			$(".canvas").append('<input id="multiplier" type="hidden" value="25">');
-			var multiplier = 25;
+			$(".canvas").append('<input id="multiplier" type="hidden" value="32">');
+			var multiplier = 32;
 			// If hidden multiplier value does exist set variable
 		} else {
 			var multiplier = $("#multiplier").val();
 		}
+
 		// Set canvas scale input and bg size to match scale
 		$("#canvas-scale").val(multiplier);
 		$(".canvas").css("background-size", multiplier + "px");
+	});
+
+	$("#convert-units").on( "change", function() {
+		convertUnits();
 	});
 
 	// When user changes scale, update stuffs
@@ -216,8 +222,8 @@ $(document).ready(function () {
 	$("body").on("click", "#add-custom-pedal .btn", function (event) {
 		var serial = GenRandom.Job();
 		var multiplier = $("#canvas-scale").val();
-		var width = $("#add-custom-pedal .custom-width").val();
-		var height = $("#add-custom-pedal .custom-height").val();
+		var width = convertUnitsIfNeeded("down", $("#add-custom-pedal .custom-width").val() );
+		var height = convertUnitsIfNeeded("down", $("#add-custom-pedal .custom-height").val() );
 		var scaledWidth = width * multiplier;
 		var scaledHeight = height * multiplier;
 		var dims = width + '" x ' + height + '"';
@@ -283,8 +289,8 @@ $(document).ready(function () {
 	$("body").on("click", "#add-custom-pedalboard .btn", function (event) {
 		var serial = GenRandom.Job();
 		var multiplier = $("#canvas-scale").val();
-		var width = $("#add-custom-pedalboard .custom-width").val();
-		var height = $("#add-custom-pedalboard .custom-height").val();
+		var width = convertUnitsIfNeeded('down', $("#add-custom-pedalboard .custom-width").val());
+		var height = convertUnitsIfNeeded('down',$("#add-custom-pedalboard .custom-height").val());
 		var scaledWidth = width * multiplier;
 		var scaledHeight = height * multiplier;
 
@@ -335,7 +341,7 @@ $(document).ready(function () {
 	$("body").on("keydown keyup", function (event) {
 		if (event.which == 68 || event.which == 8) {
 			deleteSelected();
-			$(".site-body > .panel").remove();
+			$(".site-body > .item-info").remove();
 			savePedalCanvas();
 		}
 	});
@@ -423,7 +429,26 @@ $(document).ready(function () {
 	});
 }); // End Document ready
 
-function readyCanvas(pedal) {
+function convertUnitsIfNeeded(direction,value) {
+	switch(direction) {
+		case 'up':
+			return ( $('#convert-units').is(':checked') ) ? convertIn(value) : value;
+		case 'down':
+			return ( $('#convert-units').is(':checked') ) ? convertMm(value) : value;
+		default:
+			break;
+	}
+}
+
+function convertMm(value) {
+	return Math.round((value * 0.0393701) * 100) / 100;
+}
+
+function convertIn(value) {
+	return Math.round((value * 25.4));
+}
+
+function readyCanvas() {
 	var $draggable = $(".canvas .pedal, .canvas .pedalboard").draggabilly({
 		containment: ".canvas",
 	});
@@ -469,13 +494,28 @@ function readyCanvas(pedal) {
 			savePedalCanvas();
 		}
 	});
-
 	savePedalCanvas();
 }
 
 function savePedalCanvas() {
 	console.log("Canvas Saved!");
 	localStorage["pedalCanvas"] = JSON.stringify($(".canvas").html());
+}
+
+function rotatePedal(pedal) {
+	ga("send", "event", "Pedal", "clicked", "rotate");
+	if ($(pedal).hasClass("rotate-90")) {
+		$(pedal).removeClass("rotate-90");
+		$(pedal).addClass("rotate-180");
+	} else if ($(pedal).hasClass("rotate-180")) {
+		$(pedal).removeClass("rotate-180");
+		$(pedal).addClass("rotate-270");
+	} else if ($(pedal).hasClass("rotate-270")) {
+		$(pedal).removeClass("rotate-270");
+	} else {
+		$(pedal).addClass("rotate-90");
+	}
+	savePedalCanvas();
 }
 
 function deletePedal(pedal) {
@@ -496,21 +536,24 @@ function deleteSelected() {
 	savePedalCanvas();
 }
 
-// function rotatePedal() {
-// 	alert("rotate Pedal");
-// 	if ( $(this).hasClass("rotate-90") ) {
-// 		$(this).removeClass("rotate-90");
-// 		$(this).addClass("rotate-180");
-// 	} else if ( $(this).hasClass("rotate-180") ) {
-// 		$(this).removeClass("rotate-180");
-// 		$(this).addClass("rotate-270");
-// 	}  else if ( $(this).hasClass("rotate-270") ) {
-// 		$(this).removeClass("rotate-270");
-// 	} else {
-// 		$(this).addClass("rotate-90");
-// 	}
-// 	return false;
-// }
+function convertUnits() {
+	if ( $('#convert-units').is(':checked') ) {
+		var units = 'mm';
+		$("label .units").text('(mm)');
+		$('#custom-pb-width').attr('placeholder',610);
+		$('#custom-pb-height').attr('placeholder',318);
+		$('#custom-p-width').attr('placeholder',70);
+		$('#custom-p-height').attr('placeholder',108);
+	} else {
+		var units = 'in';
+		$("label .units").text('(inches)');
+		$('#custom-pb-width').attr('placeholder',24);
+		$('#custom-pb-height').attr('placeholder',12.5);
+		$('#custom-p-width').attr('placeholder',2.75);
+		$('#custom-p-height').attr('placeholder',4.25);
+	}
+}
+
 
 window.Pedal = function (type, brand, name, width, height, image) {
 	this.Type = type || "";
@@ -706,22 +749,27 @@ var GenRandom = {
 };
 
 $("body").on("click", ".item", function (e) {
+
+	if ( $('#convert-units').is(':checked') ) {
+		var units = 'mm';
+	} else {
+		var units = 'in';
+	}
+
 	var pedal = $(this);
 	var id = $(this).attr("id");
 	var pedalName = $(this).attr("title");
-	var width = $(this).attr("data-width");
-	var height = $(this).attr("data-height");
+
+	var height = convertUnitsIfNeeded("up", $(this).attr("data-height") );
+	var width = convertUnitsIfNeeded("up", $(this).attr("data-width") );;
+
 	var markup =
-		'<div class="panel" data-id="#' +
+		'<div class="panel item-info" data-id="#' +
 		id +
 		'">\
     <div class="panel__name">' +
 		pedalName +
-		'<br><span class="panel__dimensions">(' +
-		width +
-		" x " +
-		height +
-		')</span>\
+		'<br><span class="panel__dimensions">(' + width + units + " x " + height + units + ')</span>\
     </div>\
 		<a href="#rotate" class="panel__action">Rotate <i>R</i></a>\
 		<a href="#front" class="panel__action">Move Front <i>]</i></a>\
@@ -730,7 +778,7 @@ $("body").on("click", ".item", function (e) {
 	</div>';
 
 	// reset stuff
-	$(".panel").remove();
+	$(".item-info").remove();
 	$(".canvas .selected").removeClass("selected");
 
 	// add stuff
@@ -763,7 +811,7 @@ $("body").on("click", 'a[href="#rotate"]', function (e) {
 $("body").on("click", 'a[href="#delete"]', function () {
 	var id = $(this).parents(".panel").data("id");
 	$(id).remove();
-	$(".panel").remove();
+	$(".item-info").remove();
 	savePedalCanvas();
 });
 
@@ -785,6 +833,25 @@ $("body").on("click", 'a[href="#back"]', function (e) {
 
 $("body").click(function () {
 	// reset stuff
-	$(".panel").remove();
+	$(".item-info").remove();
 	$(".canvas .selected").removeClass("selected");
+});
+
+$("body").on("click", ".canvas", function (e) {
+	$(".settings-popover").addClass("hide");
+	$(".settings-trigger").removeClass("open");
+});
+
+$("body").on("click", ".settings-trigger", function (e) {
+	$(".settings-popover").removeClass("hide");
+	$(".settings-trigger").addClass("open");
+	e.preventDefault();
+	e.stopPropagation();
+});
+
+
+$("body").on("click", ".settings-trigger.open", function (e) {
+	$(".settings-popover").addClass("hide");
+	$(".settings-trigger").removeClass("open");
+	e.preventDefault();
 });

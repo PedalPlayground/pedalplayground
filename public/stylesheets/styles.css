@@ -8232,6 +8232,62 @@ body .btn {
   }
 }
 
+.settings-popover h4 {
+  padding: 1.4rem 1rem;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.settings-popover .panel__action {
+  display: flex;
+  justify-content: space-between;
+}
+.settings-popover .panel__action label {
+  font-weight: normal;
+  margin: 0;
+}
+.settings-popover .panel__action .form-control {
+  width: 40px;
+  padding: 0;
+  text-align: right;
+  height: auto;
+  border: none;
+  box-shadow: none;
+}
+.settings-popover input::-webkit-outer-spin-button,
+.settings-popover input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.settings-popover input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.halp {
+  border: none;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  z-index: 3;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1023px) {
+  .halp {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .halp {
+    background: #201f22;
+    border: 0;
+    box-shadow: none !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .modal-content {
     background: #201f22;
