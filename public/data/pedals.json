@@ -16724,6 +16724,20 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Ampero II Press",
+		"Width": 3.03,
+		"Height": 6.38,
+		"Image": "hotone-ampero-ii-press.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Ampero II Stage",
+		"Width": 11.85,
+		"Height": 7.13,
+		"Image": "hotone-ampero-ii-stage.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Ampero II Stomp",
 		"Width": 7.28,
 		"Height": 5.58,
@@ -23357,7 +23371,7 @@
 		"Width": 5.78,
 		"Height": 4.76,
 		"Image": "mesaboogie-fluxfive.png"
-	},	
+	},
 	{
 		"Brand": "Mesa Boogie",
 		"Name": "Grid Slammer",
@@ -23420,7 +23434,7 @@
 		"Width": 5.78,
 		"Height": 4.76,
 		"Image": "mesaboogie-throttleboxeq.png"
-	},	
+	},
 	{
 		"Brand": "Mesa Boogie",
 		"Name": "Tone-Burst",
