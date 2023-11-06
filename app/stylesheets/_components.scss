@@ -844,3 +844,79 @@ body {
 		border-bottom-color: #B9BCBF;
 	}
 }
+
+
+// <div class="settings-popover">
+// 	<h4>Settings</h4>
+// 	<ul>
+// 		<li>
+// 			<label for="convert-units" class="convert-units">
+// 				Use mm <input id="convert-units" type="checkbox">
+// 			</label>
+// 		</li>
+// 		<li>
+// 			<label for="canvas-scale">
+// 				Canvas scale
+// 				<input class="form-control input-sm" id="canvas-scale" type="number" value="25" />
+// 			</label>
+// 		</li>
+// 	</ul>
+// </div>
+
+.settings-popover {
+	// width: 280px;
+	
+	h4 {
+		padding: 1.4rem 1rem;
+		margin: 0;
+		font-size: 15px;
+		font-weight: 600;
+	}
+	.panel__action {
+		// font-size: 14px;
+		display: flex;
+		justify-content: space-between;
+		label {
+			font-weight: normal;
+			margin: 0;
+		}
+		.form-control {
+			width: 40px;
+			padding: 0;
+			text-align: right;
+			height: auto;
+			border: none;
+			box-shadow: none;
+		}
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		/* display: none; <- Crashes Chrome on hover */
+		-webkit-appearance: none;
+		margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+	}
+
+	input[type=number] {
+		-moz-appearance:textfield; /* Firefox */
+	}
+}
+
+.halp {
+	@media (max-width: 1023px) {
+		display: none;
+	}
+	border: none;
+	position: fixed;
+	bottom: 1rem;
+	left: 50%;
+	z-index: 3;
+	padding: .5rem 1rem;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(black, 0.2);
+	@media (prefers-color-scheme: dark) {
+		background: $panel-bg-dark;
+		border: 0;
+		box-shadow: none !important;
+	}
+}

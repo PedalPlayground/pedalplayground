@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pedal Playground</title>
+
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+		/>
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="public/stylesheets/styles.css" />
+
+		<!-- HTML in your document's head -->
+		<link rel="preconnect" href="https://rsms.me/">
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+		<!-- meta info -->
+		<meta
+			name="description"
+			content="PedalPlayground.com is an interactive planning tool for planning your guitar effects pedalboard."
+		/>
+		<meta
+			name="keywords"
+			content="pedalboard, effects, fx, guitar, stompboxes, planner, pedalboard planner, pedalboard builder"
+		/>
+
+		<!-- favicons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#8576f7" />
+		<meta name="msapplication-TileColor" content="#2d89ef" />
+		<meta name="theme-color" content="#ffffff" />
+
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://pedalplayground.com">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Pedal Playground">
+		<meta property="og:description" content="PedalPlayground.com is an interactive planning tool for planning your guitar effects pedalboard.">
+		<meta property="og:image" content="https://pedalplayground.com/public/images/social.jpg">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content="pedalplayground.com">
+		<meta property="twitter:url" content="https://pedalplayground.com">
+		<meta name="twitter:title" content="Pedal Playground">
+		<meta name="twitter:description" content="PedalPlayground.com is an interactive planning tool for planning your guitar effects pedalboard.">
+		<meta name="twitter:image" content="https://pedalplayground.com/public/images/social.jpg">
+		
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8665257118994115" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<header class="site-header">
+			<h1><b>Pedal</b>Playground</h1>
+			<nav>
+				<a href="https://github.com/PedalPlayground/PedalPlayground.github.io/">Change Log</a>
+				<a href="https://www.paypal.me/travlehman" target="_blank">Donate</a>
+				<a class="settings-trigger" href="#" target="_blank">
+					<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+				</a>
+			</nav>
+		</header>
+
+		<div id="list-pedals"></div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/2.2.0/draggabilly.pkgd.min.js" integrity="sha512-zBAct6t0RFMOkOv9I+sMKzp4rHVqt/5PJBp5tUpO0y/zV9Ret0qh2nQP0+7AehWwRF5M0pLWefnBAZeCB7J3xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha512-oBTprMeNEKCnqfuqKd6sbvFzmFQtlXS3e0C/RGFV0hD6QzhHV+ODfaQbAlmY6/q0ubbwlAM/nCJjkrgA3waLzg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.2/js/bootstrap-colorpicker.min.js" integrity="sha512-Inb8rvDBBswSGp+fMJmR7y+HgWACE/2m1pj2h1ItXBGt7NbI0llkYIqp7bgzibqom5rSqTt84Cqug9UQV1+e8w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js" integrity="sha512-Y1UCb35/WpQMj8SlTwW43Q+vaROlBiuJ3BBpdF646G4WjXYp417N7OzlmOVWTxOTaiFIZt1CWnby8G9J6u2EoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script type="text/javascript" src="public/scripts/scripts.js"></script>
+		
+		<script>
+			(
+				function (i, s, o, g, r, a, m) {
+					i["GoogleAnalyticsObject"] = r;
+					(
+						i[r] =
+						i[r] ||
+						function () {
+							(i[r].q = i[r].q || []).push(arguments);
+						}
+					),
+
+					(i[r].l = 1 * new Date());
+					(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m);
+				}
+			)(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+			ga("create", "UA-92858206-1", "auto");
+			ga("send", "pageview");
+		</script>
+	</body>
+</html>
