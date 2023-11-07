@@ -28589,6 +28589,13 @@
 	},
 	{
 		"Brand": "PastFx",
+		"Name": "Patriarch",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-patriarch.png"
+	},
+	{
+		"Brand": "PastFx",
 		"Name": "Phase V",
 		"Width": 5.01,
 		"Height": 3.7,
