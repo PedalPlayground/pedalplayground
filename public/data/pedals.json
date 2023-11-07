@@ -18684,6 +18684,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Lizard Queen (Big Box)",
+		"Width": 5.5,
+		"Height": 7.15,
+		"Image": "jhs-lizard-queen-box.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Lucky Cat",
 		"Width": 2.82,
 		"Height": 5,
