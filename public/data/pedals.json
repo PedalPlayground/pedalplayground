@@ -7459,7 +7459,7 @@
 		"Name": "CAE Wah",
 		"Width": 4,
 		"Height": 10,
-		"Image": "cry-baby-mc404.png"
+		"Image": "dunlop-mc404.png"
 	},
 	{
 		"Brand": "Cry Baby",
@@ -31008,13 +31008,6 @@
 		"Width": 4.9,
 		"Height": 3.95,
 		"Image": "shiftline-flex.png"
-	},
-	{
-		"Brand": "Shift Line",
-		"Name": "Twin MkIIIS",
-		"Width": 4.88,
-		"Height": 4.09,
-		"Image": "shiftline-twin-mkiiis.png"
 	},
 	{
 		"Brand": "Shift Line",
