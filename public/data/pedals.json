@@ -4586,6 +4586,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GT-1 Guitar Effects Processor",
+		"Width": 12,
+		"Height": 5.8,
+		"Image": "boss-gt1.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GT-8 Guitar Effects Processor",
 		"Width": 20.28,
 		"Height": 9.92,
@@ -4919,6 +4926,13 @@
 		"Width": 4,
 		"Height": 5.4375,
 		"Image": "boss-rc10r.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-2 Loop Station",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-rc2.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -11765,6 +11779,13 @@
 		"Width": 1.99,
 		"Height": 3.65,
 		"Image": "ehx-pico-oceans-3verb.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico Platform Compressor/Limiter",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-platform.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -18663,6 +18684,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Lizard Queen (Big Box)",
+		"Width": 5.5,
+		"Height": 7.15,
+		"Image": "jhs-lizard-queen-box.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Lucky Cat",
 		"Width": 2.82,
 		"Height": 5,
@@ -21089,6 +21117,13 @@
 		"Width": 3.85,
 		"Height": 4.89,
 		"Image": "kma-audio-machines-logan-transcend-drive.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Mandrake",
+		"Width": 2.59,
+		"Height": 4.92,
+		"Image": "kma-audio-machines-mandrake.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
@@ -28470,6 +28505,13 @@
 	},
 	{
 		"Brand": "PastFx",
+		"Name": "18V Power Booster",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-18v-power-booster.png"
+	},
+	{
+		"Brand": "PastFx",
 		"Name": "80/A Flanger",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -28558,6 +28600,13 @@
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "pastfx-nick-james-foot-phaser.png"
+	},
+	{
+		"Brand": "PastFx",
+		"Name": "Patriarch",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-patriarch.png"
 	},
 	{
 		"Brand": "PastFx",
