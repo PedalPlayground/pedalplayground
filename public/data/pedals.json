@@ -4586,6 +4586,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GT-1 Guitar Effects Processor",
+		"Width": 12,
+		"Height": 5.8,
+		"Image": "boss-gt1.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GT-8 Guitar Effects Processor",
 		"Width": 20.28,
 		"Height": 9.92,
@@ -4919,6 +4926,13 @@
 		"Width": 4,
 		"Height": 5.4375,
 		"Image": "boss-rc10r.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-2 Loop Station",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-rc2.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -11768,6 +11782,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Pico Platform Compressor/Limiter",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-platform.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Pico Rerun",
 		"Width": 1.99,
 		"Height": 3.65,
@@ -16724,6 +16745,20 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Ampero II Press",
+		"Width": 3.03,
+		"Height": 6.38,
+		"Image": "hotone-ampero-ii-press.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Ampero II Stage",
+		"Width": 11.85,
+		"Height": 7.13,
+		"Image": "hotone-ampero-ii-stage.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Ampero II Stomp",
 		"Width": 7.28,
 		"Height": 5.58,
@@ -18646,6 +18681,13 @@
 		"Width": 3.7,
 		"Height": 1.78,
 		"Image": "jhs-little-black-buffer.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Lizard Queen (Big Box)",
+		"Width": 5.5,
+		"Height": 7.15,
+		"Image": "jhs-lizard-queen-box.png"
 	},
 	{
 		"Brand": "JHS",
@@ -21078,6 +21120,13 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
+		"Name": "Mandrake",
+		"Width": 2.59,
+		"Height": 4.92,
+		"Image": "kma-audio-machines-mandrake.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
 		"Name": "Minos",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -23357,7 +23406,7 @@
 		"Width": 5.78,
 		"Height": 4.76,
 		"Image": "mesaboogie-fluxfive.png"
-	},	
+	},
 	{
 		"Brand": "Mesa Boogie",
 		"Name": "Grid Slammer",
@@ -23420,7 +23469,7 @@
 		"Width": 5.78,
 		"Height": 4.76,
 		"Image": "mesaboogie-throttleboxeq.png"
-	},	
+	},
 	{
 		"Brand": "Mesa Boogie",
 		"Name": "Tone-Burst",
@@ -28456,6 +28505,13 @@
 	},
 	{
 		"Brand": "PastFx",
+		"Name": "18V Power Booster",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-18v-power-booster.png"
+	},
+	{
+		"Brand": "PastFx",
 		"Name": "80/A Flanger",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -28544,6 +28600,13 @@
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "pastfx-nick-james-foot-phaser.png"
+	},
+	{
+		"Brand": "PastFx",
+		"Name": "Patriarch",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-patriarch.png"
 	},
 	{
 		"Brand": "PastFx",
