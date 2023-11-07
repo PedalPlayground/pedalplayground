@@ -4586,6 +4586,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GT-1 Guitar Effects Processor",
+		"Width": 12,
+		"Height": 5.8,
+		"Image": "boss-gt1.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GT-8 Guitar Effects Processor",
 		"Width": 20.28,
 		"Height": 9.92,
@@ -28481,6 +28488,13 @@
 		"Width": 2.58,
 		"Height": 4.74,
 		"Image": "paradox-vitral.png"
+	},
+	{
+		"Brand": "PastFx",
+		"Name": "18V Power Booster",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-18v-power-booster.png"
 	},
 	{
 		"Brand": "PastFx",
