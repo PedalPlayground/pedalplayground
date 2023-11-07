@@ -38,7 +38,7 @@ body {
 	border-bottom: $border;
 	background-clip: padding-box;
 	height: 5.5rem;
-	padding: 2rem;
+	padding: 0 2rem;
 
 	h1 {
 		text-transform: uppercase;
@@ -52,12 +52,15 @@ body {
 	nav {
 		a {
 			text-decoration: underline;
-			margin-left: 1rem;
+			margin-left: 0;
 			font-size: 1.3rem;
+			// background: red;
+			line-height: 1.6;
+			padding: 1rem;
 			@media (min-width: 500px) {
 				font-size: 1.5rem;
 				text-decoration: none;
-				margin-left: 2rem;
+				// margin-left: 2rem;
 				font-weight: 600;
 				// text-decoration: underline;
 				// color: black;
@@ -593,13 +596,11 @@ body {
 
 // Huge list of pedals, to find any broken links
 #list-pedals {
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(10, 10%);
 	background: #222;
 	.pedal-listing {
-		flex: 1 1 150px;
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
+
 		padding: 30px;
 		box-shadow: 1px 1px 0 0 rgba(white, 0.08);
 		img {
@@ -636,9 +637,14 @@ body {
 }
 
 .panel {
-	z-index: 3;
-	display: none;
-
+	z-index: 3;	
+	position: fixed;
+	top: 67px;
+	right: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 6px rgba(black, 0.2);
+	width: 200px;
+	
 	@media (prefers-color-scheme: dark) {
 		background: $panel-bg-dark;
 		border: 1px solid rgba(white, 0.2);
@@ -646,45 +652,43 @@ body {
 		box-shadow: none !important;
 	}
 
-	@media (min-width: 768px) {
+	&__name {
+		font-size: 13px;
+		color: #999;
+		font-weight: 600;
+		padding: 10px;
+		.panel__dimensions {
+			font-weight: normal;
+		}
+	}
+	&__action {
+		font-size: 13px;
 		display: block;
-		position: fixed;
-		top: 67px;
-		right: 20px;
-		border-radius: 10px;
-		box-shadow: 0 2px 6px rgba(black, 0.2);
-		width: 200px;
-		&__name {
-			font-size: 13px;
+		padding: 10px;
+		border-top: 1px solid rgba(black, 0.2);
+		@media (prefers-color-scheme: dark) {
+			border-top: 1px solid rgba(white, 0.2);
+		}
+		i {
+			font-style: normal;
 			color: #999;
-			font-weight: 600;
-			padding: 10px;
-			.panel__dimensions {
-				font-weight: normal;
-			}
+			// border: 1px solid #ddd;
+			float: right;
+			border-radius: 3px;
+			font-family: menlo, inconsolata, monospace;
+			padding: 1px 6px;
+			position: relative;
+			top: -2px;
+			color: #ccc;
+			font-weight: bold;
 		}
-		&__action {
-			font-size: 13px;
-			display: block;
-			padding: 10px;
-			border-top: 1px solid rgba(black, 0.2);
-			@media (prefers-color-scheme: dark) {
-				border-top: 1px solid rgba(white, 0.2);
-			}
-			i {
-				font-style: normal;
-				color: #999;
-				// border: 1px solid #ddd;
-				float: right;
-				border-radius: 3px;
-				font-family: menlo, inconsolata, monospace;
-				padding: 1px 6px;
-				position: relative;
-				top: -2px;
-				color: #ccc;
-				font-weight: bold;
-			}
-		}
+	}
+}
+
+.item-info {
+	display: none;
+	@media (min-width: 1024px) {
+		display: block;
 	}
 }
 
