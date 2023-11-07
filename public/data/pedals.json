@@ -21120,6 +21120,13 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
+		"Name": "Mandrake",
+		"Width": 2.59,
+		"Height": 4.92,
+		"Image": "kma-audio-machines-mandrake.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
 		"Name": "Minos",
 		"Width": 2.67,
 		"Height": 4.5,
