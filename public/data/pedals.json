@@ -4922,6 +4922,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RC-2 Loop Station",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-rc2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RC-20 Loop Station",
 		"Width": 6.8125,
 		"Height": 6.25,
@@ -11765,6 +11772,13 @@
 		"Width": 1.99,
 		"Height": 3.65,
 		"Image": "ehx-pico-oceans-3verb.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico Platform Compressor/Limiter",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-platform.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
