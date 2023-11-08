@@ -4691,7 +4691,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "MD-L Metal Core",
+		"Name": "ML-2 Metal Core",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ml2.png"
@@ -9329,6 +9329,13 @@
 		"Width": 1.62,
 		"Height": 3.74,
 		"Image": "donner-extreme-driver.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Giant Metal",
+		"Width": 1.66,
+		"Height": 3.76,
+		"Image": "donner-giant-metal.png"
 	},
 	{
 		"Brand": "Donner",
@@ -32154,6 +32161,13 @@
 		"Brand": "Source Audio",
 		"Name": "Nemesis",
 		"Width": 4.53,
+		"Height": 4.5,
+		"Image": "source-audio-nemesis.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Nemesis ADT",
+		"Width": 4.5,
 		"Height": 4.5,
 		"Image": "source-audio-nemesis.png"
 	},
