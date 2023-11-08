@@ -924,3 +924,18 @@ body {
 		box-shadow: none !important;
 	}
 }
+
+.settings-trigger {
+	display: inline-flex;
+	border-radius: 6px;
+	svg circle {
+		transition: all .2s;
+	}
+	&:hover {
+		background: $gray-lighter;
+		svg {
+			circle.top {	transform: translateX(8px); }
+			circle.bottom {	transform: translateX(-10px); }
+		}
+	}
+}
