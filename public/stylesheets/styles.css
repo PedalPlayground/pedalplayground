@@ -8287,6 +8287,23 @@ body .btn {
   }
 }
 
+.settings-trigger {
+  display: inline-flex;
+  border-radius: 6px;
+}
+.settings-trigger svg circle {
+  transition: all 0.2s;
+}
+.settings-trigger:hover {
+  background: #eeeeee;
+}
+.settings-trigger:hover svg circle.top {
+  transform: translateX(8px);
+}
+.settings-trigger:hover svg circle.bottom {
+  transform: translateX(-10px);
+}
+
 @media (prefers-color-scheme: dark) {
   .modal-content {
     background: #201f22;
