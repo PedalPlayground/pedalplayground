@@ -4266,7 +4266,7 @@
 		"Brand": "BOSS",
 		"Name": "DD-200 Digital Delay",
 		"Width": 4,
-		"Height": 5.4375,
+		"Height": 5.44,
 		"Image": "boss-dd200.png"
 	},
 	{
@@ -4385,7 +4385,7 @@
 		"Brand": "BOSS",
 		"Name": "EQ-200 Graphic Equalizer",
 		"Width": 4,
-		"Height": 5.4375,
+		"Height": 5.44,
 		"Image": "boss-eq200.png"
 	},
 	{
@@ -4643,8 +4643,8 @@
 	{
 		"Brand": "BOSS",
 		"Name": "IR-200 Amp & IR Cabinet",
-		"Width": 4.06,
-		"Height": 5.4375,
+		"Width": 4,
+		"Height": 5.44,
 		"Image": "boss-ir200.png"
 	},
 	{
@@ -4679,7 +4679,7 @@
 		"Brand": "BOSS",
 		"Name": "MD-200 Modulation",
 		"Width": 4,
-		"Height": 5.4375,
+		"Height": 5.44,
 		"Image": "boss-md200.png"
 	},
 	{
@@ -4819,7 +4819,7 @@
 		"Brand": "BOSS",
 		"Name": "OD-200 Hybrid Drive",
 		"Width": 4,
-		"Height": 5.4375,
+		"Height": 5.44,
 		"Image": "boss-od200.png"
 	},
 	{
@@ -5141,7 +5141,7 @@
 		"Brand": "BOSS",
 		"Name": "SY-200 Synthesizer",
 		"Width": 4,
-		"Height": 5.4375,
+		"Height": 5.44,
 		"Image": "boss-sy200.png"
 	},
 	{
@@ -6165,6 +6165,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-soft-focus.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "SuperCharged",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-supercharged.png"
 	},
 	{
 		"Brand": "Catalinbread",
