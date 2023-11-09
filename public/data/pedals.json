@@ -5020,6 +5020,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RV-200 Reverb",
+		"Width": 4,
+		"Height": 5.44,
+		"Image": "boss-rv200.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RV-3 Digital Reverb/Delay",
 		"Width": 2.875,
 		"Height": 5.125,
