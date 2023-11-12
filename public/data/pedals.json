@@ -9135,6 +9135,13 @@
 		"Image": "disaster-area-nnb.png"
 	},
 	{
+		"Brand": "Divided by 13",
+		"Name": "Dyna-Ranger",
+		"Width": 4,
+		"Height" 4.6,
+		"Image": "dividedby13-dyna-ranger.png"
+	},
+	{
 		"Brand": "DMB",
 		"Name": "Lunar Echo",
 		"Width": 4.7,
