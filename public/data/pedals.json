@@ -14673,6 +14673,13 @@
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "Mini Deja Vibe",
+		"Width": 5.57,
+		"Height": 4,
+		"Image": "fulltone-mdv.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "OCD",
 		"Width": 2.75,
 		"Height": 4.5,
