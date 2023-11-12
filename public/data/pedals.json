@@ -30667,6 +30667,20 @@
 		"Image": "rolls-mx28.png"
 	},
 	{
+		"Brand":"Rolls",
+		"Name":"PM50se Personal Monitor Amp",
+		"Width":3.25,
+		"Height":4,
+		"Image":"rolls-pm50se.png"
+	},
+	{
+		"Brand":"Rolls",
+		"Name":"PM351 Personal Monitor Station",
+		"Width":4.75,
+		"Height":4.3,
+		"Image":"rolls-pm351.png"
+	},
+	{
 		"Brand": "Ross",
 		"Name": "Chorus",
 		"Width": 3.57,
@@ -34755,7 +34769,7 @@
 		"Height": 7.8,
 		"Image": "tapestry-bloomery.png"
 	},
-	{
+		{
 		"Brand": "Tech 21 NYC",
 		"Name": "Bass Driver DI",
 		"Width": 5.03,
@@ -34768,6 +34782,13 @@
 		"Width": 3.89,
 		"Height": 4.7,
 		"Image": "tech21-blonde.png"
+	},
+	{
+		"Brand":"Tech 21 NYC",
+		"Name":"Boost Comp",
+		"Width":4,
+		"Height":4.6,
+		"Image":"tech21-boost-comp.png"
 	},
 	{
 		"Brand": "Tech 21 NYC",
@@ -34812,6 +34833,13 @@
 		"Image": "tech21-sansamp-gt2.png"
 	},
 	{
+		"Brand":"Tech 21 NYC",
+		"Name":"Sansamp Street Driver 48",
+		"Width":4,
+		"Height":4.6,
+		"Image":"tech21-street-driver.png"
+	},
+	{
 		"Brand": "Tech 21 NYC",
 		"Name": "Sansamp Paradriver",
 		"Width": 5.03,
@@ -34828,9 +34856,23 @@
 	{
 		"Brand": "Tech 21 NYC",
 		"Name": "Sansamp YYZ",
-		"Width": 3.89,
-		"Height": 4.7,
+		"Width": 4,
+		"Height": 4.6,
 		"Image": "tech21-ssansamp-geddy-lee-yyz.png"
+	},
+	{
+		"Brand":"Tech 21 NYC",
+		"Name":"Sansamp YYZ Shape-shifter",
+		"Width":4,
+		"Height":4.6,
+		"Image":"tech21-yyz-shape-shifter.png"
+	},
+	{
+		"Brand":"Tech 21 NYC",
+		"Name":"Sansamp YYZ Shape-shifter MP40",
+		"Width":4,
+		"Height":4.6,
+		"Image":"tech21-yyz-mp40.png"
 	},
 	{
 		"Brand": "Tech 21 NYC",
@@ -39032,7 +39074,7 @@
 		"Height": 4.1875,
 		"Image": "zeppelin-quaverato.png"
  	},
-	{
+{
 		"Brand": "Zoom",
 		"Name": "G1x",
 		"Width": 9.21,
@@ -39066,6 +39108,13 @@
 		"Width": 3.05,
 		"Height": 5.13,
 		"Image": "zoom-ms50g.png"
+	},
+	{
+		"Brand":"Zoom",
+		"Name":"MS-50G+",
+		"Width":3.11,
+		"Height":5.23,
+		"Image":"zoom-ms50g+.png"
 	},
 	{
 		"Brand": "Zoom",
