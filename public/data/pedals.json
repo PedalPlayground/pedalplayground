@@ -16535,6 +16535,13 @@
 	},
 	{
 		"Brand": "Headrush",
+		"Name": "Core",
+		"Width": 16.08,
+		"Height": 9.27,
+		"Image": "headrush-core.png"
+	},
+	{
+		"Brand": "Headrush",
 		"Name": "MX5",
 		"Width": 11.6,
 		"Height": 5.94,
