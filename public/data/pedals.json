@@ -3465,18 +3465,18 @@
 		"Image": "blackmass-first-herald-v2-blue.png"
 	},
 	{
-		"Brand": "Blackstar",
-		"Name": "Dept. 10 Dual Distortion",
-		"Width": 6.18,
-		"Height": 4.6,
-		"Image": "blackstar-dept10-dual-dist.png"
-	},
-	{
 		"Brand": "Blackskycraft",
 		"Name": "Unusual EAS",
 		"Width": 3.7,
 		"Height": 5.98,
 		"Image": "blackskycraft-unusual-eas.png"
+	},
+	{
+		"Brand": "Blackstar",
+		"Name": "Dept. 10 Dual Distortion",
+		"Width": 6.18,
+		"Height": 4.6,
+		"Image": "blackstar-dept10-dual-dist.png"
 	},
 	{
 		"Brand": "Blackstar",
@@ -9298,15 +9298,15 @@
 	{
 		"Brand": "Donner",
 		"Name": "AB/Y",
-		"Width": 1.62,
-		"Height": 3.74,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "donner-aby.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Blues Drive",
-		"Width": 1.62,
-		"Height": 3.74,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "donner-blues-drive.png"
 	},
 	{
@@ -9319,8 +9319,8 @@
 	{
 		"Brand": "Donner",
 		"Name": "Dark Mouse",
-		"Width": 1.62,
-		"Height": 3.74,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "donner-dark-mouse.png"
 	},
 	{
@@ -9333,8 +9333,8 @@
 	{
 		"Brand": "Donner",
 		"Name": "Extreme Driver",
-		"Width": 1.62,
-		"Height": 3.74,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "donner-extreme-driver.png"
 	},
 	{
@@ -9347,8 +9347,8 @@
 	{
 		"Brand": "Donner",
 		"Name": "Golden Tremolo",
-		"Width": 1.62,
-		"Height": 3.74,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "donner-golden-tremolo.png"
 	},
 	{
@@ -9361,22 +9361,22 @@
 	{
 		"Brand": "Donner",
 		"Name": "Jet Convolution",
-		"Width": 1.62,
-		"Height": 3.74,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "donner-jet-convolution.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Morpher",
-		"Width": 1.62,
-		"Height": 3.74,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "donner-morpher.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Noise Killer",
-		"Width": 1.62,
-		"Height": 3.74,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "donner-noise-killer.png"
 	},
 	{
@@ -9396,8 +9396,8 @@
 	{
 		"Brand": "Donner",
 		"Name": "Tutti Love",
-		"Width": 1.62,
-		"Height": 3.74,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "donner-tutti.png"
 	},
 	{
@@ -9410,8 +9410,8 @@
 	{
 		"Brand": "Donner",
 		"Name": "Yellow Fall",
-		"Width": 1.62,
-		"Height": 3.74,
+		"Width": 1.65354,
+		"Height": 3.681102,
 		"Image": "donner-yellow-fall.png"
 	},
 	{
