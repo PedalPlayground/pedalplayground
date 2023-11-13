@@ -4245,7 +4245,7 @@
 		"Brand": "BOSS",
 		"Name": "DD-200 Digital Delay",
 		"Width": 4,
-		"Height": 5.4375,
+		"Height": 5.44,
 		"Image": "boss-dd200.png"
 	},
 	{
@@ -4364,7 +4364,7 @@
 		"Brand": "BOSS",
 		"Name": "EQ-200 Graphic Equalizer",
 		"Width": 4,
-		"Height": 5.4375,
+		"Height": 5.44,
 		"Image": "boss-eq200.png"
 	},
 	{
@@ -4587,8 +4587,8 @@
 	{
 		"Brand": "BOSS",
 		"Name": "GT-1000CORE Guitar Effects Processor",
-		"Width": 6.8125,
-		"Height": 5.375,
+		"Width": 6.81,
+		"Height": 5.38,
 		"Image": "boss-gt1000core.png"
 	},
 	{
@@ -4622,8 +4622,8 @@
 	{
 		"Brand": "BOSS",
 		"Name": "IR-200 Amp & IR Cabinet",
-		"Width": 4.06,
-		"Height": 5.4375,
+		"Width": 4,
+		"Height": 5.44,
 		"Image": "boss-ir200.png"
 	},
 	{
@@ -4658,7 +4658,7 @@
 		"Brand": "BOSS",
 		"Name": "MD-200 Modulation",
 		"Width": 4,
-		"Height": 5.4375,
+		"Height": 5.44,
 		"Image": "boss-md200.png"
 	},
 	{
@@ -4812,7 +4812,7 @@
 		"Brand": "BOSS",
 		"Name": "OD-200 Hybrid Drive",
 		"Width": 4,
-		"Height": 5.4375,
+		"Height": 5.44,
 		"Image": "boss-od200.png"
 	},
 	{
@@ -5013,6 +5013,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RV-200 Reverb",
+		"Width": 4,
+		"Height": 5.44,
+		"Image": "boss-rv200.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RV-3 Digital Reverb/Delay",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -5127,7 +5134,7 @@
 		"Brand": "BOSS",
 		"Name": "SY-200 Synthesizer",
 		"Width": 4,
-		"Height": 5.4375,
+		"Height": 5.44,
 		"Image": "boss-sy200.png"
 	},
 	{
@@ -6165,6 +6172,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-soft-focus.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "SuperCharged",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-supercharged.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -9140,6 +9154,13 @@
 		"Width": 1.65,
 		"Height": 3.65,
 		"Image": "disaster-area-nnb.png"
+	},
+	{
+		"Brand": "Divided by 13",
+		"Name": "Dyna-Ranger",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "dividedby13-dyna-ranger.png"
 	},
 	{
 		"Brand": "DMB",
@@ -14708,6 +14729,13 @@
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "Mini Deja Vibe",
+		"Width": 5.57,
+		"Height": 4,
+		"Image": "fulltone-mdv.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "OCD",
 		"Width": 2.75,
 		"Height": 4.5,
@@ -16560,6 +16588,13 @@
 		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "haunted-labs-witch-hammer.png"
+	},
+	{
+		"Brand": "Headrush",
+		"Name": "Core",
+		"Width": 16.08,
+		"Height": 9.27,
+		"Image": "headrush-core.png"
 	},
 	{
 		"Brand": "Headrush",
@@ -23091,6 +23126,13 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "mask-black-line-blur.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Maybe?",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "mask-maybe.png"
 	},
 	{
 		"Brand": "Mask Audio Electronics",
@@ -30751,6 +30793,20 @@
 		"Image": "rolls-mx28.png"
 	},
 	{
+		"Brand": "Rolls",
+		"Name": "PM50se Personal Monitor Amp",
+		"Width": 3.25,
+		"Height": 4,
+		"Image": "rolls-pm50se.png"
+	},
+	{
+		"Brand": "Rolls",
+		"Name": "PM351 Personal Monitor Station",
+		"Width": 4.75,
+		"Height": 4.3,
+		"Image": "rolls-pm351.png"
+	},
+	{
 		"Brand": "Ross",
 		"Name": "Chorus",
 		"Width": 3.57,
@@ -34855,6 +34911,97 @@
 	},
 	{
 		"Brand": "Tech 21 NYC",
+		"Name": "Bass Boost Chorus",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-bass-boost-chorus.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Bass Boost Fuzz",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-bass-boost-fuzz.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost Chorus",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-chorus.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost Comp",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-comp.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost Comp (White)",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-comp-white.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost Distortion (Metallic)",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-distortion-metallic.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost DLA",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-dla.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost Fuzz (Metallic)",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-fuzz-metallic.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost Overdrive",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-overdrive.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost Overdrive (Metallic)",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-overdrive-metallic.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost RVB",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-rvb.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost RVB Trails",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-rvb-trails"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Boost RVB Trails (Makeover)",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-boost-rvb-trails-makeover"
+	},
+	{
+		"Brand": "Tech 21 NYC",
 		"Name": "DI 2112",
 		"Width": 6.38,
 		"Height": 3.97,
@@ -34869,10 +35016,45 @@
 	},
 	{
 		"Brand": "Tech 21 NYC",
+		"Name": "Hot-Rod Plexi",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-hot-rod-plexi.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
 		"Name": "Leeds",
 		"Width": 3.89,
 		"Height": 4.7,
 		"Image": "tech21-leeds.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "OMG",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-omg.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Q\\Strip",
+		"Width": 5.03,
+		"Height": 3.7,
+		"Image": "tech21-qstrip.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Red Ripper",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-red-ripper.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Roto Choir",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-roto-choir.png"
 	},
 	{
 		"Brand": "Tech 21 NYC",
@@ -34904,24 +35086,38 @@
 	},
 	{
 		"Brand": "Tech 21 NYC",
-		"Name": "VT Bass DI",
-		"Width": 5.03,
-		"Height": 3.7,
-		"Image": "tech21-vtbassdi.png"
+		"Name": "Sansamp Street Driver 48",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-street-driver.png"
 	},
 	{
 		"Brand": "Tech 21 NYC",
 		"Name": "Sansamp YYZ",
-		"Width": 3.89,
-		"Height": 4.7,
+		"Width": 4,
+		"Height": 4.6,
 		"Image": "tech21-ssansamp-geddy-lee-yyz.png"
 	},
 	{
 		"Brand": "Tech 21 NYC",
-		"Name": "Q\\Strip",
+		"Name": "Sansamp YYZ Shape-shifter",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-yyz-shape-shifter.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Sansamp YYZ Shape-shifter (MP40)",
+		"Width": 4,
+		"Height": 4.6,
+		"Image": "tech21-yyz-mp40.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "VT Bass DI",
 		"Width": 5.03,
 		"Height": 3.7,
-		"Image": "tech21-qstrip.png"
+		"Image": "tech21-vtbassdi.png"
 	},
 	{
 		"Brand": "Teenage Engineering",
@@ -39157,6 +39353,13 @@
 		"Width": 3.05,
 		"Height": 5.13,
 		"Image": "zoom-ms50g.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "MS-50G+",
+		"Width": 3.11,
+		"Height": 5.23,
+		"Image": "zoom-ms50g+.png"
 	},
 	{
 		"Brand": "Zoom",
