@@ -57,14 +57,16 @@
 		<header class="site-header">
 			<h1><b>Pedal</b>Playground</h1>
 			<nav>
-				<a href="https://github.com/PedalPlayground/PedalPlayground.github.io/">Change Log</a>
-				<a href="https://www.paypal.me/travlehman" target="_blank">Donate</a>
-				<!--<a
-									class="hidden-xs"
-									href="https://github.com/PedalPlayground/PedalPlayground.github.io#contributing"
-									target="_blank"
-									>Contribute
-								</a>-->
+				<!-- <a href="https://github.com/PedalPlayground/PedalPlayground.github.io/">Change Log</a> 
+				<a href="https://www.paypal.me/travlehman" target="_blank">Donate</a> -->
+				<a style="vertical-align: middle; display: inline-flex" class="settings-trigger" href="#" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" width="27" height="18" fill="none">
+						<rect width="27" height="2" y="3" fill="#2F2F31" rx="1"/>
+						<circle class="top" cx="10" cy="4" r="3" fill="#fff" stroke="#2F2F31" stroke-width="2"/>
+						<rect width="27" height="2" y="13" fill="#2F2F31" rx="1"/>
+						<circle class="bottom" cx="18" cy="14" r="3" fill="#fff" stroke="#2F2F31" stroke-width="2"/>
+					</svg>
+				</a>
 			</nav>
 		</header>
 
@@ -78,9 +80,9 @@
 				<div class="sidebar__inner">
 					<div class="sidebar__scroll">
 						<div class="sidebar__section">
-							<h2 class="h4">Add a Pedalboard</h2>
+							<label class="h4" for="select-a-pedalboard">Add a Pedalboard</label>
 							<form id="add-pedalboard">
-								<p><select class="pedalboard-list form-control"></select></p>
+								<p><select id="select-a-pedalboard" class="pedalboard-list form-control"></select></p>
 								<button
 									id="add-selected-pedalboard"
 									class="btn btn-primary btn-block"
@@ -91,9 +93,9 @@
 						</div>
 
 						<div class="sidebar__section">
-							<h2 class="h4">Add a Pedal</h2>
+							<label class="h4" for="select-a-pedal">Add a Pedal</label>
 							<form id="add-pedal">
-								<p><select class="pedal-list form-control"></select></p>
+								<p><select id="select-a-pedal" class="pedal-list form-control"></select></p>
 								<button id="add-selected-pedal" class="btn btn-primary btn-block">
 									Add Pedal
 								</button>
@@ -132,22 +134,24 @@
 								<div role="tabpanel" class="tab-pane active" id="custom-pedalboard">
 									<form id="add-custom-pedalboard">
 										<div class="form-element left">
-											<label for="">Width <em>(inches)</em></label>
+											<label for="custom-pb-width">Width <em class="units">(inches)</em></label>
 											<input
+												id="custom-pb-width"
 												type="number"
 												class="custom-width form-control"
-												placeholder="2.75"
+												placeholder="24"
 												value=""
 												required
 											/>
 										</div>
 
 										<div class="form-element left">
-											<label for="">Height <em>(inches)</em></label>
+											<label for="custom-pb-height">Height <em class="units">(inches)</em></label>
 											<input
+												id="custom-pb-height"
 												type="number"
 												class="custom-height form-control"
-												placeholder="4.25"
+												placeholder="12"
 												value=""
 												required
 											/>
@@ -165,8 +169,9 @@
 								<div role="tabpanel" class="tab-pane" id="custom-pedal">
 									<form id="add-custom-pedal">
 										<div class="form-element">
-											<label>Name <em>(optional)</em></label>
+											<label for="custom-pedal-name">Name <em>(optional)</em></label>
 											<input
+												id="custom-pedal-name"
 												class="custom-name form-control"
 												type="type"
 												name="custom-pedal-name"
@@ -176,8 +181,9 @@
 										</div>
 
 										<div class="form-element left">
-											<label for="">Width <em>(inches)</em></label>
+											<label for="custom-p-width">Width <em class="units">(inches)</em></label>
 											<input
+												id="custom-p-width"
 												type="number"
 												class="custom-width form-control"
 												placeholder="2.75"
@@ -187,8 +193,9 @@
 										</div>
 
 										<div class="form-element left">
-											<label for="">Height <em>(inches)</em></label>
+											<label for="custom-p-height">Height <em class="units">(inches)</em></label>
 											<input
+												id="custom-p-height"
 												type="number"
 												class="custom-height form-control"
 												placeholder="4.25"
@@ -198,9 +205,10 @@
 										</div>
 
 										<div class="form-element">
-											<label>Color</label>
+											<label for="custom-pedal-color">Color</label>
 											<div class="input-group custom-color-block">
 												<input
+													id="custom-pedal-color"
 													class="custom-color form-control"
 													type="type"
 													name="favcolor"
@@ -223,7 +231,7 @@
 							</div>
 						</div>
 
-						<div id="canvas-scale-form" class="sidebar__section form-inline">
+						<!-- <div id="canvas-scale-form" class="sidebar__section form-inline">
 							<h4>Canvas Scale</h4>
 							<div class="input-group">
 								<div class="input-group-addon input-sm">Resolution</div>
@@ -247,7 +255,8 @@
 									aria-hidden="true"
 								></span>
 							</a>
-						</div>
+
+						</div> -->
 
 						<div class="sidebar__section">
 							<button id="clear-canvas" class="btn-reset text-danger" data-toggle="modal" data-target="#clear-canvas-modal">
@@ -271,7 +280,22 @@
 			<div class="canvas">
 				<input id="multiplier" type="hidden" value="32" />
 			</div>
+			<div class="settings-popover panel hide">
+				<h4>Settings</h4>
+				<div class="panel__action">
+					<label for="convert-units" class="convert-units">Use mm for units</label>
+					<input id="convert-units" type="checkbox">
+				</div>
+				<div class="panel__action">
+					<label for="canvas-scale">Canvas scale</label>
+					<input class="form-control input-sm" id="canvas-scale" type="number" value="25" />
+				</div>
+			</div>
 		</div>
+
+		<button id="clear-canvas" class="halp" data-toggle="modal" data-target="#halp-modal">
+			🚧 Help me pay for Pedal Playground's new server!
+		</button>
 
 		<div id="clear-canvas-modal" class="modal fade" tabindex="-1" role="dialog">
 			<div class="modal-dialog" role="document">
@@ -337,7 +361,37 @@
 			</div>
 		</div>
 
-		<script type="text/javascript" src="public/scripts/scripts-min.js"></script>
+		<div id="halp-modal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p>
+							You may have noticed that updates slowed to a halt over the last few months. This is because Pedal Playground exceeded the file storage allowed from GitHub Pages where the site was hosted since it's creation. 
+						</p>
+						<p>I have since moved Pedal Playground to a paid dedicated server that can keep up with storage demands, but server resources are not cheap. If you find Pedal Playground useful and would think about donating what you think it's worth to you, I would be extremely grateful! </p>
+						<p>Thank you for your support and thank you for using Pedal Playground.</p>
+
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Close
+						</button>
+						<a href="https://www.paypal.me/travlehman" target="_blank" class="btn btn-primary">
+							Donate
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/2.2.0/draggabilly.pkgd.min.js" integrity="sha512-zBAct6t0RFMOkOv9I+sMKzp4rHVqt/5PJBp5tUpO0y/zV9Ret0qh2nQP0+7AehWwRF5M0pLWefnBAZeCB7J3xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha512-oBTprMeNEKCnqfuqKd6sbvFzmFQtlXS3e0C/RGFV0hD6QzhHV+ODfaQbAlmY6/q0ubbwlAM/nCJjkrgA3waLzg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.2/js/bootstrap-colorpicker.min.js" integrity="sha512-Inb8rvDBBswSGp+fMJmR7y+HgWACE/2m1pj2h1ItXBGt7NbI0llkYIqp7bgzibqom5rSqTt84Cqug9UQV1+e8w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js" integrity="sha512-Y1UCb35/WpQMj8SlTwW43Q+vaROlBiuJ3BBpdF646G4WjXYp417N7OzlmOVWTxOTaiFIZt1CWnby8G9J6u2EoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script type="text/javascript" src="public/scripts/scripts.js"></script>
+		
 		<script>
 			(
 				function (i, s, o, g, r, a, m) {

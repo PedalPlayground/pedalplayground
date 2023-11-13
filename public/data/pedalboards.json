@@ -343,6 +343,27 @@
 		"Image": "gokko-medium.png"
 	},
 	{
+		"Brand": "Goodwood Audio",
+		"Name": "Lift 12",
+		"Width": 12,
+		"Height": 5,
+		"Image": "goodwood-lift-12.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
+		"Name": "Lift 16",
+		"Width": 16,
+		"Height": 5,
+		"Image": "goodwood-lift-16.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
+		"Name": "Lift 21",
+		"Width": 21,
+		"Height": 5,
+		"Image": "goodwood-lift-21.png"
+	},
+	{
 		"Brand": "Harley Benton",
 		"Name": "SpaceShip 40",
 		"Width": 17.7165,

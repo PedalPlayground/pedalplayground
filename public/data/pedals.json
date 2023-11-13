@@ -4565,6 +4565,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GT-1 Guitar Effects Processor",
+		"Width": 12,
+		"Height": 5.8,
+		"Image": "boss-gt1.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GT-8 Guitar Effects Processor",
 		"Width": 20.28,
 		"Height": 9.92,
@@ -4663,7 +4670,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "MD-L Metal Core",
+		"Name": "ML-2 Metal Core",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ml2.png"
@@ -4898,6 +4905,13 @@
 		"Width": 4,
 		"Height": 5.4375,
 		"Image": "boss-rc10r.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-2 Loop Station",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-rc2.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -7438,7 +7452,7 @@
 		"Name": "CAE Wah",
 		"Width": 4,
 		"Height": 10,
-		"Image": "cry-baby-mc404.png"
+		"Image": "dunlop-mc404.png"
 	},
 	{
 		"Brand": "Cry Baby",
@@ -9294,6 +9308,13 @@
 		"Width": 1.62,
 		"Height": 3.74,
 		"Image": "donner-extreme-driver.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Giant Metal",
+		"Width": 1.66,
+		"Height": 3.76,
+		"Image": "donner-giant-metal.png"
 	},
 	{
 		"Brand": "Donner",
@@ -11744,6 +11765,13 @@
 		"Width": 1.99,
 		"Height": 3.65,
 		"Image": "ehx-pico-oceans-3verb.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico Platform Compressor/Limiter",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-platform.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -16591,23 +16619,30 @@
 	},
 	{
 		"Brand": "Hologram Electronics",
+		"Name": "Chroma Console",
+		"Width": 5,
+		"Height": 5.65,
+		"Image": "hologram-chroma-console.png"
+	},
+	{
+		"Brand": "Hologram Electronics",
 		"Name": "Dream Sequence",
-		"Width": 7.37,
-		"Height": 4.69,
+		"Width": 7.66,
+		"Height": 4.81,
 		"Image": "hologram-dream-sequence.png"
 	},
 	{
 		"Brand": "Hologram Electronics",
 		"Name": "Infinite Jets",
-		"Width": 7.37,
-		"Height": 4.69,
+		"Width": 7.66,
+		"Height": 4.81,
 		"Image": "hologram-infinite-jets.png"
 	},
 	{
 		"Brand": "Hologram Electronics",
 		"Name": "Microcosm",
 		"Width": 7.1,
-		"Height": 4.7,
+		"Height": 4.74,
 		"Image": "hologram-microcosm.png"
 	},
 	{
@@ -16707,6 +16742,20 @@
 		"Width": 5.28,
 		"Height": 4.67,
 		"Image": "hotone-ampero-mini.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Ampero II Press",
+		"Width": 3.03,
+		"Height": 6.38,
+		"Image": "hotone-ampero-ii-press.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Ampero II Stage",
+		"Width": 11.85,
+		"Height": 7.13,
+		"Image": "hotone-ampero-ii-stage.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -18632,6 +18681,13 @@
 		"Width": 3.7,
 		"Height": 1.78,
 		"Image": "jhs-little-black-buffer.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Lizard Queen (Big Box)",
+		"Width": 5.5,
+		"Height": 7.15,
+		"Image": "jhs-lizard-queen-box.png"
 	},
 	{
 		"Brand": "JHS",
@@ -21064,6 +21120,13 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
+		"Name": "Mandrake",
+		"Width": 2.59,
+		"Height": 4.92,
+		"Image": "kma-audio-machines-mandrake.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
 		"Name": "Minos",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -23343,7 +23406,7 @@
 		"Width": 5.78,
 		"Height": 4.76,
 		"Image": "mesaboogie-fluxfive.png"
-	},	
+	},
 	{
 		"Brand": "Mesa Boogie",
 		"Name": "Grid Slammer",
@@ -23406,7 +23469,7 @@
 		"Width": 5.78,
 		"Height": 4.76,
 		"Image": "mesaboogie-throttleboxeq.png"
-	},	
+	},
 	{
 		"Brand": "Mesa Boogie",
 		"Name": "Tone-Burst",
@@ -28442,6 +28505,13 @@
 	},
 	{
 		"Brand": "PastFx",
+		"Name": "18V Power Booster",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-18v-power-booster.png"
+	},
+	{
+		"Brand": "PastFx",
 		"Name": "80/A Flanger",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -28530,6 +28600,13 @@
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "pastfx-nick-james-foot-phaser.png"
+	},
+	{
+		"Brand": "PastFx",
+		"Name": "Patriarch",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-patriarch.png"
 	},
 	{
 		"Brand": "PastFx",
@@ -31004,13 +31081,6 @@
 	},
 	{
 		"Brand": "Shift Line",
-		"Name": "Twin MkIIIS",
-		"Width": 4.88,
-		"Height": 4.09,
-		"Image": "shiftline-twin-mkiiis.png"
-	},
-	{
-		"Brand": "Shift Line",
 		"Name": "Olympic Mk II",
 		"Width": 4.7,
 		"Height": 3.84,
@@ -32091,6 +32161,13 @@
 		"Brand": "Source Audio",
 		"Name": "Nemesis",
 		"Width": 4.53,
+		"Height": 4.5,
+		"Image": "source-audio-nemesis.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Nemesis ADT",
+		"Width": 4.5,
 		"Height": 4.5,
 		"Image": "source-audio-nemesis.png"
 	},

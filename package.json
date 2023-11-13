@@ -10,7 +10,6 @@
 		"start": "npm-run-all --parallel watch serve",
 		"build:sass": "sass  --no-source-map app/stylesheets:public/stylesheets",
 		"watch:sass": "sass  --no-source-map --watch app/stylesheets:public/stylesheets",
-		"watch:js": "rollup app/scripts/scripts.js -o public/scripts/scripts.js -f cjs",
 		"watch": "npm-run-all --parallel watch:*",
 		"serve": "browser-sync start --files app public --server ",
 		"build": "npm-run-all build:*",
