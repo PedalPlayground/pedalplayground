@@ -3997,6 +3997,13 @@
 		"Image": "bondi-sick-as-mk3.png"
 	},
 	{
+		"Brand": "Bondi Effects",
+		"Name": "Squish As",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "bondi-squish-as.png"
+	},
+	{
 		"Brand": "Boomerang",
 		"Name": "III Phrase Sampler",
 		"Width": 9.45,
