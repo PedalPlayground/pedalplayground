@@ -7848,6 +7848,13 @@
 	},
 	{
 		"Brand": "DanDrive",
+		"Name": "Bonk Machine",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "dandrive-bonk-machine.png"
+	},
+	{
+		"Brand": "DanDrive",
 		"Name": "Secret Machine Fuzz",
 		"Width": 2.6,
 		"Height": 4.89,
@@ -30917,6 +30924,27 @@
 		"Width": 2.9,
 		"Height": 5.13,
 		"Image": "sarno-solar-flare.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "3-Looper",
+		"Width": 9.75,
+		"Height": 2.74,
+		"Image": "saturnworks-3looper.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "4-Looper",
+		"Width": 9.75,
+		"Height": 2.74,
+		"Image": "saturnworks-4looper.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "5-Looper",
+		"Width": 9.75,
+		"Height": 2.74,
+		"Image": "saturnworks-5looper.png"
 	},
 	{
 		"Brand": "Saturnworks",
