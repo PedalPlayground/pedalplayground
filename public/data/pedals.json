@@ -15247,6 +15247,13 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "G3S",
+		"Width": 17.33,
+		"Height": 5.12,
+		"Image": "gigrig-g3s.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "G3",
 		"Width": 17.33,
 		"Height": 5.12,
