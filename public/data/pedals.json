@@ -18915,6 +18915,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "NOTAKLÖN",
+		"Width": 4.7,
+		"Height": 3.76,
+		"Image": "jhs-notaklon.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Overdrive Preamp",
 		"Width": 3.96,
 		"Height": 4.7,
