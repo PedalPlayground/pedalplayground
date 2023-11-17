@@ -337,6 +337,13 @@
 	},
 	{
 		"Brand": "Aclam",
+		"Name": "The Mocker",
+		"Width": 5.4,
+		"Height": 3.59,
+		"Image": "aclam-mocker.png"
+	},
+	{
+		"Brand": "Aclam",
 		"Name": "The Woman Tone",
 		"Width": 5.4,
 		"Height": 3.59,
@@ -37862,6 +37869,13 @@
 		"Width": 3.95,
 		"Height": 4.7,
 		"Image": "walrus-melee.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Meraki",
+		"Width": 4.82,
+		"Height": 5.7,
+		"Image": "walrus-meraki.png"
 	},
 	{
 		"Brand": "Walrus Audio",
