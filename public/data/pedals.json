@@ -659,6 +659,13 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Spectron",
+		"Width": 5.75,
+		"Height": 4.80,
+		"Image": "aion-spectron.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Quantum",
 		"Width": 2.6,
 		"Height": 4.97,
