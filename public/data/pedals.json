@@ -22778,6 +22778,13 @@
 		"Image": "maestro-titan-boost.png"
 	},
 	{
+		"Brand": "Magnetic Effects",
+		"Name": "White Atom v3",
+		"Width": 2.36,
+		"Height": 4.65,
+		"Image": "magnetic-effects-white-atom-v3.png"
+	},
+	{
 		"Brand": "Mantic Conceptual",
 		"Name": "Hulk",
 		"Width": 2.52,
