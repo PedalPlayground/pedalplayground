@@ -1470,6 +1470,13 @@
 		"Image": "analogman-sunlion.png"
 	},
 	{
+		"Brand": "Anarchy Audio",
+		"Name": "Gold Class",
+		"Width": 2.36,
+		"Height": 4.41,
+		"Image": "anarchy-audio-gold-class.png"
+	},
+	{
 		"Brand": "Anasounds",
 		"Name": "Ages",
 		"Width": 2.52,
