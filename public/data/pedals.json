@@ -16618,6 +16618,13 @@
 		"Image": "headrush-pedalboard.png"
 	},
 	{
+		"Brand": "HBE",
+		"Name": "Psilocybe",
+		"Width": 3.86,
+		"Height": 4.57,
+		"Image": "hbe-psilocybe.png"
+	},
+	{
 		"Brand": "Heather Brown",
 		"Name": "Sensation Fuzzdrive",
 		"Width": 3,
