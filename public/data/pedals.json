@@ -36,6 +36,13 @@
 	},
 	{
 		"Brand": "1981 Inventions",
+		"Name": "DRV (Hyperfade white)",
+		"Width": 3.7,
+		"Height": 4.58,
+		"Image": "1981-inventions-drv-hyperfade-white.png"
+	},
+	{
+		"Brand": "1981 Inventions",
 		"Name": "DRV (Outline)",
 		"Width": 3.7,
 		"Height": 4.58,
