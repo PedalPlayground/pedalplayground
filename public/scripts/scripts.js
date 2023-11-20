@@ -115,6 +115,15 @@ $(document).ready(function () {
 		e.preventDefault();
 	});
 
+	$("body").on("click", "#save-canvas", function (e) {
+		downloadPedalCanvas("canvas.json");
+	});
+
+	$("body").on("click", "#load-canvas", function (e) {
+		uploadPedalCanvas();
+		savePedalCanvas();
+	});
+
 	$("body").on("click", "#clear-canvas-confirmation", function () {
 		$(".canvas").empty();
 		$("#clear-canvas-modal").modal("hide");
@@ -500,6 +509,67 @@ function readyCanvas() {
 function savePedalCanvas() {
 	console.log("Canvas Saved!");
 	localStorage["pedalCanvas"] = JSON.stringify($(".canvas").html());
+}
+
+function exportPedalCanvas() {
+	return new Blob(
+		[ JSON.stringify(
+			{
+				source: "pedalplayground.com",
+				version: "1.0",
+				canvas: JSON.parse(localStorage["pedalCanvas"])
+			}
+		)],
+		{ type: "application/json" }
+	);
+}
+
+function downloadPedalCanvas(filename) {
+	console.log("Downloading canvas to " + filename);
+
+	const blob = exportPedalCanvas();
+
+	const url = window.URL.createObjectURL(blob);
+
+	const a = document.createElement("a");
+	a.style.display = "none";
+	a.href = url;
+	a.download = filename;
+	document.body.appendChild(a);
+	a.click();
+
+	window.URL.revokeObjectURL(url);
+}
+
+function importPedalCanvas(file) {
+	console.log("Importing canvas from " + file);
+
+	var reader = new FileReader();
+
+	reader.addEventListener(
+		"load",
+		() => {
+			blob = JSON.parse(reader.result);
+
+			// TODO: check source and version
+			
+			$(".canvas").html(blob.canvas);
+		},
+		false,
+	);
+
+	reader.readAsText(file);
+}
+
+function uploadPedalCanvas() {
+	console.log("Uploading canvas ...");
+	var input = document.createElement("input");
+	input.type = 'file';
+	input.onchange = _ => {
+		var file = input.files[0];
+		importPedalCanvas(file);
+	};
+	input.click();
 }
 
 function rotatePedal(pedal) {
