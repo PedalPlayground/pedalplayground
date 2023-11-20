@@ -27609,6 +27609,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "BL-52",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "obne-bl-52.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "BL-82",
 		"Width": 2.74,
 		"Height": 4.5,
