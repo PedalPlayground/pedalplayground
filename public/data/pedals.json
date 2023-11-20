@@ -8996,6 +8996,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "TR-7 Tremolo/Rotary",
+		"Width": 3.43,
+		"Height": 5.25,
+		"Image": "digitech-tr7.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Trio Looper",
 		"Width": 3.25,
 		"Height": 5.4,
@@ -30980,6 +30987,13 @@
 		"Width": 4,
 		"Height": 1.75,
 		"Image": "saturnworks-looper-horizontal.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "Tap Tempo",
+		"Width": 2,
+		"Height": 2.13,
+		"Image": "saturnworks-tap-tempo.png"
 	},
 	{
 		"Brand": "Selah",
