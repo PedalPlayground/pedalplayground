@@ -337,6 +337,13 @@
 	},
 	{
 		"Brand": "Aclam",
+		"Name": "The Mocker",
+		"Width": 5.4,
+		"Height": 3.59,
+		"Image": "aclam-mocker.png"
+	},
+	{
+		"Brand": "Aclam",
 		"Name": "The Woman Tone",
 		"Width": 5.4,
 		"Height": 3.59,
@@ -3997,6 +4004,13 @@
 		"Image": "bondi-sick-as-mk3.png"
 	},
 	{
+		"Brand": "Bondi Effects",
+		"Name": "Squish As",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "bondi-squish-as.png"
+	},
+	{
 		"Brand": "Boomerang",
 		"Name": "III Phrase Sampler",
 		"Width": 9.45,
@@ -6539,6 +6553,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Lossy",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-lossy.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Midibox",
 		"Width": 3.47,
 		"Height": 1.58,
@@ -7848,6 +7869,13 @@
 	},
 	{
 		"Brand": "DanDrive",
+		"Name": "Bonk Machine",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "dandrive-bonk-machine.png"
+	},
+	{
+		"Brand": "DanDrive",
 		"Name": "Secret Machine Fuzz",
 		"Width": 2.6,
 		"Height": 4.89,
@@ -8972,6 +9000,13 @@
 		"Width": 3.13,
 		"Height": 4.94,
 		"Image": "digitech-tone-driver.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "TR-7 Tremolo/Rotary",
+		"Width": 3.43,
+		"Height": 5.25,
+		"Image": "digitech-tr7.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -15862,6 +15897,13 @@
 		"Image": "greer-tone-smuggler.png"
 	},
 	{
+		"Brand": "Grobert Effects",
+		"Name": "The One Chorus",
+		"Width": 7.36,
+		"Height": 4.78,
+		"Image": "grobert-the-one-chorus.png"
+	},
+	{
 		"Brand": "Ground Control",
 		"Name": "Amaterasu",
 		"Width": 2.73,
@@ -18891,6 +18933,13 @@
 		"Width": 1.96,
 		"Height": 3.8,
 		"Image": "jhs-mute-switch.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "NOTAKLÖN",
+		"Width": 4.7,
+		"Height": 3.76,
+		"Image": "jhs-notaklon.png"
 	},
 	{
 		"Brand": "JHS",
@@ -27567,6 +27616,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "BL-52",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "obne-bl-52.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "BL-82",
 		"Width": 2.74,
 		"Height": 4.5,
@@ -30920,10 +30976,38 @@
 	},
 	{
 		"Brand": "Saturnworks",
+		"Name": "3-Looper",
+		"Width": 9.75,
+		"Height": 2.74,
+		"Image": "saturnworks-3looper.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "4-Looper",
+		"Width": 9.75,
+		"Height": 2.74,
+		"Image": "saturnworks-4looper.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "5-Looper",
+		"Width": 9.75,
+		"Height": 2.74,
+		"Image": "saturnworks-5looper.png"
+	},
+	{
+		"Brand": "Saturnworks",
 		"Name": "Compact Looper (Horizontal)",
 		"Width": 4,
 		"Height": 1.75,
 		"Image": "saturnworks-looper-horizontal.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "Tap Tempo",
+		"Width": 2,
+		"Height": 2.13,
+		"Image": "saturnworks-tap-tempo.png"
 	},
 	{
 		"Brand": "Selah",
@@ -37813,6 +37897,13 @@
 		"Width": 3.95,
 		"Height": 4.7,
 		"Image": "walrus-melee.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Meraki",
+		"Width": 4.82,
+		"Height": 5.7,
+		"Image": "walrus-meraki.png"
 	},
 	{
 		"Brand": "Walrus Audio",
