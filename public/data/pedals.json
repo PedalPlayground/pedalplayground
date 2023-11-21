@@ -6553,6 +6553,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Lossy",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-lossy.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Midibox",
 		"Width": 3.47,
 		"Height": 1.58,
