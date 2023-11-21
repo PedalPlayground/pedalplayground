@@ -115,6 +115,18 @@ $(document).ready(function () {
 		e.preventDefault();
 	});
 
+	$("body").on("click", "#save-canvas", function (e) {
+		const currentDate = new Date().toLocaleDateString() + new Date().toLocaleTimeString();
+
+		downloadPedalCanvas("Pedal Playground - " + currentDate + ".json");
+	});
+
+	$("body").on("click", "#load-canvas", function (e) {
+		uploadPedalCanvas();
+		savePedalCanvas();
+		readyCanvas();
+	});
+
 	$("body").on("click", "#clear-canvas-confirmation", function () {
 		$(".canvas").empty();
 		$("#clear-canvas-modal").modal("hide");
@@ -276,7 +288,7 @@ $(document).ready(function () {
 		} else if (height == "") {
 			$("#add-custom-pedal .custom-height").addClass("invalid").focus();
 		} else {
-			console.log("add custom pedal...");
+			//console.log("add custom pedal...");
 			$(".canvas").append(pedal);
 			readyCanvas();
 			// console.log(dims);
@@ -306,7 +318,7 @@ $(document).ready(function () {
 		} else if (height == "") {
 			$("#add-custom-pedalboard .custom-height").addClass("invalid").focus();
 		} else {
-			console.log("add custom pedalboard...");
+			//console.log("add custom pedalboard...");
 			var dims = width + '" x ' + height + '"';
 			var pedalboard =
 				'<div id="item-' +
@@ -449,6 +461,8 @@ function convertIn(value) {
 }
 
 function readyCanvas() {
+	//console.log("canvas ready!");
+
 	var $draggable = $(".canvas .pedal, .canvas .pedalboard").draggabilly({
 		containment: ".canvas",
 	});
@@ -458,7 +472,7 @@ function readyCanvas() {
 	});
 
 	$draggable.on("dragEnd", function (e) {
-		console.log("dragEnd");
+		//console.log("dragEnd");
 		ga("send", "event", "Canvas", "moved", "dragend");
 		savePedalCanvas();
 	});
@@ -498,8 +512,71 @@ function readyCanvas() {
 }
 
 function savePedalCanvas() {
-	console.log("Canvas Saved!");
+	//console.log("Canvas Saved!");
 	localStorage["pedalCanvas"] = JSON.stringify($(".canvas").html());
+	// readyCanvas();
+}
+
+function exportPedalCanvas() {
+	return new Blob(
+		[ JSON.stringify(
+			{
+				source: "pedalplayground.com",
+				version: "1.0",
+				canvas: JSON.parse(localStorage["pedalCanvas"])
+			}
+		)],
+		{ type: "application/json" }
+	);
+}
+
+function downloadPedalCanvas(filename) {
+	//console.log("Downloading canvas to " + filename);
+
+	const blob = exportPedalCanvas();
+
+	const url = window.URL.createObjectURL(blob);
+
+	const a = document.createElement("a");
+	a.style.display = "none";
+	a.href = url;
+	a.download = filename;
+	document.body.appendChild(a);
+	a.click();
+
+	window.URL.revokeObjectURL(url);
+}
+
+function importPedalCanvas(file) {
+	//console.log("Importing canvas from " + file);
+
+	var reader = new FileReader();
+
+	reader.addEventListener(
+		"load",
+		() => {
+			blob = JSON.parse(reader.result);
+
+			// TODO: check source and version
+			
+			$(".canvas").html(blob.canvas);
+			readyCanvas();
+		},
+		false,
+	);
+
+	reader.readAsText(file);
+}
+
+function uploadPedalCanvas() {
+	//console.log("Uploading canvas ...");
+	var input = document.createElement("input");
+	input.type = 'file';
+	input.onchange = _ => {
+		var file = input.files[0];
+		importPedalCanvas(file);
+	};
+	input.click();
 }
 
 function rotatePedal(pedal) {
@@ -655,7 +732,7 @@ window.GetPedalBoardData = function () {
 					)
 				);
 			}
-			console.log("Pedalboard data loaded");
+			//console.log("Pedalboard data loaded");
 			//Sort brands and pedals alphabetically
 			pedalboards.sort(function (a, b) {
 				if (a.Brand < b.Brand) {
