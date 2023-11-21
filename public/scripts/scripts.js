@@ -116,12 +116,15 @@ $(document).ready(function () {
 	});
 
 	$("body").on("click", "#save-canvas", function (e) {
-		downloadPedalCanvas("canvas.json");
+		const currentDate = new Date().toLocaleDateString() + new Date().toLocaleTimeString();
+
+		downloadPedalCanvas("Pedal Playground - " + currentDate + ".json");
 	});
 
 	$("body").on("click", "#load-canvas", function (e) {
 		uploadPedalCanvas();
 		savePedalCanvas();
+		readyCanvas();
 	});
 
 	$("body").on("click", "#clear-canvas-confirmation", function () {
@@ -285,7 +288,7 @@ $(document).ready(function () {
 		} else if (height == "") {
 			$("#add-custom-pedal .custom-height").addClass("invalid").focus();
 		} else {
-			console.log("add custom pedal...");
+			//console.log("add custom pedal...");
 			$(".canvas").append(pedal);
 			readyCanvas();
 			// console.log(dims);
@@ -315,7 +318,7 @@ $(document).ready(function () {
 		} else if (height == "") {
 			$("#add-custom-pedalboard .custom-height").addClass("invalid").focus();
 		} else {
-			console.log("add custom pedalboard...");
+			//console.log("add custom pedalboard...");
 			var dims = width + '" x ' + height + '"';
 			var pedalboard =
 				'<div id="item-' +
@@ -458,6 +461,8 @@ function convertIn(value) {
 }
 
 function readyCanvas() {
+	//console.log("canvas ready!");
+
 	var $draggable = $(".canvas .pedal, .canvas .pedalboard").draggabilly({
 		containment: ".canvas",
 	});
@@ -467,7 +472,7 @@ function readyCanvas() {
 	});
 
 	$draggable.on("dragEnd", function (e) {
-		console.log("dragEnd");
+		//console.log("dragEnd");
 		ga("send", "event", "Canvas", "moved", "dragend");
 		savePedalCanvas();
 	});
@@ -507,8 +512,9 @@ function readyCanvas() {
 }
 
 function savePedalCanvas() {
-	console.log("Canvas Saved!");
+	//console.log("Canvas Saved!");
 	localStorage["pedalCanvas"] = JSON.stringify($(".canvas").html());
+	// readyCanvas();
 }
 
 function exportPedalCanvas() {
@@ -525,7 +531,7 @@ function exportPedalCanvas() {
 }
 
 function downloadPedalCanvas(filename) {
-	console.log("Downloading canvas to " + filename);
+	//console.log("Downloading canvas to " + filename);
 
 	const blob = exportPedalCanvas();
 
@@ -542,7 +548,7 @@ function downloadPedalCanvas(filename) {
 }
 
 function importPedalCanvas(file) {
-	console.log("Importing canvas from " + file);
+	//console.log("Importing canvas from " + file);
 
 	var reader = new FileReader();
 
@@ -554,6 +560,7 @@ function importPedalCanvas(file) {
 			// TODO: check source and version
 			
 			$(".canvas").html(blob.canvas);
+			readyCanvas();
 		},
 		false,
 	);
@@ -562,7 +569,7 @@ function importPedalCanvas(file) {
 }
 
 function uploadPedalCanvas() {
-	console.log("Uploading canvas ...");
+	//console.log("Uploading canvas ...");
 	var input = document.createElement("input");
 	input.type = 'file';
 	input.onchange = _ => {
@@ -725,7 +732,7 @@ window.GetPedalBoardData = function () {
 					)
 				);
 			}
-			console.log("Pedalboard data loaded");
+			//console.log("Pedalboard data loaded");
 			//Sort brands and pedals alphabetically
 			pedalboards.sort(function (a, b) {
 				if (a.Brand < b.Brand) {

@@ -259,15 +259,6 @@
 						</div> -->
 
 						<div class="sidebar__section">
-							<button id="save-canvas" class="btn btn-primary btn-block">
-								Save Playground
-							</button>
-							<button id="load-canvas" class="btn btn-primary btn-block">
-								Load Playground
-							</button>
-						</div>
-
-						<div class="sidebar__section">
 							<button id="clear-canvas" class="btn-reset text-danger" data-toggle="modal" data-target="#clear-canvas-modal">
 								<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 								Reset Playground
@@ -297,6 +288,15 @@
 				<div class="panel__action">
 					<label for="canvas-scale">Canvas scale</label>
 					<input class="form-control input-sm" id="canvas-scale" type="number" value="25" />
+				</div>
+
+				<div class="panel__action" style="flex-direction: column;">
+					<button id="save-canvas" class="btn btn-default btn-block">
+						Save to File
+					</button>
+					<button id="load-canvas" class="btn btn-default btn-block">
+						Import from File
+					</button>
 				</div>
 			</div>
 		</div>
