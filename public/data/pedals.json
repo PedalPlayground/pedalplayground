@@ -36,6 +36,13 @@
 	},
 	{
 		"Brand": "1981 Inventions",
+		"Name": "DRV (Hyperfade white)",
+		"Width": 3.7,
+		"Height": 4.58,
+		"Image": "1981-inventions-drv-hyperfade-white.png"
+	},
+	{
+		"Brand": "1981 Inventions",
 		"Name": "DRV (Outline)",
 		"Width": 3.7,
 		"Height": 4.58,
@@ -656,6 +663,13 @@
 		"Width": 2.6,
 		"Height": 4.97,
 		"Image": "aion-prism.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Spectron",
+		"Width": 5.75,
+		"Height": 4.80,
+		"Image": "aion-spectron.png"
 	},
 	{
 		"Brand": "Aion FX",
@@ -1468,6 +1482,13 @@
 		"Width": 4.7,
 		"Height": 3.97,
 		"Image": "analogman-sunlion.png"
+	},
+	{
+		"Brand": "Anarchy Audio",
+		"Name": "Gold Class",
+		"Width": 2.36,
+		"Height": 4.41,
+		"Image": "anarchy-audio-gold-class.png"
 	},
 	{
 		"Brand": "Anasounds",
@@ -16653,6 +16674,13 @@
 		"Image": "headrush-pedalboard.png"
 	},
 	{
+		"Brand": "HBE",
+		"Name": "Psilocybe",
+		"Width": 3.86,
+		"Height": 4.57,
+		"Image": "hbe-psilocybe.png"
+	},
+	{
 		"Brand": "Heather Brown",
 		"Name": "Sensation Fuzzdrive",
 		"Width": 3,
@@ -22811,6 +22839,13 @@
 		"Width": 3.54,
 		"Height": 5.28,
 		"Image": "maestro-titan-boost.png"
+	},
+	{
+		"Brand": "Magnetic Effects",
+		"Name": "White Atom v3",
+		"Width": 2.36,
+		"Height": 4.65,
+		"Image": "magnetic-effects-white-atom-v3.png"
 	},
 	{
 		"Brand": "Mantic Conceptual",
