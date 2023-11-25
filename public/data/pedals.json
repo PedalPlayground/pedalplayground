@@ -9521,6 +9521,13 @@
 	},
 	{
 		"Brand": "Dr Scientist",
+		"Name": "Phreak",
+		"Width": 2.71,
+		"Height": 5.03,
+		"Image": "dr-scientist-phreak.png"
+	},
+	{
+		"Brand": "Dr Scientist",
 		"Name": "Reverberator",
 		"Width": 2.5,
 		"Height": 4.89,
@@ -9609,6 +9616,13 @@
 		"Width": 3.94,
 		"Height": 5.58,
 		"Image": "dreadbox-lethargy.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Psyclop",
+		"Width": 3.47,
+		"Height": 5.51,
+		"Image": "dreadbox-psyclop.png"
 	},
 	{
 		"Brand": "Dreadbox",
