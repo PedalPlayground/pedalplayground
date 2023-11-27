@@ -36,6 +36,13 @@
 	},
 	{
 		"Brand": "1981 Inventions",
+		"Name": "DRV (Hyperfade white)",
+		"Width": 3.7,
+		"Height": 4.58,
+		"Image": "1981-inventions-drv-hyperfade-white.png"
+	},
+	{
+		"Brand": "1981 Inventions",
 		"Name": "DRV (Outline)",
 		"Width": 3.7,
 		"Height": 4.58,
@@ -334,6 +341,13 @@
 		"Width": 5.4,
 		"Height": 3.59,
 		"Image": "aclam-dr-robert-up.png"
+	},
+	{
+		"Brand": "Aclam",
+		"Name": "The Mocker",
+		"Width": 5.4,
+		"Height": 3.59,
+		"Image": "aclam-mocker.png"
 	},
 	{
 		"Brand": "Aclam",
@@ -649,6 +663,13 @@
 		"Width": 2.6,
 		"Height": 4.97,
 		"Image": "aion-prism.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Spectron",
+		"Width": 5.75,
+		"Height": 4.80,
+		"Image": "aion-spectron.png"
 	},
 	{
 		"Brand": "Aion FX",
@@ -1468,6 +1489,13 @@
 		"Width": 4.7,
 		"Height": 3.97,
 		"Image": "analogman-sunlion.png"
+	},
+	{
+		"Brand": "Anarchy Audio",
+		"Name": "Gold Class",
+		"Width": 2.36,
+		"Height": 4.41,
+		"Image": "anarchy-audio-gold-class.png"
 	},
 	{
 		"Brand": "Anasounds",
@@ -4009,6 +4037,13 @@
 		"Width": 4.7,
 		"Height": 3.9,
 		"Image": "bondi-sick-as-mk3.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Squish As",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "bondi-squish-as.png"
 	},
 	{
 		"Brand": "Boomerang",
@@ -6553,6 +6588,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Lossy",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-lossy.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Midibox",
 		"Width": 3.47,
 		"Height": 1.58,
@@ -7862,6 +7904,13 @@
 	},
 	{
 		"Brand": "DanDrive",
+		"Name": "Bonk Machine",
+		"Width": 2.6,
+		"Height": 4.89,
+		"Image": "dandrive-bonk-machine.png"
+	},
+	{
+		"Brand": "DanDrive",
 		"Name": "Secret Machine Fuzz",
 		"Width": 2.6,
 		"Height": 4.89,
@@ -8986,6 +9035,13 @@
 		"Width": 3.13,
 		"Height": 4.94,
 		"Image": "digitech-tone-driver.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "TR-7 Tremolo/Rotary",
+		"Width": 3.43,
+		"Height": 5.25,
+		"Image": "digitech-tr7.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -15904,6 +15960,13 @@
 		"Image": "greer-tone-smuggler.png"
 	},
 	{
+		"Brand": "Grobert Effects",
+		"Name": "The One Chorus",
+		"Width": 7.36,
+		"Height": 4.78,
+		"Image": "grobert-the-one-chorus.png"
+	},
+	{
 		"Brand": "Ground Control",
 		"Name": "Amaterasu",
 		"Width": 2.73,
@@ -16658,6 +16721,13 @@
 		"Width": 23.6,
 		"Height": 11.2,
 		"Image": "headrush-pedalboard.png"
+	},
+	{
+		"Brand": "HBE",
+		"Name": "Psilocybe",
+		"Width": 3.86,
+		"Height": 4.57,
+		"Image": "hbe-psilocybe.png"
 	},
 	{
 		"Brand": "Heather Brown",
@@ -18940,6 +19010,13 @@
 		"Width": 1.96,
 		"Height": 3.8,
 		"Image": "jhs-mute-switch.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "NOTAKLÖN",
+		"Width": 4.7,
+		"Height": 3.76,
+		"Image": "jhs-notaklon.png"
 	},
 	{
 		"Brand": "JHS",
@@ -22811,6 +22888,13 @@
 		"Width": 3.54,
 		"Height": 5.28,
 		"Image": "maestro-titan-boost.png"
+	},
+	{
+		"Brand": "Magnetic Effects",
+		"Name": "White Atom v3",
+		"Width": 2.36,
+		"Height": 4.65,
+		"Image": "magnetic-effects-white-atom-v3.png"
 	},
 	{
 		"Brand": "Mantic Conceptual",
@@ -27630,6 +27714,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "BL-52",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "obne-bl-52.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "BL-82",
 		"Width": 2.74,
 		"Height": 4.5,
@@ -30990,10 +31081,38 @@
 	},
 	{
 		"Brand": "Saturnworks",
+		"Name": "3-Looper",
+		"Width": 9.75,
+		"Height": 2.74,
+		"Image": "saturnworks-3looper.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "4-Looper",
+		"Width": 9.75,
+		"Height": 2.74,
+		"Image": "saturnworks-4looper.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "5-Looper",
+		"Width": 9.75,
+		"Height": 2.74,
+		"Image": "saturnworks-5looper.png"
+	},
+	{
+		"Brand": "Saturnworks",
 		"Name": "Compact Looper (Horizontal)",
 		"Width": 4,
 		"Height": 1.75,
 		"Image": "saturnworks-looper-horizontal.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "Tap Tempo",
+		"Width": 2,
+		"Height": 2.13,
+		"Image": "saturnworks-tap-tempo.png"
 	},
 	{
 		"Brand": "Selah",
@@ -37890,6 +38009,13 @@
 		"Width": 3.95,
 		"Height": 4.7,
 		"Image": "walrus-melee.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Meraki",
+		"Width": 4.82,
+		"Height": 5.7,
+		"Image": "walrus-meraki.png"
 	},
 	{
 		"Brand": "Walrus Audio",

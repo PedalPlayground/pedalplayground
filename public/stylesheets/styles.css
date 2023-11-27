@@ -8304,6 +8304,12 @@ body .btn {
   transform: translateX(-10px);
 }
 
+@media (max-width: 959px) {
+  #export-canvas-controls {
+    display: none;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .modal-content {
     background: #201f22;
