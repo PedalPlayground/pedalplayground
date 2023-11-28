@@ -29856,6 +29856,13 @@
 	},
 	{
 		"Brand": "Radial Engineering",
+		"Name": "Ice Cube IC-1",
+		"Width": 4.20,
+		"Height": 1.60,
+		"Image": "radial-ice-cube.png"
+	},
+	{
+		"Brand": "Radial Engineering",
 		"Name": "J48",
 		"Width": 3.3,
 		"Height": 5,
