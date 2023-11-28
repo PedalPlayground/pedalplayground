@@ -17535,6 +17535,13 @@
 		"Image": "industrialectric-rm1n.png"
 	},
 	{
+		"Brand": "Industrialectric",
+		"Name": "RM-1N Altered Edition",
+		"Width": 6,
+		"Height": 5,
+		"Image": "industrialectric-rm1n-alt.png"
+	},
+	{
 		"Brand": "Instruments For A New Electric Music",
 		"Name": "Second Voice",
 		"Width": 3.68,
