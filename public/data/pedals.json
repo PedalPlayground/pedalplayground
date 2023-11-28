@@ -32880,10 +32880,31 @@
 	},
 	{
 		"Brand": "Stomp Under Foot",
+		"Name": "Pumpkin Pi",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "stomp-under-foot-pumpkin-pi.png"
+	},
+	{
+		"Brand": "Stomp Under Foot",
 		"Name": "Silverfish",
 		"Width": 4.7,
 		"Height": 3.87,
 		"Image": "stomp-under-foot-silverfish.png"
+	},
+	{
+		"Brand": "Stomp Under Foot",
+		"Name": "Skinner Box",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "stomp-under-foot-skinner-box.png"
+	},
+	{
+		"Brand": "Stomp Under Foot",
+		"Name": "Violet Menace",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "stomp-under-foot-violet-menace.png"
 	},
 	{
 		"Brand": "Stone Deaf FX",
