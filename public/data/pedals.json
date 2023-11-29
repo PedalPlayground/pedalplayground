@@ -13672,6 +13672,13 @@
 	},
 	{
 		"Brand": "Flower Pedals",
+		"Name": "Dahlia",
+		"Width": 2.87,
+		"Height": 4.85,
+		"Image": "flower-pedals-dahlia.png"
+	},
+	{
+		"Brand": "Flower Pedals",
 		"Name": "Dandelion",
 		"Width": 2.73,
 		"Height": 4.98,
