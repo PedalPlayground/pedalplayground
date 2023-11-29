@@ -36703,8 +36703,15 @@
 	},
 	{
 		"Brand": "Vemuram",
+		"Name": "Butter Machine",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "vemuram-butter-machine.png"
+	},
+	{
+		"Brand": "Vemuram",
 		"Name": "Jan Ray",
-		"Width": 2.70,
+		"Width": 2.7,
 		"Height": 4.42,
 		"Image": "vemuram-janray.png"
 	},
@@ -36712,7 +36719,7 @@
 		"Brand": "Vemuram",
 		"Name": "Myriad Fuzz",
 		"Width": 2.74,
-		"Height": 4.50,
+		"Height": 4.5,
 		"Image": "vemuram-myriad-fuzz.png"
 	},
 	{
