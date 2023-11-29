@@ -3871,6 +3871,13 @@
 		"Image": "blue-colander-tremond.png"
 	},
 	{
+		"Brand": "Blue FX",
+		"Name": "Nebula",
+		"Width": 4.82,
+		"Height": 3.08,
+		"Image": "bluefx-nebula.png"
+	},
+	{
 		"Brand": "BluGuitar",
 		"Name": "Amp1",
 		"Width": 9.65,
