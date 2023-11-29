@@ -17565,22 +17565,36 @@
 	{
 		"Brand": "Intensive Care Audio",
 		"Name": "Death Drive",
-		"Width": 3.9,
+		"Width": 3.78,
 		"Height": 4.9,
 		"Image": "ica-death-drive.png"
 	},
 	{
 		"Brand": "Intensive Care Audio",
 		"Name": "Fideleater",
-		"Width": 3.9,
-		"Height": 4.9,
+		"Width": 3.52,
+		"Height": 5.04,
 		"Image": "ica-fideleater.png"
 	},
 	{
 		"Brand": "Intensive Care Audio",
+		"Name": "Life Support",
+		"Width": 4.79,
+		"Height": 3.73,
+		"Image": "ica-life-suport.png"
+	},
+	{
+		"Brand": "Intensive Care Audio",
+		"Name": "Recover Phase",
+		"Width": 4.79,
+		"Height": 3.73,
+		"Image": "ica-recover-phase.png"
+	},
+	{
+		"Brand": "Intensive Care Audio",
 		"Name": "Vena Cava Filter",
-		"Width": 3.9,
-		"Height": 4.9,
+		"Width": 3.52,
+		"Height": 5.04,
 		"Image": "ica-vena-cava-filter.png"
 	},
 	{
