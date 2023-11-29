@@ -8310,6 +8310,12 @@ body .btn {
   }
 }
 
+@media (max-width: 1023px) {
+  .sense {
+    display: none;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .modal-content {
     background: #201f22;
