@@ -18271,6 +18271,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Dyna-ssoR (Legacy)",
+		"Width": 2.79,
+		"Height": 4.36,
+		"Image": "jam-dyna-ssor-legacy.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Eureka!",
 		"Width": 2.7,
 		"Height": 4.3,
@@ -18282,6 +18289,13 @@
 		"Width": 2.84,
 		"Height": 4.7,
 		"Image": "jam-fuzz-phrase-ltd.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Fuzz Phrase (Legacy)",
+		"Width": 2.79,
+		"Height": 4.36,
+		"Image": "jam-fuzz-phrase-legacy.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -18338,6 +18352,13 @@
 		"Width": 2.9,
 		"Height": 4.7,
 		"Image": "jam-red-muck.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Red Muck (Legacy)",
+		"Width": 2.79,
+		"Height": 4.36,
+		"Image": "jam-red-muck-legacy.png"
 	},
 	{
 		"Brand": "Jam Pedals",
