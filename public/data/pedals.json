@@ -1142,6 +1142,13 @@
 	},
 	{
 		"Brand": "Ammoon",
+		"Name": "EQ7",
+		"Width": 1.6,
+		"Height": 3.7,
+		"Image": "ammoon-eq7.png"
+	},
+	{
+		"Brand": "Ammoon",
 		"Name": "Pockdist",
 		"Width": 2.73,
 		"Height": 4.58,
@@ -2315,6 +2322,20 @@
 		"Width": 19,
 		"Height": 5.7,
 		"Image": "arturia-keystep.png"
+	},
+	{
+		"Brand": "Arturia",
+		"Name": "Microfreak",
+		"Width": 12.2,
+		"Height": 9.2,
+		"Image": "arturia-microfreak.png"
+	},
+	{
+		"Brand": "Arturia",
+		"Name": "Minifreak",
+		"Width": 22.75,
+		"Height": 9.2,
+		"Image": "arturia-minifreak.png"
 	},
 	{
 		"Brand": "Ashdown",
@@ -16772,6 +16793,13 @@
 		"Image": "henretta-orange-whip.png"
 	},
 	{
+		"Brand": "Hexe FX",
+		"Name": "Revolver IV",
+		"Width": 3.99,
+		"Height": 4.75,
+		"Image": "hexefx-revolver-iv.png"
+	},
+	{
 		"Brand": "Hilbish Designs",
 		"Name": "Compressimiser",
 		"Width": 4,
@@ -20844,6 +20872,13 @@
 		"Width": 17,
 		"Height": 4.1,
 		"Image": "kmi-12-step.png"
+	},
+	{
+		"Brand": "Keith McMillen Instruments",
+		"Name": "Softstep 2",
+		"Width": 17.51,
+		"Height": 4.21,
+		"Image": "keith-mcmillen-instruments-softstep-2.png"
 	},
 	{
 		"Brand": "Kemper",
@@ -29926,6 +29961,13 @@
 	},
 	{
 		"Brand": "Radial Engineering",
+		"Name": "Ice Cube IC-1",
+		"Width": 4.20,
+		"Height": 1.60,
+		"Image": "radial-ice-cube.png"
+	},
+	{
+		"Brand": "Radial Engineering",
 		"Name": "J48",
 		"Width": 3.3,
 		"Height": 5,
@@ -30171,10 +30213,31 @@
 	},
 	{
 		"Brand": "Rainger FX",
+		"Name": "Break Box",
+		"Width": 3.46,
+		"Height": 5.00,
+		"Image": "raingerfx-break-box.png"
+	},
+	{
+		"Brand": "Rainger FX",
+		"Name": "Chop Fuzzz",
+		"Width": 4.09,
+		"Height": 4.56,
+		"Image": "raingerfx-chop-fuzzz.png"
+	},
+	{
+		"Brand": "Rainger FX",
 		"Name": "Deep Space Pulsar",
 		"Width": 1.7,
 		"Height": 4.15,
 		"Image": "raingerfx-deep-space-pulsar.png"
+	},
+	{
+		"Brand": "Rainger FX",
+		"Name": "Drone Rainger",
+		"Width": 4.09,
+		"Height": 4.56,
+		"Image": "raingerfx-drone-rainger.png"
 	},
 	{
 		"Brand": "Rainger FX",
@@ -30192,6 +30255,13 @@
 	},
 	{
 		"Brand": "Rainger FX",
+		"Name": "Igor Expression Pad",
+		"Width": 2.16,
+		"Height": 2.82,
+		"Image": "raingerfx-igor-expression-pad.png"
+	},
+	{
+		"Brand": "Rainger FX",
 		"Name": "Minibar",
 		"Width": 1.7,
 		"Height": 4.15,
@@ -30203,6 +30273,13 @@
 		"Width": 1.7,
 		"Height": 4.15,
 		"Image": "raingerfx-reverb-x.png"
+	},
+	{
+		"Brand": "Rainger FX",
+		"Name": "Snare Trap",
+		"Width": 4.31,
+		"Height": 5.37,
+		"Image": "raingerfx-snare-trap.png"
 	},
 	{
 		"Brand": "Ramble FX",
