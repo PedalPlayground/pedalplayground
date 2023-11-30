@@ -3906,6 +3906,13 @@
 		"Image": "blue-colander-tremond.png"
 	},
 	{
+		"Brand": "Blue FX",
+		"Name": "Nebula",
+		"Width": 4.82,
+		"Height": 3.08,
+		"Image": "bluefx-nebula.png"
+	},
+	{
 		"Brand": "BluGuitar",
 		"Name": "Amp1",
 		"Width": 9.65,
@@ -9563,6 +9570,13 @@
 	},
 	{
 		"Brand": "Dr Scientist",
+		"Name": "Phreak",
+		"Width": 2.71,
+		"Height": 5.03,
+		"Image": "dr-scientist-phreak.png"
+	},
+	{
+		"Brand": "Dr Scientist",
 		"Name": "Reverberator",
 		"Width": 2.5,
 		"Height": 4.89,
@@ -9651,6 +9665,13 @@
 		"Width": 3.94,
 		"Height": 5.58,
 		"Image": "dreadbox-lethargy.png"
+	},
+	{
+		"Brand": "Dreadbox",
+		"Name": "Psyclop",
+		"Width": 3.47,
+		"Height": 5.51,
+		"Image": "dreadbox-psyclop.png"
 	},
 	{
 		"Brand": "Dreadbox",
@@ -13700,6 +13721,13 @@
 	},
 	{
 		"Brand": "Flower Pedals",
+		"Name": "Dahlia",
+		"Width": 2.87,
+		"Height": 4.85,
+		"Image": "flower-pedals-dahlia.png"
+	},
+	{
+		"Brand": "Flower Pedals",
 		"Name": "Dandelion",
 		"Width": 2.73,
 		"Height": 4.98,
@@ -17605,6 +17633,13 @@
 		"Image": "industrialectric-rm1n.png"
 	},
 	{
+		"Brand": "Industrialectric",
+		"Name": "RM-1N Altered Edition",
+		"Width": 6,
+		"Height": 5,
+		"Image": "industrialectric-rm1n-alt.png"
+	},
+	{
 		"Brand": "Instruments For A New Electric Music",
 		"Name": "Second Voice",
 		"Width": 3.68,
@@ -17614,22 +17649,36 @@
 	{
 		"Brand": "Intensive Care Audio",
 		"Name": "Death Drive",
-		"Width": 3.9,
+		"Width": 3.78,
 		"Height": 4.9,
 		"Image": "ica-death-drive.png"
 	},
 	{
 		"Brand": "Intensive Care Audio",
 		"Name": "Fideleater",
-		"Width": 3.9,
-		"Height": 4.9,
+		"Width": 3.52,
+		"Height": 5.04,
 		"Image": "ica-fideleater.png"
 	},
 	{
 		"Brand": "Intensive Care Audio",
+		"Name": "Life Support",
+		"Width": 4.79,
+		"Height": 3.73,
+		"Image": "ica-life-suport.png"
+	},
+	{
+		"Brand": "Intensive Care Audio",
+		"Name": "Recover Phase",
+		"Width": 4.79,
+		"Height": 3.73,
+		"Image": "ica-recover-phase.png"
+	},
+	{
+		"Brand": "Intensive Care Audio",
 		"Name": "Vena Cava Filter",
-		"Width": 3.9,
-		"Height": 4.9,
+		"Width": 3.52,
+		"Height": 5.04,
 		"Image": "ica-vena-cava-filter.png"
 	},
 	{
@@ -22339,8 +22388,8 @@
 	{
 		"Brand": "Lovepedal",
 		"Name": "Kalamazoo Gold",
-		"Width": 2.59,
-		"Height": 4.44,
+		"Width": 2.58,
+		"Height": 4.37,
 		"Image": "lovepedal-kalamazoo-gold.png"
 	},
 	{
@@ -33013,10 +33062,31 @@
 	},
 	{
 		"Brand": "Stomp Under Foot",
+		"Name": "Pumpkin Pi",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "stomp-under-foot-pumpkin-pi.png"
+	},
+	{
+		"Brand": "Stomp Under Foot",
 		"Name": "Silverfish",
 		"Width": 4.7,
 		"Height": 3.87,
 		"Image": "stomp-under-foot-silverfish.png"
+	},
+	{
+		"Brand": "Stomp Under Foot",
+		"Name": "Skinner Box",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "stomp-under-foot-skinner-box.png"
+	},
+	{
+		"Brand": "Stomp Under Foot",
+		"Name": "Violet Menace",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "stomp-under-foot-violet-menace.png"
 	},
 	{
 		"Brand": "Stone Deaf FX",
@@ -36815,23 +36885,30 @@
 	},
 	{
 		"Brand": "Vemuram",
+		"Name": "Butter Machine",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "vemuram-butter-machine.png"
+	},
+	{
+		"Brand": "Vemuram",
 		"Name": "Jan Ray",
-		"Width": 2.70,
-		"Height": 4.42,
+		"Width": 2.75,
+		"Height": 4.5,
 		"Image": "vemuram-janray.png"
 	},
 	{
 		"Brand": "Vemuram",
 		"Name": "Myriad Fuzz",
-		"Width": 2.74,
-		"Height": 4.50,
+		"Width": 2.75,
+		"Height": 4.55,
 		"Image": "vemuram-myriad-fuzz.png"
 	},
 	{
 		"Brand": "Vemuram",
 		"Name": "Shanks ODS-1",
 		"Width": 2.75,
-		"Height": 4.47,
+		"Height": 4.5,
 		"Image": "vemuram-shanks-ods-1.png"
 	},
 	{
