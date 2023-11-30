@@ -4698,6 +4698,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "IR-2 Amp & Cabinet",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ir2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "JB-2 Angry Driver",
 		"Width": 2.875,
 		"Height": 5.125,
