@@ -26013,6 +26013,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "La Machine",
+		"Width": 2.56,
+		"Height": 4.38,
+		"Image": "mxr-la-machine.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Micro Amp",
 		"Width": 2.67,
 		"Height": 4.5,
