@@ -31675,6 +31675,13 @@
 		"Image": "shure-glxd-6.png"
 	},
 	{
+		"Brand": "Shure",
+		"Name": "GLXD 16+",
+		"Width": 3.74,
+		"Height": 5.43,
+		"Image": "shure-glxd16plus.png"
+	},
+	{
 		"Brand": "Silktone",
 		"Name": "Fuzz",
 		"Width": 4.7,
