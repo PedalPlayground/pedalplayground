@@ -9745,16 +9745,23 @@
 	},
 	{
 		"Brand": "Drybell",
-		"Name": "Vibe Machine V2",
-		"Width": 2.64,
-		"Height": 4.33,
+		"Name": "Vibe Machine V-1",
+		"Width": 2.66,
+		"Height": 4.41,
+		"Image": "drybell-vibe-machine-v1.png"
+	},
+	{
+		"Brand": "Drybell",
+		"Name": "Vibe Machine V-2",
+		"Width": 2.66,
+		"Height": 4.41,
 		"Image": "drybell-vibe-machine-v2.png"
 	},
 	{
 		"Brand": "Drybell",
-		"Name": "Vibe Machine V3",
-		"Width": 2.64,
-		"Height": 4.33,
+		"Name": "Vibe Machine V-3",
+		"Width": 2.66,
+		"Height": 4.41,
 		"Image": "drybell-vibe-machine-v3.png"
 	},
 	{
