@@ -24319,6 +24319,13 @@
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "Iron Bell (Pink)",
+		"Width": 2.92,
+		"Height": 4.8,
+		"Image": "mojohand-ironbell-pink.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "Little Wonder",
 		"Width": 2.65,
 		"Height": 4.5,
