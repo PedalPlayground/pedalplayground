@@ -18341,6 +18341,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Delay Llama (Legacy)",
+		"Width": 4.09,
+		"Height": 4.73,
+		"Image": "jam-delay-llama-legacy.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Delay Llama mk3",
 		"Width": 2.9,
 		"Height": 4.7,
@@ -18376,6 +18383,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Dyna-ssoR (Legacy)",
+		"Width": 2.79,
+		"Height": 4.36,
+		"Image": "jam-dyna-ssor-legacy.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Eureka!",
 		"Width": 2.7,
 		"Height": 4.3,
@@ -18387,6 +18401,13 @@
 		"Width": 2.84,
 		"Height": 4.7,
 		"Image": "jam-fuzz-phrase-ltd.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Fuzz Phrase (Legacy)",
+		"Width": 2.79,
+		"Height": 4.36,
+		"Image": "jam-fuzz-phrase-legacy.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -18432,6 +18453,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Rattler+ (Legacy)",
+		"Width": 2.79,
+		"Height": 4.36,
+		"Image": "jam-rattlerplus-legacy.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Rattler Bass",
 		"Width": 2.7,
 		"Height": 4.3,
@@ -18446,10 +18474,24 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Red Muck (Legacy)",
+		"Width": 2.79,
+		"Height": 4.36,
+		"Image": "jam-red-muck-legacy.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Retrovibe",
 		"Width": 4.1,
 		"Height": 4.7,
 		"Image": "jam-retrovibe.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "RetroVibe (Legacy)",
+		"Width": 4.07,
+		"Height": 4.63,
+		"Image": "jam-retrovibe-legacy.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -18467,6 +18509,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Ripple (Legacy)",
+		"Width": 2.79,
+		"Height": 4.36,
+		"Image": "jam-ripple-legacy.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Ripply Fall",
 		"Width": 5.1,
 		"Height": 3.9,
@@ -18478,6 +18527,13 @@
 		"Width": 5.02,
 		"Height": 3.84,
 		"Image": "jam-ripply-fall-bass.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Rooster (Legacy)",
+		"Width": 2.79,
+		"Height": 4.36,
+		"Image": "jam-rooster-legacy.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -18495,6 +18551,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Tube Dreamer 88 (Legacy)",
+		"Width": 5.11,
+		"Height": 4.00,
+		"Image": "jam-tubedreamer88-legacy.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Waterfall",
 		"Width": 2.9,
 		"Height": 4.7,
@@ -18502,10 +18565,24 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "WaterFall (Legacy)",
+		"Width": 2.97,
+		"Height": 4.76,
+		"Image": "jam-waterfall-legacy.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Wahcko",
 		"Width": 4.7,
 		"Height": 10,
 		"Image": "jam-wahcko.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Wahcko+ (Legacy)",
+		"Width": 4.72,
+		"Height": 9.96,
+		"Image": "jam-wahcko-plus-legacy.png"
 	},
 	{
 		"Brand": "JangleBox",
