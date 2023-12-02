@@ -35863,10 +35863,24 @@
 	},
 	{
 		"Brand": "Tomkat",
+		"Name": "Bender",
+		"Width": 3.49,
+		"Height": 4.48,
+		"Image": "tomkat-bender.png"
+	},
+	{
+		"Brand": "Tomkat",
 		"Name": "Cloudy",
 		"Width": 3.62,
 		"Height": 4.82,
 		"Image": "tomkat-cloudy.png"
+	},
+	{
+		"Brand": "Tomkat",
+		"Name": "Violet Muffer",
+		"Width": 3.49,
+		"Height": 4.48,
+		"Image": "tomkat-violet-muffer.png"
 	},
 	{
 		"Brand": "TONE.ELECTRONIX",
