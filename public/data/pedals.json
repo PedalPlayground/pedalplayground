@@ -9745,6 +9745,20 @@
 	},
 	{
 		"Brand": "Drybell",
+		"Name": "Footswitch F-1L",
+		"Width": 2.16,
+		"Height": 2.01,
+		"Image": "drybell-f-1l.png"
+	},
+	{
+		"Brand": "Drybell",
+		"Name": "Footswitch F-1L3",
+		"Width": 2.16,
+		"Height": 2.01,
+		"Image": "drybell-f-1l3.png"
+	},
+	{
+		"Brand": "Drybell",
 		"Name": "Vibe Machine V-1",
 		"Width": 2.66,
 		"Height": 4.41,
