@@ -17676,7 +17676,7 @@
 	},
 	{
 		"Brand": "Intensive Care Audio",
-		"Name": "Recover Phase",
+		"Name": "Recovery Phase",
 		"Width": 4.79,
 		"Height": 3.73,
 		"Image": "ica-recover-phase.png"
@@ -21477,6 +21477,13 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
+		"Name": "AB/Y",
+		"Width": 4.5,
+		"Height": 2.57,
+		"Image": "kma-audio-machines-aby.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
 		"Name": "Astrospurt",
 		"Width": 4.04,
 		"Height": 4.87,
@@ -21579,6 +21586,13 @@
 		"Width": 2.59,
 		"Height": 4.97,
 		"Image": "kma-audio-machines-queequeg-2.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
+		"Name": "Stereo AB/Y",
+		"Width": 4.5,
+		"Height": 2.57,
+		"Image": "kma-audio-machines-stereo-aby.png"
 	},
 	{
 		"Brand": "KMA Audio Machines",
@@ -34480,6 +34494,27 @@
 		"Width": 4.7,
 		"Height": 3.82,
 		"Image": "tapeaudioco-two-white.png"
+	},
+	{
+		"Brand": "Tark Audio",
+		"Name": "Squidink",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "tarkaudio-squidink.png"
+	},
+	{
+		"Brand": "Tark Audio",
+		"Name": "Tark 144",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "tarkaudio-tark144.png"
+	},
+	{
+		"Brand": "Tark Audio",
+		"Name": "Worf",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "tarkaudio-worf.png"
 	},
 	{
 		"Brand": "Taylor",
