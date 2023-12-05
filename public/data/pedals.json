@@ -8528,15 +8528,15 @@
 	{
 		"Brand": "Decibelics",
 		"Name": "Angry Swede",
-		"Width": 2.10,
-		"Height": 3.74,
+		"Width": 2.06,
+		"Height": 3.88,
 		"Image": "decibelics-angry-swede.png"
 	},
 	{
 		"Brand": "Decibelics",
 		"Name": "Golden Horse (Black)",
-		"Width": 1.92,
-		"Height": 3.74,
+		"Width": 1.93,
+		"Height": 3.88,
 		"Image": "decibelics-golden-horse-black.png"
 	},
 	{
@@ -8549,9 +8549,23 @@
 	{
 		"Brand": "Decibelics",
 		"Name": "Golden Royale",
-		"Width": 4.72,
-		"Height": 3.85,
+		"Width": 4.7,
+		"Height": 3.79,
 		"Image": "decibelics-golden-royale.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "The Reverend",
+		"Width": 1.93,
+		"Height": 3.7,
+		"Image": "decibelics-the-reverend.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "The Reverend XX",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "decibelics-the-reverend-xx.png"
 	},
 	{
 		"Brand": "Deep Trip",
@@ -13557,6 +13571,13 @@
 		"Width": 2.52,
 		"Height": 4.93,
 		"Image": "fjord-loke.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Mime",
+		"Width": 2.52,
+		"Height": 4.93,
+		"Image": "fjord-mime.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
