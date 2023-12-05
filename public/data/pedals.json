@@ -22121,6 +22121,27 @@
 	},
 	{
 		"Brand": "Line 6",
+		"Name": "Pocket POD",
+		"Width": 5,
+		"Height": 3.5,
+		"Image": "line-6-pocket-pod.png"
+	},
+	{
+		"Brand": "Line 6",
+		"Name": "POD 2.0",
+		"Width": 10.25,
+		"Height": 7,
+		"Image": "line-6-pod-2.png"
+	},
+	{
+		"Brand": "Line 6",
+		"Name": "POD X3",
+		"Width": 11,
+		"Height": 7.5,
+		"Image": "line-6-pod-x3.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "POD HD500X",
 		"Width": 29.75,
 		"Height": 14.47,
