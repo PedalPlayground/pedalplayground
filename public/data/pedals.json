@@ -15303,6 +15303,13 @@
 	},
 	{
 		"Brand": "GFI System",
+		"Name": "Enieqma",
+		"Width": 4.7,
+		"Height": 4.68,
+		"Image": "gfi-enieqma.png"
+	},
+	{
+		"Brand": "GFI System",
 		"Name": "Jonassus Drive",
 		"Width": 3.03,
 		"Height": 4.84,
