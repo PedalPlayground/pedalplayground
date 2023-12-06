@@ -18852,6 +18852,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "3 Series Oil Can Delay",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3-series-oil.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "3 Series Overdrive",
 		"Width": 2.68,
 		"Height": 4.42,
