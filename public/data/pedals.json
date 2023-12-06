@@ -6252,6 +6252,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Sinkhole",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-sinkhole.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Skewer",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -20172,6 +20179,13 @@
 		"Width": 2.81,
 		"Height": 4.29,
 		"Image": "joyo-r28.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "WAH-II Multimode Wah",
+		"Width": 3.05,
+		"Height": 6.3,
+		"Image": "joyo-wah2.png"
 	},
 	{
 		"Brand": "JPTR FX",
