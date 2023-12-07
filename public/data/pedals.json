@@ -7407,6 +7407,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Hi Power",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "ctc-hi-power.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "Killer V",
 		"Width": 2.6,
 		"Height": 4.9,
@@ -38688,6 +38695,13 @@
 		"Width": 4.5,
 		"Height": 3.65,
 		"Image": "wampler-gearbox.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Germanium Tumnus",
+		"Width": 1.85,
+		"Height": 3.7,
+		"Image": "wampler-germanium-tumnus.png"
 	},
 	{
 		"Brand": "Wampler",
