@@ -22533,6 +22533,13 @@
 		"Image": "lovepedal-kalamazoo-gold.png"
 	},
 	{
+		"Brand": "Lovepedal",
+		"Name": "Kanji 9",
+		"Width": 2.73,
+		"Height": 4.81,
+		"Image": "lovepedal-kanji9.png"
+	},
+	{
 		"Brand":"Lovepedal",
 		"Name":"Rubber Chicken",
 		"Width":2.59,
