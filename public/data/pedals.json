@@ -40259,6 +40259,13 @@
 	},
 	{
 		"Brand": "Zvex",
+		"Name": "Ringtone TT",
+		"Width": 4.7,
+		"Height": 2.38,
+		"Image": "zvex-ringtone-tt.png"
+	},
+	{
+		"Brand": "Zvex",
 		"Name": "Silicon Fuzz Factory",
 		"Width": 2.69,
 		"Height": 4.5,
