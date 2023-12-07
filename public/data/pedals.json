@@ -1534,6 +1534,13 @@
 	},
 	{
 		"Brand": "Anasounds",
+		"Name": "Dystopia",
+		"Width": 3.7,
+		"Height": 4.96,
+		"Image": "anasounds-dystopia.png"
+	},
+	{
+		"Brand": "Anasounds",
 		"Name": "Ego Driver",
 		"Width": 2.56,
 		"Height": 5,
@@ -1664,6 +1671,13 @@
 		"Width": 2.52,
 		"Height": 4.91,
 		"Image": "anasounds-utopia.png"
+	},
+	{
+		"Brand": "Anasounds",
+		"Name": "Utopia Deluxe",
+		"Width": 3.7,
+		"Height": 4.96,
+		"Image": "anasounds-utopia-deluxe.png"
 	},
 	{
 		"Brand": "Animals Pedal",
@@ -4698,17 +4712,17 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "IR-200 Amp & IR Cabinet",
-		"Width": 4,
-		"Height": 5.44,
-		"Image": "boss-ir200.png"
-	},
-	{
-		"Brand": "BOSS",
 		"Name": "IR-2 Amp & Cabinet",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ir2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "IR-200 Amp & IR Cabinet",
+		"Width": 4,
+		"Height": 5.44,
+		"Image": "boss-ir200.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -6235,6 +6249,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-sft.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Sinkhole",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-sinkhole.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -8528,15 +8549,15 @@
 	{
 		"Brand": "Decibelics",
 		"Name": "Angry Swede",
-		"Width": 2.10,
-		"Height": 3.74,
+		"Width": 2.06,
+		"Height": 3.88,
 		"Image": "decibelics-angry-swede.png"
 	},
 	{
 		"Brand": "Decibelics",
 		"Name": "Golden Horse (Black)",
-		"Width": 1.92,
-		"Height": 3.74,
+		"Width": 1.93,
+		"Height": 3.88,
 		"Image": "decibelics-golden-horse-black.png"
 	},
 	{
@@ -8549,9 +8570,23 @@
 	{
 		"Brand": "Decibelics",
 		"Name": "Golden Royale",
-		"Width": 4.72,
-		"Height": 3.85,
+		"Width": 4.7,
+		"Height": 3.79,
 		"Image": "decibelics-golden-royale.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "The Reverend",
+		"Width": 1.93,
+		"Height": 3.7,
+		"Image": "decibelics-the-reverend.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "The Reverend XX",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "decibelics-the-reverend-xx.png"
 	},
 	{
 		"Brand": "Deep Trip",
@@ -13560,6 +13595,13 @@
 	},
 	{
 		"Brand": "Fjord Fuzz",
+		"Name": "Mime",
+		"Width": 2.52,
+		"Height": 4.93,
+		"Image": "fjord-mime.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
 		"Name": "Odin",
 		"Width": 2.52,
 		"Height": 4.8,
@@ -15265,6 +15307,13 @@
 		"Width": 4.02,
 		"Height": 4.72,
 		"Image": "gfi-duophony.png"
+	},
+	{
+		"Brand": "GFI System",
+		"Name": "Enieqma",
+		"Width": 4.7,
+		"Height": 4.68,
+		"Image": "gfi-enieqma.png"
 	},
 	{
 		"Brand": "GFI System",
@@ -18810,6 +18859,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "3 Series Oil Can Delay",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3-series-oil.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "3 Series Overdrive",
 		"Width": 2.68,
 		"Height": 4.42,
@@ -20123,6 +20179,13 @@
 		"Width": 2.81,
 		"Height": 4.29,
 		"Image": "joyo-r28.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "WAH-II Multimode Wah",
+		"Width": 3.05,
+		"Height": 6.3,
+		"Image": "joyo-wah2.png"
 	},
 	{
 		"Brand": "JPTR FX",
@@ -36917,6 +36980,13 @@
 		"Width": 1.89,
 		"Height": 3.7,
 		"Image": "valeton-fp-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-200",
+		"Width": 13.58,
+		"Height": 8.49,
+		"Image": "valeton-gp200.png"
 	},
 	{
 		"Brand": "Valeton",
