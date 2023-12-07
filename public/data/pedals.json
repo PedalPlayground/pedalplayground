@@ -4712,17 +4712,17 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "IR-200 Amp & IR Cabinet",
-		"Width": 4,
-		"Height": 5.44,
-		"Image": "boss-ir200.png"
-	},
-	{
-		"Brand": "BOSS",
 		"Name": "IR-2 Amp & Cabinet",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ir2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "IR-200 Amp & IR Cabinet",
+		"Width": 4,
+		"Height": 5.44,
+		"Image": "boss-ir200.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -36959,6 +36959,13 @@
 		"Width": 1.89,
 		"Height": 3.7,
 		"Image": "valeton-fp-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-200",
+		"Width": 13.58,
+		"Height": 8.49,
+		"Image": "valeton-gp200.png"
 	},
 	{
 		"Brand": "Valeton",
