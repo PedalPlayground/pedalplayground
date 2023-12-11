@@ -21714,6 +21714,13 @@
 		"Image": "komet-koda.png"
 	},
 	{
+		"Brand": "Komet",
+		"Name": "Mirasol",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "komet-mirasol.png"
+	},
+	{
 		"Brand": "Korg",
 		"Name": "DT-10",
 		"Width": 4.09,
@@ -27238,6 +27245,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "B-8 Wireless Receiver",
+		"Width": 3.96,
+		"Height": 4.84,
+		"Image": "nux-b8.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Boost Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
@@ -27462,6 +27476,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "NMT-1 Multi Tester",
+		"Width": 2.75,
+		"Height": 3.74,
+		"Image": "nux-nmt1.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Oceanic",
 		"Width": 2.06,
 		"Height": 3.7,
@@ -27655,6 +27676,20 @@
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-xtc-od.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Zeus",
+		"Width": 7.68,
+		"Height": 4.04,
+		"Image": "nux-zeus.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Zeus Jr",
+		"Width": 3.54,
+		"Height": 3.62,
+		"Image": "nux-zeus-jr.png"
 	},
 	{
 		"Brand": "Native Audio",
