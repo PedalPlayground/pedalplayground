@@ -21120,6 +21120,13 @@
 	},
 	{
 		"Brand": "Kernom",
+		"Name": "Moho",
+		"Width": 6.46,
+		"Height": 4.46,
+		"Image": "kernom-moho.png"
+	},
+	{
+		"Brand": "Kernom",
 		"Name": "Ridge",
 		"Width": 6.46,
 		"Height": 4.46,
@@ -30091,6 +30098,13 @@
 		"Width": 4,
 		"Height": 4.56,
 		"Image": "poly-josh-smith-flat-v.png"
+	},
+	{
+		"Brand": "Poly Effects",
+		"Name": "Verbs",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "poly-verbs.png"
 	},
 	{
 		"Brand": "Pro Co",
