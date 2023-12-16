@@ -28148,6 +28148,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Dark Light",
+		"Width": 5.7,
+		"Height": 3.84,
+		"Image": "obne-dark-light.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Dark Star",
 		"Width": 2.87,
 		"Height": 4.96,
