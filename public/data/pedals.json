@@ -21107,15 +21107,22 @@
 	{
 		"Brand": "Kemper",
 		"Name": "Remote",
-		"Width": 16.5,
-		"Height": 7,
+		"Width": 16.53,
+		"Height": 6.92,
 		"Image": "kemper-remote.png"
+	},
+	{
+		"Brand": "Kemper",
+		"Name": "Profiler Player",
+		"Width": 5.71,
+		"Height": 6.27,
+		"Image": "kemper-player.png"
 	},
 	{
 		"Brand": "Kemper",
 		"Name": "Profiler Stage",
 		"Width": 18.5,
-		"Height": 10.24,
+		"Height": 10.18,
 		"Image": "kemper-stage.png"
 	},
 	{
@@ -39234,6 +39241,13 @@
 		"Width": 4.72,
 		"Height": 3.91,
 		"Image": "weehbo-dumbledore.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "Genks",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "weehbo-genks.png"
 	},
 	{
 		"Brand": "Weehbo",
