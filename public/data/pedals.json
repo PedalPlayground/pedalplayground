@@ -13867,6 +13867,13 @@
 		"Image": "fmr-rnc.png"
 	},
 	{
+		"Brand": "FomoFX",
+		"Name": "Virtual Jeff",
+		"Width": 6.53,
+		"Height": 4,
+		"Image": "fomofx-virtual-jeff.png"
+	},
+	{
 		"Brand": "Formula 6",
 		"Name": "Fuzz Rangers",
 		"Width": 2.25,
