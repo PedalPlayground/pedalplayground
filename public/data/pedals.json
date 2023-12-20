@@ -17263,10 +17263,17 @@
 	},
 	{
 		"Brand": "Hudson",
-		"Name": "Broadcast-AP",
+		"Name": "Broadcast AP",
 		"Width": 3.7,
 		"Height": 4.91,
 		"Image": "hudson-broadcast-ap.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast AP-II",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "hudson-broadcast-ap2.png"
 	},
 	{
 		"Brand": "Hudson",
