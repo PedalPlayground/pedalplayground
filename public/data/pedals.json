@@ -9590,6 +9590,13 @@
 		"Image": "donner-yellow-fall.png"
 	},
 	{
+		"Brand": "Dophix",
+		"Name": "Galileo",
+		"Width": 5.01,
+		"Height": 3.79,
+		"Image": "dophix-galileo.png"
+	},
+	{
 		"Brand": "Dr Scientist",
 		"Name": "Bitquest",
 		"Width": 2.71,
