@@ -5701,7 +5701,7 @@
 		"Brand": "Caroline",
 		"Name": "Crom",
 		"Width": 3.78,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-crom.png"
 	},
 	{
@@ -5749,7 +5749,7 @@
 	{
 		"Brand": "Caroline",
 		"Name": "Icarus",
-		"Width": 2.81,
+		"Width": 2.83,
 		"Height": 4.5,
 		"Image": "caroline-icarus.png"
 	},
@@ -5759,6 +5759,13 @@
 		"Width": 3.7,
 		"Height": 4.89,
 		"Image": "caroline-icarus-v2.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Icarus V2 (Gold)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "caroline-icarus-v2-gold.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -5836,6 +5843,13 @@
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "caroline-meteore-throwback.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Olympia",
+		"Width": 2.83,
+		"Height": 4.5,
+		"Image": "caroline-olympia.png"
 	},
 	{
 		"Brand": "Caroline",
