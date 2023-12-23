@@ -17536,6 +17536,13 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "MT-10 Mostortion",
+		"Width": 2.67,
+		"Height": 5.02,
+		"Image": "ibanez-mt10.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "Pentatone Preamp",
 		"Width": 5.75,
 		"Height": 4.99,
