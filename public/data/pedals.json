@@ -17201,15 +17201,36 @@
 	{
 		"Brand": "Hotone",
 		"Name": "Choir",
-		"Width": 1.73,
-		"Height": 2.91,
+		"Width": 1.9,
+		"Height": 3.2,
 		"Image": "hotone-choir.png"
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Djent",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-djent.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Fury",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-fury.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Gate",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-gate.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Harmony",
-		"Width": 1.73,
-		"Height": 2.91,
+		"Width": 1.9,
+		"Height": 3.2,
 		"Image": "hotone-harmony.png"
 	},
 	{
@@ -17221,10 +17242,17 @@
 	},
 	{
 		"Brand": "Hotone",
-		"Name": "Krunch",
-		"Width": 1.7,
-		"Height": 2.91,
-		"Image": "hotone-krunch.png"
+		"Name": "Krush",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-krush.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Omni AC",
+		"Width": 2.25,
+		"Height": 3.98,
+		"Image": "hotone-omni-ac.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -17256,9 +17284,16 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Wally Looper",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-wally.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Wally+ Looper",
-		"Width": 1.73,
-		"Height": 2.91,
+		"Width": 1.9,
+		"Height": 3.2,
 		"Image": "hotone-wally-plus.png"
 	},
 	{
