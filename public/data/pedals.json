@@ -5687,62 +5687,69 @@
 		"Brand": "Caroline",
 		"Name": "Arigato",
 		"Width": 3.78,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-arigato.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "California 'Za'",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "caroline-california-za.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Crom",
 		"Width": 3.78,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-crom.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Crom (Black)",
 		"Width": 3.78,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-crom-black.png"
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Fck Ptn Pizza Shite",
+		"Name": "Fck Ptn Pizza Shit",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-fck-ptn.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Hawaiian Pizza",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-hawaiian-pizza.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Hawaiian Pizza (Black)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-hawaiian-black.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Hawaiian Pizza (Teal)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-hawaiian-pizza-teal.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Haymaker",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-haymaker.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Icarus",
-		"Width": 2.81,
+		"Width": 2.83,
 		"Height": 4.5,
 		"Image": "caroline-icarus.png"
 	},
@@ -5750,8 +5757,15 @@
 		"Brand": "Caroline",
 		"Name": "Icarus V2",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-icarus-v2.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Icarus V2 (Gold)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "caroline-icarus-v2-gold.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -5764,63 +5778,63 @@
 		"Brand": "Caroline",
 		"Name": "Kilobyte",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-kilobyte.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Kilobyte (64)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-kilobyte-64.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Megabyte",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-megabyte.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Megabyte (Black)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-megabyte-black.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Megabyte (Throwback Can)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-megabyte-throwback.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Meteore",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-meteore.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Meteore (Cosmic Purple)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-meteore-cosmic-purple.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Meteore (Purple)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-meteore-purple.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Meteore (Rose Gold)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-meteore-rose-gold.png"
 	},
 	{
@@ -5832,58 +5846,65 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Olympia",
+		"Width": 2.83,
+		"Height": 4.5,
+		"Image": "caroline-olympia.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Parabola",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-parabola.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Parabola (Throwback Can)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-parabola-throwback.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Shigeharu",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-shigeharu.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Somersault",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-somersault.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Somersault (Black LE)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-somersault-black.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Somersault (Cosmic Purple)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-somersault-purple.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Somersault (Throwback Can)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-somersault-throwback.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "The Blues",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-the-blues.png"
 	},
 	{
@@ -5897,14 +5918,14 @@
 		"Brand": "Caroline",
 		"Name": "Wave Cannon MKII",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-wave-cannon-mkii.png"
 	},
 	{
 		"Brand": "Caroline",
 		"Name": "Wave Cannon MkII (1985 Throwback)",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.89,
 		"Image": "caroline-wave-cannon-mk2-1985.png"
 	},
 	{
@@ -7404,6 +7425,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "ctc-golden-ratio.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Hi Power",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "ctc-hi-power.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
@@ -9574,6 +9602,13 @@
 		"Width": 1.65354,
 		"Height": 3.681102,
 		"Image": "donner-yellow-fall.png"
+	},
+	{
+		"Brand": "Dophix",
+		"Name": "Galileo",
+		"Width": 5.01,
+		"Height": 3.79,
+		"Image": "dophix-galileo.png"
 	},
 	{
 		"Brand": "Dr Scientist",
@@ -13860,6 +13895,13 @@
 		"Image": "fmr-rnc.png"
 	},
 	{
+		"Brand": "FomoFX",
+		"Name": "Virtual Jeff",
+		"Width": 6.53,
+		"Height": 4,
+		"Image": "fomofx-virtual-jeff.png"
+	},
+	{
 		"Brand": "Formula 6",
 		"Name": "Fuzz Rangers",
 		"Width": 2.25,
@@ -13897,7 +13939,7 @@
 	{
 		"Brand": "Fortin",
 		"Name": "Zuul Mini",
-		"Width": 1.52,
+		"Width": 1.98,
 		"Height": 3.64,
 		"Image": "fortin-zuul-mini.png"
 	},
@@ -17159,15 +17201,36 @@
 	{
 		"Brand": "Hotone",
 		"Name": "Choir",
-		"Width": 1.73,
-		"Height": 2.91,
+		"Width": 1.9,
+		"Height": 3.2,
 		"Image": "hotone-choir.png"
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Djent",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-djent.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Fury",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-fury.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Gate",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-gate.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Harmony",
-		"Width": 1.73,
-		"Height": 2.91,
+		"Width": 1.9,
+		"Height": 3.2,
 		"Image": "hotone-harmony.png"
 	},
 	{
@@ -17179,10 +17242,17 @@
 	},
 	{
 		"Brand": "Hotone",
-		"Name": "Krunch",
-		"Width": 1.7,
-		"Height": 2.91,
-		"Image": "hotone-krunch.png"
+		"Name": "Krush",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-krush.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Omni AC",
+		"Width": 2.25,
+		"Height": 3.98,
+		"Image": "hotone-omni-ac.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -17214,9 +17284,16 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Wally Looper",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-wally.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Wally+ Looper",
-		"Width": 1.73,
-		"Height": 2.91,
+		"Width": 1.9,
+		"Height": 3.2,
 		"Image": "hotone-wally-plus.png"
 	},
 	{
@@ -17249,10 +17326,17 @@
 	},
 	{
 		"Brand": "Hudson",
-		"Name": "Broadcast-AP",
+		"Name": "Broadcast AP",
 		"Width": 3.7,
 		"Height": 4.91,
 		"Image": "hudson-broadcast-ap.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast AP-II",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "hudson-broadcast-ap2.png"
 	},
 	{
 		"Brand": "Hudson",
@@ -17484,6 +17568,13 @@
 		"Width": 1.96,
 		"Height": 3.65,
 		"Image": "ibanez-flanger-mini.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "MT-10 Mostortion",
+		"Width": 2.67,
+		"Height": 5.02,
+		"Image": "ibanez-mt10.png"
 	},
 	{
 		"Brand": "Ibanez",
@@ -21100,16 +21191,30 @@
 	{
 		"Brand": "Kemper",
 		"Name": "Remote",
-		"Width": 16.5,
-		"Height": 7,
+		"Width": 16.53,
+		"Height": 6.92,
 		"Image": "kemper-remote.png"
+	},
+	{
+		"Brand": "Kemper",
+		"Name": "Profiler Player",
+		"Width": 5.71,
+		"Height": 6.27,
+		"Image": "kemper-player.png"
 	},
 	{
 		"Brand": "Kemper",
 		"Name": "Profiler Stage",
 		"Width": 18.5,
-		"Height": 10.24,
+		"Height": 10.18,
 		"Image": "kemper-stage.png"
+	},
+	{
+		"Brand": "Kernom",
+		"Name": "Moho",
+		"Width": 6.46,
+		"Height": 4.46,
+		"Image": "kernom-moho.png"
 	},
 	{
 		"Brand": "Kernom",
@@ -21705,6 +21810,13 @@
 		"Width": 3.7,
 		"Height": 4.84,
 		"Image": "komet-koda.png"
+	},
+	{
+		"Brand": "Komet",
+		"Name": "Mirasol",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "komet-mirasol.png"
 	},
 	{
 		"Brand": "Korg",
@@ -27231,6 +27343,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "B-8 Wireless Receiver",
+		"Width": 3.96,
+		"Height": 4.84,
+		"Image": "nux-b8.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Boost Core Deluxe",
 		"Width": 2.95,
 		"Height": 4.8,
@@ -27455,6 +27574,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "NMT-1 Multi Tester",
+		"Width": 2.75,
+		"Height": 3.74,
+		"Image": "nux-nmt1.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Oceanic",
 		"Width": 2.06,
 		"Height": 3.7,
@@ -27648,6 +27774,20 @@
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-xtc-od.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Zeus",
+		"Width": 7.68,
+		"Height": 4.04,
+		"Image": "nux-zeus.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Zeus Jr",
+		"Width": 3.54,
+		"Height": 3.62,
+		"Image": "nux-zeus-jr.png"
 	},
 	{
 		"Brand": "Native Audio",
@@ -28096,6 +28236,13 @@
 		"Width": 2.87,
 		"Height": 4.96,
 		"Image": "obne-black-fountain-v3-sage.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Dark Light",
+		"Width": 5.7,
+		"Height": 3.84,
+		"Image": "obne-dark-light.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -30049,6 +30196,13 @@
 		"Width": 4,
 		"Height": 4.56,
 		"Image": "poly-josh-smith-flat-v.png"
+	},
+	{
+		"Brand": "Poly Effects",
+		"Name": "Verbs",
+		"Width": 4,
+		"Height": 4.55,
+		"Image": "poly-verbs.png"
 	},
 	{
 		"Brand": "Pro Co",
@@ -38691,6 +38845,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Germanium Tumnus",
+		"Width": 1.85,
+		"Height": 3.7,
+		"Image": "wampler-germanium-tumnus.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "Hot Wired v2",
 		"Width": 4.5,
 		"Height": 3.65,
@@ -39164,6 +39325,13 @@
 		"Width": 4.72,
 		"Height": 3.91,
 		"Image": "weehbo-dumbledore.png"
+	},
+	{
+		"Brand": "Weehbo",
+		"Name": "Genks",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "weehbo-genks.png"
 	},
 	{
 		"Brand": "Weehbo",
