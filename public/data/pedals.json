@@ -26405,6 +26405,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Joshua",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "mxr-joshua.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Kerry King Ten Band EQ",
 		"Width": 4.75,
 		"Height": 3.65,
