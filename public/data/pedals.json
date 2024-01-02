@@ -2594,133 +2594,133 @@
 		"Name": "Alter Destiny",
 		"Width": 2.89,
 		"Height": 4.78,
-		"Image": "basicaudio-alter-destiny.png"
+		"Image": "basic-audio-alter-destiny.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Foxey Lady",
 		"Width": 2.8,
 		"Height": 4.78,
-		"Image": "basicaudio-foxey-lady.png"
+		"Image": "basic-audio-foxey-lady.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Futureman",
 		"Width": 2.88,
 		"Height": 4.78,
-		"Image": "basicaudio-futureman.png"
+		"Image": "basic-audio-futureman.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Fuzz Mutant",
 		"Width": 2.75,
 		"Height": 4.78,
-		"Image": "basicaudio-fuzz-mutant.png"
+		"Image": "basic-audio-fuzz-mutant.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Fuzzmondo",
 		"Width": 2.91,
 		"Height": 4.78,
-		"Image": "basicaudio-fuzzmondo.png"
+		"Image": "basic-audio-fuzzmondo.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Gnarly",
 		"Width": 2.86,
 		"Height": 4.78,
-		"Image": "basicaudio-gnarly.png"
+		"Image": "basic-audio-gnarly.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Lucky Number",
 		"Width": 2.84,
 		"Height": 4.78,
-		"Image": "basicaudio-lucky-number.png"
+		"Image": "basic-audio-lucky-number.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Orpheum",
 		"Width": 2.6,
 		"Height": 4.78,
-		"Image": "basicaudio-orpheum.png"
+		"Image": "basic-audio-orpheum.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Pale Rider",
 		"Width": 2.8,
 		"Height": 4.78,
-		"Image": "basicaudio-pale-rider.png"
+		"Image": "basic-audio-pale-rider.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Peak Freq",
 		"Width": 2.8,
 		"Height": 4.8,
-		"Image": "basicaudio-peak-freq.png"
+		"Image": "basic-audio-peak-freq.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Scarab Deluxe",
 		"Width": 2.8,
 		"Height": 4.8,
-		"Image": "basicaudio-scarab-deluxe.png"
+		"Image": "basic-audio-scarab-deluxe.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Solar Myth",
 		"Width": 2.85,
 		"Height": 4.78,
-		"Image": "basicaudio-solar-myth.png"
+		"Image": "basic-audio-solar-myth.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Spooky Tooth",
 		"Width": 2.76,
 		"Height": 4.78,
-		"Image": "basicaudio-spooky-tooth.png"
+		"Image": "basic-audio-spooky-tooth.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Squarewave+",
 		"Width": 2.85,
 		"Height": 4.78,
-		"Image": "basicaudio-squarewave-plus.png"
+		"Image": "basic-audio-squarewave-plus.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Throbby",
 		"Width": 2.78,
 		"Height": 4.78,
-		"Image": "basicaudio-throbby.png"
+		"Image": "basic-audio-throbby.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Tri/Ram Muff",
 		"Width": 2.77,
 		"Height": 4.78,
-		"Image": "basicaudio-triram.png"
+		"Image": "basic-audio-triram.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Wildcat",
 		"Width": 2.84,
 		"Height": 4.78,
-		"Image": "basicaudio-wildcat.png"
+		"Image": "basic-audio-wildcat.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Zippy",
 		"Width": 2.81,
 		"Height": 4.78,
-		"Image": "basicaudio-zippy.png"
+		"Image": "basic-audio-zippy.png"
 	},
 	{
 		"Brand": "Basic Audio",
 		"Name": "Zonk",
 		"Width": 2.81,
 		"Height": 4.78,
-		"Image": "basicaudio-zonk.png"
+		"Image": "basic-audio-zonk.png"
 	},
 	{
 		"Brand": "BBE",
@@ -10213,6 +10213,153 @@
 		"Image": "dwarfcraft-wizard-of-pitch.png"
 	},
 	{
+		"Brand": "EAE",
+		"Name": "0xEAE Boost",
+		"Width": 3.5,
+		"Height": 6.9,
+		"Image": "electronic-audio-experiments-0xeae-boost.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "0xEAE Fuzz",
+		"Width": 3.5,
+		"Height": 6.9,
+		"Image": "electronic-audio-experiments-0xeae-fuzz.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Beholder",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-beholder.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Citadel",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-citadel.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Dagger",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "electronic-audio-experiments-dagger.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Dagger (Black)",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "electronic-audio-experiments-dagger-black.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Dagger (Bubblegum)",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "electronic-audio-experiments-dagger-bubblegum.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Dude Incredible",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-dude-incredible.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Eldritch Blast",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-eldritch-blast.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Halberd",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-halberd.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Halberd v2",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "electronic-audio-experiments-halberd-v2.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Halberd v2 (Acid Etched)",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "electronic-audio-experiments-halberd-v2-acid.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Halberd v2 (Green Dragon)",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "electronic-audio-experiments-halberd-v2-green.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Hypersleep",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-hypersleep.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Limelight",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "electronic-audio-experiments-limelight.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Limelight v2",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "electronic-audio-experiments-limelight-v2.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Longsword",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-longsword.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Longsword (Rose Gold)",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-longsword-rose.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Model feT",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "electronic-audio-experiments-model-fet.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Sending",
+		"Width": 5.7,
+		"Height": 4.8,
+		"Image": "electronic-audio-experiments-sending.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Sending v2",
+		"Width": 5.7,
+		"Height": 5,
+		"Image": "electronic-audio-experiments-sending-v2.png"
+	},
+	{
 		"Brand": "EarthQuaker",
 		"Name": "Acapulco Gold",
 		"Width": 2.6,
@@ -12390,153 +12537,6 @@
 		"Image": "ehx-walking-on-the-moon.png"
 	},
 	{
-		"Brand": "EAE",
-		"Name": "0xEAE Boost",
-		"Width": 3.5,
-		"Height": 6.9,
-		"Image": "electronic-audio-experiments-0xeae-boost.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "0xEAE Fuzz",
-		"Width": 3.5,
-		"Height": 6.9,
-		"Image": "electronic-audio-experiments-0xeae-fuzz.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Beholder",
-		"Width": 3.7,
-		"Height": 4.95,
-		"Image": "electronic-audio-experiments-beholder.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Citadel",
-		"Width": 3.7,
-		"Height": 4.95,
-		"Image": "electronic-audio-experiments-citadel.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Dagger",
-		"Width": 2.6,
-		"Height": 4.99,
-		"Image": "electronic-audio-experiments-dagger.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Dagger (Black)",
-		"Width": 2.6,
-		"Height": 4.99,
-		"Image": "electronic-audio-experiments-dagger-black.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Dagger (Bubblegum)",
-		"Width": 2.6,
-		"Height": 4.99,
-		"Image": "electronic-audio-experiments-dagger-bubblegum.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Dude Incredible",
-		"Width": 3.7,
-		"Height": 4.95,
-		"Image": "electronic-audio-experiments-dude-incredible.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Eldritch Blast",
-		"Width": 3.7,
-		"Height": 4.95,
-		"Image": "electronic-audio-experiments-eldritch-blast.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Halberd",
-		"Width": 3.7,
-		"Height": 4.95,
-		"Image": "electronic-audio-experiments-halberd.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Halberd v2",
-		"Width": 2.6,
-		"Height": 5.05,
-		"Image": "electronic-audio-experiments-halberd-v2.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Halberd v2 (Acid Etched)",
-		"Width": 2.6,
-		"Height": 5.05,
-		"Image": "electronic-audio-experiments-halberd-v2-acid.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Halberd v2 (Green Dragon)",
-		"Width": 2.6,
-		"Height": 5.05,
-		"Image": "electronic-audio-experiments-halberd-v2-green.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Hypersleep",
-		"Width": 3.7,
-		"Height": 4.95,
-		"Image": "electronic-audio-experiments-hypersleep.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Limelight",
-		"Width": 4.7,
-		"Height": 3.81,
-		"Image": "electronic-audio-experiments-limelight.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Limelight v2",
-		"Width": 3.7,
-		"Height": 4.94,
-		"Image": "electronic-audio-experiments-limelight-v2.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Longsword",
-		"Width": 3.7,
-		"Height": 4.95,
-		"Image": "electronic-audio-experiments-longsword.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Longsword (Rose Gold)",
-		"Width": 3.7,
-		"Height": 4.95,
-		"Image": "electronic-audio-experiments-longsword-rose.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Model feT",
-		"Width": 3.7,
-		"Height": 4.95,
-		"Image": "electronic-audio-experiments-model-fet.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Sending",
-		"Width": 5.7,
-		"Height": 4.8,
-		"Image": "electronic-audio-experiments-sending.png"
-	},
-	{
-		"Brand": "EAE",
-		"Name": "Sending v2",
-		"Width": 5.7,
-		"Height": 5,
-		"Image": "electronic-audio-experiments-sending-v2.png"
-	},
-	{
 		"Brand": "Elektron",
 		"Name": "Analog Drive",
 		"Width": 6.8,
@@ -12556,6 +12556,13 @@
 		"Width": 8.5,
 		"Height": 7.01,
 		"Image": "elektron-digitone.png"
+	},
+	{
+		"Brand": "Elite Acoustics",
+		"Name": "Stompmix X6",
+		"Width": 7.8,
+		"Height": 9.8,
+		"Image": "elite-acoustics-stompmix-x6.png"
 	},
 	{
 		"Brand": "Emerson Custom",
