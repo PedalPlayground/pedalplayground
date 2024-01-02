@@ -10340,6 +10340,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Blumes",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-blumes.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Bows",
 		"Width": 2.6,
 		"Height": 4.94,
