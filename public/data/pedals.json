@@ -11011,6 +11011,13 @@
 		"Image": "effectrode-tube-vibe.png"
 	},
 	{
+		"Brand": "Effectrode",
+		"Name": "PC-2A Tube Compressor",
+		"Width": 3.7,
+		"Height": 5,
+		"Image": "effectrode-pc2a-tube-compressor.png"
+	},
+	{
 		"Brand": "Effects Bakery",
 		"Name": "An Bread DI",
 		"Width": 1.82,
