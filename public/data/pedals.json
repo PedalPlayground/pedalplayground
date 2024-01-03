@@ -13707,6 +13707,20 @@
 	},
 	{
 		"Brand": "Flamma",
+		"Name": "FC12 Drum Machine",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc12.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FC13 Analog Phaser",
+		"Width": 2.02,
+		"Height": 3.69,
+		"Image": "flamma-fc13.png"
+	},
+	{
+		"Brand": "Flamma",
 		"Name": "FC14 Analog Chorus",
 		"Width": 2.02,
 		"Height": 3.69,
@@ -13802,6 +13816,13 @@
 		"Width": 2.75,
 		"Height": 4.8,
 		"Image": "flamma-fs07.png"
+	},
+	{
+		"Brand": "Flamma",
+		"Name": "FS08 Octave",
+		"Width": 2.75,
+		"Height": 4.8,
+		"Image": "flamma-fs08.png"
 	},
 	{
 		"Brand": "Flamma",
@@ -24708,6 +24729,13 @@
 		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "mojohand-speakeasy.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
+		"Name": "Stylus",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "mojohand-stylus.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
