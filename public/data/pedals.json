@@ -12482,6 +12482,13 @@
 	},
 	{
 		"Brand": "EAE",
+		"Name": "Halberd v2 (Black)",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "electronic-audio-experiments-halberd-v2-black.png"
+	},
+	{
+		"Brand": "EAE",
 		"Name": "Halberd v2 (Green Dragon)",
 		"Width": 2.6,
 		"Height": 5.05,
@@ -29520,10 +29527,59 @@
 	},
 	{
 		"Brand": "Pedal Pal FX",
-		"Name": "Gold Overdrive",
-		"Width": 4.13,
-		"Height": 4.6,
-		"Image": "pedal-pal-fx-gold-overdrive.png"
+		"Name": "PAL-034 Night Overdrive",
+		"Width": 4.19,
+		"Height": 4.7,
+		"Image": "pedalpalfx-pal034.png"
+	},
+	{
+		"Brand": "Pedal Pal FX",
+		"Name": "PAL800 Gold Overdrive",
+		"Width": 4.19,
+		"Height": 4.7,
+		"Image": "pedalpalfx-pal800.png"
+	},
+	{
+		"Brand": "Pedal Pal FX",
+		"Name": "PAL800-V3 Gold Overdrive",
+		"Width": 4.19,
+		"Height": 4.82,
+		"Image": "pedalpalfx-pal800-v3.png"
+	},
+	{
+		"Brand": "Pedal Pal FX",
+		"Name": "PAL800-V4 Gold Overdrive",
+		"Width": 2.83,
+		"Height": 4.57,
+		"Image": "pedalpalfx-pal800-v4.png"
+	},
+	{
+		"Brand": "Pedal Pal FX",
+		"Name": "PAL800 JCM Emulator",
+		"Width": 4.19,
+		"Height": 4.7,
+		"Image": "pedalpalfx-pal800-jcm.png"
+	},
+	{
+		"Brand": "Pedal Pal FX",
+		"Name": "PAL959 Plexi Emulator",
+		"Width": 4.19,
+		"Height": 4.7,
+		"Image": "pedalpalfx-pal959.png"
+	},
+	{
+		"Brand": "Pedal Pal FX",
+		"Name": "PAL959-V2 Plexi Emulator",
+		"Width": 4.19,
+		"Height": 4.82,
+		"Image": "pedalpalfx-pal959-v2.png"
+	},
+	{
+		"Brand": "Pedal Pal FX",
+		"Name": "PAL987 Plexi Carrera",
+		"Width": 2.83,
+		"Height": 4.57,
+		"Image": "pedalpalfx-pal987.png"
 	},
 	{
 		"Brand": "Pedal Pawn",
