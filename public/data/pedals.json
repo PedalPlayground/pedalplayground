@@ -24942,7 +24942,7 @@
 	},
 	{
 		"Brand": "Mooer",
-		"Name": "Drummed X2",
+		"Name": "Drummer X2",
 		"Width": 2.85,
 		"Height": 4.53,
 		"Image": "mooer-drummer-x2.png"
@@ -25051,6 +25051,13 @@
 		"Width": 2.85,
 		"Height": 4.53,
 		"Image": "mooer-groove-loop-x2.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Harmony X2",
+		"Width": 2.85,
+		"Height": 4.53,
+		"Image": "mooer-harmony-x2.png"
 	},
 	{
 		"Brand": "Mooer",
@@ -25352,6 +25359,13 @@
 		"Width": 4.17,
 		"Height": 3.7,
 		"Image": "mooer-tender-octaver-pro.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "Tender Octaver X2",
+		"Width": 2.85,
+		"Height": 4.53,
+		"Image": "mooer-tender-octaver-x2.png"
 	},
 	{
 		"Brand": "Mooer",
