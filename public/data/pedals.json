@@ -2962,6 +2962,13 @@
 	},
 	{
 		"Brand": "Beetronics",
+		"Name": "Abelha Tropical Fuzz",
+		"Width": 3.25,
+		"Height": 6.97,
+		"Image": "beetronics-abelha.png"
+	},
+	{
+		"Brand": "Beetronics",
 		"Name": "Fatbee",
 		"Width": 3.52,
 		"Height": 5.5,
@@ -34370,6 +34377,13 @@
 		"Image": "supro-tremolo.png"
 	},
 	{
+		"Brand": "Supro",
+		"Name": "Tremolo V2",
+		"Width": 2.74,
+		"Height": 5.2,
+		"Image": "supro-tremolo-v2.png"
+	},
+	{
 		"Brand": "Surfy Industries",
 		"Name": "Blossom Point",
 		"Width": 2.56,
@@ -38765,6 +38779,20 @@
 		"Width": 3.88,
 		"Height": 4.67,
 		"Image": "walrus-red.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Silt",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "walrus-silt.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Silt (Black)",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "walrus-silt-black.png"
 	},
 	{
 		"Brand": "Walrus Audio",
