@@ -6252,6 +6252,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Naga Viper MKII",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-naga-viper-mk2.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Nic Compressor",
 		"Width": 3.75,
 		"Height": 4.6,
