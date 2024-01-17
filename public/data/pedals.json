@@ -3557,23 +3557,44 @@
 	},
 	{
 		"Brand": "Blackstar",
+		"Name": "Dept. 10 AMPED 1",
+		"Width": 7.87,
+		"Height": 5.83,
+		"Image": "blackstar-dept10-amped-1.png"
+	},
+	{
+		"Brand": "Blackstar",
+		"Name": "Dept. 10 AMPED 2",
+		"Width": 11.34,
+		"Height": 5.83,
+		"Image": "blackstar-dept10-amped-2.png"
+	},
+	{
+		"Brand": "Blackstar",
+		"Name": "Dept. 10 AMPED 3",
+		"Width": 11.34,
+		"Height": 5.83,
+		"Image": "blackstar-dept10-amped-3.png"
+	},
+	{
+		"Brand": "Blackstar",
 		"Name": "Dept. 10 Dual Distortion",
-		"Width": 6.18,
+		"Width": 6.28,
 		"Height": 4.6,
 		"Image": "blackstar-dept10-dual-dist.png"
 	},
 	{
 		"Brand": "Blackstar",
 		"Name": "Dept. 10 Dual Drive",
-		"Width": 6.18,
+		"Width": 6.28,
 		"Height": 4.6,
 		"Image": "blackstar-dept10-dual-drive.png"
 	},
 	{
 		"Brand": "Blackstar",
 		"Name": "Dept. 10 Boost",
-		"Width": 3.03,
-		"Height": 2.99,
+		"Width": 3.02,
+		"Height": 4.44,
 		"Image": "blackstar-dept10-boost.png"
 	},
 	{
@@ -9485,11 +9506,18 @@
 		"Image": "does-it-doom-doomcaster.png"
 	},
 	{
-		"Brand": "Dominion",
+		"Brand": "Dominion Electric",
 		"Name": "Fuzz",
 		"Width": 3,
 		"Height": 4.73,
 		"Image": "dominion-fuzz.png"
+	},
+	{
+		"Brand": "Dominion Electric",
+		"Name": "The Faceless Fuzz",
+		"Width": 3,
+		"Height": 4.73,
+		"Image": "dominion-the-faceless-fuzz.png"
 	},
 	{
 		"Brand": "Donner",
@@ -22864,9 +22892,16 @@
 	{
 		"Brand": "LPD",
 		"Name": "Embers Overdrive",
-		"Width": 2.5,
-		"Height": 4.87,
+		"Width": 2.6,
+		"Height": 5.06,
 		"Image": "lpd-embers-overdrive.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Embers Overdrive (2024)",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "lpd-embers-overdrive-2024.png"
 	},
 	{
 		"Brand": "LPD",
@@ -22892,8 +22927,8 @@
 	{
 		"Brand": "LPD",
 		"Name": "Offset Delay",
-		"Width": 2.5,
-		"Height": 4.87,
+		"Width": 2.6,
+		"Height": 5.06,
 		"Image": "lpd-offset-delay.png"
 	},
 	{
@@ -22934,8 +22969,8 @@
 	{
 		"Brand": "LPD",
 		"Name": "Tidal Chorus",
-		"Width": 2.5,
-		"Height": 4.87,
+		"Width": 2.6,
+		"Height": 5.06,
 		"Image": "lpd-tidal-chorus.png"
 	},
 	{
