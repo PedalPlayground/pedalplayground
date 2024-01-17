@@ -33006,6 +33006,63 @@
 	},
 	{
 		"Brand": "Source Audio",
+		"Name": "Hot Hand 3 Wireless Controller",
+		"Width": 2.756,
+		"Height": 2.756,
+		"Image": "source-audio-hot-hand-3-universal-wireless-controller.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Hot Hand Motion Controlled Wah Filters",
+		"Width": 7.125,
+		"Height": 7.125,
+		"Image": "source-audio-hot-hand-wah.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "Hot Hand Motion Controlled Phaser/Flanger",
+		"Width": 7.125,
+		"Height": 7.125,
+		"Image": "source-audio-hot-hand-phaser-flanger.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "SoundBlox Pro Classic Distortion",
+		"Width": 6,
+		"Height": 7,
+		"Image": "source-audio-soundblox-pro-classic-distortion.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "SoundBlox Pro Multiwave Distortion",
+		"Width": 6,
+		"Height": 7,
+		"Image": "source-audio-soundblox-pro-multiwave-distortion.png"
+		
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "SoundBlox Pro Multiwave Bass Distortion",
+		"Width": 6,
+		"Height": 7,
+		"Image": "source-audio-soundblox-pro-multiwave-bass-distortion.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "SoundBlox Pro Poly-Mod Filter",
+		"Width": 6,
+		"Height": 7,
+		"Image": "source-audio-soundblox-pro-polymod-filter.png"
+	},
+	{
+		"Brand": "Source Audio",
+		"Name": "SoundBlox Pro Bass Envelope Filter",
+		"Width": 6,
+		"Height": 7,
+		"Image": "source-audio-soundblox-pro-bass-envelope-filter.png"
+	},
+	{
+		"Brand": "Source Audio",
 		"Name": "Soundblox 2 Dimension Reverb",
 		"Width": 4.5,
 		"Height": 4.5,
