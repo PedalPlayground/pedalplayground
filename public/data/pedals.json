@@ -5377,6 +5377,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "VE-22 Vocal Performer",
+		"Width": 8.63,
+		"Height": 5.57,
+		"Image": "boss-ve22.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "VE-8 Acoustic Singer",
 		"Width": 8.5625,
 		"Height": 6.375,
