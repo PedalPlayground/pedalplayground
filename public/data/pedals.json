@@ -16282,6 +16282,13 @@
 		"Image": "ground-control-tsukuyomi.png"
 	},
 	{
+		"Brand": "Ground Control",
+		"Name": "UwU",
+		"Width": 1.8,
+		"Height": 3.72,
+		"Image": "ground-control-uwu.png"
+	},
+	{
 		"Brand": "Ground FX",
 		"Name": "Boneflower",
 		"Width": 2.6,
