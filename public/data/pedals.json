@@ -6875,6 +6875,13 @@
 	},
 	{
 		"Brand": "Cioks",
+		"Name": "Crux",
+		"Width": 1.57,
+		"Height": 3.46,
+		"Image": "cioks-crux.png"
+	},
+	{
+		"Brand": "Cioks",
 		"Name": "DC5",
 		"Width": 5.17,
 		"Height": 3.46,
@@ -18363,8 +18370,8 @@
 	{
 		"Brand": "Jackson Audio",
 		"Name": "1484 Twin Twelve",
-		"Width": 4.7,
-		"Height": 4.01,
+		"Width": 5,
+		"Height": 4.27,
 		"Image": "jackson-1484.png"
 	},
 	{
