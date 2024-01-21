@@ -9520,6 +9520,13 @@
 		"Image": "dod-fx75b.png"
 	},
 	{
+		"Brand": "DOD",
+		"Name": "Yngwie J. Malmsteem Preamp Overdrive YJM308",
+		"Width": 3.16,
+		"Height": 4.88,
+		"Image": "dod-yjm308.png"
+	},
+	{
 		"Brand": "Does It Doom",
 		"Name": "Aghartha",
 		"Width": 2.6,
@@ -37330,6 +37337,13 @@
 		"Width": 9.29,
 		"Height": 6.14,
 		"Image": "van-weelden-royal-overdrive.png"
+	},
+	{
+		"Brand": "Vandae",
+		"Name": "Green Jealousy",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "vandae-green-jealousy.png"
 	},
 	{
 		"Brand": "Vertex",
