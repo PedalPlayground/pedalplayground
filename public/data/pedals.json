@@ -5643,6 +5643,13 @@
 	},
 	{
 		"Brand": "Caline",
+		"Name": "Mariana",
+		"Width": 2.77,
+		"Height": 4.5,
+		"Image": "caline-mariana.png"
+	},
+	{
+		"Brand": "Caline",
 		"Name": "Pure Sky",
 		"Width": 2.7,
 		"Height": 4.5,
