@@ -31048,7 +31048,7 @@
 		"Brand": "Red Panda",
 		"Name": "Bitmap 2",
 		"Width": 3.05,
-		"Height": 4.75,
+		"Height": 4.8,
 		"Image": "redpanda-bitmap2.png"
 	},
 	{
@@ -31069,7 +31069,7 @@
 		"Brand": "Red Panda",
 		"Name": "Context 2",
 		"Width": 3.05,
-		"Height": 4.75,
+		"Height": 4.8,
 		"Image": "redpanda-context2.png"
 	},
 	{
@@ -31090,8 +31090,15 @@
 		"Brand": "Red Panda",
 		"Name": "Particle V2",
 		"Width": 3.05,
-		"Height": 4.75,
+		"Height": 4.8,
 		"Image": "redpanda-particle2.png"
+	},
+	{
+		"Brand": "Red Panda",
+		"Name": "Radius",
+		"Width": 3.05,
+		"Height": 4.8,
+		"Image": "redpanda-radius.png"
 	},
 	{
 		"Brand": "Red Panda",
@@ -31104,7 +31111,7 @@
 		"Brand": "Red Panda",
 		"Name": "Raster 2",
 		"Width": 3.05,
-		"Height": 4.75,
+		"Height": 4.8,
 		"Image": "redpanda-raster2.png"
 	},
 	{
@@ -31118,7 +31125,7 @@
 		"Brand": "Red Panda",
 		"Name": "Tensor",
 		"Width": 3.05,
-		"Height": 4.75,
+		"Height": 4.8,
 		"Image": "redpanda-tensor.png"
 	},
 	{
