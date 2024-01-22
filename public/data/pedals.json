@@ -31703,6 +31703,13 @@
 		"Image": "ryra-klone-gold.png"
 	},
 	{
+		"Brand": "Sadowsky",
+		"Name": "Bass Preamp / DI",
+		"Width": 4.21,
+		"Height": 4.27,
+		"Image": "sadowsky-bass-preamp-di.png"
+	},
+	{
 		"Brand": "Santono",
 		"Name": "Etched Pick Tin",
 		"Width": 2,
@@ -37963,10 +37970,24 @@
 	},
 	{
 		"Brand": "Vox",
+		"Name": "Fuel Injector",
+		"Width": 2.71,
+		"Height": 4.72,
+		"Image": "vox-fuel-injector.png"
+	},
+	{
+		"Brand": "Vox",
 		"Name": "Mystic Edge",
 		"Width": 2.71,
 		"Height": 4.72,
 		"Image": "vox-mystic-edge.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Power Burst",
+		"Width": 2.71,
+		"Height": 4.72,
+		"Image": "vox-power-burst.png"
 	},
 	{
 		"Brand": "Vox",
@@ -37981,6 +38002,13 @@
 		"Width": 2.71,
 		"Height": 4.72,
 		"Image": "vox-silk-drive.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Smooth Impact",
+		"Width": 2.71,
+		"Height": 4.72,
+		"Image": "vox-smooth-impact.png"
 	},
 	{
 		"Brand": "Vox",
@@ -38016,6 +38044,13 @@
 		"Width": 3.43,
 		"Height": 5.2,
 		"Image": "vox-straight-6.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "Tone Sculptor",
+		"Width": 2.71,
+		"Height": 4.72,
+		"Image": "vox-tone-sculptor.png"
 	},
 	{
 		"Brand": "Vox",
