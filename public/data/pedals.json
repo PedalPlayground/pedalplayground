@@ -7218,6 +7218,13 @@
 	},
 	{
 		"Brand": "Colorsound",
+		"Name": "Supa Tonebender",
+		"Width": 4.72,
+		"Height": 8.7,
+		"Image": "colorsound-supa-tonebender.png"
+	},
+	{
+		"Brand": "Colorsound",
 		"Name": "Tremolo",
 		"Width": 3.8189,
 		"Height": 8.66142,
@@ -12621,6 +12628,13 @@
 		"Image": "electronic-audio-experiments-sending-v2.png"
 	},
 	{
+		"Brand": "EAE",
+		"Name": "The Bard",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "electronic-audio-experiments-the-bard.png"
+	},
+	{
 		"Brand": "Elektron",
 		"Name": "Analog Drive",
 		"Width": 6.8,
@@ -17237,7 +17251,7 @@
 		"Brand": "Hotone",
 		"Name": "Ampero Control",
 		"Width": 10.18,
-		"Height": 2.14,
+		"Height": 2.11,
 		"Image": "hotone-ampero-control.png"
 	},
 	{
@@ -17286,7 +17300,7 @@
 		"Brand": "Hotone",
 		"Name": "Ampero Switch",
 		"Width": 3.94,
-		"Height": 1.55,
+		"Height": 1.58,
 		"Image": "hotone-ampero-switch.png"
 	},
 	{
