@@ -11628,6 +11628,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Double Anniversary Big Muff Pi",
+		"Width": 5.5,
+		"Height": 6.93,
+		"Image": "ehx-double-anniversary-big-muff-pi.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Double Muff",
 		"Width": 2.82,
 		"Height": 4.5,
