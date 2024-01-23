@@ -17711,6 +17711,20 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "Pentatone Equalizer",
+		"Width": 3.94,
+		"Height": 4.71,
+		"Image": "ibanez-pentatone-equalizer.png"
+	},
+	{
+		"Brand": "Ibanez",
+		"Name": "Pentatone Gate",
+		"Width": 2.68,
+		"Height": 4.57,
+		"Image": "ibanez-pentatone-gate.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "Pentatone Preamp",
 		"Width": 5.75,
 		"Height": 4.99,
@@ -21040,6 +21054,13 @@
 		"Width": 2.73,
 		"Height": 4.5,
 		"Image": "keeley-moon.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Muse Driver",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-muse-driver.png"
 	},
 	{
 		"Brand": "Keeley",
