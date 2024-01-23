@@ -3903,7 +3903,7 @@
 		"Name": "Pig",
 		"Width": 2.6,
 		"Height": 4.97,
-		"Image": "bluecolander-pig.png"
+		"Image": "blue-colander-pig.png"
 	},
 	{
 		"Brand": "Blue Colander",
@@ -3924,7 +3924,7 @@
 		"Name": "Nebula",
 		"Width": 4.82,
 		"Height": 3.08,
-		"Image": "bluefx-nebula.png"
+		"Image": "blue-fx-nebula.png"
 	},
 	{
 		"Brand": "BluGuitar",
@@ -6563,231 +6563,231 @@
 		"Name": "Ayahuasca",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-ayahuasca.png"
+		"Image": "chase-bliss-ayahuasca.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Bliss Factory",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-factory.png"
+		"Image": "chase-bliss-factory.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Bliss Factory (Silver)",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-factory-silver.png"
+		"Image": "chase-bliss-factory-silver.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Blooper",
 		"Width": 2.86,
 		"Height": 4.95,
-		"Image": "chasebliss-blooper.png"
+		"Image": "chase-bliss-blooper.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Brothers",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-brothers.png"
+		"Image": "chase-bliss-brothers.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Condor",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-condor.png"
+		"Image": "chase-bliss-condor.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "CXM 1978",
 		"Width": 5.75,
 		"Height": 6.5,
-		"Image": "chasebliss-cxm1978.png"
+		"Image": "chase-bliss-cxm1978.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Dark World",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-dark-world.png"
+		"Image": "chase-bliss-dark-world.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "EXP",
 		"Width": 2.52,
 		"Height": 4.87,
-		"Image": "chasebliss-exp.png"
+		"Image": "chase-bliss-exp.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Faves",
 		"Width": 1.4,
 		"Height": 3.61,
-		"Image": "chasebliss-faves.png"
+		"Image": "chase-bliss-faves.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Generation Loss",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-generation-loss.png"
+		"Image": "chase-bliss-generation-loss.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Generation Loss MKII",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-generation-loss-mk2.png"
+		"Image": "chase-bliss-generation-loss-mk2.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Generation Loss MKII (LE)",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-generation-loss-mk2-le.png"
+		"Image": "chase-bliss-generation-loss-mk2-le.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Gravitas",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-gravitas.png"
+		"Image": "chase-bliss-gravitas.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Habit",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-habit.png"
+		"Image": "chase-bliss-habit.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Lossy",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-lossy.png"
+		"Image": "chase-bliss-lossy.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Midibox",
 		"Width": 3.47,
 		"Height": 1.58,
-		"Image": "chasebliss-midibox.png"
+		"Image": "chase-bliss-midibox.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "MOOD",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-mood.png"
+		"Image": "chase-bliss-mood.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "MOOD (LE)",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-mood-bauhaus.png"
+		"Image": "chase-bliss-mood-bauhaus.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "MOOD MKII",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-mood-mk2.png"
+		"Image": "chase-bliss-mood-mk2.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "MOOD MKII (LE)",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-mood-mk2-le.png"
+		"Image": "chase-bliss-mood-mk2-le.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Preamp MKII",
 		"Width": 5.75,
 		"Height": 6.5,
-		"Image": "chasebliss-preamp-mkii.png"
+		"Image": "chase-bliss-preamp-mkii.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Reverse Mode C",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-reverse-mood-c.png"
+		"Image": "chase-bliss-reverse-mood-c.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Spectre",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-spectre.png"
+		"Image": "chase-bliss-spectre.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Spectre (Blue Knobs)",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-spectre-blue.png"
+		"Image": "chase-bliss-spectre-blue.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Thermae",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-thermae.png"
+		"Image": "chase-bliss-thermae.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Tonal Recall",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-tonal-recall.png"
+		"Image": "chase-bliss-tonal-recall.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Tonal Recall RKM",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-tonal-recall-rkm.png"
+		"Image": "chase-bliss-tonal-recall-rkm.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Warped Vinyl",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-warped-vinyl.png"
+		"Image": "chase-bliss-warped-vinyl.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Warped Vinyl HiFi",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-warped-vinyl-hifi.png"
+		"Image": "chase-bliss-warped-vinyl-hifi.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Warped Vinyl MKII",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-warped-vinyl-mk2.png"
+		"Image": "chase-bliss-warped-vinyl-mk2.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Wombtone",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-wombtone.png"
+		"Image": "chase-bliss-wombtone.png"
 	},
 	{
 		"Brand": "Chase Bliss",
 		"Name": "Wombtone MKII",
 		"Width": 2.86,
 		"Height": 4.86,
-		"Image": "chasebliss-wombtone-mk2.png"
+		"Image": "chase-bliss-wombtone-mk2.png"
 	},
 	{
 		"Brand": "Chicago Iron",
@@ -8278,7 +8278,7 @@
 		"Name": "Boonar",
 		"Width": 4.81,
 		"Height": 2.44,
-		"Image": "dawnerprince-boonar.png"
+		"Image": "dawner-prince-boonar.png"
 	},
 	{
 		"Brand": "Dawner Prince",
@@ -8306,21 +8306,21 @@
 		"Name": "Red Rox",
 		"Width": 2.71,
 		"Height": 4.5,
-		"Image": "dawnerprince-red-rox.png"
+		"Image": "dawner-prince-red-rox.png"
 	},
 	{
 		"Brand": "Dawner Prince",
 		"Name": "Starla",
 		"Width": 4.81,
 		"Height": 2.44,
-		"Image": "dawnerprince-starla.png"
+		"Image": "dawner-prince-starla.png"
 	},
 	{
 		"Brand": "Dawner Prince",
 		"Name": "Viberator",
 		"Width": 2.71,
 		"Height": 4.5,
-		"Image": "dawnerprince-viberator.png"
+		"Image": "dawner-prince-viberator.png"
 	},
 	{
 		"Brand": "Dead Air Studios",
@@ -8670,7 +8670,7 @@
 		"Name": "HTR",
 		"Width": 4.7,
 		"Height": 3.83,
-		"Image": "demonicmachines-htr.png"
+		"Image": "demonic-machines-htr.png"
 	},
 	{
 		"Brand": "Devi Ever: FX",
