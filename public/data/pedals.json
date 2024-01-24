@@ -8079,9 +8079,16 @@
 	},
 	{
 		"Brand": "Danelectro",
+		"Name": "3699 Fuzz",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "danelectro-3699-fuzz.png"
+	},
+	{
+		"Brand": "Danelectro",
 		"Name": "Back Talk",
-		"Width": 2.31,
-		"Height": 4.37,
+		"Width": 2.5,
+		"Height": 4.85,
 		"Image": "danelectro-back-talk.png"
 	},
 	{
@@ -8104,6 +8111,27 @@
 		"Width": 4.25,
 		"Height": 5.94,
 		"Image": "danelectro-daddy-o.png"
+	},
+	{
+		"Brand": "Danelectro",
+		"Name": "Roebuck",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "danelectro-roebuck.png"
+	},
+	{
+		"Brand": "Danelectro",
+		"Name": "The Breakdown",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "danelectro-the-breakdown.png"
+	},
+	{
+		"Brand": "Danelectro",
+		"Name": "The Eisenhower Fuzz",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "danelectro-the-eisenhower-fuzz.png"
 	},
 	{
 		"Brand": "Daredevil",
@@ -39759,6 +39787,41 @@
 		"Width": 3.99,
 		"Height": 4.7,
 		"Image": "westerlund-one.png"
+	},
+	{
+		"Brand": "Winnipeg Electrical Co.",
+		"Name": "Homework Series Blues",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "winnipeg-homework-blues.png"
+	},
+	{
+		"Brand": "Winnipeg Electrical Co.",
+		"Name": "Homework Series Distortion",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "winnipeg-homework-distortion.png"
+	},
+	{
+		"Brand": "Winnipeg Electrical Co.",
+		"Name": "Homework Series Fuzz",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "winnipeg-homework-fuzz.png"
+	},
+	{
+		"Brand": "Winnipeg Electrical Co.",
+		"Name": "Homework Series Metal",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "winnipeg-homework-metal.png"
+	},
+	{
+		"Brand": "Winnipeg Electrical Co.",
+		"Name": "Homework Series Overdrive",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "winnipeg-homework-overdrive.png"
 	},
 	{
 		"Brand": "Wonderful Audio Technology",
