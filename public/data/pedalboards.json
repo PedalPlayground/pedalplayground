@@ -127,80 +127,17 @@
 	},
 	{
 		"Brand": "Creation Music Co",
-		"Name": "Aero 18",
-		"Width": 18,
-		"Height": 12.5,
-		"Image": "creation-aero-18.png"
-	},
-	{
-		"Brand": "Creation Music Co",
-		"Name": "Aero 18 Lite",
-		"Width": 18,
-		"Height": 7,
-		"Image": "creation-aero-18-lite.png"
-	},
-	{
-		"Brand": "Creation Music Co",
-		"Name": "Aero 24",
+		"Name": "Aero 24x12.5",
 		"Width": 24,
 		"Height": 12.5,
-		"Image": "creation-aero-24.png"
+		"Image": "creation-aero-24-125.png"
 	},
 	{
 		"Brand": "Creation Music Co",
-		"Name": "Aero 24+",
+		"Name": "Aero 24x16",
 		"Width": 24,
 		"Height": 16,
-		"Image": "creation-aero-24-plus.png"
-	},
-	{
-		"Brand": "Creation Music Co",
-		"Name": "Aero 28",
-		"Width": 28,
-		"Height": 14,
-		"Image": "creation-aero-28.png"
-	},
-	{
-		"Brand": "Creation Music Co",
-		"Name": "Aero 32+",
-		"Width": 32,
-		"Height": 16,
-		"Image": "creation-aero-32-plus.png"
-	},
-	{
-		"Brand": "Creation Music Co",
-		"Name": "Aero Riser 11",
-		"Width": 11,
-		"Height": 6,
-		"Image": "creation-aero-riser-11.png"
-	},
-	{
-		"Brand": "Creation Music Co",
-		"Name": "Aero Riser 14",
-		"Width": 14,
-		"Height": 6,
-		"Image": "creation-aero-riser-14.png"
-	},
-	{
-		"Brand": "Creation Music Co",
-		"Name": "Aero Riser 18",
-		"Width": 18,
-		"Height": 6,
-		"Image": "creation-aero-riser-18.png"
-	},
-	{
-		"Brand": "Creation Music Co",
-		"Name": "Aero Riser 24",
-		"Width": 24,
-		"Height": 6,
-		"Image": "creation-aero-riser-24.png"
-	},
-	{
-		"Brand": "Creation Music Co",
-		"Name": "Aero Riser 28",
-		"Width": 28,
-		"Height": 6,
-		"Image": "creation-aero-riser-28.png"
+		"Image": "creation-aero-24-16.png"
 	},
 	{
 		"Brand": "Creation Music Co",
@@ -211,38 +148,31 @@
 	},
 	{
 		"Brand": "Creation Music Co",
-		"Name": "Elevation 18",
-		"Width": 18,
-		"Height": 12.5,
-		"Image": "creation-elevation-18.png"
+		"Name": "Elevation 17x12",
+		"Width": 17,
+		"Height": 12,
+		"Image": "creation-elevation-17-12.png"
 	},
 	{
 		"Brand": "Creation Music Co",
-		"Name": "Elevation 24",
+		"Name": "Elevation 24x12.5",
 		"Width": 24,
 		"Height": 12.5,
-		"Image": "creation-elevation-24.png"
+		"Image": "creation-elevation-24-12.png"
 	},
 	{
 		"Brand": "Creation Music Co",
-		"Name": "Elevation 24+",
+		"Name": "Elevation 24x16",
 		"Width": 24,
 		"Height": 16,
-		"Image": "creation-elevation-24-plus.png"
+		"Image": "creation-elevation-24-16.png"
 	},
 	{
 		"Brand": "Creation Music Co",
-		"Name": "Elevation 28",
-		"Width": 28,
-		"Height": 14,
-		"Image": "creation-elevation-28.png"
-	},
-	{
-		"Brand": "Creation Music Co",
-		"Name": "Elevation 32+",
+		"Name": "Elevation 32x16",
 		"Width": 32,
 		"Height": 16,
-		"Image": "creation-elevation-32-plus.png"
+		"Image": "creation-elevation-32-16.png"
 	},
 	{
 		"Brand": "Donner",
