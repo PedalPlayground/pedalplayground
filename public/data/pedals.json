@@ -25201,6 +25201,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "GE1000",
+		"Width": 13.27,
+		"Height": 6.6,
+		"Image": "mooer-ge1000.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Graphic B",
 		"Width": 1.67,
 		"Height": 3.75,
@@ -27256,6 +27263,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "mythos-herculean.png"
+	},
+		{
+		"Brand": "Mythos",
+		"Name": "Herculean Deluxe",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "mythos-herculean-deluxe.png"
 	},
 	{
 		"Brand": "Mythos",
