@@ -2191,6 +2191,27 @@
 		"Image": "animals-pedal-op-surfing-bear.png"
 	},
 	{
+		"Brand": "API",
+		"Name": "TranZformer CMP",
+		"Width": 4.82,
+		"Height": 3.74,
+		"Image": "api-tranzformer-cmp.png"
+	},
+	{
+		"Brand": "API",
+		"Name": "TranZformer GTR",
+		"Width": 4.82,
+		"Height": 3.74,
+		"Image": "api-tranzformer-gtr.png"
+	},
+	{
+		"Brand": "API",
+		"Name": "TranZformer LLX Bass",
+		"Width": 4.82,
+		"Height": 3.74,
+		"Image": "api-tranzformer-llx-bass.png"
+	},
+	{
 		"Brand": "Apple",
 		"Name": "MacBook Pro 14",
 		"Width": 15.15,
@@ -21883,6 +21904,13 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
+		"Name": "Endgame",
+		"Width": 4.11,
+		"Height": 4.77,
+		"Image": "kma-audio-machines-endgame.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
 		"Name": "Fuzzly Bear",
 		"Width": 2.65,
 		"Height": 4.5,
@@ -30098,6 +30126,13 @@
 		"Width": 4.4,
 		"Height": 2.55,
 		"Image": "pigtronix-philosophers-tone.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Philosopher's Tone 2",
+		"Width": 4.75,
+		"Height": 3.95,
+		"Image": "pigtronix-philosophers-tone-2.png"
 	},
 	{
 		"Brand": "Pigtronix",
