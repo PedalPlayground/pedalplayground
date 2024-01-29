@@ -26576,7 +26576,7 @@
 		"Name": "FOD",
 		"Width": 2.67,
 		"Height": 4.5,
-		"Image": "mxr-m251.png"
+		"Image": "mxr-csp033g.png"
 	},
 	{
 		"Brand": "MXR",
@@ -26584,6 +26584,13 @@
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "mxr-m116.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Gran Torino",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m94se.png"
 	},
 	{
 		"Brand": "MXR",
@@ -26899,6 +26906,13 @@
 		"Width": 1.5,
 		"Height": 2.16,
 		"Image": "mxr-m199.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "TRS Split + Tap",
+		"Width": 1.91,
+		"Height": 3.7,
+		"Image": "mxr-m231.png"
 	},
 	{
 		"Brand": "MXR",
@@ -39535,6 +39549,13 @@
 		"Width": 3.26,
 		"Height": 5.04,
 		"Image": "wayhuge-geisha.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Geisha Drive (Smalls)",
+		"Width": 2.5,
+		"Height": 4.37,
+		"Image": "wayhuge-wm32.png"
 	},
 	{
 		"Brand": "Way Huge",
