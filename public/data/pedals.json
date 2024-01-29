@@ -26210,8 +26210,8 @@
 	{
 		"Brand": "Mu-Tron",
 		"Name": "Boostron II",
-		"Width": 2.25,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "mu-tron-boostron-ii.png"
 	},
 	{
@@ -26224,43 +26224,43 @@
 	{
 		"Brand": "Mu-Tron",
 		"Name": "Micro-Tron IV",
-		"Width": 2.50,
-		"Height": 4.80,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "mu-tron-micro-tron-4.png"
 	},
 	{
 		"Brand": "Mu-Tron",
 		"Name": "Octavider+",
-		"Width": 2.25,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "mu-tron-octavider+.png"
 	},
 	{
 		"Brand": "Mu-Tron",
 		"Name": "Phasor III",
-		"Width": 2.25,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "mu-tron-phasor-iii.png"
 	},
 	{
 		"Brand": "Mu-Tron",
 		"Name": "Ripper",
-		"Width": 2.25,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "mu-tron-ripper.png"
 	},
 	{
 		"Brand": "Mu-Tron",
 		"Name": "Tremu-Tron",
-		"Width": 2.25,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "mu-tron-tremu-tron.png"
 	},
 	{
 		"Brand": "Mu-Tron",
 		"Name": "TubeTron",
-		"Width": 2.25,
-		"Height": 4.75,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "mu-tron-tubetron.png"
 	},
 	{
