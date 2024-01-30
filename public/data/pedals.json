@@ -8135,6 +8135,13 @@
 	},
 	{
 		"Brand": "Danelectro",
+		"Name": "Nichols 1966",
+		"Width": 2.5,
+		"Height": 4.85,
+		"Image": "danelectro-nichols-1966.png"
+	},
+	{
+		"Brand": "Danelectro",
 		"Name": "Roebuck",
 		"Width": 2.5,
 		"Height": 4.85,
@@ -28586,6 +28593,13 @@
 		"Width": 1.69,
 		"Height": 3.88,
 		"Image": "obne-ramper.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Expression Ramper (Dark Light)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-dark-light.png"
 	},
 	{
 		"Brand": "OBNE",
