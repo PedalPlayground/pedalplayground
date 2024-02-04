@@ -15821,10 +15821,73 @@
 	},
 	{
 		"Brand": "God City Instruments",
+		"Name": "Bad Larry",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "god-city-bad-larry.png"
+	},
+	{
+		"Brand": "God City Instruments",
+		"Name": "BJR",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "god-city-bjr.png"
+	},
+	{
+		"Brand": "God City Instruments",
+		"Name": "Brutalist",
+		"Width": 3.7,
+		"Height": 4.83,
+		"Image": "god-city-brutalist.png"
+	},
+	{
+		"Brand": "God City Instruments",
 		"Name": "Jugendstil",
-		"Width": 2.5,
-		"Height": 4.8,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "god-city-jugendstil.png"
+	},
+	{
+		"Brand": "God City Instruments",
+		"Name": "Jugendtief",
+		"Width": 3.7,
+		"Height": 4.83,
+		"Image": "god-city-jugendtief.png"
+	},
+	{
+		"Brand": "God City Instruments",
+		"Name": "Nojofuzz",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "god-city-nojo-fuzz.png"
+	},
+	{
+		"Brand": "God City Instruments",
+		"Name": "OGR Stage 3",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "god-city-ogr-stage-3.png"
+	},
+	{
+		"Brand": "God City Instruments",
+		"Name": "Onslaught",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "god-city-onslaught.png"
+	},
+	{
+		"Brand": "God City Instruments",
+		"Name": "Riffchild",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "god-city-riffchild.png"
+	},
+	{
+		"Brand": "God City Instruments",
+		"Name": "SBD",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "god-city-sbd.png"
 	},
 	{
 		"Brand": "Gokko",
@@ -17470,6 +17533,13 @@
 		"Width": 3.1,
 		"Height": 6.38,
 		"Image": "hotone-soul-press-2.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Tuner Press",
+		"Width": 3.17,
+		"Height": 6.38,
+		"Image": "hotone-tuner-press.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -21022,9 +21092,9 @@
 	},
 	{
 		"Brand": "Keeley",
-		"Name": "Katana (New Light Pink)",
-		"Width": 3.19,
-		"Height": 4.4,
+		"Name": "Katana (Light Pink)",
+		"Width": 3.26,
+		"Height": 4.5,
 		"Image": "keeley-katana-new-light-pink.png"
 	},
 	{
@@ -21096,6 +21166,13 @@
 		"Width": 1.77,
 		"Height": 3.62,
 		"Image": "keeley-mini-katana.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Mini Katana (Light Pink)",
+		"Width": 1.77,
+		"Height": 3.62,
+		"Image": "keeley-mini-katana-light-pink.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -28075,6 +28152,13 @@
 		"Width": 3.54,
 		"Height": 3.62,
 		"Image": "nux-zeus-jr.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "Aakii",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "native-audio-aakii.png"
 	},
 	{
 		"Brand": "Native Audio",
