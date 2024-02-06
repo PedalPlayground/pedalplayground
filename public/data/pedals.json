@@ -12566,6 +12566,13 @@
 	},
 	{
 		"Brand": "EAE",
+		"Name": "Dagger (Acid Etched)",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "electronic-audio-experiments-dagger-acid-etched.png"
+	},
+	{
+		"Brand": "EAE",
 		"Name": "Dagger (Black)",
 		"Width": 2.6,
 		"Height": 4.99,
@@ -14579,6 +14586,13 @@
 		"Width": 6.5,
 		"Height": 5.44,
 		"Image": "friedman-irx.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "IR-X (Limited Edition)",
+		"Width": 6.5,
+		"Height": 5.44,
+		"Image": "friedman-irx-limited.png"
 	},
 	{
 		"Brand": "Friedman",
@@ -17342,8 +17356,15 @@
 		"Brand": "Horizon Devices",
 		"Name": "Apex Preamp",
 		"Width": 4.75,
-		"Height": 3.62,
+		"Height": 3.64,
 		"Image": "horizon-apex-preamp.png"
+	},
+	{
+		"Brand": "Horizon Devices",
+		"Name": "Clarity Compressor",
+		"Width": 2.58,
+		"Height": 4.5,
+		"Image": "horizon-clarity.png"
 	},
 	{
 		"Brand": "Horizon Devices",
@@ -17362,8 +17383,8 @@
 	{
 		"Brand": "Horizon Devices",
 		"Name": "Precision Drive",
-		"Width": 2.4,
-		"Height": 4.25,
+		"Width": 2.58,
+		"Height": 4.5,
 		"Image": "horizon-precision-drive.png"
 	},
 	{
@@ -17624,6 +17645,13 @@
 		"Width": 4.7,
 		"Height": 3.84,
 		"Image": "hudson-broadcast-dual-mint.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Broadcast Dual Switch (Regent)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "hudson-broadcast-dual-regent.png"
 	},
 	{
 		"Brand": "Hudson",
