@@ -3844,6 +3844,13 @@
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
+		"Name": "Skronk Machine",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-skronk-machine.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
 		"Name": "Slob",
 		"Width": 2.6,
 		"Height": 5,
@@ -9735,6 +9742,20 @@
 		"Width": 1.65354,
 		"Height": 3.681102,
 		"Image": "donner-yellow-fall.png"
+	},
+	{
+		"Brand": "Donner X Third Man Hardware",
+		"Name": "Triple Threat",
+		"Width": 9.25,
+		"Height": 3,
+		"Image": "donner-third-man-triple-threat.png"
+	},
+	{
+		"Brand": "Donner X Third Man Hardware",
+		"Name": "Triple Threat (Yellow)",
+		"Width": 9.25,
+		"Height": 3,
+		"Image": "donner-third-man-triple-threat-yellow.png"
 	},
 	{
 		"Brand": "Dophix",
@@ -32576,6 +32597,13 @@
 		"Width": 4.7,
 		"Height": 3.75,
 		"Image": "silktone-fuzz.png"
+	},
+	{
+		"Brand": "Silktone",
+		"Name": "Overdrive+",
+		"Width": 4.7,
+		"Height": 3.73,
+		"Image": "silktone-overdrive-plus.png"
 	},
 	{
 		"Brand": "Simple Switch",
