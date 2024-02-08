@@ -770,6 +770,34 @@
 		"Image": "akai-e2-headrush.png"
 	},
 	{
+		"Brand": "Alabs",
+		"Name": "Cetus",
+		"Width": 2.71,
+		"Height": 4.83,
+		"Image": "alabs-cetus.png"
+	},
+	{
+		"Brand": "Alabs",
+		"Name": "Novadrift",
+		"Width": 2.71,
+		"Height": 4.83,
+		"Image": "alabs-novadrift.png"
+	},
+	{
+		"Brand": "Alabs",
+		"Name": "Orbital",
+		"Width": 2.71,
+		"Height": 4.83,
+		"Image": "alabs-orbital.png"
+	},
+	{
+		"Brand": "Alabs",
+		"Name": "Timeslip",
+		"Width": 2.71,
+		"Height": 4.83,
+		"Image": "alabs-timeslip.png"
+	},
+	{
 		"Brand": "Alexander",
 		"Name": "Calavera",
 		"Width": 2.78,
@@ -16546,6 +16574,27 @@
 		"Width": 3.5,
 		"Height": 5.19,
 		"Image": "guyatone-vt3-vintage.png"
+	},
+	{
+		"Brand": "Hagerman",
+		"Name": "Boost EF86",
+		"Width": 4,
+		"Height": 5.05,
+		"Image": "hagerman-boost-ef86.png"
+	},
+	{
+		"Brand": "Hagerman",
+		"Name": "Compressor 12AU7",
+		"Width": 4,
+		"Height": 5.05,
+		"Image": "hagerman-compressor-12au7.png"
+	},
+	{
+		"Brand": "Hagerman",
+		"Name": "Overdrive 12AX7",
+		"Width": 4,
+		"Height": 5.05,
+		"Image": "hagerman-overdrive-12ax7.png"
 	},
 	{
 		"Brand": "Hammond",
@@ -33927,6 +33976,13 @@
 		"Width": 2.85,
 		"Height": 4.5,
 		"Image": "stomp-under-foot-skinner-box.png"
+	},
+	{
+		"Brand": "Stomp Under Foot",
+		"Name": "Sonic Generator",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "stomp-under-foot-sonic-generator.png"
 	},
 	{
 		"Brand": "Stomp Under Foot",
