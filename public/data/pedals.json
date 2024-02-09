@@ -533,6 +533,13 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Anomaly",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-anomaly.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Andromeda",
 		"Width": 2.6,
 		"Height": 4.97,
@@ -544,6 +551,13 @@
 		"Width": 2.6,
 		"Height": 4.97,
 		"Image": "aion-aphelion.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Ares",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-ares.png"
 	},
 	{
 		"Brand": "Aion FX",
@@ -586,6 +600,13 @@
 		"Width": 2.6,
 		"Height": 4.97,
 		"Image": "aion-deimos.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Elysium",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-elysium.png"
 	},
 	{
 		"Brand": "Aion FX",
@@ -666,13 +687,6 @@
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Spectron",
-		"Width": 5.75,
-		"Height": 4.80,
-		"Image": "aion-spectron.png"
-	},
-	{
-		"Brand": "Aion FX",
 		"Name": "Quantum",
 		"Width": 2.6,
 		"Height": 4.97,
@@ -715,6 +729,13 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Spectron",
+		"Width": 5.75,
+		"Height": 4.80,
+		"Image": "aion-spectron.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Stratus",
 		"Width": 2.6,
 		"Height": 4.97,
@@ -726,6 +747,13 @@
 		"Width": 4.7,
 		"Height": 3.81,
 		"Image": "aion-theseus.png"
+	},
+	{
+		"Brand": "Aion FX",
+		"Name": "Titan",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-titan.png"
 	},
 	{
 		"Brand": "Aion FX",
@@ -2567,6 +2595,13 @@
 		"Width": 3.7,
 		"Height": 5.7,
 		"Image": "barber-burn-unit.png"
+	},
+	{
+		"Brand": "Barber",
+		"Name": "Buss",
+		"Width": 2.8,
+		"Height": 4.56,
+		"Image": "barber-buss.png"
 	},
 	{
 		"Brand": "Barber",
