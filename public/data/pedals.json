@@ -2583,6 +2583,41 @@
 		"Image": "audio-sprockets-tone-dexter.png"
 	},
 	{
+		"Brand": "Bananana Effects",
+		"Name": "Abracadabra",
+		"Width": 2,
+		"Height": 3.72,
+		"Image": "bananana-effects-abracadabra.png"
+	},
+	{
+		"Brand": "Bananana Effects",
+		"Name": "Aurora",
+		"Width": 2,
+		"Height": 3.72,
+		"Image": "bananana-effects-aurora.png"
+	},
+	{
+		"Brand": "Bananana Effects",
+		"Name": "Mandala",
+		"Width": 2,
+		"Height": 3.72,
+		"Image": "bananana-effects-mandala.png"
+	},
+	{
+		"Brand": "Bananana Effects",
+		"Name": "Matryoshka",
+		"Width": 2,
+		"Height": 3.72,
+		"Image": "bananana-effects-matryoshka.png"
+	},
+	{
+		"Brand": "Bananana Effects",
+		"Name": "Tararira",
+		"Width": 5.7,
+		"Height": 4.87,
+		"Image": "bananana-effects-tararira.png"
+	},
+	{
 		"Brand": "Barber",
 		"Name": "1/2 Gainer",
 		"Width": 3.7,
