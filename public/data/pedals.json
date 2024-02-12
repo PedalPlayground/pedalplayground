@@ -8148,6 +8148,13 @@
 		"Image": "daddario-ct23.png"
 	},
 	{
+		"Brand": "Daddy Daughter Pedal Works",
+		"Name": "My Little Klony",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "daddy-daughter-my-little-klony.png"
+	},
+	{
 		"Brand": "Damnation Audio",
 		"Name": "Curmudgeon Dist 2",
 		"Width": 2.5,
@@ -14429,7 +14436,7 @@
 	{
 		"Brand": "Fractal Audio Systems",
 		"Name": "EV-2",
-		"Width": 3.2,
+		"Width": 3.33,
 		"Height": 7.5,
 		"Image": "fractal-ev2.png"
 	},
@@ -23364,6 +23371,34 @@
 		"Width": 2.6,
 		"Height": 5.06,
 		"Image": "lpd-tidal-chorus.png"
+	},
+	{
+		"Brand": "LSL",
+		"Name": "Claro Boost",
+		"Width": 3,
+		"Height": 4.4,
+		"Image": "lsl-claro-boost.png"
+	},
+	{
+		"Brand": "LSL",
+		"Name": "Lucid OD",
+		"Width": 3,
+		"Height": 4.4,
+		"Image": "lsl-lucid-od.png"
+	},
+	{
+		"Brand": "LSL",
+		"Name": "OG-OD",
+		"Width": 3,
+		"Height": 4.4,
+		"Image": "lsl-og-od.png"
+	},
+	{
+		"Brand": "LSL",
+		"Name": "Vital DS",
+		"Width": 3,
+		"Height": 4.4,
+		"Image": "lsl-vital-ds.png"
 	},
 	{
 		"Brand": "Lurch Audio",
