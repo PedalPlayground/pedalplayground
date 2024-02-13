@@ -38691,6 +38691,20 @@
 	},
 	{
 		"Brand": "Warm Audio",
+		"Name": "RingerBringer",
+		"Width": 5.25,
+		"Height": 6.81,
+		"Image": "warm-audio-ringerbringer.png"
+	},
+	{
+		"Brand": "Warm Audio",
+		"Name": "Warm Bender",
+		"Width": 3.37,
+		"Height": 6,
+		"Image": "warm-audio-warm-bender.png"
+	},
+	{
+		"Brand": "Warm Audio",
 		"Name": "Warmdrive",
 		"Width": 2.88,
 		"Height": 4.75,
