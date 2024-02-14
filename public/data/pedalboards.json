@@ -441,41 +441,41 @@
 		"Image": "harley-benton-spaceship-40.png"
 	},
 	{
-		"Brand": "Palmer",
+		"Brand": "Harley Benton",
 		"Name": "SpaceShip 50C",
 		"Width": 19.685,
 		"Height": 5.31496,
 		"Image": "harley-benton-spaceship-50C.png"
 	},
-	{
-		"Brand": "Palmer",
+ 	{
+		"Brand": "Harley Benton",
+		"Name": "SpaceShip 50M",
+		"Width": 19.88,
+		"Height": 6.89,
+		"Image": "harley-benton-spaceship-50m.png"
+ 	},
+ 	{
+		"Brand": "Harley Benton",
 		"Name": "SpaceShip 60",
 		"Width": 23.8189,
 		"Height": 12.00787,
 		"Image": "harley-benton-spaceship-60.png"
 	},
 	{
-		"Brand": "Palmer",
+		"Brand": "Harley Benton",
 		"Name": "SpaceShip 60XL",
 		"Width": 23.622,
 		"Height": 15.3543,
 		"Image": "harley-benton-spaceship-60XL.png"
 	},
 	{
-		"Brand": "Palmer",
+		"Brand": "Harley Benton",
 		"Name": "SpaceShip 80",
 		"Width": 31.4961,
 		"Height": 15.3543,
 		"Image": "harley-benton-spaceship-80.png"
-  },
-  {
-		"Brand": "Harvey Benton",
-		"Name": "SpaceShip 50M",
-		"Width": 19.88,
-		"Height": 6.89,
-		"Image": "harvey-benton-spaceship-50m.png"
-  },
-  {
+	},
+	{
 		"Brand": "Holeyboard",
 		"Name": "Mini",
 		"Width": 13,
