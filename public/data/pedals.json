@@ -40238,6 +40238,13 @@
 	},
 	{
 		"Brand": "Xvive",
+		"Name": "V9 Lemon Squeezer",
+		"Width": 1.81,
+		"Height": 3.70,
+		"Image": "xvive-v9-lemon-squeezer.png"
+	},
+	{
+		"Brand": "Xvive",
 		"Name": "T1 Golden Brownie",
 		"Width": 1.81,
 		"Height": 3.70,
