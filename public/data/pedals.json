@@ -3130,6 +3130,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "FD300 Ultra Feedback and Distortion",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-fd300.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "FX600 Digital Multi-FX",
 		"Width": 2.76,
 		"Height": 4.84,
