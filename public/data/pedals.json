@@ -21336,6 +21336,13 @@
 		"Image": "kemper-stage.png"
 	},
 	{
+		"Brand": "Kenton",
+		"Name": "Thru-5",
+		"Width": 3.94,
+		"Height": 1.97,
+		"Image": "kenton-thru-5.png"
+	},
+	{
 		"Brand": "Kernom",
 		"Name": "Moho",
 		"Width": 6.46,
