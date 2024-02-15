@@ -26027,17 +26027,24 @@
 	},
 	{
 		"Brand": "Morley",
-		"Name": "AFX-1",
-		"Width": 12,
-		"Height": 7.09,
-		"Image": "morley-afx1.png"
+		"Name": "20/20 Bad Horsie Wah",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-20-20-bad-horsie-wah.png"
 	},
 	{
 		"Brand": "Morley",
-		"Name": "Bad Horsie",
-		"Width": 6,
-		"Height": 9.25,
-		"Image": "morley-wah.png"
+		"Name": "20/20 Classic Switchless Wah",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-20-20-classic-switchless-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Distortion Wah",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-20-20-distortion-wah.png"
 	},
 	{
 		"Brand": "Morley",
@@ -26050,8 +26057,120 @@
 		"Brand": "Morley",
 		"Name": "20/20 Lead Wah Boost",
 		"Width": 4.5,
-		"Height": 7.24,
+		"Height": 6.85,
 		"Image": "morley-20-20-lead-wah-boost.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Power Fuzz Wah",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-20-20-power-fuzz-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Power Wah",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-20-20-power-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Power Wah Volume",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-20-20-power-wah-volume.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Volume Plus",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-20-20-volume-plus.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Wah Boost",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-20-20-wah-boost.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Wah Lock",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-20-20-wah-lock.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "AFX-1",
+		"Width": 12,
+		"Height": 7.09,
+		"Image": "morley-afx1.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Bad Horsie",
+		"Width": 6,
+		"Height": 9.25,
+		"Image": "morley-bad-horsie.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Classic Bad Horsie Wah",
+		"Width": 5.88,
+		"Height": 9.13,
+		"Image": "morley-classic-bad-horsie-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Classic Mark Tremonti Wah",
+		"Width": 5.88,
+		"Height": 9.13,
+		"Image": "morley-classic-mark-tremonti-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Classic Power Fuzz Wah",
+		"Width": 5.88,
+		"Height": 9.13,
+		"Image": "morley-classic-power-fuzz-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Gold Series ABC",
+		"Width": 6.63,
+		"Height": 4.38,
+		"Image": "morley-gold-series-abc.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Gold Series ABC Pro Selector",
+		"Width": 6.63,
+		"Height": 4.38,
+		"Image": "morley-gold-series-abc-pro-selector.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Gold Series ABY",
+		"Width": 5.24,
+		"Height": 3.25,
+		"Image": "morley-gold-series-aby.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Gold Series ABY Mix",
+		"Width": 6.63,
+		"Height": 4.38,
+		"Image": "morley-gold-series-aby-mix.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Immortals Series George Lynch Dragon 2 Wah",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-immortals-series-george-lynch-dragon-2-wah.png"
 	},
 	{
 		"Brand": "Morley",
@@ -26059,6 +26178,20 @@
 		"Width": 4.5,
 		"Height": 6.75,
 		"Image": "morley-mini-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Tone Questor Wah",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-tone-questor-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Volume Commander",
+		"Width": 5.3,
+		"Height": 4.5,
+		"Image": "morley-volume-commander.png"
 	},
 	{
 		"Brand": "Morningstar",
