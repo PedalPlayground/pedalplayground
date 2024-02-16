@@ -352,9 +352,13 @@ $(document).ready(function () {
 	// On keydown of "D" or "delete" remove pedal
 	$("body").on("keydown keyup", function (event) {
 		if (event.which == 68 || event.which == 8) {
-			deleteSelected();
-			$(".site-body > .item-info").remove();
-			savePedalCanvas();
+			if (confirm('Are you sure you want to remove the item?')) {
+				deleteSelected();
+				$(".site-body > .item-info").remove();
+				savePedalCanvas();
+			  } else {
+				// Do nothing!
+			  }
 		}
 	});
 
@@ -483,9 +487,13 @@ function readyCanvas() {
 		//rotatePedal(this);
 		var target = $(event.target);
 		if (target.is(".delete")) {
-			deletePedal(this);
-			deselect();
-			$("body").click();
+			if (confirm('Are you sure you want to remove the item?')) {
+				deletePedal(this);
+				deselect();
+				$("body").click();
+			} else {
+				// Do nothing!
+			}
 		} else if (target.is(".rotate")) {
 			event.stopPropagation();
 
@@ -886,10 +894,14 @@ $("body").on("click", 'a[href="#rotate"]', function (e) {
 });
 
 $("body").on("click", 'a[href="#delete"]', function () {
-	var id = $(this).parents(".panel").data("id");
-	$(id).remove();
-	$(".item-info").remove();
-	savePedalCanvas();
+	if (confirm('Are you sure you want to remove the item?')) {
+		var id = $(this).parents(".panel").data("id");
+		$(id).remove();
+		$(".item-info").remove();
+		savePedalCanvas();
+	} else {
+		// Do nothing!
+	}
 });
 
 $("body").on("click", 'a[href="#front"]', function (e) {
