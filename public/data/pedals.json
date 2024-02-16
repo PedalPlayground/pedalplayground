@@ -23150,6 +23150,13 @@
 	},
 	{
 		"Brand": "Lovepedal",
+		"Name": "AMP808",
+		"Width": 4.87,
+		"Height": 2.74,
+		"Image": "lovepedal-amp808.png"
+	},
+	{
+		"Brand": "Lovepedal",
 		"Name": "Dover Drive",
 		"Width": 2.66,
 		"Height": 4.41,
