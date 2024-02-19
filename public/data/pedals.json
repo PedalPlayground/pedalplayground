@@ -10067,9 +10067,23 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
+		"Name": "Hoverla",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-hoverla.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "The Forest Song",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-the-forest-song.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
 		"Name": "Bat Cold War V2",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Width": 2.6,
+		"Height": 4.9,
 		"Image": "drunk-beaver-bat-cold-war-v2.png"
 	},
 	{
