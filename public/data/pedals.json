@@ -6546,6 +6546,13 @@
 	},
 	{
 		"Brand": "Caveman",
+		"Name": "BP1 Compact",
+		"Width": 5.13,
+		"Height": 5.97,
+		"Image": "caveman-bp1c.png"
+	},
+	{
+		"Brand": "Caveman",
 		"Name": "DST1",
 		"Width": 4.33,
 		"Height": 5.71,
@@ -10067,6 +10074,13 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
+		"Name": "Bat Cold War V2",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-bat-cold-war-v2.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
 		"Name": "Hoverla",
 		"Width": 2.6,
 		"Height": 4.9,
@@ -10078,13 +10092,6 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "drunk-beaver-the-forest-song.png"
-	},
-	{
-		"Brand": "Drunk Beaver",
-		"Name": "Bat Cold War V2",
-		"Width": 2.6,
-		"Height": 4.9,
-		"Image": "drunk-beaver-bat-cold-war-v2.png"
 	},
 	{
 		"Brand": "Drybell",
