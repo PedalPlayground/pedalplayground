@@ -30961,6 +30961,13 @@
 		"Image": "roland-spd-one-wav.png"
 	},
 	{
+		"Brand": "Roland",
+		"Name": "VT 3",
+		"Width": 8.26,
+		"Height": 6.88,
+		"Image": "roland-vt-3.png"
+	},
+	{
 		"Brand": "Rolls",
 		"Name": "MX28 Stereo Mini-Mix VI",
 		"Width": 4.25,
