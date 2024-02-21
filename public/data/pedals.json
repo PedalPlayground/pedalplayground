@@ -27749,6 +27749,13 @@
 	},
 	{
 		"Brand": "Nobels",
+		"Name": "ODR-1 (30th Anniversary)",
+		"Width": 2.89,
+		"Height": 5.08,
+		"Image": "nobels-odr-1-30th.png"
+	},
+	{
+		"Brand": "Nobels",
 		"Name": "TR-X",
 		"Width": 2.89,
 		"Height": 5.08,
@@ -29400,6 +29407,13 @@
 		"Image": "onecontrol-xenagama.png"
 	},
 	{
+		"Brand": "OPFXS",
+		"Name": "Electric Vibe",
+		"Width": 2.77,
+		"Height": 5.02,
+		"Image": "opfxs-electric-vibe.png"
+	},
+	{
 		"Brand": "Orange",
 		"Name": "Amp Detonator",
 		"Width": 3.74,
@@ -30945,6 +30959,13 @@
 		"Width": 4.7,
 		"Height": 3.76,
 		"Image": "proanalog-manticore.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Anadime Bass Chorus",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "providence-anadime-bass-chorus.png"
 	},
 	{
 		"Brand": "Providence",
@@ -34648,6 +34669,13 @@
 		"Width": 2.71,
 		"Height": 4.5,
 		"Image": "subdecay-m3.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Noise Theory",
+		"Width": 2.71,
+		"Height": 4.5,
+		"Image": "subdecay-noise-theory.png"
 	},
 	{
 		"Brand": "Subdecay",
