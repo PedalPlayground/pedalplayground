@@ -15260,6 +15260,41 @@
 		"Image": "gfi-triple-switch.png"
 	},
 	{
+		"Brand": "gig-fx",
+		"Name": "Chopper",
+		"Width": 4.05,
+		"Height": 8.97,
+		"Image": "gig-fx-chopper.png"
+	},
+	{
+		"Brand": "gig-fx",
+		"Name": "Kilo Wah",
+		"Width": 4.05,
+		"Height": 8.97,
+		"Image": "gig-fx-kilo-wah.png"
+	},
+	{
+		"Brand": "gig-fx",
+		"Name": "Mega Wah",
+		"Width": 4.05,
+		"Height": 8.97,
+		"Image": "gig-fx-mega-wah.png"
+	},
+	{
+		"Brand": "gig-fx",
+		"Name": "Pro Chop",
+		"Width": 4.05,
+		"Height": 8.97,
+		"Image": "gig-fx-pro-chop.png"
+	},
+	{
+		"Brand": "gig-fx",
+		"Name": "VOD",
+		"Width": 4.05,
+		"Height": 8.97,
+		"Image": "gig-fx-vod-variable-overdrive.png"
+	},
+	{
 		"Brand": "GigRig",
 		"Name": "ABY Baby",
 		"Width": 6.45,
