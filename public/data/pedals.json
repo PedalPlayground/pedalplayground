@@ -6784,6 +6784,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Condor HiFi",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-condor-hifi.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "CXM 1978",
 		"Width": 5.75,
 		"Height": 6.5,
@@ -33248,6 +33255,13 @@
 		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "solidgoldfx-athena.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Aurras",
+		"Width": 2.66,
+		"Height": 4.85,
+		"Image": "solidgoldfx-aurras.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
