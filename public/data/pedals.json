@@ -22624,6 +22624,265 @@
 		"Image": "m-audio-expression.png"
 	},
 	{
+		"Brand": "M-VAVE",
+		"Name": "Mini Universe",
+		"Width": 3.27,
+		"Height": 5.94,
+		"Image": "m-vave-mini-universe.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Mini Amp",
+		"Width": 3.27,
+		"Height": 5.94,
+		"Image": "m-vave-mini-amp.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Mini EFX",
+		"Width": 3.27,
+		"Height": 5.94,
+		"Image": "m-vave-mini-efx.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "ABY Box",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-aby-box.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Looper Plus",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-looper-plus.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Tuner",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-looper-tuner.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Noise Gate",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-noise-gate.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Booster",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-booster.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Chorus",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-chorus.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Compressor",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-compressor.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Delay",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-delay.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "DIG Delay",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-dig-delay.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "DIG Pitch",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-dig-pitch.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "DIG Reverb",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-dig-reverb.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Dist British",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-dist-british.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Dist MT1",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-dist-mt1.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Distorsion SC1",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-distorsion-sc1.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Fuzz",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-fuzz.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Overdrive BLUES",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-overdrive-blues.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Overdrive TS",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-overdrive-ts.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Overdrive DB",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-overdrive-db.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Overdrive Amp",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-overdrive-amp.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Tremolo",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-tremolo.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Phaser",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-phaser.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Looper",
+		"Width": 1.91,
+		"Height": 3.54,
+		"Image": "m-vave-looper.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Cube Baby",
+		"Width": 6.37,
+		"Height": 2.40,
+		"Image": "m-vave-cube-baby.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Cube Baby AC",
+		"Width": 6.37,
+		"Height": 2.40,
+		"Image": "m-vave-cube-baby-ac.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Cube Baby bass",
+		"Width": 6.37,
+		"Height": 2.40,
+		"Image": "m-vave-cube-baby-bass.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Tank G",
+		"Width": 12.2,
+		"Height": 2.56,
+		"Image": "m-vave-tank-g.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Tank B",
+		"Width": 12.2,
+		"Height": 2.56,
+		"Image": "m-vave-tank-b.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Cube Sugar",
+		"Width": 13,
+		"Height": 3.7,
+		"Image": "m-vave-cube-sugar.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Cube Turner Pro",
+		"Width": 4.3,
+		"Height": 2,
+		"Image": "m-vave-cube-turner-pro.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Cube Turner Plus",
+		"Width": 4.3,
+		"Height": 2,
+		"Image": "m-vave-cube-turner-plus.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Chocolate",
+		"Width": 8.34,
+		"Height": 1.41,
+		"Image": "m-vave-cube-chocolate.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Pedal Power",
+		"Width": 5.50,
+		"Height": 1.02,
+		"Image": "m-vave-pedal-power.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Isolated Power",
+		"Width": 6.22,
+		"Height": 1.97,
+		"Image": "m-vave-isolated-power.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Cube Magic",
+		"Width": 16.2,
+		"Height": 6.1,
+		"Image": "m-vave-cube-magic.png"
+	},
+	{
 		"Brand": "Mad Professor",
 		"Name": "1 Overdrive",
 		"Width": 2.62,
@@ -31088,7 +31347,7 @@
 	},
 	{
 		"Brand": "Roland",
-		"Name": "VT 3",
+		"Name": "VT-3",
 		"Width": 8.26,
 		"Height": 6.88,
 		"Image": "roland-vt-3.png"
