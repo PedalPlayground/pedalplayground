@@ -22016,6 +22016,20 @@
 	},
 	{
 		"Brand": "Lightning Wave",
+		"Name": "Astro",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "lightning-wave-Astro.png"
+	},
+	{
+		"Brand": "Lightning Wave",
+		"Name": "Doom",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "lightning-wave-doom.png"
+	},
+	{
+		"Brand": "Lightning Wave",
 		"Name": "Ghost",
 		"Width": 3.7,
 		"Height": 4.86,
