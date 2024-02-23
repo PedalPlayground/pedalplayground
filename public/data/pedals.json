@@ -31347,7 +31347,14 @@
 	},
 	{
 		"Brand": "Roland",
-		"Name": "VT-3",
+		"Name": "AIRA TB-3",
+		"Width": 8.26,
+		"Height": 6.88,
+		"Image": "roland-aira-tb-3.png"
+	},
+	{
+		"Brand": "Roland",
+		"Name": "AIRA VT-3",
 		"Width": 8.26,
 		"Height": 6.88,
 		"Image": "roland-vt-3.png"
