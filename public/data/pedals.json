@@ -21567,6 +21567,83 @@
 		"Image": "korg-sdd-3000.png"
 	},
 	{
+		"Brand": "Korg",
+		"Name": "Volca Bass",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-bass.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Volca Sample",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-sample.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Volca Drum",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-drum.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Volca FM",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-fm.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Volca FM 2",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-fm2.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Volca Modular",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-modular.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Volca Nubass",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-nubass.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Volca Kick",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-kick.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Volca Mix",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-mix.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Volca Keys",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-keys.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Volca Beats",
+		"Width": 7.59,
+		"Height": 4.52,
+		"Image": "korg-volca-beats.png"
+	},
+	{
 		"Brand": "L.R. Baggs",
 		"Name": "Align Series Active DI",
 		"Width": 3.34,
