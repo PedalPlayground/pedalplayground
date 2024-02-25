@@ -6672,6 +6672,13 @@
 	},
 	{
 		"Brand": "Champion Leccy",
+		"Name": "The Skitzy (Beige)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitzy-beige.png"
+	},
+	{
+		"Brand": "Champion Leccy",
 		"Name": "The Skitzy (Seafoam)",
 		"Width": 3.7,
 		"Height": 4.81,
@@ -10232,6 +10239,13 @@
 		"Width": 4.1,
 		"Height": 5.13,
 		"Image": "dtsart-sdd-3kp.png"
+	},
+	{
+		"Brand": "Dunable",
+		"Name": "Eidolon",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "dunable-eidolon.png"
 	},
 	{
 		"Brand": "Dunlop",
