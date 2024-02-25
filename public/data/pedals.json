@@ -6602,6 +6602,13 @@
 	},
 	{
 		"Brand": "Champion Leccy",
+		"Name": "The Dunsh (Pink Sherbet)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-dunsh-pink.png"
+	},
+	{
+		"Brand": "Champion Leccy",
 		"Name": "The Fettle Boost",
 		"Width": 2.6,
 		"Height": 5,
