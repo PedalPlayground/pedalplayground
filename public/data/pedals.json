@@ -32725,6 +32725,20 @@
 		"Image": "shin-ei-fy-6.png"
 	},
 	{
+		"Brand": "Shin's Music",
+		"Name": "Clean Boost",
+		"Width": 2.79,
+		"Height": 4.56,
+		"Image": "shins-music-clean-boost.png"
+	},
+	{
+		"Brand": "Shin's Music",
+		"Name": "Dumbloid ODS",
+		"Width": 5.02,
+		"Height": 3.7,
+		"Image": "shins-music-dumbloid-ods.png"
+	},
+	{
 		"Brand": "Shnobel Tone",
 		"Name": "Boost",
 		"Width": 2.31,
@@ -40816,6 +40830,13 @@
 		"Width": 2.85,
 		"Height": 4.5,
 		"Image": "xts-precision.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Precision Overdrive",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "xts-precision-od.png"
 	},
 	{
 		"Brand": "XTS",
