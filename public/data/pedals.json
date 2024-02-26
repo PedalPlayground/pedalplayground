@@ -10255,6 +10255,13 @@
 		"Image": "dunable-eidolon.png"
 	},
 	{
+		"Brand": "Dunable",
+		"Name": "Splatter Blaster",
+		"Width": 6.12,
+		"Height": 4.7,
+		"Image": "dunable-splatter-blaster.png"
+	},
+	{
 		"Brand": "Dunlop",
 		"Name": "Band of Gypsys Fuzz Face",
 		"Width": 3.5,
@@ -26514,6 +26521,13 @@
 		"Width": 2.72,
 		"Height": 4.5,
 		"Image": "mrblack-thunderclaw.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Tunnelworm",
+		"Width": 2.69,
+		"Height": 4.5,
+		"Image": "mrblack-tunneworm.png"
 	},
 	{
 		"Brand": "Mr. Black",
