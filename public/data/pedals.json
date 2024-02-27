@@ -37178,6 +37178,48 @@
 		"Image": "tonecity-wild-fro.png"
 	},
 	{
+		"Brand": "ToneTuga FX",
+		"Name": "Aegis",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "tonetugafx-aegis.png"
+	},
+	{
+		"Brand": "ToneTuga FX",
+		"Name": "Clockwork",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "tonetugafx-clockwork.png"
+	},
+	{
+		"Brand": "ToneTuga FX",
+		"Name": "Delphine",
+		"Width": 5.7,
+		"Height": 4.8,
+		"Image": "tonetugafx-delphine.png"
+	},
+	{
+		"Brand": "ToneTuga FX",
+		"Name": "Prysm",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "tonetugafx-prysm.png"
+	},
+	{
+		"Brand": "ToneTuga FX",
+		"Name": "Salvage",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "tonetugafx-salvage.png"
+	},
+	{
+		"Brand": "ToneTuga FX",
+		"Name": "Songbird",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "tonetugafx-songbird.png"
+	},
+	{
 		"Brand": "Tonewave",
 		"Name": "Borealis",
 		"Width": 2.6,
@@ -38135,6 +38177,13 @@
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "vemuram-shanks-ods-1.png"
+	},
+	{
+		"Brand": "Very Good Amp Co",
+		"Name": "EP Drive",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "very-good-ep-drive.png"
 	},
 	{
 		"Brand": "VFE Pedals",
