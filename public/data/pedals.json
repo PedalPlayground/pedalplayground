@@ -6546,6 +6546,13 @@
 	},
 	{
 		"Brand": "Caveman",
+		"Name": "BP1 Compact",
+		"Width": 5.13,
+		"Height": 5.97,
+		"Image": "caveman-bp1c.png"
+	},
+	{
+		"Brand": "Caveman",
 		"Name": "DST1",
 		"Width": 4.33,
 		"Height": 5.71,
@@ -6592,6 +6599,13 @@
 		"Width": 3.7,
 		"Height": 4.81,
 		"Image": "champion-leccy-the-dunsh.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Dunsh (Pink Sherbet)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-dunsh-pink.png"
 	},
 	{
 		"Brand": "Champion Leccy",
@@ -6662,6 +6676,20 @@
 		"Width": 3.7,
 		"Height": 4.81,
 		"Image": "champion-leccy-the-skitter-pink.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Skitzy (Beige)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitzy-beige.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Skitzy (Seafoam)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitzy-seafoam.png"
 	},
 	{
 		"Brand": "Champion Leccy",
@@ -6774,6 +6802,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-condor.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "Condor HiFi",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-condor-hifi.png"
 	},
 	{
 		"Brand": "Chase Bliss",
@@ -10068,9 +10103,23 @@
 	{
 		"Brand": "Drunk Beaver",
 		"Name": "Bat Cold War V2",
-		"Width": 2.59843,
-		"Height": 4.80315,
+		"Width": 2.6,
+		"Height": 4.9,
 		"Image": "drunk-beaver-bat-cold-war-v2.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Hoverla",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-hoverla.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "The Forest Song",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-the-forest-song.png"
 	},
 	{
 		"Brand": "Drybell",
@@ -10197,6 +10246,20 @@
 		"Width": 4.1,
 		"Height": 5.13,
 		"Image": "dtsart-sdd-3kp.png"
+	},
+	{
+		"Brand": "Dunable",
+		"Name": "Eidolon",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "dunable-eidolon.png"
+	},
+	{
+		"Brand": "Dunable",
+		"Name": "Splatter Blaster",
+		"Width": 6.12,
+		"Height": 4.7,
+		"Image": "dunable-splatter-blaster.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -13942,6 +14005,13 @@
 		"Width": 2.52,
 		"Height": 4.8,
 		"Image": "fjord-odin.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Sol",
+		"Width": 2.52,
+		"Height": 4.8,
+		"Image": "fjord-sol.png"
 	},
 	{
 		"Brand": "Flamma",
@@ -23150,6 +23220,13 @@
 	},
 	{
 		"Brand": "Lovepedal",
+		"Name": "AMP808",
+		"Width": 4.87,
+		"Height": 2.74,
+		"Image": "lovepedal-amp808.png"
+	},
+	{
+		"Brand": "Lovepedal",
 		"Name": "Dover Drive",
 		"Width": 2.66,
 		"Height": 4.41,
@@ -23172,8 +23249,8 @@
 	{
 		"Brand": "Lovepedal",
 		"Name": "Hermida Zendrive",
-		"Width": 2.5,
-		"Height": 4.37,
+		"Width": 2.69,
+		"Height": 4.5,
 		"Image": "lovepedal-hermida-zendrive.png"
 	},
 	{
@@ -23182,6 +23259,13 @@
 		"Width": 2.5,
 		"Height": 4.6,
 		"Image": "lovepedal-hp-tweed-twin.png"
+	},
+	{
+		"Brand": "Lovepedal",
+		"Name": "Jubilee",
+		"Width": 2.69,
+		"Height": 4.5,
+		"Image": "lovepedal-jubilee.png"
 	},
 	{
 		"Brand": "Lovepedal",
@@ -26447,6 +26531,13 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "Tunnelworm",
+		"Width": 2.69,
+		"Height": 4.5,
+		"Image": "mrblack-tunneworm.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "Twin Lazers",
 		"Width": 3.98,
 		"Height": 4.7,
@@ -27711,6 +27802,13 @@
 		"Width": 2.89,
 		"Height": 5.08,
 		"Image": "nobels-odr-1-bc.png"
+	},
+	{
+		"Brand": "Nobels",
+		"Name": "ODR-1 (30th Anniversary)",
+		"Width": 2.89,
+		"Height": 5.08,
+		"Image": "nobels-odr-1-30th.png"
 	},
 	{
 		"Brand": "Nobels",
@@ -29365,6 +29463,13 @@
 		"Image": "onecontrol-xenagama.png"
 	},
 	{
+		"Brand": "OPFXS",
+		"Name": "Electric Vibe",
+		"Width": 2.77,
+		"Height": 5.02,
+		"Image": "opfxs-electric-vibe.png"
+	},
+	{
 		"Brand": "Orange",
 		"Name": "Amp Detonator",
 		"Width": 3.74,
@@ -30910,6 +31015,13 @@
 		"Width": 4.7,
 		"Height": 3.76,
 		"Image": "proanalog-manticore.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Anadime Bass Chorus",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "providence-anadime-bass-chorus.png"
 	},
 	{
 		"Brand": "Providence",
@@ -32620,6 +32732,20 @@
 		"Image": "shin-ei-fy-6.png"
 	},
 	{
+		"Brand": "Shin's Music",
+		"Name": "Clean Boost",
+		"Width": 2.79,
+		"Height": 4.56,
+		"Image": "shins-music-clean-boost.png"
+	},
+	{
+		"Brand": "Shin's Music",
+		"Name": "Dumbloid ODS",
+		"Width": 5.02,
+		"Height": 3.7,
+		"Image": "shins-music-dumbloid-ods.png"
+	},
+	{
 		"Brand": "Shnobel Tone",
 		"Name": "Boost",
 		"Width": 2.31,
@@ -33192,6 +33318,13 @@
 		"Width": 2.72,
 		"Height": 4.77,
 		"Image": "solidgoldfx-athena.png"
+	},
+	{
+		"Brand": "SolidGoldFX",
+		"Name": "Aurras",
+		"Width": 2.66,
+		"Height": 4.85,
+		"Image": "solidgoldfx-aurras.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
@@ -34613,6 +34746,13 @@
 		"Width": 2.71,
 		"Height": 4.5,
 		"Image": "subdecay-m3.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Noise Theory",
+		"Width": 2.71,
+		"Height": 4.5,
+		"Image": "subdecay-noise-theory.png"
 	},
 	{
 		"Brand": "Subdecay",
@@ -37045,6 +37185,48 @@
 		"Image": "tonecity-wild-fro.png"
 	},
 	{
+		"Brand": "ToneTuga FX",
+		"Name": "Aegis",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "tonetugafx-aegis.png"
+	},
+	{
+		"Brand": "ToneTuga FX",
+		"Name": "Clockwork",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "tonetugafx-clockwork.png"
+	},
+	{
+		"Brand": "ToneTuga FX",
+		"Name": "Delphine",
+		"Width": 5.7,
+		"Height": 4.8,
+		"Image": "tonetugafx-delphine.png"
+	},
+	{
+		"Brand": "ToneTuga FX",
+		"Name": "Prysm",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "tonetugafx-prysm.png"
+	},
+	{
+		"Brand": "ToneTuga FX",
+		"Name": "Salvage",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "tonetugafx-salvage.png"
+	},
+	{
+		"Brand": "ToneTuga FX",
+		"Name": "Songbird",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "tonetugafx-songbird.png"
+	},
+	{
 		"Brand": "Tonewave",
 		"Name": "Borealis",
 		"Width": 2.6,
@@ -38002,6 +38184,13 @@
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "vemuram-shanks-ods-1.png"
+	},
+	{
+		"Brand": "Very Good Amp Co",
+		"Name": "EP Drive",
+		"Width": 2.6,
+		"Height": 5.1,
+		"Image": "very-good-ep-drive.png"
 	},
 	{
 		"Brand": "VFE Pedals",
@@ -40697,6 +40886,13 @@
 		"Width": 2.85,
 		"Height": 4.5,
 		"Image": "xts-precision.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Precision Overdrive",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "xts-precision-od.png"
 	},
 	{
 		"Brand": "XTS",
