@@ -6287,6 +6287,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Epoch Bias",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-epoch-bias.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Epoch Boost",
 		"Width": 2.7,
 		"Height": 4.5,
