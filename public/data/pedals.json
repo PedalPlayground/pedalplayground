@@ -23255,6 +23255,13 @@
 	},
 	{
 		"Brand": "Lovepedal",
+		"Name": "Kalamazoo",
+		"Width": 2.50,
+		"Height": 4.41,
+		"Image": "lovepedal-kalamazoo.png"
+	},
+	{
+		"Brand": "Lovepedal",
 		"Name": "Kalamazoo Gold",
 		"Width": 2.58,
 		"Height": 4.37,
