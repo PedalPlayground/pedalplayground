@@ -5434,9 +5434,16 @@
 	{
 		"Brand": "BOSS",
 		"Name": "TU-12EX Chromatic Tuner",
-		"Width": 5.8125,
-		"Height": 2.125,
+		"Width": 5.81,
+		"Height": 2.11,
 		"Image": "boss-tu12ex.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "TU-12H Chromatic Tuner",
+		"Width": 5.81,
+		"Height": 2.06,
+		"Image": "boss-tu12h.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -5780,6 +5787,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "caline-pure-sky.png"
+	},
+	{
+		"Brand": "Carl Martin",
+		"Name": "AC-Tone",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "carl-martin-actone.png"
 	},
 	{
 		"Brand": "Carl Martin",
@@ -11222,31 +11236,24 @@
 	},
 	{
 		"Brand": "EBS",
-		"Name": "BassIQ",
-		"Width": 2.8,
-		"Height": 4.5,
-		"Image": "ebs-bassiq.png"
-	},
-	{
-		"Brand": "EBS",
-		"Name": "DPhaser",
-		"Width": 2.8,
-		"Height": 4.5,
-		"Image": "ebs-multicomp.png"
-	},
-	{
-		"Brand": "EBS",
 		"Name": "DynaVerb",
-		"Width": 2.8,
+		"Width": 3.02,
 		"Height": 4.5,
 		"Image": "ebs-dynaverb.png"
 	},
 	{
 		"Brand": "EBS",
-		"Name": "MetalDrive",
-		"Width": 2.8,
-		"Height": 4.5,
-		"Image": "ebs-metaldrive.png"
+		"Name": "DynaVerb (Spring Edition)",
+		"Width": 3.02,
+		"Height": 4.54,
+		"Image": "ebs-dynaverb-spring.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "DynaVerb (Studio Edition)",
+		"Width": 3.02,
+		"Height": 4.54,
+		"Image": "ebs-dynaverb-studio.png"
 	},
 	{
 		"Brand": "EBS",
@@ -11257,45 +11264,17 @@
 	},
 	{
 		"Brand": "EBS",
-		"Name": "MultiComp",
-		"Width": 2.8,
-		"Height": 4.5,
-		"Image": "ebs-multicomp.png"
-	},
-	{
-		"Brand": "EBS",
-		"Name": "MultiDrive",
-		"Width": 2.8,
-		"Height": 4.5,
-		"Image": "ebs-multidrive.png"
-	},
-	{
-		"Brand": "EBS",
-		"Name": "OctaBass",
-		"Width": 2.8,
-		"Height": 4.5,
-		"Image": "ebs-octabass.png"
-	},
-	{
-		"Brand": "EBS",
 		"Name": "Red Twister",
-		"Width": 3.06,
-		"Height": 4.38,
+		"Width": 3.02,
+		"Height": 4.54,
 		"Image": "ebs-red-twister.png"
 	},
 	{
 		"Brand": "EBS",
-		"Name": "TremoLo",
-		"Width": 2.8,
-		"Height": 4.5,
-		"Image": "ebs-tremolo.png"
-	},
-	{
-		"Brand": "EBS",
 		"Name": "UniChorus",
-		"Width": 2.8,
-		"Height": 4.5,
-		"Image": "ebs-unichorus.png"
+		"Width": 3.02,
+		"Height": 4.54,
+		"Image": "ebs-dynaverb-unichorus.png"
 	},
 	{
 		"Brand": "Echo Fix",
@@ -38527,6 +38506,13 @@
 		"Width": 6,
 		"Height": 3.4,
 		"Image": "voodoolab-pp2.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "Pedal Power 3 Plus",
+		"Width": 7,
+		"Height": 3.59,
+		"Image": "voodoolab-pp3-plus.png"
 	},
 	{
 		"Brand": "Voodoo Lab",
