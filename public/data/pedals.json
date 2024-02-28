@@ -11236,6 +11236,20 @@
 	},
 	{
 		"Brand": "EBS",
+		"Name": "BassIQ (Blue Label)",
+		"Width": 2.71,
+		"Height": 4.55,
+		"Image": "ebs-bassiq.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "Black Haze 2",
+		"Width": 2.71,
+		"Height": 4.55,
+		"Image": "ebs-black-haze-2.png"
+	},
+	{
+		"Brand": "EBS",
 		"Name": "DynaVerb",
 		"Width": 3.02,
 		"Height": 4.5,
@@ -11261,6 +11275,20 @@
 		"Width": 6.93,
 		"Height": 5.08,
 		"Image": "ebs-multibass-3.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "MultiComp (Blue Label)",
+		"Width": 2.77,
+		"Height": 4.55,
+		"Image": "ebs-multicomp.png"
+	},
+	{
+		"Brand": "EBS",
+		"Name": "OctaBass (Blue Label)",
+		"Width": 2.71,
+		"Height": 4.55,
+		"Image": "ebs-octabass.png"
 	},
 	{
 		"Brand": "EBS",
