@@ -3500,6 +3500,20 @@
 		"Image": "benson-stonk-box.png"
 	},
 	{
+		"Brand": "Berkos FX",
+		"Name": "The Germanium Experience",
+		"Width": 4.06,
+		"Height": 4.7,
+		"Image": "berkosfx-the-germanium-experience.png"
+	},
+	{
+		"Brand": "Berkos FX",
+		"Name": "Third Stone",
+		"Width": 4.06,
+		"Height": 4.7,
+		"Image": "berkosfx-third-stone.png"
+	},
+	{
 		"Brand": "Big Ear Pedals",
 		"Name": "Albie",
 		"Width": 2.75,
