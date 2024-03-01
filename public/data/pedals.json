@@ -6392,6 +6392,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Knight School Synth",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-knight-school.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Many Worlds",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -6483,17 +6490,24 @@
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Soft Focus Reverb (Shoegaze Purple)",
-		"Width": 2.6,
-		"Height": 4.33,
-		"Image": "catalinbread-soft-focus-shoegaze-purple.png"
-	},
-	{
-		"Brand": "Catalinbread",
 		"Name": "Soft Focus Reverb",
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-soft-focus.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Soft Focus Reverb (Gold)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-soft-focus-gold.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Soft Focus Reverb (Shoegaze Purple)",
+		"Width": 2.6,
+		"Height": 4.33,
+		"Image": "catalinbread-soft-focus-shoegaze-purple.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -25422,6 +25436,41 @@
 		"Width": 1.67,
 		"Height": 3.75,
 		"Image": "mooer-awah.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "004 Day Tripper",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-004.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "005 Brown Sound 3",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-005.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "009 Black Knight",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-009.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "012 US Gold 100",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-012.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "015 Brown Sound",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-015.png"
 	},
 	{
 		"Brand": "Mooer",
