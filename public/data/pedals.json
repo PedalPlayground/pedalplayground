@@ -23290,6 +23290,13 @@
 	},
 	{
 		"Brand": "Lovepedal",
+		"Name": "Elephant Man",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "lovepedal-elephant-man.png"
+	},
+	{
+		"Brand": "Lovepedal",
 		"Name": "Eternity Kanji",
 		"Width": 2.66,
 		"Height": 4.4,
@@ -35110,6 +35117,13 @@
 		"Width": 1.74,
 		"Height": 3.7,
 		"Image": "suhr-woodshed.png"
+	},
+	{
+		"Brand": "Summer School Electronics",
+		"Name": "Gladys V2",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "summer-school-electronics-gladys-v2.png"
 	},
 	{
 		"Brand": "Supro",
