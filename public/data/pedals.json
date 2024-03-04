@@ -21029,6 +21029,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Angry Orange",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-angry-orange.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Aurora",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -21684,6 +21691,13 @@
 		"Width": 2.73,
 		"Height": 4.5,
 		"Image": "keeley-super-phat-mod-germanium.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Super Rodent",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-super-rodent.png"
 	},
 	{
 		"Brand": "Keeley",
