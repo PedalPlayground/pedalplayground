@@ -5629,6 +5629,13 @@
 	},
 	{
 		"Brand": "Browne Amplification",
+		"Name": "Carbon X",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "browneamps-carbon-x.png"
+	},
+	{
+		"Brand": "Browne Amplification",
 		"Name": "Gritador",
 		"Width": 2.91,
 		"Height": 4.8,
