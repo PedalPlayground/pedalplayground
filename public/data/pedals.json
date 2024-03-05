@@ -24536,6 +24536,13 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Analog Delay AD80",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "maxon-ad80.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Analog Delay AD999",
 		"Width": 4.75,
 		"Height": 5.9,
