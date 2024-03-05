@@ -8828,6 +8828,13 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Octave Clang",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "deathbyaudio-octave-clang.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Pinned",
 		"Width": 4.5,
 		"Height": 5.62,
