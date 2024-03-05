@@ -23157,6 +23157,20 @@
 	},
 	{
 		"Brand": "Line 6",
+		"Name": "POD Express",
+		"Width": 3.6,
+		"Height": 5.11,
+		"Image": "line-6-pod-express.png"
+	},
+	{
+		"Brand": "Line 6",
+		"Name": "POD Express Bass",
+		"Width": 3.6,
+		"Height": 5.11,
+		"Image": "line-6-pod-express-bass.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "POD X3",
 		"Width": 11,
 		"Height": 7.5,
