@@ -5832,6 +5832,13 @@
 	},
 	{
 		"Brand": "Carl Martin",
+		"Name": "Hydra Boost",
+		"Width": 2.69,
+		"Height": 4.57,
+		"Image": "carl-martin-hydra-boost.png"
+	},
+	{
+		"Brand": "Carl Martin",
 		"Name": "Octa-Switch MK3",
 		"Width": 12.23,
 		"Height": 6,
@@ -8563,8 +8570,8 @@
 	{
 		"Brand": "Darkglass",
 		"Name": "NSG",
-		"Width": 1.9685,
-		"Height": 3.93701,
+		"Width": 2.14,
+		"Height": 3.94,
 		"Image": "darkglass-nsg.png"
 	},
 	{
@@ -38670,9 +38677,9 @@
 	},
 	{
 		"Brand": "Voodoo Lab",
-		"Name": "Pedal Power 2+",
+		"Name": "Pedal Power 2 Plus",
 		"Width": 6,
-		"Height": 3.4,
+		"Height": 3.48,
 		"Image": "voodoolab-pp2.png"
 	},
 	{
@@ -38686,7 +38693,7 @@
 		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power 4x4",
 		"Width": 7,
-		"Height": 3.4,
+		"Height": 3.41,
 		"Image": "voodoolab-4x4.png"
 	},
 	{
@@ -38700,15 +38707,29 @@
 		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power ISO 5",
 		"Width": 4.9,
-		"Height": 3.4,
+		"Height": 3.46,
 		"Image": "voodoolab-iso5.png"
 	},
 	{
 		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power Mondo",
 		"Width": 10.7,
-		"Height": 3.4,
+		"Height": 3.47,
 		"Image": "voodoolab-mondo.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "Pedal Power X4",
+		"Width": 3.38,
+		"Height": 2.77,
+		"Image": "voodoolab-x4.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "Pedal Power X8",
+		"Width": 5.5,
+		"Height": 2.75,
+		"Image": "voodoolab-x8.png"
 	},
 	{
 		"Brand": "Voodoo Lab",
@@ -41012,6 +41033,13 @@
 		"Width": 2.85,
 		"Height": 4.5,
 		"Image": "xts-imperial.png"
+	},
+	{
+		"Brand": "XTS",
+		"Name": "Iridium Fuzz",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "xts-iridium-fuzz.png"
 	},
 	{
 		"Brand": "XTS",
