@@ -1407,6 +1407,13 @@
 		"Image": "analog-endeavors-aux.png"
 	},
 	{
+		"Brand": "Analog Music Company",
+		"Name": "SHSL",
+		"Width": 3.84,
+		"Height": 4.99,
+		"Image": "analogmusicco-shsl.png"
+	},
+	{
 		"Brand": "Analog.Man",
 		"Name": "ARDX20 Dual Analog Delay",
 		"Width": 4.7,
@@ -26682,6 +26689,13 @@
 		"Width": 3.98,
 		"Height": 4.7,
 		"Image": "mrblack-twinlazers.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Vintage Ensemble",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "mrblack-vintage-ensemble.png"
 	},
 	{
 		"Brand": "Music Box Pedals",
