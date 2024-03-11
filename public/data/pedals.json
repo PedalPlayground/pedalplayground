@@ -2766,6 +2766,13 @@
 	},
 	{
 		"Brand": "Basic Audio",
+		"Name": "Marq Won",
+		"Width": 2.91,
+		"Height": 4.8,
+		"Image": "basicaudio-marq-won.png"
+	},
+	{
+		"Brand": "Basic Audio",
 		"Name": "Orpheum",
 		"Width": 2.6,
 		"Height": 4.78,
