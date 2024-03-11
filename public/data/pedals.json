@@ -22072,6 +22072,13 @@
 	},
 	{
 		"Brand": "Kingsley",
+		"Name": "Constable",
+		"Width": 5.25,
+		"Height": 5.45,
+		"Image": "kingsley-constable.png"
+	},
+	{
+		"Brand": "Kingsley",
 		"Name": "Harlot V3",
 		"Width": 3.88,
 		"Height": 4.85,
