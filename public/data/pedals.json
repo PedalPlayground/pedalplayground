@@ -5572,6 +5572,20 @@
 		"Image": "brightonion-hxfs.png"
 	},
 	{
+		"Brand": "British Pedal Company",
+		"Name": "Dumble Black Face",
+		"Width": 2.79,
+		"Height": 4.5,
+		"Image": "britishpedalco-dumble-black-face.png"
+	},
+	{
+		"Brand": "British Pedal Company",
+		"Name": "Dumble Silver Face",
+		"Width": 2.79,
+		"Height": 4.5,
+		"Image": "britishpedalco-dumble-silver-face.png"
+	},
+	{
 		"Brand": "Broughton",
 		"Name": "High Pass Filter",
 		"Width": 1.95,
@@ -37661,6 +37675,13 @@
 		"Image": "tsakalis-zipper-mk2.png"
 	},
 	{
+		"Brand": "Tubesteader",
+		"Name": "Lightkeeper V2",
+		"Width": 2.92,
+		"Height": 4.82,
+		"Image": "tubesteader-lightkeeper-v2.png"
+	},
+	{
 		"Brand": "Tube Works",
 		"Name": "BK Butler Real Tube",
 		"Width": 3.2,
@@ -39675,6 +39696,13 @@
 		"Width": 3.95,
 		"Height": 4.7,
 		"Image": "walrus-melee.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Melee (Black)",
+		"Width": 3.95,
+		"Height": 4.7,
+		"Image": "walrus-melee-black.png"
 	},
 	{
 		"Brand": "Walrus Audio",
