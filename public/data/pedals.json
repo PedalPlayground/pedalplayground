@@ -21120,6 +21120,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Blues Disorder",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-blues-disorder.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Bubble Tron",
 		"Width": 2.73,
 		"Height": 4.5,
