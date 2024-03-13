@@ -9688,6 +9688,13 @@
 		"Image": "disaster-area-nnb.png"
 	},
 	{
+		"Brand": "Disruptive Music Tech",
+		"Name": "Enhancifier",
+		"Width": 8,
+		"Height": 6.13,
+		"Image": "disruptive-music-tech-enhancifier.png"
+	},
+	{
 		"Brand": "Divided by 13",
 		"Name": "Dyna-Ranger",
 		"Width": 4,
@@ -17407,6 +17414,13 @@
 		"Width": 2.68,
 		"Height": 4.65,
 		"Image": "harley-benton-vintage-tremolo.png"
+	},
+	{
+		"Brand": "Hartman",
+		"Name": "Analog Flanger",
+		"Width": 5.7,
+		"Height": 4.84,
+		"Image": "hartman-analog-flanger.png"
 	},
 	{
 		"Brand": "Haunted Labs",
@@ -26276,6 +26290,13 @@
 		"Width": 6,
 		"Height": 9,
 		"Image": "moog-mf-103-12-stage-phaser.png"
+	},
+	{
+		"Brand": "Moollon",
+		"Name": "British Octah",
+		"Width": 2.7,
+		"Height": 5.25,
+		"Image": "moollon-british-octah.png"
 	},
 	{
 		"Brand": "Moose Electronics",
