@@ -11719,10 +11719,10 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
-		"Name": "Bass9 Bass Machine",
-		"Width": 4.19,
+		"Name": "Bass Micro Synth",
+		"Width": 6.07,
 		"Height": 4.75,
-		"Image": "ehx-bass9.png"
+		"Image": "ehx-bass-micro-synth.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -11744,6 +11744,13 @@
 		"Width": 2.82,
 		"Height": 4.5,
 		"Image": "ehx-bass-soul-food.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Bass9 Bass Machine",
+		"Width": 4.19,
+		"Height": 4.75,
+		"Image": "ehx-bass9.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -21099,6 +21106,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Angry Orange (White)",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-angry-orange-white.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Aurora",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -21138,6 +21152,13 @@
 		"Width": 2.6,
 		"Height": 4.76,
 		"Image": "keeley-blues-disorder.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Blues Disorder (White)",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-blues-disorder-white.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -21589,6 +21610,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Noble Screamer (White)",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-noble-screamer-white.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Nocturner",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -21768,6 +21796,13 @@
 		"Width": 2.6,
 		"Height": 4.76,
 		"Image": "keeley-super-rodent.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Super Rodent (White)",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-super-rodent-white.png"
 	},
 	{
 		"Brand": "Keeley",
