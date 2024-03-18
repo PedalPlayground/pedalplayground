@@ -14078,6 +14078,13 @@
 	},
 	{
 		"Brand": "Free The Tone",
+		"Name": "Gigs Boson",
+		"Width": 2.83,
+		"Height": 4.53,
+		"Image": "free-the-tone-boson.png"
+	},
+	{
+		"Brand": "Free The Tone",
 		"Name": "Heat Blaster HB-2",
 		"Width": 3.94,
 		"Height": 4.88,
