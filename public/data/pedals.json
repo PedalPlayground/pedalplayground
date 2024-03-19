@@ -3431,6 +3431,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Germanium Preamp",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-germanium-preamp.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Preamp",
 		"Width": 4.69,
 		"Height": 3.77,
