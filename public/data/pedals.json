@@ -9353,6 +9353,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "SC-2 Valve Distortion",
+		"Width": 3.5,
+		"Height": 5.25,
+		"Image": "digitech-sc2.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "SDRUM",
 		"Width": 3.29,
 		"Height": 5.4,
