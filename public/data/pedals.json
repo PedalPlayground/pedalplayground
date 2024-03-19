@@ -39503,6 +39503,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Fundamental Ambient",
+		"Width": 2.31,
+		"Height": 4.44,
+		"Image": "walrus-fundamental-ambient.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Fundamental Chorus",
 		"Width": 2.31,
 		"Height": 4.44,
