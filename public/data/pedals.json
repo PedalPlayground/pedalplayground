@@ -9451,6 +9451,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "SC-2 Valve Distortion",
+		"Width": 3.43,
+		"Height": 5.25,
+		"Image": "digitech-sc2.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "SDRUM",
 		"Width": 3.29,
 		"Height": 5.4,
@@ -11789,6 +11796,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Big Muff Pi (Double Anniversary)",
+		"Width": 5.5,
+		"Height": 7.02,
+		"Image": "ehx-big-muff-box-double-anniversary.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Black Russian Big Muff Pi",
 		"Width": 4.75,
 		"Height": 6.62,
@@ -13018,6 +13032,13 @@
 		"Width": 8.5,
 		"Height": 7.01,
 		"Image": "elektron-digitone.png"
+	},
+	{
+		"Brand": "Elite Acoustics",
+		"Name": "StompboxMix 6-2",
+		"Width": 6.46,
+		"Height": 7.11,
+		"Image": "elite-acoustics-stompmix-62.png"
 	},
 	{
 		"Brand": "Emerson Custom",
@@ -14733,6 +14754,13 @@
 		"Width": 5.72,
 		"Height": 4.68,
 		"Image": "freethetone-future-factory.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Gigs Boson GB-1V",
+		"Width": 2.79,
+		"Height": 4.68,
+		"Image": "freethetone-gigs-boson.png"
 	},
 	{
 		"Brand": "Free The Tone",
