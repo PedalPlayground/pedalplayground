@@ -20189,6 +20189,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Tacobolt",
+		"Width": 2.93,
+		"Height": 4.98,
+		"Image": "jhs-tacobolt.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Tidewater",
 		"Width": 1.82,
 		"Height": 3.8,
@@ -28075,6 +28082,13 @@
 		"Width": 3.7,
 		"Height": 4.83,
 		"Image": "mythos-the-fates.png"
+	},
+	{
+		"Brand": "Ninjafox",
+		"Name": "Sidekick NES Retro",
+		"Width": 3.73,
+		"Height": 1.66,
+		"Image": "ninjafox-sidekick-nes-retro.png"
 	},
 	{
 		"Brand": "Nobels",
