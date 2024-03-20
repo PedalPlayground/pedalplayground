@@ -18656,6 +18656,13 @@
 	},
 	{
 		"Brand": "J. Rockett",
+		"Name": "Airchild",
+		"Width": 2.75,
+		"Height": 4.15,
+		"Image": "jrockett-airchild.png"
+	},
+	{
+		"Brand": "J. Rockett",
 		"Name": "Alan Holdsworth",
 		"Width": 4.9,
 		"Height": 3,
