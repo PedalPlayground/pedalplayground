@@ -11232,7 +11232,7 @@
 		"Name": "DPhaser",
 		"Width": 2.8,
 		"Height": 4.5,
-		"Image": "ebs-multicomp.png"
+		"Image": "ebs-dphaser.png"
 	},
 	{
 		"Brand": "EBS",
@@ -11253,7 +11253,7 @@
 		"Name": "MicroBass 3",
 		"Width": 6.93,
 		"Height": 5.08,
-		"Image": "ebs-multibass-3.png"
+		"Image": "ebs-microbass-3.png"
 	},
 	{
 		"Brand": "EBS",
