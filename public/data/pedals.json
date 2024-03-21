@@ -7988,6 +7988,13 @@
  	},
 	{
 		"Brand": "Cry Baby",
+		"Name": "Jimi Hendrix Signature Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "cry-baby-jh1d.png"
+	},
+	{
+		"Brand": "Cry Baby",
 	 	"Name": "Joe Bonamassa Signature Wah",
 	 	"Width": 4,
 	 	"Height": 10,
@@ -10386,6 +10393,34 @@
 		"Width": 6.12,
 		"Height": 4.7,
 		"Image": "dunable-splatter-blaster.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Authentic Hendrix '68 Shrine Series Band of Gypsys",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "dunlop-68shrine-band-of-gypsys.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Authentic Hendrix '68 Shrine Series Fuzz Face",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "dunlop-68shrine-fuzz-face.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Authentic Hendrix '68 Shrine Series Octavio",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "dunlop-68shrine-octavio.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Authentic Hendrix '68 Shrine Series Uni-Vibe",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "dunlop-68shrine-univibe.png"
 	},
 	{
 		"Brand": "Dunlop",
