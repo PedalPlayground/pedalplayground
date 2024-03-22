@@ -33082,6 +33082,20 @@
 		"Image": "shin-ei-fy-6.png"
 	},
 	{
+		"Brand": "Shin-ei",
+		"Name": "Vibe 2",
+		"Width": 5.5,
+		"Height": 4.5,
+		"Image": "shin-ei-vibe-2.png"
+	},
+	{
+		"Brand": "Shin-ei",
+		"Name": "Vibe-Bro",
+		"Width": 8.5,
+		"Height": 5.67,
+		"Image": "shin-ei-vibe-bro.png"
+	},
+	{
 		"Brand": "Shin's Music",
 		"Name": "Clean Boost",
 		"Width": 2.79,
@@ -33171,13 +33185,6 @@
 		"Width": 1.5,
 		"Height": 3.81,
 		"Image": "shnobel-volume-expression-selector-box.png"
-	},
-	{
-		"Brand": "Shin-ei",
-		"Name": "Vibe-Bro",
-		"Width": 8.5,
-		"Height": 5.5,
-		"Image": "shin-ei-vibe-bro.png"
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
