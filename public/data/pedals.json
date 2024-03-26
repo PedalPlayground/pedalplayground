@@ -36934,6 +36934,13 @@
 	},
 	{
 		"Brand": "Tech 21 NYC",
+		"Name": "Flyrig 5",
+		"Width": 12.56,
+		"Height": 2.72,
+		"Image": "tech21-flyrig-5.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
 		"Name": "Flyrig 5 Plexi",
 		"Width": 12.52,
 		"Height": 3.08,
