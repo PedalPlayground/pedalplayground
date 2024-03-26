@@ -6119,6 +6119,13 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Shigeharu (Germanium Octave)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "caroline-shigeharu-go.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Somersault",
 		"Width": 3.7,
 		"Height": 4.89,
