@@ -7380,9 +7380,30 @@
 	{
 		"Brand": "Coffee Shop Pedals",
 		"Name": "Affogato",
-		"Width": 2.81,
-		"Height": 4.7,
+		"Width": 2.67,
+		"Height": 4.5,
 		"Image": "coffeshoppedals-affogato.png"
+	},
+	{
+		"Brand": "Coffee Shop Pedals",
+		"Name": "Cortado",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "coffeshoppedals-cortado.png"
+	},
+	{
+		"Brand": "Coffee Shop Pedals",
+		"Name": "Donut Hole",
+		"Width": 2.67,
+		"Height": 4.64,
+		"Image": "coffeshoppedals-donut-hole.png"
+	},
+	{
+		"Brand": "Coffee Shop Pedals",
+		"Name": "London Fog",
+		"Width": 2.89,
+		"Height": 4.85,
+		"Image": "coffeshoppedals-london-fog.png"
 	},
 	{
 		"Brand": "Collaboration Devices",
@@ -9742,6 +9763,13 @@
 		"Width": 4,
 		"Height": 4.6,
 		"Image": "dividedby13-dyna-ranger.png"
+	},
+	{
+		"Brand": "DLS Effects",
+		"Name": "Rotospin",
+		"Width": 3.7,
+		"Height": 4.96,
+		"Image": "dls-rotospin.png"
 	},
 	{
 		"Brand": "DMB",
