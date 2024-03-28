@@ -995,6 +995,104 @@
 	},
 	{
 		"Brand": "Pivotal",
+		"Name": "P14",
+		"Width": 15.25,
+		"Height": 13.64,
+		"Image": "pivotal-p14.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P14 Top Deck (Full)",
+		"Width": 13.75,
+		"Height": 6,
+		"Image": "pivotal-p14-full.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P20",
+		"Width": 21.75,
+		"Height": 13.64,
+		"Image": "pivotal-p20.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P20 Top Deck (Full)",
+		"Width": 20.25,
+		"Height": 6,
+		"Image": "pivotal-p20-full.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P20 Top Deck (Single Cut)",
+		"Width": 20.25,
+		"Height": 6,
+		"Image": "pivotal-p20-1cut.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P20 Top Deck (Double Cut)",
+		"Width": 20.25,
+		"Height": 6,
+		"Image": "pivotal-p20-2cut.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P26",
+		"Width": 27.75,
+		"Height": 15.64,
+		"Image": "pivotal-p26.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P26 Top Deck (Full)",
+		"Width": 26.25,
+		"Height": 8,
+		"Image": "pivotal-p26-full.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P26 Top Deck (Single Cut)",
+		"Width": 26.25,
+		"Height": 8,
+		"Image": "pivotal-p26-1cut.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P26 Top Deck (Double Cut)",
+		"Width": 26.25,
+		"Height": 8,
+		"Image": "pivotal-p26-2cut.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P31",
+		"Width": 32.25,
+		"Height": 15.64,
+		"Image": "pivotal-p31.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P31 Top Deck (Full)",
+		"Width": 30.75,
+		"Height": 8,
+		"Image": "pivotal-p31-full.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P31 Top Deck (Single Cut)",
+		"Width": 30.75,
+		"Height": 8,
+		"Image": "pivotal-p31-1cut.png"
+	},
+	{
+		"Brand": "Pivotal",
+		"Name": "P31 Top Deck (Double Cut)",
+		"Width": 30.75,
+		"Height": 8,
+		"Image": "pivotal-p31-2cut.png"
+	},
+	{
+		"Brand": "Pivotal",
 		"Name": "X14",
 		"Width": 15.85,
 		"Height": 13.65,
