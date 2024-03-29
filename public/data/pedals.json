@@ -38747,6 +38747,13 @@
 	},
 	{
 		"Brand": "Vox",
+		"Name": "V861 Vol/Exp Pedal",
+		"Width": 3.54,
+		"Height": 10.55,
+		"Image": "vox-v861.png"
+	},
+	{
+		"Brand": "Vox",
 		"Name": "V8 Distortion",
 		"Width": 3.43,
 		"Height": 5.2,
