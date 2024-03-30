@@ -7708,6 +7708,13 @@
 	},
 	{
 		"Brand": "Cornerstone",
+		"Name": "Nero",
+		"Width": 2.76,
+		"Height": 5.14,
+		"Image": "cornerstone-nero.png"
+	},
+	{
+		"Brand": "Cornerstone",
 		"Name": "Zefiro",
 		"Width": 2.88,
 		"Height": 4.8,
@@ -19339,6 +19346,13 @@
 		"Width": 2.84,
 		"Height": 4.7,
 		"Image": "jam-fuzz-phrase-ltd.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Fuzz Phrase SI",
+		"Width": 2.9,
+		"Height": 4.7,
+		"Image": "jam-fuzz-phrase-si.png"
 	},
 	{
 		"Brand": "Jam Pedals",
