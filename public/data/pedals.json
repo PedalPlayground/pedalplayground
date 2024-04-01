@@ -23094,6 +23094,13 @@
 	},
 	{
 		"Brand": "Line 6",
+		"Name": "POD Express Guitar",
+		"Width": 3.60,
+		"Height": 5.10,
+		"Image": "line-6-pod-express-guitar.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "POD HD500X",
 		"Width": 29.75,
 		"Height": 14.47,
