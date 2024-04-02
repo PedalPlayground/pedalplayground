@@ -5839,6 +5839,13 @@
 	},
 	{
 		"Brand": "Caline",
+		"Name": "CP-31 Purple Wah",
+		"Width": 2.61,
+		"Height": 5.31,
+		"Image": "caline-cp31.png"
+	},
+	{
+		"Brand": "Caline",
 		"Name": "Mariana",
 		"Width": 2.77,
 		"Height": 4.5,
@@ -23780,6 +23787,13 @@
 	},
 	{
 		"Brand": "LPD",
+		"Name": "Kokopelli Overdrive",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "lpd-kokopelli-overdrive.png"
+	},
+	{
+		"Brand": "LPD",
 		"Name": "Lucent Overdrive",
 		"Width": 2.68,
 		"Height": 4.5,
@@ -40515,6 +40529,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "wampler-velvet.png"
+	},
+	{
+		"Brand": "Wave Audio",
+		"Name": "DI-22",
+		"Width": 3.64,
+		"Height": 5.5,
+		"Image": "waveaudio-di22.png"
 	},
 	{
 		"Brand": "Way Huge",
