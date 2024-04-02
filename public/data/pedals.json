@@ -3165,6 +3165,13 @@
 	},
 	{
 		"Brand": "Beetronics",
+		"Name": "Wannabee",
+		"Width": 3.67,
+		"Height": 5.5,
+		"Image": "beetronics-wannabee.png"
+	},
+	{
+		"Brand": "Beetronics",
 		"Name": "Zzombee",
 		"Width": 3.57,
 		"Height": 5.5,
@@ -10407,6 +10414,13 @@
 		"Width": 4.74,
 		"Height": 3.13,
 		"Image": "dsm-simplifier-mk2.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier X",
+		"Width": 5.25,
+		"Height": 3.96,
+		"Image": "dsm-simplifier-x.png"
 	},
 	{
 		"Brand": "DSM Noisemaker",
@@ -23063,6 +23077,13 @@
 		"Width": 3.5,
 		"Height": 5.32,
 		"Image": "lauren-mustang.png"
+	},
+	{
+		"Brand": "Lauren Audio",
+		"Name": "Mustang GT",
+		"Width": 2.75,
+		"Height": 4.79,
+		"Image": "lauren-mustang-gt.png"
 	},
 	{
 		"Brand": "Lehle",
