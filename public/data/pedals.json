@@ -5923,16 +5923,16 @@
 	},
 	{
 		"Brand": "Carl Martin",
-		"Name": "PlexiTone - Single Channel",
+		"Name": "PlexiTone-S",
 		"Width": 2.83,
-		"Height": 4.42,
+		"Height": 4.5,
 		"Image": "carl-martin-plexitone-single-channel.png"
 	},
 	{
 		"Brand": "Carl Martin",
-		"Name": "PlexiTone - Single Channel Lo-Gain",
-		"Width": 2.90,
-		"Height": 4.47,
+		"Name": "PlexiTone Lo-Gain",
+		"Width": 2.83,
+		"Height": 4.5,
 		"Image": "carl-martin-plexitone-single-channel-lo-gain.png"
 	},
 	{
