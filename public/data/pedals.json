@@ -11278,6 +11278,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Spatial Delivery V3",
+		"Width": 2.7,
+		"Height": 4.94,
+		"Image": "earthquaker-spatial-delivery-v3.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Speaker Cranker",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -23196,6 +23203,20 @@
 		"Width": 3.62,
 		"Height": 3.54,
 		"Image": "lehle-sunday-driver.png"
+	},
+	{
+		"Brand": "Lerxst",
+		"Name": "By-Tor",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "lerxst-by-tor.png"
+	},
+	{
+		"Brand": "Lerxst",
+		"Name": "Snow Dog",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "lerxst-snow-dog.png"
 	},
 	{
 		"Brand": "Lichtlaerm",
