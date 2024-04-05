@@ -6119,6 +6119,13 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Parabola (Pawnshop)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "caroline-parabola-pawnshop.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Parabola (Throwback Can)",
 		"Width": 3.7,
 		"Height": 4.89,
