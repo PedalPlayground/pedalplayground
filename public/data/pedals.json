@@ -8170,6 +8170,13 @@
 	},
 	{
 		"Brand": "Cusack Music",
+		"Name": "Project 34",
+		"Width": 2.4,
+		"Height": 4.71,
+		"Image": "cusack-project-34.png"
+	},
+	{
+		"Brand": "Cusack Music",
 		"Name": "Resound",
 		"Width": 4.7,
 		"Height": 3.84,
@@ -32446,6 +32453,13 @@
 	},
 	{
 		"Brand": "RJM",
+		"Name": "Full English",
+		"Width": 4.4,
+		"Height": 5.1,
+		"Image": "rjm-full-english.png"
+	},
+	{
+		"Brand": "RJM",
 		"Name": "Mastermind GT/10",
 		"Width": 19.4,
 		"Height": 8.1,
@@ -32497,7 +32511,7 @@
 		"Brand": "RJM",
 		"Name": "Overture",
 		"Width": 4.4,
-		"Height": 5.25,
+		"Height": 5.1,
 		"Image": "rjm-overture.png"
 	},
 	{
