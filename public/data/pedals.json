@@ -16590,20 +16590,6 @@
 		"Image": "grace-design-felix.png"
 	},
 	{
-		"Brand": "Great Eastern FX Co.",
-		"Name": "Design-A-Drive",
-		"Width": 2.6,
-		"Height": 5,
-		"Image": "great-eastern-dad.png"
-	},
-	{
-		"Brand": "Great Eastern FX Co.",
-		"Name": "Small Speaker Overdrive",
-		"Width": 2.6,
-		"Height": 5,
-		"Image": "great-eastern-sso.png"
-	},
-	{
 		"Brand": "Green Carrot Pedals",
 		"Name": "Infatuator (Blue)",
 		"Width": 4.85,
@@ -16616,6 +16602,34 @@
 		"Width": 4.85,
 		"Height": 4.20,
 		"Image": "gcp-infatuator-yellow.png"
+	},
+	{
+		"Brand": "Great Eastern FX Co.",
+		"Name": "Design-A-Drive",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "great-eastern-dad.png"
+	},
+	{
+		"Brand": "Great Eastern FX Co.",
+		"Name": "Focus Fuzz Silicon",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "great-eastern-focus-fuzz-si.png"
+	},
+	{
+		"Brand": "Great Eastern FX Co.",
+		"Name": "Small Speaker Overdrive",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "great-eastern-sso.png"
+	},
+	{
+		"Brand": "Great Eastern FX Co.",
+		"Name": "XO Variable Crossover",
+		"Width": 2.87,
+		"Height": 4.85,
+		"Image": "great-eastern-xo.png"
 	},
 	{
 		"Brand": "Greenhouse Effects",
