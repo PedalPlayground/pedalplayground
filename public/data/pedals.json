@@ -22429,6 +22429,13 @@
 	},
 	{
 		"Brand": "Kingtone",
+		"Name": "Blues Power v2",
+		"Width": 2.85,
+		"Height": 4.83,
+		"Image": "kingtone-blues-power-v2.png"
+	},
+	{
+		"Brand": "Kingtone",
 		"Name": "The Duellist",
 		"Width": 4.98,
 		"Height": 3.76,
@@ -22454,6 +22461,13 @@
 		"Width": 2.33,
 		"Height": 4.43,
 		"Image": "kingtone-heavyhand.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "Heavyhand v2",
+		"Width": 2.85,
+		"Height": 4.83,
+		"Image": "kingtone-heavyhand-v2.png"
 	},
 	{
 		"Brand": "Kingtone",
@@ -22503,6 +22517,13 @@
 		"Width": 2.33,
 		"Height": 4.47,
 		"Image": "kingtone-soloist-red.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "The Soloist v2",
+		"Width": 2.85,
+		"Height": 4.83,
+		"Image": "kingtone-soloist-v2.png"
 	},
 	{
 		"Brand": "Kingtone",
@@ -22867,6 +22888,13 @@
 		"Width": 3.15,
 		"Height": 4.91,
 		"Image": "krozz-airborn.png"
+	},
+	{
+		"Brand": "Krozz Devices",
+		"Name": "Krakenheart",
+		"Width": 3.15,
+		"Height": 4.91,
+		"Image": "krozz-krakenheart.png"
 	},
 	{
 		"Brand": "L.R. Baggs",
