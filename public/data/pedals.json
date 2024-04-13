@@ -3775,8 +3775,8 @@
 	{
 		"Brand": "Blackstar",
 		"Name": "Live Logic MIDI Controller",
-		"Width": 15.6,
-		"Height": 3.11,
+		"Width": 15.59,
+		"Height": 2.86,
 		"Image": "blackstar-live-logic.png"
 	},
 	{
@@ -18786,6 +18786,20 @@
 		"Width": 1.4,
 		"Height": 3.5,
 		"Image": "iset-sandwich-comp.png"
+	},
+	{
+		"Brand": "Isolate Audio",
+		"Name": "Ratatatat",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "isolate-ratatatat.png"
+	},
+	{
+		"Brand": "Isolate Audio",
+		"Name": "Squash The Jam",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "isolate-squash-the-jam.png"
 	},
 	{
 		"Brand": "ISP Technologies",
@@ -39864,6 +39878,13 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-ironhorse-v3.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Iron Horse V3 (Halloween LE)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-ironhorse-v3-halloween-le.png"
 	},
 	{
 		"Brand": "Walrus Audio",
