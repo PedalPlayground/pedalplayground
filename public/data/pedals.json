@@ -34265,6 +34265,13 @@
 		"Image": "soundsculpture-switchblade8f.png"
 	},
 	{
+		"Brand": "Sound Sculpture",
+		"Name": "Volcano",
+		"Width": 4.2,
+		"Height": 2.5,
+		"Image": "soundsculpture-volcano.png"
+	},
+	{
 		"Brand": "Source Audio",
 		"Name": "Aftershock",
 		"Width": 2.94,
