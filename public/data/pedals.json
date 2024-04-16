@@ -7960,6 +7960,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "White Whale v2",
+		"Width": 6.7,
+		"Height": 4.78,
+		"Image": "ctc-white-whale-v2.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "XT",
 		"Width": 2,
 		"Height": 2.14,
@@ -17561,6 +17568,20 @@
 		"Width": 5.51,
 		"Height": 2.805,
 		"Image": "harley-benton-power-plant-iso-2-pro.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "PowerPlant ISO-1AC Pro",
+		"Width": 5.24,
+		"Height": 3.46,
+		"Image": "harley-benton-iso1acpro.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "PowerPlant ISO-10AC Pro",
+		"Width": 7.68,
+		"Height": 3.46,
+		"Image": "harley-benton-iso10acpro.png"
 	},
 	{
 		"Brand": "Harley Benton",
