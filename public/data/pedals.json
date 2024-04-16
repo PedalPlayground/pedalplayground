@@ -37409,11 +37409,18 @@
 		"Image": "tkog-oxford-drive-v2.png"
 	},
 	{
-		"Brand": "The Pill",
+		"Brand": "The Pill Pedal",
 		"Name": "Stereo",
-		"Width": 4.7047244,
-		"Height": 3.70079,
+		"Width": 5.2,
+		"Height": 3.7,
 		"Image": "pill-stereo.png"
+	},
+	{
+		"Brand": "The Pill Pedal",
+		"Name": "Mini",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "pill-mini.png"
 	},
 	{
 		"Brand": "The Sound of Justice FX",
