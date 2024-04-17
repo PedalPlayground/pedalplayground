@@ -6224,6 +6224,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Adineko ('70s Collection)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-adineko-sc.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Antichthon",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -6497,6 +6504,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Katzenkönig ('70s Collection)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-katzenkonig-sc.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Knight School Synth",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -6581,6 +6595,20 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "SFT ('70s Collection)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-sft-sc.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "SideArm ('70s Collection)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-sidearm-sc.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Sinkhole",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -6613,6 +6641,13 @@
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-soft-focus-shoegaze-purple.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "StarCrash ('70s Collection)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-starcrash-sc.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -6676,6 +6711,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-valcoder.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Valcoder ('70s Collection)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-valcoder-sc.png"
 	},
 	{
 		"Brand": "Catalinbread",
