@@ -297,8 +297,15 @@
 		"Brand": "AC Noises",
 		"Name": "Respira",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.84,
 		"Image": "acn-respira.png"
+	},
+	{
+		"Brand": "AC Noises",
+		"Name": "Ricorda",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "acn-ricorda.png"
 	},
 	{
 		"Brand": "AC Noises",
