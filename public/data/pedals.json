@@ -3069,42 +3069,42 @@
 		"Brand": "Becos",
 		"Name": "CompIQ Mini",
 		"Width": 1.85,
-		"Height": 3.62,
+		"Height": 3.7,
 		"Image": "becos-compiq-mini.png"
 	},
 	{
 		"Brand": "Becos",
-		"Name": "CompIQ One",
+		"Name": "CompIQ MINI One",
 		"Width": 1.85,
-		"Height": 3.62,
+		"Height": 3.7,
 		"Image": "becos-compiq-one.png"
 	},
 	{
 		"Brand": "Becos",
-		"Name": "CompIQ Stella Pro",
-		"Width": 2.78,
-		"Height": 4.41,
+		"Name": "CompIQ STELLA",
+		"Width": 2.8,
+		"Height": 4.5,
 		"Image": "becos-compiq-stella-pro.png"
 	},
 	{
 		"Brand": "Becos",
-		"Name": "CompIQ Twain",
-		"Width": 4.23,
+		"Name": "CompIQ TWAIN",
+		"Width": 3.99,
 		"Height": 4.72,
 		"Image": "becos-compiq-twain.png"
 	},
 	{
 		"Brand": "Becos",
-		"Name": "TS8-MS Overdrive",
-		"Width": 2.70,
-		"Height": 4.72,
+		"Name": "Overdrive / Switcher",
+		"Width": 2.72,
+		"Height": 4.62,
 		"Image": "becos-ts8-ms-overdrive.png"
 	},
 	{
 		"Brand": "Becos",
 		"Name": "Ziffer Overdrive",
-		"Width": 1.53543,
-		"Height": 3.62205,
+		"Width": 1.85,
+		"Height": 3.7,
 		"Image": "becos-ziffer.png"
 	},
 	{
