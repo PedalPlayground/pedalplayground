@@ -17048,7 +17048,7 @@
 		"Brand": "GUPTech",
 		"Name": "Donut Distortion",
 		"Width": 2.6,
-		"Height": 5,
+		"Height": 4.94,
 		"Image": "guptech-donut.png"
 	},
 	{
@@ -26003,6 +26003,13 @@
 		"Width": 1.67,
 		"Height": 3.75,
 		"Image": "mooer-015.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "018 Custom 100",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "mooer-018.png"
 	},
 	{
 		"Brand": "Mooer",
