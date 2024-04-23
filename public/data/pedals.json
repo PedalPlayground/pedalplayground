@@ -35689,8 +35689,36 @@
 		"Brand": "Summer School Electronics",
 		"Name": "Gladys V2",
 		"Width": 2.6,
-		"Height": 5.05,
+		"Height": 5.07,
 		"Image": "summer-school-electronics-gladys-v2.png"
+	},
+	{
+		"Brand": "Summer School Electronics",
+		"Name": "Gus-Drive",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "summer-school-electronics-gus-drive.png"
+	},
+	{
+		"Brand": "Summer School Electronics",
+		"Name": "Half Day Compressor",
+		"Width": 2.6,
+		"Height": 5.07,
+		"Image": "summer-school-electronics-half-day.png"
+	},
+	{
+		"Brand": "Summer School Electronics",
+		"Name": "Pep Rally Fuzz",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "summer-school-electronics-pep-rally.png"
+	},
+	{
+		"Brand": "Summer School Electronics",
+		"Name": "Science Fair",
+		"Width": 2.6,
+		"Height": 5.07,
+		"Image": "summer-school-electronics-science-fair.png"
 	},
 	{
 		"Brand": "Supro",
