@@ -40301,6 +40301,20 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Monumental",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-monumental.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Monumental (Black)",
+		"Width": 2.88,
+		"Height": 4.84,
+		"Image": "walrus-monumental-black.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Phoenix",
 		"Width": 9.75,
 		"Height": 3,
