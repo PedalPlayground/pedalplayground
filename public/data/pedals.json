@@ -28582,10 +28582,24 @@
 	},
 	{
 		"Brand": "Nordvang",
+		"Name": "Mid Air",
+		"Width": 3.03,
+		"Height": 4.76,
+		"Image": "nordvang-mid-air.png"
+	},
+	{
+		"Brand": "Nordvang",
 		"Name": "No.1 Signature",
 		"Width": 4.7,
 		"Height": 3.85,
 		"Image": "nordvang-no1-signature.png"
+	},
+	{
+		"Brand": "Nordvang",
+		"Name": "Skyline",
+		"Width": 3.03,
+		"Height": 4.76,
+		"Image": "nordvang-skyline.png"
 	},
 	{
 		"Brand": "Nordvang",
@@ -32660,6 +32674,13 @@
 		"Width": 4.4,
 		"Height": 5.1,
 		"Image": "rjm-overture.png"
+	},
+	{
+		"Brand": "Rock Stock",
+		"Name": "Auxiliary Pedal (White)",
+		"Width": 3.7,
+		"Height": 1.66,
+		"Image": "rock-stock-aux-pedal-white.png"
 	},
 	{
 		"Brand": "Rock Stock",
