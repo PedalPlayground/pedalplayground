@@ -15128,6 +15128,13 @@
 	},
 	{
 		"Brand": "Friedman",
+		"Name": "IR-D",
+		"Width": 6.5,
+		"Height": 5.44,
+		"Image": "friedman-ird.png"
+	},
+	{
+		"Brand": "Friedman",
 		"Name": "IR-X",
 		"Width": 6.5,
 		"Height": 5.44,
