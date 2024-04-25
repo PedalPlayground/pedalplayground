@@ -30227,6 +30227,27 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "Cali76 Bass Compressor",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-cali76-bass-comp.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Cali76 Bass Compressor (Black)",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-cali76-bass-comp-black.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Cali76 Bass Compressor (Blue)",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-cali76-bass-comp-blue.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "Cali76 Compact Deluxe",
 		"Width": 2.6,
 		"Height": 5.59,
@@ -30238,6 +30259,20 @@
 		"Width": 2.6,
 		"Height": 5.59,
 		"Image": "origin-cali76-compact-deluxe-le.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Cali76 FET Compressor",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-cali76-fet-comp.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Cali76 FET Compressor (Black)",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-cali76-fet-comp-black.png"
 	},
 	{
 		"Brand": "Origin Effects",
