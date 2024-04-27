@@ -15156,6 +15156,13 @@
 	},
 	{
 		"Brand": "Friedman",
+		"Name": "IR-D (Limited Edition)",
+		"Width": 6.5,
+		"Height": 5.44,
+		"Image": "friedman-ird-limited.png"
+	},
+	{
+		"Brand": "Friedman",
 		"Name": "IR-X",
 		"Width": 6.5,
 		"Height": 5.44,
@@ -22675,9 +22682,16 @@
 	{
 		"Brand": "Kinotone",
 		"Name": "Ribbons",
-		"Width": 2.94,
-		"Height": 4.9,
+		"Width": 2.89,
+		"Height": 4.83,
 		"Image": "kinotone-ribbons.png"
+	},
+	{
+		"Brand": "Kinotone",
+		"Name": "Sparks",
+		"Width": 2.89,
+		"Height": 4.83,
+		"Image": "kinotone-sparks.png"
 	},
 	{
 		"Brand": "KittycasterFX",
