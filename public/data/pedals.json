@@ -35106,6 +35106,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "BigSky MX",
+		"Width": 7,
+		"Height": 4.95,
+		"Image": "strymon-bigsky-mx.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "BlueSky",
 		"Width": 4,
 		"Height": 4.55,
