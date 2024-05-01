@@ -30611,6 +30611,13 @@
 		"Image": "palmer-pocket-amp-mk2.png"
 	},
 	{
+		"Brand": "Palmer Custom FX",
+		"Name": "The Solarist V2",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "palmercustom-the-solarist-v2.png"
+	},
+	{
 		"Brand": "Panda Audio",
 		"Name": "Future Impact",
 		"Width": 4.9,
@@ -37652,6 +37659,13 @@
 		"Width": 3.98,
 		"Height": 4.89,
 		"Image": "thorpyfx-camoflange.png"
+	},
+	{
+		"Brand": "ThorpyFX",
+		"Name": "Electric Lightning",
+		"Width": 3.98,
+		"Height": 4.89,
+		"Image": "thorpyfx-electric-lightning.png"
 	},
 	{
 		"Brand": "ThorpyFX",
