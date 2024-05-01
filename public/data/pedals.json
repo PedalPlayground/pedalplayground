@@ -37655,6 +37655,13 @@
 	},
 	{
 		"Brand": "ThorpyFX",
+		"Name": "Electric Lightning",
+		"Width": 3.98,
+		"Height": 4.89,
+		"Image": "thorpyfx-electric-lightning.png"
+	},
+	{
+		"Brand": "ThorpyFX",
 		"Name": "ER-2 Uni-Vibe",
 		"Width": 3.98,
 		"Height": 4.89,
