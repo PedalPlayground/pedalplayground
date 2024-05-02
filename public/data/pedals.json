@@ -2604,6 +2604,13 @@
 		"Image": "audio-sprockets-tone-dexter.png"
 	},
 	{
+		"Brand": "Audio Sprockets",
+		"Name": "Tone Dexter II",
+		"Width": 6.3,
+		"Height": 5.71,
+		"Image": "audio-sprockets-tone-dexter-2.png"
+	},
+	{
 		"Brand": "Bananana Effects",
 		"Name": "Abracadabra",
 		"Width": 2,
@@ -34687,8 +34694,8 @@
 	{
 		"Brand": "Source Audio",
 		"Name": "Tap Tempo Switch",
-		"Width": 2.25,
-		"Height": 2.5,
+		"Width": 1.96,
+		"Height": 2.13,
 		"Image": "source-audio-tap.png"
 	},
 	{
