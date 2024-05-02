@@ -5001,8 +5001,15 @@
 		"Brand": "BOSS",
 		"Name": "ME-90 Guitar Multiple Effects",
 		"Width": 17.5,
-		"Height": 8.6875,
+		"Height": 8.49,
 		"Image": "boss-me90.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "ME-90B Guitar Multiple Effects",
+		"Width": 17.5,
+		"Height": 8.49,
+		"Image": "boss-me90b.png"
 	},
 	{
 		"Brand": "BOSS",
