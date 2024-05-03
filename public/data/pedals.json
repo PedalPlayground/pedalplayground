@@ -32621,6 +32621,13 @@
 	},
 	{
 		"Brand": "Reuss",
+		"Name": "Plasmatron",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "reuss-plasmatron.png"
+	},
+	{
+		"Brand": "Reuss",
 		"Name": "Square One",
 		"Width": 2.84,
 		"Height": 4.5,
