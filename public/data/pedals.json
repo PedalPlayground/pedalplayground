@@ -42037,6 +42037,48 @@
  	},
 	{
 		"Brand": "Zoom",
+		"Name": "A1 Four",
+		"Width": 5.12,
+		"Height": 6.22,
+		"Image": "zoom-a1-four.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "A1x Four",
+		"Width": 8.64,
+		"Height": 6.22,
+		"Image": "zoom-a1x-four.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "B1 Four",
+		"Width": 5.12,
+		"Height": 6.22,
+		"Image": "zoom-b1-four.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "B1x Four",
+		"Width": 8.64,
+		"Height": 6.22,
+		"Image": "zoom-b1x-four.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "B3n",
+		"Width": 9.2,
+		"Height": 7,
+		"Image": "zoom-b3n.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "G1 Four",
+		"Width": 5.12,
+		"Height": 6.22,
+		"Image": "zoom-g1-four.png"
+	},
+	{
+		"Brand": "Zoom",
 		"Name": "G1x",
 		"Width": 9.21,
 		"Height": 6.50,
@@ -42044,17 +42086,24 @@
 	},
 	{
 		"Brand": "Zoom",
-		"Name": "G1 Four",
-		"Width": 5.12,
-		"Height": 6.21,
-		"Image": "zoom-g1-four.png"
+		"Name": "G1x Four",
+		"Width": 8.64,
+		"Height": 6.22,
+		"Image": "zoom-g1x-four.png"
 	},
 	{
 		"Brand": "Zoom",
-		"Name": "G1x Four",
-		"Width": 8.625,
-		"Height": 6.21,
-		"Image": "zoom-g1x-four.png"
+		"Name": "G2 Four",
+		"Width": 7.2,
+		"Height": 5.77,
+		"Image": "zoom-g2-four.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "G2x Four",
+		"Width": 10.78,
+		"Height": 5.89,
+		"Image": "zoom-g2x-four.png"
 	},
 	{
 		"Brand": "Zoom",
@@ -42062,6 +42111,13 @@
 		"Width": 9.21,
 		"Height": 6.69,
 		"Image": "zoom-g3.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "G3n",
+		"Width": 9.2,
+		"Height": 7,
+		"Image": "zoom-g3n.png"
 	},
 	{
 		"Brand": "Zoom",
