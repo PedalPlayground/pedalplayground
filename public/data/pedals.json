@@ -8415,10 +8415,10 @@
 	},
 	{
 		"Brand": "Custom Tones",
-		"Name": "Ethos TWE-1",
-		"Width": 2.69,
-		"Height": 4.42,
-		"Image": "ethos-twe1.png"
+		"Name": "Ethos Clean Fusion Deluxe",
+		"Width": 10.05,
+		"Height": 2.93,
+		"Image": "ethos-clean-fusion-deluxe.png"
 	},
 	{
 		"Brand": "Custom Tones",
@@ -8433,6 +8433,13 @@
 		"Width": 7.5,
 		"Height": 4.75,
 		"Image": "customtones-ethosoverdrive.png"
+	},
+	{
+		"Brand": "Custom Tones",
+		"Name": "Ethos TWE-1",
+		"Width": 2.69,
+		"Height": 4.42,
+		"Image": "ethos-twe1.png"
 	},
 	{
 		"Brand": "Cuvave",
@@ -30892,9 +30899,16 @@
 	},
 	{
 		"Brand": "Paul C",
+		"Name": "Zefram",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "paul-c-zefram.png"
+	},
+	{
+		"Brand": "Paul C",
 		"Name": "Timmy V3 15th Anniversary",
-		"Width": 2.70,
-		"Height": 4.60,
+		"Width": 2.7,
+		"Height": 4.6,
 		"Image": "paul-c-timmy-v3-15th.png"
 	},
 	{
