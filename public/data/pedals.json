@@ -29716,6 +29716,20 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Expression Ramper X3",
+		"Width": 5.15,
+		"Height": 4.12,
+		"Image": "obne-ramper-x3.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Expression Ramper (Beam Splitter)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-beam-splitter.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Expression Ramper (Dark Light)",
 		"Width": 1.69,
 		"Height": 3.88,
@@ -29895,6 +29909,13 @@
 		"Width": 4.7,
 		"Height": 4.12,
 		"Image": "obne-rever.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Scooch",
+		"Width": 1.5,
+		"Height": 3.88,
+		"Image": "obne-scooch.png"
 	},
 	{
 		"Brand": "OBNE",
