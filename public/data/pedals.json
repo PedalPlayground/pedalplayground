@@ -12468,6 +12468,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "LPB-3",
+		"Width": 2.82,
+		"Height": 4.5,
+		"Image": "ehx-lpb3.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Mainframe",
 		"Width": 2.82,
 		"Height": 4.5,
