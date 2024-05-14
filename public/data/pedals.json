@@ -20210,6 +20210,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Good Vibrations",
+		"Width": 6,
+		"Height": 4.93,
+		"Image": "jhs-good-vibrations.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Haunting Mids",
 		"Width": 2.93,
 		"Height": 4.98,
@@ -20431,6 +20438,13 @@
 		"Width": 2.93,
 		"Height": 4.98,
 		"Image": "jhs-pulp-n-peel-v4.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Punchline",
+		"Width": 9.7,
+		"Height": 5.7,
+		"Image": "jhs-punchline.png"
 	},
 	{
 		"Brand": "JHS",
@@ -21554,6 +21568,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "California Girls",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-california-girls.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Caverns",
 		"Width": 2.64,
 		"Height": 5.15,
@@ -21852,6 +21873,13 @@
 		"Width": 2.84,
 		"Height": 4.8,
 		"Image": "keeley-hydra-custom.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "I Get Around",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-i-get-around.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -38328,8 +38356,8 @@
 	{
 		"Brand": "Tsakalis",
 		"Name": "Mothership",
-		"Width": 6.5,
-		"Height": 5.5,
+		"Width": 7,
+		"Height": 5.92,
 		"Image": "tsakalis-mothership.png"
 	},
 	{
