@@ -23241,6 +23241,13 @@
 	},
 	{
 		"Brand": "LastGasp",
+		"Name": "Flikrrr",
+		"Width": 2.81,
+		"Height": 4.53,
+		"Image": "lastgasp-flikrrr.png"
+	},
+	{
+		"Brand": "LastGasp",
 		"Name": "Gomorrah",
 		"Width": 2.81,
 		"Height": 4.53,
@@ -38320,6 +38327,13 @@
 	},
 	{
 		"Brand": "Tsakalis",
+		"Name": "Mothership",
+		"Width": 6.5,
+		"Height": 5.5,
+		"Image": "tsakalis-mothership.png"
+	},
+	{
+		"Brand": "Tsakalis",
 		"Name": "MultiCab 4",
 		"Width": 5.1,
 		"Height": 3.7,
@@ -39440,6 +39454,13 @@
 	},
 	{
 		"Brand": "Voodoo Lab",
+		"Name": "Giggity",
+		"Width": 3.75,
+		"Height": 4.99,
+		"Image": "voodoolab-giggity.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
 		"Name": "Ground Control Pro",
 		"Width": 17,
 		"Height": 10.96,
@@ -39507,6 +39528,20 @@
 		"Width": 21.5,
 		"Height": 2.8,
 		"Image": "voodoolab-px8-plus.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "Sparkle Drive MOD",
+		"Width": 3.75,
+		"Height": 4.99,
+		"Image": "voodoolab-sparkle-drive-mod.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "Superfuzz",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "voodoolab-superfuzz.png"
 	},
 	{
 		"Brand": "Voodoo Lab",
