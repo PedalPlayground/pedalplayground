@@ -37774,6 +37774,13 @@
 	},
 	{
 		"Brand": "ThorpyFX",
+		"Name": "Camoflange MKII",
+		"Width": 3.98,
+		"Height": 4.89,
+		"Image": "thorpyfx-camoflange-mk2.png"
+	},
+	{
+		"Brand": "ThorpyFX",
 		"Name": "Electric Lightning",
 		"Width": 3.98,
 		"Height": 4.89,
