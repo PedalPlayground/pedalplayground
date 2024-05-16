@@ -9429,6 +9429,13 @@
 		"Image": "diamond-vibrato.png"
 	},
 	{
+		"Brand": "Diamond",
+		"Name": "Vibrato (2024)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-vibrato-2024.png"
+	},
+	{
 		"Brand": "Diezel",
 		"Name": "Herbert",
 		"Width": 4.5,
