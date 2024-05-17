@@ -40917,6 +40917,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Mofetta",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "wampler-mofetta.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "Moxie",
 		"Width": 1.85,
 		"Height": 3.7,
