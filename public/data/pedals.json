@@ -28581,6 +28581,27 @@
 		"Image": "nobels-odr-mini.png"
 	},
 	{
+		"Brand": "Non-Human Audio",
+		"Name": "Mocking Blur",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "non-human-audio-mocking-blur.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
+		"Name": "Slow Loris",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "non-human-audio-slow-loris.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
+		"Name": "Unclean",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "non-human-audio-unclean.png"
+	},
+	{
 		"Brand": "Nordland",
 		"Name": "ODR-C",
 		"Width": 2.6,
