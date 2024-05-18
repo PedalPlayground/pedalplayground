@@ -26999,6 +26999,20 @@
 		"Image": "mosky-spring-reverb.png"
 	},
 	{
+		"Brand": "Moth Electric",
+		"Name": "A. incorrupta",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "moth-electric-a-incorrupta.png"
+	},
+	{
+		"Brand": "Moth Electric",
+		"Name": "P. isabella",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "moth-electric-p-isabella.png"
+	},
+	{
 		"Brand": "MOYO",
 		"Name": "Mini Expression",
 		"Width": 2.125,
