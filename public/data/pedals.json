@@ -15947,6 +15947,13 @@
 	},
 	{
 		"Brand": "Fuzzrocious",
+		"Name": "Big Fella",
+		"Width": 3.7,
+		"Height": 4.98,
+		"Image": "fuzzrocious-pedals-big-fella.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
 		"Name": "Blast Furnace",
 		"Width": 3.7,
 		"Height": 4.98,
@@ -24988,6 +24995,13 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "mask-neck-brace.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Screws",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "mask-screws.png"
 	},
 	{
 		"Brand": "Mattoverse",
