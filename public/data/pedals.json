@@ -25033,6 +25033,13 @@
 	},
 	{
 		"Brand": "Matthews Effects",
+		"Name": "The Architect V4",
+		"Width": 2.67,
+		"Height": 4.89,
+		"Image": "matthews-architect-v4.png"
+	},
+	{
+		"Brand": "Matthews Effects",
 		"Name": "The Astronomer",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -35152,6 +35159,13 @@
 		"Width": 2.85,
 		"Height": 4.5,
 		"Image": "stomp-under-foot-pumpkin-pi.png"
+	},
+	{
+		"Brand": "Stomp Under Foot",
+		"Name": "Red Menace",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "stomp-under-foot-red-menace.png"
 	},
 	{
 		"Brand": "Stomp Under Foot",
