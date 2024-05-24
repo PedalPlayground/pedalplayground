@@ -1142,6 +1142,13 @@
 	},
 	{
 		"Brand": "AllPedal",
+		"Name": "Devil's Triad (Essentials)",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "allpedal-devils-triad-e.png"
+	},
+	{
+		"Brand": "AllPedal",
 		"Name": "Galactavise",
 		"Width": 2.6,
 		"Height": 5.09,
@@ -30091,6 +30098,48 @@
 		"Width": 4.7,
 		"Height": 4.12,
 		"Image": "obne-whitecap.png"
+	},
+	{
+		"Brand": "October Audio",
+		"Name": "Heavy Peaches",
+		"Width": 1.79,
+		"Height": 3.7,
+		"Image": "october-audio-jeavy-peaches.png"
+	},
+	{
+		"Brand": "October Audio",
+		"Name": "Nvmbr Fuzz",
+		"Width": 1.79,
+		"Height": 3.7,
+		"Image": "october-audio-nvmbr.png"
+	},
+	{
+		"Brand": "October Audio",
+		"Name": "Octo Deco",
+		"Width": 1.79,
+		"Height": 3.7,
+		"Image": "october-audio-octo-deco.png"
+	},
+	{
+		"Brand": "October Audio",
+		"Name": "Robotic Celebrity Head",
+		"Width": 1.79,
+		"Height": 3.7,
+		"Image": "october-audio-robotic-celebrity-head.png"
+	},
+	{
+		"Brand": "October Audio",
+		"Name": "Witch Finger",
+		"Width": 1.79,
+		"Height": 3.7,
+		"Image": "october-audio-witch-finger.png"
+	},
+	{
+		"Brand": "October Audio",
+		"Name": "Witch Finger (Always On)",
+		"Width": 3.7,
+		"Height": 1.69,
+		"Image": "october-audio-witch-finger-always-on.png"
 	},
 	{
 		"Brand": "Oneder Effects",
