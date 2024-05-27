@@ -28659,6 +28659,13 @@
 	},
 	{
 		"Brand": "Nordland",
+		"Name": "MT-11",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "nordland-mt11.png"
+	},
+	{
+		"Brand": "Nordland",
 		"Name": "ODR-C",
 		"Width": 2.6,
 		"Height": 5.03,
