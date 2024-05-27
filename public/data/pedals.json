@@ -7561,6 +7561,13 @@
 	},
 	{
 		"Brand": "Collision Devices",
+		"Name": "Crushturnal",
+		"Width": 7.61,
+		"Height": 4.88,
+		"Image": "collision-devices-crushturnal.png"
+	},
+	{
+		"Brand": "Collision Devices",
 		"Name": "Nocturnal",
 		"Width": 7.61,
 		"Height": 4.88,
@@ -13284,6 +13291,13 @@
 		"Width": 5.7,
 		"Height": 5,
 		"Image": "electronic-audio-experiments-sending-v2.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Surveyer",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "electronic-audio-experiments-surveyer.png"
 	},
 	{
 		"Brand": "EAE",
