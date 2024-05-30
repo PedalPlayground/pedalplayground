@@ -22802,14 +22802,21 @@
 		"Brand": "KittycasterFX",
 		"Name": "Groovy Wizard",
 		"Width": 3.39,
-		"Height": 5.36,
+		"Height": 5.47,
 		"Image": "kittycasterfx-groovy-wizard.png"
+	},
+	{
+		"Brand": "KittycasterFX",
+		"Name": "Mohair",
+		"Width": 3.39,
+		"Height": 5.47,
+		"Image": "kittycasterfx-mohair.png"
 	},
 	{
 		"Brand": "KittycasterFX",
 		"Name": "Tremdriver",
 		"Width": 3.39,
-		"Height": 5.36,
+		"Height": 5.47,
 		"Image": "kittycasterfx-tremdriver.png"
 	},
 	{
@@ -32436,6 +32443,13 @@
 		"Width": 2.16,
 		"Height": 2.82,
 		"Image": "raingerfx-igor-expression-pad.png"
+	},
+	{
+		"Brand": "Rainger FX",
+		"Name": "Mini Drone",
+		"Width": 1.7,
+		"Height": 4.15,
+		"Image": "raingerfx-mini-drone.png"
 	},
 	{
 		"Brand": "Rainger FX",
