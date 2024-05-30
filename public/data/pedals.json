@@ -13881,6 +13881,20 @@
 		"Image": "ews-japan-little-fuzzy-drive.png"
 	},
 	{
+		"Brand": "F-Pedals",
+		"Name": "Matterix",
+		"Width": 2.05,
+		"Height": 3.7,
+		"Image": "fpedals-matterix.png"
+	},
+	{
+		"Brand": "F-Pedals",
+		"Name": "Yurei",
+		"Width": 2.05,
+		"Height": 3.7,
+		"Image": "fpedals-yurei.png"
+	},
+	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "~900",
 		"Width": 4.4,
@@ -26895,6 +26909,20 @@
 	},
 	{
 		"Brand": "Morley",
+		"Name": "20/20 Lead Wah",
+		"Width": 4.5,
+		"Height": 6.85,
+		"Image": "morley-20-20-lead-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Lead Wah Boost",
+		"Width": 4.5,
+		"Height": 7.24,
+		"Image": "morley-20-20-lead-wah-boost.png"
+	},
+	{
+		"Brand": "Morley",
 		"Name": "AFX-1",
 		"Width": 12,
 		"Height": 7.09,
@@ -26909,17 +26937,10 @@
 	},
 	{
 		"Brand": "Morley",
-		"Name": "20/20 Lead Wah",
-		"Width": 4.5,
-		"Height": 6.85,
-		"Image": "morley-20-20-lead-wah.png"
-	},
-	{
-		"Brand": "Morley",
-		"Name": "20/20 Lead Wah Boost",
-		"Width": 4.5,
-		"Height": 7.24,
-		"Image": "morley-20-20-lead-wah-boost.png"
+		"Name": "George Lynch Tripler",
+		"Width": 6.63,
+		"Height": 4.27,
+		"Image": "morley-george-lynch-tripler.png"
 	},
 	{
 		"Brand": "Morley",
