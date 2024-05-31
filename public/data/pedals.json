@@ -30891,6 +30891,13 @@
 		"Image": "palmer-pocket-amp-mk2.png"
 	},
 	{
+		"Brand": "Palmer",
+		"Name": "PWT12 MK2",
+		"Width": 7.6,
+		"Height": 3.13,
+		"Image": "palmer-pwt12-mk2.png"
+	},
+	{
 		"Brand": "Palmer Custom FX",
 		"Name": "The Solarist V2",
 		"Width": 4.7,
