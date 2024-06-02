@@ -34315,6 +34315,13 @@
 	},
 	{
 		"Brand": "SoloDallas",
+		"Name": "Bass-X",
+		"Width": 2.79,
+		"Height": 4.69,
+		"Image": "solodallas-bass-x.png"
+	},
+	{
+		"Brand": "SoloDallas",
 		"Name": "The Schaffer Replica",
 		"Width": 3.5,
 		"Height": 4.49,
