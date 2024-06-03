@@ -6189,10 +6189,17 @@
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Shigeharu (Germanium Octave)",
+		"Name": "Shigeharu (Germanium)",
 		"Width": 3.7,
 		"Height": 4.89,
 		"Image": "caroline-shigeharu-go.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Shigeharu (Germanium CME)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "caroline-shigeharu-go-cme.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -13627,6 +13634,13 @@
 		"Width": 2.6,
 		"Height": 5.14,
 		"Image": "empress-para-eq-mk2-deluxe.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "ParaEQ MKII Deluxe (Black)",
+		"Width": 2.6,
+		"Height": 5.14,
+		"Image": "empress-para-eq-mk2-deluxe-black.png"
 	},
 	{
 		"Brand": "Empress",
@@ -39773,6 +39787,13 @@
 		"Width": 21.5,
 		"Height": 2.8,
 		"Image": "voodoolab-px8-plus.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "Sparkle Drive",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "voodoolab-sparkle-drive.png"
 	},
 	{
 		"Brand": "Voodoo Lab",
