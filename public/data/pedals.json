@@ -33432,6 +33432,34 @@
 		"Image": "science-mother.png"
 	},
 	{
+		"Brand": "Secret Efx",
+		"Name": "Omnia",
+		"Width": 3.44,
+		"Height": 4.6,
+		"Image": "secretefx-omnia.png"
+	},
+	{
+		"Brand": "Secret Efx",
+		"Name": "Secret-1",
+		"Width": 3.44,
+		"Height": 4.6,
+		"Image": "secretefx-secret-1.png"
+	},
+	{
+		"Brand": "Secret Efx",
+		"Name": "Secret-2",
+		"Width": 3.44,
+		"Height": 4.6,
+		"Image": "secretefx-secret-2.png"
+	},
+	{
+		"Brand": "Secret Efx",
+		"Name": "Soul Pressure",
+		"Width": 3.44,
+		"Height": 4.6,
+		"Image": "secretefx-soul-pressure.png"
+	},
+	{
 		"Brand": "Selah",
 		"Name": "Feather Drive",
 		"Width": 2.5,
