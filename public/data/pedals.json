@@ -16521,6 +16521,34 @@
 	},
 	{
 		"Brand": "Glou-Glou",
+		"Name": "FL5B",
+		"Width": 7.09,
+		"Height": 6.01,
+		"Image": "glou-glou-fl5b.png"
+	},
+	{
+		"Brand": "Glou-Glou",
+		"Name": "FL5D",
+		"Width": 7.09,
+		"Height": 6.01,
+		"Image": "glou-glou-fl5d.png"
+	},
+	{
+		"Brand": "Glou-Glou",
+		"Name": "FL7",
+		"Width": 7.09,
+		"Height": 6.01,
+		"Image": "glou-glou-fl7.png"
+	},
+	{
+		"Brand": "Glou-Glou",
+		"Name": "FL9",
+		"Width": 7.09,
+		"Height": 6.01,
+		"Image": "glou-glou-fl9.png"
+	},
+	{
+		"Brand": "Glou-Glou",
 		"Name": "Loupé (Blue)",
 		"Width": 7.28,
 		"Height": 7.46,
