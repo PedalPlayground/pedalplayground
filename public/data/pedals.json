@@ -6616,6 +6616,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Perseus Dio",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-perseus-dio.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "RAH",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -11531,9 +11538,23 @@
 	{
 		"Brand": "EarthQuaker",
 		"Name": "Time Shadows",
-		"Width": 2.6,
+		"Width": 2.7,
 		"Height": 4.96,
 		"Image": "earthquaker-time-shadows.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Time Shadows (Cyberpunk)",
+		"Width": 2.7,
+		"Height": 4.96,
+		"Image": "earthquaker-time-shadows-cp.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Time Shadows (Limited)",
+		"Width": 2.6,
+		"Height": 4.96,
+		"Image": "earthquaker-time-shadows-le.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -13981,8 +14002,8 @@
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "The Accountant",
-		"Width": 1.77,
-		"Height": 3.6,
+		"Width": 1.82,
+		"Height": 3.7,
 		"Image": "fairfield-accountant.png"
 	},
 	{
@@ -28841,6 +28862,13 @@
 	},
 	{
 		"Brand": "Nordvang",
+		"Name": "Altitude",
+		"Width": 3.03,
+		"Height": 4.76,
+		"Image": "nordvang-altitude.png"
+	},
+	{
+		"Brand": "Nordvang",
 		"Name": "Gravity v2.0",
 		"Width": 5.7,
 		"Height": 4.9,
@@ -37911,6 +37939,13 @@
 		"Width": 2.6,
 		"Height": 4.46,
 		"Image": "templo-model-33.png"
+	},
+	{
+		"Brand": "Templo Devices",
+		"Name": "Reel Deal",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "templo-reel-deal.png"
 	},
 	{
 		"Brand": "Templo Devices",
