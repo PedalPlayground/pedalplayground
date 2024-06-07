@@ -26692,6 +26692,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "Prime S1",
+		"Width": 9.45,
+		"Height": 2.75,
+		"Image": "mooer-prime-s1.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Pure Boost",
 		"Width": 1.67,
 		"Height": 3.75,
@@ -28950,6 +28957,13 @@
 		"Width": 2.98,
 		"Height": 4.76,
 		"Image": "nux-6ixty5ive.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "63' Diamond",
+		"Width": 2.98,
+		"Height": 4.76,
+		"Image": "nux-63-diamond.png"
 	},
 	{
 		"Brand": "NuX",
