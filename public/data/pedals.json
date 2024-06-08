@@ -40385,9 +40385,51 @@
 	},
 	{
 		"Brand": "Walrus Audio",
-		"Name": "Canvas Stereo Direct Injection Box",
-		"Width": 2.65,
-		"Height": 4.93,
+		"Name": "Canvas Power 15",
+		"Width": 12.28,
+		"Height": 2.21,
+		"Image": "walrus-canvas-power-15.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Canvas Power 22",
+		"Width": 16.42,
+		"Height": 2.21,
+		"Image": "walrus-canvas-power-22.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Canvas Power 5",
+		"Width": 5.24,
+		"Height": 2.21,
+		"Image": "walrus-canvas-power-5.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Canvas Power 8",
+		"Width": 8.14,
+		"Height": 2.21,
+		"Image": "walrus-canvas-power-8.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Canvas Mono",
+		"Width": 2.5,
+		"Height": 4.61,
+		"Image": "walrus-canvas-mono.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Canvas Re-Amp",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "walrus-canvas-re-amp.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Canvas Stereo",
+		"Width": 2.51,
+		"Height": 4.68,
 		"Image": "walrus-canvasstereo.png"
 	},
 	{
