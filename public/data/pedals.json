@@ -40414,29 +40414,29 @@
 	{
 		"Brand": "Walrus Audio",
 		"Name": "Canvas Mono",
-		"Width": 2.5,
-		"Height": 4.61,
+		"Width": 2.66,
+		"Height": 4.9,
 		"Image": "walrus-canvas-mono.png"
 	},
 	{
 		"Brand": "Walrus Audio",
 		"Name": "Canvas Re-Amp",
-		"Width": 2.75,
-		"Height": 4.5,
+		"Width": 2.93,
+		"Height": 4.79,
 		"Image": "walrus-canvas-re-amp.png"
 	},
 	{
 		"Brand": "Walrus Audio",
 		"Name": "Canvas Stereo",
-		"Width": 2.51,
-		"Height": 4.68,
+		"Width": 2.68,
+		"Height": 4.99,
 		"Image": "walrus-canvasstereo.png"
 	},
 	{
 		"Brand": "Walrus Audio",
 		"Name": "Canvas Tuner",
-		"Width": 2.4,
-		"Height": 4.71,
+		"Width": 2.42,
+		"Height": 4.75,
 		"Image": "walrus-canvas-tuner.png"
 	},
 	{
