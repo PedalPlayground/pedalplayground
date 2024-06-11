@@ -8066,9 +8066,16 @@
 	{
 		"Brand": "Crazy Tube Circuits",
 		"Name": "Unobtainium",
-		"Width": 4.83,
+		"Width": 4.8,
 		"Height": 3.78,
 		"Image": "ctc-unobtainium.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Unobtainium Raw",
+		"Width": 4.8,
+		"Height": 3.78,
+		"Image": "ctc-unobtainium-raw.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
