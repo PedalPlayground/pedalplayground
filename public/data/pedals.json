@@ -225,6 +225,13 @@
 	},
 	{
 		"Brand": "A3 Stompbox",
+		"Name": "DM",
+		"Width": 4.92,
+		"Height": 3,
+		"Image": "a3-dm.png"
+	},
+	{
+		"Brand": "A3 Stompbox",
 		"Name": "Groovim",
 		"Width": 2.48,
 		"Height": 4.74,
