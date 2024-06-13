@@ -9536,8 +9536,8 @@
 	{
 		"Brand": "DigiTech",
 		"Name": "Bass Whammy",
-		"Width": 6.5,
-		"Height": 7.75,
+		"Width": 6.67,
+		"Height": 7.57,
 		"Image": "digitech-bass-whammy.png"
 	},
 	{
@@ -9801,9 +9801,16 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Whammy 4",
+		"Width": 6.3,
+		"Height": 7.87,
+		"Image": "digitech-whammy-4.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Whammy 5",
-		"Width": 6.5,
-		"Height": 7.75,
+		"Width": 6.67,
+		"Height": 7.57,
 		"Image": "digitech-whammy.png"
 	},
 	{
