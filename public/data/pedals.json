@@ -39425,6 +39425,13 @@
 		"Image": "vandae-green-jealousy.png"
 	},
 	{
+		"Brand": "VDL",
+		"Name": "L'Overdrive",
+		"Width": 3.94,
+		"Height": 4.7,
+		"Image": "vdl-l-overdrive.png"
+	},
+	{
 		"Brand": "Vertex",
 		"Name": "Boost",
 		"Width": 3.2,
