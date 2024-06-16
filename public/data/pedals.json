@@ -10137,6 +10137,13 @@
 	},
 	{
 		"Brand": "Dominion Electric",
+		"Name": "Firebox",
+		"Width": 3,
+		"Height": 4.73,
+		"Image": "dominion-firebox.png"
+	},
+	{
+		"Brand": "Dominion Electric",
 		"Name": "Fuzz",
 		"Width": 3,
 		"Height": 4.73,
@@ -35502,6 +35509,13 @@
 		"Width": 2.6,
 		"Height": 5.07,
 		"Image": "spruce-effects-the-gale.png"
+	},
+	{
+		"Brand": "Stoll	",
+		"Name": "Mullet Drive",
+		"Width": 4.45,
+		"Height": 3.69,
+		"Image": "stoll-mullet-drive.png"
 	},
 	{
 		"Brand": "Stomp Audio Labs",
