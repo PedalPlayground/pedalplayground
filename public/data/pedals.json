@@ -3458,6 +3458,34 @@
 		"Image": "behringer-vt999.png"
 	},
 	{
+		"Brand": "Bennett Custom Audio",
+		"Name": "Jfet Boost",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "bennett-jfet-boost.png"
+	},
+	{
+		"Brand": "Bennett Custom Audio",
+		"Name": "Lighthouse",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "bennett-lighthouse.png"
+	},
+	{
+		"Brand": "Bennett Custom Audio",
+		"Name": "Sea Eagle",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "bennett-sea-eagle.png"
+	},
+	{
+		"Brand": "Bennett Custom Audio",
+		"Name": "Weather Man",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "bennett-weather-man.png"
+	},
+	{
 		"Brand": "Benson",
 		"Name": "Delay",
 		"Width": 4.69,
