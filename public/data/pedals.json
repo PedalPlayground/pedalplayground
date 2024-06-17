@@ -11831,6 +11831,20 @@
 	},
 	{
 		"Brand": "Effectrode",
+		"Name": "Fire Bottle",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "effectrode-fire-bottle.png"
+	},
+	{
+		"Brand": "Effectrode",
+		"Name": "PC-2A Tube Compressor",
+		"Width": 3.7,
+		"Height": 5,
+		"Image": "effectrode-pc2a-tube-compressor.png"
+	},
+	{
+		"Brand": "Effectrode",
 		"Name": "Tube Drive",
 		"Width": 6.8,
 		"Height": 4.52,
@@ -11842,13 +11856,6 @@
 		"Width": 7.5,
 		"Height": 5.1,
 		"Image": "effectrode-tube-vibe.png"
-	},
-	{
-		"Brand": "Effectrode",
-		"Name": "PC-2A Tube Compressor",
-		"Width": 3.7,
-		"Height": 5,
-		"Image": "effectrode-pc2a-tube-compressor.png"
 	},
 	{
 		"Brand": "Effects Bakery",
