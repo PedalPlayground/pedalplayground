@@ -2759,6 +2759,27 @@
 	},
 	{
 		"Brand": "Barn3",
+		"Name": "OXU Mini",
+		"Width": 5.2,
+		"Height": 1.39,
+		"Image": "barn3-oxu-mini.png"
+	},
+	{
+		"Brand": "Barn3",
+		"Name": "OXU Standard",
+		"Width": 7.25,
+		"Height": 1.13,
+		"Image": "barn3-oxu-standard.png"
+	},
+	{
+		"Brand": "Barn3",
+		"Name": "OXU Three",
+		"Width": 6.83,
+		"Height": 1.79,
+		"Image": "barn3-oxu-three.png"
+	},
+	{
+		"Brand": "Barn3",
 		"Name": "Tesla Tap",
 		"Width": 1.75,
 		"Height": 1.9,
