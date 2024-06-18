@@ -5993,10 +5993,38 @@
 	},
 	{
 		"Brand": "Carl Martin",
+		"Name": "Atlantic Chorus",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "carl-martin-atlantic-chorus.png"
+	},
+	{
+		"Brand": "Carl Martin",
+		"Name": "Axis Flanger",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "carl-martin-axis-flanger.png"
+	},
+	{
+		"Brand": "Carl Martin",
 		"Name": "Compressor Limiter",
 		"Width": 3.93,
 		"Height": 4.7,
 		"Image": "carl-martin-compressor-limiter.png"
+	},
+	{
+		"Brand": "Carl Martin",
+		"Name": "DC Drive",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "carl-martin-dc-drive.png"
+	},
+	{
+		"Brand": "Carl Martin",
+		"Name": "Honey-Comp",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "carl-martin-honey-comp.png"
 	},
 	{
 		"Brand": "Carl Martin",
@@ -6021,9 +6049,16 @@
 	},
 	{
 		"Brand": "Carl Martin",
+		"Name": "Ottawa",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "carl-martin-ottawa.png"
+	},
+	{
+		"Brand": "Carl Martin",
 		"Name": "Panama",
-		"Width": 2.36,
-		"Height": 4.33,
+		"Width": 2.6,
+		"Height": 4.88,
 		"Image": "carl-martin-panama.png"
 	},
 	{
@@ -6057,9 +6092,23 @@
 	{
 		"Brand": "Carl Martin",
 		"Name": "Purple Moon",
-		"Width": 2.36,
-		"Height": 4.43,
+		"Width": 2.6,
+		"Height": 4.88,
 		"Image": "carl-martin-purple-moon.png"
+	},
+	{
+		"Brand": "Carl Martin",
+		"Name": "Surf Trem",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "carl-martin-surf-trem.png"
+	},
+	{
+		"Brand": "Carl Martin",
+		"Name": "Tone Tweaker",
+		"Width": 2.6,
+		"Height": 4.88,
+		"Image": "carl-martin-tone-tweaker.png"
 	},
 	{
 		"Brand": "Caroline",
