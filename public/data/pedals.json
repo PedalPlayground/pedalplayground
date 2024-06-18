@@ -22856,6 +22856,13 @@
 	},
 	{
 		"Brand": "Kingsley",
+		"Name": "Peasant",
+		"Width": 3.25,
+		"Height": 4.1,
+		"Image": "kingsley-peasant.png"
+	},
+	{
+		"Brand": "Kingsley",
 		"Name": "Squire",
 		"Width": 3.88,
 		"Height": 4.85,
