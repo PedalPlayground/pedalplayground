@@ -2310,6 +2310,13 @@
 		"Image": "api-tranzformer-llx-bass.png"
 	},
 	{
+		"Brand": "Apollo Approved",
+		"Name": "Skyscraper",
+		"Width": 2.94,
+		"Height": 4.8,
+		"Image": "apollo-approved-skyscraper.png"
+	},
+	{
 		"Brand": "Apple",
 		"Name": "MacBook Pro 14",
 		"Width": 15.15,
@@ -3946,6 +3953,13 @@
 		"Width": 5.63,
 		"Height": 4.63,
 		"Image": "blackout-crystal-dagger.png"
+	},
+	{
+		"Brand": "Blackout Effectors",
+		"Name": "Fix'D Fuzz",
+		"Width": 2.94,
+		"Height": 4.75,
+		"Image": "blackout-fixdfuzz.png"
 	},
 	{
 		"Brand": "Blackout Effectors",
