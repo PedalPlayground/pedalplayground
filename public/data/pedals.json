@@ -6686,10 +6686,38 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Knight School Bit Crush",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-knight-bit-crush.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Knight School Fuzz",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-knight-fuzz.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Knight School Overdrive",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-knight-od.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Knight School Synth",
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-knight-school.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Knight School Trem",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-knight-trem.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -6840,6 +6868,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Super Chil Picoso",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-super-chil-picoso.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "STS-88",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -6900,6 +6935,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-valcoder-sc.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "WIIO",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-wiio.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -23535,7 +23577,14 @@
 	},
 	{
 		"Brand": "Laney",
-		"Name": "Lionheart",
+		"Name": "Ironheart Loudpedal",
+		"Width": 7.83,
+		"Height": 5.52,
+		"Image": "laney-ironheart.png"
+	},
+	{
+		"Brand": "Laney",
+		"Name": "Lionheart Loudpedal",
 		"Width": 7.83,
 		"Height": 5.52,
 		"Image": "laney-lionheart.png"
