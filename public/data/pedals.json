@@ -23766,6 +23766,13 @@
 	},
 	{
 		"Brand": "Lauren Audio",
+		"Name": "B100",
+		"Width": 2.75,
+		"Height": 4.79,
+		"Image": "lauren-b100.png"
+	},
+	{
+		"Brand": "Lauren Audio",
 		"Name": "Mustang",
 		"Width": 3.5,
 		"Height": 5.32,
