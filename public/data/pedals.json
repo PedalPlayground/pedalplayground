@@ -20553,6 +20553,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Hard Drive (Tan)",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "jhs-hard-drive-tan.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Haunting Mid",
 		"Width": 2.93,
 		"Height": 4.98,
@@ -34039,6 +34046,13 @@
 		"Width": 2.6,
 		"Height": 5.18,
 		"Image": "seymour-duncan-studio-bass.png"
+	},
+	{
+		"Brand": "Seymour Duncan",
+		"Name": "Tweak Fuzz",
+		"Width": 4.62,
+		"Height": 4.96,
+		"Image": "seymour-duncan-tweak-fuzz.png"
 	},
 	{
 		"Brand": "Seymour Duncan",
