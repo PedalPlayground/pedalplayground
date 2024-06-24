@@ -20546,7 +20546,14 @@
 	},
 	{
 		"Brand": "JHS",
-		"Name": "Haunting Mids",
+		"Name": "Hard Drive",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "jhs-hard-drive.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Haunting Mid",
 		"Width": 2.93,
 		"Height": 4.98,
 		"Image": "jhs-haunting-mids.png"
