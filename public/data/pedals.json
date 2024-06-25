@@ -3633,6 +3633,13 @@
 		"Image": "benson-stonk-box.png"
 	},
 	{
+		"Brand": "Bergantino",
+		"Name": "Super Pre",
+		"Width": 8.5,
+		"Height": 6.95,
+		"Image": "bergantino-super-pre.png"
+	},
+	{
 		"Brand": "Berkos FX",
 		"Name": "The Germanium Experience",
 		"Width": 4.06,
@@ -14142,9 +14149,30 @@
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "~900",
-		"Width": 4.4,
-		"Height": 2.54,
+		"Width": 4.5,
+		"Height": 2.6,
 		"Image": "fairfield-900.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
+		"Name": "Board Member",
+		"Width": 3.85,
+		"Height": 1.66,
+		"Image": "fairfield-board-member.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
+		"Name": "Conflict of Interest",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "fairfield-conflict-of-interest.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
+		"Name": "Either/Or",
+		"Width": 4.5,
+		"Height": 2.53,
+		"Image": "fairfield-either-or.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
@@ -14159,6 +14187,13 @@
 		"Width": 4.7,
 		"Height": 3.84,
 		"Image": "fairfield-hors-d-oeuvre.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
+		"Name": "Less & Less",
+		"Width": 3.7,
+		"Height": 1.5,
+		"Image": "fairfield-less-less.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
@@ -14183,6 +14218,13 @@
 	},
 	{
 		"Brand": "Fairfield Circuitry",
+		"Name": "PB&J",
+		"Width": 4.5,
+		"Height": 2.66,
+		"Image": "fairfield-pbj.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
 		"Name": "Randy's Revenge",
 		"Width": 4.7,
 		"Height": 3.84,
@@ -14204,6 +14246,13 @@
 	},
 	{
 		"Brand": "Fairfield Circuitry",
+		"Name": "Split!",
+		"Width": 3.7,
+		"Height": 1.65,
+		"Image": "fairfield-split.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
 		"Name": "The Accountant",
 		"Width": 1.82,
 		"Height": 3.7,
@@ -14219,15 +14268,15 @@
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "The Barbershop v2",
-		"Width": 2.63,
-		"Height": 4.4,
+		"Width": 2.69,
+		"Height": 4.5,
 		"Image": "fairfield-barbershop-v2.png"
 	},
 	{
 		"Brand": "Fairfield Circuitry",
 		"Name": "The Unpleasant Surprise",
-		"Width": 4.4,
-		"Height": 2.47,
+		"Width": 4.5,
+		"Height": 2.53,
 		"Image": "fairfield-unpleasant-surprise.png"
 	},
 	{
