@@ -35274,6 +35274,13 @@
 	},
 	{
 		"Brand": "Source Audio",
+		"Name": "Artifakt",
+		"Width": 2.9,
+		"Height": 4.5,
+		"Image": "source-audio-artifakt.png"
+	},
+	{
+		"Brand": "Source Audio",
 		"Name": "Atlas",
 		"Width": 2.94,
 		"Height": 4.5,
