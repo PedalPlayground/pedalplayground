@@ -13525,6 +13525,13 @@
 	},
 	{
 		"Brand": "EAE",
+		"Name": "Prismatic Wall",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "electronic-audio-experiments-prismatic-wall.png"
+	},
+	{
+		"Brand": "EAE",
 		"Name": "Sending",
 		"Width": 5.7,
 		"Height": 4.8,
@@ -31459,6 +31466,20 @@
 	},
 	{
 		"Brand": "PastFX",
+		"Name": "80/A Flanger MN3007",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-80a-flanger-mn3007.png"
+	},
+	{
+		"Brand": "PastFX",
+		"Name": "BLD",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-bld.png"
+	},
+	{
+		"Brand": "PastFX",
 		"Name": "Chorus Ensemble",
 		"Width": 5.01,
 		"Height": 3.7,
@@ -31501,6 +31522,20 @@
 	},
 	{
 		"Brand": "PastFX",
+		"Name": "Classic Phase PX99",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-classic-phase-px99.png"
+	},
+	{
+		"Brand": "PastFX",
+		"Name": "Distortiion",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-distortiion.png"
+	},
+	{
+		"Brand": "PastFX",
 		"Name": "Elastic Mattress",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -31526,6 +31561,13 @@
 		"Width": 5.01,
 		"Height": 3.7,
 		"Image": "pastfx-jet-phaser.png"
+	},
+	{
+		"Brand": "PastFX",
+		"Name": "Mischief",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-mischief.png"
 	},
 	{
 		"Brand": "PastFX",
@@ -31561,6 +31603,13 @@
 		"Width": 4.4,
 		"Height": 2.36,
 		"Image": "pastfx-powerbooster.png"
+	},
+	{
+		"Brand": "PastFX",
+		"Name": "Punkifriar PX76",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-punkifriar-px76.png"
 	},
 	{
 		"Brand": "PastFX",
