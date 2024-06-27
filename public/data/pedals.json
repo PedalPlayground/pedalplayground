@@ -22226,6 +22226,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Halo",
+		"Width": 2.84,
+		"Height": 4.8,
+		"Image": "keeley-halo.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Halo (Andy Apple Red)",
 		"Width": 2.84,
 		"Height": 4.8,
@@ -22233,10 +22240,10 @@
 	},
 	{
 		"Brand": "Keeley",
-		"Name": "Halo",
-		"Width": 2.84,
-		"Height": 4.8,
-		"Image": "keeley-halo.png"
+		"Name": "Halo Core",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-halo-core.png"
 	},
 	{
 		"Brand": "Keeley",
