@@ -12048,6 +12048,20 @@
 	},
 	{
 		"Brand": "Effects Bakery",
+		"Name": "Mecha Bagel Overdrive",
+		"Width": 1.82,
+		"Height": 3.7,
+		"Image": "effectsbakery-mecha-bagel-overdrive.png"
+	},
+	{
+		"Brand": "Effects Bakery",
+		"Name": "Mecha Croissant Distortion",
+		"Width": 1.82,
+		"Height": 3.7,
+		"Image": "effectsbakery-mecha-croissant-distortion.png"
+	},
+	{
+		"Brand": "Effects Bakery",
 		"Name": "Melon Pan Chorus",
 		"Width": 1.82,
 		"Height": 3.7,
@@ -30731,175 +30745,539 @@
 	},
 	{
 		"Brand": "One Control",
-		"Name": "1Loop Box",
-		"Width": 2.13,
-		"Height": 3.98,
-		"Image": "onecontrol-1loop-box.png"
-	},
-	{
-		"Brand": "One Control",
-		"Name": "AB Box",
-		"Width": 2.713,
-		"Height": 3.98,
-		"Image": "one-control-ab-box.png"
-	},
-	{
-		"Brand": "One Control",
 		"Name": "Agamidae Tail Loop",
 		"Width": 14.57,
-		"Height": 1.61,
+		"Height": 1.66,
 		"Image": "onecontrol-agamidae.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Anodized Brown Distortion 4K",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-abd4kn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Baby Blue OD",
+		"Width": 2.6,
+		"Height": 4.45,
+		"Image": "onecontrol-bbodn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Baltic Blue Fuzz",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-bbfn.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Basilisk",
 		"Width": 4.29,
-		"Height": 3.38,
+		"Height": 3.39,
 		"Image": "onecontrol-basilisk.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "BJF Buffer",
-		"Width": 1.65,
-		"Height": 3.7,
-		"Image": "onecontrol-bjf-buffer.png"
+		"Name": "Blackberry Bass OD",
+		"Width": 2.6,
+		"Height": 4.45,
+		"Image": "onecontrol-bbbodn.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "BJF Buffer Split",
-		"Width": 2.13,
-		"Height": 3.98,
-		"Image": "onecontrol-bjf-buffer-split.png"
+		"Name": "Blue 360 AIAB",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-360aiabn.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Black Loop",
-		"Width": 4.72,
-		"Height": 2.56,
-		"Image": "onecontrol-black-loop.png"
+		"Name": "Blue Bee OD 4k Mini",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-blbod4km.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Butter Yellow Auto Quack",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-byaqn.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Caiman Tail Loop",
 		"Width": 17.32,
-		"Height": 2.44,
+		"Height": 2.5,
 		"Image": "onecontrol-caiman-tail-loop.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Chamaeleo Tail Loop MkII",
 		"Width": 17.32,
-		"Height": 2.6,
+		"Height": 2.56,
 		"Image": "onecontrol-chamaeleo.png"
 	},
 	{
 		"Brand": "One Control",
+		"Name": "Cranberry Over Drive",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-cbodn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Crimson Red Bass Preamp",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-crbpn.png"
+	},
+	{
+		"Brand": "One Control",
 		"Name": "Croc Eye",
-		"Width": 3.7,
-		"Height": 1.48,
+		"Width": 3.73,
+		"Height": 1.5,
 		"Image": "onecontrol-croc-eye.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Crocodile Tail Loop OC10",
+		"Name": "Crocodile Tail Loop",
 		"Width": 18.2,
-		"Height": 4.35,
+		"Height": 4.07,
 		"Image": "onecontrol-crocodile.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Crocodile Tail Loop Wing OC10W",
+		"Name": "Crocodile Tail Loop Wing",
 		"Width": 17.32,
-		"Height": 3.72,
+		"Height": 3.75,
 		"Image": "onecontrol-crocodile-wing.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Dimensional Blue Monger",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-dcmn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Dyna Red Distortion 4K",
+		"Width": 2.6,
+		"Height": 4.45,
+		"Image": "onecontrol-drd4kn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Fluorescent Orange AIAB",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-foaiabn.png"
 	},
 	{
 		"Brand": "One Control",
 		"Name": "Gecko MkIII",
 		"Width": 4.72,
-		"Height": 2.56,
+		"Height": 2.53,
 		"Image": "onecontrol-gecko-mk3.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Iguana Tail Loop 2",
+		"Name": "Golden Acorn Overdrive Special",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-gaodsn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Granith Grey Booster",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-ggbn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Honey Bee OD 4K Mini Standard",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-hbod4kms.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Hooker's Green Bass Machine 4K",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-hgb4kn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Iguana Tail Loop MKIII",
 		"Width": 14.37,
-		"Height": 1.77,
+		"Height": 1.61,
 		"Image": "onecontrol-iguana.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Junction Box",
-		"Width": 3.7,
-		"Height": 1.73,
-		"Image": "onecontrol-junction-box.png"
+		"Name": "Jubilee Red AIAB",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-jraeabn.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "LX Tuner with BJF Buffer",
+		"Name": "Lemon Yellow Compressor 4K",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-lyc4kn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Lingonberry Over Drive",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-lbodn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Little Copper Chorus",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-lccn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Little Green Emphaser",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-lgen.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "LX Tuner w/ BJF Buffer",
 		"Width": 2.73,
 		"Height": 4.58,
 		"Image": "onecontrol-lx-tuner.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "MIDI Solo Stereo Loop",
-		"Width": 1.89,
-		"Height": 3.86,
+		"Name": "Marigold Orange Overdrive",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-moodn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series 1Loop Box",
+		"Width": 2.04,
+		"Height": 3.98,
+		"Image": "onecontrol-1loop-box.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series ABBox",
+		"Width": 2.04,
+		"Height": 3.98,
+		"Image": "one-control-aab-box.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series Aux Switch",
+		"Width": 4.72,
+		"Height": 2.81,
+		"Image": "onecontrol-ms-aux.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series BJF Buffer",
+		"Width": 1.68,
+		"Height": 3.73,
+		"Image": "onecontrol-bjf-buffer.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series BJF Buffer Split",
+		"Width": 2.04,
+		"Height": 3.98,
+		"Image": "onecontrol-bjf-buffer-split.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series Black Loop",
+		"Width": 5.25,
+		"Height": 2.81,
+		"Image": "onecontrol-black-loop.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series DC Porter",
+		"Width": 1.5,
+		"Height": 3.73,
+		"Image": "onecontrol-ms-dc-porter.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series Distro",
+		"Width": 1.5,
+		"Height": 3.73,
+		"Image": "onecontrol-ms-distro.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series Distro MKII Isolated",
+		"Width": 4.72,
+		"Height": 2.53,
+		"Image": "onecontrol-ms-pd2iso.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series MIDI Dual Stereo Loop",
+		"Width": 4.89,
+		"Height": 2.81,
+		"Image": "onecontrol-ms-mdsl.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series MIDI Solo Stereo Loop",
+		"Width": 1.8,
+		"Height": 3.73,
 		"Image": "onecontrol-midi-solo-stereo-loop.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Minimal Series USB Porter",
-		"Width": 1.535,
-		"Height": 3.267,
-		"Image": "onecontrol-min-usb.png"
+		"Name": "Minimal Series Mosquito Blender Expressio w/ BJF Buffer",
+		"Width": 4.89,
+		"Height": 2.67,
+		"Image": "onecontrol-ms-mbexp.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Mosquito Blender Trail with BJF Buffer",
-		"Width": 1.89,
-		"Height": 3.7,
+		"Name": "Minimal Series Mosquito Blender Trail w/ BJF Buffer",
+		"Width": 1.8,
+		"Height": 3.73,
 		"Image": "onecontrol-mosquito-blender.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Pedal Board Junction Box 4M",
-		"Width": 4.45,
-		"Height": 2.56,
+		"Name": "Minimal Series Pedal Board Junction Box 4M",
+		"Width": 4.72,
+		"Height": 2.78,
 		"Image": "onecontrol-pedal-board-junction-box-4m.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Salamandra Tail Loop",
-		"Width": 4.33,
-		"Height": 4.67,
-		"Image": "onecontrol-salamandra.png"
+		"Name": "Minimal Series Pedal Board Junction Box w/ BJF Buffer",
+		"Width": 3.73,
+		"Height": 1.76,
+		"Image": "onecontrol-junction-box.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Sonic Silver Peg",
-		"Width": 1.85,
-		"Height": 3.94,
-		"Image": "onecontrol-sonic-silver-peg.png"
+		"Name": "Minimal Series Silver Para Bass Buffer",
+		"Width": 1.68,
+		"Height": 3.73,
+		"Image": "onecontrol-ms-spbb.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Tuner with BJF Buffer",
+		"Name": "Minimal Series Stereo 1Loop Box",
+		"Width": 1.8,
+		"Height": 3.73,
+		"Image": "onecontrol-ms-st1l.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series Tri Loop",
+		"Width": 5.25,
+		"Height": 2.81,
+		"Image": "onecontrol-tl.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series Tuner w/ BJF Buffer",
 		"Width": 1.74,
 		"Height": 3.86,
 		"Image": "onecontrol-tuner.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "White Loop",
-		"Width": 4.72,
-		"Height": 2.56,
+		"Name": "Minimal Series Tuner MKII w/ BJF Buffer",
+		"Width": 1.8,
+		"Height": 3.74,
+		"Image": "onecontrol-tuner-mk2.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series USB Porter",
+		"Width": 1.5,
+		"Height": 3.73,
+		"Image": "onecontrol-min-usb.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Minimal Series White Loop",
+		"Width": 5.25,
+		"Height": 2.81,
 		"Image": "onecontrol-white-loop.png"
 	},
 	{
 		"Brand": "One Control",
-		"Name": "Xenagama Tail Loop 2",
+		"Name": "Pale Blue Compressor",
+		"Width": 2.6,
+		"Height": 4.45,
+		"Image": "onecontrol-pbcn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Persian Green Screamer",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-pgsn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Prussian Blue Reverb",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-pbrn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Purple Plexidist",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-ppdn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Purple Plexifier 4K",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-pp4kn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Raspberry Booster",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-rbbn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Rebel Red Distortion",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-rrd4kn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Rocket Grey Fuzz",
+		"Width": 4.53,
+		"Height": 3.13,
+		"Image": "onecontrol-rgf.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Salamandra Tail Loop",
+		"Width": 4.33,
+		"Height": 3.94,
+		"Image": "onecontrol-salamandra.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Sea Turqoise Delay",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-stdn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Silver Bee OD 4K Mini",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-svbod4k.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Silver Bee OD Limited BJFE Style",
+		"Width": 2.6,
+		"Height": 4.45,
+		"Image": "onecontrol-svbodn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Solid Blue Twanger",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-sbtn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Sonic Silver Peg",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-sonic-silver-peg.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Stone Bramble Over Drive",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-sbodbn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Strawberry Red Overdrive 4K",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-srod4kn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Strawberry Red Overdrive DLX",
+		"Width": 2.6,
+		"Height": 4.45,
+		"Image": "onecontrol-sroddlx.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Strawberry Red Overdrive RC",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-srodrcn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Super Apricot OD",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-saodn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Tiger Lily Tremolo",
+		"Width": 1.84,
+		"Height": 3.94,
+		"Image": "onecontrol-tlrn.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Tornado FX Tornado Drive Aluminum",
+		"Width": 3.34,
+		"Height": 4.72,
+		"Image": "onecontrol-trfxodalm.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Tornado FX Tornado Drive Brass",
+		"Width": 3.34,
+		"Height": 4.72,
+		"Image": "onecontrol-trfxodbr.png"
+	},
+	{
+		"Brand": "One Control",
+		"Name": "Xenagama Tail Loop MKIII",
 		"Width": 9.6,
 		"Height": 1.65,
 		"Image": "onecontrol-xenagama.png"
@@ -40172,6 +40550,13 @@
 		"Width": 3.7,
 		"Height": 4.86,
 		"Image": "vsaudio-blackbird-deluxe.png"
+	},
+	{
+		"Brand": "VS Audio",
+		"Name": "Jangle Master",
+		"Width": 2.6,
+		"Height": 4.93,
+		"Image": "vsaudio-jangle-master.png"
 	},
 	{
 		"Brand": "VS Audio",
