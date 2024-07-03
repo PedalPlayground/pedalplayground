@@ -7694,19 +7694,25 @@ body .btn {
   pointer-events: none;
   transition: all 0.15s;
 }
-.item.rotate-90 .artwork {
+.item.rotate-90 .artwork,
+.item:not(.pedal--custom):not(.pedalboard--custom).rotate-90:after,
+.item:not(.pedal--custom):not(.pedalboard--custom).rotate-90::after {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-.item.rotate-180 .artwork {
+.item.rotate-180 .artwork,
+.item:not(.pedal--custom):not(.pedalboard--custom).rotate-180:after,
+.item:not(.pedal--custom):not(.pedalboard--custom).rotate-180::after  {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.item.rotate-270 .artwork {
+.item.rotate-270 .artwork,
+.item:not(.pedal--custom):not(.pedalboard--custom).rotate-270:after,
+.item:not(.pedal--custom):not(.pedalboard--custom).rotate-270::after  {
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
