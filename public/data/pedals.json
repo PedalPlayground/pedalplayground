@@ -9801,6 +9801,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Jamman Solo HD",
+		"Width": 3.11,
+		"Height": 5.06,
+		"Image": "digitech-jamman-solo-hd.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Jamman Solo XT",
 		"Width": 3,
 		"Height": 4.865,
@@ -35567,6 +35574,20 @@
 		"Image": "solodallas-tsr.png"
 	},
 	{
+		"Brand": "SoloDallas",
+		"Name": "The Schaffer Replica Bass-X",
+		"Width": 2.79,
+		"Height": 4.72,
+		"Image": "solodallas-tsr-bassx.png"
+	},
+	{
+		"Brand": "SoloDallas",
+		"Name": "The Schaffer Replica Storm",
+		"Width": 2.79,
+		"Height": 4.72,
+		"Image": "solodallas-tsr-storm.png"
+	},
+	{
 		"Brand": "Soma",
 		"Name": "Cosmos",
 		"Width": 13.46,
@@ -40151,6 +40172,13 @@
 		"Width": 2.6,
 		"Height": 4.99,
 		"Image": "vandae-green-jealousy.png"
+	},
+	{
+		"Brand": "VDL",
+		"Name": "Il Distorsore",
+		"Width": 4.87,
+		"Height": 4.12,
+		"Image": "vdl-il-distorsore.png"
 	},
 	{
 		"Brand": "VDL",
