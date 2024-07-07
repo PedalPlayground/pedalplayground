@@ -40133,6 +40133,13 @@
 	},
 	{
 		"Brand": "Valeton",
+		"Name": "GP-100",
+		"Width": 7.8,
+		"Height": 5.31,
+		"Image": "valeton-gp100.png"
+	},
+	{
+		"Brand": "Valeton",
 		"Name": "GP-200",
 		"Width": 13.58,
 		"Height": 8.49,
