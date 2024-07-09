@@ -10263,6 +10263,13 @@
 	},
 	{
 		"Brand": "DOD",
+		"Name": "Overdrive Preamp FX50",
+		"Width": 3.35,
+		"Height": 5.13,
+		"Image": "dod-fx50.png"
+	},
+	{
+		"Brand": "DOD",
 		"Name": "Phasor 201",
 		"Width": 3.05,
 		"Height": 4.88,
@@ -32088,6 +32095,13 @@
 		"Image": "peacehillfx-sss-tube-preamp.png"
 	},
 	{
+		"Brand": "Pearl",
+		"Name": "Analog Delay AD-08",
+		"Width": 3.13,
+		"Height": 5.2,
+		"Image": "pearl-ad08.png"
+	},
+	{
 		"Brand": "Pedal Brainz",
 		"Name": "3rd Eye",
 		"Width": 2.75,
@@ -39097,6 +39111,13 @@
 	},
 	{
 		"Brand": "ThorpyFX",
+		"Name": "The WOPR",
+		"Width": 3.98,
+		"Height": 4.89,
+		"Image": "thorpyfx-the-wopr.png"
+	},
+	{
+		"Brand": "ThorpyFX",
 		"Name": "Warthog",
 		"Width": 2.76,
 		"Height": 4.89,
@@ -43301,6 +43322,13 @@
 		"Width": 2.75591,
 		"Height": 5.07874,
 		"Image": "yamaha-ch01.png"
+	},
+	{
+		"Brand": "Yamaha",
+		"Name": "CH-100 Chorus",
+		"Width": 2.81,
+		"Height": 5,
+		"Image": "yamaha-ch100.png"
 	},
 	{
 		"Brand": "Yamaha",
