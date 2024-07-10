@@ -32970,6 +32970,13 @@
 		"Image": "poly-verbs.png"
 	},
 	{
+		"Brand": "Preston Pedals",
+		"Name": "Stereo Audition",
+		"Width": 3.7,
+		"Height": 1.87,
+		"Image": "preston-stereo-audition.png"
+	},
+	{
 		"Brand": "Pro Co",
 		"Name": "Big Box Vintage Rat",
 		"Width": 5,
@@ -39827,15 +39834,36 @@
 		"Brand": "Twilight Pulse Audioworks",
 		"Name": "Konstante",
 		"Width": 2.6,
-		"Height": 4.99,
+		"Height": 5.01,
 		"Image": "twilight-pulse-konstante.png"
+	},
+	{
+		"Brand": "Twilight Pulse Audioworks",
+		"Name": "Konstante (Black)",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "twilight-pulse-konstante-black.png"
+	},
+	{
+		"Brand": "Twilight Pulse Audioworks",
+		"Name": "Konstante (Pink)",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "twilight-pulse-konstante-pink.png"
 	},
 	{
 		"Brand": "Twilight Pulse Audioworks",
 		"Name": "Proxima",
 		"Width": 2.6,
-		"Height": 4.99,
+		"Height": 5.01,
 		"Image": "twilight-pulse-proxima.png"
+	},
+	{
+		"Brand": "Twilight Pulse Audioworks",
+		"Name": "Proxima (Black)",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "twilight-pulse-proxima-black.png"
 	},
 	{
 		"Brand": "Twinote",
