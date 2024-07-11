@@ -6462,6 +6462,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Bitters",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-bitters.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Blood Donor",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -25506,6 +25513,20 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "mask-neck-brace.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Part Garden",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "mask-neck-part-garden.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Part Garden Ge",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "mask-neck-part-garden-ge.png"
 	},
 	{
 		"Brand": "Mask Audio Electronics",
