@@ -7707,6 +7707,13 @@
 		"Image": "cme-widi-uhost.png"
 	},
 	{
+		"Brand": "Coda Music Technologies",
+		"Name": "Stomp",
+		"Width": 4.7,
+		"Height": 4.06,
+		"Image": "coda-stomp.png"
+	},
+	{
 		"Brand": "Coffee Shop Pedals",
 		"Name": "Affogato",
 		"Width": 2.67,
