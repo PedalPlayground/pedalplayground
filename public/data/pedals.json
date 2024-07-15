@@ -792,6 +792,13 @@
 	},
 	{
 		"Brand": "AirTurn",
+		"Name": "BT500S-2",
+		"Width": 4.50,
+		"Height": 2.69,
+		"Image": "airturn-bt500s-2.png"
+	},
+	{
+		"Brand": "AirTurn",
 		"Name": "Duo 200",
 		"Width": 7.00,
 		"Height": 4.5,
