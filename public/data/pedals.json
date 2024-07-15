@@ -18306,10 +18306,59 @@
 	},
 	{
 		"Brand": "Henretta",
+		"Name": "Bluebird Fuzz",
+		"Width": 2.38,
+		"Height": 2,
+		"Image": "henretta-bluebird-fuzz.png"
+	},
+	{
+		"Brand": "Henretta",
+		"Name": "Crimson Tremolo",
+		"Width": 2.38,
+		"Height": 2,
+		"Image": "henretta-crimson.png"
+	},
+	{
+		"Brand": "Henretta",
+		"Name": "Emerald Prince Preamp",
+		"Width": 2.38,
+		"Height": 2,
+		"Image": "henretta-emerald-prince.png"
+	},
+	{
+		"Brand": "Henretta",
+		"Name": "Green Zapper Auto Filter",
+		"Width": 2.38,
+		"Height": 2,
+		"Image": "henretta-green-zapper.png"
+	},
+	{
+		"Brand": "Henretta",
+		"Name": "Mr. White Tweak Boost",
+		"Width": 2.38,
+		"Height": 2,
+		"Image": "henretta-mr-white.png"
+	},
+	{
+		"Brand": "Henretta",
 		"Name": "Orange Whip",
 		"Width": 2.38,
 		"Height": 2,
 		"Image": "henretta-orange-whip.png"
+	},
+	{
+		"Brand": "Henretta",
+		"Name": "Pinkman Dirty Boost",
+		"Width": 2.38,
+		"Height": 2,
+		"Image": "henretta-pinkman.png"
+	},
+	{
+		"Brand": "Henretta",
+		"Name": "Purple Octopus Octave Up",
+		"Width": 2.38,
+		"Height": 2,
+		"Image": "henretta-purple-octopus.png"
 	},
 	{
 		"Brand": "Hexe FX",
