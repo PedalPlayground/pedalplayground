@@ -19215,6 +19215,13 @@
 		"Image": "idiotbox-no-moon.png"
 	},
 	{
+		"Brand": "Idiotbox",
+		"Name": "Power Drive",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "idiotbox-power-drive.png"
+	},
+	{
 		"Brand": "IK Multimedia",
 		"Name": "TONEX",
 		"Width": 7,
