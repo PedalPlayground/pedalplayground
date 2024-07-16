@@ -2451,6 +2451,13 @@
 	},
 	{
 		"Brand": "Arion",
+		"Name": "SFL-1 Stereo Flanger",
+		"Width": 3,
+		"Height": 5,
+		"Image": "arion-sfl1.png"
+	},
+	{
+		"Brand": "Arion",
 		"Name": "SCO-1 Compressor",
 		"Width": 3,
 		"Height": 5,
