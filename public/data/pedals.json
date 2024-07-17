@@ -1465,22 +1465,29 @@
 	{
 		"Brand": "Analog.Man",
 		"Name": "Astro Tone (Black)",
-		"Width": 2.6,
-		"Height": 4.97,
+		"Width": 2.48,
+		"Height": 4.68,
 		"Image": "analogman-astro-tone-black.png"
 	},
 	{
 		"Brand": "Analog.Man",
 		"Name": "Astro Tone (White)",
-		"Width": 2.61,
-		"Height": 4.88,
+		"Width": 2.48,
+		"Height": 4.68,
 		"Image": "analogman-astro-tone-white.png"
 	},
 	{
 		"Brand": "Analog.Man",
+		"Name": "Bad Bob",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "analogman-bad-bob.png"
+	},
+	{
+		"Brand": "Analog.Man",
 		"Name": "Beano Boost",
-		"Width": 2.65,
-		"Height": 4.65,
+		"Width": 2.96,
+		"Height": 4.83,
 		"Image": "analogman-beano-boost.png"
 	},
 	{
@@ -1506,16 +1513,9 @@
 	},
 	{
 		"Brand": "Analog.Man",
-		"Name": "Dual Analog Delay",
-		"Width": 4.6,
-		"Height": 5.5,
-		"Image": "analogman-dual-analog-delay.png"
-	},
-	{
-		"Brand": "Analog.Man",
 		"Name": "Envelope Filter",
-		"Width": 2.79,
-		"Height": 4.5,
+		"Width": 2.83,
+		"Height": 4.56,
 		"Image": "analogman-envelope-filter.png"
 	},
 	{
@@ -1549,22 +1549,22 @@
 	{
 		"Brand": "Analog.Man",
 		"Name": "Mini Bi-Comp",
-		"Width": 2.85,
-		"Height": 4.65,
+		"Width": 3.19,
+		"Height": 4.83,
 		"Image": "analogman-mini-bi-comp.png"
 	},
 	{
 		"Brand": "Analog.Man",
 		"Name": "Mini Chorus",
-		"Width": 2.5,
-		"Height": 4.77,
+		"Width": 2.96,
+		"Height": 4.83,
 		"Image": "analogman-mini-chorus.png"
 	},
 	{
 		"Brand": "Analog.Man",
 		"Name": "Peppermint Fuzz",
-		"Width": 2.85,
-		"Height": 4.65,
+		"Width": 2.79,
+		"Height": 4.5,
 		"Image": "analogman-peppermint.png"
 	},
 	{
@@ -1577,22 +1577,22 @@
 	{
 		"Brand": "Analog.Man",
 		"Name": "Sunbender",
-		"Width": 2.85,
-		"Height": 4.65,
+		"Width": 2.79,
+		"Height": 4.5,
 		"Image": "analogman-sunbender.png"
 	},
 	{
 		"Brand": "Analog.Man",
 		"Name": "Sunbender MkIV",
-		"Width": 2.5,
-		"Height": 4.75,
+		"Width": 2.41,
+		"Height": 4.68,
 		"Image": "analogman-sunbender-mk4.png"
 	},
 	{
 		"Brand": "Analog.Man",
 		"Name": "Sunface",
-		"Width": 2.85,
-		"Height": 4.65,
+		"Width": 2.79,
+		"Height": 4.5,
 		"Image": "analogman-sunface.png"
 	},
 	{
@@ -36363,6 +36363,13 @@
 		"Width": 2.85,
 		"Height": 4.75,
 		"Image": "spaceman-redstone.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Rumblefuzz II",
+		"Width": 2.81,
+		"Height": 4.75,
+		"Image": "spaceman-rumblefuzz-2.png"
 	},
 	{
 		"Brand": "Spaceman",
