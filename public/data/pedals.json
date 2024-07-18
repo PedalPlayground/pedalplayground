@@ -27000,6 +27000,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "GE200",
+		"Width": 11.69,
+		"Height": 5.69,
+		"Image": "mooer-ge200.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Graphic B",
 		"Width": 1.67,
 		"Height": 3.75,
