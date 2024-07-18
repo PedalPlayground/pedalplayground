@@ -34524,6 +34524,27 @@
 		"Image": "science-mother.png"
 	},
 	{
+		"Brand": "Seamoon",
+		"Name": "Funk Machine",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "seamoon-funk-machine.png"
+	},
+	{
+		"Brand": "Seamoon",
+		"Name": "Grind Machine",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "seamoon-grind-machine.png"
+	},
+	{
+		"Brand": "Seamoon",
+		"Name": "Octatron",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "seamoon-octatron.png"
+	},
+	{
 		"Brand": "Secret Efx",
 		"Name": "Omnia",
 		"Width": 3.44,
