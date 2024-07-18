@@ -20008,29 +20008,29 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Boomster mk2",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-bioomster-mk2.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Chill",
-		"Width": 2.7,
-		"Height": 4.3,
+		"Width": 2.77,
+		"Height": 4.5,
 		"Image": "jam-chilli.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "CTRL BOX",
-		"Width": 3,
-		"Height": 4.8,
+		"Width": 3.03,
+		"Height": 5.01,
 		"Image": "jam-ctrl-box.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Delay Llama",
-		"Width": 2.9,
-		"Height": 4.86,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-delay-llama.png"
 	},
 	{
@@ -20043,8 +20043,8 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Delay Llama mk3",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-delay-llama-mk3.png"
 	},
 	{
@@ -20071,9 +20071,16 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Dyna-ssoR",
-		"Width": 2.7,
-		"Height": 4.3,
+		"Width": 2.77,
+		"Height": 4.5,
 		"Image": "jam-dyna-ssor.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Dyna-ssoR Bass",
+		"Width": 2.77,
+		"Height": 4.5,
+		"Image": "jam-dyna-ssor-bass.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -20085,8 +20092,8 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Eureka!",
-		"Width": 2.7,
-		"Height": 4.3,
+		"Width": 2.77,
+		"Height": 4.5,
 		"Image": "jam-eureka.png"
 	},
 	{
@@ -20099,8 +20106,8 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Fuzz Phrase SI",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-fuzz-phrase-si.png"
 	},
 	{
@@ -20120,22 +20127,22 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Harmonious Monk mk2",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-harmonious-monk-mk2.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Lucydreamer",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-lucydreamer.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Lucydreamer Bass",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-lucydreamer-bass.png"
 	},
 	{
@@ -20147,10 +20154,24 @@
 	},
 	{
 		"Brand": "Jam Pedals",
-		"Name": "Rattler",
+		"Name": "Rattler mk1",
+		"Width": 2.77,
+		"Height": 4.5,
+		"Image": "jam-rattler-mk1.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Rattler mk3",
 		"Width": 2.7,
 		"Height": 4.3,
 		"Image": "jam-rattler.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Rattler mk4",
+		"Width": 2.96,
+		"Height": 4.87,
+		"Image": "jam-rattler-mk4.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -20162,16 +20183,30 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Rattler Bass",
-		"Width": 2.7,
-		"Height": 4.3,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-rattler-bass.png"
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Rattler Bass mk4",
+		"Width": 2.96,
+		"Height": 4.87,
+		"Image": "jam-rattler-bass-mk4.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Red Muck",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-red-muck.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Red Muck Bass",
+		"Width": 2.96,
+		"Height": 4.87,
+		"Image": "jam-red-muck-bass.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -20204,9 +20239,16 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Ripple",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 2.77,
+		"Height": 4.5,
 		"Image": "jam-ripple.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Ripple Bass",
+		"Width": 2.77,
+		"Height": 4.5,
+		"Image": "jam-ripple-bass.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -20239,15 +20281,15 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Seagull",
-		"Width": 2.85,
-		"Height": 4.7,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-seagull.png"
 	},
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Tube Dreamer",
-		"Width": 2.7,
-		"Height": 4.3,
+		"Width": 2.77,
+		"Height": 4.5,
 		"Image": "jam-tube-dreamer.png"
 	},
 	{
@@ -20260,9 +20302,16 @@
 	{
 		"Brand": "Jam Pedals",
 		"Name": "Waterfall",
-		"Width": 2.9,
-		"Height": 4.7,
+		"Width": 2.96,
+		"Height": 4.87,
 		"Image": "jam-waterfall.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Waterfall Bass",
+		"Width": 2.96,
+		"Height": 4.87,
+		"Image": "jam-waterfall-bass.png"
 	},
 	{
 		"Brand": "Jam Pedals",
