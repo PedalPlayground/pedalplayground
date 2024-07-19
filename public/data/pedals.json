@@ -4663,7 +4663,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "DD-3t Digital Delay",
+		"Name": "DD-3T Digital Delay",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-dd3t.png"
@@ -4688,6 +4688,13 @@
 		"Width": 6.75,
 		"Height": 5.4,
 		"Image": "boss-dd500.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "DD-6 Digital Delay",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dd6.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -10333,6 +10340,13 @@
 	},
 	{
 		"Brand": "DOD",
+		"Name": "Overdrive Preamp FX60",
+		"Width": 3.35,
+		"Height": 5.13,
+		"Image": "dod-fx60.png"
+	},
+	{
+		"Brand": "DOD",
 		"Name": "Stereo Chorus FX65",
 		"Width": 3.3,
 		"Height": 5.13,
@@ -15552,6 +15566,13 @@
 		"Width": 4.72,
 		"Height": 4,
 		"Image": "free-the-tone-tri-avatar.png"
+	},
+	{
+		"Brand": "Freqscene Effects Co.",
+		"Name": "Koldwave",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "freqscene-koldwave.png"
 	},
 	{
 		"Brand": "Friedman",
