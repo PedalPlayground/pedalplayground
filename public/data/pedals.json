@@ -7197,6 +7197,13 @@
 	},
 	{
 		"Brand": "Chase Tone",
+		"Name": "Purple Stardust",
+		"Width": 2.34,
+		"Height": 4.56,
+		"Image": "chase-tone-purple-stardust.png"
+	},
+	{
+		"Brand": "Chase Tone",
 		"Name": "Secret Preamp",
 		"Width": 2.34,
 		"Height": 4.5,
