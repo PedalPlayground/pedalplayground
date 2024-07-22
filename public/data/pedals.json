@@ -4453,6 +4453,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "AC-2 Acoustic Simulator",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ac2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "AC-3 Acoustic Simulator",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -4621,6 +4628,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DA-2 Adaptive Distortion",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-da2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "DC-2 Dimension C",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -4737,6 +4751,20 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-dm2w.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "DM-3 Delay",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dm3.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "DN-2 Dyna Drive",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-dn2.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -5083,6 +5111,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "LM-2 Limiter",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-lm2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "LMB-3 Bass Limiter Enhancer",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -5157,6 +5192,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-mt2.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "MT-2-3A Metal Zone (Anniversary)",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-mt23a.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -5293,6 +5335,20 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "PH-1R Phaser",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ph1r.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "PH-2 Super Phase",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ph2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "PH-3 Phase Shifter",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -5367,6 +5423,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-rc1.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-1-BK Loop Station",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-rc1bk.png"
 	},
 	{
 		"Brand": "BOSS",
