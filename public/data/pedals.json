@@ -3536,6 +3536,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Florist",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-florist.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Germanium Boost",
 		"Width": 2.71,
 		"Height": 4.5,
@@ -16427,6 +16434,13 @@
 		"Width": 2.5,
 		"Height": 4.84,
 		"Image": "flb-1991.png"
+	},
+	{
+		"Brand": "Fuzzhugger",
+		"Name": "Algal Bloom V2",
+		"Width": 4.03,
+		"Height": 4.7,
+		"Image": "fuzzhugger-algal-bloom-v2.png"
 	},
 	{
 		"Brand": "Fuzzrocious",
@@ -39157,6 +39171,13 @@
 		"Width": 4.08,
 		"Height": 4.9,
 		"Image": "tefi-golden-era.png"
+	},
+	{
+		"Brand": "TEFI Vintage Lab",
+		"Name": "Malinconia",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "tefi-malinconia.png"
 	},
 	{
 		"Brand": "Teisco",
