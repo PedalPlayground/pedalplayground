@@ -32306,6 +32306,13 @@
 	},
 	{
 		"Brand": "PastFX",
+		"Name": "Lowpass Filter PX-101",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-px101.png"
+	},
+	{
+		"Brand": "PastFX",
 		"Name": "Mischief",
 		"Width": 2.67,
 		"Height": 4.5,
