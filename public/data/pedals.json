@@ -3760,10 +3760,38 @@
 	},
 	{
 		"Brand": "Black Arts Toneworks",
+		"Name": "Crown of Horns",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "black-arts-crown-of-horns.png"
+	},
+	{
+		"Brand": "Black Arts Toneworks",
+		"Name": "LSTR",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "black-arts-lstr.png"
+	},
+	{
+		"Brand": "Black Arts Toneworks",
 		"Name": "Pharaoh",
 		"Width": 3.7,
-		"Height": 4.97,
+		"Height": 4.91,
 		"Image": "black-arts-pharaoh.png"
+	},
+	{
+		"Brand": "Black Arts Toneworks",
+		"Name": "Pharaoh Supreme",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "black-arts-pharaoh-supreme.png"
+	},
+	{
+		"Brand": "Black Arts Toneworks",
+		"Name": "Priestess",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "black-arts-priestess.png"
 	},
 	{
 		"Brand": "Black Arts Toneworks",
@@ -3771,6 +3799,27 @@
 		"Width": 4.7,
 		"Height": 5.88,
 		"Image": "black-arts-raw-heart.png"
+	},
+	{
+		"Brand": "Black Arts Toneworks",
+		"Name": "Revelation",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "black-arts-revelation.png"
+	},
+	{
+		"Brand": "Black Arts Toneworks",
+		"Name": "Sarcophagus",
+		"Width": 5,
+		"Height": 4.25,
+		"Image": "black-arts-sarcophagus.png"
+	},
+	{
+		"Brand": "Black Arts Toneworks",
+		"Name": "Son of Pharaoh",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "black-arts-son-of-pharaoh.png"
 	},
 	{
 		"Brand": "Black Mass Electronics",
@@ -42552,6 +42601,13 @@
 		"Width": 1.85,
 		"Height": 3.7,
 		"Image": "wampler-germanium-tumnus.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Germanium Tumnus Deluxe",
+		"Width": 2.78,
+		"Height": 5,
+		"Image": "wampler-germanium-tumnus-deluxe.png"
 	},
 	{
 		"Brand": "Wampler",
