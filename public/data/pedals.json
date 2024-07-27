@@ -4103,6 +4103,13 @@
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
+		"Name": "Buzzaround",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-buzzaround.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
 		"Name": "Deth Pedal",
 		"Width": 4.7,
 		"Height": 3.82,
@@ -4128,6 +4135,20 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-harmonic-perkolator.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
+		"Name": "L.A. Square Face",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-la-square-face.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
+		"Name": "Mr. Horse",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-mr-horse.png"
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
@@ -4184,6 +4205,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-slob.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
+		"Name": "Space Madness",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "blammo-space-madness.png"
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
