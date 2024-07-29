@@ -40609,6 +40609,27 @@
 	},
 	{
 		"Brand": "Vahlbruch",
+		"Name": "6-Phi-4",
+		"Width": 2.67,
+		"Height": 4.55,
+		"Image": "vahlbruch-6-phi-4.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "BBQ",
+		"Width": 2.67,
+		"Height": 4.55,
+		"Image": "vahlbruch-bbq.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "BBQ-XL",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "vahlbruch-bbq-xl.png"
+	},
+	{
+		"Brand": "Vahlbruch",
 		"Name": "Kaluna",
 		"Width": 4.7,
 		"Height": 3.86,
@@ -40620,6 +40641,55 @@
 		"Width": 4.7,
 		"Height": 3.86,
 		"Image": "vahlbruch-kaluna-black.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "Kaluna II",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "vahlbruch-kaluna-2.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "Octavia v2",
+		"Width": 2.67,
+		"Height": 4.55,
+		"Image": "vahlbruch-octavia-v2.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "OptoTrem",
+		"Width": 2.67,
+		"Height": 4.55,
+		"Image": "vahlbruch-optotrem.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "Pipeline v2",
+		"Width": 2.67,
+		"Height": 4.55,
+		"Image": "vahlbruch-pipeline-v2.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "Quantum",
+		"Width": 2.67,
+		"Height": 4.55,
+		"Image": "vahlbruch-quantum.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "SpaceTime v2",
+		"Width": 2.67,
+		"Height": 4.55,
+		"Image": "vahlbruch-spacetime-v2.png"
+	},
+	{
+		"Brand": "Vahlbruch",
+		"Name": "SpaceTime Tap v2",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "vahlbruch-spacetime-tap-v2.png"
 	},
 	{
 		"Brand": "Valeton",
