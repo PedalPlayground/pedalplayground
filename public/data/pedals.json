@@ -8184,6 +8184,13 @@
 	},
 	{
 		"Brand": "Cornerstone",
+		"Name": "Antique V3",
+		"Width": 2.76,
+		"Height": 5.14,
+		"Image": "cornerstone-antique-v3.png"
+	},
+	{
+		"Brand": "Cornerstone",
 		"Name": "Aquarium",
 		"Width": 4.7,
 		"Height": 3.82,
@@ -16514,9 +16521,9 @@
 	},
 	{
 		"Brand": "Fuzzhugger",
-		"Name": "Algal Bloom V2",
-		"Width": 4.03,
-		"Height": 4.7,
+		"Name": "Algal Bloom 7K DLX",
+		"Width": 3.7,
+		"Height": 4.92,
 		"Image": "fuzzhugger-algal-bloom-v2.png"
 	},
 	{
