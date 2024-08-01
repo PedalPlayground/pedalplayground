@@ -3172,6 +3172,13 @@
 	},
 	{
 		"Brand": "Becos",
+		"Name": "CompIQ TWAIN MK2",
+		"Width": 4.12,
+		"Height": 4.72,
+		"Image": "becos-compiq-twain-mk2.png"
+	},
+	{
+		"Brand": "Becos",
 		"Name": "Overdrive / Switcher",
 		"Width": 2.72,
 		"Height": 4.62,
@@ -42041,6 +42048,13 @@
 		"Width": 3.7,
 		"Height": 4.84,
 		"Image": "walrus-fable.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Fable (Black)",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "walrus-fable-black.png"
 	},
 	{
 		"Brand": "Walrus Audio",
