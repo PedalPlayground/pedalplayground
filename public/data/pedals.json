@@ -11859,6 +11859,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Silos",
+		"Width": 2.7,
+		"Height": 4.94,
+		"Image": "earthquaker-silos.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Sound Shank",
 		"Width": 2.6,
 		"Height": 5.02,
@@ -23599,8 +23606,8 @@
 	{
 		"Brand": "Klon",
 		"Name": "KTR",
-		"Width": 4.85,
-		"Height": 3.7,
+		"Width": 3.73,
+		"Height": 4.88,
 		"Image": "klon-ktr.png"
 	},
 	{
@@ -35316,17 +35323,31 @@
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
-		"Name": "Mini",
-		"Width": 2.66,
+		"Name": "Mini (Black)",
+		"Width": 2.71,
 		"Height": 4.5,
 		"Image": "smallsound-mini.png"
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
-		"Name": "Mini (Pink)",
-		"Width": 2.66,
+		"Name": "Mini (Red)",
+		"Width": 2.71,
+		"Height": 4.5,
+		"Image": "smallsound-mini-red.png"
+	},
+	{
+		"Brand": "Smallsound/Bigsound",
+		"Name": "Mini (Shell Pink)",
+		"Width": 2.71,
 		"Height": 4.5,
 		"Image": "smallsound-mini-pink.png"
+	},
+	{
+		"Brand": "Smallsound/Bigsound",
+		"Name": "Mini (Silver)",
+		"Width": 2.71,
+		"Height": 4.5,
+		"Image": "smallsound-mini-silver.png"
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
@@ -43700,6 +43721,13 @@
 		"Width": 1.9,
 		"Height": 3.7,
 		"Image": "xotic-sp.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "SP Compressor (Knobs Switch)",
+		"Width": 1.9,
+		"Height": 3.7,
+		"Image": "xotic-sp-knobs.png"
 	},
 	{
 		"Brand": "Xotic",
