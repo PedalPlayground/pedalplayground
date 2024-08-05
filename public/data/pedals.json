@@ -13336,6 +13336,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "POG3",
+		"Width": 7.13,
+		"Height": 5.92,
+		"Image": "ehx-pog3.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Q-Tron (Big Box)",
 		"Width": 8,
 		"Height": 6.87,
@@ -43028,6 +43035,13 @@
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-wm20.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Deep State",
+		"Width": 2.5,
+		"Height": 4.37,
+		"Image": "wayhuge-deep-state.png"
 	},
 	{
 		"Brand": "Way Huge",
