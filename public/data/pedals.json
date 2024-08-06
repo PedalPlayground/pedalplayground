@@ -85,6 +85,13 @@
 	},
 	{
 		"Brand": "1981 Inventions",
+		"Name": "DRV (White/Pink No3)",
+		"Width": 3.7,
+		"Height": 4.58,
+		"Image": "1981-inventions-drv-white-pink-no3.png"
+	},
+	{
+		"Brand": "1981 Inventions",
 		"Name": "LVL",
 		"Width": 2.71,
 		"Height": 4.58,
@@ -4511,8 +4518,43 @@
 		"Brand": "Bondi Effects",
 		"Name": "Sick As MK3",
 		"Width": 4.7,
-		"Height": 3.9,
+		"Height": 3.84,
 		"Image": "bondi-sick-as-mk3.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As MK3 (Blackout)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "bondi-sick-as-mk3-blackout.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As MK3 (Retro Blue)",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "bondi-sick-as-mk3-retro-blue.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As High Shredroom (Blackout)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "bondi-sick-as-hs-blackout.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As High Shredroom (Graphite)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "bondi-sick-as-hs-graphite.png"
+	},
+	{
+		"Brand": "Bondi Effects",
+		"Name": "Sick As High Shredroom (Pink)",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "bondi-sick-as-hs-pink.png"
 	},
 	{
 		"Brand": "Bondi Effects",
