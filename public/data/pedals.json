@@ -9571,16 +9571,30 @@
 	{
 		"Brand": "Decibelics",
 		"Name": "Golden Horse (Black)",
-		"Width": 1.93,
-		"Height": 3.88,
+		"Width": 1.86,
+		"Height": 3.86,
 		"Image": "decibelics-golden-horse-black.png"
 	},
 	{
 		"Brand": "Decibelics",
-		"Name": "Golden Horse (White)",
-		"Width": 1.92,
-		"Height": 3.74,
+		"Name": "Golden Horse (Crystal White)",
+		"Width": 1.86,
+		"Height": 3.86,
 		"Image": "decibelics-golden-horse-white.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "Golden Horse (Gold)",
+		"Width": 1.86,
+		"Height": 3.86,
+		"Image": "decibelics-golden-horse-gold.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "Golden Horse (Silver)",
+		"Width": 1.86,
+		"Height": 3.86,
+		"Image": "decibelics-golden-horse-silver.png"
 	},
 	{
 		"Brand": "Decibelics",
@@ -9592,9 +9606,30 @@
 	{
 		"Brand": "Decibelics",
 		"Name": "The Reverend",
-		"Width": 1.93,
-		"Height": 3.7,
+		"Width": 2.01,
+		"Height": 3.86,
 		"Image": "decibelics-the-reverend.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "The Reverend v2 (Black)",
+		"Width": 1.86,
+		"Height": 3.7,
+		"Image": "decibelics-the-reverend-v2-black.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "The Reverend v2 (Red)",
+		"Width": 1.86,
+		"Height": 3.7,
+		"Image": "decibelics-the-reverend-v2-red.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "The Reverend v2 (Silver)",
+		"Width": 1.86,
+		"Height": 3.7,
+		"Image": "decibelics-the-reverend-v2-silver.png"
 	},
 	{
 		"Brand": "Decibelics",
