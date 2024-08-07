@@ -8225,6 +8225,13 @@
 		"Image": "coppersound-telegraph-v2.png"
 	},
 	{
+		"Brand": "Coriolis Effects",
+		"Name": "Hail To The King",
+		"Width": 2.96,
+		"Height": 5.01,
+		"Image": "coriolis-hail-to-the-king.png"
+	},
+	{
 		"Brand": "Cornerstone",
 		"Name": "Antique",
 		"Width": 2.6,
