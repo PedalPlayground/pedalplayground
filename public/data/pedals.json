@@ -15302,6 +15302,13 @@
 		"Image": "flamma-fs22.png"
 	},
 	{
+		"Brand": "Flamma",
+		"Name": "FS23 Octave",
+		"Width": 3.5,
+		"Height": 4.8,
+		"Image": "flamma-fs23.png"
+	},
+	{
 		"Brand": "Flower Pedals",
 		"Name": "Castilleja",
 		"Width": 2.73,
@@ -16806,6 +16813,27 @@
 		"Height": 4.64,
 		"Image": "gamma-narcissus.png"
  	},
+	{
+		"Brand": "Gamechanger Audio",
+		"Name": "Auto Chorus",
+		"Width": 4,
+		"Height": 6.63,
+		"Image": "gamechanger-auto-chorus.png"
+	},
+	{
+		"Brand": "Gamechanger Audio",
+		"Name": "Auto Delay",
+		"Width": 4,
+		"Height": 6.63,
+		"Image": "gamechanger-auto-delay.png"
+	},
+	{
+		"Brand": "Gamechanger Audio",
+		"Name": "Auto Reverb",
+		"Width": 4,
+		"Height": 6.63,
+		"Image": "gamechanger-auto-reverb.png"
+	},
 	{
 		"Brand": "Gamechanger Audio",
 		"Name": "Bigsby Pedal",
@@ -33573,6 +33601,13 @@
 	},
 	{
 		"Brand": "Quilter Labs",
+		"Name": "DirectAmp",
+		"Width": 8.25,
+		"Height": 4.99,
+		"Image": "quilter-labs-directamp.png"
+	},
+	{
+		"Brand": "Quilter Labs",
 		"Name": "InterBass",
 		"Width": 4.94,
 		"Height": 3.81,
@@ -41033,6 +41068,13 @@
 		"Width": 2.59843,
 		"Height": 4.37008,
 		"Image": "vfe-yodeler.png"
+	},
+	{
+		"Brand": "Vemuram",
+		"Name": "Budi-G",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "vemuram-budi-g.png"
 	},
 	{
 		"Brand": "Vemuram",
