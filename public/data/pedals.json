@@ -10991,10 +10991,52 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
-		"Name": "Bat Cold War V2",
+		"Name": "Bat",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-bat.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Bat Cold War",
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "drunk-beaver-bat-cold-war-v2.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Bloom",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-bloom.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Disambiguation",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-disambiguation.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Distortion",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-distortion.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Fat Bat",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-fat-bat.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "FET OverBooster",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-fet-overbooster.png"
 	},
 	{
 		"Brand": "Drunk Beaver",
@@ -11005,10 +11047,66 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
+		"Name": "Ivan Mazepa",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "drunk-beaver-ivan-mazepa.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "JellyFish",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-jellyfish.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Lighthouse",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-lighthouse.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Seattle Driver",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-seattle-driver.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Secret Sauce",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-secret-sauce.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Tarus Bulba MK2",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-tarus-bulba-mk2.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
 		"Name": "The Forest Song",
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "drunk-beaver-the-forest-song.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Tornado MK2",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "drunk-beaver-tornado-mk2.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Trainers TS-100",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-trainers-ts100.png"
 	},
 	{
 		"Brand": "Drybell",
