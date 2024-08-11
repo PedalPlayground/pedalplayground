@@ -32425,6 +32425,13 @@
 	},
 	{
 		"Brand": "Palmer",
+		"Name": "Pocket Amp Bass",
+		"Width": 3.94,
+		"Height": 4.25,
+		"Image": "palmer-pocket-amp-bass.png"
+	},
+	{
+		"Brand": "Palmer",
 		"Name": "Pocket Amp MK2",
 		"Width": 3.94,
 		"Height": 4.12,
@@ -43626,6 +43633,13 @@
 	},
 	{
 		"Brand": "Winnipeg Electrical Co.",
+		"Name": "Blues DLX",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "winnipeg-blues-dlx.png"
+	},
+	{
+		"Brand": "Winnipeg Electrical Co.",
 		"Name": "Homework Series Blues",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -43658,6 +43672,13 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "winnipeg-homework-overdrive.png"
+	},
+	{
+		"Brand": "Winnipeg Electrical Co.",
+		"Name": "Melting Sun Preamp v2",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "winnipeg-melting-sun-preamp-v2.png"
 	},
 	{
 		"Brand": "Wonderful Audio Technology",
