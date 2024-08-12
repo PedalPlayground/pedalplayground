@@ -33426,6 +33426,13 @@
 	},
 	{
 		"Brand": "Pinstripe Pedals",
+		"Name": "MBFR",
+		"Width": 4.87,
+		"Height": 2.94,
+		"Image": "pinstripepedals-mbfr.png"
+	},
+	{
+		"Brand": "Pinstripe Pedals",
 		"Name": "MISO",
 		"Width": 4.78,
 		"Height": 2.96,
