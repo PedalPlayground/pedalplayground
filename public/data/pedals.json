@@ -6637,6 +6637,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Antichthon Deluxe",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "catalinbread-antichthon-deluxe.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Belle Epoch",
 		"Width": 2.7,
 		"Height": 4.5,
