@@ -8178,29 +8178,29 @@
 	{
 		"Brand": "Coppersound",
 		"Name": "Gravity Bomb",
-		"Width": 1.94,
-		"Height": 3.65,
+		"Width": 1.97,
+		"Height": 3.7,
 		"Image": "coppersound-gravity-bomb.png"
 	},
 	{
 		"Brand": "Coppersound",
 		"Name": "Gravity Bomb V2",
-		"Width": 1.76,
-		"Height": 3.65,
+		"Width": 1.78,
+		"Height": 3.7,
 		"Image": "coppersound-gravity-bomb-v2.png"
 	},
 	{
 		"Brand": "Coppersound",
 		"Name": "Iris",
-		"Width": 1.76,
-		"Height": 3.65,
+		"Width": 1.78,
+		"Height": 3.7,
 		"Image": "coppersound-iris.png"
 	},
 	{
 		"Brand": "Coppersound",
 		"Name": "Kingpin",
-		"Width": 1.76,
-		"Height": 3.65,
+		"Width": 1.78,
+		"Height": 3.7,
 		"Image": "coppersound-kingpin.png"
 	},
 	{
@@ -8220,8 +8220,8 @@
 	{
 		"Brand": "Coppersound",
 		"Name": "Renegade",
-		"Width": 1.76,
-		"Height": 3.65,
+		"Width": 1.78,
+		"Height": 3.7,
 		"Image": "coppersound-renegade.png"
 	},
 	{
@@ -32469,70 +32469,112 @@
 		"Brand": "Paradox Effects",
 		"Name": "Arquitecto",
 		"Width": 3.7,
-		"Height": 4.83,
+		"Height": 4.93,
 		"Image": "paradox-arquitecto.png"
 	},
 	{
 		"Brand": "Paradox Effects",
 		"Name": "Carmesi",
 		"Width": 3.7,
-		"Height": 4.95,
+		"Height": 4.93,
 		"Image": "paradox-carmesi.png"
 	},
 	{
 		"Brand": "Paradox Effects",
+		"Name": "Defibrillator",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "paradox-defibrillator.png"
+	},
+	{
+		"Brand": "Paradox Effects",
 		"Name": "Fortissimo",
-		"Width": 2.8,
-		"Height": 4.65,
+		"Width": 2.89,
+		"Height": 4.87,
 		"Image": "paradox-fortissimo.png"
 	},
 	{
 		"Brand": "Paradox Effects",
 		"Name": "Futura",
-		"Width": 2.5,
-		"Height": 4.74,
+		"Width": 2.6,
+		"Height": 4.9,
 		"Image": "paradox-futura.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Futura v2",
+		"Width": 2.73,
+		"Height": 4.93,
+		"Image": "paradox-futura-v2.png"
 	},
 	{
 		"Brand": "Paradox Effects",
 		"Name": "Fuzz-E Cat",
 		"Width": 3.7,
-		"Height": 4.86,
+		"Height": 4.93,
 		"Image": "paradox-fuzz-e-cat.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Gato Muerto",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "paradox-gato-muerto.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Habla-Bla",
+		"Width": 2.6,
+		"Height": 4.93,
+		"Image": "paradox-habla-bla.png"
 	},
 	{
 		"Brand": "Paradox Effects",
 		"Name": "Ionizer",
 		"Width": 4.7,
-		"Height": 3.83,
+		"Height": 3.85,
 		"Image": "paradox-ionizer.png"
+	},
+	{
+		"Brand": "Paradox Effects",
+		"Name": "Nacion-FZ",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "paradox-nacion-fz.png"
 	},
 	{
 		"Brand": "Paradox Effects",
 		"Name": "Obsidiana",
 		"Width": 3.7,
-		"Height": 4.87,
+		"Height": 4.93,
 		"Image": "paradox-obsidiana.png"
 	},
 	{
 		"Brand": "Paradox Effects",
 		"Name": "Oniric",
-		"Width": 4.44,
-		"Height": 3.83,
+		"Width": 5.7,
+		"Height": 4.86,
 		"Image": "paradox-oniric.png"
 	},
 	{
 		"Brand": "Paradox Effects",
 		"Name": "Terran",
-		"Width": 2.5,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 4.9,
 		"Image": "paradox-terran.png"
 	},
 	{
 		"Brand": "Paradox Effects",
+		"Name": "Ultropia",
+		"Width": 2.6,
+		"Height": 4.93,
+		"Image": "paradox-ultropia.png"
+	},
+	{
+		"Brand": "Paradox Effects",
 		"Name": "Vitral",
-		"Width": 2.58,
-		"Height": 4.74,
+		"Width": 2.73,
+		"Height": 4.93,
 		"Image": "paradox-vitral.png"
 	},
 	{
