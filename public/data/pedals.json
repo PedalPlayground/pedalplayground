@@ -6615,6 +6615,20 @@
 		"Image": "caroline-wave-cannon-mk2-1985.png"
 	},
 	{
+		"Brand": "Case Study",
+		"Name": "Aspen Overdrive",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "case-study-aspen-overdrive.png"
+	},
+	{
+		"Brand": "Case Study",
+		"Name": "Studio Compressor",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "case-study-studio-compressor.png"
+	},
+	{
 		"Brand": "Catalinbread",
 		"Name": "Adineko",
 		"Width": 2.7,
@@ -8549,29 +8563,29 @@
 	{
 		"Brand": "Crowther",
 		"Name": "Hotcake V1",
-		"Width": 2.64,
-		"Height": 4.42,
+		"Width": 2.72,
+		"Height": 4.5,
 		"Image": "crowther-hotcake-v1.png"
 	},
 	{
 		"Brand": "Crowther",
 		"Name": "Hotcake V2",
-		"Width": 2.76,
-		"Height": 4.49,
+		"Width": 2.72,
+		"Height": 4.5,
 		"Image": "crowther-hotcake-v2.png"
 	},
 	{
 		"Brand": "Crowther",
 		"Name": "Double Hotcake",
-		"Width": 5.12,
+		"Width": 5.1,
 		"Height": 3.7,
 		"Image": "crowther-double-hotcake.png"
 	},
 	{
 		"Brand": "Crowther",
 		"Name": "Prunes & Custard",
-		"Width": 4.06,
-		"Height": 4.72,
+		"Width": 4.01,
+		"Height": 4.7,
 		"Image": "crowther-prunes-custard.png"
 	},
 	{
