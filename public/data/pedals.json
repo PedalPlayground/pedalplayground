@@ -18942,6 +18942,13 @@
 		"Image": "hologram-microcosm.png"
 	},
 	{
+		"Brand": "Hologram Electronics",
+		"Name": "Microcosm (Black)",
+		"Width": 7.1,
+		"Height": 4.74,
+		"Image": "hologram-microcosm-black.png"
+	},
+	{
 		"Brand": "Homebrew Electronics",
 		"Name": "Power Screamer",
 		"Width": 5.07,
@@ -26094,6 +26101,13 @@
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "mask-civil-math.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Fuzz Lab",
+		"Width": 5.7,
+		"Height": 4.91,
+		"Image": "mask-fuzz-lab.png"
 	},
 	{
 		"Brand": "Mask Audio Electronics",
@@ -33621,11 +33635,18 @@
 		"Image": "pladask-taken.png"
 	},
 	{
-		"Brand": "PolarBear",
+		"Brand": "PolarBear Effects",
 		"Name": "Drowner",
-		"Width": 3.62,
-		"Height": 4.6,
+		"Width": 3.7,
+		"Height": 4.89,
 		"Image": "polarbear-drowner.png"
+	},
+	{
+		"Brand": "PolarBear Effects",
+		"Name": "Petrichor",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "polarbear-petrichor.png"
 	},
 	{
 		"Brand": "Poly Effects",
@@ -35495,6 +35516,13 @@
 		"Width": 4.1,
 		"Height": 4.39,
 		"Image": "shiftline-prism-2-black.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Prism III",
+		"Width": 4.1,
+		"Height": 4.39,
+		"Image": "shiftline-prism-3.png"
 	},
 	{
 		"Brand": "Shift Line",
