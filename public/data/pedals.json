@@ -36064,6 +36064,13 @@
 		"Image": "sofi-the-very-thing.png"
 	},
 	{
+		"Brand": "Snark",
+		"Name": "SN-10S Pedal Tuner",
+		"Width": 2.68,
+		"Height": 4,
+		"Image": "snark-sn10s.png"
+	},
+	{
 		"Brand": "Snouse Electronics",
 		"Name": "Black Box Overdrive",
 		"Width": 2.71,
@@ -42017,57 +42024,64 @@
 	{
 		"Brand": "WMD",
 		"Name": "Acoustic Trauma",
-		"Width": 4.78,
-		"Height": 3.58,
+		"Width": 4.86,
+		"Height": 3.7,
 		"Image": "wmd-acoustictrauma.png"
 	},
 	{
 		"Brand": "WMD",
 		"Name": "Arcane Preamp",
-		"Width": 4.97,
-		"Height": 2.36,
+		"Width": 5.15,
+		"Height": 2.43,
 		"Image": "wmd-arcanepreamp.png"
 	},
 	{
 		"Brand": "WMD",
 		"Name": "Geiger Counter",
-		"Width": 3.5,
-		"Height": 4.57,
+		"Width": 3.7,
+		"Height": 4.99,
 		"Image": "wmd-geigercounter.png"
 	},
 	{
 		"Brand": "WMD",
 		"Name": "Geiger Counter CI",
-		"Width": 4.97,
-		"Height": 2.36,
+		"Width": 5.15,
+		"Height": 2.43,
 		"Image": "wmd-geigercounterci.png"
 	},
 	{
 		"Brand": "WMD",
 		"Name": "Geiger Counter Pro",
 		"Width": 5.7,
-		"Height": 4.97,
+		"Height": 4.86,
 		"Image": "wmd-geigercounterpro.png"
 	},
 	{
 		"Brand": "WMD",
+		"Name": "Geiger Counter Pro (Black)",
+		"Width": 5.7,
+		"Height": 4.86,
+		"Image": "wmd-geigercounterpro-black.png"
+	},
+	{
+		"Brand": "WMD",
 		"Name": "Protostar",
-		"Width": 4.9,
-		"Height": 3.9,
+		"Width": 4.85,
+		"Height": 3.85,
 		"Image": "wmd-protostar.png"
 	},
 	{
 		"Brand": "WMD",
 		"Name": "The Goldilocks Planet",
-		"Width": 2.5,
-		"Height": 4.79,
+		"Width": 2.6,
+		"Height": 5.01,
 		"Image": "wmd-thegoldilocks.png"
 	},
 	{
 		"Brand": "WMD",
 		"Name": "Utility Parametric EQ",
-		"Width": 2.69,
-		"Height": 4.33,
+		"Width": 2.79,
+		"Height": 4.5,
 		"Image": "wmd-utilityparametriceq.png"
 	},
 	{
