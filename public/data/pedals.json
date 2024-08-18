@@ -4971,6 +4971,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "EV-1-WL Wireless MIDI Expression Pedal",
+		"Width": 3.36,
+		"Height": 7.875,
+		"Image": "boss-ev1wl.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "ES-5 Effects Switching System",
 		"Width": 13.31,
 		"Height": 3.66,
@@ -44589,6 +44596,13 @@
 		"Width": 3.1,
 		"Height": 5.13,
 		"Image": "zoom-ms70cdr.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "MS-70CDR+",
+		"Width": 3.1,
+		"Height": 5.13,
+		"Image": "zoom-ms70cdr-plus.png"
 	},
 	{
 		"Brand": "Zorg",
