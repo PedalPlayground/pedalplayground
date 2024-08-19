@@ -44472,6 +44472,13 @@
 		"Image": "zeppelin-quaverato.png"
  	},
 	{
+		"Brand": "Zinky",
+		"Name": "Master Blaster",
+		"Width": 3.5,
+		"Height": 4.34,
+		"Image": "zinky-master-blaster.png"
+	},
+	{
 		"Brand": "Zoom",
 		"Name": "A1 Four",
 		"Width": 5.12,
