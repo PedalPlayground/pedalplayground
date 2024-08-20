@@ -40819,6 +40819,13 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Anti 19924",
+		"Width": 3.5,
+		"Height": 5.62,
+		"Image": "ua-anti-1992.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Apollo Twin MkII",
 		"Width": 6.31,
 		"Height": 5.9,
