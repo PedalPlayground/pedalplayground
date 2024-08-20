@@ -40539,10 +40539,38 @@
 	},
 	{
 		"Brand": "Tubesteader",
+		"Name": "Beekeeper",
+		"Width": 4.99,
+		"Height": 5.7,
+		"Image": "tubesteader-beekeeper.png"
+	},
+	{
+		"Brand": "Tubesteader",
+		"Name": "Eggnog",
+		"Width": 2.91,
+		"Height": 5.02,
+		"Image": "tubesteader-eggnog.png"
+	},
+	{
+		"Brand": "Tubesteader",
 		"Name": "Lightkeeper V2",
-		"Width": 2.92,
-		"Height": 4.82,
+		"Width": 2.91,
+		"Height": 4.86,
 		"Image": "tubesteader-lightkeeper-v2.png"
+	},
+	{
+		"Brand": "Tubesteader",
+		"Name": "Magnezium",
+		"Width": 4.99,
+		"Height": 5.7,
+		"Image": "tubesteader-magnezium.png"
+	},
+	{
+		"Brand": "Tubesteader",
+		"Name": "Sunkeeper",
+		"Width": 4.99,
+		"Height": 5.7,
+		"Image": "tubesteader-sunkeeper.png"
 	},
 	{
 		"Brand": "Tube Works",
