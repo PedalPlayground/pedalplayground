@@ -9570,6 +9570,13 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Phosphene Scream",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "deathbyaudio-phosphene-scream.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Pinned",
 		"Width": 4.5,
 		"Height": 5.62,
@@ -29167,6 +29174,13 @@
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "mxr-m69.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Randy Rhoads Distortion+",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-rr104.png"
 	},
 	{
 		"Brand": "MXR",
