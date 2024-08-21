@@ -26819,15 +26819,15 @@
 	{
 		"Brand": "Mission",
 		"Name": "EP1 (Black)",
-		"Width": 3.57,
-		"Height": 9,
+		"Width": 3.97,
+		"Height": 10,
 		"Image": "mission-ep1-black.png"
 	},
 	{
 		"Brand": "Mission",
 		"Name": "EP1 (White)",
-		"Width": 3.57,
-		"Height": 9,
+		"Width": 3.97,
+		"Height": 10,
 		"Image": "mission-ep1.png"
 	},
 	{
@@ -26847,15 +26847,15 @@
 	{
 		"Brand": "Mission",
 		"Name": "EP-25K (Black)",
-		"Width": 3.57,
-		"Height": 9,
+		"Width": 3.97,
+		"Height": 10,
 		"Image": "mission-ep1-black.png"
 	},
 	{
 		"Brand": "Mission",
 		"Name": "EP-25K (White)",
-		"Width": 3.57,
-		"Height": 9,
+		"Width": 3.97,
+		"Height": 10,
 		"Image": "mission-ep1.png"
 	},
 	{
@@ -26875,8 +26875,8 @@
 	{
 		"Brand": "Mission",
 		"Name": "SP1-TMP",
-		"Width": 3.61,
-		"Height": 9,
+		"Width": 3.97,
+		"Height": 10,
 		"Image": "mission-sp1-tmp.png"
 	},
 	{
