@@ -10549,6 +10549,13 @@
 		"Image": "drnoeffects-moon-canyon.png"
 	},
 	{
+		"Brand": "Dr.No Effects",
+		"Name": "Mother Brain",
+		"Width": 5,
+		"Height": 4.02,
+		"Image": "drnoeffects-mother-brain.png"
+	},
+	{
 		"Brand": "Dreadbox",
 		"Name": "Darkness",
 		"Width": 3.94,
