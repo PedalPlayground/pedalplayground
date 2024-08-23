@@ -17459,6 +17459,13 @@
 	},
 	{
 		"Brand": "Gokko",
+		"Name": "Divine",
+		"Width": 2.76,
+		"Height": 4.5,
+		"Image": "gokko-divine.png"
+	},
+	{
+		"Brand": "Gokko",
 		"Name": "Dripping",
 		"Width": 2.76,
 		"Height": 4.5,
@@ -17480,10 +17487,31 @@
 	},
 	{
 		"Brand": "Gokko",
+		"Name": "Magrane'",
+		"Width": 2.57,
+		"Height": 4.5,
+		"Image": "gokko-magrane.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Mogwai",
+		"Width": 2.57,
+		"Height": 4.5,
+		"Image": "gokko-mogwai.png"
+	},
+	{
+		"Brand": "Gokko",
 		"Name": "Octave Fuzz",
 		"Width": 4.99,
 		"Height": 3.79,
 		"Image": "gokko-octave-fuzz.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Pazuzu",
+		"Width": 2.57,
+		"Height": 4.5,
+		"Image": "gokko-pazuzu.png"
 	},
 	{
 		"Brand": "Gokko",
@@ -17505,6 +17533,13 @@
 		"Width": 2.76,
 		"Height": 4.5,
 		"Image": "gokko-rocket.png"
+	},
+	{
+		"Brand": "Gokko",
+		"Name": "Salem",
+		"Width": 2.57,
+		"Height": 4.5,
+		"Image": "gokko-salem.png"
 	},
 	{
 		"Brand": "Gokko",
@@ -21446,6 +21481,13 @@
 		"Width": 2.93,
 		"Height": 4.89,
 		"Image": "jhs-packrat.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "PackRat (White)",
+		"Width": 2.93,
+		"Height": 4.91,
+		"Image": "jhs-packrat-white.png"
 	},
 	{
 		"Brand": "JHS",
@@ -29825,6 +29867,13 @@
 		"Width": 1.99,
 		"Height": 3.66,
 		"Image": "nobels-odr-mini.png"
+	},
+	{
+		"Brand": "Noise Engineering",
+		"Name": "Dystorpia",
+		"Width": 2.99,
+		"Height": 5.25,
+		"Image": "noise-engineering-dystorpia.png"
 	},
 	{
 		"Brand": "Non-Human Audio",
