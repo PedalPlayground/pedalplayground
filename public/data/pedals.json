@@ -3872,6 +3872,13 @@
 	},
 	{
 		"Brand": "Black Mass Electronics",
+		"Name": "Ceremonial Show of Force",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "blackmass-csof.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
 		"Name": "Kill Chain",
 		"Width": 2.6,
 		"Height": 4.97,
@@ -20091,6 +20098,13 @@
 	},
 	{
 		"Brand": "J. Rockett",
+		"Name": "Blue Note Select",
+		"Width": 2.3,
+		"Height": 4,
+		"Image": "jrockett-blue-note-select.png"
+	},
+	{
+		"Brand": "J. Rockett",
 		"Name": "Blue Note Tour Series",
 		"Width": 2.3,
 		"Height": 4,
@@ -29114,6 +29128,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Layers",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "mxr-layers.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Micro Amp",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -31298,6 +31319,27 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Pardner Fuzz (Blue)",
+		"Width": 4,
+		"Height": 4.29,
+		"Image": "obne-pardner-fuzz-blue.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Pardner Fuzz (Purple)",
+		"Width": 4,
+		"Height": 4.29,
+		"Image": "obne-pardner-fuzz-purple.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Pardner Fuzz (Tan)",
+		"Width": 4,
+		"Height": 4.29,
+		"Image": "obne-pardner-fuzz-tan.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Procession",
 		"Width": 2.87,
 		"Height": 4.96,
@@ -32275,6 +32317,13 @@
 		"Width": 3.6,
 		"Height": 5.8,
 		"Image": "origin-deluxe61.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Halcyon Blue",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-halcyon-blue.png"
 	},
 	{
 		"Brand": "Origin Effects",
