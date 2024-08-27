@@ -7693,6 +7693,13 @@
 		"Image": "chasebliss-wombtone-mk2.png"
 	},
 	{
+		"Brand": "Chase Bliss",
+		"Name": "Wombtone MKIII",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-wombtone-mk3.png"
+	},
+	{
 		"Brand": "Chicago Iron",
 		"Name": "Octavian",
 		"Width": 3.11,
