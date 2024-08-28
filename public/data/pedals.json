@@ -35793,16 +35793,23 @@
 	{
 		"Brand": "Smallsound/Bigsound",
 		"Name": "Buzzz",
-		"Width": 3.68,
-		"Height": 4.75,
+		"Width": 3.7,
+		"Height": 4.9,
 		"Image": "smallsound-buzzz.png"
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
-		"Name": "Fuck Overdrive",
+		"Name": "Fuck Overdrive (Black)",
 		"Width": 3.7,
 		"Height": 4.97,
 		"Image": "smallsound-fuck.png"
+	},
+	{
+		"Brand": "Smallsound/Bigsound",
+		"Name": "Fuck Overdrive (Silver)",
+		"Width": 3.7,
+		"Height": 4.97,
+		"Image": "smallsound-fuck-silver.png"
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
@@ -35843,14 +35850,14 @@
 		"Brand": "Smallsound/Bigsound",
 		"Name": "Pretty Years",
 		"Width": 4.7,
-		"Height": 5.7,
+		"Height": 5.75,
 		"Image": "smallsound-prettyyears.png"
 	},
 	{
 		"Brand": "Smallsound/Bigsound",
 		"Name": "Team Awesome Fuzz Machine",
 		"Width": 3.7,
-		"Height": 4.92,
+		"Height": 4.9,
 		"Image": "smallsound-teamawesome.png"
 	},
 	{
