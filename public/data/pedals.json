@@ -35274,6 +35274,13 @@
 	},
 	{
 		"Brand": "Saturnworks",
+		"Name": "Double Switch",
+		"Width": 3.7,
+		"Height": 1.71,
+		"Image": "saturnworks-double-switch.png"
+	},
+	{
+		"Brand": "Saturnworks",
 		"Name": "Tap Tempo",
 		"Width": 2,
 		"Height": 2.13,
