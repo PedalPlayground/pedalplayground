@@ -25431,6 +25431,55 @@
 		"Image": "lsl-vital-ds.png"
 	},
 	{
+		"Brand": "Luminite",
+		"Name": "F6 Footswitch",
+		"Width": 5.9,
+		"Height": 3.25,
+		"Image": "luminite-f6.png"
+	},
+	{
+		"Brand": "Luminite",
+		"Name": "F6W Footswitch",
+		"Width": 5.9,
+		"Height": 3.25,
+		"Image": "luminite-f6w.png"
+	},
+	{
+		"Brand": "Luminite",
+		"Name": "F10 Footswitch",
+		"Width": 11,
+		"Height": 3.18,
+		"Image": "luminite-f10.png"
+	},
+	{
+		"Brand": "Luminite",
+		"Name": "F10W Footswitch",
+		"Width": 11,
+		"Height": 3.18,
+		"Image": "luminite-f10w.png"
+	},
+	{
+		"Brand": "Luminite",
+		"Name": "Graviton M1",
+		"Width": 3.74,
+		"Height": 2.85,
+		"Image": "luminite-graviton-m1.png"
+	},
+	{
+		"Brand": "Luminite",
+		"Name": "Graviton M2",
+		"Width": 5.9,
+		"Height": 4.2,
+		"Image": "luminite-graviton-m2.png"
+	},
+	{
+		"Brand": "Luminite",
+		"Name": "Relay + CV",
+		"Width": 2.09,
+		"Height": 2.46,
+		"Image": "luminite-relay-cv.png"
+	},
+	{
 		"Brand": "Lurch Audio",
 		"Name": "Sorghum",
 		"Width": 3.50,
