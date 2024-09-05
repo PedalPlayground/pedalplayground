@@ -5748,6 +5748,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "SDE-3 Dual Digital Delay",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-sde3.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "SDE-3000D Dual Digital Delay",
 		"Width": 7.875,
 		"Height": 5.17,
