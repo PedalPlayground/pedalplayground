@@ -24269,6 +24269,13 @@
 		"Image": "krozz-krakenheart.png"
 	},
 	{
+		"Brand": "Kyro Audio",
+		"Name": "Crunch",
+		"Width": 5.7,
+		"Height": 4.56,
+		"Image": "kyro-crunch.png"
+	},
+	{
 		"Brand": "L.R. Baggs",
 		"Name": "Align Series Active DI",
 		"Width": 3.34,
@@ -41352,9 +41359,23 @@
 	{
 		"Brand": "Valeton",
 		"Name": "Coral Amp",
-		"Width": 1.65,
-		"Height": 3.68,
+		"Width": 1.7,
+		"Height": 3.72,
 		"Image": "valeton-coral-amp.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "Coral Verb II",
+		"Width": 1.7,
+		"Height": 3.72,
+		"Image": "valeton-coral-verb-2.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "Coral Mod II",
+		"Width": 1.7,
+		"Height": 3.72,
+		"Image": "valeton-coral-mod-2.png"
 	},
 	{
 		"Brand": "Valeton",
@@ -41368,6 +41389,7 @@
 		"Name": "GP-100",
 		"Width": 7.8,
 		"Height": 5.31,
+
 		"Image": "valeton-gp100.png"
 	},
 	{
@@ -41380,23 +41402,30 @@
 	{
 		"Brand": "Valeton",
 		"Name": "GP-200LT",
-		"Width": 9.961,
-		"Height": 6.496,
+		"Width": 9.96,
+		"Height": 6.39,
 		"Image": "valeton-gp-200lt.png"
 	},
 	{
 		"Brand": "Valeton",
 		"Name": "Surge EP-1",
-		"Width": 2.57874,
-		"Height": 5.8464567,
+		"Width": 2.82,
+		"Height": 5.85,
 		"Image": "valeton-ep-1.png"
 	},
 	{
 		"Brand": "Valeton",
 		"Name": "Surge EP-2",
-		"Width": 2.57874,
-		"Height": 5.8464567,
+		"Width": 2.82,
+		"Height": 5.85,
 		"Image": "valeton-ep-2.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "VLP-200",
+		"Width": 4.7,
+		"Height": 4.11,
+		"Image": "valeton-vlp200.png"
 	},
 	{
 		"Brand": "Van Weelden",
