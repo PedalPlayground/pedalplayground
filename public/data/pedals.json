@@ -29107,6 +29107,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Fet Driver",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m264.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Flanger",
 		"Width": 4.95,
 		"Height": 3.54,
@@ -34833,24 +34840,171 @@
 	},
 	{
 		"Brand": "Reuss",
-		"Name": "Evil Twin ET-01",
-		"Width": 4.72,
+		"Name": "Big Bender",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "reuss-big-bender.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Copenhagen Bender",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "reuss-copenhagen-bender.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Double Classic Fuzz",
+		"Width": 5,
 		"Height": 3.74,
+		"Image": "reuss-double-classic-fuzz.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Double Standard Distortion",
+		"Width": 5,
+		"Height": 3.74,
+		"Image": "reuss-double-standard-distortion.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Epic Overdrive",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "reuss-epice-overdrive.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Evil Twin MKII",
+		"Width": 4.7,
+		"Height": 3.84,
 		"Image": "reuss-evil-twin.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Fisklåda",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "reuss-fisklada.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Germanium Bender",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "reuss-germanium-bender.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Gold Sounds Dual Overdrive",
+		"Width": 5,
+		"Height": 3.74,
+		"Image": "reuss-dual-sounds.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Goo Goo Fuzz",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "reuss-goo-goo-fuzz.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Muzzbox",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "reuss-muzzbox.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Old Black Shoe",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "reuss-old-black-shoe.png"
 	},
 	{
 		"Brand": "Reuss",
 		"Name": "Plasmatron",
 		"Width": 4.7,
-		"Height": 3.77,
+		"Height": 3.84,
 		"Image": "reuss-plasmatron.png"
 	},
 	{
 		"Brand": "Reuss",
-		"Name": "Square One",
-		"Width": 2.84,
+		"Name": "Purple Faze",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "reuss-purple-faze.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Recidivist",
+		"Width": 5,
+		"Height": 3.74,
+		"Image": "reuss-recidivist.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Repeater",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "reuss-repeater.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Repeater Fuzz MKIV",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "reuss-repeater-fuzz-mk4.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "RSH-03",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "reuss-rsh-03.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Square One Overdrive",
+		"Width": 2.8,
 		"Height": 4.5,
 		"Image": "reuss-square-one.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Swiss Army Knife",
+		"Width": 5,
+		"Height": 3.74,
+		"Image": "reuss-swiss-army-knife.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "The Tingler",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "reuss-the-tingler.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "The Utilitarian",
+		"Width": 5,
+		"Height": 3.74,
+		"Image": "reuss-the-utilitarian.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Tone Booster",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "reuss-tone-booster.png"
+	},
+	{
+		"Brand": "Reuss",
+		"Name": "Understate",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "reuss-understate.png"
 	},
 	{
 		"Brand": "Revv",
