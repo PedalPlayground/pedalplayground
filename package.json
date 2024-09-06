@@ -4,7 +4,7 @@
 	"description": "A site to help you arrange pedals",
 	"main": "gulpfile.js",
 	"devDependencies": {
-		"gulp": "^4.0.2"
+		"gulp": "^5.0.0"
 	},
 	"scripts": {
 		"start": "npm-run-all --parallel watch serve",
