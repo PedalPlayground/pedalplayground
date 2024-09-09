@@ -10878,6 +10878,55 @@
 		"Image": "dophix-galileo.png"
 	},
 	{
+		"Brand": "Double Pony",
+		"Name": "The Reins",
+		"Width": 2.02,
+		"Height": 3.7,
+		"Image": "double-pony-the-reins.png"
+	},
+	{
+		"Brand": "Double Pony",
+		"Name": "Glue Factory",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "double-pony-glue-factory.png"
+	},
+	{
+		"Brand": "Double Pony",
+		"Name": "Open Range",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "double-pony-open-range.png"
+	},
+	{
+		"Brand": "Double Pony",
+		"Name": "Stampede",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "double-pony-stampede.png"
+	},
+	{
+		"Brand": "Double Pony",
+		"Name": "Trailhead",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "double-pony-trailhead.png"
+	},
+	{
+		"Brand": "Double Pony",
+		"Name": "Unbridled",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "double-pony-unbridled.png"
+	},
+	{
+		"Brand": "Double Pony",
+		"Name": "Why The Long Face",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "double-pony-why-the-long-face.png"
+	},
+	{
 		"Brand": "Dr Scientist",
 		"Name": "Bitquest",
 		"Width": 2.71,
