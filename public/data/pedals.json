@@ -10879,10 +10879,10 @@
 	},
 	{
 		"Brand": "Double Pony",
-		"Name": "The Reins",
-		"Width": 2.02,
-		"Height": 3.7,
-		"Image": "double-pony-the-reins.png"
+		"Name": "Bareback",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "double-pony-bareback.png"
 	},
 	{
 		"Brand": "Double Pony",
@@ -10904,6 +10904,13 @@
 		"Width": 2.6,
 		"Height": 4.99,
 		"Image": "double-pony-stampede.png"
+	},
+	{
+		"Brand": "Double Pony",
+		"Name": "The Reins",
+		"Width": 2.02,
+		"Height": 3.7,
+		"Image": "double-pony-the-reins.png"
 	},
 	{
 		"Brand": "Double Pony",
