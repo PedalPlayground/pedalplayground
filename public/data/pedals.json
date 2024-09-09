@@ -17641,16 +17641,44 @@
 	},
 	{
 		"Brand": "Goodwood Audio",
+		"Name": "4 Way Buffered Split",
+		"Width": 3.93,
+		"Height": 4.7,
+		"Image": "goodwood-4way-buffered-split.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
+		"Name": "AC/EL",
+		"Width": 5.12,
+		"Height": 5.7,
+		"Image": "goodwood-acel.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
 		"Name": "Audition",
-		"Width": 4.45,
-		"Height": 2.6,
+		"Width": 4.5,
+		"Height": 2.7,
 		"Image": "goodwood-audition.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
+		"Name": "Bass Box",
+		"Width": 5.22,
+		"Height": 5.7,
+		"Image": "goodwood-bass-box.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
+		"Name": "Buzzkill",
+		"Width": 2.54,
+		"Height": 4.5,
+		"Image": "goodwood-buzzkill.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
 		"Name": "Input V2",
-		"Width": 4.45,
-		"Height": 2.6,
+		"Width": 4.5,
+		"Height": 2.69,
 		"Image": "goodwood-input-v2.png"
 	},
 	{
@@ -17662,16 +17690,16 @@
 	},
 	{
 		"Brand": "Goodwood Audio",
-		"Name": "Interfacer TX",
-		"Width": 3,
-		"Height": 5,
-		"Image": "goodwood-interfacer-tx.png"
+		"Name": "Isolator",
+		"Width": 4.5,
+		"Height": 2.7,
+		"Image": "goodwood-isolator.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
 		"Name": "LongLine",
-		"Width": 4,
-		"Height": 4.72,
+		"Width": 3.95,
+		"Height": 4.7,
 		"Image": "goodwood-longline.png"
 	},
 	{
@@ -17684,9 +17712,16 @@
 	{
 		"Brand": "Goodwood Audio",
 		"Name": "Output V2",
-		"Width": 4.45,
-		"Height": 2.95,
+		"Width": 4.5,
+		"Height": 2.84,
 		"Image": "goodwood-output-v2.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
+		"Name": "Output TX",
+		"Width": 4.5,
+		"Height": 2.7,
+		"Image": "goodwood-output-tx.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
@@ -17698,16 +17733,44 @@
 	{
 		"Brand": "Goodwood Audio",
 		"Name": "RMT",
-		"Width": 1.52,
-		"Height": 3.9,
+		"Width": 1.5,
+		"Height": 4.07,
 		"Image": "goodwood-rmt.png"
 	},
 	{
 		"Brand": "Goodwood Audio",
-		"Name": "Underfacer",
-		"Width": 3.94,
-		"Height": 4.65,
-		"Image": "goodwood-underfacer.png"
+		"Name": "Stereo Line Mixer",
+		"Width": 3.93,
+		"Height": 4.7,
+		"Image": "goodwood-stereo-line-mixer.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
+		"Name": "The TX Interfacer",
+		"Width": 3.04,
+		"Height": 4.74,
+		"Image": "goodwood-interfacer-tx.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
+		"Name": "The TX Underfacer",
+		"Width": 3.93,
+		"Height": 4.7,
+		"Image": "goodwood-the-tx-underfacer.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
+		"Name": "Wet Dry Wet Box",
+		"Width": 4.29,
+		"Height": 4.87,
+		"Image": "goodwood-wet-dry-wet-box.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
+		"Name": "Wireless Bypass",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "goodwood-wireless-bypass.png"
 	},
 	{
 		"Brand": "Goodrich",
@@ -18107,13 +18170,6 @@
 		"Width": 2.6,
 		"Height": 5.17,
 		"Image": "groundfx-boneflower.png"
-	},
-	{
-		"Brand": "Ground FX",
-		"Name": "Burning Sunn",
-		"Width": 2.6,
-		"Height": 5.17,
-		"Image": "groundfx-burning-sunn.png"
 	},
 	{
 		"Brand": "Ground FX",
@@ -24141,6 +24197,20 @@
 		"Width": 2.59,
 		"Height": 4.9,
 		"Image": "kma-audio-machines-wurm2-distortion.png"
+	},
+	{
+		"Brand": "Kodex Audio",
+		"Name": "Burning Sunn",
+		"Width": 2.6,
+		"Height": 5.17,
+		"Image": "groundfx-burning-sunn.png"
+	},
+	{
+		"Brand": "Kodex Audio",
+		"Name": "GFX-91W",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "kodex-gfx-91w.png"
 	},
 	{
 		"Brand": "Komet",
