@@ -42940,6 +42940,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Canvas Power HP",
+		"Width": 5.23,
+		"Height": 2.21,
+		"Image": "walrus-canvas-power-hp.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Canvas Mono",
 		"Width": 2.66,
 		"Height": 4.9,
