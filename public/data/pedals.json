@@ -2731,43 +2731,64 @@
 	},
 	{
 		"Brand": "Barber",
+		"Name": "Burn Unit (Compact)",
+		"Width": 2.81,
+		"Height": 4.57,
+		"Image": "barber-burn-unit-compact.png"
+	},
+	{
+		"Brand": "Barber",
 		"Name": "Buss",
-		"Width": 2.8,
-		"Height": 4.56,
+		"Width": 2.81,
+		"Height": 4.57,
 		"Image": "barber-buss.png"
 	},
 	{
 		"Brand": "Barber",
 		"Name": "Direct Drive",
-		"Width": 2.75,
-		"Height": 4.4375,
+		"Width": 2.94,
+		"Height": 4.76,
 		"Image": "barber-direct-drive.png"
 	},
 	{
 		"Brand": "Barber",
+		"Name": "Exacta",
+		"Width": 2.81,
+		"Height": 4.57,
+		"Image": "barber-exacta.png"
+	},
+	{
+		"Brand": "Barber",
 		"Name": "Gain Changer",
-		"Width": 2.75,
-		"Height": 4.4375,
+		"Width": 2.94,
+		"Height": 4.76,
 		"Image": "barber-gain-changer.png"
 	},
 	{
 		"Brand": "Barber",
+		"Name": "Linden",
+		"Width": 2.81,
+		"Height": 4.57,
+		"Image": "barber-linden.png"
+	},
+	{
+		"Brand": "Barber",
 		"Name": "LTD",
-		"Width": 3.7,
+		"Width": 3.98,
 		"Height": 4.7,
 		"Image": "barber-ltd.png"
 	},
 	{
 		"Brand": "Barber",
 		"Name": "Tone Press",
-		"Width": 2.75,
-		"Height": 4.4375,
+		"Width": 2.94,
+		"Height": 4.76,
 		"Image": "barber-tone-press-modern.png"
 	},
 	{
 		"Brand": "Barber",
 		"Name": "Tone Press (old)",
-		"Width": 3.7,
+		"Width": 4.02,
 		"Height": 4.7,
 		"Image": "barber-tone-press-old.png"
 	},
@@ -28463,13 +28484,6 @@
 	},
 	{
 		"Brand": "Mosky",
-		"Name": "Dual Switch (Jinx)",
-		"Width": 3.7,
-		"Height": 1.68,
-		"Image": "mosky-dual-switch-jinx.png"
-	},
-	{
-		"Brand": "Mosky",
 		"Name": "Golden Horse",
 		"Width": 1.84,
 		"Height": 3.66,
@@ -41645,6 +41659,27 @@
 	},
 	{
 		"Brand": "Valeton",
+		"Name": "AD-10 Analog Delay",
+		"Width": 2.03,
+		"Height": 3.7,
+		"Image": "valeton-ad-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "BD-10 Blues OD",
+		"Width": 2.03,
+		"Height": 3.7,
+		"Image": "valeton-bd-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "CH-10 Analog Chorus",
+		"Width": 2.03,
+		"Height": 3.7,
+		"Image": "valeton-ch-10.png"
+	},
+	{
+		"Brand": "Valeton",
 		"Name": "Coral Amp",
 		"Width": 1.7,
 		"Height": 3.72,
@@ -41666,8 +41701,29 @@
 	},
 	{
 		"Brand": "Valeton",
+		"Name": "CS-10 Compressor",
+		"Width": 2.03,
+		"Height": 3.7,
+		"Image": "valeton-cs-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "DS-10 Distortion",
+		"Width": 2.03,
+		"Height": 3.7,
+		"Image": "valeton-ds-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "FL-10 HB Flanger",
+		"Width": 2.03,
+		"Height": 3.7,
+		"Image": "valeton-fl-10.png"
+	},
+	{
+		"Brand": "Valeton",
 		"Name": "FP-10 FET Preamp",
-		"Width": 1.89,
+		"Width": 2.03,
 		"Height": 3.7,
 		"Image": "valeton-fp-10.png"
 	},
@@ -41676,7 +41732,6 @@
 		"Name": "GP-100",
 		"Width": 7.8,
 		"Height": 5.31,
-
 		"Image": "valeton-gp100.png"
 	},
 	{
@@ -41692,6 +41747,27 @@
 		"Width": 9.96,
 		"Height": 6.39,
 		"Image": "valeton-gp-200lt.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "OC-10 Octave",
+		"Width": 2.03,
+		"Height": 3.7,
+		"Image": "valeton-oc-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "OD-10 Over Drive",
+		"Width": 2.03,
+		"Height": 3.7,
+		"Image": "valeton-od-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "PH-10 Phaser",
+		"Width": 2.03,
+		"Height": 3.7,
+		"Image": "valeton-ph-10.png"
 	},
 	{
 		"Brand": "Valeton",
