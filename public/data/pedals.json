@@ -10549,6 +10549,13 @@
 		"Image": "disaster-area-nnb.png"
 	},
 	{
+		"Brand": "Discomfort Designs",
+		"Name": "Phantom Limb",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "discomfort-designs-phantom-limb.png"
+	},
+	{
 		"Brand": "Disruptive Music Tech",
 		"Name": "Enhancifier",
 		"Width": 8,
@@ -12185,6 +12192,13 @@
 		"Width": 3.81,
 		"Height": 4.81,
 		"Image": "earthquaker-rainbow-machine-v2.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Rainbow Machine V2 (Teal)",
+		"Width": 3.81,
+		"Height": 4.81,
+		"Image": "earthquaker-rainbow-machine-v2-teal.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -29666,6 +29680,13 @@
 		"Image": "mxr-wa90.png"
 	},
 	{
+		"Brand": "MXR",
+		"Name": "Yngwie Malmsteen Overdrive",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-yjm308.png"
+	},
+	{
 		"Brand": "MXR Bass Innovations",
 		"Name": "Bass Chorus Deluxe",
 		"Width": 2.67,
@@ -36569,6 +36590,13 @@
 	},
 	{
 		"Brand": "Slow Gear Electronics",
+		"Name": "Micro Active ISO/DI",
+		"Width": 4.08,
+		"Height": 3.25,
+		"Image": "slow-gear-micro-active-iso-di.png"
+	},
+	{
+		"Brand": "Slow Gear Electronics",
 		"Name": "Stereo Headphone Amp",
 		"Width": 3.48,
 		"Height": 4.77,
@@ -38645,6 +38673,83 @@
 		"Width": 2.56,
 		"Height": 4.5,
 		"Image": "surfy-surfyvibe.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "Black Eye II",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "sushi-box-black-eye-2.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "Dreamcatcher",
+		"Width": 5.7,
+		"Height": 4.88,
+		"Image": "sushi-box-dreamcatcher.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "Elementary",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "sushi-box-elementary.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "Finally v2",
+		"Width": 2.71,
+		"Height": 5.04,
+		"Image": "sushi-box-finally-v2.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "JC Emerald",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "sushi-box-jc-emerald.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "More",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "sushi-box-more.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "Neptunium",
+		"Width": 2.71,
+		"Height": 5.04,
+		"Image": "sushi-box-neptunium.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "Slampegg Bee Pre",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "sushi-box-slampegg-bee-pre.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "The Detective",
+		"Width": 5.7,
+		"Height": 4.88,
+		"Image": "sushi-box-the-detective.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "Underground Accelerator",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "sushi-box-underground-accelerator.png"
+	},
+	{
+		"Brand": "Sushi Box",
+		"Name": "Venus Z",
+		"Width": 4.79,
+		"Height": 3.88,
+		"Image": "sushi-box-venus-z.png"
 	},
 	{
 		"Brand": "Swamp Witch",
