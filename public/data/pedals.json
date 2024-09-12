@@ -29954,6 +29954,13 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Envy",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "mythos-envy.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Golden Fleece",
 		"Width": 1.75,
 		"Height": 3.6,
@@ -33962,6 +33969,13 @@
 		"Width": 3.7,
 		"Height": 4.86,
 		"Image": "pladask-draume.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Etterslep",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "pladask-etterslep.png"
 	},
 	{
 		"Brand": "Pladask Elektrisk",
@@ -38501,6 +38515,13 @@
 	},
 	{
 		"Brand": "Summer School Electronics",
+		"Name": "Extra Credit Boost",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "summer-school-electronics-extra-credit-boost.png"
+	},
+	{
+		"Brand": "Summer School Electronics",
 		"Name": "Gladys V2",
 		"Width": 2.6,
 		"Height": 5.07,
@@ -38512,6 +38533,13 @@
 		"Width": 2.6,
 		"Height": 5.03,
 		"Image": "summer-school-electronics-gus-drive.png"
+	},
+	{
+		"Brand": "Summer School Electronics",
+		"Name": "Gus-Plus",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "summer-school-electronics-gus-plus.png"
 	},
 	{
 		"Brand": "Summer School Electronics",
@@ -38533,6 +38561,13 @@
 		"Width": 2.6,
 		"Height": 5.07,
 		"Image": "summer-school-electronics-science-fair.png"
+	},
+	{
+		"Brand": "Summer School Electronics",
+		"Name": "Snow Day Delay",
+		"Width": 4.7,
+		"Height": 3.95,
+		"Image": "summer-school-electronics-snow-day-delay.png"
 	},
 	{
 		"Brand": "Summer School Electronics",
@@ -44943,16 +44978,30 @@
 	{
 		"Brand": "Xotic",
 		"Name": "XVP-250K Volume Pedal",
-		"Width": 3.94,
+		"Width": 3.78,
 		"Height": 8.27,
 		"Image": "xotic-xvp-250k.png"
 	},
 	{
 		"Brand": "Xotic",
-		"Name": "XW-1 Wah Pedal (Blue)",
-		"Width": 3.83,
+		"Name": "XW-1 Wah Pedal",
+		"Width": 3.79,
 		"Height": 8.27,
 		"Image": "xotic-wah.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "XW-1 Wah Pedal (Blue)",
+		"Width": 3.79,
+		"Height": 8.27,
+		"Image": "xotic-xw1-blue.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "XW-2 Wah Pedal (Limited)",
+		"Width": 3.78,
+		"Height": 8.27,
+		"Image": "xotic-xw2-limited.png"
 	},
 	{
 		"Brand": "Xotic",
