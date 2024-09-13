@@ -15946,6 +15946,104 @@
 		"Image": "fractal-fm9.png"
 	},
 	{
+		"Brand": "Frantone Electronics",
+		"Name": "Acoust-A-Boost",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-acoust-a-boost.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Bassweet",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-bassweet.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Brooklyn Overdrive",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-brooklyn.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Cream Puff Fuzz",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-cream-puff.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Glacier Hyper Modulator",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-glacier.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Hep Cat",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-hep-cat.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Hi-Ball",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-hi-ball.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Lo-Tone Classic Fuzz",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-lo-tone-classic-fuzz.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Peachfuzz Fuzztone",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-peachfuzz.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Sandwich",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-sandwich.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Sputnik",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-sputnik.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "The Sweet",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-the-sweet.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Thunderhead Bass Booster",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-thunderhead.png"
+	},
+	{
+		"Brand": "Frantone Electronics",
+		"Name": "Vibutron",
+		"Width": 5.06,
+		"Height": 3.75,
+		"Image": "frantone-vibutron.png"
+	},
+	{
 		"Brand": "Fredric Effects",
 		"Name": "Blue Monarch",
 		"Width": 2.68,
