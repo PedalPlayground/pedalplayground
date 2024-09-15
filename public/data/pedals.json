@@ -31255,6 +31255,62 @@
 		"Image": "neunaber-wet-v5.png"
 	},
 	{
+		"Brand": "Neural Devices",
+		"Name": "Chambers",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "neural-devices-chambers.png"
+	},
+	{
+		"Brand": "Neural Devices",
+		"Name": "Emerald",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "neural-devices-emerald.png"
+	},
+	{
+		"Brand": "Neural Devices",
+		"Name": "Gentlemen",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "neural-devices-gentlemen.png"
+	},
+	{
+		"Brand": "Neural Devices",
+		"Name": "Lilith",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "neural-devices-lilith.png"
+	},
+	{
+		"Brand": "Neural Devices",
+		"Name": "Marrow",
+		"Width": 2.73,
+		"Height": 4.99,
+		"Image": "neural-devices-marrow.png"
+	},
+	{
+		"Brand": "Neural Devices",
+		"Name": "Pravus",
+		"Width": 2.84,
+		"Height": 4.99,
+		"Image": "neural-devices-pravus.png"
+	},
+	{
+		"Brand": "Neural Devices",
+		"Name": "Spore",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "neural-devices-spore.png"
+	},
+	{
+		"Brand": "Neural Devices",
+		"Name": "Tempest",
+		"Width": 2.84,
+		"Height": 4.99,
+		"Image": "neural-devices-tempest.png"
+	},
+	{
 		"Brand": "Neural DSP",
 		"Name": "Quad Cortex",
 		"Width": 11.42,
