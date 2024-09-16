@@ -10083,8 +10083,15 @@
 		"Brand": "Diffractor Soundings",
 		"Name": "Arboretum",
 		"Width": 7.4,
-		"Height": 5.01,
+		"Height": 4.99,
 		"Image": "diffractor-soundings-arboretum.png"
+	},
+	{
+		"Brand": "Diffractor Soundings",
+		"Name": "Chromatic Journey",
+		"Width": 7.4,
+		"Height": 4.99,
+		"Image": "diffractor-soundings-chromatic-journey.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -14415,22 +14422,22 @@
 	{
 		"Brand": "Empress",
 		"Name": "Buffer+",
-		"Width": 2.56,
+		"Width": 2.6,
 		"Height": 4.5,
 		"Image": "empress-buffer-plus.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Buffer+Stereo",
-		"Width": 3.5,
-		"Height": 4.5,
+		"Width": 3.83,
+		"Height": 4.7,
 		"Image": "empress-buffer-stereo.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Compressor",
-		"Width": 4.68,
-		"Height": 3.5,
+		"Width": 4.95,
+		"Height": 3.7,
 		"Image": "empress-comp.png"
 	},
 	{
@@ -14450,7 +14457,7 @@
 	{
 		"Brand": "Empress",
 		"Name": "Distortion",
-		"Width": 2.63,
+		"Width": 2.6,
 		"Height": 4.5,
 		"Image": "empress-distortion.png"
 	},
@@ -14464,22 +14471,22 @@
 	{
 		"Brand": "Empress",
 		"Name": "Fuzz",
-		"Width": 2.63,
+		"Width": 2.6,
 		"Height": 4.5,
 		"Image": "empress-fuzz.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Germ Drive",
-		"Width": 2.63,
+		"Width": 2.6,
 		"Height": 4.5,
 		"Image": "empress-germ-drive.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Heavy",
-		"Width": 4.68,
-		"Height": 3.5,
+		"Width": 4.95,
+		"Height": 3.7,
 		"Image": "empress-heavy.png"
 	},
 	{
@@ -14506,22 +14513,22 @@
 	{
 		"Brand": "Empress",
 		"Name": "Multidrive",
-		"Width": 4.68,
-		"Height": 3.5,
+		"Width": 4.95,
+		"Height": 3.7,
 		"Image": "empress-multidrive.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Nebulus",
-		"Width": 4.68,
-		"Height": 3.5,
+		"Width": 4.95,
+		"Height": 3.7,
 		"Image": "empress-nebulus.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "ParaEQ",
-		"Width": 4.68,
-		"Height": 3.5,
+		"Width": 4.95,
+		"Height": 3.7,
 		"Image": "empress-para-eq.png"
 	},
 	{
@@ -14548,8 +14555,8 @@
 	{
 		"Brand": "Empress",
 		"Name": "Phaser",
-		"Width": 4.68,
-		"Height": 3.5,
+		"Width": 4.95,
+		"Height": 3.7,
 		"Image": "empress-phaser.png"
 	},
 	{
@@ -14576,15 +14583,15 @@
 	{
 		"Brand": "Empress",
 		"Name": "Tape Delay",
-		"Width": 4.68,
-		"Height": 3.5,
+		"Width": 4.95,
+		"Height": 3.7,
 		"Image": "empress-tape-delay.png"
 	},
 	{
 		"Brand": "Empress",
 		"Name": "Tremolo 2",
-		"Width": 4.68,
-		"Height": 3.5,
+		"Width": 4.95,
+		"Height": 3.7,
 		"Image": "empress-trem2.png"
 	},
 	{
