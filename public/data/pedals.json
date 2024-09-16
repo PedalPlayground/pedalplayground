@@ -11901,6 +11901,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Dirt Transmitter (Reissue)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "earthquaker-dirt-transmitter-reissue.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Disaster Transport",
 		"Width": 3.7,
 		"Height": 5.02,
