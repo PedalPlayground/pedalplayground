@@ -3333,6 +3333,13 @@
 	},
 	{
 		"Brand": "Beetronics",
+		"Name": "Tuna Fuzz",
+		"Width": 4.17,
+		"Height": 3.5,
+		"Image": "beetronics-tuna-fuzz.png"
+	},
+	{
+		"Brand": "Beetronics",
 		"Name": "Vezzpa",
 		"Width": 3.42,
 		"Height": 5.5,
@@ -34792,15 +34799,15 @@
 	{
 		"Brand": "Rainger FX",
 		"Name": "Break Box",
-		"Width": 3.46,
-		"Height": 5.00,
+		"Width": 3.44,
+		"Height": 4.85,
 		"Image": "raingerfx-break-box.png"
 	},
 	{
 		"Brand": "Rainger FX",
 		"Name": "Chop Fuzzz",
-		"Width": 4.09,
-		"Height": 4.56,
+		"Width": 4.25,
+		"Height": 4.91,
 		"Image": "raingerfx-chop-fuzzz.png"
 	},
 	{
@@ -34813,8 +34820,8 @@
 	{
 		"Brand": "Rainger FX",
 		"Name": "Drone Rainger",
-		"Width": 4.09,
-		"Height": 4.56,
+		"Width": 4.17,
+		"Height": 4.76,
 		"Image": "raingerfx-drone-rainger.png"
 	},
 	{
@@ -34854,6 +34861,13 @@
 	},
 	{
 		"Brand": "Rainger FX",
+		"Name": "Pull Focus",
+		"Width": 2.66,
+		"Height": 4.67,
+		"Image": "raingerfx-pull-focus.png"
+	},
+	{
+		"Brand": "Rainger FX",
 		"Name": "Reverb-X",
 		"Width": 1.7,
 		"Height": 4.15,
@@ -34862,8 +34876,8 @@
 	{
 		"Brand": "Rainger FX",
 		"Name": "Snare Trap",
-		"Width": 4.31,
-		"Height": 5.37,
+		"Width": 4.33,
+		"Height": 5.52,
 		"Image": "raingerfx-snare-trap.png"
 	},
 	{
