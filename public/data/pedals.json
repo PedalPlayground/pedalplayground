@@ -2681,6 +2681,41 @@
 		"Image": "audio-sprockets-tone-dexter-2.png"
 	},
 	{
+		"Brand": "BSRI",
+		"Name": "Ashmaker",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "bsri-ashmaker.png"
+	},
+	{
+		"Brand": "BSRI",
+		"Name": "Everything We Don't Know About The Ocean Floor",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "bsri-ewdkatof.png"
+	},
+	{
+		"Brand": "BSRI",
+		"Name": "Impossible Colors",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "bsri-impossible-colors.png"
+	},
+	{
+		"Brand": "BSRI",
+		"Name": "Magawa",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "bsri-magawa.png"
+	},
+	{
+		"Brand": "BSRI",
+		"Name": "Soft Rains And The Smell Of The Ground",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "bsri-sratsotg.png"
+	},
+	{
 		"Brand": "Bananana Effects",
 		"Name": "Abracadabra",
 		"Width": 2,
