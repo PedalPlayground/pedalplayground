@@ -31368,6 +31368,13 @@
 	},
 	{
 		"Brand": "Neural DSP",
+		"Name": "Nano Cortex",
+		"Width": 5.78,
+		"Height": 4.16,
+		"Image": "neural-dsp-nano-cortex.png"
+	},
+	{
+		"Brand": "Neural DSP",
 		"Name": "Quad Cortex",
 		"Width": 11.42,
 		"Height": 7.8,
