@@ -2681,6 +2681,41 @@
 		"Image": "audio-sprockets-tone-dexter-2.png"
 	},
 	{
+		"Brand": "Audio Surplus Effects",
+		"Name": "Dornenkrone",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "ase-dornenkrone.png"
+	},
+	{
+		"Brand": "Audio Surplus Effects",
+		"Name": "Lurid Machine",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "ase-lurid-machine.png"
+	},
+	{
+		"Brand": "Audio Surplus Effects",
+		"Name": "Massenpanik",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "ase-massenpanik.png"
+	},
+	{
+		"Brand": "Audio Surplus Effects",
+		"Name": "Ok Doomer",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "ase-ok-doomer.png"
+	},
+	{
+		"Brand": "Audio Surplus Effects",
+		"Name": "Ok Doomer (Slider)",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "ase-ok-doomer-slider.png"
+	},
+	{
 		"Brand": "BSRI",
 		"Name": "Ashmaker",
 		"Width": 3.7,
