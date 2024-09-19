@@ -7680,6 +7680,13 @@
 	},
 	{
 		"Brand": "CME",
+		"Name": "U6Midi Pro",
+		"Width": 3.25,
+		"Height": 2.52,
+		"Image": "cme-u6midi-pro.png"
+	},
+	{
+		"Brand": "CME",
 		"Name": "WIDI Jack",
 		"Width": 1.339,
 		"Height": 1.496,
@@ -24400,6 +24407,13 @@
 		"Width": 4.87,
 		"Height": 2.74,
 		"Image": "lovepedal-amp808.png"
+	},
+	{
+		"Brand": "Lovepedal",
+		"Name": "Coternity",
+		"Width": 4.69,
+		"Height": 3.66,
+		"Image": "lovepedal-coternity.png"
 	},
 	{
 		"Brand": "Lovepedal",
