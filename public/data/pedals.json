@@ -9933,6 +9933,13 @@
 		"Image": "devi-ever-torns-peaker.png"
 	},
 	{
+		"Brand": "DevTech",
+		"Name": "Gilmour Muff",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "devtech-gilmour-muff.png"
+	},
+	{
 		"Brand": "Diamond",
 		"Name": "Bass Comp",
 		"Width": 3.92,
@@ -32681,6 +32688,13 @@
 		"Width": 2.77,
 		"Height": 5.02,
 		"Image": "opfxs-electric-vibe.png"
+	},
+	{
+		"Brand": "OPFXS",
+		"Name": "Twin Boost",
+		"Width": 2.87,
+		"Height": 4.8,
+		"Image": "opfxs-twin-boost.png"
 	},
 	{
 		"Brand": "Orange",
