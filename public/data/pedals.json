@@ -9927,7 +9927,28 @@
 	},
 	{
 		"Brand": "Devi Ever: FX",
-		"Name": "Torn's Peaker",
+		"Name": "Hyperion",
+		"Width": 2.74,
+		"Height": 4.66,
+		"Image": "devi-ever-hyperion.png"
+	},
+	{
+		"Brand": "Devi Ever: FX",
+		"Name": "Soda Meiser",
+		"Width": 2.74,
+		"Height": 4.66,
+		"Image": "devi-ever-soda-meiser.png"
+	},
+	{
+		"Brand": "Devi Ever: FX",
+		"Name": "Torn's Speaker",
+		"Width": 2.74,
+		"Height": 4.66,
+		"Image": "devi-ever-torns-peaker-old.png"
+	},
+	{
+		"Brand": "Devi Ever: FX",
+		"Name": "Torn's Peaker (125B)",
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "devi-ever-torns-peaker.png"
@@ -33766,6 +33787,13 @@
 		"Width": 1.95,
 		"Height": 3.77,
 		"Image": "peterson-strobostomp-mini.png"
+	},
+	{
+		"Brand": "Petla	",
+		"Name": "Noa",
+		"Width": 2.92,
+		"Height": 4.89,
+		"Image": "petla-noa.png"
 	},
 	{
 		"Brand": "Pettyjohn",
