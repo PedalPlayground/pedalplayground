@@ -18516,17 +18516,115 @@
 	},
 	{
 		"Brand": "GUPTech",
+		"Name": "A(((Ole))) - Death By Unicorn",
+		"Width": 5.7,
+		"Height": 4.91,
+		"Image": "guptech-aole.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "Berry-Verb V2",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "guptech-berry-verb-v2.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "Boo Octave Machine",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "guptech-boo-octave-machine.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "Death By Unicorn Mini",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "guptech-mini-corn.png"
+	},
+	{
+		"Brand": "GUPTech",
 		"Name": "Donut Distortion",
 		"Width": 2.6,
-		"Height": 4.94,
+		"Height": 5.06,
 		"Image": "guptech-donut.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "Double Donut",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "guptech-double-donut.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "FOAZZ",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "guptech-foazz.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "GrindR EQ",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "guptech-grindr.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "Horsie Overdrive",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "guptech-horsie.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "MWAC Gate",
+		"Width": 2.8,
+		"Height": 5.06,
+		"Image": "guptech-mwac.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "PdeQ",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "guptech-pdeq.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "Phoque Face Fuzz",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "guptech-phoque-face.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "Pile O' RATs",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "guptech-pile-o-rats.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "Queen of Crow Dual Overdrive",
+		"Width": 4.7,
+		"Height": 3.88,
+		"Image": "guptech-queen-of-crow.png"
 	},
 	{
 		"Brand": "GUPTech",
 		"Name": "SUN Noise Gate",
 		"Width": 3,
-		"Height": 5,
+		"Height": 5.06,
 		"Image": "guptech-sun.png"
+	},
+	{
+		"Brand": "GUPTech",
+		"Name": "Voodoo Doll Univibe",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "guptech-voodoo-doll.png"
 	},
 	{
 		"Brand": "Gurus",
@@ -25205,6 +25303,13 @@
 		"Width": 2.88,
 		"Height": 4.95,
 		"Image": "lichtlaerm-kassandra.png"
+	},
+	{
+		"Brand": "Lichtlaerm",
+		"Name": "Medusa",
+		"Width": 2.74,
+		"Height": 4.95,
+		"Image": "lichtlaerm-medusa.png"
 	},
 	{
 		"Brand": "Lichtlaerm",
