@@ -42002,6 +42002,13 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Enigmatic",
+		"Width": 3.5,
+		"Height": 5.62,
+		"Image": "ua-enigmatic.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Evermore",
 		"Width": 2.58,
 		"Height": 4.77,
@@ -43357,6 +43364,13 @@
 		"Width": 2.84,
 		"Height": 4.5,
 		"Image": "warm-audio-odd-box.png"
+	},
+	{
+		"Brand": "Warm Audio",
+		"Name": "Pedal76",
+		"Width": 5.9,
+		"Height": 4.31,
+		"Image": "warm-audio-pedal76.png"
 	},
 	{
 		"Brand": "Warm Audio",
