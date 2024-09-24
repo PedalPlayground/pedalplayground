@@ -23689,6 +23689,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "OCTA PSI",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-octa-psi.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Omni",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -23798,6 +23805,13 @@
 		"Width": 4.5,
 		"Height": 2.61,
 		"Image": "keeley-remote-switcher-hydra.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Remote Switcher (OCTA PSI)",
+		"Width": 4.5,
+		"Height": 2.61,
+		"Image": "keeley-remote-switcher-octa-psi.png"
 	},
 	{
 		"Brand": "Keeley",
