@@ -44018,10 +44018,24 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "MAKO Series: ACS1 MKII",
+		"Width": 2.85,
+		"Height": 4.9,
+		"Image": "walrus-acs1-mk2.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "MAKO Series: D1",
 		"Width": 2.87,
 		"Height": 4.9,
 		"Image": "walrus-mako-d1.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "MAKO Series: D1 MKII",
+		"Width": 2.85,
+		"Height": 4.9,
+		"Image": "walrus-mako-d1-mk2.png"
 	},
 	{
 		"Brand": "Walrus Audio",
@@ -44039,10 +44053,24 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "MAKO Series: M1 MKII",
+		"Width": 2.85,
+		"Height": 4.9,
+		"Image": "walrus-mako-m1-mk2.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "MAKO Series: R1",
 		"Width": 2.87,
 		"Height": 4.9,
 		"Image": "walrus-r1.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "MAKO Series: R1 MK2",
+		"Width": 2.85,
+		"Height": 4.9,
+		"Image": "walrus-r1-mk2.png"
 	},
 	{
 		"Brand": "Walrus Audio",
