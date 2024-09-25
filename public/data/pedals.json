@@ -43395,6 +43395,13 @@
 	},
 	{
 		"Brand": "Warm Audio",
+		"Name": "WA-C1",
+		"Width": 6.5,
+		"Height": 4.11,
+		"Image": "warm-audio-wac1.png"
+	},
+	{
+		"Brand": "Warm Audio",
 		"Name": "Warm Bender",
 		"Width": 3.37,
 		"Height": 6,
