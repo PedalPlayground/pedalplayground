@@ -3780,6 +3780,13 @@
 		"Image": "benson-stonk-box.png"
 	},
 	{
+		"Brand": "Benson",
+		"Name": "Störkn B0kš",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-storkn-boks.png"
+	},
+	{
 		"Brand": "Bergantino",
 		"Name": "Super Pre",
 		"Width": 8.5,
@@ -10043,6 +10050,13 @@
 		"Width": 5.01,
 		"Height": 3.82,
 		"Image": "diamond-counterpoint.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "Dark Cloud (2023)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-dark-cloud.png"
 	},
 	{
 		"Brand": "Diamond",
@@ -24659,6 +24673,20 @@
 		"Width": 2.6,
 		"Height": 5.09,
 		"Image": "kodex-gfx-91w.png"
+	},
+	{
+		"Brand": "Kodex Audio",
+		"Name": "Grayskull",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "kodex-grayskull.png"
+	},
+	{
+		"Brand": "Kodex Audio",
+		"Name": "Lux",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "kodex-lux.png"
 	},
 	{
 		"Brand": "Komet",
