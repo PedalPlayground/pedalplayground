@@ -30555,13 +30555,6 @@
 		"Image": "nobels-odr-mini.png"
 	},
 	{
-		"Brand": "Nobels",
-		"Name": "ODR Mini 2",
-		"Width": 1.92,
-		"Height": 3.66,
-		"Image": "nobels-odr-mini-2.png"
-	},
-	{
 		"Brand": "Noise Engineering",
 		"Name": "Dystorpia",
 		"Width": 2.99,
@@ -40921,13 +40914,6 @@
 		"Width": 3.7,
 		"Height": 4.7,
 		"Image": "blank.png"
-	},
-	{
-		"Brand": "The King of Gear",
-		"Name": "EQ-201 Preamp",
-		"Width": 2.44,
-		"Height": 4.71,
-		"Image": "tkog-eq201preamp.png"
 	},
 	{
 		"Brand": "The King of Gear",
