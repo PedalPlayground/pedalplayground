@@ -30542,13 +30542,6 @@
 	},
 	{
 		"Brand": "Nobels",
-		"Name": "TR-X",
-		"Width": 2.89,
-		"Height": 5.08,
-		"Image": "nobels-tr-x.png"
-	},
-	{
-		"Brand": "Nobels",
 		"Name": "ODR Mini",
 		"Width": 1.99,
 		"Height": 3.66,
@@ -30560,6 +30553,13 @@
 		"Width": 1.92,
 		"Height": 3.66,
 		"Image": "nobels-odr-mini-2.png"
+	},
+	{
+		"Brand": "Nobels",
+		"Name": "TR-X",
+		"Width": 2.89,
+		"Height": 5.08,
+		"Image": "nobels-tr-x.png"
 	},
 	{
 		"Brand": "Noise Engineering",
