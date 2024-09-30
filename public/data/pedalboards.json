@@ -1205,6 +1205,13 @@
 	},
 	{
 		"Brand": "Rockboard by Warwick",
+		"Name": "Duo 2.3",
+		"Width": 28.42,
+		"Height": 5.75,
+		"Image": "rockboard-duo-23.png"
+	},
+	{
+		"Brand": "Rockboard by Warwick",
 		"Name": "Quad 4.1",
 		"Width": 18.5,
 		"Height": 13,
