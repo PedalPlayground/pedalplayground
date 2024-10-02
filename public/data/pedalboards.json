@@ -1233,6 +1233,13 @@
 	},
 	{
 		"Brand": "Rockboard by Warwick",
+		"Name": "Quad 4.4",
+		"Width": 28.42,
+		"Height": 13,
+		"Image": "rockboard-quad-44.png"
+	},
+	{
+		"Brand": "Rockboard by Warwick",
 		"Name": "Tres 3.0",
 		"Width": 17.4,
 		"Height": 9.3,

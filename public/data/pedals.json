@@ -42114,6 +42114,13 @@
 	},
 	{
 		"Brand": "Universal Audio",
+		"Name": "Knuckles",
+		"Width": 3.5,
+		"Height": 5.62,
+		"Image": "ua-knuckles.png"
+	},
+	{
+		"Brand": "Universal Audio",
 		"Name": "Lion",
 		"Width": 3.5,
 		"Height": 5.62,
