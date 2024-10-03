@@ -21211,6 +21211,13 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Kochness Monster",
+		"Width": 15.75,
+		"Height": 6.7,
+		"Image": "jam-kochness-monster.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Lucydreamer",
 		"Width": 2.96,
 		"Height": 4.87,
@@ -35694,6 +35701,13 @@
 	},
 	{
 		"Brand": "Revv",
+		"Name": "G2 (Anniversary)",
+		"Width": 2.75,
+		"Height": 4.85,
+		"Image": "revv-g2-anniversary.png"
+	},
+	{
+		"Brand": "Revv",
 		"Name": "G2 (Canadian Edition)",
 		"Width": 2.79,
 		"Height": 4.96,
@@ -35715,6 +35729,13 @@
 	},
 	{
 		"Brand": "Revv",
+		"Name": "G3 (Anniversary)",
+		"Width": 2.75,
+		"Height": 4.85,
+		"Image": "revv-g3-anniversary.png"
+	},
+	{
+		"Brand": "Revv",
 		"Name": "G3 (Red)",
 		"Width": 2.75,
 		"Height": 4.87,
@@ -35726,6 +35747,13 @@
 		"Width": 2.75,
 		"Height": 4.87,
 		"Image": "revv-g4.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "G4 (Anniversary)",
+		"Width": 2.75,
+		"Height": 4.85,
+		"Image": "revv-g4-anniversary.png"
 	},
 	{
 		"Brand": "Revv",
@@ -45107,6 +45135,13 @@
 		"Width": 2.55,
 		"Height": 4.87,
 		"Image": "weehbo-tackleberry.png"
+	},
+	{
+		"Brand": "West Co Pedals",
+		"Name": "Grease Juicer",
+		"Width": 4.7,
+		"Height": 3.81,
+		"Image": "wcp-grease-juicer.png"
 	},
 	{
 		"Brand": "Westerlund",
