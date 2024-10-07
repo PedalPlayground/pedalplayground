@@ -13490,6 +13490,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Lizard King",
+		"Width": 2.82,
+		"Height": 4.5,
+		"Image": "ehx-lizard-king.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Lizard Queen",
 		"Width": 2.82,
 		"Height": 4.5,
@@ -28883,6 +28890,13 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Big Fuzz",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-big-fuzz.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Black Rat",
 		"Width": 1.84,
 		"Height": 3.66,
@@ -28897,6 +28911,13 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Dolphin",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-dolphin.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Dual Switch",
 		"Width": 3.7,
 		"Height": 1.68,
@@ -28908,6 +28929,20 @@
 		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-golden-horse.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "King Rat",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-king-rat.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "LM741 Preamp",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-lm471-preamp.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -43441,6 +43476,13 @@
 		"Width": 6.75,
 		"Height": 5.28,
 		"Image": "warm-audio-centavo.png"
+	},
+	{
+		"Brand": "Warm Audio",
+		"Name": "Centavo (Silver)",
+		"Width": 6.75,
+		"Height": 5.28,
+		"Image": "warm-audio-centavo-silver.png"
 	},
 	{
 		"Brand": "Warm Audio",
