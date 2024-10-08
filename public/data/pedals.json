@@ -28890,10 +28890,24 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Accurate Drive",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-accurate-drive.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Big Fuzz",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "mosky-big-fuzz.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Black Juice Preamp",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-black-juice-preamp.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -28911,6 +28925,20 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Compass Drive",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-compass-drive.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Crunch Pro",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-crunch-pro.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Dolphin",
 		"Width": 2.6,
 		"Height": 5,
@@ -28925,10 +28953,45 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Flame Chorus",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-flame-chorus.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "G III Blue",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-g-3-blue.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "G IV Red",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-g-4-red.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Golden Horse",
 		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-golden-horse.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Green Screamer",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-green-screamer.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Honey Box",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-honey-box.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -28953,10 +29016,59 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Mad Cow",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-mad-cow.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Marksman",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-marksman.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Mini Muff",
 		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-mini-muff.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Multi Spring Reverb",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-multi-spring-reverb.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Ota Phaser",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-ota-phaser.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Plexi Pro",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-plexi-pro.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Red Brown Distortion",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-red-brown-distortion.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Roller Compressor",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-roller-compressor.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -28971,6 +29083,27 @@
 		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-spring-reverb.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Super Delay",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-super-delay.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Tai Ji Drive",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-tai-ji-drive.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Transparent Overdrive",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "mosky-transparent-overdrive.png"
 	},
 	{
 		"Brand": "Moth Electric",
