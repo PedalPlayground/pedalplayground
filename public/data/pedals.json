@@ -28897,6 +28897,20 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "AMP Turbo",
+		"Width": 4.53,
+		"Height": 2.7,
+		"Image": "mosky-amp-turbo.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "BB Preamp",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-bb-preamp.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Big Fuzz",
 		"Width": 2.6,
 		"Height": 5,
@@ -28918,10 +28932,73 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Blue Delay",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-blue-delay.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Blue Ocean Chorus",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-blue-ocean-chorus.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "BP Booster",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-bp-booster.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "CE Chorus",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-ce-chorus.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Ch-Vibe",
 		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-ch-vibe.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Classic AC-30 Speaker Sim",
+		"Width": 2.71,
+		"Height": 4.53,
+		"Image": "mosky-classic-ac30-speaker-sim.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Classic F-DR Speaker Sim",
+		"Width": 2.71,
+		"Height": 4.53,
+		"Image": "mosky-classic-fdr-speaker-sim.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Classic M-SA Speaker Sim",
+		"Width": 2.71,
+		"Height": 4.53,
+		"Image": "mosky-classic-msa-speaker-sim.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Classic M-SHALL Speaker Sim",
+		"Width": 2.71,
+		"Height": 4.53,
+		"Image": "mosky-classic-mshall-speaker-sim.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Clean Buffer",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-clean-buffer.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -28932,10 +29009,45 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Crazy Tone",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-crazy-tone.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Crunch Pro",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "mosky-crunch-pro.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Crunch Red Distortion",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-crunch-red-distortion.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "D250X",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-d250x.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "DEC Buffer Booster",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-dec-buffer-booster.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Deluxe Preamp",
+		"Width": 4.53,
+		"Height": 2.7,
+		"Image": "mosky-deluxe-preamp.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -28953,10 +29065,24 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Dynamic Compressor",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-dynamic-compressor.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Flame Chorus",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "mosky-flame-chorus.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Fuzz Distortion",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-fuzz-distortion.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -28978,6 +29104,13 @@
 		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-golden-horse.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Green Drive",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-green-drive.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -29023,10 +29156,24 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Magnetic Delay",
+		"Width": 2.71,
+		"Height": 4.53,
+		"Image": "mosky-magnetic-delay.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Marksman",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "mosky-marksman.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Mini C4 Compressor",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-mini-c4-compressor.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -29037,6 +29184,20 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Mini Screamer",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-mini-screamer.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "MM Overdrive",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-mm-overdrive.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Multi Spring Reverb",
 		"Width": 2.6,
 		"Height": 5,
@@ -29044,10 +29205,38 @@
 	},
 	{
 		"Brand": "Mosky",
-		"Name": "Ota Phaser",
+		"Name": "Noise Gate",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-noise-gate.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Noise Kinger",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-noise-kinger.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Obsessive Overdrive",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-obsessive-overdrive.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "OTA Phaser",
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "mosky-ota-phaser.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Plexi Distortion",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-plexi-distortion.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -29072,10 +29261,24 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "SHO Booster",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-sho-booster.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Silver Horse",
 		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-silver-horse.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Sky Reverb & Delay",
+		"Width": 2.71,
+		"Height": 4.53,
+		"Image": "mosky-sky-reverb-delay.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -29104,6 +29307,20 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "mosky-transparent-overdrive.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "VOL Attenuator",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-vol-attenuator.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "XP Booster",
+		"Width": 1.84,
+		"Height": 3.66,
+		"Image": "mosky-xp-booster.png"
 	},
 	{
 		"Brand": "Moth Electric",
