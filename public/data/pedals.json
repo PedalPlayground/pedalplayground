@@ -7603,6 +7603,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Clean",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-clean.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Condor",
 		"Width": 2.86,
 		"Height": 4.86,
@@ -34972,6 +34979,13 @@
 		"Image": "poly-verbs.png"
 	},
 	{
+		"Brand": "Polyend",
+		"Name": "Press",
+		"Width": 4.17,
+		"Height": 4.9,
+		"Image": "polyend-press.png"
+	},
+	{
 		"Brand": "Preston Pedals",
 		"Name": "Stereo Audition",
 		"Width": 3.7,
@@ -39485,6 +39499,13 @@
 		"Width": 3.7,
 		"Height": 4.92,
 		"Image": "summer-school-electronics-the-class-reunion.png"
+	},
+	{
+		"Brand": "Superlunar",
+		"Name": "SR-01",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "superlunar-sr01.png"
 	},
 	{
 		"Brand": "Supro",
