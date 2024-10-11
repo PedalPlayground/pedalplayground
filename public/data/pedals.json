@@ -2716,6 +2716,13 @@
 		"Image": "ase-ok-doomer-slider.png"
 	},
 	{
+		"Brand": "AVTPedals",
+		"Name": "DC Tank",
+		"Width": 6.24,
+		"Height": 3.94,
+		"Image": "avtpedals-dc-tank.png"
+	},
+	{
 		"Brand": "BSRI",
 		"Name": "Ashmaker",
 		"Width": 3.7,
@@ -6755,6 +6762,13 @@
 		"Image": "caroline-wave-cannon-mk2-1985.png"
 	},
 	{
+		"Brand": "Caroline",
+		"Name": "Wave Cannon Zero",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "caroline-wave-cannon-zero.png"
+	},
+	{
 		"Brand": "Case Study",
 		"Name": "Aspen Overdrive",
 		"Width": 2.6,
@@ -9548,14 +9562,21 @@
 		"Image": "dawnerprince-viberator.png"
 	},
 	{
-		"Brand": "Dead Air Studios",
+		"Brand": "Dead Air",
+		"Name": "Chaos Drive",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "deadair-chaos-drive.png"
+	},
+	{
+		"Brand": "Dead Air",
 		"Name": "Feral",
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "deadair-feral.png"
 	},
 	{
-		"Brand": "Dead Air Studios",
+		"Brand": "Dead Air",
 		"Name": "Feral+",
 		"Width": 3.7,
 		"Height": 4.81,
