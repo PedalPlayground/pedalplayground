@@ -16065,6 +16065,13 @@
 		"Image": "fractal-fm9.png"
 	},
 	{
+		"Brand": "Fractal Audio Systems",
+		"Name": "VP4",
+		"Width": 10,
+		"Height": 6.3,
+		"Image": "fractal-vp4.png"
+	},
+	{
 		"Brand": "Frantone Electronics",
 		"Name": "Acoust-A-Boost",
 		"Width": 5.06,
