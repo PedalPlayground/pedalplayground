@@ -15487,98 +15487,105 @@
 		"Brand": "Fjord Fuzz",
 		"Name": "Berserk",
 		"Width": 2.52,
-		"Height": 4.8,
+		"Height": 4.78,
 		"Image": "fjord-berserk.png"
-	},
-	{
-		"Brand": "Fjord Fuzz",
-		"Name": "Berserk II",
-		"Width": 2.52,
-		"Height": 4.8,
-		"Image": "fjord-berserk-2.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Bifrost",
 		"Width": 3.66,
-		"Height": 4.78,
+		"Height": 4.97,
 		"Image": "fjord-bifrost.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Dovre",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-dovre.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Dovre (Black)",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-dovre-black.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Embla",
 		"Width": 2.52,
-		"Height": 4.8,
+		"Height": 4.78,
 		"Image": "fjord-embla.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Fenris",
 		"Width": 2.52,
-		"Height": 4.8,
+		"Height": 4.78,
 		"Image": "fjord-fenris.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Frei",
 		"Width": 2.52,
-		"Height": 4.93,
+		"Height": 4.89,
 		"Image": "fjord-frei.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Freia",
 		"Width": 2.52,
-		"Height": 4.8,
+		"Height": 4.78,
 		"Image": "fjord-freia.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Hedda",
 		"Width": 2.52,
-		"Height": 4.8,
+		"Height": 4.78,
 		"Image": "fjord-hedda.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Kvasir",
 		"Width": 2.52,
-		"Height": 4.8,
+		"Height": 4.78,
 		"Image": "fjord-kvasir.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Loke",
 		"Width": 2.52,
-		"Height": 4.93,
+		"Height": 4.89,
 		"Image": "fjord-loke.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Måne",
 		"Width": 2.52,
-		"Height": 4.93,
+		"Height": 4.89,
 		"Image": "fjord-mane.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Mime",
 		"Width": 2.52,
-		"Height": 4.93,
+		"Height": 4.89,
 		"Image": "fjord-mime.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Odin",
 		"Width": 2.52,
-		"Height": 4.8,
+		"Height": 4.78,
 		"Image": "fjord-odin.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
 		"Name": "Sol",
 		"Width": 2.52,
-		"Height": 4.8,
+		"Height": 4.78,
 		"Image": "fjord-sol.png"
 	},
 	{
