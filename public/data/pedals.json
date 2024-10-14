@@ -37962,6 +37962,13 @@
 	},
 	{
 		"Brand": "SoloDallas",
+		"Name": "Orbiter Fuzz",
+		"Width": 2.79,
+		"Height": 4.72,
+		"Image": "solodallas-orbiter-fuzz.png"
+	},
+	{
+		"Brand": "SoloDallas",
 		"Name": "The Schaffer Replica Bass-X",
 		"Width": 2.79,
 		"Height": 4.72,
