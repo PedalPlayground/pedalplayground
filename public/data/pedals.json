@@ -3984,6 +3984,13 @@
 	},
 	{
 		"Brand": "Black Mass Electronics",
+		"Name": "1312 Distortion V3 (Black)",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "blackmass-1312-v3-black.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
 		"Name": "1312 Distortion V3 (Blurple)",
 		"Width": 2.6,
 		"Height": 4.97,
@@ -25438,6 +25445,20 @@
 		"Image": "lichtlaerm-untiefe.png"
 	},
 	{
+		"Brand": "Life Is Unfair",
+		"Name": "Bad Machine (Reverb)",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "life-is-unfair-bad-machine-reverb.png"
+	},
+	{
+		"Brand": "Life Is Unfair",
+		"Name": "Violet Oscillation",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "life-is-unfair-violet-oscillation.png"
+	},
+	{
 		"Brand": "Lightning Wave",
 		"Name": "Ghost",
 		"Width": 3.7,
@@ -46640,6 +46661,13 @@
 		"Width": 4.68,
 		"Height": 2.38,
 		"Image": "zvex-lofi-junky-little-box.png"
+	},
+	{
+		"Brand": "Zvex",
+		"Name": "Instant Lo-Fi Junky (Razzle Dazzle)",
+		"Width": 4.68,
+		"Height": 2.38,
+		"Image": "zvex-lofijunky-razzle-dazzle.png"
 	},
 	{
 		"Brand": "Zvex",
