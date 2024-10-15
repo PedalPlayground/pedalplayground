@@ -25943,6 +25943,13 @@
 	},
 	{
 		"Brand": "LPD",
+		"Name": "CLE-304",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "lpd-cle-304.png"
+	},
+	{
+		"Brand": "LPD",
 		"Name": "Eighty7",
 		"Width": 2.68,
 		"Height": 4.5,
@@ -25996,6 +26003,20 @@
 		"Width": 2.68,
 		"Height": 4.5,
 		"Image": "lpd-lucent.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Lucent Overdrive (2024)",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "lpd-lucent-v2.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "Eighty7 Plus",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "lpd-eighty7-plus.png"
 	},
 	{
 		"Brand": "LPD",
