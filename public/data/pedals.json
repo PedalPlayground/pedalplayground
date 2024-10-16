@@ -16079,60 +16079,67 @@
 		"Image": "foxrox-zim.png"
 	},
 	{
-		"Brand": "Fractal Audio Systems",
+		"Brand": "Fractal",
 		"Name": "AX8",
 		"Width": 16.4,
 		"Height": 10.3,
 		"Image": "fractal-axe8.png"
 	},
 	{
-		"Brand": "Fractal Audio Systems",
+		"Brand": "Fractal",
 		"Name": "EV-1 Black",
 		"Width": 4.1,
 		"Height": 11.5,
 		"Image": "fractal-ev1-black.png"
 	},
 	{
-		"Brand": "Fractal Audio Systems",
+		"Brand": "Fractal",
 		"Name": "EV-1 Silver",
 		"Width": 4.1,
 		"Height": 11.5,
 		"Image": "fractal-ev1-silver.png"
 	},
 	{
-		"Brand": "Fractal Audio Systems",
+		"Brand": "Fractal",
 		"Name": "EV-2",
 		"Width": 3.33,
 		"Height": 7.5,
 		"Image": "fractal-ev2.png"
 	},
 	{
-		"Brand": "Fractal Audio Systems",
+		"Brand": "Fractal",
 		"Name": "FC12",
 		"Width": 20.2,
 		"Height": 9.2,
 		"Image": "fractal-fc12.png"
 	},
 	{
-		"Brand": "Fractal Audio Systems",
+		"Brand": "Fractal",
 		"Name": "FC6",
 		"Width": 11.2,
 		"Height": 9.2,
 		"Image": "fractal-fc6.png"
 	},
 	{
-		"Brand": "Fractal Audio Systems",
+		"Brand": "Fractal",
 		"Name": "FM3",
 		"Width": 11.1,
 		"Height": 9.3,
 		"Image": "fractal-fm3.png"
 	},
 	{
-		"Brand": "Fractal Audio Systems",
+		"Brand": "Fractal",
 		"Name": "FM9",
 		"Width": 20.2,
 		"Height": 9.2,
 		"Image": "fractal-fm9.png"
+	},
+	{
+		"Brand": "Fractal",
+		"Name": "VP4",
+		"Width": 10,
+		"Height": 6.52,
+		"Image": "fractal-vp4.png"
 	},
 	{
 		"Brand": "Frantone Electronics",
