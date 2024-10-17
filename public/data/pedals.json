@@ -31550,10 +31550,31 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "MG-101",
+		"Width": 9.61,
+		"Height": 6.4,
+		"Image": "nux-mg101.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "MG-30",
 		"Width": 12.3,
 		"Height": 6.7,
 		"Image": "nux-mg30.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "MG-300",
+		"Width": 9.06,
+		"Height": 6.15,
+		"Image": "nux-mg300.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "MG-400",
+		"Width": 11.38,
+		"Height": 6.41,
+		"Image": "nux-mg400.png"
 	},
 	{
 		"Brand": "NuX",
