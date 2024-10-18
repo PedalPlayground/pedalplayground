@@ -35120,6 +35120,13 @@
 	},
 	{
 		"Brand": "Poly Effects",
+		"Name": "Ample",
+		"Width": 4.09,
+		"Height": 4.56,
+		"Image": "poly-ample.png"
+	},
+	{
+		"Brand": "Poly Effects",
 		"Name": "Beebo (Blue)",
 		"Width": 5.98,
 		"Height": 5.04,
@@ -35142,15 +35149,15 @@
 	{
 		"Brand": "Poly Effects",
 		"Name": "Josh Smith Flat V",
-		"Width": 4,
+		"Width": 4.09,
 		"Height": 4.56,
 		"Image": "poly-josh-smith-flat-v.png"
 	},
 	{
 		"Brand": "Poly Effects",
 		"Name": "Verbs",
-		"Width": 4,
-		"Height": 4.55,
+		"Width": 4.09,
+		"Height": 4.56,
 		"Image": "poly-verbs.png"
 	},
 	{
