@@ -8498,6 +8498,20 @@
 		"Image": "cornerstone-zefiro.png"
 	},
 	{
+		"Brand": "Cosmodio",
+		"Name": "Gravity Well",
+		"Width": 3.83,
+		"Height": 4.74,
+		"Image": "cosmodio-gravity-well.png"
+	},
+	{
+		"Brand": "Cosmodio",
+		"Name": "Pet Yeti",
+		"Width": 3.7,
+		"Height": 4.74,
+		"Image": "cosmodio-pet-yeti.png"
+	},
+	{
 		"Brand": "Costalab",
 		"Name": "Buffer",
 		"Width": 1.88,
@@ -37402,6 +37416,20 @@
 	},
 	{
 		"Brand": "Silktone",
+		"Name": "Fuzz+",
+		"Width": 4.7,
+		"Height": 3.72,
+		"Image": "silktone-fuzz-plus.png"
+	},
+	{
+		"Brand": "Silktone",
+		"Name": "Fuzz+ (Teal)",
+		"Width": 4.7,
+		"Height": 3.72,
+		"Image": "silktone-fuzz-plus-teal.png"
+	},
+	{
+		"Brand": "Silktone",
 		"Name": "Overdrive+",
 		"Width": 4.7,
 		"Height": 3.73,
@@ -38638,6 +38666,13 @@
 		"Width": 2.92,
 		"Height": 4.75,
 		"Image": "spaceman-explorer.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Explorer (Electric Blue)",
+		"Width": 2.92,
+		"Height": 4.75,
+		"Image": "spaceman-explorer-blue.png"
 	},
 	{
 		"Brand": "Spaceman",
