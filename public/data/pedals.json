@@ -4635,6 +4635,13 @@
 	},
 	{
 		"Brand": "Bondi Effects",
+		"Name": "Del Mar MK2 (Blackout)",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "bondi-del-mar-mk2-blackout.png"
+	},
+	{
+		"Brand": "Bondi Effects",
 		"Name": "Sick As",
 		"Width": 4.7,
 		"Height": 3.81,
@@ -21992,6 +21999,20 @@
 		"Width": 2.9,
 		"Height": 4.87,
 		"Image": "jhs-firefly.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Flight Delay",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "jhs-flight-delay.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Flight Delay (Blue)",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "jhs-flight-delay-blue.png"
 	},
 	{
 		"Brand": "JHS",
