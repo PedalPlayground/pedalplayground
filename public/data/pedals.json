@@ -25747,6 +25747,13 @@
 	},
 	{
 		"Brand": "Line 6",
+		"Name": "POD Express Black",
+		"Width": 3.65,
+		"Height": 5.11,
+		"Image": "line-6-pod-express-black.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "POD X3",
 		"Width": 11,
 		"Height": 7.5,
@@ -43693,6 +43700,13 @@
 		"Width": 4.7,
 		"Height": 5.7,
 		"Image": "vongon-paragraphs.png"
+	},
+	{
+		"Brand": "Vongon",
+		"Name": "Paragraphs II",
+		"Width": 6.5,
+		"Height": 5.5,
+		"Image": "vongon-paragraphs-2.png"
 	},
 	{
 		"Brand": "Vongon",
