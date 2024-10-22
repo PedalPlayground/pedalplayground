@@ -28952,6 +28952,13 @@
 		"Image": "moog-mf-103-12-stage-phaser.png"
 	},
 	{
+		"Brand": "Moog",
+		"Name": "MF-104 Analog Delay",
+		"Width": 6,
+		"Height": 9.24,
+		"Image": "moog-mf-104.png"
+	},
+	{
 		"Brand": "Moollon",
 		"Name": "British Octah",
 		"Width": 2.7,
