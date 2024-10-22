@@ -28934,29 +28934,29 @@
 		"Brand": "Moog",
 		"Name": "MF-101 Low Pass Filter",
 		"Width": 6,
-		"Height": 9,
+		"Height": 9.24,
 		"Image": "moog-mf-101-low-pass-filter.png"
 	},
 	{
 		"Brand": "Moog",
 		"Name": "MF-102 Ring Modulator",
 		"Width": 6,
-		"Height": 9,
+		"Height": 9.24,
 		"Image": "moog-mf-102-ring-modulator.png"
 	},
 	{
 		"Brand": "Moog",
 		"Name": "MF-103 12-Stage Phaser",
 		"Width": 6,
-		"Height": 9,
+		"Height": 9.24,
 		"Image": "moog-mf-103-12-stage-phaser.png"
 	},
 	{
 		"Brand": "Moog",
-		"Name": "MF-104 Analog Delay",
+		"Name": "MF-104M Analog Delay",
 		"Width": 6,
 		"Height": 9.24,
-		"Image": "moog-mf-104.png"
+		"Image": "moog-mf-104m.png"
 	},
 	{
 		"Brand": "Moollon",
@@ -32258,16 +32258,23 @@
 	{
 		"Brand": "Okko FX",
 		"Name": "Coca Comp MKII",
-		"Width": 2.76,
-		"Height": 4.72,
+		"Width": 2.87,
+		"Height": 4.91,
 		"Image": "okko-coca-mk2.png"
 	},
 	{
 		"Brand": "Okko FX",
 		"Name": "Diablo",
-		"Width": 2.76,
-		"Height": 4.72,
+		"Width": 2.87,
+		"Height": 4.91,
 		"Image": "okko-diablo.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "Diablo 20",
+		"Width": 2.6,
+		"Height": 4.96,
+		"Image": "okko-diablo-20.png"
 	},
 	{
 		"Brand": "Okko FX",
@@ -32293,15 +32300,15 @@
 	{
 		"Brand": "Okko FX",
 		"Name": "Holy Grit",
-		"Width": 2.76,
-		"Height": 4.86,
+		"Width": 2.87,
+		"Height": 5.05,
 		"Image": "okko-holy-grit.png"
 	},
 	{
 		"Brand": "Okko FX",
 		"Name": "Motörbass",
-		"Width": 2.76,
-		"Height": 4.72,
+		"Width": 2.87,
+		"Height": 4.91,
 		"Image": "okko-motorbass.png"
 	},
 	{
@@ -32317,6 +32324,13 @@
 		"Width": 3.67,
 		"Height": 4.81,
 		"Image": "okko-twinsonic.png"
+	},
+	{
+		"Brand": "Okko FX",
+		"Name": "V.I.B.",
+		"Width": 2.8,
+		"Height": 4.57,
+		"Image": "okko-vib.png"
 	},
 	{
 		"Brand": "OBNE",
