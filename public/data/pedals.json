@@ -38878,6 +38878,13 @@
 		"Image": "spruce-effects-the-gale.png"
 	},
 	{
+		"Brand": "Step Audio",
+		"Name": "Status",
+		"Width": 5,
+		"Height": 4.24,
+		"Image": "step-audio-status.png"
+	},
+	{
 		"Brand": "Stoll",
 		"Name": "Mullet Drive",
 		"Width": 4.45,
