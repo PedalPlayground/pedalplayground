@@ -5356,6 +5356,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "GX-10 Guitar Effects Processor",
+		"Width": 11.81,
+		"Height": 6.97,
+		"Image": "boss-gx10.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "GX-100 Guitar Effects Processor",
 		"Width": 18.125,
 		"Height": 7.42,
