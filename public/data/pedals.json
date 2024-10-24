@@ -12999,6 +12999,13 @@
 		"Image": "electric-love-aquatone.png"
 	},
 	{
+		"Brand": "Electric Love",
+		"Name": "Norrsken",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "electric-love-norrsken.png"
+	},
+	{
 		"Brand": "Electro-Harmonix",
 		"Name": "#1 Echo",
 		"Width": 4.19,
@@ -24197,6 +24204,13 @@
 		"Width": 2.73,
 		"Height": 4.5,
 		"Image": "keeley-xviii-phaser-classic.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Zoma",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-zoma.png"
 	},
 	{
 		"Brand": "Keith McMillen Instruments",
