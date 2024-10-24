@@ -3690,6 +3690,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Cast Iron Stonk Box",
+		"Width": 4.69,
+		"Height": 3.82,
+		"Image": "benson-cast-iron-stonk-box.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Germanium Fuzz",
 		"Width": 4.69,
 		"Height": 3.85,
@@ -14334,6 +14341,13 @@
 		"Width": 2.6,
 		"Height": 5.05,
 		"Image": "electronic-audio-experiments-halberd-v2-green.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Halberd + Germanium Boost",
+		"Width": 5.7,
+		"Height": 4.94,
+		"Image": "electronic-audio-experiments-halberd-germanium-boost.png"
 	},
 	{
 		"Brand": "EAE",
@@ -32877,6 +32891,13 @@
 		"Width": 3.7,
 		"Height": 1.69,
 		"Image": "october-audio-witch-finger-always-on.png"
+	},
+	{
+		"Brand": "Oneder Effects",
+		"Name": "Action & Action",
+		"Width": 4.7,
+		"Height": 3.8,
+		"Image": "oneder-action-action.png"
 	},
 	{
 		"Brand": "Oneder Effects",
