@@ -11929,6 +11929,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "A/B Box",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-ab-box.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Acapulco Gold",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -12069,6 +12076,20 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Buffer/Preamp",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-buffer-preamp.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Buffer/Splitter",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-buffer-splitter.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Chrysalis",
 		"Width": 2.84,
 		"Height": 4.5,
@@ -12178,6 +12199,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-erupter.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Flexi Loops",
+		"Width": 5.12,
+		"Height": 2.73,
+		"Image": "earthquaker-flexi-loops.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -12311,6 +12339,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-park-fuzz.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Passive ABY Box",
+		"Width": 4.5,
+		"Height": 2.55,
+		"Image": "earthquaker-passive-aby-box.png"
 	},
 	{
 		"Brand": "EarthQuaker",
