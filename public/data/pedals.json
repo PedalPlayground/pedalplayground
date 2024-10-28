@@ -34574,10 +34574,17 @@
 	},
 	{
 		"Brand": "Pedal Pawn",
-		"Name": "Germanium Fuzz",
+		"Name": "Germanium Fuzz (CV 7003)",
 		"Width": 2.81,
 		"Height": 4.5,
 		"Image": "pedal-pawn-germanium-fuzz.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
+		"Name": "Germanium Fuzz (2N404)",
+		"Width": 2.81,
+		"Height": 4.5,
+		"Image": "pedal-pawn-germanium-fuzz-2n404.png"
 	},
 	{
 		"Brand": "Pedal Pawn",
