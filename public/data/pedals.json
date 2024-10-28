@@ -17306,9 +17306,23 @@
 	{
 		"Brand": "Funny Little Boxes",
 		"Name": "1991",
-		"Width": 2.5,
-		"Height": 4.84,
+		"Width": 2.6,
+		"Height": 5,
 		"Image": "flb-1991.png"
+	},
+	{
+		"Brand": "Funny Little Boxes",
+		"Name": "Dirt",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "flb-dirt.png"
+	},
+	{
+		"Brand": "Funny Little Boxes",
+		"Name": "Skeleton Key",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "flb-skeleton-key.png"
 	},
 	{
 		"Brand": "Fuzzhugger",
@@ -22016,8 +22030,15 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Colour Box 10",
+		"Width": 3.95,
+		"Height": 5.7,
+		"Image": "jhs-colour-box-10.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Colour Box V2",
-		"Width": 3.93,
+		"Width": 3.95,
 		"Height": 5.7,
 		"Image": "jhs-colour-box-v2.png"
 	},
@@ -31239,6 +31260,20 @@
 		"Width": 2.99,
 		"Height": 5.25,
 		"Image": "noise-engineering-dystorpia.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
+		"Name": "Bird Eater",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "non-human-audio-bird-eater.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
+		"Name": "Goblin Shark",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "non-human-audio-goblin-shark.png"
 	},
 	{
 		"Brand": "Non-Human Audio",
