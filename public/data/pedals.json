@@ -9725,8 +9725,8 @@
 	{
 		"Brand": "Death By Audio",
 		"Name": "Echo Dream 2",
-		"Width": 4.72,
-		"Height": 5.87,
+		"Width": 4.7,
+		"Height": 5.78,
 		"Image": "deathbyaudio-echo-dream-2.png"
 	},
 	{
@@ -14957,6 +14957,13 @@
 		"Width": 6.5,
 		"Height": 5.21,
 		"Image": "eventide-h90.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "Knife Drop",
+		"Width": 4,
+		"Height": 4.54,
+		"Image": "eventide-knife-drop.png"
 	},
 	{
 		"Brand": "Eventide",
