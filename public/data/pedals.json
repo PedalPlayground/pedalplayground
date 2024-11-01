@@ -9725,8 +9725,8 @@
 	{
 		"Brand": "Death By Audio",
 		"Name": "Echo Dream 2",
-		"Width": 4.72,
-		"Height": 5.87,
+		"Width": 4.7,
+		"Height": 5.78,
 		"Image": "deathbyaudio-echo-dream-2.png"
 	},
 	{
@@ -14957,6 +14957,13 @@
 		"Width": 6.5,
 		"Height": 5.21,
 		"Image": "eventide-h90.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "Knife Drop",
+		"Width": 4,
+		"Height": 4.54,
+		"Image": "eventide-knife-drop.png"
 	},
 	{
 		"Brand": "Eventide",
@@ -24283,6 +24290,13 @@
 		"Image": "kernom-ridge.png"
 	},
 	{
+		"Brand": "Keyztone",
+		"Name": "Exchanger Pro",
+		"Width": 2.92,
+		"Height": 4.6,
+		"Image": "keyztone-exchanger-pro.png"
+	},
+	{
 		"Brand": "KG MIDI Controllers",
 		"Name": "Quadruple I/O",
 		"Width": 6.66,
@@ -26768,6 +26782,13 @@
 		"Image": "magnetic-effects-white-atom-v3.png"
 	},
 	{
+		"Brand": "Malaise Forever",
+		"Name": "Clubber Lang",
+		"Width": 2.4,
+		"Height": 4.65,
+		"Image": "malaise-forever-clubber-lang.png"
+	},
+	{
 		"Brand": "Mantic Conceptual",
 		"Name": "Hulk",
 		"Width": 2.52,
@@ -27114,7 +27135,7 @@
 		"Brand": "Mask Audio Electronics",
 		"Name": "Cascader",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5.06,
 		"Image": "mask-black-cascader.png"
 	},
 	{
@@ -27123,6 +27144,13 @@
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "mask-civil-math.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Clubber Lang",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "mask-black-clubber-lang.png"
 	},
 	{
 		"Brand": "Mask Audio Electronics",
@@ -27135,7 +27163,7 @@
 		"Brand": "Mask Audio Electronics",
 		"Name": "Line Blur",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5.06,
 		"Image": "mask-black-line-blur.png"
 	},
 	{
@@ -27147,9 +27175,9 @@
 	},
 	{
 		"Brand": "Mask Audio Electronics",
-		"Name": "Neck Brace",
+		"Name": "Neckbrace",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5.06,
 		"Image": "mask-neck-brace.png"
 	},
 	{
@@ -27170,7 +27198,7 @@
 		"Brand": "Mask Audio Electronics",
 		"Name": "Screws",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5.06,
 		"Image": "mask-screws.png"
 	},
 	{
@@ -36737,6 +36765,13 @@
 	},
 	{
 		"Brand": "Roger Mayer",
+		"Name": "Octavia Classic",
+		"Width": 5.07,
+		"Height": 3.7,
+		"Image": "roger-mayer-octavia-classic.png"
+	},
+	{
+		"Brand": "Roger Mayer",
 		"Name": "Voodoo Vibe",
 		"Width": 8.66,
 		"Height": 5.83,
@@ -36881,6 +36916,13 @@
 		"Width": 7.16,
 		"Height": 5.28,
 		"Image": "sabbadius-funky-vibe.png"
+	},
+	{
+		"Brand": "Sabbadius",
+		"Name": "Mr. White Special",
+		"Width": 3.52,
+		"Height": 4.72,
+		"Image": "sabbadius-mr-white-special.png"
 	},
 	{
 		"Brand": "Santono",
