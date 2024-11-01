@@ -24290,6 +24290,13 @@
 		"Image": "kernom-ridge.png"
 	},
 	{
+		"Brand": "Keyztone",
+		"Name": "Exchanger Pro",
+		"Width": 2.92,
+		"Height": 4.6,
+		"Image": "keyztone-exchanger-pro.png"
+	},
+	{
 		"Brand": "KG MIDI Controllers",
 		"Name": "Quadruple I/O",
 		"Width": 6.66,
@@ -36744,6 +36751,13 @@
 	},
 	{
 		"Brand": "Roger Mayer",
+		"Name": "Octavia Classic",
+		"Width": 5.07,
+		"Height": 3.7,
+		"Image": "roger-mayer-octavia-classic.png"
+	},
+	{
+		"Brand": "Roger Mayer",
 		"Name": "Voodoo Vibe",
 		"Width": 8.66,
 		"Height": 5.83,
@@ -36888,6 +36902,13 @@
 		"Width": 7.16,
 		"Height": 5.28,
 		"Image": "sabbadius-funky-vibe.png"
+	},
+	{
+		"Brand": "Sabbadius",
+		"Name": "Mr. White Special",
+		"Width": 3.52,
+		"Height": 4.72,
+		"Image": "sabbadius-mr-white-special.png"
 	},
 	{
 		"Brand": "Santono",
