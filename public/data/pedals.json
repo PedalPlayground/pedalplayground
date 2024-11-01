@@ -27128,7 +27128,7 @@
 		"Brand": "Mask Audio Electronics",
 		"Name": "Cascader",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5.06,
 		"Image": "mask-black-cascader.png"
 	},
 	{
@@ -27137,6 +27137,13 @@
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "mask-civil-math.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
+		"Name": "Clubber Lang",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "mask-black-clubber-lang.png"
 	},
 	{
 		"Brand": "Mask Audio Electronics",
@@ -27149,7 +27156,7 @@
 		"Brand": "Mask Audio Electronics",
 		"Name": "Line Blur",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5.06,
 		"Image": "mask-black-line-blur.png"
 	},
 	{
@@ -27161,9 +27168,9 @@
 	},
 	{
 		"Brand": "Mask Audio Electronics",
-		"Name": "Neck Brace",
+		"Name": "Neckbrace",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5.06,
 		"Image": "mask-neck-brace.png"
 	},
 	{
@@ -27184,7 +27191,7 @@
 		"Brand": "Mask Audio Electronics",
 		"Name": "Screws",
 		"Width": 2.6,
-		"Height": 4.95,
+		"Height": 5.06,
 		"Image": "mask-screws.png"
 	},
 	{
