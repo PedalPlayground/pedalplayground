@@ -19040,6 +19040,34 @@
 		"Image": "hamstead-zenith.png"
 	},
 	{
+		"Brand": "Hangman fx",
+		"Name": "Atomic World Ender",
+		"Width": 2.69,
+		"Height": 5.04,
+		"Image": "hangmanfx-atomic-world-ender.png"
+	},
+	{
+		"Brand": "Hangman fx",
+		"Name": "Lord GermFet",
+		"Width": 2.69,
+		"Height": 5.04,
+		"Image": "hangmanfx-lord-germfet.png"
+	},
+	{
+		"Brand": "Hangman fx",
+		"Name": "Meteoric Echo Monster",
+		"Width": 4.79,
+		"Height": 3.93,
+		"Image": "hangmanfx-meteoric-echo-monster.png"
+	},
+	{
+		"Brand": "Hangman fx",
+		"Name": "Tyrannosaur MegaDriver",
+		"Width": 2.69,
+		"Height": 5.04,
+		"Image": "hangmanfx-tyrannosaur-megadriver.png"
+	},
+	{
 		"Brand": "Harby",
 		"Name": "BMF",
 		"Width": 2.91,
@@ -29681,6 +29709,13 @@
 	},
 	{
 		"Brand": "Mr. Black",
+		"Name": "Bass OD Mk. II",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "mrblack-bass-od-mk2.png"
+	},
+	{
+		"Brand": "Mr. Black",
 		"Name": "BloodMoon",
 		"Width": 2.72,
 		"Height": 4.5,
@@ -29720,6 +29755,13 @@
 		"Width": 2.72,
 		"Height": 4.5,
 		"Image": "mr-black-deluxe-plus-plus.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Deuce Coupe",
+		"Width": 4.7,
+		"Height": 3.8,
+		"Image": "mr-black-deuce-coupe.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -29783,6 +29825,13 @@
 		"Width": 2.72,
 		"Height": 4.5,
 		"Image": "mrblack-heavens-gate.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "High-Five",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "mrblack-high-five.png"
 	},
 	{
 		"Brand": "Mr. Black",
