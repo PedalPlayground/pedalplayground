@@ -22492,6 +22492,20 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "The Violet",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "jhs-the-violet.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "The Violet (Black)",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "jhs-the-violet-black.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Tidewater",
 		"Width": 1.82,
 		"Height": 3.8,
