@@ -25221,6 +25221,27 @@
 		"Image": "lrbaggs-para-acoustic-di.png"
 	},
 	{
+		"Brand": "L.R. Baggs",
+		"Name": "Session D.I.",
+		"Width": 4.23,
+		"Height": 6.5,
+		"Image": "lrbaggs-session-di.png"
+	},
+	{
+		"Brand": "L.R. Baggs",
+		"Name": "Stadium D.I.",
+		"Width": 4.23,
+		"Height": 6.5,
+		"Image": "lrbaggs-stadium-di.png"
+	},
+	{
+		"Brand": "L.R. Baggs",
+		"Name": "Venue D.I.",
+		"Width": 7.63,
+		"Height": 7.34,
+		"Image": "lrbaggs-venue-di.png"
+	},
+	{
 		"Brand": "Lake Effects",
 		"Name": "FVD",
 		"Width": 3.68,
@@ -44354,10 +44375,38 @@
 	},
 	{
 		"Brand": "VTR Effects",
+		"Name": "Helios Overdrive (Gold)",
+		"Width": 2.56,
+		"Height": 4.8,
+		"Image": "vtr-helios-overdrive-gold.png"
+	},
+	{
+		"Brand": "VTR Effects",
 		"Name": "Indigo Reverb V2",
 		"Width": 2.69,
 		"Height": 4.9,
 		"Image": "vtr-indigo-reverb-v2.png"
+	},
+	{
+		"Brand": "VTR Effects",
+		"Name": "Kailani",
+		"Width": 3.55,
+		"Height": 4.72,
+		"Image": "vtr-kailani.png"
+	},
+	{
+		"Brand": "VTR Effects",
+		"Name": "Loki",
+		"Width": 3.55,
+		"Height": 4.72,
+		"Image": "vtr-loki.png"
+	},
+	{
+		"Brand": "VTR Effects",
+		"Name": "Narciso",
+		"Width": 3.55,
+		"Height": 4.72,
+		"Image": "vtr-narciso.png"
 	},
 	{
 		"Brand": "VTR Effects",
@@ -45429,6 +45478,13 @@
 		"Width": 2.5,
 		"Height": 4.7,
 		"Image": "wampler-black65.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Catacombs",
+		"Width": 4.8,
+		"Height": 3.83,
+		"Image": "wampler-catacombs.png"
 	},
 	{
 		"Brand": "Wampler",
