@@ -4453,6 +4453,13 @@
 	},
 	{
 		"Brand": "Bleak District Electric",
+		"Name": "Joy",
+		"Width": 4.5,
+		"Height": 2.5,
+		"Image": "bde-joy.png"
+	},
+	{
+		"Brand": "Bleak District Electric",
 		"Name": "Miraj",
 		"Width": 4.7,
 		"Height": 3.81,
@@ -4460,10 +4467,31 @@
 	},
 	{
 		"Brand": "Bleak District Electric",
+		"Name": "Rec Head",
+		"Width": 2.38,
+		"Height": 4.62,
+		"Image": "bde-rec-head.png"
+	},
+	{
+		"Brand": "Bleak District Electric",
+		"Name": "Sun? No",
+		"Width": 2.38,
+		"Height": 4.62,
+		"Image": "bde-sun-no.png"
+	},
+	{
+		"Brand": "Bleak District Electric",
 		"Name": "Tapescape",
 		"Width": 4.7,
 		"Height": 3.98,
 		"Image": "bde-tapescape.png"
+	},
+	{
+		"Brand": "Bleak District Electric",
+		"Name": "Terra",
+		"Width": 2.38,
+		"Height": 4.62,
+		"Image": "bde-terra.png"
 	},
 	{
 		"Brand": "Blue Colander",
@@ -27734,6 +27762,13 @@
 		"Image": "mesa-boogie-triple-rectifier.png"
 	},
 	{
+		"Brand": "Mezzabarba",
+		"Name": "Even Drive",
+		"Width": 6.1,
+		"Height": 7.38,
+		"Image": "mezzabarba-even-drive.png"
+	},
+	{
 		"Brand": "MI Audio",
 		"Name": "Blues Pro",
 		"Width": 2.62,
@@ -41932,10 +41967,66 @@
 	},
 	{
 		"Brand": "Thermion",
+		"Name": "Black Sun",
+		"Width": 6.15,
+		"Height": 4.7,
+		"Image": "thermion-black-sun.png"
+	},
+	{
+		"Brand": "Thermion",
+		"Name": "Breakthru",
+		"Width": 3.98,
+		"Height": 4.97,
+		"Image": "thermion-breakthru.png"
+	},
+	{
+		"Brand": "Thermion",
+		"Name": "Breathe",
+		"Width": 6.05,
+		"Height": 4.7,
+		"Image": "thermion-breathe.png"
+	},
+	{
+		"Brand": "Thermion",
 		"Name": "Freeway",
 		"Width": 6.39,
 		"Height": 5.26,
 		"Image": "thermion-freeway.png"
+	},
+	{
+		"Brand": "Thermion",
+		"Name": "Gasoline",
+		"Width": 3.98,
+		"Height": 4.97,
+		"Image": "thermion-gasoline.png"
+	},
+	{
+		"Brand": "Thermion",
+		"Name": "Heartbreaker",
+		"Width": 3.98,
+		"Height": 4.97,
+		"Image": "thermion-heartbreaker.png"
+	},
+	{
+		"Brand": "Thermion",
+		"Name": "Outlaw",
+		"Width": 3.01,
+		"Height": 4.84,
+		"Image": "thermion-outlaw.png"
+	},
+	{
+		"Brand": "Thermion",
+		"Name": "Stone Age",
+		"Width": 6.15,
+		"Height": 4.7,
+		"Image": "thermion-stone-age.png"
+	},
+	{
+		"Brand": "Thermion",
+		"Name": "Uprising",
+		"Width": 3.98,
+		"Height": 4.97,
+		"Image": "thermion-uprising.png"
 	},
 	{
 		"Brand": "Third Man",
@@ -46078,7 +46169,7 @@
 		"Brand": "Winnipeg Electrical Co.",
 		"Name": "Blues DLX",
 		"Width": 3.7,
-		"Height": 4.93,
+		"Height": 5,
 		"Image": "winnipeg-blues-dlx.png"
 	},
 	{
