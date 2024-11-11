@@ -16016,6 +16016,13 @@
 		"Image": "formula-b-supa-tank.png"
 	},
 	{
+		"Brand": "Formula B",
+		"Name": "Vintage-Vibe",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "formula-b-vintage-vibe.png"
+	},
+	{
 		"Brand": "Fortin",
 		"Name": "33",
 		"Width": 2.3622,
@@ -33153,6 +33160,13 @@
 	},
 	{
 		"Brand": "Oneder Effects",
+		"Name": "HW-2",
+		"Width": 3.7,
+		"Height": 4.82,
+		"Image": "oneder-hw-2.png"
+	},
+	{
+		"Brand": "Oneder Effects",
 		"Name": "Less Than Jake",
 		"Width": 3.7,
 		"Height": 4.82,
@@ -33213,6 +33227,13 @@
 		"Width": 2.6,
 		"Height": 4.93,
 		"Image": "oneder-nofx.png"
+	},
+	{
+		"Brand": "Oneder Effects",
+		"Name": "Wet Hot American Bummer",
+		"Width": 2.6,
+		"Height": 4.93,
+		"Image": "oneder-wet-hot-american-bummer.png"
 	},
 	{
 		"Brand": "One Control",
@@ -41876,10 +41897,24 @@
 	},
 	{
 		"Brand": "Templo Devices",
+		"Name": "2 Track Tape-Style Compressor",
+		"Width": 2.57,
+		"Height": 4.72,
+		"Image": "templo-2-track.png"
+	},
+	{
+		"Brand": "Templo Devices",
 		"Name": "Model 33",
 		"Width": 2.6,
 		"Height": 4.46,
 		"Image": "templo-model-33.png"
+	},
+	{
+		"Brand": "Templo Devices",
+		"Name": "Pocket Studio Comp",
+		"Width": 5.05,
+		"Height": 2.83,
+		"Image": "templo-pocket-studio-comp.png"
 	},
 	{
 		"Brand": "Templo Devices",
@@ -41901,6 +41936,13 @@
 		"Width": 3.2,
 		"Height": 3.56,
 		"Image": "templo-splyce.png"
+	},
+	{
+		"Brand": "Templo Devices",
+		"Name": "The Outer Limit",
+		"Width": 2.57,
+		"Height": 4.85,
+		"Image": "templo-the-outer-limit.png"
 	},
 	{
 		"Brand": "Testing Blanks",
@@ -42804,6 +42846,20 @@
 		"Width": 3.2,
 		"Height": 5,
 		"Image": "tubeworks-bk-butler-real-tube.png"
+	},
+	{
+		"Brand": "Tuesday Experiments",
+		"Name": "EXP. 1118 Sonic Drive Deluxe",
+		"Width": 3.7,
+		"Height": 4.96,
+		"Image": "tuesday-experiments-sonic-drive-deluxe.png"
+	},
+	{
+		"Brand": "Tuesday Experiments",
+		"Name": "EXP. 533 The Street Fuzz",
+		"Width": 4.5,
+		"Height": 2.57,
+		"Image": "tuesday-experiments-the-street-fuzz.png"
 	},
 	{
 		"Brand": "TWA",
