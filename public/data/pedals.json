@@ -33972,6 +33972,13 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "DELUXE55",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-deluxe55.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "DELUXE61",
 		"Width": 3.6,
 		"Height": 5.8,
@@ -45506,6 +45513,20 @@
 		"Width": 2.88,
 		"Height": 4.84,
 		"Image": "walrus-voyager-10.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Voyager MKII",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-voyager-mk2.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Voyager MKII (Black)",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-voyager-mk2-black.png"
 	},
 	{
 		"Brand": "Walrus Audio",
