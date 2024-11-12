@@ -25774,6 +25774,13 @@
 		"Image": "lightning-wave-ghost.png"
 	},
 	{
+		"Brand": "Limestone Audio",
+		"Name": "Focus",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "limestone-focus.png"
+	},
+	{
 		"Brand": "Line 6",
 		"Name": "DL4 Delay",
 		"Width": 10,
@@ -37637,6 +37644,13 @@
 		"Width": 3.7,
 		"Height": 4.99,
 		"Image": "shnobel-tone-daily-driver.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Daily Driver Boost",
+		"Width": 3.7,
+		"Height": 4.99,
+		"Image": "shnobel-tone-daily-driver-boost.png"
 	},
 	{
 		"Brand": "Shnobel Tone",
