@@ -22375,8 +22375,15 @@
 		"Brand": "JHS",
 		"Name": "NOTAKLÖN",
 		"Width": 4.7,
-		"Height": 3.76,
+		"Height": 3.86,
 		"Image": "jhs-notaklon.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "NOTAKLÖN (Black)",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "jhs-notaklon-black.png"
 	},
 	{
 		"Brand": "JHS",
@@ -25802,11 +25809,11 @@
 		"Image": "lightning-wave-ghost.png"
 	},
 	{
-		"Brand": "Limestone Audio",
+		"Brand": "Limetone Audio",
 		"Name": "Focus",
 		"Width": 4.7,
 		"Height": 3.77,
-		"Image": "limestone-focus.png"
+		"Image": "limetone-focus.png"
 	},
 	{
 		"Brand": "Line 6",
