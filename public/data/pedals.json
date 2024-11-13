@@ -15450,6 +15450,13 @@
 	},
 	{
 		"Brand": "Fender",
+		"Name": "Pink Fuzz",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-pink-fuzz.png"
+	},
+	{
+		"Brand": "Fender",
 		"Name": "Pour Over Env Filter",
 		"Width": 3.95,
 		"Height": 5,
@@ -19118,10 +19125,24 @@
 	},
 	{
 		"Brand": "Harby",
+		"Name": "Centauri*",
+		"Width": 2.91,
+		"Height": 4.86,
+		"Image": "harby-centauri-mod.png"
+	},
+	{
+		"Brand": "Harby",
 		"Name": "Noble Tone",
 		"Width": 2.91,
 		"Height": 4.86,
 		"Image": "harby-noble-tone.png"
+	},
+	{
+		"Brand": "Harby",
+		"Name": "Pi-7c",
+		"Width": 2.91,
+		"Height": 4.86,
+		"Image": "harby-pi-7c.png"
 	},
 	{
 		"Brand": "Harley Benton",
@@ -19941,6 +19962,13 @@
 		"Width": 10.18,
 		"Height": 2.11,
 		"Image": "hotone-ampero-control.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Ampero II",
+		"Width": 13,
+		"Height": 5.96,
+		"Image": "hotone-ampero-2.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -32180,6 +32208,13 @@
 	},
 	{
 		"Brand": "Native Audio",
+		"Name": "Fry Bread Fuzz",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "native-audio-fry-bread-fuzz.png"
+	},
+	{
+		"Brand": "Native Audio",
 		"Name": "Ghost Ridge V1.5",
 		"Width": 2.6,
 		"Height": 5,
@@ -32215,6 +32250,13 @@
 	},
 	{
 		"Brand": "Native Audio",
+		"Name": "Niisoo",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "native-audio-niisoo.png"
+	},
+	{
+		"Brand": "Native Audio",
 		"Name": "Pretty Bird Woman",
 		"Width": 2.6,
 		"Height": 5,
@@ -32247,6 +32289,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "nativeaudio-war-party.png"
+	},
+	{
+		"Brand": "Native Audio",
+		"Name": "War Pony",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "native-audio-war-pony.png"
 	},
 	{
 		"Brand": "Native Audio",
@@ -32807,6 +32856,13 @@
 		"Width": 1.69,
 		"Height": 3.88,
 		"Image": "obne-ramper-dark-light.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Expression Ramper (Dark Light Charcoal)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-dark-light-charcoal.png"
 	},
 	{
 		"Brand": "OBNE",
