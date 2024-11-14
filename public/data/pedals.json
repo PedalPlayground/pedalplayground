@@ -12244,6 +12244,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Gary",
+		"Width": 2.7,
+		"Height": 4.94,
+		"Image": "earthquaker-gary.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Ghost Echo",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -20648,6 +20655,13 @@
 		"Width": 7,
 		"Height": 5.55,
 		"Image": "ikm-tonex.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "TONEX (White)",
+		"Width": 7,
+		"Height": 5.55,
+		"Image": "ikm-tonex-white.png"
 	},
 	{
 		"Brand": "IK Multimedia",
