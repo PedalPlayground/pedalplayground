@@ -14990,8 +14990,15 @@
 		"Brand": "Eventide",
 		"Name": "H90",
 		"Width": 6.5,
-		"Height": 5.21,
+		"Height": 5.28,
 		"Image": "eventide-h90.png"
+	},
+	{
+		"Brand": "Eventide",
+		"Name": "H90 (Black)",
+		"Width": 6.5,
+		"Height": 5.28,
+		"Image": "eventide-h90-black.png"
 	},
 	{
 		"Brand": "Eventide",
@@ -33241,6 +33248,13 @@
 		"Width": 3.7,
 		"Height": 1.69,
 		"Image": "october-audio-witch-finger-always-on.png"
+	},
+	{
+		"Brand": "Olinthus",
+		"Name": "Cicada",
+		"Width": 1.2,
+		"Height": 1.77,
+		"Image": "olinthus-cicada.png"
 	},
 	{
 		"Brand": "Oneder Effects",
