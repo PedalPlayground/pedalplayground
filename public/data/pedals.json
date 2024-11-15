@@ -7295,24 +7295,31 @@
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Soft Focus Reverb",
+		"Name": "Soft Focus",
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-soft-focus.png"
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Soft Focus Reverb (Gold)",
+		"Name": "Soft Focus (Gold)",
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-soft-focus-gold.png"
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Soft Focus Reverb (Shoegaze Purple)",
+		"Name": "Soft Focus (Shoegaze Purple)",
 		"Width": 2.6,
 		"Height": 4.33,
 		"Image": "catalinbread-soft-focus-shoegaze-purple.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Soft Focus Deluxe",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "catalinbread-soft-focus-deluxe.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -21241,7 +21248,7 @@
 		"Brand": "Jackson Audio",
 		"Name": "1484 Twin Twelve",
 		"Width": 5,
-		"Height": 4.27,
+		"Height": 4.23,
 		"Image": "jackson-1484.png"
 	},
 	{
@@ -21432,6 +21439,13 @@
 		"Width": 2.7,
 		"Height": 5.13,
 		"Image": "jackson-the-optimist-warp.png"
+	},
+	{
+		"Brand": "Jackson Audio",
+		"Name": "Twin Trem",
+		"Width": 5,
+		"Height": 4.23,
+		"Image": "jackson-twin-trem.png"
 	},
 	{
 		"Brand": "Jam Pedals",
@@ -42261,6 +42275,13 @@
 	},
 	{
 		"Brand": "ThorpyFX",
+		"Name": "ER-2 Block 2 Uni-Vibe",
+		"Width": 3.98,
+		"Height": 4.89,
+		"Image": "thorpyfx-er-2-block-2.png"
+	},
+	{
+		"Brand": "ThorpyFX",
 		"Name": "Fallout Cloud",
 		"Width": 2.76,
 		"Height": 4.89,
@@ -42363,6 +42384,13 @@
 		"Width": 2.76,
 		"Height": 4.89,
 		"Image": "thorpyfx-fat-general.png"
+	},
+	{
+		"Brand": "ThorpyFX",
+		"Name": "The Fat General MKII",
+		"Width": 2.76,
+		"Height": 4.89,
+		"Image": "thorpyfx-fat-general-mk2.png"
 	},
 	{
 		"Brand": "ThorpyFX",
