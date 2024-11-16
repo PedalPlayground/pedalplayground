@@ -1316,6 +1316,13 @@
 		"Image": "ampeg-sgt-di.png"
 	},
 	{
+		"Brand": "Amplified Nation",
+		"Name": "Bigger Bloom",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "amplified-nation-bigger-bloom.png"
+	},
+	{
 		"Brand": "Amptweaker",
 		"Name": "Big Rock Pro II",
 		"Width": 6.47,
@@ -26440,6 +26447,13 @@
 	},
 	{
 		"Brand": "LPD",
+		"Name": "One20Three",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "lpd-one20three.png"
+	},
+	{
+		"Brand": "LPD",
 		"Name": "Seventy4",
 		"Width": 2.68,
 		"Height": 4.5,
@@ -27529,6 +27543,13 @@
 		"Width": 2.83,
 		"Height": 4.91,
 		"Image": "matthews-surgeon-v2.png"
+	},
+	{
+		"Brand": "Matthews Effects",
+		"Name": "The Technician",
+		"Width": 4.8,
+		"Height": 5.49,
+		"Image": "matthews-the-technician.png"
 	},
 	{
 		"Brand": "Matthews Effects",
@@ -43931,6 +43952,20 @@
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "vemuram-shanks-ods-1.png"
+	},
+	{
+		"Brand": "Vemuram",
+		"Name": "Shanks 4K",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "vemuram-shanks-4k.png"
+	},
+	{
+		"Brand": "Vemuram",
+		"Name": "Shanks II",
+		"Width": 2.91,
+		"Height": 4.5,
+		"Image": "vemuram-shanks-2.png"
 	},
 	{
 		"Brand": "Very Good Amp Co",
