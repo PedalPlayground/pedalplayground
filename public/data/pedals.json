@@ -1821,6 +1821,13 @@
 	},
 	{
 		"Brand": "Animals Pedal",
+		"Name": "Angel Bear Face Fuzz",
+		"Width": 2.56,
+		"Height": 4.5,
+		"Image": "animals-pedal-angel-bear-face-fuzz.png"
+	},
+	{
+		"Brand": "Animals Pedal",
 		"Name": "Bath Time Reverb",
 		"Width": 2.56,
 		"Height": 4.5,
@@ -25411,6 +25418,13 @@
 	},
 	{
 		"Brand": "Land Devices",
+		"Name": "Moonbow",
+		"Width": 3.15,
+		"Height": 5.39,
+		"Image": "land-devices-moonbow.png"
+	},
+	{
+		"Brand": "Land Devices",
 		"Name": "Multi-Box",
 		"Width": 3.7,
 		"Height": 1.83,
@@ -43945,6 +43959,13 @@
 		"Width": 2.75,
 		"Height": 4.55,
 		"Image": "vemuram-myriad-fuzz.png"
+	},
+	{
+		"Brand": "Vemuram",
+		"Name": "Oz",
+		"Width": 2.75,
+		"Height": 4.5,
+		"Image": "vemuram-oz.png"
 	},
 	{
 		"Brand": "Vemuram",
