@@ -3340,6 +3340,13 @@
 	},
 	{
 		"Brand": "Beetronics",
+		"Name": "Larva",
+		"Width": 3.55,
+		"Height": 5.5,
+		"Image": "beetronics-larva.png"
+	},
+	{
+		"Brand": "Beetronics",
 		"Name": "Nectar",
 		"Width": 3.42,
 		"Height": 5.5,
@@ -12272,7 +12279,14 @@
 	},
 	{
 		"Brand": "EarthQuaker",
-		"Name": "Ghost Echo",
+		"Name": "Ghost Echo V2",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "earthquaker-ghost-echo-v2.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Ghost Echo V3",
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-ghost-echo.png"
@@ -19920,6 +19934,13 @@
 		"Width": 7.1,
 		"Height": 4.74,
 		"Image": "hologram-microcosm-2024.png"
+	},
+	{
+		"Brand": "Holy Island Audio",
+		"Name": "Tides",
+		"Width": 4.7,
+		"Height": 5.77,
+		"Image": "holy-island-audio-tides.png"
 	},
 	{
 		"Brand": "Homebrew Electronics",
