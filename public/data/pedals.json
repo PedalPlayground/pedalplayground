@@ -3236,9 +3236,16 @@
 	{
 		"Brand": "Beautiful Noise Effects",
 		"Name": "Endless Sleeper",
-		"Width": 4.84,
-		"Height": 5.9,
+		"Width": 4.7,
+		"Height": 5.8,
 		"Image": "bne-endless-sleeper.png"
+	},
+	{
+		"Brand": "Beautiful Noise Effects",
+		"Name": "Endless Sleeper II",
+		"Width": 4.7,
+		"Height": 5.8,
+		"Image": "bne-endless-sleeper-2.png"
 	},
 	{
 		"Brand": "Beautiful Noise Effects",
@@ -27624,15 +27631,15 @@
 	{
 		"Brand": "Maxon",
 		"Name": "Analog Delay AD80",
-		"Width": 2.8,
-		"Height": 4.5,
+		"Width": 2.79,
+		"Height": 4.52,
 		"Image": "maxon-ad80.png"
 	},
 	{
 		"Brand": "Maxon",
 		"Name": "Analog Delay AD999",
-		"Width": 4.75,
-		"Height": 5.9,
+		"Width": 4.67,
+		"Height": 5.97,
 		"Image": "maxon-ad999.png"
 	},
 	{
@@ -27659,8 +27666,8 @@
 	{
 		"Brand": "Maxon",
 		"Name": "Distortion Master DS830",
-		"Width": 4.8,
-		"Height": 6,
+		"Width": 4.67,
+		"Height": 5.97,
 		"Image": "maxon-ds830.png"
 	},
 	{
@@ -27714,17 +27721,17 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Overdrive Pro OD820",
+		"Width": 4.67,
+		"Height": 5.97,
+		"Image": "maxon-od820.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Overdrive OD9PRO+",
 		"Width": 2.93,
 		"Height": 4.88,
 		"Image": "maxon-od9pro.png"
-	},
-	{
-		"Brand": "Maxon",
-		"Name": "Overdrive Pro OD820",
-		"Width": 4.75,
-		"Height": 5.9,
-		"Image": "maxon-od820.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -27743,9 +27750,30 @@
 	{
 		"Brand": "Maxon",
 		"Name": "Real Tube Overdrive ",
-		"Width": 4.8,
-		"Height": 6,
+		"Width": 4.67,
+		"Height": 5.97,
 		"Image": "maxon-rto700.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Rotary Phaser PH350",
+		"Width": 4.67,
+		"Height": 5.97,
+		"Image": "maxon-ph350.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Stereo Chorus CS505",
+		"Width": 2.79,
+		"Height": 4.52,
+		"Image": "maxon-cs505.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Stereo Chorus CS550",
+		"Width": 4.67,
+		"Height": 5.97,
+		"Image": "maxon-cs550.png"
 	},
 	{
 		"Brand": "Maxon",
