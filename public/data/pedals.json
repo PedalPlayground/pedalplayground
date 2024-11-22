@@ -3473,6 +3473,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "Centaur Overdrive",
+		"Width": 4.75,
+		"Height": 4.12,
+		"Image": "behringer-centaur-overdrive.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "CL9 Compressor/Limiter",
 		"Width": 2.76,
 		"Height": 4.84,
@@ -3529,10 +3536,31 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "Fuzz Bender",
+		"Width": 3.5,
+		"Height": 6.98,
+		"Image": "behringer-fuzz-bender.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "GDI21 Guitar DI Box",
 		"Width": 3.94,
 		"Height": 4.96,
 		"Image": "behringer-gdi21.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "FS112BV Dual Footswitch",
+		"Width": 5.28,
+		"Height": 4.46,
+		"Image": "behringer-fs112bv.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "HB01 Hellbabe",
+		"Width": 4.51,
+		"Height": 10,
+		"Image": "behringer-hb01.png"
 	},
 	{
 		"Brand": "Behringer",
