@@ -3529,6 +3529,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "FS112BV Dual Footswitch",
+		"Width": 5.28,
+		"Height": 4.46,
+		"Image": "behringer-fs112bv.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "FX600 Digital Multi-FX",
 		"Width": 2.76,
 		"Height": 4.84,
@@ -3547,13 +3554,6 @@
 		"Width": 3.94,
 		"Height": 4.96,
 		"Image": "behringer-gdi21.png"
-	},
-	{
-		"Brand": "Behringer",
-		"Name": "FS112BV Dual Footswitch",
-		"Width": 5.28,
-		"Height": 4.46,
-		"Image": "behringer-fs112bv.png"
 	},
 	{
 		"Brand": "Behringer",
@@ -6459,6 +6459,13 @@
 		"Width": 2.61,
 		"Height": 5.31,
 		"Image": "caline-cp31.png"
+	},
+	{
+		"Brand": "Caline",
+		"Name": "CP-81 10 Band EQ",
+		"Width": 4.72,
+		"Height": 3.62,
+		"Image": "caline-cp81.png"
 	},
 	{
 		"Brand": "Caline",
