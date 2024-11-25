@@ -8911,139 +8911,6 @@
 		"Image": "crowther-prunes-custard.png"
 	},
 	{
-		"Brand": "Cry Baby",
-		"Name": "Bass Wah",
-		"Width": 4.07,
-		"Height": 10,
-		"Image": "cry-baby-105q.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Buddy Guy Signature",
-		"Width": 4,
-		"Height": 10,
-		"Image": "cry-baby-bg95.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "CAE Wah",
-		"Width": 4,
-		"Height": 10,
-		"Image": "dunlop-mc404.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Custom Badass Dual Inductor Wah",
-		"Width": 4,
-		"Height": 10,
-		"Image": "cry-baby-gcb65.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Daredevil Fuzz Wah",
-		"Width": 4.69,
-		"Height": 10,
-		"Image": "cry-baby-dd95fw.png"
-	},
-	{
-			"Brand": "Cry Baby",
-			"Name": "Dimebag Cry Baby from Hell Wah",
-			"Width": 4.73,
-			"Height": 10,
-			"Image": "cry-baby-db01b.png"
-		},
-	{
-		"Brand": "Cry Baby",
-	 	"Name": "Jerry Cantrell Rainier Fog Wah",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "cry-baby-jc95b.png"
- 	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Jimi Hendrix Signature Wah",
-		"Width": 4,
-		"Height": 10,
-		"Image": "cry-baby-jh1d.png"
-	},
-	{
-		"Brand": "Cry Baby",
-	 	"Name": "Joe Bonamassa Signature Wah",
-	 	"Width": 4,
-	 	"Height": 10,
-	 	"Image": "cry-baby-jb95.png"
- 	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Junior Wah",
-		"Width": 4.00,
-		"Height": 8.00,
-		"Image": "cry-baby-cbj95.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Kirk Hammett Wah",
-		"Width": 3.858,
-		"Height": 10,
-		"Image": "cry-baby-105q.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Mini 535Q Wah",
-		"Width": 3.13,
-		"Height": 5.24,
-		"Image": "cry-baby-cbm535q.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Mini Bass Wah",
-		"Width": 3.08,
-		"Height": 5.25,
-		"Image": "cry-baby-cbm105q.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Mini Wah",
-		"Width": 3,
-		"Height": 5.25,
-		"Image": "cry-baby-cbm95.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Multi-Wah",
-		"Width": 4.75,
-		"Height": 10,
-		"Image": "cry-baby-535q.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Multi-Wah (Chrome)",
-		"Width": 4.75,
-		"Height": 10,
-		"Image": "cry-baby-535q-chrome.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Q Zone Auto Wah",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "cry-baby-csp030.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Q Zone Fixed Wah",
-		"Width": 2.57,
-		"Height": 4.33,
-		"Image": "cry-baby-qz1.png"
-	},
-	{
-		"Brand": "Cry Baby",
-		"Name": "Standard Wah",
-		"Width": 4,
-		"Height": 10,
-		"Image": "cry-baby-gcb95.png"
-	},
-	{
 		"Brand": "Cusack Music",
 		"Name": "Carolina Reaper",
 		"Width": 3.69,
@@ -11733,6 +11600,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Akira Takasaki Cry Baby Fuzz Wah",
+		"Width": 4.62,
+		"Height": 10,
+		"Image": "dunlop-at95.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Authentic Hendrix '68 Shrine Series Band of Gypsys",
 		"Width": 1.74,
 		"Height": 3.7,
@@ -11765,6 +11639,146 @@
 		"Width": 3.5,
 		"Height": 3.5,
 		"Image": "dunlop-ffm6.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Buddy Guy Cry Baby Signature",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-bg95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "CAE Wah",
+		"Width": 4.41,
+		"Height": 10,
+		"Image": "dunlop-mc404.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Clyde McCoy Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-cm95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby 535Q Multi-Wah",
+		"Width": 4.75,
+		"Height": 10,
+		"Image": "dunlop-535q.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby 535Q Multi-Wah (Chrome)",
+		"Width": 4.75,
+		"Height": 10,
+		"Image": "dunlop-535q-chrome.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby 95Q Wah",
+		"Width": 4.09,
+		"Height": 10,
+		"Image": "dunlop-95Q.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Bass Wah",
+		"Width": 4.09,
+		"Height": 10,
+		"Image": "dunlop-105q.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Custom Badass Dual-Inductor Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-gcb65.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Daredevil Fuzz Wah",
+		"Width": 4.69,
+		"Height": 10,
+		"Image": "dunlop-dd95fw.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby EVH Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-evh95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Junior Wah",
+		"Width": 4.00,
+		"Height": 8.00,
+		"Image": "dunlop-cbj95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Mini 535Q Wah",
+		"Width": 3.13,
+		"Height": 5.24,
+		"Image": "dunlop-cbm535q.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Mini Bass Wah",
+		"Width": 3.07,
+		"Height": 5.24,
+		"Image": "dunlop-cbm105q.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Mini Wah",
+		"Width": 3,
+		"Height": 5.25,
+		"Image": "dunlop-cbm95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Q Mini 535Q Auto-Return Wah",
+		"Width": 3.14,
+		"Height": 5.24,
+		"Image": "dunlop-cbm535ar.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Q Zone Auto Wah",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "dunlop-csp030.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Q Zone Fixed Wah",
+		"Width": 2.57,
+		"Height": 4.33,
+		"Image": "dunlop-qz1.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Rack Foot Controller",
+		"Width": 4,
+		"Height": 10.7,
+		"Image": "dunlop-cspo25.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Cry Baby Standard Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-gcb95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Dimebag Cry Baby from Hell Wah",
+		"Width": 4.73,
+		"Height": 10,
+		"Image": "dunlop-db01b.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -11803,6 +11817,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Eric Clapton Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-ec95g.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Eric Johnson Signature Fuzz Face",
 		"Width": 7.0,
 		"Height": 7.0,
@@ -11817,10 +11838,38 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Gary Clark Jr. Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-gcj95.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Germanium Fuzz Face Mini",
 		"Width": 3.5,
 		"Height": 3.5,
 		"Image": "dunlop-ffm2.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Jerry Cantrell Firefly Cry Baby Wah",
+		"Width": 4.62,
+		"Height": 10,
+		"Image": "dunlop-jc95ffs.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Jerry Cantrell Rainier Fog Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-jc95b.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Jimi Hendrix Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-jh1d.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -11845,10 +11894,10 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "Justin Chancellor Wah",
-		"Width": 5.26,
-		"Height": 9.6,
-		"Image": "dunlop-justin-chancellor-wah.png"
+		"Name": "Joe Bonamassa Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-jb95.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -11859,10 +11908,38 @@
 	},
 	{
 		"Brand": "Dunlop",
-		"Name": "MC404 CAE Wah",
-		"Width": 4.41,
+		"Name": "John Petrucci Cry Baby Wah",
+		"Width": 4,
 		"Height": 10,
-		"Image": "dunlop-mc404.png"
+		"Image": "dunlop-jp95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Justin Chancellor Cry Baby Wah",
+		"Width": 5.26,
+		"Height": 9.6,
+		"Image": "dunlop-justin-chancellor-wah.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Kirk Hammett Collection Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-kh95x.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Kirk Hammett Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-kh95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Leo Nocentelli Cry Baby Mardi Gras Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-ln95.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -11874,7 +11951,7 @@
 	{
 		"Brand": "Dunlop",
 		"Name": "Rotovibe",
-		"Width": 4,
+		"Width": 4.52,
 	 	"Height": 10,
 		"Image": "dunlop-jd4s.png"
 	},
@@ -11887,10 +11964,31 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Slash Cry Baby Classic Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-sc95.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Slash Cry Baby Wah",
+		"Width": 4.69,
+		"Height": 10,
+		"Image": "dunlop-sw95.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "UV-1 Uni-Vibe",
 		"Width": 5,
 		"Height": 5.5,
 		"Image": "dunlop-uv1.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Wylde Cry Baby Wah",
+		"Width": 4,
+		"Height": 10,
+		"Image": "dunlop-wa45.png"
 	},
 	{
 		"Brand": "Dusky Electronics",
@@ -30486,6 +30584,69 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Bass Chorus Deluxe",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m83.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Compressor",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m87.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass DI+",
+		"Width": 4.95,
+		"Height": 3.54,
+		"Image": "mxr-m80.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Distortion",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m85.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Envelope Filter",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m82.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Fuzz Deluxe",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m84.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Octave Deluxe",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m288.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Overdrive",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m89.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Preamp",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m81.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Blue Box Fuzz",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -30665,6 +30826,13 @@
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "mxr-csp102sl.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Dyna Comp Bass",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-m282.png"
 	},
 	{
 		"Brand": "MXR",
@@ -31032,6 +31200,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Sub Octave Bass Fuzz",
+		"Width": 4.95,
+		"Height": 3.54,
+		"Image": "mxr-m287.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Super Comp",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -31088,6 +31263,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Thump",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-m281.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "TRS Split + Tap",
 		"Width": 1.91,
 		"Height": 3.7,
@@ -31123,6 +31305,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Vintage Bass Octave",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "mxr-m280.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Wylde Audio Chorus",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -31148,97 +31337,6 @@
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "mxr-yjm308.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Chorus Deluxe",
-		"Width": 2.67,
-		"Height": 4.5,
-		"Image": "mxr-m83.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Compressor",
-		"Width": 2.67,
-		"Height": 4.5,
-		"Image": "mxr-m87.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass DI+",
-		"Width": 4.95,
-		"Height": 3.54,
-		"Image": "mxr-m80.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Distortion",
-		"Width": 2.67,
-		"Height": 4.5,
-		"Image": "mxr-m85.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Envelope Filter",
-		"Width": 2.67,
-		"Height": 4.5,
-		"Image": "mxr-m82.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Fuzz Deluxe",
-		"Width": 2.67,
-		"Height": 4.5,
-		"Image": "mxr-m84.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Octave Deluxe",
-		"Width": 2.67,
-		"Height": 4.5,
-		"Image": "mxr-m288.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Overdrive",
-		"Width": 2.67,
-		"Height": 4.5,
-		"Image": "mxr-m89.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Bass Preamp",
-		"Width": 2.67,
-		"Height": 4.5,
-		"Image": "mxr-m81.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Dyna Comp Bass",
-		"Width": 1.74,
-		"Height": 3.7,
-		"Image": "mxr-m282.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Sub Octave Bass Fuzz",
-		"Width": 4.95,
-		"Height": 3.54,
-		"Image": "mxr-m287.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Thump",
-		"Width": 1.74,
-		"Height": 3.7,
-		"Image": "mxr-m281.png"
-	},
-	{
-		"Brand": "MXR Bass Innovations",
-		"Name": "Vintage Bass Octave",
-		"Width": 1.74,
-		"Height": 3.7,
-		"Image": "mxr-m280.png"
 	},
 	{
 		"Brand": "MXR Custom Shop",
@@ -35236,6 +35334,13 @@
 		"Width": 2.5,
 		"Height": 4.8,
 		"Image": "pettyjohn-rous.png"
+	},
+	{
+		"Brand": "Pettyjohn",
+		"Name": "Shift",
+		"Width": 2.75,
+		"Height": 4.91,
+		"Image": "pettyjohn-shift.png"
 	},
 	{
 		"Brand": "Pigtronix",
