@@ -9892,6 +9892,20 @@
 	},
 	{
 		"Brand": "Decibelics",
+		"Name": "Rivus",
+		"Width": 1.86,
+		"Height": 3.7,
+		"Image": "decibelics-rivus.png"
+	},
+	{
+		"Brand": "Decibelics",
+		"Name": "Rivus (Blue)",
+		"Width": 1.86,
+		"Height": 3.7,
+		"Image": "decibelics-rivus-blue.png"
+	},
+	{
+		"Brand": "Decibelics",
 		"Name": "The Reverend",
 		"Width": 2.01,
 		"Height": 3.86,
@@ -24102,6 +24116,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Fuzz Head",
+		"Width": 2.82,
+		"Height": 4.58,
+		"Image": "keeley-fuzz-head.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "GC-2",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -31690,6 +31711,13 @@
 	},
 	{
 		"Brand": "Nobels",
+		"Name": "DEL-Mini",
+		"Width": 1.91,
+		"Height": 3.66,
+		"Image": "nobels-del-mini.png"
+	},
+	{
+		"Brand": "Nobels",
 		"Name": "ODR-1",
 		"Width": 2.89,
 		"Height": 5.08,
@@ -31718,7 +31746,7 @@
 	},
 	{
 		"Brand": "Nobels",
-		"Name": "ODR Mini",
+		"Name": "ODR-Mini",
 		"Width": 1.99,
 		"Height": 3.66,
 		"Image": "nobels-odr-mini.png"
