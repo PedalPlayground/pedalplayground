@@ -5797,6 +5797,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "PW-2 Power Driver",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-pw2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "PW-3 Wah Pedal",
 		"Width": 3.1875,
 		"Height": 7.5625,
@@ -37455,6 +37462,20 @@
 		"Width": 1.60,
 		"Height": 3.68,
 		"Image": "rowin-tuner.png"
+	},
+	{
+		"Brand": "Rude Tech",
+		"Name": "3MuF-14",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "rudetech-3muf14.png"
+	},
+	{
+		"Brand": "Rude Tech",
+		"Name": "Dude Alert!",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "rudetech-dude-alert.png"
 	},
 	{
 		"Brand": "RYRA",
