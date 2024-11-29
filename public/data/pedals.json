@@ -5153,6 +5153,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "DS-1-WH Distortion",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-ds1wh.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "DS-1w Distortion",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -10876,6 +10883,13 @@
 		"Width": 3.05,
 		"Height": 4.88,
 		"Image": "dod-250.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Overdrive Preamp 250 (50th Anniversary)",
+		"Width": 3,
+		"Height": 4.88,
+		"Image": "dod-250-anniversary.png"
 	},
 	{
 		"Brand": "DOD",
@@ -46055,6 +46069,20 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Brent Mason: Hot Wired v2",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "wampler-hardwired-v2.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Brent Mason: ReWired",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "wampler-brent-mason-rewired.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "Catacombs",
 		"Width": 4.8,
 		"Height": 3.83,
@@ -46105,8 +46133,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Dual Fusion V2",
-		"Width": 4.5,
-		"Height": 3.65,
+		"Width": 4.7,
+		"Height": 3.77,
 		"Image": "wampler-dualfusion.png"
 	},
 	{
@@ -46154,8 +46182,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Gearbox",
-		"Width": 4.5,
-		"Height": 3.65,
+		"Width": 4.7,
+		"Height": 3.77,
 		"Image": "wampler-gearbox.png"
 	},
 	{
@@ -46171,13 +46199,6 @@
 		"Width": 2.78,
 		"Height": 5,
 		"Image": "wampler-germanium-tumnus-deluxe.png"
-	},
-	{
-		"Brand": "Wampler",
-		"Name": "Hot Wired v2",
-		"Width": 4.5,
-		"Height": 3.65,
-		"Image": "wampler-hardwired-v2.png"
 	},
 	{
 		"Brand": "Wampler",
@@ -46238,8 +46259,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Paisley Deluxe",
-		"Width": 4.94,
-		"Height": 3.65,
+		"Width": 4.85,
+		"Height": 3.77,
 		"Image": "wampler-paisleydlx.png"
 	},
 	{
@@ -46252,8 +46273,8 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Pantheon Deluxe",
-		"Width": 4.5,
-		"Height": 3.65,
+		"Width": 4.7,
+		"Height": 3.77,
 		"Image": "wampler-pantheon-dual.png"
 	},
 	{
@@ -46332,6 +46353,13 @@
 		"Width": 4.8,
 		"Height": 3.83,
 		"Image": "wampler-terraform.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "The Fearbox",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "wampler-the-fearbox.png"
 	},
 	{
 		"Brand": "Wampler",
