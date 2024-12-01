@@ -1646,6 +1646,13 @@
 	},
 	{
 		"Brand": "Anasounds",
+		"Name": "Blues Believer",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-blues-believer.png"
+	},
+	{
+		"Brand": "Anasounds",
 		"Name": "Bumper",
 		"Width": 2.38,
 		"Height": 2.125,
@@ -42771,6 +42778,13 @@
 		"Image": "tinsley-sir-henry.png"
 	},
 	{
+		"Brand": "Tiny Tone",
+		"Name": "Varitone",
+		"Width": 4.85,
+		"Height": 2.36,
+		"Image": "tiny-tone-varitone.png"
+	},
+	{
 		"Brand": "Tomkat",
 		"Name": "Bender",
 		"Width": 3.49,
@@ -43780,10 +43794,24 @@
 	},
 	{
 		"Brand": "Vaderin",
+		"Name": "Bulldozer Percolator",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-bulldozer-percolator.png"
+	},
+	{
+		"Brand": "Vaderin",
 		"Name": "Cherry Fuzz",
 		"Width": 2.6,
 		"Height": 5.01,
 		"Image": "vaderin-cherry-fuzz.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "Heartbeat Percolator",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-heartbeat-percolator.png"
 	},
 	{
 		"Brand": "Vaderin",
@@ -43805,6 +43833,20 @@
 		"Width": 2.6,
 		"Height": 5.01,
 		"Image": "vaderin-laser-i.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "Low Hum Fuzz",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-low-hum-fuzz.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "Racer-X Percolator",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-racer-x-percolator.png"
 	},
 	{
 		"Brand": "Vaderin",
