@@ -38333,6 +38333,13 @@
 	},
 	{
 		"Brand": "Sonicake",
+		"Name": "Levitate",
+		"Width": 4.88,
+		"Height": 3.54,
+		"Image": "sonicake-levitate.png"
+	},
+	{
+		"Brand": "Sonicake",
 		"Name": "Noise Wiper",
 		"Width": 1.66,
 		"Height": 3.78,
