@@ -15820,6 +15820,13 @@
 		"Image": "fire-custom-ariete.png"
 	},
 	{
+		"Brand": "Fire-Eye",
+		"Name": "Red-Eye Preamp",
+		"Width": 3.28,
+		"Height": 4.38,
+		"Image": "fire-eye-red-eye-preamp.png"
+	},
+	{
 		"Brand": "Fishman",
 		"Name": "Aura Spectrum DI Preamp",
 		"Width": 5.37,
@@ -30857,6 +30864,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Dookie Drive (30th Anniversary Deluxe)",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-dd30.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Double-Double Overdrive",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -39047,6 +39061,13 @@
 	},
 	{
 		"Brand": "Sonicake",
+		"Name": "Vexpress",
+		"Width": 2.7,
+		"Height": 5.85,
+		"Image": "sonicake-vexpress.png"
+	},
+	{
+		"Brand": "Sonicake",
 		"Name": "Wave Crush",
 		"Width": 1.66,
 		"Height": 3.78,
@@ -43336,6 +43357,13 @@
 		"Width": 4.99,
 		"Height": 5.7,
 		"Image": "tubesteader-magnezium.png"
+	},
+	{
+		"Brand": "Tubesteader",
+		"Name": "Roy",
+		"Width": 2.91,
+		"Height": 5.02,
+		"Image": "tubesteader-roy.png"
 	},
 	{
 		"Brand": "Tubesteader",
