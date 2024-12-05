@@ -24956,6 +24956,13 @@
 	},
 	{
 		"Brand": "Kingsley",
+		"Name": "Artisan",
+		"Width": 3.88,
+		"Height": 4.85,
+		"Image": "kingsley-artisan.png"
+	},
+	{
+		"Brand": "Kingsley",
 		"Name": "Bard V3",
 		"Width": 3.88,
 		"Height": 4.85,
@@ -24981,6 +24988,13 @@
 		"Width": 5.25,
 		"Height": 5,
 		"Image": "kingsley-jester.png"
+	},
+	{
+		"Brand": "Kingsley",
+		"Name": "Juggler V3",
+		"Width": 6.7,
+		"Height": 5,
+		"Image": "kingsley-juggler-v3.png"
 	},
 	{
 		"Brand": "Kingsley",
@@ -38725,10 +38739,17 @@
 	},
 	{
 		"Brand": "Soldano",
-		"Name": "Super Lead Overdrive",
+		"Name": "SLO",
 		"Width": 2.63,
 		"Height": 4.45,
 		"Image": "soldano-super-lead-overdrive.png"
+	},
+	{
+		"Brand": "Soldano",
+		"Name": "SLO Plus",
+		"Width": 3.85,
+		"Height": 4.61,
+		"Image": "soldano-slo-plus.png"
 	},
 	{
 		"Brand": "SolidGoldFX",
@@ -44424,30 +44445,79 @@
 	},
 	{
 		"Brand": "Vick Audio",
-		"Name": "'73 Ram's Head",
-		"Width": 2.60,
-		"Height": 4.28,
+		"Name": "73 Ram's Head",
+		"Width": 2.85,
+		"Height": 4.5,
 		"Image": "vick-73-rams-head.png"
 	},
 	{
 		"Brand": "Vick Audio",
 		"Name": "1861",
-		"Width": 2.60,
-		"Height": 4.25,
+		"Width": 2.85,
+		"Height": 4.5,
 		"Image": "vick-1861.png"
 	},
 	{
 		"Brand": "Vick Audio",
+		"Name": "Black Russian",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "vick-black-russian.png"
+	},
+	{
+		"Brand": "Vick Audio",
+		"Name": "Lucky No. 13",
+		"Width": 2.85,
+		"Height": 4.58,
+		"Image": "vick-lucky-no-13.png"
+	},
+	{
+		"Brand": "Vick Audio",
+		"Name": "Mount Pleasant",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "vick-mount-pleasant.png"
+	},
+	{
+		"Brand": "Vick Audio",
+		"Name": "Overdriver",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "vick-overdriver.png"
+	},
+	{
+		"Brand": "Vick Audio",
+		"Name": "R-Comp",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "vick-r-comp.png"
+	},
+	{
+		"Brand": "Vick Audio",
 		"Name": "Tree of Life",
-		"Width": 2.83,
+		"Width": 2.85,
 		"Height": 4.5,
 		"Image": "vick-tree-of-life.png"
 	},
 	{
 		"Brand": "Vick Audio",
+		"Name": "V1 Triangle",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "vick-v1-triangle.png"
+	},
+	{
+		"Brand": "Vick Audio",
+		"Name": "Violet Ram's Head",
+		"Width": 2.85,
+		"Height": 4.5,
+		"Image": "vick-violet-rams-head.png"
+	},
+	{
+		"Brand": "Vick Audio",
 		"Name": "V-2",
-		"Width": 4.04,
-		"Height": 4.72,
+		"Width": 4.13,
+		"Height": 4.7,
 		"Image": "vick-v2.png"
 	},
 	{
