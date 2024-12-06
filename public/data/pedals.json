@@ -42933,6 +42933,13 @@
 	},
 	{
 		"Brand": "Tomkat",
+		"Name": "Super Heavy",
+		"Width": 3.5,
+		"Height": 4.7,
+		"Image": "tomkat-super-heavy.png"
+	},
+	{
+		"Brand": "Tomkat",
 		"Name": "Violet Muffer",
 		"Width": 3.82,
 		"Height": 4.89,
@@ -42968,6 +42975,13 @@
 	},
 	{
 		"Brand": "Tone City",
+		"Name": "Big Rumble",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "tonecity-big-rumble.png"
+	},
+	{
+		"Brand": "Tone City",
 		"Name": "Black Tea",
 		"Width": 1.75,
 		"Height": 3.66,
@@ -42986,6 +43000,13 @@
 		"Width": 1.75,
 		"Height": 3.66,
 		"Image": "tonecity-compengine.png"
+	},
+	{
+		"Brand": "Tone City",
+		"Name": "Double Durple",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "tonecity-double-durple.png"
 	},
 	{
 		"Brand": "Tone City",
@@ -43021,6 +43042,20 @@
 		"Width": 1.75,
 		"Height": 3.66,
 		"Image": "tonecity-goldenplexi2.png"
+	},
+	{
+		"Brand": "Tone City",
+		"Name": "Heavenly Lake",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "tonecity-heavenly-lake.png"
+	},
+	{
+		"Brand": "Tone City",
+		"Name": "Holy Aura",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "tonecity-holy-aura.png"
 	},
 	{
 		"Brand": "Tone City",
