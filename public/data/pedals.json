@@ -8261,6 +8261,13 @@
 	},
 	{
 		"Brand": "CME",
+		"Name": "U6Midi Pro",
+		"Width": 3.25,
+		"Height": 2.52,
+		"Image": "cme-u6midi-pro.png"
+	},
+	{
+		"Brand": "CME",
 		"Name": "WIDI Jack",
 		"Width": 1.339,
 		"Height": 1.496,
@@ -25577,6 +25584,13 @@
 		"Height": 4.56,
 		"Image": "kyro-crunch.png"
 	},
+  {
+		"Brand": "Lekato",
+		"Name": "Looper 9",
+		"Width": 1.86,
+		"Height": 3.54,
+		"Image": "lekato-looper-9.png"
+  },
 	{
 		"Brand": "L.R. Baggs",
 		"Name": "Align Series Active DI",
@@ -26507,6 +26521,13 @@
 		"Width": 4.87,
 		"Height": 2.74,
 		"Image": "lovepedal-amp808.png"
+	},
+	{
+		"Brand": "Lovepedal",
+		"Name": "Coternity",
+		"Width": 4.69,
+		"Height": 3.66,
+		"Image": "lovepedal-coternity.png"
 	},
 	{
 		"Brand": "Lovepedal",
