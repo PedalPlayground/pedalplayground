@@ -17998,6 +17998,13 @@
 	},
 	{
 		"Brand": "GFI System",
+		"Name": "Solisventus",
+		"Width": 6.7,
+		"Height": 4.69,
+		"Image": "gfi-solisventus.png"
+	},
+	{
+		"Brand": "GFI System",
 		"Name": "Specular Reverb V2",
 		"Width": 4.7,
 		"Height": 2.5,
@@ -39040,17 +39047,24 @@
 	},
 	{
 		"Brand": "SoloDallas",
-		"Name": "The Schaffer Replica Classic",
-		"Width": 3.7,
-		"Height": 4.85,
-		"Image": "solodallas-tsr.png"
-	},
-	{
-		"Brand": "SoloDallas",
 		"Name": "Orbiter Fuzz",
 		"Width": 2.79,
 		"Height": 4.72,
 		"Image": "solodallas-orbiter-fuzz.png"
+	},
+	{
+		"Brand": "SoloDallas",
+		"Name": "SVDS Boost",
+		"Width": 1.8,
+		"Height": 3.7,
+		"Image": "solodallas-svds-boost.png"
+	},
+	{
+		"Brand": "SoloDallas",
+		"Name": "The Schaffer Replica Classic",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "solodallas-tsr.png"
 	},
 	{
 		"Brand": "SoloDallas",
@@ -42878,22 +42892,50 @@
 	{
 		"Brand": "Tomkat",
 		"Name": "Bender",
-		"Width": 3.49,
-		"Height": 4.48,
+		"Width": 3.62,
+		"Height": 4.89,
 		"Image": "tomkat-bender.png"
 	},
 	{
 		"Brand": "Tomkat",
 		"Name": "Cloudy",
-		"Width": 3.62,
-		"Height": 4.82,
+		"Width": 3.69,
+		"Height": 4.99,
 		"Image": "tomkat-cloudy.png"
 	},
 	{
 		"Brand": "Tomkat",
+		"Name": "Cloudy (Black)",
+		"Width": 3.69,
+		"Height": 4.99,
+		"Image": "tomkat-cloudy-black.png"
+	},
+	{
+		"Brand": "Tomkat",
+		"Name": "Day Dreamer",
+		"Width": 3.62,
+		"Height": 4.89,
+		"Image": "tomkat-day-dreamer.png"
+	},
+	{
+		"Brand": "Tomkat",
+		"Name": "Killer",
+		"Width": 3.82,
+		"Height": 4.89,
+		"Image": "tomkat-killer.png"
+	},
+	{
+		"Brand": "Tomkat",
+		"Name": "Ripper",
+		"Width": 3.82,
+		"Height": 4.89,
+		"Image": "tomkat-ripper.png"
+	},
+	{
+		"Brand": "Tomkat",
 		"Name": "Violet Muffer",
-		"Width": 3.49,
-		"Height": 4.48,
+		"Width": 3.82,
+		"Height": 4.89,
 		"Image": "tomkat-violet-muffer.png"
 	},
 	{
