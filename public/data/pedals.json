@@ -19363,6 +19363,13 @@
 	},
 	{
 		"Brand": "Hamstead",
+		"Name": "Redwing",
+		"Width": 4.53,
+		"Height": 5.12,
+		"Image": "hamstead-redwing.png"
+	},
+	{
+		"Brand": "Hamstead",
 		"Name": "Signature",
 		"Width": 2.76,
 		"Height": 5.13,
