@@ -10641,52 +10641,73 @@
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "DMC-2",
-		"Width": 3.6,
-		"Height": 1.5,
-		"Image": "disasterarea-dmc2.png"
-	},
-	{
-		"Brand": "Disaster Area",
 		"Name": "DMC-3XL",
-		"Width": 4.8,
-		"Height": 2.75,
+		"Width": 4.86,
+		"Height": 2.88,
 		"Image": "disasterarea-dmc3xl.png"
-	},
-	{
-		"Brand": "Disaster Area",
-		"Name": "DMC-4",
-		"Width": 4.7,
-		"Height": 3.7,
-		"Image": "disasterarea-dmc4.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "DMC-4 Gen3",
 		"Width": 4.7,
-		"Height": 3.7,
+		"Height": 3.94,
 		"Image": "disasterarea-dmc4g3.png"
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "DMC-6",
+		"Name": "DMC-6 Gen3",
 		"Width": 7.4,
-		"Height": 4.7,
+		"Height": 4.86,
 		"Image": "disasterarea-dmc6.png"
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "DMC-8",
+		"Name": "DMC-8 Gen3",
 		"Width": 10,
-		"Height": 2.65,
+		"Height": 2.83,
 		"Image": "disasterarea-dmc8.png"
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "DMC Micro",
-		"Width": 3.65,
-		"Height": 1.65,
+		"Name": "DMC.micro Gen4",
+		"Width": 3.7,
+		"Height": 1.75,
 		"Image": "disasterarea-dmc-micro.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DMC.micro Gen4 (White)",
+		"Width": 3.7,
+		"Height": 1.75,
+		"Image": "disasterarea-dmc-micro-white.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DMC.micro PRO",
+		"Width": 3.7,
+		"Height": 1.75,
+		"Image": "disasterarea-dmc-micro-pro.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DPC-5 Gen3",
+		"Width": 10,
+		"Height": 2.87,
+		"Image": "disasterarea-dpc5.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DPC-8EZ Gen3",
+		"Width": 10,
+		"Height": 2.87,
+		"Image": "disasterarea-dpc-8ez-gen3.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DPC.micro Gen4",
+		"Width": 4.98,
+		"Height": 2.88,
+		"Image": "disasterarea-dpc-micro-g4.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -10697,73 +10718,73 @@
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "Micro Clock",
-		"Width": 1.73,
-		"Height": 3.65,
+		"Name": "micro.clock Gen4",
+		"Width": 1.75,
+		"Height": 3.7,
 		"Image": "disasterarea-micro-clock.png"
 	},
 	{
 		"Brand": "Disaster Area",
+		"Name": "micro.clock Gen4 (White)",
+		"Width": 1.75,
+		"Height": 3.7,
+		"Image": "disasterarea-micro-clock-white.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "micro.ghost",
+		"Width": 3.94,
+		"Height": 2.13,
+		"Image": "disasterarea-micro-ghost.png"
+	},
+	{
+		"Brand": "Disaster Area",
 		"Name": "MIDI Baby 3",
-		"Width": 4.41,
+		"Width": 4.4,
 		"Height": 2.64,
 		"Image": "disasterarea-midi-baby-3.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "MIDI Baby",
-		"Width": 2.346,
+		"Width": 2.41,
 		"Height": 2,
 		"Image": "disasterarea-midi-baby.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "MIDI Box 4",
-		"Width": 4.42,
+		"Width": 4.4,
 		"Height": 2.64,
 		"Image": "disasterarea-midibox4.png"
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "Smart Clock",
-		"Width": 2.81,
-		"Height": 4.87,
-		"Image": "disasterarea-smart-clock.png"
-	},
-	{
-		"Brand": "Disaster Area",
-		"Name": "DPC-8EZ gen3",
-		"Width": 10,
-		"Height": 2.88,
-		"Image": "disasterarea-dpc-8ez-gen3.png"
-	},
-	{
-		"Brand": "Disaster Area",
-		"Name": "DPC5",
-		"Width": 10,
-		"Height": 2.65,
-		"Image": "disasterarea-dpc5.png"
-	},
-	{
-		"Brand": "Disaster Area",
-		"Name": "qConnect",
-		"Width": 4.8,
-		"Height": 2.6,
-		"Image": "disasterarea-qconnect.png"
-	},
-	{
-		"Brand": "Disaster Area",
-		"Name": "DPC.Micro",
-		"Width": 4.9,
-		"Height": 2.88,
-		"Image": "disasterarea-dpc-micro.png"
+		"Name": "MIDI Box One",
+		"Width": 2.41,
+		"Height": 2,
+		"Image": "disasterarea-midi-box-one.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "NNB",
-		"Width": 1.65,
-		"Height": 3.65,
+		"Width": 1.75,
+		"Height": 3.7,
 		"Image": "disaster-area-nnb.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "qCONNECT",
+		"Width": 4.98,
+		"Height": 2.88,
+		"Image": "disasterarea-qconnect.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "SMARTClock Gen3",
+		"Width": 2.84,
+		"Height": 4.86,
+		"Image": "disasterarea-smart-clock.png"
 	},
 	{
 		"Brand": "Discomfort Designs",
@@ -11107,6 +11128,13 @@
 		"Width": 1.65354,
 		"Height": 3.681102,
 		"Image": "donner-yellow-fall.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Yellow Fall II",
+		"Width": 3.32,
+		"Height": 4.8,
+		"Image": "donner-yellow-fall-2.png"
 	},
 	{
 		"Brand": "Donner X Third Man Hardware",
@@ -24561,6 +24589,13 @@
 		"Width": 4.5,
 		"Height": 2.61,
 		"Image": "keeley-remote-switcher-octa-psi.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Rotary",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-rotary.png"
 	},
 	{
 		"Brand": "Keeley",
