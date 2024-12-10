@@ -41918,7 +41918,21 @@
 	},
 	{
 		"Brand": "TC Electronic",
-		"Name": "Plethora x5",
+		"Name": "Plethora X1",
+		"Width": 2.86,
+		"Height": 4.8,
+		"Image": "tc-plethora-x1.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Plethora X3",
+		"Width": 7,
+		"Height": 4.56,
+		"Image": "tc-plethora-x3.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Plethora X5",
 		"Width": 11.8,
 		"Height": 4.78,
 		"Image": "tc-plethora.png"
@@ -41985,13 +41999,6 @@
 		"Width": 2,
 		"Height": 3.75,
 		"Image": "tc-polytunemini.png"
-	},
-	{
-		"Brand": "TC Electronic",
-		"Name": "Plethora X3",
-		"Width": 7,
-		"Height": 4.56,
-		"Image": "tc-plethora-x3.png"
 	},
 	{
 		"Brand": "TC Electronic",
