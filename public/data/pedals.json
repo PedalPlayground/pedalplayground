@@ -13003,7 +13003,7 @@
 		"Name": "MicroBass 3",
 		"Width": 6.93,
 		"Height": 5.08,
-		"Image": "ebs-multibass-3.png"
+		"Image": "ebs-microbass-3.png"
 	},
 	{
 		"Brand": "EBS",
@@ -45100,6 +45100,13 @@
 		"Width": 4.01575,
 		"Height": 9.92126,
 		"Image": "vox-wah.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "V861 Vol/Exp Pedal",
+		"Width": 3.54,
+		"Height": 10.55,
+		"Image": "vox-v861.png"
 	},
 	{
 		"Brand": "Vox",
