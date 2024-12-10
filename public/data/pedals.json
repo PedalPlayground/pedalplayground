@@ -3355,8 +3355,8 @@
 	{
 		"Brand": "Beetronics",
 		"Name": "Fatbee",
-		"Width": 3.52,
-		"Height": 5.5,
+		"Width": 2.72,
+		"Height": 4.43,
 		"Image": "beetronics-fatbee.png"
 	},
 	{
@@ -3369,8 +3369,8 @@
 	{
 		"Brand": "Beetronics",
 		"Name": "Nectar",
-		"Width": 3.42,
-		"Height": 5.5,
+		"Width": 2.72,
+		"Height": 4.43,
 		"Image": "beetronics-nectar.png"
 	},
 	{
@@ -3383,8 +3383,8 @@
 	{
 		"Brand": "Beetronics",
 		"Name": "Octahive 2",
-		"Width": 3.52,
-		"Height": 5.6,
+		"Width": 2.72,
+		"Height": 4.43,
 		"Image": "beetronics-octahive-2.png"
 	},
 	{
@@ -3425,8 +3425,8 @@
 	{
 		"Brand": "Beetronics",
 		"Name": "Vezzpa",
-		"Width": 3.42,
-		"Height": 5.5,
+		"Width": 2.72,
+		"Height": 4.43,
 		"Image": "beetronics-vezzpa.png"
 	},
 	{
@@ -3435,6 +3435,13 @@
 		"Width": 3.67,
 		"Height": 5.5,
 		"Image": "beetronics-wannabee.png"
+	},
+	{
+		"Brand": "Beetronics",
+		"Name": "Whoctahell",
+		"Width": 2.72,
+		"Height": 4.43,
+		"Image": "beetronics-whoctahell.png"
 	},
 	{
 		"Brand": "Beetronics",
@@ -4541,6 +4548,13 @@
 		"Width": 2.38,
 		"Height": 4.62,
 		"Image": "bde-rec-head.png"
+	},
+	{
+		"Brand": "Bleak District Electric",
+		"Name": "Slate",
+		"Width": 2.38,
+		"Height": 4.62,
+		"Image": "bde-slate.png"
 	},
 	{
 		"Brand": "Bleak District Electric",
@@ -25711,13 +25725,6 @@
 		"Image": "lake-effects-fvd-white.png"
 	},
 	{
-		"Brand": "Land + Vongon",
-		"Name": "Onset",
-		"Width": 2.87,
-		"Height": 5.4,
-		"Image": "land-vongon-onset.png"
-	},
-	{
 		"Brand": "Land Devices",
 		"Name": "Domino",
 		"Width": 3.9,
@@ -25779,6 +25786,13 @@
 		"Width": 4.7,
 		"Height": 3.83,
 		"Image": "land-devices-no-masters.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "Onset",
+		"Width": 2.87,
+		"Height": 5.44,
+		"Image": "land-vongon-onset.png"
 	},
 	{
 		"Brand": "Land Devices",
@@ -26941,6 +26955,13 @@
 		"Width": 1.26,
 		"Height": 1.18,
 		"Image": "lwave-tiny-tap.png"
+	},
+	{
+		"Brand": "M2 Labs",
+		"Name": "The Bomber Overdrive",
+		"Width": 4.1,
+		"Height": 4.86,
+		"Image": "m2-labs-the-bomber-overdrive.png"
 	},
 	{
 		"Brand": "M-Audio",
