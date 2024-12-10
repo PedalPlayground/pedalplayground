@@ -3355,8 +3355,8 @@
 	{
 		"Brand": "Beetronics",
 		"Name": "Fatbee",
-		"Width": 3.52,
-		"Height": 5.5,
+		"Width": 2.72,
+		"Height": 4.43,
 		"Image": "beetronics-fatbee.png"
 	},
 	{
@@ -3369,8 +3369,8 @@
 	{
 		"Brand": "Beetronics",
 		"Name": "Nectar",
-		"Width": 3.42,
-		"Height": 5.5,
+		"Width": 2.72,
+		"Height": 4.43,
 		"Image": "beetronics-nectar.png"
 	},
 	{
@@ -3383,8 +3383,8 @@
 	{
 		"Brand": "Beetronics",
 		"Name": "Octahive 2",
-		"Width": 3.52,
-		"Height": 5.6,
+		"Width": 2.72,
+		"Height": 4.43,
 		"Image": "beetronics-octahive-2.png"
 	},
 	{
@@ -3425,8 +3425,8 @@
 	{
 		"Brand": "Beetronics",
 		"Name": "Vezzpa",
-		"Width": 3.42,
-		"Height": 5.5,
+		"Width": 2.72,
+		"Height": 4.43,
 		"Image": "beetronics-vezzpa.png"
 	},
 	{
@@ -3435,6 +3435,13 @@
 		"Width": 3.67,
 		"Height": 5.5,
 		"Image": "beetronics-wannabee.png"
+	},
+	{
+		"Brand": "Beetronics",
+		"Name": "Whoctahell",
+		"Width": 2.72,
+		"Height": 4.43,
+		"Image": "beetronics-whoctahell.png"
 	},
 	{
 		"Brand": "Beetronics",
@@ -4541,6 +4548,13 @@
 		"Width": 2.38,
 		"Height": 4.62,
 		"Image": "bde-rec-head.png"
+	},
+	{
+		"Brand": "Bleak District Electric",
+		"Name": "Slate",
+		"Width": 2.38,
+		"Height": 4.62,
+		"Image": "bde-slate.png"
 	},
 	{
 		"Brand": "Bleak District Electric",
@@ -10641,52 +10655,73 @@
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "DMC-2",
-		"Width": 3.6,
-		"Height": 1.5,
-		"Image": "disasterarea-dmc2.png"
-	},
-	{
-		"Brand": "Disaster Area",
 		"Name": "DMC-3XL",
-		"Width": 4.8,
-		"Height": 2.75,
+		"Width": 4.86,
+		"Height": 2.88,
 		"Image": "disasterarea-dmc3xl.png"
-	},
-	{
-		"Brand": "Disaster Area",
-		"Name": "DMC-4",
-		"Width": 4.7,
-		"Height": 3.7,
-		"Image": "disasterarea-dmc4.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "DMC-4 Gen3",
 		"Width": 4.7,
-		"Height": 3.7,
+		"Height": 3.94,
 		"Image": "disasterarea-dmc4g3.png"
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "DMC-6",
+		"Name": "DMC-6 Gen3",
 		"Width": 7.4,
-		"Height": 4.7,
+		"Height": 4.86,
 		"Image": "disasterarea-dmc6.png"
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "DMC-8",
+		"Name": "DMC-8 Gen3",
 		"Width": 10,
-		"Height": 2.65,
+		"Height": 2.83,
 		"Image": "disasterarea-dmc8.png"
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "DMC Micro",
-		"Width": 3.65,
-		"Height": 1.65,
+		"Name": "DMC.micro Gen4",
+		"Width": 3.7,
+		"Height": 1.75,
 		"Image": "disasterarea-dmc-micro.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DMC.micro Gen4 (White)",
+		"Width": 3.7,
+		"Height": 1.75,
+		"Image": "disasterarea-dmc-micro-white.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DMC.micro PRO",
+		"Width": 3.7,
+		"Height": 1.75,
+		"Image": "disasterarea-dmc-micro-pro.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DPC-5 Gen3",
+		"Width": 10,
+		"Height": 2.87,
+		"Image": "disasterarea-dpc5.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DPC-8EZ Gen3",
+		"Width": 10,
+		"Height": 2.87,
+		"Image": "disasterarea-dpc-8ez-gen3.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "DPC.micro Gen4",
+		"Width": 4.98,
+		"Height": 2.88,
+		"Image": "disasterarea-dpc-micro-g4.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -10697,73 +10732,73 @@
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "Micro Clock",
-		"Width": 1.73,
-		"Height": 3.65,
+		"Name": "micro.clock Gen4",
+		"Width": 1.75,
+		"Height": 3.7,
 		"Image": "disasterarea-micro-clock.png"
 	},
 	{
 		"Brand": "Disaster Area",
+		"Name": "micro.clock Gen4 (White)",
+		"Width": 1.75,
+		"Height": 3.7,
+		"Image": "disasterarea-micro-clock-white.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "micro.ghost",
+		"Width": 3.94,
+		"Height": 2.13,
+		"Image": "disasterarea-micro-ghost.png"
+	},
+	{
+		"Brand": "Disaster Area",
 		"Name": "MIDI Baby 3",
-		"Width": 4.41,
+		"Width": 4.4,
 		"Height": 2.64,
 		"Image": "disasterarea-midi-baby-3.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "MIDI Baby",
-		"Width": 2.346,
+		"Width": 2.41,
 		"Height": 2,
 		"Image": "disasterarea-midi-baby.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "MIDI Box 4",
-		"Width": 4.42,
+		"Width": 4.4,
 		"Height": 2.64,
 		"Image": "disasterarea-midibox4.png"
 	},
 	{
 		"Brand": "Disaster Area",
-		"Name": "Smart Clock",
-		"Width": 2.81,
-		"Height": 4.87,
-		"Image": "disasterarea-smart-clock.png"
-	},
-	{
-		"Brand": "Disaster Area",
-		"Name": "DPC-8EZ gen3",
-		"Width": 10,
-		"Height": 2.88,
-		"Image": "disasterarea-dpc-8ez-gen3.png"
-	},
-	{
-		"Brand": "Disaster Area",
-		"Name": "DPC5",
-		"Width": 10,
-		"Height": 2.65,
-		"Image": "disasterarea-dpc5.png"
-	},
-	{
-		"Brand": "Disaster Area",
-		"Name": "qConnect",
-		"Width": 4.8,
-		"Height": 2.6,
-		"Image": "disasterarea-qconnect.png"
-	},
-	{
-		"Brand": "Disaster Area",
-		"Name": "DPC.Micro",
-		"Width": 4.9,
-		"Height": 2.88,
-		"Image": "disasterarea-dpc-micro.png"
+		"Name": "MIDI Box One",
+		"Width": 2.41,
+		"Height": 2,
+		"Image": "disasterarea-midi-box-one.png"
 	},
 	{
 		"Brand": "Disaster Area",
 		"Name": "NNB",
-		"Width": 1.65,
-		"Height": 3.65,
+		"Width": 1.75,
+		"Height": 3.7,
 		"Image": "disaster-area-nnb.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "qCONNECT",
+		"Width": 4.98,
+		"Height": 2.88,
+		"Image": "disasterarea-qconnect.png"
+	},
+	{
+		"Brand": "Disaster Area",
+		"Name": "SMARTClock Gen3",
+		"Width": 2.84,
+		"Height": 4.86,
+		"Image": "disasterarea-smart-clock.png"
 	},
 	{
 		"Brand": "Discomfort Designs",
@@ -11107,6 +11142,13 @@
 		"Width": 1.65354,
 		"Height": 3.681102,
 		"Image": "donner-yellow-fall.png"
+	},
+	{
+		"Brand": "Donner",
+		"Name": "Yellow Fall II",
+		"Width": 3.32,
+		"Height": 4.8,
+		"Image": "donner-yellow-fall-2.png"
 	},
 	{
 		"Brand": "Donner X Third Man Hardware",
@@ -17998,6 +18040,13 @@
 	},
 	{
 		"Brand": "GFI System",
+		"Name": "Solisventus",
+		"Width": 6.7,
+		"Height": 4.69,
+		"Image": "gfi-solisventus.png"
+	},
+	{
+		"Brand": "GFI System",
 		"Name": "Specular Reverb V2",
 		"Width": 4.7,
 		"Height": 2.5,
@@ -19353,6 +19402,13 @@
 		"Width": 2.76,
 		"Height": 5.13,
 		"Image": "hamstead-odyssey.png"
+	},
+	{
+		"Brand": "Hamstead",
+		"Name": "Redwing",
+		"Width": 4.53,
+		"Height": 5.12,
+		"Image": "hamstead-redwing.png"
 	},
 	{
 		"Brand": "Hamstead",
@@ -24550,6 +24606,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Rotary",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-rotary.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Roto Sonic",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -25662,13 +25725,6 @@
 		"Image": "lake-effects-fvd-white.png"
 	},
 	{
-		"Brand": "Land + Vongon",
-		"Name": "Onset",
-		"Width": 2.87,
-		"Height": 5.4,
-		"Image": "land-vongon-onset.png"
-	},
-	{
 		"Brand": "Land Devices",
 		"Name": "Domino",
 		"Width": 3.9,
@@ -25730,6 +25786,13 @@
 		"Width": 4.7,
 		"Height": 3.83,
 		"Image": "land-devices-no-masters.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "Onset",
+		"Width": 2.87,
+		"Height": 5.44,
+		"Image": "land-vongon-onset.png"
 	},
 	{
 		"Brand": "Land Devices",
@@ -26892,6 +26955,13 @@
 		"Width": 1.26,
 		"Height": 1.18,
 		"Image": "lwave-tiny-tap.png"
+	},
+	{
+		"Brand": "M2 Labs",
+		"Name": "The Bomber Overdrive",
+		"Width": 4.1,
+		"Height": 4.86,
+		"Image": "m2-labs-the-bomber-overdrive.png"
 	},
 	{
 		"Brand": "M-Audio",
@@ -39040,17 +39110,24 @@
 	},
 	{
 		"Brand": "SoloDallas",
-		"Name": "The Schaffer Replica Classic",
-		"Width": 3.7,
-		"Height": 4.85,
-		"Image": "solodallas-tsr.png"
-	},
-	{
-		"Brand": "SoloDallas",
 		"Name": "Orbiter Fuzz",
 		"Width": 2.79,
 		"Height": 4.72,
 		"Image": "solodallas-orbiter-fuzz.png"
+	},
+	{
+		"Brand": "SoloDallas",
+		"Name": "SVDS Boost",
+		"Width": 1.8,
+		"Height": 3.7,
+		"Image": "solodallas-svds-boost.png"
+	},
+	{
+		"Brand": "SoloDallas",
+		"Name": "The Schaffer Replica Classic",
+		"Width": 3.7,
+		"Height": 4.85,
+		"Image": "solodallas-tsr.png"
 	},
 	{
 		"Brand": "SoloDallas",
@@ -42878,22 +42955,57 @@
 	{
 		"Brand": "Tomkat",
 		"Name": "Bender",
-		"Width": 3.49,
-		"Height": 4.48,
+		"Width": 3.62,
+		"Height": 4.89,
 		"Image": "tomkat-bender.png"
 	},
 	{
 		"Brand": "Tomkat",
 		"Name": "Cloudy",
-		"Width": 3.62,
-		"Height": 4.82,
+		"Width": 3.69,
+		"Height": 4.99,
 		"Image": "tomkat-cloudy.png"
 	},
 	{
 		"Brand": "Tomkat",
+		"Name": "Cloudy (Black)",
+		"Width": 3.69,
+		"Height": 4.99,
+		"Image": "tomkat-cloudy-black.png"
+	},
+	{
+		"Brand": "Tomkat",
+		"Name": "Day Dreamer",
+		"Width": 3.62,
+		"Height": 4.89,
+		"Image": "tomkat-day-dreamer.png"
+	},
+	{
+		"Brand": "Tomkat",
+		"Name": "Killer",
+		"Width": 3.82,
+		"Height": 4.89,
+		"Image": "tomkat-killer.png"
+	},
+	{
+		"Brand": "Tomkat",
+		"Name": "Ripper",
+		"Width": 3.82,
+		"Height": 4.89,
+		"Image": "tomkat-ripper.png"
+	},
+	{
+		"Brand": "Tomkat",
+		"Name": "Super Heavy",
+		"Width": 3.5,
+		"Height": 4.7,
+		"Image": "tomkat-super-heavy.png"
+	},
+	{
+		"Brand": "Tomkat",
 		"Name": "Violet Muffer",
-		"Width": 3.49,
-		"Height": 4.48,
+		"Width": 3.82,
+		"Height": 4.89,
 		"Image": "tomkat-violet-muffer.png"
 	},
 	{
@@ -42926,6 +43038,13 @@
 	},
 	{
 		"Brand": "Tone City",
+		"Name": "Big Rumble",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "tonecity-big-rumble.png"
+	},
+	{
+		"Brand": "Tone City",
 		"Name": "Black Tea",
 		"Width": 1.75,
 		"Height": 3.66,
@@ -42944,6 +43063,13 @@
 		"Width": 1.75,
 		"Height": 3.66,
 		"Image": "tonecity-compengine.png"
+	},
+	{
+		"Brand": "Tone City",
+		"Name": "Double Durple",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "tonecity-double-durple.png"
 	},
 	{
 		"Brand": "Tone City",
@@ -42979,6 +43105,20 @@
 		"Width": 1.75,
 		"Height": 3.66,
 		"Image": "tonecity-goldenplexi2.png"
+	},
+	{
+		"Brand": "Tone City",
+		"Name": "Heavenly Lake",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "tonecity-heavenly-lake.png"
+	},
+	{
+		"Brand": "Tone City",
+		"Name": "Holy Aura",
+		"Width": 4.7,
+		"Height": 3.9,
+		"Image": "tonecity-holy-aura.png"
 	},
 	{
 		"Brand": "Tone City",
