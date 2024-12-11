@@ -8751,6 +8751,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Heatseeker",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "ctc-heatseeker.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "Hi Power",
 		"Width": 4.7,
 		"Height": 3.78,
@@ -11545,51 +11552,65 @@
 	{
 		"Brand": "Drybell",
 		"Name": "Footswitch F-1L",
-		"Width": 2.16,
-		"Height": 2.01,
+		"Width": 2.17,
+		"Height": 2,
 		"Image": "drybell-f-1l.png"
 	},
 	{
 		"Brand": "Drybell",
 		"Name": "Footswitch F-1L3",
-		"Width": 2.16,
-		"Height": 2.01,
+		"Width": 2.17,
+		"Height": 2,
 		"Image": "drybell-f-1l3.png"
 	},
 	{
 		"Brand": "Drybell",
-		"Name": "Vibe Machine V-1",
-		"Width": 2.66,
-		"Height": 4.41,
-		"Image": "drybell-vibe-machine-v1.png"
-	},
-	{
-		"Brand": "Drybell",
-		"Name": "Vibe Machine V-2",
-		"Width": 2.66,
-		"Height": 4.41,
-		"Image": "drybell-vibe-machine-v2.png"
-	},
-	{
-		"Brand": "Drybell",
-		"Name": "Vibe Machine V-3",
-		"Width": 2.66,
-		"Height": 4.41,
-		"Image": "drybell-vibe-machine-v3.png"
-	},
-	{
-		"Brand": "Drybell",
-		"Name": "Unit67",
-		"Width": 2.64,
-		"Height": 4.33,
-		"Image": "drybell-unit67.png"
+		"Name": "Module 4",
+		"Width": 2.87,
+		"Height": 4.88,
+		"Image": "drybell-module4.png"
 	},
 	{
 		"Brand": "Drybell",
 		"Name": "The Engine",
 		"Width": 4.7,
-		"Height": 3.86,
+		"Height": 3.79,
 		"Image": "drybell-engine.png"
+	},
+	{
+		"Brand": "Drybell",
+		"Name": "Unit67",
+		"Width": 2.62,
+		"Height": 4.4,
+		"Image": "drybell-unit67.png"
+	},
+	{
+		"Brand": "Drybell",
+		"Name": "Unit67 (Silver)",
+		"Width": 2.62,
+		"Height": 4.4,
+		"Image": "drybell-unit67-silver.png"
+	},
+	{
+		"Brand": "Drybell",
+		"Name": "Vibe Machine V-1",
+		"Width": 2.62,
+		"Height": 4.4,
+		"Image": "drybell-vibe-machine-v1.png"
+	},
+	{
+		"Brand": "Drybell",
+		"Name": "Vibe Machine V-2",
+		"Width": 2.62,
+		"Height": 4.4,
+		"Image": "drybell-vibe-machine-v2.png"
+	},
+	{
+		"Brand": "Drybell",
+		"Name": "Vibe Machine V-3",
+		"Width": 2.62,
+		"Height": 4.4,
+		"Image": "drybell-vibe-machine-v3.png"
 	},
 	{
 		"Brand": "DSM & Humboldt",
@@ -12556,6 +12577,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-hoof.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Hoof (20th Anniversary)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-hoof-20th-anniversary.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -39800,6 +39828,13 @@
 		"Width": 2.81,
 		"Height": 4.75,
 		"Image": "spaceman-titanii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Voyager II",
+		"Width": 3.99,
+		"Height": 4.75,
+		"Image": "spaceman-voyager-ii.png"
 	},
 	{
 		"Brand": "Spiral Electric FX",
