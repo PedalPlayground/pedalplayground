@@ -23661,10 +23661,24 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "R-23 Legal Done",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r23.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "R-24 Rigel Preamp",
 		"Width": 5.12,
 		"Height": 3.31,
 		"Image": "joyo-r24.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-25 Hot Witch",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r25.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -23686,6 +23700,20 @@
 		"Width": 2.81,
 		"Height": 4.29,
 		"Image": "joyo-r28.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-29 Gloam",
+		"Width": 5.12,
+		"Height": 4.37,
+		"Image": "joyo-r29.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-30 Tidal Wave",
+		"Width": 5.16,
+		"Height": 4.37,
+		"Image": "joyo-r29.png"
 	},
 	{
 		"Brand": "Joyo",
