@@ -9311,6 +9311,20 @@
 	},
 	{
 		"Brand": "Danelectro",
+		"Name": "DSR-1 Spring King",
+		"Width": 9.33,
+		"Height": 6.54,
+		"Image": "danelectro-spring-king.png"
+	},
+	{
+		"Brand": "Danelectro",
+		"Name": "DSR-2 Spring King Junior",
+		"Width": 2.78,
+		"Height": 6.3,
+		"Image": "danelectro-spring-king-junior.png"
+	},
+	{
+		"Brand": "Danelectro",
 		"Name": "Nichols 1966",
 		"Width": 2.5,
 		"Height": 4.85,
@@ -23703,6 +23717,13 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "R-16 Vocal Lab",
+		"Width": 5.24,
+		"Height": 4.37,
+		"Image": "joyo-r16.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "R-17 Dark Flame",
 		"Width": 2.81,
 		"Height": 4.29,
@@ -23745,10 +23766,24 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "R-23 Legal Done",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r23.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "R-24 Rigel Preamp",
 		"Width": 5.12,
 		"Height": 3.31,
 		"Image": "joyo-r24.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-25 Hot Witch",
+		"Width": 2.81,
+		"Height": 4.29,
+		"Image": "joyo-r25.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -23770,6 +23805,20 @@
 		"Width": 2.81,
 		"Height": 4.29,
 		"Image": "joyo-r28.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-29 Gloam",
+		"Width": 5.12,
+		"Height": 4.37,
+		"Image": "joyo-r29.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-30 Tidal Wave",
+		"Width": 5.16,
+		"Height": 4.37,
+		"Image": "joyo-r30.png"
 	},
 	{
 		"Brand": "Joyo",
