@@ -19992,6 +19992,34 @@
 		"Image": "hartman-analog-flanger.png"
 	},
 	{
+		"Brand": "Hartwood",
+		"Name": "Beartooth",
+		"Width": 2.78,
+		"Height": 4.5,
+		"Image": "hartwood-beartooth.png"
+	},
+	{
+		"Brand": "Hartwood",
+		"Name": "Blue Ridge",
+		"Width": 2.78,
+		"Height": 4.5,
+		"Image": "hartwood-blue-ridge.png"
+	},
+	{
+		"Brand": "Hartwood",
+		"Name": "Collinsville",
+		"Width": 2.78,
+		"Height": 4.5,
+		"Image": "hartwood-collinsville.png"
+	},
+	{
+		"Brand": "Hartwood",
+		"Name": "Santa Fe",
+		"Width": 2.78,
+		"Height": 4.5,
+		"Image": "hartwood-santa-fe.png"
+	},
+	{
 		"Brand": "Haunted Labs",
 		"Name": "Dark Aura",
 		"Width": 2.66,
@@ -32047,6 +32075,13 @@
 	},
 	{
 		"Brand": "Non-Human Audio",
+		"Name": "Night Creatures",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "non-human-audio-night-creatures.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
 		"Name": "Slow Loris",
 		"Width": 2.6,
 		"Height": 5.06,
@@ -43371,6 +43406,27 @@
 		"Width": 2.6,
 		"Height": 5.06,
 		"Image": "tonewave-preset.png"
+	},
+	{
+		"Brand": "Trap Door Electronics",
+		"Name": "Active Acid",
+		"Width": 4.7,
+		"Height": 5.91,
+		"Image": "tde-active-acid.png"
+	},
+	{
+		"Brand": "Trap Door Electronics",
+		"Name": "Dot Dot Damage",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "tde-dot-dot-damage.png"
+	},
+	{
+		"Brand": "Trap Door Electronics",
+		"Name": "Exit Index Redux",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "tde-exit-index-redux.png"
 	},
 	{
 		"Brand": "Travs",
