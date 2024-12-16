@@ -9353,6 +9353,13 @@
 	},
 	{
 		"Brand": "Daredevil",
+		"Name": "Aces",
+		"Width": 2.99,
+		"Height": 4.82,
+		"Image": "daredevil-aces.png"
+	},
+	{
+		"Brand": "Daredevil",
 		"Name": "Almighty Bass",
 		"Width": 4.08,
 		"Height": 4.7,
@@ -9361,15 +9368,15 @@
 	{
 		"Brand": "Daredevil",
 		"Name": "Atomic Cock",
-		"Width": 2.87,
-		"Height": 4.63,
+		"Width": 2.99,
+		"Height": 4.82,
 		"Image": "daredevil-atomic-cock.png"
 	},
 	{
 		"Brand": "Daredevil",
 		"Name": "Bootleg Dirty Delay V2",
-		"Width": 2.87,
-		"Height": 4.63,
+		"Width": 2.99,
+		"Height": 4.82,
 		"Image": "daredevil-bootleg-v2.png"
 	},
 	{
@@ -9389,37 +9396,58 @@
 	{
 		"Brand": "Daredevil",
 		"Name": "Drive-Bi",
-		"Width": 2.87,
-		"Height": 4.63,
+		"Width": 2.99,
+		"Height": 4.82,
 		"Image": "daredevil-drive-bi.png"
 	},
 	{
 		"Brand": "Daredevil",
+		"Name": "Hype",
+		"Width": 2.99,
+		"Height": 4.82,
+		"Image": "daredevil-hype.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Logan Square Destroyer",
+		"Width": 2.99,
+		"Height": 4.82,
+		"Image": "daredevil-logan-square-destroyer.png"
+	},
+	{
+		"Brand": "Daredevil",
 		"Name": "Northern Creeper",
-		"Width": 2.87,
-		"Height": 4.63,
+		"Width": 2.99,
+		"Height": 4.82,
 		"Image": "daredevil-northern-creeper.png"
 	},
 	{
 		"Brand": "Daredevil",
 		"Name": "Premium Overdrive",
-		"Width": 2.87,
-		"Height": 4.63,
+		"Width": 2.99,
+		"Height": 4.82,
 		"Image": "daredevil-premium-overdrive.png"
 	},
 	{
 		"Brand": "Daredevil",
 		"Name": "Real Cool Fuzz",
-		"Width": 2.87,
-		"Height": 4.63,
+		"Width": 2.99,
+		"Height": 4.82,
 		"Image": "daredevil-real-cool-fuzz.png"
 	},
 	{
 		"Brand": "Daredevil",
 		"Name": "Silver Solo",
-		"Width": 2.87,
-		"Height": 4.63,
+		"Width": 2.99,
+		"Height": 4.82,
 		"Image": "daredevil-silver-solo.png"
+	},
+	{
+		"Brand": "Daredevil",
+		"Name": "Ten Tone Anniversary Fuzz",
+		"Width": 3.62,
+		"Height": 5.5,
+		"Image": "daredevil-ten-tone.png"
 	},
 	{
 		"Brand": "Darkglass",
@@ -38746,73 +38774,248 @@
 	},
 	{
 		"Brand": "Skreddy",
-		"Name": "BC 109",
-		"Width": 2.75,
-		"Height": 4.4,
+		"Name": "1966 Modernized",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-1966-modernized.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "1971",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-1971.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "?Lady",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-lady.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "BC109 Fuzz",
+		"Width": 2.67,
+		"Height": 4.5,
 		"Image": "skreddy-bc109.png"
 	},
 	{
 		"Brand": "Skreddy",
+		"Name": "BC239 Fuzz",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-bc239.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Cephalopod II",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-cephalopod-2.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Cognitive Dissonance MkIV",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-cognitive-dissonance-mk4.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Cosmos",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-cosmos.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Dynamic Mids Enhancer",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-dynamic-mids-enhancer.png"
+	},
+	{
+		"Brand": "Skreddy",
 		"Name": "Echo",
-		"Width": 4,
+		"Width": 3.84,
 		"Height": 5,
 		"Image": "skreddy-echo.png"
 	},
 	{
 		"Brand": "Skreddy",
-		"Name": "Hibrid Fuzz Driver",
-		"Width": 2.75,
-		"Height": 4.4,
+		"Name": "Echo Infinity",
+		"Width": 3.9,
+		"Height": 4.7,
+		"Image": "skreddy-echo-infinity.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Ernie",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-ernie.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "General Pig",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-general-pig.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Giant Meat Pie",
+		"Width": 3.7,
+		"Height": 5,
+		"Image": "skreddy-giant-meat-pie.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "High Gear",
+		"Width": 3.9,
+		"Height": 4.7,
+		"Image": "skreddy-high-gear.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Hybrid Fuzz Driver",
+		"Width": 2.67,
+		"Height": 4.5,
 		"Image": "skreddy-hibrid-fuzz-driver.png"
 	},
 	{
 		"Brand": "Skreddy",
+		"Name": "Hybrid Overdrive",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-hibrid-overdrive.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Juicy Pig",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-juicy-pig.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Klipper",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-klipper.png"
+	},
+	{
+		"Brand": "Skreddy",
 		"Name": "Little Miss Sunshine",
-		"Width": 2.75,
-		"Height": 4.4,
+		"Width": 2.67,
+		"Height": 4.5,
 		"Image": "skreddy-little-miss-sunshine.png"
 	},
 	{
 		"Brand": "Skreddy",
 		"Name": "Lunar Module",
-		"Width": 2.75,
-		"Height": 4.3,
+		"Width": 2.67,
+		"Height": 4.5,
 		"Image": "skreddy-lunar-module.png"
 	},
 	{
 		"Brand": "Skreddy",
+		"Name": "LZ-129",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-lz-129.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Martian Tarantula",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-martian-tarantula.png"
+	},
+	{
+		"Brand": "Skreddy",
 		"Name": "Mayo",
-		"Width": 2.75,
-		"Height": 4.4,
+		"Width": 2.7,
+		"Height": 4.5,
 		"Image": "skreddy-mayo.png"
 	},
 	{
 		"Brand": "Skreddy",
-		"Name": "P 19",
-		"Width": 2.75,
-		"Height": 4.4,
+		"Name": "P19",
+		"Width": 2.67,
+		"Height": 4.5,
 		"Image": "skreddy-p19.png"
 	},
 	{
 		"Brand": "Skreddy",
 		"Name": "Rover",
-		"Width": 2.75,
-		"Height": 4.4,
+		"Width": 2.74,
+		"Height": 4.5,
 		"Image": "skreddy-rover.png"
 	},
 	{
 		"Brand": "Skreddy",
+		"Name": "Rubber Soul",
+		"Width": 3.9,
+		"Height": 4.7,
+		"Image": "skreddy-rubber-soul.png"
+	},
+	{
+		"Brand": "Skreddy",
 		"Name": "Rust Rod",
-		"Width": 2.75,
-		"Height": 4.4,
+		"Width": 2.69,
+		"Height": 4.5,
 		"Image": "skreddy-rust-rod.png"
 	},
 	{
 		"Brand": "Skreddy",
-		"Name": "Screwdriver",
-		"Width": 2.75,
-		"Height": 4.3,
+		"Name": "Screaming Lizard",
+		"Width": 3.7,
+		"Height": 5,
+		"Image": "skreddy-screaming-lizard.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Screw Driver Mini Deluxe",
+		"Width": 2.67,
+		"Height": 4.5,
 		"Image": "skreddy-screwdriver.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Serenity Fuzzdrive",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-serenity-fuzzdrive.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Skunk",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-skunk.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Supa Tone",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "skreddy-supa-tone.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Super 100",
+		"Width": 3.9,
+		"Height": 4.7,
+		"Image": "skreddy-super-100.png"
+	},
+	{
+		"Brand": "Skreddy",
+		"Name": "Twangophile",
+		"Width": 3.9,
+		"Height": 4.7,
+		"Image": "skreddy-twangophile.png"
 	},
 	{
 		"Brand": "Slow Gear Electronics",
@@ -38831,8 +39034,8 @@
 	{
 		"Brand": "Skreddy",
 		"Name": "Swirl",
-		"Width": 2.75,
-		"Height": 4.4,
+		"Width": 2.67,
+		"Height": 4.5,
 		"Image": "skreddy-swirl.png"
 	},
 	{
