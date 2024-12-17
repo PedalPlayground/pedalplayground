@@ -3550,6 +3550,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "FD300 Ultra Feedback/Distortion",
+		"Width": 2.76,
+		"Height": 4.84,
+		"Image": "behringer-fd300.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "FS112BV Dual Footswitch",
 		"Width": 5.28,
 		"Height": 4.46,
@@ -24932,6 +24939,13 @@
 		"Width": 18.5,
 		"Height": 10.18,
 		"Image": "kemper-stage.png"
+	},
+	{
+		"Brand": "Kenton",
+		"Name": "Thru-5",
+		"Width": 3.94,
+		"Height": 1.93,
+		"Image": "kenton-thru5.png"
 	},
 	{
 		"Brand": "Kernom",
@@ -48234,21 +48248,28 @@
 		"Brand": "Xvive",
 		"Name": "Echoman",
 		"Width": 1.74,
-		"Height": 3.70,
+		"Height": 3.7,
 		"Image": "xvive-echoman.png"
+	},
+	{
+		"Brand": "Xvive",
+		"Name": "Lemon Squeezer",
+		"Width": 1.67,
+		"Height": 3.75,
+		"Image": "xvive-lemon-squeezer.png"
 	},
 	{
 		"Brand": "Xvive",
 		"Name": "O1 Tube Squasher",
 		"Width": 1.81,
-		"Height": 3.70,
+		"Height": 3.7,
 		"Image": "xvive-o1-tube-squasher.png"
 	},
 	{
 		"Brand": "Xvive",
 		"Name": "T1 Golden Brownie",
 		"Width": 1.81,
-		"Height": 3.70,
+		"Height": 3.7,
 		"Image": "xvive-t1-golden-brownie.png"
 	},
 	{
