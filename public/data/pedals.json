@@ -27923,6 +27923,13 @@
 		"Image": "mask-screws.png"
 	},
 	{
+		"Brand": "Master Effects",
+		"Name": "Super 800",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "master-effects-super-800.png"
+	},
+	{
 		"Brand": "Mattoverse",
 		"Name": "Inflection Point",
 		"Width": 2.66,
@@ -29856,17 +29863,73 @@
 	},
 	{
 		"Brand": "Morley",
+		"Name": "20/20 Bad Horsie Wah",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-20-20-bad-horsie-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Classic Switchless Wah",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-20-20-classic-switchless-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Distortion Wah",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-20-20-distortion-wah.png"
+	},
+	{
+		"Brand": "Morley",
 		"Name": "20/20 Lead Wah",
-		"Width": 4.5,
-		"Height": 6.85,
+		"Width": 4.73,
+		"Height": 7.62,
 		"Image": "morley-20-20-lead-wah.png"
 	},
 	{
 		"Brand": "Morley",
 		"Name": "20/20 Lead Wah Boost",
-		"Width": 4.5,
-		"Height": 7.24,
+		"Width": 4.73,
+		"Height": 7.62,
 		"Image": "morley-20-20-lead-wah-boost.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Power Fuzz Wah",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-20-20-power-fuzz-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Power Wah",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-20-20-power-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Power Wah Volume",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-20-20-power-wah-volume.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Volume Plus",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-20-20-volume-plus.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "20/20 Wah Lock",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-20-20-wah-lock.png"
 	},
 	{
 		"Brand": "Morley",
@@ -29877,10 +29940,24 @@
 	},
 	{
 		"Brand": "Morley",
-		"Name": "Bad Horsie",
-		"Width": 6,
-		"Height": 9.25,
-		"Image": "morley-wah.png"
+		"Name": "Classic Bad Horsie Wah",
+		"Width": 5.88,
+		"Height": 9.93,
+		"Image": "morley-classic-bad-horsie-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Classic Mark Tremonti Wah",
+		"Width": 5.88,
+		"Height": 9.93,
+		"Image": "morley-classic-mark-tremonti-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Cliff Burton Tribute Power Wah Fuzz",
+		"Width": 5.88,
+		"Height": 9.93,
+		"Image": "morley-cliff-burton-tribute-power-wah-fuzz.png"
 	},
 	{
 		"Brand": "Morley",
@@ -29891,10 +29968,87 @@
 	},
 	{
 		"Brand": "Morley",
+		"Name": "Gold Series ABC",
+		"Width": 6.63,
+		"Height": 4.25,
+		"Image": "morley-abc.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Gold Series ABC Pro Selector",
+		"Width": 6.63,
+		"Height": 4.3,
+		"Image": "morley-abc-pro-selector.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Gold Series ABY",
+		"Width": 5,
+		"Height": 3.14,
+		"Image": "morley-aby.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Gold Series ABY Mix",
+		"Width": 6.63,
+		"Height": 4.25,
+		"Image": "morley-aby-mix.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Gold Series ABY Pro Selector",
+		"Width": 5,
+		"Height": 3.3,
+		"Image": "morley-aby-pro-selector.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Immortal Series George Lynch Dragon 2 Wah",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-george-lynch-dragon-2-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Immortal Series George Lynch Mr Scary Wah",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-george-lynch-mr-scary-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Lerxst Blah Blah",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-lerxst-blah-blah.png"
+	},
+	{
+		"Brand": "Morley",
 		"Name": "Mini Wah",
 		"Width": 4.5,
 		"Height": 6.75,
 		"Image": "morley-mini-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Power Fuzz Wah",
+		"Width": 5.88,
+		"Height": 9.93,
+		"Image": "morley-power-fuzz-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Tone Questor Wah",
+		"Width": 4.73,
+		"Height": 7.62,
+		"Image": "morley-tone-questor-wah.png"
+	},
+	{
+		"Brand": "Morley",
+		"Name": "Volume Commander",
+		"Width": 5.3,
+		"Height": 4.67,
+		"Image": "morley-volume-commander.png"
 	},
 	{
 		"Brand": "Morningstar",
