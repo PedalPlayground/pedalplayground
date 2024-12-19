@@ -1037,13 +1037,6 @@
 	},
 	{
 		"Brand": "Pivotal",
-		"Name": "P20 Top Deck (Double Cut)",
-		"Width": 20.25,
-		"Height": 6,
-		"Image": "pivotal-p20-2cut.png"
-	},
-	{
-		"Brand": "Pivotal",
 		"Name": "P26",
 		"Width": 27.75,
 		"Height": 15.64,
