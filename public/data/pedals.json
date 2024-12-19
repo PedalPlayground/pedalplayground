@@ -39656,10 +39656,31 @@
 	},
 	{
 		"Brand": "Sonicake",
+		"Name": "A Factory",
+		"Width": 4.97,
+		"Height": 3.69,
+		"Image": "sonicake-afactory.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "B Factory",
+		"Width": 4.97,
+		"Height": 3.69,
+		"Image": "sonicake-bfactory.png"
+	},
+	{
+		"Brand": "Sonicake",
 		"Name": "Fazy Cream",
 		"Width": 1.66,
 		"Height": 3.78,
 		"Image": "sonicake-fazy-cream.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Levitate",
+		"Width": 4.88,
+		"Height": 3.69,
+		"Image": "sonicake-levitate.png"
 	},
 	{
 		"Brand": "Sonicake",
@@ -39674,6 +39695,13 @@
 		"Width": 1.66,
 		"Height": 3.78,
 		"Image": "sonicake-octaver.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Portal",
+		"Width": 4.88,
+		"Height": 3.59,
+		"Image": "sonicake-portal.png"
 	},
 	{
 		"Brand": "Sonicake",
@@ -39712,10 +39740,24 @@
 	},
 	{
 		"Brand": "Sonicake",
+		"Name": "Tone Group",
+		"Width": 4.88,
+		"Height": 3.69,
+		"Image": "sonicake-tone-group.png"
+	},
+	{
+		"Brand": "Sonicake",
 		"Name": "Vexpress",
 		"Width": 2.7,
 		"Height": 5.85,
 		"Image": "sonicake-vexpress.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Warped Dimension",
+		"Width": 4.88,
+		"Height": 3.69,
+		"Image": "sonicake-warped-dimension.png"
 	},
 	{
 		"Brand": "Sonicake",
