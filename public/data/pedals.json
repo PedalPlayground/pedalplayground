@@ -13136,7 +13136,7 @@
 		"Name": "MicroBass 3",
 		"Width": 6.93,
 		"Height": 5.08,
-		"Image": "ebs-multibass-3.png"
+		"Image": "ebs-microbass-3.png"
 	},
 	{
 		"Brand": "EBS",
@@ -45839,16 +45839,23 @@
 	{
 		"Brand": "Vox",
 		"Name": "V810 Valvetone",
-		"Width": 3.375,
-		"Height": 5.8125,
+		"Width": 3.38,
+		"Height": 5.81,
 		"Image": "vox-v810.png"
 	},
 	{
 		"Brand": "Vox",
 		"Name": "V847 Wah",
-		"Width": 4.01575,
-		"Height": 9.92126,
+		"Width": 4.02,
+		"Height": 9.92,
 		"Image": "vox-wah.png"
+	},
+	{
+		"Brand": "Vox",
+		"Name": "V861",
+		"Width": 3.5,
+		"Height": 10.03,
+		"Image": "vox-v861.png"
 	},
 	{
 		"Brand": "Vox",
@@ -45859,7 +45866,7 @@
 	},
 	{
 		"Brand": "Vox",
-		"Name": "Valvenergy silk-drive",
+		"Name": "Valvenergy Silk-Drive",
 		"Width": 2.83,
 		"Height": 4.72,
 		"Image": "vox-valvenergy-silk-drive.png"
