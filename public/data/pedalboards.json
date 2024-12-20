@@ -1260,6 +1260,13 @@
 		"Image": "rockboard-tres-33.png"
 	},
 	{
+		"Brand": "Rolling Pedalboards",
+		"Name": "Stage 1 Deluxe",
+		"Width": 22,
+		"Height": 14.5,
+		"Image": "rolling-stage-1-deluxe.png"
+	},
+	{
 		"Brand": "Rug",
 		"Name": "1",
 		"Width": 34,

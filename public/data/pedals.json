@@ -8282,16 +8282,23 @@
 	},
 	{
 		"Brand": "CME",
+		"Name": "U6MIDI Pro",
+		"Width": 3.25,
+		"Height": 2.52,
+		"Image": "cme-u6midi-pro.png"
+	},
+	{
+		"Brand": "CME",
 		"Name": "WIDI Jack",
-		"Width": 1.339,
-		"Height": 1.496,
+		"Width": 1.34,
+		"Height": 1.47,
 		"Image": "cme-widi-jack.png"
 	},
 	{
 		"Brand": "CME",
 		"Name": "WIDI Uhost",
-		"Width": 1.339,
-		"Height": 1.496,
+		"Width": 1.34,
+		"Height": 1.47,
 		"Image": "cme-widi-uhost.png"
 	},
 	{
@@ -20588,6 +20595,13 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Komp",
+		"Width": 1.9,
+		"Height": 3.2,
+		"Image": "hotone-komp.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Krush",
 		"Width": 1.9,
 		"Height": 3.2,
@@ -26299,6 +26313,13 @@
 		"Image": "lehle-sunday-driver.png"
 	},
 	{
+		"Brand": "Lekato",
+		"Name": "Looper",
+		"Width": 1.8,
+		"Height": 3.54,
+		"Image": "lekato-looper.png"
+	},
+	{
 		"Brand": "Lerxst",
 		"Name": "By-Tor",
 		"Width": 3.7,
@@ -26738,6 +26759,13 @@
 		"Width": 4.87,
 		"Height": 2.74,
 		"Image": "lovepedal-amp808.png"
+	},
+	{
+		"Brand": "Lovepedal",
+		"Name": "COTernity",
+		"Width": 4.7,
+		"Height": 3.84,
+		"Image": "lovepedal-coternity.png"
 	},
 	{
 		"Brand": "Lovepedal",
