@@ -24788,6 +24788,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Soft Reverb",
+		"Width": 2.73,
+		"Height": 4.5,
+		"Image": "keeley-soft-reverb.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Stahlhammer",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -43056,6 +43063,13 @@
 		"Width": 4,
 		"Height": 4.6,
 		"Image": "tech21-yyz-mp40.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Sansamp XB Driver",
+		"Width": 7.5,
+		"Height": 4.91,
+		"Image": "tech21-xb-driver.png"
 	},
 	{
 		"Brand": "Tech 21 NYC",
