@@ -6945,6 +6945,13 @@
 	},
 	{
 		"Brand": "Case Study",
+		"Name": "Lastlight Overdrive",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "case-study-lastlight-overdrive.png"
+	},
+	{
+		"Brand": "Case Study",
 		"Name": "Studio Compressor",
 		"Width": 2.6,
 		"Height": 4.99,
@@ -43189,6 +43196,13 @@
 		"Width": 3.2,
 		"Height": 3.56,
 		"Image": "templo-splyce.png"
+	},
+	{
+		"Brand": "Templo Devices",
+		"Name": "T2",
+		"Width": 7.42,
+		"Height": 4.74,
+		"Image": "templo-t2.png"
 	},
 	{
 		"Brand": "Templo Devices",
