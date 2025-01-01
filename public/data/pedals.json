@@ -3983,6 +3983,20 @@
 		"Image": "big-joe-analog-chorus.png"
 	},
 	{
+		"Brand": "Biyang",
+		"Name": "PH-10 Phase Pro",
+		"Width": 2.63,
+		"Height": 4.5,
+		"Image": "biyang-ph10.png"
+	},
+	{
+		"Brand": "Biyang",
+		"Name": "RV-10 Tri Reverb",
+		"Width": 2.63,
+		"Height": 4.5,
+		"Image": "biyang-rv10.png"
+	},
+	{
 		"Brand": "B.K. Butler",
 		"Name": "Tube Driver",
 		"Width": 4.13,
@@ -4852,9 +4866,30 @@
 	},
 	{
 		"Brand": "Boredbrain",
-		"Name": "Terminal V2",
-		"Width": 2.56,
-		"Height": 4.33,
+		"Name": "Intrfx v2",
+		"Width": 4,
+		"Height": 4.01,
+		"Image": "boredbrain-intrfx-v2.png"
+	},
+	{
+		"Brand": "Boredbrain",
+		"Name": "Patchulator Pro",
+		"Width": 10,
+		"Height": 2.93,
+		"Image": "boredbrain-patchulator-pro.png"
+	},
+	{
+		"Brand": "Boredbrain",
+		"Name": "Patchulator v2",
+		"Width": 6.18,
+		"Height": 6.18,
+		"Image": "boredbrain-patchulator-v2.png"
+	},
+	{
+		"Brand": "Boredbrain",
+		"Name": "Terminal v2",
+		"Width": 2.65,
+		"Height": 4.5,
 		"Image": "boredbrain-terminal-v2.png"
 	},
 	{
@@ -6504,10 +6539,24 @@
 	},
 	{
 		"Brand": "Caline",
+		"Name": "CP-17 Echo Delay",
+		"Width": 3.93,
+		"Height": 4.75,
+		"Image": "caline-cp17.png"
+	},
+	{
+		"Brand": "Caline",
 		"Name": "CP-31 Purple Wah",
 		"Width": 2.61,
 		"Height": 5.31,
 		"Image": "caline-cp31.png"
+	},
+	{
+		"Brand": "Caline",
+		"Name": "CP-47 Presure Tank",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "caline-cp47.png"
 	},
 	{
 		"Brand": "Caline",
