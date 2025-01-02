@@ -8464,6 +8464,13 @@
 	},
 	{
 		"Brand": "Collision Devices",
+		"Name": "Tars DLX",
+		"Width": 5.47,
+		"Height": 4.97,
+		"Image": "collision-devices-tars-dlx.png"
+	},
+	{
+		"Brand": "Collision Devices",
 		"Name": "The Ranch",
 		"Width": 3.94,
 		"Height": 5.09,
@@ -37788,7 +37795,7 @@
 	{
 		"Brand": "RJM",
 		"Name": "Mastermind PBC/6X",
-		"Width": 10.1,
+		"Width": 10.28,
 		"Height": 4.15,
 		"Image": "rjm-pbc6x.png"
 	},
