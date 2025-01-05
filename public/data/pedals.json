@@ -48518,6 +48518,13 @@
 		"Image": "yellowcake-furry-burrito.png"
 	},
 	{
+		"Brand": "Yuer",
+		"Name": "Looper&Drum",
+		"Width": 3.55,
+		"Height": 4.92,
+		"Image": "yuer-looper-drum.png"
+	},
+	{
 		"Brand": "Zander Circuitry",
 		"Name": "American Geek",
 		"Width": 2.64,
