@@ -33615,6 +33615,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "BL-13",
+		"Width": 2.71,
+		"Height": 4.67,
+		"Image": "obne-bl-13.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "BL-37",
 		"Width": 2.74,
 		"Height": 4.5,
@@ -35656,6 +35663,13 @@
 		"Width": 2.7,
 		"Height": 4.6,
 		"Image": "paul-c-timmy-v3-15th.png"
+	},
+	{
+		"Brand": "PdLS 3D",
+		"Name": "AUX Switch (PBC/6X)",
+		"Width": 1.8,
+		"Height": 4.45,
+		"Image": "pdls3d-aux-switch-pbc6x.png"
 	},
 	{
 		"Brand": "Peace Hill FX",
@@ -37795,8 +37809,8 @@
 	{
 		"Brand": "RJM",
 		"Name": "Mastermind PBC/6X",
-		"Width": 10.28,
-		"Height": 4.15,
+		"Width": 10.1,
+		"Height": 4.28,
 		"Image": "rjm-pbc6x.png"
 	},
 	{
@@ -47851,6 +47865,20 @@
 		"Width": 3.99,
 		"Height": 4.7,
 		"Image": "westerlund-one.png"
+	},
+	{
+		"Brand": "Whimsy Machines",
+		"Name": "Fantabulizing Whatsitdo",
+		"Width": 4.9,
+		"Height": 2.84,
+		"Image": "whimsy-machines-fantabulizing=whatsitdo.png"
+	},
+	{
+		"Brand": "Whimsy Machines",
+		"Name": "Sweet Tooth",
+		"Width": 4.9,
+		"Height": 2.84,
+		"Image": "whimsy-machines-sweet-tooth.png"
 	},
 	{
 		"Brand": "Winnipeg Electrical Co.",
