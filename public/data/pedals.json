@@ -41209,6 +41209,13 @@
 		"Image": "subdecay-vitruvian-mod.png"
 	},
 	{
+		"Brand": "Substation Onyx",
+		"Name": "Opaque Drive",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "substation-onyx-opaque-drive.png"
+	},
+	{
 		"Brand": "Suhr",
 		"Name": "ACE",
 		"Width": 4.8,
