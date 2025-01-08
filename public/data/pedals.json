@@ -13491,9 +13491,16 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "2020 Tuner",
-		"Width": 1.8,
-		"Height": 3.63,
+		"Width": 1.82,
+		"Height": 3.75,
 		"Image": "ehx-2020-tuner.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "2020 Tuner v2",
+		"Width": 1.82,
+		"Height": 3.81,
+		"Image": "ehx-2020-tuner-v2.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -14320,6 +14327,13 @@
 		"Width": 4.19,
 		"Height": 4.75,
 		"Image": "ehx-operation-overlord.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico 360+ Looper",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-360-looper.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
