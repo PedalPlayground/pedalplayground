@@ -21267,9 +21267,37 @@
 	},
 	{
 		"Brand": "Industrialectric",
+		"Name": "567-M",
+		"Width": 3.57,
+		"Height": 5.5,
+		"Image": "industrialectric-567m.png"
+	},
+	{
+		"Brand": "Industrialectric",
+		"Name": "Echo Degrader",
+		"Width": 3.93,
+		"Height": 5.63,
+		"Image": "industrialectric-echo-degrader.png"
+	},
+	{
+		"Brand": "Industrialectric",
+		"Name": "Echo Degrader Altered Edition",
+		"Width": 5,
+		"Height": 6,
+		"Image": "industrialectric-echo-degrader-alt.png"
+	},
+	{
+		"Brand": "Industrialectric",
+		"Name": "Incinerator",
+		"Width": 7,
+		"Height": 7,
+		"Image": "industrialectric-incinerator.png"
+	},
+	{
+		"Brand": "Industrialectric",
 		"Name": "RM-1N",
-		"Width": 5.7,
-		"Height": 3.87,
+		"Width": 5.5,
+		"Height": 3.82,
 		"Image": "industrialectric-rm1n.png"
 	},
 	{
@@ -21278,6 +21306,27 @@
 		"Width": 6,
 		"Height": 5,
 		"Image": "industrialectric-rm1n-alt.png"
+	},
+	{
+		"Brand": "Industrialectric",
+		"Name": "RM-1N Altered Edition v2",
+		"Width": 6,
+		"Height": 5,
+		"Image": "industrialectric-rm1n-alt-v2.png"
+	},
+	{
+		"Brand": "Industrialectric",
+		"Name": "System-46",
+		"Width": 6.5,
+		"Height": 4.72,
+		"Image": "industrialectric-system-46.png"
+	},
+	{
+		"Brand": "Industrialectric",
+		"Name": "Thermionic Actuator",
+		"Width": 4.62,
+		"Height": 6.5,
+		"Image": "industrialectric-thermionic-actuator.png"
 	},
 	{
 		"Brand": "Instruments For A New Electric Music",
