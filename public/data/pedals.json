@@ -8267,6 +8267,20 @@
 		"Image": "cae-yukon.png"
 	},
 	{
+		"Brand": "ClinchFX",
+		"Name": "EP Plus",
+		"Width": 2.95,
+		"Height": 4.67,
+		"Image": "clinchfx-ep-plus.png"
+	},
+	{
+		"Brand": "ClinchFX",
+		"Name": "EP-PRE",
+		"Width": 2.95,
+		"Height": 4.67,
+		"Image": "clinchfx-ep-pre.png"
+	},
+	{
 		"Brand": "CMAT Mods",
 		"Name": "Analog Chorus",
 		"Width": 2.94,
@@ -27721,57 +27735,92 @@
 	},
 	{
 		"Brand": "Malekko",
+		"Name": "AD (Omicron)",
+		"Width": 1.76,
+		"Height": 3.7,
+		"Image": "malekko-ad-omicron.png"
+	},
+	{
+		"Brand": "Malekko",
 		"Name": "B:Assmaster",
 		"Width": 6,
-		"Height": 5.14,
+		"Height": 5.07,
 		"Image": "malekko-bassmaster.png"
 	},
 	{
 		"Brand": "Malekko",
 		"Name": "Charlie Foxtrot",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-charlie-foxtrot.png"
 	},
 	{
 		"Brand": "Malekko",
+		"Name": "Chorus",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "malekko-chorus.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Comp (Omicron)",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "malekko-comp-omicron.png"
+	},
+	{
+		"Brand": "Malekko",
 		"Name": "Diabolik",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-diabolik.png"
 	},
 	{
 		"Brand": "Malekko",
 		"Name": "Downer",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-downer.png"
 	},
 	{
 		"Brand": "Malekko",
-		"Name": "Ekko 616 MKII FE",
-		"Width": 2.72,
+		"Name": "E.Filter",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "malekko-efilter.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Ekko 616 MKII",
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-ekko-616-mk2.png"
 	},
 	{
 		"Brand": "Malekko",
+		"Name": "Ekko 616 MKII FE",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "malekko-ekko-616-mk2-fe.png"
+	},
+	{
+		"Brand": "Malekko",
 		"Name": "Fetish MKII",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-fetish-mk2.png"
 	},
 	{
 		"Brand": "Malekko",
 		"Name": "Goatkeeper",
-		"Width": 2.72,
+		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "malekko-goatkeeper.png"
 	},
 	{
 		"Brand": "Malekko",
 		"Name": "Helium MKII",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-helium-mk2.png"
 	},
@@ -27779,57 +27828,99 @@
 		"Brand": "Malekko",
 		"Name": "Lil Buddy",
 		"Width": 2,
-		"Height": 2.19,
+		"Height": 2.12,
 		"Image": "malekko-lil-buddy.png"
 	},
 	{
 		"Brand": "Malekko",
+		"Name": "Lofi Ekko 616",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "malekko-lofi-ekko-616.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Phase",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "malekko-phase.png"
+	},
+	{
+		"Brand": "Malekko",
 		"Name": "Polyamorator",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-polyamorator.png"
 	},
 	{
 		"Brand": "Malekko",
 		"Name": "Scrutator",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-scrutator.png"
 	},
 	{
 		"Brand": "Malekko",
 		"Name": "Sloika MKII",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-sloika-mk2.png"
 	},
 	{
 		"Brand": "Malekko",
 		"Name": "Sneak Attack",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-sneak-attack.png"
 	},
 	{
 		"Brand": "Malekko",
-		"Name": "Spring",
-		"Width": 1.77,
-		"Height": 3.58,
+		"Name": "Spring (Omicron)",
+		"Width": 1.74,
+		"Height": 3.7,
 		"Image": "malekko-spring.png"
 	},
 	{
 		"Brand": "Malekko",
+		"Name": "Spring Chicken",
+		"Width": 3.1,
+		"Height": 4.97,
+		"Image": "malekko-spring-chicken.png"
+	},
+	{
+		"Brand": "Malekko",
 		"Name": "Thicken",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-thicken.png"
 	},
 	{
 		"Brand": "Malekko",
+		"Name": "Trem",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "malekko-trem.png"
+	},
+	{
+		"Brand": "Malekko",
 		"Name": "Unity MKII",
-		"Width": 2.72,
+		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-unity-mk2.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Vibrato",
+		"Width": 1.74,
+		"Height": 3.7,
+		"Image": "malekko-vibrato.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Vibrato (Omicron)",
+		"Width": 1.76,
+		"Height": 3.7,
+		"Image": "malekko-vibrato-omicron.png"
 	},
 	{
 		"Brand": "MarkBass",
