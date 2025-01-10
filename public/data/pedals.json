@@ -4383,6 +4383,13 @@
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
+		"Name": "Fuzz Banger",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-fuzz-banger.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
 		"Name": "Fuzz Detonator",
 		"Width": 3.7,
 		"Height": 4.92,
@@ -4429,6 +4436,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-p2p-tone-bender-mk2.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
+		"Name": "Priority Delay",
+		"Width": 4.7,
+		"Height": 3.85,
+		"Image": "blammo-priority-delay.png"
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
@@ -26528,6 +26542,13 @@
 		"Width": 2.74,
 		"Height": 4.95,
 		"Image": "lichtlaerm-medusa.png"
+	},
+	{
+		"Brand": "Lichtlaerm",
+		"Name": "PandorA",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-pandora.png"
 	},
 	{
 		"Brand": "Lichtlaerm",
