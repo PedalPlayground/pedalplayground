@@ -11159,6 +11159,13 @@
 	},
 	{
 		"Brand": "Dominion Electric",
+		"Name": "Battery Replacement Box",
+		"Width": 3.72,
+		"Height": 1.5,
+		"Image": "dominion-battery-replacement-box.png"
+	},
+	{
+		"Brand": "Dominion Electric",
 		"Name": "Firebox",
 		"Width": 3,
 		"Height": 4.73,
