@@ -10326,6 +10326,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "CabDryVR",
+		"Width": 2.63,
+		"Height": 4.68,
+		"Image": "digitech-cabdryvr.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Death Metal",
 		"Width": 3.12,
 		"Height": 4.865,
