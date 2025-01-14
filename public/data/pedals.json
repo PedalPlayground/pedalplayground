@@ -10319,13 +10319,6 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "Boneshaker",
-		"Width": 2.63,
-		"Height": 4.68,
-		"Image": "digitech-boneshaker.png"
-	},
-	{
-		"Brand": "DigiTech",
 		"Name": "CabDryVR",
 		"Width": 2.63,
 		"Height": 4.68,
@@ -10813,6 +10806,13 @@
 		"Width": 3.05,
 		"Height": 4.88,
 		"Image": "dod-410.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Boneshaker",
+		"Width": 3.05,
+		"Height": 4.88,
+		"Image": "dod-boneshaker.png"
 	},
 	{
 		"Brand": "DOD",
