@@ -10803,43 +10803,43 @@
 	{
 		"Brand": "DOD",
 		"Name": "Bifet Boost 410",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-410.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Boneshaker",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-boneshaker.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Carcosa",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-carcosa.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Compressor 280",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-280.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Chthonic Fuzz",
-		"Width": 3,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-chthonic.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Envelope Filter 440",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-440.png"
 	},
 	{
@@ -10852,8 +10852,8 @@
 	{
 		"Brand": "DOD",
 		"Name": "Gonkulator Ringmod",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-gonkulator.png"
 	},
 	{
@@ -10866,8 +10866,8 @@
 	{
 		"Brand": "DOD",
 		"Name": "Gunslinger Mosfet Distortion",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-gunslinger.png"
 	},
 	{
@@ -10880,15 +10880,15 @@
 	{
 		"Brand": "DOD",
 		"Name": "Looking Glass",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-looking-glass.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Meatbox Subsynth",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-meatbox.png"
 	},
 	{
@@ -10901,15 +10901,15 @@
 	{
 		"Brand": "DOD",
 		"Name": "Overdrive Preamp 250",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-250.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Overdrive Preamp 250 (50th Anniversary)",
-		"Width": 3,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-250-anniversary.png"
 	},
 	{
@@ -10922,8 +10922,8 @@
 	{
 		"Brand": "DOD",
 		"Name": "Phasor 201",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.9,
+		"Height": 4.68,
 		"Image": "dod-201.png"
 	},
 	{
