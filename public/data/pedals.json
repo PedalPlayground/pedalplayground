@@ -11083,8 +11083,8 @@
 	{
 		"Brand": "DOD",
 		"Name": "Overdrive Preamp 250",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "dod-250.png"
 	},
 	{
@@ -30668,6 +30668,13 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "ISO-10 Power Supply",
+		"Width": 6.61,
+		"Height": 2.8,
+		"Image": "mosky-iso10.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "King Rat",
 		"Width": 2.6,
 		"Height": 5,
@@ -43707,6 +43714,13 @@
 		"Width": 3.98,
 		"Height": 4.89,
 		"Image": "thorpyfx-scarlet-tunic.png"
+	},
+	{
+		"Brand": "ThorpyFX",
+		"Name": "Six Zero",
+		"Width": 3.98,
+		"Height": 4.89,
+		"Image": "thorpyfx-six-zero.png"
 	},
 	{
 		"Brand": "ThorpyFX",
