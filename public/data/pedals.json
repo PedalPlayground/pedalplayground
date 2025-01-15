@@ -7036,6 +7036,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Airstrip",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-airstrip.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Antichthon",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -25809,6 +25816,13 @@
 		"Image": "kma-audio-machines-wurm2-distortion.png"
 	},
 	{
+		"Brand": "Kmise",
+		"Name": "Looper&Drum",
+		"Width": 3.81,
+		"Height": 4.92,
+		"Image": "kmise-looper-drum.png"
+	},
+	{
 		"Brand": "Kodex Audio",
 		"Name": "Burning Sunn",
 		"Width": 2.6,
@@ -36177,6 +36191,13 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "2NR",
+		"Width": 2.5,
+		"Height": 4.45,
+		"Image": "pigtronix-2nr.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Aria",
 		"Width": 4.4,
 		"Height": 2.55,
@@ -36202,6 +36223,13 @@
 		"Width": 4.5,
 		"Height": 3.12,
 		"Image": "pigtronix-cosmosis.png"
+	},
+	{
+		"Brand": "Pigtronix",
+		"Name": "Cosmosis I",
+		"Width": 2.5,
+		"Height": 4.55,
+		"Image": "pigtronix-cosmosis-i.png"
 	},
 	{
 		"Brand": "Pigtronix",
