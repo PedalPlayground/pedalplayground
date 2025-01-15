@@ -10900,6 +10900,13 @@
 	},
 	{
 		"Brand": "DOD",
+		"Name": "Mini Volume",
+		"Width": 3,
+		"Height": 5,
+		"Image": "dod-mini-volume.png"
+	},
+	{
+		"Brand": "DOD",
 		"Name": "Overdrive Preamp 250",
 		"Width": 2.9,
 		"Height": 4.68,
