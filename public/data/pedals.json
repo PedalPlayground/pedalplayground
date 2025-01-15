@@ -833,6 +833,13 @@
 		"Image": "akai-e2-headrush.png"
 	},
 	{
+		"Brand": "Akai Professional",
+		"Name": "Hexacomp C2M",
+		"Width": 5.43,
+		"Height": 6.85,
+		"Image": "akai-hexacomp.png"
+	},
+	{
 		"Brand": "Alabs",
 		"Name": "Cetus",
 		"Width": 2.71,
