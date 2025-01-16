@@ -6287,6 +6287,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "VG-800 V-Guitar Processor",
+		"Width": 6.81,
+		"Height": 5.28,
+		"Image": "boss-vg800.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "VO-1 Vocoder",
 		"Width": 2.875,
 		"Height": 5.125,
