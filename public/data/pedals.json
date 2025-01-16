@@ -25712,6 +25712,13 @@
 	},
 	{
 		"Brand": "KMA Audio Machines",
+		"Name": "Endgame (Shadow)",
+		"Width": 4.11,
+		"Height": 4.77,
+		"Image": "kma-audio-machines-endgame-shadow.png"
+	},
+	{
+		"Brand": "KMA Audio Machines",
 		"Name": "Fuzzly Bear",
 		"Width": 2.65,
 		"Height": 4.5,
@@ -47207,6 +47214,20 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "walrus-polychrome-kamakura.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Qi",
+		"Width": 5.83,
+		"Height": 4.84,
+		"Image": "walrus-qi.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Qi (Black)",
+		"Width": 5.83,
+		"Height": 4.84,
+		"Image": "walrus-qi-black.png"
 	},
 	{
 		"Brand": "Walrus Audio",
