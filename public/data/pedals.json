@@ -47917,6 +47917,13 @@
 	},
 	{
 		"Brand": "Zoom",
+		"Name": "MS-80IR+",
+		"Width": 3.11,
+		"Height": 5.23,
+		"Image": "zoom-ms80irplus.png"
+	},
+	{
+		"Brand": "Zoom",
 		"Name": "MS-90LP+",
 		"Width": 3.11,
 		"Height": 5.23,
