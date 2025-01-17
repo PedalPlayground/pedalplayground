@@ -47863,13 +47863,13 @@
 		"Brand": "Zoom",
 		"Name": "MS-100BT",
 		"Width": 3.1,
-		"Height": 5.16,
+		"Height": 5.13,
 		"Image": "zoom-ms100bt.png"
 	},
 	{
 		"Brand": "Zoom",
 		"Name": "MS-200D+",
-		"Width": 3.08,
+		"Width": 3.11,
 		"Height": 5.23,
 		"Image": "zoom-ms200dplus.png"
 	},
@@ -47883,7 +47883,7 @@
 	{
 		"Brand": "Zoom",
 		"Name": "MS-50G+",
-		"Width": 3.08,
+		"Width": 3.11,
 		"Height": 5.23,
 		"Image": "zoom-ms50g+.png"
 	},
@@ -47911,8 +47911,8 @@
 	{
 		"Brand": "Zoom",
 		"Name": "MS-70CDR+",
-		"Width": 3.1,
-		"Height": 5.13,
+		"Width": 3.11,
+		"Height": 5.23,
 		"Image": "zoom-ms70cdr-plus.png"
 	},
 	{
