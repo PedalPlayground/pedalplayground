@@ -29716,6 +29716,20 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "GS1000",
+		"Width": 10.12,
+		"Height": 6.78,
+		"Image": "mooer-gs1000.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "GS1000 (White)",
+		"Width": 10.12,
+		"Height": 6.78,
+		"Image": "mooer-gs1000-white.png"
+	},
+	{
+		"Brand": "Mooer",
 		"Name": "Harmony X2",
 		"Width": 2.85,
 		"Height": 4.53,
@@ -41368,6 +41382,13 @@
 		"Width": 2.71,
 		"Height": 4.5,
 		"Image": "subdecay-starlight.png"
+	},
+	{
+		"Brand": "Subdecay",
+		"Name": "Starlight mkIII",
+		"Width": 2.71,
+		"Height": 4.5,
+		"Image": "subdecay-starlight-mk3.png"
 	},
 	{
 		"Brand": "Subdecay",
