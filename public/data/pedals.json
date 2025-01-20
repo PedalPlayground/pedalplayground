@@ -23079,6 +23079,13 @@
 		"Image": "marshall-vibratrem-vt1.png"
 	},
 	{
+		"Brand": "master Effects",
+		"Name": "Super Forty",
+		"Width": 4.6,
+		"Height": 4,
+		"Image": "master-effects-super-forty.png"
+	},
+	{
 		"Brand": "Mastro Valvola",
 		"Name": "Attila",
 		"Width": 3.54,
@@ -30893,8 +30900,8 @@
 	{
 		"Brand": "Rolls",
 		"Name": "PM351 Personal Monitor Station",
-		"Width": 4.75,
-		"Height": 4.3,
+		"Width": 5.25,
+		"Height": 4.2,
 		"Image": "rolls-pm351.png"
 	},
 	{
@@ -35237,6 +35244,13 @@
 		"Width": 5.03,
 		"Height": 3.7,
 		"Image": "tech21-vtbassdi.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "XB Driver",
+		"Width": 7.5,
+		"Height": 4.75,
+		"Image": "tech21-xb-driver.png"
 	},
 	{
 		"Brand": "Teenage Engineering",
