@@ -21792,6 +21792,13 @@
 	},
 	{
 		"Brand": "J. Rockett",
+		"Name": "PXO",
+		"Width": 4.27,
+		"Height": 4.07,
+		"Image": "jrockett-pxo.png"
+	},
+	{
+		"Brand": "J. Rockett",
 		"Name": "Rockaway Archer",
 		"Width": 2.35,
 		"Height": 4,
@@ -24155,6 +24162,27 @@
 		"Width": 4.72,
 		"Height": 5.9,
 		"Image": "jptr-warlow.png"
+	},
+	{
+		"Brand": "Karma",
+		"Name": "Machine Shop",
+		"Width": 5.7,
+		"Height": 4.93,
+		"Image": "karma-machine-shop.png"
+	},
+	{
+		"Brand": "Karma",
+		"Name": "MTN-10",
+		"Width": 2.62,
+		"Height": 4.5,
+		"Image": "karma-mtn10.png"
+	},
+	{
+		"Brand": "Karma",
+		"Name": "ODR-10",
+		"Width": 2.62,
+		"Height": 4.5,
+		"Image": "karma-odr10.png"
 	},
 	{
 		"Brand": "Kartakou Amplification",
@@ -32534,6 +32562,13 @@
 		"Width": 3.73,
 		"Height": 1.66,
 		"Image": "ninjafox-sidekick-nes-retro.png"
+	},
+	{
+		"Brand": "Nobels",
+		"Name": "CHO-Mini",
+		"Width": 1.91,
+		"Height": 3.66,
+		"Image": "nobels-cho-mini.png"
 	},
 	{
 		"Brand": "Nobels",
