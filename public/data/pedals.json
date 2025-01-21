@@ -226,8 +226,8 @@
 	{
 		"Brand": "A3 Stompbox",
 		"Name": "Custom Volume (Mini)",
-		"Width": 3.15,
-		"Height": 7.64,
+		"Width": 3.58,
+		"Height": 7.68,
 		"Image": "a3-volume-mini.png"
 	},
 	{
@@ -26720,10 +26720,24 @@
 	},
 	{
 		"Brand": "Lightning Wave",
+		"Name": "Astro",
+		"Width": 3.7,
+		"Height": 4.94,
+		"Image": "lightning-wave-astro.png"
+	},
+	{
+		"Brand": "Lightning Wave",
 		"Name": "Ghost",
 		"Width": 3.7,
-		"Height": 4.86,
+		"Height": 4.94,
 		"Image": "lightning-wave-ghost.png"
+	},
+	{
+		"Brand": "Lightning Wave",
+		"Name": "Mutant Spacebat of Doom",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "lightning-wave-mutant-spacebat-of-doom.png"
 	},
 	{
 		"Brand": "Limetone Audio",
