@@ -4151,6 +4151,13 @@
 		"Image": "blackmass-first-herald-v2-blue.png"
 	},
 	{
+		"Brand": "Black Mountain",
+		"Name": "Volume",
+		"Width": 3.64,
+		"Height": 6,
+		"Image": "black-mountain-volume.png"
+	},
+	{
 		"Brand": "Blackskycraft",
 		"Name": "Unusual EAS",
 		"Width": 3.7,
@@ -31414,6 +31421,20 @@
 		"Width": 8.35,
 		"Height": 1.51,
 		"Image": "mvave-chocolate.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Tank B",
+		"Width": 12.2,
+		"Height": 2.68,
+		"Image": "mvave-tankb.png"
+	},
+	{
+		"Brand": "M-VAVE",
+		"Name": "Tank G",
+		"Width": 12.2,
+		"Height": 2.68,
+		"Image": "mvave-tankg.png"
 	},
 	{
 		"Brand": "MWFX",
