@@ -24823,6 +24823,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Neutrino V2",
+		"Width": 2.73,
+		"Height": 4.5,
+		"Image": "keeley-neutrino-v2.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Noble Screamer",
 		"Width": 2.6,
 		"Height": 4.76,
@@ -25005,10 +25012,24 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Suns Ultravoid Fuzz",
+		"Width": 2.73,
+		"Height": 4.5,
+		"Image": "keeley-suns-ultravoid-fuzz.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Super AT Mod",
 		"Width": 2.73,
 		"Height": 4.5,
 		"Image": "keeley-super-at-mod.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Super Bass",
+		"Width": 2.73,
+		"Height": 4.5,
+		"Image": "keeley-super-bass.png"
 	},
 	{
 		"Brand": "Keeley",
