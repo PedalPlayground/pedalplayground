@@ -436,44 +436,44 @@
 	{
 		"Brand": "Harley Benton",
 		"Name": "SpaceShip 40",
-		"Width": 17.7165,
-		"Height": 12.0079,
+		"Width": 17.72,
+		"Height": 12,
 		"Image": "harley-benton-spaceship-40.png"
 	},
 	{
-		"Brand": "Palmer",
+		"Brand": "Harley Benton",
 		"Name": "SpaceShip 50C",
-		"Width": 19.685,
-		"Height": 5.31496,
+		"Width": 19.69,
+		"Height": 5.32,
 		"Image": "harley-benton-spaceship-50C.png"
 	},
 	{
-		"Brand": "Palmer",
-		"Name": "SpaceShip 60",
-		"Width": 23.8189,
-		"Height": 12.00787,
-		"Image": "harley-benton-spaceship-60.png"
-	},
-	{
-		"Brand": "Palmer",
-		"Name": "SpaceShip 60XL",
-		"Width": 23.622,
-		"Height": 15.3543,
-		"Image": "harley-benton-spaceship-60XL.png"
-	},
-	{
-		"Brand": "Palmer",
-		"Name": "SpaceShip 80",
-		"Width": 31.4961,
-		"Height": 15.3543,
-		"Image": "harley-benton-spaceship-80.png"
-  },
-  {
-		"Brand": "Harvey Benton",
+		"Brand": "Harley Benton",
 		"Name": "SpaceShip 50M",
 		"Width": 19.88,
 		"Height": 6.89,
 		"Image": "harvey-benton-spaceship-50m.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "SpaceShip 60",
+		"Width": 23.82,
+		"Height": 12.01,
+		"Image": "harley-benton-spaceship-60.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "SpaceShip 60XL",
+		"Width": 23.62,
+		"Height": 15.35,
+		"Image": "harley-benton-spaceship-60XL.png"
+	},
+	{
+		"Brand": "Harley Benton",
+		"Name": "SpaceShip 80",
+		"Width": 31.5,
+		"Height": 15.35,
+		"Image": "harley-benton-spaceship-80.png"
   },
   {
 		"Brand": "Holeyboard",
@@ -562,8 +562,8 @@
 	{
 		"Brand": "Mooer",
 		"Name": "TF-16S",
-		"Width": 19.2913,
-		"Height": 11.232283,
+		"Width": 19.29,
+		"Height": 11.23,
 		"Image": "mooer-tf-16s.png"
 	},
 	{
@@ -807,15 +807,15 @@
 	{
 		"Brand": "Palmer",
 		"Name": "Pedalbay 40",
-		"Width": 17.7165,
-		"Height": 12.0079,
+		"Width": 17.72,
+		"Height": 12.01,
 		"Image": "palmer-pedalbay-40.png"
 	},
 	{
 		"Brand": "Palmer",
 		"Name": "Pedalbay 50 S",
-		"Width": 19.685,
-		"Height": 5.31496,
+		"Width": 19.69,
+		"Height": 5.32,
 		"Image": "palmer-pedalbay-50-S.png"
 	},
 	{
@@ -828,15 +828,15 @@
 	{
 		"Brand": "Palmer",
 		"Name": "Pedalbay 60 L",
-		"Width": 23.622,
-		"Height": 15.3543,
+		"Width": 23.62,
+		"Height": 15.35,
 		"Image": "palmer-pedalbay-60-L.png"
 	},
 	{
 		"Brand": "Palmer",
 		"Name": "Pedalbay 80",
-		"Width": 31.4961,
-		"Height": 15.3543,
+		"Width": 31.5,
+		"Height": 15.35,
 		"Image": "palmer-pedalbay-80.png"
 	},
 	{
@@ -1034,13 +1034,6 @@
 		"Width": 20.25,
 		"Height": 6,
 		"Image": "pivotal-p20-1cut.png"
-	},
-	{
-		"Brand": "Pivotal",
-		"Name": "P20 Top Deck (Double Cut)",
-		"Width": 20.25,
-		"Height": 6,
-		"Image": "pivotal-p20-2cut.png"
 	},
 	{
 		"Brand": "Pivotal",
@@ -1265,6 +1258,13 @@
 		"Width": 28.42,
 		"Height": 9.3,
 		"Image": "rockboard-tres-33.png"
+	},
+	{
+		"Brand": "Rolling Pedalboards",
+		"Name": "Stage 1 Deluxe",
+		"Width": 22,
+		"Height": 14.5,
+		"Image": "rolling-stage-1-deluxe.png"
 	},
 	{
 		"Brand": "Rug",
