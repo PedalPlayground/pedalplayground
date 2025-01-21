@@ -1268,6 +1268,13 @@
 	},
 	{
 		"Brand": "Ammoon",
+		"Name": "Octa",
+		"Width": 2.71,
+		"Height": 4.56,
+		"Image": "ammoon-octa.png"
+	},
+	{
+		"Brand": "Ammoon",
 		"Name": "Pockdist",
 		"Width": 2.73,
 		"Height": 4.58,
@@ -6567,10 +6574,31 @@
 	},
 	{
 		"Brand": "Caline",
-		"Name": "CP-17 Echo Delay",
+		"Name": "CP-12 Pure Sky",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "caline-pure-sky.png"
+	},
+	{
+		"Brand": "Caline",
+		"Name": "CP-16 Mark 4 Distortion",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "caline-cp16.png"
+	},
+	{
+		"Brand": "Caline",
+		"Name": "CP-17 Time Space",
 		"Width": 3.93,
 		"Height": 4.75,
 		"Image": "caline-cp17.png"
+	},
+	{
+		"Brand": "Caline",
+		"Name": "CP-17 Plus Time Space",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "caline-cp17-plus.png"
 	},
 	{
 		"Brand": "Caline",
@@ -6599,13 +6627,6 @@
 		"Width": 2.77,
 		"Height": 4.5,
 		"Image": "caline-mariana.png"
-	},
-	{
-		"Brand": "Caline",
-		"Name": "Pure Sky",
-		"Width": 2.7,
-		"Height": 4.5,
-		"Image": "caline-pure-sky.png"
 	},
 	{
 		"Brand": "Carl Martin",
@@ -7565,6 +7586,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-talisman-gallery.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Teaser Stallion",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-teaser-stallion.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -15401,10 +15429,17 @@
 	},
 	{
 		"Brand": "Eno Music",
-		"Name": "EX EQ 7",
+		"Name": "EX EQ7",
 		"Width": 1.8,
 		"Height": 3.77,
 		"Image": "eno-ex-eq-7.png"
+	},
+	{
+		"Brand": "Eno Music",
+		"Name": "TC-80 BMF Fuzz",
+		"Width": 1.8,
+		"Height": 3.77,
+		"Image": "eno-tc80.png"
 	},
 	{
 		"Brand": "Erica Synths",
@@ -36876,6 +36911,13 @@
 		"Image": "polyend-press.png"
 	},
 	{
+		"Brand": "Polyend",
+		"Name": "Step",
+		"Width": 7.09,
+		"Height": 4.91,
+		"Image": "polyend-step.png"
+	},
+	{
 		"Brand": "Preston Pedals",
 		"Name": "Stereo Audition",
 		"Width": 3.7,
@@ -38498,6 +38540,13 @@
 		"Width": 9.75,
 		"Height": 2.74,
 		"Image": "saturnworks-5looper.png"
+	},
+	{
+		"Brand": "Saturnworks",
+		"Name": "Compact Feedback Looper",
+		"Width": 1.88,
+		"Height": 3.86,
+		"Image": "saturnworks-compact-feedback-looper.png"
 	},
 	{
 		"Brand": "Saturnworks",
