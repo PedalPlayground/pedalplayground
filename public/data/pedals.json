@@ -13524,6 +13524,20 @@
 		"Image": "effectsbakery-uguisu-bread-tremolo.png"
 	},
 	{
+		"Brand": "Electric Eye",
+		"Name": "Cannibal Unicorn",
+		"Width": 4,
+		"Height": 4.7,
+		"Image": "electric-eye-cannibal-unicorn.png"
+	},
+	{
+		"Brand": "Electric Eye",
+		"Name": "The Thrasher",
+		"Width": 2.6,
+		"Height": 4.98,
+		"Image": "electric-eye-the-thrasher.png"
+	},
+	{
 		"Brand": "Electro Faustus",
 		"Name": "Blackfly",
 		"Width": 5.55,
@@ -13977,6 +13991,13 @@
 		"Width": 4.19,
 		"Height": 4.75,
 		"Image": "ehx-germanium-od.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Golden Small Stone",
+		"Width": 3.38,
+		"Height": 5.29,
+		"Image": "ehx-golden-small-stone.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -25247,6 +25268,13 @@
 		"Width": 3.94,
 		"Height": 1.93,
 		"Image": "kenton-thru5.png"
+	},
+	{
+		"Brand": "Kernom",
+		"Name": "Elipse",
+		"Width": 6.46,
+		"Height": 4.46,
+		"Image": "kernom-elipse.png"
 	},
 	{
 		"Brand": "Kernom",
@@ -44610,6 +44638,13 @@
 		"Width": 4.5,
 		"Height": 2.55,
 		"Image": "tsakalis-phonkify.png"
+	},
+	{
+		"Brand": "Tsakalis",
+		"Name": "Phonkify X",
+		"Width": 2.75,
+		"Height": 4.97,
+		"Image": "tsakalis-phonkify-x.png"
 	},
 	{
 		"Brand": "Tsakalis",
