@@ -28134,6 +28134,13 @@
 	},
 	{
 		"Brand": "Marshall",
+		"Name": "1959",
+		"Width": 3.98,
+		"Height": 5.19,
+		"Image": "marshall-1959.png"
+	},
+	{
+		"Brand": "Marshall",
 		"Name": "BB-2 Blues Breaker",
 		"Width": 2.7,
 		"Height": 4.7,
@@ -28155,6 +28162,13 @@
 	},
 	{
 		"Brand": "Marshall",
+		"Name": "DSL",
+		"Width": 3.98,
+		"Height": 5.19,
+		"Image": "marshall-dsl.png"
+	},
+	{
+		"Brand": "Marshall",
 		"Name": "EH-1 Echohead",
 		"Width": 2.7,
 		"Height": 4.7,
@@ -28169,10 +28183,31 @@
 	},
 	{
 		"Brand": "Marshall",
+		"Name": "JCM 800",
+		"Width": 3.98,
+		"Height": 5.19,
+		"Image": "marshall-jcm800.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "JCM 900",
+		"Width": 3.98,
+		"Height": 5.19,
+		"Image": "marshall-jcm900.png"
+	},
+	{
+		"Brand": "Marshall",
 		"Name": "JH-1 Jackhammer",
 		"Width": 2.7,
 		"Height": 4.7,
 		"Image": "marshall-jackhammer.png"
+	},
+	{
+		"Brand": "Marshall",
+		"Name": "JVM",
+		"Width": 3.98,
+		"Height": 5.19,
+		"Image": "marshall-jvm.png"
 	},
 	{
 		"Brand": "Marshall",
