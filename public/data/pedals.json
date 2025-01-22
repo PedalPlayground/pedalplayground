@@ -1491,6 +1491,13 @@
 		"Image": "analogmusicco-shsl.png"
 	},
 	{
+		"Brand": "Analogwise",
+		"Name": "Pocket Rocket",
+		"Width": 1.9,
+		"Height": 3.7,
+		"Image": "analogwise-pocket-rocket.png"
+	},
+	{
 		"Brand": "Analog.Man",
 		"Name": "ARDX20 Dual Analog Delay",
 		"Width": 4.7,
@@ -6609,7 +6616,7 @@
 	},
 	{
 		"Brand": "Caline",
-		"Name": "CP-47 Presure Tank",
+		"Name": "CP-47 Pressure Tank",
 		"Width": 2.68,
 		"Height": 4.5,
 		"Image": "caline-cp47.png"
