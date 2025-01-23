@@ -10571,6 +10571,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "HammerOn",
+		"Width": 3.72,
+		"Height": 5.12,
+		"Image": "digitech-hammeron.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Hot Rod Rock Distortion",
 		"Width": 3.13,
 		"Height": 4.94,
