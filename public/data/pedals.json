@@ -10648,6 +10648,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "MonoNeon Whammy",
+		"Width": 6.67,
+		"Height": 7.75,
+		"Image": "digitech-mononeon-whammy.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Multi Chorus",
 		"Width": 3.13,
 		"Height": 4.94,
