@@ -6777,6 +6777,20 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Arigato (Black)",
+		"Width": 3.78,
+		"Height": 4.89,
+		"Image": "caroline-arigato-black.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Arigato (CME)",
+		"Width": 3.78,
+		"Height": 4.89,
+		"Image": "caroline-arigato-cme.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "California 'Za'",
 		"Width": 3.7,
 		"Height": 4.89,
@@ -12311,6 +12325,13 @@
 		"Width": 5,
 		"Height": 5.5,
 		"Image": "dunlop-uv1.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Wylde Audio Rotovibe",
+		"Width": 4.61,
+		"Height": 10,
+		"Image": "dunlop-wa357.png"
 	},
 	{
 		"Brand": "Dunlop",
@@ -21369,6 +21390,13 @@
 		"Width": 1.73,
 		"Height": 3.7,
 		"Image": "ikm-tonex-one.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "TONEX One (Chrome)",
+		"Width": 1.73,
+		"Height": 3.7,
+		"Image": "ikm-tonex-one-chrome.png"
 	},
 	{
 		"Brand": "IK Multimedia",
@@ -32152,7 +32180,7 @@
 	},
 	{
 		"Brand": "MXR",
-		"Name": "Tom Morello Power 50",
+		"Name": "Power 50",
 		"Width": 4.75,
 		"Height": 3.65,
 		"Image": "mxr-tbm1.png"
@@ -32184,6 +32212,13 @@
 		"Width": 2.74,
 		"Height": 4.5,
 		"Image": "mxr-m300.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Rockman X100",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "mxr-rockman-x100.png"
 	},
 	{
 		"Brand": "MXR",
