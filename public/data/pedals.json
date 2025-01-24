@@ -10613,10 +10613,24 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Drop",
+		"Width": 2.86,
+		"Height": 4.75,
+		"Image": "digitech-drop.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "FreqOut",
-		"Width": 2.875,
+		"Width": 2.86,
 		"Height": 4.75,
 		"Image": "digitech-freqout.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "HammerOn",
+		"Width": 3.49,
+		"Height": 5.12,
+		"Image": "digitech-hammeron.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -10697,6 +10711,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "Mosaic",
+		"Width": 2.86,
+		"Height": 4.75,
+		"Image": "digitech-mosaic.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Multi Chorus",
 		"Width": 3.13,
 		"Height": 4.94,
@@ -10747,8 +10768,8 @@
 	{
 		"Brand": "DigiTech",
 		"Name": "SDRUM",
-		"Width": 3.29,
-		"Height": 5.4,
+		"Width": 3.2,
+		"Height": 5.25,
 		"Image": "digitech-sdrum.png"
 	},
 	{
@@ -10771,20 +10792,6 @@
 		"Width": 3.13,
 		"Height": 4.94,
 		"Image": "digitech-synth-wah.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "The Drop",
-		"Width": 2.875,
-		"Height": 4.75,
-		"Image": "digitech-drop.png"
-	},
-	{
-		"Brand": "DigiTech",
-		"Name": "The Mosaic",
-		"Width": 2.875,
-		"Height": 4.75,
-		"Image": "digitech-mosaic.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -10817,15 +10824,15 @@
 	{
 		"Brand": "DigiTech",
 		"Name": "Trio Looper",
-		"Width": 3.25,
-		"Height": 5.4,
+		"Width": 3.2,
+		"Height": 5.3,
 		"Image": "digitech-trio.png"
 	},
 	{
 		"Brand": "DigiTech",
 		"Name": "Trio+ Looper",
-		"Width": 4.25,
-		"Height": 5.4,
+		"Width": 4.46,
+		"Height": 5.3,
 		"Image": "digitech-trio-plus.png"
 	},
 	{
@@ -10859,7 +10866,7 @@
 	{
 		"Brand": "DigiTech",
 		"Name": "Whammy Ricochet",
-		"Width": 2.96,
+		"Width": 2.86,
 		"Height": 4.75,
 		"Image": "digitech-ricochet.png"
 	},
@@ -32887,10 +32894,17 @@
 	},
 	{
 		"Brand": "Nordland",
-		"Name": "ODR-C (30th Anniversary)",
+		"Name": "ODR-C 30A",
 		"Width": 2.6,
 		"Height": 5.03,
 		"Image": "nordland-odr-c-white.png"
+	},
+	{
+		"Brand": "Nordland",
+		"Name": "ODR-C H/L",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "nordland-odr-c-hl.png"
 	},
 	{
 		"Brand": "Nordland",
@@ -32901,16 +32915,23 @@
 	},
 	{
 		"Brand": "Nordland",
-		"Name": "ODR-CC+",
-		"Width": 2.36,
-		"Height": 4.13,
+		"Name": "ODR-CC",
+		"Width": 2.38,
+		"Height": 4.33,
 		"Image": "nordland-odr-cc.png"
 	},
 	{
 		"Brand": "Nordland",
-		"Name": "ODR-CC+ (Black Edition)",
-		"Width": 2.36,
-		"Height": 4.13,
+		"Name": "ODR-CC+",
+		"Width": 2.38,
+		"Height": 4.33,
+		"Image": "nordland-odr-cc-plus.png"
+	},
+	{
+		"Brand": "Nordland",
+		"Name": "ODR-CC+ (Black)",
+		"Width": 2.38,
+		"Height": 4.33,
 		"Image": "nordland-odr-cc-black.png"
 	},
 	{
