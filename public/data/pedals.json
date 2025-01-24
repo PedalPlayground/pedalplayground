@@ -10551,8 +10551,8 @@
 	{
 		"Brand": "DigiTech",
 		"Name": "Bass Whammy",
-		"Width": 6.67,
-		"Height": 7.57,
+		"Width": 6.82,
+		"Height": 7.75,
 		"Image": "digitech-bass-whammy.png"
 	},
 	{
@@ -10711,6 +10711,13 @@
 	},
 	{
 		"Brand": "DigiTech",
+		"Name": "MonoNeon Whammy",
+		"Width": 6.82,
+		"Height": 7.75,
+		"Image": "digitech-mononeon-whammy.png"
+	},
+	{
+		"Brand": "DigiTech",
 		"Name": "Mosaic",
 		"Width": 2.86,
 		"Height": 4.75,
@@ -10859,8 +10866,8 @@
 	{
 		"Brand": "DigiTech",
 		"Name": "Whammy 5",
-		"Width": 6.67,
-		"Height": 7.57,
+		"Width": 6.82,
+		"Height": 7.75,
 		"Image": "digitech-whammy.png"
 	},
 	{
@@ -34225,22 +34232,22 @@
 	{
 		"Brand": "OBNE",
 		"Name": "Dark Star v3",
-		"Width": 4,
-		"Height": 4.29,
+		"Width": 4.25,
+		"Height": 4.56,
 		"Image": "obne-dark-star-stereo.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Dark Star v3 (Black)",
-		"Width": 4,
-		"Height": 4.29,
+		"Width": 4.25,
+		"Height": 4.56,
 		"Image": "obne-dark-star-stereo-black.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Dark Star v3 (Pink)",
-		"Width": 4,
-		"Height": 4.29,
+		"Width": 4.25,
+		"Height": 4.56,
 		"Image": "obne-dark-star-stereo-pink.png"
 	},
 	{
@@ -34463,22 +34470,22 @@
 	{
 		"Brand": "OBNE",
 		"Name": "Pardner Fuzz (Blue)",
-		"Width": 4,
-		"Height": 4.29,
+		"Width": 4.25,
+		"Height": 4.56,
 		"Image": "obne-pardner-fuzz-blue.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Pardner Fuzz (Purple)",
-		"Width": 4,
-		"Height": 4.29,
+		"Width": 4.25,
+		"Height": 4.56,
 		"Image": "obne-pardner-fuzz-purple.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Pardner Fuzz (Tan)",
-		"Width": 4,
-		"Height": 4.29,
+		"Width": 4.25,
+		"Height": 4.56,
 		"Image": "obne-pardner-fuzz-tan.png"
 	},
 	{
