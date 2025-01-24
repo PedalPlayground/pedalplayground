@@ -25560,8 +25560,15 @@
 		"Brand": "Kingsley",
 		"Name": "Jester",
 		"Width": 5.25,
-		"Height": 5,
+		"Height": 5.45,
 		"Image": "kingsley-jester.png"
+	},
+	{
+		"Brand": "Kingsley",
+		"Name": "Jouster",
+		"Width": 5.25,
+		"Height": 4.99,
+		"Image": "kingsley-jouster.png"
 	},
 	{
 		"Brand": "Kingsley",
@@ -25579,7 +25586,7 @@
 	},
 	{
 		"Brand": "Kingsley",
-		"Name": "Minstrel V3",
+		"Name": "Minstrel",
 		"Width": 3.88,
 		"Height": 4.85,
 		"Image": "kingsley-minstrel.png"
