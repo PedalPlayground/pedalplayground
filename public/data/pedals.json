@@ -12286,6 +12286,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Kirk Hammett Collection Cry Baby Wah (Yellow Sparkle)",
+		"Width": 3.95,
+		"Height": 10,
+		"Image": "dunlop-kh95y.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Kirk Hammett Cry Baby Wah",
 		"Width": 4,
 		"Height": 10,
@@ -12300,6 +12307,13 @@
 	},
 	{
 		"Brand": "Dunlop",
+		"Name": "Mick Ronson Cry Baby Wah",
+		"Width": 3.82,
+		"Height": 10,
+		"Image": "dunlop-mr95ltd.png"
+	},
+	{
+		"Brand": "Dunlop",
 		"Name": "Octavio JH-OC1",
 		"Width": 3.54,
 		"Height": 7.05,
@@ -12311,6 +12325,13 @@
 		"Width": 4.52,
 	 	"Height": 10,
 		"Image": "dunlop-jd4s.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Sepultura 40th Anniversary Cry Baby Wah",
+		"Width": 4.08,
+		"Height": 10,
+		"Image": "dunlop-ak95mmxxiv.png"
 	},
 	{
 		"Brand": "Dunlop",
