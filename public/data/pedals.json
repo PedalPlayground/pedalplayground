@@ -6400,14 +6400,14 @@
 	{
 		"Brand": "Browne Amplification",
 		"Name": "Atom",
-		"Width": 2.91,
+		"Width": 2.79,
 		"Height": 4.8,
 		"Image": "browneamps-atom.png"
 	},
 	{
 		"Brand": "Browne Amplification",
 		"Name": "Carbon",
-		"Width": 2.86,
+		"Width": 2.79,
 		"Height": 4.8,
 		"Image": "browneamps-carbon.png"
 	},
@@ -6421,7 +6421,7 @@
 	{
 		"Brand": "Browne Amplification",
 		"Name": "Gritador",
-		"Width": 2.91,
+		"Width": 2.79,
 		"Height": 4.8,
 		"Image": "browneamps-gritador.png"
 	},
@@ -6455,9 +6455,16 @@
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "T4 Fuzz",
-		"Width": 2.85,
-		"Height": 4.86,
+		"Name": "SSHAC",
+		"Width": 2.79,
+		"Height": 4.8,
+		"Image": "browne-sshac.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "T4",
+		"Width": 2.79,
+		"Height": 5.03,
 		"Image": "browne-t4.png"
 	},
 	{
@@ -11635,6 +11642,13 @@
 	},
 	{
 		"Brand": "Drolo",
+		"Name": "Kiwami",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "drolo-kiwami.png"
+	},
+	{
+		"Brand": "Drolo",
 		"Name": "Lilac Cloud",
 		"Width": 3.7,
 		"Height": 4.95,
@@ -11660,6 +11674,13 @@
 		"Width": 3.77,
 		"Height": 4.95,
 		"Image": "drolo-stammen-v4.png"
+	},
+	{
+		"Brand": "Drolo",
+		"Name": "Strands",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "drolo-strands.png"
 	},
 	{
 		"Brand": "Drolo",
@@ -36204,6 +36225,41 @@
 		"Image": "pearl-ad08.png"
 	},
 	{
+		"Brand": "Peavey",
+		"Name": "Bandit Supreme",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "peavey-bandit-supreme.png"
+	},
+	{
+		"Brand": "Peavey",
+		"Name": "Decade",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "peavey-decade.png"
+	},
+	{
+		"Brand": "Peavey",
+		"Name": "Rock Master",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "peavey-rock-master.png"
+	},
+	{
+		"Brand": "Peavey",
+		"Name": "Session-LTD 400",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "peavey-session-ltd-400.png"
+	},
+	{
+		"Brand": "Peavey",
+		"Name": "VTM",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "peavey-vtm.png"
+	},
+	{
 		"Brand": "Pedal Brainz",
 		"Name": "3rd Eye",
 		"Width": 2.75,
@@ -42043,6 +42099,13 @@
 	},
 	{
 		"Brand": "Surfy Industries",
+		"Name": "Stereomaker",
+		"Width": 4.25,
+		"Height": 4.55,
+		"Image": "surfy-stereomaker.png"
+	},
+	{
+		"Brand": "Surfy Industries",
 		"Name": "SurfyBear Classic",
 		"Width": 17.94,
 		"Height": 7.5,
@@ -42054,6 +42117,13 @@
 		"Width": 9.5,
 		"Height": 4.74,
 		"Image": "surfy-surfybear-compact.png"
+	},
+	{
+		"Brand": "Surfy Industries",
+		"Name": "SurfyBear Compact Deluxe",
+		"Width": 9.5,
+		"Height": 4.81,
+		"Image": "surfy-surfybear-compact-deluxe.png"
 	},
 	{
 		"Brand": "Surfy Industries",
@@ -42073,8 +42143,15 @@
 		"Brand": "Surfy Industries",
 		"Name": "SurfyFuzz",
 		"Width": 4.25,
-		"Height": 4.54,
+		"Height": 4.55,
 		"Image": "surfy-surfyfuzz.png"
+	},
+	{
+		"Brand": "Surfy Industries",
+		"Name": "Surfyman",
+		"Width": 9,
+		"Height": 4.46,
+		"Image": "surfy-surfyman.png"
 	},
 	{
 		"Brand": "Surfy Industries",
@@ -42087,7 +42164,7 @@
 		"Brand": "Surfy Industries",
 		"Name": "SurfyTrem Deluxe",
 		"Width": 4.25,
-		"Height": 4.54,
+		"Height": 4.55,
 		"Image": "surfy-surfytrem-dlx.png"
 	},
 	{
