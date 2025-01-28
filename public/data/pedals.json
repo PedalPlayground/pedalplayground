@@ -32222,6 +32222,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Phase 90 (50th Anniversary)",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m101gld.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Phase 90 (Script LED)",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -33167,6 +33174,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "Amp Core Studio",
+		"Width": 2.91,
+		"Height": 4.8,
+		"Image": "nux-amp-core-studio.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Analog Chorus",
 		"Width": 2.98,
 		"Height": 4.76,
@@ -33227,6 +33241,13 @@
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-drive-core.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Drive Core Deluxe MKII",
+		"Width": 2.91,
+		"Height": 4.8,
+		"Image": "nux-drive-core-mk2.png"
 	},
 	{
 		"Brand": "NuX",
@@ -33297,6 +33318,13 @@
 		"Width": 2.95,
 		"Height": 4.8,
 		"Image": "nux-komp-core.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Komp Core Deluxe MKII",
+		"Width": 2.91,
+		"Height": 4.8,
+		"Image": "nux-komp-core-mk2.png"
 	},
 	{
 		"Brand": "NuX",
@@ -47018,6 +47046,13 @@
 		"Width": 2.42,
 		"Height": 4.75,
 		"Image": "walrus-canvas-tuner.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Canvas Tuner (Horizontal)",
+		"Width": 4.75,
+		"Height": 2.42,
+		"Image": "walrus-canvas-tuner-horizontal.png"
 	},
 	{
 		"Brand": "Walrus Audio",
