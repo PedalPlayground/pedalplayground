@@ -3515,6 +3515,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "Chorus Symphony",
+		"Width": 7.88,
+		"Height": 5.87,
+		"Image": "behringer-chorus-symphony.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "CL9 Compressor/Limiter",
 		"Width": 2.76,
 		"Height": 4.84,
@@ -37632,6 +37639,13 @@
 		"Image": "radial-usb-pro.png"
 	},
 	{
+		"Brand": "Radial Engineering",
+		"Name": "Voco-Loco",
+		"Width": 5.75,
+		"Height": 3.83,
+		"Image": "radial-voco-loco.png"
+	},
+	{
 		"Brand": "RadioShack",
 		"Name": "1.5in Knob",
 		"Width": 1.38,
@@ -41116,6 +41130,41 @@
 		"Width": 5.41,
 		"Height": 4.25,
 		"Image": "spontaneous-son-of-kong.png"
+	},
+	{
+		"Brand": "Spruce Effects",
+		"Name": "JRS: Acadia",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "spruce-effects-jrs-acadia.png"
+	},
+	{
+		"Brand": "Spruce Effects",
+		"Name": "JRS: Badlands",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "spruce-effects-jrs-badlands.png"
+	},
+	{
+		"Brand": "Spruce Effects",
+		"Name": "JRS: Glaciers",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "spruce-effects-jrs-glaciers.png"
+	},
+	{
+		"Brand": "Spruce Effects",
+		"Name": "JRS: Saguaros",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "spruce-effects-jrs-saguaros.png"
+	},
+	{
+		"Brand": "Spruce Effects",
+		"Name": "JRS: Yosemite",
+		"Width": 3.7,
+		"Height": 4.84,
+		"Image": "spruce-effects-jrs-yosemite.png"
 	},
 	{
 		"Brand": "Spruce Effects",
