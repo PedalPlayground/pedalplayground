@@ -39299,10 +39299,24 @@
 	},
 	{
 		"Brand": "Shin's Music",
+		"Name": "Double Trouble",
+		"Width": 5.02,
+		"Height": 3.7,
+		"Image": "shins-music-double-trouble.png"
+	},
+	{
+		"Brand": "Shin's Music",
 		"Name": "Dumbloid ODS",
 		"Width": 5.02,
 		"Height": 3.7,
 		"Image": "shins-music-dumbloid-ods.png"
+	},
+	{
+		"Brand": "Shin's Music",
+		"Name": "Dumbloid Twin SP/ODS",
+		"Width": 5.7,
+		"Height": 4.33,
+		"Image": "shins-music-dumbloid-twin-spods.png"
 	},
 	{
 		"Brand": "Shnobel Tone",
