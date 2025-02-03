@@ -31641,6 +31641,13 @@
 	},
 	{
 		"Brand": "M-VAVE",
+		"Name": "Mini Universe",
+		"Width": 2.69,
+		"Height": 4.5,
+		"Image": "mvave-mini-universe.png"
+	},
+	{
+		"Brand": "M-VAVE",
 		"Name": "Tank B",
 		"Width": 12.2,
 		"Height": 2.68,
