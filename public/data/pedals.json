@@ -821,8 +821,8 @@
 	{
 		"Brand": "Akai Professional",
 		"Name": "G-Drive",
-		"Width": 5.433071,
-		"Height": 6.850394,
+		"Width": 5.43,
+		"Height": 6.85,
 		"Image": "akai-g-drive.png"
 	},
 	{
@@ -831,6 +831,13 @@
 		"Width": 5.51,
 		"Height": 7.22,
 		"Image": "akai-e2-headrush.png"
+	},
+	{
+		"Brand": "Akai Professional",
+		"Name": "Hexacomp C2M",
+		"Width": 5.43,
+		"Height": 7.02,
+		"Image": "akai-hexacomp-c2m.png"
 	},
 	{
 		"Brand": "Alabs",
@@ -8849,6 +8856,13 @@
 	},
 	{
 		"Brand": "Cornerstone",
+		"Name": "Sparkle",
+		"Width": 3.01,
+		"Height": 4.91,
+		"Image": "cornerstone-sparkle.png"
+	},
+	{
+		"Brand": "Cornerstone",
 		"Name": "Zefiro",
 		"Width": 2.88,
 		"Height": 4.8,
@@ -10311,6 +10325,13 @@
 		"Image": "devtech-gilmour-muff.png"
 	},
 	{
+		"Brand": "DevTech",
+		"Name": "Powerdriver 18",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "devtech-powerdriver-18.png"
+	},
+	{
 		"Brand": "Diamond",
 		"Name": "Bass Comp",
 		"Width": 3.92,
@@ -11191,6 +11212,13 @@
 		"Width": 3,
 		"Height": 5,
 		"Image": "dod-mini-expression.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Mini Volume",
+		"Width": 3,
+		"Height": 5.11,
+		"Image": "dod-mini-volume.png"
 	},
 	{
 		"Brand": "DOD",
@@ -19115,6 +19143,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "great-eastern-focus-fuzz-si.png"
+	},
+	{
+		"Brand": "Great Eastern FX Co.",
+		"Name": "OC201 Preamp",
+		"Width": 2.6,
+		"Height": 4.91,
+		"Image": "great-eastern-oc201-preamp.png"
 	},
 	{
 		"Brand": "Great Eastern FX Co.",
@@ -49618,6 +49653,13 @@
 	},
 	{
 		"Brand": "Zoom",
+		"Name": "MS-60B+",
+		"Width": 3.1,
+		"Height": 5.13,
+		"Image": "zoom-ms60b-plus.png"
+	},
+	{
+		"Brand": "Zoom",
 		"Name": "MS-70CDR",
 		"Width": 3.1,
 		"Height": 5.13,
@@ -49629,6 +49671,20 @@
 		"Width": 3.1,
 		"Height": 5.13,
 		"Image": "zoom-ms70cdr-plus.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "MS-80IR+",
+		"Width": 3.1,
+		"Height": 5.13,
+		"Image": "zoom-ms80ir-plus.png"
+	},
+	{
+		"Brand": "Zoom",
+		"Name": "MS-90LP+",
+		"Width": 3.1,
+		"Height": 5.13,
+		"Image": "zoom-ms90lp-plus.png"
 	},
 	{
 		"Brand": "Zorg",
