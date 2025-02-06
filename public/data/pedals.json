@@ -10571,10 +10571,10 @@
 	},
 	{
 		"Brand": "DigiTech",
-		"Name": "Boneshaker",
-		"Width": 2.63,
-		"Height": 4.68,
-		"Image": "digitech-boneshaker.png"
+		"Name": "CabDryVR",
+		"Width": 2.61,
+		"Height": 4.5,
+		"Image": "digitech-cabdryvr.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -10631,6 +10631,13 @@
 		"Width": 2.86,
 		"Height": 4.75,
 		"Image": "digitech-drop.png"
+	},
+	{
+		"Brand": "DigiTech",
+		"Name": "Drop (Black)",
+		"Width": 2.86,
+		"Height": 4.75,
+		"Image": "digitech-drop-black.png"
 	},
 	{
 		"Brand": "DigiTech",
@@ -11090,36 +11097,43 @@
 	{
 		"Brand": "DOD",
 		"Name": "Bifet Boost 410",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "dod-410.png"
 	},
 	{
 		"Brand": "DOD",
+		"Name": "Boneshaker",
+		"Width": 2.88,
+		"Height": 4.68,
+		"Image": "dod-boneshaker.png"
+	},
+	{
+		"Brand": "DOD",
 		"Name": "Carcosa",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "dod-carcosa.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Compressor 280",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "dod-280.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Chthonic Fuzz",
-		"Width": 3,
-		"Height": 4.88,
+		"Width": 2.88,
+		"Height": 4.68,
 		"Image": "dod-chthonic.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Envelope Filter 440",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "dod-440.png"
 	},
 	{
@@ -11132,8 +11146,8 @@
 	{
 		"Brand": "DOD",
 		"Name": "Gonkulator Ringmod",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "dod-gonkulator.png"
 	},
 	{
@@ -11146,8 +11160,8 @@
 	{
 		"Brand": "DOD",
 		"Name": "Gunslinger Mosfet Distortion",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "dod-gunslinger.png"
 	},
 	{
@@ -11160,15 +11174,15 @@
 	{
 		"Brand": "DOD",
 		"Name": "Looking Glass",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "dod-looking-glass.png"
 	},
 	{
 		"Brand": "DOD",
 		"Name": "Meatbox Subsynth",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "dod-meatbox.png"
 	},
 	{
@@ -11188,8 +11202,8 @@
 	{
 		"Brand": "DOD",
 		"Name": "Overdrive Preamp 250 (50th Anniversary)",
-		"Width": 3,
-		"Height": 4.88,
+		"Width": 2.88,
+		"Height": 4.68,
 		"Image": "dod-250-anniversary.png"
 	},
 	{
@@ -11202,8 +11216,8 @@
 	{
 		"Brand": "DOD",
 		"Name": "Phasor 201",
-		"Width": 3.05,
-		"Height": 4.88,
+		"Width": 2.93,
+		"Height": 4.68,
 		"Image": "dod-201.png"
 	},
 	{
@@ -11237,8 +11251,8 @@
 	{
 		"Brand": "DOD",
 		"Name": "Yngwie J. Malmsteem Preamp Overdrive YJM308",
-		"Width": 3.16,
-		"Height": 4.88,
+		"Width": 3.03,
+		"Height": 4.68,
 		"Image": "dod-yjm308.png"
 	},
 	{
@@ -33734,6 +33748,13 @@
 	},
 	{
 		"Brand": "Native Audio",
+		"Name": "Love Pony",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "native-audio-love-pony.png"
+	},
+	{
+		"Brand": "Native Audio",
 		"Name": "Makoyii",
 		"Width": 2.6,
 		"Height": 5,
@@ -44171,6 +44192,69 @@
 		"Image": "third-man-triplegraph-black.png"
 	},
 	{
+		"Brand": "Thorn Soundlabs",
+		"Name": "Bad Cash",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "thorn-soundlabs-bad-cash.png"
+	},
+	{
+		"Brand": "Thorn Soundlabs",
+		"Name": "Basstard",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "thorn-soundlabs-basstard.png"
+	},
+	{
+		"Brand": "Thorn Soundlabs",
+		"Name": "Black Swamp",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "thorn-soundlabs-black-swamp.png"
+	},
+	{
+		"Brand": "Thorn Soundlabs",
+		"Name": "Magma",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "thorn-soundlabs-magma.png"
+	},
+	{
+		"Brand": "Thorn Soundlabs",
+		"Name": "Silver Spurs",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "thorn-soundlabs-silver-spurs.png"
+	},
+	{
+		"Brand": "Thorn Soundlabs",
+		"Name": "Steam",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "thorn-soundlabs-steam.png"
+	},
+	{
+		"Brand": "Thorn Soundlabs",
+		"Name": "Steambass",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "thorn-soundlabs-steambass.png"
+	},
+	{
+		"Brand": "Thorn Soundlabs",
+		"Name": "The Freaq",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "thorn-soundlabs-the-freaq.png"
+	},
+	{
+		"Brand": "Thorn Soundlabs",
+		"Name": "Tremonator",
+		"Width": 3.7,
+		"Height": 4.8,
+		"Image": "thorn-soundlabs-tremonator.png"
+	},
+	{
 		"Brand": "ThorpyFX",
 		"Name": "Camoflange",
 		"Width": 3.98,
@@ -48737,15 +48821,15 @@
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "47/73 Classic",
-		"Width": 2.64,
-		"Height": 4.64,
+		"Width": 2.71,
+		"Height": 4.77,
 		"Image": "wrenandcuff-4773-classic.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Ace Octave Fuzz",
-		"Width": 2.7,
-		"Height": 4.52,
+		"Width": 2.69,
+		"Height": 4.5,
 		"Image": "wrenandcuff-ace-octave-fuzz.png"
 	},
 	{
@@ -48765,8 +48849,8 @@
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Box of War (Small Foot)",
-		"Width": 2.64,
-		"Height": 4.64,
+		"Width": 2.71,
+		"Height": 4.77,
 		"Image": "wrenandcuff-boxofwar-small-foot.png"
 	},
 	{
@@ -48792,9 +48876,16 @@
 	},
 	{
 		"Brand": "Wren And Cuff",
+		"Name": "Caprid (Blue Violet Small Foot)",
+		"Width": 2.71,
+		"Height": 4.62,
+		"Image": "wrenandcuff-caprid-blueviolet-small-foot.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
 		"Name": "Caprid (Small Foot)",
-		"Width": 2.64,
-		"Height": 4.64,
+		"Width": 2.71,
+		"Height": 4.77,
 		"Image": "wrenandcuff-caprid-small-foot.png"
 	},
 	{
@@ -48807,8 +48898,8 @@
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Eye See '78",
-		"Width": 2.7,
-		"Height": 4.52,
+		"Width": 2.69,
+		"Height": 4.59,
 		"Image": "wrenandcuff-eyesee78.png"
 	},
 	{
@@ -48836,7 +48927,7 @@
 		"Brand": "Wren And Cuff",
 		"Name": "Gold Comp Compressor",
 		"Width": 2.7,
-		"Height": 4.52,
+		"Height": 4.5,
 		"Image": "wrenandcuff-gold-comp.png"
 	},
 	{
@@ -48849,22 +48940,22 @@
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "MKII Germanium Bender V2",
-		"Width": 2.64,
-		"Height": 4.64,
+		"Width": 2.71,
+		"Height": 4.77,
 		"Image": "wrenandcuff-mk2-germanium-bender-v2.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Pickle Pie B",
-		"Width": 2.99,
-		"Height": 4.51,
+		"Width": 3.04,
+		"Height": 4.57,
 		"Image": "wrenandcuff-pickle-pie-b.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Phat Phuck B",
-		"Width": 2.7,
-		"Height": 4.52,
+		"Width": 2.69,
+		"Height": 4.5,
 		"Image": "wrenandcuff-phatphuckb.png"
 	},
 	{
@@ -48877,8 +48968,8 @@
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Suppa Phat Phuk",
-		"Width": 2.64,
-		"Height": 4.64,
+		"Width": 2.71,
+		"Height": 4.77,
 		"Image": "wrenandcuff-suppa-phat-phuk.png"
 	},
 	{
@@ -48891,8 +48982,8 @@
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Tall Font Russian",
-		"Width": 2.64,
-		"Height": 4.51,
+		"Width": 2.69,
+		"Height": 4.59,
 		"Image": "wrenandcuff-tall-font-russian.png"
 	},
 	{
@@ -48905,43 +48996,43 @@
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Tri Pie '70",
-		"Width": 2.64,
-		"Height": 4.51,
+		"Width": 2.69,
+		"Height": 4.59,
 		"Image": "wrenandcuff-tri-pie-70.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Two-Five Drive Boost",
-		"Width": 2.64,
-		"Height": 4.64,
+		"Width": 2.71,
+		"Height": 4.77,
 		"Image": "wrenandcuff-two-five-drive-boost.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Violet World Fuzz",
-		"Width": 2.64,
-		"Height": 4.51,
+		"Width": 2.69,
+		"Height": 4.59,
 		"Image": "wrenandcuff-violet-world.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "White Elk (Small Foot)",
-		"Width": 2.64,
-		"Height": 4.64,
+		"Width": 2.71,
+		"Height": 4.77,
 		"Image": "wrenandcuff-white-elk-small-foot.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Your Face 60's",
-		"Width": 2.64,
-		"Height": 4.51,
+		"Width": 2.69,
+		"Height": 4.59,
 		"Image": "wrenandcuff-yourface-60s.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
 		"Name": "Your Face 70's",
-		"Width": 2.7,
-		"Height": 4.52,
+		"Width": 2.71,
+		"Height": 4.58,
 		"Image": "wrenandcuff-yourface-70s.png"
 	},
 	{
