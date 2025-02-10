@@ -8869,6 +8869,13 @@
 		"Image": "cornerstone-zefiro.png"
 	},
 	{
+		"Brand": "Cosmic Loop FX",
+		"Name": "Parallelarator",
+		"Width": 3.01,
+		"Height": 4.8,
+		"Image": "cosmicloopfx-parallelarator.png"
+	},
+	{
 		"Brand": "Cosmodio",
 		"Name": "Gravity Well",
 		"Width": 3.83,
@@ -26829,6 +26836,13 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "lichtlaerm-aquaria.png"
+	},
+	{
+		"Brand": "Lichtlaerm",
+		"Name": "Aquaria V2",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-aquaria-v2.png"
 	},
 	{
 		"Brand": "Lichtlaerm",
