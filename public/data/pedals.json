@@ -8869,6 +8869,13 @@
 		"Image": "cornerstone-zefiro.png"
 	},
 	{
+		"Brand": "Cosmic Loop FX",
+		"Name": "Parallelarator",
+		"Width": 3.01,
+		"Height": 4.8,
+		"Image": "cosmicloopfx-parallelarator.png"
+	},
+	{
 		"Brand": "Cosmodio",
 		"Name": "Gravity Well",
 		"Width": 3.83,
@@ -26832,6 +26839,13 @@
 	},
 	{
 		"Brand": "Lichtlaerm",
+		"Name": "Aquaria V2",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-aquaria-v2.png"
+	},
+	{
+		"Brand": "Lichtlaerm",
 		"Name": "Gehenna",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -39191,6 +39205,13 @@
 		"Width": 5.18,
 		"Height": 3.7,
 		"Image": "shark-warzy-drive.png"
+	},
+	{
+		"Brand": "Sheeran Guitars",
+		"Name": "Sheeran Looper+",
+		"Width": 8.52,
+		"Height": 5.84,
+		"Image": "sheeran-looper-plus.png"
 	},
 	{
 		"Brand": "Shift Line",
