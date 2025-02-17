@@ -30003,6 +30003,13 @@
 	},
 	{
 		"Brand": "Mooer",
+		"Name": "GL100",
+		"Width": 2.91,
+		"Height": 4.92,
+		"Image": "mooer-gl100.png"
+	},	
+	{
+		"Brand": "Mooer",
 		"Name": "Graphic B",
 		"Width": 1.67,
 		"Height": 3.75,
