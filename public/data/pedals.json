@@ -22866,6 +22866,13 @@
 		"Name": "3 Series Oil Can Delay",
 		"Width": 2.68,
 		"Height": 4.42,
+		"Image": "jhs-3-series-oil-can-delay.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "3 Series Oil Can Delay (Black)",
+		"Width": 2.68,
+		"Height": 4.42,
 		"Image": "jhs-3-series-oil.png"
 	},
 	{
@@ -22891,10 +22898,24 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "3 Series Rotary Chorus",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3-series-rotary-chorus.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "3 Series Screamer",
 		"Width": 2.68,
 		"Height": 4.42,
 		"Image": "jhs-3-series-screamer.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "3 Series Tape Delay",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3-series-tape-delay.png"
 	},
 	{
 		"Brand": "JHS",
