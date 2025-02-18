@@ -4942,6 +4942,13 @@
 		"Image": "boredbrain-terminal-v2.png"
 	},
 	{
+		"Brand": "Boredbrain",
+		"Name": "Transmutron",
+		"Width": 5.88,
+		"Height": 3.82,
+		"Image": "boredbrain-transmutron.png"
+	},
+	{
 		"Brand": "BOSS",
 		"Name": "AC-2 Acoustic Simulator",
 		"Width": 2.875,
@@ -12888,6 +12895,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Ghost Echo",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "earthquaker-ghost-echo-v1.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Ghost Echo V2",
 		"Width": 2.6,
 		"Height": 5.02,
@@ -13690,6 +13704,13 @@
 		"Width": 7.5,
 		"Height": 4.94,
 		"Image": "electrode-leveling-amplifier.png"
+	},
+	{
+		"Brand": "Effettidiclara",
+		"Name": "Agata",
+		"Width": 2.75,
+		"Height": 4.56,
+		"Image": "effettidiclara-agata.png"
 	},
 	{
 		"Brand": "Electric Love",
@@ -21474,6 +21495,13 @@
 		"Width": 2.6,
 		"Height": 5.02,
 		"Image": "idiotbox-blower-box.png"
+	},
+	{
+		"Brand": "Idiotbox",
+		"Name": "Liquid Heat",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "idiotbox-liquid-heat.png"
 	},
 	{
 		"Brand": "Idiotbox",
