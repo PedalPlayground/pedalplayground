@@ -29030,6 +29030,13 @@
 	},
 	{
 		"Brand": "Meris",
+		"Name": "Enzo X",
+		"Width": 7.25,
+		"Height": 4.5,
+		"Image": "meris-enzo-x.png"
+	},
+	{
+		"Brand": "Meris",
 		"Name": "Hedra",
 		"Width": 4.25,
 		"Height": 4.5,
@@ -46206,6 +46213,13 @@
 		"Width": 2.91,
 		"Height": 4.5,
 		"Image": "vemuram-shanks-2.png"
+	},
+	{
+		"Brand": "Veri-Tone",
+		"Name": "Arcturus",
+		"Width": 4.16,
+		"Height": 4.92,
+		"Image": "veritone-arcturus.png"
 	},
 	{
 		"Brand": "Very Good Amp Co",
