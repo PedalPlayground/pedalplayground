@@ -58,8 +58,8 @@
 
 _Post a separate issue for each pedal that you are requesting._
 
-****
-
 [Submit a Pedal Request](https://github.com/PedalPlayground/PedalPlayground.github.io/issues)
+
+****
 
 Note: Even if your request has been completed and linked to a pull request it may still take several weeks for updates to get pulled into the main project.  The individual contributors have no control over that so please remain patient. If we haven't gotten to your request yet there is probably a good reason for it (insufficient image quality, lack of published dimensions, etc).
