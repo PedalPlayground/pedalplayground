@@ -19134,7 +19134,7 @@
 		"Brand": "Grace Design",
 		"Name": "ALiX",
 		"Width": 6.2,
-		"Height": 5.5,
+		"Height": 5.54,
 		"Image": "grace-design-alix.png"
 	},
 	{
@@ -19143,6 +19143,13 @@
 		"Width": 9.5,
 		"Height": 5.5,
 		"Image": "grace-design-felix.png"
+	},
+	{
+		"Brand": "Grace Design",
+		"Name": "ROXi",
+		"Width": 6.2,
+		"Height": 5.54,
+		"Image": "grace-design-roxi.png"
 	},
 	{
 		"Brand": "Green Carrot Pedals",
@@ -29776,6 +29783,13 @@
 		"Width": 5.62,
 		"Height": 2.2,
 		"Image": "mono-power-supply-small.png"
+	},
+	{
+		"Brand": "Monoprice",
+		"Name": "Flanger Mini",
+		"Width": 1.76,
+		"Height": 3.7,
+		"Image": "monoprice-flanger.png"
 	},
 	{
 		"Brand": "Montreal Assembly",
