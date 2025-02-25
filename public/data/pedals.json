@@ -4628,6 +4628,13 @@
 	},
 	{
 		"Brand": "Bleak District Electric",
+		"Name": "Sun? Never",
+		"Width": 3.7,
+		"Height": 4.83,
+		"Image": "bde-sun-never.png"
+	},
+	{
+		"Brand": "Bleak District Electric",
 		"Name": "Sun? No",
 		"Width": 2.38,
 		"Height": 4.62,
@@ -41620,6 +41627,13 @@
 		"Width": 4,
 		"Height": 4.55,
 		"Image": "strymon-dig-v2.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "EC-1",
+		"Width": 2.7,
+		"Height": 4.43,
+		"Image": "strymon-ec1.png"
 	},
 	{
 		"Brand": "Strymon",
