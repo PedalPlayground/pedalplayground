@@ -56,9 +56,11 @@
 2.  A high resolution image of the pedal (top-down view, straight on perspective),
 3.  The dimensions of the pedal in inches (include jacks and other protrusions).
 
+****
+
 _Post a separate issue for each pedal that you are requesting._
 
-[Submit a Pedal Request](https://github.com/PedalPlayground/PedalPlayground.github.io/issues)
+:point_right: [Submit a Pedal Request](https://github.com/PedalPlayground/PedalPlayground.github.io/issues)
 
 ****
 
