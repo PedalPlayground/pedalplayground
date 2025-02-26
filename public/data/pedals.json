@@ -35701,6 +35701,20 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "Cali76 Stacked Compressor",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-cali76-stacked-comp.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Cali76 Stacked Compressor (Black)",
+		"Width": 2.5,
+		"Height": 4.79,
+		"Image": "origin-cali76-stacked-comp-black.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "Cali76 Stacked Edition",
 		"Width": 2.6,
 		"Height": 5.59,
