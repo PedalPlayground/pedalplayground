@@ -21036,6 +21036,13 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Wong Press",
+		"Width": 3.17,
+		"Height": 6.38,
+		"Image": "hotone-wong-press.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Xtomp",
 		"Width": 2.88,
 		"Height": 4.96,
@@ -34188,6 +34195,13 @@
 		"Image": "neural-dsp-quad-cortex.png"
 	},
 	{
+		"Brand": "Normal Devices",
+		"Name": "Delay Cascade",
+		"Width": 5.7,
+		"Height": 4.89,
+		"Image": "normal-devices-delay-cascade.png"
+	},
+	{
 		"Brand": "O.C.E. Pedals",
 		"Name": "Wrench Fuzz",
 		"Width": 3.7,
@@ -40234,6 +40248,13 @@
 		"Width": 3.07,
 		"Height": 4.38,
 		"Image": "snouse-blackbox2-stagepro.png"
+	},
+	{
+		"Brand": "Sobbat",
+		"Name": "Drive Breaker DB-2S",
+		"Width": 2.77,
+		"Height": 4.5,
+		"Image": "sobbat-db2s.png"
 	},
 	{
 		"Brand": "Sola Sound",
