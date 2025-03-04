@@ -12769,6 +12769,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Chelsea",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-chelsea.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Chrysalis",
 		"Width": 2.84,
 		"Height": 4.5,
@@ -40276,6 +40283,27 @@
 		"Width": 3.75,
 		"Height": 8.6,
 		"Image": "sola-sound-yellow-hybrid.png"
+	},
+	{
+		"Brand": "Solar Guitars",
+		"Name": "Chug",
+		"Width": 3.16,
+		"Height": 4.72,
+		"Image": "solar-chug.png"
+	},
+	{
+		"Brand": "Solar Guitars",
+		"Name": "EQ Boost",
+		"Width": 3.16,
+		"Height": 4.72,
+		"Image": "solar-eq-boost.png"
+	},
+	{
+		"Brand": "Solar Guitars",
+		"Name": "Tuner+",
+		"Width": 3.16,
+		"Height": 4.72,
+		"Image": "solar-tuner-plus.png"
 	},
 	{
 		"Brand": "Soldano",
