@@ -48225,6 +48225,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Cryptid",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "wampler-cryptid.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "dB+",
 		"Width": 1.81,
 		"Height": 3.7,
