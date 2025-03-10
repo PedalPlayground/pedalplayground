@@ -372,6 +372,13 @@
 	},
 	{
 		"Brand": "Aclam",
+		"Name": "Go Rocky Go",
+		"Width": 5.4,
+		"Height": 3.59,
+		"Image": "aclam-go-rocky-go.png"
+	},
+	{
+		"Brand": "Aclam",
 		"Name": "The Mocker",
 		"Width": 5.4,
 		"Height": 3.59,
@@ -9374,6 +9381,13 @@
 	},
 	{
 		"Brand": "Custom Tones",
+		"Name": "Ethos 60's Harmonic Bias Trem",
+		"Width": 4.96,
+		"Height": 3.7,
+		"Image": "ethos-60s-harmonic-bias-trem.png"
+	},
+	{
+		"Brand": "Custom Tones",
 		"Name": "Ethos Clean Fusion Deluxe",
 		"Width": 10.05,
 		"Height": 2.93,
@@ -13690,6 +13704,13 @@
 		"Width": 4,
 		"Height": 4.7,
 		"Image": "electric-eye-cannibal-unicorn.png"
+	},
+	{
+		"Brand": "Electric Eye",
+		"Name": "Mud Killer",
+		"Width": 2.72,
+		"Height": 4.96,
+		"Image": "electric-eye-mud-killer.png"
 	},
 	{
 		"Brand": "Electric Eye",
@@ -27512,8 +27533,8 @@
 	{
 		"Brand": "LPD",
 		"Name": "Eighty7",
-		"Width": 2.68,
-		"Height": 4.5,
+		"Width": 2.42,
+		"Height": 4.58,
 		"Image": "lpd-eighty7.png"
 	},
 	{
@@ -27550,6 +27571,13 @@
 		"Width": 2.68,
 		"Height": 4.5,
 		"Image": "lpd-fifty7.png"
+	},
+	{
+		"Brand": "LPD",
+		"Name": "JMP79",
+		"Width": 2.42,
+		"Height": 4.58,
+		"Image": "lpd-jmp79.png"
 	},
 	{
 		"Brand": "LPD",
@@ -27617,8 +27645,8 @@
 	{
 		"Brand": "LPD",
 		"Name": "Sixty8",
-		"Width": 2.68,
-		"Height": 4.5,
+		"Width": 2.42,
+		"Height": 4.58,
 		"Image": "lpd-sixty8.png"
 	},
 	{
@@ -47343,6 +47371,13 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Canvas Clock",
+		"Width": 2.82,
+		"Height": 4.8,
+		"Image": "walrus-canvas-clock.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Canvas Power 15",
 		"Width": 12.28,
 		"Height": 2.21,
@@ -49293,6 +49328,20 @@
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "xotic-bb-preamp-v15.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "BB Preamp Comp",
+		"Width": 2.69,
+		"Height": 4.5,
+		"Image": "xotic-bb-preamp-comp.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "BB Preamp MB",
+		"Width": 2.69,
+		"Height": 4.5,
+		"Image": "xotic-bb-preamp-mb.png"
 	},
 	{
 		"Brand": "Xotic",
