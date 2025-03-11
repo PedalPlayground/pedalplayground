@@ -3781,6 +3781,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Deep Sea Diver Fuzz-Echo",
+		"Width": 4.69,
+		"Height": 3.77,
+		"Image": "benson-deep-sea-diver.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Delay",
 		"Width": 4.69,
 		"Height": 3.77,
@@ -45366,6 +45373,13 @@
 		"Width": 3.7,
 		"Height": 4.96,
 		"Image": "tuesday-experiments-sonic-drive-deluxe.png"
+	},
+	{
+		"Brand": "Tuesday Experiments",
+		"Name": "EXP. 14138 The Stack",
+		"Width": 3.7,
+		"Height": 4.96,
+		"Image": "tuesday-experiments-the-stack.png"
 	},
 	{
 		"Brand": "Tuesday Experiments",
