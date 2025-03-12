@@ -11838,6 +11838,13 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
+		"Name": "Hello Beaver",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-hello-beaver.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
 		"Name": "Hoverla",
 		"Width": 2.6,
 		"Height": 4.9,
@@ -38673,6 +38680,13 @@
 		"Width": 10.1,
 		"Height": 4.28,
 		"Image": "rjm-pbc6x.png"
+	},
+	{
+		"Brand": "RJM",
+		"Name": "Micro Line Mixer",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "rjm-micro-line-mixer.png"
 	},
 	{
 		"Brand": "RJM",
