@@ -9136,6 +9136,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Venus",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "ctc-venus.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "White Whale",
 		"Width": 6.7,
 		"Height": 4.78,
@@ -9147,6 +9154,13 @@
 		"Width": 6.7,
 		"Height": 4.78,
 		"Image": "ctc-white-whale-v2.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "White Whale v2 (Footswitch)",
+		"Width": 3.7,
+		"Height": 1.63,
+		"Image": "ctc-white-whale-v2-footswitch.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
@@ -12115,6 +12129,13 @@
 		"Width": 3.5,
 		"Height": 3.5,
 		"Image": "dunlop-ffm6.png"
+	},
+	{
+		"Brand": "Dunlop",
+		"Name": "Band of Gypsys Fuzz Face (Chrome)",
+		"Width": 3.5,
+		"Height": 3.57,
+		"Image": "dunlop-ffm6-chrome.png"
 	},
 	{
 		"Brand": "Dunlop",
