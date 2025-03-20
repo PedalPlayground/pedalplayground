@@ -19769,6 +19769,13 @@
 	},
 	{
 		"Brand": "GUPTech",
+		"Name": "pPTSD Parametric EQ",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "guptech-pptsd.png"
+	},
+	{
+		"Brand": "GUPTech",
 		"Name": "Queen of Crow Dual Overdrive",
 		"Width": 4.7,
 		"Height": 3.88,
@@ -31748,7 +31755,7 @@
 		"Brand": "Musicomlab",
 		"Name": "EFX III",
 		"Width": 11,
-		"Height": 4.9,
+		"Height": 5.16,
 		"Image": "musicomlab-efx-iii.png"
 	},
 	{
