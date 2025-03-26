@@ -3662,6 +3662,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "Powerplay P1",
+		"Width": 3.3,
+		"Height": 4.88,
+		"Image": "behringer-p1.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "SF300 Super Fuzz",
 		"Width": 2.76,
 		"Height": 4.84,
@@ -6938,6 +6945,13 @@
 	},
 	{
 		"Brand": "Caroline",
+		"Name": "Kilobyte 2000",
+		"Width": 3.92,
+		"Height": 4.89,
+		"Image": "caroline-kilobyte-2000.png"
+	},
+	{
+		"Brand": "Caroline",
 		"Name": "Megabyte",
 		"Width": 3.7,
 		"Height": 4.89,
@@ -7656,6 +7670,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-talisman-gallery.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Talisman Ghost",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-talisman-ghost.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -32845,6 +32866,13 @@
 	},
 	{
 		"Brand": "Mythos",
+		"Name": "Argo Boost Deluxe",
+		"Width": 3.72,
+		"Height": 4.8,
+		"Image": "mythos-argo-boost-deluxe.png"
+	},
+	{
+		"Brand": "Mythos",
 		"Name": "Argo V2",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -34518,6 +34546,27 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Black Fountain Stereo (Cream)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-black-fountain-stereo-cream.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Black Fountain Stereo (Slate)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-black-fountain-stereo.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Black Fountain Stereo (Terracotta)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-black-fountain-stereo-terra.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Dark Light",
 		"Width": 5.7,
 		"Height": 3.84,
@@ -34553,21 +34602,21 @@
 	},
 	{
 		"Brand": "OBNE",
-		"Name": "Dark Star v3",
+		"Name": "Dark Star Stereo (Blue)",
 		"Width": 4.25,
 		"Height": 4.56,
 		"Image": "obne-dark-star-stereo.png"
 	},
 	{
 		"Brand": "OBNE",
-		"Name": "Dark Star v3 (Black)",
+		"Name": "Dark Star Stereo (Black)",
 		"Width": 4.25,
 		"Height": 4.56,
 		"Image": "obne-dark-star-stereo-black.png"
 	},
 	{
 		"Brand": "OBNE",
-		"Name": "Dark Star v3 (Pink)",
+		"Name": "Dark Star Stereo (Pink)",
 		"Width": 4.25,
 		"Height": 4.56,
 		"Image": "obne-dark-star-stereo-pink.png"
