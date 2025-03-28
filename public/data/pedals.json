@@ -15933,6 +15933,13 @@
 	},
 	{
 		"Brand": "Fairfield Circuitry",
+		"Name": "20% More",
+		"Width": 3.89,
+		"Height": 4.7,
+		"Image": "fairfield-20-more.png"
+	},
+	{
+		"Brand": "Fairfield Circuitry",
 		"Name": "Board Member",
 		"Width": 3.85,
 		"Height": 1.66,
@@ -19262,6 +19269,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "great-eastern-dad.png"
+	},
+	{
+		"Brand": "Great Eastern FX Co.",
+		"Name": "Focus Fuzz Deluxe",
+		"Width": 3.5,
+		"Height": 5.41,
+		"Image": "great-eastern-focus-fuzz-deluxe.png"
 	},
 	{
 		"Brand": "Great Eastern FX Co.",
@@ -38144,6 +38158,13 @@
 	},
 	{
 		"Brand": "Redbeard Effects",
+		"Name": "Bearded Vulture",
+		"Width": 2.75,
+		"Height": 4.87,
+		"Image": "redbeard-bearded-vulture.png"
+	},
+	{
+		"Brand": "Redbeard Effects",
 		"Name": "Hairy Squid",
 		"Width": 2.75,
 		"Height": 4.87,
@@ -46759,6 +46780,13 @@
 		"Width": 4.7,
 		"Height": 3.85,
 		"Image": "vsaudio-royalflush.png"
+	},
+	{
+		"Brand": "VS Audio",
+		"Name": "Royal Flush+",
+		"Width": 4.7,
+		"Height": 3.68,
+		"Image": "vsaudio-royalflush-plus.png"
 	},
 	{
 		"Brand": "VS Audio",
