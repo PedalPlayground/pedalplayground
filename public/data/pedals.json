@@ -4495,6 +4495,13 @@
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
+		"Name": "Payola",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-payola.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
 		"Name": "Priority Delay",
 		"Width": 4.7,
 		"Height": 3.85,
@@ -6732,6 +6739,13 @@
 		"Width": 2.6,
 		"Height": 4.88,
 		"Image": "carl-martin-dc-drive.png"
+	},
+	{
+		"Brand": "Carl Martin",
+		"Name": "Headroom Mini",
+		"Width": 3.7,
+		"Height": 4.87,
+		"Image": "carl-martin-headroom-mini.png"
 	},
 	{
 		"Brand": "Carl Martin",
@@ -25047,6 +25061,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Halo Core (Purple)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-halo-core-purple.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Holy Fuzz",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -25250,6 +25271,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "OCTA PSI (Purple)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-octa-psi-purple.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Omni",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -25373,6 +25401,13 @@
 		"Width": 4,
 		"Height": 5.04,
 		"Image": "keeley-rotary.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Rotary (Purple)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-rotary-purple.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -25548,6 +25583,13 @@
 		"Width": 4,
 		"Height": 5.04,
 		"Image": "keeley-zoma.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Zoma (Purple)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-zoma-purple.png"
 	},
 	{
 		"Brand": "Keith McMillen Instruments",
@@ -43315,6 +43357,13 @@
 		"Width": 2,
 		"Height": 3.75,
 		"Image": "tc-ditto.png"
+	},
+	{
+		"Brand": "TC Electronic",
+		"Name": "Ditto 2 Looper",
+		"Width": 2,
+		"Height": 3.66,
+		"Image": "tc-ditto-2.png"
 	},
 	{
 		"Brand": "TC Electronic",
