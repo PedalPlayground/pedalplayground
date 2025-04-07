@@ -4032,6 +4032,13 @@
 		"Image": "big-joe-analog-chorus.png"
 	},
 	{
+		"Brand": "Big Joe",
+		"Name": "Li2",
+		"Width": 1.63,
+		"Height": 3.36,
+		"Image": "big-joe-li2.png"
+	},
+	{
 		"Brand": "Biyang",
 		"Name": "PH-10 Phase Pro",
 		"Width": 2.63,
@@ -37045,6 +37052,13 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Gas Giant",
+		"Width": 2.5,
+		"Height": 4.55,
+		"Image": "pigtronix-gas-giant.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Gate Keeper",
 		"Width": 1.75,
 		"Height": 3.75,
@@ -45530,6 +45544,13 @@
 	},
 	{
 		"Brand": "Tuesday Experiments",
+		"Name": "EXP. 1112 Sonic Drive Discrete",
+		"Width": 2.1,
+		"Height": 3.7,
+		"Image": "tuesday-experiments-1112.png"
+	},
+	{
+		"Brand": "Tuesday Experiments",
 		"Name": "EXP. 1118 Sonic Drive Deluxe",
 		"Width": 3.7,
 		"Height": 4.96,
@@ -49146,6 +49167,13 @@
 		"Width": 2.55,
 		"Height": 4.87,
 		"Image": "weehbo-tackleberry.png"
+	},
+	{
+		"Brand": "Wem",
+		"Name": "Copicat Boost CCB-1",
+		"Width": 2.83,
+		"Height": 4.8,
+		"Image": "wem-ccb1.png"
 	},
 	{
 		"Brand": "West Co Pedals",
