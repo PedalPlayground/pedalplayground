@@ -6636,6 +6636,13 @@
 		"Image": "bugera-fsb106a.png"
 	},
 	{
+		"Brand": "Butterfly Effects",
+		"Name": "Dobbo",
+		"Width": 3.92,
+		"Height": 4.7,
+		"Image": "butterfly-effects-dobbo.png"
+	},
+	{
 		"Brand": "BYW",
 		"Name": "Blacky' Blower",
 		"Width": 3.94,
@@ -37178,6 +37185,13 @@
 	},
 	{
 		"Brand": "Pigtronix",
+		"Name": "Rototron",
+		"Width": 6.2,
+		"Height": 4.95,
+		"Image": "pigtronix-rototron.png"
+	},
+	{
+		"Brand": "Pigtronix",
 		"Name": "Space Rip",
 		"Width": 1.75,
 		"Height": 3.75,
@@ -42533,6 +42547,13 @@
 	},
 	{
 		"Brand": "Summer School Electronics",
+		"Name": "Spring Break Reverb",
+		"Width": 2.6,
+		"Height": 4.96,
+		"Image": "summer-school-electronics-spring-break-reverb.png"
+	},
+	{
+		"Brand": "Summer School Electronics",
 		"Name": "The Class Reunion",
 		"Width": 3.7,
 		"Height": 4.92,
@@ -45144,6 +45165,13 @@
 		"Image": "tonecity-wild-fro.png"
 	},
 	{
+		"Brand": "Tone King",
+		"Name": "Imperial Preamp",
+		"Width": 7.2,
+		"Height": 5.67,
+		"Image": "toneking-imperial-preamp.png"
+	},
+	{
 		"Brand": "ToneTuga FX",
 		"Name": "Aegis",
 		"Width": 4.7,
@@ -45545,8 +45573,8 @@
 	{
 		"Brand": "Tuesday Experiments",
 		"Name": "EXP. 1112 Sonic Drive Discrete",
-		"Width": 2.1,
-		"Height": 3.7,
+		"Width": 2.24,
+		"Height": 3.94,
 		"Image": "tuesday-experiments-1112.png"
 	},
 	{
@@ -45555,6 +45583,13 @@
 		"Width": 3.7,
 		"Height": 4.96,
 		"Image": "tuesday-experiments-sonic-drive-deluxe.png"
+	},
+	{
+		"Brand": "Tuesday Experiments",
+		"Name": "EXP. 1118 Sonic Drive Deluxe v1.5",
+		"Width": 3.54,
+		"Height": 4.68,
+		"Image": "tuesday-experiments-sonic-drive-deluxe-v15.png"
 	},
 	{
 		"Brand": "Tuesday Experiments",
