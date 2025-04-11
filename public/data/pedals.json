@@ -41385,6 +41385,13 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Apollo VIIb",
+		"Width": 2.81,
+		"Height": 4.75,
+		"Image": "spaceman-apolloviib.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Artemis",
 		"Width": 4.11,
 		"Height": 4.75,
@@ -44820,6 +44827,13 @@
 		"Width": 2.76,
 		"Height": 4.89,
 		"Image": "thorpyfx-thedane-mk2.png"
+	},
+	{
+		"Brand": "ThorpyFX",
+		"Name": "The Dane MkII (LE)",
+		"Width": 2.76,
+		"Height": 4.89,
+		"Image": "thorpyfx-thedane-mk2-le.png"
 	},
 	{
 		"Brand": "ThorpyFX",
@@ -49552,6 +49566,13 @@
 		"Width": 4.97,
 		"Height": 3.7,
 		"Image": "xotic-acrcoz.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "AH Booster",
+		"Width": 2.69,
+		"Height": 4.5,
+		"Image": "xotic-ahbooster.png"
 	},
 	{
 		"Brand": "Xotic",
