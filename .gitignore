@@ -18,3 +18,5 @@ app/images/desktop.ini
 app/images/pedals/desktop.ini
 app/images/pedals/desktop.ini
 *.ini
+app/images/pedals/.public.lnk
+public/images/pedals/.app.lnk
