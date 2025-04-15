@@ -8030,6 +8030,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Brothers AM",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-brothers-am.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Clean",
 		"Width": 2.86,
 		"Height": 4.86,
