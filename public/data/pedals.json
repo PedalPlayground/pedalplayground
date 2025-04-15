@@ -8030,6 +8030,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Brothers AM",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-brothers-am.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Clean",
 		"Width": 2.86,
 		"Height": 4.86,
@@ -45608,8 +45615,8 @@
 	{
 		"Brand": "Tuesday Experiments",
 		"Name": "EXP. 14138 The Stack",
-		"Width": 3.7,
-		"Height": 4.96,
+		"Width": 3.54,
+		"Height": 4.75,
 		"Image": "tuesday-experiments-the-stack.png"
 	},
 	{
