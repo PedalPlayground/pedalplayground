@@ -23800,6 +23800,27 @@
 		"Image": "joe-gore-screech.png"
 	},
 	{
+		"Brand": "Jordan",
+		"Name": "Acid Tone",
+		"Width": 2.96,
+		"Height": 4.5,
+		"Image": "jordan-acid-tone.png"
+	},
+	{
+		"Brand": "Jordan",
+		"Name": "Buzz Tone",
+		"Width": 2.96,
+		"Height": 4.5,
+		"Image": "jordan-buzz-tone.png"
+	},
+	{
+		"Brand": "Jordan",
+		"Name": "Sky Fuzz",
+		"Width": 2.65,
+		"Height": 4.5,
+		"Image": "jordan-sky-fuzz.png"
+	},
+	{
 		"Brand": "Joyo",
 		"Name": "D-Seed",
 		"Width": 3.92,
