@@ -4180,6 +4180,13 @@
 	},
 	{
 		"Brand": "Black Mass Electronics",
+		"Name": "Dual 1312 Distortion",
+		"Width": 5.7,
+		"Height": 5.01,
+		"Image": "blackmass-dual-1312.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
 		"Name": "Kill Chain",
 		"Width": 2.6,
 		"Height": 4.97,
@@ -29909,6 +29916,13 @@
 		"Width": 2.65,
 		"Height": 4.5,
 		"Image": "mojo-hand-park-theatre.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
+		"Name": "Rock City",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "mojo-hand-rock-city.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
