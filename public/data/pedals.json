@@ -15156,6 +15156,20 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "V256 Vocoder",
+		"Width": 6.1,
+		"Height": 4.75,
+		"Image": "ehx-v256.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Voice Box",
+		"Width": 6.1,
+		"Height": 4.75,
+		"Image": "ehx-voice-box.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Volume Pedal",
 		"Width": 3.39,
 		"Height": 9.92,
@@ -40962,6 +40976,13 @@
 		"Width": 1.66,
 		"Height": 3.78,
 		"Image": "sonicake-octaver.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Pocket Master",
+		"Width": 4.08,
+		"Height": 3.35,
+		"Image": "sonicake-pocket-master.png"
 	},
 	{
 		"Brand": "Sonicake",
