@@ -10423,6 +10423,20 @@
 		"Image": "demonicmachines-htr.png"
 	},
 	{
+		"Brand": "Dess",
+		"Name": "SP-9",
+		"Width": 16.34,
+		"Height": 5.94,
+		"Image": "dess-sp-9.png"
+	},
+	{
+		"Brand": "Dess",
+		"Name": "SP-9S",
+		"Width": 16.34,
+		"Height": 5.94,
+		"Image": "dess-sp-9s.png"
+	},
+	{
 		"Brand": "Devi Ever: FX",
 		"Name": "Hyperion",
 		"Width": 2.74,
@@ -22695,6 +22709,20 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Octaurus",
+		"Width": 2.96,
+		"Height": 4.87,
+		"Image": "jam-octaurus.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Octaurus NOS",
+		"Width": 2.96,
+		"Height": 4.87,
+		"Image": "jam-octaurus-nos.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Pink Flow",
 		"Width": 15.7,
 		"Height": 6.7,
@@ -24645,6 +24673,20 @@
 		"Width": 4.72,
 		"Height": 5.9,
 		"Image": "jptr-warlow.png"
+	},
+	{
+		"Brand": "Judahs",
+		"Name": "Kedem 4",
+		"Width": 5.56,
+		"Height": 4.74,
+		"Image": "judahs-kedem-4.png"
+	},
+	{
+		"Brand": "Judahs",
+		"Name": "Kedem 6",
+		"Width": 7.44,
+		"Height": 4.74,
+		"Image": "judahs-kedem-6.png"
 	},
 	{
 		"Brand": "Karma",
