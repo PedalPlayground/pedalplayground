@@ -6490,10 +6490,31 @@
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Carbon X",
+		"Name": "Carbon X (Black)",
 		"Width": 4.7,
-		"Height": 3.81,
+		"Height": 3.79,
 		"Image": "browneamps-carbon-x.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Carbon X (Red)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-carbon-x-red.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Carbon X (White)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-carbon-x-white.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Carbon X (Yellow)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-carbon-x-yellow.png"
 	},
 	{
 		"Brand": "Browne Amplification",
@@ -6504,31 +6525,87 @@
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein (Black)",
+		"Name": "Protein V3 (Black)",
 		"Width": 4.7,
 		"Height": 3.79,
 		"Image": "browneamps-protein-black.png"
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein (Green)",
+		"Name": "Protein V3 (Blue)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-blue.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V3 (Copper)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-copper.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V3 (Green)",
 		"Width": 4.7,
 		"Height": 3.79,
 		"Image": "browneamps-protein-green.png"
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein (Pink)",
+		"Name": "Protein V3 (Pink)",
 		"Width": 4.7,
 		"Height": 3.79,
 		"Image": "browneamps-protein-pink.png"
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein (White)",
+		"Name": "Protein V3 (White)",
 		"Width": 4.7,
 		"Height": 3.79,
 		"Image": "browneamps-protein-white.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V3 (Yellow)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-yellow.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V4 (Black)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-4-black.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V4 (Copper)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-4-copper.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V4 (Green)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-4-green.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V4 (Pink)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-4-pink.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V4 (White)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-4-white.png"
 	},
 	{
 		"Brand": "Browne Amplification",
