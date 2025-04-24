@@ -17068,9 +17068,37 @@
 	{
 		"Brand": "Fortin",
 		"Name": "33",
-		"Width": 2.3622,
-		"Height": 4.40945,
+		"Width": 2.5,
+		"Height": 4.6,
 		"Image": "fortin-33.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Fuzz )))",
+		"Width": 1.71,
+		"Height": 3.7,
+		"Image": "fortin-fuzz.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Meshuggah PreAmp",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "fortin-meshuggah.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Mini 33",
+		"Width": 1.71,
+		"Height": 3.7,
+		"Image": "fortin-mini-33.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Natas",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "fortin-natas.png"
 	},
 	{
 		"Brand": "Fortin",
@@ -17081,16 +17109,30 @@
 	},
 	{
 		"Brand": "Fortin",
+		"Name": "Spliff",
+		"Width": 2.61,
+		"Height": 4.6,
+		"Image": "fortin-spliff.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Zuul",
+		"Width": 2.5,
+		"Height": 4.6,
+		"Image": "fortin-zuul.png"
+	},
+	{
+		"Brand": "Fortin",
 		"Name": "Zuul+",
-		"Width": 2.47,
-		"Height": 4.51,
+		"Width": 2.5,
+		"Height": 4.6,
 		"Image": "fortin-zuul-plus.png"
 	},
 	{
 		"Brand": "Fortin",
 		"Name": "Zuul Mini",
-		"Width": 1.98,
-		"Height": 3.64,
+		"Width": 1.71,
+		"Height": 3.7,
 		"Image": "fortin-zuul-mini.png"
 	},
 	{
