@@ -15100,6 +15100,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Steel Leather",
+		"Width": 2.76,
+		"Height": 4.5,
+		"Image": "ehx-steel-leather.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Stereo The Clone Theory",
 		"Width": 4.19,
 		"Height": 4.75,
@@ -16066,10 +16073,38 @@
 	},
 	{
 		"Brand": "E.W.S. Japan",
+		"Name": "Bass Mid Control II",
+		"Width": 1.89,
+		"Height": 3.64,
+		"Image": "ews-japan-bmc-2.png"
+	},
+	{
+		"Brand": "E.W.S. Japan",
+		"Name": "Little Brute Drive II",
+		"Width": 1.89,
+		"Height": 3.64,
+		"Image": "ews-japan-little-brute-drive-2.png"
+	},
+	{
+		"Brand": "E.W.S. Japan",
 		"Name": "Little Fuzzy Drive",
 		"Width": 1.89,
 		"Height": 3.64,
 		"Image": "ews-japan-little-fuzzy-drive.png"
+	},
+	{
+		"Brand": "E.W.S. Japan",
+		"Name": "Stormy Bass Drive",
+		"Width": 1.89,
+		"Height": 3.64,
+		"Image": "ews-japan-stormy-bass-drive.png"
+	},
+	{
+		"Brand": "E.W.S. Japan",
+		"Name": "Tri-logic Bass Preamp III",
+		"Width": 2.87,
+		"Height": 4.5,
+		"Image": "ews-japan-tri-logic-bass-preamp-3.png"
 	},
 	{
 		"Brand": "F-Pedals",
@@ -26922,11 +26957,11 @@
 		"Image": "land-devices-pre-black.png"
 	},
 	{
-		"Brand": "Laney BCC",
-		"Name": "Blackheath",
-		"Width": 2.76,
+		"Brand": "Laney",
+		"Name": "Digbeth",
+		"Width": 5.85,
 		"Height": 4.78,
-		"Image": "laney-bcc-bh.png"
+		"Image": "laney-digbeth.png"
 	},
 	{
 		"Brand": "Laney",
@@ -26948,6 +26983,13 @@
 		"Width": 5.94,
 		"Height": 4.78,
 		"Image": "laney-loudpedal.png"
+	},
+	{
+		"Brand": "Laney BCC",
+		"Name": "Blackheath",
+		"Width": 2.76,
+		"Height": 4.78,
+		"Image": "laney-bcc-bh.png"
 	},
 	{
 		"Brand": "Laney BCC",
@@ -27882,6 +27924,13 @@
 	},
 	{
 		"Brand": "LPD",
+		"Name": "Bedlum Overdrive",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "lpd-bedlum-overdrive.png"
+	},
+	{
+		"Brand": "LPD",
 		"Name": "CLE-304",
 		"Width": 4.7,
 		"Height": 3.86,
@@ -28614,6 +28663,13 @@
 		"Width": 2.66,
 		"Height": 4.5,
 		"Image": "malekko-ekko-616-mk2.png"
+	},
+	{
+		"Brand": "Malekko",
+		"Name": "Ekko 616 MKII Dark",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "malekko-ekko-616-mk2-dark.png"
 	},
 	{
 		"Brand": "Malekko",
@@ -44557,6 +44613,13 @@
 	},
 	{
 		"Brand": "Tech 21 NYC",
+		"Name": "Sansamp VT Bass Deluxe",
+		"Width": 10.04,
+		"Height": 5.46,
+		"Image": "tech21-sansamp-vt-bass-deluxe.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
 		"Name": "Sansamp YYZ",
 		"Width": 4,
 		"Height": 4.6,
@@ -47592,6 +47655,13 @@
 		"Width": 3.32,
 		"Height": 4.9,
 		"Image": "vtr-venator.png"
+	},
+	{
+		"Brand": "Whirlwind",
+		"Name": "Bass Ten",
+		"Width": 5.08,
+		"Height": 5.9,
+		"Image": "whirlwind-bass-ten.png"
 	},
 	{
 		"Brand": "Whirlwind",
