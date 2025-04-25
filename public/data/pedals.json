@@ -2679,13 +2679,20 @@
 			"Width": 3.81,
 			"Height": 4.96,
 			"Image": "asheville-adg1-se.png"
-		},
+	},
 	{
 		"Brand": "Asheville Music Tools",
 		"Name": "AFG-1",
 		"Width": 3.7,
 		"Height": 4.96,
 		"Image": "asheville-afg1.png"
+	},
+	{
+		"Brand": "Asheville Music Tools",
+		"Name": "APH-1",
+		"Width": 3.7,
+		"Height": 4.96,
+		"Image": "asheville-aph1.png"
 	},
 	{
 		"Brand": "Atomic",
@@ -4170,6 +4177,13 @@
 		"Width": 2.6,
 		"Height": 5.03,
 		"Image": "blackmass-csof.png"
+	},
+	{
+		"Brand": "Black Mass Electronics",
+		"Name": "Dual 1312 Distortion",
+		"Width": 5.7,
+		"Height": 5.01,
+		"Image": "blackmass-dual-1312.png"
 	},
 	{
 		"Brand": "Black Mass Electronics",
@@ -6476,10 +6490,31 @@
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Carbon X",
+		"Name": "Carbon X (Black)",
 		"Width": 4.7,
-		"Height": 3.81,
+		"Height": 3.79,
 		"Image": "browneamps-carbon-x.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Carbon X (Red)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-carbon-x-red.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Carbon X (White)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-carbon-x-white.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Carbon X (Yellow)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-carbon-x-yellow.png"
 	},
 	{
 		"Brand": "Browne Amplification",
@@ -6490,31 +6525,87 @@
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein (Black)",
+		"Name": "Protein V3 (Black)",
 		"Width": 4.7,
 		"Height": 3.79,
 		"Image": "browneamps-protein-black.png"
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein (Green)",
+		"Name": "Protein V3 (Blue)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-blue.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V3 (Copper)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-copper.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V3 (Green)",
 		"Width": 4.7,
 		"Height": 3.79,
 		"Image": "browneamps-protein-green.png"
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein (Pink)",
+		"Name": "Protein V3 (Pink)",
 		"Width": 4.7,
 		"Height": 3.79,
 		"Image": "browneamps-protein-pink.png"
 	},
 	{
 		"Brand": "Browne Amplification",
-		"Name": "Protein (White)",
+		"Name": "Protein V3 (White)",
 		"Width": 4.7,
 		"Height": 3.79,
 		"Image": "browneamps-protein-white.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V3 (Yellow)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-yellow.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V4 (Black)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-4-black.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V4 (Copper)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-4-copper.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V4 (Green)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-4-green.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V4 (Pink)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-4-pink.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V4 (White)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-4-white.png"
 	},
 	{
 		"Brand": "Browne Amplification",
@@ -8272,6 +8363,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-wombtone-mk3.png"
+	},
+	{
+		"Brand": "Chellee",
+		"Name": "Compy",
+		"Width": 2.7,
+		"Height": 4.58,
+		"Image": "chellee-compy.png"
 	},
 	{
 		"Brand": "Chicago Iron",
@@ -10400,6 +10498,20 @@
 		"Width": 4.7,
 		"Height": 3.83,
 		"Image": "demonicmachines-htr.png"
+	},
+	{
+		"Brand": "Dess",
+		"Name": "SP-9",
+		"Width": 16.34,
+		"Height": 5.94,
+		"Image": "dess-sp-9.png"
+	},
+	{
+		"Brand": "Dess",
+		"Name": "SP-9S",
+		"Width": 16.34,
+		"Height": 5.94,
+		"Image": "dess-sp-9s.png"
 	},
 	{
 		"Brand": "Devi Ever: FX",
@@ -15135,6 +15247,20 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "V256 Vocoder",
+		"Width": 6.1,
+		"Height": 4.75,
+		"Image": "ehx-v256.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Voice Box",
+		"Width": 6.1,
+		"Height": 4.75,
+		"Image": "ehx-voice-box.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Volume Pedal",
 		"Width": 3.39,
 		"Height": 9.92,
@@ -16942,9 +17068,37 @@
 	{
 		"Brand": "Fortin",
 		"Name": "33",
-		"Width": 2.3622,
-		"Height": 4.40945,
+		"Width": 2.5,
+		"Height": 4.6,
 		"Image": "fortin-33.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Fuzz )))",
+		"Width": 1.71,
+		"Height": 3.7,
+		"Image": "fortin-fuzz.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Meshuggah PreAmp",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "fortin-meshuggah.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Mini 33",
+		"Width": 1.71,
+		"Height": 3.7,
+		"Image": "fortin-mini-33.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Natas",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "fortin-natas.png"
 	},
 	{
 		"Brand": "Fortin",
@@ -16955,16 +17109,30 @@
 	},
 	{
 		"Brand": "Fortin",
+		"Name": "Spliff",
+		"Width": 2.61,
+		"Height": 4.6,
+		"Image": "fortin-spliff.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Zuul",
+		"Width": 2.5,
+		"Height": 4.6,
+		"Image": "fortin-zuul.png"
+	},
+	{
+		"Brand": "Fortin",
 		"Name": "Zuul+",
-		"Width": 2.47,
-		"Height": 4.51,
+		"Width": 2.5,
+		"Height": 4.6,
 		"Image": "fortin-zuul-plus.png"
 	},
 	{
 		"Brand": "Fortin",
 		"Name": "Zuul Mini",
-		"Width": 1.98,
-		"Height": 3.64,
+		"Width": 1.71,
+		"Height": 3.7,
 		"Image": "fortin-zuul-mini.png"
 	},
 	{
@@ -22660,6 +22828,20 @@
 	},
 	{
 		"Brand": "Jam Pedals",
+		"Name": "Octaurus",
+		"Width": 2.96,
+		"Height": 4.87,
+		"Image": "jam-octaurus.png"
+	},
+	{
+		"Brand": "Jam Pedals",
+		"Name": "Octaurus NOS",
+		"Width": 2.96,
+		"Height": 4.87,
+		"Image": "jam-octaurus-nos.png"
+	},
+	{
+		"Brand": "Jam Pedals",
 		"Name": "Pink Flow",
 		"Width": 15.7,
 		"Height": 6.7,
@@ -23800,6 +23982,27 @@
 		"Image": "joe-gore-screech.png"
 	},
 	{
+		"Brand": "Jordan",
+		"Name": "Acid Tone",
+		"Width": 2.96,
+		"Height": 4.5,
+		"Image": "jordan-acid-tone.png"
+	},
+	{
+		"Brand": "Jordan",
+		"Name": "Buzz Tone",
+		"Width": 2.96,
+		"Height": 4.5,
+		"Image": "jordan-buzz-tone.png"
+	},
+	{
+		"Brand": "Jordan",
+		"Name": "Sky Fuzz",
+		"Width": 2.65,
+		"Height": 4.5,
+		"Image": "jordan-sky-fuzz.png"
+	},
+	{
 		"Brand": "Joyo",
 		"Name": "D-Seed",
 		"Width": 3.92,
@@ -24589,6 +24792,20 @@
 		"Width": 4.72,
 		"Height": 5.9,
 		"Image": "jptr-warlow.png"
+	},
+	{
+		"Brand": "Judahs",
+		"Name": "Kedem 4",
+		"Width": 5.56,
+		"Height": 4.74,
+		"Image": "judahs-kedem-4.png"
+	},
+	{
+		"Brand": "Judahs",
+		"Name": "Kedem 6",
+		"Width": 7.44,
+		"Height": 4.74,
+		"Image": "judahs-kedem-6.png"
 	},
 	{
 		"Brand": "Karma",
@@ -29881,6 +30098,13 @@
 		"Width": 2.65,
 		"Height": 4.5,
 		"Image": "mojo-hand-park-theatre.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
+		"Name": "Rock City",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "mojo-hand-rock-city.png"
 	},
 	{
 		"Brand": "Mojo Hand FX",
@@ -40913,6 +41137,13 @@
 		"Width": 1.66,
 		"Height": 3.78,
 		"Image": "sonicake-octaver.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Pocket Master",
+		"Width": 4.08,
+		"Height": 3.35,
+		"Image": "sonicake-pocket-master.png"
 	},
 	{
 		"Brand": "Sonicake",
