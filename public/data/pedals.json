@@ -1394,6 +1394,13 @@
 	},
 	{
 		"Brand": "Amptweaker",
+		"Name": "Tight Metal Pro",
+		"Width": 5.74,
+		"Height": 5.45,
+		"Image": "amptweaker-tight-metal-pro.png"
+	},
+	{
+		"Brand": "Amptweaker",
 		"Name": "Tight Metal Pro II",
 		"Width": 6.47,
 		"Height": 5.29,
@@ -2570,93 +2577,100 @@
 	},
 	{
 		"Brand": "Ashdown",
+		"Name": "Bass Exchange",
+		"Width": 7.09,
+		"Height": 4.72,
+		"Image": "ashdown-bass-exchange.png"
+	},
+	{
+		"Brand": "Ashdown",
 		"Name": "Macchiato",
-		"Width": 4.25197,
-		"Height": 4.72441,
+		"Width": 4.25,
+		"Height": 4.72,
 		"Image": "ashdown-macchiato.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "Norman Watt-Roy Pre-DI",
-		"Width": 7.204724,
-		"Height": 4.64567,
+		"Width": 7.2,
+		"Height": 4.65,
 		"Image": "ashdown-norman-watt-roy.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "OriginAL Valve Pre-DI",
-		"Width": 7.204724,
-		"Height": 4.64567,
+		"Width": 7.20,
+		"Height": 4.65,
 		"Image": "ashdown-original-valve.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "PRO-FX-Double Shot",
-		"Width": 2.87402,
-		"Height": 4.52756,
+		"Width": 2.87,
+		"Height": 4.53,
 		"Image": "ashdown-double-shot.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "PRO-FX-Pro Drive",
-		"Width": 2.87402,
-		"Height": 4.52756,
+		"Width": 2.87,
+		"Height": 4.53,
 		"Image": "ashdown-pro-drive.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "PRO-FX-Retro Drive",
-		"Width": 2.87402,
-		"Height": 4.52756,
+		"Width": 2.87,
+		"Height": 4.53,
 		"Image": "ashdown-retro-drive.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "PRO-FX-Sub Harmonic Generator",
-		"Width": 2.87402,
-		"Height": 4.52756,
+		"Width": 2.87,
+		"Height": 4.53,
 		"Image": "ashdown-sub-harmonic.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "PRO-FX-Two Band Boost",
-		"Width": 2.87402,
-		"Height": 4.52756,
+		"Width": 2.87,
+		"Height": 4.53,
 		"Image": "ashdown-two-band.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "PRO-FX-Vintage Fuzz",
-		"Width": 2.87402,
-		"Height": 4.52756,
+		"Width": 2.87,
+		"Height": 4.53,
 		"Image": "ashdown-vintage-fuzz.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "Studio Compressor",
-		"Width": 4.25197,
-		"Height": 4.72441,
+		"Width": 4.25,
+		"Height": 4.72,
 		"Image": "ashdown-studio-comp.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "Triple Shot",
-		"Width": 4.25197,
-		"Height": 4.72441,
+		"Width": 4.25,
+		"Height": 4.72,
 		"Image": "ashdown-triple-shot.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "Type 23 Dynamic Filter",
-		"Width": 4.25197,
-		"Height": 4.72441,
+		"Width": 4.25,
+		"Height": 4.72,
 		"Image": "ashdown-type-23.png"
 	},
 	{
 		"Brand": "Ashdown",
 		"Name": "Velvet Compressor",
-		"Width": 4.25197,
-		"Height": 4.72441,
+		"Width": 4.25,
+		"Height": 4.72,
 		"Image": "ashdown-velvet-comp.png"
 	},
 	{
@@ -41622,6 +41636,13 @@
 		"Image": "source-audio-zio.png"
 	},
 	{
+		"Brand": "Source Audio",
+		"Name": "Zio Bass",
+		"Width": 3.2,
+		"Height": 4,
+		"Image": "source-audio-zio-bass.png"
+	},
+	{
 		"Brand": "Southampton Pedals",
 		"Name": "All Things Equal",
 		"Width": 2.37,
@@ -50210,6 +50231,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "yamaha-fl-10mii.png"
+	},
+	{
+		"Brand": "Yamaha",
+		"Name": "NE-1 Parametric Equalizer",
+		"Width": 5.5,
+		"Height": 3.44,
+		"Image": "yamaha-ne1.png"
 	},
 	{
 		"Brand": "Yamaha",
