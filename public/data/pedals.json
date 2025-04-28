@@ -13763,16 +13763,37 @@
 	},
 	{
 		"Brand": "Effectrode",
+		"Name": "Blue Bottle",
+		"Width": 3.7,
+		"Height": 5.06,
+		"Image": "effectrode-blue-bottle.png"
+	},
+	{
+		"Brand": "Effectrode",
 		"Name": "Fire Bottle",
 		"Width": 3.7,
-		"Height": 4.91,
+		"Height": 5.06,
 		"Image": "effectrode-fire-bottle.png"
+	},
+	{
+		"Brand": "Effectrode",
+		"Name": "Leveling Amplifier",
+		"Width": 7.5,
+		"Height": 4.94,
+		"Image": "effectrode-leveling-amplifier.png"
+	},
+	{
+		"Brand": "Effectrode",
+		"Name": "Mercury Tube Fuzz",
+		"Width": 3.7,
+		"Height": 5.06,
+		"Image": "effectrode-mercury-tube-fuzz.png"
 	},
 	{
 		"Brand": "Effectrode",
 		"Name": "PC-2A Tube Compressor",
 		"Width": 3.7,
-		"Height": 5,
+		"Height": 5.06,
 		"Image": "effectrode-pc2a-tube-compressor.png"
 	},
 	{
@@ -13956,20 +13977,6 @@
 		"Width": 5.55,
 		"Height": 4.8,
 		"Image": "electro-faustus-blackfly.png"
-	},
-	{
-		"Brand": "Effectrode",
-		"Name": "Mercury Tube Fuzz",
-		"Width": 3.7,
-		"Height": 5,
-		"Image": "electrode-mercury-tube-fuzz.png"
-	},
-	{
-		"Brand": "Effectrode",
-		"Name": "Leveling Amplifier",
-		"Width": 7.5,
-		"Height": 4.94,
-		"Image": "electrode-leveling-amplifier.png"
 	},
 	{
 		"Brand": "Effettidiclara",
