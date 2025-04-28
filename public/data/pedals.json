@@ -28827,6 +28827,13 @@
 	},
 	{
 		"Brand": "MarkBass",
+		"Name": "Compressore",
+		"Width": 6.7,
+		"Height": 5.7,
+		"Image": "markbass-compressore.png"
+	},
+	{
+		"Brand": "MarkBass",
 		"Name": "Ground Stereo Pre",
 		"Width": 9.25,
 		"Height": 5.71,
@@ -38662,6 +38669,13 @@
 	},
 	{
 		"Brand": "Red Witch",
+		"Name": "Cynosium Delay",
+		"Width": 2.8,
+		"Height": 4.82,
+		"Image": "redwitch-cynosium.png"
+	},
+	{
+		"Brand": "Red Witch",
 		"Name": "Deluxe Moon Phaser",
 		"Width": 5,
 		"Height": 3.77,
@@ -38680,6 +38694,20 @@
 		"Width": 5,
 		"Height": 3.77,
 		"Image": "redwitch-empresschorus-deus.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Epiphanous Drive",
+		"Width": 2.8,
+		"Height": 4.82,
+		"Image": "redwitch-epiphanous.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Euphorium Drive",
+		"Width": 2.8,
+		"Height": 4.82,
+		"Image": "redwitch-euphorium.png"
 	},
 	{
 		"Brand": "Red Witch",
@@ -38718,6 +38746,13 @@
 	},
 	{
 		"Brand": "Red Witch",
+		"Name": "Invidium Phaser",
+		"Width": 2.8,
+		"Height": 4.82,
+		"Image": "redwitch-invidium.png"
+	},
+	{
+		"Brand": "Red Witch",
 		"Name": "Medusa Chorus Tremolo",
 		"Width": 5,
 		"Height": 3.77,
@@ -38743,6 +38778,13 @@
 		"Width": 5,
 		"Height": 3.77,
 		"Image": "redwitch-pentavocal.png"
+	},
+	{
+		"Brand": "Red Witch",
+		"Name": "Plurious Chorus",
+		"Width": 2.8,
+		"Height": 4.82,
+		"Image": "redwitch-plurious.png"
 	},
 	{
 		"Brand": "Red Witch",
