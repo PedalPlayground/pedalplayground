@@ -253,6 +253,13 @@
 	},
 	{
 		"Brand": "A3 Stompbox",
+		"Name": "Groovim 808",
+		"Width": 2.75,
+		"Height": 4.94,
+		"Image": "a3-groovim-808.png"
+	},
+	{
+		"Brand": "A3 Stompbox",
 		"Name": "J",
 		"Width": 2.48,
 		"Height": 4.74,
@@ -9927,6 +9934,13 @@
 	},
 	{
 		"Brand": "Darkglass",
+		"Name": "Anagram",
+		"Width": 8.27,
+		"Height": 3.94,
+		"Image": "darkglass-anagram.png"
+	},
+	{
+		"Brand": "Darkglass",
 		"Name": "Duality Fuzz DFZ",
 		"Width": 2.14,
 		"Height": 3.94,
@@ -15900,8 +15914,15 @@
 		"Brand": "Engl",
 		"Name": "Cabloader",
 		"Width": 3.88,
-		"Height": 4.73,
+		"Height": 4.68,
 		"Image": "engl-cabloader.png"
+	},
+	{
+		"Brand": "Engl",
+		"Name": "Fireball IR",
+		"Width": 2.6,
+		"Height": 4.8,
+		"Image": "engl-fireball-ir.png"
 	},
 	{
 		"Brand": "Eno Music",
@@ -40871,6 +40892,13 @@
 		"Width": 3.16,
 		"Height": 4.72,
 		"Image": "solar-chug.png"
+	},
+	{
+		"Brand": "Solar Guitars",
+		"Name": "Chug Lite",
+		"Width": 2.36,
+		"Height": 4.13,
+		"Image": "solar-chug-lite.png"
 	},
 	{
 		"Brand": "Solar Guitars",
