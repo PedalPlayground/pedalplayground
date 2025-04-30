@@ -9976,6 +9976,13 @@
 	},
 	{
 		"Brand": "Darkglass",
+		"Name": "Luminal Booster Ultra",
+		"Width": 4.81,
+		"Height": 3.76,
+		"Image": "darkglass-luminal-booster-ultra.png"
+	},
+	{
+		"Brand": "Darkglass",
 		"Name": "Microtubes B1K",
 		"Width": 2.14,
 		"Height": 3.94,
@@ -18800,6 +18807,20 @@
 		"Width": 7.4,
 		"Height": 4.87,
 		"Image": "gecko-geckoplex-ep5.png"
+	},
+	{
+		"Brand": "Genzler",
+		"Name": "Magellan Pre",
+		"Width": 6,
+		"Height": 4.18,
+		"Image": "genzler-magellan-pre.png"
+	},
+	{
+		"Brand": "Genzler",
+		"Name": "re/Q",
+		"Width": 6,
+		"Height": 4.06,
+		"Image": "genzler-req.png"
 	},
 	{
 		"Brand": "GFI System",
