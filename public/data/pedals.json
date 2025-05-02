@@ -7883,6 +7883,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Wake Chorus",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-wake-chorus.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "WIIO",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -30637,6 +30644,13 @@
 		"Width": 11.69,
 		"Height": 5.69,
 		"Image": "mooer-ge200.png"
+	},
+	{
+		"Brand": "Mooer",
+		"Name": "GL100",
+		"Width": 2.82,
+		"Height": 4.92,
+		"Image": "mooer-gl100.png"
 	},
 	{
 		"Brand": "Mooer",
