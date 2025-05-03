@@ -37888,28 +37888,28 @@
 		"Name": "VITALIZER BF VFB-1",
 		"Width": 2.97,
 		"Height": 4.53,
-		"Image": "providence_vfb1.png"
+		"Image": "providence-vfb1.png"
 	},
 	{
 		"Brand": "Providence",
 		"Name": "VITALIZER WV VZW-1",
 		"Width": 2.87,
 		"Height": 2.36,
-		"Image": "providence_vzw.png"
+		"Image": "providence-vzw.png"
 	},
 	{
 		"Brand": "Providence",
 		"Name": "VITALIZER BF VZF-1",
 		"Width": 2.87,
 		"Height": 2.36,
-		"Image": "providence_vzf.png"
+		"Image": "providence-vzf.png"
 	},
 	{
 		"Brand": "Providence",
 		"Name": "DVI-1M",
 		"Width": 4.53,
 		"Height": 2.97,
-		"Image": "providence_dvi1m.png"
+		"Image": "providence-dvi1m.png"
 	},
 	{
 		"Brand": "PRS Guitars",
