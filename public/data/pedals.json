@@ -23808,6 +23808,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "NOTADÜMBLË",
+		"Width": 3.96,
+		"Height": 4.7,
+		"Image": "jhs-notadumble.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "NOTAKLÖN",
 		"Width": 4.7,
 		"Height": 3.86,
@@ -39145,6 +39152,13 @@
 	},
 	{
 		"Brand": "Revv",
+		"Name": "G2 (V2)",
+		"Width": 2.75,
+		"Height": 4.85,
+		"Image": "revv-g2-v2.png"
+	},
+	{
+		"Brand": "Revv",
 		"Name": "G3",
 		"Width": 2.75,
 		"Height": 4.87,
@@ -39166,6 +39180,13 @@
 	},
 	{
 		"Brand": "Revv",
+		"Name": "G3 (V2)",
+		"Width": 2.75,
+		"Height": 4.85,
+		"Image": "revv-g3-v2.png"
+	},
+	{
+		"Brand": "Revv",
 		"Name": "G4",
 		"Width": 2.75,
 		"Height": 4.87,
@@ -39177,6 +39198,13 @@
 		"Width": 2.75,
 		"Height": 4.85,
 		"Image": "revv-g4-anniversary.png"
+	},
+	{
+		"Brand": "Revv",
+		"Name": "G4 (V2)",
+		"Width": 2.75,
+		"Height": 4.85,
+		"Image": "revv-g4-v2.png"
 	},
 	{
 		"Brand": "Revv",
