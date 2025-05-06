@@ -18690,6 +18690,13 @@
 		"Image": "fuzzrocious-tyrannochorus.png"
 	},
 	{
+		"Brand": "G2D",
+		"Name": "Morpheus",
+		"Width": 4.72,
+		"Height": 3.7,
+		"Image": "g2d-morpheus.png"
+	},
+	{
 		"Brand": "G-LAB",
 		"Name": "Wowee-Wah",
 		"Width": 3.89,
@@ -26530,161 +26537,168 @@
 		"Image": "klon-ktr.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "AB/Y",
 		"Width": 4.5,
 		"Height": 2.57,
 		"Image": "kma-audio-machines-aby.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Astrospurt",
 		"Width": 4.04,
 		"Height": 4.87,
 		"Image": "kma-audio-machines-astrospurt-phaser.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Chief Disruptor",
 		"Width": 3.91,
 		"Height": 4.89,
 		"Image": "kma-audio-machines-chief-disruptor.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Cirrus",
 		"Width": 3.85,
 		"Height": 4.85,
 		"Image": "kma-audio-machines-cirrus-delay-and-reverb.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Dead Stag",
 		"Width": 4.04,
 		"Height": 4.8,
 		"Image": "kma-audio-machines-dead-stag-fuzz.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Endgame",
 		"Width": 4.11,
 		"Height": 4.77,
 		"Image": "kma-audio-machines-endgame.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Endgame (Shadow)",
 		"Width": 4.11,
 		"Height": 4.77,
 		"Image": "kma-audio-machines-endgame-shadow.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Fuzzly Bear",
 		"Width": 2.65,
 		"Height": 4.5,
 		"Image": "kma-audio-machines-fuzzly-bear.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Fuzzly Bear 2",
 		"Width": 2.59,
 		"Height": 4.94,
 		"Image": "kma-audio-machines-fuzzly-bear-2.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
+		"Name": "Geminus",
+		"Width": 2.59,
+		"Height": 4.92,
+		"Image": "kma-audio-machines-geminus.png"
+	},
+	{
+		"Brand": "KMA",
 		"Name": "Guardian of the Wurm",
 		"Width": 5.75,
 		"Height": 4.93,
 		"Image": "kma-audio-machines-guardian-of-the-wurm.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Horizont",
 		"Width": 5.99,
 		"Height": 4.93,
 		"Image": "kma-audio-machines-horizont-phaser.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Logan",
 		"Width": 3.85,
 		"Height": 4.89,
 		"Image": "kma-audio-machines-logan-transcend-drive.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Mandrake",
 		"Width": 2.59,
 		"Height": 4.92,
 		"Image": "kma-audio-machines-mandrake.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Minos",
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "kma-audio-machines-minos-germanium-fuzz.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Moai Maea",
 		"Width": 5.75,
 		"Height": 4.9,
 		"Image": "kma-audio-machines-moai-maea.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Pylon",
 		"Width": 2.92,
 		"Height": 5,
 		"Image": "kma-audio-machines-pylon-atb-noise-gate.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Queequeg",
 		"Width": 2.65,
 		"Height": 4.5,
 		"Image": "kma-audio-machines-queequeg.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Queequeg 2",
 		"Width": 2.59,
 		"Height": 4.97,
 		"Image": "kma-audio-machines-queequeg-2.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Stereo AB/Y",
 		"Width": 4.5,
 		"Height": 2.57,
 		"Image": "kma-audio-machines-stereo-aby.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Tyler",
 		"Width": 6,
 		"Height": 4.93,
 		"Image": "kma-audio-machines-tyler.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Tyler Deluxe",
 		"Width": 5.96,
 		"Height": 4.93,
 		"Image": "kma-audio-machines-tyler-deluxe.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Wurm",
 		"Width": 3.98,
 		"Height": 4.87,
 		"Image": "kma-audio-machines-wurm-distortion.png"
 	},
 	{
-		"Brand": "KMA Audio Machines",
+		"Brand": "KMA",
 		"Name": "Wurm 2",
 		"Width": 2.59,
 		"Height": 4.9,
