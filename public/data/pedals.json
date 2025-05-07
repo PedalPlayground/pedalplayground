@@ -11840,7 +11840,7 @@
 		"Brand": "Dr Scientist",
 		"Name": "Phreak",
 		"Width": 2.71,
-		"Height": 5.03,
+		"Height":5.03,
 		"Image": "dr-scientist-phreak.png"
 	},
 	{
@@ -11884,6 +11884,69 @@
 		"Width": 4.7,
 		"Height": 3.86,
 		"Image": "drz-z-drive.png"
+	},
+	{
+		"Brand": "Dr.J",
+		"Name": "Aerolite",
+		"Width": 4.21,
+		"Height": 3.46,
+		"Image": "drj-aerolite-compressor.png"
+	},
+	{
+		"Brand": "Dr.J",
+		"Name": "Armor",
+		"Width": 4.21,
+		"Height": 3.46,
+		"Image": "drj-armor.png"
+	},
+	{
+		"Brand": "Dr.J",
+		"Name": "Arsenal",
+		"Width": 4.21,
+		"Height": 3.46,
+		"Image": "drj-arsenal-distortion.png"
+	},
+	{
+		"Brand": "Dr.J",
+		"Name": "Blademaster",
+		"Width": 4.21,
+		"Height": 3.46,
+		"Image": "drj-blademaster.png"
+	},
+	{
+		"Brand": "Dr.J",
+		"Name": "Emerald",
+		"Width": 4.21,
+		"Height": 3.46,
+		"Image": "drj-emerald-overdriver.png"
+	},
+	{
+		"Brand": "Dr.J",
+		"Name": "Green Crystal",
+		"Width": 4.21,
+		"Height": 3.46,
+		"Image": "drj-green-crystal.png"
+	},
+	{
+		"Brand": "Dr.J",
+		"Name": "Lancelot",
+		"Width": 4.21,
+		"Height": 3.46,
+		"Image": "drj-lancelot-distortion.png"
+	},
+	{
+		"Brand": "Dr.J",
+		"Name": "Planes Walker",
+		"Width": 4.21,
+		"Height": 3.46,
+		"Image": "drj-planes-walker.png"
+	},
+	{
+		"Brand": "Dr.J",
+		"Name": "Shadow",
+		"Width": 4.21,
+		"Height": 3.46,
+		"Image": "drj-shadow.png"
 	},
 	{
 		"Brand": "Dr.No Effects",
@@ -45233,6 +45296,13 @@
 		"Width": 2.76,
 		"Height": 4.89,
 		"Image": "thorpy-gunshot.png"
+	},
+	{
+		"Brand": "ThorpyFX",
+		"Name": "Hanami",
+		"Width": 2.76,
+		"Height": 4.89,
+		"Image": "v.png"
 	},
 	{
 		"Brand": "ThorpyFX",
