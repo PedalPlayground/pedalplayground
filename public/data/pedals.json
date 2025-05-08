@@ -18599,6 +18599,13 @@
 		"Image": "fulltonecustom-wah-full.png"
 	},
 	{
+		"Brand": "Function F(X)",
+		"Name": "The Third Rail",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "functionfx-the-third-rail.png"
+	},
+	{
 		"Brand": "Funny Little Boxes",
 		"Name": "1991",
 		"Width": 2.6,
@@ -21481,6 +21488,13 @@
 		"Width": 2.25,
 		"Height": 3.98,
 		"Image": "hotone-omni-ac.png"
+	},
+	{
+		"Brand": "Hotone",
+		"Name": "Omni IR",
+		"Width": 2.25,
+		"Height": 3.98,
+		"Image": "hotone-omni-ir.png"
 	},
 	{
 		"Brand": "Hotone",
@@ -26892,6 +26906,13 @@
 		"Width": 5.04,
 		"Height": 4.86,
 		"Image": "korg-pitchblack-plus.png"
+	},
+	{
+		"Brand": "Korg",
+		"Name": "Pitchblack Portable",
+		"Width": 6.34,
+		"Height": 2.31,
+		"Image": "korg-pitchblack-portable.png"
 	},
 	{
 		"Brand": "Korg",
@@ -33696,6 +33717,13 @@
 		"Width": 2.89,
 		"Height": 5.08,
 		"Image": "nobels-tr-x.png"
+	},
+	{
+		"Brand": "Noise Engineering",
+		"Name": "Batverb",
+		"Width": 4.94,
+		"Height": 3.82,
+		"Image": "noise-engineering-batverb.png"
 	},
 	{
 		"Brand": "Noise Engineering",
