@@ -14932,6 +14932,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Oceans Abyss",
+		"Width": 7.13,
+		"Height": 5.92,
+		"Image": "ehx-oceans-abyss.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Octave Multiplexer",
 		"Width": 4.19,
 		"Height": 4.75,
