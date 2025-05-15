@@ -10648,6 +10648,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Boost-EQ (2025)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-boost-eq-2025.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Boost-EQ 2",
 		"Width": 2.44,
 		"Height": 4.63,
@@ -38060,6 +38067,13 @@
 	},
 	{
 		"Brand": "Polyend",
+		"Name": "Mess",
+		"Width": 7.09,
+		"Height": 4.91,
+		"Image": "polyend-mess.png"
+	},
+	{
+		"Brand": "Polyend",
 		"Name": "Press",
 		"Width": 4.17,
 		"Height": 4.9,
@@ -42001,6 +42015,13 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Delta II (Cadet)",
+		"Width": 2.88,
+		"Height": 4.75,
+		"Image": "spaceman-deltaii-cadet.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Equinox",
 		"Width": 5.95,
 		"Height": 4.74,
@@ -42012,6 +42033,13 @@
 		"Width": 2.92,
 		"Height": 4.75,
 		"Image": "spaceman-explorer.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Explorer (Cadet)",
+		"Width": 2.88,
+		"Height": 4.75,
+		"Image": "spaceman-explorer-cadet.png"
 	},
 	{
 		"Brand": "Spaceman",
@@ -42096,6 +42124,13 @@
 		"Width": 2.81,
 		"Height": 4.75,
 		"Image": "spaceman-saturnvi.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Saturn VI (Cadet)",
+		"Width": 2.81,
+		"Height": 4.75,
+		"Image": "spaceman-saturnvi-cadet.png"
 	},
 	{
 		"Brand": "Spaceman",
@@ -45191,6 +45226,20 @@
 		"Width": 3.01,
 		"Height": 4.84,
 		"Image": "thermion-outlaw.png"
+	},
+	{
+		"Brand": "Thermion",
+		"Name": "PowerTrem",
+		"Width": 2.7,
+		"Height": 4.58,
+		"Image": "thermion-powertrem.png"
+	},
+	{
+		"Brand": "Thermion",
+		"Name": "PowerVibe",
+		"Width": 2.7,
+		"Height": 4.58,
+		"Image": "thermion-powervibe.png"
 	},
 	{
 		"Brand": "Thermion",
