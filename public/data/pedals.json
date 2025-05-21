@@ -47245,6 +47245,13 @@
 	},
 	{
 		"Brand": "Voodoo Lab",
+		"Name": "Micro Vibe",
+		"Width": 3.71,
+		"Height": 4.85,
+		"Image": "voodoolab-micro-vibe.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
 		"Name": "Pedal Power 2 Plus",
 		"Width": 6,
 		"Height": 3.48,
