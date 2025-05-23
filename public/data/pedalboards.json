@@ -364,6 +364,20 @@
 		"Image": "fender-pro-small.png"
 	},
 	{
+		"Brand": "Friedman",
+		"Name": "1317",
+		"Width": 17,
+		"Height": 13,
+		"Image": "friedman-1317.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "Riser (1317)",
+		"Width": 4,
+		"Height": 6,
+		"Image": "friedman-riser-1317.png"
+	},
+	{
 		"Brand": "Gator",
 		"Name": "Aluminum Extra Large",
 		"Width": 32,

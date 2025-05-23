@@ -8030,6 +8030,13 @@
 	},
 	{
 		"Brand": "Champion Leccy",
+		"Name": "The Skitter (Beige)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitter-beige.png"
+	},
+	{
+		"Brand": "Champion Leccy",
 		"Name": "The Skitter (Black)",
 		"Width": 3.7,
 		"Height": 4.81,
@@ -15835,6 +15842,13 @@
 	},
 	{
 		"Brand": "Empress",
+		"Name": "Bass ParaEQ MII",
+		"Width": 2.6,
+		"Height": 5.14,
+		"Image": "empress-bass-para-eq-mk2.png"
+	},
+	{
+		"Brand": "Empress",
 		"Name": "Buffer",
 		"Width": 2.61,
 		"Height": 4.5,
@@ -16021,6 +16035,13 @@
 		"Width": 5.7,
 		"Height": 3.91,
 		"Image": "empress-zoia.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "Zoia 10K",
+		"Width": 5.7,
+		"Height": 3.91,
+		"Image": "empress-zoia-10k.png"
 	},
 	{
 		"Brand": "Endorphines",
@@ -37927,6 +37948,13 @@
 	},
 	{
 		"Brand": "Pirate Midi",
+		"Name": "Aero",
+		"Width": 6.9,
+		"Height": 1.41,
+		"Image": "pirate-midi-aero.png"
+	},
+	{
+		"Brand": "Pirate Midi",
 		"Name": "Bridge4",
 		"Width": 4.4,
 		"Height": 3.74,
@@ -50245,6 +50273,13 @@
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "xotic-acbooster.png"
+	},
+	{
+		"Brand": "Xotic",
+		"Name": "AC Booster V2",
+		"Width": 2.69,
+		"Height": 4.5,
+		"Image": "xotic-acbooster-v2.png"
 	},
 	{
 		"Brand": "Xotic",
