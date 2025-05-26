@@ -38221,24 +38221,136 @@
 	},
 	{
 		"Brand": "Providence",
-		"Name": "Anadime Bass Chorus",
-		"Width": 2.85,
+		"Name": "A/B Box P-4E",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-ab-box.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Anadime Bass Chorus ABC-1",
+		"Width": 2.86,
 		"Height": 4.5,
 		"Image": "providence-anadime-bass-chorus.png"
 	},
 	{
 		"Brand": "Providence",
-		"Name": "Chrono",
+		"Name": "Anadime Chorus ADC-4",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-anadime-chorus.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Bass Boot Comp BTC-1",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-bass-boot-comp.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Brick Drive BDI-1",
+		"Width": 4.04,
+		"Height": 5.35,
+		"Image": "providence-brick-drive.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Chrono Delay DLY-4",
 		"Width": 3.98,
-		"Height": 5.00,
+		"Height": 5.35,
 		"Image": "providence-chrono.png"
 	},
 	{
 		"Brand": "Providence",
+		"Name": "Dual Vitalized Routing Interface DVI-1M",
+		"Width": 4.5,
+		"Height": 3.04,
+		"Image": "providence-dvi-1m.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Heat Blaster HBL-4",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-heat-blaster.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Provolt9 PV-9",
+		"Width": 4.61,
+		"Height": 2.48,
+		"Image": "providence-provolt9.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Red Rock OD ROD-1",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-red-rock-od.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Stampede DT SDT-3",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-stampede-dt.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Stampede OD SOV-2",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-stampede-od.png"
+	},
+	{
+		"Brand": "Providence",
 		"Name": "System Tuner STV-1JB",
-		"Width": 2.97,
-		"Height": 4.53,
+		"Width": 2.86,
+		"Height": 4.5,
 		"Image": "providence-stv1jb.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "System Tuner STV-1JB (White)",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-stv1jb-white.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "True Bypass Box P-4TB",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-true-bypass-box.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Velvet Comp VLC-1",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-velvet-comp.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Vitalizer BF VFB-1",
+		"Width": 2.86,
+		"Height": 4.5,
+		"Image": "providence-vitalizer-bf.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Vitalizer BF VZF-1",
+		"Width": 2.89,
+		"Height": 2.36,
+		"Image": "providence-vzf1.png"
+	},
+	{
+		"Brand": "Providence",
+		"Name": "Vitalizer WV VZW-1",
+		"Width": 2.89,
+		"Height": 2.36,
+		"Image": "providence-vzw1.png"
 	},
 	{
 		"Brand": "PRS Guitars",
@@ -47739,6 +47851,13 @@
 		"Width": 17,
 		"Height": 10.96,
 		"Image": "voodoolab-ground-control-pro.png"
+	},
+	{
+		"Brand": "Voodoo Lab",
+		"Name": "Micro Vibe",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "voodoolab-micro-vibe.png"
 	},
 	{
 		"Brand": "Voodoo Lab",
