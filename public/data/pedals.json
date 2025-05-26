@@ -37408,6 +37408,13 @@
 		"Image": "pedaltrain-sst.png"
 	},
 	{
+		"Brand": "Pedrone",
+		"Name": "Penta MIDI",
+		"Width": 12.5,
+		"Height": 3.04,
+		"Image": "pedrone-penta-midi.png"
+	},
+	{
 		"Brand": "Pete Cornish",
 		"Name": "G-2",
 		"Width": 4.8,
@@ -42253,6 +42260,13 @@
 	},
 	{
 		"Brand": "Spiral Electric FX",
+		"Name": "Demhe Fuzz",
+		"Width": 2.6,
+		"Height": 5.03,
+		"Image": "spiral-demhe-fuzz.png"
+	},
+	{
+		"Brand": "Spiral Electric FX",
 		"Name": "Secret Chord",
 		"Width": 4.7,
 		"Height": 3.85,
@@ -47014,6 +47028,13 @@
 	},
 	{
 		"Brand": "Valeton",
+		"Name": "GP-5",
+		"Width": 1.84,
+		"Height": 3.7,
+		"Image": "valeton-gp-5.png"
+	},
+	{
+		"Brand": "Valeton",
 		"Name": "OC-10 Octave",
 		"Width": 2.03,
 		"Height": 3.7,
@@ -47053,6 +47074,13 @@
 		"Width": 4.7,
 		"Height": 4.11,
 		"Image": "valeton-vlp200.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "VLP-400",
+		"Width": 9.96,
+		"Height": 6.39,
+		"Image": "valeton-vlp400.png"
 	},
 	{
 		"Brand": "Van Weelden",
