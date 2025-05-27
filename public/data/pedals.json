@@ -15611,6 +15611,13 @@
 	},
 	{
 		"Brand": "EAE",
+		"Name": "Mirror House",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "electronic-audio-experiments-mirror-house.png"
+	},
+	{
+		"Brand": "EAE",
 		"Name": "Model feT",
 		"Width": 3.7,
 		"Height": 4.95,
