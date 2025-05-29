@@ -13266,6 +13266,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Four to One Mixer",
+		"Width": 4.84,
+		"Height": 2.86,
+		"Image": "earthquaker-four-to-one-mixer.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Fuzz Master General",
 		"Width": 2.6,
 		"Height": 5.02,
@@ -13403,6 +13410,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-night-wire.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "One to Four Splitter",
+		"Width": 4.84,
+		"Height": 2.86,
+		"Image": "earthquaker-one-to-four-splitter.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -18751,6 +18765,13 @@
 		"Width": 5.7,
 		"Height": 4.91,
 		"Image": "fuzzrocious-pedals-cat-king.png"
+	},
+	{
+		"Brand": "Fuzzrocious",
+		"Name": "Cat King V2",
+		"Width": 3.7,
+		"Height": 4.98,
+		"Image": "fuzzrocious-pedals-cat-king-v2.png"
 	},
 	{
 		"Brand": "Fuzzrocious",
@@ -27609,6 +27630,13 @@
 	},
 	{
 		"Brand": "Lichtlaerm",
+		"Name": "As Above So Below",
+		"Width": 2.88,
+		"Height": 4.95,
+		"Image": "lichtlaerm-as-above-so-below.png"
+	},
+	{
+		"Brand": "Lichtlaerm",
 		"Name": "Gehenna",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -27630,6 +27658,13 @@
 	},
 	{
 		"Brand": "Lichtlaerm",
+		"Name": "Nostalgia",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-nostalgia.png"
+	},
+	{
+		"Brand": "Lichtlaerm",
 		"Name": "PandorA",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -27648,6 +27683,13 @@
 		"Width": 2.74,
 		"Height": 4.95,
 		"Image": "lichtlaerm-the-key-and-the-gate.png"
+	},
+	{
+		"Brand": "Lichtlaerm",
+		"Name": "The King In Yellow",
+		"Width": 2.74,
+		"Height": 4.95,
+		"Image": "lichtlaerm-the-king-in-yellow.png"
 	},
 	{
 		"Brand": "Lichtlaerm",
