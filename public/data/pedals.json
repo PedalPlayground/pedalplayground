@@ -13898,7 +13898,7 @@
 		"Brand": "Effectrode",
 		"Name": "Blackbird",
 		"Width": 7.5,
-		"Height": 5,
+		"Height": 5.05,
 		"Image": "effectrode-blackbird.png"
 	},
 	{
@@ -13907,6 +13907,13 @@
 		"Width": 3.7,
 		"Height": 5.06,
 		"Image": "effectrode-blue-bottle.png"
+	},
+	{
+		"Brand": "Effectrode",
+		"Name": "Delta-Trem",
+		"Width": 7.5,
+		"Height": 5.05,
+		"Image": "effectrode-delta-trem.png"
 	},
 	{
 		"Brand": "Effectrode",
@@ -13919,7 +13926,7 @@
 		"Brand": "Effectrode",
 		"Name": "Leveling Amplifier",
 		"Width": 7.5,
-		"Height": 4.94,
+		"Height": 5.05,
 		"Image": "effectrode-leveling-amplifier.png"
 	},
 	{
@@ -13938,16 +13945,23 @@
 	},
 	{
 		"Brand": "Effectrode",
+		"Name": "Phaseomatic",
+		"Width": 7.5,
+		"Height": 5.05,
+		"Image": "effectrode-phaseomatic.png"
+	},
+	{
+		"Brand": "Effectrode",
 		"Name": "Tube Drive",
-		"Width": 6.8,
-		"Height": 4.52,
+		"Width": 7.5,
+		"Height": 5.05,
 		"Image": "effectrode-tube-drive.png"
 	},
 	{
 		"Brand": "Effectrode",
 		"Name": "Tube Vibe",
 		"Width": 7.5,
-		"Height": 5.1,
+		"Height": 5.05,
 		"Image": "effectrode-tube-vibe.png"
 	},
 	{
@@ -25191,6 +25205,13 @@
 		"Width": 4.7,
 		"Height": 3.89,
 		"Image": "kasleder-pipergate.png"
+	},
+	{
+		"Brand": "Kasleder FX",
+		"Name": "Sweet Little Thing",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-sweet-little-thing.png"
 	},
 	{
 		"Brand": "Kasleder FX",
@@ -40815,6 +40836,20 @@
 		"Width": 2.8,
 		"Height": 4.8,
 		"Image": "sinvertek-n5-mgat-1.png"
+	},
+	{
+		"Brand": "Sinvertek",
+		"Name": "N5 MGAT-1 (Golden Era)",
+		"Width": 2.8,
+		"Height": 4.8,
+		"Image": "sinvertek-n5-mgat-1-ge.png"
+	},
+	{
+		"Brand": "Sinvertek",
+		"Name": "N5 MGAT-5",
+		"Width": 2.8,
+		"Height": 4.8,
+		"Image": "sinvertek-n5-mgat-5.png"
 	},
 	{
 		"Brand": "Siren Pedals",
