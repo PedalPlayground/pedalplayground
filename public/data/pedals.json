@@ -8345,6 +8345,20 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Onward (Prism Black)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-onward-pb.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "Onward (Prism Tan)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-onward-pt.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Preamp MKII",
 		"Width": 5.75,
 		"Height": 6.5,
@@ -9129,16 +9143,23 @@
 	},
 	{
 		"Brand": "Cosmodio",
+		"Name": "Glitch Witch",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "cosmodio-glitch-witch.png"
+	},
+	{
+		"Brand": "Cosmodio",
 		"Name": "Gravity Well",
-		"Width": 3.83,
-		"Height": 4.74,
+		"Width": 3.8,
+		"Height": 4.92,
 		"Image": "cosmodio-gravity-well.png"
 	},
 	{
 		"Brand": "Cosmodio",
 		"Name": "Pet Yeti",
-		"Width": 3.7,
-		"Height": 4.74,
+		"Width": 3.8,
+		"Height": 4.92,
 		"Image": "cosmodio-pet-yeti.png"
 	},
 	{
