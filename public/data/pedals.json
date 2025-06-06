@@ -31256,6 +31256,13 @@
 	},
 	{
 		"Brand": "Morningstar",
+		"Name": "MC8 Pro",
+		"Width": 10.24,
+		"Height": 4.84,
+		"Image": "morningstar-mc8-pro.png"
+	},
+	{
+		"Brand": "Morningstar",
 		"Name": "MIDI Box",
 		"Width": 4.6,
 		"Height": 1.56,
