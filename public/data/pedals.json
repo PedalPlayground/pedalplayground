@@ -13301,6 +13301,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Dispatch Master (Zine Edition)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-dispatch-master-zine.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Dream Crusher",
 		"Width": 2.84,
 		"Height": 4.5,
@@ -13392,6 +13399,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Hizumitas (Zine Edition)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-hizumitas-zine.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Hoof",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -13403,6 +13417,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-hoof-20th-anniversary.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Hoof (Zine Edition)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-hoof-zine.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -13578,6 +13599,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-plumes-white-vein.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Plumes (Zine Edition)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-plumes-zine.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -17480,10 +17508,52 @@
 	},
 	{
 		"Brand": "Foxgear",
+		"Name": "Anubi Ambient Box",
+		"Width": 5,
+		"Height": 3.68,
+		"Image": "foxgear-anubi-ambient-box.png"
+	},
+	{
+		"Brand": "Foxgear",
+		"Name": "Anubi Modulation Box",
+		"Width": 5,
+		"Height": 3.68,
+		"Image": "foxgear-anubi-modulation-box.png"
+	},
+	{
+		"Brand": "Foxgear",
+		"Name": "HW-103",
+		"Width": 5,
+		"Height": 3.68,
+		"Image": "foxgear-hw-103.png"
+	},
+	{
+		"Brand": "Foxgear",
+		"Name": "M-1959",
+		"Width": 5,
+		"Height": 3.68,
+		"Image": "foxgear-m-1959.png"
+	},
+	{
+		"Brand": "Foxgear",
 		"Name": "T7E Baby",
 		"Width": 5,
-		"Height": 3.73,
+		"Height": 3.68,
 		"Image": "foxgear-t7e-baby.png"
+	},
+	{
+		"Brand": "Foxgear",
+		"Name": "TW-100",
+		"Width": 5,
+		"Height": 3.68,
+		"Image": "foxgear-tw-100.png"
+	},
+	{
+		"Brand": "Foxgear",
+		"Name": "V-100",
+		"Width": 5,
+		"Height": 3.68,
+		"Image": "foxgear-v-100.png"
 	},
 	{
 		"Brand": "Foxpedal",
@@ -31722,6 +31792,13 @@
 		"Width": 8.82,
 		"Height": 4.82,
 		"Image": "morningstar-mc8.png"
+	},
+	{
+		"Brand": "Morningstar",
+		"Name": "MC8 Pro",
+		"Width": 10.2,
+		"Height": 4.61,
+		"Image": "morningstar-mc8-pro.png"
 	},
 	{
 		"Brand": "Morningstar",
