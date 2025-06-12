@@ -27210,6 +27210,13 @@
 	},
 	{
 		"Brand": "Lehle",
+		"Name": "Parallel SW II",
+		"Width": 4.8,
+		"Height": 3.94,
+		"Image": "lehle-parallel-sw-ii.png"
+	},
+	{
+		"Brand": "Lehle",
 		"Name": "RMI Acouswitch Junior",
 		"Width": 6.3,
 		"Height": 5.9,
