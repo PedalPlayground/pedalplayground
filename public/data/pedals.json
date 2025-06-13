@@ -13707,6 +13707,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Special Cranker (Black/Black)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-special-cranker-black-black.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Special Cranker (Blue Steel)",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -40664,6 +40671,13 @@
 	},
 	{
 		"Brand": "Shift Line",
+		"Name": "Octaves",
+		"Width": 4.1,
+		"Height": 4.39,
+		"Image": "shiftline-octaves.png"
+	},
+	{
+		"Brand": "Shift Line",
 		"Name": "Olympic Mk II",
 		"Width": 4.7,
 		"Height": 3.84,
@@ -40710,6 +40724,13 @@
 		"Width": 2.7,
 		"Height": 4.21,
 		"Image": "shiftline-stages.png"
+	},
+	{
+		"Brand": "Shift Line",
+		"Name": "Termofuzz MkII",
+		"Width": 2.7,
+		"Height": 4.21,
+		"Image": "shiftline-termofuzz-mk2.png"
 	},
 	{
 		"Brand": "Shift Line",
