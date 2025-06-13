@@ -13560,6 +13560,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Plumes (Citron)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-plumes-citron.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Plumes (Cream)",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -25411,6 +25418,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Angry Orange (Signalis)",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-angry-orange-cs.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Angry Orange (White)",
 		"Width": 2.6,
 		"Height": 4.76,
@@ -25457,6 +25471,13 @@
 		"Width": 2.6,
 		"Height": 4.76,
 		"Image": "keeley-blues-disorder.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Blues Disorder (Signalis)",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-blues-disorder-cs.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -25908,6 +25929,20 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Mk3 Driver",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-mk3-driver.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Mk3 Driver (Signalis)",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-mk3-driver-cs.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Monterey",
 		"Width": 4.7,
 		"Height": 3.79,
@@ -25954,6 +25989,13 @@
 		"Width": 2.6,
 		"Height": 4.76,
 		"Image": "keeley-noble-screamer.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Noble Screamer (Signalis)",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-noble-screamer-cs.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -26199,6 +26241,13 @@
 		"Width": 2.6,
 		"Height": 4.76,
 		"Image": "keeley-super-rodent.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Super Rodent (Signalis)",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-super-rodent-cs.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -27330,30 +27379,44 @@
 	{
 		"Brand": "Land Devices",
 		"Name": "EP-5",
-		"Width": 4.7,
-		"Height": 3.83,
+		"Width": 4.6,
+		"Height": 3.66,
 		"Image": "land-devices-ep5.png"
 	},
 	{
 		"Brand": "Land Devices",
+		"Name": "HP-2 (Black)",
+		"Width": 4.6,
+		"Height": 3.66,
+		"Image": "land-devices-hp2-black.png"
+	},
+	{
+		"Brand": "Land Devices",
 		"Name": "HP-2 (Blue)",
-		"Width": 4.7,
-		"Height": 3.83,
+		"Width": 4.6,
+		"Height": 3.66,
 		"Image": "land-devices-hp2-blue.png"
 	},
 	{
 		"Brand": "Land Devices",
 		"Name": "HP-2 (Olive Drab)",
-		"Width": 4.7,
-		"Height": 3.83,
+		"Width": 4.6,
+		"Height": 3.66,
 		"Image": "land-devices-hp2-olive.png"
 	},
 	{
 		"Brand": "Land Devices",
 		"Name": "HP-2 (White)",
-		"Width": 4.7,
-		"Height": 3.83,
+		"Width": 4.6,
+		"Height": 3.66,
 		"Image": "land-devices-hp2-white.png"
+	},
+	{
+		"Brand": "Land Devices",
+		"Name": "Hunter",
+		"Width": 3.15,
+		"Height": 5.34,
+		"Image": "land-devices-hunter.png"
 	},
 	{
 		"Brand": "Land Devices",
@@ -27366,7 +27429,7 @@
 		"Brand": "Land Devices",
 		"Name": "Moonbow",
 		"Width": 3.15,
-		"Height": 5.39,
+		"Height": 5.34,
 		"Image": "land-devices-moonbow.png"
 	},
 	{
@@ -27379,8 +27442,8 @@
 	{
 		"Brand": "Land Devices",
 		"Name": "No Masters",
-		"Width": 4.7,
-		"Height": 3.83,
+		"Width": 4.6,
+		"Height": 3.66,
 		"Image": "land-devices-no-masters.png"
 	},
 	{
