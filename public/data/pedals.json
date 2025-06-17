@@ -9150,6 +9150,13 @@
 	},
 	{
 		"Brand": "Cornerstone",
+		"Name": "Imperivm V2",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "cornerstone-imperivm-v2.png"
+	},
+	{
+		"Brand": "Cornerstone",
 		"Name": "Nero",
 		"Width": 2.76,
 		"Height": 5.14,
@@ -25898,6 +25905,20 @@
 		"Width": 2.73,
 		"Height": 4.5,
 		"Image": "keeley-mag-echo.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Manis",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-manis.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Manis (Silver)",
+		"Width": 2.6,
+		"Height": 4.76,
+		"Image": "keeley-manis-silver.png"
 	},
 	{
 		"Brand": "Keeley",
