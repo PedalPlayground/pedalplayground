@@ -16731,6 +16731,20 @@
 	},
 	{
 		"Brand": "Fender",
+		"Name": "Hammertone Boost",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-boost.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Hammertone Breakup Drive",
+		"Width": 2.44,
+		"Height": 4.55,
+		"Image": "fender-ht-breakup-drive.png"
+	},
+	{
+		"Brand": "Fender",
 		"Name": "Hammertone Chorus",
 		"Width": 2.44,
 		"Height": 4.55,
@@ -16896,6 +16910,13 @@
 		"Width": 4.02,
 		"Height": 5.03,
 		"Image": "fender-smolder.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Strobo-Sonic Pro",
+		"Width": 2.6,
+		"Height": 4.69,
+		"Image": "fender-strobo-sonic-pro.png"
 	},
 	{
 		"Brand": "Fender",
@@ -44322,6 +44343,41 @@
 		"Width": 4.7,
 		"Height": 3.82,
 		"Image": "tallon--electric-the-hog.png"
+	},
+	{
+		"Brand": "Tampco",
+		"Name": "All-Bender",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "tampco-all-bender.png"
+	},
+	{
+		"Brand": "Tampco",
+		"Name": "Distorter",
+		"Width": 3.7,
+		"Height": 4.98,
+		"Image": "tampco-distorter.png"
+	},
+	{
+		"Brand": "Tampco",
+		"Name": "The Gazelle",
+		"Width": 7.4,
+		"Height": 4.86,
+		"Image": "tampco-the-gazelle.png"
+	},
+	{
+		"Brand": "Tampco",
+		"Name": "The Twist",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "tampco-the-twist.png"
+	},
+	{
+		"Brand": "Tampco",
+		"Name": "Tone Oven",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "tampco-tone-oven.png"
 	},
 	{
 		"Brand": "Tape Audio Co.",
