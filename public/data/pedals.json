@@ -13252,6 +13252,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Dirt Transmitter (Rancho de la Luna)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-dirt-transmitter-rdll.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Dirt Transmitter (Reissue)",
 		"Width": 3.7,
 		"Height": 4.81,
@@ -27742,17 +27749,31 @@
 	},
 	{
 		"Brand": "Lehle",
-		"Name": "3at1 SGoS",
+		"Name": "1at3 SGOS",
 		"Width": 6.1,
-		"Height": 4,
+		"Height": 4.1,
+		"Image": "lehle-1at3-sgos.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "3at1 SGOS",
+		"Width": 6.1,
+		"Height": 4.1,
 		"Image": "lehle-3at1-sgos.png"
 	},
 	{
 		"Brand": "Lehle",
 		"Name": "D.Loop",
 		"Width": 6.1,
-		"Height": 4,
+		"Height": 4.1,
 		"Image": "lehle-dloop.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "Dual SGOS",
+		"Width": 6.1,
+		"Height": 4.1,
+		"Image": "lehle-dual-sgos.png"
 	},
 	{
 		"Brand": "Lehle",
@@ -27772,14 +27793,14 @@
 		"Brand": "Lehle",
 		"Name": "Little Dual II",
 		"Width": 4.8,
-		"Height": 3.9,
+		"Height": 3.98,
 		"Image": "lehle-little-dual-ii.png"
 	},
 	{
 		"Brand": "Lehle",
 		"Name": "Little Lehle III",
-		"Width": 3.8,
-		"Height": 3.54,
+		"Width": 3.7,
+		"Height": 3.44,
 		"Image": "lehle-little-lehle-iii.png"
 	},
 	{
@@ -27805,10 +27826,52 @@
 	},
 	{
 		"Brand": "Lehle",
-		"Name": "P Split III",
+		"Name": "Parallel SW II",
+		"Width": 4.8,
+		"Height": 3.98,
+		"Image": "lehle-parallel-sw-ii.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "P-ISO",
+		"Width": 1.6,
+		"Height": 2.85,
+		"Image": "lehle-p-iso.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "P-ISO TRS XLR",
+		"Width": 1.9,
+		"Height": 2.99,
+		"Image": "lehle-p-iso-trs-xlr.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "P-ISO TRS XLR Stereo",
+		"Width": 3.7,
+		"Height": 2.87,
+		"Image": "lehle-p-iso-trs-xlr-stereo.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "P-ISO XLR TRS",
+		"Width": 1.9,
+		"Height": 2.85,
+		"Image": "lehle-p-iso-xlr-trs.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "P-Split III",
 		"Width": 3.6,
-		"Height": 3.55,
+		"Height": 3.48,
 		"Image": "lehle-p-split-iii.png"
+	},
+	{
+		"Brand": "Lehle",
+		"Name": "P-Split Stereo",
+		"Width": 6,
+		"Height": 3.5,
+		"Image": "lehle-p-split-stereo.png"
 	},
 	{
 		"Brand": "Lehle",
@@ -27819,17 +27882,17 @@
 	},
 	{
 		"Brand": "Lehle",
-		"Name": "Sunday Driver II",
+		"Name": "Sunday Driver",
 		"Width": 3.62,
 		"Height": 3.54,
-		"Image": "lehle-sunday-driver-ii.png"
+		"Image": "lehle-sunday-driver.png"
 	},
 	{
 		"Brand": "Lehle",
-		"Name": "Sunday Driver SW II",
-		"Width": 3.98,
-		"Height": 3.54,
-		"Image": "lehle-sunday-driver-sw-ii.png"
+		"Name": "Sunday Driver II",
+		"Width": 3.6,
+		"Height": 3.48,
+		"Image": "lehle-sunday-driver-ii.png"
 	},
 	{
 		"Brand": "Lehle",
@@ -27840,10 +27903,10 @@
 	},
 	{
 		"Brand": "Lehle",
-		"Name": "Sunday Driver",
-		"Width": 3.62,
-		"Height": 3.54,
-		"Image": "lehle-sunday-driver.png"
+		"Name": "Sunday Driver SW II",
+		"Width": 3.7,
+		"Height": 3.45,
+		"Image": "lehle-sunday-driver-sw-ii.png"
 	},
 	{
 		"Brand": "Lekato",
