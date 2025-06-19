@@ -19902,6 +19902,13 @@
 	},
 	{
 		"Brand": "Goodwood Audio",
+		"Name": "Trash Panda Quad",
+		"Width": 4.96,
+		"Height": 3.84,
+		"Image": "goodwood-trash-panda-quad.png"
+	},
+	{
+		"Brand": "Goodwood Audio",
 		"Name": "Wet Dry Wet Box",
 		"Width": 4.29,
 		"Height": 4.87,
@@ -36114,10 +36121,38 @@
 	},
 	{
 		"Brand": "Oneder Effects",
-		"Name": "Old Blue v2",
+		"Name": "Old Blue V2",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "oneder-old-blue-v2.png"
+	},
+	{
+		"Brand": "Oneder Effects",
+		"Name": "Old Blue V2 (White)",
 		"Width": 2.6,
 		"Height": 4.93,
 		"Image": "oneder-old-blue-white.png"
+	},
+	{
+		"Brand": "Oneder Effects",
+		"Name": "Oneder Boost",
+		"Width": 1.75,
+		"Height": 3.7,
+		"Image": "oneder-oneder-boost.png"
+	},
+	{
+		"Brand": "Oneder Effects",
+		"Name": "Oneder Drive (5th Anniversary)",
+		"Width": 2.6,
+		"Height": 4.92,
+		"Image": "oneder-oneder-drive-5a.png"
+	},
+	{
+		"Brand": "Oneder Effects",
+		"Name": "Oneder Fuzz",
+		"Width": 2.5,
+		"Height": 4.78,
+		"Image": "oneder-oneder-fuzz.png"
 	},
 	{
 		"Brand": "Oneder Effects",
@@ -36144,7 +36179,7 @@
 		"Brand": "Oneder Effects",
 		"Name": "Red Ryder",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 4.92,
 		"Image": "oneder-red-ryder.png"
 	},
 	{
@@ -36165,7 +36200,7 @@
 		"Brand": "Oneder Effects",
 		"Name": "Wet Hot American Bummer",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 4.92,
 		"Image": "oneder-wet-hot-american-bummer.png"
 	},
 	{
@@ -43664,6 +43699,13 @@
 		"Width": 2.67,
 		"Height": 4.54,
 		"Image": "suhr-kokoboostreloaded.png"
+	},
+	{
+		"Brand": "Suhr",
+		"Name": "microMIDI Control",
+		"Width": 3.7,
+		"Height": 1.65,
+		"Image": "suhr-micromidi-control.png"
 	},
 	{
 		"Brand": "Suhr",
