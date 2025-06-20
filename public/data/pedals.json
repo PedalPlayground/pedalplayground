@@ -36442,6 +36442,13 @@
 		"Image": "outlaw-effects-wrangler.png"
 	},
 	{
+		"Brand": "Ovaltone",
+		"Name": "GD-XIII",
+		"Width": 3.74,
+		"Height": 4.45,
+		"Image": "ovaltone-gd-xiii.png"
+	},
+	{
 		"Brand": "Paintaudio",
 		"Name": "MIDI Captain",
 		"Width": 11.14,
