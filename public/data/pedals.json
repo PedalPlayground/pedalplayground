@@ -3508,10 +3508,31 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "69 Vibe",
+		"Width": 4.72,
+		"Height": 4.09,
+		"Image": "behringer-69-vibe.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "ADI21 Acoustic DI Box",
 		"Width": 3.94,
 		"Height": 4.96,
 		"Image": "behringer-adi21.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "B-Tron III Envelope Filter",
+		"Width": 3.94,
+		"Height": 6.89,
+		"Image": "behringer-btron3.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "Bass Brassmaster Fuzz",
+		"Width": 4.72,
+		"Height": 4.17,
+		"Image": "behringer-bass-brassmaster-fuzz.png"
 	},
 	{
 		"Brand": "Behringer",
@@ -3547,6 +3568,13 @@
 		"Width": 2.76,
 		"Height": 4.84,
 		"Image": "behringer-cc300.png"
+	},
+	{
+		"Brand": "Behringer",
+		"Name": "Centara Overdrive",
+		"Width": 4.75,
+		"Height": 4.11,
+		"Image": "behringer-centara-overdrive.png"
 	},
 	{
 		"Brand": "Behringer",
@@ -6217,6 +6245,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "SD-2 Dual Overdrive",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-sd2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "SDE-3 Dual Digital Delay",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -6991,6 +7026,20 @@
 		"Width": 2.6,
 		"Height": 4.88,
 		"Image": "carl-martin-tone-tweaker.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Alpha Gain",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "caroline-alpha-gain.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Alpha Gain II",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "caroline-alpha-gain-2.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -21957,6 +22006,13 @@
 		"Width": 4.7,
 		"Height": 3.84,
 		"Image": "hudson-broadcast-dual-regent.png"
+	},
+	{
+		"Brand": "Hudson",
+		"Name": "Fuzz",
+		"Width": 2.51,
+		"Height": 4.59,
+		"Image": "hudson-fuzz.png"
 	},
 	{
 		"Brand": "Hudson",
