@@ -15781,8 +15781,15 @@
 		"Brand": "EAE",
 		"Name": "Limelight",
 		"Width": 4.7,
-		"Height": 3.81,
+		"Height": 3.85,
 		"Image": "electronic-audio-experiments-limelight.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Limelight (Pink)",
+		"Width": 4.7,
+		"Height": 3.85,
+		"Image": "electronic-audio-experiments-limelight-pink.png"
 	},
 	{
 		"Brand": "EAE",
@@ -15797,6 +15804,13 @@
 		"Width": 3.7,
 		"Height": 4.95,
 		"Image": "electronic-audio-experiments-longsword.png"
+	},
+	{
+		"Brand": "EAE",
+		"Name": "Longsword (10th Anniversary)",
+		"Width": 3.7,
+		"Height": 4.95,
+		"Image": "eae-longsword-10-anniversary.png"
 	},
 	{
 		"Brand": "EAE",
@@ -39366,6 +39380,13 @@
 		"Width": 2.66,
 		"Height": 4.67,
 		"Image": "raingerfx-pull-focus.png"
+	},
+	{
+		"Brand": "Rainger FX",
+		"Name": "Razor Fuzz",
+		"Width": 2.66,
+		"Height": 4.67,
+		"Image": "raingerfx-razor-fuzz.png"
 	},
 	{
 		"Brand": "Rainger FX",
