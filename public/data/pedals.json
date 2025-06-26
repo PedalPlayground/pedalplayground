@@ -2899,36 +2899,64 @@
 	},
 	{
 		"Brand": "Barber",
-		"Name": "Buss",
-		"Width": 2.81,
+		"Name": "BUSS",
+		"Width": 2.76,
 		"Height": 4.57,
 		"Image": "barber-buss.png"
 	},
 	{
 		"Brand": "Barber",
+		"Name": "BUSS (Black)",
+		"Width": 2.76,
+		"Height": 4.57,
+		"Image": "barber-buss-black.png"
+	},
+	{
+		"Brand": "Barber",
+		"Name": "BUSS HG",
+		"Width": 2.76,
+		"Height": 4.57,
+		"Image": "barber-buss-hg.png"
+	},
+	{
+		"Brand": "Barber",
 		"Name": "Direct Drive",
-		"Width": 2.94,
-		"Height": 4.76,
+		"Width": 2.76,
+		"Height": 4.57,
 		"Image": "barber-direct-drive.png"
 	},
 	{
 		"Brand": "Barber",
+		"Name": "Direct Drive (Blue)",
+		"Width": 2.76,
+		"Height": 4.57,
+		"Image": "barber-direct-drive-blue.png"
+	},
+	{
+		"Brand": "Barber",
 		"Name": "Exacta",
-		"Width": 2.81,
+		"Width": 2.76,
 		"Height": 4.57,
 		"Image": "barber-exacta.png"
 	},
 	{
 		"Brand": "Barber",
 		"Name": "Gain Changer",
-		"Width": 2.94,
-		"Height": 4.76,
+		"Width": 2.76,
+		"Height": 4.57,
 		"Image": "barber-gain-changer.png"
 	},
 	{
 		"Brand": "Barber",
+		"Name": "Gain Changer (Tan)",
+		"Width": 2.76,
+		"Height": 4.57,
+		"Image": "barber-gain-changer-tan.png"
+	},
+	{
+		"Brand": "Barber",
 		"Name": "Linden",
-		"Width": 2.81,
+		"Width": 2.76,
 		"Height": 4.57,
 		"Image": "barber-linden.png"
 	},
@@ -2941,14 +2969,35 @@
 	},
 	{
 		"Brand": "Barber",
+		"Name": "Plus",
+		"Width": 2.76,
+		"Height": 4.57,
+		"Image": "barber-plus.png"
+	},
+	{
+		"Brand": "Barber",
+		"Name": "Plus (Silver)",
+		"Width": 2.76,
+		"Height": 4.57,
+		"Image": "barber-plus-silver.png"
+	},
+	{
+		"Brand": "Barber",
 		"Name": "Tone Press",
-		"Width": 2.94,
-		"Height": 4.76,
+		"Width": 2.76,
+		"Height": 4.57,
 		"Image": "barber-tone-press-modern.png"
 	},
 	{
 		"Brand": "Barber",
-		"Name": "Tone Press (old)",
+		"Name": "Tone Press (Blue)",
+		"Width": 2.76,
+		"Height": 4.57,
+		"Image": "barber-tone-press-modern-blue.png"
+	},
+	{
+		"Brand": "Barber",
+		"Name": "Tone Press (Old)",
 		"Width": 4.02,
 		"Height": 4.7,
 		"Image": "barber-tone-press-old.png"
@@ -42789,6 +42838,13 @@
 		"Width": 2.81,
 		"Height": 4.75,
 		"Image": "spaceman-atlasiii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Atlas IV",
+		"Width": 2.92,
+		"Height": 4.75,
+		"Image": "spaceman-atlas-iv.png"
 	},
 	{
 		"Brand": "Spaceman",
