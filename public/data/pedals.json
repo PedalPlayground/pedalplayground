@@ -2674,11 +2674,11 @@
 		"Image": "asheville-adg1.png"
 	},
 	{
-			"Brand": "Asheville Music Tools",
-			"Name": "ADG-1 SE",
-			"Width": 3.81,
-			"Height": 4.96,
-			"Image": "asheville-adg1-se.png"
+		"Brand": "Asheville Music Tools",
+		"Name": "ADG-1 SE",
+		"Width": 3.81,
+		"Height": 4.96,
+		"Image": "asheville-adg1-se.png"
 	},
 	{
 		"Brand": "Asheville Music Tools",
@@ -12631,7 +12631,7 @@
 		"Brand": "Dunlop",
 		"Name": "Rotovibe",
 		"Width": 4.52,
-	 	"Height": 10,
+		"Height": 10,
 		"Image": "dunlop-jd4s.png"
 	},
 	{
@@ -15896,7 +15896,7 @@
 		"Height": 3.68,
 		"Image": "ernie-ball-tap.png"
 	},
- 	{
+	{
 		"Brand": "Ernie Ball",
 		"Name": "Volt",
 		"Width": 3.5,
@@ -18590,49 +18590,49 @@
 		"Width": 3.89,
 		"Height": 9.84,
 		"Image": "g-lab-wowee-wah.png"
- 	},
+	},
 	{
 		"Brand": "Gamma",
 		"Name": "Atlas",
 		"Width": 2.75,
 		"Height": 4.64,
 		"Image": "gamma-atlas.png"
- 	},
+	},
 	{
 		"Brand": "Gamma",
 		"Name": "Bacchus",
 		"Width": 2.75,
 		"Height": 4.64,
 		"Image": "gamma-bacchus.png"
- 	},
+	},
 	{
 		"Brand": "Gamma",
 		"Name": "Cumulus",
 		"Width": 2.75,
 		"Height": 4.64,
 		"Image": "gamma-cumulus.png"
- 	},
+	},
 	{
 		"Brand": "Gamma",
 		"Name": "Eros",
 		"Width": 2.75,
 		"Height": 4.64,
 		"Image": "gamma-eros.png"
- 	},
+	},
 	{
 		"Brand": "Gamma",
 		"Name": "Hades",
 		"Width": 2.75,
 		"Height": 4.64,
 		"Image": "gamma-hades.png"
- 	},
+	},
 	{
 		"Brand": "Gamma",
 		"Name": "Narcissus",
 		"Width": 2.75,
 		"Height": 4.64,
 		"Image": "gamma-narcissus.png"
- 	},
+	},
 	{
 		"Brand": "Gamechanger Audio",
 		"Name": "Auto Chorus",
@@ -25989,7 +25989,7 @@
 		"Width": 4.7,
 		"Height": 3.88,
 		"Image": "khdk-scott-ian-sgt-d.png"
- 	},
+	},
 	{
 		"Brand": "KHDK",
 		"Name": "Scuzz Box",
@@ -27804,11 +27804,11 @@
 		"Image": "lovepedal-kanji9.png"
 	},
 	{
-		"Brand":"Lovepedal",
-		"Name":"Rubber Chicken",
-		"Width":2.59,
-		"Height":4.37,
-		"Image":"lovepedal-rubberchicken.png"
+		"Brand": "Lovepedal",
+		"Name": "Rubber Chicken",
+		"Width": 2.59,
+		"Height": 4.37,
+		"Image": "lovepedal-rubberchicken.png"
 	},
 	{
 		"Brand": "Lovepedal",
@@ -33277,7 +33277,7 @@
 		"Height": 4.94,
 		"Image": "mythos-herculean.png"
 	},
-		{
+	{
 		"Brand": "Mythos",
 		"Name": "Herculean Deluxe",
 		"Width": 4.7,
@@ -38240,7 +38240,7 @@
 		"Height": 4.5,
 		"Image": "radial-tonebone-trimode.png"
 	},
- 	{
+	{
 		"Brand": "Radial Engineering",
 		"Name": "Twin-City",
 		"Width": 3.5,
@@ -41464,21 +41464,21 @@
 		"Brand": "Source Audio",
 		"Name": "Soundblox Bass Envelope Filter",
 		"Width": 4,
-		"Height": 7	,
+		"Height": 7,
 		"Image": "source-audio-sb-bass-env.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Classic Distortion",
 		"Width": 4,
-		"Height": 7	,
+		"Height": 7,
 		"Image": "source-audio-sb-classic.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Guitar Envelope Filter",
 		"Width": 4,
-		"Height": 7	,
+		"Height": 7,
 		"Image": "source-audio-sb-guitar-env.png"
 	},
 	{
@@ -41492,21 +41492,21 @@
 		"Brand": "Source Audio",
 		"Name": "Soundblox Multiwave Distortion",
 		"Width": 4,
-		"Height": 7	,
+		"Height": 7,
 		"Image": "source-audio-sb-multiwave.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Tri-Mod Phaser",
 		"Width": 4,
-		"Height": 7	,
+		"Height": 7,
 		"Image": "source-audio-sb-tri-mod-phaser.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Soundblox Tri-Mod Wah",
 		"Width": 4,
-		"Height": 7	,
+		"Height": 7,
 		"Image": "source-audio-sb-tri-mod-wah.png"
 	},
 	{
@@ -43462,7 +43462,6 @@
 		"Height": 3.62,
 		"Image": "taylor-a-b-both-box.png"
 	},
-
 	{
 		"Brand": "TC Electronic",
 		"Name": "2290 P Dynamic Digital Delay",
@@ -46542,6 +46541,27 @@
 		"Width": 9.96,
 		"Height": 6.39,
 		"Image": "valeton-gp-200lt.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-5",
+		"Width": 1.65,
+		"Height": 3.70,
+		"Image": "valeton-gp-5.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-4",
+		"Width": 5.12,
+		"Height": 3.54,
+		"Image": "valeton-gp-4.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-5",
+		"Width": 6.1,
+		"Height": 4.13,
+		"Image": "valeton-gp-5.png"
 	},
 	{
 		"Brand": "Valeton",
@@ -50259,7 +50279,7 @@
 		"Width": 5,
 		"Height": 4.1875,
 		"Image": "zeppelin-quaverato.png"
- 	},
+	},
 	{
 		"Brand": "Zinky",
 		"Name": "Master Blaster",
