@@ -46551,20 +46551,6 @@
 	},
 	{
 		"Brand": "Valeton",
-		"Name": "GP-4",
-		"Width": 5.12,
-		"Height": 3.54,
-		"Image": "valeton-gp-4.png"
-	},
-	{
-		"Brand": "Valeton",
-		"Name": "GP-5",
-		"Width": 6.1,
-		"Height": 4.13,
-		"Image": "valeton-gp-5.png"
-	},
-	{
-		"Brand": "Valeton",
 		"Name": "OC-10 Octave",
 		"Width": 2.03,
 		"Height": 3.7,
