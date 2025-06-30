@@ -14106,6 +14106,13 @@
 	},
 	{
 		"Brand": "Echo Fix",
+		"Name": "FET Compressor",
+		"Width": 7.43,
+		"Height": 5.52,
+		"Image": "echo-fix-fet-compressor.png"
+	},
+	{
+		"Brand": "Echo Fix",
 		"Name": "Spring Reverb",
 		"Width": 6.3,
 		"Height": 5.52,
@@ -16402,10 +16409,17 @@
 	},
 	{
 		"Brand": "Ernie Ball",
-		"Name": "VP Jr Tuner",
+		"Name": "VP Jr Tuner (Black)",
 		"Width": 3.5,
 		"Height": 9.65,
 		"Image": "ernie-ball-vp-jr-tuner.png"
+	},
+	{
+		"Brand": "Ernie Ball",
+		"Name": "VP Jr Tuner (Silver)",
+		"Width": 3.5,
+		"Height": 9.65,
+		"Image": "ernie-ball-vp-jr-tuner-silver.png"
 	},
 	{
 		"Brand": "Eventide",
@@ -40173,6 +40187,13 @@
 		"Image": "revv-tilt-boost.png"
 	},
 	{
+		"Brand": "RhPf Electronics",
+		"Name": "Mosferatwo",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "rhpf-mosferatwo.png"
+	},
+	{
 		"Brand": "Rimrock",
 		"Name": "Lil MO",
 		"Width": 2.6,
@@ -41134,8 +41155,8 @@
 	{
 		"Brand": "Shnobel Tone",
 		"Name": "Boost",
-		"Width": 2.31,
-		"Height": 4.59,
+		"Width": 2.33,
+		"Height": 4.63,
 		"Image": "shnobel-tone-boost.png"
 	},
 	{
@@ -41179,6 +41200,13 @@
 		"Width": 3.7,
 		"Height": 4.99,
 		"Image": "shnobel-tone-daily-driver-stereo.png"
+	},
+	{
+		"Brand": "Shnobel Tone",
+		"Name": "Dumbbell Boost",
+		"Width": 2.33,
+		"Height": 4.55,
+		"Image": "shnobel-tone-dumbbell-boost.png"
 	},
 	{
 		"Brand": "Shnobel Tone",
