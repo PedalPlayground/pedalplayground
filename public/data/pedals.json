@@ -40188,10 +40188,52 @@
 	},
 	{
 		"Brand": "RhPf Electronics",
+		"Name": "Capharnaüm",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "rhpf-capharnaum.png"
+	},
+	{
+		"Brand": "RhPf Electronics",
+		"Name": "Moschops",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "rhpf-moschops.png"
+	},
+	{
+		"Brand": "RhPf Electronics",
 		"Name": "Mosferatwo",
 		"Width": 2.6,
-		"Height": 4.99,
+		"Height": 4.85,
 		"Image": "rhpf-mosferatwo.png"
+	},
+	{
+		"Brand": "RhPf Electronics",
+		"Name": "Mostard",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "rhpf-mostard.png"
+	},
+	{
+		"Brand": "RhPf Electronics",
+		"Name": "Mo(s)ghoul",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "rhpf-mosghoul.png"
+	},
+	{
+		"Brand": "RhPf Electronics",
+		"Name": "Tri-Hormonic Phalanx",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "rhpf-tri-hormonic-phalanx.png"
+	},
+	{
+		"Brand": "RhPf Electronics",
+		"Name": "Twin Peaks Eiger-Mönch",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "rhpf-twin-peaks-eiger-monch.png"
 	},
 	{
 		"Brand": "Rimrock",
