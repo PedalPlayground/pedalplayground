@@ -21364,6 +21364,13 @@
 		"Image": "hotone-xtomp-mini.png"
 	},
 	{
+		"Brand": "Hotone",
+		"Name": "Verbera",
+		"Width": 2.46,
+		"Height": 4.94,
+		"Image": "hotone-verbera.png"
+	},
+	{
 		"Brand": "Hudson",
 		"Name": "Broadcast",
 		"Width": 4.7,
@@ -45576,6 +45583,13 @@
 		"Width": 8.12,
 		"Height": 3.37,
 		"Image": "truetone-cs12.png"
+	},
+	{
+		"Brand": "Truetone",
+		"Name": "1 Spot Pro CS11",
+		"Width": 8.07,
+		"Height": 3.38,
+		"Image": "truetone-cs11.png"
 	},
 	{
 		"Brand": "Truetone",
