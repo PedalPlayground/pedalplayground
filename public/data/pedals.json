@@ -9444,6 +9444,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Mirage",
+		"Width": 4.8,
+		"Height": 3.78,
+		"Image": "ctc-mirage.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "Motherload",
 		"Width": 2.6,
 		"Height": 4.9,
@@ -22002,6 +22009,13 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Verbera",
+		"Width": 3.31,
+		"Height": 4.84,
+		"Image": "hotone-verbera.png"
+	},
+	{
+		"Brand": "Hotone",
 		"Name": "Vow Press",
 		"Width": 2.38,
 		"Height": 5.43,
@@ -33255,6 +33269,13 @@
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "mxr-m81.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Bass Synth",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-mb301.png"
 	},
 	{
 		"Brand": "MXR",
@@ -46944,6 +46965,13 @@
 	},
 	{
 		"Brand": "Truetone",
+		"Name": "1 Spot Pro CS11",
+		"Width": 8.07,
+		"Height": 3.48,
+		"Image": "truetone-cs11.png"
+	},
+	{
+		"Brand": "Truetone",
 		"Name": "1 Spot Pro CS12",
 		"Width": 8.12,
 		"Height": 3.37,
@@ -50973,6 +51001,13 @@
 		"Width": 2.6,
 		"Height": 4.91,
 		"Image": "wat-nivicola.png"
+	},
+	{
+		"Brand": "Wonderful Audio Technology",
+		"Name": "Ranges",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "wat-ranges.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
