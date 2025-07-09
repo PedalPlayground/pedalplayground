@@ -10942,6 +10942,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "F-Octave (2025)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-f-octave-2025.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Fireburst",
 		"Width": 5.01,
 		"Height": 3.82,
@@ -21534,7 +21541,7 @@
 	{
 		"Brand": "Heather Brown",
 		"Name": "Spirit in the Sky",
-		"Width": 4.09,
+		"Width": 4.06,
 		"Height": 4.7,
 		"Image": "hbe-spirit-in-the-sky.png"
 	},
@@ -21551,6 +21558,13 @@
 		"Width": 5.14,
 		"Height": 3.7,
 		"Image": "hbe-the-blessed-mother-the-fuzz-assumption.png"
+	},
+	{
+		"Brand": "Heather Brown",
+		"Name": "Volga",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "hbe-volga.png"
 	},
 	{
 		"Brand": "Hello Sailor Effects",
