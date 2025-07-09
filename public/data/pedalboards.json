@@ -364,6 +364,48 @@
 		"Image": "fender-pro-small.png"
 	},
 	{
+		"Brand": "Friedman",
+		"Name": "1317",
+		"Width": 17,
+		"Height": 13,
+		"Image": "friedman-1317.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "1520",
+		"Width": 20,
+		"Height": 15,
+		"Image": "friedman-1520.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "1524",
+		"Width": 24,
+		"Height": 15,
+		"Image": "friedman-1524.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "1529",
+		"Width": 29,
+		"Height": 15,
+		"Image": "friedman-1529.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "Riser (13)",
+		"Width": 4,
+		"Height": 6,
+		"Image": "friedman-riser-1317.png"
+	},
+	{
+		"Brand": "Friedman",
+		"Name": "Riser (15)",
+		"Width": 4,
+		"Height": 7,
+		"Image": "friedman-riser-15.png"
+	},
+	{
 		"Brand": "Gator",
 		"Name": "Aluminum Extra Large",
 		"Width": 32,
