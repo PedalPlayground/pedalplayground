@@ -10564,6 +10564,13 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Psychedelic Lightmare",
+		"Width": 4.95,
+		"Height": 3.95,
+		"Image": "deathbyaudio-psychedelic-lightmare.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Reverberation Machine",
 		"Width": 3.67,
 		"Height": 4.86,
@@ -34469,6 +34476,20 @@
 	},
 	{
 		"Brand": "Non-Human Audio",
+		"Name": "Ram",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "non-human-audio-ram.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
+		"Name": "Robins",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "non-human-audio-robins.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
 		"Name": "Slow Loris",
 		"Width": 2.6,
 		"Height": 5.06,
@@ -34480,6 +34501,13 @@
 		"Width": 2.6,
 		"Height": 5.06,
 		"Image": "non-human-audio-unclean.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
+		"Name": "Water Bear",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "non-human-audio-water-bear.png"
 	},
 	{
 		"Brand": "Nordland",
@@ -37448,6 +37476,20 @@
 		"Width": 1.65,
 		"Height": 3.75,
 		"Image": "outlaw-effects-wrangler.png"
+	},
+	{
+		"Brand": "Ovaltone",
+		"Name": "GD-XIII",
+		"Width": 3.74,
+		"Height": 4.21,
+		"Image": "ovaltone-gdxiii.png"
+	},
+	{
+		"Brand": "Ovaltone",
+		"Name": "Merkava",
+		"Width": 3.74,
+		"Height": 4.21,
+		"Image": "ovaltone-merkava.png"
 	},
 	{
 		"Brand": "Paintaudio",
