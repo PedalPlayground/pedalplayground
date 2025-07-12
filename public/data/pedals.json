@@ -8170,6 +8170,13 @@
 	},
 	{
 		"Brand": "Champion Leccy",
+		"Name": "The Kilter V2 (Universe)",
+		"Width": 4.02,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-kilter-v2-universe.png"
+	},
+	{
+		"Brand": "Champion Leccy",
 		"Name": "The Rockstar Fuzz",
 		"Width": 2.5,
 		"Height": 4.65,
@@ -8205,17 +8212,17 @@
 	},
 	{
 		"Brand": "Champion Leccy",
-		"Name": "The Skitter (Seafoam)",
-		"Width": 3.7,
-		"Height": 4.81,
-		"Image": "champion-leccy-the-skitter-foam-green.png"
-	},
-	{
-		"Brand": "Champion Leccy",
 		"Name": "The Skitter (Pink Sherbet)",
 		"Width": 3.7,
 		"Height": 4.81,
 		"Image": "champion-leccy-the-skitter-pink.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Skitter (Seafoam)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitter-foam-green.png"
 	},
 	{
 		"Brand": "Champion Leccy",
