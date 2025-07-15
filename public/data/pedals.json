@@ -9093,6 +9093,13 @@
 		"Image": "colortone-spring-reverb-2.png"
 	},
 	{
+		"Brand": "Concrete Sound Lab",
+		"Name": "Slab",
+		"Width": 3.7,
+		"Height": 4.87,
+		"Image": "csl-slab.png"
+	},
+	{
 		"Brand": "Cooper FX",
 		"Name": "Arcades",
 		"Width": 3.7,
@@ -12552,6 +12559,13 @@
 	},
 	{
 		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier Bass Master",
+		"Width": 4.76,
+		"Height": 3.13,
+		"Image": "dsm-simplifier-bass-master.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier Bass Station",
 		"Width": 4.53,
 		"Height": 3.06,
@@ -12574,7 +12588,7 @@
 	{
 		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier MK-II",
-		"Width": 4.74,
+		"Width": 4.76,
 		"Height": 3.13,
 		"Image": "dsm-simplifier-mk2.png"
 	},
@@ -12584,6 +12598,13 @@
 		"Width": 5.25,
 		"Height": 3.96,
 		"Image": "dsm-simplifier-x.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
+		"Name": "Sub Atomic",
+		"Width": 4.16,
+		"Height": 4.92,
+		"Image": "dsm-sub-atomic.png"
 	},
 	{
 		"Brand": "DSM Noisemaker",
@@ -13473,6 +13494,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-dunes.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Easy Listening",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-easy-listening.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -26731,6 +26759,20 @@
 		"Width": 2.6,
 		"Height": 4.99,
 		"Image": "khdk-dark-blood.png"
+	},
+	{
+		"Brand": "KHDK",
+		"Name": "Deathscream",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "khdk-deathscream.png"
+	},
+	{
+		"Brand": "KHDK",
+		"Name": "Digital Bath",
+		"Width": 2.6,
+		"Height": 4.75,
+		"Image": "khdk-digital-bath.png"
 	},
 	{
 		"Brand": "KHDK",
