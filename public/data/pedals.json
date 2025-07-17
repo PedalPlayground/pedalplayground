@@ -6224,6 +6224,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RT-2 Rotary Ensemble",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-rt2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RT-20 Rotary",
 		"Width": 6.8125,
 		"Height": 6.25,
