@@ -12433,6 +12433,13 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
+		"Name": "Moon Metal",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-moon-metal.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
 		"Name": "Seattle Driver",
 		"Width": 2.6,
 		"Height": 4.9,
@@ -12444,6 +12451,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "drunk-beaver-secret-sauce.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Sustain Filter",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-sustain-filter.png"
 	},
 	{
 		"Brand": "Drunk Beaver",
@@ -12465,6 +12479,13 @@
 		"Width": 3.7,
 		"Height": 4.92,
 		"Image": "drunk-beaver-tornado-mk2.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Trainer TS-15 MK2",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-trainer-ts15-mk2.png"
 	},
 	{
 		"Brand": "Drunk Beaver",
@@ -16024,7 +16045,14 @@
 	},
 	{
 		"Brand": "Elite Acoustics",
-		"Name": "StompboxMix 6-2",
+		"Name": "StompMix 4",
+		"Width": 4.87,
+		"Height": 3.82,
+		"Image": "elite-acoustics-stompmix-4.png"
+	},
+	{
+		"Brand": "Elite Acoustics",
+		"Name": "StompMix 6-2",
 		"Width": 6.46,
 		"Height": 7.11,
 		"Image": "elite-acoustics-stompmix-62.png"
