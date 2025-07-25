@@ -16429,6 +16429,20 @@
 		"Image": "endorphines-ghost.png"
 	},
 	{
+		"Brand": "Endorphines",
+		"Name": "Golden Master (Black)",
+		"Width": 4.95,
+		"Height": 4.89,
+		"Image": "endorphines-golden-master-black.png"
+	},
+	{
+		"Brand": "Endorphines",
+		"Name": "Golden Master (Silver)",
+		"Width": 4.95,
+		"Height": 4.89,
+		"Image": "endorphines-golden-master-silver.png"
+	},
+	{
 		"Brand": "Engl",
 		"Name": "Cabloader",
 		"Width": 3.88,
@@ -35960,6 +35974,20 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Black Fountain Stereo (Wildberry)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-black-fountain-stereo-wildberry.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Black Fountain Stereo (White)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-black-fountain-stereo-white.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Dark Light",
 		"Width": 5.7,
 		"Height": 3.84,
@@ -36016,6 +36044,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Dark Star Stereo (White)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-dark-star-stereo-white.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Dweller",
 		"Width": 2.87,
 		"Height": 4.96,
@@ -36062,6 +36097,13 @@
 		"Width": 1.69,
 		"Height": 3.88,
 		"Image": "obne-ramper-beam-splitter.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Expression Ramper (Black Fountain)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-black-fountain.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -36254,6 +36296,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Pardner Fuzz (White)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-pardner-fuzz-white.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Procession",
 		"Width": 2.87,
 		"Height": 4.96,
@@ -36356,6 +36405,13 @@
 		"Width": 2.87,
 		"Height": 4.96,
 		"Image": "obne-sunlight.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Sunlight (Olive)",
+		"Width": 2.87,
+		"Height": 4.96,
+		"Image": "obne-sunlight-olive.png"
 	},
 	{
 		"Brand": "OBNE",
