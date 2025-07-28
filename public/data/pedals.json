@@ -6224,6 +6224,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "RT-2 Rotary Ensemble",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-rt2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "RT-20 Rotary",
 		"Width": 6.8125,
 		"Height": 6.25,
@@ -8170,6 +8177,13 @@
 	},
 	{
 		"Brand": "Champion Leccy",
+		"Name": "The Kilter V2 (Universe)",
+		"Width": 4.02,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-kilter-v2-universe.png"
+	},
+	{
+		"Brand": "Champion Leccy",
 		"Name": "The Rockstar Fuzz",
 		"Width": 2.5,
 		"Height": 4.65,
@@ -8205,17 +8219,17 @@
 	},
 	{
 		"Brand": "Champion Leccy",
-		"Name": "The Skitter (Seafoam)",
-		"Width": 3.7,
-		"Height": 4.81,
-		"Image": "champion-leccy-the-skitter-foam-green.png"
-	},
-	{
-		"Brand": "Champion Leccy",
 		"Name": "The Skitter (Pink Sherbet)",
 		"Width": 3.7,
 		"Height": 4.81,
 		"Image": "champion-leccy-the-skitter-pink.png"
+	},
+	{
+		"Brand": "Champion Leccy",
+		"Name": "The Skitter (Seafoam)",
+		"Width": 3.7,
+		"Height": 4.81,
+		"Image": "champion-leccy-the-skitter-foam-green.png"
 	},
 	{
 		"Brand": "Champion Leccy",
@@ -9084,6 +9098,13 @@
 		"Width": 2.6,
 		"Height": 4.97,
 		"Image": "colortone-spring-reverb-2.png"
+	},
+	{
+		"Brand": "Concrete Sound Lab",
+		"Name": "Slab",
+		"Width": 3.7,
+		"Height": 4.87,
+		"Image": "csl-slab.png"
 	},
 	{
 		"Brand": "Cooper FX",
@@ -10564,6 +10585,13 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Psychedelic Lightmare",
+		"Width": 4.95,
+		"Height": 3.95,
+		"Image": "deathbyaudio-psychedelic-lightmare.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Reverberation Machine",
 		"Width": 3.67,
 		"Height": 4.86,
@@ -10939,6 +10967,13 @@
 		"Width": 2.44,
 		"Height": 4.63,
 		"Image": "diamond-f-octave.png"
+	},
+	{
+		"Brand": "Diamond",
+		"Name": "F-Octave (2025)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-f-octave-2025.png"
 	},
 	{
 		"Brand": "Diamond",
@@ -12398,6 +12433,13 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
+		"Name": "Moon Metal",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-moon-metal.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
 		"Name": "Seattle Driver",
 		"Width": 2.6,
 		"Height": 4.9,
@@ -12409,6 +12451,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "drunk-beaver-secret-sauce.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Sustain Filter",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-sustain-filter.png"
 	},
 	{
 		"Brand": "Drunk Beaver",
@@ -12430,6 +12479,13 @@
 		"Width": 3.7,
 		"Height": 4.92,
 		"Image": "drunk-beaver-tornado-mk2.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Trainer TS-15 MK2",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-trainer-ts15-mk2.png"
 	},
 	{
 		"Brand": "Drunk Beaver",
@@ -12531,6 +12587,13 @@
 	},
 	{
 		"Brand": "DSM & Humboldt",
+		"Name": "Simplifier Bass Master",
+		"Width": 4.76,
+		"Height": 3.13,
+		"Image": "dsm-simplifier-bass-master.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier Bass Station",
 		"Width": 4.53,
 		"Height": 3.06,
@@ -12553,7 +12616,7 @@
 	{
 		"Brand": "DSM & Humboldt",
 		"Name": "Simplifier MK-II",
-		"Width": 4.74,
+		"Width": 4.76,
 		"Height": 3.13,
 		"Image": "dsm-simplifier-mk2.png"
 	},
@@ -12563,6 +12626,13 @@
 		"Width": 5.25,
 		"Height": 3.96,
 		"Image": "dsm-simplifier-x.png"
+	},
+	{
+		"Brand": "DSM & Humboldt",
+		"Name": "Sub Atomic",
+		"Width": 4.16,
+		"Height": 4.92,
+		"Image": "dsm-sub-atomic.png"
 	},
 	{
 		"Brand": "DSM Noisemaker",
@@ -13452,6 +13522,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-dunes.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Easy Listening",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-easy-listening.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -15968,7 +16045,14 @@
 	},
 	{
 		"Brand": "Elite Acoustics",
-		"Name": "StompboxMix 6-2",
+		"Name": "StompMix 4",
+		"Width": 4.87,
+		"Height": 3.82,
+		"Image": "elite-acoustics-stompmix-4.png"
+	},
+	{
+		"Brand": "Elite Acoustics",
+		"Name": "StompMix 6-2",
 		"Width": 6.46,
 		"Height": 7.11,
 		"Image": "elite-acoustics-stompmix-62.png"
@@ -16343,6 +16427,20 @@
 		"Width": 7.48,
 		"Height": 4.89,
 		"Image": "endorphines-ghost.png"
+	},
+	{
+		"Brand": "Endorphines",
+		"Name": "Golden Master (Black)",
+		"Width": 4.95,
+		"Height": 4.89,
+		"Image": "endorphines-golden-master-black.png"
+	},
+	{
+		"Brand": "Endorphines",
+		"Name": "Golden Master (Silver)",
+		"Width": 4.95,
+		"Height": 4.89,
+		"Image": "endorphines-golden-master-silver.png"
 	},
 	{
 		"Brand": "Engl",
@@ -21534,7 +21632,7 @@
 	{
 		"Brand": "Heather Brown",
 		"Name": "Spirit in the Sky",
-		"Width": 4.09,
+		"Width": 4.06,
 		"Height": 4.7,
 		"Image": "hbe-spirit-in-the-sky.png"
 	},
@@ -21551,6 +21649,13 @@
 		"Width": 5.14,
 		"Height": 3.7,
 		"Image": "hbe-the-blessed-mother-the-fuzz-assumption.png"
+	},
+	{
+		"Brand": "Heather Brown",
+		"Name": "Volga",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "hbe-volga.png"
 	},
 	{
 		"Brand": "Hello Sailor Effects",
@@ -26703,6 +26808,20 @@
 		"Width": 2.6,
 		"Height": 4.99,
 		"Image": "khdk-dark-blood.png"
+	},
+	{
+		"Brand": "KHDK",
+		"Name": "Deathscream",
+		"Width": 2.6,
+		"Height": 4.99,
+		"Image": "khdk-deathscream.png"
+	},
+	{
+		"Brand": "KHDK",
+		"Name": "Digital Bath",
+		"Width": 2.6,
+		"Height": 4.75,
+		"Image": "khdk-digital-bath.png"
 	},
 	{
 		"Brand": "KHDK",
@@ -34455,6 +34574,20 @@
 	},
 	{
 		"Brand": "Non-Human Audio",
+		"Name": "Ram",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "non-human-audio-ram.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
+		"Name": "Robins",
+		"Width": 3.7,
+		"Height": 4.91,
+		"Image": "non-human-audio-robins.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
 		"Name": "Slow Loris",
 		"Width": 2.6,
 		"Height": 5.06,
@@ -34466,6 +34599,13 @@
 		"Width": 2.6,
 		"Height": 5.06,
 		"Image": "non-human-audio-unclean.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
+		"Name": "Water Bear",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "non-human-audio-water-bear.png"
 	},
 	{
 		"Brand": "Nordland",
@@ -35834,6 +35974,20 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Black Fountain Stereo (Wildberry)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-black-fountain-stereo-wildberry.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Black Fountain Stereo (White)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-black-fountain-stereo-white.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Dark Light",
 		"Width": 5.7,
 		"Height": 3.84,
@@ -35890,6 +36044,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Dark Star Stereo (White)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-dark-star-stereo-white.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Dweller",
 		"Width": 2.87,
 		"Height": 4.96,
@@ -35936,6 +36097,13 @@
 		"Width": 1.69,
 		"Height": 3.88,
 		"Image": "obne-ramper-beam-splitter.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Expression Ramper (Black Fountain)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-black-fountain.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -36128,6 +36296,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Pardner Fuzz (White)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-pardner-fuzz-white.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Procession",
 		"Width": 2.87,
 		"Height": 4.96,
@@ -36230,6 +36405,13 @@
 		"Width": 2.87,
 		"Height": 4.96,
 		"Image": "obne-sunlight.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Sunlight (Olive)",
+		"Width": 2.87,
+		"Height": 4.96,
+		"Image": "obne-sunlight-olive.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -37434,6 +37616,20 @@
 		"Width": 1.65,
 		"Height": 3.75,
 		"Image": "outlaw-effects-wrangler.png"
+	},
+	{
+		"Brand": "Ovaltone",
+		"Name": "GD-XIII",
+		"Width": 3.74,
+		"Height": 4.21,
+		"Image": "ovaltone-gdxiii.png"
+	},
+	{
+		"Brand": "Ovaltone",
+		"Name": "Merkava",
+		"Width": 3.74,
+		"Height": 4.21,
+		"Image": "ovaltone-merkava.png"
 	},
 	{
 		"Brand": "Paintaudio",
