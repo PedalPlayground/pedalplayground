@@ -35862,6 +35862,27 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Bathing (Algae)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-bathing-algae.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Bathing (Ink)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-bathing-black.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Bathing (Orchid)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-bathing-orchid.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Beam Splitter",
 		"Width": 5.79,
 		"Height": 4.88,
@@ -35960,6 +35981,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Black Fountain Stereo (Revolver-esque)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-black-fountain-stereo-white.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Black Fountain Stereo (Slate)",
 		"Width": 4.25,
 		"Height": 4.56,
@@ -35978,13 +36006,6 @@
 		"Width": 4.25,
 		"Height": 4.56,
 		"Image": "obne-black-fountain-stereo-wildberry.png"
-	},
-	{
-		"Brand": "OBNE",
-		"Name": "Black Fountain Stereo (White)",
-		"Width": 4.25,
-		"Height": 4.56,
-		"Image": "obne-black-fountain-stereo-white.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -36044,7 +36065,7 @@
 	},
 	{
 		"Brand": "OBNE",
-		"Name": "Dark Star Stereo (White)",
+		"Name": "Dark Star Stereo (Revolver-esque)",
 		"Width": 4.25,
 		"Height": 4.56,
 		"Image": "obne-dark-star-stereo-white.png"
@@ -36289,17 +36310,17 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Pardner Fuzz (Revolver-eque)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-pardner-fuzz-white.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Pardner Fuzz (Tan)",
 		"Width": 4.25,
 		"Height": 4.56,
 		"Image": "obne-pardner-fuzz-tan.png"
-	},
-	{
-		"Brand": "OBNE",
-		"Name": "Pardner Fuzz (White)",
-		"Width": 4.25,
-		"Height": 4.56,
-		"Image": "obne-pardner-fuzz-white.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -36377,6 +36398,13 @@
 		"Width": 4.7,
 		"Height": 3.86,
 		"Image": "obne-signalblender.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Signal Blender Stereo",
+		"Width": 5.5,
+		"Height": 5.06,
+		"Image": "obne-signalblender-stereo.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -50322,6 +50350,20 @@
 		"Width": 4.67,
 		"Height": 3.75,
 		"Image": "walrus-warhorn-ages-dual-drive.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Xero Poly Looper",
+		"Width": 3.95,
+		"Height": 4.7,
+		"Image": "walrus-xero-poly-looper.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Xero Poly Looper (Black)",
+		"Width": 3.95,
+		"Height": 4.7,
+		"Image": "walrus-xero-poly-looper-black.png"
 	},
 	{
 		"Brand": "Wampler",
