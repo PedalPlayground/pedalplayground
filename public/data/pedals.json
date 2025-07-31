@@ -17683,6 +17683,13 @@
 	},
 	{
 		"Brand": "Flower Pedals",
+		"Name": "Hosta V2",
+		"Width": 2.87,
+		"Height": 4.85,
+		"Image": "flower-pedals-hosta-v2.png"
+	},
+	{
+		"Brand": "Flower Pedals",
 		"Name": "Lupine",
 		"Width": 1.75,
 		"Height": 3.62,
@@ -46612,6 +46619,13 @@
 		"Width": 2.76,
 		"Height": 4.89,
 		"Image": "thorpyfx-heavy-water.png"
+	},
+	{
+		"Brand": "ThorpyFX",
+		"Name": "Peace2keeper",
+		"Width": 2.76,
+		"Height": 4.89,
+		"Image": "thorpy-peace2keeper.png"
 	},
 	{
 		"Brand": "ThorpyFX",
