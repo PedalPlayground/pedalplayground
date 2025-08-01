@@ -1673,6 +1673,27 @@
 		"Image": "analogman-sunlion.png"
 	},
 	{
+		"Brand": "Analogworm",
+		"Name": "Noir",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "analogworm-noir.png"
+	},
+	{
+		"Brand": "Analogworm",
+		"Name": "OD808 mkIII",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "analogworm-od808-mk3.png"
+	},
+	{
+		"Brand": "Analogworm",
+		"Name": "Void",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "analogworm-void.png"
+	},
+	{
 		"Brand": "Anarchy Audio",
 		"Name": "Gold Class",
 		"Width": 2.36,
@@ -8464,6 +8485,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Lost + Found",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-lost-found.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Midibox",
 		"Width": 3.47,
 		"Height": 1.58,
@@ -8538,6 +8566,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-reverse-mood-c.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "Reverse Mode C (2025)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-reverse-mood-c-2025.png"
 	},
 	{
 		"Brand": "Chase Bliss",
@@ -9098,6 +9133,20 @@
 		"Width": 2.6,
 		"Height": 4.97,
 		"Image": "colortone-spring-reverb-2.png"
+	},
+	{
+		"Brand": "Colortone",
+		"Name": "VibroVerb",
+		"Width": 3.11,
+		"Height": 5,
+		"Image": "colortone-vibroverb.png"
+	},
+	{
+		"Brand": "Colortone",
+		"Name": "ZeroSum",
+		"Width": 3.11,
+		"Height": 5,
+		"Image": "colortone-zerosum.png"
 	},
 	{
 		"Brand": "Concrete Sound Lab",
