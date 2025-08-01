@@ -1673,6 +1673,27 @@
 		"Image": "analogman-sunlion.png"
 	},
 	{
+		"Brand": "Analogworm",
+		"Name": "Noir",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "analogworm-noir.png"
+	},
+	{
+		"Brand": "Analogworm",
+		"Name": "OD808 mkIII",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "analogworm-od808-mk3.png"
+	},
+	{
+		"Brand": "Analogworm",
+		"Name": "Void",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "analogworm-void.png"
+	},
+	{
 		"Brand": "Anarchy Audio",
 		"Name": "Gold Class",
 		"Width": 2.36,
@@ -8464,6 +8485,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "Lost + Found",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-lost-found.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "Midibox",
 		"Width": 3.47,
 		"Height": 1.58,
@@ -8538,6 +8566,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-reverse-mood-c.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "Reverse Mode C (2025)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-reverse-mood-c-2025.png"
 	},
 	{
 		"Brand": "Chase Bliss",
@@ -9098,6 +9133,20 @@
 		"Width": 2.6,
 		"Height": 4.97,
 		"Image": "colortone-spring-reverb-2.png"
+	},
+	{
+		"Brand": "Colortone",
+		"Name": "VibroVerb",
+		"Width": 3.11,
+		"Height": 5,
+		"Image": "colortone-vibroverb.png"
+	},
+	{
+		"Brand": "Colortone",
+		"Name": "ZeroSum",
+		"Width": 3.11,
+		"Height": 5,
+		"Image": "colortone-zerosum.png"
 	},
 	{
 		"Brand": "Concrete Sound Lab",
@@ -17680,6 +17729,13 @@
 		"Width": 2.73,
 		"Height": 4.98,
 		"Image": "flower-pedals-hosta.png"
+	},
+	{
+		"Brand": "Flower Pedals",
+		"Name": "Hosta V2",
+		"Width": 2.87,
+		"Height": 4.85,
+		"Image": "flower-pedals-hosta-v2.png"
 	},
 	{
 		"Brand": "Flower Pedals",
@@ -35862,6 +35918,27 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Bathing (Algae)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-bathing-algae.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Bathing (Ink)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-bathing-black.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Bathing (Orchid)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-bathing-orchid.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Beam Splitter",
 		"Width": 5.79,
 		"Height": 4.88,
@@ -35960,6 +36037,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Black Fountain Stereo (Revolver-esque)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-black-fountain-stereo-white.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Black Fountain Stereo (Slate)",
 		"Width": 4.25,
 		"Height": 4.56,
@@ -35978,13 +36062,6 @@
 		"Width": 4.25,
 		"Height": 4.56,
 		"Image": "obne-black-fountain-stereo-wildberry.png"
-	},
-	{
-		"Brand": "OBNE",
-		"Name": "Black Fountain Stereo (White)",
-		"Width": 4.25,
-		"Height": 4.56,
-		"Image": "obne-black-fountain-stereo-white.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -36044,7 +36121,7 @@
 	},
 	{
 		"Brand": "OBNE",
-		"Name": "Dark Star Stereo (White)",
+		"Name": "Dark Star Stereo (Revolver-esque)",
 		"Width": 4.25,
 		"Height": 4.56,
 		"Image": "obne-dark-star-stereo-white.png"
@@ -36289,17 +36366,17 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Pardner Fuzz (Revolver-eque)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-pardner-fuzz-white.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Pardner Fuzz (Tan)",
 		"Width": 4.25,
 		"Height": 4.56,
 		"Image": "obne-pardner-fuzz-tan.png"
-	},
-	{
-		"Brand": "OBNE",
-		"Name": "Pardner Fuzz (White)",
-		"Width": 4.25,
-		"Height": 4.56,
-		"Image": "obne-pardner-fuzz-white.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -36377,6 +36454,13 @@
 		"Width": 4.7,
 		"Height": 3.86,
 		"Image": "obne-signalblender.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Signal Blender Stereo",
+		"Width": 5.5,
+		"Height": 4.67,
+		"Image": "obne-signalblender-stereo.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -46587,6 +46671,13 @@
 	},
 	{
 		"Brand": "ThorpyFX",
+		"Name": "Peace2keeper",
+		"Width": 2.76,
+		"Height": 4.89,
+		"Image": "thorpy-peace2keeper.png"
+	},
+	{
+		"Brand": "ThorpyFX",
 		"Name": "Peacekeeper",
 		"Width": 2.76,
 		"Height": 4.89,
@@ -50322,6 +50413,20 @@
 		"Width": 4.67,
 		"Height": 3.75,
 		"Image": "walrus-warhorn-ages-dual-drive.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Xero Poly Looper",
+		"Width": 3.95,
+		"Height": 4.7,
+		"Image": "walrus-xero-poly-looper.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Xero Poly Looper (Black)",
+		"Width": 3.95,
+		"Height": 4.7,
+		"Image": "walrus-xero-poly-looper-black.png"
 	},
 	{
 		"Brand": "Wampler",

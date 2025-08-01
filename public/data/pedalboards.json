@@ -1351,6 +1351,76 @@
 		"Image": "stompbox-ex-portable-20.png"
 	},
 	{
+		"Brand": "STRITCH",
+		"Name": "MAX 18",
+		"Width": 18.11,
+		"Height": 17.72,
+		"Image": "stritch-max-18.png"
+	},
+	{
+		"Brand": "STRITCH",
+		"Name": "MAX 22",
+		"Width": 22.05,
+		"Height": 17.72,
+		"Image": "stritch-max-22.png"
+	},
+	{
+		"Brand": "STRITCH",
+		"Name": "MINI 15",
+		"Width": 14.96,
+		"Height": 5.7,
+		"Image": "stritch-mini-15.png"
+	},
+	{
+		"Brand": "STRITCH",
+		"Name": "MINI+ 15",
+		"Width": 14.96,
+		"Height": 8.66,
+		"Image": "stritch-mini-plus-15.png"
+	},
+	{
+		"Brand": "STRITCH",
+		"Name": "MINI+ 22",
+		"Width": 22.05,
+		"Height": 8.66,
+		"Image": "stritch-mini-plus-22.png"
+	},
+	{
+		"Brand": "STRITCH",
+		"Name": "STANDARD 15",
+		"Width": 14.96,
+		"Height": 11.81,
+		"Image": "stritch-standard-15.png"
+	},
+	{
+		"Brand": "STRITCH",
+		"Name": "STANDARD 18",
+		"Width": 18.11,
+		"Height": 12.6,
+		"Image": "stritch-standard-18.png"
+	},
+	{
+		"Brand": "STRITCH",
+		"Name": "STANDARD 22",
+		"Width": 22.05,
+		"Height": 12.6,
+		"Image": "stritch-standard-22.png"
+	},
+	{
+		"Brand": "STRITCH",
+		"Name": "STANDARD 25",
+		"Width": 25,
+		"Height": 12.6,
+		"Image": "stritch-standard-25.png"
+	},
+	{
+		"Brand": "STRITCH",
+		"Name": "STANDARD 28",
+		"Width": 27.95,
+		"Height": 13.78,
+		"Image": "stritch-standard-28.png"
+	},
+	{
 		"Brand": "Templeboards",
 		"Name": "Duo 17",
 		"Width": 17,
