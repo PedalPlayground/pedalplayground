@@ -7044,15 +7044,15 @@
 	{
 		"Brand": "Carl Martin",
 		"Name": "Octa-Switch MK3",
-		"Width": 12.23,
-		"Height": 6,
+		"Width": 12.24,
+		"Height": 5.81,
 		"Image": "carl-martin-octa-mk3.png"
 	},
 	{
 		"Brand": "Carl Martin",
 		"Name": "Octa-Switch The Strip",
-		"Width": 22.8346,
-		"Height": 3.34646,
+		"Width": 22.83,
+		"Height": 3.39,
 		"Image": "carl-martin-octa-strip.png"
 	},
 	{
@@ -13609,6 +13609,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Fuzz Master General (Legacy Reissue)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-fuzz-master-general-ri.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Gary",
 		"Width": 2.7,
 		"Height": 4.94,
@@ -17827,6 +17834,13 @@
 		"Width": 1.71,
 		"Height": 3.7,
 		"Image": "fortin-fuzz.png"
+	},
+	{
+		"Brand": "Fortin",
+		"Name": "Kali",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "fortin-kali.png"
 	},
 	{
 		"Brand": "Fortin",
