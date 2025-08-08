@@ -2583,6 +2583,13 @@
 		"Image": "arion-smm1.png"
 	},
 	{
+		"Brand": "Artec",
+		"Name": "Parametric EQ",
+		"Width": 3.12,
+		"Height": 4.84,
+		"Image": "artec-se-peq.png"
+	},
+	{
 		"Brand": "Arturia",
 		"Name": "KeyStep",
 		"Width": 19,
@@ -7044,15 +7051,15 @@
 	{
 		"Brand": "Carl Martin",
 		"Name": "Octa-Switch MK3",
-		"Width": 12.23,
-		"Height": 6,
+		"Width": 12.24,
+		"Height": 5.81,
 		"Image": "carl-martin-octa-mk3.png"
 	},
 	{
 		"Brand": "Carl Martin",
 		"Name": "Octa-Switch The Strip",
-		"Width": 22.8346,
-		"Height": 3.34646,
+		"Width": 22.83,
+		"Height": 3.39,
 		"Image": "carl-martin-octa-strip.png"
 	},
 	{
@@ -12433,6 +12440,13 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
+		"Name": "Echo Machine EM-1",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-echo-machine-em1.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
 		"Name": "Fat Bat",
 		"Width": 2.6,
 		"Height": 4.9,
@@ -12444,6 +12458,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "drunk-beaver-fet-overbooster.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Fluff",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "drunk-beaver-fluff.png"
 	},
 	{
 		"Brand": "Drunk Beaver",
@@ -12486,6 +12507,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "drunk-beaver-moon-metal.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Over Drive OD-1",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-over-drive-od1.png"
 	},
 	{
 		"Brand": "Drunk Beaver",
@@ -13606,6 +13634,13 @@
 		"Width": 2.6,
 		"Height": 5.02,
 		"Image": "earthquaker-fuzz-master-general.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Fuzz Master General (Legacy Reissue)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "earthquaker-fuzz-master-general-ri.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -17830,6 +17865,13 @@
 	},
 	{
 		"Brand": "Fortin",
+		"Name": "Kali",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "fortin-kali.png"
+	},
+	{
+		"Brand": "Fortin",
 		"Name": "Meshuggah PreAmp",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -17911,6 +17953,13 @@
 		"Width": 5,
 		"Height": 3.68,
 		"Image": "foxgear-m-1959.png"
+	},
+	{
+		"Brand": "Foxgear",
+		"Name": "Qboost",
+		"Width": 2.36,
+		"Height": 4.84,
+		"Image": "foxgear-qboost.png"
 	},
 	{
 		"Brand": "Foxgear",
@@ -36114,6 +36163,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Dark Star Stereo (Blue Raspberry)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-dark-star-stereo-blue-raspberry.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Dark Star Stereo (Pink)",
 		"Width": 4.25,
 		"Height": 4.56,
@@ -38316,6 +38372,20 @@
 		"Width": 2.81,
 		"Height": 4.5,
 		"Image": "pedal-pawn-texas-twang.png"
+	},
+	{
+		"Brand": "Pedalnetics",
+		"Name": "Helauxy Duo Midi V2",
+		"Width": 3.19,
+		"Height": 1.5,
+		"Image": "pedalnetics-helauxy-duo-midi-v2.png"
+	},
+	{
+		"Brand": "Pedalnetics",
+		"Name": "Helauxy Duo Pro",
+		"Width": 3.19,
+		"Height": 1.5,
+		"Image": "pedalnetics-helauxy-duo-pro.png"
 	},
 	{
 		"Brand": "Pedaltank",
@@ -42761,6 +42831,13 @@
 		"Width": 2.7,
 		"Height": 5.85,
 		"Image": "sonicake-vexpress.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "VolWah",
+		"Width": 2.7,
+		"Height": 5.85,
+		"Image": "sonicake-volwah.png"
 	},
 	{
 		"Brand": "Sonicake",
