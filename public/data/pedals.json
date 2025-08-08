@@ -12440,6 +12440,13 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
+		"Name": "Echo Machine EM-1",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-echo-machine-em1.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
 		"Name": "Fat Bat",
 		"Width": 2.6,
 		"Height": 4.9,
@@ -12451,6 +12458,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "drunk-beaver-fet-overbooster.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Fluff",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "drunk-beaver-fluff.png"
 	},
 	{
 		"Brand": "Drunk Beaver",
@@ -12493,6 +12507,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "drunk-beaver-moon-metal.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
+		"Name": "Over Drive OD-1",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-over-drive-od1.png"
 	},
 	{
 		"Brand": "Drunk Beaver",
@@ -38344,6 +38365,20 @@
 		"Width": 2.81,
 		"Height": 4.5,
 		"Image": "pedal-pawn-texas-twang.png"
+	},
+	{
+		"Brand": "Pedalnetics",
+		"Name": "Helauxy Duo Midi V2",
+		"Width": 3.19,
+		"Height": 1.5,
+		"Image": "pedalnetics-helauxy-duo-midi-v2.png"
+	},
+	{
+		"Brand": "Pedalnetics",
+		"Name": "Helauxy Duo Pro",
+		"Width": 3.19,
+		"Height": 1.5,
+		"Image": "pedalnetics-helauxy-duo-pro.png"
 	},
 	{
 		"Brand": "Pedaltank",
