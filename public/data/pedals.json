@@ -2583,6 +2583,13 @@
 		"Image": "arion-smm1.png"
 	},
 	{
+		"Brand": "Artec",
+		"Name": "Parametric EQ",
+		"Width": 3.12,
+		"Height": 4.84,
+		"Image": "artec-se-peq.png"
+	},
+	{
 		"Brand": "Arturia",
 		"Name": "KeyStep",
 		"Width": 19,
@@ -17925,6 +17932,13 @@
 		"Width": 5,
 		"Height": 3.68,
 		"Image": "foxgear-m-1959.png"
+	},
+	{
+		"Brand": "Foxgear",
+		"Name": "Qboost",
+		"Width": 2.36,
+		"Height": 4.84,
+		"Image": "foxgear-qboost.png"
 	},
 	{
 		"Brand": "Foxgear",
@@ -42775,6 +42789,13 @@
 		"Width": 2.7,
 		"Height": 5.85,
 		"Image": "sonicake-vexpress.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "VolWah",
+		"Width": 2.7,
+		"Height": 5.85,
+		"Image": "sonicake-volwah.png"
 	},
 	{
 		"Brand": "Sonicake",
