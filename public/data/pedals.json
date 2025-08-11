@@ -24683,6 +24683,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "424 Gain Stage",
+		"Width": 2.66,
+		"Height": 5.01,
+		"Image": "jhs-424-gain-stage.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Prestige",
 		"Width": 1.82,
 		"Height": 3.8,
