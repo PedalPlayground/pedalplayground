@@ -1212,6 +1212,13 @@
 	},
 	{
 		"Brand": "Rockboard by Warwick",
+		"Name": "Cinque 5.3 MAX",
+		"Width": 32.86,
+		"Height": 19.91,
+		"Image": "rockboard-cinque-53-max.png"
+	},
+	{
+		"Brand": "Rockboard by Warwick",
 		"Name": "Cinque 5.4",
 		"Width": 39.5,
 		"Height": 16.7,
