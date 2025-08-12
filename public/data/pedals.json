@@ -32488,6 +32488,13 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Beta Ultra",
+		"Width": 4.75,
+		"Height": 3.91,
+		"Image": "mosky-beta-ultra.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "Big Fuzz",
 		"Width": 2.6,
 		"Height": 5,
@@ -32530,6 +32537,13 @@
 	},
 	{
 		"Brand": "Mosky",
+		"Name": "Bright Flame",
+		"Width": 4.8,
+		"Height": 3.11,
+		"Image": "mosky-bright-flame.png"
+	},
+	{
+		"Brand": "Mosky",
 		"Name": "CE Chorus",
 		"Width": 1.84,
 		"Height": 3.66,
@@ -32548,6 +32562,13 @@
 		"Width": 2.71,
 		"Height": 4.53,
 		"Image": "mosky-classic-ac30-speaker-sim.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Classic Bass Preamp",
+		"Width": 4.75,
+		"Height": 3.91,
+		"Image": "mosky-classic-bass-preamp.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -32695,6 +32716,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "mosky-green-screamer.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Headphone Amp",
+		"Width": 1.77,
+		"Height": 3.66,
+		"Image": "mosky-headphone-amp.png"
 	},
 	{
 		"Brand": "Mosky",
@@ -32870,6 +32898,13 @@
 		"Width": 1.84,
 		"Height": 3.66,
 		"Image": "mosky-spring-reverb.png"
+	},
+	{
+		"Brand": "Mosky",
+		"Name": "Super Amp",
+		"Width": 4.75,
+		"Height": 3.91,
+		"Image": "mosky-super-amp.png"
 	},
 	{
 		"Brand": "Mosky",
