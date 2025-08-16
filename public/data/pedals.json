@@ -51536,6 +51536,20 @@
 	},
 	{
 		"Brand": "Wren And Cuff",
+		"Name": "Fade Font",
+		"Width": 4.69,
+		"Height": 6.35,
+		"Image": "wrenandcuff-fade-font.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Forest for the Trees",
+		"Width": 3.92,
+		"Height": 4.7,
+		"Image": "wrenandcuff-forest-for-the-trees.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
 		"Name": "Gold Comp Compressor",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -51554,6 +51568,13 @@
 		"Width": 2.71,
 		"Height": 4.77,
 		"Image": "wrenandcuff-mk2-germanium-bender-v2.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "Phat Phuk B",
+		"Width": 2.73,
+		"Height": 4.5,
+		"Image": "wrenandcuff-phat-phuk-b.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
