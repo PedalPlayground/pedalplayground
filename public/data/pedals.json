@@ -4565,6 +4565,13 @@
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
+		"Name": "Brashmaster",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-brashmaster.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
 		"Name": "Buzzaround",
 		"Width": 2.6,
 		"Height": 5,
@@ -4719,6 +4726,13 @@
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
+		"Name": "TNYDUMBLE",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-tnydumble.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
 		"Name": "Tomb Sender",
 		"Width": 2.6,
 		"Height": 5,
@@ -4744,6 +4758,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "blammo-voltage-booster.png"
+	},
+	{
+		"Brand": "BLAMMO! Electronics",
+		"Name": "Utility Boost",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "blammo-utility-boost.png"
 	},
 	{
 		"Brand": "BLAMMO! Electronics",
@@ -10533,6 +10554,20 @@
 		"Width": 4.72,
 		"Height": 5.87,
 		"Image": "deathbyaudio-apocalypse.png"
+	},
+	{
+		"Brand": "Death By Audio",
+		"Name": "Crossover Fuzz",
+		"Width": 5.02,
+		"Height": 5.7,
+		"Image": "deathbyaudio-crossover-fuzz.png"
+	},
+	{
+		"Brand": "Death By Audio",
+		"Name": "Crossover Fuzz (White)",
+		"Width": 5.02,
+		"Height": 5.7,
+		"Image": "deathbyaudio-crossover-fuzz-white.png"
 	},
 	{
 		"Brand": "Death By Audio",
