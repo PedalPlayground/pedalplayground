@@ -8344,6 +8344,13 @@
 		"Image": "champion-leccy-the-woozy-red.png"
 	},
 	{
+		"Brand": "Chaos Audio",
+		"Name": "Stratus",
+		"Width": 2.96,
+		"Height": 5.5,
+		"Image": "chaos-audio-stratus.png"
+	},
+	{
 		"Brand": "Chase Tone",
 		"Name": "68 Red Velvet Fuzz",
 		"Width": 2.34,
@@ -19103,6 +19110,13 @@
 		"Image": "fuchs-royal-plush-compressor.png"
 	},
 	{
+		"Brand": "Fuhrmann",
+		"Name": "Compressor",
+		"Width": 2.81,
+		"Height": 4.33,
+		"Image": "fuhrmann-compressor.png"
+	},
+	{
 		"Brand": "Fulltone",
 		"Name": "2B",
 		"Width": 2.19,
@@ -22972,6 +22986,13 @@
 		"Width": 2.6,
 		"Height": 5.01,
 		"Image": "iam-octonaut.png"
+	},
+	{
+		"Brand": "Irin Instrument",
+		"Name": "Talent Octave",
+		"Width": 1.94,
+		"Height": 3.62,
+		"Image": "irin-talent-octave.png"
 	},
 	{
 		"Brand": "Iron Ether",
@@ -42834,6 +42855,20 @@
 	},
 	{
 		"Brand": "Sonicake",
+		"Name": "Matribox II",
+		"Width": 10.87,
+		"Height": 6.36,
+		"Image": "sonicake-matribox-2.png"
+	},
+	{
+		"Brand": "Sonicake",
+		"Name": "Matribox II Pro",
+		"Width": 14.69,
+		"Height": 7.6,
+		"Image": "sonicake-matribox-2-pro.png"
+	},
+	{
+		"Brand": "Sonicake",
 		"Name": "Noise Wiper",
 		"Width": 1.66,
 		"Height": 3.78,
@@ -43636,6 +43671,13 @@
 		"Width": 2.6,
 		"Height": 5.07,
 		"Image": "spruce-effects-the-gale.png"
+	},
+	{
+		"Brand": "Stax",
+		"Name": "Loop Station",
+		"Width": 1.72,
+		"Height": 3,
+		"Image": "stax-loop-station.png"
 	},
 	{
 		"Brand": "Step Audio",
