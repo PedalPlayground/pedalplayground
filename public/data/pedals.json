@@ -34973,6 +34973,13 @@
 	},
 	{
 		"Brand": "Nordvang",
+		"Name": "Gravity v2.5",
+		"Width": 5.7,
+		"Height": 4.9,
+		"Image": "nordvang-gravity-25.png"
+	},
+	{
+		"Brand": "Nordvang",
 		"Name": "Mid Air",
 		"Width": 3.03,
 		"Height": 4.76,
@@ -34996,7 +35003,7 @@
 		"Brand": "Nordvang",
 		"Name": "Triple Gain",
 		"Width": 7.4,
-		"Height": 4.72,
+		"Height": 4.83,
 		"Image": "nordvang-triple-gain.png"
 	},
 	{
