@@ -43680,6 +43680,13 @@
 		"Image": "spruce-effects-the-gale.png"
 	},
 	{
+		"Brand": "Static Effectors",
+		"Name": "Purple Glaze",
+		"Width": 3.15,
+		"Height": 4.99,
+		"Image": "static-effectors-purple-glaze.png"
+	},
+	{
 		"Brand": "Stax",
 		"Name": "Loop Station",
 		"Width": 1.72,
