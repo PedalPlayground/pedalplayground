@@ -6173,12 +6173,13 @@
 		"Height": 7.5625,
 		"Image": "boss-pw3.png"
 	},
+
 	{
 		"Brand": "BOSS",
-		"Name": "RC-1 Loop Station",
+		"Name": "PX-1 Plugout FX",
 		"Width": 2.875,
-		"Height": 5.125,
-		"Image": "boss-rc1.png"
+		"Height": 5.03,
+		"Image": "boss-px1.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -29394,6 +29395,13 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Deep Blue Delay (Handwired 2025)",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "mad-professor-deep-blue-hw-2025.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Dual Blue Delay",
 		"Width": 4.7,
 		"Height": 3.83,
@@ -29534,6 +29542,13 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Royal Blue Overdrive (Handwired 2025)",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "mad-professor-royal-blue-hw-2025.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Ruby Red Booster",
 		"Width": 2.62,
 		"Height": 4.5,
@@ -29622,6 +29637,13 @@
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-sweet-honey-hw.png"
+	},
+	{
+		"Brand": "Mad Professor",
+		"Name": "Sweet Honey Overdrive (Handwired 2025)",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "mad-professor-sweet-honey-hw-2025.png"
 	},
 	{
 		"Brand": "Mad Professor",
