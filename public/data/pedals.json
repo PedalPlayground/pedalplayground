@@ -17767,6 +17767,27 @@
 		"Image": "flamma-fx100.png"
 	},
 	{
+		"Brand": "Floating Forest",
+		"Name": "Dream Eater",
+		"Width": 1.9,
+		"Height": 3.94,
+		"Image": "floating-forest-dream-eater.png"
+	},
+	{
+		"Brand": "Floating Forest",
+		"Name": "Dream Eater Deluxe",
+		"Width": 4.27,
+		"Height": 4.97,
+		"Image": "floating-forest-dream-eater-deluxe.png"
+	},
+	{
+		"Brand": "Floating Forest",
+		"Name": "The Drifter Delay",
+		"Width": 5.21,
+		"Height": 3.92,
+		"Image": "floating-forest-the-drifter-delay.png"
+	},
+	{
 		"Brand": "Flower Pedals",
 		"Name": "Castilleja",
 		"Width": 2.73,
