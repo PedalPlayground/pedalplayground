@@ -617,6 +617,13 @@
 	},
 	{
 		"Brand": "Aion FX",
+		"Name": "Azure",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "aion-azure.png"
+	},
+	{
+		"Brand": "Aion FX",
 		"Name": "Cerulean",
 		"Width": 2.6,
 		"Height": 4.97,
@@ -6628,6 +6635,13 @@
 		"Width": 3.7,
 		"Height": 2.14,
 		"Image": "broughton-hpf-ao.png"
+	},
+	{
+		"Brand": "Broughton",
+		"Name": "Josh Wah",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "broughton-josh-wah.png"
 	},
 	{
 		"Brand": "Broughton",
