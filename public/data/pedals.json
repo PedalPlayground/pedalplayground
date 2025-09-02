@@ -18391,10 +18391,38 @@
 	},
 	{
 		"Brand": "Free The Tone",
+		"Name": "12-Digit LED Display LDP-1",
+		"Width": 9.45,
+		"Height": 2.13,
+		"Image": "free-the-tone-ldp1.png"
+	},
+	{
+		"Brand": "Free The Tone",
 		"Name": "Ambi Space AS-1R",
 		"Width": 4.72,
 		"Height": 4,
 		"Image": "free-the-tone-ambi-space.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Audio Routing Controller ARC-3",
+		"Width": 17.56,
+		"Height": 5.4,
+		"Image": "free-the-tone-arc-3.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Audio Routing Controller ARC-4",
+		"Width": 15.2,
+		"Height": 6.04,
+		"Image": "free-the-tone-arc-4.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Audio Routing Controller ARC-53M",
+		"Width": 12.99,
+		"Height": 3.63,
+		"Image": "free-the-tone-arc-53m.png"
 	},
 	{
 		"Brand": "Free The Tone",
@@ -18423,6 +18451,13 @@
 		"Width": 3.55,
 		"Height": 9.69,
 		"Image": "freethetone-dvl1.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "External Footswitch EFS-3",
+		"Width": 4.33,
+		"Height": 4.23,
+		"Image": "freethetone-efs3.png"
 	},
 	{
 		"Brand": "Free The Tone",
@@ -18482,6 +18517,13 @@
 	},
 	{
 		"Brand": "Free The Tone",
+		"Name": "Midi Controller MC-3",
+		"Width": 4.72,
+		"Height": 3.74,
+		"Image": "freethetone-mc3.png"
+	},
+	{
+		"Brand": "Free The Tone",
 		"Name": "Motion Loop ML-1L",
 		"Width": 2.61,
 		"Height": 4.66,
@@ -18503,7 +18545,14 @@
 	},
 	{
 		"Brand": "Free The Tone",
-		"Name": "PHV-1",
+		"Name": "Phase Analyzer PHA-1",
+		"Width": 4.33,
+		"Height": 2.07,
+		"Image": "freethetone-pha1.png"
+	},
+	{
+		"Brand": "Free The Tone",
+		"Name": "Phase Inverter PHV-1",
 		"Width": 3.68,
 		"Height": 2.07,
 		"Image": "freethetone-phv1.png"
@@ -41110,6 +41159,13 @@
 		"Width": 2.6,
 		"Height": 4.95,
 		"Image": "rudetech-dude-alert.png"
+	},
+	{
+		"Brand": "Rude Tech",
+		"Name": "Falcondrive",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "rudetech-falcondrive.png"
 	},
 	{
 		"Brand": "RYRA",
