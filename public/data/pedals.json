@@ -44552,8 +44552,15 @@
 		"Brand": "Suhr",
 		"Name": "Discovery Analog Delay",
 		"Width": 4,
-		"Height": 5.33,
+		"Height": 5.09,
 		"Image": "suhr-discovery.png"
+	},
+	{
+		"Brand": "Suhr",
+		"Name": "Discovery Analog Delay (Black)",
+		"Width": 4,
+		"Height": 5.09,
+		"Image": "suhr-discovery-black.png"
 	},
 	{
 		"Brand": "Suhr",
