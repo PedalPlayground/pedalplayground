@@ -1128,6 +1128,13 @@
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Space Panner",
+		"Width": 2.6,
+		"Height": 5.07,
+		"Image": "alexander-space-panner.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Space Race",
 		"Width": 2.89,
 		"Height": 4.88,
@@ -36327,8 +36334,15 @@
 		"Brand": "OBNE",
 		"Name": "Dark Light",
 		"Width": 5.7,
-		"Height": 3.84,
+		"Height": 3.8,
 		"Image": "obne-dark-light.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Dark Light (Blueberry Dusk)",
+		"Width": 5.7,
+		"Height": 3.8,
+		"Image": "obne-dark-light-blueberry.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -36455,6 +36469,13 @@
 		"Width": 1.69,
 		"Height": 3.88,
 		"Image": "obne-ramper-dark-light.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Expression Ramper (Dark Light Blueberry Dusk)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-dark-light-blueberry.png"
 	},
 	{
 		"Brand": "OBNE",
@@ -44232,6 +44253,13 @@
 		"Width": 4,
 		"Height": 4.55,
 		"Image": "strymon-orbit.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "PCH",
+		"Width": 4.88,
+		"Height": 3.01,
+		"Image": "strymon-pch.png"
 	},
 	{
 		"Brand": "Strymon",
