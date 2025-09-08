@@ -34218,6 +34218,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Randy Rhoads Distortion+ (Special Edition)",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-rr104c.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Raw Dog",
 		"Width": 1.74,
 		"Height": 3.7,
@@ -49077,6 +49084,34 @@
 		"Width": 8.96,
 		"Height": 5.66,
 		"Image": "victory-v4-the-sheriff-preamp.png"
+	},
+	{
+		"Brand": "Virtues",
+		"Name": "Arca",
+		"Width": 2.67,
+		"Height": 4.41,
+		"Image": "virtues-arca.png"
+	},
+	{
+		"Brand": "Virtues",
+		"Name": "Lander",
+		"Width": 2.67,
+		"Height": 4.41,
+		"Image": "virtues-lander.png"
+	},
+	{
+		"Brand": "Virtues",
+		"Name": "Monica",
+		"Width": 2.67,
+		"Height": 4.41,
+		"Image": "virtues-monica.png"
+	},
+	{
+		"Brand": "Virtues",
+		"Name": "Stella",
+		"Width": 2.67,
+		"Height": 4.41,
+		"Image": "virtues-stella.png"
 	},
 	{
 		"Brand": "Visual Sound",
