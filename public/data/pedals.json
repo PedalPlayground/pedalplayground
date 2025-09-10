@@ -4362,6 +4362,13 @@
 	},
 	{
 		"Brand": "Black Mountain",
+		"Name": "Roto Echo",
+		"Width": 3.89,
+		"Height": 5.36,
+		"Image": "black-mountain-roto-echo.png"
+	},
+	{
+		"Brand": "Black Mountain",
 		"Name": "Volume",
 		"Width": 3.64,
 		"Height": 6,
@@ -4972,21 +4979,28 @@
 	{
 		"Brand": "Bogner",
 		"Name": "Burnley",
-		"Width": 2.85,
+		"Width": 2.61,
 		"Height": 4.75,
 		"Image": "bogner-burnley.png"
 	},
 	{
 		"Brand": "Bogner",
+		"Name": "Burnley V2",
+		"Width": 2.98,
+		"Height": 4.75,
+		"Image": "bogner-burnley-v2.png"
+	},
+	{
+		"Brand": "Bogner",
 		"Name": "Ecstasy Blue",
 		"Width": 5.25,
-		"Height": 3.75,
+		"Height": 3.91,
 		"Image": "bogner-blue.png"
 	},
 	{
 		"Brand": "Bogner",
-		"Name": "Ecstasy Blue mini",
-		"Width": 2.86,
+		"Name": "Ecstasy Blue Mini",
+		"Width": 2.76,
 		"Height": 4,
 		"Image": "bogner-ecstasy-blue-mini.png"
 	},
@@ -4994,43 +5008,57 @@
 		"Brand": "Bogner",
 		"Name": "Ecstasy Red",
 		"Width": 5.25,
-		"Height": 3.75,
+		"Height": 3.91,
 		"Image": "bogner-red.png"
 	},
 	{
 		"Brand": "Bogner",
-		"Name": "Ecstasy Red mini",
-		"Width": 3.85,
-		"Height": 5.25,
+		"Name": "Ecstasy Red Mini",
+		"Width": 2.76,
+		"Height": 4,
 		"Image": "bogner-ecstasy-red-mini.png"
 	},
 	{
 		"Brand": "Bogner",
 		"Name": "Harlow",
-		"Width": 2.85,
+		"Width": 2.61,
 		"Height": 4.75,
 		"Image": "bogner-harlow.png"
 	},
 	{
 		"Brand": "Bogner",
+		"Name": "Harlow V2",
+		"Width": 2.98,
+		"Height": 4.75,
+		"Image": "bogner-harlow-v2.png"
+	},
+	{
+		"Brand": "Bogner",
 		"Name": "La Grange",
 		"Width": 5.25,
-		"Height": 3.75,
+		"Height": 3.91,
 		"Image": "bogner-lagrange.png"
 	},
 	{
 		"Brand": "Bogner",
 		"Name": "Uberschall",
 		"Width": 5.25,
-		"Height": 3.75,
+		"Height": 3.91,
 		"Image": "bogner-uberschall.png"
 	},
 	{
 		"Brand": "Bogner",
 		"Name": "Wessex",
-		"Width": 2.623,
-		"Height": 4.78,
+		"Width": 2.61,
+		"Height": 4.75,
 		"Image": "bogner-wessex.png"
+	},
+	{
+		"Brand": "Bogner",
+		"Name": "Wessex V2",
+		"Width": 2.98,
+		"Height": 4.75,
+		"Image": "bogner-wessex-v2.png"
 	},
 	{
 		"Brand": "Bondi Effects",
