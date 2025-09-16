@@ -1898,6 +1898,13 @@
 	},
 	{
 		"Brand": "Anasounds",
+		"Name": "Utopia MK2",
+		"Width": 2.52,
+		"Height": 4.91,
+		"Image": "anasounds-utopia-mk2.png"
+	},
+	{
+		"Brand": "Anasounds",
 		"Name": "Utopia Deluxe",
 		"Width": 3.7,
 		"Height": 4.96,
@@ -7475,6 +7482,13 @@
 		"Width": 3.7,
 		"Height": 4.89,
 		"Image": "caroline-the-blues.png"
+	},
+	{
+		"Brand": "Caroline",
+		"Name": "Tomato Pie",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "caroline-tomato-pie.png"
 	},
 	{
 		"Brand": "Caroline",
@@ -17495,6 +17509,13 @@
 	},
 	{
 		"Brand": "Fjord Fuzz",
+		"Name": "Bjørn",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-bjorn.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
 		"Name": "Dovre",
 		"Width": 2.52,
 		"Height": 4.78,
@@ -17513,6 +17534,14 @@
 		"Width": 2.52,
 		"Height": 4.78,
 		"Image": "fjord-embla.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "
+		",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-fjaer.png"
 	},
 	{
 		"Brand": "Fjord Fuzz",
@@ -17611,6 +17640,13 @@
 		"Width": 2.52,
 		"Height": 4.78,
 		"Image": "fjord-sol.png"
+	},
+	{
+		"Brand": "Fjord Fuzz",
+		"Name": "Thor",
+		"Width": 2.52,
+		"Height": 4.78,
+		"Image": "fjord-thor.png"
 	},
 	{
 		"Brand": "Flamma",
@@ -43214,21 +43250,21 @@
 	{
 		"Brand": "Source Audio",
 		"Name": "Aftershock",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-aftershock-bass-distortion.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Artifakt",
-		"Width": 2.9,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-artifakt.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Atlas",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-atlas.png"
 	},
@@ -43242,7 +43278,7 @@
 	{
 		"Brand": "Source Audio",
 		"Name": "C4 Synth",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-c4.png"
 	},
@@ -43255,50 +43291,57 @@
 	},
 	{
 		"Brand": "Source Audio",
+		"Name": "Encounter",
+		"Width": 4.53,
+		"Height": 4.5,
+		"Image": "source-audio-encounter.png"
+	},
+	{
+		"Brand": "Source Audio",
 		"Name": "EQ2",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-eq2.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Gemini",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-gemini.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Kingmaker",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-kingmaker.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "LA Lady",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-la-lady.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Lunar",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-lunar.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Mercury",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-mercury.png"
 	},
 	{
 		"Brand": "Source Audio",
 		"Name": "Nemesis",
-		"Width": 4.57,
+		"Width": 4.53,
 		"Height": 4.5,
 		"Image": "source-audio-nemesis.png"
 	},
@@ -43438,7 +43481,7 @@
 	{
 		"Brand": "Source Audio",
 		"Name": "Spectrum",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-spectrum.png"
 	},
@@ -43452,23 +43495,23 @@
 	{
 		"Brand": "Source Audio",
 		"Name": "True Spring",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-true-spring.png"
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Ultrawave (Bass)",
-		"Width": 2.94,
+		"Name": "Ultrawave",
+		"Width": 2.88,
 		"Height": 4.5,
-		"Image": "source-audio-ultrawave-bass.png"
+		"Image": "source-audio-ultrawave.png"
 	},
 	{
 		"Brand": "Source Audio",
-		"Name": "Ultrawave (Guitar)",
-		"Width": 2.94,
+		"Name": "Ultrawave (Bass)",
+		"Width": 2.88,
 		"Height": 4.5,
-		"Image": "source-audio-ultrawave.png"
+		"Image": "source-audio-ultrawave-bass.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -43480,7 +43523,7 @@
 	{
 		"Brand": "Source Audio",
 		"Name": "Vertigo",
-		"Width": 2.94,
+		"Width": 2.88,
 		"Height": 4.5,
 		"Image": "source-audio-vertigo.png"
 	},
@@ -48134,6 +48177,27 @@
 		"Image": "twonotes-torpedocabmplus.png"
 	},
 	{
+		"Brand": "Umbrella Company",
+		"Name": "#24 Distortion",
+		"Width": 2.8,
+		"Height": 5.05,
+		"Image": "umbrella-company-24-distortion.png"
+	},
+	{
+		"Brand": "Umbrella Company",
+		"Name": "Hitchhike Drive",
+		"Width": 2.8,
+		"Height": 5.05,
+		"Image": "umbrella-company-hitchhike-drive.png"
+	},
+	{
+		"Brand": "Umbrella Company",
+		"Name": "Mayonaise Fuzz",
+		"Width": 2.8,
+		"Height": 5.05,
+		"Image": "umbrella-company-mayonaise-fuzz.png"
+	},
+	{
 		"Brand": "Union Tube & Transistor",
 		"Name": "Beelzebuzz",
 		"Width": 3.7,
@@ -50505,6 +50569,13 @@
 		"Width": 4.67,
 		"Height": 3.77,
 		"Image": "walrus-luminary-v2.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Lüm",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "walrus-lum.png"
 	},
 	{
 		"Brand": "Walrus Audio",
