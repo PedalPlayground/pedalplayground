@@ -58,6 +58,10 @@ $(document).ready(function () {
 		convertUnits();
 	});
 
+	$("#toggle-search").on("change", function() {
+		toggleSearch();
+	})
+
 	// When user changes scale, update stuffs
 	$("#canvas-scale").change(function () {
 		// update var
@@ -631,6 +635,11 @@ function convertUnits() {
 	}
 }
 
+function toggleSearch() {
+	if ($('#toggle-search').is(':checked')) {
+	} else {
+	}
+}
 
 window.Pedal = function (type, brand, name, width, height, image) {
 	this.Type = type || "";
