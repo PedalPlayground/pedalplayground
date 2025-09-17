@@ -1,23 +1,35 @@
+# MacOS files
 .DS_Store
-.vscode/
+
+# Windows files
 Thumbs.db
+*.ini
+app/images/desktop.ini
+app/images/pedals/desktop.ini
+
+# Editor/IDE files
+.vscode/
+config.codekit3
+
+# Dependency directories
 bower_components/
 node_modules/
+
+# Build directories
 workfiles/
 app/scss/.sass-cache/*
+
+# Aliases and symlinks
 pedals alias
 pedals-new alias
-config.codekit3
+app/images/pedals/.pedals-public.lnk
+public/images/pedals/.pedals-app.lnk
+cmd.lnk
+app/images/pedals/.public.lnk
+public/images/pedals/.app.lnk
+
+# Build scripts
 0_pre
 1_post
 _post
 _pre
-app/images/pedals/.pedals-public.lnk
-public/images/pedals/.pedals-app.lnk
-cmd.lnk
-app/images/desktop.ini
-app/images/pedals/desktop.ini
-app/images/pedals/desktop.ini
-*.ini
-app/images/pedals/.public.lnk
-public/images/pedals/.app.lnk
