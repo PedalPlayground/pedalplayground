@@ -2,6 +2,7 @@
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV",
+		"Effect": "Distortion",
 		"Width": 3.7,
 		"Height": 4.58,
 		"Image": "1981-inventions-drv.png"
@@ -5252,6 +5253,7 @@
 	{
 		"Brand": "BOSS",
 		"Name": "CE-2 Chorus",
+		"Effect": "Chorus",
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-ce2.png"
@@ -5364,6 +5366,7 @@
 	{
 		"Brand": "BOSS",
 		"Name": "DD-20 Giga Delay",
+		"Effect": "Delay",
 		"Width": 6.8125,
 		"Height": 6.25,
 		"Image": "boss-dd20.png"
@@ -10474,6 +10477,7 @@
 	{
 		"Brand": "Deadbeat Sound",
 		"Name": "Reverberation Station",
+		"Effect": "Reverb",
 		"Width": 5,
 		"Height": 5.75,
 		"Image": "deadbeat-reverberation-station.png"
@@ -50711,6 +50715,7 @@
 	{
 		"Brand": "Wampler",
 		"Name": "Ratsbane",
+		"Effect": "Distortion",
 		"Width": 1.81,
 		"Height": 3.7,
 		"Image": "wampler-ratsbane.png"

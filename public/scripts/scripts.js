@@ -655,6 +655,7 @@ window.GetPedalData = function () {
 					new Pedal(
 						data[pedal].Type || "",
 						data[pedal].Brand || "",
+						data[pedal].Effect || "",
 						data[pedal].Name || "",
 						data[pedal].Width || "",
 						data[pedal].Height || "",
