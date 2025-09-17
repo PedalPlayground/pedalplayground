@@ -15605,6 +15605,13 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Pico Swello",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-swello.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Pico Triboro Bridge",
 		"Width": 1.99,
 		"Height": 3.65,
@@ -19732,6 +19739,13 @@
 		"Width": 4.13,
 		"Height": 7.6,
 		"Image": "gamechanger-light.png"
+	},
+	{
+		"Brand": "Gamechanger Audio",
+		"Name": "Motor Pedal",
+		"Width": 4,
+		"Height": 7.17,
+		"Image": "gamechanger-motor-pedal.png"
 	},
 	{
 		"Brand": "Gamechanger Audio",
