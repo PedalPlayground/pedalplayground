@@ -42072,6 +42072,13 @@
 	},
 	{
 		"Brand": "Silktone",
+		"Name": "Expander",
+		"Width": 3.7,
+		"Height": 5.97,
+		"Image": "silktone-expander.png"
+	},
+	{
+		"Brand": "Silktone",
 		"Name": "Fuzz",
 		"Width": 4.7,
 		"Height": 3.75,
