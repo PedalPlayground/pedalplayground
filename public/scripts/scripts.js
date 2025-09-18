@@ -641,10 +641,11 @@ function toggleSearch() {
 	}
 }
 
-window.Pedal = function (type, brand, name, width, height, image) {
+window.Pedal = function (type, brand, name, effect, width, height, image) {
 	this.Type = type || "";
 	this.Brand = brand || "";
 	this.Name = name || "";
+	this.Effect = effect || "";
 	this.Width = width || "";
 	this.Height = height || "";
 	this.Image = image || "";
@@ -694,7 +695,7 @@ window.GetPedalData = function () {
 };
 
 window.RenderPedals = function (pedals) {
-	var { Type, Brand, Name, Width, Height, Image } = pedals;
+	var { Type, Brand, Name, Effect, Width, Height, Image } = pedals;
 	var option = $("<option>", {
 		text: `${Brand} ${Name}`,
 		// id: `${Name.toLowerCase().replace(/(\s+)|(['"])/g, (m, p1, p2) => p1 ? "-" : "")}`,
