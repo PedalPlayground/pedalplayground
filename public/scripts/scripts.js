@@ -673,7 +673,8 @@ window.GetPedalData = function () {
 					)
 				);
 			}
-			//Sort brands and pedals alphabetically
+
+			// Sort brands and pedals alphabetically
 			pedals.sort(function (a, b) {
 				if (a.Brand < b.Brand) {
 					return -1;
