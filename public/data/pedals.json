@@ -6568,27 +6568,6 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "WP-20G Wave Processor",
-		"Width": 6.8125,
-		"Height": 6.25,
-		"Image": "boss-wp20g.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "WL-50 Wireless System",
-		"Width": 2.875,
-		"Height": 5.125,
-		"Image": "boss-wl50.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "WL-60 Wireless System",
-		"Width": 2.75591,
-		"Height": 4.72441,
-		"Image": "boss-wl60.png"
-	},
-	{
-		"Brand": "BOSS",
 		"Name": "VB-2 Vibrato",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -6635,6 +6614,41 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-vo1.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "WP-20G Wave Processor",
+		"Width": 6.8125,
+		"Height": 6.25,
+		"Image": "boss-wp20g.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "WL-50 Wireless System",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-wl50.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "WL-60 Wireless System",
+		"Width": 2.75591,
+		"Height": 4.72441,
+		"Image": "boss-wl60.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "XS-1 Pitch Shifter",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-xs1.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "XS-100 Poly Shifter",
+		"Width": 5.79,
+		"Height": 8.87,
+		"Image": "boss-xs100.png"
 	},
 	{
 		"Brand": "Bright Onion",
