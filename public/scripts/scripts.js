@@ -660,16 +660,19 @@ window.GetPedalData = function () {
 		success: function (data) {
 			data = $.parseJSON(data.replace(/\r\n/g, "").replace(/\t/g, ""));
 			var pedals = [];
+
 			for (var pedal in data) {
+				var d = data[pedal];
+				
 				pedals.push(
 					new Pedal(
-						data[pedal].Type || "",
-						data[pedal].Brand || "",
-						data[pedal].Effect || "",
-						data[pedal].Name || "",
-						data[pedal].Width || "",
-						data[pedal].Height || "",
-						data[pedal].Image || ""
+						d.Type || "",
+						d.Brand || "",
+						d.Name || "",
+						d.Effect || "",
+						d.Width || "",
+						d.Height || "",
+						d.Image || ""
 					)
 				);
 			}
