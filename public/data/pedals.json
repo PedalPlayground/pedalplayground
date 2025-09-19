@@ -48247,6 +48247,13 @@
 	},
 	{
 		"Brand": "Union Tube & Transistor",
+		"Name": "EverMore",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "union-evermore.png"
+	},
+	{
+		"Brand": "Union Tube & Transistor",
 		"Name": "Lab",
 		"Width": 3.7,
 		"Height": 4.88,
@@ -48258,6 +48265,27 @@
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "union-more.png"
+	},
+	{
+		"Brand": "Union Tube & Transistor",
+		"Name": "NeverMore",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "union-nevermore.png"
+	},
+	{
+		"Brand": "Union Tube & Transistor",
+		"Name": "Shiny",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "union-shiny.png"
+	},
+	{
+		"Brand": "Union Tube & Transistor",
+		"Name": "Snap",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "union-snap.png"
 	},
 	{
 		"Brand": "Union Tube & Transistor",
@@ -48279,6 +48307,13 @@
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "union-swindle.png"
+	},
+	{
+		"Brand": "Union Tube & Transistor",
+		"Name": "Tone Druid",
+		"Width": 3.7,
+		"Height": 4.88,
+		"Image": "union-tone-druid.png"
 	},
 	{
 		"Brand": "Union Tube & Transistor",
