@@ -38348,10 +38348,31 @@
 	},
 	{
 		"Brand": "PastFX",
+		"Name": "Deluxe Elastic Mattress",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-deluxe-elastic-mattress.png"
+	},
+	{
+		"Brand": "PastFX",
 		"Name": "Distortiion",
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "pastfx-distortiion.png"
+	},
+	{
+		"Brand": "PastFX",
+		"Name": "Echo 600",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "pastfx-echo-600.png"
+	},
+	{
+		"Brand": "PastFX",
+		"Name": "Echoflanger",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-echoflanger.png"
 	},
 	{
 		"Brand": "PastFX",
@@ -38366,6 +38387,13 @@
 		"Width": 2.67,
 		"Height": 4.5,
 		"Image": "pastfx-foot-phaser-deluxe.png"
+	},
+	{
+		"Brand": "PastFX",
+		"Name": "Gallstone",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "pastfx-gallstone.png"
 	},
 	{
 		"Brand": "PastFX",
