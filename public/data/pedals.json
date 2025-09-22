@@ -14856,6 +14856,20 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Bender Royale",
+		"Width": 2.82,
+		"Height": 4.5,
+		"Image": "ehx-bender-royale.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Bender Royale (Orange)",
+		"Width": 2.82,
+		"Height": 4.5,
+		"Image": "ehx-bender-royale-orange.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi Hardware Plugin",
 		"Width": 4.19,
 		"Height": 4.87,
@@ -40629,6 +40643,13 @@
 		"Image": "redwitch-zeus.png"
 	},
 	{
+		"Brand": "Retrograve",
+		"Name": "Void Gazer",
+		"Width": 4.7,
+		"Height": 3.85,
+		"Image": "retrograve-void-gazer.png"
+	},
+	{
 		"Brand": "Reuss",
 		"Name": "Big Bender",
 		"Width": 2.8,
@@ -50029,6 +50050,13 @@
 		"Width": 5.25,
 		"Height": 6.81,
 		"Image": "warm-audio-ringerbringer.png"
+	},
+	{
+		"Brand": "Warm Audio",
+		"Name": "TubeSquealer",
+		"Width": 2.82,
+		"Height": 5.13,
+		"Image": "warm-audio-wats.png"
 	},
 	{
 		"Brand": "Warm Audio",
