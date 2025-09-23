@@ -141,9 +141,9 @@ gulp.task("watch", function () {
 
 gulp.task("watch-all", function () {
 	livereload.listen();
-	//gulp.watch(['app/images/pedals/*.png','!app/images/pedals/*_tmp*.*'], ['images']);
+	//gulp.watch(['app/images/pedals/*.webp','!app/images/pedals/*_tmp*.*'], ['images']);
 	gulp.watch(
-		["app/images/pedals-new/**/*.png", "!app/images/pedals-new/**/*_tmp*.*"],
+		["app/images/pedals-new/**/*.webp", "!app/images/pedals-new/**/*_tmp*.*"],
 		["process-images"]
 	);
 	gulp.watch("app/stylesheets/**", ["styles"]);
