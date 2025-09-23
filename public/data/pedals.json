@@ -30169,6 +30169,13 @@
 		"Height": 5.06,
 		"Image": "mask-screws.png"
 	},
+		{
+		"Brand": "Master Effects",
+		"Name": "Super 40",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "master-effects-super-40.png"
+	},
 	{
 		"Brand": "Master Effects",
 		"Name": "Super 800",
@@ -46108,6 +46115,13 @@
 		"Width": 6.38,
 		"Height": 3.97,
 		"Image": "tech21-di2112.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "dUg DP-3X Signature",
+		"Width": 7.75,
+		"Height": 1.25,
+		"Image": "tech21-dUg-DP-3X.png"
 	},
 	{
 		"Brand": "Tech 21 NYC",
