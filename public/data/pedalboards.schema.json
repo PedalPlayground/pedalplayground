@@ -4,623 +4,623 @@
 		"Name": "Tolex 1224",
 		"Width": 24,
 		"Height": 12,
-		"Image": "blackbird-tolex-1224.png"
+		"Image": "blackbird-tolex-1224.webp"
 	},
 	{
 		"Brand": "Blackbird",
 		"Name": "Tolex 1530",
 		"Width": 30,
 		"Height": 15,
-		"Image": "blackbird-tolex-1530.png"
+		"Image": "blackbird-tolex-1530.webp"
 	},
 	{
 		"Brand": "Caseman",
 		"Name": "Gentleman Medium / Large",
 		"Width": 32.284,
 		"Height": 12.6,
-		"Image": "caseman-gentleman-medium.png"
+		"Image": "caseman-gentleman-medium.webp"
 	},
 	{
 		"Brand": "Caseman",
 		"Name": "Gentleman Medium",
 		"Width": 23.9,
 		"Height": 12.6,
-		"Image": "caseman-medium.png"
+		"Image": "caseman-medium.webp"
 	},
 	{
 		"Brand": "Caseman",
 		"Name": "Gentleman Small",
 		"Width": 16,
 		"Height": 12.6,
-		"Image": "caseman-small.png"
+		"Image": "caseman-small.webp"
 	},
 	{
 		"Brand": "Creation Music Co",
 		"Name": "Aero 17x12.5",
 		"Width": 17,
 		"Height": 12.5,
-		"Image": "creation-aero-17-125.png"
+		"Image": "creation-aero-17-125.webp"
 	},
 	{
 		"Brand": "Creation Music Co",
 		"Name": "Aero 24x12.5",
 		"Width": 24,
 		"Height": 12.5,
-		"Image": "creation-aero-24-125.png"
+		"Image": "creation-aero-24-125.webp"
 	},
 	{
 		"Brand": "Creation Music Co",
 		"Name": "Aero 24x16",
 		"Width": 24,
 		"Height": 16,
-		"Image": "creation-aero-24-16.png"
+		"Image": "creation-aero-24-16.webp"
 	},
 	{
 		"Brand": "Creation Music Co",
 		"Name": "Elevation 17x7",
 		"Width": 17,
 		"Height": 7,
-		"Image": "creation-elevation-17-7.png"
+		"Image": "creation-elevation-17-7.webp"
 	},
 	{
 		"Brand": "Creation Music Co",
 		"Name": "Elevation 17x12",
 		"Width": 17,
 		"Height": 12,
-		"Image": "creation-elevation-17-12.png"
+		"Image": "creation-elevation-17-12.webp"
 	},
 	{
 		"Brand": "Creation Music Co",
 		"Name": "Elevation 24x12.5",
 		"Width": 24,
 		"Height": 12.5,
-		"Image": "creation-elevation-24-12.png"
+		"Image": "creation-elevation-24-12.webp"
 	},
 	{
 		"Brand": "Creation Music Co",
 		"Name": "Elevation 24x16",
 		"Width": 24,
 		"Height": 16,
-		"Image": "creation-elevation-24-16.png"
+		"Image": "creation-elevation-24-16.webp"
 	},
 	{
 		"Brand": "Creation Music Co",
 		"Name": "Elevation 32x16",
 		"Width": 32,
 		"Height": 16,
-		"Image": "creation-elevation-32-16.png"
+		"Image": "creation-elevation-32-16.webp"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "DB-3",
 		"Width": 20,
 		"Height": 11.4,
-		"Image": "donner-db-3.png"
+		"Image": "donner-db-3.webp"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "18x12",
 		"Width": 19.25,
 		"Height": 12.25,
-		"Image": "emerson-18x12.png"
+		"Image": "emerson-18x12.webp"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "24x12",
 		"Width": 25.25,
 		"Height": 12.25,
-		"Image": "emerson-24x12.png"
+		"Image": "emerson-24x12.webp"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "24x18",
 		"Width": 25.25,
 		"Height": 18,
-		"Image": "emerson-24x18.png"
+		"Image": "emerson-24x18.webp"
 	},
 	{
 		"Brand": "Emerson Custom",
 		"Name": "32x12",
 		"Width": 33.25,
 		"Height": 12.25,
-		"Image": "emerson-32x12.png"
+		"Image": "emerson-32x12.webp"
 	},
 	{
 		"Brand": "Gator",
 		"Name": "Aluminum Extra Large",
 		"Width": 32,
 		"Height": 17,
-		"Image": "gator-alum-xlarge.png"
+		"Image": "gator-alum-xlarge.webp"
 	},
 	{
 		"Brand": "Gator",
 		"Name": "Aluminum Large",
 		"Width": 23.75,
 		"Height": 10.66,
-		"Image": "gator-alum-large.png"
+		"Image": "gator-alum-large.webp"
 	},
 	{
 		"Brand": "Gator",
 		"Name": "Aluminum Small",
 		"Width": 15.75,
 		"Height": 7,
-		"Image": "gator-alum-small.png"
+		"Image": "gator-alum-small.webp"
 	},
 	{
 		"Brand": "Ghost Fire",
 		"Name": "Little 20",
 		"Width": 20,
 		"Height": 7,
-		"Image": "pedaltrain-mini.png"
+		"Image": "pedaltrain-mini.webp"
 	},
 	{
 		"Brand": "Gokko",
 		"Name": "Medium Pedalboard",
 		"Width": 13.8,
 		"Height": 11,
-		"Image": "gokko-medium.png"
+		"Image": "gokko-medium.webp"
 	},
 	{
 		"Brand": "Mono",
 		"Name": "Carbon Large",
 		"Width": 30.87,
 		"Height": 14.84,
-		"Image": "mono-carbon-large.png"
+		"Image": "mono-carbon-large.webp"
 	},
 	{
 		"Brand": "Mono",
 		"Name": "Carbon Medium",
 		"Width": 23.82,
 		"Height": 14.33,
-		"Image": "mono-carbon-medium.png"
+		"Image": "mono-carbon-medium.webp"
 	},
 	{
 		"Brand": "Mono",
 		"Name": "Carbon Small",
 		"Width": 16.85,
 		"Height": 11.85,
-		"Image": "mono-carbon-small.png"
+		"Image": "mono-carbon-small.webp"
 	},
 	{
 		"Brand": "Mono",
 		"Name": "Large",
 		"Width": 32,
 		"Height": 16,
-		"Image": "mono-large-pedalboard.png"
+		"Image": "mono-large-pedalboard.webp"
 	},
 	{
 		"Brand": "Mono",
 		"Name": "Lite",
 		"Width": 14,
 		"Height": 5.65,
-		"Image": "mono-lite-pedalboard.png"
+		"Image": "mono-lite-pedalboard.webp"
 	},
 	{
 		"Brand": "Mono",
 		"Name": "Lite+",
 		"Width": 18,
 		"Height": 5.7,
-		"Image": "mono-liteplus-pedalboard.png"
+		"Image": "mono-liteplus-pedalboard.webp"
 	},
 	{
 		"Brand": "Mono",
 		"Name": "Medium",
 		"Width": 24,
 		"Height": 14.5,
-		"Image": "mono-medium-pedalboard.png"
+		"Image": "mono-medium-pedalboard.webp"
 	},
 	{
 		"Brand": "Mono",
 		"Name": "Small",
 		"Width": 18,
 		"Height": 12.3,
-		"Image": "mono-small-pedalboard.png"
+		"Image": "mono-small-pedalboard.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Flat 16",
 		"Width": 16.0,
 		"Height": 6.0,
-		"Image": "morton-frontflat16.png"
+		"Image": "morton-frontflat16.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Flat 8",
 		"Width": 8.0,
 		"Height": 6.0,
-		"Image": "morton-frontflat8.png"
+		"Image": "morton-frontflat8.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Slant 16",
 		"Width": 16.0,
 		"Height": 6.0,
-		"Image": "morton-frontslant16.png"
+		"Image": "morton-frontslant16.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Slant 8",
 		"Width": 8.0,
 		"Height": 6.0,
-		"Image": "morton-frontslant8.png"
+		"Image": "morton-frontslant8.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Tray 16",
 		"Width": 16.0,
 		"Height": 5.0,
-		"Image": "morton-fronttray16.png"
+		"Image": "morton-fronttray16.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Front Tray 20",
 		"Width": 20.0,
 		"Height": 7.0,
-		"Image": "morton-fronttray20.png"
+		"Image": "morton-fronttray20.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Long Flat 4",
 		"Width": 4.0,
 		"Height": 12.0,
-		"Image": "morton-longflat4.png"
+		"Image": "morton-longflat4.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Long Flat 8",
 		"Width": 8.0,
 		"Height": 12.0,
-		"Image": "morton-longflat8.png"
+		"Image": "morton-longflat8.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Long Slant 16",
 		"Width": 16.0,
 		"Height": 12.0,
-		"Image": "morton-longslant16.png"
+		"Image": "morton-longslant16.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Long Slant 4",
 		"Width": 4.0,
 		"Height": 12.0,
-		"Image": "morton-longslant4.png"
+		"Image": "morton-longslant4.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Long Slant 8",
 		"Width": 8.0,
 		"Height": 12.0,
-		"Image": "morton-longslant8.png"
+		"Image": "morton-longslant8.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Rear Flat 16",
 		"Width": 16.0,
 		"Height": 6.0,
-		"Image": "morton-rearflat16.png"
+		"Image": "morton-rearflat16.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Rear Flat 8",
 		"Width": 8.0,
 		"Height": 6.0,
-		"Image": "morton-rearflat8.png"
+		"Image": "morton-rearflat8.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Rear Slant 16",
 		"Width": 16.0,
 		"Height": 6.0,
-		"Image": "morton-rearslant16.png"
+		"Image": "morton-rearslant16.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Rear Slant 8",
 		"Width": 8.0,
 		"Height": 6.0,
-		"Image": "morton-rearslant8.png"
+		"Image": "morton-rearslant8.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Side Tray 4",
 		"Width": 4.6,
 		"Height": 12.0,
-		"Image": "morton-sidetray4.png"
+		"Image": "morton-sidetray4.webp"
 	},
 	{
 		"Brand": "Morton Pedalboards",
 		"Name": "Side Tray 8",
 		"Width": 8.6,
 		"Height": 12.0,
-		"Image": "morton-sidetray8.png"
+		"Image": "morton-sidetray8.webp"
 	},
 	{
 		"Brand": "Muzbay",
 		"Name": "Meridian 40",
 		"Width": 15.7,
 		"Height": 11.8,
-		"Image": "muzbay-meridian-40.png"
+		"Image": "muzbay-meridian-40.webp"
 	},
 	{
 		"Brand": "Muzbay",
 		"Name": "Meridian 50",
 		"Width": 19.7,
 		"Height": 11.8,
-		"Image": "muzbay-meridian-50.png"
+		"Image": "muzbay-meridian-50.webp"
 	},
 	{
 		"Brand": "Muzbay",
 		"Name": "Meridian 60",
 		"Width": 23.6,
 		"Height": 11.8,
-		"Image": "muzbay-meridian-60.png"
+		"Image": "muzbay-meridian-60.webp"
 	},
 	{
 		"Brand": "Muzbay",
 		"Name": "Sputnik 35",
 		"Width": 13.8,
 		"Height": 5.12,
-		"Image": "muzbay-sputnik-50.png"
+		"Image": "muzbay-sputnik-50.webp"
 	},
 	{
 		"Brand": "Muzbay",
 		"Name": "Sputnik 50",
 		"Width": 19.7,
 		"Height": 5.12,
-		"Image": "muzbay-sputnik-35.png"
+		"Image": "muzbay-sputnik-35.webp"
 	},
 	{
 		"Brand": "Onstage",
 		"Name": "GPB2000",
 		"Width": 18.75,
 		"Height": 6,
-		"Image": "onstage-gpb2000.png"
+		"Image": "onstage-gpb2000.webp"
 	},
 	{
 		"Brand": "Onstage",
 		"Name": "GPB3000",
 		"Width": 18.75,
 		"Height": 9,
-		"Image": "onstage-gpb3000.png"
+		"Image": "onstage-gpb3000.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Classic 1",
 		"Width": 22,
 		"Height": 12.5,
-		"Image": "pedaltrain-classic1.png"
+		"Image": "pedaltrain-classic1.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Classic 2",
 		"Width": 24,
 		"Height": 12.5,
-		"Image": "pedaltrain-classic2.png"
+		"Image": "pedaltrain-classic2.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Classic 3",
 		"Width": 24,
 		"Height": 16,
-		"Image": "pedaltrain-classic3.png"
+		"Image": "pedaltrain-classic3.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Classic JR",
 		"Width": 18,
 		"Height": 12.5,
-		"Image": "pedaltrain-jr.png"
+		"Image": "pedaltrain-jr.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Classic Pro",
 		"Width": 32,
 		"Height": 16,
-		"Image": "pedaltrain-pro.png"
+		"Image": "pedaltrain-pro.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Fly",
 		"Width": 22,
 		"Height": 14.5,
-		"Image": "pedaltrain-fly.png"
+		"Image": "pedaltrain-fly.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "JR MAX",
 		"Width": 28,
 		"Height": 12.5,
-		"Image": "pedaltrain-jr-max.png"
+		"Image": "pedaltrain-jr-max.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Metro 16",
 		"Width": 16,
 		"Height": 8,
-		"Image": "pedaltrain-metro16.png"
+		"Image": "pedaltrain-metro16.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Metro 20",
 		"Width": 20,
 		"Height": 8,
-		"Image": "pedaltrain-metro20.png"
+		"Image": "pedaltrain-metro20.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Metro 24",
 		"Width": 24,
 		"Height": 8,
-		"Image": "pedaltrain-metro24.png"
+		"Image": "pedaltrain-metro24.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Metro MAX",
 		"Width": 28,
 		"Height": 8,
-		"Image": "pedaltrain-metro16.png"
+		"Image": "pedaltrain-metro16.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Mini",
 		"Width": 20,
 		"Height": 7,
-		"Image": "pedaltrain-mini.png"
+		"Image": "pedaltrain-mini.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Nano",
 		"Width": 14,
 		"Height": 5.5,
-		"Image": "pedaltrain-nano.png"
+		"Image": "pedaltrain-nano.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Nano+",
 		"Width": 18,
 		"Height": 5,
-		"Image": "pedaltrain-nanoplus.png"
+		"Image": "pedaltrain-nanoplus.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Nano MAX",
 		"Width": 28,
 		"Height": 5.5,
-		"Image": "pedaltrain-nano-max.png"
+		"Image": "pedaltrain-nano-max.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Novo 18",
 		"Width": 18,
 		"Height": 14.5,
-		"Image": "pedaltrain-novo18.png"
+		"Image": "pedaltrain-novo18.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Novo 24",
 		"Width": 24,
 		"Height": 14.5,
-		"Image": "pedaltrain-novo24.png"
+		"Image": "pedaltrain-novo24.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Novo 32",
 		"Width": 32,
 		"Height": 14.5,
-		"Image": "pedaltrain-novo32.png"
+		"Image": "pedaltrain-novo32.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Pro FX",
 		"Width": 32,
 		"Height": 16,
-		"Image": "pedaltrain-pro-fx.png"
+		"Image": "pedaltrain-pro-fx.webp"
 	},
 	{
 		"Brand": "Pedaltrain",
 		"Name": "Terra 42",
 		"Width": 42,
 		"Height": 14.5,
-		"Image": "pedaltrain-terra42.png"
+		"Image": "pedaltrain-terra42.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Cinque 5.2",
 		"Width": 24.5,
 		"Height": 16.7,
-		"Image": "rockboard-cinque-52.png"
+		"Image": "rockboard-cinque-52.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Cinque 5.3",
 		"Width": 32.3,
 		"Height": 16.7,
-		"Image": "rockboard-cinque-53.png"
+		"Image": "rockboard-cinque-53.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Cinque 5.4",
 		"Width": 39.5,
 		"Height": 16.7,
-		"Image": "rockboard-cinque-54.png"
+		"Image": "rockboard-cinque-54.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Duo 2.0",
 		"Width": 12.5,
 		"Height": 5.75,
-		"Image": "rockboard-duo-20.png"
+		"Image": "rockboard-duo-20.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Duo 2.1",
 		"Width": 18.125,
 		"Height": 5.75,
-		"Image": "rockboard-duo-21.png"
+		"Image": "rockboard-duo-21.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Duo 2.2",
 		"Width": 24.5,
 		"Height": 5.75,
-		"Image": "rockboard-duo-22.png"
+		"Image": "rockboard-duo-22.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Quad 4.1",
 		"Width": 18.5,
 		"Height": 13,
-		"Image": "rockboard-quad-41.png"
+		"Image": "rockboard-quad-41.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Quad 4.2",
 		"Width": 24.5,
 		"Height": 13,
-		"Image": "rockboard-quad-42.png"
+		"Image": "rockboard-quad-42.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Quad 4.3",
 		"Width": 32.6,
 		"Height": 13,
-		"Image": "rockboard-quad-43.png"
+		"Image": "rockboard-quad-43.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Tres 3.0",
 		"Width": 17.4,
 		"Height": 9.3,
-		"Image": "rockboard-tres-30.png"
+		"Image": "rockboard-tres-30.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Tres 3.1",
 		"Width": 20.55,
 		"Height": 9.3,
-		"Image": "rockboard-tres-31.png"
+		"Image": "rockboard-tres-31.webp"
 	},
 	{
 		"Brand": "Rockboard by Warwick",
 		"Name": "Tres 3.2",
 		"Width": 23.55,
 		"Height": 9.3,
-		"Image": "rockboard-tres-32.png"
+		"Image": "rockboard-tres-32.webp"
 	},
 	{
 		"Brand": "Rug",
 		"Name": "1",
 		"Width": 34,
 		"Height": 20,
-		"Image": "rug-plush.png"
+		"Image": "rug-plush.webp"
 	},
 	{
 		"Brand": "Rug",
 		"Name": "2",
 		"Width": 34,
 		"Height": 20,
-		"Image": "rug-plush2.png"
+		"Image": "rug-plush2.webp"
 	},
 	{
 		"Brand": "Rug",
@@ -641,76 +641,76 @@
 		"Name": "Duo 17",
 		"Width": 17,
 		"Height": 12.5,
-		"Image": "temple-duo17.png"
+		"Image": "temple-duo17.webp"
 	},
 	{
 		"Brand": "Templeboards",
 		"Name": "Duo 24",
 		"Width": 24.5,
 		"Height": 12.5,
-		"Image": "temple-duo24.png"
+		"Image": "temple-duo24.webp"
 	},
 	{
 		"Brand": "Templeboards",
 		"Name": "Duo 34",
 		"Width": 34,
 		"Height": 12.5,
-		"Image": "temple-duo34.png"
+		"Image": "temple-duo34.webp"
 	},
 	{
 		"Brand": "Templeboards",
 		"Name": "Solo 18",
 		"Width": 18,
 		"Height": 8.5,
-		"Image": "temple-solo18.png"
+		"Image": "temple-solo18.webp"
 	},
 	{
 		"Brand": "Templeboards",
 		"Name": "Trio 21",
 		"Width": 21,
 		"Height": 16.5,
-		"Image": "temple-trio21.png"
+		"Image": "temple-trio21.webp"
 	},
 	{
 		"Brand": "Templeboards",
 		"Name": "Trio 28",
 		"Width": 28.2,
 		"Height": 16.5,
-		"Image": "temple-trio28.png"
+		"Image": "temple-trio28.webp"
 	},
 	{
 		"Brand": "Templeboards",
 		"Name": "Trio 43",
 		"Width": 43.2,
 		"Height": 16.5,
-		"Image": "temple-trio43.png"
+		"Image": "temple-trio43.webp"
 	},
 	{
 		"Brand": "Trav's",
 		"Name": "14.5 x 28 pedalboard",
 		"Width": 28,
 		"Height": 14.5,
-		"Image": "tl-pb.png"
+		"Image": "tl-pb.webp"
 	},
 	{
 		"Brand": "Voodoo Lab",
 		"Name": "Dingbat Large",
 		"Width": 25,
 		"Height": 15.75,
-		"Image": "voodoo-large.png"
+		"Image": "voodoo-large.webp"
 	},
 	{
 		"Brand": "Voodoo Lab",
 		"Name": "Dingbat Medium",
 		"Width": 22,
 		"Height": 13.5,
-		"Image": "voodoo-medium.png"
+		"Image": "voodoo-medium.webp"
 	},
 	{
 		"Brand": "Voodoo Lab",
 		"Name": "Dingbat Small",
 		"Width": 18,
 		"Height": 7.75,
-		"Image": "voodoo-small.png"
+		"Image": "voodoo-small.webp"
 	}
 ]
