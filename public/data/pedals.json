@@ -41293,6 +41293,13 @@
 		"Image": "seymourduncan-vapor-trail-deluxe.png"
 	},
 	{
+		"Brand": "[sfx]",
+		"Name": "micro-Thumpinator v2",
+		"Width": 3.9,
+		"Height": 1.7,
+		"Image": "sfx-micro-thumpinator.png"
+	},
+	{
 		"Brand": "Shark",
 		"Name": "Warzy Drive",
 		"Width": 5.18,
