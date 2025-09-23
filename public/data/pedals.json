@@ -3816,6 +3816,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "Toro",
+		"Width": 16.7,
+		"Height": 5.3,
+		"Image": "behringer-toro.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "TU300 Chromatic Tuner",
 		"Width": 2.76,
 		"Height": 4.84,
