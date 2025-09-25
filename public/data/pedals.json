@@ -3508,6 +3508,13 @@
 	},
 	{
 		"Brand": "Beetronics",
+		"Name": "Bee Bee Dee",
+		"Width": 3.55,
+		"Height": 5.5,
+		"Image": "beetronics-bee-bee-dee.png"
+	},
+	{
+		"Brand": "Beetronics",
 		"Name": "Fatbee",
 		"Width": 2.72,
 		"Height": 4.43,
@@ -6946,13 +6953,6 @@
 	},
 	{
 		"Brand": "Buffalo FX",
-		"Name": "Power Booster",
-		"Width": 3.7,
-		"Height": 4.84,
-		"Image": "buffalo-power-booster.png"
-	},
-	{
-		"Brand": "Buffalo FX",
 		"Name": "Propeller",
 		"Width": 3.7,
 		"Height": 4.84,
@@ -9631,6 +9631,13 @@
 		"Width": 4.8,
 		"Height": 3.78,
 		"Image": "ctc-mirage.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Mirage JR",
+		"Width": 2.71,
+		"Height": 4.9,
+		"Image": "ctc-mirage-jr.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
@@ -13537,6 +13544,13 @@
 		"Width": 4.34,
 		"Height": 4.81,
 		"Image": "earthquaker-avalanche-run-v2-purple.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Barrows Fuzz",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-barrows-fuzz.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -38467,13 +38481,6 @@
 	},
 	{
 		"Brand": "PastFX",
-		"Name": "Powerbooster",
-		"Width": 4.4,
-		"Height": 2.36,
-		"Image": "pastfx-powerbooster.png"
-	},
-	{
-		"Brand": "PastFX",
 		"Name": "Punkifriar PX76",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -45558,6 +45565,13 @@
 	},
 	{
 		"Brand": "Tampco",
+		"Name": "Singer Overdrive",
+		"Width": 2.6,
+		"Height": 5.09,
+		"Image": "tampco-singer-overdrive.png"
+	},
+	{
+		"Brand": "Tampco",
 		"Name": "The Gazelle",
 		"Width": 7.4,
 		"Height": 4.86,
@@ -51485,6 +51499,13 @@
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "wayhuge-deep-state.png"
+	},
+	{
+		"Brand": "Way Huge",
+		"Name": "Doom Hammer",
+		"Width": 2.5,
+		"Height": 4.37,
+		"Image": "wayhuge-doom-hammer.png"
 	},
 	{
 		"Brand": "Way Huge",
