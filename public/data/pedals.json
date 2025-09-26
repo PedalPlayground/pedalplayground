@@ -36934,10 +36934,31 @@
 	},
 	{
 		"Brand": "October Audio",
+		"Name": "Asunder",
+		"Width": 4.7,
+		"Height": 3.74,
+		"Image": "october-audio-asunder.png"
+	},
+	{
+		"Brand": "October Audio",
+		"Name": "F Division",
+		"Width": 2.97,
+		"Height": 4.99,
+		"Image": "october-audio-f-division.png"
+	},
+	{
+		"Brand": "October Audio",
 		"Name": "Heavy Peaches",
 		"Width": 1.79,
 		"Height": 3.7,
 		"Image": "october-audio-jeavy-peaches.png"
+	},
+	{
+		"Brand": "October Audio",
+		"Name": "Mntns",
+		"Width": 2.97,
+		"Height": 4.99,
+		"Image": "october-audio-mntns.png"
 	},
 	{
 		"Brand": "October Audio",
@@ -36959,6 +36980,20 @@
 		"Width": 1.79,
 		"Height": 3.7,
 		"Image": "october-audio-robotic-celebrity-head.png"
+	},
+	{
+		"Brand": "October Audio",
+		"Name": "Transience",
+		"Width": 4.7,
+		"Height": 3.74,
+		"Image": "october-audio-transience.png"
+	},
+	{
+		"Brand": "October Audio",
+		"Name": "Ubiquity",
+		"Width": 4.7,
+		"Height": 3.74,
+		"Image": "october-audio-ubiquity.png"
 	},
 	{
 		"Brand": "October Audio",
