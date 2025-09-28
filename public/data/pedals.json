@@ -8870,6 +8870,55 @@
 		"Image": "cioks-schizo.png"
 	},
 	{
+		"Brand": "Citadel",
+		"Name": "Bus Driver",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "citadel-bus-driver.png"
+	},
+	{
+		"Brand": "Citadel",
+		"Name": "Dynazero",
+		"Width": 2.73,
+		"Height": 4.7,
+		"Image": "citadel-dynazero.png"
+	},
+	{
+		"Brand": "Citadel",
+		"Name": "Overtuber",
+		"Width": 6,
+		"Height": 3.78,
+		"Image": "citadel-overtuber.png"
+	},
+	{
+		"Brand": "Citadel",
+		"Name": "Particle Drive",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "citadel-particle-drive.png"
+	},
+	{
+		"Brand": "Citadel",
+		"Name": "Planetary Phase",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "citadel-planetary-phase.png"
+	},
+	{
+		"Brand": "Citadel",
+		"Name": "Plutonium Overdrive",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "citadel-plutonium-overdrive.png"
+	},
+	{
+		"Brand": "Citadel",
+		"Name": "Vector",
+		"Width": 2.6,
+		"Height": 4.7,
+		"Image": "citadel-vector.png"
+	},
+	{
 		"Brand": "CKK Electronic",
 		"Name": "Destruction Drive",
 		"Width": 2.36,
@@ -39829,6 +39878,13 @@
 		"Width": 8.25,
 		"Height": 4.99,
 		"Image": "quilter-labs-directamp.png"
+	},
+	{
+		"Brand": "Quilter Labs",
+		"Name": "Elevate",
+		"Width": 10,
+		"Height": 5.67,
+		"Image": "quilter-labs-elevate.png"
 	},
 	{
 		"Brand": "Quilter Labs",
