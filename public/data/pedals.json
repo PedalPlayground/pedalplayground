@@ -1044,6 +1044,13 @@
 	},
 	{
 		"Brand": "Alexander",
+		"Name": "Now We Are Ghosts",
+		"Width": 5.7,
+		"Height": 4.95,
+		"Image": "alexander-now-we-are-ghosts.png"
+	},
+	{
+		"Brand": "Alexander",
 		"Name": "Oblivion",
 		"Width": 4.7,
 		"Height": 3.78,
@@ -46622,6 +46629,13 @@
 		"Image": "tapestry-bloomery.png"
 	},
 	{
+		"Brand": "Teaching Machines",
+		"Name": "FuzzBillion",
+		"Width": 6.7,
+		"Height": 5.6,
+		"Image": "teaching-machines-fuzzbillion.png"
+	},
+	{
 		"Brand": "Tech 21 NYC",
 		"Name": "Bass Driver DI",
 		"Width": 5.03,
@@ -47789,6 +47803,34 @@
 		"Width": 2.6,
 		"Height": 5.06,
 		"Image": "tonewave-preset.png"
+	},
+	{
+		"Brand": "Trace Acoustic",
+		"Name": "Acoustic Clarity",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "trace-acoustic-acoustic-clarity.png"
+	},
+	{
+		"Brand": "Trace Elliot",
+		"Name": "Dual Band Compressor",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "trace-elliot-dual-band-compressor.png"
+	},
+	{
+		"Brand": "Trace Elliot",
+		"Name": "Overdrive",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "trace-elliot-overdrive.png"
+	},
+	{
+		"Brand": "Trace Elliot",
+		"Name": "Transformer DI",
+		"Width": 4.86,
+		"Height": 2.74,
+		"Image": "trace-elliot-transformer-di.png"
 	},
 	{
 		"Brand": "Trap Door Electronics",
