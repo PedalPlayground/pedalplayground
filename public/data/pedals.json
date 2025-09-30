@@ -20252,6 +20252,13 @@
 		"Image": "glou-glou-loupe-white.png"
 	},
 	{
+		"Brand": "Glou-Glou",
+		"Name": "Pilule",
+		"Width": 5.5,
+		"Height": 6.87,
+		"Image": "glou-glou-pilule.png"
+	},
+	{
 		"Brand": "God City Instruments",
 		"Name": "Bad Larry",
 		"Width": 2.6,
@@ -23204,6 +23211,13 @@
 		"Width": 3.78,
 		"Height": 4.9,
 		"Image": "ica-death-drive.png"
+	},
+	{
+		"Brand": "Intensive Care Audio",
+		"Name": "Death Muff",
+		"Width": 3.52,
+		"Height": 5.04,
+		"Image": "ica-death-muff.png"
 	},
 	{
 		"Brand": "Intensive Care Audio",
@@ -42283,16 +42297,37 @@
 	{
 		"Brand": "Singular Sound",
 		"Name": "Aeros",
-		"Width": 8.375,
-		"Height": 5.875,
+		"Width": 7.86,
+		"Height": 5.53,
 		"Image": "singular-sound-aeros.png"
 	},
 	{
 		"Brand": "Singular Sound",
 		"Name": "BeatBuddy",
-		"Width": 3.58,
-		"Height": 4.92,
+		"Width": 3.6,
+		"Height": 5.2,
 		"Image": "singular-sound-beat-buddy.png"
+	},
+	{
+		"Brand": "Singular Sound",
+		"Name": "BeatBuddy 2",
+		"Width": 4.95,
+		"Height": 6.16,
+		"Image": "singular-sound-beat-buddy-2.png"
+	},
+	{
+		"Brand": "Singular Sound",
+		"Name": "BeatBuddy (10th Anniversary)",
+		"Width": 3.6,
+		"Height": 5.2,
+		"Image": "singular-sound-beat-buddy-10th.png"
+	},
+	{
+		"Brand": "Singular Sound",
+		"Name": "BeatBuddy Mini 2",
+		"Width": 2.68,
+		"Height": 4.7,
+		"Image": "singular-sound-beat-buddy-mini-2.png"
 	},
 	{
 		"Brand": "Singular Sound",
@@ -42304,8 +42339,8 @@
 	{
 		"Brand": "Singular Sound",
 		"Name": "Midi Maestro",
-		"Width": 8.375,
-		"Height": 5.75,
+		"Width": 8.4,
+		"Height": 5.97,
 		"Image": "singular-sound-midi-maestro.png"
 	},
 	{
