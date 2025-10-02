@@ -12014,6 +12014,13 @@
 	},
 	{
 		"Brand": "DOD",
+		"Name": "Overdrive Preamp 250-X",
+		"Width": 2.93,
+		"Height": 4.68,
+		"Image": "dod-250x.png"
+	},
+	{
+		"Brand": "DOD",
 		"Name": "Overdrive Preamp FX50",
 		"Width": 3.35,
 		"Height": 5.13,
@@ -37085,6 +37092,13 @@
 		"Width": 1.2,
 		"Height": 1.77,
 		"Image": "olinthus-cicada.png"
+	},
+	{
+		"Brand": "Olinthus",
+		"Name": "Earwig",
+		"Width": 1.2,
+		"Height": 1.77,
+		"Image": "olinthus-earwig.png"
 	},
 	{
 		"Brand": "Oneder Effects",
