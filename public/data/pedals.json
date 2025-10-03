@@ -4964,6 +4964,13 @@
 	},
 	{
 		"Brand": "Blue FX",
+		"Name": "Fuzz Fields",
+		"Width": 3.66,
+		"Height": 5.61,
+		"Image": "bluefx-fuzz-fields.png"
+	},
+	{
+		"Brand": "Blue FX",
 		"Name": "Nebula",
 		"Width": 4.82,
 		"Height": 3.08,
@@ -39643,6 +39650,13 @@
 	},
 	{
 		"Brand": "Poly Effects",
+		"Name": "Trails",
+		"Width": 4.09,
+		"Height": 4.56,
+		"Image": "poly-trails.png"
+	},
+	{
+		"Brand": "Poly Effects",
 		"Name": "Verbs",
 		"Width": 4.09,
 		"Height": 4.56,
@@ -48188,6 +48202,13 @@
 		"Width": 2.91,
 		"Height": 5.02,
 		"Image": "tubesteader-eggnog.png"
+	},
+	{
+		"Brand": "Tubesteader",
+		"Name": "Gainlord",
+		"Width": 4.99,
+		"Height": 5.7,
+		"Image": "tubesteader-gainlord.png"
 	},
 	{
 		"Brand": "Tubesteader",
