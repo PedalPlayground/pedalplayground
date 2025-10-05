@@ -42072,6 +42072,13 @@
 	},
 	{
 		"Brand": "Shin's Music",
+		"Name": "BMP-1 Bass Master Preamp CTM",
+		"Width": 5.59,
+		"Height": 3.7,
+		"Image": "shins-music-bmp1-bass-master-preamp-ctm.png"
+	},
+	{
+		"Brand": "Shin's Music",
 		"Name": "Clean Boost",
 		"Width": 2.79,
 		"Height": 4.56,
@@ -49595,6 +49602,20 @@
 		"Width": 5.81,
 		"Height": 9.06,
 		"Image": "vis-sound-vv10.png"
+	},
+	{
+		"Brand": "Vivie",
+		"Name": "OwlMighty II",
+		"Width": 4.91,
+		"Height": 3.79,
+		"Image": "vivie-owlmighty-2.png"
+	},
+	{
+		"Brand": "Vivie",
+		"Name": "Rhinotes",
+		"Width": 4.02,
+		"Height": 4.81,
+		"Image": "vivie-rhinotes.png"
 	},
 	{
 		"Brand": "VS Audio",
