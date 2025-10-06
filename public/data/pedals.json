@@ -435,17 +435,10 @@
 	},
 	{
 		"Brand": "Aguilar",
-		"Name": "DB925",
-		"Width": 1.73,
-		"Height": 3.65,
-		"Image": "aguilar-db925.png"
-	},
-	{
-		"Brand": "Aguilar",
-		"Name": "DB599",
-		"Width": 1.73,
-		"Height": 3.65,
-		"Image": "aguilar-db599.png"
+		"Name": "AG Preamp",
+		"Width": 4.93,
+		"Height": 3.81,
+		"Image": "aguilar-ag-preamp.png"
 	},
 	{
 		"Brand": "Aguilar",
@@ -474,6 +467,27 @@
 		"Width": 2.5,
 		"Height": 4.8,
 		"Image": "aguilar-chorusaurus-mk2.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "DB 316",
+		"Width": 1.73,
+		"Height": 3.65,
+		"Image": "aguilar-db316.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "DB 599",
+		"Width": 1.73,
+		"Height": 3.65,
+		"Image": "aguilar-db599.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "DB 925",
+		"Width": 1.73,
+		"Height": 3.65,
+		"Image": "aguilar-db925.png"
 	},
 	{
 		"Brand": "Aguilar",
@@ -565,6 +579,13 @@
 		"Width": 4.4,
 		"Height": 5.31,
 		"Image": "aguilar-tone-hammer-silver.png"
+	},
+	{
+		"Brand": "Aguilar",
+		"Name": "Tone Hammer Preamp",
+		"Width": 4.93,
+		"Height": 3.81,
+		"Image": "aguilar-tone-hammer-preamp.png"
 	},
 	{
 		"Brand": "Aion FX",
