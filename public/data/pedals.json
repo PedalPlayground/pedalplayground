@@ -33357,6 +33357,20 @@
 	},
 	{
 		"Brand": "Moth Electric",
+		"Name": "C. regalis Overdrive",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "moth-electric-c-regalis.png"
+	},
+	{
+		"Brand": "Moth Electric",
+		"Name": "M. stellatarum Tremolo",
+		"Width": 3.7,
+		"Height": 4.92,
+		"Image": "moth-electric-m-stellatarum.png"
+	},
+	{
+		"Brand": "Moth Electric",
 		"Name": "P. isabella",
 		"Width": 3.7,
 		"Height": 4.84,
@@ -34824,6 +34838,48 @@
 		"Width": 1.78,
 		"Height": 3.6,
 		"Image": "mythos-argonaut-2022.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Big Puft",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "mythos-big-puft.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Big Puft (Aluminum)",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "mythos-big-puft-aluminum.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Big Puft (Black/Red)",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "mythos-big-puft-black-red.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Big Puft (Black/Yellow)",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "mythos-big-puft-black-yellow.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Big Puft (Military Green)",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "mythos-big-puft-military-green.png"
+	},
+	{
+		"Brand": "Mythos",
+		"Name": "Big Puft (Raw Metal)",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "mythos-big-puft-raw-metal.png"
 	},
 	{
 		"Brand": "Mythos",
