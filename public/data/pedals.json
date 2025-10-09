@@ -3487,28 +3487,28 @@
 	},
 	{
 		"Brand": "Becos",
-		"Name": "CompIQ MINI One",
+		"Name": "CompIQ Mini One",
 		"Width": 1.85,
 		"Height": 3.7,
 		"Image": "becos-compiq-one.png"
 	},
 	{
 		"Brand": "Becos",
-		"Name": "CompIQ STELLA",
+		"Name": "CompIQ Stella",
 		"Width": 2.8,
 		"Height": 4.5,
 		"Image": "becos-compiq-stella-pro.png"
 	},
 	{
 		"Brand": "Becos",
-		"Name": "CompIQ TWAIN",
+		"Name": "CompIQ Twain",
 		"Width": 3.99,
 		"Height": 4.72,
 		"Image": "becos-compiq-twain.png"
 	},
 	{
 		"Brand": "Becos",
-		"Name": "CompIQ TWAIN MK2",
+		"Name": "CompIQ Twain MK2",
 		"Width": 4.12,
 		"Height": 4.72,
 		"Image": "becos-compiq-twain-mk2.png"
@@ -3519,6 +3519,13 @@
 		"Width": 2.72,
 		"Height": 4.62,
 		"Image": "becos-ts8-ms-overdrive.png"
+	},
+	{
+		"Brand": "Becos",
+		"Name": "CompIQ Yuna",
+		"Width": 2.8,
+		"Height": 4.5,
+		"Image": "becos-compiq-yuna.png"
 	},
 	{
 		"Brand": "Becos",
@@ -44130,10 +44137,31 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Sputnik I",
+		"Width": 2.92,
+		"Height": 4.75,
+		"Image": "spaceman-sputnik-1.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Sputnik I (Olive Drab)",
+		"Width": 2.92,
+		"Height": 4.75,
+		"Image": "spaceman-sputnik-1-olive-drab.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Sputnik II",
 		"Width": 6.39,
 		"Height": 4.75,
 		"Image": "spaceman-sputnikii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Sputnik IIb",
+		"Width": 5.7,
+		"Height": 4.87,
+		"Image": "spaceman-sputnikiib.png"
 	},
 	{
 		"Brand": "Spaceman",
