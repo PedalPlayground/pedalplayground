@@ -50410,6 +50410,13 @@
 	},
 	{
 		"Brand": "Warm Audio",
+		"Name": "Throne of Tone",
+		"Width": 5,
+		"Height": 5.73,
+		"Image": "warm-audio-throne-of-tone.png"
+	},
+	{
+		"Brand": "Warm Audio",
 		"Name": "TubeSquealer",
 		"Width": 2.82,
 		"Height": 5.13,
