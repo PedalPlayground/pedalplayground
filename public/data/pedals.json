@@ -7618,6 +7618,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Adineko Ghost",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-adineko-ghost.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Airstrip",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -7629,6 +7636,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-antichthon.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Antichthon (Retired Edition)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-antichthon-retired.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -7716,6 +7730,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "CSIDMAN Ghost",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-csidman-ghost.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Callisto",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -7783,6 +7804,20 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-echorec.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Echorec (Graffiti White)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-echorec-graffiti-white.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Echorec (Space Black)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-echorec-space-black.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -7898,6 +7933,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Giygas 2K",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-giygas-2k.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Karma Suture (Ge)",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -7975,6 +8017,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Merkin Fuzz (Reissue)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-merkin-fuzz-ri.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Montavillian",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -8024,6 +8073,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Pads (Proto 365)",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-pads-proto-365.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "RAH",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -8056,6 +8112,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-sft-sc.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "SFX Tap",
+		"Width": 1.59,
+		"Height": 3.82,
+		"Image": "catalinbread-sfx-tap.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -8105,6 +8168,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-soft-focus-gold.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Soft Focus Ghost",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-soft-focus-ghost.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -20821,7 +20891,7 @@
 	{
 		"Brand": "Greer Amps",
 		"Name": "Black Mountain Drive",
-		"Width": 2.68,
+		"Width": 2.63,
 		"Height": 4.5,
 		"Image": "greer-black-mountain-drive.png"
 	},
@@ -20960,6 +21030,13 @@
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Mizuki Blue",
+		"Width": 2.63,
+		"Height": 4.5,
+		"Image": "greer-mizuki-blue.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Royal Velvet",
 		"Width": 2.84,
 		"Height": 4.9,
@@ -20974,9 +21051,16 @@
 	},
 	{
 		"Brand": "Greer Amps",
+		"Name": "Sonic Boom Booster",
+		"Width": 2.63,
+		"Height": 4.5,
+		"Image": "greer-sonic-boom-booster.png"
+	},
+	{
+		"Brand": "Greer Amps",
 		"Name": "Special Request",
-		"Width": 2.84,
-		"Height": 4.77,
+		"Width": 2.61,
+		"Height": 4.5,
 		"Image": "greer-special-request.png"
 	},
 	{
@@ -21024,9 +21108,16 @@
 	{
 		"Brand": "Greer Amps",
 		"Name": "Tomahawk",
-		"Width": 2.84,
-		"Height": 4.77,
+		"Width": 2.61,
+		"Height": 4.5,
 		"Image": "greer-tomahawk.png"
+	},
+	{
+		"Brand": "Greer Amps",
+		"Name": "Tomahawk (Gray)",
+		"Width": 2.61,
+		"Height": 4.5,
+		"Image": "greer-tomahawk-gray.png"
 	},
 	{
 		"Brand": "Greer Amps",
@@ -30809,13 +30900,6 @@
 	},
 	{
 		"Brand": "Maxon",
-		"Name": "Auto Filter AF-9",
-		"Width": 2.93,
-		"Height": 4.88,
-		"Image": "maxon-af9.png"
-	},
-	{
-		"Brand": "Maxon",
 		"Name": "Analog Delay AD10",
 		"Width": 2.79,
 		"Height": 4.5,
@@ -30837,10 +30921,17 @@
 	},
 	{
 		"Brand": "Maxon",
-		"Name": "Analog Delay AD9PRO",
-		"Width": 2.93,
+		"Name": "Analog Delay AD9Pro",
+		"Width": 2.86,
 		"Height": 4.88,
 		"Image": "maxon-ad9pro.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Auto Filter AF-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-af9.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -30872,8 +30963,8 @@
 	},
 	{
 		"Brand": "Maxon",
-		"Name": "Flanger FL9",
-		"Width": 2.93,
+		"Name": "Flanger FL-9",
+		"Width": 2.26,
 		"Height": 4.88,
 		"Image": "maxon-fl9.png"
 	},
@@ -30914,6 +31005,13 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Overdrive OD-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-od9.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Overdrive Pro OD820",
 		"Width": 4.67,
 		"Height": 5.97,
@@ -30922,7 +31020,7 @@
 	{
 		"Brand": "Maxon",
 		"Name": "Overdrive OD9PRO+",
-		"Width": 2.93,
+		"Width": 2.86,
 		"Height": 4.88,
 		"Image": "maxon-od9pro.png"
 	},
@@ -30942,6 +31040,13 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Pure Analog Chorus PAC9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-pac9.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Real Tube Overdrive ",
 		"Width": 4.67,
 		"Height": 5.97,
@@ -30953,6 +31058,13 @@
 		"Width": 4.67,
 		"Height": 5.97,
 		"Image": "maxon-ph350.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Sonic Distortion SD-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-sd9.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -30971,7 +31083,7 @@
 	{
 		"Brand": "Maxon",
 		"Name": "Stereo Chorus CS9PRO",
-		"Width": 2.93,
+		"Width": 2.86,
 		"Height": 4.88,
 		"Image": "maxon-cs9pro.png"
 	},
@@ -30984,17 +31096,10 @@
 	},
 	{
 		"Brand": "Maxon",
-		"Name": "Vintage Overdrive Pro",
-		"Width": 2.93,
+		"Name": "Vintage Overdrive Pro VOP9",
+		"Width": 2.86,
 		"Height": 4.88,
 		"Image": "maxon-vop9.png"
-	},
-	{
-		"Brand": "Maxon",
-		"Name": "Overdrive OD-9",
-		"Width": 2.93,
-		"Height": 4.88,
-		"Image": "maxon-overdrive-od-9.png"
 	},
 	{
 		"Brand": "Maxon",
