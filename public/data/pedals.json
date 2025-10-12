@@ -9353,6 +9353,13 @@
 		"Image": "colombo-rocker-83.png"
 	},
 	{
+		"Brand": "Color Audio",
+		"Name": "Cassette Preamp",
+		"Width": 2.6,
+		"Height": 4.96,
+		"Image": "color-audio-cassette-preamp.png"
+	},
+	{
 		"Brand": "Colorsound",
 		"Name": "Fuzz Sound",
 		"Width": 3.8189,
@@ -30935,9 +30942,30 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Auto Filter AF-9 (Sliders)",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-af9-sliders.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Bi-mode Chorus BC-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-bc9.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Blackdrive OD-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-blackdrive-od-9.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Compressor/Limiter CP9Pro+",
-		"Width": 2.79,
-		"Height": 4.5,
+		"Width": 2.86,
+		"Height": 4.88,
 		"Image": "maxon-cp9pro+.png"
 	},
 	{
@@ -30946,6 +30974,13 @@
 		"Width": 2.79,
 		"Height": 4.5,
 		"Image": "maxon-cp101.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Creamdrive OD-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-creamdrive-od9.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -30988,6 +31023,20 @@
 		"Width": 2.79,
 		"Height": 4.5,
 		"Image": "maxon-ge601.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Magnum Distortion MD-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-md9.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Organic Overdrive OOD-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-ood9.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -31035,7 +31084,7 @@
 		"Brand": "Maxon",
 		"Name": "Phaser PT9PRO+",
 		"Width": 2.93,
-		"Height": 4.88,
+		"Height": 4.86,
 		"Image": "maxon-pt9pro.png"
 	},
 	{
@@ -31090,9 +31139,30 @@
 	{
 		"Brand": "Maxon",
 		"Name": "Super Metal SM9PRO+",
-		"Width": 2.93,
+		"Width": 2.86,
 		"Height": 4.88,
 		"Image": "maxon-sm9pro.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Super Tube ST9PRO+",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-st9pro.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "True Tube Booster/Overdrive TBO9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-tbo9.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "True Tube Overdrive TOD9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-tod9.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -31100,13 +31170,6 @@
 		"Width": 2.86,
 		"Height": 4.88,
 		"Image": "maxon-vop9.png"
-	},
-	{
-		"Brand": "Maxon",
-		"Name": "Blackdrive OD-9",
-		"Width": 2.93,
-		"Height": 4.88,
-		"Image": "maxon-blackdrive-od-9.png"
 	},
 	{
 		"Brand": "MeloAudio",
