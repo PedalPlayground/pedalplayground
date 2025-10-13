@@ -9501,6 +9501,13 @@
 	},
 	{
 		"Brand": "Coppersound",
+		"Name": "Foxcatcher V2",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "coppersound-foxcatcher-v2.png"
+	},
+	{
+		"Brand": "Coppersound",
 		"Name": "Gravity Bomb",
 		"Width": 1.97,
 		"Height": 3.7,
@@ -9536,6 +9543,13 @@
 	},
 	{
 		"Brand": "Coppersound",
+		"Name": "Mystique",
+		"Width": 4.7,
+		"Height": 3.87,
+		"Image": "coppersound-mystique.png"
+	},
+	{
+		"Brand": "Coppersound",
 		"Name": "Polaris",
 		"Width": 4.7,
 		"Height": 3.87,
@@ -9550,9 +9564,16 @@
 	},
 	{
 		"Brand": "Coppersound",
-		"Name": "Telegraph V2",
-		"Width": 2.75,
-		"Height": 5.24,
+		"Name": "Telegraph V2 (Gray)",
+		"Width": 2.73,
+		"Height": 5.18,
+		"Image": "coppersound-telegraph-v2-gray.png"
+	},
+	{
+		"Brand": "Coppersound",
+		"Name": "Telegraph V2 (White)",
+		"Width": 2.73,
+		"Height": 5.18,
 		"Image": "coppersound-telegraph-v2.png"
 	},
 	{
@@ -47526,9 +47547,9 @@
 	},
 	{
 		"Brand": "Third Man",
-		"Name": "Triplegraph (Black)",
+		"Name": "Triplegraph",
 		"Width": 7.38,
-		"Height": 4.7,
+		"Height": 5.07,
 		"Image": "third-man-triplegraph-black.png"
 	},
 	{
