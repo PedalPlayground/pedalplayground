@@ -12013,6 +12013,13 @@
 		"Image": "discomfort-designs-phantom-limb.png"
 	},
 	{
+		"Brand": "Discomfort Designs",
+		"Name": "Riemann's Grave",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "discomfort-designs-riemanns-grave.png"
+	},
+	{
 		"Brand": "Disruptive Music Tech",
 		"Name": "Enhancifier",
 		"Width": 8,
@@ -25129,6 +25136,20 @@
 		"Width": 4.7,
 		"Height": 3.86,
 		"Image": "jhs-notaklon-black.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "NOTAKLÖN (Pink)",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "jhs-notaklon-pink.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "NOTAKLÖN (Splatter)",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "jhs-notaklon-splatter.png"
 	},
 	{
 		"Brand": "JHS",
@@ -44890,6 +44911,13 @@
 		"Width": 4,
 		"Height": 4.55,
 		"Image": "strymon-ola.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Olivera",
+		"Width": 2.7,
+		"Height": 4.43,
+		"Image": "strymon-olivera.png"
 	},
 	{
 		"Brand": "Strymon",
