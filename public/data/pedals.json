@@ -2899,6 +2899,13 @@
 	},
 	{
 		"Brand": "BSRI",
+		"Name": "Everything We Don't Know About The Ocean Floor V2",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "bsri-ewdkatof-v2.png"
+	},
+	{
+		"Brand": "BSRI",
 		"Name": "Impossible Colors",
 		"Width": 3.7,
 		"Height": 4.9,
@@ -17387,6 +17394,34 @@
 		"Width": 4.02,
 		"Height": 5.03,
 		"Image": "fender-bubbler.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Competition Chorus",
+		"Width": 2.81,
+		"Height": 4.75,
+		"Image": "fender-competition-chorus.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Competition Distortion",
+		"Width": 2.81,
+		"Height": 4.75,
+		"Image": "fender-competition-distortion.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Competition Drive",
+		"Width": 2.81,
+		"Height": 4.75,
+		"Image": "fender-competition-drive.png"
+	},
+	{
+		"Brand": "Fender",
+		"Name": "Competition Delay",
+		"Width": 2.81,
+		"Height": 4.75,
+		"Image": "fender-competition-delay.png"
 	},
 	{
 		"Brand": "Fender",
