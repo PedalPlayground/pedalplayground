@@ -30970,6 +30970,13 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Analog Delay AD-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-ad9.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Analog Delay AD9Pro",
 		"Width": 2.86,
 		"Height": 4.88,
@@ -31002,6 +31009,13 @@
 		"Width": 2.86,
 		"Height": 4.88,
 		"Image": "maxon-blackdrive-od-9.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Compressor CP-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-cp9.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -31061,6 +31075,13 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Graphic EQ GE-9",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "maxon-ge9.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Graphic Equalizer GE601",
 		"Width": 2.79,
 		"Height": 4.5,
@@ -31072,6 +31093,13 @@
 		"Width": 2.86,
 		"Height": 4.88,
 		"Image": "maxon-md9.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Noise Gate NG-9",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "maxon-ng9.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -31117,6 +31145,20 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Overdrive Soft Distortion OSD9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-osd9.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Parametric EQ PQ-9",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "maxon-pq9.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Phase Tone PT999",
 		"Width": 2.79,
 		"Height": 4.5,
@@ -31124,8 +31166,15 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Phaser PT-9PRO",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "maxon-pt-9pro.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Phaser PT9PRO+",
-		"Width": 2.93,
+		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "maxon-pt9pro.png"
 	},
@@ -31173,10 +31222,24 @@
 	},
 	{
 		"Brand": "Maxon",
+		"Name": "Stereo Chorus CS-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-cs9.png"
+	},
+	{
+		"Brand": "Maxon",
 		"Name": "Stereo Chorus CS9PRO",
 		"Width": 2.86,
 		"Height": 4.88,
 		"Image": "maxon-cs9pro.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Super Metal SM-9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-sm9.png"
 	},
 	{
 		"Brand": "Maxon",
@@ -31205,6 +31268,13 @@
 		"Width": 2.86,
 		"Height": 4.88,
 		"Image": "maxon-tod9.png"
+	},
+	{
+		"Brand": "Maxon",
+		"Name": "Vintage Jet Riser VJR9",
+		"Width": 2.86,
+		"Height": 4.88,
+		"Image": "maxon-vjr9.png"
 	},
 	{
 		"Brand": "Maxon",
