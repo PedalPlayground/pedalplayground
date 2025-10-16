@@ -16354,6 +16354,13 @@
 	},
 	{
 		"Brand": "EAE",
+		"Name": "Glaive",
+		"Width": 2.6,
+		"Height": 5.05,
+		"Image": "electronic-audio-experiments-glaive.png"
+	},
+	{
+		"Brand": "EAE",
 		"Name": "Halberd",
 		"Width": 3.7,
 		"Height": 4.95,
