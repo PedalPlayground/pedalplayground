@@ -9262,6 +9262,13 @@
 		"Image": "coffeshoppedals-london-fog.png"
 	},
 	{
+		"Brand": "Coffee Shop Pedals",
+		"Name": "Portafilter",
+		"Width": 3.7,
+		"Height": 4.79,
+		"Image": "coffeshoppedals-portafilter.png"
+	},
+	{
 		"Brand": "Collaboration Devices",
 		"Name": "The Compressor (Black)",
 		"Width": 4.75,
