@@ -7863,6 +7863,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Epoch Boost Mini",
+		"Width": 1.8,
+		"Height": 3.7,
+		"Image": "catalinbread-epoch-boost-mini.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Epoch Pre",
 		"Width": 4.7,
 		"Height": 3.82,
@@ -7916,6 +7923,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-fuzzrite.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Fuzzrite Mini",
+		"Width": 1.8,
+		"Height": 3.7,
+		"Image": "catalinbread-fuzzrite-mini.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -12281,43 +12295,50 @@
 	{
 		"Brand": "Donner",
 		"Name": "AB/Y",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.65,
+		"Height": 3.68,
 		"Image": "donner-aby.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Blues Drive",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.65,
+		"Height": 3.68,
 		"Image": "donner-blues-drive.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Circle Looper",
-		"Width": 3.89764,
-		"Height": 4.76378,
+		"Width": 3.9,
+		"Height": 4.76,
 		"Image": "donner-circle-looper.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Dark Mouse",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.65,
+		"Height": 3.68,
 		"Image": "donner-dark-mouse.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Dumbal Drive",
-		"Width": 2.51969,
-		"Height": 4.4685039,
+		"Width": 2.52,
+		"Height": 4.47,
 		"Image": "donner-dumbal-drive.png"
 	},
 	{
 		"Brand": "Donner",
+		"Name": "EQ Seeker",
+		"Width": 5.14,
+		"Height": 2.53,
+		"Image": "donner-eq-seeker.png"
+	},
+	{
+		"Brand": "Donner",
 		"Name": "Extreme Driver",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.65,
+		"Height": 3.68,
 		"Image": "donner-extreme-driver.png"
 	},
 	{
@@ -12330,36 +12351,36 @@
 	{
 		"Brand": "Donner",
 		"Name": "Golden Tremolo",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.65,
+		"Height": 3.68,
 		"Image": "donner-golden-tremolo.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Island Delay",
-		"Width": 2.51969,
-		"Height": 4.4685039,
+		"Width": 2.52,
+		"Height": 4.47,
 		"Image": "donner-island-delay.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Jet Convolution",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.65,
+		"Height": 3.68,
 		"Image": "donner-jet-convolution.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Morpher",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.65,
+		"Height": 3.68,
 		"Image": "donner-morpher.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Noise Killer",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.65,
+		"Height": 3.68,
 		"Image": "donner-noise-killer.png"
 	},
 	{
@@ -12379,22 +12400,22 @@
 	{
 		"Brand": "Donner",
 		"Name": "Tutti Love",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.65,
+		"Height": 3.68,
 		"Image": "donner-tutti.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Vintaverb",
-		"Width": 2.51969,
-		"Height": 4.4685039,
+		"Width": 2.52,
+		"Height": 4.47,
 		"Image": "donner-vintaverb.png"
 	},
 	{
 		"Brand": "Donner",
 		"Name": "Yellow Fall",
-		"Width": 1.65354,
-		"Height": 3.681102,
+		"Width": 1.65,
+		"Height": 3.68,
 		"Image": "donner-yellow-fall.png"
 	},
 	{
@@ -25678,6 +25699,27 @@
 	},
 	{
 		"Brand": "Joyo",
+		"Name": "JF-24 Orthros Selector",
+		"Width": 3.76,
+		"Height": 4.81,
+		"Image": "joyo-jf24.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-25 Bright Day Overdrive",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf25.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "JF-26 Tiny Huge Fuzz",
+		"Width": 2.77,
+		"Height": 4.65,
+		"Image": "joyo-jf26.png"
+	},
+	{
+		"Brand": "Joyo",
 		"Name": "JF-30 A/B Switch",
 		"Width": 2.61,
 		"Height": 4.65,
@@ -26221,6 +26263,13 @@
 		"Width": 5.16,
 		"Height": 4.37,
 		"Image": "joyo-r30.png"
+	},
+	{
+		"Brand": "Joyo",
+		"Name": "R-31 Para-Verb",
+		"Width": 5.12,
+		"Height": 4.37,
+		"Image": "joyo-r31.png"
 	},
 	{
 		"Brand": "Joyo",
@@ -27918,17 +27967,52 @@
 	},
 	{
 		"Brand": "Kinotone",
+		"Name": "Ghosts",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "kinotone-ghosts.png"
+	},
+	{
+		"Brand": "Kinotone",
 		"Name": "Ribbons",
-		"Width": 2.89,
-		"Height": 4.83,
+		"Width": 2.88,
+		"Height": 4.8,
 		"Image": "kinotone-ribbons.png"
 	},
 	{
 		"Brand": "Kinotone",
-		"Name": "Sparks",
-		"Width": 2.89,
-		"Height": 4.83,
+		"Name": "Ribbons (Gray)",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "kinotone-ribbons-gray.png"
+	},
+	{
+		"Brand": "Kinotone",
+		"Name": "Ribbons (Pink)",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "kinotone-ribbons-pink.png"
+	},
+	{
+		"Brand": "Kinotone",
+		"Name": "Ribbons (Metal)",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "kinotone-ribbons-metal.png"
+	},
+	{
+		"Brand": "Kinotone",
+		"Name": "Sparks (Blue)",
+		"Width": 2.88,
+		"Height": 4.8,
 		"Image": "kinotone-sparks.png"
+	},
+	{
+		"Brand": "Kinotone",
+		"Name": "Sparks (Yellow)",
+		"Width": 2.88,
+		"Height": 4.8,
+		"Image": "kinotone-sparks-yellow.png"
 	},
 	{
 		"Brand": "KittycasterFX",
@@ -33935,6 +34019,13 @@
 		"Width": 1.78,
 		"Height": 3.7,
 		"Image": "mrblack-mini-vintage-chorus.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Mod.One",
+		"Width": 4.7,
+		"Height": 3.8,
+		"Image": "mr-black-mod-one.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -51929,6 +52020,13 @@
 	},
 	{
 		"Brand": "Wampler",
+		"Name": "Mini Ego 76",
+		"Width": 1.81,
+		"Height": 3.7,
+		"Image": "wampler-miniego76.png"
+	},
+	{
+		"Brand": "Wampler",
 		"Name": "Mini Faux Spring Reverb",
 		"Width": 1.81,
 		"Height": 3.7,
@@ -52038,6 +52136,13 @@
 		"Width": 2.6,
 		"Height": 5,
 		"Image": "wampler-sovereign.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "Syntax",
+		"Width": 3.7,
+		"Height": 1.53,
+		"Image": "wampler-syntax.png"
 	},
 	{
 		"Brand": "Wampler",
