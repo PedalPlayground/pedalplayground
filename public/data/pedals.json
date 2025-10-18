@@ -40112,6 +40112,27 @@
 	},
 	{
 		"Brand": "Pladask Elektrisk",
+		"Name": "Stereo Blomar",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "pladask-stereo-blomar.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Stereo Falma",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "pladask-stereo-falma.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
+		"Name": "Stereo Matrise",
+		"Width": 5.96,
+		"Height": 4.95,
+		"Image": "pladask-stereo-matrise.png"
+	},
+	{
+		"Brand": "Pladask Elektrisk",
 		"Name": "Tåken",
 		"Width": 3.87,
 		"Height": 4.7,
