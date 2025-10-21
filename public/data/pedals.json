@@ -11426,6 +11426,13 @@
 	},
 	{
 		"Brand": "Diamond",
+		"Name": "Memory Lane (2025)",
+		"Width": 2.6,
+		"Height": 4.94,
+		"Image": "diamond-memory-lane-2025.png"
+	},
+	{
+		"Brand": "Diamond",
 		"Name": "Nine Zero Two",
 		"Width": 2.44,
 		"Height": 4.63,
@@ -37319,6 +37326,13 @@
 	},
 	{
 		"Brand": "OBNE",
+		"Name": "Expression Ramper (Sunlight)",
+		"Width": 1.69,
+		"Height": 3.88,
+		"Image": "obne-ramper-sunlight.png"
+	},
+	{
+		"Brand": "OBNE",
 		"Name": "Expression Slider",
 		"Width": 1.5,
 		"Height": 3.88,
@@ -37561,6 +37575,27 @@
 		"Width": 2.87,
 		"Height": 4.96,
 		"Image": "obne-sunlight-olive.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Sunlight Stereo (Black)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-sunlight-stereo-black.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Sunlight Stereo (Maroon)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-sunlight-stereo-maroon.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Sunlight Stereo (Yellow)",
+		"Width": 4.25,
+		"Height": 4.56,
+		"Image": "obne-sunlight-stereo-yellow.png"
 	},
 	{
 		"Brand": "OBNE",
