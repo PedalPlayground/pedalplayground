@@ -20259,6 +20259,27 @@
 		"Image": "gfi-triple-switch.png"
 	},
 	{
+		"Brand": "Ghost Note Audio",
+		"Name": "3 Bit Fuzz",
+		"Width": 3.58,
+		"Height": 5.3,
+		"Image": "ghost-note-audio-3-bit-fuzz.png"
+	},
+	{
+		"Brand": "Ghost Note Audio",
+		"Name": "Amverb",
+		"Width": 3.58,
+		"Height": 5.3,
+		"Image": "ghost-note-audio-amverb.png"
+	},
+	{
+		"Brand": "Ghost Note Audio",
+		"Name": "Swirls",
+		"Width": 3.58,
+		"Height": 5.3,
+		"Image": "ghost-note-audio-swirls.png"
+	},
+	{
 		"Brand": "GigRig",
 		"Name": "ABY Baby",
 		"Width": 6.45,
@@ -35863,6 +35884,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "'59 Bassguy",
+		"Width": 2.92,
+		"Height": 4.76,
+		"Image": "nux-59-bassguy.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "'6ixty5ive'",
 		"Width": 2.98,
 		"Height": 4.76,
@@ -35888,6 +35916,13 @@
 		"Width": 4.21,
 		"Height": 4.47,
 		"Image": "nux-amp-academy.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Amp Academy Stomp",
+		"Width": 7.2,
+		"Height": 4.92,
+		"Image": "nux-amp-academy-stomp.png"
 	},
 	{
 		"Brand": "NuX",
@@ -35968,6 +36003,13 @@
 	},
 	{
 		"Brand": "NuX",
+		"Name": "Dual Loop Stereo",
+		"Width": 7.2,
+		"Height": 4.92,
+		"Image": "nux-dual-loop-stereo.png"
+	},
+	{
+		"Brand": "NuX",
 		"Name": "Duotime",
 		"Width": 4.13,
 		"Height": 4.47,
@@ -36014,6 +36056,13 @@
 		"Width": 2.06,
 		"Height": 3.7,
 		"Image": "nux-horseman.png"
+	},
+	{
+		"Brand": "NuX",
+		"Name": "Huminator",
+		"Width": 2.91,
+		"Height": 4.76,
+		"Image": "nux-huminator.png"
 	},
 	{
 		"Brand": "NuX",
