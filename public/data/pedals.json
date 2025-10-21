@@ -36971,21 +36971,21 @@
 		"Brand": "OBNE",
 		"Name": "Bathing (Algae)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-bathing-algae.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Bathing (Ink)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-bathing-black.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Bathing (Orchid)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-bathing-orchid.png"
 	},
 	{
@@ -37083,35 +37083,35 @@
 		"Brand": "OBNE",
 		"Name": "Black Fountain Stereo (Cream)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-black-fountain-stereo-cream.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Black Fountain Stereo (Revolver-esque)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-black-fountain-stereo-white.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Black Fountain Stereo (Slate)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-black-fountain-stereo.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Black Fountain Stereo (Terracotta)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-black-fountain-stereo-terra.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Black Fountain Stereo (Wildberry)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-black-fountain-stereo-wildberry.png"
 	},
 	{
@@ -37158,37 +37158,44 @@
 	},
 	{
 		"Brand": "OBNE",
-		"Name": "Dark Star Stereo (Blue)",
+		"Name": "Dark Star Stereo (Black)",
 		"Width": 4.25,
-		"Height": 4.56,
-		"Image": "obne-dark-star-stereo.png"
+		"Height": 4.84,
+		"Image": "obne-dark-star-stereo-black.png"
 	},
 	{
 		"Brand": "OBNE",
-		"Name": "Dark Star Stereo (Black)",
+		"Name": "Dark Star Stereo (Blue)",
 		"Width": 4.25,
-		"Height": 4.56,
-		"Image": "obne-dark-star-stereo-black.png"
+		"Height": 4.84,
+		"Image": "obne-dark-star-stereo.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Dark Star Stereo (Blue Raspberry)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-dark-star-stereo-blue-raspberry.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Dark Star Stereo (Green Galaxy)",
+		"Width": 4.25,
+		"Height": 4.84,
+		"Image": "obne-dark-star-stereo-green-galaxy.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Dark Star Stereo (Pink)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-dark-star-stereo-pink.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Dark Star Stereo (Revolver-esque)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-dark-star-stereo-white.png"
 	},
 	{
@@ -37433,28 +37440,35 @@
 		"Brand": "OBNE",
 		"Name": "Pardner Fuzz (Blue)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-pardner-fuzz-blue.png"
+	},
+	{
+		"Brand": "OBNE",
+		"Name": "Pardner Fuzz (Blue Bonanza)",
+		"Width": 4.25,
+		"Height": 4.84,
+		"Image": "obne-pardner-fuzz-blue-bonanza.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Pardner Fuzz (Purple)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-pardner-fuzz-purple.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Pardner Fuzz (Revolver-eque)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-pardner-fuzz-white.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Pardner Fuzz (Tan)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-pardner-fuzz-tan.png"
 	},
 	{
@@ -37580,21 +37594,21 @@
 		"Brand": "OBNE",
 		"Name": "Sunlight Stereo (Black)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-sunlight-stereo-black.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Sunlight Stereo (Maroon)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-sunlight-stereo-maroon.png"
 	},
 	{
 		"Brand": "OBNE",
 		"Name": "Sunlight Stereo (Yellow)",
 		"Width": 4.25,
-		"Height": 4.56,
+		"Height": 4.84,
 		"Image": "obne-sunlight-stereo-yellow.png"
 	},
 	{
