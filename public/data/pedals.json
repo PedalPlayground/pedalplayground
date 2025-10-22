@@ -42043,6 +42043,48 @@
 		"Image": "rolls-pm351.png"
 	},
 	{
+		"Brand": "Roshi",
+		"Name": "Blacklon",
+		"Width": 3.21,
+		"Height": 5.16,
+		"Image": "roshi-blacklon.png"
+	},
+	{
+		"Brand": "Roshi",
+		"Name": "Dezzyner",
+		"Width": 3.21,
+		"Height": 5.16,
+		"Image": "roshi-dezzyner.png"
+	},
+	{
+		"Brand": "Roshi",
+		"Name": "Gruff V1",
+		"Width": 4.41,
+		"Height": 6.05,
+		"Image": "roshi-gruff-v1.png"
+	},
+	{
+		"Brand": "Roshi",
+		"Name": "Gruff Result",
+		"Width": 3.21,
+		"Height": 5.16,
+		"Image": "roshi-gruff-result.png"
+	},
+	{
+		"Brand": "Roshi",
+		"Name": "Plexition",
+		"Width": 3.21,
+		"Height": 5.16,
+		"Image": "roshi-plexition.png"
+	},
+	{
+		"Brand": "Roshi",
+		"Name": "Seji",
+		"Width": 3.21,
+		"Height": 5.16,
+		"Image": "roshi-seji.png"
+	},
+	{
 		"Brand": "Ross",
 		"Name": "Chorus",
 		"Width": 3.57,
