@@ -27141,6 +27141,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Oaxa",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-oaxa.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "OCTA PSI",
 		"Width": 4,
 		"Height": 5.04,
@@ -27152,6 +27159,13 @@
 		"Width": 4,
 		"Height": 5.04,
 		"Image": "keeley-octa-psi-purple.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "OCTA PSI (Taiga Mod)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-octa-psi-taiga-mod.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -31688,6 +31702,13 @@
 		"Width": 4.7,
 		"Height": 4.07,
 		"Image": "mile-end-ng51.png"
+	},
+	{
+		"Brand": "Milkman Sound",
+		"Name": "Benson The Amp",
+		"Width": 8.5,
+		"Height": 6.66,
+		"Image": "milkman-benson-the-amp.png"
 	},
 	{
 		"Brand": "Milkman Sound",
