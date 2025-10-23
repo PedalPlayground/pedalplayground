@@ -23549,6 +23549,13 @@
 		"Image": "iam-octonaut.png"
 	},
 	{
+		"Brand": "Intrepid Audio",
+		"Name": "Crossflow",
+		"Width": 5.7,
+		"Height": 4.82,
+		"Image": "intrepid-audio-crossflow.png"
+	},
+	{
 		"Brand": "Irin Instrument",
 		"Name": "Talent Octave",
 		"Width": 1.94,
@@ -30872,6 +30879,13 @@
 	},
 	{
 		"Brand": "Mask Audio Electronics",
+		"Name": "Alone",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "mask-alone.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
 		"Name": "Black Math",
 		"Width": 3.7,
 		"Height": 4.88,
@@ -31735,21 +31749,21 @@
 		"Brand": "Milkman Sound",
 		"Name": "The Amp 50",
 		"Width": 8.5,
-		"Height": 6.74,
+		"Height": 6.66,
 		"Image": "milkman-the-amp.png"
 	},
 	{
 		"Brand": "Milkman Sound",
 		"Name": "The Amp 100",
 		"Width": 8.5,
-		"Height": 6.74,
+		"Height": 6.66,
 		"Image": "milkman-the-amp-black.png"
 	},
 	{
 		"Brand": "Milkman Sound",
 		"Name": "The Amp Stereo",
 		"Width": 8.5,
-		"Height": 6.74,
+		"Height": 6.66,
 		"Image": "milkman-the-amp-stereo.png"
 	},
 	{
