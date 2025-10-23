@@ -35555,6 +35555,13 @@
 	},
 	{
 		"Brand": "Nobels",
+		"Name": "MOD-Mini",
+		"Width": 1.91,
+		"Height": 3.66,
+		"Image": "nobels-mod-mini.png"
+	},
+	{
+		"Brand": "Nobels",
 		"Name": "ODR-1",
 		"Width": 2.89,
 		"Height": 5.08,
@@ -35590,7 +35597,7 @@
 	},
 	{
 		"Brand": "Nobels",
-		"Name": "ODR Mini 2",
+		"Name": "ODR-Mini 2",
 		"Width": 1.92,
 		"Height": 3.66,
 		"Image": "nobels-odr-mini-2.png"
@@ -38404,10 +38411,24 @@
 	},
 	{
 		"Brand": "Orange",
+		"Name": "Acoustic Pedal",
+		"Width": 3.94,
+		"Height": 5.28,
+		"Image": "orange-acoustic-pedal.png"
+	},
+	{
+		"Brand": "Orange",
 		"Name": "Amp Detonator",
-		"Width": 3.74,
+		"Width": 3.94,
 		"Height": 5.12,
 		"Image": "orange-amp-detonator.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "Bass Butler",
+		"Width": 6.69,
+		"Height": 6.18,
+		"Image": "orange-bass-butler.png"
 	},
 	{
 		"Brand": "Orange",
@@ -38426,21 +38447,35 @@
 	{
 		"Brand": "Orange",
 		"Name": "Fur Coat",
-		"Width": 3.74,
+		"Width": 3.94,
 		"Height": 5.12,
 		"Image": "orange-fur-coat.png"
 	},
 	{
 		"Brand": "Orange",
 		"Name": "Getaway Driver",
-		"Width": 3.74,
+		"Width": 3.94,
 		"Height": 5.12,
 		"Image": "orange-getaway-driver.png"
 	},
 	{
 		"Brand": "Orange",
+		"Name": "Guitar Butler",
+		"Width": 6.69,
+		"Height": 6.18,
+		"Image": "orange-guitar-butler.png"
+	},
+	{
+		"Brand": "Orange",
+		"Name": "King Comp",
+		"Width": 3.94,
+		"Height": 5.12,
+		"Image": "orange-king-comp.png"
+	},
+	{
+		"Brand": "Orange",
 		"Name": "Kongpressor",
-		"Width": 3.74,
+		"Width": 3.94,
 		"Height": 5.12,
 		"Image": "orange-kongpressor.png"
 	},
@@ -38475,7 +38510,7 @@
 	{
 		"Brand": "Orange",
 		"Name": "Two Stroke",
-		"Width": 3.74,
+		"Width": 3.94,
 		"Height": 5.12,
 		"Image": "orange-two-stroke.png"
 	},
