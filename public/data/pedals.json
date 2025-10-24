@@ -27155,6 +27155,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Oaxa (Black)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-oaxa-black.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "OCTA PSI",
 		"Width": 4,
 		"Height": 5.04,
@@ -30909,7 +30916,7 @@
 		"Brand": "Mask Audio Electronics",
 		"Name": "Civil Math",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.95,
 		"Image": "mask-civil-math.png"
 	},
 	{
@@ -30928,6 +30935,13 @@
 	},
 	{
 		"Brand": "Mask Audio Electronics",
+		"Name": "Hot Water",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "mask-hot-water.png"
+	},
+	{
+		"Brand": "Mask Audio Electronics",
 		"Name": "Line Blur",
 		"Width": 2.6,
 		"Height": 5.06,
@@ -30937,7 +30951,7 @@
 		"Brand": "Mask Audio Electronics",
 		"Name": "Maybe?",
 		"Width": 3.7,
-		"Height": 4.89,
+		"Height": 4.95,
 		"Image": "mask-maybe.png"
 	},
 	{
@@ -30951,14 +30965,14 @@
 		"Brand": "Mask Audio Electronics",
 		"Name": "Part Garden",
 		"Width": 3.7,
-		"Height": 4.93,
+		"Height": 4.95,
 		"Image": "mask-neck-part-garden.png"
 	},
 	{
 		"Brand": "Mask Audio Electronics",
 		"Name": "Part Garden Ge",
 		"Width": 3.7,
-		"Height": 4.93,
+		"Height": 4.95,
 		"Image": "mask-neck-part-garden-ge.png"
 	},
 	{
