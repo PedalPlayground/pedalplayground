@@ -47442,6 +47442,13 @@
 	},
 	{
 		"Brand": "TC Helicon",
+		"Name": "Harmony Singer 2",
+		"Width": 3.84,
+		"Height": 5.4,
+		"Image": "tc-helicon-harmony-singer-2.png"
+	},
+	{
+		"Brand": "TC Helicon",
 		"Name": "Harmony-G XT",
 		"Width": 5,
 		"Height": 5.24,
