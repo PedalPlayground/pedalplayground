@@ -29892,6 +29892,13 @@
 	},
 	{
 		"Brand": "LPD",
+		"Name": "Supernode",
+		"Width": 4.7,
+		"Height": 3.86,
+		"Image": "lpd-supernode.png"
+	},
+	{
+		"Brand": "LPD",
 		"Name": "Tidal Chorus",
 		"Width": 2.6,
 		"Height": 5.06,
@@ -49934,6 +49941,20 @@
 	},
 	{
 		"Brand": "Vertex",
+		"Name": "Buffer Interface",
+		"Width": 3.22,
+		"Height": 5,
+		"Image": "vertex-buffer-interface.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Buffer Module",
+		"Width": 5,
+		"Height": 2.23,
+		"Image": "vertex-buffer-module.png"
+	},
+	{
+		"Brand": "Vertex",
 		"Name": "Dynamic Distortion",
 		"Width": 3.2,
 		"Height": 4.53,
@@ -49969,10 +49990,24 @@
 	},
 	{
 		"Brand": "Vertex",
+		"Name": "Steel String (Slight Return)",
+		"Width": 2.2,
+		"Height": 4.23,
+		"Image": "vertex-ss-srv-mini-sr.png"
+	},
+	{
+		"Brand": "Vertex",
 		"Name": "Steel String Supreme",
 		"Width": 3.2,
 		"Height": 4.53,
 		"Image": "vertex-steelstringsupreme.png"
+	},
+	{
+		"Brand": "Vertex",
+		"Name": "Steel String Supreme (Slight Return)",
+		"Width": 3.2,
+		"Height": 4.53,
+		"Image": "vertex-steelstringsupreme-sr.png"
 	},
 	{
 		"Brand": "Vertex",
