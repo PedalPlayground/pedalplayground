@@ -28022,6 +28022,20 @@
 		"Image": "kingtone-vintage-fuzz.png"
 	},
 	{
+		"Brand": "Kink",
+		"Name": "Charlie Fuzz",
+		"Width": 1.95,
+		"Height": 3.7,
+		"Image": "kink-charlie-fuzz.png"
+	},
+	{
+		"Brand": "Kink",
+		"Name": "P.C. Boost",
+		"Width": 1.95,
+		"Height": 3.7,
+		"Image": "kink-pc-boost.png"
+	},
+	{
 		"Brand": "Kinotone",
 		"Name": "Ghosts",
 		"Width": 2.88,
@@ -36885,9 +36899,37 @@
 	},
 	{
 		"Brand": "O.C.E. Pedals",
-		"Name": "Wrench Fuzz",
+		"Name": "Demon Core",
 		"Width": 3.7,
-		"Height": 4.88,
+		"Height": 4.8,
+		"Image": "oce-demon-core.png"
+	},
+	{
+		"Brand": "O.C.E. Pedals",
+		"Name": "Step Ladder v2",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "oce-step-ladder-v2.png"
+	},
+	{
+		"Brand": "O.C.E. Pedals",
+		"Name": "Tsar Bomba",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "oce-tsar-bomba.png"
+	},
+	{
+		"Brand": "O.C.E. Pedals",
+		"Name": "White Rider",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "oce-white-rider.png"
+	},
+	{
+		"Brand": "O.C.E. Pedals",
+		"Name": "Wrench Fuzz v2",
+		"Width": 3.7,
+		"Height": 4.8,
 		"Image": "oce-wrench-fuzz.png"
 	},
 	{
