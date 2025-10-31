@@ -21696,28 +21696,49 @@
 	{
 		"Brand": "Hangman fx",
 		"Name": "Atomic World Ender",
-		"Width": 2.69,
+		"Width": 2.6,
 		"Height": 5.04,
 		"Image": "hangmanfx-atomic-world-ender.png"
 	},
 	{
 		"Brand": "Hangman fx",
 		"Name": "Lord GermFet",
-		"Width": 2.69,
+		"Width": 2.6,
 		"Height": 5.04,
 		"Image": "hangmanfx-lord-germfet.png"
 	},
 	{
 		"Brand": "Hangman fx",
 		"Name": "Meteoric Echo Monster",
-		"Width": 4.79,
+		"Width": 4.7,
 		"Height": 3.93,
 		"Image": "hangmanfx-meteoric-echo-monster.png"
 	},
 	{
 		"Brand": "Hangman fx",
+		"Name": "The Dagger",
+		"Width": 2.6,
+		"Height": 5.04,
+		"Image": "hangmanfx-the-dagger.png"
+	},
+	{
+		"Brand": "Hangman fx",
+		"Name": "The Luma Expresss",
+		"Width": 2.68,
+		"Height": 2.36,
+		"Image": "hangmanfx-the-luma-express.png"
+	},
+	{
+		"Brand": "Hangman fx",
+		"Name": "The Switch Box",
+		"Width": 2.12,
+		"Height": 2,
+		"Image": "hangmanfx-the-switch-box.png"
+	},
+	{
+		"Brand": "Hangman fx",
 		"Name": "Tyrannosaur MegaDriver",
-		"Width": 2.69,
+		"Width": 2.6,
 		"Height": 5.04,
 		"Image": "hangmanfx-tyrannosaur-megadriver.png"
 	},
