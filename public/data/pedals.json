@@ -44676,6 +44676,13 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Apollo VIIb (Cadet)",
+		"Width": 2.88,
+		"Height": 4.75,
+		"Image": "spaceman-apolloviib-cadet.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Artemis",
 		"Width": 4.11,
 		"Height": 4.75,
@@ -44809,6 +44816,13 @@
 	},
 	{
 		"Brand": "Spaceman",
+		"Name": "Polaris (Cadet)",
+		"Width": 3.92,
+		"Height": 4.71,
+		"Image": "spaceman-polaris-cadet.png"
+	},
+	{
+		"Brand": "Spaceman",
 		"Name": "Redstone",
 		"Width": 2.85,
 		"Height": 4.75,
@@ -44883,6 +44897,13 @@
 		"Width": 3.99,
 		"Height": 4.75,
 		"Image": "spaceman-sputnikiii.png"
+	},
+	{
+		"Brand": "Spaceman",
+		"Name": "Sputnik III (Cadet)",
+		"Width": 3.92,
+		"Height": 4.71,
+		"Image": "spaceman-sputnikiii-cadet.png"
 	},
 	{
 		"Brand": "Spaceman",
@@ -50638,6 +50659,13 @@
 		"Width": 6.5,
 		"Height": 5.5,
 		"Image": "vongon-polyphrase.png"
+	},
+	{
+		"Brand": "Vongon",
+		"Name": "Solarfaze",
+		"Width": 6.5,
+		"Height": 5.5,
+		"Image": "vongon-solarfaze.png"
 	},
 	{
 		"Brand": "Vongon",
