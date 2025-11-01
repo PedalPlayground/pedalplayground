@@ -615,14 +615,14 @@ function deleteSelected() {
 
 function convertUnits() {
 	if ( $('#convert-units').is(':checked') ) {
-		var units = 'mm';
+		units = 'mm';
 		$("label .units").text('(mm)');
 		$('#custom-pb-width').attr('placeholder',610);
 		$('#custom-pb-height').attr('placeholder',318);
 		$('#custom-p-width').attr('placeholder',70);
 		$('#custom-p-height').attr('placeholder',108);
 	} else {
-		var units = 'in';
+		units = 'in';
 		$("label .units").text('(inches)');
 		$('#custom-pb-width').attr('placeholder',24);
 		$('#custom-pb-height').attr('placeholder',12.5);
@@ -828,9 +828,9 @@ var GenRandom = {
 $("body").on("click", ".item", function (e) {
 
 	if ( $('#convert-units').is(':checked') ) {
-		var units = 'mm';
+		units = 'mm';
 	} else {
-		var units = 'in';
+		units = 'in';
 	}
 
 	var pedal = $(this);
