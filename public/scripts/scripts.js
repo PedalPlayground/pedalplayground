@@ -1,6 +1,6 @@
-var pedalImagePath = "public/images/pedals/";
-var pedalboardImagePath = "public/images/pedalboards/";
-var units = 'in';
+const pedalImagePath = "public/images/pedals/";
+const pedalboardImagePath = "public/images/pedalboards/";
+let units = 'in';
 
 $(document).ready(function () {
 	
