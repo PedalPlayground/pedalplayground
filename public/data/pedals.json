@@ -30277,6 +30277,13 @@
 	},
 	{
 		"Brand": "Mad Professor",
+		"Name": "Simble Overdrive Mk2",
+		"Width": 2.62,
+		"Height": 4.5,
+		"Image": "mad-professor-simble-od-mk2.png"
+	},
+	{
+		"Brand": "Mad Professor",
 		"Name": "Simble Predriver",
 		"Width": 2.62,
 		"Height": 4.5,
