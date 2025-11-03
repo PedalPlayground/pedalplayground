@@ -4164,6 +4164,13 @@
 		"Height": 3.36,
 		"Image": "big-joe-li2.png"
 	},
+	        {
+                "Brand": "Bigfoot Engineering",
+                "Name": "King Fuzz Mini",
+		"Width": 2.73,
+		"Height": 4.5,
+                "Image": "bigfoot-king-fuzz-mini.png"
+        },
 	{
 		"Brand": "Biyang",
 		"Name": "PH-10 Phase Pro",
