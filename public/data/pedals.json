@@ -16927,6 +16927,27 @@
 		"Image": "empress-zoia-10k.png"
 	},
 	{
+		"Brand": "Empty Head Effects",
+		"Name": "Big Talker",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "empty-head-big-talker.png"
+	},
+	{
+		"Brand": "Empty Head Effects",
+		"Name": "Falling Man",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "empty-head-falling-head.png"
+	},
+	{
+		"Brand": "Empty Head Effects",
+		"Name": "The External / Internal",
+		"Width": 4.7,
+		"Height": 3.85,
+		"Image": "empty-head-the-external-internal.png"
+	},
+	{
 		"Brand": "Endorphines",
 		"Name": "Ghost",
 		"Width": 7.48,
@@ -19714,6 +19735,13 @@
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "OCD v2",
+		"Width": 2.78,
+		"Height": 4.5,
+		"Image": "fulltone-ocd-v2.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "Octafuzz",
 		"Width": 2.82,
 		"Height": 4.5,
@@ -19785,7 +19813,7 @@
 	{
 		"Brand": "Fulltone Custom Shop",
 		"Name": "OCD-Ge",
-		"Width": 2.82,
+		"Width": 2.78,
 		"Height": 4.5,
 		"Image": "fulltonecustom-ocd-ge.png"
 	},
@@ -39441,9 +39469,37 @@
 	{
 		"Brand": "Paul C",
 		"Name": "Timmy",
-		"Width": 2.65,
-		"Height": 4.54,
+		"Width": 2.66,
+		"Height": 4.58,
 		"Image": "paul-c-timmy.png"
+	},
+	{
+		"Brand": "Paul C",
+		"Name": "Timmy V2",
+		"Width": 2.66,
+		"Height": 4.58,
+		"Image": "paul-c-timmy-v2.png"
+	},
+	{
+		"Brand": "Paul C",
+		"Name": "Timmy V2 (Red)",
+		"Width": 2.66,
+		"Height": 4.58,
+		"Image": "paul-c-timmy-v2-red.png"
+	},
+	{
+		"Brand": "Paul C",
+		"Name": "Timmy V2 (Surf Green)",
+		"Width": 2.66,
+		"Height": 4.58,
+		"Image": "paul-c-timmy-v2-surf-green.png"
+	},
+	{
+		"Brand": "Paul C",
+		"Name": "Timmy V3 15th Anniversary",
+		"Width": 2.66,
+		"Height": 4.58,
+		"Image": "paul-c-timmy-v3-15th.png"
 	},
 	{
 		"Brand": "Paul C",
@@ -39451,13 +39507,6 @@
 		"Width": 2.6,
 		"Height": 5.05,
 		"Image": "paul-c-zefram.png"
-	},
-	{
-		"Brand": "Paul C",
-		"Name": "Timmy V3 15th Anniversary",
-		"Width": 2.7,
-		"Height": 4.6,
-		"Image": "paul-c-timmy-v3-15th.png"
 	},
 	{
 		"Brand": "PdLS 3D",
@@ -48384,6 +48433,13 @@
 		"Width": 2.76,
 		"Height": 4.89,
 		"Image": "thorpyfx-field-marshall.png"
+	},
+	{
+		"Brand": "ThorpyFX",
+		"Name": "The J",
+		"Width": 3.98,
+		"Height": 4.89,
+		"Image": "thorpyfx-thej.png"
 	},
 	{
 		"Brand": "ThorpyFX",
