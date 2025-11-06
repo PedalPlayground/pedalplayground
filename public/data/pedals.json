@@ -13841,6 +13841,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Black Eye Mini",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-black-eye-mini.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Blumes",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -49248,6 +49255,13 @@
 	},
 	{
 		"Brand": "TWA",
+		"Name": "Great Divide 2.0",
+		"Width": 4.75,
+		"Height": 5.94,
+		"Image": "twa-great-divide-2.png"
+	},
+	{
+		"Brand": "TWA",
 		"Name": "Hot Sake",
 		"Width": 2.89,
 		"Height": 4.5,
@@ -49287,6 +49301,13 @@
 		"Width": 3.97,
 		"Height": 4.7,
 		"Image": "twa-octoverdrive.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "SC-01 Source Code",
+		"Width": 2.6,
+		"Height": 4.93,
+		"Image": "twa-sc-01-source-code.png"
 	},
 	{
 		"Brand": "TWA",
