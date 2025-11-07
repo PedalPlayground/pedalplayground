@@ -4242,6 +4242,83 @@
 		"Image": "big-joe-li2.png"
 	},
 	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "King Fuzz",
+		"Width": 4.08,
+		"Height": 4.77,
+		"Image": "bigfoot-king-fuzz.png"
+	},
+	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "King Fuzz Mini",
+		"Width": 2.8,
+		"Height": 4.56,
+		"Image": "bigfoot-king-fuzz-mini.png"
+	},
+	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "King Fuzz XL",
+		"Width": 4.08,
+		"Height": 4.77,
+		"Image": "bigfoot-king-fuzz-xl.png"
+	},
+	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "Octo Puss Prime",
+		"Width": 5.63,
+		"Height": 5.31,
+		"Image": "bigfoot-octo-puss-prime.png"
+	},
+	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "Octo Puss XL",
+		"Width": 4.08,
+		"Height": 4.77,
+		"Image": "bigfoot-octo-puss-xl.png"
+	},
+	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "Thunder Pup",
+		"Width": 4.08,
+		"Height": 4.77,
+		"Image": "bigfoot-thunder-pup.png"
+	},
+	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "Thunder Pup Mini",
+		"Width": 2.8,
+		"Height": 4.56,
+		"Image": "bigfoot-thunder-pup-mini.png"
+	},
+	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "Thunder Pup XL",
+		"Width": 4.08,
+		"Height": 4.77,
+		"Image": "bigfoot-thunder-pup-xl.png"
+	},
+	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "Trouble Booster",
+		"Width": 4.08,
+		"Height": 4.77,
+		"Image": "bigfoot-trouble-booster.png"
+	},
+	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "Trouble Booster Mini",
+		"Width": 2.8,
+		"Height": 4.56,
+		"Image": "bigfoot-trouble-booster-mini.png"
+	},
+	{
+		"Brand": "Bigfoot Engineering",
+		"Name": "Trouble Booster XL",
+		"Width": 4.08,
+		"Height": 4.77,
+		"Image": "bigfoot-trouble-booster-xl.png"
+	},
+	{
 		"Brand": "Biyang",
 		"Name": "PH-10 Phase Pro",
 		"Width": 2.63,
@@ -13026,6 +13103,13 @@
 		"Width": 2.62,
 		"Height": 4.4,
 		"Image": "drybell-vibe-machine-v3.png"
+	},
+	{
+		"Brand": "Drybell",
+		"Name": "Vibe Machine V-3 (Purple)",
+		"Width": 2.62,
+		"Height": 4.4,
+		"Image": "drybell-vibe-machine-v3-purple.png"
 	},
 	{
 		"Brand": "DSM & Humboldt",
