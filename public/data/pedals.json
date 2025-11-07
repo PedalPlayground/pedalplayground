@@ -10943,6 +10943,13 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Infinity Verb",
+		"Width": 2.75,
+		"Height": 5.09,
+		"Image": "deathbyaudio-infinity-verb.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Interstellar Overdrive",
 		"Width": 4.05,
 		"Height": 4.75,
