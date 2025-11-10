@@ -1295,6 +1295,48 @@
 		"Image": "allpedal-slamurai.png"
 	},
 	{
+		"Brand": "Altero",
+		"Name": "Kaede",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "altero-kaede.png"
+	},
+	{
+		"Brand": "Altero",
+		"Name": "Kaede (Handwired)",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "altero-kaede-hw.png"
+	},
+	{
+		"Brand": "Altero",
+		"Name": "Mag",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "altero-mag.png"
+	},
+	{
+		"Brand": "Altero",
+		"Name": "Mag (Handwired)",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "altero-mag-hw.png"
+	},
+	{
+		"Brand": "Altero",
+		"Name": "Wal",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "altero-wal.png"
+	},
+	{
+		"Brand": "Altero",
+		"Name": "Wal (Handwired)",
+		"Width": 2.76,
+		"Height": 4.72,
+		"Image": "altero-wal-hw.png"
+	},
+	{
 		"Brand": "Altoids",
 		"Name": "Smalls Tin",
 		"Width": 2.25,
@@ -14188,6 +14230,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-hizumitas-zine.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Hizumitas Jr",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-hizumitas-jr.png"
 	},
 	{
 		"Brand": "EarthQuaker",
