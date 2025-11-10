@@ -43427,6 +43427,13 @@
 		"Height": 3.85,
 		"Image": "spiral-yellow-spiral-drive.png"
 	},
+  {
+    "Brand": "Spline Laboratories",
+    "Name": "Cathedral",
+    "Width": 2.63,
+    "Height": 5,
+    "Image": "spline-laboratories-cathedral.png"
+  },
 	{
 		"Brand": "Spontaneous Audio Devices",
 		"Name": "Son of Kong",
