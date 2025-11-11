@@ -25698,6 +25698,20 @@
 		"Image": "jhs-whitey-tighty.png"
 	},
 	{
+		"Brand": "JHS X Third Man Hardware",
+		"Name": "Troika (Black)",
+		"Width": 3.35,
+		"Height": 4.8,
+		"Image": "jhs-troika-black.png"
+	},
+	{
+		"Brand": "JHS X Third Man Hardware",
+		"Name": "Troika (Yellow)",
+		"Width": 3.35,
+		"Height": 4.8,
+		"Image": "jhs-troika-yellow.png"
+	},
+	{
 		"Brand": "Joe Gore",
 		"Name": "Cult",
 		"Width": 2.6,
