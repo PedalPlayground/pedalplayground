@@ -9843,6 +9843,13 @@
 		"Image": "cosmodio-pet-yeti.png"
 	},
 	{
+		"Brand": "Cosmodio",
+		"Name": "Splinter Twin",
+		"Width": 3.8,
+		"Height": 4.92,
+		"Image": "cosmodio-splinter-twin.png"
+	},
+	{
 		"Brand": "Costalab",
 		"Name": "Buffer",
 		"Width": 1.88,
@@ -15994,6 +16001,13 @@
 		"Width": 1.99,
 		"Height": 3.65,
 		"Image": "ehx-pico-360-looper.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Pico Atomic Cluster",
+		"Width": 1.99,
+		"Height": 3.65,
+		"Image": "ehx-pico-atomic-cluster.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
