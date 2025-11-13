@@ -4055,9 +4055,16 @@
 	{
 		"Brand": "Benson",
 		"Name": "Germanium Boost",
-		"Width": 2.71,
+		"Width": 2.74,
 		"Height": 4.5,
 		"Image": "benson-germanium-boost.png"
+	},
+	{
+		"Brand": "Benson",
+		"Name": "Germanium Boost (White)",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "benson-germanium-boost-white.png"
 	},
 	{
 		"Brand": "Benevale",
@@ -4086,6 +4093,13 @@
 		"Width": 4.69,
 		"Height": 3.77,
 		"Image": "benson-germanium-preamp.png"
+	},
+	{
+		"Brand": "Benson",
+		"Name": "Portable Distortion 424 MKII",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "benson-portable-distortion-424-mk2.png"
 	},
 	{
 		"Brand": "Benson",
