@@ -22556,6 +22556,13 @@
 	},
 	{
 		"Brand": "Heather Brown",
+		"Name": "Darlene Compression",
+		"Width": 2.6,
+		"Height": 3.9,
+		"Image": "hbe-darlene-compression.png"
+	},
+	{
+		"Brand": "Heather Brown",
 		"Name": "Sensation Fuzzdrive",
 		"Width": 3,
 		"Height": 4.92,
@@ -22719,8 +22726,15 @@
 		"Brand": "Hologram Electronics",
 		"Name": "Chroma Console",
 		"Width": 5,
-		"Height": 5.65,
+		"Height": 5.82,
 		"Image": "hologram-chroma-console.png"
+	},
+	{
+		"Brand": "Hologram Electronics",
+		"Name": "Chroma Console (Black)",
+		"Width": 5,
+		"Height": 5.82,
+		"Image": "hologram-chroma-console-black.png"
 	},
 	{
 		"Brand": "Hologram Electronics",
