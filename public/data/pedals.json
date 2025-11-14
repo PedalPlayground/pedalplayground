@@ -7814,6 +7814,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Belle Epoch +",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-belle-plus.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Belle Epoch Deluxe",
 		"Width": 4.7,
 		"Height": 3.82,
@@ -29640,6 +29647,13 @@
 	},
 	{
 		"Brand": "Line 6",
+		"Name": "Helix",
+		"Width": 22.05,
+		"Height": 11.79,
+		"Image": "line6-helix.png"
+	},
+	{
+		"Brand": "Line 6",
 		"Name": "Helix (Space Gray)",
 		"Width": 22.05,
 		"Height": 11.79,
@@ -29654,10 +29668,10 @@
 	},
 	{
 		"Brand": "Line 6",
-		"Name": "Helix",
-		"Width": 22.05,
-		"Height": 11.79,
-		"Image": "line6-helix.png"
+		"Name": "Helix Stadium XL",
+		"Width": 19.37,
+		"Height": 10.17,
+		"Image": "line6-helix-stadium-xl.png"
 	},
 	{
 		"Brand": "Line 6",
