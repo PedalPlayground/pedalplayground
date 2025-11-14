@@ -17998,6 +17998,20 @@
 		"Image": "fire-eye-red-eye-preamp.png"
 	},
 	{
+		"Brand": "Fish Circuits",
+		"Name": "Astronomie",
+		"Width": 4.5,
+		"Height": 8.53,
+		"Image": "fish-circuits-astronomie.png"
+	},
+	{
+		"Brand": "Fish Circuits",
+		"Name": "Model One",
+		"Width": 3,
+		"Height": 5.68,
+		"Image": "fish-circuits-model-one.png"
+	},
+	{
 		"Brand": "Fishman",
 		"Name": "Aura Spectrum DI Preamp",
 		"Width": 5.37,
