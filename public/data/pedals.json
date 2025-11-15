@@ -26749,10 +26749,24 @@
 	},
 	{
 		"Brand": "Kasleder FX",
+		"Name": "Pressure Drop",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-pressure-drop.png"
+	},
+	{
+		"Brand": "Kasleder FX",
 		"Name": "Sweet Little Thing",
 		"Width": 4.7,
 		"Height": 3.89,
 		"Image": "kasleder-sweet-little-thing.png"
+	},
+	{
+		"Brand": "Kasleder FX",
+		"Name": "The Toad",
+		"Width": 4.7,
+		"Height": 3.89,
+		"Image": "kasleder-the-toad.png"
 	},
 	{
 		"Brand": "Kasleder FX",
@@ -32524,6 +32538,13 @@
 	},
 	{
 		"Brand": "Mojo Hand FX",
+		"Name": "SMPLoFi",
+		"Width": 2.65,
+		"Height": 4.5,
+		"Image": "mojohand-smplofi.png"
+	},
+	{
+		"Brand": "Mojo Hand FX",
 		"Name": "Speakeasy",
 		"Width": 2.84,
 		"Height": 4.8,
@@ -34201,6 +34222,13 @@
 		"Width": 2.72,
 		"Height": 4.5,
 		"Image": "mrblack-ambience.png"
+	},
+	{
+		"Brand": "Mr. Black",
+		"Name": "Analog Tremolo",
+		"Width": 2.72,
+		"Height": 4.5,
+		"Image": "mrblack-analog-tremolo.png"
 	},
 	{
 		"Brand": "Mr. Black",
