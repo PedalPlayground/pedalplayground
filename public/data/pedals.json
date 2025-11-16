@@ -1576,10 +1576,24 @@
 	},
 	{
 		"Brand": "AMT",
+		"Name": "O-Drive",
+		"Width": 2.11,
+		"Height": 3.9,
+		"Image": "amt-o-drive.png"
+	},
+	{
+		"Brand": "AMT",
 		"Name": "PANGAEA CP-100 IR",
 		"Width": 3.77,
 		"Height": 1.69,
 		"Image": "amt-pangaea-cp100.png"
+	},
+	{
+		"Brand": "AMT",
+		"Name": "R/S Lead",
+		"Width": 2.28,
+		"Height": 3.74,
+		"Image": "amt-rs-lead.png"
 	},
 	{
 		"Brand": "AMT",
