@@ -38824,6 +38824,13 @@
 	},
 	{
 		"Brand": "OPFXS",
+		"Name": "Asteroide",
+		"Width": 2.73,
+		"Height": 4.83,
+		"Image": "opfxs-asteroide.png"
+	},
+	{
+		"Brand": "OPFXS",
 		"Name": "Electric Vibe",
 		"Width": 2.77,
 		"Height": 5.02,
