@@ -21177,6 +21177,13 @@
 	},
 	{
 		"Brand": "Great Eastern FX Co.",
+		"Name": "Distortion Filter D312A",
+		"Width": 3.7,
+		"Height": 4.86,
+		"Image": "great-eastern-d312a.png"
+	},
+	{
+		"Brand": "Great Eastern FX Co.",
 		"Name": "Focus Fuzz Deluxe",
 		"Width": 3.5,
 		"Height": 5.41,
@@ -28478,6 +28485,13 @@
 	},
 	{
 		"Brand": "KMA",
+		"Name": "AB/Y (Active)",
+		"Width": 4.5,
+		"Height": 2.57,
+		"Image": "kma-audio-machines-aby-active.png"
+	},
+	{
+		"Brand": "KMA",
 		"Name": "Astrospurt",
 		"Width": 4.04,
 		"Height": 4.87,
@@ -28503,6 +28517,13 @@
 		"Width": 4.04,
 		"Height": 4.8,
 		"Image": "kma-audio-machines-dead-stag-fuzz.png"
+	},
+	{
+		"Brand": "KMA",
+		"Name": "Dual Loop Switcher",
+		"Width": 4.5,
+		"Height": 2.57,
+		"Image": "kma-audio-machines-dual-loop-switcher.png"
 	},
 	{
 		"Brand": "KMA",
@@ -28608,6 +28629,13 @@
 		"Width": 4.5,
 		"Height": 2.57,
 		"Image": "kma-audio-machines-stereo-aby.png"
+	},
+	{
+		"Brand": "KMA",
+		"Name": "Stereo AB/Y (Active)",
+		"Width": 4.5,
+		"Height": 2.57,
+		"Image": "kma-audio-machines-stereo-aby-active.png"
 	},
 	{
 		"Brand": "KMA",
@@ -39983,6 +40011,20 @@
 		"Width": 2.81,
 		"Height": 4.5,
 		"Image": "pedal-pawn-texas-twang.png"
+	},
+	{
+		"Brand": "Pedalbot",
+		"Name": "PB-M6",
+		"Width": 6.3,
+		"Height": 3.17,
+		"Image": "pedalbot-pbm6.png"
+	},
+	{
+		"Brand": "Pedalbot",
+		"Name": "PB-ML4",
+		"Width": 4.8,
+		"Height": 2.79,
+		"Image": "pedalbot-pbml4.png"
 	},
 	{
 		"Brand": "Pedalnetics",
