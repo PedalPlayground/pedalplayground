@@ -2982,6 +2982,20 @@
 		"Image": "bsri-sratsotg.png"
 	},
 	{
+		"Brand": "Bad Cat",
+		"Name": "Burmese Drive",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "bad-cat-burmese-drive.png"
+	},
+	{
+		"Brand": "Bad Cat",
+		"Name": "Siamese Drive",
+		"Width": 4.7,
+		"Height": 3.82,
+		"Image": "bad-cat-siamese-drive.png"
+	},
+	{
 		"Brand": "Bananana Effects",
 		"Name": "Abracadabra",
 		"Width": 2,
@@ -10193,6 +10207,13 @@
 		"Image": "crowther-prunes-custard.png"
 	},
 	{
+		"Brand": "Crumar",
+		"Name": "Burn",
+		"Width": 4.64,
+		"Height": 3.76,
+		"Image": "crumar-burn.png"
+	},
+	{
 		"Brand": "Cusack Music",
 		"Name": "Carolina Reaper",
 		"Width": 3.69,
@@ -17009,6 +17030,13 @@
 		"Width": 2.6,
 		"Height": 5.14,
 		"Image": "empress-heavy-menace.png"
+	},
+	{
+		"Brand": "Empress",
+		"Name": "Heavy Menace (LE)",
+		"Width": 2.6,
+		"Height": 5.14,
+		"Image": "empress-heavy-menace-le.png"
 	},
 	{
 		"Brand": "Empress",
@@ -38978,6 +39006,13 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "Bassrig Fifteen",
+		"Width": 3.6,
+		"Height": 5.8,
+		"Image": "origin-bassrig-fifteen.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "Bassrig Super Vintage",
 		"Width": 3.6,
 		"Height": 5.8,
@@ -38989,20 +39024,6 @@
 		"Width": 3.6,
 		"Height": 5.8,
 		"Image": "origin-bassrig-64.png"
-	},
-	{
-		"Brand": "Origin Effects",
-		"Name": "Cali76 Compact",
-		"Width": 2.6,
-		"Height": 5.59,
-		"Image": "origin-cali76.png"
-	},
-	{
-		"Brand": "Origin Effects",
-		"Name": "Cali76 Compact Bass",
-		"Width": 2.6,
-		"Height": 5.59,
-		"Image": "origin-cali76-bass.png"
 	},
 	{
 		"Brand": "Origin Effects",
@@ -39027,17 +39048,45 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "Cali76 Compact",
+		"Width": 2.6,
+		"Height": 5.49,
+		"Image": "origin-cali76.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Cali76 Compact Bass",
+		"Width": 2.6,
+		"Height": 5.49,
+		"Image": "origin-cali76-bass.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Cali76 Compact Bass (Inverted)",
+		"Width": 2.6,
+		"Height": 5.49,
+		"Image": "origin-cali76-bass-inverted.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "Cali76 Compact Deluxe",
 		"Width": 2.6,
-		"Height": 5.59,
+		"Height": 5.49,
 		"Image": "origin-cali76-compact-deluxe.png"
 	},
 	{
 		"Brand": "Origin Effects",
-		"Name": "Cali76 Compact Deluxe - Blackout",
+		"Name": "Cali76 Compact Deluxe (Blackout)",
 		"Width": 2.6,
-		"Height": 5.59,
+		"Height": 5.49,
 		"Image": "origin-cali76-compact-deluxe-le.png"
+	},
+	{
+		"Brand": "Origin Effects",
+		"Name": "Cali76 Compact Deluxe (Inverted)",
+		"Width": 2.6,
+		"Height": 5.49,
+		"Image": "origin-cali76-compact-deluxe-inverted.png"
 	},
 	{
 		"Brand": "Origin Effects",
@@ -39071,7 +39120,7 @@
 		"Brand": "Origin Effects",
 		"Name": "Cali76 Stacked Edition",
 		"Width": 2.6,
-		"Height": 5.59,
+		"Height": 5.49,
 		"Image": "origin-cali76-stacked.png"
 	},
 	{
@@ -39146,6 +39195,13 @@
 	},
 	{
 		"Brand": "Origin Effects",
+		"Name": "RD Compact (Hot Rod)",
+		"Width": 2.6,
+		"Height": 5.49,
+		"Image": "origin-revival-drive-hot-rod.png"
+	},
+	{
+		"Brand": "Origin Effects",
 		"Name": "Revival Footswitch",
 		"Width": 4.52,
 		"Height": 1.62,
@@ -39169,21 +39225,14 @@
 		"Brand": "Origin Effects",
 		"Name": "RevivalDRIVE Compact",
 		"Width": 2.6,
-		"Height": 5.59,
+		"Height": 5.49,
 		"Image": "origin-revivaldrivecompact.png"
-	},
-	{
-		"Brand": "Origin Effects",
-		"Name": "RevivalDRIVE Compact (Hot Rod)",
-		"Width": 2.6,
-		"Height": 5.59,
-		"Image": "origin-revival-drive-hot-rod.png"
 	},
 	{
 		"Brand": "Origin Effects",
 		"Name": "RevivalDRIVE Switcher Interface",
 		"Width": 4.52,
-		"Height": 2.55,
+		"Height": 2.61,
 		"Image": "origin-revivaldrive-switcher-interface.png"
 	},
 	{
@@ -39197,7 +39246,7 @@
 		"Brand": "Origin Effects",
 		"Name": "SlideRIG Compact Deluxe MK2",
 		"Width": 2.6,
-		"Height": 5.59,
+		"Height": 5.49,
 		"Image": "origin-sliderig-compact-deluxe-mk2.png"
 	},
 	{
@@ -39962,6 +40011,13 @@
 		"Width": 2.76,
 		"Height": 4.5,
 		"Image": "pedal-pawn-chicken-quiff.png"
+	},
+	{
+		"Brand": "Pedal Pawn",
+		"Name": "Cowboy King",
+		"Width": 2.76,
+		"Height": 4.5,
+		"Image": "pedal-pawn-cowboy-king.png"
 	},
 	{
 		"Brand": "Pedal Pawn",
