@@ -18881,6 +18881,13 @@
 	},
 	{
 		"Brand": "Fractal",
+		"Name": "AM4",
+		"Width": 10,
+		"Height": 6.39,
+		"Image": "fractal-am4.png"
+	},
+	{
+		"Brand": "Fractal",
 		"Name": "AX8",
 		"Width": 16.4,
 		"Height": 10.3,
@@ -18939,7 +18946,7 @@
 		"Brand": "Fractal",
 		"Name": "VP4",
 		"Width": 10,
-		"Height": 6.52,
+		"Height": 6.39,
 		"Image": "fractal-vp4.png"
 	},
 	{
