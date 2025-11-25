@@ -8920,6 +8920,13 @@
 	},
 	{
 		"Brand": "Chase Bliss",
+		"Name": "MOOD (Last 100 Edition)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-mood-last-100.png"
+	},
+	{
+		"Brand": "Chase Bliss",
 		"Name": "MOOD (LE)",
 		"Width": 2.86,
 		"Height": 4.86,
@@ -8931,6 +8938,13 @@
 		"Width": 2.86,
 		"Height": 4.86,
 		"Image": "chasebliss-mood-mk2.png"
+	},
+	{
+		"Brand": "Chase Bliss",
+		"Name": "MOOD MKII (Desert Friends)",
+		"Width": 2.86,
+		"Height": 4.86,
+		"Image": "chasebliss-mood-mk2-desert-friends.png"
 	},
 	{
 		"Brand": "Chase Bliss",
@@ -31893,6 +31907,13 @@
 		"Image": "meloaudio-exp-001.png"
 	},
 	{
+		"Brand": "Mentha.works",
+		"Name": "Monk Echo",
+		"Width": 7.36,
+		"Height": 5.45,
+		"Image": "menthaworks-monk-echo.png"
+	},
+	{
 		"Brand": "Meris",
 		"Name": "Enzo",
 		"Width": 4.25,
@@ -34736,6 +34757,13 @@
 	},
 	{
 		"Brand": "M-VAVE",
+		"Name": "IR Box",
+		"Width": 1.86,
+		"Height": 3.54,
+		"Image": "mvave-ir-box.png"
+	},
+	{
+		"Brand": "M-VAVE",
 		"Name": "Mini Universe",
 		"Width": 2.69,
 		"Height": 4.5,
@@ -36098,6 +36126,13 @@
 		"Width": 2.6,
 		"Height": 5.06,
 		"Image": "non-human-audio-goblin-shark.png"
+	},
+	{
+		"Brand": "Non-Human Audio",
+		"Name": "Kimchi",
+		"Width": 2.6,
+		"Height": 5.06,
+		"Image": "non-human-audio-kimchi.png"
 	},
 	{
 		"Brand": "Non-Human Audio",
