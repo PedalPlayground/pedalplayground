@@ -5730,7 +5730,7 @@
 		"Name": "DM-101 Delay Machine",
 		"Width": 7.56,
 		"Height": 5.23,
-		"Image": "boss-re101.png"
+		"Image": "boss-dm101.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -52483,9 +52483,16 @@
 	{
 		"Brand": "Walrus Audio",
 		"Name": "Meraki",
-		"Width": 4.96,
+		"Width": 4.94,
 		"Height": 5.86,
 		"Image": "walrus-meraki.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Meraki (LE)",
+		"Width": 4.94,
+		"Height": 5.86,
+		"Image": "walrus-meraki-le.png"
 	},
 	{
 		"Brand": "Walrus Audio",
