@@ -23697,6 +23697,13 @@
 	},
 	{
 		"Brand": "IK Multimedia",
+		"Name": "TONEX (Bass)",
+		"Width": 7,
+		"Height": 5.55,
+		"Image": "ikm-tonex-bass.png"
+	},
+	{
+		"Brand": "IK Multimedia",
 		"Name": "TONEX (White)",
 		"Width": 7,
 		"Height": 5.55,
@@ -23715,6 +23722,20 @@
 		"Width": 1.73,
 		"Height": 3.7,
 		"Image": "ikm-tonex-one-chrome.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "TONEX One (White)",
+		"Width": 1.73,
+		"Height": 3.7,
+		"Image": "ikm-tonex-one-white.png"
+	},
+	{
+		"Brand": "IK Multimedia",
+		"Name": "TONEX One (Yellow)",
+		"Width": 1.73,
+		"Height": 3.7,
+		"Image": "ikm-tonex-one-yellow.png"
 	},
 	{
 		"Brand": "IK Multimedia",
@@ -25416,6 +25437,13 @@
 		"Width": 3.86,
 		"Height": 4.7,
 		"Image": "jhs-kilt-v1.png"
+	},
+	{
+		"Brand": "JHS",
+		"Name": "Kilt 10",
+		"Width": 2.93,
+		"Height": 5,
+		"Image": "jhs-kilt-10.png"
 	},
 	{
 		"Brand": "JHS",
