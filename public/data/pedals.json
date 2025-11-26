@@ -5568,7 +5568,7 @@
 		"Brand": "BOSS",
 		"Name": "CE-20 Chorus Ensemble",
 		"Width": 6.8125,
-		"Height": 6.25,
+		"Height": 6.1,
 		"Image": "boss-ce20.png"
 	},
 	{
@@ -5659,7 +5659,7 @@
 		"Brand": "BOSS",
 		"Name": "DD-20 Giga Delay",
 		"Width": 6.8125,
-		"Height": 6.25,
+		"Height": 6.1,
 		"Image": "boss-dd20.png"
 	},
 	{
@@ -5827,7 +5827,7 @@
 		"Brand": "BOSS",
 		"Name": "EQ-20 Advanced EQ",
 		"Width": 6.8125,
-		"Height": 6.25,
+		"Height": 6.1,
 		"Image": "boss-eq20.png"
 	},
 	{
@@ -6037,7 +6037,7 @@
 		"Brand": "BOSS",
 		"Name": "GP-20 Amp Factory",
 		"Width": 6.8125,
-		"Height": 6.25,
+		"Height": 6.1,
 		"Image": "boss-gp20.png"
 	},
 	{
@@ -6261,7 +6261,7 @@
 		"Brand": "BOSS",
 		"Name": "OC-20G Poly Octave",
 		"Width": 6.8125,
-		"Height": 6.25,
+		"Height": 6.1,
 		"Image": "boss-oc20g.png"
 	},
 	{
@@ -6310,7 +6310,7 @@
 		"Brand": "BOSS",
 		"Name": "OD-20 Drive Zone",
 		"Width": 6.8125,
-		"Height": 6.25,
+		"Height": 6.1,
 		"Image": "boss-od20.png"
 	},
 	{
@@ -6470,10 +6470,10 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "RC-20 Loop Station",
+		"Name": "RC-20XL Loop Station",
 		"Width": 6.8125,
-		"Height": 6.25,
-		"Image": "boss-rc20.png"
+		"Height": 6.1,
+		"Image": "boss-rc20xl.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -6481,6 +6481,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-rc3.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "RC-30 Loop Station",
+		"Width": 6.8125,
+		"Height": 6.1,
+		"Image": "boss-rc30.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -6495,13 +6502,6 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-rc5.png"
-	},
-	{
-		"Brand": "BOSS",
-		"Name": "RC-30 Loop Station",
-		"Width": 6.8125,
-		"Height": 6.25,
-		"Image": "boss-rc30.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -6528,7 +6528,7 @@
 		"Brand": "BOSS",
 		"Name": "RE-20 Space Echo",
 		"Width": 6.8125,
-		"Height": 6.25,
+		"Height": 6.1,
 		"Image": "boss-re20.png"
 	},
 	{
@@ -6549,7 +6549,7 @@
 		"Brand": "BOSS",
 		"Name": "RT-20 Rotary",
 		"Width": 6.8125,
-		"Height": 6.25,
+		"Height": 6.1,
 		"Image": "boss-rt20.png"
 	},
 	{
@@ -6661,7 +6661,7 @@
 		"Brand": "BOSS",
 		"Name": "SL-20 Slicer",
 		"Width": 6.8125,
-		"Height": 6.25,
+		"Height": 6.1,
 		"Image": "boss-sl20.png"
 	},
 	{
@@ -6799,6 +6799,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "VE-20 Vocal Processor",
+		"Width": 6.8125,
+		"Height": 6.1,
+		"Image": "boss-ve20.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "VE-22 Vocal Performer",
 		"Width": 8.63,
 		"Height": 5.57,
@@ -6836,7 +6843,7 @@
 		"Brand": "BOSS",
 		"Name": "WP-20G Wave Processor",
 		"Width": 6.8125,
-		"Height": 6.25,
+		"Height": 6.1,
 		"Image": "boss-wp20g.png"
 	},
 	{
@@ -28282,6 +28289,13 @@
 	},
 	{
 		"Brand": "Kingtone",
+		"Name": "Blues Power Deluxe",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "kingtone-blues-power-deluxe.png"
+	},
+	{
+		"Brand": "Kingtone",
 		"Name": "Blues Power v2",
 		"Width": 2.85,
 		"Height": 4.83,
@@ -28359,10 +28373,24 @@
 	},
 	{
 		"Brand": "Kingtone",
+		"Name": "The Octaland",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "kingtone-the-octaland.png"
+	},
+	{
+		"Brand": "Kingtone",
 		"Name": "The Soloist",
 		"Width": 2.33,
 		"Height": 4.43,
 		"Image": "kingtone-soloist.png"
+	},
+	{
+		"Brand": "Kingtone",
+		"Name": "The Soloist Deluxe",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "kingtone-soloist-deluxe.png"
 	},
 	{
 		"Brand": "Kingtone",
@@ -50186,6 +50214,13 @@
 	},
 	{
 		"Brand": "Vaderin",
+		"Name": "Bolt+",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-bolt-plus.png"
+	},
+	{
+		"Brand": "Vaderin",
 		"Name": "Bulldozer Percolator",
 		"Width": 2.6,
 		"Height": 5.01,
@@ -50204,6 +50239,13 @@
 		"Width": 2.6,
 		"Height": 5.01,
 		"Image": "vaderin-heartbeat-percolator.png"
+	},
+	{
+		"Brand": "Vaderin",
+		"Name": "Horror Fuzz",
+		"Width": 2.6,
+		"Height": 5.01,
+		"Image": "vaderin-horror-fuzz.png"
 	},
 	{
 		"Brand": "Vaderin",
@@ -52623,8 +52665,8 @@
 	{
 		"Brand": "Walrus Audio",
 		"Name": "SLARP",
-		"Width": 5.625,
-		"Height": 4.82,
+		"Width": 5.83,
+		"Height": 4.84,
 		"Image": "walrus-slarp.png"
 	},
 	{
