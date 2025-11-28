@@ -40791,6 +40791,20 @@
 	},
 	{
 		"Brand": "Pirate Midi",
+		"Name": "Scribble (Black)",
+		"Width": 2.48,
+		"Height": 0.98,
+		"Image": "pirate-midi-scribble-black.png"
+	},
+	{
+		"Brand": "Pirate Midi",
+		"Name": "Scribble (White)",
+		"Width": 2.48,
+		"Height": 0.98,
+		"Image": "pirate-midi-scribble-white.png"
+	},
+	{
+		"Brand": "Pirate Midi",
 		"Name": "uLoop",
 		"Width": 5.08,
 		"Height": 2.56,
