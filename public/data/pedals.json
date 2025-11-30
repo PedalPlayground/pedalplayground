@@ -11097,6 +11097,13 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Dream Station",
+		"Width": 2.76,
+		"Height": 5.04,
+		"Image": "deathbyaudio-dream-station.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Echo Dream 2",
 		"Width": 4.7,
 		"Height": 5.78,
@@ -11174,6 +11181,20 @@
 	},
 	{
 		"Brand": "Death By Audio",
+		"Name": "Micro Harmonic Transformer",
+		"Width": 2.89,
+		"Height": 4.71,
+		"Image": "deathbyaudio-micro-harmonic-transformer.png"
+	},
+	{
+		"Brand": "Death By Audio",
+		"Name": "Moonbeam Phaser",
+		"Width": 2.76,
+		"Height": 5.04,
+		"Image": "deathbyaudio-moonbeam-phaser.png"
+	},
+	{
+		"Brand": "Death By Audio",
 		"Name": "Octave Clang",
 		"Width": 3.7,
 		"Height": 4.94,
@@ -11248,6 +11269,13 @@
 		"Width": 4.72,
 		"Height": 3.84,
 		"Image": "deathbyaudio-fuzz-gun.png"
+	},
+	{
+		"Brand": "Death By Audio",
+		"Name": "Thee Treble Overload",
+		"Width": 2.76,
+		"Height": 5.04,
+		"Image": "deathbyaudio-thee-treble-overload.png"
 	},
 	{
 		"Brand": "Death By Audio",
@@ -36079,6 +36107,13 @@
 		"Image": "mythos-the-fates.png"
 	},
 	{
+		"Brand": "Mythos",
+		"Name": "The Victor",
+		"Width": 3.7,
+		"Height": 4.7,
+		"Image": "mythos-the-victor.png"
+	},
+	{
 		"Brand": "Ninjafox",
 		"Name": "Sidekick NES Retro",
 		"Width": 3.73,
@@ -53116,6 +53151,13 @@
 		"Width": 3.5,
 		"Height": 4.68,
 		"Image": "wampler-tapeecho.png"
+	},
+	{
+		"Brand": "Wampler",
+		"Name": "TCD",
+		"Width": 2.6,
+		"Height": 5,
+		"Image": "wampler-tcd.png"
 	},
 	{
 		"Brand": "Wampler",
