@@ -29682,6 +29682,13 @@
 	},
 	{
 		"Brand": "Lichtlaerm",
+		"Name": "Thorn",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "lichtlaerm-thorn.png"
+	},
+	{
+		"Brand": "Lichtlaerm",
 		"Name": "Transcendence",
 		"Width": 2.88,
 		"Height": 4.95,
@@ -51271,6 +51278,20 @@
 	},
 	{
 		"Brand": "Volta",
+		"Name": "Fire Dirt",
+		"Width": 2.84,
+		"Height": 4.5,
+		"Image": "volta-fire-dirt.png"
+	},
+	{
+		"Brand": "Volta",
+		"Name": "Jailbreaker",
+		"Width": 5.12,
+		"Height": 3.79,
+		"Image": "volta-jailbreaker.png"
+	},
+	{
+		"Brand": "Volta",
 		"Name": "The Blue",
 		"Width": 5.12,
 		"Height": 3.79,
@@ -54362,6 +54383,13 @@
 		"Width": 6.46,
 		"Height": 7.17,
 		"Image": "yamaha-ub99.png"
+	},
+	{
+		"Brand": "Yamaha",
+		"Name": "UD-Stomp Modulation Delay",
+		"Width": 11.02,
+		"Height": 7.18,
+		"Image": "yamaha-ud-stomp.png"
 	},
 	{
 		"Brand": "Yellowcake",
