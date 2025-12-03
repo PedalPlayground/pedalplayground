@@ -7359,6 +7359,20 @@
 	},
 	{
 		"Brand": "Carl Martin",
+		"Name": "Octa-Switch",
+		"Width": 20.06,
+		"Height": 5.16,
+		"Image": "carl-martin-octa.png"
+	},
+	{
+		"Brand": "Carl Martin",
+		"Name": "Octa-Switch MK2",
+		"Width": 20.06,
+		"Height": 5.16,
+		"Image": "carl-martin-octa-mk2.png"
+	},
+	{
+		"Brand": "Carl Martin",
 		"Name": "Octa-Switch MK3",
 		"Width": 12.24,
 		"Height": 5.81,
@@ -20425,6 +20439,13 @@
 		"Width": 3.62,
 		"Height": 7.99,
 		"Image": "gamechanger-audio-plus-sustain.png"
+	},
+	{
+		"Brand": "Gamechanger Audio",
+		"Name": "Recoder",
+		"Width": 4.7,
+		"Height": 5.54,
+		"Image": "gamechanger-audio-recoder.png"
 	},
 	{
 		"Brand": "Gamechanger Audio",
@@ -41176,6 +41197,13 @@
 	},
 	{
 		"Brand": "Providence",
+		"Name": "Programmable Effects Controller PEC-2",
+		"Width": 17.56,
+		"Height": 5.71,
+		"Image": "providence-pec-2.png"
+	},
+	{
+		"Brand": "Providence",
 		"Name": "Provolt9 PV-9",
 		"Width": 4.61,
 		"Height": 2.48,
@@ -42464,6 +42492,13 @@
 	},
 	{
 		"Brand": "RhPf Electronics",
+		"Name": "Basilisk",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "rhpf-basilisk.png"
+	},
+	{
+		"Brand": "RhPf Electronics",
 		"Name": "Capharnaüm",
 		"Width": 2.6,
 		"Height": 4.85,
@@ -42485,6 +42520,20 @@
 	},
 	{
 		"Brand": "RhPf Electronics",
+		"Name": "Mosphoros",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "rhpf-mosphoros.png"
+	},
+	{
+		"Brand": "RhPf Electronics",
+		"Name": "Mosrawr",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "rhpf-mosrawr.png"
+	},
+	{
+		"Brand": "RhPf Electronics",
 		"Name": "Mostard",
 		"Width": 2.6,
 		"Height": 4.85,
@@ -42496,6 +42545,13 @@
 		"Width": 2.6,
 		"Height": 4.85,
 		"Image": "rhpf-mosghoul.png"
+	},
+	{
+		"Brand": "RhPf Electronics",
+		"Name": "Shodhana",
+		"Width": 2.6,
+		"Height": 4.85,
+		"Image": "rhpf-shodhana.png"
 	},
 	{
 		"Brand": "RhPf Electronics",
