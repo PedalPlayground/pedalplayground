@@ -434,6 +434,13 @@
 		"Image": "aerospace-atmosphere-v2.png"
 	},
 	{
+		"Brand": "Aerospace Audio",
+		"Name": "Atmosphere V3",
+		"Width": 5.75,
+		"Height": 4.83,
+		"Image": "aerospace-atmosphere-v3.png"
+	},
+	{
 		"Brand": "Aguilar",
 		"Name": "AG Preamp",
 		"Width": 4.93,
@@ -52059,6 +52066,13 @@
 		"Width": 2.82,
 		"Height": 4.8,
 		"Image": "walrus-canvas-clock.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Canvas Line Isolator",
+		"Width": 1.87,
+		"Height": 3.7,
+		"Image": "walrus-canvas-line-isolator.png"
 	},
 	{
 		"Brand": "Walrus Audio",
