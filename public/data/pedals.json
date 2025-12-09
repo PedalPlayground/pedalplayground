@@ -32033,6 +32033,13 @@
 		"Image": "maxon-vop9.png"
 	},
 	{
+		"Brand": "Melo Tone Labs",
+		"Name": "Silent Bee Overdrive",
+		"Width": 3.11,
+		"Height": 4.68,
+		"Image": "melo-tone-labs-silent-bee-overdrive.png"
+	},
+	{
 		"Brand": "MeloAudio",
 		"Name": "EXP-001",
 		"Width": 2.2,
@@ -45632,6 +45639,13 @@
 		"Width": 4.7,
 		"Height": 3.85,
 		"Image": "spiral-yellow-spiral-drive.png"
+	},
+	{
+		"Brand": "Spline Laboratories",
+		"Name": "Cathedral",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "spline-laboratories-cathedral.png"
 	},
 	{
 		"Brand": "Spontaneous Audio Devices",
