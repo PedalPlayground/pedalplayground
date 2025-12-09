@@ -46020,6 +46020,13 @@
 	},
 	{
 		"Brand": "Strymon",
+		"Name": "Fairfax",
+		"Width": 2.83,
+		"Height": 4.43,
+		"Image": "strymon-fairfax.png"
+	},
+	{
+		"Brand": "Strymon",
 		"Name": "Flint",
 		"Width": 4,
 		"Height": 4.55,
