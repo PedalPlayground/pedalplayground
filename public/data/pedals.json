@@ -10082,6 +10082,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Orama",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "ctc-orama.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "Planet B Plus",
 		"Width": 4.7,
 		"Height": 3.78,
@@ -12340,6 +12347,13 @@
 		"Width": 4.7,
 		"Height": 3.7,
 		"Image": "dmb-lunar-echo.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Badder Monkey",
+		"Width": 2.88,
+		"Height": 4.68,
+		"Image": "dod-badder-monkey.png"
 	},
 	{
 		"Brand": "DOD",
