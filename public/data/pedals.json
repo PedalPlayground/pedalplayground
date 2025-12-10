@@ -35373,6 +35373,20 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Jail Guitar Doors Drive",
+		"Width": 3.6,
+		"Height": 4.97,
+		"Image": "mxr-jgd1.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Jail Guitar Doors Overdrive",
+		"Width": 3.6,
+		"Height": 4.97,
+		"Image": "mxr-jgd2.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Jimi Hendrix Fuzz Face (Limited Edition)",
 		"Width": 2.67,
 		"Height": 4.5,
