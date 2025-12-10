@@ -15437,6 +15437,20 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Big Muff 2",
+		"Width": 5.5,
+		"Height": 7,
+		"Image": "ehx-big-muff-2.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Big Muff 2 (Third Man)",
+		"Width": 5.5,
+		"Height": 7,
+		"Image": "ehx-big-muff-2-third-man.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi Hardware Plugin",
 		"Width": 4.19,
 		"Height": 4.87,
@@ -15453,14 +15467,14 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi (Big Box)",
 		"Width": 5.5,
-		"Height": 6.93,
+		"Height": 7,
 		"Image": "ehx-big-muff-box.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi (Double Anniversary)",
 		"Width": 5.5,
-		"Height": 7.02,
+		"Height": 7,
 		"Image": "ehx-big-muff-box-double-anniversary.png"
 	},
 	{
