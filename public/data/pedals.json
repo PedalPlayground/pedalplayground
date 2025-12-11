@@ -38431,6 +38431,13 @@
 		"Image": "olinthus-earwig.png"
 	},
 	{
+		"Brand": "Olinthus",
+		"Name": "Pillbug",
+		"Width": 1.2,
+		"Height": 1.77,
+		"Image": "olinthus-pillbug.png"
+	},
+	{
 		"Brand": "Oneder Effects",
 		"Name": "Action & Action",
 		"Width": 4.7,
@@ -50738,6 +50745,13 @@
 		"Image": "vandae-green-jealousy.png"
 	},
 	{
+		"Brand": "Vans",
+		"Name": "Old Skool",
+		"Width": 4,
+		"Height": 10.88,
+		"Image": "vans-old-skool.png"
+	},
+	{
 		"Brand": "VDL",
 		"Name": "Il Distorsore",
 		"Width": 4.87,
@@ -54502,6 +54516,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "yamaha-fl-10mii.png"
+	},
+	{
+		"Brand": "Yamaha",
+		"Name": "MFC05 Midi Foot Controller",
+		"Width": 17.48,
+		"Height": 5.05,
+		"Image": "yamaha-mfc05.png"
 	},
 	{
 		"Brand": "Yamaha",
