@@ -3970,6 +3970,13 @@
 	},
 	{
 		"Brand": "Behringer",
+		"Name": "Toro",
+		"Width": 16.7,
+		"Height": 5.3,
+		"Image": "behringer-toro.png"
+	},
+	{
+		"Brand": "Behringer",
 		"Name": "TU300 Chromatic Tuner",
 		"Width": 2.76,
 		"Height": 4.84,
@@ -31556,6 +31563,13 @@
 		"Height": 5.06,
 		"Image": "mask-screws.png"
 	},
+		{
+		"Brand": "Master Effects",
+		"Name": "Super 40",
+		"Width": 4.7,
+		"Height": 3.7,
+		"Image": "master-effects-super-40.png"
+	},
 	{
 		"Brand": "Master Effects",
 		"Name": "Super 800",
@@ -42913,9 +42927,16 @@
 	{
 		"Brand": "Rolls",
 		"Name": "PM351 Personal Monitor Station",
-		"Width": 4.75,
-		"Height": 4.3,
+		"Width": 5.25,
+		"Height": 4.25,
 		"Image": "rolls-pm351.png"
+	},
+	{
+		"Brand": "Rolls",
+		"Name": "SX21 Tiny Two-Way Crossover",
+		"Width": 3.6,
+		"Height": 5,
+		"Image": "rolls-sx21.png"
 	},
 	{
 		"Brand": "Roshi",
@@ -43434,6 +43455,13 @@
 		"Width": 3.84,
 		"Height": 5.26,
 		"Image": "seymourduncan-vapor-trail-deluxe.png"
+	},
+	{
+		"Brand": "[sfx]",
+		"Name": "micro-Thumpinator v2",
+		"Width": 3.9,
+		"Height": 1.7,
+		"Image": "sfx-micro-thumpinator.png"
 	},
 	{
 		"Brand": "Shark",
@@ -48450,6 +48478,13 @@
 	},
 	{
 		"Brand": "Tech 21 NYC",
+		"Name": "dUg DP-3X",
+		"Width": 8,
+		"Height": 2.75,
+		"Image": "tech21-dUg-DP-3X.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
 		"Name": "Flyrig 5",
 		"Width": 12.56,
 		"Height": 2.72,
@@ -48510,6 +48545,34 @@
 		"Width": 7.25,
 		"Height": 5.25,
 		"Image": "tech21-sansamp-bass-driver.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Sansamp Character Plus English Muffy",
+		"Width": 8,
+		"Height": 2.75,
+		"Image": "tech21-english-muffy.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Sansamp Character Plus Fuzzy Brit",
+		"Width": 8,
+		"Height": 2.75,
+		"Image": "tech21-fuzzy-brit.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Sansamp Character Plus Mop Top Liverpool",
+		"Width": 8,
+		"Height": 2.75,
+		"Image": "tech21-mop-top-liverpool.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
+		"Name": "Sansamp Character Plus Screaming Blonde",
+		"Width": 8,
+		"Height": 2.75,
+		"Image": "tech21-screaming-blonde.png"
 	},
 	{
 		"Brand": "Tech 21 NYC",
