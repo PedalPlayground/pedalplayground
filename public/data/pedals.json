@@ -10082,6 +10082,13 @@
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
+		"Name": "Orama",
+		"Width": 4.7,
+		"Height": 3.78,
+		"Image": "ctc-orama.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
 		"Name": "Planet B Plus",
 		"Width": 4.7,
 		"Height": 3.78,
@@ -12340,6 +12347,13 @@
 		"Width": 4.7,
 		"Height": 3.7,
 		"Image": "dmb-lunar-echo.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Badder Monkey",
+		"Width": 2.88,
+		"Height": 4.68,
+		"Image": "dod-badder-monkey.png"
 	},
 	{
 		"Brand": "DOD",
@@ -15423,6 +15437,27 @@
 	},
 	{
 		"Brand": "Electro-Harmonix",
+		"Name": "Big Muff 2",
+		"Width": 2.73,
+		"Height": 4.5,
+		"Image": "ehx-big-muff-2.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Big Muff 2 (Big Box)",
+		"Width": 5.5,
+		"Height": 7,
+		"Image": "ehx-big-muff-2-big.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Big Muff 2 (Third Man)",
+		"Width": 5.5,
+		"Height": 7,
+		"Image": "ehx-big-muff-2-third-man.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi Hardware Plugin",
 		"Width": 4.19,
 		"Height": 4.87,
@@ -15439,14 +15474,14 @@
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi (Big Box)",
 		"Width": 5.5,
-		"Height": 6.93,
+		"Height": 7,
 		"Image": "ehx-big-muff-box.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff Pi (Double Anniversary)",
 		"Width": 5.5,
-		"Height": 7.02,
+		"Height": 7,
 		"Image": "ehx-big-muff-box-double-anniversary.png"
 	},
 	{
@@ -28036,6 +28071,13 @@
 		"Image": "kg-midi-triple.png"
 	},
 	{
+		"Brand": "KGR Harmony USA",
+		"Name": "HalfLife Fer",
+		"Width": 2.7,
+		"Height": 4.93,
+		"Image": "kgr-halflife-fer.png"
+	},
+	{
 		"Brand": "Khan",
 		"Name": "DI",
 		"Width": 4.38,
@@ -32019,6 +32061,13 @@
 		"Image": "maxon-vop9.png"
 	},
 	{
+		"Brand": "Melo Tone Labs",
+		"Name": "Silent Bee Overdrive",
+		"Width": 3.11,
+		"Height": 4.68,
+		"Image": "melo-tone-labs-silent-bee-overdrive.png"
+	},
+	{
 		"Brand": "MeloAudio",
 		"Name": "EXP-001",
 		"Width": 2.2,
@@ -35338,6 +35387,20 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Jail Guitar Doors Drive",
+		"Width": 3.6,
+		"Height": 4.97,
+		"Image": "mxr-jgd1.png"
+	},
+	{
+		"Brand": "MXR",
+		"Name": "Jail Guitar Doors Overdrive",
+		"Width": 3.6,
+		"Height": 4.97,
+		"Image": "mxr-jgd2.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Jimi Hendrix Fuzz Face (Limited Edition)",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -38380,6 +38443,13 @@
 		"Width": 1.2,
 		"Height": 1.77,
 		"Image": "olinthus-earwig.png"
+	},
+	{
+		"Brand": "Olinthus",
+		"Name": "Pillbug",
+		"Width": 1.2,
+		"Height": 1.77,
+		"Image": "olinthus-pillbug.png"
 	},
 	{
 		"Brand": "Oneder Effects",
@@ -43919,6 +43989,13 @@
 		"Image": "sinvertek-n5-mgat-5.png"
 	},
 	{
+		"Brand": "Sinvertek",
+		"Name": "N5 MGAT-5 (Abstractionism)",
+		"Width": 2.8,
+		"Height": 4.8,
+		"Image": "sinvertek-n5-mgat-5-abstractionism.png"
+	},
+	{
 		"Brand": "Siren Pedals",
 		"Name": "Airavata",
 		"Width": 2.6,
@@ -45620,6 +45697,13 @@
 		"Image": "spiral-yellow-spiral-drive.png"
 	},
 	{
+		"Brand": "Spline Laboratories",
+		"Name": "Cathedral",
+		"Width": 2.6,
+		"Height": 4.95,
+		"Image": "spline-laboratories-cathedral.png"
+	},
+	{
 		"Brand": "Spontaneous Audio Devices",
 		"Name": "Son of Kong",
 		"Width": 5.41,
@@ -45989,6 +46073,13 @@
 		"Width": 4,
 		"Height": 4.55,
 		"Image": "strymon-elcap-v2.png"
+	},
+	{
+		"Brand": "Strymon",
+		"Name": "Fairfax",
+		"Width": 2.83,
+		"Height": 4.43,
+		"Image": "strymon-fairfax.png"
 	},
 	{
 		"Brand": "Strymon",
@@ -50675,6 +50766,13 @@
 		"Image": "vandae-green-jealousy.png"
 	},
 	{
+		"Brand": "Vans",
+		"Name": "Old Skool",
+		"Width": 4,
+		"Height": 10.88,
+		"Image": "vans-old-skool.png"
+	},
+	{
 		"Brand": "VDL",
 		"Name": "Il Distorsore",
 		"Width": 4.87,
@@ -54439,6 +54537,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "yamaha-fl-10mii.png"
+	},
+	{
+		"Brand": "Yamaha",
+		"Name": "MFC05 Midi Foot Controller",
+		"Width": 17.48,
+		"Height": 5.05,
+		"Image": "yamaha-mfc05.png"
 	},
 	{
 		"Brand": "Yamaha",
