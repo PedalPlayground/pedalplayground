@@ -13141,6 +13141,13 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
+		"Name": "Inglorious Bastard",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-inglorious-bastard.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
 		"Name": "Ivan Mazepa",
 		"Width": 3.7,
 		"Height": 4.92,
