@@ -1061,14 +1061,14 @@
 		"Name": "Neo Footswitch",
 		"Width": 4,
 		"Height": 2.36,
-		"Image": "alexander-neo-link.png"
+		"Image": "alexander-neo-footswitch.png"
 	},
 	{
 		"Brand": "Alexander",
 		"Name": "Neo-Link",
 		"Width": 2,
 		"Height": 2,
-		"Image": "alexander-neo-footswitch.png"
+		"Image": "alexander-neo-link.png"
 	},
 	{
 		"Brand": "Alexander",
@@ -8230,7 +8230,7 @@
 		"Name": "Manx Loaghtan Fuzz (Reissue)",
 		"Width": 2.7,
 		"Height": 4.5,
-		"Image": "catalinbread-manx-loughtan-ri.png"
+		"Image": "catalinbread-manx-loaghtan-ri.png"
 	},
 	{
 		"Brand": "Catalinbread",
