@@ -15438,9 +15438,16 @@
 	{
 		"Brand": "Electro-Harmonix",
 		"Name": "Big Muff 2",
+		"Width": 2.73,
+		"Height": 4.5,
+		"Image": "ehx-big-muff-2.png"
+	},
+	{
+		"Brand": "Electro-Harmonix",
+		"Name": "Big Muff 2 (Big Box)",
 		"Width": 5.5,
 		"Height": 7,
-		"Image": "ehx-big-muff-2.png"
+		"Image": "ehx-big-muff-2-big.png"
 	},
 	{
 		"Brand": "Electro-Harmonix",
@@ -28062,6 +28069,13 @@
 		"Width": 6.66,
 		"Height": 2.56,
 		"Image": "kg-midi-triple.png"
+	},
+	{
+		"Brand": "KGR Harmony USA",
+		"Name": "HalfLife Fer",
+		"Width": 2.7,
+		"Height": 4.93,
+		"Image": "kgr-halflife-fer.png"
 	},
 	{
 		"Brand": "Khan",
@@ -43973,6 +43987,13 @@
 		"Width": 2.8,
 		"Height": 4.8,
 		"Image": "sinvertek-n5-mgat-5.png"
+	},
+	{
+		"Brand": "Sinvertek",
+		"Name": "N5 MGAT-5 (Abstractionism)",
+		"Width": 2.8,
+		"Height": 4.8,
+		"Image": "sinvertek-n5-mgat-5-abstractionism.png"
 	},
 	{
 		"Brand": "Siren Pedals",
