@@ -27624,6 +27624,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Nocturne",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-nocturne.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Nocturner",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -50673,6 +50680,13 @@
 		"Width": 2.03,
 		"Height": 3.7,
 		"Image": "valeton-fp-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-50",
+		"Width": 3.27,
+		"Height": 4.8,
+		"Image": "valeton-gp50.png"
 	},
 	{
 		"Brand": "Valeton",
