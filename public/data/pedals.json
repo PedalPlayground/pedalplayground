@@ -32874,6 +32874,41 @@
 	},
 	{
 		"Brand": "Monoprice",
+		"Name": "611610 Chorus",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "monoprice-611610.png"
+	},
+	{
+		"Brand": "Monoprice",
+		"Name": "611611 Blues Overdrive",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "monoprice-611611.png"
+	},
+	{
+		"Brand": "Monoprice",
+		"Name": "611612 EQ Booster",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "monoprice-611612.png"
+	},
+	{
+		"Brand": "Monoprice",
+		"Name": "611613 Distortion",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "monoprice-611613.png"
+	},
+	{
+		"Brand": "Monoprice",
+		"Name": "611614 Overdrive",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "monoprice-611614.png"
+	},
+	{
+		"Brand": "Monoprice",
 		"Name": "Flanger Mini",
 		"Width": 1.76,
 		"Height": 3.7,
