@@ -31026,8 +31026,15 @@
 	},
 	{
 		"Brand": "Mantic Conceptual",
+		"Name": "Proverb",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "mantic-conceptual-proverb.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
 		"Name": "Vitriol",
-		"Width": 3.70,
+		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "mantic-conceptual-vitriol.png"
 	},
@@ -33753,6 +33760,34 @@
 		"Width": 3.7,
 		"Height": 4.92,
 		"Image": "moose-electronics-sledge-hammer.png"
+	},
+	{
+		"Brand": "Morgan",
+		"Name": "NKT275",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "morgan-nkt275.png"
+	},
+	{
+		"Brand": "Morgan",
+		"Name": "OD",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "morgan-od.png"
+	},
+	{
+		"Brand": "Morgan",
+		"Name": "Silicon Fuzz",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "morgan-silicon-fuzz.png"
+	},
+	{
+		"Brand": "Morgan",
+		"Name": "Tone Bender MKII",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "morgan-tone-bender-mk2.png"
 	},
 	{
 		"Brand": "Morley",
