@@ -31019,10 +31019,31 @@
 	},
 	{
 		"Brand": "Mantic Conceptual",
+		"Name": "Flex",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "mantic-conceptual-flex.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Hivemind",
+		"Width": 2.4,
+		"Height": 4.67,
+		"Image": "mantic-conceptual-hivemind.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
 		"Name": "Hulk",
-		"Width": 2.52,
-		"Height": 4.57,
+		"Width": 2.54,
+		"Height": 4.67,
 		"Image": "mantic-conceptual-hulk.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Pendulum",
+		"Width": 2.54,
+		"Height": 4.5,
+		"Image": "mantic-conceptual-pendulum.png"
 	},
 	{
 		"Brand": "Mantic Conceptual",
@@ -31030,6 +31051,20 @@
 		"Width": 3.7,
 		"Height": 4.93,
 		"Image": "mantic-conceptual-proverb.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Proverb XS",
+		"Width": 2.4,
+		"Height": 4.67,
+		"Image": "mantic-conceptual-proverb-xs.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Thug",
+		"Width": 2.4,
+		"Height": 4.67,
+		"Image": "mantic-conceptual-thug.png"
 	},
 	{
 		"Brand": "Mantic Conceptual",
@@ -48958,6 +48993,13 @@
 		"Width": 7.38,
 		"Height": 5.07,
 		"Image": "third-man-triplegraph-black.png"
+	},
+	{
+		"Brand": "Third Man x Mantic",
+		"Name": "Flex",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "third-man-flex.png"
 	},
 	{
 		"Brand": "Thorn Soundlabs",
