@@ -13141,6 +13141,13 @@
 	},
 	{
 		"Brand": "Drunk Beaver",
+		"Name": "Inglorious Bastard",
+		"Width": 2.6,
+		"Height": 4.9,
+		"Image": "drunk-beaver-inglorious-bastard.png"
+	},
+	{
+		"Brand": "Drunk Beaver",
 		"Name": "Ivan Mazepa",
 		"Width": 3.7,
 		"Height": 4.92,
@@ -27624,6 +27631,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Nocturne",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-nocturne.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Nocturner",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -31005,15 +31019,57 @@
 	},
 	{
 		"Brand": "Mantic Conceptual",
+		"Name": "Flex",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "mantic-conceptual-flex.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Hivemind",
+		"Width": 2.4,
+		"Height": 4.67,
+		"Image": "mantic-conceptual-hivemind.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
 		"Name": "Hulk",
-		"Width": 2.52,
-		"Height": 4.57,
+		"Width": 2.54,
+		"Height": 4.67,
 		"Image": "mantic-conceptual-hulk.png"
 	},
 	{
 		"Brand": "Mantic Conceptual",
+		"Name": "Pendulum",
+		"Width": 2.54,
+		"Height": 4.5,
+		"Image": "mantic-conceptual-pendulum.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Proverb",
+		"Width": 3.7,
+		"Height": 4.93,
+		"Image": "mantic-conceptual-proverb.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Proverb XS",
+		"Width": 2.4,
+		"Height": 4.67,
+		"Image": "mantic-conceptual-proverb-xs.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
+		"Name": "Thug",
+		"Width": 2.4,
+		"Height": 4.67,
+		"Image": "mantic-conceptual-thug.png"
+	},
+	{
+		"Brand": "Mantic Conceptual",
 		"Name": "Vitriol",
-		"Width": 3.70,
+		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "mantic-conceptual-vitriol.png"
 	},
@@ -32860,6 +32916,41 @@
 	},
 	{
 		"Brand": "Monoprice",
+		"Name": "611610 Chorus",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "monoprice-611610.png"
+	},
+	{
+		"Brand": "Monoprice",
+		"Name": "611611 Blues Overdrive",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "monoprice-611611.png"
+	},
+	{
+		"Brand": "Monoprice",
+		"Name": "611612 EQ Booster",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "monoprice-611612.png"
+	},
+	{
+		"Brand": "Monoprice",
+		"Name": "611613 Distortion",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "monoprice-611613.png"
+	},
+	{
+		"Brand": "Monoprice",
+		"Name": "611614 Overdrive",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "monoprice-611614.png"
+	},
+	{
+		"Brand": "Monoprice",
 		"Name": "Flanger Mini",
 		"Width": 1.76,
 		"Height": 3.7,
@@ -33704,6 +33795,34 @@
 		"Width": 3.7,
 		"Height": 4.92,
 		"Image": "moose-electronics-sledge-hammer.png"
+	},
+	{
+		"Brand": "Morgan",
+		"Name": "NKT275",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "morgan-nkt275.png"
+	},
+	{
+		"Brand": "Morgan",
+		"Name": "OD",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "morgan-od.png"
+	},
+	{
+		"Brand": "Morgan",
+		"Name": "Silicon Fuzz",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "morgan-silicon-fuzz.png"
+	},
+	{
+		"Brand": "Morgan",
+		"Name": "Tone Bender MKII",
+		"Width": 2.66,
+		"Height": 4.5,
+		"Image": "morgan-tone-bender-mk2.png"
 	},
 	{
 		"Brand": "Morley",
@@ -48876,6 +48995,13 @@
 		"Image": "third-man-triplegraph-black.png"
 	},
 	{
+		"Brand": "Third Man x Mantic",
+		"Name": "Flex",
+		"Width": 3.7,
+		"Height": 4.89,
+		"Image": "third-man-flex.png"
+	},
+	{
 		"Brand": "Thorn Soundlabs",
 		"Name": "Bad Cash",
 		"Width": 3.7,
@@ -50673,6 +50799,13 @@
 		"Width": 2.03,
 		"Height": 3.7,
 		"Image": "valeton-fp-10.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-50",
+		"Width": 3.27,
+		"Height": 4.8,
+		"Image": "valeton-gp50.png"
 	},
 	{
 		"Brand": "Valeton",
