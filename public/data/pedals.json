@@ -23592,6 +23592,13 @@
 	},
 	{
 		"Brand": "Hotone",
+		"Name": "Ampero Switch+",
+		"Width": 4.01,
+		"Height": 1.95,
+		"Image": "hotone-ampero-switch-2.png"
+	},	
+	{
+		"Brand": "Hotone",
 		"Name": "Binary Mod",
 		"Width": 4.76,
 		"Height": 2.8,
