@@ -34300,6 +34300,12 @@
 		"Height": 5.51,
 		"Image": "meloaudio-exp-001.png"
 	},
+	{ "Brand": "Menatone", 
+		"Name": "Red Snapper (4-knob)", 
+		"Width": 2.44, 
+		"Height": 4.78, 
+		"Image": "menatone-red-snapper-4-knob.png" 
+	},
 	{
 		"Brand": "Mentha.works",
 		"Name": "Monk Echo",
