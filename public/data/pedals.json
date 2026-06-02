@@ -34300,11 +34300,40 @@
 		"Height": 5.51,
 		"Image": "meloaudio-exp-001.png"
 	},
-	{ "Brand": "Menatone", 
-		"Name": "Red Snapper (4-knob)", 
-		"Width": 2.44, 
-		"Height": 4.78, 
-		"Image": "menatone-red-snapper-4-knob.png" 
+{
+		"Brand": "Menatone",
+		"Name": "Das Boost",
+		"Width": 3.12,
+		"Height": 4.406,
+		"Image": "menatone-das-boost.png"
+	},
+	{
+		"Brand": "Menatone",
+		"Name": "Fish Factory Mojo",
+		"Width": 3.621,
+		"Height": 5.06,
+		"Image": "menatone-fish-factory-mojo.png"
+	},
+	{
+		"Brand": "Menatone",
+		"Name": "Red Snapper (4-knob)",
+		"Width": 2.44,
+		"Height": 4.78,
+		"Image": "menatone-red-snapper-4-knob.png"
+	},
+	{
+		"Brand": "Menatone",
+		"Name": "Red Snapper Mini (4-knob)",
+		"Width": 2.27,
+		"Height": 3.62,
+		"Image": "menatone-red-snapper-mini.png"
+	},
+	{
+		"Brand": "Menatone",
+		"Name": "Wreck-T",
+		"Width": 3.12,
+		"Height": 4.406,
+		"Image": "menatone-wreckt.png"
 	},
 	{
 		"Brand": "Mentha.works",
