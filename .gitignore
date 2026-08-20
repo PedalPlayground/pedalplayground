@@ -1,22 +1,95 @@
+### macOS
+# Finder metadata
 .DS_Store
+
+# Thumbnails
+._*
+
+# Custom folder icons
+Icon
+
+
+# Volume root files
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+### Windows
+# Windows thumbnail cache files
 Thumbs.db
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# Misc Windows
+*.ini
+app/images/desktop.ini
+app/images/pedals/desktop.ini
+
+### Linux
+# Backup files
+*~
+
+# Temporary files from deleted open files
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder
+.Trash-*
+
+# NFS temporary files
+.nfs*
+
+### VS Code
+# VSCode settings (keep shared configuration)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# Misc IDE
+config.codekit3
+.idea/
+
+### Pedal Playground
+# Dependency directories
 bower_components/
 node_modules/
+
+# Build directories
 workfiles/
 app/scss/.sass-cache/*
+
+# Aliases and symlinks
 pedals alias
 pedals-new alias
-config.codekit3
+app/images/pedals/.pedals-public.lnk
+public/images/pedals/.pedals-app.lnk
+cmd.lnk
+app/images/pedals/.public.lnk
+public/images/pedals/.app.lnk
+
+# Build scripts
 0_pre
 1_post
 _post
 _pre
-app/images/pedals/.pedals-public.lnk
-public/images/pedals/.pedals-app.lnk
-cmd.lnk
-app/images/desktop.ini
-app/images/pedals/desktop.ini
-app/images/pedals/desktop.ini
-*.ini
-app/images/pedals/.public.lnk
-public/images/pedals/.app.lnk

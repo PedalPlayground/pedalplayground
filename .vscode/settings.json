@@ -1,4 +1,8 @@
 {
+    "cSpell.ignoreRegExpList": [
+        "/\"Image\"\\s*:\\s*\"[^\"]*\"/"
+    ],
+    "cSpell.language": "en-US",
     "cSpell.words": [
         "Abasi",
         "Aclam",

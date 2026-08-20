@@ -2,6 +2,7 @@
 	{
 		"Brand": "1981 Inventions",
 		"Name": "DRV",
+		"Effect": "Distortion",
 		"Width": 3.7,
 		"Height": 4.58,
 		"Image": "1981-inventions-drv.png"
@@ -36,7 +37,7 @@
 	},
 	{
 		"Brand": "1981 Inventions",
-		"Name": "DRV (Hyperfade white)",
+		"Name": "DRV (Hyperfade White)",
 		"Width": 3.7,
 		"Height": 4.58,
 		"Image": "1981-inventions-drv-hyperfade-white.png"
@@ -743,7 +744,7 @@
 	},
 	{
 		"Brand": "Aion FX",
-		"Name": "Azimuthe",
+		"Name": "Azimuth",
 		"Width": 2.6,
 		"Height": 4.97,
 		"Image": "aion-azimuth.png"
@@ -1422,7 +1423,7 @@
 	},
 	{
 		"Brand": "Altero",
-		"Name": "Kaede (Handwired)",
+		"Name": "Kaede (Hand Wired)",
 		"Width": 2.76,
 		"Height": 4.72,
 		"Image": "altero-kaede-hw.png"
@@ -1436,7 +1437,7 @@
 	},
 	{
 		"Brand": "Altero",
-		"Name": "Mag (Handwired)",
+		"Name": "Mag (Hand Wired)",
 		"Width": 2.76,
 		"Height": 4.72,
 		"Image": "altero-mag-hw.png"
@@ -1450,7 +1451,7 @@
 	},
 	{
 		"Brand": "Altero",
-		"Name": "Wal (Handwired)",
+		"Name": "Wal (Hand Wired)",
 		"Width": 2.76,
 		"Height": 4.72,
 		"Image": "altero-wal-hw.png"
@@ -6532,17 +6533,17 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "Gigmaster 5",
+		"Name": "Gigcaster 5",
 		"Width": 7,
 		"Height": 8.53,
-		"Image": "boss-gigmaster-5.png"
+		"Image": "boss-gigcaster-5.png"
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "Gigmaster 8",
+		"Name": "Gigcaster 8",
 		"Width": 8.53,
 		"Height": 10.6,
-		"Image": "boss-gigmaster-8.png"
+		"Image": "boss-gigcaster-8.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -6735,7 +6736,7 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "MS-3 Multieffects Switcher",
+		"Name": "MS-3 Multi Effects Switcher",
 		"Width": 10.88,
 		"Height": 3.75,
 		"Image": "boss-ms3.png"
@@ -8262,35 +8263,35 @@
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Meteore",
+		"Name": "Météore",
 		"Width": 3.7,
 		"Height": 4.89,
 		"Image": "caroline-meteore.png"
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Meteore (Cosmic Purple)",
+		"Name": "Météore (Cosmic Purple)",
 		"Width": 3.7,
 		"Height": 4.89,
 		"Image": "caroline-meteore-cosmic-purple.png"
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Meteore (Purple)",
+		"Name": "Météore (Purple)",
 		"Width": 3.7,
 		"Height": 4.89,
 		"Image": "caroline-meteore-purple.png"
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Meteore (Rose Gold)",
+		"Name": "Météore (Rose Gold)",
 		"Width": 3.7,
 		"Height": 4.89,
 		"Image": "caroline-meteore-rose-gold.png"
 	},
 	{
 		"Brand": "Caroline",
-		"Name": "Meteore (Throwback Can)",
+		"Name": "Météore (Throwback Can)",
 		"Width": 3.7,
 		"Height": 4.88,
 		"Image": "caroline-meteore-throwback.png"
@@ -9690,7 +9691,7 @@
 	},
 	{
 		"Brand": "Chase Bliss",
-		"Name": "Midibox",
+		"Name": "MIDIbox",
 		"Width": 3.47,
 		"Height": 1.58,
 		"Image": "chasebliss-midibox.png"
@@ -12581,7 +12582,7 @@
 	},
 	{
 		"Brand": "Devi Ever: FX",
-		"Name": "Torn's Speaker",
+		"Name": "Torn's Peaker",
 		"Width": 2.74,
 		"Height": 4.66,
 		"Image": "devi-ever-torns-peaker-old.png"
@@ -13722,7 +13723,7 @@
 	},
 	{
 		"Brand": "DOD",
-		"Name": "Yngwie J. Malmsteem Preamp Overdrive YJM308",
+		"Name": "Yngwie J. Malmsteen Preamp Overdrive YJM308",
 		"Width": 3.03,
 		"Height": 4.68,
 		"Image": "dod-yjm308.png"
@@ -20883,7 +20884,7 @@
 	},
 	{
 		"Brand": "Fredric Effects",
-		"Name": "Super Umpleasant Companion",
+		"Name": "Super Unpleasant Companion",
 		"Width": 3.39,
 		"Height": 5.9,
 		"Image": "fredric-super-unpleasant-companion.png"
@@ -25993,7 +25994,7 @@
 	},
 	{
 		"Brand": "Ibanez",
-		"Name": "TS808HW Handwired Tubescreamer",
+		"Name": "TS808HW Hand-Wired Tubescreamer",
 		"Width": 3.13,
 		"Height": 4.9,
 		"Image": "ibanez-ts808hw.png"
@@ -33210,7 +33211,7 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Amber Overdrive (Handwired)",
+		"Name": "Amber Overdrive (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-amber-hw.png"
@@ -33245,14 +33246,14 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Deep Blue Delay (Handwired)",
+		"Name": "Deep Blue Delay (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-deep-blue-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Deep Blue Delay (Handwired 2025)",
+		"Name": "Deep Blue Delay (Hand Wired 2025)",
 		"Width": 2.6,
 		"Height": 5.02,
 		"Image": "mad-professor-deep-blue-hw-2025.png"
@@ -33301,7 +33302,7 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Fire Red Fuzz (Handwired)",
+		"Name": "Fire Red Fuzz (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-fire-red-hw.png"
@@ -33315,7 +33316,7 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Forest Green Compressor (Handwired)",
+		"Name": "Forest Green Compressor (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-forest-green-hw.png"
@@ -33336,7 +33337,7 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Little Green Wonder (Handwired)",
+		"Name": "Little Green Wonder (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-little-green-wonder-hw.png"
@@ -33371,7 +33372,7 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Mellow Yellow Tremolo (Handwired)",
+		"Name": "Mellow Yellow Tremolo (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-mellow-yellow-hw.png"
@@ -33385,7 +33386,7 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Mighty Red Distortion (Handwired)",
+		"Name": "Mighty Red Distortion (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-mighty-red-hw.png"
@@ -33399,7 +33400,7 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Royal Blue Overdrive (Handwired 2025)",
+		"Name": "Royal Blue Overdrive (Hand Wired 2025)",
 		"Width": 2.6,
 		"Height": 5.02,
 		"Image": "mad-professor-royal-blue-hw-2025.png"
@@ -33441,7 +33442,7 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Sky Blue (Handwired)",
+		"Name": "Sky Blue (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-sky-blue-hw.png"
@@ -33455,14 +33456,14 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Snow White AutoWah (Handwired)",
+		"Name": "Snow White AutoWah (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-snow-white-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Snow White Bass AutoWah (Handwired)",
+		"Name": "Snow White Bass AutoWah (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-snow-white-bass-hw.png"
@@ -33504,14 +33505,14 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Sweet Honey Overdrive (Handwired)",
+		"Name": "Sweet Honey Overdrive (Hand Wired)",
 		"Width": 2.69,
 		"Height": 4.5,
 		"Image": "mad-professor-sweet-honey-hw.png"
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Sweet Honey Overdrive (Handwired 2025)",
+		"Name": "Sweet Honey Overdrive (Hand Wired 2025)",
 		"Width": 2.6,
 		"Height": 5.02,
 		"Image": "mad-professor-sweet-honey-hw-2025.png"
@@ -33539,7 +33540,7 @@
 	},
 	{
 		"Brand": "Mad Professor",
-		"Name": "Tiny Orange Phaser (Handwired)",
+		"Name": "Tiny Orange Phaser (Hand Wired)",
 		"Width": 2.62,
 		"Height": 4.5,
 		"Image": "mad-professor-tiny-orange-hw.png"
