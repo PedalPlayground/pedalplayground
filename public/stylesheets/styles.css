@@ -7788,6 +7788,12 @@ body .btn {
 .item.selected:after {
   border-color: #5C62FC;
 }
+.item.group-selected:after {
+  border-color: #41C74D;
+}
+.item.group-selected:hover:after {
+  border-color: #41C74D;
+}
 .item.is-dragging .actions {
   opacity: 0;
 }
@@ -7926,6 +7932,10 @@ body .btn {
 }
 .pedal--custom.selected:after {
   border-color: #2AC3F3;
+}
+.pedal--custom.group-selected:after,
+.pedal--custom.group-selected:hover:after {
+  border-color: #41C74D;
 }
 
 .pedalboard {
@@ -8089,15 +8099,24 @@ body .btn {
 }
 .panel__name {
   font-size: 13px;
-  color: #999;
+  color: #ccc;
   font-weight: 600;
   padding: 10px;
 }
 .panel__name .panel__dimensions {
+  font-size: 11px;
+  color: #999;
   font-weight: normal;
 }
 .panel__action {
   font-size: 13px;
+  display: block;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.panel__tooltip {
+  font-size: 11px;
+  color: #999;
   display: block;
   padding: 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);

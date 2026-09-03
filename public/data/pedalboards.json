@@ -575,10 +575,24 @@
 	},
 	{
 		"Brand": "GigRig",
+		"Name": "Small Single Tier Pedalboard",
+		"Width": 13.03,
+		"Height": 13.18,
+		"Image": "gigrig-small-single-tier.png"
+	},
+	{
+		"Brand": "GigRig",
 		"Name": "Small Wide Tier",
 		"Width": 11.4,
 		"Height": 6.2,
 		"Image": "gigrig-small-wide-tier.png"
+	},
+	{
+		"Brand": "GigRig",
+		"Name": "Wah Riser",
+		"Width": 4.44,
+		"Height": 10.18,
+		"Image": "gigrig-wah-riser.png"
 	},
 	{
 		"Brand": "Gokko",
@@ -1116,7 +1130,7 @@
 		"Brand": "Pedaltrain",
 		"Name": "Nano+",
 		"Width": 18,
-		"Height": 5.5,
+		"Height": 5,
 		"Image": "pedaltrain-nanoplus.png"
 	},
 	{
