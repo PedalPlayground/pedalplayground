@@ -3136,6 +3136,13 @@
 		"Image": "avtpedals-dc-tank.png"
 	},
 	{
+		"Brand": "Browne Amplification",
+		"Name": "Protein V3 (Red)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "browneamps-protein-red.png"
+	},
+	{
 		"Brand": "BSRI",
 		"Name": "Ashmaker",
 		"Width": 3.7,
@@ -7769,6 +7776,13 @@
 		"Width": 5.63,
 		"Height": 4.88,
 		"Image": "bss-ar133.png"
+	},
+	{
+		"Brand": "Budda",
+		"Name": "Bud-Wah (1990's)",
+		"Width": 4.0,
+		"Height": 10.0,
+		"Image": "budda-budwah.png"
 	},
 	{
 		"Brand": "Buffalo FX",
@@ -16330,6 +16344,13 @@
 		"Width": 6.3,
 		"Height": 5.52,
 		"Image": "echo-fix-spring-reverb.png"
+	},
+	{
+		"Brand": "Eddie Rifkind",
+		"Name": "Karen Speaker Manager Basic (Pink)",
+		"Width": 2.36,
+		"Height": 4.61,
+		"Image": "eddie-rifkin-karen-basic.png"
 	},
 	{
 		"Brand": "Eden Amps",
@@ -25853,6 +25874,13 @@
 	},
 	{
 		"Brand": "Ibanez",
+		"Name": "DL10 Digital Delay",
+		"Width": 2.76,
+		"Height": 4.92,
+		"Image": "ibanez-dl10.png"
+	},
+	{
+		"Brand": "Ibanez",
 		"Name": "Echo Shifter",
 		"Width": 4.7,
 		"Height": 6.3,
@@ -29997,6 +30025,13 @@
 	},
 	{
 		"Brand": "Keeley",
+		"Name": "Monterey Special (Custom Germanium)",
+		"Width": 4.7,
+		"Height": 3.79,
+		"Image": "keeley-monterey-special-custom-germanium.png"
+	},
+	{
+		"Brand": "Keeley",
 		"Name": "Moon",
 		"Width": 2.73,
 		"Height": 4.5,
@@ -32864,6 +32899,13 @@
 		"Width": 2.5,
 		"Height": 4.37,
 		"Image": "lovepedal-vibronaut.png"
+	},
+	{
+		"Brand": "Lovepedal",
+		"Name": "Zendrive Saucy Overdrive",
+		"Width": 2.69,
+		"Height": 4.5,
+		"Image": "lovepedal-zendrive-saucy.png"
 	},
 	{
 		"Brand": "Lovetone",
@@ -37932,6 +37974,13 @@
 		"Width": 2.68,
 		"Height": 4.5,
 		"Image": "mrblack-vintage-ensemble.png"
+	},
+	{
+		"Brand": "Multivox",
+		"Name": "Big Jam Biphase-9 SE-9",
+		"Width": 3.15,
+		"Height": 5.12,
+		"Image": "multivox-big-jam-biphase-9-se-9.png"
 	},
 	{
 		"Brand": "Music Box Pedals",
@@ -43959,6 +44008,13 @@
 		"Width": 3.19,
 		"Height": 1.5,
 		"Image": "pedalnetics-helauxy-duo-pro.png"
+	},
+	{
+		"Brand": "Pedals of Theoretical Doom",
+		"Name": "Mu-Tron Envelope Filter",
+		"Width": 3.79,
+		"Height": 4.7,
+		"Image": "ptd-envelope-filter.png"
 	},
 	{
 		"Brand": "Pedaltank",
@@ -52689,6 +52745,13 @@
 		"Width": 13.8,
 		"Height": 8.5,
 		"Image": "tchelicon-voicelive3extreme.png"
+	},
+	{
+		"Brand": "TC Helicon",
+		"Name": "VoiceLive Play",
+		"Width": 7.9,
+		"Height": 6.1,
+		"Image": "tc-helicon-voicelive-play-v1.png"
 	},
 	{
 		"Brand": "TC Helicon",
