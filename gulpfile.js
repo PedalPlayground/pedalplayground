@@ -88,6 +88,7 @@ gulp.task("styles", function () {
 gulp.task("scripts", function () {
 	return gulp
 		.src([
+			"app/scripts/canvas-history.js",
 			"bower_components/jquery/dist/jquery.js",
 			"bower_components/draggabilly/dist/draggabilly.pkgd.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",

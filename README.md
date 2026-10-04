@@ -1,3 +1,19 @@
+# Using the canvas
+
+Select a pedal or pedalboard to open its action menu. You can drag it to move it, or use these shortcuts:
+
+| Action | Shortcut |
+| --- | --- |
+| Undo | `Cmd/Ctrl+Z` |
+| Redo | `Cmd/Ctrl+Shift+Z` or `Cmd/Ctrl+Y` |
+| Clone the selected item | `C` |
+| Rotate the selected item | `R` |
+| Move the selected item backward / forward | `[` / `]` |
+| Delete the selected item | `D`, `Backspace`, or `Delete` |
+| Nudge the selected item | Arrow keys (1 px) |
+
+You can also use the Undo and Redo buttons in Settings. Undo history keeps up to 50 canvas states for the current page session. The canvas is saved in your browser, but its undo history resets when you reload. Keyboard shortcuts are paused while you type in a field.
+
 # Contributing
 
 ## :camera: Images
@@ -40,6 +56,7 @@
 
 1. Install dependencies via `npm install`
 2. Start the local server and compile resources via `npm start`. This will open a browser tab for you at localhost:3000.
+3. Run the test suite with `npm test` (uses Node's built-in test runner; no additional packages are needed).
 
 # Requesting Pedals
 

@@ -297,6 +297,23 @@
 			</div>
 			<div class="settings-popover panel hide">
 				<h4>Settings</h4>
+				<div class="panel__action canvas-history-controls" role="group" aria-label="Canvas edit history">
+					<button id="undo-canvas" class="btn btn-default btn-sm" type="button" title="Undo (Cmd/Ctrl+Z)" aria-label="Undo last canvas action" disabled>Undo</button>
+					<button id="redo-canvas" class="btn btn-default btn-sm" type="button" title="Redo (Cmd/Ctrl+Shift+Z or Ctrl+Y)" aria-label="Redo last canvas action" disabled>Redo</button>
+				</div>
+				<details class="panel__action" style="display: block;">
+					<summary>Keyboard shortcuts</summary>
+					<ul style="margin: 8px 0; padding-left: 18px;">
+						<li><kbd>Cmd/Ctrl+Z</kbd> Undo</li>
+						<li><kbd>Cmd/Ctrl+Shift+Z</kbd> or <kbd>Cmd/Ctrl+Y</kbd> Redo</li>
+						<li><kbd>C</kbd> Clone selected item</li>
+						<li><kbd>R</kbd> Rotate selected item</li>
+						<li><kbd>[</kbd> / <kbd>]</kbd> Move selected item back / forward</li>
+						<li><kbd>D</kbd>, <kbd>Backspace</kbd>, or <kbd>Delete</kbd> Delete selected item</li>
+						<li>Arrow keys nudge selected item by 1 px</li>
+					</ul>
+					<p style="margin: 8px 0 0;">Shortcuts are paused while you type in a field. Undo keeps up to 50 canvas states in this tab; reloading the page clears its history.</p>
+				</details>
 				<div class="panel__action">
 					<label for="convert-units" class="convert-units">Use mm for units</label>
 					<input id="convert-units" type="checkbox">
@@ -415,6 +432,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha512-oBTprMeNEKCnqfuqKd6sbvFzmFQtlXS3e0C/RGFV0hD6QzhHV+ODfaQbAlmY6/q0ubbwlAM/nCJjkrgA3waLzg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.2/js/bootstrap-colorpicker.min.js" integrity="sha512-Inb8rvDBBswSGp+fMJmR7y+HgWACE/2m1pj2h1ItXBGt7NbI0llkYIqp7bgzibqom5rSqTt84Cqug9UQV1+e8w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js" integrity="sha512-Y1UCb35/WpQMj8SlTwW43Q+vaROlBiuJ3BBpdF646G4WjXYp417N7OzlmOVWTxOTaiFIZt1CWnby8G9J6u2EoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script type="text/javascript" src="public/scripts/canvas-history.js"></script>
 		<script type="text/javascript" src="public/scripts/scripts.js"></script>
 		
 		<script>

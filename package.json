@@ -7,6 +7,7 @@
 		"gulp": "^4.0.2"
 	},
 	"scripts": {
+		"test": "node --test",
 		"start": "npm-run-all --parallel watch serve",
 		"build:sass": "sass  --no-source-map app/stylesheets:public/stylesheets",
 		"watch:sass": "sass  --no-source-map --watch app/stylesheets:public/stylesheets",

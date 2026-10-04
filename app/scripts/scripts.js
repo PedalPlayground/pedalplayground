@@ -1,5 +1,11 @@
 var pedalImagePath = "public/images/pedals/";
 var pedalboardImagePath = "public/images/pedalboards/";
+var isRestoringCanvasHistory = false;
+var canvasHistory = PedalPlaygroundCanvas.createHistory({
+	limit: 50,
+	restore: restoreCanvasHistorySnapshot,
+	onChange: updateCanvasHistoryControls,
+});
 
 const UNITS_IN = 'in.';
 const UNITS_MM = 'mm.';
@@ -57,7 +63,6 @@ $(document).ready(function () {
 		if (localStorage["pedalCanvas"] != null) {
 			var savedPedalCanvas = JSON.parse(localStorage["pedalCanvas"]);
 			$(".canvas").html(savedPedalCanvas);
-			readyCanvas();
 		}
 
 		// If hidden multiplier value doesn't exist, create it
@@ -71,6 +76,9 @@ $(document).ready(function () {
 		// Set canvas scale input and bg size to match scale
 		$("#canvas-scale").val(multiplier);
 		$(".canvas").css("background-size", multiplier + "px");
+		$(".canvas .selected").removeClass("selected");
+		initializeCanvasHistory();
+		readyCanvas(false);
 	});
 
 	// When user changes scale, update stuffs
@@ -131,7 +139,9 @@ $(document).ready(function () {
 	});
 
 	$("body").on("click", "#clear-canvas-confirmation", function () {
-		$(".canvas").empty();
+		var multiplier = $("#multiplier").val() || $("#canvas-scale").val() || 32;
+		$(".canvas").empty().append('<input id="multiplier" type="hidden" value="' + multiplier + '">');
+		$(".panel").remove();
 		$("#clear-canvas-modal").modal("hide");
 		savePedalCanvas();
 	});
@@ -177,7 +187,7 @@ $(document).ready(function () {
 	</div>\
 </div>';
 		$(".canvas").append(pedal);
-		readyCanvas();
+		readyCanvas($("#item-" + serial));
 		ga("send", "event", "Pedal", "added", name);
 		event.preventDefault();
 	});
@@ -223,7 +233,7 @@ $(document).ready(function () {
 </div>';
 
 		$(".canvas").prepend(pedal);
-		readyCanvas();
+		readyCanvas($("#item-" + serial));
 		ga("send", "event", "Pedalboard", "added", name);
 		event.preventDefault();
 	});
@@ -293,7 +303,7 @@ $(document).ready(function () {
 		} else {
 			console.log("add custom pedal...");
 			$(".canvas").append(pedal);
-			readyCanvas();
+			readyCanvas($("#item-" + serial));
 			// console.log(dims);
 			ga("send", "event", "CustomPedal", "added", dims + " " + name);
 			event.preventDefault();
@@ -346,102 +356,17 @@ $(document).ready(function () {
 			</div>';
 
 			$(".canvas").prepend(pedalboard);
-			readyCanvas();
+			readyCanvas($("#item-" + serial));
 			ga("send", "event", "CustomPedalboard", "added", dims + " " + name);
 			event.preventDefault();
 		}
 	});
 
-	// On keydown of "D" or "delete" remove pedal
-	$("body").on("keydown keyup", function (event) {
-		if (event.which == 68 || event.which == 8) {
-			deleteSelected();
-			$(".site-body > .panel").remove();
-			savePedalCanvas();
-		}
-	});
+	// Canvas history controls and keyboard shortcuts
+	$("body").on("click", "#undo-canvas", undoCanvas);
+	$("body").on("click", "#redo-canvas", redoCanvas);
+	$("body").on("keydown.pedalCanvas", handleCanvasKeyboardShortcut);
 
-	// On keydown of "[", move pedal back
-	$("body").on("keydown keyup", function (event) {
-		if (event.which == 219) {
-			$(".panel a[href='#back']").click();
-			savePedalCanvas();
-		}
-	});
-
-	// On keydown of "]", move pedal front
-	$("body").on("keydown keyup", function (event) {
-		if (event.which == 221) {
-			$(".panel a[href='#front']").click();
-			savePedalCanvas();
-		}
-	});
-
-	// 37 - left
-	// 38 - up
-	// 39 - right
-	// 40 - down
-
-	// Move left
-	$("body").on("keydown", function (event) {
-		if (event.which == 37) {
-			var current = parseInt($(".canvas .selected").css("left"));
-			$(".canvas .selected").css("left", current - 1);
-			savePedalCanvas();
-		}
-	});
-
-	// Move up
-	$("body").on("keydown", function (event) {
-		if (event.which == 38) {
-			var current = parseInt($(".canvas .selected").css("top"));
-			$(".canvas .selected").css("top", current - 1);
-			event.preventDefault();
-			savePedalCanvas();
-		}
-	});
-
-	// Move right
-	$("body").on("keydown", function (event) {
-		if (event.which == 39) {
-			var current = parseInt($(".canvas .selected").css("left"));
-			$(".canvas .selected").css("left", current + 1);
-			savePedalCanvas();
-		}
-	});
-
-	// Move down
-	$("body").on("keydown", function (event) {
-		if (event.which == 40) {
-			var current = parseInt($(".canvas .selected").css("top"));
-			$(".canvas .selected").css("top", current + 1);
-			event.preventDefault();
-			savePedalCanvas();
-		}
-	});
-
-	$("body").on("keydown", function (event) {
-		event.stopPropagation();
-
-		//mvital: in some cases click event is sent multiple times to the handler - no idea why
-		//mvital: seems calling stopImmediatePropagation() helps
-		event.stopImmediatePropagation();
-
-		if (event.which == 82) {
-			if ($(".canvas .selected").hasClass("rotate-90")) {
-				$(".canvas .selected").removeClass("rotate-90");
-				$(".canvas .selected").addClass("rotate-180");
-			} else if ($(".canvas .selected").hasClass("rotate-180")) {
-				$(".canvas .selected").removeClass("rotate-180");
-				$(".canvas .selected").addClass("rotate-270");
-			} else if ($(".canvas .selected").hasClass("rotate-270")) {
-				$(".canvas .selected").removeClass("rotate-270");
-			} else {
-				$(".canvas .selected").addClass("rotate-90");
-			}
-			savePedalCanvas();
-		}
-	});
 }); // End Document ready
 
 function convertUnitsIfNeeded(type, value) {
@@ -459,25 +384,27 @@ function mmToIn(value) {
 	return Math.round((value * 0.0393701) * 100) / 100;
 }
 
-function readyCanvas(pedal) {
-	var $draggable = $(".canvas .pedal, .canvas .pedalboard").draggabilly({
+function readyCanvas(items, shouldSave) {
+	if (typeof items === "boolean") {
+		shouldSave = items;
+		items = null;
+	}
+
+	var $draggable = items
+		? $(items).filter(".pedal, .pedalboard")
+		: $(".canvas .pedal, .canvas .pedalboard");
+	$draggable.draggabilly({
 		containment: ".canvas",
 	});
 
-	$(".canvas .pedal, .canvas .pedalboard").draggabilly({
-		containment: ".canvas",
-	});
-
-	$draggable.on("dragEnd", function (e) {
-		console.log("dragEnd");
+	// readyCanvas runs after each add/import; keep one set of handlers per item.
+	$draggable.off(".pedalCanvas");
+	$draggable.on("dragEnd.pedalCanvas", function () {
 		ga("send", "event", "Canvas", "moved", "dragend");
 		savePedalCanvas();
 	});
 
-	// $draggable.on( 'staticClick', function(event) {
-
-	$draggable.on("staticClick", function (event) {
-		//rotatePedal(this);
+	$draggable.on("staticClick.pedalCanvas", function (event) {
 		var target = $(event.target);
 		if (target.is(".delete")) {
 			deletePedal(this);
@@ -485,33 +412,137 @@ function readyCanvas(pedal) {
 			$("body").click();
 		} else if (target.is(".rotate")) {
 			event.stopPropagation();
-
-			//mvital: in some cases click event is sent multiple times to the handler - no idea why
-			//mvital: seems calling stopImmediatePropagation() helps
 			event.stopImmediatePropagation();
-
-			//rotatePedal(this);
-			if ($(this).hasClass("rotate-90")) {
-				$(this).removeClass("rotate-90");
-				$(this).addClass("rotate-180");
-			} else if ($(this).hasClass("rotate-180")) {
-				$(this).removeClass("rotate-180");
-				$(this).addClass("rotate-270");
-			} else if ($(this).hasClass("rotate-270")) {
-				$(this).removeClass("rotate-270");
-			} else {
-				$(this).addClass("rotate-90");
-			}
-			savePedalCanvas();
+			rotatePedal(this);
 		}
 	});
 
-	savePedalCanvas();
+	if (shouldSave !== false) {
+		savePedalCanvas();
+	}
+}
+
+function getCanvasSnapshot() {
+	var $canvas = $(".canvas").clone();
+	$canvas.find(".selected, .is-pointer-down, .is-dragging").removeClass(
+		"selected is-pointer-down is-dragging"
+	);
+	return $canvas.html();
+}
+
+function initializeCanvasHistory() {
+	canvasHistory.reset(getCanvasSnapshot());
 }
 
 function savePedalCanvas() {
-	console.log("Canvas Saved!");
-	localStorage["pedalCanvas"] = JSON.stringify($(".canvas").html());
+	var snapshot = getCanvasSnapshot();
+	localStorage["pedalCanvas"] = JSON.stringify(snapshot);
+
+	if (isRestoringCanvasHistory) {
+		return;
+	}
+
+	canvasHistory.record(snapshot);
+}
+
+function updateCanvasHistoryControls(state) {
+	state = state || { canUndo: canvasHistory.canUndo(), canRedo: canvasHistory.canRedo() };
+	$("#undo-canvas").prop("disabled", !state.canUndo);
+	$("#redo-canvas").prop("disabled", !state.canRedo);
+}
+
+function restoreCanvasHistorySnapshot(snapshot) {
+	isRestoringCanvasHistory = true;
+	try {
+		$(".canvas").next(".panel").remove();
+		$(".site-body > .item-info").remove();
+		$(".canvas").html(snapshot);
+		$(".canvas .selected").removeClass("selected");
+		syncCanvasScaleControl();
+		readyCanvas(false);
+		localStorage["pedalCanvas"] = JSON.stringify(snapshot);
+	} finally {
+		isRestoringCanvasHistory = false;
+	}
+}
+
+function syncCanvasScaleControl() {
+	var multiplier = parseFloat($("#multiplier").val());
+	if (!isNaN(multiplier)) {
+		$("#canvas-scale").val(multiplier);
+		$(".canvas").css("background-size", multiplier + "px");
+	}
+}
+
+function undoCanvas() {
+	canvasHistory.undo();
+}
+
+function redoCanvas() {
+	canvasHistory.redo();
+}
+
+function handleCanvasKeyboardShortcut(event) {
+	var target = $(event.target);
+	var isTextInput = target.is("input, textarea, select") || target.is("[contenteditable='true']");
+	var action = PedalPlaygroundCanvas.resolveShortcut(event, isTextInput);
+	if (!action) {
+		return;
+	}
+	if (action === "undo" || action === "redo") {
+		event.preventDefault();
+		if (action === "redo") {
+			redoCanvas();
+		} else {
+			undoCanvas();
+		}
+		return;
+	}
+
+	var $selected = $(".canvas .selected");
+	if (!$selected.length) {
+		return;
+	}
+
+	if (action === "delete") {
+		event.preventDefault();
+		deleteSelected();
+		$(".site-body > .panel, .site-body > .item-info").remove();
+	} else if (action === "sendBackward" || action === "bringForward") {
+		event.preventDefault();
+		$(".panel a[href='" + (action === "sendBackward" ? "#back" : "#front") + "']").click();
+	} else if (action === "left" || action === "right" || action === "up" || action === "down") {
+		var property = action === "left" || action === "right" ? "left" : "top";
+		var direction = action === "left" || action === "up" ? -1 : 1;
+		var current = parseInt($selected.css(property), 10) || 0;
+		$selected.css(property, current + direction);
+		event.preventDefault();
+		savePedalCanvas();
+	} else if (action === "rotate") {
+		event.preventDefault();
+		rotatePedal($selected[0]);
+	} else if (action === "clone") {
+		event.preventDefault();
+		duplicateCanvasItem($selected[0]);
+	}
+}
+
+function duplicateCanvasItem(item) {
+	if (!item) {
+		return;
+	}
+
+	var $item = $(item);
+	var $duplicate = $item.clone(false, false);
+	var position = PedalPlaygroundCanvas.getClonePosition($item.css("left"), $item.css("top"));
+
+	$duplicate
+		.attr("id", "item-" + GenRandom.Job())
+		.removeClass("selected is-pointer-down is-dragging")
+		.css(position);
+	$item.after($duplicate);
+	readyCanvas($duplicate);
+	$duplicate.trigger("click");
 }
 
 function rotatePedal(pedal) {
@@ -759,6 +790,9 @@ var GenRandom = {
 
 $("body").on("click", ".item", function (e) {
 	var pedal = $(this);
+	if ($(document.activeElement).is("input, textarea, select")) {
+		$(document.activeElement).blur();
+	}
 	var id = $(this).attr("id");
 	var pedalName = $(this).attr("title");
 	var width = $(this).attr("data-width");
@@ -775,6 +809,7 @@ $("body").on("click", ".item", function (e) {
 		height +
 		')</span>\
     </div>\
+		<a href="#duplicate" class="panel__action">Clone <i>C</i></a>\
 		<a href="#rotate" class="panel__action">Rotate <i>R</i></a>\
 		<a href="#front" class="panel__action">Move Front <i>]</i></a>\
 		<a href="#back" class="panel__action">Move Back <i>[</i></a>\
@@ -817,6 +852,14 @@ $("body").on("click", 'a[href="#delete"]', function () {
 	$(id).remove();
 	$(".panel").remove();
 	savePedalCanvas();
+});
+
+$("body").on("click", 'a[href="#duplicate"]', function (e) {
+	e.preventDefault();
+	e.stopImmediatePropagation();
+	var itemSelector = $(this).parents(".panel").data("id");
+	duplicateCanvasItem($(itemSelector)[0]);
+	e.stopPropagation();
 });
 
 $("body").on("click", 'a[href="#front"]', function (e) {
