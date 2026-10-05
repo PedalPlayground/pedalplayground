@@ -1,5 +1,5 @@
 // Browser tests for group selection, custom pedal units, the settings menu,
-// the units switch and save/load.
+// the units switch, save/load and undo/redo.
 //
 // Needs the site running (npm start) and Playwright with Chromium installed.
 // Playwright isn't a dependency of this project, so point PLAYWRIGHT at an install:
@@ -285,6 +285,85 @@ async function saveLoad(b) {
   await p.context().close();
 }
 
+async function undoRedo(b) {
+  console.log("\n# Undo and redo");
+  const p = await freshPage(b);
+  const st = () => p.evaluate(() => ({
+    n: $(".canvas .item").length, idx: historyIndex, len: undoHistory.length,
+    undoOff: $(".undo-trigger").css("opacity") == "0.3", redoOff: $(".redo-trigger").css("opacity") == "0.3",
+    stored: JSON.parse(localStorage.pedalCanvas || '""') == $(".canvas").html(),
+  }));
+  const center = (id) => p.evaluate((id) => { const r = $("#" + id)[0].getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; }, id);
+  const drag = async (id, dx, dy) => { const c = await center(id); await p.mouse.move(c.x, c.y); await p.mouse.down(); for (let i = 1; i <= 10; i++) await p.mouse.move(c.x + dx * i / 10, c.y + dy * i / 10); await p.mouse.up(); await p.waitForTimeout(50); };
+  const pos = (id) => p.evaluate((id) => [$("#" + id).css("left"), $("#" + id).css("top"), $("#" + id).attr("class")], id);
+
+  const order = await p.evaluate(() => $(".site-header nav > a").map(function () { return this.className; }).get());
+  ok(order.join() === "undo-trigger,redo-trigger,settings-trigger", "undo/redo icons sit left of the settings button", order);
+  let s = await st();
+  ok(s.len === 1 && s.undoOff && s.redoOff, "both icons disabled on a fresh page", s);
+
+  const id = await p.evaluate(() => {
+    $("#add-pedal option").eq(20).prop("selected", true); $("#add-pedal button").click();
+    $("#add-pedalboard option").eq(5).prop("selected", true); $("#add-pedalboard button").click();
+    return $(".canvas .pedal").attr("id");
+  });
+  s = await st();
+  ok(s.n === 2 && s.len === 3 && !s.undoOff && s.redoOff, "each add is an undo step", s);
+  const c = await center(id);
+  await p.mouse.click(c.x, c.y); await p.waitForTimeout(50);
+  ok((await st()).len === 3, "selecting an item adds no undo step");
+
+  const pos0 = await pos(id);
+  for (let i = 0; i < 5; i++) await p.keyboard.press("ArrowRight");
+  for (let i = 0; i < 3; i++) await p.keyboard.press("ArrowDown");
+  ok((await st()).len === 4, "a run of arrow-key moves is one undo step");
+  await p.keyboard.press("r"); await p.waitForTimeout(50);
+  for (let i = 0; i < 2; i++) await p.keyboard.press("ArrowLeft");
+  ok((await st()).len === 6, "rotate, then another arrow run, add two steps");
+  await drag(id, 100, 50);
+  ok((await st()).len === 7, "a drag is one undo step");
+
+  for (let i = 0; i < 4; i++) await p.keyboard.press("Control+z");
+  const posU = await pos(id);
+  ok(posU[0] === pos0[0] && posU[1] === pos0[1] && !/rotate-|selected/.test(posU[2]), "Ctrl-Z steps back to before the arrow moves, unselected", [pos0, posU]);
+  s = await st();
+  ok(s.n === 2 && s.idx === 2 && s.stored && !s.redoOff, "undo updates localStorage and enables redo", s);
+  await p.click(".undo-trigger"); s = await st();
+  ok(s.n === 1, "undo icon removes the pedalboard", s);
+  await p.click(".undo-trigger"); s = await st();
+  ok(s.n === 0 && s.undoOff, "back to the empty canvas, undo disabled", s);
+
+  await p.keyboard.press("Control+y"); await p.keyboard.press("Control+Shift+Z"); await p.click(".redo-trigger");
+  s = await st();
+  ok(s.n === 2 && s.idx === 3, "redo by Ctrl-Y, Ctrl-Shift-Z and the redo icon", s);
+  await drag(id, 80, 0);
+  s = await st();
+  ok(s.idx === 4 && s.len === 5 && s.redoOff, "restored items are draggable, and a new change clears redo", s);
+
+  const scale = () => p.evaluate(() => [$("#canvas-scale").val(), $("#multiplier").val(), $(".canvas .pedal .artwork").css("width")]);
+  const sc0 = await scale();
+  await p.evaluate(() => $("#canvas-scale").val(40).change()); await p.keyboard.press("Control+z");
+  const sc = await scale();
+  ok(JSON.stringify(sc) === JSON.stringify(sc0), "undoing a scale change restores the scale input and sizes", { sc0, sc });
+
+  await p.evaluate(() => $("#clear-canvas-confirmation").click());
+  ok((await st()).n === 0, "(canvas cleared)");
+  await p.keyboard.press("Control+z");
+  ok((await st()).n === 2, "undo restores a cleared canvas");
+
+  const before = await st();
+  await p.evaluate(() => { $("#add-custom-pedal .custom-name").parents().addBack().show(); $("#add-custom-pedal .custom-name").focus(); });
+  await p.keyboard.type("abc"); await p.keyboard.press("Control+z");
+  s = await st();
+  ok(s.n === before.n && s.idx === before.idx, "Ctrl-Z in a text field leaves the canvas alone", s);
+
+  await p.reload(); await p.waitForFunction(() => typeof historyIndex != "undefined" && historyIndex === 0);
+  s = await st();
+  ok(s.n === 2 && s.len === 1 && s.undoOff, "after reload the saved canvas is the first undo state", s);
+  ok(p.errs.length === 0, "no page errors", p.errs);
+  await p.context().close();
+}
+
 (async () => {
   const b = await chromium.launch();
   try {
@@ -293,6 +372,7 @@ async function saveLoad(b) {
     await settingsMenu(b);
     await unitsSwitch(b);
     await saveLoad(b);
+    await undoRedo(b);
   } finally {
     await b.close();
   }
