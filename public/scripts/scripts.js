@@ -55,6 +55,20 @@ $(document).ready(function () {
       })
     }
 
+    // Undo/Redo icons to the left of the settings button
+    $(".site-header .settings-trigger").before(
+      '<a class="undo-trigger" href="#" title="Undo (Ctrl+Z)" style="vertical-align: middle; display: inline-flex; margin-right: 1rem">\
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none" stroke="#2F2F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\
+          <path d="M6 3 2 7l4 4"/><path d="M2 7h11a5 5 0 0 1 0 10H8"/>\
+        </svg>\
+      </a>\
+      <a class="redo-trigger" href="#" title="Redo (Ctrl+Y)" style="vertical-align: middle; display: inline-flex; margin-right: 1rem">\
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none" stroke="#2F2F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\
+          <path d="m14 3 4 4-4 4"/><path d="M18 7H7a5 5 0 0 0 0 10h5"/>\
+        </svg>\
+      </a>'
+    );
+
     // Load canvas from localStorage if it has been saved prior
     if (localStorage["pedalCanvas"] != null) {
       var savedPedalCanvas = JSON.parse(localStorage["pedalCanvas"]);
@@ -73,6 +87,11 @@ $(document).ready(function () {
     // Set canvas scale input and bg size to match scale
     $("#canvas-scale").val(multiplier);
     $(".canvas").css("background-size", multiplier + "px");
+
+    // The loaded canvas is the first undo state
+    undoHistory = [canvasSnapshot()];
+    historyIndex = 0;
+    updateHistoryButtons();
   });
 
   $("#convert-units").on("change", function () {
@@ -404,7 +423,7 @@ $(document).ready(function () {
       selectedItems().each(function () {
         $(this).css("left", parseInt($(this).css("left")) - 1);
       });
-      savePedalCanvas();
+      savePedalCanvas(true);
     }
   });
 
@@ -415,7 +434,7 @@ $(document).ready(function () {
         $(this).css("top", parseInt($(this).css("top")) - 1);
       });
       event.preventDefault();
-      savePedalCanvas();
+      savePedalCanvas(true);
     }
   });
 
@@ -425,7 +444,7 @@ $(document).ready(function () {
       selectedItems().each(function () {
         $(this).css("left", parseInt($(this).css("left")) + 1);
       });
-      savePedalCanvas();
+      savePedalCanvas(true);
     }
   });
 
@@ -436,7 +455,21 @@ $(document).ready(function () {
         $(this).css("top", parseInt($(this).css("top")) + 1);
       });
       event.preventDefault();
-      savePedalCanvas();
+      savePedalCanvas(true);
+    }
+  });
+
+  // Ctrl-Z undo, Ctrl-Y / Ctrl-Shift-Z redo. Must be bound before the
+  // handler below, which stops immediate propagation.
+  $("body").on("keydown", function (event) {
+    if (!(event.ctrlKey || event.metaKey)) return;
+    if ($(event.target).is("input, textarea, select, [contenteditable]")) return;
+    if (event.which == 90 && !event.shiftKey) {
+      undo();
+      event.preventDefault();
+    } else if (event.which == 89 || (event.which == 90 && event.shiftKey)) {
+      redo();
+      event.preventDefault();
     }
   });
 
@@ -651,9 +684,10 @@ function readyCanvas(pedal) {
   savePedalCanvas();
 }
 
-function savePedalCanvas() {
+function savePedalCanvas(nudge) {
   console.log("Canvas Saved!");
   localStorage["pedalCanvas"] = JSON.stringify($(".canvas").html());
+  recordHistory(nudge);
 }
 
 function exportPedalCanvas() {
@@ -736,6 +770,67 @@ var suppressNextClick = false;
 
 // Positions of the other selected items while a group is being dragged
 var groupDrag = null;
+
+// Undo history of canvas snapshots; historyIndex is the current state
+var undoHistory = [];
+var historyIndex = -1;
+var HISTORY_LIMIT = 100;
+
+// Successive arrow-key nudges are merged into one undo step
+var lastWasNudge = false;
+var lastNudgeTime = 0;
+
+// Canvas HTML without selection or drag state, so that selecting doesn't
+// count as a change
+function canvasSnapshot() {
+  var $canvas = $(".canvas").clone();
+  $canvas.find(".marquee").remove();
+  $canvas.find(".selected, .is-dragging, .is-pointer-down").removeClass("selected is-dragging is-pointer-down");
+  return $canvas.html();
+}
+
+function recordHistory(nudge) {
+  if (historyIndex < 0) return; // not loaded yet
+  var snapshot = canvasSnapshot();
+  if (snapshot == undoHistory[historyIndex]) return;
+  if (nudge && lastWasNudge && Date.now() - lastNudgeTime < 60000) {
+    undoHistory[historyIndex] = snapshot;
+  } else {
+    undoHistory.length = historyIndex + 1;
+    undoHistory.push(snapshot);
+    if (undoHistory.length > HISTORY_LIMIT) undoHistory.shift();
+    historyIndex = undoHistory.length - 1;
+  }
+  lastWasNudge = !!nudge;
+  if (nudge) lastNudgeTime = Date.now();
+  updateHistoryButtons();
+}
+
+function restoreHistory(i) {
+  historyIndex = i;
+  lastWasNudge = false;
+  $(".canvas").html(undoHistory[i]);
+  $(".panel:not(.settings-popover)").remove();
+  $("#canvas-scale").val($("#multiplier").val());
+  $(".canvas").css("background-size", $("#multiplier").val() + "px");
+  readyCanvas();
+  updateHistoryButtons();
+}
+
+function undo() {
+  if (historyIndex > 0) restoreHistory(historyIndex - 1);
+}
+
+function redo() {
+  if (historyIndex < undoHistory.length - 1) restoreHistory(historyIndex + 1);
+}
+
+function updateHistoryButtons() {
+  var off = { opacity: 0.3, pointerEvents: "none" };
+  var on = { opacity: "", pointerEvents: "" };
+  $(".undo-trigger").css(historyIndex > 0 ? on : off);
+  $(".redo-trigger").css(historyIndex < undoHistory.length - 1 ? on : off);
+}
 
 function selectedItems() {
   return $(".canvas .selected");
@@ -1156,6 +1251,16 @@ $("body").click(function () {
 $("body").on("click", ".canvas", function (e) {
   $(".settings-popover").addClass("hide");
   $(".settings-trigger").removeClass("open");
+});
+
+$("body").on("click", ".undo-trigger", function (e) {
+  e.preventDefault();
+  undo();
+});
+
+$("body").on("click", ".redo-trigger", function (e) {
+  e.preventDefault();
+  redo();
 });
 
 $("body").on("click", ".settings-trigger", function (e) {
