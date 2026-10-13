@@ -29626,6 +29626,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "Wanderer",
+		"Width": 3.82,
+		"Height": 4.88,
+		"Image": "jhs-wanderer.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "Whitey Tighty",
 		"Width": 1.82,
 		"Height": 3.8,
@@ -40476,6 +40483,13 @@
 	},
 	{
 		"Brand": "MXR",
+		"Name": "Turbo Tuner",
+		"Width": 2.67,
+		"Height": 4.5,
+		"Image": "mxr-m400.png"
+	},
+	{
+		"Brand": "MXR",
 		"Name": "Univibe",
 		"Width": 2.67,
 		"Height": 4.5,
@@ -45515,60 +45529,74 @@
 		"Image": "pedal-brainz-no-brainer.png"
 	},
 	{
-		"Brand": "Pedal Pal FX",
+		"Brand": "PedalPalFX",
 		"Name": "PAL-034 Night Overdrive",
 		"Width": 4.19,
 		"Height": 4.7,
 		"Image": "pedalpalfx-pal034.png"
 	},
 	{
-		"Brand": "Pedal Pal FX",
+		"Brand": "PedalPalFX",
 		"Name": "PAL800 Gold Overdrive",
 		"Width": 4.19,
 		"Height": 4.7,
 		"Image": "pedalpalfx-pal800.png"
 	},
 	{
-		"Brand": "Pedal Pal FX",
+		"Brand": "PedalPalFX",
 		"Name": "PAL800-V3 Gold Overdrive",
 		"Width": 4.19,
 		"Height": 4.82,
 		"Image": "pedalpalfx-pal800-v3.png"
 	},
 	{
-		"Brand": "Pedal Pal FX",
+		"Brand": "PedalPalFX",
 		"Name": "PAL800-V4 Gold Overdrive",
 		"Width": 2.83,
 		"Height": 4.57,
 		"Image": "pedalpalfx-pal800-v4.png"
 	},
 	{
-		"Brand": "Pedal Pal FX",
+		"Brand": "PedalPalFX",
 		"Name": "PAL800 JCM Emulator",
 		"Width": 4.19,
 		"Height": 4.7,
 		"Image": "pedalpalfx-pal800-jcm.png"
 	},
 	{
-		"Brand": "Pedal Pal FX",
+		"Brand": "PedalPalFX",
+		"Name": "PAL808-V2 TS-Overdrive",
+		"Width": 2.83,
+		"Height": 4.57,
+		"Image": "pedalpalfx-pal808-v2.png"
+	},
+	{
+		"Brand": "PedalPalFX",
 		"Name": "PAL959 Plexi Emulator",
 		"Width": 4.19,
 		"Height": 4.7,
 		"Image": "pedalpalfx-pal959.png"
 	},
 	{
-		"Brand": "Pedal Pal FX",
+		"Brand": "PedalPalFX",
 		"Name": "PAL959-V2 Plexi Emulator",
 		"Width": 4.19,
 		"Height": 4.82,
 		"Image": "pedalpalfx-pal959-v2.png"
 	},
 	{
-		"Brand": "Pedal Pal FX",
+		"Brand": "PedalPalFX",
 		"Name": "PAL987 Plexi Carrera",
 		"Width": 2.83,
 		"Height": 4.57,
 		"Image": "pedalpalfx-pal987.png"
+	},
+	{
+		"Brand": "PedalPalFX",
+		"Name": "Silverhenge",
+		"Width": 2.83,
+		"Height": 4.57,
+		"Image": "pedalpalfx-silverhenge.png"
 	},
 	{
 		"Brand": "Pedal Pawn",
@@ -60998,6 +61026,20 @@
 		"Width": 5.08,
 		"Height": 4,
 		"Image": "wrenandcuff-garbage-face.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "MINI Fade Font Russian",
+		"Width": 1.77,
+		"Height": 3.81,
+		"Image": "wrenandcuff-mini-fade-font-russian.png"
+	},
+	{
+		"Brand": "Wren And Cuff",
+		"Name": "MINI Tall Font Russian",
+		"Width": 1.77,
+		"Height": 3.81,
+		"Image": "wrenandcuff-mini-tall-font-russian.png"
 	},
 	{
 		"Brand": "Wren And Cuff",
