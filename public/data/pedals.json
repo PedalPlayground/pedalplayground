@@ -59237,6 +59237,20 @@
 	},
 	{
 		"Brand": "Walrus Audio",
+		"Name": "Fable MKII",
+		"Width": 3.95,
+		"Height": 4.7,
+		"Image": "walrus-fable-mk2.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Fable MKII (Black)",
+		"Width": 3.95,
+		"Height": 4.7,
+		"Image": "walrus-fable-mk2-black.png"
+	},
+	{
+		"Brand": "Walrus Audio",
 		"Name": "Fathom",
 		"Width": 2.6,
 		"Height": 4.95,
@@ -59528,6 +59542,20 @@
 		"Width": 3.7,
 		"Height": 4.84,
 		"Image": "walrus-lore-kamakura.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Lore MKII",
+		"Width": 3.95,
+		"Height": 4.7,
+		"Image": "walrus-lore-mk2.png"
+	},
+	{
+		"Brand": "Walrus Audio",
+		"Name": "Lore MKII (Black)",
+		"Width": 3.95,
+		"Height": 4.7,
+		"Image": "walrus-lore-mk2-black.png"
 	},
 	{
 		"Brand": "Walrus Audio",
