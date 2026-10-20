@@ -8780,6 +8780,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Cold One",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-cold-one.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Coriolis Effect",
 		"Width": 4.7,
 		"Height": 3.82,
@@ -11188,6 +11195,13 @@
 	},
 	{
 		"Brand": "Cosmodio",
+		"Name": "Horoscope",
+		"Width": 3.8,
+		"Height": 4.92,
+		"Image": "cosmodio-horoscope.png"
+	},
+	{
+		"Brand": "Cosmodio",
 		"Name": "Pet Yeti",
 		"Width": 3.8,
 		"Height": 4.92,
@@ -11199,6 +11213,13 @@
 		"Width": 3.8,
 		"Height": 4.92,
 		"Image": "cosmodio-splinter-twin.png"
+	},
+	{
+		"Brand": "Cosmotronic",
+		"Name": "Messor",
+		"Width": 3.98,
+		"Height": 4.79,
+		"Image": "cosmotronic-messor.png"
 	},
 	{
 		"Brand": "Costalab",
@@ -13026,6 +13047,13 @@
 		"Width": 2.6,
 		"Height": 4.9,
 		"Image": "devi-ever-torns-peaker.png"
+	},
+	{
+		"Brand": "DevTech",
+		"Name": "DSOTM",
+		"Width": 2.6,
+		"Height": 5.02,
+		"Image": "devtech-dsotm.png"
 	},
 	{
 		"Brand": "DevTech",
@@ -61691,6 +61719,20 @@
 		"Width": 3.5,
 		"Height": 4.34,
 		"Image": "zinky-master-blaster.png"
+	},
+	{
+		"Brand": "Zoar Sound",
+		"Name": "Midium 4",
+		"Width": 4.22,
+		"Height": 3.23,
+		"Image": "zoar-sound-midium-4.png"
+	},
+	{
+		"Brand": "Zoar Sound",
+		"Name": "Midium 6",
+		"Width": 6.48,
+		"Height": 4.2,
+		"Image": "zoar-sound-midium-6.png"
 	},
 	{
 		"Brand": "Zoom",
