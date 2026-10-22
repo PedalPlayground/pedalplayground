@@ -11125,6 +11125,13 @@
 	},
 	{
 		"Brand": "Cornerstone",
+		"Name": "Gladio MK3",
+		"Width": 4.7,
+		"Height": 3.77,
+		"Image": "cornerstone-gladio-mk3.png"
+	},
+	{
+		"Brand": "Cornerstone",
 		"Name": "Gladio SC",
 		"Width": 2.6,
 		"Height": 4.99,
@@ -11374,6 +11381,13 @@
 		"Width": 4.7,
 		"Height": 3.78,
 		"Image": "ctc-planet-b-plus.png"
+	},
+	{
+		"Brand": "Crazy Tube Circuits",
+		"Name": "Rapture",
+		"Width": 2.68,
+		"Height": 4.5,
+		"Image": "ctc-rapture.png"
 	},
 	{
 		"Brand": "Crazy Tube Circuits",
@@ -36224,6 +36238,13 @@
 		"Width": 2.2,
 		"Height": 5.51,
 		"Image": "meloaudio-exp-001.png"
+	},
+	{
+		"Brand": "Melofty",
+		"Name": "Axom Max",
+		"Width": 15,
+		"Height": 9.02,
+		"Image": "melofty-axom-max.png"
 	},
 	{
 		"Brand": "Menatone",
