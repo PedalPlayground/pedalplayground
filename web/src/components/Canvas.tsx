@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { pedalImageUrl, pedalboardImageUrl } from "../lib/catalog";
+import { canvasImageUrl } from "../lib/catalog";
 import { clamp, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { snapMove, type Guides } from "../lib/snap";
 import type { Item } from "../lib/types";
+import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 
@@ -26,7 +27,8 @@ type Gesture =
   | { type: "pinch"; dist: number; mx: number; my: number };
 
 function ItemView({ item, selected, zoom }: { item: Item; selected: boolean; zoom: number }) {
-  const src = item.image ? (item.kind === "pedalboard" ? pedalboardImageUrl : pedalImageUrl)(item.image) : null;
+  const manifest = useCatalog((s) => s.manifest);
+  const src = item.image ? canvasImageUrl(manifest, item.kind, item.image) : null;
   return (
     <div
       data-item-id={item.id}
@@ -63,6 +65,10 @@ export function Canvas() {
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const spaceDown = useRef(false);
   const tool = useUi((u) => u.tool);
+
+  useEffect(() => {
+    void useCatalog.getState().load();
+  }, []);
 
   const [marquee, setMarquee] = useState<Rect | null>(null);
   const [guides, setGuides] = useState<Guides>(NO_GUIDES);

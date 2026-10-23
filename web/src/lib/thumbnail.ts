@@ -1,5 +1,6 @@
 import { itemBounds } from "./geometry";
-import { pedalImageUrl, pedalboardImageUrl } from "./catalog";
+import { canvasImageUrl } from "./catalog";
+import { useCatalog } from "../store/catalog";
 import type { Item } from "./types";
 
 const W = 360;
@@ -43,8 +44,12 @@ export async function renderThumbnail(items: Item[]): Promise<string | null> {
   ctx.fillStyle = "#f6f7f9";
   ctx.fillRect(0, 0, W, H);
 
+  const manifest = await useCatalog.getState().load();
   const images = await Promise.all(
-    items.map((i) => (i.image ? loadImage((i.kind === "pedalboard" ? pedalboardImageUrl : pedalImageUrl)(i.image)) : null)),
+    items.map((i) => {
+      const url = i.image ? canvasImageUrl(manifest, i.kind, i.image) : null;
+      return url ? loadImage(url) : null;
+    }),
   );
 
   items.forEach((item, n) => {

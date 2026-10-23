@@ -1,23 +1,24 @@
 import { Search, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { loadCatalog, pedalImageUrl, pedalboardImageUrl } from "../lib/catalog";
+import { thumbUrl } from "../lib/catalog";
 import { formatSize } from "../lib/units";
-import type { Catalog, CatalogItem } from "../lib/types";
+import type { CatalogItem } from "../lib/types";
+import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 
 type Category = "pedals" | "pedalboards";
 
 export function SearchPanel({ onClose }: { onClose: () => void }) {
-  const [catalog, setCatalog] = useState<Catalog | null>(null);
+  const { manifest: catalog, error, load } = useCatalog();
   const [category, setCategory] = useState<Category>("pedals");
   const [query, setQuery] = useState("");
   const units = useUi((u) => u.units);
   const addCatalogItem = usePlayground((p) => p.addCatalogItem);
 
   useEffect(() => {
-    void loadCatalog().then(setCatalog);
-  }, []);
+    void load();
+  }, [load]);
 
   const results = useMemo(() => {
     if (!catalog) return [];
@@ -27,7 +28,7 @@ export function SearchPanel({ onClose }: { onClose: () => void }) {
     return hits.slice(0, 60);
   }, [catalog, category, query]);
 
-  const imageUrl = category === "pedals" ? pedalImageUrl : pedalboardImageUrl;
+  const kind = category === "pedals" ? "pedal" : "pedalboard";
 
   return (
     <div className="w-[min(420px,calc(100vw-5rem))] rounded-panel bg-surface shadow-panel">
@@ -58,16 +59,17 @@ export function SearchPanel({ onClose }: { onClose: () => void }) {
         ))}
       </div>
       <ul className="max-h-80 overflow-y-auto p-2">
-        {!catalog && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
+        {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
+        {error && <li className="p-3 text-sm text-danger">{error}</li>}
         {catalog && results.length === 0 && <li className="p-3 text-sm text-ink-muted">No results</li>}
         {results.map((item: CatalogItem) => (
           <li key={`${item.brand}-${item.name}`}>
             <button
-              onClick={() => addCatalogItem(category === "pedals" ? "pedal" : "pedalboard", item)}
+              onClick={() => addCatalogItem(kind, item)}
               className="flex w-full items-center gap-3 rounded-control p-2 text-left hover:bg-surface-hover"
             >
               <img
-                src={imageUrl(item.image)}
+                src={thumbUrl(catalog, kind, item.image) ?? undefined}
                 alt=""
                 loading="lazy"
                 className="size-16 shrink-0 rounded-control bg-canvas object-contain"

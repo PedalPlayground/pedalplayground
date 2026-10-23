@@ -1,0 +1,26 @@
+name: Catalog
+
+# Validates contributions to the pedal/pedalboard catalog (JSON entries + source PNGs).
+on:
+  pull_request:
+    paths:
+      - "public/data/**"
+      - "public/images/pedals/**"
+      - "public/images/pedalboards/**"
+      - "web/scripts/catalog/**"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: web/.nvmrc
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+        working-directory: web
+      - run: npm run catalog:validate
+        working-directory: web

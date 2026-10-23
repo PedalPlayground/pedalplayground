@@ -1,34 +1,52 @@
-import type { Catalog, CatalogItem } from "./types";
-
-interface RawItem {
-  Brand?: string;
-  Name?: string;
-  Width?: number;
-  Height?: number;
-  Image?: string;
-}
-
-const normalize = (raw: RawItem[]): CatalogItem[] =>
-  raw
-    .map((r) => ({
-      brand: r.Brand ?? "",
-      name: r.Name ?? "",
-      width: r.Width ?? 0,
-      height: r.Height ?? 0,
-      image: r.Image ?? "",
-    }))
-    .sort((a, b) => a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
+import type { CatalogItem } from "./types";
 
 /**
- * Catalog source. Reads the repo JSON today; swap this for Supabase tables later
- * without touching callers.
+ * Where the generated catalog lives (manifest + thumb/ + img/). Same-origin `/catalog/` in dev;
+ * set VITE_CATALOG_BASE_URL to a CDN origin in production.
  */
-export async function loadCatalog(): Promise<Catalog> {
-  const [pedals, pedalboards] = await Promise.all(
-    ["pedals", "pedalboards"].map((n) => fetch(`/data/${n}.json`).then((r) => r.json() as Promise<RawItem[]>)),
-  );
-  return { pedals: normalize(pedals), pedalboards: normalize(pedalboards) };
+export const CATALOG_BASE = ((import.meta.env.VITE_CATALOG_BASE_URL as string | undefined) || "/catalog/").replace(/\/?$/, "/");
+
+export type Kind = "pedal" | "pedalboard";
+
+export interface Manifest {
+  schema: number;
+  pedals: CatalogItem[];
+  pedalboards: CatalogItem[];
+  /** image key -> hashed file paths relative to CATALOG_BASE */
+  assets: { pedals: Record<string, AssetPaths>; pedalboards: Record<string, AssetPaths> };
 }
 
-export const pedalImageUrl = (image: string) => `/images/pedals/${image}`;
-export const pedalboardImageUrl = (image: string) => `/images/pedalboards/${image}`;
+export interface AssetPaths {
+  thumb: string;
+  img: string;
+}
+
+/** Documents store the original filename ("boss-ds1.png"); the manifest keys drop the extension. */
+export const imageKey = (image: string) => image.replace(/\.png$/i, "");
+
+export async function fetchManifest(): Promise<Manifest> {
+  const res = await fetch(`${CATALOG_BASE}catalog.json`);
+  if (!res.ok) {
+    throw new Error(`Catalog not found at ${CATALOG_BASE}catalog.json. In dev, run "npm run catalog:build" first.`);
+  }
+  const m = (await res.json()) as Manifest;
+  const byName = (a: CatalogItem, b: CatalogItem) => a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name);
+  m.pedals.sort(byName);
+  m.pedalboards.sort(byName);
+  return m;
+}
+
+function paths(m: Manifest | null, kind: Kind, image: string): AssetPaths | null {
+  return m?.assets[kind === "pedal" ? "pedals" : "pedalboards"][imageKey(image)] ?? null;
+}
+
+/** Optimized canvas image URL, or null if the manifest isn't loaded or has no such image. */
+export function canvasImageUrl(m: Manifest | null, kind: Kind, image: string): string | null {
+  const p = paths(m, kind, image);
+  return p ? CATALOG_BASE + p.img : null;
+}
+
+export function thumbUrl(m: Manifest | null, kind: Kind, image: string): string | null {
+  const p = paths(m, kind, image);
+  return p ? CATALOG_BASE + p.thumb : null;
+}
