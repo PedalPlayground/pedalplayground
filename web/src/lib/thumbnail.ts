@@ -15,6 +15,8 @@ function loadImage(url: string) {
   if (!p) {
     p = new Promise((resolve) => {
       const img = new Image();
+      // Required for toDataURL() once images come from a CDN; the CDN must send Access-Control-Allow-Origin.
+      img.crossOrigin = "anonymous";
       img.onload = () => resolve(img);
       img.onerror = () => resolve(null);
       img.src = url;

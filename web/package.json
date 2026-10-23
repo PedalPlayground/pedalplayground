@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
     "catalog:build": "node scripts/catalog/build.mjs",
-    "catalog:validate": "node scripts/catalog/validate.mjs"
+    "catalog:validate": "node scripts/catalog/validate.mjs",
+    "postbuild": "node -e \"require('fs').rmSync('dist/catalog',{recursive:true,force:true})\""
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.0",
