@@ -9,10 +9,59 @@ $(document).ready(function () {
 	GetPedalBoardData();
 	convertUnits();
 
+	function pedalMatcher(params, data) {
+		if ($.trim(params.term) === '') {
+			return data;
+		}
+
+		function cleanString(str) {
+			return str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+		}
+
+		var terms = params.term.split(/\s+/).filter(function(t) {
+			return t.length > 0;
+		});
+
+		function matchAllTerms(targetText) {
+			var cleanTarget = cleanString(targetText);
+			for (var i = 0; i < terms.length; i++) {
+				var cleanTerm = cleanString(terms[i]);
+				if (cleanTarget.indexOf(cleanTerm) === -1) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		if (matchAllTerms(data.text)) {
+			return data;
+		}
+
+		if (data.children && data.children.length > 0) {
+			var filteredChildren = [];
+
+			$.each(data.children, function (idx, child) {
+				var matchedChild = pedalMatcher(params, child);
+				if (matchedChild !== null) {
+					filteredChildren.push(matchedChild);
+				}
+			});
+
+			if (filteredChildren.length > 0) {
+				var modifiedData = $.extend({}, data, true);
+				modifiedData.children = filteredChildren;
+				return modifiedData;
+			}
+		}
+
+		return null;
+	}
+
 	// Make lists searchable
 	$(".pedal-list").select2({
 		placeholder: "Select a pedal",
 		width: "style",
+		matcher: pedalMatcher
 	});
 
 	$(".pedal-list").on("select2:select", function (e) {
@@ -24,6 +73,7 @@ $(document).ready(function () {
 	$(".pedalboard-list").select2({
 		placeholder: "Select a pedalboard",
 		width: "style",
+		matcher: pedalMatcher
 	});
 
 	$(".pedalboard-list").on("select2:select", function (e) {
