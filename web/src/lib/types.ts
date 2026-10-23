@@ -27,6 +27,8 @@ export interface Item {
   rotation: Rotation;
   flipX: boolean;
   custom: boolean;
+  /** Body color for custom pedals (hex); null for catalog items and custom boards. */
+  color: string | null;
 }
 
 export interface View {
@@ -60,5 +62,7 @@ export interface LegacyDocV2 {
     artworkBackgroundImage: string | null;
     position: { left: number; top: number; translateX: number; translateY: number; useTransform: boolean };
     zOrder: number;
+    /** Only present when read from the original HTML save. */
+    color?: string | null;
   }[];
 }

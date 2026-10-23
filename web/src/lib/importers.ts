@@ -1,3 +1,4 @@
+import { DEFAULT_PEDAL_COLOR } from "./color";
 import { PX_PER_INCH } from "./geometry";
 import type { Item, LegacyDocV2, PlaygroundDocument, Rotation } from "./types";
 
@@ -34,6 +35,7 @@ export function fromLegacyV2(doc: LegacyDocV2): PlaygroundDocument {
         rotation: it.rotationClass ? ROTATION[it.rotationClass] : 0,
         flipX: false,
         custom: it.isCustom || !art,
+        color: it.isCustom && it.type === "pedal" ? (it.color ?? DEFAULT_PEDAL_COLOR) : null,
       };
     })
     .filter((i) => i.width > 0 && i.height > 0);
@@ -65,6 +67,7 @@ export function fromLegacyHtml(html: string): PlaygroundDocument {
       height: parseFloat(el.getAttribute("data-height") ?? "") || null,
       rotationClass,
       artworkBackgroundImage: art?.getAttribute("style")?.match(/background-image:\s*([^;]+)/)?.[1] ?? null,
+      color: el.querySelector(".pedal__box")?.getAttribute("style")?.match(/background-color:\s*([^;]+)/)?.[1]?.trim() ?? null,
       position: { left: num("left"), top: num("top"), translateX: t ? +t[1] : 0, translateY: t ? +t[2] : 0, useTransform: !!t },
       zOrder: index,
     });
@@ -77,7 +80,10 @@ export function fromLegacyHtml(html: string): PlaygroundDocument {
 export function importAny(raw: unknown): PlaygroundDocument {
   const o = raw as Record<string, unknown> | null;
   if (!o || typeof o !== "object") throw new Error("Not a playground file.");
-  if (o.schemaVersion === 3 && Array.isArray(o.items)) return o as unknown as PlaygroundDocument;
+  if (o.schemaVersion === 3 && Array.isArray(o.items)) {
+    const doc = o as unknown as PlaygroundDocument;
+    return { ...doc, items: doc.items.map((it) => ({ ...it, color: it.color ?? null })) };
+  }
   if (o.document && typeof o.document === "object") return importAny(o.document);
   if (Array.isArray(o.items) && "multiplier" in o) return fromLegacyV2(o as unknown as LegacyDocV2);
   if (typeof o.canvas === "string") return fromLegacyHtml(o.canvas);

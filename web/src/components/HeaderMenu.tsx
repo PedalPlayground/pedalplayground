@@ -5,14 +5,14 @@ import { importAny } from "../lib/importers";
 import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
-import { useUi } from "../store/ui";
+import { useUi, type Theme } from "../store/ui";
 
 const item =
   "flex cursor-pointer select-none items-center justify-between gap-6 rounded-control px-3 py-2 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
 export function HeaderMenu({ onAccount, onPlaygrounds }: { onAccount: () => void; onPlaygrounds: () => void }) {
   const { user, cloudEnabled, signOut } = useAuth();
-  const { units, setUnits } = useUi();
+  const { units, setUnits, theme, setTheme } = useUi();
   const fileInput = useRef<HTMLInputElement>(null);
 
   const newPlayground = () => {
@@ -88,6 +88,16 @@ export function HeaderMenu({ onAccount, onPlaygrounds }: { onAccount: () => void
             Use millimeters
             <Dropdown.ItemIndicator className="text-brand">✓</Dropdown.ItemIndicator>
           </Dropdown.CheckboxItem>
+          <Dropdown.Separator className="my-1 h-px bg-line" />
+          <Dropdown.Label className="px-3 pb-1 pt-1.5 text-xs text-ink-muted">Appearance</Dropdown.Label>
+          <Dropdown.RadioGroup value={theme} onValueChange={(v) => setTheme(v as Theme)}>
+            {(["system", "light", "dark"] as const).map((t) => (
+              <Dropdown.RadioItem key={t} value={t} className={item}>
+                <span className="capitalize">{t}</span>
+                <Dropdown.ItemIndicator className="text-brand">✓</Dropdown.ItemIndicator>
+              </Dropdown.RadioItem>
+            ))}
+          </Dropdown.RadioGroup>
           {cloudEnabled && user && (
             <>
               <Dropdown.Separator className="my-1 h-px bg-line" />

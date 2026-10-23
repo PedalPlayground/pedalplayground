@@ -5,6 +5,7 @@ import { snapMove, type Guides } from "../lib/snap";
 import type { Item } from "../lib/types";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
+import { CustomItemView } from "./CustomItem";
 import { useUi } from "../store/ui";
 
 /** Screen-space distance (px) within which a dragged item snaps to another's edge or center. */
@@ -46,14 +47,10 @@ function ItemView({ item, selected, zoom }: { item: Item; selected: boolean; zoo
     >
       {src ? (
         <img src={src} alt={item.label} draggable={false} className="size-full select-none object-fill" />
+      ) : item.custom ? (
+        <CustomItemView item={item} />
       ) : (
-        <div
-          className={`grid size-full place-items-center text-center text-xs ${
-            item.kind === "pedalboard" ? "border-4 border-ink bg-ink/10" : "bg-surface ring-1 ring-line"
-          }`}
-        >
-          {item.label}
-        </div>
+        <div className="size-full bg-surface-hover" />
       )}
     </div>
   );
@@ -284,7 +281,7 @@ export function Canvas() {
       className="absolute inset-0 touch-none"
       style={{
         cursor: tool === "hand" ? "grab" : "default",
-        backgroundImage: "radial-gradient(circle, #d6d9e0 1px, transparent 1px)",
+        backgroundImage: "radial-gradient(circle, var(--color-grid) 1px, transparent 1px)",
         backgroundSize: `${24 * view.zoom}px ${24 * view.zoom}px`,
         backgroundPosition: `${view.x}px ${view.y}px`,
       }}

@@ -1,3 +1,4 @@
+import { DEFAULT_PEDAL_COLOR } from "./color";
 import { itemBounds } from "./geometry";
 import { canvasImageUrl } from "./catalog";
 import { useCatalog } from "../store/catalog";
@@ -62,10 +63,16 @@ export async function renderThumbnail(items: Item[]): Promise<string | null> {
     const img = images[n];
     if (img) {
       ctx.drawImage(img, -w / 2, -h / 2, w, h);
-    } else {
-      ctx.fillStyle = item.kind === "pedalboard" ? "#d8dae0" : "#ffffff";
+    } else if (item.kind === "pedalboard") {
+      ctx.fillStyle = "#e4e5ea";
       ctx.fillRect(-w / 2, -h / 2, w, h);
-      ctx.strokeStyle = "#9a9ea9";
+      ctx.strokeStyle = "#2b2b30";
+      ctx.lineWidth = Math.max(1, scale * 0.5);
+      ctx.strokeRect(-w / 2 + ctx.lineWidth / 2, -h / 2 + ctx.lineWidth / 2, w - ctx.lineWidth, h - ctx.lineWidth);
+    } else {
+      ctx.fillStyle = item.color ?? DEFAULT_PEDAL_COLOR;
+      ctx.fillRect(-w / 2, -h / 2, w, h);
+      ctx.strokeStyle = "rgb(0 0 0 / 0.3)";
       ctx.strokeRect(-w / 2, -h / 2, w, h);
     }
     ctx.restore();

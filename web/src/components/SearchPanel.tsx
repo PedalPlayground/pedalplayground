@@ -4,10 +4,11 @@ import { thumbUrl } from "../lib/catalog";
 import { formatSize } from "../lib/units";
 import type { CatalogItem } from "../lib/types";
 import { useCatalog } from "../store/catalog";
+import { CustomItemForm } from "./CustomItemForm";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 
-type Category = "pedals" | "pedalboards";
+type Category = "pedals" | "pedalboards" | "custom";
 
 export function SearchPanel({ onClose }: { onClose: () => void }) {
   const { manifest: catalog, error, load } = useCatalog();
@@ -23,12 +24,12 @@ export function SearchPanel({ onClose }: { onClose: () => void }) {
   const results = useMemo(() => {
     if (!catalog) return [];
     const q = query.trim().toLowerCase();
-    const list = catalog[category];
+    const list = catalog[category === "pedalboards" ? "pedalboards" : "pedals"];
     const hits = q ? list.filter((i) => `${i.brand} ${i.name}`.toLowerCase().includes(q)) : list;
     return hits.slice(0, 60);
   }, [catalog, category, query]);
 
-  const kind = category === "pedals" ? "pedal" : "pedalboard";
+  const kind = category === "pedalboards" ? "pedalboard" : "pedal";
 
   return (
     <div className="w-[min(420px,calc(100vw-5rem))] rounded-panel bg-surface shadow-panel">
@@ -46,7 +47,7 @@ export function SearchPanel({ onClose }: { onClose: () => void }) {
         </button>
       </div>
       <div className="flex gap-1 px-3 pt-2">
-        {(["pedals", "pedalboards"] as const).map((c) => (
+        {(["pedals", "pedalboards", "custom"] as const).map((c) => (
           <button
             key={c}
             onClick={() => setCategory(c)}
@@ -58,6 +59,9 @@ export function SearchPanel({ onClose }: { onClose: () => void }) {
           </button>
         ))}
       </div>
+      {category === "custom" ? (
+        <CustomItemForm onDone={onClose} />
+      ) : (
       <ul className="max-h-80 overflow-y-auto p-2">
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
         {error && <li className="p-3 text-sm text-danger">{error}</li>}
@@ -84,6 +88,7 @@ export function SearchPanel({ onClose }: { onClose: () => void }) {
           </li>
         ))}
       </ul>
+      )}
     </div>
   );
 }

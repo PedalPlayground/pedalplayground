@@ -38,6 +38,7 @@ interface PlaygroundState {
   selectMany: (ids: string[], additive?: boolean) => void;
 
   addCatalogItem: (kind: Item["kind"], c: CatalogItem) => void;
+  addCustomItem: (c: { kind: Item["kind"]; width: number; height: number; label: string; color: string | null }) => void;
   select: (id: string, additive?: boolean) => void;
   clearSelection: () => void;
   rotateSelected: () => void;
@@ -126,10 +127,39 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         rotation: 0,
         flipX: false,
         custom: false,
+        color: null,
       };
       // Pedalboards sit beneath every pedal; pedals go on top.
       const items = [...s.items];
       if (kind === "pedalboard") {
+        const firstPedal = items.findIndex((i) => i.kind === "pedal");
+        items.splice(firstPedal === -1 ? items.length : firstPedal, 0, item);
+      } else {
+        items.push(item);
+      }
+      return { ...record(s), items, selected: [item.id] };
+    }),
+
+  addCustomItem: (c) =>
+    set((s) => {
+      const cx = (s.viewport.w / 2 - s.view.x) / s.view.zoom / PX_PER_INCH;
+      const cy = (s.viewport.h / 2 - s.view.y) / s.view.zoom / PX_PER_INCH;
+      const item: Item = {
+        id: crypto.randomUUID(),
+        kind: c.kind,
+        label: c.label,
+        image: null,
+        width: c.width,
+        height: c.height,
+        x: cx - c.width / 2,
+        y: cy - c.height / 2,
+        rotation: 0,
+        flipX: false,
+        custom: true,
+        color: c.kind === "pedal" ? c.color : null,
+      };
+      const items = [...s.items];
+      if (c.kind === "pedalboard") {
         const firstPedal = items.findIndex((i) => i.kind === "pedal");
         items.splice(firstPedal === -1 ? items.length : firstPedal, 0, item);
       } else {
