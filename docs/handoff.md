@@ -35,7 +35,7 @@ fresh machine or account. Nothing here contains credentials; every secret is nam
 | Export as image, donate banner, ads, dedicated account page | Not built |
 
 Repo map: `web/src/{components,store,lib}` (app), `web/scripts/catalog/` (catalog pipeline and validator),
-`supabase/` (`schema.sql`, `migrations/`, `functions/`), `docs/` (this file plus `catalog.md`, `auth.md`, `billing.md`,
+`supabase/` (`migrations/`, `functions/`), `docs/` (this file plus `catalog.md`, `auth.md`, `billing.md`,
 `auth-email-template.html`). The original jQuery site is still at the repo root and untouched by the rebuild.
 
 ## What's untested
@@ -50,7 +50,7 @@ Be skeptical of these until each has been exercised:
   cross-device sign-in are unverified. See the test list in `docs/auth.md`.
 - **Signed-in cloud flows beyond a quick manual pass:** autosave versions, switcher list, rename conflicts, share and
   fork, delete, and the sign-in reconcile logic (empty canvas loads latest; local work uploads) deserve a deliberate test.
-- **Thumbnails in the cloud list:** need the `thumbnail` migration at the bottom of `schema.sql`. Without it saves work
+- **Thumbnails in the cloud list:** need the `thumbnail` column, which the base migration adds. Without it saves work
   and the app falls back cleanly, but no previews show.
 - **Legacy HTML-blob import** (including custom pedal colors) was never tried against a real old save.
 - **Real touch devices.** Pinch and touch-drag were only simulated with synthetic pointer events.
@@ -66,7 +66,7 @@ Be skeptical of these until each has been exercised:
 - **Past-due payments** keep Pro for Stripe's whole retry window.
 - **A free user at the limit who opens a shared link** gets a local-only fork.
 - **Price labels** in the upgrade dialog are hand-typed (`VITE_PRO_PRICE_*`) and can drift from Stripe.
-- **Two schema sources:** `schema.sql` and `migrations/` overlap. Consolidate before creating the production project.
+- **Schema:** the base schema is now the first migration; apply everything with `supabase db push --linked`.
 - **Catalog data:** 10 entries point at missing images (hidden from the app), 96 images are unreferenced, four pedal
   entries have suspicious sizes, and 220 known validator errors are frozen in `web/scripts/catalog/baseline.json`.
 - **Legal and compliance:** terms, privacy, refund policy, sales tax/VAT and account deletion don't exist yet. Sign-off
@@ -76,8 +76,8 @@ Be skeptical of these until each has been exercised:
 
 None of these are in the repository, by design.
 
-1. **Supabase:** a project in an organization you own, on a paid plan so it doesn't pause. Run `supabase/schema.sql`
-   (consolidated into migrations ideally), then the billing migration, then `notify pgrst, 'reload schema';`.
+1. **Supabase:** a project in an organization you own, on a paid plan so it doesn't pause. Link it
+   (`supabase link --project-ref …`) and run `supabase db push --linked`, which applies every file in `supabase/migrations/` in order.
 2. **Auth settings:** Site URL, redirect URLs, custom SMTP with SPF/DKIM/DMARC on your domain, raise the email rate
    limit, paste `docs/auth-email-template.html` into **Magic Link** and **Confirm signup** (`docs/auth.md`).
 3. **Stripe (own account, test mode first):** product with monthly and annual prices, customer portal config, webhook

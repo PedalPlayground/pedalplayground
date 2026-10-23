@@ -45,7 +45,7 @@ App ◀── my_entitlements() (plan, limit, usage) ─────────
 
 ### 2. Supabase
 
-1. Run `supabase/migrations/20261023000000_billing.sql` in the SQL editor (safe to re-run).
+1. Apply the migrations with `supabase db push --linked` (billing is `20261023000000_billing.sql`, plus `20261023000100_billing_grants.sql`).
 2. Set function secrets (never commit these; the secret key and webhook secret are credentials):
    ```bash
    supabase secrets set \
