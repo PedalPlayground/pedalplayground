@@ -1,6 +1,6 @@
 # Handoff: React rebuild of Pedal Playground
 
-State of the work on branch `react-rebuild` (5 commits on top of `master`), written so it can be picked up from a
+State of the work on branch `react-rebuild` (8 commits on top of `master`), written so it can be picked up from a
 fresh machine or account. Nothing here contains credentials; every secret is named, never included.
 
 ## Decisions already made
