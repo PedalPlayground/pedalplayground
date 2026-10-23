@@ -1,0 +1,23 @@
+import { useEffect, useState } from "react";
+import { useAuth } from "../store/auth";
+import { useCloud } from "../store/cloud";
+
+/** Brief "Saving… / Saved!" feedback in the header, for signed-in users. */
+export function SaveStatus() {
+  const user = useAuth((s) => s.user);
+  const { status, error } = useCloud();
+  const [showSaved, setShowSaved] = useState(false);
+
+  useEffect(() => {
+    if (status !== "saved") return;
+    setShowSaved(true);
+    const t = setTimeout(() => setShowSaved(false), 1800);
+    return () => clearTimeout(t);
+  }, [status]);
+
+  if (!user) return null;
+  if (status === "saving") return <span className="text-sm text-ink-muted">Saving…</span>;
+  if (status === "error") return <span className="text-sm text-danger" title={error ?? ""}>Saved locally only</span>;
+  if (status === "saved" && showSaved) return <span className="text-sm text-ink-muted">Saved!</span>;
+  return null;
+}

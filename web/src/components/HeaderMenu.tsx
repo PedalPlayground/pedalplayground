@@ -3,20 +3,21 @@ import { Menu } from "lucide-react";
 import { useRef } from "react";
 import { importAny } from "../lib/importers";
 import { useAuth } from "../store/auth";
+import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 
 const item =
   "flex cursor-pointer select-none items-center justify-between gap-6 rounded-control px-3 py-2 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
-export function HeaderMenu({ onAccount }: { onAccount: () => void }) {
+export function HeaderMenu({ onAccount, onPlaygrounds }: { onAccount: () => void; onPlaygrounds: () => void }) {
   const { user, cloudEnabled, signOut } = useAuth();
   const { units, setUnits } = useUi();
   const fileInput = useRef<HTMLInputElement>(null);
 
   const newPlayground = () => {
     if (!usePlayground.getState().items.length || window.confirm("Start a fresh playground? This clears the canvas.")) {
-      usePlayground.getState().reset();
+      useCloud.getState().newPlayground();
     }
   };
 
@@ -65,7 +66,9 @@ export function HeaderMenu({ onAccount }: { onAccount: () => void }) {
           <Dropdown.Item className={item} onSelect={onAccount}>
             Account
           </Dropdown.Item>
-          <Dropdown.Item className={item}>Playgrounds</Dropdown.Item>
+          <Dropdown.Item className={item} onSelect={onPlaygrounds}>
+            Playgrounds
+          </Dropdown.Item>
           <Dropdown.Item className={item} onSelect={newPlayground}>
             New playground
           </Dropdown.Item>

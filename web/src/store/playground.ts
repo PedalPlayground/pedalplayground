@@ -48,6 +48,7 @@ interface PlaygroundState {
   bringToFront: () => void;
   sendToBack: () => void;
 
+  setName: (name: string) => void;
   loadDocument: (doc: PlaygroundDocument, opts?: { undoable?: boolean }) => void;
   toDocument: () => PlaygroundDocument;
   reset: () => void;
@@ -222,6 +223,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       ...record(s),
       items: [...s.items.filter((i) => s.selected.includes(i.id)), ...s.items.filter((i) => !s.selected.includes(i.id))],
     })),
+
+  setName: (name) => set({ name }),
 
   loadDocument: (doc, opts) => {
     set((s) => ({
