@@ -2,48 +2,113 @@ import { useState } from "react";
 import { useAuth } from "../store/auth";
 import { Modal } from "./Modal";
 
-export function AccountDialog({ onClose }: { onClose: () => void }) {
-  const { user, cloudEnabled, sendMagicLink } = useAuth();
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<string | null>(null);
+const field =
+  "h-9 w-full rounded-control border border-line bg-surface px-3 text-sm outline-none focus:border-brand placeholder:text-ink-muted";
+const primary =
+  "h-9 w-full rounded-control bg-brand text-sm font-medium text-brand-ink hover:bg-brand-hover disabled:opacity-50";
 
-  const submit = async () => {
-    const error = await sendMagicLink(email.trim());
-    setStatus(error ?? "Magic link sent. Check your email.");
+export function AccountDialog({ onClose }: { onClose: () => void }) {
+  const { user, cloudEnabled, sendCode, verifyCode } = useAuth();
+  const [email, setEmail] = useState("");
+  const [code, setCode] = useState("");
+  const [step, setStep] = useState<"email" | "code">("email");
+  const [busy, setBusy] = useState(false);
+  const [message, setMessage] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const send = async () => {
+    setBusy(true);
+    setError(null);
+    const err = await sendCode(email.trim());
+    setBusy(false);
+    if (err) return setError(err);
+    setStep("code");
+    setCode("");
+    setMessage(`We sent a 6-digit code to ${email.trim()}.`);
   };
 
-return (
-  <Modal title="Account" onClose={onClose}>
+  const verify = async () => {
+    setBusy(true);
+    setError(null);
+    const err = await verifyCode(email.trim(), code);
+    setBusy(false);
+    if (err) return setError(err);
+    onClose();
+  };
+
+  return (
+    <Modal title="Account" onClose={onClose}>
       {!cloudEnabled && <p className="text-sm text-ink-muted">Cloud sign-in is not configured on this build.</p>}
+
       {cloudEnabled && user && (
         <>
           <p className="text-xs text-ink-muted">Signed in as</p>
           <p className="text-sm font-medium">{user.email}</p>
         </>
       )}
-      {cloudEnabled && !user && (
-        <>
-          <p className="mb-3 text-sm text-ink-muted">Sign in with a magic link. No password needed.</p>
+
+      {cloudEnabled && !user && step === "email" && (
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            void send();
+          }}
+        >
+          <p className="mb-3 text-sm text-ink-muted">Sign in with your email. We'll send you a code, no password needed.</p>
           <input
             type="email"
+            autoFocus
+            autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
-            className="mb-3 h-9 w-full rounded-control border border-line px-3 text-sm outline-none focus:border-brand"
+            className={`${field} mb-3`}
           />
-          <button
-            onClick={() => void submit()}
-            disabled={!email.trim()}
-            className="h-9 w-full rounded-control bg-brand text-sm font-medium text-brand-ink hover:bg-brand-hover disabled:opacity-50"
-          >
-            Send magic link
+          <button type="submit" disabled={!email.trim() || busy} className={primary}>
+            {busy ? "Sending…" : "Email me a code"}
           </button>
-          {status && <p className="mt-2 text-sm text-ink-muted">{status}</p>}
-        </>
+        </form>
       )}
+
+      {cloudEnabled && !user && step === "code" && (
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            void verify();
+          }}
+        >
+          {message && <p className="mb-3 text-sm text-ink-muted">{message}</p>}
+          <input
+            autoFocus
+            inputMode="numeric"
+            autoComplete="one-time-code"
+            pattern="[0-9 ]*"
+            maxLength={9}
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+            placeholder="123456"
+            aria-label="6-digit code"
+            className={`${field} mb-3 text-center text-lg tracking-[0.4em]`}
+          />
+          <button type="submit" disabled={code.replace(/\s/g, "").length < 6 || busy} className={primary}>
+            {busy ? "Checking…" : "Sign in"}
+          </button>
+          <div className="mt-3 flex justify-between text-sm">
+            <button type="button" onClick={() => void send()} disabled={busy} className="text-brand hover:underline disabled:opacity-50">
+              Send a new code
+            </button>
+            <button type="button" onClick={() => { setStep("email"); setError(null); setMessage(null); }} className="text-ink-muted hover:text-ink">
+              Use a different email
+            </button>
+          </div>
+        </form>
+      )}
+
+      {error && <p className="mt-3 text-sm text-danger">{error}</p>}
+
       <button onClick={onClose} className="mt-4 text-sm text-ink-muted hover:text-ink">
-          Close
-        </button>
+        Close
+      </button>
     </Modal>
   );
 }

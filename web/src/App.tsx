@@ -1,7 +1,9 @@
 import { Share2 } from "lucide-react";
 import { useEffect, useState } from "react";
+import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
 import { Canvas } from "./components/Canvas";
+import { ConfirmSignIn } from "./components/ConfirmSignIn";
 import { HeaderMenu } from "./components/HeaderMenu";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
@@ -15,6 +17,25 @@ import { Toolbar } from "./components/Toolbar";
 import { useAuth } from "./store/auth";
 import { startCloudSync, useCloud } from "./store/cloud";
 import { restorePlayground, startLocalAutosave, usePlayground } from "./store/playground";
+
+const OTP_TYPES: EmailOtpType[] = ["email", "magiclink", "signup", "recovery", "invite", "email_change"];
+
+/** Reads `?token_hash=&type=` from the URL after an emailed sign-in link. Pure, so StrictMode can call it twice. */
+function readEmailLinkParams(): { tokenHash: string; type: EmailOtpType } | null {
+  const params = new URLSearchParams(window.location.search);
+  const tokenHash = params.get("token_hash");
+  const type = params.get("type") as EmailOtpType | null;
+  return tokenHash && type && OTP_TYPES.includes(type) ? { tokenHash, type } : null;
+}
+
+/** Removes the sign-in params so a reload or shared URL doesn't carry the token. */
+function stripEmailLinkParams() {
+  const params = new URLSearchParams(window.location.search);
+  params.delete("token_hash");
+  params.delete("type");
+  const qs = params.toString();
+  window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""));
+}
 
 type Dialog = "account" | "rename" | "share" | "playgrounds" | null;
 
@@ -45,8 +66,11 @@ export function App() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [dialog, setDialog] = useState<Dialog>(null);
   const close = () => setDialog(null);
+  const [emailLink] = useState(readEmailLinkParams);
+  const [confirming, setConfirming] = useState(!!emailLink);
 
   useEffect(init, [init]);
+  useEffect(stripEmailLinkParams, []);
   useEffect(() => {
     restorePlayground();
     const stopLocal = startLocalAutosave();
@@ -98,6 +122,7 @@ export function App() {
         </main>
       </div>
 
+      {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}
       {dialog === "account" && <AccountDialog onClose={close} />}
       {dialog === "rename" && <RenameDialog onClose={close} />}
       {dialog === "share" && <ShareDialog onClose={close} onSignIn={() => setDialog("account")} />}
