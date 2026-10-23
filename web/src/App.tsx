@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
 import { Canvas } from "./components/Canvas";
+import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
 import { HeaderMenu } from "./components/HeaderMenu";
 import { ModeRail } from "./components/ModeRail";
@@ -14,6 +15,7 @@ import { SearchPanel } from "./components/SearchPanel";
 import { SelectionBar } from "./components/SelectionBar";
 import { ShareDialog } from "./components/ShareDialog";
 import { Toolbar } from "./components/Toolbar";
+import { UpgradeDialog } from "./components/UpgradeDialog";
 import { useAuth } from "./store/auth";
 import { startCloudSync, useCloud } from "./store/cloud";
 import { restorePlayground, startLocalAutosave, usePlayground } from "./store/playground";
@@ -28,11 +30,18 @@ function readEmailLinkParams(): { tokenHash: string; type: EmailOtpType } | null
   return tokenHash && type && OTP_TYPES.includes(type) ? { tokenHash, type } : null;
 }
 
+/** Stripe sends people back to `/?billing=success` (or `canceled`). */
+function readBillingReturn(): "success" | "canceled" | null {
+  const v = new URLSearchParams(window.location.search).get("billing");
+  return v === "success" || v === "canceled" ? v : null;
+}
+
 /** Removes the sign-in params so a reload or shared URL doesn't carry the token. */
 function stripEmailLinkParams() {
   const params = new URLSearchParams(window.location.search);
   params.delete("token_hash");
   params.delete("type");
+  params.delete("billing");
   const qs = params.toString();
   window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""));
 }
@@ -68,6 +77,7 @@ export function App() {
   const close = () => setDialog(null);
   const [emailLink] = useState(readEmailLinkParams);
   const [confirming, setConfirming] = useState(!!emailLink);
+  const [billingReturn, setBillingReturn] = useState(readBillingReturn);
 
   useEffect(init, [init]);
   useEffect(stripEmailLinkParams, []);
@@ -122,6 +132,8 @@ export function App() {
         </main>
       </div>
 
+      {billingReturn === "success" && <BillingReturn onDone={() => setBillingReturn(null)} />}
+      <UpgradeDialog onSignIn={() => setDialog("account")} />
       {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}
       {dialog === "account" && <AccountDialog onClose={close} />}
       {dialog === "rename" && <RenameDialog onClose={close} />}

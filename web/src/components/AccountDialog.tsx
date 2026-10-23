@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { openBillingPortal } from "../lib/billing";
 import { useAuth } from "../store/auth";
+import { useBilling } from "../store/billing";
+import { useUi } from "../store/ui";
 import { Modal } from "./Modal";
 
 const field =
@@ -9,6 +12,8 @@ const primary =
 
 export function AccountDialog({ onClose }: { onClose: () => void }) {
   const { user, cloudEnabled, sendCode, verifyCode } = useAuth();
+  const { entitlements, billingEnabled } = useBilling();
+  const openUpgrade = useUi((u) => u.openUpgrade);
   const [email, setEmail] = useState("");
   const [code, setCode] = useState("");
   const [step, setStep] = useState<"email" | "code">("email");
@@ -44,6 +49,32 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
         <>
           <p className="text-xs text-ink-muted">Signed in as</p>
           <p className="text-sm font-medium">{user.email}</p>
+          {billingEnabled && entitlements && (
+            <div className="mt-4 rounded-control border border-line p-3">
+              <div className="text-sm font-medium">{entitlements.plan === "pro" ? "Pro" : "Free plan"}</div>
+              <div className="mt-0.5 text-xs text-ink-muted">
+                {entitlements.plan === "pro"
+                  ? entitlements.currentPeriodEnd
+                    ? `${entitlements.cancelAtPeriodEnd ? "Ends" : "Renews"} ${new Date(entitlements.currentPeriodEnd).toLocaleDateString()}`
+                    : "Unlimited playgrounds"
+                  : `${entitlements.playgroundCount} of ${entitlements.maxPlaygrounds ?? "unlimited"} playground${entitlements.maxPlaygrounds === 1 ? "" : "s"} used`}
+              </div>
+              {entitlements.plan === "pro" ? (
+                entitlements.status && (
+                  <button
+                    onClick={() => void openBillingPortal().catch((e: Error) => setError(e.message))}
+                    className="mt-2 text-sm text-brand hover:underline"
+                  >
+                    Manage subscription
+                  </button>
+                )
+              ) : (
+                <button onClick={() => { onClose(); openUpgrade("menu"); }} className="mt-2 text-sm text-brand hover:underline">
+                  Upgrade to Pro
+                </button>
+              )}
+            </div>
+          )}
         </>
       )}
 

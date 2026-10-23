@@ -1,5 +1,6 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { Check, ChevronsUpDown, Plus } from "lucide-react";
+import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
@@ -27,14 +28,8 @@ export function PlaygroundSwitcher({
   const name = usePlayground((s) => s.name);
   const user = useAuth((s) => s.user);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
-  const { list, cloudId, openPlayground, newPlayground } = useCloud();
+  const { list, cloudId, openPlayground } = useCloud();
   const current = list.find((p) => p.id === cloudId);
-
-  const confirmNew = () => {
-    if (!usePlayground.getState().items.length || window.confirm("Start a fresh playground? This clears the canvas.")) {
-      newPlayground();
-    }
-  };
 
   return (
     <div className="absolute left-4 top-4 flex max-w-[calc(100%-2rem)] items-center gap-1 rounded-panel bg-surface p-1.5 shadow-panel lg:bottom-4 lg:top-auto">
@@ -65,7 +60,7 @@ export function PlaygroundSwitcher({
             <Dropdown.Item className={item} onSelect={onRename}>
               Rename…
             </Dropdown.Item>
-            <Dropdown.Item className={item} onSelect={confirmNew}>
+            <Dropdown.Item className={item} onSelect={requestNewPlayground}>
               New playground
             </Dropdown.Item>
             {cloudEnabled && !user && (
@@ -82,7 +77,7 @@ export function PlaygroundSwitcher({
       <button
         aria-label="New playground"
         title="New playground"
-        onClick={confirmNew}
+        onClick={requestNewPlayground}
         className="grid size-9 shrink-0 place-items-center rounded-control text-ink-muted hover:bg-surface-hover"
       >
         <Plus size={16} />

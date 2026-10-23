@@ -4,16 +4,21 @@ export type Mode = "playground" | "signal" | "list";
 export type Tool = "hand" | "select";
 export type Units = "in" | "mm";
 export type Theme = "system" | "light" | "dark";
+/** Why the upgrade dialog opened; changes its headline. */
+export type UpgradeReason = "menu" | "limit" | "save";
 
 interface UiState {
   mode: Mode;
   tool: Tool;
   units: Units;
   theme: Theme;
+  upgrade: UpgradeReason | null;
   setMode: (m: Mode) => void;
   setTool: (t: Tool) => void;
   setUnits: (u: Units) => void;
   setTheme: (t: Theme) => void;
+  openUpgrade: (reason: UpgradeReason) => void;
+  closeUpgrade: () => void;
 }
 
 const savedUnits = (): Units => {
@@ -45,6 +50,7 @@ export const useUi = create<UiState>((set) => ({
   tool: "select",
   units: savedUnits(),
   theme: savedTheme(),
+  upgrade: null,
   setMode: (mode) => set({ mode }),
   setTool: (tool) => set({ tool }),
   setUnits: (units) => {
@@ -55,6 +61,8 @@ export const useUi = create<UiState>((set) => ({
     }
     set({ units });
   },
+  openUpgrade: (upgrade) => set({ upgrade }),
+  closeUpgrade: () => set({ upgrade: null }),
   setTheme: (theme) => {
     try {
       localStorage.setItem("pp:theme", theme);

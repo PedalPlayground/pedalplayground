@@ -3,7 +3,9 @@ import { Menu } from "lucide-react";
 import { useRef } from "react";
 import { importAny } from "../lib/importers";
 import { useAuth } from "../store/auth";
-import { useCloud } from "../store/cloud";
+import { requestNewPlayground } from "../lib/newPlayground";
+import { openBillingPortal } from "../lib/billing";
+import { useBilling } from "../store/billing";
 import { usePlayground } from "../store/playground";
 import { useUi, type Theme } from "../store/ui";
 
@@ -14,12 +16,8 @@ export function HeaderMenu({ onAccount, onPlaygrounds }: { onAccount: () => void
   const { user, cloudEnabled, signOut } = useAuth();
   const { units, setUnits, theme, setTheme } = useUi();
   const fileInput = useRef<HTMLInputElement>(null);
-
-  const newPlayground = () => {
-    if (!usePlayground.getState().items.length || window.confirm("Start a fresh playground? This clears the canvas.")) {
-      useCloud.getState().newPlayground();
-    }
-  };
+  const { entitlements, billingEnabled } = useBilling();
+  const openUpgrade = useUi((u) => u.openUpgrade);
 
   const exportFile = () => {
     const doc = usePlayground.getState().toDocument();
@@ -66,10 +64,21 @@ export function HeaderMenu({ onAccount, onPlaygrounds }: { onAccount: () => void
           <Dropdown.Item className={item} onSelect={onAccount}>
             Account
           </Dropdown.Item>
+          {billingEnabled && user && entitlements && (
+            entitlements.plan === "pro" ? (
+              <Dropdown.Item className={item} onSelect={() => void openBillingPortal().catch((e: Error) => window.alert(e.message))}>
+                Manage subscription
+              </Dropdown.Item>
+            ) : (
+              <Dropdown.Item className={`${item} text-brand`} onSelect={() => openUpgrade("menu")}>
+                Upgrade to Pro
+              </Dropdown.Item>
+            )
+          )}
           <Dropdown.Item className={item} onSelect={onPlaygrounds}>
             Playgrounds
           </Dropdown.Item>
-          <Dropdown.Item className={item} onSelect={newPlayground}>
+          <Dropdown.Item className={item} onSelect={requestNewPlayground}>
             New playground
           </Dropdown.Item>
           <Dropdown.Separator className="my-1 h-px bg-line" />

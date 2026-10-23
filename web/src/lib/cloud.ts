@@ -25,6 +25,15 @@ let thumbnailSupported = true;
 
 export class DuplicateNameError extends Error {}
 
+/** The plan allows no more playgrounds (database answered 402 / playground_limit_reached). */
+export class PlaygroundLimitError extends Error {
+  constructor() {
+    super("Your plan has reached its playground limit.");
+  }
+}
+
+const isLimitError = (e: { code?: string; message?: string }) => e.code === "PT402" || e.message === "playground_limit_reached";
+
 export async function listPlaygrounds(): Promise<PlaygroundSummary[]> {
   const cols = "id,name,updated_at,slug,is_public";
   if (thumbnailSupported) {
@@ -69,6 +78,7 @@ export async function createPlayground(
       attempt--;
       continue;
     }
+    if (isLimitError(error)) throw new PlaygroundLimitError();
     if (error.code !== UNIQUE_VIOLATION) throw error;
   }
   throw new Error("Could not find an unused playground name.");

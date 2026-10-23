@@ -6,6 +6,7 @@ import {
   fetchLatestDocument,
   fetchShared,
   insertVersion,
+  PlaygroundLimitError,
   listPlaygrounds,
   sharePlayground,
   touchPlayground,
@@ -15,12 +16,14 @@ import {
 import { renderThumbnail } from "../lib/thumbnail";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "./auth";
+import { useBilling } from "./billing";
 import { usePlayground } from "./playground";
 
 const META_KEY = "pp:cloud-meta";
 const AUTOSAVE_DEBOUNCE_MS = 1500;
 
-export type SaveStatus = "idle" | "saving" | "saved" | "error";
+/** "limit": the plan has no room for another playground, so this board is saved on this device only. */
+export type SaveStatus = "idle" | "saving" | "saved" | "error" | "limit";
 
 interface Meta {
   /** Cloud row for the playground on the canvas, once it has been saved. */
@@ -119,6 +122,7 @@ export const useCloud = create<CloudState>((set, get) => {
           id = row.id;
           if (row.name !== pg.name) usePlayground.getState().setName(row.name);
           setMeta({ cloudId: id, ownerId: user.id, forkedFromId: null, slug: null, isPublic: false });
+          void useBilling.getState().refresh(); // the playground count changed
         } else {
           await touchPlayground(id, pg.name, thumbnail);
         }
@@ -128,7 +132,12 @@ export const useCloud = create<CloudState>((set, get) => {
         set({ status: "saved" });
         void get().refreshList();
       } catch (e) {
-        set({ status: "error", error: e instanceof Error ? e.message : "Cloud save failed." });
+        if (e instanceof PlaygroundLimitError) {
+          set({ status: "limit", error: e.message });
+          void useBilling.getState().refresh();
+        } else {
+          set({ status: "error", error: e instanceof Error ? e.message : "Cloud save failed." });
+        }
       } finally {
         saving = false;
         if (saveAgain) {
@@ -200,6 +209,7 @@ export const useCloud = create<CloudState>((set, get) => {
       await deletePlayground(id);
       if (get().cloudId === id) setMeta({ ...EMPTY_META }); // keep the canvas; it just stops being synced
       await get().refreshList();
+      void useBilling.getState().refresh();
     },
 
     /** Opens a shared playground as an unsaved fork; the first edit saves it as the viewer's own. */
@@ -238,6 +248,7 @@ export function startCloudSync() {
       if (!user) {
         lastUserId = null;
         useCloud.setState({ list: [] });
+        useBilling.getState().clear();
       }
       return;
     }
@@ -247,7 +258,7 @@ export function startCloudSync() {
     if (cloud.ownerId && cloud.ownerId !== user.id) {
       useCloud.setState({ ...EMPTY_META });
     }
-    await useCloud.getState().refreshList();
+    await Promise.all([useCloud.getState().refreshList(), useBilling.getState().refresh()]);
 
     const { cloudId, list } = useCloud.getState();
     const { items } = usePlayground.getState();
