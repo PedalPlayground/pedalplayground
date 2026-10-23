@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Design tokens. Components use these via Tailwind utilities (bg-surface, text-ink-muted, ...). */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-canvas: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f1f2f6;
+  --color-line: #e3e5ea;
+  --color-ink: #1c1d22;
+  --color-ink-muted: #6b6f7b;
+  --color-brand: #5b5bff;
+  --color-brand-hover: #4a4af0;
+  --color-brand-ink: #ffffff;
+  --color-danger: #d92d20;
+
+  --radius-control: 8px;
+  --radius-panel: 12px;
+
+  --shadow-panel: 0 4px 16px rgb(16 18 27 / 0.08), 0 0 0 1px rgb(16 18 27 / 0.04);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-canvas);
+  overflow: hidden;
+}
