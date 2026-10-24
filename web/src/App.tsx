@@ -16,6 +16,7 @@ import { SelectionBar } from "./components/SelectionBar";
 import { ShareDialog } from "./components/ShareDialog";
 import { Toolbar } from "./components/Toolbar";
 import { UpgradeDialog } from "./components/UpgradeDialog";
+import { BETA, FEEDBACK_URL } from "./lib/beta";
 import { useAuth } from "./store/auth";
 import { startCloudSync, useCloud } from "./store/cloud";
 import { restorePlayground, startLocalAutosave, usePlayground } from "./store/playground";
@@ -95,9 +96,21 @@ export function App() {
   return (
     <div className="flex h-full flex-col">
       <header className="flex h-11 shrink-0 items-center justify-between border-b border-line bg-surface px-4">
-        <h1 className="text-sm tracking-tight">
-          <b className="font-bold">PEDAL</b>PLAYGROUND
-        </h1>
+        <div className="flex items-center gap-2">
+          <h1 className="text-sm tracking-tight">
+            <b className="font-bold">PEDAL</b>PLAYGROUND
+          </h1>
+          {BETA && (
+            <>
+              <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand">Beta</span>
+              {FEEDBACK_URL && (
+                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="text-xs text-ink-muted hover:text-ink hover:underline">
+                  Send feedback
+                </a>
+              )}
+            </>
+          )}
+        </div>
         <div className="flex items-center gap-3">
           <SaveStatus />
           <HeaderMenu onAccount={() => setDialog("account")} onPlaygrounds={() => setDialog("playgrounds")} />
