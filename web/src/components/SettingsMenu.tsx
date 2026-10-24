@@ -3,6 +3,8 @@ import { SlidersHorizontal } from "lucide-react";
 import { useRef } from "react";
 import { importAny } from "../lib/importers";
 import { usePlayground } from "../store/playground";
+import { requestNewPlayground } from "../lib/newPlayground";
+import { useAuth } from "../store/auth";
 import { useUi, type Theme } from "../store/ui";
 
 export const menuItem =
@@ -10,6 +12,7 @@ export const menuItem =
 
 export function SettingsMenu() {
   const { units, setUnits, theme, setTheme } = useUi();
+  const signedIn = useAuth((s) => !!s.user);
   const fileInput = useRef<HTMLInputElement>(null);
 
   const exportFile = () => {
@@ -54,6 +57,14 @@ export function SettingsMenu() {
           sideOffset={6}
           className="z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel"
         >
+          {!signedIn && (
+            <>
+              <Dropdown.Item className={menuItem} onSelect={requestNewPlayground}>
+                New playground
+              </Dropdown.Item>
+              <Dropdown.Separator className="my-1 h-px bg-line" />
+            </>
+          )}
           <Dropdown.Item className={menuItem} onSelect={exportFile}>
             Export file
           </Dropdown.Item>

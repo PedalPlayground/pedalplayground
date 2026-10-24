@@ -78,6 +78,8 @@ async function openSharedFromUrl() {
 
 export function App() {
   const init = useAuth((s) => s.init);
+  const user = useAuth((s) => s.user);
+  const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const searchOpen = useUi((u) => u.searchOpen);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
   const [dialog, setDialog] = useState<Dialog>(null);
@@ -121,11 +123,22 @@ export function App() {
         </div>
         <div className="flex items-center gap-3">
           <SaveStatus />
-          <AvatarMenu
-            onAccount={() => setDialog("account")}
-            onPlaygrounds={() => setDialog("playgrounds")}
-            onChangeAvatar={() => setDialog("avatar")}
-          />
+          {user ? (
+            <AvatarMenu
+              onAccount={() => setDialog("account")}
+              onPlaygrounds={() => setDialog("playgrounds")}
+              onChangeAvatar={() => setDialog("avatar")}
+            />
+          ) : (
+            cloudEnabled && (
+              <button
+                onClick={() => setDialog("account")}
+                className="h-8 rounded-control bg-surface-hover px-3 text-sm font-medium outline-none hover:bg-line focus-visible:ring-2 focus-visible:ring-brand"
+              >
+                Sign in
+              </button>
+            )
+          )}
           <SettingsMenu />
         </div>
       </header>
