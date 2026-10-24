@@ -10,5 +10,6 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 - Better sign-in success UX.
 - Better-looking custom pedals.
 - Finesse the design library (buttons and form elements are a bit sterile).
+- Make the sign-in flow more complete.
 
 ## Other
