@@ -3,7 +3,10 @@ import logoUrl from "../assets/logo.svg";
 import { thumbUrl } from "../lib/catalog";
 import { useCatalog } from "../store/catalog";
 
-/** Popular pedals with portrait proportions; one is picked per visit to sit in the logo's icon. */
+/**
+ * Popular pedals with portrait proportions (the classics, shoegaze/Reddit favorites, TGP staples); one is
+ * picked per visit to sit in the logo's icon.
+ */
 const LOGO_PEDALS = [
   "boss-ds1",
   "boss-bd2",
@@ -23,6 +26,29 @@ const LOGO_PEDALS = [
   "wampler-tumnus-deluxe",
   "ehx-green-russian",
   "ehx-nano-big-muff-pi",
+  // Shoegaze / Reddit favorites
+  "earthquaker-hizumitas",
+  "earthquaker-afterneath-v3",
+  "ehx-freeze",
+  "ehx-nano-deluxe-memory-man",
+  "ehx-holy-grail-neo",
+  "walrus-julia2",
+  "walrus-voyager-mk2",
+  "chasebliss-mood-mk2",
+  "chasebliss-generation-loss-mk2",
+  "catalinbread-belle",
+  "jhs-morning-glory-v4",
+  "deathbyaudio-fuzz-war",
+  "deathbyaudio-reverberation-machine",
+  "zvex-fuzzfactory-vertical",
+  // TGP staples
+  "klon-ktr",
+  "vemuram-janray",
+  "xotic-bb",
+  "wampler-pinnacle",
+  "wayhuge-overratedspecial",
+  "keeley-compressor",
+  "mad-professor-forest-green",
 ];
 
 const VISIT_KEY = "pp:logo-pedal";
