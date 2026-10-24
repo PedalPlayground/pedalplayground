@@ -5,6 +5,6 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 
 ## From the beta smoke test
 
-(nothing logged yet)
+- Make signed in/out status more clear.
 
 ## Other
