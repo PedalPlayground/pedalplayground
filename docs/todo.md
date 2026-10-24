@@ -9,5 +9,6 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 - Polish the Pro purchase modal.
 - Better sign-in success UX.
 - Better-looking custom pedals.
+- Finesse the design library (buttons and form elements are a bit sterile).
 
 ## Other
