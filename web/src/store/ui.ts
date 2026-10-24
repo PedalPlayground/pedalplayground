@@ -19,6 +19,9 @@ interface UiState {
   setAvatar: (key: string) => void;
   searchOpen: boolean;
   setSearchOpen: (open: boolean) => void;
+  /** The panel is picking a replacement for the selected product instead of adding a new one. */
+  replacing: boolean;
+  setReplacing: (replacing: boolean) => void;
   setMode: (m: Mode) => void;
   setTool: (t: Tool) => void;
   setUnits: (u: Units) => void;
@@ -77,7 +80,9 @@ export const useUi = create<UiState>((set) => ({
     set({ avatar });
   },
   searchOpen: false,
-  setSearchOpen: (searchOpen) => set({ searchOpen }),
+  setSearchOpen: (searchOpen) => set({ searchOpen, replacing: false }),
+  replacing: false,
+  setReplacing: (replacing) => set({ replacing, searchOpen: replacing }),
   setMode: (mode) => set({ mode }),
   setTool: (tool) => set({ tool }),
   setUnits: (units) => {

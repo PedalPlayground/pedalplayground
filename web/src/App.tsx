@@ -17,7 +17,7 @@ import { RenameDialog } from "./components/RenameDialog";
 import { SaveStatus } from "./components/SaveStatus";
 import { SearchPanel } from "./components/SearchPanel";
 import { useUi } from "./store/ui";
-import { SelectionBar } from "./components/SelectionBar";
+import { ObjectMenu } from "./components/ObjectMenu";
 import { ShareDialog } from "./components/ShareDialog";
 import { Toolbar } from "./components/Toolbar";
 import { UpgradeDialog } from "./components/UpgradeDialog";
@@ -81,6 +81,7 @@ export function App() {
   const user = useAuth((s) => s.user);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const searchOpen = useUi((u) => u.searchOpen);
+  const replacing = useUi((u) => u.replacing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
   const [dialog, setDialog] = useState<Dialog>(null);
   const close = () => setDialog(null);
@@ -148,7 +149,7 @@ export function App() {
 
         <main className="relative flex-1 overflow-hidden bg-canvas">
           <Canvas />
-          <SelectionBar />
+          <ObjectMenu />
 
           <PlaygroundSwitcher
             onRename={() => setDialog("rename")}
@@ -157,8 +158,8 @@ export function App() {
           />
 
           <div className="absolute bottom-4 left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2">
-            {searchOpen && <SearchPanel onClose={() => setSearchOpen(false)} />}
-            <Toolbar onPlace={() => setSearchOpen(!searchOpen)} />
+            {searchOpen && <SearchPanel key={replacing ? "replace" : "add"} replace={replacing} onClose={() => setSearchOpen(false)} />}
+            <Toolbar onPlace={() => setSearchOpen(replacing ? true : !searchOpen)} />
           </div>
 
           <button

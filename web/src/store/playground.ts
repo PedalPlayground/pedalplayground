@@ -44,6 +44,8 @@ interface PlaygroundState {
   selectMany: (ids: string[], additive?: boolean) => void;
 
   addCatalogItem: (kind: Item["kind"], c: CatalogItem) => void;
+  /** Swaps the given item for another catalog product of the same kind, keeping its center, rotation, flip and stacking. */
+  replaceItem: (id: string, c: CatalogItem) => void;
   addCustomItem: (c: { kind: Item["kind"]; width: number; height: number; label: string; color: string | null }) => void;
   select: (id: string, additive?: boolean) => void;
   clearSelection: () => void;
@@ -197,6 +199,26 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         color: null,
       }),
     ),
+
+  replaceItem: (id, c) =>
+    set((s) => {
+      const old = s.items.find((i) => i.id === id);
+      if (!old) return {};
+      const cx = old.x + old.width / 2;
+      const cy = old.y + old.height / 2;
+      const next: Item = {
+        ...old,
+        label: `${c.brand} ${c.name}`.trim(),
+        image: c.image,
+        width: c.width,
+        height: c.height,
+        x: cx - c.width / 2,
+        y: cy - c.height / 2,
+        custom: false,
+        color: null,
+      };
+      return { ...record(s), items: s.items.map((i) => (i.id === id ? next : i)) };
+    }),
 
   addCustomItem: (c) =>
     set((s) =>

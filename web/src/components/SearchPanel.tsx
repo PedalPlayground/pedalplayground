@@ -10,12 +10,21 @@ import { useUi } from "../store/ui";
 
 type Category = "pedals" | "pedalboards" | "custom";
 
-export function SearchPanel({ onClose }: { onClose: () => void }) {
+/** Adds products to the canvas; with `replace`, picks a replacement for the selected product instead. */
+export function SearchPanel({ onClose, replace = false }: { onClose: () => void; replace?: boolean }) {
   const { manifest: catalog, error, load } = useCatalog();
-  const [category, setCategory] = useState<Category>("pedals");
   const [query, setQuery] = useState("");
   const units = useUi((u) => u.units);
   const addCatalogItem = usePlayground((p) => p.addCatalogItem);
+  const replaceItem = usePlayground((p) => p.replaceItem);
+  const target = usePlayground((p) => (replace && p.selected.length === 1 ? p.items.find((i) => i.id === p.selected[0]) : undefined));
+
+  const [category, setCategory] = useState<Category>(target?.kind === "pedalboard" ? "pedalboards" : "pedals");
+
+  // Replacing needs exactly one selected product; close if that stops being true.
+  useEffect(() => {
+    if (replace && !target) onClose();
+  }, [replace, target, onClose]);
 
   useEffect(() => {
     void load();
@@ -39,13 +48,14 @@ export function SearchPanel({ onClose }: { onClose: () => void }) {
           autoFocus
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search pedals and pedalboards"
+          placeholder={target ? `Replace ${target.label}` : "Search pedals and pedalboards"}
           className="h-9 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted"
         />
         <button aria-label="Close search" onClick={onClose} className="text-ink-muted hover:text-ink">
           <X size={16} />
         </button>
       </div>
+      {!replace && (
       <div className="flex gap-1 px-3 pt-2">
         {(["pedals", "pedalboards", "custom"] as const).map((c) => (
           <button
@@ -59,6 +69,7 @@ export function SearchPanel({ onClose }: { onClose: () => void }) {
           </button>
         ))}
       </div>
+      )}
       {category === "custom" ? (
         <CustomItemForm onDone={onClose} />
       ) : (
@@ -69,7 +80,12 @@ export function SearchPanel({ onClose }: { onClose: () => void }) {
         {results.map((item: CatalogItem) => (
           <li key={`${item.brand}-${item.name}`}>
             <button
-              onClick={() => addCatalogItem(kind, item)}
+              onClick={() => {
+                if (target) {
+                  replaceItem(target.id, item);
+                  onClose();
+                } else addCatalogItem(kind, item);
+              }}
               className="flex w-full items-center gap-3 rounded-control p-2 text-left hover:bg-surface-hover"
             >
               <img
