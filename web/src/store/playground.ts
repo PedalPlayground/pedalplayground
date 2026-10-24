@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { clamp, contentBounds, PX_PER_INCH } from "../lib/geometry";
+import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { importAny, readLegacyLocalStorage } from "../lib/importers";
 import type { CatalogItem, Item, PlaygroundDocument, Rotation, View } from "../lib/types";
 
@@ -9,6 +9,10 @@ const MAX_ZOOM = 4;
 
 const HISTORY_LIMIT = 100;
 const NUDGE_COALESCE_MS = 600;
+/** Gap, in inches, between a new pedal and the pedal placed before it. */
+const PLACE_GAP = 0.25;
+/** Screen padding, in px, kept around a newly placed pedal when zooming out to show it. */
+const PLACE_PAD = 48;
 
 interface PlaygroundState {
   name: string;
@@ -21,6 +25,8 @@ interface PlaygroundState {
   past: Item[][];
   future: Item[][];
   lastNudgeAt: number;
+  /** The pedal most recently added from the search panel; the next one lands beside it. */
+  lastPlacedId: string | null;
 
   setViewport: (w: number, h: number) => void;
   setView: (v: Partial<View>) => void;
@@ -63,6 +69,74 @@ const record = (s: Pick<PlaygroundState, "past" | "items">) => ({
   future: [] as Item[][],
 });
 
+type NewItem = Pick<Item, "kind" | "label" | "image" | "width" | "height" | "custom" | "color">;
+
+/**
+ * Adds an item and returns the state patch. A pedal goes to the right of the previously placed pedal with its
+ * bottom edges aligned; otherwise (first pedal, or any pedalboard) it goes at the viewport center. If the result
+ * isn't fully visible, the view zooms out just enough to show it.
+ */
+function placeNew(s: PlaygroundState, n: NewItem): Partial<PlaygroundState> {
+  const prev = n.kind === "pedal" ? s.items.find((i) => i.id === s.lastPlacedId) : undefined;
+  let x: number;
+  let y: number;
+  if (prev) {
+    const b = itemBounds(prev);
+    x = b.right + PLACE_GAP;
+    y = b.bottom - n.height;
+  } else {
+    x = (s.viewport.w / 2 - s.view.x) / s.view.zoom / PX_PER_INCH - n.width / 2;
+    y = (s.viewport.h / 2 - s.view.y) / s.view.zoom / PX_PER_INCH - n.height / 2;
+  }
+  const item: Item = { id: crypto.randomUUID(), ...n, x, y, rotation: 0, flipX: false };
+
+  // Pedalboards sit beneath every pedal; pedals go on top.
+  const items = [...s.items];
+  if (n.kind === "pedalboard") {
+    const firstPedal = items.findIndex((i) => i.kind === "pedal");
+    items.splice(firstPedal === -1 ? items.length : firstPedal, 0, item);
+  } else {
+    items.push(item);
+  }
+
+  const patch: Partial<PlaygroundState> = { ...record(s), items, selected: [item.id] };
+  if (n.kind === "pedal") patch.lastPlacedId = item.id;
+  if (n.kind === "pedal" && prev && s.viewport.w > 0) patch.view = viewShowing(s, item);
+  return patch;
+}
+
+/** The current view, zoomed out and re-centered only if `item` isn't fully on screen. */
+function viewShowing(s: PlaygroundState, item: Item): View {
+  const { view, viewport } = s;
+  const scale = view.zoom * PX_PER_INCH;
+  const pad = PLACE_PAD / scale;
+  const vis = {
+    left: -view.x / scale,
+    top: -view.y / scale,
+    right: (viewport.w - view.x) / scale,
+    bottom: (viewport.h - view.y) / scale,
+  };
+  const b = itemBounds(item);
+  const inside = b.left >= vis.left + pad && b.right <= vis.right - pad && b.top >= vis.top + pad && b.bottom <= vis.bottom - pad;
+  if (inside) return view;
+
+  const u = {
+    left: Math.min(vis.left, b.left),
+    top: Math.min(vis.top, b.top),
+    right: Math.max(vis.right, b.right),
+    bottom: Math.max(vis.bottom, b.bottom),
+  };
+  const uw = (u.right - u.left) * PX_PER_INCH;
+  const uh = (u.bottom - u.top) * PX_PER_INCH;
+  const zoom = clamp(Math.min(view.zoom, (viewport.w - PLACE_PAD * 2) / uw, (viewport.h - PLACE_PAD * 2) / uh), MIN_ZOOM, MAX_ZOOM);
+  const k = zoom * PX_PER_INCH;
+  return {
+    zoom,
+    x: viewport.w / 2 - ((u.left + u.right) / 2) * k,
+    y: viewport.h / 2 - ((u.top + u.bottom) / 2) * k,
+  };
+}
+
 export const usePlayground = create<PlaygroundState>((set, get) => ({
   name: "Untitled playground",
   items: [],
@@ -73,6 +147,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
   past: [],
   future: [],
   lastNudgeAt: 0,
+  lastPlacedId: null,
 
   setViewport: (w, h) => {
     set({ viewport: { w, h } });
@@ -111,62 +186,30 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     }),
 
   addCatalogItem: (kind, c) =>
-    set((s) => {
-      // Drop at the viewport center, in world inches.
-      const cx = (s.viewport.w / 2 - s.view.x) / s.view.zoom / PX_PER_INCH;
-      const cy = (s.viewport.h / 2 - s.view.y) / s.view.zoom / PX_PER_INCH;
-      const item: Item = {
-        id: crypto.randomUUID(),
+    set((s) =>
+      placeNew(s, {
         kind,
         label: `${c.brand} ${c.name}`.trim(),
         image: c.image,
         width: c.width,
         height: c.height,
-        x: cx - c.width / 2,
-        y: cy - c.height / 2,
-        rotation: 0,
-        flipX: false,
         custom: false,
         color: null,
-      };
-      // Pedalboards sit beneath every pedal; pedals go on top.
-      const items = [...s.items];
-      if (kind === "pedalboard") {
-        const firstPedal = items.findIndex((i) => i.kind === "pedal");
-        items.splice(firstPedal === -1 ? items.length : firstPedal, 0, item);
-      } else {
-        items.push(item);
-      }
-      return { ...record(s), items, selected: [item.id] };
-    }),
+      }),
+    ),
 
   addCustomItem: (c) =>
-    set((s) => {
-      const cx = (s.viewport.w / 2 - s.view.x) / s.view.zoom / PX_PER_INCH;
-      const cy = (s.viewport.h / 2 - s.view.y) / s.view.zoom / PX_PER_INCH;
-      const item: Item = {
-        id: crypto.randomUUID(),
+    set((s) =>
+      placeNew(s, {
         kind: c.kind,
         label: c.label,
         image: null,
         width: c.width,
         height: c.height,
-        x: cx - c.width / 2,
-        y: cy - c.height / 2,
-        rotation: 0,
-        flipX: false,
         custom: true,
         color: c.kind === "pedal" ? c.color : null,
-      };
-      const items = [...s.items];
-      if (c.kind === "pedalboard") {
-        const firstPedal = items.findIndex((i) => i.kind === "pedal");
-        items.splice(firstPedal === -1 ? items.length : firstPedal, 0, item);
-      } else {
-        items.push(item);
-      }
-      return { ...record(s), items, selected: [item.id] };
-    }),
+      }),
+    ),
 
   select: (id, additive) =>
     set((s) => ({

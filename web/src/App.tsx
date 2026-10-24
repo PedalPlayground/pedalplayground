@@ -12,6 +12,7 @@ import { PlaygroundSwitcher } from "./components/PlaygroundSwitcher";
 import { RenameDialog } from "./components/RenameDialog";
 import { SaveStatus } from "./components/SaveStatus";
 import { SearchPanel } from "./components/SearchPanel";
+import { useUi } from "./store/ui";
 import { SelectionBar } from "./components/SelectionBar";
 import { ShareDialog } from "./components/ShareDialog";
 import { Toolbar } from "./components/Toolbar";
@@ -73,7 +74,8 @@ async function openSharedFromUrl() {
 
 export function App() {
   const init = useAuth((s) => s.init);
-  const [searchOpen, setSearchOpen] = useState(false);
+  const searchOpen = useUi((u) => u.searchOpen);
+  const setSearchOpen = useUi((u) => u.setSearchOpen);
   const [dialog, setDialog] = useState<Dialog>(null);
   const close = () => setDialog(null);
   const [emailLink] = useState(readEmailLinkParams);
@@ -132,7 +134,7 @@ export function App() {
 
           <div className="absolute bottom-4 left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2">
             {searchOpen && <SearchPanel onClose={() => setSearchOpen(false)} />}
-            <Toolbar onPlace={() => setSearchOpen((o) => !o)} />
+            <Toolbar onPlace={() => setSearchOpen(!searchOpen)} />
           </div>
 
           <button

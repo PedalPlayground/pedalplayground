@@ -13,6 +13,9 @@ interface UiState {
   units: Units;
   theme: Theme;
   upgrade: UpgradeReason | null;
+  /** The pedal search panel; the canvas closes it as soon as the user starts arranging. */
+  searchOpen: boolean;
+  setSearchOpen: (open: boolean) => void;
   setMode: (m: Mode) => void;
   setTool: (t: Tool) => void;
   setUnits: (u: Units) => void;
@@ -51,6 +54,8 @@ export const useUi = create<UiState>((set) => ({
   units: savedUnits(),
   theme: savedTheme(),
   upgrade: null,
+  searchOpen: false,
+  setSearchOpen: (searchOpen) => set({ searchOpen }),
   setMode: (mode) => set({ mode }),
   setTool: (tool) => set({ tool }),
   setUnits: (units) => {

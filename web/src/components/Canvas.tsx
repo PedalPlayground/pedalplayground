@@ -170,6 +170,7 @@ export function Canvas() {
   };
 
   const onPointerDown = (e: React.PointerEvent) => {
+    useUi.getState().setSearchOpen(false);
     try {
       ref.current!.setPointerCapture(e.pointerId);
     } catch {
