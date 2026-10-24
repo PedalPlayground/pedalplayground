@@ -27,7 +27,7 @@ export function ObjectMenu() {
   const single = s.selected.length === 1 ? s.items.find((i) => i.id === s.selected[0]) : undefined;
   return (
     // On phones it sits at the bottom, in thumb reach above the toolbar (hidden while the search sheet is open).
-    <div className={`absolute left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-0.5 rounded-panel bg-surface p-1.5 shadow-panel max-sm:bottom-[76px] sm:top-16 sm:flex-row sm:gap-1 lg:top-4 ${searchOpen ? "max-sm:hidden" : ""}`}>
+    <div className={`absolute left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-0.5 glass-sm p-1.5 max-sm:rounded-3xl max-sm:bottom-[88px] sm:rounded-panel sm:bg-surface sm:shadow-panel sm:top-16 sm:flex-row sm:gap-1 lg:top-4 ${searchOpen ? "max-sm:hidden" : ""}`}>
       <div className="flex items-center gap-1 max-sm:w-full max-sm:justify-center">
         <span className="max-w-64 truncate px-2 text-xs font-medium sm:max-w-48 sm:text-sm" title={single?.label}>
           {single ? single.label : `${s.selected.length} selected`}

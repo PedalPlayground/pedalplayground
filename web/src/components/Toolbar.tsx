@@ -2,6 +2,7 @@ import { Hand, MousePointer2, Plus, Redo2, Undo2, ZoomIn, ZoomOut } from "lucide
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
+import { MobileBar } from "./MobileBar";
 
 function IconButton({
   label,
@@ -42,7 +43,9 @@ export function Toolbar({ onPlace }: { onPlace: () => void }) {
   const canUndo = usePlayground((s) => s.past.length > 0);
   const canRedo = usePlayground((s) => s.future.length > 0);
   return (
-    <div className="flex max-w-full items-center gap-1 overflow-x-auto rounded-panel bg-surface p-1.5 shadow-panel max-sm:w-full max-sm:justify-between">
+    <>
+    <MobileBar onPlace={onPlace} />
+    <div className="flex max-w-full items-center gap-1 overflow-x-auto rounded-panel bg-surface p-1.5 shadow-panel max-sm:hidden">
       {/* Touch screens pan and select automatically, so the tool switch is only for mouse and trackpad. */}
       <span className="contents pointer-coarse:hidden max-sm:hidden">
         <IconButton label="Pan (hand)" active={tool === "hand"} onClick={() => setTool("hand")}>
@@ -87,5 +90,6 @@ export function Toolbar({ onPlace }: { onPlace: () => void }) {
         <span className="max-sm:hidden">Place a Product</span>
       </button>
     </div>
+    </>
   );
 }

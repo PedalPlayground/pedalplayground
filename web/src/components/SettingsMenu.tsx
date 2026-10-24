@@ -80,7 +80,7 @@ export function SettingsMenu() {
                 role="radio"
                 aria-checked={units === value}
                 onClick={() => setUnits(value)}
-                className={`h-6 flex-1 rounded-[6px] px-2.5 text-xs outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+                className={`h-6 flex-1 rounded-[3px] px-2.5 text-xs outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
                   units === value ? "bg-surface font-medium text-brand shadow-sm" : "text-ink-muted hover:text-ink"
                 }`}
               >
