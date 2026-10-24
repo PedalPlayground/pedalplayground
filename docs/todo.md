@@ -15,5 +15,6 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 - Improve contrast in dark mode.
 - Address canvas zoom going out of bounds.
 - Z-index minimap.
+- Snap guides get stuck sometimes.
 
 ## Other
