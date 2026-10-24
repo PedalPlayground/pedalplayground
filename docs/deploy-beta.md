@@ -42,6 +42,12 @@ Check it with `nslookup beta.pedalplayground.com`.
        try_files $uri =404;
    }
 
+   # The page itself must always revalidate so a deploy takes effect at once. The deploy replaces the hashed
+   # files in /assets/, so a stale cached page would point at files that no longer exist.
+   location = /index.html {
+       expires -1;
+   }
+
    gzip on;
    gzip_types text/css application/javascript application/json image/svg+xml;
    ```
@@ -64,8 +70,9 @@ DRY_RUN=1 DEPLOY_TARGET=forge@<droplet-ip>:<site-root-from-nginx> ./scripts/depl
 DEPLOY_TARGET=forge@<droplet-ip>:<site-root-from-nginx> ./scripts/deploy.sh               # for real
 ```
 
-The first deploy uploads about 376 MB of catalog; later ones only send what changed. The script builds in
-`--mode beta`, uploads the app, then the hashed catalog images, and the manifest last.
+The first deploy uploads about 376 MB of catalog; later ones skip images the server already has (their names contain a
+hash of the source). The script builds in `--mode beta`, uploads the app, then the hashed catalog images, and the manifest last.
+Use `DEPLOY_PARTS=app` or `DEPLOY_PARTS=catalog` to deploy just one half (the default is both).
 
 ## 5. Supabase settings for the beta address
 
@@ -89,6 +96,50 @@ See `docs/billing.md` for the full explanation. For the beta:
 - Autosave, reload, second device; share link in a private window; fork; playground limit and upgrade flow.
 - Create a share-preview thumbnail (save a playground, then open Playgrounds): it proves same-origin image export works.
 - Dark mode, a phone, and a tablet.
+
+## Automated deploys (GitHub Actions)
+
+Two workflows deploy the beta automatically on pushes to `react-rebuild`; nothing here touches the live site or `master`:
+
+- `deploy-beta-app.yml`: when `web/` changes. Typechecks, builds, uploads the app. Fast (about a minute), downloads only `web/`.
+- `deploy-beta-catalog.yml`: when `public/data`, the pedal/pedalboard images, or the catalog scripts change. Validates the catalog,
+  rebuilds it, uploads only the images the server doesn't have, then the manifest.
+
+Both can also be run by hand from the repository's **Actions** tab ("Run workflow"). Until you finish the setup below, both
+jobs are skipped (they check that `BETA_DEPLOY_TARGET` is set), so pushing the branch first is safe.
+
+### One-time setup
+
+1. **Create a deploy key just for CI.** Use a new key, not your personal one, so you can revoke it independently.
+   It needs no passphrase because CI can't type one; GitHub stores it encrypted.
+   ```bash
+   ssh-keygen -t ed25519 -f ~/.ssh/pedalplayground_deploy -N "" -C "github-actions beta deploy"
+   cat ~/.ssh/pedalplayground_deploy.pub
+   ```
+2. **Authorize it on the droplet:** Forge → your server → **SSH Keys** → add the public line printed above.
+3. **GitHub → the repository → Settings → Environments → New environment**, named exactly `beta`:
+   - **Deployment branches:** *Selected branches* → `react-rebuild`. This stops any other branch (or a changed workflow
+     on another branch) from using the key.
+   - **Secret** `BETA_SSH_PRIVATE_KEY`: the *private* key file. Copy it with `pbcopy < ~/.ssh/pedalplayground_deploy`.
+     Never paste it anywhere else.
+   - **Variables** (not secrets; none of these are sensitive):
+     - `BETA_DEPLOY_TARGET`: `forge@<droplet-ip>:/home/forge/beta.pedalplayground.com/public`
+     - `BETA_KNOWN_HOSTS`: the server's host key, so CI never trusts an unknown or changed server. Get it with
+       `ssh-keyscan -t ed25519 <droplet-ip>`, check that `ssh-keyscan -t ed25519 <droplet-ip> | ssh-keygen -lf -` shows the fingerprint
+       you verified the first time you connected, then paste the one line it prints.
+     - `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`: the same two values as in `web/.env.local` (public by design).
+4. **Run it once by hand:** Actions → *Deploy beta (app)* → Run workflow. Then check the live site.
+
+### What the key can do, and how it's limited
+
+A key added in Forge logs in as the `forge` user, which can write every site on that server, including the live one.
+So treat the key and the repository's write access as sensitive:
+- Secrets aren't available to workflows triggered by pull requests from forks, and the `beta` environment only releases the key
+  to `react-rebuild`. Keep write access to the repository limited to people you trust, and consider branch protection on `react-rebuild`.
+- The workflows pin their actions to exact commits. Update those pins deliberately.
+- To stop automated deploys at once: delete the key in Forge, or clear the `BETA_DEPLOY_TARGET` variable (the jobs then skip).
+- To rotate: create a new key, update the secret, then remove the old key in Forge. If Forge offers per-site isolation for the beta site,
+  using it narrows what the key can reach; check that option in the site's settings.
 
 ## Rollback and cleanup
 

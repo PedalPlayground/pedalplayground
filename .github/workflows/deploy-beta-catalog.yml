@@ -1,0 +1,71 @@
+name: Deploy beta (catalog)
+
+# Rebuilds the catalog and uploads it to the beta site when pedals, pedalboards or the catalog scripts change
+# on react-rebuild. Images already on the server are skipped (their names contain a content hash).
+#
+# Skipped until the "beta" environment is set up; see docs/deploy-beta.md ("Automated deploys").
+on:
+  push:
+    branches: [react-rebuild]
+    paths:
+      - "public/data/**"
+      - "public/images/pedals/**"
+      - "public/images/pedalboards/**"
+      - "web/scripts/catalog/**"
+      - ".github/workflows/deploy-beta-catalog.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-beta
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    if: ${{ vars.BETA_DEPLOY_TARGET != '' }}
+    runs-on: ubuntu-latest
+    environment: beta
+    timeout-minutes: 45
+    steps:
+      # The catalog build needs the source data and images (several GB) plus web/ for the build tooling.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: |
+            web
+            public/data
+            public/images/pedals
+            public/images/pedalboards
+          sparse-checkout-cone-mode: true
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: web/.nvmrc
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - run: npm ci
+        working-directory: web
+
+      # Reject contributions that add new catalog errors before anything is built or uploaded.
+      - run: npm run catalog:validate
+        working-directory: web
+
+      - name: Set up SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.BETA_SSH_PRIVATE_KEY }}
+          KNOWN_HOSTS: ${{ vars.BETA_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Build and deploy the catalog
+        working-directory: web
+        env:
+          DEPLOY_PARTS: catalog
+          DEPLOY_TARGET: ${{ vars.BETA_DEPLOY_TARGET }}
+        run: ./scripts/deploy.sh
