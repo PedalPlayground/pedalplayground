@@ -12,5 +12,6 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 - Finesse the design library (buttons and form elements are a bit sterile).
 - Make the sign-in flow more complete.
 - Sign-in: after sending a code, show the address it went to with a "Wrong address? Change it" link (a mistyped address looks like a broken email).
+- Improve contrast in dark mode.
 
 ## Other
