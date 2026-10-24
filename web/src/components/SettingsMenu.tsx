@@ -1,23 +1,17 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
-import { Menu } from "lucide-react";
+import { SlidersHorizontal } from "lucide-react";
 import { useRef } from "react";
 import { importAny } from "../lib/importers";
-import { useAuth } from "../store/auth";
 import { requestNewPlayground } from "../lib/newPlayground";
-import { openBillingPortal } from "../lib/billing";
-import { useBilling } from "../store/billing";
 import { usePlayground } from "../store/playground";
 import { useUi, type Theme } from "../store/ui";
 
-const item =
+export const menuItem =
   "flex cursor-pointer select-none items-center justify-between gap-6 rounded-control px-3 py-2 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
-export function HeaderMenu({ onAccount, onPlaygrounds }: { onAccount: () => void; onPlaygrounds: () => void }) {
-  const { user, cloudEnabled, signOut } = useAuth();
+export function SettingsMenu() {
   const { units, setUnits, theme, setTheme } = useUi();
   const fileInput = useRef<HTMLInputElement>(null);
-  const { entitlements, billingEnabled } = useBilling();
-  const openUpgrade = useUi((u) => u.openUpgrade);
 
   const exportFile = () => {
     const doc = usePlayground.getState().toDocument();
@@ -50,10 +44,10 @@ export function HeaderMenu({ onAccount, onPlaygrounds }: { onAccount: () => void
     />
     <Dropdown.Root>
       <Dropdown.Trigger
-        aria-label="Menu"
+        aria-label="Settings"
         className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover data-[state=open]:bg-surface-hover"
       >
-        <Menu size={18} />
+        <SlidersHorizontal size={18} />
       </Dropdown.Trigger>
       <Dropdown.Portal>
         <Dropdown.Content
@@ -61,36 +55,19 @@ export function HeaderMenu({ onAccount, onPlaygrounds }: { onAccount: () => void
           sideOffset={6}
           className="z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel"
         >
-          <Dropdown.Item className={item} onSelect={onAccount}>
-            Account
-          </Dropdown.Item>
-          {billingEnabled && user && entitlements && (
-            entitlements.plan === "pro" ? (
-              <Dropdown.Item className={item} onSelect={() => void openBillingPortal().catch((e: Error) => window.alert(e.message))}>
-                Manage subscription
-              </Dropdown.Item>
-            ) : (
-              <Dropdown.Item className={`${item} text-brand`} onSelect={() => openUpgrade("menu")}>
-                Upgrade to Pro
-              </Dropdown.Item>
-            )
-          )}
-          <Dropdown.Item className={item} onSelect={onPlaygrounds}>
-            Playgrounds
-          </Dropdown.Item>
-          <Dropdown.Item className={item} onSelect={requestNewPlayground}>
+          <Dropdown.Item className={menuItem} onSelect={requestNewPlayground}>
             New playground
           </Dropdown.Item>
           <Dropdown.Separator className="my-1 h-px bg-line" />
-          <Dropdown.Item className={item} onSelect={exportFile}>
+          <Dropdown.Item className={menuItem} onSelect={exportFile}>
             Export file
           </Dropdown.Item>
-          <Dropdown.Item className={item} onSelect={() => fileInput.current?.click()}>
+          <Dropdown.Item className={menuItem} onSelect={() => fileInput.current?.click()}>
             Import file…
           </Dropdown.Item>
           <Dropdown.Separator className="my-1 h-px bg-line" />
           <Dropdown.CheckboxItem
-            className={item}
+            className={menuItem}
             checked={units === "mm"}
             onCheckedChange={(on) => setUnits(on ? "mm" : "in")}
           >
@@ -101,20 +78,12 @@ export function HeaderMenu({ onAccount, onPlaygrounds }: { onAccount: () => void
           <Dropdown.Label className="px-3 pb-1 pt-1.5 text-xs text-ink-muted">Appearance</Dropdown.Label>
           <Dropdown.RadioGroup value={theme} onValueChange={(v) => setTheme(v as Theme)}>
             {(["system", "light", "dark"] as const).map((t) => (
-              <Dropdown.RadioItem key={t} value={t} className={item}>
+              <Dropdown.RadioItem key={t} value={t} className={menuItem}>
                 <span className="capitalize">{t}</span>
                 <Dropdown.ItemIndicator className="text-brand">✓</Dropdown.ItemIndicator>
               </Dropdown.RadioItem>
             ))}
           </Dropdown.RadioGroup>
-          {cloudEnabled && user && (
-            <>
-              <Dropdown.Separator className="my-1 h-px bg-line" />
-              <Dropdown.Item className={item} onSelect={() => void signOut()}>
-                Sign out
-              </Dropdown.Item>
-            </>
-          )}
         </Dropdown.Content>
       </Dropdown.Portal>
     </Dropdown.Root>

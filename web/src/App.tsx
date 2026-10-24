@@ -5,7 +5,8 @@ import { AccountDialog } from "./components/AccountDialog";
 import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
-import { HeaderMenu } from "./components/HeaderMenu";
+import { AvatarMenu } from "./components/AvatarMenu";
+import { SettingsMenu } from "./components/SettingsMenu";
 import { Logo } from "./components/Logo";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
@@ -116,7 +117,8 @@ export function App() {
         </div>
         <div className="flex items-center gap-3">
           <SaveStatus />
-          <HeaderMenu onAccount={() => setDialog("account")} onPlaygrounds={() => setDialog("playgrounds")} />
+          <SettingsMenu />
+          <AvatarMenu onAccount={() => setDialog("account")} onPlaygrounds={() => setDialog("playgrounds")} />
         </div>
       </header>
 
