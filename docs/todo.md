@@ -6,5 +6,6 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 ## From the beta smoke test
 
 - Make signed in/out status more clear.
+- Polish the Pro purchase modal.
 
 ## Other
