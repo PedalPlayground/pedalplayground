@@ -73,14 +73,14 @@ export function SettingsMenu() {
           </Dropdown.Item>
           <Dropdown.Separator className="my-1 h-px bg-line" />
           <Dropdown.Label className="px-3 pb-1 pt-1.5 text-xs text-ink-muted">Units</Dropdown.Label>
-          <div role="radiogroup" aria-label="Units" className="mx-1 mb-1 flex rounded-control bg-surface-hover p-0.5">
+          <div role="radiogroup" aria-label="Units" className="mx-3 mb-2 flex rounded-control bg-surface-hover p-0.5">
             {([["in", "Inches"], ["mm", "Millimeters"]] as const).map(([value, label]) => (
               <button
                 key={value}
                 role="radio"
                 aria-checked={units === value}
                 onClick={() => setUnits(value)}
-                className={`h-8 flex-1 rounded-[6px] px-3 text-sm outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+                className={`h-6 flex-1 rounded-[6px] px-2.5 text-xs outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
                   units === value ? "bg-surface font-medium text-brand shadow-sm" : "text-ink-muted hover:text-ink"
                 }`}
               >

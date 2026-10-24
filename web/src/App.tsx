@@ -133,7 +133,7 @@ export function App() {
             cloudEnabled && (
               <button
                 onClick={() => setDialog("account")}
-                className="h-8 rounded-control bg-surface-hover px-3 text-sm font-medium outline-none hover:bg-line focus-visible:ring-2 focus-visible:ring-brand"
+                className="h-9 rounded-control bg-surface-hover px-3 text-sm font-medium outline-none hover:bg-line focus-visible:ring-2 focus-visible:ring-brand"
               >
                 Sign in
               </button>

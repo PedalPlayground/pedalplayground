@@ -40,7 +40,7 @@ export function SearchPanel({ onClose }: { onClose: () => void }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search pedals and pedalboards"
-          className="h-8 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted"
+          className="h-9 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted"
         />
         <button aria-label="Close search" onClick={onClose} className="text-ink-muted hover:text-ink">
           <X size={16} />

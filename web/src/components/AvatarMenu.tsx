@@ -27,7 +27,7 @@ export function AvatarMenu({
     <Dropdown.Root>
       <Dropdown.Trigger
         aria-label={`Account menu (${user?.email ?? ""})`}
-        className="flex h-8 items-center gap-1 rounded-control px-1.5 text-ink-muted outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover"
+        className="flex h-9 items-center gap-1 rounded-control px-1.5 text-ink-muted outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover"
       >
         <span className="grid size-6 place-items-center">
           <PedalAvatar pedalKey={avatar} size={24} />
