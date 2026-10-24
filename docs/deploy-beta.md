@@ -123,7 +123,9 @@ jobs are skipped (they check that `BETA_DEPLOY_TARGET` is set), so pushing the b
    - **Secret** `BETA_SSH_PRIVATE_KEY`: the *private* key file. Copy it with `pbcopy < ~/.ssh/pedalplayground_deploy`.
      Never paste it anywhere else.
    - **Variables** (not secrets; none of these are sensitive):
-     - `BETA_DEPLOY_TARGET`: `forge@<droplet-ip>:/home/forge/beta.pedalplayground.com/public`
+     - `BETA_DEPLOY_TARGET`: `forge@<droplet-ip>:/home/forge/beta.pedalplayground.com/public`. Also add this one as a
+       **repository** variable (Settings → Secrets and variables → Actions → Variables): the jobs' `if` check runs before the
+       environment loads, so it can't see environment variables, and the jobs would be skipped.
      - `BETA_KNOWN_HOSTS`: the server's host key, so CI never trusts an unknown or changed server. Get it with
        `ssh-keyscan -t ed25519 <droplet-ip>`, check that `ssh-keyscan -t ed25519 <droplet-ip> | ssh-keygen -lf -` shows the fingerprint
        you verified the first time you connected, then paste the one line it prints.
