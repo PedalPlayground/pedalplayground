@@ -1,4 +1,3 @@
-import { Share2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
@@ -140,13 +139,6 @@ export function App() {
               </button>
             )
           )}
-          <button
-            onClick={() => setDialog("share")}
-            aria-label="Share"
-            className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover sm:hidden"
-          >
-            <Share2 size={18} />
-          </button>
           <SettingsMenu />
         </div>
       </header>
@@ -162,6 +154,7 @@ export function App() {
             onRename={() => setDialog("rename")}
             onAll={() => setDialog("playgrounds")}
             onSignIn={() => setDialog("account")}
+            onShare={() => setDialog("share")}
           />
 
           <div className="absolute bottom-3 left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-3 max-sm:right-3 max-sm:max-w-none max-sm:translate-x-0 sm:bottom-4">
@@ -169,13 +162,6 @@ export function App() {
             <Toolbar onPlace={() => setSearchOpen(replacing ? true : !searchOpen)} />
           </div>
 
-          <button
-            onClick={() => setDialog("share")}
-            className="absolute bottom-4 right-4 flex h-9 items-center gap-2 px-4 max-sm:hidden btn-primary"
-          >
-            <Share2 size={16} />
-            Share
-          </button>
         </main>
       </div>
 

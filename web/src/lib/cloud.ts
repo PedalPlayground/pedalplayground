@@ -94,7 +94,7 @@ export async function createPlayground(
 
 export async function touchPlayground(id: string, name: string, thumbnail: string | null) {
   const patch: Record<string, unknown> = { name, updated_at: new Date().toISOString() };
-  if (thumbnailSupported && thumbnail) patch.thumbnail = thumbnail;
+  if (thumbnailSupported) patch.thumbnail = thumbnail; // null clears it when the canvas was emptied
   let { error } = await db().from("playgrounds").update(patch).eq("id", id);
   if (error && isMissingColumn(error.code)) {
     thumbnailSupported = false;
