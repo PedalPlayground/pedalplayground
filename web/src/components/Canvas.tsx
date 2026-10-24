@@ -132,7 +132,7 @@ export function Canvas() {
         s.zoomBy(0.8);
       } else if (key === "r" && has && !mod) s.rotateSelected();
       else if (key === "f" && has && !mod) s.flipSelected();
-      else if ((key === "delete" || key === "backspace") && has) {
+      else if ((key === "delete" || key === "backspace" || (key === "d" && !mod)) && has) {
         e.preventDefault();
         s.deleteSelected();
       } else if (key === "]" && has) (mod ? s.bringToFront : s.bringForward)();
