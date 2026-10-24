@@ -1,0 +1,10 @@
+# To do
+
+Things noticed while testing, logged to address later. Newest at the bottom of each section.
+The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps").
+
+## From the beta smoke test
+
+(nothing logged yet)
+
+## Other
