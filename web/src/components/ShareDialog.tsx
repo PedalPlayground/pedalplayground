@@ -25,7 +25,7 @@ export function ShareDialog({ onClose, onSignIn }: { onClose: () => void; onSign
     return (
       <Modal title="Share playground" onClose={onClose}>
         <p className="mb-3 text-sm text-ink-muted">Sign in to get a link you can share. Your board is saved to your account first.</p>
-        <button onClick={onSignIn} className="h-9 w-full rounded-control bg-brand text-sm font-medium text-brand-ink hover:bg-brand-hover">
+        <button onClick={onSignIn} className="h-9 w-full btn-primary">
           Sign in
         </button>
       </Modal>
@@ -50,7 +50,7 @@ export function ShareDialog({ onClose, onSignIn }: { onClose: () => void; onSign
               setCopied(true);
               setTimeout(() => setCopied(false), 1500);
             }}
-            className="h-9 w-20 rounded-control bg-brand text-sm font-medium text-brand-ink hover:bg-brand-hover"
+            className="h-9 w-20 btn-primary"
           >
             {copied ? "Copied" : "Copy"}
           </button>

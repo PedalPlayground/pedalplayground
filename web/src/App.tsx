@@ -171,7 +171,7 @@ export function App() {
 
           <button
             onClick={() => setDialog("share")}
-            className="absolute bottom-4 right-4 flex h-9 items-center gap-2 rounded-control bg-brand px-4 max-sm:hidden text-sm font-medium text-brand-ink shadow-panel hover:bg-brand-hover "
+            className="absolute bottom-4 right-4 flex h-9 items-center gap-2 px-4 max-sm:hidden btn-primary"
           >
             <Share2 size={16} />
             Share

@@ -27,7 +27,7 @@ export function PlaygroundsDialog({ onClose, onSignIn }: { onClose: () => void; 
       {!user && (
         <>
           <p className="mb-3 text-sm text-ink-muted">Sign in to save playgrounds to your account and open them on any device.</p>
-          <button onClick={onSignIn} className="h-9 rounded-control bg-brand px-4 text-sm font-medium text-brand-ink hover:bg-brand-hover">
+          <button onClick={onSignIn} className="h-9 px-4 btn-primary">
             Sign in
           </button>
         </>

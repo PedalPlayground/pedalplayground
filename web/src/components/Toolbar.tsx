@@ -81,7 +81,7 @@ export function Toolbar({ onPlace }: { onPlace: () => void }) {
         onClick={onPlace}
         aria-label="Place a Product"
         title="Place a Product"
-        className="ml-1 flex h-9 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-control bg-brand px-3 text-sm font-medium text-brand-ink outline-none hover:bg-brand-hover max-sm:size-11 max-sm:justify-center max-sm:px-0 pointer-coarse:h-11"
+        className="ml-1 flex h-9 shrink-0 items-center gap-1.5 whitespace-nowrap px-3 outline-none max-sm:size-11 max-sm:justify-center max-sm:px-0 pointer-coarse:h-11 btn-primary"
       >
         <Plus size={18} />
         <span className="max-sm:hidden">Place a Product</span>

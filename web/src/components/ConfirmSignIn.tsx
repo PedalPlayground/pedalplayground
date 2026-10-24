@@ -27,7 +27,7 @@ export function ConfirmSignIn({ tokenHash, type, onDone }: { tokenHash: string; 
       <button
         onClick={() => void go()}
         disabled={busy}
-        className="h-9 w-full rounded-control bg-brand text-sm font-medium text-brand-ink hover:bg-brand-hover disabled:opacity-50"
+        className="h-9 w-full disabled:opacity-50 btn-primary"
       >
         {busy ? "Signing in…" : "Sign in"}
       </button>

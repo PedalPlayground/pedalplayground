@@ -8,7 +8,7 @@ import { Modal } from "./Modal";
 const field =
   "h-9 w-full rounded-control border border-line bg-surface px-3 text-sm outline-none focus:border-brand placeholder:text-ink-muted";
 const primary =
-  "h-9 w-full rounded-control bg-brand text-sm font-medium text-brand-ink hover:bg-brand-hover disabled:opacity-50";
+  "h-9 w-full disabled:opacity-50 btn-primary";
 
 export function AccountDialog({ onClose }: { onClose: () => void }) {
   const { user, cloudEnabled, sendCode, verifyCode } = useAuth();

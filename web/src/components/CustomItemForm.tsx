@@ -90,7 +90,7 @@ export function CustomItemForm({ onDone }: { onDone: () => void }) {
       )}
 
       {error && <p className="text-sm text-danger">{error}</p>}
-      <button type="submit" className="h-9 w-full rounded-control bg-brand text-sm font-medium text-brand-ink hover:bg-brand-hover">
+      <button type="submit" className="h-9 w-full btn-primary">
         Add custom {kind}
       </button>
     </form>

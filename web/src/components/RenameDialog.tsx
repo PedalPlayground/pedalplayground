@@ -30,7 +30,7 @@ export function RenameDialog({ onClose }: { onClose: () => void }) {
         <button onClick={onClose} className="h-9 rounded-control px-3 text-sm text-ink-muted hover:bg-surface-hover">
           Cancel
         </button>
-        <button onClick={() => void submit()} className="h-9 rounded-control bg-brand px-3 text-sm font-medium text-brand-ink hover:bg-brand-hover">
+        <button onClick={() => void submit()} className="h-9 px-3 btn-primary">
           Save
         </button>
       </div>

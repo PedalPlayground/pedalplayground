@@ -82,7 +82,7 @@ export function UpgradeDialog({ onSignIn }: { onSignIn: () => void }) {
       {!user ? (
         <>
           <p className="mb-3 text-sm text-ink-muted">Sign in first so Pro is attached to your account.</p>
-          <button onClick={() => { closeUpgrade(); onSignIn(); }} className="h-9 w-full rounded-control bg-brand text-sm font-medium text-brand-ink hover:bg-brand-hover">
+          <button onClick={() => { closeUpgrade(); onSignIn(); }} className="h-9 w-full btn-primary">
             Sign in
           </button>
         </>
@@ -106,7 +106,7 @@ export function UpgradeDialog({ onSignIn }: { onSignIn: () => void }) {
           <button
             onClick={() => void checkout()}
             disabled={busy}
-            className="h-9 w-full rounded-control bg-brand text-sm font-medium text-brand-ink hover:bg-brand-hover disabled:opacity-50"
+            className="h-9 w-full disabled:opacity-50 btn-primary"
           >
             {busy ? "Opening checkout…" : "Continue to checkout"}
           </button>

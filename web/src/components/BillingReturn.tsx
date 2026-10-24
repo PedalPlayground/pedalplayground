@@ -29,7 +29,7 @@ export function BillingReturn({ onDone }: { onDone: () => void }) {
           Your payment is still being confirmed. Pro will switch on within a few minutes; there's nothing else you need to do. If it doesn't, sign in and check the Account menu.
         </p>
       )}
-      <button onClick={onDone} className="mt-4 h-9 w-full rounded-control bg-brand text-sm font-medium text-brand-ink hover:bg-brand-hover">
+      <button onClick={onDone} className="mt-4 h-9 w-full btn-primary">
         {state === "pro" ? "Start building" : "Close"}
       </button>
     </Modal>
