@@ -9,7 +9,7 @@ function Action({ label, onClick, children, danger }: { label: string; onClick: 
       title={label}
       aria-label={label}
       onClick={onClick}
-      className={`grid size-9 place-items-center rounded-control outline-none hover:bg-surface-hover ${
+      className={`grid size-9 place-items-center rounded-control outline-none hover:bg-surface-hover pointer-coarse:size-10 ${
         danger ? "text-danger" : "text-ink-muted"
       }`}
     >
@@ -22,13 +22,18 @@ function Action({ label, onClick, children, danger }: { label: string; onClick: 
 export function ObjectMenu() {
   const s = usePlayground();
   const setReplacing = useUi((u) => u.setReplacing);
+  const searchOpen = useUi((u) => u.searchOpen);
   if (!s.selected.length) return null;
   const single = s.selected.length === 1 ? s.items.find((i) => i.id === s.selected[0]) : undefined;
   return (
-    <div className="absolute left-1/2 top-16 flex lg:top-4 -translate-x-1/2 items-center gap-1 rounded-panel bg-surface p-1.5 shadow-panel">
-      <span className="max-w-48 truncate px-2 text-sm font-medium" title={single?.label}>
-        {single ? single.label : `${s.selected.length} selected`}
-      </span>
+    // On phones it sits at the bottom, in thumb reach above the toolbar (hidden while the search sheet is open).
+    <div className={`absolute left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-0.5 rounded-panel bg-surface p-1.5 shadow-panel max-sm:bottom-[76px] sm:top-16 sm:flex-row sm:gap-1 lg:top-4 ${searchOpen ? "max-sm:hidden" : ""}`}>
+      <div className="flex items-center gap-1 max-sm:w-full max-sm:justify-center">
+        <span className="max-w-64 truncate px-2 text-xs font-medium sm:max-w-48 sm:text-sm" title={single?.label}>
+          {single ? single.label : `${s.selected.length} selected`}
+        </span>
+      </div>
+      <div className="flex items-center gap-1">
       {single && (
         <button
           onClick={() => setReplacing(true)}
@@ -39,7 +44,7 @@ export function ObjectMenu() {
           <span className="hidden sm:inline">Replace</span>
         </button>
       )}
-      <span className="mx-1 h-5 w-px bg-line" />
+      {single && <span className="mx-1 h-5 w-px bg-line" />}
       <Action label="Rotate (R)" onClick={s.rotateSelected}>
         <RotateCw size={18} />
       </Action>
@@ -57,6 +62,7 @@ export function ObjectMenu() {
       <Action label="Delete" onClick={s.deleteSelected} danger>
         <Trash2 size={18} />
       </Action>
+      </div>
     </div>
   );
 }

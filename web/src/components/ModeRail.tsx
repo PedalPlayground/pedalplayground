@@ -11,7 +11,7 @@ const modes: { id: Mode; label: string; icon: ReactNode }[] = [
 export function ModeRail() {
   const { mode, setMode } = useUi();
   return (
-    <nav className="flex w-12 flex-col items-center gap-1 border-r border-line bg-surface py-2">
+    <nav className="order-last flex shrink-0 items-center justify-around border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] sm:order-none sm:w-12 sm:flex-col sm:justify-start sm:gap-1 sm:border-r sm:border-t-0 sm:py-2 sm:pb-2">
       {modes.map((m) => (
         <button
           key={m.id}
@@ -19,7 +19,7 @@ export function ModeRail() {
           aria-label={m.label}
           aria-pressed={mode === m.id}
           onClick={() => setMode(m.id)}
-          className={`grid size-9 place-items-center rounded-control outline-none ${
+          className={`grid size-11 place-items-center rounded-control outline-none sm:size-9 ${
             mode === m.id ? "bg-brand/10 text-brand" : "text-ink-muted hover:bg-surface-hover"
           }`}
         >

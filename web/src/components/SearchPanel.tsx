@@ -41,11 +41,11 @@ export function SearchPanel({ onClose, replace = false }: { onClose: () => void;
   const kind = category === "pedalboards" ? "pedalboard" : "pedal";
 
   return (
-    <div className="w-[min(420px,calc(100vw-5rem))] rounded-panel bg-surface shadow-panel">
+    <div className="w-[min(420px,calc(100vw-5rem))] rounded-panel bg-surface shadow-panel max-sm:w-full">
       <div className="flex items-center gap-2 border-b border-line px-3 py-2">
         <Search size={16} className="text-ink-muted" />
         <input
-          autoFocus
+          autoFocus={!window.matchMedia("(pointer: coarse)").matches}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={target ? `Replace ${target.label}` : "Search pedals and pedalboards"}
@@ -73,7 +73,7 @@ export function SearchPanel({ onClose, replace = false }: { onClose: () => void;
       {category === "custom" ? (
         <CustomItemForm onDone={onClose} />
       ) : (
-      <ul className="max-h-80 overflow-y-auto p-2">
+      <ul className="max-h-80 overflow-y-auto p-2 max-sm:max-h-[42vh]">
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
         {error && <li className="p-3 text-sm text-danger">{error}</li>}
         {catalog && results.length === 0 && <li className="p-3 text-sm text-ink-muted">No results</li>}

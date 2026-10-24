@@ -115,14 +115,14 @@ export function App() {
             <>
               <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand">Beta</span>
               {FEEDBACK_URL && (
-                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="text-xs text-ink-muted hover:text-ink hover:underline">
+                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="hidden text-xs sm:inline text-ink-muted hover:text-ink hover:underline">
                   Send feedback
                 </a>
               )}
             </>
           )}
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1 sm:gap-3">
           <SaveStatus />
           {user ? (
             <AvatarMenu
@@ -140,11 +140,18 @@ export function App() {
               </button>
             )
           )}
+          <button
+            onClick={() => setDialog("share")}
+            aria-label="Share"
+            className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover sm:hidden"
+          >
+            <Share2 size={18} />
+          </button>
           <SettingsMenu />
         </div>
       </header>
 
-      <div className="flex min-h-0 flex-1">
+      <div className="flex min-h-0 flex-1 flex-col sm:flex-row">
         <ModeRail />
 
         <main className="relative flex-1 overflow-hidden bg-canvas">
@@ -157,14 +164,14 @@ export function App() {
             onSignIn={() => setDialog("account")}
           />
 
-          <div className="absolute bottom-4 left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2">
+          <div className="absolute bottom-3 left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-3 max-sm:right-3 max-sm:max-w-none max-sm:translate-x-0 sm:bottom-4">
             {searchOpen && <SearchPanel key={replacing ? "replace" : "add"} replace={replacing} onClose={() => setSearchOpen(false)} />}
             <Toolbar onPlace={() => setSearchOpen(replacing ? true : !searchOpen)} />
           </div>
 
           <button
             onClick={() => setDialog("share")}
-            className="absolute right-4 top-4 flex h-9 items-center gap-2 rounded-control bg-brand px-4 text-sm font-medium text-brand-ink shadow-panel hover:bg-brand-hover sm:bottom-4 sm:top-auto"
+            className="absolute bottom-4 right-4 flex h-9 items-center gap-2 rounded-control bg-brand px-4 max-sm:hidden text-sm font-medium text-brand-ink shadow-panel hover:bg-brand-hover "
           >
             <Share2 size={16} />
             Share

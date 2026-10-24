@@ -23,7 +23,7 @@ function IconButton({
       aria-pressed={active}
       disabled={disabled}
       onClick={onClick}
-      className={`grid size-9 place-items-center rounded-control outline-none disabled:opacity-40 ${
+      className={`grid size-9 place-items-center rounded-control outline-none pointer-coarse:size-11 disabled:opacity-40 ${
         active ? "bg-brand/10 text-brand" : "text-ink-muted hover:bg-surface-hover"
       }`}
     >
@@ -42,14 +42,17 @@ export function Toolbar({ onPlace }: { onPlace: () => void }) {
   const canUndo = usePlayground((s) => s.past.length > 0);
   const canRedo = usePlayground((s) => s.future.length > 0);
   return (
-    <div className="flex max-w-full items-center gap-1 overflow-x-auto rounded-panel bg-surface p-1.5 shadow-panel">
-      <IconButton label="Pan (hand)" active={tool === "hand"} onClick={() => setTool("hand")}>
-        <Hand size={18} />
-      </IconButton>
-      <IconButton label="Select" active={tool === "select"} onClick={() => setTool("select")}>
-        <MousePointer2 size={18} />
-      </IconButton>
-      <span className="mx-1 h-5 w-px bg-line" />
+    <div className="flex max-w-full items-center gap-1 overflow-x-auto rounded-panel bg-surface p-1.5 shadow-panel max-sm:w-full max-sm:justify-between">
+      {/* Touch screens pan and select automatically, so the tool switch is only for mouse and trackpad. */}
+      <span className="contents pointer-coarse:hidden max-sm:hidden">
+        <IconButton label="Pan (hand)" active={tool === "hand"} onClick={() => setTool("hand")}>
+          <Hand size={18} />
+        </IconButton>
+        <IconButton label="Select" active={tool === "select"} onClick={() => setTool("select")}>
+          <MousePointer2 size={18} />
+        </IconButton>
+        <span className="mx-1 h-5 w-px bg-line" />
+      </span>
       <span className="hidden sm:contents">
         <IconButton label="Zoom out" onClick={() => zoomBy(0.8)}>
           <ZoomOut size={18} />
@@ -58,7 +61,7 @@ export function Toolbar({ onPlace }: { onPlace: () => void }) {
       <button
         title="Fit to content"
         onClick={fit}
-        className="h-9 w-12 rounded-control text-xs tabular-nums text-ink-muted hover:bg-surface-hover"
+        className="h-9 w-12 rounded-control text-xs tabular-nums text-ink-muted hover:bg-surface-hover pointer-coarse:h-11 pointer-coarse:w-14"
       >
         {Math.round(zoom * 100)}%
       </button>
@@ -67,7 +70,7 @@ export function Toolbar({ onPlace }: { onPlace: () => void }) {
           <ZoomIn size={18} />
         </IconButton>
       </span>
-      <span className="mx-1 h-5 w-px bg-line" />
+      <span className="mx-1 h-5 w-px bg-line max-sm:hidden" />
       <IconButton label="Undo (⌘Z)" disabled={!canUndo} onClick={undo}>
         <Undo2 size={18} />
       </IconButton>
@@ -76,10 +79,12 @@ export function Toolbar({ onPlace }: { onPlace: () => void }) {
       </IconButton>
       <button
         onClick={onPlace}
-        className="ml-1 flex h-9 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-control bg-brand px-3 text-sm font-medium text-brand-ink outline-none hover:bg-brand-hover"
+        aria-label="Place a Product"
+        title="Place a Product"
+        className="ml-1 flex h-9 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-control bg-brand px-3 text-sm font-medium text-brand-ink outline-none hover:bg-brand-hover max-sm:size-11 max-sm:justify-center max-sm:px-0 pointer-coarse:h-11"
       >
-        <Plus size={16} />
-        Place a Product
+        <Plus size={18} />
+        <span className="max-sm:hidden">Place a Product</span>
       </button>
     </div>
   );

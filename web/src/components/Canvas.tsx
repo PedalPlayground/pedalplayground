@@ -11,12 +11,14 @@ import { useUi } from "../store/ui";
 /** Screen-space distance (px) within which a dragged item snaps to another's edge or center. */
 const SNAP_PX = 6;
 const DRAG_START_PX = 3;
+/** A touch that moves less than this still counts as a tap. */
+const TAP_SLOP_PX = 6;
 const NO_GUIDES: Guides = { x: [], y: [] };
 
 type Rect = { x: number; y: number; w: number; h: number };
 
 type Gesture =
-  | { type: "pan"; lastX: number; lastY: number }
+  | { type: "pan"; lastX: number; lastY: number; /** Touch: a tap that never moved clears the selection. */ tap?: boolean; moved?: boolean }
   | {
       type: "drag";
       origins: Record<string, { x: number; y: number }>;
@@ -189,8 +191,13 @@ export function Canvas() {
     const itemEl = (e.target as HTMLElement).closest<HTMLElement>("[data-item-id]");
     const p = local(e);
 
+    // Touch: dragging a product moves it, dragging empty canvas pans (no marquee, no tool switching).
+    const touch = e.pointerType === "touch";
+
     if (tool === "hand" || spaceDown.current || e.button === 1) {
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY };
+    } else if (touch && !itemEl) {
+      gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: true, moved: false };
     } else if (itemEl) {
       const id = itemEl.dataset.itemId!;
       if (e.shiftKey) s.select(id, true);
@@ -218,6 +225,8 @@ export function Canvas() {
       s.panBy(next.mx - g.mx, next.my - g.my);
       gesture.current = { type: "pinch", ...next };
     } else if (g.type === "pan") {
+      if (g.tap && !g.moved && Math.hypot(e.clientX - g.lastX, e.clientY - g.lastY) < TAP_SLOP_PX) return;
+      g.moved = true;
       s.panBy(e.clientX - g.lastX, e.clientY - g.lastY);
       g.lastX = e.clientX;
       g.lastY = e.clientY;
@@ -270,6 +279,8 @@ export function Canvas() {
 
   const endGesture = (e: React.PointerEvent) => {
     pointers.current.delete(e.pointerId);
+    const g = gesture.current;
+    if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) usePlayground.getState().clearSelection();
     if (ref.current?.hasPointerCapture(e.pointerId)) ref.current.releasePointerCapture(e.pointerId);
     gesture.current = null; // a lifted pinch finger shouldn't turn into a drag, so just end
     setMarquee(null);

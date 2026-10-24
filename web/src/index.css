@@ -85,3 +85,12 @@ body {
 :root[data-theme="dark"] .app-logo {
   filter: invert(1) hue-rotate(180deg);
 }
+
+/* iOS Safari zooms the page when focusing a field with text under 16px. */
+@media (pointer: coarse) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}

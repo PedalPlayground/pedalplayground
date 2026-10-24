@@ -46,8 +46,8 @@ export function Logo() {
   }, [manifest, start, signedIn, avatar]);
 
   return (
-    <span className="relative block h-4 w-64" role="img" aria-label="Pedal Playground">
-      <img src={logoUrl} alt="" width={256} height={16} className="app-logo block h-4 w-64" />
+    <span className="relative block h-4 w-6 overflow-hidden sm:w-64" role="img" aria-label="Pedal Playground">
+      <img src={logoUrl} alt="" width={256} height={16} className="app-logo block h-4 w-64 max-w-none" />
       <span className="absolute left-0 top-0 block h-4 w-6">
         {src && <img src={src} alt="" className="absolute right-px top-px block h-[13.64px] w-auto" />}
       </span>
