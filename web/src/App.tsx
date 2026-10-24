@@ -1,5 +1,4 @@
 import { Share2 } from "lucide-react";
-import logoUrl from "./assets/logo.svg";
 import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
@@ -7,6 +6,7 @@ import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
 import { HeaderMenu } from "./components/HeaderMenu";
+import { Logo } from "./components/Logo";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
 import { PlaygroundSwitcher } from "./components/PlaygroundSwitcher";
@@ -101,7 +101,7 @@ export function App() {
       <header className="flex h-12 shrink-0 items-center justify-between border-b border-line bg-surface px-4">
         <div className="flex items-center gap-2">
           <h1 className="flex">
-            <img src={logoUrl} alt="Pedal Playground" width={256} height={16} className="app-logo block h-4 w-auto" />
+            <Logo />
           </h1>
           {BETA && (
             <>

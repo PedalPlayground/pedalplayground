@@ -1,0 +1,70 @@
+import { useMemo } from "react";
+import logoUrl from "../assets/logo.svg";
+import { thumbUrl } from "../lib/catalog";
+import { useCatalog } from "../store/catalog";
+
+/** Popular pedals with portrait proportions; one is picked per visit to sit in the logo's icon. */
+const LOGO_PEDALS = [
+  "boss-ds1",
+  "boss-bd2",
+  "boss-sd1",
+  "boss-dd3",
+  "boss-ce2",
+  "boss-bf2",
+  "boss-ch1",
+  "boss-dm2",
+  "boss-tu3",
+  "ibanez-ts9",
+  "ibanez-ts808",
+  "mxr-m101",
+  "mxr-m102",
+  "mxr-m169",
+  "fulltone-ocd",
+  "wampler-tumnus-deluxe",
+  "ehx-green-russian",
+  "ehx-nano-big-muff-pi",
+];
+
+const VISIT_KEY = "pp:logo-pedal";
+
+/** One random pick per browser session ("visit"), so reloads don't reshuffle it. */
+function pickForVisit(): number {
+  try {
+    const saved = sessionStorage.getItem(VISIT_KEY);
+    if (saved !== null && Number(saved) < LOGO_PEDALS.length) return Number(saved);
+    const n = Math.floor(Math.random() * LOGO_PEDALS.length);
+    sessionStorage.setItem(VISIT_KEY, String(n));
+    return n;
+  } catch {
+    return Math.floor(Math.random() * LOGO_PEDALS.length);
+  }
+}
+
+/**
+ * The wordmark (256×16) with a catalog pedal in its icon. The pedal is pinned to the icon's top, right and bottom
+ * edges, so its width follows its aspect ratio.
+ */
+export function Logo() {
+  const manifest = useCatalog((s) => s.manifest);
+  const start = useMemo(pickForVisit, []);
+
+  const src = useMemo(() => {
+    if (!manifest) return null;
+    // Start at this visit's pick and take the first usable pedal (portrait, with an image).
+    for (let k = 0; k < LOGO_PEDALS.length; k++) {
+      const key = LOGO_PEDALS[(start + k) % LOGO_PEDALS.length];
+      const p = manifest.pedals.find((i) => i.image === key);
+      if (p && p.height > p.width) return thumbUrl(manifest, "pedal", key);
+    }
+    return null;
+  }, [manifest, start]);
+
+  return (
+    <span className="relative block h-4 w-64" role="img" aria-label="Pedal Playground">
+      <img src={logoUrl} alt="" width={256} height={16} className="app-logo block h-4 w-64" />
+      <span className="absolute left-0 top-0 block h-4 w-6">
+        {src && <img src={src} alt="" className="absolute right-px top-px block h-[13.64px] w-auto" />}
+      </span>
+    </span>
+  );
+}
