@@ -2,7 +2,6 @@ import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { SlidersHorizontal } from "lucide-react";
 import { useRef } from "react";
 import { importAny } from "../lib/importers";
-import { requestNewPlayground } from "../lib/newPlayground";
 import { usePlayground } from "../store/playground";
 import { useUi, type Theme } from "../store/ui";
 
@@ -55,10 +54,6 @@ export function SettingsMenu() {
           sideOffset={6}
           className="z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel"
         >
-          <Dropdown.Item className={menuItem} onSelect={requestNewPlayground}>
-            New playground
-          </Dropdown.Item>
-          <Dropdown.Separator className="my-1 h-px bg-line" />
           <Dropdown.Item className={menuItem} onSelect={exportFile}>
             Export file
           </Dropdown.Item>
@@ -66,14 +61,22 @@ export function SettingsMenu() {
             Import file…
           </Dropdown.Item>
           <Dropdown.Separator className="my-1 h-px bg-line" />
-          <Dropdown.CheckboxItem
-            className={menuItem}
-            checked={units === "mm"}
-            onCheckedChange={(on) => setUnits(on ? "mm" : "in")}
-          >
-            Use millimeters
-            <Dropdown.ItemIndicator className="text-brand">✓</Dropdown.ItemIndicator>
-          </Dropdown.CheckboxItem>
+          <Dropdown.Label className="px-3 pb-1 pt-1.5 text-xs text-ink-muted">Units</Dropdown.Label>
+          <div role="radiogroup" aria-label="Units" className="mx-1 mb-1 flex rounded-control bg-surface-hover p-0.5">
+            {([["in", "Inches"], ["mm", "Millimeters"]] as const).map(([value, label]) => (
+              <button
+                key={value}
+                role="radio"
+                aria-checked={units === value}
+                onClick={() => setUnits(value)}
+                className={`h-8 flex-1 rounded-[6px] px-3 text-sm outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+                  units === value ? "bg-surface font-medium text-brand shadow-sm" : "text-ink-muted hover:text-ink"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
           <Dropdown.Separator className="my-1 h-px bg-line" />
           <Dropdown.Label className="px-3 pb-1 pt-1.5 text-xs text-ink-muted">Appearance</Dropdown.Label>
           <Dropdown.RadioGroup value={theme} onValueChange={(v) => setTheme(v as Theme)}>

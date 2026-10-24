@@ -5,6 +5,7 @@ import { AccountDialog } from "./components/AccountDialog";
 import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
+import { AvatarDialog } from "./components/AvatarDialog";
 import { AvatarMenu } from "./components/AvatarMenu";
 import { SettingsMenu } from "./components/SettingsMenu";
 import { Logo } from "./components/Logo";
@@ -50,7 +51,7 @@ function stripEmailLinkParams() {
   window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""));
 }
 
-type Dialog = "account" | "rename" | "share" | "playgrounds" | null;
+type Dialog = "account" | "rename" | "share" | "playgrounds" | "avatar" | null;
 
 /** Opens `?p=<slug>` as a fork, then strips the param so a reload keeps the viewer's edits. */
 async function openSharedFromUrl() {
@@ -117,8 +118,12 @@ export function App() {
         </div>
         <div className="flex items-center gap-3">
           <SaveStatus />
+          <AvatarMenu
+            onAccount={() => setDialog("account")}
+            onPlaygrounds={() => setDialog("playgrounds")}
+            onChangeAvatar={() => setDialog("avatar")}
+          />
           <SettingsMenu />
-          <AvatarMenu onAccount={() => setDialog("account")} onPlaygrounds={() => setDialog("playgrounds")} />
         </div>
       </header>
 
@@ -154,6 +159,7 @@ export function App() {
       <UpgradeDialog onSignIn={() => setDialog("account")} />
       {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}
       {dialog === "account" && <AccountDialog onClose={close} />}
+      {dialog === "avatar" && <AvatarDialog onClose={close} />}
       {dialog === "rename" && <RenameDialog onClose={close} />}
       {dialog === "share" && <ShareDialog onClose={close} onSignIn={() => setDialog("account")} />}
       {dialog === "playgrounds" && <PlaygroundsDialog onClose={close} onSignIn={() => setDialog("account")} />}

@@ -1,55 +1,9 @@
 import { useMemo } from "react";
 import logoUrl from "../assets/logo.svg";
 import { thumbUrl } from "../lib/catalog";
+import { FEATURED_PEDALS } from "../lib/featuredPedals";
 import { useCatalog } from "../store/catalog";
 
-/**
- * Popular pedals with portrait proportions (the classics, shoegaze/Reddit favorites, TGP staples); one is
- * picked per visit to sit in the logo's icon.
- */
-const LOGO_PEDALS = [
-  "boss-ds1",
-  "boss-bd2",
-  "boss-sd1",
-  "boss-dd3",
-  "boss-ce2",
-  "boss-bf2",
-  "boss-ch1",
-  "boss-dm2",
-  "boss-tu3",
-  "ibanez-ts9",
-  "ibanez-ts808",
-  "mxr-m101",
-  "mxr-m102",
-  "mxr-m169",
-  "fulltone-ocd",
-  "wampler-tumnus-deluxe",
-  "ehx-green-russian",
-  "ehx-nano-big-muff-pi",
-  // Shoegaze / Reddit favorites
-  "earthquaker-hizumitas",
-  "earthquaker-afterneath-v3",
-  "ehx-freeze",
-  "ehx-nano-deluxe-memory-man",
-  "ehx-holy-grail-neo",
-  "walrus-julia2",
-  "walrus-voyager-mk2",
-  "chasebliss-mood-mk2",
-  "chasebliss-generation-loss-mk2",
-  "catalinbread-belle",
-  "jhs-morning-glory-v4",
-  "deathbyaudio-fuzz-war",
-  "deathbyaudio-reverberation-machine",
-  "zvex-fuzzfactory-vertical",
-  // TGP staples
-  "klon-ktr",
-  "vemuram-janray",
-  "xotic-bb",
-  "wampler-pinnacle",
-  "wayhuge-overratedspecial",
-  "keeley-compressor",
-  "mad-professor-forest-green",
-];
 
 const VISIT_KEY = "pp:logo-pedal";
 
@@ -57,12 +11,12 @@ const VISIT_KEY = "pp:logo-pedal";
 function pickForVisit(): number {
   try {
     const saved = sessionStorage.getItem(VISIT_KEY);
-    if (saved !== null && Number(saved) < LOGO_PEDALS.length) return Number(saved);
-    const n = Math.floor(Math.random() * LOGO_PEDALS.length);
+    if (saved !== null && Number(saved) < FEATURED_PEDALS.length) return Number(saved);
+    const n = Math.floor(Math.random() * FEATURED_PEDALS.length);
     sessionStorage.setItem(VISIT_KEY, String(n));
     return n;
   } catch {
-    return Math.floor(Math.random() * LOGO_PEDALS.length);
+    return Math.floor(Math.random() * FEATURED_PEDALS.length);
   }
 }
 
@@ -77,8 +31,8 @@ export function Logo() {
   const src = useMemo(() => {
     if (!manifest) return null;
     // Start at this visit's pick and take the first usable pedal (portrait, with an image).
-    for (let k = 0; k < LOGO_PEDALS.length; k++) {
-      const key = LOGO_PEDALS[(start + k) % LOGO_PEDALS.length];
+    for (let k = 0; k < FEATURED_PEDALS.length; k++) {
+      const key = FEATURED_PEDALS[(start + k) % FEATURED_PEDALS.length];
       const p = manifest.pedals.find((i) => i.image === key);
       if (p && p.height > p.width) return thumbUrl(manifest, "pedal", key);
     }

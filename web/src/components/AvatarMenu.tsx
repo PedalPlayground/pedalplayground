@@ -1,27 +1,38 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
-import { User } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { openBillingPortal } from "../lib/billing";
+import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useUi } from "../store/ui";
 import { menuItem } from "./SettingsMenu";
+import { PedalAvatar } from "./PedalAvatar";
 
-/** 24px account avatar: the user's initial when signed in, a person icon when not. */
-export function AvatarMenu({ onAccount, onPlaygrounds }: { onAccount: () => void; onPlaygrounds: () => void }) {
+/** Avatar (a pedal of the user's choice, 24px) with a chevron; opens the account menu. */
+export function AvatarMenu({
+  onAccount,
+  onPlaygrounds,
+  onChangeAvatar,
+}: {
+  onAccount: () => void;
+  onPlaygrounds: () => void;
+  onChangeAvatar: () => void;
+}) {
   const { user, cloudEnabled, signOut } = useAuth();
   const { entitlements, billingEnabled } = useBilling();
   const openUpgrade = useUi((u) => u.openUpgrade);
-  const initial = user?.email?.trim()[0]?.toUpperCase();
+  const avatar = useUi((u) => u.avatar);
 
   return (
     <Dropdown.Root>
       <Dropdown.Trigger
-        aria-label={user ? `Account menu (${user.email})` : "Sign in"}
-        className={`grid size-6 place-items-center rounded-full text-xs font-semibold outline-none ring-offset-1 ring-offset-surface focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:ring-2 data-[state=open]:ring-brand ${
-          user ? "bg-brand text-brand-ink" : "bg-surface-hover text-ink-muted hover:text-ink"
-        }`}
+        aria-label={user ? `Account menu (${user.email})` : "Account menu"}
+        className="flex h-8 items-center gap-1 rounded-control px-1.5 text-ink-muted outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover"
       >
-        {user && initial ? initial : <User size={14} />}
+        <span className="grid size-6 place-items-center">
+          <PedalAvatar pedalKey={avatar} size={24} />
+        </span>
+        <ChevronDown size={14} />
       </Dropdown.Trigger>
       <Dropdown.Portal>
         <Dropdown.Content align="end" sideOffset={10} className="z-50 min-w-52 rounded-panel bg-surface p-1.5 shadow-panel">
@@ -49,15 +60,29 @@ export function AvatarMenu({ onAccount, onPlaygrounds }: { onAccount: () => void
               <Dropdown.Item className={menuItem} onSelect={onPlaygrounds}>
                 Playgrounds
               </Dropdown.Item>
+              <Dropdown.Item className={menuItem} onSelect={requestNewPlayground}>
+                New playground
+              </Dropdown.Item>
+              <Dropdown.Item className={menuItem} onSelect={onChangeAvatar}>
+                Change avatar…
+              </Dropdown.Item>
               <Dropdown.Separator className="my-1 h-px bg-line" />
               <Dropdown.Item className={menuItem} onSelect={() => void signOut()}>
                 Sign out
               </Dropdown.Item>
             </>
           ) : (
-            <Dropdown.Item className={menuItem} onSelect={onAccount}>
-              {cloudEnabled ? "Sign in" : "Account"}
-            </Dropdown.Item>
+            <>
+              <Dropdown.Item className={menuItem} onSelect={onAccount}>
+                {cloudEnabled ? "Sign in" : "Account"}
+              </Dropdown.Item>
+              <Dropdown.Item className={menuItem} onSelect={requestNewPlayground}>
+                New playground
+              </Dropdown.Item>
+              <Dropdown.Item className={menuItem} onSelect={onChangeAvatar}>
+                Change avatar…
+              </Dropdown.Item>
+            </>
           )}
         </Dropdown.Content>
       </Dropdown.Portal>

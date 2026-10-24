@@ -14,6 +14,9 @@ interface UiState {
   theme: Theme;
   upgrade: UpgradeReason | null;
   /** The pedal search panel; the canvas closes it as soon as the user starts arranging. */
+  /** Image key of the pedal used as the user's avatar. */
+  avatar: string;
+  setAvatar: (key: string) => void;
   searchOpen: boolean;
   setSearchOpen: (open: boolean) => void;
   setMode: (m: Mode) => void;
@@ -29,6 +32,16 @@ const savedUnits = (): Units => {
     return localStorage.getItem("pp:units") === "mm" ? "mm" : "in";
   } catch {
     return "in";
+  }
+};
+
+export const DEFAULT_AVATAR = "boss-ds1";
+
+const savedAvatar = (): string => {
+  try {
+    return localStorage.getItem("pp:avatar") || DEFAULT_AVATAR;
+  } catch {
+    return DEFAULT_AVATAR;
   }
 };
 
@@ -54,6 +67,15 @@ export const useUi = create<UiState>((set) => ({
   units: savedUnits(),
   theme: savedTheme(),
   upgrade: null,
+  avatar: savedAvatar(),
+  setAvatar: (avatar) => {
+    try {
+      localStorage.setItem("pp:avatar", avatar);
+    } catch {
+      /* storage unavailable */
+    }
+    set({ avatar });
+  },
   searchOpen: false,
   setSearchOpen: (searchOpen) => set({ searchOpen }),
   setMode: (mode) => set({ mode }),
