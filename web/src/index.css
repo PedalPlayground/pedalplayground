@@ -75,3 +75,13 @@ body {
   background: var(--color-canvas);
   overflow: hidden;
 }
+
+/* The logo is dark artwork; flip it on dark surfaces. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .app-logo {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+:root[data-theme="dark"] .app-logo {
+  filter: invert(1) hue-rotate(180deg);
+}

@@ -1,4 +1,5 @@
 import { Share2 } from "lucide-react";
+import logoUrl from "./assets/logo.svg";
 import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
@@ -97,10 +98,10 @@ export function App() {
 
   return (
     <div className="flex h-full flex-col">
-      <header className="flex h-11 shrink-0 items-center justify-between border-b border-line bg-surface px-4">
+      <header className="flex h-12 shrink-0 items-center justify-between border-b border-line bg-surface px-4">
         <div className="flex items-center gap-2">
-          <h1 className="text-sm tracking-tight">
-            <b className="font-bold">PEDAL</b>PLAYGROUND
+          <h1 className="flex">
+            <img src={logoUrl} alt="Pedal Playground" width={256} height={16} className="app-logo block h-4 w-auto" />
           </h1>
           {BETA && (
             <>
