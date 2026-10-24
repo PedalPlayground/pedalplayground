@@ -2,7 +2,9 @@ import { useMemo } from "react";
 import logoUrl from "../assets/logo.svg";
 import { thumbUrl } from "../lib/catalog";
 import { FEATURED_PEDALS } from "../lib/featuredPedals";
+import { useAuth } from "../store/auth";
 import { useCatalog } from "../store/catalog";
+import { useUi } from "../store/ui";
 
 
 const VISIT_KEY = "pp:logo-pedal";
@@ -26,10 +28,14 @@ function pickForVisit(): number {
  */
 export function Logo() {
   const manifest = useCatalog((s) => s.manifest);
+  const signedIn = useAuth((s) => !!s.user);
+  const avatar = useUi((u) => u.avatar);
   const start = useMemo(pickForVisit, []);
 
   const src = useMemo(() => {
     if (!manifest) return null;
+    // Signed-in users see their own avatar pedal in the logo.
+    if (signedIn) return thumbUrl(manifest, "pedal", avatar);
     // Start at this visit's pick and take the first usable pedal (portrait, with an image).
     for (let k = 0; k < FEATURED_PEDALS.length; k++) {
       const key = FEATURED_PEDALS[(start + k) % FEATURED_PEDALS.length];
@@ -37,7 +43,7 @@ export function Logo() {
       if (p && p.height > p.width) return thumbUrl(manifest, "pedal", key);
     }
     return null;
-  }, [manifest, start]);
+  }, [manifest, start, signedIn, avatar]);
 
   return (
     <span className="relative block h-4 w-64" role="img" aria-label="Pedal Playground">

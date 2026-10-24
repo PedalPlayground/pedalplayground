@@ -5,7 +5,7 @@ export type Tool = "hand" | "select";
 export type Units = "in" | "mm";
 export type Theme = "system" | "light" | "dark";
 /** Why the upgrade dialog opened; changes its headline. */
-export type UpgradeReason = "menu" | "limit" | "save";
+export type UpgradeReason = "menu" | "limit" | "save" | "avatar";
 
 interface UiState {
   mode: Mode;

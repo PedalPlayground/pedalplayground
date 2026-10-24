@@ -5,6 +5,7 @@ import { AccountDialog } from "./components/AccountDialog";
 import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
+import { startAvatarSync } from "./lib/avatar";
 import { AvatarDialog } from "./components/AvatarDialog";
 import { AvatarMenu } from "./components/AvatarMenu";
 import { SettingsMenu } from "./components/SettingsMenu";
@@ -91,10 +92,12 @@ export function App() {
     restorePlayground();
     const stopLocal = startLocalAutosave();
     const stopCloud = startCloudSync();
+    const stopAvatar = startAvatarSync();
     void openSharedFromUrl();
     return () => {
       stopLocal();
       stopCloud();
+      stopAvatar();
     };
   }, []);
 

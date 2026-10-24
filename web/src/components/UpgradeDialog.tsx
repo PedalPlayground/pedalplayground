@@ -16,16 +16,18 @@ const HEADLINE: Record<UpgradeReason, string> = {
   menu: "Upgrade to Pro",
   limit: "You've used your free playground",
   save: "This playground isn't saved to your account",
+  avatar: "Use any pedal as your avatar",
 };
 
 const BLURB: Record<UpgradeReason, string> = {
   menu: "Keep as many playgrounds as you like, saved to your account and available on every device.",
   limit: "Free accounts keep one saved playground. Pro lets you save as many as you like.",
   save: "Free accounts keep one saved playground, so changes to this one are only stored on this device. Pro saves them all.",
+  avatar: "Free accounts pick an avatar from our featured pedals. Pro lets you search the whole catalog for yours.",
 };
 
-const FREE = ["1 saved playground", "Share and fork playgrounds", "Every pedal and pedalboard", "Custom pedals and boards"];
-const PRO = ["Unlimited saved playgrounds", "Everything in Free"];
+const FREE = ["1 saved playground", "Share and fork playgrounds", "Every pedal and pedalboard", "Custom pedals and boards", "Featured pedal avatars"];
+const PRO = ["Unlimited saved playgrounds", "Any catalog pedal as your avatar", "Everything in Free"];
 
 function Feature({ children }: { children: string }) {
   return (
