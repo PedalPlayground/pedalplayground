@@ -14,5 +14,6 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 - Sign-in: after sending a code, show the address it went to with a "Wrong address? Change it" link (a mistyped address looks like a broken email).
 - Improve contrast in dark mode.
 - Address canvas zoom going out of bounds.
+- Z-index minimap.
 
 ## Other
