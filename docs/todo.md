@@ -8,5 +8,6 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 - Make signed in/out status more clear.
 - Polish the Pro purchase modal.
 - Better sign-in success UX.
+- Better-looking custom pedals.
 
 ## Other
