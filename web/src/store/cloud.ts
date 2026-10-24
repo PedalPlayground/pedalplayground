@@ -90,9 +90,10 @@ export const useCloud = create<CloudState>((set, get) => {
     list: [],
 
     refreshList: async () => {
-      if (!supabase || !useAuth.getState().user) return set({ list: [] });
+      const user = useAuth.getState().user;
+      if (!supabase || !user) return set({ list: [] });
       try {
-        set({ list: await listPlaygrounds() });
+        set({ list: await listPlaygrounds(user.id) });
       } catch (e) {
         set({ error: e instanceof Error ? e.message : "Could not load playgrounds." });
       }
@@ -207,7 +208,9 @@ export const useCloud = create<CloudState>((set, get) => {
 
     remove: async (id) => {
       await deletePlayground(id);
-      if (get().cloudId === id) setMeta({ ...EMPTY_META }); // keep the canvas; it just stops being synced
+      // Deleting the open playground also clears the canvas. Leaving its content behind would make the
+      // sign-in sync upload it again as a new playground on the next load. (Clearing is undoable until reload.)
+      if (get().cloudId === id) get().newPlayground();
       await get().refreshList();
       void useBilling.getState().refresh();
     },

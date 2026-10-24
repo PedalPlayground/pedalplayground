@@ -49,7 +49,7 @@ export function PlaygroundsDialog({ onClose, onSignIn }: { onClose: () => void; 
             <button
               aria-label={`Delete ${p.name}`}
               onClick={() => {
-                if (window.confirm(`Delete "${p.name}"? This can't be undone.`)) void remove(p.id).catch(() => setError("Could not delete."));
+                if (window.confirm(`Delete "${p.name}"? This can't be undone.`)) void remove(p.id).catch((e: unknown) => setError(e instanceof Error ? e.message : "Could not delete."));
               }}
               className="absolute right-1 top-1 hidden size-7 place-items-center rounded-control bg-surface text-danger shadow-panel group-hover:grid"
             >

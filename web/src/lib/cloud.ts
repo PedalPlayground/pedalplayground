@@ -34,15 +34,23 @@ export class PlaygroundLimitError extends Error {
 
 const isLimitError = (e: { code?: string; message?: string }) => e.code === "PT402" || e.message === "playground_limit_reached";
 
-export async function listPlaygrounds(): Promise<PlaygroundSummary[]> {
+/**
+ * The signed-in user's own playgrounds. The owner filter is required: the share feature lets everyone read
+ * public playgrounds, so an unfiltered query would also return other people's shared boards.
+ */
+export async function listPlaygrounds(ownerId: string): Promise<PlaygroundSummary[]> {
   const cols = "id,name,updated_at,slug,is_public";
   if (thumbnailSupported) {
-    const res = await db().from("playgrounds").select(`${cols},thumbnail`).order("updated_at", { ascending: false });
+    const res = await db()
+      .from("playgrounds")
+      .select(`${cols},thumbnail`)
+      .eq("owner_user_id", ownerId)
+      .order("updated_at", { ascending: false });
     if (!res.error) return res.data as PlaygroundSummary[];
     if (!isMissingColumn(res.error.code)) throw res.error;
     thumbnailSupported = false;
   }
-  const res = await db().from("playgrounds").select(cols).order("updated_at", { ascending: false });
+  const res = await db().from("playgrounds").select(cols).eq("owner_user_id", ownerId).order("updated_at", { ascending: false });
   if (res.error) throw res.error;
   return (res.data as Omit<PlaygroundSummary, "thumbnail">[]).map((p) => ({ ...p, thumbnail: null }));
 }
@@ -103,8 +111,10 @@ export async function insertVersion(playgroundId: string, doc: PlaygroundDocumen
 }
 
 export async function deletePlayground(id: string) {
-  const { error } = await db().from("playgrounds").delete().eq("id", id);
+  // Row-level security makes a delete of someone else's row succeed with zero rows, so check the count.
+  const { data, error } = await db().from("playgrounds").delete().eq("id", id).select("id");
   if (error) throw error;
+  if (!data?.length) throw new Error("That playground couldn't be deleted. It may belong to another account, or it's already gone.");
 }
 
 const SLUG_ALPHABET = "abcdefghijklmnopqrstuvwxyz0123456789";
