@@ -1,16 +1,29 @@
-import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Replace, RotateCw, Trash2 } from "lucide-react";
+import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Lock, LockOpen, Replace, RotateCw, Trash2 } from "lucide-react";
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 
-function Action({ label, onClick, children, danger }: { label: string; onClick: () => void; children: ReactNode; danger?: boolean }) {
+function Action({
+  label,
+  onClick,
+  children,
+  danger,
+  pressed,
+}: {
+  label: string;
+  onClick: () => void;
+  children: ReactNode;
+  danger?: boolean;
+  pressed?: boolean;
+}) {
   return (
     <button
       title={label}
       aria-label={label}
+      aria-pressed={pressed}
       onClick={onClick}
       className={`grid size-9 place-items-center rounded-control outline-none hover:bg-surface-hover pointer-coarse:size-10 ${
-        danger ? "text-danger" : "text-ink-muted"
+        danger ? "text-danger" : pressed ? "bg-surface-hover text-brand" : "text-ink-muted"
       }`}
     >
       {children}
@@ -25,6 +38,7 @@ export function ObjectMenu() {
   const searchOpen = useUi((u) => u.searchOpen);
   if (!s.selected.length) return null;
   const single = s.selected.length === 1 ? s.items.find((i) => i.id === s.selected[0]) : undefined;
+  const locked = s.items.filter((i) => s.selected.includes(i.id)).every((i) => i.locked);
   return (
     // On phones it sits at the bottom, in thumb reach above the toolbar (hidden while the search sheet is open).
     <div className={`absolute left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-0.5 glass-sm p-1.5 max-sm:rounded-3xl max-sm:bottom-[88px] sm:rounded-panel sm:bg-surface sm:shadow-panel sm:top-16 sm:flex-row sm:gap-1 lg:top-4 ${searchOpen ? "max-sm:hidden" : ""}`}>
@@ -45,6 +59,9 @@ export function ObjectMenu() {
         </button>
       )}
       {single && <span className="mx-1 h-5 w-px bg-line" />}
+      <Action label={locked ? "Unlock position" : "Lock position"} onClick={s.toggleLockSelected} pressed={locked}>
+        {locked ? <Lock size={18} /> : <LockOpen size={18} />}
+      </Action>
       <Action label="Rotate (R)" onClick={s.rotateSelected}>
         <RotateCw size={18} />
       </Action>

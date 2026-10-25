@@ -29,6 +29,8 @@ export interface Item {
   custom: boolean;
   /** Body color for custom pedals (hex); null for catalog items and custom boards. */
   color: string | null;
+  /** Locked items stay put: they can be selected but not dragged, nudged or distributed. */
+  locked?: boolean;
 }
 
 export interface View {

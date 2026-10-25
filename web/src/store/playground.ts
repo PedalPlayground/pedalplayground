@@ -53,6 +53,8 @@ interface PlaygroundState {
   deleteSelected: () => void;
   /** Spaces 3+ selected items so the gaps between them are equal; the leftmost and rightmost stay put. */
   distributeHorizontally: () => void;
+  /** Locks the selection, or unlocks it if every selected item is already locked. */
+  toggleLockSelected: () => void;
   bringForward: () => void;
   sendBackward: () => void;
   bringToFront: () => void;
@@ -270,7 +272,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       return {
         ...history,
         lastNudgeAt: now,
-        items: s.items.map((i) => (s.selected.includes(i.id) ? { ...i, x: i.x + dx, y: i.y + dy } : i)),
+        items: s.items.map((i) => (s.selected.includes(i.id) && !i.locked ? { ...i, x: i.x + dx, y: i.y + dy } : i)),
       };
     }),
 
@@ -286,7 +288,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     })),
   distributeHorizontally: () =>
     set((s) => {
-      const picked = s.items.filter((i) => s.selected.includes(i.id));
+      const picked = s.items.filter((i) => s.selected.includes(i.id) && !i.locked);
       if (picked.length < 3) return {};
       const sorted = picked.map((item) => ({ item, b: itemBounds(item) })).sort((a, b) => a.b.left - b.b.left);
       const first = sorted[0].b.left;
@@ -300,6 +302,13 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         cursor += e.b.right - e.b.left + gap;
       }
       return { ...record(s), items: s.items.map((i) => (shift.has(i.id) ? { ...i, x: i.x + shift.get(i.id)! } : i)) };
+    }),
+  toggleLockSelected: () =>
+    set((s) => {
+      const picked = s.items.filter((i) => s.selected.includes(i.id));
+      if (!picked.length) return {};
+      const lock = !picked.every((i) => i.locked);
+      return { ...record(s), items: s.items.map((i) => (s.selected.includes(i.id) ? { ...i, locked: lock } : i)) };
     }),
   deleteSelected: () =>
     set((s) => ({ ...record(s), items: s.items.filter((i) => !s.selected.includes(i.id)), selected: [] })),

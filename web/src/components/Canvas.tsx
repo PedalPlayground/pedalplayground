@@ -221,7 +221,7 @@ export function Canvas() {
       }
       const state = usePlayground.getState();
       const origins: Record<string, { x: number; y: number }> = {};
-      for (const i of state.items) if (state.selected.includes(i.id)) origins[i.id] = { x: i.x, y: i.y };
+      for (const i of state.items) if (state.selected.includes(i.id) && !i.locked) origins[i.id] = { x: i.x, y: i.y };
       gesture.current = { type: "drag", origins, startX: e.clientX, startY: e.clientY, started: false };
     } else {
       if (!e.shiftKey) s.clearSelection();
@@ -248,6 +248,7 @@ export function Canvas() {
       g.lastX = e.clientX;
       g.lastY = e.clientY;
     } else if (g.type === "drag") {
+      if (!Object.keys(g.origins).length) return; // everything selected is locked
       const rawX = e.clientX - g.startX;
       const rawY = e.clientY - g.startY;
       if (!g.started) {
