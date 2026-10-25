@@ -11,6 +11,7 @@ createRoot(document.getElementById("root")!).render(
 
 // Dev only: expose the stores so flows (billing, sign-in) can be exercised without real accounts.
 if (import.meta.env.DEV) {
+  void import("./dev/fontSwitcher");
   void Promise.all([
     import("./store/auth"),
     import("./store/billing"),

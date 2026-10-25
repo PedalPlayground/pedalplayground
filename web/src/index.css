@@ -85,6 +85,12 @@ body {
   overflow: hidden;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading, var(--font-sans));
+}
+
 /* The logo is dark artwork; flip it on dark surfaces. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .app-logo {
