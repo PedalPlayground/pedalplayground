@@ -9,7 +9,7 @@ The sizes the app already uses almost everywhere. Keep new UI to these so it sta
 | Dialog titles | `text-base font-semibold` |
 | Primary button | `btn-primary` (index.css), from the Figma button: purple `#5B61FB` with a lighter `#6D72F6` highlight in its top ~1px (the gradient border), `0 1px 1px` shadow at 14% black, faint text shadow, semibold, 4px radius (same as every control) |
 | Corner radius | controls 4px (`rounded-control`), panels and menus 12px (`rounded-panel`), avatar and color dots fully round |
-| Header | None. The wordmark floats top-left (large screens only); account and settings float top-right in a small pill; the playground switcher, New playground and Share are one pill |
+| Header | Tablet and desktop: 48px tall bar with the 16px logo (16px above and below), save status, account and settings. Phones: no header; account and settings float top-right in a small pill |
 | Avatar | 24px box; the pedal keeps its own proportions |
 | Segmented toggle (units) | 24px buttons, `text-xs`, inside a 4px-radius track |
 
