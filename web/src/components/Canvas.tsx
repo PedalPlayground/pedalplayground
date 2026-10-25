@@ -319,6 +319,7 @@ export function Canvas() {
       onPointerMove={onPointerMove}
       onPointerUp={endGesture}
       onPointerCancel={endGesture}
+      onLostPointerCapture={endGesture}
     >
       <div
         className="absolute left-0 top-0 origin-top-left"
@@ -330,16 +331,16 @@ export function Canvas() {
           </div>
         ))}
 
-        {guides.x.map((x) => (
+        {guides.x.map((x, i) => (
           <div
-            key={`gx${x}`}
+            key={`gx${i}`}
             className="pointer-events-none absolute bg-[#ff3b8d]"
             style={{ left: x * PX_PER_INCH, top: -5000, height: 10000, width: 1 / view.zoom, zIndex: 100000 }}
           />
         ))}
-        {guides.y.map((y) => (
+        {guides.y.map((y, i) => (
           <div
-            key={`gy${y}`}
+            key={`gy${i}`}
             className="pointer-events-none absolute bg-[#ff3b8d]"
             style={{ top: y * PX_PER_INCH, left: -5000, width: 10000, height: 1 / view.zoom, zIndex: 100000 }}
           />

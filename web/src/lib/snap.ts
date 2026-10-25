@@ -51,6 +51,8 @@ export function snapMove(moving: Item[], others: Item[], dx: number, dy: number,
     threshold,
   );
 
-  const guides: Guides = { x: sx?.lines ?? [], y: sy?.lines ?? [] };
+  // Several items can share an edge, so the same line can match more than once. Keep each line once.
+  const unique = (lines: number[] | undefined) => [...new Set(lines ?? [])];
+  const guides: Guides = { x: unique(sx?.lines), y: unique(sy?.lines) };
   return { dx: dx + (sx?.offset ?? 0), dy: dy + (sy?.offset ?? 0), guides };
 }
