@@ -74,7 +74,7 @@ function FontSwitcher() {
 
   return (
     <div
-      className="fixed bottom-3 left-3 z-[9999] rounded-panel bg-surface text-xs text-ink shadow-panel"
+      className="fixed bottom-3 right-3 z-[9999] rounded-panel bg-surface text-xs text-ink shadow-panel"
       style={{ fontFamily: "system-ui, sans-serif" }}
     >
       <button onClick={() => setOpen(!open)} className="w-full px-3 py-1.5 text-left font-semibold">
