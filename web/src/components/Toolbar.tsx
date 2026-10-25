@@ -1,4 +1,4 @@
-import { Hand, MousePointer2, Plus, Redo2, Undo2, ZoomIn, ZoomOut } from "lucide-react";
+import { Hand, Maximize2, MousePointer2, Plus, Redo2, Undo2, ZoomIn, ZoomOut } from "lucide-react";
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -73,6 +73,9 @@ export function Toolbar({ onPlace }: { onPlace: () => void }) {
           <ZoomIn size={18} />
         </IconButton>
       </span>
+      <IconButton label="Zoom to fit (⇧1)" onClick={fit}>
+        <Maximize2 size={18} />
+      </IconButton>
       <span className="mx-1 h-5 w-px bg-line max-sm:hidden" />
       <IconButton label="Undo (⌘Z)" disabled={!canUndo} onClick={undo}>
         <Undo2 size={18} />

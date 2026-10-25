@@ -1,5 +1,5 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
-import { ChevronUp, Plus, Redo2, Undo2 } from "lucide-react";
+import { ChevronUp, Maximize2, Plus, Redo2, Undo2 } from "lucide-react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { modes } from "./ModeRail";
@@ -10,6 +10,7 @@ import { modes } from "./ModeRail";
  */
 export function MobileBar({ onPlace }: { onPlace: () => void }) {
   const mode = useUi((u) => u.mode);
+  const fit = usePlayground((s) => s.fitToContent);
   const undo = usePlayground((s) => s.undo);
   const redo = usePlayground((s) => s.redo);
   const canUndo = usePlayground((s) => s.past.length > 0);
@@ -45,6 +46,9 @@ export function MobileBar({ onPlace }: { onPlace: () => void }) {
             </Dropdown.Content>
           </Dropdown.Portal>
         </Dropdown.Root>
+        <button aria-label="Zoom to fit" onClick={fit} className={btn}>
+          <Maximize2 size={20} />
+        </button>
         <button aria-label="Undo" disabled={!canUndo} onClick={undo} className={btn}>
           <Undo2 size={20} />
         </button>

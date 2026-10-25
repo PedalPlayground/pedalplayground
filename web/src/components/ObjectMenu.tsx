@@ -1,4 +1,4 @@
-import { ArrowDownToLine, ArrowUpToLine, Replace, RotateCw, Trash2 } from "lucide-react";
+import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Replace, RotateCw, Trash2 } from "lucide-react";
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -48,6 +48,11 @@ export function ObjectMenu() {
       <Action label="Rotate (R)" onClick={s.rotateSelected}>
         <RotateCw size={18} />
       </Action>
+      {s.selected.length >= 3 && (
+        <Action label="Distribute horizontally" onClick={s.distributeHorizontally}>
+          <AlignHorizontalSpaceBetween size={18} />
+        </Action>
+      )}
       <span className="mx-1 h-5 w-px bg-line" />
       <Action label="Bring forward (])" onClick={s.bringForward}>
         <ArrowUpToLine size={18} />

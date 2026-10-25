@@ -51,6 +51,8 @@ interface PlaygroundState {
   clearSelection: () => void;
   rotateSelected: () => void;
   deleteSelected: () => void;
+  /** Spaces 3+ selected items so the gaps between them are equal; the leftmost and rightmost stay put. */
+  distributeHorizontally: () => void;
   bringForward: () => void;
   sendBackward: () => void;
   bringToFront: () => void;
@@ -282,6 +284,23 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         s.selected.includes(i.id) ? { ...i, rotation: ((i.rotation + 90) % 360) as Rotation } : i,
       ),
     })),
+  distributeHorizontally: () =>
+    set((s) => {
+      const picked = s.items.filter((i) => s.selected.includes(i.id));
+      if (picked.length < 3) return {};
+      const sorted = picked.map((item) => ({ item, b: itemBounds(item) })).sort((a, b) => a.b.left - b.b.left);
+      const first = sorted[0].b.left;
+      const last = sorted[sorted.length - 1].b.right;
+      const widths = sorted.reduce((sum, e) => sum + (e.b.right - e.b.left), 0);
+      const gap = (last - first - widths) / (sorted.length - 1);
+      const shift = new Map<string, number>();
+      let cursor = first;
+      for (const e of sorted) {
+        shift.set(e.item.id, cursor - e.b.left);
+        cursor += e.b.right - e.b.left + gap;
+      }
+      return { ...record(s), items: s.items.map((i) => (shift.has(i.id) ? { ...i, x: i.x + shift.get(i.id)! } : i)) };
+    }),
   deleteSelected: () =>
     set((s) => ({ ...record(s), items: s.items.filter((i) => !s.selected.includes(i.id)), selected: [] })),
 

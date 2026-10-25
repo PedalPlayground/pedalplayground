@@ -14,6 +14,8 @@ const DRAG_START_PX = 3;
 /** A touch that moves less than this still counts as a tap. */
 const TAP_SLOP_PX = 6;
 const NO_GUIDES: Guides = { x: [], y: [] };
+/** Two taps on the same product within this window add it to the earlier selection. */
+const DOUBLE_TAP_MS = 350;
 
 type Rect = { x: number; y: number; w: number; h: number };
 
@@ -63,6 +65,7 @@ export function Canvas() {
   const gesture = useRef<Gesture | null>(null);
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const spaceDown = useRef(false);
+  const lastTap = useRef<{ id: string; t: number; prev: string[] } | null>(null);
   const tool = useUi((u) => u.tool);
 
   useEffect(() => {
@@ -126,6 +129,9 @@ export function Canvas() {
       } else if (mod && key === "a") {
         e.preventDefault();
         s.selectMany(s.items.map((i) => i.id));
+      } else if (e.shiftKey && e.code === "Digit1" && !mod) {
+        e.preventDefault();
+        s.fitToContent();
       } else if (mod && (key === "=" || key === "+")) {
         e.preventDefault();
         s.zoomBy(1.25);
@@ -199,8 +205,20 @@ export function Canvas() {
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: true, moved: false };
     } else if (itemEl) {
       const id = itemEl.dataset.itemId!;
-      if (e.shiftKey) s.select(id, true);
-      else if (!s.selected.includes(id)) s.select(id);
+      const now = Date.now();
+      const tap = lastTap.current;
+      if (e.shiftKey) {
+        s.select(id, true);
+        lastTap.current = null;
+      } else if (tap && tap.id === id && now - tap.t < DOUBLE_TAP_MS && tap.prev.length) {
+        // Double tap: keep what was selected before the first tap and add this product.
+        s.selectMany([...tap.prev, id]);
+        lastTap.current = null;
+      } else {
+        // Remember the selection from before this tap, since a plain tap replaces it.
+        lastTap.current = { id, t: now, prev: s.selected.filter((x) => x !== id) };
+        if (!s.selected.includes(id)) s.select(id);
+      }
       const state = usePlayground.getState();
       const origins: Record<string, { x: number; y: number }> = {};
       for (const i of state.items) if (state.selected.includes(i.id)) origins[i.id] = { x: i.x, y: i.y };
@@ -235,6 +253,7 @@ export function Canvas() {
       if (!g.started) {
         if (Math.hypot(rawX, rawY) < DRAG_START_PX) return;
         g.started = true;
+        lastTap.current = null; // a drag isn't a tap
         s.beginTransaction(); // the whole drag is one undo step
       }
       const scale = s.view.zoom * PX_PER_INCH;

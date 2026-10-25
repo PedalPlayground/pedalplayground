@@ -20,7 +20,7 @@ import { ObjectMenu } from "./components/ObjectMenu";
 import { ShareDialog } from "./components/ShareDialog";
 import { Toolbar } from "./components/Toolbar";
 import { UpgradeDialog } from "./components/UpgradeDialog";
-import { BETA, FEEDBACK_URL } from "./lib/beta";
+import { BETA } from "./lib/beta";
 import { useAuth } from "./store/auth";
 import { startCloudSync, useCloud } from "./store/cloud";
 import { restorePlayground, startLocalAutosave, usePlayground } from "./store/playground";
@@ -105,50 +105,45 @@ export function App() {
 
   return (
     <div className="flex h-full flex-col">
-      <header className="flex h-12 shrink-0 items-center justify-between border-b border-line bg-surface px-4">
-        <div className="flex items-center gap-2">
-          <h1 className="flex max-sm:hidden">
-            <Logo />
-          </h1>
-          {BETA && (
-            <>
-              <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand">Beta</span>
-              {FEEDBACK_URL && (
-                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="hidden text-xs sm:inline text-ink-muted hover:text-ink hover:underline">
-                  Send feedback
-                </a>
-              )}
-            </>
-          )}
-        </div>
-        <div className="flex items-center gap-1 sm:gap-3">
-          <SaveStatus />
-          {user ? (
-            <AvatarMenu
-              onAccount={() => setDialog("account")}
-              onPlaygrounds={() => setDialog("playgrounds")}
-              onChangeAvatar={() => setDialog("avatar")}
-            />
-          ) : (
-            cloudEnabled && (
-              <button
-                onClick={() => setDialog("account")}
-                className="h-9 rounded-control bg-surface-hover px-3 text-sm font-medium outline-none hover:bg-line focus-visible:ring-2 focus-visible:ring-brand"
-              >
-                Sign in
-              </button>
-            )
-          )}
-          <SettingsMenu />
-        </div>
-      </header>
-
       <div className="flex min-h-0 flex-1 flex-col sm:flex-row">
         <ModeRail />
 
         <main className="relative flex-1 overflow-hidden bg-canvas">
           <Canvas />
           <ObjectMenu />
+
+          {/* No header: the wordmark floats top-left on large screens; account and settings float top-right. */}
+          <div className="pointer-events-none absolute left-4 top-4 hidden items-center gap-2 lg:flex">
+            <h1 className="pointer-events-auto">
+              <Logo />
+            </h1>
+            {BETA && <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand">Beta</span>}
+          </div>
+
+          <div className="absolute right-3 top-3 z-20 flex flex-col items-end gap-2 sm:right-4 sm:top-4">
+            <div className="flex items-center gap-1 rounded-panel bg-surface p-1.5 shadow-panel">
+              {user ? (
+                <AvatarMenu
+                  onAccount={() => setDialog("account")}
+                  onPlaygrounds={() => setDialog("playgrounds")}
+                  onChangeAvatar={() => setDialog("avatar")}
+                />
+              ) : (
+                cloudEnabled && (
+                  <button
+                    onClick={() => setDialog("account")}
+                    className="h-9 rounded-control bg-surface-hover px-3 text-sm font-medium outline-none hover:bg-line focus-visible:ring-2 focus-visible:ring-brand"
+                  >
+                    Sign in
+                  </button>
+                )
+              )}
+              <SettingsMenu />
+            </div>
+            <div className="empty:hidden rounded-control bg-surface/90 px-2 py-1 shadow-panel">
+              <SaveStatus />
+            </div>
+          </div>
 
           <PlaygroundSwitcher
             onRename={() => setDialog("rename")}

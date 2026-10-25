@@ -113,9 +113,9 @@ export function PlaygroundSwitcher({
       >
         <Plus size={16} />
       </button>
-      <button onClick={onShare} className="btn-primary ml-0.5 flex h-9 items-center gap-1.5 px-3">
+      <button onClick={onShare} aria-label="Share" className="btn-primary ml-0.5 flex h-9 items-center gap-1.5 px-3 max-sm:px-2.5">
         <Share2 size={16} />
-        Share
+        <span className="max-sm:hidden">Share</span>
       </button>
     </div>
   );

@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { importAny } from "../lib/importers";
 import { usePlayground } from "../store/playground";
 import { requestNewPlayground } from "../lib/newPlayground";
+import { BETA, FEEDBACK_URL } from "../lib/beta";
 import { useAuth } from "../store/auth";
 import { useUi, type Theme } from "../store/ui";
 
@@ -98,6 +99,17 @@ export function SettingsMenu() {
               </Dropdown.RadioItem>
             ))}
           </Dropdown.RadioGroup>
+          {BETA && (
+            <>
+              <Dropdown.Separator className="my-1 h-px bg-line" />
+              <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Pedal Playground beta</Dropdown.Label>
+              {FEEDBACK_URL && (
+                <Dropdown.Item className={menuItem} onSelect={() => window.open(FEEDBACK_URL, "_blank", "noopener")}>
+                  Send feedback
+                </Dropdown.Item>
+              )}
+            </>
+          )}
         </Dropdown.Content>
       </Dropdown.Portal>
     </Dropdown.Root>
