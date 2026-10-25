@@ -12,7 +12,7 @@ export const menuItem =
   "flex cursor-pointer select-none items-center justify-between gap-6 rounded-control px-3 py-2 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
 export function SettingsMenu() {
-  const { units, setUnits, theme, setTheme } = useUi();
+  const { units, setUnits, theme, setTheme, snapping, setSnapping } = useUi();
   const signedIn = useAuth((s) => !!s.user);
   const fileInput = useRef<HTMLInputElement>(null);
 
@@ -72,6 +72,16 @@ export function SettingsMenu() {
           <Dropdown.Item className={menuItem} onSelect={() => fileInput.current?.click()}>
             Import file…
           </Dropdown.Item>
+          <Dropdown.Separator className="my-1 h-px bg-line" />
+          <Dropdown.CheckboxItem
+            className={menuItem}
+            checked={snapping}
+            onCheckedChange={(on) => setSnapping(on === true)}
+            onSelect={(e) => e.preventDefault()}
+          >
+            Snapping
+            <span className="text-brand">{snapping ? "✓" : ""}</span>
+          </Dropdown.CheckboxItem>
           <Dropdown.Separator className="my-1 h-px bg-line" />
           <Dropdown.Label className="px-3 pb-1 pt-1.5 text-xs text-ink-muted">Units</Dropdown.Label>
           <div role="radiogroup" aria-label="Units" className="mx-3 mb-2 flex rounded-control bg-surface-hover p-0.5">

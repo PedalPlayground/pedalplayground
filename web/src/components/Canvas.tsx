@@ -259,7 +259,8 @@ export function Canvas() {
       const scale = s.view.zoom * PX_PER_INCH;
       let dx = rawX / scale;
       let dy = rawY / scale;
-      if (e.altKey) {
+      // Alt/Option skips snapping for one drag; the Snapping setting turns it off for good.
+      if (e.altKey || !useUi.getState().snapping) {
         setGuides(NO_GUIDES);
       } else {
         const moving = s.items.filter((i) => g.origins[i.id]).map((i) => ({ ...i, ...g.origins[i.id] }));

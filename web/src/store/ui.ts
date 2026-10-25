@@ -12,6 +12,9 @@ interface UiState {
   tool: Tool;
   units: Units;
   theme: Theme;
+  /** Dragged items snap to other items' edges and centers. */
+  snapping: boolean;
+  setSnapping: (on: boolean) => void;
   upgrade: UpgradeReason | null;
   /** The pedal search panel; the canvas closes it as soon as the user starts arranging. */
   /** Image key of the pedal used as the user's avatar. */
@@ -35,6 +38,14 @@ const savedUnits = (): Units => {
     return localStorage.getItem("pp:units") === "mm" ? "mm" : "in";
   } catch {
     return "in";
+  }
+};
+
+const savedSnapping = (): boolean => {
+  try {
+    return localStorage.getItem("pp:snap") !== "off";
+  } catch {
+    return true;
   }
 };
 
@@ -69,6 +80,15 @@ export const useUi = create<UiState>((set) => ({
   tool: "select",
   units: savedUnits(),
   theme: savedTheme(),
+  snapping: savedSnapping(),
+  setSnapping: (snapping) => {
+    try {
+      localStorage.setItem("pp:snap", snapping ? "on" : "off");
+    } catch {
+      /* storage unavailable */
+    }
+    set({ snapping });
+  },
   upgrade: null,
   avatar: savedAvatar(),
   setAvatar: (avatar) => {
