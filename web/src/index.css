@@ -2,7 +2,7 @@
 
 /* Design tokens. Components use these via Tailwind utilities (bg-surface, text-ink-muted, ...). */
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --color-canvas: #f6f7f9;
   --color-surface: #ffffff;
@@ -83,12 +83,6 @@ body {
   color: var(--color-ink);
   background: var(--color-canvas);
   overflow: hidden;
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--font-heading, var(--font-sans));
 }
 
 /* The logo is dark artwork; flip it on dark surfaces. */
