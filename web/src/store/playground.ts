@@ -50,7 +50,6 @@ interface PlaygroundState {
   select: (id: string, additive?: boolean) => void;
   clearSelection: () => void;
   rotateSelected: () => void;
-  flipSelected: () => void;
   deleteSelected: () => void;
   bringForward: () => void;
   sendBackward: () => void;
@@ -283,8 +282,6 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         s.selected.includes(i.id) ? { ...i, rotation: ((i.rotation + 90) % 360) as Rotation } : i,
       ),
     })),
-  flipSelected: () =>
-    set((s) => ({ ...record(s), items: s.items.map((i) => (s.selected.includes(i.id) ? { ...i, flipX: !i.flipX } : i)) })),
   deleteSelected: () =>
     set((s) => ({ ...record(s), items: s.items.filter((i) => !s.selected.includes(i.id)), selected: [] })),
 

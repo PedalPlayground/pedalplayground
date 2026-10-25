@@ -1,4 +1,4 @@
-import { ArrowDownToLine, ArrowUpToLine, FlipHorizontal2, Replace, RotateCw, Trash2 } from "lucide-react";
+import { ArrowDownToLine, ArrowUpToLine, Replace, RotateCw, Trash2 } from "lucide-react";
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -47,9 +47,6 @@ export function ObjectMenu() {
       {single && <span className="mx-1 h-5 w-px bg-line" />}
       <Action label="Rotate (R)" onClick={s.rotateSelected}>
         <RotateCw size={18} />
-      </Action>
-      <Action label="Flip (F)" onClick={s.flipSelected}>
-        <FlipHorizontal2 size={18} />
       </Action>
       <span className="mx-1 h-5 w-px bg-line" />
       <Action label="Bring forward (])" onClick={s.bringForward}>
