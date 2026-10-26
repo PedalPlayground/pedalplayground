@@ -167,12 +167,13 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     } else add(entry, String(entry.id));
   };
 
-  // Keyboard: arrows move a highlight through the results, Enter picks it. With nothing highlighted yet, Enter picks
-  // the top result of a typed search.
-  const [active, setActive] = useState(-1);
-  useEffect(() => setActive(-1), [deferredQuery, kind, sizes]);
+  // Keyboard: the top result starts highlighted, so Enter adds it as soon as you see it. Arrows move the highlight.
+  const [highlight, setActive] = useState(0);
+  useEffect(() => setActive(0), [deferredQuery, kind, sizes]);
+  const active = results.length === 0 ? -1 : Math.min(highlight, results.length - 1);
   useEffect(() => {
-    if (active >= 0) document.getElementById(`search-row-${active}`)?.scrollIntoView({ block: "nearest" });
+    // Keep the highlighted row in view, but don't scroll the list back to the top on every new search.
+    if (active > 0) document.getElementById(`search-row-${active}`)?.scrollIntoView({ block: "nearest" });
   }, [active]);
   const onSearchKey = (e: ReactKeyboardEvent<HTMLInputElement>) => {
     if (e.nativeEvent.isComposing) return;
@@ -183,9 +184,9 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       if (results.length === 0) return;
       e.preventDefault();
       const step = e.key === "ArrowDown" ? 1 : -1;
-      setActive((a) => (a < 0 ? (step > 0 ? 0 : results.length - 1) : Math.min(results.length - 1, Math.max(0, a + step))));
+      setActive(Math.min(results.length - 1, Math.max(0, active + step)));
     } else if (e.key === "Enter") {
-      const entry = results[active >= 0 ? active : typed ? 0 : -1];
+      const entry = results[active];
       if (!entry) return;
       e.preventDefault();
       pick(entry);
@@ -381,7 +382,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
               tabIndex={-1}
               onClick={() => pick(entry)}
               className={`flex w-full items-center gap-3 rounded-control p-2 text-left transition-colors ${
-                isAdded ? "bg-brand/10" : row === active ? "bg-surface-hover" : "hover:bg-surface-hover active:bg-chrome-line"
+                isAdded ? "bg-brand/10" : row === active ? "pointer-fine:bg-surface-hover" : "hover:bg-surface-hover active:bg-chrome-line"
               }`}
             >
               <img
