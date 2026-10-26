@@ -1,4 +1,4 @@
-import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Lock, LockOpen, Replace, RotateCw, Trash2 } from "lucide-react";
+import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Lock, LockOpen, Pencil, Replace, RotateCw, Trash2 } from "lucide-react";
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -39,6 +39,7 @@ function Action({
 export function ObjectMenu() {
   const s = usePlayground();
   const setReplacing = useUi((u) => u.setReplacing);
+  const setEditing = useUi((u) => u.setEditing);
   const searchOpen = useUi((u) => u.searchOpen);
   if (!s.selected.length) return null;
   const single = s.selected.length === 1 ? s.items.find((i) => i.id === s.selected[0]) : undefined;
@@ -75,6 +76,17 @@ export function ObjectMenu() {
         <ArrowDownToLine size={18} />
       </Action>
       <span className={barDivider} />
+      {single?.custom && (
+        <button
+          onClick={() => setEditing(true)}
+          aria-label={single.kind === "pedalboard" ? "Edit Size" : "Edit Size, Name, Color and Style"}
+          {...tip(single.kind === "pedalboard" ? "Edit Size" : "Edit Size, Name, Color and Style")}
+          className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}
+        >
+          <Pencil size={14} strokeWidth={2.25} className="max-sm:size-[18px] max-sm:stroke-2" />
+          <span className="hidden sm:inline">Edit</span>
+        </button>
+      )}
       {single && (
         <button
           onClick={() => setReplacing(true)}

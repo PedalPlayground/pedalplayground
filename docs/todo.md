@@ -8,7 +8,6 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 - Make signed in/out status more clear.
 - Polish the Pro purchase modal.
 - Better sign-in success UX.
-- Better-looking custom pedals.
 - Finesse the design library (buttons and form elements are a bit sterile).
 - Make the sign-in flow more complete.
 - Sign-in: after sending a code, show the address it went to with a "Wrong address? Change it" link (a mistyped address looks like a broken email).
@@ -37,3 +36,4 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 
 - Snap guides get stuck sometimes.
 - Onboarding popups (first-visit tour; replay from Settings → Take the tour).
+- Better-looking custom pedals (style templates, plus Edit for custom pedals and pedalboards).

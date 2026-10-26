@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { importAny, readLegacyLocalStorage } from "../lib/importers";
+import type { PedalTemplate } from "../lib/pedalTemplates";
 import type { CatalogItem, Item, PlaygroundDocument, Rotation, View } from "../lib/types";
 
 const STORAGE_KEY = "pp:playground:v3";
@@ -47,7 +48,9 @@ interface PlaygroundState {
   addCatalogItem: (kind: Item["kind"], c: CatalogItem) => void;
   /** Swaps the given item for another catalog product of the same kind, keeping its center, rotation, flip and stacking. */
   replaceItem: (id: string, c: CatalogItem) => void;
-  addCustomItem: (c: { kind: Item["kind"]; width: number; height: number; label: string; color: string | null }) => void;
+  addCustomItem: (c: CustomFields & { kind: Item["kind"] }) => void;
+  /** Changes a custom item's size, name, color or template, keeping its center. */
+  updateCustomItem: (id: string, c: CustomFields) => void;
   select: (id: string, additive?: boolean) => void;
   /** Changes an item's Equipment List details as one undo step. */
   updateGear: (id: string, patch: Partial<Pick<Item, "status" | "price" | "ma" | "voltage" | "pedalType">>) => void;
@@ -70,6 +73,9 @@ interface PlaygroundState {
   toDocument: () => PlaygroundDocument;
   reset: () => void;
 }
+
+/** What the Custom form sets on a custom pedal or pedalboard. */
+export type CustomFields = { width: number; height: number; label: string; color: string | null; template?: PedalTemplate };
 
 const DEFAULT_VIEW: View = { x: 80, y: 80, zoom: 1 };
 
@@ -235,6 +241,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         y: cy - c.height / 2,
         custom: false,
         color: null,
+        template: undefined,
         // A different product has a different price and specs; whether they own it stays.
         price: undefined,
         ma: undefined,
@@ -255,8 +262,30 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         height: c.height,
         custom: true,
         color: c.kind === "pedal" ? c.color : null,
+        ...(c.kind === "pedal" && c.template ? { template: c.template } : {}),
       }),
     ),
+
+  updateCustomItem: (id, c) =>
+    set((s) => {
+      const old = s.items.find((i) => i.id === id);
+      if (!old?.custom) return {};
+      const cx = old.x + old.width / 2;
+      const cy = old.y + old.height / 2;
+      const pedal = old.kind === "pedal";
+      const next: Item = {
+        ...old,
+        label: pedal ? c.label : old.label,
+        width: c.width,
+        height: c.height,
+        x: cx - c.width / 2,
+        y: cy - c.height / 2,
+        color: pedal ? c.color : null,
+        template: pedal ? c.template : undefined,
+      };
+      if (!next.template) delete next.template;
+      return { ...record(s), items: s.items.map((i) => (i.id === id ? next : i)) };
+    }),
 
   select: (id, additive) =>
     set((s) => ({
