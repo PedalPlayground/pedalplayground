@@ -307,9 +307,9 @@ export function Canvas() {
     setGuides(NO_GUIDES);
   };
 
-  // A fine 8px dot grid (from the Figma mockup). When zoomed out, skip every other dot until it isn't too dense.
-  let gridStep = 8 * view.zoom;
-  while (gridStep < 6) gridStep *= 2;
+  // A fine 12px dot grid. When zoomed out, skip every other dot until it isn't too dense.
+  let gridStep = 12 * view.zoom;
+  while (gridStep < 8) gridStep *= 2;
 
   return (
     <div
@@ -317,7 +317,7 @@ export function Canvas() {
       className="absolute inset-0 touch-none"
       style={{
         cursor: tool === "hand" ? "grab" : "default",
-        backgroundImage: "radial-gradient(circle at 1px 1px, var(--color-grid) 0.75px, transparent 1px)",
+        backgroundImage: "radial-gradient(circle at 1px 1px, var(--color-grid) 0.625px, transparent 0.875px)",
         backgroundSize: `${gridStep}px ${gridStep}px`,
         backgroundPosition: `${view.x}px ${view.y}px`,
       }}
