@@ -46,7 +46,7 @@ function AddGlyph() {
         <rect x="1" y="7" width="8" height="4" rx="1" fill="currentColor" opacity="0.7" className="text-brand" />
       </svg>
       {/* Same pedalboard shape as the logo icon. */}
-      <svg width="18" height="12" viewBox="0 0 24 16" fill="currentColor">
+      <svg width="18" height="12" viewBox="0 0 24 16" fill="#000" className="drop-shadow-[0_0_1px_rgb(255_255_255/0.25)]">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
