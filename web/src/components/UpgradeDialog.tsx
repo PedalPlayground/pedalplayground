@@ -1,13 +1,13 @@
 import { Check } from "lucide-react";
-import { useState } from "react";
-import { startCheckout, type Interval } from "../lib/billing";
+import { useEffect, useState } from "react";
+import { fetchPrices, formatPrice, startCheckout, type Interval, type Prices } from "../lib/billing";
 import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
 import { useUi, type UpgradeReason } from "../store/ui";
 import { Modal } from "./Modal";
 
-// Display-only labels, for example "$4 / month". Real prices live in Stripe; leave unset to hide them.
-const LABELS: Record<Interval, string | undefined> = {
+// Fallback labels, for example "$4 / month", used only if prices can't be loaded from Stripe.
+const FALLBACK: Record<Interval, string | undefined> = {
   month: import.meta.env.VITE_PRO_PRICE_MONTHLY as string | undefined,
   year: import.meta.env.VITE_PRO_PRICE_YEARLY as string | undefined,
 };
@@ -29,6 +29,32 @@ const BLURB: Record<UpgradeReason, string> = {
 const FREE = ["1 saved playground", "Share and fork playgrounds", "Every pedal and pedalboard", "Custom pedals and boards", "Featured pedal avatars"];
 const PRO = ["Unlimited saved playgrounds", "Any catalog pedal as your avatar", "Everything in Free"];
 
+interface PriceLabels {
+  /** The price for each billing period, e.g. "$4 / month". */
+  period: Record<Interval, string | undefined>;
+  /** The annual plan's monthly equivalent and saving, e.g. "$3.33 / month, save 17%". */
+  yearNote?: string;
+  /** One line for the Pro card, e.g. "$4 / month or $40 / year". */
+  summary?: string;
+}
+
+function priceLabels(prices: Prices | null): PriceLabels {
+  const m = prices?.month;
+  const y = prices?.year;
+  const period = {
+    month: m ? `${formatPrice(m.amount, m.currency)} / month` : FALLBACK.month,
+    year: y ? `${formatPrice(y.amount, y.currency)} / year` : FALLBACK.year,
+  };
+  let yearNote: string | undefined;
+  if (y) {
+    yearNote = `${formatPrice(Math.round(y.amount / 12), y.currency)} / month`;
+    const saving = m && m.currency === y.currency ? Math.round((1 - y.amount / (m.amount * 12)) * 100) : 0;
+    if (saving > 0) yearNote += `, save ${saving}%`;
+  }
+  const summary = period.month && period.year ? `${period.month} or ${period.year}` : (period.month ?? period.year);
+  return { period, yearNote, summary };
+}
+
 function Feature({ children }: { children: string }) {
   return (
     <li className="flex items-start gap-2 text-sm">
@@ -45,8 +71,21 @@ export function UpgradeDialog({ onSignIn }: { onSignIn: () => void }) {
   const [interval, setInterval] = useState<Interval>("year");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [prices, setPrices] = useState<Prices | null>(null);
+
+  useEffect(() => {
+    if (!reason) return;
+    let live = true;
+    fetchPrices()
+      .then((p) => live && setPrices(p))
+      .catch(() => {}); // fall back to the build-time labels, if any
+    return () => {
+      live = false;
+    };
+  }, [reason]);
 
   if (!reason) return null;
+  const labels = priceLabels(prices);
 
   const checkout = async () => {
     setBusy(true);
@@ -74,7 +113,10 @@ export function UpgradeDialog({ onSignIn }: { onSignIn: () => void }) {
           <ul className="space-y-1.5">{FREE.map((f) => <Feature key={f}>{f}</Feature>)}</ul>
         </div>
         <div className="rounded-control border-2 border-brand p-3">
-          <div className="mb-2 text-sm font-semibold">Pro</div>
+          <div className="mb-2 flex items-baseline justify-between gap-2">
+            <span className="text-sm font-semibold">Pro</span>
+            {labels.summary && <span className="animate-fade text-xs text-ink-muted">{labels.summary}</span>}
+          </div>
           <ul className="space-y-1.5">{PRO.map((f) => <Feature key={f}>{f}</Feature>)}</ul>
         </div>
       </div>
@@ -97,8 +139,12 @@ export function UpgradeDialog({ onSignIn }: { onSignIn: () => void }) {
                 onClick={() => setInterval(i)}
                 className={`flex-1 rounded-control border px-3 py-2 text-left text-sm ${interval === i ? "border-brand bg-brand/10" : "border-line hover:bg-surface-hover"}`}
               >
-                <div className="font-medium">{i === "year" ? "Annual" : "Monthly"}</div>
-                {LABELS[i] && <div className="text-xs text-ink-muted">{LABELS[i]}</div>}
+                <div className="flex items-baseline justify-between gap-2">
+                  <span className="font-medium">{i === "year" ? "Annual" : "Monthly"}</span>
+                  {labels.period[i] && <span className="animate-fade font-medium">{labels.period[i]}</span>}
+                </div>
+                {i === "year" && labels.yearNote && <div className="animate-fade text-xs text-ink-muted">{labels.yearNote}</div>}
+                {i === "month" && labels.period.month && <div className="animate-fade text-xs text-ink-muted">Billed monthly</div>}
               </button>
             ))}
           </div>

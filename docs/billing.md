@@ -15,7 +15,10 @@ App ◀── my_entitlements() (plan, limit, usage) ─────────
 
 - `supabase/migrations/20261023000000_billing.sql`: `plan_limits`, `subscriptions`, `user_plan()`,
   the limit trigger on `playgrounds`, and `my_entitlements()`.
-- `supabase/functions/`: `create-checkout-session`, `create-portal-session`, `stripe-webhook`.
+- `supabase/functions/`: `create-checkout-session`, `create-portal-session`, `stripe-webhook`, `get-prices`.
+- The upgrade dialog shows prices from `get-prices`, which reads the same `STRIPE_PRICE_*` IDs from Stripe (cached
+  for 10 minutes per function instance). Change a price in Stripe, point the secret at the new price ID, and the
+  dialog follows.
 - The **database enforces the limit**, not the UI: inserting a playground past the limit fails with
   HTTP 402 (`playground_limit_reached`). The UI only reads `my_entitlements()` to explain it nicely.
 - The webhook is the only writer of `subscriptions`. Clients can read their own row and nothing else.
@@ -62,14 +65,17 @@ App ◀── my_entitlements() (plan, limit, usage) ─────────
    supabase functions deploy create-checkout-session
    supabase functions deploy create-portal-session
    supabase functions deploy stripe-webhook --no-verify-jwt
+   supabase functions deploy get-prices --no-verify-jwt
    ```
    The webhook must be deployed with `--no-verify-jwt` because Stripe doesn't send a Supabase token;
-   its authenticity comes from the Stripe signature check inside the function.
+   its authenticity comes from the Stripe signature check inside the function. `get-prices` is public too: signed-out
+   visitors see prices, and it only returns the two Pro prices.
 
-### 3. App (optional display labels)
+### 3. App (optional fallback labels)
 
-In `web/.env.local`, `VITE_PRO_PRICE_MONTHLY="$X / month"` and `VITE_PRO_PRICE_YEARLY="$Y / year"` show prices in the
-upgrade dialog. They're labels only; Stripe holds the real prices, so keep them in step by hand.
+Prices come from Stripe through `get-prices`. If that call fails, the dialog falls back to
+`VITE_PRO_PRICE_MONTHLY="$X / month"` and `VITE_PRO_PRICE_YEARLY="$Y / year"` from `web/.env.local`, or shows no price
+when those are unset.
 
 ## Testing (test mode)
 

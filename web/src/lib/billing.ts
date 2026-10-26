@@ -65,3 +65,35 @@ async function redirectFromFunction(name: string, body?: Record<string, unknown>
 
 export const startCheckout = (interval: Interval) => redirectFromFunction("create-checkout-session", { interval });
 export const openBillingPortal = () => redirectFromFunction("create-portal-session");
+
+export interface Price {
+  /** Smallest currency unit, e.g. cents. */
+  amount: number;
+  currency: string;
+}
+export type Prices = Record<Interval, Price | null>;
+
+let pricesRequest: Promise<Prices> | null = null;
+
+/** Pro prices as Stripe has them, fetched once per page load. */
+export function fetchPrices(): Promise<Prices> {
+  if (!supabase) return Promise.reject(new Error("Cloud is not configured."));
+  const client = supabase;
+  pricesRequest ??= client.functions.invoke("get-prices").then(({ data, error }) => {
+    if (error || !data) throw error ?? new Error("No prices returned.");
+    return data as Prices;
+  });
+  // Let a later open retry if this one failed.
+  pricesRequest.catch(() => (pricesRequest = null));
+  return pricesRequest;
+}
+
+/** "$4" for whole amounts, "$3.33" otherwise. */
+export function formatPrice(amount: number, currency: string) {
+  const value = amount / 100;
+  return new Intl.NumberFormat(undefined, {
+    style: "currency",
+    currency: currency.toUpperCase(),
+    minimumFractionDigits: Number.isInteger(value) ? 0 : 2,
+  }).format(value);
+}
