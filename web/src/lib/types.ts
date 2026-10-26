@@ -1,3 +1,5 @@
+import type { PedalTemplate } from "./pedalTemplates";
+
 export interface CatalogItem {
   brand: string;
   name: string;
@@ -33,6 +35,8 @@ export interface Item {
   custom: boolean;
   /** Body color for custom pedals (hex); null for catalog items and custom boards. */
   color: string | null;
+  /** Custom pedals: which look to draw (see pedalTemplates). Missing means Classic, the look from before templates. */
+  template?: PedalTemplate;
   /** Locked items stay put: they can be selected but not dragged, nudged or distributed. */
   locked?: boolean;
   /** Equipment List: "wanted" means the user still needs to buy it. Missing means they own it. */

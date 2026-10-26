@@ -23,7 +23,7 @@ const SHEET_MS = 220;
  * Adds products to the canvas; with `replace`, picks a replacement for the selected product instead.
  * Larger screens get a panel above the toolbar; phones get a bottom drawer that slides closed.
  */
-export function SearchPanel({ onClose: close, replace = false }: { onClose: () => void; replace?: boolean }) {
+export function SearchPanel({ onClose: close, replace = false, edit = false }: { onClose: () => void; replace?: boolean; edit?: boolean }) {
   const phone = useMediaQuery(PHONE_QUERY);
   const { height: visibleHeight, keyboard } = useVisualViewport();
 
@@ -63,14 +63,16 @@ export function SearchPanel({ onClose: close, replace = false }: { onClose: () =
   const units = useUi((u) => u.units);
   const addCatalogItem = usePlayground((p) => p.addCatalogItem);
   const replaceItem = usePlayground((p) => p.replaceItem);
-  const target = usePlayground((p) => (replace && p.selected.length === 1 ? p.items.find((i) => i.id === p.selected[0]) : undefined));
+  const target = usePlayground((p) =>
+    (replace || edit) && p.selected.length === 1 ? p.items.find((i) => i.id === p.selected[0] && (!edit || i.custom)) : undefined,
+  );
 
   const [category, setCategory] = useState<Category>(target?.kind === "pedalboard" ? "pedalboards" : "pedals");
 
-  // Replacing needs exactly one selected product; close if that stops being true.
+  // Replacing and editing need exactly one selected product; close if that stops being true.
   useEffect(() => {
-    if (replace && !target) onClose();
-  }, [replace, target, onClose]);
+    if ((replace || edit) && !target) onClose();
+  }, [replace, edit, target, onClose]);
 
   useEffect(() => {
     void load();
@@ -101,6 +103,12 @@ export function SearchPanel({ onClose: close, replace = false }: { onClose: () =
   const body = (
     <>
       <div className="flex items-center gap-2 border-b border-line px-3 py-2">
+        {edit ? (
+          <h2 className="flex h-9 flex-1 items-center text-sm font-semibold">
+            {target?.kind === "pedalboard" ? "Edit Custom Pedalboard" : "Edit Custom Pedal"}
+          </h2>
+        ) : (
+        <>
         <Search size={16} className="text-ink-muted" />
         <input
           autoFocus
@@ -109,11 +117,13 @@ export function SearchPanel({ onClose: close, replace = false }: { onClose: () =
           placeholder={target ? `Replace ${target.label}` : "Search pedals and pedalboards"}
           className="h-9 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted max-sm:text-base"
         />
+        </>
+        )}
         <button aria-label="Close search" {...tip("Close")} onClick={onClose} className="press grid size-7 place-items-center rounded-control text-ink-muted hover:bg-surface-hover hover:text-ink active:bg-chrome-line">
           <X size={16} />
         </button>
       </div>
-      {!replace && (
+      {!replace && !edit && (
       <div className="flex gap-1 px-3 pt-2">
         {(["pedals", "pedalboards", "custom"] as const).map((c) => (
           <button
@@ -128,9 +138,9 @@ export function SearchPanel({ onClose: close, replace = false }: { onClose: () =
         ))}
       </div>
       )}
-      {category === "custom" ? (
-        <div className={phone ? "min-h-0 flex-1 overflow-y-auto" : ""}>
-          <CustomItemForm onDone={onClose} />
+      {edit || category === "custom" ? (
+        <div className={phone ? "min-h-0 flex-1 overflow-y-auto overscroll-contain" : "max-h-[min(560px,calc(100dvh-12rem))] overflow-y-auto"}>
+          <CustomItemForm onDone={onClose} item={edit ? target : undefined} />
         </div>
       ) : (
       <ul className={`overflow-y-auto overscroll-contain p-2 ${phone ? "min-h-0 flex-1" : "max-h-80"}`}>
@@ -195,7 +205,7 @@ export function SearchPanel({ onClose: close, replace = false }: { onClose: () =
       />
       <div
         role="dialog"
-        aria-label={replace ? "Replace" : "Add Gear"}
+        aria-label={edit ? "Edit" : replace ? "Replace" : "Add Gear"}
         className="animate-sheet absolute inset-x-0 flex flex-col rounded-t-[16px] bg-surface shadow-[0_-4px_24px_rgb(0_0_0/0.12)]"
         style={{
           bottom: keyboard,
