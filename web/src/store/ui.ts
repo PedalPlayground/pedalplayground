@@ -31,6 +31,10 @@ interface UiState {
   setTheme: (t: Theme) => void;
   openUpgrade: (reason: UpgradeReason) => void;
   closeUpgrade: () => void;
+  /** The first-visit tour of the editor. Opens on its own once; Settings can replay it. */
+  tourOpen: boolean;
+  startTour: () => void;
+  endTour: () => void;
 }
 
 const savedUnits = (): Units => {
@@ -46,6 +50,17 @@ const savedSnapping = (): boolean => {
     return localStorage.getItem("pp:snap") !== "off";
   } catch {
     return true;
+  }
+};
+
+const TOUR_KEY = "pp:tour";
+
+/** True once the tour has been finished or skipped on this device. */
+export const tourSeen = (): boolean => {
+  try {
+    return localStorage.getItem(TOUR_KEY) === "done";
+  } catch {
+    return true; // without storage we couldn't remember a skip, so don't show it on every visit
   }
 };
 
@@ -115,6 +130,16 @@ export const useUi = create<UiState>((set) => ({
   },
   openUpgrade: (upgrade) => set({ upgrade }),
   closeUpgrade: () => set({ upgrade: null }),
+  tourOpen: false,
+  startTour: () => set({ tourOpen: true, searchOpen: false, replacing: false }),
+  endTour: () => {
+    try {
+      localStorage.setItem(TOUR_KEY, "done");
+    } catch {
+      /* storage unavailable */
+    }
+    set({ tourOpen: false });
+  },
   setTheme: (theme) => {
     try {
       localStorage.setItem("pp:theme", theme);

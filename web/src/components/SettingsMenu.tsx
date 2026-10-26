@@ -68,7 +68,7 @@ function Segmented<T extends string>({
 }
 
 export function SettingsMenu() {
-  const { units, setUnits, theme, setTheme, snapping, setSnapping } = useUi();
+  const { units, setUnits, theme, setTheme, snapping, setSnapping, startTour } = useUi();
   const signedIn = useAuth((s) => !!s.user);
   const fileInput = useRef<HTMLInputElement>(null);
 
@@ -122,6 +122,10 @@ export function SettingsMenu() {
               <Dropdown.Separator className="my-1 h-px bg-line" />
             </>
           )}
+          <Dropdown.Item className={menuItem} onSelect={startTour}>
+            Take the tour
+          </Dropdown.Item>
+          <Dropdown.Separator className="my-1 h-px bg-line" />
           {SHOW_FILE_IO && (
             <>
               <Dropdown.Item className={menuItem} onSelect={exportFile}>

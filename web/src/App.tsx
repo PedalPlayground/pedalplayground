@@ -15,9 +15,10 @@ import { PlaygroundBreadcrumb } from "./components/PlaygroundSwitcher";
 import { RenameDialog } from "./components/RenameDialog";
 import { SaveStatus } from "./components/SaveStatus";
 import { SearchPanel } from "./components/SearchPanel";
-import { useUi } from "./store/ui";
+import { tourSeen, useUi } from "./store/ui";
 import { ObjectMenu } from "./components/ObjectMenu";
 import { ActionToast } from "./components/ActionToast";
+import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { Toolbar } from "./components/Toolbar";
 import { UpgradeDialog } from "./components/UpgradeDialog";
@@ -89,6 +90,16 @@ export function App() {
   const [confirming, setConfirming] = useState(!!emailLink);
   const [billingReturn, setBillingReturn] = useState(readBillingReturn);
 
+  // First visit on this device: once nothing else is asking for attention, show the tour after the UI settles.
+  const startTour = useUi((u) => u.startTour);
+  const upgradeOpen = useUi((u) => u.upgrade !== null);
+  const busy = confirming || !!billingReturn || dialog !== null || upgradeOpen;
+  useEffect(() => {
+    if (busy || tourSeen()) return;
+    const t = setTimeout(startTour, 800);
+    return () => clearTimeout(t);
+  }, [busy, startTour]);
+
   useEffect(init, [init]);
   useEffect(stripEmailLinkParams, []);
   useEffect(() => {
@@ -133,6 +144,7 @@ export function App() {
           <span className="max-sm:hidden">
             <SaveStatus />
           </span>
+          <span data-tour="account" className="flex empty:hidden">
           {user ? (
             <AvatarMenu
               onAccount={() => setDialog("account")}
@@ -149,6 +161,7 @@ export function App() {
               </button>
             )
           )}
+          </span>
           <SettingsMenu />
         </div>
       </header>
@@ -156,7 +169,7 @@ export function App() {
       <div className="flex min-h-0 flex-1 flex-col sm:flex-row">
         <ModeRail />
 
-        <main className="relative flex-1 overflow-hidden bg-canvas">
+        <main data-tour="canvas" className="relative flex-1 overflow-hidden bg-canvas">
           <Canvas />
           <ObjectMenu />
 
@@ -177,6 +190,7 @@ export function App() {
         </main>
       </div>
 
+      <OnboardingTour />
       {billingReturn === "success" && <BillingReturn onDone={() => setBillingReturn(null)} />}
       <UpgradeDialog onSignIn={() => setDialog("account")} />
       {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}

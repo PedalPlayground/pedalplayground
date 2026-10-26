@@ -75,10 +75,11 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
     <div className={`flex max-w-full items-center gap-1.5 overflow-x-auto ${barPanel}`}>
       <button
         onClick={onPlace}
+        data-tour="add"
         className="btn-primary flex h-[26px] shrink-0 items-center gap-2 whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
       >
         <AddGlyph />
-        Add<span className="max-sm:hidden"> a Pedal/Board</span>
+        Add Gear
       </button>
       {divider}
       {/* Touch screens pan and select automatically, so the tool switch is only for mouse and trackpad. */}
@@ -115,7 +116,7 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
         <Redo2 size={17} />
       </IconButton>
       {divider}
-      <button onClick={onShare} className={barSoftButton}>
+      <button onClick={onShare} data-tour="share" className={barSoftButton}>
         <SquareArrowOutUpRight size={14} strokeWidth={2.25} />
         Share
       </button>
