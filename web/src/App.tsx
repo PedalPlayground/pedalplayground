@@ -119,8 +119,9 @@ export function App() {
 
   return (
     <div className="flex h-full flex-col">
-      {/* One header for every size. On phones the side columns shrink to fit and the breadcrumb takes the middle. */}
-      <header className="grid h-10 shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-chrome-line bg-chrome px-3 sm:grid-cols-[1fr_auto_1fr] sm:gap-4 sm:px-4">
+      {/* One header for every size. On phones the side columns shrink to fit and the breadcrumb takes the middle.
+          Safe-area padding keeps it clear of notches and rounded corners. */}
+      <header className="box-content grid h-10 shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-chrome-line bg-chrome pl-[max(0.75rem,env(safe-area-inset-left))] pr-[max(0.75rem,env(safe-area-inset-right))] pt-[env(safe-area-inset-top)] sm:grid-cols-[1fr_auto_1fr] sm:gap-4 sm:pl-[max(1rem,env(safe-area-inset-left))] sm:pr-[max(1rem,env(safe-area-inset-right))]">
         <div className="flex min-w-0 items-center gap-2">
           <h1 className="flex">
             <LogoMark />
@@ -184,7 +185,7 @@ export function App() {
           {/* Phones show action confirmations up top, clear of the thumb; larger screens show them above the toolbar. */}
           <ActionToast className="absolute left-1/2 top-3 -translate-x-1/2 [--enter-y:-8px] sm:hidden" />
 
-          <div className="absolute bottom-3 left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-3 max-sm:right-3 max-sm:max-w-none max-sm:translate-x-0 sm:bottom-4">
+          <div className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             <ActionToast className="max-sm:hidden" />
             {searchOpen && <SearchPanel key={replacing ? "replace" : "add"} replace={replacing} onClose={() => setSearchOpen(false)} />}
             <Toolbar onPlace={() => setSearchOpen(replacing ? true : !searchOpen)} onShare={() => setDialog("share")} />

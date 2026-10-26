@@ -106,7 +106,12 @@ export function OnboardingTour() {
     return () => window.removeEventListener("resize", measure);
   }, [open, measure]);
 
-  const next = useCallback(() => (last ? endTour() : setIndex((i) => i + 1)), [last, endTour]);
+  // Finishing the tour drops the user straight into adding gear; skipping just closes it.
+  const finish = useCallback(() => {
+    endTour();
+    useUi.getState().setSearchOpen(true);
+  }, [endTour]);
+  const next = useCallback(() => (last ? finish() : setIndex((i) => i + 1)), [last, finish]);
   const back = useCallback(() => setIndex((i) => Math.max(0, i - 1)), []);
 
   useEffect(() => {

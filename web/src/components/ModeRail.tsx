@@ -12,7 +12,7 @@ export const modes: { id: Mode; label: string; icon: ReactNode }[] = [
 export function ModeRail() {
   const { mode, setMode } = useUi();
   return (
-    <nav className="flex w-12 shrink-0 flex-col items-center gap-1 border-r border-line bg-surface py-2 max-sm:hidden">
+    <nav className="box-content flex w-12 shrink-0 pl-[env(safe-area-inset-left)] flex-col items-center gap-1 border-r border-line bg-surface py-2 max-sm:hidden">
       {modes.map((m) => (
         <button
           key={m.id}

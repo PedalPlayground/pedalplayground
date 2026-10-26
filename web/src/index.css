@@ -163,6 +163,15 @@ body {
 @utility animate-exit {
   animation: pp-exit 0.15s ease-in both;
 }
+/* Bottom drawers rise from below the screen. No fill, so the inline transform takes over for dragging. */
+@keyframes pp-sheet {
+  from {
+    transform: translateY(100%);
+  }
+}
+@utility animate-sheet {
+  animation: pp-sheet 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 @utility animate-fade {
   animation: pp-fade 0.15s ease-out both;
 }
