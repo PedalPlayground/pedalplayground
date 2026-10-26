@@ -23,7 +23,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
     },
     {
       target: "add",
-      title: "Add gear",
+      title: "Add Gear",
       body: "Search for pedals and boards, then drop them onto your Playground.",
     },
     {

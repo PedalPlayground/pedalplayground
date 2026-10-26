@@ -79,7 +79,7 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
         className="btn-primary flex h-[26px] shrink-0 items-center gap-2 whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
       >
         <AddGlyph />
-        Add<span className="max-sm:hidden"> a Pedal/Board</span>
+        Add Gear
       </button>
       {divider}
       {/* Touch screens pan and select automatically, so the tool switch is only for mouse and trackpad. */}
