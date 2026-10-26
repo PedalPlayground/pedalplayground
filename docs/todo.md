@@ -32,8 +32,8 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 20. Add a button to suggest a catalog pedalboard (or a custom one) when multiple pedals are selected.
 21. Equipment List Buy links (step 4): a Buy button on Need to Buy items that opens a Reverb search through an
     affiliate link, with a disclosure line. Waits on Trav's Reverb approval on Awin.
-22. Clean up repeated catalog entries in `public/data/pedals.json` (BOSS BC-2 Combo Drive, MXR Super Comp, JHS AT+,
-    Kingtone The Octaland, Pedal Pawn Gypsy Vibe, Glou-Glou Loupé Blue and White). Search hides them for now.
+22. Two catalog pedals appear twice with different images or sizes: Kingtone The Octaland (4.7″ vs 5.09″ wide) and
+    MXR Super Comp (two images). Check which are real variants, and rename or remove the rest.
 
 ## Done
 

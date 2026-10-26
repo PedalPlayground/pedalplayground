@@ -6077,13 +6077,6 @@
 	},
 	{
 		"Brand": "BOSS",
-		"Name": "BC-2 Combo Drive",
-		"Width": 2.875,
-		"Height": 5.125,
-		"Image": "boss-bc2.png"
-	},
-	{
-		"Brand": "BOSS",
 		"Name": "BD-2 Blues Driver",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -23718,20 +23711,6 @@
 	},
 	{
 		"Brand": "Glou-Glou",
-		"Name": "Loupé (Blue)",
-		"Width": 7.28,
-		"Height": 7.46,
-		"Image": "glou-glou-loupe-blue.png"
-	},
-	{
-		"Brand": "Glou-Glou",
-		"Name": "Loupé (White)",
-		"Width": 7.28,
-		"Height": 7.46,
-		"Image": "glou-glou-loupe-white.png"
-	},
-	{
-		"Brand": "Glou-Glou",
 		"Name": "Pilule",
 		"Width": 5.5,
 		"Height": 6.87,
@@ -29000,13 +28979,6 @@
 		"Width": 2.25,
 		"Height": 4.1,
 		"Image": "jhs-at-mini.png"
-	},
-	{
-		"Brand": "JHS",
-		"Name": "AT+",
-		"Width": 2.93,
-		"Height": 4.98,
-		"Image": "jhs-timmons.png"
 	},
 	{
 		"Brand": "JHS",
@@ -45709,13 +45681,6 @@
 		"Width": 2.79,
 		"Height": 4.58,
 		"Image": "pedal-pawn-great-british-drive.png"
-	},
-	{
-		"Brand": "Pedal Pawn",
-		"Name": "Gypsy Vibe",
-		"Width": 7.28,
-		"Height": 4.69,
-		"Image": "pedal-pawn-gypsy-vibe.png"
 	},
 	{
 		"Brand": "Pedal Pawn",
