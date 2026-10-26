@@ -205,6 +205,9 @@ export function App() {
           {/* Phones show action confirmations up top, clear of the thumb; larger screens show them above the toolbar. */}
           <ActionToast className="absolute left-1/2 top-3 -translate-x-1/2 [--enter-y:-8px] sm:hidden" />
 
+          {/* The other modes hide the toolbar, so their confirmations sit at the bottom on their own. */}
+          {covered && <ActionToast className="absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] left-1/2 -translate-x-1/2 max-sm:hidden" />}
+
           {!covered && (
           <div className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             <ActionToast className="max-sm:hidden" />

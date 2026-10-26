@@ -70,8 +70,8 @@ export function ioOf(node: SignalNode): IoProfile {
 
 export const isController = (node: SignalNode | undefined) => node?.type === "item" && !!node.io?.control;
 
-const audioIn = (g: SignalGraph, id: string) => g.cables.filter((c) => c.kind === "audio" && c.to === id);
-const audioOut = (g: SignalGraph, id: string) => g.cables.filter((c) => c.kind === "audio" && c.from === id);
+export const audioIn = (g: SignalGraph, id: string) => g.cables.filter((c) => c.kind === "audio" && c.to === id);
+export const audioOut = (g: SignalGraph, id: string) => g.cables.filter((c) => c.kind === "audio" && c.from === id);
 
 /** How many audio cables can come into and go out of a node. Fan-out and fan-in go through split and merge nodes. */
 function audioLimits(node: SignalNode): { ins: number; outs: number } {
@@ -172,35 +172,34 @@ export function disconnect(g: SignalGraph, cableId: string): SignalGraph {
   return { ...g, cables: g.cables.filter((c) => c.id !== cableId) };
 }
 
-/** Puts a pedal into the audio cable `cableId`, between its two ends. */
+/** Puts a pedal into the audio cable `cableId`, between its two ends. If it was elsewhere in the chain, it moves. */
 export function insertOnCable(g: SignalGraph, cableId: string, itemId: string): SignalGraph {
   const cable = g.cables.find((c) => c.id === cableId && c.kind === "audio");
   if (!cable) throw new SignalError("That cable isn't in the signal path.");
   if (cable.from === itemId || cable.to === itemId) return g; // already right there
-  let next = removeNode(addItemNode(g, itemId), itemId, { heal: true });
-  next = addItemNode(next, itemId);
+  if (isController(nodeById(g, itemId))) throw new SignalError("Controllers don't carry audio.");
+  let next = detach(addItemNode(g, itemId), itemId);
   // Healing can replace the cable, so find the one between the same two ends again.
   const target = next.cables.find((c) => c.kind === "audio" && c.from === cable.from && c.to === cable.to);
-  if (!target) throw new SignalError("That cable isn't in the signal path.");
+  if (!target) throw new SignalError("That cable isn't in the signal path anymore.");
   next = disconnect(next, target.id);
   next = connect(next, cable.from, itemId);
   return connect(next, itemId, cable.to);
 }
 
 /**
- * Takes a node out of the chain. With `heal`, a node that sat in a single line (one audio cable in, one out)
- * leaves its neighbours plugged into each other. Controllers that controlled it stay, unattached.
+ * Unplugs a node's audio cables, healing the chain around it, but keeps the node, its settings and any
+ * controllers attached to it. A node that sat in a single line (one cable in, one out) leaves its neighbours
+ * plugged into each other.
  */
-export function removeNode(g: SignalGraph, id: string, opts: { heal: boolean }): SignalGraph {
+export function detach(g: SignalGraph, id: string): SignalGraph {
   const ins = audioIn(g, id);
   const outs = audioOut(g, id);
-  let next: SignalGraph = {
-    nodes: g.nodes.filter((n) => n.id !== id),
-    cables: g.cables.filter((c) => c.from !== id && c.to !== id),
-  };
-  // A branch whose last pedal is deleted goes away, instead of becoming an empty wire from split to merge.
+  if (!ins.length && !outs.length) return g;
+  let next: SignalGraph = { ...g, cables: g.cables.filter((c) => c.kind !== "audio" || (c.from !== id && c.to !== id)) };
+  // A branch whose last pedal leaves goes away, instead of becoming an empty wire from split to merge.
   const emptiesBranch = ins.length === 1 && outs.length === 1 && nodeById(g, ins[0].from)?.type === "split" && nodeById(g, outs[0].to)?.type === "merge";
-  if (opts.heal && ins.length === 1 && outs.length === 1 && !emptiesBranch) {
+  if (ins.length === 1 && outs.length === 1 && !emptiesBranch) {
     try {
       next = connect(next, ins[0].from, outs[0].to);
     } catch {
@@ -208,6 +207,15 @@ export function removeNode(g: SignalGraph, id: string, opts: { heal: boolean }):
     }
   }
   return tidyJunctions(next);
+}
+
+/** Takes a node out of the graph. With `heal`, the chain closes up around it. Controllers that controlled it stay, unattached. */
+export function removeNode(g: SignalGraph, id: string, opts: { heal: boolean }): SignalGraph {
+  const healed = opts.heal ? detach(g, id) : g;
+  return tidyJunctions({
+    nodes: healed.nodes.filter((n) => n.id !== id),
+    cables: healed.cables.filter((c) => c.from !== id && c.to !== id),
+  });
 }
 
 /** Removes splits and merges that no longer split or merge anything, joining what was on either side. */

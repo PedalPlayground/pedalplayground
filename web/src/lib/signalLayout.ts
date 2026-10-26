@@ -75,6 +75,8 @@ export interface Wire {
   points: [number, number][];
   /** This wire runs from the end of one band to the start of the next. */
   wraps: boolean;
+  /** Where a "+" to insert a pedal on this wire goes: the middle of its longest straight run across. */
+  slot: [number, number] | null;
 }
 
 export interface SignalLayout {
@@ -386,7 +388,7 @@ export function layoutSignal(g: SignalGraph, items: Item[], m: LayoutMetrics): S
       const tx = b.x + b.w / 2;
       const turn = a.y - m.laneGap / 2;
       const points: [number, number][] = cx === tx ? [[cx, a.y], [tx, b.y + b.h]] : [[cx, a.y], [cx, turn], [tx, turn], [tx, b.y + b.h]];
-      wires.push({ id: c.id, kind: "control", channels: null, points, wraps: false });
+      wires.push({ id: c.id, kind: "control", channels: null, points, wraps: false, slot: null });
       continue;
     }
     const sx = a.junction ? a.x + a.w / 2 : a.x + a.w;
@@ -415,7 +417,7 @@ export function layoutSignal(g: SignalGraph, items: Item[], m: LayoutMetrics): S
       const xm = tx - m.gap / 2;
       points = [[sx, sy], [xm, sy], [xm, ty], [tx, ty]];
     }
-    wires.push({ id: c.id, kind: "audio", channels: cableChannels(g, c), points, wraps });
+    wires.push({ id: c.id, kind: "audio", channels: cableChannels(g, c), points, wraps, slot: slotOn(points, wraps) });
   }
   for (const t of tiles) {
     if (t.kind === "item" && !g.cables.some((c) => c.kind === "audio" && c.from === t.id)) deadEnds.push({ x: t.x + t.w, y: t.y + t.h / 2 });
@@ -426,6 +428,25 @@ export function layoutSignal(g: SignalGraph, items: Item[], m: LayoutMetrics): S
   const tray = items.filter((i) => i.kind === "pedal" && !onDiagram.has(i.id)).map((i) => i.id);
 
   return { width: Math.max(width, m.pad * 2), height, tiles, junctions, wires, deadEnds, warnings, tray };
+}
+
+/** The middle of the longest horizontal run; on a wrap wire, a quarter of the way along the run back left. */
+function slotOn(points: [number, number][], wraps: boolean): [number, number] | null {
+  if (wraps && points.length >= 4) {
+    const [[x0, y], [x1]] = [points[2], points[3]];
+    return [x0 + (x1 - x0) / 4, y];
+  }
+  let best: [number, number] | null = null;
+  let len = -1;
+  for (let i = 1; i < points.length; i++) {
+    const [x0, y0] = points[i - 1];
+    const [x1, y1] = points[i];
+    if (y0 === y1 && Math.abs(x1 - x0) > len) {
+      len = Math.abs(x1 - x0);
+      best = [(x0 + x1) / 2, y0];
+    }
+  }
+  return best;
 }
 
 /** How a tile describes its channels: "ST" for stereo all the way through, "M→ST" or "ST→M" where it changes. */
