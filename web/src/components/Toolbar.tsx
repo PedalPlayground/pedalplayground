@@ -57,6 +57,12 @@ function AddGlyph() {
   );
 }
 
+/**
+ * The hand/select tool buttons are hidden for now: select is the default, and space-drag or the middle mouse button
+ * still pans. Set to true to bring them back.
+ */
+const SHOW_TOOL_SWITCH = false;
+
 const divider = <span className="mx-1 h-4 w-px shrink-0 bg-line" />;
 
 export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: () => void }) {
@@ -80,15 +86,17 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
       </button>
       {divider}
       {/* Touch screens pan and select automatically, so the tool switch is only for mouse and trackpad. */}
-      <span className="contents pointer-coarse:hidden">
-        <IconButton label="Pan (hand)" active={tool === "hand"} onClick={() => setTool("hand")}>
-          <Hand size={18} />
-        </IconButton>
-        <IconButton label="Select" active={tool === "select"} onClick={() => setTool("select")}>
-          <MousePointer2 size={18} />
-        </IconButton>
-        {divider}
-      </span>
+      {SHOW_TOOL_SWITCH && (
+        <span className="contents pointer-coarse:hidden">
+          <IconButton label="Pan (hand)" active={tool === "hand"} onClick={() => setTool("hand")}>
+            <Hand size={18} />
+          </IconButton>
+          <IconButton label="Select" active={tool === "select"} onClick={() => setTool("select")}>
+            <MousePointer2 size={18} />
+          </IconButton>
+          {divider}
+        </span>
+      )}
       <IconButton label="Zoom in" onClick={() => zoomBy(1.25)}>
         <ZoomIn size={20} />
       </IconButton>
