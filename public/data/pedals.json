@@ -9528,6 +9528,13 @@
     },
     {
         "Brand": "Chase Bliss",
+        "Name": "BAD MOOD (Xtreme Red)",
+        "Width": 2.86,
+        "Height": 4.86,
+        "Image": "chasebliss-bad-mood-xtreme-red.png"
+    },
+    {
+        "Brand": "Chase Bliss",
         "Name": "Big Time",
         "Width": 5.75,
         "Height": 6.58,
@@ -20602,6 +20609,13 @@
     },
     {
         "Brand": "Foxrox",
+        "Name": "Octron FR-100",
+        "Width": 3,
+        "Height": 5,
+        "Image": "foxrox-fr100.png"
+    },
+    {
+        "Brand": "Foxrox",
         "Name": "Hot Silicon",
         "Width": 3.85,
         "Height": 5.15,
@@ -31592,6 +31606,13 @@
     },
     {
         "Brand": "Korg",
+        "Name": "G4",
+        "Width": 11.06,
+        "Height": 8.23,
+        "Image": "korg-g4.png"
+    },
+    {
+        "Brand": "Korg",
         "Name": "HD-S",
         "Width": 4.7,
         "Height": 3.67,
@@ -32555,6 +32576,13 @@
         "Width": 9.25,
         "Height": 4.5,
         "Image": "line6-dl4-mk2.png"
+    },
+    {
+        "Brand": "Line 6",
+        "Name": "DL4 Delay MkII 25th Anniversary",
+        "Width": 9.25,
+        "Height": 4.5,
+        "Image": "line6-dl4-mk2-25th.png"
     },
     {
         "Brand": "Line 6",
@@ -43618,6 +43646,13 @@
     },
     {
         "Brand": "PastFX",
+        "Name": "Delay Machine II",
+        "Width": 2.67,
+        "Height": 4.5,
+        "Image": "pastfx-delay-machine-ii.png"
+    },
+    {
+        "Brand": "PastFX",
         "Name": "Deluxe Elastic Mattress",
         "Width": 2.67,
         "Height": 4.5,
@@ -43629,6 +43664,13 @@
         "Width": 2.67,
         "Height": 4.5,
         "Image": "pastfx-distortiion.png"
+    },
+    {
+        "Brand": "PastFX",
+        "Name": "Doppelflänger",
+        "Width": 2.67,
+        "Height": 4.5,
+        "Image": "pastfx-doppelflänger.png"
     },
     {
         "Brand": "PastFX",
@@ -43780,7 +43822,7 @@
     {
         "Brand": "PastFX",
         "Name": "Ring Modulator",
-        "Width": 2.37,
+        "Width": 2.67,
         "Height": 4.5,
         "Image": "pastfx-ring-modulator.png"
     },
