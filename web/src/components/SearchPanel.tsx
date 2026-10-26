@@ -26,6 +26,8 @@ import { useUi } from "../store/ui";
 
 /** One catalog product with its kind, so pedals and pedalboards can share a list. */
 interface Entry {
+  /** Unique within the list, for React keys. Names alone aren't: the catalog has a few repeated entries. */
+  id: number;
   kind: Kind;
   item: CatalogItem;
   brand: string;
@@ -124,12 +126,19 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   // Pedals and pedalboards in one alphabetical list, indexed once for search.
   const index = useMemo(() => {
     if (!catalog) return [];
-    const all: Entry[] = [
-      ...catalog.pedals.map((item) => ({ kind: "pedal" as const, item, brand: item.brand, name: item.name })),
-      ...catalog.pedalboards.map((item) => ({ kind: "pedalboard" as const, item, brand: item.brand, name: item.name })),
-    ];
+    const all: Omit<Entry, "id">[] = [];
+    // Skip exact repeats (same product, size and image), which the catalog has a few of.
+    const seen = new Set<string>();
+    for (const [kind, list] of [["pedal", catalog.pedals], ["pedalboard", catalog.pedalboards]] as const) {
+      for (const item of list) {
+        const sig = [kind, item.brand, item.name, item.width, item.height, item.image].join("|");
+        if (seen.has(sig)) continue;
+        seen.add(sig);
+        all.push({ kind, item, brand: item.brand, name: item.name });
+      }
+    }
     all.sort((a, b) => a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
-    return all.map((e) => ({ ...indexItem(e), size: sizeClass(e.kind, e.item.width) }));
+    return all.map((e, id) => ({ ...indexItem({ ...e, id }), size: sizeClass(e.kind, e.item.width) }));
   }, [catalog]);
 
   const { items: hits, partial } = useMemo(() => {
@@ -322,7 +331,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         )}
         {results.map((entry) => {
           const { item } = entry;
-          const key = `${entry.kind}:${item.brand}-${item.name}`;
+          const key = String(entry.id);
           const isAdded = added === key;
           return (
           <li key={key}>
