@@ -9,6 +9,7 @@ import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
+import { plainField } from "../lib/inputProps";
 
 interface Row {
   item: Item;
@@ -319,7 +320,9 @@ function MaField({ item, name }: { item: Item; name: string }) {
           onChange={(e) => setDraft(e.target.value)}
           onBlur={commit}
           onKeyDown={(e) => e.key === "Enter" && e.currentTarget.blur()}
+          {...plainField}
           inputMode="numeric"
+          enterKeyHint="done"
           placeholder="0"
           aria-label={`Current draw of ${name} in milliamps`}
           className="w-full min-w-0 bg-transparent text-right tabular-nums outline-none placeholder:text-ink-muted/60"
@@ -353,7 +356,9 @@ function PriceField({ item, name }: { item: Item; name: string }) {
             requestAnimationFrame(() => (e.target as HTMLInputElement).blur());
           }
         }}
+        {...plainField}
         inputMode="decimal"
+        enterKeyHint="done"
         placeholder="0"
         aria-label={`Price of ${name}`}
         className="w-full min-w-0 bg-transparent text-right tabular-nums outline-none placeholder:text-ink-muted/60 max-sm:text-base"

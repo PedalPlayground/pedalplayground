@@ -20,6 +20,7 @@ import { useUi } from "../store/ui";
 import { CustomBoard } from "./CustomItem";
 import { PedalArt } from "./PedalArt";
 import { tip } from "./Tooltip";
+import { plainField } from "../lib/inputProps";
 
 const MM_PER_INCH = 25.4;
 const MAX_INCHES = 60;
@@ -211,11 +212,11 @@ export function CustomItemForm({
           <div className="grid grid-cols-2 gap-2">
             <label className="text-xs text-ink-muted">
               Width ({unitLabel})
-              <input className={`${field} mt-1`} inputMode="decimal" value={width} placeholder={placeholder[0]} onChange={(e) => setWidth(e.target.value)} autoFocus={!item} />
+              <input className={`${field} mt-1`} {...plainField} inputMode="decimal" enterKeyHint="done" value={width} placeholder={placeholder[0]} onChange={(e) => setWidth(e.target.value)} autoFocus={!item} />
             </label>
             <label className="text-xs text-ink-muted">
               Height ({unitLabel})
-              <input className={`${field} mt-1`} inputMode="decimal" value={height} placeholder={placeholder[1]} onChange={(e) => setHeight(e.target.value)} />
+              <input className={`${field} mt-1`} {...plainField} inputMode="decimal" enterKeyHint="done" value={height} placeholder={placeholder[1]} onChange={(e) => setHeight(e.target.value)} />
             </label>
           </div>
           {kind === "pedal" && (
@@ -229,7 +230,7 @@ export function CustomItemForm({
               </div>
               <label className="block text-xs text-ink-muted">
                 Name (optional)
-                <input className={`${field} mt-1`} value={name} maxLength={40} onChange={(e) => setName(e.target.value)} />
+                <input className={`${field} mt-1`} {...plainField} autoCapitalize="words" enterKeyHint="done" value={name} maxLength={40} onChange={(e) => setName(e.target.value)} />
               </label>
             </>
           )}

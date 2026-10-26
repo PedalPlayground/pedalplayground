@@ -2,6 +2,7 @@ import { useState } from "react";
 import { usePlayground } from "../store/playground";
 import { useCloud } from "../store/cloud";
 import { Modal } from "./Modal";
+import { plainField } from "../lib/inputProps";
 
 export function RenameDialog({ onClose }: { onClose: () => void }) {
   const current = usePlayground((s) => s.name);
@@ -21,6 +22,10 @@ export function RenameDialog({ onClose }: { onClose: () => void }) {
         autoFocus
         value={value}
         maxLength={120}
+        {...plainField}
+        autoCapitalize="words"
+        enterKeyHint="done"
+        aria-label="Playground name"
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && void submit()}
         className="mb-2 h-9 w-full rounded-control border border-line px-3 text-sm outline-none focus:border-brand"

@@ -24,6 +24,7 @@ import { menuContentClass, rowClass } from "./ContextMenu";
 import { CustomItemForm } from "./CustomItemForm";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
+import { plainField } from "../lib/inputProps";
 
 /** One catalog product with its kind, so pedals and pedalboards can share a list. */
 interface Entry {
@@ -236,6 +237,9 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           aria-controls="search-results"
           aria-activedescendant={active >= 0 ? `search-row-${active}` : undefined}
           aria-autocomplete="list"
+          {...plainField}
+          autoCapitalize="none"
+          enterKeyHint="search"
           placeholder={target ? `Replace ${target.label}` : "Search pedals and pedalboards"}
           className="h-9 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted max-sm:text-base"
         />
