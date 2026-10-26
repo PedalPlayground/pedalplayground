@@ -31,6 +31,10 @@ export interface Item {
   color: string | null;
   /** Locked items stay put: they can be selected but not dragged, nudged or distributed. */
   locked?: boolean;
+  /** Equipment List: "wanted" means the user still needs to buy it. Missing means they own it. */
+  status?: "owned" | "wanted";
+  /** Equipment List: price in US dollars (what they paid, or what it costs to buy). */
+  price?: number;
 }
 
 export interface View {

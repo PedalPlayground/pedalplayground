@@ -49,6 +49,8 @@ interface PlaygroundState {
   replaceItem: (id: string, c: CatalogItem) => void;
   addCustomItem: (c: { kind: Item["kind"]; width: number; height: number; label: string; color: string | null }) => void;
   select: (id: string, additive?: boolean) => void;
+  /** Changes an item's Equipment List details as one undo step. */
+  updateGear: (id: string, patch: Partial<Pick<Item, "status" | "price">>) => void;
   /** Selects one item and moves the view just enough to show it. */
   reveal: (id: string) => void;
   clearSelection: () => void;
@@ -222,6 +224,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         y: cy - c.height / 2,
         custom: false,
         color: null,
+        // A different product has a different price; whether they own it stays.
+        price: undefined,
       };
       return { ...record(s), items: s.items.map((i) => (i.id === id ? next : i)) };
     }),
@@ -243,6 +247,12 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     set((s) => ({
       selected: additive ? (s.selected.includes(id) ? s.selected.filter((x) => x !== id) : [...s.selected, id]) : [id],
     })),
+  updateGear: (id, patch) =>
+    set((s) => {
+      const item = s.items.find((i) => i.id === id);
+      if (!item || Object.entries(patch).every(([k, v]) => item[k as keyof Item] === v)) return {};
+      return { ...record(s), items: s.items.map((i) => (i.id === id ? { ...i, ...patch } : i)) };
+    }),
   reveal: (id) =>
     set((s) => {
       const item = s.items.find((i) => i.id === id);
