@@ -20,6 +20,10 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 
 - Move the action notifications (toasts) to the top right of the canvas.
 - Color action notifications: green for successful actions, red for failed ones.
+- Help menu (bottom right of the canvas):
+  - Take the tour again.
+  - A Keyboard Shortcuts cheat sheet, including mouse and tap gestures. Keep a running checklist of the shortcuts
+    each person has already used, so they can knock them out one by one.
 
 ## Done
 
