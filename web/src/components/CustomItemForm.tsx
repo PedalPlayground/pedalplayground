@@ -65,14 +65,27 @@ function Preview({
   );
 }
 
-/** Adds a custom pedal or pedalboard, or with `item`, edits that one. */
-export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: Item }) {
+/**
+ * Adds a custom pedal or pedalboard, or with `item`, edits that one. `initialKind` and `initialName` prefill a new
+ * one, e.g. from a search that found nothing.
+ */
+export function CustomItemForm({
+  onDone,
+  item,
+  initialKind,
+  initialName,
+}: {
+  onDone: () => void;
+  item?: Item;
+  initialKind?: Item["kind"];
+  initialName?: string;
+}) {
   const units = useUi((u) => u.units);
   const add = usePlayground((s) => s.addCustomItem);
   const update = usePlayground((s) => s.updateCustomItem);
   const toUnits = (inches: number) => (units === "mm" ? String(Math.round(inches * MM_PER_INCH)) : String(+inches.toFixed(3)));
 
-  const [kind, setKind] = useState<Item["kind"]>(item?.kind ?? "pedal");
+  const [kind, setKind] = useState<Item["kind"]>(item?.kind ?? initialKind ?? "pedal");
   const [template, setTemplate] = useState<PedalTemplate>(item ? (item.template ?? "classic") : DEFAULT_PEDAL_TEMPLATE);
   // The size fields are the enclosure; jacks add to the footprint on top of it.
   const enclosure = item ? withoutJacks(item.width, item.height, item.jacks) : null;
@@ -83,7 +96,7 @@ export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: It
   const [jackSide, setJackSide] = useState(hasSideJacks(initialJacks));
   // Until the user picks jacks themselves, each style brings its usual ones.
   const [jacksPicked, setJacksPicked] = useState(!!item);
-  const [name, setName] = useState(item?.kind === "pedal" ? item.label : "");
+  const [name, setName] = useState(item ? (item.kind === "pedal" ? item.label : "") : (initialName ?? ""));
   const [color, setColor] = useState(item?.color ?? NEW_PEDAL_COLOR);
   const [error, setError] = useState<string | null>(null);
 

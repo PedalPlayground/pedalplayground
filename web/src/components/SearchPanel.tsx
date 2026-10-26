@@ -1,9 +1,21 @@
-import { Check, Search, X } from "lucide-react";
+import * as Dropdown from "@radix-ui/react-dropdown-menu";
+import { Check, ChevronDown, ChevronLeft, Plus, Search, X } from "lucide-react";
 import { tip } from "./Tooltip";
-import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import {
+  useCallback,
+  useDeferredValue,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type MouseEvent as ReactMouseEvent,
+  type PointerEvent as ReactPointerEvent,
+} from "react";
 import { createPortal } from "react-dom";
 import { PHONE_QUERY, useMediaQuery, useVisualViewport } from "../lib/viewport";
-import { thumbUrl } from "../lib/catalog";
+import { thumbUrl, type Kind } from "../lib/catalog";
+import { indexItem, search } from "../lib/search";
+import { SIZE_CLASSES, sizeClass, sizeRangeShort, type SizeClass } from "../lib/sizes";
 import { formatSize } from "../lib/units";
 import type { CatalogItem } from "../lib/types";
 import { useCatalog } from "../store/catalog";
@@ -11,7 +23,19 @@ import { CustomItemForm } from "./CustomItemForm";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 
-type Category = "pedals" | "pedalboards" | "custom";
+/** One catalog product with its kind, so pedals and pedalboards can share a list. */
+interface Entry {
+  kind: Kind;
+  item: CatalogItem;
+  brand: string;
+  name: string;
+}
+
+const sizeItem =
+  "flex cursor-pointer select-none items-center gap-2 rounded-control px-2 py-2 text-sm outline-none data-[highlighted]:bg-surface-hover";
+
+/** Rows rendered at once; more than this asks for a narrower search. */
+const MAX_RESULTS = 60;
 
 /** How far (px) a drag down on the drawer's handle has to go before letting go closes it. */
 const SWIPE_CLOSE = 80;
@@ -60,6 +84,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
 
   const { manifest: catalog, error, load } = useCatalog();
   const [query, setQuery] = useState("");
+  const deferredQuery = useDeferredValue(query);
   const units = useUi((u) => u.units);
   const addCatalogItem = usePlayground((p) => p.addCatalogItem);
   const replaceItem = usePlayground((p) => p.replaceItem);
@@ -67,7 +92,19 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     (replace || edit) && p.selected.length === 1 ? p.items.find((i) => i.id === p.selected[0] && (!edit || i.custom)) : undefined,
   );
 
-  const [category, setCategory] = useState<Category>(target?.kind === "pedalboard" ? "pedalboards" : "pedals");
+  // Filters are optional: no kind picked means pedals and pedalboards together. Replacing keeps to the same kind.
+  const [kindFilter, setKindFilter] = useState<Kind | null>(null);
+  const kind: Kind | null = target ? target.kind : kindFilter;
+  const [sizes, setSizes] = useState<SizeClass[]>([]);
+  const filtered = kindFilter !== null || sizes.length > 0;
+  const clearFilters = () => {
+    setKindFilter(null);
+    setSizes([]);
+  };
+  const toggleSize = (s: SizeClass) => setSizes((cur) => (cur.includes(s) ? cur.filter((c) => c !== s) : [...cur, s]));
+
+  // The custom item form, opened from the Custom button or from an empty search (prefilled with what was typed).
+  const [custom, setCustom] = useState<{ name: string; kind: Kind } | null>(null);
 
   // Replacing and editing need exactly one selected product; close if that stops being true.
   useEffect(() => {
@@ -78,27 +115,44 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     void load();
   }, [load]);
 
-  const results = useMemo(() => {
+  // Pedals and pedalboards in one alphabetical list, indexed once for search.
+  const index = useMemo(() => {
     if (!catalog) return [];
-    const q = query.trim().toLowerCase();
-    const list = catalog[category === "pedalboards" ? "pedalboards" : "pedals"];
-    const hits = q ? list.filter((i) => `${i.brand} ${i.name}`.toLowerCase().includes(q)) : list;
-    return hits.slice(0, 60);
-  }, [catalog, category, query]);
+    const all: Entry[] = [
+      ...catalog.pedals.map((item) => ({ kind: "pedal" as const, item, brand: item.brand, name: item.name })),
+      ...catalog.pedalboards.map((item) => ({ kind: "pedalboard" as const, item, brand: item.brand, name: item.name })),
+    ];
+    all.sort((a, b) => a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name));
+    return all.map((e) => ({ ...indexItem(e), size: sizeClass(e.kind, e.item.width) }));
+  }, [catalog]);
 
-  const kind = category === "pedalboards" ? "pedalboard" : "pedal";
+  const { items: hits, partial } = useMemo(() => {
+    const pool = index.filter((e) => (!kind || e.item.kind === kind) && (sizes.length === 0 || sizes.includes(e.size)));
+    return search(pool, deferredQuery);
+  }, [index, kind, sizes, deferredQuery]);
+  const results = hits.slice(0, MAX_RESULTS);
 
   // Brief "Added" confirmation on the row just tapped. Phones then close the panel, which covers the middle of the
   // canvas where new items land.
   const [added, setAdded] = useState<string | null>(null);
   const addedTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   useEffect(() => () => clearTimeout(addedTimer.current), []);
-  const add = (item: CatalogItem, key: string) => {
-    addCatalogItem(kind, item);
+  const add = (entry: Entry, key: string) => {
+    addCatalogItem(entry.kind, entry.item);
     setAdded(key);
     clearTimeout(addedTimer.current);
     addedTimer.current = setTimeout(() => (phone ? onClose() : setAdded(null)), phone ? 600 : 1200);
   };
+
+  // Tapping a chip shouldn't take focus from the search field, which would drop the phone keyboard.
+  const keepFocus = (e: ReactMouseEvent) => e.preventDefault();
+  const chip = (on: boolean) =>
+    `press h-7 shrink-0 rounded-full border px-2.5 text-[13px] transition-colors ${
+      on ? "border-brand/40 bg-brand/10 text-brand" : "border-line text-ink-muted hover:bg-surface-hover hover:text-ink"
+    }`;
+
+  const typed = query.trim();
+  const showCustom = edit || custom !== null;
 
   const body = (
     <>
@@ -113,7 +167,10 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         <input
           autoFocus
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setCustom(null); // typing goes back to the results
+          }}
           placeholder={target ? `Replace ${target.label}` : "Search pedals and pedalboards"}
           className="h-9 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted max-sm:text-base"
         />
@@ -123,32 +180,134 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           <X size={16} />
         </button>
       </div>
-      {!replace && !edit && (
-      <div className="flex gap-1 px-3 pt-2">
-        {(["pedals", "pedalboards", "custom"] as const).map((c) => (
+      {!edit && (custom ? (
+        <div className="flex px-3 pt-2">
           <button
-            key={c}
-            onClick={() => setCategory(c)}
-            className={`rounded-control px-3 py-1 text-sm capitalize ${
-              category === c ? "bg-brand/10 text-brand" : "text-ink-muted hover:bg-surface-hover"
-            }`}
+            onClick={() => setCustom(null)}
+            className="press -ml-1.5 flex h-7 items-center gap-0.5 rounded-control pl-1 pr-2 text-[13px] text-ink-muted hover:bg-surface-hover hover:text-ink"
           >
-            {c}
+            <ChevronLeft size={16} />
+            Back to Search
           </button>
-        ))}
-      </div>
-      )}
-      {edit || category === "custom" ? (
+        </div>
+      ) : (
+        <div className="flex items-center gap-2 px-3 pt-2">
+          <div className="-mx-3 flex min-w-0 flex-1 items-center gap-1.5 overflow-x-auto px-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {!target && (
+              <>
+                {(["pedal", "pedalboard"] as const).map((k) => (
+                  <button
+                    key={k}
+                    aria-pressed={kindFilter === k}
+                    onMouseDown={keepFocus}
+                    onClick={() => setKindFilter(kindFilter === k ? null : k)}
+                    className={chip(kindFilter === k)}
+                  >
+                    {k === "pedal" ? "Pedals" : "Pedalboards"}
+                  </button>
+                ))}
+                <span className="mx-0.5 h-4 w-px shrink-0 bg-line" aria-hidden />
+              </>
+            )}
+            <Dropdown.Root>
+              <Dropdown.Trigger className={`${chip(sizes.length > 0)} flex items-center gap-0.5 pr-1.5 outline-none focus-visible:ring-2 focus-visible:ring-brand`}>
+                {sizes.length === 0 ? "Size" : sizes.length === 1 ? SIZE_CLASSES.find((c) => c.id === sizes[0])?.label : `${sizes.length} Sizes`}
+                <ChevronDown size={14} className="opacity-70" />
+              </Dropdown.Trigger>
+              <Dropdown.Portal>
+                <Dropdown.Content align="start" sideOffset={6} className="animate-menu z-50 min-w-56 rounded-panel bg-surface p-1.5 shadow-panel">
+                  {SIZE_CLASSES.map((c) => (
+                    <Dropdown.CheckboxItem
+                      key={c.id}
+                      checked={sizes.includes(c.id)}
+                      onSelect={(e) => e.preventDefault()} // stay open to pick more than one
+                      onCheckedChange={() => toggleSize(c.id)}
+                      className={sizeItem}
+                    >
+                      <span className="grid size-4 shrink-0 place-items-center text-brand">
+                        <Dropdown.ItemIndicator>
+                          <Check size={15} strokeWidth={2.5} />
+                        </Dropdown.ItemIndicator>
+                      </span>
+                      <span className="font-medium">{c.label}</span>
+                      <span className="ml-auto pl-4 text-xs text-ink-muted">{sizeRangeShort(c.id, kind, units)}</span>
+                    </Dropdown.CheckboxItem>
+                  ))}
+                  {sizes.length > 0 && (
+                    <>
+                      <Dropdown.Separator className="my-1 h-px bg-line" />
+                      <Dropdown.Item onSelect={() => setSizes([])} className={sizeItem}>
+                        <span className="size-4 shrink-0" />
+                        Any Size
+                      </Dropdown.Item>
+                    </>
+                  )}
+                </Dropdown.Content>
+              </Dropdown.Portal>
+            </Dropdown.Root>
+          </div>
+          {!target && (
+            <button
+              {...tip("Make a Custom Pedal or Pedalboard")}
+              onClick={() => setCustom({ name: "", kind: kindFilter ?? "pedal" })}
+              className="press flex h-7 shrink-0 items-center gap-1 rounded-full pl-1.5 pr-2.5 text-[13px] font-medium text-brand hover:bg-brand/10"
+            >
+              <Plus size={15} strokeWidth={2.25} />
+              Custom
+            </button>
+          )}
+        </div>
+      ))}
+      {showCustom ? (
         <div className={phone ? "min-h-0 flex-1 overflow-y-auto overscroll-contain" : "max-h-[min(560px,calc(100dvh-12rem))] overflow-y-auto"}>
-          <CustomItemForm onDone={onClose} item={edit ? target : undefined} />
+          <CustomItemForm
+            key={custom ? `${custom.kind}:${custom.name}` : "edit"}
+            onDone={onClose}
+            item={edit ? target : undefined}
+            initialKind={custom?.kind}
+            initialName={custom?.name}
+          />
         </div>
       ) : (
       <ul className={`overflow-y-auto overscroll-contain p-2 ${phone ? "min-h-0 flex-1" : "max-h-80"}`}>
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
         {error && <li className="p-3 text-sm text-danger">{error}</li>}
-        {catalog && results.length === 0 && <li className="p-3 text-sm text-ink-muted">No results</li>}
-        {results.map((item: CatalogItem) => {
-          const key = `${item.brand}-${item.name}`;
+        {catalog && (hits.length === 0 || partial) && (
+          <li className={`animate-enter flex flex-col items-center gap-3 px-3 text-center [--enter-y:4px] ${partial ? "pb-3 pt-2" : "py-6"}`}>
+            <p className="text-sm text-ink-muted">
+              {typed ? (
+                <>
+                  No matches for <span className="font-medium text-ink">“{typed}”</span>
+                  {filtered && " with these filters"}
+                  {partial && ". Close matches below."}
+                </>
+              ) : (
+                "Nothing matches these filters"
+              )}
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {filtered && !partial && (
+                <button onMouseDown={keepFocus} onClick={clearFilters} className="press h-8 rounded-control border border-line px-3 text-sm hover:bg-surface-hover">
+                  Clear Filters
+                </button>
+              )}
+              {!target && (
+                <button
+                  onClick={() => setCustom({ name: kindFilter === "pedalboard" ? "" : typed.slice(0, 40), kind: kindFilter ?? "pedal" })}
+                  className="flex h-8 max-w-full items-center gap-1 px-3 text-sm btn-primary"
+                >
+                  <Plus size={15} strokeWidth={2.25} className="shrink-0" />
+                  <span className="truncate">
+                    {kindFilter === "pedalboard" ? "Make a Custom Pedalboard" : typed ? `Create “${typed}” as a Custom Pedal` : "Make a Custom Pedal"}
+                  </span>
+                </button>
+              )}
+            </div>
+          </li>
+        )}
+        {results.map((entry) => {
+          const { item } = entry;
+          const key = `${entry.kind}:${item.brand}-${item.name}`;
           const isAdded = added === key;
           return (
           <li key={key}>
@@ -157,14 +316,14 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                 if (target) {
                   replaceItem(target.id, item);
                   onClose();
-                } else add(item, key);
+                } else add(entry, key);
               }}
               className={`flex w-full items-center gap-3 rounded-control p-2 text-left transition-colors ${
                 isAdded ? "bg-brand/10" : "hover:bg-surface-hover active:bg-chrome-line"
               }`}
             >
               <img
-                src={thumbUrl(catalog, kind, item.image) ?? undefined}
+                src={thumbUrl(catalog, entry.kind, item.image) ?? undefined}
                 alt=""
                 loading="lazy"
                 className="size-16 shrink-0 rounded-control bg-canvas object-contain"
@@ -173,6 +332,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                 <span className="block truncate text-sm font-medium">{item.name}</span>
                 <span className="block truncate text-xs text-ink-muted">
                   {item.brand} · {formatSize(item.width, item.height, units)}
+                  {!kind && entry.kind === "pedalboard" && " · Pedalboard"}
                 </span>
               </span>
               {isAdded && (
@@ -185,6 +345,11 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           </li>
           );
         })}
+        {hits.length > MAX_RESULTS && (
+          <li className="px-2 pb-1 pt-2 text-center text-xs text-ink-muted">
+            Showing {MAX_RESULTS} of {hits.length.toLocaleString()}. Keep typing or add a filter to narrow it down.
+          </li>
+        )}
       </ul>
       )}
     </>
