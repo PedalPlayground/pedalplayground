@@ -8,10 +8,10 @@ import { startAvatarSync } from "./lib/avatar";
 import { AvatarDialog } from "./components/AvatarDialog";
 import { AvatarMenu } from "./components/AvatarMenu";
 import { SettingsMenu } from "./components/SettingsMenu";
-import { Logo } from "./components/Logo";
+import { LogoMark } from "./components/Logo";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
-import { PlaygroundSwitcher } from "./components/PlaygroundSwitcher";
+import { PlaygroundBreadcrumb, PlaygroundSwitcher } from "./components/PlaygroundSwitcher";
 import { RenameDialog } from "./components/RenameDialog";
 import { SaveStatus } from "./components/SaveStatus";
 import { SearchPanel } from "./components/SearchPanel";
@@ -106,23 +106,28 @@ export function App() {
   return (
     <div className="flex h-full flex-col">
       {/* Header on tablet and desktop; phones use the floating account/settings pill below. */}
-      <header className="flex h-12 shrink-0 items-center justify-between border-b border-line bg-surface px-4 max-sm:hidden">
-        <div className="flex items-center gap-2">
+      <header className="grid h-10 shrink-0 grid-cols-[1fr_auto_1fr] items-center gap-4 border-b border-chrome-line bg-chrome px-4 max-sm:hidden">
+        <div className="flex min-w-0 items-center gap-2">
           <h1 className="flex">
-            <Logo />
+            <LogoMark />
           </h1>
           {BETA && (
             <>
               <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand">Beta</span>
               {FEEDBACK_URL && (
-                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="text-xs text-ink-muted hover:text-ink hover:underline">
+                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="truncate text-xs text-ink-muted hover:text-ink hover:underline">
                   Send feedback
                 </a>
               )}
             </>
           )}
         </div>
-        <div className="flex items-center gap-3">
+        <PlaygroundBreadcrumb
+          onRename={() => setDialog("rename")}
+          onAll={() => setDialog("playgrounds")}
+          onSignIn={() => setDialog("account")}
+        />
+        <div className="flex items-center justify-end gap-3">
           <SaveStatus />
           {user ? (
             <AvatarMenu
@@ -134,9 +139,9 @@ export function App() {
             cloudEnabled && (
               <button
                 onClick={() => setDialog("account")}
-                className="h-9 rounded-control bg-surface-hover px-3 text-sm font-medium outline-none hover:bg-line focus-visible:ring-2 focus-visible:ring-brand"
+                className="btn-primary h-[26px] whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1"
               >
-                Sign in
+                Sign in to Save
               </button>
             )
           )}

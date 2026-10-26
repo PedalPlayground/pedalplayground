@@ -7,6 +7,8 @@
   --color-canvas: #f6f7f9;
   --color-surface: #ffffff;
   --color-surface-hover: #f1f2f6;
+  --color-chrome: #f4f5f6;
+  --color-chrome-line: rgb(0 0 0 / 0.08);
   --color-line: #e3e5ea;
   --color-grid: #d6d9e0;
   --color-board: #2b2b30;
@@ -37,6 +39,8 @@
     --color-canvas: #121316;
     --color-surface: #1b1c21;
     --color-surface-hover: #26272e;
+    --color-chrome: #17181c;
+    --color-chrome-line: rgb(255 255 255 / 0.06);
     --color-line: #31333b;
     --color-grid: #2a2c34;
     --color-board: #5b5d6b;
@@ -57,6 +61,8 @@
   --color-canvas: #121316;
   --color-surface: #1b1c21;
   --color-surface-hover: #26272e;
+  --color-chrome: #17181c;
+  --color-chrome-line: rgb(255 255 255 / 0.06);
   --color-line: #31333b;
   --color-grid: #2a2c34;
   --color-board: #5b5d6b;
