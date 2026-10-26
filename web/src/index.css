@@ -4,13 +4,13 @@
 @theme {
   --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  --color-canvas: #f6f7f9;
+  --color-canvas: #f8f8f8;
   --color-surface: #ffffff;
   --color-surface-hover: #f1f2f6;
   --color-chrome: #f4f5f6;
   --color-chrome-line: rgb(0 0 0 / 0.08);
   --color-line: #e3e5ea;
-  --color-grid: #d6d9e0;
+  --color-grid: #dedede;
   --color-board: #2b2b30;
   --color-ink: #1c1d22;
   --color-ink-muted: #6b6f7b;
