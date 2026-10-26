@@ -18,6 +18,16 @@ be as large as contributors like (up to the limits below) without slowing the si
    { "Brand": "BOSS", "Name": "DS-1", "Width": 2.875, "Height": 5.125, "Image": "boss-ds1.png" }
    ```
    `Width` and `Height` are the real product footprint in **inches**, as seen from above.
+   Pedals can also have optional specs, which the Equipment List fills in when someone places the pedal:
+   ```json
+   { "Brand": "BOSS", "Name": "DS-1", "Width": 2.875, "Height": 5.125, "Image": "boss-ds1.png",
+     "Current": 10, "Voltage": "9V DC", "Type": "Distortion" }
+   ```
+   - `Current`: current draw in milliamps, a whole number, from the maker's spec sheet.
+   - `Voltage`: one of `9V DC`, `12V DC`, `18V DC`, `24V DC`, `9V AC`, `12V AC`, `5V USB`.
+   - `Type`: one of `Boost`, `Overdrive`, `Distortion`, `Fuzz`, `Compressor`, `EQ`, `Modulation`, `Delay`,
+     `Reverb`, `Pitch`, `Filter / Wah`, `Looper`, `Multi-Effect`, `Amp / Preamp`, `Tuner`, `Volume / Expression`,
+     `Noise Gate`, `Utility`, `Other`.
 2. Add the image to `public/images/pedals/` (or `pedalboards/`):
    - PNG with a transparent background, top-down, cropped tight to the product.
    - Filename: lowercase letters, digits and hyphens only, ending in `.png` (`boss-ds1.png`).

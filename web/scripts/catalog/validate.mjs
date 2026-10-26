@@ -18,6 +18,9 @@ const MAX_BYTES = 3 * 1024 * 1024;
 const MIN_PX_PER_INCH = 60;
 const MAX_DIM_IN = { pedals: 25, pedalboards: 60 };
 const FILE_NAME = /^[a-z0-9]+(-[a-z0-9]+)*\.png$/;
+// Optional pedal specs. Keep these lists in step with web/src/lib/specs.ts.
+const PEDAL_TYPES = ["Boost", "Overdrive", "Distortion", "Fuzz", "Compressor", "EQ", "Modulation", "Delay", "Reverb", "Pitch", "Filter / Wah", "Looper", "Multi-Effect", "Amp / Preamp", "Tuner", "Volume / Expression", "Noise Gate", "Utility", "Other"];
+const VOLTAGES = ["9V DC", "12V DC", "18V DC", "24V DC", "9V AC", "12V AC", "5V USB"];
 
 const issues = []; // { level, id, message }
 const error = (code, subject, message) => issues.push({ level: "error", id: `${code}:${subject}`, message });
@@ -45,6 +48,16 @@ for (const k of KINDS) {
     if (typeof e.Image !== "string" || !e.Image) {
       error("image-field", subject, `${where}: missing Image`);
       continue;
+    }
+
+    if (e.Current !== undefined && !(Number.isInteger(e.Current) && e.Current > 0 && e.Current <= 5000)) {
+      error("spec-current", subject, `${where}: Current must be a whole number of milliamps, like 100`);
+    }
+    if (e.Voltage !== undefined && !VOLTAGES.includes(e.Voltage)) {
+      error("spec-voltage", subject, `${where}: Voltage must be one of ${VOLTAGES.join(", ")}`);
+    }
+    if (e.Type !== undefined && !PEDAL_TYPES.includes(e.Type)) {
+      error("spec-type", subject, `${where}: Type must be one of ${PEDAL_TYPES.join(", ")}`);
     }
 
     const dupKey = `${e.Brand}|${e.Name}`.toLowerCase();

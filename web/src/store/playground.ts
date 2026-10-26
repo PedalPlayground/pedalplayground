@@ -50,7 +50,7 @@ interface PlaygroundState {
   addCustomItem: (c: { kind: Item["kind"]; width: number; height: number; label: string; color: string | null }) => void;
   select: (id: string, additive?: boolean) => void;
   /** Changes an item's Equipment List details as one undo step. */
-  updateGear: (id: string, patch: Partial<Pick<Item, "status" | "price">>) => void;
+  updateGear: (id: string, patch: Partial<Pick<Item, "status" | "price" | "ma" | "voltage" | "pedalType">>) => void;
   /** Selects one item and moves the view just enough to show it. */
   reveal: (id: string) => void;
   clearSelection: () => void;
@@ -79,7 +79,8 @@ const record = (s: Pick<PlaygroundState, "past" | "items">) => ({
   future: [] as Item[][],
 });
 
-type NewItem = Pick<Item, "kind" | "label" | "image" | "width" | "height" | "custom" | "color">;
+type NewItem = Pick<Item, "kind" | "label" | "image" | "width" | "height" | "custom" | "color"> &
+  Partial<Pick<Item, "ma" | "voltage" | "pedalType">>;
 
 /**
  * Adds an item and returns the state patch. A pedal goes to the right of the previously placed pedal with its
@@ -147,6 +148,15 @@ function viewShowing(s: PlaygroundState, item: Item): View {
   };
 }
 
+/** The catalog's pedal specs, as item fields. Only the ones the catalog has are set. */
+function catalogSpecs(c: CatalogItem): Partial<Pick<Item, "ma" | "voltage" | "pedalType">> {
+  return {
+    ...(c.ma !== undefined && { ma: c.ma }),
+    ...(c.voltage !== undefined && { voltage: c.voltage }),
+    ...(c.type !== undefined && { pedalType: c.type }),
+  };
+}
+
 export const usePlayground = create<PlaygroundState>((set, get) => ({
   name: "Untitled Playground",
   items: [],
@@ -205,6 +215,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         height: c.height,
         custom: false,
         color: null,
+        ...catalogSpecs(c),
       }),
     ),
 
@@ -224,8 +235,12 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         y: cy - c.height / 2,
         custom: false,
         color: null,
-        // A different product has a different price; whether they own it stays.
+        // A different product has a different price and specs; whether they own it stays.
         price: undefined,
+        ma: undefined,
+        voltage: undefined,
+        pedalType: undefined,
+        ...catalogSpecs(c),
       };
       return { ...record(s), items: s.items.map((i) => (i.id === id ? next : i)) };
     }),

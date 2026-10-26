@@ -70,7 +70,17 @@ for (const k of KINDS) {
       stats.missing.push(`${k.kind}: ${e.Brand} ${e.Name} -> ${e.Image}`);
       continue;
     }
-    manifest[k.kind].push({ brand: e.Brand, name: e.Name, width: e.Width, height: e.Height, image: key });
+    manifest[k.kind].push({
+      brand: e.Brand,
+      name: e.Name,
+      width: e.Width,
+      height: e.Height,
+      image: key,
+      // Optional pedal specs; left out when the entry doesn't have them, to keep the manifest small.
+      ...(e.Current !== undefined && { ma: e.Current }),
+      ...(e.Voltage !== undefined && { voltage: e.Voltage }),
+      ...(e.Type !== undefined && { type: e.Type }),
+    });
     if (seen.has(key)) continue;
     seen.add(key);
     jobs.push(async () => {

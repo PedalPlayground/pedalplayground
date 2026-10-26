@@ -6,6 +6,10 @@ export interface CatalogItem {
   /** Inches */
   height: number;
   image: string;
+  /** Optional pedal specs from the catalog: current draw in mA, supply voltage (e.g. "9V DC"), and pedal type. */
+  ma?: number;
+  voltage?: string;
+  type?: string;
 }
 
 export type Catalog = { pedals: CatalogItem[]; pedalboards: CatalogItem[] };
@@ -35,6 +39,10 @@ export interface Item {
   status?: "owned" | "wanted";
   /** Equipment List: price in US dollars (what they paid, or what it costs to buy). */
   price?: number;
+  /** Equipment List pedal specs: current draw in mA, supply voltage ("9V DC"), and pedal type ("Delay"). */
+  ma?: number;
+  voltage?: string;
+  pedalType?: string;
 }
 
 export interface View {

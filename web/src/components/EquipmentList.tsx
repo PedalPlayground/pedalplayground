@@ -1,7 +1,8 @@
-import { Check, ChevronRight, List, ShoppingCart } from "lucide-react";
+import { Check, ChevronDown, List, LocateFixed, ShoppingCart, Zap } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { imageKey, thumbUrl, type Manifest } from "../lib/catalog";
 import type { Item } from "../lib/types";
+import { formatMa, parseMa, PEDAL_TYPES, VOLTAGES } from "../lib/specs";
 import { formatSize } from "../lib/units";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
@@ -110,9 +111,10 @@ export function EquipmentList() {
           </div>
         ) : (
           <div className="animate-enter flex flex-col gap-3">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               <Stat label="Inventory Value" rows={owned} count={plural(owned.length, "Item")} />
               <Stat label="Left to Buy" rows={wanted} count={plural(wanted.length, "Item")} accent />
+              <PowerStat items={items} />
             </div>
             <Section title="Need to Buy" rows={wanted} catalog={catalog} onShow={show} empty="Mark gear you still need to buy and it'll show up here with a running total." />
             <Section title="Owned" rows={owned} catalog={catalog} onShow={show} empty="Everything here is on your shopping list." />
@@ -138,7 +140,6 @@ function Stat({ label, rows, count, accent }: { label: string; rows: Row[]; coun
 }
 
 function Section({ title, rows, catalog, onShow, empty }: { title: string; rows: Row[]; catalog: Manifest | null; onShow: (id: string) => void; empty: string }) {
-  const units = useUi((u) => u.units);
   const { sum } = total(rows);
   return (
     <section className="rounded-panel bg-surface shadow-panel">
@@ -153,29 +154,161 @@ function Section({ title, rows, catalog, onShow, empty }: { title: string; rows:
       ) : (
         <ul className="p-1.5 pt-0">
           {rows.map((r) => (
-            <li key={r.item.id} className="animate-enter group flex items-center gap-2 rounded-control p-1 pr-2 transition-colors hover:bg-surface-hover [--enter-y:4px] sm:gap-3">
-              <button
-                onClick={() => onShow(r.item.id)}
-                {...tip("Show on Playground")}
-                className="press flex min-w-0 flex-1 items-center gap-3 rounded-control p-1 text-left outline-none focus-visible:ring-2 focus-visible:ring-brand"
-              >
-                <Thumb item={r.item} catalog={catalog} />
-                <span className="min-w-0 flex-1">
-                  <span className="block truncate text-sm font-medium">{r.name}</span>
-                  <span className="block truncate text-xs text-ink-muted">
-                    {r.brand && `${r.brand} · `}
-                    {formatSize(r.item.width, r.item.height, units)}
-                  </span>
-                </span>
-                <ChevronRight size={16} className="shrink-0 text-ink-muted opacity-0 transition-opacity group-hover:opacity-100 max-sm:hidden" />
-              </button>
-              <PriceField key={r.item.price ?? "none"} item={r.item} name={r.name} />
-              <StatusToggle item={r.item} />
-            </li>
+            <GearRow key={r.item.id} row={r} catalog={catalog} onShow={onShow} />
           ))}
         </ul>
       )}
     </section>
+  );
+}
+
+/** Total current draw of every pedal on the board, owned or not, so it can be sized for a power supply. */
+function PowerStat({ items }: { items: Item[] }) {
+  const pedals = items.filter((i) => i.kind === "pedal");
+  const sum = pedals.reduce((t, i) => t + (i.ma ?? 0), 0);
+  const missing = pedals.filter((i) => i.ma === undefined).length;
+  // Per-voltage totals, biggest first: "9V DC 450 mA · 12V DC 300 mA".
+  const byVoltage = new Map<string, number>();
+  for (const i of pedals) if (i.ma !== undefined && i.voltage) byVoltage.set(i.voltage, (byVoltage.get(i.voltage) ?? 0) + i.ma);
+  const split = [...byVoltage].sort((a, b) => b[1] - a[1]).map(([v, ma]) => `${v} ${formatMa(ma)}`);
+  return (
+    <div className="rounded-panel bg-surface px-4 py-3 shadow-panel max-sm:col-span-2">
+      <p className="flex items-center gap-1 text-[13px] font-semibold tracking-[-0.01em] text-ink-muted">
+        <Zap size={13} strokeWidth={2.25} />
+        Power Draw
+      </p>
+      <p className="text-2xl font-semibold tabular-nums tracking-[-0.02em] max-sm:text-xl">{formatMa(sum)}</p>
+      <p className="truncate text-xs text-ink-muted" {...(split.length > 1 ? tip(split.join(" · ")) : {})}>
+        {pedals.length === 0
+          ? "No Pedals Yet"
+          : missing > 0
+            ? `${plural(missing, "Pedal")} Without a Draw`
+            : split.join(" · ") || plural(pedals.length, "Pedal")}
+      </p>
+    </div>
+  );
+}
+
+/** One item: thumbnail, name, price and status. Clicking it opens its details (specs, size, Show on Playground). */
+function GearRow({ row: r, catalog, onShow }: { row: Row; catalog: Manifest | null; onShow: (id: string) => void }) {
+  const units = useUi((u) => u.units);
+  const [open, setOpen] = useState(false);
+  const { item } = r;
+  const specs = [item.pedalType, item.voltage, item.ma !== undefined ? formatMa(item.ma) : undefined].filter(Boolean);
+  const detail = [r.brand, ...(specs.length ? specs : [formatSize(item.width, item.height, units)])].filter(Boolean).join(" · ");
+  return (
+    <li className={`animate-enter rounded-control transition-colors [--enter-y:4px] ${open ? "bg-surface-hover" : ""}`}>
+      <div className="group flex items-center gap-2 rounded-control p-1 pr-2 transition-colors hover:bg-surface-hover sm:gap-3">
+        <button
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          {...tip(open ? "Hide Details" : "Show Details")}
+          className="press flex min-w-0 flex-1 items-center gap-3 rounded-control p-1 text-left outline-none focus-visible:ring-2 focus-visible:ring-brand"
+        >
+          <Thumb item={item} catalog={catalog} />
+          <span className="min-w-0 flex-1">
+            <span className="block truncate text-sm font-medium">{r.name}</span>
+            <span className="block truncate text-xs text-ink-muted">{detail}</span>
+          </span>
+          <ChevronDown
+            size={16}
+            className={`shrink-0 text-ink-muted transition-[transform,opacity] duration-150 max-sm:hidden ${open ? "rotate-180 opacity-100" : "opacity-0 group-hover:opacity-100"}`}
+          />
+        </button>
+        <PriceField key={item.price ?? "none"} item={item} name={r.name} />
+        <StatusToggle item={item} />
+      </div>
+      {open && <Details item={item} name={r.name} onShow={() => onShow(item.id)} />}
+    </li>
+  );
+}
+
+const fieldLabel = "flex min-w-0 flex-col gap-1 text-xs font-medium text-ink-muted";
+const fieldBox =
+  "h-8 w-full rounded-control border border-line bg-surface px-2 text-sm text-ink outline-none transition-shadow focus:border-brand focus:ring-2 focus:ring-brand/30 pointer-coarse:h-10 max-sm:text-base";
+
+/** Specs for a pedal (type, voltage, current draw), its size, and a way back to it on the Playground. */
+function Details({ item, name, onShow }: { item: Item; name: string; onShow: () => void }) {
+  const updateGear = usePlayground((p) => p.updateGear);
+  const units = useUi((u) => u.units);
+  const pedal = item.kind === "pedal";
+  return (
+    <div className="animate-enter flex flex-wrap items-end gap-3 px-3 pb-3 pt-1 [--enter-y:-4px] sm:pl-[68px]">
+      {pedal && (
+        <>
+          <label className={`${fieldLabel} w-[150px] max-sm:flex-1`}>
+            Type
+            <select
+              value={item.pedalType ?? ""}
+              onChange={(e) => updateGear(item.id, { pedalType: e.target.value || undefined })}
+              aria-label={`Type of ${name}`}
+              className={fieldBox}
+            >
+              <option value="">Not Set</option>
+              {PEDAL_TYPES.map((t) => (
+                <option key={t}>{t}</option>
+              ))}
+              {item.pedalType && !(PEDAL_TYPES as readonly string[]).includes(item.pedalType) && <option>{item.pedalType}</option>}
+            </select>
+          </label>
+          <label className={`${fieldLabel} w-[110px] max-sm:flex-1`}>
+            Voltage
+            <select
+              value={item.voltage ?? ""}
+              onChange={(e) => updateGear(item.id, { voltage: e.target.value || undefined })}
+              aria-label={`Voltage of ${name}`}
+              className={fieldBox}
+            >
+              <option value="">Not Set</option>
+              {VOLTAGES.map((v) => (
+                <option key={v}>{v}</option>
+              ))}
+              {item.voltage && !(VOLTAGES as readonly string[]).includes(item.voltage) && <option>{item.voltage}</option>}
+            </select>
+          </label>
+          <MaField key={item.ma ?? "none"} item={item} name={name} />
+        </>
+      )}
+      <p className="flex h-8 items-center text-xs text-ink-muted pointer-coarse:h-10 max-sm:basis-full max-sm:h-auto">
+        Size {formatSize(item.width, item.height, units)}
+      </p>
+      <button
+        onClick={onShow}
+        className="press ml-auto flex h-8 shrink-0 items-center gap-1.5 rounded-[5px] bg-[rgb(202_203_226/0.39)] px-3 text-[13px] font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)] focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10 max-sm:ml-0 max-sm:w-full max-sm:justify-center"
+      >
+        <LocateFixed size={14} strokeWidth={2.25} />
+        Show on Playground
+      </button>
+    </div>
+  );
+}
+
+/** Current draw in mA. Saves on blur or Enter. */
+function MaField({ item, name }: { item: Item; name: string }) {
+  const updateGear = usePlayground((p) => p.updateGear);
+  const [draft, setDraft] = useState(() => (item.ma === undefined ? "" : String(item.ma)));
+  const commit = () => {
+    const ma = parseMa(draft);
+    setDraft(ma === undefined ? "" : String(ma));
+    updateGear(item.id, { ma });
+  };
+  return (
+    <label className={`${fieldLabel} w-[110px] max-sm:flex-1`}>
+      Current Draw
+      <span className={`${fieldBox} flex items-center gap-1 focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/30`}>
+        <input
+          value={draft}
+          onChange={(e) => setDraft(e.target.value)}
+          onBlur={commit}
+          onKeyDown={(e) => e.key === "Enter" && e.currentTarget.blur()}
+          inputMode="numeric"
+          placeholder="0"
+          aria-label={`Current draw of ${name} in milliamps`}
+          className="w-full min-w-0 bg-transparent text-right tabular-nums outline-none placeholder:text-ink-muted/60"
+        />
+        <span className="text-xs text-ink-muted">mA</span>
+      </span>
+    </label>
   );
 }
 
