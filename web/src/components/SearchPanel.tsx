@@ -1,5 +1,5 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
-import { Check, ChevronDown, ChevronLeft, Plus, Search, X } from "lucide-react";
+import { Check, ChevronDown, ChevronLeft, CornerDownLeft, Plus, Search, X } from "lucide-react";
 import { tip } from "./Tooltip";
 import {
   useCallback,
@@ -398,6 +398,12 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                   {!kind && entry.kind === "pedalboard" && " · Pedalboard"}
                 </span>
               </span>
+              {row === active && !isAdded && (
+                <kbd className="ml-auto flex shrink-0 items-center gap-1 pr-1 font-sans text-xs tracking-normal text-ink-muted pointer-coarse:hidden">
+                  <CornerDownLeft size={13} />
+                  Enter
+                </kbd>
+              )}
               {isAdded && (
                 <span className="animate-enter ml-auto flex shrink-0 items-center gap-1 pr-1 text-[13px] font-semibold text-brand [--enter-y:4px]">
                   <Check size={16} strokeWidth={2.5} />
