@@ -21,9 +21,9 @@ const WARM_MS = 300;
 let timer: ReturnType<typeof setTimeout> | undefined;
 let lastHidden = 0;
 
-const isMac = typeof navigator !== "undefined" && /Mac|iPhone|iPad/.test(navigator.platform);
+export const isMac = typeof navigator !== "undefined" && /Mac|iPhone|iPad/.test(navigator.platform);
 /** Shortcuts are written with ⌘; other platforms read "Ctrl+" ("Ctrl +" before a plus or minus). */
-const platformKeys = (s: string) => (isMac ? s : s.replace(/⌘(?=[+−])/g, "Ctrl ").replace(/⌘/g, "Ctrl+"));
+export const platformKeys = (s: string) => (isMac ? s : s.replace(/⌘(?=[+−])/g, "Ctrl ").replace(/⌘/g, "Ctrl+"));
 
 function show(el: Element, label: string, shortcut: string | undefined, side: Side | undefined, immediate: boolean) {
   clearTimeout(timer);

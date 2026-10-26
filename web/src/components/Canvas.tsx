@@ -5,8 +5,9 @@ import { snapMove, type Guides } from "../lib/snap";
 import type { Item } from "../lib/types";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
+import { openContextMenu, useContextMenu } from "./ContextMenu";
 import { CustomItemView } from "./CustomItem";
-import { tip } from "./Tooltip";
+import { isMac, tip } from "./Tooltip";
 import { useUi } from "../store/ui";
 
 /** Screen-space distance (px) within which a dragged item snaps to another's edge or center. */
@@ -17,6 +18,8 @@ const TAP_SLOP_PX = 6;
 const NO_GUIDES: Guides = { x: [], y: [] };
 /** Two taps on the same product within this window add it to the earlier selection. */
 const DOUBLE_TAP_MS = 350;
+/** Holding a finger still this long opens the right-click menu on touch screens. */
+const LONG_PRESS_MS = 500;
 
 type Rect = { x: number; y: number; w: number; h: number };
 
@@ -28,6 +31,8 @@ type Gesture =
       startX: number;
       startY: number;
       started: boolean;
+      /** Fingers wobble, so a touch needs to travel a little further before it counts as a drag. */
+      touch: boolean;
     }
   | { type: "marquee"; startX: number; startY: number; additive: boolean }
   | { type: "pinch"; dist: number; mx: number; my: number };
@@ -110,6 +115,9 @@ export function Canvas() {
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const spaceDown = useRef(false);
   const lastTap = useRef<{ id: string; t: number; prev: string[] } | null>(null);
+  const longPress = useRef<{ timer: ReturnType<typeof setTimeout>; x: number; y: number } | null>(null);
+  /** When a long press last opened the menu, so the browser's own long-press menu event doesn't open it twice. */
+  const longPressAt = useRef(0);
   const tool = useUi((u) => u.tool);
 
   useEffect(() => {
@@ -160,13 +168,31 @@ export function Canvas() {
       if (typing(e.target)) return;
       // Other modes (like the Equipment List) cover the canvas, so its shortcuts are off there.
       if (useUi.getState().mode !== "playground") return;
+      // The right-click menu has the keyboard while it's open (arrows move through it, Esc closes it).
+      if (useContextMenu.getState().open) return;
       const s = usePlayground.getState();
       const has = s.selected.length > 0;
       const mod = e.metaKey || e.ctrlKey;
       const nudge = (e.shiftKey ? 8 : 1) / PX_PER_INCH;
       const key = e.key.toLowerCase();
 
-      if (e.code === "Space") {
+      if (key === "contextmenu" || (e.shiftKey && key === "f10")) {
+        // The keyboard way to open the right-click menu: on the selection if there is one, else mid-canvas.
+        e.preventDefault();
+        const r = ref.current!.getBoundingClientRect();
+        const chosen = s.items.filter((i) => s.selected.includes(i.id));
+        let x = r.width / 2;
+        let y = r.height / 2;
+        if (chosen.length) {
+          const b = chosen.map(itemBounds);
+          const scale = s.view.zoom * PX_PER_INCH;
+          x = s.view.x + ((Math.min(...b.map((v) => v.left)) + Math.max(...b.map((v) => v.right))) / 2) * scale;
+          y = s.view.y + ((Math.min(...b.map((v) => v.top)) + Math.max(...b.map((v) => v.bottom))) / 2) * scale;
+        }
+        x = clamp(x, 0, r.width);
+        y = clamp(y, 0, r.height);
+        openContextMenu({ kind: has ? "object" : "canvas", x: r.left + x, y: r.top + y, canvasX: x, canvasY: y });
+      } else if (e.code === "Space") {
         e.preventDefault();
         if (!spaceDown.current) setSpaceHeld(true);
         spaceDown.current = true;
@@ -236,8 +262,32 @@ export function Canvas() {
     };
   };
 
+  const cancelLongPress = () => {
+    if (longPress.current) clearTimeout(longPress.current.timer);
+    longPress.current = null;
+  };
+
+  /** Opens the right-click menu at a window point: the object menu if something is selected, else the canvas menu. */
+  const openMenuAt = (clientX: number, clientY: number, onItem: boolean) => {
+    if (useUi.getState().mode !== "playground") return;
+    const p = local({ clientX, clientY });
+    const kind = onItem && usePlayground.getState().selected.length ? "object" : "canvas";
+    openContextMenu({ kind, x: clientX, y: clientY, canvasX: p.x, canvasY: p.y });
+  };
+
   const onPointerDown = (e: React.PointerEvent) => {
     useUi.getState().setSearchOpen(false);
+    cancelLongPress();
+
+    // Right click (or Control-click on a Mac): pick what's under the pointer, then let the menu open.
+    // A right click on something already selected keeps the whole selection, like Figma and Finder.
+    if (e.pointerType !== "touch" && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) {
+      const s = usePlayground.getState();
+      const id = (e.target as HTMLElement).closest<HTMLElement>("[data-item-id]")?.dataset.itemId;
+      if (!id) s.clearSelection();
+      else if (!s.selected.includes(id)) s.select(id);
+      return;
+    }
     try {
       ref.current!.setPointerCapture(e.pointerId);
     } catch {
@@ -283,15 +333,43 @@ export function Canvas() {
       const state = usePlayground.getState();
       const origins: Record<string, { x: number; y: number }> = {};
       for (const i of state.items) if (state.selected.includes(i.id) && !i.locked) origins[i.id] = { x: i.x, y: i.y };
-      gesture.current = { type: "drag", origins, startX: e.clientX, startY: e.clientY, started: false };
+      gesture.current = { type: "drag", origins, startX: e.clientX, startY: e.clientY, started: false, touch };
     } else {
       if (!e.shiftKey) s.clearSelection();
       gesture.current = { type: "marquee", startX: p.x, startY: p.y, additive: e.shiftKey };
     }
+
+    // Touch: holding one finger still opens the right-click menu (iPhones and iPads have no right click).
+    if (touch && pointers.current.size === 1) {
+      const at = { x: e.clientX, y: e.clientY };
+      const onItem = !!itemEl;
+      longPress.current = {
+        ...at,
+        timer: setTimeout(() => {
+          longPress.current = null;
+          const g = gesture.current;
+          if (!g || (g.type === "pan" && g.moved) || (g.type === "drag" && g.started)) return;
+          gesture.current = null; // lifting the finger now shouldn't count as a tap
+          lastTap.current = null;
+          longPressAt.current = Date.now();
+          openMenuAt(at.x, at.y, onItem);
+        }, LONG_PRESS_MS),
+      };
+    }
+  };
+
+  const onContextMenu = (e: React.MouseEvent) => {
+    e.preventDefault(); // never the browser's own menu on the canvas
+    cancelLongPress();
+    if (Date.now() - longPressAt.current < 1000) return; // a long press already opened it
+    if (gesture.current?.type === "pan" || gesture.current?.type === "drag") gesture.current = null;
+    openMenuAt(e.clientX, e.clientY, !!(e.target as HTMLElement).closest("[data-item-id]"));
   };
 
   const onPointerMove = (e: React.PointerEvent) => {
     if (pointers.current.has(e.pointerId)) pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    const lp = longPress.current;
+    if (lp && Math.hypot(e.clientX - lp.x, e.clientY - lp.y) >= TAP_SLOP_PX) cancelLongPress();
     const g = gesture.current;
     if (!g) return;
     const s = usePlayground.getState();
@@ -313,7 +391,7 @@ export function Canvas() {
       const rawX = e.clientX - g.startX;
       const rawY = e.clientY - g.startY;
       if (!g.started) {
-        if (Math.hypot(rawX, rawY) < DRAG_START_PX) return;
+        if (Math.hypot(rawX, rawY) < (g.touch ? TAP_SLOP_PX : DRAG_START_PX)) return;
         g.started = true;
         lastTap.current = null; // a drag isn't a tap
         s.beginTransaction(); // the whole drag is one undo step
@@ -360,6 +438,7 @@ export function Canvas() {
 
   const endGesture = (e: React.PointerEvent) => {
     pointers.current.delete(e.pointerId);
+    cancelLongPress();
     setPanning(false);
     const g = gesture.current;
     if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) usePlayground.getState().clearSelection();
@@ -382,8 +461,10 @@ export function Canvas() {
         backgroundImage: "radial-gradient(circle at 1px 1px, var(--color-grid) 0.625px, transparent 0.875px)",
         backgroundSize: `${gridStep}px ${gridStep}px`,
         backgroundPosition: `${view.x}px ${view.y}px`,
+        WebkitTouchCallout: "none", // no iOS "save image" sheet on a long press
       }}
       onPointerDown={onPointerDown}
+      onContextMenu={onContextMenu}
       onPointerMove={onPointerMove}
       onPointerUp={endGesture}
       onPointerCancel={endGesture}

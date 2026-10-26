@@ -25,9 +25,6 @@ interface UiState {
   /** The panel is picking a replacement for the selected product instead of adding a new one. */
   replacing: boolean;
   setReplacing: (replacing: boolean) => void;
-  /** The panel is editing the selected custom pedal or pedalboard. */
-  editing: boolean;
-  setEditing: (editing: boolean) => void;
   setMode: (m: Mode) => void;
   setTool: (t: Tool) => void;
   setUnits: (u: Units) => void;
@@ -118,11 +115,9 @@ export const useUi = create<UiState>((set) => ({
     set({ avatar });
   },
   searchOpen: false,
-  setSearchOpen: (searchOpen) => set({ searchOpen, replacing: false, editing: false }),
+  setSearchOpen: (searchOpen) => set({ searchOpen, replacing: false }),
   replacing: false,
-  setReplacing: (replacing) => set({ replacing, editing: false, searchOpen: replacing }),
-  editing: false,
-  setEditing: (editing) => set({ editing, replacing: false, searchOpen: editing }),
+  setReplacing: (replacing) => set({ replacing, searchOpen: replacing }),
   setMode: (mode) => set({ mode }),
   setTool: (tool) => set({ tool }),
   setUnits: (units) => {
@@ -136,7 +131,7 @@ export const useUi = create<UiState>((set) => ({
   openUpgrade: (upgrade) => set({ upgrade }),
   closeUpgrade: () => set({ upgrade: null }),
   tourOpen: false,
-  startTour: () => set({ tourOpen: true, searchOpen: false, replacing: false, editing: false }),
+  startTour: () => set({ tourOpen: true, searchOpen: false, replacing: false }),
   endTour: () => {
     try {
       localStorage.setItem(TOUR_KEY, "done");

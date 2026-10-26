@@ -18,6 +18,7 @@ import { SaveStatus } from "./components/SaveStatus";
 import { SearchPanel } from "./components/SearchPanel";
 import { tourSeen, useUi } from "./store/ui";
 import { ObjectMenu } from "./components/ObjectMenu";
+import { ContextMenu } from "./components/ContextMenu";
 import { ActionToast } from "./components/ActionToast";
 import { BackToCenter } from "./components/BackToCenter";
 import { TooltipLayer } from "./components/Tooltip";
@@ -86,7 +87,6 @@ export function App() {
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const searchOpen = useUi((u) => u.searchOpen);
   const replacing = useUi((u) => u.replacing);
-  const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
   const listMode = useUi((u) => u.mode === "list");
   const [dialog, setDialog] = useState<Dialog>(null);
@@ -183,6 +183,7 @@ export function App() {
             <>
               <BackToCenter />
               <ObjectMenu />
+              <ContextMenu />
             </>
           )}
           <ModeRail />
@@ -198,8 +199,8 @@ export function App() {
           {!listMode && (
           <div className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             <ActionToast className="max-sm:hidden" />
-            {searchOpen && <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} />}
-            <Toolbar onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
+            {searchOpen && <SearchPanel key={replacing ? "replace" : "add"} replace={replacing} onClose={() => setSearchOpen(false)} />}
+            <Toolbar onPlace={() => setSearchOpen(replacing ? true : !searchOpen)} onShare={() => setDialog("share")} />
           </div>
           )}
 
