@@ -8,6 +8,7 @@ import {
   useMemo,
   useRef,
   useState,
+  type KeyboardEvent as ReactKeyboardEvent,
   type MouseEvent as ReactMouseEvent,
   type PointerEvent as ReactPointerEvent,
 } from "react";
@@ -159,6 +160,38 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     addedTimer.current = setTimeout(() => (phone ? onClose() : setAdded(null)), phone ? 600 : 1200);
   };
 
+  const pick = (entry: Entry) => {
+    if (target) {
+      replaceItem(target.id, entry.item);
+      onClose();
+    } else add(entry, String(entry.id));
+  };
+
+  // Keyboard: arrows move a highlight through the results, Enter picks it. With nothing highlighted yet, Enter picks
+  // the top result of a typed search.
+  const [active, setActive] = useState(-1);
+  useEffect(() => setActive(-1), [deferredQuery, kind, sizes]);
+  useEffect(() => {
+    if (active >= 0) document.getElementById(`search-row-${active}`)?.scrollIntoView({ block: "nearest" });
+  }, [active]);
+  const onSearchKey = (e: ReactKeyboardEvent<HTMLInputElement>) => {
+    if (e.nativeEvent.isComposing) return;
+    if (e.key === "Escape") {
+      e.preventDefault();
+      onClose();
+    } else if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      if (results.length === 0) return;
+      e.preventDefault();
+      const step = e.key === "ArrowDown" ? 1 : -1;
+      setActive((a) => (a < 0 ? (step > 0 ? 0 : results.length - 1) : Math.min(results.length - 1, Math.max(0, a + step))));
+    } else if (e.key === "Enter") {
+      const entry = results[active >= 0 ? active : typed ? 0 : -1];
+      if (!entry) return;
+      e.preventDefault();
+      pick(entry);
+    }
+  };
+
   // Tapping a chip shouldn't take focus from the search field, which would drop the phone keyboard.
   const keepFocus = (e: ReactMouseEvent) => e.preventDefault();
   // Filters read as plain text with a caret; a filter that's narrowing the results turns brand-colored.
@@ -187,6 +220,12 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
             setQuery(e.target.value);
             setCustom(null); // typing goes back to the results
           }}
+          onKeyDown={onSearchKey}
+          role="combobox"
+          aria-expanded={!showCustom}
+          aria-controls="search-results"
+          aria-activedescendant={active >= 0 ? `search-row-${active}` : undefined}
+          aria-autocomplete="list"
           placeholder={target ? `Replace ${target.label}` : "Search pedals and pedalboards"}
           className="h-9 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted max-sm:text-base"
         />
@@ -293,7 +332,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           />
         </div>
       ) : (
-      <ul className={`overflow-y-auto overscroll-contain p-2 ${phone ? "min-h-0 flex-1" : "max-h-80"}`}>
+      <ul id="search-results" role="listbox" className={`overflow-y-auto overscroll-contain p-2 ${phone ? "min-h-0 flex-1" : "max-h-80"}`}>
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
         {error && <li className="p-3 text-sm text-danger">{error}</li>}
         {catalog && (hits.length === 0 || partial) && (
@@ -329,21 +368,20 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
             </div>
           </li>
         )}
-        {results.map((entry) => {
+        {results.map((entry, row) => {
           const { item } = entry;
           const key = String(entry.id);
           const isAdded = added === key;
           return (
-          <li key={key}>
+          <li key={key} role="presentation">
             <button
-              onClick={() => {
-                if (target) {
-                  replaceItem(target.id, item);
-                  onClose();
-                } else add(entry, key);
-              }}
+              id={`search-row-${row}`}
+              role="option"
+              aria-selected={row === active}
+              tabIndex={-1}
+              onClick={() => pick(entry)}
               className={`flex w-full items-center gap-3 rounded-control p-2 text-left transition-colors ${
-                isAdded ? "bg-brand/10" : "hover:bg-surface-hover active:bg-chrome-line"
+                isAdded ? "bg-brand/10" : row === active ? "bg-surface-hover" : "hover:bg-surface-hover active:bg-chrome-line"
               }`}
             >
               <img

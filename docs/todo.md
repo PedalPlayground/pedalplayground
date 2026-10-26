@@ -34,10 +34,10 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
     affiliate link, with a disclosure line. Waits on Trav's Reverb approval on Awin.
 22. Two catalog pedals appear twice with different images or sizes: Kingtone The Octaland (4.7″ vs 5.09″ wide) and
     MXR Super Comp (two images). Check which are real variants, and rename or remove the rest.
-23. Keyboard navigation in the pedal search: arrow keys to move through results, Enter to add, Escape to close.
 
 ## Done
 
+- Keyboard navigation in the pedal search (arrows, Enter, Escape).
 - Snap guides get stuck sometimes.
 - Onboarding popups (first-visit tour; replay from Settings → Take the tour).
 - Better-looking custom pedals (style templates, plus Edit for custom pedals and pedalboards).
