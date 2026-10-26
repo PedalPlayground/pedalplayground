@@ -25,6 +25,13 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
   - A Keyboard Shortcuts cheat sheet, including mouse and tap gestures. Keep a running checklist of the shortcuts
     each person has already used, so they can knock them out one by one.
 - Support logging in by username/password, and maybe Google/Apple auth.
+- Tour first screen: a short looping demo video (or a lighter format if better) in the top half of the modal,
+  optimized for size and load time. Aimed at returning users seeing the new UI and at brand new users.
+- Make an artifact of all the UI copy on the site, so Trav can audit and tweak tone and voice.
+- Establish tone and voice.
+- Bug: clicking the Signal Path button in the mode rail hides its tooltip.
+- Audit colors so the grays and blacks share the main blurple's hue, and build a brand palette with shades of each
+  color, named the industry-standard way (e.g. `brand-50` to `brand-950`).
 
 ## Done
 
