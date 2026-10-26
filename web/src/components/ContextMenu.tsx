@@ -193,6 +193,8 @@ export function ContextMenu() {
           sideOffset={2}
           collisionPadding={8}
           onCloseAutoFocus={(e) => e.preventDefault()}
+          // Esc only closes the menu; without this the canvas would also take it as "clear the selection".
+          onEscapeKeyDown={(e) => e.stopPropagation()}
           onContextMenu={(e) => e.preventDefault()}
           className="animate-menu z-50 min-w-48 rounded-[10px] border border-chrome-line bg-surface p-1 shadow-panel"
         >
