@@ -18,6 +18,9 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 
 ## Other
 
+- Move the action notifications (toasts) to the top right of the canvas.
+- Color action notifications: green for successful actions, red for failed ones.
+
 ## Done
 
 - Snap guides get stuck sometimes.
