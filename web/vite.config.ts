@@ -4,5 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  server: { port: 5173, fs: { allow: [".."] } },
+  // host: true also serves on your local network, so a phone on the same Wi-Fi can open the dev server.
+  server: { port: 5173, host: true, fs: { allow: [".."] } },
 });
