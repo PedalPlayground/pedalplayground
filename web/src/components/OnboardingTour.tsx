@@ -24,7 +24,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
     {
       target: "add",
       title: "Add gear",
-      body: "Search for pedals and boards, then drop them onto your canvas.",
+      body: "Search for pedals and boards, then drop them onto your Playground.",
     },
     {
       target: "canvas",
