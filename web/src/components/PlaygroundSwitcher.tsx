@@ -121,8 +121,8 @@ export function PlaygroundBreadcrumb(props: MenuProps) {
 }
 
 /**
- * Floating playground controls over the canvas. Phones get the whole unit (switch, new, share), since they have no
- * header; larger screens have the breadcrumb in the header, so only Share shows here.
+ * Floating playground controls for phones (switch, new, share), which have no header. Larger screens use the header
+ * breadcrumb and the toolbar's Share button instead.
  */
 export function PlaygroundSwitcher({ onShare, ...props }: MenuProps & { onShare: () => void }) {
   const live = useLiveThumbnail();
@@ -131,8 +131,8 @@ export function PlaygroundSwitcher({ onShare, ...props }: MenuProps & { onShare:
   const current = list.find((p) => p.id === cloudId);
 
   return (
-    <div className="absolute left-4 top-4 flex max-w-[calc(100%-2rem)] items-center gap-1 rounded-panel bg-surface p-1.5 shadow-panel lg:bottom-4 lg:top-auto">
-      <span className="contents sm:hidden">
+    <div className="absolute left-4 top-4 flex max-w-[calc(100%-2rem)] items-center gap-1 rounded-panel bg-surface p-1.5 shadow-panel sm:hidden">
+      <span className="contents">
         <Dropdown.Root>
           <Dropdown.Trigger
             aria-label={`Playground: ${name}`}
@@ -154,9 +154,8 @@ export function PlaygroundSwitcher({ onShare, ...props }: MenuProps & { onShare:
           <Plus size={16} />
         </button>
       </span>
-      <button onClick={onShare} aria-label="Share" className="btn-primary ml-0.5 flex h-9 items-center gap-1.5 px-3 max-sm:px-2.5">
+      <button onClick={onShare} aria-label="Share" className="btn-primary ml-0.5 flex h-9 items-center gap-1.5 px-2.5">
         <Share2 size={16} />
-        <span className="max-sm:hidden">Share</span>
       </button>
     </div>
   );

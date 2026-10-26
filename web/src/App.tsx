@@ -191,7 +191,7 @@ export function App() {
 
           <div className="absolute bottom-3 left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-3 max-sm:right-3 max-sm:max-w-none max-sm:translate-x-0 sm:bottom-4">
             {searchOpen && <SearchPanel key={replacing ? "replace" : "add"} replace={replacing} onClose={() => setSearchOpen(false)} />}
-            <Toolbar onPlace={() => setSearchOpen(replacing ? true : !searchOpen)} />
+            <Toolbar onPlace={() => setSearchOpen(replacing ? true : !searchOpen)} onShare={() => setDialog("share")} />
           </div>
 
         </main>
