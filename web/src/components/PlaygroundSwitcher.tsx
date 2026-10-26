@@ -1,5 +1,5 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
-import { Check, ChevronDown, Plus, Share2 } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 import { renderThumbnail } from "../lib/thumbnail";
 import { requestNewPlayground } from "../lib/newPlayground";
@@ -40,7 +40,7 @@ function useLiveThumbnail() {
 type MenuProps = { onRename: () => void; onAll: () => void; onSignIn: () => void };
 
 /** The playground menu's items: the user's playgrounds, rename, new, and (signed out) sign in. */
-function MenuContent({ onRename, onAll, onSignIn, side }: MenuProps & { side: "top" | "bottom" }) {
+function MenuContent({ onRename, onAll, onSignIn }: MenuProps) {
   const name = usePlayground((s) => s.name);
   const user = useAuth((s) => s.user);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
@@ -48,10 +48,11 @@ function MenuContent({ onRename, onAll, onSignIn, side }: MenuProps & { side: "t
   return (
     <Dropdown.Portal>
       <Dropdown.Content
-        side={side}
-        align={side === "bottom" ? "center" : "start"}
+        side="bottom"
+        align="center"
         sideOffset={8}
-        className="z-50 w-72 rounded-panel bg-surface p-1.5 shadow-panel"
+        collisionPadding={12}
+        className="z-50 w-72 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
       >
         <Dropdown.Label className="truncate px-2 pb-1 pt-1.5 text-sm font-medium">{name}</Dropdown.Label>
         <Dropdown.Separator className="my-1 h-px bg-line" />
@@ -91,13 +92,13 @@ function MenuContent({ onRename, onAll, onSignIn, side }: MenuProps & { side: "t
 }
 
 /** Header breadcrumb: "PedalPlayground / [thumbnail] Playground name ⌄", which opens the playground menu. */
-export function PlaygroundBreadcrumb(props: MenuProps) {
+export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & { className?: string }) {
   const live = useLiveThumbnail();
   const name = usePlayground((s) => s.name);
   const { list, cloudId } = useCloud();
   const thumb = live ?? list.find((p) => p.id === cloudId)?.thumbnail;
   return (
-    <div className="flex min-w-0 items-center gap-3 text-sm/4 font-semibold tracking-[-0.01em]">
+    <div className={`flex min-w-0 items-center gap-3 text-sm/4 font-semibold tracking-[-0.01em] ${className}`}>
       <span className="shrink-0 max-md:hidden">PedalPlayground</span>
       <span className="shrink-0 text-base/4 font-light opacity-30 max-md:hidden">/</span>
       <Dropdown.Root>
@@ -114,49 +115,8 @@ export function PlaygroundBreadcrumb(props: MenuProps) {
           <span className="truncate">{name}</span>
           <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
         </Dropdown.Trigger>
-        <MenuContent {...props} side="bottom" />
+        <MenuContent {...props} />
       </Dropdown.Root>
-    </div>
-  );
-}
-
-/**
- * Floating playground controls for phones (switch, new, share), which have no header. Larger screens use the header
- * breadcrumb and the toolbar's Share button instead.
- */
-export function PlaygroundSwitcher({ onShare, ...props }: MenuProps & { onShare: () => void }) {
-  const live = useLiveThumbnail();
-  const name = usePlayground((s) => s.name);
-  const { list, cloudId } = useCloud();
-  const current = list.find((p) => p.id === cloudId);
-
-  return (
-    <div className="absolute left-4 top-4 flex max-w-[calc(100%-2rem)] items-center gap-1 rounded-panel bg-surface p-1.5 shadow-panel sm:hidden">
-      <span className="contents">
-        <Dropdown.Root>
-          <Dropdown.Trigger
-            aria-label={`Playground: ${name}`}
-            title={name}
-            className="flex h-9 items-center gap-1.5 rounded-control px-1.5 outline-none hover:bg-surface-hover data-[state=open]:bg-surface-hover"
-          >
-            <Thumb src={live ?? current?.thumbnail} />
-            <ChevronDown size={14} className="shrink-0 text-ink-muted" />
-          </Dropdown.Trigger>
-          <MenuContent {...props} side="top" />
-        </Dropdown.Root>
-        <span className="h-5 w-px bg-line" />
-        <button
-          aria-label="New playground"
-          title="New playground"
-          onClick={requestNewPlayground}
-          className="grid size-9 shrink-0 place-items-center rounded-control text-ink-muted hover:bg-surface-hover"
-        >
-          <Plus size={16} />
-        </button>
-      </span>
-      <button onClick={onShare} aria-label="Share" className="btn-primary ml-0.5 flex h-9 items-center gap-1.5 px-2.5">
-        <Share2 size={16} />
-      </button>
     </div>
   );
 }

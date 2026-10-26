@@ -2,7 +2,7 @@ import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Lock, Lock
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
-import { barDivider, barIconActive, barIconIdle, barSoftButton, barSoftDangerButton } from "./toolbarStyles";
+import { barDivider, barIconActive, barIconButton, barIconIdle, barPanel, barSoftButton, barSoftDangerButton } from "./toolbarStyles";
 
 function Action({
   label,
@@ -23,7 +23,7 @@ function Action({
       aria-label={label}
       aria-pressed={pressed}
       onClick={onClick}
-      className={`grid size-10 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand sm:size-7 sm:rounded-[5px] sm:pointer-coarse:size-11 ${
+      className={`${barIconButton} ${
         danger ? "text-danger hover:bg-surface-hover" : pressed ? barIconActive : barIconIdle
       }`}
     >
@@ -41,10 +41,12 @@ export function ObjectMenu() {
   const single = s.selected.length === 1 ? s.items.find((i) => i.id === s.selected[0]) : undefined;
   const locked = s.items.filter((i) => s.selected.includes(i.id)).every((i) => i.locked);
   return (
-    // On phones it sits at the bottom, in thumb reach above the toolbar (hidden while the search sheet is open).
-    <div className={`absolute left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-0.5 glass-sm p-1.5 max-sm:rounded-3xl max-sm:bottom-[88px] sm:top-4 sm:flex-row sm:gap-1.5 sm:rounded-[10px] sm:border sm:border-chrome-line sm:bg-surface sm:shadow-[0_0_12px_rgb(0_0_0/0.05)] ${searchOpen ? "max-sm:hidden" : ""}`}>
+    // On phones it sits at the bottom, in thumb reach just above the toolbar (hidden while the search panel is open).
+    <div
+      className={`absolute left-1/2 z-10 flex max-w-[calc(100%-24px)] -translate-x-1/2 flex-col items-center gap-1 ${barPanel} max-sm:bottom-[74px] sm:top-4 sm:flex-row sm:gap-1.5 ${searchOpen ? "max-sm:hidden" : ""}`}
+    >
       <div className="flex items-center gap-1 max-sm:w-full max-sm:justify-center">
-        <span className="max-w-64 truncate px-2 text-xs font-medium sm:max-w-48 sm:pl-1.5 sm:pr-0.5 sm:text-[13px] sm:font-semibold sm:tracking-[-0.01em]" title={single?.label}>
+        <span className="max-w-64 truncate px-2 pt-0.5 text-[13px] font-semibold tracking-[-0.01em] sm:max-w-48 sm:pl-1.5 sm:pr-0.5 sm:pt-0" title={single?.label}>
           {single ? single.label : `${s.selected.length} selected`}
         </span>
       </div>
@@ -73,7 +75,7 @@ export function ObjectMenu() {
         <button
           onClick={() => setReplacing(true)}
           title="Replace with another product"
-          className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:rounded-control max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}
+          className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}
         >
           <Replace size={14} strokeWidth={2.25} className="max-sm:size-[18px] max-sm:stroke-2" />
           <span className="hidden sm:inline">Replace</span>

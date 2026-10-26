@@ -2,7 +2,6 @@ import { Fullscreen, Hand, MousePointer2, Redo2, SquareArrowOutUpRight, Undo2, Z
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
-import { MobileBar } from "./MobileBar";
 import { barDivider, barIconActive, barIconButton, barIconIdle, barPanel, barSoftButton } from "./toolbarStyles";
 
 function IconButton({
@@ -73,15 +72,13 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
   const canUndo = usePlayground((s) => s.past.length > 0);
   const canRedo = usePlayground((s) => s.future.length > 0);
   return (
-    <>
-    <MobileBar onPlace={onPlace} />
-    <div className={`flex max-w-full items-center gap-1.5 overflow-x-auto ${barPanel} max-sm:hidden`}>
+    <div className={`flex max-w-full items-center gap-1.5 overflow-x-auto ${barPanel}`}>
       <button
         onClick={onPlace}
-        className="btn-primary flex h-[26px] shrink-0 items-center gap-2 whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-11"
+        className="btn-primary flex h-[26px] shrink-0 items-center gap-2 whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
       >
         <AddGlyph />
-        Add a Pedal/Board
+        Add<span className="max-sm:hidden"> a Pedal/Board</span>
       </button>
       {divider}
       {/* Touch screens pan and select automatically, so the tool switch is only for mouse and trackpad. */}
@@ -96,15 +93,20 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
           {divider}
         </span>
       )}
-      <IconButton label="Zoom in" onClick={() => zoomBy(1.25)}>
-        <ZoomIn size={20} />
-      </IconButton>
+      {/* Phones zoom with a pinch, so only "zoom to fit" stays. */}
+      <span className="contents max-sm:hidden">
+        <IconButton label="Zoom in" onClick={() => zoomBy(1.25)}>
+          <ZoomIn size={20} />
+        </IconButton>
+      </span>
       <IconButton label="Zoom to fit (⇧1)" onClick={fit}>
         <Fullscreen size={17} />
       </IconButton>
-      <IconButton label="Zoom out" onClick={() => zoomBy(0.8)}>
-        <ZoomOut size={20} />
-      </IconButton>
+      <span className="contents max-sm:hidden">
+        <IconButton label="Zoom out" onClick={() => zoomBy(0.8)}>
+          <ZoomOut size={20} />
+        </IconButton>
+      </span>
       {divider}
       <IconButton label="Undo (⌘Z)" disabled={!canUndo} onClick={undo}>
         <Undo2 size={17} />
@@ -113,14 +115,10 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
         <Redo2 size={17} />
       </IconButton>
       {divider}
-      <button
-        onClick={onShare}
-        className={barSoftButton}
-      >
+      <button onClick={onShare} className={barSoftButton}>
         <SquareArrowOutUpRight size={14} strokeWidth={2.25} />
         Share
       </button>
     </div>
-    </>
   );
 }

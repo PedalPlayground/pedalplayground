@@ -17,8 +17,6 @@
   --color-brand: #5b61fb;
   --color-brand-hover: #4a50ef;
   --color-brand-top: #6d72f6;
-  --glass-edge: rgb(255 255 255 / 0.65);
-  --glass-shadow: 0 8px 32px rgb(16 18 27 / 0.14);
   --color-brand-ink: #ffffff;
   --color-danger: #d92d20;
 
@@ -49,8 +47,6 @@
     --color-brand: #6c6cff;
     --color-brand-hover: #8282ff;
     --color-brand-top: #8a8eff;
-    --glass-edge: rgb(255 255 255 / 0.14);
-    --glass-shadow: 0 8px 32px rgb(0 0 0 / 0.5);
     --color-danger: #f97066;
     --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
   }
@@ -71,8 +67,6 @@
   --color-brand: #6c6cff;
   --color-brand-hover: #8282ff;
   --color-brand-top: #8a8eff;
-  --glass-edge: rgb(255 255 255 / 0.14);
-  --glass-shadow: 0 8px 32px rgb(0 0 0 / 0.5);
   --color-danger: #f97066;
   --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
 }
@@ -114,25 +108,6 @@ body {
    (the "gradient border"; background-origin lets it span the transparent border), a soft drop shadow and
    a faint text shadow. */
 @layer components {
-  /* "Liquid glass" surface for the phone's floating bars: translucent, blurred, with a bright top edge. */
-  .glass {
-    background: color-mix(in srgb, var(--color-surface) 58%, transparent);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    backdrop-filter: blur(24px) saturate(180%);
-    border: 1px solid var(--glass-edge);
-    box-shadow: var(--glass-shadow), inset 0 1px 0 var(--glass-edge);
-  }
-  /* Same surface, but only below the sm breakpoint (desktop keeps its solid panel). */
-  @media (max-width: 639.98px) {
-    .glass-sm {
-      background: color-mix(in srgb, var(--color-surface) 58%, transparent);
-      -webkit-backdrop-filter: blur(24px) saturate(180%);
-      backdrop-filter: blur(24px) saturate(180%);
-      border: 1px solid var(--glass-edge);
-      box-shadow: var(--glass-shadow), inset 0 1px 0 var(--glass-edge);
-    }
-  }
-
   .btn-primary {
     border: 1px solid transparent;
     border-radius: var(--radius-control);

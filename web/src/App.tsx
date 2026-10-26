@@ -11,7 +11,7 @@ import { SettingsMenu } from "./components/SettingsMenu";
 import { LogoMark } from "./components/Logo";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
-import { PlaygroundBreadcrumb, PlaygroundSwitcher } from "./components/PlaygroundSwitcher";
+import { PlaygroundBreadcrumb } from "./components/PlaygroundSwitcher";
 import { RenameDialog } from "./components/RenameDialog";
 import { SaveStatus } from "./components/SaveStatus";
 import { SearchPanel } from "./components/SearchPanel";
@@ -105,17 +105,17 @@ export function App() {
 
   return (
     <div className="flex h-full flex-col">
-      {/* Header on tablet and desktop; phones use the floating account/settings pill below. */}
-      <header className="grid h-10 shrink-0 grid-cols-[1fr_auto_1fr] items-center gap-4 border-b border-chrome-line bg-chrome px-4 max-sm:hidden">
+      {/* One header for every size. On phones the side columns shrink to fit and the breadcrumb takes the middle. */}
+      <header className="grid h-10 shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-chrome-line bg-chrome px-3 sm:grid-cols-[1fr_auto_1fr] sm:gap-4 sm:px-4">
         <div className="flex min-w-0 items-center gap-2">
           <h1 className="flex">
             <LogoMark />
           </h1>
           {BETA && (
             <>
-              <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand">Beta</span>
+              <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand max-sm:hidden">Beta</span>
               {FEEDBACK_URL && (
-                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="truncate text-xs text-ink-muted hover:text-ink hover:underline">
+                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="truncate text-xs text-ink-muted hover:text-ink hover:underline max-sm:hidden">
                   Send feedback
                 </a>
               )}
@@ -123,12 +123,15 @@ export function App() {
           )}
         </div>
         <PlaygroundBreadcrumb
+          className="justify-self-center"
           onRename={() => setDialog("rename")}
           onAll={() => setDialog("playgrounds")}
           onSignIn={() => setDialog("account")}
         />
-        <div className="flex items-center justify-end gap-3">
-          <SaveStatus />
+        <div className="flex items-center justify-end gap-2 sm:gap-3">
+          <span className="max-sm:hidden">
+            <SaveStatus />
+          </span>
           {user ? (
             <AvatarMenu
               onAccount={() => setDialog("account")}
@@ -141,7 +144,7 @@ export function App() {
                 onClick={() => setDialog("account")}
                 className="btn-primary h-[26px] whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1"
               >
-                Sign in to Save
+                Sign in<span className="max-sm:hidden"> to Save</span>
               </button>
             )
           )}
@@ -156,38 +159,10 @@ export function App() {
           <Canvas />
           <ObjectMenu />
 
-          {/* Phones have no header: account and settings float top-right instead. */}
-          <div className="absolute right-3 top-3 z-20 flex flex-col items-end gap-2 sm:hidden">
-            <div className="flex items-center gap-1 rounded-panel bg-surface p-1.5 shadow-panel">
-              {user ? (
-                <AvatarMenu
-                  onAccount={() => setDialog("account")}
-                  onPlaygrounds={() => setDialog("playgrounds")}
-                  onChangeAvatar={() => setDialog("avatar")}
-                />
-              ) : (
-                cloudEnabled && (
-                  <button
-                    onClick={() => setDialog("account")}
-                    className="h-9 rounded-control bg-surface-hover px-3 text-sm font-medium outline-none hover:bg-line focus-visible:ring-2 focus-visible:ring-brand"
-                  >
-                    Sign in
-                  </button>
-                )
-              )}
-              <SettingsMenu />
-            </div>
-            <div className="empty:hidden rounded-control bg-surface/90 px-2 py-1 shadow-panel">
-              <SaveStatus />
-            </div>
+          {/* Phones have no room for the save status in the header, so it floats just below it. */}
+          <div className="empty:hidden absolute right-3 top-3 z-20 rounded-control bg-surface/90 px-2 py-1 shadow-panel sm:hidden">
+            <SaveStatus />
           </div>
-
-          <PlaygroundSwitcher
-            onRename={() => setDialog("rename")}
-            onAll={() => setDialog("playgrounds")}
-            onSignIn={() => setDialog("account")}
-            onShare={() => setDialog("share")}
-          />
 
           <div className="absolute bottom-3 left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-3 max-sm:right-3 max-sm:max-w-none max-sm:translate-x-0 sm:bottom-4">
             {searchOpen && <SearchPanel key={replacing ? "replace" : "add"} replace={replacing} onClose={() => setSearchOpen(false)} />}
