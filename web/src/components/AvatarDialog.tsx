@@ -9,6 +9,7 @@ import { useCatalog } from "../store/catalog";
 import { useUi } from "../store/ui";
 import { Modal } from "./Modal";
 import { PedalAvatar } from "./PedalAvatar";
+import { plainField } from "../lib/inputProps";
 
 export function AvatarDialog({ onClose }: { onClose: () => void }) {
   const manifest = useCatalog((s) => s.manifest);
@@ -55,6 +56,9 @@ export function AvatarDialog({ onClose }: { onClose: () => void }) {
             autoFocus
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            {...plainField}
+            autoCapitalize="none"
+            enterKeyHint="search"
             placeholder="Search pedals"
             className="h-9 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted"
           />

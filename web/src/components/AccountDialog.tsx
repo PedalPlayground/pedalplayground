@@ -89,7 +89,12 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
           <input
             type="email"
             autoFocus
+            name="email"
             autoComplete="email"
+            autoCapitalize="none"
+            autoCorrect="off"
+            spellCheck={false}
+            enterKeyHint="send"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
@@ -112,7 +117,12 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
           <input
             autoFocus
             inputMode="numeric"
+            name="code"
             autoComplete="one-time-code"
+            autoCapitalize="none"
+            autoCorrect="off"
+            spellCheck={false}
+            enterKeyHint="done"
             pattern="[0-9 ]*"
             maxLength={9}
             value={code}

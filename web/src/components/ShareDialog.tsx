@@ -3,6 +3,7 @@ import { shareUrl } from "../lib/cloud";
 import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
 import { Modal } from "./Modal";
+import { plainField } from "../lib/inputProps";
 
 export function ShareDialog({ onClose, onSignIn }: { onClose: () => void; onSignIn: () => void }) {
   const user = useAuth((s) => s.user);
@@ -43,7 +44,7 @@ export function ShareDialog({ onClose, onSignIn }: { onClose: () => void; onSign
       {error && <p className="mb-2 text-sm text-danger">{error}</p>}
       {url && (
         <div className="flex gap-2">
-          <input readOnly value={url} onFocus={(e) => e.target.select()} className="h-9 min-w-0 flex-1 rounded-control border border-line px-3 text-sm" />
+          <input readOnly value={url} {...plainField} aria-label="Share link" onFocus={(e) => e.target.select()} className="h-9 min-w-0 flex-1 rounded-control border border-line px-3 text-sm" />
           <button
             onClick={() => {
               void navigator.clipboard?.writeText(url);
