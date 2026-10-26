@@ -52,7 +52,7 @@ function MenuContent({ onRename, onAll, onSignIn }: MenuProps) {
         align="center"
         sideOffset={8}
         collisionPadding={12}
-        className="z-50 w-72 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
+        className="animate-menu z-50 w-72 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
       >
         <Dropdown.Label className="truncate px-2 pb-1 pt-1.5 text-sm font-medium">{name}</Dropdown.Label>
         <Dropdown.Separator className="my-1 h-px bg-line" />
@@ -105,7 +105,7 @@ export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & {
         <Dropdown.Trigger
           aria-label={`Playground: ${name}`}
           title={name}
-          className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none hover:bg-ink/5 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
+          className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
         >
           {thumb ? (
             <img src={thumb} alt="" className="size-6 shrink-0 rounded-[3px] border-[0.5px] border-[#d9d9d9] bg-white object-cover max-sm:hidden" />

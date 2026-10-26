@@ -54,7 +54,7 @@ export function SearchPanel({ onClose, replace = false }: { onClose: () => void;
   };
 
   return (
-    <div className="w-[min(420px,calc(100vw-5rem))] rounded-panel bg-surface shadow-panel max-sm:w-full">
+    <div className="animate-enter w-[min(420px,calc(100vw-5rem))] rounded-panel bg-surface shadow-panel max-sm:w-full">
       <div className="flex items-center gap-2 border-b border-line px-3 py-2">
         <Search size={16} className="text-ink-muted" />
         <input
@@ -64,7 +64,7 @@ export function SearchPanel({ onClose, replace = false }: { onClose: () => void;
           placeholder={target ? `Replace ${target.label}` : "Search pedals and pedalboards"}
           className="h-9 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted"
         />
-        <button aria-label="Close search" onClick={onClose} className="text-ink-muted hover:text-ink">
+        <button aria-label="Close search" onClick={onClose} className="press grid size-7 place-items-center rounded-control text-ink-muted hover:bg-surface-hover hover:text-ink active:bg-chrome-line">
           <X size={16} />
         </button>
       </div>
@@ -103,7 +103,7 @@ export function SearchPanel({ onClose, replace = false }: { onClose: () => void;
                 } else add(item, key);
               }}
               className={`flex w-full items-center gap-3 rounded-control p-2 text-left transition-colors ${
-                isAdded ? "bg-brand/10" : "hover:bg-surface-hover active:bg-surface-hover"
+                isAdded ? "bg-brand/10" : "hover:bg-surface-hover active:bg-chrome-line"
               }`}
             >
               <img
@@ -119,7 +119,7 @@ export function SearchPanel({ onClose, replace = false }: { onClose: () => void;
                 </span>
               </span>
               {isAdded && (
-                <span className="ml-auto flex shrink-0 items-center gap-1 pr-1 text-[13px] font-semibold text-brand">
+                <span className="animate-enter ml-auto flex shrink-0 items-center gap-1 pr-1 text-[13px] font-semibold text-brand [--enter-y:4px]">
                   <Check size={16} strokeWidth={2.5} />
                   Added
                 </span>

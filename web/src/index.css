@@ -119,7 +119,70 @@ body {
     font-weight: 600;
     text-shadow: 0 1px 1px rgb(0 0 0 / 0.06);
   }
+  .btn-primary {
+    transition: transform 0.12s ease-out, filter 0.15s;
+  }
   .btn-primary:hover:not(:disabled) {
     filter: brightness(0.94);
+  }
+  .btn-primary:active:not(:disabled) {
+    filter: brightness(0.86);
+    transform: scale(0.97);
+  }
+
+  /* Pressed state for buttons: a quick squeeze. Colors come from each button's own classes. */
+  .press {
+    transition: transform 0.12s ease-out, background-color 0.15s, color 0.15s;
+  }
+  .press:active:not(:disabled) {
+    transform: scale(0.92);
+  }
+}
+
+/* Things that appear slide in a few pixels and fade up; --enter-y sets the direction (negative drops in from above). */
+@keyframes pp-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--enter-y, 8px));
+  }
+}
+@keyframes pp-exit {
+  to {
+    opacity: 0;
+    transform: translateY(var(--enter-y, 8px));
+  }
+}
+@keyframes pp-fade {
+  from {
+    opacity: 0;
+  }
+}
+@utility animate-enter {
+  animation: pp-enter 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@utility animate-exit {
+  animation: pp-exit 0.15s ease-in both;
+}
+@utility animate-fade {
+  animation: pp-fade 0.15s ease-out both;
+}
+/* Radix menus: enter on open, leave on close, and drop from the side they open from. */
+@utility animate-menu {
+  --enter-y: -6px;
+  animation: pp-enter 0.18s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  &[data-side="top"] {
+    --enter-y: 6px;
+  }
+  &[data-state="closed"] {
+    animation: pp-exit 0.12s ease-in both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

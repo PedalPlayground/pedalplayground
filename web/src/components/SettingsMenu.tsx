@@ -48,7 +48,7 @@ export function SettingsMenu() {
     <Dropdown.Root>
       <Dropdown.Trigger
         aria-label="Settings"
-        className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover data-[state=open]:bg-surface-hover"
+        className="press grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover active:bg-chrome-line data-[state=open]:bg-surface-hover"
       >
         <SlidersHorizontal size={18} />
       </Dropdown.Trigger>
@@ -56,7 +56,7 @@ export function SettingsMenu() {
         <Dropdown.Content
           align="end"
           sideOffset={6}
-          className="z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel"
+          className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel"
         >
           {!signedIn && (
             <>

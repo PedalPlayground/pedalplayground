@@ -19,8 +19,8 @@ export function ModeRail() {
           aria-label={m.label}
           aria-pressed={mode === m.id}
           onClick={() => setMode(m.id)}
-          className={`grid size-9 place-items-center rounded-control outline-none ${
-            mode === m.id ? "bg-brand/10 text-brand" : "text-ink-muted hover:bg-surface-hover"
+          className={`press grid size-9 place-items-center rounded-control outline-none ${
+            mode === m.id ? "bg-brand/10 text-brand active:bg-brand/20" : "text-ink-muted hover:bg-surface-hover active:bg-chrome-line"
           }`}
         >
           {m.icon}

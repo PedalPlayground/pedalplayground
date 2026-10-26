@@ -8,11 +8,11 @@ export function Modal({ title, onClose, children, wide }: { title: string; onClo
   }, [onClose]);
 
   return (
-    <div className="fixed inset-0 z-50 grid place-items-center bg-ink/30 p-4" onClick={onClose}>
+    <div className="animate-fade fixed inset-0 z-50 grid place-items-center bg-ink/30 p-4" onClick={onClose}>
       <div
         role="dialog"
         aria-label={title}
-        className={`max-h-full w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-panel ${wide ? "max-w-2xl" : "max-w-sm"}`}
+        className={`animate-enter max-h-full w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-panel ${wide ? "max-w-2xl" : "max-w-sm"}`}
         onClick={(e) => e.stopPropagation()}
       >
         <h2 className="mb-3 text-base font-semibold">{title}</h2>

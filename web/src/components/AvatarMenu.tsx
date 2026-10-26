@@ -27,7 +27,7 @@ export function AvatarMenu({
     <Dropdown.Root>
       <Dropdown.Trigger
         aria-label={`Account menu (${user?.email ?? ""})`}
-        className="flex h-9 items-center gap-1 rounded-control px-1.5 text-ink-muted outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover"
+        className="press flex h-9 items-center gap-1 rounded-control px-1.5 text-ink-muted outline-none hover:bg-surface-hover active:bg-chrome-line focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover"
       >
         <span className="grid size-6 place-items-center">
           <PedalAvatar pedalKey={avatar} size={24} />
@@ -35,7 +35,7 @@ export function AvatarMenu({
         <ChevronDown size={14} />
       </Dropdown.Trigger>
       <Dropdown.Portal>
-        <Dropdown.Content align="end" sideOffset={10} className="z-50 min-w-52 rounded-panel bg-surface p-1.5 shadow-panel">
+        <Dropdown.Content align="end" sideOffset={10} className="animate-menu z-50 min-w-52 rounded-panel bg-surface p-1.5 shadow-panel">
           <Dropdown.Label className="px-3 pb-1 pt-1.5">
             <span className="block text-xs text-ink-muted">Signed in as</span>
             <span className="block max-w-56 truncate text-sm font-medium">{user?.email}</span>

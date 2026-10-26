@@ -17,6 +17,7 @@ import { SaveStatus } from "./components/SaveStatus";
 import { SearchPanel } from "./components/SearchPanel";
 import { useUi } from "./store/ui";
 import { ObjectMenu } from "./components/ObjectMenu";
+import { ActionToast } from "./components/ActionToast";
 import { ShareDialog } from "./components/ShareDialog";
 import { Toolbar } from "./components/Toolbar";
 import { UpgradeDialog } from "./components/UpgradeDialog";
@@ -164,7 +165,11 @@ export function App() {
             <SaveStatus />
           </div>
 
+          {/* Phones show action confirmations up top, clear of the thumb; larger screens show them above the toolbar. */}
+          <ActionToast className="absolute left-1/2 top-3 -translate-x-1/2 [--enter-y:-8px] sm:hidden" />
+
           <div className="absolute bottom-3 left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-3 max-sm:right-3 max-sm:max-w-none max-sm:translate-x-0 sm:bottom-4">
+            <ActionToast className="max-sm:hidden" />
             {searchOpen && <SearchPanel key={replacing ? "replace" : "add"} replace={replacing} onClose={() => setSearchOpen(false)} />}
             <Toolbar onPlace={() => setSearchOpen(replacing ? true : !searchOpen)} onShare={() => setDialog("share")} />
           </div>
