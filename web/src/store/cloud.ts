@@ -68,8 +68,8 @@ let saving = false;
 let saveAgain = false;
 
 const contentKey = () => {
-  const { name, items } = usePlayground.getState();
-  return JSON.stringify({ name, items });
+  const { name, items, signal } = usePlayground.getState();
+  return JSON.stringify({ name, items, signal });
 };
 
 export const useCloud = create<CloudState>((set, get) => {
@@ -238,7 +238,7 @@ export function startCloudSync() {
   let timer: ReturnType<typeof setTimeout> | undefined;
 
   const unsubPlayground = usePlayground.subscribe((s, prev) => {
-    if (s.items === prev.items && s.name === prev.name) return;
+    if (s.items === prev.items && s.signal === prev.signal && s.name === prev.name) return;
     if (!useAuth.getState().user) return;
     clearTimeout(timer);
     timer = setTimeout(() => void useCloud.getState().saveNow(), AUTOSAVE_DEBOUNCE_MS);
