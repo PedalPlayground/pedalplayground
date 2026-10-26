@@ -21,6 +21,7 @@ import { ObjectMenu } from "./components/ObjectMenu";
 import { ContextMenu } from "./components/ContextMenu";
 import { ActionToast } from "./components/ActionToast";
 import { BackToCenter } from "./components/BackToCenter";
+import { ScaleKey } from "./components/ScaleKey";
 import { TooltipLayer } from "./components/Tooltip";
 import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
@@ -183,6 +184,8 @@ export function App() {
           ) : (
             <>
               <BackToCenter />
+              {/* Phones keep it above the toolbar instead, since the toolbar spans the bottom edge there. */}
+              <ScaleKey className="absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] left-[max(1rem,env(safe-area-inset-left))] z-10 max-md:hidden" />
               <ObjectMenu />
               <ContextMenu />
             </>
@@ -200,6 +203,7 @@ export function App() {
           {!listMode && (
           <div className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             <ActionToast className="max-sm:hidden" />
+            {!searchOpen && <ScaleKey className="self-start md:hidden" />}
             {searchOpen && <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} />}
             <Toolbar onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
           </div>

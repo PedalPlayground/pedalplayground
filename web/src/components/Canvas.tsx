@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { canvasImageUrl } from "../lib/catalog";
 import { clamp, itemBounds, PX_PER_INCH } from "../lib/geometry";
+import { gridLayers } from "../lib/scale";
 import { snapMove, type Guides } from "../lib/snap";
 import type { Item } from "../lib/types";
 import { useCatalog } from "../store/catalog";
@@ -119,6 +120,7 @@ export function Canvas() {
   /** When a long press last opened the menu, so the browser's own long-press menu event doesn't open it twice. */
   const longPressAt = useRef(0);
   const tool = useUi((u) => u.tool);
+  const units = useUi((u) => u.units);
 
   useEffect(() => {
     void useCatalog.getState().load();
@@ -448,9 +450,8 @@ export function Canvas() {
     setGuides(NO_GUIDES);
   };
 
-  // A fine 12px dot grid. When zoomed out, skip every other dot until it isn't too dense.
-  let gridStep = 12 * view.zoom;
-  while (gridStep < 8) gridStep *= 2;
+  // A ½ in or 1 cm dot grid, anchored to the playground's origin. Zoomed out, crowded dots fade to a coarser grid.
+  const grid = gridLayers(view.zoom, units);
 
   return (
     <div
@@ -458,9 +459,14 @@ export function Canvas() {
       className="absolute inset-0 touch-none"
       style={{
         cursor: panning ? "grabbing" : spaceHeld || tool === "hand" ? "grab" : "default",
-        backgroundImage: "radial-gradient(circle at 1px 1px, var(--color-grid) 0.625px, transparent 0.875px)",
-        backgroundSize: `${gridStep}px ${gridStep}px`,
-        backgroundPosition: `${view.x}px ${view.y}px`,
+        backgroundImage: grid
+          .map(
+            (g) =>
+              `radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--color-grid) ${Math.round(g.opacity * 100)}%, transparent) 0.625px, transparent 0.875px)`,
+          )
+          .join(", "),
+        backgroundSize: grid.map((g) => `${g.step}px ${g.step}px`).join(", "),
+        backgroundPosition: grid.map(() => `${view.x - 1}px ${view.y - 1}px`).join(", "),
         WebkitTouchCallout: "none", // no iOS "save image" sheet on a long press
       }}
       onPointerDown={onPointerDown}
