@@ -55,15 +55,19 @@ function CustomPedal({ item }: { item: Item }) {
   );
 }
 
-/** A generic pedalboard: dark frame with faint rails. */
+/**
+ * A generic pedalboard, styled like the original site: a dark deck framed by half-inch aluminum
+ * U-channel. Lighter sides and darker ends meet on the diagonal, which reads as mitered corners.
+ */
 function CustomBoard({ item }: { item: Item }) {
   return (
     <div
       className="size-full"
       style={{
-        border: `${PX_PER_INCH / 2}px solid var(--color-board)`,
-        borderRadius: 6,
-        background: `repeating-linear-gradient(to bottom, transparent 0 ${PX_PER_INCH * 2.5}px, rgb(128 128 140 / 0.35) ${PX_PER_INCH * 2.5}px ${PX_PER_INCH * 2.75}px), rgb(128 128 140 / 0.1)`,
+        border: `${PX_PER_INCH / 2}px solid #ddd`,
+        borderTopColor: "#ccc",
+        borderBottomColor: "#ccc",
+        background: "#222",
       }}
       title={item.label}
     />
