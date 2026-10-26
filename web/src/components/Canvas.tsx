@@ -31,7 +31,50 @@ type Gesture =
   | { type: "marquee"; startX: number; startY: number; additive: boolean }
   | { type: "pinch"; dist: number; mx: number; my: number };
 
-function ItemView({ item, selected, zoom }: { item: Item; selected: boolean; zoom: number }) {
+/** Halo look, in screen pixels so it stays crisp at any zoom. */
+const HALO_GAP = 4;
+const HALO_STROKE = 2;
+const HALO_RADIUS = 7;
+/** Half the break in the top edge where the lock sits, and the lock's size. */
+const LOCK_GAP = 8;
+const LOCK_SIZE = 12;
+
+/**
+ * The rounded selection outline around an item. It follows the item's rotated bounds, so the
+ * lock badge on a locked item always sits upright at the top center, in a break in the outline.
+ */
+function SelectionHalo({ item, zoom }: { item: Item; zoom: number }) {
+  const b = itemBounds(item);
+  const pad = (HALO_GAP + HALO_STROKE) / zoom;
+  const w = (b.right - b.left) * PX_PER_INCH + pad * 2;
+  const h = (b.bottom - b.top) * PX_PER_INCH + pad * 2;
+  const sw = HALO_STROKE / zoom;
+  const r = Math.min(HALO_RADIUS / zoom, w / 2, h / 2);
+  const g = item.locked ? LOCK_GAP / zoom : 0;
+  const [x0, y0, x1, y1, cx] = [sw / 2, sw / 2, w - sw / 2, h - sw / 2, w / 2];
+  const d =
+    `M${cx + g} ${y0}H${x1 - r}A${r} ${r} 0 0 1 ${x1} ${y0 + r}V${y1 - r}A${r} ${r} 0 0 1 ${x1 - r} ${y1}` +
+    `H${x0 + r}A${r} ${r} 0 0 1 ${x0} ${y1 - r}V${y0 + r}A${r} ${r} 0 0 1 ${x0 + r} ${y0}H${cx - g}${g ? "" : "Z"}`;
+  const lock = LOCK_SIZE / zoom;
+  return (
+    <svg
+      aria-hidden
+      className="animate-fade pointer-events-none absolute overflow-visible"
+      style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h }}
+    >
+      <path d={d} fill="none" stroke="var(--color-brand)" strokeWidth={sw} />
+      {item.locked && (
+        // A solid padlock: rounded body plus shackle, drawn on a 12px box centered on the top edge.
+        <g transform={`translate(${cx - lock / 2} ${y0 - lock / 2}) scale(${lock / 12})`}>
+          <path d="M3.5 5.5V4a2.5 2.5 0 0 1 5 0v1.5" fill="none" stroke="var(--color-brand)" strokeWidth={1.6} />
+          <rect x={1.75} y={5} width={8.5} height={6.5} rx={1.5} fill="var(--color-brand)" />
+        </g>
+      )}
+    </svg>
+  );
+}
+
+function ItemView({ item }: { item: Item }) {
   const manifest = useCatalog((s) => s.manifest);
   const src = item.image ? canvasImageUrl(manifest, item.kind, item.image) : null;
   return (
@@ -45,8 +88,6 @@ function ItemView({ item, selected, zoom }: { item: Item; selected: boolean; zoo
         width: item.width * PX_PER_INCH,
         height: item.height * PX_PER_INCH,
         transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})`,
-        outline: selected ? `${2 / zoom}px solid var(--color-brand)` : "none",
-        outlineOffset: 1 / zoom,
       }}
     >
       {src ? (
@@ -349,7 +390,8 @@ export function Canvas() {
       >
         {items.map((item, index) => (
           <div key={item.id} style={{ position: "absolute", zIndex: index }}>
-            <ItemView item={item} selected={selected.includes(item.id)} zoom={view.zoom} />
+            <ItemView item={item} />
+            {selected.includes(item.id) && <SelectionHalo item={item} zoom={view.zoom} />}
           </div>
         ))}
 
