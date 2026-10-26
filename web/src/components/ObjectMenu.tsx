@@ -2,7 +2,7 @@ import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Lock, Lock
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
-import { barDivider, barIconActive, barIconIdle, barSoftButton } from "./toolbarStyles";
+import { barDivider, barIconActive, barIconIdle, barSoftButton, barSoftDangerButton } from "./toolbarStyles";
 
 function Action({
   label,
@@ -49,17 +49,7 @@ export function ObjectMenu() {
         </span>
       </div>
       <div className="flex items-center gap-1 sm:gap-1.5">
-      {single && (
-        <button
-          onClick={() => setReplacing(true)}
-          title="Replace with another product"
-          className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:rounded-control max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}
-        >
-          <Replace size={16} />
-          <span className="hidden sm:inline">Replace</span>
-        </button>
-      )}
-      {single && <span className={barDivider} />}
+      <span className={`${barDivider} max-sm:hidden`} />
       <Action label={locked ? "Unlock position" : "Lock position"} onClick={s.toggleLockSelected} pressed={locked}>
         {locked ? <Lock size={18} /> : <LockOpen size={18} />}
       </Action>
@@ -79,9 +69,30 @@ export function ObjectMenu() {
         <ArrowDownToLine size={18} />
       </Action>
       <span className={barDivider} />
-      <Action label="Delete" onClick={s.deleteSelected} danger>
-        <Trash2 size={18} />
-      </Action>
+      {single && (
+        <button
+          onClick={() => setReplacing(true)}
+          title="Replace with another product"
+          className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:rounded-control max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}
+        >
+          <Replace size={14} strokeWidth={2.25} className="max-sm:size-[18px] max-sm:stroke-2" />
+          <span className="hidden sm:inline">Replace</span>
+        </button>
+      )}
+      {/* Phones: icon button. Tablet and desktop: icon and text, in a soft red version of the Replace style. */}
+      <span className="contents sm:hidden">
+        <Action label="Delete" onClick={s.deleteSelected} danger>
+          <Trash2 size={18} />
+        </Action>
+      </span>
+      <button
+        onClick={s.deleteSelected}
+        title="Delete"
+        className={`${barSoftDangerButton} max-sm:hidden`}
+      >
+        <Trash2 size={14} strokeWidth={2.25} />
+        Delete
+      </button>
       </div>
     </div>
   );
