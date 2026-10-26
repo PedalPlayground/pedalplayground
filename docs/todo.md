@@ -18,3 +18,5 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 - Snap guides get stuck sometimes.
 
 ## Other
+
+- Onboarding popups.
