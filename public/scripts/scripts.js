@@ -3,7 +3,7 @@ var pedalboardImagePath = "public/images/pedalboards/";
 var units = 'in';
 
 $(document).ready(function () {
-	
+
 	// Populate Pedalboards and Pedals lists
 	GetPedalData();
 	GetPedalBoardData();
@@ -382,8 +382,9 @@ $(document).ready(function () {
 	// Move left
 	$("body").on("keydown", function (event) {
 		if (event.which == 37) {
-			var current = parseInt($(".canvas .selected").css("left"));
-			$(".canvas .selected").css("left", current - 1);
+			$(".canvas .selected, .canvas .group-selected").each(function () {
+				$(this).css("left", (parseInt($(this).css("left")) || 0) - 1);
+			});
 			savePedalCanvas();
 		}
 	});
@@ -391,8 +392,9 @@ $(document).ready(function () {
 	// Move up
 	$("body").on("keydown", function (event) {
 		if (event.which == 38) {
-			var current = parseInt($(".canvas .selected").css("top"));
-			$(".canvas .selected").css("top", current - 1);
+			$(".canvas .selected, .canvas .group-selected").each(function () {
+				$(this).css("top", (parseInt($(this).css("top")) || 0) - 1);
+			});
 			event.preventDefault();
 			savePedalCanvas();
 		}
@@ -401,8 +403,9 @@ $(document).ready(function () {
 	// Move right
 	$("body").on("keydown", function (event) {
 		if (event.which == 39) {
-			var current = parseInt($(".canvas .selected").css("left"));
-			$(".canvas .selected").css("left", current + 1);
+			$(".canvas .selected, .canvas .group-selected").each(function () {
+				$(this).css("left", (parseInt($(this).css("left")) || 0) + 1);
+			});
 			savePedalCanvas();
 		}
 	});
@@ -410,8 +413,9 @@ $(document).ready(function () {
 	// Move down
 	$("body").on("keydown", function (event) {
 		if (event.which == 40) {
-			var current = parseInt($(".canvas .selected").css("top"));
-			$(".canvas .selected").css("top", current + 1);
+			$(".canvas .selected, .canvas .group-selected").each(function () {
+				$(this).css("top", (parseInt($(this).css("top")) || 0) + 1);
+			});
 			event.preventDefault();
 			savePedalCanvas();
 		}
@@ -425,17 +429,19 @@ $(document).ready(function () {
 		event.stopImmediatePropagation();
 
 		if (event.which == 82) {
-			if ($(".canvas .selected").hasClass("rotate-90")) {
-				$(".canvas .selected").removeClass("rotate-90");
-				$(".canvas .selected").addClass("rotate-180");
-			} else if ($(".canvas .selected").hasClass("rotate-180")) {
-				$(".canvas .selected").removeClass("rotate-180");
-				$(".canvas .selected").addClass("rotate-270");
-			} else if ($(".canvas .selected").hasClass("rotate-270")) {
-				$(".canvas .selected").removeClass("rotate-270");
-			} else {
-				$(".canvas .selected").addClass("rotate-90");
-			}
+			$(".canvas .selected, .canvas .group-selected").each(function () {
+				if ($(this).hasClass("rotate-90")) {
+					$(this).removeClass("rotate-90");
+					$(this).addClass("rotate-180");
+				} else if ($(this).hasClass("rotate-180")) {
+					$(this).removeClass("rotate-180");
+					$(this).addClass("rotate-270");
+				} else if ($(this).hasClass("rotate-270")) {
+					$(this).removeClass("rotate-270");
+				} else {
+					$(this).addClass("rotate-90");
+				}
+			});
 			savePedalCanvas();
 		}
 	});
@@ -475,6 +481,39 @@ function readyCanvas() {
 		//console.log("dragEnd");
 		ga("send", "event", "Canvas", "moved", "dragend");
 		savePedalCanvas();
+	});
+
+	// Move a green multi-select group together when any member is dragged.
+	// Draggabilly's jQuery events fire on the element (they don't bubble), so
+	// these are bound directly here. Namespaced + .off keeps them idempotent
+	// across readyCanvas() re-inits.
+	$draggable.off(".group");
+	$draggable.on("dragStart.group", function () {
+		if (!$(this).hasClass("group-selected")) return;
+		// record each group member's starting position
+		$(".canvas .group-selected").each(function () {
+			$(this).data("grpStart", {
+				left: parseFloat($(this).css("left")) || 0,
+				top: parseFloat($(this).css("top")) || 0,
+			});
+		});
+	});
+	$draggable.on("dragMove.group", function () {
+		if (!$(this).hasClass("group-selected")) return;
+		var dragged = this; // Draggabilly moves this element itself
+		var draggie = $(dragged).data("draggabilly");
+		var draggedStart = $(dragged).data("grpStart");
+		if (!draggie || !draggedStart) return;
+		// use the dragged element's actual (containment-clamped) delta so the
+		// rest of the group tracks it exactly, even at the canvas edge
+		var dx = draggie.position.x - draggedStart.left;
+		var dy = draggie.position.y - draggedStart.top;
+		$(".canvas .group-selected").each(function () {
+			if (this === dragged) return;
+			var start = $(this).data("grpStart");
+			if (!start) return;
+			$(this).css({ left: start.left + dx, top: start.top + dy });
+		});
 	});
 
 	// $draggable.on( 'staticClick', function(event) {
@@ -558,7 +597,7 @@ function importPedalCanvas(file) {
 			blob = JSON.parse(reader.result);
 
 			// TODO: check source and version
-			
+
 			$(".canvas").html(blob.canvas);
 			readyCanvas();
 		},
@@ -604,11 +643,12 @@ function deletePedal(pedal) {
 function deselect() {
 	$(".canvas .panel").remove();
 	$(".canvas .selected").removeClass("selected");
+	$(".canvas .group-selected").removeClass("group-selected");
 	savePedalCanvas();
 }
 
 function deleteSelected() {
-	$(".canvas .selected").remove();
+	$(".canvas .selected, .canvas .group-selected").remove();
 	$(".canvas .panel").remove();
 	savePedalCanvas();
 }
@@ -840,6 +880,27 @@ $("body").on("click", ".item", function (e) {
 	var height = convertUnitsIfNeeded("up", $(this).attr("data-height") );
 	var width = convertUnitsIfNeeded("up", $(this).attr("data-width") );;
 
+	// Shift-click: build/modify a green multi-select group (no single-item panel)
+	if (e.shiftKey) {
+		if (pedal.hasClass("group-selected")) {
+			// toggle this item out of the group
+			pedal.removeClass("group-selected");
+			var $group = $(".canvas .group-selected");
+			// if only one remains, demote it back to a normal single selection
+			if ($group.length === 1) {
+				$group.removeClass("group-selected").addClass("selected");
+			}
+		} else {
+			// promote any current single selection into the group, then add this item
+			$(".item-info").remove();
+			$(".canvas .selected").removeClass("selected").addClass("group-selected");
+			pedal.addClass("group-selected");
+		}
+		e.stopPropagation();
+		e.preventDefault();
+		return;
+	}
+
 	var markup =
 		'<div class="panel item-info" data-id="#' +
 		id +
@@ -852,11 +913,13 @@ $("body").on("click", ".item", function (e) {
 		<a href="#front" class="panel__action">Move Front <i>]</i></a>\
 		<a href="#back" class="panel__action">Move Back <i>[</i></a>\
 		<a href="#delete" class="panel__action">Delete <i>D</i></a>\
+		<span class="panel__action panel__tooltip">Multi-Select <i>SHIFT-CLICK</i></span>\
 	</div>';
 
 	// reset stuff
 	$(".item-info").remove();
 	$(".canvas .selected").removeClass("selected");
+	$(".canvas .group-selected").removeClass("group-selected");
 
 	// add stuff
 	$(pedal).addClass("selected");
@@ -912,6 +975,7 @@ $("body").click(function () {
 	// reset stuff
 	$(".item-info").remove();
 	$(".canvas .selected").removeClass("selected");
+	$(".canvas .group-selected").removeClass("group-selected");
 });
 
 $("body").on("click", ".canvas", function (e) {

@@ -7788,6 +7788,12 @@ body .btn {
 .item.selected:after {
   border-color: #5C62FC;
 }
+.item.group-selected:after {
+  border-color: #41C74D;
+}
+.item.group-selected:hover:after {
+  border-color: #41C74D;
+}
 .item.is-dragging .actions {
   opacity: 0;
 }
@@ -7869,13 +7875,14 @@ body .btn {
 }*/
 }
 .pedal__box {
-  border-radius: 0.2vw;
+  border-radius: .75rem;
   background-clip: border-box;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
 }
 .pedal__knob1, .pedal__knob2 {
   background-image: url(../images/pedal_knob.svg);
@@ -7884,10 +7891,10 @@ body .btn {
   background-size: cover;
   position: absolute;
   border-radius: 50%;
-  width: clamp(.5vw, 15%, .75vw);
+  width: clamp(1rem, 15%, 4rem);
   aspect-ratio: 1 / 1;
   translate: -50% 0%;
-  box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   top: 12%;
 }
 .pedal__knob1 {
@@ -7899,33 +7906,37 @@ body .btn {
 .pedal__switch {
   position: absolute;
   background-color: #999;
-  border: 4px solid rgba(60, 60, 60, 0.3);
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   background-clip: border-box;
   border-radius: 50%;
   left: 50%;
-  width: clamp(.25vw, 10%, .5vw);
+  width: clamp(.75rem, 10%, 3rem);
   translate: -50% 0%;
   aspect-ratio: 1 / 1;
   bottom: 10%;
 }
 .pedal__name {
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-align: center;
-  text-shadow: .25rem .25rem 0 rgba(0, 0, 0, 0.4);
+  text-shadow: .1rem .1rem 0 rgba(0, 0, 0, 0.4);
+  line-height: 1.25rem;
   display: block;
   position: absolute;
-  top: 48%;
+  top: 30%;
   left: 0;
   right: 0;
   padding: 0;
-  font-weight: 600;
+  font-weight: 1000;
 }
 .pedal--custom:hover:after {
   border-color: rgba(42, 195, 243, 0.5);
 }
 .pedal--custom.selected:after {
   border-color: #2AC3F3;
+}
+.pedal--custom.group-selected:after,
+.pedal--custom.group-selected:hover:after {
+  border-color: #41C74D;
 }
 
 .pedalboard {
@@ -8089,15 +8100,24 @@ body .btn {
 }
 .panel__name {
   font-size: 13px;
-  color: #999;
+  color: #ccc;
   font-weight: 600;
   padding: 10px;
 }
 .panel__name .panel__dimensions {
+  font-size: 11px;
+  color: #999;
   font-weight: normal;
 }
 .panel__action {
   font-size: 13px;
+  display: block;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.panel__tooltip {
+  font-size: 11px;
+  color: #999;
   display: block;
   padding: 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
