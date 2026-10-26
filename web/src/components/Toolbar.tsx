@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { MobileBar } from "./MobileBar";
+import { barDivider, barIconActive, barIconButton, barIconIdle, barPanel, barSoftButton } from "./toolbarStyles";
 
 function IconButton({
   label,
@@ -24,9 +25,7 @@ function IconButton({
       aria-pressed={active}
       disabled={disabled}
       onClick={onClick}
-      className={`grid size-7 place-items-center rounded-[5px] outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 disabled:opacity-40 ${
-        active ? "bg-brand/10 text-brand" : "text-ink hover:bg-surface-hover"
-      }`}
+      className={`${barIconButton} ${active ? barIconActive : barIconIdle}`}
     >
       {children}
     </button>
@@ -63,7 +62,7 @@ function AddGlyph() {
  */
 const SHOW_TOOL_SWITCH = false;
 
-const divider = <span className="mx-1 h-4 w-px shrink-0 bg-line" />;
+const divider = <span className={barDivider} />;
 
 export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: () => void }) {
   const { tool, setTool } = useUi();
@@ -76,7 +75,7 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
   return (
     <>
     <MobileBar onPlace={onPlace} />
-    <div className="flex max-w-full items-center gap-1.5 overflow-x-auto rounded-[10px] border border-chrome-line bg-surface p-1.5 shadow-[0_0_12px_rgb(0_0_0/0.05)] max-sm:hidden">
+    <div className={`flex max-w-full items-center gap-1.5 overflow-x-auto ${barPanel} max-sm:hidden`}>
       <button
         onClick={onPlace}
         className="btn-primary flex h-[26px] shrink-0 items-center gap-2 whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-11"
@@ -116,7 +115,7 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
       {divider}
       <button
         onClick={onShare}
-        className="flex h-[26px] shrink-0 items-center gap-1 rounded-[5px] bg-[rgb(202_203_226/0.39)] px-3 text-[13px] font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-[rgb(202_203_226/0.6)] focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-11"
+        className={barSoftButton}
       >
         <SquareArrowOutUpRight size={14} strokeWidth={2.25} />
         Share
