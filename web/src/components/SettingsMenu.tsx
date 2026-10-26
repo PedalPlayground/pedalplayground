@@ -6,10 +6,68 @@ import { usePlayground } from "../store/playground";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { BETA, FEEDBACK_URL } from "../lib/beta";
 import { useAuth } from "../store/auth";
-import { useUi, type Theme } from "../store/ui";
+import { useUi } from "../store/ui";
+
+/** Import/export of playground files is archived for now. Flip this to bring the menu items back. */
+const SHOW_FILE_IO = false;
 
 export const menuItem =
   "flex cursor-pointer select-none items-center justify-between gap-6 rounded-control px-3 py-2 text-sm outline-none data-[highlighted]:bg-surface-hover";
+
+/** A small on/off switch. Display only: the menu row around it handles the click. `neutral` skips the brand color, for either/or settings. */
+function Switch({ on, label, neutral }: { on: boolean; label: string; neutral?: boolean }) {
+  return (
+    <span
+      role="switch"
+      aria-checked={on}
+      aria-label={label}
+      className={`relative inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${
+        on && !neutral ? "bg-brand" : neutral ? "bg-ink/25" : "bg-ink/15"
+      }`}
+    >
+      <span
+        className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white shadow-sm transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`}
+      />
+    </span>
+  );
+}
+
+/** A compact segmented control; the highlight slides to the chosen option. */
+function Segmented<T extends string>({
+  label,
+  value,
+  onChange,
+  options,
+}: {
+  label: string;
+  value: T;
+  onChange: (v: T) => void;
+  options: readonly (readonly [T, string])[];
+}) {
+  const index = Math.max(0, options.findIndex(([v]) => v === value));
+  return (
+    <div role="radiogroup" aria-label={label} className="relative flex rounded-control bg-surface-hover p-0.5">
+      <span
+        aria-hidden
+        className="absolute bottom-0.5 left-0.5 top-0.5 rounded-[3px] bg-surface shadow-sm transition-transform duration-200 ease-out"
+        style={{ width: `calc((100% - 4px) / ${options.length})`, transform: `translateX(${index * 100}%)` }}
+      />
+      {options.map(([v, text]) => (
+        <button
+          key={v}
+          role="radio"
+          aria-checked={value === v}
+          onClick={() => onChange(v)}
+          className={`relative h-6 w-12 rounded-[3px] text-xs outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+            value === v ? "font-medium text-ink" : "text-ink-muted hover:text-ink"
+          }`}
+        >
+          {text}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export function SettingsMenu() {
   const { units, setUnits, theme, setTheme, snapping, setSnapping } = useUi();
@@ -66,49 +124,38 @@ export function SettingsMenu() {
               <Dropdown.Separator className="my-1 h-px bg-line" />
             </>
           )}
-          <Dropdown.Item className={menuItem} onSelect={exportFile}>
-            Export file
-          </Dropdown.Item>
-          <Dropdown.Item className={menuItem} onSelect={() => fileInput.current?.click()}>
-            Import file…
-          </Dropdown.Item>
-          <Dropdown.Separator className="my-1 h-px bg-line" />
-          <Dropdown.CheckboxItem
-            className={menuItem}
-            checked={snapping}
-            onCheckedChange={(on) => setSnapping(on === true)}
-            onSelect={(e) => e.preventDefault()}
-          >
+          {SHOW_FILE_IO && (
+            <>
+              <Dropdown.Item className={menuItem} onSelect={exportFile}>
+                Export file
+              </Dropdown.Item>
+              <Dropdown.Item className={menuItem} onSelect={() => fileInput.current?.click()}>
+                Import file…
+              </Dropdown.Item>
+              <Dropdown.Separator className="my-1 h-px bg-line" />
+            </>
+          )}
+          <Dropdown.Item className={menuItem} onSelect={(e) => (e.preventDefault(), setSnapping(!snapping))}>
             Snapping
-            <span className="text-brand">{snapping ? "✓" : ""}</span>
-          </Dropdown.CheckboxItem>
-          <Dropdown.Separator className="my-1 h-px bg-line" />
-          <Dropdown.Label className="px-3 pb-1 pt-1.5 text-xs text-ink-muted">Units</Dropdown.Label>
-          <div role="radiogroup" aria-label="Units" className="mx-3 mb-2 flex rounded-control bg-surface-hover p-0.5">
-            {([["in", "Inches"], ["mm", "Millimeters"]] as const).map(([value, label]) => (
-              <button
-                key={value}
-                role="radio"
-                aria-checked={units === value}
-                onClick={() => setUnits(value)}
-                className={`h-6 flex-1 rounded-[3px] px-2.5 text-xs outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
-                  units === value ? "bg-surface font-medium text-brand shadow-sm" : "text-ink-muted hover:text-ink"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
+            <Switch on={snapping} label="Snapping" />
+          </Dropdown.Item>
+          <Dropdown.Item className={menuItem} onSelect={(e) => (e.preventDefault(), setUnits(units === "in" ? "mm" : "in"))}>
+            Units
+            <span className="flex items-center gap-1.5 text-xs">
+              <span className={units === "in" ? "font-medium text-ink" : "text-ink-muted"}>in</span>
+              <Switch on={units === "mm"} label="Millimeters" neutral />
+              <span className={units === "mm" ? "font-medium text-ink" : "text-ink-muted"}>mm</span>
+            </span>
+          </Dropdown.Item>
+          <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
+            Appearance
+            <Segmented
+              label="Appearance"
+              value={theme}
+              onChange={setTheme}
+              options={[["light", "Light"], ["dark", "Dark"], ["system", "Auto"]]}
+            />
           </div>
-          <Dropdown.Separator className="my-1 h-px bg-line" />
-          <Dropdown.Label className="px-3 pb-1 pt-1.5 text-xs text-ink-muted">Appearance</Dropdown.Label>
-          <Dropdown.RadioGroup value={theme} onValueChange={(v) => setTheme(v as Theme)}>
-            {(["system", "light", "dark"] as const).map((t) => (
-              <Dropdown.RadioItem key={t} value={t} className={menuItem}>
-                <span className="capitalize">{t}</span>
-                <Dropdown.ItemIndicator className="text-brand">✓</Dropdown.ItemIndicator>
-              </Dropdown.RadioItem>
-            ))}
-          </Dropdown.RadioGroup>
           {BETA && (
             <>
               <Dropdown.Separator className="my-1 h-px bg-line" />
