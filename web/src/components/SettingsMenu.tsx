@@ -14,16 +14,14 @@ const SHOW_FILE_IO = false;
 export const menuItem =
   "flex cursor-pointer select-none items-center justify-between gap-6 rounded-control px-3 py-2 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
-/** A small on/off switch. Display only: the menu row around it handles the click. `neutral` skips the brand color, for either/or settings. */
-function Switch({ on, label, neutral }: { on: boolean; label: string; neutral?: boolean }) {
+/** A small on/off switch. Display only: the menu row around it handles the click. */
+function Switch({ on, label }: { on: boolean; label: string }) {
   return (
     <span
       role="switch"
       aria-checked={on}
       aria-label={label}
-      className={`relative inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${
-        on && !neutral ? "bg-brand" : neutral ? "bg-ink/25" : "bg-ink/15"
-      }`}
+      className={`relative inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${on ? "bg-brand" : "bg-ink/15"}`}
     >
       <span
         className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white shadow-sm transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`}
@@ -139,14 +137,10 @@ export function SettingsMenu() {
             Snapping
             <Switch on={snapping} label="Snapping" />
           </Dropdown.Item>
-          <Dropdown.Item className={menuItem} onSelect={(e) => (e.preventDefault(), setUnits(units === "in" ? "mm" : "in"))}>
+          <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
             Units
-            <span className="flex items-center gap-1.5 text-xs">
-              <span className={units === "in" ? "font-medium text-ink" : "text-ink-muted"}>in</span>
-              <Switch on={units === "mm"} label="Millimeters" neutral />
-              <span className={units === "mm" ? "font-medium text-ink" : "text-ink-muted"}>mm</span>
-            </span>
-          </Dropdown.Item>
+            <Segmented label="Units" value={units} onChange={setUnits} options={[["in", "in"], ["mm", "mm"]]} />
+          </div>
           <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
             Appearance
             <Segmented
