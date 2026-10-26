@@ -1,5 +1,6 @@
-import { Check, ChevronDown, List, LocateFixed, ShoppingCart, Zap } from "lucide-react";
+import { Check, ChevronDown, ExternalLink, List, LocateFixed, ShoppingBag, ShoppingCart, Zap } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { affiliateProps, BUY_LINKS, buyLinks, DISCLOSURE, type BuyLink } from "../lib/affiliate";
 import { imageKey, thumbUrl, type Manifest } from "../lib/catalog";
 import type { Item } from "../lib/types";
 import { formatMa, parseMa, PEDAL_TYPES, VOLTAGES } from "../lib/specs";
@@ -118,6 +119,7 @@ export function EquipmentList() {
             </div>
             <Section title="Need to Buy" rows={wanted} catalog={catalog} onShow={show} empty="Mark gear you still need to buy and it'll show up here with a running total." />
             <Section title="Owned" rows={owned} catalog={catalog} onShow={show} empty="Everything here is on your shopping list." />
+            {BUY_LINKS && <p className="px-1 text-xs text-ink-muted">{DISCLOSURE}</p>}
           </div>
         )}
       </div>
@@ -195,6 +197,7 @@ function GearRow({ row: r, catalog, onShow }: { row: Row; catalog: Manifest | nu
   const [open, setOpen] = useState(false);
   const { item } = r;
   const specs = [item.pedalType, item.voltage, item.ma !== undefined ? formatMa(item.ma) : undefined].filter(Boolean);
+  const links = buyLinks(r.brand, r.name);
   const detail = [r.brand, ...(specs.length ? specs : [formatSize(item.width, item.height, units)])].filter(Boolean).join(" · ");
   return (
     <li className={`animate-enter rounded-control transition-colors [--enter-y:4px] ${open ? "bg-surface-hover" : ""}`}>
@@ -215,10 +218,11 @@ function GearRow({ row: r, catalog, onShow }: { row: Row; catalog: Manifest | nu
             className={`shrink-0 text-ink-muted transition-[transform,opacity] duration-150 max-sm:hidden ${open ? "rotate-180 opacity-100" : "opacity-0 group-hover:opacity-100"}`}
           />
         </button>
+        {isWanted(item) && links[0] && <BuyButton link={links[0]} name={r.name} />}
         <PriceField key={item.price ?? "none"} item={item} name={r.name} />
         <StatusToggle item={item} />
       </div>
-      {open && <Details item={item} name={r.name} onShow={() => onShow(item.id)} />}
+      {open && <Details item={item} name={r.name} links={links} onShow={() => onShow(item.id)} />}
     </li>
   );
 }
@@ -228,7 +232,7 @@ const fieldBox =
   "h-8 w-full rounded-control border border-line bg-surface px-2 text-sm text-ink outline-none transition-shadow focus:border-brand focus:ring-2 focus:ring-brand/30 pointer-coarse:h-10 max-sm:text-base";
 
 /** Specs for a pedal (type, voltage, current draw), its size, and a way back to it on the Playground. */
-function Details({ item, name, onShow }: { item: Item; name: string; onShow: () => void }) {
+function Details({ item, name, links, onShow }: { item: Item; name: string; links: BuyLink[]; onShow: () => void }) {
   const updateGear = usePlayground((p) => p.updateGear);
   const units = useUi((u) => u.units);
   const pedal = item.kind === "pedal";
@@ -272,9 +276,23 @@ function Details({ item, name, onShow }: { item: Item; name: string; onShow: () 
       <p className="flex h-8 items-center text-xs text-ink-muted pointer-coarse:h-10 max-sm:basis-full max-sm:h-auto">
         Size {formatSize(item.width, item.height, units)}
       </p>
+      {links.map((l, i) => (
+        <a
+          key={l.store}
+          href={l.href}
+          {...affiliateProps}
+          {...tip(`Search ${l.store} for ${name}`)}
+          className={`press flex h-8 shrink-0 items-center gap-1.5 rounded-[5px] px-3 text-[13px] font-semibold tracking-[-0.01em] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10 max-sm:w-full max-sm:justify-center ${
+            i === 0 ? "ml-auto max-sm:ml-0" : ""
+          } ${isWanted(item) ? "bg-brand/10 text-brand hover:bg-brand/15 active:bg-brand/25" : "bg-chrome text-ink-muted hover:bg-chrome-line hover:text-ink active:bg-line"}`}
+        >
+          <ExternalLink size={14} strokeWidth={2.25} />
+          {isWanted(item) ? `Buy on ${l.store}` : `Find on ${l.store}`}
+        </a>
+      ))}
       <button
         onClick={onShow}
-        className="press ml-auto flex h-8 shrink-0 items-center gap-1.5 rounded-[5px] bg-[rgb(202_203_226/0.39)] px-3 text-[13px] font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)] focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10 max-sm:ml-0 max-sm:w-full max-sm:justify-center"
+        className={`press ${links.length ? "" : "ml-auto"} flex h-8 shrink-0 items-center gap-1.5 rounded-[5px] bg-[rgb(202_203_226/0.39)] px-3 text-[13px] font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)] focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10 max-sm:ml-0 max-sm:w-full max-sm:justify-center`}
       >
         <LocateFixed size={14} strokeWidth={2.25} />
         Show on Playground
@@ -341,6 +359,21 @@ function PriceField({ item, name }: { item: Item; name: string }) {
         className="w-full min-w-0 bg-transparent text-right tabular-nums outline-none placeholder:text-ink-muted/60 max-sm:text-base"
       />
     </label>
+  );
+}
+
+/** Opens a store search for an item still to buy. Icon only, so the row keeps its width. */
+function BuyButton({ link, name }: { link: BuyLink; name: string }) {
+  return (
+    <a
+      href={link.href}
+      {...affiliateProps}
+      {...tip(`Buy on ${link.store}`)}
+      aria-label={`Buy ${name} on ${link.store}`}
+      className="press grid size-8 shrink-0 place-items-center rounded-full text-brand outline-none transition-colors hover:bg-brand/10 active:bg-brand/20 focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-10"
+    >
+      <ShoppingBag size={15} strokeWidth={2.25} />
+    </a>
   );
 }
 
