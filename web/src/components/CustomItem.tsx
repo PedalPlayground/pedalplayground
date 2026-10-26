@@ -7,6 +7,7 @@ function CustomPedal({ item }: { item: Item }) {
   return (
     <PedalArt
       template={item.template}
+      jacks={item.jacks}
       w={item.width * PX_PER_INCH}
       h={item.height * PX_PER_INCH}
       color={item.color ?? DEFAULT_PEDAL_COLOR}

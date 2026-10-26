@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { importAny, readLegacyLocalStorage } from "../lib/importers";
-import type { PedalTemplate } from "../lib/pedalTemplates";
+import type { Jacks, PedalTemplate } from "../lib/pedalTemplates";
 import type { CatalogItem, Item, PlaygroundDocument, Rotation, View } from "../lib/types";
 
 const STORAGE_KEY = "pp:playground:v3";
@@ -75,7 +75,7 @@ interface PlaygroundState {
 }
 
 /** What the Custom form sets on a custom pedal or pedalboard. */
-export type CustomFields = { width: number; height: number; label: string; color: string | null; template?: PedalTemplate };
+export type CustomFields = { width: number; height: number; label: string; color: string | null; template?: PedalTemplate; jacks?: Jacks };
 
 const DEFAULT_VIEW: View = { x: 80, y: 80, zoom: 1 };
 
@@ -242,6 +242,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         custom: false,
         color: null,
         template: undefined,
+        jacks: undefined,
         // A different product has a different price and specs; whether they own it stays.
         price: undefined,
         ma: undefined,
@@ -263,6 +264,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         custom: true,
         color: c.kind === "pedal" ? c.color : null,
         ...(c.kind === "pedal" && c.template ? { template: c.template } : {}),
+        ...(c.kind === "pedal" && c.jacks ? { jacks: c.jacks } : {}),
       }),
     ),
 
@@ -282,8 +284,10 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         y: cy - c.height / 2,
         color: pedal ? c.color : null,
         template: pedal ? c.template : undefined,
+        jacks: pedal ? c.jacks : undefined,
       };
       if (!next.template) delete next.template;
+      if (!next.jacks) delete next.jacks;
       return { ...record(s), items: s.items.map((i) => (i.id === id ? next : i)) };
     }),
 

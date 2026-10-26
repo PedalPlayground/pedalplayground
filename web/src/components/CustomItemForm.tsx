@@ -1,7 +1,19 @@
 import { useState } from "react";
 import { NEW_PEDAL_COLOR, PEDAL_COLOR_PRESETS } from "../lib/color";
 import { PX_PER_INCH } from "../lib/geometry";
-import { DEFAULT_PEDAL_TEMPLATE, PEDAL_TEMPLATES, templateInfo, type PedalTemplate } from "../lib/pedalTemplates";
+import {
+  DEFAULT_PEDAL_TEMPLATE,
+  hasSideJacks,
+  hasTopJacks,
+  JACK_DEPTH,
+  PEDAL_TEMPLATES,
+  templateInfo,
+  withJacks,
+  withoutJacks,
+  type Jacks,
+  type PedalTemplate,
+} from "../lib/pedalTemplates";
+import { formatSize } from "../lib/units";
 import type { Item } from "../lib/types";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -21,6 +33,7 @@ const field =
 function Preview({
   kind,
   template,
+  jacks,
   width,
   height,
   color,
@@ -30,6 +43,7 @@ function Preview({
 }: {
   kind: Item["kind"];
   template?: PedalTemplate;
+  jacks?: Jacks;
   width: number;
   height: number;
   color: string;
@@ -44,7 +58,7 @@ function Preview({
     <div className="grid place-items-center" style={{ width: boxW, height: boxH }}>
       <div style={{ width: w * scale, height: h * scale }} className="relative transition-[width,height] duration-200 ease-out">
         <div className="absolute left-0 top-0 origin-top-left" style={{ width: w, height: h, transform: `scale(${scale})` }}>
-          {kind === "pedalboard" ? <CustomBoard /> : <PedalArt template={template} w={w} h={h} color={color} label={label} />}
+          {kind === "pedalboard" ? <CustomBoard /> : <PedalArt template={template} jacks={jacks} w={w} h={h} color={color} label={label} />}
         </div>
       </div>
     </div>
@@ -60,8 +74,15 @@ export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: It
 
   const [kind, setKind] = useState<Item["kind"]>(item?.kind ?? "pedal");
   const [template, setTemplate] = useState<PedalTemplate>(item ? (item.template ?? "classic") : DEFAULT_PEDAL_TEMPLATE);
-  const [width, setWidth] = useState(item ? toUnits(item.width) : "");
-  const [height, setHeight] = useState(item ? toUnits(item.height) : "");
+  // The size fields are the enclosure; jacks add to the footprint on top of it.
+  const enclosure = item ? withoutJacks(item.width, item.height, item.jacks) : null;
+  const [width, setWidth] = useState(enclosure ? toUnits(enclosure.width) : "");
+  const [height, setHeight] = useState(enclosure ? toUnits(enclosure.height) : "");
+  const initialJacks = item ? item.jacks : (templateInfo(DEFAULT_PEDAL_TEMPLATE).jacks ?? undefined);
+  const [jackTop, setJackTop] = useState(hasTopJacks(initialJacks));
+  const [jackSide, setJackSide] = useState(hasSideJacks(initialJacks));
+  // Until the user picks jacks themselves, each style brings its usual ones.
+  const [jacksPicked, setJacksPicked] = useState(!!item);
   const [name, setName] = useState(item?.kind === "pedal" ? item.label : "");
   const [color, setColor] = useState(item?.color ?? NEW_PEDAL_COLOR);
   const [error, setError] = useState<string | null>(null);
@@ -73,14 +94,40 @@ export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: It
   const placeholder = [toUnits(suggested.width), toUnits(suggested.height)];
   const w = width.trim() ? toInches(parseFloat(width)) : suggested.width;
   const h = height.trim() ? toInches(parseFloat(height)) : suggested.height;
-  const sizeOk = w > 0 && h > 0 && w <= MAX_INCHES && h <= MAX_INCHES;
+  const jacks: Jacks | undefined = kind !== "pedal" ? undefined : jackTop && jackSide ? "both" : jackTop ? "top" : jackSide ? "side" : undefined;
+  const foot = withJacks(w, h, jacks);
+  const sizeOk = w > 0 && h > 0 && foot.width <= MAX_INCHES && foot.height <= MAX_INCHES;
+  const jackDepth = units === "mm" ? `${Math.round(JACK_DEPTH * MM_PER_INCH)} mm` : `${JACK_DEPTH}″`;
+
+  const pickTemplate = (t: PedalTemplate) => {
+    setTemplate(t);
+    if (jacksPicked) return;
+    const j = templateInfo(t).jacks;
+    setJackTop(hasTopJacks(j));
+    setJackSide(hasSideJacks(j));
+  };
+  const jackButton = (on: boolean, set: (v: boolean) => void, text: string, hint: string) => (
+    <button
+      type="button"
+      aria-pressed={on}
+      {...tip(hint)}
+      onClick={() => {
+        set(!on);
+        setJacksPicked(true);
+      }}
+      className={`press h-8 flex-1 rounded-control border text-sm transition-colors ${on ? "border-brand bg-brand/10 text-brand" : "border-line text-ink hover:bg-surface-hover"}`}
+    >
+      {text}
+    </button>
+  );
 
   const submit = () => {
     if (!(w > 0) || !(h > 0)) return setError("Enter a width and height greater than zero.");
-    if (w > MAX_INCHES || h > MAX_INCHES) return setError(`That's larger than ${MAX_INCHES} in. Check the units.`);
+    if (foot.width > MAX_INCHES || foot.height > MAX_INCHES) return setError(`That's larger than ${MAX_INCHES} in. Check the units.`);
     const fields = {
-      width: w,
-      height: h,
+      width: foot.width,
+      height: foot.height,
+      jacks,
       label: kind === "pedal" ? name.trim() : "Custom Pedalboard",
       color: kind === "pedal" ? color : null,
       template: kind === "pedal" ? template : undefined,
@@ -126,12 +173,12 @@ export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: It
                 key={t.id}
                 aria-pressed={template === t.id}
                 {...tip(t.hint)}
-                onClick={() => setTemplate(t.id)}
+                onClick={() => pickTemplate(t.id)}
                 className={`press flex flex-col items-center gap-1 rounded-control border px-1 pb-1.5 pt-2 text-xs transition-colors ${
                   template === t.id ? "border-brand bg-brand/10 text-brand" : "border-line text-ink hover:bg-surface-hover"
                 }`}
               >
-                <Preview kind="pedal" template={t.id} width={t.width} height={t.height} color={color} label="" boxW={72} boxH={44} />
+                <Preview kind="pedal" template={t.id} jacks={t.jacks ?? undefined} {...withJacks(t.width, t.height, t.jacks)} color={color} label="" boxW={72} boxH={44} />
                 <span className="truncate font-medium">{t.name}</span>
               </button>
             ))}
@@ -140,9 +187,9 @@ export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: It
       )}
 
       <div className="flex gap-3">
-        <div className="grid shrink-0 place-items-center rounded-control bg-canvas" style={{ width: 112, height: kind === "pedal" ? 140 : 92 }}>
+        <div className="grid shrink-0 place-items-center self-stretch rounded-control bg-canvas" style={{ width: 112, minHeight: 92 }}>
           {sizeOk ? (
-            <Preview kind={kind} template={template} width={w} height={h} color={color} label={name.trim()} boxW={96} boxH={kind === "pedal" ? 124 : 76} />
+            <Preview kind={kind} template={template} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} boxW={96} boxH={kind === "pedal" ? 160 : 76} />
           ) : (
             <span className="px-2 text-center text-xs text-ink-muted">Check the size</span>
           )}
@@ -159,13 +206,28 @@ export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: It
             </label>
           </div>
           {kind === "pedal" && (
-            <label className="block text-xs text-ink-muted">
-              Name (optional)
-              <input className={`${field} mt-1`} value={name} maxLength={40} onChange={(e) => setName(e.target.value)} />
-            </label>
+            <>
+              <div>
+                <div className="mb-1 text-xs text-ink-muted">Jacks</div>
+                <div className="flex gap-1.5">
+                  {jackButton(jackTop, setJackTop, "Top", `Jacks on top add ${jackDepth} to the height`)}
+                  {jackButton(jackSide, setJackSide, "Sides", `Side jacks add ${jackDepth} to each side`)}
+                </div>
+              </div>
+              <label className="block text-xs text-ink-muted">
+                Name (optional)
+                <input className={`${field} mt-1`} value={name} maxLength={40} onChange={(e) => setName(e.target.value)} />
+              </label>
+            </>
           )}
         </div>
       </div>
+
+      {jacks && sizeOk && (
+        <p className="text-xs text-ink-muted">
+          Takes up {formatSize(foot.width, foot.height, units)} with jacks.
+        </p>
+      )}
 
       {kind === "pedal" && (
         <div>

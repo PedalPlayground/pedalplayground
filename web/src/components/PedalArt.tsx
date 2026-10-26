@@ -1,7 +1,7 @@
 import { createContext, useContext, useId, type ReactNode } from "react";
 import { DEFAULT_PEDAL_COLOR, luminance, readableOn, shade } from "../lib/color";
 import { PX_PER_INCH as IN } from "../lib/geometry";
-import type { PedalTemplate } from "../lib/pedalTemplates";
+import { hasSideJacks, hasTopJacks, JACK_DEPTH, JACK_LENGTH, type Jacks, type PedalTemplate } from "../lib/pedalTemplates";
 
 /*
  * Custom pedal artwork, in a sleek industrial style (think Braun, Teenage Engineering, Apple): matte bodies under
@@ -154,15 +154,30 @@ function Toggle({ cx, cy, s }: { cx: number; cy: number; s: number }) {
   );
 }
 
-/** Black jacks set into both sides. */
-function SideJacks({ w, y, u }: { w: number; y: number; u: number }) {
+/**
+ * A 1/4" jack seen from above, sticking out of the enclosure: a black hex nut against the wall and a threaded
+ * nickel bushing past it. (x, y) is where it meets the wall; it points `dir`. Sizes are in px.
+ */
+function Jack({ x, y, dir, depth, length }: { x: number; y: number; dir: "up" | "left" | "right"; depth: number; length: number }) {
   const url = useUrl();
-  const jw = u * 0.055;
-  const jh = u * 0.2;
+  const nutT = depth * 0.42;
+  const bushW = length * 0.72;
+  const hair = Math.max(0.5, depth * 0.04);
+  const threads = Math.max(2, Math.round((depth - nutT) / Math.max(1.2, depth * 0.12)));
+  const rot = dir === "up" ? 0 : dir === "left" ? -90 : 90;
   return (
-    <g fill={url("jack")}>
-      <rect x={-jw} y={y} width={jw * 2} height={jh} rx={jw * 0.5} />
-      <rect x={w - jw} y={y} width={jw * 2} height={jh} rx={jw * 0.5} />
+    <g transform={`translate(${x} ${y}) rotate(${rot})`}>
+      <rect x={-length / 2 + depth * 0.15} y={-depth * 0.9} width={length} height={depth} fill="#000" opacity={0.3} filter={url("soft")} />
+      {/* Bushing, threaded, then the nut over its base. */}
+      <rect x={-bushW / 2} y={-depth} width={bushW} height={depth - nutT + hair} rx={hair} fill={url("bushing")} stroke="#1b1c1f" strokeWidth={hair} />
+      {Array.from({ length: threads }, (_, i) => {
+        const ty = -depth + ((depth - nutT) * (i + 0.6)) / (threads + 0.2);
+        return <line key={i} x1={-bushW / 2 + hair} x2={bushW / 2 - hair} y1={ty} y2={ty} stroke="#000" strokeOpacity={0.35} strokeWidth={hair} />;
+      })}
+      <rect x={-length / 2} y={-nutT} width={length} height={nutT + hair} rx={hair} fill={url("nutSide")} stroke="#000" strokeWidth={hair} />
+      {/* Hex facets. */}
+      <line x1={-length / 4} x2={-length / 4} y1={-nutT + hair} y2={0} stroke="#fff" strokeOpacity={0.12} strokeWidth={hair} />
+      <line x1={length / 4} x2={length / 4} y1={-nutT + hair} y2={0} stroke="#000" strokeOpacity={0.5} strokeWidth={hair} />
     </g>
   );
 }
@@ -191,7 +206,6 @@ const compact: Draw = (w, h, u, color, dark) => {
   return {
     parts: (
       <>
-        <SideJacks w={w} y={h * 0.16} u={u} />
         {spread(n, w * 0.06, w * 0.94).map((cx, i) => (
           <Knob key={i} cx={cx} cy={h * 0.04 + knobZone * 0.45} r={r} turn={i} light={dark} />
         ))}
@@ -250,7 +264,6 @@ const hammond: Draw = (w, h, u, _color, dark) => {
   return {
     parts: (
       <>
-        <SideJacks w={w} y={h * 0.22} u={u} />
         {knobs}
         <Led cx={w / 2} cy={ledY} r={u * 0.028} />
         <Footswitch cx={w / 2} cy={fsY} r={fsR} />
@@ -279,7 +292,6 @@ const wide: Draw = (w, h, u, _color, dark) => {
   return {
     parts: (
       <>
-        <SideJacks w={w} y={h * 0.3} u={u} />
         {Array.from({ length: rows }, (_, ri) =>
           spread(cols, w * 0.05, w * 0.95).map((cx, i) => (
             <Knob key={`${ri}-${i}`} cx={cx} cy={top + cellH * (ri + 0.5)} r={r} turn={ri * cols + i} light={dark} />
@@ -397,7 +409,6 @@ const switcher: Draw = (w, h, u) => {
   return {
     parts: (
       <>
-        <SideJacks w={w} y={h * 0.15} u={u} />
         {parts}
       </>
     ),
@@ -413,7 +424,6 @@ const classic: Draw = (w, h, u, _color, dark) => {
   return {
     parts: (
       <>
-        <SideJacks w={w} y={h * 0.3} u={u} />
         <Knob cx={w * 0.24} cy={ky} r={r} turn={0} light={dark} />
         <Knob cx={w * 0.76} cy={ky} r={r} turn={3} light={dark} />
         <Led cx={w / 2} cy={ky} r={u * 0.026} />
@@ -553,16 +563,35 @@ function Defs({ id, color, u, w, h, rx }: { id: string; color: string; u: number
         [0, "#2a2c30"],
         [1, "#0a0a0c"],
       ])}
-      {lin("jack", [
-        [0, "#3a3d42"],
-        [1, "#0e0f11"],
-      ])}
+      {lin(
+        "nutSide",
+        [
+          [0, "#2a2c31"],
+          [0.25, "#4b4e55"],
+          [0.5, "#202226"],
+          [1, "#0c0d0f"],
+        ],
+        [0, 0, 1, 0],
+      )}
+      {lin(
+        "bushing",
+        [
+          [0, "#7d828a"],
+          [0.35, "#e9ebee"],
+          [0.6, "#a7acb4"],
+          [1, "#5d6168"],
+        ],
+        [0, 0, 1, 0],
+      )}
       {lin("screen", [
         [0, "#16171c"],
         [1, "#0a0b0e"],
       ])}
       <filter id={`${id}-soft`} x="-60%" y="-60%" width="220%" height="220%">
         <feGaussianBlur stdDeviation={Math.max(0.8, u * 0.022)} />
+      </filter>
+      <filter id={`${id}-long`} x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation={Math.max(1, u * 0.06)} />
       </filter>
       <filter id={`${id}-glow`} x="-150%" y="-150%" width="400%" height="400%">
         <feGaussianBlur stdDeviation={Math.max(0.6, u * 0.018)} />
@@ -579,43 +608,58 @@ export function PedalArt({
   template = "classic",
   w,
   h,
+  jacks,
   color = DEFAULT_PEDAL_COLOR,
   label,
   flipX,
 }: {
   template?: PedalTemplate;
+  /** The whole footprint, jacks included, in canvas px. */
   w: number;
   h: number;
+  jacks?: Jacks;
   color?: string;
   label: string;
   flipX?: boolean;
 }) {
   const id = `pp${useId().replace(/[^a-zA-Z0-9]/g, "")}`;
-  const u = Math.min(w, h);
+  const depth = JACK_DEPTH * IN;
+  const sx = hasSideJacks(jacks) ? depth : 0;
+  const sy = hasTopJacks(jacks) ? depth : 0;
+  const bw = Math.max(1, w - sx * 2);
+  const bh = Math.max(1, h - sy);
+  const u = Math.min(bw, bh);
   const rx = u * BODY_RADIUS[template];
-  const { parts, label: box } = DRAW[template](w, h, u, color, luminance(color) < 0.06);
+  const { parts, label: box } = DRAW[template](bw, bh, u, color, luminance(color) < 0.06);
   const hair = Math.max(0.6, u * 0.008);
+  const len = Math.min(JACK_LENGTH * IN, u * 0.3);
+  const topXs = bw >= 4 * IN ? [0.22, 0.78] : [0.28, 0.72];
   return (
-    <div
-      className="relative size-full"
-      style={{
-        borderRadius: rx,
-        // Contact shadow plus a long, soft one falling down and to the right.
-        boxShadow: `0 1px 1.5px rgb(0 0 0 / 0.22), ${u * 0.04}px ${u * 0.08}px ${u * 0.14}px -${u * 0.02}px rgb(0 0 0 / 0.28)`,
-      }}
-    >
+    <div className="relative size-full">
       <Ids.Provider value={id}>
-        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="absolute inset-0 block size-full" aria-hidden>
-          <Defs id={id} color={color} u={u} w={w} h={h} rx={rx} />
-          <g clipPath={`url(#${id}-clip)`}>
-            <rect width={w} height={h} fill={`url(#${id}-body)`} />
-            {parts}
+        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="absolute inset-0 block size-full overflow-visible" aria-hidden>
+          <Defs id={id} color={color} u={u} w={bw} h={bh} rx={rx} />
+          {hasSideJacks(jacks) && (
+            <>
+              <Jack x={sx} y={sy + bh * 0.24} dir="left" depth={depth} length={len} />
+              <Jack x={sx + bw} y={sy + bh * 0.24} dir="right" depth={depth} length={len} />
+            </>
+          )}
+          {hasTopJacks(jacks) && topXs.map((k) => <Jack key={k} x={sx + bw * k} y={sy} dir="up" depth={depth} length={len} />)}
+          <g transform={`translate(${sx} ${sy})`}>
+            {/* Contact shadow plus a long, soft one falling down and to the right. */}
+            <rect x={u * 0.04} y={u * 0.07} width={bw} height={bh} rx={rx} fill="#000" opacity={0.26} filter={`url(#${id}-long)`} />
+            <rect x={0} y={hair * 0.6} width={bw} height={bh} rx={rx} fill="#000" opacity={0.25} />
+            <g clipPath={`url(#${id}-clip)`}>
+              <rect width={bw} height={bh} fill={`url(#${id}-body)`} />
+              {parts}
+            </g>
+            <rect x={hair / 2} y={hair / 2} width={bw - hair} height={bh - hair} rx={rx} fill="none" stroke={shade(color, -0.24)} strokeWidth={hair} />
+            <rect x={hair * 1.5} y={hair * 1.5} width={bw - hair * 3} height={bh - hair * 3} rx={Math.max(0, rx - hair)} fill="none" stroke={`url(#${id}-edge)`} strokeWidth={hair} />
           </g>
-          <rect x={hair / 2} y={hair / 2} width={w - hair} height={h - hair} rx={rx} fill="none" stroke={shade(color, -0.24)} strokeWidth={hair} />
-          <rect x={hair * 1.5} y={hair * 1.5} width={w - hair * 3} height={h - hair * 3} rx={Math.max(0, rx - hair)} fill="none" stroke={`url(#${id}-edge)`} strokeWidth={hair} />
         </svg>
       </Ids.Provider>
-      {box && <Label box={box} text={label} u={u} ink={readableOn(color)} flipX={flipX} />}
+      {box && <Label box={{ ...box, x: box.x + sx, y: box.y + sy }} text={label} u={u} ink={readableOn(color)} flipX={flipX} />}
     </div>
   );
 }

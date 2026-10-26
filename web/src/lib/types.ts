@@ -1,4 +1,4 @@
-import type { PedalTemplate } from "./pedalTemplates";
+import type { Jacks, PedalTemplate } from "./pedalTemplates";
 
 export interface CatalogItem {
   brand: string;
@@ -37,6 +37,8 @@ export interface Item {
   color: string | null;
   /** Custom pedals: which look to draw (see pedalTemplates). Missing means Classic, the look from before templates. */
   template?: PedalTemplate;
+  /** Custom pedals: edges with jacks sticking out. width and height include them. Missing means none. */
+  jacks?: Jacks;
   /** Locked items stay put: they can be selected but not dragged, nudged or distributed. */
   locked?: boolean;
   /** Equipment List: "wanted" means the user still needs to buy it. Missing means they own it. */
