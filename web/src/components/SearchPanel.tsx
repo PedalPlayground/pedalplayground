@@ -256,7 +256,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           </button>
         </div>
       ) : (
-        <div className="flex items-center gap-2 px-3 pb-2 pt-2">
+        <div className="flex items-center gap-2 px-3 pb-2 pt-4">
           <div className="-mx-3 -my-1 flex min-w-0 flex-1 items-center gap-4 overflow-x-auto px-3 py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {!target && (
               <Dropdown.Root>
