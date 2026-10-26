@@ -9,6 +9,7 @@ import { usePlayground } from "../store/playground";
 import { openContextMenu, useContextMenu } from "./ContextMenu";
 import { CustomItemView } from "./CustomItem";
 import { isMac, tip } from "./Tooltip";
+import { itemName } from "../lib/itemName";
 import { useUi } from "../store/ui";
 
 /** Screen-space distance (px) within which a dragged item snaps to another's edge or center. */
@@ -89,7 +90,7 @@ function ItemView({ item }: { item: Item }) {
   return (
     <div
       data-item-id={item.id}
-      {...tip(item.label)}
+      {...tip(itemName(item))}
       className="absolute"
       style={{
         left: item.x * PX_PER_INCH,
@@ -100,7 +101,7 @@ function ItemView({ item }: { item: Item }) {
       }}
     >
       {src ? (
-        <img src={src} alt={item.label} draggable={false} className="size-full select-none object-fill" />
+        <img src={src} alt={itemName(item)} draggable={false} className="size-full select-none object-fill" />
       ) : item.custom ? (
         <CustomItemView item={item} />
       ) : (

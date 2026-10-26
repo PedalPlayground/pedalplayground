@@ -23,6 +23,7 @@ import { create } from "zustand";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { hideTip, platformKeys } from "./Tooltip";
+import { itemName } from "../lib/itemName";
 
 type Kind = "canvas" | "object";
 
@@ -113,7 +114,7 @@ function ObjectItems() {
   return (
     <>
       <Dropdown.Label className="max-w-60 truncate px-2 pb-1 pt-0.5 text-xs font-semibold text-ink-muted">
-        {single ? single.label : `${selected.length} selected`}
+        {single ? itemName(single) : `${selected.length} selected`}
       </Dropdown.Label>
       <Row
         icon={locked ? <Lock {...ICON} /> : <LockOpen {...ICON} />}

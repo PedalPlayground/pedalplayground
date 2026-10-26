@@ -1,11 +1,15 @@
 import type { Item } from "../lib/types";
+import { itemName } from "../lib/itemName";
 import { usePlayground } from "./playground";
 import { toast } from "./toast";
 
 type State = ReturnType<typeof usePlayground.getState>;
 
 const changed = (a: Item[], b: Item[]) => a.length !== b.length || a.some((item, n) => item !== b[n]);
-const selectedLabel = (s: State) => s.items.find((i) => i.id === s.selected[0])?.label;
+const selectedLabel = (s: State) => {
+  const item = s.items.find((i) => i.id === s.selected[0]);
+  return item && itemName(item);
+};
 
 /** How each action describes itself once it has changed the canvas. Catalog adds confirm in the search panel instead. */
 const messages: Partial<Record<keyof State, (after: State, before: State) => string | undefined>> = {
