@@ -33,6 +33,7 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 - Bug: clicking the Signal Path button in the mode rail hides its tooltip.
 - Audit colors so the grays and blacks share the main blurple's hue, and build a brand palette with shades of each
   color, named the industry-standard way (e.g. `brand-50` to `brand-950`).
+- Add a button to suggest a catalog pedalboard (or a custom one) when multiple pedals are selected.
 
 ## Done
 
