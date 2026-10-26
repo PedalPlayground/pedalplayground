@@ -23,10 +23,10 @@ export function ShareDialog({ onClose, onSignIn }: { onClose: () => void; onSign
 
   if (!user) {
     return (
-      <Modal title="Share playground" onClose={onClose}>
+      <Modal title="Share Playground" onClose={onClose}>
         <p className="mb-3 text-sm text-ink-muted">Sign in to get a link you can share. Your board is saved to your account first.</p>
         <button onClick={onSignIn} className="h-9 w-full btn-primary">
-          Sign in
+          Sign In
         </button>
       </Modal>
     );
@@ -35,7 +35,7 @@ export function ShareDialog({ onClose, onSignIn }: { onClose: () => void; onSign
   const url = slug && isPublic ? shareUrl(slug) : "";
 
   return (
-    <Modal title="Share playground" onClose={onClose}>
+    <Modal title="Share Playground" onClose={onClose}>
       <p className="mb-3 text-sm text-ink-muted">
         Anyone with this link can open their own copy of your playground. Their edits never change yours.
       </p>
@@ -62,7 +62,7 @@ export function ShareDialog({ onClose, onSignIn }: { onClose: () => void; onSign
             onClick={() => void stopSharing().then(onClose)}
             className="text-sm text-danger hover:underline"
           >
-            Stop sharing
+            Stop Sharing
           </button>
         ) : (
           <span />

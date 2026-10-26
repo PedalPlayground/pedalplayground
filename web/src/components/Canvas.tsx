@@ -6,6 +6,7 @@ import type { Item } from "../lib/types";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { CustomItemView } from "./CustomItem";
+import { tip } from "./Tooltip";
 import { useUi } from "../store/ui";
 
 /** Screen-space distance (px) within which a dragged item snaps to another's edge or center. */
@@ -80,7 +81,7 @@ function ItemView({ item }: { item: Item }) {
   return (
     <div
       data-item-id={item.id}
-      title={item.label}
+      {...tip(item.label)}
       className="absolute"
       style={{
         left: item.x * PX_PER_INCH,

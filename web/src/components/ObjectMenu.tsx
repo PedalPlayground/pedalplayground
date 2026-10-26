@@ -2,16 +2,19 @@ import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Lock, Lock
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
+import { tip } from "./Tooltip";
 import { barDivider, barIconActive, barIconButton, barIconIdle, barPanel, barSoftButton, barSoftDangerButton } from "./toolbarStyles";
 
 function Action({
   label,
+  shortcut,
   onClick,
   children,
   danger,
   pressed,
 }: {
   label: string;
+  shortcut?: string;
   onClick: () => void;
   children: ReactNode;
   danger?: boolean;
@@ -19,7 +22,7 @@ function Action({
 }) {
   return (
     <button
-      title={label}
+      {...tip(label, { shortcut })}
       aria-label={label}
       aria-pressed={pressed}
       onClick={onClick}
@@ -46,35 +49,36 @@ export function ObjectMenu() {
       className={`animate-enter sm:[--enter-y:-8px] absolute left-1/2 z-10 flex max-w-[calc(100%-24px)] -translate-x-1/2 flex-col items-center gap-1 ${barPanel} max-sm:bottom-[74px] sm:top-4 sm:flex-row sm:gap-1.5 ${searchOpen ? "max-sm:hidden" : ""}`}
     >
       <div className="flex items-center gap-1 max-sm:w-full max-sm:justify-center">
-        <span className="max-w-64 truncate px-2 pt-0.5 text-[13px] font-semibold tracking-[-0.01em] sm:max-w-48 sm:pl-1.5 sm:pr-0.5 sm:pt-0" title={single?.label}>
+        <span className="max-w-64 truncate px-2 pt-0.5 text-[13px] font-semibold tracking-[-0.01em] sm:max-w-48 sm:pl-1.5 sm:pr-0.5 sm:pt-0" {...(single ? tip(single.label) : {})}>
           {single ? single.label : `${s.selected.length} selected`}
         </span>
       </div>
       <div className="flex items-center gap-1 sm:gap-1.5">
       <span className={`${barDivider} max-sm:hidden`} />
-      <Action label={locked ? "Unlock position" : "Lock position"} onClick={s.toggleLockSelected} pressed={locked}>
+      <Action label={locked ? "Unlock" : "Lock in Place"} onClick={s.toggleLockSelected} pressed={locked}>
         {locked ? <Lock size={18} /> : <LockOpen size={18} />}
       </Action>
-      <Action label="Rotate (R)" onClick={s.rotateSelected}>
+      <Action label="Rotate 90°" shortcut="R" onClick={s.rotateSelected}>
         <RotateCw size={18} />
       </Action>
       {s.selected.length >= 3 && (
-        <Action label="Distribute horizontally" onClick={s.distributeHorizontally}>
+        <Action label="Space Evenly" onClick={s.distributeHorizontally}>
           <AlignHorizontalSpaceBetween size={18} />
         </Action>
       )}
       <span className={barDivider} />
-      <Action label="Bring forward (])" onClick={s.bringForward}>
+      <Action label="Move Forward" shortcut="]" onClick={s.bringForward}>
         <ArrowUpToLine size={18} />
       </Action>
-      <Action label="Send backward ([)" onClick={s.sendBackward}>
+      <Action label="Move Back" shortcut="[" onClick={s.sendBackward}>
         <ArrowDownToLine size={18} />
       </Action>
       <span className={barDivider} />
       {single && (
         <button
           onClick={() => setReplacing(true)}
-          title="Replace with another product"
+          aria-label="Swap for Something Else"
+          {...tip("Swap for Something Else")}
           className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}
         >
           <Replace size={14} strokeWidth={2.25} className="max-sm:size-[18px] max-sm:stroke-2" />
@@ -83,17 +87,17 @@ export function ObjectMenu() {
       )}
       {/* Phones: icon button. Tablet and desktop: icon and text, in a soft red version of the Replace style. */}
       <span className="contents sm:hidden">
-        <Action label="Delete" onClick={s.deleteSelected} danger>
+        <Action label="Remove" shortcut="Delete" onClick={s.deleteSelected} danger>
           <Trash2 size={18} />
         </Action>
       </span>
       <button
         onClick={s.deleteSelected}
-        title="Delete"
+        {...tip("Remove from the Playground", { shortcut: "Delete" })}
         className={`${barSoftDangerButton} max-sm:hidden`}
       >
         <Trash2 size={14} strokeWidth={2.25} />
-        Delete
+        Remove
       </button>
       </div>
     </div>

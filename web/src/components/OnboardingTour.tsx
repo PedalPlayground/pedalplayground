@@ -18,7 +18,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
   const touch = coarse();
   const steps: Step[] = [
     {
-      title: "Welcome to the new Pedal Playground",
+      title: "Welcome to the New Pedal Playground",
       body: "Plan your pedalboard before you buy a thing. Here's a quick look around.",
     },
     {
@@ -29,7 +29,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
     {
       target: "canvas",
       pad: -10,
-      title: "Arrange your board",
+      title: "Arrange Your Board",
       body: touch
         ? "Drag to move gear. Tap it to rotate, replace or delete. Pinch to zoom."
         : "Drag to move gear. Click it to rotate, replace or delete. Scroll to pan, and pinch or hold ⌘/Ctrl while scrolling to zoom.",
@@ -38,9 +38,9 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
   if (cloudEnabled) {
     steps.push(
       signedIn
-        ? { target: "account", title: "Your playgrounds", body: "Everything you build saves to your account. Find all your boards here." }
-        : { target: "account", title: "Save your work", body: "Your board is kept on this device. Sign in to save it to your account and open it anywhere." },
-      { target: "share", title: "Share it", body: "Get a link anyone can open as their own copy." },
+        ? { target: "account", title: "Your Playgrounds", body: "Everything you build saves to your account. Find all your boards here." }
+        : { target: "account", title: "Save Your Work", body: "Your board is kept on this device. Sign in to save it to your account and open it anywhere." },
+      { target: "share", title: "Share It", body: "Get a link anyone can open as their own copy." },
     );
   }
   return steps;
@@ -224,7 +224,7 @@ export function OnboardingTour() {
               onClick={next}
               className="btn-primary h-8 px-3.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1"
             >
-              {index === 0 ? "Show me around" : last ? "Start building" : "Next"}
+              {index === 0 ? "Show Me Around" : last ? "Start Building" : "Next"}
             </button>
           </div>
         </div>

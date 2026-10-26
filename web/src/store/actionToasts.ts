@@ -12,15 +12,15 @@ const messages: Partial<Record<keyof State, (after: State, before: State) => str
   undo: () => "Undo",
   redo: () => "Redo",
   rotateSelected: () => "Rotated 90°",
-  toggleLockSelected: (s) => (s.items.some((i) => s.selected.includes(i.id) && i.locked) ? "Locked in place" : "Unlocked"),
-  bringForward: () => "Moved forward",
-  sendBackward: () => "Moved behind",
-  bringToFront: () => "Moved to front",
-  sendToBack: () => "Moved to back",
-  distributeHorizontally: () => "Spaced evenly",
+  toggleLockSelected: (s) => (s.items.some((i) => s.selected.includes(i.id) && i.locked) ? "Locked in Place" : "Unlocked"),
+  bringForward: () => "Moved Forward",
+  sendBackward: () => "Moved Behind",
+  bringToFront: () => "Moved to Front",
+  sendToBack: () => "Moved to Back",
+  distributeHorizontally: () => "Spaced Evenly",
   deleteSelected: (s, b) => {
     const n = b.items.length - s.items.length;
-    return n > 1 ? `Deleted ${n} items` : "Deleted";
+    return n > 1 ? `Deleted ${n} Items` : "Deleted";
   },
   addCustomItem: (s) => `Added ${selectedLabel(s) ?? ""}`.trim(),
   replaceItem: (s) => `Replaced with ${selectedLabel(s) ?? "new item"}`,

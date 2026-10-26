@@ -51,12 +51,12 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
           <p className="text-sm font-medium">{user.email}</p>
           {billingEnabled && entitlements && (
             <div className="mt-4 rounded-control border border-line p-3">
-              <div className="text-sm font-medium">{entitlements.plan === "pro" ? "Pro" : "Free plan"}</div>
+              <div className="text-sm font-medium">{entitlements.plan === "pro" ? "Pro" : "Free Plan"}</div>
               <div className="mt-0.5 text-xs text-ink-muted">
                 {entitlements.plan === "pro"
                   ? entitlements.currentPeriodEnd
                     ? `${entitlements.cancelAtPeriodEnd ? "Ends" : "Renews"} ${new Date(entitlements.currentPeriodEnd).toLocaleDateString()}`
-                    : "Unlimited playgrounds"
+                    : "Unlimited Playgrounds"
                   : `${entitlements.playgroundCount} of ${entitlements.maxPlaygrounds ?? "unlimited"} playground${entitlements.maxPlaygrounds === 1 ? "" : "s"} used`}
               </div>
               {entitlements.plan === "pro" ? (
@@ -65,7 +65,7 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
                     onClick={() => void openBillingPortal().catch((e: Error) => setError(e.message))}
                     className="mt-2 text-sm text-brand hover:underline"
                   >
-                    Manage subscription
+                    Manage Subscription
                   </button>
                 )
               ) : (
@@ -96,7 +96,7 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
             className={`${field} mb-3`}
           />
           <button type="submit" disabled={!email.trim() || busy} className={primary}>
-            {busy ? "Sending…" : "Email me a code"}
+            {busy ? "Sending…" : "Email Me a Code"}
           </button>
         </form>
       )}
@@ -122,14 +122,14 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
             className={`${field} mb-3 text-center text-lg tracking-[0.4em]`}
           />
           <button type="submit" disabled={code.replace(/\s/g, "").length < 6 || busy} className={primary}>
-            {busy ? "Checking…" : "Sign in"}
+            {busy ? "Checking…" : "Sign In"}
           </button>
           <div className="mt-3 flex justify-between text-sm">
             <button type="button" onClick={() => void send()} disabled={busy} className="text-brand hover:underline disabled:opacity-50">
-              Send a new code
+              Send a New Code
             </button>
             <button type="button" onClick={() => { setStep("email"); setError(null); setMessage(null); }} className="text-ink-muted hover:text-ink">
-              Use a different email
+              Use a Different Email
             </button>
           </div>
         </form>

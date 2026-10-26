@@ -28,7 +28,7 @@ export function CustomItemForm({ onDone }: { onDone: () => void }) {
     const h = toInches(parseFloat(height));
     if (!(w > 0) || !(h > 0)) return setError("Enter a width and height greater than zero.");
     if (w > MAX_INCHES || h > MAX_INCHES) return setError(`That's larger than ${MAX_INCHES} in. Check the units.`);
-    add({ kind, width: w, height: h, label: kind === "pedal" ? name.trim() : "Custom pedalboard", color });
+    add({ kind, width: w, height: h, label: kind === "pedal" ? name.trim() : "Custom Pedalboard", color });
     onDone();
   };
 

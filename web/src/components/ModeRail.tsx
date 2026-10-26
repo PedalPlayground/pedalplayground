@@ -1,11 +1,12 @@
 import { LayoutGrid, List, Route } from "lucide-react";
 import type { ReactNode } from "react";
 import { useUi, type Mode } from "../store/ui";
+import { tip } from "./Tooltip";
 
 export const modes: { id: Mode; label: string; icon: ReactNode }[] = [
   { id: "playground", label: "Playground", icon: <LayoutGrid size={18} /> },
-  { id: "signal", label: "Signal path", icon: <Route size={18} /> },
-  { id: "list", label: "Equipment list", icon: <List size={18} /> },
+  { id: "signal", label: "Signal Path", icon: <Route size={18} /> },
+  { id: "list", label: "Equipment List", icon: <List size={18} /> },
 ];
 
 export function ModeRail() {
@@ -15,7 +16,7 @@ export function ModeRail() {
       {modes.map((m) => (
         <button
           key={m.id}
-          title={m.label}
+          {...tip(m.label, { side: "right" })}
           aria-label={m.label}
           aria-pressed={mode === m.id}
           onClick={() => setMode(m.id)}

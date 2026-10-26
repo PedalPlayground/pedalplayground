@@ -7,6 +7,7 @@ import { requestNewPlayground } from "../lib/newPlayground";
 import { BETA, FEEDBACK_URL } from "../lib/beta";
 import { useAuth } from "../store/auth";
 import { useUi } from "../store/ui";
+import { tip } from "./Tooltip";
 
 /** Import/export of playground files is archived for now. Flip this to bring the menu items back. */
 const SHOW_FILE_IO = false;
@@ -104,6 +105,7 @@ export function SettingsMenu() {
     <Dropdown.Root>
       <Dropdown.Trigger
         aria-label="Settings"
+        {...tip("Settings")}
         className="press grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover active:bg-chrome-line data-[state=open]:bg-surface-hover"
       >
         <SlidersHorizontal size={18} />
@@ -117,22 +119,22 @@ export function SettingsMenu() {
           {!signedIn && (
             <>
               <Dropdown.Item className={menuItem} onSelect={requestNewPlayground}>
-                New playground
+                New Playground
               </Dropdown.Item>
               <Dropdown.Separator className="my-1 h-px bg-line" />
             </>
           )}
           <Dropdown.Item className={menuItem} onSelect={startTour}>
-            Take the tour
+            Take the Tour
           </Dropdown.Item>
           <Dropdown.Separator className="my-1 h-px bg-line" />
           {SHOW_FILE_IO && (
             <>
               <Dropdown.Item className={menuItem} onSelect={exportFile}>
-                Export file
+                Export File
               </Dropdown.Item>
               <Dropdown.Item className={menuItem} onSelect={() => fileInput.current?.click()}>
-                Import file…
+                Import File…
               </Dropdown.Item>
               <Dropdown.Separator className="my-1 h-px bg-line" />
             </>
@@ -157,10 +159,10 @@ export function SettingsMenu() {
           {BETA && (
             <>
               <Dropdown.Separator className="my-1 h-px bg-line" />
-              <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Pedal Playground beta</Dropdown.Label>
+              <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Pedal Playground Beta</Dropdown.Label>
               {FEEDBACK_URL && (
                 <Dropdown.Item className={menuItem} onSelect={() => window.open(FEEDBACK_URL, "_blank", "noopener")}>
-                  Send feedback
+                  Send Feedback
                 </Dropdown.Item>
               )}
             </>

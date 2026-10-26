@@ -1,4 +1,5 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
+import { tip } from "./Tooltip";
 import { ChevronDown } from "lucide-react";
 import { openBillingPortal } from "../lib/billing";
 import { requestNewPlayground } from "../lib/newPlayground";
@@ -27,6 +28,7 @@ export function AvatarMenu({
     <Dropdown.Root>
       <Dropdown.Trigger
         aria-label={`Account menu (${user?.email ?? ""})`}
+        {...tip("Your Account")}
         className="press flex h-9 items-center gap-1 rounded-control px-1.5 text-ink-muted outline-none hover:bg-surface-hover active:bg-chrome-line focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover"
       >
         <span className="grid size-6 place-items-center">
@@ -47,7 +49,7 @@ export function AvatarMenu({
           {billingEnabled && entitlements && (
             entitlements.plan === "pro" ? (
               <Dropdown.Item className={menuItem} onSelect={() => void openBillingPortal().catch((e: Error) => window.alert(e.message))}>
-                Manage subscription
+                Manage Subscription
               </Dropdown.Item>
             ) : (
               <Dropdown.Item className={`${menuItem} text-brand`} onSelect={() => openUpgrade("menu")}>
@@ -59,14 +61,14 @@ export function AvatarMenu({
             Playgrounds
           </Dropdown.Item>
           <Dropdown.Item className={menuItem} onSelect={requestNewPlayground}>
-            New playground
+            New Playground
           </Dropdown.Item>
           <Dropdown.Item className={menuItem} onSelect={onChangeAvatar}>
-            Change avatar…
+            Change Avatar…
           </Dropdown.Item>
           <Dropdown.Separator className="my-1 h-px bg-line" />
           <Dropdown.Item className={menuItem} onSelect={() => void signOut()}>
-            Sign out
+            Sign Out
           </Dropdown.Item>
         </Dropdown.Content>
       </Dropdown.Portal>

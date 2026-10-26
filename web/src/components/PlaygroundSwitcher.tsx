@@ -1,4 +1,5 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
+import { tip } from "./Tooltip";
 import { Check, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 import { renderThumbnail } from "../lib/thumbnail";
@@ -58,7 +59,7 @@ function MenuContent({ onRename, onAll, onSignIn }: MenuProps) {
         <Dropdown.Separator className="my-1 h-px bg-line" />
         {user && list.length > 0 && (
           <>
-            <Dropdown.Label className="px-2 py-1 text-xs text-ink-muted">Your playgrounds</Dropdown.Label>
+            <Dropdown.Label className="px-2 py-1 text-xs text-ink-muted">Your Playgrounds</Dropdown.Label>
             {list.slice(0, 6).map((p) => (
               <Dropdown.Item key={p.id} className={item} onSelect={() => void openPlayground(p.id)}>
                 <Thumb src={p.thumbnail} />
@@ -67,7 +68,7 @@ function MenuContent({ onRename, onAll, onSignIn }: MenuProps) {
               </Dropdown.Item>
             ))}
             <Dropdown.Item className={item} onSelect={onAll}>
-              All playgrounds…
+              All Playgrounds…
             </Dropdown.Item>
             <Dropdown.Separator className="my-1 h-px bg-line" />
           </>
@@ -76,13 +77,13 @@ function MenuContent({ onRename, onAll, onSignIn }: MenuProps) {
           Rename…
         </Dropdown.Item>
         <Dropdown.Item className={item} onSelect={requestNewPlayground}>
-          New playground
+          New Playground
         </Dropdown.Item>
         {cloudEnabled && !user && (
           <>
             <Dropdown.Separator className="my-1 h-px bg-line" />
             <Dropdown.Item className={`${item} text-brand`} onSelect={onSignIn}>
-              Sign in to save across devices
+              Sign In to Save Across Devices
             </Dropdown.Item>
           </>
         )}
@@ -104,7 +105,7 @@ export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & {
       <Dropdown.Root>
         <Dropdown.Trigger
           aria-label={`Playground: ${name}`}
-          title={name}
+          {...tip("Switch Playgrounds")}
           className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
         >
           {thumb ? (

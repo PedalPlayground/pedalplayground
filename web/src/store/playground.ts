@@ -4,7 +4,8 @@ import { importAny, readLegacyLocalStorage } from "../lib/importers";
 import type { CatalogItem, Item, PlaygroundDocument, Rotation, View } from "../lib/types";
 
 const STORAGE_KEY = "pp:playground:v3";
-const MIN_ZOOM = 0.1;
+/** Zooming out stops here (8px per inch), so pedals never shrink to specks. */
+const MIN_ZOOM = 0.25;
 const MAX_ZOOM = 4;
 
 const HISTORY_LIMIT = 100;
@@ -143,7 +144,7 @@ function viewShowing(s: PlaygroundState, item: Item): View {
 }
 
 export const usePlayground = create<PlaygroundState>((set, get) => ({
-  name: "Untitled playground",
+  name: "Untitled Playground",
   items: [],
   selected: [],
   view: DEFAULT_VIEW,
@@ -365,7 +366,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     return { schemaVersion: 3, savedAt: new Date().toISOString(), name, items, view };
   },
 
-  reset: () => set((s) => ({ ...record(s), name: "Untitled playground", items: [], selected: [], view: DEFAULT_VIEW })),
+  reset: () => set((s) => ({ ...record(s), name: "Untitled Playground", items: [], selected: [], view: DEFAULT_VIEW })),
 }));
 
 /** Restores the last session; on first run, imports the legacy app's local save if one exists. */

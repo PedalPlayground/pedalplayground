@@ -1,4 +1,5 @@
 import { Check, Search, X } from "lucide-react";
+import { tip } from "./Tooltip";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { thumbUrl } from "../lib/catalog";
 import { formatSize } from "../lib/units";
@@ -64,7 +65,7 @@ export function SearchPanel({ onClose, replace = false }: { onClose: () => void;
           placeholder={target ? `Replace ${target.label}` : "Search pedals and pedalboards"}
           className="h-9 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted"
         />
-        <button aria-label="Close search" onClick={onClose} className="press grid size-7 place-items-center rounded-control text-ink-muted hover:bg-surface-hover hover:text-ink active:bg-chrome-line">
+        <button aria-label="Close search" {...tip("Close")} onClick={onClose} className="press grid size-7 place-items-center rounded-control text-ink-muted hover:bg-surface-hover hover:text-ink active:bg-chrome-line">
           <X size={16} />
         </button>
       </div>

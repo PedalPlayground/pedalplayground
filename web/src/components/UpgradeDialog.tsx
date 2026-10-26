@@ -14,9 +14,9 @@ const FALLBACK: Record<Interval, string | undefined> = {
 
 const HEADLINE: Record<UpgradeReason, string> = {
   menu: "Upgrade to Pro",
-  limit: "You've used your free playground",
-  save: "This playground isn't saved to your account",
-  avatar: "Use any pedal as your avatar",
+  limit: "You've Used Your Free Playground",
+  save: "This Playground Isn't Saved to Your Account",
+  avatar: "Use Any Pedal as Your Avatar",
 };
 
 const BLURB: Record<UpgradeReason, string> = {
@@ -125,7 +125,7 @@ export function UpgradeDialog({ onSignIn }: { onSignIn: () => void }) {
         <>
           <p className="mb-3 text-sm text-ink-muted">Sign in first so Pro is attached to your account.</p>
           <button onClick={() => { closeUpgrade(); onSignIn(); }} className="h-9 w-full btn-primary">
-            Sign in
+            Sign In
           </button>
         </>
       ) : (
@@ -154,7 +154,7 @@ export function UpgradeDialog({ onSignIn }: { onSignIn: () => void }) {
             disabled={busy}
             className="h-9 w-full disabled:opacity-50 btn-primary"
           >
-            {busy ? "Opening checkout…" : "Continue to checkout"}
+            {busy ? "Opening checkout…" : "Continue to Checkout"}
           </button>
           <p className="mt-2 text-center text-xs text-ink-muted">Payment is handled securely by Stripe. Cancel anytime from your account.</p>
         </>
@@ -163,13 +163,13 @@ export function UpgradeDialog({ onSignIn }: { onSignIn: () => void }) {
       <div className="mt-4 flex items-center justify-between text-sm">
         {reason === "limit" ? (
           <button onClick={unsavedInstead} className="text-ink-muted hover:text-ink hover:underline">
-            Start an unsaved canvas instead
+            Start an Unsaved Canvas Instead
           </button>
         ) : (
           <span />
         )}
         <button onClick={closeUpgrade} className="text-ink-muted hover:text-ink">
-          Not now
+          Not Now
         </button>
       </div>
     </Modal>

@@ -21,7 +21,7 @@ export function BillingReturn({ onDone }: { onDone: () => void }) {
   }, [ready, user, waitForPro]);
 
   return (
-    <Modal title={state === "pro" ? "You're on Pro" : "Finishing your upgrade"} onClose={onDone}>
+    <Modal title={state === "pro" ? "You're on Pro" : "Finishing Your Upgrade"} onClose={onDone}>
       {state === "waiting" && <p className="text-sm text-ink-muted">Confirming your payment…</p>}
       {state === "pro" && <p className="text-sm text-ink-muted">Thanks for supporting Pedal Playground. You can now save as many playgrounds as you like.</p>}
       {state === "slow" && (
@@ -30,7 +30,7 @@ export function BillingReturn({ onDone }: { onDone: () => void }) {
         </p>
       )}
       <button onClick={onDone} className="mt-4 h-9 w-full btn-primary">
-        {state === "pro" ? "Start building" : "Close"}
+        {state === "pro" ? "Start Building" : "Close"}
       </button>
     </Modal>
   );

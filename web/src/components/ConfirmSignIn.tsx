@@ -21,7 +21,7 @@ export function ConfirmSignIn({ tokenHash, type, onDone }: { tokenHash: string; 
   };
 
   return (
-    <Modal title="Finish signing in" onClose={onDone}>
+    <Modal title="Finish Signing In" onClose={onDone}>
       <p className="mb-3 text-sm text-ink-muted">Confirm to sign in to Pedal Playground on this device.</p>
       {error && <p className="mb-3 text-sm text-danger">{error}</p>}
       <button
@@ -29,7 +29,7 @@ export function ConfirmSignIn({ tokenHash, type, onDone }: { tokenHash: string; 
         disabled={busy}
         className="h-9 w-full disabled:opacity-50 btn-primary"
       >
-        {busy ? "Signing in…" : "Sign in"}
+        {busy ? "Signing in…" : "Sign In"}
       </button>
       <button onClick={onDone} className="mt-3 text-sm text-ink-muted hover:text-ink">
         Cancel

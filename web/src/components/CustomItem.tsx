@@ -59,7 +59,7 @@ function CustomPedal({ item }: { item: Item }) {
  * A generic pedalboard, styled like the original site: a dark deck framed by half-inch aluminum
  * U-channel. Lighter sides and darker ends meet on the diagonal, which reads as mitered corners.
  */
-function CustomBoard({ item }: { item: Item }) {
+function CustomBoard() {
   return (
     <div
       className="size-full"
@@ -69,11 +69,10 @@ function CustomBoard({ item }: { item: Item }) {
         borderBottomColor: "#ccc",
         background: "#222",
       }}
-      title={item.label}
     />
   );
 }
 
 export function CustomItemView({ item }: { item: Item }) {
-  return item.kind === "pedalboard" ? <CustomBoard item={item} /> : <CustomPedal item={item} />;
+  return item.kind === "pedalboard" ? <CustomBoard /> : <CustomPedal item={item} />;
 }

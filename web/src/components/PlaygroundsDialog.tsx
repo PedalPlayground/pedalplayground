@@ -23,12 +23,12 @@ export function PlaygroundsDialog({ onClose, onSignIn }: { onClose: () => void; 
   };
 
   return (
-    <Modal title="Your playgrounds" onClose={onClose} wide>
+    <Modal title="Your Playgrounds" onClose={onClose} wide>
       {!user && (
         <>
           <p className="mb-3 text-sm text-ink-muted">Sign in to save playgrounds to your account and open them on any device.</p>
           <button onClick={onSignIn} className="h-9 px-4 btn-primary">
-            Sign in
+            Sign In
           </button>
         </>
       )}

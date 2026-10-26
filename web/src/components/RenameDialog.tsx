@@ -16,7 +16,7 @@ export function RenameDialog({ onClose }: { onClose: () => void }) {
   };
 
   return (
-    <Modal title="Rename playground" onClose={onClose}>
+    <Modal title="Rename Playground" onClose={onClose}>
       <input
         autoFocus
         value={value}

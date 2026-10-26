@@ -2,16 +2,19 @@ import { Fullscreen, Hand, MousePointer2, Redo2, SquareArrowOutUpRight, Undo2, Z
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
+import { tip } from "./Tooltip";
 import { barDivider, barIconActive, barIconButton, barIconIdle, barPanel, barSoftButton } from "./toolbarStyles";
 
 function IconButton({
   label,
+  shortcut,
   active,
   disabled,
   onClick,
   children,
 }: {
   label: string;
+  shortcut?: string;
   active?: boolean;
   disabled?: boolean;
   onClick?: () => void;
@@ -19,7 +22,7 @@ function IconButton({
 }) {
   return (
     <button
-      title={label}
+      {...tip(label, { shortcut })}
       aria-label={label}
       aria-pressed={active}
       disabled={disabled}
@@ -85,10 +88,10 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
       {/* Touch screens pan and select automatically, so the tool switch is only for mouse and trackpad. */}
       {SHOW_TOOL_SWITCH && (
         <span className="contents pointer-coarse:hidden">
-          <IconButton label="Pan (hand)" active={tool === "hand"} onClick={() => setTool("hand")}>
+          <IconButton label="Pan Around" shortcut="Space" active={tool === "hand"} onClick={() => setTool("hand")}>
             <Hand size={18} />
           </IconButton>
-          <IconButton label="Select" active={tool === "select"} onClick={() => setTool("select")}>
+          <IconButton label="Select and Move" active={tool === "select"} onClick={() => setTool("select")}>
             <MousePointer2 size={18} />
           </IconButton>
           {divider}
@@ -96,23 +99,23 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
       )}
       {/* Phones zoom with a pinch, so only "zoom to fit" stays. */}
       <span className="contents max-sm:hidden">
-        <IconButton label="Zoom in" onClick={() => zoomBy(1.25)}>
+        <IconButton label="Zoom In" shortcut="⌘+" onClick={() => zoomBy(1.25)}>
           <ZoomIn size={20} />
         </IconButton>
       </span>
-      <IconButton label="Zoom to fit (⇧1)" onClick={fit}>
+      <IconButton label="Fit Everything in View" shortcut="⇧1" onClick={fit}>
         <Fullscreen size={17} />
       </IconButton>
       <span className="contents max-sm:hidden">
-        <IconButton label="Zoom out" onClick={() => zoomBy(0.8)}>
+        <IconButton label="Zoom Out" shortcut="⌘−" onClick={() => zoomBy(0.8)}>
           <ZoomOut size={20} />
         </IconButton>
       </span>
       {divider}
-      <IconButton label="Undo (⌘Z)" disabled={!canUndo} onClick={undo}>
+      <IconButton label="Undo" shortcut="⌘Z" disabled={!canUndo} onClick={undo}>
         <Undo2 size={17} />
       </IconButton>
-      <IconButton label="Redo (⇧⌘Z)" disabled={!canRedo} onClick={redo}>
+      <IconButton label="Redo" shortcut="⇧⌘Z" disabled={!canRedo} onClick={redo}>
         <Redo2 size={17} />
       </IconButton>
       {divider}

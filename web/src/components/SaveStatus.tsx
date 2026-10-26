@@ -1,4 +1,5 @@
 import { useAuth } from "../store/auth";
+import { tip } from "./Tooltip";
 import { useCloud } from "../store/cloud";
 import { useUi } from "../store/ui";
 
@@ -15,6 +16,6 @@ export function SaveStatus() {
       </button>
     );
   }
-  if (status === "error") return <span className="animate-enter text-sm text-danger" title={error ?? ""}>Saved locally only</span>;
+  if (status === "error") return <span className="animate-enter text-sm text-danger" {...(error ? tip(error) : {})}>Saved locally only</span>;
   return null;
 }

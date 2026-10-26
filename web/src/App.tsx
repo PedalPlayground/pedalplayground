@@ -18,6 +18,8 @@ import { SearchPanel } from "./components/SearchPanel";
 import { tourSeen, useUi } from "./store/ui";
 import { ObjectMenu } from "./components/ObjectMenu";
 import { ActionToast } from "./components/ActionToast";
+import { BackToCenter } from "./components/BackToCenter";
+import { TooltipLayer } from "./components/Tooltip";
 import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { Toolbar } from "./components/Toolbar";
@@ -128,7 +130,7 @@ export function App() {
               <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand max-sm:hidden">Beta</span>
               {FEEDBACK_URL && (
                 <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="truncate text-xs text-ink-muted hover:text-ink hover:underline max-sm:hidden">
-                  Send feedback
+                  Send Feedback
                 </a>
               )}
             </>
@@ -157,7 +159,7 @@ export function App() {
                 onClick={() => setDialog("account")}
                 className="btn-primary h-[26px] whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1"
               >
-                Sign in<span className="max-sm:hidden"> to Save</span>
+                Sign In<span className="max-sm:hidden"> to Save</span>
               </button>
             )
           )}
@@ -171,6 +173,7 @@ export function App() {
 
         <main data-tour="canvas" className="relative flex-1 overflow-hidden bg-canvas">
           <Canvas />
+          <BackToCenter />
           <ObjectMenu />
 
           {/* Phones have no room for the save status in the header, so it floats just below it. */}
@@ -191,6 +194,7 @@ export function App() {
       </div>
 
       <OnboardingTour />
+      <TooltipLayer />
       {billingReturn === "success" && <BillingReturn onDone={() => setBillingReturn(null)} />}
       <UpgradeDialog onSignIn={() => setDialog("account")} />
       {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}

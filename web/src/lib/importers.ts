@@ -42,7 +42,7 @@ export function fromLegacyV2(doc: LegacyDocV2): PlaygroundDocument {
   return {
     schemaVersion: 3,
     savedAt: new Date().toISOString(),
-    name: doc.playgroundName?.trim() || "Imported playground",
+    name: doc.playgroundName?.trim() || "Imported Playground",
     items,
   };
 }

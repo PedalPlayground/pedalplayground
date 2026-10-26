@@ -1,4 +1,5 @@
 import { ArrowLeft, Search } from "lucide-react";
+import { tip } from "./Tooltip";
 import { useEffect, useMemo, useState } from "react";
 import { canSearchAvatars, chooseAvatar } from "../lib/avatar";
 import { usableFeaturedPedals } from "../lib/featuredPedals";
@@ -44,7 +45,7 @@ export function AvatarDialog({ onClose }: { onClose: () => void }) {
 
   if (searching) {
     return (
-      <Modal title="Search for your avatar pedal" onClose={onClose}>
+      <Modal title="Search for Your Avatar Pedal" onClose={onClose}>
         <button onClick={() => setSearching(false)} className="mb-3 flex items-center gap-1 text-sm text-ink-muted hover:text-ink">
           <ArrowLeft size={14} /> Back to featured pedals
         </button>
@@ -80,7 +81,7 @@ export function AvatarDialog({ onClose }: { onClose: () => void }) {
   }
 
   return (
-    <Modal title="Choose your avatar" onClose={onClose}>
+    <Modal title="Choose Your Avatar" onClose={onClose}>
       {!manifest && <p className="text-sm text-ink-muted">Loading pedals…</p>}
       <div className="grid grid-cols-5 gap-2">
         {keys.map((key) => {
@@ -91,7 +92,7 @@ export function AvatarDialog({ onClose }: { onClose: () => void }) {
               key={key}
               aria-label={label}
               aria-pressed={avatar === key}
-              title={label}
+              {...tip(label)}
               onClick={() => pick(key)}
               className={`grid aspect-square place-items-center rounded-control p-1.5 outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand ${
                 avatar === key ? "bg-brand/10 ring-2 ring-brand" : ""
