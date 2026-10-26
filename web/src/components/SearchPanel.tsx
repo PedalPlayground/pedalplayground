@@ -31,6 +31,12 @@ interface Entry {
   name: string;
 }
 
+const KIND_OPTIONS: { id: Kind | "all"; label: string }[] = [
+  { id: "all", label: "All Gear" },
+  { id: "pedal", label: "Pedals" },
+  { id: "pedalboard", label: "Pedalboards" },
+];
+
 const sizeItem =
   "flex cursor-pointer select-none items-center gap-2 rounded-control px-2 py-2 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
@@ -146,9 +152,10 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
 
   // Tapping a chip shouldn't take focus from the search field, which would drop the phone keyboard.
   const keepFocus = (e: ReactMouseEvent) => e.preventDefault();
-  const chip = (on: boolean) =>
-    `press h-7 shrink-0 rounded-full border px-2.5 text-[13px] transition-colors ${
-      on ? "border-brand/40 bg-brand/10 text-brand" : "border-line text-ink-muted hover:bg-surface-hover hover:text-ink"
+  // Filters read as plain text with a caret; a filter that's narrowing the results turns brand-colored.
+  const filterTrigger = (on: boolean) =>
+    `press -mx-1 flex h-7 shrink-0 items-center gap-0.5 rounded-control px-1.5 text-[13px] font-medium outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover ${
+      on ? "text-brand" : "text-ink-muted hover:text-ink"
     }`;
 
   const typed = query.trim();
@@ -192,26 +199,34 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         </div>
       ) : (
         <div className="flex items-center gap-2 px-3 pt-2">
-          <div className="-mx-3 flex min-w-0 flex-1 items-center gap-1.5 overflow-x-auto px-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="-mx-3 -my-1 flex min-w-0 flex-1 items-center gap-4 overflow-x-auto px-3 py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {!target && (
-              <>
-                {(["pedal", "pedalboard"] as const).map((k) => (
-                  <button
-                    key={k}
-                    aria-pressed={kindFilter === k}
-                    onMouseDown={keepFocus}
-                    onClick={() => setKindFilter(kindFilter === k ? null : k)}
-                    className={chip(kindFilter === k)}
-                  >
-                    {k === "pedal" ? "Pedals" : "Pedalboards"}
-                  </button>
-                ))}
-                <span className="mx-0.5 h-4 w-px shrink-0 bg-line" aria-hidden />
-              </>
+              <Dropdown.Root>
+                <Dropdown.Trigger className={filterTrigger(kindFilter !== null)}>
+                  {kindFilter === "pedal" ? "Pedals" : kindFilter === "pedalboard" ? "Pedalboards" : "All Gear"}
+                  <ChevronDown size={14} className="opacity-70" />
+                </Dropdown.Trigger>
+                <Dropdown.Portal>
+                  <Dropdown.Content align="start" sideOffset={6} className="animate-menu z-50 min-w-44 rounded-panel bg-surface p-1.5 shadow-panel">
+                    <Dropdown.RadioGroup value={kindFilter ?? "all"} onValueChange={(v) => setKindFilter(v === "all" ? null : (v as Kind))}>
+                      {KIND_OPTIONS.map((o) => (
+                        <Dropdown.RadioItem key={o.id} value={o.id} className={sizeItem}>
+                          <span className="grid size-4 shrink-0 place-items-center text-brand">
+                            <Dropdown.ItemIndicator>
+                              <Check size={15} strokeWidth={2.5} />
+                            </Dropdown.ItemIndicator>
+                          </span>
+                          {o.label}
+                        </Dropdown.RadioItem>
+                      ))}
+                    </Dropdown.RadioGroup>
+                  </Dropdown.Content>
+                </Dropdown.Portal>
+              </Dropdown.Root>
             )}
             <Dropdown.Root>
-              <Dropdown.Trigger className={`${chip(sizes.length > 0)} flex items-center gap-0.5 pr-1.5 outline-none focus-visible:ring-2 focus-visible:ring-brand`}>
-                {sizes.length === 0 ? "Size" : sizes.length === 1 ? SIZE_CLASSES.find((c) => c.id === sizes[0])?.label : `${sizes.length} Sizes`}
+              <Dropdown.Trigger className={filterTrigger(sizes.length > 0)}>
+                {sizes.length === 0 ? "Any Size" : sizes.length === 1 ? SIZE_CLASSES.find((c) => c.id === sizes[0])?.label : `${sizes.length} Sizes`}
                 <ChevronDown size={14} className="opacity-70" />
               </Dropdown.Trigger>
               <Dropdown.Portal>
@@ -250,7 +265,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
             <button
               {...tip("Make a Custom Pedal or Pedalboard")}
               onClick={() => setCustom({ name: "", kind: kindFilter ?? "pedal" })}
-              className="press flex h-7 shrink-0 items-center gap-1 rounded-full pl-1.5 pr-2.5 text-[13px] font-medium text-brand hover:bg-brand/10"
+              className="press flex h-7 shrink-0 items-center gap-1 rounded-control border border-line bg-surface pl-1.5 pr-2.5 text-[13px] font-medium text-ink shadow-sm hover:bg-surface-hover active:bg-chrome-line"
             >
               <Plus size={15} strokeWidth={2.25} />
               Custom
