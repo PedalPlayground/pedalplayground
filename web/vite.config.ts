@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 /**
  * Home screen and tab icons, picked per environment so prod, beta and local copies can sit side by side on one
  * home screen: the dev server (localhost or your network IP) is "local", `--mode beta` builds are "beta", and
- * any other build is "prod". Icons live in public/icons/<env>/; their SVG sources are in scripts/icons/.
+ * any other build is "prod". Icons live in public/icons/<env>/ and are made by scripts/icons/render.cjs.
  */
 function appIcons(): Plugin {
   const titles = { prod: "Pedal Playground", beta: "PP Beta", local: "PP Local" };
