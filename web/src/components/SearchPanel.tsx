@@ -19,6 +19,7 @@ import { SIZE_CLASSES, sizeClass, sizeRangeShort, type SizeClass } from "../lib/
 import { formatSize } from "../lib/units";
 import type { CatalogItem } from "../lib/types";
 import { useCatalog } from "../store/catalog";
+import { menuContentClass, rowClass } from "./ContextMenu";
 import { CustomItemForm } from "./CustomItemForm";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -37,8 +38,7 @@ const KIND_OPTIONS: { id: Kind | "all"; label: string }[] = [
   { id: "pedalboard", label: "Pedalboards" },
 ];
 
-const sizeItem =
-  "flex cursor-pointer select-none items-center gap-2 rounded-control px-2 py-2 text-sm outline-none data-[highlighted]:bg-surface-hover";
+const sizeItem = `${rowClass} text-ink data-[highlighted]:bg-surface-hover active:bg-chrome-line`;
 
 /** Rows rendered at once; more than this asks for a narrower search. */
 const MAX_RESULTS = 60;
@@ -207,13 +207,13 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                   <ChevronDown size={14} className="opacity-70" />
                 </Dropdown.Trigger>
                 <Dropdown.Portal>
-                  <Dropdown.Content align="start" sideOffset={6} className="animate-menu z-50 min-w-44 rounded-panel bg-surface p-1.5 shadow-panel">
+                  <Dropdown.Content align="start" sideOffset={6} className={`${menuContentClass} !min-w-40`}>
                     <Dropdown.RadioGroup value={kindFilter ?? "all"} onValueChange={(v) => setKindFilter(v === "all" ? null : (v as Kind))}>
                       {KIND_OPTIONS.map((o) => (
                         <Dropdown.RadioItem key={o.id} value={o.id} className={sizeItem}>
                           <span className="grid size-4 shrink-0 place-items-center text-brand">
                             <Dropdown.ItemIndicator>
-                              <Check size={15} strokeWidth={2.5} />
+                              <Check size={14} strokeWidth={2.5} />
                             </Dropdown.ItemIndicator>
                           </span>
                           {o.label}
@@ -230,7 +230,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                 <ChevronDown size={14} className="opacity-70" />
               </Dropdown.Trigger>
               <Dropdown.Portal>
-                <Dropdown.Content align="start" sideOffset={6} className="animate-menu z-50 min-w-56 rounded-panel bg-surface p-1.5 shadow-panel">
+                <Dropdown.Content align="start" sideOffset={6} className={`${menuContentClass} !min-w-56`}>
                   {SIZE_CLASSES.map((c) => (
                     <Dropdown.CheckboxItem
                       key={c.id}
@@ -241,16 +241,16 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                     >
                       <span className="grid size-4 shrink-0 place-items-center text-brand">
                         <Dropdown.ItemIndicator>
-                          <Check size={15} strokeWidth={2.5} />
+                          <Check size={14} strokeWidth={2.5} />
                         </Dropdown.ItemIndicator>
                       </span>
-                      <span className="font-medium">{c.label}</span>
-                      <span className="ml-auto pl-4 text-xs text-ink-muted">{sizeRangeShort(c.id, kind, units)}</span>
+                      <span>{c.label}</span>
+                      <span className="ml-auto pl-6 text-xs tracking-normal text-ink-muted">{sizeRangeShort(c.id, kind, units)}</span>
                     </Dropdown.CheckboxItem>
                   ))}
                   {sizes.length > 0 && (
                     <>
-                      <Dropdown.Separator className="my-1 h-px bg-line" />
+                      <Dropdown.Separator className="-mx-1 my-1 h-px bg-line" />
                       <Dropdown.Item onSelect={() => setSizes([])} className={sizeItem}>
                         <span className="size-4 shrink-0" />
                         Any Size
