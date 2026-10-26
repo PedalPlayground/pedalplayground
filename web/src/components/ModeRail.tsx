@@ -2,6 +2,7 @@ import { LayoutGrid, List, Route } from "lucide-react";
 import type { ReactNode } from "react";
 import { useUi, type Mode } from "../store/ui";
 import { tip } from "./Tooltip";
+import { barIconActive, barIconButton, barIconIdle, barPanel } from "./toolbarStyles";
 
 export const modes: { id: Mode; label: string; icon: ReactNode }[] = [
   { id: "playground", label: "Playground", icon: <LayoutGrid size={18} /> },
@@ -12,7 +13,12 @@ export const modes: { id: Mode; label: string; icon: ReactNode }[] = [
 export function ModeRail() {
   const { mode, setMode } = useUi();
   return (
-    <nav className="box-content flex w-12 shrink-0 pl-[env(safe-area-inset-left)] flex-col items-center gap-1 border-r border-line bg-surface py-2 max-sm:hidden">
+    // Floats over the canvas like the other bars. Its buttons line up under the header logo: both are centered
+    // 16px (or the safe-area inset) + 16px from the left edge, so the panel sits 5px in from the logo's left edge.
+    <nav
+      aria-label="Modes"
+      className={`absolute left-[calc(max(1rem,env(safe-area-inset-left))-5px)] top-3 z-10 flex flex-col gap-1 ${barPanel} max-sm:hidden`}
+    >
       {modes.map((m) => (
         <button
           key={m.id}
@@ -20,9 +26,7 @@ export function ModeRail() {
           aria-label={m.label}
           aria-pressed={mode === m.id}
           onClick={() => setMode(m.id)}
-          className={`press grid size-9 place-items-center rounded-control outline-none ${
-            mode === m.id ? "bg-brand/10 text-brand active:bg-brand/20" : "text-ink-muted hover:bg-surface-hover active:bg-chrome-line"
-          }`}
+          className={`${barIconButton} ${mode === m.id ? barIconActive : barIconIdle}`}
         >
           {m.icon}
         </button>

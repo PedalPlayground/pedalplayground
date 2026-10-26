@@ -170,11 +170,11 @@ export function App() {
       </header>
 
       <div className="flex min-h-0 flex-1 flex-col sm:flex-row">
-        <ModeRail />
 
         <main data-tour="canvas" className="relative flex-1 overflow-hidden bg-canvas">
           <Canvas />
           <BackToCenter />
+          <ModeRail />
           <ObjectMenu />
 
           {/* Phones have no room for the save status in the header, so it floats just below it. */}
