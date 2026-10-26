@@ -49,6 +49,8 @@ interface PlaygroundState {
   replaceItem: (id: string, c: CatalogItem) => void;
   addCustomItem: (c: { kind: Item["kind"]; width: number; height: number; label: string; color: string | null }) => void;
   select: (id: string, additive?: boolean) => void;
+  /** Selects one item and moves the view just enough to show it. */
+  reveal: (id: string) => void;
   clearSelection: () => void;
   rotateSelected: () => void;
   deleteSelected: () => void;
@@ -241,6 +243,12 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     set((s) => ({
       selected: additive ? (s.selected.includes(id) ? s.selected.filter((x) => x !== id) : [...s.selected, id]) : [id],
     })),
+  reveal: (id) =>
+    set((s) => {
+      const item = s.items.find((i) => i.id === id);
+      if (!item) return {};
+      return { selected: [id], view: s.viewport.w > 0 ? viewShowing(s, item) : s.view };
+    }),
   clearSelection: () => set({ selected: [] }),
 
   beginTransaction: () => set((s) => record(s)),

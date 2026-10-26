@@ -4,6 +4,7 @@ import { AccountDialog } from "./components/AccountDialog";
 import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
+import { EquipmentList } from "./components/EquipmentList";
 import { startAvatarSync } from "./lib/avatar";
 import { AvatarDialog } from "./components/AvatarDialog";
 import { AvatarMenu } from "./components/AvatarMenu";
@@ -86,6 +87,7 @@ export function App() {
   const searchOpen = useUi((u) => u.searchOpen);
   const replacing = useUi((u) => u.replacing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
+  const listMode = useUi((u) => u.mode === "list");
   const [dialog, setDialog] = useState<Dialog>(null);
   const close = () => setDialog(null);
   const [emailLink] = useState(readEmailLinkParams);
@@ -173,9 +175,16 @@ export function App() {
 
         <main data-tour="canvas" className="relative flex-1 overflow-hidden bg-canvas">
           <Canvas />
-          <BackToCenter />
+          {/* The Equipment List covers the canvas; the canvas stays mounted so the view is kept for coming back. */}
+          {listMode ? (
+            <EquipmentList />
+          ) : (
+            <>
+              <BackToCenter />
+              <ObjectMenu />
+            </>
+          )}
           <ModeRail />
-          <ObjectMenu />
 
           {/* Phones have no room for the save status in the header, so it floats just below it. */}
           <div className="empty:hidden absolute right-3 top-3 z-20 rounded-control bg-surface/90 px-2 py-1 shadow-panel sm:hidden">
@@ -185,11 +194,13 @@ export function App() {
           {/* Phones show action confirmations up top, clear of the thumb; larger screens show them above the toolbar. */}
           <ActionToast className="absolute left-1/2 top-3 -translate-x-1/2 [--enter-y:-8px] sm:hidden" />
 
+          {!listMode && (
           <div className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             <ActionToast className="max-sm:hidden" />
             {searchOpen && <SearchPanel key={replacing ? "replace" : "add"} replace={replacing} onClose={() => setSearchOpen(false)} />}
             <Toolbar onPlace={() => setSearchOpen(replacing ? true : !searchOpen)} onShare={() => setDialog("share")} />
           </div>
+          )}
 
         </main>
       </div>

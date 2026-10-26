@@ -156,6 +156,8 @@ export function Canvas() {
 
     const onKeyDown = (e: KeyboardEvent) => {
       if (typing(e.target)) return;
+      // Other modes (like the Equipment List) cover the canvas, so its shortcuts are off there.
+      if (useUi.getState().mode !== "playground") return;
       const s = usePlayground.getState();
       const has = s.selected.length > 0;
       const mod = e.metaKey || e.ctrlKey;
