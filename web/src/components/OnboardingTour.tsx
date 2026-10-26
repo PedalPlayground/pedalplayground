@@ -1,6 +1,9 @@
 import { X } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { usableFeaturedPedals } from "../lib/featuredPedals";
 import { useAuth } from "../store/auth";
+import { useCatalog } from "../store/catalog";
+import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 
 interface Step {
@@ -27,12 +30,16 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
       body: "Search for pedals and boards, then drop them onto your Playground.",
     },
     {
-      target: "canvas",
-      pad: -10,
+      target: "selection",
       title: "Arrange Your Board",
       body: touch
-        ? "Drag to move gear. Tap it to rotate, replace or delete. Pinch to zoom."
-        : "Drag to move gear. Click it to rotate, replace or delete. Scroll to pan, and pinch or hold ⌘/Ctrl while scrolling to zoom.",
+        ? "Drag a pedal to move it, and tap to select it. Pinch to zoom, and drag empty space to pan."
+        : "Drag a pedal to move it, and click to select it. Scroll to pan, and pinch or hold ⌘/Ctrl while scrolling to zoom.",
+    },
+    {
+      target: "object-menu",
+      title: "Edit Your Selection",
+      body: "Selected gear gets this menu: rotate it, lock it in place, move it up or down a layer, swap it for another product, or remove it.",
     },
   ];
   if (cloudEnabled) {
@@ -63,6 +70,23 @@ function targetRect(name?: string, pad = PAD): Rect | null {
 }
 
 /**
+ * Gives the tour a pedal to point at: the first pedal already on the Playground, or else one classic pedal added to
+ * the empty canvas. It ends up selected, so its halo and the selection menu are on screen.
+ */
+async function stageDemoPedal() {
+  useUi.getState().setMode("playground");
+  const play = usePlayground.getState();
+  const existing = play.items.find((i) => i.kind === "pedal") ?? play.items[0];
+  if (existing) return play.reveal(existing.id);
+  const manifest = await useCatalog.getState().load();
+  if (!manifest || usePlayground.getState().items.length) return;
+  const key = usableFeaturedPedals(manifest)[0];
+  const pedal = manifest.pedals.find((p) => p.image === key) ?? manifest.pedals[0];
+  if (!pedal) return;
+  usePlayground.getState().addCatalogItem("pedal", pedal);
+}
+
+/**
  * A short coach-mark tour: dims the app, spotlights one control at a time and explains it in a line or two.
  * Opens once on a device's first visit (see App) and can be replayed from Settings. Esc or "Skip" ends it.
  */
@@ -84,6 +108,7 @@ export function OnboardingTour() {
     if (!open) return;
     setSteps(buildSteps(signedIn, cloudEnabled));
     setIndex(0);
+    void stageDemoPedal();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
@@ -99,6 +124,14 @@ export function OnboardingTour() {
   useLayoutEffect(() => {
     if (open && step) measure();
   }, [open, step, measure]);
+
+  // The demo pedal and its menu can appear after a step is shown (the catalog loads first), so measure again then.
+  const selectedCount = usePlayground((p) => p.selected.length);
+  useEffect(() => {
+    if (!open) return;
+    const f = requestAnimationFrame(measure);
+    return () => cancelAnimationFrame(f);
+  }, [open, selectedCount, measure]);
 
   useEffect(() => {
     if (!open) return;

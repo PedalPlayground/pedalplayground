@@ -44,7 +44,8 @@ const LOCK_SIZE = 12;
  * The rounded selection outline around an item. It follows the item's rotated bounds, so the
  * lock badge on a locked item always sits upright at the top center, in a break in the outline.
  */
-function SelectionHalo({ item, zoom }: { item: Item; zoom: number }) {
+/** `tour` marks it as the onboarding tour's "selection" target. */
+function SelectionHalo({ item, zoom, tour }: { item: Item; zoom: number; tour?: boolean }) {
   const b = itemBounds(item);
   const pad = (HALO_GAP + HALO_STROKE) / zoom;
   const w = (b.right - b.left) * PX_PER_INCH + pad * 2;
@@ -60,6 +61,7 @@ function SelectionHalo({ item, zoom }: { item: Item; zoom: number }) {
   return (
     <svg
       aria-hidden
+      data-tour={tour ? "selection" : undefined}
       className="animate-fade pointer-events-none absolute overflow-visible"
       style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h }}
     >
@@ -394,7 +396,7 @@ export function Canvas() {
         {items.map((item, index) => (
           <div key={item.id} style={{ position: "absolute", zIndex: index }}>
             <ItemView item={item} />
-            {selected.includes(item.id) && <SelectionHalo item={item} zoom={view.zoom} />}
+            {selected.includes(item.id) && <SelectionHalo item={item} zoom={view.zoom} tour={selected.length === 1} />}
           </div>
         ))}
 
