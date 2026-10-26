@@ -1,5 +1,5 @@
-import { Search, X } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { Check, Search, X } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { thumbUrl } from "../lib/catalog";
 import { formatSize } from "../lib/units";
 import type { CatalogItem } from "../lib/types";
@@ -40,6 +40,19 @@ export function SearchPanel({ onClose, replace = false }: { onClose: () => void;
 
   const kind = category === "pedalboards" ? "pedalboard" : "pedal";
 
+  // Brief "Added" confirmation on the row just tapped. Phones then close the panel, which covers the middle of the
+  // canvas where new items land.
+  const [added, setAdded] = useState<string | null>(null);
+  const addedTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  useEffect(() => () => clearTimeout(addedTimer.current), []);
+  const add = (item: CatalogItem, key: string) => {
+    addCatalogItem(kind, item);
+    setAdded(key);
+    clearTimeout(addedTimer.current);
+    const phone = window.matchMedia("(max-width: 639.98px)").matches;
+    addedTimer.current = setTimeout(() => (phone ? onClose() : setAdded(null)), phone ? 600 : 1200);
+  };
+
   return (
     <div className="w-[min(420px,calc(100vw-5rem))] rounded-panel bg-surface shadow-panel max-sm:w-full">
       <div className="flex items-center gap-2 border-b border-line px-3 py-2">
@@ -77,16 +90,21 @@ export function SearchPanel({ onClose, replace = false }: { onClose: () => void;
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
         {error && <li className="p-3 text-sm text-danger">{error}</li>}
         {catalog && results.length === 0 && <li className="p-3 text-sm text-ink-muted">No results</li>}
-        {results.map((item: CatalogItem) => (
-          <li key={`${item.brand}-${item.name}`}>
+        {results.map((item: CatalogItem) => {
+          const key = `${item.brand}-${item.name}`;
+          const isAdded = added === key;
+          return (
+          <li key={key}>
             <button
               onClick={() => {
                 if (target) {
                   replaceItem(target.id, item);
                   onClose();
-                } else addCatalogItem(kind, item);
+                } else add(item, key);
               }}
-              className="flex w-full items-center gap-3 rounded-control p-2 text-left hover:bg-surface-hover"
+              className={`flex w-full items-center gap-3 rounded-control p-2 text-left transition-colors ${
+                isAdded ? "bg-brand/10" : "hover:bg-surface-hover active:bg-surface-hover"
+              }`}
             >
               <img
                 src={thumbUrl(catalog, kind, item.image) ?? undefined}
@@ -100,9 +118,16 @@ export function SearchPanel({ onClose, replace = false }: { onClose: () => void;
                   {item.brand} · {formatSize(item.width, item.height, units)}
                 </span>
               </span>
+              {isAdded && (
+                <span className="ml-auto flex shrink-0 items-center gap-1 pr-1 text-[13px] font-semibold text-brand">
+                  <Check size={16} strokeWidth={2.5} />
+                  Added
+                </span>
+              )}
             </button>
           </li>
-        ))}
+          );
+        })}
       </ul>
       )}
     </div>
