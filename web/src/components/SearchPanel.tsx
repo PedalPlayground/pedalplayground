@@ -93,6 +93,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
 
   const { manifest: catalog, error, load } = useCatalog();
   const [query, setQuery] = useState("");
+  const searchInput = useRef<HTMLInputElement>(null);
   const deferredQuery = useDeferredValue(query);
   const units = useUi((u) => u.units);
   const addCatalogItem = usePlayground((p) => p.addCatalogItem);
@@ -193,6 +194,13 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     }
   };
 
+  // When a filter menu closes, focus goes back to the search box (not the menu's button) so the arrow keys keep
+  // driving the results. Not on phones, where that would bring the keyboard back up.
+  const closeMenu = (e: Event) => {
+    e.preventDefault();
+    if (!phone) searchInput.current?.focus();
+  };
+
   // Tapping a chip shouldn't take focus from the search field, which would drop the phone keyboard.
   const keepFocus = (e: ReactMouseEvent) => e.preventDefault();
   // Filters read as plain text with a caret; a filter that's narrowing the results turns brand-colored.
@@ -215,6 +223,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         <>
         <Search size={16} className="text-ink-muted" />
         <input
+          ref={searchInput}
           autoFocus
           value={query}
           onChange={(e) => {
@@ -256,7 +265,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                   <ChevronDown size={14} className="opacity-70" />
                 </Dropdown.Trigger>
                 <Dropdown.Portal>
-                  <Dropdown.Content align="start" sideOffset={6} className={`${menuContentClass} !min-w-40`}>
+                  <Dropdown.Content align="start" sideOffset={6} onCloseAutoFocus={closeMenu} className={`${menuContentClass} !min-w-40`}>
                     <Dropdown.RadioGroup value={kindFilter ?? "all"} onValueChange={(v) => setKindFilter(v === "all" ? null : (v as Kind))}>
                       {KIND_OPTIONS.map((o) => (
                         <Dropdown.RadioItem key={o.id} value={o.id} className={sizeItem}>
@@ -279,12 +288,11 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                 <ChevronDown size={14} className="opacity-70" />
               </Dropdown.Trigger>
               <Dropdown.Portal>
-                <Dropdown.Content align="start" sideOffset={6} className={`${menuContentClass} !min-w-56`}>
+                <Dropdown.Content align="start" sideOffset={6} onCloseAutoFocus={closeMenu} className={`${menuContentClass} !min-w-56`}>
                   {SIZE_CLASSES.map((c) => (
                     <Dropdown.CheckboxItem
                       key={c.id}
                       checked={sizes.includes(c.id)}
-                      onSelect={(e) => e.preventDefault()} // stay open to pick more than one
                       onCheckedChange={() => toggleSize(c.id)}
                       className={sizeItem}
                     >
