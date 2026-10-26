@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DEFAULT_PEDAL_COLOR, PEDAL_COLOR_PRESETS } from "../lib/color";
+import { NEW_PEDAL_COLOR, PEDAL_COLOR_PRESETS } from "../lib/color";
 import { PX_PER_INCH } from "../lib/geometry";
 import { DEFAULT_PEDAL_TEMPLATE, PEDAL_TEMPLATES, templateInfo, type PedalTemplate } from "../lib/pedalTemplates";
 import type { Item } from "../lib/types";
@@ -63,7 +63,7 @@ export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: It
   const [width, setWidth] = useState(item ? toUnits(item.width) : "");
   const [height, setHeight] = useState(item ? toUnits(item.height) : "");
   const [name, setName] = useState(item?.kind === "pedal" ? item.label : "");
-  const [color, setColor] = useState(item?.color ?? DEFAULT_PEDAL_COLOR);
+  const [color, setColor] = useState(item?.color ?? NEW_PEDAL_COLOR);
   const [error, setError] = useState<string | null>(null);
 
   const unitLabel = units === "mm" ? "mm" : "in";
@@ -170,7 +170,7 @@ export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: It
       {kind === "pedal" && (
         <div>
           <div className="mb-1 text-xs text-ink-muted">Color</div>
-          <div className="flex flex-wrap items-center gap-1.5">
+          <div className="flex flex-wrap items-center gap-[5px]">
             {PEDAL_COLOR_PRESETS.map((c) => (
               <button
                 type="button"
@@ -179,11 +179,11 @@ export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: It
                 aria-pressed={color === c.hex}
                 {...tip(c.name)}
                 onClick={() => setColor(c.hex)}
-                className={`press size-6 rounded-full shadow-[inset_0_1px_0_rgb(255_255_255/0.35),inset_0_-1px_1px_rgb(0_0_0/0.25)] ring-offset-2 ring-offset-surface ${color === c.hex ? "ring-2 ring-brand" : "ring-1 ring-black/15"}`}
+                className={`press size-[22px] rounded-full shadow-[inset_0_1px_0_rgb(255_255_255/0.4),inset_0_-1px_1px_rgb(0_0_0/0.2)] ring-offset-2 ring-offset-surface ${color === c.hex ? "ring-2 ring-brand" : "ring-1 ring-black/15"}`}
                 style={{ background: c.hex }}
               />
             ))}
-            <input type="color" aria-label="Custom color" value={color} onChange={(e) => setColor(e.target.value)} className="size-6 cursor-pointer rounded border-0 bg-transparent p-0" />
+            <input type="color" aria-label="Custom color" value={color} onChange={(e) => setColor(e.target.value)} className="size-[22px] cursor-pointer rounded border-0 bg-transparent p-0" />
           </div>
         </div>
       )}

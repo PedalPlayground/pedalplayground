@@ -16,20 +16,25 @@ export function readableOn(hex: string): "#111318" | "#ffffff" {
 
 export const DEFAULT_PEDAL_COLOR = "#41c74d";
 
-/** Swatches in the Custom form, picked to stand out against black and cream knobs and chrome footswitches. */
+/** Swatches in the Custom form: muted, cool industrial finishes that let black knobs and LEDs stand out. */
 export const PEDAL_COLOR_PRESETS: { name: string; hex: string }[] = [
-  { name: "Green", hex: "#41c74d" },
-  { name: "Lime", hex: "#b5d334" },
-  { name: "Marigold", hex: "#f2a516" },
-  { name: "Tangerine", hex: "#ff6b2c" },
-  { name: "Cherry", hex: "#e23d4b" },
-  { name: "Bubblegum", hex: "#ff5fa2" },
-  { name: "Ultraviolet", hex: "#8a5cf6" },
-  { name: "Cobalt", hex: "#2f6df6" },
-  { name: "Lagoon", hex: "#19b3c9" },
-  { name: "Cream", hex: "#efe8d8" },
-  { name: "Graphite", hex: "#2a2d34" },
+  { name: "Seafoam", hex: "#9ec9c4" },
+  { name: "Sage", hex: "#a8b59c" },
+  { name: "Fog", hex: "#e3e6eb" },
+  { name: "Bone", hex: "#e8e1d3" },
+  { name: "Powder Blue", hex: "#a9c4dd" },
+  { name: "Lilac", hex: "#b7b0d4" },
+  { name: "Clay", hex: "#d38b70" },
+  { name: "Coral", hex: "#ee7464" },
+  { name: "Ochre", hex: "#d6a84f" },
+  { name: "Slate", hex: "#5f6f80" },
+  { name: "Forest", hex: "#3d5547" },
+  { name: "Midnight", hex: "#232a3a" },
+  { name: "Graphite", hex: "#2b2d32" },
 ];
+
+/** The color a new custom pedal starts with. */
+export const NEW_PEDAL_COLOR = PEDAL_COLOR_PRESETS[0].hex;
 
 /** Mixes `hex` toward white (amt > 0) or black (amt < 0), by |amt| from 0 to 1. */
 export function shade(hex: string, amt: number): string {
