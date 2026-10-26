@@ -71,6 +71,9 @@ function Row({
     <Dropdown.Item
       disabled={disabled}
       onSelect={onSelect}
+      // Radix also picks an item when a press that started elsewhere is released over it. Here that's the right
+      // click that opened the menu, so a slight drag would pick the first row; only a full click selects.
+      onPointerUp={(e) => e.preventDefault()}
       className={`${rowClass} ${
         danger
           ? "text-danger data-[highlighted]:bg-danger/10 active:bg-danger/20"
