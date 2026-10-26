@@ -1,12 +1,17 @@
-/** Black or white, whichever reads better on `hex` (WCAG relative luminance). */
-export function readableOn(hex: string): "#111318" | "#ffffff" {
+/** WCAG relative luminance of a hex color, from 0 (black) to 1 (white). Unparseable colors count as black. */
+export function luminance(hex: string): number {
   const m = /^#?([0-9a-f]{6})$/i.exec(hex.trim());
-  if (!m) return "#ffffff";
+  if (!m) return 0;
   const [r, g, b] = [0, 2, 4].map((i) => {
     const c = parseInt(m[1].slice(i, i + 2), 16) / 255;
     return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
   });
-  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.4 ? "#111318" : "#ffffff";
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+
+/** Black or white, whichever reads better on `hex`. */
+export function readableOn(hex: string): "#111318" | "#ffffff" {
+  return luminance(hex) > 0.4 ? "#111318" : "#ffffff";
 }
 
 export const DEFAULT_PEDAL_COLOR = "#41c74d";

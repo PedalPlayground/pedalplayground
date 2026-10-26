@@ -15,6 +15,8 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 - Address canvas zoom going out of bounds.
 - Z-index minimap.
 
+- Custom illustrations for the custom pedal styles (Trav to draw; current flat SVG styles are placeholders).
+
 ## Other
 
 - Move the action notifications (toasts) to the top right of the canvas.
