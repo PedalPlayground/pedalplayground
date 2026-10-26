@@ -74,6 +74,9 @@ export function Canvas() {
 
   const [marquee, setMarquee] = useState<Rect | null>(null);
   const [guides, setGuides] = useState<Guides>(NO_GUIDES);
+  // Drive the cursor: an open hand while space (or the hand tool) is ready to pan, a closed one mid-pan.
+  const [spaceHeld, setSpaceHeld] = useState(false);
+  const [panning, setPanning] = useState(false);
 
   const items = usePlayground((s) => s.items);
   const selected = usePlayground((s) => s.selected);
@@ -118,8 +121,9 @@ export function Canvas() {
       const key = e.key.toLowerCase();
 
       if (e.code === "Space") {
-        spaceDown.current = true;
         e.preventDefault();
+        if (!spaceDown.current) setSpaceHeld(true);
+        spaceDown.current = true;
       } else if (mod && key === "z") {
         e.preventDefault();
         (e.shiftKey ? s.redo : s.undo)();
@@ -151,11 +155,21 @@ export function Canvas() {
       else if (key === "arrowdown" && has) (e.preventDefault(), s.nudgeSelected(0, nudge));
     };
     const onKeyUp = (e: KeyboardEvent) => {
-      if (e.code === "Space") spaceDown.current = false;
+      if (e.code === "Space") {
+        spaceDown.current = false;
+        setSpaceHeld(false);
+      }
+    };
+    // Releasing space in another window would otherwise leave the hand stuck on.
+    const onBlur = () => {
+      spaceDown.current = false;
+      setSpaceHeld(false);
     };
     window.addEventListener("keydown", onKeyDown);
     window.addEventListener("keyup", onKeyUp);
+    window.addEventListener("blur", onBlur);
     return () => {
+      window.removeEventListener("blur", onBlur);
       window.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("keyup", onKeyUp);
     };
@@ -201,6 +215,7 @@ export function Canvas() {
 
     if (tool === "hand" || spaceDown.current || e.button === 1) {
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY };
+      setPanning(true);
     } else if (touch && !itemEl) {
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: true, moved: false };
     } else if (itemEl) {
@@ -299,6 +314,7 @@ export function Canvas() {
 
   const endGesture = (e: React.PointerEvent) => {
     pointers.current.delete(e.pointerId);
+    setPanning(false);
     const g = gesture.current;
     if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) usePlayground.getState().clearSelection();
     if (ref.current?.hasPointerCapture(e.pointerId)) ref.current.releasePointerCapture(e.pointerId);
@@ -316,7 +332,7 @@ export function Canvas() {
       ref={ref}
       className="absolute inset-0 touch-none"
       style={{
-        cursor: tool === "hand" ? "grab" : "default",
+        cursor: panning ? "grabbing" : spaceHeld || tool === "hand" ? "grab" : "default",
         backgroundImage: "radial-gradient(circle at 1px 1px, var(--color-grid) 0.625px, transparent 0.875px)",
         backgroundSize: `${gridStep}px ${gridStep}px`,
         backgroundPosition: `${view.x}px ${view.y}px`,
