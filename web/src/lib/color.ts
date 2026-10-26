@@ -16,7 +16,20 @@ export function readableOn(hex: string): "#111318" | "#ffffff" {
 
 export const DEFAULT_PEDAL_COLOR = "#41c74d";
 
-export const PEDAL_COLOR_PRESETS = ["#41c74d", "#e5484d", "#f5a524", "#3b82f6", "#8b5cf6", "#ec4899", "#14b8a6", "#d4d4d8", "#27272a"];
+/** Swatches in the Custom form, picked to stand out against black and cream knobs and chrome footswitches. */
+export const PEDAL_COLOR_PRESETS: { name: string; hex: string }[] = [
+  { name: "Green", hex: "#41c74d" },
+  { name: "Lime", hex: "#b5d334" },
+  { name: "Marigold", hex: "#f2a516" },
+  { name: "Tangerine", hex: "#ff6b2c" },
+  { name: "Cherry", hex: "#e23d4b" },
+  { name: "Bubblegum", hex: "#ff5fa2" },
+  { name: "Ultraviolet", hex: "#8a5cf6" },
+  { name: "Cobalt", hex: "#2f6df6" },
+  { name: "Lagoon", hex: "#19b3c9" },
+  { name: "Cream", hex: "#efe8d8" },
+  { name: "Graphite", hex: "#2a2d34" },
+];
 
 /** Mixes `hex` toward white (amt > 0) or black (amt < 0), by |amt| from 0 to 1. */
 export function shade(hex: string, amt: number): string {

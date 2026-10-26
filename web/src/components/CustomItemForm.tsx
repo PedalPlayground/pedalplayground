@@ -174,11 +174,13 @@ export function CustomItemForm({ onDone, item }: { onDone: () => void; item?: It
             {PEDAL_COLOR_PRESETS.map((c) => (
               <button
                 type="button"
-                key={c}
-                aria-label={`Color ${c}`}
-                onClick={() => setColor(c)}
-                className={`size-6 rounded-full ring-offset-2 ring-offset-surface ${color === c ? "ring-2 ring-brand" : "ring-1 ring-line"}`}
-                style={{ background: c }}
+                key={c.hex}
+                aria-label={c.name}
+                aria-pressed={color === c.hex}
+                {...tip(c.name)}
+                onClick={() => setColor(c.hex)}
+                className={`press size-6 rounded-full shadow-[inset_0_1px_0_rgb(255_255_255/0.35),inset_0_-1px_1px_rgb(0_0_0/0.25)] ring-offset-2 ring-offset-surface ${color === c.hex ? "ring-2 ring-brand" : "ring-1 ring-black/15"}`}
+                style={{ background: c.hex }}
               />
             ))}
             <input type="color" aria-label="Custom color" value={color} onChange={(e) => setColor(e.target.value)} className="size-6 cursor-pointer rounded border-0 bg-transparent p-0" />
