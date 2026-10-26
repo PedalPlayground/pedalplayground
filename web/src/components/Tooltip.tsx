@@ -22,8 +22,8 @@ let timer: ReturnType<typeof setTimeout> | undefined;
 let lastHidden = 0;
 
 const isMac = typeof navigator !== "undefined" && /Mac|iPhone|iPad/.test(navigator.platform);
-/** Shortcuts are written with ⌘; other platforms read "Ctrl+". */
-const platformKeys = (s: string) => (isMac ? s : s.replace(/⌘/g, "Ctrl+"));
+/** Shortcuts are written with ⌘; other platforms read "Ctrl+" ("Ctrl +" before a plus or minus). */
+const platformKeys = (s: string) => (isMac ? s : s.replace(/⌘(?=[+−])/g, "Ctrl ").replace(/⌘/g, "Ctrl+"));
 
 function show(el: Element, label: string, shortcut: string | undefined, side: Side | undefined, immediate: boolean) {
   clearTimeout(timer);
@@ -112,7 +112,7 @@ export function TooltipLayer() {
       ref={ref}
       role="tooltip"
       key={`${t.label}-${t.rect.left}-${t.rect.top}`}
-      className={`pointer-events-none fixed z-[100] flex items-center gap-1.5 whitespace-nowrap rounded-[5px] bg-ink px-2 py-1 text-xs font-medium text-surface shadow-[0_2px_8px_rgb(0_0_0/0.15)] ${
+      className={`pointer-events-none fixed z-[100] flex items-center gap-1.5 whitespace-nowrap rounded-[5px] bg-tip px-2 py-1 text-xs font-medium text-tip-ink shadow-[0_2px_8px_rgb(0_0_0/0.15)] ${
         t.warm ? "" : `animate-enter ${enter}`
       }`}
       style={pos ? { left: pos.left, top: pos.top } : { left: 0, top: 0, visibility: "hidden" }}

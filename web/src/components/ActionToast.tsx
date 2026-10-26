@@ -24,7 +24,7 @@ export function ActionToast({ className = "" }: { className?: string }) {
     <div role="status" className={`pointer-events-none z-20 ${className}`}>
       <div
         key={id}
-        className={`max-w-[80vw] truncate rounded-full bg-ink px-3 py-1 text-[13px] font-semibold tracking-[-0.01em] text-surface shadow-[0_2px_12px_rgb(0_0_0/0.15)] ${leaving ? "animate-exit" : "animate-enter"}`}
+        className={`max-w-[80vw] truncate rounded-full bg-tip px-3 py-1 text-[13px] font-semibold tracking-[-0.01em] text-tip-ink shadow-[0_2px_12px_rgb(0_0_0/0.15)] ${leaving ? "animate-exit" : "animate-enter"}`}
       >
         {msg}
       </div>

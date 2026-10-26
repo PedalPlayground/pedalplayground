@@ -19,6 +19,9 @@
   --color-brand-top: #6d72f6;
   --color-brand-ink: #ffffff;
   --color-danger: #d92d20;
+  /* Tooltips and action toasts. */
+  --color-tip: #1c1d22;
+  --color-tip-ink: #ffffff;
 
   --radius-control: 4px;
   --radius-panel: 12px;
@@ -48,6 +51,8 @@
     --color-brand-hover: #8282ff;
     --color-brand-top: #8a8eff;
     --color-danger: #f97066;
+    --color-tip: #4a4c55;
+    --color-tip-ink: #f4f4f6;
     --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
   }
 }
@@ -68,6 +73,8 @@
   --color-brand-hover: #8282ff;
   --color-brand-top: #8a8eff;
   --color-danger: #f97066;
+  --color-tip: #4a4c55;
+  --color-tip-ink: #f4f4f6;
   --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
 }
 
