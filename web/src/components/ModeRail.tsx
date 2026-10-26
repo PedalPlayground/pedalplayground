@@ -6,7 +6,7 @@ import { barIconActive, barIconButton, barIconIdle, barPanel } from "./toolbarSt
 
 export const modes: { id: Mode; label: string; icon: ReactNode; soon?: boolean }[] = [
   { id: "playground", label: "Playground", icon: <LayoutGrid size={18} /> },
-  { id: "signal", label: "Signal Path", icon: <Route size={18} />, soon: true },
+  { id: "signal", label: "Signal Path", icon: <Route size={18} /> },
   { id: "list", label: "Equipment List", icon: <List size={18} /> },
 ];
 

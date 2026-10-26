@@ -1,4 +1,5 @@
 import type { Jacks, PedalTemplate } from "./pedalTemplates";
+import type { SignalGraph } from "./signal";
 
 export interface CatalogItem {
   brand: string;
@@ -65,6 +66,8 @@ export interface PlaygroundDocument {
   name: string;
   items: Item[];
   view?: View;
+  /** How the pedals are wired. Missing in documents saved before the Signal Path mode; they get the default. */
+  signal?: SignalGraph;
 }
 
 /** Legacy (jQuery app) v2 document. Read-only: we import it, never write it. */

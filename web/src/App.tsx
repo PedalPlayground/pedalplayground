@@ -5,6 +5,7 @@ import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
 import { EquipmentList } from "./components/EquipmentList";
+import { SignalPath } from "./components/SignalPath";
 import { startAvatarSync } from "./lib/avatar";
 import { AvatarDialog } from "./components/AvatarDialog";
 import { AvatarMenu } from "./components/AvatarMenu";
@@ -90,7 +91,9 @@ export function App() {
   const replacing = useUi((u) => u.replacing);
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
-  const listMode = useUi((u) => u.mode === "list");
+  const mode = useUi((u) => u.mode);
+  /** The Equipment List and Signal Path cover the canvas and hide its tools. */
+  const covered = mode !== "playground";
   const [dialog, setDialog] = useState<Dialog>(null);
   const close = () => setDialog(null);
   const [emailLink] = useState(readEmailLinkParams);
@@ -178,9 +181,11 @@ export function App() {
 
         <main data-tour="canvas" className="relative flex-1 overflow-hidden bg-canvas">
           <Canvas />
-          {/* The Equipment List covers the canvas; the canvas stays mounted so the view is kept for coming back. */}
-          {listMode ? (
+          {/* The other modes cover the canvas; the canvas stays mounted so the view is kept for coming back. */}
+          {mode === "list" ? (
             <EquipmentList />
+          ) : mode === "signal" ? (
+            <SignalPath />
           ) : (
             <>
               <BackToCenter />
@@ -200,7 +205,7 @@ export function App() {
           {/* Phones show action confirmations up top, clear of the thumb; larger screens show them above the toolbar. */}
           <ActionToast className="absolute left-1/2 top-3 -translate-x-1/2 [--enter-y:-8px] sm:hidden" />
 
-          {!listMode && (
+          {!covered && (
           <div className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             <ActionToast className="max-sm:hidden" />
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}

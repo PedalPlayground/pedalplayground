@@ -2,7 +2,9 @@ import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { importAny, readLegacyLocalStorage } from "../lib/importers";
 import type { Jacks, PedalTemplate } from "../lib/pedalTemplates";
+import { defaultSignal, normalizeSignal, removeItems, SignalError, type SignalGraph } from "../lib/signal";
 import type { CatalogItem, Item, PlaygroundDocument, Rotation, View } from "../lib/types";
+import { toast } from "./toast";
 
 const STORAGE_KEY = "pp:playground:v3";
 /** Zooming out stops here (8px per inch), so pedals never shrink to specks. */
@@ -16,16 +18,24 @@ const PLACE_GAP = 0.25;
 /** Screen padding, in px, kept around a newly placed pedal when zooming out to show it. */
 const PLACE_PAD = 48;
 
+/** One undo step: the items and the signal path share a history, so either kind of edit undoes in order. */
+export interface Snapshot {
+  items: Item[];
+  signal: SignalGraph;
+}
+
 interface PlaygroundState {
   name: string;
   items: Item[];
+  /** How the pedals are wired together. Pedals can be on the playground without being in it. */
+  signal: SignalGraph;
   selected: string[];
   view: View;
   viewport: { w: number; h: number };
   /** A fit was requested before the canvas had a size; apply it once measured. */
   pendingFit: boolean;
-  past: Item[][];
-  future: Item[][];
+  past: Snapshot[];
+  future: Snapshot[];
   lastNudgeAt: number;
   /** The pedal most recently added from the search panel; the next one lands beside it. */
   lastPlacedId: string | null;
@@ -68,6 +78,12 @@ interface PlaygroundState {
   bringToFront: () => void;
   sendToBack: () => void;
 
+  /**
+   * Applies a signal path edit (see lib/signal.ts) as one undo step. A SignalError is shown as a toast and
+   * nothing changes. `message` is toasted when the edit changed something.
+   */
+  editSignal: (edit: (g: SignalGraph) => SignalGraph, message?: string) => boolean;
+
   setName: (name: string) => void;
   loadDocument: (doc: PlaygroundDocument, opts?: { undoable?: boolean }) => void;
   toDocument: () => PlaygroundDocument;
@@ -79,10 +95,10 @@ export type CustomFields = { width: number; height: number; label: string; color
 
 const DEFAULT_VIEW: View = { x: 80, y: 80, zoom: 1 };
 
-/** Pushes the current items onto the undo stack and clears redo. */
-const record = (s: Pick<PlaygroundState, "past" | "items">) => ({
-  past: [...s.past.slice(-(HISTORY_LIMIT - 1)), s.items],
-  future: [] as Item[][],
+/** Pushes the current items and signal path onto the undo stack and clears redo. */
+const record = (s: Pick<PlaygroundState, "past" | "items" | "signal">) => ({
+  past: [...s.past.slice(-(HISTORY_LIMIT - 1)), { items: s.items, signal: s.signal }],
+  future: [] as Snapshot[],
 });
 
 type NewItem = Pick<Item, "kind" | "label" | "image" | "width" | "height" | "custom" | "color"> &
@@ -166,6 +182,7 @@ function catalogSpecs(c: CatalogItem): Partial<Pick<Item, "ma" | "voltage" | "pe
 export const usePlayground = create<PlaygroundState>((set, get) => ({
   name: "Untitled Playground",
   items: [],
+  signal: defaultSignal(),
   selected: [],
   view: DEFAULT_VIEW,
   viewport: { w: 0, h: 0 },
@@ -315,15 +332,27 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     set((s) => {
       const prev = s.past.at(-1);
       if (!prev) return {};
-      const ids = new Set(prev.map((i) => i.id));
-      return { past: s.past.slice(0, -1), future: [...s.future, s.items], items: prev, selected: s.selected.filter((id) => ids.has(id)) };
+      const ids = new Set(prev.items.map((i) => i.id));
+      return {
+        past: s.past.slice(0, -1),
+        future: [...s.future, { items: s.items, signal: s.signal }],
+        items: prev.items,
+        signal: prev.signal,
+        selected: s.selected.filter((id) => ids.has(id)),
+      };
     }),
   redo: () =>
     set((s) => {
       const next = s.future.at(-1);
       if (!next) return {};
-      const ids = new Set(next.map((i) => i.id));
-      return { future: s.future.slice(0, -1), past: [...s.past, s.items], items: next, selected: s.selected.filter((id) => ids.has(id)) };
+      const ids = new Set(next.items.map((i) => i.id));
+      return {
+        future: s.future.slice(0, -1),
+        past: [...s.past, { items: s.items, signal: s.signal }],
+        items: next.items,
+        signal: next.signal,
+        selected: s.selected.filter((id) => ids.has(id)),
+      };
     }),
 
   dragTo: (origins, dx, dy) =>
@@ -378,7 +407,13 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       return { ...record(s), items: s.items.map((i) => (s.selected.includes(i.id) ? { ...i, locked: lock } : i)) };
     }),
   deleteSelected: () =>
-    set((s) => ({ ...record(s), items: s.items.filter((i) => !s.selected.includes(i.id)), selected: [] })),
+    set((s) => ({
+      ...record(s),
+      items: s.items.filter((i) => !s.selected.includes(i.id)),
+      // Deleted pedals leave the chain, and the pedals on either side are plugged into each other.
+      signal: removeItems(s.signal, s.selected),
+      selected: [],
+    })),
 
   bringForward: () =>
     set((s) => {
@@ -411,6 +446,24 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       items: [...s.items.filter((i) => s.selected.includes(i.id)), ...s.items.filter((i) => !s.selected.includes(i.id))],
     })),
 
+  editSignal: (edit, message) => {
+    const s = get();
+    let signal: SignalGraph;
+    try {
+      signal = edit(s.signal);
+    } catch (e) {
+      if (e instanceof SignalError) {
+        toast(e.message);
+        return false;
+      }
+      throw e;
+    }
+    if (signal === s.signal) return false;
+    set({ ...record(s), signal });
+    if (message) toast(message);
+    return true;
+  },
+
   setName: (name) => set({ name }),
 
   loadDocument: (doc, opts) => {
@@ -418,6 +471,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       ...(opts?.undoable ? record(s) : { past: [], future: [] }),
       name: doc.name,
       items: doc.items,
+      signal: normalizeSignal(doc.signal, doc.items),
       selected: [],
       view: doc.view ?? DEFAULT_VIEW,
     }));
@@ -428,11 +482,12 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
   },
 
   toDocument: () => {
-    const { name, items, view } = get();
-    return { schemaVersion: 3, savedAt: new Date().toISOString(), name, items, view };
+    const { name, items, view, signal } = get();
+    return { schemaVersion: 3, savedAt: new Date().toISOString(), name, items, view, signal };
   },
 
-  reset: () => set((s) => ({ ...record(s), name: "Untitled Playground", items: [], selected: [], view: DEFAULT_VIEW })),
+  reset: () =>
+    set((s) => ({ ...record(s), name: "Untitled Playground", items: [], signal: defaultSignal(), selected: [], view: DEFAULT_VIEW })),
 }));
 
 /** Restores the last session; on first run, imports the legacy app's local save if one exists. */
@@ -454,7 +509,7 @@ export function restorePlayground() {
 export function startLocalAutosave() {
   let timer: ReturnType<typeof setTimeout> | undefined;
   const unsub = usePlayground.subscribe((s, prev) => {
-    if (s.items === prev.items && s.name === prev.name && s.view === prev.view) return;
+    if (s.items === prev.items && s.signal === prev.signal && s.name === prev.name && s.view === prev.view) return;
     clearTimeout(timer);
     timer = setTimeout(() => {
       try {

@@ -39,7 +39,7 @@ for (const [key, describe] of Object.entries(messages)) {
     const before = usePlayground.getState();
     original(...args);
     const after = usePlayground.getState();
-    if (!changed(before.items, after.items)) return;
+    if (!changed(before.items, after.items) && before.signal === after.signal) return;
     const msg = describe!(after, before);
     if (msg) toast(msg);
   };
