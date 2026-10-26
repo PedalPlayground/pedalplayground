@@ -91,7 +91,7 @@ function MenuContent({ onRename, onAll, onSignIn }: MenuProps) {
   );
 }
 
-/** Header breadcrumb: "PedalPlayground / [thumbnail] Playground name ⌄", which opens the playground menu. */
+/** Header breadcrumb: "PedalPlayground / [thumbnail] Playground name ⌄", which opens the playground menu. Phones show just the name. */
 export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & { className?: string }) {
   const live = useLiveThumbnail();
   const name = usePlayground((s) => s.name);
@@ -108,9 +108,9 @@ export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & {
           className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none hover:bg-ink/5 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
         >
           {thumb ? (
-            <img src={thumb} alt="" className="size-6 shrink-0 rounded-[3px] border-[0.5px] border-[#d9d9d9] bg-white object-cover" />
+            <img src={thumb} alt="" className="size-6 shrink-0 rounded-[3px] border-[0.5px] border-[#d9d9d9] bg-white object-cover max-sm:hidden" />
           ) : (
-            <span className="size-6 shrink-0 rounded-[3px] border-[0.5px] border-[#d9d9d9] bg-white" />
+            <span className="size-6 shrink-0 rounded-[3px] border-[0.5px] border-[#d9d9d9] bg-white max-sm:hidden" />
           )}
           <span className="truncate">{name}</span>
           <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />

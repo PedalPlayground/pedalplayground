@@ -123,7 +123,7 @@ export function App() {
           )}
         </div>
         <PlaygroundBreadcrumb
-          className="justify-self-center"
+          className="sm:justify-self-center"
           onRename={() => setDialog("rename")}
           onAll={() => setDialog("playgrounds")}
           onSignIn={() => setDialog("account")}
