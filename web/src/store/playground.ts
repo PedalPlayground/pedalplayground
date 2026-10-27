@@ -215,15 +215,18 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     set((s) => {
       const b = contentBounds(s.items);
       if (!b || !s.viewport.w) return { view: DEFAULT_VIEW };
-      const pad = 96;
+      // Phones fit tight to the sides, leaving room for the save pill up top and the toolbar and scale key below.
+      const pad = s.viewport.w < 640 ? { x: 16, top: 48, bottom: 112 } : { x: 96, top: 96, bottom: 96 };
+      const availW = s.viewport.w - pad.x * 2;
+      const availH = s.viewport.h - pad.top - pad.bottom;
       const w = (b.right - b.left) * PX_PER_INCH;
       const h = (b.bottom - b.top) * PX_PER_INCH;
-      const zoom = clamp(Math.min((s.viewport.w - pad * 2) / w, (s.viewport.h - pad * 2) / h), MIN_ZOOM, 1.5);
+      const zoom = clamp(Math.min(availW / w, availH / h), MIN_ZOOM, 1.5);
       return {
         view: {
           zoom,
-          x: (s.viewport.w - w * zoom) / 2 - b.left * PX_PER_INCH * zoom,
-          y: (s.viewport.h - h * zoom) / 2 - b.top * PX_PER_INCH * zoom,
+          x: pad.x + (availW - w * zoom) / 2 - b.left * PX_PER_INCH * zoom,
+          y: pad.top + (availH - h * zoom) / 2 - b.top * PX_PER_INCH * zoom,
         },
       };
     }),
