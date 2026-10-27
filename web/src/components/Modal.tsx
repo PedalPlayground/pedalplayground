@@ -1,6 +1,20 @@
+import { X } from "lucide-react";
 import { useEffect, type ReactNode } from "react";
 
-export function Modal({ title, onClose, children, wide }: { title: string; onClose: () => void; children: ReactNode; wide?: boolean }) {
+/** `closeX` adds an X button in the top-right corner, for dialogs without their own Close or Cancel button. */
+export function Modal({
+  title,
+  onClose,
+  children,
+  wide,
+  closeX,
+}: {
+  title: string;
+  onClose: () => void;
+  children: ReactNode;
+  wide?: boolean;
+  closeX?: boolean;
+}) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
@@ -12,10 +26,19 @@ export function Modal({ title, onClose, children, wide }: { title: string; onClo
       <div
         role="dialog"
         aria-label={title}
-        className={`animate-enter max-h-full w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-panel ${wide ? "max-w-2xl" : "max-w-sm"}`}
+        className={`animate-enter relative max-h-full w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-panel ${wide ? "max-w-2xl" : "max-w-sm"}`}
         onClick={(e) => e.stopPropagation()}
       >
-        <h2 className="mb-3 text-base font-semibold">{title}</h2>
+        <h2 className={`mb-3 text-base font-semibold ${closeX ? "pr-8" : ""}`}>{title}</h2>
+        {closeX && (
+          <button
+            onClick={onClose}
+            aria-label="Close"
+            className="absolute right-3 top-3 grid size-8 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+          >
+            <X size={16} />
+          </button>
+        )}
         {children}
       </div>
     </div>

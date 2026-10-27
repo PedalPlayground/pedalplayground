@@ -5,7 +5,6 @@ import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useUi } from "../store/ui";
 import { Modal } from "./Modal";
-import { Segmented } from "./SettingsMenu";
 
 /** Shaded, borderless fields, like the Edit Playground dialog. */
 const field =
@@ -19,8 +18,7 @@ const linkButton = "text-sm text-brand hover:underline disabled:opacity-50";
 const MIN_PASSWORD = 8;
 
 type Tab = "signin" | "create";
-type Method = "password" | "link";
-/** "form" is the tab's own form; "code" waits for the emailed code; "confirm" waits for a sign-up confirmation email. */
+/** "form" is the Sign In or Create Account form; "code" waits for the emailed code; "confirm" waits for a sign-up confirmation email. */
 type Step = "form" | "code" | "confirm";
 
 /** Checks the username as it's typed: format first, then (after a pause) whether it's free. */
@@ -53,7 +51,6 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
   const openUpgrade = useUi((u) => u.openUpgrade);
 
   const [tab, setTab] = useState<Tab>("signin");
-  const [method, setMethod] = useState<Method>("password");
   const [step, setStep] = useState<Step>("form");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -71,11 +68,11 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
     setMessage(null);
   };
 
-  /** Emails a code and link. Used by "Email Me a Code" when signing in and by the email-link sign-up. */
-  const send = async (withUsername?: string) => {
+  /** Emails a sign-in code and link (Forgot Password). */
+  const send = async () => {
     setBusy(true);
     setError(null);
-    const err = await sendCode(email.trim(), withUsername);
+    const err = await sendCode(email.trim());
     setBusy(false);
     if (err) return setError(err);
     setStep("code");
@@ -103,7 +100,6 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
 
   const create = async () => {
     const name = username.trim();
-    if (method === "link") return send(name);
     setBusy(true);
     setError(null);
     const res = await signUp(email.trim(), password, name);
@@ -119,7 +115,7 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
   const emailOk = /.+@.+\..+/.test(email.trim());
 
   return (
-    <Modal title={title} onClose={onClose}>
+    <Modal title={title} onClose={onClose} closeX>
       {!cloudEnabled && <p className="text-sm text-ink-muted">Cloud sign-in is not configured on this build.</p>}
 
       {cloudEnabled && user && (
@@ -187,7 +183,6 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
                 spellCheck={false}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
                 className={`${field} mb-3`}
               />
               <div className="mb-1 flex items-baseline justify-between">
@@ -241,7 +236,6 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
                 maxLength={24}
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="tonechaser"
                 className={`${field} mb-1`}
               />
               <p className={`mb-3 text-xs ${check.hint ? "text-danger" : "text-ink-muted"}`}>
@@ -260,46 +254,27 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
                 spellCheck={false}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
                 className={`${field} mb-3`}
               />
-              <div className="mb-3 flex items-center justify-between gap-4">
-                <span className="text-xs text-ink-muted">Sign In With</span>
-                <div className="w-48">
-                  <Segmented
-                    label="Sign in with"
-                    value={method}
-                    onChange={setMethod}
-                    options={[
-                      ["password", "Password"],
-                      ["link", "Email Link"],
-                    ]}
-                    wide
-                  />
-                </div>
-              </div>
-              {method === "password" ? (
-                <>
-                  <input
-                    type="password"
-                    name="new-password"
-                    aria-label="Password"
-                    autoComplete="new-password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder={`Password (${MIN_PASSWORD}+ characters)`}
-                    className={`${field} mb-4`}
-                  />
-                </>
-              ) : (
-                <p className="mb-4 text-xs text-ink-muted">No password to remember. We'll email you a link each time you sign in.</p>
-              )}
+              <label className={label} htmlFor="acct-new-password">
+                Password
+              </label>
+              <input
+                id="acct-new-password"
+                type="password"
+                name="new-password"
+                autoComplete="new-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className={`${field} mb-1`}
+              />
+              <p className="mb-4 text-xs text-ink-muted">At least {MIN_PASSWORD} characters.</p>
               <button
                 type="submit"
-                disabled={!check.ok || !emailOk || (method === "password" && password.length < MIN_PASSWORD) || busy}
+                disabled={!check.ok || !emailOk || password.length < MIN_PASSWORD || busy}
                 className={primary}
               >
-                {busy ? "Creating…" : method === "password" ? "Create Account" : "Email Me a Link"}
+                {busy ? "Creating…" : "Create Account"}
               </button>
               <p className="mt-3 text-center text-sm text-ink-muted">
                 Already have an account?{" "}
@@ -333,7 +308,6 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
             maxLength={9}
             value={code}
             onChange={(e) => setCode(e.target.value)}
-            placeholder="123456"
             aria-label="6-digit code"
             className={`${field} mb-3 text-center text-lg tracking-[0.4em]`}
           />
@@ -341,7 +315,7 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
             {busy ? "Checking…" : "Sign In"}
           </button>
           <div className="mt-3 flex justify-between text-sm">
-            <button type="button" onClick={() => void send(tab === "create" ? username.trim() : undefined)} disabled={busy} className={linkButton}>
+            <button type="button" onClick={() => void send()} disabled={busy} className={linkButton}>
               Send a New Code
             </button>
             <button type="button" onClick={() => switchTab(tab)} className="text-ink-muted hover:text-ink">
@@ -362,9 +336,6 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
 
       {error && <p className="mt-3 text-sm text-danger">{error}</p>}
 
-      <button onClick={onClose} className="mt-4 text-sm text-ink-muted hover:text-ink">
-        Close
-      </button>
     </Modal>
   );
 }
