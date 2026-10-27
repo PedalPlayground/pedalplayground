@@ -3,6 +3,7 @@ import {
   createPlayground,
   deletePlayground,
   renamePlayground,
+  setInGallery as setPlaygroundInGallery,
   DuplicateNameError,
   fetchLatestDocument,
   fetchShared,
@@ -61,8 +62,8 @@ interface CloudState extends Meta {
   share: () => Promise<string>;
   stopSharing: () => Promise<void>;
   remove: (id: string) => Promise<void>;
-  /** Makes a saved playground public (anyone with the link can open a copy) or private again. */
-  setVisibility: (id: string, isPublic: boolean) => Promise<void>;
+  /** Adds a saved playground to the public gallery (sharing it too) or takes it out (any share link keeps working). */
+  setInGallery: (id: string, inGallery: boolean) => Promise<void>;
   openShared: (slug: string) => Promise<boolean>;
 }
 
@@ -219,14 +220,10 @@ export const useCloud = create<CloudState>((set, get) => {
       void get().refreshList();
     },
 
-    setVisibility: async (id, isPublic) => {
-      if (id === get().cloudId) {
-        if (isPublic) await get().share();
-        else await get().stopSharing();
-        return;
-      }
-      if (isPublic) await sharePlayground(id);
-      else await unsharePlayground(id);
+    setInGallery: async (id, inGallery) => {
+      // The open playground shares through share(), which saves it first and keeps its share state in step.
+      if (inGallery && id === get().cloudId) await get().share();
+      await setPlaygroundInGallery(id, inGallery);
       await get().refreshList();
     },
 

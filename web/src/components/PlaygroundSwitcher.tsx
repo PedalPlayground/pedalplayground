@@ -74,7 +74,7 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
                       <span className="block truncate text-sm font-medium">{p.name}</span>
                       <span className="block truncate text-xs text-ink-muted">
                         {current ? "Open now" : edited(p.updated_at)}
-                        {p.is_public && " · Public"}
+                        {p.is_public && " · Shared"}
                       </span>
                     </span>
                     {/* Its own click: don't also open the playground. */}

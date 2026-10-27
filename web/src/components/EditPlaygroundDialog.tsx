@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import {
   DESCRIPTION_MAX,
   fetchDetails,
+  fetchInGallery,
   PLAYGROUND_TYPES,
-  shareUrl,
   updateDetails,
   type PlaygroundDetails,
   type PlaygroundSummary,
@@ -14,16 +14,13 @@ import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { Modal } from "./Modal";
-import { Segmented } from "./SettingsMenu";
-
-type Visibility = "private" | "public";
 
 /** Shaded, borderless fields; focus shows a brand ring. */
 const field =
   "rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted/70 focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
 
 /**
- * Name, visibility and delete for one playground. `target` is a saved playground picked from the menu;
+ * Name, type, description, gallery listing and delete for one playground. `target` is a saved playground picked from the menu;
  * without it, the dialog edits the open playground.
  */
 export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void; target?: PlaygroundSummary }) {
@@ -33,16 +30,15 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
 
   const id = target?.id ?? cloud.cloudId;
   const startName = target?.name ?? openName;
-  const startPublic = target ? target.is_public : cloud.isPublic;
-  const slug = target ? target.slug : cloud.slug;
-  // Visibility and delete need a playground saved to the account.
+  // The gallery switch and delete need a playground saved to the account.
   const saved = !!user && !!id;
 
   const [name, setName] = useState(startName);
-  const [visibility, setVisibility] = useState<Visibility>(startPublic ? "public" : "private");
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const [copied, setCopied] = useState(false);
+  /** Loaded like the details; undefined hides the switch. */
+  const [startGallery, setStartGallery] = useState<boolean | undefined>();
+  const [inGallery, setGallery] = useState(false);
   /** Loaded from the account; undefined while loading, or when the database can't store them yet (fields hidden). */
   const [startDetails, setStartDetails] = useState<PlaygroundDetails | undefined>();
   const [description, setDescription] = useState("");
@@ -61,6 +57,15 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
       .catch(() => {
         /* leave the fields hidden */
       });
+    fetchInGallery(id)
+      .then((g) => {
+        if (cancelled || g === undefined) return;
+        setStartGallery(g);
+        setGallery(g);
+      })
+      .catch(() => {
+        /* leave the switch hidden */
+      });
     return () => {
       cancelled = true;
     };
@@ -77,8 +82,9 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
       if (id && startDetails && (description.trim() !== startDetails.description.trim() || type !== startDetails.type)) {
         await updateDetails(id, { description, type });
       }
-      const isPublic = visibility === "public";
-      if (saved && id && isPublic !== startPublic) await cloud.setVisibility(id, isPublic);
+      if (id && startGallery !== undefined && inGallery !== startGallery) {
+        await cloud.setInGallery(id, inGallery);
+      }
       onClose();
     } catch (e) {
       setError(e instanceof Error ? e.message : "Could not save those changes.");
@@ -98,9 +104,6 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
       setError(e instanceof Error ? e.message : "Could not delete that playground.");
     }
   };
-
-  // The link only exists once it's been made public and saved.
-  const url = startPublic && slug && visibility === "public" ? shareUrl(slug) : "";
 
   return (
     <Modal title="Edit Playground" onClose={onClose}>
@@ -159,48 +162,28 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
         </>
       )}
 
-      <div className="mb-1 flex items-center justify-between gap-4">
-        <span className="text-xs text-ink-muted">Visibility</span>
-        {saved && (
-          <Segmented
-            label="Visibility"
-            value={visibility}
-            onChange={setVisibility}
-            options={[
-              ["private", "Private"],
-              ["public", "Public"],
-            ]}
-          />
-        )}
-      </div>
-      <p className="mb-2 text-sm text-ink-muted">
-        {!saved
-          ? "Sign in to save this playground to your account before sharing it."
-          : visibility === "public"
-            ? "Anyone with the link can open their own copy. Their edits never change yours."
-            : "Only you can see it."}
-      </p>
-      {url && (
-        <div className="mb-2 flex gap-2">
-          <input
-            readOnly
-            value={url}
-            {...plainField}
-            aria-label="Share link"
-            onFocus={(e) => e.target.select()}
-            className={`h-8 min-w-0 flex-1 px-2 ${field} text-xs`}
-          />
-          <button
-            onClick={() => {
-              void navigator.clipboard?.writeText(url);
-              setCopied(true);
-              setTimeout(() => setCopied(false), 1500);
-            }}
-            className="h-8 w-16 rounded-control text-xs font-medium text-brand hover:bg-brand/10"
-          >
-            {copied ? "Copied" : "Copy"}
-          </button>
-        </div>
+      {startGallery !== undefined && (
+        <button
+          type="button"
+          role="switch"
+          aria-checked={inGallery}
+          onClick={() => setGallery(!inGallery)}
+          className="mb-2 flex w-full items-start justify-between gap-4 rounded-control text-left outline-none focus-visible:ring-2 focus-visible:ring-brand"
+        >
+          <span>
+            <span className="block text-sm">Show in Public Gallery</span>
+            <span className="block text-xs text-ink-muted">
+              {inGallery
+                ? "Anyone can find this board in the gallery and open their own copy."
+                : "Only people you send a share link to can see it."}
+            </span>
+          </span>
+          <span className={`relative mt-0.5 inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${inGallery ? "bg-brand" : "bg-ink/15"}`}>
+            <span
+              className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white shadow-sm transition-transform duration-200 ease-out ${inGallery ? "translate-x-3.5" : ""}`}
+            />
+          </span>
+        </button>
       )}
 
       {error && <p className="mb-2 text-sm text-danger">{error}</p>}

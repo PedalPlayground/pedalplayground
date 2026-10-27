@@ -152,6 +152,28 @@ export async function updateDetails(id: string, details: PlaygroundDetails) {
   if (error) throw error;
 }
 
+/** Until the in_gallery column is added (see the playground_gallery migration), the dialog hides the gallery switch. */
+let gallerySupported = true;
+
+/** Whether the playground is in the public gallery, or undefined when the database can't store it yet. */
+export async function fetchInGallery(id: string): Promise<boolean | undefined> {
+  if (!gallerySupported) return undefined;
+  const { data, error } = await db().from("playgrounds").select("in_gallery").eq("id", id).single();
+  if (error && isMissingColumn(error.code)) {
+    gallerySupported = false;
+    return undefined;
+  }
+  if (error) throw error;
+  return !!(data as { in_gallery: boolean }).in_gallery;
+}
+
+/** Adding to the gallery also shares the playground (the database requires it); leaving keeps any share link. */
+export async function setInGallery(id: string, inGallery: boolean) {
+  if (inGallery) await sharePlayground(id);
+  const { error } = await db().from("playgrounds").update({ in_gallery: inGallery }).eq("id", id);
+  if (error) throw error;
+}
+
 export async function insertVersion(playgroundId: string, doc: PlaygroundDocument) {
   const { error } = await db().from("playground_versions").insert({ playground_id: playgroundId, document: doc });
   if (error) throw error;
@@ -178,8 +200,10 @@ export async function sharePlayground(id: string): Promise<string> {
   return slug;
 }
 
+/** Stops sharing, which also takes the playground out of the gallery (a gallery board must be public). */
 export async function unsharePlayground(id: string) {
-  const { error } = await db().from("playgrounds").update({ is_public: false }).eq("id", id);
+  let { error } = await db().from("playgrounds").update({ is_public: false, in_gallery: false }).eq("id", id);
+  if (error && isMissingColumn(error.code)) ({ error } = await db().from("playgrounds").update({ is_public: false }).eq("id", id));
   if (error) throw error;
 }
 
