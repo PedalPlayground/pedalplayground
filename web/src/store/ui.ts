@@ -1,6 +1,12 @@
 import { create } from "zustand";
 
 export type Mode = "playground" | "signal" | "list";
+
+/**
+ * Signal Path and Equipment List are hidden for the Playground launch. Off hides the mode rail and keeps the app on
+ * the Playground; their code and the data they edit stay in place, so turning this back on brings them back.
+ */
+export const SHOW_MODES = false;
 export type Tool = "hand" | "select";
 export type Units = "in" | "mm";
 export type Theme = "system" | "light" | "dark";
@@ -123,7 +129,7 @@ export const useUi = create<UiState>((set) => ({
   setReplacing: (replacing) => set({ replacing, editing: false, searchOpen: replacing }),
   editing: false,
   setEditing: (editing) => set({ editing, replacing: false, searchOpen: editing }),
-  setMode: (mode) => set({ mode }),
+  setMode: (mode) => set({ mode: SHOW_MODES ? mode : "playground" }),
   setTool: (tool) => set({ tool }),
   setUnits: (units) => {
     try {

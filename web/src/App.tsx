@@ -17,7 +17,7 @@ import { PlaygroundBreadcrumb } from "./components/PlaygroundSwitcher";
 import { RenameDialog } from "./components/RenameDialog";
 import { SaveStatus } from "./components/SaveStatus";
 import { SearchPanel } from "./components/SearchPanel";
-import { tourSeen, useUi } from "./store/ui";
+import { SHOW_MODES, tourSeen, useUi } from "./store/ui";
 import { ObjectMenu } from "./components/ObjectMenu";
 import { ContextMenu } from "./components/ContextMenu";
 import { ActionToast } from "./components/ActionToast";
@@ -91,7 +91,7 @@ export function App() {
   const replacing = useUi((u) => u.replacing);
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
-  const mode = useUi((u) => u.mode);
+  const mode = useUi((u) => (SHOW_MODES ? u.mode : "playground"));
   /** The Equipment List and Signal Path cover the canvas and hide its tools. */
   const covered = mode !== "playground";
   const [dialog, setDialog] = useState<Dialog>(null);
@@ -195,7 +195,7 @@ export function App() {
               <ContextMenu />
             </>
           )}
-          <ModeRail />
+          {SHOW_MODES && <ModeRail />}
 
           {/* Phones have no room for the save status in the header, so it floats just below it. */}
           <div className="empty:hidden absolute right-3 top-3 z-20 rounded-control bg-surface/90 px-2 py-1 shadow-panel sm:hidden">
