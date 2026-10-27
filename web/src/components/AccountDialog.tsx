@@ -1,35 +1,84 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { openBillingPortal } from "../lib/billing";
+import { usernameAvailable, usernameProblem } from "../lib/profiles";
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useUi } from "../store/ui";
 import { Modal } from "./Modal";
+import { Segmented } from "./SettingsMenu";
 
+/** Shaded, borderless fields, like the Edit Playground dialog. */
 const field =
-  "h-9 w-full rounded-control border border-line bg-surface px-3 text-sm outline-none focus:border-brand placeholder:text-ink-muted";
-const primary =
-  "h-9 w-full disabled:opacity-50 btn-primary";
+  "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand";
+const primary = "h-9 w-full disabled:opacity-50 btn-primary";
+const label = "mb-1 block text-xs text-ink-muted";
+const linkButton = "text-sm text-brand hover:underline disabled:opacity-50";
+
+const MIN_PASSWORD = 8;
+
+type Tab = "signin" | "create";
+type Method = "password" | "link";
+/** "form" is the tab's own form; "code" waits for the emailed code; "confirm" waits for a sign-up confirmation email. */
+type Step = "form" | "code" | "confirm";
+
+/** Checks the username as it's typed: format first, then (after a pause) whether it's free. */
+function useUsernameCheck(name: string) {
+  const [taken, setTaken] = useState<{ name: string; taken: boolean } | null>(null);
+  const problem = name ? usernameProblem(name) : null;
+  useEffect(() => {
+    if (!name || problem) return;
+    let cancelled = false;
+    const t = setTimeout(() => {
+      void usernameAvailable(name).then((free) => {
+        if (!cancelled) setTaken({ name, taken: !free });
+      });
+    }, 350);
+    return () => {
+      cancelled = true;
+      clearTimeout(t);
+    };
+  }, [name, problem]);
+  const checked = taken?.name === name;
+  return {
+    hint: problem ?? (checked && taken.taken ? "That username is taken." : null),
+    ok: !!name && !problem && checked && !taken.taken,
+  };
+}
 
 export function AccountDialog({ onClose }: { onClose: () => void }) {
-  const { user, cloudEnabled, sendCode, verifyCode } = useAuth();
+  const { user, username: currentUsername, cloudEnabled, sendCode, verifyCode, signInWithPassword, signUp } = useAuth();
   const { entitlements, billingEnabled } = useBilling();
   const openUpgrade = useUi((u) => u.openUpgrade);
+
+  const [tab, setTab] = useState<Tab>("signin");
+  const [method, setMethod] = useState<Method>("password");
+  const [step, setStep] = useState<Step>("form");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
   const [code, setCode] = useState("");
-  const [step, setStep] = useState<"email" | "code">("email");
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const check = useUsernameCheck(username.trim());
 
-  const send = async () => {
+  const switchTab = (t: Tab) => {
+    setTab(t);
+    setStep("form");
+    setError(null);
+    setMessage(null);
+  };
+
+  /** Emails a code and link. Used by "Email Me a Code" when signing in and by the email-link sign-up. */
+  const send = async (withUsername?: string) => {
     setBusy(true);
     setError(null);
-    const err = await sendCode(email.trim());
+    const err = await sendCode(email.trim(), withUsername);
     setBusy(false);
     if (err) return setError(err);
     setStep("code");
     setCode("");
-    setMessage(`We sent a 6-digit code to ${email.trim()}.`);
+    setMessage(`We sent a link and a 6-digit code to ${email.trim()}. Click the link, or enter the code here.`);
   };
 
   const verify = async () => {
@@ -41,16 +90,48 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
     onClose();
   };
 
+  const signIn = async () => {
+    setBusy(true);
+    setError(null);
+    const err = await signInWithPassword(email.trim(), password);
+    setBusy(false);
+    if (err) return setError(err);
+    onClose();
+  };
+
+  const create = async () => {
+    const name = username.trim();
+    if (method === "link") return send(name);
+    setBusy(true);
+    setError(null);
+    const res = await signUp(email.trim(), password, name);
+    setBusy(false);
+    if (res.error) return setError(res.error);
+    if (res.confirm) {
+      setStep("confirm");
+      setMessage(`Almost done. We sent a confirmation link to ${email.trim()}. Click it to finish creating your account.`);
+    } else onClose();
+  };
+
+  const title = user ? "Account" : tab === "create" ? "Create Account" : "Sign In";
+  const emailOk = /.+@.+\..+/.test(email.trim());
+
   return (
-    <Modal title="Account" onClose={onClose}>
+    <Modal title={title} onClose={onClose}>
       {!cloudEnabled && <p className="text-sm text-ink-muted">Cloud sign-in is not configured on this build.</p>}
 
       {cloudEnabled && user && (
         <>
-          <p className="text-xs text-ink-muted">Signed in as</p>
+          {currentUsername && (
+            <>
+              <p className="text-xs text-ink-muted">Username</p>
+              <p className="mb-2 text-sm font-medium">{currentUsername}</p>
+            </>
+          )}
+          <p className="text-xs text-ink-muted">Email</p>
           <p className="text-sm font-medium">{user.email}</p>
           {billingEnabled && entitlements && (
-            <div className="mt-4 rounded-control border border-line p-3">
+            <div className="mt-4 rounded-control bg-surface-hover p-3">
               <div className="text-sm font-medium">{entitlements.plan === "pro" ? "Pro" : "Free Plan"}</div>
               <div className="mt-0.5 text-xs text-ink-muted">
                 {entitlements.plan === "pro"
@@ -61,15 +142,18 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
               </div>
               {entitlements.plan === "pro" ? (
                 entitlements.status && (
-                  <button
-                    onClick={() => void openBillingPortal().catch((e: Error) => setError(e.message))}
-                    className="mt-2 text-sm text-brand hover:underline"
-                  >
+                  <button onClick={() => void openBillingPortal().catch((e: Error) => setError(e.message))} className={`mt-2 ${linkButton}`}>
                     Manage Subscription
                   </button>
                 )
               ) : (
-                <button onClick={() => { onClose(); openUpgrade("menu"); }} className="mt-2 text-sm text-brand hover:underline">
+                <button
+                  onClick={() => {
+                    onClose();
+                    openUpgrade("menu");
+                  }}
+                  className={`mt-2 ${linkButton}`}
+                >
                   Upgrade to Pro
                 </button>
               )}
@@ -78,32 +162,151 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
         </>
       )}
 
-      {cloudEnabled && !user && step === "email" && (
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            void send();
-          }}
-        >
-          <p className="mb-3 text-sm text-ink-muted">Sign in with your email. We'll send you a code, no password needed.</p>
-          <input
-            type="email"
-            autoFocus
-            name="email"
-            autoComplete="email"
-            autoCapitalize="none"
-            autoCorrect="off"
-            spellCheck={false}
-            enterKeyHint="send"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@example.com"
-            className={`${field} mb-3`}
-          />
-          <button type="submit" disabled={!email.trim() || busy} className={primary}>
-            {busy ? "Sending…" : "Email Me a Code"}
-          </button>
-        </form>
+      {cloudEnabled && !user && step === "form" && (
+        <>
+          <div className="mb-4">
+            <Segmented
+              label="Sign in or create an account"
+              value={tab}
+              onChange={switchTab}
+              options={[
+                ["signin", "Sign In"],
+                ["create", "Create Account"],
+              ]}
+              wide
+            />
+          </div>
+
+          {tab === "signin" ? (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                void signIn();
+              }}
+            >
+              <label className={label} htmlFor="acct-email">
+                Email
+              </label>
+              <input
+                id="acct-email"
+                type="email"
+                autoFocus
+                name="email"
+                autoComplete="email"
+                autoCapitalize="none"
+                autoCorrect="off"
+                spellCheck={false}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@example.com"
+                className={`${field} mb-3`}
+              />
+              <label className={label} htmlFor="acct-password">
+                Password
+              </label>
+              <input
+                id="acct-password"
+                type="password"
+                name="password"
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className={`${field} mb-4`}
+              />
+              <button type="submit" disabled={!emailOk || !password || busy} className={primary}>
+                {busy ? "Signing In…" : "Sign In"}
+              </button>
+              <p className="mt-3 text-center text-sm text-ink-muted">
+                No password, or forgot it?{" "}
+                <button type="button" disabled={!emailOk || busy} onClick={() => void send()} className={linkButton}>
+                  Email Me a Sign-In Code
+                </button>
+              </p>
+            </form>
+          ) : (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                void create();
+              }}
+            >
+              <label className={label} htmlFor="acct-username">
+                Username
+              </label>
+              <input
+                id="acct-username"
+                autoFocus
+                name="username"
+                autoComplete="username"
+                autoCapitalize="none"
+                autoCorrect="off"
+                spellCheck={false}
+                maxLength={24}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="tonechaser"
+                className={`${field} mb-1`}
+              />
+              <p className={`mb-3 text-xs ${check.hint ? "text-danger" : "text-ink-muted"}`}>
+                {check.hint ?? "Shown on playgrounds you share. Letters, numbers, - and _."}
+              </p>
+              <label className={label} htmlFor="acct-new-email">
+                Email
+              </label>
+              <input
+                id="acct-new-email"
+                type="email"
+                name="email"
+                autoComplete="email"
+                autoCapitalize="none"
+                autoCorrect="off"
+                spellCheck={false}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@example.com"
+                className={`${field} mb-3`}
+              />
+              <div className="mb-3 flex items-center justify-between gap-4">
+                <span className="text-xs text-ink-muted">Sign In With</span>
+                <div className="w-48">
+                  <Segmented
+                    label="Sign in with"
+                    value={method}
+                    onChange={setMethod}
+                    options={[
+                      ["password", "Password"],
+                      ["link", "Email Link"],
+                    ]}
+                    wide
+                  />
+                </div>
+              </div>
+              {method === "password" ? (
+                <>
+                  <input
+                    type="password"
+                    name="new-password"
+                    aria-label="Password"
+                    autoComplete="new-password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder={`Password (${MIN_PASSWORD}+ characters)`}
+                    className={`${field} mb-4`}
+                  />
+                </>
+              ) : (
+                <p className="mb-4 text-xs text-ink-muted">No password to remember. We'll email you a link each time you sign in.</p>
+              )}
+              <button
+                type="submit"
+                disabled={!check.ok || !emailOk || (method === "password" && password.length < MIN_PASSWORD) || busy}
+                className={primary}
+              >
+                {busy ? "Creating…" : method === "password" ? "Create Account" : "Email Me a Link"}
+              </button>
+            </form>
+          )}
+        </>
       )}
 
       {cloudEnabled && !user && step === "code" && (
@@ -135,14 +338,23 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
             {busy ? "Checking…" : "Sign In"}
           </button>
           <div className="mt-3 flex justify-between text-sm">
-            <button type="button" onClick={() => void send()} disabled={busy} className="text-brand hover:underline disabled:opacity-50">
+            <button type="button" onClick={() => void send(tab === "create" ? username.trim() : undefined)} disabled={busy} className={linkButton}>
               Send a New Code
             </button>
-            <button type="button" onClick={() => { setStep("email"); setError(null); setMessage(null); }} className="text-ink-muted hover:text-ink">
-              Use a Different Email
+            <button type="button" onClick={() => switchTab(tab)} className="text-ink-muted hover:text-ink">
+              Back
             </button>
           </div>
         </form>
+      )}
+
+      {cloudEnabled && !user && step === "confirm" && (
+        <>
+          {message && <p className="mb-3 text-sm text-ink-muted">{message}</p>}
+          <button type="button" onClick={() => switchTab("signin")} className={linkButton}>
+            Back to Sign In
+          </button>
+        </>
       )}
 
       {error && <p className="mt-3 text-sm text-danger">{error}</p>}

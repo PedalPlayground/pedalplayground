@@ -29,6 +29,7 @@ import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { Toolbar } from "./components/Toolbar";
 import { UpgradeDialog } from "./components/UpgradeDialog";
+import { UsernamePrompt } from "./components/UsernamePrompt";
 import { BETA, FEEDBACK_URL } from "./lib/beta";
 import { useAuth } from "./store/auth";
 import { useBilling } from "./store/billing";
@@ -237,6 +238,8 @@ export function App() {
       <TooltipLayer />
       {billingReturn === "success" && <BillingReturn onDone={() => setBillingReturn(null)} />}
       <UpgradeDialog onSignIn={() => setDialog("account")} />
+      {/* Not over other dialogs or the sign-in confirmation. */}
+      {!busy && <UsernamePrompt />}
       {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}
       {dialog === "account" && <AccountDialog onClose={close} />}
       {dialog === "avatar" && <AvatarDialog onClose={close} />}

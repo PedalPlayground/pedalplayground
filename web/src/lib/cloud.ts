@@ -220,7 +220,15 @@ export async function fetchShared(slug: string): Promise<SharedPlayground | null
   if (pg.error) throw pg.error;
   if (!pg.data) return null;
   const row = pg.data as { id: string; name: string; owner_user_id: string };
-  return { id: row.id, name: row.name, ownerId: row.owner_user_id, ownerName: null, doc: await fetchLatestDocument(row.id) };
+  const [doc, ownerName] = await Promise.all([fetchLatestDocument(row.id), fetchOwnerName(row.owner_user_id)]);
+  return { id: row.id, name: row.name, ownerId: row.owner_user_id, ownerName, doc };
+}
+
+/** The owner's username for a shared playground; null when they have none (or profiles aren't set up). */
+async function fetchOwnerName(userId: string): Promise<string | null> {
+  const { data, error } = await db().from("profiles").select("username").eq("user_id", userId).maybeSingle();
+  if (error) return null;
+  return (data as { username: string } | null)?.username ?? null;
 }
 
 export const shareUrl = (slug: string) => `${window.location.origin}${window.location.pathname}?p=${encodeURIComponent(slug)}`;

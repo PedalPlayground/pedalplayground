@@ -38,15 +38,18 @@ export function Segmented<T extends string>({
   value,
   onChange,
   options,
+  wide = false,
 }: {
   label: string;
   value: T;
   onChange: (v: T) => void;
   options: readonly (readonly [T, string])[];
+  /** Fills its container, with equal-width options (for longer labels). */
+  wide?: boolean;
 }) {
   const index = Math.max(0, options.findIndex(([v]) => v === value));
   return (
-    <div role="radiogroup" aria-label={label} className="relative flex rounded-control bg-surface-hover p-0.5">
+    <div role="radiogroup" aria-label={label} className={`relative flex rounded-control bg-surface-hover p-0.5 ${wide ? "w-full" : ""}`}>
       <span
         aria-hidden
         className="absolute bottom-0.5 left-0.5 top-0.5 rounded-[3px] bg-surface shadow-sm transition-transform duration-200 ease-out"
@@ -58,7 +61,7 @@ export function Segmented<T extends string>({
           role="radio"
           aria-checked={value === v}
           onClick={() => onChange(v)}
-          className={`relative h-6 w-12 rounded-[3px] text-xs outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+          className={`relative rounded-[3px] outline-none ${wide ? "h-7 flex-1 text-sm" : "h-6 w-12 text-xs"} transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
             value === v ? "font-medium text-ink" : "text-ink-muted hover:text-ink"
           }`}
         >
