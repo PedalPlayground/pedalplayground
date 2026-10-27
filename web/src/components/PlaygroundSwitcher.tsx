@@ -1,8 +1,6 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { tip } from "./Tooltip";
 import { Check, ChevronDown } from "lucide-react";
-import { useEffect, useState } from "react";
-import { renderThumbnail } from "../lib/thumbnail";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
@@ -17,25 +15,6 @@ function Thumb({ src }: { src: string | null | undefined }) {
   ) : (
     <span className="size-8 shrink-0 rounded bg-canvas ring-1 ring-line" />
   );
-}
-
-/** A thumbnail of the canvas as it is right now (re-rendered shortly after each edit), so it never lags a cloud save. */
-function useLiveThumbnail() {
-  const items = usePlayground((s) => s.items);
-  const [thumb, setThumb] = useState<string | null>(null);
-  useEffect(() => {
-    let cancelled = false;
-    const t = setTimeout(() => {
-      void renderThumbnail(items).then((url) => {
-        if (!cancelled) setThumb(url);
-      });
-    }, 500);
-    return () => {
-      cancelled = true;
-      clearTimeout(t);
-    };
-  }, [items]);
-  return items.length ? thumb : null;
 }
 
 type MenuProps = { onRename: () => void; onAll: () => void; onSignIn: () => void };
@@ -92,29 +71,19 @@ function MenuContent({ onRename, onAll, onSignIn }: MenuProps) {
   );
 }
 
-/** Header breadcrumb: "PedalPlayground / [thumbnail] Playground name ⌄", which opens the playground menu. Phones show just the name. */
+/** Header center: "⌄ Playground name", which opens the playground menu (from Figma). */
 export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & { className?: string }) {
-  const live = useLiveThumbnail();
   const name = usePlayground((s) => s.name);
-  const { list, cloudId } = useCloud();
-  const thumb = live ?? list.find((p) => p.id === cloudId)?.thumbnail;
   return (
-    <div className={`flex min-w-0 items-center gap-3 text-sm/4 font-semibold tracking-[-0.01em] ${className}`}>
-      <span className="shrink-0 max-md:hidden">PedalPlayground</span>
-      <span className="shrink-0 text-base/4 font-light opacity-30 max-md:hidden">/</span>
+    <div className={`flex min-w-0 items-center text-sm/4 font-semibold tracking-[-0.01em] ${className}`}>
       <Dropdown.Root>
         <Dropdown.Trigger
           aria-label={`Playground: ${name}`}
           {...tip("Switch Playgrounds")}
           className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
         >
-          {thumb ? (
-            <img src={thumb} alt="" className="size-6 shrink-0 rounded-[3px] border-[0.5px] border-[#d9d9d9] bg-white object-cover max-sm:hidden" />
-          ) : (
-            <span className="size-6 shrink-0 rounded-[3px] border-[0.5px] border-[#d9d9d9] bg-white max-sm:hidden" />
-          )}
-          <span className="truncate">{name}</span>
           <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
+          <span className="truncate">{name}</span>
         </Dropdown.Trigger>
         <MenuContent {...props} />
       </Dropdown.Root>

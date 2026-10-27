@@ -30,6 +30,7 @@ import { Toolbar } from "./components/Toolbar";
 import { UpgradeDialog } from "./components/UpgradeDialog";
 import { BETA, FEEDBACK_URL } from "./lib/beta";
 import { useAuth } from "./store/auth";
+import { useBilling } from "./store/billing";
 import { startCloudSync, useCloud } from "./store/cloud";
 import { restorePlayground, startLocalAutosave, usePlayground } from "./store/playground";
 
@@ -83,10 +84,18 @@ async function openSharedFromUrl() {
   }
 }
 
+const headerButton =
+  "btn-primary h-[26px] whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1";
+
 export function App() {
   const init = useAuth((s) => s.init);
   const user = useAuth((s) => s.user);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
+  const plan = useBilling((b) => (b.billingEnabled ? b.entitlements?.plan : undefined));
+  const pro = !!user && plan === "pro";
+  /** Only once the plan is known to be free, so Pro members never see it flash in. */
+  const canUpgrade = plan === "free";
+  const openUpgrade = useUi((u) => u.openUpgrade);
   const searchOpen = useUi((u) => u.searchOpen);
   const replacing = useUi((u) => u.replacing);
   const editing = useUi((u) => u.editing);
@@ -132,8 +141,10 @@ export function App() {
           Safe-area padding keeps it clear of notches and rounded corners. */}
       <header className="box-content grid h-10 shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-chrome-line bg-chrome pl-[max(0.75rem,env(safe-area-inset-left))] pr-[max(0.75rem,env(safe-area-inset-right))] pt-[env(safe-area-inset-top)] sm:grid-cols-[1fr_auto_1fr] sm:gap-4 sm:pl-[max(1rem,env(safe-area-inset-left))] sm:pr-[max(1rem,env(safe-area-inset-right))]">
         <div className="flex min-w-0 items-center gap-2">
-          <h1 className="flex">
+          <h1 className="flex items-center gap-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink">
             <LogoMark />
+            <span className="whitespace-nowrap max-sm:hidden">Pedal Playground</span>
+            {pro && <span className="text-brand-top max-sm:hidden">Pro</span>}
           </h1>
           {BETA && (
             <>
@@ -156,7 +167,12 @@ export function App() {
           <span className="max-sm:hidden">
             <SaveStatus />
           </span>
-          <span data-tour="account" className="flex empty:hidden">
+          <span data-tour="account" className="flex items-center gap-4 empty:hidden max-sm:gap-2">
+          {user && canUpgrade && (
+            <button onClick={() => openUpgrade("menu")} className={headerButton}>
+              Get Pro
+            </button>
+          )}
           {user ? (
             <AvatarMenu
               onAccount={() => setDialog("account")}
@@ -165,11 +181,8 @@ export function App() {
             />
           ) : (
             cloudEnabled && (
-              <button
-                onClick={() => setDialog("account")}
-                className="btn-primary h-[26px] whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1"
-              >
-                Sign In<span className="max-sm:hidden"> to Save</span>
+              <button onClick={() => setDialog("account")} className={headerButton}>
+                Sign In<span className="max-sm:hidden"> to Save &amp; Share</span>
               </button>
             )
           )}
