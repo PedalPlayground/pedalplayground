@@ -91,6 +91,7 @@ export function App() {
   const replacing = useUi((u) => u.replacing);
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
+  const hasSelection = usePlayground((s) => s.selected.length > 0);
   const mode = useUi((u) => (SHOW_MODES ? u.mode : "playground"));
   /** The Equipment List and Signal Path cover the canvas and hide its tools. */
   const covered = mode !== "playground";
@@ -173,7 +174,6 @@ export function App() {
             )
           )}
           </span>
-          <SettingsMenu />
         </div>
       </header>
 
@@ -216,6 +216,10 @@ export function App() {
             <Toolbar onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
           </div>
           )}
+
+          {/* Lower-right corner. Phones keep it above the toolbar, which spans the bottom edge there, and hide it
+              while the search panel or the selection menu needs that space. */}
+          <SettingsMenu className={`absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-10 max-sm:bottom-[calc(0.75rem+62px+env(safe-area-inset-bottom))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] ${searchOpen || hasSelection ? "max-sm:hidden" : ""}`} />
 
         </main>
       </div>

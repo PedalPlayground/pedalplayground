@@ -1,5 +1,5 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
-import { SlidersHorizontal } from "lucide-react";
+import { Settings } from "lucide-react";
 import { useRef } from "react";
 import { importAny } from "../lib/importers";
 import { usePlayground } from "../store/playground";
@@ -8,6 +8,7 @@ import { BETA, FEEDBACK_URL } from "../lib/beta";
 import { useAuth } from "../store/auth";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
+import { barIconButton, barIconIdle, barPanel } from "./toolbarStyles";
 
 /** Import/export of playground files is archived for now. Flip this to bring the menu items back. */
 const SHOW_FILE_IO = false;
@@ -68,7 +69,8 @@ function Segmented<T extends string>({
   );
 }
 
-export function SettingsMenu() {
+/** The cog in the canvas's lower-right corner. `className` positions its floating panel. */
+export function SettingsMenu({ className = "" }: { className?: string }) {
   const { units, setUnits, theme, setTheme, snapping, setSnapping, startTour } = useUi();
   const signedIn = useAuth((s) => !!s.user);
   const fileInput = useRef<HTMLInputElement>(null);
@@ -103,15 +105,18 @@ export function SettingsMenu() {
       }}
     />
     <Dropdown.Root>
+      <div className={`${barPanel} ${className}`}>
       <Dropdown.Trigger
         aria-label="Settings"
-        {...tip("Settings")}
-        className="press grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover active:bg-chrome-line data-[state=open]:bg-surface-hover"
+        {...tip("Settings", { side: "top" })}
+        className={`${barIconButton} ${barIconIdle} data-[state=open]:bg-surface-hover`}
       >
-        <SlidersHorizontal size={18} />
+        <Settings size={18} />
       </Dropdown.Trigger>
+      </div>
       <Dropdown.Portal>
         <Dropdown.Content
+          side="top"
           align="end"
           sideOffset={6}
           className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel"
