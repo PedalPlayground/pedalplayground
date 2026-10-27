@@ -1,6 +1,6 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { tip } from "./Tooltip";
-import { Check, ChevronDown } from "lucide-react";
+import { Check, ChevronDown, Trash2 } from "lucide-react";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
@@ -23,7 +23,12 @@ type MenuProps = { onRename: () => void; onSignIn: () => void };
 function MenuContent({ onRename, onSignIn }: MenuProps) {
   const user = useAuth((s) => s.user);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
-  const { list, cloudId, openPlayground } = useCloud();
+  const { list, cloudId, openPlayground, remove } = useCloud();
+  const confirmDelete = (id: string, name: string) => {
+    const open = id === cloudId ? " It's open now, so the canvas will be cleared." : "";
+    if (!window.confirm(`Delete "${name}"? This can't be undone.${open}`)) return;
+    void remove(id).catch((e: unknown) => window.alert(e instanceof Error ? e.message : "Could not delete that playground."));
+  };
   return (
     <Dropdown.Portal>
       <Dropdown.Content
@@ -41,10 +46,23 @@ function MenuContent({ onRename, onSignIn }: MenuProps) {
           <>
             <Dropdown.Label className="px-2 py-1 text-xs text-ink-muted">Your Playgrounds</Dropdown.Label>
             {list.slice(0, 6).map((p) => (
-              <Dropdown.Item key={p.id} className={item} onSelect={() => void openPlayground(p.id)}>
+              <Dropdown.Item key={p.id} className={`group ${item}`} onSelect={() => void openPlayground(p.id)}>
                 <Thumb src={p.thumbnail} />
                 <span className="min-w-0 flex-1 truncate">{p.name}</span>
                 {p.id === cloudId && <Check size={14} className="text-brand" />}
+                <button
+                  aria-label={`Delete ${p.name}`}
+                  {...tip("Delete")}
+                  // Its own click: don't also open the playground.
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    confirmDelete(p.id, p.name);
+                  }}
+                  className="-my-1 -mr-1 grid size-7 shrink-0 place-items-center rounded-control text-ink-muted opacity-0 outline-none hover:bg-danger/10 hover:text-danger focus-visible:opacity-100 group-hover:opacity-100 group-data-[highlighted]:opacity-100 pointer-coarse:opacity-100"
+                >
+                  <Trash2 size={14} />
+                </button>
               </Dropdown.Item>
             ))}
           </>
