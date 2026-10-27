@@ -112,6 +112,30 @@ export async function renamePlayground(id: string, name: string) {
   if (error) throw error;
 }
 
+/** Until the description column is added (see the migration), the dialog hides the description box. */
+let descriptionSupported = true;
+export const DESCRIPTION_MAX = 500;
+
+/** The playground's description, or undefined when the database has no description column yet. */
+export async function fetchDescription(id: string): Promise<string | undefined> {
+  if (!descriptionSupported) return undefined;
+  const { data, error } = await db().from("playgrounds").select("description").eq("id", id).single();
+  if (error && isMissingColumn(error.code)) {
+    descriptionSupported = false;
+    return undefined;
+  }
+  if (error) throw error;
+  return (data as { description: string | null }).description ?? "";
+}
+
+export async function updateDescription(id: string, description: string) {
+  const { error } = await db()
+    .from("playgrounds")
+    .update({ description: description.trim() || null })
+    .eq("id", id);
+  if (error) throw error;
+}
+
 export async function insertVersion(playgroundId: string, doc: PlaygroundDocument) {
   const { error } = await db().from("playground_versions").insert({ playground_id: playgroundId, document: doc });
   if (error) throw error;
