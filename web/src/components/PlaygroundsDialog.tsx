@@ -38,7 +38,7 @@ export function PlaygroundsDialog({ onClose, onSignIn }: { onClose: () => void; 
         {list.map((p) => (
           <li key={p.id} className={`group relative overflow-hidden rounded-control border ${p.id === cloudId ? "border-brand" : "border-line"}`}>
             <button onClick={() => void open(p.id)} className="block w-full text-left">
-              <div className="aspect-[8/5] bg-canvas">
+              <div className="aspect-[8/5] bg-white/10">
                 {p.thumbnail && <img src={p.thumbnail} alt="" className="size-full object-cover" />}
               </div>
               <div className="p-2">

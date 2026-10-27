@@ -66,9 +66,9 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
                     }`}
                   >
                     {p.thumbnail ? (
-                      <img src={p.thumbnail} alt="" className="aspect-[8/5] w-14 shrink-0 rounded-[3px] bg-canvas object-cover" />
+                      <img src={p.thumbnail} alt="" className="aspect-[8/5] w-14 shrink-0 rounded-[3px] bg-white/10 object-contain" />
                     ) : (
-                      <span className="aspect-[8/5] w-14 shrink-0 rounded-[3px] bg-canvas" />
+                      <span className="aspect-[8/5] w-14 shrink-0 rounded-[3px] bg-white/10" />
                     )}
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-sm font-medium">{p.name}</span>

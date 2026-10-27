@@ -26,7 +26,7 @@ function loadImage(url: string) {
   return p;
 }
 
-/** Renders a small JPEG data URL of the layout, or null if there's nothing to draw. */
+/** Renders a small WebP (PNG where WebP can't be encoded) data URL of the layout, or null if there's nothing to draw. */
 export async function renderThumbnail(items: Item[]): Promise<string | null> {
   if (!items.length) return null;
 
@@ -44,8 +44,7 @@ export async function renderThumbnail(items: Item[]): Promise<string | null> {
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext("2d")!;
-  ctx.fillStyle = "#f6f7f9";
-  ctx.fillRect(0, 0, W, H);
+  // Transparent background: the UI puts a light tint behind it that works on light and dark menus.
 
   const manifest = await useCatalog.getState().load();
   const images = await Promise.all(
@@ -81,7 +80,8 @@ export async function renderThumbnail(items: Item[]): Promise<string | null> {
   });
 
   try {
-    return canvas.toDataURL("image/jpeg", 0.7);
+    // WebP keeps the transparency and stays small. Browsers that can't encode it return PNG instead.
+    return canvas.toDataURL("image/webp", 0.8);
   } catch {
     return null; // tainted canvas (cross-origin images without CORS)
   }
