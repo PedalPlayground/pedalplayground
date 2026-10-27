@@ -18,6 +18,10 @@ import { Segmented } from "./SettingsMenu";
 
 type Visibility = "private" | "public";
 
+/** Shaded, borderless fields; focus shows a brand ring. */
+const field =
+  "rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted/70 focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
+
 /**
  * Name, visibility and delete for one playground. `target` is a saved playground picked from the menu;
  * without it, the dialog edits the open playground.
@@ -113,7 +117,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
         enterKeyHint="done"
         onChange={(e) => setName(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && void save()}
-        className="mb-4 h-9 w-full rounded-control border border-line px-3 text-sm outline-none focus:border-brand"
+        className={`mb-4 h-9 w-full px-3 ${field}`}
       />
 
       {startDetails && (
@@ -125,7 +129,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
             id="pg-type"
             value={type ?? ""}
             onChange={(e) => setType((e.target.value || null) as PlaygroundType | null)}
-            className={`mb-4 h-9 w-full rounded-control border border-line bg-surface px-2.5 text-sm outline-none focus:border-brand ${type ? "" : "text-ink-muted"}`}
+            className={`mb-4 h-9 w-full px-2.5 ${field} ${type ? "" : "text-ink-muted"}`}
           >
             <option value="">Choose a type…</option>
             {PLAYGROUND_TYPES.map(([value, label]) => (
@@ -150,7 +154,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
             rows={3}
             placeholder="What's this board for? Gear notes, power, anything."
             onChange={(e) => setDescription(e.target.value)}
-            className="mb-4 block w-full resize-none rounded-control border border-line px-3 py-2 text-sm outline-none placeholder:text-ink-muted/70 focus:border-brand"
+            className={`mb-4 block w-full resize-none px-3 py-2 ${field}`}
           />
         </>
       )}
@@ -184,7 +188,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
             {...plainField}
             aria-label="Share link"
             onFocus={(e) => e.target.select()}
-            className="h-8 min-w-0 flex-1 rounded-control border border-line px-2 text-xs"
+            className={`h-8 min-w-0 flex-1 px-2 ${field} text-xs`}
           />
           <button
             onClick={() => {
@@ -203,8 +207,8 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
 
       <div className="mt-4 flex items-center gap-2">
         {saved && (
-          <button onClick={() => void remove()} className="mr-auto h-9 rounded-control px-2 text-sm text-danger hover:bg-danger/10">
-            Delete
+          <button onClick={() => void remove()} className="mr-auto h-9 rounded-control text-sm text-danger outline-none hover:underline focus-visible:underline">
+            Delete Playground
           </button>
         )}
         <button onClick={onClose} className="ml-auto h-9 rounded-control px-3 text-sm text-ink-muted hover:bg-surface-hover">
