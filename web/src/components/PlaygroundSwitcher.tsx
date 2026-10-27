@@ -62,7 +62,7 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
                     aria-current={current || undefined}
                     onSelect={() => void openPlayground(p.id)}
                     className={`flex cursor-pointer select-none items-center gap-2.5 rounded-control p-1.5 outline-none ${
-                      current ? "bg-brand/10 data-[highlighted]:bg-brand/15" : "bg-surface-hover data-[highlighted]:bg-ink/10"
+                      current ? "bg-surface-hover data-[highlighted]:bg-ink/10" : "data-[highlighted]:bg-surface-hover"
                     }`}
                   >
                     {p.thumbnail ? (
