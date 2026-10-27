@@ -112,26 +112,42 @@ export async function renamePlayground(id: string, name: string) {
   if (error) throw error;
 }
 
-/** Until the description column is added (see the migration), the dialog hides the description box. */
-let descriptionSupported = true;
+/** Until the details columns are added (see the playground_details migration), the dialog hides those fields. */
+let detailsSupported = true;
 export const DESCRIPTION_MAX = 500;
 
-/** The playground's description, or undefined when the database has no description column yet. */
-export async function fetchDescription(id: string): Promise<string | undefined> {
-  if (!descriptionSupported) return undefined;
-  const { data, error } = await db().from("playgrounds").select("description").eq("id", id).single();
+/** Keep in step with the playgrounds_type_valid check in the playground_details migration. */
+export const PLAYGROUND_TYPES = [
+  ["guitar", "Guitar Pedalboard"],
+  ["bass", "Bass Pedalboard"],
+  ["synth", "Synth Pedalboard"],
+  ["collection", "Gear Collection"],
+  ["other", "Other"],
+] as const;
+export type PlaygroundType = (typeof PLAYGROUND_TYPES)[number][0];
+
+export interface PlaygroundDetails {
+  description: string;
+  type: PlaygroundType | null;
+}
+
+/** The playground's description and type, or undefined when the database has no columns for them yet. */
+export async function fetchDetails(id: string): Promise<PlaygroundDetails | undefined> {
+  if (!detailsSupported) return undefined;
+  const { data, error } = await db().from("playgrounds").select("description,playground_type").eq("id", id).single();
   if (error && isMissingColumn(error.code)) {
-    descriptionSupported = false;
+    detailsSupported = false;
     return undefined;
   }
   if (error) throw error;
-  return (data as { description: string | null }).description ?? "";
+  const row = data as { description: string | null; playground_type: PlaygroundType | null };
+  return { description: row.description ?? "", type: row.playground_type };
 }
 
-export async function updateDescription(id: string, description: string) {
+export async function updateDetails(id: string, details: PlaygroundDetails) {
   const { error } = await db()
     .from("playgrounds")
-    .update({ description: description.trim() || null })
+    .update({ description: details.description.trim() || null, playground_type: details.type })
     .eq("id", id);
   if (error) throw error;
 }

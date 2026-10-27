@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
-import { DESCRIPTION_MAX, fetchDescription, shareUrl, updateDescription, type PlaygroundSummary } from "../lib/cloud";
+import {
+  DESCRIPTION_MAX,
+  fetchDetails,
+  PLAYGROUND_TYPES,
+  shareUrl,
+  updateDetails,
+  type PlaygroundDetails,
+  type PlaygroundSummary,
+  type PlaygroundType,
+} from "../lib/cloud";
 import { plainField } from "../lib/inputProps";
 import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
@@ -30,21 +39,23 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [copied, setCopied] = useState(false);
-  /** Loaded from the account; undefined while loading, or when the database can't store one yet (box hidden). */
-  const [startDescription, setStartDescription] = useState<string | undefined>();
+  /** Loaded from the account; undefined while loading, or when the database can't store them yet (fields hidden). */
+  const [startDetails, setStartDetails] = useState<PlaygroundDetails | undefined>();
   const [description, setDescription] = useState("");
+  const [type, setType] = useState<PlaygroundType | null>(null);
 
   useEffect(() => {
     if (!saved || !id) return;
     let cancelled = false;
-    fetchDescription(id)
+    fetchDetails(id)
       .then((d) => {
-        if (cancelled || d === undefined) return;
-        setStartDescription(d);
-        setDescription(d);
+        if (cancelled || !d) return;
+        setStartDetails(d);
+        setDescription(d.description);
+        setType(d.type);
       })
       .catch(() => {
-        /* leave the box hidden */
+        /* leave the fields hidden */
       });
     return () => {
       cancelled = true;
@@ -59,8 +70,8 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
         const err = await cloud.rename(name, target?.id);
         if (err) return setError(err);
       }
-      if (id && startDescription !== undefined && description.trim() !== startDescription.trim()) {
-        await updateDescription(id, description);
+      if (id && startDetails && (description.trim() !== startDetails.description.trim() || type !== startDetails.type)) {
+        await updateDetails(id, { description, type });
       }
       const isPublic = visibility === "public";
       if (saved && id && isPublic !== startPublic) await cloud.setVisibility(id, isPublic);
@@ -105,8 +116,25 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
         className="mb-4 h-9 w-full rounded-control border border-line px-3 text-sm outline-none focus:border-brand"
       />
 
-      {startDescription !== undefined && (
+      {startDetails && (
         <>
+          <label className="mb-1 block text-xs text-ink-muted" htmlFor="pg-type">
+            Playground Type
+          </label>
+          <select
+            id="pg-type"
+            value={type ?? ""}
+            onChange={(e) => setType((e.target.value || null) as PlaygroundType | null)}
+            className={`mb-4 h-9 w-full rounded-control border border-line bg-surface px-2.5 text-sm outline-none focus:border-brand ${type ? "" : "text-ink-muted"}`}
+          >
+            <option value="">Choose a type…</option>
+            {PLAYGROUND_TYPES.map(([value, label]) => (
+              <option key={value} value={value} className="text-ink">
+                {label}
+              </option>
+            ))}
+          </select>
+
           <label className="mb-1 flex justify-between text-xs text-ink-muted" htmlFor="pg-description">
             Description
             {description.length > DESCRIPTION_MAX - 100 && (
