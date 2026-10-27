@@ -174,11 +174,14 @@ export function Canvas() {
       // The right-click menu has the keyboard while it's open (arrows move through it, Esc closes it).
       if (useContextMenu.getState().open) return;
       const s = usePlayground.getState();
-      const has = s.selected.length > 0;
+      // A shared playground being viewed only pans and zooms.
+      const viewOnly = !!useUi.getState().viewing;
+      const has = !viewOnly && s.selected.length > 0;
       const mod = e.metaKey || e.ctrlKey;
       const nudge = (e.shiftKey ? 8 : 1) / PX_PER_INCH;
       const key = e.key.toLowerCase();
 
+      if (viewOnly && !(e.code === "Space" || (e.shiftKey && e.code === "Digit1") || (mod && (key === "=" || key === "+" || key === "-")))) return;
       if (key === "contextmenu" || (e.shiftKey && key === "f10")) {
         // The keyboard way to open the right-click menu: on the selection if there is one, else mid-canvas.
         e.preventDefault();
@@ -272,7 +275,7 @@ export function Canvas() {
 
   /** Opens the right-click menu at a window point: the object menu if something is selected, else the canvas menu. */
   const openMenuAt = (clientX: number, clientY: number, onItem: boolean) => {
-    if (useUi.getState().mode !== "playground") return;
+    if (useUi.getState().mode !== "playground" || useUi.getState().viewing) return;
     const p = local({ clientX, clientY });
     const kind = onItem && usePlayground.getState().selected.length ? "object" : "canvas";
     openContextMenu({ kind, x: clientX, y: clientY, canvasX: p.x, canvasY: p.y });
@@ -312,7 +315,11 @@ export function Canvas() {
     // Touch: dragging a product moves it, dragging empty canvas pans (no marquee, no tool switching).
     const touch = e.pointerType === "touch";
 
-    if (tool === "hand" || spaceDown.current || e.button === 1) {
+    if (useUi.getState().viewing) {
+      // View-only: every drag pans (a touch tap does nothing).
+      gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: touch, moved: false };
+      setPanning(!touch);
+    } else if (tool === "hand" || spaceDown.current || e.button === 1) {
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY };
       setPanning(true);
     } else if (touch && !itemEl) {

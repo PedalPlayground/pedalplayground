@@ -11,10 +11,23 @@ export type Tool = "hand" | "select";
 export type Units = "in" | "mm";
 export type Theme = "system" | "light" | "dark";
 /** Why the upgrade dialog opened; changes its headline. */
-export type UpgradeReason = "menu" | "limit" | "save" | "avatar";
+export type UpgradeReason = "menu" | "limit" | "save" | "avatar" | "copy";
+
+/** A shared playground open from a link: shown view-only until the viewer makes a copy. */
+export interface SharedView {
+  id: string;
+  slug: string;
+  name: string;
+  ownerId: string;
+  /** The owner's username, when they have one. */
+  ownerName: string | null;
+}
 
 interface UiState {
   mode: Mode;
+  /** Set while a shared playground is open view-only. Edits, saving and autosave are off until it's copied or left. */
+  viewing: SharedView | null;
+  setViewing: (v: SharedView | null) => void;
   tool: Tool;
   units: Units;
   theme: Theme;
@@ -101,6 +114,8 @@ export function applyTheme(theme: Theme) {
 
 export const useUi = create<UiState>((set) => ({
   mode: "playground",
+  viewing: null,
+  setViewing: (viewing) => set({ viewing, searchOpen: false, replacing: false, editing: false }),
   tool: "select",
   units: savedUnits(),
   theme: savedTheme(),

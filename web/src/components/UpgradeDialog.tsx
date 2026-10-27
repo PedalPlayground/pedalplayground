@@ -17,6 +17,7 @@ const HEADLINE: Record<UpgradeReason, string> = {
   limit: "You've Used Your Free Playground",
   save: "This Playground Isn't Saved to Your Account",
   avatar: "Use Any Pedal as Your Avatar",
+  copy: "Make Your Own Copy",
 };
 
 const BLURB: Record<UpgradeReason, string> = {
@@ -24,10 +25,11 @@ const BLURB: Record<UpgradeReason, string> = {
   limit: "Free accounts keep one saved playground. Pro lets you save as many as you like.",
   save: "Free accounts keep one saved playground, so changes to this one are only stored on this device. Pro saves them all.",
   avatar: "Free accounts pick an avatar from our featured pedals. Pro lets you search the whole catalog for yours.",
+  copy: "Pro lets you copy any shared playground into your account and make it your own.",
 };
 
-const FREE = ["1 saved playground", "Share and fork playgrounds", "Every pedal and pedalboard", "Custom pedals and boards", "Featured pedal avatars"];
-const PRO = ["Unlimited saved playgrounds", "Any catalog pedal as your avatar", "Everything in Free"];
+const FREE = ["1 saved playground", "Share your playgrounds", "Every pedal and pedalboard", "Custom pedals and boards", "Featured pedal avatars"];
+const PRO = ["Unlimited saved playgrounds", "Copy shared playgrounds", "Any catalog pedal as your avatar", "Everything in Free"];
 
 interface PriceLabels {
   /** The price for each billing period, e.g. "$4 / month". */

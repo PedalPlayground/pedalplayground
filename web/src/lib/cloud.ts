@@ -207,11 +207,20 @@ export async function unsharePlayground(id: string) {
   if (error) throw error;
 }
 
-export async function fetchShared(slug: string): Promise<{ id: string; name: string; doc: PlaygroundDocument } | null> {
-  const pg = await db().from("playgrounds").select("id,name").eq("slug", slug).eq("is_public", true).maybeSingle();
+export interface SharedPlayground {
+  id: string;
+  name: string;
+  ownerId: string;
+  ownerName: string | null;
+  doc: PlaygroundDocument;
+}
+
+export async function fetchShared(slug: string): Promise<SharedPlayground | null> {
+  const pg = await db().from("playgrounds").select("id,name,owner_user_id").eq("slug", slug).eq("is_public", true).maybeSingle();
   if (pg.error) throw pg.error;
   if (!pg.data) return null;
-  return { ...pg.data, doc: await fetchLatestDocument(pg.data.id) };
+  const row = pg.data as { id: string; name: string; owner_user_id: string };
+  return { id: row.id, name: row.name, ownerId: row.owner_user_id, ownerName: null, doc: await fetchLatestDocument(row.id) };
 }
 
 export const shareUrl = (slug: string) => `${window.location.origin}${window.location.pathname}?p=${encodeURIComponent(slug)}`;

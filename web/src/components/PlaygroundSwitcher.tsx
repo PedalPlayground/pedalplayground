@@ -1,12 +1,14 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { useRef, useState } from "react";
 import { tip } from "./Tooltip";
-import { ChevronDown, Pencil, Plus } from "lucide-react";
+import { ArrowLeft, ChevronDown, Copy, Pencil, Plus } from "lucide-react";
 import type { PlaygroundSummary } from "../lib/cloud";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
+import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
+import { useUi } from "../store/ui";
 
 const item =
   "flex cursor-pointer select-none items-center gap-3 rounded-control px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-surface-hover";
@@ -113,8 +115,69 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
   );
 }
 
-/** Header center: "⌄ Playground name", which opens the playground menu (from Figma). */
-export function PlaygroundBreadcrumb({ className = "", onEdit, onSignIn }: MenuProps & { className?: string }) {
+/** Header center while a shared playground is viewed: "⌄ Name by owner", with Create a Copy and Back to My Playground. */
+function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn: () => void }) {
+  const viewing = useUi((u) => u.viewing)!;
+  const openUpgrade = useUi((u) => u.openUpgrade);
+  const user = useAuth((s) => s.user);
+  const { billingEnabled, entitlements } = useBilling();
+  const { copyShared, leaveShared } = useCloud();
+  // Copies are a Pro feature; without billing set up, nothing is gated.
+  const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
+  const owner = viewing.ownerName ?? "a Pedal Playground member";
+
+  const createCopy = () => {
+    if (!user) onSignIn();
+    else if (!canCopy) openUpgrade("copy");
+    else copyShared();
+  };
+
+  return (
+    <div className={`flex min-w-0 items-center text-sm/4 tracking-[-0.01em] ${className}`}>
+      <Dropdown.Root>
+        <Dropdown.Trigger
+          aria-label={`Shared playground: ${viewing.name} by ${owner}`}
+          className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
+        >
+          <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
+          <span className="truncate font-semibold">{viewing.name}</span>
+          <span className="shrink-0 text-ink-muted max-sm:hidden">by {owner}</span>
+        </Dropdown.Trigger>
+        <Dropdown.Portal>
+          <Dropdown.Content
+            side="bottom"
+            align="center"
+            sideOffset={8}
+            collisionPadding={12}
+            className="animate-menu z-50 w-72 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
+          >
+            <p className="px-2 pb-1.5 pt-1 text-xs text-ink-muted">
+              You're viewing a shared playground. Make a copy to edit it and save it to your account.
+            </p>
+            <Dropdown.Item className={item} onSelect={createCopy}>
+              <Copy size={14} />
+              <span className="flex-1">Create a Copy</span>
+              {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
+            </Dropdown.Item>
+            <Dropdown.Separator className="my-1 h-px bg-line" />
+            <Dropdown.Item className={item} onSelect={leaveShared}>
+              <ArrowLeft size={14} />
+              Back to My Playground
+            </Dropdown.Item>
+          </Dropdown.Content>
+        </Dropdown.Portal>
+      </Dropdown.Root>
+    </div>
+  );
+}
+
+/** Header center: the open playground's menu, or the shared playground being viewed. */
+export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & { className?: string }) {
+  const viewing = useUi((u) => !!u.viewing);
+  return viewing ? <SharedBreadcrumb className={className} onSignIn={props.onSignIn} /> : <OwnBreadcrumb className={className} {...props} />;
+}
+
+function OwnBreadcrumb({ className, onEdit, onSignIn }: MenuProps & { className: string }) {
   const name = usePlayground((s) => s.name);
   const [open, setOpen] = useState(false);
   /**

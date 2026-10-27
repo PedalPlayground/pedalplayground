@@ -63,21 +63,10 @@ function stripEmailLinkParams() {
 
 type Dialog = "account" | "edit" | "share" | "playgrounds" | "avatar" | null;
 
-/** Opens `?p=<slug>` as a fork, then strips the param so a reload keeps the viewer's edits. */
+/** Opens `?p=<slug>` view-only. The param stays while viewing, so a reload shows it again. */
 async function openSharedFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  const slug = params.get("p");
+  const slug = new URLSearchParams(window.location.search).get("p");
   if (!slug || !useAuth.getState().cloudEnabled) return;
-
-  const { items } = usePlayground.getState();
-  const { cloudId } = useCloud.getState();
-  const replaces = items.length > 0 && !cloudId;
-  if (replaces && !window.confirm("Open this shared playground? It will replace the board on your canvas.")) return;
-
-  params.delete("p");
-  const qs = params.toString();
-  window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""));
-
   try {
     if (!(await useCloud.getState().openShared(slug))) window.alert("That shared playground wasn't found or is no longer shared.");
   } catch {
@@ -102,6 +91,7 @@ export function App() {
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
   const hasSelection = usePlayground((s) => s.selected.length > 0);
+  const viewing = useUi((u) => !!u.viewing);
   const mode = useUi((u) => (SHOW_MODES ? u.mode : "playground"));
   /** The Equipment List and Signal Path cover the canvas and hide its tools. */
   const covered = mode !== "playground";
@@ -116,7 +106,8 @@ export function App() {
   // First visit on this device: once nothing else is asking for attention, show the tour after the UI settles.
   const startTour = useUi((u) => u.startTour);
   const upgradeOpen = useUi((u) => u.upgrade !== null);
-  const busy = confirming || !!billingReturn || dialog !== null || upgradeOpen;
+  // A shared playground opened from a link isn't the place for the tour (it would add a demo pedal to it).
+  const busy = confirming || !!billingReturn || dialog !== null || upgradeOpen || viewing;
   useEffect(() => {
     if (busy || tourSeen()) return;
     const t = setTimeout(startTour, 800);
@@ -231,7 +222,7 @@ export function App() {
             <ActionToast className="max-sm:hidden" />
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
             {searchOpen && <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} />}
-            <Toolbar onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
+            <Toolbar viewOnly={viewing} onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
           </div>
           )}
 

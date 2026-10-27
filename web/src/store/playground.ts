@@ -5,6 +5,7 @@ import type { Jacks, PedalTemplate } from "../lib/pedalTemplates";
 import { defaultSignal, normalizeSignal, removeItems, SignalError, type SignalGraph } from "../lib/signal";
 import type { CatalogItem, Item, PlaygroundDocument, Rotation, View } from "../lib/types";
 import { toast } from "./toast";
+import { useUi } from "./ui";
 
 const STORAGE_KEY = "pp:playground:v3";
 /** Zooming out stops here (8px per inch), so pedals never shrink to specks. */
@@ -513,6 +514,8 @@ export function startLocalAutosave() {
   let timer: ReturnType<typeof setTimeout> | undefined;
   const unsub = usePlayground.subscribe((s, prev) => {
     if (s.items === prev.items && s.signal === prev.signal && s.name === prev.name && s.view === prev.view) return;
+    // A shared playground being viewed isn't the user's; keep their own board in storage.
+    if (useUi.getState().viewing) return;
     clearTimeout(timer);
     timer = setTimeout(() => {
       try {

@@ -66,7 +66,8 @@ const SHOW_TOOL_SWITCH = false;
 
 const divider = <span className={barDivider} />;
 
-export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: () => void }) {
+/** `viewOnly` (a shared playground being viewed) keeps just the zoom controls. */
+export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () => void; onShare: () => void; viewOnly?: boolean }) {
   const { tool, setTool } = useUi();
   const zoomBy = usePlayground((s) => s.zoomBy);
   const fit = usePlayground((s) => s.fitToContent);
@@ -76,6 +77,8 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
   const canRedo = usePlayground((s) => s.future.length > 0);
   return (
     <div className={`flex max-w-full items-center gap-1.5 overflow-x-auto ${barPanel}`}>
+      {!viewOnly && (
+      <>
       <button
         onClick={onPlace}
         data-tour="add"
@@ -85,6 +88,8 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
         Add Gear
       </button>
       {divider}
+      </>
+      )}
       {/* Touch screens pan and select automatically, so the tool switch is only for mouse and trackpad. */}
       {SHOW_TOOL_SWITCH && (
         <span className="contents pointer-coarse:hidden">
@@ -111,6 +116,8 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
           <ZoomOut size={20} />
         </IconButton>
       </span>
+      {!viewOnly && (
+      <>
       {divider}
       <IconButton label="Undo" shortcut="⌘Z" disabled={!canUndo} onClick={undo}>
         <Undo2 size={17} />
@@ -123,6 +130,8 @@ export function Toolbar({ onPlace, onShare }: { onPlace: () => void; onShare: ()
         <SquareArrowOutUpRight size={14} strokeWidth={2.25} />
         Share
       </button>
+      </>
+      )}
     </div>
   );
 }

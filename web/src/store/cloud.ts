@@ -19,7 +19,8 @@ import { renderThumbnail } from "../lib/thumbnail";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "./auth";
 import { useBilling } from "./billing";
-import { usePlayground } from "./playground";
+import { restorePlayground, usePlayground } from "./playground";
+import { useUi } from "./ui";
 
 const META_KEY = "pp:cloud-meta";
 const AUTOSAVE_DEBOUNCE_MS = 1500;
@@ -66,7 +67,28 @@ interface CloudState extends Meta {
   shareById: (id: string) => Promise<string>;
   /** Adds a saved playground to the public gallery (sharing it too) or takes it out (any share link keeps working). */
   setInGallery: (id: string, inGallery: boolean) => Promise<void>;
+  /** Opens a shared playground view-only (or the user's own, normally). False when the link isn't shared. */
   openShared: (slug: string) => Promise<boolean>;
+  /** Closes the shared playground and brings back the user's own board. */
+  leaveShared: () => void;
+  /** Turns the shared playground being viewed into the user's own copy (Pro; the caller checks). */
+  copyShared: () => void;
+}
+
+/** Removes `?p=` once the shared playground is copied or left, so a reload doesn't reopen it. */
+function clearSharedParam() {
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has("p")) return;
+  params.delete("p");
+  const qs = params.toString();
+  window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""));
+}
+
+/** Opening or starting another playground leaves the shared one without restoring the old board first. */
+function endViewing() {
+  if (!useUi.getState().viewing) return;
+  useUi.getState().setViewing(null);
+  clearSharedParam();
 }
 
 /** What was last persisted (or loaded), so we only save real changes. */
@@ -108,7 +130,7 @@ export const useCloud = create<CloudState>((set, get) => {
 
     saveNow: async () => {
       const user = useAuth.getState().user;
-      if (!supabase || !user) return;
+      if (!supabase || !user || useUi.getState().viewing) return;
       if (saving) {
         saveAgain = true;
         return;
@@ -157,6 +179,7 @@ export const useCloud = create<CloudState>((set, get) => {
 
     openPlayground: async (id) => {
       const doc = await fetchLatestDocument(id);
+      endViewing();
       const row = get().list.find((p) => p.id === id);
       usePlayground.getState().loadDocument(doc, { undoable: true });
       if (row) usePlayground.getState().setName(row.name);
@@ -172,6 +195,7 @@ export const useCloud = create<CloudState>((set, get) => {
     },
 
     newPlayground: () => {
+      endViewing();
       usePlayground.getState().reset();
       lastSavedKey = contentKey();
       setMeta({ ...EMPTY_META });
@@ -249,15 +273,64 @@ export const useCloud = create<CloudState>((set, get) => {
     openShared: async (slug) => {
       const shared = await fetchShared(slug);
       if (!shared) return false;
-      usePlayground.getState().loadDocument(shared.doc, { undoable: true });
-      usePlayground.getState().setName(`${shared.name} (fork)`);
-      lastSavedKey = contentKey();
-      setMeta({ ...EMPTY_META, forkedFromId: shared.id });
-      set({ status: "idle" });
+      // Your own shared link just opens your playground.
+      if (shared.ownerId === useAuth.getState().user?.id) {
+        clearSharedParam();
+        await get().openPlayground(shared.id);
+        return true;
+      }
+      // View-only: the user's own board stays in storage and in the cloud, untouched, until they leave or copy.
+      useUi.getState().setViewing({ id: shared.id, slug, name: shared.name, ownerId: shared.ownerId, ownerName: shared.ownerName });
+      usePlayground.getState().loadDocument(shared.doc);
+      usePlayground.getState().setName(shared.name);
+      usePlayground.getState().fitToContent();
       return true;
+    },
+
+    leaveShared: () => {
+      if (!useUi.getState().viewing) return;
+      useUi.getState().setViewing(null);
+      clearSharedParam();
+      usePlayground.getState().reset();
+      restorePlayground();
+      // Undo shouldn't step back into the shared board.
+      usePlayground.setState({ past: [], future: [] });
+      usePlayground.getState().fitToContent();
+      lastSavedKey = contentKey();
+      void reconcileWithCloud();
+    },
+
+    copyShared: () => {
+      const viewing = useUi.getState().viewing;
+      if (!viewing) return;
+      useUi.getState().setViewing(null);
+      clearSharedParam();
+      // The copy becomes the open playground; the first save creates it and records where it came from.
+      setMeta({ ...EMPTY_META, forkedFromId: viewing.id });
+      usePlayground.getState().setName(`${viewing.name} (Copy)`);
+      lastSavedKey = "";
+      set({ status: "idle" });
+      void get().saveNow();
     },
   };
 });
+
+/**
+ * After sign-in (or leaving a shared playground): open the account's latest playground on a new device, or upload
+ * local work from before sign-in. Waits while a shared playground is being viewed, since that board isn't theirs.
+ */
+async function reconcileWithCloud() {
+  if (!useAuth.getState().user || useUi.getState().viewing) return;
+  const { cloudId, list } = useCloud.getState();
+  const { items } = usePlayground.getState();
+  if (cloudId) return;
+  if (items.length === 0 && list.length > 0) {
+    await useCloud.getState().openPlayground(list[0].id); // new device: pick up where they left off
+  } else if (items.length > 0) {
+    lastSavedKey = ""; // local work from before sign-in: upload it
+    void useCloud.getState().saveNow();
+  }
+}
 
 /**
  * Wires cloud sync: autosave on edits, and reconciles local vs cloud state when the user signs in.
@@ -269,7 +342,7 @@ export function startCloudSync() {
 
   const unsubPlayground = usePlayground.subscribe((s, prev) => {
     if (s.items === prev.items && s.signal === prev.signal && s.name === prev.name) return;
-    if (!useAuth.getState().user) return;
+    if (!useAuth.getState().user || useUi.getState().viewing) return;
     clearTimeout(timer);
     timer = setTimeout(() => void useCloud.getState().saveNow(), AUTOSAVE_DEBOUNCE_MS);
   });
@@ -292,16 +365,7 @@ export function startCloudSync() {
       useCloud.setState({ ...EMPTY_META });
     }
     await Promise.all([useCloud.getState().refreshList(), useBilling.getState().refresh()]);
-
-    const { cloudId, list } = useCloud.getState();
-    const { items } = usePlayground.getState();
-    if (cloudId) return;
-    if (items.length === 0 && list.length > 0) {
-      await useCloud.getState().openPlayground(list[0].id); // new device: pick up where they left off
-    } else if (items.length > 0) {
-      lastSavedKey = ""; // local work from before sign-in: upload it
-      void useCloud.getState().saveNow();
-    }
+    await reconcileWithCloud();
   };
 
   const unsubAuth = useAuth.subscribe(() => void onAuth());
