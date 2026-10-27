@@ -160,7 +160,6 @@ export function App() {
         <PlaygroundBreadcrumb
           className="sm:justify-self-center"
           onRename={() => setDialog("rename")}
-          onAll={() => setDialog("playgrounds")}
           onSignIn={() => setDialog("account")}
         />
         <div className="flex items-center justify-end gap-2 sm:gap-3">
