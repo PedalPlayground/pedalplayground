@@ -62,6 +62,8 @@ interface CloudState extends Meta {
   share: () => Promise<string>;
   stopSharing: () => Promise<void>;
   remove: (id: string) => Promise<void>;
+  /** Shares a saved playground (the open one or another) and returns its link's slug. */
+  shareById: (id: string) => Promise<string>;
   /** Adds a saved playground to the public gallery (sharing it too) or takes it out (any share link keeps working). */
   setInGallery: (id: string, inGallery: boolean) => Promise<void>;
   openShared: (slug: string) => Promise<boolean>;
@@ -218,6 +220,13 @@ export const useCloud = create<CloudState>((set, get) => {
       await unsharePlayground(cloudId);
       setMeta({ isPublic: false });
       void get().refreshList();
+    },
+
+    shareById: async (id) => {
+      if (id === get().cloudId) return get().share();
+      const slug = await sharePlayground(id);
+      await get().refreshList();
+      return slug;
     },
 
     setInGallery: async (id, inGallery) => {

@@ -1,9 +1,11 @@
+import { Check, Copy } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
   DESCRIPTION_MAX,
   fetchDetails,
   fetchInGallery,
   PLAYGROUND_TYPES,
+  shareUrl,
   updateDetails,
   type PlaygroundDetails,
   type PlaygroundSummary,
@@ -14,6 +16,7 @@ import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { Modal } from "./Modal";
+import { tip } from "./Tooltip";
 
 /** Shaded, borderless fields; focus shows a brand ring. */
 const field =
@@ -39,6 +42,11 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
   /** Loaded like the details; undefined hides the switch. */
   const [startGallery, setStartGallery] = useState<boolean | undefined>();
   const [inGallery, setGallery] = useState(false);
+  /** The share link's slug once the playground is shared; null until then. */
+  const startShared = target ? target.is_public : cloud.isPublic;
+  const [slug, setSlug] = useState<string | null>(startShared ? (target ? target.slug : cloud.slug) : null);
+  const [sharing, setSharing] = useState(false);
+  const [copied, setCopied] = useState(false);
   /** Loaded from the account; undefined while loading, or when the database can't store them yet (fields hidden). */
   const [startDetails, setStartDetails] = useState<PlaygroundDetails | undefined>();
   const [description, setDescription] = useState("");
@@ -159,6 +167,45 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
             onChange={(e) => setDescription(e.target.value)}
             className={`mb-4 block w-full resize-none px-3 py-2 ${field}`}
           />
+        </>
+      )}
+
+      {saved && (
+        <>
+          <span className="mb-1 block text-xs text-ink-muted">Share Link</span>
+          {slug ? (
+            <button
+              type="button"
+              aria-label="Copy share link"
+              onClick={() => {
+                void navigator.clipboard?.writeText(shareUrl(slug));
+                setCopied(true);
+                setTimeout(() => setCopied(false), 1500);
+              }}
+              {...tip(copied ? "Copied" : "Copy Link")}
+              className={`mb-4 flex h-9 w-full items-center gap-2 px-3 text-left ${field}`}
+            >
+              <span className="min-w-0 flex-1 truncate">{shareUrl(slug)}</span>
+              {copied ? <Check size={14} className="shrink-0 text-brand" /> : <Copy size={14} className="shrink-0 text-ink-muted" />}
+            </button>
+          ) : (
+            <button
+              type="button"
+              disabled={sharing || !id}
+              onClick={() => {
+                if (!id) return;
+                setSharing(true);
+                cloud
+                  .shareById(id)
+                  .then(setSlug)
+                  .catch((e: unknown) => setError(e instanceof Error ? e.message : "Could not create a share link."))
+                  .finally(() => setSharing(false));
+              }}
+              className={`mb-4 flex h-9 w-full items-center px-3 text-left text-brand disabled:opacity-60 ${field}`}
+            >
+              {sharing ? "Creating Link…" : "Create Share Link"}
+            </button>
+          )}
         </>
       )}
 
