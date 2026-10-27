@@ -11,6 +11,8 @@ import { Segmented } from "./SettingsMenu";
 const field =
   "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand";
 const primary = "h-9 w-full disabled:opacity-50 btn-primary";
+const secondary =
+  "mt-2 h-9 w-full rounded-control bg-surface-hover text-sm font-medium outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand";
 const label = "mb-1 block text-xs text-ink-muted";
 const linkButton = "text-sm text-brand hover:underline disabled:opacity-50";
 
@@ -164,19 +166,6 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
 
       {cloudEnabled && !user && step === "form" && (
         <>
-          <div className="mb-4">
-            <Segmented
-              label="Sign in or create an account"
-              value={tab}
-              onChange={switchTab}
-              options={[
-                ["signin", "Sign In"],
-                ["create", "Create Account"],
-              ]}
-              wide
-            />
-          </div>
-
           {tab === "signin" ? (
             <form
               onSubmit={(e) => {
@@ -201,9 +190,20 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
                 placeholder="you@example.com"
                 className={`${field} mb-3`}
               />
-              <label className={label} htmlFor="acct-password">
-                Password
-              </label>
+              <div className="mb-1 flex items-baseline justify-between">
+                <label className="text-xs text-ink-muted" htmlFor="acct-password">
+                  Password
+                </label>
+                {/* Emails a sign-in code: for a forgotten password, or an account made with an email link. */}
+                <button
+                  type="button"
+                  disabled={busy}
+                  onClick={() => (emailOk ? void send() : setError("Enter your email first, and we'll send you a sign-in code."))}
+                  className="text-xs text-brand hover:underline disabled:opacity-50"
+                >
+                  Forgot Password?
+                </button>
+              </div>
               <input
                 id="acct-password"
                 type="password"
@@ -216,12 +216,9 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
               <button type="submit" disabled={!emailOk || !password || busy} className={primary}>
                 {busy ? "Signing In…" : "Sign In"}
               </button>
-              <p className="mt-3 text-center text-sm text-ink-muted">
-                No password, or forgot it?{" "}
-                <button type="button" disabled={!emailOk || busy} onClick={() => void send()} className={linkButton}>
-                  Email Me a Sign-In Code
-                </button>
-              </p>
+              <button type="button" onClick={() => switchTab("create")} className={secondary}>
+                Create an Account
+              </button>
             </form>
           ) : (
             <form
@@ -304,6 +301,12 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
               >
                 {busy ? "Creating…" : method === "password" ? "Create Account" : "Email Me a Link"}
               </button>
+              <p className="mt-3 text-center text-sm text-ink-muted">
+                Already have an account?{" "}
+                <button type="button" onClick={() => switchTab("signin")} className={linkButton}>
+                  Sign In
+                </button>
+              </p>
             </form>
           )}
         </>
