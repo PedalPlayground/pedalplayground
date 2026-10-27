@@ -1,6 +1,8 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
+import { useRef, useState } from "react";
 import { tip } from "./Tooltip";
-import { Check, ChevronDown, Trash2 } from "lucide-react";
+import { ChevronDown, Pencil, Plus } from "lucide-react";
+import type { PlaygroundSummary } from "../lib/cloud";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
@@ -9,26 +11,27 @@ import { usePlayground } from "../store/playground";
 const item =
   "flex cursor-pointer select-none items-center gap-3 rounded-control px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
-function Thumb({ src }: { src: string | null | undefined }) {
-  return src ? (
-    <img src={src} alt="" className="size-8 shrink-0 rounded object-cover ring-1 ring-line" />
-  ) : (
-    <span className="size-8 shrink-0 rounded bg-canvas ring-1 ring-line" />
-  );
+type MenuProps = { onEdit: (target?: PlaygroundSummary) => void; onSignIn: () => void };
+
+const cardAction =
+  "grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/10 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
+
+/** "Edited Oct 27", or with the year once it's not this year. */
+function edited(iso: string) {
+  const d = new Date(iso);
+  const sameYear = d.getFullYear() === new Date().getFullYear();
+  return `Edited ${d.toLocaleDateString(undefined, { month: "short", day: "numeric", ...(sameYear ? {} : { year: "numeric" }) })}`;
 }
 
-type MenuProps = { onRename: () => void; onSignIn: () => void };
-
-/** The playground menu's items: rename, the user's playgrounds, new, and (signed out) sign in. */
-function MenuContent({ onRename, onSignIn }: MenuProps) {
+/** The playground menu: the user's playgrounds as cards (open, edit), new, and (signed out) sign in. */
+function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onCloseAutoFocus: (e: Event) => void }) {
   const user = useAuth((s) => s.user);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
-  const { list, cloudId, openPlayground, remove } = useCloud();
-  const confirmDelete = (id: string, name: string) => {
-    const open = id === cloudId ? " It's open now, so the canvas will be cleared." : "";
-    if (!window.confirm(`Delete "${name}"? This can't be undone.${open}`)) return;
-    void remove(id).catch((e: unknown) => window.alert(e instanceof Error ? e.message : "Could not delete that playground."));
-  };
+  const { list, cloudId, openPlayground } = useCloud();
+  const cards = user ? list.slice(0, 6) : [];
+  // The open playground has its own card when it's saved; otherwise edit it from the top item.
+  const openHasCard = cards.some((p) => p.id === cloudId);
+
   return (
     <Dropdown.Portal>
       <Dropdown.Content
@@ -36,38 +39,65 @@ function MenuContent({ onRename, onSignIn }: MenuProps) {
         align="center"
         sideOffset={8}
         collisionPadding={12}
-        className="animate-menu z-50 w-72 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
+        onCloseAutoFocus={onCloseAutoFocus}
+        className="animate-menu z-50 w-80 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
       >
-        <Dropdown.Item className={item} onSelect={onRename}>
-          Rename…
-        </Dropdown.Item>
-        <Dropdown.Separator className="my-1 h-px bg-line" />
-        {user && list.length > 0 && (
+        {!openHasCard && (
           <>
-            <Dropdown.Label className="px-2 py-1 text-xs text-ink-muted">Your Playgrounds</Dropdown.Label>
-            {list.slice(0, 6).map((p) => (
-              <Dropdown.Item key={p.id} className={`group ${item}`} onSelect={() => void openPlayground(p.id)}>
-                <Thumb src={p.thumbnail} />
-                <span className="min-w-0 flex-1 truncate">{p.name}</span>
-                {p.id === cloudId && <Check size={14} className="text-brand" />}
-                <button
-                  aria-label={`Delete ${p.name}`}
-                  {...tip("Delete")}
-                  // Its own click: don't also open the playground.
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    confirmDelete(p.id, p.name);
-                  }}
-                  className="-my-1 -mr-1 grid size-7 shrink-0 place-items-center rounded-control text-ink-muted opacity-0 outline-none hover:bg-danger/10 hover:text-danger focus-visible:opacity-100 group-hover:opacity-100 group-data-[highlighted]:opacity-100 pointer-coarse:opacity-100"
-                >
-                  <Trash2 size={14} />
-                </button>
-              </Dropdown.Item>
-            ))}
+            <Dropdown.Item className={item} onSelect={() => onEdit()}>
+              Edit Playground…
+            </Dropdown.Item>
+            <Dropdown.Separator className="my-1 h-px bg-line" />
+          </>
+        )}
+        {cards.length > 0 && (
+          <>
+            <Dropdown.Label className="px-2 pb-1.5 pt-1 text-xs text-ink-muted">Your Playgrounds</Dropdown.Label>
+            <div className="flex flex-col gap-1">
+              {cards.map((p) => {
+                const current = p.id === cloudId;
+                return (
+                  <Dropdown.Item
+                    key={p.id}
+                    aria-current={current || undefined}
+                    onSelect={() => void openPlayground(p.id)}
+                    className={`flex cursor-pointer select-none items-center gap-2.5 rounded-control border p-1.5 outline-none data-[highlighted]:bg-surface-hover ${
+                      current ? "border-brand bg-brand/5" : "border-line"
+                    }`}
+                  >
+                    {p.thumbnail ? (
+                      <img src={p.thumbnail} alt="" className="aspect-[8/5] w-14 shrink-0 rounded-[3px] bg-canvas object-cover" />
+                    ) : (
+                      <span className="aspect-[8/5] w-14 shrink-0 rounded-[3px] bg-canvas" />
+                    )}
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate text-sm font-medium">{p.name}</span>
+                      <span className="block truncate text-xs text-ink-muted">
+                        {current ? "Open now" : edited(p.updated_at)}
+                        {p.is_public && " · Public"}
+                      </span>
+                    </span>
+                    {/* Its own click: don't also open the playground. */}
+                    <button
+                      aria-label={`Edit ${p.name}`}
+                      {...tip("Edit")}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onEdit(p);
+                      }}
+                      className={cardAction}
+                    >
+                      <Pencil size={14} />
+                    </button>
+                  </Dropdown.Item>
+                );
+              })}
+            </div>
+            <Dropdown.Separator className="my-1 h-px bg-line" />
           </>
         )}
         <Dropdown.Item className={item} onSelect={requestNewPlayground}>
+          <Plus size={14} />
           New Playground
         </Dropdown.Item>
         {cloudEnabled && !user && (
@@ -84,11 +114,17 @@ function MenuContent({ onRename, onSignIn }: MenuProps) {
 }
 
 /** Header center: "⌄ Playground name", which opens the playground menu (from Figma). */
-export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & { className?: string }) {
+export function PlaygroundBreadcrumb({ className = "", onEdit, onSignIn }: MenuProps & { className?: string }) {
   const name = usePlayground((s) => s.name);
+  const [open, setOpen] = useState(false);
+  /**
+   * What to edit once the menu has closed. The dialog opens only then: opened sooner, the menu's focus trap and
+   * focus return pull focus out of the dialog's name field. `null` means nothing to open.
+   */
+  const pending = useRef<{ target?: PlaygroundSummary } | null>(null);
   return (
     <div className={`flex min-w-0 items-center text-sm/4 font-semibold tracking-[-0.01em] ${className}`}>
-      <Dropdown.Root>
+      <Dropdown.Root open={open} onOpenChange={setOpen}>
         <Dropdown.Trigger
           aria-label={`Playground: ${name}`}
           {...tip("Switch Playgrounds")}
@@ -97,7 +133,20 @@ export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & {
           <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
           <span className="truncate">{name}</span>
         </Dropdown.Trigger>
-        <MenuContent {...props} />
+        <MenuContent
+          onEdit={(target) => {
+            pending.current = { target };
+            setOpen(false);
+          }}
+          onCloseAutoFocus={(e) => {
+            if (!pending.current) return;
+            e.preventDefault();
+            const { target } = pending.current;
+            pending.current = null;
+            onEdit(target);
+          }}
+          onSignIn={onSignIn}
+        />
       </Dropdown.Root>
     </div>
   );

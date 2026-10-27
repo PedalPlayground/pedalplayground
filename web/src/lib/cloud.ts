@@ -105,6 +105,13 @@ export async function touchPlayground(id: string, name: string, thumbnail: strin
   if (error) throw error;
 }
 
+/** Renames a playground without touching its content or thumbnail (for ones that aren't open). */
+export async function renamePlayground(id: string, name: string) {
+  const { error } = await db().from("playgrounds").update({ name }).eq("id", id);
+  if (error?.code === UNIQUE_VIOLATION) throw new DuplicateNameError("You already have a playground with that name.");
+  if (error) throw error;
+}
+
 export async function insertVersion(playgroundId: string, doc: PlaygroundDocument) {
   const { error } = await db().from("playground_versions").insert({ playground_id: playgroundId, document: doc });
   if (error) throw error;

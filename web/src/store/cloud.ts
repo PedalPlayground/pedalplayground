@@ -2,6 +2,7 @@ import { create } from "zustand";
 import {
   createPlayground,
   deletePlayground,
+  renamePlayground,
   DuplicateNameError,
   fetchLatestDocument,
   fetchShared,
@@ -55,10 +56,13 @@ interface CloudState extends Meta {
   saveNow: () => Promise<void>;
   openPlayground: (id: string) => Promise<void>;
   newPlayground: () => void;
-  rename: (name: string) => Promise<string | null>;
+  /** Renames the open playground, or another saved one when `id` is given. Returns an error message or null. */
+  rename: (name: string, id?: string) => Promise<string | null>;
   share: () => Promise<string>;
   stopSharing: () => Promise<void>;
   remove: (id: string) => Promise<void>;
+  /** Makes a saved playground public (anyone with the link can open a copy) or private again. */
+  setVisibility: (id: string, isPublic: boolean) => Promise<void>;
   openShared: (slug: string) => Promise<boolean>;
 }
 
@@ -171,10 +175,19 @@ export const useCloud = create<CloudState>((set, get) => {
       set({ status: "idle" });
     },
 
-    rename: async (name) => {
+    rename: async (name, id) => {
       const trimmed = name.trim();
       if (!trimmed) return "Name can't be empty.";
       const { cloudId, ownerId } = get();
+      if (id && id !== cloudId) {
+        try {
+          await renamePlayground(id, trimmed);
+        } catch (e) {
+          return e instanceof DuplicateNameError ? e.message : "Could not rename that playground.";
+        }
+        await get().refreshList();
+        return null;
+      }
       const user = useAuth.getState().user;
       if (supabase && user && cloudId && ownerId === user.id) {
         try {
@@ -204,6 +217,17 @@ export const useCloud = create<CloudState>((set, get) => {
       await unsharePlayground(cloudId);
       setMeta({ isPublic: false });
       void get().refreshList();
+    },
+
+    setVisibility: async (id, isPublic) => {
+      if (id === get().cloudId) {
+        if (isPublic) await get().share();
+        else await get().stopSharing();
+        return;
+      }
+      if (isPublic) await sharePlayground(id);
+      else await unsharePlayground(id);
+      await get().refreshList();
     },
 
     remove: async (id) => {

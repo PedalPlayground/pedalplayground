@@ -33,7 +33,7 @@ function Switch({ on, label }: { on: boolean; label: string }) {
 }
 
 /** A compact segmented control; the highlight slides to the chosen option. */
-function Segmented<T extends string>({
+export function Segmented<T extends string>({
   label,
   value,
   onChange,

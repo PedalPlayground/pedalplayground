@@ -14,7 +14,8 @@ import { LogoMark } from "./components/Logo";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
 import { PlaygroundBreadcrumb } from "./components/PlaygroundSwitcher";
-import { RenameDialog } from "./components/RenameDialog";
+import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
+import type { PlaygroundSummary } from "./lib/cloud";
 import { SaveStatus } from "./components/SaveStatus";
 import { SearchPanel } from "./components/SearchPanel";
 import { SHOW_MODES, tourSeen, useUi } from "./store/ui";
@@ -60,7 +61,7 @@ function stripEmailLinkParams() {
   window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""));
 }
 
-type Dialog = "account" | "rename" | "share" | "playgrounds" | "avatar" | null;
+type Dialog = "account" | "edit" | "share" | "playgrounds" | "avatar" | null;
 
 /** Opens `?p=<slug>` as a fork, then strips the param so a reload keeps the viewer's edits. */
 async function openSharedFromUrl() {
@@ -106,6 +107,8 @@ export function App() {
   const covered = mode !== "playground";
   const [dialog, setDialog] = useState<Dialog>(null);
   const close = () => setDialog(null);
+  /** The saved playground being edited from the menu; undefined edits the open one. */
+  const [editingPlayground, setEditingPlayground] = useState<PlaygroundSummary | undefined>();
   const [emailLink] = useState(readEmailLinkParams);
   const [confirming, setConfirming] = useState(!!emailLink);
   const [billingReturn, setBillingReturn] = useState(readBillingReturn);
@@ -159,7 +162,10 @@ export function App() {
         </div>
         <PlaygroundBreadcrumb
           className="sm:justify-self-center"
-          onRename={() => setDialog("rename")}
+          onEdit={(target) => {
+            setEditingPlayground(target);
+            setDialog("edit");
+          }}
           onSignIn={() => setDialog("account")}
         />
         <div className="flex items-center justify-end gap-2 sm:gap-3">
@@ -243,7 +249,7 @@ export function App() {
       {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}
       {dialog === "account" && <AccountDialog onClose={close} />}
       {dialog === "avatar" && <AvatarDialog onClose={close} />}
-      {dialog === "rename" && <RenameDialog onClose={close} />}
+      {dialog === "edit" && <EditPlaygroundDialog onClose={close} target={editingPlayground} />}
       {dialog === "share" && <ShareDialog onClose={close} onSignIn={() => setDialog("account")} />}
       {dialog === "playgrounds" && <PlaygroundsDialog onClose={close} onSignIn={() => setDialog("account")} />}
     </div>
