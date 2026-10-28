@@ -281,6 +281,28 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   const typed = query.trim();
   const showCustom = edit || custom !== null;
 
+  // Make your own: for gear that isn't in the catalog. Pictured as a custom Hammond-style pedal.
+  const makeOwn = (
+    <button
+      tabIndex={-1}
+      onClick={() => setCustom({ name: typed.slice(0, 40), kind: kindFilter ?? "pedal" })}
+      className="flex w-full items-center gap-3 rounded-control p-2 text-left transition-colors hover:bg-surface-hover active:bg-chrome-line"
+    >
+      <span className="relative size-16 shrink-0">
+        <span className="grid size-full place-items-center rounded-control bg-canvas">
+          <HammondThumb />
+        </span>
+        <span className="absolute -bottom-1 -right-1 grid size-5 place-items-center rounded-full bg-brand text-white shadow-sm">
+          <Plus size={13} strokeWidth={3} />
+        </span>
+      </span>
+      <span className="min-w-0">
+        <span className="block text-sm font-medium leading-snug">Make Your Own</span>
+        <span className="block text-xs text-ink-muted">A pedal or pedalboard with custom dimensions</span>
+      </span>
+    </button>
+  );
+
   const body = (
     <>
       {/* Title and close, then (except when editing a custom item) the shaded search field. */}
@@ -376,29 +398,8 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       <>
       <ul id="search-results" role="listbox" className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2">
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
-        {/* First row: make your own, for gear that isn't in the catalog. Pictured as a custom Hammond-style pedal. */}
-        {!target && (
-          <li role="presentation">
-            <button
-              tabIndex={-1}
-              onClick={() => setCustom({ name: typed.slice(0, 40), kind: kindFilter ?? "pedal" })}
-              className="flex w-full items-center gap-3 rounded-control p-2 text-left transition-colors hover:bg-surface-hover active:bg-chrome-line"
-            >
-              <span className="relative size-16 shrink-0">
-                <span className="grid size-full place-items-center rounded-control bg-canvas">
-                  <HammondThumb />
-                </span>
-                <span className="absolute -bottom-1 -right-1 grid size-5 place-items-center rounded-full bg-brand text-white shadow-sm">
-                  <Plus size={13} strokeWidth={3} />
-                </span>
-              </span>
-              <span className="min-w-0">
-                <span className="block text-sm font-medium leading-snug">Make Your Own</span>
-                <span className="block text-xs text-ink-muted">A pedal or pedalboard with custom dimensions</span>
-              </span>
-            </button>
-          </li>
-        )}
+        {/* Phones: the first row. Larger screens dock it at the bottom of the panel instead. */}
+        {!target && phone && <li role="presentation">{makeOwn}</li>}
         {error && <li className="p-3 text-sm text-danger">{error}</li>}
         {catalog && !browsing && (hits.length === 0 || partial) && (
           <li className={`animate-enter flex flex-col items-center gap-3 px-3 text-center [--enter-y:4px] ${partial ? "pb-3 pt-2" : "py-6"}`}>
@@ -484,6 +485,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           </li>
         )}
       </ul>
+      {!target && !phone && <div className="border-t border-line p-2">{makeOwn}</div>}
       </>
       )}
     </>
