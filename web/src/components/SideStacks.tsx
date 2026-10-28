@@ -5,6 +5,7 @@ import {
   ChevronsLeft,
   ChevronsRight,
   Fullscreen,
+  Group,
   Lock,
   LockOpen,
   Pencil,
@@ -13,14 +14,17 @@ import {
   Replace,
   RotateCw,
   SquareArrowOutUpRight,
+  MoveHorizontal,
   Trash2,
   Undo2,
+  Ungroup,
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
-import { useState, type ReactNode } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import { itemName } from "../lib/itemName";
-import { usePlayground } from "../store/playground";
+import { plainField } from "../lib/inputProps";
+import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { barPanel } from "./toolbarStyles";
@@ -143,15 +147,68 @@ function Shell({
   );
 }
 
+const MM_PER_INCH = 25.4;
+/** The last custom gap used (in inches), so the next "Space By…" starts there. */
+let lastGap = 0.25;
+
+/** "Space By…": type a gap in the current units and the selection lines up left to right with exactly that between them. */
+function SpaceByEditor({ onClose }: { onClose: () => void }) {
+  const units = useUi((u) => u.units);
+  const spaceByGap = usePlayground((s) => s.spaceByGap);
+  const [value, setValue] = useState(units === "mm" ? String(Math.round(lastGap * MM_PER_INCH)) : String(+lastGap.toFixed(3)));
+  const input = useRef<HTMLInputElement>(null);
+  const gap = parseFloat(value);
+  const apply = () => {
+    if (!(gap >= 0)) return;
+    const inches = units === "mm" ? gap / MM_PER_INCH : gap;
+    lastGap = inches;
+    spaceByGap(inches);
+    onClose();
+  };
+  return (
+    <form
+      className="flex items-center gap-1.5 px-1 pb-1"
+      onSubmit={(e) => {
+        e.preventDefault();
+        apply();
+      }}
+    >
+      <label className="flex h-8 min-w-0 flex-1 items-center gap-1 rounded-[5px] bg-surface-hover px-2 focus-within:ring-2 focus-within:ring-brand">
+        <input
+          ref={input}
+          autoFocus
+          aria-label={`Gap between items (${units})`}
+          inputMode="decimal"
+          {...plainField}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          onKeyDown={(e) => e.key === "Escape" && (e.stopPropagation(), onClose())}
+          onFocus={(e) => e.target.select()}
+          className="h-full min-w-0 flex-1 bg-transparent text-right text-[13px] outline-none"
+        />
+        <span aria-hidden className="text-xs text-ink-muted">
+          {units}
+        </span>
+      </label>
+      <button type="submit" disabled={!(gap >= 0)} className="h-8 rounded-[5px] px-2.5 text-[13px] btn-primary disabled:opacity-50">
+        Apply
+      </button>
+    </form>
+  );
+}
+
 /** Left side: what you can do with the selected gear. Slides clear of the gear panel when that's open. */
 export function ObjectStack() {
   const s = usePlayground();
   const setReplacing = useUi((u) => u.setReplacing);
   const setEditing = useUi((u) => u.setEditing);
   const [collapsed, toggle] = useCollapsed("left");
+  const [spacing, setSpacing] = useState(false);
   if (!s.selected.length) return null;
   const single = s.selected.length === 1 ? s.items.find((i) => i.id === s.selected[0]) : undefined;
-  const locked = s.items.filter((i) => s.selected.includes(i.id)).every((i) => i.locked);
+  const picked = s.items.filter((i) => s.selected.includes(i.id));
+  const locked = picked.every((i) => i.locked);
+  const grouped = isOneGroup(picked);
   const row = { collapsed, side: "right" as const };
   return (
     <Shell
@@ -165,7 +222,33 @@ export function ObjectStack() {
     >
       <Row {...row} icon={locked ? <Lock size={16} /> : <LockOpen size={16} />} label={locked ? "Unlock" : "Lock in Place"} shortcut="L" onClick={s.toggleLockSelected} pressed={locked} />
       <Row {...row} icon={<RotateCw size={16} />} label="Rotate 90°" shortcut="R" onClick={s.rotateSelected} />
+      {s.selected.length >= 2 && (
+        <Row
+          {...row}
+          icon={grouped ? <Ungroup size={16} /> : <Group size={16} />}
+          label={grouped ? "Ungroup" : "Group"}
+          shortcut="⌘G"
+          onClick={s.toggleGroupSelected}
+          pressed={grouped}
+        />
+      )}
       {s.selected.length >= 3 && <Row {...row} icon={<AlignHorizontalSpaceBetween size={16} />} label="Space Evenly" onClick={s.distributeHorizontally} />}
+      {s.selected.length >= 2 && (
+        <>
+          <Row
+            {...row}
+            icon={<MoveHorizontal size={16} />}
+            label="Space By…"
+            onClick={() => {
+              // Collapsed, there's no room for the field: open the stack first.
+              if (collapsed) toggle();
+              setSpacing((o) => !o);
+            }}
+            pressed={spacing && !collapsed}
+          />
+          {spacing && !collapsed && <SpaceByEditor onClose={() => setSpacing(false)} />}
+        </>
+      )}
       <Divider />
       <Row {...row} icon={<ArrowUpToLine size={16} />} label="Move Forward" shortcut="]" onClick={s.bringForward} />
       <Row {...row} icon={<ArrowDownToLine size={16} />} label="Move Back" shortcut="[" onClick={s.sendBackward} />

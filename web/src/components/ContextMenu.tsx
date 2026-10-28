@@ -1,6 +1,8 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import {
   AlignHorizontalSpaceBetween,
+  Group,
+  Ungroup,
   ArrowDownToLine,
   ArrowUpToLine,
   BringToFront,
@@ -20,7 +22,7 @@ import {
 } from "lucide-react";
 import { useEffect, type ReactNode } from "react";
 import { create } from "zustand";
-import { usePlayground } from "../store/playground";
+import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { hideTip, platformKeys } from "./Tooltip";
 import { itemName } from "../lib/itemName";
@@ -123,6 +125,14 @@ function ObjectItems() {
         onSelect={s.toggleLockSelected}
       />
       <Row icon={<RotateCw {...ICON} />} label="Rotate 90°" shortcut="R" onSelect={s.rotateSelected} />
+      {selected.length >= 2 && (
+        <Row
+          icon={isOneGroup(selected) ? <Ungroup {...ICON} /> : <Group {...ICON} />}
+          label={isOneGroup(selected) ? "Ungroup" : "Group"}
+          shortcut="⌘G"
+          onSelect={s.toggleGroupSelected}
+        />
+      )}
       {selected.length >= 3 && (
         <Row icon={<AlignHorizontalSpaceBetween {...ICON} />} label="Space Evenly" onSelect={s.distributeHorizontally} />
       )}

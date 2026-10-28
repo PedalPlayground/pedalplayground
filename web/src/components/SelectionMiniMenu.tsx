@@ -1,7 +1,7 @@
-import { Ellipsis, Lock, LockOpen, RotateCw } from "lucide-react";
+import { Ellipsis, Group, Lock, LockOpen, RotateCw, Ungroup } from "lucide-react";
 import { useRef } from "react";
 import { itemBounds, PX_PER_INCH } from "../lib/geometry";
-import { usePlayground } from "../store/playground";
+import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { openContextMenu } from "./ContextMenu";
 import { tip } from "./Tooltip";
@@ -33,6 +33,8 @@ export function SelectionMiniMenu() {
   const below = bottom + GAP;
   const y = below + H > s.viewport.h - 8 ? Math.max(8, top - GAP - H) : below;
   const locked = chosen.every((i) => i.locked);
+  const several = chosen.length > 1;
+  const grouped = several && isOneGroup(chosen);
 
   const more = () => {
     const el = wrap.current;
@@ -65,9 +67,22 @@ export function SelectionMiniMenu() {
       >
         {locked ? <Lock size={16} /> : <LockOpen size={16} />}
       </button>
-      <button aria-label="Rotate 90°" {...tip("Rotate 90°", { shortcut: "R", side: "bottom" })} onClick={s.rotateSelected} className={`${barIconButton} ${barIconIdle}`}>
-        <RotateCw size={16} />
-      </button>
+      {/* With several pieces selected, grouping takes Rotate's place. */}
+      {several ? (
+        <button
+          aria-label={grouped ? "Ungroup" : "Group"}
+          aria-pressed={grouped}
+          {...tip(grouped ? "Ungroup" : "Group", { shortcut: grouped ? "⇧⌘G" : "⌘G", side: "bottom" })}
+          onClick={s.toggleGroupSelected}
+          className={`${barIconButton} ${grouped ? barIconActive : barIconIdle}`}
+        >
+          {grouped ? <Ungroup size={16} /> : <Group size={16} />}
+        </button>
+      ) : (
+        <button aria-label="Rotate 90°" {...tip("Rotate 90°", { shortcut: "R", side: "bottom" })} onClick={s.rotateSelected} className={`${barIconButton} ${barIconIdle}`}>
+          <RotateCw size={16} />
+        </button>
+      )}
       <button aria-label="More" aria-haspopup="menu" {...tip("More", { side: "bottom" })} onClick={more} className={`${barIconButton} ${barIconIdle}`}>
         <Ellipsis size={16} />
       </button>

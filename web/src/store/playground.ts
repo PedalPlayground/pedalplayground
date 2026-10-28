@@ -77,6 +77,10 @@ interface PlaygroundState {
   deleteSelected: () => void;
   /** Spaces 3+ selected items so the gaps between them are equal; the leftmost and rightmost stay put. */
   distributeHorizontally: () => void;
+  /** Lines the selection up left to right with exactly `gap` inches between neighbors, keeping the leftmost where it is. */
+  spaceByGap: (gap: number) => void;
+  /** Groups the selected items (two or more), or ungroups them when they're already one group. */
+  toggleGroupSelected: () => void;
   /** Locks the selection, or unlocks it if every selected item is already locked. */
   toggleLockSelected: () => void;
   bringForward: () => void;
@@ -105,6 +109,15 @@ const DEFAULT_VIEW: View = { x: 80, y: 80, zoom: 1 };
 export const DEFAULT_NAME = "Untitled Playground";
 
 /** Pushes the current items and signal path onto the undo stack and clears redo. */
+/** The ids plus everything grouped with any of them. */
+function withGroupmates(items: Item[], ids: string[]): string[] {
+  const groups = new Set(items.filter((i) => ids.includes(i.id) && i.groupId).map((i) => i.groupId));
+  return groups.size ? items.filter((i) => ids.includes(i.id) || (i.groupId && groups.has(i.groupId))).map((i) => i.id) : ids;
+}
+
+/** True when the items are exactly one group (they all share a group id). */
+export const isOneGroup = (items: Item[]) => items.length > 1 && !!items[0].groupId && items.every((i) => i.groupId === items[0].groupId);
+
 const record = (s: Pick<PlaygroundState, "past" | "items" | "signal">) => ({
   past: [...s.past.slice(-(HISTORY_LIMIT - 1)), { items: s.items, signal: s.signal }],
   future: [] as Snapshot[],
@@ -328,9 +341,13 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     }),
 
   select: (id, additive) =>
-    set((s) => ({
-      selected: additive ? (s.selected.includes(id) ? s.selected.filter((x) => x !== id) : [...s.selected, id]) : [id],
-    })),
+    set((s) => {
+      // Picking one piece of a group picks the whole group.
+      const ids = withGroupmates(s.items, [id]);
+      if (!additive) return { selected: ids };
+      const all = ids.every((x) => s.selected.includes(x));
+      return { selected: all ? s.selected.filter((x) => !ids.includes(x)) : [...new Set([...s.selected, ...ids])] };
+    }),
   updateGear: (id, patch) =>
     set((s) => {
       const item = s.items.find((i) => i.id === id);
@@ -392,7 +409,10 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     }),
 
   selectMany: (ids, additive) =>
-    set((s) => ({ selected: additive ? [...new Set([...s.selected, ...ids])] : ids })),
+    set((s) => {
+      const all = withGroupmates(s.items, ids);
+      return { selected: additive ? [...new Set([...s.selected, ...all])] : all };
+    }),
 
   rotateSelected: () =>
     set((s) => ({
@@ -417,6 +437,34 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         cursor += e.b.right - e.b.left + gap;
       }
       return { ...record(s), items: s.items.map((i) => (shift.has(i.id) ? { ...i, x: i.x + shift.get(i.id)! } : i)) };
+    }),
+  spaceByGap: (gap) =>
+    set((s) => {
+      const picked = s.items.filter((i) => s.selected.includes(i.id) && !i.locked);
+      if (picked.length < 2 || !(gap >= 0)) return {};
+      const sorted = picked.map((item) => ({ item, b: itemBounds(item) })).sort((a, b) => a.b.left - b.b.left);
+      const shift = new Map<string, number>();
+      let cursor = sorted[0].b.left;
+      for (const e of sorted) {
+        shift.set(e.item.id, cursor - e.b.left);
+        cursor += e.b.right - e.b.left + gap;
+      }
+      return { ...record(s), items: s.items.map((i) => (shift.has(i.id) ? { ...i, x: i.x + shift.get(i.id)! } : i)) };
+    }),
+  toggleGroupSelected: () =>
+    set((s) => {
+      const picked = s.items.filter((i) => s.selected.includes(i.id));
+      if (picked.length < 2) return {};
+      const one = isOneGroup(picked);
+      const id = crypto.randomUUID();
+      return {
+        ...record(s),
+        items: s.items.map((i) => {
+          if (!s.selected.includes(i.id)) return i;
+          const { groupId: _old, ...rest } = i;
+          return one ? rest : { ...rest, groupId: id };
+        }),
+      };
     }),
   toggleLockSelected: () =>
     set((s) => {

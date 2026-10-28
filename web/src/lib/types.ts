@@ -45,6 +45,8 @@ export interface Item {
   jacks?: Jacks;
   /** Custom pedalboards: border, thickness, top surface and border finish. Missing means the original look. */
   board?: Partial<BoardStyle>;
+  /** Grouped items share a groupId: selecting one selects them all, so they move and edit together. */
+  groupId?: string;
   /** Locked items stay put: they can be selected but not dragged, nudged or distributed. */
   locked?: boolean;
   /** Equipment List: "wanted" means the user still needs to buy it. Missing means they own it. */

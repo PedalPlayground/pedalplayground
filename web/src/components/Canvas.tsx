@@ -5,7 +5,7 @@ import { gridLayers } from "../lib/scale";
 import { snapMove, type Guides } from "../lib/snap";
 import type { Item } from "../lib/types";
 import { useCatalog } from "../store/catalog";
-import { usePlayground } from "../store/playground";
+import { isOneGroup, usePlayground } from "../store/playground";
 import { openContextMenu, useContextMenu } from "./ContextMenu";
 import { CustomItemView } from "./CustomItem";
 import { isMac, tip } from "./Tooltip";
@@ -235,6 +235,10 @@ export function Canvas() {
       else if ((key === "delete" || key === "backspace" || (key === "d" && !mod)) && has) {
         e.preventDefault();
         s.deleteSelected();
+      } else if (key === "g" && mod && has && s.selected.length > 1) {
+        e.preventDefault(); // ⌘G groups, ⇧⌘G ungroups (the toggle ungroups when it's already one group)
+        const picked = s.items.filter((i) => s.selected.includes(i.id));
+        if (e.shiftKey === isOneGroup(picked)) s.toggleGroupSelected();
       } else if (key === "g" && !mod && !e.altKey) {
         // G opens Add Gear, unless a dialog, menu or the panel already has the screen.
         const ui = useUi.getState();

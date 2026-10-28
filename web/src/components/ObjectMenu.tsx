@@ -1,6 +1,6 @@
-import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Lock, LockOpen, Pencil, Replace, RotateCw, Trash2 } from "lucide-react";
+import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Group, Lock, LockOpen, Pencil, Replace, RotateCw, Trash2, Ungroup } from "lucide-react";
 import type { ReactNode } from "react";
-import { usePlayground } from "../store/playground";
+import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { itemName } from "../lib/itemName";
@@ -65,6 +65,15 @@ export function ObjectMenu() {
       <Action label="Rotate 90°" shortcut="R" onClick={s.rotateSelected}>
         <RotateCw size={18} />
       </Action>
+      {s.selected.length >= 2 && (
+        <Action
+          label={isOneGroup(s.items.filter((i) => s.selected.includes(i.id))) ? "Ungroup" : "Group"}
+          shortcut="⌘G"
+          onClick={s.toggleGroupSelected}
+        >
+          {isOneGroup(s.items.filter((i) => s.selected.includes(i.id))) ? <Ungroup size={18} /> : <Group size={18} />}
+        </Action>
+      )}
       {s.selected.length >= 3 && (
         <Action label="Space Evenly" onClick={s.distributeHorizontally}>
           <AlignHorizontalSpaceBetween size={18} />
