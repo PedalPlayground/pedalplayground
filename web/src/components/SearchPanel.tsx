@@ -25,6 +25,10 @@ import { CustomItemForm } from "./CustomItemForm";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { plainField } from "../lib/inputProps";
+import { DEFAULT_PEDAL_COLOR } from "../lib/color";
+import { PX_PER_INCH } from "../lib/geometry";
+import { templateInfo } from "../lib/pedalTemplates";
+import { PedalArt } from "./PedalArt";
 
 /** One catalog product with its kind, so pedals and pedalboards can share a list. */
 interface Entry {
@@ -52,6 +56,21 @@ const SWIPE_CLOSE = 80;
 /** Or how fast (px per ms) a flick has to be. */
 const FLICK_CLOSE = 0.5;
 const SHEET_MS = 220;
+
+/** The custom pedal form's Hammond style, drawn small for the "Custom Pedal or Pedalboard" row. */
+function HammondThumb() {
+  const t = templateInfo("hammond");
+  const w = t.width * PX_PER_INCH;
+  const h = t.height * PX_PER_INCH;
+  const scale = 52 / Math.max(w, h);
+  return (
+    <span className="relative block" style={{ width: w * scale, height: h * scale }}>
+      <span className="absolute left-0 top-0 origin-top-left" style={{ width: w, height: h, transform: `scale(${scale})` }}>
+        <PedalArt template="hammond" jacks={t.jacks ?? undefined} w={w} h={h} color={DEFAULT_PEDAL_COLOR} label="Custom" />
+      </span>
+    </span>
+  );
+}
 
 /**
  * Adds products to the canvas; with `replace`, picks a replacement for the selected product instead.
@@ -372,7 +391,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       ) : (
       <ul id="search-results" role="listbox" className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2">
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
-        {/* First row: make your own, for gear that isn't in the catalog. Pictured as a bare Hammond enclosure. */}
+        {/* First row: make your own, for gear that isn't in the catalog. Pictured as a custom Hammond-style pedal. */}
         {!target && (
           <li role="presentation">
             <button
@@ -381,12 +400,9 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
               className="flex w-full items-center gap-3 rounded-control p-2 text-left transition-colors hover:bg-surface-hover active:bg-chrome-line"
             >
               <span className="relative size-16 shrink-0">
-                <img
-                  src={thumbUrl(catalog, "pedal", "hammond-1590b") ?? undefined}
-                  alt=""
-                  loading="lazy"
-                  className="size-full rounded-control bg-canvas object-contain"
-                />
+                <span className="grid size-full place-items-center rounded-control bg-canvas">
+                  <HammondThumb />
+                </span>
                 <span className="absolute -bottom-1 -right-1 grid size-5 place-items-center rounded-full bg-brand text-white shadow-sm">
                   <Plus size={13} strokeWidth={3} />
                 </span>
