@@ -92,7 +92,7 @@ function ItemView({ item }: { item: Item }) {
   return (
     <div
       data-item-id={item.id}
-      {...tip(itemName(item))}
+      {...tip(itemName(item), { canvas: true })}
       className="absolute"
       style={{
         left: item.x * PX_PER_INCH,

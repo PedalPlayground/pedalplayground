@@ -10,6 +10,8 @@ interface Tip {
   side: Side;
   /** Shown right after another tooltip, so it appears without the entrance animation. */
   warm: boolean;
+  /** Styled like the action toasts: quiet text on a faint canvas-colored backing (for labels over the canvas). */
+  canvas?: boolean;
 }
 
 const useTip = create<{ tip: Tip | null }>(() => ({ tip: null }));
@@ -25,7 +27,7 @@ export const isMac = typeof navigator !== "undefined" && /Mac|iPhone|iPad/.test(
 /** Shortcuts are written with ⌘; other platforms read "Ctrl+" ("Ctrl +" before a plus or minus). */
 export const platformKeys = (s: string) => (isMac ? s : s.replace(/⌘(?=[+−])/g, "Ctrl ").replace(/⌘/g, "Ctrl+"));
 
-function show(el: Element, label: string, shortcut: string | undefined, side: Side | undefined, immediate: boolean) {
+function show(el: Element, label: string, shortcut: string | undefined, side: Side | undefined, immediate: boolean, canvas?: boolean) {
   clearTimeout(timer);
   const warm = !!useTip.getState().tip || Date.now() - lastHidden < WARM_MS;
   const open = () => {
@@ -33,7 +35,7 @@ function show(el: Element, label: string, shortcut: string | undefined, side: Si
     const rect = el.getBoundingClientRect();
     // Default to below for things near the top of the screen, above for everything else.
     const s = side ?? (rect.top < 80 ? "bottom" : "top");
-    useTip.setState({ tip: { label, shortcut: shortcut && platformKeys(shortcut), rect, side: s, warm } });
+    useTip.setState({ tip: { label, shortcut: shortcut && platformKeys(shortcut), rect, side: s, warm, canvas } });
   };
   if (warm || immediate) open();
   else timer = setTimeout(open, DELAY_MS);
@@ -51,15 +53,15 @@ export function hideTip() {
  * Props that give an element a tooltip. Spread them onto a button (or a Radix trigger). Mouse and keyboard
  * focus only: touch screens never show tooltips, since there's no hover to dismiss them.
  */
-export function tip(label: string, opts: { shortcut?: string; side?: Side } = {}) {
+export function tip(label: string, opts: { shortcut?: string; side?: Side; canvas?: boolean } = {}) {
   return {
     onPointerEnter: (e: PointerEvent<Element>) => {
-      if (e.pointerType === "mouse") show(e.currentTarget, label, opts.shortcut, opts.side, false);
+      if (e.pointerType === "mouse") show(e.currentTarget, label, opts.shortcut, opts.side, false, opts.canvas);
     },
     onPointerLeave: hideTip,
     onPointerDown: hideTip,
     onFocus: (e: FocusEvent<Element>) => {
-      if (e.currentTarget.matches(":focus-visible")) show(e.currentTarget, label, opts.shortcut, opts.side, true);
+      if (e.currentTarget.matches(":focus-visible")) show(e.currentTarget, label, opts.shortcut, opts.side, true, opts.canvas);
     },
     onBlur: hideTip,
   };
@@ -115,7 +117,11 @@ export function TooltipLayer() {
       ref={ref}
       role="tooltip"
       key={`${t.label}-${t.rect.left}-${t.rect.top}`}
-      className={`pointer-events-none fixed z-[100] flex items-center gap-1.5 whitespace-nowrap rounded-[5px] bg-tip px-2 py-1 text-xs font-medium text-tip-ink shadow-[0_2px_8px_rgb(0_0_0/0.15)] ${
+      className={`pointer-events-none fixed z-[100] flex items-center gap-1.5 whitespace-nowrap ${
+        t.canvas
+          ? "rounded-full bg-canvas/70 px-3 py-1 text-[13px] font-medium tracking-[-0.01em] text-ink-muted backdrop-blur-sm"
+          : "rounded-[5px] bg-tip px-2 py-1 text-xs font-medium text-tip-ink shadow-[0_2px_8px_rgb(0_0_0/0.15)]"
+      } ${
         t.warm ? "" : `animate-enter ${enter}`
       }`}
       style={pos ? { left: pos.left, top: pos.top } : { left: 0, top: 0, visibility: "hidden" }}
