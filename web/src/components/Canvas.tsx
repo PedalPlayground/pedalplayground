@@ -97,7 +97,9 @@ function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
   const sw = HALO_STROKE / zoom;
   const r = Math.min(12 / zoom, w / 2, h / 2);
   // The outline breaks at the top center for a small group badge, like the lock's.
-  const g = (GROUP_ICON / 2 + 5) / zoom;
+  const locked = items.every((i) => i.locked);
+  const badges = locked ? 2 : 1;
+  const g = ((badges * GROUP_ICON + (badges - 1) * 5) / 2 + 5) / zoom;
   const [x0, y0, x1, y1, cx] = [sw / 2, sw / 2, w - sw / 2, h - sw / 2, w / 2];
   const d =
     `M${cx + g} ${y0}H${x1 - r}A${r} ${r} 0 0 1 ${x1} ${y0 + r}V${y1 - r}A${r} ${r} 0 0 1 ${x1 - r} ${y1}` +
@@ -112,7 +114,7 @@ function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
       <path d={d} fill="none" stroke="var(--color-apricot)" strokeWidth={sw} />
       {/* The Group glyph (corner brackets around two overlapping boxes), centered on the top edge. */}
       <g
-        transform={`translate(${cx - icon / 2} ${y0 - icon / 2}) scale(${icon / 24})`}
+        transform={`translate(${cx - (locked ? icon * 1.17 : icon / 2)} ${y0 - icon / 2}) scale(${icon / 24})`}
         fill="none"
         stroke="var(--color-apricot)"
         strokeWidth={2.25}
@@ -126,6 +128,13 @@ function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
         <rect width="7" height="5" x="7" y="7" rx="1" />
         <rect width="7" height="5" x="10" y="12" rx="1" />
       </g>
+      {/* Locked group: the lock sits beside it, drawn like a single locked item's. */}
+      {locked && (
+        <g transform={`translate(${cx + (5 / 2) / zoom} ${y0 - icon / 2}) scale(${icon / 12})`} fill="none" stroke="var(--color-apricot)">
+          <path d="M3.5 5.5V4a2.5 2.5 0 0 1 5 0v1.5" strokeWidth={1.6} />
+          <rect x={1.75} y={5} width={8.5} height={6.5} rx={1.5} fill="var(--color-apricot)" stroke="none" />
+        </g>
+      )}
     </svg>
   );
 }
