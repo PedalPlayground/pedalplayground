@@ -403,6 +403,7 @@ export function Canvas() {
       if (!g.started) {
         if (Math.hypot(rawX, rawY) < (g.touch ? TAP_SLOP_PX : DRAG_START_PX)) return;
         g.started = true;
+        useUi.setState({ dragging: true });
         lastTap.current = null; // a drag isn't a tap
         s.beginTransaction(); // the whole drag is one undo step
       }
@@ -453,6 +454,7 @@ export function Canvas() {
     const g = gesture.current;
     if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) usePlayground.getState().clearSelection();
     if (ref.current?.hasPointerCapture(e.pointerId)) ref.current.releasePointerCapture(e.pointerId);
+    if (useUi.getState().dragging) useUi.setState({ dragging: false });
     gesture.current = null; // a lifted pinch finger shouldn't turn into a drag, so just end
     setMarquee(null);
     setGuides(NO_GUIDES);

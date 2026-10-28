@@ -19,6 +19,7 @@ import { PlaygroundBreadcrumb } from "./components/PlaygroundSwitcher";
 import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
 import type { PlaygroundSummary } from "./lib/cloud";
 import { SaveStatus } from "./components/SaveStatus";
+import { SelectionMiniMenu } from "./components/SelectionMiniMenu";
 import { SearchPanel } from "./components/SearchPanel";
 import { SHOW_MODES, tourSeen, useUi } from "./store/ui";
 import { ObjectMenu } from "./components/ObjectMenu";
@@ -34,7 +35,7 @@ import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
 import { Toolbar } from "./components/Toolbar";
-import { useMediaQuery } from "./lib/viewport";
+import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
 import { UpgradeDialog } from "./components/UpgradeDialog";
 import { UsernamePrompt } from "./components/UsernamePrompt";
 import { BETA, FEEDBACK_URL } from "./lib/beta";
@@ -106,6 +107,7 @@ export function App() {
   const viewing = useUi((u) => !!u.viewing);
   /** Larger screens get side stacks and a lone Add Gear button; smaller ones keep the bars. */
   const wide = useMediaQuery(WIDE_QUERY);
+  const phoneSized = useMediaQuery(PHONE_QUERY);
   const mode = useUi((u) => (SHOW_MODES ? u.mode : "playground"));
   /** The Equipment List and Signal Path cover the canvas and hide its tools. */
   const covered = mode !== "playground";
@@ -230,6 +232,7 @@ export function App() {
               ) : (
                 <ObjectMenu />
               )}
+              {phoneSized ? null : <SelectionMiniMenu />}
               <ContextMenu />
             </>
           )}
