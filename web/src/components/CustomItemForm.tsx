@@ -15,10 +15,10 @@ import {
   type PedalTemplate,
   type PedalTemplateInfo,
 } from "../lib/pedalTemplates";
-import { formatSize } from "../lib/units";
+import { formatLength } from "../lib/units";
 import type { Item } from "../lib/types";
 import { usePlayground } from "../store/playground";
-import { useUi } from "../store/ui";
+import { useUi, type Units } from "../store/ui";
 import { CustomBoard } from "./CustomItem";
 import { PedalArt } from "./PedalArt";
 import { tip } from "./Tooltip";
@@ -28,10 +28,6 @@ const MM_PER_INCH = 25.4;
 const MAX_INCHES = 60;
 /** Suggested custom pedalboard size, in inches. */
 const BOARD_SIZE = { width: 24, height: 12.5 };
-
-/** Shaded, borderless fields, like the rest of the app's forms. */
-const field =
-  "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand max-sm:text-base";
 
 /** Draws a custom pedal or board at its real size, scaled down to fit a `boxW` × `boxH` px box. */
 function Preview({
@@ -90,6 +86,66 @@ function StylePreview({
     return <span className="grid h-11 place-items-center text-[10px] text-ink-muted">Check size</span>;
   }
   return <Preview kind="pedal" template={template.id} jacks={jacks} width={foot.width} height={foot.height} color={color} label={label} boxW={72} boxH={44} />;
+}
+
+/**
+ * The custom item at scale with dimension lines like a technical drawing: width below the item, height to its right,
+ * each with end ticks and its length. Sizes are the full footprint (jacks included).
+ */
+function TechDrawing({
+  kind,
+  template,
+  jacks,
+  width,
+  height,
+  color,
+  label,
+  units,
+}: {
+  kind: Item["kind"];
+  template: PedalTemplate;
+  jacks: Jacks | undefined;
+  width: number;
+  height: number;
+  color: string;
+  label: string;
+  units: Units;
+}) {
+  const BOX_W = 150;
+  const BOX_H = kind === "pedal" ? 120 : 80;
+  const w = width * PX_PER_INCH;
+  const h = height * PX_PER_INCH;
+  const scale = Math.min(BOX_W / w, BOX_H / h);
+  const pw = w * scale;
+  const ph = h * scale;
+  const GAP = 8; // item edge to dimension line
+  const TICK = 4;
+  const line = "stroke-ink-muted";
+  return (
+    <div className="relative" style={{ width: pw + GAP + 34, height: ph + GAP + 18 }}>
+      <Preview kind={kind} template={template} jacks={jacks} width={width} height={height} color={color} label={label} boxW={pw} boxH={ph} />
+      <svg className="absolute inset-0 overflow-visible" width={pw + GAP + 34} height={ph + GAP + 18} aria-hidden>
+        {/* Width, below. */}
+        <g className={line} strokeWidth={1}>
+          <line x1={0} x2={pw} y1={ph + GAP} y2={ph + GAP} />
+          <line x1={0} x2={0} y1={ph + GAP - TICK} y2={ph + GAP + TICK} />
+          <line x1={pw} x2={pw} y1={ph + GAP - TICK} y2={ph + GAP + TICK} />
+        </g>
+        {/* Height, to the right. */}
+        <g className={line} strokeWidth={1}>
+          <line x1={pw + GAP} x2={pw + GAP} y1={0} y2={ph} />
+          <line x1={pw + GAP - TICK} x2={pw + GAP + TICK} y1={0} y2={0} />
+          <line x1={pw + GAP - TICK} x2={pw + GAP + TICK} y1={ph} y2={ph} />
+        </g>
+      </svg>
+      <span className="absolute -translate-x-1/2 text-[11px] tabular-nums text-ink-muted" style={{ left: pw / 2, top: ph + GAP + 4 }}>
+        {formatLength(width, units)}
+      </span>
+      <span className="absolute -translate-y-1/2 text-[11px] tabular-nums text-ink-muted" style={{ left: pw + GAP + 6, top: ph / 2 }}>
+        {formatLength(height, units)}
+      </span>
+    </div>
+  );
 }
 
 const RAINBOW = "conic-gradient(#ff4d4d, #ffd84d, #4dff88, #4dd8ff, #6b4dff, #ff4dd8, #ff4d4d)";
@@ -164,7 +220,8 @@ export function CustomItemForm({
   const [jackSide, setJackSide] = useState(hasSideJacks(initialJacks));
   // Until the user picks jacks themselves, each style brings its usual ones.
   const [jacksPicked, setJacksPicked] = useState(!!item);
-  const [name, setName] = useState(item ? (item.kind === "pedal" ? item.label : "") : (initialName ?? ""));
+  // No name field: a custom pedal keeps its existing name, or the search text it was made from.
+  const [name] = useState(item ? (item.kind === "pedal" ? item.label : "") : (initialName ?? ""));
   const [color, setColor] = useState(item?.color ?? NEW_PEDAL_COLOR);
   const [error, setError] = useState<string | null>(null);
 
@@ -232,12 +289,14 @@ export function CustomItemForm({
 
   return (
     <form
-      className="space-y-3 p-3"
+      // Fields scroll; the drawing and the buttons stay anchored at the bottom.
+      className="flex h-full min-h-0 flex-col"
       onSubmit={(e) => {
         e.preventDefault();
         submit();
       }}
     >
+      <div className="min-h-0 flex-1 space-y-3 overflow-y-auto overscroll-contain p-3">
       {!item && (
         <div className="flex gap-1">
           {(["pedal", "pedalboard"] as const).map((k) => (
@@ -256,12 +315,6 @@ export function CustomItemForm({
         </div>
       )}
 
-      {kind === "pedal" && (
-        <label className="block text-xs text-ink-muted">
-          Name (optional)
-          <input className={`${field} mt-1`} {...plainField} autoCapitalize="words" enterKeyHint="done" value={name} maxLength={40} onChange={(e) => setName(e.target.value)} autoFocus={!item} />
-        </label>
-      )}
 
       {kind === "pedal" && (
         <div>
@@ -366,10 +419,7 @@ export function CustomItemForm({
 
       {kind === "pedal" && (
         <div>
-          <div className="mb-1 flex justify-between text-xs text-ink-muted">
-            Jacks
-            {sizeOk && <span>Footprint {formatSize(foot.width, foot.height, units)}</span>}
-          </div>
+          <div className="mb-1 text-xs text-ink-muted">Jacks</div>
           <div className="flex gap-1.5">
             {jackButton(jackTop, setJackTop, "Top", `Jacks on top add ${jackDepth} to the height`)}
             {jackButton(jackSide, setJackSide, "Sides", `Side jacks add ${jackDepth} to each side`)}
@@ -377,6 +427,16 @@ export function CustomItemForm({
         </div>
       )}
 
+      </div>
+
+      <div className="shrink-0 space-y-3 border-t border-line p-3">
+        <div className="grid place-items-center rounded-control bg-canvas py-3">
+          {sizeOk ? (
+            <TechDrawing kind={kind} template={template} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} units={units} />
+          ) : (
+            <span className="py-6 text-xs text-ink-muted">Check the width and height</span>
+          )}
+        </div>
       {error && <p className="text-sm text-danger">{error}</p>}
       <button type="submit" className="h-9 w-full btn-primary">
         {item ? "Save Changes" : kind === "pedal" ? "Add Custom Pedal" : "Add Custom Pedalboard"}
@@ -386,6 +446,7 @@ export function CustomItemForm({
           Back to Search
         </button>
       )}
+      </div>
     </form>
   );
 }
