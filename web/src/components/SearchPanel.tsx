@@ -485,7 +485,13 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           </li>
         )}
       </ul>
-      {!target && !phone && <div className="border-t border-line p-2">{makeOwn}</div>}
+      {/* Floats over the end of the list like a lifted result; the list fades out behind it. */}
+      {!target && !phone && (
+        <div className="relative px-2 pb-2">
+          <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-surface to-transparent" />
+          <div className="rounded-control bg-surface shadow-[0_2px_12px_rgb(0_0_0/0.18)] ring-1 ring-line">{makeOwn}</div>
+        </div>
+      )}
       </>
       )}
     </>
