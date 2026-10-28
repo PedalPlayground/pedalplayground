@@ -178,70 +178,74 @@ export function CustomItemForm({
       )}
 
       {kind === "pedal" && (
+        <label className="block text-xs text-ink-muted">
+          Name (optional)
+          <input className={`${field} mt-1`} {...plainField} autoCapitalize="words" enterKeyHint="done" value={name} maxLength={40} onChange={(e) => setName(e.target.value)} autoFocus={!item} />
+        </label>
+      )}
+
+      {kind === "pedal" && (
         <div>
           <div className="mb-1 text-xs text-ink-muted">Style</div>
+          {/* Just the pictures; each style's name and hint are in its tooltip. */}
           <div className="grid grid-cols-3 gap-1.5">
             {PEDAL_TEMPLATES.map((t) => (
               <button
                 type="button"
                 key={t.id}
+                aria-label={t.name}
                 aria-pressed={template === t.id}
-                {...tip(t.hint)}
+                {...tip(`${t.name}: ${t.hint}`)}
                 onClick={() => pickTemplate(t.id)}
-                className={`press flex flex-col items-center gap-1 rounded-control border px-1 pb-1.5 pt-2 text-xs transition-colors ${
-                  template === t.id ? "border-brand bg-brand/10 text-brand" : "border-line text-ink hover:bg-surface-hover"
+                className={`press grid place-items-center rounded-control border p-1.5 transition-colors ${
+                  template === t.id ? "border-brand bg-brand/10" : "border-line hover:bg-surface-hover"
                 }`}
               >
                 <Preview kind="pedal" template={t.id} jacks={t.jacks ?? undefined} {...withJacks(t.width, t.height, t.jacks)} color={color} label="" boxW={72} boxH={44} />
-                <span className="truncate font-medium">{t.name}</span>
               </button>
             ))}
           </div>
         </div>
       )}
 
-      <div className="flex gap-3">
-        <div className="grid shrink-0 place-items-center self-stretch rounded-control bg-canvas" style={{ width: 112, minHeight: 92 }}>
+      <div className="grid grid-cols-2 gap-2">
+        <label className="text-xs text-ink-muted">
+          Width ({unitLabel})
+          <input className={`${field} mt-1`} {...plainField} inputMode="decimal" enterKeyHint="done" value={width} placeholder={placeholder[0]} onChange={(e) => setWidth(e.target.value)} autoFocus={!item && kind !== "pedal"} />
+        </label>
+        <label className="text-xs text-ink-muted">
+          Height ({unitLabel})
+          <input className={`${field} mt-1`} {...plainField} inputMode="decimal" enterKeyHint="done" value={height} placeholder={placeholder[1]} onChange={(e) => setHeight(e.target.value)} />
+        </label>
+      </div>
+
+      {kind === "pedal" && (
+        <div>
+          <div className="mb-1 text-xs text-ink-muted">Jacks</div>
+          <div className="flex gap-1.5">
+            {jackButton(jackTop, setJackTop, "Top", `Jacks on top add ${jackDepth} to the height`)}
+            {jackButton(jackSide, setJackSide, "Sides", `Side jacks add ${jackDepth} to each side`)}
+          </div>
+        </div>
+      )}
+
+      {/* The preview, with the space it takes up beside it. */}
+      <div className="flex items-center gap-3">
+        <div className="grid shrink-0 place-items-center rounded-control bg-canvas" style={{ width: 112, minHeight: 92 }}>
           {sizeOk ? (
             <Preview kind={kind} template={template} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} boxW={96} boxH={kind === "pedal" ? 160 : 76} />
           ) : (
             <span className="px-2 text-center text-xs text-ink-muted">Check the size</span>
           )}
         </div>
-        <div className="min-w-0 flex-1 space-y-2">
-          <div className="grid grid-cols-2 gap-2">
-            <label className="text-xs text-ink-muted">
-              Width ({unitLabel})
-              <input className={`${field} mt-1`} {...plainField} inputMode="decimal" enterKeyHint="done" value={width} placeholder={placeholder[0]} onChange={(e) => setWidth(e.target.value)} autoFocus={!item} />
-            </label>
-            <label className="text-xs text-ink-muted">
-              Height ({unitLabel})
-              <input className={`${field} mt-1`} {...plainField} inputMode="decimal" enterKeyHint="done" value={height} placeholder={placeholder[1]} onChange={(e) => setHeight(e.target.value)} />
-            </label>
-          </div>
-          {kind === "pedal" && (
-            <>
-              <div>
-                <div className="mb-1 text-xs text-ink-muted">Jacks</div>
-                <div className="flex gap-1.5">
-                  {jackButton(jackTop, setJackTop, "Top", `Jacks on top add ${jackDepth} to the height`)}
-                  {jackButton(jackSide, setJackSide, "Sides", `Side jacks add ${jackDepth} to each side`)}
-                </div>
-              </div>
-              <label className="block text-xs text-ink-muted">
-                Name (optional)
-                <input className={`${field} mt-1`} {...plainField} autoCapitalize="words" enterKeyHint="done" value={name} maxLength={40} onChange={(e) => setName(e.target.value)} />
-              </label>
-            </>
-          )}
-        </div>
+        {sizeOk && (
+          <p className="min-w-0 text-xs text-ink-muted">
+            <span className="block">Footprint</span>
+            <span className="block text-sm font-medium text-ink">{formatSize(foot.width, foot.height, units)}</span>
+            {jacks && <span className="block">Including the jacks</span>}
+          </p>
+        )}
       </div>
-
-      {jacks && sizeOk && (
-        <p className="text-xs text-ink-muted">
-          Takes up {formatSize(foot.width, foot.height, units)} with jacks.
-        </p>
-      )}
 
       {kind === "pedal" && (
         <div>
