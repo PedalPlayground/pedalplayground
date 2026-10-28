@@ -498,6 +498,7 @@ export function Canvas() {
   return (
     <div
       ref={ref}
+      data-canvas
       className="absolute inset-0 touch-none"
       style={{
         cursor: panning ? "grabbing" : dragging ? "move" : spaceHeld || tool === "hand" ? "grab" : "default",

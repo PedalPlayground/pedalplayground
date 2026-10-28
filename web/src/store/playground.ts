@@ -37,7 +37,12 @@ interface PlaygroundState {
   viewport: { w: number; h: number };
   /** Pixels on the canvas's left edge covered by the docked gear panel; new gear is placed and shown clear of it. */
   coverLeft: number;
+  /** Px of the canvas bottom covered by the phone Add Gear drawer. */
+  coverBottom: number;
   setCoverLeft: (px: number) => void;
+  setCoverBottom: (px: number) => void;
+  /** Re-centers everything in the open part of the canvas (beside the gear panel, above the phone drawer), zooming out only if it must. */
+  centerInOpenSpace: () => void;
   /** A fit was requested before the canvas had a size; apply it once measured. */
   pendingFit: boolean;
   past: Snapshot[];
@@ -157,7 +162,7 @@ function placeNew(s: PlaygroundState, n: NewItem): Partial<PlaygroundState> {
     y = b.bottom - n.height;
   } else {
     x = ((s.coverLeft + s.viewport.w) / 2 - s.view.x) / s.view.zoom / PX_PER_INCH - n.width / 2;
-    y = (s.viewport.h / 2 - s.view.y) / s.view.zoom / PX_PER_INCH - n.height / 2;
+    y = ((s.viewport.h - s.coverBottom) / 2 - s.view.y) / s.view.zoom / PX_PER_INCH - n.height / 2;
   }
   const item: Item = { id: crypto.randomUUID(), ...n, x, y, rotation: 0, flipX: false };
 
@@ -174,7 +179,7 @@ function placeNew(s: PlaygroundState, n: NewItem): Partial<PlaygroundState> {
   if (n.kind === "pedal") patch.lastPlacedId = item.id;
   if (s.viewport.w > 0) {
     // With the gear panel open, keep the whole arrangement centered in the open space beside it as gear is added.
-    if (s.coverLeft > 0) patch.view = centeredView(s, items);
+    if (s.coverLeft > 0 || s.coverBottom > 0) patch.view = centeredView(s, items);
     else if (n.kind === "pedal" && prev) patch.view = viewShowing(s, item);
   }
   return patch;
@@ -187,30 +192,32 @@ function placeNew(s: PlaygroundState, n: NewItem): Partial<PlaygroundState> {
 function centeredView(s: PlaygroundState, items: Item[]): View {
   const b = contentBounds(items);
   if (!b) return s.view;
-  const { viewport, coverLeft, view } = s;
+  const { viewport, coverLeft, coverBottom, view } = s;
+  const openH = viewport.h - coverBottom;
   const margin = viewport.w < 640 ? 24 : 72;
   const w = (b.right - b.left) * PX_PER_INCH;
   const h = (b.bottom - b.top) * PX_PER_INCH;
   const availW = viewport.w - coverLeft - margin * 2;
-  const availH = viewport.h - margin * 2;
+  const availH = openH - margin * 2;
   const zoom = clamp(Math.min(view.zoom, availW / w, availH / h), MIN_ZOOM, MAX_ZOOM);
   return {
     zoom,
     x: coverLeft + (viewport.w - coverLeft - w * zoom) / 2 - b.left * PX_PER_INCH * zoom,
-    y: (viewport.h - h * zoom) / 2 - b.top * PX_PER_INCH * zoom,
+    y: (openH - h * zoom) / 2 - b.top * PX_PER_INCH * zoom,
   };
 }
 
 /** The current view, zoomed out and re-centered only if the whole of `items` isn't on screen. */
 function viewShowingAll(s: PlaygroundState, items: Item[]): View {
-  const { view, viewport, coverLeft } = s;
+  const { view, viewport, coverLeft, coverBottom } = s;
+  const openH = viewport.h - coverBottom;
   const scale = view.zoom * PX_PER_INCH;
   const pad = PLACE_PAD / scale;
   const vis = {
     left: (coverLeft - view.x) / scale,
     top: -view.y / scale,
     right: (viewport.w - view.x) / scale,
-    bottom: (viewport.h - view.y) / scale,
+    bottom: (openH - view.y) / scale,
   };
   const b = contentBounds(items)!;
   const inside = b.left >= vis.left + pad && b.right <= vis.right - pad && b.top >= vis.top + pad && b.bottom <= vis.bottom - pad;
@@ -224,12 +231,12 @@ function viewShowingAll(s: PlaygroundState, items: Item[]): View {
   };
   const uw = (u.right - u.left) * PX_PER_INCH;
   const uh = (u.bottom - u.top) * PX_PER_INCH;
-  const zoom = clamp(Math.min(view.zoom, (viewport.w - coverLeft - PLACE_PAD * 2) / uw, (viewport.h - PLACE_PAD * 2) / uh), MIN_ZOOM, MAX_ZOOM);
+  const zoom = clamp(Math.min(view.zoom, (viewport.w - coverLeft - PLACE_PAD * 2) / uw, (openH - PLACE_PAD * 2) / uh), MIN_ZOOM, MAX_ZOOM);
   const k = zoom * PX_PER_INCH;
   return {
     zoom,
     x: (coverLeft + viewport.w) / 2 - ((u.left + u.right) / 2) * k,
-    y: viewport.h / 2 - ((u.top + u.bottom) / 2) * k,
+    y: openH / 2 - ((u.top + u.bottom) / 2) * k,
   };
 }
 
@@ -254,6 +261,9 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
   viewport: { w: 0, h: 0 },
   coverLeft: 0,
   setCoverLeft: (coverLeft) => set({ coverLeft }),
+  coverBottom: 0,
+  setCoverBottom: (coverBottom) => set({ coverBottom }),
+  centerInOpenSpace: () => set((s) => (s.viewport.w > 0 && s.items.length ? { view: centeredView(s, s.items) } : {})),
   pendingFit: false,
   past: [],
   future: [],
@@ -287,7 +297,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const pad = s.viewport.w < 640 ? { x: 16, top: 48, bottom: 112 } : { x: 96, top: 96, bottom: 96 };
       // With the gear panel open, fit into the space beside it.
       const availW = s.viewport.w - s.coverLeft - pad.x * 2;
-      const availH = s.viewport.h - pad.top - pad.bottom;
+      const availH = s.viewport.h - pad.top - (s.coverBottom > 0 ? s.coverBottom + 16 : pad.bottom);
       const w = (b.right - b.left) * PX_PER_INCH;
       const h = (b.bottom - b.top) * PX_PER_INCH;
       const zoom = clamp(Math.min(availW / w, availH / h), MIN_ZOOM, 1.5);

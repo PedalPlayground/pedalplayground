@@ -132,6 +132,45 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     };
   }, [phone]);
 
+  // Phone drawer in Add Gear mode: the canvas fits into the space above it, so gear being added stays in view.
+  const sheetRef = useRef<HTMLDivElement>(null);
+  const shrink = phone && !replace && !edit;
+  const keyboardRef = useRef(keyboard);
+  const measureRef = useRef<(() => void) | null>(null);
+  useEffect(() => {
+    keyboardRef.current = keyboard;
+    measureRef.current?.();
+  }, [keyboard, visibleHeight]);
+  useEffect(() => {
+    if (!shrink) return;
+    const store = usePlayground.getState();
+    const before = { view: store.view, count: store.items.length };
+    const measure = () => {
+      const sheet = sheetRef.current;
+      const canvas = document.querySelector("[data-canvas]");
+      if (!sheet || !canvas) return;
+      // From layout rather than the drawer's on-screen position, which is mid-slide while it opens.
+      const covered = Math.max(0, sheet.offsetHeight + keyboardRef.current + (window.innerHeight - canvas.getBoundingClientRect().bottom));
+      const s = usePlayground.getState();
+      if (Math.abs(covered - s.coverBottom) < 2) return;
+      s.setCoverBottom(covered);
+      s.centerInOpenSpace();
+    };
+    measure();
+    measureRef.current = measure;
+    const ro = new ResizeObserver(measure);
+    if (sheetRef.current) ro.observe(sheetRef.current);
+    return () => {
+      measureRef.current = null;
+      ro.disconnect();
+      const s = usePlayground.getState();
+      s.setCoverBottom(0);
+      // Nothing added: back to how it was. Otherwise fit everything, the new gear included.
+      if (s.items.length === before.count) s.setView(before.view);
+      else s.fitToContent();
+    };
+  }, [shrink]);
+
   // Phones slide the drawer away before unmounting it.
   const [closing, setClosing] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
@@ -333,6 +372,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   const body = (
     <>
       {/* Title and close, then (except when editing a custom item) the shaded search field. */}
+      {(!phone || replace || edit) && (
       <div className="flex items-center gap-2 px-4 pb-1 pt-3">
         <h2 className="flex-1 truncate text-base font-semibold tracking-[-0.01em]">
           {edit
@@ -347,6 +387,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           <X size={16} />
         </button>
       </div>
+      )}
       {/* Hidden while making a custom item; Back to Search brings it back. */}
       {!edit && !showCustom && (
         <div className="px-3 pb-1 pt-1.5">
@@ -354,7 +395,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
             <Search size={16} className="shrink-0 text-ink-muted" />
             <input
               ref={searchInput}
-              autoFocus
+              autoFocus={!phone}
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
@@ -524,12 +565,14 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   const offset = closing ? "100%" : `${drag ?? 0}px`;
   return createPortal(
     <div className="fixed inset-0 z-40">
+      {/* Adding gear: no dimming, so the canvas stays visible; tapping it dismisses the drawer. */}
       <div
-        className="animate-fade absolute inset-0 bg-[rgb(10_11_16/0.75)]"
-        style={{ opacity: closing ? 0 : 1 - (drag ?? 0) / 400, transition: drag === null ? `opacity ${SHEET_MS}ms ease-out` : "none" }}
+        className={shrink ? "absolute inset-0" : "animate-fade absolute inset-0 bg-[rgb(10_11_16/0.75)]"}
+        style={shrink ? undefined : { opacity: closing ? 0 : 1 - (drag ?? 0) / 400, transition: drag === null ? `opacity ${SHEET_MS}ms ease-out` : "none" }}
         onClick={onClose}
       />
       <div
+        ref={sheetRef}
         role="dialog"
         aria-label={edit ? "Edit" : replace ? "Replace" : "Add Gear"}
         className="animate-sheet absolute inset-x-0 flex flex-col rounded-t-[16px] bg-surface shadow-[0_-4px_24px_rgb(0_0_0/0.12)]"
