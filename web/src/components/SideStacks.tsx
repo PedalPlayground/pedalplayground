@@ -21,11 +21,13 @@ import {
   ZoomIn,
   ZoomOut,
 } from "lucide-react";
-import { useRef, useState, type ReactNode } from "react";
+import { createPortal } from "react-dom";
+import { useState, type ReactNode } from "react";
 import { itemName } from "../lib/itemName";
 import { plainField } from "../lib/inputProps";
 import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
+import { Modal } from "./Modal";
 import { tip } from "./Tooltip";
 import { barPanel } from "./toolbarStyles";
 
@@ -151,12 +153,19 @@ const MM_PER_INCH = 25.4;
 /** The last custom gap used (in inches), so the next "Space By…" starts there. */
 let lastGap = 0.25;
 
+/** Thin side of common right-angle 1/4" plugs: the room one needs between two pedals. */
+const PLUGS = [
+  { name: "SquarePlug SP400", mm: 8.3 },
+  { name: "Pancake (typical)", mm: 10 },
+  { name: "Neutrik NP2RX", mm: 14.5 },
+];
+
 /** "Space By…": type a gap in the current units and the selection lines up left to right with exactly that between them. */
-function SpaceByEditor({ onClose }: { onClose: () => void }) {
+function SpaceByModal({ onClose }: { onClose: () => void }) {
   const units = useUi((u) => u.units);
   const spaceByGap = usePlayground((s) => s.spaceByGap);
-  const [value, setValue] = useState(units === "mm" ? String(Math.round(lastGap * MM_PER_INCH)) : String(+lastGap.toFixed(3)));
-  const input = useRef<HTMLInputElement>(null);
+  const fmt = (inches: number) => (units === "mm" ? String(Math.round(inches * MM_PER_INCH * 10) / 10) : String(+inches.toFixed(3)));
+  const [value, setValue] = useState(fmt(lastGap));
   const gap = parseFloat(value);
   const apply = () => {
     if (!(gap >= 0)) return;
@@ -166,34 +175,52 @@ function SpaceByEditor({ onClose }: { onClose: () => void }) {
     onClose();
   };
   return (
-    <form
-      className="flex items-center gap-1.5 px-1 pb-1"
-      onSubmit={(e) => {
-        e.preventDefault();
-        apply();
-      }}
-    >
-      <label className="flex h-8 min-w-0 flex-1 items-center gap-1 rounded-[5px] bg-surface-hover px-2 focus-within:ring-2 focus-within:ring-brand">
-        <input
-          ref={input}
-          autoFocus
-          aria-label={`Gap between items (${units})`}
-          inputMode="decimal"
-          {...plainField}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          onKeyDown={(e) => e.key === "Escape" && (e.stopPropagation(), onClose())}
-          onFocus={(e) => e.target.select()}
-          className="h-full min-w-0 flex-1 bg-transparent text-right text-[13px] outline-none"
-        />
-        <span aria-hidden className="text-xs text-ink-muted">
-          {units}
-        </span>
-      </label>
-      <button type="submit" disabled={!(gap >= 0)} className="h-8 rounded-[5px] px-2.5 text-[13px] btn-primary disabled:opacity-50">
-        Apply
-      </button>
-    </form>
+    <Modal title="Space By" onClose={onClose} closeX>
+      <p className="mb-3 text-sm text-ink-muted">Lines the selection up left to right with this gap between each item.</p>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          apply();
+        }}
+      >
+        <label className="mb-4 flex h-9 items-center gap-1 rounded-control bg-surface-hover px-3 focus-within:ring-2 focus-within:ring-brand">
+          <input
+            autoFocus
+            aria-label={`Gap between items (${units})`}
+            inputMode="decimal"
+            {...plainField}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            onFocus={(e) => e.target.select()}
+            className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none"
+          />
+          <span aria-hidden className="text-xs text-ink-muted">
+            {units}
+          </span>
+        </label>
+        <p className="mb-1.5 text-xs text-ink-muted">Plug thickness (right angle 1/4″)</p>
+        <ul className="mb-4 flex flex-col gap-1">
+          {PLUGS.map((p) => (
+            <li key={p.name}>
+              <button
+                type="button"
+                onClick={() => setValue(fmt(p.mm / MM_PER_INCH))}
+                className="flex h-9 w-full items-center gap-3 rounded-control bg-surface-hover px-3 text-left text-sm outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand"
+              >
+                <span className="flex-1">{p.name}</span>
+                {/* A bar drawn to scale (2 px per mm) next to the measurement. */}
+                <span aria-hidden className="h-3 rounded-[2px] bg-ink-muted" style={{ width: p.mm * 2 }} />
+                <span className="w-16 text-right text-xs text-ink-muted">{units === "mm" ? `${p.mm} mm` : `${(p.mm / MM_PER_INCH).toFixed(2)} in`}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+        <button type="submit" disabled={!(gap >= 0)} className="h-9 w-full btn-primary disabled:opacity-50">
+          Apply
+        </button>
+        <p className="mt-2 text-center text-xs text-ink-muted">Tap a plug to use its thickness. Sizes are approximate.</p>
+      </form>
+    </Modal>
   );
 }
 
@@ -235,18 +262,9 @@ export function ObjectStack() {
       {s.selected.length >= 3 && <Row {...row} icon={<AlignHorizontalSpaceBetween size={16} />} label="Space Evenly" onClick={s.distributeHorizontally} />}
       {s.selected.length >= 2 && (
         <>
-          <Row
-            {...row}
-            icon={<MoveHorizontal size={16} />}
-            label="Space By…"
-            onClick={() => {
-              // Collapsed, there's no room for the field: open the stack first.
-              if (collapsed) toggle();
-              setSpacing((o) => !o);
-            }}
-            pressed={spacing && !collapsed}
-          />
-          {spacing && !collapsed && <SpaceByEditor onClose={() => setSpacing(false)} />}
+          <Row {...row} icon={<MoveHorizontal size={16} />} label="Space By…" onClick={() => setSpacing(true)} />
+          {/* Portaled: the stack is transformed, which would trap a fixed-position modal inside it. */}
+          {spacing && createPortal(<SpaceByModal onClose={() => setSpacing(false)} />, document.body)}
         </>
       )}
       <Divider />
