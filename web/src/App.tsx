@@ -23,6 +23,7 @@ import { ObjectMenu } from "./components/ObjectMenu";
 import { ContextMenu } from "./components/ContextMenu";
 import { ActionToast } from "./components/ActionToast";
 import { BackToCenter } from "./components/BackToCenter";
+import { EmptyAddGear } from "./components/EmptyAddGear";
 import { ScaleKey } from "./components/ScaleKey";
 import { TooltipLayer } from "./components/Tooltip";
 import { OnboardingTour } from "./components/OnboardingTour";
@@ -199,6 +200,7 @@ export function App() {
           ) : (
             <>
               <BackToCenter />
+              <EmptyAddGear />
               {/* Phones keep it above the toolbar instead, since the toolbar spans the bottom edge there. */}
               <ScaleKey className="absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] left-[max(1rem,env(safe-area-inset-left))] z-10 max-md:hidden" />
               <ObjectMenu />

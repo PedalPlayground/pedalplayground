@@ -1,7 +1,7 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { useRef, useState } from "react";
 import { tip } from "./Tooltip";
-import { ArrowLeft, ChevronDown, Copy, Pencil, Plus } from "lucide-react";
+import { ArrowLeft, ChevronDown, Copy, Pencil, Plus, RotateCcw } from "lucide-react";
 import type { PlaygroundSummary } from "../lib/cloud";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
@@ -25,14 +25,35 @@ function edited(iso: string) {
   return `Edited ${d.toLocaleDateString(undefined, { month: "short", day: "numeric", ...(sameYear ? {} : { year: "numeric" }) })}`;
 }
 
-/** The playground menu: the user's playgrounds as cards (open, edit), new, and (signed out) sign in. */
-function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onCloseAutoFocus: (e: Event) => void }) {
+/** The playground menu: the user's playgrounds as cards (open, edit) and new; for guests, just Start Fresh. */
+function MenuContent({ onEdit, onCloseAutoFocus }: MenuProps & { onCloseAutoFocus: (e: Event) => void }) {
   const user = useAuth((s) => s.user);
-  const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const { list, cloudId, openPlayground } = useCloud();
   const cards = user ? list.slice(0, 6) : [];
   // The open playground has its own card when it's saved; otherwise edit it from the top item.
   const openHasCard = cards.some((p) => p.id === cloudId);
+  const empty = usePlayground((s) => s.items.length === 0);
+
+  // Guests have one board on this device, so their menu only starts it over.
+  if (!user) {
+    return (
+      <Dropdown.Portal>
+        <Dropdown.Content
+          side="bottom"
+          align="center"
+          sideOffset={8}
+          collisionPadding={12}
+          onCloseAutoFocus={onCloseAutoFocus}
+          className="animate-menu z-50 w-56 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
+        >
+          <Dropdown.Item disabled={empty} className={`${item} data-[disabled]:cursor-default data-[disabled]:opacity-40`} onSelect={requestNewPlayground}>
+            <RotateCcw size={14} />
+            Start Fresh
+          </Dropdown.Item>
+        </Dropdown.Content>
+      </Dropdown.Portal>
+    );
+  }
 
   return (
     <Dropdown.Portal>
@@ -102,14 +123,6 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
           <Plus size={14} />
           New Playground
         </Dropdown.Item>
-        {cloudEnabled && !user && (
-          <>
-            <Dropdown.Separator className="my-1 h-px bg-line" />
-            <Dropdown.Item className={`${item} text-brand`} onSelect={onSignIn}>
-              Sign In to Save Across Devices
-            </Dropdown.Item>
-          </>
-        )}
       </Dropdown.Content>
     </Dropdown.Portal>
   );
