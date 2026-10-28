@@ -82,6 +82,35 @@
   --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
 }
 
+/* OLED dark: true black for the canvas and chrome, near-black panels with hairline edges (shadows can't show on
+   black). Applies whenever dark mode is on and Settings → Dark Mode is OLED (data-dark on <html>). */
+@media (prefers-color-scheme: dark) {
+  :root[data-dark="oled"]:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-canvas: #000000;
+    --color-surface: #0b0b0d;
+    --color-surface-hover: #1a1a1e;
+    --color-chrome: #000000;
+    --color-chrome-line: rgb(255 255 255 / 0.1);
+    --color-line: #26262b;
+    --color-grid: #1a1a1e;
+    --shadow-panel: 0 0 0 1px rgb(255 255 255 / 0.1);
+    --shadow-modal: 0 0 0 1px rgb(255 255 255 / 0.1);
+  }
+}
+:root[data-theme="dark"][data-dark="oled"] {
+  color-scheme: dark;
+  --color-canvas: #000000;
+  --color-surface: #0b0b0d;
+  --color-surface-hover: #1a1a1e;
+  --color-chrome: #000000;
+  --color-chrome-line: rgb(255 255 255 / 0.1);
+  --color-line: #26262b;
+  --color-grid: #1a1a1e;
+  --shadow-panel: 0 0 0 1px rgb(255 255 255 / 0.1);
+  --shadow-modal: 0 0 0 1px rgb(255 255 255 / 0.1);
+}
+
 html,
 body,
 #root {

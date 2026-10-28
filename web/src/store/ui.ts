@@ -10,6 +10,8 @@ export const SHOW_MODES = false;
 export type Tool = "hand" | "select";
 export type Units = "in" | "mm";
 export type Theme = "system" | "light" | "dark";
+/** Which dark look to use when dark mode is on: the regular dark grays, or true black for OLED screens. */
+export type DarkStyle = "dark" | "oled";
 /** Why the upgrade dialog opened; changes its headline. */
 export type UpgradeReason = "menu" | "limit" | "save" | "avatar" | "copy";
 
@@ -31,6 +33,8 @@ interface UiState {
   tool: Tool;
   units: Units;
   theme: Theme;
+  darkStyle: DarkStyle;
+  setDarkStyle: (d: DarkStyle) => void;
   /** Dragged items snap to other items' edges and centers. */
   snapping: boolean;
   setSnapping: (on: boolean) => void;
@@ -105,6 +109,21 @@ const savedTheme = (): Theme => {
   }
 };
 
+const savedDarkStyle = (): DarkStyle => {
+  try {
+    return localStorage.getItem("pp:dark") === "oled" ? "oled" : "dark";
+  } catch {
+    return "dark";
+  }
+};
+
+/** Applies the dark style to <html> (index.html also does this before first paint). */
+export function applyDarkStyle(d: DarkStyle) {
+  const root = document.documentElement;
+  if (d === "oled") root.setAttribute("data-dark", "oled");
+  else root.removeAttribute("data-dark");
+}
+
 /** Applies the theme to <html>; "system" removes the override so the OS preference wins. */
 export function applyTheme(theme: Theme) {
   const root = document.documentElement;
@@ -119,6 +138,16 @@ export const useUi = create<UiState>((set) => ({
   tool: "select",
   units: savedUnits(),
   theme: savedTheme(),
+  darkStyle: savedDarkStyle(),
+  setDarkStyle: (darkStyle) => {
+    try {
+      localStorage.setItem("pp:dark", darkStyle);
+    } catch {
+      /* storage unavailable */
+    }
+    applyDarkStyle(darkStyle);
+    set({ darkStyle });
+  },
   snapping: savedSnapping(),
   setSnapping: (snapping) => {
     try {

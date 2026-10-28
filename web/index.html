@@ -15,6 +15,7 @@
       try {
         var t = localStorage.getItem("pp:theme");
         if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+        if (localStorage.getItem("pp:dark") === "oled") document.documentElement.setAttribute("data-dark", "oled");
       } catch (e) {}
     </script>
   </head>

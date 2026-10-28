@@ -74,7 +74,7 @@ export function Segmented<T extends string>({
 
 /** The cog in the canvas's lower-right corner. `className` positions its floating panel. */
 export function SettingsMenu({ className = "" }: { className?: string }) {
-  const { units, setUnits, theme, setTheme, snapping, setSnapping, startTour } = useUi();
+  const { units, setUnits, theme, setTheme, darkStyle, setDarkStyle, snapping, setSnapping, startTour } = useUi();
   const signedIn = useAuth((s) => !!s.user);
   const fileInput = useRef<HTMLInputElement>(null);
 
@@ -163,6 +163,10 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
               onChange={setTheme}
               options={[["light", "Light"], ["dark", "Dark"], ["system", "Auto"]]}
             />
+          </div>
+          <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
+            Dark Mode
+            <Segmented label="Dark Mode" value={darkStyle} onChange={setDarkStyle} options={[["dark", "Dark"], ["oled", "OLED"]]} />
           </div>
           {BETA && (
             <>
