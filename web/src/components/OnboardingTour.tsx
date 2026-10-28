@@ -24,7 +24,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
   const steps: Step[] = [
     {
       hero: true,
-      title: "Welcome to Pedal Playground 2.0",
+      title: "Welcome to Pedal Playground 2.0!",
       body: "Plan, arrange and show off your pedalboard or gear collection before you buy a thing. 2.0 is rebuilt from the ground up, with a faster canvas, thousands of pedals, custom gear, and boards you can save and share.",
     },
     {
