@@ -1,4 +1,4 @@
-import { Ellipsis, Group, Lock, LockOpen, RotateCw, Ungroup } from "lucide-react";
+import { Ellipsis, Group, Lock, LockOpen, Pencil, RotateCw, Ungroup } from "lucide-react";
 import { useRef } from "react";
 import { itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { isOneGroup, usePlayground } from "../store/playground";
@@ -8,12 +8,13 @@ import { tip } from "./Tooltip";
 import { barIconButton, barIconIdle, barIconActive } from "./toolbarStyles";
 
 const GAP = 12; // between the selection and the pill
-const HALF_W = 54; // half the pill's width, for keeping it on screen
+const HALF_W = 54; // half the pill's width, for keeping it on screen (+18 with the Edit button)
 const H = 36;
 
-/** A little menu that follows the selection: Lock, Rotate, and ••• for the full right-click menu. Not on phones. */
+/** A little menu that follows the selection: Lock, Rotate, Edit (custom gear) and ••• for the full right-click menu. Not on phones. */
 export function SelectionMiniMenu() {
   const s = usePlayground();
+  const setEditing = useUi((u) => u.setEditing);
   const dragging = useUi((u) => u.dragging || u.nudging);
   const viewing = useUi((u) => !!u.viewing);
   const wrap = useRef<HTMLDivElement>(null);
@@ -29,7 +30,9 @@ export function SelectionMiniMenu() {
   const bottom = s.view.y + Math.max(...b.map((v) => v.bottom)) * scale;
   const top = s.view.y + Math.min(...b.map((v) => v.top)) * scale;
   // Centered under it; above it when there's no room below; kept on screen, clear of the docked gear panel.
-  const cx = Math.min(Math.max((left + right) / 2, s.coverLeft + HALF_W + 8), s.viewport.w - HALF_W - 8);
+  const editable = chosen.length === 1 && chosen[0].custom ? chosen[0] : undefined;
+  const halfW = HALF_W + (editable ? 18 : 0);
+  const cx = Math.min(Math.max((left + right) / 2, s.coverLeft + halfW + 8), s.viewport.w - halfW - 8);
   const below = bottom + GAP;
   const y = below + H > s.viewport.h - 8 ? Math.max(8, top - GAP - H) : below;
   const locked = chosen.every((i) => i.locked);
@@ -81,6 +84,16 @@ export function SelectionMiniMenu() {
       ) : (
         <button aria-label="Rotate 90°" {...tip("Rotate 90°", { shortcut: "R", side: "bottom" })} onClick={s.rotateSelected} className={`${barIconButton} ${barIconIdle}`}>
           <RotateCw size={16} />
+        </button>
+      )}
+      {editable && (
+        <button
+          aria-label={editable.kind === "pedalboard" ? "Edit Board" : "Edit"}
+          {...tip(editable.kind === "pedalboard" ? "Edit Board" : "Edit", { side: "bottom" })}
+          onClick={() => setEditing(true)}
+          className={`${barIconButton} ${barIconIdle}`}
+        >
+          <Pencil size={15} />
         </button>
       )}
       <button aria-label="More" aria-haspopup="menu" {...tip("More", { side: "bottom" })} onClick={more} className={`${barIconButton} ${barIconIdle}`}>
