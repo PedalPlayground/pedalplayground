@@ -177,7 +177,7 @@ export function App() {
           </span>
           <span data-tour="account" className="flex items-center gap-4 empty:hidden max-sm:gap-2">
           {user && canUpgrade && (
-            <button onClick={() => openUpgrade("menu")} className={headerButton}>
+            <button onClick={() => openUpgrade("menu")} data-tour="pro" className={headerButton}>
               Get Pro
             </button>
           )}

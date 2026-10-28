@@ -2,6 +2,7 @@ import { X } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usableFeaturedPedals } from "../lib/featuredPedals";
 import { useAuth } from "../store/auth";
+import { useBilling } from "../store/billing";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -19,7 +20,8 @@ interface Step {
 
 const coarse = () => typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
 
-function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
+/** `pro`: the account already has Pro, so the Pro step is left out. `billing`: Pro is on sale at all. */
+function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, billing: boolean): Step[] {
   const touch = coarse();
   const steps: Step[] = [
     {
@@ -50,6 +52,16 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
       signedIn
         ? { target: "account", title: "Your Playgrounds", body: "Everything you build saves to your account. Find all your boards here." }
         : { target: "account", title: "Save Your Work", body: "Your playground is saved temporarily on this device. Sign in to save it to your account and open it anywhere." },
+      // Signed-in free accounts see the header's Get Pro button spotlighted; guests get a centered card.
+      ...(billing && !pro
+        ? [
+            {
+              target: signedIn ? "pro" : undefined,
+              title: "Go Pro",
+              body: "Pro gives you unlimited saved playgrounds, copies of anyone's shared boards, and any pedal as your avatar. It also keeps Pedal Playground running.",
+            },
+          ]
+        : []),
       { target: "share", title: "Share It", body: "Show off your creation with a link that lets anyone see your Playground." },
     );
   }
@@ -123,7 +135,8 @@ export function OnboardingTour() {
   // Fix the step list when the tour opens so signing in mid-tour doesn't reshuffle it.
   useEffect(() => {
     if (!open) return;
-    setSteps(buildSteps(signedIn, cloudEnabled));
+    const { billingEnabled, entitlements } = useBilling.getState();
+    setSteps(buildSteps(signedIn, cloudEnabled, entitlements?.plan === "pro", billingEnabled));
     setIndex(0);
     void stageDemoPedal();
     // eslint-disable-next-line react-hooks/exhaustive-deps
