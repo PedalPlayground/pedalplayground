@@ -86,56 +86,22 @@ function SelectionHalo({ item, zoom, tour }: { item: Item; zoom: number; tour?: 
   );
 }
 
-/** A rounded rectangle's outline as a wavy line: the wave rides the outline, a whole number of waves around so it closes. */
-function squigglePath(w: number, h: number, r: number, amp: number, wavelength: number) {
-  const straight = [w - 2 * r, h - 2 * r, w - 2 * r, h - 2 * r];
-  const arc = (Math.PI / 2) * r;
-  const total = 2 * (straight[0] + straight[1]) + 4 * arc;
-  const waves = Math.max(1, Math.round(total / wavelength));
-  const step = total / (waves * 12);
-  // Outline point and outward normal at distance s, going clockwise from the top edge's left end.
-  const at = (s: number): [number, number, number, number] => {
-    const seg = [straight[0], arc, straight[1], arc, straight[2], arc, straight[3], arc];
-    let i = 0;
-    while (i < 7 && s > seg[i]) (s -= seg[i], i++);
-    const t = s;
-    switch (i) {
-      case 0: return [r + t, 0, 0, -1];
-      case 1: { const a = t / r; return [w - r + r * Math.sin(a), r - r * Math.cos(a), Math.sin(a), -Math.cos(a)]; }
-      case 2: return [w, r + t, 1, 0];
-      case 3: { const a = t / r; return [w - r + r * Math.cos(a), h - r + r * Math.sin(a), Math.cos(a), Math.sin(a)]; }
-      case 4: return [w - r - t, h, 0, 1];
-      case 5: { const a = t / r; return [r - r * Math.sin(a), h - r + r * Math.cos(a), -Math.sin(a), Math.cos(a)]; }
-      case 6: return [0, h - r - t, -1, 0];
-      default: { const a = t / r; return [r - r * Math.cos(a), r - r * Math.sin(a), -Math.cos(a), -Math.sin(a)]; }
-    }
-  };
-  let d = "";
-  for (let s = 0; s < total; s += step) {
-    const [x, y, nx, ny] = at(s);
-    const o = amp * Math.sin((2 * Math.PI * s * waves) / total);
-    d += `${d ? "L" : "M"}${(x + nx * o).toFixed(2)} ${(y + ny * o).toFixed(2)}`;
-  }
-  return d + "Z";
-}
-
-/** One mint squiggly halo around a whole selected group, in place of its members' own halos. */
+/** One apricot halo around a whole selected group, in place of its members' own halos. */
 function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
   const moving = useUi((u) => u.dragging || u.nudging);
   const b = contentBounds(items)!;
   const pad = (HALO_GAP + HALO_STROKE + 5) / zoom;
   const w = (b.right - b.left) * PX_PER_INCH + pad * 2;
   const h = (b.bottom - b.top) * PX_PER_INCH + pad * 2;
-  const amp = 2 / zoom;
+  const sw = HALO_STROKE / zoom;
   const r = Math.min(12 / zoom, w / 2, h / 2);
-  const d = useMemo(() => squigglePath(w, h, r, amp, 15 / zoom), [w, h, r, amp, zoom]);
   return (
     <svg
       aria-hidden
       className="animate-fade pointer-events-none absolute overflow-visible transition-opacity duration-150"
       style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
     >
-      <path d={d} fill="none" stroke="var(--color-mint)" strokeWidth={HALO_STROKE / zoom} strokeLinejoin="round" strokeLinecap="round" />
+      <rect x={sw / 2} y={sw / 2} width={w - sw} height={h - sw} rx={r} fill="none" stroke="var(--color-apricot)" strokeWidth={sw} />
     </svg>
   );
 }
