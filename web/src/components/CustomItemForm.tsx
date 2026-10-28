@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, RotateCcw } from "lucide-react";
 import { useState } from "react";
 import { NEW_PEDAL_COLOR, PEDAL_COLOR_PRESETS, readableOn } from "../lib/color";
 import { PX_PER_INCH } from "../lib/geometry";
@@ -317,21 +317,24 @@ export function CustomItemForm({
       <div>
         {/* One label row (with the app-wide units switch) and one row of fields: "Width 2.6 in" "Height 4.8 in". */}
         <div className="mb-1 flex items-center justify-between">
-          <span className="text-xs text-ink-muted">Dimensions</span>
-          <div className="flex items-center gap-2">
-          {(width.trim() || height.trim()) && (
-            // Back to the style's (or board's) usual size, shown again as the fields' placeholders.
-            <button
-              type="button"
-              onClick={() => {
-                setWidth("");
-                setHeight("");
-              }}
-              className="text-[11px] font-medium text-ink-muted outline-none hover:text-ink focus-visible:underline"
-            >
-              Reset
-            </button>
-          )}
+          <span className="flex items-center gap-1 text-xs text-ink-muted">
+            Dimensions
+            {(width.trim() || height.trim()) && (
+              // Back to the style's (or board's) usual size, shown again as the fields' placeholders.
+              <button
+                type="button"
+                aria-label="Reset dimensions"
+                {...tip("Reset")}
+                onClick={() => {
+                  setWidth("");
+                  setHeight("");
+                }}
+                className="press grid size-5 place-items-center rounded-full outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+              >
+                <RotateCcw size={12} strokeWidth={2.25} />
+              </button>
+            )}
+          </span>
           <div role="radiogroup" aria-label="Units" className="flex rounded-control bg-surface-hover p-0.5 text-[11px] font-medium">
             {(["in", "mm"] as const).map((u) => (
               <button
@@ -345,7 +348,6 @@ export function CustomItemForm({
                 {u}
               </button>
             ))}
-          </div>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-2">
