@@ -57,7 +57,7 @@ const SWIPE_CLOSE = 80;
 const FLICK_CLOSE = 0.5;
 const SHEET_MS = 220;
 
-/** The custom pedal form's Hammond style, drawn small for the "Custom Pedal or Pedalboard" row. */
+/** The custom pedal form's Hammond style, drawn small for the "Make Your Own" row. */
 function HammondThumb() {
   const t = templateInfo("hammond");
   const w = t.width * PX_PER_INCH;
@@ -408,8 +408,8 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                 </span>
               </span>
               <span className="min-w-0">
-                <span className="block text-sm font-medium leading-snug">Custom Pedal or Pedalboard</span>
-                <span className="block text-xs text-ink-muted">Not in the catalog? Make your own.</span>
+                <span className="block text-sm font-medium leading-snug">Make Your Own</span>
+                <span className="block text-xs text-ink-muted">A pedal or pedalboard with custom dimensions</span>
               </span>
             </button>
           </li>
