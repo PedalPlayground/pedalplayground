@@ -28,10 +28,10 @@ function ThreadsLogo() {
 /** "Made with love by @tehtrav" in the lower-left corner; @tehtrav opens links to X, Threads and a donate button. */
 export function MadeBy({ className = "" }: { className?: string }) {
   return (
-    <p className={`text-xs text-ink-muted ${className}`}>
+    <p className={`text-[11px] text-ink-muted opacity-70 transition-opacity hover:opacity-100 has-[[data-state=open]]:opacity-100 ${className}`}>
       Made with love by{" "}
       <Dropdown.Root>
-        <Dropdown.Trigger className="rounded-[3px] font-medium text-ink outline-none hover:text-brand focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:text-brand">
+        <Dropdown.Trigger className="rounded-[3px] font-medium outline-none hover:text-brand focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:text-brand">
           @tehtrav
         </Dropdown.Trigger>
         <Dropdown.Portal>
