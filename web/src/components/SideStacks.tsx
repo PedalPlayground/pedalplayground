@@ -78,7 +78,7 @@ function Row({ icon, label, shortcut, onClick, collapsed, side, danger, pressed,
       aria-pressed={pressed}
       data-tour={dataTour}
       {...(collapsed ? tip(label, { shortcut, side }) : {})}
-      className={`press flex h-8 shrink-0 items-center rounded-[5px] text-[13px] font-medium tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-40 ${
+      className={`group press flex h-8 shrink-0 items-center rounded-[5px] text-[13px] font-medium tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-40 ${
         collapsed ? "w-8 justify-center" : "w-full gap-2.5 px-2"
       } ${
         danger
@@ -88,7 +88,7 @@ function Row({ icon, label, shortcut, onClick, collapsed, side, danger, pressed,
             : "text-ink hover:bg-surface-hover active:bg-chrome-line"
       }`}
     >
-      <span className="grid size-[18px] shrink-0 place-items-center">{icon}</span>
+      <span className={`grid size-[18px] shrink-0 place-items-center ${danger || pressed ? "" : "text-icon group-hover:text-ink"}`}>{icon}</span>
       {!collapsed && (
         <>
           <span className="flex-1 truncate text-left">{label}</span>

@@ -89,7 +89,7 @@ function Row({
     >
       <span
         aria-hidden
-        className={`grid size-4 shrink-0 place-items-center ${danger ? "" : "text-ink-muted group-data-[highlighted]:text-ink"}`}
+        className={`grid size-4 shrink-0 place-items-center ${danger ? "" : "text-icon group-data-[highlighted]:text-ink"}`}
       >
         {icon}
       </span>

@@ -14,6 +14,8 @@
   --color-board: #2b2b30;
   --color-ink: #1c1d22;
   --color-ink-muted: #6b6f7b;
+  /* Icons next to text: a slight step from the text color (lighter in light mode, darker in dark mode). */
+  --color-icon: #4f525e;
   --color-brand: #5b61fb;
   --color-brand-hover: #4a50ef;
   --color-brand-top: #6d72f6;
@@ -49,6 +51,7 @@
     --color-board: #5b5d6b;
     --color-ink: #ececf1;
     --color-ink-muted: #9a9ca8;
+    --color-icon: #c2c4ce;
     --color-brand: #6c6cff;
     --color-brand-hover: #8282ff;
     --color-brand-top: #8a8eff;
@@ -72,6 +75,7 @@
   --color-board: #5b5d6b;
   --color-ink: #ececf1;
   --color-ink-muted: #9a9ca8;
+  --color-icon: #c2c4ce;
   --color-brand: #6c6cff;
   --color-brand-hover: #8282ff;
   --color-brand-top: #8a8eff;

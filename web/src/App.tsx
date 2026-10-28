@@ -232,9 +232,10 @@ export function App() {
                   <CanvasStack viewOnly={viewing} onShare={() => setDialog("share")} />
                 </>
               ) : (
-                <ObjectMenu />
+                // Tablets keep the full bar; phones (and larger screens) use the little menu under the selection.
+                !phoneSized && <ObjectMenu />
               )}
-              {phoneSized ? null : <SelectionMiniMenu />}
+              <SelectionMiniMenu />
               <ContextMenu />
             </>
           )}
