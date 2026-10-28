@@ -1,5 +1,5 @@
-import { Check, ChevronDown } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { Check } from "lucide-react";
+import { useState } from "react";
 import { NEW_PEDAL_COLOR, PEDAL_COLOR_PRESETS, readableOn } from "../lib/color";
 import { PX_PER_INCH } from "../lib/geometry";
 import {
@@ -70,69 +70,37 @@ function Preview({
 
 const RAINBOW = "conic-gradient(#ff4d4d, #ffd84d, #4dff88, #4dd8ff, #6b4dff, #ff4dd8, #ff4d4d)";
 
-/** "● Mint ⌄": the chosen color as a quiet chip; it opens the swatches (and a color wheel for any color) in a popover. */
-function ColorChip({ color, onChange }: { color: string; onChange: (hex: string) => void }) {
-  const [open, setOpen] = useState(false);
-  const wrap = useRef<HTMLDivElement>(null);
-  const preset = PEDAL_COLOR_PRESETS.find((c) => c.hex === color);
-
-  // Closes on a click outside or Escape. The native color picker isn't part of the page, so using it keeps this open.
-  useEffect(() => {
-    if (!open) return;
-    const onDown = (e: PointerEvent) => !wrap.current?.contains(e.target as Node) && setOpen(false);
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && (e.stopPropagation(), setOpen(false));
-    document.addEventListener("pointerdown", onDown);
-    window.addEventListener("keydown", onKey, true);
-    return () => {
-      document.removeEventListener("pointerdown", onDown);
-      window.removeEventListener("keydown", onKey, true);
-    };
-  }, [open]);
-
+/** Flat round swatches; a check marks the pick. The last is a color wheel for any color (showing it when picked). */
+function ColorSwatches({ color, onChange }: { color: string; onChange: (hex: string) => void }) {
+  const preset = PEDAL_COLOR_PRESETS.some((c) => c.hex === color);
   return (
-    <div ref={wrap} className="relative">
-      <button
-        type="button"
-        aria-haspopup="dialog"
-        aria-expanded={open}
-        onClick={() => setOpen(!open)}
-        className={`press flex h-7 items-center gap-1.5 rounded-full pl-1.5 pr-2 text-[13px] font-medium outline-none transition-colors hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand ${open ? "bg-surface-hover" : ""}`}
+    <div className="flex flex-wrap items-center gap-1.5">
+      {PEDAL_COLOR_PRESETS.map((c) => (
+        <button
+          type="button"
+          key={c.hex}
+          aria-label={c.name}
+          aria-pressed={color === c.hex}
+          {...tip(c.name)}
+          onClick={() => onChange(c.hex)}
+          className="press grid size-6 place-items-center rounded-full outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+          style={{ background: c.hex, color: readableOn(c.hex) }}
+        >
+          {color === c.hex && <Check size={14} strokeWidth={3} />}
+        </button>
+      ))}
+      <label
+        {...tip("Any Color")}
+        className="press relative grid size-6 cursor-pointer place-items-center rounded-full text-white focus-within:ring-2 focus-within:ring-brand focus-within:ring-offset-2 focus-within:ring-offset-surface"
+        style={{ background: RAINBOW }}
       >
-        <span className="size-4 rounded-full ring-1 ring-black/10" style={{ background: color }} />
-        {preset?.name ?? "Custom"}
-        <ChevronDown size={13} className="text-ink-muted" />
-      </button>
-      {open && (
-        <div role="dialog" aria-label="Pick a color" className="animate-menu absolute right-0 top-full z-20 mt-1.5 w-max rounded-panel bg-surface p-2 shadow-panel">
-          <div className="grid grid-cols-4 gap-1.5">
-            {PEDAL_COLOR_PRESETS.map((c) => (
-              <button
-                type="button"
-                key={c.hex}
-                aria-label={c.name}
-                aria-pressed={color === c.hex}
-                {...tip(c.name)}
-                onClick={() => {
-                  onChange(c.hex);
-                  setOpen(false);
-                }}
-                className="press grid size-7 place-items-center rounded-[7px] outline-none focus-visible:ring-2 focus-visible:ring-brand"
-                style={{ background: c.hex, color: readableOn(c.hex) }}
-              >
-                {color === c.hex && <Check size={14} strokeWidth={3} />}
-              </button>
-            ))}
-            <label
-              {...tip("Any Color")}
-              className="press relative grid size-7 cursor-pointer place-items-center rounded-[7px] focus-within:ring-2 focus-within:ring-brand"
-              style={{ background: RAINBOW }}
-            >
-              {!preset && <span className="size-3.5 rounded-full ring-2 ring-white" style={{ background: color }} />}
-              <input type="color" aria-label="Any color" value={color} onChange={(e) => onChange(e.target.value)} className="absolute inset-0 size-full cursor-pointer opacity-0" />
-            </label>
-          </div>
-        </div>
-      )}
+        {!preset && (
+          <span className="grid size-4 place-items-center rounded-full" style={{ background: color, color: readableOn(color) }}>
+            <Check size={11} strokeWidth={3} />
+          </span>
+        )}
+        <input type="color" aria-label="Any color" value={color} onChange={(e) => onChange(e.target.value)} className="absolute inset-0 size-full cursor-pointer opacity-0" />
+      </label>
     </div>
   );
 }
@@ -295,9 +263,9 @@ export function CustomItemForm({
       )}
 
       {kind === "pedal" && (
-        <div className="flex items-center justify-between gap-3">
-          <span className="text-xs text-ink-muted">Color</span>
-          <ColorChip color={color} onChange={setColor} />
+        <div>
+          <div className="mb-1 text-xs text-ink-muted">Color</div>
+          <ColorSwatches color={color} onChange={setColor} />
         </div>
       )}
 
