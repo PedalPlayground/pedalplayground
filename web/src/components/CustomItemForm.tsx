@@ -55,7 +55,7 @@ function Preview({
   const scale = Math.min(boxW / w, boxH / h);
   return (
     <div className="grid place-items-center" style={{ width: boxW, height: boxH }}>
-      <div style={{ width: w * scale, height: h * scale }} className="relative transition-[width,height] duration-200 ease-out">
+      <div style={{ width: w * scale, height: h * scale }} className="relative">
         <div className="absolute left-0 top-0 origin-top-left" style={{ width: w, height: h, transform: `scale(${scale})` }}>
           {kind === "pedalboard" ? <CustomBoard /> : <PedalArt template={template} jacks={jacks} w={w} h={h} color={color} label={label} />}
         </div>
