@@ -166,6 +166,8 @@ function SpaceByModal({ onClose }: { onClose: () => void }) {
   const spaceByGap = usePlayground((s) => s.spaceByGap);
   const fmt = (inches: number) => (units === "mm" ? String(Math.round(inches * MM_PER_INCH * 10) / 10) : String(+inches.toFixed(3)));
   const [value, setValue] = useState(fmt(lastGap));
+  // Two plugs when the gear on both sides of the gap has a jack facing the other.
+  const [plugs, setPlugs] = useState<1 | 2>(1);
   const gap = parseFloat(value);
   const apply = () => {
     if (!(gap >= 0)) return;
@@ -198,19 +200,34 @@ function SpaceByModal({ onClose }: { onClose: () => void }) {
             {units}
           </span>
         </label>
-        <p className="mb-1.5 text-xs text-ink-muted">Plug thickness (right angle 1/4″)</p>
+        <div className="mb-1.5 flex items-center justify-between">
+          <p className="text-xs text-ink-muted">Plug thickness (right angle 1/4″)</p>
+          <div role="group" aria-label="Plugs in the gap" className="flex rounded-control bg-surface-hover p-0.5 text-xs">
+            {([1, 2] as const).map((n) => (
+              <button
+                key={n}
+                type="button"
+                aria-pressed={plugs === n}
+                onClick={() => setPlugs(n)}
+                className={`h-6 rounded-[5px] px-2.5 font-medium outline-none focus-visible:ring-2 focus-visible:ring-brand ${plugs === n ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
+              >
+                {n} {n === 1 ? "plug" : "plugs"}
+              </button>
+            ))}
+          </div>
+        </div>
         <ul className="mb-4 flex flex-col gap-1">
           {PLUGS.map((p) => (
             <li key={p.name}>
               <button
                 type="button"
-                onClick={() => setValue(fmt(p.mm / MM_PER_INCH))}
+                onClick={() => setValue(fmt((p.mm * plugs) / MM_PER_INCH))}
                 className="flex h-9 w-full items-center gap-3 rounded-control bg-surface-hover px-3 text-left text-sm outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand"
               >
                 <span className="flex-1">{p.name}</span>
                 {/* A bar drawn to scale (2 px per mm) next to the measurement. */}
-                <span aria-hidden className="h-3 rounded-[2px] bg-ink-muted" style={{ width: p.mm * 2 }} />
-                <span className="w-16 text-right text-xs text-ink-muted">{units === "mm" ? `${p.mm} mm` : `${(p.mm / MM_PER_INCH).toFixed(2)} in`}</span>
+                <span aria-hidden className="h-3 rounded-[2px] bg-ink-muted" style={{ width: p.mm * plugs * 2 }} />
+                <span className="w-16 text-right text-xs text-ink-muted">{units === "mm" ? `${+(p.mm * plugs).toFixed(1)} mm` : `${((p.mm * plugs) / MM_PER_INCH).toFixed(2)} in`}</span>
               </button>
             </li>
           ))}
@@ -218,7 +235,7 @@ function SpaceByModal({ onClose }: { onClose: () => void }) {
         <button type="submit" disabled={!(gap >= 0)} className="h-9 w-full btn-primary disabled:opacity-50">
           Apply
         </button>
-        <p className="mt-2 text-center text-xs text-ink-muted">Tap a plug to use its thickness. Sizes are approximate.</p>
+        <p className="mt-2 text-center text-xs text-ink-muted">Tap a plug to use its thickness. Choose 2 when jacks face each other. Sizes are approximate.</p>
       </form>
     </Modal>
   );
