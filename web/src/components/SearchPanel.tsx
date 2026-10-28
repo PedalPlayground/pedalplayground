@@ -231,40 +231,49 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
 
   const body = (
     <>
-      <div className="flex items-center gap-2 border-b border-line px-3 py-2">
-        {edit ? (
-          <h2 className="flex h-9 flex-1 items-center text-sm font-semibold">
-            {target?.kind === "pedalboard" ? "Edit Custom Pedalboard" : "Edit Custom Pedal"}
-          </h2>
-        ) : (
-        <>
-        <Search size={16} className="text-ink-muted" />
-        <input
-          ref={searchInput}
-          autoFocus
-          value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
-            setCustom(null); // typing goes back to the results
-          }}
-          onKeyDown={onSearchKey}
-          role="combobox"
-          aria-expanded={!showCustom}
-          aria-controls="search-results"
-          aria-activedescendant={active >= 0 ? `search-row-${active}` : undefined}
-          aria-autocomplete="list"
-          {...plainField}
-          autoCapitalize="none"
-          enterKeyHint="search"
-          placeholder={target ? `Replace ${target.label}` : "Search pedals and pedalboards"}
-          className="h-9 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted max-sm:text-base"
-        />
-        </>
-        )}
-        <button aria-label="Close search" {...tip("Close")} onClick={onClose} className="press grid size-7 place-items-center rounded-control text-ink-muted hover:bg-surface-hover hover:text-ink active:bg-chrome-line">
+      {/* Title and close, then (except when editing a custom item) the shaded search field. */}
+      <div className="flex items-center gap-2 px-4 pb-1 pt-3">
+        <h2 className="flex-1 truncate text-base font-semibold tracking-[-0.01em]">
+          {edit
+            ? target?.kind === "pedalboard"
+              ? "Edit Custom Pedalboard"
+              : "Edit Custom Pedal"
+            : target
+              ? `Replace ${target.label}`
+              : "Add Gear"}
+        </h2>
+        <button aria-label="Close" {...tip("Close")} onClick={onClose} className="press -mr-1.5 grid size-7 place-items-center rounded-control text-ink-muted hover:bg-surface-hover hover:text-ink active:bg-chrome-line">
           <X size={16} />
         </button>
       </div>
+      {!edit && (
+        <div className="px-3 pb-1 pt-1.5">
+          <label className="flex h-9 items-center gap-2 rounded-control bg-surface-hover px-3 focus-within:ring-2 focus-within:ring-brand">
+            <Search size={16} className="shrink-0 text-ink-muted" />
+            <input
+              ref={searchInput}
+              autoFocus
+              value={query}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                setCustom(null); // typing goes back to the results
+              }}
+              onKeyDown={onSearchKey}
+              role="combobox"
+              aria-label="Search pedals and pedalboards"
+              aria-expanded={!showCustom}
+              aria-controls="search-results"
+              aria-activedescendant={active >= 0 ? `search-row-${active}` : undefined}
+              aria-autocomplete="list"
+              {...plainField}
+              autoCapitalize="none"
+              enterKeyHint="search"
+              placeholder="Search pedals and pedalboards"
+              className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted max-sm:text-base"
+            />
+          </label>
+        </div>
+      )}
       {!edit && (custom ? (
         <div className="flex px-3 pt-2">
           <button
@@ -453,13 +462,13 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   );
 
   if (!phone) {
-    // Docked down the canvas's left side (stopping above the toolbar), so gear lands in view to its right.
+    // Docked down the canvas's whole left side, so gear lands in view to its right (the toolbar re-centers beside it).
     return (
       <div
         ref={dockRef}
         role="dialog"
         aria-label={edit ? "Edit" : replace ? "Replace" : "Add Gear"}
-        className="animate-dock absolute bottom-[calc(4.5rem+env(safe-area-inset-bottom))] left-3 top-3 z-20 flex w-[min(380px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-panel"
+        className="animate-dock absolute bottom-3 left-3 top-3 z-20 flex w-[min(380px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-panel"
       >
         {body}
       </div>
