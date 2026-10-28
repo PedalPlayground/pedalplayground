@@ -137,9 +137,13 @@ export function App() {
           Safe-area padding keeps it clear of notches and rounded corners. */}
       <header className="box-content grid h-10 shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-chrome-line bg-chrome pl-[max(0.75rem,env(safe-area-inset-left))] pr-[max(0.75rem,env(safe-area-inset-right))] pt-[env(safe-area-inset-top)] sm:grid-cols-[1fr_auto_1fr] sm:gap-4 sm:pl-[max(1rem,env(safe-area-inset-left))] sm:pr-[max(1rem,env(safe-area-inset-right))]">
         <div className="flex min-w-0 items-center gap-2">
-          <h1 className="flex items-center gap-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink">
+          <h1 className="group flex items-center gap-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink">
             <LogoMark />
-            <span className="whitespace-nowrap max-sm:hidden">Pedal Playground</span>
+            <span className="whitespace-nowrap max-sm:hidden">
+              Pedal Playground
+              {/* A little hello on hover. */}
+              <span aria-hidden className="hidden text-brand-top group-hover:inline"> &lt;3s you</span>
+            </span>
             {pro && <span className="text-brand-top max-sm:hidden">Pro</span>}
           </h1>
           {BETA && (
