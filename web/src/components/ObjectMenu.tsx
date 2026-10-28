@@ -49,6 +49,8 @@ export function ObjectMenu() {
     // On phones it sits at the bottom, in thumb reach just above the toolbar (hidden while the search panel is open).
     <div
       data-tour="object-menu"
+      // With the gear panel docked on the left (larger screens), center over the canvas that's still showing.
+      style={s.coverLeft ? { left: `calc(50% + ${s.coverLeft / 2}px)`, maxWidth: `calc(100% - ${s.coverLeft + 24}px)` } : undefined}
       className={`animate-enter sm:[--enter-y:-8px] absolute left-1/2 z-10 flex max-w-[calc(100%-24px)] -translate-x-1/2 flex-col items-center gap-1 ${barPanel} max-sm:bottom-[calc(74px+env(safe-area-inset-bottom))] sm:top-4 sm:flex-row sm:gap-1.5 ${searchOpen ? "max-sm:hidden" : ""}`}
     >
       <div className="flex items-center gap-1 max-sm:w-full max-sm:justify-center">

@@ -224,9 +224,13 @@ export function App() {
           <div className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             <ActionToast className="max-sm:hidden" />
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
-            {searchOpen && <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} />}
             <Toolbar viewOnly={viewing} onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
           </div>
+          )}
+
+          {/* Docked on the left on larger screens; phones open it as a bottom drawer (it portals itself there). */}
+          {!covered && searchOpen && (
+            <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} />
           )}
 
           {/* Lower-right corner. Phones keep it above the toolbar, which spans the bottom edge there, and hide it

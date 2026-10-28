@@ -33,6 +33,9 @@ interface PlaygroundState {
   selected: string[];
   view: View;
   viewport: { w: number; h: number };
+  /** Pixels on the canvas's left edge covered by the docked gear panel; new gear is placed and shown clear of it. */
+  coverLeft: number;
+  setCoverLeft: (px: number) => void;
   /** A fit was requested before the canvas had a size; apply it once measured. */
   pendingFit: boolean;
   past: Snapshot[];
@@ -122,7 +125,7 @@ function placeNew(s: PlaygroundState, n: NewItem): Partial<PlaygroundState> {
     x = b.right + PLACE_GAP;
     y = b.bottom - n.height;
   } else {
-    x = (s.viewport.w / 2 - s.view.x) / s.view.zoom / PX_PER_INCH - n.width / 2;
+    x = ((s.coverLeft + s.viewport.w) / 2 - s.view.x) / s.view.zoom / PX_PER_INCH - n.width / 2;
     y = (s.viewport.h / 2 - s.view.y) / s.view.zoom / PX_PER_INCH - n.height / 2;
   }
   const item: Item = { id: crypto.randomUUID(), ...n, x, y, rotation: 0, flipX: false };
@@ -144,11 +147,11 @@ function placeNew(s: PlaygroundState, n: NewItem): Partial<PlaygroundState> {
 
 /** The current view, zoomed out and re-centered only if `item` isn't fully on screen. */
 function viewShowing(s: PlaygroundState, item: Item): View {
-  const { view, viewport } = s;
+  const { view, viewport, coverLeft } = s;
   const scale = view.zoom * PX_PER_INCH;
   const pad = PLACE_PAD / scale;
   const vis = {
-    left: -view.x / scale,
+    left: (coverLeft - view.x) / scale,
     top: -view.y / scale,
     right: (viewport.w - view.x) / scale,
     bottom: (viewport.h - view.y) / scale,
@@ -165,11 +168,11 @@ function viewShowing(s: PlaygroundState, item: Item): View {
   };
   const uw = (u.right - u.left) * PX_PER_INCH;
   const uh = (u.bottom - u.top) * PX_PER_INCH;
-  const zoom = clamp(Math.min(view.zoom, (viewport.w - PLACE_PAD * 2) / uw, (viewport.h - PLACE_PAD * 2) / uh), MIN_ZOOM, MAX_ZOOM);
+  const zoom = clamp(Math.min(view.zoom, (viewport.w - coverLeft - PLACE_PAD * 2) / uw, (viewport.h - PLACE_PAD * 2) / uh), MIN_ZOOM, MAX_ZOOM);
   const k = zoom * PX_PER_INCH;
   return {
     zoom,
-    x: viewport.w / 2 - ((u.left + u.right) / 2) * k,
+    x: (coverLeft + viewport.w) / 2 - ((u.left + u.right) / 2) * k,
     y: viewport.h / 2 - ((u.top + u.bottom) / 2) * k,
   };
 }
@@ -190,6 +193,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
   selected: [],
   view: DEFAULT_VIEW,
   viewport: { w: 0, h: 0 },
+  coverLeft: 0,
+  setCoverLeft: (coverLeft) => set({ coverLeft }),
   pendingFit: false,
   past: [],
   future: [],

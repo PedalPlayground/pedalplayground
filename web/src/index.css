@@ -179,6 +179,15 @@ body {
 @utility animate-sheet {
   animation: pp-sheet 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+/* The gear panel slides in from the canvas's left edge. */
+@keyframes pp-dock {
+  from {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+@utility animate-dock {
+  animation: pp-dock 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
 @utility animate-fade {
   animation: pp-fade 0.15s ease-out both;
 }

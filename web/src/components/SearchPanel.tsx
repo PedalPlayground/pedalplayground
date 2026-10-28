@@ -55,11 +55,27 @@ const SHEET_MS = 220;
 
 /**
  * Adds products to the canvas; with `replace`, picks a replacement for the selected product instead.
- * Larger screens get a panel above the toolbar; phones get a bottom drawer that slides closed.
+ * Larger screens get a panel docked down the canvas's left side; phones get a bottom drawer that slides closed.
  */
 export function SearchPanel({ onClose: close, replace = false, edit = false }: { onClose: () => void; replace?: boolean; edit?: boolean }) {
   const phone = useMediaQuery(PHONE_QUERY);
   const { height: visibleHeight, keyboard } = useVisualViewport();
+
+  // The docked panel (larger screens) tells the canvas how much of its left edge it covers, so new gear lands clear of it.
+  const dockRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = dockRef.current;
+    const setCover = usePlayground.getState().setCoverLeft;
+    if (phone || !el) return;
+    const measure = () => setCover(el.offsetLeft + el.offsetWidth);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => {
+      ro.disconnect();
+      setCover(0);
+    };
+  }, [phone]);
 
   // Phones slide the drawer away before unmounting it.
   const [closing, setClosing] = useState(false);
@@ -335,7 +351,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         </div>
       ))}
       {showCustom ? (
-        <div className={phone ? "min-h-0 flex-1 overflow-y-auto overscroll-contain" : "max-h-[min(560px,calc(100dvh-12rem))] overflow-y-auto"}>
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
           <CustomItemForm
             key={custom ? `${custom.kind}:${custom.name}` : "edit"}
             onDone={onClose}
@@ -345,7 +361,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           />
         </div>
       ) : (
-      <ul id="search-results" role="listbox" className={`overflow-y-auto overscroll-contain p-2 ${phone ? "min-h-0 flex-1" : "max-h-80"}`}>
+      <ul id="search-results" role="listbox" className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2">
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
         {error && <li className="p-3 text-sm text-danger">{error}</li>}
         {catalog && (hits.length === 0 || partial) && (
@@ -437,7 +453,17 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   );
 
   if (!phone) {
-    return <div className="animate-enter w-[min(420px,calc(100vw-5rem))] rounded-panel bg-surface shadow-panel">{body}</div>;
+    // Docked down the canvas's left side (stopping above the toolbar), so gear lands in view to its right.
+    return (
+      <div
+        ref={dockRef}
+        role="dialog"
+        aria-label={edit ? "Edit" : replace ? "Replace" : "Add Gear"}
+        className="animate-dock absolute bottom-[calc(4.5rem+env(safe-area-inset-bottom))] left-3 top-3 z-20 flex w-[min(380px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-panel"
+      >
+        {body}
+      </div>
+    );
   }
 
   // Phone drawer. Sits above the keyboard when it's open, and leaves the header in view.
