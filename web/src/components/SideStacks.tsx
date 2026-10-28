@@ -2,6 +2,7 @@ import {
   AlignHorizontalSpaceBetween,
   ArrowDownToLine,
   ArrowUpToLine,
+  ChevronDown,
   ChevronsLeft,
   ChevronsRight,
   Fullscreen,
@@ -155,20 +156,89 @@ let lastGap = 0.25;
 
 /** Thin side of common right-angle 1/4" plugs: the room one needs between two pedals. */
 const PLUGS = [
-  { name: "SquarePlug SP400", mm: 8.3 },
-  { name: "Pancake (typical)", mm: 10 },
-  { name: "Neutrik NP2RX", mm: 14.5 },
+  { id: "sp400", name: "SP400", mm: 8.3 },
+  { id: "pancake", name: "Pancake", mm: 10 },
+  { id: "neutrik", name: "Neutrik", mm: 14.5 },
 ];
 
-/** "Space By…": type a gap in the current units and the selection lines up left to right with exactly that between them. */
+const PLUG_BODY_MM = 26;
+const BARREL_MM = [6.35, 14] as const;
+
+/** Top-down view of two right-angle plugs back to back, each an upside-down L: the barrel runs out to its pedal, the body stands between. */
+function PlugDrawing({ left, right }: { left: number; right: number }) {
+  const k = 3.2;
+  const pad = 8;
+  const bodyH = PLUG_BODY_MM * k;
+  const barrelW = BARREL_MM[1] * k;
+  const barrelH = BARREL_MM[0] * k;
+  const lw = left * k;
+  const rw = right * k;
+  const w = pad * 2 + barrelW * 2 + 14.5 * k * 2;
+  const seam = w / 2;
+  const y0 = 6;
+  const fill = "currentColor";
+  return (
+    <svg viewBox={`0 0 ${w} ${bodyH + 28}`} className="mx-auto h-[88px] w-full text-ink-muted" role="img" aria-label="Two plugs side by side">
+      {/* Left plug: body hugging the seam, barrel running left from its top. */}
+      <rect x={seam - lw} y={y0} width={lw} height={bodyH} rx={2} fill={fill} opacity={0.55} stroke="var(--color-surface)" strokeWidth={1.5} />
+      <rect x={seam - lw - barrelW} y={y0} width={barrelW + 2} height={barrelH} rx={2} fill={fill} opacity={0.55} stroke="var(--color-surface)" strokeWidth={1.5} />
+      {right > 0 && (
+        <>
+          <rect x={seam} y={y0} width={rw} height={bodyH} rx={2} fill={fill} opacity={0.85} stroke="var(--color-surface)" strokeWidth={1.5} />
+          <rect x={seam + rw - 2} y={y0} width={barrelW + 2} height={barrelH} rx={2} fill={fill} opacity={0.85} stroke="var(--color-surface)" strokeWidth={1.5} />
+        </>
+      )}
+      {/* Gap measure under the bodies. */}
+      <line x1={seam - lw} x2={seam + rw} y1={y0 + bodyH + 8} y2={y0 + bodyH + 8} stroke="currentColor" strokeWidth={1.5} />
+      <line x1={seam - lw} x2={seam - lw} y1={y0 + bodyH + 4} y2={y0 + bodyH + 12} stroke="currentColor" strokeWidth={1.5} />
+      <line x1={seam + rw} x2={seam + rw} y1={y0 + bodyH + 4} y2={y0 + bodyH + 12} stroke="currentColor" strokeWidth={1.5} />
+    </svg>
+  );
+}
+
+const plugSeg = (on: boolean) =>
+  `h-6 rounded-[5px] px-2.5 text-xs font-medium outline-none focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`;
+
+/** "Space By…": type a gap, or pick the plugs that sit between the gear, and the selection lines up left to right with that between them. */
 function SpaceByModal({ onClose }: { onClose: () => void }) {
   const units = useUi((u) => u.units);
+  const setUnits = useUi((u) => u.setUnits);
   const spaceByGap = usePlayground((s) => s.spaceByGap);
-  const fmt = (inches: number) => (units === "mm" ? String(Math.round(inches * MM_PER_INCH * 10) / 10) : String(+inches.toFixed(3)));
+  const fmt = (inches: number, u = units) => (u === "mm" ? String(Math.round(inches * MM_PER_INCH * 10) / 10) : String(+inches.toFixed(3)));
   const [value, setValue] = useState(fmt(lastGap));
-  // Two plugs when the gear on both sides of the gap has a jack facing the other.
-  const [plugs, setPlugs] = useState<1 | 2>(1);
+  const [plug1, setPlug1] = useState<string | null>(null);
+  const [plug2, setPlug2] = useState<string | null>(null);
+  const [guideOpen, setGuideOpen] = useState(() => {
+    try {
+      return localStorage.getItem("pp:plug-guide") !== "closed";
+    } catch {
+      return true;
+    }
+  });
   const gap = parseFloat(value);
+  const mmOf = (id: string | null) => PLUGS.find((p) => p.id === id)?.mm ?? 0;
+
+  const pick = (which: 1 | 2, id: string | null) => {
+    const a = which === 1 ? id : plug1;
+    const b = which === 2 ? id : plug2;
+    if (which === 1) setPlug1(id);
+    else setPlug2(id);
+    if (a || b) setValue(fmt((mmOf(a) + mmOf(b)) / MM_PER_INCH));
+  };
+  const changeUnits = (u: typeof units) => {
+    if (u === units) return;
+    if (gap >= 0) setValue(fmt(units === "mm" ? gap / MM_PER_INCH : gap, u));
+    setUnits(u);
+  };
+  const toggleGuide = () =>
+    setGuideOpen((o) => {
+      try {
+        localStorage.setItem("pp:plug-guide", o ? "closed" : "open");
+      } catch {
+        /* storage unavailable */
+      }
+      return !o;
+    });
   const apply = () => {
     if (!(gap >= 0)) return;
     const inches = units === "mm" ? gap / MM_PER_INCH : gap;
@@ -176,66 +246,74 @@ function SpaceByModal({ onClose }: { onClose: () => void }) {
     spaceByGap(inches);
     onClose();
   };
+  const cell = (on: boolean) =>
+    `h-7 rounded-[5px] text-xs outline-none focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-brand/15 font-medium text-brand" : "bg-surface-hover text-ink hover:bg-ink/10"}`;
+  const size = (mm: number) => (units === "mm" ? `${mm} mm` : `${(mm / MM_PER_INCH).toFixed(2)} in`);
+
   return (
     <Modal title="Space By" onClose={onClose} closeX>
-      <p className="mb-3 text-sm text-ink-muted">Lines the selection up left to right with this gap between each item.</p>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           apply();
         }}
       >
-        <label className="mb-4 flex h-9 items-center gap-1 rounded-control bg-surface-hover px-3 focus-within:ring-2 focus-within:ring-brand">
-          <input
-            autoFocus
-            aria-label={`Gap between items (${units})`}
-            inputMode="decimal"
-            {...plainField}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            onFocus={(e) => e.target.select()}
-            className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none"
-          />
-          <span aria-hidden className="text-xs text-ink-muted">
-            {units}
-          </span>
-        </label>
-        <div className="mb-1.5 flex items-center justify-between">
-          <p className="text-xs text-ink-muted">Plug thickness (right angle 1/4″)</p>
-          <div role="group" aria-label="Plugs in the gap" className="flex rounded-control bg-surface-hover p-0.5 text-xs">
-            {([1, 2] as const).map((n) => (
-              <button
-                key={n}
-                type="button"
-                aria-pressed={plugs === n}
-                onClick={() => setPlugs(n)}
-                className={`h-6 rounded-[5px] px-2.5 font-medium outline-none focus-visible:ring-2 focus-visible:ring-brand ${plugs === n ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
-              >
-                {n} {n === 1 ? "plug" : "plugs"}
+        <div className="mb-3 flex items-center gap-2">
+          <label className="flex h-9 min-w-0 flex-1 items-center gap-1 rounded-control bg-surface-hover px-3 focus-within:ring-2 focus-within:ring-brand">
+            <input
+              autoFocus
+              aria-label={`Gap between items (${units})`}
+              inputMode="decimal"
+              {...plainField}
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              onFocus={(e) => e.target.select()}
+              className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none"
+            />
+          </label>
+          <div role="group" aria-label="Units" className="flex rounded-control bg-surface-hover p-0.5">
+            {(["in", "mm"] as const).map((u) => (
+              <button key={u} type="button" aria-pressed={units === u} onClick={() => changeUnits(u)} className={plugSeg(units === u)}>
+                {u}
               </button>
             ))}
           </div>
         </div>
-        <ul className="mb-4 flex flex-col gap-1">
-          {PLUGS.map((p) => (
-            <li key={p.name}>
-              <button
-                type="button"
-                onClick={() => setValue(fmt((p.mm * plugs) / MM_PER_INCH))}
-                className="flex h-9 w-full items-center gap-3 rounded-control bg-surface-hover px-3 text-left text-sm outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand"
-              >
-                <span className="flex-1">{p.name}</span>
-                {/* A bar drawn to scale (2 px per mm) next to the measurement. */}
-                <span aria-hidden className="h-3 rounded-[2px] bg-ink-muted" style={{ width: p.mm * plugs * 2 }} />
-                <span className="w-16 text-right text-xs text-ink-muted">{units === "mm" ? `${+(p.mm * plugs).toFixed(1)} mm` : `${((p.mm * plugs) / MM_PER_INCH).toFixed(2)} in`}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
+
+        <button
+          type="button"
+          onClick={toggleGuide}
+          aria-expanded={guideOpen}
+          className="mb-1 flex w-full items-center gap-1 rounded-[5px] text-xs text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+        >
+          <ChevronDown size={14} className={guideOpen ? "" : "-rotate-90"} />
+          Plug guide
+        </button>
+        {guideOpen && (
+          <div className="mb-3 rounded-control bg-surface-hover/60 p-2">
+            <PlugDrawing left={mmOf(plug1) || 10} right={mmOf(plug2)} />
+            <div className="mt-1 grid grid-cols-[3.5rem_1fr_1fr] items-center gap-1 text-[11px] text-ink-muted">
+              <span />
+              <span className="text-center">Plug 1</span>
+              <span className="text-center">Plug 2</span>
+              {PLUGS.map((p) => (
+                <div key={p.id} className="contents">
+                  <span className="truncate">{p.name}</span>
+                  <button type="button" aria-pressed={plug1 === p.id} onClick={() => pick(1, plug1 === p.id ? null : p.id)} className={cell(plug1 === p.id)}>
+                    {size(p.mm)}
+                  </button>
+                  <button type="button" aria-pressed={plug2 === p.id} onClick={() => pick(2, plug2 === p.id ? null : p.id)} className={cell(plug2 === p.id)}>
+                    {size(p.mm)}
+                  </button>
+                </div>
+              ))}
+            </div>
+            <p className="mt-1.5 text-center text-[11px] text-ink-muted">Pick one plug, or two where jacks face each other. Sizes are approximate.</p>
+          </div>
+        )}
         <button type="submit" disabled={!(gap >= 0)} className="h-9 w-full btn-primary disabled:opacity-50">
           Apply
         </button>
-        <p className="mt-2 text-center text-xs text-ink-muted">Tap a plug to use its thickness. Choose 2 when jacks face each other. Sizes are approximate.</p>
       </form>
     </Modal>
   );
