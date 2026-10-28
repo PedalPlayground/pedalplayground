@@ -46,6 +46,7 @@ const HALO_RADIUS = 7;
 /** Half the break in the top edge where the lock sits, and the lock's size. */
 const LOCK_GAP = 8;
 const LOCK_SIZE = 12;
+const GROUP_ICON = 15;
 
 /**
  * The rounded selection outline around an item. It follows the item's rotated bounds, so the
@@ -95,13 +96,36 @@ function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
   const h = (b.bottom - b.top) * PX_PER_INCH + pad * 2;
   const sw = HALO_STROKE / zoom;
   const r = Math.min(12 / zoom, w / 2, h / 2);
+  // The outline breaks at the top center for a small group badge, like the lock's.
+  const g = (GROUP_ICON / 2 + 5) / zoom;
+  const [x0, y0, x1, y1, cx] = [sw / 2, sw / 2, w - sw / 2, h - sw / 2, w / 2];
+  const d =
+    `M${cx + g} ${y0}H${x1 - r}A${r} ${r} 0 0 1 ${x1} ${y0 + r}V${y1 - r}A${r} ${r} 0 0 1 ${x1 - r} ${y1}` +
+    `H${x0 + r}A${r} ${r} 0 0 1 ${x0} ${y1 - r}V${y0 + r}A${r} ${r} 0 0 1 ${x0 + r} ${y0}H${cx - g}`;
+  const icon = GROUP_ICON / zoom;
   return (
     <svg
       aria-hidden
       className="animate-fade pointer-events-none absolute overflow-visible transition-opacity duration-150"
       style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
     >
-      <rect x={sw / 2} y={sw / 2} width={w - sw} height={h - sw} rx={r} fill="none" stroke="var(--color-apricot)" strokeWidth={sw} />
+      <path d={d} fill="none" stroke="var(--color-apricot)" strokeWidth={sw} />
+      {/* The Group glyph (corner brackets around two overlapping boxes), centered on the top edge. */}
+      <g
+        transform={`translate(${cx - icon / 2} ${y0 - icon / 2}) scale(${icon / 24})`}
+        fill="none"
+        stroke="var(--color-apricot)"
+        strokeWidth={2.25}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+        <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+        <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+        <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+        <rect width="7" height="5" x="7" y="7" rx="1" />
+        <rect width="7" height="5" x="10" y="12" rx="1" />
+      </g>
     </svg>
   );
 }
