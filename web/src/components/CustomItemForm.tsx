@@ -1,5 +1,6 @@
+import { Check } from "lucide-react";
 import { useState } from "react";
-import { NEW_PEDAL_COLOR, PEDAL_COLOR_PRESETS } from "../lib/color";
+import { NEW_PEDAL_COLOR, PEDAL_COLOR_PRESETS, readableOn } from "../lib/color";
 import { PX_PER_INCH } from "../lib/geometry";
 import {
   DEFAULT_PEDAL_TEMPLATE,
@@ -26,9 +27,6 @@ const MM_PER_INCH = 25.4;
 const MAX_INCHES = 60;
 /** Suggested custom pedalboard size, in inches. */
 const BOARD_SIZE = { width: 24, height: 12.5 };
-
-/** The selected color swatch: a brand ring drawn inside its edge, with a band of the panel color between it and the color. */
-const selectedSwatch = "shadow-[inset_0_0_0_2px_var(--color-brand),inset_0_0_0_4px_var(--color-surface)]";
 
 /** Shaded, borderless fields, like the rest of the app's forms. */
 const field =
@@ -207,7 +205,7 @@ export function CustomItemForm({
       {kind === "pedal" && (
         <div>
           <div className="mb-1 text-xs text-ink-muted">Style</div>
-          {/* Just the pictures; each style's name and hint are in its tooltip. */}
+          {/* Just the pictures (each style's name is its accessible label). */}
           <div className="grid grid-cols-3 gap-1.5">
             {PEDAL_TEMPLATES.map((t) => (
               <button
@@ -215,7 +213,6 @@ export function CustomItemForm({
                 key={t.id}
                 aria-label={t.name}
                 aria-pressed={template === t.id}
-                {...tip(`${t.name}: ${t.hint}`)}
                 onClick={() => pickTemplate(t.id)}
                 className={`press grid place-items-center rounded-control border p-1.5 transition-colors ${
                   template === t.id ? "border-brand bg-brand/10" : "border-line hover:bg-surface-hover"
@@ -229,10 +226,10 @@ export function CustomItemForm({
       )}
 
       {kind === "pedal" && (
-        // One line: the label left, flat round swatches right, the last a color wheel for any color.
+        // One line: the label left, flat swatches right (a check marks the pick), the last a color wheel for any color.
         <div className="flex items-center justify-between gap-3">
           <span className="text-xs text-ink-muted">Color</span>
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1">
             {PEDAL_COLOR_PRESETS.map((c) => (
               <button
                 type="button"
@@ -241,17 +238,20 @@ export function CustomItemForm({
                 aria-pressed={color === c.hex}
                 {...tip(c.name)}
                 onClick={() => setColor(c.hex)}
-                className={`press size-[22px] rounded-full ${color === c.hex ? selectedSwatch : ""}`}
-                style={{ background: c.hex }}
-              />
+                className="press grid size-[22px] place-items-center rounded-[6px] outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                style={{ background: c.hex, color: readableOn(c.hex) }}
+              >
+                {color === c.hex && <Check size={13} strokeWidth={3} />}
+              </button>
             ))}
             <label
               {...tip("Any Color")}
-              className={`press relative size-[22px] cursor-pointer rounded-full focus-within:ring-2 focus-within:ring-brand ${
-                PEDAL_COLOR_PRESETS.some((c) => c.hex === color) ? "" : selectedSwatch
-              }`}
+              className="press relative grid size-[22px] cursor-pointer place-items-center rounded-[6px] text-white focus-within:ring-2 focus-within:ring-brand"
               style={{ background: "conic-gradient(#ff4d4d, #ffd84d, #4dff88, #4dd8ff, #6b4dff, #ff4dd8, #ff4d4d)" }}
             >
+              {!PEDAL_COLOR_PRESETS.some((c) => c.hex === color) && (
+                <span className="grid size-3.5 place-items-center rounded-full ring-2 ring-white" style={{ background: color }} />
+              )}
               <input type="color" aria-label="Any color" value={color} onChange={(e) => setColor(e.target.value)} className="absolute inset-0 size-full cursor-pointer opacity-0" />
             </label>
           </div>
