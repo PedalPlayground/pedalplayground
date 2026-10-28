@@ -15,19 +15,55 @@ declare global {
 /** True when this build has an analytics ID, so Settings only offers the switch when it does something. */
 export const analyticsAvailable = !!GA_ID;
 
-export const analyticsOn = (): boolean => {
+/**
+ * Who is asked before analytics starts. "regional" (the default) asks visitors whose time zone is in Europe, where
+ * cookie-consent rules apply, and counts everyone else in unless they opt out. "all" asks everyone; "off" never asks.
+ * Set with VITE_CONSENT at build time.
+ */
+const CONSENT_MODE = (import.meta.env.VITE_CONSENT as string | undefined) ?? "regional";
+
+const inConsentRegion = (): boolean => {
   try {
-    return localStorage.getItem(KEY) !== "off";
+    return /^(Europe|Atlantic\/(Reykjavik|Faroe|Canary|Madeira|Azores))\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone);
   } catch {
-    return true;
+    return true; // can't tell, so ask
   }
 };
+
+export const consentRequired = (): boolean => CONSENT_MODE === "all" || (CONSENT_MODE !== "off" && inConsentRegion());
+
+type Choice = "on" | "off" | null;
+const choice = (): Choice => {
+  try {
+    const v = localStorage.getItem(KEY);
+    return v === "on" || v === "off" ? v : null;
+  } catch {
+    return null;
+  }
+};
+
+/** Analytics runs when the visitor said yes, or hasn't been asked and doesn't need to be. */
+export const analyticsOn = (): boolean => {
+  const c = choice();
+  return c ? c === "on" : !consentRequired();
+};
+
+/** True while the banner should be showing: analytics exists, consent is needed, and nobody has answered yet. */
+export const consentPending = (): boolean => analyticsAvailable && consentRequired() && choice() === null;
+
+const listeners = new Set<() => void>();
+export const subscribeConsent = (fn: () => void) => {
+  listeners.add(fn);
+  return () => void listeners.delete(fn);
+};
+/** A snapshot for useSyncExternalStore: changes whenever the answer does. */
+export const consentSnapshot = (): string => `${choice()}|${consentPending()}`;
 
 const isLocal = () => ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname) || location.hostname.endsWith(".localhost");
 
 let loaded = false;
 
-/** Loads GA once, if this build has an ID and the visitor hasn't opted out. */
+/** Loads GA once, if this build has an ID and the visitor allows it. */
 export function startAnalytics() {
   if (!GA_ID || loaded || isLocal() || !analyticsOn()) return;
   loaded = true;
@@ -45,7 +81,7 @@ export function startAnalytics() {
   document.head.appendChild(script);
 }
 
-/** Turns analytics on or off for this device. Turning it off stops tracking at once; turning it on starts it. */
+/** Records the visitor's choice. Yes starts analytics; no stops it at once. */
 export function setAnalyticsOn(on: boolean) {
   try {
     localStorage.setItem(KEY, on ? "on" : "off");
@@ -54,6 +90,7 @@ export function setAnalyticsOn(on: boolean) {
   }
   if (GA_ID) (window as unknown as Record<string, unknown>)[`ga-disable-${GA_ID}`] = !on;
   if (on) startAnalytics();
+  listeners.forEach((fn) => fn());
 }
 
 /** Sends a named event with small, non-identifying details (never names, emails or board contents). */

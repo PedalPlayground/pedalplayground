@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { analyticsAvailable, analyticsOn, setAnalyticsOn } from "../lib/analytics";
+import { useSyncExternalStore } from "react";
+import { analyticsAvailable, analyticsOn, consentSnapshot, setAnalyticsOn, subscribeConsent } from "../lib/analytics";
 import { BUY_LINKS } from "../lib/affiliate";
 import { useUi } from "../store/ui";
 import { Modal } from "./Modal";
@@ -14,7 +14,8 @@ const p = "text-sm text-ink-muted";
 export function LegalDialog() {
   const open = useUi((u) => u.legalOpen);
   const close = useUi((u) => u.closeLegal);
-  const [analytics, setAnalytics] = useState(analyticsOn());
+  useSyncExternalStore(subscribeConsent, consentSnapshot);
+  const analytics = analyticsOn();
   if (!open) return null;
   return (
     <Modal title="Terms, Disclaimer and Privacy" onClose={close} wide closeX>
@@ -54,7 +55,7 @@ export function LegalDialog() {
         <h3 className={h}>Analytics and cookies</h3>
         <p className={p}>
           {analyticsAvailable
-            ? "We use Google Analytics 4 to see how the site is used (pages, features, rough location, device type). It sets cookies and sends usage data to Google. Ad personalization is turned off. You can turn it off for this device here:"
+            ? "We use Google Analytics 4 to see how the site is used (pages, features, rough location, device type). It sets cookies and sends usage data to Google. Ad personalization is turned off. Where the law asks, we only turn it on if you say yes. You can change your choice for this device here:"
             : "This build doesn't use analytics. If it does in future, we'll say so here."}
         </p>
         {analyticsAvailable && (
@@ -63,10 +64,7 @@ export function LegalDialog() {
             <input
               type="checkbox"
               checked={analytics}
-              onChange={(e) => {
-                setAnalytics(e.target.checked);
-                setAnalyticsOn(e.target.checked);
-              }}
+              onChange={(e) => setAnalyticsOn(e.target.checked)}
               className="size-4 accent-[var(--color-brand)]"
             />
           </label>
