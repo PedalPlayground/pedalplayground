@@ -1,4 +1,5 @@
 // Shared helpers for reading the catalog source (JSON entries + original PNGs).
+import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -51,3 +52,33 @@ export const slugify = (s) =>
     .replace(/\+/g, "-plus")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "") || "item";
+
+/**
+ * When each entry's image line last changed in the data file, from git blame: in practice the day the entry was
+ * added. Returns a map from image key to "YYYY-MM-DD", or an empty map outside a git checkout.
+ * Feeds the search panel's What's New list.
+ */
+export function addedDates(src, k) {
+  const file = path.join(src, "data", k.json);
+  let out;
+  try {
+    out = execFileSync("git", ["blame", "--line-porcelain", "--", path.basename(file)], {
+      cwd: path.dirname(file),
+      encoding: "utf8",
+      maxBuffer: 256 * 1024 * 1024,
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+  } catch {
+    return new Map();
+  }
+  const dates = new Map();
+  let time = 0;
+  for (const line of out.split("\n")) {
+    if (line.startsWith("author-time ")) time = Number(line.slice(12));
+    else if (line.startsWith("\t")) {
+      const m = /"Image"\s*:\s*"([^"]+)"/.exec(line);
+      if (m) dates.set(imageKey(m[1]), new Date(time * 1000).toISOString().slice(0, 10));
+    }
+  }
+  return dates;
+}

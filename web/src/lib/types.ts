@@ -13,6 +13,8 @@ export interface CatalogItem {
   ma?: number;
   voltage?: string;
   type?: string;
+  /** The day it joined the catalog, "YYYY-MM-DD" (from git history at build time). */
+  added?: string;
 }
 
 export type Catalog = { pedals: CatalogItem[]; pedalboards: CatalogItem[] };

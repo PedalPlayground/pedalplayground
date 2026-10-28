@@ -29,6 +29,21 @@ import { DEFAULT_PEDAL_COLOR } from "../lib/color";
 import { PX_PER_INCH } from "../lib/geometry";
 import { templateInfo } from "../lib/pedalTemplates";
 import { PedalArt } from "./PedalArt";
+import { Segmented } from "./SettingsMenu";
+import { FEATURED_PEDALS } from "../lib/featuredPedals";
+import { fetchTrending, recordGearAdd, type TrendingEntry } from "../lib/trending";
+
+type Feed = "trending" | "new";
+const FEED_KEY = "pp:gear-feed";
+/** How many items Trending and What's New show. */
+const FEED_SIZE = 30;
+const savedFeed = (): Feed => {
+  try {
+    return localStorage.getItem(FEED_KEY) === "new" ? "new" : "trending";
+  } catch {
+    return "trending";
+  }
+};
 
 /** One catalog product with its kind, so pedals and pedalboards can share a list. */
 interface Entry {
@@ -183,7 +198,47 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     const pool = index.filter((e) => (!kind || e.item.kind === kind) && (sizes.length === 0 || sizes.includes(e.size)));
     return search(pool, deferredQuery);
   }, [index, kind, sizes, deferredQuery]);
-  const results = hits.slice(0, MAX_RESULTS);
+
+  // Before any search or filter, the list shows Trending (most added lately) or What's New (newest in the catalog).
+  const browsing = !target && !deferredQuery.trim() && !filtered;
+  const [feed, setFeed] = useState<Feed>(savedFeed);
+  const chooseFeed = (f: Feed) => {
+    setFeed(f);
+    try {
+      localStorage.setItem(FEED_KEY, f);
+    } catch {
+      /* storage unavailable */
+    }
+  };
+  const [trending, setTrending] = useState<TrendingEntry[] | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    void fetchTrending().then((t) => !cancelled && setTrending(t));
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  const feedEntries = useMemo((): Entry[] => {
+    if (!browsing) return [];
+    const entries = index.map((e) => e.item);
+    const byKey = new Map(entries.map((e) => [`${e.kind}|${e.item.image}`, e]));
+    if (feed === "new") {
+      return entries
+        .filter((e) => e.item.added)
+        .sort((a, b) => b.item.added!.localeCompare(a.item.added!) || a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name))
+        .slice(0, FEED_SIZE);
+    }
+    // Until enough adds are recorded, Trending tops up with the featured classics.
+    const picks = (trending ?? []).map((t) => byKey.get(`${t.kind}|${t.image}`)).filter((e): e is Entry => !!e);
+    for (const key of FEATURED_PEDALS) {
+      if (picks.length >= FEED_SIZE) break;
+      const e = byKey.get(`pedal|${key}`);
+      if (e && !picks.includes(e)) picks.push(e);
+    }
+    return picks.slice(0, FEED_SIZE);
+  }, [browsing, feed, index, trending]);
+
+  const results = browsing ? feedEntries : hits.slice(0, MAX_RESULTS);
 
   // Brief "Added" confirmation on the row just tapped. Phones then close the panel, which covers the middle of the
   // canvas where new items land.
@@ -192,6 +247,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   useEffect(() => () => clearTimeout(addedTimer.current), []);
   const add = (entry: Entry, key: string) => {
     addCatalogItem(entry.kind, entry.item);
+    recordGearAdd(entry.kind, entry.item.image);
     setAdded(key);
     clearTimeout(addedTimer.current);
     addedTimer.current = setTimeout(() => (phone ? onClose() : setAdded(null)), phone ? 600 : 1200);
@@ -200,13 +256,14 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   const pick = (entry: Entry) => {
     if (target) {
       replaceItem(target.id, entry.item);
+      recordGearAdd(entry.kind, entry.item.image);
       onClose();
     } else add(entry, String(entry.id));
   };
 
   // Keyboard: the top result starts highlighted, so Enter adds it as soon as you see it. Arrows move the highlight.
   const [highlight, setActive] = useState(0);
-  useEffect(() => setActive(0), [deferredQuery, kind, sizes]);
+  useEffect(() => setActive(0), [deferredQuery, kind, sizes, feed]);
   const active = results.length === 0 ? -1 : Math.min(highlight, results.length - 1);
   useEffect(() => {
     // Keep the highlighted row in view, but don't scroll the list back to the top on every new search.
@@ -389,6 +446,21 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           />
         </div>
       ) : (
+      <>
+      {browsing && (
+        <div className="px-3 pt-2">
+          <Segmented
+            label="Show"
+            value={feed}
+            onChange={chooseFeed}
+            options={[
+              ["trending", "Trending"],
+              ["new", "What's New"],
+            ]}
+            wide
+          />
+        </div>
+      )}
       <ul id="search-results" role="listbox" className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2">
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
         {/* First row: make your own, for gear that isn't in the catalog. Pictured as a custom Hammond-style pedal. */}
@@ -415,7 +487,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           </li>
         )}
         {error && <li className="p-3 text-sm text-danger">{error}</li>}
-        {catalog && (hits.length === 0 || partial) && (
+        {catalog && !browsing && (hits.length === 0 || partial) && (
           <li className={`animate-enter flex flex-col items-center gap-3 px-3 text-center [--enter-y:4px] ${partial ? "pb-3 pt-2" : "py-6"}`}>
             <p className="text-sm text-ink-muted">
               {typed ? (
@@ -493,12 +565,13 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           </li>
           );
         })}
-        {hits.length > MAX_RESULTS && (
+        {!browsing && hits.length > MAX_RESULTS && (
           <li className="px-2 pb-1 pt-2 text-center text-xs text-ink-muted">
             Showing {MAX_RESULTS} of {hits.length.toLocaleString()}. Keep typing or add a filter to narrow it down.
           </li>
         )}
       </ul>
+      </>
       )}
     </>
   );

@@ -38,6 +38,9 @@ jobs:
             public/images/pedals
             public/images/pedalboards
           sparse-checkout-cone-mode: true
+          # Full commit history (file contents fetched on demand) so the build can date each entry for What's New.
+          fetch-depth: 0
+          filter: blob:none
 
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:

@@ -10,7 +10,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import sharp from "sharp";
-import { imageDir, imageKey, KINDS, parseArgs, readEntries, resolveImageFile, slugify } from "./source.mjs";
+import { addedDates, imageDir, imageKey, KINDS, parseArgs, readEntries, resolveImageFile, slugify } from "./source.mjs";
 
 const THUMB_MAX = 128; // 2x the 64px shown in search
 const args = parseArgs(process.argv);
@@ -60,6 +60,7 @@ const manifest = { schema: 1, generatedAt: new Date().toISOString(), pedals: [],
 for (const k of KINDS) {
   const entries = readEntries(args.src, k);
   const dir = imageDir(args.src, k);
+  const added = addedDates(args.src, k);
   const jobs = [];
   const seen = new Set();
 
@@ -80,6 +81,8 @@ for (const k of KINDS) {
       ...(e.Current !== undefined && { ma: e.Current }),
       ...(e.Voltage !== undefined && { voltage: e.Voltage }),
       ...(e.Type !== undefined && { type: e.Type }),
+      // The day the entry joined the catalog (from git), for What's New.
+      ...(added.has(key) && { added: added.get(key) }),
     });
     if (seen.has(key)) continue;
     seen.add(key);
