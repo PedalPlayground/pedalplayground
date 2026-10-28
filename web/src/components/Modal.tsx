@@ -22,7 +22,7 @@ export function Modal({
   }, [onClose]);
 
   return (
-    <div className="animate-fade fixed inset-0 z-50 grid place-items-center bg-ink/30 p-4" onClick={onClose}>
+    <div className="animate-fade fixed inset-0 z-50 grid place-items-center bg-[rgb(10_11_16/0.65)] p-4" onClick={onClose}>
       <div
         role="dialog"
         aria-label={title}
