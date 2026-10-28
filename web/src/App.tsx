@@ -1,3 +1,4 @@
+import { LogIn } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
@@ -79,6 +80,10 @@ async function openSharedFromUrl() {
 
 const headerButton =
   "btn-primary h-[26px] whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1";
+
+/** A quieter header button (Sign In): shaded, with an icon. */
+const headerSecondaryButton =
+  "press flex h-[26px] items-center gap-1.5 whitespace-nowrap rounded-[5px] bg-[rgb(202_203_226/0.39)] px-2.5 text-[13px] font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)] focus-visible:ring-2 focus-visible:ring-brand";
 
 export function App() {
   const init = useAuth((s) => s.init);
@@ -184,8 +189,9 @@ export function App() {
             />
           ) : (
             cloudEnabled && (
-              <button onClick={() => setDialog("account")} className={headerButton}>
-                Sign In<span className="max-sm:hidden"> to Save &amp; Share</span>
+              <button onClick={() => setDialog("account")} className={headerSecondaryButton}>
+                <LogIn size={14} strokeWidth={2.25} />
+                Sign In
               </button>
             )
           )}
