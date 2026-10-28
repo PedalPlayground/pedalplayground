@@ -1,5 +1,9 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { menuItem } from "./SettingsMenu";
+import { tip } from "./Tooltip";
+
+const socialIcon =
+  "grid size-7 cursor-pointer place-items-center rounded-control text-ink-muted outline-none hover:text-ink data-[highlighted]:bg-surface-hover data-[highlighted]:text-ink";
 
 const LINKS = {
   x: "https://x.com/tehtrav",
@@ -36,25 +40,25 @@ export function MadeBy({ className = "" }: { className?: string }) {
         </Dropdown.Trigger>
         <Dropdown.Portal>
           <Dropdown.Content side="top" align="start" sideOffset={8} className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel">
+            {/* "Say hi" with the two social links as icons, then the donate link. */}
+            <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
+              Say hi
+              <span className="flex items-center gap-0.5">
+                <Dropdown.Item asChild className={socialIcon}>
+                  <a href={LINKS.x} target="_blank" rel="noreferrer" aria-label="X" {...tip("X")}>
+                    <XLogo />
+                  </a>
+                </Dropdown.Item>
+                <Dropdown.Item asChild className={socialIcon}>
+                  <a href={LINKS.threads} target="_blank" rel="noreferrer" aria-label="Threads" {...tip("Threads")}>
+                    <ThreadsLogo />
+                  </a>
+                </Dropdown.Item>
+              </span>
+            </div>
             <Dropdown.Item asChild className={menuItem}>
-              <a href={LINKS.x} target="_blank" rel="noreferrer">
-                <span className="flex items-center gap-2">
-                  <XLogo />Find me on X
-                </span>
-              </a>
-            </Dropdown.Item>
-            <Dropdown.Item asChild className={menuItem}>
-              <a href={LINKS.threads} target="_blank" rel="noreferrer">
-                <span className="flex items-center gap-2">
-                  <ThreadsLogo />
-                  Find me on Threads
-                </span>
-              </a>
-            </Dropdown.Item>
-            <Dropdown.Separator className="my-1 h-px bg-line" />
-            <Dropdown.Item asChild className="flex h-9 cursor-pointer items-center justify-center rounded-control text-sm outline-none btn-primary">
               <a href={LINKS.donate} target="_blank" rel="noreferrer">
-                Donate
+                Support Pedal Playground
               </a>
             </Dropdown.Item>
           </Dropdown.Content>
