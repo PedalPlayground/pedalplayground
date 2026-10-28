@@ -454,7 +454,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                 src={thumbUrl(catalog, entry.kind, item.image) ?? undefined}
                 alt=""
                 loading="lazy"
-                className="size-16 shrink-0 rounded-control bg-canvas object-contain"
+                className="size-16 shrink-0 rounded-control bg-canvas object-contain p-1"
               />
               <span className="min-w-0">
                 <span className="block truncate text-sm font-medium">{item.name}</span>
