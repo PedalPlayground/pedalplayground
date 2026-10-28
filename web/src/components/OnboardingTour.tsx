@@ -265,7 +265,7 @@ export function OnboardingTour() {
         )}
         {step.hero === "intro" && (
           <div aria-hidden className="tour-hero relative -mx-4 -mt-4 mb-4 grid h-40 place-items-center overflow-hidden">
-            <span className="shimmer-text text-[88px] font-bold leading-none tracking-[-0.04em]">2.0</span>
+            <span className="shimmer-text px-3 py-1 text-[88px] font-bold leading-none tracking-[-0.04em]">2.0</span>
           </div>
         )}
         {step.hero === "pro" && (
