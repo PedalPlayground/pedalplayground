@@ -118,6 +118,20 @@ function withGroupmates(items: Item[], ids: string[]): string[] {
 /** True when the items are exactly one group (they all share a group id). */
 export const isOneGroup = (items: Item[]) => items.length > 1 && !!items[0].groupId && items.every((i) => i.groupId === items[0].groupId);
 
+/** The selected, unlocked items lined up left to right with exactly `gap` inches between them; the same array when there's nothing to move. */
+export function spacedItems(items: Item[], selected: string[], gap: number): Item[] {
+  const picked = items.filter((i) => selected.includes(i.id) && !i.locked);
+  if (picked.length < 2 || !(gap >= 0)) return items;
+  const sorted = picked.map((item) => ({ item, b: itemBounds(item) })).sort((a, b) => a.b.left - b.b.left);
+  const shift = new Map<string, number>();
+  let cursor = sorted[0].b.left;
+  for (const e of sorted) {
+    shift.set(e.item.id, cursor - e.b.left);
+    cursor += e.b.right - e.b.left + gap;
+  }
+  return items.map((i) => (shift.has(i.id) ? { ...i, x: i.x + shift.get(i.id)! } : i));
+}
+
 const record = (s: Pick<PlaygroundState, "past" | "items" | "signal">) => ({
   past: [...s.past.slice(-(HISTORY_LIMIT - 1)), { items: s.items, signal: s.signal }],
   future: [] as Snapshot[],
@@ -466,16 +480,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     }),
   spaceByGap: (gap) =>
     set((s) => {
-      const picked = s.items.filter((i) => s.selected.includes(i.id) && !i.locked);
-      if (picked.length < 2 || !(gap >= 0)) return {};
-      const sorted = picked.map((item) => ({ item, b: itemBounds(item) })).sort((a, b) => a.b.left - b.b.left);
-      const shift = new Map<string, number>();
-      let cursor = sorted[0].b.left;
-      for (const e of sorted) {
-        shift.set(e.item.id, cursor - e.b.left);
-        cursor += e.b.right - e.b.left + gap;
-      }
-      return { ...record(s), items: s.items.map((i) => (shift.has(i.id) ? { ...i, x: i.x + shift.get(i.id)! } : i)) };
+      const items = spacedItems(s.items, s.selected, gap);
+      return items === s.items ? {} : { ...record(s), items };
     }),
   toggleGroupSelected: () =>
     set((s) => {

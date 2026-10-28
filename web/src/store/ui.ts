@@ -49,6 +49,9 @@ interface UiState {
   avatar: string;
   setAvatar: (key: string) => void;
   searchOpen: boolean;
+  /** The docked Space Between drawer (larger screens). */
+  spacingOpen: boolean;
+  setSpacingOpen: (open: boolean) => void;
   setSearchOpen: (open: boolean) => void;
   /** The panel is picking a replacement for the selected product instead of adding a new one. */
   replacing: boolean;
@@ -179,6 +182,8 @@ export const useUi = create<UiState>((set) => ({
     set({ avatar });
   },
   searchOpen: false,
+  spacingOpen: false,
+  setSpacingOpen: (spacingOpen) => set(spacingOpen ? { spacingOpen, searchOpen: false, replacing: false, editing: false } : { spacingOpen }),
   setSearchOpen: (searchOpen) => set({ searchOpen, replacing: false, editing: false }),
   replacing: false,
   setReplacing: (replacing) => set({ replacing, editing: false, searchOpen: replacing }),

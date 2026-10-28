@@ -33,6 +33,7 @@ import { ConsentBanner } from "./components/ConsentBanner";
 import { LegalDialog } from "./components/LegalDialog";
 import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
+import { SpaceBetweenPanel } from "./components/SpaceBetweenPanel";
 import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
 import { Toolbar } from "./components/Toolbar";
 import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
@@ -100,6 +101,7 @@ export function App() {
   const canUpgrade = plan === "free";
   const openUpgrade = useUi((u) => u.openUpgrade);
   const searchOpen = useUi((u) => u.searchOpen);
+  const spacingOpen = useUi((u) => u.spacingOpen);
   const replacing = useUi((u) => u.replacing);
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
@@ -264,6 +266,8 @@ export function App() {
           {!covered && searchOpen && (
             <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} />
           )}
+
+          {wide && !covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
 
           {/* Lower-right corner. Phones keep it above the toolbar, which spans the bottom edge there, and hide it
               while the search panel or the selection menu needs that space. */}
