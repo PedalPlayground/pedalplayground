@@ -1,3 +1,4 @@
+import { AtSign } from "lucide-react";
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { menuItem } from "./SettingsMenu";
 import { tip } from "./Tooltip";
@@ -20,14 +21,6 @@ function XLogo() {
   );
 }
 
-/** The Threads logo. */
-function ThreadsLogo() {
-  return (
-    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden>
-      <path d="M17.7 11.1c-.1 0-.2-.1-.3-.1-.2-3-1.8-4.7-4.6-4.7h-.1c-1.6 0-3 .7-3.9 2l1.5 1c.6-.9 1.6-1.1 2.4-1.1 1 0 1.7.3 2.2.8.3.4.6 1 .7 1.7-.8-.1-1.6-.2-2.5-.1-2.5.1-4.1 1.6-4 3.6.1 1 .6 1.9 1.4 2.5.7.5 1.6.7 2.6.6 1.3-.1 2.3-.6 3-1.5.5-.7.9-1.6 1-2.7.6.4 1.1.8 1.3 1.4.4 1 .4 2.6-.9 3.9-1.2 1.2-2.6 1.7-4.7 1.7-2.4 0-4.1-.8-5.3-2.2-1.1-1.3-1.6-3.3-1.7-5.7.1-2.5.6-4.4 1.7-5.7 1.1-1.4 2.9-2.1 5.3-2.2 2.4 0 4.2.8 5.4 2.2.6.7 1 1.6 1.3 2.6l1.8-.5c-.4-1.3-.9-2.4-1.7-3.3C17.8 2 15.6 1 12.7 1c-2.9 0-5.1 1-6.6 2.8C4.8 5.4 4.1 7.7 4 10.5v.1c.1 2.8.8 5.1 2.1 6.7C7.6 19.1 9.8 20 12.7 20c2.5 0 4.3-.7 5.8-2.2 2-2 1.9-4.4 1.3-5.9-.5-1.1-1.4-2-2.6-2.6Zm-4.3 4.1c-1.1.1-2.2-.4-2.2-1.4 0-.7.5-1.6 2.3-1.7h.6c.6 0 1.2.1 1.8.2-.2 2.5-1.4 2.9-2.5 2.9Z" />
-    </svg>
-  );
-}
 
 /** "Made with love by @tehtrav" in the lower-left corner; @tehtrav opens links to X, Threads and a donate button. */
 export function MadeBy({ className = "" }: { className?: string }) {
@@ -51,7 +44,7 @@ export function MadeBy({ className = "" }: { className?: string }) {
                 </Dropdown.Item>
                 <Dropdown.Item asChild className={socialIcon}>
                   <a href={LINKS.threads} target="_blank" rel="noreferrer" aria-label="Threads" {...tip("Threads")}>
-                    <ThreadsLogo />
+                    <AtSign size={15} strokeWidth={2.25} />
                   </a>
                 </Dropdown.Item>
               </span>
