@@ -145,7 +145,7 @@ export function App() {
               {/* A little hello on hover. */}
               <span aria-hidden className="hidden text-brand-top group-hover:inline"> appreciates you</span>
             </span>
-            {pro && <span className="text-brand-top max-sm:hidden">Pro</span>}
+            {pro && <span className="text-brand-top group-hover:hidden max-sm:hidden">Pro</span>}
           </h1>
           {BETA && (
             <>
