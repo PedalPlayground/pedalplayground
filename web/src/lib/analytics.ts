@@ -24,7 +24,7 @@ const CONSENT_MODE = (import.meta.env.VITE_CONSENT as string | undefined) ?? "re
 
 const inConsentRegion = (): boolean => {
   try {
-    return /^(Europe|Atlantic\/(Reykjavik|Faroe|Canary|Madeira|Azores))\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone);
+    return /^(Europe\/|Atlantic\/(Reykjavik|Faroe|Canary|Madeira|Azores)$)/.test(Intl.DateTimeFormat().resolvedOptions().timeZone);
   } catch {
     return true; // can't tell, so ask
   }
