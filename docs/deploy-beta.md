@@ -156,3 +156,10 @@ the `.env.production` that the deploy uses or the GitHub environment's variables
 analytics code at all. It never runs on localhost, and visitors can turn it off in Settings → Terms & Privacy.
 Events sent: `add_gear`, `custom_item_created`, `share_link_created`, `sign_up`, `upgrade_opened`. Mark
 `sign_up` and `upgrade_opened` as key events in GA4 if you want them as conversions.
+
+## Microsoft Clarity
+
+Set `VITE_CLARITY_ID` (the project ID from Clarity → Settings → Setup) the same way as the GA ID, in
+`web/.env.production`. It follows the same rules: production builds only, never on localhost, and stopped by the
+consent banner or the Terms & Privacy switch. Text inside dialogs is masked from recordings. In Clarity, also set
+masking to at least Balanced (Settings → Masking) so typed fields in the rest of the app stay hidden.

@@ -15,7 +15,7 @@ export function ConsentBanner() {
     >
       <p className="text-sm font-semibold tracking-[-0.01em]">Help improve Pedal Playground?</p>
       <p className="mt-1 text-sm text-ink-muted">
-        We'd like to use Google Analytics cookies to see which features get used.{" "}
+        We'd like to use analytics cookies (Google Analytics and Microsoft Clarity) to see how the site gets used.{" "}
         <button onClick={() => useUi.getState().openLegal()} className="underline hover:text-ink">
           Details
         </button>

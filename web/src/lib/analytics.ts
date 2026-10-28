@@ -1,19 +1,22 @@
 /**
- * Google Analytics 4. Off unless VITE_GA_ID (a "G-XXXXXXXXXX" measurement ID) is set at build time, never on
- * localhost, and off for anyone who turns "Usage analytics" off in Settings. Ads personalization is disabled.
+ * Google Analytics 4 and Microsoft Clarity (session replays and heatmaps). Each is off unless its ID is set at build
+ * time (VITE_GA_ID "G-XXXXXXXXXX", VITE_CLARITY_ID), never runs on localhost, and stops for anyone who says no or turns
+ * "Usage analytics" off in Terms & Privacy. GA's ads personalization is disabled.
  */
 const GA_ID = import.meta.env.VITE_GA_ID as string | undefined;
+const CLARITY_ID = import.meta.env.VITE_CLARITY_ID as string | undefined;
 const KEY = "pp:analytics";
 
 declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    clarity?: (...args: unknown[]) => void;
   }
 }
 
 /** True when this build has an analytics ID, so Settings only offers the switch when it does something. */
-export const analyticsAvailable = !!GA_ID;
+export const analyticsAvailable = !!GA_ID || !!CLARITY_ID;
 
 /**
  * Who is asked before analytics starts. "regional" (the default) asks visitors whose time zone is in Europe, where
@@ -63,10 +66,26 @@ const isLocal = () => ["localhost", "127.0.0.1", "[::1]"].includes(location.host
 
 let loaded = false;
 
-/** Loads GA once, if this build has an ID and the visitor allows it. */
+/** Loads Microsoft Clarity's tag. */
+function startClarity(id: string) {
+  window.clarity =
+    window.clarity ||
+    function () {
+      // eslint-disable-next-line prefer-rest-params
+      ((window.clarity as unknown as { q?: unknown[] }).q = (window.clarity as unknown as { q?: unknown[] }).q || []).push(arguments);
+    };
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.clarity.ms/tag/${encodeURIComponent(id)}`;
+  document.head.appendChild(script);
+}
+
+/** Loads GA and Clarity once, for whichever IDs this build has, if the visitor allows it. */
 export function startAnalytics() {
-  if (!GA_ID || loaded || isLocal() || !analyticsOn()) return;
+  if (!analyticsAvailable || loaded || isLocal() || !analyticsOn()) return;
   loaded = true;
+  if (CLARITY_ID) startClarity(CLARITY_ID);
+  if (!GA_ID) return;
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () {
     // gtag requires the arguments object itself, not an array.
@@ -90,6 +109,7 @@ export function setAnalyticsOn(on: boolean) {
   }
   if (GA_ID) (window as unknown as Record<string, unknown>)[`ga-disable-${GA_ID}`] = !on;
   if (on) startAnalytics();
+  else window.clarity?.("stop");
   listeners.forEach((fn) => fn());
 }
 

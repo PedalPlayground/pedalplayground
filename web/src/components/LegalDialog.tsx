@@ -55,7 +55,7 @@ export function LegalDialog() {
         <h3 className={h}>Analytics and cookies</h3>
         <p className={p}>
           {analyticsAvailable
-            ? "We use Google Analytics 4 to see how the site is used (pages, features, rough location, device type). It sets cookies and sends usage data to Google. Ad personalization is turned off. Where the law asks, we only turn it on if you say yes. You can change your choice for this device here:"
+            ? "We use Google Analytics 4 to see how the site is used (pages, features, rough location, device type) and Microsoft Clarity to see anonymized recordings and heatmaps of how people use it, with the text in dialogs hidden. Both set cookies and send usage data to Google and Microsoft. Ad personalization is turned off. Where the law asks, we only turn them on if you say yes. You can change your choice for this device here:"
             : "This build doesn't use analytics. If it does in future, we'll say so here."}
         </p>
         {analyticsAvailable && (

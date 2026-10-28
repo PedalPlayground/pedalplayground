@@ -25,6 +25,8 @@ export function Modal({
     <div className="animate-fade fixed inset-0 z-50 grid place-items-center bg-[rgb(10_11_16/0.75)] p-4" onClick={onClose}>
       <div
         role="dialog"
+        // Session recordings (Clarity) skip dialog contents: sign-in, usernames, board names and descriptions.
+        data-clarity-mask="True"
         aria-label={title}
         className={`animate-enter relative max-h-full w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-[var(--shadow-modal)] ${wide ? "max-w-2xl" : "max-w-sm"}`}
         onClick={(e) => e.stopPropagation()}
