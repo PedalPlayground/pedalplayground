@@ -158,7 +158,7 @@ function CanvasItems({ canvasX, canvasY }: { canvasX: number; canvasY: number })
       <Separator />
       <Row icon={<ZoomIn {...ICON} />} label="Zoom In" shortcut="⌘+" onSelect={() => s.zoomBy(1.25, canvasX, canvasY)} />
       <Row icon={<ZoomOut {...ICON} />} label="Zoom Out" shortcut="⌘−" onSelect={() => s.zoomBy(0.8, canvasX, canvasY)} />
-      <Row icon={<Fullscreen {...ICON} />} label="Fit Everything in View" shortcut="⇧1" disabled={empty} onSelect={s.fitToContent} />
+      <Row icon={<Fullscreen {...ICON} />} label="Center & Fit" shortcut="⇧1" disabled={empty} onSelect={s.fitToContent} />
     </>
   );
 }
