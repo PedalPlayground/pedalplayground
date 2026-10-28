@@ -36,9 +36,10 @@ const useCollapsed = (key: string) => {
   const storageKey = `pp:stack-${key}`;
   const [collapsed, set] = useState(() => {
     try {
-      return localStorage.getItem(storageKey) === "collapsed";
+      // Collapsed until the person opens it; after that their choice sticks.
+      return localStorage.getItem(storageKey) !== "open";
     } catch {
-      return false;
+      return true;
     }
   });
   const toggle = () =>
