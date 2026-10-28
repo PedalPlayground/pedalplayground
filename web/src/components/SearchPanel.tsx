@@ -536,7 +536,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   return createPortal(
     <div className="fixed inset-0 z-40">
       <div
-        className="animate-fade absolute inset-0 bg-[rgb(10_11_16/0.65)]"
+        className="animate-fade absolute inset-0 bg-[rgb(10_11_16/0.75)]"
         style={{ opacity: closing ? 0 : 1 - (drag ?? 0) / 400, transition: drag === null ? `opacity ${SHEET_MS}ms ease-out` : "none" }}
         onClick={onClose}
       />

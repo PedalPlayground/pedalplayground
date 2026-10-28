@@ -22,11 +22,11 @@ export function Modal({
   }, [onClose]);
 
   return (
-    <div className="animate-fade fixed inset-0 z-50 grid place-items-center bg-[rgb(10_11_16/0.65)] p-4" onClick={onClose}>
+    <div className="animate-fade fixed inset-0 z-50 grid place-items-center bg-[rgb(10_11_16/0.75)] p-4" onClick={onClose}>
       <div
         role="dialog"
         aria-label={title}
-        className={`animate-enter relative max-h-full w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-panel ${wide ? "max-w-2xl" : "max-w-sm"}`}
+        className={`animate-enter relative max-h-full w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-[0_24px_80px_rgb(0_0_0/0.45),0_6px_20px_rgb(0_0_0/0.25)] ${wide ? "max-w-2xl" : "max-w-sm"}`}
         onClick={(e) => e.stopPropagation()}
       >
         <h2 className={`mb-3 text-base font-semibold ${closeX ? "pr-8" : ""}`}>{title}</h2>
