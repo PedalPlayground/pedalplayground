@@ -1,4 +1,4 @@
-import { Check, CornerDownLeft, Flame, Plus, Search, Sparkles, X } from "lucide-react";
+import { Check, CornerDownLeft, Flame, Search, Sparkles, X } from "lucide-react";
 import { tip } from "./Tooltip";
 import {
   useCallback,
@@ -417,8 +417,6 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       <>
       <ul id="search-results" role="listbox" className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2">
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
-        {/* Phones: the first row. Larger screens dock it at the bottom of the panel instead. */}
-        {!target && phone && <li role="presentation">{makeOwn}</li>}
         {error && <li className="p-3 text-sm text-danger">{error}</li>}
         {catalog && !browsing && (hits.length === 0 || partial) && (
           <li className={`animate-enter flex flex-col items-center gap-3 px-3 text-center [--enter-y:4px] ${partial ? "pb-3 pt-2" : "py-6"}`}>
@@ -437,17 +435,6 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
               {filtered && !partial && (
                 <button onMouseDown={keepFocus} onClick={clearFilters} className="press h-8 rounded-control border border-line px-3 text-sm hover:bg-surface-hover">
                   Clear Filters
-                </button>
-              )}
-              {!target && (
-                <button
-                  onClick={() => setCustom({ name: kindFilter === "pedalboard" ? "" : typed.slice(0, 40), kind: kindFilter ?? "pedal" })}
-                  className="flex h-8 max-w-full items-center gap-1 px-3 text-sm btn-primary"
-                >
-                  <Plus size={15} strokeWidth={2.25} className="shrink-0" />
-                  <span className="truncate">
-                    {kindFilter === "pedalboard" ? "Make a Custom Pedalboard" : typed ? `Create “${typed}” as a Custom Pedal` : "Make a Custom Pedal"}
-                  </span>
                 </button>
               )}
             </div>
@@ -503,6 +490,8 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
             Showing {MAX_RESULTS} of {hits.length.toLocaleString()}. Keep typing or add a filter to narrow it down.
           </li>
         )}
+        {/* Phones: the last row. Larger screens dock it at the bottom of the panel instead. */}
+        {!target && phone && <li role="presentation">{makeOwn}</li>}
       </ul>
       {/* Floats over the end of the list like a lifted result; the list fades out behind it. */}
       {!target && !phone && (
