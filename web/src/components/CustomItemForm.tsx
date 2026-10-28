@@ -208,6 +208,27 @@ export function CustomItemForm({
         </div>
       )}
 
+      {kind === "pedal" && (
+        <div>
+          <div className="mb-1 text-xs text-ink-muted">Color</div>
+          <div className="flex flex-wrap items-center gap-[5px]">
+            {PEDAL_COLOR_PRESETS.map((c) => (
+              <button
+                type="button"
+                key={c.hex}
+                aria-label={c.name}
+                aria-pressed={color === c.hex}
+                {...tip(c.name)}
+                onClick={() => setColor(c.hex)}
+                className={`press size-[22px] rounded-full shadow-[inset_0_1px_0_rgb(255_255_255/0.4),inset_0_-1px_1px_rgb(0_0_0/0.2)] ring-offset-2 ring-offset-surface ${color === c.hex ? "ring-2 ring-brand" : "ring-1 ring-black/15"}`}
+                style={{ background: c.hex }}
+              />
+            ))}
+            <input type="color" aria-label="Custom color" value={color} onChange={(e) => setColor(e.target.value)} className="size-[22px] cursor-pointer rounded border-0 bg-transparent p-0" />
+          </div>
+        </div>
+      )}
+
       <div className="grid grid-cols-2 gap-2">
         <label className="text-xs text-ink-muted">
           Width ({unitLabel})
@@ -229,44 +250,22 @@ export function CustomItemForm({
         </div>
       )}
 
-      {/* The preview, with the space it takes up beside it. */}
-      <div className="flex items-center gap-3">
-        <div className="grid shrink-0 place-items-center rounded-control bg-canvas" style={{ width: 112, minHeight: 92 }}>
+      {/* The preview with its name and footprint, laid out like a search result. */}
+      <div className="flex items-center gap-3 p-2">
+        <div className="grid size-16 shrink-0 place-items-center rounded-control bg-canvas p-1">
           {sizeOk ? (
-            <Preview kind={kind} template={template} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} boxW={96} boxH={kind === "pedal" ? 160 : 76} />
+            <Preview kind={kind} template={template} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} boxW={56} boxH={56} />
           ) : (
-            <span className="px-2 text-center text-xs text-ink-muted">Check the size</span>
+            <span className="text-center text-[10px] leading-tight text-ink-muted">Check the size</span>
           )}
         </div>
-        {sizeOk && (
-          <p className="min-w-0 text-xs text-ink-muted">
-            <span className="block">Footprint</span>
-            <span className="block text-sm font-medium text-ink">{formatSize(foot.width, foot.height, units)}</span>
-            {jacks && <span className="block">Including the jacks</span>}
-          </p>
-        )}
+        <span className="min-w-0">
+          <span className="block truncate text-sm font-medium">{name.trim() || (kind === "pedal" ? "Custom Pedal" : "Custom Pedalboard")}</span>
+          <span className="block truncate text-xs text-ink-muted">
+            {sizeOk ? `${formatSize(foot.width, foot.height, units)}${jacks ? " with jacks" : ""}` : "Check the width and height"}
+          </span>
+        </span>
       </div>
-
-      {kind === "pedal" && (
-        <div>
-          <div className="mb-1 text-xs text-ink-muted">Color</div>
-          <div className="flex flex-wrap items-center gap-[5px]">
-            {PEDAL_COLOR_PRESETS.map((c) => (
-              <button
-                type="button"
-                key={c.hex}
-                aria-label={c.name}
-                aria-pressed={color === c.hex}
-                {...tip(c.name)}
-                onClick={() => setColor(c.hex)}
-                className={`press size-[22px] rounded-full shadow-[inset_0_1px_0_rgb(255_255_255/0.4),inset_0_-1px_1px_rgb(0_0_0/0.2)] ring-offset-2 ring-offset-surface ${color === c.hex ? "ring-2 ring-brand" : "ring-1 ring-black/15"}`}
-                style={{ background: c.hex }}
-              />
-            ))}
-            <input type="color" aria-label="Custom color" value={color} onChange={(e) => setColor(e.target.value)} className="size-[22px] cursor-pointer rounded border-0 bg-transparent p-0" />
-          </div>
-        </div>
-      )}
 
       {error && <p className="text-sm text-danger">{error}</p>}
       <button type="submit" className="h-9 w-full btn-primary">

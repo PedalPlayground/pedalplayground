@@ -348,7 +348,8 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           <X size={16} />
         </button>
       </div>
-      {!edit && (
+      {/* Hidden while making a custom item; Back to Search brings it back. */}
+      {!edit && !showCustom && (
         <div className="px-3 pb-1 pt-1.5">
           <label className="flex h-9 items-center gap-2 rounded-control bg-surface-hover px-3 focus-within:ring-2 focus-within:ring-brand">
             <Search size={16} className="shrink-0 text-ink-muted" />
