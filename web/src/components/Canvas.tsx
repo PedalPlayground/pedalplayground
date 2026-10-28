@@ -87,7 +87,7 @@ function SelectionHalo({ item, zoom, tour }: { item: Item; zoom: number; tour?: 
   );
 }
 
-/** One apricot halo around a whole selected group, in place of its members' own halos. */
+/** One purple halo around a whole selected group, in place of its members' own halos. */
 function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
   const moving = useUi((u) => u.dragging || u.nudging);
   const b = contentBounds(items)!;
@@ -111,12 +111,12 @@ function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
       className="animate-fade pointer-events-none absolute overflow-visible transition-opacity duration-150"
       style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
     >
-      <path d={d} fill="none" stroke="var(--color-apricot)" strokeWidth={sw} />
+      <path d={d} fill="none" stroke="var(--color-group)" strokeWidth={sw} />
       {/* The Group glyph (corner brackets around two overlapping boxes), centered on the top edge. */}
       <g
         transform={`translate(${cx - (locked ? icon * 1.17 : icon / 2)} ${y0 - icon / 2}) scale(${icon / 24})`}
         fill="none"
-        stroke="var(--color-apricot)"
+        stroke="var(--color-group)"
         strokeWidth={2.25}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -130,9 +130,9 @@ function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
       </g>
       {/* Locked group: the lock sits beside it, drawn like a single locked item's. */}
       {locked && (
-        <g transform={`translate(${cx + (5 / 2) / zoom} ${y0 - icon / 2}) scale(${icon / 12})`} fill="none" stroke="var(--color-apricot)">
+        <g transform={`translate(${cx + (5 / 2) / zoom} ${y0 - icon / 2}) scale(${icon / 12})`} fill="none" stroke="var(--color-group)">
           <path d="M3.5 5.5V4a2.5 2.5 0 0 1 5 0v1.5" strokeWidth={1.6} />
-          <rect x={1.75} y={5} width={8.5} height={6.5} rx={1.5} fill="var(--color-apricot)" stroke="none" />
+          <rect x={1.75} y={5} width={8.5} height={6.5} rx={1.5} fill="var(--color-group)" stroke="none" />
         </g>
       )}
     </svg>

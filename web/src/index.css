@@ -25,8 +25,8 @@
   /* Dialogs: a big soft shadow in light mode. Dark mode keeps it tighter, since a wide blur over a dark backdrop bands. */
   --shadow-modal: 0 24px 80px rgb(0 0 0 / 0.3), 0 6px 20px rgb(0 0 0 / 0.15);
   --color-danger: #d92d20;
-  /* Group halos. */
-  --color-apricot: #d97757;
+  /* Group halos: purple, a step from the blurple brand color. */
+  --color-group: #9a4fe6;
   /* Tooltips and action toasts. */
   --color-tip: #1c1d22;
   --color-tip-ink: #ffffff;
@@ -62,7 +62,7 @@
     --color-brand-top: #8a8eff;
     --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5);
     --color-danger: #f97066;
-    --color-apricot: #e8896a;
+    --color-group: #b784ff;
     --color-tip: #4a4c55;
     --color-tip-ink: #f4f4f6;
     --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
@@ -88,7 +88,7 @@
   --color-brand-top: #8a8eff;
   --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5);
   --color-danger: #f97066;
-  --color-apricot: #e8896a;
+  --color-group: #b784ff;
   --color-tip: #4a4c55;
   --color-tip-ink: #f4f4f6;
   --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
