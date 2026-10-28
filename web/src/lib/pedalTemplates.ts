@@ -18,7 +18,7 @@ export interface PedalTemplateInfo {
 
 export const PEDAL_TEMPLATES: PedalTemplateInfo[] = [
   { id: "compact", name: "Compact", hint: "Boss-style, with a big treadle", width: 2.875, height: 5.125, jacks: "side" },
-  { id: "hammond", name: "Hammond", hint: "Small enclosure, knobs and one footswitch", width: 2.6, height: 4.8, jacks: "top" },
+  { id: "hammond", name: "Hammond", hint: "Six knobs and two footswitches", width: 2.6, height: 4.8, jacks: "top" },
   { id: "wide", name: "Wide Hammond", hint: "Two footswitches, knobs and toggles", width: 4.7, height: 3.7, jacks: "top" },
   { id: "modeler", name: "Modeler", hint: "Screen, knobs and a row of footswitches", width: 12, height: 6.5, jacks: "top" },
   { id: "switcher", name: "Switcher", hint: "Footswitches only: loopers and amp switches", width: 6, height: 2.5, jacks: "top" },

@@ -1,4 +1,4 @@
-import { Check, ChevronLeft, CornerDownLeft, Flame, Plus, Search, Sparkles, X } from "lucide-react";
+import { Check, CornerDownLeft, Flame, Plus, Search, Sparkles, X } from "lucide-react";
 import { tip } from "./Tooltip";
 import {
   useCallback,
@@ -377,17 +377,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           </label>
         </div>
       )}
-      {!edit && (custom ? (
-        <div className="flex px-3 pt-2">
-          <button
-            onClick={() => setCustom(null)}
-            className="press -ml-1.5 flex h-7 items-center gap-0.5 rounded-control pl-1 pr-2 text-[13px] text-ink-muted hover:bg-surface-hover hover:text-ink"
-          >
-            <ChevronLeft size={16} />
-            Back to Search
-          </button>
-        </div>
-      ) : (
+      {!edit && !custom && (
         browsing && (
           // Sort for the list shown before searching: most added lately, or newest in the catalog.
           <div role="radiogroup" aria-label="Sort" className="flex items-center gap-1 px-3 pt-2">
@@ -412,12 +402,13 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
             ))}
           </div>
         )
-      ))}
+      )}
       {showCustom ? (
         <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
           <CustomItemForm
             key={custom ? `${custom.kind}:${custom.name}` : "edit"}
             onDone={onClose}
+            onBack={edit ? undefined : () => setCustom(null)}
             item={edit ? target : undefined}
             initialKind={custom?.kind}
             initialName={custom?.name}

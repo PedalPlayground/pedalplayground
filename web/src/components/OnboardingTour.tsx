@@ -213,11 +213,16 @@ export function OnboardingTour() {
 
       <div
         ref={card}
+        // A fresh card per step that slides in on one axis only (from the side its target is on), rather than gliding
+        // diagonally from the last step's spot.
+        key={index}
         role="dialog"
         aria-modal="true"
         aria-labelledby="tour-title"
         aria-describedby="tour-body"
-        className="absolute w-[min(320px,calc(100vw-24px))] rounded-panel bg-surface p-4 shadow-panel motion-safe:transition-[left,top,opacity] motion-safe:duration-300 motion-safe:ease-out"
+        className={`absolute w-[min(320px,calc(100vw-24px))] rounded-panel bg-surface p-4 shadow-panel ${
+          cardSize ? `animate-enter ${arrow?.side === "bottom" ? "[--enter-y:6px]" : arrow ? "[--enter-y:-6px]" : "[--enter-y:8px]"}` : ""
+        }`}
         style={{ left, top, opacity: cardSize ? 1 : 0 }}
       >
         {arrow && (

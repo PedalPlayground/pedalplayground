@@ -27,8 +27,9 @@ const MAX_INCHES = 60;
 /** Suggested custom pedalboard size, in inches. */
 const BOARD_SIZE = { width: 24, height: 12.5 };
 
+/** Shaded, borderless fields, like the rest of the app's forms. */
 const field =
-  "h-9 w-full rounded-control border border-line bg-surface px-3 text-sm outline-none focus:border-brand placeholder:text-ink-muted max-sm:text-base";
+  "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand max-sm:text-base";
 
 /** Draws a custom pedal or board at its real size, scaled down to fit a `boxW` × `boxH` px box. */
 function Preview({
@@ -72,16 +73,20 @@ function Preview({
  */
 export function CustomItemForm({
   onDone,
+  onBack,
   item,
   initialKind,
   initialName,
 }: {
   onDone: () => void;
+  /** Shows a Back to Search button under the submit button. */
+  onBack?: () => void;
   item?: Item;
   initialKind?: Item["kind"];
   initialName?: string;
 }) {
   const units = useUi((u) => u.units);
+  const setUnits = useUi((u) => u.setUnits);
   const add = usePlayground((s) => s.addCustomItem);
   const update = usePlayground((s) => s.updateCustomItem);
   const toUnits = (inches: number) => (units === "mm" ? String(Math.round(inches * MM_PER_INCH)) : String(+inches.toFixed(3)));
@@ -112,6 +117,18 @@ export function CustomItemForm({
   const foot = withJacks(w, h, jacks);
   const sizeOk = w > 0 && h > 0 && foot.width <= MAX_INCHES && foot.height <= MAX_INCHES;
   const jackDepth = units === "mm" ? `${Math.round(JACK_DEPTH * MM_PER_INCH)} mm` : `${JACK_DEPTH}″`;
+
+  const switchUnits = () => {
+    const next = units === "mm" ? "in" : "mm";
+    const convert = (v: string) => {
+      const n = parseFloat(v);
+      if (!v.trim() || !(n > 0)) return v;
+      return next === "mm" ? String(Math.round(n * MM_PER_INCH)) : String(+(n / MM_PER_INCH).toFixed(3));
+    };
+    setWidth(convert(width));
+    setHeight(convert(height));
+    setUnits(next);
+  };
 
   const pickTemplate = (t: PedalTemplate) => {
     setTemplate(t);
@@ -229,15 +246,29 @@ export function CustomItemForm({
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-2">
-        <label className="text-xs text-ink-muted">
-          Width ({unitLabel})
-          <input className={`${field} mt-1`} {...plainField} inputMode="decimal" enterKeyHint="done" value={width} placeholder={placeholder[0]} onChange={(e) => setWidth(e.target.value)} autoFocus={!item && kind !== "pedal"} />
-        </label>
-        <label className="text-xs text-ink-muted">
-          Height ({unitLabel})
-          <input className={`${field} mt-1`} {...plainField} inputMode="decimal" enterKeyHint="done" value={height} placeholder={placeholder[1]} onChange={(e) => setHeight(e.target.value)} />
-        </label>
+      <div>
+        <div className="grid grid-cols-2 gap-2">
+          {(
+            [
+              ["Width", width, setWidth, placeholder[0], !item && kind !== "pedal"],
+              ["Height", height, setHeight, placeholder[1], false],
+            ] as const
+          ).map(([labelText, value, set, hint, focus]) => (
+            <label key={labelText} className="text-xs text-ink-muted">
+              {labelText}
+              <span className="relative mt-1 block">
+                <input className={`${field} pr-9`} {...plainField} inputMode="decimal" enterKeyHint="done" value={value} placeholder={hint} onChange={(e) => set(e.target.value)} autoFocus={focus} />
+                <span aria-hidden className="pointer-events-none absolute inset-y-0 right-3 grid place-items-center text-sm text-ink-muted">
+                  {unitLabel}
+                </span>
+              </span>
+            </label>
+          ))}
+        </div>
+        {/* Switches the app-wide units setting (the same one as in Settings), converting what's typed. */}
+        <button type="button" onClick={switchUnits} className="mt-1.5 text-xs text-brand hover:underline">
+          {units === "mm" ? "Use inches for units" : "Use mm for units"}
+        </button>
       </div>
 
       {kind === "pedal" && (
@@ -271,6 +302,11 @@ export function CustomItemForm({
       <button type="submit" className="h-9 w-full btn-primary">
         {item ? "Save Changes" : kind === "pedal" ? "Add Custom Pedal" : "Add Custom Pedalboard"}
       </button>
+      {onBack && (
+        <button type="button" onClick={onBack} className="mx-auto block text-sm text-ink-muted hover:text-ink hover:underline">
+          Back to Search
+        </button>
+      )}
     </form>
   );
 }

@@ -240,24 +240,25 @@ function Treadle({ x, y, w, h, u, color }: { x: number; y: number; w: number; h:
   );
 }
 
-/** A small Hammond enclosure (1590B / 125B): a grid of knobs, the name, an LED and one footswitch. */
+/**
+ * A Hammond enclosure, Walrus / Chase Bliss style: six knobs in two rows of three, the name, then two footswitches,
+ * each with its LED.
+ */
 const hammond: Draw = (w, h, u, _color, dark) => {
-  const top = h * 0.06;
-  const zoneH = h * 0.44;
-  const cols = clamp(Math.floor(w / (0.8 * IN)), 1, 4);
-  const rows = clamp(Math.floor(zoneH / (0.85 * IN)), 1, 3);
+  const top = h * 0.05;
+  const zoneH = h * 0.4;
+  const cols = 3;
+  const rows = 2;
   const cellW = (w * 0.9) / cols;
   const cellH = zoneH / rows;
   const r = Math.min(cellW, cellH, IN) * 0.36;
-  const fsR = Math.min(u * 0.17, 0.34 * IN);
-  const fsY = h * 0.93 - fsR;
-  const ledY = fsY - fsR - u * 0.12;
+  const fx = [w * 0.27, w * 0.73];
+  const fsR = Math.min(u * 0.13, w * 0.17, 0.3 * IN);
+  const fsY = h * 0.94 - fsR;
+  const ledY = fsY - fsR - u * 0.1;
   const knobs: ReactNode[] = [];
   for (let ri = 0; ri < rows; ri++) {
-    // A last row one knob short, centered under the others, reads like a real layout.
-    const n = rows > 1 && ri === rows - 1 && cols >= 3 ? cols - 1 : cols;
-    const inset = ((cols - n) * cellW) / 2;
-    spread(n, w * 0.05 + inset, w * 0.95 - inset).forEach((cx, i) =>
+    spread(cols, w * 0.05, w * 0.95).forEach((cx, i) =>
       knobs.push(<Knob key={`${ri}-${i}`} cx={cx} cy={top + cellH * (ri + 0.5)} r={r} turn={ri * 3 + i} light={dark} />),
     );
   }
@@ -265,11 +266,15 @@ const hammond: Draw = (w, h, u, _color, dark) => {
     parts: (
       <>
         {knobs}
-        <Led cx={w / 2} cy={ledY} r={u * 0.028} />
-        <Footswitch cx={w / 2} cy={fsY} r={fsR} />
+        {fx.map((cx, i) => (
+          <Led key={`led-${i}`} cx={cx} cy={ledY} r={u * 0.026} />
+        ))}
+        {fx.map((cx, i) => (
+          <Footswitch key={`fs-${i}`} cx={cx} cy={fsY} r={fsR} />
+        ))}
       </>
     ),
-    label: { x: w * 0.06, y: top + zoneH + u * 0.02, w: w * 0.88, h: Math.max(0, ledY - u * 0.09 - (top + zoneH + u * 0.02)) },
+    label: { x: w * 0.06, y: top + zoneH + u * 0.02, w: w * 0.88, h: Math.max(0, ledY - u * 0.08 - (top + zoneH + u * 0.02)) },
   };
 };
 
@@ -277,14 +282,15 @@ const hammond: Draw = (w, h, u, _color, dark) => {
 const wide: Draw = (w, h, u, _color, dark) => {
   const labelH = h * 0.14;
   const top = h * 0.04 + labelH + h * 0.02;
-  const zoneH = h * 0.38;
+  // Knobs and toggles sit high enough that the toggles stay clear of the footswitch LEDs.
+  const zoneH = h * 0.34;
   const cols = clamp(Math.floor(w / (1.4 * IN)), 2, 8);
   const rows = clamp(Math.floor(zoneH / (0.62 * IN)), 1, 2);
   const cellW = (w * 0.9) / cols;
   const cellH = zoneH / rows;
   const r = Math.min(cellW, cellH, IN) * 0.33;
   const s = Math.min(u * 0.1, 0.18 * IN);
-  const toggleY = top + zoneH + h * 0.07;
+  const toggleY = top + zoneH + h * 0.06;
   const nF = w >= 7.5 * IN ? 3 : w >= 3.4 * IN ? 2 : 1;
   const fsR = Math.min(u * 0.14, (w / nF) * 0.2, 0.3 * IN);
   const fsY = h * 0.95 - fsR;
