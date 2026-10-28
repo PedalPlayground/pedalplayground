@@ -388,7 +388,7 @@ export function CustomItemForm({
 
       </div>
 
-      <div className="shrink-0 space-y-3 border-t border-line p-3">
+      <div className="shrink-0 space-y-3 p-3">
         <div className="grid place-items-center rounded-control bg-canvas pb-7 pt-3">
           {sizeOk ? (
             <TechDrawing kind={kind} template={template} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} units={units} />
