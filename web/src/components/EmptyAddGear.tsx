@@ -1,4 +1,4 @@
-import { AddGlyph } from "./Toolbar";
+import { Plus } from "lucide-react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 
@@ -11,14 +11,12 @@ export function EmptyAddGear() {
   if (!empty || searchOpen || viewing) return null;
   return (
     <div className="pointer-events-none absolute inset-0 z-10 grid place-items-center">
-      {/* A bigger twin of the toolbar's Add Gear: same glyph, corners and type, outlined over a faint tint. */}
+      {/* A bigger twin of the toolbar's Add Gear: a +, the same corners and type, outlined over a faint tint. */}
       <button
         onClick={() => setSearchOpen(true)}
-        className="press animate-enter pointer-events-auto flex h-11 items-center gap-2.5 rounded-[8px] border-[1.5px] border-brand bg-brand/10 px-5 text-[15px] font-semibold tracking-[-0.01em] text-brand outline-none hover:bg-brand/15 active:bg-brand/20 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+        className="press animate-enter pointer-events-auto flex h-11 items-center gap-2 rounded-[8px] border-[1.5px] border-brand bg-brand/10 px-5 text-[15px] font-semibold tracking-[-0.01em] text-brand outline-none hover:bg-brand/15 active:bg-brand/20 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
       >
-        <span className="mx-[5px] flex scale-[1.3]">
-          <AddGlyph />
-        </span>
+        <Plus size={18} strokeWidth={2.5} />
         Add Gear
       </button>
     </div>

@@ -1,4 +1,4 @@
-import { Fullscreen, Hand, MousePointer2, Redo2, SquareArrowOutUpRight, Undo2, ZoomIn, ZoomOut } from "lucide-react";
+import { Fullscreen, Hand, MousePointer2, Plus, Redo2, SquareArrowOutUpRight, Undo2, ZoomIn, ZoomOut } from "lucide-react";
 import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -84,7 +84,7 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
         data-tour="add"
         className="btn-primary flex h-[26px] shrink-0 items-center gap-2 whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
       >
-        <AddGlyph />
+        <Plus size={15} strokeWidth={2.5} />
         Add Gear
       </button>
       {divider}
