@@ -199,7 +199,8 @@ export function App() {
             />
           ) : (
             cloudEnabled && (
-              <button onClick={() => setDialog("account")} className={headerSecondaryButton}>
+              // Phones sign in from the playground menu ("Sign In to Save"), so the header leaves it out.
+              <button onClick={() => setDialog("account")} className={`${headerSecondaryButton} max-sm:hidden`}>
                 <LogIn size={14} strokeWidth={2.25} />
                 Sign In
               </button>

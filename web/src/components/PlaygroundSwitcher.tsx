@@ -162,9 +162,9 @@ function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn
           aria-label={`Shared playground: ${viewing.name} by ${owner}`}
           className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
         >
-          <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
           <span className="truncate font-semibold">{viewing.name}</span>
           <span className="shrink-0 text-ink-muted max-sm:hidden">by {owner}</span>
+          <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
         </Dropdown.Trigger>
         <Dropdown.Portal>
           <Dropdown.Content
@@ -215,8 +215,8 @@ function OwnBreadcrumb({ className, onEdit, onSignIn }: MenuProps & { className:
           aria-label={`Playground: ${name}`}
           className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
         >
-          <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
           <span className="truncate">{name}</span>
+          <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
         </Dropdown.Trigger>
         <MenuContent
           onEdit={(target) => {
