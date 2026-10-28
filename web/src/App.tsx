@@ -32,7 +32,9 @@ import { ConsentBanner } from "./components/ConsentBanner";
 import { LegalDialog } from "./components/LegalDialog";
 import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
+import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
 import { Toolbar } from "./components/Toolbar";
+import { useMediaQuery } from "./lib/viewport";
 import { UpgradeDialog } from "./components/UpgradeDialog";
 import { UsernamePrompt } from "./components/UsernamePrompt";
 import { BETA, FEEDBACK_URL } from "./lib/beta";
@@ -102,6 +104,8 @@ export function App() {
   const setSearchOpen = useUi((u) => u.setSearchOpen);
   const hasSelection = usePlayground((s) => s.selected.length > 0);
   const viewing = useUi((u) => !!u.viewing);
+  /** Larger screens get side stacks and a lone Add Gear button; smaller ones keep the bars. */
+  const wide = useMediaQuery(WIDE_QUERY);
   const mode = useUi((u) => (SHOW_MODES ? u.mode : "playground"));
   /** The Equipment List and Signal Path cover the canvas and hide its tools. */
   const covered = mode !== "playground";
@@ -218,7 +222,14 @@ export function App() {
               <MadeBy className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] left-[max(1rem,env(safe-area-inset-left))] z-10 max-md:hidden" />
               {/* Paired with the Settings cog in the lower-right corner. */}
               <ScaleKey end className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] right-[calc(max(1rem,env(safe-area-inset-right))+40px)] z-10 max-md:hidden" />
-              <ObjectMenu />
+              {wide ? (
+                <>
+                  <ObjectStack />
+                  <CanvasStack viewOnly={viewing} onShare={() => setDialog("share")} />
+                </>
+              ) : (
+                <ObjectMenu />
+              )}
               <ContextMenu />
             </>
           )}
@@ -241,7 +252,11 @@ export function App() {
             className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 z-30 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             <ActionToast className="max-sm:hidden" />
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
-            <Toolbar viewOnly={viewing} onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
+            {wide ? (
+              !viewing && <AddGearButton onClick={() => setSearchOpen(replacing || editing ? true : !searchOpen)} />
+            ) : (
+              <Toolbar viewOnly={viewing} onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
+            )}
           </div>
           )}
 

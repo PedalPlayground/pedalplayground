@@ -179,17 +179,18 @@ body {
   }
 }
 
-/* Things that appear slide in a few pixels and fade up; --enter-y sets the direction (negative drops in from above). */
+/* Things that appear slide in a few pixels and fade up; --enter-y sets the direction (negative drops in from above), or
+   --enter-x with --enter-y: 0px for things that come in from the side. */
 @keyframes pp-enter {
   from {
     opacity: 0;
-    transform: translateY(var(--enter-y, 8px));
+    transform: translate(var(--enter-x, 0px), var(--enter-y, 8px));
   }
 }
 @keyframes pp-exit {
   to {
     opacity: 0;
-    transform: translateY(var(--enter-y, 8px));
+    transform: translate(var(--enter-x, 0px), var(--enter-y, 8px));
   }
 }
 @keyframes pp-fade {

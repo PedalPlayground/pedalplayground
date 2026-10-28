@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type FocusEvent, type PointerEvent } from "react";
 import { create } from "zustand";
 
-type Side = "top" | "bottom" | "right";
+type Side = "top" | "bottom" | "right" | "left";
 
 interface Tip {
   label: string;
@@ -95,6 +95,9 @@ export function TooltipLayer() {
     let top: number;
     if (t.side === "right") {
       left = r.right + GAP;
+      top = r.top + r.height / 2 - height / 2;
+    } else if (t.side === "left") {
+      left = r.left - GAP - width;
       top = r.top + r.height / 2 - height / 2;
     } else {
       left = r.left + r.width / 2 - width / 2;
