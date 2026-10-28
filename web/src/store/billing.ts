@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { BillingUnavailableError, fetchEntitlements, type Entitlements } from "../lib/billing";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "./auth";
+import { SHOW_PRO } from "./ui";
 
 interface BillingState {
   entitlements: Entitlements | null;
@@ -15,9 +16,11 @@ interface BillingState {
 
 export const useBilling = create<BillingState>((set, get) => ({
   entitlements: null,
-  billingEnabled: true,
+  // With Pro hidden, billing counts as off: the app shows no plans and gates nothing.
+  billingEnabled: SHOW_PRO,
 
   refresh: async () => {
+    if (!SHOW_PRO) return null;
     if (!supabase || !useAuth.getState().user) {
       set({ entitlements: null });
       return null;

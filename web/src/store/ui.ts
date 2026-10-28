@@ -8,6 +8,14 @@ export type Mode = "playground" | "signal" | "list";
  * the Playground; their code and the data they edit stay in place, so turning this back on brings them back.
  */
 export const SHOW_MODES = false;
+
+/**
+ * Pro is hidden for the launch: no Get Pro button, Pro badges, upgrade dialogs, plan details, or Pro step in the tour,
+ * and nothing is gated in the app (avatar search and shared-board copies open to everyone). The billing code and
+ * database stay in place, so turning this on brings it all back. Note the database still enforces the free playground
+ * limit until `plan_limits` is changed.
+ */
+export const SHOW_PRO = false;
 export type Tool = "hand" | "select";
 export type Units = "in" | "mm";
 export type Theme = "system" | "light" | "dark";
@@ -203,6 +211,7 @@ export const useUi = create<UiState>((set) => ({
   openLegal: () => set({ legalOpen: true }),
   closeLegal: () => set({ legalOpen: false }),
   openUpgrade: (upgrade) => {
+    if (!SHOW_PRO) return;
     track("upgrade_opened", { reason: upgrade });
     set({ upgrade });
   },

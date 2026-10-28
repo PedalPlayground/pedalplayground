@@ -1,7 +1,7 @@
 import { useSyncExternalStore } from "react";
 import { analyticsAvailable, analyticsOn, consentSnapshot, setAnalyticsOn, subscribeConsent } from "../lib/analytics";
 import { BUY_LINKS } from "../lib/affiliate";
-import { useUi } from "../store/ui";
+import { SHOW_PRO, useUi } from "../store/ui";
 import { Modal } from "./Modal";
 
 /** Last time the text below changed. */
@@ -48,8 +48,7 @@ export function LegalDialog() {
         <h3 className={h}>What we collect</h3>
         <p className={p}>
           If you create an account: your email address, your username (which is public on boards you share), and your boards.
-          Sign-in and storage run on Supabase. If you buy Pro, Stripe handles your payment details; we never see your card
-          number. We count how often catalog gear is added, without recording who added it. We don't sell your data.
+          Sign-in and storage run on Supabase.{SHOW_PRO && " If you buy Pro, Stripe handles your payment details; we never see your card number."} We count how often catalog gear is added, without recording who added it. We don't sell your data.
         </p>
 
         <h3 className={h}>Analytics and cookies</h3>
@@ -82,8 +81,7 @@ export function LegalDialog() {
         <p className={p}>
           Don't misuse the site: no scraping at a scale that harms it, no attacks, and no uploading anything unlawful or that
           infringes someone else's rights. We may change or remove features, limit accounts, or remove content or accounts that
-          break these rules. To the extent the law allows, we aren't liable for losses from using the site. Pro is billed
-          through Stripe and can be cancelled any time from your account. We may update this page; the date above says when.
+          break these rules. To the extent the law allows, we aren't liable for losses from using the site.{SHOW_PRO && " Pro is billed through Stripe and can be cancelled any time from your account."} We may update this page; the date above says when.
         </p>
 
         <h3 className={h}>Questions or deleting your data</h3>
