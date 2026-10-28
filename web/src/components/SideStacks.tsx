@@ -163,7 +163,7 @@ export function ObjectStack() {
       className="left-4"
       style={s.coverLeft ? { left: s.coverLeft + 16 } : undefined}
     >
-      <Row {...row} icon={locked ? <Lock size={16} /> : <LockOpen size={16} />} label={locked ? "Unlock" : "Lock in Place"} onClick={s.toggleLockSelected} pressed={locked} />
+      <Row {...row} icon={locked ? <Lock size={16} /> : <LockOpen size={16} />} label={locked ? "Unlock" : "Lock in Place"} shortcut="L" onClick={s.toggleLockSelected} pressed={locked} />
       <Row {...row} icon={<RotateCw size={16} />} label="Rotate 90°" shortcut="R" onClick={s.rotateSelected} />
       {s.selected.length >= 3 && <Row {...row} icon={<AlignHorizontalSpaceBetween size={16} />} label="Space Evenly" onClick={s.distributeHorizontally} />}
       <Divider />
@@ -194,7 +194,7 @@ export function CanvasStack({ viewOnly, onShare }: { viewOnly: boolean; onShare:
     <Shell edge="right" title="Canvas" collapsed={collapsed} onToggle={toggle} className="right-4">
       <Row {...row} icon={<ZoomIn size={17} />} label="Zoom In" shortcut={`${mod}+`} onClick={() => zoomBy(1.25)} />
       <Row {...row} icon={<ZoomOut size={17} />} label="Zoom Out" shortcut={`${mod}−`} onClick={() => zoomBy(0.8)} />
-      <Row {...row} icon={<Fullscreen size={16} />} label="Center & Fit" shortcut="⇧1" onClick={fit} />
+      <Row {...row} icon={<Fullscreen size={16} />} label="Center & Fit" shortcut="1" onClick={fit} />
       {!viewOnly && (
         <>
           <Divider />
@@ -214,6 +214,7 @@ export function AddGearButton({ onClick }: { onClick: () => void }) {
     <button
       onClick={onClick}
       data-tour="add"
+      {...tip("Add Gear", { shortcut: "Space", side: "top" })}
       className="btn-primary flex h-11 items-center gap-2 whitespace-nowrap rounded-[8px] px-6 text-[15px] font-semibold tracking-[-0.01em] shadow-[0_6px_20px_rgb(0_0_0/0.25)] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
     >
       <Plus size={18} strokeWidth={2.5} />

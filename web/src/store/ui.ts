@@ -32,6 +32,8 @@ interface UiState {
   viewing: SharedView | null;
   /** A drag of gear is under way, so floating helpers (the little menu under the selection) stay out of the way. */
   dragging: boolean;
+  /** An arrow-key nudge just happened (clears after a moment), so the selection UI steps aside briefly too. */
+  nudging: boolean;
   setViewing: (v: SharedView | null) => void;
   tool: Tool;
   units: Units;
@@ -142,6 +144,7 @@ export const useUi = create<UiState>((set) => ({
   mode: "playground",
   viewing: null,
   dragging: false,
+  nudging: false,
   setViewing: (viewing) => set({ viewing, searchOpen: false, replacing: false, editing: false }),
   tool: "select",
   units: savedUnits(),

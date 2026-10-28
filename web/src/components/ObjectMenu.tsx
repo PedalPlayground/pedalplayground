@@ -59,7 +59,7 @@ export function ObjectMenu() {
       </div>
       <div className="flex items-center gap-1 sm:gap-1.5">
       <span className={`${barDivider} max-sm:hidden`} />
-      <Action label={locked ? "Unlock" : "Lock in Place"} onClick={s.toggleLockSelected} pressed={locked}>
+      <Action label={locked ? "Unlock" : "Lock in Place"} shortcut="L" onClick={s.toggleLockSelected} pressed={locked}>
         {locked ? <Lock size={18} /> : <LockOpen size={18} />}
       </Action>
       <Action label="Rotate 90°" shortcut="R" onClick={s.rotateSelected}>

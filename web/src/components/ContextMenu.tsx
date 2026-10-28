@@ -119,6 +119,7 @@ function ObjectItems() {
       <Row
         icon={locked ? <Lock {...ICON} /> : <LockOpen {...ICON} />}
         label={locked ? "Unlock" : "Lock in Place"}
+        shortcut="L"
         onSelect={s.toggleLockSelected}
       />
       <Row icon={<RotateCw {...ICON} />} label="Rotate 90°" shortcut="R" onSelect={s.rotateSelected} />
@@ -143,7 +144,7 @@ function CanvasItems({ canvasX, canvasY }: { canvasX: number; canvasY: number })
   const empty = !s.items.length;
   return (
     <>
-      <Row icon={<Plus {...ICON} />} label="Add Gear" onSelect={() => useUi.getState().setSearchOpen(true)} />
+      <Row icon={<Plus {...ICON} />} label="Add Gear" shortcut="Space" onSelect={() => useUi.getState().setSearchOpen(true)} />
       <Separator />
       <Row icon={<Undo2 {...ICON} />} label="Undo" shortcut="⌘Z" disabled={!s.past.length} onSelect={s.undo} />
       <Row icon={<Redo2 {...ICON} />} label="Redo" shortcut="⇧⌘Z" disabled={!s.future.length} onSelect={s.redo} />
@@ -158,7 +159,7 @@ function CanvasItems({ canvasX, canvasY }: { canvasX: number; canvasY: number })
       <Separator />
       <Row icon={<ZoomIn {...ICON} />} label="Zoom In" shortcut="⌘+" onSelect={() => s.zoomBy(1.25, canvasX, canvasY)} />
       <Row icon={<ZoomOut {...ICON} />} label="Zoom Out" shortcut="⌘−" onSelect={() => s.zoomBy(0.8, canvasX, canvasY)} />
-      <Row icon={<Fullscreen {...ICON} />} label="Center & Fit" shortcut="⇧1" disabled={empty} onSelect={s.fitToContent} />
+      <Row icon={<Fullscreen {...ICON} />} label="Center & Fit" shortcut="1" disabled={empty} onSelect={s.fitToContent} />
     </>
   );
 }

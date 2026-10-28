@@ -14,7 +14,7 @@ const H = 36;
 /** A little menu that follows the selection: Lock, Rotate, and ••• for the full right-click menu. Not on phones. */
 export function SelectionMiniMenu() {
   const s = usePlayground();
-  const dragging = useUi((u) => u.dragging);
+  const dragging = useUi((u) => u.dragging || u.nudging);
   const viewing = useUi((u) => !!u.viewing);
   const wrap = useRef<HTMLDivElement>(null);
   if (!s.selected.length || dragging || viewing || !s.viewport.w) return null;
@@ -59,7 +59,7 @@ export function SelectionMiniMenu() {
       <button
         aria-label={locked ? "Unlock" : "Lock in Place"}
         aria-pressed={locked}
-        {...tip(locked ? "Unlock" : "Lock in Place", { side: "bottom" })}
+        {...tip(locked ? "Unlock" : "Lock in Place", { shortcut: "L", side: "bottom" })}
         onClick={s.toggleLockSelected}
         className={`${barIconButton} ${locked ? barIconActive : barIconIdle}`}
       >

@@ -53,6 +53,8 @@ const LOCK_SIZE = 12;
  */
 /** `tour` marks it as the onboarding tour's "selection" target. */
 function SelectionHalo({ item, zoom, tour }: { item: Item; zoom: number; tour?: boolean }) {
+  // Steps aside (fades to nothing) while the gear is being moved.
+  const moving = useUi((u) => u.dragging || u.nudging);
   const b = itemBounds(item);
   const pad = (HALO_GAP + HALO_STROKE) / zoom;
   const w = (b.right - b.left) * PX_PER_INCH + pad * 2;
@@ -69,8 +71,8 @@ function SelectionHalo({ item, zoom, tour }: { item: Item; zoom: number; tour?: 
     <svg
       aria-hidden
       data-tour={tour ? "selection" : undefined}
-      className="animate-fade pointer-events-none absolute overflow-visible"
-      style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h }}
+      className="animate-fade pointer-events-none absolute overflow-visible transition-opacity duration-150"
+      style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
     >
       <path d={d} fill="none" stroke="var(--color-brand)" strokeWidth={sw} />
       {item.locked && (
@@ -111,16 +113,28 @@ function ItemView({ item }: { item: Item }) {
   );
 }
 
+/** Briefly marks "nudging" so the selection halo and the little menu step aside while arrow keys move gear. */
+let nudgeTimer: ReturnType<typeof setTimeout> | undefined;
+function pulseNudge() {
+  useUi.setState({ nudging: true });
+  clearTimeout(nudgeTimer);
+  nudgeTimer = setTimeout(() => useUi.setState({ nudging: false }), 450);
+}
+
 export function Canvas() {
   const ref = useRef<HTMLDivElement>(null);
   const gesture = useRef<Gesture | null>(null);
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const spaceDown = useRef(false);
+  /** Whether this Space press could still be a tap (opens Add Gear), and whether it was used to pan instead. */
+  const spaceTap = useRef(false);
+  const spacePanned = useRef(false);
   const lastTap = useRef<{ id: string; t: number; prev: string[] } | null>(null);
   const longPress = useRef<{ timer: ReturnType<typeof setTimeout>; x: number; y: number } | null>(null);
   /** When a long press last opened the menu, so the browser's own long-press menu event doesn't open it twice. */
   const longPressAt = useRef(0);
   const tool = useUi((u) => u.tool);
+  const dragging = useUi((u) => u.dragging);
   const units = useUi((u) => u.units);
 
   useEffect(() => {
@@ -200,7 +214,12 @@ export function Canvas() {
         openContextMenu({ kind: has ? "object" : "canvas", x: r.left + x, y: r.top + y, canvasX: x, canvasY: y });
       } else if (e.code === "Space") {
         e.preventDefault();
-        if (!spaceDown.current) setSpaceHeld(true);
+        if (!spaceDown.current) {
+          setSpaceHeld(true);
+          spacePanned.current = false;
+          // A tap of Space (no pan) opens Add Gear, unless a dialog, menu or the gear panel already has the screen.
+          spaceTap.current = !e.repeat && !mod && !document.querySelector('[role="dialog"], [role="menu"]');
+        }
         spaceDown.current = true;
       } else if (mod && key === "z") {
         e.preventDefault();
@@ -211,7 +230,7 @@ export function Canvas() {
       } else if (mod && key === "a") {
         e.preventDefault();
         s.selectMany(s.items.map((i) => i.id));
-      } else if (e.shiftKey && e.code === "Digit1" && !mod) {
+      } else if (key === "1" && !mod && !e.shiftKey && !e.altKey) {
         e.preventDefault();
         s.fitToContent();
       } else if (mod && (key === "=" || key === "+")) {
@@ -224,18 +243,28 @@ export function Canvas() {
       else if ((key === "delete" || key === "backspace" || (key === "d" && !mod)) && has) {
         e.preventDefault();
         s.deleteSelected();
+      } else if (key === "l" && has && !mod) {
+        e.preventDefault();
+        s.toggleLockSelected();
       } else if (key === "]" && has) (mod ? s.bringToFront : s.bringForward)();
       else if (key === "[" && has) (mod ? s.sendToBack : s.sendBackward)();
       else if (key === "escape") s.clearSelection();
-      else if (key === "arrowleft" && has) (e.preventDefault(), s.nudgeSelected(-nudge, 0));
-      else if (key === "arrowright" && has) (e.preventDefault(), s.nudgeSelected(nudge, 0));
-      else if (key === "arrowup" && has) (e.preventDefault(), s.nudgeSelected(0, -nudge));
-      else if (key === "arrowdown" && has) (e.preventDefault(), s.nudgeSelected(0, nudge));
+      else if (key === "arrowleft" && has) (e.preventDefault(), pulseNudge(), s.nudgeSelected(-nudge, 0));
+      else if (key === "arrowright" && has) (e.preventDefault(), pulseNudge(), s.nudgeSelected(nudge, 0));
+      else if (key === "arrowup" && has) (e.preventDefault(), pulseNudge(), s.nudgeSelected(0, -nudge));
+      else if (key === "arrowdown" && has) (e.preventDefault(), pulseNudge(), s.nudgeSelected(0, nudge));
     };
     const onKeyUp = (e: KeyboardEvent) => {
       if (e.code === "Space") {
+        const tapped = spaceDown.current && spaceTap.current && !spacePanned.current;
         spaceDown.current = false;
+        spaceTap.current = false;
         setSpaceHeld(false);
+        const ui = useUi.getState();
+        if (tapped && !ui.viewing && !ui.searchOpen && ui.mode === "playground") {
+          e.preventDefault();
+          ui.setSearchOpen(true);
+        }
       }
     };
     // Releasing space in another window would otherwise leave the hand stuck on.
@@ -320,6 +349,7 @@ export function Canvas() {
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: touch, moved: false };
       setPanning(!touch);
     } else if (tool === "hand" || spaceDown.current || e.button === 1) {
+      if (spaceDown.current) spacePanned.current = true;
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY };
       setPanning(true);
     } else if (touch && !itemEl) {
@@ -468,7 +498,7 @@ export function Canvas() {
       ref={ref}
       className="absolute inset-0 touch-none"
       style={{
-        cursor: panning ? "grabbing" : spaceHeld || tool === "hand" ? "grab" : "default",
+        cursor: panning ? "grabbing" : dragging ? "move" : spaceHeld || tool === "hand" ? "grab" : "default",
         backgroundImage: grid
           .map(
             (g) =>
