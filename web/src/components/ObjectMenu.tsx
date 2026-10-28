@@ -68,7 +68,7 @@ export function ObjectMenu() {
       {s.selected.length >= 2 && (
         <Action
           label={isOneGroup(s.items.filter((i) => s.selected.includes(i.id))) ? "Ungroup" : "Group"}
-          shortcut="⌘G"
+          shortcut="G"
           onClick={s.toggleGroupSelected}
         >
           {isOneGroup(s.items.filter((i) => s.selected.includes(i.id))) ? <Ungroup size={18} /> : <Group size={18} />}

@@ -227,7 +227,7 @@ export function ObjectStack() {
           {...row}
           icon={grouped ? <Ungroup size={16} /> : <Group size={16} />}
           label={grouped ? "Ungroup" : "Group"}
-          shortcut="⌘G"
+          shortcut="G"
           onClick={s.toggleGroupSelected}
           pressed={grouped}
         />
@@ -297,12 +297,12 @@ export function AddGearButton({ onClick }: { onClick: () => void }) {
     <button
       onClick={onClick}
       data-tour="add"
-      {...tip("Add Gear", { shortcut: "G", side: "top" })}
+      {...tip("Add Gear", { shortcut: "+", side: "top" })}
       className="btn-primary flex h-11 items-center gap-2 whitespace-nowrap rounded-[8px] pl-4 pr-4 text-[15px] font-semibold tracking-[-0.01em] shadow-[0_6px_20px_rgb(0_0_0/0.25)] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
     >
       <Plus size={18} strokeWidth={2.5} />
       Add Gear
-      <kbd className="ml-5 font-sans text-[13px] font-medium opacity-60 pointer-coarse:hidden">G</kbd>
+      <kbd className="ml-5 font-sans text-[13px] font-medium opacity-60 pointer-coarse:hidden">+</kbd>
     </button>
   );
 }

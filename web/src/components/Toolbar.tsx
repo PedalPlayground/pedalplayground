@@ -82,12 +82,12 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
       <button
         onClick={onPlace}
         data-tour="add"
-        {...tip("Add Gear", { shortcut: "G" })}
+        {...tip("Add Gear", { shortcut: "+" })}
         className="btn-primary flex h-[26px] shrink-0 items-center gap-2 whitespace-nowrap rounded-[5px] pl-3 pr-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
       >
         <Plus size={15} strokeWidth={2.5} />
         Add Gear
-        <kbd className="ml-3 font-sans text-[12px] font-medium opacity-60 pointer-coarse:hidden">G</kbd>
+        <kbd className="ml-3 font-sans text-[12px] font-medium opacity-60 pointer-coarse:hidden">+</kbd>
       </button>
       {divider}
       </>

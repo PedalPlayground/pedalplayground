@@ -129,7 +129,7 @@ function ObjectItems() {
         <Row
           icon={isOneGroup(selected) ? <Ungroup {...ICON} /> : <Group {...ICON} />}
           label={isOneGroup(selected) ? "Ungroup" : "Group"}
-          shortcut="⌘G"
+          shortcut="G"
           onSelect={s.toggleGroupSelected}
         />
       )}
@@ -154,7 +154,7 @@ function CanvasItems({ canvasX, canvasY }: { canvasX: number; canvasY: number })
   const empty = !s.items.length;
   return (
     <>
-      <Row icon={<Plus {...ICON} />} label="Add Gear" shortcut="G" onSelect={() => useUi.getState().setSearchOpen(true)} />
+      <Row icon={<Plus {...ICON} />} label="Add Gear" shortcut="+" onSelect={() => useUi.getState().setSearchOpen(true)} />
       <Separator />
       <Row icon={<Undo2 {...ICON} />} label="Undo" shortcut="⌘Z" disabled={!s.past.length} onSelect={s.undo} />
       <Row icon={<Redo2 {...ICON} />} label="Redo" shortcut="⇧⌘Z" disabled={!s.future.length} onSelect={s.redo} />

@@ -72,7 +72,7 @@ export function SelectionMiniMenu() {
         <button
           aria-label={grouped ? "Ungroup" : "Group"}
           aria-pressed={grouped}
-          {...tip(grouped ? "Ungroup" : "Group", { shortcut: grouped ? "⇧⌘G" : "⌘G", side: "bottom" })}
+          {...tip(grouped ? "Ungroup" : "Group", { shortcut: "G", side: "bottom" })}
           onClick={s.toggleGroupSelected}
           className={`${barIconButton} ${grouped ? barIconActive : barIconIdle}`}
         >
