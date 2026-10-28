@@ -1,3 +1,4 @@
+import { boardStyle, finishFlat, TOP_FLAT } from "./boardStyles";
 import { DEFAULT_PEDAL_COLOR } from "./color";
 import { itemBounds } from "./geometry";
 import { canvasImageUrl } from "./catalog";
@@ -65,11 +66,15 @@ export async function renderThumbnail(items: Item[]): Promise<string | null> {
     if (img) {
       ctx.drawImage(img, -w / 2, -h / 2, w, h);
     } else if (item.kind === "pedalboard") {
-      ctx.fillStyle = "#e4e5ea";
-      ctx.fillRect(-w / 2, -h / 2, w, h);
-      ctx.strokeStyle = "#2b2b30";
-      ctx.lineWidth = Math.max(1, scale * 0.5);
-      ctx.strokeRect(-w / 2 + ctx.lineWidth / 2, -h / 2 + ctx.lineWidth / 2, w - ctx.lineWidth, h - ctx.lineWidth);
+      // Flat colors of the board's frame and deck.
+      const b = boardStyle(item.board);
+      const bw = b.border ? Math.min(b.borderWidth * scale, w / 2, h / 2) : 0;
+      if (bw) {
+        ctx.fillStyle = finishFlat(b.finish);
+        ctx.fillRect(-w / 2, -h / 2, w, h);
+      }
+      ctx.fillStyle = TOP_FLAT[b.top];
+      ctx.fillRect(-w / 2 + bw, -h / 2 + bw, w - bw * 2, h - bw * 2);
     } else {
       ctx.fillStyle = item.color ?? DEFAULT_PEDAL_COLOR;
       ctx.fillRect(-w / 2, -h / 2, w, h);

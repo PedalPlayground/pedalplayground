@@ -1,5 +1,6 @@
 import { DEFAULT_PEDAL_COLOR } from "../lib/color";
 import { PX_PER_INCH } from "../lib/geometry";
+import { boardStyle, finishBackground, topBackground, type BoardStyle } from "../lib/boardStyles";
 import type { Item } from "../lib/types";
 import { PedalArt } from "./PedalArt";
 
@@ -18,23 +19,22 @@ function CustomPedal({ item }: { item: Item }) {
 }
 
 /**
- * A generic pedalboard, styled like the original site: a dark deck framed by half-inch aluminum
- * U-channel. Lighter sides and darker ends meet on the diagonal, which reads as mitered corners.
+ * A custom pedalboard: a deck (black ABS, Velcro or wood grain) inside an optional frame (aluminum, black metal
+ * or tolex) of the chosen thickness. Without options it's the original look: half-inch aluminum around a dark deck.
  */
-export function CustomBoard() {
+export function CustomBoard({ board }: { board?: Partial<BoardStyle> }) {
+  const b = boardStyle(board);
+  const bw = b.border ? b.borderWidth * PX_PER_INCH : 0;
   return (
-    <div
-      className="size-full"
-      style={{
-        border: `${PX_PER_INCH / 2}px solid #ddd`,
-        borderTopColor: "#ccc",
-        borderBottomColor: "#ccc",
-        background: "#222",
-      }}
-    />
+    <div className="size-full" style={b.border ? { ...finishBackground(b.finish), padding: bw } : undefined}>
+      <div
+        className="size-full"
+        style={{ ...topBackground(b.top), boxShadow: b.border ? "inset 0 0 0 1px rgb(0 0 0 / 0.35), inset 0 2px 6px rgb(0 0 0 / 0.35)" : undefined }}
+      />
+    </div>
   );
 }
 
 export function CustomItemView({ item }: { item: Item }) {
-  return item.kind === "pedalboard" ? <CustomBoard /> : <CustomPedal item={item} />;
+  return item.kind === "pedalboard" ? <CustomBoard board={item.board} /> : <CustomPedal item={item} />;
 }

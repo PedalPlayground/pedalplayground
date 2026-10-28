@@ -1,3 +1,4 @@
+import type { BoardStyle } from "./boardStyles";
 import type { Jacks, PedalTemplate } from "./pedalTemplates";
 import type { SignalGraph } from "./signal";
 
@@ -42,6 +43,8 @@ export interface Item {
   template?: PedalTemplate;
   /** Custom pedals: edges with jacks sticking out. width and height include them. Missing means none. */
   jacks?: Jacks;
+  /** Custom pedalboards: border, thickness, top surface and border finish. Missing means the original look. */
+  board?: Partial<BoardStyle>;
   /** Locked items stay put: they can be selected but not dragged, nudged or distributed. */
   locked?: boolean;
   /** Equipment List: "wanted" means the user still needs to buy it. Missing means they own it. */

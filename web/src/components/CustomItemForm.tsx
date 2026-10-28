@@ -18,6 +18,16 @@ import type { Item } from "../lib/types";
 import { usePlayground } from "../store/playground";
 import { useUi, type Units } from "../store/ui";
 import { CustomBoard } from "./CustomItem";
+import {
+  BOARD_TOPS,
+  BORDER_FINISHES,
+  BORDER_STEPS_IN,
+  BORDER_STEPS_MM,
+  boardStyle,
+  finishBackground,
+  topBackground,
+  type BoardStyle,
+} from "../lib/boardStyles";
 import { PedalArt } from "./PedalArt";
 import { tip } from "./Tooltip";
 import { plainField } from "../lib/inputProps";
@@ -38,7 +48,9 @@ function Preview({
   label,
   boxW,
   boxH,
+  board,
 }: {
+  board?: BoardStyle;
   kind: Item["kind"];
   template?: PedalTemplate;
   jacks?: Jacks;
@@ -56,7 +68,7 @@ function Preview({
     <div className="grid place-items-center" style={{ width: boxW, height: boxH }}>
       <div style={{ width: w * scale, height: h * scale }} className="relative">
         <div className="absolute left-0 top-0 origin-top-left" style={{ width: w, height: h, transform: `scale(${scale})` }}>
-          {kind === "pedalboard" ? <CustomBoard /> : <PedalArt template={template} jacks={jacks} w={w} h={h} color={color} label={label} />}
+          {kind === "pedalboard" ? <CustomBoard board={board} /> : <PedalArt template={template} jacks={jacks} w={w} h={h} color={color} label={label} />}
         </div>
       </div>
     </div>
@@ -68,6 +80,7 @@ function Preview({
  * each with end ticks and its length. Sizes are the full footprint (jacks included).
  */
 function TechDrawing({
+  board,
   kind,
   template,
   jacks,
@@ -85,6 +98,7 @@ function TechDrawing({
   color: string;
   label: string;
   units: Units;
+  board?: BoardStyle;
 }) {
   const BOX_W = 150;
   const BOX_H = kind === "pedal" ? 120 : 80;
@@ -100,7 +114,7 @@ function TechDrawing({
   return (
     // Only the item takes up layout room, so it sits centered; the dimension lines and labels hang outside it.
     <div className="relative" style={{ width: pw, height: ph }}>
-      <Preview kind={kind} template={template} jacks={jacks} width={width} height={height} color={color} label={label} boxW={pw} boxH={ph} />
+      <Preview kind={kind} template={template} jacks={jacks} width={width} height={height} color={color} label={label} boxW={pw} boxH={ph} board={board} />
       <svg className="absolute left-0 top-0 overflow-visible" width={pw} height={ph} aria-hidden>
         {/* Bracket shapes that open toward the item: width below, height to the right. */}
         <path d={`M0 ${ph + GAP - TICK} V${ph + GAP} H${pw} V${ph + GAP - TICK}`} className="fill-none stroke-ink-muted" strokeWidth={1} />
@@ -113,6 +127,116 @@ function TechDrawing({
         {fmt(height)}
       </span>
     </div>
+  );
+}
+
+/** A small on/off switch for a form row. */
+function Toggle({ on, onChange, label }: { on: boolean; onChange: (on: boolean) => void; label: string }) {
+  return (
+    <button
+      type="button"
+      role="switch"
+      aria-checked={on}
+      aria-label={label}
+      onClick={() => onChange(!on)}
+      className={`relative inline-flex h-[18px] w-8 shrink-0 rounded-full outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-brand" : "bg-ink/15"}`}
+    >
+      <span className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white shadow-sm transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`} />
+    </button>
+  );
+}
+
+/** Custom pedalboard options: the deck's surface, then the frame (on/off, thickness on a notched slider, finish). */
+function BoardOptions({
+  board,
+  onChange,
+  units,
+  onUnits,
+}: {
+  board: BoardStyle;
+  onChange: (patch: Partial<BoardStyle>) => void;
+  units: Units;
+  onUnits: () => void;
+}) {
+  // The slider moves between fixed stops in the chosen units; the value is stored in inches.
+  const steps = units === "mm" ? BORDER_STEPS_MM.map((mm) => mm / MM_PER_INCH) : BORDER_STEPS_IN;
+  const nearest = steps.reduce((best, v, i) => (Math.abs(v - board.borderWidth) < Math.abs(steps[best] - board.borderWidth) ? i : best), 0);
+  const thickness = units === "mm" ? `${Math.round(board.borderWidth * MM_PER_INCH)} mm` : `${+board.borderWidth.toFixed(3)}″`;
+  const tile = (on: boolean) =>
+    `press flex flex-col items-center gap-1 rounded-control border p-1.5 text-[11px] font-medium transition-colors ${on ? "border-brand bg-brand/10 text-brand" : "border-line text-ink-muted hover:bg-surface-hover"}`;
+  return (
+    <>
+      <div>
+        <div className="mb-1 text-xs text-ink-muted">Top</div>
+        <div className="grid grid-cols-3 gap-1.5">
+          {BOARD_TOPS.map((t) => (
+            <button key={t.id} type="button" aria-pressed={board.top === t.id} onClick={() => onChange({ top: t.id })} className={tile(board.top === t.id)}>
+              <span className="h-7 w-full rounded-[3px]" style={topBackground(t.id)} />
+              {t.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        <div className="flex items-center justify-between">
+          <span className="text-xs text-ink-muted">Border</span>
+          <Toggle on={board.border} onChange={(border) => onChange({ border })} label="Border" />
+        </div>
+        {board.border && (
+          <>
+            <div>
+              <div className="mb-1 flex items-center justify-between">
+                <span className="text-xs text-ink-muted">
+                  Thickness <span className="tabular-nums text-ink">{thickness}</span>
+                </span>
+                <div role="radiogroup" aria-label="Units" className="flex rounded-control bg-surface-hover p-0.5 text-[11px] font-medium">
+                  {(["in", "mm"] as const).map((u) => (
+                    <button
+                      key={u}
+                      type="button"
+                      role="radio"
+                      aria-checked={units === u}
+                      onClick={() => units !== u && onUnits()}
+                      className={`rounded-[3px] px-1.5 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-brand ${units === u ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
+                    >
+                      {u}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <input
+                type="range"
+                aria-label="Border thickness"
+                min={0}
+                max={steps.length - 1}
+                step={1}
+                value={nearest}
+                onChange={(e) => onChange({ borderWidth: steps[Number(e.target.value)] })}
+                className="w-full accent-[var(--color-brand)]"
+              />
+              {/* Notches under the slider, one per stop. */}
+              <div aria-hidden className="flex justify-between px-[7px]">
+                {steps.map((_, i) => (
+                  <span key={i} className={`h-1.5 w-px ${i === nearest ? "bg-brand" : "bg-ink/25"}`} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="mb-1 text-xs text-ink-muted">Finish</div>
+              <div className="grid grid-cols-3 gap-1.5">
+                {BORDER_FINISHES.map((f) => (
+                  <button key={f.id} type="button" aria-pressed={board.finish === f.id} onClick={() => onChange({ finish: f.id })} className={tile(board.finish === f.id)}>
+                    <span className="h-5 w-full rounded-[3px]" style={finishBackground(f.id)} />
+                    {f.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    </>
   );
 }
 
@@ -191,6 +315,8 @@ export function CustomItemForm({
   // No name field: a custom pedal keeps its existing name, or the search text it was made from.
   const [name] = useState(item ? (item.kind === "pedal" ? item.label : "") : (initialName ?? ""));
   const [color, setColor] = useState(item?.color ?? NEW_PEDAL_COLOR);
+  const [board, setBoard] = useState<BoardStyle>(boardStyle(item?.board));
+  const patchBoard = (patch: Partial<BoardStyle>) => setBoard((b) => ({ ...b, ...patch }));
   const [error, setError] = useState<string | null>(null);
 
   const unitLabel = units === "mm" ? "mm" : "in";
@@ -249,6 +375,7 @@ export function CustomItemForm({
       label: kind === "pedal" ? name.trim() : "Custom Pedalboard",
       color: kind === "pedal" ? color : null,
       template: kind === "pedal" ? template : undefined,
+      board: kind === "pedalboard" ? board : undefined,
     };
     if (item) update(item.id, fields);
     else add({ kind, ...fields });
@@ -312,6 +439,10 @@ export function CustomItemForm({
           <div className="mb-1 text-xs text-ink-muted">Color</div>
           <ColorSwatches color={color} onChange={setColor} />
         </div>
+      )}
+
+      {kind === "pedalboard" && (
+        <BoardOptions board={board} onChange={patchBoard} units={units} onUnits={switchUnits} />
       )}
 
       <div>
@@ -393,7 +524,7 @@ export function CustomItemForm({
       <div className="shrink-0 space-y-3 p-3">
         <div className="grid place-items-center rounded-control bg-canvas pb-7 pt-3">
           {sizeOk ? (
-            <TechDrawing kind={kind} template={template} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} units={units} />
+            <TechDrawing board={board} kind={kind} template={template} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} units={units} />
           ) : (
             <span className="py-6 text-xs text-ink-muted">Check the width and height</span>
           )}

@@ -4,6 +4,7 @@ import { importAny, readLegacyLocalStorage } from "../lib/importers";
 import type { Jacks, PedalTemplate } from "../lib/pedalTemplates";
 import { defaultSignal, normalizeSignal, removeItems, SignalError, type SignalGraph } from "../lib/signal";
 import type { CatalogItem, Item, PlaygroundDocument, Rotation, View } from "../lib/types";
+import type { BoardStyle } from "../lib/boardStyles";
 import { toast } from "./toast";
 import { useUi } from "./ui";
 
@@ -95,7 +96,7 @@ interface PlaygroundState {
 }
 
 /** What the Custom form sets on a custom pedal or pedalboard. */
-export type CustomFields = { width: number; height: number; label: string; color: string | null; template?: PedalTemplate; jacks?: Jacks };
+export type CustomFields = { width: number; height: number; label: string; color: string | null; template?: PedalTemplate; jacks?: Jacks; board?: BoardStyle };
 
 const DEFAULT_VIEW: View = { x: 80, y: 80, zoom: 1 };
 
@@ -294,6 +295,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         color: c.kind === "pedal" ? c.color : null,
         ...(c.kind === "pedal" && c.template ? { template: c.template } : {}),
         ...(c.kind === "pedal" && c.jacks ? { jacks: c.jacks } : {}),
+        ...(c.kind === "pedalboard" && c.board ? { board: c.board } : {}),
       }),
     ),
 
@@ -314,9 +316,11 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         color: pedal ? c.color : null,
         template: pedal ? c.template : undefined,
         jacks: pedal ? c.jacks : undefined,
+        board: pedal ? undefined : (c.board ?? old.board),
       };
       if (!next.template) delete next.template;
       if (!next.jacks) delete next.jacks;
+      if (!next.board) delete next.board;
       return { ...record(s), items: s.items.map((i) => (i.id === id ? next : i)) };
     }),
 

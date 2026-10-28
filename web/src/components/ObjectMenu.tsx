@@ -81,8 +81,8 @@ export function ObjectMenu() {
       {single?.custom && (
         <button
           onClick={() => setEditing(true)}
-          aria-label={single.kind === "pedalboard" ? "Edit Size" : "Edit Size, Name, Color and Style"}
-          {...tip(single.kind === "pedalboard" ? "Edit Size" : "Edit Size, Name, Color and Style")}
+          aria-label={single.kind === "pedalboard" ? "Edit Board" : "Edit Size, Color and Style"}
+          {...tip(single.kind === "pedalboard" ? "Edit Board" : "Edit Size, Color and Style")}
           className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}
         >
           <Pencil size={14} strokeWidth={2.25} className="max-sm:size-[18px] max-sm:stroke-2" />
