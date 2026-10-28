@@ -15,7 +15,7 @@ import {
   Replace,
   RotateCw,
   SquareArrowOutUpRight,
-  MoveHorizontal,
+  Ruler,
   Trash2,
   Undo2,
   Ungroup,
@@ -151,7 +151,7 @@ function Shell({
 }
 
 const MM_PER_INCH = 25.4;
-/** The last custom gap used (in inches), so the next "Space By…" starts there. */
+/** The last custom gap used (in inches), so the next "Space Between…" starts there. */
 let lastGap = 0.25;
 
 /** Thin side of common right-angle 1/4" plugs: the room one needs between two pedals. */
@@ -199,7 +199,7 @@ function PlugDrawing({ left, right }: { left: number; right: number }) {
 const plugSeg = (on: boolean) =>
   `h-6 rounded-[5px] px-2.5 text-xs font-medium outline-none focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`;
 
-/** "Space By…": type a gap, or pick the plugs that sit between the gear, and the selection lines up left to right with that between them. */
+/** "Space Between…": type a gap, or pick the plugs that sit between the gear, and the selection lines up left to right with that between them. */
 function SpaceByModal({ onClose }: { onClose: () => void }) {
   const units = useUi((u) => u.units);
   const setUnits = useUi((u) => u.setUnits);
@@ -251,34 +251,35 @@ function SpaceByModal({ onClose }: { onClose: () => void }) {
   const size = (mm: number) => (units === "mm" ? `${mm} mm` : `${(mm / MM_PER_INCH).toFixed(2)} in`);
 
   return (
-    <Modal title="Space By" onClose={onClose} closeX>
+    <Modal title="Space Between" onClose={onClose} closeX>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           apply();
         }}
       >
-        <div className="mb-3 flex items-center gap-2">
-          <label className="flex h-9 min-w-0 flex-1 items-center gap-1 rounded-control bg-surface-hover px-3 focus-within:ring-2 focus-within:ring-brand">
-            <input
-              autoFocus
-              aria-label={`Gap between items (${units})`}
-              inputMode="decimal"
-              {...plainField}
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              onFocus={(e) => e.target.select()}
-              className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none"
-            />
-          </label>
-          <div role="group" aria-label="Units" className="flex rounded-control bg-surface-hover p-0.5">
-            {(["in", "mm"] as const).map((u) => (
-              <button key={u} type="button" aria-pressed={units === u} onClick={() => changeUnits(u)} className={plugSeg(units === u)}>
-                {u}
-              </button>
-            ))}
-          </div>
+        <div role="group" aria-label="Units" className="mb-2 flex w-fit rounded-control bg-surface-hover p-0.5">
+          {(["in", "mm"] as const).map((u) => (
+            <button key={u} type="button" aria-pressed={units === u} onClick={() => changeUnits(u)} className={plugSeg(units === u)}>
+              {u}
+            </button>
+          ))}
         </div>
+        <label className="mb-3 flex h-9 items-center gap-1 rounded-control bg-surface-hover px-3 focus-within:ring-2 focus-within:ring-brand">
+          <input
+            autoFocus
+            aria-label={`Gap between items (${units})`}
+            inputMode="decimal"
+            {...plainField}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            onFocus={(e) => e.target.select()}
+            className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none"
+          />
+          <span aria-hidden className="text-sm text-ink-muted">
+            {units}
+          </span>
+        </label>
 
         <button
           type="button"
@@ -357,7 +358,7 @@ export function ObjectStack() {
       {s.selected.length >= 3 && <Row {...row} icon={<AlignHorizontalSpaceBetween size={16} />} label="Space Evenly" onClick={s.distributeHorizontally} />}
       {s.selected.length >= 2 && (
         <>
-          <Row {...row} icon={<MoveHorizontal size={16} />} label="Space By…" onClick={() => setSpacing(true)} />
+          <Row {...row} icon={<Ruler size={16} />} label="Space Between…" onClick={() => setSpacing(true)} />
           {/* Portaled: the stack is transformed, which would trap a fixed-position modal inside it. */}
           {spacing && createPortal(<SpaceByModal onClose={() => setSpacing(false)} />, document.body)}
         </>
