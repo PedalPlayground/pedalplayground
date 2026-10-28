@@ -1,5 +1,4 @@
-import * as Dropdown from "@radix-ui/react-dropdown-menu";
-import { Check, ChevronDown, ChevronLeft, CornerDownLeft, Plus, Search, X } from "lucide-react";
+import { Check, ChevronLeft, CornerDownLeft, Flame, Plus, Search, Sparkles, X } from "lucide-react";
 import { tip } from "./Tooltip";
 import {
   useCallback,
@@ -16,11 +15,10 @@ import { createPortal } from "react-dom";
 import { PHONE_QUERY, useMediaQuery, useVisualViewport } from "../lib/viewport";
 import { thumbUrl, type Kind } from "../lib/catalog";
 import { indexItem, search } from "../lib/search";
-import { SIZE_CLASSES, sizeClass, sizeRangeShort, type SizeClass } from "../lib/sizes";
+import { sizeClass, type SizeClass } from "../lib/sizes";
 import { formatSize } from "../lib/units";
 import type { CatalogItem } from "../lib/types";
 import { useCatalog } from "../store/catalog";
-import { menuContentClass, rowClass } from "./ContextMenu";
 import { CustomItemForm } from "./CustomItemForm";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -29,7 +27,6 @@ import { DEFAULT_PEDAL_COLOR } from "../lib/color";
 import { PX_PER_INCH } from "../lib/geometry";
 import { templateInfo } from "../lib/pedalTemplates";
 import { PedalArt } from "./PedalArt";
-import { Segmented } from "./SettingsMenu";
 import { FEATURED_PEDALS } from "../lib/featuredPedals";
 import { fetchTrending, recordGearAdd, type TrendingEntry } from "../lib/trending";
 
@@ -54,14 +51,6 @@ interface Entry {
   brand: string;
   name: string;
 }
-
-const KIND_OPTIONS: { id: Kind | "all"; label: string }[] = [
-  { id: "all", label: "All Gear" },
-  { id: "pedal", label: "Pedals" },
-  { id: "pedalboard", label: "Pedalboards" },
-];
-
-const sizeItem = `${rowClass} text-ink data-[highlighted]:bg-surface-hover active:bg-chrome-line`;
 
 /** Rows rendered at once; more than this asks for a narrower search. */
 const MAX_RESULTS = 60;
@@ -162,7 +151,6 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     setKindFilter(null);
     setSizes([]);
   };
-  const toggleSize = (s: SizeClass) => setSizes((cur) => (cur.includes(s) ? cur.filter((c) => c !== s) : [...cur, s]));
 
   // The custom item form, opened from the Custom button or from an empty search (prefilled with what was typed).
   const [custom, setCustom] = useState<{ name: string; kind: Kind } | null>(null);
@@ -287,20 +275,8 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     }
   };
 
-  // When a filter menu closes, focus goes back to the search box (not the menu's button) so the arrow keys keep
-  // driving the results. Not on phones, where that would bring the keyboard back up.
-  const closeMenu = (e: Event) => {
-    e.preventDefault();
-    if (!phone) searchInput.current?.focus();
-  };
-
   // Tapping a chip shouldn't take focus from the search field, which would drop the phone keyboard.
   const keepFocus = (e: ReactMouseEvent) => e.preventDefault();
-  // Filters read as plain text with a caret; a filter that's narrowing the results turns brand-colored.
-  const filterTrigger = (on: boolean) =>
-    `press -mx-1 flex h-7 shrink-0 items-center gap-0.5 rounded-control px-1.5 text-[13px] font-medium outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover ${
-      on ? "text-brand" : "text-ink-muted hover:text-ink"
-    }`;
 
   const typed = query.trim();
   const showCustom = edit || custom !== null;
@@ -361,79 +337,30 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           </button>
         </div>
       ) : (
-        <div className="flex items-center gap-2 px-3 pt-2">
-          <div className="-mx-3 -my-1 flex min-w-0 flex-1 items-center gap-4 overflow-x-auto px-3 py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {!target && (
-              <Dropdown.Root>
-                <Dropdown.Trigger className={filterTrigger(kindFilter !== null)}>
-                  {kindFilter === "pedal" ? "Pedals" : kindFilter === "pedalboard" ? "Pedalboards" : "All Gear"}
-                  <ChevronDown size={14} className="opacity-70" />
-                </Dropdown.Trigger>
-                <Dropdown.Portal>
-                  <Dropdown.Content align="start" sideOffset={6} onCloseAutoFocus={closeMenu} className={`${menuContentClass} !min-w-40`}>
-                    <Dropdown.RadioGroup value={kindFilter ?? "all"} onValueChange={(v) => setKindFilter(v === "all" ? null : (v as Kind))}>
-                      {KIND_OPTIONS.map((o) => (
-                        <Dropdown.RadioItem key={o.id} value={o.id} className={sizeItem}>
-                          <span className="grid size-4 shrink-0 place-items-center text-brand">
-                            <Dropdown.ItemIndicator>
-                              <Check size={14} strokeWidth={2.5} />
-                            </Dropdown.ItemIndicator>
-                          </span>
-                          {o.label}
-                        </Dropdown.RadioItem>
-                      ))}
-                    </Dropdown.RadioGroup>
-                  </Dropdown.Content>
-                </Dropdown.Portal>
-              </Dropdown.Root>
-            )}
-            <Dropdown.Root>
-              <Dropdown.Trigger className={filterTrigger(sizes.length > 0)}>
-                {sizes.length === 0 ? "Any Size" : sizes.length === 1 ? SIZE_CLASSES.find((c) => c.id === sizes[0])?.label : `${sizes.length} Sizes`}
-                <ChevronDown size={14} className="opacity-70" />
-              </Dropdown.Trigger>
-              <Dropdown.Portal>
-                <Dropdown.Content align="start" sideOffset={6} onCloseAutoFocus={closeMenu} className={`${menuContentClass} !min-w-56`}>
-                  {SIZE_CLASSES.map((c) => (
-                    <Dropdown.CheckboxItem
-                      key={c.id}
-                      checked={sizes.includes(c.id)}
-                      onCheckedChange={() => toggleSize(c.id)}
-                      className={sizeItem}
-                    >
-                      <span className="grid size-4 shrink-0 place-items-center text-brand">
-                        <Dropdown.ItemIndicator>
-                          <Check size={14} strokeWidth={2.5} />
-                        </Dropdown.ItemIndicator>
-                      </span>
-                      <span>{c.label}</span>
-                      <span className="ml-auto pl-6 text-xs tracking-normal text-ink-muted">{sizeRangeShort(c.id, kind, units)}</span>
-                    </Dropdown.CheckboxItem>
-                  ))}
-                  {sizes.length > 0 && (
-                    <>
-                      <Dropdown.Separator className="-mx-1 my-1 h-px bg-line" />
-                      <Dropdown.Item onSelect={() => setSizes([])} className={sizeItem}>
-                        <span className="size-4 shrink-0" />
-                        Any Size
-                      </Dropdown.Item>
-                    </>
-                  )}
-                </Dropdown.Content>
-              </Dropdown.Portal>
-            </Dropdown.Root>
+        browsing && (
+          // Sort for the list shown before searching: most added lately, or newest in the catalog.
+          <div role="radiogroup" aria-label="Sort" className="flex items-center gap-1 px-3 pt-2">
+            {(
+              [
+                ["trending", "Trending", <Flame key="t" size={14} strokeWidth={2.25} />],
+                ["new", "What's New", <Sparkles key="n" size={14} strokeWidth={2.25} />],
+              ] as const
+            ).map(([id, label, icon]) => (
+              <button
+                key={id}
+                role="radio"
+                aria-checked={feed === id}
+                onClick={() => chooseFeed(id)}
+                className={`press flex h-7 items-center gap-1.5 rounded-full px-2.5 text-[13px] font-medium outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+                  feed === id ? "bg-brand/10 text-brand" : "text-ink-muted hover:bg-surface-hover hover:text-ink"
+                }`}
+              >
+                {icon}
+                {label}
+              </button>
+            ))}
           </div>
-          {!target && (
-            <button
-              {...tip("Make a Custom Pedal or Pedalboard")}
-              onClick={() => setCustom({ name: "", kind: kindFilter ?? "pedal" })}
-              className="press flex h-7 shrink-0 items-center gap-1 rounded-control border border-line bg-surface pl-1.5 pr-2.5 text-[13px] font-medium text-ink shadow-sm hover:bg-surface-hover active:bg-chrome-line"
-            >
-              <Plus size={15} strokeWidth={2.25} />
-              Custom
-            </button>
-          )}
-        </div>
+        )
       ))}
       {showCustom ? (
         <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
@@ -447,20 +374,6 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         </div>
       ) : (
       <>
-      {browsing && (
-        <div className="px-3 pt-2">
-          <Segmented
-            label="Show"
-            value={feed}
-            onChange={chooseFeed}
-            options={[
-              ["trending", "Trending"],
-              ["new", "What's New"],
-            ]}
-            wide
-          />
-        </div>
-      )}
       <ul id="search-results" role="listbox" className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2">
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
         {/* First row: make your own, for gear that isn't in the catalog. Pictured as a custom Hammond-style pedal. */}
