@@ -27,6 +27,9 @@ const MAX_INCHES = 60;
 /** Suggested custom pedalboard size, in inches. */
 const BOARD_SIZE = { width: 24, height: 12.5 };
 
+/** The selected color swatch: a brand ring drawn inside its edge, with a band of the panel color between it and the color. */
+const selectedSwatch = "shadow-[inset_0_0_0_2px_var(--color-brand),inset_0_0_0_4px_var(--color-surface)]";
+
 /** Shaded, borderless fields, like the rest of the app's forms. */
 const field =
   "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand max-sm:text-base";
@@ -238,14 +241,14 @@ export function CustomItemForm({
                 aria-pressed={color === c.hex}
                 {...tip(c.name)}
                 onClick={() => setColor(c.hex)}
-                className={`press size-5 rounded-full ring-offset-2 ring-offset-surface ${color === c.hex ? "ring-2 ring-brand" : ""}`}
+                className={`press size-[22px] rounded-full ${color === c.hex ? selectedSwatch : ""}`}
                 style={{ background: c.hex }}
               />
             ))}
             <label
               {...tip("Any Color")}
-              className={`press relative size-5 cursor-pointer rounded-full ring-offset-2 ring-offset-surface focus-within:ring-2 focus-within:ring-brand ${
-                PEDAL_COLOR_PRESETS.some((c) => c.hex === color) ? "" : "ring-2 ring-brand"
+              className={`press relative size-[22px] cursor-pointer rounded-full focus-within:ring-2 focus-within:ring-brand ${
+                PEDAL_COLOR_PRESETS.some((c) => c.hex === color) ? "" : selectedSwatch
               }`}
               style={{ background: "conic-gradient(#ff4d4d, #ffd84d, #4dff88, #4dd8ff, #6b4dff, #ff4dd8, #ff4d4d)" }}
             >
