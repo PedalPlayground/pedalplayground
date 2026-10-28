@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
-import { barDivider, barIconActive, barIconButton, barIconIdle, barPanel, barSoftButton } from "./toolbarStyles";
+import { barDivider, barGhostButton, barIconActive, barIconButton, barIconIdle, barPanel } from "./toolbarStyles";
 
 function IconButton({
   label,
@@ -126,7 +126,7 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
         <Redo2 size={17} />
       </IconButton>
       {divider}
-      <button onClick={onShare} data-tour="share" className={barSoftButton}>
+      <button onClick={onShare} data-tour="share" className={barGhostButton}>
         <SquareArrowOutUpRight size={14} strokeWidth={2.25} />
         Share
       </button>

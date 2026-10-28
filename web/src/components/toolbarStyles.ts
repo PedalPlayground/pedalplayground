@@ -7,5 +7,7 @@ export const barIconActive = "bg-brand/10 text-brand active:bg-brand/20";
 const barSoftBase =
   "press flex h-[26px] shrink-0 items-center gap-1 rounded-[5px] px-3 text-[13px] font-semibold tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10";
 export const barSoftButton = `${barSoftBase} bg-[rgb(202_203_226/0.39)] text-ink hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)]`;
+/** Icon + text with no fill until hovered (the toolbar's Share). */
+export const barGhostButton = `${barSoftBase} text-ink hover:bg-surface-hover active:bg-chrome-line`;
 export const barSoftDangerButton = `${barSoftBase} bg-danger/10 text-danger hover:bg-danger/15 active:bg-danger/25`;
 export const barDivider = "mx-1 h-4 w-px shrink-0 bg-line";
