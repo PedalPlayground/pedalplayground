@@ -11,6 +11,7 @@ import { AvatarDialog } from "./components/AvatarDialog";
 import { AvatarMenu } from "./components/AvatarMenu";
 import { SettingsMenu } from "./components/SettingsMenu";
 import { LogoMark } from "./components/Logo";
+import { MadeBy } from "./components/MadeBy";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
 import { PlaygroundBreadcrumb } from "./components/PlaygroundSwitcher";
@@ -142,7 +143,7 @@ export function App() {
             <span className="whitespace-nowrap max-sm:hidden">
               Pedal Playground
               {/* A little hello on hover. */}
-              <span aria-hidden className="hidden text-brand-top group-hover:inline"> &lt;3s you</span>
+              <span aria-hidden className="hidden text-brand-top group-hover:inline"> appreciates you</span>
             </span>
             {pro && <span className="text-brand-top max-sm:hidden">Pro</span>}
           </h1>
@@ -206,6 +207,7 @@ export function App() {
               <BackToCenter />
               <EmptyAddGear />
               {/* Phones keep it above the toolbar instead, since the toolbar spans the bottom edge there. */}
+              <MadeBy className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] left-[max(1rem,env(safe-area-inset-left))] z-10 max-md:hidden" />
               {/* Paired with the Settings cog in the lower-right corner. */}
               <ScaleKey end className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] right-[calc(max(1rem,env(safe-area-inset-right))+40px)] z-10 max-md:hidden" />
               <ObjectMenu />
