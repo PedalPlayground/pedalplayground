@@ -8,7 +8,7 @@ import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { openContextMenu, useContextMenu } from "./ContextMenu";
 import { CustomItemView } from "./CustomItem";
-import { isMac, tip } from "./Tooltip";
+import { hideTip, isMac, tip } from "./Tooltip";
 import { itemName } from "../lib/itemName";
 import { useUi } from "../store/ui";
 
@@ -89,10 +89,15 @@ function SelectionHalo({ item, zoom, tour }: { item: Item; zoom: number; tour?: 
 function ItemView({ item }: { item: Item }) {
   const manifest = useCatalog((s) => s.manifest);
   const src = item.image ? canvasImageUrl(manifest, item.kind, item.image) : null;
+  // A selected item has its menus; the name label is only for the ones that don't.
+  const selected = usePlayground((s) => s.selected.includes(item.id));
+  useEffect(() => {
+    if (selected) hideTip();
+  }, [selected]);
   return (
     <div
       data-item-id={item.id}
-      {...tip(itemName(item), { canvas: true })}
+      {...(selected ? {} : tip(itemName(item), { canvas: true }))}
       className="absolute"
       style={{
         left: item.x * PX_PER_INCH,
