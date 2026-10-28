@@ -163,3 +163,9 @@ Set `VITE_CLARITY_ID` (the project ID from Clarity → Settings → Setup) the s
 `web/.env.production`. It follows the same rules: production builds only, never on localhost, and stopped by the
 consent banner or the Terms & Privacy switch. Text inside dialogs is masked from recordings. In Clarity, also set
 masking to at least Balanced (Settings → Masking) so typed fields in the rest of the app stay hidden.
+
+## Consent banner
+
+`VITE_CONSENT` in `web/.env.production` decides who is asked before analytics starts: `off` (never, the current setting
+for launch), `regional` (visitors whose time zone is in Europe) or `all`. Switching `off` to `regional` brings the
+banner back for Europe with no other change. The opt-out in Settings → Terms & Privacy works in every mode.
