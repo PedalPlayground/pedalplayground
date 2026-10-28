@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { Sparkles, X } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usableFeaturedPedals } from "../lib/featuredPedals";
 import { useAuth } from "../store/auth";
@@ -14,8 +14,8 @@ interface Step {
   pad?: number;
   title: string;
   body: string;
-  /** The welcome card: a contrasting hero up top with a big shimmering "2.0". */
-  hero?: boolean;
+  /** A hero across the top of the card: "intro" is the big shimmering "2.0"; "pro" is a quieter Pro banner. */
+  hero?: "intro" | "pro";
 }
 
 const coarse = () => typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
@@ -25,7 +25,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, bill
   const touch = coarse();
   const steps: Step[] = [
     {
-      hero: true,
+      hero: "intro",
       title: "Welcome to Pedal Playground 2.0!",
       body: "Plan, arrange and show off your pedalboard or gear collection before you buy a thing. New in 2.0: sign in to keep your boards on every device, share them with a link, and build on a snappy canvas that zooms to any size.",
     },
@@ -38,32 +38,28 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, bill
       target: "selection",
       title: "Arrange Your Board",
       body: touch
-        ? "Drag a pedal to move it, and tap to select it. Pinch to zoom, and drag empty space to pan."
-        : "Drag a pedal to move it, and click to select it. Scroll to pan, and pinch or hold ⌘/Ctrl while scrolling to zoom.",
-    },
-    {
-      target: "object-menu",
-      title: "Edit Your Selection",
-      body: "Selected gear gets this menu: rotate it, lock it in place, move it up or down a layer, swap it for another product, or remove it.",
+        ? "Drag gear to move it, pinch to zoom, and drag empty space to pan. Tap a piece for its menu: rotate, lock, layer, swap or remove."
+        : "Drag gear to move it. Scroll to pan, and pinch or hold ⌘/Ctrl while scrolling to zoom. Click a piece for its menu: rotate, lock, layer, swap or remove.",
     },
   ];
   if (cloudEnabled) {
     steps.push(
       signedIn
-        ? { target: "account", title: "Your Playgrounds", body: "Everything you build saves to your account. Find all your boards here." }
-        : { target: "account", title: "Save Your Work", body: "Your playground is saved temporarily on this device. Sign in to save it to your account and open it anywhere." },
-      // Signed-in free accounts see the header's Get Pro button spotlighted; guests get a centered card.
-      ...(billing && !pro
-        ? [
-            {
-              target: signedIn ? "pro" : undefined,
-              title: "Go Pro",
-              body: "Pro gives you unlimited saved playgrounds, copies of anyone's shared boards, and any pedal as your avatar. It also keeps Pedal Playground running.",
-            },
-          ]
-        : []),
-      { target: "share", title: "Share It", body: "Show off your creation with a link that lets anyone see your Playground." },
+        ? { target: "account", title: "Your Playgrounds", body: "Everything you build saves to your account. Find all your boards here, and share any of them with a link." }
+        : {
+            target: "account",
+            title: "Save Your Work",
+            body: "Your playground is saved temporarily on this device. Sign in to save it to your account, open it anywhere, and share it with a link.",
+          },
     );
+    // Last: Pro, with its own (quieter) hero.
+    if (billing && !pro) {
+      steps.push({
+        hero: "pro",
+        title: "Go Pro",
+        body: "Pro gives you unlimited saved playgrounds, copies of anyone's shared boards, and any pedal as your avatar. It also keeps Pedal Playground running.",
+      });
+    }
   }
   return steps;
 }
@@ -267,9 +263,15 @@ export function OnboardingTour() {
             style={{ left: arrow.x - 6 }}
           />
         )}
-        {step.hero && (
+        {step.hero === "intro" && (
           <div aria-hidden className="tour-hero relative -mx-4 -mt-4 mb-4 grid h-40 place-items-center overflow-hidden">
             <span className="shimmer-text text-[88px] font-bold leading-none tracking-[-0.04em]">2.0</span>
+          </div>
+        )}
+        {step.hero === "pro" && (
+          <div aria-hidden className="tour-hero-pro relative -mx-4 -mt-4 mb-4 flex h-24 items-center justify-center gap-2 overflow-hidden">
+            <Sparkles size={22} className="text-white/85" />
+            <span className="text-[40px] font-bold leading-none tracking-[-0.03em] text-white">Pro</span>
           </div>
         )}
         <button
@@ -295,7 +297,17 @@ export function OnboardingTour() {
             ))}
           </div>
           <div className="ml-auto flex items-center gap-1">
-            {index === 0 ? (
+            {step.hero === "pro" ? (
+              <button
+                onClick={() => {
+                  close();
+                  useUi.getState().openUpgrade("menu");
+                }}
+                className="h-8 rounded-control px-3 text-sm text-brand outline-none hover:underline focus-visible:ring-2 focus-visible:ring-brand"
+              >
+                See Pro
+              </button>
+            ) : index === 0 ? (
               <button onClick={close} className="h-8 rounded-control px-3 text-sm text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand">
                 Skip
               </button>

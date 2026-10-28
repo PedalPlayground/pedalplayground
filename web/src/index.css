@@ -186,6 +186,12 @@ body {
     radial-gradient(90% 80% at 90% 100%, rgb(255 120 200 / 0.35), transparent 60%),
     linear-gradient(135deg, #4b4ff5, #7a4ff0 55%, #a64fe0);
 }
+/* The tour's Pro hero: the same brand colors as the intro, toned down and without the shimmer. */
+.tour-hero-pro {
+  background:
+    radial-gradient(80% 120% at 85% 0%, rgb(255 255 255 / 0.14), transparent 60%),
+    linear-gradient(135deg, #3f43d6, #6a45d8);
+}
 @keyframes pp-shimmer {
   from {
     background-position: 150% 0;
