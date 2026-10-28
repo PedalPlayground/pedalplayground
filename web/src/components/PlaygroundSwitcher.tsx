@@ -1,7 +1,7 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { useRef, useState } from "react";
 import { tip } from "./Tooltip";
-import { ArrowLeft, ChevronDown, Copy, Pencil, Plus, RotateCcw } from "lucide-react";
+import { ArrowLeft, ChevronDown, Copy, Pencil, Plus, LogIn, RotateCcw } from "lucide-react";
 import type { PlaygroundSummary } from "../lib/cloud";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
@@ -25,16 +25,17 @@ function edited(iso: string) {
   return `Edited ${d.toLocaleDateString(undefined, { month: "short", day: "numeric", ...(sameYear ? {} : { year: "numeric" }) })}`;
 }
 
-/** The playground menu: the user's playgrounds as cards (open, edit) and new; for guests, just Start Fresh. */
-function MenuContent({ onEdit, onCloseAutoFocus }: MenuProps & { onCloseAutoFocus: (e: Event) => void }) {
+/** The playground menu: the user's playgrounds as cards (open, edit) and new; for guests, Start Fresh and Sign In to Save. */
+function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onCloseAutoFocus: (e: Event) => void }) {
   const user = useAuth((s) => s.user);
+  const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const { list, cloudId, openPlayground } = useCloud();
   const cards = user ? list.slice(0, 6) : [];
   // The open playground has its own card when it's saved; otherwise edit it from the top item.
   const openHasCard = cards.some((p) => p.id === cloudId);
   const empty = usePlayground((s) => s.items.length === 0);
 
-  // Guests have one board on this device, so their menu only starts it over.
+  // Guests have one board on this device: they can start it over, or sign in to save it.
   if (!user) {
     return (
       <Dropdown.Portal>
@@ -44,12 +45,21 @@ function MenuContent({ onEdit, onCloseAutoFocus }: MenuProps & { onCloseAutoFocu
           sideOffset={8}
           collisionPadding={12}
           onCloseAutoFocus={onCloseAutoFocus}
-          className="animate-menu z-50 w-56 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
+          className="animate-menu z-50 w-60 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
         >
           <Dropdown.Item disabled={empty} className={`${item} data-[disabled]:cursor-default data-[disabled]:opacity-40`} onSelect={requestNewPlayground}>
             <RotateCcw size={14} />
             Start Fresh
           </Dropdown.Item>
+          {cloudEnabled && (
+            <>
+              <Dropdown.Separator className="my-1 h-px bg-line" />
+              <Dropdown.Item className={`${item} text-brand`} onSelect={onSignIn}>
+                <LogIn size={14} />
+                Sign In to Save
+              </Dropdown.Item>
+            </>
+          )}
         </Dropdown.Content>
       </Dropdown.Portal>
     );
@@ -194,10 +204,10 @@ function OwnBreadcrumb({ className, onEdit, onSignIn }: MenuProps & { className:
   const name = usePlayground((s) => s.name);
   const [open, setOpen] = useState(false);
   /**
-   * What to edit once the menu has closed. The dialog opens only then: opened sooner, the menu's focus trap and
+   * The dialog to open once the menu has closed (Edit Playground or Sign In). It opens only then: opened sooner, the menu's focus trap and
    * focus return pull focus out of the dialog's name field. `null` means nothing to open.
    */
-  const pending = useRef<{ target?: PlaygroundSummary } | null>(null);
+  const pending = useRef<{ open: () => void } | null>(null);
   return (
     <div className={`flex min-w-0 items-center text-sm/4 font-semibold tracking-[-0.01em] ${className}`}>
       <Dropdown.Root open={open} onOpenChange={setOpen}>
@@ -211,17 +221,20 @@ function OwnBreadcrumb({ className, onEdit, onSignIn }: MenuProps & { className:
         </Dropdown.Trigger>
         <MenuContent
           onEdit={(target) => {
-            pending.current = { target };
+            pending.current = { open: () => onEdit(target) };
+            setOpen(false);
+          }}
+          onSignIn={() => {
+            pending.current = { open: onSignIn };
             setOpen(false);
           }}
           onCloseAutoFocus={(e) => {
             if (!pending.current) return;
             e.preventDefault();
-            const { target } = pending.current;
+            const { open } = pending.current;
             pending.current = null;
-            onEdit(target);
+            open();
           }}
-          onSignIn={onSignIn}
         />
       </Dropdown.Root>
     </div>

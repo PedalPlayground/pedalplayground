@@ -96,6 +96,9 @@ export type CustomFields = { width: number; height: number; label: string; color
 
 const DEFAULT_VIEW: View = { x: 80, y: 80, zoom: 1 };
 
+/** Every new board's name, and always a guest's (they name boards once they save them to an account). */
+export const DEFAULT_NAME = "Untitled Playground";
+
 /** Pushes the current items and signal path onto the undo stack and clears redo. */
 const record = (s: Pick<PlaygroundState, "past" | "items" | "signal">) => ({
   past: [...s.past.slice(-(HISTORY_LIMIT - 1)), { items: s.items, signal: s.signal }],
@@ -181,7 +184,7 @@ function catalogSpecs(c: CatalogItem): Partial<Pick<Item, "ma" | "voltage" | "pe
 }
 
 export const usePlayground = create<PlaygroundState>((set, get) => ({
-  name: "Untitled Playground",
+  name: DEFAULT_NAME,
   items: [],
   signal: defaultSignal(),
   selected: [],
@@ -491,7 +494,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
   },
 
   reset: () =>
-    set((s) => ({ ...record(s), name: "Untitled Playground", items: [], signal: defaultSignal(), selected: [], view: DEFAULT_VIEW })),
+    set((s) => ({ ...record(s), name: DEFAULT_NAME, items: [], signal: defaultSignal(), selected: [], view: DEFAULT_VIEW })),
 }));
 
 /** Restores the last session; on first run, imports the legacy app's local save if one exists. */

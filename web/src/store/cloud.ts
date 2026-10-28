@@ -19,7 +19,7 @@ import { renderThumbnail } from "../lib/thumbnail";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "./auth";
 import { useBilling } from "./billing";
-import { restorePlayground, usePlayground } from "./playground";
+import { DEFAULT_NAME, restorePlayground, usePlayground } from "./playground";
 import { useUi } from "./ui";
 
 const META_KEY = "pp:cloud-meta";
@@ -316,6 +316,20 @@ export const useCloud = create<CloudState>((set, get) => {
 });
 
 /**
+ * Signed out: an account's board doesn't stay on the screen (it's saved in the account, and the device may be
+ * shared), and a guest's board is always "Untitled Playground", so the playground menu is where they go to save it.
+ */
+function settleGuestBoard() {
+  if (useUi.getState().viewing) return;
+  if (useCloud.getState().cloudId) {
+    useCloud.getState().newPlayground();
+    usePlayground.setState({ past: [], future: [] });
+  } else if (usePlayground.getState().name !== DEFAULT_NAME) {
+    usePlayground.getState().setName(DEFAULT_NAME);
+  }
+}
+
+/**
  * After sign-in (or leaving a shared playground): open the account's latest playground on a new device, or upload
  * local work from before sign-in. Waits while a shared playground is being viewed, since that board isn't theirs.
  */
@@ -352,9 +366,11 @@ export function startCloudSync() {
     const user = useAuth.getState().user;
     if (!user || user.id === lastUserId) {
       if (!user) {
+        const signedOut = lastUserId !== null;
         lastUserId = null;
         useCloud.setState({ list: [] });
         useBilling.getState().clear();
+        if (signedOut || useAuth.getState().ready) settleGuestBoard();
       }
       return;
     }
