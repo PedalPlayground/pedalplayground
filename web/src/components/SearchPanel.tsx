@@ -122,14 +122,28 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     const el = dockRef.current;
     const setCover = usePlayground.getState().setCoverLeft;
     if (phone || !el) return;
-    const measure = () => setCover(el.offsetLeft + el.offsetWidth);
+    // Adding gear: the canvas gives up the panel's width, so what's on it re-centers in the space that's left.
+    const adding = !replace && !edit;
+    const before = { view: usePlayground.getState().view, count: usePlayground.getState().items.length };
+    const measure = () => {
+      const covered = el.offsetLeft + el.offsetWidth;
+      if (covered === usePlayground.getState().coverLeft) return;
+      setCover(covered);
+      if (adding) usePlayground.getState().centerInOpenSpace();
+    };
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(el);
     return () => {
       ro.disconnect();
       setCover(0);
+      if (!adding) return;
+      // Nothing added: back to how it was. Otherwise fit everything, the new gear included.
+      const s = usePlayground.getState();
+      if (s.items.length === before.count) s.setView(before.view);
+      else s.fitToContent();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phone]);
 
   // Phone drawer in Add Gear mode: the canvas fits into the space above it, so gear being added stays in view.
