@@ -65,9 +65,9 @@ const SHEET_MS = 220;
 const CUSTOM_LOOKS: { template: PedalTemplate; color: string }[] = [
   { template: "hammond", color: DEFAULT_PEDAL_COLOR },
   { template: "compact", color: "#ee7464" },
-  { template: "wide", color: "#a9c4dd" },
+  { template: "modeler", color: "#a9c4dd" },
   { template: "classic", color: "#d6a84f" },
-  { template: "hammond", color: "#b7b0d4" },
+  { template: "switcher", color: "#b7b0d4" },
 ];
 const LOOK_MS = 1600;
 
@@ -517,7 +517,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       {!target && !phone && (
         <div className="relative px-2 pb-2">
           <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-surface to-transparent" />
-          <div className="rounded-control bg-surface shadow-[0_2px_12px_rgb(0_0_0/0.18)] ring-1 ring-line">{makeOwn}</div>
+          <div className="rounded-control bg-surface-hover shadow-[0_2px_12px_rgb(0_0_0/0.12)] [&>button:hover]:bg-ink/10">{makeOwn}</div>
         </div>
       )}
       </>
