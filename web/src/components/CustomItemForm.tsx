@@ -15,7 +15,6 @@ import {
   type PedalTemplate,
   type PedalTemplateInfo,
 } from "../lib/pedalTemplates";
-import { formatLength } from "../lib/units";
 import type { Item } from "../lib/types";
 import { usePlayground } from "../store/playground";
 import { useUi, type Units } from "../store/ui";
@@ -119,30 +118,23 @@ function TechDrawing({
   const pw = w * scale;
   const ph = h * scale;
   const GAP = 8; // item edge to dimension line
-  const TICK = 4;
-  const line = "stroke-ink-muted";
+  const TICK = 5;
+  // The same precision as the size fields: inches to three places, millimeters whole.
+  const fmt = (inches: number) => (units === "mm" ? `${Math.round(inches * MM_PER_INCH)} mm` : `${+inches.toFixed(3)}″`);
   return (
-    <div className="relative" style={{ width: pw + GAP + 34, height: ph + GAP + 18 }}>
+    // Only the item takes up layout room, so it sits centered; the dimension lines and labels hang outside it.
+    <div className="relative" style={{ width: pw, height: ph }}>
       <Preview kind={kind} template={template} jacks={jacks} width={width} height={height} color={color} label={label} boxW={pw} boxH={ph} />
-      <svg className="absolute inset-0 overflow-visible" width={pw + GAP + 34} height={ph + GAP + 18} aria-hidden>
-        {/* Width, below. */}
-        <g className={line} strokeWidth={1}>
-          <line x1={0} x2={pw} y1={ph + GAP} y2={ph + GAP} />
-          <line x1={0} x2={0} y1={ph + GAP - TICK} y2={ph + GAP + TICK} />
-          <line x1={pw} x2={pw} y1={ph + GAP - TICK} y2={ph + GAP + TICK} />
-        </g>
-        {/* Height, to the right. */}
-        <g className={line} strokeWidth={1}>
-          <line x1={pw + GAP} x2={pw + GAP} y1={0} y2={ph} />
-          <line x1={pw + GAP - TICK} x2={pw + GAP + TICK} y1={0} y2={0} />
-          <line x1={pw + GAP - TICK} x2={pw + GAP + TICK} y1={ph} y2={ph} />
-        </g>
+      <svg className="absolute left-0 top-0 overflow-visible" width={pw} height={ph} aria-hidden>
+        {/* Bracket shapes that open toward the item: width below, height to the right. */}
+        <path d={`M0 ${ph + GAP - TICK} V${ph + GAP} H${pw} V${ph + GAP - TICK}`} className="fill-none stroke-ink-muted" strokeWidth={1} />
+        <path d={`M${pw + GAP - TICK} 0 H${pw + GAP} V${ph} H${pw + GAP - TICK}`} className="fill-none stroke-ink-muted" strokeWidth={1} />
       </svg>
-      <span className="absolute -translate-x-1/2 text-[11px] tabular-nums text-ink-muted" style={{ left: pw / 2, top: ph + GAP + 4 }}>
-        {formatLength(width, units)}
+      <span className="absolute -translate-x-1/2 whitespace-nowrap text-[11px] tabular-nums text-ink-muted" style={{ left: pw / 2, top: ph + GAP + 3 }}>
+        {fmt(width)}
       </span>
-      <span className="absolute -translate-y-1/2 text-[11px] tabular-nums text-ink-muted" style={{ left: pw + GAP + 6, top: ph / 2 }}>
-        {formatLength(height, units)}
+      <span className="absolute -translate-y-1/2 whitespace-nowrap text-[11px] tabular-nums text-ink-muted" style={{ left: pw + GAP + 5, top: ph / 2 }}>
+        {fmt(height)}
       </span>
     </div>
   );
@@ -430,7 +422,7 @@ export function CustomItemForm({
       </div>
 
       <div className="shrink-0 space-y-3 border-t border-line p-3">
-        <div className="grid place-items-center rounded-control bg-canvas py-3">
+        <div className="grid place-items-center rounded-control bg-canvas pb-7 pt-3">
           {sizeOk ? (
             <TechDrawing kind={kind} template={template} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} units={units} />
           ) : (
