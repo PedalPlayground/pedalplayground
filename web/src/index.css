@@ -179,6 +179,31 @@ body {
 @utility animate-sheet {
   animation: pp-sheet 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+/* The tour's welcome hero: brand gradient with soft light blooms, and a "2.0" that shimmers. */
+.tour-hero {
+  background:
+    radial-gradient(120% 90% at 15% 10%, rgb(255 255 255 / 0.22), transparent 55%),
+    radial-gradient(90% 80% at 90% 100%, rgb(255 120 200 / 0.35), transparent 60%),
+    linear-gradient(135deg, #4b4ff5, #7a4ff0 55%, #a64fe0);
+}
+@keyframes pp-shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+.shimmer-text {
+  background: linear-gradient(110deg, #ffffff 30%, #ffe3fb 45%, #c9f3ff 50%, #ffffff 65%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 6px 18px rgb(30 10 90 / 0.35));
+  animation: pp-shimmer 2.8s linear infinite;
+}
+
 /* The gear panel slides in from the canvas's left edge. */
 @keyframes pp-dock {
   from {

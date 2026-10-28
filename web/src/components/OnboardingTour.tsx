@@ -13,6 +13,8 @@ interface Step {
   pad?: number;
   title: string;
   body: string;
+  /** The welcome card: a contrasting hero up top with a big shimmering "2.0". */
+  hero?: boolean;
 }
 
 const coarse = () => typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
@@ -21,8 +23,9 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
   const touch = coarse();
   const steps: Step[] = [
     {
-      title: "Welcome to Pedal Playground!",
-      body: "Plan, arrange, and show off your virtual pedal board or gear collection.",
+      hero: true,
+      title: "Welcome to Pedal Playground 2.0",
+      body: "Plan, arrange and show off your pedalboard or gear collection before you buy a thing. 2.0 is rebuilt from the ground up, with a faster canvas, thousands of pedals, custom gear, and boards you can save and share.",
     },
     {
       target: "add",
@@ -239,7 +242,7 @@ export function OnboardingTour() {
         aria-modal="true"
         aria-labelledby="tour-title"
         aria-describedby="tour-body"
-        className={`absolute w-[min(320px,calc(100vw-24px))] rounded-panel bg-surface p-4 shadow-panel ${
+        className={`absolute ${step.hero ? "w-[min(360px,calc(100vw-24px))] overflow-hidden" : "w-[min(320px,calc(100vw-24px))]"} rounded-panel bg-surface p-4 shadow-panel ${
           cardSize ? `animate-enter ${arrow?.side === "bottom" ? "[--enter-y:6px]" : arrow ? "[--enter-y:-6px]" : "[--enter-y:8px]"}` : ""
         }`}
         style={{ left, top, opacity: cardSize ? 1 : 0 }}
@@ -251,14 +254,21 @@ export function OnboardingTour() {
             style={{ left: arrow.x - 6 }}
           />
         )}
+        {step.hero && (
+          <div aria-hidden className="tour-hero relative -mx-4 -mt-4 mb-4 grid h-40 place-items-center overflow-hidden">
+            <span className="shimmer-text text-[88px] font-bold leading-none tracking-[-0.04em]">2.0</span>
+          </div>
+        )}
         <button
           onClick={close}
           aria-label="Close tour"
-          className="absolute right-2 top-2 grid size-7 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand"
+          className={`absolute right-2 top-2 z-10 grid size-7 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand ${
+            step.hero ? "text-white/80 hover:bg-white/15 hover:text-white" : "text-ink-muted hover:bg-surface-hover"
+          }`}
         >
           <X size={16} />
         </button>
-        <h2 id="tour-title" className="pr-6 text-[15px] font-semibold tracking-[-0.01em]">
+        <h2 id="tour-title" className={`pr-6 font-semibold tracking-[-0.01em] ${step.hero ? "text-lg" : "text-[15px]"}`}>
           {step.title}
         </h2>
         <p id="tour-body" className="mt-1 text-sm text-ink-muted">
