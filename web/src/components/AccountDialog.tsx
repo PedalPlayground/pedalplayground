@@ -196,7 +196,7 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
                   onClick={() => (emailOk ? void send() : setError("Enter your email first, and we'll send you a sign-in code."))}
                   className="text-xs text-brand hover:underline disabled:opacity-50"
                 >
-                  Forgot Password?
+                  Forgot Password
                 </button>
               </div>
               <input
@@ -239,7 +239,7 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
                 className={`${field} mb-1`}
               />
               <p className={`mb-3 text-xs ${check.hint ? "text-danger" : "text-ink-muted"}`}>
-                {check.hint ?? "Shown on playgrounds you share. Letters, numbers, - and _."}
+                {check.hint ?? "Dashes and underscores allowed"}
               </p>
               <label className={label} htmlFor="acct-new-email">
                 Email
@@ -268,7 +268,7 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
                 onChange={(e) => setPassword(e.target.value)}
                 className={`${field} mb-1`}
               />
-              <p className="mb-4 text-xs text-ink-muted">At least {MIN_PASSWORD} characters.</p>
+              <p className="mb-4 text-xs text-ink-muted">At least {MIN_PASSWORD} characters</p>
               <button
                 type="submit"
                 disabled={!check.ok || !emailOk || password.length < MIN_PASSWORD || busy}

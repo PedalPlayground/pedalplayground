@@ -133,7 +133,7 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
             </>
           )}
           <Dropdown.Item className={menuItem} onSelect={startTour}>
-            Take the Tour
+            Show tutorial again…
           </Dropdown.Item>
           <Dropdown.Separator className="my-1 h-px bg-line" />
           {SHOW_FILE_IO && (

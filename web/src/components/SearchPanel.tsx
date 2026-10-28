@@ -325,7 +325,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       </span>
       <span className="min-w-0">
         <span className="block text-sm font-medium leading-snug">Make Your Own</span>
-        <span className="block text-xs text-ink-muted">A pedal or pedalboard with custom dimensions</span>
+        <span className="block text-xs text-ink-muted">Add a pedal/pedalboard with custom dimensions</span>
       </span>
     </button>
   );
@@ -383,7 +383,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
             {(
               [
                 ["trending", "Trending", <Flame key="t" size={14} strokeWidth={2.25} />],
-                ["new", "What's New", <Sparkles key="n" size={14} strokeWidth={2.25} />],
+                ["new", "New", <Sparkles key="n" size={14} strokeWidth={2.25} />],
               ] as const
             ).map(([id, label, icon]) => (
               <button

@@ -108,7 +108,7 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
           <ZoomIn size={20} />
         </IconButton>
       </span>
-      <IconButton label="Fit Everything in View" shortcut="⇧1" onClick={fit}>
+      <IconButton label="Center & Fit" shortcut="⇧1" onClick={fit}>
         <Fullscreen size={17} />
       </IconButton>
       <span className="contents max-sm:hidden">

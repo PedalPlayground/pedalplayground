@@ -21,13 +21,13 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
   const touch = coarse();
   const steps: Step[] = [
     {
-      title: "Welcome to the New Pedal Playground",
-      body: "Plan your pedalboard before you buy a thing. Here's a quick look around.",
+      title: "Welcome to Pedal Playground!",
+      body: "Plan, arrange, and show off your virtual pedal board or gear collection.",
     },
     {
       target: "add",
       title: "Add Gear",
-      body: "Search for pedals and boards, then drop them onto your Playground.",
+      body: "Search for gear to add to your Playground.",
     },
     {
       target: "selection",
@@ -46,8 +46,8 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
     steps.push(
       signedIn
         ? { target: "account", title: "Your Playgrounds", body: "Everything you build saves to your account. Find all your boards here." }
-        : { target: "account", title: "Save Your Work", body: "Your board is kept on this device. Sign in to save it to your account and open it anywhere." },
-      { target: "share", title: "Share It", body: "Get a link anyone can open as their own copy." },
+        : { target: "account", title: "Save Your Work", body: "Your playground is saved temporarily on this device. Sign in to save it to your account and open it anywhere." },
+      { target: "share", title: "Share It", body: "Show off your creation with a link that lets anyone see your Playground." },
     );
   }
   return steps;

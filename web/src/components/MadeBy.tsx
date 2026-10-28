@@ -39,7 +39,7 @@ export function MadeBy({ className = "" }: { className?: string }) {
             <Dropdown.Item asChild className={menuItem}>
               <a href={LINKS.x} target="_blank" rel="noreferrer">
                 <span className="flex items-center gap-2">
-                  <XLogo />X
+                  <XLogo />Find me on X
                 </span>
               </a>
             </Dropdown.Item>
@@ -47,7 +47,7 @@ export function MadeBy({ className = "" }: { className?: string }) {
               <a href={LINKS.threads} target="_blank" rel="noreferrer">
                 <span className="flex items-center gap-2">
                   <ThreadsLogo />
-                  Threads
+                  Find me on Threads
                 </span>
               </a>
             </Dropdown.Item>

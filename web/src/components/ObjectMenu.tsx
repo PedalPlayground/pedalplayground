@@ -93,8 +93,6 @@ export function ObjectMenu() {
       {single && (
         <button
           onClick={() => setReplacing(true)}
-          aria-label="Swap for Something Else"
-          {...tip("Swap for Something Else")}
           className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}
         >
           <Replace size={14} strokeWidth={2.25} className="max-sm:size-[18px] max-sm:stroke-2" />
@@ -109,7 +107,6 @@ export function ObjectMenu() {
       </span>
       <button
         onClick={s.deleteSelected}
-        {...tip("Remove from the Playground", { shortcut: "Delete" })}
         className={`${barSoftDangerButton} max-sm:hidden`}
       >
         <Trash2 size={14} strokeWidth={2.25} />

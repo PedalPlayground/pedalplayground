@@ -175,7 +175,7 @@ function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn
             className="animate-menu z-50 w-72 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
           >
             <p className="px-2 pb-1.5 pt-1 text-xs text-ink-muted">
-              You're viewing a shared playground. Make a copy to edit it and save it to your account.
+              You're viewing a shared playground. To edit it create a copy.
             </p>
             <Dropdown.Item className={item} onSelect={createCopy}>
               <Copy size={14} />
@@ -213,7 +213,6 @@ function OwnBreadcrumb({ className, onEdit, onSignIn }: MenuProps & { className:
       <Dropdown.Root open={open} onOpenChange={setOpen}>
         <Dropdown.Trigger
           aria-label={`Playground: ${name}`}
-          {...tip("Switch Playgrounds")}
           className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
         >
           <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />

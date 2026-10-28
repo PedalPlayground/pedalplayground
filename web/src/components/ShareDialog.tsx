@@ -38,7 +38,7 @@ export function ShareDialog({ onClose, onSignIn }: { onClose: () => void; onSign
   return (
     <Modal title="Share Playground" onClose={onClose}>
       <p className="mb-3 text-sm text-ink-muted">
-        Anyone with this link can open their own copy of your playground. Their edits never change yours.
+        Show off your creation! Anyone with this link can create a copy of your playground. Their edits never change yours.
       </p>
       {busy && !url && <p className="text-sm text-ink-muted">Preparing link…</p>}
       {error && <p className="mb-2 text-sm text-danger">{error}</p>}

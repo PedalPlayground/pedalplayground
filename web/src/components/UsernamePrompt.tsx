@@ -48,7 +48,7 @@ export function UsernamePrompt() {
 
   return (
     <Modal title="Pick a Username" onClose={() => setDismissed(true)}>
-      <p className="mb-3 text-sm text-ink-muted">It's shown on playgrounds you share, like "Gig Board by you".</p>
+      <p className="mb-3 text-sm text-ink-muted">Shown on playgrounds you share</p>
       <form
         onSubmit={(e) => {
           e.preventDefault();
