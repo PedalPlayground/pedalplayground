@@ -1,4 +1,4 @@
-import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Group, Lock, LockOpen, Pencil, Replace, RotateCw, Trash2, Ungroup } from "lucide-react";
+import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, CopyPlus, Group, Lock, LockOpen, Pencil, Replace, RotateCw, Trash2, Ungroup } from "lucide-react";
 import type { ReactNode } from "react";
 import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -64,6 +64,9 @@ export function ObjectMenu() {
       </Action>
       <Action label="Rotate 90°" shortcut="R" onClick={s.rotateSelected}>
         <RotateCw size={18} />
+      </Action>
+      <Action label="Duplicate" shortcut="⌘D" onClick={s.duplicateSelected}>
+        <CopyPlus size={18} />
       </Action>
       {s.selected.length >= 2 && (
         <Action

@@ -3,6 +3,7 @@ import {
   ArrowDownToLine,
   ArrowUpToLine,
   ChevronsLeft,
+  CopyPlus,
   ChevronsRight,
   Fullscreen,
   Group,
@@ -172,6 +173,7 @@ export function ObjectStack() {
     >
       <Row {...row} icon={locked ? <Lock size={16} /> : <LockOpen size={16} />} label={locked ? "Unlock" : "Lock in Place"} shortcut="L" onClick={s.toggleLockSelected} pressed={locked} />
       <Row {...row} icon={<RotateCw size={16} />} label="Rotate 90°" shortcut="R" onClick={s.rotateSelected} />
+      <Row {...row} icon={<CopyPlus size={16} />} label="Duplicate" shortcut="⌘D" onClick={s.duplicateSelected} />
       {s.selected.length >= 2 && (
         <Row
           {...row}

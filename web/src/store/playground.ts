@@ -81,6 +81,8 @@ interface PlaygroundState {
   spaceByGap: (gap: number) => void;
   /** Groups the selected items (two or more), or ungroups them when they're already one group. */
   toggleGroupSelected: () => void;
+  /** Copies the selection just to its right, grouped as it was, and selects the copies. */
+  duplicateSelected: () => void;
   /** Locks the selection, or unlocks it if every selected item is already locked. */
   toggleLockSelected: () => void;
   bringForward: () => void;
@@ -199,8 +201,8 @@ function centeredView(s: PlaygroundState, items: Item[]): View {
   };
 }
 
-/** The current view, zoomed out and re-centered only if `item` isn't fully on screen. */
-function viewShowing(s: PlaygroundState, item: Item): View {
+/** The current view, zoomed out and re-centered only if the whole of `items` isn't on screen. */
+function viewShowingAll(s: PlaygroundState, items: Item[]): View {
   const { view, viewport, coverLeft } = s;
   const scale = view.zoom * PX_PER_INCH;
   const pad = PLACE_PAD / scale;
@@ -210,7 +212,7 @@ function viewShowing(s: PlaygroundState, item: Item): View {
     right: (viewport.w - view.x) / scale,
     bottom: (viewport.h - view.y) / scale,
   };
-  const b = itemBounds(item);
+  const b = contentBounds(items)!;
   const inside = b.left >= vis.left + pad && b.right <= vis.right - pad && b.top >= vis.top + pad && b.bottom <= vis.bottom - pad;
   if (inside) return view;
 
@@ -230,6 +232,9 @@ function viewShowing(s: PlaygroundState, item: Item): View {
     y: viewport.h / 2 - ((u.top + u.bottom) / 2) * k,
   };
 }
+
+/** The current view, zoomed out and re-centered only if `item` isn't fully on screen. */
+const viewShowing = (s: PlaygroundState, item: Item) => viewShowingAll(s, [item]);
 
 /** The catalog's pedal specs, as item fields. Only the ones the catalog has are set. */
 function catalogSpecs(c: CatalogItem): Partial<Pick<Item, "ma" | "voltage" | "pedalType">> {
@@ -482,6 +487,33 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     set((s) => {
       const items = spacedItems(s.items, s.selected, gap);
       return items === s.items ? {} : { ...record(s), items };
+    }),
+  duplicateSelected: () =>
+    set((s) => {
+      const picked = s.items.filter((i) => s.selected.includes(i.id));
+      if (!picked.length) return {};
+      const b = contentBounds(picked)!;
+      const dx = b.right - b.left + PLACE_GAP;
+      const groups = new Map<string, string>();
+      const copies = picked.map((i) => {
+        const { locked: _locked, groupId, ...rest } = i;
+        if (groupId && !groups.has(groupId)) groups.set(groupId, crypto.randomUUID());
+        return { ...rest, id: crypto.randomUUID(), x: i.x + dx, ...(groupId ? { groupId: groups.get(groupId) } : {}) };
+      });
+      // Boards stay beneath every pedal, like newly placed gear.
+      const boards = copies.filter((i) => i.kind === "pedalboard");
+      const rest = copies.filter((i) => i.kind !== "pedalboard");
+      const firstPedal = s.items.findIndex((i) => i.kind === "pedal");
+      const items = [...s.items];
+      items.splice(firstPedal === -1 ? items.length : firstPedal, 0, ...boards);
+      items.push(...rest);
+      const next = { ...s, items };
+      return {
+        ...record(s),
+        items,
+        selected: copies.map((i) => i.id),
+        ...(s.viewport.w > 0 ? { view: viewShowingAll(next, copies) } : {}),
+      };
     }),
   toggleGroupSelected: () =>
     set((s) => {

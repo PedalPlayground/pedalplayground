@@ -231,6 +231,9 @@ export function Canvas() {
       } else if (mod && key === "-") {
         e.preventDefault();
         s.zoomBy(0.8);
+      } else if (key === "d" && mod && has) {
+        e.preventDefault(); // ⌘D duplicates (the browser would bookmark the page)
+        s.duplicateSelected();
       } else if (key === "r" && has && !mod) s.rotateSelected();
       else if ((key === "delete" || key === "backspace" || (key === "d" && !mod)) && has) {
         e.preventDefault();

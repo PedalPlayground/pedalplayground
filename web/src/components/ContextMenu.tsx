@@ -6,6 +6,7 @@ import {
   ArrowDownToLine,
   ArrowUpToLine,
   BringToFront,
+  CopyPlus,
   Fullscreen,
   Lock,
   LockOpen,
@@ -125,6 +126,7 @@ function ObjectItems() {
         onSelect={s.toggleLockSelected}
       />
       <Row icon={<RotateCw {...ICON} />} label="Rotate 90°" shortcut="R" onSelect={s.rotateSelected} />
+      <Row icon={<CopyPlus {...ICON} />} label="Duplicate" shortcut="⌘D" onSelect={s.duplicateSelected} />
       {selected.length >= 2 && (
         <Row
           icon={isOneGroup(selected) ? <Ungroup {...ICON} /> : <Group {...ICON} />}
