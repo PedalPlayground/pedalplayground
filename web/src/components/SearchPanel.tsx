@@ -499,7 +499,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         ref={dockRef}
         role="dialog"
         aria-label={edit ? "Edit" : replace ? "Replace" : "Add Gear"}
-        className="animate-dock absolute bottom-3 left-3 top-3 z-20 flex w-[min(280px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-panel"
+        className="animate-dock absolute bottom-3 left-3 top-3 z-40 flex w-[min(280px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-panel"
       >
         {body}
       </div>

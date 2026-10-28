@@ -229,7 +229,7 @@ export function App() {
 
           {!covered && (
           <div
-            // Stays put when the gear panel opens, and above it where the two meet on narrower screens.
+            // Stays put when the gear panel opens; the panel sits above it where the two meet on narrower screens.
             className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 z-30 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             <ActionToast className="max-sm:hidden" />
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
