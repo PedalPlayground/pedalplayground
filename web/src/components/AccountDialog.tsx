@@ -276,6 +276,13 @@ export function AccountDialog({ onClose }: { onClose: () => void }) {
               >
                 {busy ? "Creating…" : "Create Account"}
               </button>
+              <p className="mt-2 text-center text-xs text-ink-muted">
+                By creating an account you agree to the{" "}
+                <button type="button" onClick={() => { onClose(); useUi.getState().openLegal(); }} className="underline hover:text-ink">
+                  Terms &amp; Privacy
+                </button>
+                .
+              </p>
               <p className="mt-3 text-center text-sm text-ink-muted">
                 Already have an account?{" "}
                 <button type="button" onClick={() => switchTab("signin")} className={linkButton}>

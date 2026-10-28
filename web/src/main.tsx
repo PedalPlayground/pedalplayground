@@ -3,6 +3,9 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import "./store/actionToasts";
 import { App } from "./App";
+import { startAnalytics } from "./lib/analytics";
+
+startAnalytics();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

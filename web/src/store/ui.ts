@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { track } from "../lib/analytics";
 
 export type Mode = "playground" | "signal" | "list";
 
@@ -56,6 +57,10 @@ interface UiState {
   setUnits: (u: Units) => void;
   setTheme: (t: Theme) => void;
   openUpgrade: (reason: UpgradeReason) => void;
+  /** The Terms, Disclaimer and Privacy window. */
+  legalOpen: boolean;
+  openLegal: () => void;
+  closeLegal: () => void;
   closeUpgrade: () => void;
   /** The first-visit tour of the editor. Opens on its own once; Settings can replay it. */
   tourOpen: boolean;
@@ -183,7 +188,13 @@ export const useUi = create<UiState>((set) => ({
     }
     set({ units });
   },
-  openUpgrade: (upgrade) => set({ upgrade }),
+  legalOpen: false,
+  openLegal: () => set({ legalOpen: true }),
+  closeLegal: () => set({ legalOpen: false }),
+  openUpgrade: (upgrade) => {
+    track("upgrade_opened", { reason: upgrade });
+    set({ upgrade });
+  },
   closeUpgrade: () => set({ upgrade: null }),
   tourOpen: false,
   startTour: () => set({ tourOpen: true, searchOpen: false, replacing: false, editing: false }),

@@ -175,6 +175,10 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
             <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Made with love by @tehtrav</Dropdown.Label>
             <CreditMenuItems />
           </div>
+          <Dropdown.Separator className="my-1 h-px bg-line" />
+          <Dropdown.Item className={menuItem} onSelect={() => useUi.getState().openLegal()}>
+            Terms &amp; Privacy
+          </Dropdown.Item>
           {BETA && (
             <>
               <Dropdown.Separator className="my-1 h-px bg-line" />

@@ -5,6 +5,7 @@ import type { Jacks, PedalTemplate } from "../lib/pedalTemplates";
 import { defaultSignal, normalizeSignal, removeItems, SignalError, type SignalGraph } from "../lib/signal";
 import type { CatalogItem, Item, PlaygroundDocument, Rotation, View } from "../lib/types";
 import type { BoardStyle } from "../lib/boardStyles";
+import { track } from "../lib/analytics";
 import { toast } from "./toast";
 import { useUi } from "./ui";
 
@@ -283,7 +284,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       return { ...record(s), items: s.items.map((i) => (i.id === id ? next : i)) };
     }),
 
-  addCustomItem: (c) =>
+  addCustomItem: (c) => {
+    track("custom_item_created", { kind: c.kind });
     set((s) =>
       placeNew(s, {
         kind: c.kind,
@@ -297,7 +299,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
         ...(c.kind === "pedal" && c.jacks ? { jacks: c.jacks } : {}),
         ...(c.kind === "pedalboard" && c.board ? { board: c.board } : {}),
       }),
-    ),
+    );
+  },
 
   updateCustomItem: (id, c) =>
     set((s) => {

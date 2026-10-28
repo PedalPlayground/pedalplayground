@@ -28,6 +28,7 @@ import { BackToCenter } from "./components/BackToCenter";
 import { EmptyAddGear } from "./components/EmptyAddGear";
 import { ScaleKey } from "./components/ScaleKey";
 import { TooltipLayer } from "./components/Tooltip";
+import { LegalDialog } from "./components/LegalDialog";
 import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { Toolbar } from "./components/Toolbar";
@@ -255,6 +256,7 @@ export function App() {
         </main>
       </div>
 
+      <LegalDialog />
       <OnboardingTour />
       <TooltipLayer />
       {billingReturn === "success" && <BillingReturn onDone={() => setBillingReturn(null)} />}

@@ -147,3 +147,12 @@ So treat the key and the repository's write access as sensitive:
 
 Nothing here touches the live site. To undo the beta: delete the Forge site and remove the `beta` DNS record. The
 Supabase project and Stripe test data stay as they are.
+
+
+## Analytics (Google Analytics 4)
+
+Set `VITE_GA_ID=G-XXXXXXXXXX` (the GA4 web stream's measurement ID) in the environment the build runs in, for example
+the `.env.production` that the deploy uses or the GitHub environment's variables. With no ID the build contains no
+analytics code at all. It never runs on localhost, and visitors can turn it off in Settings → Terms & Privacy.
+Events sent: `add_gear`, `custom_item_created`, `share_link_created`, `sign_up`, `upgrade_opened`. Mark
+`sign_up` and `upgrade_opened` as key events in GA4 if you want them as conversions.

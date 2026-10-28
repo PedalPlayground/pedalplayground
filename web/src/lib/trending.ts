@@ -1,3 +1,4 @@
+import { track } from "./analytics";
 import type { Kind } from "./catalog";
 import { supabase } from "./supabase";
 
@@ -9,6 +10,7 @@ export interface TrendingEntry {
 
 /** Records that a catalog item was added to a playground. Fire and forget: failures never reach the user. */
 export function recordGearAdd(kind: Kind, image: string) {
+  track("add_gear", { kind });
   if (!supabase) return;
   void supabase.rpc("record_gear_add", { kind, image }).then(
     () => undefined,

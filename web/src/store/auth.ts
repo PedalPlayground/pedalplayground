@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import type { EmailOtpType, User } from "@supabase/supabase-js";
+import { track } from "../lib/analytics";
 import { fetchUsername } from "../lib/profiles";
 import { supabase } from "../lib/supabase";
 
@@ -97,6 +98,7 @@ export const useAuth = create<AuthState>((set, get) => ({
     // Supabase answers an already-registered email with a user that has no identities (so it doesn't leak who has
     // an account); treat it as "sign in instead".
     if (data.user && data.user.identities?.length === 0) return { error: "There's already an account with that email. Sign in instead." };
+    track("sign_up");
     return { error: null, confirm: !data.session };
   },
 

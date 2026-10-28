@@ -15,6 +15,7 @@ import {
   unsharePlayground,
   type PlaygroundSummary,
 } from "../lib/cloud";
+import { track } from "../lib/analytics";
 import { renderThumbnail } from "../lib/thumbnail";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "./auth";
@@ -233,6 +234,7 @@ export const useCloud = create<CloudState>((set, get) => {
       const { cloudId } = get();
       if (!cloudId) throw new Error("Sign in to share a playground.");
       const slug = await sharePlayground(cloudId);
+      track("share_link_created");
       setMeta({ slug, isPublic: true });
       void get().refreshList();
       return slug;
