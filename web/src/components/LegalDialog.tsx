@@ -48,7 +48,7 @@ export function LegalDialog() {
         <h3 className={h}>What we collect</h3>
         <p className={p}>
           If you create an account: your email address, your username (which is public on boards you share), and your boards.
-          Sign-in and storage run on Supabase.{SHOW_PRO && " If you buy Pro, Stripe handles your payment details; we never see your card number."} We count how often catalog gear is added, without recording who added it. We don't sell your data.
+          Sign-in and storage run on Supabase.{SHOW_PRO && " If you buy Pro, Stripe handles your payment details; we never see your card number."} We count how often catalog gear is added, without recording who added it. We don't sell your data. To delete your account and everything saved to it, find @tehtrav on X or Threads and ask; we'll remove it within 30 days.
         </p>
 
         <h3 className={h}>Analytics and cookies</h3>
