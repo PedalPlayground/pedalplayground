@@ -83,7 +83,21 @@ async function stageDemoPedal() {
   const key = usableFeaturedPedals(manifest)[0];
   const pedal = manifest.pedals.find((p) => p.image === key) ?? manifest.pedals[0];
   if (!pedal) return;
+  demo = { before: usePlayground.getState().toDocument() };
   usePlayground.getState().addCatalogItem("pedal", pedal);
+  demo.id = usePlayground.getState().selected[0];
+}
+
+/** The pedal the tour added to an empty canvas, and the board from just before, so the tour can take it away again. */
+let demo: { before: ReturnType<ReturnType<typeof usePlayground.getState>["toDocument"]>; id?: string } | null = null;
+
+/** Takes the tour's demo pedal back off (if nothing else was added since), leaving the canvas empty with no undo step. */
+function removeDemoPedal() {
+  const d = demo;
+  demo = null;
+  const { items } = usePlayground.getState();
+  if (!d?.id || items.length !== 1 || items[0].id !== d.id) return;
+  usePlayground.getState().loadDocument(d.before);
 }
 
 /**
@@ -139,18 +153,23 @@ export function OnboardingTour() {
     return () => window.removeEventListener("resize", measure);
   }, [open, measure]);
 
-  // Finishing the tour drops the user straight into adding gear; skipping just closes it.
-  const finish = useCallback(() => {
+  // Ending the tour takes the demo pedal back off. Finishing then drops the user straight into adding gear;
+  // skipping just closes it.
+  const close = useCallback(() => {
+    removeDemoPedal();
     endTour();
-    useUi.getState().setSearchOpen(true);
   }, [endTour]);
+  const finish = useCallback(() => {
+    close();
+    useUi.getState().setSearchOpen(true);
+  }, [close]);
   const next = useCallback(() => (last ? finish() : setIndex((i) => i + 1)), [last, finish]);
   const back = useCallback(() => setIndex((i) => Math.max(0, i - 1)), []);
 
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") endTour();
+      if (e.key === "Escape") close();
       else if (e.key === "ArrowRight") next();
       else if (e.key === "ArrowLeft") back();
       else return;
@@ -160,7 +179,7 @@ export function OnboardingTour() {
     // Capture so the canvas's own shortcuts (arrows nudge, Esc deselects) don't also fire.
     window.addEventListener("keydown", onKey, true);
     return () => window.removeEventListener("keydown", onKey, true);
-  }, [open, next, back, endTour]);
+  }, [open, next, back, close]);
 
   useEffect(() => {
     if (!open) return;
@@ -233,7 +252,7 @@ export function OnboardingTour() {
           />
         )}
         <button
-          onClick={endTour}
+          onClick={close}
           aria-label="Close tour"
           className="absolute right-2 top-2 grid size-7 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand"
         >
@@ -254,7 +273,7 @@ export function OnboardingTour() {
           </div>
           <div className="ml-auto flex items-center gap-1">
             {index === 0 ? (
-              <button onClick={endTour} className="h-8 rounded-control px-3 text-sm text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand">
+              <button onClick={close} className="h-8 rounded-control px-3 text-sm text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand">
                 Skip
               </button>
             ) : (
