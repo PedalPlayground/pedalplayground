@@ -126,9 +126,6 @@ export function Canvas() {
   const gesture = useRef<Gesture | null>(null);
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const spaceDown = useRef(false);
-  /** Whether this Space press could still be a tap (opens Add Gear), and whether it was used to pan instead. */
-  const spaceTap = useRef(false);
-  const spacePanned = useRef(false);
   const lastTap = useRef<{ id: string; t: number; prev: string[] } | null>(null);
   const longPress = useRef<{ timer: ReturnType<typeof setTimeout>; x: number; y: number } | null>(null);
   /** When a long press last opened the menu, so the browser's own long-press menu event doesn't open it twice. */
@@ -195,7 +192,7 @@ export function Canvas() {
       const nudge = (e.shiftKey ? 8 : 1) / PX_PER_INCH;
       const key = e.key.toLowerCase();
 
-      if (viewOnly && !(e.code === "Space" || (e.shiftKey && e.code === "Digit1") || (mod && (key === "=" || key === "+" || key === "-")))) return;
+      if (viewOnly && !(e.code === "Space" || (key === "1" && !mod) || (mod && (key === "=" || key === "+" || key === "-")))) return;
       if (key === "contextmenu" || (e.shiftKey && key === "f10")) {
         // The keyboard way to open the right-click menu: on the selection if there is one, else mid-canvas.
         e.preventDefault();
@@ -214,12 +211,7 @@ export function Canvas() {
         openContextMenu({ kind: has ? "object" : "canvas", x: r.left + x, y: r.top + y, canvasX: x, canvasY: y });
       } else if (e.code === "Space") {
         e.preventDefault();
-        if (!spaceDown.current) {
-          setSpaceHeld(true);
-          spacePanned.current = false;
-          // A tap of Space (no pan) opens Add Gear, unless a dialog, menu or the gear panel already has the screen.
-          spaceTap.current = !e.repeat && !mod && !document.querySelector('[role="dialog"], [role="menu"]');
-        }
+        if (!spaceDown.current) setSpaceHeld(true);
         spaceDown.current = true;
       } else if (mod && key === "z") {
         e.preventDefault();
@@ -243,6 +235,13 @@ export function Canvas() {
       else if ((key === "delete" || key === "backspace" || (key === "d" && !mod)) && has) {
         e.preventDefault();
         s.deleteSelected();
+      } else if (key === "g" && !mod && !e.altKey) {
+        // G opens Add Gear, unless a dialog, menu or the panel already has the screen.
+        const ui = useUi.getState();
+        if (!ui.viewing && !ui.searchOpen && !document.querySelector('[role="dialog"], [role="menu"]')) {
+          e.preventDefault();
+          ui.setSearchOpen(true);
+        }
       } else if (key === "l" && has && !mod) {
         e.preventDefault();
         s.toggleLockSelected();
@@ -256,15 +255,8 @@ export function Canvas() {
     };
     const onKeyUp = (e: KeyboardEvent) => {
       if (e.code === "Space") {
-        const tapped = spaceDown.current && spaceTap.current && !spacePanned.current;
         spaceDown.current = false;
-        spaceTap.current = false;
         setSpaceHeld(false);
-        const ui = useUi.getState();
-        if (tapped && !ui.viewing && !ui.searchOpen && ui.mode === "playground") {
-          e.preventDefault();
-          ui.setSearchOpen(true);
-        }
       }
     };
     // Releasing space in another window would otherwise leave the hand stuck on.
@@ -349,7 +341,6 @@ export function Canvas() {
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: touch, moved: false };
       setPanning(!touch);
     } else if (tool === "hand" || spaceDown.current || e.button === 1) {
-      if (spaceDown.current) spacePanned.current = true;
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY };
       setPanning(true);
     } else if (touch && !itemEl) {

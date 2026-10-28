@@ -214,11 +214,12 @@ export function AddGearButton({ onClick }: { onClick: () => void }) {
     <button
       onClick={onClick}
       data-tour="add"
-      {...tip("Add Gear", { shortcut: "Space", side: "top" })}
+      {...tip("Add Gear", { shortcut: "G", side: "top" })}
       className="btn-primary flex h-11 items-center gap-2 whitespace-nowrap rounded-[8px] px-6 text-[15px] font-semibold tracking-[-0.01em] shadow-[0_6px_20px_rgb(0_0_0/0.25)] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
     >
       <Plus size={18} strokeWidth={2.5} />
       Add Gear
+      <kbd className="ml-1 grid h-5 min-w-5 place-items-center rounded-[4px] bg-white/20 px-1 font-sans text-[11px] font-semibold pointer-coarse:hidden">G</kbd>
     </button>
   );
 }

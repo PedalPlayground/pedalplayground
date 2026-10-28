@@ -18,6 +18,7 @@ export function EmptyAddGear() {
       >
         <Plus size={18} strokeWidth={2.5} />
         Add Gear
+        <kbd className="ml-1 grid h-5 min-w-5 place-items-center rounded-[4px] bg-brand/15 px-1 font-sans text-[11px] font-semibold pointer-coarse:hidden">G</kbd>
       </button>
     </div>
   );
