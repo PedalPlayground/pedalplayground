@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useToast } from "../store/toast";
 
-/** A small pill confirming the last canvas action. It replays its entrance for each action and fades out after a moment. */
+/** A line of quiet text on the canvas confirming the last action (a faint canvas-colored backing keeps it readable over gear). It replays its entrance for each action and fades out after a moment. */
 export function ActionToast({ className = "" }: { className?: string }) {
   const { id, msg } = useToast();
   const [leaving, setLeaving] = useState(false);
@@ -24,7 +24,7 @@ export function ActionToast({ className = "" }: { className?: string }) {
     <div role="status" className={`pointer-events-none z-20 ${className}`}>
       <div
         key={id}
-        className={`max-w-[80vw] truncate rounded-full bg-tip px-3 py-1 text-[13px] font-semibold tracking-[-0.01em] text-tip-ink shadow-[0_2px_12px_rgb(0_0_0/0.15)] ${leaving ? "animate-exit" : "animate-enter"}`}
+        className={`max-w-[80vw] truncate rounded-full bg-canvas/70 px-3 py-1 text-[13px] font-medium tracking-[-0.01em] text-ink-muted backdrop-blur-sm ${leaving ? "animate-exit" : "animate-enter"}`}
       >
         {msg}
       </div>
