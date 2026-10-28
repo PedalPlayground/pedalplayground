@@ -23,7 +23,6 @@ import { CustomItemForm } from "./CustomItemForm";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { plainField } from "../lib/inputProps";
-import { DEFAULT_PEDAL_COLOR } from "../lib/color";
 import { PX_PER_INCH } from "../lib/geometry";
 import { templateInfo, type PedalTemplate } from "../lib/pedalTemplates";
 import { PedalArt } from "./PedalArt";
@@ -63,11 +62,11 @@ const SHEET_MS = 220;
 
 /** Custom pedal looks the Make Your Own thumbnail cycles through. */
 const CUSTOM_LOOKS: { template: PedalTemplate; color: string }[] = [
-  { template: "hammond", color: DEFAULT_PEDAL_COLOR },
-  { template: "compact", color: "#ee7464" },
-  { template: "modeler", color: "#a9c4dd" },
-  { template: "classic", color: "#d6a84f" },
-  { template: "switcher", color: "#b7b0d4" },
+  { template: "hammond", color: "#7fd8b4" },
+  { template: "compact", color: "#ff6b5e" },
+  { template: "modeler", color: "#6cb8f0" },
+  { template: "classic", color: "#f2c14e" },
+  { template: "switcher", color: "#a993f0" },
 ];
 const LOOK_MS = 1600;
 

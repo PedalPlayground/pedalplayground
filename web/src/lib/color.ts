@@ -16,17 +16,15 @@ export function readableOn(hex: string): "#111318" | "#ffffff" {
 
 export const DEFAULT_PEDAL_COLOR = "#41c74d";
 
-/** Swatches in the Custom form: muted, cool industrial finishes that let black knobs and LEDs stand out. */
+/** Swatches in the Custom form: bright, current boutique-pedal finishes, plus one deep neutral. */
 export const PEDAL_COLOR_PRESETS: { name: string; hex: string }[] = [
-  { name: "Sage", hex: "#a8b59c" },
-  { name: "Bone", hex: "#e8e1d3" },
-  { name: "Lilac", hex: "#b7b0d4" },
-  { name: "Clay", hex: "#d38b70" },
-  { name: "Coral", hex: "#ee7464" },
-  { name: "Ochre", hex: "#d6a84f" },
-  { name: "Slate", hex: "#5f6f80" },
-  { name: "Forest", hex: "#3d5547" },
-  { name: "Midnight", hex: "#232a3a" },
+  { name: "Mint", hex: "#7fd8b4" },
+  { name: "Sky", hex: "#6cb8f0" },
+  { name: "Lavender", hex: "#a993f0" },
+  { name: "Peach", hex: "#ffa98a" },
+  { name: "Coral", hex: "#ff6b5e" },
+  { name: "Mustard", hex: "#f2c14e" },
+  { name: "Ink", hex: "#2b3445" },
 ];
 
 /** The color a new custom pedal starts with. */

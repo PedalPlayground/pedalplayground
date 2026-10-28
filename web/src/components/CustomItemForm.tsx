@@ -226,9 +226,10 @@ export function CustomItemForm({
       )}
 
       {kind === "pedal" && (
-        <div>
-          <div className="mb-1 text-xs text-ink-muted">Color</div>
-          <div className="flex flex-wrap items-center gap-[5px]">
+        // One line: the label left, flat round swatches right, the last a color wheel for any color.
+        <div className="flex items-center justify-between gap-3">
+          <span className="text-xs text-ink-muted">Color</span>
+          <div className="flex items-center gap-1.5">
             {PEDAL_COLOR_PRESETS.map((c) => (
               <button
                 type="button"
@@ -237,11 +238,19 @@ export function CustomItemForm({
                 aria-pressed={color === c.hex}
                 {...tip(c.name)}
                 onClick={() => setColor(c.hex)}
-                className={`press size-[22px] rounded-full shadow-[inset_0_1px_0_rgb(255_255_255/0.4),inset_0_-1px_1px_rgb(0_0_0/0.2)] ring-offset-2 ring-offset-surface ${color === c.hex ? "ring-2 ring-brand" : "ring-1 ring-black/15"}`}
+                className={`press size-5 rounded-full ring-offset-2 ring-offset-surface ${color === c.hex ? "ring-2 ring-brand" : ""}`}
                 style={{ background: c.hex }}
               />
             ))}
-            <input type="color" aria-label="Custom color" value={color} onChange={(e) => setColor(e.target.value)} className="size-[22px] cursor-pointer rounded border-0 bg-transparent p-0" />
+            <label
+              {...tip("Any Color")}
+              className={`press relative size-5 cursor-pointer rounded-full ring-offset-2 ring-offset-surface focus-within:ring-2 focus-within:ring-brand ${
+                PEDAL_COLOR_PRESETS.some((c) => c.hex === color) ? "" : "ring-2 ring-brand"
+              }`}
+              style={{ background: "conic-gradient(#ff4d4d, #ffd84d, #4dff88, #4dd8ff, #6b4dff, #ff4dd8, #ff4d4d)" }}
+            >
+              <input type="color" aria-label="Any color" value={color} onChange={(e) => setColor(e.target.value)} className="absolute inset-0 size-full cursor-pointer opacity-0" />
+            </label>
           </div>
         </div>
       )}
