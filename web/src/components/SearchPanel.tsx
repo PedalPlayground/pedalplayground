@@ -313,8 +313,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
 
   const results = browsing ? feedEntries : hits.slice(0, MAX_RESULTS);
 
-  // Brief "Added" confirmation on the row just tapped. Phones then close the panel, which covers the middle of the
-  // canvas where new items land.
+  // Brief "Added" confirmation on the row just tapped. The panel stays open so several can be added in a row.
   const [added, setAdded] = useState<string | null>(null);
   const addedTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   useEffect(() => () => clearTimeout(addedTimer.current), []);
@@ -323,7 +322,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     recordGearAdd(entry.kind, entry.item.image);
     setAdded(key);
     clearTimeout(addedTimer.current);
-    addedTimer.current = setTimeout(() => (phone ? onClose() : setAdded(null)), phone ? 600 : 1200);
+    addedTimer.current = setTimeout(() => setAdded(null), 1200);
   };
 
   const pick = (entry: Entry) => {

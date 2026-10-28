@@ -26,7 +26,10 @@ const messages: Partial<Record<keyof State, (after: State, before: State) => str
     const n = b.items.length - s.items.length;
     return n > 1 ? `Deleted ${n} Items` : "Deleted";
   },
-  addCustomItem: (s) => `Added ${selectedLabel(s) ?? ""}`.trim(),
+  addCustomItem: (s, b) => {
+    const added = s.items.find((i) => !b.items.some((o) => o.id === i.id));
+    return `Added ${added ? itemName(added) : ""}`.trim();
+  },
   replaceItem: (s) => `Replaced with ${selectedLabel(s) ?? "new item"}`,
 };
 

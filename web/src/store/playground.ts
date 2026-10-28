@@ -175,7 +175,9 @@ function placeNew(s: PlaygroundState, n: NewItem): Partial<PlaygroundState> {
     items.push(item);
   }
 
-  const patch: Partial<PlaygroundState> = { ...record(s), items, selected: [item.id] };
+  // New gear isn't selected, so adding several in a row never sprouts menus over the canvas.
+  const patch: Partial<PlaygroundState> = { ...record(s), items, selected: [] };
+  // The next pedal lines up after this one.
   if (n.kind === "pedal") patch.lastPlacedId = item.id;
   if (s.viewport.w > 0) {
     // With the gear panel open, keep the whole arrangement centered in the open space beside it as gear is added.

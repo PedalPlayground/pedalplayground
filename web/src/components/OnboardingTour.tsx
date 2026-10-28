@@ -96,7 +96,9 @@ async function stageDemoPedal() {
   if (!pedal) return;
   demo = { before: usePlayground.getState().toDocument() };
   usePlayground.getState().addCatalogItem("pedal", pedal);
-  demo.id = usePlayground.getState().selected[0];
+  // New gear isn't selected when added, but the tour points at its halo and menu.
+  demo.id = usePlayground.getState().lastPlacedId ?? undefined;
+  if (demo.id) usePlayground.getState().reveal(demo.id);
 }
 
 /** The pedal the tour added to an empty canvas, and the board from just before, so the tour can take it away again. */
