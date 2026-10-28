@@ -13,7 +13,6 @@ import {
   withoutJacks,
   type Jacks,
   type PedalTemplate,
-  type PedalTemplateInfo,
 } from "../lib/pedalTemplates";
 import type { Item } from "../lib/types";
 import { usePlayground } from "../store/playground";
@@ -62,29 +61,6 @@ function Preview({
       </div>
     </div>
   );
-}
-
-/** A style tile's drawing at a given enclosure size (inches), jacks added on, or a note when the size is out of range. */
-function StylePreview({
-  template,
-  width,
-  height,
-  jacks,
-  color,
-  label,
-}: {
-  template: PedalTemplateInfo;
-  width: number;
-  height: number;
-  jacks: Jacks | undefined;
-  color: string;
-  label: string;
-}) {
-  const foot = withJacks(width, height, jacks);
-  if (!(width > 0 && height > 0) || foot.width > MAX_INCHES || foot.height > MAX_INCHES) {
-    return <span className="grid h-11 place-items-center text-[10px] text-ink-muted">Check size</span>;
-  }
-  return <Preview kind="pedal" template={template.id} jacks={jacks} width={foot.width} height={foot.height} color={color} label={label} boxW={72} boxH={44} />;
 }
 
 /**
@@ -324,16 +300,7 @@ export function CustomItemForm({
                   template === t.id ? "border-brand bg-brand/10" : "border-line hover:bg-surface-hover"
                 }`}
               >
-                {/* Every tile previews the size you've typed (a blank field keeps that style's usual size); the picked
-                    one also shows your jacks and name. */}
-                <StylePreview
-                  template={t}
-                  width={width.trim() ? w : t.width}
-                  height={height.trim() ? h : t.height}
-                  jacks={template === t.id || jacksPicked ? jacks : (t.jacks ?? undefined)}
-                  color={color}
-                  label={template === t.id ? name.trim() : ""}
-                />
+                <Preview kind="pedal" template={t.id} jacks={t.jacks ?? undefined} {...withJacks(t.width, t.height, t.jacks)} color={color} label="" boxW={72} boxH={44} />
               </button>
             ))}
           </div>
