@@ -35,7 +35,7 @@ function PlugDrawing({ left, right }: { left: Plug; right: Plug | null }) {
         width: p.w * ART_SCALE,
         height: p.h * ART_SCALE,
         top: (ART_TOP - p.collar) * ART_SCALE,
-        ...(mirrored ? { left: "50%", transform: "scaleX(-1)", transformOrigin: "left center" } : { right: "50%" }),
+        ...(mirrored ? { left: "50%", transform: "scaleX(-1)" } : { right: "50%" }),
       }}
     />
   );
@@ -178,11 +178,12 @@ export function SpaceBetweenPanel() {
   const size = (mm: number) => (units === "mm" ? `${mm} mm` : `${(mm / MM_PER_INCH).toFixed(2)} in`);
 
   return (
+    // The wrapper holds the docked spot (full height, content centered) so the slide-in animation doesn't fight the centering.
+    <div ref={dockRef} className="pointer-events-none absolute inset-y-3 left-3 z-40 flex w-[min(280px,calc(100%-1.5rem))] items-center">
     <div
-      ref={dockRef}
       role="dialog"
       aria-label="Space Between"
-      className="animate-dock absolute left-3 top-3 z-40 flex w-[min(280px,calc(100%-1.5rem))] flex-col rounded-panel bg-surface p-4 shadow-panel"
+      className="animate-dock pointer-events-auto flex max-h-full w-full flex-col overflow-y-auto rounded-panel bg-surface p-4 shadow-panel"
     >
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-base font-semibold">Space Between</h2>
@@ -273,6 +274,7 @@ export function SpaceBetweenPanel() {
           Apply
         </button>
       </form>
+    </div>
     </div>
   );
 }
