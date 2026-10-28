@@ -22,6 +22,35 @@ function XLogo() {
 }
 
 
+/** "Say hi" (X and Threads) and "Support Pedal Playground", as items for a Radix dropdown. Also in Settings on phones. */
+export function CreditMenuItems() {
+  return (
+    <>
+    {/* "Say hi" with the two social links as icons, then the donate link. */}
+    <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
+      Say hi
+      <span className="flex items-center gap-0.5">
+        <Dropdown.Item asChild className={socialIcon}>
+          <a href={LINKS.x} target="_blank" rel="noreferrer" aria-label="X" {...tip("X")}>
+            <XLogo />
+          </a>
+        </Dropdown.Item>
+        <Dropdown.Item asChild className={socialIcon}>
+          <a href={LINKS.threads} target="_blank" rel="noreferrer" aria-label="Threads" {...tip("Threads")}>
+            <AtSign size={15} strokeWidth={2.25} />
+          </a>
+        </Dropdown.Item>
+      </span>
+    </div>
+    <Dropdown.Item asChild className={menuItem}>
+      <a href={LINKS.donate} target="_blank" rel="noreferrer">
+        Support Pedal Playground
+      </a>
+    </Dropdown.Item>
+    </>
+  );
+}
+
 /** "Made with love by @tehtrav" in the lower-left corner; @tehtrav opens links to X, Threads and a donate button. */
 export function MadeBy({ className = "" }: { className?: string }) {
   return (
@@ -33,27 +62,7 @@ export function MadeBy({ className = "" }: { className?: string }) {
         </Dropdown.Trigger>
         <Dropdown.Portal>
           <Dropdown.Content side="top" align="start" sideOffset={8} className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel">
-            {/* "Say hi" with the two social links as icons, then the donate link. */}
-            <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
-              Say hi
-              <span className="flex items-center gap-0.5">
-                <Dropdown.Item asChild className={socialIcon}>
-                  <a href={LINKS.x} target="_blank" rel="noreferrer" aria-label="X" {...tip("X")}>
-                    <XLogo />
-                  </a>
-                </Dropdown.Item>
-                <Dropdown.Item asChild className={socialIcon}>
-                  <a href={LINKS.threads} target="_blank" rel="noreferrer" aria-label="Threads" {...tip("Threads")}>
-                    <AtSign size={15} strokeWidth={2.25} />
-                  </a>
-                </Dropdown.Item>
-              </span>
-            </div>
-            <Dropdown.Item asChild className={menuItem}>
-              <a href={LINKS.donate} target="_blank" rel="noreferrer">
-                Support Pedal Playground
-              </a>
-            </Dropdown.Item>
+            <CreditMenuItems />
           </Dropdown.Content>
         </Dropdown.Portal>
       </Dropdown.Root>

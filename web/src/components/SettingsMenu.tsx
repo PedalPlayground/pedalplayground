@@ -8,6 +8,7 @@ import { BETA, FEEDBACK_URL } from "../lib/beta";
 import { useAuth } from "../store/auth";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
+import { CreditMenuItems } from "./MadeBy";
 import { barIconButton } from "./toolbarStyles";
 
 /** Import/export of playground files is archived for now. Flip this to bring the menu items back. */
@@ -167,6 +168,12 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
           <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
             Dark Mode
             <Segmented label="Dark Mode" value={darkStyle} onChange={setDarkStyle} options={[["dark", "Dark"], ["oled", "OLED"]]} />
+          </div>
+          {/* Small screens have no room for the credit line in the corner, so it lives here. */}
+          <div className="md:hidden">
+            <Dropdown.Separator className="my-1 h-px bg-line" />
+            <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Made with love by @tehtrav</Dropdown.Label>
+            <CreditMenuItems />
           </div>
           {BETA && (
             <>

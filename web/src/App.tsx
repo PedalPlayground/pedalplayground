@@ -201,7 +201,7 @@ export function App() {
 
       <div className="flex min-h-0 flex-1 flex-col sm:flex-row">
 
-        <main data-tour="canvas" className="relative flex-1 overflow-hidden bg-canvas">
+        <main data-tour="canvas" className="relative flex-1 overflow-clip bg-canvas">
           <Canvas />
           {/* The other modes cover the canvas; the canvas stays mounted so the view is kept for coming back. */}
           {mode === "list" ? (
