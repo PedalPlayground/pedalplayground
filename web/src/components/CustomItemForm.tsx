@@ -247,6 +247,24 @@ export function CustomItemForm({
       )}
 
       <div>
+        {/* One label row (with the app-wide units switch) and one row of fields: "Width 2.6 in" "Height 4.8 in". */}
+        <div className="mb-1 flex items-center justify-between">
+          <span className="text-xs text-ink-muted">Dimensions</span>
+          <div role="radiogroup" aria-label="Units" className="flex rounded-control bg-surface-hover p-0.5 text-[11px] font-medium">
+            {(["in", "mm"] as const).map((u) => (
+              <button
+                key={u}
+                type="button"
+                role="radio"
+                aria-checked={units === u}
+                onClick={() => units !== u && switchUnits()}
+                className={`rounded-[3px] px-1.5 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-brand ${units === u ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
+              >
+                {u}
+              </button>
+            ))}
+          </div>
+        </div>
         <div className="grid grid-cols-2 gap-2">
           {(
             [
@@ -254,21 +272,25 @@ export function CustomItemForm({
               ["Height", height, setHeight, placeholder[1], false],
             ] as const
           ).map(([labelText, value, set, hint, focus]) => (
-            <label key={labelText} className="text-xs text-ink-muted">
-              {labelText}
-              <span className="relative mt-1 block">
-                <input className={`${field} pr-9`} {...plainField} inputMode="decimal" enterKeyHint="done" value={value} placeholder={hint} onChange={(e) => set(e.target.value)} autoFocus={focus} />
-                <span aria-hidden className="pointer-events-none absolute inset-y-0 right-3 grid place-items-center text-sm text-ink-muted">
-                  {unitLabel}
-                </span>
+            <label key={labelText} className="flex h-9 min-w-0 items-center gap-1.5 rounded-control bg-surface-hover px-2.5 focus-within:ring-2 focus-within:ring-brand">
+              <span className="shrink-0 text-xs text-ink-muted">{labelText}</span>
+              <input
+                className="h-full min-w-0 flex-1 bg-transparent text-right text-sm outline-none placeholder:text-ink-muted/70 max-sm:text-base"
+                {...plainField}
+                inputMode="decimal"
+                enterKeyHint="done"
+                aria-label={`${labelText} (${unitLabel})`}
+                value={value}
+                placeholder={hint}
+                onChange={(e) => set(e.target.value)}
+                autoFocus={focus}
+              />
+              <span aria-hidden className="shrink-0 text-xs text-ink-muted">
+                {unitLabel}
               </span>
             </label>
           ))}
         </div>
-        {/* Switches the app-wide units setting (the same one as in Settings), converting what's typed. */}
-        <button type="button" onClick={switchUnits} className="mt-1.5 text-xs text-brand hover:underline">
-          {units === "mm" ? "Use inches for units" : "Use mm for units"}
-        </button>
       </div>
 
       {kind === "pedal" && (
