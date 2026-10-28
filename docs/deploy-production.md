@@ -19,9 +19,7 @@ Reuse the deploy key the beta already uses (it's authorized on the droplet as th
      - `PROD_DEPLOY_TARGET`: `forge@<droplet-ip>:/home/forge/pedalplayground-web`
      - `PROD_KNOWN_HOSTS`: same value as `BETA_KNOWN_HOSTS`.
      - `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`: same values as the beta environment (one Supabase project for both).
-2. **Settings → Secrets and variables → Actions → Variables → New repository variable:** `PROD_DEPLOY_TARGET`, same
-   value as above. The job's `if` check runs before the environment loads, so it needs the repository copy too.
-3. **Create the branch and deploy:** make a `production` branch from `react-rebuild` (GitHub → Branches → New branch,
+2. **Create the branch and deploy:** make a `production` branch from `react-rebuild` (GitHub → Branches → New branch,
    source `react-rebuild`). The push starts *Deploy production* in the Actions tab. The first run uploads the whole
    catalog and takes longer; later runs only send what changed.
 

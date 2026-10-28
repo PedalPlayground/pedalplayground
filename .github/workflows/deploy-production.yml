@@ -4,7 +4,7 @@ name: Deploy production
 # To release: fast-forward `production` to the commit on react-rebuild you've tested on beta, and push it.
 # Nothing else deploys to production, so beta can keep changing freely.
 #
-# Skipped until the "production" environment is set up (the job checks PROD_DEPLOY_TARGET).
+# Needs the "production" environment (PROD_DEPLOY_TARGET and friends); the first step fails with a clear message if it's missing.
 # Setup and the one-time switch of the live site are in docs/deploy-production.md.
 on:
   push:
@@ -20,11 +20,20 @@ permissions:
 
 jobs:
   deploy:
-    if: ${{ vars.PROD_DEPLOY_TARGET != '' }}
     runs-on: ubuntu-latest
     environment: production
     timeout-minutes: 60
     steps:
+      # Checked inside the job, where the environment's variables are available (a job-level `if` can't see them).
+      - name: Check settings
+        env:
+          TARGET: ${{ vars.PROD_DEPLOY_TARGET }}
+        run: |
+          if [ -z "$TARGET" ]; then
+            echo "::error::PROD_DEPLOY_TARGET isn't set in the production environment. See docs/deploy-production.md."
+            exit 1
+          fi
+
       # The catalog build needs the source data and images plus web/ for the build tooling.
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
