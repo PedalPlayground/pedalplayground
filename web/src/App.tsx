@@ -243,17 +243,14 @@ export function App() {
             <SaveStatus />
           </div>
 
-          {/* Phones show action confirmations up top, clear of the thumb; larger screens show them above the toolbar. */}
-          <ActionToast className="absolute left-1/2 top-3 -translate-x-1/2 [--enter-y:-8px] sm:hidden" />
+          {/* Action confirmations pop up at the top center. On tablets they drop below the selection bar when it's showing. */}
+          <ActionToast className={`absolute left-1/2 -translate-x-1/2 [--enter-y:-8px] ${hasSelection && !wide ? "top-3 sm:top-16" : "top-3"}`} />
 
-          {/* The other modes hide the toolbar, so their confirmations sit at the bottom on their own. */}
-          {covered && <ActionToast className="absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] left-1/2 -translate-x-1/2 max-sm:hidden" />}
 
           {!covered && (
           <div
             // Stays put when the gear panel opens; the panel sits above it where the two meet on narrower screens.
             className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 z-30 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
-            <ActionToast className="max-sm:hidden" />
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
             {wide ? (
               !viewing && <AddGearButton onClick={() => setSearchOpen(replacing || editing ? true : !searchOpen)} />
