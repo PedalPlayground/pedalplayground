@@ -25,7 +25,7 @@ import { useUi } from "../store/ui";
 import { plainField } from "../lib/inputProps";
 import { DEFAULT_PEDAL_COLOR } from "../lib/color";
 import { PX_PER_INCH } from "../lib/geometry";
-import { templateInfo } from "../lib/pedalTemplates";
+import { templateInfo, type PedalTemplate } from "../lib/pedalTemplates";
 import { PedalArt } from "./PedalArt";
 import { FEATURED_PEDALS } from "../lib/featuredPedals";
 import { fetchTrending, recordGearAdd, type TrendingEntry } from "../lib/trending";
@@ -61,17 +61,50 @@ const SWIPE_CLOSE = 80;
 const FLICK_CLOSE = 0.5;
 const SHEET_MS = 220;
 
-/** The custom pedal form's Hammond style, drawn small for the "Make Your Own" row. */
-function HammondThumb() {
-  const t = templateInfo("hammond");
+/** Custom pedal looks the Make Your Own thumbnail cycles through. */
+const CUSTOM_LOOKS: { template: PedalTemplate; color: string }[] = [
+  { template: "hammond", color: DEFAULT_PEDAL_COLOR },
+  { template: "compact", color: "#ee7464" },
+  { template: "wide", color: "#a9c4dd" },
+  { template: "classic", color: "#d6a84f" },
+  { template: "hammond", color: "#b7b0d4" },
+];
+const LOOK_MS = 1600;
+
+/** One custom pedal drawn to fit a 52px box. */
+function CustomLook({ template, color }: { template: PedalTemplate; color: string }) {
+  const t = templateInfo(template);
   const w = t.width * PX_PER_INCH;
   const h = t.height * PX_PER_INCH;
   const scale = 52 / Math.max(w, h);
   return (
     <span className="relative block" style={{ width: w * scale, height: h * scale }}>
       <span className="absolute left-0 top-0 origin-top-left" style={{ width: w, height: h, transform: `scale(${scale})` }}>
-        <PedalArt template="hammond" jacks={t.jacks ?? undefined} w={w} h={h} color={DEFAULT_PEDAL_COLOR} label="Custom" />
+        <PedalArt template={template} jacks={t.jacks ?? undefined} w={w} h={h} color={color} label="Custom" />
       </span>
+    </span>
+  );
+}
+
+/** The Make Your Own thumbnail: cross-fades through a few custom pedal styles and colors (holds still for reduced motion). */
+function CustomThumb() {
+  const [look, setLook] = useState(0);
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const t = setInterval(() => setLook((n) => (n + 1) % CUSTOM_LOOKS.length), LOOK_MS);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <span className="relative grid size-full place-items-center">
+      {CUSTOM_LOOKS.map((l, i) => (
+        <span
+          key={i}
+          className="absolute inset-0 grid place-items-center transition-opacity duration-500 ease-out"
+          style={{ opacity: i === look ? 1 : 0 }}
+        >
+          <CustomLook {...l} />
+        </span>
+      ))}
     </span>
   );
 }
@@ -281,20 +314,15 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   const typed = query.trim();
   const showCustom = edit || custom !== null;
 
-  // Make your own: for gear that isn't in the catalog. Pictured as a custom Hammond-style pedal.
+  // Make your own: for gear that isn't in the catalog. Pictured as custom pedals in a few styles.
   const makeOwn = (
     <button
       tabIndex={-1}
       onClick={() => setCustom({ name: typed.slice(0, 40), kind: kindFilter ?? "pedal" })}
       className="flex w-full items-center gap-3 rounded-control p-2 text-left transition-colors hover:bg-surface-hover active:bg-chrome-line"
     >
-      <span className="relative size-16 shrink-0">
-        <span className="grid size-full place-items-center rounded-control bg-canvas">
-          <HammondThumb />
-        </span>
-        <span className="absolute -bottom-1 -right-1 grid size-5 place-items-center rounded-full bg-brand text-white shadow-sm">
-          <Plus size={13} strokeWidth={3} />
-        </span>
+      <span className="size-16 shrink-0 overflow-hidden rounded-control bg-canvas">
+        <CustomThumb />
       </span>
       <span className="min-w-0">
         <span className="block text-sm font-medium leading-snug">Make Your Own</span>
