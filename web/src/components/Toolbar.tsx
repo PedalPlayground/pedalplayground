@@ -34,8 +34,8 @@ function IconButton({
   );
 }
 
-/** The "pedal and board" glyph on the Add button, drawn from the Figma mockup. */
-function AddGlyph() {
+/** The "pedal and board" glyph on the Add button, drawn from the Figma mockup. Also on the empty canvas's Add Gear. */
+export function AddGlyph() {
   return (
     <span className="flex items-center gap-1" aria-hidden>
       <svg width="10" height="12" viewBox="0 0 10 12" className="drop-shadow-[0_0_1px_rgb(255_255_255/0.25)]">
