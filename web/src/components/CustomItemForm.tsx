@@ -255,7 +255,12 @@ export function CustomItemForm({
                   template === t.id ? "border-brand bg-brand/10" : "border-line hover:bg-surface-hover"
                 }`}
               >
-                <Preview kind="pedal" template={t.id} jacks={t.jacks ?? undefined} {...withJacks(t.width, t.height, t.jacks)} color={color} label="" boxW={72} boxH={44} />
+                {/* The picked style is the live preview: your size, jacks and name. The others show their usual look. */}
+                {template === t.id && sizeOk ? (
+                  <Preview kind="pedal" template={t.id} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} boxW={72} boxH={44} />
+                ) : (
+                  <Preview kind="pedal" template={t.id} jacks={t.jacks ?? undefined} {...withJacks(t.width, t.height, t.jacks)} color={color} label="" boxW={72} boxH={44} />
+                )}
               </button>
             ))}
           </div>
@@ -273,6 +278,20 @@ export function CustomItemForm({
         {/* One label row (with the app-wide units switch) and one row of fields: "Width 2.6 in" "Height 4.8 in". */}
         <div className="mb-1 flex items-center justify-between">
           <span className="text-xs text-ink-muted">Dimensions</span>
+          <div className="flex items-center gap-2">
+          {(width.trim() || height.trim()) && (
+            // Back to the style's (or board's) usual size, shown again as the fields' placeholders.
+            <button
+              type="button"
+              onClick={() => {
+                setWidth("");
+                setHeight("");
+              }}
+              className="text-[11px] font-medium text-ink-muted outline-none hover:text-ink focus-visible:underline"
+            >
+              Reset
+            </button>
+          )}
           <div role="radiogroup" aria-label="Units" className="flex rounded-control bg-surface-hover p-0.5 text-[11px] font-medium">
             {(["in", "mm"] as const).map((u) => (
               <button
@@ -286,6 +305,7 @@ export function CustomItemForm({
                 {u}
               </button>
             ))}
+          </div>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-2">
@@ -318,30 +338,16 @@ export function CustomItemForm({
 
       {kind === "pedal" && (
         <div>
-          <div className="mb-1 text-xs text-ink-muted">Jacks</div>
+          <div className="mb-1 flex justify-between text-xs text-ink-muted">
+            Jacks
+            {sizeOk && <span>Footprint {formatSize(foot.width, foot.height, units)}</span>}
+          </div>
           <div className="flex gap-1.5">
             {jackButton(jackTop, setJackTop, "Top", `Jacks on top add ${jackDepth} to the height`)}
             {jackButton(jackSide, setJackSide, "Sides", `Side jacks add ${jackDepth} to each side`)}
           </div>
         </div>
       )}
-
-      {/* The preview with its name and footprint, laid out like a search result. */}
-      <div className="flex items-center gap-3 p-2">
-        <div className="grid size-16 shrink-0 place-items-center rounded-control bg-canvas p-1">
-          {sizeOk ? (
-            <Preview kind={kind} template={template} jacks={jacks} width={foot.width} height={foot.height} color={color} label={name.trim()} boxW={56} boxH={56} />
-          ) : (
-            <span className="text-center text-[10px] leading-tight text-ink-muted">Check the size</span>
-          )}
-        </div>
-        <span className="min-w-0">
-          <span className="block truncate text-sm font-medium">{name.trim() || (kind === "pedal" ? "Custom Pedal" : "Custom Pedalboard")}</span>
-          <span className="block truncate text-xs text-ink-muted">
-            {sizeOk ? `${formatSize(foot.width, foot.height, units)}${jacks ? " with jacks" : ""}` : "Check the width and height"}
-          </span>
-        </span>
-      </div>
 
       {error && <p className="text-sm text-danger">{error}</p>}
       <button type="submit" className="h-9 w-full btn-primary">
