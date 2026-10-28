@@ -89,7 +89,8 @@ export function ObjectMenu() {
           <span className="hidden sm:inline">Edit</span>
         </button>
       )}
-      {single && (
+      {/* Custom items are edited instead; swapping one for catalog gear doesn't apply. */}
+      {single && !single.custom && (
         <button
           onClick={() => setReplacing(true)}
           className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}

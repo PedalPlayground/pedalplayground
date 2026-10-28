@@ -131,7 +131,7 @@ function ObjectItems() {
       <Row icon={<BringToFront {...ICON} />} label="Move to Front" shortcut="⌘]" onSelect={s.bringToFront} />
       <Row icon={<SendToBack {...ICON} />} label="Move to Back" shortcut="⌘[" onSelect={s.sendToBack} />
       <Separator />
-      {single && <Row icon={<Replace {...ICON} />} label="Replace" onSelect={() => setReplacing(true)} />}
+      {single && !single.custom && <Row icon={<Replace {...ICON} />} label="Replace" onSelect={() => setReplacing(true)} />}
       <Row icon={<Trash2 {...ICON} />} label="Remove" shortcut="Delete" onSelect={s.deleteSelected} danger />
     </>
   );
