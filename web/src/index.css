@@ -186,11 +186,17 @@ body {
     radial-gradient(90% 80% at 90% 100%, rgb(255 120 200 / 0.35), transparent 60%),
     linear-gradient(135deg, #4b4ff5, #7a4ff0 55%, #a64fe0);
 }
-/* The tour's Pro hero: the same brand colors as the intro, toned down and without the shimmer. */
+/* The tour's Pro hero: the intro's colors reversed, a near-black band with "Pro" in the brand gradient. */
 .tour-hero-pro {
   background:
-    radial-gradient(80% 120% at 85% 0%, rgb(255 255 255 / 0.14), transparent 60%),
-    linear-gradient(135deg, #3f43d6, #6a45d8);
+    radial-gradient(70% 140% at 50% 120%, rgb(122 79 240 / 0.28), transparent 70%),
+    #121316;
+}
+.pro-gradient-text {
+  background: linear-gradient(135deg, #7d81ff, #a97bff 50%, #e07be8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 @keyframes pp-shimmer {
   from {

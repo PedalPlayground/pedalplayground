@@ -1,4 +1,4 @@
-import { Sparkles, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usableFeaturedPedals } from "../lib/featuredPedals";
 import { useAuth } from "../store/auth";
@@ -269,9 +269,8 @@ export function OnboardingTour() {
           </div>
         )}
         {step.hero === "pro" && (
-          <div aria-hidden className="tour-hero-pro relative -mx-4 -mt-4 mb-4 flex h-24 items-center justify-center gap-2 overflow-hidden">
-            <Sparkles size={22} className="text-white/85" />
-            <span className="text-[40px] font-bold leading-none tracking-[-0.03em] text-white">Pro</span>
+          <div aria-hidden className="tour-hero-pro relative -mx-4 -mt-4 mb-4 flex h-24 items-center justify-center overflow-hidden">
+            <span className="pro-gradient-text px-2 py-1 text-[44px] font-bold leading-none tracking-[-0.03em]">Pro</span>
           </div>
         )}
         <button
