@@ -88,7 +88,7 @@ function Row({ icon, label, shortcut, onClick, collapsed, side, danger, pressed,
             : "text-ink hover:bg-surface-hover active:bg-chrome-line"
       }`}
     >
-      <span className={`grid size-[18px] shrink-0 place-items-center ${danger || pressed ? "" : "text-icon group-hover:text-ink"}`}>{icon}</span>
+      <span className={`grid size-[18px] shrink-0 place-items-center ${danger || pressed ? "" : collapsed ? "text-icon-solo group-hover:text-ink" : "text-icon group-hover:text-ink"}`}>{icon}</span>
       {!collapsed && (
         <>
           <span className="flex-1 truncate text-left">{label}</span>
