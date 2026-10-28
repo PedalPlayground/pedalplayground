@@ -79,9 +79,6 @@ async function openSharedFromUrl() {
 const headerButton =
   "btn-primary h-[26px] whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1";
 
-/** Width kept clear for the lower-right scale key and Settings cog when the toolbar re-centers beside the gear panel. */
-const CORNER_W = 140;
-
 export function App() {
   const init = useAuth((s) => s.init);
   const user = useAuth((s) => s.user);
@@ -96,7 +93,6 @@ export function App() {
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
   const hasSelection = usePlayground((s) => s.selected.length > 0);
-  const coverLeft = usePlayground((s) => s.coverLeft);
   const viewing = useUi((u) => !!u.viewing);
   const mode = useUi((u) => (SHOW_MODES ? u.mode : "playground"));
   /** The Equipment List and Signal Path cover the canvas and hide its tools. */
@@ -207,7 +203,7 @@ export function App() {
               <EmptyAddGear />
               {/* Phones keep it above the toolbar instead, since the toolbar spans the bottom edge there. */}
               {/* Paired with the Settings cog in the lower-right corner. */}
-              <ScaleKey end className="absolute bottom-[calc(1rem+12px+env(safe-area-inset-bottom))] right-[calc(max(1rem,env(safe-area-inset-right))+54px)] z-10 max-md:hidden" />
+              <ScaleKey end className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] right-[calc(max(1rem,env(safe-area-inset-right))+40px)] z-10 max-md:hidden" />
               <ObjectMenu />
               <ContextMenu />
             </>
@@ -227,13 +223,8 @@ export function App() {
 
           {!covered && (
           <div
-            // With the gear panel docked on the left (larger screens), center between it and the scale key + Settings corner.
-            style={
-              coverLeft
-                ? { left: `calc(50% + ${(coverLeft - CORNER_W) / 2}px)`, maxWidth: `calc(100% - ${coverLeft + CORNER_W + 16}px)` }
-                : undefined
-            }
-            className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
+            // Stays put when the gear panel opens, and above it where the two meet on narrower screens.
+            className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 z-30 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             <ActionToast className="max-sm:hidden" />
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
             <Toolbar viewOnly={viewing} onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
@@ -247,7 +238,7 @@ export function App() {
 
           {/* Lower-right corner. Phones keep it above the toolbar, which spans the bottom edge there, and hide it
               while the search panel or the selection menu needs that space. */}
-          <SettingsMenu className={`absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-10 max-sm:bottom-[calc(0.75rem+62px+env(safe-area-inset-bottom))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] ${searchOpen || hasSelection ? "max-sm:hidden" : ""}`} />
+          <SettingsMenu className={`absolute bottom-[calc(1rem+6px+env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-10 max-sm:bottom-[calc(0.75rem+62px+env(safe-area-inset-bottom))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] ${searchOpen || hasSelection ? "max-sm:hidden" : ""}`} />
 
         </main>
       </div>

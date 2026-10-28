@@ -8,7 +8,7 @@ import { BETA, FEEDBACK_URL } from "../lib/beta";
 import { useAuth } from "../store/auth";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
-import { barIconButton, barIconIdle, barPanel } from "./toolbarStyles";
+import { barIconButton } from "./toolbarStyles";
 
 /** Import/export of playground files is archived for now. Flip this to bring the menu items back. */
 const SHOW_FILE_IO = false;
@@ -108,11 +108,11 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
       }}
     />
     <Dropdown.Root>
-      <div className={`${barPanel} ${className}`}>
+      <div className={className}>
       <Dropdown.Trigger
         aria-label="Settings"
         {...tip("Settings", { side: "top" })}
-        className={`${barIconButton} ${barIconIdle} data-[state=open]:bg-surface-hover`}
+        className={`${barIconButton} text-ink-muted hover:bg-surface-hover hover:text-ink active:bg-chrome-line data-[state=open]:bg-surface-hover data-[state=open]:text-ink`}
       >
         <Settings size={18} />
       </Dropdown.Trigger>

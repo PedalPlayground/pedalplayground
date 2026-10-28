@@ -462,13 +462,14 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   );
 
   if (!phone) {
-    // Docked down the canvas's whole left side, so gear lands in view to its right (the toolbar re-centers beside it).
+    // Docked down the canvas's whole left side, so gear lands in view to its right. Narrow enough to clear the
+    // centered toolbar on a 1024px-wide screen.
     return (
       <div
         ref={dockRef}
         role="dialog"
         aria-label={edit ? "Edit" : replace ? "Replace" : "Add Gear"}
-        className="animate-dock absolute bottom-3 left-3 top-3 z-20 flex w-[min(380px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-panel"
+        className="animate-dock absolute bottom-3 left-3 top-3 z-20 flex w-[min(280px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-panel"
       >
         {body}
       </div>
