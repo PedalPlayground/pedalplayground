@@ -123,7 +123,7 @@ function Shell({
     <div
       data-tour={dataTour}
       style={style}
-      className={`animate-enter absolute top-4 z-10 flex flex-col gap-0.5 ${barPanel} ${collapsed ? "w-[calc(2rem+0.75rem+2px)]" : "w-48"} [--enter-y:0px] ${edge === "left" ? "[--enter-x:-10px]" : "[--enter-x:10px]"} ${className}`}
+      className={`animate-enter absolute top-1/2 z-10 flex -translate-y-1/2 flex-col gap-0.5 ${barPanel} ${collapsed ? "w-[calc(2rem+0.75rem+2px)]" : "w-48"} [--enter-y:0px] ${edge === "left" ? "[--enter-x:-10px]" : "[--enter-x:10px]"} ${className}`}
     >
       <div className={`flex h-8 items-center ${collapsed ? "justify-center" : "justify-between pl-2"}`}>
         {!collapsed && <span className="truncate text-[12px] font-semibold tracking-[-0.01em] text-ink-muted">{title}</span>}
