@@ -7,6 +7,11 @@ import { startAnalytics } from "./lib/analytics";
 
 startAnalytics();
 
+// iOS Safari pinches the whole page with gesture events, which touch-action doesn't stop. The canvas does its own pinch zoom.
+for (const type of ["gesturestart", "gesturechange", "gestureend"]) {
+  document.addEventListener(type, (e) => e.preventDefault(), { passive: false });
+}
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />

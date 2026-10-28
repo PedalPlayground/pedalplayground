@@ -269,9 +269,8 @@ export function App() {
 
           {wide && !covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
 
-          {/* Lower-right corner. Phones keep it above the toolbar, which spans the bottom edge there, and hide it
-              while the search panel or the selection menu needs that space. */}
-          <SettingsMenu className={`absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-10 max-sm:bottom-[calc(0.75rem+62px+env(safe-area-inset-bottom))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] ${searchOpen || hasSelection ? "max-sm:hidden" : ""}`} />
+          {/* Lower-right corner. Phones have it in the bottom bar instead. */}
+          <SettingsMenu className={`absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-10 max-sm:hidden`} />
 
         </main>
       </div>

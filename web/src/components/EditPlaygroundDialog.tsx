@@ -163,6 +163,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
             value={description}
             maxLength={DESCRIPTION_MAX}
             rows={3}
+            {...plainField}
             placeholder="What's this board for? Gear notes, power, anything."
             onChange={(e) => setDescription(e.target.value)}
             className={`mb-4 block w-full resize-none px-3 py-2 ${field}`}

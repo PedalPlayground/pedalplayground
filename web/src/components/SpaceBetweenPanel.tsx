@@ -1,5 +1,8 @@
 import { ChevronDown, X } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import pancakeArt from "../assets/plugs/pancake.svg";
+import reanArt from "../assets/plugs/rean.svg";
+import sp400Art from "../assets/plugs/sp400.svg";
 import { itemBounds } from "../lib/geometry";
 import { plainField } from "../lib/inputProps";
 import { spacedItems, usePlayground } from "../store/playground";
@@ -7,45 +10,40 @@ import { useUi, type Units } from "../store/ui";
 
 const MM_PER_INCH = 25.4;
 
-/** Thin side of common right-angle 1/4" plugs: the room one needs between two pedals. */
+/** Thin side of common right-angle 1/4" plugs: the room one needs between two pedals. Pancake's is an estimate drawn from the illustration's proportions. */
 const PLUGS = [
-  { id: "sp400", name: "SP400", mm: 8.3 },
-  { id: "pancake", name: "Pancake", mm: 10 },
-  { id: "neutrik", name: "Neutrik", mm: 14.5 },
+  { id: "rean", name: "Rean", mm: 14.5, art: reanArt, w: 217, h: 212, collar: 14 },
+  { id: "sp400", name: "SP400", mm: 8.3, art: sp400Art, w: 189, h: 133, collar: 24 },
+  { id: "pancake", name: "Pancake", mm: 11.5, art: pancakeArt, w: 203, h: 201, collar: 46 },
 ];
+type Plug = (typeof PLUGS)[number];
 
-const PLUG_BODY_MM = 26;
-const BARREL_MM = [6.35, 14] as const;
+/** The illustrations draw the barrel to the left and the body at the right edge; the second plug is mirrored. */
+const ART_SCALE = 0.4;
+const ART_TOP = Math.max(...PLUGS.map((p) => p.collar));
+const ART_H = Math.max(...PLUGS.map((p) => ART_TOP - p.collar + p.h)) * ART_SCALE;
 
-/** Top-down view of two right-angle plugs back to back, each an upside-down L: the barrel runs out to its pedal, the body stands between. */
-function PlugDrawing({ left, right }: { left: number; right: number }) {
-  const k = 3.2;
-  const pad = 8;
-  const bodyH = PLUG_BODY_MM * k;
-  const barrelW = BARREL_MM[1] * k;
-  const barrelH = BARREL_MM[0] * k;
-  const lw = left * k;
-  const rw = right * k;
-  const w = pad * 2 + barrelW * 2 + 14.5 * k * 2;
-  const seam = w / 2;
-  const y0 = 6;
-  const edge = { stroke: "var(--color-surface)", strokeWidth: 1.5 };
+/** Top-down view of two right-angle plugs back to back: barrels run out to their pedals, bodies stand side by side between. */
+function PlugDrawing({ left, right }: { left: Plug; right: Plug | null }) {
+  const place = (p: Plug, mirrored: boolean) => (
+    <img
+      alt=""
+      src={p.art}
+      draggable={false}
+      className="absolute max-w-none"
+      style={{
+        width: p.w * ART_SCALE,
+        height: p.h * ART_SCALE,
+        top: (ART_TOP - p.collar) * ART_SCALE,
+        ...(mirrored ? { left: "50%", transform: "scaleX(-1)", transformOrigin: "left center" } : { right: "50%" }),
+      }}
+    />
+  );
   return (
-    <svg viewBox={`0 0 ${w} ${bodyH + 28}`} className="mx-auto h-[88px] w-full text-ink-muted" role="img" aria-label="Two plugs side by side">
-      {/* Left plug: body hugging the seam, barrel running left from its top. */}
-      <rect x={seam - lw} y={y0} width={lw} height={bodyH} rx={2} fill="currentColor" opacity={0.55} {...edge} />
-      <rect x={seam - lw - barrelW} y={y0} width={barrelW + 2} height={barrelH} rx={2} fill="currentColor" opacity={0.55} {...edge} />
-      {right > 0 && (
-        <>
-          <rect x={seam} y={y0} width={rw} height={bodyH} rx={2} fill="currentColor" opacity={0.85} {...edge} />
-          <rect x={seam + rw - 2} y={y0} width={barrelW + 2} height={barrelH} rx={2} fill="currentColor" opacity={0.85} {...edge} />
-        </>
-      )}
-      {/* Gap measure under the bodies. */}
-      <line x1={seam - lw} x2={seam + rw} y1={y0 + bodyH + 8} y2={y0 + bodyH + 8} stroke="currentColor" strokeWidth={1.5} />
-      <line x1={seam - lw} x2={seam - lw} y1={y0 + bodyH + 4} y2={y0 + bodyH + 12} stroke="currentColor" strokeWidth={1.5} />
-      <line x1={seam + rw} x2={seam + rw} y1={y0 + bodyH + 4} y2={y0 + bodyH + 12} stroke="currentColor" strokeWidth={1.5} />
-    </svg>
+    <div className="relative mx-auto" style={{ height: ART_H, width: "100%" }} role="img" aria-label="Two plugs side by side">
+      {place(left, false)}
+      {right && place(right, true)}
+    </div>
   );
 }
 
@@ -178,7 +176,6 @@ export function SpaceBetweenPanel() {
   const cell = (on: boolean) =>
     `h-7 rounded-[5px] text-xs outline-none focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-brand/15 font-medium text-brand" : "bg-surface-hover text-ink hover:bg-ink/10"}`;
   const size = (mm: number) => (units === "mm" ? `${mm} mm` : `${(mm / MM_PER_INCH).toFixed(2)} in`);
-  const rows = useMemo(() => PLUGS, []);
 
   return (
     <div
@@ -253,12 +250,12 @@ export function SpaceBetweenPanel() {
             <p className="mb-1 text-[11px] leading-snug text-ink-muted">
               Pedal sizes already include their jacks, so you only need room for the plugs. Pick two where jacks face each other.
             </p>
-            <PlugDrawing left={mmOf(plug1) || 10} right={mmOf(plug2)} />
+            <PlugDrawing left={PLUGS.find((p) => p.id === plug1) ?? PLUGS[1]} right={PLUGS.find((p) => p.id === plug2) ?? null} />
             <div className="mt-1 grid grid-cols-[3.5rem_1fr_1fr] items-center gap-1 text-[11px] text-ink-muted">
               <span />
               <span className="text-center">Plug 1</span>
               <span className="text-center">Plug 2</span>
-              {rows.map((p) => (
+              {PLUGS.map((p) => (
                 <div key={p.id} className="contents">
                   <span className="truncate">{p.name}</span>
                   <button type="button" aria-pressed={plug1 === p.id} onClick={() => pick(1, plug1 === p.id ? null : p.id)} className={cell(plug1 === p.id)}>

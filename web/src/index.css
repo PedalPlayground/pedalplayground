@@ -123,6 +123,28 @@ body {
   color: var(--color-ink);
   background: var(--color-canvas);
   overflow: hidden;
+  /* App-like on touch screens: no text selection, callouts, tap flashes, double-tap zoom or rubber-banding. */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  overscroll-behavior: none;
+}
+
+/* Fields still select and edit text normally. */
+input,
+textarea,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+}
+
+/* Gear and artwork are not for dragging out of the page or long-press saving. */
+img {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
 
 /* The logo is dark artwork; flip it on dark surfaces. */

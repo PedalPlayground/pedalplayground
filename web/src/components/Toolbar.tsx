@@ -1,7 +1,9 @@
 import { Fullscreen, Hand, MousePointer2, Plus, Redo2, SquareArrowOutUpRight, Undo2, ZoomIn, ZoomOut } from "lucide-react";
 import type { ReactNode } from "react";
+import { PHONE_QUERY, useMediaQuery } from "../lib/viewport";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
+import { SettingsMenu } from "./SettingsMenu";
 import { tip } from "./Tooltip";
 import { barDivider, barGhostButton, barIconActive, barIconButton, barIconIdle, barPanel } from "./toolbarStyles";
 
@@ -75,6 +77,39 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
   const redo = usePlayground((s) => s.redo);
   const canUndo = usePlayground((s) => s.past.length > 0);
   const canRedo = usePlayground((s) => s.future.length > 0);
+  const phone = useMediaQuery(PHONE_QUERY);
+
+  // Phones: one full-width row of larger icon buttons (no labels or separators), with Settings at the end. Pinch zooms.
+  if (phone) {
+    const btn = "press grid h-11 min-w-0 flex-1 place-items-center rounded-[8px] outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-40";
+    return (
+      <div className={`flex w-full items-center ${barPanel}`}>
+        {!viewOnly && (
+          <button onClick={onPlace} data-tour="add" aria-label="Add Gear" className={`${btn} btn-primary max-w-14`}>
+            <Plus size={22} strokeWidth={2.75} />
+          </button>
+        )}
+        <button onClick={fit} aria-label="Center & Fit" className={`${btn} ${barIconIdle}`}>
+          <Fullscreen size={22} />
+        </button>
+        {!viewOnly && (
+          <>
+            <button onClick={undo} disabled={!canUndo} aria-label="Undo" className={`${btn} ${barIconIdle}`}>
+              <Undo2 size={22} />
+            </button>
+            <button onClick={redo} disabled={!canRedo} aria-label="Redo" className={`${btn} ${barIconIdle}`}>
+              <Redo2 size={22} />
+            </button>
+            <button onClick={onShare} data-tour="share" aria-label="Share" className={`${btn} ${barIconIdle}`}>
+              <SquareArrowOutUpRight size={21} />
+            </button>
+          </>
+        )}
+        <SettingsMenu className="flex min-w-0 flex-1 [&>button]:h-11 [&>button]:w-full [&>button]:rounded-[8px] [&_svg]:size-[22px]" />
+      </div>
+    );
+  }
+
   return (
     <div className={`flex max-w-full items-center gap-1.5 overflow-x-auto ${barPanel}`}>
       {!viewOnly && (
