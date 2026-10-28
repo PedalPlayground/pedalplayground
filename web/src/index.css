@@ -52,7 +52,7 @@
     --color-brand: #6c6cff;
     --color-brand-hover: #8282ff;
     --color-brand-top: #8a8eff;
-    --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.04);
+    --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5);
     --color-danger: #f97066;
     --color-tip: #4a4c55;
     --color-tip-ink: #f4f4f6;
@@ -75,7 +75,7 @@
   --color-brand: #6c6cff;
   --color-brand-hover: #8282ff;
   --color-brand-top: #8a8eff;
-  --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.04);
+  --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5);
   --color-danger: #f97066;
   --color-tip: #4a4c55;
   --color-tip-ink: #f4f4f6;
