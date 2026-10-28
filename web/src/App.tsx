@@ -1,4 +1,3 @@
-import { Heart } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
@@ -143,9 +142,7 @@ export function App() {
             <span className="whitespace-nowrap max-sm:hidden">
               Pedal Playground
               {/* A little hello on hover. */}
-              <span aria-hidden className="hidden items-center pl-1 text-brand-top group-hover:inline-flex">
-                <Heart size={13} strokeWidth={0} fill="currentColor" className="translate-y-px" />s you
-              </span>
+              <span aria-hidden className="hidden text-brand-top group-hover:inline"> &lt;3s you</span>
             </span>
             {pro && <span className="text-brand-top max-sm:hidden">Pro</span>}
           </h1>
