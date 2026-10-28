@@ -1,0 +1,84 @@
+name: Deploy production
+
+# Builds the app and the catalog and uploads them to the live site whenever the `production` branch moves.
+# To release: fast-forward `production` to the commit on react-rebuild you've tested on beta, and push it.
+# Nothing else deploys to production, so beta can keep changing freely.
+#
+# Skipped until the "production" environment is set up (the job checks PROD_DEPLOY_TARGET).
+# Setup and the one-time switch of the live site are in docs/deploy-production.md.
+on:
+  push:
+    branches: [production]
+
+# One production deploy at a time; queue instead of cancelling a deploy mid-upload.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    if: ${{ vars.PROD_DEPLOY_TARGET != '' }}
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 60
+    steps:
+      # The catalog build needs the source data and images plus web/ for the build tooling.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: |
+            web
+            public/data
+            public/images/pedals
+            public/images/pedalboards
+          sparse-checkout-cone-mode: true
+          # Full commit history (file contents fetched on demand) so the build can date each entry for What's New.
+          fetch-depth: 0
+          filter: blob:none
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: web/.nvmrc
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - run: npm ci
+        working-directory: web
+
+      # Don't ship a build that doesn't typecheck, or a catalog with new errors.
+      - run: npm run typecheck
+        working-directory: web
+      - run: npm run catalog:validate
+        working-directory: web
+
+      # Public values (the anon key is protected by row-level security), passed through env, never interpolated.
+      - name: Write build environment
+        working-directory: web
+        env:
+          SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
+        run: printf 'VITE_SUPABASE_URL=%s\nVITE_SUPABASE_ANON_KEY=%s\n' "$SUPABASE_URL" "$SUPABASE_ANON_KEY" > .env.local
+
+      - name: Set up SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
+          KNOWN_HOSTS: ${{ vars.PROD_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          # The server's host key is pinned: a changed or unknown host fails the deploy instead of being trusted.
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      # Production mode uses .env.production (analytics on, no Beta badge, indexable).
+      # The catalog part is incremental: images the server already has are skipped.
+      - name: Build and deploy
+        working-directory: web
+        env:
+          BUILD_MODE: production
+          DEPLOY_PARTS: all
+          DEPLOY_TARGET: ${{ vars.PROD_DEPLOY_TARGET }}
+        run: ./scripts/deploy.sh
