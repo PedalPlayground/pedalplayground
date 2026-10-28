@@ -25,7 +25,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean): Step[] {
     {
       hero: true,
       title: "Welcome to Pedal Playground 2.0!",
-      body: "Plan, arrange and show off your pedalboard or gear collection before you buy a thing. 2.0 is rebuilt from the ground up, with a faster canvas, thousands of pedals, custom gear, and boards you can save and share.",
+      body: "Plan, arrange and show off your pedalboard or gear collection before you buy a thing. New in 2.0: sign in to keep your boards on every device, share them with a link, and build on a snappy canvas that zooms to any size.",
     },
     {
       target: "add",
