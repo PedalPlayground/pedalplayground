@@ -251,7 +251,7 @@ export function OnboardingTour() {
         aria-modal="true"
         aria-labelledby="tour-title"
         aria-describedby="tour-body"
-        className={`absolute ${step.hero ? "w-[min(360px,calc(100vw-24px))] overflow-hidden" : "w-[min(320px,calc(100vw-24px))]"} rounded-panel bg-surface p-4 shadow-[0_24px_80px_rgb(0_0_0/0.45),0_6px_20px_rgb(0_0_0/0.25)] ${
+        className={`absolute ${step.hero ? "w-[min(360px,calc(100vw-24px))] overflow-hidden" : "w-[min(320px,calc(100vw-24px))]"} rounded-panel bg-surface p-4 shadow-[var(--shadow-modal)] ${
           cardSize ? `animate-enter ${arrow?.side === "bottom" ? "[--enter-y:6px]" : arrow ? "[--enter-y:-6px]" : "[--enter-y:8px]"}` : ""
         }`}
         style={{ left, top, opacity: cardSize ? 1 : 0 }}

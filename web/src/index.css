@@ -18,6 +18,8 @@
   --color-brand-hover: #4a50ef;
   --color-brand-top: #6d72f6;
   --color-brand-ink: #ffffff;
+  /* Dialogs: a big soft shadow in light mode. Dark mode keeps it tighter, since a wide blur over a dark backdrop bands. */
+  --shadow-modal: 0 24px 80px rgb(0 0 0 / 0.3), 0 6px 20px rgb(0 0 0 / 0.15);
   --color-danger: #d92d20;
   /* Tooltips and action toasts. */
   --color-tip: #1c1d22;
@@ -50,6 +52,7 @@
     --color-brand: #6c6cff;
     --color-brand-hover: #8282ff;
     --color-brand-top: #8a8eff;
+    --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.04);
     --color-danger: #f97066;
     --color-tip: #4a4c55;
     --color-tip-ink: #f4f4f6;
@@ -72,6 +75,7 @@
   --color-brand: #6c6cff;
   --color-brand-hover: #8282ff;
   --color-brand-top: #8a8eff;
+  --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5), 0 0 0 1px rgb(255 255 255 / 0.04);
   --color-danger: #f97066;
   --color-tip: #4a4c55;
   --color-tip-ink: #f4f4f6;

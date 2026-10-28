@@ -26,7 +26,7 @@ export function Modal({
       <div
         role="dialog"
         aria-label={title}
-        className={`animate-enter relative max-h-full w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-[0_24px_80px_rgb(0_0_0/0.45),0_6px_20px_rgb(0_0_0/0.25)] ${wide ? "max-w-2xl" : "max-w-sm"}`}
+        className={`animate-enter relative max-h-full w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-[var(--shadow-modal)] ${wide ? "max-w-2xl" : "max-w-sm"}`}
         onClick={(e) => e.stopPropagation()}
       >
         <h2 className={`mb-3 text-base font-semibold ${closeX ? "pr-8" : ""}`}>{title}</h2>
