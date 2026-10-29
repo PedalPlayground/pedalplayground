@@ -149,6 +149,8 @@ export function App() {
 
   return (
     <div className="flex h-full flex-col">
+      {/* Works around iOS 27 blurring the top edge of home-screen web apps; see .pwa-top-strip in index.css. */}
+      <div aria-hidden className="pwa-top-strip" />
       {/* One header for every size. On phones the side columns shrink to fit and the breadcrumb takes the middle.
           Safe-area padding keeps it clear of notches and rounded corners. */}
       <header className="box-content grid h-10 shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-chrome-line bg-chrome pl-[max(0.75rem,env(safe-area-inset-left))] pr-[max(0.75rem,env(safe-area-inset-right))] pt-[env(safe-area-inset-top)] sm:grid-cols-[1fr_auto_1fr] sm:gap-4 sm:pl-[max(1rem,env(safe-area-inset-left))] sm:pr-[max(1rem,env(safe-area-inset-right))]">
