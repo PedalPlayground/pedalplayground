@@ -57,6 +57,8 @@ web app deploys separately. Old hashed files can stay until a periodic cleanup.
 
 ## Where this is going: an admin back end
 
+In progress: see [catalog-backend.md](catalog-backend.md) for what's built and how to set it up.
+
 The pull-request flow works but makes every addition a git operation and keeps ~3 GB of images in the
 repository. The intended replacement:
 
