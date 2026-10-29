@@ -55,10 +55,10 @@ export const slugify = (s) =>
 
 /**
  * When each entry's image line last changed in the data file, from git blame: in practice the day the entry was
- * added. Returns a map from image key to "YYYY-MM-DD", or an empty map outside a git checkout.
- * Feeds the search panel's What's New list.
+ * added. Returns "YYYY-MM-DD" dates in file order (one per entry, since each entry has one Image line), or an empty
+ * list outside a git checkout. Feeds the search panel's What's New list.
  */
-export function addedDates(src, k) {
+export function addedDatesInOrder(src, k) {
   const file = path.join(src, "data", k.json);
   let out;
   try {
@@ -69,16 +69,21 @@ export function addedDates(src, k) {
       stdio: ["ignore", "pipe", "ignore"],
     });
   } catch {
-    return new Map();
+    return [];
   }
-  const dates = new Map();
+  const dates = [];
   let time = 0;
   for (const line of out.split("\n")) {
     if (line.startsWith("author-time ")) time = Number(line.slice(12));
     else if (line.startsWith("\t")) {
       const m = /"Image"\s*:\s*"([^"]+)"/.exec(line);
-      if (m) dates.set(imageKey(m[1]), new Date(time * 1000).toISOString().slice(0, 10));
+      if (m) dates.push({ key: imageKey(m[1]), date: new Date(time * 1000).toISOString().slice(0, 10) });
     }
   }
   return dates;
+}
+
+/** The same dates as a map from image key to date (the last entry wins when entries share an image). */
+export function addedDates(src, k) {
+  return new Map(addedDatesInOrder(src, k).map((d) => [d.key, d.date]));
 }
