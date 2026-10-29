@@ -320,11 +320,24 @@ img {
 /* iOS 27 draws a system blur over the top edge of home-screen web apps unless it finds an opaque fixed element there
    (WebKit samples the top few pixels to pick the status bar color and blur). This strip is that element: it matches
    the header behind the status bar, so it's invisible. Only shown when the app runs from the home screen. */
+/* --pwa-strip is the strip's height when it shows, so the header can start below it. With the default iOS status bar
+   the page starts below the status bar (safe-area-inset-top is 0), and the strip would otherwise cover the logo. */
+:root {
+  --pwa-strip: 0px;
+}
+:root.ios-standalone {
+  --pwa-strip: 11px;
+}
+@media (display-mode: standalone) {
+  :root {
+    --pwa-strip: 11px;
+  }
+}
 .pwa-top-strip {
   display: none;
   position: fixed;
   inset: 0 0 auto 0;
-  height: 11px;
+  height: var(--pwa-strip);
   background: var(--color-chrome);
   pointer-events: none;
   z-index: 9999;
