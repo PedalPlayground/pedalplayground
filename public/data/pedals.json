@@ -16025,6 +16025,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Blumes Jr MOSFET Mod",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-blumes-jr-mosfet-mod.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Bows",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -16484,6 +16491,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-plumes-zine.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Plumes Jr MOSFET Mod",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-plumes-jr-mosfet-mod.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -31705,17 +31719,17 @@
 	},
 	{
 		"Brand": "Keeley",
-		"Name": "Tube Drive (1984 GE 12AX7A/7025)",
+		"Name": "Tube Drive (1984 GE 12AX7A/7025 Pink)",
 		"Width": 4,
 		"Height": 5.04,
-		"Image": "keeley-tube-drive-ge-12ax7a.png"
+		"Image": "keeley-tube-drive-ge-12ax7a-pink.png"
 	},
 	{
 		"Brand": "Keeley",
-		"Name": "Tube Drive (1984 GE12AX7A/7025)",
+		"Name": "Tube Drive (1984 GE 12AX7A/7025 Silver)",
 		"Width": 4,
 		"Height": 5.04,
-		"Image": "keeley-tube-drive-ge12ax7a.png"
+		"Image": "keeley-tube-drive-ge-12ax7a-silver.png"
 	},
 	{
 		"Brand": "Keeley",
