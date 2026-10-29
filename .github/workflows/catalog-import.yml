@@ -1,0 +1,113 @@
+name: Catalog import
+
+# One-time move of the repo catalog (public/data + images) into Supabase, then a publish and a comparison with the
+# catalog the site serves today. Run by hand from the Actions tab. Safe to rerun: items already imported are
+# skipped, so a run that stops partway picks up where it left off.
+#
+# Needs the "catalog" environment (same as Catalog publish). Steps are in docs/catalog-backend.md.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Import at most this many entries (blank for all)"
+        type: string
+        default: "20"
+      refresh:
+        description: "Re-import items already in Supabase, overwriting them (only before the site switches)"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Only report what would happen"
+        type: boolean
+        default: false
+
+# Shares the publish workflow's group so an import and a publish never run at once.
+concurrency:
+  group: catalog-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    environment: catalog
+    timeout-minutes: 150
+    steps:
+      - name: Check settings
+        env:
+          URL: ${{ vars.SUPABASE_URL }}
+          KEY_SET: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY != '' }}
+          LIMIT: ${{ inputs.limit }}
+        run: |
+          if [ -z "$URL" ] || [ "$KEY_SET" != true ]; then
+            echo "::error::Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in the catalog environment. See docs/catalog-backend.md."
+            exit 1
+          fi
+          if [ -n "$LIMIT" ] && ! [[ "$LIMIT" =~ ^[0-9]+$ ]]; then
+            echo "::error::limit must be a whole number or blank."
+            exit 1
+          fi
+
+      # The images are about 10 GB; make room on the runner first.
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h /
+
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: |
+            web
+            public/data
+            public/images/pedals
+            public/images/pedalboards
+            app/images/pedals
+          sparse-checkout-cone-mode: true
+          # Full commit history (file contents fetched on demand) so each entry keeps its What's New date.
+          fetch-depth: 0
+          filter: blob:none
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: web/.nvmrc
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - run: npm ci
+        working-directory: web
+
+      - name: Import
+        working-directory: web
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          LIMIT: ${{ inputs.limit }}
+          REFRESH: ${{ inputs.refresh }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=()
+          [ -n "$LIMIT" ] && args+=(--limit "$LIMIT")
+          [ "$REFRESH" = true ] && args+=(--refresh)
+          [ "$DRY_RUN" = true ] && args+=(--dry-run)
+          set -o pipefail
+          node scripts/catalog/import.mjs "${args[@]}" | tee "$RUNNER_TEMP/import.txt"
+          { echo '## Import'; echo '```'; cat "$RUNNER_TEMP/import.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish
+        if: ${{ !inputs.dry_run }}
+        working-directory: web
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/catalog/publish.mjs > "$RUNNER_TEMP/publish.txt" 2>&1 || { tail -50 "$RUNNER_TEMP/publish.txt"; exit 1; }; tail -5 "$RUNNER_TEMP/publish.txt"
+
+      # Reports differences from today's catalog. With a limit, most entries are "missing", which is expected.
+      - name: Compare with today's catalog
+        if: ${{ !inputs.dry_run }}
+        working-directory: web
+        env:
+          NEW_BASE: ${{ vars.SUPABASE_URL }}/storage/v1/object/public/catalog-public/
+        run: node scripts/catalog/compare.mjs --new "$NEW_BASE" --summary "$GITHUB_STEP_SUMMARY" > "$RUNNER_TEMP/compare.txt" || echo "::warning::The new catalog doesn't match today's yet. See the run summary."; head -60 "$RUNNER_TEMP/compare.txt"
+
