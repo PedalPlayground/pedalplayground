@@ -9004,10 +9004,10 @@
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Little Secret",
-		"Width": 1.8,
-		"Height": 3.7,
-		"Image": "catalinbread-little-secret.png"
+		"Name": "Jimothy",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-jimothy.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -9071,6 +9071,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-knight-trem.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Little Secret",
+		"Width": 1.8,
+		"Height": 3.7,
+		"Image": "catalinbread-little-secret.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -14055,6 +14062,13 @@
 		"Width": 3.3,
 		"Height": 5.13,
 		"Image": "dod-fx63.png"
+	},
+	{
+		"Brand": "DOD",
+		"Name": "Digital Delay DFX9",
+		"Width": 3.35,
+		"Height": 5.13,
+		"Image": "dod-dfx9.png"
 	},
 	{
 		"Brand": "DOD",
@@ -28905,6 +28919,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "3 Series Pherb",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3-series-pherb.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "3 Series Reverb",
 		"Width": 2.68,
 		"Height": 4.42,
@@ -31698,17 +31719,38 @@
 	},
 	{
 		"Brand": "Keeley",
-		"Name": "Tube Drive (12AX7 Black)",
-		"Width": 4,
-		"Height": 5.04,
-		"Image": "keeley-tube-drive.png"
-	},
-	{
-		"Brand": "Keeley",
-		"Name": "Tube Drive (12AT7WA Gold)",
+		"Name": "Tube Drive (12AT7WA)",
 		"Width": 4,
 		"Height": 5.04,
 		"Image": "keeley-tube-drive-12at7wa.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Tube Drive (1969 Sylvania JAN 12AX7WA)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-tube-drive-sylvania-12ax7wa.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Tube Drive (1984 GE 12AX7A/7025)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-tube-drive-ge-12ax7a.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Tube Drive (1984 GE12AX7A/7025)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-tube-drive-ge12ax7a.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Tube Drive (Twin Triode)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-tube-drive.png"
 	},
 	{
 		"Brand": "Keeley",
