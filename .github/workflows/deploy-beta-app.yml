@@ -1,13 +1,13 @@
 name: Deploy beta (app)
 
-# Builds the web app and uploads it to the beta site whenever web/ changes on react-rebuild.
+# Builds the web app and uploads it to the beta site whenever web/ changes on beta.
 # The catalog (images + manifest) deploys separately; see deploy-beta-catalog.yml.
 #
 # Nothing runs until the "beta" environment is set up: the job is skipped while the BETA_DEPLOY_TARGET
 # variable is empty. Setup steps are in docs/deploy-beta.md ("Automated deploys").
 on:
   push:
-    branches: [react-rebuild]
+    branches: [beta]
     paths:
       - "web/**"
       - ".github/workflows/deploy-beta-app.yml"

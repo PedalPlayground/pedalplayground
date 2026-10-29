@@ -1,12 +1,12 @@
 name: Deploy beta (catalog)
 
 # Rebuilds the catalog and uploads it to the beta site when pedals, pedalboards or the catalog scripts change
-# on react-rebuild. Images already on the server are skipped (their names contain a content hash).
+# on beta. Images already on the server are skipped (their names contain a content hash).
 #
 # Skipped until the "beta" environment is set up; see docs/deploy-beta.md ("Automated deploys").
 on:
   push:
-    branches: [react-rebuild]
+    branches: [beta]
     paths:
       - "public/data/**"
       - "public/images/pedals/**"
