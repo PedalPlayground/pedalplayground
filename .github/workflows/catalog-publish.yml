@@ -1,0 +1,73 @@
+name: Catalog publish
+
+# Builds newly approved catalog items from Supabase and rewrites catalog.json in the catalog-public bucket.
+# Started by the catalog-publish Edge Function after an editor approves something, or by hand from the Actions tab.
+# Safe to run any time: it only builds items marked needs_render.
+#
+# Needs the "catalog" environment: variable SUPABASE_URL and secret SUPABASE_SERVICE_ROLE_KEY.
+# Setup is in docs/catalog-backend.md. Nothing starts it until then; a manual run fails with a clear message.
+on:
+  repository_dispatch:
+    types: [catalog-publish]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "What to run"
+        type: choice
+        options: [publish, manifest-only, dry-run]
+        default: publish
+
+# One publish at a time. GitHub keeps at most one waiting run, and each run picks up everything pending,
+# so approvals that arrive mid-run are covered by the next one.
+concurrency:
+  group: catalog-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: catalog
+    timeout-minutes: 60
+    steps:
+      # Checked inside the job, where the environment's settings are visible (a job-level `if` can't see them).
+      - name: Check settings
+        env:
+          URL: ${{ vars.SUPABASE_URL }}
+          KEY_SET: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY != '' }}
+        run: |
+          if [ -z "$URL" ] || [ "$KEY_SET" != true ]; then
+            echo "::error::Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in the catalog environment. See docs/catalog-backend.md."
+            exit 1
+          fi
+
+      # Only web/ is needed: the sources come from Supabase, not the repo.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: web
+          sparse-checkout-cone-mode: true
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: web/.nvmrc
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - run: npm ci
+        working-directory: web
+
+      - name: Publish
+        working-directory: web
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          MODE: ${{ inputs.mode || 'publish' }}
+        run: |
+          case "$MODE" in
+            publish) node scripts/catalog/publish.mjs ;;
+            manifest-only) node scripts/catalog/publish.mjs --manifest-only ;;
+            dry-run) node scripts/catalog/publish.mjs --dry-run ;;
+            *) echo "Unknown mode $MODE"; exit 2 ;;
+          esac

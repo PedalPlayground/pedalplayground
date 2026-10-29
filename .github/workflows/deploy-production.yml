@@ -1,6 +1,6 @@
 name: Deploy production
 
-# Builds the app and the catalog and uploads them to the live site whenever the `production` branch moves.
+# Builds the app (and the catalog, when pedals changed) and uploads them to the live site whenever the `production` branch moves.
 # To release: fast-forward `production` to the commit on beta you've tested on beta, and push it.
 # Nothing else deploys to production, so beta can keep changing freely.
 #
@@ -9,6 +9,14 @@ name: Deploy production
 on:
   push:
     branches: [production]
+  # Manual run from the Actions tab, e.g. to re-upload everything.
+  workflow_dispatch:
+    inputs:
+      parts:
+        description: "What to deploy"
+        type: choice
+        options: [all, app]
+        default: all
 
 # One production deploy at a time; queue instead of cancelling a deploy mid-upload.
 concurrency:
@@ -82,12 +90,33 @@ jobs:
           printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
+      # The catalog rebuild is most of a deploy's time, so skip it when no catalog files changed since the
+      # last push to production. A manual run, or a push whose previous commit can't be compared, deploys everything.
+      - name: Decide what to deploy
+        id: parts
+        env:
+          EVENT: ${{ github.event_name }}
+          INPUT_PARTS: ${{ inputs.parts }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          parts=all
+          if [ "$EVENT" = workflow_dispatch ]; then
+            parts="${INPUT_PARTS:-all}"
+          elif [ -n "$BEFORE" ] && [ "$BEFORE" != 0000000000000000000000000000000000000000 ] \
+            && git cat-file -e "$BEFORE^{commit}" 2>/dev/null \
+            && git diff --quiet "$BEFORE" "$AFTER" -- public/data public/images/pedals public/images/pedalboards web/scripts/catalog; then
+            parts=app
+          fi
+          echo "Deploying: $parts"
+          echo "parts=$parts" >> "$GITHUB_OUTPUT"
+
       # Production mode uses .env.production (analytics on, no Beta badge, indexable).
-      # The catalog part is incremental: images the server already has are skipped.
+      # When the catalog is included it's incremental: images the server already has are skipped.
       - name: Build and deploy
         working-directory: web
         env:
           BUILD_MODE: production
-          DEPLOY_PARTS: all
+          DEPLOY_PARTS: ${{ steps.parts.outputs.parts }}
           DEPLOY_TARGET: ${{ vars.PROD_DEPLOY_TARGET }}
         run: ./scripts/deploy.sh

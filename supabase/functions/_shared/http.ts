@@ -1,4 +1,4 @@
-import { HttpError } from "./clients.ts";
+import { HttpError } from "./supabase.ts";
 
 /** ALLOWED_ORIGINS is a comma-separated list, e.g. "https://pedalplayground.com,http://localhost:5173". */
 export function corsHeaders(req: Request): Record<string, string> {

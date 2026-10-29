@@ -11,31 +11,11 @@
 The app never reads the source files. It reads the generated manifest and images, so source images can
 be as large as contributors like (up to the limits below) without slowing the site.
 
-## Adding a pedal (today's contributor flow, unchanged)
+## Adding a pedal
 
-1. Add an entry to `public/data/pedals.json` (or `pedalboards.json`):
-   ```json
-   { "Brand": "BOSS", "Name": "DS-1", "Width": 2.875, "Height": 5.125, "Image": "boss-ds1.png" }
-   ```
-   `Width` and `Height` are the real product footprint in **inches**, as seen from above.
-   Pedals can also have optional specs, which the Equipment List fills in when someone places the pedal:
-   ```json
-   { "Brand": "BOSS", "Name": "DS-1", "Width": 2.875, "Height": 5.125, "Image": "boss-ds1.png",
-     "Current": 10, "Voltage": "9V DC", "Type": "Distortion" }
-   ```
-   - `Current`: current draw in milliamps, a whole number, from the maker's spec sheet.
-   - `Voltage`: one of `9V DC`, `12V DC`, `18V DC`, `24V DC`, `9V AC`, `12V AC`, `5V USB`.
-   - `Type`: one of `Boost`, `Overdrive`, `Distortion`, `Fuzz`, `Compressor`, `EQ`, `Modulation`, `Delay`,
-     `Reverb`, `Pitch`, `Filter / Wah`, `Looper`, `Multi-Effect`, `Amp / Preamp`, `Tuner`, `Volume / Expression`,
-     `Noise Gate`, `Utility`, `Other`.
-2. Add the image to `public/images/pedals/` (or `pedalboards/`):
-   - PNG with a transparent background, top-down, cropped tight to the product.
-   - Filename: lowercase letters, digits and hyphens only, ending in `.png` (`boss-ds1.png`).
-   - At least 60 px per inch of `Width` (a 3 in wide pedal needs 180 px or more), and no more than 3 MB.
-   - Its width : height ratio should match `Width` : `Height`. The canvas stretches images to the entry's
-     size, so a mismatch distorts the pedal.
-3. Run `cd web && npm ci && npm run catalog:validate`. The same check runs on every pull request.
-4. Open a pull request. CI fails only on **new** errors; warnings are advisory.
+The contributor steps (image, entry, validation, pull request) are in the [README](../README.md#adding-a-pedal).
+The rules the validator enforces: a PNG of at most 3 MB with a lowercase-hyphen filename, at least 60 px per inch
+of `Width`, an aspect ratio within 15% of `Width` : `Height`, and no duplicate brand + name.
 
 ### Known problems (the baseline)
 
@@ -76,6 +56,8 @@ and then `catalog.json` last (so the manifest never points at files that haven't
 web app deploys separately. Old hashed files can stay until a periodic cleanup.
 
 ## Where this is going: an admin back end
+
+In progress: see [catalog-backend.md](catalog-backend.md) for what's built and how to set it up.
 
 The pull-request flow works but makes every addition a git operation and keeps ~3 GB of images in the
 repository. The intended replacement:
