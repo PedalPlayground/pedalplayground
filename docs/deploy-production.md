@@ -6,7 +6,7 @@ Visitors only see it once the live site's nginx `root` points there (the "switch
 that one line back.
 
 Releases go out when the `production` branch moves (`.github/workflows/deploy-production.yml`). Beta keeps deploying
-from `react-rebuild` as before.
+from `beta` as before.
 
 ## One-time setup (GitHub)
 
@@ -19,8 +19,8 @@ Reuse the deploy key the beta already uses (it's authorized on the droplet as th
      - `PROD_DEPLOY_TARGET`: `forge@<droplet-ip>:/home/forge/pedalplayground-web`
      - `PROD_KNOWN_HOSTS`: same value as `BETA_KNOWN_HOSTS`.
      - `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`: same values as the beta environment (one Supabase project for both).
-2. **Create the branch and deploy:** make a `production` branch from `react-rebuild` (GitHub → Branches → New branch,
-   source `react-rebuild`). The push starts *Deploy production* in the Actions tab. The first run uploads the whole
+2. **Create the branch and deploy:** make a `production` branch from `beta` (GitHub → Branches → New branch,
+   source `beta`). The push starts *Deploy production* in the Actions tab. The first run uploads the whole
    catalog and takes longer; later runs only send what changed.
 
 Nothing is visible to visitors yet. To check the upload, on the droplet: `ls /home/forge/pedalplayground-web` should
@@ -75,4 +75,4 @@ address. The old site's files were never touched.
 ## Later releases
 
 Test on beta, then move `production` up to that commit: GitHub → Pull requests → New, base `production`, compare
-`react-rebuild`, and merge. Each merge deploys.
+`beta`, and merge. Each merge deploys.

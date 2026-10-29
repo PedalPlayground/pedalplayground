@@ -1,7 +1,7 @@
 name: Deploy production
 
 # Builds the app and the catalog and uploads them to the live site whenever the `production` branch moves.
-# To release: fast-forward `production` to the commit on react-rebuild you've tested on beta, and push it.
+# To release: fast-forward `production` to the commit on beta you've tested on beta, and push it.
 # Nothing else deploys to production, so beta can keep changing freely.
 #
 # Needs the "production" environment (PROD_DEPLOY_TARGET and friends); the first step fails with a clear message if it's missing.

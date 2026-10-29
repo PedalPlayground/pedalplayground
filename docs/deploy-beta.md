@@ -99,7 +99,7 @@ See `docs/billing.md` for the full explanation. For the beta:
 
 ## Automated deploys (GitHub Actions)
 
-Two workflows deploy the beta automatically on pushes to `react-rebuild`; nothing here touches the live site or `master`:
+Two workflows deploy the beta automatically on pushes to `beta`; nothing here touches the live site or `master`:
 
 - `deploy-beta-app.yml`: when `web/` changes. Typechecks, builds, uploads the app. Fast (about a minute), downloads only `web/`.
 - `deploy-beta-catalog.yml`: when `public/data`, the pedal/pedalboard images, or the catalog scripts change. Validates the catalog,
@@ -118,7 +118,7 @@ jobs are skipped (they check that `BETA_DEPLOY_TARGET` is set), so pushing the b
    ```
 2. **Authorize it on the droplet:** Forge → your server → **SSH Keys** → add the public line printed above.
 3. **GitHub → the repository → Settings → Environments → New environment**, named exactly `beta`:
-   - **Deployment branches:** *Selected branches* → `react-rebuild`. This stops any other branch (or a changed workflow
+   - **Deployment branches:** *Selected branches* → `beta`. This stops any other branch (or a changed workflow
      on another branch) from using the key.
    - **Secret** `BETA_SSH_PRIVATE_KEY`: the *private* key file. Copy it with `pbcopy < ~/.ssh/pedalplayground_deploy`.
      Never paste it anywhere else.
@@ -137,7 +137,7 @@ jobs are skipped (they check that `BETA_DEPLOY_TARGET` is set), so pushing the b
 A key added in Forge logs in as the `forge` user, which can write every site on that server, including the live one.
 So treat the key and the repository's write access as sensitive:
 - Secrets aren't available to workflows triggered by pull requests from forks, and the `beta` environment only releases the key
-  to `react-rebuild`. Keep write access to the repository limited to people you trust, and consider branch protection on `react-rebuild`.
+  to `beta`. Keep write access to the repository limited to people you trust, and consider branch protection on `beta`.
 - The workflows pin their actions to exact commits. Update those pins deliberately.
 - To stop automated deploys at once: delete the key in Forge, or clear the `BETA_DEPLOY_TARGET` variable (the jobs then skip).
 - To rotate: create a new key, update the secret, then remove the old key in Forge. If Forge offers per-site isolation for the beta site,

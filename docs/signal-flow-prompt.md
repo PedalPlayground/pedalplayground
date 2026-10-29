@@ -54,8 +54,8 @@ Conventions to keep:
 - Positions in the playground are inches. The signal diagram is **not** to scale: it uses its own grid in
   screen pixels. Never write signal layout coordinates into `Item.x`/`Item.y`.
 - Pedalboards are never part of the signal path. Custom pedals are.
-- Pushes to `react-rebuild` that touch `web/` auto-deploy to beta. Work on a feature branch and open a PR
-  into `react-rebuild`. Do not push to `react-rebuild` directly.
+- Pushes to `beta` that touch `web/` auto-deploy to beta. Work on a feature branch and open a PR
+  into `beta`. Do not push to `beta` directly.
 
 ## What the modelers do, and what to take from each
 
