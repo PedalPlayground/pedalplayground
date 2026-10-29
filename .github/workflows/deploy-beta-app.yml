@@ -1,0 +1,76 @@
+name: Deploy beta (app)
+
+# Builds the web app and uploads it to the beta site whenever web/ changes on beta.
+# The catalog (images + manifest) deploys separately; see deploy-beta-catalog.yml.
+#
+# Nothing runs until the "beta" environment is set up: the job is skipped while the BETA_DEPLOY_TARGET
+# variable is empty. Setup steps are in docs/deploy-beta.md ("Automated deploys").
+on:
+  push:
+    branches: [beta]
+    paths:
+      - "web/**"
+      - ".github/workflows/deploy-beta-app.yml"
+  workflow_dispatch:
+
+# One beta deploy at a time (app and catalog share the group); queue instead of cancelling a deploy mid-upload.
+concurrency:
+  group: deploy-beta
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    if: ${{ vars.BETA_DEPLOY_TARGET != '' }}
+    runs-on: ubuntu-latest
+    environment: beta
+    timeout-minutes: 15
+    steps:
+      # Only web/ is needed, which avoids downloading the multi-gigabyte source images.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: web
+          sparse-checkout-cone-mode: true
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: web/.nvmrc
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - run: npm ci
+        working-directory: web
+
+      # Don't ship a build that doesn't typecheck.
+      - run: npm run typecheck
+        working-directory: web
+
+      # Both values are public by design (the anon key is protected by row-level security), so they live in
+      # environment variables, not secrets. Values go through env, never interpolated into the script.
+      - name: Write build environment
+        working-directory: web
+        env:
+          SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
+        run: printf 'VITE_SUPABASE_URL=%s\nVITE_SUPABASE_ANON_KEY=%s\n' "$SUPABASE_URL" "$SUPABASE_ANON_KEY" > .env.local
+
+      - name: Set up SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.BETA_SSH_PRIVATE_KEY }}
+          KNOWN_HOSTS: ${{ vars.BETA_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          # The server's host key is pinned: a changed or unknown host fails the deploy instead of being trusted.
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Deploy
+        working-directory: web
+        env:
+          DEPLOY_PARTS: app
+          DEPLOY_TARGET: ${{ vars.BETA_DEPLOY_TARGET }}
+        run: ./scripts/deploy.sh

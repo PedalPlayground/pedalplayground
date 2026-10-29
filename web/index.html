@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Pedal Playground</title>
+    <meta name="description" content="Pedal Playground is a free tool for planning your guitar pedalboard. Drag real pedals onto a board to check sizes, layouts and power before you buy." />
+    <link rel="canonical" href="https://pedalplayground.com/" />
+    <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4f5f6" media="(prefers-color-scheme: light)" />
+    <meta property="og:url" content="https://pedalplayground.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pedal Playground" />
+    <meta property="og:title" content="Pedal Playground" />
+    <meta property="og:description" content="Plan your pedalboard before you buy a thing. Drag real pedals onto a board to check sizes and layouts." />
+    <meta property="og:image" content="https://pedalplayground.com/social.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pedal Playground" />
+    <meta name="twitter:description" content="Plan your pedalboard before you buy a thing. Drag real pedals onto a board to check sizes and layouts." />
+    <meta name="twitter:image" content="https://pedalplayground.com/social.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&display=swap"
+    />
+    <script>
+      // Apply a saved theme before first paint to avoid a light flash.
+      try {
+        var t = localStorage.getItem("pp:theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+        if (localStorage.getItem("pp:dark") === "oled") document.documentElement.setAttribute("data-dark", "oled");
+        // Home-screen launch on iOS (it doesn't always report display-mode: standalone).
+        if (navigator.standalone) document.documentElement.classList.add("ios-standalone");
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

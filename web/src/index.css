@@ -1,0 +1,352 @@
+@import "tailwindcss";
+
+/* Design tokens. Components use these via Tailwind utilities (bg-surface, text-ink-muted, ...). */
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-canvas: #f8f8f8;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f1f2f6;
+  --color-chrome: #f4f5f6;
+  --color-chrome-line: rgb(0 0 0 / 0.08);
+  --color-line: #e3e5ea;
+  --color-grid: #dedede;
+  --color-board: #2b2b30;
+  --color-ink: #1c1d22;
+  --color-ink-muted: #6b6f7b;
+  /* Icons next to text: a step from the text color (lighter in light mode, darker in dark mode). Icons paired with
+     a label are more muted; icons on their own are closer to the text color. */
+  --color-icon: #666a76;
+  --color-icon-solo: #4f525e;
+  --color-brand: #5b61fb;
+  --color-brand-hover: #4a50ef;
+  --color-brand-top: #6d72f6;
+  --color-brand-ink: #ffffff;
+  /* Dialogs: a big soft shadow in light mode. Dark mode keeps it tighter, since a wide blur over a dark backdrop bands. */
+  --shadow-modal: 0 24px 80px rgb(0 0 0 / 0.3), 0 6px 20px rgb(0 0 0 / 0.15);
+  --color-danger: #d92d20;
+  /* Group halos: purple, a step from the blurple brand color. */
+  --color-group: #9a4fe6;
+  /* Tooltips and action toasts. */
+  --color-tip: #1c1d22;
+  --color-tip-ink: #ffffff;
+
+  --radius-control: 4px;
+  --radius-panel: 12px;
+
+  --shadow-panel: 0 4px 16px rgb(16 18 27 / 0.08), 0 0 0 1px rgb(16 18 27 / 0.04);
+}
+
+/* Dark theme: follows the OS unless the user picks Light or Dark (data-theme on <html>). */
+:root {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-canvas: #121316;
+    --color-surface: #1b1c21;
+    --color-surface-hover: #26272e;
+    --color-chrome: #17181c;
+    --color-chrome-line: rgb(255 255 255 / 0.06);
+    --color-line: #31333b;
+    --color-grid: #2a2c34;
+    --color-board: #5b5d6b;
+    --color-ink: #ececf1;
+    --color-ink-muted: #9a9ca8;
+    --color-icon: #a9abb6;
+    --color-icon-solo: #c2c4ce;
+    --color-brand: #6c6cff;
+    --color-brand-hover: #8282ff;
+    --color-brand-top: #8a8eff;
+    --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5);
+    --color-danger: #f97066;
+    --color-group: #b784ff;
+    --color-tip: #4a4c55;
+    --color-tip-ink: #f4f4f6;
+    --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-canvas: #121316;
+  --color-surface: #1b1c21;
+  --color-surface-hover: #26272e;
+  --color-chrome: #17181c;
+  --color-chrome-line: rgb(255 255 255 / 0.06);
+  --color-line: #31333b;
+  --color-grid: #2a2c34;
+  --color-board: #5b5d6b;
+  --color-ink: #ececf1;
+  --color-ink-muted: #9a9ca8;
+  --color-icon: #a9abb6;
+  --color-icon-solo: #c2c4ce;
+  --color-brand: #6c6cff;
+  --color-brand-hover: #8282ff;
+  --color-brand-top: #8a8eff;
+  --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5);
+  --color-danger: #f97066;
+  --color-group: #b784ff;
+  --color-tip: #4a4c55;
+  --color-tip-ink: #f4f4f6;
+  --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
+}
+
+/* OLED dark: true black for the canvas and chrome, near-black panels with hairline edges (shadows can't show on
+   black). Applies whenever dark mode is on and Settings → Dark Mode is OLED (data-dark on <html>). */
+@media (prefers-color-scheme: dark) {
+  :root[data-dark="oled"]:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-canvas: #000000;
+    --color-surface: #0b0b0d;
+    --color-surface-hover: #1a1a1e;
+    --color-chrome: #000000;
+    --color-chrome-line: rgb(255 255 255 / 0.1);
+    --color-line: #26262b;
+    --color-grid: #1a1a1e;
+    --shadow-panel: 0 0 0 1px rgb(255 255 255 / 0.1);
+    --shadow-modal: 0 0 0 1px rgb(255 255 255 / 0.1);
+  }
+}
+:root[data-theme="dark"][data-dark="oled"] {
+  color-scheme: dark;
+  --color-canvas: #000000;
+  --color-surface: #0b0b0d;
+  --color-surface-hover: #1a1a1e;
+  --color-chrome: #000000;
+  --color-chrome-line: rgb(255 255 255 / 0.1);
+  --color-line: #26262b;
+  --color-grid: #1a1a1e;
+  --shadow-panel: 0 0 0 1px rgb(255 255 255 / 0.1);
+  --shadow-modal: 0 0 0 1px rgb(255 255 255 / 0.1);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-canvas);
+  overflow: hidden;
+  /* App-like on touch screens: no text selection, callouts, tap flashes, double-tap zoom or rubber-banding. */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  overscroll-behavior: none;
+}
+
+/* Fields still select and edit text normally. */
+input,
+textarea,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+}
+
+/* Gear and artwork are not for dragging out of the page or long-press saving. */
+img {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+/* The logo is dark artwork; flip it on dark surfaces. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .app-logo {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+:root[data-theme="dark"] .app-logo {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* iOS Safari zooms the page when focusing a field with text under 16px. */
+@media (pointer: coarse) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+/* Primary button, from the Figma design: a vertical purple gradient whose first ~1px is a lighter highlight
+   (the "gradient border"; background-origin lets it span the transparent border), a soft drop shadow and
+   a faint text shadow. */
+@layer components {
+  .btn-primary {
+    border: 1px solid transparent;
+    border-radius: var(--radius-control);
+    background-image: linear-gradient(180deg, var(--color-brand-top) 0%, var(--color-brand) 2.886%, var(--color-brand) 100%);
+    background-origin: border-box;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 0.14);
+    color: var(--color-brand-ink);
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 0 1px 1px rgb(0 0 0 / 0.06);
+  }
+  .btn-primary {
+    transition: transform 0.12s ease-out, filter 0.15s;
+  }
+  .btn-primary:hover:not(:disabled) {
+    filter: brightness(0.94);
+  }
+  .btn-primary:active:not(:disabled) {
+    filter: brightness(0.86);
+    transform: scale(0.97);
+  }
+
+  /* Pressed state for buttons: a quick squeeze. Colors come from each button's own classes. */
+  .press {
+    transition: transform 0.12s ease-out, background-color 0.15s, color 0.15s;
+  }
+  .press:active:not(:disabled) {
+    transform: scale(0.92);
+  }
+}
+
+/* Things that appear slide in a few pixels and fade up; --enter-y sets the direction (negative drops in from above), or
+   --enter-x with --enter-y: 0px for things that come in from the side. */
+@keyframes pp-enter {
+  from {
+    opacity: 0;
+    transform: translate(var(--enter-x, 0px), var(--enter-y, 8px));
+  }
+}
+@keyframes pp-exit {
+  to {
+    opacity: 0;
+    transform: translate(var(--enter-x, 0px), var(--enter-y, 8px));
+  }
+}
+@keyframes pp-fade {
+  from {
+    opacity: 0;
+  }
+}
+@utility animate-enter {
+  animation: pp-enter 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@utility animate-exit {
+  animation: pp-exit 0.15s ease-in both;
+}
+/* Bottom drawers rise from below the screen. No fill, so the inline transform takes over for dragging. */
+@keyframes pp-sheet {
+  from {
+    transform: translateY(100%);
+  }
+}
+@utility animate-sheet {
+  animation: pp-sheet 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+/* The tour's welcome hero: brand gradient with soft light blooms, and a "2.0" that shimmers. */
+.tour-hero {
+  background:
+    radial-gradient(120% 90% at 15% 10%, rgb(255 255 255 / 0.22), transparent 55%),
+    radial-gradient(90% 80% at 90% 100%, rgb(255 120 200 / 0.35), transparent 60%),
+    linear-gradient(135deg, #4b4ff5, #7a4ff0 55%, #a64fe0);
+}
+/* The tour's Pro hero: the intro's colors reversed, a near-black band with "Pro" in the brand gradient. */
+.tour-hero-pro {
+  background:
+    radial-gradient(70% 140% at 50% 120%, rgb(122 79 240 / 0.28), transparent 70%),
+    #121316;
+}
+.pro-gradient-text {
+  background: linear-gradient(135deg, #7d81ff, #a97bff 50%, #e07be8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@keyframes pp-shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+.shimmer-text {
+  background: linear-gradient(110deg, #ffffff 30%, #ffe3fb 45%, #c9f3ff 50%, #ffffff 65%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 6px 18px rgb(30 10 90 / 0.35));
+  animation: pp-shimmer 2.8s linear infinite;
+}
+
+/* The gear panel slides in from the canvas's left edge. */
+@keyframes pp-dock {
+  from {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+@utility animate-dock {
+  animation: pp-dock 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@utility animate-fade {
+  animation: pp-fade 0.15s ease-out both;
+}
+/* Radix menus: enter on open, leave on close, and drop from the side they open from. */
+@utility animate-menu {
+  --enter-y: -6px;
+  animation: pp-enter 0.18s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  &[data-side="top"] {
+    --enter-y: 6px;
+  }
+  &[data-state="closed"] {
+    animation: pp-exit 0.12s ease-in both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* iOS 27 draws a system blur over the top edge of home-screen web apps unless it finds an opaque fixed element there
+   (WebKit samples the top few pixels to pick the status bar color and blur). This strip is that element: it matches
+   the header behind the status bar, so it's invisible. Only shown when the app runs from the home screen. */
+/* --pwa-strip is the strip's height when it shows, so the header can start below it. With the default iOS status bar
+   the page starts below the status bar (safe-area-inset-top is 0), and the strip would otherwise cover the logo. */
+:root {
+  --pwa-strip: 0px;
+}
+:root.ios-standalone {
+  --pwa-strip: 11px;
+}
+@media (display-mode: standalone) {
+  :root {
+    --pwa-strip: 11px;
+  }
+}
+.pwa-top-strip {
+  display: none;
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--pwa-strip);
+  background: var(--color-chrome);
+  pointer-events: none;
+  z-index: 9999;
+}
+:root.ios-standalone .pwa-top-strip {
+  display: block;
+}
+@media (display-mode: standalone) {
+  .pwa-top-strip {
+    display: block;
+  }
+}

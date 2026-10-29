@@ -1,0 +1,63 @@
+<!--
+  Supabase sign-in email for Pedal Playground.
+
+  Paste into BOTH templates (Authentication -> Email Templates):
+    - "Magic Link"      (existing users)
+    - "Confirm signup"  (first-time users; signInWithOtp creates the account)
+
+  Suggested subject:  Your Pedal Playground sign-in code
+  (Supabase renders template variables in the subject too, so "{{ .Token }}" can go there if you
+   want the code visible in the notification. Check that it renders after you paste it.)
+
+  Variables used: {{ .Token }} (6-digit code), {{ .SiteURL }}, {{ .TokenHash }}.
+  The button link lands on the app, which asks for one click before using the token, so email
+  scanners that load the page cannot use it up. The code works regardless.
+-->
+<!doctype html>
+<html lang="en">
+  <body style="margin:0;padding:0;background:#f6f7f9;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f7f9;padding:32px 16px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:440px;background:#ffffff;border-radius:12px;border:1px solid #e3e5ea;">
+            <tr>
+              <td style="padding:28px 28px 8px 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;color:#1c1d22;">
+                <span style="font-size:16px;letter-spacing:-0.2px;"><b>PEDAL</b>PLAYGROUND</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:8px 28px 0 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:22px;color:#1c1d22;">
+                Your sign-in code is:
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding:16px 28px;">
+                <div style="font-family:'SFMono-Regular',Menlo,Consolas,monospace;font-size:32px;line-height:40px;letter-spacing:8px;font-weight:600;color:#1c1d22;background:#f6f7f9;border-radius:8px;padding:12px 8px;">
+                  {{ .Token }}
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0 28px 8px 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:21px;color:#6b6f7b;">
+                Enter it where you started signing in. It expires soon and works once.
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding:16px 28px 8px 28px;">
+                <a href="{{ .SiteURL }}/?token_hash={{ .TokenHash }}&type=email"
+                   style="display:inline-block;background:#5b5bff;color:#ffffff;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:600;padding:11px 20px;border-radius:8px;">
+                  Or sign in with one click
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:16px 28px 28px 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:18px;color:#9a9ca8;">
+                If you didn't ask to sign in, you can ignore this email. Nobody can sign in without this code.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
