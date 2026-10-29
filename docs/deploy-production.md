@@ -76,3 +76,8 @@ address. The old site's files were never touched.
 
 Test on beta, then move `production` up to that commit: GitHub → Pull requests → New, base `production`, compare
 `beta`, and merge. Each merge deploys.
+
+A release that doesn't touch the catalog (`public/data`, `public/images/pedals`, `public/images/pedalboards`,
+`web/scripts/catalog`) deploys only the app and takes a few minutes. One that adds pedals also rebuilds the
+catalog, which takes about 25 minutes. To redeploy by hand, or force a full catalog upload, run
+*Deploy production* from the Actions tab (Run workflow, choose `all` or `app`).
