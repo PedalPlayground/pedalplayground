@@ -80,11 +80,30 @@ function startClarity(id: string) {
   document.head.appendChild(script);
 }
 
+/** The signed-in account, kept so Clarity can be told even if it starts after sign-in. */
+let identity: { id: string; name?: string } | null = null;
+
+function sendIdentity() {
+  if (!identity || !loaded || !analyticsOn()) return;
+  // Clarity hashes the ID in the browser before sending it. The username is public anyway (it's shown on shared
+  // boards) and labels the recording in the dashboard. Never pass an email here.
+  window.clarity?.("identify", identity.id, undefined, undefined, identity.name);
+}
+
+/** Links Clarity recordings to the signed-in account (null when signed out). Does nothing if analytics is off. */
+export function identifyUser(id: string | null, name?: string | null) {
+  identity = id ? { id, name: name ?? undefined } : null;
+  sendIdentity();
+}
+
 /** Loads GA and Clarity once, for whichever IDs this build has, if the visitor allows it. */
 export function startAnalytics() {
   if (!analyticsAvailable || loaded || isLocal() || !analyticsOn()) return;
   loaded = true;
-  if (CLARITY_ID) startClarity(CLARITY_ID);
+  if (CLARITY_ID) {
+    startClarity(CLARITY_ID);
+    sendIdentity();
+  }
   if (!GA_ID) return;
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () {

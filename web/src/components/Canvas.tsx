@@ -151,22 +151,26 @@ function ItemView({ item }: { item: Item }) {
     <div
       data-item-id={item.id}
       {...(selected ? {} : tip(itemName(item), { canvas: true }))}
-      className="absolute"
+      // Catalog photos get the V1 drop shadow, which follows the image's own outline. It sits on this unrotated box so
+      // the light always falls down and to the right, whatever the rotation. Custom styles draw their own shadows.
+      // Taps go to the rotated inner box only, so the empty corners of this one never catch them.
+      className={`pointer-events-none absolute ${src ? "drop-shadow-[3px_5px_7px_rgb(0_0_0/0.34)]" : ""}`}
       style={{
         left: item.x * PX_PER_INCH,
         top: item.y * PX_PER_INCH,
         width: item.width * PX_PER_INCH,
         height: item.height * PX_PER_INCH,
-        transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})`,
       }}
     >
-      {src ? (
-        <img src={src} alt={itemName(item)} draggable={false} className="size-full select-none object-fill" />
-      ) : item.custom ? (
-        <CustomItemView item={item} />
-      ) : (
-        <div className="size-full bg-surface-hover" />
-      )}
+      <div className="pointer-events-auto size-full" style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}>
+        {src ? (
+          <img src={src} alt={itemName(item)} draggable={false} className="size-full select-none object-fill" />
+        ) : item.custom ? (
+          <CustomItemView item={item} />
+        ) : (
+          <div className="size-full bg-surface-hover" />
+        )}
+      </div>
     </div>
   );
 }
