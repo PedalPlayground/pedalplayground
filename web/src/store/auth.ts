@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import type { EmailOtpType, User } from "@supabase/supabase-js";
-import { track } from "../lib/analytics";
+import { identifyUser, track } from "../lib/analytics";
 import { fetchUsername } from "../lib/profiles";
 import { supabase } from "../lib/supabase";
 
@@ -51,13 +51,16 @@ export const useAuth = create<AuthState>((set, get) => ({
       set({ user });
       if (!user) {
         loadedFor = null;
+        identifyUser(null);
         return set({ username: undefined });
       }
       if (user.id === loadedFor) return;
       loadedFor = user.id;
       set({ username: undefined });
       void fetchUsername(user.id).then((username) => {
-        if (get().user?.id === user.id) set({ username });
+        if (get().user?.id !== user.id) return;
+        set({ username });
+        identifyUser(user.id, username);
       });
     };
     supabase.auth.getSession().then(({ data }) => {
@@ -67,7 +70,11 @@ export const useAuth = create<AuthState>((set, get) => ({
     supabase.auth.onAuthStateChange((_event, session) => apply(session?.user ?? null));
   },
 
-  setUsername: (username) => set({ username }),
+  setUsername: (username) => {
+    set({ username });
+    const id = get().user?.id;
+    if (id) identifyUser(id, username);
+  },
 
   sendCode: async (email, username) => {
     if (!supabase) return "Cloud sign-in is not configured.";
