@@ -5,8 +5,8 @@ the site and editors approving them. The plan, with phases and decisions, is in 
 [Catalog back end plan](https://claude.ai/artifact/Th1T16X9PZZaqDh4hURifG). This page covers what's built and how
 to set it up.
 
-**Status: phase 1 (foundation).** Nothing here changes the live site yet. The app keeps reading the old catalog
-until phase 2 points `VITE_CATALOG_BASE_URL` at the new one.
+**Status: phase 2 (import).** Nothing here changes the live site yet. The app keeps reading the old catalog
+until `VITE_CATALOG_BASE_URL` points at the new one, the last step of phase 2.
 
 ## How the pieces fit
 
@@ -15,6 +15,9 @@ until phase 2 points `VITE_CATALOG_BASE_URL` at the new one.
 | Tables, rules, review functions, buckets | `supabase/migrations/20261029000000_catalog.sql` | `catalog_items`, `catalog_submissions`, `catalog_editors`; `approve_catalog_submission()`, `review_catalog_submission()`, `set_catalog_item_status()`; buckets `catalog-sources` (private) and `catalog-public` (public) |
 | Publish script | `web/scripts/catalog/publish.mjs` | Builds every item marked `needs_render` (same WebP files as `build.mjs`), uploads them, then rewrites `catalog.json` |
 | Publish workflow | `.github/workflows/catalog-publish.yml` | Runs the publish script. Started by the Edge Function or by hand |
+| Import script | `web/scripts/catalog/import.mjs` | One-time copy of the repo catalog into Supabase, using the sharper `app/images` originals where they match |
+| Compare script | `web/scripts/catalog/compare.mjs` | Checks the Supabase catalog against the one the site serves today |
+| Import workflow | `.github/workflows/catalog-import.yml` | Runs import, publish and compare. By hand only |
 | Edge Function | `supabase/functions/catalog-publish` | Lets an editor start the publish workflow (the editor page calls it after approving) |
 
 The flow: a player inserts a `catalog_submissions` row and uploads its image to
@@ -95,13 +98,47 @@ Do these in order. Steps 1 and 2 are in Supabase, step 3 in GitHub, step 4 in bo
    ```
    Then run the workflow again with mode `manifest-only`, and delete the test files from both buckets if you like.
 
-## Running the publish script locally
+## Phase 2: importing the repo catalog
+
+The import workflow copies every entry in `public/data` into `catalog_items`, stores each image in
+`catalog-sources/import/`, publishes, and compares the result with today's catalog. It's safe to rerun: items
+already imported are skipped, so a run that times out picks up where it left off.
+
+How it treats the data:
+
+- **Images.** It uses the larger original in `app/images/pedals` when it's the same shape (within 3%) and looks
+  like the same photo; otherwise the repo image. The stored source is a lossless WebP no bigger than the canvas
+  size (1200 px for pedals, 2400 px for boards).
+- **Keys.** Every entry keeps its image key. A few entries share one image file; the first keeps the key and the
+  others get a key from their brand and name, using the same image. Saved boards keep working either way.
+- **Missing images.** The 10 entries with no image file get a row with no source. They stay out of the catalog,
+  as they are today, until someone uploads an image.
+- **What's New dates** come from git history, as the repo build does.
+- **Sizes** are stored to three decimals, so the 122 sizes written in sixteenths (6.8125) round by half a
+  thousandth of an inch.
+
+Steps (GitHub → Actions → Catalog import → Run workflow):
+
+1. **Test batch.** Run with limit `20`. Check the run summary, then the catalog.json URL from the phase 1 test.
+   The comparison lists almost everything as missing at this point; that's expected.
+2. **Full import.** Run with the limit blank. It takes about an hour. The summary should end with
+   0 images lost and 0 entries missing; the only changes should be the shared-image entries getting their own keys.
+3. **Switch beta.** Set `VITE_CATALOG_BASE_URL` in `web/.env.beta` to the `catalog-public` URL, check beta, then
+   release to production the usual way.
+
+Until the switch, changes to the repo catalog don't reach Supabase on their own: rerun the import (it adds new
+entries) or, for edited ones, run it with **refresh**. After the switch, edits happen on the site and refresh
+must not be used.
+
+## Running the scripts locally
 
 ```bash
 cd web
 SUPABASE_URL=… SUPABASE_SERVICE_ROLE_KEY=… node scripts/catalog/publish.mjs --dry-run   # list what would build
 SUPABASE_URL=… SUPABASE_SERVICE_ROLE_KEY=… node scripts/catalog/publish.mjs             # build and publish
+SUPABASE_URL=… SUPABASE_SERVICE_ROLE_KEY=… node scripts/catalog/import.mjs --dry-run    # report what would import
+node scripts/catalog/compare.mjs --new <catalog-public URL>/                            # compare with today's catalog
 ```
 
-`npm test` covers the manifest and the publish logic (against a stand-in for Supabase). The migration was tested
+`npm test` covers the manifest, publish, import and compare logic (against a stand-in for Supabase). The migration was tested
 on a local Postgres 16 with stand-ins for Supabase's `auth` and `storage` schemas.
