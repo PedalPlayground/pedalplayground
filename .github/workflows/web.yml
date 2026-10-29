@@ -23,3 +23,5 @@ jobs:
         working-directory: web
       - run: npm run typecheck
         working-directory: web
+      - run: npm test
+        working-directory: web
