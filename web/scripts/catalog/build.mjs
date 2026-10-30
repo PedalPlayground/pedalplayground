@@ -5,14 +5,12 @@
 //   <out>/catalog.json               manifest the app loads
 // Output names embed a hash of the source bytes, so they can be cached forever and
 // unchanged images are skipped on rebuilds.
-import crypto from "node:crypto";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import sharp from "sharp";
-import { addedDates, imageDir, imageKey, KINDS, parseArgs, readEntries, resolveImageFile, slugify } from "./source.mjs";
+import { assetNames, renderAssets } from "./render.mjs";
+import { addedDates, imageDir, imageKey, KINDS, parseArgs, readEntries, resolveImageFile } from "./source.mjs";
 
-const THUMB_MAX = 128; // 2x the 64px shown in search
 const args = parseArgs(process.argv);
 
 for (const sub of ["thumb", "img"]) fs.mkdirSync(path.join(args.out, sub), { recursive: true });
@@ -22,10 +20,7 @@ const keep = new Set();
 
 async function processImage(file, key, canvasMax) {
   const buf = fs.readFileSync(file);
-  const hash = crypto.createHash("sha1").update(buf).digest("hex").slice(0, 8);
-  const base = `${slugify(key)}.${hash}.webp`;
-  const thumb = `thumb/${base}`;
-  const img = `img/${base}`;
+  const { thumb, img } = assetNames(buf, key);
   keep.add(thumb).add(img);
   stats.bytesIn += buf.length;
 
@@ -37,9 +32,9 @@ async function processImage(file, key, canvasMax) {
     return { thumb, img };
   }
 
-  const base$ = () => sharp(buf).rotate().toColourspace("srgb");
-  await base$().resize(THUMB_MAX, THUMB_MAX, { fit: "inside", withoutEnlargement: true }).webp({ quality: 75, alphaQuality: 90 }).toFile(thumbPath);
-  await base$().resize(canvasMax, canvasMax, { fit: "inside", withoutEnlargement: true }).webp({ quality: 82, alphaQuality: 95 }).toFile(imgPath);
+  const out = await renderAssets(buf, canvasMax);
+  fs.writeFileSync(thumbPath, out.thumb);
+  fs.writeFileSync(imgPath, out.img);
   stats.processed++;
   stats.bytesOut += fs.statSync(thumbPath).size + fs.statSync(imgPath).size;
   return { thumb, img };
