@@ -1,7 +1,8 @@
 # Link previews for shared playgrounds
 
 When someone posts a share link (`https://pedalplayground.com/?p=<slug>`) on social media or in a chat app, the
-preview shows that playground: its layout on the dark canvas (the lighter dark color with better board contrast), its name and the logo, at 1200×630.
+preview shows that playground: its layout on the dark canvas (the lighter dark color with better board contrast) with the logo below, at
+1200×630.
 
 ## How it works
 
@@ -70,5 +71,5 @@ HTML) keeps the defaults, and it works with gzip on.
 
 ## Later
 
-The preview title stays "Pedal Playground"; the playground's name is in the picture. A title like "Trav's board"
+The preview title stays "Pedal Playground", and the picture has no name on it. A title like "Trav's board"
 would need a server (for example a Supabase Edge Function) answering previewers with the playground's details.

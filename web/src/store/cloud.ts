@@ -112,8 +112,7 @@ async function updateShareImage(slug: string) {
   const key = `${slug}:${contentKey()}`;
   if (key === shareImageKey) return;
   try {
-    const { items, name } = usePlayground.getState();
-    const image = await renderShareImage(items, name);
+    const image = await renderShareImage(usePlayground.getState().items);
     if (!image) return;
     await uploadShareImage(slug, image);
     shareImageKey = key;
@@ -299,8 +298,7 @@ export const useCloud = create<CloudState>((set, get) => {
       // Not on the canvas, so draw its preview from its latest saved version.
       try {
         const doc = await fetchLatestDocument(id);
-        const name = get().list.find((p) => p.id === id)?.name ?? doc.name;
-        const image = await renderShareImage(doc.items, name);
+        const image = await renderShareImage(doc.items);
         if (image) await uploadShareImage(slug, image);
       } catch (e) {
         console.warn("Could not create the share preview image.", e);

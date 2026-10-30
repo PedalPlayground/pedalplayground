@@ -13,8 +13,8 @@ const TEXT = "#f2f2f4";
 
 const SIDE = 64;
 const TOP = 48;
-/** Room under the layout for the name and the logo. */
-const FOOTER = 112;
+/** Room under the layout for the logo. */
+const FOOTER = 96;
 const LOGO_W = 288;
 const LOGO_H = 18;
 
@@ -32,20 +32,12 @@ function loadLogo() {
   return logoPromise;
 }
 
-/** Shortens text with an ellipsis until it fits. */
-function fitText(ctx: CanvasRenderingContext2D, text: string, maxW: number) {
-  if (ctx.measureText(text).width <= maxW) return text;
-  let t = text;
-  while (t.length > 1 && ctx.measureText(`${t}…`).width > maxW) t = t.slice(0, -1);
-  return `${t.trimEnd()}…`;
-}
-
 /**
- * The link preview for a shared playground: the layout on the dark canvas with its dot grid, the playground's name
- * and the logo. A JPEG, since every link previewer reads it and photos of pedals stay small. Null when the board is
+ * The link preview for a shared playground: the layout on the dark canvas with its dot grid, and the logo
+ * centered below it. A JPEG, since every link previewer reads it and photos of pedals stay small. Null when the board is
  * empty or the images can't be read back (cross-origin without CORS).
  */
-export async function renderShareImage(items: Item[], name: string): Promise<Blob | null> {
+export async function renderShareImage(items: Item[]): Promise<Blob | null> {
   if (!items.length) return null;
 
   const canvas = document.createElement("canvas");
@@ -83,20 +75,13 @@ export async function renderShareImage(items: Item[], name: string): Promise<Blo
   drawItems(ctx, items, images, fit);
   ctx.restore();
 
-  // Footer: fade the grid out behind the text, then the name on the left and the logo on the right.
+  // Footer: fade the grid out behind the logo, then center the logo.
   const fade = ctx.createLinearGradient(0, SHARE_H - FOOTER - 8, 0, SHARE_H);
   fade.addColorStop(0, "rgb(42 43 49 / 0)");
   fade.addColorStop(0.45, CANVAS);
   ctx.fillStyle = fade;
   ctx.fillRect(0, SHARE_H - FOOTER - 8, SHARE_W, FOOTER + 8);
-
-  const baseline = SHARE_H - 46;
-  if (document.fonts) await document.fonts.load('600 40px "DM Sans"').catch(() => undefined);
-  ctx.font = '600 40px "DM Sans", ui-sans-serif, system-ui, sans-serif';
-  ctx.fillStyle = TEXT;
-  ctx.textBaseline = "alphabetic";
-  ctx.fillText(fitText(ctx, name.trim() || "Pedalboard", SHARE_W - SIDE * 2 - LOGO_W - 48), SIDE, baseline);
-  if (logo) ctx.drawImage(logo, SHARE_W - SIDE - LOGO_W, baseline - LOGO_H - 4, LOGO_W, LOGO_H);
+  if (logo) ctx.drawImage(logo, (SHARE_W - LOGO_W) / 2, SHARE_H - FOOTER / 2 - LOGO_H / 2, LOGO_W, LOGO_H);
 
   try {
     return await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/jpeg", 0.86));
