@@ -5,8 +5,8 @@ the site and editors approving them. The plan, with phases and decisions, is in 
 [Catalog back end plan](https://claude.ai/artifact/Th1T16X9PZZaqDh4hURifG). This page covers what's built and how
 to set it up.
 
-**Status: phase 2 (import).** Nothing here changes the live site yet. The app keeps reading the old catalog
-until `VITE_CATALOG_BASE_URL` points at the new one, the last step of phase 2.
+**Status: phase 3 (editor page).** Beta and production read the catalog from Supabase since 2026-10-30. The repo's
+`public/data` and `public/images` are no longer what the site shows.
 
 ## How the pieces fit
 
@@ -142,3 +142,24 @@ node scripts/catalog/compare.mjs --new <catalog-public URL>/                    
 
 `npm test` covers the manifest, publish, import and compare logic (against a stand-in for Supabase). The migration was tested
 on a local Postgres 16 with stand-ins for Supabase's `auth` and `storage` schemas.
+
+## Phase 3: the editor page
+
+`/editor/` on the site (a separate page, `web/editor/index.html`, so it adds nothing to the playground's bundle).
+Only accounts in `catalog_editors` get past the sign-in check; everyone else sees a short message.
+
+- **Queue:** pending and sent-back submissions, oldest first. Fix any field or replace the photo, then Approve,
+  Needs changes (the note goes to the submitter) or Reject. Empty until the submit form arrives in phase 4.
+- **Add:** a new pedal or pedalboard straight into the catalog.
+- **Catalog:** search by brand and name, then fix an item's fields or photo, or retire and restore it.
+
+Each one shows the photo at canvas scale beside the closest same-brand items, with checks for resolution, shape
+against the entered size, a transparent background and likely duplicates.
+
+No new database pieces: Add and Catalog edits are filed as the editor's own submission and approved straight
+away with `approve_catalog_submission()`, so every change records who made it. After each change the page calls
+the `catalog-publish` Edge Function, so it needs step 4 above (token, secrets, deploy). Check that
+`ALLOWED_ORIGINS` lists every site origin the page runs on, including `https://beta.pedalplayground.com`.
+Until then changes still save, and **Publish now** in the page header (or a manual Catalog publish run) puts
+them live.
+
