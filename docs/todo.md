@@ -35,6 +35,7 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 22. Two catalog pedals appear twice with different images or sizes: Kingtone The Octaland (4.7″ vs 5.09″ wide) and
     MXR Super Comp (two images). Check which are real variants, and rename or remove the rest.
 23. Multiple languages (translate the site's UI). Post-MVP, not yet prioritized.
+24. Two tiered pedalboards with a hinged shelf. Post-MVP, not yet prioritized.
 
 ## Done
 
