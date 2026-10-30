@@ -27,33 +27,39 @@ function loadImage(url: string) {
   return p;
 }
 
-/** Renders a small WebP (PNG where WebP can't be encoded) data URL of the layout, or null if there's nothing to draw. */
-export async function renderThumbnail(items: Item[]): Promise<string | null> {
-  if (!items.length) return null;
+type Bounds = { left: number; top: number; right: number; bottom: number };
 
-  const bounds = items.map(itemBounds).reduce((a, b) => ({
+const layoutBounds = (items: Item[]): Bounds =>
+  items.map(itemBounds).reduce((a, b) => ({
     left: Math.min(a.left, b.left),
     top: Math.min(a.top, b.top),
     right: Math.max(a.right, b.right),
     bottom: Math.max(a.bottom, b.bottom),
   }));
-  const scale = Math.min((W - PAD * 2) / (bounds.right - bounds.left), (H - PAD * 2) / (bounds.bottom - bounds.top));
-  const ox = (W - (bounds.right - bounds.left) * scale) / 2 - bounds.left * scale;
-  const oy = (H - (bounds.bottom - bounds.top) * scale) / 2 - bounds.top * scale;
 
-  const canvas = document.createElement("canvas");
-  canvas.width = W;
-  canvas.height = H;
-  const ctx = canvas.getContext("2d")!;
-  // Transparent background: the UI puts a light tint behind it that works on light and dark menus.
-
+export async function loadItemImages(items: Item[]) {
   const manifest = await useCatalog.getState().load();
-  const images = await Promise.all(
+  return Promise.all(
     items.map((i) => {
       const url = i.image ? canvasImageUrl(manifest, i.kind, i.image) : null;
       return url ? loadImage(url) : null;
     }),
   );
+}
+
+export type Fit = { scale: number; ox: number; oy: number };
+
+/** Fits the layout into the box (x, y, w, h): canvas px per layout px, and where the layout's origin lands. */
+export function fitItems(items: Item[], box: { x: number; y: number; w: number; h: number }): Fit {
+  const bounds = layoutBounds(items);
+  const scale = Math.min(box.w / (bounds.right - bounds.left), box.h / (bounds.bottom - bounds.top));
+  const ox = box.x + (box.w - (bounds.right - bounds.left) * scale) / 2 - bounds.left * scale;
+  const oy = box.y + (box.h - (bounds.bottom - bounds.top) * scale) / 2 - bounds.top * scale;
+  return { scale, ox, oy };
+}
+
+/** Draws the items onto the canvas at the given fit. */
+export function drawItems(ctx: CanvasRenderingContext2D, items: Item[], images: (HTMLImageElement | null)[], { scale, ox, oy }: Fit) {
 
   items.forEach((item, n) => {
     const w = item.width * scale;
@@ -83,6 +89,18 @@ export async function renderThumbnail(items: Item[]): Promise<string | null> {
     }
     ctx.restore();
   });
+}
+
+/** Renders a small WebP (PNG where WebP can't be encoded) data URL of the layout, or null if there's nothing to draw. */
+export async function renderThumbnail(items: Item[]): Promise<string | null> {
+  if (!items.length) return null;
+
+  const canvas = document.createElement("canvas");
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext("2d")!;
+  // Transparent background: the UI puts a light tint behind it that works on light and dark menus.
+  drawItems(ctx, items, await loadItemImages(items), fitItems(items, { x: PAD, y: PAD, w: W - PAD * 2, h: H - PAD * 2 }));
 
   try {
     // WebP keeps the transparency and stays small. Browsers that can't encode it return PNG instead.
