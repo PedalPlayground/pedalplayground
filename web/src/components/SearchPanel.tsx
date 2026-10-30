@@ -471,8 +471,9 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       <>
       <ul id="search-results" role="listbox" className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2">
         {!catalog && !error && <li className="p-3 text-sm text-ink-muted">Loading catalog…</li>}
-        {/* Phones: the first row. Larger screens dock it at the bottom of the panel instead. */}
-        {!target && phone && <li role="presentation">{makeOwn}</li>}
+        {/* Phones: the first row until a search begins (then it moves into "No matches"). Larger screens dock it at
+            the bottom of the panel instead. */}
+        {!target && phone && !typed && <li role="presentation">{makeOwn}</li>}
         {error && <li className="p-3 text-sm text-danger">{error}</li>}
         {catalog && !browsing && (hits.length === 0 || partial) && (
           <li className={`animate-enter flex flex-col items-center gap-3 px-3 text-center [--enter-y:4px] ${partial ? "pb-3 pt-2" : "py-6"}`}>
@@ -491,6 +492,15 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
               {filtered && !partial && (
                 <button onMouseDown={keepFocus} onClick={clearFilters} className="press h-8 rounded-control border border-line px-3 text-sm hover:bg-surface-hover">
                   Clear Filters
+                </button>
+              )}
+              {phone && !target && typed && (
+                <button
+                  onMouseDown={keepFocus}
+                  onClick={() => setCustom({ name: typed.slice(0, 40), kind: kindFilter ?? "pedal" })}
+                  className="press h-8 rounded-control border border-line px-3 text-sm hover:bg-surface-hover"
+                >
+                  Make Your Own
                 </button>
               )}
             </div>

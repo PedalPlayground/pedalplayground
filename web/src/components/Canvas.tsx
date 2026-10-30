@@ -151,10 +151,10 @@ function ItemView({ item }: { item: Item }) {
     <div
       data-item-id={item.id}
       {...(selected ? {} : tip(itemName(item), { canvas: true }))}
-      // Catalog photos get the V1 drop shadow, which follows the image's own outline. It sits on this unrotated box so
+      // Catalog photos get a drop shadow (--item-drop, per theme) that follows the image's own outline. It sits on this unrotated box so
       // the light always falls down and to the right, whatever the rotation. Custom styles draw their own shadows.
       // Taps go to the rotated inner box only, so the empty corners of this one never catch them.
-      className={`pointer-events-none absolute ${src ? "drop-shadow-[3px_5px_7px_rgb(0_0_0/0.34)]" : ""}`}
+      className={`pointer-events-none absolute ${src ? "[filter:var(--item-drop)]" : ""}`}
       style={{
         left: item.x * PX_PER_INCH,
         top: item.y * PX_PER_INCH,
