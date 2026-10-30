@@ -183,6 +183,9 @@ function pulseNudge() {
   nudgeTimer = setTimeout(() => useUi.setState({ nudging: false }), 450);
 }
 
+/** Presses on the canvas so far; see onPointerDown. */
+let pressCount = 0;
+
 export function Canvas() {
   const ref = useRef<HTMLDivElement>(null);
   const gesture = useRef<Gesture | null>(null);
@@ -378,6 +381,9 @@ export function Canvas() {
   };
 
   const onPointerDown = (e: React.PointerEvent) => {
+    // Clarity counts a click that changes nothing on the page as a "dead click". Pressing empty canvas is a normal
+    // way to deselect or start a pan, so update an attribute on each press to show the page responded.
+    e.currentTarget.setAttribute("data-press", String(++pressCount));
     useUi.getState().setSearchOpen(false);
     cancelLongPress();
 
