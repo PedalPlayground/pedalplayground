@@ -7,8 +7,8 @@ export const SHARE_W = 1200;
 export const SHARE_H = 630;
 
 // The dark theme's canvas and dot grid colors (index.css).
-const CANVAS = "#121316";
-const GRID = "#2a2c34";
+const CANVAS = "#2a2b31";
+const GRID = "#40424b";
 const TEXT = "#f2f2f4";
 
 const SIDE = 64;
@@ -74,17 +74,18 @@ export async function renderShareImage(items: Item[], name: string): Promise<Blo
 
   const [images, logo] = await Promise.all([loadItemImages(items), loadLogo()]);
 
-  // A soft shadow lifts the gear off the canvas.
+  // The dark theme's drop shadow (--item-drop), which follows each photo's outline like on the canvas.
   ctx.save();
   ctx.shadowColor = "rgb(0 0 0 / 0.55)";
-  ctx.shadowBlur = 18;
-  ctx.shadowOffsetY = 6;
+  ctx.shadowBlur = 16;
+  ctx.shadowOffsetX = 3;
+  ctx.shadowOffsetY = 5;
   drawItems(ctx, items, images, fit);
   ctx.restore();
 
   // Footer: fade the grid out behind the text, then the name on the left and the logo on the right.
   const fade = ctx.createLinearGradient(0, SHARE_H - FOOTER - 8, 0, SHARE_H);
-  fade.addColorStop(0, "rgb(18 19 22 / 0)");
+  fade.addColorStop(0, "rgb(42 43 49 / 0)");
   fade.addColorStop(0.45, CANVAS);
   ctx.fillStyle = fade;
   ctx.fillRect(0, SHARE_H - FOOTER - 8, SHARE_W, FOOTER + 8);

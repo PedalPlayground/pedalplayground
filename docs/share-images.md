@@ -1,7 +1,7 @@
 # Link previews for shared playgrounds
 
 When someone posts a share link (`https://pedalplayground.com/?p=<slug>`) on social media or in a chat app, the
-preview shows that playground: its layout on the dark canvas, its name and the logo, at 1200×630.
+preview shows that playground: its layout on the dark canvas (the lighter dark color with better board contrast), its name and the logo, at 1200×630.
 
 ## How it works
 
