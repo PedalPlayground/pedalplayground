@@ -40,6 +40,7 @@ function fakeDb(items, sources, { failDownload = [] } = {}) {
 
 const png = (w, h) => sharp({ create: { width: w, height: h, channels: 4, background: { r: 200, g: 0, b: 0, alpha: 1 } } }).png().toBuffer();
 const quiet = { log: () => {}, error: () => {} };
+const noWait = { sleep: async () => {} };
 
 const item = (over) => ({
   id: 1, kind: "pedal", key: "boss-ds1", brand: "BOSS", name: "DS-1", width_in: "2.875", height_in: "5.125",
@@ -51,7 +52,7 @@ describe("publishCatalog", () => {
   it("builds pending items, uploads images before the manifest, and clears the flag", async () => {
     const items = [item(), item({ id: 2, key: "old-one", needs_render: false, thumb_path: "thumb/old-one.1.webp", img_path: "img/old-one.1.webp" })];
     const db = fakeDb(items, new Map([["submissions/u/a.png", await png(300, 540)]]));
-    const { built, failures, manifest } = await publishCatalog(db, { log: quiet });
+    const { built, failures, manifest } = await publishCatalog(db, { log: quiet, retry: noWait });
 
     expect(built).toEqual(["boss-ds1"]);
     expect(failures).toEqual([]);
@@ -71,7 +72,7 @@ describe("publishCatalog", () => {
   it("keeps a failed item marked and still writes the manifest for the rest", async () => {
     const items = [item(), item({ id: 2, key: "missing", source_path: "submissions/u/gone.png" })];
     const db = fakeDb(items, new Map([["submissions/u/a.png", await png(100, 180)]]));
-    const { built, failures, manifest } = await publishCatalog(db, { log: quiet });
+    const { built, failures, manifest } = await publishCatalog(db, { log: quiet, retry: noWait });
 
     expect(built).toEqual(["boss-ds1"]);
     expect(failures.map((f) => f.key)).toEqual(["missing"]);
@@ -89,7 +90,7 @@ describe("publishCatalog", () => {
       if (bucket === "catalog-sources") b.download = async (p) => ((items[0].source_path = "submissions/u/b.png"), download(p));
       return b;
     })(db.storage.from);
-    await publishCatalog(db, { log: quiet });
+    await publishCatalog(db, { log: quiet, retry: noWait });
     expect(items[0].needs_render).toBe(true);
   });
 

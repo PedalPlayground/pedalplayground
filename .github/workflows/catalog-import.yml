@@ -9,9 +9,10 @@ on:
   workflow_dispatch:
     inputs:
       limit:
-        description: "Import at most this many entries (blank for all)"
+        # GitHub replaces an empty box with the default, so "all" is a word rather than a blank.
+        description: "Import at most this many entries, or all"
         type: string
-        default: "20"
+        default: "all"
       refresh:
         description: "Re-import items already in Supabase, overwriting them (only before the site switches)"
         type: boolean
@@ -45,8 +46,8 @@ jobs:
             echo "::error::Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in the catalog environment. See docs/catalog-backend.md."
             exit 1
           fi
-          if [ -n "$LIMIT" ] && ! [[ "$LIMIT" =~ ^[0-9]+$ ]]; then
-            echo "::error::limit must be a whole number or blank."
+          if [ "$LIMIT" != all ] && ! [[ "$LIMIT" =~ ^[0-9]+$ ]]; then
+            echo "::error::limit must be a whole number or all."
             exit 1
           fi
 
@@ -88,7 +89,7 @@ jobs:
           DRY_RUN: ${{ inputs.dry_run }}
         run: |
           args=()
-          [ -n "$LIMIT" ] && args+=(--limit "$LIMIT")
+          [ "$LIMIT" != all ] && args+=(--limit "$LIMIT")
           [ "$REFRESH" = true ] && args+=(--refresh)
           [ "$DRY_RUN" = true ] && args+=(--dry-run)
           set -o pipefail

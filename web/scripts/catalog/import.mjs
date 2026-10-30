@@ -19,6 +19,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { createClient } from "@supabase/supabase-js";
 import sharp from "sharp";
 import { CANVAS_MAX } from "./render.mjs";
+import { withRetry } from "./retry.mjs";
 import { addedDatesInOrder, imageDir, imageKey, KINDS, readEntries, resolveImageFile, slugify } from "./source.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -130,7 +131,7 @@ async function pool(items, size, fn) {
  */
 export async function importCatalog(
   db,
-  { src, app = null, limit = Infinity, refresh = false, dryRun = false, log = console, concurrency = 4 } = {},
+  { src, app = null, limit = Infinity, refresh = false, dryRun = false, log = console, concurrency = 4, retry = {} } = {},
 ) {
   const report = {
     imported: { pedal: 0, pedalboard: 0 },
@@ -190,9 +191,10 @@ export async function importCatalog(
         source_path = sourcePath(kind, img);
         if (!dryRun) {
           const body = await prepareSource(choice.file, CANVAS_MAX[kind]);
-          const { error } = await db.storage
-            .from(SOURCES)
-            .upload(source_path, body, { contentType: "image/webp", cacheControl: "3600", upsert: true });
+          const { error } = await withRetry(() =>
+            db.storage.from(SOURCES).upload(source_path, body, { contentType: "image/webp", cacheControl: "3600", upsert: true }),
+            retry,
+          );
           if (error) throw new Error(`upload ${source_path}: ${error.message}`);
         }
       }
