@@ -119,9 +119,9 @@ How it treats the data:
 
 Steps (GitHub → Actions → Catalog import → Run workflow):
 
-1. **Test batch.** Run with limit `20`. Check the run summary, then the catalog.json URL from the phase 1 test.
+1. **Test batch.** Set the limit to `20`. Check the run summary, then the catalog.json URL from the phase 1 test.
    The comparison lists almost everything as missing at this point; that's expected.
-2. **Full import.** Run with the limit blank. It takes about an hour. The summary should end with
+2. **Full import.** Leave the limit at `all`. It takes about an hour. The summary should end with
    0 images lost and 0 entries missing; the only changes should be the shared-image entries getting their own keys.
 3. **Switch beta.** Set `VITE_CATALOG_BASE_URL` in `web/.env.beta` to the `catalog-public` URL, check beta, then
    release to production the usual way.
