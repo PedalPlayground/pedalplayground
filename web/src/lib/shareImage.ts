@@ -12,9 +12,9 @@ const GRID = "#40424b";
 const TEXT = "#f2f2f4";
 
 const SIDE = 64;
-const TOP = 48;
+const TOP = 44;
 /** Room under the layout for the logo. */
-const FOOTER = 96;
+const FOOTER = 72;
 const LOGO_W = 288;
 const LOGO_H = 18;
 
@@ -76,11 +76,11 @@ export async function renderShareImage(items: Item[]): Promise<Blob | null> {
   ctx.restore();
 
   // Footer: fade the grid out behind the logo, then center the logo.
-  const fade = ctx.createLinearGradient(0, SHARE_H - FOOTER - 8, 0, SHARE_H);
+  const fade = ctx.createLinearGradient(0, SHARE_H - FOOTER, 0, SHARE_H);
   fade.addColorStop(0, "rgb(42 43 49 / 0)");
   fade.addColorStop(0.45, CANVAS);
   ctx.fillStyle = fade;
-  ctx.fillRect(0, SHARE_H - FOOTER - 8, SHARE_W, FOOTER + 8);
+  ctx.fillRect(0, SHARE_H - FOOTER, SHARE_W, FOOTER);
   if (logo) ctx.drawImage(logo, (SHARE_W - LOGO_W) / 2, SHARE_H - FOOTER / 2 - LOGO_H / 2, LOGO_W, LOGO_H);
 
   try {
