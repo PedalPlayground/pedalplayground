@@ -2,6 +2,7 @@ import { create } from "zustand";
 import {
   createPlayground,
   deletePlayground,
+  deleteShareImage,
   renamePlayground,
   setInGallery as setPlaygroundInGallery,
   DuplicateNameError,
@@ -13,10 +14,12 @@ import {
   sharePlayground,
   touchPlayground,
   unsharePlayground,
+  uploadShareImage,
   type PlaygroundSummary,
 } from "../lib/cloud";
 import { track } from "../lib/analytics";
 import { renderThumbnail } from "../lib/thumbnail";
+import { renderShareImage } from "../lib/shareImage";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "./auth";
 import { useBilling } from "./billing";
@@ -92,6 +95,39 @@ function endViewing() {
   clearSharedParam();
 }
 
+/** How long a shared playground's edits settle before its link preview is redrawn. */
+const SHARE_IMAGE_DEBOUNCE_MS = 10_000;
+let shareImageTimer: ReturnType<typeof setTimeout> | undefined;
+let shareImageKey = "";
+
+/**
+ * Redraws the open playground's link preview (the image social sites and chat apps show for its share link) and
+ * uploads it. Best effort: a failure just leaves the previous image, or the site's default one.
+ */
+async function updateShareImage(slug: string) {
+  clearTimeout(shareImageTimer);
+  // The canvas must still hold this playground (not another one opened since, or someone else's shared board).
+  const { slug: openSlug, isPublic } = useCloud.getState();
+  if (openSlug !== slug || !isPublic || useUi.getState().viewing) return;
+  const key = `${slug}:${contentKey()}`;
+  if (key === shareImageKey) return;
+  try {
+    const { items, name } = usePlayground.getState();
+    const image = await renderShareImage(items, name);
+    if (!image) return;
+    await uploadShareImage(slug, image);
+    shareImageKey = key;
+  } catch (e) {
+    console.warn("Could not update the share preview image.", e);
+  }
+}
+
+/** After a save of a shared playground, redraws its preview once the edits settle. */
+function scheduleShareImage(slug: string) {
+  clearTimeout(shareImageTimer);
+  shareImageTimer = setTimeout(() => void updateShareImage(slug), SHARE_IMAGE_DEBOUNCE_MS);
+}
+
 /** What was last persisted (or loaded), so we only save real changes. */
 let lastSavedKey = "";
 let saving = false;
@@ -161,6 +197,8 @@ export const useCloud = create<CloudState>((set, get) => {
 
         lastSavedKey = contentKey();
         set({ status: "saved" });
+        const { isPublic, slug } = get();
+        if (isPublic && slug) scheduleShareImage(slug);
         void get().refreshList();
       } catch (e) {
         if (e instanceof PlaygroundLimitError) {
@@ -193,6 +231,8 @@ export const useCloud = create<CloudState>((set, get) => {
         forkedFromId: null,
       });
       set({ status: "idle" });
+      // Boards shared before link previews existed get theirs the next time they're opened.
+      if (row?.is_public && row.slug) scheduleShareImage(row.slug);
     },
 
     newPlayground: () => {
@@ -236,21 +276,35 @@ export const useCloud = create<CloudState>((set, get) => {
       const slug = await sharePlayground(cloudId);
       track("share_link_created");
       setMeta({ slug, isPublic: true });
+      // Ready before the link is pasted anywhere, since previewers fetch the image as soon as they see the link.
+      await updateShareImage(slug);
       void get().refreshList();
       return slug;
     },
 
     stopSharing: async () => {
-      const { cloudId } = get();
+      const { cloudId, slug } = get();
       if (!cloudId) return;
       await unsharePlayground(cloudId);
       setMeta({ isPublic: false });
+      clearTimeout(shareImageTimer);
+      shareImageKey = "";
+      if (slug) void deleteShareImage(slug).catch(() => undefined);
       void get().refreshList();
     },
 
     shareById: async (id) => {
       if (id === get().cloudId) return get().share();
       const slug = await sharePlayground(id);
+      // Not on the canvas, so draw its preview from its latest saved version.
+      try {
+        const doc = await fetchLatestDocument(id);
+        const name = get().list.find((p) => p.id === id)?.name ?? doc.name;
+        const image = await renderShareImage(doc.items, name);
+        if (image) await uploadShareImage(slug, image);
+      } catch (e) {
+        console.warn("Could not create the share preview image.", e);
+      }
       await get().refreshList();
       return slug;
     },
