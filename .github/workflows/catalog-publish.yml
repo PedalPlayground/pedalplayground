@@ -1,11 +1,14 @@
 name: Catalog publish
 
-# Builds newly approved catalog items from Supabase and rewrites catalog.json in the catalog-public bucket.
+# Builds newly approved catalog items from Supabase and rewrites catalog.json in the catalog-public bucket, then
+# copies the catalog to the web servers, which is where visitors load it from (Supabase Storage ran out of database
+# connections serving launch traffic on 2026-10-30).
 # Started by the catalog-publish Edge Function after an editor approves something, or by hand from the Actions tab.
-# Safe to run any time: it only builds items marked needs_render.
+# Safe to run any time: it only builds items marked needs_render, and only copies files the servers don't have.
 #
-# Needs the "catalog" environment: variable SUPABASE_URL and secret SUPABASE_SERVICE_ROLE_KEY.
-# Setup is in docs/catalog-backend.md. Nothing starts it until then; a manual run fails with a clear message.
+# Needs the "catalog" environment: variable SUPABASE_URL and secret SUPABASE_SERVICE_ROLE_KEY, plus
+# CATALOG_DEPLOY_TARGETS, CATALOG_KNOWN_HOSTS and secret CATALOG_SSH_PRIVATE_KEY for the copy to the servers.
+# Setup is in docs/catalog-backend.md. Until the server settings exist, the copy step is skipped with a notice.
 on:
   repository_dispatch:
     types: [catalog-publish]
@@ -14,7 +17,7 @@ on:
       mode:
         description: "What to run"
         type: choice
-        options: [publish, manifest-only, dry-run]
+        options: [publish, manifest-only, dry-run, copy-to-servers-only]
         default: publish
 
 # One publish at a time. GitHub keeps at most one waiting run, and each run picks up everything pending,
@@ -28,6 +31,7 @@ permissions:
 
 jobs:
   publish:
+    if: ${{ inputs.mode != 'copy-to-servers-only' }}
     runs-on: ubuntu-latest
     environment: catalog
     timeout-minutes: 60
@@ -71,3 +75,98 @@ jobs:
             dry-run) node scripts/catalog/publish.mjs --dry-run ;;
             *) echo "Unknown mode $MODE"; exit 2 ;;
           esac
+
+  # Copies catalog.json and any images the servers are missing. Images go first, the manifest last, so a visitor never
+  # gets a manifest that points at files that haven't arrived. Old images stay, so pages already open keep working.
+  copy-to-servers:
+    needs: publish
+    if: ${{ !cancelled() && inputs.mode != 'dry-run' }}
+    runs-on: ubuntu-latest
+    environment: catalog
+    timeout-minutes: 60
+    steps:
+      - name: Check settings
+        id: settings
+        env:
+          TARGETS: ${{ vars.CATALOG_DEPLOY_TARGETS }}
+          KEY_SET: ${{ secrets.CATALOG_SSH_PRIVATE_KEY != '' }}
+        run: |
+          if [ -z "$TARGETS" ] || [ "$KEY_SET" != true ]; then
+            echo "::notice::Not copying to the servers: set CATALOG_DEPLOY_TARGETS and CATALOG_SSH_PRIVATE_KEY in the catalog environment. See docs/catalog-backend.md."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - if: steps.settings.outputs.ready == 'true'
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          sparse-checkout: web
+          sparse-checkout-cone-mode: true
+
+      - if: steps.settings.outputs.ready == 'true'
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version-file: web/.nvmrc
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - if: steps.settings.outputs.ready == 'true'
+        run: npm ci
+        working-directory: web
+
+      - name: Set up SSH
+        if: steps.settings.outputs.ready == 'true'
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.CATALOG_SSH_PRIVATE_KEY }}
+          KNOWN_HOSTS: ${{ vars.CATALOG_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          # Host keys are pinned: an unknown or changed host fails the copy instead of being trusted.
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      # CATALOG_DEPLOY_TARGETS: one site folder per line, like PROD_DEPLOY_TARGET (user@host:/path). The catalog goes
+      # in its catalog/ subfolder. Only images that some server lacks are fetched from Supabase.
+      - name: See what the servers already have
+        if: steps.settings.outputs.ready == 'true'
+        env:
+          TARGETS: ${{ vars.CATALOG_DEPLOY_TARGETS }}
+        run: |
+          first=1
+          while IFS= read -r t <&3; do
+            t="${t%%[[:space:]]}"
+            [ -n "$t" ] || continue
+            # (The list is read on fd 3 so ssh and rsync can't swallow the remaining lines from stdin.)
+            host="${t%%:*}"; dir="${t#*:}"
+            ssh "$host" "mkdir -p '$dir/catalog/thumb' '$dir/catalog/img' && cd '$dir/catalog' && find thumb img -type f -name '*.webp'" | sort > "$RUNNER_TEMP/this.txt"
+            echo "$t: $(wc -l < "$RUNNER_TEMP/this.txt") images"
+            if [ "$first" = 1 ]; then cp "$RUNNER_TEMP/this.txt" "$RUNNER_TEMP/have.txt"; first=0
+            else comm -12 "$RUNNER_TEMP/have.txt" "$RUNNER_TEMP/this.txt" > "$RUNNER_TEMP/both.txt"; mv "$RUNNER_TEMP/both.txt" "$RUNNER_TEMP/have.txt"; fi
+          done 3<<< "$TARGETS"
+
+      - name: Fetch the catalog from Supabase
+        if: steps.settings.outputs.ready == 'true'
+        working-directory: web
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/catalog/mirror.mjs --out "$RUNNER_TEMP/catalog" --have "$RUNNER_TEMP/have.txt"
+
+      - name: Upload to the servers
+        if: steps.settings.outputs.ready == 'true'
+        env:
+          TARGETS: ${{ vars.CATALOG_DEPLOY_TARGETS }}
+        run: |
+          src="$RUNNER_TEMP/catalog"
+          mkdir -p "$src/thumb" "$src/img"
+          while IFS= read -r t <&3; do
+            t="${t%%[[:space:]]}"
+            [ -n "$t" ] || continue
+            echo "==> $t"
+            rsync -az --stats --ignore-existing "$src/thumb/" "$t/catalog/thumb/"
+            rsync -az --stats --ignore-existing "$src/img/" "$t/catalog/img/"
+            rsync -az "$src/catalog.json" "$t/catalog/catalog.json"
+          done 3<<< "$TARGETS"
