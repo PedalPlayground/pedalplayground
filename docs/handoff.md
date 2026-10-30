@@ -50,7 +50,7 @@ Pedal Playground is an interactive planner for guitar pedalboards: users pick re
   - Positions and sizes are in inches. A saved playground is a JSON document (`schemaVersion: 3`); older v2/HTML saves import.
 - `supabase/` `migrations/` (three, all applied) and `functions/` (`create-checkout-session`, `create-portal-session`, `stripe-webhook`).
 - `docs/` `billing.md`, `auth.md`, `catalog.md`, `deploy-beta.md`, `auth-email-template.html`, this file.
-- `.github/workflows/` `web.yml` (typecheck), `catalog.yml` (validate pull requests), `deploy-beta-app.yml`, `deploy-beta-catalog.yml`.
+- `.github/workflows/` `web.yml` (typecheck), `catalog.yml` (validate pull requests), `deploy-beta-app.yml`, `deploy-production.yml`, `catalog-publish.yml` (builds the catalog in Supabase and copies it to the servers).
 - Repo root (legacy site) is untouched by the rebuild, except two small additions to `.gitignore`.
 
 ## Infrastructure map (all accounts are the owner's own)

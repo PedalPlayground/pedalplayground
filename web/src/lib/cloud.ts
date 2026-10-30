@@ -232,3 +232,21 @@ async function fetchOwnerName(userId: string): Promise<string | null> {
 }
 
 export const shareUrl = (slug: string) => `${window.location.origin}${window.location.pathname}?p=${encodeURIComponent(slug)}`;
+
+/** Public bucket holding each shared playground's link preview, `<slug>.jpg` (see the share_images migration). */
+const SHARE_IMAGES = "share-images";
+
+/** Uploads (or replaces) a shared playground's link preview. Only its owner can write it. */
+export async function uploadShareImage(slug: string, image: Blob) {
+  const { error } = await db()
+    .storage.from(SHARE_IMAGES)
+    // Short cache: previewers fetch it once per link, and a fresh share should show the latest layout.
+    .upload(`${slug}.jpg`, image, { contentType: "image/jpeg", upsert: true, cacheControl: "300" });
+  if (error) throw error;
+}
+
+/** Removes the link preview when a playground stops being shared. */
+export async function deleteShareImage(slug: string) {
+  const { error } = await db().storage.from(SHARE_IMAGES).remove([`${slug}.jpg`]);
+  if (error) throw error;
+}
