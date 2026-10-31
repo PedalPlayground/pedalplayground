@@ -13,7 +13,7 @@ import {
   type BoardComment,
   type BoardPanelInfo,
 } from "../lib/boardSocial";
-import { DESCRIPTION_MAX, PLAYGROUND_TYPES, shareUrl, updateDetails, type PlaygroundType } from "../lib/cloud";
+import { canStoreGenres, DESCRIPTION_MAX, fetchDetails, PLAYGROUND_TYPES, shareUrl, updateDetails, type Genre, type PlaygroundType } from "../lib/cloud";
 import { setGalleryLike } from "../lib/gallery";
 import { plainField } from "../lib/inputProps";
 import { useAuth } from "../store/auth";
@@ -21,6 +21,7 @@ import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
+import { GenrePicker } from "./GenrePicker";
 import { tip } from "./Tooltip";
 
 const TYPE_LABELS = Object.fromEntries(PLAYGROUND_TYPES) as Record<string, string>;
@@ -334,6 +335,26 @@ function OwnerDetails({ id, info, reload }: { id: string | null; info: BoardPane
   const [name, setName] = useState(openName);
   const [description, setDescription] = useState(startDescription);
   const [type, setType] = useState<PlaygroundType | null>(startType);
+  /** Genres aren't in the panel's summary, so they load on their own; undefined until then (or without the column). */
+  const [startGenres, setStartGenres] = useState<Genre[] | undefined>();
+  const [genres, setGenres] = useState<Genre[]>([]);
+  useEffect(() => {
+    if (!id || !info) return;
+    let cancelled = false;
+    fetchDetails(id)
+      .then((d) => {
+        if (cancelled || !d || !canStoreGenres()) return;
+        setStartGenres(d.genres);
+        setGenres(d.genres);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+    // Loads once per board; saving keeps both copies in step.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]);
+  const genresChanged = startGenres !== undefined && genres.join() !== startGenres.join();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
@@ -342,7 +363,8 @@ function OwnerDetails({ id, info, reload }: { id: string | null; info: BoardPane
   // Picks up a rename made elsewhere (like the playground menu) while nothing here is being edited.
   useEffect(() => setName(openName), [openName]);
 
-  const dirty = name.trim() !== openName || (!!info && (description.trim() !== startDescription.trim() || type !== startType));
+  const detailsChanged = !!info && (description.trim() !== startDescription.trim() || type !== startType || genresChanged);
+  const dirty = name.trim() !== openName || detailsChanged;
 
   const save = async () => {
     setBusy(true);
@@ -352,8 +374,11 @@ function OwnerDetails({ id, info, reload }: { id: string | null; info: BoardPane
         const err = await cloud.rename(name);
         if (err) return setError(err);
       }
-      if (id && info && (description.trim() !== startDescription.trim() || type !== startType)) {
-        await updateDetails(id, { description, type });
+      if (id && detailsChanged) {
+        // Genres still loading: keep what's saved rather than clearing them.
+        const keep = startGenres === undefined ? ((await fetchDetails(id))?.genres ?? []) : genres;
+        await updateDetails(id, { description, type, genres: keep });
+        if (startGenres !== undefined) setStartGenres(genres);
         await reload();
       }
     } catch (e) {
@@ -366,6 +391,7 @@ function OwnerDetails({ id, info, reload }: { id: string | null; info: BoardPane
     setName(openName);
     setDescription(startDescription);
     setType(startType);
+    if (startGenres) setGenres(startGenres);
     setError(null);
   };
 
@@ -431,6 +457,12 @@ function OwnerDetails({ id, info, reload }: { id: string | null; info: BoardPane
                   ))}
                 </select>
               </div>
+              {startGenres !== undefined && (
+                <div className="[&>div]:mb-0">
+                  <span className={label}>Genres</span>
+                  <GenrePicker value={genres} onChange={setGenres} />
+                </div>
+              )}
               <div>
                 <label className={`${label} flex justify-between`} htmlFor="bp-description">
                   Description

@@ -36,7 +36,7 @@ The ⓘ button next to the board name opens one panel (`web/src/components/Board
 board. It replaced the Edit Playground dialog (2026-10-31), so there's one place to edit and read about a board.
 On larger screens it's a column beside the canvas that stays open or closed as you left it (and opens by itself for someone else's gallery board); on phones it's a sheet.
 
-- **Your own board:** two tabs. Details has name, type, description (Save button), share link, Show in Public
+- **Your own board:** two tabs. Details has name, type, genres, description (Save button), share link, Show in Public
   Gallery, Allow Comments and Delete Playground; the switches take effect right away. Comments shows likes and
   comments, where you can delete any comment. The button and tab show a count of new comments. "Edit Playground…"
   in the playground menu (and the pencil on another saved playground) opens Details. A board not saved to an
