@@ -22,6 +22,9 @@ export type GallerySort = "new" | "liked";
 
 export const GALLERY_PAGE_SIZE = 24;
 
+/** Boards owned by test accounts show on beta and local copies, never on the live site (see the test_accounts migration). */
+const SHOW_TEST_BOARDS = !["pedalplayground.com", "www.pedalplayground.com"].includes(window.location.hostname);
+
 const db = () => {
   if (!supabase) throw new Error("Cloud is not configured.");
   return supabase;
@@ -35,6 +38,8 @@ export async function fetchGalleryBoards(opts: { type: PlaygroundType | null; se
     sort: opts.sort,
     page_offset: opts.offset,
     page_size: GALLERY_PAGE_SIZE,
+    // Only sent when true, so the live site keeps working with a database that doesn't know the argument yet.
+    ...(SHOW_TEST_BOARDS ? { include_test: true } : {}),
   });
   if (error) throw error;
   return data as GalleryBoard[];
