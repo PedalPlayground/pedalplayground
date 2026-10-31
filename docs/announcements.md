@@ -19,7 +19,7 @@ A bell in the app header opens a short feed of news. A dot on the bell means the
 
 ## Setup
 
-Run `supabase/migrations/20261031180000_announcements.sql` once. Editors are the existing `catalog_editors`.
+Run `supabase/migrations/20261031155653_announcements.sql` once. Editors are the existing `catalog_editors`.
 
 ## Later
 
