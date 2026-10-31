@@ -43,5 +43,5 @@ On larger screens it's a side panel and opens by itself for gallery boards; on p
   and the button shows a count of new comments since you last opened it.
 - Taking a board out of the gallery, unsharing it or an editor hiding it hides its comments; they come back with it.
   Deleting a board or an account deletes its comments.
-- Database: `supabase/migrations/20261031170000_board_comments.sql` (`board_comments` table, `board_panel()`,
+- Database: `supabase/migrations/20261031154422_board_comments.sql` (`board_comments` table, `board_panel()`,
   `board_comments_list()`, `board_comment_add()`, `board_comment_delete()`, `board_comments_seen()`).
