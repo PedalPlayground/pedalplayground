@@ -34,7 +34,7 @@ the same way as `/editor/`.
 
 The ⓘ button next to the board name opens one panel (`web/src/components/BoardPanel.tsx`) for everything about a
 board. It replaced the Edit Playground dialog (2026-10-31), so there's one place to edit and read about a board.
-On larger screens it's a side panel (and opens by itself for someone else's gallery board); on phones it's a sheet.
+On larger screens it's a column beside the canvas that stays open or closed as you left it (and opens by itself for someone else's gallery board); on phones it's a sheet.
 
 - **Your own board:** two tabs. Details has name, type, description (Save button), share link, Show in Public
   Gallery, Allow Comments and Delete Playground; the switches take effect right away. Comments shows likes and

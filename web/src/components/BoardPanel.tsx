@@ -39,11 +39,38 @@ interface PanelState {
   setUnseen: (n: number) => void;
 }
 
+const OPEN_KEY = "pp:boardPanel";
+/** The column's width on larger screens (sm:w-[340px] below), plus its border. */
+const COLUMN_WIDTH = 341;
+const isWide = () => window.matchMedia("(min-width: 640px)").matches;
+
+/** Larger screens remember whether the column was left open. Phones always start with the sheet closed. */
+function rememberedOpen() {
+  try {
+    return isWide() && localStorage.getItem(OPEN_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+function remember(open: boolean) {
+  try {
+    if (isWide()) localStorage.setItem(OPEN_KEY, open ? "1" : "0");
+  } catch {
+    /* private mode: just don't remember */
+  }
+}
+
 export const useBoardPanel = create<PanelState>((set) => ({
-  open: false,
+  open: rememberedOpen(),
   tab: "details",
-  setOpen: (open) => set({ open }),
-  openTo: (tab) => set({ open: true, tab }),
+  setOpen: (open) => {
+    remember(open);
+    set({ open });
+  },
+  openTo: (tab) => {
+    remember(true);
+    set({ open: true, tab });
+  },
   setTab: (tab) => set({ tab }),
   unseen: 0,
   setUnseen: (unseen) => set({ unseen }),
@@ -66,14 +93,14 @@ export function BoardInfoButton() {
   const { id, viewing } = usePanelTarget();
   const { open, setOpen, openTo, unseen, setUnseen } = useBoardPanel();
 
-  // Someone's gallery board on a larger screen: open the panel right away, so its description and comments show.
+  // Someone's gallery board on a larger screen: show the column, so its description and comments are there.
   useEffect(() => {
-    if (!id || !viewing || !window.matchMedia("(min-width: 640px)").matches) return;
+    if (!id || !viewing || !isWide() || useBoardPanel.getState().open) return;
     fetchBoardPanel(id).then(
-      (p) => p?.in_gallery && setOpen(true),
+      (p) => p?.in_gallery && useBoardPanel.setState({ open: true }),
       () => undefined,
     );
-  }, [id, viewing, setOpen]);
+  }, [id, viewing]);
 
   // Your own board: check for new comments when it opens and when you come back to the tab.
   useEffect(() => {
@@ -158,22 +185,27 @@ export function BoardPanel({ onSignIn }: { onSignIn: () => void }) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [open, setOpen]);
-  // Moving between boards keeps the panel only while there's a board to show.
+  // The column changes the canvas's width. A shared board is framed again to fit; your own board keeps its zoom
+  // and shifts by half the column, so whatever was in the middle stays in the middle.
+  const firstRun = useRef(true);
   useEffect(() => {
-    if (viewing && !id) setOpen(false);
-  }, [id, viewing, setOpen]);
-
-  // Larger screens: the panel covers the canvas's right edge, so Center & Fit (and this first fit) keep the board beside it.
+    if (firstRun.current) {
+      firstRun.current = false;
+      if (!viewing) return;
+    }
+    if (!isWide()) return;
+    if (viewing) {
+      const t = setTimeout(() => usePlayground.getState().fitToContent(), 0);
+      return () => clearTimeout(t);
+    }
+    usePlayground.getState().panBy(open ? -COLUMN_WIDTH / 2 : COLUMN_WIDTH / 2, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
   useEffect(() => {
-    if (!open || !window.matchMedia("(min-width: 640px)").matches) return;
-    const pg = usePlayground.getState();
-    pg.setCoverRight(340 + 12);
-    if (useUi.getState().viewing) pg.fitToContent();
-    return () => {
-      usePlayground.getState().setCoverRight(0);
-      if (useUi.getState().viewing) usePlayground.getState().fitToContent();
-    };
-  }, [open, id]);
+    if (!viewing || !isWide()) return;
+    const t = setTimeout(() => usePlayground.getState().fitToContent(), 0);
+    return () => clearTimeout(t);
+  }, [viewing]);
 
   if (!open) return null;
 
@@ -195,7 +227,7 @@ export function BoardPanel({ onSignIn }: { onSignIn: () => void }) {
     <aside
       aria-label={own ? "Playground details and comments" : "Board details and comments"}
       data-clarity-mask="True"
-      className="animate-enter fixed inset-x-0 bottom-0 z-40 flex max-h-[85dvh] flex-col rounded-t-panel bg-surface shadow-[var(--shadow-modal)] sm:absolute sm:inset-x-auto sm:bottom-3 sm:right-3 sm:top-3 sm:max-h-none sm:w-[340px] sm:rounded-panel sm:shadow-panel"
+      className="max-sm:animate-enter fixed inset-x-0 bottom-0 z-40 flex max-h-[85dvh] flex-col rounded-t-panel bg-surface shadow-[var(--shadow-modal)] sm:static sm:z-auto sm:max-h-none sm:w-[340px] sm:shrink-0 sm:rounded-none sm:border-l sm:border-chrome-line sm:shadow-none"
     >
       <div className={`flex items-start gap-2 px-4 pt-3.5 ${own ? "" : "border-b border-line pb-3"}`}>
         <div className="min-w-0 flex-1">

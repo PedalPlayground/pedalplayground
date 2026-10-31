@@ -280,12 +280,14 @@ export function App() {
 
           {wide && !covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
 
-          {!covered && <BoardPanel onSignIn={() => setDialog("account")} />}
 
           {/* Lower-right corner. Phones have it in the bottom bar instead. */}
           <SettingsMenu className={`absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-10 max-sm:hidden`} />
 
         </main>
+
+        {/* Its own column beside the canvas on larger screens (a sheet on phones), so it never covers the board. */}
+        {!covered && <BoardPanel onSignIn={() => setDialog("account")} />}
       </div>
 
       <LegalDialog />
