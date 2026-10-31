@@ -1,9 +1,9 @@
-import { Search } from "lucide-react";
+import { Heart, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Logo } from "../components/Logo";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { isEditor } from "../lib/editorApi";
-import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, setGalleryHidden, type GalleryBoard } from "../lib/gallery";
+import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "../store/auth";
 import { useCatalog } from "../store/catalog";
@@ -19,10 +19,13 @@ const TYPE_LABELS: Record<PlaygroundType, string> = {
 const chip = (on: boolean) =>
   `press h-8 shrink-0 rounded-full px-3 text-[13px] font-semibold transition-colors ${on ? "bg-ink text-surface" : "bg-surface text-ink-muted shadow-panel hover:text-ink"}`;
 
-/** The public gallery at /gallery/: boards whose owners turned on "Show in Public Gallery", newest first. */
+/** The public gallery at /gallery/: boards whose owners turned on "Show in Public Gallery", newest or most liked first. */
 export function GalleryApp() {
   const init = useAuth((s) => s.init);
   const user = useAuth((s) => s.user);
+  const ready = useAuth((s) => s.ready);
+  const [sort, setSort] = useState<GallerySort>("new");
+  const [signInNote, setSignInNote] = useState(false);
   const [type, setType] = useState<PlaygroundType | null>(null);
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
@@ -54,7 +57,7 @@ export function GalleryApp() {
     setLoading(true);
     setFailed(false);
     try {
-      const page = await fetchGalleryBoards({ type, search, after: reset ? undefined : boards[boards.length - 1] });
+      const page = await fetchGalleryBoards({ type, search, sort, offset: reset ? 0 : boards.length });
       if (id !== request.current) return;
       setBoards((b) => (reset ? page : [...b, ...page]));
       setMore(page.length === GALLERY_PAGE_SIZE);
@@ -65,12 +68,14 @@ export function GalleryApp() {
     }
   };
 
+  // Waits for the session, so each board's heart shows whether this viewer likes it.
   useEffect(() => {
+    if (!ready) return;
     setBoards([]);
     setMore(false);
     void load(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [type, search]);
+  }, [ready, type, search, sort, user?.id]);
 
   // Load the next page when the bottom of the grid scrolls into view.
   useEffect(() => {
@@ -92,6 +97,19 @@ export function GalleryApp() {
     await setGalleryHidden(hidden.id, false);
     setHidden(null);
     void load(true);
+  };
+
+  const toggleLike = async (b: GalleryBoard) => {
+    if (!user) return setSignInNote(true);
+    const liked = !b.liked;
+    const patch = (fields: Partial<GalleryBoard>) => setBoards((list) => list.map((x) => (x.id === b.id ? { ...x, ...fields } : x)));
+    // Show it right away, then settle on the server's count.
+    patch({ liked, like_count: Math.max(0, b.like_count + (liked ? 1 : -1)) });
+    try {
+      patch({ liked, like_count: await setGalleryLike(b.id, liked) });
+    } catch {
+      patch({ liked: b.liked, like_count: b.like_count });
+    }
   };
 
   const filtering = !!search.trim() || type !== null;
@@ -136,7 +154,40 @@ export function GalleryApp() {
               </button>
             ))}
           </div>
+          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 self-start rounded-control bg-surface-hover p-0.5 sm:ml-auto sm:self-auto">
+            {(
+              [
+                ["new", "Newest"],
+                ["liked", "Most liked"],
+              ] as const
+            ).map(([v, label]) => (
+              <button
+                key={v}
+                type="button"
+                role="radio"
+                aria-checked={sort === v}
+                onClick={() => setSort(v)}
+                className={`h-7 rounded-[3px] px-2.5 text-xs font-semibold transition-colors ${sort === v ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
+
+        {signInNote && (
+          <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-lg border border-line bg-surface px-3 py-2 text-[13px]">
+            <span>
+              <a href="/" className="font-semibold text-brand">
+                Sign in on the playground
+              </a>{" "}
+              to like boards, then come back here.
+            </span>
+            <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setSignInNote(false)} aria-label="Dismiss">
+              ×
+            </button>
+          </div>
+        )}
 
         {hidden && (
           <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-lg border border-line bg-surface px-3 py-2 text-[13px]">
@@ -151,7 +202,7 @@ export function GalleryApp() {
 
         <div className="mt-6 grid grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           {boards.map((b) => (
-            <BoardCard key={b.id} board={b} onHide={editor ? () => void hide(b) : undefined} />
+            <BoardCard key={b.id} board={b} onLike={() => void toggleLike(b)} onHide={editor ? () => void hide(b) : undefined} />
           ))}
           {loading && Array.from({ length: boards.length ? 4 : 8 }, (_, i) => <CardSkeleton key={`s${i}`} />)}
         </div>
@@ -178,17 +229,29 @@ export function GalleryApp() {
   );
 }
 
-function BoardCard({ board, onHide }: { board: GalleryBoard; onHide?: () => void }) {
+function BoardCard({ board, onLike, onHide }: { board: GalleryBoard; onLike: () => void; onHide?: () => void }) {
   const meta = [
     board.username ? `@${board.username}` : null,
     board.pedal_count ? `${board.pedal_count} ${board.pedal_count === 1 ? "pedal" : "pedals"}` : null,
   ].filter(Boolean);
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface shadow-panel transition-shadow hover:shadow-[0_8px_28px_rgb(16_18_27/0.14),0_0_0_1px_rgb(16_18_27/0.05)]">
-      <a href={boardUrl(board.slug)} className="flex flex-1 flex-col outline-none focus-visible:ring-2 focus-visible:ring-brand">
-        <div className="aspect-[8/5] w-full bg-canvas">
+      <div className="relative">
+        <a href={boardUrl(board.slug)} tabIndex={-1} aria-hidden className="block aspect-[8/5] w-full bg-canvas">
           {board.thumbnail && <img src={board.thumbnail} alt="" loading="lazy" className="size-full object-contain" />}
-        </div>
+        </a>
+        <button
+          type="button"
+          onClick={onLike}
+          aria-pressed={board.liked}
+          aria-label={`${board.liked ? "Unlike" : "Like"} ${board.name}, ${board.like_count} ${board.like_count === 1 ? "like" : "likes"}`}
+          className={`press absolute bottom-2 right-2 flex h-7 items-center gap-1 rounded-full bg-surface/90 px-2.5 text-xs font-semibold shadow-panel backdrop-blur transition-colors ${board.liked ? "text-danger" : "text-ink-muted hover:text-ink"}`}
+        >
+          <Heart size={14} fill={board.liked ? "currentColor" : "none"} strokeWidth={2.25} />
+          {board.like_count > 0 && <span className="tabular-nums">{board.like_count}</span>}
+        </button>
+      </div>
+      <a href={boardUrl(board.slug)} className="flex flex-1 flex-col outline-none focus-visible:ring-2 focus-visible:ring-brand">
         <div className="flex flex-1 flex-col gap-1 px-3.5 pb-3.5 pt-3">
           <div className="flex items-start justify-between gap-2">
             <h2 className="line-clamp-1 text-sm font-semibold">{board.name}</h2>

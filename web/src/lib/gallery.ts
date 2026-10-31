@@ -11,7 +11,12 @@ export interface GalleryBoard {
   updated_at: string;
   username: string | null;
   pedal_count: number;
+  like_count: number;
+  /** Whether the signed-in viewer likes it. */
+  liked: boolean;
 }
+
+export type GallerySort = "new" | "liked";
 
 export const GALLERY_PAGE_SIZE = 24;
 
@@ -20,17 +25,24 @@ const db = () => {
   return supabase;
 };
 
-/** One page of gallery boards, newest first. Pass the last board of the previous page to continue. */
-export async function fetchGalleryBoards(opts: { type: PlaygroundType | null; search: string; after?: GalleryBoard }): Promise<GalleryBoard[]> {
+/** One page of gallery boards. `offset` is how many boards are already showing. */
+export async function fetchGalleryBoards(opts: { type: PlaygroundType | null; search: string; sort: GallerySort; offset: number }): Promise<GalleryBoard[]> {
   const { data, error } = await db().rpc("gallery_boards", {
     board_type: opts.type,
     search: opts.search.trim() || null,
-    before_updated: opts.after?.updated_at ?? null,
-    before_id: opts.after?.id ?? null,
+    sort: opts.sort,
+    page_offset: opts.offset,
     page_size: GALLERY_PAGE_SIZE,
   });
   if (error) throw error;
   return data as GalleryBoard[];
+}
+
+/** Likes or unlikes a board as the signed-in user. Returns the board's new like count. */
+export async function setGalleryLike(id: string, liked: boolean): Promise<number> {
+  const { data, error } = await db().rpc("gallery_set_like", { board: id, liked });
+  if (error) throw error;
+  return data as number;
 }
 
 /** Editors only: hides a board from the gallery (its share link keeps working), or shows it again. */
