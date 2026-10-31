@@ -14,6 +14,8 @@ export interface GalleryBoard {
   like_count: number;
   /** Whether the signed-in viewer likes it. */
   liked: boolean;
+  /** Missing until the board_comments migration is run. */
+  comment_count?: number;
 }
 
 export type GallerySort = "new" | "liked";

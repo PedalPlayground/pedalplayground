@@ -2,6 +2,7 @@ import { LogIn } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
+import { BoardInfoButton, BoardPanel } from "./components/BoardPanel";
 import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
@@ -178,14 +179,17 @@ export function App() {
             </>
           )}
         </div>
-        <PlaygroundBreadcrumb
-          className="sm:justify-self-center"
+<div className="flex min-w-0 items-center gap-1 sm:justify-self-center">
+                  <PlaygroundBreadcrumb
+          className="min-w-0"
           onEdit={(target) => {
             setEditingPlayground(target);
             setDialog("edit");
           }}
           onSignIn={() => setDialog("account")}
         />
+          <BoardInfoButton />
+        </div>
         <div className="flex items-center justify-end gap-2 sm:gap-3">
           <span className="max-sm:hidden">
             <SaveStatus />
@@ -276,6 +280,18 @@ export function App() {
           )}
 
           {wide && !covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
+
+          {/* Re-mounts when the edit dialog opens or closes, so a change made there (like joining the gallery) shows. */}
+          {!covered && (
+            <BoardPanel
+              key={dialog === "edit" ? "editing" : "panel"}
+              onSignIn={() => setDialog("account")}
+              onEdit={() => {
+                setEditingPlayground(undefined);
+                setDialog("edit");
+              }}
+            />
+          )}
 
           {/* Lower-right corner. Phones have it in the bottom bar instead. */}
           <SettingsMenu className={`absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-10 max-sm:hidden`} />

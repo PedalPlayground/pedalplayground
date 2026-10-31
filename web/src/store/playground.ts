@@ -39,7 +39,10 @@ interface PlaygroundState {
   coverLeft: number;
   /** Px of the canvas bottom covered by the phone Add Gear drawer. */
   coverBottom: number;
+  /** Px of the canvas's right edge covered by the board info panel; Center & Fit fits beside it. */
+  coverRight: number;
   setCoverLeft: (px: number) => void;
+  setCoverRight: (px: number) => void;
   setCoverBottom: (px: number) => void;
   /** Re-centers everything in the open part of the canvas (beside the gear panel, above the phone drawer), zooming out only if it must. */
   centerInOpenSpace: () => void;
@@ -263,6 +266,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
   viewport: { w: 0, h: 0 },
   coverLeft: 0,
   setCoverLeft: (coverLeft) => set({ coverLeft }),
+  coverRight: 0,
+  setCoverRight: (coverRight) => set({ coverRight }),
   coverBottom: 0,
   setCoverBottom: (coverBottom) => set({ coverBottom }),
   centerInOpenSpace: () => set((s) => (s.viewport.w > 0 && s.items.length ? { view: centeredView(s, s.items) } : {})),
@@ -298,7 +303,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       // Phones fit tight to the sides, leaving room for the save pill up top and the toolbar and scale key below.
       const pad = s.viewport.w < 640 ? { x: 16, top: 48, bottom: 112 } : { x: 96, top: 96, bottom: 96 };
       // With the gear panel open, fit into the space beside it.
-      const availW = s.viewport.w - s.coverLeft - pad.x * 2;
+      const availW = s.viewport.w - s.coverLeft - s.coverRight - pad.x * 2;
       const availH = s.viewport.h - pad.top - (s.coverBottom > 0 ? s.coverBottom + 16 : pad.bottom);
       const w = (b.right - b.left) * PX_PER_INCH;
       const h = (b.bottom - b.top) * PX_PER_INCH;

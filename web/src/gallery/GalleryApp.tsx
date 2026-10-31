@@ -1,4 +1,4 @@
-import { Heart, Search } from "lucide-react";
+import { Heart, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Logo } from "../components/Logo";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
@@ -259,7 +259,17 @@ function BoardCard({ board, onLike, onHide }: { board: GalleryBoard; onLike: () 
               <span className="shrink-0 rounded-full bg-surface-hover px-2 py-0.5 text-xs text-ink-muted">{TYPE_LABELS[board.playground_type]}</span>
             )}
           </div>
-          {meta.length > 0 && <p className="text-xs text-ink-muted">{meta.join(" · ")}</p>}
+          {(meta.length > 0 || !!board.comment_count) && (
+            <p className="flex items-center gap-1 text-xs text-ink-muted">
+              {meta.join(" · ")}
+              {!!board.comment_count && (
+                <span className="ml-auto flex items-center gap-1" aria-label={`${board.comment_count} comments`}>
+                  <MessageCircle size={12} strokeWidth={2.25} />
+                  {board.comment_count}
+                </span>
+              )}
+            </p>
+          )}
           {board.description && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
         </div>
       </a>
