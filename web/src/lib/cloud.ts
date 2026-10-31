@@ -126,29 +126,66 @@ export const PLAYGROUND_TYPES = [
 ] as const;
 export type PlaygroundType = (typeof PLAYGROUND_TYPES)[number][0];
 
+/** Genre tags. Keep in step with the playgrounds_genres_valid check in the playground_genres migration. */
+export const GENRES = [
+  ["rock", "Rock"],
+  ["blues", "Blues"],
+  ["metal", "Metal"],
+  ["punk", "Punk"],
+  ["indie", "Indie"],
+  ["shoegaze", "Shoegaze"],
+  ["ambient", "Ambient"],
+  ["post_rock", "Post-Rock"],
+  ["doom", "Doom & Stoner"],
+  ["jazz", "Jazz"],
+  ["funk", "Funk"],
+  ["country", "Country"],
+  ["worship", "Worship"],
+  ["pop", "Pop"],
+  ["electronic", "Electronic"],
+  ["experimental", "Experimental"],
+] as const;
+export type Genre = (typeof GENRES)[number][0];
+
 export interface PlaygroundDetails {
   description: string;
   type: PlaygroundType | null;
+  genres: Genre[];
 }
 
-/** The playground's description and type, or undefined when the database has no columns for them yet. */
+/** Until the genres column is added (see the playground_genres migration), genres are left out. */
+let genresSupported = true;
+
+/** Whether the database can store genres (false once a request shows the column is missing). */
+export const canStoreGenres = () => genresSupported;
+
+/** The playground's description, type and genres, or undefined when the database has no columns for them yet. */
 export async function fetchDetails(id: string): Promise<PlaygroundDetails | undefined> {
   if (!detailsSupported) return undefined;
-  const { data, error } = await db().from("playgrounds").select("description,playground_type").eq("id", id).single();
-  if (error && isMissingColumn(error.code)) {
+  const cols = "description,playground_type";
+  let res = await db().from("playgrounds").select(genresSupported ? `${cols},genres` : cols).eq("id", id).single();
+  if (res.error && genresSupported && isMissingColumn(res.error.code)) {
+    genresSupported = false;
+    res = await db().from("playgrounds").select(cols).eq("id", id).single();
+  }
+  if (res.error && isMissingColumn(res.error.code)) {
     detailsSupported = false;
     return undefined;
   }
-  if (error) throw error;
-  const row = data as { description: string | null; playground_type: PlaygroundType | null };
-  return { description: row.description ?? "", type: row.playground_type };
+  if (res.error) throw res.error;
+  const row = res.data as unknown as { description: string | null; playground_type: PlaygroundType | null; genres?: Genre[] | null };
+  return { description: row.description ?? "", type: row.playground_type, genres: row.genres ?? [] };
 }
 
 export async function updateDetails(id: string, details: PlaygroundDetails) {
-  const { error } = await db()
-    .from("playgrounds")
-    .update({ description: details.description.trim() || null, playground_type: details.type })
-    .eq("id", id);
+  const patch: Record<string, unknown> = { description: details.description.trim() || null, playground_type: details.type };
+  if (genresSupported) patch.genres = details.genres;
+  let { error } = await db().from("playgrounds").update(patch).eq("id", id);
+  if (error && "genres" in patch && isMissingColumn(error.code)) {
+    genresSupported = false;
+    delete patch.genres;
+    ({ error } = await db().from("playgrounds").update(patch).eq("id", id));
+  }
   if (error) throw error;
 }
 
