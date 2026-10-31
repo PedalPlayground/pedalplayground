@@ -1,6 +1,6 @@
 -- Test accounts (safe to re-run).
 -- Boards owned by a test account stay out of the public gallery unless the caller passes include_test,
--- which only beta and local builds do (VITE_SHOW_TEST_BOARDS). Prod keeps calling without it.
+-- which the gallery page does everywhere but pedalplayground.com (web/src/lib/gallery.ts). Prod calls without it.
 -- No RLS policies on purpose: only the SQL editor / service role can mark an account as a test account.
 create table if not exists public.test_accounts (
   user_id uuid primary key references auth.users (id) on delete cascade,
