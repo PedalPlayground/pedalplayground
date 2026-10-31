@@ -136,6 +136,9 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
           <Dropdown.Item className={menuItem} onSelect={startTour}>
             Show tutorial again…
           </Dropdown.Item>
+          <Dropdown.Item className={menuItem} onSelect={() => window.location.assign("/gallery/")}>
+            Browse the Gallery
+          </Dropdown.Item>
           <Dropdown.Separator className="my-1 h-px bg-line" />
           {SHOW_FILE_IO && (
             <>
