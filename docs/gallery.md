@@ -1,6 +1,6 @@
 # Public gallery
 
-`/gallery/` lists boards whose owners turned on **Show in Public Gallery** in the Edit Playground dialog, most
+`/gallery/` lists boards whose owners turned on **Show in Public Gallery** in their board's Details, most
 recently updated first, or most liked first. Anyone can browse it signed out. A card opens the board view-only on the playground
 (`/?p=<slug>`), where the visitor can make their own copy.
 
@@ -30,18 +30,22 @@ Run `20261031152923_gallery_page.sql` in the Supabase SQL editor (safe to re-run
 `playground_gallery` and `profiles` migrations first. Nothing else changes on the servers: `/gallery/` is served
 the same way as `/editor/`.
 
-## Board info and comments
+## Board panel: details and comments
 
-While viewing a board (or on your own saved board), the speech-bubble button next to the board name opens a panel
-(`web/src/components/BoardPanel.tsx`): the owner, type, pedal count, description, likes, Create a Copy, and comments.
-On larger screens it's a side panel and opens by itself for gallery boards; on phones it's a sheet.
+The ⓘ button next to the board name opens one panel (`web/src/components/BoardPanel.tsx`) for everything about a
+board. It replaced the Edit Playground dialog (2026-10-31), so there's one place to edit and read about a board.
+On larger screens it's a side panel (and opens by itself for someone else's gallery board); on phones it's a sheet.
 
-- Comments are only on gallery boards (Trav's call, 2026-10-31). Boards shared by link only show the info, no comments.
+- **Your own board:** two tabs. Details has name, type, description (Save button), share link, Show in Public
+  Gallery, Allow Comments and Delete Playground; the switches take effect right away. Comments shows likes and
+  comments, where you can delete any comment. The button and tab show a count of new comments. "Edit Playground…"
+  in the playground menu (and the pencil on another saved playground) opens Details. A board not saved to an
+  account only has its name.
+- **Someone else's board:** owner, type, pedal count, description, likes, Create a Copy and comments.
+- Comments are only on gallery boards (Trav's call, 2026-10-31). Boards shared by link only show the info.
 - Signed-in people with a username can comment: plain text, up to 1,000 characters, at most 5 a minute and 100 a day.
 - A commenter can delete their own comments, the owner can delete any on their board, and catalog editors any anywhere.
-- On your own board you can edit the description in the panel, turn comments off (they're kept, but only you see them),
-  and the button shows a count of new comments since you last opened it.
-- Taking a board out of the gallery, unsharing it or an editor hiding it hides its comments; they come back with it.
-  Deleting a board or an account deletes its comments.
+- Turning comments off keeps them, but only the owner sees them. Taking a board out of the gallery, unsharing it or
+  an editor hiding it hides its comments; they come back with it. Deleting a board or an account deletes them.
 - Database: `supabase/migrations/20261031154422_board_comments.sql` (`board_comments` table, `board_panel()`,
   `board_comments_list()`, `board_comment_add()`, `board_comment_delete()`, `board_comments_seen()`).

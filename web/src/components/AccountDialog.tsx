@@ -6,7 +6,7 @@ import { useBilling } from "../store/billing";
 import { useUi } from "../store/ui";
 import { Modal } from "./Modal";
 
-/** Shaded, borderless fields, like the Edit Playground dialog. */
+/** Shaded, borderless fields, like the board panel's Details. */
 const field =
   "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand";
 const primary = "h-9 w-full disabled:opacity-50 btn-primary";

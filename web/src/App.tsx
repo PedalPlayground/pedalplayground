@@ -2,7 +2,7 @@ import { LogIn } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
-import { BoardInfoButton, BoardPanel } from "./components/BoardPanel";
+import { BoardInfoButton, BoardPanel, useBoardPanel } from "./components/BoardPanel";
 import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
@@ -17,7 +17,6 @@ import { MadeBy } from "./components/MadeBy";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
 import { PlaygroundBreadcrumb } from "./components/PlaygroundSwitcher";
-import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
 import { NewPlaygroundDialog } from "./components/NewPlaygroundDialog";
 import type { PlaygroundSummary } from "./lib/cloud";
 import { SaveStatus } from "./components/SaveStatus";
@@ -74,7 +73,7 @@ function stripEmailLinkParams() {
   window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""));
 }
 
-type Dialog = "account" | "edit" | "share" | "playgrounds" | "avatar" | null;
+type Dialog = "account" | "share" | "playgrounds" | "avatar" | null;
 
 /** Opens `?p=<slug>` view-only. The param stays while viewing, so a reload shows it again. */
 async function openSharedFromUrl() {
@@ -118,8 +117,11 @@ export function App() {
   const covered = mode !== "playground";
   const [dialog, setDialog] = useState<Dialog>(null);
   const close = () => setDialog(null);
-  /** The saved playground being edited from the menu; undefined edits the open one. */
-  const [editingPlayground, setEditingPlayground] = useState<PlaygroundSummary | undefined>();
+  /** Edit Playground (from the menu) opens the board panel's Details; another saved playground opens first. */
+  const editPlayground = async (target?: PlaygroundSummary) => {
+    if (target && target.id !== useCloud.getState().cloudId) await useCloud.getState().openPlayground(target.id);
+    useBoardPanel.getState().openTo("details");
+  };
   const [emailLink] = useState(readEmailLinkParams);
   const [confirming, setConfirming] = useState(!!emailLink);
   const [billingReturn, setBillingReturn] = useState(readBillingReturn);
@@ -179,15 +181,12 @@ export function App() {
             </>
           )}
         </div>
-<div className="flex min-w-0 items-center gap-1 sm:justify-self-center">
-                  <PlaygroundBreadcrumb
-          className="min-w-0"
-          onEdit={(target) => {
-            setEditingPlayground(target);
-            setDialog("edit");
-          }}
-          onSignIn={() => setDialog("account")}
-        />
+        <div className="flex min-w-0 items-center gap-1 sm:justify-self-center">
+          <PlaygroundBreadcrumb
+            className="min-w-0"
+            onEdit={(target) => void editPlayground(target)}
+            onSignIn={() => setDialog("account")}
+          />
           <BoardInfoButton />
         </div>
         <div className="flex items-center justify-end gap-2 sm:gap-3">
@@ -281,17 +280,7 @@ export function App() {
 
           {wide && !covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
 
-          {/* Re-mounts when the edit dialog opens or closes, so a change made there (like joining the gallery) shows. */}
-          {!covered && (
-            <BoardPanel
-              key={dialog === "edit" ? "editing" : "panel"}
-              onSignIn={() => setDialog("account")}
-              onEdit={() => {
-                setEditingPlayground(undefined);
-                setDialog("edit");
-              }}
-            />
-          )}
+          {!covered && <BoardPanel onSignIn={() => setDialog("account")} />}
 
           {/* Lower-right corner. Phones have it in the bottom bar instead. */}
           <SettingsMenu className={`absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-10 max-sm:hidden`} />
@@ -311,7 +300,6 @@ export function App() {
       {dialog === "account" && <AccountDialog onClose={close} />}
       {dialog === "avatar" && <AvatarDialog onClose={close} />}
       {newPlaygroundOpen && <NewPlaygroundDialog />}
-      {dialog === "edit" && <EditPlaygroundDialog onClose={close} target={editingPlayground} />}
       {dialog === "share" && <ShareDialog onClose={close} onSignIn={() => setDialog("account")} />}
       {dialog === "playgrounds" && <PlaygroundsDialog onClose={close} onSignIn={() => setDialog("account")} />}
     </div>

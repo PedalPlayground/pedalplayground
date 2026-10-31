@@ -221,7 +221,7 @@ export function GalleryApp() {
           <p className="mx-auto mt-12 max-w-sm text-center text-sm text-ink-muted">
             {filtering
               ? "No boards match. Try another search or type."
-              : "No boards here yet. Add yours from the playground: open Edit Playground and turn on Show in Public Gallery."}
+              : "No boards here yet. Add yours from the playground: open your board's Details (the ⓘ button next to its name) and turn on Show in Public Gallery."}
           </p>
         )}
       </main>
