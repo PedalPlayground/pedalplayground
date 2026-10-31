@@ -6,7 +6,7 @@ recently updated first, or most liked first. Anyone can browse it signed out. A 
 
 - Page: `web/gallery/index.html` + `web/src/gallery/`, a separate Vite entry like the catalog editor, so it adds
   nothing to the playground's bundle. The Settings menu links to it.
-- Data: `gallery_boards()` in `supabase/migrations/20261031000000_gallery_page.sql`. It returns the card fields
+- Data: `gallery_boards()` in `supabase/migrations/20261031152923_gallery_page.sql`. It returns the card fields
   only (name, type, description, small thumbnail, owner's username, pedal count), filters by type and by a name or
   username search, sorts by newest or most liked, and pages 24 at a time.
 - Likes: one per signed-in person per board, in `gallery_likes`, set through `gallery_set_like()`. Each card shows
@@ -26,6 +26,6 @@ delete from public.gallery_hidden where playground_id = '<playground id>';
 
 ## Setup
 
-Run `20261031000000_gallery_page.sql` in the Supabase SQL editor (safe to re-run). It needs the
+Run `20261031152923_gallery_page.sql` in the Supabase SQL editor (safe to re-run). It needs the
 `playground_gallery` and `profiles` migrations first. Nothing else changes on the servers: `/gallery/` is served
 the same way as `/editor/`.
