@@ -1,6 +1,6 @@
 # Billing and plans
 
-Free accounts keep **one saved playground**; Pro accounts keep **unlimited**. Payments run through
+Free accounts keep **3 saved playgrounds**; Pro accounts keep **unlimited**. Payments run through
 Stripe Checkout (hosted by Stripe, so card details never touch our code) and the Stripe customer portal
 (update card, switch plan, cancel, invoices).
 
@@ -27,7 +27,7 @@ App ◀── my_entitlements() (plan, limit, usage) ─────────
 
 | Rule | Where |
 | --- | --- |
-| Free = 1 playground, Pro = unlimited | `plan_limits` table (edit the numbers, no deploy) |
+| Free = 3 playgrounds, Pro = unlimited | `plan_limits` table (edit the numbers, no deploy) |
 | Sharing and forking are free | nothing gates them; forks count toward the limit like any playground |
 | Downgrade or lapse | Existing playgrounds are never removed or locked; only *creating new* ones is blocked |
 | `past_due` keeps Pro while Stripe retries payment | `user_plan()` and `ACTIVE_STATUSES` in `_shared/clients.ts` (keep the two in sync) |
@@ -81,7 +81,7 @@ when those are unset.
 
 1. Run the webhook locally with the Stripe CLI: `stripe listen --forward-to <function URL>`, and use its signing secret
    for `STRIPE_WEBHOOK_SECRET` while testing.
-2. Sign in, hit the free limit (create a second playground), and confirm the upgrade dialog appears.
+2. Sign in, hit the free limit (create a fourth playground), and confirm the upgrade dialog appears.
 3. Check out with Stripe's published test card `4242 4242 4242 4242` (any future expiry, any CVC). You should land
    on `/?billing=success`, see "You're on Pro" within a few seconds, and be able to create more playgrounds.
 4. Open **Manage subscription**, cancel, and confirm Account shows "Ends <date>" and Pro continues until then.
