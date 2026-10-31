@@ -5,9 +5,10 @@ import { useAuth } from "../store/auth";
 import { AddTab } from "./AddTab";
 import { CatalogTab } from "./CatalogTab";
 import { primaryButton, secondaryButton } from "./ItemEditor";
+import { NewsTab } from "./NewsTab";
 import { QueueTab } from "./QueueTab";
 
-type Tab = "queue" | "add" | "catalog";
+type Tab = "queue" | "add" | "catalog" | "news";
 
 export interface Notice {
   text: string;
@@ -96,6 +97,7 @@ export function EditorApp() {
             {tabButton("queue", "Queue")}
             {tabButton("add", "Add")}
             {tabButton("catalog", "Catalog")}
+            {tabButton("news", "News")}
           </nav>
           <div className="ml-auto flex items-center gap-3">
             {waiting !== null && waiting > 0 && (
@@ -123,6 +125,7 @@ export function EditorApp() {
       )}
       {tab === "queue" && <QueueTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
       {tab === "add" && <AddTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
+      {tab === "news" && <NewsTab setNotice={setNotice} />}
       {tab === "catalog" && <CatalogTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
     </Shell>
   );

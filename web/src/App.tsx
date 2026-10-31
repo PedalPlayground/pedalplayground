@@ -39,6 +39,7 @@ import { Toolbar } from "./components/Toolbar";
 import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
 import { UpgradeDialog } from "./components/UpgradeDialog";
 import { UsernamePrompt } from "./components/UsernamePrompt";
+import { WhatsNew } from "./components/WhatsNew";
 import { BETA, FEEDBACK_URL } from "./lib/beta";
 import { useAuth } from "./store/auth";
 import { useBilling } from "./store/billing";
@@ -187,6 +188,7 @@ export function App() {
           <span className="max-sm:hidden">
             <SaveStatus />
           </span>
+          <WhatsNew />
           <span data-tour="account" className="flex items-center gap-4 empty:hidden max-sm:gap-2">
           {user && canUpgrade && (
             <button onClick={() => openUpgrade("menu")} data-tour="pro" className={headerButton}>
