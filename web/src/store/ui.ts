@@ -72,6 +72,9 @@ interface UiState {
   setUnits: (u: Units) => void;
   setTheme: (t: Theme) => void;
   openUpgrade: (reason: UpgradeReason) => void;
+  /** The New Playground dialog (name, type and genres) that opens before a signed-in user's fresh board. */
+  newPlaygroundOpen: boolean;
+  setNewPlaygroundOpen: (open: boolean) => void;
   /** The Terms, Disclaimer and Privacy window. */
   legalOpen: boolean;
   openLegal: () => void;
@@ -207,6 +210,8 @@ export const useUi = create<UiState>((set) => ({
     }
     set({ units });
   },
+  newPlaygroundOpen: false,
+  setNewPlaygroundOpen: (newPlaygroundOpen) => set({ newPlaygroundOpen }),
   legalOpen: false,
   openLegal: () => set({ legalOpen: true }),
   closeLegal: () => set({ legalOpen: false }),
