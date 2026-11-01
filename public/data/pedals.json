@@ -6612,14 +6612,14 @@
 		"Name": "Gigcaster 5",
 		"Width": 7,
 		"Height": 8.53,
-		"Image": "boss-gigmaster-5.png"
+		"Image": "boss-gigcaster-5.png"
 	},
 	{
 		"Brand": "BOSS",
 		"Name": "Gigcaster 8",
 		"Width": 8.53,
 		"Height": 10.6,
-		"Image": "boss-gigmaster-8.png"
+		"Image": "boss-gigcaster-8.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -8997,10 +8997,10 @@
 	},
 	{
 		"Brand": "Catalinbread",
-		"Name": "Little Secret",
-		"Width": 1.8,
-		"Height": 3.7,
-		"Image": "catalinbread-little-secret.png"
+		"Name": "Jimothy",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-jimothy.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -9064,6 +9064,13 @@
 		"Width": 2.7,
 		"Height": 4.5,
 		"Image": "catalinbread-knight-trem.png"
+	},
+	{
+		"Brand": "Catalinbread",
+		"Name": "Little Secret",
+		"Width": 1.8,
+		"Height": 3.7,
+		"Image": "catalinbread-little-secret.png"
 	},
 	{
 		"Brand": "Catalinbread",
@@ -14051,6 +14058,13 @@
 	},
 	{
 		"Brand": "DOD",
+		"Name": "Digital Delay DFX9",
+		"Width": 3.35,
+		"Height": 5.13,
+		"Image": "dod-dfx9.png"
+	},
+	{
+		"Brand": "DOD",
 		"Name": "Drag",
 		"Width": 2.8,
 		"Height": 4.75,
@@ -16011,6 +16025,13 @@
 	},
 	{
 		"Brand": "EarthQuaker",
+		"Name": "Blumes Jr MOSFET Mod",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-blumes-jr-mosfet-mod.png"
+	},
+	{
+		"Brand": "EarthQuaker",
 		"Name": "Bows",
 		"Width": 2.6,
 		"Height": 4.94,
@@ -16470,6 +16491,13 @@
 		"Width": 2.6,
 		"Height": 4.94,
 		"Image": "earthquaker-plumes-zine.png"
+	},
+	{
+		"Brand": "EarthQuaker",
+		"Name": "Plumes Jr MOSFET Mod",
+		"Width": 1.78,
+		"Height": 3.7,
+		"Image": "earthquaker-plumes-jr-mosfet-mod.png"
 	},
 	{
 		"Brand": "EarthQuaker",
@@ -22626,10 +22654,24 @@
 	},
 	{
 		"Brand": "Fulltone",
+		"Name": "ABY-Soft Touch V2",
+		"Width": 4.25,
+		"Height": 4.55,
+		"Image": "fulltone-aby-soft-touch-v2.png"
+	},
+	{
+		"Brand": "Fulltone",
 		"Name": "OCD",
 		"Width": 2.75,
 		"Height": 4.5,
 		"Image": "fulltone-ocd.png"
+	},
+	{
+		"Brand": "Fulltone",
+		"Name": "OCD 'Lux",
+		"Width": 4.75,
+		"Height": 3.86,
+		"Image": "fulltone-ocd-lux.png"
 	},
 	{
 		"Brand": "Fulltone",
@@ -26596,8 +26638,8 @@
 	{
 		"Brand": "Humanoid FX",
 		"Name": "Entity",
-		"Width": 2.7,
-		"Height": 4.63,
+		"Width": 2.6,
+		"Height": 4.99,
 		"Image": "humanoid-entity.png"
 	},
 	{
@@ -28884,6 +28926,13 @@
 	},
 	{
 		"Brand": "JHS",
+		"Name": "3 Series Pherb",
+		"Width": 2.68,
+		"Height": 4.42,
+		"Image": "jhs-3-series-pherb.png"
+	},
+	{
+		"Brand": "JHS",
 		"Name": "3 Series Reverb",
 		"Width": 2.68,
 		"Height": 4.42,
@@ -29032,7 +29081,7 @@
 	{
 		"Brand": "JHS",
 		"Name": "Calhoun V2",
-		"Width": 4,
+		"Width": 3.96,
 		"Height": 4.85,
 		"Image": "jhs-calhoun-v2.png"
 	},
@@ -31670,17 +31719,38 @@
 	},
 	{
 		"Brand": "Keeley",
-		"Name": "Tube Drive (12AX7 Black)",
-		"Width": 4,
-		"Height": 5.04,
-		"Image": "keeley-tube-drive.png"
-	},
-	{
-		"Brand": "Keeley",
-		"Name": "Tube Drive (12AT7WA Gold)",
+		"Name": "Tube Drive (12AT7WA)",
 		"Width": 4,
 		"Height": 5.04,
 		"Image": "keeley-tube-drive-12at7wa.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Tube Drive (1969 Sylvania JAN 12AX7WA)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-tube-drive-sylvania-12ax7wa.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Tube Drive (1984 GE 12AX7A/7025 Pink)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-tube-drive-ge-12ax7a-pink.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Tube Drive (1984 GE 12AX7A/7025 Silver)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-tube-drive-ge-12ax7a-silver.png"
+	},
+	{
+		"Brand": "Keeley",
+		"Name": "Tube Drive (Twin Triode)",
+		"Width": 4,
+		"Height": 5.04,
+		"Image": "keeley-tube-drive.png"
 	},
 	{
 		"Brand": "Keeley",
@@ -39380,7 +39450,7 @@
 		"Name": "Shepard's End",
 		"Width": 2.72,
 		"Height": 4.5,
-		"Image": "mr-black-shepards-end.png"
+		"Image": "mr-black-shepard-send.png"
 	},
 	{
 		"Brand": "Mr. Black",
@@ -40409,7 +40479,7 @@
 		"Name": "Super Comp",
 		"Width": 2.67,
 		"Height": 4.5,
-		"Image": "mxr-super-comp.png"
+		"Image": "mxr-m132.png"
 	},
 	{
 		"Brand": "MXR",
@@ -43846,7 +43916,7 @@
 		"Name": "Minimal Series ABBox",
 		"Width": 2.04,
 		"Height": 3.98,
-		"Image": "one-control-aab-box.png"
+		"Image": "one-control-ab-box.png"
 	},
 	{
 		"Brand": "One Control",
