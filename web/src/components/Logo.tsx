@@ -55,3 +55,15 @@ export function Logo({ iconOnly = false, fullFrom = "sm" }: { iconOnly?: boolean
     </span>
   );
 }
+
+/** The header brand: the logo icon (with its pedal) and "Pedal Playground" as text, so it matches the tabs beside it. */
+export function Brand({ textFrom = "sm" }: { textFrom?: "sm" | "lg" }) {
+  return (
+    <span className="flex items-center gap-2">
+      <Logo iconOnly />
+      <span className={`whitespace-nowrap text-sm/4 font-semibold tracking-[-0.01em] text-ink ${textFrom === "lg" ? "max-lg:hidden" : "max-sm:hidden"}`}>
+        Pedal Playground
+      </span>
+    </span>
+  );
+}

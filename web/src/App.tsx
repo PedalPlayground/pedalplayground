@@ -12,7 +12,7 @@ import { startAvatarSync } from "./lib/avatar";
 import { AvatarDialog } from "./components/AvatarDialog";
 import { AvatarMenu } from "./components/AvatarMenu";
 import { SettingsMenu } from "./components/SettingsMenu";
-import { Logo } from "./components/Logo";
+import { Brand } from "./components/Logo";
 import { SiteTabs } from "./components/SiteTabs";
 import { MadeBy } from "./components/MadeBy";
 import { ModeRail } from "./components/ModeRail";
@@ -168,7 +168,7 @@ export function App() {
           <h1 className="flex shrink-0 items-center gap-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink">
             <a href="/" aria-label="Pedal Playground" className="rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand">
               {/* Icon only until there's room beside the centered board name. */}
-              <Logo fullFrom="lg" />
+              <Brand textFrom="lg" />
             </a>
             {pro && <span className="text-brand-top max-sm:hidden">Pro</span>}
           </h1>

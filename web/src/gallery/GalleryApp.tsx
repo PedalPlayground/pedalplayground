@@ -1,6 +1,6 @@
 import { Heart, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Logo } from "../components/Logo";
+import { Brand } from "../components/Logo";
 import { SiteTabs } from "../components/SiteTabs";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { isEditor } from "../lib/editorApi";
@@ -122,7 +122,7 @@ export function GalleryApp() {
         {/* Full width, like the playground header, so the logo and tabs stay put when you switch pages. */}
         <div className="flex h-10 items-center gap-2 px-3 sm:px-4">
           <a href="/" aria-label="Pedal Playground" className="shrink-0">
-            <Logo />
+            <Brand />
           </a>
           <SiteTabs current="gallery" />
         </div>
