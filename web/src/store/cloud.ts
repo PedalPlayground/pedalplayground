@@ -351,6 +351,8 @@ export const useCloud = create<CloudState>((set, get) => {
       usePlayground.getState().loadDocument(shared.doc);
       usePlayground.getState().setName(shared.name);
       usePlayground.getState().fitToContent();
+      // The canvas is still settling (side column, window size): keep it fitted until the viewer pans or zooms.
+      usePlayground.getState().setAutoFit(true);
       return true;
     },
 

@@ -71,8 +71,9 @@ export function GalleryApp() {
     setLoading(true);
     setFailed(false);
     try {
-      const back = reset ? restore.current : null;
-      restore.current = null;
+      // Kept until a load that used it finishes: an effect re-run (sign-in settling, dev double-run) can cancel this one.
+      const saved = restore.current;
+      const back = reset && saved && saved.sort === sort && saved.type === type && saved.query === search ? saved : null;
       let page: GalleryBoard[];
       let full: boolean;
       if (back) {
@@ -91,7 +92,10 @@ export function GalleryApp() {
       if (id !== request.current) return;
       setBoards((b) => (reset ? page : [...b, ...page]));
       setMore(full);
-      if (back) pendingScroll.current = back.scroll;
+      if (back) {
+        restore.current = null;
+        pendingScroll.current = back.scroll;
+      }
     } catch {
       if (id === request.current) setFailed(true);
     } finally {

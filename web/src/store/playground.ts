@@ -45,6 +45,12 @@ interface PlaygroundState {
   centerInOpenSpace: () => void;
   /** A fit was requested before the canvas had a size; apply it once measured. */
   pendingFit: boolean;
+  /**
+   * Keep the board fitted as the canvas settles (its size changes while panels and the window load), until the
+   * viewer pans or zooms. Set when someone else's board opens.
+   */
+  autoFit: boolean;
+  setAutoFit: (on: boolean) => void;
   past: Snapshot[];
   future: Snapshot[];
   lastNudgeAt: number;
@@ -267,6 +273,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
   setCoverBottom: (coverBottom) => set({ coverBottom }),
   centerInOpenSpace: () => set((s) => (s.viewport.w > 0 && s.items.length ? { view: centeredView(s, s.items) } : {})),
   pendingFit: false,
+  autoFit: false,
+  setAutoFit: (autoFit) => set({ autoFit }),
   past: [],
   future: [],
   lastNudgeAt: 0,
@@ -274,13 +282,13 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
 
   setViewport: (w, h) => {
     set({ viewport: { w, h } });
-    if (get().pendingFit && w > 0) {
+    if ((get().pendingFit || get().autoFit) && w > 0) {
       set({ pendingFit: false });
       get().fitToContent();
     }
   },
-  setView: (v) => set((s) => ({ view: { ...s.view, ...v } })),
-  panBy: (dx, dy) => set((s) => ({ view: { ...s.view, x: s.view.x + dx, y: s.view.y + dy } })),
+  setView: (v) => set((s) => ({ autoFit: false, view: { ...s.view, ...v } })),
+  panBy: (dx, dy) => set((s) => ({ autoFit: false, view: { ...s.view, x: s.view.x + dx, y: s.view.y + dy } })),
 
   zoomBy: (factor, px, py) =>
     set((s) => {
@@ -288,13 +296,15 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const cy = py ?? s.viewport.h / 2;
       const zoom = clamp(s.view.zoom * factor, MIN_ZOOM, MAX_ZOOM);
       const k = zoom / s.view.zoom;
-      return { view: { zoom, x: cx - (cx - s.view.x) * k, y: cy - (cy - s.view.y) * k } };
+      return { autoFit: false, view: { zoom, x: cx - (cx - s.view.x) * k, y: cy - (cy - s.view.y) * k } };
     }),
 
   fitToContent: () =>
     set((s) => {
       const b = contentBounds(s.items);
-      if (!b || !s.viewport.w) return { view: DEFAULT_VIEW };
+      if (!b) return { view: DEFAULT_VIEW };
+      // The canvas isn't measured yet: fit once it is.
+      if (!s.viewport.w) return { pendingFit: true };
       // Phones fit tight to the sides, leaving room for the save pill up top and the toolbar and scale key below.
       const pad = s.viewport.w < 640 ? { x: 16, top: 48, bottom: 112 } : { x: 96, top: 96, bottom: 96 };
       // With the gear panel open, fit into the space beside it.
@@ -617,6 +627,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       signal: normalizeSignal(doc.signal, doc.items),
       selected: [],
       view: doc.view ?? DEFAULT_VIEW,
+      autoFit: false,
     }));
     if (!doc.view) {
       if (get().viewport.w > 0) get().fitToContent();
