@@ -24866,6 +24866,13 @@
 	},
 	{
 		"Brand": "Hagerman",
+		"Name": "12AU7 Preamp",
+		"Width": 4.7,
+		"Height": 3.83,
+		"Image": "hagerman-12au7-preamp.png"
+	},
+	{
+		"Brand": "Hagerman",
 		"Name": "12AX7 Overdriver",
 		"Width": 4.7,
 		"Height": 3.83,
@@ -24992,10 +24999,24 @@
 	},
 	{
 		"Brand": "Hagerman",
+		"Name": "Tubifier Stereo",
+		"Width": 2.78,
+		"Height": 4.5,
+		"Image": "hagerman-tubifier-stereo.png"
+	},
+	{
+		"Brand": "Hagerman",
 		"Name": "Valve",
 		"Width": 2.78,
 		"Height": 4.5,
 		"Image": "hagerman-valve.png"
+	},
+	{
+		"Brand": "Hagerman",
+		"Name": "Vulture Skull",
+		"Width": 3.97,
+		"Height": 4.7,
+		"Image": "hagerman-vulture-skull.png"
 	},
 	{
 		"Brand": "Hammond",
@@ -25146,10 +25167,17 @@
 	},
 	{
 		"Brand": "Hangman fx",
-		"Name": "The Dagger",
+		"Name": "The Dagg'r",
 		"Width": 2.6,
 		"Height": 5.04,
 		"Image": "hangmanfx-the-dagger.png"
+	},
+	{
+		"Brand": "Hangman fx",
+		"Name": "The Dancing Plague",
+		"Width": 2.6,
+		"Height": 4.97,
+		"Image": "hangmanfx-the-dancing-plague.png"
 	},
 	{
 		"Brand": "Hangman fx",
@@ -34680,8 +34708,15 @@
 	},
 	{
 		"Brand": "M2 Labs",
+		"Name": "Fuzzocalypse",
+		"Width": 3.91,
+		"Height": 4.86,
+		"Image": "m2-labs-fuzzocalypse.png"
+	},
+	{
+		"Brand": "M2 Labs",
 		"Name": "The Bomber Overdrive",
-		"Width": 4.1,
+		"Width": 3.91,
 		"Height": 4.86,
 		"Image": "m2-labs-the-bomber-overdrive.png"
 	},
@@ -57484,6 +57519,27 @@
 		"Width": 2.82,
 		"Height": 5.85,
 		"Image": "valeton-ep-2.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "VDS-1d Delay & Reverb",
+		"Width": 3.94,
+		"Height": 4.18,
+		"Image": "valeton-vds1d.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "VDS-2d Dual Modulation",
+		"Width": 3.94,
+		"Height": 4.18,
+		"Image": "valeton-vds2d.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "VDS-3d Dual Pitch-Shifter",
+		"Width": 3.94,
+		"Height": 4.18,
+		"Image": "valeton-vds3d.png"
 	},
 	{
 		"Brand": "Valeton",
