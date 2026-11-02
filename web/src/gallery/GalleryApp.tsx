@@ -119,7 +119,7 @@ export function GalleryApp() {
   return (
     <div className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       <header className="sticky top-0 z-10 border-b border-chrome-line bg-chrome/95 backdrop-blur">
-        <div className="mx-auto flex h-12 max-w-6xl items-center gap-3 px-4">
+        <div className="mx-auto flex h-12 max-w-6xl items-center gap-2 px-4">
           <a href="/" aria-label="Pedal Playground" className="shrink-0">
             <Logo />
           </a>

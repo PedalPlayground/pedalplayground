@@ -1,4 +1,4 @@
-import { Copy, Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
+import { Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { create } from "zustand";
 import {
@@ -15,7 +15,6 @@ import {
 import { PLAYGROUND_TYPES } from "../lib/cloud";
 import { setGalleryLike } from "../lib/gallery";
 import { useAuth } from "../store/auth";
-import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -275,7 +274,7 @@ function PedalCount() {
   return n ? <span>{`${n} ${n === 1 ? "pedal" : "pedals"}`}</span> : null;
 }
 
-/** The board's description, likes, Create a Copy (someone else's board) and comments. */
+/** The board's description, likes and comments. Create a Copy is in the bar over the canvas. */
 function Social({
   id,
   info,
@@ -353,7 +352,6 @@ function Social({
                 {info.like_count} {info.like_count === 1 ? "like" : "likes"}
               </button>
             ))}
-          {!own && <CopyButton onSignIn={onSignIn} />}
         </div>
         {own && !info.in_gallery && (
           <p className="mt-4 border-t border-line pt-4 text-[13px] text-ink-muted">
@@ -413,28 +411,6 @@ function Social({
         />
       )}
     </>
-  );
-}
-
-/** Copies are a Pro feature; signed out, it asks you to sign in first. */
-function CopyButton({ onSignIn }: { onSignIn: () => void }) {
-  const user = useAuth((s) => s.user);
-  const { billingEnabled, entitlements } = useBilling();
-  const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
-  const onClick = () => {
-    if (!user) onSignIn();
-    else if (!canCopy) useUi.getState().openUpgrade("copy");
-    else {
-      useBoardPanel.getState().setOpen(false);
-      useCloud.getState().copyShared();
-    }
-  };
-  return (
-    <button type="button" onClick={onClick} className="press flex h-8 items-center gap-1.5 rounded-full border border-line px-3 text-[13px] font-semibold text-ink-muted hover:text-ink">
-      <Copy size={13} strokeWidth={2.25} />
-      Create a Copy
-      {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
-    </button>
   );
 }
 
