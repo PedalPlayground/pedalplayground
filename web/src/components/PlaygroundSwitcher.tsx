@@ -233,7 +233,8 @@ export function ViewingBar({ onSignIn }: { onSignIn: () => void }) {
           className={`${button} btn-primary h-7 px-2.5 text-[13px] sm:h-9 sm:px-4 sm:text-sm sm:shadow-panel`}
         >
           <Copy size={14} strokeWidth={2.25} />
-          <span className="max-sm:hidden">Create a</span> Copy
+          <span className="max-sm:hidden">Create a Copy</span>
+          <span className="sm:hidden">Copy</span>
           {!canCopy && user && <span className="rounded-full bg-white/20 px-1.5 text-[11px] font-semibold">Pro</span>}
         </button>
         <a href="/gallery/" className={`${button} h-7 px-2.5 text-[13px] text-ink hover:bg-surface-hover sm:hidden`}>
