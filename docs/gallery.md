@@ -43,7 +43,7 @@ merged into the panel, but keeping settings in the dialog and the panel read-onl
 
 - **Someone else's board:** the column is always open on larger screens (no close button). Back to Gallery at the top
   returns to the same filters and scroll (saved in sessionStorage `pp:gallery-return` when a card is clicked), then the
-  summary, Create a Copy, likes and comments. The header shows just the name and owner. Phones get a sheet from the
+  summary, likes and comments. Create a Copy sits at the top center of the canvas. The header shows just the name and owner. Phones get a sheet from the
   comments button and a small bar over the canvas with Copy and Gallery.
 - **Your own board:** the button shows once the board is shared. Same summary, with a pencil that opens Edit
   Playground, and its comments (you can delete any). The button shows a count of new comments. Private boards have no

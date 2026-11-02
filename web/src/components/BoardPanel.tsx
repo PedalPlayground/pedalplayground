@@ -1,4 +1,4 @@
-import { ArrowLeft, Copy, Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
+import { ArrowLeft, Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { create } from "zustand";
 import {
@@ -17,7 +17,6 @@ import { setGalleryLike } from "../lib/gallery";
 import { galleryReturnUrl } from "../lib/gallery";
 import { useMediaQuery } from "../lib/viewport";
 import { useAuth } from "../store/auth";
-import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -342,7 +341,6 @@ function Social({
           )
         )}
         <div className="mt-3 flex flex-wrap items-center gap-2 empty:hidden">
-          {!own && <CopyButton onSignIn={onSignIn} />}
           {info.in_gallery &&
             (own ? (
               <span className="flex h-8 items-center gap-1.5 text-[13px] text-ink-muted">
@@ -433,25 +431,6 @@ function BackToGallery() {
       <ArrowLeft size={14} strokeWidth={2.25} />
       {back ? "Back to Gallery" : "Browse the Gallery"}
     </a>
-  );
-}
-
-/** Copies are a Pro feature; signed out, it asks you to sign in first. */
-function CopyButton({ onSignIn }: { onSignIn: () => void }) {
-  const user = useAuth((s) => s.user);
-  const { billingEnabled, entitlements } = useBilling();
-  const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
-  const onClick = () => {
-    if (!user) onSignIn();
-    else if (!canCopy) useUi.getState().openUpgrade("copy");
-    else useCloud.getState().copyShared();
-  };
-  return (
-    <button type="button" onClick={onClick} className="btn-primary press flex h-8 items-center gap-1.5 rounded-full px-3 text-[13px] font-semibold">
-      <Copy size={13} strokeWidth={2.25} />
-      Create a Copy
-      {!canCopy && user && <span className="rounded-full bg-white/20 px-1.5 text-[11px] font-semibold">Pro</span>}
-    </button>
   );
 }
 

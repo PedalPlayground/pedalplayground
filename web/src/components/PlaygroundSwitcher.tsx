@@ -203,7 +203,10 @@ function OwnBreadcrumb({ className, onEdit, onSignIn, onPlaygrounds }: MenuProps
   );
 }
 
-/** Phones only, over the canvas while someone else's board is viewed: Create a Copy and Back to Gallery. Larger screens have them in the side panel. */
+/**
+ * Top center of the canvas while someone else's board is viewed: Create a Copy, the one thing to do with it.
+ * Phones also get whose board it is and the way back to the gallery (larger screens have those in the side panel).
+ */
 export function ViewingBar({ onSignIn }: { onSignIn: () => void }) {
   const viewing = useUi((u) => u.viewing);
   const openUpgrade = useUi((u) => u.openUpgrade);
@@ -217,19 +220,23 @@ export function ViewingBar({ onSignIn }: { onSignIn: () => void }) {
     else if (!canCopy) openUpgrade("copy");
     else copyShared();
   };
-  const button = "flex h-7 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-[13px] font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand";
+  const button = "press flex shrink-0 items-center gap-1.5 rounded-full font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand";
   return (
-    <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center px-3 sm:hidden">
-      <div className="pointer-events-auto flex max-w-full items-center gap-1 rounded-full bg-surface py-1 pl-3.5 pr-1 shadow-panel">
-        <span className="min-w-0 truncate text-[13px] text-ink-muted">
+    <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center px-3 sm:top-4">
+      <div className="pointer-events-auto flex max-w-full items-center gap-1 rounded-full max-sm:bg-surface max-sm:py-1 max-sm:pl-3.5 max-sm:pr-1 max-sm:shadow-panel">
+        <span className="min-w-0 truncate text-[13px] text-ink-muted sm:hidden">
           {viewing.ownerName ? `${viewing.ownerName}'s board` : "A shared board"}
         </span>
-        <button type="button" onClick={createCopy} className={`${button} text-ink hover:bg-surface-hover`}>
-          <Copy size={13} strokeWidth={2.25} />
-          Copy
-          {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
+        <button
+          type="button"
+          onClick={createCopy}
+          className={`${button} btn-primary h-7 px-2.5 text-[13px] sm:h-9 sm:px-4 sm:text-sm sm:shadow-panel`}
+        >
+          <Copy size={14} strokeWidth={2.25} />
+          <span className="max-sm:hidden">Create a</span> Copy
+          {!canCopy && user && <span className="rounded-full bg-white/20 px-1.5 text-[11px] font-semibold">Pro</span>}
         </button>
-        <a href="/gallery/" className={`${button} btn-primary`}>
+        <a href="/gallery/" className={`${button} h-7 px-2.5 text-[13px] text-ink hover:bg-surface-hover sm:hidden`}>
           <LayoutGrid size={13} strokeWidth={2.25} />
           Gallery
         </a>
