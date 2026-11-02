@@ -23,10 +23,11 @@ function pickForVisit(): number {
 }
 
 /**
- * The wordmark (256×16) with a catalog pedal in its icon. `iconOnly` crops it to the 24×16 icon at every size. The pedal is pinned to the icon's top, right and bottom
+ * The wordmark (256×16) with a catalog pedal in its icon. `iconOnly` crops it to the 24×16 icon at every size; otherwise
+ * it's the icon on small screens and the full wordmark from `fullFrom` up. The pedal is pinned to the icon's top, right and bottom
  * edges, so its width follows its aspect ratio.
  */
-export function Logo({ iconOnly = false }: { iconOnly?: boolean }) {
+export function Logo({ iconOnly = false, fullFrom = "sm" }: { iconOnly?: boolean; fullFrom?: "sm" | "lg" }) {
   const manifest = useCatalog((s) => s.manifest);
   const signedIn = useAuth((s) => !!s.user);
   const avatar = useUi((u) => u.avatar);
@@ -46,27 +47,10 @@ export function Logo({ iconOnly = false }: { iconOnly?: boolean }) {
   }, [manifest, start, signedIn, avatar]);
 
   return (
-    <span className={`relative block h-4 w-6 overflow-hidden ${iconOnly ? "" : "sm:w-64"}`} role="img" aria-label="Pedal Playground">
+    <span className={`relative block h-4 w-6 overflow-hidden ${iconOnly ? "" : fullFrom === "lg" ? "lg:w-64" : "sm:w-64"}`} role="img" aria-label="Pedal Playground">
       <img src={logoUrl} alt="" width={256} height={16} className="app-logo block h-4 w-64 max-w-none" />
       <span className="absolute left-0 top-0 block h-4 w-6">
         {src && <img src={src} alt="" className="absolute right-px top-px block h-[13.64px] w-auto" />}
-      </span>
-    </span>
-  );
-}
-
-/** The logo icon inside a purple selection box with corner handles, as if picked on the canvas (header, from Figma). */
-export function LogoMark() {
-  const handle = "absolute size-[3px] bg-brand";
-  return (
-    <span className="relative block h-6 w-8">
-      <span className="absolute inset-px border-[1.5px] border-brand" />
-      <span className={`${handle} left-0 top-0`} />
-      <span className={`${handle} right-0 top-0`} />
-      <span className={`${handle} bottom-0 left-0`} />
-      <span className={`${handle} bottom-0 right-0`} />
-      <span className="absolute left-1 top-1">
-        <Logo iconOnly />
       </span>
     </span>
   );
