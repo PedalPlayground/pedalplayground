@@ -41,8 +41,8 @@ interface PanelState {
 }
 
 const OPEN_KEY = "pp:boardPanel";
-/** The column's width on larger screens (sm:w-[340px] below), plus its border. */
-const COLUMN_WIDTH = 341;
+/** The column's width on larger screens (sm:w-[300px] below), plus its border. */
+const COLUMN_WIDTH = 301;
 const isWide = () => window.matchMedia("(min-width: 640px)").matches;
 
 /** Larger screens remember whether the column was left open. Phones always start with the sheet closed. */
@@ -228,7 +228,7 @@ export function BoardPanel({ onSignIn }: { onSignIn: () => void }) {
     <aside
       aria-label={own ? "Playground details and comments" : "Board details and comments"}
       data-clarity-mask="True"
-      className="max-sm:animate-enter fixed inset-x-0 bottom-0 z-40 flex max-h-[85dvh] flex-col rounded-t-panel bg-surface shadow-[var(--shadow-modal)] sm:static sm:z-auto sm:max-h-none sm:w-[340px] sm:shrink-0 sm:rounded-none sm:border-l sm:border-chrome-line sm:shadow-none"
+      className="max-sm:animate-enter fixed inset-x-0 bottom-0 z-40 flex max-h-[85dvh] flex-col rounded-t-panel bg-surface shadow-[var(--shadow-modal)] sm:static sm:z-auto sm:max-h-none sm:w-[300px] sm:shrink-0 sm:rounded-none sm:border-r sm:border-chrome-line sm:shadow-none"
     >
       <div className={`flex items-start gap-2 px-4 pt-3.5 ${own ? "" : "border-b border-line pb-3"}`}>
         <div className="min-w-0 flex-1">

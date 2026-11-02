@@ -217,6 +217,8 @@ export function App() {
       </header>
 
       <div className="flex min-h-0 flex-1 flex-col sm:flex-row">
+        {/* Its own column left of the canvas on larger screens (a sheet on phones), so it never covers the board. */}
+        {!covered && <BoardPanel onSignIn={() => setDialog("account")} />}
 
         <main data-tour="canvas" className="relative flex-1 overflow-clip bg-canvas">
           <Canvas />
@@ -283,8 +285,6 @@ export function App() {
 
         </main>
 
-        {/* Its own column beside the canvas on larger screens (a sheet on phones), so it never covers the board. */}
-        {!covered && <BoardPanel onSignIn={() => setDialog("account")} />}
       </div>
 
       <LegalDialog />
