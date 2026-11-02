@@ -43,6 +43,14 @@ export function GalleryApp() {
   const scroller = useRef<HTMLDivElement>(null);
   /** The first load after coming back fetches as many boards as were showing, then scrolls to where you were. */
   const restore = useRef(returning);
+  /** Applied once the restored boards are on the page. */
+  const pendingScroll = useRef<number | null>(null);
+  useEffect(() => {
+    if (pendingScroll.current === null || !boards.length) return;
+    const top = pendingScroll.current;
+    pendingScroll.current = null;
+    requestAnimationFrame(() => scroller.current?.scrollTo({ top }));
+  }, [boards]);
 
   useEffect(init, [init]);
   useEffect(() => void useCatalog.getState().load(), []);
@@ -83,7 +91,7 @@ export function GalleryApp() {
       if (id !== request.current) return;
       setBoards((b) => (reset ? page : [...b, ...page]));
       setMore(full);
-      if (back) requestAnimationFrame(() => scroller.current?.scrollTo({ top: back.scroll }));
+      if (back) pendingScroll.current = back.scroll;
     } catch {
       if (id === request.current) setFailed(true);
     } finally {

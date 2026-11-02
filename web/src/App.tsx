@@ -172,7 +172,7 @@ export function App() {
             </a>
             {pro && <span className="text-brand-top max-sm:hidden">Pro</span>}
           </h1>
-          <SiteTabs current="build" />
+          <SiteTabs current={viewing ? null : "build"} />
           {BETA && (
             <>
               <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand max-lg:hidden">Beta</span>

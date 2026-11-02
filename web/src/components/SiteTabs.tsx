@@ -6,7 +6,8 @@ const TABS = [
 ] as const;
 
 /** "Build · Gallery" beside the logo on both pages, so either is one click away. Icons only on phones. */
-export function SiteTabs({ current }: { current: "build" | "gallery" }) {
+/** `current` null: neither is marked (someone else's board, which is neither your build nor the gallery). */
+export function SiteTabs({ current }: { current: "build" | "gallery" | null }) {
   return (
     <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-0.5">
       {TABS.map((t) => {

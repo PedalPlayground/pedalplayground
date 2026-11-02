@@ -197,11 +197,14 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
     usePlayground.getState().panBy(open ? -COLUMN_WIDTH / 2 : COLUMN_WIDTH / 2, 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
+  // A viewed board is framed to fit once its gear has loaded and the column is in place, on any screen.
+  const viewingId = useUi((u) => u.viewing?.id ?? null);
+  const hasItems = usePlayground((s) => s.items.length > 0);
   useEffect(() => {
-    if (!viewing || !isWide()) return;
-    const t = setTimeout(() => usePlayground.getState().fitToContent(), 0);
+    if (!viewingId || !hasItems) return;
+    const t = setTimeout(() => usePlayground.getState().fitToContent(), 50);
     return () => clearTimeout(t);
-  }, [viewing]);
+  }, [viewingId, hasItems, pinned]);
 
   if (!open || !id) return null;
 
