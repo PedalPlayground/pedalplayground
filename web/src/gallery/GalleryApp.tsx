@@ -4,7 +4,7 @@ import { Brand } from "../components/Logo";
 import { SiteTabs } from "../components/SiteTabs";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { isEditor } from "../lib/editorApi";
-import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
+import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "../store/auth";
 import { useCatalog } from "../store/catalog";
@@ -22,14 +22,16 @@ const chip = (on: boolean) =>
 
 /** The public gallery at /gallery/: boards whose owners turned on "Show in Public Gallery", newest or most liked first. */
 export function GalleryApp() {
+  /** Coming back from a board: start where you left off (read once). */
+  const [returning] = useState(() => readGalleryReturn(true));
   const init = useAuth((s) => s.init);
   const user = useAuth((s) => s.user);
   const ready = useAuth((s) => s.ready);
-  const [sort, setSort] = useState<GallerySort>("new");
+  const [sort, setSort] = useState<GallerySort>(returning?.sort ?? "new");
   const [signInNote, setSignInNote] = useState(false);
-  const [type, setType] = useState<PlaygroundType | null>(null);
-  const [query, setQuery] = useState("");
-  const [search, setSearch] = useState("");
+  const [type, setType] = useState<PlaygroundType | null>(returning?.type ?? null);
+  const [query, setQuery] = useState(returning?.query ?? "");
+  const [search, setSearch] = useState(returning?.query ?? "");
   const [boards, setBoards] = useState<GalleryBoard[]>([]);
   const [loading, setLoading] = useState(true);
   const [more, setMore] = useState(false);
@@ -38,6 +40,9 @@ export function GalleryApp() {
   const [hidden, setHidden] = useState<GalleryBoard | null>(null);
   const request = useRef(0);
   const sentinel = useRef<HTMLDivElement>(null);
+  const scroller = useRef<HTMLDivElement>(null);
+  /** The first load after coming back fetches as many boards as were showing, then scrolls to where you were. */
+  const restore = useRef(returning);
 
   useEffect(init, [init]);
   useEffect(() => void useCatalog.getState().load(), []);
@@ -58,10 +63,27 @@ export function GalleryApp() {
     setLoading(true);
     setFailed(false);
     try {
-      const page = await fetchGalleryBoards({ type, search, sort, offset: reset ? 0 : boards.length });
+      const back = reset ? restore.current : null;
+      restore.current = null;
+      let page: GalleryBoard[];
+      let full: boolean;
+      if (back) {
+        // The server sends at most 60 a request, so refill what was showing in steps.
+        page = [];
+        full = true;
+        while (full && page.length < Math.max(GALLERY_PAGE_SIZE, back.count)) {
+          const step = await fetchGalleryBoards({ type, search, sort, offset: page.length, limit: 60 });
+          page.push(...step);
+          full = step.length === 60;
+        }
+      } else {
+        page = await fetchGalleryBoards({ type, search, sort, offset: reset ? 0 : boards.length });
+        full = page.length === GALLERY_PAGE_SIZE;
+      }
       if (id !== request.current) return;
       setBoards((b) => (reset ? page : [...b, ...page]));
-      setMore(page.length === GALLERY_PAGE_SIZE);
+      setMore(full);
+      if (back) requestAnimationFrame(() => scroller.current?.scrollTo({ top: back.scroll }));
     } catch {
       if (id === request.current) setFailed(true);
     } finally {
@@ -117,7 +139,7 @@ export function GalleryApp() {
 
   // The playground locks page scrolling (body overflow: hidden), so this page scrolls inside its own container.
   return (
-    <div className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
+    <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       <header className="sticky top-0 z-10 border-b border-chrome-line bg-chrome/95 backdrop-blur">
         {/* Full width, like the playground header, so the logo and tabs stay put when you switch pages. */}
         <div className="flex h-10 items-center gap-2 px-3 sm:px-4">
@@ -128,7 +150,14 @@ export function GalleryApp() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl px-4 pb-16 pt-8">
+      {/* Opening a board saves this spot, so its "Back to Gallery" returns here. */}
+      <main
+        className="mx-auto max-w-6xl px-4 pb-16 pt-8"
+        onClickCapture={(e) => {
+          if (!(e.target as HTMLElement).closest('a[href^="/?p="]')) return;
+          saveGalleryReturn({ sort, type, query, count: boards.length, scroll: scroller.current?.scrollTop ?? 0 });
+        }}
+      >
         <h1 className="text-2xl font-bold tracking-[-0.01em]">Gallery</h1>
         <p className="mt-1 text-sm text-ink-muted">Pedalboards shared by the community. Open one to look around, or make your own copy.</p>
 
@@ -221,7 +250,7 @@ export function GalleryApp() {
           <p className="mx-auto mt-12 max-w-sm text-center text-sm text-ink-muted">
             {filtering
               ? "No boards match. Try another search or type."
-              : "No boards here yet. Add yours from the playground: open your board's Details (the ⓘ button next to its name) and turn on Show in Public Gallery."}
+              : "No boards here yet. Add yours from the playground: open Playground Settings from your board's name and turn on Show in Public Gallery."}
           </p>
         )}
       </main>

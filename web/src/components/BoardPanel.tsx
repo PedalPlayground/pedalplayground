@@ -1,4 +1,4 @@
-import { Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
+import { ArrowLeft, Copy, Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { create } from "zustand";
 import {
@@ -14,7 +14,10 @@ import {
 } from "../lib/boardSocial";
 import { PLAYGROUND_TYPES } from "../lib/cloud";
 import { setGalleryLike } from "../lib/gallery";
+import { galleryReturnUrl } from "../lib/gallery";
+import { useMediaQuery } from "../lib/viewport";
 import { useAuth } from "../store/auth";
+import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -90,18 +93,12 @@ export function BoardInfoButton() {
   const { open, setOpen, unseen, count } = useBoardPanel();
 
   // Load the counts when the board changes, and for your own board when you come back to the tab.
-  // Someone's gallery board on a larger screen also opens the column, so its description and comments are there.
   useEffect(() => {
     useBoardPanel.setState({ unseen: 0, count: null });
     if (!id) return;
-    let first = true;
     const check = () =>
       fetchBoardPanel(id).then(
-        (p) => {
-          useBoardPanel.setState({ unseen: viewing ? 0 : (p?.new_comments ?? 0), count: p?.in_gallery ? p.comment_count : null });
-          if (first && viewing && p?.in_gallery && isWide()) useBoardPanel.setState({ open: true });
-          first = false;
-        },
+        (p) => useBoardPanel.setState({ unseen: viewing ? 0 : (p?.new_comments ?? 0), count: p?.in_gallery ? p.comment_count : null }),
         () => undefined,
       );
     void check();
@@ -110,6 +107,7 @@ export function BoardInfoButton() {
     return () => window.removeEventListener("focus", check);
   }, [id, viewing]);
 
+  // Someone else's board keeps the column open on larger screens, so the button is only for phones there.
   if (!id) return null;
   const label = count === null ? "Board info" : `Board info and ${count} ${count === 1 ? "comment" : "comments"}${unseen ? `, ${unseen} new` : ""}`;
   return (
@@ -119,7 +117,7 @@ export function BoardInfoButton() {
       aria-label={label}
       aria-pressed={open}
       {...tip(count === null ? "Board Info" : "Info & Comments", { side: "bottom" })}
-      className={`press relative flex h-7 shrink-0 items-center gap-1 rounded-control px-1.5 text-[13px] font-semibold tabular-nums outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${open ? "bg-brand/10 text-brand" : "text-icon-solo hover:bg-ink/5 hover:text-ink"}`}
+      className={`press relative flex h-7 shrink-0 items-center gap-1 rounded-control ${viewing ? "sm:hidden" : ""} px-1.5 text-[13px] font-semibold tabular-nums outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${open ? "bg-brand/10 text-brand" : "text-icon-solo hover:bg-ink/5 hover:text-ink"}`}
     >
       <MessageSquare size={16} strokeWidth={2.25} />
       {!!count && <span>{count}</span>}
@@ -136,7 +134,10 @@ export function BoardInfoButton() {
 export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit: () => void }) {
   const { id, viewing } = usePanelTarget();
   const { open: wantOpen, setOpen, setUnseen, version } = useBoardPanel();
-  const open = wantOpen && !!id;
+  const wide = useMediaQuery("(min-width: 640px)");
+  /** Someone else's board always has the column on larger screens: it's how a shared board reads. */
+  const pinned = viewing && wide;
+  const open = (wantOpen || pinned) && !!id;
   const user = useAuth((s) => s.user);
   const boardName = usePlayground((s) => s.name);
   const [info, setInfo] = useState<BoardPanelInfo | null | undefined>();
@@ -175,11 +176,11 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
   }, [open, viewing, id, info, setUnseen]);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open || pinned) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && !(e.target as HTMLElement).closest?.("input,textarea,select,[role=dialog]") && setOpen(false);
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open, setOpen]);
+  }, [open, pinned, setOpen]);
   // The column changes the canvas's width. A shared board is framed again to fit; your own board keeps its zoom
   // and shifts by half the column, so whatever was in the middle stays in the middle.
   const firstRun = useRef(true);
@@ -212,7 +213,8 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
       data-clarity-mask="True"
       className="max-sm:animate-enter fixed inset-x-0 bottom-0 z-40 flex max-h-[85dvh] flex-col rounded-t-panel bg-surface shadow-[var(--shadow-modal)] sm:static sm:z-auto sm:max-h-none sm:w-[300px] sm:shrink-0 sm:rounded-none sm:border-r sm:border-chrome-line sm:shadow-none"
     >
-      <div className="flex items-start gap-1 border-b border-line px-4 pb-3 pt-3.5">
+      {viewing && <BackToGallery />}
+      <div className={`flex items-start gap-1 px-4 ${own ? "border-b border-line pb-3 pt-3.5" : "pt-1"}`}>
         <div className="min-w-0 flex-1">
           <h2 className="truncate text-base font-semibold">{own ? boardName : (info?.name ?? boardName)}</h2>
           <p className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-muted empty:hidden">
@@ -232,6 +234,7 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
             <Pencil size={15} />
           </button>
         )}
+        {!pinned && (
         <button
           type="button"
           onClick={() => setOpen(false)}
@@ -240,6 +243,7 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
         >
           <X size={16} />
         </button>
+        )}
       </div>
 
       {failed ? (
@@ -335,6 +339,7 @@ function Social({
           )
         )}
         <div className="mt-3 flex flex-wrap items-center gap-2 empty:hidden">
+          {!own && <CopyButton onSignIn={onSignIn} />}
           {info.in_gallery &&
             (own ? (
               <span className="flex h-8 items-center gap-1.5 text-[13px] text-ink-muted">
@@ -411,6 +416,39 @@ function Social({
         />
       )}
     </>
+  );
+}
+
+/** Top of someone else's board: back to the gallery where you left it (filters and scroll), or to the gallery when you came by link. */
+function BackToGallery() {
+  const back = galleryReturnUrl();
+  return (
+    <a
+      href="/gallery/"
+      className="mx-2.5 mt-2 flex h-8 w-fit items-center gap-1.5 rounded-control px-1.5 text-[13px] font-semibold text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+    >
+      <ArrowLeft size={14} strokeWidth={2.25} />
+      {back ? "Back to Gallery" : "Browse the Gallery"}
+    </a>
+  );
+}
+
+/** Copies are a Pro feature; signed out, it asks you to sign in first. */
+function CopyButton({ onSignIn }: { onSignIn: () => void }) {
+  const user = useAuth((s) => s.user);
+  const { billingEnabled, entitlements } = useBilling();
+  const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
+  const onClick = () => {
+    if (!user) onSignIn();
+    else if (!canCopy) useUi.getState().openUpgrade("copy");
+    else useCloud.getState().copyShared();
+  };
+  return (
+    <button type="button" onClick={onClick} className="btn-primary press flex h-8 items-center gap-1.5 rounded-full px-3 text-[13px] font-semibold">
+      <Copy size={13} strokeWidth={2.25} />
+      Create a Copy
+      {!canCopy && user && <span className="rounded-full bg-white/20 px-1.5 text-[11px] font-semibold">Pro</span>}
+    </button>
   );
 }
 

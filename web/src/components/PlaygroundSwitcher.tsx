@@ -1,7 +1,7 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { useRef, useState } from "react";
 import { tip } from "./Tooltip";
-import { ArrowLeft, ChevronDown, Copy, LayoutGrid, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
+import { ChevronDown, Copy, LayoutGrid, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
 import type { PlaygroundSummary } from "../lib/cloud";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
@@ -140,62 +140,14 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
   );
 }
 
-/** Header center while a shared playground is viewed: "⌄ Name by owner", with Create a Copy and Back to My Playground. */
-function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn: () => void }) {
+/** Header center while someone else's board is viewed: just its name and owner. Its actions live in the side panel. */
+function SharedBreadcrumb({ className }: { className: string }) {
   const viewing = useUi((u) => u.viewing)!;
-  const openUpgrade = useUi((u) => u.openUpgrade);
-  const user = useAuth((s) => s.user);
-  const { billingEnabled, entitlements } = useBilling();
-  const { copyShared, leaveShared } = useCloud();
-  // Copies are a Pro feature; without billing set up, nothing is gated.
-  const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
-  const owner = viewing.ownerName ?? "a Pedal Playground member";
-
-  const createCopy = () => {
-    if (!user) onSignIn();
-    else if (!canCopy) openUpgrade("copy");
-    else copyShared();
-  };
-
+  const owner = viewing.ownerName;
   return (
-    <div className={`flex min-w-0 items-center text-sm/4 tracking-[-0.01em] ${className}`}>
-      <Dropdown.Root>
-        <Dropdown.Trigger
-          aria-label={`Shared playground: ${viewing.name} by ${owner}`}
-          className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
-        >
-          <span className="truncate font-semibold">{viewing.name}</span>
-          <span className="shrink-0 text-ink-muted max-sm:hidden">by {owner}</span>
-          <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
-        </Dropdown.Trigger>
-        <Dropdown.Portal>
-          <Dropdown.Content
-            side="bottom"
-            align="center"
-            sideOffset={8}
-            collisionPadding={12}
-            className="animate-menu z-50 w-72 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
-          >
-            <p className="px-2 pb-1.5 pt-1 text-xs text-ink-muted">
-              You're viewing a shared playground. To edit it create a copy.
-            </p>
-            <Dropdown.Item className={item} onSelect={createCopy}>
-              <Copy size={14} />
-              <span className="flex-1">Create a Copy</span>
-              {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
-            </Dropdown.Item>
-            <Dropdown.Separator className="my-1 h-px bg-line" />
-            <Dropdown.Item className={item} onSelect={() => window.location.assign("/gallery/")}>
-              <LayoutGrid size={14} />
-              Back to Gallery
-            </Dropdown.Item>
-            <Dropdown.Item className={item} onSelect={leaveShared}>
-              <ArrowLeft size={14} />
-              Back to My Playground
-            </Dropdown.Item>
-          </Dropdown.Content>
-        </Dropdown.Portal>
-      </Dropdown.Root>
+    <div className={`flex min-w-0 items-center gap-2 text-sm/4 tracking-[-0.01em] ${className}`}>
+      <span className="truncate font-semibold">{viewing.name}</span>
+      {owner && <span className="shrink-0 text-ink-muted max-sm:hidden">by {owner}</span>}
     </div>
   );
 }
@@ -203,7 +155,7 @@ function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn
 /** Header center: the open playground's menu, or the shared playground being viewed. */
 export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & { className?: string }) {
   const viewing = useUi((u) => !!u.viewing);
-  return viewing ? <SharedBreadcrumb className={className} onSignIn={props.onSignIn} /> : <OwnBreadcrumb className={className} {...props} />;
+  return viewing ? <SharedBreadcrumb className={className} /> : <OwnBreadcrumb className={className} {...props} />;
 }
 
 function OwnBreadcrumb({ className, onEdit, onSignIn, onPlaygrounds }: MenuProps & { className: string }) {
@@ -251,7 +203,7 @@ function OwnBreadcrumb({ className, onEdit, onSignIn, onPlaygrounds }: MenuProps
   );
 }
 
-/** Over the canvas while someone else's board is viewed: whose it is, Create a Copy and Back to Gallery, so there's always a way on. */
+/** Phones only, over the canvas while someone else's board is viewed: Create a Copy and Back to Gallery. Larger screens have them in the side panel. */
 export function ViewingBar({ onSignIn }: { onSignIn: () => void }) {
   const viewing = useUi((u) => u.viewing);
   const openUpgrade = useUi((u) => u.openUpgrade);
@@ -267,19 +219,19 @@ export function ViewingBar({ onSignIn }: { onSignIn: () => void }) {
   };
   const button = "flex h-7 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-[13px] font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand";
   return (
-    <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center px-3">
+    <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center px-3 sm:hidden">
       <div className="pointer-events-auto flex max-w-full items-center gap-1 rounded-full bg-surface py-1 pl-3.5 pr-1 shadow-panel">
         <span className="min-w-0 truncate text-[13px] text-ink-muted">
           {viewing.ownerName ? `${viewing.ownerName}'s board` : "A shared board"}
         </span>
         <button type="button" onClick={createCopy} className={`${button} text-ink hover:bg-surface-hover`}>
           <Copy size={13} strokeWidth={2.25} />
-          <span className="max-sm:hidden">Create a</span> Copy
+          Copy
           {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
         </button>
         <a href="/gallery/" className={`${button} btn-primary`}>
           <LayoutGrid size={13} strokeWidth={2.25} />
-          <span className="max-sm:hidden">Back to</span> Gallery
+          Gallery
         </a>
       </div>
     </div>

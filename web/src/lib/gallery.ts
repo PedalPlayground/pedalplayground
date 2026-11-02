@@ -31,13 +31,13 @@ const db = () => {
 };
 
 /** One page of gallery boards. `offset` is how many boards are already showing. */
-export async function fetchGalleryBoards(opts: { type: PlaygroundType | null; search: string; sort: GallerySort; offset: number }): Promise<GalleryBoard[]> {
+export async function fetchGalleryBoards(opts: { type: PlaygroundType | null; search: string; sort: GallerySort; offset: number; limit?: number }): Promise<GalleryBoard[]> {
   const { data, error } = await db().rpc("gallery_boards", {
     board_type: opts.type,
     search: opts.search.trim() || null,
     sort: opts.sort,
     page_offset: opts.offset,
-    page_size: GALLERY_PAGE_SIZE,
+    page_size: opts.limit ?? GALLERY_PAGE_SIZE,
     // Only sent when true, so the live site keeps working with a database that doesn't know the argument yet.
     ...(SHOW_TEST_BOARDS ? { include_test: true } : {}),
   });
@@ -60,3 +60,36 @@ export async function setGalleryHidden(id: string, hidden: boolean) {
 
 /** The playground opens a shared board view-only, with a way to make your own copy. */
 export const boardUrl = (slug: string) => `/?p=${encodeURIComponent(slug)}`;
+
+/** Where you were in the gallery when you opened a board: filters, how many boards had loaded, and the scroll. */
+export interface GalleryReturn {
+  sort: GallerySort;
+  type: PlaygroundType | null;
+  query: string;
+  count: number;
+  scroll: number;
+}
+
+const RETURN_KEY = "pp:gallery-return";
+
+export function saveGalleryReturn(r: GalleryReturn) {
+  try {
+    sessionStorage.setItem(RETURN_KEY, JSON.stringify(r));
+  } catch {
+    /* private mode: the gallery just starts at the top */
+  }
+}
+
+/** The saved spot, if a board was opened from the gallery in this tab. `take` clears it, so it's used once. */
+export function readGalleryReturn(take = false): GalleryReturn | null {
+  try {
+    const raw = sessionStorage.getItem(RETURN_KEY);
+    if (take) sessionStorage.removeItem(RETURN_KEY);
+    return raw ? (JSON.parse(raw) as GalleryReturn) : null;
+  } catch {
+    return null;
+  }
+}
+
+/** True when "Back to Gallery" has a spot to go back to. */
+export const galleryReturnUrl = () => !!readGalleryReturn();
