@@ -32,16 +32,19 @@ the same way as `/editor/`.
 
 ## Board panel: details and comments
 
-The ⓘ button next to the board name opens one panel (`web/src/components/BoardPanel.tsx`) for everything about a
-board. It replaced the Edit Playground dialog (2026-10-31), so there's one place to edit and read about a board.
-On larger screens it's a column left of the canvas that stays open or closed as you left it (and opens by itself for someone else's gallery board); on phones it's a sheet.
+The ⓘ button next to the board name opens the board panel (`web/src/components/BoardPanel.tsx`): how a shared or
+gallery board reads. It shows a summary (owner, type, pedal count, description, likes) and the comments. On larger
+screens it's a column left of the canvas that stays open or closed as you left it (and opens by itself for someone
+else's gallery board); on phones it's a sheet.
 
-- **Your own board:** two tabs. Details has name, type, genres, description (Save button), share link, Show in Public
-  Gallery, Allow Comments and Delete Playground; the switches take effect right away. Comments shows likes and
-  comments, where you can delete any comment. The button and tab show a count of new comments. "Edit Playground…"
-  in the playground menu (and the pencil on another saved playground) opens Details. A board not saved to an
-  account only has its name.
-- **Someone else's board:** owner, type, pedal count, description, likes, Create a Copy and comments.
+Board settings stay in the **Edit Playground** dialog (`EditPlaygroundDialog.tsx`): name, type, genres, description,
+share link, Show in Public Gallery, Allow Comments and Delete. Trav's call, 2026-11-02: for a while the dialog was
+merged into the panel, but keeping settings in the dialog and the panel read-only was clearer.
+
+- **Someone else's board:** summary, like button, Create a Copy and comments.
+- **Your own board:** the button shows once the board is shared. Same summary, with a pencil that opens Edit
+  Playground, and its comments (you can delete any). The button shows a count of new comments. Private boards have no
+  panel.
 - Comments are only on gallery boards (Trav's call, 2026-10-31). Boards shared by link only show the info.
 - Signed-in people with a username can comment: plain text, up to 1,000 characters, at most 5 a minute and 100 a day.
 - A commenter can delete their own comments, the owner can delete any on their board, and catalog editors any anywhere.
