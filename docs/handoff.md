@@ -24,7 +24,7 @@ Pedal Playground is an interactive planner for guitar pedalboards: users pick re
   work on `react-rebuild` is.
 - **Catalog:** about 8,900 pedals and 270 pedalboards, contributed by the community through pull requests (JSON entries plus
   PNG photos). That contribution flow must keep working.
-- **Business model, decided:** launch with billing from day one. **Free:** one saved playground (sharing and forking allowed).
+- **Business model, decided:** launch with billing from day one. **Free:** 3 saved playgrounds (sharing and forking allowed).
   **Pro:** unlimited playgrounds. Guests can use the app locally without an account.
 
 ## Where things stand

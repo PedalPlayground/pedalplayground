@@ -18,7 +18,7 @@ create table if not exists public.plan_limits (
 );
 
 insert into public.plan_limits (plan, max_playgrounds)
-values ('free', 1), ('pro', null)
+values ('free', 3), ('pro', null)
 on conflict (plan) do nothing;
 
 alter table public.plan_limits enable row level security;

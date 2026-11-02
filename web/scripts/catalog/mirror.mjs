@@ -30,19 +30,35 @@ export function assetPaths(manifest) {
   return [...paths].filter(Boolean).sort();
 }
 
+/** Fetches a public file through Supabase's CDN, which usually has it cached and then needs no database. Null if not. */
+export function cdnFetcher(supabaseUrl, fetchImpl = fetch) {
+  const base = `${supabaseUrl.replace(/\/$/, "")}/storage/v1/object/public/${PUBLIC}/`;
+  return async (p) => {
+    try {
+      const res = await fetchImpl(base + p);
+      return res.ok ? Buffer.from(await res.arrayBuffer()) : null;
+    } catch {
+      return null;
+    }
+  };
+}
+
 /**
- * db: a supabase-js client with the service role. Downloads straight from Storage (not the CDN), a few at a time so
- * the database isn't flooded. Returns { manifest, downloaded, failures }.
+ * db: a supabase-js client with the service role. Images come from the CDN when it has them (their names never get
+ * reused, so a cached copy is always right), otherwise straight from Storage, a few at a time with patient retries,
+ * because Storage needs a database connection for each and the database can be busy. catalog.json always comes
+ * from Storage, since the CDN may hold an older one for a few minutes. Returns { manifest, downloaded, failures }.
  */
-export async function mirrorCatalog(db, { out, have = new Set(), concurrency = 4, retry = {}, log = console } = {}) {
+export async function mirrorCatalog(db, { out, have = new Set(), concurrency = 4, retry = { tries: 8 }, fromCdn = async () => null, log = console } = {}) {
   const bucket = db.storage.from(PUBLIC);
-  const get = async (p) => {
+  const fromStorage = async (p) => {
     const { data, error } = await withRetry(() => bucket.download(p), retry);
     if (error) throw new Error(`download ${p}: ${error.message}`);
     return Buffer.from(await data.arrayBuffer());
   };
+  const get = async (p) => (await fromCdn(p)) ?? (await fromStorage(p));
 
-  const manifestBody = await get("catalog.json");
+  const manifestBody = await fromStorage("catalog.json");
   const manifest = JSON.parse(manifestBody.toString("utf8"));
   const all = assetPaths(manifest);
   const unsafe = all.filter((p) => !SAFE_PATH.test(p));
@@ -101,7 +117,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const have = new Set(haveFile ? (await fs.readFile(haveFile, "utf8")).split("\n").map((l) => l.trim()).filter(Boolean) : []);
   await fs.mkdir(out, { recursive: true });
   const db = createClient(env("SUPABASE_URL"), env("SUPABASE_SERVICE_ROLE_KEY"), { auth: { persistSession: false } });
-  const { manifest, downloaded, failures } = await mirrorCatalog(db, { out, have });
+  const { manifest, downloaded, failures } = await mirrorCatalog(db, { out, have, fromCdn: cdnFetcher(env("SUPABASE_URL")) });
   console.log(`catalog.json: ${manifest.pedals.length} pedals, ${manifest.pedalboards.length} pedalboards; fetched ${downloaded.length} images`);
   if (failures.length) {
     console.error(`${failures.length} image(s) couldn't be fetched, so catalog.json wasn't written. Run it again.`);

@@ -15,7 +15,9 @@ import {
   sharePlayground,
   touchPlayground,
   unsharePlayground,
+  updateDetails,
   uploadShareImage,
+  type PlaygroundDetails,
   type PlaygroundSummary,
 } from "../lib/cloud";
 import { track } from "../lib/analytics";
@@ -42,9 +44,11 @@ interface Meta {
   isPublic: boolean;
   /** Set when the canvas was opened from a shared link; the first save records the fork. */
   forkedFromId: string | null;
+  /** Type and genres picked in the New Playground dialog, stored with the playground when its first save creates it. */
+  pendingDetails: PlaygroundDetails | null;
 }
 
-const EMPTY_META: Meta = { cloudId: null, ownerId: null, slug: null, isPublic: false, forkedFromId: null };
+const EMPTY_META: Meta = { cloudId: null, ownerId: null, slug: null, isPublic: false, forkedFromId: null, pendingDetails: null };
 
 const readMeta = (): Meta => {
   try {
@@ -62,7 +66,8 @@ interface CloudState extends Meta {
   refreshList: () => Promise<void>;
   saveNow: () => Promise<void>;
   openPlayground: (id: string) => Promise<void>;
-  newPlayground: () => void;
+  /** Starts a fresh playground, optionally named and described from the New Playground dialog. */
+  newPlayground: (start?: { name: string; details: PlaygroundDetails }) => void;
   /** Renames the open playground, or another saved one when `id` is given. Returns an error message or null. */
   rename: (name: string, id?: string) => Promise<string | null>;
   share: () => Promise<string>;
@@ -213,9 +218,9 @@ const contentKey = () => {
 export const useCloud = create<CloudState>((set, get) => {
   const setMeta = (patch: Partial<Meta>) => {
     set(patch);
-    const { cloudId, ownerId, slug, isPublic, forkedFromId } = get();
+    const { cloudId, ownerId, slug, isPublic, forkedFromId, pendingDetails } = get();
     try {
-      localStorage.setItem(META_KEY, JSON.stringify({ cloudId, ownerId, slug, isPublic, forkedFromId }));
+      localStorage.setItem(META_KEY, JSON.stringify({ cloudId, ownerId, slug, isPublic, forkedFromId, pendingDetails }));
     } catch {
       /* storage unavailable */
     }
@@ -267,8 +272,13 @@ export const useCloud = create<CloudState>((set, get) => {
           created = true;
           markThumbnail(id, pg.items, true);
           if (row.name !== pg.name) usePlayground.getState().setName(row.name);
-          setMeta({ cloudId: id, ownerId: user.id, forkedFromId: null, slug: null, isPublic: false });
+          const { pendingDetails } = meta;
+          setMeta({ cloudId: id, ownerId: user.id, forkedFromId: null, slug: null, isPublic: false, pendingDetails: null });
           void useBilling.getState().refresh(); // the playground count changed
+          // Best effort: the playground is saved either way, and the details can be set again from Edit Playground.
+          if (pendingDetails) {
+            await updateDetails(id, pendingDetails).catch((e: unknown) => console.warn("Could not save the playground's details.", e));
+          }
         } else {
           sentThumbnail = await thumbnailIfDue(id, pg.items);
           // Saving the version marks the playground as just edited, so the row only needs writing for a rename or
@@ -331,19 +341,22 @@ export const useCloud = create<CloudState>((set, get) => {
         slug: row?.slug ?? null,
         isPublic: row?.is_public ?? false,
         forkedFromId: null,
+        pendingDetails: null,
       });
       set({ status: "idle" });
       // Boards shared before link previews existed get theirs the next time they're opened.
       if (row?.is_public && row.slug) scheduleShareImage(row.slug);
     },
 
-    newPlayground: () => {
+    newPlayground: (start) => {
       void flushPending();
       endViewing();
       usePlayground.getState().reset();
       lastSavedKey = contentKey();
-      setMeta({ ...EMPTY_META });
+      setMeta({ ...EMPTY_META, pendingDetails: start?.details ?? null });
       set({ status: "idle" });
+      // A new name differs from what was just marked saved, so autosave creates the playground in the account right away.
+      if (start?.name.trim()) usePlayground.getState().setName(start.name.trim());
     },
 
     rename: async (name, id) => {

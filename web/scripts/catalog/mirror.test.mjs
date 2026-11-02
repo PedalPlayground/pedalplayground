@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { assetPaths, mirrorCatalog } from "./mirror.mjs";
+import { assetPaths, cdnFetcher, mirrorCatalog } from "./mirror.mjs";
 
 const quiet = { log: () => {}, error: () => {} };
 const noWait = { sleep: async () => {} };
@@ -46,6 +46,17 @@ describe("assetPaths", () => {
   });
 });
 
+describe("cdnFetcher", () => {
+  it("returns the body on success and null on an error status or network failure", async () => {
+    const seen = [];
+    const ok = cdnFetcher("https://x.supabase.co/", async (u) => (seen.push(u), new Response("hi")));
+    expect((await ok("img/a.webp")).toString()).toBe("hi");
+    expect(seen).toEqual(["https://x.supabase.co/storage/v1/object/public/catalog-public/img/a.webp"]);
+    expect(await cdnFetcher("https://x", async () => new Response("busy", { status: 544 }))("img/a.webp")).toBeNull();
+    expect(await cdnFetcher("https://x", async () => { throw new Error("reset"); })("img/a.webp")).toBeNull();
+  });
+});
+
 describe("mirrorCatalog", () => {
   it("fetches only images the servers don't have, then writes catalog.json", async () => {
     const out = await tmp();
@@ -74,6 +85,18 @@ describe("mirrorCatalog", () => {
     const { failures } = await mirrorCatalog(fakeDb(files), { out, log: quiet, retry: noWait });
     expect(failures).toEqual(["img/retired.bb.webp"]);
     await expect(fs.access(path.join(out, "catalog.json"))).rejects.toThrow();
+  });
+
+  it("uses the CDN copy when there is one, but always reads catalog.json from Storage", async () => {
+    const out = await tmp();
+    const db = fakeDb(filesFor(manifest));
+    const fromCdn = async (p) => (p.startsWith("img/") ? Buffer.from(`cdn ${p}`) : null);
+    const { failures } = await mirrorCatalog(db, { out, fromCdn, log: quiet, retry: noWait });
+    expect(failures).toEqual([]);
+    expect(db.calls).toContain("catalog.json");
+    expect(db.calls.filter((p) => p.startsWith("img/"))).toEqual([]);
+    expect(db.calls.filter((p) => p.startsWith("thumb/")).length).toBe(3);
+    expect(await fs.readFile(path.join(out, "img/pb-1.cc.webp"), "utf8")).toBe("cdn img/pb-1.cc.webp");
   });
 
   it("refuses paths that could escape the folder", async () => {

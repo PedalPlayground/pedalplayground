@@ -41,6 +41,18 @@ const savedFeed = (): Feed => {
   }
 };
 
+/** Opens Add Gear on its New list (the "new pedals added" posts in What's new link here). */
+export function showNewGear() {
+  try {
+    localStorage.setItem(FEED_KEY, "new");
+  } catch {
+    /* storage unavailable */
+  }
+  // Close first so an open panel remounts and picks up the New list.
+  useUi.getState().setSearchOpen(false);
+  requestAnimationFrame(() => useUi.getState().setSearchOpen(true));
+}
+
 /** One catalog product with its kind, so pedals and pedalboards can share a list. */
 interface Entry {
   /** Unique within the list, for React keys. Names alone aren't: the catalog has a few repeated entries. */

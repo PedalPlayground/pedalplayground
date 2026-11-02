@@ -3,6 +3,7 @@
  * (their own, or a player's) and approve it with approve_catalog_submission(), which records who approved it.
  * Adding a pedal directly or fixing a live one is the same thing with the queue skipped.
  */
+import type { Post } from "./announcements";
 import type { Fields } from "./editorChecks";
 import { supabase } from "./supabase";
 
@@ -194,4 +195,44 @@ export async function publish(): Promise<string | null> {
     }
   }
   return error.message || "Couldn't start the publish.";
+}
+
+// ---- What's New posts (announcements table) ----
+
+/** The editor form's values; empty strings mean "not set". `published_at` is a datetime-local value. */
+export interface PostDraft {
+  title: string;
+  body: string;
+  link_url: string;
+  link_label: string;
+  published_at: string;
+}
+
+/** All posts, scheduled ones included (editors can see them), newest first. */
+export async function listPosts(): Promise<Post[]> {
+  const { data, error } = await db()
+    .from("announcements")
+    .select("id,title,body,link_url,link_label,published_at")
+    .order("published_at", { ascending: false })
+    .limit(100);
+  fail(error);
+  return (data ?? []) as Post[];
+}
+
+/** Creates a post (id null) or updates one. */
+export async function savePost(id: string | null, d: PostDraft): Promise<void> {
+  const row = {
+    title: d.title.trim(),
+    body: d.body.trim(),
+    link_url: d.link_url.trim() || null,
+    link_label: d.link_label.trim() || null,
+    ...(d.published_at ? { published_at: new Date(d.published_at).toISOString() } : id ? {} : { published_at: new Date().toISOString() }),
+  };
+  const { error } = id ? await db().from("announcements").update(row).eq("id", id) : await db().from("announcements").insert(row);
+  fail(error);
+}
+
+export async function deletePost(id: string): Promise<void> {
+  const { error } = await db().from("announcements").delete().eq("id", id);
+  fail(error);
 }
