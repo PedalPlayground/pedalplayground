@@ -130,7 +130,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
   };
 
   return (
-    <Modal title="Edit Playground" onClose={onClose}>
+    <Modal title="Playground Settings" onClose={onClose}>
       <label className="mb-1 block text-xs text-ink-muted" htmlFor="pg-name">
         Name
       </label>

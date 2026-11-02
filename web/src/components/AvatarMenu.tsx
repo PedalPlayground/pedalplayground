@@ -2,7 +2,6 @@ import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { tip } from "./Tooltip";
 import { ChevronDown } from "lucide-react";
 import { openBillingPortal } from "../lib/billing";
-import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useUi } from "../store/ui";
@@ -12,11 +11,9 @@ import { PedalAvatar } from "./PedalAvatar";
 /** Signed-in users only: avatar (a pedal of their choice, 24px) with a chevron; opens the account menu. */
 export function AvatarMenu({
   onAccount,
-  onPlaygrounds,
   onChangeAvatar,
 }: {
   onAccount: () => void;
-  onPlaygrounds: () => void;
   onChangeAvatar: () => void;
 }) {
   const { user, signOut } = useAuth();
@@ -57,12 +54,6 @@ export function AvatarMenu({
               </Dropdown.Item>
             )
           )}
-          <Dropdown.Item className={menuItem} onSelect={onPlaygrounds}>
-            Playgrounds
-          </Dropdown.Item>
-          <Dropdown.Item className={menuItem} onSelect={requestNewPlayground}>
-            New Playground
-          </Dropdown.Item>
           <Dropdown.Item className={menuItem} onSelect={onChangeAvatar}>
             Change Avatar…
           </Dropdown.Item>

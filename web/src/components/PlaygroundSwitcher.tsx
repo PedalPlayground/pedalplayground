@@ -1,7 +1,7 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { useRef, useState } from "react";
 import { tip } from "./Tooltip";
-import { ArrowLeft, ChevronDown, Copy, Pencil, Plus, LogIn, RotateCcw } from "lucide-react";
+import { ArrowLeft, ChevronDown, Copy, LayoutGrid, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
 import type { PlaygroundSummary } from "../lib/cloud";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
@@ -13,7 +13,7 @@ import { useUi } from "../store/ui";
 const item =
   "flex cursor-pointer select-none items-center gap-3 rounded-control px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
-type MenuProps = { onEdit: (target?: PlaygroundSummary) => void; onSignIn: () => void };
+type MenuProps = { onEdit: (target?: PlaygroundSummary) => void; onSignIn: () => void; onPlaygrounds: () => void };
 
 const cardAction =
   "grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/10 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
@@ -25,14 +25,15 @@ function edited(iso: string) {
   return `Edited ${d.toLocaleDateString(undefined, { month: "short", day: "numeric", ...(sameYear ? {} : { year: "numeric" }) })}`;
 }
 
-/** The playground menu: the user's playgrounds as cards (open, edit) and new; for guests, Start Fresh and Sign In to Save. */
-function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onCloseAutoFocus: (e: Event) => void }) {
+/**
+ * The board hub: New Playground, the user's playgrounds as cards (open, settings), All Playgrounds and Playground Settings.
+ * Guests have New Playground and Sign In to Save.
+ */
+function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: MenuProps & { onCloseAutoFocus: (e: Event) => void }) {
   const user = useAuth((s) => s.user);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const { list, cloudId, openPlayground } = useCloud();
   const cards = user ? list.slice(0, 6) : [];
-  // The open playground has its own card when it's saved; otherwise edit it from the top item.
-  const openHasCard = cards.some((p) => p.id === cloudId);
   const empty = usePlayground((s) => s.items.length === 0);
 
   // Guests have one board on this device: they can start it over, or sign in to save it.
@@ -48,8 +49,8 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
           className="animate-menu z-50 w-60 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
         >
           <Dropdown.Item disabled={empty} className={`${item} data-[disabled]:cursor-default data-[disabled]:opacity-40`} onSelect={requestNewPlayground}>
-            <RotateCcw size={14} />
-            Start Fresh
+            <Plus size={14} />
+            New Playground
           </Dropdown.Item>
           {cloudEnabled && (
             <>
@@ -75,14 +76,11 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
         onCloseAutoFocus={onCloseAutoFocus}
         className="animate-menu z-50 w-80 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
       >
-        {!openHasCard && (
-          <>
-            <Dropdown.Item className={item} onSelect={() => onEdit()}>
-              Edit Playground…
-            </Dropdown.Item>
-            <Dropdown.Separator className="my-1 h-px bg-line" />
-          </>
-        )}
+        <Dropdown.Item className={item} onSelect={requestNewPlayground}>
+          <Plus size={14} />
+          New Playground
+        </Dropdown.Item>
+        <Dropdown.Separator className="my-1 h-px bg-line" />
         {cards.length > 0 && (
           <>
             <Dropdown.Label className="px-2 pb-1.5 pt-1 text-xs text-ink-muted">Your Playgrounds</Dropdown.Label>
@@ -112,8 +110,8 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
                     </span>
                     {/* Its own click: don't also open the playground. */}
                     <button
-                      aria-label={`Edit ${p.name}`}
-                      {...tip("Edit")}
+                      aria-label={`Settings for ${p.name}`}
+                      {...tip("Playground Settings")}
                       onClick={(e) => {
                         e.stopPropagation();
                         onEdit(p);
@@ -126,12 +124,16 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
                 );
               })}
             </div>
-            <Dropdown.Separator className="my-1 h-px bg-line" />
           </>
         )}
-        <Dropdown.Item className={item} onSelect={requestNewPlayground}>
-          <Plus size={14} />
-          New Playground
+        <Dropdown.Item className={item} onSelect={onPlaygrounds}>
+          <LayoutList size={14} />
+          All Playgrounds…
+        </Dropdown.Item>
+        <Dropdown.Separator className="my-1 h-px bg-line" />
+        <Dropdown.Item className={item} onSelect={() => onEdit()}>
+          <Settings2 size={14} />
+          Playground Settings…
         </Dropdown.Item>
       </Dropdown.Content>
     </Dropdown.Portal>
@@ -183,6 +185,10 @@ function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn
               {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
             </Dropdown.Item>
             <Dropdown.Separator className="my-1 h-px bg-line" />
+            <Dropdown.Item className={item} onSelect={() => window.location.assign("/gallery/")}>
+              <LayoutGrid size={14} />
+              Back to Gallery
+            </Dropdown.Item>
             <Dropdown.Item className={item} onSelect={leaveShared}>
               <ArrowLeft size={14} />
               Back to My Playground
@@ -200,11 +206,11 @@ export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & {
   return viewing ? <SharedBreadcrumb className={className} onSignIn={props.onSignIn} /> : <OwnBreadcrumb className={className} {...props} />;
 }
 
-function OwnBreadcrumb({ className, onEdit, onSignIn }: MenuProps & { className: string }) {
+function OwnBreadcrumb({ className, onEdit, onSignIn, onPlaygrounds }: MenuProps & { className: string }) {
   const name = usePlayground((s) => s.name);
   const [open, setOpen] = useState(false);
   /**
-   * The dialog to open once the menu has closed (Edit Playground or Sign In). It opens only then: opened sooner, the menu's focus trap and
+   * The dialog to open once the menu has closed (Playground Settings, All Playgrounds or Sign In). It opens only then: opened sooner, the menu's focus trap and
    * focus return pull focus out of the dialog's name field. `null` means nothing to open.
    */
   const pending = useRef<{ open: () => void } | null>(null);
@@ -212,6 +218,7 @@ function OwnBreadcrumb({ className, onEdit, onSignIn }: MenuProps & { className:
     <div className={`flex min-w-0 items-center text-sm/4 font-semibold tracking-[-0.01em] ${className}`}>
       <Dropdown.Root open={open} onOpenChange={setOpen}>
         <Dropdown.Trigger
+          data-tour="playgrounds"
           aria-label={`Playground: ${name}`}
           className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
         >
@@ -227,6 +234,10 @@ function OwnBreadcrumb({ className, onEdit, onSignIn }: MenuProps & { className:
             pending.current = { open: onSignIn };
             setOpen(false);
           }}
+          onPlaygrounds={() => {
+            pending.current = { open: onPlaygrounds };
+            setOpen(false);
+          }}
           onCloseAutoFocus={(e) => {
             if (!pending.current) return;
             e.preventDefault();
@@ -236,6 +247,41 @@ function OwnBreadcrumb({ className, onEdit, onSignIn }: MenuProps & { className:
           }}
         />
       </Dropdown.Root>
+    </div>
+  );
+}
+
+/** Over the canvas while someone else's board is viewed: whose it is, Create a Copy and Back to Gallery, so there's always a way on. */
+export function ViewingBar({ onSignIn }: { onSignIn: () => void }) {
+  const viewing = useUi((u) => u.viewing);
+  const openUpgrade = useUi((u) => u.openUpgrade);
+  const user = useAuth((s) => s.user);
+  const { billingEnabled, entitlements } = useBilling();
+  const copyShared = useCloud((c) => c.copyShared);
+  if (!viewing) return null;
+  const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
+  const createCopy = () => {
+    if (!user) onSignIn();
+    else if (!canCopy) openUpgrade("copy");
+    else copyShared();
+  };
+  const button = "flex h-7 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-[13px] font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand";
+  return (
+    <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center px-3">
+      <div className="pointer-events-auto flex max-w-full items-center gap-1 rounded-full bg-surface py-1 pl-3.5 pr-1 shadow-panel">
+        <span className="min-w-0 truncate text-[13px] text-ink-muted">
+          {viewing.ownerName ? `${viewing.ownerName}'s board` : "A shared board"}
+        </span>
+        <button type="button" onClick={createCopy} className={`${button} text-ink hover:bg-surface-hover`}>
+          <Copy size={13} strokeWidth={2.25} />
+          <span className="max-sm:hidden">Create a</span> Copy
+          {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
+        </button>
+        <a href="/gallery/" className={`${button} btn-primary`}>
+          <LayoutGrid size={13} strokeWidth={2.25} />
+          <span className="max-sm:hidden">Back to</span> Gallery
+        </a>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Copy, Heart, Info, Pencil, Trash2, X } from "lucide-react";
+import { Copy, Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { create } from "zustand";
 import {
@@ -29,7 +29,9 @@ interface PanelState {
   /** Owner only: comments from others they haven't seen. */
   unseen: number;
   setUnseen: (n: number) => void;
-  /** Bumped when the board's settings change elsewhere (the Edit Playground dialog), so the panel reloads. */
+  /** Comments on the board, shown on the header button; null when it has no comments section (not in the gallery). */
+  count: number | null;
+  /** Bumped when the board's settings change elsewhere (the Playground Settings dialog), so the panel reloads. */
   version: number;
   refresh: () => void;
 }
@@ -63,13 +65,14 @@ export const useBoardPanel = create<PanelState>((set) => ({
   },
   unseen: 0,
   setUnseen: (unseen) => set({ unseen }),
+  count: null,
   version: 0,
   refresh: () => set((s) => ({ version: s.version + 1 })),
 }));
 
 /**
  * The board the panel is about: a shared board being viewed, or your own board once it's shared.
- * Private boards have no panel; their settings are in the Edit Playground dialog.
+ * Private boards have no panel; their settings are in the Playground Settings dialog.
  */
 function usePanelTarget(): { id: string | null; viewing: boolean } {
   const viewingId = useUi((u) => u.viewing?.id ?? null);
@@ -82,58 +85,53 @@ function usePanelTarget(): { id: string | null; viewing: boolean } {
 const field =
   "w-full rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted/70 focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
 
-/** Header button next to the board name: opens the board panel, with a count of new comments on your own board. */
+/** Header button next to the board name: opens the board panel. Shows the comment count, and new comments on your own board. */
 export function BoardInfoButton() {
   const { id, viewing } = usePanelTarget();
-  const { open, setOpen, unseen, setUnseen } = useBoardPanel();
+  const { open, setOpen, unseen, count } = useBoardPanel();
 
-  // Someone's gallery board on a larger screen: show the column, so its description and comments are there.
+  // Load the counts when the board changes, and for your own board when you come back to the tab.
+  // Someone's gallery board on a larger screen also opens the column, so its description and comments are there.
   useEffect(() => {
-    if (!id || !viewing || !isWide() || useBoardPanel.getState().open) return;
-    fetchBoardPanel(id).then(
-      (p) => p?.in_gallery && useBoardPanel.setState({ open: true }),
-      () => undefined,
-    );
-  }, [id, viewing]);
-
-  // Your own board: check for new comments when it opens and when you come back to the tab.
-  useEffect(() => {
-    setUnseen(0);
-    if (!id || viewing) return;
+    useBoardPanel.setState({ unseen: 0, count: null });
+    if (!id) return;
+    let first = true;
     const check = () =>
       fetchBoardPanel(id).then(
-        (p) => setUnseen(p?.new_comments ?? 0),
+        (p) => {
+          useBoardPanel.setState({ unseen: viewing ? 0 : (p?.new_comments ?? 0), count: p?.in_gallery ? p.comment_count : null });
+          if (first && viewing && p?.in_gallery && isWide()) useBoardPanel.setState({ open: true });
+          first = false;
+        },
         () => undefined,
       );
     void check();
+    if (viewing) return;
     window.addEventListener("focus", check);
     return () => window.removeEventListener("focus", check);
-  }, [id, viewing, setUnseen]);
+  }, [id, viewing]);
 
   if (!id) return null;
-  const name = "Board info and comments";
+  const label = count === null ? "Board info" : `Board info and ${count} ${count === 1 ? "comment" : "comments"}${unseen ? `, ${unseen} new` : ""}`;
   return (
     <button
       type="button"
       onClick={() => setOpen(!open)}
-      aria-label={unseen ? `${name}, ${unseen} new ${unseen === 1 ? "comment" : "comments"}` : name}
+      aria-label={label}
       aria-pressed={open}
-      {...tip("Info & Comments", { side: "bottom" })}
-      className={`press relative grid size-7 shrink-0 place-items-center rounded-control outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${open ? "bg-brand/10 text-brand" : "text-icon-solo hover:bg-ink/5 hover:text-ink"}`}
+      {...tip(count === null ? "Board Info" : "Info & Comments", { side: "bottom" })}
+      className={`press relative flex h-7 shrink-0 items-center gap-1 rounded-control px-1.5 text-[13px] font-semibold tabular-nums outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${open ? "bg-brand/10 text-brand" : "text-icon-solo hover:bg-ink/5 hover:text-ink"}`}
     >
-      <Info size={16} strokeWidth={2.25} />
-      {unseen > 0 && (
-        <span className="absolute -right-1 -top-1 grid h-4 min-w-4 place-items-center rounded-full bg-brand px-1 text-[10px] font-bold text-brand-ink">
-          {unseen > 9 ? "9+" : unseen}
-        </span>
-      )}
+      <MessageSquare size={16} strokeWidth={2.25} />
+      {!!count && <span>{count}</span>}
+      {unseen > 0 && <span aria-hidden className="absolute -right-0.5 -top-0.5 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
     </button>
   );
 }
 
 /**
  * How a shared or gallery board reads: a summary (owner, type, description, likes) and its comments.
- * The same view for your own shared board, plus an Edit button for the Edit Playground dialog.
+ * The same view for your own shared board, plus an Edit button for the Playground Settings dialog.
  * A column left of the canvas on larger screens, a sheet on phones.
  */
 export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit: () => void }) {
@@ -152,6 +150,7 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
     try {
       const p = await fetchBoardPanel(id);
       setInfo(p);
+      useBoardPanel.setState({ count: p?.in_gallery ? p.comment_count : null });
       setComments(p && (p.comments_open || (p.is_owner && p.in_gallery)) ? await fetchComments(id) : []);
     } catch {
       setFailed(true);
@@ -227,8 +226,8 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
           <button
             type="button"
             onClick={onEdit}
-            aria-label="Edit Playground"
-            {...tip("Edit Playground", { side: "bottom" })}
+            aria-label="Playground Settings"
+            {...tip("Playground Settings", { side: "bottom" })}
             className="grid size-8 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
           >
             <Pencil size={15} />
@@ -360,7 +359,7 @@ function Social({
           <p className="mt-4 border-t border-line pt-4 text-[13px] text-ink-muted">
             Shared by link. Add it to the Public Gallery (
             <button type="button" onClick={onEdit} className="font-semibold text-brand">
-              Edit Playground
+              Playground Settings
             </button>
             ) for likes and comments.
           </p>

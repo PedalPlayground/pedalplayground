@@ -37,7 +37,7 @@ gallery board reads. It shows a summary (owner, type, pedal count, description, 
 screens it's a column left of the canvas that stays open or closed as you left it (and opens by itself for someone
 else's gallery board); on phones it's a sheet.
 
-Board settings stay in the **Edit Playground** dialog (`EditPlaygroundDialog.tsx`): name, type, genres, description,
+Board settings stay in the **Playground Settings** dialog (`EditPlaygroundDialog.tsx`): name, type, genres, description,
 share link, Show in Public Gallery, Allow Comments and Delete. Trav's call, 2026-11-02: for a while the dialog was
 merged into the panel, but keeping settings in the dialog and the panel read-only was clearer.
 
@@ -52,3 +52,10 @@ merged into the panel, but keeping settings in the dialog and the panel read-onl
   an editor hiding it hides its comments; they come back with it. Deleting a board or an account deletes them.
 - Database: `supabase/migrations/20261031154422_board_comments.sql` (`board_comments` table, `board_panel()`,
   `board_comments_list()`, `board_comment_add()`, `board_comment_delete()`, `board_comments_seen()`).
+
+## Navigation (2026-11-02)
+
+Plan: https://claude.ai/artifact/MsKYwJCNh9zf75mr7dScBK. Build and Gallery tabs sit next to the logo on both pages
+(`SiteTabs.tsx`). The board name's menu is the board hub: New Playground, your playgrounds, All Playgrounds and
+Playground Settings. The canvas cog is Preferences, with a Help group. The header button beside the board name is a
+comments button with a count. Someone else's board shows a bar over the canvas with Create a Copy and Back to Gallery.

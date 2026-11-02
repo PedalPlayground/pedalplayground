@@ -13,10 +13,11 @@ import { AvatarDialog } from "./components/AvatarDialog";
 import { AvatarMenu } from "./components/AvatarMenu";
 import { SettingsMenu } from "./components/SettingsMenu";
 import { Logo } from "./components/Logo";
+import { SiteTabs } from "./components/SiteTabs";
 import { MadeBy } from "./components/MadeBy";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
-import { PlaygroundBreadcrumb } from "./components/PlaygroundSwitcher";
+import { PlaygroundBreadcrumb, ViewingBar } from "./components/PlaygroundSwitcher";
 import { NewPlaygroundDialog } from "./components/NewPlaygroundDialog";
 import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
 import type { PlaygroundSummary } from "./lib/cloud";
@@ -163,17 +164,20 @@ export function App() {
           Safe-area padding keeps it clear of notches and rounded corners. */}
       <header className="box-content grid h-10 shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-chrome-line bg-chrome pl-[max(0.75rem,env(safe-area-inset-left))] pr-[max(0.75rem,env(safe-area-inset-right))] pt-[max(env(safe-area-inset-top),var(--pwa-strip))] sm:grid-cols-[1fr_auto_1fr] sm:gap-4 sm:pl-[max(1rem,env(safe-area-inset-left))] sm:pr-[max(1rem,env(safe-area-inset-right))]">
         <div className="flex min-w-0 items-center gap-2">
-          {/* The same wordmark as the gallery header. */}
+          {/* The same wordmark and tabs as the gallery header. */}
           <h1 className="flex shrink-0 items-center gap-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink">
-            {/* Icon only until there's room beside the centered board name. */}
-            <Logo fullFrom="lg" />
+            <a href="/" aria-label="Pedal Playground" className="rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand">
+              {/* Icon only until there's room beside the centered board name. */}
+              <Logo fullFrom="lg" />
+            </a>
             {pro && <span className="text-brand-top max-sm:hidden">Pro</span>}
           </h1>
+          <SiteTabs current="build" />
           {BETA && (
             <>
-              <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand max-sm:hidden">Beta</span>
+              <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand max-lg:hidden">Beta</span>
               {FEEDBACK_URL && (
-                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="truncate text-xs text-ink-muted hover:text-ink hover:underline max-sm:hidden">
+                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="truncate text-xs text-ink-muted hover:text-ink hover:underline max-xl:hidden">
                   Send Feedback
                 </a>
               )}
@@ -185,6 +189,7 @@ export function App() {
             className="min-w-0"
             onEdit={editPlayground}
             onSignIn={() => setDialog("account")}
+            onPlaygrounds={() => setDialog("playgrounds")}
           />
           <BoardInfoButton />
         </div>
@@ -202,7 +207,6 @@ export function App() {
           {user ? (
             <AvatarMenu
               onAccount={() => setDialog("account")}
-              onPlaygrounds={() => setDialog("playgrounds")}
               onChangeAvatar={() => setDialog("avatar")}
             />
           ) : (
@@ -224,6 +228,7 @@ export function App() {
 
         <main data-tour="canvas" className="relative flex-1 overflow-clip bg-canvas">
           <Canvas />
+          {!covered && <ViewingBar onSignIn={() => setDialog("account")} />}
           {/* The other modes cover the canvas; the canvas stays mounted so the view is kept for coming back. */}
           {mode === "list" ? (
             <EquipmentList />

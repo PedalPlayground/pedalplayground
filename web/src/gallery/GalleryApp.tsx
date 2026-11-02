@@ -1,6 +1,7 @@
 import { Heart, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Logo } from "../components/Logo";
+import { SiteTabs } from "../components/SiteTabs";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { isEditor } from "../lib/editorApi";
 import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
@@ -122,9 +123,7 @@ export function GalleryApp() {
           <a href="/" aria-label="Pedal Playground" className="shrink-0">
             <Logo />
           </a>
-          <a href="/" className="btn-primary ml-auto inline-flex h-9 items-center rounded-control px-3 text-sm">
-            Open Playground
-          </a>
+          <SiteTabs current="gallery" />
         </div>
       </header>
 
