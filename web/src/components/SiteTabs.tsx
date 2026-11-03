@@ -17,7 +17,7 @@ export function PedalboardIcon({ size = 24, strokeWidth = 2, className }: Lucide
   );
 }
 
-/** One look for Builds, Explore and Updates: an icon and a label (icons only below laptop width). */
+/** One look for Explore, My Playgrounds and Updates: an icon and a label (icons only below laptop width). */
 export function tabClass(here: boolean) {
   return `press relative flex h-9 shrink-0 items-center gap-2 rounded-[4px] p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     here ? "bg-ink/[0.06]" : "hover:bg-ink/5 data-[state=open]:bg-ink/5"
@@ -27,22 +27,22 @@ export const tabIcon = { size: 18, strokeWidth: 2 } as const;
 export const tabLabel = "max-lg:sr-only";
 
 /**
- * Builds, Explore, Updates. `builds` is the playground's board menu; elsewhere Builds is a link to the playground.
+ * Explore, then My Playgrounds. `builds` is the playground's board menu; elsewhere it's a link to the playground.
  * Explore is marked on the gallery page.
  */
 export function SiteTabs({ current, builds, after }: { current: "build" | "gallery" | null; builds?: ReactNode; after?: ReactNode }) {
   return (
     <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-1 sm:gap-2">
-      {builds ?? (
-        <a href="/" className={tabClass(false)}>
-          <PedalboardIcon {...tabIcon} className="text-ink-muted" />
-          <span className={tabLabel}>Builds</span>
-        </a>
-      )}
       <a href="/gallery/" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
         <LayoutGrid {...tabIcon} fill="currentColor" className="text-ink-muted" />
         <span className={tabLabel}>Explore</span>
       </a>
+      {builds ?? (
+        <a href="/" className={tabClass(false)}>
+          <PedalboardIcon {...tabIcon} className="text-ink-muted" />
+          <span className={tabLabel}>My Playgrounds</span>
+        </a>
+      )}
       {after}
     </nav>
   );
@@ -52,7 +52,7 @@ const section = "flex shrink-0 items-center";
 
 
 /**
- * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Builds, Explore
+ * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Explore, My Playgrounds
  * and Updates tabs at the right; then the account section behind a thin divider.
  */
 export function SiteHeader({

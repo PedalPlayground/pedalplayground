@@ -142,7 +142,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
 }
 
 /**
- * The Builds tab: your playgrounds' menu (New Playground, your boards, All Playgrounds, Playground Settings), styled like
+ * The My Playgrounds tab: your playgrounds' menu (New Playground, your boards, All Playgrounds, Playground Settings), styled like
  * the Explore and Updates tabs beside it.
  */
 export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds }: MenuProps) {
@@ -154,9 +154,9 @@ export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds }: MenuProps) {
   const pending = useRef<{ open: () => void } | null>(null);
   return (
     <Dropdown.Root open={open} onOpenChange={setOpen}>
-      <Dropdown.Trigger data-tour="playgrounds" aria-label="Builds" className={tabClass(false)}>
+      <Dropdown.Trigger data-tour="playgrounds" aria-label="My Playgrounds" className={tabClass(false)}>
         <PedalboardIcon {...tabIcon} className="text-ink-muted" />
-        <span className={tabLabel}>Builds</span>
+        <span className={tabLabel}>My Playgrounds</span>
         <ChevronDown size={12} strokeWidth={2.5} className="-ml-0.5 shrink-0 text-ink-muted" />
       </Dropdown.Trigger>
       <MenuContent
