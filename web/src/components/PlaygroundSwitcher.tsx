@@ -222,15 +222,17 @@ function OwnBreadcrumb({ className, onEdit, onSignIn, onPlaygrounds }: MenuProps
   );
 }
 
-/** Phones only, over the canvas while someone else's board is viewed: whose it is and the way back to the gallery. */
+/** Phones only, over the canvas while someone else's board is viewed: its name and owner, and the way back to the gallery. */
 export function ViewingBar() {
   const viewing = useUi((u) => u.viewing);
   if (!viewing) return null;
   return (
     <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center px-3 sm:hidden">
       <div className="pointer-events-auto flex max-w-full items-center gap-1 rounded-full bg-surface py-1 pl-3.5 pr-1 shadow-panel">
-        <span className="min-w-0 truncate text-[13px] text-ink-muted">
-          {viewing.ownerName ? `${viewing.ownerName}'s board` : "A shared board"}
+        {/* The header has Create a Copy in place of the name, so phones see the name here. */}
+        <span className="min-w-0 truncate text-[13px]">
+          <span className="font-semibold text-ink">{viewing.name}</span>
+          {viewing.ownerName && <span className="text-ink-muted"> by {viewing.ownerName}</span>}
         </span>
         <a
           href="/gallery/"
