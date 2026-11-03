@@ -147,6 +147,8 @@ const boxAt = {
   canvas: `${boxBase} h-10 max-w-[calc(100%-5.5rem)] shadow-[0_0_6px_rgb(0_0_0/0.05)]`,
 };
 type Placement = keyof typeof boxAt;
+const plainTrigger =
+  "flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand";
 const boxIcon =
   "relative z-10 grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/5 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
 /** Where the box sits: the canvas's top-left corner. */
@@ -162,11 +164,16 @@ export function BoardSelect({ comments, placement, ...props }: MenuProps & { com
   const opening = useUi((u) => u.openingShared);
   if (opening) return null;
   const box = boxAt[placement];
-  const inner = viewing ? <SharedBox box={box} comments={comments} onSignIn={props.onSignIn} /> : <OwnBox box={box} comments={comments} {...props} />;
-  return placement === "canvas" ? <div className={`${corner} sm:hidden`}>{inner}</div> : <div className="flex min-w-40 max-sm:hidden">{inner}</div>;
+  const plain = placement === "header";
+  const inner = viewing ? (
+    <SharedBox box={box} plain={plain} comments={comments} onSignIn={props.onSignIn} />
+  ) : (
+    <OwnBox box={box} plain={plain} comments={comments} {...props} />
+  );
+  return placement === "canvas" ? <div className={`${corner} sm:hidden`}>{inner}</div> : <div className="flex min-w-0 max-sm:hidden">{inner}</div>;
 }
 
-function SharedBox({ box, comments, onSignIn }: { box: string; comments?: ReactNode; onSignIn: () => void }) {
+function SharedBox({ box, plain, comments, onSignIn }: { box: string; plain: boolean; comments?: ReactNode; onSignIn: () => void }) {
   const viewing = useUi((u) => u.viewing);
   const openUpgrade = useUi((u) => u.openUpgrade);
   const user = useAuth((s) => s.user);
@@ -179,6 +186,15 @@ function SharedBox({ box, comments, onSignIn }: { box: string; comments?: ReactN
     else if (!canCopy) openUpgrade("copy");
     else copyShared();
   };
+  // The header (larger screens, where the side panel has the name): Create a Copy as plain text.
+  if (plain)
+    return (
+      <button type="button" onClick={createCopy} className={plainTrigger}>
+        <Copy size={14} strokeWidth={2.25} className="shrink-0" />
+        <span className="truncate">Create a Copy</span>
+        {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
+      </button>
+    );
   return (
     // Larger screens have the name in the pinned side panel, so the box is just Copy there.
     <div className={`${box} pr-1.5 sm:w-auto`}>
@@ -202,7 +218,7 @@ function SharedBox({ box, comments, onSignIn }: { box: string; comments?: ReactN
   );
 }
 
-function OwnBox({ box, comments, onEdit, onSignIn, onPlaygrounds }: MenuProps & { box: string; comments?: ReactNode }) {
+function OwnBox({ box, plain, comments, onEdit, onSignIn, onPlaygrounds }: MenuProps & { box: string; plain: boolean; comments?: ReactNode }) {
   const name = usePlayground((s) => s.name);
   const user = useAuth((s) => s.user);
   const [open, setOpen] = useState(false);
@@ -213,24 +229,35 @@ function OwnBox({ box, comments, onEdit, onSignIn, onPlaygrounds }: MenuProps & 
   const pending = useRef<{ open: () => void } | null>(null);
   return (
     <Dropdown.Root open={open} onOpenChange={setOpen}>
-      <div className={`${box} ${open ? "border-brand/40" : ""}`}>
-        {/* The whole box opens the menu; the buttons inside sit above this. */}
-        <Dropdown.Trigger
-          data-tour="playgrounds"
-          aria-label={`Playground: ${name}`}
-          className="absolute inset-0 rounded-[5px] outline-none transition-colors hover:bg-ink/[0.03] focus-visible:ring-2 focus-visible:ring-brand"
-        />
-        <span className="pointer-events-none relative min-w-0 flex-1 truncate">{name}</span>
-        {comments && <span className="relative z-10 flex">{comments}</span>}
-        {user && (
-          <button type="button" onClick={() => onEdit()} aria-label="Playground Settings" {...tip("Playground Settings", { side: "bottom" })} className={boxIcon}>
-            <Settings size={16} strokeWidth={2} />
-          </button>
-        )}
-        <span aria-hidden className="pointer-events-none relative grid h-full w-8 shrink-0 place-items-center border-l border-line text-ink-muted">
-          <ChevronDown size={16} strokeWidth={2.25} />
+      {plain ? (
+        // The header: the name and a caret, as plain text (Playground Settings is in the menu).
+        <span className="flex min-w-0 items-center gap-1">
+          <Dropdown.Trigger data-tour="playgrounds" aria-label={`Playground: ${name}`} className={`${plainTrigger} data-[state=open]:bg-ink/5`}>
+            <span className="truncate">{name}</span>
+            <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
+          </Dropdown.Trigger>
+          {comments}
         </span>
-      </div>
+      ) : (
+        <div className={`${box} ${open ? "border-brand/40" : ""}`}>
+          {/* The whole box opens the menu; the buttons inside sit above this. */}
+          <Dropdown.Trigger
+            data-tour="playgrounds"
+            aria-label={`Playground: ${name}`}
+            className="absolute inset-0 rounded-[5px] outline-none transition-colors hover:bg-ink/[0.03] focus-visible:ring-2 focus-visible:ring-brand"
+          />
+          <span className="pointer-events-none relative min-w-0 flex-1 truncate">{name}</span>
+          {comments && <span className="relative z-10 flex">{comments}</span>}
+          {user && (
+            <button type="button" onClick={() => onEdit()} aria-label="Playground Settings" {...tip("Playground Settings", { side: "bottom" })} className={boxIcon}>
+              <Settings size={16} strokeWidth={2} />
+            </button>
+          )}
+          <span aria-hidden className="pointer-events-none relative grid h-full w-8 shrink-0 place-items-center border-l border-line text-ink-muted">
+            <ChevronDown size={16} strokeWidth={2.25} />
+          </span>
+        </div>
+      )}
       <MenuContent
         onEdit={(target) => {
           pending.current = { open: () => onEdit(target) };
