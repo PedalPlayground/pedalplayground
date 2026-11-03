@@ -76,8 +76,8 @@ export function Brand() {
         </span>
       </span>
       <span className="font-wordmark whitespace-nowrap text-base/[14px] uppercase tracking-[-0.01em] text-ink max-lg:hidden">
-        <span className="block font-extrabold">Pedal</span>
-        <span className="block font-semibold">Playground</span>
+        <span className="block font-semibold">Pedal</span>
+        <span className="block font-extrabold">Playground</span>
       </span>
     </span>
   );

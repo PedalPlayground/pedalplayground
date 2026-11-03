@@ -45,7 +45,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, bill
   if (cloudEnabled) {
     steps.push(
       signedIn
-        ? { target: "playgrounds", title: "Your Playgrounds", body: "Everything you build saves to your account. Click the board's name to switch boards, start a new one or change its settings." }
+        ? { target: "playgrounds", title: "Your Playgrounds", body: "Everything you build saves to your account. Open Builds to switch boards, start a new one or change its settings." }
         : {
             target: "account",
             title: "Save Your Work",

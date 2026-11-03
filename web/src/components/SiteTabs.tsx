@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Brand } from "./Logo";
 
 /** Two pedals (a knob up top, a footswitch low) on a board, drawn like the lucide icons beside it. */
-function PedalboardIcon({ size = 24, strokeWidth = 2, className }: LucideProps) {
+export function PedalboardIcon({ size = 24, strokeWidth = 2, className }: LucideProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
       <rect x="2" y="17" width="20" height="4.5" rx="1.5" />
@@ -17,33 +17,32 @@ function PedalboardIcon({ size = 24, strokeWidth = 2, className }: LucideProps) 
   );
 }
 
-const TABS = [
-  { id: "gallery", href: "/gallery/", label: "Explore", Icon: LayoutGrid },
-  { id: "build", href: "/", label: "Build", Icon: PedalboardIcon },
-] as const;
-
-/** One look for Explore, Build and Updates: an icon and a label (icons only below laptop width, so the board picker keeps its room). */
+/** One look for Builds, Explore and Updates: an icon and a label (icons only below laptop width). */
 export function tabClass(here: boolean) {
-  return `press relative flex h-8 shrink-0 items-center gap-1.5 rounded-[4px] px-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+  return `press relative flex h-9 shrink-0 items-center gap-2 rounded-[4px] p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     here ? "bg-ink/[0.06]" : "hover:bg-ink/5 data-[state=open]:bg-ink/5"
   }`;
 }
-export const tabIcon = { size: 16, strokeWidth: 2 } as const;
+export const tabIcon = { size: 18, strokeWidth: 2 } as const;
 export const tabLabel = "max-lg:sr-only";
 
-/** "Explore · Build", then `after` (Updates) in the same group. `current` null: neither is marked (someone else's board). */
-export function SiteTabs({ current, after }: { current: "build" | "gallery" | null; after?: ReactNode }) {
+/**
+ * Builds, Explore, Updates. `builds` is the playground's board menu; elsewhere Builds is a link to the playground.
+ * Explore is marked on the gallery page.
+ */
+export function SiteTabs({ current, builds, after }: { current: "build" | "gallery" | null; builds?: ReactNode; after?: ReactNode }) {
   return (
     <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-1 sm:gap-2">
-      {TABS.map(({ id, href, label, Icon }) => {
-        const here = id === current;
-        return (
-          <a key={id} href={href} aria-current={here ? "page" : undefined} className={tabClass(here)}>
-            <Icon {...tabIcon} className="text-ink-muted" />
-            <span className={tabLabel}>{label}</span>
-          </a>
-        );
-      })}
+      {builds ?? (
+        <a href="/" className={tabClass(false)}>
+          <PedalboardIcon {...tabIcon} className="text-ink-muted" />
+          <span className={tabLabel}>Builds</span>
+        </a>
+      )}
+      <a href="/gallery/" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
+        <LayoutGrid {...tabIcon} className="text-ink-muted" />
+        <span className={tabLabel}>Explore</span>
+      </a>
       {after}
     </nav>
   );
@@ -51,12 +50,14 @@ export function SiteTabs({ current, after }: { current: "build" | "gallery" | nu
 
 const section = "flex shrink-0 items-center";
 
+
 /**
- * The header on every page: the brand, then `nav` (the board picker), then at the right `navEnd` (save status) and the
- * Explore, Build and Updates tabs, then the account buttons. Thin lines divide the three parts.
+ * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Builds, Explore
+ * and Updates tabs at the right; then the account section behind a thin divider.
  */
 export function SiteHeader({
   current,
+  builds,
   updates,
   brandExtra,
   nav,
@@ -65,6 +66,7 @@ export function SiteHeader({
   className = "",
 }: {
   current: "build" | "gallery" | null;
+  builds?: ReactNode;
   updates?: ReactNode;
   brandExtra?: ReactNode;
   nav?: ReactNode;
@@ -76,19 +78,17 @@ export function SiteHeader({
     <header
       className={`box-content flex h-12 shrink-0 items-stretch border-b border-chrome-line bg-chrome pt-[max(env(safe-area-inset-top),var(--pwa-strip,0px))] ${className}`}
     >
-      <div className={`${section} gap-2 border-r border-chrome-line pl-[max(0.75rem,env(safe-area-inset-left))] pr-3 sm:pl-[max(1rem,env(safe-area-inset-left))] sm:pr-4`}>
+      <div className="flex min-w-0 flex-1 items-center gap-3 pl-[max(0.75rem,env(safe-area-inset-left))] pr-2 sm:pl-[max(1rem,env(safe-area-inset-left))] sm:pr-4">
         <h1 className="flex items-center">
           <a href="/" aria-label="Pedal Playground" className="rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand">
             <Brand />
           </a>
         </h1>
         {brandExtra}
-      </div>
-      <div className="flex min-w-0 flex-1 items-center gap-3 px-2 sm:px-4">
         {nav}
         <div className="ml-auto flex shrink-0 items-center gap-3">
           {navEnd}
-          <SiteTabs current={current} after={updates} />
+          <SiteTabs current={current} builds={builds} after={updates} />
         </div>
       </div>
       {account && (

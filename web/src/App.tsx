@@ -15,7 +15,7 @@ import { GuestButtons, SiteHeader } from "./components/SiteTabs";
 import { MadeBy } from "./components/MadeBy";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
-import { BoardSelect } from "./components/PlaygroundSwitcher";
+import { BoardLabel, BuildsMenu } from "./components/PlaygroundSwitcher";
 import { NewPlaygroundDialog } from "./components/NewPlaygroundDialog";
 import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
 import type { PlaygroundSummary } from "./lib/cloud";
@@ -165,19 +165,11 @@ export function App() {
       <div aria-hidden className="pwa-top-strip" />
       <SiteHeader
         current={viewing ? null : "build"}
+        builds={<BuildsMenu onEdit={editPlayground} onSignIn={() => setDialog("account")} onPlaygrounds={() => setDialog("playgrounds")} />}
         updates={<WhatsNew onNewGear={showNewGear} />}
         brandExtra={pro && <span className="text-sm/4 font-semibold text-brand-top max-sm:hidden">Pro</span>}
         nav={
           <>
-            {!covered && (
-              <BoardSelect
-                placement="header"
-                onEdit={editPlayground}
-                onSignIn={() => setDialog("account")}
-                onPlaygrounds={() => setDialog("playgrounds")}
-                comments={<BoardInfoButton />}
-              />
-            )}
             {BETA && (
             <>
               <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand max-lg:hidden">Beta</span>
@@ -224,13 +216,7 @@ export function App() {
           </div>
           {openingShared && <p className="absolute inset-0 grid place-items-center text-sm text-ink-muted">Opening board…</p>}
           {!covered && (
-            <BoardSelect
-              placement="canvas"
-              onEdit={editPlayground}
-              onSignIn={() => setDialog("account")}
-              onPlaygrounds={() => setDialog("playgrounds")}
-              comments={<BoardInfoButton />}
-            />
+            <BoardLabel onEdit={() => editPlayground()} onSignIn={() => setDialog("account")} comments={<BoardInfoButton />} />
           )}
           {/* The other modes cover the canvas; the canvas stays mounted so the view is kept for coming back. */}
           {mode === "list" ? (
