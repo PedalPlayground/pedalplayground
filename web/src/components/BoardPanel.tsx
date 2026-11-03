@@ -1,4 +1,4 @@
-import { ArrowLeft, Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
+import { ArrowLeft, Copy, Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { create } from "zustand";
 import {
@@ -17,6 +17,7 @@ import { setGalleryLike } from "../lib/gallery";
 import { galleryReturnUrl } from "../lib/gallery";
 import { useMediaQuery } from "../lib/viewport";
 import { useAuth } from "../store/auth";
+import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -218,8 +219,11 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
       {viewing && <BackToGallery />}
       <div className={`flex items-start gap-1 px-4 ${own ? "border-b border-line pb-3 pt-3.5" : "pt-1"}`}>
         <div className="min-w-0 flex-1">
-          <h2 className="truncate text-lg/6 font-bold tracking-[-0.01em]">{own ? boardName : (info?.name ?? boardName)}</h2>
-          {info && <Meta id={id} info={info} setInfo={setInfo} own={own} onSignIn={onSignIn} />}
+          <h2 className="truncate text-lg/6 tracking-[-0.01em]">
+            <span className="font-bold">{own ? boardName : (info?.name ?? boardName)}</span>
+            {info?.username && <span className="text-base text-ink-muted"> by {info.username}</span>}
+          </h2>
+          {info?.playground_type && <p className="mt-0.5 text-[13px] text-ink-muted">{TYPE_LABELS[info.playground_type]}</p>}
         </div>
         {own && (
           <button
@@ -256,7 +260,7 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
       ) : info === null ? (
         <p className="p-4 text-sm text-ink-muted">This board isn't shared anymore.</p>
       ) : (
-        <Social id={id} info={info} comments={comments} setComments={setComments} reload={load} onSignIn={onSignIn} onEdit={onEdit} own={own} />
+        <Social id={id} info={info} setInfo={setInfo} comments={comments} setComments={setComments} reload={load} onSignIn={onSignIn} onEdit={onEdit} own={own} />
       )}
     </aside>
   );
@@ -271,9 +275,28 @@ function Loading() {
   );
 }
 
-/** One line under the name: @username · type · likes (a like button on someone else's gallery board). */
-function Meta({ id, info, setInfo, own, onSignIn }: { id: string; info: BoardPanelInfo; setInfo: (i: BoardPanelInfo) => void; own: boolean; onSignIn: () => void }) {
+/**
+ * The engagement bar, like a social post's: like (with its count), comments (jumps to the comment box) and,
+ * on someone else's board, Create a Copy. Your own board shows its counts.
+ */
+function Engagement({
+  id,
+  info,
+  setInfo,
+  own,
+  showComments,
+  onSignIn,
+}: {
+  id: string;
+  info: BoardPanelInfo;
+  setInfo: (i: BoardPanelInfo) => void;
+  own: boolean;
+  showComments: boolean;
+  onSignIn: () => void;
+}) {
   const user = useAuth((s) => s.user);
+  const { billingEnabled, entitlements } = useBilling();
+  const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
   const like = async () => {
     if (!user) return onSignIn();
     const liked = !info.liked;
@@ -284,44 +307,56 @@ function Meta({ id, info, setInfo, own, onSignIn }: { id: string; info: BoardPan
       setInfo(info);
     }
   };
+  const copy = () => {
+    if (!user) onSignIn();
+    else if (!canCopy) useUi.getState().openUpgrade("copy");
+    else useCloud.getState().copyShared();
+  };
+  const toComments = () => {
+    const box = document.getElementById("board-comment");
+    if (box) box.focus();
+    else document.getElementById("board-comments")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  if (!info.in_gallery && own) return null;
+  const btn =
+    "press -mx-1.5 flex h-9 items-center gap-1.5 rounded-control px-1.5 text-sm tabular-nums text-ink-muted outline-none transition-colors hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:pointer-events-none";
   const likes = `${info.like_count} ${info.like_count === 1 ? "like" : "likes"}`;
-  const parts = [
-    info.username && <span key="u" className="min-w-0 truncate">@{info.username}</span>,
-    info.playground_type && <span key="t" className="shrink-0">{TYPE_LABELS[info.playground_type]}</span>,
-    info.in_gallery &&
-      (own ? (
-        <span key="l" className="flex shrink-0 items-center gap-1">
-          <Heart size={12} strokeWidth={2.5} />
-          {info.like_count}
-          <span className="sr-only">{likes}</span>
-        </span>
-      ) : (
+  return (
+    <div className="mt-3 flex items-center gap-6 border-y border-line py-1">
+      {info.in_gallery && (
         <button
-          key="l"
           type="button"
           onClick={() => void like()}
-          aria-pressed={info.liked}
-          aria-label={`${info.liked ? "Unlike" : "Like"}, ${likes}`}
-          {...tip(info.liked ? "Unlike" : "Like", { side: "bottom" })}
-          className={`press -mx-1 flex shrink-0 items-center gap-1 rounded-control px-1 font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${info.liked ? "text-danger" : "hover:text-ink"}`}
+          disabled={own}
+          aria-pressed={own ? undefined : info.liked}
+          aria-label={own ? likes : `${info.liked ? "Unlike" : "Like"}, ${likes}`}
+          {...(own ? {} : tip(info.liked ? "Unlike" : "Like", { side: "bottom" }))}
+          className={`${btn} ${info.liked ? "!text-danger" : ""}`}
         >
-          <Heart size={12} fill={info.liked ? "currentColor" : "none"} strokeWidth={2.5} />
+          <Heart size={20} strokeWidth={1.75} fill={info.liked ? "currentColor" : "none"} />
           {info.like_count}
         </button>
-      )),
-  ].filter(Boolean);
-  if (!parts.length) return null;
-  return (
-    <p className="mt-1 flex min-w-0 items-center gap-1.5 whitespace-nowrap text-[13px] text-ink-muted">
-      {parts.flatMap((p, i) => (i ? [<span key={`d${i}`} aria-hidden>·</span>, p] : [p]))}
-    </p>
+      )}
+      {showComments && (
+        <button type="button" onClick={toComments} aria-label={`${info.comment_count} comments`} {...tip("Comment", { side: "bottom" })} className={btn}>
+          <MessageSquare size={20} strokeWidth={1.75} />
+          {info.comment_count}
+        </button>
+      )}
+      {!own && (
+        <button type="button" onClick={copy} aria-label="Create a Copy" {...tip(canCopy || !user ? "Create a Copy" : "Create a Copy (Pro)", { side: "bottom" })} className={`${btn} ml-auto`}>
+          <Copy size={20} strokeWidth={1.75} />
+        </button>
+      )}
+    </div>
   );
 }
 
-/** The board's description and comments. Likes are on the line under its name; Create a Copy is in the header. */
+/** The board's description, the engagement bar (like, comment, copy) and comments. */
 function Social({
   id,
   info,
+  setInfo,
   comments,
   setComments,
   reload,
@@ -331,6 +366,7 @@ function Social({
 }: {
   id: string;
   info: BoardPanelInfo;
+  setInfo: (i: BoardPanelInfo) => void;
   comments: BoardComment[];
   setComments: (c: BoardComment[]) => void;
   reload: () => Promise<void>;
@@ -365,6 +401,7 @@ function Social({
             </button>
           )
         )}
+        <Engagement id={id} info={info} setInfo={setInfo} own={own} showComments={showComments} onSignIn={onSignIn} />
         {own && !info.in_gallery && (
           <p className="mt-4 border-t border-line pt-4 text-[13px] text-ink-muted">
             Shared by link. Add it to the Public Gallery (
@@ -376,7 +413,7 @@ function Social({
         )}
 
         {showComments && (
-          <section className="mt-5 border-t border-line pt-4" aria-label="Comments">
+          <section id="board-comments" className="mt-4" aria-label="Comments">
             <h3 className="text-sm font-semibold">
               Comments <span className="font-normal text-ink-muted">{comments.length || ""}</span>
             </h3>
@@ -484,6 +521,7 @@ function Composer({ id, onSignIn, onPosted }: { id: string; onSignIn: () => void
         onKeyDown={(e) => {
           if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) void post();
         }}
+        id="board-comment"
         rows={2}
         placeholder="Add a comment"
         aria-label="Add a comment"
