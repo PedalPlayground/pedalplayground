@@ -167,7 +167,7 @@ function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn
         <span className="truncate">
           {/* Phones: just "Copy", so it fits between the tabs and the comments button. */}
           <span className="max-sm:hidden">Create a </span>
-          <span className="sm:hidden">Copy</span>
+          <span className="sm:hidden max-[359px]:sr-only">Copy</span>
           <span className="max-sm:hidden">Copy</span>
         </span>
         {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
