@@ -80,11 +80,13 @@ type Dialog = "account" | "share" | "playgrounds" | "avatar" | "edit" | null;
 /** Opens `?p=<slug>` view-only. The param stays while viewing, so a reload shows it again. */
 async function openSharedFromUrl() {
   const slug = new URLSearchParams(window.location.search).get("p");
-  if (!slug || !useAuth.getState().cloudEnabled) return;
   try {
+    if (!slug || !useAuth.getState().cloudEnabled) return;
     if (!(await useCloud.getState().openShared(slug))) window.alert("That shared playground wasn't found or is no longer shared.");
   } catch {
     window.alert("Could not open that shared playground.");
+  } finally {
+    useUi.setState({ openingShared: false });
   }
 }
 
@@ -111,6 +113,7 @@ export function App() {
   const setSearchOpen = useUi((u) => u.setSearchOpen);
   const hasSelection = usePlayground((s) => s.selected.length > 0);
   const viewing = useUi((u) => !!u.viewing);
+  const openingShared = useUi((u) => u.openingShared);
   /** Larger screens get side stacks and a lone Add Gear button; smaller ones keep the bars. */
   const wide = useMediaQuery(WIDE_QUERY);
   const phoneSized = useMediaQuery(PHONE_QUERY);
@@ -227,7 +230,11 @@ export function App() {
         {!covered && <BoardPanel onSignIn={() => setDialog("account")} onEdit={() => editPlayground()} />}
 
         <main data-tour="canvas" className="relative flex-1 overflow-clip bg-canvas">
-          <Canvas />
+          {/* Hidden while a shared link loads, so your own board doesn't flash before it. */}
+          <div className={`absolute inset-0 ${openingShared ? "invisible" : ""}`}>
+            <Canvas />
+          </div>
+          {openingShared && <p className="absolute inset-0 grid place-items-center text-sm text-ink-muted">Opening board…</p>}
           {!covered && <ViewingBar />}
           {/* The other modes cover the canvas; the canvas stays mounted so the view is kept for coming back. */}
           {mode === "list" ? (
