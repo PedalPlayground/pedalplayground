@@ -218,12 +218,8 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
       {viewing && <BackToGallery />}
       <div className={`flex items-start gap-1 px-4 ${own ? "border-b border-line pb-3 pt-3.5" : "pt-1"}`}>
         <div className="min-w-0 flex-1">
-          <h2 className="truncate text-base font-semibold">{own ? boardName : (info?.name ?? boardName)}</h2>
-          <p className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-muted empty:hidden">
-            {info?.username && <span>by @{info.username}</span>}
-            {info?.playground_type && <span className="rounded-full bg-surface-hover px-2 py-0.5">{TYPE_LABELS[info.playground_type]}</span>}
-            <PedalCount />
-          </p>
+          <h2 className="truncate text-lg/6 font-bold tracking-[-0.01em]">{own ? boardName : (info?.name ?? boardName)}</h2>
+          {info && <Meta id={id} info={info} setInfo={setInfo} own={own} onSignIn={onSignIn} />}
         </div>
         {own && (
           <button
@@ -260,7 +256,7 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
       ) : info === null ? (
         <p className="p-4 text-sm text-ink-muted">This board isn't shared anymore.</p>
       ) : (
-        <Social id={id} info={info} setInfo={setInfo} comments={comments} setComments={setComments} reload={load} onSignIn={onSignIn} onEdit={onEdit} own={own} />
+        <Social id={id} info={info} comments={comments} setComments={setComments} reload={load} onSignIn={onSignIn} onEdit={onEdit} own={own} />
       )}
     </aside>
   );
@@ -275,36 +271,9 @@ function Loading() {
   );
 }
 
-function PedalCount() {
-  const n = usePlayground((s) => s.items.filter((i) => i.kind === "pedal").length);
-  return n ? <span>{`${n} ${n === 1 ? "pedal" : "pedals"}`}</span> : null;
-}
-
-/** The board's description, likes and comments. Create a Copy is in the bar over the canvas. */
-function Social({
-  id,
-  info,
-  setInfo,
-  comments,
-  setComments,
-  reload,
-  onSignIn,
-  onEdit,
-  own,
-}: {
-  id: string;
-  info: BoardPanelInfo;
-  setInfo: (i: BoardPanelInfo) => void;
-  comments: BoardComment[];
-  setComments: (c: BoardComment[]) => void;
-  reload: () => Promise<void>;
-  onSignIn: () => void;
-  onEdit: () => void;
-  own: boolean;
-}) {
+/** One line under the name: @username · type · likes (a like button on someone else's gallery board). */
+function Meta({ id, info, setInfo, own, onSignIn }: { id: string; info: BoardPanelInfo; setInfo: (i: BoardPanelInfo) => void; own: boolean; onSignIn: () => void }) {
   const user = useAuth((s) => s.user);
-  const list = useRef<HTMLDivElement>(null);
-
   const like = async () => {
     if (!user) return onSignIn();
     const liked = !info.liked;
@@ -315,6 +284,62 @@ function Social({
       setInfo(info);
     }
   };
+  const likes = `${info.like_count} ${info.like_count === 1 ? "like" : "likes"}`;
+  const parts = [
+    info.username && <span key="u" className="min-w-0 truncate">@{info.username}</span>,
+    info.playground_type && <span key="t" className="shrink-0">{TYPE_LABELS[info.playground_type]}</span>,
+    info.in_gallery &&
+      (own ? (
+        <span key="l" className="flex shrink-0 items-center gap-1">
+          <Heart size={12} strokeWidth={2.5} />
+          {info.like_count}
+          <span className="sr-only">{likes}</span>
+        </span>
+      ) : (
+        <button
+          key="l"
+          type="button"
+          onClick={() => void like()}
+          aria-pressed={info.liked}
+          aria-label={`${info.liked ? "Unlike" : "Like"}, ${likes}`}
+          {...tip(info.liked ? "Unlike" : "Like", { side: "bottom" })}
+          className={`press -mx-1 flex shrink-0 items-center gap-1 rounded-control px-1 font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${info.liked ? "text-danger" : "hover:text-ink"}`}
+        >
+          <Heart size={12} fill={info.liked ? "currentColor" : "none"} strokeWidth={2.5} />
+          {info.like_count}
+        </button>
+      )),
+  ].filter(Boolean);
+  if (!parts.length) return null;
+  return (
+    <p className="mt-1 flex min-w-0 items-center gap-1.5 whitespace-nowrap text-[13px] text-ink-muted">
+      {parts.flatMap((p, i) => (i ? [<span key={`d${i}`} aria-hidden>·</span>, p] : [p]))}
+    </p>
+  );
+}
+
+/** The board's description and comments. Likes are on the line under its name; Create a Copy is in the header. */
+function Social({
+  id,
+  info,
+  comments,
+  setComments,
+  reload,
+  onSignIn,
+  onEdit,
+  own,
+}: {
+  id: string;
+  info: BoardPanelInfo;
+  comments: BoardComment[];
+  setComments: (c: BoardComment[]) => void;
+  reload: () => Promise<void>;
+  onSignIn: () => void;
+  onEdit: () => void;
+  own: boolean;
+}) {
+  const list = useRef<HTMLDivElement>(null);
+
 
   const remove = async (c: BoardComment) => {
     if (!window.confirm("Delete this comment?")) return;
@@ -340,25 +365,6 @@ function Social({
             </button>
           )
         )}
-        <div className="mt-3 flex flex-wrap items-center gap-2 empty:hidden">
-          {info.in_gallery &&
-            (own ? (
-              <span className="flex h-8 items-center gap-1.5 text-[13px] text-ink-muted">
-                <Heart size={14} strokeWidth={2.25} />
-                {info.like_count} {info.like_count === 1 ? "like" : "likes"}
-              </span>
-            ) : (
-              <button
-                type="button"
-                onClick={() => void like()}
-                aria-pressed={info.liked}
-                className={`press flex h-8 items-center gap-1.5 rounded-full border border-line px-3 text-[13px] font-semibold transition-colors ${info.liked ? "border-danger/30 bg-danger/5 text-danger" : "text-ink-muted hover:text-ink"}`}
-              >
-                <Heart size={14} fill={info.liked ? "currentColor" : "none"} strokeWidth={2.25} />
-                {info.like_count} {info.like_count === 1 ? "like" : "likes"}
-              </button>
-            ))}
-        </div>
         {own && !info.in_gallery && (
           <p className="mt-4 border-t border-line pt-4 text-[13px] text-ink-muted">
             Shared by link. Add it to the Public Gallery (
