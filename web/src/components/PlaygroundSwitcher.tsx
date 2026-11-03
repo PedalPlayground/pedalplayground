@@ -161,10 +161,15 @@ function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn
       <button
         type="button"
         onClick={createCopy}
-        className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand"
+        className="flex min-w-0 items-center gap-2 rounded-control px-1.5 sm:-mx-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand"
       >
         <Copy size={14} strokeWidth={2.25} className="shrink-0" />
-        <span className="truncate">Create a Copy</span>
+        <span className="truncate">
+          {/* Phones: just "Copy", so it fits between the tabs and the comments button. */}
+          <span className="max-sm:hidden">Create a </span>
+          <span className="sm:hidden">Copy</span>
+          <span className="max-sm:hidden">Copy</span>
+        </span>
         {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
       </button>
     </div>
@@ -194,7 +199,7 @@ function OwnBreadcrumb({ className, onEdit, onSignIn, onPlaygrounds }: MenuProps
         <Dropdown.Trigger
           data-tour="playgrounds"
           aria-label={`Playground: ${name}`}
-          className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
+          className="flex min-w-0 items-center gap-2 rounded-control px-1.5 sm:-mx-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
         >
           <span className="truncate">{name}</span>
           <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
