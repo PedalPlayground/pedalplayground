@@ -313,6 +313,7 @@ function Engagement({
     else useCloud.getState().copyShared();
   };
   const toComments = () => {
+    if (!user && info.comments_open) return onSignIn();
     const box = document.getElementById("board-comment");
     if (box) box.focus();
     else document.getElementById("board-comments")?.scrollIntoView({ behavior: "smooth", block: "start" });
