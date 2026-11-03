@@ -140,14 +140,33 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
   );
 }
 
-/** Header center while someone else's board is viewed: just its name and owner. Its actions live in the side panel. */
-function SharedBreadcrumb({ className }: { className: string }) {
-  const viewing = useUi((u) => u.viewing)!;
-  const owner = viewing.ownerName;
+/**
+ * Header center while someone else's board is viewed: Create a Copy, as a plain text control like your own board's menu.
+ * The board's name and owner are in the side panel.
+ */
+function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn: () => void }) {
+  const openUpgrade = useUi((u) => u.openUpgrade);
+  const user = useAuth((s) => s.user);
+  const { billingEnabled, entitlements } = useBilling();
+  const copyShared = useCloud((c) => c.copyShared);
+  // Copies are a Pro feature; without billing set up, nothing is gated.
+  const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
+  const createCopy = () => {
+    if (!user) onSignIn();
+    else if (!canCopy) openUpgrade("copy");
+    else copyShared();
+  };
   return (
-    <div className={`flex min-w-0 items-center gap-2 text-sm/4 tracking-[-0.01em] ${className}`}>
-      <span className="truncate font-semibold">{viewing.name}</span>
-      {owner && <span className="shrink-0 text-ink-muted max-sm:hidden">by {owner}</span>}
+    <div className={`flex min-w-0 items-center text-sm/4 font-semibold tracking-[-0.01em] ${className}`}>
+      <button
+        type="button"
+        onClick={createCopy}
+        className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand"
+      >
+        <Copy size={14} strokeWidth={2.25} className="shrink-0" />
+        <span className="truncate">Create a Copy</span>
+        {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
+      </button>
     </div>
   );
 }
@@ -155,7 +174,7 @@ function SharedBreadcrumb({ className }: { className: string }) {
 /** Header center: the open playground's menu, or the shared playground being viewed. */
 export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & { className?: string }) {
   const viewing = useUi((u) => !!u.viewing);
-  return viewing ? <SharedBreadcrumb className={className} /> : <OwnBreadcrumb className={className} {...props} />;
+  return viewing ? <SharedBreadcrumb className={className} onSignIn={props.onSignIn} /> : <OwnBreadcrumb className={className} {...props} />;
 }
 
 function OwnBreadcrumb({ className, onEdit, onSignIn, onPlaygrounds }: MenuProps & { className: string }) {
@@ -203,41 +222,20 @@ function OwnBreadcrumb({ className, onEdit, onSignIn, onPlaygrounds }: MenuProps
   );
 }
 
-/**
- * Top center of the canvas while someone else's board is viewed: Create a Copy, the one thing to do with it.
- * Phones also get whose board it is and the way back to the gallery (larger screens have those in the side panel).
- */
-export function ViewingBar({ onSignIn }: { onSignIn: () => void }) {
+/** Phones only, over the canvas while someone else's board is viewed: whose it is and the way back to the gallery. */
+export function ViewingBar() {
   const viewing = useUi((u) => u.viewing);
-  const openUpgrade = useUi((u) => u.openUpgrade);
-  const user = useAuth((s) => s.user);
-  const { billingEnabled, entitlements } = useBilling();
-  const copyShared = useCloud((c) => c.copyShared);
   if (!viewing) return null;
-  const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
-  const createCopy = () => {
-    if (!user) onSignIn();
-    else if (!canCopy) openUpgrade("copy");
-    else copyShared();
-  };
-  const button = "press flex shrink-0 items-center gap-1.5 rounded-full font-semibold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand";
   return (
-    <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center px-3 sm:top-4">
-      <div className="pointer-events-auto flex max-w-full items-center gap-1 rounded-full max-sm:bg-surface max-sm:py-1 max-sm:pl-3.5 max-sm:pr-1 max-sm:shadow-panel">
-        <span className="min-w-0 truncate text-[13px] text-ink-muted sm:hidden">
+    <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center px-3 sm:hidden">
+      <div className="pointer-events-auto flex max-w-full items-center gap-1 rounded-full bg-surface py-1 pl-3.5 pr-1 shadow-panel">
+        <span className="min-w-0 truncate text-[13px] text-ink-muted">
           {viewing.ownerName ? `${viewing.ownerName}'s board` : "A shared board"}
         </span>
-        <button
-          type="button"
-          onClick={createCopy}
-          className={`${button} btn-primary h-7 px-2.5 text-[13px] sm:h-9 sm:px-4 sm:text-sm sm:shadow-panel`}
+        <a
+          href="/gallery/"
+          className="press flex h-7 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-[13px] font-semibold text-ink outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand"
         >
-          <Copy size={14} strokeWidth={2.25} />
-          <span className="max-sm:hidden">Create a Copy</span>
-          <span className="sm:hidden">Copy</span>
-          {!canCopy && user && <span className="rounded-full bg-white/20 px-1.5 text-[11px] font-semibold">Pro</span>}
-        </button>
-        <a href="/gallery/" className={`${button} h-7 px-2.5 text-[13px] text-ink hover:bg-surface-hover sm:hidden`}>
           <LayoutGrid size={13} strokeWidth={2.25} />
           Gallery
         </a>

@@ -228,7 +228,7 @@ export function App() {
 
         <main data-tour="canvas" className="relative flex-1 overflow-clip bg-canvas">
           <Canvas />
-          {!covered && <ViewingBar onSignIn={() => setDialog("account")} />}
+          {!covered && <ViewingBar />}
           {/* The other modes cover the canvas; the canvas stays mounted so the view is kept for coming back. */}
           {mode === "list" ? (
             <EquipmentList />
