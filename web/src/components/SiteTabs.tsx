@@ -1,10 +1,23 @@
-import { Compass, PencilRuler } from "lucide-react";
+import { LayoutGrid, type LucideProps } from "lucide-react";
 import type { ReactNode } from "react";
 import { Brand } from "./Logo";
 
+/** Two pedals on a board, drawn like the lucide icons beside it. */
+function PedalboardIcon({ size = 24, strokeWidth = 2, className }: LucideProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
+      <rect x="2" y="16" width="20" height="5" rx="1.5" />
+      <rect x="4" y="4" width="7" height="12" rx="1.5" />
+      <rect x="13" y="4" width="7" height="12" rx="1.5" />
+      <circle cx="7.5" cy="12" r="1" />
+      <circle cx="16.5" cy="12" r="1" />
+    </svg>
+  );
+}
+
 const TABS = [
-  { id: "gallery", href: "/gallery/", label: "Explore", Icon: Compass },
-  { id: "build", href: "/", label: "Build", Icon: PencilRuler },
+  { id: "gallery", href: "/gallery/", label: "Explore", Icon: LayoutGrid },
+  { id: "build", href: "/", label: "Build", Icon: PedalboardIcon },
 ] as const;
 
 /** One look for Explore, Build and Updates: an icon and a label (icons only on phones, where all three can't fit). */
