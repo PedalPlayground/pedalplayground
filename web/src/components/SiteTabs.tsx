@@ -63,10 +63,11 @@ export function SiteHeader({
         </h1>
         {brandExtra}
       </div>
-      <div className="flex min-w-0 flex-1 items-center gap-3 px-2 sm:px-4">
+      <div className="flex min-w-0 flex-1 items-center gap-3 px-2 max-[359px]:gap-1 sm:px-4">
         <SiteTabs current={current} />
         {nav}
-        <div className="ml-auto flex items-center gap-3">{navEnd}</div>
+        {/* The icon buttons' padding is trimmed on the right so the megaphone sits 16px from the divider, as in the design. */}
+        <div className="ml-auto flex items-center gap-3 sm:-mr-2">{navEnd}</div>
       </div>
       {account && (
         <div

@@ -173,8 +173,9 @@ function SharedBox({ comments, onSignIn }: { comments?: ReactNode; onSignIn: () 
     else copyShared();
   };
   return (
-    <div className={`${box} pr-1.5`}>
-      <span className="min-w-0 flex-1 truncate">
+    // Larger screens have the name in the pinned side panel, so the box is just Copy there.
+    <div className={`${box} pr-1.5 sm:w-auto`}>
+      <span className="min-w-0 flex-1 truncate sm:hidden">
         {viewing?.name}
         {viewing?.ownerName && <span className="text-ink-muted"> by {viewing.ownerName}</span>}
       </span>
