@@ -140,26 +140,33 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
   );
 }
 
-const box =
-  "pointer-events-auto relative flex h-10 w-[277px] max-w-full max-sm:max-w-[calc(100%-5.5rem)] items-center gap-2 rounded-[6px] border border-line bg-surface pl-2 text-[13px] text-ink shadow-[0_0_6px_rgb(0_0_0/0.05)]";
+const boxBase = "pointer-events-auto relative flex w-[277px] min-w-0 max-w-full items-center gap-2 rounded-[6px] border border-line bg-surface pl-2 text-[13px] text-ink";
+/** In the header (larger screens), or over the canvas on phones, where the header has no room for it. */
+const boxAt = {
+  header: `${boxBase} h-8`,
+  canvas: `${boxBase} h-10 max-w-[calc(100%-5.5rem)] shadow-[0_0_6px_rgb(0_0_0/0.05)]`,
+};
+type Placement = keyof typeof boxAt;
 const boxIcon =
   "relative z-10 grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/5 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
 /** Where the box sits: the canvas's top-left corner. */
 const corner = "pointer-events-none absolute left-[max(1rem,env(safe-area-inset-left))] right-4 top-4 z-20 flex max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:top-3";
 
 /**
- * The board selector over the canvas's top-left corner. Your own board: its name (opens the board menu), comments once
+ * The board selector: in the header beside the logo, or over the canvas's top-left corner on phones. Your own board: its name (opens the board menu), comments once
  * it's shared, Playground Settings, and the menu chevron. Someone else's board: its name and owner, Copy, and comments.
  */
-export function BoardSelect({ comments, ...props }: MenuProps & { comments?: ReactNode }) {
+export function BoardSelect({ comments, placement, ...props }: MenuProps & { comments?: ReactNode; placement: Placement }) {
   const viewing = useUi((u) => !!u.viewing);
   // A link is still loading: show nothing rather than your own board's name.
   const opening = useUi((u) => u.openingShared);
   if (opening) return null;
-  return <div className={corner}>{viewing ? <SharedBox comments={comments} onSignIn={props.onSignIn} /> : <OwnBox comments={comments} {...props} />}</div>;
+  const box = boxAt[placement];
+  const inner = viewing ? <SharedBox box={box} comments={comments} onSignIn={props.onSignIn} /> : <OwnBox box={box} comments={comments} {...props} />;
+  return placement === "canvas" ? <div className={`${corner} sm:hidden`}>{inner}</div> : <div className="flex min-w-0 max-sm:hidden">{inner}</div>;
 }
 
-function SharedBox({ comments, onSignIn }: { comments?: ReactNode; onSignIn: () => void }) {
+function SharedBox({ box, comments, onSignIn }: { box: string; comments?: ReactNode; onSignIn: () => void }) {
   const viewing = useUi((u) => u.viewing);
   const openUpgrade = useUi((u) => u.openUpgrade);
   const user = useAuth((s) => s.user);
@@ -195,7 +202,7 @@ function SharedBox({ comments, onSignIn }: { comments?: ReactNode; onSignIn: () 
   );
 }
 
-function OwnBox({ comments, onEdit, onSignIn, onPlaygrounds }: MenuProps & { comments?: ReactNode }) {
+function OwnBox({ box, comments, onEdit, onSignIn, onPlaygrounds }: MenuProps & { box: string; comments?: ReactNode }) {
   const name = usePlayground((s) => s.name);
   const user = useAuth((s) => s.user);
   const [open, setOpen] = useState(false);

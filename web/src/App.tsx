@@ -168,7 +168,17 @@ export function App() {
         updates={<WhatsNew onNewGear={showNewGear} />}
         brandExtra={pro && <span className="text-sm/4 font-semibold text-brand-top max-sm:hidden">Pro</span>}
         nav={
-          BETA && (
+          <>
+            {!covered && (
+              <BoardSelect
+                placement="header"
+                onEdit={editPlayground}
+                onSignIn={() => setDialog("account")}
+                onPlaygrounds={() => setDialog("playgrounds")}
+                comments={<BoardInfoButton />}
+              />
+            )}
+            {BETA && (
             <>
               <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand max-lg:hidden">Beta</span>
               {FEEDBACK_URL && (
@@ -177,7 +187,8 @@ export function App() {
                 </a>
               )}
             </>
-          )
+            )}
+          </>
         }
         navEnd={
           <>
@@ -214,6 +225,7 @@ export function App() {
           {openingShared && <p className="absolute inset-0 grid place-items-center text-sm text-ink-muted">Opening board…</p>}
           {!covered && (
             <BoardSelect
+              placement="canvas"
               onEdit={editPlayground}
               onSignIn={() => setDialog("account")}
               onPlaygrounds={() => setDialog("playgrounds")}

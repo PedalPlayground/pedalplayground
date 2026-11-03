@@ -2,15 +2,17 @@ import { LayoutGrid, type LucideProps } from "lucide-react";
 import type { ReactNode } from "react";
 import { Brand } from "./Logo";
 
-/** Two pedals on a board, drawn like the lucide icons beside it. */
+/** Two pedals (a knob up top, a footswitch low) on a board, drawn like the lucide icons beside it. */
 function PedalboardIcon({ size = 24, strokeWidth = 2, className }: LucideProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
-      <rect x="2" y="16" width="20" height="5" rx="1.5" />
-      <rect x="4" y="4" width="7" height="12" rx="1.5" />
-      <rect x="13" y="4" width="7" height="12" rx="1.5" />
-      <circle cx="7.5" cy="12" r="1" />
-      <circle cx="16.5" cy="12" r="1" />
+      <rect x="2" y="17" width="20" height="4.5" rx="1.5" />
+      <rect x="4" y="2.5" width="7" height="14.5" rx="1.5" />
+      <rect x="13" y="2.5" width="7" height="14.5" rx="1.5" />
+      <circle cx="7.5" cy="6.5" r="0.5" />
+      <circle cx="16.5" cy="6.5" r="0.5" />
+      <circle cx="7.5" cy="13" r="1" />
+      <circle cx="16.5" cy="13" r="1" />
     </svg>
   );
 }
@@ -50,8 +52,8 @@ export function SiteTabs({ current, after }: { current: "build" | "gallery" | nu
 const section = "flex shrink-0 items-center";
 
 /**
- * The header on every page: the brand, then the tabs with `nav` after them and `navEnd` at the far right (save status,
- * What's New), then the account buttons. Thin lines divide the three parts.
+ * The header on every page: the brand, then `nav` (the board picker), then at the right `navEnd` (save status) and the
+ * Explore, Build and Updates tabs, then the account buttons. Thin lines divide the three parts.
  */
 export function SiteHeader({
   current,
@@ -83,9 +85,11 @@ export function SiteHeader({
         {brandExtra}
       </div>
       <div className="flex min-w-0 flex-1 items-center gap-3 px-2 sm:px-4">
-        <SiteTabs current={current} after={updates} />
         {nav}
-        <div className="ml-auto flex items-center gap-3 empty:hidden">{navEnd}</div>
+        <div className="ml-auto flex shrink-0 items-center gap-3">
+          {navEnd}
+          <SiteTabs current={current} after={updates} />
+        </div>
       </div>
       {account && (
         <div
