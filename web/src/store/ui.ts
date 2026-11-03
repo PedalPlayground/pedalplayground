@@ -159,7 +159,7 @@ export function applyTheme(theme: Theme) {
 export const useUi = create<UiState>((set) => ({
   mode: "playground",
   viewing: null,
-  openingShared: new URLSearchParams(window.location.search).has("p"),
+  openingShared: typeof window !== "undefined" && new URLSearchParams(window.location.search).has("p"),
   dragging: false,
   nudging: false,
   setViewing: (viewing) => set({ viewing, searchOpen: false, replacing: false, editing: false }),
