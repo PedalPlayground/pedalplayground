@@ -55072,6 +55072,13 @@
 	},
 	{
 		"Brand": "Tech 21 NYC",
+		"Name": "PSA 2.0",
+		"Width": 7.75,
+		"Height": 2.68,
+		"Image": "tech21-psa-20.png"
+	},
+	{
+		"Brand": "Tech 21 NYC",
 		"Name": "Q\\Strip",
 		"Width": 5.03,
 		"Height": 3.7,

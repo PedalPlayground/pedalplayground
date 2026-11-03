@@ -980,6 +980,13 @@
 		"Image": "nyccases-riser20.png"
 	},
 	{
+		"Brand": "Oneset Audio",
+		"Name": "Pedalboard 6535STD",
+		"Width": 26.9,
+		"Height": 13.96,
+		"Image": "oneset-audio-6535std.png"
+	},
+	{
 		"Brand": "Onstage",
 		"Name": "GPB2000",
 		"Width": 18.75,
