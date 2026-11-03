@@ -88,9 +88,11 @@ export function SiteHeader({
         {nav}
         <div className="ml-auto flex shrink-0 items-center gap-3">
           {navEnd}
-          <SiteTabs current={current} builds={builds} after={updates} />
+          <SiteTabs current={current} builds={builds} />
         </div>
       </div>
+      {/* Updates gets its own section, like the account menu. */}
+      {updates && <div className={`${section} border-l border-chrome-line px-1.5`}>{updates}</div>}
       {account && (
         <div
           data-tour="account"

@@ -1,6 +1,7 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { Megaphone, Sparkles } from "lucide-react";
-import { tabClass, tabIcon, tabLabel } from "./SiteTabs";
+import { tabClass, tabIcon } from "./SiteTabs";
+import { tip } from "./Tooltip";
 import { useEffect, useMemo, useState } from "react";
 import { buildFeed, fetchPosts, isUnread, markSeen, readSeen, type FeedEntry, type Post } from "../lib/announcements";
 import { track } from "../lib/analytics";
@@ -43,14 +44,14 @@ export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
         }
       }}
     >
-      <Dropdown.Trigger aria-label={unread ? "Updates (unread)" : "Updates"} className={tabClass(false)}>
+      <Dropdown.Trigger aria-label={unread ? "Updates (unread)" : "Updates"} {...tip("Updates", { side: "bottom" })} className={tabClass(false)}>
         <Megaphone {...tabIcon} className="text-ink-muted" />
-        <span className={tabLabel}>Updates</span>
+        <span className="sr-only">Updates</span>
         {unread && <span aria-hidden className="absolute right-1 top-1 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
       </Dropdown.Trigger>
       <Dropdown.Portal>
         <Dropdown.Content
-          align="start"
+          align="end"
           sideOffset={8}
           collisionPadding={12}
           className="animate-menu z-50 flex max-h-[min(32rem,calc(100dvh-5rem))] w-[22rem] max-w-[calc(100vw-1.5rem)] flex-col rounded-panel bg-surface shadow-panel"
