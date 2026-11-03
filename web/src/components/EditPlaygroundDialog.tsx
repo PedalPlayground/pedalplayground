@@ -5,8 +5,10 @@ import {
   fetchDetails,
   fetchInGallery,
   PLAYGROUND_TYPES,
+  canStoreGenres,
   shareUrl,
   updateDetails,
+  type Genre,
   type PlaygroundDetails,
   type PlaygroundSummary,
   type PlaygroundType,
@@ -15,6 +17,7 @@ import { plainField } from "../lib/inputProps";
 import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
+import { GenrePicker } from "./GenrePicker";
 import { Modal } from "./Modal";
 import { tip } from "./Tooltip";
 
@@ -23,7 +26,7 @@ const field =
   "rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted/70 focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
 
 /**
- * Name, type, description, gallery listing and delete for one playground. `target` is a saved playground picked from the menu;
+ * Name, type, genres, description, gallery listing and delete for one playground. `target` is a saved playground picked from the menu;
  * without it, the dialog edits the open playground.
  */
 export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void; target?: PlaygroundSummary }) {
@@ -51,6 +54,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
   const [startDetails, setStartDetails] = useState<PlaygroundDetails | undefined>();
   const [description, setDescription] = useState("");
   const [type, setType] = useState<PlaygroundType | null>(null);
+  const [genres, setGenres] = useState<Genre[]>([]);
 
   useEffect(() => {
     if (!saved || !id) return;
@@ -61,6 +65,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
         setStartDetails(d);
         setDescription(d.description);
         setType(d.type);
+        setGenres(d.genres);
       })
       .catch(() => {
         /* leave the fields hidden */
@@ -87,8 +92,8 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
         const err = await cloud.rename(name, target?.id);
         if (err) return setError(err);
       }
-      if (id && startDetails && (description.trim() !== startDetails.description.trim() || type !== startDetails.type)) {
-        await updateDetails(id, { description, type });
+      if (id && startDetails && (description.trim() !== startDetails.description.trim() || type !== startDetails.type || genres.join() !== startDetails.genres.join())) {
+        await updateDetails(id, { description, type, genres });
       }
       if (id && startGallery !== undefined && inGallery !== startGallery) {
         await cloud.setInGallery(id, inGallery);
@@ -149,6 +154,13 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
               </option>
             ))}
           </select>
+
+          {canStoreGenres() && (
+            <>
+              <span className="mb-1.5 block text-xs text-ink-muted">Genres</span>
+              <GenrePicker value={genres} onChange={setGenres} />
+            </>
+          )}
 
           <label className="mb-1 flex justify-between text-xs text-ink-muted" htmlFor="pg-description">
             Description

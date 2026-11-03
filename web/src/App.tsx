@@ -17,6 +17,7 @@ import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
 import { PlaygroundBreadcrumb } from "./components/PlaygroundSwitcher";
 import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
+import { NewPlaygroundDialog } from "./components/NewPlaygroundDialog";
 import type { PlaygroundSummary } from "./lib/cloud";
 import { SaveStatus } from "./components/SaveStatus";
 import { SelectionMiniMenu } from "./components/SelectionMiniMenu";
@@ -39,6 +40,7 @@ import { Toolbar } from "./components/Toolbar";
 import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
 import { UpgradeDialog } from "./components/UpgradeDialog";
 import { UsernamePrompt } from "./components/UsernamePrompt";
+import { WhatsNew } from "./components/WhatsNew";
 import { BETA, FEEDBACK_URL } from "./lib/beta";
 import { useAuth } from "./store/auth";
 import { useBilling } from "./store/billing";
@@ -124,8 +126,9 @@ export function App() {
   // First visit on this device: once nothing else is asking for attention, show the tour after the UI settles.
   const startTour = useUi((u) => u.startTour);
   const upgradeOpen = useUi((u) => u.upgrade !== null);
+  const newPlaygroundOpen = useUi((u) => u.newPlaygroundOpen);
   // A shared playground opened from a link isn't the place for the tour (it would add a demo pedal to it).
-  const busy = confirming || !!billingReturn || dialog !== null || upgradeOpen || viewing;
+  const busy = confirming || !!billingReturn || dialog !== null || upgradeOpen || newPlaygroundOpen || viewing;
   useEffect(() => {
     if (busy || tourSeen()) return;
     const t = setTimeout(startTour, 800);
@@ -187,6 +190,7 @@ export function App() {
           <span className="max-sm:hidden">
             <SaveStatus />
           </span>
+          <WhatsNew />
           <span data-tour="account" className="flex items-center gap-4 empty:hidden max-sm:gap-2">
           {user && canUpgrade && (
             <button onClick={() => openUpgrade("menu")} data-tour="pro" className={headerButton}>
@@ -290,6 +294,7 @@ export function App() {
       {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}
       {dialog === "account" && <AccountDialog onClose={close} />}
       {dialog === "avatar" && <AvatarDialog onClose={close} />}
+      {newPlaygroundOpen && <NewPlaygroundDialog />}
       {dialog === "edit" && <EditPlaygroundDialog onClose={close} target={editingPlayground} />}
       {dialog === "share" && <ShareDialog onClose={close} onSignIn={() => setDialog("account")} />}
       {dialog === "playgrounds" && <PlaygroundsDialog onClose={close} onSignIn={() => setDialog("account")} />}

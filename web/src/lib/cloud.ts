@@ -92,9 +92,13 @@ export async function createPlayground(
   throw new Error("Could not find an unused playground name.");
 }
 
-export async function touchPlayground(id: string, name: string, thumbnail: string | null) {
+/**
+ * Updates the open playground's row after a save. `thumbnail` undefined leaves the stored image alone (most saves:
+ * it's re-sent at most once a minute, since it's the largest thing we write), null clears it.
+ */
+export async function touchPlayground(id: string, name: string, thumbnail?: string | null) {
   const patch: Record<string, unknown> = { name, updated_at: new Date().toISOString() };
-  if (thumbnailSupported) patch.thumbnail = thumbnail; // null clears it when the canvas was emptied
+  if (thumbnailSupported && thumbnail !== undefined) patch.thumbnail = thumbnail;
   let { error } = await db().from("playgrounds").update(patch).eq("id", id);
   if (error && isMissingColumn(error.code)) {
     thumbnailSupported = false;
@@ -102,6 +106,17 @@ export async function touchPlayground(id: string, name: string, thumbnail: strin
     ({ error } = await db().from("playgrounds").update(patch).eq("id", id));
   }
   if (error?.code === UNIQUE_VIOLATION) throw new DuplicateNameError("You already have a playground with that name.");
+  if (error) throw error;
+}
+
+/** Stores just the thumbnail (null clears it), without changing the name or the last-edited time. */
+export async function setThumbnail(id: string, thumbnail: string | null) {
+  if (!thumbnailSupported) return;
+  const { error } = await db().from("playgrounds").update({ thumbnail }).eq("id", id);
+  if (error && isMissingColumn(error.code)) {
+    thumbnailSupported = false;
+    return;
+  }
   if (error) throw error;
 }
 
@@ -126,29 +141,66 @@ export const PLAYGROUND_TYPES = [
 ] as const;
 export type PlaygroundType = (typeof PLAYGROUND_TYPES)[number][0];
 
+/** Genre tags. Keep in step with the playgrounds_genres_valid check in the playground_genres migration. */
+export const GENRES = [
+  ["rock", "Rock"],
+  ["blues", "Blues"],
+  ["metal", "Metal"],
+  ["punk", "Punk"],
+  ["indie", "Indie"],
+  ["shoegaze", "Shoegaze"],
+  ["ambient", "Ambient"],
+  ["post_rock", "Post-Rock"],
+  ["doom", "Doom & Stoner"],
+  ["jazz", "Jazz"],
+  ["funk", "Funk"],
+  ["country", "Country"],
+  ["worship", "Worship"],
+  ["pop", "Pop"],
+  ["electronic", "Electronic"],
+  ["experimental", "Experimental"],
+] as const;
+export type Genre = (typeof GENRES)[number][0];
+
 export interface PlaygroundDetails {
   description: string;
   type: PlaygroundType | null;
+  genres: Genre[];
 }
 
-/** The playground's description and type, or undefined when the database has no columns for them yet. */
+/** Until the genres column is added (see the playground_genres migration), genres are left out. */
+let genresSupported = true;
+
+/** Whether the database can store genres (false once a request shows the column is missing). */
+export const canStoreGenres = () => genresSupported;
+
+/** The playground's description, type and genres, or undefined when the database has no columns for them yet. */
 export async function fetchDetails(id: string): Promise<PlaygroundDetails | undefined> {
   if (!detailsSupported) return undefined;
-  const { data, error } = await db().from("playgrounds").select("description,playground_type").eq("id", id).single();
-  if (error && isMissingColumn(error.code)) {
+  const cols = "description,playground_type";
+  let res = await db().from("playgrounds").select(genresSupported ? `${cols},genres` : cols).eq("id", id).single();
+  if (res.error && genresSupported && isMissingColumn(res.error.code)) {
+    genresSupported = false;
+    res = await db().from("playgrounds").select(cols).eq("id", id).single();
+  }
+  if (res.error && isMissingColumn(res.error.code)) {
     detailsSupported = false;
     return undefined;
   }
-  if (error) throw error;
-  const row = data as { description: string | null; playground_type: PlaygroundType | null };
-  return { description: row.description ?? "", type: row.playground_type };
+  if (res.error) throw res.error;
+  const row = res.data as unknown as { description: string | null; playground_type: PlaygroundType | null; genres?: Genre[] | null };
+  return { description: row.description ?? "", type: row.playground_type, genres: row.genres ?? [] };
 }
 
 export async function updateDetails(id: string, details: PlaygroundDetails) {
-  const { error } = await db()
-    .from("playgrounds")
-    .update({ description: details.description.trim() || null, playground_type: details.type })
-    .eq("id", id);
+  const patch: Record<string, unknown> = { description: details.description.trim() || null, playground_type: details.type };
+  if (genresSupported) patch.genres = details.genres;
+  let { error } = await db().from("playgrounds").update(patch).eq("id", id);
+  if (error && "genres" in patch && isMissingColumn(error.code)) {
+    genresSupported = false;
+    delete patch.genres;
+    ({ error } = await db().from("playgrounds").update(patch).eq("id", id));
+  }
   if (error) throw error;
 }
 
@@ -174,7 +226,22 @@ export async function setInGallery(id: string, inGallery: boolean) {
   if (error) throw error;
 }
 
+/** Set once we learn the save_playground_version migration hasn't been run, so we insert versions directly. */
+let saveVersionRpcSupported = true;
+
+/**
+ * Saves the playground's document. With the save_playground_version function, saves within a few minutes of the
+ * last history entry update that entry instead of adding one, so history keeps a checkpoint every few minutes
+ * rather than one per autosave. Without it, every save inserts a version (the database keeps the newest 20).
+ */
 export async function insertVersion(playgroundId: string, doc: PlaygroundDocument) {
+  if (saveVersionRpcSupported) {
+    const { error } = await db().rpc("save_playground_version", { p_playground_id: playgroundId, p_document: doc });
+    if (!error) return;
+    // PGRST202: the function doesn't exist yet.
+    if (error.code !== "PGRST202") throw error;
+    saveVersionRpcSupported = false;
+  }
   const { error } = await db().from("playground_versions").insert({ playground_id: playgroundId, document: doc });
   if (error) throw error;
 }
@@ -232,3 +299,21 @@ async function fetchOwnerName(userId: string): Promise<string | null> {
 }
 
 export const shareUrl = (slug: string) => `${window.location.origin}${window.location.pathname}?p=${encodeURIComponent(slug)}`;
+
+/** Public bucket holding each shared playground's link preview, `<slug>.jpg` (see the share_images migration). */
+const SHARE_IMAGES = "share-images";
+
+/** Uploads (or replaces) a shared playground's link preview. Only its owner can write it. */
+export async function uploadShareImage(slug: string, image: Blob) {
+  const { error } = await db()
+    .storage.from(SHARE_IMAGES)
+    // Short cache: previewers fetch it once per link, and a fresh share should show the latest layout.
+    .upload(`${slug}.jpg`, image, { contentType: "image/jpeg", upsert: true, cacheControl: "300" });
+  if (error) throw error;
+}
+
+/** Removes the link preview when a playground stops being shared. */
+export async function deleteShareImage(slug: string) {
+  const { error } = await db().storage.from(SHARE_IMAGES).remove([`${slug}.jpg`]);
+  if (error) throw error;
+}

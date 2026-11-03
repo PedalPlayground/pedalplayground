@@ -24,7 +24,7 @@ Pedal Playground is an interactive planner for guitar pedalboards: users pick re
   work on `react-rebuild` is.
 - **Catalog:** about 8,900 pedals and 270 pedalboards, contributed by the community through pull requests (JSON entries plus
   PNG photos). That contribution flow must keep working.
-- **Business model, decided:** launch with billing from day one. **Free:** one saved playground (sharing and forking allowed).
+- **Business model, decided:** launch with billing from day one. **Free:** 3 saved playgrounds (sharing and forking allowed).
   **Pro:** unlimited playgrounds. Guests can use the app locally without an account.
 
 ## Where things stand
@@ -50,7 +50,7 @@ Pedal Playground is an interactive planner for guitar pedalboards: users pick re
   - Positions and sizes are in inches. A saved playground is a JSON document (`schemaVersion: 3`); older v2/HTML saves import.
 - `supabase/` `migrations/` (three, all applied) and `functions/` (`create-checkout-session`, `create-portal-session`, `stripe-webhook`).
 - `docs/` `billing.md`, `auth.md`, `catalog.md`, `deploy-beta.md`, `auth-email-template.html`, this file.
-- `.github/workflows/` `web.yml` (typecheck), `catalog.yml` (validate pull requests), `deploy-beta-app.yml`, `deploy-beta-catalog.yml`.
+- `.github/workflows/` `web.yml` (typecheck), `catalog.yml` (validate pull requests), `deploy-beta-app.yml`, `deploy-production.yml`, `catalog-publish.yml` (builds the catalog in Supabase and copies it to the servers).
 - Repo root (legacy site) is untouched by the rebuild, except two small additions to `.gitignore`.
 
 ## Infrastructure map (all accounts are the owner's own)

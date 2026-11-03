@@ -31,4 +31,13 @@ export default defineConfig({
   plugins: [react(), tailwindcss(), appIcons()],
   // host: true also serves on your local network, so a phone on the same Wi-Fi can open the dev server.
   server: { port: 5173, host: true, fs: { allow: [".."] } },
+  // Two pages: the playground, and the catalog editor at /editor/ (kept out of the playground's bundle).
+  build: {
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        editor: "editor/index.html",
+      },
+    },
+  },
 });

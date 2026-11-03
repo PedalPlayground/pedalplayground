@@ -99,14 +99,14 @@ See `docs/billing.md` for the full explanation. For the beta:
 
 ## Automated deploys (GitHub Actions)
 
-Two workflows deploy the beta automatically on pushes to `beta`; nothing here touches the live site or `master`:
+`deploy-beta-app.yml` deploys the beta app automatically on pushes to `beta` that change `web/`: it typechecks, builds and
+uploads the app. Fast (about a minute), downloads only `web/`. Nothing here touches the live site.
 
-- `deploy-beta-app.yml`: when `web/` changes. Typechecks, builds, uploads the app. Fast (about a minute), downloads only `web/`.
-- `deploy-beta-catalog.yml`: when `public/data`, the pedal/pedalboard images, or the catalog scripts change. Validates the catalog,
-  rebuilds it, uploads only the images the server doesn't have, then the manifest.
+The catalog (`/catalog/` on the server) isn't deployed from the repo any more. The *Catalog publish* workflow copies it from
+Supabase to both servers; see docs/catalog-backend.md.
 
-Both can also be run by hand from the repository's **Actions** tab ("Run workflow"). Until you finish the setup below, both
-jobs are skipped (they check that `BETA_DEPLOY_TARGET` is set), so pushing the branch first is safe.
+The app workflow can also be run by hand from the repository's **Actions** tab ("Run workflow"). Until you finish the setup
+below, it's skipped (it checks that `BETA_DEPLOY_TARGET` is set), so pushing the branch first is safe.
 
 ### One-time setup
 

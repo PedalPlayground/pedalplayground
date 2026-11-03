@@ -11,6 +11,7 @@ import { pathToFileURL } from "node:url";
 import { createClient } from "@supabase/supabase-js";
 import { manifestFromRows } from "./manifest.mjs";
 import { assetNames, CANVAS_MAX, renderAssets } from "./render.mjs";
+import { withRetry } from "./retry.mjs";
 
 const SOURCES = "catalog-sources";
 const PUBLIC = "catalog-public";
@@ -51,15 +52,15 @@ async function pool(items, size, fn, log) {
  * db: a supabase-js client with the service role. Returns what it did, for the CLI and tests.
  * Failed items keep needs_render, so the next run retries them; the manifest is still written for the rest.
  */
-export async function publishCatalog(db, { dryRun = false, manifestOnly = false, log = console, concurrency = 4 } = {}) {
+export async function publishCatalog(db, { dryRun = false, manifestOnly = false, log = console, concurrency = 4, retry = {} } = {}) {
   const upload = async (path, body, contentType, cacheControl) => {
-    const { error } = await db.storage.from(PUBLIC).upload(path, body, { contentType, cacheControl, upsert: true });
+    const { error } = await withRetry(() => db.storage.from(PUBLIC).upload(path, body, { contentType, cacheControl, upsert: true }), retry);
     if (error) throw new Error(`upload ${path}: ${error.message}`);
   };
 
   const built = [];
   const buildItem = async (item) => {
-    const { data, error } = await db.storage.from(SOURCES).download(item.source_path);
+    const { data, error } = await withRetry(() => db.storage.from(SOURCES).download(item.source_path), retry);
     if (error) throw new Error(`download ${item.source_path}: ${error.message}`);
     const buf = Buffer.from(await data.arrayBuffer());
     const names = assetNames(buf, item.key);

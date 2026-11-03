@@ -1,7 +1,7 @@
 name: Deploy beta (app)
 
 # Builds the web app and uploads it to the beta site whenever web/ changes on beta.
-# The catalog (images + manifest) deploys separately; see deploy-beta-catalog.yml.
+# The catalog (images + manifest) is copied to the server by the Catalog publish workflow, from Supabase.
 #
 # Nothing runs until the "beta" environment is set up: the job is skipped while the BETA_DEPLOY_TARGET
 # variable is empty. Setup steps are in docs/deploy-beta.md ("Automated deploys").

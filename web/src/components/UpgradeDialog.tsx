@@ -14,7 +14,7 @@ const FALLBACK: Record<Interval, string | undefined> = {
 
 const HEADLINE: Record<UpgradeReason, string> = {
   menu: "Upgrade to Pro",
-  limit: "You've Used Your Free Playground",
+  limit: "You've Used Your Free Playgrounds",
   save: "This Playground Isn't Saved to Your Account",
   avatar: "Use Any Pedal as Your Avatar",
   copy: "Make Your Own Copy",
@@ -22,13 +22,13 @@ const HEADLINE: Record<UpgradeReason, string> = {
 
 const BLURB: Record<UpgradeReason, string> = {
   menu: "Keep as many playgrounds as you like, saved to your account and available on every device.",
-  limit: "Free accounts keep one saved playground. Pro lets you save as many as you like.",
-  save: "Free accounts keep one saved playground, so changes to this one are only stored on this device. Pro saves them all.",
+  limit: "Free accounts keep 3 saved playgrounds. Pro lets you save as many as you like.",
+  save: "Free accounts keep 3 saved playgrounds, so changes to this one are only stored on this device. Pro saves them all.",
   avatar: "Free accounts pick an avatar from our featured pedals. Pro lets you search the whole catalog for yours.",
   copy: "Pro lets you copy any shared playground into your account and make it your own.",
 };
 
-const FREE = ["1 saved playground", "Share your playgrounds", "Every pedal and pedalboard", "Custom pedals and boards", "Featured pedal avatars"];
+const FREE = ["3 saved playgrounds", "Share your playgrounds", "Every pedal and pedalboard", "Custom pedals and boards", "Featured pedal avatars"];
 const PRO = ["Unlimited saved playgrounds", "Copy shared playgrounds", "Any catalog pedal as your avatar", "Everything in Free"];
 
 interface PriceLabels {
