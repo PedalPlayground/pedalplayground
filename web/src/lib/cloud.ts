@@ -92,9 +92,13 @@ export async function createPlayground(
   throw new Error("Could not find an unused playground name.");
 }
 
-export async function touchPlayground(id: string, name: string, thumbnail: string | null) {
+/**
+ * Updates the open playground's row after a save. `thumbnail` undefined leaves the stored image alone (most saves:
+ * it's re-sent at most once a minute, since it's the largest thing we write), null clears it.
+ */
+export async function touchPlayground(id: string, name: string, thumbnail?: string | null) {
   const patch: Record<string, unknown> = { name, updated_at: new Date().toISOString() };
-  if (thumbnailSupported) patch.thumbnail = thumbnail; // null clears it when the canvas was emptied
+  if (thumbnailSupported && thumbnail !== undefined) patch.thumbnail = thumbnail;
   let { error } = await db().from("playgrounds").update(patch).eq("id", id);
   if (error && isMissingColumn(error.code)) {
     thumbnailSupported = false;
@@ -102,6 +106,17 @@ export async function touchPlayground(id: string, name: string, thumbnail: strin
     ({ error } = await db().from("playgrounds").update(patch).eq("id", id));
   }
   if (error?.code === UNIQUE_VIOLATION) throw new DuplicateNameError("You already have a playground with that name.");
+  if (error) throw error;
+}
+
+/** Stores just the thumbnail (null clears it), without changing the name or the last-edited time. */
+export async function setThumbnail(id: string, thumbnail: string | null) {
+  if (!thumbnailSupported) return;
+  const { error } = await db().from("playgrounds").update({ thumbnail }).eq("id", id);
+  if (error && isMissingColumn(error.code)) {
+    thumbnailSupported = false;
+    return;
+  }
   if (error) throw error;
 }
 
@@ -196,7 +211,22 @@ export async function setInGallery(id: string, inGallery: boolean) {
   if (error) throw error;
 }
 
+/** Set once we learn the save_playground_version migration hasn't been run, so we insert versions directly. */
+let saveVersionRpcSupported = true;
+
+/**
+ * Saves the playground's document. With the save_playground_version function, saves within a few minutes of the
+ * last history entry update that entry instead of adding one, so history keeps a checkpoint every few minutes
+ * rather than one per autosave. Without it, every save inserts a version (the database keeps the newest 20).
+ */
 export async function insertVersion(playgroundId: string, doc: PlaygroundDocument) {
+  if (saveVersionRpcSupported) {
+    const { error } = await db().rpc("save_playground_version", { p_playground_id: playgroundId, p_document: doc });
+    if (!error) return;
+    // PGRST202: the function doesn't exist yet.
+    if (error.code !== "PGRST202") throw error;
+    saveVersionRpcSupported = false;
+  }
   const { error } = await db().from("playground_versions").insert({ playground_id: playgroundId, document: doc });
   if (error) throw error;
 }
