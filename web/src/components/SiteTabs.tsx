@@ -1,31 +1,35 @@
+import { Compass, PencilRuler } from "lucide-react";
 import type { ReactNode } from "react";
 import { Brand } from "./Logo";
 
 const TABS = [
-  { id: "gallery", href: "/gallery/", label: "Explore" },
-  { id: "build", href: "/", label: "Build" },
+  { id: "gallery", href: "/gallery/", label: "Explore", Icon: Compass },
+  { id: "build", href: "/", label: "Build", Icon: PencilRuler },
 ] as const;
 
-/** "Explore · Build", so either page is one click away. */
-/** `current` null: neither is marked (someone else's board, which is neither your build nor the gallery). */
-export function SiteTabs({ current }: { current: "build" | "gallery" | null }) {
+/** One look for Explore, Build and Updates: an icon and a label (icons only on phones, where all three can't fit). */
+export function tabClass(here: boolean) {
+  return `press relative flex h-8 shrink-0 items-center gap-1.5 rounded-[4px] px-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+    here ? "bg-ink/[0.06]" : "hover:bg-ink/5 data-[state=open]:bg-ink/5"
+  }`;
+}
+export const tabIcon = { size: 16, strokeWidth: 2 } as const;
+export const tabLabel = "max-sm:sr-only";
+
+/** "Explore · Build", then `after` (Updates) in the same group. `current` null: neither is marked (someone else's board). */
+export function SiteTabs({ current, after }: { current: "build" | "gallery" | null; after?: ReactNode }) {
   return (
-    <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-2 max-[359px]:gap-0.5">
-      {TABS.map((t) => {
-        const here = t.id === current;
+    <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-1 sm:gap-2">
+      {TABS.map(({ id, href, label, Icon }) => {
+        const here = id === current;
         return (
-          <a
-            key={t.id}
-            href={t.href}
-            aria-current={here ? "page" : undefined}
-            className={`flex h-8 items-center rounded-[4px] px-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
-              here ? "bg-ink/[0.06]" : "hover:bg-ink/5"
-            }`}
-          >
-            {t.label}
+          <a key={id} href={href} aria-current={here ? "page" : undefined} className={tabClass(here)}>
+            <Icon {...tabIcon} className="text-ink-muted" />
+            <span className={tabLabel}>{label}</span>
           </a>
         );
       })}
+      {after}
     </nav>
   );
 }
@@ -38,6 +42,7 @@ const section = "flex shrink-0 items-center";
  */
 export function SiteHeader({
   current,
+  updates,
   brandExtra,
   nav,
   navEnd,
@@ -45,6 +50,7 @@ export function SiteHeader({
   className = "",
 }: {
   current: "build" | "gallery" | null;
+  updates?: ReactNode;
   brandExtra?: ReactNode;
   nav?: ReactNode;
   navEnd?: ReactNode;
@@ -63,11 +69,10 @@ export function SiteHeader({
         </h1>
         {brandExtra}
       </div>
-      <div className="flex min-w-0 flex-1 items-center gap-3 px-2 max-[359px]:gap-1 sm:px-4">
-        <SiteTabs current={current} />
+      <div className="flex min-w-0 flex-1 items-center gap-3 px-2 sm:px-4">
+        <SiteTabs current={current} after={updates} />
         {nav}
-        {/* The icon buttons' padding is trimmed on the right so the megaphone sits 16px from the divider, as in the design. */}
-        <div className="ml-auto flex items-center gap-3 sm:-mr-2">{navEnd}</div>
+        <div className="ml-auto flex items-center gap-3 empty:hidden">{navEnd}</div>
       </div>
       {account && (
         <div

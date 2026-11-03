@@ -1,10 +1,10 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { Megaphone, Sparkles } from "lucide-react";
+import { tabClass, tabIcon, tabLabel } from "./SiteTabs";
 import { useEffect, useMemo, useState } from "react";
 import { buildFeed, fetchPosts, isUnread, markSeen, readSeen, type FeedEntry, type Post } from "../lib/announcements";
 import { track } from "../lib/analytics";
 import { useCatalog } from "../store/catalog";
-import { tip } from "./Tooltip";
 
 const dateLabel = (iso: string) =>
   new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric", year: new Date(iso).getFullYear() === new Date().getFullYear() ? undefined : "numeric" });
@@ -43,18 +43,15 @@ export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
         }
       }}
     >
-      <Dropdown.Trigger
-        aria-label={unread ? "What's new (unread)" : "What's new"}
-        {...tip("What's New")}
-        className="press relative grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink active:bg-chrome-line focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover data-[state=open]:text-ink"
-      >
-        <Megaphone size={20} strokeWidth={1.75} />
-        {unread && <span aria-hidden className="absolute right-2 top-2 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
+      <Dropdown.Trigger aria-label={unread ? "Updates (unread)" : "Updates"} className={tabClass(false)}>
+        <Megaphone {...tabIcon} className="text-ink-muted" />
+        <span className={tabLabel}>Updates</span>
+        {unread && <span aria-hidden className="absolute right-1 top-1 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
       </Dropdown.Trigger>
       <Dropdown.Portal>
         <Dropdown.Content
-          align="end"
-          sideOffset={10}
+          align="start"
+          sideOffset={8}
           collisionPadding={12}
           className="animate-menu z-50 flex max-h-[min(32rem,calc(100dvh-5rem))] w-[22rem] max-w-[calc(100vw-1.5rem)] flex-col rounded-panel bg-surface shadow-panel"
         >

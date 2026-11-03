@@ -165,6 +165,7 @@ export function App() {
       <div aria-hidden className="pwa-top-strip" />
       <SiteHeader
         current={viewing ? null : "build"}
+        updates={<WhatsNew onNewGear={showNewGear} />}
         brandExtra={pro && <span className="text-sm/4 font-semibold text-brand-top max-sm:hidden">Pro</span>}
         nav={
           BETA && (
@@ -183,7 +184,6 @@ export function App() {
             <span className="max-sm:hidden">
               <SaveStatus />
             </span>
-            <WhatsNew onNewGear={showNewGear} />
           </>
         }
         account={

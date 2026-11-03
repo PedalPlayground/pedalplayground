@@ -167,7 +167,7 @@ export function GalleryApp() {
       <SiteHeader
         current="gallery"
         className="sticky top-0 z-10"
-        navEnd={<WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />}
+        updates={<WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />}
         account={
           user ? (
             <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
