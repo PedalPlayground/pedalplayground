@@ -193,7 +193,8 @@ export function App() {
             </>
           )}
         </div>
-        <div className="flex min-w-0 items-center gap-1 sm:justify-self-center">
+        {/* Phones: centered in the space between the tabs and the bell (true screen center would hit the tabs). */}
+        <div className="flex min-w-0 items-center justify-center gap-1 sm:justify-self-center">
           <PlaygroundBreadcrumb
             className="min-w-0"
             onEdit={editPlayground}
