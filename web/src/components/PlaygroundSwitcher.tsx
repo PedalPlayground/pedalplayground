@@ -163,7 +163,7 @@ export function BoardSelect({ comments, placement, ...props }: MenuProps & { com
   if (opening) return null;
   const box = boxAt[placement];
   const inner = viewing ? <SharedBox box={box} comments={comments} onSignIn={props.onSignIn} /> : <OwnBox box={box} comments={comments} {...props} />;
-  return placement === "canvas" ? <div className={`${corner} sm:hidden`}>{inner}</div> : <div className="flex min-w-0 max-sm:hidden">{inner}</div>;
+  return placement === "canvas" ? <div className={`${corner} sm:hidden`}>{inner}</div> : <div className="flex min-w-40 max-sm:hidden">{inner}</div>;
 }
 
 function SharedBox({ box, comments, onSignIn }: { box: string; comments?: ReactNode; onSignIn: () => void }) {

@@ -58,7 +58,7 @@ export function Logo({ iconOnly = false, fullFrom = "sm" }: { iconOnly?: boolean
 
 /**
  * The header brand: the logo icon (with its pedal) inside a brand-colored selection frame with corner handles, and
- * "PEDAL / PLAYGROUND" stacked beside it (from tablet width up, so the tabs keep their labels).
+ * "PEDAL / PLAYGROUND" stacked beside it (from laptop width up).
  */
 export function Brand() {
   const handle = "absolute size-[3.75px] bg-brand";
@@ -75,7 +75,7 @@ export function Brand() {
           <Logo iconOnly />
         </span>
       </span>
-      <span className="font-wordmark whitespace-nowrap text-base/[14px] uppercase tracking-[-0.01em] text-ink max-md:hidden">
+      <span className="font-wordmark whitespace-nowrap text-base/[14px] uppercase tracking-[-0.01em] text-ink max-lg:hidden">
         <span className="block font-extrabold">Pedal</span>
         <span className="block font-semibold">Playground</span>
       </span>
