@@ -140,6 +140,8 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
   const open = (wantOpen || pinned) && !!id;
   const user = useAuth((s) => s.user);
   const boardName = usePlayground((s) => s.name);
+  /** Known from the shared board itself, so the title is whole before the panel's data arrives. */
+  const viewingOwner = useUi((u) => (u.viewing ? u.viewing.ownerName : null));
   const [info, setInfo] = useState<BoardPanelInfo | null | undefined>();
   const [comments, setComments] = useState<BoardComment[]>([]);
   const [failed, setFailed] = useState(false);
@@ -161,7 +163,17 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
     setInfo(undefined);
     setComments([]);
     if (open) void load();
-  }, [open, load, user?.id]);
+  }, [open, load]);
+  // Signing in or out (or the session settling on page load) refreshes in place, without blanking the panel.
+  const firstUser = useRef(true);
+  useEffect(() => {
+    if (firstUser.current) {
+      firstUser.current = false;
+      return;
+    }
+    if (open) void load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.id]);
   useEffect(() => {
     if (open && version) void load();
     // Only when the dialog saved something.
@@ -221,7 +233,7 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
         <div className="min-w-0 flex-1">
           <h2 className="truncate text-lg/6 tracking-[-0.01em]">
             <span className="font-bold">{own ? boardName : (info?.name ?? boardName)}</span>
-            {info?.username && <span className="text-base text-ink-muted"> by {info.username}</span>}
+            {(info?.username ?? viewingOwner) && <span className="text-base text-ink-muted"> by {info?.username ?? viewingOwner}</span>}
           </h2>
           {info?.playground_type && <p className="mt-0.5 text-[13px] text-ink-muted">{TYPE_LABELS[info.playground_type]}</p>}
         </div>

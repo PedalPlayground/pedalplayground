@@ -112,8 +112,9 @@ export function App() {
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
   const hasSelection = usePlayground((s) => s.selected.length > 0);
-  const viewing = useUi((u) => !!u.viewing);
   const openingShared = useUi((u) => u.openingShared);
+  /** Someone else's board, or one loading from a link: your own board's tools stay hidden. */
+  const viewing = useUi((u) => !!u.viewing) || openingShared;
   /** Larger screens get side stacks and a lone Add Gear button; smaller ones keep the bars. */
   const wide = useMediaQuery(WIDE_QUERY);
   const phoneSized = useMediaQuery(PHONE_QUERY);
@@ -243,8 +244,12 @@ export function App() {
             <SignalPath />
           ) : (
             <>
-              <BackToCenter />
-              <EmptyAddGear />
+              {!openingShared && (
+                <>
+                  <BackToCenter />
+                  <EmptyAddGear />
+                </>
+              )}
               {/* Phones keep it above the toolbar instead, since the toolbar spans the bottom edge there. */}
               <MadeBy className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] left-[max(1rem,env(safe-area-inset-left))] z-10 max-md:hidden" />
               {/* Paired with the Settings cog in the lower-right corner. */}

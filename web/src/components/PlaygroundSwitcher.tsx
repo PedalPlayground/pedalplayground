@@ -174,6 +174,9 @@ function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn
 /** Header center: the open playground's menu, or the shared playground being viewed. */
 export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & { className?: string }) {
   const viewing = useUi((u) => !!u.viewing);
+  // A link is still loading: show nothing rather than your own board's name.
+  const opening = useUi((u) => u.openingShared);
+  if (opening) return null;
   return viewing ? <SharedBreadcrumb className={className} onSignIn={props.onSignIn} /> : <OwnBreadcrumb className={className} {...props} />;
 }
 
