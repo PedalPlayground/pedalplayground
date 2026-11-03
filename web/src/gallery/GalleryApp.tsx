@@ -1,12 +1,19 @@
-import { Heart, MessageCircle, Search } from "lucide-react";
+import { Heart, LogIn, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { AccountDialog } from "../components/AccountDialog";
+import { AvatarDialog } from "../components/AvatarDialog";
+import { AvatarMenu } from "../components/AvatarMenu";
 import { Brand } from "../components/Logo";
+import { UpgradeDialog } from "../components/UpgradeDialog";
+import { WhatsNew } from "../components/WhatsNew";
+import { startAvatarSync } from "../lib/avatar";
 import { SiteTabs } from "../components/SiteTabs";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { isEditor } from "../lib/editorApi";
 import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "../store/auth";
+import { useBilling } from "../store/billing";
 import { useCatalog } from "../store/catalog";
 
 const TYPE_LABELS: Record<PlaygroundType, string> = {
@@ -29,6 +36,9 @@ export function GalleryApp() {
   const ready = useAuth((s) => s.ready);
   const [sort, setSort] = useState<GallerySort>(returning?.sort ?? "new");
   const [signInNote, setSignInNote] = useState(false);
+  /** The same account dialogs as the playground header. */
+  const [dialog, setDialog] = useState<"account" | "avatar" | null>(null);
+  const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const [type, setType] = useState<PlaygroundType | null>(returning?.type ?? null);
   const [query, setQuery] = useState(returning?.query ?? "");
   const [search, setSearch] = useState(returning?.query ?? "");
@@ -53,6 +63,8 @@ export function GalleryApp() {
   }, [boards]);
 
   useEffect(init, [init]);
+  useEffect(startAvatarSync, []);
+  useEffect(() => void useBilling.getState().refresh(), [user?.id]);
   useEffect(() => void useCatalog.getState().load(), []);
   useEffect(() => {
     if (!user) return setEditor(false);
@@ -135,7 +147,7 @@ export function GalleryApp() {
   };
 
   const toggleLike = async (b: GalleryBoard) => {
-    if (!user) return setSignInNote(true);
+    if (!user) return setDialog("account");
     const liked = !b.liked;
     const patch = (fields: Partial<GalleryBoard>) => setBoards((list) => list.map((x) => (x.id === b.id ? { ...x, ...fields } : x)));
     // Show it right away, then settle on the server's count.
@@ -159,8 +171,29 @@ export function GalleryApp() {
             <Brand />
           </a>
           <SiteTabs current="gallery" />
+          {/* Right side matches the playground header: What's New, then the account menu or Sign In. */}
+          <div className="ml-auto flex items-center gap-2 sm:gap-3">
+            <WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />
+            {user ? (
+              <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
+            ) : (
+              cloudEnabled && (
+                <button
+                  type="button"
+                  onClick={() => setDialog("account")}
+                  className="press flex h-[26px] items-center gap-1.5 whitespace-nowrap rounded-[5px] bg-[rgb(202_203_226/0.39)] px-2.5 text-[13px] font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)] focus-visible:ring-2 focus-visible:ring-brand"
+                >
+                  <LogIn size={14} strokeWidth={2.25} />
+                  Sign In
+                </button>
+              )
+            )}
+          </div>
         </div>
       </header>
+      {dialog === "account" && <AccountDialog onClose={() => setDialog(null)} />}
+      {dialog === "avatar" && <AvatarDialog onClose={() => setDialog(null)} />}
+      <UpgradeDialog onSignIn={() => setDialog("account")} />
 
       {/* Opening a board saves this spot, so its "Back to Gallery" returns here. */}
       <main

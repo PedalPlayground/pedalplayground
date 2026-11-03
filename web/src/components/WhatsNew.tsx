@@ -4,14 +4,14 @@ import { useEffect, useMemo, useState } from "react";
 import { buildFeed, fetchPosts, isUnread, markSeen, readSeen, type FeedEntry, type Post } from "../lib/announcements";
 import { track } from "../lib/analytics";
 import { useCatalog } from "../store/catalog";
-import { showNewGear } from "./SearchPanel";
 import { tip } from "./Tooltip";
 
 const dateLabel = (iso: string) =>
   new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric", year: new Date(iso).getFullYear() === new Date().getFullYear() ? undefined : "numeric" });
 
 /** The header bell: a dot when there's something new, and a short feed of posts and new pedals. */
-export function WhatsNew() {
+/** `onNewGear` opens the Add Gear panel at its New list (the gallery sends you to the playground for that). */
+export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
   const manifest = useCatalog((s) => s.manifest);
   const [posts, setPosts] = useState<Post[]>([]);
   const [seen, setSeen] = useState(readSeen);
@@ -63,7 +63,7 @@ export function WhatsNew() {
             {feed.length === 0 ? (
               <p className="px-3 py-6 text-center text-sm text-ink-muted">Nothing new yet. Check back soon.</p>
             ) : (
-              feed.map((e) => <Entry key={e.id} entry={e} fresh={isUnread(e, seen)} />)
+              feed.map((e) => <Entry key={e.id} entry={e} fresh={isUnread(e, seen)} onNewGear={onNewGear} />)
             )}
           </div>
         </Dropdown.Content>
@@ -74,7 +74,7 @@ export function WhatsNew() {
 
 const linkClass = "mt-1.5 inline-block text-[13px] font-semibold text-brand hover:underline";
 
-function Entry({ entry, fresh }: { entry: FeedEntry; fresh: boolean }) {
+function Entry({ entry, fresh, onNewGear }: { entry: FeedEntry; fresh: boolean; onNewGear: () => void }) {
   const meta = (
     <span className="flex items-center gap-2 text-xs text-ink-muted">
       {dateLabel(entry.date)}
@@ -89,7 +89,7 @@ function Entry({ entry, fresh }: { entry: FeedEntry; fresh: boolean }) {
         className="block cursor-pointer select-none rounded-control px-3 py-2.5 outline-none data-[highlighted]:bg-surface-hover"
         onSelect={() => {
           track("whats_new_pedals");
-          showNewGear();
+          onNewGear();
         }}
       >
         {meta}

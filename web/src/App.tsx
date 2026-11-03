@@ -23,7 +23,7 @@ import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
 import type { PlaygroundSummary } from "./lib/cloud";
 import { SaveStatus } from "./components/SaveStatus";
 import { SelectionMiniMenu } from "./components/SelectionMiniMenu";
-import { SearchPanel } from "./components/SearchPanel";
+import { SearchPanel, showNewGear } from "./components/SearchPanel";
 import { SHOW_MODES, tourSeen, useUi } from "./store/ui";
 import { ObjectMenu } from "./components/ObjectMenu";
 import { ContextMenu } from "./components/ContextMenu";
@@ -153,6 +153,11 @@ export function App() {
     const stopCloud = startCloudSync();
     const stopAvatar = startAvatarSync();
     void openSharedFromUrl();
+    // The gallery's What's New sends "new pedals" here, to open Add Gear at its New list.
+    if (window.location.hash === "#new-gear") {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+      showNewGear();
+    }
     return () => {
       stopLocal();
       stopCloud();
@@ -201,7 +206,7 @@ export function App() {
           <span className="max-sm:hidden">
             <SaveStatus />
           </span>
-          <WhatsNew />
+          <WhatsNew onNewGear={showNewGear} />
           <span data-tour="account" className="flex items-center gap-4 empty:hidden max-sm:gap-2">
           {user && canUpgrade && (
             <button onClick={() => openUpgrade("menu")} data-tour="pro" className={headerButton}>
