@@ -1,7 +1,7 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
-import { useRef, useState } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import { tip } from "./Tooltip";
-import { ChevronDown, Copy, LayoutGrid, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
+import { ChevronDown, Copy, LayoutList, Pencil, Plus, LogIn, Settings, Settings2 } from "lucide-react";
 import type { PlaygroundSummary } from "../lib/cloud";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
@@ -42,8 +42,8 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
       <Dropdown.Portal>
         <Dropdown.Content
           side="bottom"
-          align="center"
-          sideOffset={8}
+          align="start"
+          sideOffset={6}
           collisionPadding={12}
           onCloseAutoFocus={onCloseAutoFocus}
           className="animate-menu z-50 w-60 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
@@ -70,8 +70,8 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
     <Dropdown.Portal>
       <Dropdown.Content
         side="bottom"
-        align="center"
-        sideOffset={8}
+        align="start"
+        sideOffset={6}
         collisionPadding={12}
         onCloseAutoFocus={onCloseAutoFocus}
         className="animate-menu z-50 w-80 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
@@ -140,11 +140,27 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
   );
 }
 
+const box =
+  "pointer-events-auto relative flex h-10 w-[277px] max-w-full max-sm:max-w-[calc(100%-5.5rem)] items-center gap-2 rounded-[6px] border border-line bg-surface pl-2 text-[13px] text-ink shadow-[0_0_6px_rgb(0_0_0/0.05)]";
+const boxIcon =
+  "relative z-10 grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/5 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
+/** Where the box sits: the canvas's top-left corner. */
+const corner = "pointer-events-none absolute left-[max(1rem,env(safe-area-inset-left))] right-4 top-4 z-20 flex max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:top-3";
+
 /**
- * Header center while someone else's board is viewed: Create a Copy, as a plain text control like your own board's menu.
- * The board's name and owner are in the side panel.
+ * The board selector over the canvas's top-left corner. Your own board: its name (opens the board menu), comments once
+ * it's shared, Playground Settings, and the menu chevron. Someone else's board: its name and owner, Copy, and comments.
  */
-function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn: () => void }) {
+export function BoardSelect({ comments, ...props }: MenuProps & { comments?: ReactNode }) {
+  const viewing = useUi((u) => !!u.viewing);
+  // A link is still loading: show nothing rather than your own board's name.
+  const opening = useUi((u) => u.openingShared);
+  if (opening) return null;
+  return <div className={corner}>{viewing ? <SharedBox comments={comments} onSignIn={props.onSignIn} /> : <OwnBox comments={comments} {...props} />}</div>;
+}
+
+function SharedBox({ comments, onSignIn }: { comments?: ReactNode; onSignIn: () => void }) {
+  const viewing = useUi((u) => u.viewing);
   const openUpgrade = useUi((u) => u.openUpgrade);
   const user = useAuth((s) => s.user);
   const { billingEnabled, entitlements } = useBilling();
@@ -157,36 +173,30 @@ function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn
     else copyShared();
   };
   return (
-    <div className={`flex min-w-0 items-center text-sm/4 font-semibold tracking-[-0.01em] ${className}`}>
+    <div className={`${box} pr-1.5`}>
+      <span className="min-w-0 flex-1 truncate">
+        {viewing?.name}
+        {viewing?.ownerName && <span className="text-ink-muted"> by {viewing.ownerName}</span>}
+      </span>
+      {comments}
       <button
         type="button"
         onClick={createCopy}
-        className="flex min-w-0 items-center gap-2 rounded-control px-1.5 sm:-mx-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand"
+        aria-label="Create a Copy"
+        {...tip("Create a Copy", { side: "bottom" })}
+        className="press flex h-7 shrink-0 items-center gap-1.5 rounded-control px-1.5 font-semibold outline-none hover:bg-ink/5 focus-visible:ring-2 focus-visible:ring-brand"
       >
-        <Copy size={14} strokeWidth={2.25} className="shrink-0" />
-        <span className="truncate">
-          {/* Phones: just "Copy", so it fits between the tabs and the comments button. */}
-          <span className="max-sm:hidden">Create a </span>
-          <span className="sm:hidden max-[359px]:sr-only">Copy</span>
-          <span className="max-sm:hidden">Copy</span>
-        </span>
+        <Copy size={14} strokeWidth={2.25} />
+        <span className="max-sm:hidden">Copy</span>
         {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
       </button>
     </div>
   );
 }
 
-/** Header center: the open playground's menu, or the shared playground being viewed. */
-export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & { className?: string }) {
-  const viewing = useUi((u) => !!u.viewing);
-  // A link is still loading: show nothing rather than your own board's name.
-  const opening = useUi((u) => u.openingShared);
-  if (opening) return null;
-  return viewing ? <SharedBreadcrumb className={className} onSignIn={props.onSignIn} /> : <OwnBreadcrumb className={className} {...props} />;
-}
-
-function OwnBreadcrumb({ className, onEdit, onSignIn, onPlaygrounds }: MenuProps & { className: string }) {
+function OwnBox({ comments, onEdit, onSignIn, onPlaygrounds }: MenuProps & { comments?: ReactNode }) {
   const name = usePlayground((s) => s.name);
+  const user = useAuth((s) => s.user);
   const [open, setOpen] = useState(false);
   /**
    * The dialog to open once the menu has closed (Playground Settings, All Playgrounds or Sign In). It opens only then: opened sooner, the menu's focus trap and
@@ -194,62 +204,46 @@ function OwnBreadcrumb({ className, onEdit, onSignIn, onPlaygrounds }: MenuProps
    */
   const pending = useRef<{ open: () => void } | null>(null);
   return (
-    <div className={`flex min-w-0 items-center text-sm/4 font-semibold tracking-[-0.01em] ${className}`}>
-      <Dropdown.Root open={open} onOpenChange={setOpen}>
+    <Dropdown.Root open={open} onOpenChange={setOpen}>
+      <div className={`${box} ${open ? "border-brand/40" : ""}`}>
+        {/* The whole box opens the menu; the buttons inside sit above this. */}
         <Dropdown.Trigger
           data-tour="playgrounds"
           aria-label={`Playground: ${name}`}
-          className="flex min-w-0 items-center gap-2 rounded-control px-1.5 sm:-mx-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
-        >
-          <span className="truncate">{name}</span>
-          <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
-        </Dropdown.Trigger>
-        <MenuContent
-          onEdit={(target) => {
-            pending.current = { open: () => onEdit(target) };
-            setOpen(false);
-          }}
-          onSignIn={() => {
-            pending.current = { open: onSignIn };
-            setOpen(false);
-          }}
-          onPlaygrounds={() => {
-            pending.current = { open: onPlaygrounds };
-            setOpen(false);
-          }}
-          onCloseAutoFocus={(e) => {
-            if (!pending.current) return;
-            e.preventDefault();
-            const { open } = pending.current;
-            pending.current = null;
-            open();
-          }}
+          className="absolute inset-0 rounded-[5px] outline-none transition-colors hover:bg-ink/[0.03] focus-visible:ring-2 focus-visible:ring-brand"
         />
-      </Dropdown.Root>
-    </div>
-  );
-}
-
-/** Phones only, over the canvas while someone else's board is viewed: its name and owner, and the way back to the gallery. */
-export function ViewingBar() {
-  const viewing = useUi((u) => u.viewing);
-  if (!viewing) return null;
-  return (
-    <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center px-3 sm:hidden">
-      <div className="pointer-events-auto flex max-w-full items-center gap-1 rounded-full bg-surface py-1 pl-3.5 pr-1 shadow-panel">
-        {/* The header has Create a Copy in place of the name, so phones see the name here. */}
-        <span className="min-w-0 truncate text-[13px]">
-          <span className="font-semibold text-ink">{viewing.name}</span>
-          {viewing.ownerName && <span className="text-ink-muted"> by {viewing.ownerName}</span>}
+        <span className="pointer-events-none relative min-w-0 flex-1 truncate">{name}</span>
+        {comments && <span className="relative z-10 flex">{comments}</span>}
+        {user && (
+          <button type="button" onClick={() => onEdit()} aria-label="Playground Settings" {...tip("Playground Settings", { side: "bottom" })} className={boxIcon}>
+            <Settings size={16} strokeWidth={2} />
+          </button>
+        )}
+        <span aria-hidden className="pointer-events-none relative grid h-full w-8 shrink-0 place-items-center border-l border-line text-ink-muted">
+          <ChevronDown size={16} strokeWidth={2.25} />
         </span>
-        <a
-          href="/gallery/"
-          className="press flex h-7 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-[13px] font-semibold text-ink outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand"
-        >
-          <LayoutGrid size={13} strokeWidth={2.25} />
-          Gallery
-        </a>
       </div>
-    </div>
+      <MenuContent
+        onEdit={(target) => {
+          pending.current = { open: () => onEdit(target) };
+          setOpen(false);
+        }}
+        onSignIn={() => {
+          pending.current = { open: onSignIn };
+          setOpen(false);
+        }}
+        onPlaygrounds={() => {
+          pending.current = { open: onPlaygrounds };
+          setOpen(false);
+        }}
+        onCloseAutoFocus={(e) => {
+          if (!pending.current) return;
+          e.preventDefault();
+          const { open } = pending.current;
+          pending.current = null;
+          open();
+        }}
+      />
+    </Dropdown.Root>
   );
 }

@@ -1,5 +1,5 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
-import { Bell, Sparkles } from "lucide-react";
+import { Megaphone, Sparkles } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { buildFeed, fetchPosts, isUnread, markSeen, readSeen, type FeedEntry, type Post } from "../lib/announcements";
 import { track } from "../lib/analytics";
@@ -48,7 +48,7 @@ export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
         {...tip("What's New")}
         className="press relative grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink active:bg-chrome-line focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover data-[state=open]:text-ink"
       >
-        <Bell size={18} />
+        <Megaphone size={20} strokeWidth={1.75} />
         {unread && <span aria-hidden className="absolute right-2 top-2 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
       </Dropdown.Trigger>
       <Dropdown.Portal>

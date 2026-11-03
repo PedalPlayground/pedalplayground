@@ -45,12 +45,12 @@ function useUsernameCheck(name: string) {
   };
 }
 
-export function AccountDialog({ onClose }: { onClose: () => void }) {
+export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () => void; initialTab?: Tab }) {
   const { user, username: currentUsername, cloudEnabled, sendCode, verifyCode, signInWithPassword, signUp } = useAuth();
   const { entitlements, billingEnabled } = useBilling();
   const openUpgrade = useUi((u) => u.openUpgrade);
 
-  const [tab, setTab] = useState<Tab>("signin");
+  const [tab, setTab] = useState<Tab>(initialTab);
   const [step, setStep] = useState<Step>("form");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

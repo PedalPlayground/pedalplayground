@@ -1,13 +1,12 @@
-import { Heart, LogIn, MessageCircle, Search } from "lucide-react";
+import { Heart, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { AccountDialog } from "../components/AccountDialog";
 import { AvatarDialog } from "../components/AvatarDialog";
 import { AvatarMenu } from "../components/AvatarMenu";
-import { Brand } from "../components/Logo";
 import { UpgradeDialog } from "../components/UpgradeDialog";
 import { WhatsNew } from "../components/WhatsNew";
 import { startAvatarSync } from "../lib/avatar";
-import { SiteTabs } from "../components/SiteTabs";
+import { GuestButtons, SiteHeader } from "../components/SiteTabs";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { isEditor } from "../lib/editorApi";
 import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
@@ -37,7 +36,7 @@ export function GalleryApp() {
   const [sort, setSort] = useState<GallerySort>(returning?.sort ?? "new");
   const [signInNote, setSignInNote] = useState(false);
   /** The same account dialogs as the playground header. */
-  const [dialog, setDialog] = useState<"account" | "avatar" | null>(null);
+  const [dialog, setDialog] = useState<"account" | "register" | "avatar" | null>(null);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const [type, setType] = useState<PlaygroundType | null>(returning?.type ?? null);
   const [query, setQuery] = useState(returning?.query ?? "");
@@ -164,34 +163,21 @@ export function GalleryApp() {
   // The playground locks page scrolling (body overflow: hidden), so this page scrolls inside its own container.
   return (
     <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
-      <header className="sticky top-0 z-10 border-b border-chrome-line bg-chrome/95 backdrop-blur">
-        {/* Full width, like the playground header, so the logo and tabs stay put when you switch pages. */}
-        <div className="flex h-10 items-center gap-2 px-3 sm:px-4">
-          <a href="/" aria-label="Pedal Playground" className="shrink-0">
-            <Brand />
-          </a>
-          <SiteTabs current="gallery" />
-          {/* Right side matches the playground header: What's New, then the account menu or Sign In. */}
-          <div className="ml-auto flex items-center gap-2 sm:gap-3">
-            <WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />
-            {user ? (
-              <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
-            ) : (
-              cloudEnabled && (
-                <button
-                  type="button"
-                  onClick={() => setDialog("account")}
-                  className="press flex h-[26px] items-center gap-1.5 whitespace-nowrap rounded-[5px] bg-[rgb(202_203_226/0.39)] px-2.5 text-[13px] font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)] focus-visible:ring-2 focus-visible:ring-brand"
-                >
-                  <LogIn size={14} strokeWidth={2.25} />
-                  Sign In
-                </button>
-              )
-            )}
-          </div>
-        </div>
-      </header>
+      {/* The same header as the playground. */}
+      <SiteHeader
+        current="gallery"
+        className="sticky top-0 z-10"
+        navEnd={<WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />}
+        account={
+          user ? (
+            <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
+          ) : (
+            cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />
+          )
+        }
+      />
       {dialog === "account" && <AccountDialog onClose={() => setDialog(null)} />}
+      {dialog === "register" && <AccountDialog onClose={() => setDialog(null)} initialTab="create" />}
       {dialog === "avatar" && <AvatarDialog onClose={() => setDialog(null)} />}
       <UpgradeDialog onSignIn={() => setDialog("account")} />
 

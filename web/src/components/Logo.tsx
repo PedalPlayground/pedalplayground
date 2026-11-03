@@ -56,13 +56,28 @@ export function Logo({ iconOnly = false, fullFrom = "sm" }: { iconOnly?: boolean
   );
 }
 
-/** The header brand: the logo icon (with its pedal) and "Pedal Playground" as text, so it matches the tabs beside it. */
-export function Brand({ textFrom = "sm" }: { textFrom?: "sm" | "lg" }) {
+/**
+ * The header brand: the logo icon (with its pedal) inside a brand-colored selection frame with corner handles, and
+ * "PEDAL / PLAYGROUND" stacked beside it (hidden on phones).
+ */
+export function Brand() {
+  const handle = "absolute size-[3.75px] bg-brand";
   return (
-    <span className="flex items-center gap-2">
-      <Logo iconOnly />
-      <span className={`whitespace-nowrap text-sm/4 font-semibold tracking-[-0.01em] text-ink ${textFrom === "lg" ? "max-lg:hidden" : "max-sm:hidden"}`}>
-        Pedal Playground
+    <span className="flex items-center gap-1.5">
+      <span aria-hidden className="relative block h-[30px] w-10 shrink-0">
+        <span className="absolute inset-[1.25px] border-[1.875px] border-brand" />
+        <span className={`${handle} left-0 top-0`} />
+        <span className={`${handle} right-0 top-0`} />
+        <span className={`${handle} bottom-0 left-0`} />
+        <span className={`${handle} bottom-0 right-0`} />
+        {/* The 24×16 icon, scaled to 30×20. */}
+        <span className="absolute left-[5px] top-[5px] origin-top-left scale-125">
+          <Logo iconOnly />
+        </span>
+      </span>
+      <span className="font-wordmark whitespace-nowrap text-base/[14px] uppercase tracking-[-0.01em] text-ink max-sm:hidden">
+        <span className="block font-extrabold">Pedal</span>
+        <span className="block font-semibold">Playground</span>
       </span>
     </span>
   );
