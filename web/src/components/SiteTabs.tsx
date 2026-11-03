@@ -94,7 +94,7 @@ export function SiteHeader({
       {account && (
         <div
           data-tour="account"
-          className={`${section} gap-[7px] border-l border-chrome-line pl-3 pr-[max(0.75rem,env(safe-area-inset-right))] sm:pl-4 sm:pr-[max(1rem,env(safe-area-inset-right))]`}
+          className={`${section} gap-[7px] border-l border-chrome-line pl-1.5 pr-[max(0.375rem,env(safe-area-inset-right))]`}
         >
           {account}
         </div>
