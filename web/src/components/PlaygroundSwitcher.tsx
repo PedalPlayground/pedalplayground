@@ -199,7 +199,7 @@ export function BoardLabel({ comments, onEdit, onSignIn }: { comments?: ReactNod
   const user = useAuth((s) => s.user);
   if (opening) return null;
   return (
-    <div className="pointer-events-none absolute left-[max(1rem,env(safe-area-inset-left))] right-[max(1rem,env(safe-area-inset-right))] top-4 z-20 flex max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:top-3">
+    <div className="pointer-events-none absolute left-[max(1.1875rem,env(safe-area-inset-left))] right-[max(1rem,env(safe-area-inset-right))] top-[22px] z-20 flex max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:top-3">
       <div className="pointer-events-auto flex min-w-0 items-center gap-1 text-sm/4 font-semibold tracking-[-0.01em] text-ink">
         {viewing ? (
           <>

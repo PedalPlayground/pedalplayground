@@ -40,7 +40,7 @@ export function SiteTabs({ current, builds, after }: { current: "build" | "galle
         </a>
       )}
       <a href="/gallery/" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
-        <LayoutGrid {...tabIcon} className="text-ink-muted" />
+        <LayoutGrid {...tabIcon} fill="currentColor" className="text-ink-muted" />
         <span className={tabLabel}>Explore</span>
       </a>
       {after}
