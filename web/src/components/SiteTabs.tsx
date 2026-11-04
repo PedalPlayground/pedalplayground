@@ -2,10 +2,10 @@ import { LayoutGrid, type LucideProps } from "lucide-react";
 import type { ReactNode } from "react";
 import { Brand } from "./Logo";
 
-/** Trav's My Playgrounds icon: a frame with three stacked bars (17×12, in the icon color). */
+/** Trav's My Playgrounds icon: a frame with three stacked bars (drawn at 17×12, shown a bit larger), in the icon color. */
 export function PedalboardIcon({ className }: LucideProps) {
   return (
-    <svg width={17} height={12} viewBox="0 0 17 12" fill="none" className={className} aria-hidden>
+    <svg width={19.5} height={13.75} viewBox="0 0 17 12" fill="none" className={className} aria-hidden>
       <path
         d="M17 11.333H0V0H17V11.333ZM1.61914 8.0957V9.71387H15.3809V8.0957H1.61914ZM1.61914 6.47656H15.3809V4.85742H1.61914V6.47656ZM1.61914 3.23828H15.3809V1.61914H1.61914V3.23828Z"
         fillRule="evenodd"
