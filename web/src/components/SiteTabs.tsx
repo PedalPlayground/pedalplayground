@@ -2,17 +2,16 @@ import { LayoutGrid, type LucideProps } from "lucide-react";
 import type { ReactNode } from "react";
 import { Brand } from "./Logo";
 
-/** Two pedals (a knob up top, a footswitch low) on a board, drawn like the lucide icons beside it. */
-export function PedalboardIcon({ size = 24, strokeWidth = 2, className }: LucideProps) {
+/** Trav's My Playgrounds icon: a frame with three stacked bars (17×12, in the icon color). */
+export function PedalboardIcon({ className }: LucideProps) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden>
-      <rect x="2" y="17" width="20" height="4.5" rx="1.5" />
-      <rect x="4" y="2.5" width="7" height="14.5" rx="1.5" />
-      <rect x="13" y="2.5" width="7" height="14.5" rx="1.5" />
-      <circle cx="7.5" cy="6.5" r="0.5" />
-      <circle cx="16.5" cy="6.5" r="0.5" />
-      <circle cx="7.5" cy="13" r="1" />
-      <circle cx="16.5" cy="13" r="1" />
+    <svg width={17} height={12} viewBox="0 0 17 12" fill="none" className={className} aria-hidden>
+      <path
+        d="M17 11.333H0V0H17V11.333ZM1.61914 8.0957V9.71387H15.3809V8.0957H1.61914ZM1.61914 6.47656H15.3809V4.85742H1.61914V6.47656ZM1.61914 3.23828H15.3809V1.61914H1.61914V3.23828Z"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        fill="currentColor"
+      />
     </svg>
   );
 }
