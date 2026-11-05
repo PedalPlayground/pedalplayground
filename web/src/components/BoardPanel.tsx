@@ -121,7 +121,7 @@ export function BoardInfoButton() {
     >
       <MessageSquare size={16} strokeWidth={2.25} />
       {!!count && <span>{count}</span>}
-      {unseen > 0 && <span aria-hidden className="absolute -right-0.5 -top-0.5 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
+      {unseen > 0 && <span aria-hidden className="absolute -right-0.5 -top-0.5 size-2 rounded-full bg-brand ring-2 ring-canvas" />}
     </button>
   );
 }
