@@ -109,8 +109,9 @@ const guestButton =
 
 /** Signed out: Register (phones skip it; the sign-in dialog has Create Account) and Sign in. */
 export function GuestButtons({ onRegister, onSignIn }: { onRegister: () => void; onSignIn: () => void }) {
+  // Extra room around the buttons (the section itself is tight for the avatar): 12px on phones, 16px from sm.
   return (
-    <>
+    <span className="flex items-center gap-[7px] px-1.5 sm:px-2.5">
       <button
         type="button"
         onClick={onRegister}
@@ -121,6 +122,6 @@ export function GuestButtons({ onRegister, onSignIn }: { onRegister: () => void;
       <button type="button" onClick={onSignIn} className={`${guestButton} btn-primary`}>
         Sign in
       </button>
-    </>
+    </span>
   );
 }
