@@ -174,7 +174,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
             </>
           )}
 
-          <label className="mb-1 flex justify-between text-[13px] font-medium text-ink/80" htmlFor="pg-description">
+          <label className="mb-1 flex justify-between text-[13px] font-semibold text-ink/80" htmlFor="pg-description">
             Description
             {description.length > DESCRIPTION_MAX - 100 && (
               <span>
