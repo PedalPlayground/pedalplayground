@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
-import { useMediaQuery } from "../lib/viewport";
+import { PHONE_QUERY, useMediaQuery } from "../lib/viewport";
 import { WIDE_QUERY } from "./SideStacks";
 import { openContextMenu } from "./ContextMenu";
 import { tip } from "./Tooltip";
@@ -28,8 +28,11 @@ export function SelectionMiniMenu() {
   const setSpacing = useUi((u) => u.setSpacingOpen);
   const dragging = useUi((u) => u.dragging || u.nudging);
   const viewing = useUi((u) => !!u.viewing);
+  // Phones: the Add Gear / Replace / Edit sheet covers the bottom of the screen, and the pill would peek out above it.
+  const phone = useMediaQuery(PHONE_QUERY);
+  const sheetOpen = useUi((u) => u.searchOpen) && phone;
   const wrap = useRef<HTMLDivElement>(null);
-  if (!s.selected.length || dragging || viewing || !s.viewport.w) return null;
+  if (!s.selected.length || dragging || viewing || sheetOpen || !s.viewport.w) return null;
   const chosen = s.items.filter((i) => s.selected.includes(i.id));
   if (!chosen.length) return null;
 
