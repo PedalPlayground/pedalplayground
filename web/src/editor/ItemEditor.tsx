@@ -2,10 +2,12 @@ import { Check as CheckIcon, ImageUp, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { ScaleKey } from "../components/ScaleKey";
-import { canvasImageUrl, type Manifest } from "../lib/catalog";
+import { canvasImageUrl, thumbUrl, type Manifest } from "../lib/catalog";
+import { FEATURED_PEDALS } from "../lib/featuredPedals";
+import { fetchGearUsage } from "../lib/trending";
 import { PX_PER_INCH } from "../lib/geometry";
 import { dotGridStyle } from "../lib/scale";
-import { brandSizes, brandSpelling, brandSuggestions, catalogBrands, copiedFields, copySources, imageStats, runChecks, sameBrand, type Fields, type ImageStats } from "../lib/editorChecks";
+import { brandSizes, brandSpelling, brandSuggestions, catalogBrands, copiedFields, copySources, imageStats, runChecks, sameBrand, type Fields, type ImageStats, type Usage } from "../lib/editorChecks";
 import type { CatalogItem } from "../lib/types";
 import { plainField } from "../lib/inputProps";
 import { PEDAL_TYPES, VOLTAGES } from "../lib/specs";
@@ -80,8 +82,16 @@ export function ItemEditor({
   const brands = useMemo(() => (manifest ? catalogBrands([...manifest.pedals, ...manifest.pedalboards]) : []), [manifest]);
   const checks = useMemo(() => runChecks(fields, stats, list, skipImage), [fields, stats, list, skipImage]);
   const neighbours = useMemo(() => sameBrand(list, fields, 3, skipImage), [list, fields, skipImage]);
+  // How often each item gets added to playgrounds (the site's featured pedals count a little too), so chips and
+  // Copy From show the pedals people know first.
+  const [adds, setAdds] = useState<Map<string, number>>(new Map());
+  useEffect(() => void fetchGearUsage().then(setAdds), []);
+  const usage = useMemo<Usage>(() => {
+    const featured = new Set<string>(FEATURED_PEDALS);
+    return (i) => (adds.get(`${fields.kind}:${i.image}`) ?? 0) + (featured.has(i.image) ? 0.5 : 0);
+  }, [adds, fields.kind]);
   // The brand's standard sizes (enclosures it builds on), as one-tap chips under the size fields.
-  const sizes = useMemo(() => brandSizes(list, fields.brand), [list, fields.brand]);
+  const sizes = useMemo(() => brandSizes(list, fields.brand, 6, usage), [list, fields.brand, usage]);
   const sameSize = (w: number, h: number) => Math.abs(fields.width - w) < 0.005 && Math.abs(fields.height - h) < 0.005;
 
   return (
@@ -163,8 +173,10 @@ export function ItemEditor({
                   type="button"
                   aria-pressed={sameSize(z.width, z.height)}
                   onClick={() => fill({ width: z.width, height: z.height })}
-                  className={`press h-7 rounded-full px-2.5 text-xs font-medium tabular-nums ${sameSize(z.width, z.height) ? "bg-brand/10 text-brand" : "bg-surface-hover text-ink hover:bg-ink/10"}`}
+                  title={`Like ${z.example.name}`}
+                  className={`press flex h-8 items-center gap-1.5 rounded-full py-1 pl-1 pr-2.5 text-xs font-medium tabular-nums ${sameSize(z.width, z.height) ? "bg-brand/10 text-brand" : "bg-surface-hover text-ink hover:bg-ink/10"}`}
                 >
+                  <Thumb src={thumbUrl(manifest, fields.kind, z.example.image)} />
                   {+z.width.toFixed(2)} × {+z.height.toFixed(2)} in <span className="text-ink-muted">· {z.count}</span>
                 </button>
               ))}
@@ -175,6 +187,8 @@ export function ItemEditor({
           <CopyFrom
             items={list}
             brand={fields.brand}
+            usage={usage}
+            thumb={(i) => thumbUrl(manifest, fields.kind, i.image)}
             onPick={(from, withSpecs) => {
               fill(copiedFields(from, withSpecs));
               setCopying(false);
@@ -424,10 +438,24 @@ function BrandField({ id, value, brands, onChange }: { id: string; value: string
  * "Copy From…": find a catalog item (the brand's own first) and copy its brand and size. Power and type come too when
  * that box is ticked.
  */
-function CopyFrom({ items, brand, onPick, onClose }: { items: CatalogItem[]; brand: string; onPick: (from: CatalogItem, withSpecs: boolean) => void; onClose: () => void }) {
+function CopyFrom({
+  items,
+  brand,
+  usage,
+  thumb,
+  onPick,
+  onClose,
+}: {
+  items: CatalogItem[];
+  brand: string;
+  usage: Usage;
+  thumb: (item: CatalogItem) => string | null;
+  onPick: (from: CatalogItem, withSpecs: boolean) => void;
+  onClose: () => void;
+}) {
   const [text, setText] = useState("");
   const [withSpecs, setWithSpecs] = useState(false);
-  const found = copySources(items, text, brand);
+  const found = copySources(items, text, brand, 12, usage);
   return (
     <div className="grid gap-2 rounded-panel bg-surface p-3 shadow-panel">
       <div className="flex items-center justify-between gap-2">
@@ -453,15 +481,16 @@ function CopyFrom({ items, brand, onPick, onClose }: { items: CatalogItem[]; bra
       {found.length === 0 ? (
         <p className="text-[13px] text-ink-muted">{text.trim() ? "Nothing matches." : "Type a brand or name."}</p>
       ) : (
-        <ul className="grid max-h-56 gap-0.5 overflow-y-auto">
+        <ul className="grid max-h-56 grid-cols-1 gap-0.5 overflow-y-auto">
           {found.map((i) => (
             <li key={i.image}>
               <button
                 type="button"
                 onClick={() => onPick(i, withSpecs)}
-                className="flex w-full items-baseline justify-between gap-3 rounded-control px-2 py-1.5 text-left text-sm hover:bg-surface-hover"
+                className="flex w-full items-center gap-2.5 rounded-control px-2 py-1.5 text-left text-sm hover:bg-surface-hover"
               >
-                <span className="min-w-0 truncate">
+                <Thumb src={thumb(i)} />
+                <span className="min-w-0 flex-1 truncate">
                   <span className="text-ink-muted">{i.brand}</span> {i.name}
                 </span>
                 <span className="shrink-0 text-xs tabular-nums text-ink-muted">
@@ -473,5 +502,14 @@ function CopyFrom({ items, brand, onPick, onClose }: { items: CatalogItem[]; bra
         </ul>
       )}
     </div>
+  );
+}
+
+/** A small catalog thumbnail (fits a 24px square), for size chips and Copy From rows. */
+function Thumb({ src }: { src: string | null }) {
+  return (
+    <span className="grid size-6 shrink-0 place-items-center">
+      {src && <img src={src} alt="" loading="lazy" className="max-h-6 max-w-6 object-contain" />}
+    </span>
   );
 }

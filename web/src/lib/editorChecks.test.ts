@@ -101,6 +101,17 @@ describe("copying sizes", () => {
     expect(brandSizes(items, "")).toEqual([]);
   });
 
+  it("shows each size with its most used item, or the first by name without usage data", () => {
+    expect(brandSizes(items, "walrus audio").map((s) => s.example.name)).toEqual(["Fable", "ACS1"]);
+    const usage = (i: CatalogItem) => (i.name === "Julia" ? 12 : i.name === "MAKO R1" ? 3 : 0);
+    expect(brandSizes(items, "walrus audio", 6, usage).map((s) => s.example.name)).toEqual(["Julia", "MAKO R1"]);
+  });
+
+  it("puts the most used items first in Copy From, after the brand's own", () => {
+    const usage = (i: CatalogItem) => (i.name === "MAKO R1" ? 5 : 0);
+    expect(copySources(items, "", "Walrus Audio", 2, usage).map((i) => i.name)).toEqual(["MAKO R1", "ACS1"]);
+  });
+
   it("finds items to copy from, the brand's own first", () => {
     expect(copySources(items, "", "Walrus Audio").length).toBe(6);
     expect(copySources(items, "ds", "Walrus Audio").map((i) => i.image)).toEqual(["boss-ds1"]);

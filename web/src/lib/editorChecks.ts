@@ -68,26 +68,33 @@ export function brandSuggestions(typed: string, brands: string[], n = 8): string
   return [...starts, ...contains].slice(0, n);
 }
 
-/** One size a brand uses, and how many of its items have it. */
+/** One size a brand uses, how many of its items have it, and its most used item (for a thumbnail). */
 export interface BrandSize {
   width: number;
   height: number;
   count: number;
+  example: CatalogItem;
 }
+
+/** How much an item is used (higher first); ties fall back to the name. Defaults to no usage data. */
+export type Usage = (item: CatalogItem) => number;
+const byUsage = (usage: Usage) => (a: CatalogItem, b: CatalogItem) => usage(b) - usage(a) || a.name.localeCompare(b.name);
 
 /**
  * The sizes a brand's items come in, most used first (sizes within 0.05 in count as one), for brands that build on
  * standard enclosures. Only sizes shared by at least two items, up to `n`.
  */
-export function brandSizes(items: CatalogItem[], brand: string, n = 6): BrandSize[] {
+export function brandSizes(items: CatalogItem[], brand: string, n = 6, usage: Usage = () => 0): BrandSize[] {
   const key = norm(brand);
   if (!key) return [];
   const sizes: BrandSize[] = [];
   for (const i of items) {
     if (norm(i.brand) !== key || !(i.width > 0 && i.height > 0)) continue;
     const same = sizes.find((s) => Math.abs(s.width - i.width) < 0.05 && Math.abs(s.height - i.height) < 0.05);
-    if (same) same.count++;
-    else sizes.push({ width: i.width, height: i.height, count: 1 });
+    if (same) {
+      same.count++;
+      if (byUsage(usage)(i, same.example) < 0) same.example = i;
+    } else sizes.push({ width: i.width, height: i.height, count: 1, example: i });
   }
   return sizes
     .filter((s) => s.count >= 2)
@@ -95,15 +102,15 @@ export function brandSizes(items: CatalogItem[], brand: string, n = 6): BrandSiz
     .slice(0, n);
 }
 
-/** Catalog items for "Copy from…": every word typed in the brand or name, the given brand's items first. */
-export function copySources(items: CatalogItem[], typed: string, brand: string, n = 12): CatalogItem[] {
+/** Catalog items for "Copy from…": every word typed in the brand or name, the given brand's items first, then most used. */
+export function copySources(items: CatalogItem[], typed: string, brand: string, n = 12, usage: Usage = () => 0): CatalogItem[] {
   const words = typed.toLowerCase().split(/\s+/).filter(Boolean).map(norm).filter(Boolean);
   const key = norm(brand);
   const matches = items.filter((i) => {
     const text = norm(`${i.brand} ${i.name}`);
     return words.length ? words.every((w) => text.includes(w)) : key !== "" && norm(i.brand) === key;
   });
-  return matches.sort((a, b) => Number(norm(b.brand) === key) - Number(norm(a.brand) === key) || a.name.localeCompare(b.name)).slice(0, n);
+  return matches.sort((a, b) => Number(norm(b.brand) === key) - Number(norm(a.brand) === key) || byUsage(usage)(a, b)).slice(0, n);
 }
 
 /** What "Copy from…" and Duplicate fill in: brand and size, plus power and type when asked. */

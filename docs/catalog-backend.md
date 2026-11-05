@@ -171,7 +171,7 @@ on a local Postgres 16 with stand-ins for Supabase's `auth` and `storage` schema
 Only accounts in `catalog_editors` get past the sign-in check; everyone else sees a short message.
 
 - **Copying sizes (Add, Queue and Catalog):** once Brand is set, its common sizes show as chips under Width and Height
-  (sizes shared by 2 or more of its items). **Copy From…** searches the catalog and copies an item's brand and size, plus
+  (sizes shared by 2 or more of its items, each with a thumbnail of its most added pedal). **Copy From…** searches the catalog and copies an item's brand and size, plus
   power and type when ticked. Each same-brand preview has **Use This Size**. On the Catalog tab, **Duplicate** opens Add
   (`/editor/#add?from=<key>`) with that item's kind, brand and size.
 - **Queue:** pending and sent-back submissions, oldest first. Fix any field or replace the photo, then Approve,
