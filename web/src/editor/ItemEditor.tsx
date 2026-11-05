@@ -2,6 +2,7 @@ import { Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, TriangleAlert }
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { ScaleKey } from "../components/ScaleKey";
+import { tip } from "../components/Tooltip";
 import { canvasImageUrl, thumbUrl, type Manifest } from "../lib/catalog";
 import { FEATURED_PEDALS } from "../lib/featuredPedals";
 import { fetchGearUsage } from "../lib/trending";
@@ -20,7 +21,14 @@ const PREVIEW_ZOOM = PREVIEW_PPI / PX_PER_INCH;
 const PLACEHOLDER_IN = [2.9, 5.1] as const;
 /** The size strip: each size's caption width at least, and the gap between sizes (px). */
 const CAPTION_W = 104;
-const STRIP_GAP = 16;
+/** Preview figures: the caption's height under each picture, and the space between them (px), so pictures share a baseline. */
+const FIGURE_CAPTION_H = 32;
+const FIGURE_GAP = 6;
+/** A guide line across the preview, at the new item's top or bottom. */
+const guide = "pointer-events-none absolute -inset-x-6 z-10 h-px bg-[#ef4444]/70";
+const STRIP_GAP = 24;
+/** Room kept at each side of the size strip for its arrows (px). */
+const ARROW_W = 32;
 
 /** Editor forms use the site's form pieces: fields, labels, help under the label, errors under the field. */
 export { fieldBox, fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass } from "../components/formText";
@@ -101,7 +109,7 @@ export function ItemEditor({
   const sameSize = (w: number, h: number) => Math.abs(fields.width - w) < 0.005 && Math.abs(fields.height - h) < 0.005;
 
   return (
-    <div className="grid gap-5 md:grid-cols-[minmax(0,320px)_minmax(0,1fr)]">
+    <div className="grid gap-5 md:grid-cols-[minmax(0,400px)_minmax(0,1fr)]">
       <div className="grid content-start gap-3">
         <div className="grid grid-cols-2 gap-3">
           <div>
@@ -251,25 +259,30 @@ export function ItemEditor({
 
       <div className="grid content-start gap-4">
         {/* Like the canvas: its color, its ½ in dots and its scale key, at the preview's scale. */}
-        <div className="rounded-lg border border-line bg-canvas p-4" style={dotGridStyle(PREVIEW_ZOOM, "in", 16, 16)}>
-          <div className="flex items-end gap-5">
-            <Figure label="This one" src={image} w={fields.width} h={fields.height} highlight broken={imageError} />
-            {sizes.length > 0 && (
-              <SizeStrip
-                brand={fields.brand.trim()}
-                kind={fields.kind}
-                sizes={sizes}
-                selected={(z) => sameSize(z.width, z.height)}
-                src={(z) => canvasImageUrl(manifest, fields.kind, z.example.image)}
-                onUse={(z) => fill({ width: z.width, height: z.height })}
-              />
-            )}
+        <div>
+          <span className={labelClass}>Size Reference</span>
+          <div className="overflow-hidden rounded-lg bg-canvas px-6 pb-5 pt-14" style={dotGridStyle(PREVIEW_ZOOM, "in", 24, 0)}>
+            <div className="relative flex items-end gap-8">
+              {/* Guides at the new item's top and bottom, across the whole preview, to compare heights at a glance. */}
+              {fields.width > 0 && fields.height > 0 && (
+                <>
+                  <span aria-hidden className={guide} style={{ bottom: FIGURE_CAPTION_H + FIGURE_GAP + Math.round(fields.height * PREVIEW_PPI) }} />
+                  <span aria-hidden className={guide} style={{ bottom: FIGURE_CAPTION_H + FIGURE_GAP }} />
+                </>
+              )}
+              <Figure label="This one" src={image} w={fields.width} h={fields.height} broken={imageError} />
+              {sizes.length > 0 && (
+                <SizeStrip
+                  kind={fields.kind}
+                  sizes={sizes}
+                  selected={(z) => sameSize(z.width, z.height)}
+                  src={(z) => canvasImageUrl(manifest, fields.kind, z.example.image)}
+                  onUse={(z) => fill({ width: z.width, height: z.height })}
+                />
+              )}
+            </div>
+            <ScaleKey zoom={PREVIEW_ZOOM} units="in" className="mt-5" />
           </div>
-          <ScaleKey zoom={PREVIEW_ZOOM} units="in" className="mt-3" />
-          <p className="mt-3 text-xs text-ink-muted">
-            Drawn at the same scale, stretched to the entered size. A photo that looks squashed, or a size far off the
-            brand's others, means a wrong number. Click a size to use it.
-          </p>
         </div>
         <ul className="grid gap-1.5">
           {checks.map((c) => (
@@ -294,26 +307,21 @@ function Figure({
   src,
   w,
   h,
-  highlight,
   broken,
 }: {
   label: string;
   src: string | null;
   w: number;
   h: number;
-  highlight?: boolean;
   broken?: boolean;
 }) {
   // No size yet: a typical pedal's size, so the box and its "No photo" read cleanly above the caption.
   const sized = w > 0 && h > 0;
   const pw = sized ? Math.max(8, w * PREVIEW_PPI) : PLACEHOLDER_IN[0] * PREVIEW_PPI;
-  const ph = sized ? Math.max(8, h * PREVIEW_PPI) : PLACEHOLDER_IN[1] * PREVIEW_PPI;
+  const ph = sized ? Math.max(8, Math.round(h * PREVIEW_PPI)) : PLACEHOLDER_IN[1] * PREVIEW_PPI;
   return (
-    <figure className="flex shrink-0 flex-col items-center gap-1.5">
-      <div
-        className={`relative ${highlight ? "outline-2 outline-offset-2 outline-dashed outline-brand/60" : ""}`}
-        style={{ width: pw, height: ph }}
-      >
+    <figure className="flex shrink-0 flex-col items-center" style={{ gap: FIGURE_GAP }}>
+      <div className="relative" style={{ width: pw, height: ph }}>
         {src && !broken ? (
           <img src={src} alt="" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />
         ) : (
@@ -322,9 +330,9 @@ function Figure({
           </div>
         )}
       </div>
-      <figcaption className="max-w-[140px] truncate text-center text-[11px] text-ink-muted" title={label}>
+      <figcaption className="max-w-[140px] truncate text-center text-[11px] leading-4 text-ink-muted" style={{ height: FIGURE_CAPTION_H }} title={label}>
         {label}
-        <span className="block tabular-nums">{sized ? `${+w.toFixed(3)} × ${+h.toFixed(3)} in` : "No size yet"}</span>
+        <span className="block font-semibold tabular-nums text-ink">{sized ? `${+w.toFixed(3)} × ${+h.toFixed(3)} in` : "No size yet"}</span>
       </figcaption>
     </figure>
   );
@@ -495,17 +503,15 @@ function Thumb({ src }: { src: string | null }) {
 /**
  * The brand's sizes in the preview, most used first, each drawn at the preview's scale by its most added pedal. Split
  * into pages that fit the width (only the current page is drawn, so one huge unit doesn't stretch every page), with
- * arrows to page through. Clicking a size copies it.
+ * arrows at the sides. Clicking a size copies its dimensions.
  */
 function SizeStrip({
-  brand,
   kind,
   sizes,
   selected,
   src,
   onUse,
 }: {
-  brand: string;
   kind: Fields["kind"];
   sizes: BrandSize[];
   selected: (z: BrandSize) => boolean;
@@ -522,14 +528,15 @@ function SizeStrip({
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
-  // A size takes its drawn width or its caption's, plus padding; pages fill greedily, at least one size each.
+  // A size takes its drawn width or its caption's; pages fill greedily (leaving room for the arrows), one size at least.
   const pages = useMemo(() => {
+    const room = width - 2 * ARROW_W;
     const out: BrandSize[][] = [];
     let row: BrandSize[] = [];
     let used = 0;
     for (const z of sizes) {
-      const w = Math.max(z.width * PREVIEW_PPI, CAPTION_W) + 8;
-      if (row.length && used + STRIP_GAP + w > width) {
+      const w = Math.max(z.width * PREVIEW_PPI, CAPTION_W);
+      if (row.length && used + STRIP_GAP + w > room) {
         out.push(row);
         row = [];
         used = 0;
@@ -542,56 +549,45 @@ function SizeStrip({
   }, [sizes, width]);
   useEffect(() => setPage(0), [sizes]);
   const at = Math.min(page, Math.max(0, pages.length - 1));
-  const arrow = "press grid size-7 place-items-center rounded-control text-ink-muted hover:bg-ink/5 hover:text-ink disabled:opacity-30 disabled:hover:bg-transparent";
+  const arrow =
+    "press absolute top-1/2 z-20 grid size-8 -translate-y-1/2 place-items-center rounded-full text-ink hover:bg-ink/5 outline-none focus-visible:ring-2 focus-visible:ring-brand";
   const plural = kind === "pedal" ? "pedals" : "boards";
 
   return (
-    <div className="min-w-0 flex-1 border-l border-line pl-5">
-      <div className="mb-2 flex items-center justify-between gap-2">
-        <span className="text-xs text-ink-muted">
-          {brand} sizes, most used first ({sizes.length})
-        </span>
-        {pages.length > 1 && (
-          <span className="flex items-center gap-0.5 text-xs tabular-nums text-ink-muted">
-            <button type="button" aria-label="Previous sizes" disabled={at === 0} onClick={() => setPage(at - 1)} className={arrow}>
-              <ChevronLeft size={16} />
-            </button>
-            {at + 1} / {pages.length}
-            <button type="button" aria-label="More sizes" disabled={at === pages.length - 1} onClick={() => setPage(at + 1)} className={arrow}>
-              <ChevronRight size={16} />
-            </button>
-          </span>
-        )}
-      </div>
-      <div ref={box} className="flex items-end gap-4">
+    <div ref={box} className="relative min-w-0 flex-1 self-stretch">
+      {at > 0 && (
+        <button type="button" aria-label="Previous sizes" {...tip("Previous")} onClick={() => setPage(at - 1)} className={`${arrow} left-0`}>
+          <ChevronLeft size={20} strokeWidth={2.25} />
+        </button>
+      )}
+      {at < pages.length - 1 && (
+        <button type="button" aria-label="More sizes" {...tip("More")} onClick={() => setPage(at + 1)} className={`${arrow} right-0`}>
+          <ChevronRight size={20} strokeWidth={2.25} />
+        </button>
+      )}
+      <div className="flex h-full items-end" style={{ gap: STRIP_GAP, paddingInline: ARROW_W }}>
         {width > 0 &&
           (pages[at] ?? []).map((z) => {
             const on = selected(z);
             const url = src(z);
+            const size = `${+z.width.toFixed(2)} × ${+z.height.toFixed(2)} in`;
             return (
               <button
                 key={`${z.width}x${z.height}`}
                 type="button"
-                aria-pressed={on}
-                title={on ? "This size" : "Use this size"}
+                aria-label={`Copy dimensions ${size}, like ${z.example.name}`}
+                {...tip("Copy Dimensions")}
                 onClick={() => onUse(z)}
-                className="press flex shrink-0 flex-col items-center gap-1.5 rounded-control p-1 outline-none hover:bg-ink/5 focus-visible:ring-2 focus-visible:ring-brand"
+                className="press flex shrink-0 flex-col items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                style={{ gap: FIGURE_GAP, width: Math.max(z.width * PREVIEW_PPI, CAPTION_W) }}
               >
-                <span
-                  className={`relative block ${on ? "outline-2 outline-offset-2 outline-brand" : ""}`}
-                  style={{ width: z.width * PREVIEW_PPI, height: z.height * PREVIEW_PPI }}
-                >
+                <span className="relative block transition-transform hover:-translate-y-0.5" style={{ width: z.width * PREVIEW_PPI, height: z.height * PREVIEW_PPI }}>
                   {url && <img src={url} alt="" loading="lazy" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />}
                 </span>
-                <span className="text-center text-[11px] leading-snug" style={{ width: Math.max(z.width * PREVIEW_PPI, CAPTION_W) }}>
-                  <span className={`block font-semibold tabular-nums ${on ? "text-brand" : "text-ink"}`}>
-                    {+z.width.toFixed(2)} × {+z.height.toFixed(2)} in
-                  </span>
+                <span className="block w-full text-center text-[11px] leading-4" style={{ height: FIGURE_CAPTION_H }}>
+                  <span className={`block font-semibold tabular-nums ${on ? "text-brand" : "text-ink"}`}>{size}</span>
                   <span className="block text-ink-muted">
                     {z.count} {z.count === 1 ? plural.slice(0, -1) : plural}
-                  </span>
-                  <span className="block truncate text-ink-muted" title={z.example.name}>
-                    like {z.example.name}
                   </span>
                 </span>
               </button>

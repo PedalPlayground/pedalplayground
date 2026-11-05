@@ -170,9 +170,9 @@ on a local Postgres 16 with stand-ins for Supabase's `auth` and `storage` schema
 `/editor/` on the site (a separate page, `web/editor/index.html`, so it adds nothing to the playground's bundle).
 Only accounts in `catalog_editors` get past the sign-in check; everyone else sees a short message.
 
-- **Copying sizes (Add, Queue and Catalog):** once Brand is set, the preview shows every size the brand comes in beside
-  "This one", most used first, each drawn at the preview's scale by its most added pedal, with arrows to page through.
-  Clicking a size copies it. **Copy From…** (by the size fields) searches the catalog and copies an item's brand and
+- **Copying sizes (Add, Queue and Catalog):** once Brand is set, the Size Reference shows every size the brand comes in
+  beside "This one", most used first, each drawn at the preview's scale by its most added pedal, with arrows to page
+  through and red guides at the new item's top and bottom. Clicking a size copies its dimensions. **Copy From…** (by the size fields) searches the catalog and copies an item's brand and
   size, plus power and type when ticked. On the Catalog tab, **Duplicate** opens Add (`/editor/#add?from=<key>`) with
   that item's kind, brand and size.
 - **Queue:** pending and sent-back submissions, oldest first. Fix any field or replace the photo, then Approve,

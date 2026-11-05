@@ -156,10 +156,10 @@ function Shell({ header, children, bar }: { header: React.ReactNode; children?: 
       {header}
       {bar && (
         <div className="sticky top-12 z-[9] border-b border-chrome-line bg-chrome/95 backdrop-blur">
-          <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
         </div>
       )}
-      <main className="mx-auto max-w-5xl px-4 py-6">{children}</main>
+      <main className="mx-auto max-w-6xl px-4 py-6">{children}</main>
     </div>
   );
 }

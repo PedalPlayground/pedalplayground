@@ -10,6 +10,7 @@ import { AvatarDialog } from "./AvatarDialog";
 import { AvatarMenu } from "./AvatarMenu";
 import { BuildsMenu } from "./PlaygroundSwitcher";
 import { SetPasswordDialog } from "./SetPasswordForm";
+import { TooltipLayer } from "./Tooltip";
 import { GuestButtons, SiteHeader, type SitePage } from "./SiteTabs";
 import { UpgradeDialog } from "./UpgradeDialog";
 import { UsernamePrompt } from "./UsernamePrompt";
@@ -19,7 +20,7 @@ export type PageDialog = "account" | "register" | "avatar" | null;
 
 /**
  * The site header for pages other than the playground (the gallery and the editor), with everything it opens: the
- * account, register and avatar dialogs, Upgrade, the new-password step after a reset, and Pick a Username. The page
+ * account, register and avatar dialogs, Upgrade, the new-password step after a reset, Pick a Username, and tooltips. The page
  * owns `dialog` so its own buttons can open sign-in too. The playground wires up the same pieces itself in App.tsx.
  */
 export function PageHeader({ current, dialog, setDialog }: { current: SitePage; dialog: PageDialog; setDialog: (d: PageDialog) => void }) {
@@ -58,6 +59,8 @@ export function PageHeader({ current, dialog, setDialog }: { current: SitePage; 
       <UpgradeDialog onSignIn={() => setDialog("account")} />
       {/* Same as the playground page: waits until nothing else is open. */}
       {!dialog && !recovering && !upgradeOpen && <UsernamePrompt />}
+      {/* Tooltips from tip(), like the playground's. */}
+      <TooltipLayer />
     </>
   );
 }
