@@ -4,13 +4,11 @@ import { usernameAvailable, usernameProblem } from "../lib/profiles";
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useUi } from "../store/ui";
-import { fieldError, fieldHelp, fieldLabel } from "./formText";
+import { fieldError, fieldHelp, fieldInput as field, fieldLabel } from "./formText";
 import { Modal } from "./Modal";
 import { MIN_PASSWORD, SetPasswordForm } from "./SetPasswordForm";
 
 /** Shaded, borderless fields, like the board panel's Details. */
-const field =
-  "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand";
 const primary = "h-9 w-full disabled:opacity-50 btn-primary";
 const secondary =
   "mt-2 h-9 w-full rounded-control bg-surface-hover text-sm font-medium outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand";

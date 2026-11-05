@@ -1,3 +1,7 @@
+/** The standard text field in dialogs (account, password, username). */
+export const fieldInput =
+  "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand";
+
 /**
  * Form field text, top to bottom: the label, optional help text right under it, the field, then any error under the
  * field. Wrap each field's pieces in a `mb-3` (or `mb-4` before a button) block so the spacing stays even.

@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { useAuth } from "../store/auth";
-import { fieldError, fieldHelp, fieldLabel } from "./formText";
+import { fieldError, fieldHelp, fieldInput as field, fieldLabel } from "./formText";
 import { Modal } from "./Modal";
 
 export const MIN_PASSWORD = 8;
 
-const field =
-  "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand";
 
 /** New password, typed twice. Used after a password reset and for Change Password. */
 export function SetPasswordForm({ onDone, onCancel, cancelLabel = "Cancel" }: { onDone: () => void; onCancel: () => void; cancelLabel?: string }) {
