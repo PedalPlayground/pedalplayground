@@ -11,8 +11,8 @@ import { QueueTab } from "./QueueTab";
 
 type Tab = "queue" | "add" | "catalog" | "news";
 const TABS: Tab[] = ["queue", "add", "catalog", "news"];
-/** The tab in the address (/editor/#news), so links can open a tab and reloads stay on it. */
-const tabFromHash = (): Tab => TABS.find((t) => `#${t}` === window.location.hash) ?? "queue";
+/** The tab in the address (/editor/#news, or #add?from=<key> for Duplicate), so links can open a tab and reloads stay on it. */
+const tabFromHash = (): Tab => TABS.find((t) => `#${t}` === window.location.hash.split("?")[0]) ?? "queue";
 
 export interface Notice {
   text: string;

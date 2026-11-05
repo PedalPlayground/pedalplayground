@@ -1,11 +1,12 @@
 import { Check as CheckIcon, ImageUp, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
+import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { ScaleKey } from "../components/ScaleKey";
 import { canvasImageUrl, type Manifest } from "../lib/catalog";
 import { PX_PER_INCH } from "../lib/geometry";
 import { dotGridStyle } from "../lib/scale";
-import { brandSpelling, brandSuggestions, catalogBrands, imageStats, runChecks, sameBrand, type Fields, type ImageStats } from "../lib/editorChecks";
+import { brandSizes, brandSpelling, brandSuggestions, catalogBrands, copiedFields, copySources, imageStats, runChecks, sameBrand, type Fields, type ImageStats } from "../lib/editorChecks";
+import type { CatalogItem } from "../lib/types";
 import { plainField } from "../lib/inputProps";
 import { PEDAL_TYPES, VOLTAGES } from "../lib/specs";
 
@@ -54,6 +55,13 @@ export function ItemEditor({
   const [imageError, setImageError] = useState(false);
   const fileInput = useRef<HTMLInputElement>(null);
   const set = (patch: Partial<Fields>) => onChange({ ...fields, ...patch });
+  /** Bumped when sizes are filled in from elsewhere (a size chip, Copy From, a preview), so the number fields redraw. */
+  const [filled, setFilled] = useState(0);
+  const fill = (patch: Partial<Fields>) => {
+    set(patch);
+    setFilled((n) => n + 1);
+  };
+  const [copying, setCopying] = useState(false);
 
   useEffect(() => {
     setStats(null);
@@ -72,6 +80,9 @@ export function ItemEditor({
   const brands = useMemo(() => (manifest ? catalogBrands([...manifest.pedals, ...manifest.pedalboards]) : []), [manifest]);
   const checks = useMemo(() => runChecks(fields, stats, list, skipImage), [fields, stats, list, skipImage]);
   const neighbours = useMemo(() => sameBrand(list, fields, 3, skipImage), [list, fields, skipImage]);
+  // The brand's standard sizes (enclosures it builds on), as one-tap chips under the size fields.
+  const sizes = useMemo(() => brandSizes(list, fields.brand), [list, fields.brand]);
+  const sameSize = (w: number, h: number) => Math.abs(fields.width - w) < 0.005 && Math.abs(fields.height - h) < 0.005;
 
   return (
     <div className="grid gap-5 md:grid-cols-[minmax(0,320px)_minmax(0,1fr)]">
@@ -109,6 +120,7 @@ export function ItemEditor({
                 {...plainField}
                 className={fieldWithUnitInput}
                 inputMode="decimal"
+                key={`w${filled}`}
                 defaultValue={fields.width || ""}
                 onChange={(e) => set({ width: num(e.target.value) })}
               />
@@ -126,6 +138,7 @@ export function ItemEditor({
                 {...plainField}
                 className={fieldWithUnitInput}
                 inputMode="decimal"
+                key={`h${filled}`}
                 defaultValue={fields.height || ""}
                 onChange={(e) => set({ height: num(e.target.value) })}
               />
@@ -135,6 +148,40 @@ export function ItemEditor({
             </label>
           </div>
         </div>
+        <div className="-mt-1 grid gap-1.5">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-xs text-ink-muted">{sizes.length > 0 ? `Common ${fields.brand.trim()} sizes` : ""}</span>
+            <button type="button" aria-expanded={copying} onClick={() => setCopying((o) => !o)} className="text-xs font-semibold text-brand hover:underline">
+              Copy From…
+            </button>
+          </div>
+          {sizes.length > 0 && (
+            <div className="flex flex-wrap gap-1.5">
+              {sizes.map((z) => (
+                <button
+                  key={`${z.width}x${z.height}`}
+                  type="button"
+                  aria-pressed={sameSize(z.width, z.height)}
+                  onClick={() => fill({ width: z.width, height: z.height })}
+                  className={`press h-7 rounded-full px-2.5 text-xs font-medium tabular-nums ${sameSize(z.width, z.height) ? "bg-brand/10 text-brand" : "bg-surface-hover text-ink hover:bg-ink/10"}`}
+                >
+                  {+z.width.toFixed(2)} × {+z.height.toFixed(2)} in <span className="text-ink-muted">· {z.count}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+        {copying && (
+          <CopyFrom
+            items={list}
+            brand={fields.brand}
+            onPick={(from, withSpecs) => {
+              fill(copiedFields(from, withSpecs));
+              setCopying(false);
+            }}
+            onClose={() => setCopying(false)}
+          />
+        )}
         {fields.kind === "pedal" && (
           <>
             <div className="grid grid-cols-2 gap-3">
@@ -147,6 +194,7 @@ export function ItemEditor({
                     {...plainField}
                     className={fieldWithUnitInput}
                     inputMode="numeric"
+                    key={`ma${filled}`}
                     defaultValue={fields.ma ?? ""}
                     onChange={(e) => {
                       const v = e.target.value.trim();
@@ -213,6 +261,7 @@ export function ItemEditor({
                 src={canvasImageUrl(manifest, fields.kind, n.image)}
                 w={n.width}
                 h={n.height}
+                onUseSize={sameSize(n.width, n.height) ? undefined : () => fill({ width: n.width, height: n.height })}
               />
             ))}
           </div>
@@ -240,7 +289,24 @@ export function ItemEditor({
   );
 }
 
-function Figure({ label, src, w, h, highlight, broken }: { label: string; src: string | null; w: number; h: number; highlight?: boolean; broken?: boolean }) {
+function Figure({
+  label,
+  src,
+  w,
+  h,
+  highlight,
+  broken,
+  onUseSize,
+}: {
+  label: string;
+  src: string | null;
+  w: number;
+  h: number;
+  highlight?: boolean;
+  broken?: boolean;
+  /** Same-brand pedals: copy this one's size to the item being edited. */
+  onUseSize?: () => void;
+}) {
   // No size yet: a typical pedal's size, so the box and its "No photo" read cleanly above the caption.
   const sized = w > 0 && h > 0;
   const pw = sized ? Math.max(8, w * PREVIEW_PPI) : PLACEHOLDER_IN[0] * PREVIEW_PPI;
@@ -262,6 +328,11 @@ function Figure({ label, src, w, h, highlight, broken }: { label: string; src: s
       <figcaption className="max-w-[140px] truncate text-center text-[11px] text-ink-muted" title={label}>
         {label}
         <span className="block tabular-nums">{sized ? `${+w.toFixed(3)} × ${+h.toFixed(3)} in` : "No size yet"}</span>
+        {onUseSize && (
+          <button type="button" onClick={onUseSize} className="mt-0.5 font-semibold text-brand hover:underline">
+            Use This Size
+          </button>
+        )}
       </figcaption>
     </figure>
   );
@@ -344,6 +415,62 @@ function BrandField({ id, value, brands, onChange }: { id: string; value: string
             Use {spelling}
           </button>
         </span>
+      )}
+    </div>
+  );
+}
+
+/**
+ * "Copy From…": find a catalog item (the brand's own first) and copy its brand and size. Power and type come too when
+ * that box is ticked.
+ */
+function CopyFrom({ items, brand, onPick, onClose }: { items: CatalogItem[]; brand: string; onPick: (from: CatalogItem, withSpecs: boolean) => void; onClose: () => void }) {
+  const [text, setText] = useState("");
+  const [withSpecs, setWithSpecs] = useState(false);
+  const found = copySources(items, text, brand);
+  return (
+    <div className="grid gap-2 rounded-panel bg-surface p-3 shadow-panel">
+      <div className="flex items-center justify-between gap-2">
+        <span className={fieldLabelText}>Copy From</span>
+        <button type="button" onClick={onClose} className="text-xs text-ink-muted hover:text-ink">
+          Cancel
+        </button>
+      </div>
+      <input
+        {...plainField}
+        autoFocus
+        aria-label="Search the catalog to copy from"
+        placeholder="Search by brand or name"
+        className={inputClass}
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        onKeyDown={(e) => e.key === "Escape" && onClose()}
+      />
+      <label className="flex items-center gap-2 text-[13px] text-ink">
+        <input type="checkbox" checked={withSpecs} onChange={(e) => setWithSpecs(e.target.checked)} className="accent-[var(--color-brand)]" />
+        Also copy power and type
+      </label>
+      {found.length === 0 ? (
+        <p className="text-[13px] text-ink-muted">{text.trim() ? "Nothing matches." : "Type a brand or name."}</p>
+      ) : (
+        <ul className="grid max-h-56 gap-0.5 overflow-y-auto">
+          {found.map((i) => (
+            <li key={i.image}>
+              <button
+                type="button"
+                onClick={() => onPick(i, withSpecs)}
+                className="flex w-full items-baseline justify-between gap-3 rounded-control px-2 py-1.5 text-left text-sm hover:bg-surface-hover"
+              >
+                <span className="min-w-0 truncate">
+                  <span className="text-ink-muted">{i.brand}</span> {i.name}
+                </span>
+                <span className="shrink-0 text-xs tabular-nums text-ink-muted">
+                  {+i.width.toFixed(2)} × {+i.height.toFixed(2)} in
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );
