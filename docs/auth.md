@@ -12,6 +12,16 @@ Defender Safe Links) can open links before the user does.
   verifies the token when the user clicks. A scanner that loads the page therefore can't use the token up.
 - The `token_hash` and `type` parameters are removed from the URL on load.
 
+## Password reset
+
+- **Forgot Password** on the Sign In form calls `resetPasswordForEmail(email, { redirectTo: <this site> })`.
+  The email (the *Reset Password* template) has a 6-digit code and a link.
+- The code is entered in the same dialog (`verifyOtp({ email, token, type: "recovery" })`). The link lands on
+  `<site>/?token_hash=…&type=recovery`, and the **Reset Your Password** dialog verifies it on a click.
+- Either way the user is signed in, and **Set a New Password** appears (`updateUser({ password })`). They can
+  skip it and stay signed in. Signed-in users can also use **Change Password** in the Account dialog.
+- Accounts made with an email link have no password; Forgot Password is how they add one.
+
 ## Supabase setup (production project)
 
 1. **Authentication → URL Configuration**
@@ -26,6 +36,9 @@ Defender Safe Links) can open links before the user does.
 3. **Authentication → Rate Limits**: raise the email limit above the 30 per hour default for expected traffic.
 4. **Authentication → Email Templates**: paste `docs/auth-email-template.html` into **Magic Link** and
    **Confirm signup**. Use the subject suggested at the top of that file.
+   Paste `docs/auth-reset-template.html` into **Reset Password**.
+   The reset link goes back to the site it was requested on, so add both sites to **Redirect URLs** in step 1:
+   `https://pedalplayground.com/**` and `https://beta.pedalplayground.com/**`.
 5. **Authentication → Providers → Email**: keep OTP length at 6 and choose an expiry you are comfortable
    with (shorter is safer; the default is one hour).
 

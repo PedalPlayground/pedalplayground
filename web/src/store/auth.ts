@@ -24,8 +24,22 @@ interface AuthState {
    * (when the project requires it); otherwise the user is signed in.
    */
   signUp: (email: string, password: string, username: string) => Promise<{ error: string | null; confirm?: boolean }>;
-  /** Completes sign-in with the emailed code. Returns an error message, or null on success. */
-  verifyCode: (email: string, code: string) => Promise<string | null>;
+  /**
+   * Emails a password reset code and link. Supabase answers the same way whether or not the email has an account.
+   * Returns an error message, or null on success.
+   */
+  sendPasswordReset: (email: string) => Promise<string | null>;
+  /**
+   * Completes sign-in with the emailed code. `recovery` is a password reset code, which signs in and then asks for
+   * a new password. Returns an error message, or null on success.
+   */
+  verifyCode: (email: string, code: string, type?: "email" | "recovery") => Promise<string | null>;
+  /** Signed in from a password reset: the Set a New Password dialog is showing. */
+  recovering: boolean;
+  /** Ends the reset step without setting a password (they stay signed in). */
+  endRecovery: () => void;
+  /** Sets a new password for the signed-in user. Returns an error message, or null on success. */
+  updatePassword: (password: string) => Promise<string | null>;
   /** Completes sign-in from an emailed link's token hash. Returns an error message, or null on success. */
   confirmTokenHash: (tokenHash: string, type: EmailOtpType) => Promise<string | null>;
   signOut: () => Promise<void>;
@@ -43,6 +57,7 @@ export const useAuth = create<AuthState>((set, get) => ({
   username: undefined,
   ready: !supabase,
   cloudEnabled: !!supabase,
+  recovering: false,
 
   init: () => {
     if (!supabase) return;
@@ -51,6 +66,7 @@ export const useAuth = create<AuthState>((set, get) => ({
       set({ user });
       if (!user) {
         loadedFor = null;
+        set({ recovering: false });
         identifyUser(null);
         return set({ username: undefined });
       }
@@ -67,7 +83,10 @@ export const useAuth = create<AuthState>((set, get) => ({
       apply(data.session?.user ?? null);
       set({ ready: true });
     });
-    supabase.auth.onAuthStateChange((_event, session) => apply(session?.user ?? null));
+    supabase.auth.onAuthStateChange((event, session) => {
+      apply(session?.user ?? null);
+      if (event === "PASSWORD_RECOVERY") set({ recovering: true });
+    });
   },
 
   setUsername: (username) => {
@@ -109,16 +128,41 @@ export const useAuth = create<AuthState>((set, get) => ({
     return { error: null, confirm: !data.session };
   },
 
-  verifyCode: async (email, code) => {
+  sendPasswordReset: async (email) => {
     if (!supabase) return "Cloud sign-in is not configured.";
-    const { error } = await supabase.auth.verifyOtp({ email, token: code.replace(/\s/g, ""), type: "email" });
-    return error ? friendly(error.message) : null;
+    // The reset email's link goes to redirectTo when it's on the Redirect URLs allowlist, so beta stays on beta.
+    const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin });
+    return error ? error.message : null;
+  },
+
+  verifyCode: async (email, code, type = "email") => {
+    if (!supabase) return "Cloud sign-in is not configured.";
+    const { error } = await supabase.auth.verifyOtp({ email, token: code.replace(/\s/g, ""), type });
+    if (error) return friendly(error.message);
+    if (type === "recovery") set({ recovering: true });
+    return null;
   },
 
   confirmTokenHash: async (tokenHash, type) => {
     if (!supabase) return "Cloud sign-in is not configured.";
     const { error } = await supabase.auth.verifyOtp({ token_hash: tokenHash, type });
-    return error ? friendly(error.message) : null;
+    if (error) return friendly(error.message);
+    if (type === "recovery") set({ recovering: true });
+    return null;
+  },
+
+  endRecovery: () => set({ recovering: false }),
+
+  updatePassword: async (password) => {
+    if (!supabase) return "Cloud sign-in is not configured.";
+    const { error } = await supabase.auth.updateUser({ password });
+    if (error) {
+      if (/different from the old/i.test(error.message)) return "That's your current password. Choose a new one.";
+      if (/reauthenticat/i.test(error.message)) return "For security, sign out and back in, then change your password.";
+      return error.message;
+    }
+    track("password_set");
+    return null;
   },
 
   signOut: async () => {

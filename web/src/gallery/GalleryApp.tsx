@@ -1,6 +1,7 @@
 import { Heart, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { AccountDialog } from "../components/AccountDialog";
+import { SetPasswordDialog } from "../components/SetPasswordForm";
 import { AvatarDialog } from "../components/AvatarDialog";
 import { AvatarMenu } from "../components/AvatarMenu";
 import { UpgradeDialog } from "../components/UpgradeDialog";
@@ -182,6 +183,7 @@ export function GalleryApp() {
         }
       />
       {dialog === "account" && <AccountDialog onClose={() => setDialog(null)} />}
+      {!dialog && <SetPasswordDialog />}
       {dialog === "register" && <AccountDialog onClose={() => setDialog(null)} initialTab="create" />}
       {dialog === "avatar" && <AvatarDialog onClose={() => setDialog(null)} />}
       <UpgradeDialog onSignIn={() => setDialog("account")} />
