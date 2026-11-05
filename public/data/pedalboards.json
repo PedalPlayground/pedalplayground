@@ -981,6 +981,20 @@
 	},
 	{
 		"Brand": "Oneset Audio",
+		"Name": "Pedalboard 4535STD",
+		"Width": 19,
+		"Height": 13.96,
+		"Image": "oneset-audio-4535std.png"
+	},
+	{
+		"Brand": "Oneset Audio",
+		"Name": "Pedalboard 5030STD",
+		"Width": 21,
+		"Height": 12.17,
+		"Image": "oneset-audio-5030std.png"
+	},
+	{
+		"Brand": "Oneset Audio",
 		"Name": "Pedalboard 6535STD",
 		"Width": 26.9,
 		"Height": 13.96,
