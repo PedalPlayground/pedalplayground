@@ -5,6 +5,7 @@ import { useCloud } from "../store/cloud";
 import { DEFAULT_NAME } from "../store/playground";
 import { useUi } from "../store/ui";
 import { GenrePicker } from "./GenrePicker";
+import { fieldLabel } from "./formText";
 import { Modal } from "./Modal";
 
 /** Shaded, borderless fields; focus shows a brand ring. Matches the Edit Playground dialog. */
@@ -30,7 +31,7 @@ export function NewPlaygroundDialog() {
 
   return (
     <Modal title="New Playground" onClose={close}>
-      <label className="mb-1 block text-xs text-ink-muted" htmlFor="new-pg-name">
+      <label className={fieldLabel} htmlFor="new-pg-name">
         Name
       </label>
       <input
@@ -47,7 +48,7 @@ export function NewPlaygroundDialog() {
         className={`mb-4 h-9 w-full px-3 ${field}`}
       />
 
-      <label className="mb-1 block text-xs text-ink-muted" htmlFor="new-pg-type">
+      <label className={fieldLabel} htmlFor="new-pg-type">
         Playground Type
       </label>
       <select
@@ -64,7 +65,7 @@ export function NewPlaygroundDialog() {
         ))}
       </select>
 
-      <span className="mb-1.5 block text-xs text-ink-muted">Genres</span>
+      <span className={fieldLabel}>Genres</span>
       <GenrePicker value={genres} onChange={setGenres} />
 
       <div className="mt-4 flex items-center justify-end gap-2">

@@ -19,6 +19,7 @@ import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useBoardPanel } from "./BoardPanel";
 import { GenrePicker } from "./GenrePicker";
+import { fieldLabel } from "./formText";
 import { Modal } from "./Modal";
 import { tip } from "./Tooltip";
 
@@ -131,7 +132,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
 
   return (
     <Modal title="Playground Settings" onClose={onClose}>
-      <label className="mb-1 block text-xs text-ink-muted" htmlFor="pg-name">
+      <label className={fieldLabel} htmlFor="pg-name">
         Name
       </label>
       <input
@@ -149,7 +150,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
 
       {startDetails && (
         <>
-          <label className="mb-1 block text-xs text-ink-muted" htmlFor="pg-type">
+          <label className={fieldLabel} htmlFor="pg-type">
             Playground Type
           </label>
           <select
@@ -168,12 +169,12 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
 
           {canStoreGenres() && (
             <>
-              <span className="mb-1.5 block text-xs text-ink-muted">Genres</span>
+              <span className={fieldLabel}>Genres</span>
               <GenrePicker value={genres} onChange={setGenres} />
             </>
           )}
 
-          <label className="mb-1 flex justify-between text-xs text-ink-muted" htmlFor="pg-description">
+          <label className="mb-1 flex justify-between text-[13px] text-ink/80" htmlFor="pg-description">
             Description
             {description.length > DESCRIPTION_MAX - 100 && (
               <span>
@@ -196,7 +197,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
 
       {saved && (
         <>
-          <span className="mb-1 block text-xs text-ink-muted">Share Link</span>
+          <span className={fieldLabel}>Share Link</span>
           {slug ? (
             <button
               type="button"
