@@ -254,7 +254,7 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
                 className={`${field} mb-3`}
               />
               <div className="mb-1 flex items-baseline justify-between">
-                <label className="text-[13px] text-ink/80" htmlFor="acct-password">
+                <label className="text-[13px] font-medium text-ink/80" htmlFor="acct-password">
                   Password
                 </label>
                 {/* Emails a reset code and link: for a forgotten password, or an account made with an email link. */}
