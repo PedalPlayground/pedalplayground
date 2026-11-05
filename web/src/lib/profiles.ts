@@ -8,6 +8,11 @@ const isMissing = (code?: string) => code === "42P01" || code === "PGRST205" || 
 /** False once we learn the database has no profiles table yet, so nothing asks for a username. */
 export let profilesSupported = true;
 
+/** A starting username from an email. "trav.lehman+pp1@gmail.com" → "travlehman": the part before the @ (and any +tag), with only allowed characters. */
+export function usernameFromEmail(email: string) {
+  return email.split("@")[0].split("+")[0].replace(/[^A-Za-z0-9_-]/g, "").slice(0, 24);
+}
+
 /** A short reason the name can't be used, or null when its format is fine. */
 export function usernameProblem(name: string): string | null {
   if (name.length < 3) return "At least 3 characters.";

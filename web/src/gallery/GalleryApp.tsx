@@ -5,6 +5,7 @@ import { SetPasswordDialog } from "../components/SetPasswordForm";
 import { AvatarDialog } from "../components/AvatarDialog";
 import { AvatarMenu } from "../components/AvatarMenu";
 import { UpgradeDialog } from "../components/UpgradeDialog";
+import { UsernamePrompt } from "../components/UsernamePrompt";
 import { WhatsNew } from "../components/WhatsNew";
 import { startAvatarSync } from "../lib/avatar";
 import { GuestButtons, SiteHeader } from "../components/SiteTabs";
@@ -15,6 +16,7 @@ import { isEditor } from "../lib/editorApi";
 import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "../store/auth";
+import { useUi } from "../store/ui";
 import { useBilling } from "../store/billing";
 import { useCatalog } from "../store/catalog";
 
@@ -41,6 +43,8 @@ export function GalleryApp() {
   /** The same account dialogs as the playground header. */
   const [dialog, setDialog] = useState<"account" | "register" | "avatar" | null>(null);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
+  const recovering = useAuth((s) => s.recovering);
+  const upgradeOpen = useUi((u) => u.upgrade !== null);
   const [type, setType] = useState<PlaygroundType | null>(returning?.type ?? null);
   const [query, setQuery] = useState(returning?.query ?? "");
   const [search, setSearch] = useState(returning?.query ?? "");
@@ -187,6 +191,8 @@ export function GalleryApp() {
       {dialog === "register" && <AccountDialog onClose={() => setDialog(null)} initialTab="create" />}
       {dialog === "avatar" && <AvatarDialog onClose={() => setDialog(null)} />}
       <UpgradeDialog onSignIn={() => setDialog("account")} />
+      {/* Same as the playground page: waits until nothing else is open. */}
+      {!dialog && !recovering && !upgradeOpen && <UsernamePrompt />}
 
       {/* Opening a board saves this spot, so its "Back to Gallery" returns here. */}
       <main

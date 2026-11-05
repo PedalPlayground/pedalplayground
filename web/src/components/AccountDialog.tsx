@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { openBillingPortal } from "../lib/billing";
-import { usernameAvailable, usernameProblem } from "../lib/profiles";
+import { usernameAvailable, usernameFromEmail, usernameProblem } from "../lib/profiles";
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useUi } from "../store/ui";
@@ -20,11 +20,6 @@ type Tab = "signin" | "create";
  * a sign-up confirmation email.
  */
 type Step = "form" | "code" | "confirm";
-
-/** "trav.lehman+pp1@gmail.com" → "travlehman": the part before the @ (and any +tag), with only allowed characters. */
-function usernameFromEmail(email: string) {
-  return email.split("@")[0].split("+")[0].replace(/[^A-Za-z0-9_-]/g, "").slice(0, 24);
-}
 
 /** Checks the username as it's typed: format first, then (after a pause) whether it's free. */
 function useUsernameCheck(name: string) {

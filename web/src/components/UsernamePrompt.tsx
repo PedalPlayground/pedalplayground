@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { saveUsername, usernameAvailable, usernameProblem } from "../lib/profiles";
+import { saveUsername, usernameAvailable, usernameFromEmail, usernameProblem } from "../lib/profiles";
 import { useAuth } from "../store/auth";
 import { fieldError, fieldHelp, fieldInput, fieldLabel } from "./formText";
 import { Modal } from "./Modal";
@@ -14,7 +14,9 @@ export function UsernamePrompt() {
   const username = useAuth((s) => s.username);
   const setStoredUsername = useAuth((s) => s.setUsername);
   const [dismissed, setDismissed] = useState(false);
-  const [name, setName] = useState("");
+  // Starts as the email's name part (like Create Account) until they type their own.
+  const [typed, setName] = useState<string | null>(null);
+  const name = typed ?? usernameFromEmail(user?.email ?? "");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [taken, setTaken] = useState<string | null>(null);
