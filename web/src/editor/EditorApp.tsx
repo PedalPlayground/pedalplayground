@@ -149,10 +149,7 @@ export function EditorApp() {
 
 export type SetNotice = (n: Notice | null) => void;
 
-/**
- * The site header, then the editor's own tab bar under it (once you're in). The page itself sits on a white panel, like
- * dialogs and side panels, so the gray form fields always stand out.
- */
+/** The site header, then the editor's own tab bar under it (once you're in). */
 function Shell({ header, children, bar }: { header: React.ReactNode; children?: React.ReactNode; bar?: React.ReactNode }) {
   return (
     <div className="min-h-dvh bg-chrome font-sans text-ink">
@@ -162,7 +159,7 @@ function Shell({ header, children, bar }: { header: React.ReactNode; children?: 
           <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
         </div>
       )}
-      <main className="mx-auto max-w-5xl px-4 py-6">{children && <div className="rounded-panel bg-surface p-5 shadow-panel">{children}</div>}</main>
+      <main className="mx-auto max-w-5xl px-4 py-6">{children}</main>
     </div>
   );
 }
