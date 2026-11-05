@@ -80,6 +80,8 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
 
   const switchTab = (t: Tab) => {
     setTab(t);
+    // An email typed on Sign In carries over, so fill the username from it too.
+    if (t === "create" && !usernameEdited) setUsername(usernameFromEmail(email));
     setStep("form");
     setError(null);
     setMessage(null);
