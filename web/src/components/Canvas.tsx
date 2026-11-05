@@ -390,6 +390,8 @@ export function Canvas() {
     // Right click (or Control-click on a Mac): pick what's under the pointer, then let the menu open.
     // A right click on something already selected keeps the whole selection, like Figma and Finder.
     if (e.pointerType !== "touch" && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) {
+      // View-only boards can't be selected or changed, so a right click does nothing there.
+      if (useUi.getState().viewing) return;
       const s = usePlayground.getState();
       const id = (e.target as HTMLElement).closest<HTMLElement>("[data-item-id]")?.dataset.itemId;
       if (!id) s.clearSelection();

@@ -42,7 +42,9 @@ export function ObjectMenu() {
   const setReplacing = useUi((u) => u.setReplacing);
   const setEditing = useUi((u) => u.setEditing);
   const searchOpen = useUi((u) => u.searchOpen);
-  if (!s.selected.length) return null;
+  const viewing = useUi((u) => !!u.viewing);
+  // Someone else's board is view-only.
+  if (!s.selected.length || viewing) return null;
   const single = s.selected.length === 1 ? s.items.find((i) => i.id === s.selected[0]) : undefined;
   const locked = s.items.filter((i) => s.selected.includes(i.id)).every((i) => i.locked);
   return (
