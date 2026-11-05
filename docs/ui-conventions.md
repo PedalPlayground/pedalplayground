@@ -6,7 +6,8 @@ The sizes the app already uses almost everywhere. Keep new UI to these so it sta
 | --- | --- |
 | Buttons, text fields, icon buttons, menu triggers | 36px tall (`h-9`, `size-9`); icon buttons are 36×36 |
 | Body and control text | `text-sm` (14px); metadata, the zoom readout and the Beta badge use `text-xs` (12px) |
-| Form fields | `components/formText.ts`: label 13px semibold at 80% ink, help text (12px, muted) right under the label, the field, then any error (12px, red) under the field. Help and error are linked to the field with `aria-describedby` |
+| Form fields | `components/formText.ts`: label 13px semibold at 80% ink, help text (12px, muted) right under the label, the field, then any error (12px, red) under the field. Help and error are linked to the field with `aria-describedby`. Labels are Title Case. Units go inside the field at the end (`fieldWithUnit`), never in the label |
+| Selects | One rule in `index.css` for every `<select>`: our own chevron 12px from the right edge, with 34px of right padding |
 | Dialog titles | `text-base font-semibold` |
 | Primary button | `btn-primary` (index.css), from the Figma button: purple `#5B61FB` with a lighter `#6D72F6` highlight in its top ~1px (the gradient border), `0 1px 1px` shadow at 14% black, faint text shadow, semibold, 4px radius (same as every control) |
 | Corner radius | controls 4px (`rounded-control`), panels and menus 12px (`rounded-panel`), avatar and color dots fully round |
@@ -26,7 +27,7 @@ below is where this has bitten before. Add to it when you find another.
 
 | Pattern | Where it lives | Also update |
 | --- | --- | --- |
-| Form label, help text, error, text field | `components/formText.ts` | Every dialog form: Account (Sign In, Create Account, account view), `SetPasswordForm` (Change Password and after a reset), `UsernamePrompt`, `NewPlaygroundDialog`, `EditPlaygroundDialog`, and the editor's forms (`editor/ItemEditor.tsx` for Queue, Add and Catalog, `editor/NewsTab.tsx`). New and Edit Playground, and the editor, still have their own text field style (the editor's is smaller on purpose). |
+| Form label, help text, error, text field | `components/formText.ts` | Every dialog form: Account (Sign In, Create Account, account view), `SetPasswordForm` (Change Password and after a reset), `UsernamePrompt`, `NewPlaygroundDialog`, `EditPlaygroundDialog`, and the editor's forms (`editor/ItemEditor.tsx` for Queue, Add and Catalog, `editor/NewsTab.tsx`). New and Edit Playground still have their own `field` style. The equipment list's inline fields are compact (32px) on purpose but use the same label text. |
 | Dialog shell and backdrop | `components/Modal.tsx`, `.modal-backdrop` in `index.css` | Dialogs built by hand: `OnboardingTour`, `SpaceBetweenPanel`. Text placed on the backdrop (the `footer` under a dialog) must use theme colors, since the backdrop is light in light mode. |
 | Add Gear / Replace / Edit | `components/SearchPanel.tsx` | It has two layouts: the desktop side panel and the phone sheet. Change both, and check all three modes in each. On phones all three leave the canvas undimmed and fit it above the sheet, and the selection bar (`SelectionMiniMenu`) hides while the sheet is open. |
 | Site header and nav | `SiteHeader` / `SiteTabs` in `components/SiteTabs.tsx`; `components/PageHeader.tsx` | The gallery and the editor use `PageHeader` (header plus its dialogs). The playground wires the same pieces itself in `App.tsx`, so check it too. The Editor tab and Updates' "Post an Update" only show for catalog editors (`useIsEditor`). Each page's HTML (`index.html`, `gallery/index.html`, `editor/index.html`) repeats the fonts, theme script and first-paint colors. |
