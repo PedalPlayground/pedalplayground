@@ -82,9 +82,9 @@ const byUsage = (usage: Usage) => (a: CatalogItem, b: CatalogItem) => usage(b) -
 
 /**
  * The sizes a brand's items come in, most used first (sizes within 0.05 in count as one), for brands that build on
- * standard enclosures. Only sizes shared by at least two items, up to `n`.
+ * standard enclosures. Only sizes shared by at least `minCount` items, up to `n`.
  */
-export function brandSizes(items: CatalogItem[], brand: string, n = 6, usage: Usage = () => 0): BrandSize[] {
+export function brandSizes(items: CatalogItem[], brand: string, n = 6, usage: Usage = () => 0, minCount = 2): BrandSize[] {
   const key = norm(brand);
   if (!key) return [];
   const sizes: BrandSize[] = [];
@@ -97,7 +97,7 @@ export function brandSizes(items: CatalogItem[], brand: string, n = 6, usage: Us
     } else sizes.push({ width: i.width, height: i.height, count: 1, example: i });
   }
   return sizes
-    .filter((s) => s.count >= 2)
+    .filter((s) => s.count >= minCount)
     .sort((a, b) => b.count - a.count || a.width * a.height - b.width * b.height)
     .slice(0, n);
 }

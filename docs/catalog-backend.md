@@ -170,10 +170,11 @@ on a local Postgres 16 with stand-ins for Supabase's `auth` and `storage` schema
 `/editor/` on the site (a separate page, `web/editor/index.html`, so it adds nothing to the playground's bundle).
 Only accounts in `catalog_editors` get past the sign-in check; everyone else sees a short message.
 
-- **Copying sizes (Add, Queue and Catalog):** once Brand is set, its common sizes show as chips under the preview, their pictures drawn to scale with each other
-  (sizes shared by 2 or more of its items, each with a thumbnail of its most added pedal). **Copy From…** searches the catalog and copies an item's brand and size, plus
-  power and type when ticked. Each same-brand preview has **Use This Size**. On the Catalog tab, **Duplicate** opens Add
-  (`/editor/#add?from=<key>`) with that item's kind, brand and size.
+- **Copying sizes (Add, Queue and Catalog):** once Brand is set, the preview shows every size the brand comes in beside
+  "This one", most used first, each drawn at the preview's scale by its most added pedal, with arrows to page through.
+  Clicking a size copies it. **Copy From…** (by the size fields) searches the catalog and copies an item's brand and
+  size, plus power and type when ticked. On the Catalog tab, **Duplicate** opens Add (`/editor/#add?from=<key>`) with
+  that item's kind, brand and size.
 - **Queue:** pending and sent-back submissions, oldest first. Fix any field or replace the photo, then Approve,
   Needs changes (the note goes to the submitter) or Reject. Empty until the submit form arrives in phase 4.
 - **Add:** a new pedal or pedalboard straight into the catalog.

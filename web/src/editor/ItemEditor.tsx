@@ -1,4 +1,4 @@
-import { Check as CheckIcon, ImageUp, TriangleAlert } from "lucide-react";
+import { Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { ScaleKey } from "../components/ScaleKey";
@@ -7,7 +7,7 @@ import { FEATURED_PEDALS } from "../lib/featuredPedals";
 import { fetchGearUsage } from "../lib/trending";
 import { PX_PER_INCH } from "../lib/geometry";
 import { dotGridStyle } from "../lib/scale";
-import { brandSizes, brandSpelling, brandSuggestions, catalogBrands, copiedFields, copySources, imageStats, runChecks, sameBrand, type Fields, type ImageStats, type Usage } from "../lib/editorChecks";
+import { brandSizes, brandSpelling, brandSuggestions, catalogBrands, copiedFields, copySources, imageStats, runChecks, type BrandSize, type Fields, type ImageStats, type Usage } from "../lib/editorChecks";
 import type { CatalogItem } from "../lib/types";
 import { plainField } from "../lib/inputProps";
 import { PEDAL_TYPES, VOLTAGES } from "../lib/specs";
@@ -18,6 +18,9 @@ const PREVIEW_PPI = 28;
 const PREVIEW_ZOOM = PREVIEW_PPI / PX_PER_INCH;
 /** The preview's size before one is entered: a typical pedal (inches). */
 const PLACEHOLDER_IN = [2.9, 5.1] as const;
+/** The size strip: each size's caption width at least, and the gap between sizes (px). */
+const CAPTION_W = 104;
+const STRIP_GAP = 16;
 
 /** Editor forms use the site's form pieces: fields, labels, help under the label, errors under the field. */
 export { fieldBox, fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass } from "../components/formText";
@@ -81,7 +84,6 @@ export function ItemEditor({
   // Every brand in the catalog (pedals and pedalboards), for the Brand field's suggestions.
   const brands = useMemo(() => (manifest ? catalogBrands([...manifest.pedals, ...manifest.pedalboards]) : []), [manifest]);
   const checks = useMemo(() => runChecks(fields, stats, list, skipImage), [fields, stats, list, skipImage]);
-  const neighbours = useMemo(() => sameBrand(list, fields, 3, skipImage), [list, fields, skipImage]);
   // How often each item gets added to playgrounds (the site's featured pedals count a little too), so chips and
   // Copy From show the pedals people know first.
   const [adds, setAdds] = useState<Map<string, number>>(new Map());
@@ -90,10 +92,12 @@ export function ItemEditor({
     const featured = new Set<string>(FEATURED_PEDALS);
     return (i) => (adds.get(`${fields.kind}:${i.image}`) ?? 0) + (featured.has(i.image) ? 0.5 : 0);
   }, [adds, fields.kind]);
-  // The brand's standard sizes (enclosures it builds on), as one-tap chips under the size fields.
-  const sizes = useMemo(() => brandSizes(list, fields.brand, 6, usage), [list, fields.brand, usage]);
-  // One scale for every chip's picture (the biggest size fits 56px tall and 72px wide), so sizes compare at a glance.
-  const chipScale = sizes.length ? Math.min(56 / Math.max(...sizes.map((z) => z.height)), 72 / Math.max(...sizes.map((z) => z.width))) : 0;
+  // Every size the brand comes in, most used first, each shown by its most added pedal beside this one in the preview
+  // (the item being edited left out). Clicking one copies its size.
+  const sizes = useMemo(
+    () => brandSizes(skipImage ? list.filter((i) => i.image !== skipImage) : list, fields.brand, 60, usage, 1),
+    [list, skipImage, fields.brand, usage],
+  );
   const sameSize = (w: number, h: number) => Math.abs(fields.width - w) < 0.005 && Math.abs(fields.height - h) < 0.005;
 
   return (
@@ -247,58 +251,26 @@ export function ItemEditor({
 
       <div className="grid content-start gap-4">
         {/* Like the canvas: its color, its ½ in dots and its scale key, at the preview's scale. */}
-        <div className="overflow-x-auto rounded-lg border border-line bg-canvas p-4" style={dotGridStyle(PREVIEW_ZOOM, "in", 16, 16)}>
-          <div className="flex min-h-24 items-end gap-5">
+        <div className="rounded-lg border border-line bg-canvas p-4" style={dotGridStyle(PREVIEW_ZOOM, "in", 16, 16)}>
+          <div className="flex items-end gap-5">
             <Figure label="This one" src={image} w={fields.width} h={fields.height} highlight broken={imageError} />
-            {neighbours.map((n) => (
-              <Figure
-                key={n.image}
-                label={n.name}
-                src={canvasImageUrl(manifest, fields.kind, n.image)}
-                w={n.width}
-                h={n.height}
-                onUseSize={sameSize(n.width, n.height) ? undefined : () => fill({ width: n.width, height: n.height })}
+            {sizes.length > 0 && (
+              <SizeStrip
+                brand={fields.brand.trim()}
+                kind={fields.kind}
+                sizes={sizes}
+                selected={(z) => sameSize(z.width, z.height)}
+                src={(z) => canvasImageUrl(manifest, fields.kind, z.example.image)}
+                onUse={(z) => fill({ width: z.width, height: z.height })}
               />
-            ))}
+            )}
           </div>
           <ScaleKey zoom={PREVIEW_ZOOM} units="in" className="mt-3" />
           <p className="mt-3 text-xs text-ink-muted">
-            Drawn at the same scale, stretched to the entered size. A photo that looks squashed, or a size far off its
-            neighbours, means a wrong number.
+            Drawn at the same scale, stretched to the entered size. A photo that looks squashed, or a size far off the
+            brand's others, means a wrong number. Click a size to use it.
           </p>
         </div>
-        {sizes.length > 0 && (
-          <div>
-            <span className={labelClass}>Common {fields.brand.trim()} Sizes</span>
-            <span className={fieldHelp}>Drawn to scale with each other</span>
-            <div className="flex flex-wrap items-end gap-2">
-              {sizes.map((z) => (
-                <button
-                  key={`${z.width}x${z.height}`}
-                  type="button"
-                  aria-pressed={sameSize(z.width, z.height)}
-                  onClick={() => fill({ width: z.width, height: z.height })}
-                  title={`Like ${z.example.name}`}
-                  className={`press flex items-end gap-2.5 rounded-control p-2 pr-3 text-left tabular-nums ${sameSize(z.width, z.height) ? "bg-brand/10 text-brand ring-1 ring-brand/40" : "bg-surface-hover text-ink hover:bg-ink/10"}`}
-                >
-                  <span className="grid shrink-0 place-items-end" style={{ width: z.width * chipScale, height: z.height * chipScale }}>
-                    {thumbUrl(manifest, fields.kind, z.example.image) && (
-                      <img src={thumbUrl(manifest, fields.kind, z.example.image)!} alt="" loading="lazy" className="size-full object-contain" />
-                    )}
-                  </span>
-                  <span>
-                    <span className="block text-sm font-semibold">
-                      {+z.width.toFixed(2)} × {+z.height.toFixed(2)} in
-                    </span>
-                    <span className="block text-xs text-ink-muted">
-                      {z.count} {z.count === 1 ? "pedal" : fields.kind === "pedal" ? "pedals" : "boards"}
-                    </span>
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
         <ul className="grid gap-1.5">
           {checks.map((c) => (
             <li key={c.text} className={`flex items-start gap-2 text-[13px] ${c.ok ? "text-ink-muted" : "text-ink"}`}>
@@ -324,7 +296,6 @@ function Figure({
   h,
   highlight,
   broken,
-  onUseSize,
 }: {
   label: string;
   src: string | null;
@@ -332,8 +303,6 @@ function Figure({
   h: number;
   highlight?: boolean;
   broken?: boolean;
-  /** Same-brand pedals: copy this one's size to the item being edited. */
-  onUseSize?: () => void;
 }) {
   // No size yet: a typical pedal's size, so the box and its "No photo" read cleanly above the caption.
   const sized = w > 0 && h > 0;
@@ -356,11 +325,6 @@ function Figure({
       <figcaption className="max-w-[140px] truncate text-center text-[11px] text-ink-muted" title={label}>
         {label}
         <span className="block tabular-nums">{sized ? `${+w.toFixed(3)} × ${+h.toFixed(3)} in` : "No size yet"}</span>
-        {onUseSize && (
-          <button type="button" onClick={onUseSize} className="mt-0.5 font-semibold text-brand hover:underline">
-            Use This Size
-          </button>
-        )}
       </figcaption>
     </figure>
   );
@@ -525,5 +489,115 @@ function Thumb({ src }: { src: string | null }) {
     <span className="grid size-6 shrink-0 place-items-center">
       {src && <img src={src} alt="" loading="lazy" className="max-h-6 max-w-6 object-contain" />}
     </span>
+  );
+}
+
+/**
+ * The brand's sizes in the preview, most used first, each drawn at the preview's scale by its most added pedal. Split
+ * into pages that fit the width (only the current page is drawn, so one huge unit doesn't stretch every page), with
+ * arrows to page through. Clicking a size copies it.
+ */
+function SizeStrip({
+  brand,
+  kind,
+  sizes,
+  selected,
+  src,
+  onUse,
+}: {
+  brand: string;
+  kind: Fields["kind"];
+  sizes: BrandSize[];
+  selected: (z: BrandSize) => boolean;
+  src: (z: BrandSize) => string | null;
+  onUse: (z: BrandSize) => void;
+}) {
+  const box = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(0);
+  const [page, setPage] = useState(0);
+  useEffect(() => {
+    const el = box.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => setWidth(el.clientWidth));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  // A size takes its drawn width or its caption's, plus padding; pages fill greedily, at least one size each.
+  const pages = useMemo(() => {
+    const out: BrandSize[][] = [];
+    let row: BrandSize[] = [];
+    let used = 0;
+    for (const z of sizes) {
+      const w = Math.max(z.width * PREVIEW_PPI, CAPTION_W) + 8;
+      if (row.length && used + STRIP_GAP + w > width) {
+        out.push(row);
+        row = [];
+        used = 0;
+      }
+      used += (row.length ? STRIP_GAP : 0) + w;
+      row.push(z);
+    }
+    if (row.length) out.push(row);
+    return out;
+  }, [sizes, width]);
+  useEffect(() => setPage(0), [sizes]);
+  const at = Math.min(page, Math.max(0, pages.length - 1));
+  const arrow = "press grid size-7 place-items-center rounded-control text-ink-muted hover:bg-ink/5 hover:text-ink disabled:opacity-30 disabled:hover:bg-transparent";
+  const plural = kind === "pedal" ? "pedals" : "boards";
+
+  return (
+    <div className="min-w-0 flex-1 border-l border-line pl-5">
+      <div className="mb-2 flex items-center justify-between gap-2">
+        <span className="text-xs text-ink-muted">
+          {brand} sizes, most used first ({sizes.length})
+        </span>
+        {pages.length > 1 && (
+          <span className="flex items-center gap-0.5 text-xs tabular-nums text-ink-muted">
+            <button type="button" aria-label="Previous sizes" disabled={at === 0} onClick={() => setPage(at - 1)} className={arrow}>
+              <ChevronLeft size={16} />
+            </button>
+            {at + 1} / {pages.length}
+            <button type="button" aria-label="More sizes" disabled={at === pages.length - 1} onClick={() => setPage(at + 1)} className={arrow}>
+              <ChevronRight size={16} />
+            </button>
+          </span>
+        )}
+      </div>
+      <div ref={box} className="flex items-end gap-4">
+        {width > 0 &&
+          (pages[at] ?? []).map((z) => {
+            const on = selected(z);
+            const url = src(z);
+            return (
+              <button
+                key={`${z.width}x${z.height}`}
+                type="button"
+                aria-pressed={on}
+                title={on ? "This size" : "Use this size"}
+                onClick={() => onUse(z)}
+                className="press flex shrink-0 flex-col items-center gap-1.5 rounded-control p-1 outline-none hover:bg-ink/5 focus-visible:ring-2 focus-visible:ring-brand"
+              >
+                <span
+                  className={`relative block ${on ? "outline-2 outline-offset-2 outline-brand" : ""}`}
+                  style={{ width: z.width * PREVIEW_PPI, height: z.height * PREVIEW_PPI }}
+                >
+                  {url && <img src={url} alt="" loading="lazy" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />}
+                </span>
+                <span className="text-center text-[11px] leading-snug" style={{ width: Math.max(z.width * PREVIEW_PPI, CAPTION_W) }}>
+                  <span className={`block font-semibold tabular-nums ${on ? "text-brand" : "text-ink"}`}>
+                    {+z.width.toFixed(2)} × {+z.height.toFixed(2)} in
+                  </span>
+                  <span className="block text-ink-muted">
+                    {z.count} {z.count === 1 ? plural.slice(0, -1) : plural}
+                  </span>
+                  <span className="block truncate text-ink-muted" title={z.example.name}>
+                    like {z.example.name}
+                  </span>
+                </span>
+              </button>
+            );
+          })}
+      </div>
+    </div>
   );
 }
