@@ -1,13 +1,18 @@
 import { Check as CheckIcon, ImageUp, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
+import { ScaleKey } from "../components/ScaleKey";
 import { canvasImageUrl, type Manifest } from "../lib/catalog";
+import { PX_PER_INCH } from "../lib/geometry";
+import { dotGridStyle } from "../lib/scale";
 import { brandSpelling, brandSuggestions, catalogBrands, imageStats, runChecks, sameBrand, type Fields, type ImageStats } from "../lib/editorChecks";
 import { plainField } from "../lib/inputProps";
 import { PEDAL_TYPES, VOLTAGES } from "../lib/specs";
 
 /** Pixels per inch for the side-by-side preview. */
 const PREVIEW_PPI = 28;
+/** The preview's scale as a canvas zoom level, for its dots and scale key. */
+const PREVIEW_ZOOM = PREVIEW_PPI / PX_PER_INCH;
 /** The preview's size before one is entered: a typical pedal (inches). */
 const PLACEHOLDER_IN = [2.9, 5.1] as const;
 
@@ -197,7 +202,8 @@ export function ItemEditor({
       </div>
 
       <div className="grid content-start gap-4">
-        <div className="overflow-x-auto rounded-lg border border-line bg-canvas p-4">
+        {/* Like the canvas: its color, its ½ in dots and its scale key, at the preview's scale. */}
+        <div className="overflow-x-auto rounded-lg border border-line bg-canvas p-4" style={dotGridStyle(PREVIEW_ZOOM, "in", 16, 16)}>
           <div className="flex min-h-24 items-end gap-5">
             <Figure label="This one" src={image} w={fields.width} h={fields.height} highlight broken={imageError} />
             {neighbours.map((n) => (
@@ -210,6 +216,7 @@ export function ItemEditor({
               />
             ))}
           </div>
+          <ScaleKey zoom={PREVIEW_ZOOM} units="in" className="mt-3" />
           <p className="mt-3 text-xs text-ink-muted">
             Drawn at the same scale, stretched to the entered size. A photo that looks squashed, or a size far off its
             neighbours, means a wrong number.
