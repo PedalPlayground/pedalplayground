@@ -137,7 +137,32 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
   const emailOk = /.+@.+\..+/.test(email.trim());
 
   return (
-    <Modal title={title} onClose={onClose} closeX>
+    <Modal
+      title={title}
+      onClose={onClose}
+      closeX
+      footer={
+        cloudEnabled &&
+        !user &&
+        tab === "create" &&
+        step === "form" && (
+          <>
+            By creating an account you agree to the{" "}
+            <button
+              type="button"
+              onClick={() => {
+                onClose();
+                useUi.getState().openLegal();
+              }}
+              className="underline hover:text-white"
+            >
+              Terms &amp; Privacy
+            </button>
+            .
+          </>
+        )
+      }
+    >
       {!cloudEnabled && <p className="text-sm text-ink-muted">Cloud sign-in is not configured on this build.</p>}
 
       {cloudEnabled && user && changing && (
@@ -322,13 +347,6 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
               >
                 {busy ? "Creating…" : "Create Account"}
               </button>
-              <p className="mt-2 text-center text-xs text-ink-muted">
-                By creating an account you agree to the{" "}
-                <button type="button" onClick={() => { onClose(); useUi.getState().openLegal(); }} className="underline hover:text-ink">
-                  Terms &amp; Privacy
-                </button>
-                .
-              </p>
               <p className="mt-3 text-center text-sm text-ink-muted">
                 Already have an account?{" "}
                 <button type="button" onClick={() => switchTab("signin")} className={linkButton}>
