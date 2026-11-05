@@ -3,9 +3,7 @@ import { Settings } from "lucide-react";
 import { useRef } from "react";
 import { importAny } from "../lib/importers";
 import { usePlayground } from "../store/playground";
-import { requestNewPlayground } from "../lib/newPlayground";
 import { BETA, FEEDBACK_URL } from "../lib/beta";
-import { useAuth } from "../store/auth";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { CreditMenuItems } from "./MadeBy";
@@ -76,7 +74,6 @@ export function Segmented<T extends string>({
 /** The cog in the canvas's lower-right corner. `className` positions its floating panel. */
 export function SettingsMenu({ className = "" }: { className?: string }) {
   const { units, setUnits, theme, setTheme, darkStyle, setDarkStyle, snapping, setSnapping, startTour } = useUi();
-  const signedIn = useAuth((s) => !!s.user);
   const fileInput = useRef<HTMLInputElement>(null);
 
   const exportFile = () => {
@@ -111,8 +108,8 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
     <Dropdown.Root>
       <div className={className}>
       <Dropdown.Trigger
-        aria-label="Settings"
-        {...tip("Settings", { side: "top" })}
+        aria-label="Preferences"
+        {...tip("Preferences", { side: "top" })}
         className={`${barIconButton} text-ink-muted hover:bg-surface-hover hover:text-ink active:bg-chrome-line data-[state=open]:bg-surface-hover data-[state=open]:text-ink`}
       >
         <Settings size={18} />
@@ -125,18 +122,6 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
           sideOffset={6}
           className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel"
         >
-          {!signedIn && (
-            <>
-              <Dropdown.Item className={menuItem} onSelect={requestNewPlayground}>
-                New Playground
-              </Dropdown.Item>
-              <Dropdown.Separator className="my-1 h-px bg-line" />
-            </>
-          )}
-          <Dropdown.Item className={menuItem} onSelect={startTour}>
-            Show tutorial again…
-          </Dropdown.Item>
-          <Dropdown.Separator className="my-1 h-px bg-line" />
           {SHOW_FILE_IO && (
             <>
               <Dropdown.Item className={menuItem} onSelect={exportFile}>
@@ -169,16 +154,20 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
             Dark Mode
             <Segmented label="Dark Mode" value={darkStyle} onChange={setDarkStyle} options={[["dark", "Dark"], ["oled", "OLED"]]} />
           </div>
+          <Dropdown.Separator className="my-1 h-px bg-line" />
+          <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Help</Dropdown.Label>
+          <Dropdown.Item className={menuItem} onSelect={startTour}>
+            Show Tutorial Again
+          </Dropdown.Item>
+          <Dropdown.Item className={menuItem} onSelect={() => useUi.getState().openLegal()}>
+            Terms &amp; Privacy
+          </Dropdown.Item>
           {/* Small screens have no room for the credit line in the corner, so it lives here. */}
           <div className="md:hidden">
             <Dropdown.Separator className="my-1 h-px bg-line" />
             <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Made with love by @tehtrav</Dropdown.Label>
             <CreditMenuItems />
           </div>
-          <Dropdown.Separator className="my-1 h-px bg-line" />
-          <Dropdown.Item className={menuItem} onSelect={() => useUi.getState().openLegal()}>
-            Terms &amp; Privacy
-          </Dropdown.Item>
           {BETA && (
             <>
               <Dropdown.Separator className="my-1 h-px bg-line" />

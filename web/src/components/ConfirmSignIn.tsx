@@ -20,16 +20,19 @@ export function ConfirmSignIn({ tokenHash, type, onDone }: { tokenHash: string; 
     else onDone();
   };
 
+  const reset = type === "recovery";
   return (
-    <Modal title="Finish Signing In" onClose={onDone}>
-      <p className="mb-3 text-sm text-ink-muted">Confirm to sign in to Pedal Playground on this device.</p>
+    <Modal title={reset ? "Reset Your Password" : "Finish Signing In"} onClose={onDone}>
+      <p className="mb-3 text-sm text-ink-muted">
+        {reset ? "Continue to sign in on this device, then choose a new password." : "Confirm to sign in to Pedal Playground on this device."}
+      </p>
       {error && <p className="mb-3 text-sm text-danger">{error}</p>}
       <button
         onClick={() => void go()}
         disabled={busy}
         className="h-9 w-full disabled:opacity-50 btn-primary"
       >
-        {busy ? "Signing in…" : "Sign In"}
+        {busy ? "Signing in…" : reset ? "Continue" : "Sign In"}
       </button>
       <button onClick={onDone} className="mt-3 text-sm text-ink-muted hover:text-ink">
         Cancel

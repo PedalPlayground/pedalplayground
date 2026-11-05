@@ -3,6 +3,7 @@
 /* Design tokens. Components use these via Tailwind utilities (bg-surface, text-ink-muted, ...). */
 @theme {
   --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-wordmark: "Figtree", var(--font-sans);
 
   --color-canvas: #f8f8f8;
   --color-surface: #ffffff;

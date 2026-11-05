@@ -1,7 +1,8 @@
-import { LogIn } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
+import { SetPasswordDialog } from "./components/SetPasswordForm";
+import { BoardInfoButton, BoardPanel } from "./components/BoardPanel";
 import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
@@ -11,17 +12,19 @@ import { startAvatarSync } from "./lib/avatar";
 import { AvatarDialog } from "./components/AvatarDialog";
 import { AvatarMenu } from "./components/AvatarMenu";
 import { SettingsMenu } from "./components/SettingsMenu";
-import { LogoMark } from "./components/Logo";
+import { GuestButtons, SiteHeader } from "./components/SiteTabs";
 import { MadeBy } from "./components/MadeBy";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
-import { PlaygroundBreadcrumb } from "./components/PlaygroundSwitcher";
-import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
+import { BoardLabel, BuildsMenu } from "./components/PlaygroundSwitcher";
+import { takeHandoff } from "./lib/handoff";
+import { requestNewPlayground } from "./lib/newPlayground";
 import { NewPlaygroundDialog } from "./components/NewPlaygroundDialog";
+import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
 import type { PlaygroundSummary } from "./lib/cloud";
 import { SaveStatus } from "./components/SaveStatus";
 import { SelectionMiniMenu } from "./components/SelectionMiniMenu";
-import { SearchPanel } from "./components/SearchPanel";
+import { SearchPanel, showNewGear } from "./components/SearchPanel";
 import { SHOW_MODES, tourSeen, useUi } from "./store/ui";
 import { ObjectMenu } from "./components/ObjectMenu";
 import { ContextMenu } from "./components/ContextMenu";
@@ -44,7 +47,7 @@ import { WhatsNew } from "./components/WhatsNew";
 import { BETA, FEEDBACK_URL } from "./lib/beta";
 import { useAuth } from "./store/auth";
 import { useBilling } from "./store/billing";
-import { startCloudSync, useCloud } from "./store/cloud";
+import { openAfterSignIn, startCloudSync, useCloud } from "./store/cloud";
 import { restorePlayground, startLocalAutosave, usePlayground } from "./store/playground";
 
 const OTP_TYPES: EmailOtpType[] = ["email", "magiclink", "signup", "recovery", "invite", "email_change"];
@@ -73,25 +76,23 @@ function stripEmailLinkParams() {
   window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""));
 }
 
-type Dialog = "account" | "edit" | "share" | "playgrounds" | "avatar" | null;
+type Dialog = "account" | "register" | "share" | "playgrounds" | "avatar" | "edit" | null;
 
 /** Opens `?p=<slug>` view-only. The param stays while viewing, so a reload shows it again. */
 async function openSharedFromUrl() {
   const slug = new URLSearchParams(window.location.search).get("p");
-  if (!slug || !useAuth.getState().cloudEnabled) return;
   try {
+    if (!slug || !useAuth.getState().cloudEnabled) return;
     if (!(await useCloud.getState().openShared(slug))) window.alert("That shared playground wasn't found or is no longer shared.");
   } catch {
     window.alert("Could not open that shared playground.");
+  } finally {
+    useUi.setState({ openingShared: false });
   }
 }
 
 const headerButton =
   "btn-primary h-[26px] whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1";
-
-/** A quieter header button (Sign In): shaded, with an icon. */
-const headerSecondaryButton =
-  "press flex h-[26px] items-center gap-1.5 whitespace-nowrap rounded-[5px] bg-[rgb(202_203_226/0.39)] px-2.5 text-[13px] font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)] focus-visible:ring-2 focus-visible:ring-brand";
 
 export function App() {
   const init = useAuth((s) => s.init);
@@ -108,7 +109,9 @@ export function App() {
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
   const hasSelection = usePlayground((s) => s.selected.length > 0);
-  const viewing = useUi((u) => !!u.viewing);
+  const openingShared = useUi((u) => u.openingShared);
+  /** Someone else's board, or one loading from a link: your own board's tools stay hidden. */
+  const viewing = useUi((u) => !!u.viewing) || openingShared;
   /** Larger screens get side stacks and a lone Add Gear button; smaller ones keep the bars. */
   const wide = useMediaQuery(WIDE_QUERY);
   const phoneSized = useMediaQuery(PHONE_QUERY);
@@ -117,8 +120,12 @@ export function App() {
   const covered = mode !== "playground";
   const [dialog, setDialog] = useState<Dialog>(null);
   const close = () => setDialog(null);
-  /** The saved playground being edited from the menu; undefined edits the open one. */
+  /** Edit Playground: the open playground, or another saved one picked from the menu. */
   const [editingPlayground, setEditingPlayground] = useState<PlaygroundSummary | undefined>();
+  const editPlayground = (target?: PlaygroundSummary) => {
+    setEditingPlayground(target);
+    setDialog("edit");
+  };
   const [emailLink] = useState(readEmailLinkParams);
   const [confirming, setConfirming] = useState(!!emailLink);
   const [billingReturn, setBillingReturn] = useState(readBillingReturn);
@@ -128,7 +135,8 @@ export function App() {
   const upgradeOpen = useUi((u) => u.upgrade !== null);
   const newPlaygroundOpen = useUi((u) => u.newPlaygroundOpen);
   // A shared playground opened from a link isn't the place for the tour (it would add a demo pedal to it).
-  const busy = confirming || !!billingReturn || dialog !== null || upgradeOpen || newPlaygroundOpen || viewing;
+  const recovering = useAuth((s) => s.recovering);
+  const busy = confirming || recovering || !!billingReturn || dialog !== null || upgradeOpen || newPlaygroundOpen || viewing;
   useEffect(() => {
     if (busy || tourSeen()) return;
     const t = setTimeout(startTour, 800);
@@ -137,12 +145,43 @@ export function App() {
 
   useEffect(init, [init]);
   useEffect(stripEmailLinkParams, []);
+  // Picks from the My Playgrounds menu on another page (the gallery); see lib/handoff.
+  const [handoff, setHandoff] = useState(() => {
+    const h = takeHandoff();
+    if (h?.kind === "open") openAfterSignIn(h.id);
+    return h?.kind === "open" ? null : h;
+  });
+  const authReady = useAuth((s) => s.ready);
+  const cloudList = useCloud((c) => c.list);
+  const billingKnown = useBilling((b) => !b.billingEnabled || !!b.entitlements);
+  useEffect(() => {
+    if (!handoff || !authReady) return;
+    if (handoff.kind === "new") {
+      // Wait for the plan so the limit check is right.
+      if (user && !billingKnown) return;
+      requestNewPlayground();
+    } else if (handoff.kind === "playgrounds") {
+      setDialog("playgrounds");
+    } else if (handoff.kind === "edit") {
+      const target = cloudList.find((p) => p.id === handoff.id);
+      if (!target) return; // the list is still loading
+      editPlayground(target);
+    }
+    setHandoff(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [handoff, authReady, user, billingKnown, cloudList]);
+
   useEffect(() => {
     restorePlayground();
     const stopLocal = startLocalAutosave();
     const stopCloud = startCloudSync();
     const stopAvatar = startAvatarSync();
     void openSharedFromUrl();
+    // The gallery's What's New sends "new pedals" here, to open Add Gear at its New list.
+    if (window.location.hash === "#new-gear") {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+      showNewGear();
+    }
     return () => {
       stopLocal();
       stopCloud();
@@ -154,72 +193,61 @@ export function App() {
     <div className="flex h-full flex-col">
       {/* Works around iOS 27 blurring the top edge of home-screen web apps; see .pwa-top-strip in index.css. */}
       <div aria-hidden className="pwa-top-strip" />
-      {/* One header for every size. On phones the side columns shrink to fit and the breadcrumb takes the middle.
-          Safe-area padding keeps it clear of notches and rounded corners. */}
-      <header className="box-content grid h-10 shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 border-b border-chrome-line bg-chrome pl-[max(0.75rem,env(safe-area-inset-left))] pr-[max(0.75rem,env(safe-area-inset-right))] pt-[max(env(safe-area-inset-top),var(--pwa-strip))] sm:grid-cols-[1fr_auto_1fr] sm:gap-4 sm:pl-[max(1rem,env(safe-area-inset-left))] sm:pr-[max(1rem,env(safe-area-inset-right))]">
-        <div className="flex min-w-0 items-center gap-2">
-          <h1 className="group flex items-center gap-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink">
-            <LogoMark />
-            <span className="whitespace-nowrap max-sm:hidden">
-              Pedal Playground
-              {/* A little hello on hover. */}
-              <span aria-hidden className="hidden text-brand-top group-hover:inline"> appreciates you</span>
-            </span>
-            {pro && <span className="text-brand-top group-hover:hidden max-sm:hidden">Pro</span>}
-          </h1>
-          {BETA && (
+      <SiteHeader
+        current={viewing ? null : "build"}
+        builds={<BuildsMenu onEdit={editPlayground} onSignIn={() => setDialog("account")} onPlaygrounds={() => setDialog("playgrounds")} />}
+        updates={<WhatsNew onNewGear={showNewGear} />}
+        brandExtra={pro && <span className="text-sm/4 font-semibold text-brand-top max-sm:hidden">Pro</span>}
+        nav={
+          <>
+            {BETA && (
             <>
-              <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand max-sm:hidden">Beta</span>
+              <span className="rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand max-lg:hidden">Beta</span>
               {FEEDBACK_URL && (
-                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="truncate text-xs text-ink-muted hover:text-ink hover:underline max-sm:hidden">
+                <a href={FEEDBACK_URL} target="_blank" rel="noreferrer" className="truncate text-xs text-ink-muted hover:text-ink hover:underline max-xl:hidden">
                   Send Feedback
                 </a>
               )}
             </>
-          )}
-        </div>
-        <PlaygroundBreadcrumb
-          className="sm:justify-self-center"
-          onEdit={(target) => {
-            setEditingPlayground(target);
-            setDialog("edit");
-          }}
-          onSignIn={() => setDialog("account")}
-        />
-        <div className="flex items-center justify-end gap-2 sm:gap-3">
-          <span className="max-sm:hidden">
-            <SaveStatus />
-          </span>
-          <WhatsNew />
-          <span data-tour="account" className="flex items-center gap-4 empty:hidden max-sm:gap-2">
-          {user && canUpgrade && (
-            <button onClick={() => openUpgrade("menu")} data-tour="pro" className={headerButton}>
-              Get Pro
-            </button>
-          )}
-          {user ? (
-            <AvatarMenu
-              onAccount={() => setDialog("account")}
-              onPlaygrounds={() => setDialog("playgrounds")}
-              onChangeAvatar={() => setDialog("avatar")}
-            />
+            )}
+          </>
+        }
+        navEnd={
+          <>
+            <span className="max-sm:hidden">
+              <SaveStatus />
+            </span>
+          </>
+        }
+        account={
+          user ? (
+            <>
+              {canUpgrade && (
+                <button onClick={() => openUpgrade("menu")} data-tour="pro" className={`${headerButton} mr-2 max-sm:hidden`}>
+                  Get Pro
+                </button>
+              )}
+              <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
+            </>
           ) : (
-            cloudEnabled && (
-              // Phones sign in from the playground menu ("Sign In to Save"), so the header leaves it out.
-              <button onClick={() => setDialog("account")} className={`${headerSecondaryButton} max-sm:hidden`}>
-                <LogIn size={14} strokeWidth={2.25} />
-                Sign In
-              </button>
-            )
-          )}
-          </span>
-        </div>
-      </header>
+            cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />
+          )
+        }
+      />
 
       <div className="flex min-h-0 flex-1 flex-col sm:flex-row">
+        {/* Its own column left of the canvas on larger screens (a sheet on phones), so it never covers the board. */}
+        {!covered && <BoardPanel onSignIn={() => setDialog("account")} onEdit={() => editPlayground()} />}
 
         <main data-tour="canvas" className="relative flex-1 overflow-clip bg-canvas">
-          <Canvas />
+          {/* Hidden while a shared link loads, so your own board doesn't flash before it. */}
+          <div className={`absolute inset-0 ${openingShared ? "invisible" : ""}`}>
+            <Canvas />
+          </div>
+          {openingShared && <p className="absolute inset-0 grid place-items-center text-sm text-ink-muted">Opening board…</p>}
+          {!covered && (
+            <BoardLabel onEdit={() => editPlayground()} onSignIn={() => setDialog("account")} comments={<BoardInfoButton />} />
+          )}
           {/* The other modes cover the canvas; the canvas stays mounted so the view is kept for coming back. */}
           {mode === "list" ? (
             <EquipmentList />
@@ -227,8 +255,12 @@ export function App() {
             <SignalPath />
           ) : (
             <>
-              <BackToCenter />
-              <EmptyAddGear />
+              {!openingShared && (
+                <>
+                  <BackToCenter />
+                  <EmptyAddGear />
+                </>
+              )}
               {/* Phones keep it above the toolbar instead, since the toolbar spans the bottom edge there. */}
               <MadeBy className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] left-[max(1rem,env(safe-area-inset-left))] z-10 max-md:hidden" />
               {/* Paired with the Settings cog in the lower-right corner. */}
@@ -277,10 +309,12 @@ export function App() {
 
           {wide && !covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
 
+
           {/* Lower-right corner. Phones have it in the bottom bar instead. */}
           <SettingsMenu className={`absolute bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-10 max-sm:hidden`} />
 
         </main>
+
       </div>
 
       <LegalDialog />
@@ -293,6 +327,8 @@ export function App() {
       {!busy && <UsernamePrompt />}
       {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}
       {dialog === "account" && <AccountDialog onClose={close} />}
+      {!dialog && <SetPasswordDialog />}
+      {dialog === "register" && <AccountDialog onClose={close} initialTab="create" />}
       {dialog === "avatar" && <AvatarDialog onClose={close} />}
       {newPlaygroundOpen && <NewPlaygroundDialog />}
       {dialog === "edit" && <EditPlaygroundDialog onClose={close} target={editingPlayground} />}

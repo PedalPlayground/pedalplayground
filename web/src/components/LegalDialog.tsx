@@ -44,6 +44,12 @@ export function LegalDialog() {
           people may open their own copy. Don't put anything private in a board you share. Keep your account secure; you're
           responsible for what happens under it.
         </p>
+        <h3 className={h}>Comments</h3>
+        <p className={p}>
+          Comments on gallery boards are public and show your username. Keep them friendly and on topic: no spam, harassment or
+          anything illegal. A board's owner can delete comments on their board, and we may remove comments or boards that break
+          these rules.
+        </p>
 
         <h3 className={h}>What we collect</h3>
         <p className={p}>
