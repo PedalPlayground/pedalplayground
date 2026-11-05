@@ -5,52 +5,84 @@
 
   Suggested subject:  Reset your Pedal Playground password
 
-  Variables used: {{ .Token }} (6-digit code), {{ .RedirectTo }}, {{ .TokenHash }}.
+  Variables used: {{ .Token }} (6-digit code), {{ .RedirectTo }}, {{ .TokenHash }}, {{ .SiteURL }}.
   {{ .RedirectTo }} is the site the reset was requested on (beta or production). Supabase only uses it
   when it's on the Redirect URLs allowlist, and otherwise falls back to the Site URL.
   The button link lands on the app, which asks for one click before using the token, so email
   scanners that load the page cannot use it up. The code works regardless.
+
+  Images (logo, dot background) load from {{ .SiteURL }}/email/, so they show once that site has
+  web/public/email deployed. Without them the email still reads fine: plain background, logo alt text.
+
+  Design: same layout as auth-email-template.html (Figma "Email template").
 -->
 <!doctype html>
 <html lang="en">
-  <body style="margin:0;padding:0;background:#f6f7f9;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f7f9;padding:32px 16px;">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:opsz,wght@9..40,500;9..40,600&display=swap" rel="stylesheet" />
+    <style>
+      :root { color-scheme: light dark; supported-color-schemes: light dark; }
+      body { margin: 0; padding: 0; }
+      /* The 1px border is translucent and the card's fill stops inside it, so the border darkens the shadow under it. */
+      .pp-card { background-clip: padding-box !important; }
+      .pp-logo-dark { display: none; }
+      @media (prefers-color-scheme: dark) {
+        .pp-bg { background-color: #131418 !important; background-image: url("{{ .SiteURL }}/email/dots-dark.png") !important; }
+        .pp-card { background-color: #1b1c21 !important; border-color: rgba(255, 255, 255, 0.08) !important; box-shadow: 0 12px 16px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4) !important; }
+        .pp-head { border-bottom-color: rgba(255, 255, 255, 0.06) !important; }
+        .pp-text { color: #ececf1 !important; }
+        .pp-muted { color: #9a9ca8 !important; }
+        .pp-code { background-color: #26272e !important; color: #ececf1 !important; }
+        .pp-button { background-color: #6c6cff !important; }
+        .pp-logo-light { display: none !important; }
+        .pp-logo-dark { display: block !important; }
+      }
+      /* Outlook.com dark mode */
+      [data-ogsc] .pp-text { color: #ececf1 !important; }
+      [data-ogsc] .pp-muted { color: #9a9ca8 !important; }
+    </style>
+  </head>
+  <body class="pp-bg" style="margin:0;padding:0;background-color:#f8f8f8;background-image:url('{{ .SiteURL }}/email/dots-light.png');background-repeat:repeat;">
+    <table role="presentation" class="pp-bg" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f8f8f8" background="{{ .SiteURL }}/email/dots-light.png" style="background-color:#f8f8f8;background-image:url('{{ .SiteURL }}/email/dots-light.png');background-repeat:repeat;padding:48px 16px;">
       <tr>
         <td align="center">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:440px;background:#ffffff;border-radius:12px;border:1px solid #e3e5ea;">
+          <table role="presentation" class="pp-card" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:440px;background-color:#ffffff;background-clip:padding-box;border:1px solid rgba(0,0,0,0.05);border-radius:8px;box-shadow:0 12px 16px -3px rgba(0,0,0,0.09),0 4px 6px -4px rgba(0,0,0,0.06);">
             <tr>
-              <td style="padding:28px 28px 8px 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;color:#1c1d22;">
-                <span style="font-size:16px;letter-spacing:-0.2px;"><b>PEDAL</b>PLAYGROUND</span>
+              <td class="pp-head" style="padding:12px 20px;border-bottom:1px solid rgba(0,0,0,0.05);">
+                <img class="pp-logo-light" src="{{ .SiteURL }}/email/logo-light.png" width="153" height="30" alt="Pedal Playground" style="display:block;width:153px;height:30px;border:0;outline:none;text-decoration:none;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;color:#272c25;" />
+                <!--[if !mso]><!-->
+                <img class="pp-logo-dark" src="{{ .SiteURL }}/email/logo-dark.png" width="153" height="30" alt="Pedal Playground" style="display:none;width:153px;height:30px;border:0;outline:none;text-decoration:none;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;color:#ececf1;" />
+                <!--<![endif]-->
               </td>
             </tr>
             <tr>
-              <td style="padding:8px 28px 0 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:22px;color:#1c1d22;">
+              <td class="pp-text" style="padding:20px 20px 0 20px;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;font-weight:500;line-height:20px;color:#000000;">
                 Your password reset code is:
               </td>
             </tr>
             <tr>
-              <td align="center" style="padding:16px 28px;">
-                <div style="font-family:'SFMono-Regular',Menlo,Consolas,monospace;font-size:32px;line-height:40px;letter-spacing:8px;font-weight:600;color:#1c1d22;background:#f6f7f9;border-radius:8px;padding:12px 8px;">
-                  {{ .Token }}
-                </div>
+              <td style="padding:16px 20px 0 20px;">
+                <div class="pp-code" style="font-family:'DM Mono','SFMono-Regular',Menlo,Consolas,monospace;font-size:32px;font-weight:500;line-height:42px;letter-spacing:16px;text-indent:16px;text-align:center;color:#000000;background-color:#f6f7f9;border-radius:8px;padding:12px 0;">{{ .Token }}</div>
               </td>
             </tr>
             <tr>
-              <td style="padding:0 28px 8px 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:21px;color:#6b6f7b;">
-                Enter it where you asked to reset your password. It expires soon and works once. After it signs you in, you can choose a new password.
+              <td class="pp-text" style="padding:16px 20px 0 20px;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;font-weight:500;line-height:20px;color:#000000;">
+                Enter this code where you asked to reset your password. It will expire soon and only works once. After it signs you in, you can choose a new password.
               </td>
             </tr>
             <tr>
-              <td align="center" style="padding:16px 28px 8px 28px;">
-                <a href="{{ .RedirectTo }}/?token_hash={{ .TokenHash }}&type=recovery"
-                   style="display:inline-block;background:#5b5bff;color:#ffffff;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:600;padding:11px 20px;border-radius:8px;">
-                  Or reset with one click
-                </a>
+              <td style="padding:16px 20px 0 20px;">
+                <a class="pp-button" href="{{ .RedirectTo }}/?token_hash={{ .TokenHash }}&type=recovery"
+                   style="display:block;background-color:#5c62fc;color:#ffffff;text-decoration:none;text-align:center;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;line-height:16px;letter-spacing:-0.15px;padding:10px 12px;border-radius:5px;box-shadow:0 1px 2px rgba(0,0,0,0.05);">Or, Reset with one click</a>
               </td>
             </tr>
             <tr>
-              <td style="padding:16px 28px 28px 28px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:18px;color:#9a9ca8;">
-                If you didn't ask to reset your password, you can ignore this email. Your password stays the same.
+              <td class="pp-muted" style="padding:16px 20px 20px 20px;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:500;line-height:17px;color:#87878c;">
+                If you didn't ask for a reset, you can ignore this email.<br />Your password will not change.
               </td>
             </tr>
           </table>

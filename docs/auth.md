@@ -37,6 +37,8 @@ Defender Safe Links) can open links before the user does.
 4. **Authentication → Email Templates**: paste `docs/auth-email-template.html` into **Magic Link** and
    **Confirm signup**. Use the subject suggested at the top of that file.
    Paste `docs/auth-reset-template.html` into **Reset Password**.
+   Both load their logo and dot background from `<Site URL>/email/` (`web/public/email`), so deploy the site
+   before pasting, or the images won't show.
    The reset link goes back to the site it was requested on, so add both sites to **Redirect URLs** in step 1:
    `https://pedalplayground.com/**` and `https://beta.pedalplayground.com/**`.
 5. **Authentication → Providers → Email**: keep OTP length at 6 and choose an expiry you are comfortable
