@@ -183,7 +183,7 @@ export function GalleryApp() {
               </button>
             ))}
           </div>
-          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 self-start rounded-control bg-surface-hover p-0.5 sm:ml-auto sm:self-auto">
+          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 self-start rounded-control bg-ink/[0.06] p-0.5 sm:ml-auto sm:self-auto">
             {(
               [
                 ["new", "Newest"],

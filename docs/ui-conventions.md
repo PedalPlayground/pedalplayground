@@ -7,6 +7,7 @@ The sizes the app already uses almost everywhere. Keep new UI to these so it sta
 | Buttons, text fields, icon buttons, menu triggers | 36px tall (`h-9`, `size-9`); icon buttons are 36×36 |
 | Body and control text | `text-sm` (14px); metadata, the zoom readout and the Beta badge use `text-xs` (12px) |
 | Form fields | `components/formText.ts`: label 13px semibold at 80% ink, help text (12px, muted) right under the label, the field, then any error (12px, red) under the field. Help and error are linked to the field with `aria-describedby`. Labels are Title Case. Units go inside the field at the end (`fieldWithUnit`), never in the label |
+| Form backgrounds | Forms sit on white (`bg-surface`): dialogs, side panels, and the editor's white page panel. The gray fields (`bg-surface-hover`) disappear on the page backgrounds (`bg-chrome`, `bg-canvas`), so a field placed straight on the page is a white box with a border instead (the gallery search) |
 | Selects | One rule in `index.css` for every `<select>`: our own chevron 12px from the right edge, with 34px of right padding |
 | Dialog titles | `text-base font-semibold` |
 | Primary button | `btn-primary` (index.css), from the Figma button: purple `#5B61FB` with a lighter `#6D72F6` highlight in its top ~1px (the gradient border), `0 1px 1px` shadow at 14% black, faint text shadow, semibold, 4px radius (same as every control) |

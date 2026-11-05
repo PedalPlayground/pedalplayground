@@ -41,7 +41,7 @@ export function QueueTab({ manifest, publisher, setNotice }: { manifest: Manifes
             <button
               type="button"
               onClick={() => setOpenId(s.id)}
-              className={`w-full rounded-[5px] px-2.5 py-2 text-left text-[13px] ${s.id === openId ? "bg-surface shadow-sm" : "hover:bg-surface-hover"}`}
+              className={`w-full rounded-[5px] px-2.5 py-2 text-left text-[13px] ${s.id === openId ? "bg-ink/[0.06] font-medium" : "hover:bg-surface-hover"}`}
             >
               <span className="block truncate font-semibold">
                 {s.brand} {s.name}
