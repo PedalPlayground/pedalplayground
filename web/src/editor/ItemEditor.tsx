@@ -92,6 +92,8 @@ export function ItemEditor({
   }, [adds, fields.kind]);
   // The brand's standard sizes (enclosures it builds on), as one-tap chips under the size fields.
   const sizes = useMemo(() => brandSizes(list, fields.brand, 6, usage), [list, fields.brand, usage]);
+  // One scale for every chip's picture (the biggest size fits 56px tall and 72px wide), so sizes compare at a glance.
+  const chipScale = sizes.length ? Math.min(56 / Math.max(...sizes.map((z) => z.height)), 72 / Math.max(...sizes.map((z) => z.width))) : 0;
   const sameSize = (w: number, h: number) => Math.abs(fields.width - w) < 0.005 && Math.abs(fields.height - h) < 0.005;
 
   return (
@@ -158,30 +160,10 @@ export function ItemEditor({
             </label>
           </div>
         </div>
-        <div className="-mt-1 grid gap-1.5">
-          <div className="flex items-center justify-between gap-2">
-            <span className="text-xs text-ink-muted">{sizes.length > 0 ? `Common ${fields.brand.trim()} sizes` : ""}</span>
-            <button type="button" aria-expanded={copying} onClick={() => setCopying((o) => !o)} className="text-xs font-semibold text-brand hover:underline">
-              Copy From…
-            </button>
-          </div>
-          {sizes.length > 0 && (
-            <div className="flex flex-wrap gap-1.5">
-              {sizes.map((z) => (
-                <button
-                  key={`${z.width}x${z.height}`}
-                  type="button"
-                  aria-pressed={sameSize(z.width, z.height)}
-                  onClick={() => fill({ width: z.width, height: z.height })}
-                  title={`Like ${z.example.name}`}
-                  className={`press flex h-8 items-center gap-1.5 rounded-full py-1 pl-1 pr-2.5 text-xs font-medium tabular-nums ${sameSize(z.width, z.height) ? "bg-brand/10 text-brand" : "bg-surface-hover text-ink hover:bg-ink/10"}`}
-                >
-                  <Thumb src={thumbUrl(manifest, fields.kind, z.example.image)} />
-                  {+z.width.toFixed(2)} × {+z.height.toFixed(2)} in <span className="text-ink-muted">· {z.count}</span>
-                </button>
-              ))}
-            </div>
-          )}
+        <div className="-mt-1 flex justify-end">
+          <button type="button" aria-expanded={copying} onClick={() => setCopying((o) => !o)} className="text-xs font-semibold text-brand hover:underline">
+            Copy From…
+          </button>
         </div>
         {copying && (
           <CopyFrom
@@ -285,6 +267,38 @@ export function ItemEditor({
             neighbours, means a wrong number.
           </p>
         </div>
+        {sizes.length > 0 && (
+          <div>
+            <span className={labelClass}>Common {fields.brand.trim()} Sizes</span>
+            <span className={fieldHelp}>Drawn to scale with each other</span>
+            <div className="flex flex-wrap items-end gap-2">
+              {sizes.map((z) => (
+                <button
+                  key={`${z.width}x${z.height}`}
+                  type="button"
+                  aria-pressed={sameSize(z.width, z.height)}
+                  onClick={() => fill({ width: z.width, height: z.height })}
+                  title={`Like ${z.example.name}`}
+                  className={`press flex items-end gap-2.5 rounded-control p-2 pr-3 text-left tabular-nums ${sameSize(z.width, z.height) ? "bg-brand/10 text-brand ring-1 ring-brand/40" : "bg-surface-hover text-ink hover:bg-ink/10"}`}
+                >
+                  <span className="grid shrink-0 place-items-end" style={{ width: z.width * chipScale, height: z.height * chipScale }}>
+                    {thumbUrl(manifest, fields.kind, z.example.image) && (
+                      <img src={thumbUrl(manifest, fields.kind, z.example.image)!} alt="" loading="lazy" className="size-full object-contain" />
+                    )}
+                  </span>
+                  <span>
+                    <span className="block text-sm font-semibold">
+                      {+z.width.toFixed(2)} × {+z.height.toFixed(2)} in
+                    </span>
+                    <span className="block text-xs text-ink-muted">
+                      {z.count} {z.count === 1 ? "pedal" : fields.kind === "pedal" ? "pedals" : "boards"}
+                    </span>
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
         <ul className="grid gap-1.5">
           {checks.map((c) => (
             <li key={c.text} className={`flex items-start gap-2 text-[13px] ${c.ok ? "text-ink-muted" : "text-ink"}`}>
