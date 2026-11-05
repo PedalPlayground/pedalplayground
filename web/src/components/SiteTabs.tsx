@@ -85,7 +85,7 @@ export function SiteHeader({
 }) {
   return (
     <header
-      className={`box-content flex h-12 shrink-0 items-stretch border-b border-chrome-line bg-chrome pt-[max(env(safe-area-inset-top),var(--pwa-strip,0px))] ${className}`}
+      className={`box-content flex h-12 shrink-0 items-stretch border-b border-chrome-line bg-header pt-[max(env(safe-area-inset-top),var(--pwa-strip,0px))] ${className}`}
     >
       <div className="flex min-w-0 flex-1 items-center gap-3 pl-[max(0.75rem,env(safe-area-inset-left))] pr-2 sm:pl-[max(1rem,env(safe-area-inset-left))] sm:pr-4">
         <h1 className="flex items-center">

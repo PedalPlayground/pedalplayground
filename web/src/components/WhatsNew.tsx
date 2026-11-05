@@ -49,7 +49,7 @@ export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
       <Dropdown.Trigger aria-label={unread ? "Updates (unread)" : "Updates"} {...tip("Updates", { side: "bottom" })} className={tabClass(false)}>
         <Megaphone {...tabIcon} className="text-ink-muted" />
         <span className="sr-only">Updates</span>
-        {unread && <span aria-hidden className="absolute right-1 top-1 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
+        {unread && <span aria-hidden className="absolute right-1 top-1 size-2 rounded-full bg-brand ring-2 ring-header" />}
       </Dropdown.Trigger>
       <Dropdown.Portal>
         <Dropdown.Content

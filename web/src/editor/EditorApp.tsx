@@ -158,7 +158,7 @@ function Shell({ header, children, bar }: { header: React.ReactNode; children?: 
     <div className="min-h-dvh bg-chrome font-sans text-ink">
       {header}
       {bar && (
-        <div className="sticky top-12 z-[9] border-b border-chrome-line bg-chrome/95 backdrop-blur">
+        <div className="sticky top-12 z-[9] border-b border-chrome-line bg-header/95 backdrop-blur">
           <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
         </div>
       )}

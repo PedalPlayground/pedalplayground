@@ -8,6 +8,8 @@
   --color-surface: #ffffff;
   --color-surface-hover: #f1f2f6;
   --color-chrome: #f4f5f6;
+  /* The header bar: white in light mode; the chrome color in dark (and OLED black). */
+  --color-header: #ffffff;
   --color-chrome-line: rgb(0 0 0 / 0.08);
   --color-line: #e3e5ea;
   --color-grid: #dedede;
@@ -51,6 +53,7 @@
     --color-surface: #1b1c21;
     --color-surface-hover: #26272e;
     --color-chrome: #17181c;
+    --color-header: var(--color-chrome);
     --color-chrome-line: rgb(255 255 255 / 0.06);
     --color-line: #31333b;
     --color-grid: #40424b;
@@ -78,6 +81,7 @@
   --color-surface: #1b1c21;
   --color-surface-hover: #26272e;
   --color-chrome: #17181c;
+  --color-header: var(--color-chrome);
   --color-chrome-line: rgb(255 255 255 / 0.06);
   --color-line: #31333b;
   --color-grid: #40424b;
@@ -366,7 +370,7 @@ select {
   position: fixed;
   inset: 0 0 auto 0;
   height: var(--pwa-strip);
-  background: var(--color-chrome);
+  background: var(--color-header);
   pointer-events: none;
   z-index: 9999;
 }
