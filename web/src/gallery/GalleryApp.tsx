@@ -1,24 +1,11 @@
 import { Heart, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { AccountDialog } from "../components/AccountDialog";
-import { SetPasswordDialog } from "../components/SetPasswordForm";
-import { AvatarDialog } from "../components/AvatarDialog";
-import { AvatarMenu } from "../components/AvatarMenu";
-import { UpgradeDialog } from "../components/UpgradeDialog";
-import { UsernamePrompt } from "../components/UsernamePrompt";
-import { WhatsNew } from "../components/WhatsNew";
-import { startAvatarSync } from "../lib/avatar";
-import { GuestButtons, SiteHeader } from "../components/SiteTabs";
-import { BuildsMenu } from "../components/PlaygroundSwitcher";
-import { useCloud } from "../store/cloud";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
-import { isEditor } from "../lib/editorApi";
 import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
 import { supabase } from "../lib/supabase";
+import { PageHeader, type PageDialog } from "../components/PageHeader";
+import { useIsEditor } from "../lib/useIsEditor";
 import { useAuth } from "../store/auth";
-import { useUi } from "../store/ui";
-import { useBilling } from "../store/billing";
-import { useCatalog } from "../store/catalog";
 
 const TYPE_LABELS: Record<PlaygroundType, string> = {
   guitar: "Guitar",
@@ -40,11 +27,8 @@ export function GalleryApp() {
   const ready = useAuth((s) => s.ready);
   const [sort, setSort] = useState<GallerySort>(returning?.sort ?? "new");
   const [signInNote, setSignInNote] = useState(false);
-  /** The same account dialogs as the playground header. */
-  const [dialog, setDialog] = useState<"account" | "register" | "avatar" | null>(null);
-  const cloudEnabled = useAuth((s) => s.cloudEnabled);
-  const recovering = useAuth((s) => s.recovering);
-  const upgradeOpen = useUi((u) => u.upgrade !== null);
+  /** The header's account dialogs; liking while signed out opens sign-in too. */
+  const [dialog, setDialog] = useState<PageDialog>(null);
   const [type, setType] = useState<PlaygroundType | null>(returning?.type ?? null);
   const [query, setQuery] = useState(returning?.query ?? "");
   const [search, setSearch] = useState(returning?.query ?? "");
@@ -52,7 +36,7 @@ export function GalleryApp() {
   const [loading, setLoading] = useState(true);
   const [more, setMore] = useState(false);
   const [failed, setFailed] = useState(false);
-  const [editor, setEditor] = useState(false);
+  const editor = useIsEditor();
   const [hidden, setHidden] = useState<GalleryBoard | null>(null);
   const request = useRef(0);
   const sentinel = useRef<HTMLDivElement>(null);
@@ -69,15 +53,6 @@ export function GalleryApp() {
   }, [boards]);
 
   useEffect(init, [init]);
-  useEffect(startAvatarSync, []);
-  useEffect(() => void useBilling.getState().refresh(), [user?.id]);
-  // Your boards, for the My Playgrounds menu.
-  useEffect(() => void useCloud.getState().refreshList(), [user?.id]);
-  useEffect(() => void useCatalog.getState().load(), []);
-  useEffect(() => {
-    if (!user) return setEditor(false);
-    isEditor().then(setEditor, () => setEditor(false));
-  }, [user]);
 
   // Search as you type, after a short pause.
   useEffect(() => {
@@ -173,26 +148,7 @@ export function GalleryApp() {
   return (
     <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       {/* The same header as the playground. */}
-      <SiteHeader
-        current="gallery"
-        className="sticky top-0 z-10"
-        builds={<BuildsMenu remote onEdit={() => undefined} onPlaygrounds={() => undefined} onSignIn={() => setDialog("account")} />}
-        updates={<WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />}
-        account={
-          user ? (
-            <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
-          ) : (
-            cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />
-          )
-        }
-      />
-      {dialog === "account" && <AccountDialog onClose={() => setDialog(null)} />}
-      {!dialog && <SetPasswordDialog />}
-      {dialog === "register" && <AccountDialog onClose={() => setDialog(null)} initialTab="create" />}
-      {dialog === "avatar" && <AvatarDialog onClose={() => setDialog(null)} />}
-      <UpgradeDialog onSignIn={() => setDialog("account")} />
-      {/* Same as the playground page: waits until nothing else is open. */}
-      {!dialog && !recovering && !upgradeOpen && <UsernamePrompt />}
+      <PageHeader current="gallery" dialog={dialog} setDialog={setDialog} />
 
       {/* Opening a board saves this spot, so its "Back to Gallery" returns here. */}
       <main

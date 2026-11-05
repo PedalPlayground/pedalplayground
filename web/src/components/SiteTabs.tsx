@@ -1,5 +1,6 @@
-import { LayoutGrid, type LucideProps } from "lucide-react";
+import { LayoutGrid, PencilRuler, type LucideProps } from "lucide-react";
 import type { ReactNode } from "react";
+import { useIsEditor } from "../lib/useIsEditor";
 import { Brand } from "./Logo";
 
 /** Trav's My Playgrounds icon: a frame with three stacked bars (drawn at 17×12, shown a bit larger), in the icon color. */
@@ -16,7 +17,7 @@ export function PedalboardIcon({ className }: LucideProps) {
   );
 }
 
-/** One look for Explore, My Playgrounds and Updates: an icon and a label (icons only below laptop width). */
+/** One look for Explore, My Playgrounds, Editor and Updates: an icon and a label (icons only below laptop width). */
 export function tabClass(here: boolean) {
   return `press relative flex h-9 shrink-0 items-center gap-2 rounded-[4px] p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     here ? "bg-ink/[0.06]" : "hover:bg-ink/5 data-[state=open]:bg-ink/5"
@@ -25,11 +26,14 @@ export function tabClass(here: boolean) {
 export const tabIcon = { size: 18, strokeWidth: 2 } as const;
 export const tabLabel = "max-lg:sr-only";
 
+export type SitePage = "build" | "gallery" | "editor" | null;
+
 /**
- * Explore, then My Playgrounds. `builds` is the playground's board menu; elsewhere it's a link to the playground.
- * Explore is marked on the gallery page.
+ * Explore, My Playgrounds, then Editor for catalog editors. `builds` is the playground's board menu; elsewhere it's a
+ * link to the playground. The current page's tab is marked.
  */
-export function SiteTabs({ current, builds, after }: { current: "build" | "gallery" | null; builds?: ReactNode; after?: ReactNode }) {
+export function SiteTabs({ current, builds, after }: { current: SitePage; builds?: ReactNode; after?: ReactNode }) {
+  const editor = useIsEditor();
   return (
     <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-1 sm:gap-2">
       <a href="/gallery/" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
@@ -40,6 +44,12 @@ export function SiteTabs({ current, builds, after }: { current: "build" | "galle
         <a href="/" className={tabClass(false)}>
           <PedalboardIcon {...tabIcon} className="text-ink-muted" />
           <span className={tabLabel}>My Playgrounds</span>
+        </a>
+      )}
+      {editor && (
+        <a href="/editor/" aria-current={current === "editor" ? "page" : undefined} className={tabClass(false)}>
+          <PencilRuler {...tabIcon} className="text-ink-muted" />
+          <span className={tabLabel}>Editor</span>
         </a>
       )}
       {after}
@@ -64,7 +74,7 @@ export function SiteHeader({
   account,
   className = "",
 }: {
-  current: "build" | "gallery" | null;
+  current: SitePage;
   builds?: ReactNode;
   updates?: ReactNode;
   brandExtra?: ReactNode;
