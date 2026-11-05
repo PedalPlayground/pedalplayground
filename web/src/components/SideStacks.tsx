@@ -156,7 +156,9 @@ export function ObjectStack() {
   const [collapsed, toggle] = useCollapsed("left");
   const spacing = useUi((u) => u.spacingOpen);
   const setSpacing = useUi((u) => u.setSpacingOpen);
-  if (!s.selected.length) return null;
+  const viewing = useUi((u) => !!u.viewing);
+  // Someone else's board is view-only: no editing tools even if something ends up selected.
+  if (!s.selected.length || viewing) return null;
   const single = s.selected.length === 1 ? s.items.find((i) => i.id === s.selected[0]) : undefined;
   const picked = s.items.filter((i) => s.selected.includes(i.id));
   const locked = picked.every((i) => i.locked);

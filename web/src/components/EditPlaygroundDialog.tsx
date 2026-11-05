@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import {
   DESCRIPTION_MAX,
   fetchDetails,
-  fetchInGallery,
   PLAYGROUND_TYPES,
   canStoreGenres,
   shareUrl,
@@ -13,10 +12,12 @@ import {
   type PlaygroundSummary,
   type PlaygroundType,
 } from "../lib/cloud";
+import { fetchBoardPanel, setCommentsOff } from "../lib/boardSocial";
 import { plainField } from "../lib/inputProps";
 import { useAuth } from "../store/auth";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
+import { useBoardPanel } from "./BoardPanel";
 import { GenrePicker } from "./GenrePicker";
 import { Modal } from "./Modal";
 import { tip } from "./Tooltip";
@@ -26,7 +27,7 @@ const field =
   "rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted/70 focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
 
 /**
- * Name, type, genres, description, gallery listing and delete for one playground. `target` is a saved playground picked from the menu;
+ * Name, type, genres, description, share link, gallery listing, comments and delete for one playground. `target` is a saved playground picked from the menu;
  * without it, the dialog edits the open playground.
  */
 export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void; target?: PlaygroundSummary }) {
@@ -45,6 +46,8 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
   /** Loaded like the details; undefined hides the switch. */
   const [startGallery, setStartGallery] = useState<boolean | undefined>();
   const [inGallery, setGallery] = useState(false);
+  const [startCommentsOn, setStartCommentsOn] = useState(true);
+  const [commentsOn, setCommentsOn] = useState(true);
   /** The share link's slug once the playground is shared; null until then. */
   const startShared = target ? target.is_public : cloud.isPublic;
   const [slug, setSlug] = useState<string | null>(startShared ? (target ? target.slug : cloud.slug) : null);
@@ -70,14 +73,16 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
       .catch(() => {
         /* leave the fields hidden */
       });
-    fetchInGallery(id)
-      .then((g) => {
-        if (cancelled || g === undefined) return;
-        setStartGallery(g);
-        setGallery(g);
+    fetchBoardPanel(id)
+      .then((p) => {
+        if (cancelled || !p) return;
+        setStartGallery(p.in_gallery);
+        setGallery(p.in_gallery);
+        setStartCommentsOn(!p.comments_off);
+        setCommentsOn(!p.comments_off);
       })
       .catch(() => {
-        /* leave the switch hidden */
+        /* leave the switches hidden */
       });
     return () => {
       cancelled = true;
@@ -98,6 +103,11 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
       if (id && startGallery !== undefined && inGallery !== startGallery) {
         await cloud.setInGallery(id, inGallery);
       }
+      if (id && startGallery !== undefined && commentsOn !== startCommentsOn) {
+        await setCommentsOff(id, !commentsOn);
+      }
+      // The board info panel shows the new name, description and comment setting.
+      useBoardPanel.getState().refresh();
       onClose();
     } catch (e) {
       setError(e instanceof Error ? e.message : "Could not save those changes.");
@@ -112,6 +122,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
     if (!window.confirm(`Delete "${startName}"? This can't be undone.${open}`)) return;
     try {
       await cloud.remove(id);
+      if (id === cloud.cloudId) useBoardPanel.getState().setOpen(false);
       onClose();
     } catch (e) {
       setError(e instanceof Error ? e.message : "Could not delete that playground.");
@@ -119,7 +130,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
   };
 
   return (
-    <Modal title="Edit Playground" onClose={onClose}>
+    <Modal title="Playground Settings" onClose={onClose}>
       <label className="mb-1 block text-xs text-ink-muted" htmlFor="pg-name">
         Name
       </label>
@@ -223,27 +234,22 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
       )}
 
       {startGallery !== undefined && (
-        <button
-          type="button"
-          role="switch"
-          aria-checked={inGallery}
-          onClick={() => setGallery(!inGallery)}
-          className="mb-2 flex w-full items-start justify-between gap-4 rounded-control text-left outline-none focus-visible:ring-2 focus-visible:ring-brand"
-        >
-          <span>
-            <span className="block text-sm">Show in Public Gallery</span>
-            <span className="block text-xs text-ink-muted">
-              {inGallery
-                ? "Anyone can find this board in the gallery and open their own copy."
-                : "Only people you send a share link to can see it."}
-            </span>
-          </span>
-          <span className={`relative mt-0.5 inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${inGallery ? "bg-brand" : "bg-ink/15"}`}>
-            <span
-              className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white shadow-sm transition-transform duration-200 ease-out ${inGallery ? "translate-x-3.5" : ""}`}
+        <>
+          <Switch
+            on={inGallery}
+            onClick={() => setGallery(!inGallery)}
+            title="Show in Public Gallery"
+            hint={inGallery ? "Anyone can find this board in the gallery, like it and open their own copy." : "Only people you send a share link to can see it."}
+          />
+          {inGallery && (
+            <Switch
+              on={commentsOn}
+              onClick={() => setCommentsOn(!commentsOn)}
+              title="Allow Comments"
+              hint={commentsOn ? "Anyone signed in can comment." : "Comments are hidden from everyone but you."}
             />
-          </span>
-        </button>
+          )}
+        </>
       )}
 
       {error && <p className="mb-2 text-sm text-danger">{error}</p>}
@@ -262,5 +268,25 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
         </button>
       </div>
     </Modal>
+  );
+}
+
+function Switch({ on, onClick, title, hint }: { on: boolean; onClick: () => void; title: string; hint: string }) {
+  return (
+    <button
+      type="button"
+      role="switch"
+      aria-checked={on}
+      onClick={onClick}
+      className="mb-3 flex w-full items-start justify-between gap-4 rounded-control text-left outline-none focus-visible:ring-2 focus-visible:ring-brand"
+    >
+      <span>
+        <span className="block text-sm">{title}</span>
+        <span className="block text-xs text-ink-muted">{hint}</span>
+      </span>
+      <span className={`relative mt-0.5 inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${on ? "bg-brand" : "bg-ink/15"}`}>
+        <span className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white shadow-sm transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`} />
+      </span>
+    </button>
   );
 }

@@ -455,6 +455,8 @@ export const useCloud = create<CloudState>((set, get) => {
       usePlayground.getState().loadDocument(shared.doc);
       usePlayground.getState().setName(shared.name);
       usePlayground.getState().fitToContent();
+      // The canvas is still settling (side column, window size): keep it fitted until the viewer pans or zooms.
+      usePlayground.getState().setAutoFit(true);
       return true;
     },
 
@@ -500,12 +502,24 @@ function settleGuestBoard() {
   }
 }
 
+/** A board picked in another page's My Playgrounds menu: it opens in place of "pick up where they left off". */
+let handoffOpen: string | null = null;
+export function openAfterSignIn(id: string) {
+  handoffOpen = id;
+}
+
 /**
  * After sign-in (or leaving a shared playground): open the account's latest playground on a new device, or upload
  * local work from before sign-in. Waits while a shared playground is being viewed, since that board isn't theirs.
  */
 async function reconcileWithCloud() {
   if (!useAuth.getState().user || useUi.getState().viewing) return;
+  if (handoffOpen) {
+    const id = handoffOpen;
+    handoffOpen = null;
+    if (id !== useCloud.getState().cloudId) return useCloud.getState().openPlayground(id);
+    return;
+  }
   const { cloudId, list } = useCloud.getState();
   const { items } = usePlayground.getState();
   if (cloudId) return;

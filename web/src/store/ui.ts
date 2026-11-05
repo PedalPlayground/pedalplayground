@@ -38,6 +38,8 @@ interface UiState {
   mode: Mode;
   /** Set while a shared playground is open view-only. Edits, saving and autosave are off until it's copied or left. */
   viewing: SharedView | null;
+  /** A `?p=` link is loading: the canvas stays hidden so your own board doesn't flash first. */
+  openingShared: boolean;
   /** A drag of gear is under way, so floating helpers (the little menu under the selection) stay out of the way. */
   dragging: boolean;
   /** An arrow-key nudge just happened (clears after a moment), so the selection UI steps aside briefly too. */
@@ -157,6 +159,7 @@ export function applyTheme(theme: Theme) {
 export const useUi = create<UiState>((set) => ({
   mode: "playground",
   viewing: null,
+  openingShared: typeof window !== "undefined" && new URLSearchParams(window.location.search).has("p"),
   dragging: false,
   nudging: false,
   setViewing: (viewing) => set({ viewing, searchOpen: false, replacing: false, editing: false }),

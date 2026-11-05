@@ -45,7 +45,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, bill
   if (cloudEnabled) {
     steps.push(
       signedIn
-        ? { target: "account", title: "Your Playgrounds", body: "Everything you build saves to your account. Find all your boards here, and share any of them with a link." }
+        ? { target: "playgrounds", title: "Your Playgrounds", body: "Everything you build saves to your account. Open My Playgrounds to switch boards, start a new one or change its settings." }
         : {
             target: "account",
             title: "Save Your Work",
@@ -115,7 +115,7 @@ function removeDemoPedal() {
 
 /**
  * A short coach-mark tour: dims the app, spotlights one control at a time and explains it in a line or two.
- * Opens once on a device's first visit (see App) and can be replayed from Settings. Esc or "Skip" ends it.
+ * Opens once on a device's first visit (see App) and can be replayed from Preferences. Esc or "Skip" ends it.
  */
 export function OnboardingTour() {
   const open = useUi((u) => u.tourOpen);
@@ -197,7 +197,7 @@ export function OnboardingTour() {
 
   useEffect(() => {
     if (!open) return;
-    // Wait a frame: opening from the Settings menu, the menu hands focus back to its trigger as it closes.
+    // Wait a frame: opening from the Preferences menu, the menu hands focus back to its trigger as it closes.
     const f = requestAnimationFrame(() => primary.current?.focus());
     return () => cancelAnimationFrame(f);
   }, [open, index]);

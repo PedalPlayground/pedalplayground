@@ -1,8 +1,10 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
-import { useRef, useState } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import { tip } from "./Tooltip";
-import { ArrowLeft, ChevronDown, Copy, Pencil, Plus, LogIn, RotateCcw } from "lucide-react";
+import { ChevronDown, Copy, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
+import { PedalboardIcon, tabClass, tabIcon, tabLabel } from "./SiteTabs";
 import type { PlaygroundSummary } from "../lib/cloud";
+import { handoffHref, type Handoff } from "../lib/handoff";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
@@ -13,7 +15,9 @@ import { useUi } from "../store/ui";
 const item =
   "flex cursor-pointer select-none items-center gap-3 rounded-control px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
-type MenuProps = { onEdit: (target?: PlaygroundSummary) => void; onSignIn: () => void };
+type MenuProps = { onEdit: (target?: PlaygroundSummary) => void; onSignIn: () => void; onPlaygrounds: () => void };
+/** On other pages (the gallery), picks go to the playground instead; see lib/handoff. */
+const go = (h: Handoff) => window.location.assign(handoffHref(h));
 
 const cardAction =
   "grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/10 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
@@ -25,15 +29,18 @@ function edited(iso: string) {
   return `Edited ${d.toLocaleDateString(undefined, { month: "short", day: "numeric", ...(sameYear ? {} : { year: "numeric" }) })}`;
 }
 
-/** The playground menu: the user's playgrounds as cards (open, edit) and new; for guests, Start Fresh and Sign In to Save. */
-function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onCloseAutoFocus: (e: Event) => void }) {
+/**
+ * The board hub: New Playground, the user's playgrounds as cards (open, settings), All Playgrounds and Playground Settings.
+ * Guests have New Playground and Sign In to Save.
+ */
+function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote }: MenuProps & { onCloseAutoFocus: (e: Event) => void; remote: boolean }) {
   const user = useAuth((s) => s.user);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const { list, cloudId, openPlayground } = useCloud();
   const cards = user ? list.slice(0, 6) : [];
-  // The open playground has its own card when it's saved; otherwise edit it from the top item.
-  const openHasCard = cards.some((p) => p.id === cloudId);
-  const empty = usePlayground((s) => s.items.length === 0);
+  // The gallery doesn't load your board, so New Playground is always offered there.
+  const empty = usePlayground((s) => s.items.length === 0) && !remote;
+  const newPlayground = remote ? () => go({ kind: "new" }) : requestNewPlayground;
 
   // Guests have one board on this device: they can start it over, or sign in to save it.
   if (!user) {
@@ -41,15 +48,15 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
       <Dropdown.Portal>
         <Dropdown.Content
           side="bottom"
-          align="center"
-          sideOffset={8}
+          align="start"
+          sideOffset={6}
           collisionPadding={12}
           onCloseAutoFocus={onCloseAutoFocus}
           className="animate-menu z-50 w-60 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
         >
-          <Dropdown.Item disabled={empty} className={`${item} data-[disabled]:cursor-default data-[disabled]:opacity-40`} onSelect={requestNewPlayground}>
-            <RotateCcw size={14} />
-            Start Fresh
+          <Dropdown.Item disabled={empty} className={`${item} data-[disabled]:cursor-default data-[disabled]:opacity-40`} onSelect={newPlayground}>
+            <Plus size={14} />
+            New Playground
           </Dropdown.Item>
           {cloudEnabled && (
             <>
@@ -69,20 +76,17 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
     <Dropdown.Portal>
       <Dropdown.Content
         side="bottom"
-        align="center"
-        sideOffset={8}
+        align="start"
+        sideOffset={6}
         collisionPadding={12}
         onCloseAutoFocus={onCloseAutoFocus}
         className="animate-menu z-50 w-80 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
       >
-        {!openHasCard && (
-          <>
-            <Dropdown.Item className={item} onSelect={() => onEdit()}>
-              Edit Playground…
-            </Dropdown.Item>
-            <Dropdown.Separator className="my-1 h-px bg-line" />
-          </>
-        )}
+        <Dropdown.Item className={item} onSelect={newPlayground}>
+          <Plus size={14} />
+          New Playground
+        </Dropdown.Item>
+        <Dropdown.Separator className="my-1 h-px bg-line" />
         {cards.length > 0 && (
           <>
             <Dropdown.Label className="px-2 pb-1.5 pt-1 text-xs text-ink-muted">Your Playgrounds</Dropdown.Label>
@@ -93,7 +97,7 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
                   <Dropdown.Item
                     key={p.id}
                     aria-current={current || undefined}
-                    onSelect={() => void openPlayground(p.id)}
+                    onSelect={() => (remote ? go({ kind: "open", id: p.id }) : void openPlayground(p.id))}
                     className={`flex cursor-pointer select-none items-center gap-2.5 rounded-control p-1.5 outline-none ${
                       current ? "bg-surface-hover data-[highlighted]:bg-ink/10" : "data-[highlighted]:bg-surface-hover"
                     }`}
@@ -112,11 +116,12 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
                     </span>
                     {/* Its own click: don't also open the playground. */}
                     <button
-                      aria-label={`Edit ${p.name}`}
-                      {...tip("Edit")}
+                      aria-label={`Settings for ${p.name}`}
+                      {...tip("Playground Settings")}
                       onClick={(e) => {
                         e.stopPropagation();
-                        onEdit(p);
+                        if (remote) go({ kind: "edit", id: p.id });
+                        else onEdit(p);
                       }}
                       className={cardAction}
                     >
@@ -126,116 +131,135 @@ function MenuContent({ onEdit, onSignIn, onCloseAutoFocus }: MenuProps & { onClo
                 );
               })}
             </div>
-            <Dropdown.Separator className="my-1 h-px bg-line" />
           </>
         )}
-        <Dropdown.Item className={item} onSelect={requestNewPlayground}>
-          <Plus size={14} />
-          New Playground
+        <Dropdown.Item className={item} onSelect={remote ? () => go({ kind: "playgrounds" }) : onPlaygrounds}>
+          <LayoutList size={14} />
+          All Playgrounds…
         </Dropdown.Item>
+        {/* "The open board" only means something on the playground. */}
+        {!remote && (
+          <>
+            <Dropdown.Separator className="my-1 h-px bg-line" />
+            <Dropdown.Item className={item} onSelect={() => onEdit()}>
+              <Settings2 size={14} />
+              Playground Settings…
+            </Dropdown.Item>
+          </>
+        )}
       </Dropdown.Content>
     </Dropdown.Portal>
   );
 }
 
-/** Header center while a shared playground is viewed: "⌄ Name by owner", with Create a Copy and Back to My Playground. */
-function SharedBreadcrumb({ className, onSignIn }: { className: string; onSignIn: () => void }) {
-  const viewing = useUi((u) => u.viewing)!;
+/**
+ * The My Playgrounds tab: your playgrounds' menu (New Playground, your boards, All Playgrounds, Playground Settings), styled like
+ * the Explore and Updates tabs beside it.
+ */
+export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds, remote = false }: MenuProps & { remote?: boolean }) {
+  const [open, setOpen] = useState(false);
+  /**
+   * The dialog to open once the menu has closed (Playground Settings, All Playgrounds or Sign In). It opens only then: opened sooner, the menu's focus trap and
+   * focus return pull focus out of the dialog's name field. `null` means nothing to open.
+   */
+  const pending = useRef<{ open: () => void } | null>(null);
+  return (
+    <Dropdown.Root open={open} onOpenChange={setOpen}>
+      <Dropdown.Trigger data-tour="playgrounds" aria-label="My Playgrounds" className={tabClass(false)}>
+        <PedalboardIcon {...tabIcon} className="text-ink-muted" />
+        <span className={tabLabel}>My Playgrounds</span>
+        <ChevronDown size={12} strokeWidth={2.5} className="-ml-0.5 shrink-0 text-ink-muted" />
+      </Dropdown.Trigger>
+      <MenuContent
+        remote={remote}
+        onEdit={(target) => {
+          pending.current = { open: () => onEdit(target) };
+          setOpen(false);
+        }}
+        onSignIn={() => {
+          pending.current = { open: onSignIn };
+          setOpen(false);
+        }}
+        onPlaygrounds={() => {
+          pending.current = { open: onPlaygrounds };
+          setOpen(false);
+        }}
+        onCloseAutoFocus={(e) => {
+          if (!pending.current) return;
+          e.preventDefault();
+          const { open } = pending.current;
+          pending.current = null;
+          open();
+        }}
+      />
+    </Dropdown.Root>
+  );
+}
+
+const labelButton =
+  "press grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/5 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
+
+/**
+ * Over the canvas's top-left corner: the open board's name, with comments once it's shared and a pencil for Playground
+ * Settings. Someone else's board: Create a Copy (and on phones, where the side panel is a sheet, its name and comments).
+ */
+export function BoardLabel({ comments, onEdit, onSignIn }: { comments?: ReactNode; onEdit: () => void; onSignIn: () => void }) {
+  const viewing = useUi((u) => u.viewing);
+  // A link is still loading: show nothing rather than your own board's name.
+  const opening = useUi((u) => u.openingShared);
+  const name = usePlayground((s) => s.name);
+  const user = useAuth((s) => s.user);
+  if (opening) return null;
+  return (
+    <div className="pointer-events-none absolute left-[max(1.1875rem,env(safe-area-inset-left))] right-[max(1rem,env(safe-area-inset-right))] top-[22px] z-20 flex max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:top-3">
+      <div className="pointer-events-auto flex min-w-0 items-center gap-1 text-sm/4 font-semibold tracking-[-0.01em] text-ink">
+        {viewing ? (
+          <>
+            <span className="min-w-0 truncate sm:hidden">
+              {viewing.name}
+              {viewing.ownerName && <span className="font-normal text-ink-muted"> by {viewing.ownerName}</span>}
+            </span>
+            <CopyButton onSignIn={onSignIn} />
+            {comments}
+          </>
+        ) : (
+          <>
+            <span className="min-w-0 truncate">{name}</span>
+            {user && (
+              <button type="button" onClick={onEdit} aria-label="Playground Settings" {...tip("Playground Settings", { side: "bottom" })} className={labelButton}>
+                <Pencil size={14} strokeWidth={2} />
+              </button>
+            )}
+            {comments}
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function CopyButton({ onSignIn }: { onSignIn: () => void }) {
   const openUpgrade = useUi((u) => u.openUpgrade);
   const user = useAuth((s) => s.user);
   const { billingEnabled, entitlements } = useBilling();
-  const { copyShared, leaveShared } = useCloud();
+  const copyShared = useCloud((c) => c.copyShared);
   // Copies are a Pro feature; without billing set up, nothing is gated.
   const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
-  const owner = viewing.ownerName ?? "a Pedal Playground member";
-
   const createCopy = () => {
     if (!user) onSignIn();
     else if (!canCopy) openUpgrade("copy");
     else copyShared();
   };
-
   return (
-    <div className={`flex min-w-0 items-center text-sm/4 tracking-[-0.01em] ${className}`}>
-      <Dropdown.Root>
-        <Dropdown.Trigger
-          aria-label={`Shared playground: ${viewing.name} by ${owner}`}
-          className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
-        >
-          <span className="truncate font-semibold">{viewing.name}</span>
-          <span className="shrink-0 text-ink-muted max-sm:hidden">by {owner}</span>
-          <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
-        </Dropdown.Trigger>
-        <Dropdown.Portal>
-          <Dropdown.Content
-            side="bottom"
-            align="center"
-            sideOffset={8}
-            collisionPadding={12}
-            className="animate-menu z-50 w-72 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
-          >
-            <p className="px-2 pb-1.5 pt-1 text-xs text-ink-muted">
-              You're viewing a shared playground. To edit it create a copy.
-            </p>
-            <Dropdown.Item className={item} onSelect={createCopy}>
-              <Copy size={14} />
-              <span className="flex-1">Create a Copy</span>
-              {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
-            </Dropdown.Item>
-            <Dropdown.Separator className="my-1 h-px bg-line" />
-            <Dropdown.Item className={item} onSelect={leaveShared}>
-              <ArrowLeft size={14} />
-              Back to My Playground
-            </Dropdown.Item>
-          </Dropdown.Content>
-        </Dropdown.Portal>
-      </Dropdown.Root>
-    </div>
-  );
-}
-
-/** Header center: the open playground's menu, or the shared playground being viewed. */
-export function PlaygroundBreadcrumb({ className = "", ...props }: MenuProps & { className?: string }) {
-  const viewing = useUi((u) => !!u.viewing);
-  return viewing ? <SharedBreadcrumb className={className} onSignIn={props.onSignIn} /> : <OwnBreadcrumb className={className} {...props} />;
-}
-
-function OwnBreadcrumb({ className, onEdit, onSignIn }: MenuProps & { className: string }) {
-  const name = usePlayground((s) => s.name);
-  const [open, setOpen] = useState(false);
-  /**
-   * The dialog to open once the menu has closed (Edit Playground or Sign In). It opens only then: opened sooner, the menu's focus trap and
-   * focus return pull focus out of the dialog's name field. `null` means nothing to open.
-   */
-  const pending = useRef<{ open: () => void } | null>(null);
-  return (
-    <div className={`flex min-w-0 items-center text-sm/4 font-semibold tracking-[-0.01em] ${className}`}>
-      <Dropdown.Root open={open} onOpenChange={setOpen}>
-        <Dropdown.Trigger
-          aria-label={`Playground: ${name}`}
-          className="-mx-1.5 flex min-w-0 items-center gap-2 rounded-control px-1.5 py-1 outline-none transition-colors hover:bg-ink/5 active:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-ink/5"
-        >
-          <span className="truncate">{name}</span>
-          <ChevronDown size={12} strokeWidth={2.5} className="shrink-0" />
-        </Dropdown.Trigger>
-        <MenuContent
-          onEdit={(target) => {
-            pending.current = { open: () => onEdit(target) };
-            setOpen(false);
-          }}
-          onSignIn={() => {
-            pending.current = { open: onSignIn };
-            setOpen(false);
-          }}
-          onCloseAutoFocus={(e) => {
-            if (!pending.current) return;
-            e.preventDefault();
-            const { open } = pending.current;
-            pending.current = null;
-            open();
-          }}
-        />
-      </Dropdown.Root>
-    </div>
+    <button
+      type="button"
+      onClick={createCopy}
+      aria-label="Create a Copy"
+      className="press flex h-7 shrink-0 items-center gap-1.5 rounded-control px-1.5 outline-none hover:bg-ink/5 focus-visible:ring-2 focus-visible:ring-brand sm:-ml-1.5"
+    >
+      <Copy size={14} strokeWidth={2.25} />
+      <span className="max-sm:hidden">Create a Copy</span>
+      {!canCopy && user && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Pro</span>}
+    </button>
   );
 }
