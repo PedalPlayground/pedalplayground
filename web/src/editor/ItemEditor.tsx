@@ -1,5 +1,6 @@
 import { Check as CheckIcon, ImageUp, TriangleAlert } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { fieldHelp, fieldLabel as labelClass } from "../components/formText";
 import { canvasImageUrl, type Manifest } from "../lib/catalog";
 import { imageStats, runChecks, sameBrand, type Fields, type ImageStats } from "../lib/editorChecks";
 import { plainField } from "../lib/inputProps";
@@ -10,7 +11,8 @@ const PREVIEW_PPI = 28;
 
 export const inputClass =
   "h-8 w-full rounded-[5px] border border-line bg-surface px-2 text-[13px] text-ink outline-none focus:border-brand focus:ring-2 focus:ring-brand/25";
-export const labelClass = "mb-1 block text-xs text-ink-muted";
+/** Editor forms use the site's form text (label, help under it, error under the field). */
+export { fieldError, fieldHelp, fieldLabel as labelClass } from "../components/formText";
 export const primaryButton = "btn-primary h-8 rounded-[5px] px-3 text-[13px] disabled:opacity-50";
 export const secondaryButton =
   "press h-8 rounded-[5px] border border-line bg-surface px-3 text-[13px] font-medium text-ink hover:bg-surface-hover disabled:opacity-50";
@@ -59,6 +61,7 @@ export function ItemEditor({
   }, [image]);
 
   const list = manifest ? (fields.kind === "pedal" ? manifest.pedals : manifest.pedalboards) : [];
+  const id = useId();
   const checks = useMemo(() => runChecks(fields, stats, list, skipImage), [fields, stats, list, skipImage]);
   const neighbours = useMemo(() => sameBrand(list, fields, 3, skipImage), [list, fields, skipImage]);
 
@@ -67,8 +70,10 @@ export function ItemEditor({
       <div className="grid content-start gap-3">
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className={labelClass}>Kind</label>
-            <select
+            <label className={labelClass} htmlFor={`${id}-kind`}>
+Kind
+</label>
+            <select id={`${id}-kind`}
               className={inputClass}
               value={fields.kind}
               disabled={lockKind}
@@ -79,18 +84,24 @@ export function ItemEditor({
             </select>
           </div>
           <div>
-            <label className={labelClass}>Brand</label>
-            <input {...plainField} className={inputClass} value={fields.brand} onChange={(e) => set({ brand: e.target.value })} />
+            <label className={labelClass} htmlFor={`${id}-brand`}>
+Brand
+</label>
+            <input id={`${id}-brand`} {...plainField} className={inputClass} value={fields.brand} onChange={(e) => set({ brand: e.target.value })} />
           </div>
         </div>
         <div>
-          <label className={labelClass}>Name</label>
-          <input {...plainField} className={inputClass} value={fields.name} onChange={(e) => set({ name: e.target.value })} />
+          <label className={labelClass} htmlFor={`${id}-name`}>
+Name
+</label>
+          <input id={`${id}-name`} {...plainField} className={inputClass} value={fields.name} onChange={(e) => set({ name: e.target.value })} />
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className={labelClass}>Width (in)</label>
-            <input
+            <label className={labelClass} htmlFor={`${id}-width`}>
+Width (in)
+</label>
+            <input id={`${id}-width`}
               {...plainField}
               className={inputClass}
               inputMode="decimal"
@@ -99,8 +110,10 @@ export function ItemEditor({
             />
           </div>
           <div>
-            <label className={labelClass}>Height (in)</label>
-            <input
+            <label className={labelClass} htmlFor={`${id}-height`}>
+Height (in)
+</label>
+            <input id={`${id}-height`}
               {...plainField}
               className={inputClass}
               inputMode="decimal"
@@ -113,8 +126,10 @@ export function ItemEditor({
           <>
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className={labelClass}>Current draw (mA)</label>
-                <input
+                <label className={labelClass} htmlFor={`${id}-ma`}>
+Current draw (mA)
+</label>
+                <input id={`${id}-ma`}
                   {...plainField}
                   className={inputClass}
                   inputMode="numeric"
@@ -126,8 +141,10 @@ export function ItemEditor({
                 />
               </div>
               <div>
-                <label className={labelClass}>Voltage</label>
-                <select className={inputClass} value={fields.voltage ?? ""} onChange={(e) => set({ voltage: e.target.value || undefined })}>
+                <label className={labelClass} htmlFor={`${id}-voltage`}>
+Voltage
+</label>
+                <select id={`${id}-voltage`} className={inputClass} value={fields.voltage ?? ""} onChange={(e) => set({ voltage: e.target.value || undefined })}>
                   <option value="">Unknown</option>
                   {VOLTAGES.map((v) => (
                     <option key={v}>{v}</option>
@@ -136,8 +153,10 @@ export function ItemEditor({
               </div>
             </div>
             <div>
-              <label className={labelClass}>Type</label>
-              <select className={inputClass} value={fields.type ?? ""} onChange={(e) => set({ type: e.target.value || undefined })}>
+              <label className={labelClass} htmlFor={`${id}-type`}>
+Type
+</label>
+              <select id={`${id}-type`} className={inputClass} value={fields.type ?? ""} onChange={(e) => set({ type: e.target.value || undefined })}>
                 <option value="">Unknown</option>
                 {PEDAL_TYPES.map((t) => (
                   <option key={t}>{t}</option>
@@ -148,6 +167,8 @@ export function ItemEditor({
         )}
         {onPickFile && (
           <div>
+            <span className={labelClass}>Photo</span>
+            <span className={fieldHelp}>PNG with a transparent background, ideally. 10 MB at most.</span>
             <input
               ref={fileInput}
               type="file"
@@ -162,7 +183,6 @@ export function ItemEditor({
             <button type="button" className={`${secondaryButton} flex items-center gap-1.5`} onClick={() => fileInput.current?.click()}>
               <ImageUp size={15} /> {image ? "Replace photo" : "Choose photo"}
             </button>
-            <p className="mt-1 text-xs text-ink-muted">PNG with a transparent background, ideally. 10 MB at most.</p>
           </div>
         )}
       </div>
