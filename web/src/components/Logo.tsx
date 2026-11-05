@@ -5,6 +5,7 @@ import { FEATURED_PEDALS } from "../lib/featuredPedals";
 import { useAuth } from "../store/auth";
 import { useCatalog } from "../store/catalog";
 import { useUi } from "../store/ui";
+import { Wordmark } from "./Wordmark";
 
 
 const VISIT_KEY = "pp:logo-pedal";
@@ -75,10 +76,7 @@ export function Brand() {
           <Logo iconOnly />
         </span>
       </span>
-      <span className="font-wordmark whitespace-nowrap text-base/[14px] uppercase tracking-[-0.01em] text-ink max-lg:hidden">
-        <span className="block font-semibold">Pedal</span>
-        <span className="block font-extrabold">Playground</span>
-      </span>
+      <Wordmark className="shrink-0 text-ink max-lg:hidden" />
     </span>
   );
 }
