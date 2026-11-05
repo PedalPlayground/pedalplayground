@@ -255,6 +255,17 @@ img {
   animation: pp-sheet 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 /* The tour's welcome hero: brand gradient with soft light blooms, and a "2.0" that shimmers. */
+/* Behind dialogs: the canvas color and its ½ in dot grid (16px at 100% zoom), at 94%. */
+.modal-backdrop {
+  background-color: color-mix(in srgb, var(--color-canvas) 94%, transparent);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    color-mix(in srgb, var(--color-grid) 94%, transparent) 0.625px,
+    transparent 0.875px
+  );
+  background-size: 16px 16px;
+}
+
 .tour-hero {
   background:
     radial-gradient(120% 90% at 15% 10%, rgb(255 255 255 / 0.22), transparent 55%),

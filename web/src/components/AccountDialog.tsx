@@ -154,7 +154,7 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
                 onClose();
                 useUi.getState().openLegal();
               }}
-              className="underline hover:text-white"
+              className="underline hover:text-ink"
             >
               Terms &amp; Privacy
             </button>

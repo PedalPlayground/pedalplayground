@@ -3,7 +3,7 @@ import { useEffect, type ReactNode } from "react";
 
 /**
  * `closeX` adds an X button in the top-right corner, for dialogs without their own Close or Cancel button.
- * `footer` sits just below the dialog, on the dimmed backdrop, without moving the dialog off center.
+ * `footer` sits just below the dialog, on the backdrop, without moving the dialog off center.
  */
 export function Modal({
   title,
@@ -27,7 +27,7 @@ export function Modal({
   }, [onClose]);
 
   return (
-    <div className="animate-fade fixed inset-0 z-50 grid place-items-center bg-[rgb(10_11_16/0.75)] p-4" onClick={onClose}>
+    <div className="animate-fade fixed inset-0 z-50 grid place-items-center modal-backdrop p-4" onClick={onClose}>
       <div className={`relative flex max-h-full w-full flex-col ${wide ? "max-w-2xl" : "max-w-sm"}`}>
         <div
           role="dialog"
@@ -51,7 +51,7 @@ export function Modal({
         </div>
         {footer && (
           <div
-            className="animate-enter absolute inset-x-0 top-full mt-3 text-center text-xs text-white/70"
+            className="animate-enter absolute inset-x-0 top-full mt-3 text-center text-xs text-ink-muted"
             onClick={(e) => e.stopPropagation()}
           >
             {footer}
