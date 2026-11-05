@@ -19,7 +19,7 @@ import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useBoardPanel } from "./BoardPanel";
 import { GenrePicker } from "./GenrePicker";
-import { fieldLabel } from "./formText";
+import { fieldLabel, fieldLabelText } from "./formText";
 import { Modal } from "./Modal";
 import { tip } from "./Tooltip";
 
@@ -174,7 +174,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
             </>
           )}
 
-          <label className="mb-1 flex justify-between text-[13px] font-semibold text-ink/80" htmlFor="pg-description">
+          <label className={`mb-1 flex justify-between ${fieldLabelText}`} htmlFor="pg-description">
             Description
             {description.length > DESCRIPTION_MAX - 100 && (
               <span>

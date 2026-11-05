@@ -4,7 +4,7 @@ import { usernameAvailable, usernameFromEmail, usernameProblem } from "../lib/pr
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useUi } from "../store/ui";
-import { fieldError, fieldHelp, fieldInput as field, fieldLabel } from "./formText";
+import { fieldError, fieldHelp, fieldInput as field, fieldLabel, fieldLabelText } from "./formText";
 import { Modal } from "./Modal";
 import { MIN_PASSWORD, SetPasswordForm } from "./SetPasswordForm";
 
@@ -247,7 +247,7 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
                 className={`${field} mb-3`}
               />
               <div className="mb-1 flex items-baseline justify-between">
-                <label className="text-[13px] font-semibold text-ink/80" htmlFor="acct-password">
+                <label className={fieldLabelText} htmlFor="acct-password">
                   Password
                 </label>
                 {/* Emails a reset code and link: for a forgotten password, or an account made with an email link. */}

@@ -10,6 +10,7 @@ import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { plainField } from "../lib/inputProps";
+import { fieldLabelText } from "./formText";
 
 interface Row {
   item: Item;
@@ -228,7 +229,7 @@ function GearRow({ row: r, catalog, onShow }: { row: Row; catalog: Manifest | nu
   );
 }
 
-const fieldLabel = "flex min-w-0 flex-col gap-1 text-xs font-medium text-ink-muted";
+const fieldLabel = `flex min-w-0 flex-col gap-1 ${fieldLabelText}`;
 const fieldBox =
   "h-8 w-full rounded-control border border-line bg-surface px-2 text-sm text-ink outline-none transition-shadow focus:border-brand focus:ring-2 focus:ring-brand/30 pointer-coarse:h-10 max-sm:text-base";
 

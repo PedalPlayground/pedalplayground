@@ -1,6 +1,6 @@
 import { Check as CheckIcon, ImageUp, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { fieldHelp, fieldLabel as labelClass } from "../components/formText";
+import { fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { canvasImageUrl, type Manifest } from "../lib/catalog";
 import { imageStats, runChecks, sameBrand, type Fields, type ImageStats } from "../lib/editorChecks";
 import { plainField } from "../lib/inputProps";
@@ -9,13 +9,12 @@ import { PEDAL_TYPES, VOLTAGES } from "../lib/specs";
 /** Pixels per inch for the side-by-side preview. */
 const PREVIEW_PPI = 28;
 
-export const inputClass =
-  "h-8 w-full rounded-[5px] border border-line bg-surface px-2 text-[13px] text-ink outline-none focus:border-brand focus:ring-2 focus:ring-brand/25";
-/** Editor forms use the site's form text (label, help under it, error under the field). */
-export { fieldError, fieldHelp, fieldLabel as labelClass } from "../components/formText";
-export const primaryButton = "btn-primary h-8 rounded-[5px] px-3 text-[13px] disabled:opacity-50";
+/** Editor forms use the site's form pieces: fields, labels, help under the label, errors under the field. */
+export { fieldBox, fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass } from "../components/formText";
+/** The site's button sizes (36px, 14px text), as in the account dialogs. */
+export const primaryButton = "btn-primary h-9 px-3 disabled:opacity-50";
 export const secondaryButton =
-  "press h-8 rounded-[5px] border border-line bg-surface px-3 text-[13px] font-medium text-ink hover:bg-surface-hover disabled:opacity-50";
+  "press h-9 rounded-control bg-surface-hover px-3 text-sm font-medium text-ink outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
 const num = (s: string) => {
   const n = parseFloat(s);
@@ -70,10 +69,9 @@ export function ItemEditor({
       <div className="grid content-start gap-3">
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className={labelClass} htmlFor={`${id}-kind`}>
-Kind
-</label>
-            <select id={`${id}-kind`}
+            <label className={labelClass} htmlFor={`${id}-kind`}>Kind</label>
+            <select
+              id={`${id}-kind`}
               className={inputClass}
               value={fields.kind}
               disabled={lockKind}
@@ -84,66 +82,75 @@ Kind
             </select>
           </div>
           <div>
-            <label className={labelClass} htmlFor={`${id}-brand`}>
-Brand
-</label>
+            <label className={labelClass} htmlFor={`${id}-brand`}>Brand</label>
             <input id={`${id}-brand`} {...plainField} className={inputClass} value={fields.brand} onChange={(e) => set({ brand: e.target.value })} />
           </div>
         </div>
         <div>
-          <label className={labelClass} htmlFor={`${id}-name`}>
-Name
-</label>
+          <label className={labelClass} htmlFor={`${id}-name`}>Name</label>
           <input id={`${id}-name`} {...plainField} className={inputClass} value={fields.name} onChange={(e) => set({ name: e.target.value })} />
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className={labelClass} htmlFor={`${id}-width`}>
-Width (in)
-</label>
-            <input id={`${id}-width`}
-              {...plainField}
-              className={inputClass}
-              inputMode="decimal"
-              defaultValue={fields.width || ""}
-              onChange={(e) => set({ width: num(e.target.value) })}
-            />
+            <label className={labelClass} htmlFor={`${id}-width`}>Width</label>
+            <label className={fieldWithUnit}>
+              <input
+                aria-label="Width (in)"
+                id={`${id}-width`}
+                {...plainField}
+                className={fieldWithUnitInput}
+                inputMode="decimal"
+                defaultValue={fields.width || ""}
+                onChange={(e) => set({ width: num(e.target.value) })}
+              />
+              <span aria-hidden className={fieldUnit}>
+                in
+              </span>
+            </label>
           </div>
           <div>
-            <label className={labelClass} htmlFor={`${id}-height`}>
-Height (in)
-</label>
-            <input id={`${id}-height`}
-              {...plainField}
-              className={inputClass}
-              inputMode="decimal"
-              defaultValue={fields.height || ""}
-              onChange={(e) => set({ height: num(e.target.value) })}
-            />
+            <label className={labelClass} htmlFor={`${id}-height`}>Height</label>
+            <label className={fieldWithUnit}>
+              <input
+                aria-label="Height (in)"
+                id={`${id}-height`}
+                {...plainField}
+                className={fieldWithUnitInput}
+                inputMode="decimal"
+                defaultValue={fields.height || ""}
+                onChange={(e) => set({ height: num(e.target.value) })}
+              />
+              <span aria-hidden className={fieldUnit}>
+                in
+              </span>
+            </label>
           </div>
         </div>
         {fields.kind === "pedal" && (
           <>
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className={labelClass} htmlFor={`${id}-ma`}>
-Current draw (mA)
-</label>
-                <input id={`${id}-ma`}
-                  {...plainField}
-                  className={inputClass}
-                  inputMode="numeric"
-                  defaultValue={fields.ma ?? ""}
-                  onChange={(e) => {
-                    const v = e.target.value.trim();
-                    set({ ma: v ? Math.round(num(v)) : undefined });
-                  }}
-                />
+                <label className={labelClass} htmlFor={`${id}-ma`}>Current Draw</label>
+                <label className={fieldWithUnit}>
+                  <input
+                    aria-label="Current Draw (mA)"
+                    id={`${id}-ma`}
+                    {...plainField}
+                    className={fieldWithUnitInput}
+                    inputMode="numeric"
+                    defaultValue={fields.ma ?? ""}
+                    onChange={(e) => {
+                      const v = e.target.value.trim();
+                      set({ ma: v ? Math.round(num(v)) : undefined });
+                    }}
+                  />
+                  <span aria-hidden className={fieldUnit}>
+                    mA
+                  </span>
+                </label>
               </div>
               <div>
-                <label className={labelClass} htmlFor={`${id}-voltage`}>
-Voltage
-</label>
+                <label className={labelClass} htmlFor={`${id}-voltage`}>Voltage</label>
                 <select id={`${id}-voltage`} className={inputClass} value={fields.voltage ?? ""} onChange={(e) => set({ voltage: e.target.value || undefined })}>
                   <option value="">Unknown</option>
                   {VOLTAGES.map((v) => (
@@ -153,9 +160,7 @@ Voltage
               </div>
             </div>
             <div>
-              <label className={labelClass} htmlFor={`${id}-type`}>
-Type
-</label>
+              <label className={labelClass} htmlFor={`${id}-type`}>Type</label>
               <select id={`${id}-type`} className={inputClass} value={fields.type ?? ""} onChange={(e) => set({ type: e.target.value || undefined })}>
                 <option value="">Unknown</option>
                 {PEDAL_TYPES.map((t) => (

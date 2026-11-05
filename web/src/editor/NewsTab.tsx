@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { clearPostCache, type Post } from "../lib/announcements";
 import { deletePost, listPosts, savePost, type PostDraft } from "../lib/editorApi";
 import type { SetNotice } from "./EditorApp";
-import { fieldError, fieldHelp, inputClass, labelClass, primaryButton, secondaryButton } from "./ItemEditor";
+import { fieldBox, fieldError, fieldHelp, inputClass, labelClass, primaryButton, secondaryButton } from "./ItemEditor";
 
 const empty: PostDraft = { title: "", body: "", link_url: "", link_label: "", published_at: "" };
 
@@ -100,7 +100,7 @@ export function NewsTab({ setNotice }: { setNotice: SetNotice }) {
           <textarea
             id="post-body"
             aria-describedby="post-body-help"
-            className={`${inputClass} h-28 resize-y py-1.5`}
+            className={`${fieldBox} h-28 resize-y py-2`}
             value={draft.body}
             onChange={set("body")}
             maxLength={2000}
@@ -131,7 +131,7 @@ export function NewsTab({ setNotice }: { setNotice: SetNotice }) {
           </div>
           <div>
             <label className={labelClass} htmlFor="post-link-label">
-              Link text
+              Link Text
             </label>
             <span className={fieldHelp}>What the link says</span>
             <input id="post-link-label" className={inputClass} value={draft.link_label} onChange={set("link_label")} maxLength={40} placeholder="Learn more" />
@@ -139,7 +139,7 @@ export function NewsTab({ setNotice }: { setNotice: SetNotice }) {
         </div>
         <div>
           <label className={labelClass} htmlFor="post-publish-at">
-            Publish at
+            Publish At
           </label>
           <span id="post-publish-at-help" className={fieldHelp}>
             Leave empty for now; a later time schedules it

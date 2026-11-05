@@ -4,7 +4,7 @@ import { fieldProblems, type Fields } from "../lib/editorChecks";
 import { approve, fieldsFrom, listQueue, review, sourceUrl, updateSubmission, uploadSource, type Submission } from "../lib/editorApi";
 import { useAuth } from "../store/auth";
 import { withPublish, type Notice, type PublishState, type SetNotice } from "./EditorApp";
-import { fieldHelp, inputClass, ItemEditor, labelClass, primaryButton, secondaryButton } from "./ItemEditor";
+import { fieldBox, fieldHelp, ItemEditor, labelClass, primaryButton, secondaryButton } from "./ItemEditor";
 
 /** Pending submissions, oldest first. Pick one, fix it if needed, then approve, send back, or reject. */
 export function QueueTab({ manifest, publisher, setNotice }: { manifest: Manifest | null; publisher: PublishState; setNotice: SetNotice }) {
@@ -140,12 +140,12 @@ function Review({
       />
       <div>
         <label className={labelClass} htmlFor="queue-note">
-          Note to the submitter
+          Note to the Submitter
         </label>
         <span id="queue-note-help" className={fieldHelp}>
           For Needs changes or Reject
         </span>
-        <textarea id="queue-note" aria-describedby="queue-note-help" className={`${inputClass} h-20 py-1.5`} maxLength={1000} value={note} onChange={(e) => setNote(e.target.value)} />
+        <textarea id="queue-note" aria-describedby="queue-note-help" className={`${fieldBox} h-20 py-2`} maxLength={1000} value={note} onChange={(e) => setNote(e.target.value)} />
       </div>
       {problems.length > 0 && <p className="text-[13px] text-danger">{problems.join(" ")}</p>}
       {error && <p className="text-[13px] text-danger">{error}</p>}

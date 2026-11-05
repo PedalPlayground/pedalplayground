@@ -7,6 +7,7 @@ import { itemBounds } from "../lib/geometry";
 import { plainField } from "../lib/inputProps";
 import { spacedItems, usePlayground } from "../store/playground";
 import { useUi, type Units } from "../store/ui";
+import { fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "./formText";
 
 const MM_PER_INCH = 25.4;
 
@@ -203,7 +204,7 @@ export function SpaceBetweenPanel() {
         }}
       >
         <div className="mb-1 flex items-center justify-between">
-          <label htmlFor="space-between-gap" className="text-xs text-ink-muted">
+          <label htmlFor="space-between-gap" className={fieldLabelText}>
             Spacing
           </label>
           <div role="radiogroup" aria-label="Units" className="flex rounded-control bg-surface-hover p-0.5 text-[11px] font-medium">
@@ -221,7 +222,7 @@ export function SpaceBetweenPanel() {
             ))}
           </div>
         </div>
-        <label className="mb-3 flex h-9 items-center gap-1 rounded-control bg-surface-hover px-3 focus-within:ring-2 focus-within:ring-brand">
+        <label className={`mb-3 ${fieldWithUnit}`}>
           <input
             id="space-between-gap"
             autoFocus
@@ -230,9 +231,9 @@ export function SpaceBetweenPanel() {
             value={value}
             onChange={(e) => edit(e.target.value)}
             onFocus={(e) => e.target.select()}
-            className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none"
+            className={fieldWithUnitInput}
           />
-          <span aria-hidden className="text-sm text-ink-muted">
+          <span aria-hidden className={fieldUnit}>
             {units}
           </span>
         </label>

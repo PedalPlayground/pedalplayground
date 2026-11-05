@@ -31,6 +31,7 @@ import {
 import { PedalArt } from "./PedalArt";
 import { tip } from "./Tooltip";
 import { plainField } from "../lib/inputProps";
+import { fieldLabel, fieldLabelText } from "./formText";
 
 const MM_PER_INCH = 25.4;
 const MAX_INCHES = 60;
@@ -167,7 +168,7 @@ function BoardOptions({
   return (
     <>
       <div>
-        <div className="mb-1 text-xs text-ink-muted">Top</div>
+        <div className={fieldLabel}>Top</div>
         <div className="grid grid-cols-3 gap-1.5">
           {BOARD_TOPS.map((t) => (
             <button key={t.id} type="button" aria-pressed={board.top === t.id} onClick={() => onChange({ top: t.id })} className={tile(board.top === t.id)}>
@@ -180,14 +181,14 @@ function BoardOptions({
 
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <span className="text-xs text-ink-muted">Border</span>
+          <span className={fieldLabelText}>Border</span>
           <Toggle on={board.border} onChange={(border) => onChange({ border })} label="Border" />
         </div>
         {board.border && (
           <>
             <div>
               <div className="mb-1 flex items-center justify-between">
-                <span className="text-xs text-ink-muted">
+                <span className={fieldLabelText}>
                   Thickness <span className="tabular-nums text-ink">{thickness}</span>
                 </span>
                 <div role="radiogroup" aria-label="Units" className="flex rounded-control bg-surface-hover p-0.5 text-[11px] font-medium">
@@ -223,7 +224,7 @@ function BoardOptions({
               </div>
             </div>
             <div>
-              <div className="mb-1 text-xs text-ink-muted">Finish</div>
+              <div className={fieldLabel}>Finish</div>
               <div className="grid grid-cols-3 gap-1.5">
                 {BORDER_FINISHES.map((f) => (
                   <button key={f.id} type="button" aria-pressed={board.finish === f.id} onClick={() => onChange({ finish: f.id })} className={tile(board.finish === f.id)}>
@@ -413,7 +414,7 @@ export function CustomItemForm({
 
       {kind === "pedal" && (
         <div>
-          <div className="mb-1 text-xs text-ink-muted">Style</div>
+          <div className={fieldLabel}>Style</div>
           {/* Just the pictures (each style's name is its accessible label). */}
           <div className="grid grid-cols-3 gap-1.5">
             {PEDAL_TEMPLATES.map((t) => (
@@ -436,7 +437,7 @@ export function CustomItemForm({
 
       {kind === "pedal" && (
         <div>
-          <div className="mb-1 text-xs text-ink-muted">Color</div>
+          <div className={fieldLabel}>Color</div>
           <ColorSwatches color={color} onChange={setColor} />
         </div>
       )}
@@ -448,7 +449,7 @@ export function CustomItemForm({
       <div>
         {/* One label row (with the app-wide units switch) and one row of fields: "Width 2.6 in" "Height 4.8 in". */}
         <div className="mb-1 flex items-center justify-between">
-          <span className="flex items-center gap-1 text-xs text-ink-muted">
+          <span className={`flex items-center gap-1 ${fieldLabelText}`}>
             Dimensions
             {(width.trim() || height.trim()) && (
               // Back to the style's (or board's) usual size, shown again as the fields' placeholders.
@@ -511,7 +512,7 @@ export function CustomItemForm({
 
       {kind === "pedal" && (
         <div>
-          <div className="mb-1 text-xs text-ink-muted">Jacks</div>
+          <div className={fieldLabel}>Jacks</div>
           <div className="flex gap-1.5">
             {jackButton(jackTop, setJackTop, "Top", `Jacks on top add ${jackDepth} to the height`)}
             {jackButton(jackSide, setJackSide, "Sides", `Side jacks add ${jackDepth} to each side`)}
