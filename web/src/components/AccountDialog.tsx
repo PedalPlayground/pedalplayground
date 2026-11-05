@@ -23,6 +23,11 @@ type Tab = "signin" | "create";
  */
 type Step = "form" | "code" | "confirm";
 
+/** "trav.lehman+pp1@gmail.com" → "travlehman": the part before the @ (and any +tag), with only allowed characters. */
+function usernameFromEmail(email: string) {
+  return email.split("@")[0].split("+")[0].replace(/[^A-Za-z0-9_-]/g, "").slice(0, 24);
+}
+
 /** Checks the username as it's typed: format first, then (after a pause) whether it's free. */
 function useUsernameCheck(name: string) {
   const [taken, setTaken] = useState<{ name: string; taken: boolean } | null>(null);
@@ -63,7 +68,15 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
   const [error, setError] = useState<string | null>(null);
   /** Signed in: the Change Password form is open. */
   const [changing, setChanging] = useState(false);
+  /** Once they type in Username, the email stops filling it in. */
+  const [usernameEdited, setUsernameEdited] = useState(false);
   const check = useUsernameCheck(username.trim());
+
+  /** Create Account: the username starts as the email's name part, until they change it. */
+  const changeNewEmail = (value: string) => {
+    setEmail(value);
+    if (!usernameEdited) setUsername(usernameFromEmail(value));
+  };
 
   const switchTab = (t: Tab) => {
     setTab(t);
@@ -250,12 +263,27 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
                 void create();
               }}
             >
+              <label className={label} htmlFor="acct-new-email">
+                Email
+              </label>
+              <input
+                id="acct-new-email"
+                type="email"
+                autoFocus
+                name="email"
+                autoComplete="email"
+                autoCapitalize="none"
+                autoCorrect="off"
+                spellCheck={false}
+                value={email}
+                onChange={(e) => changeNewEmail(e.target.value)}
+                className={`${field} mb-3`}
+              />
               <label className={label} htmlFor="acct-username">
                 Username
               </label>
               <input
                 id="acct-username"
-                autoFocus
                 name="username"
                 autoComplete="username"
                 autoCapitalize="none"
@@ -263,27 +291,15 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
                 spellCheck={false}
                 maxLength={24}
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => {
+                  setUsernameEdited(true);
+                  setUsername(e.target.value);
+                }}
                 className={`${field} mb-1`}
               />
               <p className={`mb-3 text-xs ${check.hint ? "text-danger" : "text-ink-muted"}`}>
                 {check.hint ?? "Dashes and underscores allowed"}
               </p>
-              <label className={label} htmlFor="acct-new-email">
-                Email
-              </label>
-              <input
-                id="acct-new-email"
-                type="email"
-                name="email"
-                autoComplete="email"
-                autoCapitalize="none"
-                autoCorrect="off"
-                spellCheck={false}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className={`${field} mb-3`}
-              />
               <label className={label} htmlFor="acct-new-password">
                 Password
               </label>
