@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
+import { SetPasswordDialog } from "./components/SetPasswordForm";
 import { BoardInfoButton, BoardPanel } from "./components/BoardPanel";
 import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
@@ -134,7 +135,8 @@ export function App() {
   const upgradeOpen = useUi((u) => u.upgrade !== null);
   const newPlaygroundOpen = useUi((u) => u.newPlaygroundOpen);
   // A shared playground opened from a link isn't the place for the tour (it would add a demo pedal to it).
-  const busy = confirming || !!billingReturn || dialog !== null || upgradeOpen || newPlaygroundOpen || viewing;
+  const recovering = useAuth((s) => s.recovering);
+  const busy = confirming || recovering || !!billingReturn || dialog !== null || upgradeOpen || newPlaygroundOpen || viewing;
   useEffect(() => {
     if (busy || tourSeen()) return;
     const t = setTimeout(startTour, 800);
@@ -325,6 +327,7 @@ export function App() {
       {!busy && <UsernamePrompt />}
       {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}
       {dialog === "account" && <AccountDialog onClose={close} />}
+      {!dialog && <SetPasswordDialog />}
       {dialog === "register" && <AccountDialog onClose={close} initialTab="create" />}
       {dialog === "avatar" && <AvatarDialog onClose={close} />}
       {newPlaygroundOpen && <NewPlaygroundDialog />}
