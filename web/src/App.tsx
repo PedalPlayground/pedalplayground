@@ -16,6 +16,8 @@ import { MadeBy } from "./components/MadeBy";
 import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
 import { BoardLabel, BuildsMenu } from "./components/PlaygroundSwitcher";
+import { takeHandoff } from "./lib/handoff";
+import { requestNewPlayground } from "./lib/newPlayground";
 import { NewPlaygroundDialog } from "./components/NewPlaygroundDialog";
 import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
 import type { PlaygroundSummary } from "./lib/cloud";
@@ -44,7 +46,7 @@ import { WhatsNew } from "./components/WhatsNew";
 import { BETA, FEEDBACK_URL } from "./lib/beta";
 import { useAuth } from "./store/auth";
 import { useBilling } from "./store/billing";
-import { startCloudSync, useCloud } from "./store/cloud";
+import { openAfterSignIn, startCloudSync, useCloud } from "./store/cloud";
 import { restorePlayground, startLocalAutosave, usePlayground } from "./store/playground";
 
 const OTP_TYPES: EmailOtpType[] = ["email", "magiclink", "signup", "recovery", "invite", "email_change"];
@@ -141,6 +143,32 @@ export function App() {
 
   useEffect(init, [init]);
   useEffect(stripEmailLinkParams, []);
+  // Picks from the My Playgrounds menu on another page (the gallery); see lib/handoff.
+  const [handoff, setHandoff] = useState(() => {
+    const h = takeHandoff();
+    if (h?.kind === "open") openAfterSignIn(h.id);
+    return h?.kind === "open" ? null : h;
+  });
+  const authReady = useAuth((s) => s.ready);
+  const cloudList = useCloud((c) => c.list);
+  const billingKnown = useBilling((b) => !b.billingEnabled || !!b.entitlements);
+  useEffect(() => {
+    if (!handoff || !authReady) return;
+    if (handoff.kind === "new") {
+      // Wait for the plan so the limit check is right.
+      if (user && !billingKnown) return;
+      requestNewPlayground();
+    } else if (handoff.kind === "playgrounds") {
+      setDialog("playgrounds");
+    } else if (handoff.kind === "edit") {
+      const target = cloudList.find((p) => p.id === handoff.id);
+      if (!target) return; // the list is still loading
+      editPlayground(target);
+    }
+    setHandoff(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [handoff, authReady, user, billingKnown, cloudList]);
+
   useEffect(() => {
     restorePlayground();
     const stopLocal = startLocalAutosave();

@@ -7,6 +7,8 @@ import { UpgradeDialog } from "../components/UpgradeDialog";
 import { WhatsNew } from "../components/WhatsNew";
 import { startAvatarSync } from "../lib/avatar";
 import { GuestButtons, SiteHeader } from "../components/SiteTabs";
+import { BuildsMenu } from "../components/PlaygroundSwitcher";
+import { useCloud } from "../store/cloud";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { isEditor } from "../lib/editorApi";
 import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
@@ -64,6 +66,8 @@ export function GalleryApp() {
   useEffect(init, [init]);
   useEffect(startAvatarSync, []);
   useEffect(() => void useBilling.getState().refresh(), [user?.id]);
+  // Your boards, for the My Playgrounds menu.
+  useEffect(() => void useCloud.getState().refreshList(), [user?.id]);
   useEffect(() => void useCatalog.getState().load(), []);
   useEffect(() => {
     if (!user) return setEditor(false);
@@ -167,6 +171,7 @@ export function GalleryApp() {
       <SiteHeader
         current="gallery"
         className="sticky top-0 z-10"
+        builds={<BuildsMenu remote onEdit={() => undefined} onPlaygrounds={() => undefined} onSignIn={() => setDialog("account")} />}
         updates={<WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />}
         account={
           user ? (

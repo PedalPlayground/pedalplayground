@@ -4,6 +4,7 @@ import { tip } from "./Tooltip";
 import { ChevronDown, Copy, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
 import { PedalboardIcon, tabClass, tabIcon, tabLabel } from "./SiteTabs";
 import type { PlaygroundSummary } from "../lib/cloud";
+import { handoffHref, type Handoff } from "../lib/handoff";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
@@ -15,6 +16,8 @@ const item =
   "flex cursor-pointer select-none items-center gap-3 rounded-control px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
 type MenuProps = { onEdit: (target?: PlaygroundSummary) => void; onSignIn: () => void; onPlaygrounds: () => void };
+/** On other pages (the gallery), picks go to the playground instead; see lib/handoff. */
+const go = (h: Handoff) => window.location.assign(handoffHref(h));
 
 const cardAction =
   "grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/10 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
@@ -30,12 +33,14 @@ function edited(iso: string) {
  * The board hub: New Playground, the user's playgrounds as cards (open, settings), All Playgrounds and Playground Settings.
  * Guests have New Playground and Sign In to Save.
  */
-function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: MenuProps & { onCloseAutoFocus: (e: Event) => void }) {
+function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote }: MenuProps & { onCloseAutoFocus: (e: Event) => void; remote: boolean }) {
   const user = useAuth((s) => s.user);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const { list, cloudId, openPlayground } = useCloud();
   const cards = user ? list.slice(0, 6) : [];
-  const empty = usePlayground((s) => s.items.length === 0);
+  // The gallery doesn't load your board, so New Playground is always offered there.
+  const empty = usePlayground((s) => s.items.length === 0) && !remote;
+  const newPlayground = remote ? () => go({ kind: "new" }) : requestNewPlayground;
 
   // Guests have one board on this device: they can start it over, or sign in to save it.
   if (!user) {
@@ -49,7 +54,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
           onCloseAutoFocus={onCloseAutoFocus}
           className="animate-menu z-50 w-60 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
         >
-          <Dropdown.Item disabled={empty} className={`${item} data-[disabled]:cursor-default data-[disabled]:opacity-40`} onSelect={requestNewPlayground}>
+          <Dropdown.Item disabled={empty} className={`${item} data-[disabled]:cursor-default data-[disabled]:opacity-40`} onSelect={newPlayground}>
             <Plus size={14} />
             New Playground
           </Dropdown.Item>
@@ -77,7 +82,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
         onCloseAutoFocus={onCloseAutoFocus}
         className="animate-menu z-50 w-80 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel"
       >
-        <Dropdown.Item className={item} onSelect={requestNewPlayground}>
+        <Dropdown.Item className={item} onSelect={newPlayground}>
           <Plus size={14} />
           New Playground
         </Dropdown.Item>
@@ -92,7 +97,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
                   <Dropdown.Item
                     key={p.id}
                     aria-current={current || undefined}
-                    onSelect={() => void openPlayground(p.id)}
+                    onSelect={() => (remote ? go({ kind: "open", id: p.id }) : void openPlayground(p.id))}
                     className={`flex cursor-pointer select-none items-center gap-2.5 rounded-control p-1.5 outline-none ${
                       current ? "bg-surface-hover data-[highlighted]:bg-ink/10" : "data-[highlighted]:bg-surface-hover"
                     }`}
@@ -115,7 +120,8 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
                       {...tip("Playground Settings")}
                       onClick={(e) => {
                         e.stopPropagation();
-                        onEdit(p);
+                        if (remote) go({ kind: "edit", id: p.id });
+                        else onEdit(p);
                       }}
                       className={cardAction}
                     >
@@ -127,15 +133,20 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
             </div>
           </>
         )}
-        <Dropdown.Item className={item} onSelect={onPlaygrounds}>
+        <Dropdown.Item className={item} onSelect={remote ? () => go({ kind: "playgrounds" }) : onPlaygrounds}>
           <LayoutList size={14} />
           All Playgrounds…
         </Dropdown.Item>
-        <Dropdown.Separator className="my-1 h-px bg-line" />
-        <Dropdown.Item className={item} onSelect={() => onEdit()}>
-          <Settings2 size={14} />
-          Playground Settings…
-        </Dropdown.Item>
+        {/* "The open board" only means something on the playground. */}
+        {!remote && (
+          <>
+            <Dropdown.Separator className="my-1 h-px bg-line" />
+            <Dropdown.Item className={item} onSelect={() => onEdit()}>
+              <Settings2 size={14} />
+              Playground Settings…
+            </Dropdown.Item>
+          </>
+        )}
       </Dropdown.Content>
     </Dropdown.Portal>
   );
@@ -145,7 +156,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus }: Menu
  * The My Playgrounds tab: your playgrounds' menu (New Playground, your boards, All Playgrounds, Playground Settings), styled like
  * the Explore and Updates tabs beside it.
  */
-export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds }: MenuProps) {
+export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds, remote = false }: MenuProps & { remote?: boolean }) {
   const [open, setOpen] = useState(false);
   /**
    * The dialog to open once the menu has closed (Playground Settings, All Playgrounds or Sign In). It opens only then: opened sooner, the menu's focus trap and
@@ -160,6 +171,7 @@ export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds }: MenuProps) {
         <ChevronDown size={12} strokeWidth={2.5} className="-ml-0.5 shrink-0 text-ink-muted" />
       </Dropdown.Trigger>
       <MenuContent
+        remote={remote}
         onEdit={(target) => {
           pending.current = { open: () => onEdit(target) };
           setOpen(false);
