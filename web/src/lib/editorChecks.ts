@@ -36,6 +36,46 @@ export const SHAPE_TOLERANCE = 0.05;
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "");
 
+/**
+ * The catalog's brands, one per brand however it's spelled across items (case, spaces, punctuation), using the
+ * spelling most of its items use. Most items first.
+ */
+export function catalogBrands(items: Pick<CatalogItem, "brand">[]): string[] {
+  const groups = new Map<string, Map<string, number>>();
+  for (const { brand } of items) {
+    const key = norm(brand);
+    if (!key) continue;
+    const spellings = groups.get(key) ?? new Map<string, number>();
+    spellings.set(brand.trim(), (spellings.get(brand.trim()) ?? 0) + 1);
+    groups.set(key, spellings);
+  }
+  return [...groups.values()]
+    .map((spellings) => {
+      const [best] = [...spellings].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      const total = [...spellings.values()].reduce((a, b) => a + b, 0);
+      return { brand: best[0], total };
+    })
+    .sort((a, b) => b.total - a.total || a.brand.localeCompare(b.brand))
+    .map((b) => b.brand);
+}
+
+/** Brands matching what's typed, ignoring case, spaces and punctuation: those starting with it first, then the rest. */
+export function brandSuggestions(typed: string, brands: string[], n = 8): string[] {
+  const q = norm(typed);
+  if (!q) return [];
+  const starts = brands.filter((b) => norm(b).startsWith(q));
+  const contains = brands.filter((b) => !norm(b).startsWith(q) && norm(b).includes(q));
+  return [...starts, ...contains].slice(0, n);
+}
+
+/** The catalog's spelling when the typed brand is the same brand spelled differently ("Electro Harmonix"), else null. */
+export function brandSpelling(typed: string, brands: string[]): string | null {
+  const q = norm(typed);
+  if (!q) return null;
+  const match = brands.find((b) => norm(b) === q);
+  return match && match !== typed.trim() ? match : null;
+}
+
 /** Live catalog entries that look like the same item: same brand, and one name contains the other. */
 export function possibleDuplicates(fields: Pick<Fields, "brand" | "name">, items: CatalogItem[], skipImage?: string): CatalogItem[] {
   const brand = norm(fields.brand);

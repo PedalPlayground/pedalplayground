@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { fieldProblems, possibleDuplicates, runChecks, sameBrand, type Fields } from "./editorChecks";
+import { brandSpelling, brandSuggestions, catalogBrands, fieldProblems, possibleDuplicates, runChecks, sameBrand, type Fields } from "./editorChecks";
 import type { CatalogItem } from "./types";
 
 const item = (brand: string, name: string, image: string, width = 2.9, height = 5.1): CatalogItem => ({ brand, name, image, width, height });
@@ -50,5 +50,33 @@ describe("fieldProblems", () => {
     expect(fieldProblems(ds1)).toEqual([]);
     expect(fieldProblems({ ...ds1, brand: " ", width: 0 })).toHaveLength(2);
     expect(fieldProblems({ ...ds1, ma: 1.5 })).toEqual(["Current draw must be 0 to 10,000 mA."]);
+  });
+});
+
+describe("brands", () => {
+  const items = [
+    { brand: "Electro-Harmonix" },
+    { brand: "Electro-Harmonix" },
+    { brand: "electro harmonix" },
+    { brand: "BOSS" },
+    { brand: "Walrus Audio" },
+    { brand: "JHS" },
+  ];
+  const brands = catalogBrands(items);
+
+  it("lists each brand once, spelled the way most of its items are, most items first", () => {
+    expect(brands).toEqual(["Electro-Harmonix", "BOSS", "JHS", "Walrus Audio"]);
+  });
+
+  it("suggests brands ignoring case, spaces and punctuation, starts-with first", () => {
+    expect(brandSuggestions("electroh", brands)).toEqual(["Electro-Harmonix"]);
+    expect(brandSuggestions("audio", brands)).toEqual(["Walrus Audio"]);
+    expect(brandSuggestions("  ", brands)).toEqual([]);
+  });
+
+  it("points out a brand that's already in the catalog with another spelling", () => {
+    expect(brandSpelling("Electro Harmonix", brands)).toBe("Electro-Harmonix");
+    expect(brandSpelling("Electro-Harmonix", brands)).toBeNull();
+    expect(brandSpelling("Chase Bliss", brands)).toBeNull();
   });
 });

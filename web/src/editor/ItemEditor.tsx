@@ -1,13 +1,15 @@
 import { Check as CheckIcon, ImageUp, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
+import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { canvasImageUrl, type Manifest } from "../lib/catalog";
-import { imageStats, runChecks, sameBrand, type Fields, type ImageStats } from "../lib/editorChecks";
+import { brandSpelling, brandSuggestions, catalogBrands, imageStats, runChecks, sameBrand, type Fields, type ImageStats } from "../lib/editorChecks";
 import { plainField } from "../lib/inputProps";
 import { PEDAL_TYPES, VOLTAGES } from "../lib/specs";
 
 /** Pixels per inch for the side-by-side preview. */
 const PREVIEW_PPI = 28;
+/** The preview's size before one is entered: a typical pedal (inches). */
+const PLACEHOLDER_IN = [2.9, 5.1] as const;
 
 /** Editor forms use the site's form pieces: fields, labels, help under the label, errors under the field. */
 export { fieldBox, fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass } from "../components/formText";
@@ -61,6 +63,8 @@ export function ItemEditor({
 
   const list = manifest ? (fields.kind === "pedal" ? manifest.pedals : manifest.pedalboards) : [];
   const id = useId();
+  // Every brand in the catalog (pedals and pedalboards), for the Brand field's suggestions.
+  const brands = useMemo(() => (manifest ? catalogBrands([...manifest.pedals, ...manifest.pedalboards]) : []), [manifest]);
   const checks = useMemo(() => runChecks(fields, stats, list, skipImage), [fields, stats, list, skipImage]);
   const neighbours = useMemo(() => sameBrand(list, fields, 3, skipImage), [list, fields, skipImage]);
 
@@ -83,7 +87,7 @@ export function ItemEditor({
           </div>
           <div>
             <label className={labelClass} htmlFor={`${id}-brand`}>Brand</label>
-            <input id={`${id}-brand`} {...plainField} className={inputClass} value={fields.brand} onChange={(e) => set({ brand: e.target.value })} />
+            <BrandField id={`${id}-brand`} value={fields.brand} brands={brands} onChange={(brand) => set({ brand })} />
           </div>
         </div>
         <div>
@@ -230,8 +234,10 @@ export function ItemEditor({
 }
 
 function Figure({ label, src, w, h, highlight, broken }: { label: string; src: string | null; w: number; h: number; highlight?: boolean; broken?: boolean }) {
-  const pw = Math.max(8, w * PREVIEW_PPI);
-  const ph = Math.max(8, h * PREVIEW_PPI);
+  // No size yet: a typical pedal's size, so the box and its "No photo" read cleanly above the caption.
+  const sized = w > 0 && h > 0;
+  const pw = sized ? Math.max(8, w * PREVIEW_PPI) : PLACEHOLDER_IN[0] * PREVIEW_PPI;
+  const ph = sized ? Math.max(8, h * PREVIEW_PPI) : PLACEHOLDER_IN[1] * PREVIEW_PPI;
   return (
     <figure className="flex shrink-0 flex-col items-center gap-1.5">
       <div
@@ -241,17 +247,97 @@ function Figure({ label, src, w, h, highlight, broken }: { label: string; src: s
         {src && !broken ? (
           <img src={src} alt="" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />
         ) : (
-          <div className="absolute inset-0 grid place-items-center rounded bg-ink/10 text-[11px] text-ink-muted">
+          <div className="absolute inset-0 grid place-items-center overflow-hidden rounded bg-ink/10 px-1 text-center text-[11px] leading-tight text-ink-muted">
             {broken ? "Can't load" : "No photo"}
           </div>
         )}
       </div>
       <figcaption className="max-w-[140px] truncate text-center text-[11px] text-ink-muted" title={label}>
         {label}
-        <span className="block tabular-nums">
-          {+w.toFixed(3)} × {+h.toFixed(3)} in
-        </span>
+        <span className="block tabular-nums">{sized ? `${+w.toFixed(3)} × ${+h.toFixed(3)} in` : "No size yet"}</span>
       </figcaption>
     </figure>
+  );
+}
+
+/**
+ * Brand, with suggestions from the catalog as you type (matching ignores case, spaces and punctuation), so a brand
+ * doesn't get added twice with another spelling. A brand the catalog spells differently gets a note and a fix.
+ */
+function BrandField({ id, value, brands, onChange }: { id: string; value: string; brands: string[]; onChange: (brand: string) => void }) {
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(-1);
+  const list = open ? brandSuggestions(value, brands).filter((b) => b !== value.trim()) : [];
+  const spelling = brandSpelling(value, brands);
+  const pick = (brand: string) => {
+    onChange(brand);
+    setOpen(false);
+    setActive(-1);
+  };
+  return (
+    <div className="relative">
+      <input
+        id={id}
+        role="combobox"
+        aria-autocomplete="list"
+        aria-expanded={list.length > 0}
+        aria-controls={`${id}-list`}
+        aria-activedescendant={active >= 0 && list[active] ? `${id}-option-${active}` : undefined}
+        aria-describedby={spelling ? `${id}-spelling` : undefined}
+        {...plainField}
+        className={inputClass}
+        value={value}
+        onChange={(e) => {
+          onChange(e.target.value);
+          setOpen(true);
+          setActive(-1);
+        }}
+        onFocus={() => setOpen(true)}
+        onBlur={() => setOpen(false)}
+        onKeyDown={(e) => {
+          if (!list.length) return;
+          if (e.key === "ArrowDown") {
+            e.preventDefault();
+            setActive((a) => (a + 1) % list.length);
+          } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            setActive((a) => (a <= 0 ? list.length - 1 : a - 1));
+          } else if (e.key === "Enter" && active >= 0) {
+            e.preventDefault();
+            pick(list[active]);
+          } else if (e.key === "Escape") {
+            setOpen(false);
+          }
+        }}
+      />
+      {list.length > 0 && (
+        <ul id={`${id}-list`} role="listbox" className="absolute inset-x-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-panel bg-surface p-1 shadow-panel">
+          {list.map((b, i) => (
+            <li
+              key={b}
+              id={`${id}-option-${i}`}
+              role="option"
+              aria-selected={i === active}
+              // Before the field's blur closes the list.
+              onMouseDown={(e) => {
+                e.preventDefault();
+                pick(b);
+              }}
+              className={`cursor-pointer rounded-control px-2.5 py-1.5 text-sm ${i === active ? "bg-surface-hover" : "hover:bg-surface-hover"}`}
+            >
+              {b}
+            </li>
+          ))}
+        </ul>
+      )}
+      {spelling && (
+        <span id={`${id}-spelling`} className={fieldError}>
+          The catalog spells it {spelling}.{" "}
+          <button type="button" className="font-semibold underline" onClick={() => onChange(spelling)}>
+            Use {spelling}
+          </button>
+        </span>
+      )}
+    </div>
   );
 }
