@@ -251,6 +251,58 @@ function viewShowingAll(s: PlaygroundState, items: Item[]): View {
 /** The current view, zoomed out and re-centered only if `item` isn't fully on screen. */
 const viewShowing = (s: PlaygroundState, item: Item) => viewShowingAll(s, [item]);
 
+/** Screen padding, in px, that a fitted board keeps from the canvas edges, clear of the toolbars. */
+function fitPad(s: PlaygroundState) {
+  // Phones fit tight to the sides, leaving room for the save pill up top and the toolbar and scale key below.
+  const pad = s.viewport.w < 640 ? { x: 16, top: 48, bottom: 112 } : { x: 96, top: 96, bottom: 96 };
+  // Above the phone Add Gear drawer, a small gap is enough.
+  return s.coverBottom > 0 ? { ...pad, bottom: s.coverBottom + 16 } : pad;
+}
+
+/** The view that fits all the gear in the open canvas, zoomed no further in than `maxZoom`. Null with no gear. */
+function fittedView(s: PlaygroundState, maxZoom: number): View | null {
+  const b = contentBounds(s.items);
+  if (!b || !s.viewport.w) return null;
+  const pad = fitPad(s);
+  // With the gear panel open, fit into the space beside it.
+  const availW = s.viewport.w - s.coverLeft - pad.x * 2;
+  const availH = s.viewport.h - pad.top - pad.bottom;
+  const w = (b.right - b.left) * PX_PER_INCH;
+  const h = (b.bottom - b.top) * PX_PER_INCH;
+  const zoom = clamp(Math.min(availW / w, availH / h), MIN_ZOOM, maxZoom);
+  return {
+    zoom,
+    x: s.coverLeft + pad.x + (availW - w * zoom) / 2 - b.left * PX_PER_INCH * zoom,
+    y: pad.top + (availH - h * zoom) / 2 - b.top * PX_PER_INCH * zoom,
+  };
+}
+
+/** How far out the viewer can zoom: until the whole board fits, or 100% for a board that fits at a bigger zoom. */
+const minZoom = (s: PlaygroundState) => Math.min(fittedView(s, MAX_ZOOM)?.zoom ?? MIN_ZOOM, 1);
+
+/**
+ * Keeps the board in view. The safe area is the open canvas less the fit padding (clear of the toolbars and the
+ * gear panel). A board smaller than it can be moved around inside it but not out. A bigger one (zoomed in) pans
+ * until its edge reaches the safe area's edge, so the outermost gear is never stuck under a toolbar.
+ */
+function clampView(s: PlaygroundState, view: View): View {
+  const b = contentBounds(s.items);
+  if (!b || !s.viewport.w) return view;
+  const pad = fitPad(s);
+  const k = view.zoom * PX_PER_INCH;
+  // One axis: lo..hi is the safe area on screen, start..end the board in inches.
+  const axis = (pos: number, lo: number, hi: number, start: number, end: number) => {
+    const a = lo;
+    const z = hi - (end - start) * k;
+    return clamp(pos + start * k, Math.min(a, z), Math.max(a, z)) - start * k;
+  };
+  return {
+    zoom: view.zoom,
+    x: axis(view.x, s.coverLeft + pad.x, s.viewport.w - pad.x, b.left, b.right),
+    y: axis(view.y, pad.top, s.viewport.h - pad.bottom, b.top, b.bottom),
+  };
+}
+
 /** The catalog's pedal specs, as item fields. Only the ones the catalog has are set. */
 function catalogSpecs(c: CatalogItem): Partial<Pick<Item, "ma" | "voltage" | "pedalType">> {
   return {
@@ -281,45 +333,31 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
   lastPlacedId: null,
 
   setViewport: (w, h) => {
-    set({ viewport: { w, h } });
+    set((s) => ({ viewport: { w, h }, view: clampView({ ...s, viewport: { w, h } }, s.view) }));
     if ((get().pendingFit || get().autoFit) && w > 0) {
       set({ pendingFit: false });
       get().fitToContent();
     }
   },
   setView: (v) => set((s) => ({ autoFit: false, view: { ...s.view, ...v } })),
-  panBy: (dx, dy) => set((s) => ({ autoFit: false, view: { ...s.view, x: s.view.x + dx, y: s.view.y + dy } })),
+  panBy: (dx, dy) => set((s) => ({ autoFit: false, view: clampView(s, { ...s.view, x: s.view.x + dx, y: s.view.y + dy }) })),
 
   zoomBy: (factor, px, py) =>
     set((s) => {
       const cx = px ?? s.viewport.w / 2;
       const cy = py ?? s.viewport.h / 2;
-      const zoom = clamp(s.view.zoom * factor, MIN_ZOOM, MAX_ZOOM);
+      // Zooming out stops once the whole board fits (or at 100% for a small one).
+      const zoom = clamp(s.view.zoom * factor, Math.min(minZoom(s), s.view.zoom), MAX_ZOOM);
       const k = zoom / s.view.zoom;
-      return { autoFit: false, view: { zoom, x: cx - (cx - s.view.x) * k, y: cy - (cy - s.view.y) * k } };
+      return { autoFit: false, view: clampView(s, { zoom, x: cx - (cx - s.view.x) * k, y: cy - (cy - s.view.y) * k }) };
     }),
 
   fitToContent: () =>
     set((s) => {
-      const b = contentBounds(s.items);
-      if (!b) return { view: DEFAULT_VIEW };
+      if (!s.items.length) return { view: DEFAULT_VIEW };
       // The canvas isn't measured yet: fit once it is.
       if (!s.viewport.w) return { pendingFit: true };
-      // Phones fit tight to the sides, leaving room for the save pill up top and the toolbar and scale key below.
-      const pad = s.viewport.w < 640 ? { x: 16, top: 48, bottom: 112 } : { x: 96, top: 96, bottom: 96 };
-      // With the gear panel open, fit into the space beside it.
-      const availW = s.viewport.w - s.coverLeft - pad.x * 2;
-      const availH = s.viewport.h - pad.top - (s.coverBottom > 0 ? s.coverBottom + 16 : pad.bottom);
-      const w = (b.right - b.left) * PX_PER_INCH;
-      const h = (b.bottom - b.top) * PX_PER_INCH;
-      const zoom = clamp(Math.min(availW / w, availH / h), MIN_ZOOM, 1.5);
-      return {
-        view: {
-          zoom,
-          x: s.coverLeft + pad.x + (availW - w * zoom) / 2 - b.left * PX_PER_INCH * zoom,
-          y: pad.top + (availH - h * zoom) / 2 - b.top * PX_PER_INCH * zoom,
-        },
-      };
+      return { view: fittedView(s, 1.5)! };
     }),
 
   addCatalogItem: (kind, c) =>
