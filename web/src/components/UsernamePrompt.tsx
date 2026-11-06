@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { saveUsername, usernameAvailable, usernameProblem } from "../lib/profiles";
+import { saveUsername, usernameAvailable, usernameFromEmail, usernameProblem } from "../lib/profiles";
 import { useAuth } from "../store/auth";
+import { useRestriction } from "../store/standing";
+import { fieldError, fieldHelp, fieldInput, fieldLabel } from "./formText";
 import { Modal } from "./Modal";
 
-const field =
-  "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand";
 
 /**
  * Asks a signed-in account without a username (made before usernames, or by an email link that skipped it) to pick
@@ -15,7 +15,11 @@ export function UsernamePrompt() {
   const username = useAuth((s) => s.username);
   const setStoredUsername = useAuth((s) => s.setUsername);
   const [dismissed, setDismissed] = useState(false);
-  const [name, setName] = useState("");
+  // A timeout holds back username changes, so don't ask until it's over.
+  const { restricted } = useRestriction();
+  // Starts as the email's name part (like Create Account) until they type their own.
+  const [typed, setName] = useState<string | null>(null);
+  const name = typed ?? usernameFromEmail(user?.email ?? "");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [taken, setTaken] = useState<string | null>(null);
@@ -34,7 +38,7 @@ export function UsernamePrompt() {
     };
   }, [trimmed, problem]);
 
-  if (!user || username !== null || dismissed) return null;
+  if (!user || username !== null || dismissed || restricted) return null;
 
   const hint = problem ?? (taken === trimmed ? "That username is taken." : null);
   const save = async () => {
@@ -55,20 +59,34 @@ export function UsernamePrompt() {
           void save();
         }}
       >
-        <input
-          autoFocus
-          aria-label="Username"
-          autoComplete="username"
-          autoCapitalize="none"
-          autoCorrect="off"
-          spellCheck={false}
-          maxLength={24}
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="tonechaser"
-          className={`${field} mb-1`}
-        />
-        <p className={`mb-4 text-xs ${hint ? "text-danger" : "text-ink-muted"}`}>{hint ?? "Letters, numbers, - and _."}</p>
+        <div className="mb-4">
+          <label className={fieldLabel} htmlFor="pick-username">
+            Username
+          </label>
+          <span id="pick-username-help" className={fieldHelp}>
+            Dashes and underscores allowed
+          </span>
+          <input
+            id="pick-username"
+            autoFocus
+            aria-describedby={hint ? "pick-username-help pick-username-error" : "pick-username-help"}
+            aria-invalid={!!hint}
+            autoComplete="username"
+            autoCapitalize="none"
+            autoCorrect="off"
+            spellCheck={false}
+            maxLength={24}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="tonechaser"
+            className={fieldInput}
+          />
+          {hint && (
+            <span id="pick-username-error" className={fieldError}>
+              {hint}
+            </span>
+          )}
+        </div>
         {error && <p className="mb-3 text-sm text-danger">{error}</p>}
         <div className="flex justify-end gap-2">
           <button type="button" onClick={() => setDismissed(true)} className="h-9 rounded-control px-3 text-sm text-ink-muted hover:bg-surface-hover">

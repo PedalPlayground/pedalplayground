@@ -1,4 +1,4 @@
-import { ArrowLeft, Copy, Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
+import { ArrowLeft, Copy, Flag, Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { create } from "zustand";
 import {
@@ -15,7 +15,13 @@ import {
 import { PLAYGROUND_TYPES } from "../lib/cloud";
 import { setGalleryLike } from "../lib/gallery";
 import { galleryReturnUrl } from "../lib/gallery";
+import { moderationError, shortDate } from "../lib/moderation";
+import { hasProfanity, PROFANITY_MESSAGE } from "../lib/profanity";
+import { useAllowedNames } from "../lib/useAllowedNames";
+import { useIsEditor } from "../lib/useIsEditor";
 import { useMediaQuery } from "../lib/viewport";
+import { useRestriction } from "../store/standing";
+import { ReportDialog } from "./ReportDialog";
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
@@ -121,7 +127,7 @@ export function BoardInfoButton() {
     >
       <MessageSquare size={16} strokeWidth={2.25} />
       {!!count && <span>{count}</span>}
-      {unseen > 0 && <span aria-hidden className="absolute -right-0.5 -top-0.5 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
+      {unseen > 0 && <span aria-hidden className="absolute -right-0.5 -top-0.5 size-2 rounded-full bg-brand ring-2 ring-canvas" />}
     </button>
   );
 }
@@ -308,9 +314,12 @@ function Engagement({
 }) {
   const user = useAuth((s) => s.user);
   const { billingEnabled, entitlements } = useBilling();
+  const restriction = useRestriction();
+  const [reporting, setReporting] = useState(false);
   const canCopy = !!user && (!billingEnabled || entitlements?.plan === "pro");
   const like = async () => {
     if (!user) return onSignIn();
+    if (restriction.restricted) return window.alert(moderationError("account_restricted", restriction.until));
     const liked = !info.liked;
     setInfo({ ...info, liked, like_count: Math.max(0, info.like_count + (liked ? 1 : -1)) });
     try {
@@ -361,6 +370,12 @@ function Engagement({
           <Copy size={20} strokeWidth={1.75} />
         </button>
       )}
+      {!own && (
+        <button type="button" onClick={() => (user ? setReporting(true) : onSignIn())} aria-label="Report Board" {...tip("Report Board", { side: "bottom" })} className={btn}>
+          <Flag size={18} strokeWidth={1.75} />
+        </button>
+      )}
+      {reporting && <ReportDialog kind="board" target={id} what={info.name} onClose={() => setReporting(false)} />}
     </div>
   );
 }
@@ -388,6 +403,9 @@ function Social({
   own: boolean;
 }) {
   const list = useRef<HTMLDivElement>(null);
+  const user = useAuth((s) => s.user);
+  const editor = useIsEditor();
+  const [reporting, setReporting] = useState<BoardComment | null>(null);
 
 
   const remove = async (c: BoardComment) => {
@@ -425,6 +443,9 @@ function Social({
           </p>
         )}
 
+        {reporting && (
+          <ReportDialog kind="comment" target={reporting.id} what={`${reporting.username ? `@${reporting.username}: ` : ""}${reporting.body}`} onClose={() => setReporting(null)} />
+        )}
         {showComments && (
           <section id="board-comments" className="mt-4" aria-label="Comments">
             <h3 className="text-sm font-semibold">
@@ -442,16 +463,41 @@ function Social({
                       <span className="text-ink-muted" title={new Date(c.created_at).toLocaleString()}>
                         {timeAgo(c.created_at)}
                       </span>
-                      {c.can_delete && (
-                        <button
-                          type="button"
-                          onClick={() => void remove(c)}
-                          aria-label="Delete comment"
-                          className="ml-auto grid size-6 place-items-center rounded-control text-ink-muted opacity-0 outline-none hover:bg-danger/10 hover:text-danger focus-visible:opacity-100 group-hover/comment:opacity-100 [@media(hover:none)]:opacity-100"
-                        >
-                          <Trash2 size={13} />
-                        </button>
-                      )}
+                      <span className="ml-auto flex items-center gap-0.5 opacity-0 focus-within:opacity-100 group-hover/comment:opacity-100 [@media(hover:none)]:opacity-100">
+                        {editor && !c.mine && c.username && (
+                          <a
+                            href={`/editor/#moderation?user=${encodeURIComponent(c.username)}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            {...tip("Flag User")}
+                            className="rounded-control px-1.5 py-0.5 text-[11px] font-semibold text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+                          >
+                            Flag User
+                          </a>
+                        )}
+                        {!c.mine && (
+                          <button
+                            type="button"
+                            onClick={() => (user ? setReporting(c) : onSignIn())}
+                            aria-label="Report comment"
+                            {...tip("Report")}
+                            className="grid size-6 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+                          >
+                            <Flag size={13} />
+                          </button>
+                        )}
+                        {c.can_delete && (
+                          <button
+                            type="button"
+                            onClick={() => void remove(c)}
+                            aria-label="Delete comment"
+                            {...tip("Delete")}
+                            className="grid size-6 place-items-center rounded-control text-ink-muted outline-none hover:bg-danger/10 hover:text-danger focus-visible:ring-2 focus-visible:ring-brand"
+                          >
+                            <Trash2 size={13} />
+                          </button>
+                        )}
+                      </span>
                     </div>
                     <p className="mt-0.5 whitespace-pre-wrap break-words text-sm">{c.body}</p>
                   </li>
@@ -495,6 +541,15 @@ function Composer({ id, onSignIn, onPosted }: { id: string; onSignIn: () => void
   const [text, setText] = useState("");
   const [posting, setPosting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const restriction = useRestriction();
+  const allowed = useAllowedNames();
+
+  if (user && restriction.restricted)
+    return (
+      <p className="border-t border-line px-4 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] text-sm text-ink-muted sm:pb-3">
+        {restriction.until ? `Your account is in a timeout. You can comment again on ${shortDate(restriction.until)}.` : "This account can't comment."}
+      </p>
+    );
 
   if (!user)
     return (
@@ -507,6 +562,7 @@ function Composer({ id, onSignIn, onPosted }: { id: string; onSignIn: () => void
 
   const post = async () => {
     if (!text.trim() || posting) return;
+    if (hasProfanity(text, allowed)) return setError(PROFANITY_MESSAGE);
     setPosting(true);
     setError(null);
     try {

@@ -5,6 +5,7 @@ import { tip } from "./Tooltip";
 import { useEffect, useMemo, useState } from "react";
 import { buildFeed, fetchPosts, isUnread, markSeen, readSeen, type FeedEntry, type Post } from "../lib/announcements";
 import { track } from "../lib/analytics";
+import { useIsEditor } from "../lib/useIsEditor";
 import { useCatalog } from "../store/catalog";
 
 const dateLabel = (iso: string) =>
@@ -14,6 +15,7 @@ const dateLabel = (iso: string) =>
 /** `onNewGear` opens the Add Gear panel at its New list (the gallery sends you to the playground for that). */
 export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
   const manifest = useCatalog((s) => s.manifest);
+  const editor = useIsEditor();
   const [posts, setPosts] = useState<Post[]>([]);
   const [seen, setSeen] = useState(readSeen);
   /** True while the panel is open: the dot goes away, but the "New" labels stay until it closes. */
@@ -64,6 +66,17 @@ export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
               feed.map((e) => <Entry key={e.id} entry={e} fresh={isUnread(e, seen)} onNewGear={onNewGear} />)
             )}
           </div>
+          {/* Catalog editors: a shortcut to writing a post. */}
+          {editor && (
+            <Dropdown.Item asChild>
+              <a
+                href="/editor/#news"
+                className="block border-t border-line px-4 py-3 text-sm font-semibold text-brand outline-none data-[highlighted]:bg-surface-hover"
+              >
+                Post an Update
+              </a>
+            </Dropdown.Item>
+          )}
         </Dropdown.Content>
       </Dropdown.Portal>
     </Dropdown.Root>

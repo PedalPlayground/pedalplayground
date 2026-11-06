@@ -36,6 +36,101 @@ export const SHAPE_TOLERANCE = 0.05;
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "");
 
+/**
+ * The catalog's brands, one per brand however it's spelled across items (case, spaces, punctuation), using the
+ * spelling most of its items use. Most items first.
+ */
+export function catalogBrands(items: Pick<CatalogItem, "brand">[]): string[] {
+  const groups = new Map<string, Map<string, number>>();
+  for (const { brand } of items) {
+    const key = norm(brand);
+    if (!key) continue;
+    const spellings = groups.get(key) ?? new Map<string, number>();
+    spellings.set(brand.trim(), (spellings.get(brand.trim()) ?? 0) + 1);
+    groups.set(key, spellings);
+  }
+  return [...groups.values()]
+    .map((spellings) => {
+      const [best] = [...spellings].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      const total = [...spellings.values()].reduce((a, b) => a + b, 0);
+      return { brand: best[0], total };
+    })
+    .sort((a, b) => b.total - a.total || a.brand.localeCompare(b.brand))
+    .map((b) => b.brand);
+}
+
+/** Brands matching what's typed, ignoring case, spaces and punctuation: those starting with it first, then the rest. */
+export function brandSuggestions(typed: string, brands: string[], n = 8): string[] {
+  const q = norm(typed);
+  if (!q) return [];
+  const starts = brands.filter((b) => norm(b).startsWith(q));
+  const contains = brands.filter((b) => !norm(b).startsWith(q) && norm(b).includes(q));
+  return [...starts, ...contains].slice(0, n);
+}
+
+/** One size a brand uses, how many of its items have it, and its most used item (for a thumbnail). */
+export interface BrandSize {
+  width: number;
+  height: number;
+  count: number;
+  example: CatalogItem;
+}
+
+/** How much an item is used (higher first); ties fall back to the name. Defaults to no usage data. */
+export type Usage = (item: CatalogItem) => number;
+const byUsage = (usage: Usage) => (a: CatalogItem, b: CatalogItem) => usage(b) - usage(a) || a.name.localeCompare(b.name);
+
+/**
+ * The sizes a brand's items come in, most used first (sizes within 0.05 in count as one), for brands that build on
+ * standard enclosures. Only sizes shared by at least `minCount` items, up to `n`.
+ */
+export function brandSizes(items: CatalogItem[], brand: string, n = 6, usage: Usage = () => 0, minCount = 2): BrandSize[] {
+  const key = norm(brand);
+  if (!key) return [];
+  const sizes: BrandSize[] = [];
+  for (const i of items) {
+    if (norm(i.brand) !== key || !(i.width > 0 && i.height > 0)) continue;
+    const same = sizes.find((s) => Math.abs(s.width - i.width) < 0.05 && Math.abs(s.height - i.height) < 0.05);
+    if (same) {
+      same.count++;
+      if (byUsage(usage)(i, same.example) < 0) same.example = i;
+    } else sizes.push({ width: i.width, height: i.height, count: 1, example: i });
+  }
+  return sizes
+    .filter((s) => s.count >= minCount)
+    .sort((a, b) => b.count - a.count || a.width * a.height - b.width * b.height)
+    .slice(0, n);
+}
+
+/** Catalog items for "Copy from…": every word typed in the brand or name, the given brand's items first, then most used. */
+export function copySources(items: CatalogItem[], typed: string, brand: string, n = 12, usage: Usage = () => 0): CatalogItem[] {
+  const words = typed.toLowerCase().split(/\s+/).filter(Boolean).map(norm).filter(Boolean);
+  const key = norm(brand);
+  const matches = items.filter((i) => {
+    const text = norm(`${i.brand} ${i.name}`);
+    return words.length ? words.every((w) => text.includes(w)) : key !== "" && norm(i.brand) === key;
+  });
+  return matches.sort((a, b) => Number(norm(b.brand) === key) - Number(norm(a.brand) === key) || byUsage(usage)(a, b)).slice(0, n);
+}
+
+/** What "Copy from…" and Duplicate fill in: brand and size, plus power and type when asked. */
+export function copiedFields(from: CatalogItem, withSpecs: boolean): Partial<Fields> {
+  return {
+    brand: from.brand,
+    width: from.width,
+    height: from.height,
+    ...(withSpecs ? { ma: from.ma, voltage: from.voltage, type: from.type } : {}),
+  };
+}
+
+/** The catalog's spelling when the typed brand is the same brand spelled differently ("Electro Harmonix"), else null. */
+export function brandSpelling(typed: string, brands: string[]): string | null {
+  const q = norm(typed);
+  if (!q) return null;
+  const match = brands.find((b) => norm(b) === q);
+  return match && match !== typed.trim() ? match : null;
+}
+
 /** Live catalog entries that look like the same item: same brand, and one name contains the other. */
 export function possibleDuplicates(fields: Pick<Fields, "brand" | "name">, items: CatalogItem[], skipImage?: string): CatalogItem[] {
   const brand = norm(fields.brand);

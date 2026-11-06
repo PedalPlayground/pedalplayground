@@ -4,7 +4,7 @@ import { fieldProblems, type Fields } from "../lib/editorChecks";
 import { approve, fieldsFrom, listQueue, review, sourceUrl, updateSubmission, uploadSource, type Submission } from "../lib/editorApi";
 import { useAuth } from "../store/auth";
 import { withPublish, type Notice, type PublishState, type SetNotice } from "./EditorApp";
-import { inputClass, ItemEditor, labelClass, primaryButton, secondaryButton } from "./ItemEditor";
+import { fieldBox, fieldHelp, ItemEditor, labelClass, primaryButton, secondaryButton } from "./ItemEditor";
 
 /** Pending submissions, oldest first. Pick one, fix it if needed, then approve, send back, or reject. */
 export function QueueTab({ manifest, publisher, setNotice }: { manifest: Manifest | null; publisher: PublishState; setNotice: SetNotice }) {
@@ -41,7 +41,7 @@ export function QueueTab({ manifest, publisher, setNotice }: { manifest: Manifes
             <button
               type="button"
               onClick={() => setOpenId(s.id)}
-              className={`w-full rounded-[5px] px-2.5 py-2 text-left text-[13px] ${s.id === openId ? "bg-surface shadow-sm" : "hover:bg-surface-hover"}`}
+              className={`w-full rounded-[5px] px-2.5 py-2 text-left text-[13px] ${s.id === openId ? "bg-ink/[0.06] font-medium" : "hover:bg-surface-hover"}`}
             >
               <span className="block truncate font-semibold">
                 {s.brand} {s.name}
@@ -139,8 +139,13 @@ function Review({
         lockKind={!!submission.target_key}
       />
       <div>
-        <label className={labelClass}>Note to the submitter (for Needs changes or Reject)</label>
-        <textarea className={`${inputClass} h-20 py-1.5`} maxLength={1000} value={note} onChange={(e) => setNote(e.target.value)} />
+        <label className={labelClass} htmlFor="queue-note">
+          Note to the Submitter
+        </label>
+        <span id="queue-note-help" className={fieldHelp}>
+          For Needs changes or Reject
+        </span>
+        <textarea id="queue-note" aria-describedby="queue-note-help" className={`${fieldBox} h-20 py-2`} maxLength={1000} value={note} onChange={(e) => setNote(e.target.value)} />
       </div>
       {problems.length > 0 && <p className="text-[13px] text-danger">{problems.join(" ")}</p>}
       {error && <p className="text-[13px] text-danger">{error}</p>}

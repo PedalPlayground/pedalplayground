@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import { fetchManifest, type Manifest } from "../lib/catalog";
 import { isEditor, pendingBuilds, publish } from "../lib/editorApi";
+import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { useAuth } from "../store/auth";
 import { AddTab } from "./AddTab";
 import { CatalogTab } from "./CatalogTab";
 import { primaryButton, secondaryButton } from "./ItemEditor";
+import { ModerationTab } from "./ModerationTab";
 import { NewsTab } from "./NewsTab";
 import { QueueTab } from "./QueueTab";
 
-type Tab = "queue" | "add" | "catalog" | "news";
+type Tab = "queue" | "add" | "catalog" | "news" | "moderation";
+const TABS: Tab[] = ["queue", "add", "catalog", "news", "moderation"];
+/** The tab in the address (/editor/#news, or #add?from=<key> for Duplicate), so links can open a tab and reloads stay on it. */
+const tabFromHash = (): Tab => TABS.find((t) => `#${t}` === window.location.hash.split("?")[0]) ?? "queue";
 
 export interface Notice {
   text: string;
@@ -32,12 +37,23 @@ export function EditorApp() {
   const ready = useAuth((s) => s.ready);
   const user = useAuth((s) => s.user);
   const [allowed, setAllowed] = useState<boolean | null>(null);
-  const [tab, setTab] = useState<Tab>("queue");
+  const [tab, setTabState] = useState<Tab>(tabFromHash);
+  const setTab = (t: Tab) => {
+    setTabState(t);
+    history.replaceState(null, "", t === "queue" ? window.location.pathname : `#${t}`);
+  };
+  const [dialog, setDialog] = useState<PageDialog>(null);
+  const header = <PageHeader current="editor" dialog={dialog} setDialog={setDialog} />;
   const [manifest, setManifest] = useState<Manifest | null>(null);
   const [notice, setNotice] = useState<Notice | null>(null);
   const [waiting, setWaiting] = useState<number | null>(null);
 
   useEffect(init, [init]);
+  useEffect(() => {
+    const onHash = () => setTabState(tabFromHash());
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
   useEffect(() => {
     if (!user) return setAllowed(null);
     isEditor().then(setAllowed, () => setAllowed(false));
@@ -60,20 +76,20 @@ export function EditorApp() {
   };
   const publisher: PublishState = { run: runPublish };
 
-  if (!ready) return <Shell />;
+  if (!ready) return <Shell header={header} />;
   if (!user)
     return (
-      <Shell>
-        <p className="text-[15px]">Sign in on the playground first, then come back to this page.</p>
-        <a href="/" className={`${primaryButton} mt-4 inline-flex items-center`}>
-          Go to the playground
-        </a>
+      <Shell header={header}>
+        <p className="text-[15px]">Sign in with a catalog editor account to use this page.</p>
+        <button type="button" onClick={() => setDialog("account")} className={`${primaryButton} mt-4 inline-flex items-center`}>
+          Sign In
+        </button>
       </Shell>
     );
-  if (allowed === null) return <Shell />;
+  if (allowed === null) return <Shell header={header} />;
   if (!allowed)
     return (
-      <Shell>
+      <Shell header={header}>
         <p className="text-[15px]">This page is for catalog editors. Your account isn't one.</p>
       </Shell>
     );
@@ -91,6 +107,7 @@ export function EditorApp() {
 
   return (
     <Shell
+      header={header}
       bar={
         <>
           <nav className="flex gap-1">
@@ -98,6 +115,7 @@ export function EditorApp() {
             {tabButton("add", "Add")}
             {tabButton("catalog", "Catalog")}
             {tabButton("news", "News")}
+            {tabButton("moderation", "Moderation")}
           </nav>
           <div className="ml-auto flex items-center gap-3">
             {waiting !== null && waiting > 0 && (
@@ -126,6 +144,7 @@ export function EditorApp() {
       {tab === "queue" && <QueueTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
       {tab === "add" && <AddTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
       {tab === "news" && <NewsTab setNotice={setNotice} />}
+      {tab === "moderation" && <ModerationTab setNotice={setNotice} />}
       {tab === "catalog" && <CatalogTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
     </Shell>
   );
@@ -133,18 +152,18 @@ export function EditorApp() {
 
 export type SetNotice = (n: Notice | null) => void;
 
-function Shell({ children, bar }: { children?: React.ReactNode; bar?: React.ReactNode }) {
+/** The site header, then the editor's own tab bar under it (once you're in). */
+function Shell({ header, children, bar }: { header: React.ReactNode; children?: React.ReactNode; bar?: React.ReactNode }) {
   return (
-    <div className="min-h-dvh bg-chrome font-sans text-ink">
-      <header className="sticky top-0 z-10 border-b border-chrome-line bg-chrome/95 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-3">
-          <a href="/" className="text-[15px] font-bold tracking-[-0.01em]">
-            Catalog editor
-          </a>
-          {bar}
+    // The page locks body scrolling (for the playground), so this page scrolls inside its own container, like the gallery.
+    <div className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
+      {header}
+      {bar && (
+        <div className="sticky top-12 z-[9] border-b border-chrome-line bg-chrome/95 backdrop-blur">
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
         </div>
-      </header>
-      <main className="mx-auto max-w-5xl px-4 py-6">{children}</main>
+      )}
+      <main className="mx-auto max-w-6xl px-4 py-6">{children}</main>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { plainField } from "../lib/inputProps";
+import { fieldLabelText } from "./formText";
 
 interface Row {
   item: Item;
@@ -228,7 +229,7 @@ function GearRow({ row: r, catalog, onShow }: { row: Row; catalog: Manifest | nu
   );
 }
 
-const fieldLabel = "flex min-w-0 flex-col gap-1 text-xs font-medium text-ink-muted";
+const fieldLabel = `flex min-w-0 flex-col gap-1 ${fieldLabelText}`;
 const fieldBox =
   "h-8 w-full rounded-control border border-line bg-surface px-2 text-sm text-ink outline-none transition-shadow focus:border-brand focus:ring-2 focus:ring-brand/30 pointer-coarse:h-10 max-sm:text-base";
 
@@ -285,7 +286,7 @@ function Details({ item, name, links, onShow }: { item: Item; name: string; link
           {...tip(`Search ${l.store} for ${name}`)}
           className={`press flex h-8 shrink-0 items-center gap-1.5 rounded-[5px] px-3 text-[13px] font-semibold tracking-[-0.01em] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10 max-sm:w-full max-sm:justify-center ${
             i === 0 ? "ml-auto max-sm:ml-0" : ""
-          } ${isWanted(item) ? "bg-brand/10 text-brand hover:bg-brand/15 active:bg-brand/25" : "bg-chrome text-ink-muted hover:bg-chrome-line hover:text-ink active:bg-line"}`}
+          } ${isWanted(item) ? "bg-brand/10 text-brand hover:bg-brand/15 active:bg-brand/25" : "bg-surface-hover text-ink-muted hover:bg-chrome-line hover:text-ink active:bg-line"}`}
         >
           <ExternalLink size={14} strokeWidth={2.25} />
           {isWanted(item) ? `Buy on ${l.store}` : `Find on ${l.store}`}
@@ -393,7 +394,7 @@ function StatusToggle({ item }: { item: Item }) {
       {...tip(wanted ? "Mark as Owned" : "Mark as Need to Buy")}
       aria-label={`${label}. ${wanted ? "Mark as Owned" : "Mark as Need to Buy"}`}
       className={`press flex h-8 w-[132px] shrink-0 items-center whitespace-nowrap justify-center gap-1.5 rounded-full px-3 text-[13px] font-semibold tracking-[-0.01em] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10 max-sm:w-10 max-sm:px-0 ${
-        wanted ? "bg-brand/10 text-brand hover:bg-brand/15 active:bg-brand/25" : "bg-chrome text-ink-muted hover:bg-chrome-line hover:text-ink active:bg-line"
+        wanted ? "bg-brand/10 text-brand hover:bg-brand/15 active:bg-brand/25" : "bg-surface-hover text-ink-muted hover:bg-chrome-line hover:text-ink active:bg-line"
       }`}
     >
       {wanted ? <ShoppingCart size={14} strokeWidth={2.25} /> : <Check size={14} strokeWidth={2.5} />}

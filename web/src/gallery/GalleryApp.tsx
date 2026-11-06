@@ -1,22 +1,13 @@
 import { Heart, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { AccountDialog } from "../components/AccountDialog";
-import { SetPasswordDialog } from "../components/SetPasswordForm";
-import { AvatarDialog } from "../components/AvatarDialog";
-import { AvatarMenu } from "../components/AvatarMenu";
-import { UpgradeDialog } from "../components/UpgradeDialog";
-import { WhatsNew } from "../components/WhatsNew";
-import { startAvatarSync } from "../lib/avatar";
-import { GuestButtons, SiteHeader } from "../components/SiteTabs";
-import { BuildsMenu } from "../components/PlaygroundSwitcher";
-import { useCloud } from "../store/cloud";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
-import { isEditor } from "../lib/editorApi";
 import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
 import { supabase } from "../lib/supabase";
+import { PageHeader, type PageDialog } from "../components/PageHeader";
+import { useIsEditor } from "../lib/useIsEditor";
+import { moderationError } from "../lib/moderation";
+import { useRestriction } from "../store/standing";
 import { useAuth } from "../store/auth";
-import { useBilling } from "../store/billing";
-import { useCatalog } from "../store/catalog";
 
 const TYPE_LABELS: Record<PlaygroundType, string> = {
   guitar: "Guitar",
@@ -37,10 +28,11 @@ export function GalleryApp() {
   const user = useAuth((s) => s.user);
   const ready = useAuth((s) => s.ready);
   const [sort, setSort] = useState<GallerySort>(returning?.sort ?? "new");
-  const [signInNote, setSignInNote] = useState(false);
-  /** The same account dialogs as the playground header. */
-  const [dialog, setDialog] = useState<"account" | "register" | "avatar" | null>(null);
-  const cloudEnabled = useAuth((s) => s.cloudEnabled);
+  /** A short message over the boards (e.g. likes are off during a timeout). */
+  const [note, setNote] = useState<string | null>(null);
+  const restriction = useRestriction();
+  /** The header's account dialogs; liking while signed out opens sign-in too. */
+  const [dialog, setDialog] = useState<PageDialog>(null);
   const [type, setType] = useState<PlaygroundType | null>(returning?.type ?? null);
   const [query, setQuery] = useState(returning?.query ?? "");
   const [search, setSearch] = useState(returning?.query ?? "");
@@ -48,7 +40,7 @@ export function GalleryApp() {
   const [loading, setLoading] = useState(true);
   const [more, setMore] = useState(false);
   const [failed, setFailed] = useState(false);
-  const [editor, setEditor] = useState(false);
+  const editor = useIsEditor();
   const [hidden, setHidden] = useState<GalleryBoard | null>(null);
   const request = useRef(0);
   const sentinel = useRef<HTMLDivElement>(null);
@@ -65,15 +57,6 @@ export function GalleryApp() {
   }, [boards]);
 
   useEffect(init, [init]);
-  useEffect(startAvatarSync, []);
-  useEffect(() => void useBilling.getState().refresh(), [user?.id]);
-  // Your boards, for the My Playgrounds menu.
-  useEffect(() => void useCloud.getState().refreshList(), [user?.id]);
-  useEffect(() => void useCatalog.getState().load(), []);
-  useEffect(() => {
-    if (!user) return setEditor(false);
-    isEditor().then(setEditor, () => setEditor(false));
-  }, [user]);
 
   // Search as you type, after a short pause.
   useEffect(() => {
@@ -152,6 +135,7 @@ export function GalleryApp() {
 
   const toggleLike = async (b: GalleryBoard) => {
     if (!user) return setDialog("account");
+    if (restriction.restricted) return setNote(moderationError("account_restricted", restriction.until));
     const liked = !b.liked;
     const patch = (fields: Partial<GalleryBoard>) => setBoards((list) => list.map((x) => (x.id === b.id ? { ...x, ...fields } : x)));
     // Show it right away, then settle on the server's count.
@@ -169,24 +153,7 @@ export function GalleryApp() {
   return (
     <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       {/* The same header as the playground. */}
-      <SiteHeader
-        current="gallery"
-        className="sticky top-0 z-10"
-        builds={<BuildsMenu remote onEdit={() => undefined} onPlaygrounds={() => undefined} onSignIn={() => setDialog("account")} />}
-        updates={<WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />}
-        account={
-          user ? (
-            <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
-          ) : (
-            cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />
-          )
-        }
-      />
-      {dialog === "account" && <AccountDialog onClose={() => setDialog(null)} />}
-      {!dialog && <SetPasswordDialog />}
-      {dialog === "register" && <AccountDialog onClose={() => setDialog(null)} initialTab="create" />}
-      {dialog === "avatar" && <AvatarDialog onClose={() => setDialog(null)} />}
-      <UpgradeDialog onSignIn={() => setDialog("account")} />
+      <PageHeader current="gallery" dialog={dialog} setDialog={setDialog} />
 
       {/* Opening a board saves this spot, so its "Back to Gallery" returns here. */}
       <main
@@ -221,7 +188,7 @@ export function GalleryApp() {
               </button>
             ))}
           </div>
-          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 self-start rounded-control bg-surface-hover p-0.5 sm:ml-auto sm:self-auto">
+          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 self-start rounded-control bg-ink/[0.06] p-0.5 sm:ml-auto sm:self-auto">
             {(
               [
                 ["new", "Newest"],
@@ -242,15 +209,10 @@ export function GalleryApp() {
           </div>
         </div>
 
-        {signInNote && (
+        {note && (
           <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-lg border border-line bg-surface px-3 py-2 text-[13px]">
-            <span>
-              <a href="/" className="font-semibold text-brand">
-                Sign in on the playground
-              </a>{" "}
-              to like boards, then come back here.
-            </span>
-            <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setSignInNote(false)} aria-label="Dismiss">
+            <span>{note}</span>
+            <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setNote(null)} aria-label="Dismiss">
               ×
             </button>
           </div>

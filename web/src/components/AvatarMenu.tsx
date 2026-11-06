@@ -32,7 +32,7 @@ export function AvatarMenu({
         <PedalAvatar pedalKey={avatar} height={32} />
       </Dropdown.Trigger>
       <Dropdown.Portal>
-        <Dropdown.Content align="end" sideOffset={10} className="animate-menu z-50 min-w-52 rounded-panel bg-surface p-1.5 shadow-panel">
+        <Dropdown.Content align="end" sideOffset={10} className="animate-menu z-50 min-w-52 rounded-panel bg-surface p-1.5 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain">
           <Dropdown.Label className="px-3 pb-1 pt-1.5">
             <span className="block text-xs text-ink-muted">Signed in as</span>
             <span className="block max-w-56 truncate text-sm font-medium">{user?.email}</span>
