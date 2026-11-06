@@ -31,7 +31,28 @@ const db = () => {
 };
 
 /** One page of gallery boards. `offset` is how many boards are already showing. */
+/** "@name" in the gallery search: only that person's boards. Returns the username, or null for a normal search. */
+export const searchedUser = (search: string) => (/^@[A-Za-z0-9_-]+$/.test(search.trim()) ? search.trim().slice(1) : null);
+
+/** The gallery filtered to one person's boards (their username is a link to this). */
+export const userGalleryUrl = (username: string) => `/gallery/?user=${encodeURIComponent(username)}`;
+
 export async function fetchGalleryBoards(opts: { type: PlaygroundType | null; search: string; sort: GallerySort; offset: number; limit?: number }): Promise<GalleryBoard[]> {
+  // "@name": the database search also matches board names, so fetch what it finds and keep that person's boards.
+  const user = searchedUser(opts.search);
+  if (user) {
+    if (opts.offset > 0) return [];
+    const { data, error } = await db().rpc("gallery_boards", {
+      board_type: opts.type,
+      search: user,
+      sort: opts.sort,
+      page_offset: 0,
+      page_size: 200,
+      ...(SHOW_TEST_BOARDS ? { include_test: true } : {}),
+    });
+    if (error) throw error;
+    return (data as GalleryBoard[]).filter((b) => b.username?.toLowerCase() === user.toLowerCase());
+  }
   const { data, error } = await db().rpc("gallery_boards", {
     board_type: opts.type,
     search: opts.search.trim() || null,

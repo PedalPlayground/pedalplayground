@@ -37,6 +37,8 @@
   --radius-panel: 12px;
 
   --shadow-panel: 0 4px 16px rgb(16 18 27 / 0.08), 0 0 0 1px rgb(16 18 27 / 0.04);
+  /* Chips and small pills on a page: a hairline edge and barely any lift. */
+  --shadow-chip: 0 1px 2px rgb(16 18 27 / 0.06), 0 0 0 1px rgb(16 18 27 / 0.07);
 }
 
 /* Dark theme: follows the OS unless the user picks Light or Dark (data-theme on <html>). */
@@ -69,6 +71,7 @@
     --color-tip: #4a4c55;
     --color-tip-ink: #f4f4f6;
     --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
+    --shadow-chip: 0 1px 2px rgb(0 0 0 / 0.35), 0 0 0 1px rgb(255 255 255 / 0.08);
   }
 }
 
@@ -96,6 +99,7 @@
   --color-tip: #4a4c55;
   --color-tip-ink: #f4f4f6;
   --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
+  --shadow-chip: 0 1px 2px rgb(0 0 0 / 0.35), 0 0 0 1px rgb(255 255 255 / 0.08);
 }
 
 /* OLED dark: true black for the canvas and chrome, near-black panels with hairline edges (shadows can't show on
