@@ -39,6 +39,9 @@ so editors still see it after an edit or a delete.
 In the Moderation tab, **Review User** opens the reported account with the report's reason filled in; flagging resolves
 the report. **Dismiss** closes it without a flag.
 
+The tab's feed also lists boards hidden from the gallery (by an editor's Hide, or by a ban), newest first, with who hid
+them. **Unhide** puts a board back in the gallery; one hidden by a ban asks first.
+
 ## Curse words
 
 Common curse words and slurs are refused, leetspeak too ("sh1t"). Short ones that hide inside ordinary words (cock,
@@ -47,7 +50,7 @@ dick, ass) only count on their own, so "Cocktail" and "Bassist" are fine. Names 
 
 ## Setting it up
 
-1. Apply the migration (it's safe to re-run). Until then, the site works as before: nobody is flagged, reports say
+1. Apply the migration (it's safe to re-run; applied 2026-11-06). Until then, the site works as before: nobody is flagged, reports say
    they aren't set up yet, and the Moderation tab says so.
 2. Test with a spare account: report one of its comments from another account, then flag it from the Moderation tab
    (a warning first, then a 1-day timeout), check the popup and the timeout, and lift it.

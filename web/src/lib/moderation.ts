@@ -126,6 +126,24 @@ export async function fetchReports(includeClosed = false): Promise<Report[]> {
   return (data ?? []) as Report[];
 }
 
+/** A board hidden from the gallery, by an editor or by a ban. */
+export interface HiddenBoard {
+  playground_id: string;
+  slug: string | null;
+  name: string;
+  owner_user_id: string;
+  owner_username: string | null;
+  hidden_by_username: string | null;
+  hidden_at: string;
+  by_ban: boolean;
+}
+
+export async function fetchHiddenBoards(): Promise<HiddenBoard[]> {
+  const { data, error } = await db().rpc("moderation_hidden_boards");
+  fail(error);
+  return (data ?? []) as HiddenBoard[];
+}
+
 /** An account by username, or null when there's no such username. */
 export async function lookupUser(name: string): Promise<ModUser | null> {
   const { data, error } = await db().rpc("moderation_user", { name });
