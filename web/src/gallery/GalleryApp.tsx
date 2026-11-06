@@ -178,7 +178,13 @@ export function GalleryApp() {
               className="h-9 w-full rounded-control border border-line bg-surface pl-9 pr-3 text-sm outline-none focus:border-brand"
             />
           </label>
-          <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0 sm:pb-0" role="group" aria-label="Board type">
+          {/* Scrolls sideways on phones. A scroller clips what's outside it, so it gets room around the chips for their
+              shadows (padding, undone by negative margins so nothing moves); that room doesn't take clicks. */}
+          <div
+            className="pointer-events-none -mx-4 -my-4 flex gap-2 overflow-x-auto px-4 py-4 sm:-mx-3 sm:px-3 [&>*]:pointer-events-auto"
+            role="group"
+            aria-label="Board type"
+          >
             <button type="button" className={chip(type === null)} aria-pressed={type === null} onClick={() => setType(null)}>
               All
             </button>
