@@ -29,3 +29,15 @@ export function fetchTrending(): Promise<TrendingEntry[]> {
   );
   return cached;
 }
+
+let usage: Promise<Map<string, number>> | null = null;
+
+/** How often each item was added in the last year (the 100 most added), keyed "kind:image". Empty when unavailable. */
+export function fetchGearUsage(): Promise<Map<string, number>> {
+  if (!supabase) return Promise.resolve(new Map());
+  usage ??= Promise.resolve(supabase.rpc("trending_gear", { days: 365, max_items: 100 })).then(
+    ({ data, error }) => new Map(error || !Array.isArray(data) ? [] : (data as TrendingEntry[]).map((e) => [`${e.kind}:${e.image}`, Number(e.adds)])),
+    () => new Map(),
+  );
+  return usage;
+}

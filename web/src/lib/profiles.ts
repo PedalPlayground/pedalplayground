@@ -1,3 +1,4 @@
+import { usernameOffensive } from "./profanity";
 import { supabase } from "./supabase";
 
 /** Keep in step with the profiles_username_format check in the profiles migration. */
@@ -8,11 +9,17 @@ const isMissing = (code?: string) => code === "42P01" || code === "PGRST205" || 
 /** False once we learn the database has no profiles table yet, so nothing asks for a username. */
 export let profilesSupported = true;
 
+/** A starting username from an email. "trav.lehman+pp1@gmail.com" → "travlehman": the part before the @ (and any +tag), with only allowed characters. */
+export function usernameFromEmail(email: string) {
+  return email.split("@")[0].split("+")[0].replace(/[^A-Za-z0-9_-]/g, "").slice(0, 24);
+}
+
 /** A short reason the name can't be used, or null when its format is fine. */
 export function usernameProblem(name: string): string | null {
   if (name.length < 3) return "At least 3 characters.";
   if (name.length > 24) return "24 characters at most.";
   if (!USERNAME_PATTERN.test(name)) return "Letters, numbers, - and _ only.";
+  if (usernameOffensive(name)) return "Please pick a different username.";
   return null;
 }
 
@@ -44,5 +51,7 @@ export async function saveUsername(userId: string, username: string): Promise<st
   const { error } = await supabase.from("profiles").upsert({ user_id: userId, username }, { onConflict: "user_id" });
   if (!error) return null;
   if (error.code === "23505") return "That username is taken.";
+  if (/username_not_allowed/.test(error.message)) return "Please pick a different username.";
+  if (/account_restricted/.test(error.message)) return "Your account is in a timeout, so the username can't change yet.";
   return error.message;
 }

@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
 import { openBillingPortal } from "../lib/billing";
-import { usernameAvailable, usernameProblem } from "../lib/profiles";
+import { usernameAvailable, usernameFromEmail, usernameProblem } from "../lib/profiles";
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useUi } from "../store/ui";
+import { fieldError, fieldHelp, fieldInput as field, fieldLabel, fieldLabelText } from "./formText";
 import { Modal } from "./Modal";
 import { MIN_PASSWORD, SetPasswordForm } from "./SetPasswordForm";
 
 /** Shaded, borderless fields, like the board panel's Details. */
-const field =
-  "h-9 w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand";
 const primary = "h-9 w-full disabled:opacity-50 btn-primary";
 const secondary =
   "mt-2 h-9 w-full rounded-control bg-surface-hover text-sm font-medium outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand";
-const label = "mb-1 block text-xs text-ink-muted";
 const linkButton = "text-sm text-brand hover:underline disabled:opacity-50";
 
 type Tab = "signin" | "create";
@@ -22,11 +20,6 @@ type Tab = "signin" | "create";
  * a sign-up confirmation email.
  */
 type Step = "form" | "code" | "confirm";
-
-/** "trav.lehman+pp1@gmail.com" → "travlehman": the part before the @ (and any +tag), with only allowed characters. */
-function usernameFromEmail(email: string) {
-  return email.split("@")[0].split("+")[0].replace(/[^A-Za-z0-9_-]/g, "").slice(0, 24);
-}
 
 /** Checks the username as it's typed: format first, then (after a pause) whether it's free. */
 function useUsernameCheck(name: string) {
@@ -154,7 +147,7 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
                 onClose();
                 useUi.getState().openLegal();
               }}
-              className="underline hover:text-white"
+              className="underline hover:text-ink"
             >
               Terms &amp; Privacy
             </button>
@@ -179,11 +172,11 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
         <>
           {currentUsername && (
             <>
-              <p className="text-xs text-ink-muted">Username</p>
+              <p className={fieldLabel}>Username</p>
               <p className="mb-2 text-sm font-medium">{currentUsername}</p>
             </>
           )}
-          <p className="text-xs text-ink-muted">Email</p>
+          <p className={fieldLabel}>Email</p>
           <p className="text-sm font-medium">{user.email}</p>
           <button
             onClick={() => {
@@ -237,7 +230,7 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
                 void signIn();
               }}
             >
-              <label className={label} htmlFor="acct-email">
+              <label className={fieldLabel} htmlFor="acct-email">
                 Email
               </label>
               <input
@@ -254,7 +247,7 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
                 className={`${field} mb-3`}
               />
               <div className="mb-1 flex items-baseline justify-between">
-                <label className="text-xs text-ink-muted" htmlFor="acct-password">
+                <label className={fieldLabelText} htmlFor="acct-password">
                   Password
                 </label>
                 {/* Emails a reset code and link: for a forgotten password, or an account made with an email link. */}
@@ -290,7 +283,7 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
                 void create();
               }}
             >
-              <label className={label} htmlFor="acct-new-email">
+              <label className={fieldLabel} htmlFor="acct-new-email">
                 Email
               </label>
               <input
@@ -306,40 +299,52 @@ export function AccountDialog({ onClose, initialTab = "signin" }: { onClose: () 
                 onChange={(e) => changeNewEmail(e.target.value)}
                 className={`${field} mb-3`}
               />
-              <label className={label} htmlFor="acct-username">
-                Username
-              </label>
-              <input
-                id="acct-username"
-                name="username"
-                autoComplete="username"
-                autoCapitalize="none"
-                autoCorrect="off"
-                spellCheck={false}
-                maxLength={24}
-                value={username}
-                onChange={(e) => {
-                  setUsernameEdited(true);
-                  setUsername(e.target.value);
-                }}
-                className={`${field} mb-1`}
-              />
-              <p className={`mb-3 text-xs ${check.hint ? "text-danger" : "text-ink-muted"}`}>
-                {check.hint ?? "Dashes and underscores allowed"}
-              </p>
-              <label className={label} htmlFor="acct-new-password">
+              <div className="mb-3">
+                <label className={fieldLabel} htmlFor="acct-username">
+                  Username
+                </label>
+                <span id="acct-username-help" className={fieldHelp}>
+                  Dashes and underscores allowed
+                </span>
+                <input
+                  id="acct-username"
+                  aria-describedby={check.hint ? "acct-username-help acct-username-error" : "acct-username-help"}
+                  aria-invalid={!!check.hint}
+                  name="username"
+                  autoComplete="username"
+                  autoCapitalize="none"
+                  autoCorrect="off"
+                  spellCheck={false}
+                  maxLength={24}
+                  value={username}
+                  onChange={(e) => {
+                    setUsernameEdited(true);
+                    setUsername(e.target.value);
+                  }}
+                  className={field}
+                />
+                {check.hint && (
+                  <span id="acct-username-error" className={fieldError}>
+                    {check.hint}
+                  </span>
+                )}
+              </div>
+              <label className={fieldLabel} htmlFor="acct-new-password">
                 Password
               </label>
+              <span id="acct-new-password-help" className={fieldHelp}>
+                At least {MIN_PASSWORD} characters
+              </span>
               <input
                 id="acct-new-password"
+                aria-describedby="acct-new-password-help"
                 type="password"
                 name="new-password"
                 autoComplete="new-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className={`${field} mb-1`}
+                className={`${field} mb-4`}
               />
-              <p className="mb-4 text-xs text-ink-muted">At least {MIN_PASSWORD} characters</p>
               <button
                 type="submit"
                 disabled={!check.ok || !emailOk || password.length < MIN_PASSWORD || busy}

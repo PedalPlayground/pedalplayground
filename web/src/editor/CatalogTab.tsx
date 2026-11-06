@@ -189,6 +189,10 @@ function EditItem({
         >
           {busy ? "Saving…" : "Save and publish"}
         </button>
+        {/* A new item starting from this one's kind, brand and size (on the Add tab). */}
+        <a href={`#add?from=${encodeURIComponent(item.key)}`} className={`${secondaryButton} inline-flex items-center`}>
+          Duplicate
+        </a>
         {item.status === "live" ? (
           <button
             type="button"

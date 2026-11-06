@@ -35,6 +35,7 @@ import { ScaleKey } from "./components/ScaleKey";
 import { TooltipLayer } from "./components/Tooltip";
 import { ConsentBanner } from "./components/ConsentBanner";
 import { LegalDialog } from "./components/LegalDialog";
+import { StandingNotice } from "./components/StandingNotice";
 import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { SpaceBetweenPanel } from "./components/SpaceBetweenPanel";
@@ -318,6 +319,8 @@ export function App() {
       </div>
 
       <LegalDialog />
+      {/* A flag an editor put on this account, shown once (also on the gallery and editor). */}
+      <StandingNotice />
       <ConsentBanner />
       <OnboardingTour />
       <TooltipLayer />

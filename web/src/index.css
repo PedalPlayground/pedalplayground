@@ -3,12 +3,11 @@
 /* Design tokens. Components use these via Tailwind utilities (bg-surface, text-ink-muted, ...). */
 @theme {
   --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-wordmark: "Figtree", var(--font-sans);
 
   --color-canvas: #f8f8f8;
   --color-surface: #ffffff;
   --color-surface-hover: #f1f2f6;
-  --color-chrome: #f4f5f6;
+  --color-chrome: #ffffff;
   --color-chrome-line: rgb(0 0 0 / 0.08);
   --color-line: #e3e5ea;
   --color-grid: #dedede;
@@ -176,6 +175,17 @@ img {
   filter: invert(1) hue-rotate(180deg);
 }
 
+/* Every select: our own chevron, 12px in from the right edge, with room for it. Outside the layers so it wins over
+   padding utilities (px-3 and the like) on each select. One mid gray reads on light and dark fields. */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23858894' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px 14px;
+  padding-right: 34px;
+}
+
 /* iOS Safari zooms the page when focusing a field with text under 16px. */
 @media (pointer: coarse) {
   input,
@@ -255,6 +265,17 @@ img {
   animation: pp-sheet 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 /* The tour's welcome hero: brand gradient with soft light blooms, and a "2.0" that shimmers. */
+/* Behind dialogs: the canvas color and its ½ in dot grid (16px at 100% zoom), at 94%. */
+.modal-backdrop {
+  background-color: color-mix(in srgb, var(--color-canvas) 94%, transparent);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    color-mix(in srgb, var(--color-grid) 94%, transparent) 0.625px,
+    transparent 0.875px
+  );
+  background-size: 16px 16px;
+}
+
 .tour-hero {
   background:
     radial-gradient(120% 90% at 15% 10%, rgb(255 255 255 / 0.22), transparent 55%),

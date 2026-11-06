@@ -1,4 +1,5 @@
 import { scaleBar } from "../lib/scale";
+import type { Units } from "../store/ui";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 
@@ -6,10 +7,15 @@ import { useUi } from "../store/ui";
  * A quiet map-style scale bar: a round length (1 in, 5 cm, ...) and a bracket that long on screen.
  * It picks a new length as the zoom changes, so the bar stays short.
  */
-/** `end` right-aligns the label and bar (for the lower-right corner). */
-export function ScaleKey({ className = "", end = false }: { className?: string; end?: boolean }) {
-  const zoom = usePlayground((s) => s.view.zoom);
-  const units = useUi((u) => u.units);
+/**
+ * `end` right-aligns the label and bar (for the lower-right corner). `zoom` and `units` fix the scale for something
+ * drawn at a set size (the editor's preview); by default it follows the canvas.
+ */
+export function ScaleKey({ className = "", end = false, zoom: fixedZoom, units: fixedUnits }: { className?: string; end?: boolean; zoom?: number; units?: Units }) {
+  const canvasZoom = usePlayground((s) => s.view.zoom);
+  const canvasUnits = useUi((u) => u.units);
+  const zoom = fixedZoom ?? canvasZoom;
+  const units = fixedUnits ?? canvasUnits;
   const { label, px } = scaleBar(zoom, units);
   return (
     <div

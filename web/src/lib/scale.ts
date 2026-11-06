@@ -42,6 +42,21 @@ export function gridLayers(zoom: number, units: Units): GridLayer[] {
   ];
 }
 
+/**
+ * The canvas's dot grid as background styles, for anything drawn at canvas scale (the canvas, the editor's preview).
+ * `x`/`y` anchor the dots (the playground's origin on screen).
+ */
+export function dotGridStyle(zoom: number, units: Units, x = 0, y = 0) {
+  const grid = gridLayers(zoom, units);
+  return {
+    backgroundImage: grid
+      .map((g) => `radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--color-grid) ${Math.round(g.opacity * 100)}%, transparent) 0.625px, transparent 0.875px)`)
+      .join(", "),
+    backgroundSize: grid.map((g) => `${g.step}px ${g.step}px`).join(", "),
+    backgroundPosition: grid.map(() => `${x - 1}px ${y - 1}px`).join(", "),
+  };
+}
+
 /** Scale bar lengths to choose from, with their labels. */
 const SCALE_STEPS: Record<Units, { inches: number; label: string }[]> = {
   in: [

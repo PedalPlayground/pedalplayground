@@ -158,9 +158,8 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phone]);
 
-  // Phone drawer in Add Gear mode: the canvas fits into the space above it, so gear being added stays in view.
+  // Phone drawer (Add Gear, Replace and Edit): the canvas fits into the space above it, so the gear stays in view.
   const sheetRef = useRef<HTMLDivElement>(null);
-  const shrink = phone && !replace && !edit;
   const keyboardRef = useRef(keyboard);
   const measureRef = useRef<(() => void) | null>(null);
   useEffect(() => {
@@ -168,7 +167,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     measureRef.current?.();
   }, [keyboard, visibleHeight]);
   useEffect(() => {
-    if (!shrink) return;
+    if (!phone) return;
     const store = usePlayground.getState();
     const before = { view: store.view, count: store.items.length };
     const measure = () => {
@@ -195,7 +194,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       if (s.items.length === before.count) s.setView(before.view);
       else s.fitToContent();
     };
-  }, [shrink]);
+  }, [phone]);
 
   // Phones slide the drawer away before unmounting it.
   const [closing, setClosing] = useState(false);
@@ -600,12 +599,8 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
   const offset = closing ? "100%" : `${drag ?? 0}px`;
   return createPortal(
     <div className="fixed inset-0 z-40">
-      {/* Adding gear: no dimming, so the canvas stays visible; tapping it dismisses the drawer. */}
-      <div
-        className={shrink ? "absolute inset-0" : "animate-fade absolute inset-0 bg-[rgb(10_11_16/0.75)]"}
-        style={shrink ? undefined : { opacity: closing ? 0 : 1 - (drag ?? 0) / 400, transition: drag === null ? `opacity ${SHEET_MS}ms ease-out` : "none" }}
-        onClick={onClose}
-      />
+      {/* No dimming, so the canvas stays visible; tapping it dismisses the drawer. */}
+      <div className="absolute inset-0" onClick={onClose} />
       <div
         ref={sheetRef}
         role="dialog"

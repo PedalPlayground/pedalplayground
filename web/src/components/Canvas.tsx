@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { canvasImageUrl } from "../lib/catalog";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
-import { gridLayers } from "../lib/scale";
+import { dotGridStyle } from "../lib/scale";
 import { snapMove, type Guides } from "../lib/snap";
 import type { Item } from "../lib/types";
 import { useCatalog } from "../store/catalog";
@@ -565,7 +565,7 @@ export function Canvas() {
   };
 
   // A ½ in or 1 cm dot grid, anchored to the playground's origin. Zoomed out, crowded dots fade to a coarser grid.
-  const grid = gridLayers(view.zoom, units);
+  const grid = dotGridStyle(view.zoom, units, view.x, view.y);
 
   return (
     <div
@@ -574,14 +574,7 @@ export function Canvas() {
       className="absolute inset-0 touch-none"
       style={{
         cursor: panning ? "grabbing" : dragging ? "move" : spaceHeld || tool === "hand" ? "grab" : "default",
-        backgroundImage: grid
-          .map(
-            (g) =>
-              `radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--color-grid) ${Math.round(g.opacity * 100)}%, transparent) 0.625px, transparent 0.875px)`,
-          )
-          .join(", "),
-        backgroundSize: grid.map((g) => `${g.step}px ${g.step}px`).join(", "),
-        backgroundPosition: grid.map(() => `${view.x - 1}px ${view.y - 1}px`).join(", "),
+        ...grid,
         WebkitTouchCallout: "none", // no iOS "save image" sheet on a long press
       }}
       onPointerDown={onPointerDown}
