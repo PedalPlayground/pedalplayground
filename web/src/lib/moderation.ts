@@ -144,6 +144,25 @@ export async function fetchHiddenBoards(): Promise<HiddenBoard[]> {
   return (data ?? []) as HiddenBoard[];
 }
 
+/** One thing an account did, for its activity history. */
+export interface Activity {
+  kind: "joined" | "signed_in" | "board_created" | "board_updated" | "comment" | "like" | "report_sent" | "reported" | "suggestion";
+  happened_at: string;
+  title: string;
+  detail: string | null;
+  board_slug: string | null;
+}
+
+/** An account's activity, newest first (moderation_activity migration). Empty until that migration is applied. */
+export async function fetchActivity(userId: string): Promise<Activity[] | null> {
+  const { data, error } = await db().rpc("moderation_activity", { target: userId, max_items: 150 });
+  if (error) {
+    if (isMissing(error.code)) return null;
+    fail(error);
+  }
+  return (data ?? []) as Activity[];
+}
+
 /** An account by username, or null when there's no such username. */
 export async function lookupUser(name: string): Promise<ModUser | null> {
   const { data, error } = await db().rpc("moderation_user", { name });
