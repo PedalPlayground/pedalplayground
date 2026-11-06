@@ -51311,6 +51311,13 @@
 		"Image": "soundsculpture-volcano.png"
 	},
 	{
+		"Brand": "Soundgas",
+		"Name": "Type 636P",
+		"Width": 5.01,
+		"Height": 7.4,
+		"Image": "soundsgas-type-636p.png"
+	},
+	{
 		"Brand": "Source Audio",
 		"Name": "Aftershock",
 		"Width": 2.88,
