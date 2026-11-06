@@ -4,7 +4,6 @@ import { itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { PHONE_QUERY, useMediaQuery } from "../lib/viewport";
-import { WIDE_QUERY } from "./SideStacks";
 import { openContextMenu } from "./ContextMenu";
 import { tip } from "./Tooltip";
 import { barIconIdle, barIconActive } from "./toolbarStyles";
@@ -22,15 +21,13 @@ const button = "press grid size-7 place-items-center rounded-[5px] outline-none 
 export function SelectionMiniMenu() {
   const s = usePlayground();
   const touch = useMediaQuery("(pointer: coarse)");
-  // The Space Between drawer docks beside the canvas, so it only exists on larger screens.
-  const wide = useMediaQuery(WIDE_QUERY);
   const setEditing = useUi((u) => u.setEditing);
   const setSpacing = useUi((u) => u.setSpacingOpen);
   const dragging = useUi((u) => u.dragging || u.nudging);
   const viewing = useUi((u) => !!u.viewing);
-  // Phones: the Add Gear / Replace / Edit sheet covers the bottom of the screen, and the pill would peek out above it.
+  // Phones: the Add Gear / Replace / Edit and Space Between sheets cover the bottom of the screen, and the pill would peek out above it.
   const phone = useMediaQuery(PHONE_QUERY);
-  const sheetOpen = useUi((u) => u.searchOpen) && phone;
+  const sheetOpen = useUi((u) => u.searchOpen || u.spacingOpen) && phone;
   const wrap = useRef<HTMLDivElement>(null);
   if (!s.selected.length || dragging || viewing || sheetOpen || !s.viewport.w) return null;
   const chosen = s.items.filter((i) => s.selected.includes(i.id));
@@ -46,7 +43,7 @@ export function SelectionMiniMenu() {
   // Centered under it; above it when there's no room below; kept on screen, clear of the docked gear panel.
   const editable = chosen.length === 1 && chosen[0].custom ? chosen[0] : undefined;
   // Lock, Rotate/Group, (Edit), More.
-  const spaceable = wide && chosen.length > 1;
+  const spaceable = chosen.length > 1;
   const buttons = 3 + (editable ? 1 : 0) + (spaceable ? 1 : 0);
   const size = touch ? 44 : 28;
   const H = size + PAD * 2;

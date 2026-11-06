@@ -1,15 +1,22 @@
 import { ChevronDown, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import { createPortal } from "react-dom";
 import pancakeArt from "../assets/plugs/pancake.svg";
 import reanArt from "../assets/plugs/rean.svg";
 import sp400Art from "../assets/plugs/sp400.svg";
 import { itemBounds } from "../lib/geometry";
 import { plainField } from "../lib/inputProps";
+import { PHONE_QUERY, useMediaQuery, useVisualViewport } from "../lib/viewport";
 import { spacedItems, usePlayground } from "../store/playground";
 import { useUi, type Units } from "../store/ui";
 import { fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "./formText";
 
 const MM_PER_INCH = 25.4;
+
+/** Phone drawer: how far (px) or how fast (px per ms) a drag down on the handle closes it. Same as the Add Gear drawer. */
+const SWIPE_CLOSE = 80;
+const FLICK_CLOSE = 0.5;
+const SHEET_MS = 220;
 
 /** Thin side of common right-angle 1/4" plugs: the room one needs between two pedals. Pancake's is an estimate drawn from the illustration's proportions. */
 const PLUGS = [
@@ -58,8 +65,9 @@ function currentGap(selected: string[]) {
 }
 
 /**
- * "Space Between": a drawer docked down the canvas's left side, like Add Gear. The selection lines up left to right
- * with the chosen gap, shown live on the canvas as it's changed; Apply keeps it (and is one undo step), closing puts it back.
+ * "Space Between": a drawer docked down the canvas's left side on larger screens and a bottom drawer on phones, like
+ * Add Gear. The selection lines up left to right with the chosen gap, shown live on the canvas as it's changed; Apply
+ * keeps it (and is one undo step), closing puts it back.
  */
 export function SpaceBetweenPanel() {
   const units = useUi((u) => u.units);
@@ -68,6 +76,8 @@ export function SpaceBetweenPanel() {
   const searchOpen = useUi((u) => u.searchOpen);
   const selected = usePlayground((s) => s.selected);
   const spaceByGap = usePlayground((s) => s.spaceByGap);
+  const phone = useMediaQuery(PHONE_QUERY);
+  const { height: visibleHeight, keyboard } = useVisualViewport();
 
   const fmt = (inches: number, u: Units = units) => (u === "mm" ? String(Math.round(inches * MM_PER_INCH * 10) / 10) : String(+inches.toFixed(3)));
   const [value, setValue] = useState(() => fmt(currentGap(usePlayground.getState().selected)));
@@ -88,7 +98,7 @@ export function SpaceBetweenPanel() {
   const dockRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = dockRef.current;
-    if (!el) return;
+    if (phone || !el) return;
     const setCover = usePlayground.getState().setCoverLeft;
     const measure = () => setCover(el.offsetLeft + el.offsetWidth);
     measure();
@@ -98,7 +108,70 @@ export function SpaceBetweenPanel() {
       ro.disconnect();
       setCover(0);
     };
-  }, []);
+  }, [phone]);
+
+  // Phone drawer: the canvas centers what's on it in the space above, so the pedals being spaced stay in view.
+  const sheetRef = useRef<HTMLDivElement>(null);
+  const keyboardRef = useRef(keyboard);
+  const measureRef = useRef<(() => void) | null>(null);
+  useEffect(() => {
+    keyboardRef.current = keyboard;
+    measureRef.current?.();
+  }, [keyboard, visibleHeight]);
+  useEffect(() => {
+    if (!phone) return;
+    const before = usePlayground.getState().view;
+    const measure = () => {
+      const sheet = sheetRef.current;
+      const canvas = document.querySelector("[data-canvas]");
+      if (!sheet || !canvas) return;
+      const covered = Math.max(0, sheet.offsetHeight + keyboardRef.current + (window.innerHeight - canvas.getBoundingClientRect().bottom));
+      const s = usePlayground.getState();
+      if (Math.abs(covered - s.coverBottom) < 2) return;
+      s.setCoverBottom(covered);
+      s.centerInOpenSpace();
+    };
+    measure();
+    measureRef.current = measure;
+    const ro = new ResizeObserver(measure);
+    if (sheetRef.current) ro.observe(sheetRef.current);
+    return () => {
+      measureRef.current = null;
+      ro.disconnect();
+      const s = usePlayground.getState();
+      s.setCoverBottom(0);
+      s.setView(before);
+    };
+  }, [phone]);
+
+  // Phones slide the drawer away before it closes; a drag down on its handle closes it too.
+  const [closing, setClosing] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  useEffect(() => () => clearTimeout(closeTimer.current), []);
+  const onClose = useCallback(() => {
+    if (!phone) return setSpacingOpen(false);
+    (document.activeElement as HTMLElement | null)?.blur();
+    setClosing(true);
+    clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setSpacingOpen(false), SHEET_MS);
+  }, [phone, setSpacingOpen]);
+  const [drag, setDrag] = useState<number | null>(null);
+  const dragStart = useRef({ y: 0, t: 0 });
+  const onHandleDown = (e: ReactPointerEvent<HTMLDivElement>) => {
+    e.currentTarget.setPointerCapture(e.pointerId);
+    dragStart.current = { y: e.clientY, t: performance.now() };
+    setDrag(0);
+  };
+  const onHandleMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (drag !== null) setDrag(Math.max(0, e.clientY - dragStart.current.y));
+  };
+  const onHandleUp = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (drag === null) return;
+    const dy = Math.max(0, e.clientY - dragStart.current.y);
+    const speed = dy / Math.max(1, performance.now() - dragStart.current.t);
+    setDrag(null);
+    if (dy > SWIPE_CLOSE || speed > FLICK_CLOSE) onClose();
+  };
 
   // Live preview. Items are swapped without touching undo history; `shown` is what we last put on the canvas, so
   // anything else changing the items (a drag, an undo) is left alone when the preview is taken back.
@@ -136,10 +209,10 @@ export function SpaceBetweenPanel() {
     if (!same || searchOpen) setSpacingOpen(false);
   }, [same, searchOpen, setSpacingOpen]);
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setSpacingOpen(false);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [setSpacingOpen]);
+  }, [onClose]);
 
   const edit = (v: string) => {
     dirty.current = true;
@@ -171,12 +244,143 @@ export function SpaceBetweenPanel() {
     revert();
     kept.current = true;
     spaceByGap(gapInches);
-    setSpacingOpen(false);
+    onClose();
   };
 
   const cell = (on: boolean) =>
     `h-7 rounded-[5px] text-xs outline-none focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-brand/15 font-medium text-brand" : "bg-surface-hover text-ink hover:bg-ink/10"}`;
   const size = (mm: number) => (units === "mm" ? `${mm} mm` : `${(mm / MM_PER_INCH).toFixed(2)} in`);
+
+  const body = (
+    <>
+    <div className="mb-3 flex items-center justify-between">
+      <h2 className="text-base font-semibold">Space Between</h2>
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="Close"
+        className="grid size-8 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+      >
+        <X size={16} />
+      </button>
+    </div>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        apply();
+      }}
+    >
+      <div className="mb-1 flex items-center justify-between">
+        <label htmlFor="space-between-gap" className={fieldLabelText}>
+          Spacing
+        </label>
+        <div role="radiogroup" aria-label="Units" className="flex rounded-control bg-surface-hover p-0.5 text-[11px] font-medium">
+          {(["in", "mm"] as const).map((u) => (
+            <button
+              key={u}
+              type="button"
+              role="radio"
+              aria-checked={units === u}
+              onClick={() => changeUnits(u)}
+              className={`rounded-[3px] px-1.5 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-brand ${units === u ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
+            >
+              {u}
+            </button>
+          ))}
+        </div>
+      </div>
+      <label className={`mb-3 ${fieldWithUnit}`}>
+        <input
+          id="space-between-gap"
+          // Phones skip it: the keyboard would cover the pedals being spaced.
+          autoFocus={!phone}
+          inputMode="decimal"
+          {...plainField}
+          value={value}
+          onChange={(e) => edit(e.target.value)}
+          onFocus={(e) => e.target.select()}
+          className={fieldWithUnitInput}
+        />
+        <span aria-hidden className={fieldUnit}>
+          {units}
+        </span>
+      </label>
+
+      <button
+        type="button"
+        onClick={toggleGuide}
+        aria-expanded={guideOpen}
+        className="mb-1 flex w-full items-center gap-1 rounded-[5px] text-xs text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+      >
+        <ChevronDown size={14} className={guideOpen ? "" : "-rotate-90"} />
+        Plug guide
+      </button>
+      {guideOpen && (
+        <div className="mb-3 rounded-control bg-surface-hover/60 p-2">
+          <p className="mb-1 text-[11px] leading-snug text-ink-muted">
+            Pedal sizes already include their jacks, so you only need room for the plugs. Pick two where jacks face each other.
+          </p>
+          <PlugDrawing left={PLUGS.find((p) => p.id === plug1) ?? PLUGS[1]} right={PLUGS.find((p) => p.id === plug2) ?? null} />
+          <div className="mt-1 grid grid-cols-[3.5rem_1fr_1fr] items-center gap-1 text-[11px] text-ink-muted">
+            <span />
+            <span className="text-center">Plug 1</span>
+            <span className="text-center">Plug 2</span>
+            {PLUGS.map((p) => (
+              <div key={p.id} className="contents">
+                <span className="truncate">{p.name}</span>
+                <button type="button" aria-pressed={plug1 === p.id} onClick={() => pick(1, plug1 === p.id ? null : p.id)} className={cell(plug1 === p.id)}>
+                  {size(p.mm)}
+                </button>
+                <button type="button" aria-pressed={plug2 === p.id} onClick={() => pick(2, plug2 === p.id ? null : p.id)} className={cell(plug2 === p.id)}>
+                  {size(p.mm)}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      <button type="submit" disabled={!(gapInches >= 0)} className="h-9 w-full btn-primary disabled:opacity-50">
+        Apply
+      </button>
+    </form>
+    </>
+  );
+
+  if (phone) {
+    // Bottom drawer like Add Gear's: no dimming, so the live preview stays visible; tapping the canvas closes it.
+    const offset = closing ? "100%" : `${drag ?? 0}px`;
+    return createPortal(
+      <div className="fixed inset-0 z-40">
+        <div className="absolute inset-0" onClick={onClose} />
+        <div
+          ref={sheetRef}
+          role="dialog"
+          aria-label="Space Between"
+          className="animate-sheet absolute inset-x-0 flex flex-col rounded-t-[16px] bg-surface shadow-[0_-4px_24px_rgb(0_0_0/0.12)]"
+          style={{
+            bottom: keyboard,
+            maxHeight: visibleHeight - 56,
+            paddingBottom: keyboard ? 0 : "env(safe-area-inset-bottom)",
+            transform: `translateY(${offset})`,
+            transition: drag === null ? `transform ${SHEET_MS}ms cubic-bezier(0.2, 0.8, 0.2, 1)` : "none",
+          }}
+        >
+          <div
+            className="flex h-6 shrink-0 cursor-grab touch-none items-center justify-center"
+            onPointerDown={onHandleDown}
+            onPointerMove={onHandleMove}
+            onPointerUp={onHandleUp}
+            onPointerCancel={onHandleUp}
+            aria-hidden
+          >
+            <span className="h-1 w-9 rounded-full bg-line" />
+          </div>
+          <div className="overflow-y-auto px-4 pb-4">{body}</div>
+        </div>
+      </div>,
+      document.body,
+    );
+  }
 
   return (
     // The wrapper holds the docked spot (full height, content centered) so the slide-in animation doesn't fight the centering.
@@ -186,95 +390,7 @@ export function SpaceBetweenPanel() {
       aria-label="Space Between"
       className="animate-dock pointer-events-auto flex max-h-full w-full flex-col overflow-y-auto rounded-panel bg-surface p-4 shadow-panel"
     >
-      <div className="mb-3 flex items-center justify-between">
-        <h2 className="text-base font-semibold">Space Between</h2>
-        <button
-          type="button"
-          onClick={() => setSpacingOpen(false)}
-          aria-label="Close"
-          className="grid size-8 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
-        >
-          <X size={16} />
-        </button>
-      </div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          apply();
-        }}
-      >
-        <div className="mb-1 flex items-center justify-between">
-          <label htmlFor="space-between-gap" className={fieldLabelText}>
-            Spacing
-          </label>
-          <div role="radiogroup" aria-label="Units" className="flex rounded-control bg-surface-hover p-0.5 text-[11px] font-medium">
-            {(["in", "mm"] as const).map((u) => (
-              <button
-                key={u}
-                type="button"
-                role="radio"
-                aria-checked={units === u}
-                onClick={() => changeUnits(u)}
-                className={`rounded-[3px] px-1.5 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-brand ${units === u ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
-              >
-                {u}
-              </button>
-            ))}
-          </div>
-        </div>
-        <label className={`mb-3 ${fieldWithUnit}`}>
-          <input
-            id="space-between-gap"
-            autoFocus
-            inputMode="decimal"
-            {...plainField}
-            value={value}
-            onChange={(e) => edit(e.target.value)}
-            onFocus={(e) => e.target.select()}
-            className={fieldWithUnitInput}
-          />
-          <span aria-hidden className={fieldUnit}>
-            {units}
-          </span>
-        </label>
-
-        <button
-          type="button"
-          onClick={toggleGuide}
-          aria-expanded={guideOpen}
-          className="mb-1 flex w-full items-center gap-1 rounded-[5px] text-xs text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
-        >
-          <ChevronDown size={14} className={guideOpen ? "" : "-rotate-90"} />
-          Plug guide
-        </button>
-        {guideOpen && (
-          <div className="mb-3 rounded-control bg-surface-hover/60 p-2">
-            <p className="mb-1 text-[11px] leading-snug text-ink-muted">
-              Pedal sizes already include their jacks, so you only need room for the plugs. Pick two where jacks face each other.
-            </p>
-            <PlugDrawing left={PLUGS.find((p) => p.id === plug1) ?? PLUGS[1]} right={PLUGS.find((p) => p.id === plug2) ?? null} />
-            <div className="mt-1 grid grid-cols-[3.5rem_1fr_1fr] items-center gap-1 text-[11px] text-ink-muted">
-              <span />
-              <span className="text-center">Plug 1</span>
-              <span className="text-center">Plug 2</span>
-              {PLUGS.map((p) => (
-                <div key={p.id} className="contents">
-                  <span className="truncate">{p.name}</span>
-                  <button type="button" aria-pressed={plug1 === p.id} onClick={() => pick(1, plug1 === p.id ? null : p.id)} className={cell(plug1 === p.id)}>
-                    {size(p.mm)}
-                  </button>
-                  <button type="button" aria-pressed={plug2 === p.id} onClick={() => pick(2, plug2 === p.id ? null : p.id)} className={cell(plug2 === p.id)}>
-                    {size(p.mm)}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-        <button type="submit" disabled={!(gapInches >= 0)} className="h-9 w-full btn-primary disabled:opacity-50">
-          Apply
-        </button>
-      </form>
+      {body}
     </div>
     </div>
   );
