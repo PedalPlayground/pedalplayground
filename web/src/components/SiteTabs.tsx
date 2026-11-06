@@ -1,4 +1,4 @@
-import { LayoutGrid, PencilRuler, type LucideProps } from "lucide-react";
+import { Guitar, LayoutGrid, PencilRuler, type LucideProps } from "lucide-react";
 import type { ReactNode } from "react";
 import { useIsEditor } from "../lib/useIsEditor";
 import { Brand } from "./Logo";
@@ -17,7 +17,7 @@ export function PedalboardIcon({ className }: LucideProps) {
   );
 }
 
-/** One look for Explore, My Playgrounds, Editor and Updates: an icon and a label (icons only below laptop width). */
+/** One look for Explore, Gear, My Playgrounds, Editor and Updates: an icon and a label (icons only below laptop width). */
 export function tabClass(here: boolean) {
   return `press relative flex h-9 shrink-0 items-center gap-2 rounded-[4px] p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     here ? "bg-ink/[0.06]" : "hover:bg-ink/5 data-[state=open]:bg-ink/5"
@@ -26,10 +26,10 @@ export function tabClass(here: boolean) {
 export const tabIcon = { size: 18, strokeWidth: 2 } as const;
 export const tabLabel = "max-lg:sr-only";
 
-export type SitePage = "build" | "gallery" | "editor" | null;
+export type SitePage = "build" | "gallery" | "gear" | "editor" | null;
 
 /**
- * Explore, My Playgrounds, then Editor for catalog editors. `builds` is the playground's board menu; elsewhere it's a
+ * Explore, Gear, My Playgrounds, then Editor for catalog editors. `builds` is the playground's board menu; elsewhere it's a
  * link to the playground. The current page's tab is marked.
  */
 export function SiteTabs({ current, builds, after }: { current: SitePage; builds?: ReactNode; after?: ReactNode }) {
@@ -39,6 +39,10 @@ export function SiteTabs({ current, builds, after }: { current: SitePage; builds
       <a href="/gallery/" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
         <LayoutGrid {...tabIcon} fill="currentColor" className="text-ink-muted" />
         <span className={tabLabel}>Explore</span>
+      </a>
+      <a href="/gear/" aria-current={current === "gear" ? "page" : undefined} className={tabClass(false)}>
+        <Guitar {...tabIcon} className="text-ink-muted" />
+        <span className={tabLabel}>Gear</span>
       </a>
       {builds ?? (
         <a href="/" className={tabClass(false)}>
@@ -61,7 +65,7 @@ const section = "flex shrink-0 items-center";
 
 
 /**
- * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Explore, My Playgrounds
+ * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Explore, Gear, My Playgrounds
  * and Updates tabs at the right; then the account section behind a thin divider.
  */
 export function SiteHeader({
