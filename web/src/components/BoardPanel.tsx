@@ -14,7 +14,7 @@ import {
 } from "../lib/boardSocial";
 import { PLAYGROUND_TYPES } from "../lib/cloud";
 import { setGalleryLike } from "../lib/gallery";
-import { galleryReturnUrl } from "../lib/gallery";
+import { galleryReturnUrl, userGalleryUrl } from "../lib/gallery";
 import { moderationError, shortDate } from "../lib/moderation";
 import { hasProfanity, PROFANITY_MESSAGE } from "../lib/profanity";
 import { useAllowedNames } from "../lib/useAllowedNames";
@@ -212,7 +212,8 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
       const t = setTimeout(() => usePlayground.getState().fitToContent(), 0);
       return () => clearTimeout(t);
     }
-    usePlayground.getState().panBy(open ? -COLUMN_WIDTH / 2 : COLUMN_WIDTH / 2, 0);
+    const { view, setView } = usePlayground.getState();
+    setView({ x: view.x + (open ? -COLUMN_WIDTH / 2 : COLUMN_WIDTH / 2) });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
   // A viewed board is framed to fit once its gear has loaded and the column is in place, on any screen.
@@ -239,7 +240,15 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
         <div className="min-w-0 flex-1">
           <h2 className="truncate text-lg/6 tracking-[-0.01em]">
             <span className="font-bold">{own ? boardName : (info?.name ?? boardName)}</span>
-            {(info?.username ?? viewingOwner) && <span className="text-base text-ink-muted"> by {info?.username ?? viewingOwner}</span>}
+            {(info?.username ?? viewingOwner) && (
+              <span className="text-base text-ink-muted">
+                {" "}
+                by{" "}
+                <a href={userGalleryUrl((info?.username ?? viewingOwner)!)} {...tip("Their boards in Explore")} className="hover:text-ink hover:underline">
+                  {info?.username ?? viewingOwner}
+                </a>
+              </span>
+            )}
           </h2>
           {info?.playground_type && <p className="mt-0.5 text-[13px] text-ink-muted">{TYPE_LABELS[info.playground_type]}</p>}
         </div>
@@ -419,6 +428,12 @@ function Social({
   };
 
   const showComments = info.comments_open || (own && info.in_gallery);
+  // From an Explore card's Comments button (#comments): go straight to them, once.
+  useEffect(() => {
+    if (window.location.hash !== "#comments" || !showComments) return;
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+    requestAnimationFrame(() => document.getElementById("board-comments")?.scrollIntoView({ block: "start" }));
+  }, [showComments, comments.length]);
 
   return (
     <>
@@ -459,7 +474,13 @@ function Social({
                 {comments.map((c) => (
                   <li key={c.id} className="group/comment">
                     <div className="flex items-center gap-2 text-xs">
-                      <span className="font-semibold">{c.username ? `@${c.username}` : "Member"}</span>
+                      {c.username ? (
+                        <a href={userGalleryUrl(c.username)} {...tip("Their boards in Explore")} className="font-semibold hover:underline">
+                          @{c.username}
+                        </a>
+                      ) : (
+                        <span className="font-semibold">Member</span>
+                      )}
                       <span className="text-ink-muted" title={new Date(c.created_at).toLocaleString()}>
                         {timeAgo(c.created_at)}
                       </span>

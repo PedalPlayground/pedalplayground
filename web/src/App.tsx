@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
 import { SetPasswordDialog } from "./components/SetPasswordForm";
-import { BoardInfoButton, BoardPanel } from "./components/BoardPanel";
+import { BoardInfoButton, BoardPanel, useBoardPanel } from "./components/BoardPanel";
 import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
@@ -85,6 +85,8 @@ async function openSharedFromUrl() {
   try {
     if (!slug || !useAuth.getState().cloudEnabled) return;
     if (!(await useCloud.getState().openShared(slug))) window.alert("That shared playground wasn't found or is no longer shared.");
+    // An Explore card's Comments button: open the board panel at its comments.
+    else if (window.location.hash === "#comments") useBoardPanel.getState().setOpen(true);
   } catch {
     window.alert("Could not open that shared playground.");
   } finally {
@@ -308,7 +310,8 @@ export function App() {
             <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} />
           )}
 
-          {wide && !covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
+          {/* Docked on the left on larger screens; a bottom drawer on phones. */}
+          {!covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
 
 
           {/* Lower-right corner. Phones have it in the bottom bar instead. */}

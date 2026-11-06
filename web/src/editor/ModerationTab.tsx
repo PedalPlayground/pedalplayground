@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fieldBox, fieldError, fieldHelp, fieldInput, fieldLabel } from "../components/formText";
 import {
   closeReport,
+  fetchActivity,
   fetchHiddenBoards,
   fetchReports,
   flagUser,
@@ -13,6 +14,7 @@ import {
   suggestedAction,
   TIMEOUT_DAYS,
   type Flag,
+  type Activity,
   type FlagAction,
   type HiddenBoard,
   type ModUser,
@@ -263,6 +265,8 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
         </p>
       </div>
 
+      <ActivityList userId={user.user_id} />
+
       {user.flags.length > 0 && (
         <ul className="grid gap-1.5">
           {user.flags.map((f) => (
@@ -355,6 +359,61 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
           {busy ? "Flagging…" : action === "ban" ? `Ban @${user.username}` : `Flag @${user.username}`}
         </button>
       </form>
+    </div>
+  );
+}
+
+const ACTIVITY: Record<Activity["kind"], string> = {
+  joined: "Joined",
+  signed_in: "Signed in",
+  board_created: "New board",
+  board_updated: "Changed a board",
+  comment: "Commented",
+  like: "Liked",
+  report_sent: "Reported",
+  reported: "Was reported",
+  suggestion: "Suggested gear",
+};
+
+/** What the account has done, newest first: boards, comments, likes, reports both ways and suggestions. */
+function ActivityList({ userId }: { userId: string }) {
+  const [items, setItems] = useState<Activity[] | null | undefined>(undefined);
+  const [all, setAll] = useState(false);
+  useEffect(() => {
+    setItems(undefined);
+    fetchActivity(userId).then(setItems, () => setItems(null));
+  }, [userId]);
+  if (items === undefined) return <p className="text-[13px] text-ink-muted">Loading activity…</p>;
+  if (items === null) return <p className="text-[13px] text-ink-muted">Activity history isn't set up on the database yet.</p>;
+  const shown = all ? items : items.slice(0, 12);
+  return (
+    <div>
+      <h3 className="mb-1.5 text-sm font-semibold">
+        Activity <span className="font-normal text-ink-muted">{items.length}</span>
+      </h3>
+      <ul className="grid gap-px overflow-hidden rounded-lg border border-line">
+        {shown.map((a, i) => (
+          <li key={`${a.kind}-${a.happened_at}-${i}`} className="flex items-start gap-3 bg-surface px-3 py-2 text-[13px]">
+            <span className="w-28 shrink-0 text-xs text-ink-muted">{ago(a.happened_at)}</span>
+            <span className="min-w-0 flex-1">
+              <span className={`font-semibold ${a.kind === "reported" ? "text-danger" : ""}`}>{ACTIVITY[a.kind]}</span>{" "}
+              {a.board_slug ? (
+                <a href={boardUrl(a.board_slug)} target="_blank" rel="noreferrer" className="text-brand hover:underline">
+                  {a.title}
+                </a>
+              ) : (
+                a.kind !== "joined" && a.kind !== "signed_in" && <span className="text-ink-muted">{a.title}</span>
+              )}
+              {a.detail && <span className="mt-0.5 block line-clamp-2 whitespace-pre-line break-words text-ink-muted">{a.kind === "comment" ? `“${a.detail}”` : a.detail}</span>}
+            </span>
+          </li>
+        ))}
+      </ul>
+      {items.length > 12 && (
+        <button type="button" onClick={() => setAll(!all)} className="mt-1.5 text-xs font-semibold text-brand hover:underline">
+          {all ? "Show less" : `Show all ${items.length}`}
+        </button>
+      )}
     </div>
   );
 }

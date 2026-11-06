@@ -39,6 +39,10 @@ so editors still see it after an edit or a delete.
 In the Moderation tab, **Review User** opens the reported account with the report's reason filled in; flagging resolves
 the report. **Dismiss** closes it without a flag.
 
+Looking up an account shows its **activity**, newest first: when it joined and last signed in, boards it made and
+changed, comments, likes, reports it sent and reports about it, and catalog suggestions
+(`supabase/migrations/20261106120000_moderation_activity.sql`). Private boards are listed without their name or link.
+
 The tab's feed also lists boards hidden from the gallery (by an editor's Hide, or by a ban), newest first, with who hid
 them. **Unhide** puts a board back in the gallery; one hidden by a ban asks first.
 

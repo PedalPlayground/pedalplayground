@@ -1,13 +1,14 @@
 import { Heart, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
-import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
+import { boardUrl, fetchGalleryBoards, searchedUser, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
 import { supabase } from "../lib/supabase";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { useIsEditor } from "../lib/useIsEditor";
 import { moderationError } from "../lib/moderation";
 import { useRestriction } from "../store/standing";
 import { useAuth } from "../store/auth";
+import { tip } from "../components/Tooltip";
 
 const TYPE_LABELS: Record<PlaygroundType, string> = {
   guitar: "Guitar",
@@ -18,7 +19,7 @@ const TYPE_LABELS: Record<PlaygroundType, string> = {
 };
 
 const chip = (on: boolean) =>
-  `press h-8 shrink-0 rounded-full px-3 text-[13px] font-semibold transition-colors ${on ? "bg-ink text-surface" : "bg-surface text-ink-muted shadow-panel hover:text-ink"}`;
+  `press h-8 shrink-0 rounded-full px-3 text-[13px] font-semibold transition-colors ${on ? "bg-ink text-surface" : "bg-surface text-ink-muted shadow-chip hover:text-ink"}`;
 
 /** The public gallery at /gallery/: boards whose owners turned on "Show in Public Gallery", newest or most liked first. */
 export function GalleryApp() {
@@ -34,8 +35,11 @@ export function GalleryApp() {
   /** The header's account dialogs; liking while signed out opens sign-in too. */
   const [dialog, setDialog] = useState<PageDialog>(null);
   const [type, setType] = useState<PlaygroundType | null>(returning?.type ?? null);
-  const [query, setQuery] = useState(returning?.query ?? "");
-  const [search, setSearch] = useState(returning?.query ?? "");
+  // ?user=name (a username link) opens the gallery filtered to that person's boards.
+  const [linkedUser] = useState(() => new URLSearchParams(window.location.search).get("user"));
+  const [query, setQuery] = useState(linkedUser ? `@${linkedUser}` : (returning?.query ?? ""));
+  const [search, setSearch] = useState(linkedUser ? `@${linkedUser}` : (returning?.query ?? ""));
+  const filteredUser = searchedUser(search);
   const [boards, setBoards] = useState<GalleryBoard[]>([]);
   const [loading, setLoading] = useState(true);
   const [more, setMore] = useState(false);
@@ -86,7 +90,8 @@ export function GalleryApp() {
         }
       } else {
         page = await fetchGalleryBoards({ type, search, sort, offset: reset ? 0 : boards.length });
-        full = page.length === GALLERY_PAGE_SIZE;
+        // One person's boards come in a single batch.
+        full = !searchedUser(search) && page.length === GALLERY_PAGE_SIZE;
       }
       if (id !== request.current) return;
       setBoards((b) => (reset ? page : [...b, ...page]));
@@ -178,7 +183,13 @@ export function GalleryApp() {
               className="h-9 w-full rounded-control border border-line bg-surface pl-9 pr-3 text-sm outline-none focus:border-brand"
             />
           </label>
-          <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0 sm:pb-0" role="group" aria-label="Board type">
+          {/* Scrolls sideways on phones. A scroller clips what's outside it, so it gets room around the chips for their
+              shadows (padding, undone by negative margins so nothing moves); that room doesn't take clicks. */}
+          <div
+            className="pointer-events-none -mx-4 -my-1 flex gap-2 overflow-x-auto px-4 py-1 sm:-mx-1 sm:px-1 [&>*]:pointer-events-auto"
+            role="group"
+            aria-label="Board type"
+          >
             <button type="button" className={chip(type === null)} aria-pressed={type === null} onClick={() => setType(null)}>
               All
             </button>
@@ -209,6 +220,21 @@ export function GalleryApp() {
           </div>
         </div>
 
+        {filteredUser && (
+          <p className="mt-4 text-sm text-ink-muted">
+            Boards by <span className="font-semibold text-ink">@{filteredUser}</span> ·{" "}
+            <button
+              type="button"
+              onClick={() => {
+                setQuery("");
+                setSearch("");
+              }}
+              className="font-semibold text-brand hover:underline"
+            >
+              Show everyone
+            </button>
+          </p>
+        )}
         {note && (
           <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-lg border border-line bg-surface px-3 py-2 text-[13px]">
             <span>{note}</span>
@@ -231,7 +257,17 @@ export function GalleryApp() {
 
         <div className="mt-6 grid grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
           {boards.map((b) => (
-            <BoardCard key={b.id} board={b} onLike={() => void toggleLike(b)} onHide={editor ? () => void hide(b) : undefined} />
+            <BoardCard
+              key={b.id}
+              board={b}
+              onLike={() => void toggleLike(b)}
+              onHide={editor ? () => void hide(b) : undefined}
+              onUser={(name) => {
+                setQuery(`@${name}`);
+                setSearch(`@${name}`);
+                scroller.current?.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            />
           ))}
           {loading && Array.from({ length: boards.length ? 4 : 8 }, (_, i) => <CardSkeleton key={`s${i}`} />)}
         </div>
@@ -258,55 +294,74 @@ export function GalleryApp() {
   );
 }
 
-function BoardCard({ board, onLike, onHide }: { board: GalleryBoard; onLike: () => void; onHide?: () => void }) {
-  const meta = [
-    board.username ? `@${board.username}` : null,
-    board.pedal_count ? `${board.pedal_count} ${board.pedal_count === 1 ? "pedal" : "pedals"}` : null,
-  ].filter(Boolean);
+function BoardCard({ board, onLike, onHide, onUser }: { board: GalleryBoard; onLike: () => void; onHide?: () => void; onUser: (username: string) => void }) {
+  const pedals = board.pedal_count ? `${board.pedal_count} ${board.pedal_count === 1 ? "pedal" : "pedals"}` : null;
+  const pill =
+    "press relative z-10 flex h-7 items-center gap-1 rounded-full bg-surface/90 px-2.5 text-xs font-semibold shadow-chip backdrop-blur transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand";
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface shadow-panel transition-shadow hover:shadow-[0_8px_28px_rgb(16_18_27/0.14),0_0_0_1px_rgb(16_18_27/0.05)]">
-      <div className="relative">
-        <a href={boardUrl(board.slug)} tabIndex={-1} aria-hidden className="block aspect-[8/5] w-full bg-canvas">
-          {board.thumbnail && <img src={board.thumbnail} alt="" loading="lazy" className="size-full object-contain" />}
-        </a>
+    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface shadow-panel transition-shadow focus-within:ring-2 focus-within:ring-brand hover:shadow-[0_8px_28px_rgb(16_18_27/0.14),0_0_0_1px_rgb(16_18_27/0.05)]">
+      <div className="aspect-[8/5] w-full bg-canvas">
+        {board.thumbnail && <img src={board.thumbnail} alt="" loading="lazy" className="size-full object-contain" />}
+      </div>
+      <div className="flex flex-1 flex-col gap-1 px-3.5 pb-3.5 pt-3">
+        <div className="flex items-start justify-between gap-2">
+          {/* The whole card opens the board (the link stretches over it); the buttons on it sit above. */}
+          <h2 className="line-clamp-1 text-sm font-semibold">
+            <a href={boardUrl(board.slug)} className="outline-none after:absolute after:inset-0">
+              {board.name}
+            </a>
+          </h2>
+          {board.playground_type && (
+            <span className="shrink-0 rounded-full bg-surface-hover px-2 py-0.5 text-xs text-ink-muted">{TYPE_LABELS[board.playground_type]}</span>
+          )}
+        </div>
+        {(board.username || pedals) && (
+          <p className="flex items-center gap-1 text-xs text-ink-muted">
+            {board.username && (
+              <button
+                type="button"
+                onClick={() => onUser(board.username!)}
+                {...tip(`Boards by @${board.username}`)}
+                className="relative z-10 rounded-[3px] font-medium outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
+              >
+                @{board.username}
+              </button>
+            )}
+            {board.username && pedals && <span aria-hidden>·</span>}
+            {pedals}
+          </p>
+        )}
+        {board.description && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
+      </div>
+      <div className="pointer-events-none absolute inset-x-2 top-0 flex aspect-[8/5] items-end justify-end gap-1.5 pb-2">
+        {board.comment_count !== undefined && (
+          <a
+            href={`${boardUrl(board.slug)}#comments`}
+            aria-label={`${board.comment_count} ${board.comment_count === 1 ? "comment" : "comments"} on ${board.name}`}
+            {...tip("Comments")}
+            className={`${pill} pointer-events-auto text-ink-muted hover:text-ink`}
+          >
+            <MessageCircle size={14} strokeWidth={2.25} />
+            {board.comment_count > 0 && <span className="tabular-nums">{board.comment_count}</span>}
+          </a>
+        )}
         <button
           type="button"
           onClick={onLike}
           aria-pressed={board.liked}
           aria-label={`${board.liked ? "Unlike" : "Like"} ${board.name}, ${board.like_count} ${board.like_count === 1 ? "like" : "likes"}`}
-          className={`press absolute bottom-2 right-2 flex h-7 items-center gap-1 rounded-full bg-surface/90 px-2.5 text-xs font-semibold shadow-panel backdrop-blur transition-colors ${board.liked ? "text-danger" : "text-ink-muted hover:text-ink"}`}
+          {...tip(board.liked ? "Unlike" : "Like")}
+          className={`${pill} pointer-events-auto ${board.liked ? "text-danger" : "text-ink-muted hover:text-ink"}`}
         >
           <Heart size={14} fill={board.liked ? "currentColor" : "none"} strokeWidth={2.25} />
           {board.like_count > 0 && <span className="tabular-nums">{board.like_count}</span>}
         </button>
       </div>
-      <a href={boardUrl(board.slug)} className="flex flex-1 flex-col outline-none focus-visible:ring-2 focus-visible:ring-brand">
-        <div className="flex flex-1 flex-col gap-1 px-3.5 pb-3.5 pt-3">
-          <div className="flex items-start justify-between gap-2">
-            <h2 className="line-clamp-1 text-sm font-semibold">{board.name}</h2>
-            {board.playground_type && (
-              <span className="shrink-0 rounded-full bg-surface-hover px-2 py-0.5 text-xs text-ink-muted">{TYPE_LABELS[board.playground_type]}</span>
-            )}
-          </div>
-          {(meta.length > 0 || !!board.comment_count) && (
-            <p className="flex items-center gap-1 text-xs text-ink-muted">
-              {meta.join(" · ")}
-              {!!board.comment_count && (
-                <span className="ml-auto flex items-center gap-1" aria-label={`${board.comment_count} comments`}>
-                  <MessageCircle size={12} strokeWidth={2.25} />
-                  {board.comment_count}
-                </span>
-              )}
-            </p>
-          )}
-          {board.description && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
-        </div>
-      </a>
       {onHide && (
         <button
           type="button"
           onClick={onHide}
-          className="absolute right-2 top-2 rounded-control bg-surface/90 px-2 py-1 text-xs font-semibold text-danger opacity-0 shadow-panel transition-opacity focus:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100"
+          className="absolute right-2 top-2 z-10 rounded-control bg-surface/90 px-2 py-1 text-xs font-semibold text-danger opacity-0 shadow-chip transition-opacity focus:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100"
         >
           Hide
         </button>
