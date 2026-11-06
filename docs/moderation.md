@@ -39,6 +39,9 @@ so editors still see it after an edit or a delete.
 In the Moderation tab, **Review User** opens the reported account with the report's reason filled in; flagging resolves
 the report. **Dismiss** closes it without a flag.
 
+The tab's feed also lists boards hidden from the gallery (by an editor's Hide, or by a ban), newest first, with who hid
+them. **Unhide** puts a board back in the gallery; one hidden by a ban asks first.
+
 ## Curse words
 
 Common curse words and slurs are refused, leetspeak too ("sh1t"). Short ones that hide inside ordinary words (cock,

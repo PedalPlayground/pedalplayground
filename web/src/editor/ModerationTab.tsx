@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fieldBox, fieldError, fieldHelp, fieldInput, fieldLabel } from "../components/formText";
 import {
   closeReport,
+  fetchHiddenBoards,
   fetchReports,
   flagUser,
   liftFlag,
@@ -13,11 +14,12 @@ import {
   TIMEOUT_DAYS,
   type Flag,
   type FlagAction,
+  type HiddenBoard,
   type ModUser,
   type Reason,
   type Report,
 } from "../lib/moderation";
-import { boardUrl } from "../lib/gallery";
+import { boardUrl, setGalleryHidden } from "../lib/gallery";
 import type { SetNotice } from "./EditorApp";
 import { primaryButton, secondaryButton } from "./ItemEditor";
 
@@ -41,11 +43,13 @@ const flagResult = (f: Flag) =>
 const userFromHash = () => new URLSearchParams(window.location.hash.split("?")[1] ?? "").get("user") ?? "";
 
 /**
- * Reports from players, oldest first, and accounts by username: their flags, and a form to flag them (warning,
+ * The feed: reports from players (oldest first), then boards hidden from the gallery (newest first). And accounts by
+ * username: their flags, and a form to flag them (warning,
  * timeout or ban, with the next step suggested from their history).
  */
 export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
   const [reports, setReports] = useState<Report[] | null>(null);
+  const [hidden, setHidden] = useState<HiddenBoard[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [name, setName] = useState(userFromHash);
   const [user, setUser] = useState<ModUser | null | undefined>(undefined);
@@ -53,8 +57,11 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
   const [fromReport, setFromReport] = useState<Report | null>(null);
 
   const loadReports = () =>
-    fetchReports().then(
-      (r) => setReports(r),
+    Promise.all([fetchReports(), fetchHiddenBoards()]).then(
+      ([r, h]) => {
+        setReports(r);
+        setHidden(h);
+      },
       (e: Error) => setError(e.message),
     );
   const look = async (username: string, report: Report | null = null) => {
@@ -80,6 +87,17 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
     return () => window.removeEventListener("hashchange", onHash);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const unhide = async (b: HiddenBoard) => {
+    if (b.by_ban && !window.confirm(`A ban on @${b.owner_username ?? "this account"} hid "${b.name}". Show it in the gallery anyway?`)) return;
+    try {
+      await setGalleryHidden(b.playground_id, false);
+      setNotice({ text: `"${b.name}" is back in the gallery.` });
+      void loadReports();
+    } catch (e) {
+      setNotice({ text: (e as Error).message, error: true });
+    }
+  };
 
   const dismiss = async (r: Report) => {
     try {
@@ -127,6 +145,41 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
                 )}
                 <button type="button" className={secondaryButton} onClick={() => void dismiss(r)}>
                   Dismiss
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        <h3 className="mt-3 text-sm font-semibold">
+          Hidden from the Gallery {hidden && hidden.length > 0 && <span className="font-normal text-ink-muted">{hidden.length}</span>}
+        </h3>
+        {hidden?.length === 0 && <p className="text-[13px] text-ink-muted">No hidden boards.</p>}
+        <ul className="grid gap-2">
+          {hidden?.map((b) => (
+            <li key={b.playground_id} className="rounded-lg border border-line px-3 py-2.5 text-[13px]">
+              <div className="flex flex-wrap items-center gap-x-2 text-xs text-ink-muted">
+                <span className="font-semibold text-ink">{b.by_ban ? "Hidden by a ban" : "Hidden"}</span>
+                <span>Board by @{b.owner_username ?? "unknown"}</span>
+                <span>
+                  · {ago(b.hidden_at)}
+                  {b.hidden_by_username && ` by @${b.hidden_by_username}`}
+                </span>
+              </div>
+              <p className="mt-1 break-words">“{b.name}”</p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {b.owner_username && (
+                  <button type="button" className={secondaryButton} onClick={() => void look(b.owner_username!)}>
+                    Review User
+                  </button>
+                )}
+                {b.slug && (
+                  <a href={boardUrl(b.slug)} target="_blank" rel="noreferrer" className={`${secondaryButton} inline-flex items-center`}>
+                    Open Board
+                  </a>
+                )}
+                <button type="button" className={secondaryButton} onClick={() => void unhide(b)}>
+                  Unhide
                 </button>
               </div>
             </li>

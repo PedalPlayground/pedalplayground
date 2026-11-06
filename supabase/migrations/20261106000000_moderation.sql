@@ -442,3 +442,37 @@ end;
 $$;
 revoke execute on function public.moderation_close_report(uuid, text) from public, anon;
 grant execute on function public.moderation_close_report(uuid, text) to authenticated;
+
+-- Boards hidden from the gallery (by an editor, or by a ban), newest first, for the Moderation tab's feed.
+create or replace function public.moderation_hidden_boards()
+returns table (
+  playground_id uuid,
+  slug text,
+  name text,
+  owner_user_id uuid,
+  owner_username text,
+  hidden_by_username text,
+  hidden_at timestamptz,
+  by_ban boolean
+)
+language plpgsql
+stable
+security definer
+set search_path = public
+as $$
+begin
+  if not public.is_catalog_editor() then
+    raise exception 'editors_only' using errcode = '42501';
+  end if;
+  return query
+    select h.playground_id, p.slug, p.name, p.owner_user_id, op.username, hp.username, h.hidden_at, h.flag_id is not null
+      from public.gallery_hidden h
+      join public.playgrounds p on p.id = h.playground_id
+      left join public.profiles op on op.user_id = p.owner_user_id
+      left join public.profiles hp on hp.user_id = h.hidden_by
+     order by h.hidden_at desc
+     limit 200;
+end;
+$$;
+revoke execute on function public.moderation_hidden_boards() from public, anon;
+grant execute on function public.moderation_hidden_boards() to authenticated;
