@@ -1,9 +1,9 @@
 import { Search } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { indexItem, search as searchItems } from "../lib/search";
-import { fetchGearUsage } from "../lib/trending";
+import { fetchGearUsage, fetchTrending, type TrendingEntry } from "../lib/trending";
 import type { CatalogItem } from "../lib/types";
 import { useAuth } from "../store/auth";
 import { ItemPage, itemHref } from "./ItemPage";
@@ -52,6 +52,8 @@ function writeFilters(f: Filters) {
 }
 
 const PAGE = 60;
+/** Items per shelf (trending, newest). */
+const SHELF = 12;
 /** Pedals are drawn at one shared scale, so you can compare sizes at a glance (boards are fit to the card). */
 const PX_PER_INCH = 16;
 /** New for 30 days after it joins the catalog. */
@@ -86,6 +88,8 @@ export function GearApp() {
   // PageHeader loads the catalog too; this is the same promise.
   useEffect(() => void useCatalog.getState().load(), []);
   useEffect(() => void fetchGearUsage().then(setUsage), []);
+  const [trending, setTrending] = useState<TrendingEntry[]>([]);
+  useEffect(() => void fetchTrending().then(setTrending), []);
 
   // Search as you type, after a short pause.
   useEffect(() => {
@@ -200,6 +204,33 @@ export function GearApp() {
     setQuery("");
     setSearch("");
   };
+
+  /** The shelves over the full list (no brand or search): trending, newest, and the most used brands. */
+  const browsing = !brand && !search.trim();
+  const shelves = useMemo(() => {
+    if (!manifest || !browsing) return null;
+    const byKey = new Map(all.map((c) => [c.image, c]));
+    const hot = trending
+      .filter((t) => t.kind === kind)
+      .map((t) => byKey.get(t.image))
+      .filter((c): c is CatalogItem => !!c)
+      .slice(0, SHELF);
+    const fresh = [...all]
+      .filter((c) => c.added)
+      .sort((a, b) => b.added!.localeCompare(a.added!))
+      .slice(0, SHELF);
+    const brandUse = new Map<string, number>();
+    for (const c of all) {
+      const n = usage.get(`${kind}:${c.image}`);
+      if (n) brandUse.set(c.brand, (brandUse.get(c.brand) ?? 0) + n);
+    }
+    const topBrands = [...brandUse].sort((a, b) => b[1] - a[1]).slice(0, 16).map(([b]) => b);
+    return { hot, fresh, topBrands };
+  }, [manifest, browsing, all, trending, kind, usage]);
+
+  const card = (c: CatalogItem) => (
+    <GearCard key={c.image} item={c} kind={kind} manifest={manifest!} isNew={!!c.added && c.added >= newSince} onBrand={pickBrand} onOpen={openItem} />
+  );
 
   const noun = kind === "pedal" ? "pedals" : "pedalboards";
   const total = items.length.toLocaleString("en-US");
@@ -322,6 +353,36 @@ export function GearApp() {
           </div>
         </div>
 
+        {shelves && (
+          <>
+            {shelves.topBrands.length > 0 && (
+              <Shelf title="Popular brands">
+                {shelves.topBrands.map((b) => (
+                  <button key={b} type="button" className={chip(false)} onClick={() => pickBrand(b)}>
+                    {b}
+                  </button>
+                ))}
+              </Shelf>
+            )}
+            {shelves.hot.length > 0 && <Shelf title="Trending this month">{shelves.hot.map((c) => <div key={c.image} className="w-40 shrink-0 sm:w-44">{card(c)}</div>)}</Shelf>}
+            {shelves.fresh.length > 0 && (
+              <Shelf
+                title="New in the catalog"
+                action={
+                  sort !== "new" && (
+                    <button type="button" onClick={() => setSort("new")} className="text-[13px] font-semibold text-brand hover:underline">
+                      See all new
+                    </button>
+                  )
+                }
+              >
+                {shelves.fresh.map((c) => <div key={c.image} className="w-40 shrink-0 sm:w-44">{card(c)}</div>)}
+              </Shelf>
+            )}
+            <h2 className="mt-10 text-lg font-bold tracking-[-0.01em]">All {noun}</h2>
+          </>
+        )}
+
         {search.trim() && manifest && (
           <p className="mt-4 text-sm text-ink-muted">
             {items.length
@@ -332,7 +393,7 @@ export function GearApp() {
           </p>
         )}
 
-        <div className="mt-6 grid grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+        <div className={`${shelves ? "mt-3" : "mt-6"} grid grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6`}>
           {manifest
             ? items.slice(0, shown).map((item) => (
                 <GearCard
@@ -424,6 +485,20 @@ function GearCard({
         </p>
       </div>
     </article>
+  );
+}
+
+/** A titled row that scrolls sideways. A scroller clips what's outside it, so it gets room for the cards' shadows
+ * (padding, undone by negative margins so nothing moves); that room doesn't take clicks. */
+function Shelf({ title, action, children }: { title: string; action?: ReactNode; children: ReactNode }) {
+  return (
+    <section className="mt-8">
+      <div className="flex items-baseline justify-between gap-3">
+        <h2 className="text-lg font-bold tracking-[-0.01em]">{title}</h2>
+        {action}
+      </div>
+      <div className="pointer-events-none -mx-4 mt-3 flex gap-3 overflow-x-auto px-4 pb-3 pt-1 [&>*]:pointer-events-auto">{children}</div>
+    </section>
   );
 }
 

@@ -10,6 +10,8 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   Boards are fit to the card.
 - **New** marks items added in the last 30 days.
 - The grid shows 60 items and adds 60 more as you scroll.
+- **Shelves** sit over the full list (no brand or search): Popular brands (most adds in the last year), Trending
+  this month (the `trending_gear` RPC, as in Add Gear) and New in the catalog. Each scrolls sideways.
 
 ## Item pages
 
@@ -25,5 +27,5 @@ The grid stays loaded underneath, so Back (the button or the browser's) returns 
 - **More from <brand>** (most used first, with See all) and **Similar size** (other brands within 0.2″, or 1″ for
   boards, either way round, at most two per brand).
 
-Planned next: a trending row on the grid; "used on these boards", which needs a database change; pages Google can
+Planned next: "used on these boards", which needs a database change; pages Google can
 find.
