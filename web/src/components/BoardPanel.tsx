@@ -212,7 +212,8 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
       const t = setTimeout(() => usePlayground.getState().fitToContent(), 0);
       return () => clearTimeout(t);
     }
-    usePlayground.getState().panBy(open ? -COLUMN_WIDTH / 2 : COLUMN_WIDTH / 2, 0);
+    const { view, setView } = usePlayground.getState();
+    setView({ x: view.x + (open ? -COLUMN_WIDTH / 2 : COLUMN_WIDTH / 2) });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
   // A viewed board is framed to fit once its gear has loaded and the column is in place, on any screen.
