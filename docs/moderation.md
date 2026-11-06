@@ -50,7 +50,7 @@ dick, ass) only count on their own, so "Cocktail" and "Bassist" are fine. Names 
 
 ## Setting it up
 
-1. Apply the migration (it's safe to re-run). Until then, the site works as before: nobody is flagged, reports say
+1. Apply the migration (it's safe to re-run; applied 2026-11-06). Until then, the site works as before: nobody is flagged, reports say
    they aren't set up yet, and the Moderation tab says so.
 2. Test with a spare account: report one of its comments from another account, then flag it from the Moderation tab
    (a warning first, then a 1-day timeout), check the popup and the timeout, and lift it.

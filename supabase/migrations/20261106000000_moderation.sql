@@ -476,3 +476,7 @@ end;
 $$;
 revoke execute on function public.moderation_hidden_boards() from public, anon;
 grant execute on function public.moderation_hidden_boards() to authenticated;
+
+-- The guard functions only run as triggers; nobody calls them directly.
+revoke execute on function public.guard_restricted() from public, anon, authenticated;
+revoke execute on function public.guard_username() from public, anon, authenticated;
