@@ -33,9 +33,9 @@ const ARROW_W = 32;
 /** Editor forms use the site's form pieces: fields, labels, help under the label, errors under the field. */
 export { fieldBox, fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass } from "../components/formText";
 /** The site's button sizes (36px, 14px text), as in the account dialogs. */
-export const primaryButton = "btn-primary h-9 px-3 disabled:opacity-50";
+export const primaryButton = "btn-primary h-9 whitespace-nowrap px-3 disabled:opacity-50";
 export const secondaryButton =
-  "press h-9 rounded-control bg-surface-hover px-3 text-sm font-medium text-ink outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
+  "press h-9 whitespace-nowrap rounded-control bg-surface-hover px-3 text-sm font-medium text-ink outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
 const num = (s: string) => {
   const n = parseFloat(s);

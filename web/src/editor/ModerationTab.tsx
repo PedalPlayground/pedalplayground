@@ -197,7 +197,7 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
           }}
         >
           <input aria-label="Username" placeholder="Username" value={name} onChange={(e) => setName(e.target.value.replace(/^@/, ""))} className={fieldInput} />
-          <button type="submit" className={secondaryButton} disabled={!name.trim()}>
+          <button type="submit" className={`${secondaryButton} shrink-0`} disabled={!name.trim()}>
             Look Up
           </button>
         </form>
