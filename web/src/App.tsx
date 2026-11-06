@@ -308,7 +308,8 @@ export function App() {
             <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} />
           )}
 
-          {wide && !covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
+          {/* Docked on the left on larger screens; a bottom drawer on phones. */}
+          {!covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
 
 
           {/* Lower-right corner. Phones have it in the bottom bar instead. */}
