@@ -5,6 +5,8 @@ import { boardUrl, fetchGalleryBoards, GALLERY_PAGE_SIZE, readGalleryReturn, sav
 import { supabase } from "../lib/supabase";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { useIsEditor } from "../lib/useIsEditor";
+import { moderationError } from "../lib/moderation";
+import { useRestriction } from "../store/standing";
 import { useAuth } from "../store/auth";
 
 const TYPE_LABELS: Record<PlaygroundType, string> = {
@@ -26,7 +28,9 @@ export function GalleryApp() {
   const user = useAuth((s) => s.user);
   const ready = useAuth((s) => s.ready);
   const [sort, setSort] = useState<GallerySort>(returning?.sort ?? "new");
-  const [signInNote, setSignInNote] = useState(false);
+  /** A short message over the boards (e.g. likes are off during a timeout). */
+  const [note, setNote] = useState<string | null>(null);
+  const restriction = useRestriction();
   /** The header's account dialogs; liking while signed out opens sign-in too. */
   const [dialog, setDialog] = useState<PageDialog>(null);
   const [type, setType] = useState<PlaygroundType | null>(returning?.type ?? null);
@@ -131,6 +135,7 @@ export function GalleryApp() {
 
   const toggleLike = async (b: GalleryBoard) => {
     if (!user) return setDialog("account");
+    if (restriction.restricted) return setNote(moderationError("account_restricted", restriction.until));
     const liked = !b.liked;
     const patch = (fields: Partial<GalleryBoard>) => setBoards((list) => list.map((x) => (x.id === b.id ? { ...x, ...fields } : x)));
     // Show it right away, then settle on the server's count.
@@ -204,15 +209,10 @@ export function GalleryApp() {
           </div>
         </div>
 
-        {signInNote && (
+        {note && (
           <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-lg border border-line bg-surface px-3 py-2 text-[13px]">
-            <span>
-              <a href="/" className="font-semibold text-brand">
-                Sign in on the playground
-              </a>{" "}
-              to like boards, then come back here.
-            </span>
-            <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setSignInNote(false)} aria-label="Dismiss">
+            <span>{note}</span>
+            <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setNote(null)} aria-label="Dismiss">
               ×
             </button>
           </div>

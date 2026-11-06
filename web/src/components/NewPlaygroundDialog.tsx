@@ -5,8 +5,10 @@ import { useCloud } from "../store/cloud";
 import { DEFAULT_NAME } from "../store/playground";
 import { useUi } from "../store/ui";
 import { GenrePicker } from "./GenrePicker";
-import { fieldLabel } from "./formText";
+import { fieldError, fieldLabel } from "./formText";
 import { Modal } from "./Modal";
+import { hasProfanity, PROFANITY_MESSAGE } from "../lib/profanity";
+import { useAllowedNames } from "../lib/useAllowedNames";
 
 /** Shaded, borderless fields; focus shows a brand ring. Matches the Edit Playground dialog. */
 const field =
@@ -19,9 +21,12 @@ export function NewPlaygroundDialog() {
   const [type, setType] = useState<PlaygroundType | null>(null);
   const [genres, setGenres] = useState<Genre[]>([]);
   const [busy, setBusy] = useState(false);
+  const [nameError, setNameError] = useState<string | null>(null);
+  const allowed = useAllowedNames();
 
   const create = async () => {
     if (busy) return;
+    if (hasProfanity(name, allowed)) return setNameError(PROFANITY_MESSAGE);
     setBusy(true);
     // Save any edits still waiting on autosave before the canvas is cleared.
     await useCloud.getState().saveNow();
@@ -43,10 +48,20 @@ export function NewPlaygroundDialog() {
         {...plainField}
         autoCapitalize="words"
         enterKeyHint="done"
-        onChange={(e) => setName(e.target.value)}
+        aria-invalid={!!nameError}
+        aria-describedby={nameError ? "new-pg-name-error" : undefined}
+        onChange={(e) => {
+          setName(e.target.value);
+          setNameError(null);
+        }}
         onKeyDown={(e) => e.key === "Enter" && void create()}
-        className={`mb-4 h-9 w-full px-3 ${field}`}
+        className={`h-9 w-full px-3 ${field} ${nameError ? "" : "mb-4"}`}
       />
+      {nameError && (
+        <span id="new-pg-name-error" className={`${fieldError} mb-4`}>
+          {nameError}
+        </span>
+      )}
 
       <label className={fieldLabel} htmlFor="new-pg-type">
         Playground Type

@@ -32,6 +32,8 @@ import { PedalArt } from "./PedalArt";
 import { tip } from "./Tooltip";
 import { plainField } from "../lib/inputProps";
 import { fieldLabel, fieldLabelText } from "./formText";
+import { hasProfanity, PROFANITY_MESSAGE } from "../lib/profanity";
+import { useAllowedNames } from "../lib/useAllowedNames";
 
 const MM_PER_INCH = 25.4;
 const MAX_INCHES = 60;
@@ -318,6 +320,7 @@ export function CustomItemForm({
   const [color, setColor] = useState(item?.color ?? NEW_PEDAL_COLOR);
   const [board, setBoard] = useState<BoardStyle>(boardStyle(item?.board));
   const patchBoard = (patch: Partial<BoardStyle>) => setBoard((b) => ({ ...b, ...patch }));
+  const allowed = useAllowedNames();
   const [error, setError] = useState<string | null>(null);
 
   const unitLabel = units === "mm" ? "mm" : "in";
@@ -367,6 +370,7 @@ export function CustomItemForm({
   );
 
   const submit = () => {
+    if (hasProfanity(name, allowed)) return setError(PROFANITY_MESSAGE);
     if (!(w > 0) || !(h > 0)) return setError("Enter a width and height greater than zero.");
     if (foot.width > MAX_INCHES || foot.height > MAX_INCHES) return setError(`That's larger than ${MAX_INCHES} in. Check the units.`);
     const fields = {

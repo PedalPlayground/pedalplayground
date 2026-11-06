@@ -6,11 +6,12 @@ import { useAuth } from "../store/auth";
 import { AddTab } from "./AddTab";
 import { CatalogTab } from "./CatalogTab";
 import { primaryButton, secondaryButton } from "./ItemEditor";
+import { ModerationTab } from "./ModerationTab";
 import { NewsTab } from "./NewsTab";
 import { QueueTab } from "./QueueTab";
 
-type Tab = "queue" | "add" | "catalog" | "news";
-const TABS: Tab[] = ["queue", "add", "catalog", "news"];
+type Tab = "queue" | "add" | "catalog" | "news" | "moderation";
+const TABS: Tab[] = ["queue", "add", "catalog", "news", "moderation"];
 /** The tab in the address (/editor/#news, or #add?from=<key> for Duplicate), so links can open a tab and reloads stay on it. */
 const tabFromHash = (): Tab => TABS.find((t) => `#${t}` === window.location.hash.split("?")[0]) ?? "queue";
 
@@ -114,6 +115,7 @@ export function EditorApp() {
             {tabButton("add", "Add")}
             {tabButton("catalog", "Catalog")}
             {tabButton("news", "News")}
+            {tabButton("moderation", "Moderation")}
           </nav>
           <div className="ml-auto flex items-center gap-3">
             {waiting !== null && waiting > 0 && (
@@ -142,6 +144,7 @@ export function EditorApp() {
       {tab === "queue" && <QueueTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
       {tab === "add" && <AddTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
       {tab === "news" && <NewsTab setNotice={setNotice} />}
+      {tab === "moderation" && <ModerationTab setNotice={setNotice} />}
       {tab === "catalog" && <CatalogTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
     </Shell>
   );

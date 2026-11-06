@@ -22,6 +22,10 @@ import { GenrePicker } from "./GenrePicker";
 import { fieldLabel, fieldLabelText } from "./formText";
 import { Modal } from "./Modal";
 import { tip } from "./Tooltip";
+import { moderationError } from "../lib/moderation";
+import { useRestriction } from "../store/standing";
+import { hasProfanity, PROFANITY_MESSAGE } from "../lib/profanity";
+import { useAllowedNames } from "../lib/useAllowedNames";
 
 /** Shaded, borderless fields; focus shows a brand ring. */
 const field =
@@ -46,6 +50,8 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
   const [busy, setBusy] = useState(false);
   /** Loaded like the details; undefined hides the switch. */
   const [startGallery, setStartGallery] = useState<boolean | undefined>();
+  const restriction = useRestriction();
+  const allowed = useAllowedNames();
   const [inGallery, setGallery] = useState(false);
   const [startCommentsOn, setStartCommentsOn] = useState(true);
   const [commentsOn, setCommentsOn] = useState(true);
@@ -91,6 +97,7 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
   }, [saved, id]);
 
   const save = async () => {
+    if (hasProfanity(name, allowed) || hasProfanity(description, allowed)) return setError(PROFANITY_MESSAGE);
     setBusy(true);
     setError(null);
     try {
@@ -240,7 +247,15 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
             on={inGallery}
             onClick={() => setGallery(!inGallery)}
             title="Show in Public Gallery"
-            hint={inGallery ? "Anyone can find this board in the gallery, like it and open their own copy." : "Only people you send a share link to can see it."}
+            // A timeout holds back adding boards to the gallery (taking one out still works).
+            disabled={restriction.restricted && !inGallery}
+            hint={
+              restriction.restricted && !inGallery
+                ? moderationError("account_restricted", restriction.until)
+                : inGallery
+                  ? "Anyone can find this board in the gallery, like it and open their own copy."
+                  : "Only people you send a share link to can see it."
+            }
           />
           {inGallery && (
             <Switch
@@ -272,14 +287,15 @@ export function EditPlaygroundDialog({ onClose, target }: { onClose: () => void;
   );
 }
 
-function Switch({ on, onClick, title, hint }: { on: boolean; onClick: () => void; title: string; hint: string }) {
+function Switch({ on, onClick, title, hint, disabled }: { on: boolean; onClick: () => void; title: string; hint: string; disabled?: boolean }) {
   return (
     <button
       type="button"
       role="switch"
       aria-checked={on}
+      disabled={disabled}
       onClick={onClick}
-      className="mb-3 flex w-full items-start justify-between gap-4 rounded-control text-left outline-none focus-visible:ring-2 focus-visible:ring-brand"
+      className="mb-3 flex w-full items-start justify-between gap-4 rounded-control text-left outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-60"
     >
       <span>
         <span className="block text-sm">{title}</span>

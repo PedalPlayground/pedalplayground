@@ -46,7 +46,11 @@ interface AuthState {
 }
 
 const friendly = (message: string) =>
-  /expired|invalid/i.test(message) ? "That code or link is invalid or has expired. Request a new code." : message;
+  /banned/i.test(message)
+    ? "This account has been banned for breaking the site's rules."
+    : /expired|invalid/i.test(message)
+      ? "That code or link is invalid or has expired. Request a new code."
+      : message;
 
 /** The profile trigger refuses a username someone grabbed a moment earlier, which surfaces as a database error. */
 const signUpError = (message: string) =>
@@ -110,7 +114,7 @@ export const useAuth = create<AuthState>((set, get) => ({
     if (!error) return null;
     return /invalid login credentials/i.test(error.message)
       ? "That email and password don't match. If you signed up with an email link, use a sign-in code instead."
-      : error.message;
+      : friendly(error.message);
   },
 
   signUp: async (email, password, username) => {

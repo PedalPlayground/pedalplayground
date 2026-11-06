@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { saveUsername, usernameAvailable, usernameFromEmail, usernameProblem } from "../lib/profiles";
 import { useAuth } from "../store/auth";
+import { useRestriction } from "../store/standing";
 import { fieldError, fieldHelp, fieldInput, fieldLabel } from "./formText";
 import { Modal } from "./Modal";
 
@@ -14,6 +15,8 @@ export function UsernamePrompt() {
   const username = useAuth((s) => s.username);
   const setStoredUsername = useAuth((s) => s.setUsername);
   const [dismissed, setDismissed] = useState(false);
+  // A timeout holds back username changes, so don't ask until it's over.
+  const { restricted } = useRestriction();
   // Starts as the email's name part (like Create Account) until they type their own.
   const [typed, setName] = useState<string | null>(null);
   const name = typed ?? usernameFromEmail(user?.email ?? "");
@@ -35,7 +38,7 @@ export function UsernamePrompt() {
     };
   }, [trimmed, problem]);
 
-  if (!user || username !== null || dismissed) return null;
+  if (!user || username !== null || dismissed || restricted) return null;
 
   const hint = problem ?? (taken === trimmed ? "That username is taken." : null);
   const save = async () => {

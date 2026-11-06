@@ -53,6 +53,7 @@ const COMMENT_ERRORS: Record<string, string> = {
   username_required: "Pick a username first (Account menu), then comment.",
   comments_closed: "Comments are closed on this board.",
   slow_down: "You're commenting very fast. Wait a minute and try again.",
+  account_restricted: "Your account is in a timeout, so you can't comment right now.",
 };
 
 /** Posts a comment. Throws an Error with a message that's fine to show. */
