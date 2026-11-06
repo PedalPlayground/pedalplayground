@@ -155,7 +155,8 @@ export type SetNotice = (n: Notice | null) => void;
 /** The site header, then the editor's own tab bar under it (once you're in). */
 function Shell({ header, children, bar }: { header: React.ReactNode; children?: React.ReactNode; bar?: React.ReactNode }) {
   return (
-    <div className="min-h-dvh bg-chrome font-sans text-ink">
+    // The page locks body scrolling (for the playground), so this page scrolls inside its own container, like the gallery.
+    <div className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       {header}
       {bar && (
         <div className="sticky top-12 z-[9] border-b border-chrome-line bg-chrome/95 backdrop-blur">

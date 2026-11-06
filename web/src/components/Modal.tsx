@@ -27,14 +27,15 @@ export function Modal({
   }, [onClose]);
 
   return (
-    <div className="animate-fade fixed inset-0 z-50 grid place-items-center modal-backdrop p-4" onClick={onClose}>
+    <div className="animate-fade fixed inset-0 z-50 flex items-center justify-center modal-backdrop p-4" onClick={onClose}>
       <div className={`relative flex max-h-full w-full flex-col ${wide ? "max-w-2xl" : "max-w-sm"}`}>
+        {/* min-h-0: the dialog shrinks to fit the screen and scrolls inside, rather than running off the bottom. */}
         <div
           role="dialog"
           // Session recordings (Clarity) skip dialog contents: sign-in, usernames, board names and descriptions.
           data-clarity-mask="True"
           aria-label={title}
-          className="animate-enter relative max-h-full w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-[var(--shadow-modal)]"
+          className="animate-enter relative min-h-0 w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-[var(--shadow-modal)]"
           onClick={(e) => e.stopPropagation()}
         >
           <h2 className={`mb-3 text-base font-semibold ${closeX ? "pr-8" : ""}`}>{title}</h2>
