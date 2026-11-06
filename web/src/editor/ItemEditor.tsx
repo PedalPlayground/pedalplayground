@@ -581,7 +581,7 @@ function SizeStrip({
                 className="press flex shrink-0 flex-col items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand"
                 style={{ gap: FIGURE_GAP, width: Math.max(z.width * PREVIEW_PPI, CAPTION_W) }}
               >
-                <span className="relative block transition-transform hover:-translate-y-0.5" style={{ width: z.width * PREVIEW_PPI, height: z.height * PREVIEW_PPI }}>
+                <span className="relative block" style={{ width: z.width * PREVIEW_PPI, height: z.height * PREVIEW_PPI }}>
                   {url && <img src={url} alt="" loading="lazy" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />}
                 </span>
                 <span className="block w-full text-center text-[11px] leading-4" style={{ height: FIGURE_CAPTION_H }}>
