@@ -37353,6 +37353,13 @@
 		"Image": "monsterbox-gay-frog-mid-hump-overdrive.png"
 	},
 	{
+		"Brand": "Monsterbox Pedals",
+		"Name": "Straight Frog Distortion",
+		"Width": 2.72,
+		"Height": 4.53,
+		"Image": "monsterbox-straight-frog-distortion.png"
+	},
+	{
 		"Brand": "Montreal Assembly",
 		"Name": "856 for ZELLERSASN",
 		"Width": 5.65,
@@ -49954,6 +49961,13 @@
 	},
 	{
 		"Brand": "Silktone",
+		"Name": "Green Hell",
+		"Width": 3.7,
+		"Height": 5.97,
+		"Image": "silktone-green-hell.png"
+	},
+	{
+		"Brand": "Silktone",
 		"Name": "Overdrive+",
 		"Width": 4.7,
 		"Height": 3.73,
@@ -51295,6 +51309,13 @@
 		"Width": 4.2,
 		"Height": 2.5,
 		"Image": "soundsculpture-volcano.png"
+	},
+	{
+		"Brand": "Soundgas",
+		"Name": "Type 636P",
+		"Width": 5.01,
+		"Height": 7.4,
+		"Image": "soundsgas-type-636p.png"
 	},
 	{
 		"Brand": "Source Audio",
