@@ -120,7 +120,7 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
           side="top"
           align="end"
           sideOffset={6}
-          className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel"
+          className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
         >
           {SHOW_FILE_IO && (
             <>

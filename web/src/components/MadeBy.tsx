@@ -61,7 +61,7 @@ export function MadeBy({ className = "" }: { className?: string }) {
           @tehtrav
         </Dropdown.Trigger>
         <Dropdown.Portal>
-          <Dropdown.Content side="top" align="start" sideOffset={8} className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel">
+          <Dropdown.Content side="top" align="start" sideOffset={8} className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain">
             <CreditMenuItems />
           </Dropdown.Content>
         </Dropdown.Portal>
