@@ -18,6 +18,10 @@ import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
 import { BoardLabel, BuildsMenu } from "./components/PlaygroundSwitcher";
 import { takeHandoff } from "./lib/handoff";
+import type { Kind } from "./lib/catalog";
+import { recordGearAdd } from "./lib/trending";
+import { useCatalog } from "./store/catalog";
+import { toast } from "./store/toast";
 import { requestNewPlayground } from "./lib/newPlayground";
 import { NewPlaygroundDialog } from "./components/NewPlaygroundDialog";
 import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
@@ -156,6 +160,7 @@ export function App() {
   });
   const authReady = useAuth((s) => s.ready);
   const cloudList = useCloud((c) => c.list);
+  const manifest = useCatalog((c) => c.manifest);
   const billingKnown = useBilling((b) => !b.billingEnabled || !!b.entitlements);
   useEffect(() => {
     if (!handoff || !authReady) return;
@@ -165,6 +170,16 @@ export function App() {
       requestNewPlayground();
     } else if (handoff.kind === "playgrounds") {
       setDialog("playgrounds");
+    } else if (handoff.kind === "add") {
+      // Waits for the catalog, then drops the item onto the open board.
+      if (!manifest) return;
+      const [kind, key] = handoff.id.split(":") as [Kind, string];
+      const item = (kind === "pedalboard" ? manifest.pedalboards : manifest.pedals).find((c) => c.image === key);
+      if (item) {
+        usePlayground.getState().addCatalogItem(kind, item);
+        recordGearAdd(kind, item.image);
+        toast(`Added ${item.brand} ${item.name}`);
+      }
     } else if (handoff.kind === "edit") {
       const target = cloudList.find((p) => p.id === handoff.id);
       if (!target) return; // the list is still loading
@@ -172,7 +187,7 @@ export function App() {
     }
     setHandoff(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [handoff, authReady, user, billingKnown, cloudList]);
+  }, [handoff, authReady, user, billingKnown, cloudList, manifest]);
 
   useEffect(() => {
     restorePlayground();

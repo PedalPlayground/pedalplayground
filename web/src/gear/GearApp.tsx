@@ -6,6 +6,7 @@ import { indexItem, search as searchItems } from "../lib/search";
 import { fetchGearUsage } from "../lib/trending";
 import type { CatalogItem } from "../lib/types";
 import { useAuth } from "../store/auth";
+import { ItemPage, itemHref } from "./ItemPage";
 import { useCatalog } from "../store/catalog";
 
 type GearSort = "az" | "new" | "used";
@@ -29,14 +30,25 @@ function readFilters(): Filters {
   };
 }
 
-function writeFilters(f: Filters) {
+/** The item whose page is open, from ?item=<image key> (with kind=boards for a board). */
+function readItem(): { kind: Kind; key: string } | null {
+  const p = new URLSearchParams(window.location.search);
+  const key = p.get("item");
+  return key ? { kind: p.get("kind") === "boards" ? "pedalboard" : "pedal", key } : null;
+}
+
+function filtersHref(f: Filters) {
   const p = new URLSearchParams();
   if (f.kind === "pedalboard") p.set("kind", "boards");
   if (f.brand) p.set("brand", f.brand);
   if (f.query.trim()) p.set("q", f.query.trim());
   if (f.sort !== "az") p.set("sort", f.sort);
   const qs = p.toString();
-  history.replaceState(null, "", `${window.location.pathname}${qs ? `?${qs}` : ""}`);
+  return `${window.location.pathname}${qs ? `?${qs}` : ""}`;
+}
+
+function writeFilters(f: Filters) {
+  history.replaceState(null, "", filtersHref(f));
 }
 
 const PAGE = 60;
@@ -62,6 +74,11 @@ export function GearApp() {
   const [sort, setSort] = useState<GearSort>(initial.sort);
   const [usage, setUsage] = useState<Map<string, number>>(new Map());
   const [shown, setShown] = useState(PAGE);
+  const [open, setOpen] = useState(readItem);
+  /** Where the grid was scrolled when an item opened, to return to on Back. */
+  const gridScroll = useRef(0);
+  /** True once this visit opened an item from the grid, so Back can be the browser's back. */
+  const pushed = useRef(false);
   const sentinel = useRef<HTMLDivElement>(null);
   const scroller = useRef<HTMLDivElement>(null);
 
@@ -77,10 +94,57 @@ export function GearApp() {
   }, [query]);
 
   useEffect(() => {
+    // An item's page owns the URL while it's open.
+    if (readItem()) return;
     writeFilters({ kind, brand, query: search, sort });
     setShown(PAGE);
     scroller.current?.scrollTo({ top: 0 });
   }, [kind, brand, search, sort]);
+
+  // The browser's back and forward move between the grid and item pages.
+  useEffect(() => {
+    const onPop = () => {
+      const next = readItem();
+      setOpen(next);
+      const f = readFilters();
+      setKind(f.kind);
+      if (!next) {
+        setBrand(f.brand);
+        setQuery(f.query);
+        setSearch(f.query);
+        setSort(f.sort);
+        requestAnimationFrame(() => scroller.current?.scrollTo({ top: gridScroll.current }));
+      } else scroller.current?.scrollTo({ top: 0 });
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
+  const openItem = (k: Kind, item: CatalogItem) => {
+    if (!open) gridScroll.current = scroller.current?.scrollTop ?? 0;
+    history.pushState(null, "", itemHref(k, item));
+    pushed.current = true;
+    setOpen({ kind: k, key: item.image });
+    scroller.current?.scrollTo({ top: 0 });
+  };
+
+  const closeItem = () => {
+    if (pushed.current) return history.back();
+    // Opened from a link: there's no grid behind it, so start one.
+    setOpen(null);
+    writeFilters({ kind, brand, query: search, sort });
+  };
+
+  /** A brand link on an item page: that brand's grid, as a new history step. */
+  const brandFromItem = (b: string) => {
+    const k = open?.kind ?? kind;
+    history.pushState(null, "", filtersHref({ kind: k, brand: b, query: "", sort }));
+    setOpen(null);
+    setKind(k);
+    pickBrand(b);
+    setShown(PAGE);
+    scroller.current?.scrollTo({ top: 0 });
+  };
 
   const all = useMemo(() => (manifest ? (kind === "pedal" ? manifest.pedals : manifest.pedalboards) : []), [manifest, kind]);
 
@@ -126,6 +190,11 @@ export function GearApp() {
     return d.toISOString().slice(0, 10);
   }, []);
 
+  const openEntry = useMemo(() => {
+    if (!open || !manifest) return null;
+    return (open.kind === "pedal" ? manifest.pedals : manifest.pedalboards).find((c) => c.image === open.key) ?? null;
+  }, [open, manifest]);
+
   const pickBrand = (b: string | null) => {
     setBrand(b);
     setQuery("");
@@ -140,7 +209,35 @@ export function GearApp() {
     <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       <PageHeader current="gear" dialog={dialog} setDialog={setDialog} />
 
-      <main className="mx-auto max-w-6xl px-4 pb-16 pt-8">
+      {open && (
+        <main className="mx-auto max-w-6xl px-4 pb-16 pt-6">
+          {openEntry && manifest ? (
+            <ItemPage
+              kind={open.kind}
+              item={openEntry}
+              manifest={manifest}
+              usage={usage}
+              onBack={closeItem}
+              onBrand={brandFromItem}
+              card={(c) => (
+                <GearCard key={c.image} item={c} kind={open.kind} manifest={manifest} isNew={!!c.added && c.added >= newSince} onBrand={brandFromItem} onOpen={openItem} />
+              )}
+            />
+          ) : (
+            manifest && (
+              <p className="mx-auto mt-12 max-w-sm text-center text-sm text-ink-muted">
+                That item isn't in the catalog.{" "}
+                <button type="button" className="font-semibold text-brand" onClick={closeItem}>
+                  Browse all gear
+                </button>
+              </p>
+            )
+          )}
+        </main>
+      )}
+
+      {/* Kept while an item is open, so its filters and loaded cards are there on Back. */}
+      <main className={`mx-auto max-w-6xl px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
         {brand ? (
           <>
             <button type="button" onClick={() => pickBrand(null)} className="text-[13px] font-semibold text-brand hover:underline">
@@ -238,7 +335,15 @@ export function GearApp() {
         <div className="mt-6 grid grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {manifest
             ? items.slice(0, shown).map((item) => (
-                <GearCard key={item.image} item={item} kind={kind} manifest={manifest} isNew={!!item.added && item.added >= newSince} onBrand={pickBrand} />
+                <GearCard
+                  key={item.image}
+                  item={item}
+                  kind={kind}
+                  manifest={manifest}
+                  isNew={!!item.added && item.added >= newSince}
+                  onBrand={pickBrand}
+                  onOpen={openItem}
+                />
               ))
             : !error && Array.from({ length: 12 }, (_, i) => <CardSkeleton key={i} />)}
         </div>
@@ -268,12 +373,14 @@ function GearCard({
   manifest,
   isNew,
   onBrand,
+  onOpen,
 }: {
   item: CatalogItem;
   kind: Kind;
   manifest: Manifest;
   isNew: boolean;
   onBrand: (brand: string) => void;
+  onOpen: (kind: Kind, item: CatalogItem) => void;
 }) {
   const src = thumbUrl(manifest, kind, item.image);
   // Pedals keep their real size against each other; anything too big for the card (and every board) is fit to it.
@@ -282,7 +389,7 @@ function GearCard({
       ? { width: item.width * PX_PER_INCH, height: item.height * PX_PER_INCH, maxWidth: "100%", maxHeight: "100%" }
       : { width: "100%", height: "100%" };
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface shadow-panel">
+    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface shadow-panel transition-shadow focus-within:ring-2 focus-within:ring-brand hover:shadow-[0_8px_28px_rgb(16_18_27/0.14),0_0_0_1px_rgb(16_18_27/0.05)]">
       <div className="relative aspect-[4/3] w-full bg-canvas">
         {/* Absolute, so a tall photo can't stretch the card. */}
         <div className="absolute inset-3 flex items-center justify-center">
@@ -294,11 +401,24 @@ function GearCard({
         <button
           type="button"
           onClick={() => onBrand(item.brand)}
-          className="self-start truncate text-left text-xs font-medium text-ink-muted outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
+          className="relative z-10 self-start truncate text-left text-xs font-medium text-ink-muted outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
         >
           {item.brand}
         </button>
-        <h2 className="line-clamp-2 text-[13px] font-semibold leading-snug">{item.name}</h2>
+        {/* The whole card opens the item (the link stretches over it); the brand button sits above. */}
+        <h2 className="line-clamp-2 text-[13px] font-semibold leading-snug">
+          <a
+            href={itemHref(kind, item)}
+            onClick={(e) => {
+              if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+              e.preventDefault();
+              onOpen(kind, item);
+            }}
+            className="outline-none after:absolute after:inset-0"
+          >
+            {item.name}
+          </a>
+        </h2>
         <p className="mt-auto pt-1 text-xs tabular-nums text-ink-muted">
           {fmt(item.width)}″ × {fmt(item.height)}″
         </p>

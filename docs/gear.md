@@ -11,5 +11,19 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
 - **New** marks items added in the last 30 days.
 - The grid shows 60 items and adds 60 more as you scroll.
 
-Planned next: a page for each item (`/gear/?item=<key>`) with Add to My Playground, Buy links (behind
-`VITE_BUY_LINKS`), more from the brand and similar sizes; then "used on these boards", which needs a database change.
+## Item pages
+
+Clicking a card opens `/gear/?item=<image key>` (`&kind=boards` for a board), drawn by `web/src/gear/ItemPage.tsx`.
+The grid stays loaded underneath, so Back (the button or the browser's) returns to the same filters and scroll.
+
+- The photo at real proportions on the canvas color, with size in inches and mm, type, power and current draw when
+  the catalog has them, and the date it was added.
+- **Add to My Playground** links to `/#pp-add=<kind>:<image key>` (`lib/handoff.ts`). The playground waits for the
+  catalog, adds the item to the open board, records the add for trending, and shows "Added …".
+- **Buy links** use `buyLinks()` from `lib/affiliate.ts`, so they only show where `VITE_BUY_LINKS=true` (today just
+  `.env.local`).
+- **More from <brand>** (most used first, with See all) and **Similar size** (other brands within 0.2″, or 1″ for
+  boards, either way round, at most two per brand).
+
+Planned next: a trending row on the grid; "used on these boards", which needs a database change; pages Google can
+find.
