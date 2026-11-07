@@ -16,7 +16,7 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   to it. Boards are fit to the card. Cards load the full photo when the 128px thumbnail would look soft.
 - The grid shows 60 items and adds 60 more as you scroll.
 - **Over the full list** (no brand, type or search), on the left: **Trending gear**, a bento of 8 photo-first tiles
-  (one big, one tall, six singles) taking turns between hot and new, each with its name and a new or hot mark; under
+  (one big, one tall, six singles) taking turns between hot and new, each with its name and a new or hot icon before it; under
   it **Newly added** (in the brand color), one row of the next newest as square photo tiles, names on hover: 12 on laptops (three per
   bento column), 8 on tablets (two per column), three rows of four on phones. It shares the bento's gap, so tiles line
   up with the bento's columns. On the right, **Popular brands**
@@ -25,8 +25,8 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   over month adds, damped by size; see `fetchHot` in `lib/trending.ts`), lifts newer gear (added in the last year
   1.6x, last three years 1.3x), and sets aside the month's 30 most added real gear (everyday staples), tuners, volume
   pedals, utilities and board accessories.
-- **Marks on full cards:** a flamingo dot with "new" (added in the last 30 days) and a tangerine up chevron with "hot"
-  (the 40 hottest), in light gray.
+- **Marks:** icon only, just before an item's name on full cards and Trending gear tiles: a brand-colored dot for new
+  (added in the last 30 days) and a tangerine trend line for hot (the 40 hottest). Hovering shows the word.
 - The photo at real proportions on the canvas color, with size in inches and mm, type, power and current draw when
   the catalog has them, and the date it was added.
 - **Add to My Playground** links to `/#pp-add=<kind>:<image key>` (`lib/handoff.ts`). The playground waits for the

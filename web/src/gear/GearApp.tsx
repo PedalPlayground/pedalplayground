@@ -1,4 +1,5 @@
-import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
+import { ArrowLeft, Search, SlidersHorizontal, TrendingUp } from "lucide-react";
+import { tip } from "../components/Tooltip";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
@@ -637,16 +638,12 @@ function GearCard({
         <div className="absolute inset-x-[10%] inset-y-[7%] flex items-center justify-center [container-type:size]">
           {src && <img src={src} srcSet={srcSet} sizes="(min-width: 768px) 15vw, 45vw" alt="" loading="lazy" style={style} className="object-contain" />}
         </div>
-        {(isNew || isHot) && (
-          <span className="absolute left-2.5 top-2 z-10 flex items-center gap-2.5">
-            {isNew && <Mark why="new" />}
-            {isHot && <Mark why="hot" />}
-          </span>
-        )}
       </div>
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5">
         {/* Name first, then brand. The whole card opens the item (the link stretches over it); the brand button sits above. */}
         <h2 className="line-clamp-2 text-[13px] font-semibold leading-snug">
+          {isNew && <Mark why="new" />}
+          {isHot && <Mark why="hot" />}
           <a
             href={itemHref(kind, item)}
             onClick={(e) => {
@@ -781,18 +778,17 @@ function FilterPanel({
   );
 }
 
-/** New (a flamingo dot) or hot (a tangerine up chevron), each with its word in light gray. */
+/** New (a brand-colored dot) or hot (a tangerine trend line), icon only, before an item's name. */
 function Mark({ why }: { why: "new" | "hot" }) {
+  const label = why === "new" ? "New" : "Hot";
+  // Inline before the name, so it wraps with the text; the hover label says what it means.
   return (
-    <span className="flex items-center gap-1 text-[11px] font-medium leading-4 text-ink-muted">
+    <span role="img" aria-label={label} {...tip(label)} className="relative z-10 mr-1.5 inline-flex h-[1em] items-center align-[-0.1em]">
       {why === "new" ? (
-        <span className="size-[7px] rounded-full bg-guide" aria-hidden />
+        <span className="size-[7px] rounded-full bg-brand" aria-hidden />
       ) : (
-        <svg width="9" height="6" viewBox="0 0 9 6" className="text-tangerine" aria-hidden>
-          <path d="M1 5 4.5 1.5 8 5" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+        <TrendingUp size={14} strokeWidth={2.5} className="text-tangerine" aria-hidden />
       )}
-      {why}
     </span>
   );
 }
@@ -838,11 +834,11 @@ function BentoTile({
           />
         )}
       </span>
-      <span className="flex items-center gap-1.5 px-3 pb-2.5">
-        <span className="min-w-0 truncate text-xs font-semibold">{item.name}</span>
-      </span>
-      <span className="absolute left-3 top-2.5">
-        <Mark why={why} />
+      <span className="flex items-center px-3 pb-2.5">
+        <span className="min-w-0 truncate text-xs font-semibold">
+          <Mark why={why} />
+          {item.name}
+        </span>
       </span>
     </a>
   );
