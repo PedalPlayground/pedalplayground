@@ -14,14 +14,10 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   to it. Boards are fit to the card. Cards load the full photo when the 128px thumbnail would look soft.
 - **New** marks items added in the last 30 days.
 - The grid shows 60 items and adds 60 more as you scroll.
-- **Shelves** sit over the full list (no brand, type or search): Popular brands (most adds in the last year), Trending
-  this month (the `trending_gear` RPC, as in Add Gear) and New in the catalog. Each scrolls sideways.
-
-## Item pages
-
-Clicking a card opens `/gear/?item=<image key>` (`&kind=boards` for a board), drawn by `web/src/gear/ItemPage.tsx`.
-The grid stays loaded underneath, so Back (the button or the browser's) returns to the same filters and scroll.
-
+- **Over the full list** (no brand, type or search): Popular brands (most adds in the last year, a sideways row),
+  then **Trending and new**, a bento of 12 photo-first tiles taking turns between this month's most added
+  (`trending_gear`) and the newest additions. Tiles show only the photo, the name and a Trending or New mark, so they
+  read differently from the full cards below; their sizes fill the grid exactly at 6, 4 and 2 columns.
 - The photo at real proportions on the canvas color, with size in inches and mm, type, power and current draw when
   the catalog has them, and the date it was added.
 - **Add to My Playground** links to `/#pp-add=<kind>:<image key>` (`lib/handoff.ts`). The playground waits for the

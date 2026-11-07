@@ -3,7 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { DensitySwitch, type Density } from "../components/DensitySwitch";
 import { fieldError, fieldHelp, fieldInput, fieldLabel, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { Meta } from "../components/Meta";
-import { RoleBadges, nameLink, squiggle, squiggleRule } from "../components/RoleBadge";
+import { RoleBadges, nameLink, squiggleRule } from "../components/RoleBadge";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { rowClass } from "../components/ContextMenu";
 import { Segmented } from "../components/SettingsMenu";
@@ -321,7 +321,7 @@ export function DesignApp() {
             </Demo>
           </Group>
 
-          <Group title="The squiggle" note="An even wave, used sparingly so it stays a treat: as a rule after section headings, and under the New badge. Never on links.">
+          <Group title="The squiggle" note="An even wave, used sparingly so it stays a treat: as a rule after section headings only. Never on links or badges.">
             <div className="col-span-full">
               <h4 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Trending this month</h4>
             </div>
@@ -329,9 +329,7 @@ export function DesignApp() {
 
           <Group title="Badges">
             <Demo label="New" code="bg-brand text-brand-ink">
-              <span className="rounded-full bg-brand px-2 pb-1 pt-0.5 text-[11px] font-semibold leading-3 text-brand-ink">
-                <span className={`${squiggle} [--squiggle-offset:0px]`}>New</span>
-              </span>
+              <span className="rounded-full bg-brand px-2 py-0.5 text-[11px] font-semibold text-brand-ink">New</span>
             </Demo>
             <Demo label="Count" code="Filters badge">
               <span className="grid size-5 place-items-center rounded-full bg-brand text-[11px] font-semibold text-brand-ink">2</span>

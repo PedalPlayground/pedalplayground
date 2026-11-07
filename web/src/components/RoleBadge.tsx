@@ -3,9 +3,8 @@ import { tip } from "./Tooltip";
 
 /** A name that links somewhere: a username (their boards in Explore) or a brand (its Gear page). Usernames show without an @. */
 export const nameLink = "underline-offset-2 hover:underline focus-visible:underline";
-/** The squiggle (drawn in index.css): `squiggleRule` after section headings, `squiggle` under the New badge. */
+/** The squiggle (drawn in index.css), as a rule after section headings. */
 export const squiggleRule = "squiggle-rule";
-export const squiggle = "squiggle";
 
 /** Accounts that speak for Pedal Playground, by username (lowercase), and the label their posts carry. */
 const TEAM: Record<string, string> = { trav: "Creator" };

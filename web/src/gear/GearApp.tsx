@@ -10,7 +10,7 @@ import { fetchGearUsage, fetchTrending, type TrendingEntry } from "../lib/trendi
 import type { CatalogItem } from "../lib/types";
 import { useAuth } from "../store/auth";
 import { ItemPage, itemHref } from "./ItemPage";
-import { nameLink, squiggle, squiggleRule } from "../components/RoleBadge";
+import { nameLink, squiggleRule } from "../components/RoleBadge";
 import { useCatalog } from "../store/catalog";
 
 type GearSort = "az" | "new" | "used";
@@ -71,8 +71,33 @@ const GRID: Record<Density, string> = {
  * height (about three in four pedals are this size or smaller). Bigger ones are fit to it; boards always are.
  */
 const FILL_INCHES = 5.2;
-/** Items per shelf (trending, newest). */
+/** Items per list (trending, newest) before they're mixed into the bento. */
 const SHELF = 12;
+/**
+ * The Trending and new bento: 12 tiles whose sizes fill the grid exactly at every width (dense packing). Six columns:
+ * a big tile, two tall ones and a wide one (3 full rows). Four columns: the wide one is single and the last tile hides
+ * (4 rows). Two columns: only the big tile spans, and the last tile hides (7 rows).
+ */
+const BENTO_COUNT = 12;
+const BENTO = [
+  "col-span-2 row-span-2",
+  "sm:row-span-2",
+  "",
+  "",
+  "sm:row-span-2",
+  "",
+  "",
+  "xl:col-span-2",
+  "",
+  "",
+  "",
+  "hidden xl:flex",
+];
+
+interface BentoPick {
+  item: CatalogItem;
+  why: "trending" | "new";
+}
 /** New for 30 days after it joins the catalog. */
 const NEW_DAYS = 30;
 
@@ -255,12 +280,20 @@ export function GearApp() {
       if (n) brandUse.set(c.brand, (brandUse.get(c.brand) ?? 0) + n);
     }
     const topBrands = [...brandUse].sort((a, b) => b[1] - a[1]).slice(0, 16).map(([b]) => b);
-    return { hot, fresh, topBrands };
+    // Trending and new, taking turns, each item once.
+    const picks: BentoPick[] = [];
+    const seen = new Set<string>();
+    for (let n = 0; n < Math.max(hot.length, fresh.length) && picks.length < BENTO_COUNT; n++) {
+      for (const [item, why] of [[hot[n], "trending"], [fresh[n], "new"]] as const) {
+        if (item && !seen.has(item.image) && picks.length < BENTO_COUNT) {
+          seen.add(item.image);
+          picks.push({ item, why });
+        }
+      }
+    }
+    return { topBrands, picks };
   }, [manifest, browsing, all, trending, kind, usage]);
 
-  const card = (c: CatalogItem) => (
-    <GearCard key={c.image} item={c} kind={kind} manifest={manifest!} isNew={!!c.added && c.added >= newSince} onBrand={pickBrand} onOpen={openItem} />
-  );
 
   const noun = kind === "pedal" ? "pedals" : "pedalboards";
   const total = items.length.toLocaleString("en-US");
@@ -406,20 +439,23 @@ export function GearApp() {
                 ))}
               </Shelf>
             )}
-            {shelves.hot.length > 0 && <Shelf title="Trending this month">{shelves.hot.map((c) => <div key={c.image} className="w-40 shrink-0 sm:w-44">{card(c)}</div>)}</Shelf>}
-            {shelves.fresh.length > 0 && (
-              <Shelf
-                title="New in the catalog"
-                action={
-                  sort !== "new" && (
+            {shelves.picks.length > 0 && (
+              <section className="mt-8">
+                <div className="flex items-center justify-between gap-3">
+                  <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Trending and new</h2>
+                  {sort !== "new" && (
                     <button type="button" onClick={() => setSort("new")} className="text-[13px] font-semibold text-brand hover:underline">
                       See all new
                     </button>
-                  )
-                }
-              >
-                {shelves.fresh.map((c) => <div key={c.image} className="w-40 shrink-0 sm:w-44">{card(c)}</div>)}
-              </Shelf>
+                  )}
+                </div>
+                {/* Bento: tiles of a few sizes, packed densely. Photo first, name only; the full cards are below. */}
+                <div className="mt-3 grid grid-flow-dense auto-rows-[8.5rem] grid-cols-2 gap-3 sm:grid-cols-4 xl:grid-cols-6">
+                  {shelves.picks.map((p, i) => (
+                    <BentoTile key={`${p.why}:${p.item.image}`} pick={p} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
+                  ))}
+                </div>
+              </section>
             )}
           </>
         )}
@@ -519,9 +555,7 @@ function GearCard({
           {src && <img src={src} srcSet={srcSet} sizes="(min-width: 768px) 15vw, 45vw" alt="" loading="lazy" style={style} className="object-contain" />}
         </div>
         {isNew && (
-          <span className="absolute left-2 top-2 rounded-full bg-brand px-2 pb-1 pt-0.5 text-[11px] font-semibold leading-3 text-brand-ink">
-            <span className={`${squiggle} [--squiggle-offset:0px]`}>New</span>
-          </span>
+          <span className="absolute left-2 top-2 rounded-full bg-brand px-2 py-0.5 text-[11px] font-semibold text-brand-ink">New</span>
         )}
       </div>
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5">
@@ -680,6 +714,58 @@ function FilterPanel({
         </button>
       )}
     </div>
+  );
+}
+
+/** One bento tile: the photo, fit to the tile, and just the name, with a small Trending or New mark. */
+function BentoTile({
+  pick,
+  kind,
+  manifest,
+  size,
+  onOpen,
+}: {
+  pick: BentoPick;
+  kind: Kind;
+  manifest: Manifest;
+  size: string;
+  onOpen: (kind: Kind, item: CatalogItem) => void;
+}) {
+  const { item, why } = pick;
+  const thumb = thumbUrl(manifest, kind, item.image);
+  const full = canvasImageUrl(manifest, kind, item.image);
+  return (
+    <a
+      href={itemHref(kind, item)}
+      onClick={(e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+        e.preventDefault();
+        onOpen(kind, item);
+      }}
+      aria-label={`${item.brand} ${item.name}, ${why === "new" ? "new" : "trending"}`}
+      className={`group relative flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand ${size}`}
+    >
+      <span className="relative min-h-0 flex-1">
+        {thumb && (
+          <img
+            src={thumb}
+            srcSet={full ? `${thumb} 128w, ${full} ${kind === "pedal" ? 1200 : 2400}w` : undefined}
+            sizes="(min-width: 640px) 25vw, 50vw"
+            alt=""
+            loading="lazy"
+            className="absolute inset-x-[10%] inset-y-[8%] size-[80%] object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+          />
+        )}
+      </span>
+      <span className="flex items-center gap-1.5 px-3 pb-2.5">
+        <span className="min-w-0 truncate text-xs font-semibold">{item.name}</span>
+      </span>
+      <span
+        className={`absolute left-2 top-2 rounded-full px-2 py-0.5 text-[11px] font-semibold ${why === "new" ? "bg-brand text-brand-ink" : "bg-surface text-ink shadow-chip"}`}
+      >
+        {why === "new" ? "New" : "Trending"}
+      </span>
+    </a>
   );
 }
 
