@@ -1,4 +1,5 @@
-import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
+import { ArrowLeft, Search, SlidersHorizontal, Sparkles, TrendingUp } from "lucide-react";
+import { tip } from "../components/Tooltip";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
@@ -200,11 +201,17 @@ export function GearApp() {
   }, [brand, brands]);
 
   /** Types for the Type list, with counts, in the order of src/lib/specs.ts. Empty until the catalog has types. */
+  /** Pedal types for the Type list, with counts (within the chosen brand), in the order of src/lib/specs.ts. */
   const types = useMemo(() => {
     const counts = new Map<string, number>();
-    for (const item of all) if (!brand || item.brand === brand) for (const t of itemTypes(item)) counts.set(t, (counts.get(t) ?? 0) + 1);
+    for (const item of manifest?.pedals ?? []) if (!brand || item.brand === brand) for (const t of itemTypes(item)) counts.set(t, (counts.get(t) ?? 0) + 1);
     return PEDAL_TYPES.filter((t) => counts.has(t)).map((t) => [t, counts.get(t)!] as [string, number]);
-  }, [all, brand]);
+  }, [manifest, brand]);
+  /** How many pedals and pedalboards (within the chosen brand), for the top and bottom of the Type list. */
+  const kindCounts = useMemo(() => {
+    const n = (list: CatalogItem[]) => (brand ? list.filter((c) => c.brand === brand).length : list.length);
+    return { pedal: n(manifest?.pedals ?? []), pedalboard: n(manifest?.pedalboards ?? []) };
+  }, [manifest, brand]);
 
   const index = useMemo(() => all.map(indexItem), [all]);
 
@@ -302,14 +309,14 @@ export function GearApp() {
 
   const searchBox = (
     <label className="relative block">
-      <Search size={16} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-icon" />
+      <Search size={18} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-icon" />
       <input
         type="search"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder={brand ? `Search ${brand}` : `Search ${noun}`}
         aria-label={`Search ${noun}`}
-        className="h-9 w-full rounded-control border border-chrome-line bg-surface pl-9 pr-3 text-sm outline-none focus:ring-2 focus:ring-brand"
+        className="h-11 w-full rounded-control border border-chrome-line bg-surface pl-10 pr-3 text-[15px] outline-none focus:ring-2 focus:ring-brand"
       />
     </label>
   );
@@ -317,16 +324,17 @@ export function GearApp() {
   const filterPanel = (
     <FilterPanel
       kind={kind}
-      setKind={(k) => {
-        setKind(k);
-        // Few pedal brands make boards, and boards have no types: start over.
-        clearFilters();
-      }}
-      sort={sort}
-      setSort={setSort}
+      kindCounts={kindCounts}
       types={types}
       type={type}
-      setType={setType}
+      // Pedals, a pedal type, or pedalboards: one list. Boards have no types, and few pedal brands make boards.
+      onType={(k, t) => {
+        if (k !== kind) {
+          setKind(k);
+          pickBrand(null);
+        }
+        setType(t);
+      }}
       brands={brands}
       brand={brand}
       setBrand={pickBrand}
@@ -368,47 +376,121 @@ export function GearApp() {
 
       {/* Kept while an item is open, so its filters and loaded cards are there on Back. */}
       <main id={open ? undefined : "content"} className={`page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
-        {brand ? (
-          <>
-            <button type="button" onClick={() => pickBrand(null)} className="flex items-center gap-1 text-[13px] font-semibold text-brand">
-              <ArrowLeft size={14} strokeWidth={2.5} />
-              <span className="underline-offset-2 hover:underline">All brands</span>
-            </button>
-            <h1 className="mt-1 text-2xl font-bold tracking-[-0.01em]">{brand}</h1>
-          </>
-        ) : (
-          <h1 className="text-2xl font-bold tracking-[-0.01em]">{type ?? "Gear"}</h1>
-        )}
-        <p className="mt-1 text-sm text-ink-muted">
-          {manifest
-            ? brand || type
-              ? `${total} ${type && brand ? `${type.toLowerCase()} ` : ""}${noun}${brand ? ` from ${brand}` : ""} in the catalog.`
-              : `Every pedal and pedalboard in the catalog: ${manifest.pedals.length.toLocaleString("en-US")} pedals and ${manifest.pedalboards.length.toLocaleString("en-US")} boards from ${new Set(manifest.pedals.map((p) => p.brand)).size.toLocaleString("en-US")} brands.`
-            : "Every pedal and pedalboard in the catalog."}
-        </p>
+        {/* The heading, with a big search beside it (under it on phones). */}
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-8">
+          <div className="min-w-0">
+            {brand && (
+              <button type="button" onClick={() => pickBrand(null)} className="mb-1 flex items-center gap-1 text-[13px] font-semibold text-brand">
+                <ArrowLeft size={14} strokeWidth={2.5} />
+                <span className="underline-offset-2 hover:underline">All brands</span>
+              </button>
+            )}
+            <h1 className="text-2xl font-bold tracking-[-0.01em]">{brand ?? type ?? "Gear"}</h1>
+            <p className="mt-1 text-sm text-ink-muted">
+              {manifest
+                ? brand || type
+                  ? `${total} ${type && brand ? `${type.toLowerCase()} ` : ""}${noun}${brand ? ` from ${brand}` : ""} in the catalog.`
+                  : `Every pedal and pedalboard in the catalog: ${manifest.pedals.length.toLocaleString("en-US")} pedals and ${manifest.pedalboards.length.toLocaleString("en-US")} boards from ${new Set(manifest.pedals.map((p) => p.brand)).size.toLocaleString("en-US")} brands.`
+                : "Every pedal and pedalboard in the catalog."}
+            </p>
+          </div>
+          <div className="w-full md:max-w-md">{searchBox}</div>
+        </div>
 
-        <div className="mt-6 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start lg:gap-8">
+        {/* Trending and new beside Popular brands, across the full width (stacked below laptop width). The brand column
+            stretches to the bento's height, its tiles sharing the rows evenly. */}
+        {shelves && (
+          <div className="mt-8 grid gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] xl:gap-6">
+            {shelves.picks.length > 0 && (
+              <section>
+                <div className="flex items-center justify-between gap-3">
+                  <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Trending and new</h2>
+                  {sort !== "new" && (
+                    <button type="button" onClick={() => setSort("new")} className="text-[13px] font-semibold text-brand hover:underline">
+                      See all new
+                    </button>
+                  )}
+                </div>
+                {/* Bento: tiles of a few sizes, packed densely. Photo first, name only; the full cards are below. */}
+                <div className="mt-3 grid grid-flow-dense auto-rows-[8.5rem] grid-cols-2 gap-3 sm:grid-cols-4 2xl:auto-rows-[10rem]">
+                  {shelves.picks.map((p, i) => (
+                    <BentoTile key={`${p.why}:${p.item.image}`} pick={p} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
+                  ))}
+                </div>
+              </section>
+            )}
+            {shelves.topBrands.length > 0 && (
+              <section className="flex flex-col">
+                <h2 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Popular brands</h2>
+                <div className="mt-3 grid flex-1 auto-rows-[3.5rem] grid-cols-2 gap-2 sm:grid-cols-4 xl:auto-rows-fr xl:grid-cols-2">
+                  {shelves.topBrands.map(({ brand: b, item }, i) => (
+                    // Phones show the top eight.
+                    <BrandTile key={b} brand={b} item={item} kind={kind} manifest={manifest!} onPick={() => pickBrand(b)} className={i >= 8 ? "max-sm:hidden" : ""} />
+                  ))}
+                </div>
+              </section>
+            )}
+          </div>
+        )}
+
+        {/* The grid, with the filters beside it from laptop width. */}
+        <div className={`${shelves ? "mt-12" : "mt-8"} lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start lg:gap-8`}>
           {/* Laptops and up: the filters in a sidebar that stays in view while the grid scrolls. */}
           <aside aria-label="Filters" className="hidden lg:sticky lg:top-[4.5rem] lg:-mx-1 lg:-mt-1 lg:block lg:pt-1 lg:max-h-[calc((100dvh-6rem)/var(--page-zoom,1))] lg:overflow-y-auto lg:px-1 lg:pb-4">
-            {searchBox}
             {filterPanel}
           </aside>
 
           <div className="min-w-0">
-            {/* Phones and tablets: search, with the rest of the filters behind a button. */}
-            <div className="flex gap-2 lg:hidden">
-              <div className="min-w-0 flex-1">{searchBox}</div>
+            {/* What's listed, then the controls: Filters (phones and tablets), sort and card size. */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+              {/* Phones: the card size shares the heading's row, so Filters and sort fit on the next. */}
+              <div className="flex min-w-0 flex-1 items-center gap-3 max-sm:basis-full">
+                <div className="min-w-0 flex-1">
+                {shelves ? (
+                  <h2 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>All {noun}</h2>
+                ) : (
+                  <p className="text-sm text-ink-muted">
+                    {manifest && items.length
+                      ? search.trim()
+                        ? partial
+                          ? `Nothing matched every word. Here are ${total} close matches.`
+                          : `${total} ${items.length === 1 ? noun.slice(0, -1) : noun} found.`
+                        : `${total} ${items.length === 1 ? noun.slice(0, -1) : noun}`
+                      : null}
+                  </p>
+                )}
+                </div>
+                <div className="sm:hidden">
+                  <DensitySwitch value={density} onChange={setDensity} />
+                </div>
+              </div>
               <button
                 type="button"
                 onClick={() => setFiltersOpen(true)}
-                className="press relative flex h-9 shrink-0 items-center gap-1.5 rounded-control border border-chrome-line bg-surface px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                className="press relative flex h-8 shrink-0 items-center gap-1.5 rounded-control bg-soft px-2.5 text-[13px] font-semibold outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand lg:hidden"
               >
-                <SlidersHorizontal size={15} />
+                <SlidersHorizontal size={14} />
                 Filters
                 {activeFilters > 0 && (
-                  <span className="grid size-5 place-items-center rounded-full bg-brand text-[11px] font-semibold text-brand-ink">{activeFilters}</span>
+                  <span className="grid size-[18px] place-items-center rounded-full bg-brand text-[11px] font-semibold text-brand-ink">{activeFilters}</span>
                 )}
               </button>
+              <div role="radiogroup" aria-label="Sort" className={`${segmented} shrink-0`}>
+                {(
+                  [
+                    ["az", "A–Z"],
+                    ["new", "Newest"],
+                    ["used", "Most used"],
+                  ] as const
+                ).map(([v, label]) => (
+                  <button key={v} type="button" role="radio" aria-checked={sort === v} onClick={() => setSort(v)} className={`${segment(sort === v)} px-2.5`}>
+                    {label}
+                  </button>
+                ))}
+              </div>
+              <div className="max-sm:hidden">
+                <DensitySwitch value={density} onChange={setDensity} />
+              </div>
             </div>
             {filtersOpen && (
               <Modal title="Filters" closeX onClose={() => setFiltersOpen(false)}>
@@ -423,94 +505,40 @@ export function GearApp() {
               </Modal>
             )}
 
-        {shelves && (
-          <>
-            {/* Trending and new beside Popular brands (stacked below laptop width). The brand column stretches to the
-                bento's height, its tiles sharing the rows evenly. */}
-            <div className="mt-8 grid gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] xl:gap-6">
-              {shelves.picks.length > 0 && (
-                <section>
-                  <div className="flex items-center justify-between gap-3">
-                    <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Trending and new</h2>
-                    {sort !== "new" && (
-                      <button type="button" onClick={() => setSort("new")} className="text-[13px] font-semibold text-brand hover:underline">
-                        See all new
-                      </button>
-                    )}
-                  </div>
-                  {/* Bento: tiles of a few sizes, packed densely. Photo first, name only; the full cards are below. */}
-                  <div className="mt-3 grid grid-flow-dense auto-rows-[8.5rem] grid-cols-2 gap-3 sm:grid-cols-4">
-                    {shelves.picks.map((p, i) => (
-                      <BentoTile key={`${p.why}:${p.item.image}`} pick={p} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
-                    ))}
-                  </div>
-                </section>
-              )}
-              {shelves.topBrands.length > 0 && (
-                <section className="flex flex-col">
-                  <h2 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Popular brands</h2>
-                  <div className="mt-3 grid flex-1 auto-rows-[3.5rem] grid-cols-2 gap-2 sm:grid-cols-4 xl:auto-rows-fr xl:grid-cols-2">
-                    {shelves.topBrands.map(({ brand: b, item }, i) => (
-                      // Phones show the top eight.
-                      <BrandTile key={b} brand={b} item={item} kind={kind} manifest={manifest!} onPick={() => pickBrand(b)} className={i >= 8 ? "max-sm:hidden" : ""} />
-                    ))}
-                  </div>
-                </section>
-              )}
+            <div className={`mt-4 grid ${GRID[density]}`}>
+              {manifest
+                ? items.slice(0, shown).map((item) => (
+                    <GearCard
+                      key={item.image}
+                      item={item}
+                      kind={kind}
+                      manifest={manifest}
+                      isNew={!!item.added && item.added >= newSince}
+                      onBrand={pickBrand}
+                      onOpen={openItem}
+                    />
+                  ))
+                : !error && Array.from({ length: 12 }, (_, i) => <CardSkeleton key={i} />)}
             </div>
-          </>
-        )}
+            <div ref={sentinel} />
 
-        {/* What's listed, and the card size. */}
-        <div className={`flex min-h-8 items-center justify-between gap-3 ${shelves ? "mt-10" : "mt-4"}`}>
-          {shelves ? (
-            <h2 className="text-lg font-bold tracking-[-0.01em]">All {noun}</h2>
-          ) : (
-            <p className="text-sm text-ink-muted">
-              {search.trim() && manifest && items.length
-                ? partial
-                  ? `Nothing matched every word. Here are ${total} close matches.`
-                  : `${total} ${items.length === 1 ? noun.slice(0, -1) : noun} found.`
-                : null}
-            </p>
-          )}
-          <DensitySwitch value={density} onChange={setDensity} />
-        </div>
-
-        <div className={`mt-3 grid ${GRID[density]}`}>
-          {manifest
-            ? items.slice(0, shown).map((item) => (
-                <GearCard
-                  key={item.image}
-                  item={item}
-                  kind={kind}
-                  manifest={manifest}
-                  isNew={!!item.added && item.added >= newSince}
-                  onBrand={pickBrand}
-                  onOpen={openItem}
-                />
-              ))
-            : !error && Array.from({ length: 12 }, (_, i) => <CardSkeleton key={i} />)}
-        </div>
-        <div ref={sentinel} />
-
-        {error && (
-          <p className="mt-10 text-center text-sm text-ink-muted">
-            The catalog didn't load.{" "}
-            <button type="button" className="font-semibold text-brand" onClick={() => void useCatalog.getState().load()}>
-              Try again
-            </button>
-          </p>
-        )}
-        {manifest && items.length === 0 && (
-          <p className="mx-auto mt-12 max-w-sm text-center text-sm text-ink-muted">
-            No {noun} match. Try another search or{" "}
-            <button type="button" className="font-semibold text-brand" onClick={clearFilters}>
-              clear the filters
-            </button>
-            .
-          </p>
-        )}
+            {error && (
+              <p className="mt-10 text-center text-sm text-ink-muted">
+                The catalog didn't load.{" "}
+                <button type="button" className="font-semibold text-brand" onClick={() => void useCatalog.getState().load()}>
+                  Try again
+                </button>
+              </p>
+            )}
+            {manifest && items.length === 0 && (
+              <p className="mx-auto mt-12 max-w-sm text-center text-sm text-ink-muted">
+                No {noun} match. Try another search or{" "}
+                <button type="button" className="font-semibold text-brand" onClick={clearFilters}>
+                  clear the filters
+                </button>
+                .
+              </p>
+            )}
           </div>
         </div>
       </main>
@@ -555,9 +583,7 @@ function GearCard({
         <div className="absolute inset-x-[10%] inset-y-[7%] flex items-center justify-center [container-type:size]">
           {src && <img src={src} srcSet={srcSet} sizes="(min-width: 768px) 15vw, 45vw" alt="" loading="lazy" style={style} className="object-contain" />}
         </div>
-        {isNew && (
-          <span className="absolute left-2 top-2 rounded-full bg-brand px-2 py-0.5 text-[11px] font-semibold text-brand-ink">New</span>
-        )}
+        {isNew && <MarkIcon why="new" />}
       </div>
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5">
         {/* Name first, then brand. The whole card opens the item (the link stretches over it); the brand button sits above. */}
@@ -601,24 +627,20 @@ const listRow = (on: boolean) =>
 /** Pedals or boards, sort, type and brand: the sidebar on laptops, the Filters sheet on phones and tablets. */
 function FilterPanel({
   kind,
-  setKind,
-  sort,
-  setSort,
+  kindCounts,
   types,
   type,
-  setType,
+  onType,
   brands,
   brand,
   setBrand,
   onClear,
 }: {
   kind: Kind;
-  setKind: (k: Kind) => void;
-  sort: GearSort;
-  setSort: (s: GearSort) => void;
+  kindCounts: Record<Kind, number>;
   types: [string, number][];
   type: string | null;
-  setType: (t: string | null) => void;
+  onType: (kind: Kind, type: string | null) => void;
   brands: [string, number][];
   brand: string | null;
   setBrand: (b: string | null) => void;
@@ -629,58 +651,40 @@ function FilterPanel({
     const q = find.trim().toLowerCase();
     return q ? brands.filter(([b]) => b.toLowerCase().includes(q)) : brands;
   }, [brands, find]);
+  const count = (n: number) => <span className="shrink-0 text-xs tabular-nums text-ink-muted">{n.toLocaleString("en-US")}</span>;
   return (
-    <div className="flex flex-col gap-5 pt-4 lg:pt-5">
-      <div className="grid gap-4">
-        <div>
-          <h3 className={filterHeading}>Show</h3>
-          <div role="radiogroup" aria-label="Show" className={segmented}>
-            {(
-              [
-                ["pedal", "Pedals"],
-                ["pedalboard", "Boards"],
-              ] as const
-            ).map(([v, label]) => (
-              <button key={v} type="button" role="radio" aria-checked={kind === v} onClick={() => setKind(v)} className={segment(kind === v)}>
-                {label}
+    <div className="flex flex-col gap-5 pt-1">
+      {/* Every pedal, a pedal type, or pedalboards. */}
+      <div>
+        <h3 className={filterHeading}>Type</h3>
+        <div role="radiogroup" aria-label="Type" className="grid gap-0.5">
+          <button type="button" role="radio" aria-checked={kind === "pedal" && type === null} onClick={() => onType("pedal", null)} className={listRow(kind === "pedal" && type === null)}>
+            <span className="truncate">All pedals</span>
+            {count(kindCounts.pedal)}
+          </button>
+          {types.map(([t, n]) => {
+            const on = kind === "pedal" && type === t;
+            return (
+              <button key={t} type="button" role="radio" aria-checked={on} onClick={() => onType("pedal", on ? null : t)} className={`${listRow(on)} pl-4`}>
+                <span className="truncate">{t}</span>
+                {count(n)}
               </button>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h3 className={filterHeading}>Sort</h3>
-          <div role="radiogroup" aria-label="Sort" className={segmented}>
-            {(
-              [
-                ["az", "A–Z"],
-                ["new", "Newest"],
-                ["used", "Most used"],
-              ] as const
-            ).map(([v, label]) => (
-              <button key={v} type="button" role="radio" aria-checked={sort === v} onClick={() => setSort(v)} className={segment(sort === v)}>
-                {label}
-              </button>
-            ))}
-          </div>
+            );
+          })}
+          {kindCounts.pedalboard > 0 && (
+            <button
+              type="button"
+              role="radio"
+              aria-checked={kind === "pedalboard"}
+              onClick={() => onType("pedalboard", null)}
+              className={`${listRow(kind === "pedalboard")} mt-1`}
+            >
+              <span className="truncate">Pedalboards</span>
+              {count(kindCounts.pedalboard)}
+            </button>
+          )}
         </div>
       </div>
-
-      {types.length > 0 && (
-        <div>
-          <h3 className={filterHeading}>Type</h3>
-          <div role="radiogroup" aria-label="Type" className="grid gap-0.5">
-            <button type="button" role="radio" aria-checked={type === null} onClick={() => setType(null)} className={listRow(type === null)}>
-              All types
-            </button>
-            {types.map(([t, n]) => (
-              <button key={t} type="button" role="radio" aria-checked={type === t} onClick={() => setType(type === t ? null : t)} className={listRow(type === t)}>
-                <span className="truncate">{t}</span>
-                <span className="shrink-0 text-xs tabular-nums text-ink-muted">{n.toLocaleString("en-US")}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* The brand list scrolls on its own; past it, the whole sidebar scrolls. */}
       <div>
@@ -718,7 +722,22 @@ function FilterPanel({
   );
 }
 
-/** One bento tile: the photo, fit to the tile, and just the name, with a small Trending or New mark. */
+/** New (a brand sparkle) or Trending (a tangerine arrow) as a small round icon in a card's corner. */
+function MarkIcon({ why }: { why: "new" | "trending" }) {
+  const label = why === "new" ? "New" : "Trending";
+  return (
+    <span
+      role="img"
+      aria-label={label}
+      {...tip(label)}
+      className={`absolute left-2 top-2 z-10 grid size-6 place-items-center rounded-full ${why === "new" ? "bg-brand text-brand-ink" : "bg-surface text-tangerine shadow-chip"}`}
+    >
+      {why === "new" ? <Sparkles size={13} strokeWidth={2.25} aria-hidden /> : <TrendingUp size={13} strokeWidth={2.5} aria-hidden />}
+    </span>
+  );
+}
+
+/** One bento tile: the photo, fit to the tile, and just the name, with a small Trending or New icon. */
 function BentoTile({
   pick,
   kind,
@@ -761,11 +780,7 @@ function BentoTile({
       <span className="flex items-center gap-1.5 px-3 pb-2.5">
         <span className="min-w-0 truncate text-xs font-semibold">{item.name}</span>
       </span>
-      <span
-        className={`absolute left-2 top-2 rounded-full px-2 py-0.5 text-[11px] font-semibold ${why === "new" ? "bg-brand text-brand-ink" : "bg-surface text-ink shadow-chip"}`}
-      >
-        {why === "new" ? "New" : "Trending"}
-      </span>
+      <MarkIcon why={why} />
     </a>
   );
 }

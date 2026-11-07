@@ -4,18 +4,20 @@
 reads the same `catalog.json` as the playground, so it needs no database pieces of its own. "Most used" uses the
 `trending_gear` RPC (adds in the last year), like the search panel.
 
-- **Filters** (Pedals/Boards, sort, type, brand) sit in a left sidebar from laptop width (`lg`), and in a Filters
-  sheet with a count badge on phones and tablets. Search sits above them. The Type list only shows types the
-  catalog has, counted within the chosen brand.
+- **Layout:** the heading with a large search beside it; then, over the full list, Trending and new and Popular brands
+  across the full width; then the grid with its filters. The bar above the grid holds the sort and card size (and a
+  Filters button below laptop width). The filters (Type and Brand) sit in a sticky left sidebar from laptop width and in
+  a Filters sheet below it. The Type list is All pedals, each pedal type, then Pedalboards (there's no separate
+  Pedals/Boards switch); it only shows types the catalog has, counted within the chosen brand.
 - **Filters live in the URL**, so a brand page is a link: `/gear/?brand=BOSS`, `/gear/?type=Fuzz`, `/gear/?kind=boards`,
   `/gear/?q=big+sky`, `/gear/?sort=new` or `sort=used`. A brand typed in another case is fixed to the catalog's.
 - **Pedals share one scale**, set by the card: a pedal 5.2″ tall (bigger than three in four pedals) fills the
   photo area's height (`FILL_INCHES`, sized in container units, so it follows the card size), and bigger ones are fit
   to it. Boards are fit to the card. Cards load the full photo when the 128px thumbnail would look soft.
-- **New** marks items added in the last 30 days.
+- **New** (a brand sparkle icon on the card) marks items added in the last 30 days.
 - The grid shows 60 items and adds 60 more as you scroll.
 - **Over the full list** (no brand, type or search): **Trending and new**, a bento of 11 photo-first tiles taking turns between this month's most added
-  (`trending_gear`) and the newest additions. Tiles show only the photo, the name and a Trending or New mark, so they
+  (`trending_gear`) and the newest additions. Tiles show only the photo, the name and a Trending (tangerine arrow) or New (brand sparkle) icon, so they
   read differently from the full cards below; their sizes fill the grid exactly at 4 and 2 columns. Beside it on laptops
   (below it on smaller screens), **Popular brands**: 16 rounded tiles (8 on phones), each with a photo of the brand's
   most added item, stretching to the bento's height.
