@@ -382,3 +382,18 @@ select {
     display: block;
   }
 }
+
+/*
+ * Capped-width pages (Explore, Gear, the editor) put their content in .page-main, up to 1600px wide. On very wide
+ * screens it's drawn 12.5% larger, about 2px more on body text. --page-zoom lets anything sized in viewport units
+ * inside it divide the zoom back out (Gear's sidebar).
+ */
+.page-main {
+  --page-zoom: 1;
+}
+@media (min-width: 1880px) {
+  .page-main {
+    --page-zoom: 1.125;
+    zoom: var(--page-zoom);
+  }
+}

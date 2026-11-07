@@ -21,9 +21,9 @@ const TYPE_LABELS: Record<PlaygroundType, string> = {
 
 /** Columns for each card size, from phones up. Medium is the original grid. */
 const GRID: Record<Density, string> = {
-  large: "grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3",
-  medium: "grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4",
-  small: "grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5",
+  large: "grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4",
+  medium: "grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5",
+  small: "grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6",
 };
 
 const chip = (on: boolean) =>
@@ -171,7 +171,7 @@ export function GalleryApp() {
 
       {/* Opening a board saves this spot, so its "Back to Gallery" returns here. */}
       <main
-        className="mx-auto max-w-6xl px-4 pb-16 pt-8"
+        className="page-main mx-auto max-w-[1600px] px-4 pb-16 pt-8"
         onClickCapture={(e) => {
           if (!(e.target as HTMLElement).closest('a[href^="/?p="]')) return;
           saveGalleryReturn({ sort, type, query, count: boards.length, scroll: scroller.current?.scrollTop ?? 0 });

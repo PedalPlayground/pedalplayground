@@ -83,7 +83,7 @@ export function ItemPage({
         Back to Gear
       </button>
 
-      <div className="mt-4 grid gap-6 md:grid-cols-[minmax(0,1fr)_320px] md:gap-8">
+      <div className="mt-4 grid gap-6 md:grid-cols-[minmax(0,1fr)_320px] 2xl:grid-cols-[minmax(0,1fr)_380px] md:gap-8">
         {/* The photo at real proportions on the canvas color, shrunk to fit. */}
         <div className="flex min-h-[260px] items-center justify-center overflow-hidden rounded-panel bg-canvas p-6 md:min-h-[420px]">
           {src && (
@@ -178,7 +178,7 @@ function Related({ title, action, children }: { title: string; action?: ReactNod
         <h2 className="text-lg font-bold tracking-[-0.01em]">{title}</h2>
         {action}
       </div>
-      <div className="mt-4 grid grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">{children}</div>
+      <div className="mt-4 grid grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">{children}</div>
     </section>
   );
 }

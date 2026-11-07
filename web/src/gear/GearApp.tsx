@@ -61,9 +61,9 @@ function writeFilters(f: Filters) {
 const PAGE = 60;
 /** Columns for each card size, from phones up (next to the sidebar from laptop width). Medium is the original. */
 const GRID: Record<Density, string> = {
-  large: "grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4",
-  medium: "grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 xl:grid-cols-5",
-  small: "grid-cols-3 gap-2 min-[560px]:grid-cols-4 md:grid-cols-5 xl:grid-cols-7",
+  large: "grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5",
+  medium: "grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6",
+  small: "grid-cols-3 gap-2 min-[560px]:grid-cols-4 md:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8",
 };
 /** Pixels per inch for pedal photos at each card size, so pedals stay to scale with each other. */
 const SCALE: Record<Density, number> = { large: 22, medium: 16, small: 11 };
@@ -308,7 +308,7 @@ export function GearApp() {
       <PageHeader current="gear" dialog={dialog} setDialog={setDialog} />
 
       {open && (
-        <main className="mx-auto max-w-6xl px-4 pb-16 pt-6">
+        <main className="page-main mx-auto max-w-[1600px] px-4 pb-16 pt-6">
           {openEntry && manifest ? (
             <ItemPage
               kind={open.kind}
@@ -335,7 +335,7 @@ export function GearApp() {
       )}
 
       {/* Kept while an item is open, so its filters and loaded cards are there on Back. */}
-      <main className={`mx-auto max-w-7xl px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
+      <main className={`page-main mx-auto max-w-[1600px] px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
         {brand ? (
           <>
             <button type="button" onClick={() => pickBrand(null)} className="text-[13px] font-semibold text-brand hover:underline">
@@ -356,7 +356,7 @@ export function GearApp() {
 
         <div className="mt-6 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start lg:gap-8">
           {/* Laptops and up: the filters in a sidebar that stays in view while the grid scrolls. */}
-          <aside aria-label="Filters" className="hidden lg:sticky lg:top-[4.5rem] lg:-mx-1 lg:block lg:max-h-[calc(100dvh-6rem)] lg:overflow-y-auto lg:px-1 lg:pb-4">
+          <aside aria-label="Filters" className="hidden lg:sticky lg:top-[4.5rem] lg:-mx-1 lg:block lg:max-h-[calc((100dvh-6rem)/var(--page-zoom,1))] lg:overflow-y-auto lg:px-1 lg:pb-4">
             {searchBox}
             {filterPanel}
           </aside>
