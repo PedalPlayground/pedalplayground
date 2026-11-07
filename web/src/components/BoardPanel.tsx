@@ -27,7 +27,7 @@ import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
-import { RoleBadges, teamRole, nameLink } from "./RoleBadge";
+import { RoleBadges, teamRole, nameLink, squiggle } from "./RoleBadge";
 import { tip } from "./Tooltip";
 
 const TYPE_LABELS = Object.fromEntries(PLAYGROUND_TYPES) as Record<string, string>;
@@ -559,7 +559,7 @@ function BackToGallery() {
       className="mx-2.5 mt-2 flex h-8 w-fit items-center gap-1.5 rounded-control px-1.5 text-[13px] font-semibold text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
     >
       <ArrowLeft size={14} strokeWidth={2.25} />
-      {back ? "Back to Gallery" : "Browse the Gallery"}
+      <span className={squiggle}>{back ? "Back to Gallery" : "Browse the Gallery"}</span>
     </a>
   );
 }

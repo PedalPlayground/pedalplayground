@@ -1,9 +1,9 @@
-import { Check, Info, Plus, Share2, Trash2, TriangleAlert, X } from "lucide-react";
+import { ArrowLeft, Check, Info, Plus, Share2, Trash2, TriangleAlert, X } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { DensitySwitch, type Density } from "../components/DensitySwitch";
 import { fieldError, fieldHelp, fieldInput, fieldLabel, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { Meta } from "../components/Meta";
-import { RoleBadges, nameLink } from "../components/RoleBadge";
+import { RoleBadges, nameLink, squiggle } from "../components/RoleBadge";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { rowClass } from "../components/ContextMenu";
 import { Segmented } from "../components/SettingsMenu";
@@ -321,9 +321,25 @@ export function DesignApp() {
             </Demo>
           </Group>
 
+          <Group title="The squiggle" note="A wavy underline, used sparingly so it stays a treat: on hover for linked names, and always on for the New badge and Back links.">
+            <Demo label="Name link" code="nameLink (hover)">
+              <a href="#components" className={`text-sm font-medium text-ink-muted hover:text-ink ${nameLink}`}>
+                BOSS
+              </a>
+            </Demo>
+            <Demo label="Back link" code="squiggle">
+              <a href="#components" className="flex items-center gap-1 text-[13px] font-semibold text-brand">
+                <ArrowLeft size={14} strokeWidth={2.5} />
+                <span className={squiggle}>Back to Gear</span>
+              </a>
+            </Demo>
+          </Group>
+
           <Group title="Badges">
             <Demo label="New" code="bg-brand text-brand-ink">
-              <span className="rounded-full bg-brand px-2 py-0.5 text-[11px] font-semibold text-brand-ink">New</span>
+              <span className="rounded-full bg-brand px-2 pb-1 pt-0.5 text-[11px] font-semibold leading-3 text-brand-ink">
+                <span className={`${squiggle} underline-offset-2`}>New</span>
+              </span>
             </Demo>
             <Demo label="Count" code="Filters badge">
               <span className="grid size-5 place-items-center rounded-full bg-brand text-[11px] font-semibold text-brand-ink">2</span>

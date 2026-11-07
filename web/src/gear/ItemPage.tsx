@@ -5,7 +5,7 @@ import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from ".
 import { boardUrl, fetchFeaturedOn, type FeaturedBoard } from "../lib/gallery";
 import { handoffHref } from "../lib/handoff";
 import { formatMa } from "../lib/specs";
-import { nameLink, RoleBadges } from "../components/RoleBadge";
+import { nameLink, RoleBadges, squiggle } from "../components/RoleBadge";
 import type { CatalogItem } from "../lib/types";
 
 /** Link to one item's page. Boards say so, since a pedal and a board can share an image key. */
@@ -91,9 +91,9 @@ export function ItemPage({
 
   return (
     <>
-      <button type="button" onClick={onBack} className="flex items-center gap-1 text-[13px] font-semibold text-brand hover:underline">
+      <button type="button" onClick={onBack} className="flex items-center gap-1 text-[13px] font-semibold text-brand">
         <ArrowLeft size={14} strokeWidth={2.5} />
-        Back to Gear
+        <span className={squiggle}>Back to Gear</span>
       </button>
 
       <div className="mt-4 grid gap-6 md:grid-cols-[minmax(0,1fr)_320px] 2xl:grid-cols-[minmax(0,1fr)_380px] md:gap-8">

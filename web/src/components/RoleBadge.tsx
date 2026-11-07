@@ -2,11 +2,14 @@ import { BadgeCheck } from "lucide-react";
 import { tip } from "./Tooltip";
 
 /**
- * A name that links somewhere: a username (their boards in Explore) or a brand (its Gear page). A soft squiggly
- * underline that firms up on hover. Usernames are shown without an @.
+ * The site's squiggle: a wavy underline, used sparingly so it stays a treat.
+ *
+ * nameLink: a name that links somewhere, a username (their boards in Explore) or a brand (its Gear page). The squiggle
+ * shows on hover and keyboard focus only. Usernames are shown without an @.
+ * squiggle: always on, for a handful of accents: the New badge and the Back links on Gear and shared boards.
  */
-export const nameLink =
-  "underline decoration-wavy decoration-1 underline-offset-[3px] decoration-ink-muted/45 transition-colors hover:decoration-current";
+export const nameLink = "decoration-wavy decoration-1 underline-offset-[3px] hover:underline focus-visible:underline";
+export const squiggle = "underline decoration-wavy decoration-1 underline-offset-[3px]";
 
 /** Accounts that speak for Pedal Playground, by username (lowercase), and the label their posts carry. */
 const TEAM: Record<string, string> = { trav: "Creator" };

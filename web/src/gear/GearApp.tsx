@@ -1,4 +1,4 @@
-import { Search, SlidersHorizontal } from "lucide-react";
+import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
@@ -10,7 +10,7 @@ import { fetchGearUsage, fetchTrending, type TrendingEntry } from "../lib/trendi
 import type { CatalogItem } from "../lib/types";
 import { useAuth } from "../store/auth";
 import { ItemPage, itemHref } from "./ItemPage";
-import { nameLink } from "../components/RoleBadge";
+import { nameLink, squiggle } from "../components/RoleBadge";
 import { useCatalog } from "../store/catalog";
 
 type GearSort = "az" | "new" | "used";
@@ -342,8 +342,9 @@ export function GearApp() {
       <main id={open ? undefined : "content"} className={`page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
         {brand ? (
           <>
-            <button type="button" onClick={() => pickBrand(null)} className="text-[13px] font-semibold text-brand hover:underline">
-              All brands
+            <button type="button" onClick={() => pickBrand(null)} className="flex items-center gap-1 text-[13px] font-semibold text-brand">
+              <ArrowLeft size={14} strokeWidth={2.5} />
+              <span className={squiggle}>All brands</span>
             </button>
             <h1 className="mt-1 text-2xl font-bold tracking-[-0.01em]">{brand}</h1>
           </>
@@ -517,7 +518,11 @@ function GearCard({
         <div className="absolute inset-2 flex items-center justify-center [container-type:size]">
           {src && <img src={src} srcSet={srcSet} sizes="(min-width: 768px) 15vw, 45vw" alt="" loading="lazy" style={style} className="object-contain" />}
         </div>
-        {isNew && <span className="absolute left-2 top-2 rounded-full bg-brand px-2 py-0.5 text-[11px] font-semibold text-brand-ink">New</span>}
+        {isNew && (
+          <span className="absolute left-2 top-2 rounded-full bg-brand px-2 pb-1 pt-0.5 text-[11px] font-semibold leading-3 text-brand-ink">
+            <span className={`${squiggle} underline-offset-2`}>New</span>
+          </span>
+        )}
       </div>
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5">
         {/* Name first, then brand. The whole card opens the item (the link stretches over it); the brand button sits above. */}
