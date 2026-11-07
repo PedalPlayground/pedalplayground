@@ -722,16 +722,16 @@ function FilterPanel({
   );
 }
 
-/** New (a flamingo dot) or Trending (a tangerine up triangle): a small colored mark in a card's corner. */
+/** New (a flamingo dot) or Trending (a tangerine up chevron): a small colored mark in a card's corner. */
 function MarkIcon({ why }: { why: "new" | "trending" }) {
   const label = why === "new" ? "New" : "Trending";
   return (
     <span role="img" aria-label={label} {...tip(label)} className="absolute left-2 top-2 z-10 grid size-5 place-items-center">
       {why === "new" ? (
-        <span className="size-2.5 rounded-full bg-guide" aria-hidden />
+        <span className="size-[7px] rounded-full bg-guide" aria-hidden />
       ) : (
-        <svg width="12" height="10" viewBox="0 0 12 10" className="text-tangerine" aria-hidden>
-          <path d="M6 0.6a1 1 0 0 1 .86.49l4.4 7.4A1 1 0 0 1 10.4 10H1.6a1 1 0 0 1-.86-1.51l4.4-7.4A1 1 0 0 1 6 .6Z" fill="currentColor" />
+        <svg width="9" height="6" viewBox="0 0 9 6" className="text-tangerine" aria-hidden>
+          <path d="M1 5 4.5 1.5 8 5" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       )}
     </span>

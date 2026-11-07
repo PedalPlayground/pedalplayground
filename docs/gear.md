@@ -17,7 +17,7 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
 - **New** (a flamingo dot in the card's corner) marks items added in the last 30 days.
 - The grid shows 60 items and adds 60 more as you scroll.
 - **Over the full list** (no brand, type or search): **Trending and new**, a bento of 11 photo-first tiles taking turns between this month's most added
-  (`trending_gear`) and the newest additions. Tiles show only the photo, the name and a Trending (tangerine triangle) or New (flamingo dot) mark, so they
+  (`trending_gear`) and the newest additions. Tiles show only the photo, the name and a Trending (tangerine up chevron) or New (flamingo dot) mark, so they
   read differently from the full cards below; their sizes fill the grid exactly at 4 and 2 columns. Beside it on laptops
   (below it on smaller screens), **Popular brands**: 16 rounded tiles (8 on phones), each with a photo of the brand's
   most added item, stretching to the bento's height.
