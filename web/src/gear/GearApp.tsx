@@ -722,11 +722,11 @@ function FilterPanel({
   );
 }
 
-/** New (the word NEW, small and bold, in jade) or Trending (a tangerine arrow): a colored mark in a card's corner. */
+/** New (the word NEW, small and bold, in the brand color) or Trending (a tangerine arrow): a colored mark in a card's corner. */
 function MarkIcon({ why }: { why: "new" | "trending" }) {
   if (why === "new")
     return (
-      <span className="absolute left-2.5 top-2.5 z-10 text-[10px] font-bold leading-[17px] tracking-[0.08em] text-positive">NEW</span>
+      <span className="absolute left-2.5 top-2.5 z-10 text-[10px] font-bold leading-[17px] tracking-[0.08em] text-brand">NEW</span>
     );
   return (
     <span role="img" aria-label="Trending" {...tip("Trending")} className="absolute left-2.5 top-2.5 z-10 flex text-tangerine">
