@@ -520,7 +520,7 @@ function GearCard({
         </div>
         {isNew && (
           <span className="absolute left-2 top-2 rounded-full bg-brand px-2 pb-1 pt-0.5 text-[11px] font-semibold leading-3 text-brand-ink">
-            <span className={`${squiggle} [--squiggle-offset:1px]`}>New</span>
+            <span className={`${squiggle} [--squiggle-offset:0px]`}>New</span>
           </span>
         )}
       </div>
