@@ -5,8 +5,8 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
 `trending_gear` RPC (adds in the last year), like the search panel.
 
 - **Layout:** the heading with a large search beside it; then, over the full list, Trending and new and Popular brands
-  across the full width; then the grid with its filters. The bar above the grid holds the sort and card size (and a
-  Filters button below laptop width). The filters (Type and Brand) sit in a sticky left sidebar from laptop width and in
+  across the full width; then the grid with its filters. A full-width bar above the sidebar and grid holds the heading (All pedals, or
+  what's filtered) with a result count, the sort and card size (and a Filters button below laptop width). The filters (Type and Brand) sit in a sticky left sidebar from laptop width and in
   a Filters sheet below it. The Type list is All pedals, each pedal type, then Pedalboards (there's no separate
   Pedals/Boards switch); it only shows types the catalog has, counted within the chosen brand.
 - **Filters live in the URL** and each new brand, type, kind or sort is a history step (search text isn't), so Back

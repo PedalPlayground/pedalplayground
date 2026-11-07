@@ -322,9 +322,9 @@ export function DesignApp() {
             </Demo>
           </Group>
 
-          <Group title="The squiggle" note="An even wave, used sparingly so it stays a treat: as a rule after section headings only. Never on links or badges.">
+          <Group title="The squiggle" note="An even wave, used sparingly so it stays a treat: only after the Newly added heading on Gear, in the brand color. Never on links, badges or other headings.">
             <div className="col-span-full">
-              <h4 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Trending this month</h4>
+              <h4 className={`text-lg font-bold tracking-[-0.01em] text-brand ${squiggleRule}`}>Newly added</h4>
             </div>
           </Group>
 
@@ -417,7 +417,7 @@ const RADII: [string, string, string][] = [
 function Section({ id, title, lead, children }: { id: string; title: string; lead: string; children: ReactNode }) {
   return (
     <section id={id} className="mt-14 scroll-mt-20">
-      <h2 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>{title}</h2>
+      <h2 className="text-lg font-bold tracking-[-0.01em]">{title}</h2>
       <p className="mt-1 max-w-2xl text-sm text-ink-muted">{lead}</p>
       <div className="mt-5 grid gap-8">{children}</div>
     </section>

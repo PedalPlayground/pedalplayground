@@ -5,7 +5,7 @@ import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from ".
 import { boardUrl, fetchFeaturedOn, type FeaturedBoard } from "../lib/gallery";
 import { handoffHref } from "../lib/handoff";
 import { formatMa } from "../lib/specs";
-import { nameLink, RoleBadges, squiggleRule } from "../components/RoleBadge";
+import { nameLink, RoleBadges } from "../components/RoleBadge";
 import type { CatalogItem } from "../lib/types";
 
 /** Link to one item's page. Boards say so, since a pedal and a board can share an image key. */
@@ -228,7 +228,7 @@ function Related({ title, action, children, cols }: { title: string; action?: Re
   return (
     <section className="mt-12">
       <div className="flex items-center justify-between gap-3">
-        <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>{title}</h2>
+        <h2 className="min-w-0 flex-1 text-lg font-bold tracking-[-0.01em]">{title}</h2>
         {action}
       </div>
       <div className={`mt-4 grid gap-3 ${cols ?? "grid-cols-2 min-[560px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"}`}>{children}</div>

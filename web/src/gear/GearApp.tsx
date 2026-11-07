@@ -459,7 +459,7 @@ export function GearApp() {
             <div className="min-w-0">
               {shelves.picks.length > 0 && (
                 <section>
-                  <h2 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Trending gear</h2>
+                  <h2 className="text-lg font-bold tracking-[-0.01em]">Trending gear</h2>
                   <div className="mt-3 grid grid-flow-dense auto-rows-[8.5rem] grid-cols-2 gap-3 sm:grid-cols-4 2xl:auto-rows-[10rem]">
                     {shelves.picks.map(({ item, why }, i) => (
                       <BentoTile key={item.image} item={item} why={why} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
@@ -487,7 +487,7 @@ export function GearApp() {
             </div>
             {shelves.topBrands.length > 0 && (
               <section className="flex flex-col">
-                <h2 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Popular brands</h2>
+                <h2 className="text-lg font-bold tracking-[-0.01em]">Popular brands</h2>
                 <div className="mt-3 grid flex-1 auto-rows-[3.5rem] grid-cols-2 gap-2 sm:grid-cols-4 xl:auto-rows-fr xl:grid-cols-2">
                   {shelves.topBrands.map(({ brand: b, item, count }, i) => (
                     // Phones show the top eight.
@@ -499,65 +499,61 @@ export function GearApp() {
           </div>
         )}
 
+        {/* What's listed and how many, then the controls (Filters on phones and tablets, sort, card size), across the
+            full width above the sidebar and the grid. */}
+        <div className={`${shelves ? "mt-12" : "mt-8"} flex flex-wrap items-center gap-x-3 gap-y-2`}>
+          {/* Phones: the card size shares the heading's row, so Filters and sort fit on the next. */}
+          <div className="flex min-w-0 flex-1 items-center gap-3 max-sm:basis-full">
+            <h2 className="flex min-w-0 flex-1 items-baseline gap-2.5">
+              <span className="truncate text-lg font-bold tracking-[-0.01em]">{browsing ? `All ${noun}` : search.trim() ? "Results" : `${type ?? brand ?? "All"} ${type || !brand ? "" : noun}`.trim()}</span>
+              {manifest && (
+                <span className="shrink-0 text-sm tabular-nums text-ink-muted">
+                  {total} {items.length === 1 ? noun.slice(0, -1) : noun}
+                  {partial && search.trim() ? ", close matches" : ""}
+                </span>
+              )}
+            </h2>
+            <div className="sm:hidden">
+              <DensitySwitch value={density} onChange={setDensity} />
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => setFiltersOpen(true)}
+            className="press relative flex h-8 shrink-0 items-center gap-1.5 rounded-control bg-soft px-2.5 text-[13px] font-semibold outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand lg:hidden"
+          >
+            <SlidersHorizontal size={14} />
+            Filters
+            {activeFilters > 0 && (
+              <span className="grid size-[18px] place-items-center rounded-full bg-brand text-[11px] font-semibold text-brand-ink">{activeFilters}</span>
+            )}
+          </button>
+          <div role="radiogroup" aria-label="Sort" className={`${segmented} shrink-0`}>
+            {(
+              [
+                ["az", "A–Z"],
+                ["new", "Newest"],
+                ["used", "Most used"],
+              ] as const
+            ).map(([v, label]) => (
+              <button key={v} type="button" role="radio" aria-checked={sort === v} onClick={() => setSort(v)} className={`${segment(sort === v)} px-2.5`}>
+                {label}
+              </button>
+            ))}
+          </div>
+          <div className="max-sm:hidden">
+            <DensitySwitch value={density} onChange={setDensity} />
+          </div>
+        </div>
+
         {/* The grid, with the filters beside it from laptop width. */}
-        <div className={`${shelves ? "mt-12" : "mt-8"} lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start lg:gap-8`}>
+        <div className={`mt-4 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start lg:gap-8`}>
           {/* Laptops and up: the filters in a sidebar that stays in view while the grid scrolls. */}
           <aside aria-label="Filters" className="hidden lg:sticky lg:top-[4.5rem] lg:-mx-1 lg:-mt-1 lg:block lg:pt-1 lg:max-h-[calc((100dvh-6rem)/var(--page-zoom,1))] lg:overflow-y-auto lg:px-1 lg:pb-4">
             {filterPanel}
           </aside>
 
           <div className="min-w-0">
-            {/* What's listed, then the controls: Filters (phones and tablets), sort and card size. */}
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-              {/* Phones: the card size shares the heading's row, so Filters and sort fit on the next. */}
-              <div className="flex min-w-0 flex-1 items-center gap-3 max-sm:basis-full">
-                <div className="min-w-0 flex-1">
-                {shelves ? (
-                  <h2 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>All {noun}</h2>
-                ) : (
-                  <p className="text-sm text-ink-muted">
-                    {manifest && items.length
-                      ? search.trim()
-                        ? partial
-                          ? `Nothing matched every word. Here are ${total} close matches.`
-                          : `${total} ${items.length === 1 ? noun.slice(0, -1) : noun} found.`
-                        : `${total} ${items.length === 1 ? noun.slice(0, -1) : noun}`
-                      : null}
-                  </p>
-                )}
-                </div>
-                <div className="sm:hidden">
-                  <DensitySwitch value={density} onChange={setDensity} />
-                </div>
-              </div>
-              <button
-                type="button"
-                onClick={() => setFiltersOpen(true)}
-                className="press relative flex h-8 shrink-0 items-center gap-1.5 rounded-control bg-soft px-2.5 text-[13px] font-semibold outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand lg:hidden"
-              >
-                <SlidersHorizontal size={14} />
-                Filters
-                {activeFilters > 0 && (
-                  <span className="grid size-[18px] place-items-center rounded-full bg-brand text-[11px] font-semibold text-brand-ink">{activeFilters}</span>
-                )}
-              </button>
-              <div role="radiogroup" aria-label="Sort" className={`${segmented} shrink-0`}>
-                {(
-                  [
-                    ["az", "A–Z"],
-                    ["new", "Newest"],
-                    ["used", "Most used"],
-                  ] as const
-                ).map(([v, label]) => (
-                  <button key={v} type="button" role="radio" aria-checked={sort === v} onClick={() => setSort(v)} className={`${segment(sort === v)} px-2.5`}>
-                    {label}
-                  </button>
-                ))}
-              </div>
-              <div className="max-sm:hidden">
-                <DensitySwitch value={density} onChange={setDensity} />
-              </div>
-            </div>
             {filtersOpen && (
               <Modal title="Filters" closeX onClose={() => setFiltersOpen(false)}>
                 {filterPanel}
@@ -571,7 +567,7 @@ export function GearApp() {
               </Modal>
             )}
 
-            <div className={`mt-4 grid ${GRID[density]}`}>
+            <div className={`grid ${GRID[density]}`}>
               {manifest
                 ? items.slice(0, shown).map((item) => (
                     <GearCard

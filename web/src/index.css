@@ -451,8 +451,8 @@ select {
 
 /*
  * The squiggle: an even, smooth wave, drawn as a masked pseudo-element in the text color (faded).
- * .squiggle-rule: after a section heading, a wave runs from just past the words to the end of the row, centered on
- * the text (Gear shelves, pedal page sections, the design page). Make the heading a flex item that can grow.
+ * .squiggle-rule: after a heading, a wave runs from just past the words to the end of the row, centered on the text.
+ * Used only after Gear's Newly added heading. Make the heading a flex item that can grow.
  */
 .squiggle-rule {
   display: flex;
