@@ -4,6 +4,7 @@ import { affiliateProps, buyLinks, DISCLOSURE } from "../lib/affiliate";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { handoffHref } from "../lib/handoff";
 import { formatMa } from "../lib/specs";
+import { nameLink } from "../components/RoleBadge";
 import type { CatalogItem } from "../lib/types";
 
 /** Link to one item's page. Boards say so, since a pedal and a board can share an image key. */
@@ -112,7 +113,7 @@ export function ItemPage({
           <button
             type="button"
             onClick={() => onBrand(item.brand)}
-            className="mt-1 text-sm font-medium text-ink-muted outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
+            className={`mt-1 text-sm font-medium text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand ${nameLink}`}
           >
             {item.brand}
           </button>

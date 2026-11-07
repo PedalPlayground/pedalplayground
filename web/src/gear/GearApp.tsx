@@ -10,6 +10,7 @@ import { fetchGearUsage, fetchTrending, type TrendingEntry } from "../lib/trendi
 import type { CatalogItem } from "../lib/types";
 import { useAuth } from "../store/auth";
 import { ItemPage, itemHref } from "./ItemPage";
+import { nameLink } from "../components/RoleBadge";
 import { useCatalog } from "../store/catalog";
 
 type GearSort = "az" | "new" | "used";
@@ -536,7 +537,7 @@ function GearCard({
         <button
           type="button"
           onClick={() => onBrand(item.brand)}
-          className="relative z-10 mt-0.5 self-start truncate text-left text-xs font-medium text-ink-muted outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
+          className={`relative z-10 self-start truncate pb-1 pt-0.5 text-left text-xs font-medium text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand ${nameLink}`}
         >
           {item.brand}
         </button>

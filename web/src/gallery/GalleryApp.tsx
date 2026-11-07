@@ -9,7 +9,7 @@ import { moderationError } from "../lib/moderation";
 import { useRestriction } from "../store/standing";
 import { useAuth } from "../store/auth";
 import { tip } from "../components/Tooltip";
-import { RoleBadges, teamRole, userLink } from "../components/RoleBadge";
+import { RoleBadges, teamRole, nameLink } from "../components/RoleBadge";
 import { DensitySwitch, useDensity, type Density } from "../components/DensitySwitch";
 
 const TYPE_LABELS: Record<PlaygroundType, string> = {
@@ -360,7 +360,7 @@ function BoardCard({
                 type="button"
                 onClick={() => onUser(board.username!)}
                 {...tip(`Boards by ${board.username}`)}
-                className={`relative z-10 rounded-inner font-medium outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand ${userLink}`}
+                className={`relative z-10 rounded-inner font-medium outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand ${nameLink}`}
               >
                 {board.username}
               </button>
