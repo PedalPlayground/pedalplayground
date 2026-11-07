@@ -355,7 +355,7 @@ function BoardCard({
               </button>
             )}
             {teamRole(board.username) && (
-              <span className="relative z-10 -ml-1 flex">
+              <span className="relative z-10 -ml-1.5 flex">
                 <RoleBadges username={board.username} />
               </span>
             )}

@@ -313,7 +313,7 @@ export function DesignApp() {
                 <RoleBadges username="tonechaser" builder />
               </span>
             </Demo>
-            <Demo label="Creator" code="RoleBadges, TEAM">
+            <Demo label="Creator" code="RoleBadges, TEAM (brand check)">
               <span className="flex items-center gap-2 text-xs">
                 <span className="font-semibold">@trav</span>
                 <RoleBadges username="trav" />

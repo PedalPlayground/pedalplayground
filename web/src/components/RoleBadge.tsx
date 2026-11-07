@@ -1,3 +1,4 @@
+import { BadgeCheck } from "lucide-react";
 import { tip } from "./Tooltip";
 
 /** Accounts that speak for Pedal Playground, by username (lowercase), and the label their posts carry. */
@@ -9,8 +10,8 @@ export const teamRole = (username: string | null | undefined) => (username ? (TE
 const pill = "inline-flex h-[18px] shrink-0 items-center rounded-full px-1.5 text-[11px] font-semibold leading-none";
 
 /**
- * Small labels after a username: Builder when it's the board's owner talking, and the team label (Creator) for
- * Pedal Playground's own accounts. Renders nothing for anyone else.
+ * Small marks after a username: a Builder pill when it's the board's owner talking, and a brand check for Pedal
+ * Playground's own accounts (its tooltip and accessible name say Creator). Renders nothing for anyone else.
  */
 export function RoleBadges({ username, builder }: { username: string | null | undefined; builder?: boolean }) {
   const role = teamRole(username);
@@ -22,9 +23,10 @@ export function RoleBadges({ username, builder }: { username: string | null | un
           Builder
         </span>
       )}
+      {/* The team mark: a small brand-colored check, quieter than a pill but easy to spot. */}
       {role && (
-        <span className={`${pill} bg-brand text-brand-ink`} {...tip("Made Pedal Playground")}>
-          {role}
+        <span role="img" aria-label={role} className="relative inline-flex shrink-0 text-brand" {...tip(`${role} of Pedal Playground`)}>
+          <BadgeCheck size={14} strokeWidth={2.25} aria-hidden />
         </span>
       )}
     </>
