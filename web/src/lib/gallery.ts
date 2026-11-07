@@ -114,3 +114,25 @@ export function readGalleryReturn(take = false): GalleryReturn | null {
 
 /** True when "Back to Gallery" has a spot to go back to. */
 export const galleryReturnUrl = () => !!readGalleryReturn();
+
+/** A gallery board that uses a catalog item, for the Gear page's "Featured on". */
+export interface FeaturedBoard {
+  id: string;
+  slug: string;
+  name: string;
+  thumbnail: string | null;
+  updated_at: string;
+  username: string | null;
+  pedal_count: number;
+  like_count: number;
+}
+
+/**
+ * Public gallery boards that use this catalog item (kind and image key), most liked first. Empty when there are none,
+ * or before the gear_featured_on migration is applied.
+ */
+export async function fetchFeaturedOn(kind: "pedal" | "pedalboard", image: string, max = 12): Promise<FeaturedBoard[]> {
+  if (!supabase) return [];
+  const { data, error } = await supabase.rpc("gear_featured_on", { item_kind: kind, item_image: image, max_items: max });
+  return error || !Array.isArray(data) ? [] : (data as FeaturedBoard[]);
+}

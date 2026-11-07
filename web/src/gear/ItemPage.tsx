@@ -2,9 +2,10 @@ import { ArrowLeft, Plus } from "lucide-react";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { affiliateProps, buyLinks, DISCLOSURE } from "../lib/affiliate";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
+import { boardUrl, fetchFeaturedOn, type FeaturedBoard } from "../lib/gallery";
 import { handoffHref } from "../lib/handoff";
 import { formatMa } from "../lib/specs";
-import { nameLink } from "../components/RoleBadge";
+import { nameLink, RoleBadges } from "../components/RoleBadge";
 import type { CatalogItem } from "../lib/types";
 
 /** Link to one item's page. Boards say so, since a pedal and a board can share an image key. */
@@ -41,6 +42,17 @@ export function ItemPage({
   const [loaded, setLoaded] = useState(false);
   useEffect(() => setLoaded(false), [src]);
   const used = (c: CatalogItem) => usage.get(`${kind}:${c.image}`) ?? 0;
+
+  /** Public boards that use it (null while loading). */
+  const [featured, setFeatured] = useState<FeaturedBoard[] | null>(null);
+  useEffect(() => {
+    let live = true;
+    setFeatured(null);
+    void fetchFeaturedOn(kind, item.image).then((b) => live && setFeatured(b));
+    return () => {
+      live = false;
+    };
+  }, [kind, item.image]);
 
   useEffect(() => {
     document.title = `${item.brand} ${item.name} · Pedal Playground`;
@@ -153,6 +165,14 @@ export function ItemPage({
         </div>
       </div>
 
+      {featured && featured.length > 0 && (
+        <Related title="Featured on" cols="grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          {featured.map((b) => (
+            <FeaturedCard key={b.id} board={b} />
+          ))}
+        </Related>
+      )}
+
       {fromBrand.length > 0 && (
         <Related
           title={`More from ${item.brand}`}
@@ -172,14 +192,35 @@ export function ItemPage({
   );
 }
 
-function Related({ title, action, children }: { title: string; action?: ReactNode; children: ReactNode }) {
+/** A public board that uses this item: its picture, name and author, opening the board. */
+function FeaturedCard({ board }: { board: FeaturedBoard }) {
+  return (
+    <a
+      href={boardUrl(board.slug)}
+      className="group flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand"
+    >
+      <span className="aspect-[8/5] w-full border-b border-chrome-line p-3">
+        {board.thumbnail && <img src={board.thumbnail} alt="" loading="lazy" className="size-full object-contain" />}
+      </span>
+      <span className="px-3.5 pb-3 pt-2.5">
+        <span className="line-clamp-1 text-sm font-semibold">{board.name}</span>
+        <span className="mt-0.5 flex items-center gap-1.5 text-xs text-ink-muted">
+          {board.username && <span>{board.username}</span>}
+          <RoleBadges username={board.username} />
+        </span>
+      </span>
+    </a>
+  );
+}
+
+function Related({ title, action, children, cols }: { title: string; action?: ReactNode; children: ReactNode; cols?: string }) {
   return (
     <section className="mt-12">
       <div className="flex items-baseline justify-between gap-3">
         <h2 className="text-lg font-bold tracking-[-0.01em]">{title}</h2>
         {action}
       </div>
-      <div className="mt-4 grid grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">{children}</div>
+      <div className={`mt-4 grid gap-3 ${cols ?? "grid-cols-2 min-[560px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"}`}>{children}</div>
     </section>
   );
 }

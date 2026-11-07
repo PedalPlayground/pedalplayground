@@ -28,6 +28,8 @@ The grid stays loaded underneath, so Back (the button or the browser's) returns 
   catalog, adds the item to the open board, records the add for trending, and shows "Added …".
 - **Buy links** use `buyLinks()` from `lib/affiliate.ts`, so they only show where `VITE_BUY_LINKS=true` (today just
   `.env.local`).
+- **Featured on**: public gallery boards whose latest version uses the item, most liked first (up to 12), from the
+  `gear_featured_on` RPC (`supabase/migrations/20261107120000_gear_featured_on.sql`). Hidden until that's applied.
 - **More from <brand>** (most used first, with See all) and **Similar size** (other brands within 0.2″, or 1″ for
   boards, either way round, at most two per brand).
 
