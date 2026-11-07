@@ -41,3 +41,43 @@ export function fetchGearUsage(): Promise<Map<string, number>> {
   );
   return usage;
 }
+
+export interface HotEntry {
+  kind: Kind;
+  image: string;
+  /** Adds in the last 7 and 30 days. */
+  week: number;
+  month: number;
+  /** Momentum: this week's share of the month, weighed so big numbers alone don't win. */
+  score: number;
+}
+
+let hot: Promise<{ rising: HotEntry[]; monthTop: TrendingEntry[] }> | null = null;
+
+/**
+ * What Gear's Hot section ranks from: this week's 100 most added, each scored by momentum (this week's adds against
+ * the month's), plus the month's 100 most added so the caller can set aside the everyday staples. Empty when
+ * unavailable.
+ */
+export function fetchHot(): Promise<{ rising: HotEntry[]; monthTop: TrendingEntry[] }> {
+  if (!supabase) return Promise.resolve({ rising: [], monthTop: [] });
+  const get = (days: number) =>
+    Promise.resolve(supabase!.rpc("trending_gear", { days, max_items: 100 })).then(
+      ({ data, error }) => (error || !Array.isArray(data) ? [] : (data as TrendingEntry[])),
+      () => [] as TrendingEntry[],
+    );
+  hot ??= Promise.all([get(7), get(30)]).then(([week, monthTop]) => {
+    const key = (e: { kind: string; image: string }) => `${e.kind}:${e.image}`;
+    const monthAdds = new Map(monthTop.map((e) => [key(e), Number(e.adds)]));
+    const rising = week
+      .filter((e) => Number(e.adds) >= 5)
+      .map((e) => {
+        const n7 = Number(e.adds);
+        const n30 = Math.max(monthAdds.get(key(e)) ?? n7, n7);
+        return { kind: e.kind, image: e.image, week: n7, month: n30, score: (n7 * n7) / n30 / Math.log(2 + n30) };
+      })
+      .sort((a, b) => b.score - a.score);
+    return { rising, monthTop };
+  });
+  return hot;
+}

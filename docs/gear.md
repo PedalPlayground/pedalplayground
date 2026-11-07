@@ -14,13 +14,16 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
 - **Pedals share one scale**, set by the card: a pedal 5.2″ tall (bigger than three in four pedals) fills the
   photo area's height (`FILL_INCHES`, sized in container units, so it follows the card size), and bigger ones are fit
   to it. Boards are fit to the card. Cards load the full photo when the 128px thumbnail would look soft.
-- **New** (a flamingo dot in the card's corner) marks items added in the last 30 days.
 - The grid shows 60 items and adds 60 more as you scroll.
-- **Over the full list** (no brand, type or search): **Trending and new**, a bento of 11 photo-first tiles taking turns between this month's most added
-  (`trending_gear`) and the newest additions. Tiles show only the photo, the name and a Trending (tangerine up chevron) or New (flamingo dot) mark, so they
-  read differently from the full cards below; their sizes fill the grid exactly at 4 and 2 columns. Beside it on laptops
-  (below it on smaller screens), **Popular brands**: 16 rounded tiles (8 on phones), each with a photo of the brand's
-  most added item, stretching to the bento's height.
+- **Over the full list** (no brand, type or search):
+  - **Hot right now**, a bento of 11 photo-first tiles (name only), beside **Popular brands** (16 photo tiles, 8 on
+    phones). Hot ranks this week's 100 most added by momentum (week adds squared over month adds, damped by size; see
+    `fetchHot` in `lib/trending.ts`), then sets aside the month's 30 most added real gear (everyday staples), tuners,
+    volume pedals, utilities and board accessories. The bento's sizes fill the grid exactly at 4 and 2 columns.
+  - **New in the catalog**, a wall of the 16 newest as square photo tiles (eight across on laptops, four on phones),
+    with the name and brand only on hover or keyboard focus.
+- **Marks on full cards:** a flamingo dot with "new" (added in the last 30 days) and a tangerine up chevron with "hot"
+  (the 40 hottest), in light gray.
 - The photo at real proportions on the canvas color, with size in inches and mm, type, power and current draw when
   the catalog has them, and the date it was added.
 - **Add to My Playground** links to `/#pp-add=<kind>:<image key>` (`lib/handoff.ts`). The playground waits for the

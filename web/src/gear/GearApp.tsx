@@ -1,5 +1,4 @@
 import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
-import { tip } from "../components/Tooltip";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
@@ -7,7 +6,7 @@ import { indexItem, search as searchItems } from "../lib/search";
 import { PEDAL_TYPES } from "../lib/specs";
 import { Modal } from "../components/Modal";
 import { DensitySwitch, useDensity, type Density } from "../components/DensitySwitch";
-import { fetchGearUsage, fetchTrending, type TrendingEntry } from "../lib/trending";
+import { fetchGearUsage, fetchHot, type HotEntry, type TrendingEntry } from "../lib/trending";
 import type { CatalogItem } from "../lib/types";
 import { useAuth } from "../store/auth";
 import { ItemPage, itemHref } from "./ItemPage";
@@ -72,8 +71,16 @@ const GRID: Record<Density, string> = {
  * height (about three in four pedals are this size or smaller). Bigger ones are fit to it; boards always are.
  */
 const FILL_INCHES = 5.2;
-/** Items per list (trending, newest) before they're mixed into the bento. */
-const SHELF = 12;
+/** Newest items in the New in the catalog grid (two rows of eight on laptops, four rows of four on phones). */
+const NEW_COUNT = 16;
+/** How many of the hottest items get the hot mark on full cards. */
+const HOT_MARKED = 40;
+/** The month's most added items (after accessories and staple types) that sit out of Hot, as everyday staples. */
+const STAPLE_COUNT = 30;
+/** Types that are staples by nature, left out of Hot. */
+const STAPLE_TYPES = new Set(["Tuner", "Volume / Expression", "Utility"]);
+/** Board accessories, left out of Hot. */
+const ACCESSORY = /\b(mount|connector|coupler|cable|patch|zip|velcro|riser|bracket|power supply)\b/i;
 /**
  * The Trending and new bento: 11 tiles whose sizes fill the grid exactly (dense packing). Four columns: a big tile and
  * two tall ones (4 full rows). Two columns: only the big tile spans (7 rows).
@@ -83,10 +90,7 @@ const BENTO = ["col-span-2 row-span-2", "sm:row-span-2", "", "", "sm:row-span-2"
 /** Brands beside the bento: two columns of eight on laptops. */
 const BRAND_TILES = 16;
 
-interface BentoPick {
-  item: CatalogItem;
-  why: "trending" | "new";
-}
+
 /** New for 30 days after it joins the catalog. */
 const NEW_DAYS = 30;
 
@@ -120,8 +124,8 @@ export function GearApp() {
   // PageHeader loads the catalog too; this is the same promise.
   useEffect(() => void useCatalog.getState().load(), []);
   useEffect(() => void fetchGearUsage().then(setUsage), []);
-  const [trending, setTrending] = useState<TrendingEntry[]>([]);
-  useEffect(() => void fetchTrending().then(setTrending), []);
+  const [hotList, setHotList] = useState<{ rising: HotEntry[]; monthTop: TrendingEntry[] }>({ rising: [], monthTop: [] });
+  useEffect(() => void fetchHot().then(setHotList), []);
 
   // Search as you type, after a short pause.
   useEffect(() => {
@@ -252,20 +256,39 @@ export function GearApp() {
     setSearch("");
   };
 
-  /** The shelves over the full list (no brand or search): trending, newest, and the most used brands. */
+  /**
+   * Hot gear in this list's kind: rising adds (see fetchHot), minus gear that's a staple by nature (tuners, volume
+   * pedals, utilities) and board accessories (mounts, connectors, cables).
+   */
+  const hotItems = useMemo(() => {
+    const byKey = new Map(all.map((c) => [c.image, c]));
+    const ok = (c: CatalogItem | undefined): c is CatalogItem => !!c && !STAPLE_TYPES.has(c.type ?? "") && !ACCESSORY.test(c.name);
+    // The month's most added real gear in this kind: everyday staples, so they sit out.
+    const staples = new Set(
+      hotList.monthTop
+        .filter((e) => e.kind === kind)
+        .map((e) => byKey.get(e.image))
+        .filter(ok)
+        .slice(0, STAPLE_COUNT)
+        .map((c) => c.image),
+    );
+    return hotList.rising
+      .filter((h) => h.kind === kind && !staples.has(h.image))
+      .map((h) => byKey.get(h.image))
+      .filter(ok);
+  }, [hotList, all, kind]);
+  /** The hot set for marking full cards. */
+  const hotKeys = useMemo(() => new Set(hotItems.slice(0, HOT_MARKED).map((c) => c.image)), [hotItems]);
+
+  /** The shelves over the full list (no brand or search): hot, newest, and the most used brands. */
   const browsing = !brand && !type && !search.trim();
   const shelves = useMemo(() => {
     if (!manifest || !browsing) return null;
-    const byKey = new Map(all.map((c) => [c.image, c]));
-    const hot = trending
-      .filter((t) => t.kind === kind)
-      .map((t) => byKey.get(t.image))
-      .filter((c): c is CatalogItem => !!c)
-      .slice(0, SHELF);
+    const hot = hotItems.slice(0, BENTO_COUNT);
     const fresh = [...all]
       .filter((c) => c.added)
       .sort((a, b) => b.added!.localeCompare(a.added!))
-      .slice(0, SHELF);
+      .slice(0, NEW_COUNT);
     const brandUse = new Map<string, number>();
     for (const c of all) {
       const n = usage.get(`${kind}:${c.image}`);
@@ -282,19 +305,8 @@ export function GearApp() {
       .sort((a, b) => b[1] - a[1])
       .slice(0, BRAND_TILES)
       .map(([b]) => ({ brand: b, item: brandPhoto.get(b)!.item }));
-    // Trending and new, taking turns, each item once.
-    const picks: BentoPick[] = [];
-    const seen = new Set<string>();
-    for (let n = 0; n < Math.max(hot.length, fresh.length) && picks.length < BENTO_COUNT; n++) {
-      for (const [item, why] of [[hot[n], "trending"], [fresh[n], "new"]] as const) {
-        if (item && !seen.has(item.image) && picks.length < BENTO_COUNT) {
-          seen.add(item.image);
-          picks.push({ item, why });
-        }
-      }
-    }
-    return { topBrands, picks };
-  }, [manifest, browsing, all, trending, kind, usage]);
+    return { topBrands, hot, fresh };
+  }, [manifest, browsing, all, hotItems, kind, usage]);
 
 
   const noun = kind === "pedal" ? "pedals" : "pedalboards";
@@ -401,20 +413,15 @@ export function GearApp() {
             stretches to the bento's height, its tiles sharing the rows evenly. */}
         {shelves && (
           <div className="mt-8 grid gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] xl:gap-6">
-            {shelves.picks.length > 0 && (
+            {shelves.hot.length > 0 && (
               <section>
                 <div className="flex items-center justify-between gap-3">
-                  <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Trending and new</h2>
-                  {sort !== "new" && (
-                    <button type="button" onClick={() => setSort("new")} className="text-[13px] font-semibold text-brand hover:underline">
-                      See all new
-                    </button>
-                  )}
+                  <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Hot right now</h2>
                 </div>
                 {/* Bento: tiles of a few sizes, packed densely. Photo first, name only; the full cards are below. */}
                 <div className="mt-3 grid grid-flow-dense auto-rows-[8.5rem] grid-cols-2 gap-3 sm:grid-cols-4 2xl:auto-rows-[10rem]">
-                  {shelves.picks.map((p, i) => (
-                    <BentoTile key={`${p.why}:${p.item.image}`} pick={p} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
+                  {shelves.hot.map((item, i) => (
+                    <BentoTile key={item.image} item={item} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
                   ))}
                 </div>
               </section>
@@ -431,6 +438,25 @@ export function GearApp() {
               </section>
             )}
           </div>
+        )}
+
+        {/* The newest additions as a photo wall: no text until a tile is hovered or focused. */}
+        {shelves && shelves.fresh.length > 0 && (
+          <section className="mt-12">
+            <div className="flex items-center justify-between gap-3">
+              <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>New in the catalog</h2>
+              {sort !== "new" && (
+                <button type="button" onClick={() => setSort("new")} className="text-[13px] font-semibold text-brand hover:underline">
+                  See all new
+                </button>
+              )}
+            </div>
+            <div className="mt-3 grid grid-cols-4 gap-2 sm:gap-3 lg:grid-cols-8">
+              {shelves.fresh.map((item) => (
+                <PhotoTile key={item.image} item={item} kind={kind} manifest={manifest!} onOpen={openItem} />
+              ))}
+            </div>
+          </section>
         )}
 
         {/* The grid, with the filters beside it from laptop width. */}
@@ -514,6 +540,7 @@ export function GearApp() {
                       kind={kind}
                       manifest={manifest}
                       isNew={!!item.added && item.added >= newSince}
+                      isHot={hotKeys.has(item.image)}
                       onBrand={pickBrand}
                       onOpen={openItem}
                     />
@@ -551,6 +578,7 @@ function GearCard({
   kind,
   manifest,
   isNew,
+  isHot,
   onBrand,
   onOpen,
 }: {
@@ -558,6 +586,7 @@ function GearCard({
   kind: Kind;
   manifest: Manifest;
   isNew: boolean;
+  isHot?: boolean;
   onBrand: (brand: string) => void;
   onOpen: (kind: Kind, item: CatalogItem) => void;
 }) {
@@ -583,7 +612,12 @@ function GearCard({
         <div className="absolute inset-x-[10%] inset-y-[7%] flex items-center justify-center [container-type:size]">
           {src && <img src={src} srcSet={srcSet} sizes="(min-width: 768px) 15vw, 45vw" alt="" loading="lazy" style={style} className="object-contain" />}
         </div>
-        {isNew && <MarkIcon why="new" />}
+        {(isNew || isHot) && (
+          <span className="absolute left-2.5 top-2 z-10 flex items-center gap-2.5">
+            {isNew && <Mark why="new" />}
+            {isHot && <Mark why="hot" />}
+          </span>
+        )}
       </div>
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5">
         {/* Name first, then brand. The whole card opens the item (the link stretches over it); the brand button sits above. */}
@@ -722,11 +756,10 @@ function FilterPanel({
   );
 }
 
-/** New (a flamingo dot) or Trending (a tangerine up chevron): a small colored mark in a card's corner. */
-function MarkIcon({ why }: { why: "new" | "trending" }) {
-  const label = why === "new" ? "New" : "Trending";
+/** New (a flamingo dot) or hot (a tangerine up chevron), each with its word in light gray. */
+function Mark({ why }: { why: "new" | "hot" }) {
   return (
-    <span role="img" aria-label={label} {...tip(label)} className="absolute left-2 top-2 z-10 grid size-5 place-items-center">
+    <span className="flex items-center gap-1 text-[11px] font-medium leading-4 text-ink-muted">
       {why === "new" ? (
         <span className="size-[7px] rounded-full bg-guide" aria-hidden />
       ) : (
@@ -734,25 +767,25 @@ function MarkIcon({ why }: { why: "new" | "trending" }) {
           <path d="M1 5 4.5 1.5 8 5" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       )}
+      {why}
     </span>
   );
 }
 
-/** One bento tile: the photo, fit to the tile, and just the name, with a small Trending or New icon. */
+/** One Hot tile: the photo, fit to the tile, and just the name (the section says why it's here). */
 function BentoTile({
-  pick,
+  item,
   kind,
   manifest,
   size,
   onOpen,
 }: {
-  pick: BentoPick;
+  item: CatalogItem;
   kind: Kind;
   manifest: Manifest;
   size: string;
   onOpen: (kind: Kind, item: CatalogItem) => void;
 }) {
-  const { item, why } = pick;
   const thumb = thumbUrl(manifest, kind, item.image);
   const full = canvasImageUrl(manifest, kind, item.image);
   return (
@@ -763,7 +796,7 @@ function BentoTile({
         e.preventDefault();
         onOpen(kind, item);
       }}
-      aria-label={`${item.brand} ${item.name}, ${why === "new" ? "new" : "trending"}`}
+      aria-label={`${item.brand} ${item.name}`}
       className={`group relative flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand ${size}`}
     >
       <span className="relative min-h-0 flex-1">
@@ -781,7 +814,39 @@ function BentoTile({
       <span className="flex items-center gap-1.5 px-3 pb-2.5">
         <span className="min-w-0 truncate text-xs font-semibold">{item.name}</span>
       </span>
-      <MarkIcon why={why} />
+    </a>
+  );
+}
+
+/** A New in the catalog tile: just the photo, with the name and brand showing on hover or keyboard focus. */
+function PhotoTile({ item, kind, manifest, onOpen }: { item: CatalogItem; kind: Kind; manifest: Manifest; onOpen: (kind: Kind, item: CatalogItem) => void }) {
+  const thumb = thumbUrl(manifest, kind, item.image);
+  const full = canvasImageUrl(manifest, kind, item.image);
+  return (
+    <a
+      href={itemHref(kind, item)}
+      onClick={(e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+        e.preventDefault();
+        onOpen(kind, item);
+      }}
+      aria-label={`${item.name}, ${item.brand}`}
+      className="group relative aspect-square overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand"
+    >
+      {thumb && (
+        <img
+          src={thumb}
+          srcSet={full ? `${thumb} 128w, ${full} ${kind === "pedal" ? 1200 : 2400}w` : undefined}
+          sizes="(min-width: 1024px) 12vw, 25vw"
+          alt=""
+          loading="lazy"
+          className="absolute inset-[12%] size-[76%] object-contain transition-[transform,opacity] duration-300 group-hover:scale-95 group-hover:opacity-30 group-focus-visible:opacity-30"
+        />
+      )}
+      <span className="absolute inset-0 flex flex-col justify-end p-2.5 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
+        <span className="line-clamp-2 text-xs font-semibold leading-tight">{item.name}</span>
+        <span className="mt-0.5 truncate text-[11px] text-ink-muted">{item.brand}</span>
+      </span>
     </a>
   );
 }
