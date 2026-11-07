@@ -5,10 +5,10 @@ The sizes the app already uses almost everywhere. Keep new UI to these so it sta
 The look itself (color, type, corners, shadows, borders, writing and access rules) is drawn live on the design
 reference page, `/design/` (`web/src/design/DesignApp.tsx`), with the tokens in `web/src/index.css`. In short:
 
-- **Flat but crisp.** Cards, panels on the page, chips and fields are flat. Only what floats gets a shadow:
+- **Flat but crisp.** Cards (tinted `card` on the white `page`), chips and fields are flat. Only what floats gets a shadow:
   `shadow-float` (menus, popovers, tooltips, docked panels, floating bars) and `shadow-modal` (dialogs, sheets).
   Catalog photos' drop shadow is exempt.
-- **Colors are tokens only.** Brand-tinted grays (`page`, `canvas`, `surface`, `surface-hover`, `chrome`, `ink`,
+- **Colors are tokens only.** Brand-tinted grays (`page`, `card`, `canvas`, `surface`, `surface-hover`, `chrome`, `ink`,
   `ink-muted`, `icon`, `icon-solo`, `line`, `chrome-line`, `soft`), `brand`, status (`positive`, `danger`, `warning`,
   `neutral`) and accents (`group`, `guide`, `tangerine`, `lagoon`). `#fff` and `#000` are the only neutral colors.
   No hex values or Tailwind palette colors in components (pedal art and board finishes excepted).
@@ -22,7 +22,7 @@ reference page, `/design/` (`web/src/design/DesignApp.tsx`), with the tokens in 
 | Buttons, text fields, icon buttons, menu triggers | 36px tall (`h-9`, `size-9`); icon buttons are 36×36 |
 | Body and control text | `text-sm` (14px); metadata, the zoom readout and the Beta badge use `text-xs` (12px) |
 | Form fields | `components/formText.ts`: label 13px semibold at 80% ink, help text (12px, muted) right under the label, the field, then any error (12px, red) under the field. Help and error are linked to the field with `aria-describedby`. Labels are Title Case. Units go inside the field at the end (`fieldWithUnit`), never in the label |
-| Form backgrounds | Forms sit on white: dialogs and side panels (`bg-surface`), and in light mode the editor page itself (`chrome`, white), which is why the editor's tabs need no panel. Explore and Gear sit on `page`, a light tint, so their white cards stand out without borders. The gray fields (`bg-surface-hover`) disappear on page backgrounds (`bg-page`, `bg-chrome`, `bg-canvas`), so a field placed straight on the page is a white box with a `chrome-line` border instead (the Explore and Gear search) |
+| Form backgrounds | Forms sit on white: dialogs and side panels (`bg-surface`), and in light mode the editor page itself (`chrome`, white), which is why the editor's tabs need no panel. Explore, Gear and the design page sit on `page` (white in light mode) with tinted `card` cards, so cards stand out without borders. The gray fields (`bg-surface-hover`) disappear on page backgrounds (`bg-page`, `bg-chrome`, `bg-canvas`), so a field placed straight on the page is a white box with a `chrome-line` border instead (the Explore and Gear search) |
 | Canvas look (color, ½ in dots, scale key) | `bg-canvas`, `dotGridStyle` in `lib/scale.ts`, `components/ScaleKey.tsx` | The playground canvas and the editor's preview use them (pass `zoom` and `units` to `ScaleKey` for a fixed scale). The dialog backdrop (`.modal-backdrop` in `index.css`) copies the dots in CSS, and the email templates have their own dot tiles. |
 | Text people name things with | `hasProfanity` / `usernameOffensive` in `lib/profanity.ts` (with `useAllowedNames` for real pedal names) | Usernames (through `usernameProblem`), New Playground and Playground Settings (name, description), comments, Make Your Own names. A new free-text field that others can see needs it too. See `docs/moderation.md` |
 | Timeout states | `useRestriction` in `store/standing.ts` | Comment box, likes (board panel and gallery cards), Show in Public Gallery, Pick a Username. Anything new that's social (posting, liking, sharing) should check it too |

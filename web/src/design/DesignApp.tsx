@@ -73,8 +73,9 @@ export function DesignApp() {
         </nav>
 
         <Section id="color" title="Color" lead="A small, fixed set. Grays carry a little of the brand's blue-violet; #fff and #000 are the only fully neutral colors.">
-          <Group title="Surfaces" note="Back to front. Cards sit on page; the board sits on canvas.">
-            <Swatch token="page" use="Behind cards on Explore and Gear" />
+          <Group title="Surfaces" note="Back to front. Cards sit on page; the board and photo wells use canvas.">
+            <Swatch token="page" use="Behind Explore, Gear and this page" />
+            <Swatch token="card" use="Cards on those pages" />
             <Swatch token="canvas" use="The board area and photo wells" />
             <Swatch token="surface" use="Cards, panels, dialogs, menus" />
             <Swatch token="surface-hover" use="Hover rows and quiet fields" />
@@ -122,7 +123,7 @@ export function DesignApp() {
         <Section id="type" title="Type" lead="DM Sans throughout. Hierarchy comes from size, weight and shade, not from boxes or rules.">
           <div className="grid gap-px overflow-hidden rounded-panel bg-line">
             {TYPE.map(([name, cls, spec, use]) => (
-              <div key={name} className="grid items-baseline gap-2 bg-surface px-4 py-3 sm:grid-cols-[10rem_minmax(0,1fr)_14rem]">
+              <div key={name} className="grid items-baseline gap-2 bg-card px-4 py-3 sm:grid-cols-[10rem_minmax(0,1fr)_14rem]">
                 <span className="text-xs font-semibold text-ink-muted">{name}</span>
                 <span className={cls}>Pedals, boards and the space between</span>
                 <span className="text-xs text-ink-muted">
@@ -144,7 +145,7 @@ export function DesignApp() {
         <Section id="shape" title="Shape" lead="Corners grow with the thing. Small pieces get small corners; the bigger the container, the softer it gets.">
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {RADII.map(([token, px, use]) => (
-              <div key={token} className="rounded-panel bg-surface p-4">
+              <div key={token} className="rounded-panel bg-card p-4">
                 <div className={`h-16 bg-brand/15 ${RADIUS_CLASS[token]}`} />
                 <p className="mt-3 text-[13px] font-semibold">{token === "full" ? "Pill" : token}</p>
                 <p className="text-xs text-ink-muted">
@@ -157,8 +158,8 @@ export function DesignApp() {
 
         <Section id="depth" title="Depth" lead="Flat by default. Shadows only lift what floats above the page, and stay soft.">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <DepthSample label="Flat" note="Cards, panels on the page, chips, fields. Edges come from the surface against the page." className="bg-surface" />
-            <DepthSample label="Hairline" note="Only where contrast is missing: a white chip or field on a light page." className="bg-surface shadow-chip" />
+            <DepthSample label="Flat" note="Cards, chips, fields. Edges come from the tinted card against the white page." className="bg-card" />
+            <DepthSample label="Hairline" note="Only where contrast is missing: a white chip, field or form on the white page." className="bg-surface shadow-chip" />
             <DepthSample label="Float" note="Menus, popovers, tooltips, docked panels, floating bars." className="bg-surface shadow-float" />
             <DepthSample label="Modal" note="Dialogs and sheets, over a dimmed backdrop." className="bg-surface shadow-modal" />
           </div>
@@ -211,7 +212,7 @@ export function DesignApp() {
           </Group>
 
           <Group title="Fields" note="Label above, help (rarely) under the label, error under the field. Units sit inside the field.">
-            <div className="col-span-full grid gap-4 rounded-panel bg-surface p-5 sm:grid-cols-3">
+            <div className="col-span-full grid gap-4 rounded-panel bg-surface p-5 shadow-chip sm:grid-cols-3">
               <label className="block">
                 <span className={fieldLabel}>Name</span>
                 <input className={fieldInput} placeholder="Main board" />
@@ -282,13 +283,13 @@ export function DesignApp() {
             </Demo>
           </Group>
 
-          <Group title="Cards" note="Flat surface on the page, no border. Hover adds a hairline; keyboard focus adds the brand ring.">
+          <Group title="Cards" note="Tinted card on the white page, no border. Hover adds a hairline; keyboard focus adds the brand ring.">
             <div className="col-span-full grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-3">
               {[0, 1, 2].map((i) => (
                 <a
                   key={i}
                   href="#components"
-                  className="group flex flex-col overflow-hidden rounded-panel bg-surface ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand"
+                  className="group flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand"
                 >
                   <span className="aspect-[4/3] bg-canvas" />
                   <span className="px-3 pb-3 pt-2.5">
@@ -418,7 +419,7 @@ function Swatch({ token, name, hue, use }: { token: string; name?: string; hue?:
     return () => obs.disconnect();
   }, [token]);
   return (
-    <div className="overflow-hidden rounded-panel bg-surface">
+    <div className="overflow-hidden rounded-panel bg-card">
       <div className="h-16 shadow-[inset_0_-1px_0_var(--color-chrome-line)]" style={{ background: `var(--color-${token})` }} />
       <div className="px-3 pb-3 pt-2">
         <p className="text-[13px] font-semibold">
@@ -444,7 +445,7 @@ function Notice({ tone, icon, text }: { tone: "positive" | "danger" | "warning" 
 
 function Demo({ label, code, children }: { label: string; code: string; children: ReactNode }) {
   return (
-    <div className="flex flex-col overflow-hidden rounded-panel bg-surface">
+    <div className="flex flex-col overflow-hidden rounded-panel bg-card">
       <div className="flex min-h-24 flex-1 items-center justify-center bg-canvas p-4">{children}</div>
       <div className="px-3 pb-3 pt-2">
         <p className="text-[13px] font-semibold">{label}</p>
@@ -456,7 +457,7 @@ function Demo({ label, code, children }: { label: string; code: string; children
 
 function DepthSample({ label, note, className }: { label: string; note: string; className: string }) {
   return (
-    <div className="rounded-container bg-canvas p-6">
+    <div className="rounded-container bg-page p-6 shadow-chip">
       <div className={`grid h-20 place-items-center rounded-panel text-[13px] font-semibold ${className}`}>{label}</div>
       <p className="mt-3 text-xs text-ink-muted">{note}</p>
     </div>
@@ -478,7 +479,7 @@ function Rules({ items }: { items: string[] }) {
 
 function Example({ good, bad, note }: { good: string; bad: string; note?: string }) {
   return (
-    <div className="grid gap-2 rounded-panel bg-surface p-4">
+    <div className="grid gap-2 rounded-panel bg-card p-4">
       <p className="flex items-start gap-2 text-sm">
         <Check size={16} className="mt-0.5 shrink-0 text-positive" aria-label="Do" />
         <span className="whitespace-pre">{good}</span>

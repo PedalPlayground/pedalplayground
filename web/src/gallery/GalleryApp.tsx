@@ -248,7 +248,7 @@ export function GalleryApp() {
           </p>
         )}
         {note && (
-          <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-panel bg-surface px-3 py-2 text-[13px]">
+          <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-panel bg-card px-3 py-2 text-[13px]">
             <span>{note}</span>
             <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setNote(null)} aria-label="Dismiss">
               ×
@@ -257,7 +257,7 @@ export function GalleryApp() {
         )}
 
         {hidden && (
-          <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-panel bg-surface px-3 py-2 text-[13px]">
+          <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-panel bg-card px-3 py-2 text-[13px]">
             <span>
               Hid “{hidden.name}” from the gallery. Its share link still works.
             </span>
@@ -325,8 +325,8 @@ function BoardCard({
   const pill =
     "press relative z-10 flex h-7 items-center gap-1 rounded-full bg-surface/90 px-2.5 text-xs font-semibold shadow-chip backdrop-blur transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand";
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface ring-chrome-line transition-shadow focus-within:ring-2 focus-within:ring-brand hover:ring-1">
-      <div className="aspect-[8/5] w-full bg-canvas">
+    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line transition-shadow focus-within:ring-2 focus-within:ring-brand hover:ring-1">
+      <div className="aspect-[8/5] w-full bg-canvas p-3">
         {board.thumbnail && <img src={board.thumbnail} alt="" loading="lazy" className="size-full object-contain" />}
       </div>
       <div className="flex flex-1 flex-col gap-1 px-3.5 pb-3.5 pt-3">
@@ -338,7 +338,7 @@ function BoardCard({
             </a>
           </h2>
           {board.playground_type && !compact && (
-            <span className="shrink-0 rounded-full bg-surface-hover px-2 py-0.5 text-xs text-ink-muted">{TYPE_LABELS[board.playground_type]}</span>
+            <span className="shrink-0 rounded-full bg-soft px-2 py-0.5 text-xs text-ink-muted">{TYPE_LABELS[board.playground_type]}</span>
           )}
         </div>
         {(board.username || pedals) && (
@@ -397,7 +397,7 @@ function BoardCard({
 
 function CardSkeleton() {
   return (
-    <div className="overflow-hidden rounded-panel bg-surface" aria-hidden>
+    <div className="overflow-hidden rounded-panel bg-card" aria-hidden>
       <div className="aspect-[8/5] w-full animate-pulse bg-surface-hover" />
       <div className="space-y-2 px-3.5 pb-4 pt-3">
         <div className="h-3.5 w-2/3 animate-pulse rounded-inner bg-surface-hover" />
