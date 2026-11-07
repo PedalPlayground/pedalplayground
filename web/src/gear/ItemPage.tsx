@@ -107,9 +107,9 @@ export function ItemPage({
               onLoad={() => setLoaded(true)}
               style={{
                 width: item.width * PX_PER_INCH,
-                maxWidth: "100%",
+                maxWidth: "min(100%, 520px)",
                 aspectRatio: `${item.width} / ${item.height}`,
-                maxHeight: 560,
+                maxHeight: 420,
                 // The thumbnail stands in while the full photo loads.
                 backgroundImage: loaded || !thumb ? undefined : `url(${thumb})`,
                 backgroundSize: "contain",

@@ -515,7 +515,7 @@ function GearCard({
     <article className="group relative flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line transition-shadow focus-within:ring-2 focus-within:ring-brand hover:ring-1">
       <div className="relative aspect-[4/3] w-full border-b border-chrome-line">
         {/* Absolute, so a tall photo can't stretch the card. */}
-        <div className="absolute inset-2 flex items-center justify-center [container-type:size]">
+        <div className="absolute inset-x-[10%] inset-y-[7%] flex items-center justify-center [container-type:size]">
           {src && <img src={src} srcSet={srcSet} sizes="(min-width: 768px) 15vw, 45vw" alt="" loading="lazy" style={style} className="object-contain" />}
         </div>
         {isNew && (
