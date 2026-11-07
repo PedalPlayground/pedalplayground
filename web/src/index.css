@@ -13,7 +13,7 @@
   /* Surfaces, back to front: page (behind Explore, Gear and the design page), card (cards on those pages), canvas
      (the board area and photo wells), surface (panels, menus, dialogs, fields' backing), chrome (header and bars). */
   --color-page: #ffffff;
-  --color-card: #f3f3f8;
+  --color-card: #f7f7fa;
   --color-canvas: #f7f7fa;
   --color-surface: #ffffff;
   --color-surface-hover: #f1f1f7;
