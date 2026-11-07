@@ -878,7 +878,7 @@ function PhotoTile({
           sizes="(min-width: 1280px) 7vw, (min-width: 640px) 10vw, 25vw"
           alt=""
           loading="lazy"
-          className="absolute inset-[14%] size-[72%] object-contain transition-[transform,opacity] duration-300 group-hover:scale-95 group-hover:opacity-50 group-focus-visible:opacity-50"
+          className="absolute inset-[14%] size-[72%] object-contain transition-[transform,opacity] duration-300 group-hover:scale-95 group-hover:opacity-10 group-focus-visible:opacity-10"
         />
       )}
       <span className="absolute inset-0 flex flex-col justify-end p-2.5 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
