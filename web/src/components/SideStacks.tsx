@@ -242,7 +242,7 @@ export function AddGearButton({ onClick }: { onClick: () => void }) {
       onClick={onClick}
       data-tour="add"
       {...tip("Add Gear", { shortcut: "+", side: "top" })}
-      className="btn-primary flex h-11 items-center gap-2.5 whitespace-nowrap rounded-control pl-2.5 pr-5 text-[15px] font-semibold tracking-[-0.01em] shadow-float outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+      className="btn-primary flex h-11 items-center gap-2.5 whitespace-nowrap rounded-control pl-2.5 pr-5 text-[15px] font-semibold tracking-[-0.01em] shadow-pop outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
     >
       <span className="grid size-6 place-items-center rounded-control bg-white/20">
         <Plus size={16} strokeWidth={2.75} />

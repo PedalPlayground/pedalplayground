@@ -7,6 +7,8 @@ reference page, `/design/` (`web/src/design/DesignApp.tsx`), with the tokens in 
 
 - **Flat but crisp.** Cards (tinted `card` on the white `page`), chips and fields are flat. Only what floats gets a shadow:
   `shadow-float` (menus, popovers, tooltips, docked panels, floating bars) and `shadow-modal` (dialogs, sheets).
+  `shadow-pop` is reserved for a button that should stand out (Add Gear on the board); use it rarely. Primary
+  buttons are otherwise flat.
   Catalog photos' drop shadow is exempt.
 - **Colors are tokens only.** Brand-tinted grays (`page`, `card`, `canvas`, `surface`, `surface-hover`, `chrome`, `ink`,
   `ink-muted`, `icon`, `icon-solo`, `line`, `chrome-line`, `soft`), `brand`, status (`positive`, `danger`, `warning`,

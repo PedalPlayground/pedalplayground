@@ -158,11 +158,12 @@ export function DesignApp() {
         </Section>
 
         <Section id="depth" title="Depth" lead="Flat by default. Shadows only lift what floats above the page, and stay soft.">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             <DepthSample label="Flat" note="Cards, chips, fields. Edges come from the tinted card against the white page." className="bg-card" />
             <DepthSample label="Hairline" note="Only where contrast is missing: a white chip, field or form on the white page." className="bg-surface shadow-chip" />
             <DepthSample label="Float" note="Menus, popovers, tooltips, docked panels, floating bars." className="bg-surface shadow-float" />
             <DepthSample label="Modal" note="Dialogs and sheets, over a dimmed backdrop." className="bg-surface shadow-modal" />
+            <DepthSample label="Pop" note="Reserved for a button that should stand out, like Add Gear on the board. Use rarely." className="btn-primary shadow-pop" />
           </div>
           <Rules
             items={[

@@ -63,9 +63,11 @@
   --radius-container: 16px;
 
   /* Shadows only for what floats above the page: float for menus, popovers, docked panels and floating bars (a
-     hairline plus a soft lift), modal for dialogs. Cards and chips are flat. */
+     hairline plus a soft lift), modal for dialogs, pop for a button that should stand out. Cards and chips are flat. */
   --shadow-float: 0 0 0 1px rgb(27 28 56 / 0.06), 0 6px 20px rgb(27 28 56 / 0.08), 0 1px 3px rgb(27 28 56 / 0.05);
   --shadow-modal: 0 0 0 1px rgb(27 28 56 / 0.05), 0 24px 64px rgb(27 28 56 / 0.18), 0 4px 12px rgb(27 28 56 / 0.06);
+  /* Pop: a stronger soft shadow for the few buttons that should stand out, like Add Gear on the board. Use rarely. */
+  --shadow-pop: 0 6px 20px rgb(27 28 56 / 0.25);
   /* Chips on a page: just the hairline. */
   --shadow-chip: 0 0 0 1px var(--color-chrome-line);
   /* Catalog photos' drop shadow, which follows each photo's outline (exempt from the flat rules). */
@@ -111,6 +113,7 @@
     --color-tip-ink: #f4f4f9;
     --shadow-float: 0 0 0 1px rgb(225 227 255 / 0.07), 0 8px 24px rgb(0 0 0 / 0.4);
     --shadow-modal: 0 0 0 1px rgb(225 227 255 / 0.07), 0 16px 40px rgb(0 0 0 / 0.5);
+    --shadow-pop: 0 6px 20px rgb(0 0 0 / 0.45);
     --item-drop: drop-shadow(3px 5px 8px rgb(0 0 0 / 0.55));
   }
 }
@@ -148,6 +151,7 @@
   --color-tip-ink: #f4f4f9;
   --shadow-float: 0 0 0 1px rgb(225 227 255 / 0.07), 0 8px 24px rgb(0 0 0 / 0.4);
   --shadow-modal: 0 0 0 1px rgb(225 227 255 / 0.07), 0 16px 40px rgb(0 0 0 / 0.5);
+  --shadow-pop: 0 6px 20px rgb(0 0 0 / 0.45);
   --item-drop: drop-shadow(3px 5px 8px rgb(0 0 0 / 0.55));
 }
 
