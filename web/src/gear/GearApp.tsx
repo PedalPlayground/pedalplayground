@@ -1,7 +1,7 @@
 import { Search, SlidersHorizontal } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
-import { itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
+import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { indexItem, search as searchItems } from "../lib/search";
 import { PEDAL_TYPES } from "../lib/specs";
 import { Modal } from "../components/Modal";
@@ -65,8 +65,11 @@ const GRID: Record<Density, string> = {
   medium: "grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6",
   small: "grid-cols-3 gap-2 min-[560px]:grid-cols-4 md:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-8",
 };
-/** Pixels per inch for pedal photos at each card size, so pedals stay to scale with each other. */
-const SCALE: Record<Density, number> = { large: 22, medium: 16, small: 11 };
+/**
+ * Pedal photos share one scale, so sizes compare at a glance: a pedal this many inches tall fills the photo area's
+ * height (about three in four pedals are this size or smaller). Bigger ones are fit to it; boards always are.
+ */
+const FILL_INCHES = 5.2;
 /** Items per shelf (trending, newest). */
 const SHELF = 12;
 /** New for 30 days after it joins the catalog. */
@@ -446,7 +449,6 @@ export function GearApp() {
                   isNew={!!item.added && item.added >= newSince}
                   onBrand={pickBrand}
                   onOpen={openItem}
-                  scale={SCALE[density]}
                 />
               ))
             : !error && Array.from({ length: 12 }, (_, i) => <CardSkeleton key={i} />)}
@@ -484,7 +486,6 @@ function GearCard({
   isNew,
   onBrand,
   onOpen,
-  scale = SCALE.medium,
 }: {
   item: CatalogItem;
   kind: Kind;
@@ -492,21 +493,28 @@ function GearCard({
   isNew: boolean;
   onBrand: (brand: string) => void;
   onOpen: (kind: Kind, item: CatalogItem) => void;
-  /** Pixels per inch for pedals, which share one scale so sizes compare at a glance (boards are fit to the card). */
-  scale?: number;
 }) {
   const src = thumbUrl(manifest, kind, item.image);
-  // Pedals keep their real size against each other; anything too big for the card (and every board) is fit to it.
+  // The 128px thumbnail is soft once the photo fills a bigger card: the browser takes the full image when it needs it.
+  const full = canvasImageUrl(manifest, kind, item.image);
+  const srcSet = full ? `${src} 128w, ${full} ${kind === "pedal" ? 1200 : 2400}w` : undefined;
+  // Pedals keep their real size against each other (see FILL_INCHES); boards are fit to the card.
   const style =
     kind === "pedal"
-      ? { width: item.width * scale, height: item.height * scale, maxWidth: "100%", maxHeight: "100%" }
+      ? {
+          // cqh: a hundredth of the photo area's height, so the scale follows the card size.
+          width: `${(item.width / FILL_INCHES) * 100}cqh`,
+          height: `${(item.height / FILL_INCHES) * 100}cqh`,
+          maxWidth: "100%",
+          maxHeight: "100%",
+        }
       : { width: "100%", height: "100%" };
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface shadow-panel transition-shadow focus-within:ring-2 focus-within:ring-brand hover:shadow-[0_8px_28px_rgb(16_18_27/0.14),0_0_0_1px_rgb(16_18_27/0.05)]">
       <div className="relative aspect-[4/3] w-full bg-canvas">
         {/* Absolute, so a tall photo can't stretch the card. */}
-        <div className="absolute inset-3 flex items-center justify-center">
-          {src && <img src={src} alt="" loading="lazy" style={style} className="object-contain" />}
+        <div className="absolute inset-2 flex items-center justify-center [container-type:size]">
+          {src && <img src={src} srcSet={srcSet} sizes="(min-width: 768px) 15vw, 45vw" alt="" loading="lazy" style={style} className="object-contain" />}
         </div>
         {isNew && <span className="absolute left-2 top-2 rounded-full bg-brand px-2 py-0.5 text-[11px] font-semibold text-white">New</span>}
       </div>

@@ -9,8 +9,9 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   catalog has, counted within the chosen brand.
 - **Filters live in the URL**, so a brand page is a link: `/gear/?brand=BOSS`, `/gear/?type=Fuzz`, `/gear/?kind=boards`,
   `/gear/?q=big+sky`, `/gear/?sort=new` or `sort=used`. A brand typed in another case is fixed to the catalog's.
-- **Pedals share one scale** (16 px per inch, shrunk only when too big for the card), so sizes compare at a glance.
-  Boards are fit to the card.
+- **Pedals share one scale**, set by the card: a pedal 5.2″ tall (bigger than three in four pedals) fills the
+  photo area's height (`FILL_INCHES`, sized in container units, so it follows the card size), and bigger ones are fit
+  to it. Boards are fit to the card. Cards load the full photo when the 128px thumbnail would look soft.
 - **New** marks items added in the last 30 days.
 - The grid shows 60 items and adds 60 more as you scroll.
 - **Shelves** sit over the full list (no brand, type or search): Popular brands (most adds in the last year), Trending
