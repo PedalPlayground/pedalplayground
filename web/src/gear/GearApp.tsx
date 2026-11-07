@@ -1,8 +1,10 @@
-import { Search } from "lucide-react";
+import { Search, SlidersHorizontal } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { indexItem, search as searchItems } from "../lib/search";
+import { PEDAL_TYPES } from "../lib/specs";
+import { Modal } from "../components/Modal";
 import { fetchGearUsage, fetchTrending, type TrendingEntry } from "../lib/trending";
 import type { CatalogItem } from "../lib/types";
 import { useAuth } from "../store/auth";
@@ -15,6 +17,8 @@ type GearSort = "az" | "new" | "used";
 interface Filters {
   kind: Kind;
   brand: string | null;
+  /** Pedal type, as in src/lib/specs.ts ("Overdrive"). */
+  type: string | null;
   query: string;
   sort: GearSort;
 }
@@ -25,6 +29,7 @@ function readFilters(): Filters {
   return {
     kind: p.get("kind") === "boards" ? "pedalboard" : "pedal",
     brand: p.get("brand") || null,
+    type: p.get("type") || null,
     query: p.get("q") ?? "",
     sort: sort === "new" || sort === "used" ? sort : "az",
   };
@@ -41,6 +46,7 @@ function filtersHref(f: Filters) {
   const p = new URLSearchParams();
   if (f.kind === "pedalboard") p.set("kind", "boards");
   if (f.brand) p.set("brand", f.brand);
+  if (f.type) p.set("type", f.type);
   if (f.query.trim()) p.set("q", f.query.trim());
   if (f.sort !== "az") p.set("sort", f.sort);
   const qs = p.toString();
@@ -71,6 +77,9 @@ export function GearApp() {
   const [initial] = useState(readFilters);
   const [kind, setKind] = useState<Kind>(initial.kind);
   const [brand, setBrand] = useState<string | null>(initial.brand);
+  const [type, setType] = useState<string | null>(initial.type);
+  /** Phones and tablets: the filters open in a sheet. */
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [query, setQuery] = useState(initial.query);
   const [search, setSearch] = useState(initial.query);
   const [sort, setSort] = useState<GearSort>(initial.sort);
@@ -100,10 +109,10 @@ export function GearApp() {
   useEffect(() => {
     // An item's page owns the URL while it's open.
     if (readItem()) return;
-    writeFilters({ kind, brand, query: search, sort });
+    writeFilters({ kind, brand, type, query: search, sort });
     setShown(PAGE);
     scroller.current?.scrollTo({ top: 0 });
-  }, [kind, brand, search, sort]);
+  }, [kind, brand, type, search, sort]);
 
   // The browser's back and forward move between the grid and item pages.
   useEffect(() => {
@@ -114,6 +123,7 @@ export function GearApp() {
       setKind(f.kind);
       if (!next) {
         setBrand(f.brand);
+        setType(f.type);
         setQuery(f.query);
         setSearch(f.query);
         setSort(f.sort);
@@ -136,13 +146,14 @@ export function GearApp() {
     if (pushed.current) return history.back();
     // Opened from a link: there's no grid behind it, so start one.
     setOpen(null);
-    writeFilters({ kind, brand, query: search, sort });
+    writeFilters({ kind, brand, type, query: search, sort });
   };
 
   /** A brand link on an item page: that brand's grid, as a new history step. */
   const brandFromItem = (b: string) => {
     const k = open?.kind ?? kind;
-    history.pushState(null, "", filtersHref({ kind: k, brand: b, query: "", sort }));
+    history.pushState(null, "", filtersHref({ kind: k, brand: b, type: null, query: "", sort }));
+    setType(null);
     setOpen(null);
     setKind(k);
     pickBrand(b);
@@ -166,10 +177,17 @@ export function GearApp() {
     if (match) setBrand(match[0]);
   }, [brand, brands]);
 
+  /** Types for the Type list, with counts, in the order of src/lib/specs.ts. Empty until the catalog has types. */
+  const types = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const item of all) if (item.type && (!brand || item.brand === brand)) counts.set(item.type, (counts.get(item.type) ?? 0) + 1);
+    return PEDAL_TYPES.filter((t) => counts.has(t)).map((t) => [t, counts.get(t)!] as [string, number]);
+  }, [all, brand]);
+
   const index = useMemo(() => all.map(indexItem), [all]);
 
   const { items, partial } = useMemo(() => {
-    const scoped = brand ? index.filter((e) => e.item.brand === brand) : index;
+    const scoped = brand || type ? index.filter((e) => (!brand || e.item.brand === brand) && (!type || e.item.type === type)) : index;
     const found = searchItems(scoped, search);
     // A search ranks by match; sorting only reorders the full list.
     if (search.trim()) return found;
@@ -177,7 +195,7 @@ export function GearApp() {
     if (sort === "new") list.sort((a, b) => (b.added ?? "").localeCompare(a.added ?? ""));
     if (sort === "used") list.sort((a, b) => (usage.get(`${kind}:${b.image}`) ?? 0) - (usage.get(`${kind}:${a.image}`) ?? 0));
     return { items: list, partial: false };
-  }, [index, brand, search, sort, usage, kind]);
+  }, [index, brand, type, search, sort, usage, kind]);
 
   // Show the next page when the bottom of the grid scrolls into view.
   useEffect(() => {
@@ -206,7 +224,7 @@ export function GearApp() {
   };
 
   /** The shelves over the full list (no brand or search): trending, newest, and the most used brands. */
-  const browsing = !brand && !search.trim();
+  const browsing = !brand && !type && !search.trim();
   const shelves = useMemo(() => {
     if (!manifest || !browsing) return null;
     const byKey = new Map(all.map((c) => [c.image, c]));
@@ -234,6 +252,47 @@ export function GearApp() {
 
   const noun = kind === "pedal" ? "pedals" : "pedalboards";
   const total = items.length.toLocaleString("en-US");
+
+  const clearFilters = () => {
+    pickBrand(null);
+    setType(null);
+  };
+  /** Filters on, for the badge on the phone's Filters button. */
+  const activeFilters = (brand ? 1 : 0) + (type ? 1 : 0);
+
+  const searchBox = (
+    <label className="relative block">
+      <Search size={16} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-icon" />
+      <input
+        type="search"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder={brand ? `Search ${brand}` : `Search ${noun}`}
+        aria-label={`Search ${noun}`}
+        className="h-9 w-full rounded-control border border-line bg-surface pl-9 pr-3 text-sm outline-none focus:border-brand"
+      />
+    </label>
+  );
+
+  const filterPanel = (
+    <FilterPanel
+      kind={kind}
+      setKind={(k) => {
+        setKind(k);
+        // Few pedal brands make boards, and boards have no types: start over.
+        clearFilters();
+      }}
+      sort={sort}
+      setSort={setSort}
+      types={types}
+      type={type}
+      setType={setType}
+      brands={brands}
+      brand={brand}
+      setBrand={pickBrand}
+      onClear={activeFilters ? clearFilters : undefined}
+    />
+  );
 
   // Pages other than the playground scroll inside their own container (the playground locks page scrolling).
   return (
@@ -268,7 +327,7 @@ export function GearApp() {
       )}
 
       {/* Kept while an item is open, so its filters and loaded cards are there on Back. */}
-      <main className={`mx-auto max-w-6xl px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
+      <main className={`mx-auto max-w-7xl px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
         {brand ? (
           <>
             <button type="button" onClick={() => pickBrand(null)} className="text-[13px] font-semibold text-brand hover:underline">
@@ -277,81 +336,51 @@ export function GearApp() {
             <h1 className="mt-1 text-2xl font-bold tracking-[-0.01em]">{brand}</h1>
           </>
         ) : (
-          <h1 className="text-2xl font-bold tracking-[-0.01em]">Gear</h1>
+          <h1 className="text-2xl font-bold tracking-[-0.01em]">{type ?? "Gear"}</h1>
         )}
         <p className="mt-1 text-sm text-ink-muted">
           {manifest
-            ? brand
-              ? `${total} ${noun} from ${brand} in the catalog.`
+            ? brand || type
+              ? `${total} ${type && brand ? `${type.toLowerCase()} ` : ""}${noun}${brand ? ` from ${brand}` : ""} in the catalog.`
               : `Every pedal and pedalboard in the catalog: ${manifest.pedals.length.toLocaleString("en-US")} pedals and ${manifest.pedalboards.length.toLocaleString("en-US")} boards from ${new Set(manifest.pedals.map((p) => p.brand)).size.toLocaleString("en-US")} brands.`
             : "Every pedal and pedalboard in the catalog."}
         </p>
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <label className="relative block sm:w-72">
-            <Search size={16} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-icon" />
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder={brand ? `Search ${brand}` : `Search ${noun}`}
-              aria-label={`Search ${noun}`}
-              className="h-9 w-full rounded-control border border-line bg-surface pl-9 pr-3 text-sm outline-none focus:border-brand"
-            />
-          </label>
-          <div className="flex items-center gap-2">
-            <div role="group" aria-label="Kind" className="flex gap-2">
-              <button type="button" className={chip(kind === "pedal")} aria-pressed={kind === "pedal"} onClick={() => setKind("pedal")}>
-                Pedals
-              </button>
+        <div className="mt-6 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start lg:gap-8">
+          {/* Laptops and up: the filters in a sidebar that stays in view while the grid scrolls. */}
+          <aside aria-label="Filters" className="hidden lg:sticky lg:top-[4.5rem] lg:-mx-1 lg:block lg:max-h-[calc(100dvh-6rem)] lg:overflow-y-auto lg:px-1 lg:pb-4">
+            {searchBox}
+            {filterPanel}
+          </aside>
+
+          <div className="min-w-0">
+            {/* Phones and tablets: search, with the rest of the filters behind a button. */}
+            <div className="flex gap-2 lg:hidden">
+              <div className="min-w-0 flex-1">{searchBox}</div>
               <button
                 type="button"
-                className={chip(kind === "pedalboard")}
-                aria-pressed={kind === "pedalboard"}
-                onClick={() => {
-                  setKind("pedalboard");
-                  // Few pedal brands make boards, so start the boards over from every brand.
-                  pickBrand(null);
-                }}
+                onClick={() => setFiltersOpen(true)}
+                className="press relative flex h-9 shrink-0 items-center gap-1.5 rounded-control border border-line bg-surface px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
               >
-                Boards
+                <SlidersHorizontal size={15} />
+                Filters
+                {activeFilters > 0 && (
+                  <span className="grid size-5 place-items-center rounded-full bg-brand text-[11px] font-semibold text-white">{activeFilters}</span>
+                )}
               </button>
             </div>
-            <select
-              value={brand ?? ""}
-              onChange={(e) => pickBrand(e.target.value || null)}
-              aria-label="Brand"
-              className="h-9 min-w-0 flex-1 rounded-control border border-line bg-surface px-2.5 text-sm outline-none focus:border-brand sm:w-48 sm:flex-none"
-            >
-              <option value="">All brands</option>
-              {brands.map(([b, n]) => (
-                <option key={b} value={b}>
-                  {b} ({n})
-                </option>
-              ))}
-            </select>
-          </div>
-          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 self-start rounded-control bg-ink/[0.06] p-0.5 sm:ml-auto sm:self-auto">
-            {(
-              [
-                ["az", "A–Z"],
-                ["new", "Newest"],
-                ["used", "Most used"],
-              ] as const
-            ).map(([v, label]) => (
-              <button
-                key={v}
-                type="button"
-                role="radio"
-                aria-checked={sort === v}
-                onClick={() => setSort(v)}
-                className={`h-7 rounded-[3px] px-2.5 text-xs font-semibold transition-colors ${sort === v ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        </div>
+            {filtersOpen && (
+              <Modal title="Filters" closeX onClose={() => setFiltersOpen(false)}>
+                {filterPanel}
+                <button
+                  type="button"
+                  onClick={() => setFiltersOpen(false)}
+                  className="btn-primary press mt-4 h-10 w-full rounded-control text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                >
+                  Show {total} {items.length === 1 ? noun.slice(0, -1) : noun}
+                </button>
+              </Modal>
+            )}
 
         {shelves && (
           <>
@@ -393,7 +422,7 @@ export function GearApp() {
           </p>
         )}
 
-        <div className={`${shelves ? "mt-3" : "mt-6"} grid grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6`}>
+        <div className={`${shelves ? "mt-3" : "mt-6"} grid grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 xl:grid-cols-5`}>
           {manifest
             ? items.slice(0, shown).map((item) => (
                 <GearCard
@@ -420,9 +449,15 @@ export function GearApp() {
         )}
         {manifest && items.length === 0 && (
           <p className="mx-auto mt-12 max-w-sm text-center text-sm text-ink-muted">
-            No {noun} match{brand ? ` in ${brand}` : ""}. Try another search{brand ? " or brand" : ""}.
+            No {noun} match. Try another search or{" "}
+            <button type="button" className="font-semibold text-brand" onClick={clearFilters}>
+              clear the filters
+            </button>
+            .
           </p>
         )}
+          </div>
+        </div>
       </main>
     </div>
   );
@@ -485,6 +520,135 @@ function GearCard({
         </p>
       </div>
     </article>
+  );
+}
+
+const filterHeading = "mb-1.5 text-xs font-semibold uppercase tracking-[0.04em] text-ink-muted";
+const segmented = "flex rounded-control bg-ink/[0.06] p-0.5";
+const segment = (on: boolean) =>
+  `h-7 flex-1 whitespace-nowrap rounded-[3px] px-1.5 text-xs font-semibold transition-colors ${on ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`;
+const listRow = (on: boolean) =>
+  `flex w-full items-center justify-between gap-2 rounded-control px-2 py-1.5 text-left text-[13px] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+    on ? "bg-ink/[0.06] font-semibold text-ink" : "text-ink-muted hover:bg-ink/5 hover:text-ink"
+  }`;
+
+/** Pedals or boards, sort, type and brand: the sidebar on laptops, the Filters sheet on phones and tablets. */
+function FilterPanel({
+  kind,
+  setKind,
+  sort,
+  setSort,
+  types,
+  type,
+  setType,
+  brands,
+  brand,
+  setBrand,
+  onClear,
+}: {
+  kind: Kind;
+  setKind: (k: Kind) => void;
+  sort: GearSort;
+  setSort: (s: GearSort) => void;
+  types: [string, number][];
+  type: string | null;
+  setType: (t: string | null) => void;
+  brands: [string, number][];
+  brand: string | null;
+  setBrand: (b: string | null) => void;
+  onClear?: () => void;
+}) {
+  const [find, setFind] = useState("");
+  const shownBrands = useMemo(() => {
+    const q = find.trim().toLowerCase();
+    return q ? brands.filter(([b]) => b.toLowerCase().includes(q)) : brands;
+  }, [brands, find]);
+  return (
+    <div className="flex flex-col gap-5 pt-4 lg:pt-5">
+      <div className="grid gap-4">
+        <div>
+          <h3 className={filterHeading}>Show</h3>
+          <div role="radiogroup" aria-label="Show" className={segmented}>
+            {(
+              [
+                ["pedal", "Pedals"],
+                ["pedalboard", "Boards"],
+              ] as const
+            ).map(([v, label]) => (
+              <button key={v} type="button" role="radio" aria-checked={kind === v} onClick={() => setKind(v)} className={segment(kind === v)}>
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 className={filterHeading}>Sort</h3>
+          <div role="radiogroup" aria-label="Sort" className={segmented}>
+            {(
+              [
+                ["az", "A–Z"],
+                ["new", "Newest"],
+                ["used", "Most used"],
+              ] as const
+            ).map(([v, label]) => (
+              <button key={v} type="button" role="radio" aria-checked={sort === v} onClick={() => setSort(v)} className={segment(sort === v)}>
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {types.length > 0 && (
+        <div>
+          <h3 className={filterHeading}>Type</h3>
+          <div role="radiogroup" aria-label="Type" className="grid gap-0.5">
+            <button type="button" role="radio" aria-checked={type === null} onClick={() => setType(null)} className={listRow(type === null)}>
+              All types
+            </button>
+            {types.map(([t, n]) => (
+              <button key={t} type="button" role="radio" aria-checked={type === t} onClick={() => setType(type === t ? null : t)} className={listRow(type === t)}>
+                <span className="truncate">{t}</span>
+                <span className="shrink-0 text-xs tabular-nums text-ink-muted">{n.toLocaleString("en-US")}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* The brand list scrolls on its own; past it, the whole sidebar scrolls. */}
+      <div>
+        <h3 className={filterHeading}>Brand</h3>
+        <input
+          type="search"
+          value={find}
+          onChange={(e) => setFind(e.target.value)}
+          placeholder={`Find a brand (${brands.length.toLocaleString("en-US")})`}
+          aria-label="Find a brand"
+          className="mb-1.5 h-8 w-full rounded-control border border-line bg-surface px-2.5 text-[13px] outline-none focus:border-brand"
+        />
+        <div role="radiogroup" aria-label="Brand" className="-mx-1 grid max-h-72 gap-0.5 overflow-y-auto px-1">
+          {!find.trim() && (
+            <button type="button" role="radio" aria-checked={brand === null} onClick={() => setBrand(null)} className={listRow(brand === null)}>
+              All brands
+            </button>
+          )}
+          {shownBrands.map(([b, n]) => (
+            <button key={b} type="button" role="radio" aria-checked={brand === b} onClick={() => setBrand(brand === b ? null : b)} className={listRow(brand === b)}>
+              <span className="truncate">{b}</span>
+              <span className="shrink-0 text-xs tabular-nums text-ink-muted">{n.toLocaleString("en-US")}</span>
+            </button>
+          ))}
+          {shownBrands.length === 0 && <p className="px-2 py-1.5 text-[13px] text-ink-muted">No brands match.</p>}
+        </div>
+      </div>
+
+      {onClear && (
+        <button type="button" onClick={onClear} className="self-start text-[13px] font-semibold text-brand hover:underline">
+          Clear filters
+        </button>
+      )}
+    </div>
   );
 }
 
