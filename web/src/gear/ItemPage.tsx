@@ -79,15 +79,16 @@ export function ItemPage({
   }, [all, item, kind, usage]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const buy = buyLinks(item.brand, item.name);
-  const specs: [string, string][] = [
-    ["Size", `${fmtIn(item.width)}″ × ${fmtIn(item.height)}″ (${fmtMm(item.width)} × ${fmtMm(item.height)} mm)`],
-    ...(item.type ? [[itemTypes(item).length > 1 ? "Types" : "Type", itemTypes(item).join(", ")] as [string, string]] : []),
-    ...(item.voltage ? [["Power", item.voltage] as [string, string]] : []),
-    ...(item.ma ? [["Current draw", formatMa(item.ma)] as [string, string]] : []),
+  /** Facts as small tiles: a label, the value, and sometimes a quieter second line. Types span the full width. */
+  const specs: { label: string; value: string; sub?: string; wide?: boolean }[] = [
+    { label: "Size", value: `${fmtIn(item.width)}″ × ${fmtIn(item.height)}″`, sub: `${fmtMm(item.width)} × ${fmtMm(item.height)} mm` },
     ...(item.added
-      ? [["Added to the catalog", new Date(`${item.added}T12:00:00`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })] as [string, string]]
+      ? [{ label: "Added", value: new Date(`${item.added}T12:00:00`).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) }]
       : []),
+    ...(item.voltage ? [{ label: "Power", value: item.voltage }] : []),
+    ...(item.ma ? [{ label: "Current draw", value: formatMa(item.ma) }] : []),
   ];
+  const types = itemTypes(item);
 
   return (
     <>
@@ -154,11 +155,21 @@ export function ItemPage({
             </div>
           )}
 
-          <dl className="mt-6 divide-y divide-line border-y border-line text-sm">
-            {specs.map(([k, v]) => (
-              <div key={k} className="flex justify-between gap-4 py-2.5">
-                <dt className="text-ink-muted">{k}</dt>
-                <dd className="text-right font-medium tabular-nums">{v}</dd>
+          {types.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-1.5" aria-label={types.length > 1 ? "Types" : "Type"}>
+              {types.map((t) => (
+                <span key={t} className="rounded-full bg-soft px-2.5 py-1 text-xs font-semibold text-ink">
+                  {t}
+                </span>
+              ))}
+            </div>
+          )}
+          <dl className={`${types.length ? "mt-3" : "mt-6"} grid grid-cols-2 gap-2`}>
+            {specs.map((sp) => (
+              <div key={sp.label} className={`rounded-panel bg-card px-3.5 py-3 ${sp.wide ? "col-span-2" : ""}`}>
+                <dt className="text-xs text-ink-muted">{sp.label}</dt>
+                <dd className="mt-0.5 text-[15px] font-semibold tabular-nums tracking-[-0.01em]">{sp.value}</dd>
+                {sp.sub && <dd className="text-xs tabular-nums text-ink-muted">{sp.sub}</dd>}
               </div>
             ))}
           </dl>
