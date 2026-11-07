@@ -1,4 +1,4 @@
-import { ArrowLeft, Search, SlidersHorizontal, Sparkles, TrendingUp } from "lucide-react";
+import { ArrowLeft, Search, SlidersHorizontal, Sprout, TrendingUp } from "lucide-react";
 import { tip } from "../components/Tooltip";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
@@ -722,17 +722,12 @@ function FilterPanel({
   );
 }
 
-/** New (a brand sparkle) or Trending (a tangerine arrow) as a small round icon in a card's corner. */
+/** New (a jade sprout) or Trending (a tangerine arrow): a small colored icon in a card's corner, no backing. */
 function MarkIcon({ why }: { why: "new" | "trending" }) {
   const label = why === "new" ? "New" : "Trending";
   return (
-    <span
-      role="img"
-      aria-label={label}
-      {...tip(label)}
-      className={`absolute left-2 top-2 z-10 grid size-6 place-items-center rounded-full ${why === "new" ? "bg-brand text-brand-ink" : "bg-surface text-tangerine shadow-chip"}`}
-    >
-      {why === "new" ? <Sparkles size={13} strokeWidth={2.25} aria-hidden /> : <TrendingUp size={13} strokeWidth={2.5} aria-hidden />}
+    <span role="img" aria-label={label} {...tip(label)} className={`absolute left-2.5 top-2.5 z-10 flex ${why === "new" ? "text-positive" : "text-tangerine"}`}>
+      {why === "new" ? <Sprout size={17} strokeWidth={2.25} aria-hidden /> : <TrendingUp size={17} strokeWidth={2.5} aria-hidden />}
     </span>
   );
 }
