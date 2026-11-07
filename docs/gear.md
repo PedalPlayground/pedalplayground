@@ -16,8 +16,8 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   to it. Boards are fit to the card. Cards load the full photo when the 128px thumbnail would look soft.
 - The grid shows 60 items and adds 60 more as you scroll.
 - **Over the full list** (no brand, type or search):
-  - **Hot right now**, a bento of 11 photo-first tiles (name only), beside **Popular brands** (16 photo tiles, 8 on
-    phones). Hot ranks this week's 100 most added by momentum (week adds squared over month adds, damped by size; see
+  - **Hot right now**, a bento of 11 photo-first tiles (name only), beside **Popular brands** (16 tiles, 8 on
+    phones, each with a zoomed, cropped photo of the brand's most added item bleeding off its bottom-right corner). Hot ranks this week's 100 most added by momentum (week adds squared over month adds, damped by size; see
     `fetchHot` in `lib/trending.ts`), then sets aside the month's 30 most added real gear (everyday staples), tuners,
     volume pedals, utilities and board accessories. The bento's sizes fill the grid exactly at 4 and 2 columns.
   - **New in the catalog**, a wall of the 16 newest as square photo tiles (eight across on laptops, four on phones),

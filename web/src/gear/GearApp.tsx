@@ -851,7 +851,10 @@ function PhotoTile({ item, kind, manifest, onOpen }: { item: CatalogItem; kind: 
   );
 }
 
-/** A brand beside the bento: a small photo of its most added item, then its name. Opens the brand's page. */
+/**
+ * A brand beside the bento: its name, with a zoomed-in photo of its most added item bleeding off the bottom-right
+ * corner (the tile crops it). Opens the brand's page.
+ */
 function BrandTile({
   brand,
   item,
@@ -868,16 +871,24 @@ function BrandTile({
   className?: string;
 }) {
   const thumb = thumbUrl(manifest, kind, item.image);
+  const full = canvasImageUrl(manifest, kind, item.image);
   return (
     <button
       type="button"
       onClick={onPick}
-      className={`group flex min-h-0 items-center gap-2.5 overflow-hidden rounded-panel bg-card px-2.5 text-left ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand ${className}`}
+      className={`group relative isolate flex min-h-0 items-center overflow-hidden rounded-panel bg-card px-3.5 text-left ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand ${className}`}
     >
-      <span className="grid size-9 shrink-0 place-items-center">
-        {thumb && <img src={thumb} alt="" loading="lazy" className="max-h-9 max-w-9 object-contain transition-transform duration-300 group-hover:scale-105" />}
-      </span>
-      <span className="min-w-0 truncate text-[13px] font-semibold">{brand}</span>
+      <span className="relative z-10 min-w-0 truncate pr-[38%] text-[13px] font-semibold">{brand}</span>
+      {thumb && (
+        <img
+          src={full ?? thumb}
+          srcSet={full ? `${thumb} 128w, ${full} 1200w` : undefined}
+          sizes="200px"
+          alt=""
+          loading="lazy"
+          className="pointer-events-none absolute -right-[8%] top-[18%] h-[220%] w-[50%] object-contain object-left-top transition-transform duration-300 group-hover:-translate-y-1"
+        />
+      )}
     </button>
   );
 }
