@@ -226,13 +226,19 @@ export function ItemEditor({
             </div>
             <div>
               <label className={labelClass} htmlFor={`${id}-type`}>Type</label>
-              <select id={`${id}-type`} className={inputClass} value={fields.type ?? ""} onChange={(e) => set({ type: e.target.value || undefined })}>
+              <select
+                id={`${id}-type`}
+                className={inputClass}
+                value={fields.type ?? ""}
+                onChange={(e) => set({ type: e.target.value || undefined, extraTypes: fields.extraTypes?.filter((t) => t !== e.target.value) })}
+              >
                 <option value="">Unknown</option>
                 {PEDAL_TYPES.map((t) => (
                   <option key={t}>{t}</option>
                 ))}
               </select>
             </div>
+            {fields.type && <AlsoTypes main={fields.type} extra={fields.extraTypes ?? []} onChange={(extraTypes) => set({ extraTypes })} />}
           </>
         )}
         {onPickFile && (
@@ -593,6 +599,34 @@ function SizeStrip({
               </button>
             );
           })}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Types besides the main one, as chips to tick ("Xotic BB Preamp": Overdrive, also Amp / Preamp). Shared by the
+ * item form and the Types tab.
+ */
+export function AlsoTypes({ main, extra, onChange, compact }: { main: string; extra: string[]; onChange: (extra: string[]) => void; compact?: boolean }) {
+  return (
+    <div>
+      {!compact && <span className={labelClass}>Also counts as</span>}
+      <div className={`flex flex-wrap gap-1 ${compact ? "" : "mt-1"}`} role="group" aria-label="Also counts as">
+        {PEDAL_TYPES.filter((t) => t !== main && t !== "Other").map((t) => {
+          const on = extra.includes(t);
+          return (
+            <button
+              key={t}
+              type="button"
+              aria-pressed={on}
+              onClick={() => onChange(on ? extra.filter((x) => x !== t) : [...extra, t])}
+              className={`h-6 rounded-full px-2 text-[11px] font-semibold transition-colors ${on ? "bg-ink text-surface" : "bg-ink/[0.06] text-ink-muted hover:text-ink"}`}
+            >
+              {t}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

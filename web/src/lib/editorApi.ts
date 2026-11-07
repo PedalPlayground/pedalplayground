@@ -18,6 +18,7 @@ export interface Submission {
   current_ma: number | null;
   voltage: string | null;
   type: string | null;
+  extra_types?: string[];
   source_path: string | null;
   note: string | null;
   status: "pending" | "needs_changes" | "approved" | "rejected";
@@ -37,6 +38,7 @@ export interface Item {
   current_ma: number | null;
   voltage: string | null;
   type: string | null;
+  extra_types?: string[];
   source_path: string | null;
   thumb_path: string | null;
   img_path: string | null;
@@ -82,6 +84,7 @@ export const fieldsFrom = (r: Submission | Item): Fields => ({
   ma: r.current_ma ?? undefined,
   voltage: r.voltage ?? undefined,
   type: r.type ?? undefined,
+  extraTypes: r.extra_types,
 });
 
 const columns = (f: Fields) => ({
@@ -93,6 +96,8 @@ const columns = (f: Fields) => ({
   current_ma: f.ma ?? null,
   voltage: f.voltage || null,
   type: f.kind === "pedal" ? f.type || null : null,
+  // Only sent once the column exists (fieldsFrom fills it in from the row); boards never have extras.
+  ...(f.extraTypes !== undefined && { extra_types: f.kind === "pedal" && f.type ? [...new Set(f.extraTypes)].filter((t) => t !== f.type) : [] }),
 });
 
 /** Submissions waiting for an editor, oldest first. */
@@ -167,6 +172,23 @@ export async function searchItems(text: string, opts: { kind?: Item["kind"]; ret
   if (opts.kind) q = q.eq("kind", opts.kind);
   if (!opts.retired) q = q.eq("status", "live");
   const { data, error } = await q.order(text.trim() ? "brand" : "updated_at", { ascending: !!text.trim() }).limit(60);
+  fail(error);
+  return (data ?? []) as Item[];
+}
+
+/**
+ * Live pedals of one type (main or extra), or with no type when `type` is null, A–Z by brand, a page at a time.
+ * `text` narrows by brand or name words, like searchItems.
+ */
+export async function listByType(type: string | null, text: string, page: number, pageSize = 100): Promise<Item[]> {
+  let q = db().from("catalog_items").select("*").eq("kind", "pedal").eq("status", "live");
+  // Quoted, since types have spaces and slashes ("Amp / Preamp").
+  q = type === null ? q.is("type", null) : q.or(`type.eq."${type}",extra_types.cs.{"${type}"}`);
+  for (const word of text.trim().split(/\s+/).filter(Boolean).slice(0, 5)) {
+    const w = word.replace(/[,()%*\\]/g, "");
+    if (w) q = q.or(`brand.ilike.*${w}*,name.ilike.*${w}*`);
+  }
+  const { data, error } = await q.order("brand").order("name").range(page * pageSize, page * pageSize + pageSize - 1);
   fail(error);
   return (data ?? []) as Item[];
 }

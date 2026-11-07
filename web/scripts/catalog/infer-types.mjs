@@ -4,7 +4,7 @@
  *
  *   node scripts/catalog/infer-types.mjs [catalog.json] [--sql out.sql]
  *
- * Prints how many pedals each rule matched, with examples. With --sql, also writes an update for each match that
+ * Prints how many pedals each rule matched, with examples, and how many names suggest more than one type. With --sql, also writes an update for each match that
  * only fills a type that's still empty, so it's safe to run again and never overwrites an editor's choice.
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -29,19 +29,23 @@ export const RULES = [
   ["Boost", /\b(boost|booster)\b/],
   ["Reverb", /\b(reverb|verb)\b/],
   ["Delay", /\b(delay|echo)\b/],
-  ["Modulation", /\b(chorus|flanger?|phaser|phase|tremolo|trem|vibrato|vibe|rotary|leslie|modulation|modulator|ring\s*mod)\b/],
-  ["Pitch", /\b(octave|octaver|harmonizer|harmonist|pitch|whammy|shifter)\b/],
+  ["Modulation", /\b(chorus|flanger?|phaser|phase(?!\s*(inverter|analy))|tremolo|trem|vibrato|vibe|rotary|leslie|modulation|modulator|ring\s*mod)\b/],
+  ["Pitch", /\b(octave|octaver|harmonizer|harmonist|pitch|whammy)\b/],
   ["Filter / Wah", /\b(wah|cry\s*baby|envelope|filter|auto[\s-]?wah)\b/],
   ["EQ", /\b(eq|equalizer|equaliser)\b/],
   ["Utility", /\b(di|di\s*box|buffer|a\/b|aby|splitter|switcher|junction|power\s*supply|mixer|blender)\b/],
 ];
 
-/** The type a pedal's name suggests, or null. */
-export function inferType(name) {
+/** Every type a pedal's name suggests, main (first matching rule) first: "Tremolo/Reverb" -> Reverb, Modulation. */
+export function inferTypes(name) {
   const n = name.toLowerCase();
-  for (const [type, re] of RULES) if (re.test(n)) return type;
-  return null;
+  const found = [];
+  for (const [type, re] of RULES) if (re.test(n) && !found.includes(type)) found.push(type);
+  return found;
 }
+
+/** The main type a pedal's name suggests, or null. */
+export const inferType = (name) => inferTypes(name)[0] ?? null;
 
 const sqlText = (s) => `'${s.replace(/'/g, "''")}'`;
 
@@ -60,7 +64,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     byType.get(t).push(p);
   }
   const matched = [...byType.values()].reduce((n, l) => n + l.length, 0);
-  console.log(`${matched} of ${open.length} pedals without a type get one from their name.\n`);
+  const several = open.filter((p) => inferTypes(p.name).length > 1);
+  console.log(`${matched} of ${open.length} pedals without a type get one from their name; ${several.length} suggest more than one.\n`);
   for (const type of new Set(RULES.map(([t]) => t))) {
     const list = byType.get(type) ?? [];
     console.log(`${type}: ${list.length}`);

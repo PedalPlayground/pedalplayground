@@ -30,6 +30,13 @@ describe("manifestFromRows", () => {
     });
   });
 
+  it("lists every type, main first, only when there's more than one", () => {
+    const [one] = manifestFromRows([row({ type: "Overdrive", extra_types: [] })]).pedals;
+    expect(one).not.toHaveProperty("types");
+    const [two] = manifestFromRows([row({ type: "Overdrive", extra_types: ["Amp / Preamp", "Overdrive"] })]).pedals;
+    expect(two.types).toEqual(["Overdrive", "Amp / Preamp"]);
+  });
+
   it("leaves out optional specs that aren't set", () => {
     const [p] = manifestFromRows([row()]).pedals;
     expect(p).not.toHaveProperty("ma");

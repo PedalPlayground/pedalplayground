@@ -46,3 +46,16 @@ node scripts/catalog/infer-types.mjs <catalog.json> --sql types.sql   # prints c
 The SQL only fills empty types (`type is null`), so it never overwrites an editor's choice and is safe to rerun. Run
 it in the SQL Editor, then a Catalog publish with mode `manifest-only` puts the types into `catalog.json`. Names
 that don't say what the pedal is (DS-1, Klon) stay empty for editors to fill in.
+
+## More than one type
+
+A pedal has a main `type` (the Equipment List and signal path show it) and up to four `extra_types`
+(`supabase/migrations/20261107000000_catalog_extra_types.sql`). `catalog.json` lists `types` (main first) only
+when there's more than one; read them with `itemTypes()` in `lib/catalog.ts`. The Gear page counts and filters by
+every type, and the item page lists them all.
+
+Editors set them in two places: **Also counts as** chips under Type in the item form, and the editor's **Types**
+tab, which lists one type's pedals (or those with none) with a main-type picker and the chips on each row. Each
+change there saves at once as an approved edit; **Publish** puts them live together.
+
+`infer-types.mjs` also reports names that suggest more than one type ("Tremolo/Reverb": Reverb, plus Modulation).

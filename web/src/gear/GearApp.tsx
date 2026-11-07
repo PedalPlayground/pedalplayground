@@ -1,7 +1,7 @@
 import { Search, SlidersHorizontal } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
-import { thumbUrl, type Kind, type Manifest } from "../lib/catalog";
+import { itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { indexItem, search as searchItems } from "../lib/search";
 import { PEDAL_TYPES } from "../lib/specs";
 import { Modal } from "../components/Modal";
@@ -180,14 +180,14 @@ export function GearApp() {
   /** Types for the Type list, with counts, in the order of src/lib/specs.ts. Empty until the catalog has types. */
   const types = useMemo(() => {
     const counts = new Map<string, number>();
-    for (const item of all) if (item.type && (!brand || item.brand === brand)) counts.set(item.type, (counts.get(item.type) ?? 0) + 1);
+    for (const item of all) if (!brand || item.brand === brand) for (const t of itemTypes(item)) counts.set(t, (counts.get(t) ?? 0) + 1);
     return PEDAL_TYPES.filter((t) => counts.has(t)).map((t) => [t, counts.get(t)!] as [string, number]);
   }, [all, brand]);
 
   const index = useMemo(() => all.map(indexItem), [all]);
 
   const { items, partial } = useMemo(() => {
-    const scoped = brand || type ? index.filter((e) => (!brand || e.item.brand === brand) && (!type || e.item.type === type)) : index;
+    const scoped = brand || type ? index.filter((e) => (!brand || e.item.brand === brand) && (!type || itemTypes(e.item).includes(type))) : index;
     const found = searchItems(scoped, search);
     // A search ranks by match; sorting only reorders the full list.
     if (search.trim()) return found;

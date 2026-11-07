@@ -96,7 +96,7 @@ export async function publishCatalog(db, { dryRun = false, manifestOnly = false,
     const rows = await allRows(() =>
       db
         .from("catalog_items")
-        .select("kind,key,brand,name,width_in,height_in,current_ma,voltage,type,status,added_on,thumb_path,img_path")
+        .select("kind,key,brand,name,width_in,height_in,current_ma,voltage,type,extra_types,status,added_on,thumb_path,img_path")
         .not("img_path", "is", null)
         .order("id"),
     );

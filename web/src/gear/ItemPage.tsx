@@ -1,7 +1,7 @@
 import { ArrowLeft, Plus } from "lucide-react";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { affiliateProps, buyLinks, DISCLOSURE } from "../lib/affiliate";
-import { canvasImageUrl, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
+import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { handoffHref } from "../lib/handoff";
 import { formatMa } from "../lib/specs";
 import type { CatalogItem } from "../lib/types";
@@ -68,7 +68,7 @@ export function ItemPage({
   const buy = buyLinks(item.brand, item.name);
   const specs: [string, string][] = [
     ["Size", `${fmtIn(item.width)}″ × ${fmtIn(item.height)}″ (${fmtMm(item.width)} × ${fmtMm(item.height)} mm)`],
-    ...(item.type ? [["Type", item.type] as [string, string]] : []),
+    ...(item.type ? [[itemTypes(item).length > 1 ? "Types" : "Type", itemTypes(item).join(", ")] as [string, string]] : []),
     ...(item.voltage ? [["Power", item.voltage] as [string, string]] : []),
     ...(item.ma ? [["Current draw", formatMa(item.ma)] as [string, string]] : []),
     ...(item.added

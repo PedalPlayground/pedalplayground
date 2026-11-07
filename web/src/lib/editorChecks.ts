@@ -15,6 +15,8 @@ export interface Fields {
   ma?: number;
   voltage?: string;
   type?: string;
+  /** Types besides the main one. Undefined until the database has the column (it's then left out of saves). */
+  extraTypes?: string[];
 }
 
 export interface ImageStats {
@@ -119,7 +121,7 @@ export function copiedFields(from: CatalogItem, withSpecs: boolean): Partial<Fie
     brand: from.brand,
     width: from.width,
     height: from.height,
-    ...(withSpecs ? { ma: from.ma, voltage: from.voltage, type: from.type } : {}),
+    ...(withSpecs ? { ma: from.ma, voltage: from.voltage, type: from.type, extraTypes: from.types?.slice(1) ?? [] } : {}),
   };
 }
 
