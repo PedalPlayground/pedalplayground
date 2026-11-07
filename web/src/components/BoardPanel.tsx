@@ -27,7 +27,7 @@ import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
-import { RoleBadges, teamRole } from "./RoleBadge";
+import { RoleBadges, teamRole, userLink } from "./RoleBadge";
 import { tip } from "./Tooltip";
 
 const TYPE_LABELS = Object.fromEntries(PLAYGROUND_TYPES) as Record<string, string>;
@@ -245,7 +245,7 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
               <span className="text-base text-ink-muted">
                 {" "}
                 by{" "}
-                <a href={userGalleryUrl((info?.username ?? viewingOwner)!)} {...tip("Their boards in Explore")} className="hover:text-ink hover:underline">
+                <a href={userGalleryUrl((info?.username ?? viewingOwner)!)} {...tip("Their boards in Explore")} className={`hover:text-ink ${userLink}`}>
                   {info?.username ?? viewingOwner}
                 </a>
                 {teamRole(info?.username ?? viewingOwner) && (
@@ -465,7 +465,7 @@ function Social({
         )}
 
         {reporting && (
-          <ReportDialog kind="comment" target={reporting.id} what={`${reporting.username ? `@${reporting.username}: ` : ""}${reporting.body}`} onClose={() => setReporting(null)} />
+          <ReportDialog kind="comment" target={reporting.id} what={`${reporting.username ? `${reporting.username}: ` : ""}${reporting.body}`} onClose={() => setReporting(null)} />
         )}
         {showComments && (
           <section id="board-comments" className="mt-4" aria-label="Comments">
@@ -481,8 +481,8 @@ function Social({
                   <li key={c.id} className="group/comment">
                     <div className="flex items-center gap-2 text-xs">
                       {c.username ? (
-                        <a href={userGalleryUrl(c.username)} {...tip("Their boards in Explore")} className="font-semibold hover:underline">
-                          @{c.username}
+                        <a href={userGalleryUrl(c.username)} {...tip("Their boards in Explore")} className={`font-semibold ${userLink}`}>
+                          {c.username}
                         </a>
                       ) : (
                         <span className="font-semibold">Member</span>

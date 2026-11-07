@@ -92,7 +92,7 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
   }, []);
 
   const unhide = async (b: HiddenBoard) => {
-    if (b.by_ban && !window.confirm(`A ban on @${b.owner_username ?? "this account"} hid "${b.name}". Show it in the gallery anyway?`)) return;
+    if (b.by_ban && !window.confirm(`A ban on ${b.owner_username ?? "this account"} hid "${b.name}". Show it in the gallery anyway?`)) return;
     try {
       await setGalleryHidden(b.playground_id, false);
       setNotice({ text: `"${b.name}" is back in the gallery.` });
@@ -125,7 +125,7 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
               <div className="flex flex-wrap items-center gap-x-2.5 text-xs text-ink-muted">
                 <span className="font-semibold text-ink">{reasonLabel(r.reason)}</span>
                 <span>
-                  {r.target_kind === "comment" ? "Comment" : r.target_kind === "board" ? "Board" : "User"} by @{r.target_username ?? "unknown"}
+                  {r.target_kind === "comment" ? "Comment" : r.target_kind === "board" ? "Board" : "User"} by {r.target_username ?? "unknown"}
                 </span>
                 <span>{ago(r.created_at)}</span>
               </div>
@@ -134,7 +134,7 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
               <p className="mt-1 text-xs text-ink-muted">
                 <Meta
                   parts={[
-                    `From @${r.reporter_username ?? "unknown"}`,
+                    `From ${r.reporter_username ?? "unknown"}`,
                     `${r.open_against} open ${r.open_against === 1 ? "report" : "reports"} and ${r.flags_against} ${r.flags_against === 1 ? "flag" : "flags"} on this account`,
                   ]}
                 />
@@ -167,10 +167,10 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
             <li key={b.playground_id} className="rounded-panel border border-line px-3 py-2.5 text-[13px]">
               <div className="flex flex-wrap items-center gap-x-2.5 text-xs text-ink-muted">
                 <span className="font-semibold text-ink">{b.by_ban ? "Hidden by a ban" : "Hidden"}</span>
-                <span>Board by @{b.owner_username ?? "unknown"}</span>
+                <span>Board by {b.owner_username ?? "unknown"}</span>
                 <span>
                   {ago(b.hidden_at)}
-                  {b.hidden_by_username && ` by @${b.hidden_by_username}`}
+                  {b.hidden_by_username && ` by ${b.hidden_by_username}`}
                 </span>
               </div>
               <p className="mt-1 break-words">“{b.name}”</p>
@@ -239,12 +239,12 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
   const status = user.banned ? "Banned" : user.restricted_until ? `In a timeout until ${shortDate(user.restricted_until)}` : "In good standing";
 
   const flag = async () => {
-    if (action === "ban" && !window.confirm(`Ban @${user.username}? They won't be able to sign in, and their gallery boards and comments will be hidden.`)) return;
+    if (action === "ban" && !window.confirm(`Ban ${user.username}? They won't be able to sign in, and their gallery boards and comments will be hidden.`)) return;
     setBusy(true);
     setError(null);
     try {
       await flagUser({ userId: user.user_id, reason, note, action, days, reportId: report?.id });
-      await onChanged(`Flagged @${user.username}: ${action === "timeout" ? `${days}-day timeout` : action}.`);
+      await onChanged(`Flagged ${user.username}: ${action === "timeout" ? `${days}-day timeout` : action}.`);
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -252,10 +252,10 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
     }
   };
   const lift = async (f: Flag) => {
-    if (!window.confirm(`Lift this ${f.action} on @${user.username}?`)) return;
+    if (!window.confirm(`Lift this ${f.action} on ${user.username}?`)) return;
     try {
       await liftFlag(f.id);
-      await onChanged(`Lifted the ${f.action} on @${user.username}.`);
+      await onChanged(`Lifted the ${f.action} on ${user.username}.`);
     } catch (e) {
       setNotice({ text: (e as Error).message, error: true });
     }
@@ -264,7 +264,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
   return (
     <div className="grid gap-4">
       <div>
-        <p className="text-[15px] font-semibold">@{user.username}</p>
+        <p className="text-[15px] font-semibold">{user.username}</p>
         <p className="text-xs text-ink-muted">
           <Meta parts={[status, `Joined ${shortDate(user.joined)}`, `${user.open_reports} open ${user.open_reports === 1 ? "report" : "reports"}`]} />
         </p>
@@ -281,7 +281,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
                 <span>{reasonLabel(f.reason)}</span>
                 <span>
                   {shortDate(f.created_at)}
-                  {f.issued_by && ` by @${f.issued_by}`}
+                  {f.issued_by && ` by ${f.issued_by}`}
                 </span>
                 <span>{f.lifted_at ? `Lifted ${shortDate(f.lifted_at)}` : f.seen_at ? "Seen" : "Not seen yet"}</span>
                 {!f.lifted_at && (
@@ -303,7 +303,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
           void flag();
         }}
       >
-        <h3 className="text-sm font-semibold">Flag @{user.username}</h3>
+        <h3 className="text-sm font-semibold">Flag {user.username}</h3>
         {report && <p className="text-xs text-ink-muted">Flagging resolves the report: “{reasonLabel(report.reason)}”.</p>}
         <div>
           <label className={fieldLabel} htmlFor="flag-reason">
@@ -319,7 +319,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
         </div>
         <div>
           <label className={fieldLabel} htmlFor="flag-note">
-            Note to @{user.username}
+            Note to {user.username}
           </label>
           <span id="flag-note-help" className={fieldHelp}>
             Shown in the popup they see on their next visit
@@ -361,7 +361,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
         )}
         {error && <span className={fieldError}>{error}</span>}
         <button type="submit" disabled={busy} className={`${primaryButton} justify-self-start`}>
-          {busy ? "Flagging…" : action === "ban" ? `Ban @${user.username}` : `Flag @${user.username}`}
+          {busy ? "Flagging…" : action === "ban" ? `Ban ${user.username}` : `Flag ${user.username}`}
         </button>
       </form>
     </div>

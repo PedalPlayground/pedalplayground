@@ -1,6 +1,13 @@
 import { BadgeCheck } from "lucide-react";
 import { tip } from "./Tooltip";
 
+/**
+ * A username that links somewhere (their boards in Explore, or moderation): a soft squiggly underline that firms up
+ * on hover. Usernames are shown without an @.
+ */
+export const userLink =
+  "underline decoration-wavy decoration-1 underline-offset-[3px] decoration-ink-muted/45 transition-colors hover:decoration-current";
+
 /** Accounts that speak for Pedal Playground, by username (lowercase), and the label their posts carry. */
 const TEAM: Record<string, string> = { trav: "Creator" };
 

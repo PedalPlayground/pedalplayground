@@ -9,7 +9,7 @@ import { moderationError } from "../lib/moderation";
 import { useRestriction } from "../store/standing";
 import { useAuth } from "../store/auth";
 import { tip } from "../components/Tooltip";
-import { RoleBadges, teamRole } from "../components/RoleBadge";
+import { RoleBadges, teamRole, userLink } from "../components/RoleBadge";
 import { DensitySwitch, useDensity, type Density } from "../components/DensitySwitch";
 
 const TYPE_LABELS: Record<PlaygroundType, string> = {
@@ -46,9 +46,14 @@ export function GalleryApp() {
   const [type, setType] = useState<PlaygroundType | null>(returning?.type ?? null);
   // ?user=name (a username link) opens the gallery filtered to that person's boards.
   const [linkedUser] = useState(() => new URLSearchParams(window.location.search).get("user"));
-  const [query, setQuery] = useState(linkedUser ? `@${linkedUser}` : (returning?.query ?? ""));
-  const [search, setSearch] = useState(linkedUser ? `@${linkedUser}` : (returning?.query ?? ""));
-  const filteredUser = searchedUser(search);
+  /** One person's boards (from a username link), kept apart from the search box so the box stays empty. */
+  const [byUser, setByUser] = useState<string | null>(() => linkedUser ?? searchedUser(returning?.query ?? ""));
+  const typed = linkedUser || searchedUser(returning?.query ?? "") ? "" : (returning?.query ?? "");
+  const [query, setQuery] = useState(typed);
+  const [search, setSearch] = useState(typed);
+  /** What the gallery is filtered by: the person, or what's typed ("@name" typed still works). */
+  const q = byUser ? `@${byUser}` : search;
+  const filteredUser = byUser ?? searchedUser(search);
   const [boards, setBoards] = useState<GalleryBoard[]>([]);
   const [loading, setLoading] = useState(true);
   const [more, setMore] = useState(false);
@@ -86,7 +91,7 @@ export function GalleryApp() {
     try {
       // Kept until a load that used it finishes: an effect re-run (sign-in settling, dev double-run) can cancel this one.
       const saved = restore.current;
-      const back = reset && saved && saved.sort === sort && saved.type === type && saved.query === search ? saved : null;
+      const back = reset && saved && saved.sort === sort && saved.type === type && saved.query === q ? saved : null;
       let page: GalleryBoard[];
       let full: boolean;
       if (back) {
@@ -94,14 +99,14 @@ export function GalleryApp() {
         page = [];
         full = true;
         while (full && page.length < Math.max(GALLERY_PAGE_SIZE, back.count)) {
-          const step = await fetchGalleryBoards({ type, search, sort, offset: page.length, limit: 60 });
+          const step = await fetchGalleryBoards({ type, search: q, sort, offset: page.length, limit: 60 });
           page.push(...step);
           full = step.length === 60;
         }
       } else {
-        page = await fetchGalleryBoards({ type, search, sort, offset: reset ? 0 : boards.length });
+        page = await fetchGalleryBoards({ type, search: q, sort, offset: reset ? 0 : boards.length });
         // One person's boards come in a single batch.
-        full = !searchedUser(search) && page.length === GALLERY_PAGE_SIZE;
+        full = !searchedUser(q) && page.length === GALLERY_PAGE_SIZE;
       }
       if (id !== request.current) return;
       setBoards((b) => (reset ? page : [...b, ...page]));
@@ -124,7 +129,7 @@ export function GalleryApp() {
     setMore(false);
     void load(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ready, type, search, sort, user?.id]);
+  }, [ready, type, q, sort, user?.id]);
 
   // Load the next page when the bottom of the grid scrolls into view.
   useEffect(() => {
@@ -162,7 +167,7 @@ export function GalleryApp() {
     }
   };
 
-  const filtering = !!search.trim() || type !== null;
+  const filtering = !!q.trim() || type !== null;
 
   // The playground locks page scrolling (body overflow: hidden), so this page scrolls inside its own container.
   return (
@@ -175,7 +180,7 @@ export function GalleryApp() {
         className="page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-8"
         onClickCapture={(e) => {
           if (!(e.target as HTMLElement).closest('a[href^="/?p="]')) return;
-          saveGalleryReturn({ sort, type, query, count: boards.length, scroll: scroller.current?.scrollTop ?? 0 });
+          saveGalleryReturn({ sort, type, query: q, count: boards.length, scroll: scroller.current?.scrollTop ?? 0 });
         }}
       >
         <h1 className="text-2xl font-bold tracking-[-0.01em]">Gallery</h1>
@@ -187,7 +192,11 @@ export function GalleryApp() {
             <input
               type="search"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                // Typing starts a new search over everyone's boards.
+                setByUser(null);
+              }}
               placeholder="Search boards or people"
               aria-label="Search the gallery"
               className="h-9 w-full rounded-control border border-chrome-line bg-surface pl-9 pr-3 text-sm outline-none focus:ring-2 focus:ring-brand"
@@ -235,10 +244,11 @@ export function GalleryApp() {
 
         {filteredUser && (
           <p className="mt-4 text-sm text-ink-muted">
-            Boards by <span className="font-semibold text-ink">@{filteredUser}</span>
+            Boards by <span className="font-semibold text-ink">{filteredUser}</span>
             <button
               type="button"
               onClick={() => {
+                setByUser(null);
                 setQuery("");
                 setSearch("");
               }}
@@ -277,8 +287,9 @@ export function GalleryApp() {
               onLike={() => void toggleLike(b)}
               onHide={editor ? () => void hide(b) : undefined}
               onUser={(name) => {
-                setQuery(`@${name}`);
-                setSearch(`@${name}`);
+                setByUser(name);
+                setQuery("");
+                setSearch("");
                 scroller.current?.scrollTo({ top: 0, behavior: "smooth" });
               }}
             />
@@ -348,10 +359,10 @@ function BoardCard({
               <button
                 type="button"
                 onClick={() => onUser(board.username!)}
-                {...tip(`Boards by @${board.username}`)}
-                className="relative z-10 rounded-inner font-medium outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
+                {...tip(`Boards by ${board.username}`)}
+                className={`relative z-10 rounded-inner font-medium outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand ${userLink}`}
               >
-                @{board.username}
+                {board.username}
               </button>
             )}
             {teamRole(board.username) && (

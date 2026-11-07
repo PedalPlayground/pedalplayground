@@ -3,7 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { DensitySwitch, type Density } from "../components/DensitySwitch";
 import { fieldError, fieldHelp, fieldInput, fieldLabel, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { Meta } from "../components/Meta";
-import { RoleBadges } from "../components/RoleBadge";
+import { RoleBadges, userLink } from "../components/RoleBadge";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { rowClass } from "../components/ContextMenu";
 import { Segmented } from "../components/SettingsMenu";
@@ -306,16 +306,16 @@ export function DesignApp() {
             </div>
           </Group>
 
-          <Group title="People" note="Name first, then who made it: a board's title, then @author; a pedal's name, then its brand. Labels after a username say who's speaking.">
+          <Group title="People" note="Name first, then who made it: a board's title, then its author; a pedal's name, then its brand. Labels after a username say who's speaking.">
             <Demo label="Builder" code="RoleBadges builder">
               <span className="flex items-center gap-2 text-xs">
-                <span className="font-semibold">@tonechaser</span>
+                <a href="#components" className={`font-semibold ${userLink}`}>tonechaser</a>
                 <RoleBadges username="tonechaser" builder />
               </span>
             </Demo>
             <Demo label="Creator" code="RoleBadges, TEAM (brand check)">
               <span className="flex items-center gap-2 text-xs">
-                <span className="font-semibold">@trav</span>
+                <a href="#components" className={`font-semibold ${userLink}`}>trav</a>
                 <RoleBadges username="trav" />
               </span>
             </Demo>
