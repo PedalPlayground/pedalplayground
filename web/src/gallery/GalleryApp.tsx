@@ -209,7 +209,7 @@ export function GalleryApp() {
             ))}
           </div>
           <div className="flex items-center gap-2 self-start sm:ml-auto sm:self-auto">
-          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 rounded-control bg-ink/[0.06] p-0.5">
+          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 rounded-control bg-soft p-0.5">
             {(
               [
                 ["new", "Newest"],

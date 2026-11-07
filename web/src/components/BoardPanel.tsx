@@ -123,7 +123,7 @@ export function BoardInfoButton() {
       aria-label={label}
       aria-pressed={open}
       {...tip(count === null ? "Board Info" : "Info & Comments", { side: "bottom" })}
-      className={`press relative flex h-7 shrink-0 items-center gap-1 rounded-control ${viewing ? "sm:hidden" : ""} px-1.5 text-[13px] font-semibold tabular-nums outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${open ? "bg-brand/10 text-brand" : "text-icon-solo hover:bg-ink/5 hover:text-ink"}`}
+      className={`press relative flex h-7 shrink-0 items-center gap-1 rounded-control ${viewing ? "sm:hidden" : ""} px-1.5 text-[13px] font-semibold tabular-nums outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${open ? "bg-brand/10 text-brand" : "text-icon-solo hover:bg-soft hover:text-ink"}`}
     >
       <MessageSquare size={16} strokeWidth={2.25} />
       {!!count && <span>{count}</span>}

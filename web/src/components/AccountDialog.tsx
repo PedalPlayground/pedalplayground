@@ -11,7 +11,7 @@ import { MIN_PASSWORD, SetPasswordForm } from "./SetPasswordForm";
 /** Shaded, borderless fields, like the board panel's Details. */
 const primary = "h-9 w-full disabled:opacity-50 btn-primary";
 const secondary =
-  "mt-2 h-9 w-full rounded-control bg-surface-hover text-sm font-medium outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand";
+  "mt-2 h-9 w-full rounded-control bg-surface-hover text-sm font-medium outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand";
 const linkButton = "text-sm text-brand hover:underline disabled:opacity-50";
 
 type Tab = "signin" | "create";

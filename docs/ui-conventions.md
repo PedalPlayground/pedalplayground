@@ -2,12 +2,27 @@
 
 The sizes the app already uses almost everywhere. Keep new UI to these so it stays consistent.
 
+The look itself (color, type, corners, shadows, borders, writing and access rules) is drawn live on the design
+reference page, `/design/` (`web/src/design/DesignApp.tsx`), with the tokens in `web/src/index.css`. In short:
+
+- **Flat but crisp.** Cards, panels on the page, chips and fields are flat. Only what floats gets a shadow:
+  `shadow-float` (menus, popovers, tooltips, docked panels, floating bars) and `shadow-modal` (dialogs, sheets).
+  Catalog photos' drop shadow is exempt.
+- **Colors are tokens only.** Brand-tinted grays (`page`, `canvas`, `surface`, `surface-hover`, `chrome`, `ink`,
+  `ink-muted`, `icon`, `icon-solo`, `line`, `chrome-line`, `soft`), `brand`, status (`positive`, `danger`, `warning`,
+  `neutral`) and accents (`group`, `guide`, `tangerine`, `lagoon`). `#fff` and `#000` are the only neutral colors.
+  No hex values or Tailwind palette colors in components (pedal art and board finishes excepted).
+- **Borders only for missing contrast**, in `chrome-line`; `line` is for dividers.
+- **Corners grow with size:** `rounded-inner` 4px, `rounded-control` 6px (fields, buttons, menu rows),
+  `rounded-panel` 10px (cards, panels, menus), `rounded-container` 16px (dialogs, sheets, big photos); pills round.
+- **Copy:** short and plain; set facts apart with space (`components/Meta.tsx`), not dots, bars, dashes or arrows.
+
 | What | Size |
 | --- | --- |
 | Buttons, text fields, icon buttons, menu triggers | 36px tall (`h-9`, `size-9`); icon buttons are 36×36 |
 | Body and control text | `text-sm` (14px); metadata, the zoom readout and the Beta badge use `text-xs` (12px) |
 | Form fields | `components/formText.ts`: label 13px semibold at 80% ink, help text (12px, muted) right under the label, the field, then any error (12px, red) under the field. Help and error are linked to the field with `aria-describedby`. Labels are Title Case. Units go inside the field at the end (`fieldWithUnit`), never in the label |
-| Form backgrounds | Forms sit on white: dialogs and side panels (`bg-surface`), and in light mode the page itself (`chrome`), which is why the editor's tabs need no panel. The gray fields (`bg-surface-hover`) disappear on the page backgrounds (`bg-chrome`, `bg-canvas`), so a field placed straight on the page is a white box with a border instead (the gallery search) |
+| Form backgrounds | Forms sit on white: dialogs and side panels (`bg-surface`), and in light mode the editor page itself (`chrome`, white), which is why the editor's tabs need no panel. Explore and Gear sit on `page`, a light tint, so their white cards stand out without borders. The gray fields (`bg-surface-hover`) disappear on page backgrounds (`bg-page`, `bg-chrome`, `bg-canvas`), so a field placed straight on the page is a white box with a `chrome-line` border instead (the Explore and Gear search) |
 | Canvas look (color, ½ in dots, scale key) | `bg-canvas`, `dotGridStyle` in `lib/scale.ts`, `components/ScaleKey.tsx` | The playground canvas and the editor's preview use them (pass `zoom` and `units` to `ScaleKey` for a fixed scale). The dialog backdrop (`.modal-backdrop` in `index.css`) copies the dots in CSS, and the email templates have their own dot tiles. |
 | Text people name things with | `hasProfanity` / `usernameOffensive` in `lib/profanity.ts` (with `useAllowedNames` for real pedal names) | Usernames (through `usernameProblem`), New Playground and Playground Settings (name, description), comments, Make Your Own names. A new free-text field that others can see needs it too. See `docs/moderation.md` |
 | Timeout states | `useRestriction` in `store/standing.ts` | Comment box, likes (board panel and gallery cards), Show in Public Gallery, Pick a Username. Anything new that's social (posting, liking, sharing) should check it too |
@@ -15,7 +30,7 @@ The sizes the app already uses almost everywhere. Keep new UI to these so it sta
 | Usernames | `userGalleryUrl` in `lib/gallery.ts` (Explore filtered to that person: `/gallery/?user=name`, or "@name" in its search) | Every username shown is a link there: Explore cards, the board panel's "by …", and comments. A new place that shows a username should link it too |
 | Page width | `.page-main` in `index.css` with `max-w-[1600px]` | Explore, Gear (grid and item pages) and the editor's bar and content. From 1880px wide, `.page-main` is zoomed 12.5% (about 2px more text); size anything in viewport units inside it with `/var(--page-zoom,1)` (Gear's sidebar). The header isn't zoomed |
 | Card size switch | `DensitySwitch` / `useDensity` in `components/DensitySwitch.tsx` (large, medium, small; kept per page in this browser as `pp:density:<page>`) | Explore (beside Sort) and Gear (above the grid). Each page maps the sizes to its own columns; Gear also scales pedal photos so they stay to scale. A new card grid should offer it too |
-| Small pills and chips on a page | `shadow-chip` (`--shadow-chip` in `index.css`, defined for light and both dark blocks) | Explore's type chips, the Gear page's Pedals/Boards chips, and the card pills (Comments, Like, Hide). Panels and cards keep `shadow-panel` |
+| Small pills and chips on a page | `shadow-chip` (a `chrome-line` hairline, no lift) | Explore's type chips, Gear's brand chips, and the card pills (Comments, Like, Hide). Cards are flat; menus and floating panels use `shadow-float` |
 | Selects | One rule in `index.css` for every `<select>`: our own chevron 12px from the right edge, with 34px of right padding |
 | Dialog titles | `text-base font-semibold` |
 | Primary button | `btn-primary` (index.css), from the Figma button: purple `#5B61FB` with a lighter `#6D72F6` highlight in its top ~1px (the gradient border), `0 1px 1px` shadow at 14% black, faint text shadow, semibold, 4px radius (same as every control) |

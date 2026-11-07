@@ -572,7 +572,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       {!target && !phone && (
         <div className="relative px-2 pb-2">
           <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-surface to-transparent" />
-          <div className="rounded-control bg-surface-hover shadow-float [&>button:hover]:bg-ink/10">{makeOwn}</div>
+          <div className="rounded-control bg-surface-hover shadow-float [&>button:hover]:bg-soft-hover">{makeOwn}</div>
         </div>
       )}
       </>

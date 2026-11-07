@@ -35,7 +35,7 @@ export { fieldBox, fieldError, fieldHelp, fieldInput as inputClass, fieldLabel a
 /** The site's button sizes (36px, 14px text), as in the account dialogs. */
 export const primaryButton = "btn-primary h-9 whitespace-nowrap px-3 disabled:opacity-50";
 export const secondaryButton =
-  "press h-9 whitespace-nowrap rounded-control bg-surface-hover px-3 text-sm font-medium text-ink outline-none hover:bg-ink/10 focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
+  "press h-9 whitespace-nowrap rounded-control bg-surface-hover px-3 text-sm font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
 const num = (s: string) => {
   const n = parseFloat(s);
@@ -331,7 +331,7 @@ function Figure({
         {src && !broken ? (
           <img src={src} alt="" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />
         ) : (
-          <div className="absolute inset-0 grid place-items-center overflow-hidden rounded-inner bg-ink/10 px-1 text-center text-[11px] leading-tight text-ink-muted">
+          <div className="absolute inset-0 grid place-items-center overflow-hidden rounded-inner bg-soft px-1 text-center text-[11px] leading-tight text-ink-muted">
             {broken ? "Can't load" : "No photo"}
           </div>
         )}
@@ -556,7 +556,7 @@ function SizeStrip({
   useEffect(() => setPage(0), [sizes]);
   const at = Math.min(page, Math.max(0, pages.length - 1));
   const arrow =
-    "press absolute top-1/2 z-20 grid size-8 -translate-y-1/2 place-items-center rounded-full text-ink hover:bg-ink/5 outline-none focus-visible:ring-2 focus-visible:ring-brand";
+    "press absolute top-1/2 z-20 grid size-8 -translate-y-1/2 place-items-center rounded-full text-ink hover:bg-soft outline-none focus-visible:ring-2 focus-visible:ring-brand";
   const plural = kind === "pedal" ? "pedals" : "boards";
 
   return (
@@ -621,7 +621,7 @@ export function AlsoTypes({ main, extra, onChange, compact }: { main: string; ex
               type="button"
               aria-pressed={on}
               onClick={() => onChange(on ? extra.filter((x) => x !== t) : [...extra, t])}
-              className={`h-6 rounded-full px-2 text-[11px] font-semibold transition-colors ${on ? "bg-ink text-surface" : "bg-ink/[0.06] text-ink-muted hover:text-ink"}`}
+              className={`h-6 rounded-full px-2 text-[11px] font-semibold transition-colors ${on ? "bg-ink text-surface" : "bg-soft text-ink-muted hover:text-ink"}`}
             >
               {t}
             </button>

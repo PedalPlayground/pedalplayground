@@ -36,7 +36,7 @@ export function useDensity(key: string): [Density, (d: Density) => void] {
 /** Three icon buttons over a card grid (Explore, Gear), styled like the pages' sort control. */
 export function DensitySwitch({ value, onChange }: { value: Density; onChange: (d: Density) => void }) {
   return (
-    <div role="radiogroup" aria-label="Card size" className="flex shrink-0 rounded-control bg-ink/[0.06] p-0.5">
+    <div role="radiogroup" aria-label="Card size" className="flex shrink-0 rounded-control bg-soft p-0.5">
       {OPTIONS.map(([d, label, Icon]) => (
         <button
           key={d}

@@ -337,7 +337,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
                 role="radio"
                 aria-checked={action === a.action}
                 onClick={() => setAction(a.action)}
-                className={`press h-9 flex-1 rounded-control text-sm font-medium ${action === a.action ? (a.action === "ban" ? "bg-danger/15 text-danger" : "bg-brand/10 text-brand") : "bg-surface-hover text-ink hover:bg-ink/10"}`}
+                className={`press h-9 flex-1 rounded-control text-sm font-medium ${action === a.action ? (a.action === "ban" ? "bg-danger/15 text-danger" : "bg-brand/10 text-brand") : "bg-surface-hover text-ink hover:bg-soft-hover"}`}
               >
                 {a.label}
                 {suggestion.action === a.action && <span className="ml-1 text-[11px] font-normal opacity-70">(suggested)</span>}

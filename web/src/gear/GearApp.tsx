@@ -549,12 +549,12 @@ function GearCard({
 }
 
 const filterHeading = "mb-1.5 text-xs font-semibold uppercase tracking-[0.04em] text-ink-muted";
-const segmented = "flex rounded-control bg-ink/[0.06] p-0.5";
+const segmented = "flex rounded-control bg-soft p-0.5";
 const segment = (on: boolean) =>
   `h-7 flex-1 whitespace-nowrap rounded-inner px-1.5 text-xs font-semibold transition-colors ${on ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`;
 const listRow = (on: boolean) =>
   `flex w-full items-center justify-between gap-2 rounded-control px-2 py-1.5 text-left text-[13px] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
-    on ? "bg-ink/[0.06] font-semibold text-ink" : "text-ink-muted hover:bg-ink/5 hover:text-ink"
+    on ? "bg-soft font-semibold text-ink" : "text-ink-muted hover:bg-soft hover:text-ink"
   }`;
 
 /** Pedals or boards, sort, type and brand: the sidebar on laptops, the Filters sheet on phones and tablets. */

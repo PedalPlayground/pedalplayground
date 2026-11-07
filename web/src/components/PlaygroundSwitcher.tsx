@@ -21,7 +21,7 @@ type MenuProps = { onEdit: (target?: PlaygroundSummary) => void; onSignIn: () =>
 const go = (h: Handoff) => window.location.assign(handoffHref(h));
 
 const cardAction =
-  "grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/10 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
+  "grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-soft-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
 
 /** "Edited Oct 27", or with the year once it's not this year. */
 function edited(iso: string) {
@@ -100,7 +100,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
                     aria-current={current || undefined}
                     onSelect={() => (remote ? go({ kind: "open", id: p.id }) : void openPlayground(p.id))}
                     className={`flex cursor-pointer select-none items-center gap-2.5 rounded-control p-1.5 outline-none ${
-                      current ? "bg-surface-hover data-[highlighted]:bg-ink/10" : "data-[highlighted]:bg-surface-hover"
+                      current ? "bg-surface-hover data-[highlighted]:bg-soft-hover" : "data-[highlighted]:bg-surface-hover"
                     }`}
                   >
                     {p.thumbnail ? (
@@ -197,7 +197,7 @@ export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds, remote = false }: 
 }
 
 const labelButton =
-  "press grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/5 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
+  "press grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-soft hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
 
 /**
  * Over the canvas's top-left corner: the open board's name, with comments once it's shared and a pencil for Playground
@@ -255,7 +255,7 @@ function CopyButton({ onSignIn }: { onSignIn: () => void }) {
       type="button"
       onClick={createCopy}
       aria-label="Create a Copy"
-      className="press flex h-7 shrink-0 items-center gap-1.5 rounded-control px-1.5 outline-none hover:bg-ink/5 focus-visible:ring-2 focus-visible:ring-brand sm:-ml-1.5"
+      className="press flex h-7 shrink-0 items-center gap-1.5 rounded-control px-1.5 outline-none hover:bg-soft focus-visible:ring-2 focus-visible:ring-brand sm:-ml-1.5"
     >
       <Copy size={14} strokeWidth={2.25} />
       <span className="max-sm:hidden">Create a Copy</span>

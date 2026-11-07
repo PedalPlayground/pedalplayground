@@ -22,7 +22,7 @@ function Switch({ on, label }: { on: boolean; label: string }) {
       role="switch"
       aria-checked={on}
       aria-label={label}
-      className={`relative inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${on ? "bg-brand" : "bg-ink/15"}`}
+      className={`relative inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${on ? "bg-brand" : "bg-soft-active"}`}
     >
       <span
         className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`}

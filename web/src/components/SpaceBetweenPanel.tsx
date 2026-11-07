@@ -248,7 +248,7 @@ export function SpaceBetweenPanel() {
   };
 
   const cell = (on: boolean) =>
-    `h-7 rounded-control text-xs outline-none focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-brand/15 font-medium text-brand" : "bg-surface-hover text-ink hover:bg-ink/10"}`;
+    `h-7 rounded-control text-xs outline-none focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-brand/15 font-medium text-brand" : "bg-surface-hover text-ink hover:bg-soft-hover"}`;
   const size = (mm: number) => (units === "mm" ? `${mm} mm` : `${(mm / MM_PER_INCH).toFixed(2)} in`);
 
   const body = (

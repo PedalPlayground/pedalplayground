@@ -301,7 +301,7 @@ function Switch({ on, onClick, title, hint, disabled }: { on: boolean; onClick: 
         <span className="block text-sm">{title}</span>
         <span className="block text-xs text-ink-muted">{hint}</span>
       </span>
-      <span className={`relative mt-0.5 inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${on ? "bg-brand" : "bg-ink/15"}`}>
+      <span className={`relative mt-0.5 inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${on ? "bg-brand" : "bg-soft-active"}`}>
         <span className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`} />
       </span>
     </button>

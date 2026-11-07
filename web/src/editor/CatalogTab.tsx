@@ -86,7 +86,7 @@ export function CatalogTab({
                 {item.thumb_path ? (
                   <img src={publicUrl(item.thumb_path)} alt="" className="max-h-10 max-w-10 object-contain" loading="lazy" />
                 ) : (
-                  <span className="size-8 rounded-inner bg-ink/10" />
+                  <span className="size-8 rounded-inner bg-soft" />
                 )}
               </span>
               <span className="min-w-0">

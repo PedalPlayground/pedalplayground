@@ -20,7 +20,7 @@ export function PedalboardIcon({ className }: LucideProps) {
 /** One look for Explore, Gear, My Playgrounds, Editor and Updates: an icon and a label (icons only below laptop width). */
 export function tabClass(here: boolean) {
   return `press relative flex h-9 shrink-0 items-center gap-2 rounded-inner p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
-    here ? "bg-ink/[0.06]" : "hover:bg-ink/5 data-[state=open]:bg-ink/5"
+    here ? "bg-soft" : "hover:bg-soft data-[state=open]:bg-soft"
   }`;
 }
 export const tabIcon = { size: 18, strokeWidth: 2 } as const;

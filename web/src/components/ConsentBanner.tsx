@@ -24,7 +24,7 @@ export function ConsentBanner() {
         <button onClick={() => setAnalyticsOn(true)} className="h-8 flex-1 px-3 text-sm btn-primary">
           Allow
         </button>
-        <button onClick={() => setAnalyticsOn(false)} className="h-8 flex-1 rounded-control bg-surface-hover px-3 text-sm font-medium hover:bg-ink/10">
+        <button onClick={() => setAnalyticsOn(false)} className="h-8 flex-1 rounded-control bg-surface-hover px-3 text-sm font-medium hover:bg-soft-hover">
           No Thanks
         </button>
       </div>
