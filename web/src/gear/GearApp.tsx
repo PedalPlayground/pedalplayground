@@ -832,7 +832,7 @@ function BentoTile({
       aria-label={`${item.brand} ${item.name}`}
       className={`group relative flex flex-col overflow-hidden rounded-panel bg-card outline-none transition-colors hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-brand ${size}`}
     >
-      {/* Centered in the whole tile: the same room above as the name takes below. */}
+      {/* Halfway between centered in the tile and centered above the name: nudged up about 9px. */}
       {thumb && (
         <img
           src={thumb}
@@ -840,7 +840,7 @@ function BentoTile({
           sizes="(min-width: 640px) 25vw, 50vw"
           alt=""
           loading="lazy"
-          className="absolute inset-x-[10%] inset-y-9 h-[calc(100%-4.5rem)] w-[80%] object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+          className="absolute inset-x-[10%] bottom-[2.8rem] top-[1.7rem] h-[calc(100%-4.5rem)] w-[80%] object-contain transition-transform duration-300 group-hover:scale-[1.03]"
         />
       )}
       <span className="absolute inset-x-0 bottom-0 flex items-center px-3 pb-2.5">
