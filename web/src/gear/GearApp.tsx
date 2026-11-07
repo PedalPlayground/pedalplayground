@@ -1,4 +1,4 @@
-import { ArrowLeft, Search, SlidersHorizontal, TrendingUp } from "lucide-react";
+import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
 import { tip } from "../components/Tooltip";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
@@ -722,15 +722,18 @@ function FilterPanel({
   );
 }
 
-/** New (the word NEW, small and bold, in flamingo) or Trending (a tangerine arrow): a colored mark in a card's corner. */
+/** New (a flamingo dot) or Trending (a tangerine up triangle): a small colored mark in a card's corner. */
 function MarkIcon({ why }: { why: "new" | "trending" }) {
-  if (why === "new")
-    return (
-      <span className="absolute left-2.5 top-2.5 z-10 text-[10px] font-bold leading-[17px] text-guide">NEW</span>
-    );
+  const label = why === "new" ? "New" : "Trending";
   return (
-    <span role="img" aria-label="Trending" {...tip("Trending")} className="absolute left-2.5 top-2.5 z-10 flex text-tangerine">
-      <TrendingUp size={17} strokeWidth={2.5} aria-hidden />
+    <span role="img" aria-label={label} {...tip(label)} className="absolute left-2 top-2 z-10 grid size-5 place-items-center">
+      {why === "new" ? (
+        <span className="size-2.5 rounded-full bg-guide" aria-hidden />
+      ) : (
+        <svg width="12" height="10" viewBox="0 0 12 10" className="text-tangerine" aria-hidden>
+          <path d="M6 0.6a1 1 0 0 1 .86.49l4.4 7.4A1 1 0 0 1 10.4 10H1.6a1 1 0 0 1-.86-1.51l4.4-7.4A1 1 0 0 1 6 .6Z" fill="currentColor" />
+        </svg>
+      )}
     </span>
   );
 }
