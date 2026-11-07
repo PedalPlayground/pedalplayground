@@ -41,7 +41,7 @@ export function DesignApp() {
   return (
     <div className="h-dvh overflow-y-auto overscroll-contain bg-page font-sans text-ink">
       <PageHeader current={null} dialog={dialog} setDialog={setDialog} />
-      <main id="content" className="page-main mx-auto max-w-[1600px] px-4 pb-24 pt-8">
+      <main id="content" className="page-main isolate mx-auto max-w-[1600px] px-4 pb-24 pt-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <h1 className="text-2xl font-bold tracking-[-0.01em]">Design reference</h1>
@@ -169,6 +169,8 @@ export function DesignApp() {
               "No borders on cards, fields or photos unless something disappears without one. When you need one, use chrome-line: felt, not noticed.",
               "Dividers (line) separate rows inside a panel. Don't box things that spacing can separate.",
               "Catalog photos keep their drop shadow on the board and in Gear. It follows each photo's outline and is exempt from these rules.",
+              "Stacking, low to high: page content (isolated, so it never covers the header), the sticky header, docked panels and sheets, then menus, dialogs and tooltips. Dialogs render on the page body.",
+              "Anything that scrolls leaves a few pixels of room so focus rings and edges inside it are never cut off.",
             ]}
           />
         </Section>

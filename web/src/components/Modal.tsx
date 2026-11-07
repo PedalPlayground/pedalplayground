@@ -1,5 +1,6 @@
 import { X } from "lucide-react";
 import { useEffect, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 
 /**
  * `closeX` adds an X button in the top-right corner, for dialogs without their own Close or Cancel button.
@@ -26,7 +27,8 @@ export function Modal({
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  return (
+  // Rendered on <body>, so it always stacks above the page (and isn't zoomed or clipped by whatever opened it).
+  return createPortal(
     <div className="animate-fade fixed inset-0 z-50 flex items-center justify-center modal-backdrop p-4" onClick={onClose}>
       <div className={`relative flex max-h-full w-full flex-col ${wide ? "max-w-2xl" : "max-w-sm"}`}>
         {/* min-h-0: the dialog shrinks to fit the screen and scrolls inside, rather than running off the bottom. */}
@@ -59,6 +61,7 @@ export function Modal({
           </div>
         )}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

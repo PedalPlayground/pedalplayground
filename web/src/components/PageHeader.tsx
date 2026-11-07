@@ -51,7 +51,7 @@ export function PageHeader({ current, dialog, setDialog }: { current: SitePage; 
       </a>
       <SiteHeader
         current={current}
-        className="sticky top-0 z-10"
+        className="sticky top-0 z-30"
         builds={<BuildsMenu remote onEdit={() => undefined} onPlaygrounds={() => undefined} onSignIn={() => setDialog("account")} />}
         updates={<WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />}
         account={

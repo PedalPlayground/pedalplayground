@@ -172,7 +172,7 @@ export function GalleryApp() {
 
       {/* Opening a board saves this spot, so its "Back to Gallery" returns here. */}
       <main id="content"
-        className="page-main mx-auto max-w-[1600px] px-4 pb-16 pt-8"
+        className="page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-8"
         onClickCapture={(e) => {
           if (!(e.target as HTMLElement).closest('a[href^="/?p="]')) return;
           saveGalleryReturn({ sort, type, query, count: boards.length, scroll: scroller.current?.scrollTop ?? 0 });

@@ -162,11 +162,11 @@ function Shell({ header, children, bar }: { header: React.ReactNode; children?: 
     <div className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       {header}
       {bar && (
-        <div className="sticky top-12 z-[9] border-b border-chrome-line bg-chrome/95 backdrop-blur">
-          <div className="page-main mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
+        <div className="sticky top-12 z-20 border-b border-chrome-line bg-chrome/95 backdrop-blur">
+          <div className="page-main isolate mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
         </div>
       )}
-      <main id="content" className="page-main mx-auto max-w-[1600px] px-4 py-6">{children}</main>
+      <main id="content" className="page-main isolate mx-auto max-w-[1600px] px-4 py-6">{children}</main>
     </div>
   );
 }

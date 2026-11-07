@@ -16,6 +16,10 @@ reference page, `/design/` (`web/src/design/DesignApp.tsx`), with the tokens in 
 - **Corners grow with size:** `rounded-inner` 4px, `rounded-control` 6px (fields, buttons, menu rows),
   `rounded-panel` 10px (cards, panels, menus), `rounded-container` 16px (dialogs, sheets, big photos); pills round.
 - **Order:** name first, then who made it: a board's title, then @author; a pedal's name, then its brand.
+- **Stacking:** page content sits in an `isolate` main, so nothing in it can rise above the sticky header (`z-30`;
+  the editor's tab bar `z-20`). Docked panels and sheets are `z-40`; menus, popovers, dialogs and tooltips `z-50`.
+  `Modal` renders on `<body>` so it always lands on top. Scroll areas leave about 4px of padding (undone with negative
+  margins) so focus rings and hairlines inside them aren't cut off.
 - **Focus:** one 2px brand ring everywhere (`focus-visible:ring-2 focus-visible:ring-brand`, `focus:ring-2` on fields).
 - **Copy:** short and plain; set facts apart with space (`components/Meta.tsx`), not dots, bars, dashes or arrows.
 

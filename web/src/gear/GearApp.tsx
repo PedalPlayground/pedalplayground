@@ -311,7 +311,7 @@ export function GearApp() {
       <PageHeader current="gear" dialog={dialog} setDialog={setDialog} />
 
       {open && (
-        <main id="content" className="page-main mx-auto max-w-[1600px] px-4 pb-16 pt-6">
+        <main id="content" className="page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-6">
           {openEntry && manifest ? (
             <ItemPage
               kind={open.kind}
@@ -338,7 +338,7 @@ export function GearApp() {
       )}
 
       {/* Kept while an item is open, so its filters and loaded cards are there on Back. */}
-      <main id={open ? undefined : "content"} className={`page-main mx-auto max-w-[1600px] px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
+      <main id={open ? undefined : "content"} className={`page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
         {brand ? (
           <>
             <button type="button" onClick={() => pickBrand(null)} className="text-[13px] font-semibold text-brand hover:underline">
@@ -359,7 +359,7 @@ export function GearApp() {
 
         <div className="mt-6 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start lg:gap-8">
           {/* Laptops and up: the filters in a sidebar that stays in view while the grid scrolls. */}
-          <aside aria-label="Filters" className="hidden lg:sticky lg:top-[4.5rem] lg:-mx-1 lg:block lg:max-h-[calc((100dvh-6rem)/var(--page-zoom,1))] lg:overflow-y-auto lg:px-1 lg:pb-4">
+          <aside aria-label="Filters" className="hidden lg:sticky lg:top-[4.5rem] lg:-mx-1 lg:-mt-1 lg:block lg:pt-1 lg:max-h-[calc((100dvh-6rem)/var(--page-zoom,1))] lg:overflow-y-auto lg:px-1 lg:pb-4">
             {searchBox}
             {filterPanel}
           </aside>
@@ -652,7 +652,7 @@ function FilterPanel({
           aria-label="Find a brand"
           className="mb-1.5 h-8 w-full rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
         />
-        <div role="radiogroup" aria-label="Brand" className="-mx-1 grid max-h-72 gap-0.5 overflow-y-auto px-1">
+        <div role="radiogroup" aria-label="Brand" className="-m-1 grid max-h-72 gap-0.5 overflow-y-auto p-1">
           {!find.trim() && (
             <button type="button" role="radio" aria-checked={brand === null} onClick={() => setBrand(null)} className={listRow(brand === null)}>
               All brands
