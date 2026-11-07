@@ -30,25 +30,50 @@ const GRID: Record<Density, string> = {
 const chip = (on: boolean) =>
   `press h-8 shrink-0 rounded-full px-3 text-[13px] font-semibold transition-colors ${on ? "bg-ink text-surface" : "bg-surface text-ink-muted shadow-chip hover:text-ink"}`;
 
+/** Explore's filters from its address. Missing means not set (the saved spot or the default applies). */
+function readGalleryUrl(): { type?: PlaygroundType | null; sort?: GallerySort; user: string | null; query?: string } {
+  const p = new URLSearchParams(window.location.search);
+  const t = p.get("type");
+  const sort = p.get("sort");
+  return {
+    type: t && PLAYGROUND_TYPES.some(([v]) => v === t) ? (t as PlaygroundType) : undefined,
+    sort: sort === "liked" || sort === "new" ? sort : undefined,
+    user: p.get("user"),
+    query: p.get("q") ?? undefined,
+  };
+}
+
+function galleryHref(f: { type: PlaygroundType | null; sort: GallerySort; user: string | null; query: string }) {
+  const p = new URLSearchParams();
+  if (f.user) p.set("user", f.user);
+  if (f.type) p.set("type", f.type);
+  if (f.sort !== "new") p.set("sort", f.sort);
+  if (f.query.trim()) p.set("q", f.query.trim());
+  const qs = p.toString();
+  return `${window.location.pathname}${qs ? `?${qs}` : ""}`;
+}
+
 /** The public gallery at /gallery/: boards whose owners turned on "Show in Public Gallery", newest or most liked first. */
 export function GalleryApp() {
   /** Coming back from a board: start where you left off (read once). */
   const [returning] = useState(() => readGalleryReturn(true));
+  /** Filters in this page's address (?type, ?sort, ?user, ?q), which win over the saved spot. */
+  const [fromUrl] = useState(readGalleryUrl);
   const init = useAuth((s) => s.init);
   const user = useAuth((s) => s.user);
   const ready = useAuth((s) => s.ready);
-  const [sort, setSort] = useState<GallerySort>(returning?.sort ?? "new");
+  const [sort, setSort] = useState<GallerySort>(fromUrl.sort ?? returning?.sort ?? "new");
   /** A short message over the boards (e.g. likes are off during a timeout). */
   const [note, setNote] = useState<string | null>(null);
   const restriction = useRestriction();
   /** The header's account dialogs; liking while signed out opens sign-in too. */
   const [dialog, setDialog] = useState<PageDialog>(null);
-  const [type, setType] = useState<PlaygroundType | null>(returning?.type ?? null);
+  const [type, setType] = useState<PlaygroundType | null>(fromUrl.type !== undefined ? fromUrl.type : (returning?.type ?? null));
   // ?user=name (a username link) opens the gallery filtered to that person's boards.
-  const [linkedUser] = useState(() => new URLSearchParams(window.location.search).get("user"));
+  const [linkedUser] = useState(() => fromUrl.user);
   /** One person's boards (from a username link), kept apart from the search box so the box stays empty. */
   const [byUser, setByUser] = useState<string | null>(() => linkedUser ?? searchedUser(returning?.query ?? ""));
-  const typed = linkedUser || searchedUser(returning?.query ?? "") ? "" : (returning?.query ?? "");
+  const typed = fromUrl.query ?? (linkedUser || searchedUser(returning?.query ?? "") ? "" : (returning?.query ?? ""));
   const [query, setQuery] = useState(typed);
   const [search, setSearch] = useState(typed);
   /** What the gallery is filtered by: the person, or what's typed ("@name" typed still works). */
@@ -82,6 +107,31 @@ export function GalleryApp() {
     const t = setTimeout(() => setSearch(query), 300);
     return () => clearTimeout(t);
   }, [query]);
+
+  // The filters live in the address, so Back and Forward step through them. A new type, sort or person is a new
+  // history step; typing in the search just updates the address.
+  const lastView = useRef<{ type: PlaygroundType | null; sort: GallerySort; byUser: string | null } | null>(null);
+  useEffect(() => {
+    const href = galleryHref({ type, sort, user: byUser, query: search });
+    const prev = lastView.current;
+    lastView.current = { type, sort, byUser };
+    if (href === window.location.pathname + window.location.search) return;
+    const sameView = prev && prev.type === type && prev.sort === sort && prev.byUser === byUser;
+    if (prev && !sameView) history.pushState(null, "", href);
+    else history.replaceState(null, "", href);
+  }, [type, sort, byUser, search]);
+  useEffect(() => {
+    const onPop = () => {
+      const f = readGalleryUrl();
+      setType(f.type ?? null);
+      setSort(f.sort ?? "new");
+      setByUser(f.user);
+      setQuery(f.query ?? "");
+      setSearch(f.query ?? "");
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   const load = async (reset: boolean) => {
     if (!supabase) return setLoading(false);

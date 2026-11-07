@@ -24,6 +24,9 @@ reference page, `/design/` (`web/src/design/DesignApp.tsx`), with the tokens in 
   `Modal` renders on `<body>` so it always lands on top. Scroll areas leave about 4px of padding (undone with negative
   margins) so focus rings and hairlines inside them aren't cut off.
 - **Focus:** one 2px brand ring everywhere (`focus-visible:ring-2 focus-visible:ring-brand`, `focus:ring-2` on fields).
+- **Back button:** a new view is a history step: Gear's filters and item pages, Explore's type, sort and person
+  (all in the address), the editor's tabs, an opened catalog item and a moderation lookup. Typing in a search only
+  updates the address.
 - **Copy:** short and plain; set facts apart with space (`components/Meta.tsx`), not dots, bars, dashes or arrows.
 
 | What | Size |

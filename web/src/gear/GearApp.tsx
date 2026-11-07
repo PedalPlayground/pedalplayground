@@ -137,10 +137,24 @@ export function GearApp() {
     return () => clearTimeout(t);
   }, [query]);
 
+  /** The filters last written to the URL, to tell a new view (a history step) from more typing (no step). */
+  const lastFilters = useRef<Filters | null>(null);
   useEffect(() => {
     // An item's page owns the URL while it's open.
     if (readItem()) return;
-    writeFilters({ kind, brand, type, query: search, sort });
+    const f = { kind, brand, type, query: search, sort };
+    const href = filtersHref(f);
+    const prev = lastFilters.current;
+    lastFilters.current = f;
+    if (href !== window.location.pathname + window.location.search) {
+      // A different brand, type, kind or sort is a new view, so Back returns to the last one. Search text just updates
+      // the address as you type.
+      // (A brand respelled to the catalog's casing isn't a new view either.)
+      const typingOnly =
+        prev && prev.kind === f.kind && prev.brand?.toLowerCase() === f.brand?.toLowerCase() && prev.type === f.type && prev.sort === f.sort;
+      if (prev && !typingOnly) history.pushState(null, "", href);
+      else writeFilters(f);
+    }
     setShown(PAGE);
     scroller.current?.scrollTo({ top: 0 });
   }, [kind, brand, type, search, sort]);

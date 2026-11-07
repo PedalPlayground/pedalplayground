@@ -67,8 +67,10 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
       },
       (e: Error) => setError(e.message),
     );
-  const look = async (username: string, report: Report | null = null) => {
+  /** Looks up an account. A new lookup is a history step (#moderation?user=name), so Back returns to the last view. */
+  const look = async (username: string, report: Report | null = null, push = true) => {
     if (!username.trim()) return;
+    if (push && userFromHash() !== username) history.pushState(null, "", `#moderation?user=${encodeURIComponent(username)}`);
     setName(username);
     setFromReport(report);
     try {
@@ -81,13 +83,22 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
   useEffect(() => {
     void loadReports();
     const first = userFromHash();
-    if (first) void look(first);
+    if (first) void look(first, null, false);
     const onHash = () => {
+      if (!window.location.hash.startsWith("#moderation")) return;
       const u = userFromHash();
-      if (u) void look(u);
+      if (u) void look(u, null, false);
+      else {
+        setUser(undefined);
+        setName("");
+      }
     };
     window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
+    window.addEventListener("popstate", onHash);
+    return () => {
+      window.removeEventListener("hashchange", onHash);
+      window.removeEventListener("popstate", onHash);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

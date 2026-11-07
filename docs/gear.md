@@ -9,7 +9,8 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   Filters button below laptop width). The filters (Type and Brand) sit in a sticky left sidebar from laptop width and in
   a Filters sheet below it. The Type list is All pedals, each pedal type, then Pedalboards (there's no separate
   Pedals/Boards switch); it only shows types the catalog has, counted within the chosen brand.
-- **Filters live in the URL**, so a brand page is a link: `/gear/?brand=BOSS`, `/gear/?type=Fuzz`, `/gear/?kind=boards`,
+- **Filters live in the URL** and each new brand, type, kind or sort is a history step (search text isn't), so Back
+  returns to the last view. A brand page is a link: `/gear/?brand=BOSS`, `/gear/?type=Fuzz`, `/gear/?kind=boards`,
   `/gear/?q=big+sky`, `/gear/?sort=new` or `sort=used`. A brand typed in another case is fixed to the catalog's.
 - **Pedals share one scale**, set by the card: a pedal 5.2″ tall (bigger than three in four pedals) fills the
   photo area's height (`FILL_INCHES`, sized in container units, so it follows the card size), and bigger ones are fit

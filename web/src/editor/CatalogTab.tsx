@@ -39,6 +39,23 @@ export function CatalogTab({
     return () => clearTimeout(t);
   }, [text, retired]);
 
+  // An open item is its own history step (#catalog?item=<id>), so Back closes it and returns to the results.
+  const openItem = (item: Item) => {
+    history.pushState({ ppCatalogItem: true }, "", `#catalog?item=${item.id}`);
+    setOpen(item);
+  };
+  const closeItem = () => {
+    if ((history.state as { ppCatalogItem?: boolean } | null)?.ppCatalogItem) history.back();
+    else setOpen(null);
+  };
+  useEffect(() => {
+    const onPop = () => {
+      if (!new URLSearchParams(window.location.hash.split("?")[1] ?? "").get("item")) setOpen(null);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
   if (open)
     return (
       <EditItem
@@ -46,10 +63,10 @@ export function CatalogTab({
         item={open}
         manifest={manifest}
         userId={userId}
-        onClose={() => setOpen(null)}
+        onClose={closeItem}
         onSaved={(n, updated) => {
           setNotice(n);
-          setOpen(null);
+          closeItem();
           if (updated) setResults((r) => r?.map((x) => (x.id === updated.id ? updated : x)) ?? r);
         }}
         publisher={publisher}
@@ -79,7 +96,7 @@ export function CatalogTab({
           <li key={item.id}>
             <button
               type="button"
-              onClick={() => setOpen(item)}
+              onClick={() => openItem(item)}
               className="flex w-full items-center gap-3 rounded-control px-2 py-1.5 text-left hover:bg-surface-hover"
             >
               <span className="grid size-10 shrink-0 place-items-center">

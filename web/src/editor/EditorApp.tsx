@@ -41,7 +41,8 @@ export function EditorApp() {
   const [tab, setTabState] = useState<Tab>(tabFromHash);
   const setTab = (t: Tab) => {
     setTabState(t);
-    history.replaceState(null, "", t === "queue" ? window.location.pathname : `#${t}`);
+    // Each tab is a history step, so Back returns to the last one.
+    if (t !== tabFromHash()) history.pushState(null, "", t === "queue" ? window.location.pathname : `#${t}`);
   };
   const [dialog, setDialog] = useState<PageDialog>(null);
   const header = <PageHeader current="editor" dialog={dialog} setDialog={setDialog} />;
@@ -53,7 +54,11 @@ export function EditorApp() {
   useEffect(() => {
     const onHash = () => setTabState(tabFromHash());
     window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
+    window.addEventListener("popstate", onHash);
+    return () => {
+      window.removeEventListener("hashchange", onHash);
+      window.removeEventListener("popstate", onHash);
+    };
   }, []);
   useEffect(() => {
     if (!user) return setAllowed(null);
