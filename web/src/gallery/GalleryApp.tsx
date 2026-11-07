@@ -165,12 +165,12 @@ export function GalleryApp() {
 
   // The playground locks page scrolling (body overflow: hidden), so this page scrolls inside its own container.
   return (
-    <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
+    <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-page font-sans text-ink">
       {/* The same header as the playground. */}
       <PageHeader current="gallery" dialog={dialog} setDialog={setDialog} />
 
       {/* Opening a board saves this spot, so its "Back to Gallery" returns here. */}
-      <main
+      <main id="content"
         className="page-main mx-auto max-w-[1600px] px-4 pb-16 pt-8"
         onClickCapture={(e) => {
           if (!(e.target as HTMLElement).closest('a[href^="/?p="]')) return;
@@ -178,7 +178,7 @@ export function GalleryApp() {
         }}
       >
         <h1 className="text-2xl font-bold tracking-[-0.01em]">Gallery</h1>
-        <p className="mt-1 text-sm text-ink-muted">Pedalboards shared by the community. Open one to look around, or make your own copy.</p>
+        <p className="mt-1 text-sm text-ink-muted">Pedalboards shared by the community. Open one to look around or make it your own.</p>
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
           <label className="relative block sm:w-72">
@@ -189,7 +189,7 @@ export function GalleryApp() {
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search boards or people"
               aria-label="Search the gallery"
-              className="h-9 w-full rounded-control border border-line bg-surface pl-9 pr-3 text-sm outline-none focus:border-brand"
+              className="h-9 w-full rounded-control border border-chrome-line bg-surface pl-9 pr-3 text-sm outline-none focus:border-brand"
             />
           </label>
           {/* Scrolls sideways on phones. A scroller clips what's outside it, so it gets room around the chips for their
@@ -222,7 +222,7 @@ export function GalleryApp() {
                 role="radio"
                 aria-checked={sort === v}
                 onClick={() => setSort(v)}
-                className={`h-7 rounded-[3px] px-2.5 text-xs font-semibold transition-colors ${sort === v ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
+                className={`h-7 rounded-inner px-2.5 text-xs font-semibold transition-colors ${sort === v ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`}
               >
                 {label}
               </button>
@@ -234,21 +234,21 @@ export function GalleryApp() {
 
         {filteredUser && (
           <p className="mt-4 text-sm text-ink-muted">
-            Boards by <span className="font-semibold text-ink">@{filteredUser}</span> ·{" "}
+            Boards by <span className="font-semibold text-ink">@{filteredUser}</span>
             <button
               type="button"
               onClick={() => {
                 setQuery("");
                 setSearch("");
               }}
-              className="font-semibold text-brand hover:underline"
+              className="ml-3 font-semibold text-brand hover:underline"
             >
               Show everyone
             </button>
           </p>
         )}
         {note && (
-          <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-lg border border-line bg-surface px-3 py-2 text-[13px]">
+          <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-panel bg-surface px-3 py-2 text-[13px]">
             <span>{note}</span>
             <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setNote(null)} aria-label="Dismiss">
               ×
@@ -257,7 +257,7 @@ export function GalleryApp() {
         )}
 
         {hidden && (
-          <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-lg border border-line bg-surface px-3 py-2 text-[13px]">
+          <div role="status" className="mt-5 flex items-center justify-between gap-3 rounded-panel bg-surface px-3 py-2 text-[13px]">
             <span>
               Hid “{hidden.name}” from the gallery. Its share link still works.
             </span>
@@ -299,7 +299,7 @@ export function GalleryApp() {
           <p className="mx-auto mt-12 max-w-sm text-center text-sm text-ink-muted">
             {filtering
               ? "No boards match. Try another search or type."
-              : "No boards here yet. Add yours from the playground: open Playground Settings from your board's name and turn on Show in Public Gallery."}
+              : "No boards yet. To share yours, turn on Show in Public Gallery in its Playground Settings."}
           </p>
         )}
       </main>
@@ -325,7 +325,7 @@ function BoardCard({
   const pill =
     "press relative z-10 flex h-7 items-center gap-1 rounded-full bg-surface/90 px-2.5 text-xs font-semibold shadow-chip backdrop-blur transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand";
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface shadow-panel transition-shadow focus-within:ring-2 focus-within:ring-brand hover:shadow-[0_8px_28px_rgb(16_18_27/0.14),0_0_0_1px_rgb(16_18_27/0.05)]">
+    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface ring-chrome-line transition-shadow focus-within:ring-2 focus-within:ring-brand hover:ring-1">
       <div className="aspect-[8/5] w-full bg-canvas">
         {board.thumbnail && <img src={board.thumbnail} alt="" loading="lazy" className="size-full object-contain" />}
       </div>
@@ -342,18 +342,17 @@ function BoardCard({
           )}
         </div>
         {(board.username || pedals) && (
-          <p className="flex items-center gap-1 text-xs text-ink-muted">
+          <p className="flex items-center gap-2.5 text-xs text-ink-muted">
             {board.username && (
               <button
                 type="button"
                 onClick={() => onUser(board.username!)}
                 {...tip(`Boards by @${board.username}`)}
-                className="relative z-10 rounded-[3px] font-medium outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
+                className="relative z-10 rounded-inner font-medium outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
               >
                 @{board.username}
               </button>
             )}
-            {board.username && pedals && <span aria-hidden>·</span>}
             {pedals}
           </p>
         )}
@@ -398,11 +397,11 @@ function BoardCard({
 
 function CardSkeleton() {
   return (
-    <div className="overflow-hidden rounded-panel bg-surface shadow-panel" aria-hidden>
+    <div className="overflow-hidden rounded-panel bg-surface" aria-hidden>
       <div className="aspect-[8/5] w-full animate-pulse bg-surface-hover" />
       <div className="space-y-2 px-3.5 pb-4 pt-3">
-        <div className="h-3.5 w-2/3 animate-pulse rounded bg-surface-hover" />
-        <div className="h-3 w-1/3 animate-pulse rounded bg-surface-hover" />
+        <div className="h-3.5 w-2/3 animate-pulse rounded-inner bg-surface-hover" />
+        <div className="h-3 w-1/3 animate-pulse rounded-inner bg-surface-hover" />
       </div>
     </div>
   );

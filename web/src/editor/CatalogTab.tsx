@@ -1,9 +1,11 @@
+import { ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { Manifest } from "../lib/catalog";
 import { fieldProblems, type Fields } from "../lib/editorChecks";
 import { fieldsFrom, publicUrl, saveDirect, searchItems, setStatus, sourceUrl, uploadSource, type Item } from "../lib/editorApi";
 import { plainField } from "../lib/inputProps";
 import { withPublish, type PublishState, type SetNotice } from "./EditorApp";
+import { Meta } from "../components/Meta";
 import { inputClass, ItemEditor, primaryButton, secondaryButton } from "./ItemEditor";
 
 /** Search the live catalog (and retired items) to fix, re-photo, retire or restore an item. */
@@ -78,13 +80,13 @@ export function CatalogTab({
             <button
               type="button"
               onClick={() => setOpen(item)}
-              className="flex w-full items-center gap-3 rounded-[5px] px-2 py-1.5 text-left hover:bg-surface-hover"
+              className="flex w-full items-center gap-3 rounded-control px-2 py-1.5 text-left hover:bg-surface-hover"
             >
               <span className="grid size-10 shrink-0 place-items-center">
                 {item.thumb_path ? (
                   <img src={publicUrl(item.thumb_path)} alt="" className="max-h-10 max-w-10 object-contain" loading="lazy" />
                 ) : (
-                  <span className="size-8 rounded bg-ink/10" />
+                  <span className="size-8 rounded-inner bg-ink/10" />
                 )}
               </span>
               <span className="min-w-0">
@@ -92,10 +94,14 @@ export function CatalogTab({
                   {item.brand} {item.name}
                 </span>
                 <span className="block truncate text-xs text-ink-muted">
-                  {item.kind === "pedalboard" ? "Pedalboard · " : ""}
-                  {+Number(item.width_in).toFixed(3)} × {+Number(item.height_in).toFixed(3)} in
-                  {item.status === "retired" && " · retired"}
-                  {item.needs_render && item.source_path && " · building"}
+                  <Meta
+                    parts={[
+                      item.kind === "pedalboard" && "Pedalboard",
+                      `${+Number(item.width_in).toFixed(3)} × ${+Number(item.height_in).toFixed(3)} in`,
+                      item.status === "retired" && "Retired",
+                      item.needs_render && item.source_path && "Building",
+                    ]}
+                  />
                 </span>
               </span>
             </button>
@@ -148,13 +154,13 @@ function EditItem({
   return (
     <div className="grid gap-5">
       <div className="flex flex-wrap items-center gap-3">
-        <button type="button" className={secondaryButton} onClick={onClose}>
-          ← Back
+        <button type="button" className={`${secondaryButton} flex items-center gap-1`} onClick={onClose}>
+          <ArrowLeft size={14} strokeWidth={2.5} />
+          Back
         </button>
         <h2 className="text-lg font-bold tracking-[-0.01em]">{name}</h2>
         <span className="text-xs text-ink-muted">
-          key {item.key} · added {item.added_on}
-          {item.status === "retired" && " · retired"}
+          <Meta parts={[`Key ${item.key}`, `Added ${item.added_on}`, item.status === "retired" && "Retired"]} />
         </span>
       </div>
       <ItemEditor

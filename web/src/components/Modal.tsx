@@ -35,7 +35,7 @@ export function Modal({
           // Session recordings (Clarity) skip dialog contents: sign-in, usernames, board names and descriptions.
           data-clarity-mask="True"
           aria-label={title}
-          className="animate-enter relative min-h-0 w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-[var(--shadow-modal)]"
+          className="animate-enter relative min-h-0 w-full overflow-y-auto rounded-container bg-surface p-5 shadow-modal"
           onClick={(e) => e.stopPropagation()}
         >
           <h2 className={`mb-3 text-base font-semibold ${closeX ? "pr-8" : ""}`}>{title}</h2>

@@ -603,14 +603,14 @@ export function Canvas() {
         {guides.x.map((x, i) => (
           <div
             key={`gx${i}`}
-            className="pointer-events-none absolute bg-[#ff3b8d]"
+            className="pointer-events-none absolute bg-guide"
             style={{ left: x * PX_PER_INCH, top: -5000, height: 10000, width: 1 / view.zoom, zIndex: 100000 }}
           />
         ))}
         {guides.y.map((y, i) => (
           <div
             key={`gy${i}`}
-            className="pointer-events-none absolute bg-[#ff3b8d]"
+            className="pointer-events-none absolute bg-guide"
             style={{ top: y * PX_PER_INCH, left: -5000, width: 10000, height: 1 / view.zoom, zIndex: 100000 }}
           />
         ))}

@@ -10,6 +10,7 @@ import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { plainField } from "../lib/inputProps";
+import { Meta } from "./Meta";
 import { fieldLabelText } from "./formText";
 
 interface Row {
@@ -95,19 +96,19 @@ export function EquipmentList() {
         <header className="animate-enter px-1 py-1 [--enter-y:4px]">
           <h2 className="text-lg font-semibold tracking-[-0.02em]">Equipment List</h2>
           <p className="text-[13px] text-ink-muted">
-            {items.length === 0 ? "Nothing on this playground yet" : `${plural(pedalCount, "Pedal")} · ${plural(boardCount, "Pedalboard")}`}
+            {items.length === 0 ? "Nothing on this playground yet" : <Meta parts={[plural(pedalCount, "Pedal"), plural(boardCount, "Pedalboard")]} />}
           </p>
         </header>
 
         {items.length === 0 ? (
-          <div className="animate-enter flex flex-col items-center gap-3 rounded-panel bg-surface px-6 py-10 text-center shadow-panel">
+          <div className="animate-enter flex flex-col items-center gap-3 rounded-panel bg-surface px-6 py-10 text-center">
             <span className="grid size-10 place-items-center rounded-full bg-brand/10 text-brand">
               <List size={18} />
             </span>
             <p className="max-w-xs text-sm text-ink-muted">Add pedals and a pedalboard to your playground and they'll show up here.</p>
             <button
               onClick={addGear}
-              className="btn-primary h-[30px] rounded-[5px] px-4 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
+              className="btn-primary h-[30px] rounded-control px-4 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
             >
               Add Gear
             </button>
@@ -132,12 +133,11 @@ export function EquipmentList() {
 function Stat({ label, rows, count, accent }: { label: string; rows: Row[]; count: string; accent?: boolean }) {
   const { sum, unpriced } = total(rows);
   return (
-    <div className="rounded-panel bg-surface px-4 py-3 shadow-panel">
+    <div className="rounded-panel bg-surface px-4 py-3">
       <p className="text-[13px] font-semibold tracking-[-0.01em] text-ink-muted">{label}</p>
       <p className={`text-2xl font-semibold tabular-nums tracking-[-0.02em] max-sm:text-xl ${accent && sum > 0 ? "text-brand" : ""}`}>{money(sum)}</p>
       <p className="truncate text-xs text-ink-muted">
-        {count}
-        {unpriced > 0 && rows.length > 0 && ` · ${unpriced} Without a Price`}
+        <Meta parts={[count, unpriced > 0 && rows.length > 0 && `${unpriced} Without a Price`]} />
       </p>
     </div>
   );
@@ -146,10 +146,10 @@ function Stat({ label, rows, count, accent }: { label: string; rows: Row[]; coun
 function Section({ title, rows, catalog, onShow, empty }: { title: string; rows: Row[]; catalog: Manifest | null; onShow: (id: string) => void; empty: string }) {
   const { sum } = total(rows);
   return (
-    <section className="rounded-panel bg-surface shadow-panel">
+    <section className="rounded-panel bg-surface">
       <h3 className="flex items-baseline justify-between px-4 pb-1 pt-3 text-[13px] font-semibold tracking-[-0.01em] text-ink-muted">
         <span>
-          {title} <span className="font-medium tabular-nums">· {rows.length}</span>
+          {title} <span className="ml-1.5 font-medium tabular-nums">{rows.length}</span>
         </span>
         {rows.length > 0 && <span className="font-medium tabular-nums">{money(sum)}</span>}
       </h3>
@@ -171,23 +171,23 @@ function PowerStat({ items }: { items: Item[] }) {
   const pedals = items.filter((i) => i.kind === "pedal");
   const sum = pedals.reduce((t, i) => t + (i.ma ?? 0), 0);
   const missing = pedals.filter((i) => i.ma === undefined).length;
-  // Per-voltage totals, biggest first: "9V DC 450 mA · 12V DC 300 mA".
+  // Per-voltage totals, biggest first: "9V DC 450 mA", "12V DC 300 mA".
   const byVoltage = new Map<string, number>();
   for (const i of pedals) if (i.ma !== undefined && i.voltage) byVoltage.set(i.voltage, (byVoltage.get(i.voltage) ?? 0) + i.ma);
   const split = [...byVoltage].sort((a, b) => b[1] - a[1]).map(([v, ma]) => `${v} ${formatMa(ma)}`);
   return (
-    <div className="rounded-panel bg-surface px-4 py-3 shadow-panel max-sm:col-span-2">
+    <div className="rounded-panel bg-surface px-4 py-3 max-sm:col-span-2">
       <p className="flex items-center gap-1 text-[13px] font-semibold tracking-[-0.01em] text-ink-muted">
         <Zap size={13} strokeWidth={2.25} />
         Power Draw
       </p>
       <p className="text-2xl font-semibold tabular-nums tracking-[-0.02em] max-sm:text-xl">{formatMa(sum)}</p>
-      <p className="truncate text-xs text-ink-muted" {...(split.length > 1 ? tip(split.join(" · ")) : {})}>
+      <p className="truncate text-xs text-ink-muted" {...(split.length > 1 ? tip(split.join(", ")) : {})}>
         {pedals.length === 0
           ? "No Pedals Yet"
           : missing > 0
             ? `${plural(missing, "Pedal")} Without a Draw`
-            : split.join(" · ") || plural(pedals.length, "Pedal")}
+            : split.length ? <Meta parts={split} /> : plural(pedals.length, "Pedal")}
       </p>
     </div>
   );
@@ -200,7 +200,7 @@ function GearRow({ row: r, catalog, onShow }: { row: Row; catalog: Manifest | nu
   const { item } = r;
   const specs = [item.pedalType, item.voltage, item.ma !== undefined ? formatMa(item.ma) : undefined].filter(Boolean);
   const links = buyLinks(r.brand, r.name);
-  const detail = [r.brand, ...(specs.length ? specs : [formatSize(item.width, item.height, units)])].filter(Boolean).join(" · ");
+  const detail = [r.brand, ...(specs.length ? specs : [formatSize(item.width, item.height, units)])].filter(Boolean);
   return (
     <li className={`animate-enter rounded-control transition-colors [--enter-y:4px] ${open ? "bg-surface-hover" : ""}`}>
       <div className="group flex items-center gap-2 rounded-control p-1 pr-2 transition-colors hover:bg-surface-hover sm:gap-3">
@@ -213,7 +213,7 @@ function GearRow({ row: r, catalog, onShow }: { row: Row; catalog: Manifest | nu
           <Thumb item={item} catalog={catalog} />
           <span className="min-w-0 flex-1">
             <span className="block truncate text-sm font-medium">{r.name}</span>
-            <span className="block truncate text-xs text-ink-muted">{detail}</span>
+            <span className="block truncate text-xs text-ink-muted"><Meta parts={detail} /></span>
           </span>
           <ChevronDown
             size={16}
@@ -284,7 +284,7 @@ function Details({ item, name, links, onShow }: { item: Item; name: string; link
           href={l.href}
           {...affiliateProps}
           {...tip(`Search ${l.store} for ${name}`)}
-          className={`press flex h-8 shrink-0 items-center gap-1.5 rounded-[5px] px-3 text-[13px] font-semibold tracking-[-0.01em] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10 max-sm:w-full max-sm:justify-center ${
+          className={`press flex h-8 shrink-0 items-center gap-1.5 rounded-control px-3 text-[13px] font-semibold tracking-[-0.01em] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10 max-sm:w-full max-sm:justify-center ${
             i === 0 ? "ml-auto max-sm:ml-0" : ""
           } ${isWanted(item) ? "bg-brand/10 text-brand hover:bg-brand/15 active:bg-brand/25" : "bg-surface-hover text-ink-muted hover:bg-chrome-line hover:text-ink active:bg-line"}`}
         >
@@ -294,7 +294,7 @@ function Details({ item, name, links, onShow }: { item: Item; name: string; link
       ))}
       <button
         onClick={onShow}
-        className={`press ${links.length ? "" : "ml-auto"} flex h-8 shrink-0 items-center gap-1.5 rounded-[5px] bg-[rgb(202_203_226/0.39)] px-3 text-[13px] font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)] focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10 max-sm:ml-0 max-sm:w-full max-sm:justify-center`}
+        className={`press ${links.length ? "" : "ml-auto"} flex h-8 shrink-0 items-center gap-1.5 rounded-control bg-soft px-3 text-[13px] font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-soft-hover active:bg-soft-active focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10 max-sm:ml-0 max-sm:w-full max-sm:justify-center`}
       >
         <LocateFixed size={14} strokeWidth={2.25} />
         Show on Playground
@@ -410,7 +410,7 @@ function Thumb({ item, catalog }: { item: Item; catalog: Manifest | null }) {
   return (
     <span className="grid size-12 shrink-0 place-items-center rounded-control bg-canvas">
       <span
-        className={item.kind === "pedal" ? "h-8 w-6 rounded-[4px]" : "h-5 w-9 rounded-[3px] bg-board"}
+        className={item.kind === "pedal" ? "h-8 w-6 rounded-inner" : "h-5 w-9 rounded-inner bg-board"}
         style={item.kind === "pedal" ? { background: item.color ?? "var(--color-board)" } : undefined}
       />
     </span>

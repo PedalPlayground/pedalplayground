@@ -91,7 +91,7 @@ function usePanelTarget(): { id: string | null; viewing: boolean } {
 }
 
 const field =
-  "w-full rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted/70 focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
+  "w-full rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
 
 /** Header button next to the board name: opens the board panel. Shows the comment count, and new comments on your own board. */
 export function BoardInfoButton() {
@@ -233,7 +233,7 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
     <aside
       aria-label="Board info and comments"
       data-clarity-mask="True"
-      className="max-sm:animate-enter fixed inset-x-0 bottom-0 z-40 flex max-h-[85dvh] flex-col rounded-t-panel bg-surface shadow-[var(--shadow-modal)] sm:static sm:z-auto sm:max-h-none sm:w-[300px] sm:shrink-0 sm:rounded-none sm:border-r sm:border-chrome-line sm:shadow-none"
+      className="max-sm:animate-enter fixed inset-x-0 bottom-0 z-40 flex max-h-[85dvh] flex-col rounded-t-panel bg-surface shadow-modal sm:static sm:z-auto sm:max-h-none sm:w-[300px] sm:shrink-0 sm:rounded-none sm:border-r sm:border-chrome-line sm:shadow-none"
     >
       {viewing && <BackToGallery />}
       <div className={`flex items-start gap-1 px-4 ${own ? "border-b border-line pb-3 pt-3.5" : "pt-1"}`}>
@@ -296,8 +296,8 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
 function Loading() {
   return (
     <div className="space-y-2 p-4" aria-hidden>
-      <div className="h-3 w-full animate-pulse rounded bg-surface-hover" />
-      <div className="h-3 w-2/3 animate-pulse rounded bg-surface-hover" />
+      <div className="h-3 w-full animate-pulse rounded-inner bg-surface-hover" />
+      <div className="h-3 w-2/3 animate-pulse rounded-inner bg-surface-hover" />
     </div>
   );
 }
@@ -620,7 +620,7 @@ function Composer({ id, onSignIn, onPosted }: { id: string; onSignIn: () => void
       {error && <p className="mt-1 text-xs text-danger">{error}</p>}
       <div className="mt-1.5 flex items-center justify-between">
         <span className="text-[11px] text-ink-muted">{text.length > COMMENT_MAX - 100 ? `${COMMENT_MAX - text.length} left` : ""}</span>
-        <button type="submit" disabled={!text.trim() || posting} className="btn-primary h-8 rounded-[5px] px-3 text-[13px] disabled:opacity-50">
+        <button type="submit" disabled={!text.trim() || posting} className="btn-primary h-8 rounded-control px-3 text-[13px] disabled:opacity-50">
           Post
         </button>
       </div>

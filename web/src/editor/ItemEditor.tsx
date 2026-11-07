@@ -25,7 +25,7 @@ const CAPTION_W = 104;
 const FIGURE_CAPTION_H = 32;
 const FIGURE_GAP = 6;
 /** A guide line across the preview, at the new item's top or bottom. */
-const guide = "pointer-events-none absolute -inset-x-6 z-10 h-px bg-[#ef4444]/70";
+const guide = "pointer-events-none absolute -inset-x-6 z-10 h-px bg-guide/70";
 const STRIP_GAP = 24;
 /** Room kept at each side of the size strip for its arrows (px). */
 const ARROW_W = 32;
@@ -267,7 +267,7 @@ export function ItemEditor({
         {/* Like the canvas: its color, its ½ in dots and its scale key, at the preview's scale. */}
         <div>
           <span className={labelClass}>Size Reference</span>
-          <div className="overflow-hidden rounded-lg bg-canvas px-6 pb-5 pt-14" style={dotGridStyle(PREVIEW_ZOOM, "in", 24, 0)}>
+          <div className="overflow-hidden rounded-panel bg-canvas px-6 pb-5 pt-14" style={dotGridStyle(PREVIEW_ZOOM, "in", 24, 0)}>
             <div className="relative flex items-end gap-8">
               {/* Guides at the new item's top and bottom, across the whole preview, to compare heights at a glance. */}
               {fields.width > 0 && fields.height > 0 && (
@@ -294,9 +294,9 @@ export function ItemEditor({
           {checks.map((c) => (
             <li key={c.text} className={`flex items-start gap-2 text-[13px] ${c.ok ? "text-ink-muted" : "text-ink"}`}>
               {c.ok ? (
-                <CheckIcon size={15} className="mt-0.5 shrink-0 text-[#12a150]" />
+                <CheckIcon size={15} className="mt-0.5 shrink-0 text-positive" />
               ) : (
-                <TriangleAlert size={15} className="mt-0.5 shrink-0 text-[#d97706]" />
+                <TriangleAlert size={15} className="mt-0.5 shrink-0 text-warning" />
               )}
               <span>{c.text}</span>
             </li>
@@ -331,7 +331,7 @@ function Figure({
         {src && !broken ? (
           <img src={src} alt="" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />
         ) : (
-          <div className="absolute inset-0 grid place-items-center overflow-hidden rounded bg-ink/10 px-1 text-center text-[11px] leading-tight text-ink-muted">
+          <div className="absolute inset-0 grid place-items-center overflow-hidden rounded-inner bg-ink/10 px-1 text-center text-[11px] leading-tight text-ink-muted">
             {broken ? "Can't load" : "No photo"}
           </div>
         )}
@@ -395,7 +395,7 @@ function BrandField({ id, value, brands, onChange }: { id: string; value: string
         }}
       />
       {list.length > 0 && (
-        <ul id={`${id}-list`} role="listbox" className="absolute inset-x-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-panel bg-surface p-1 shadow-panel">
+        <ul id={`${id}-list`} role="listbox" className="absolute inset-x-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-panel bg-surface p-1 shadow-float">
           {list.map((b, i) => (
             <li
               key={b}
@@ -449,7 +449,7 @@ function CopyFrom({
   const [withSpecs, setWithSpecs] = useState(false);
   const found = copySources(items, text, brand, 12, usage);
   return (
-    <div className="grid gap-2 rounded-panel bg-surface p-3 shadow-panel">
+    <div className="grid gap-2 rounded-panel bg-surface p-3 ring-1 ring-chrome-line">
       <div className="flex items-center justify-between gap-2">
         <span className={fieldLabelText}>Copy From</span>
         <button type="button" onClick={onClose} className="text-xs text-ink-muted hover:text-ink">

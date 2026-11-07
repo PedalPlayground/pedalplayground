@@ -19,7 +19,7 @@ export function PedalboardIcon({ className }: LucideProps) {
 
 /** One look for Explore, Gear, My Playgrounds, Editor and Updates: an icon and a label (icons only below laptop width). */
 export function tabClass(here: boolean) {
-  return `press relative flex h-9 shrink-0 items-center gap-2 rounded-[4px] p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+  return `press relative flex h-9 shrink-0 items-center gap-2 rounded-inner p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     here ? "bg-ink/[0.06]" : "hover:bg-ink/5 data-[state=open]:bg-ink/5"
   }`;
 }
@@ -119,7 +119,7 @@ export function SiteHeader({
 }
 
 const guestButton =
-  "press flex h-[26px] items-center whitespace-nowrap rounded-[5px] px-3 text-[13px] font-semibold tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand";
+  "press flex h-[26px] items-center whitespace-nowrap rounded-control px-3 text-[13px] font-semibold tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand";
 
 /** Signed out: Register (phones skip it; the sign-in dialog has Create Account) and Sign in. */
 export function GuestButtons({ onRegister, onSignIn }: { onRegister: () => void; onSignIn: () => void }) {
@@ -129,7 +129,7 @@ export function GuestButtons({ onRegister, onSignIn }: { onRegister: () => void;
       <button
         type="button"
         onClick={onRegister}
-        className={`${guestButton} bg-[rgb(202_203_226/0.39)] text-ink hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)] max-sm:hidden`}
+        className={`${guestButton} bg-soft text-ink hover:bg-soft-hover active:bg-soft-active max-sm:hidden`}
       >
         Register
       </button>

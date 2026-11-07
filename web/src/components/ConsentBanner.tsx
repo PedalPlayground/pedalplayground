@@ -11,7 +11,7 @@ export function ConsentBanner() {
     <div
       role="region"
       aria-label="Analytics consent"
-      className="animate-enter fixed bottom-[calc(5rem+env(safe-area-inset-bottom))] left-3 right-3 z-30 rounded-panel bg-surface p-4 shadow-[var(--shadow-modal)] sm:bottom-12 sm:left-4 sm:right-auto sm:w-80 [--enter-y:8px]"
+      className="animate-enter fixed bottom-[calc(5rem+env(safe-area-inset-bottom))] left-3 right-3 z-30 rounded-panel bg-surface p-4 shadow-modal sm:bottom-12 sm:left-4 sm:right-auto sm:w-80 [--enter-y:8px]"
     >
       <p className="text-sm font-semibold tracking-[-0.01em]">Help improve Pedal Playground?</p>
       <p className="mt-1 text-sm text-ink-muted">

@@ -280,7 +280,7 @@ export function GearApp() {
         onChange={(e) => setQuery(e.target.value)}
         placeholder={brand ? `Search ${brand}` : `Search ${noun}`}
         aria-label={`Search ${noun}`}
-        className="h-9 w-full rounded-control border border-line bg-surface pl-9 pr-3 text-sm outline-none focus:border-brand"
+        className="h-9 w-full rounded-control border border-chrome-line bg-surface pl-9 pr-3 text-sm outline-none focus:border-brand"
       />
     </label>
   );
@@ -307,11 +307,11 @@ export function GearApp() {
 
   // Pages other than the playground scroll inside their own container (the playground locks page scrolling).
   return (
-    <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
+    <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-page font-sans text-ink">
       <PageHeader current="gear" dialog={dialog} setDialog={setDialog} />
 
       {open && (
-        <main className="page-main mx-auto max-w-[1600px] px-4 pb-16 pt-6">
+        <main id="content" className="page-main mx-auto max-w-[1600px] px-4 pb-16 pt-6">
           {openEntry && manifest ? (
             <ItemPage
               kind={open.kind}
@@ -338,7 +338,7 @@ export function GearApp() {
       )}
 
       {/* Kept while an item is open, so its filters and loaded cards are there on Back. */}
-      <main className={`page-main mx-auto max-w-[1600px] px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
+      <main id={open ? undefined : "content"} className={`page-main mx-auto max-w-[1600px] px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
         {brand ? (
           <>
             <button type="button" onClick={() => pickBrand(null)} className="text-[13px] font-semibold text-brand hover:underline">
@@ -371,12 +371,12 @@ export function GearApp() {
               <button
                 type="button"
                 onClick={() => setFiltersOpen(true)}
-                className="press relative flex h-9 shrink-0 items-center gap-1.5 rounded-control border border-line bg-surface px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
+                className="press relative flex h-9 shrink-0 items-center gap-1.5 rounded-control border border-chrome-line bg-surface px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
               >
                 <SlidersHorizontal size={15} />
                 Filters
                 {activeFilters > 0 && (
-                  <span className="grid size-5 place-items-center rounded-full bg-brand text-[11px] font-semibold text-white">{activeFilters}</span>
+                  <span className="grid size-5 place-items-center rounded-full bg-brand text-[11px] font-semibold text-brand-ink">{activeFilters}</span>
                 )}
               </button>
             </div>
@@ -510,13 +510,13 @@ function GearCard({
         }
       : { width: "100%", height: "100%" };
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface shadow-panel transition-shadow focus-within:ring-2 focus-within:ring-brand hover:shadow-[0_8px_28px_rgb(16_18_27/0.14),0_0_0_1px_rgb(16_18_27/0.05)]">
+    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface ring-chrome-line transition-shadow focus-within:ring-2 focus-within:ring-brand hover:ring-1">
       <div className="relative aspect-[4/3] w-full bg-canvas">
         {/* Absolute, so a tall photo can't stretch the card. */}
         <div className="absolute inset-2 flex items-center justify-center [container-type:size]">
           {src && <img src={src} srcSet={srcSet} sizes="(min-width: 768px) 15vw, 45vw" alt="" loading="lazy" style={style} className="object-contain" />}
         </div>
-        {isNew && <span className="absolute left-2 top-2 rounded-full bg-brand px-2 py-0.5 text-[11px] font-semibold text-white">New</span>}
+        {isNew && <span className="absolute left-2 top-2 rounded-full bg-brand px-2 py-0.5 text-[11px] font-semibold text-brand-ink">New</span>}
       </div>
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5">
         <button
@@ -551,7 +551,7 @@ function GearCard({
 const filterHeading = "mb-1.5 text-xs font-semibold uppercase tracking-[0.04em] text-ink-muted";
 const segmented = "flex rounded-control bg-ink/[0.06] p-0.5";
 const segment = (on: boolean) =>
-  `h-7 flex-1 whitespace-nowrap rounded-[3px] px-1.5 text-xs font-semibold transition-colors ${on ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`;
+  `h-7 flex-1 whitespace-nowrap rounded-inner px-1.5 text-xs font-semibold transition-colors ${on ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`;
 const listRow = (on: boolean) =>
   `flex w-full items-center justify-between gap-2 rounded-control px-2 py-1.5 text-left text-[13px] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     on ? "bg-ink/[0.06] font-semibold text-ink" : "text-ink-muted hover:bg-ink/5 hover:text-ink"
@@ -650,7 +650,7 @@ function FilterPanel({
           onChange={(e) => setFind(e.target.value)}
           placeholder={`Find a brand (${brands.length.toLocaleString("en-US")})`}
           aria-label="Find a brand"
-          className="mb-1.5 h-8 w-full rounded-control border border-line bg-surface px-2.5 text-[13px] outline-none focus:border-brand"
+          className="mb-1.5 h-8 w-full rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:border-brand"
         />
         <div role="radiogroup" aria-label="Brand" className="-mx-1 grid max-h-72 gap-0.5 overflow-y-auto px-1">
           {!find.trim() && (
@@ -695,11 +695,11 @@ const fmt = (n: number) => String(Math.round(n * 100) / 100);
 
 function CardSkeleton() {
   return (
-    <div className="overflow-hidden rounded-panel bg-surface shadow-panel" aria-hidden>
+    <div className="overflow-hidden rounded-panel bg-surface" aria-hidden>
       <div className="aspect-[4/3] w-full animate-pulse bg-surface-hover" />
       <div className="space-y-2 px-3 pb-3 pt-2.5">
-        <div className="h-3 w-1/2 animate-pulse rounded bg-surface-hover" />
-        <div className="h-3.5 w-3/4 animate-pulse rounded bg-surface-hover" />
+        <div className="h-3 w-1/2 animate-pulse rounded-inner bg-surface-hover" />
+        <div className="h-3.5 w-3/4 animate-pulse rounded-inner bg-surface-hover" />
       </div>
     </div>
   );

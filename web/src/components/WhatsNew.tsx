@@ -56,7 +56,7 @@ export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
           align="end"
           sideOffset={8}
           collisionPadding={12}
-          className="animate-menu z-50 flex max-h-[min(32rem,calc(100dvh-5rem))] w-[22rem] max-w-[calc(100vw-1.5rem)] flex-col rounded-panel bg-surface shadow-panel"
+          className="animate-menu z-50 flex max-h-[min(32rem,calc(100dvh-5rem))] w-[22rem] max-w-[calc(100vw-1.5rem)] flex-col rounded-panel bg-surface shadow-float"
         >
           <Dropdown.Label className="border-b border-line px-4 py-3 text-sm font-semibold">What's New</Dropdown.Label>
           <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-1.5">

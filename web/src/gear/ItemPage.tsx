@@ -85,7 +85,7 @@ export function ItemPage({
 
       <div className="mt-4 grid gap-6 md:grid-cols-[minmax(0,1fr)_320px] 2xl:grid-cols-[minmax(0,1fr)_380px] md:gap-8">
         {/* The photo at real proportions on the canvas color, shrunk to fit. */}
-        <div className="flex min-h-[260px] items-center justify-center overflow-hidden rounded-panel bg-canvas p-6 md:min-h-[420px]">
+        <div className="flex min-h-[260px] items-center justify-center overflow-hidden rounded-container bg-canvas p-6 md:min-h-[420px]">
           {src && (
             <img
               src={src}
@@ -132,7 +132,7 @@ export function ItemPage({
                   key={b.store}
                   href={b.href}
                   {...affiliateProps}
-                  className="press flex h-10 items-center justify-center rounded-control border border-line bg-surface text-sm font-semibold outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand"
+                  className="press flex h-10 items-center justify-center rounded-control bg-soft text-sm font-semibold outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand"
                 >
                   Find it on {b.store}
                 </a>

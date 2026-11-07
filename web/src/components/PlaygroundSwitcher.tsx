@@ -10,6 +10,7 @@ import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
+import { Meta } from "./Meta";
 import { useUi } from "../store/ui";
 
 const item =
@@ -52,7 +53,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
           sideOffset={6}
           collisionPadding={12}
           onCloseAutoFocus={onCloseAutoFocus}
-          className="animate-menu z-50 w-60 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
+          className="animate-menu z-50 w-60 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-float max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
         >
           <Dropdown.Item disabled={empty} className={`${item} data-[disabled]:cursor-default data-[disabled]:opacity-40`} onSelect={newPlayground}>
             <Plus size={14} />
@@ -80,7 +81,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
         sideOffset={6}
         collisionPadding={12}
         onCloseAutoFocus={onCloseAutoFocus}
-        className="animate-menu z-50 w-80 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
+        className="animate-menu z-50 w-80 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-float max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
       >
         <Dropdown.Item className={item} onSelect={newPlayground}>
           <Plus size={14} />
@@ -103,15 +104,14 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
                     }`}
                   >
                     {p.thumbnail ? (
-                      <img src={p.thumbnail} alt="" className="aspect-[8/5] w-14 shrink-0 rounded-[3px] bg-canvas object-contain" />
+                      <img src={p.thumbnail} alt="" className="aspect-[8/5] w-14 shrink-0 rounded-inner bg-canvas object-contain" />
                     ) : (
-                      <span className="aspect-[8/5] w-14 shrink-0 rounded-[3px] bg-canvas" />
+                      <span className="aspect-[8/5] w-14 shrink-0 rounded-inner bg-canvas" />
                     )}
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-sm font-medium">{p.name}</span>
                       <span className="block truncate text-xs text-ink-muted">
-                        {current ? "Open now" : edited(p.updated_at)}
-                        {p.is_public && " · Shared"}
+                        <Meta parts={[current ? "Open now" : edited(p.updated_at), p.is_public && "Shared"]} />
                       </span>
                     </span>
                     {/* Its own click: don't also open the playground. */}

@@ -96,7 +96,7 @@ export function TypesTab({ manifest, publisher, setNotice }: { manifest: Manifes
         )}
       </div>
       <p className="text-xs text-ink-muted">
-        Changes save as you make them. A pedal stays in this list after you change its type until you reload, so you can undo.
+        Changes save as you go. Pedals stay listed until you reload, so a change is easy to undo.
       </p>
       {error && <p className="text-[13px] text-danger">{error}</p>}
       {items && items.length === 0 && <p className="text-[13px] text-ink-muted">No pedals here.</p>}

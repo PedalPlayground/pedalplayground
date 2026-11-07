@@ -15,7 +15,7 @@ const PAD = 4; // inside the pill
 const NAV_ROOM = 84;
 
 /** Icon buttons: bigger on touch screens. */
-const button = "press grid size-7 place-items-center rounded-[5px] outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 pointer-coarse:rounded-[8px] [&_svg]:size-4 pointer-coarse:[&_svg]:size-[21px]";
+const button = "press grid size-7 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 pointer-coarse:rounded-control [&_svg]:size-4 pointer-coarse:[&_svg]:size-[21px]";
 
 /** A little menu that follows the selection: Lock, Rotate, Edit (custom gear) and ••• for the full right-click menu. Not on phones. */
 export function SelectionMiniMenu() {
@@ -72,7 +72,7 @@ export function SelectionMiniMenu() {
   return (
     <div
       ref={wrap}
-      className="absolute z-10 flex -translate-x-1/2 items-center gap-0.5 rounded-[10px] border border-chrome-line bg-surface p-1 shadow-[0_4px_16px_rgb(0_0_0/0.18)]"
+      className="absolute z-10 flex -translate-x-1/2 items-center gap-0.5 rounded-panel bg-surface p-1 shadow-float"
       style={{ left: cx, top: y }}
       // Clicks here are for the menu, not the canvas behind it.
       onPointerDown={(e) => e.stopPropagation()}

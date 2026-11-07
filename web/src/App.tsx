@@ -99,7 +99,7 @@ async function openSharedFromUrl() {
 }
 
 const headerButton =
-  "btn-primary h-[26px] whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1";
+  "btn-primary h-[26px] whitespace-nowrap rounded-control px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1";
 
 export function App() {
   const init = useAuth((s) => s.init);
@@ -215,7 +215,7 @@ export function App() {
         current={viewing ? null : "build"}
         builds={<BuildsMenu onEdit={editPlayground} onSignIn={() => setDialog("account")} onPlaygrounds={() => setDialog("playgrounds")} />}
         updates={<WhatsNew onNewGear={showNewGear} />}
-        brandExtra={pro && <span className="text-sm/4 font-semibold text-brand-top max-sm:hidden">Pro</span>}
+        brandExtra={pro && <span className="text-sm/4 font-semibold text-brand max-sm:hidden">Pro</span>}
         nav={
           <>
             {BETA && (
@@ -299,7 +299,7 @@ export function App() {
           {SHOW_MODES && <ModeRail />}
 
           {/* Phones have no room for the save status in the header, so it floats just below it. */}
-          <div className="empty:hidden absolute right-3 top-3 z-20 rounded-control bg-surface/90 px-2 py-1 shadow-panel sm:hidden">
+          <div className="empty:hidden absolute right-3 top-3 z-20 rounded-control bg-surface/90 px-2 py-1 shadow-float sm:hidden">
             <SaveStatus />
           </div>
 

@@ -120,7 +120,7 @@ export function TooltipLayer() {
       className={`pointer-events-none fixed z-[100] flex items-center gap-1.5 whitespace-nowrap ${
         t.canvas
           ? "rounded-full bg-canvas/70 px-3 py-1 text-[13px] font-medium tracking-[-0.01em] text-ink-muted backdrop-blur-sm"
-          : "rounded-[5px] bg-tip px-2 py-1 text-xs font-medium text-tip-ink shadow-[0_2px_8px_rgb(0_0_0/0.15)]"
+          : "rounded-control bg-tip px-2 py-1 text-xs font-medium text-tip-ink shadow-float"
       } ${
         t.warm ? "" : `animate-enter ${enter}`
       }`}

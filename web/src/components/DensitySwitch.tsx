@@ -46,7 +46,7 @@ export function DensitySwitch({ value, onChange }: { value: Density; onChange: (
           aria-label={label}
           {...tip(label)}
           onClick={() => onChange(d)}
-          className={`grid h-7 w-8 place-items-center rounded-[3px] transition-colors ${value === d ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
+          className={`grid h-7 w-8 place-items-center rounded-inner transition-colors ${value === d ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`}
         >
           <Icon size={14} strokeWidth={2.25} />
         </button>

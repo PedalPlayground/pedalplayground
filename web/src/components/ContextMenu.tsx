@@ -54,10 +54,10 @@ export function openContextMenu(menu: Omit<OpenMenu, "key">) {
 export const closeContextMenu = () => useContextMenu.setState({ open: null });
 
 /** Shared with other popover menus (the search filters) so they all look the same. */
-export const menuContentClass = "animate-menu z-50 min-w-48 rounded-[10px] border border-chrome-line bg-surface p-1 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain";
+export const menuContentClass = "animate-menu z-50 min-w-48 rounded-panel bg-surface p-1 shadow-float max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain";
 
 export const rowClass =
-  "group flex h-7 cursor-default select-none items-center gap-2 rounded-[5px] pl-2 pr-2.5 text-[13px] tracking-[-0.01em] outline-none transition-colors duration-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-40 pointer-coarse:h-9";
+  "group flex h-7 cursor-default select-none items-center gap-2 rounded-control pl-2 pr-2.5 text-[13px] tracking-[-0.01em] outline-none transition-colors duration-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-40 pointer-coarse:h-9";
 
 function Row({
   icon,

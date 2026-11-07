@@ -233,13 +233,13 @@ export function OnboardingTour() {
       <div className="absolute inset-0" />
       <div
         aria-hidden
-        className="pointer-events-none absolute rounded-[10px] shadow-[0_0_0_9999px_rgb(10_11_16/0.75)] motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out"
+        className="pointer-events-none absolute rounded-panel shadow-[0_0_0_9999px_rgb(10_11_16/0.75)] motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out"
         style={{ left: spotlight.x, top: spotlight.y, width: spotlight.w, height: spotlight.h }}
       />
       {rect && (
         <div
           aria-hidden
-          className="pointer-events-none absolute rounded-[10px] ring-2 ring-brand motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out"
+          className="pointer-events-none absolute rounded-panel ring-2 ring-brand motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out"
           style={{ left: rect.x, top: rect.y, width: rect.w, height: rect.h }}
         />
       )}
@@ -253,7 +253,7 @@ export function OnboardingTour() {
         aria-modal="true"
         aria-labelledby="tour-title"
         aria-describedby="tour-body"
-        className={`absolute ${step.hero ? "w-[min(360px,calc(100vw-24px))] overflow-hidden" : "w-[min(320px,calc(100vw-24px))]"} rounded-panel bg-surface p-4 shadow-[var(--shadow-modal)] ${
+        className={`absolute ${step.hero ? "w-[min(360px,calc(100vw-24px))] overflow-hidden" : "w-[min(320px,calc(100vw-24px))]"} rounded-panel bg-surface p-4 shadow-modal ${
           cardSize ? `animate-enter ${arrow?.side === "bottom" ? "[--enter-y:6px]" : arrow ? "[--enter-y:-6px]" : "[--enter-y:8px]"}` : ""
         }`}
         style={{ left, top, opacity: cardSize ? 1 : 0 }}

@@ -23,6 +23,7 @@ import {
 } from "../lib/moderation";
 import { boardUrl, setGalleryHidden } from "../lib/gallery";
 import type { SetNotice } from "./EditorApp";
+import { Meta } from "../components/Meta";
 import { primaryButton, secondaryButton } from "./ItemEditor";
 
 const ACTIONS: { action: FlagAction; label: string }[] = [
@@ -120,19 +121,23 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
         {reports?.length === 0 && <p className="text-[13px] text-ink-muted">No open reports.</p>}
         <ul className="grid gap-2">
           {reports?.map((r) => (
-            <li key={r.id} className="rounded-lg border border-line px-3 py-2.5 text-[13px]">
-              <div className="flex flex-wrap items-center gap-x-2 text-xs text-ink-muted">
+            <li key={r.id} className="rounded-panel border border-line px-3 py-2.5 text-[13px]">
+              <div className="flex flex-wrap items-center gap-x-2.5 text-xs text-ink-muted">
                 <span className="font-semibold text-ink">{reasonLabel(r.reason)}</span>
                 <span>
                   {r.target_kind === "comment" ? "Comment" : r.target_kind === "board" ? "Board" : "User"} by @{r.target_username ?? "unknown"}
                 </span>
-                <span>· {ago(r.created_at)}</span>
+                <span>{ago(r.created_at)}</span>
               </div>
               {r.target_text && <p className="mt-1 line-clamp-3 whitespace-pre-line break-words">“{r.target_text}”</p>}
               {r.details && <p className="mt-1 text-ink-muted">Reporter: {r.details}</p>}
               <p className="mt-1 text-xs text-ink-muted">
-                From @{r.reporter_username ?? "unknown"} · {r.open_against} open {r.open_against === 1 ? "report" : "reports"} and {r.flags_against}{" "}
-                {r.flags_against === 1 ? "flag" : "flags"} on this account
+                <Meta
+                  parts={[
+                    `From @${r.reporter_username ?? "unknown"}`,
+                    `${r.open_against} open ${r.open_against === 1 ? "report" : "reports"} and ${r.flags_against} ${r.flags_against === 1 ? "flag" : "flags"} on this account`,
+                  ]}
+                />
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {r.target_username && (
@@ -159,12 +164,12 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
         {hidden?.length === 0 && <p className="text-[13px] text-ink-muted">No hidden boards.</p>}
         <ul className="grid gap-2">
           {hidden?.map((b) => (
-            <li key={b.playground_id} className="rounded-lg border border-line px-3 py-2.5 text-[13px]">
-              <div className="flex flex-wrap items-center gap-x-2 text-xs text-ink-muted">
+            <li key={b.playground_id} className="rounded-panel border border-line px-3 py-2.5 text-[13px]">
+              <div className="flex flex-wrap items-center gap-x-2.5 text-xs text-ink-muted">
                 <span className="font-semibold text-ink">{b.by_ban ? "Hidden by a ban" : "Hidden"}</span>
                 <span>Board by @{b.owner_username ?? "unknown"}</span>
                 <span>
-                  · {ago(b.hidden_at)}
+                  {ago(b.hidden_at)}
                   {b.hidden_by_username && ` by @${b.hidden_by_username}`}
                 </span>
               </div>
@@ -261,7 +266,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
       <div>
         <p className="text-[15px] font-semibold">@{user.username}</p>
         <p className="text-xs text-ink-muted">
-          {status} · joined {shortDate(user.joined)} · {user.open_reports} open {user.open_reports === 1 ? "report" : "reports"}
+          <Meta parts={[status, `Joined ${shortDate(user.joined)}`, `${user.open_reports} open ${user.open_reports === 1 ? "report" : "reports"}`]} />
         </p>
       </div>
 
@@ -270,15 +275,15 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
       {user.flags.length > 0 && (
         <ul className="grid gap-1.5">
           {user.flags.map((f) => (
-            <li key={f.id} className={`rounded-lg border border-line px-3 py-2 text-[13px] ${f.lifted_at ? "opacity-60" : ""}`}>
-              <div className="flex flex-wrap items-center gap-x-2 text-xs text-ink-muted">
+            <li key={f.id} className={`rounded-panel border border-line px-3 py-2 text-[13px] ${f.lifted_at ? "opacity-60" : ""}`}>
+              <div className="flex flex-wrap items-center gap-x-2.5 text-xs text-ink-muted">
                 <span className="font-semibold text-ink">{flagResult(f)}</span>
                 <span>{reasonLabel(f.reason)}</span>
                 <span>
-                  · {shortDate(f.created_at)}
+                  {shortDate(f.created_at)}
                   {f.issued_by && ` by @${f.issued_by}`}
                 </span>
-                <span>· {f.lifted_at ? `lifted ${shortDate(f.lifted_at)}` : f.seen_at ? "seen" : "not seen yet"}</span>
+                <span>{f.lifted_at ? `Lifted ${shortDate(f.lifted_at)}` : f.seen_at ? "Seen" : "Not seen yet"}</span>
                 {!f.lifted_at && (
                   <button type="button" onClick={() => void lift(f)} className="ml-auto font-semibold text-brand hover:underline">
                     Lift
@@ -292,7 +297,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
       )}
 
       <form
-        className="grid gap-3 rounded-lg border border-line p-3"
+        className="grid gap-3 rounded-panel border border-line p-3"
         onSubmit={(e) => {
           e.preventDefault();
           void flag();
@@ -391,7 +396,7 @@ function ActivityList({ userId }: { userId: string }) {
       <h3 className="mb-1.5 text-sm font-semibold">
         Activity <span className="font-normal text-ink-muted">{items.length}</span>
       </h3>
-      <ul className="grid gap-px overflow-hidden rounded-lg border border-line">
+      <ul className="grid gap-px overflow-hidden rounded-panel border border-line">
         {shown.map((a, i) => (
           <li key={`${a.kind}-${a.happened_at}-${i}`} className="flex items-start gap-3 bg-surface px-3 py-2 text-[13px]">
             <span className="w-28 shrink-0 text-xs text-ink-muted">{ago(a.happened_at)}</span>

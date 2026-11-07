@@ -25,7 +25,7 @@ function Switch({ on, label }: { on: boolean; label: string }) {
       className={`relative inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${on ? "bg-brand" : "bg-ink/15"}`}
     >
       <span
-        className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white shadow-sm transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`}
+        className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`}
       />
     </span>
   );
@@ -51,7 +51,7 @@ export function Segmented<T extends string>({
     <div role="radiogroup" aria-label={label} className={`relative flex rounded-control bg-surface-hover p-0.5 ${wide ? "w-full" : ""}`}>
       <span
         aria-hidden
-        className="absolute bottom-0.5 left-0.5 top-0.5 rounded-[3px] bg-surface shadow-sm transition-transform duration-200 ease-out"
+        className="absolute bottom-0.5 left-0.5 top-0.5 rounded-inner bg-surface transition-transform duration-200 ease-out"
         style={{ width: `calc((100% - 4px) / ${options.length})`, transform: `translateX(${index * 100}%)` }}
       />
       {options.map(([v, text]) => (
@@ -60,7 +60,7 @@ export function Segmented<T extends string>({
           role="radio"
           aria-checked={value === v}
           onClick={() => onChange(v)}
-          className={`relative rounded-[3px] outline-none ${wide ? "h-7 flex-1 text-sm" : "h-6 w-12 text-xs"} transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+          className={`relative rounded-inner outline-none ${wide ? "h-7 flex-1 text-sm" : "h-6 w-12 text-xs"} transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
             value === v ? "font-medium text-ink" : "text-ink-muted hover:text-ink"
           }`}
         >
@@ -120,7 +120,7 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
           side="top"
           align="end"
           sideOffset={6}
-          className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
+          className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-float max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
         >
           {SHOW_FILE_IO && (
             <>

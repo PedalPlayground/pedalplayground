@@ -27,6 +27,7 @@ import { PX_PER_INCH } from "../lib/geometry";
 import { templateInfo, type PedalTemplate } from "../lib/pedalTemplates";
 import { PedalArt } from "./PedalArt";
 import { FEATURED_PEDALS } from "../lib/featuredPedals";
+import { Meta } from "./Meta";
 import { fetchTrending, recordGearAdd, type TrendingEntry } from "../lib/trending";
 
 type Feed = "trending" | "new";
@@ -542,8 +543,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
               <span className="min-w-0">
                 <span className="block truncate text-sm font-medium">{item.name}</span>
                 <span className="block truncate text-xs text-ink-muted">
-                  {item.brand} · {formatSize(item.width, item.height, units)}
-                  {!kind && entry.kind === "pedalboard" && " · Pedalboard"}
+                  <Meta parts={[item.brand, formatSize(item.width, item.height, units), !kind && entry.kind === "pedalboard" && "Pedalboard"]} />
                 </span>
               </span>
               {row === active && !isAdded && (
@@ -572,7 +572,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       {!target && !phone && (
         <div className="relative px-2 pb-2">
           <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-surface to-transparent" />
-          <div className="rounded-control bg-surface-hover shadow-[0_2px_12px_rgb(0_0_0/0.12)] [&>button:hover]:bg-ink/10">{makeOwn}</div>
+          <div className="rounded-control bg-surface-hover shadow-float [&>button:hover]:bg-ink/10">{makeOwn}</div>
         </div>
       )}
       </>
@@ -588,7 +588,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         ref={dockRef}
         role="dialog"
         aria-label={edit ? "Edit" : replace ? "Replace" : "Add Gear"}
-        className="animate-dock absolute bottom-3 left-3 top-3 z-40 flex w-[min(280px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-panel"
+        className="animate-dock absolute bottom-3 left-3 top-3 z-40 flex w-[min(280px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-float"
       >
         {body}
       </div>
@@ -605,7 +605,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         ref={sheetRef}
         role="dialog"
         aria-label={edit ? "Edit" : replace ? "Replace" : "Add Gear"}
-        className="animate-sheet absolute inset-x-0 flex flex-col rounded-t-[16px] bg-surface shadow-[0_-4px_24px_rgb(0_0_0/0.12)]"
+        className="animate-sheet absolute inset-x-0 flex flex-col rounded-t-container bg-surface shadow-[0_-8px_32px_rgb(27_28_56/0.12)]"
         style={{
           bottom: keyboard,
           height: Math.min(visibleHeight * 0.72, visibleHeight - 56),

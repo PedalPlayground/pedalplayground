@@ -100,7 +100,7 @@ export function EditorApp() {
       type="button"
       onClick={() => setTab(t)}
       aria-pressed={tab === t}
-      className={`press h-8 rounded-[5px] px-3 text-[13px] font-semibold ${tab === t ? "bg-ink text-surface" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
+      className={`press h-8 rounded-control px-3 text-[13px] font-semibold ${tab === t ? "bg-ink text-surface" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
     >
       {label}
     </button>
@@ -135,7 +135,7 @@ export function EditorApp() {
       {notice && (
         <div
           role="status"
-          className={`mb-5 flex items-start justify-between gap-3 rounded-lg border px-3 py-2 text-[13px] ${notice.error ? "border-danger/40 text-danger" : "border-line text-ink"}`}
+          className={`mb-5 flex items-start justify-between gap-3 rounded-panel border px-3 py-2 text-[13px] ${notice.error ? "border-danger/40 text-danger" : "border-line text-ink"}`}
         >
           <span>{notice.text}</span>
           <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setNotice(null)} aria-label="Dismiss">
@@ -166,7 +166,7 @@ function Shell({ header, children, bar }: { header: React.ReactNode; children?: 
           <div className="page-main mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
         </div>
       )}
-      <main className="page-main mx-auto max-w-[1600px] px-4 py-6">{children}</main>
+      <main id="content" className="page-main mx-auto max-w-[1600px] px-4 py-6">{children}</main>
     </div>
   );
 }
