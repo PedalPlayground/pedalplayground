@@ -1,5 +1,5 @@
 import { ArrowLeft, Search, SlidersHorizontal } from "lucide-react";
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { indexItem, search as searchItems } from "../lib/search";
@@ -74,25 +74,13 @@ const FILL_INCHES = 5.2;
 /** Items per list (trending, newest) before they're mixed into the bento. */
 const SHELF = 12;
 /**
- * The Trending and new bento: 12 tiles whose sizes fill the grid exactly at every width (dense packing). Six columns:
- * a big tile, two tall ones and a wide one (3 full rows). Four columns: the wide one is single and the last tile hides
- * (4 rows). Two columns: only the big tile spans, and the last tile hides (7 rows).
+ * The Trending and new bento: 11 tiles whose sizes fill the grid exactly (dense packing). Four columns: a big tile and
+ * two tall ones (4 full rows). Two columns: only the big tile spans (7 rows).
  */
-const BENTO_COUNT = 12;
-const BENTO = [
-  "col-span-2 row-span-2",
-  "sm:row-span-2",
-  "",
-  "",
-  "sm:row-span-2",
-  "",
-  "",
-  "xl:col-span-2",
-  "",
-  "",
-  "",
-  "hidden xl:flex",
-];
+const BENTO_COUNT = 11;
+const BENTO = ["col-span-2 row-span-2", "sm:row-span-2", "", "", "sm:row-span-2", "", "", "", "", "", ""];
+/** Brands beside the bento: two columns of eight on laptops. */
+const BRAND_TILES = 16;
 
 interface BentoPick {
   item: CatalogItem;
@@ -100,9 +88,6 @@ interface BentoPick {
 }
 /** New for 30 days after it joins the catalog. */
 const NEW_DAYS = 30;
-
-const chip = (on: boolean) =>
-  `press h-8 shrink-0 rounded-full px-3 text-[13px] font-semibold transition-colors ${on ? "bg-ink text-surface" : "bg-surface text-ink-muted shadow-chip hover:text-ink"}`;
 
 /** The gear catalog at /gear/: every pedal and pedalboard, by brand, with search and sorting. */
 export function GearApp() {
@@ -279,7 +264,17 @@ export function GearApp() {
       const n = usage.get(`${kind}:${c.image}`);
       if (n) brandUse.set(c.brand, (brandUse.get(c.brand) ?? 0) + n);
     }
-    const topBrands = [...brandUse].sort((a, b) => b[1] - a[1]).slice(0, 16).map(([b]) => b);
+    // Each brand shown with its most added item's photo.
+    const brandPhoto = new Map<string, { item: CatalogItem; n: number }>();
+    for (const c of all) {
+      const n = usage.get(`${kind}:${c.image}`) ?? 0;
+      const best = brandPhoto.get(c.brand);
+      if (n && (!best || n > best.n)) brandPhoto.set(c.brand, { item: c, n });
+    }
+    const topBrands = [...brandUse]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, BRAND_TILES)
+      .map(([b]) => ({ brand: b, item: brandPhoto.get(b)!.item }));
     // Trending and new, taking turns, each item once.
     const picks: BentoPick[] = [];
     const seen = new Set<string>();
@@ -430,33 +425,39 @@ export function GearApp() {
 
         {shelves && (
           <>
-            {shelves.topBrands.length > 0 && (
-              <Shelf title="Popular brands">
-                {shelves.topBrands.map((b) => (
-                  <button key={b} type="button" className={chip(false)} onClick={() => pickBrand(b)}>
-                    {b}
-                  </button>
-                ))}
-              </Shelf>
-            )}
-            {shelves.picks.length > 0 && (
-              <section className="mt-8">
-                <div className="flex items-center justify-between gap-3">
-                  <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Trending and new</h2>
-                  {sort !== "new" && (
-                    <button type="button" onClick={() => setSort("new")} className="text-[13px] font-semibold text-brand hover:underline">
-                      See all new
-                    </button>
-                  )}
-                </div>
-                {/* Bento: tiles of a few sizes, packed densely. Photo first, name only; the full cards are below. */}
-                <div className="mt-3 grid grid-flow-dense auto-rows-[8.5rem] grid-cols-2 gap-3 sm:grid-cols-4 xl:grid-cols-6">
-                  {shelves.picks.map((p, i) => (
-                    <BentoTile key={`${p.why}:${p.item.image}`} pick={p} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
-                  ))}
-                </div>
-              </section>
-            )}
+            {/* Trending and new beside Popular brands (stacked below laptop width). The brand column stretches to the
+                bento's height, its tiles sharing the rows evenly. */}
+            <div className="mt-8 grid gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] xl:gap-6">
+              {shelves.picks.length > 0 && (
+                <section>
+                  <div className="flex items-center justify-between gap-3">
+                    <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Trending and new</h2>
+                    {sort !== "new" && (
+                      <button type="button" onClick={() => setSort("new")} className="text-[13px] font-semibold text-brand hover:underline">
+                        See all new
+                      </button>
+                    )}
+                  </div>
+                  {/* Bento: tiles of a few sizes, packed densely. Photo first, name only; the full cards are below. */}
+                  <div className="mt-3 grid grid-flow-dense auto-rows-[8.5rem] grid-cols-2 gap-3 sm:grid-cols-4">
+                    {shelves.picks.map((p, i) => (
+                      <BentoTile key={`${p.why}:${p.item.image}`} pick={p} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
+                    ))}
+                  </div>
+                </section>
+              )}
+              {shelves.topBrands.length > 0 && (
+                <section className="flex flex-col">
+                  <h2 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Popular brands</h2>
+                  <div className="mt-3 grid flex-1 auto-rows-[3.5rem] grid-cols-2 gap-2 sm:grid-cols-4 xl:auto-rows-fr xl:grid-cols-2">
+                    {shelves.topBrands.map(({ brand: b, item }, i) => (
+                      // Phones show the top eight.
+                      <BrandTile key={b} brand={b} item={item} kind={kind} manifest={manifest!} onPick={() => pickBrand(b)} className={i >= 8 ? "max-sm:hidden" : ""} />
+                    ))}
+                  </div>
+                </section>
+              )}
+            </div>
           </>
         )}
 
@@ -769,19 +770,37 @@ function BentoTile({
   );
 }
 
-/** A titled row that scrolls sideways. A scroller clips what's outside it, so it gets room for the cards' shadows
- * (padding, undone by negative margins so nothing moves); that room doesn't take clicks. */
-function Shelf({ title, action, children }: { title: string; action?: ReactNode; children: ReactNode }) {
+/** A brand beside the bento: a small photo of its most added item, then its name. Opens the brand's page. */
+function BrandTile({
+  brand,
+  item,
+  kind,
+  manifest,
+  onPick,
+  className = "",
+}: {
+  brand: string;
+  item: CatalogItem;
+  kind: Kind;
+  manifest: Manifest;
+  onPick: () => void;
+  className?: string;
+}) {
+  const thumb = thumbUrl(manifest, kind, item.image);
   return (
-    <section className="mt-8">
-      <div className="flex items-center justify-between gap-3">
-        <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>{title}</h2>
-        {action}
-      </div>
-      <div className="pointer-events-none -mx-4 mt-3 flex gap-3 overflow-x-auto px-4 pb-3 pt-1 [&>*]:pointer-events-auto">{children}</div>
-    </section>
+    <button
+      type="button"
+      onClick={onPick}
+      className={`group flex min-h-0 items-center gap-2.5 overflow-hidden rounded-panel bg-card px-2.5 text-left ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand ${className}`}
+    >
+      <span className="grid size-9 shrink-0 place-items-center">
+        {thumb && <img src={thumb} alt="" loading="lazy" className="max-h-9 max-w-9 object-contain transition-transform duration-300 group-hover:scale-105" />}
+      </span>
+      <span className="min-w-0 truncate text-[13px] font-semibold">{brand}</span>
+    </button>
   );
 }
+
 
 const fmt = (n: number) => String(Math.round(n * 100) / 100);
 

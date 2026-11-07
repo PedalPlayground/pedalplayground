@@ -14,10 +14,11 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   to it. Boards are fit to the card. Cards load the full photo when the 128px thumbnail would look soft.
 - **New** marks items added in the last 30 days.
 - The grid shows 60 items and adds 60 more as you scroll.
-- **Over the full list** (no brand, type or search): Popular brands (most adds in the last year, a sideways row),
-  then **Trending and new**, a bento of 12 photo-first tiles taking turns between this month's most added
+- **Over the full list** (no brand, type or search): **Trending and new**, a bento of 11 photo-first tiles taking turns between this month's most added
   (`trending_gear`) and the newest additions. Tiles show only the photo, the name and a Trending or New mark, so they
-  read differently from the full cards below; their sizes fill the grid exactly at 6, 4 and 2 columns.
+  read differently from the full cards below; their sizes fill the grid exactly at 4 and 2 columns. Beside it on laptops
+  (below it on smaller screens), **Popular brands**: 16 rounded tiles (8 on phones), each with a photo of the brand's
+  most added item, stretching to the bento's height.
 - The photo at real proportions on the canvas color, with size in inches and mm, type, power and current draw when
   the catalog has them, and the date it was added.
 - **Add to My Playground** links to `/#pp-add=<kind>:<image key>` (`lib/handoff.ts`). The playground waits for the
