@@ -511,7 +511,7 @@ function GearCard({
       : { width: "100%", height: "100%" };
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line transition-shadow focus-within:ring-2 focus-within:ring-brand hover:ring-1">
-      <div className="relative aspect-[4/3] w-full bg-canvas">
+      <div className="relative aspect-[4/3] w-full border-b border-chrome-line">
         {/* Absolute, so a tall photo can't stretch the card. */}
         <div className="absolute inset-2 flex items-center justify-center [container-type:size]">
           {src && <img src={src} srcSet={srcSet} sizes="(min-width: 768px) 15vw, 45vw" alt="" loading="lazy" style={style} className="object-contain" />}
@@ -696,7 +696,7 @@ const fmt = (n: number) => String(Math.round(n * 100) / 100);
 function CardSkeleton() {
   return (
     <div className="overflow-hidden rounded-panel bg-card" aria-hidden>
-      <div className="aspect-[4/3] w-full animate-pulse bg-surface-hover" />
+      <div className="aspect-[4/3] w-full animate-pulse border-b border-chrome-line bg-surface-hover" />
       <div className="space-y-2 px-3 pb-3 pt-2.5">
         <div className="h-3 w-1/2 animate-pulse rounded-inner bg-surface-hover" />
         <div className="h-3.5 w-3/4 animate-pulse rounded-inner bg-surface-hover" />

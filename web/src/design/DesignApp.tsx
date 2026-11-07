@@ -283,7 +283,7 @@ export function DesignApp() {
             </Demo>
           </Group>
 
-          <Group title="Cards" note="Tinted card on the white page, no border. Hover adds a hairline; keyboard focus adds the brand ring.">
+          <Group title="Cards" note="Tinted card on the white page, one shade throughout, with a hairline under the photo. Hover adds a hairline edge; keyboard focus adds the brand ring.">
             <div className="col-span-full grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-3">
               {[0, 1, 2].map((i) => (
                 <a
@@ -291,7 +291,7 @@ export function DesignApp() {
                   href="#components"
                   className="group flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand"
                 >
-                  <span className="aspect-[4/3] bg-canvas" />
+                  <span className="aspect-[4/3] border-b border-chrome-line" />
                   <span className="px-3 pb-3 pt-2.5">
                     <span className="block text-xs font-medium text-ink-muted">BOSS</span>
                     <span className="block text-[13px] font-semibold">{["DS-1 Distortion", "BD-2 Blues Driver", "TU-3 Tuner"][i]}</span>
