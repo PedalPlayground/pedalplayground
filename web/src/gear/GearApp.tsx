@@ -832,19 +832,18 @@ function BentoTile({
       aria-label={`${item.brand} ${item.name}`}
       className={`group relative flex flex-col overflow-hidden rounded-panel bg-card outline-none transition-colors hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-brand ${size}`}
     >
-      <span className="relative min-h-0 flex-1">
-        {thumb && (
-          <img
-            src={thumb}
-            srcSet={full ? `${thumb} 128w, ${full} ${kind === "pedal" ? 1200 : 2400}w` : undefined}
-            sizes="(min-width: 640px) 25vw, 50vw"
-            alt=""
-            loading="lazy"
-            className="absolute inset-x-[10%] inset-y-[8%] size-[80%] object-contain transition-transform duration-300 group-hover:scale-[1.03]"
-          />
-        )}
-      </span>
-      <span className="flex items-center px-3 pb-2.5">
+      {/* Centered in the whole tile: the same room above as the name takes below. */}
+      {thumb && (
+        <img
+          src={thumb}
+          srcSet={full ? `${thumb} 128w, ${full} ${kind === "pedal" ? 1200 : 2400}w` : undefined}
+          sizes="(min-width: 640px) 25vw, 50vw"
+          alt=""
+          loading="lazy"
+          className="absolute inset-x-[10%] inset-y-9 h-[calc(100%-4.5rem)] w-[80%] object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+        />
+      )}
+      <span className="absolute inset-x-0 bottom-0 flex items-center px-3 pb-2.5">
         <span className="min-w-0 truncate text-xs font-semibold">
           <Mark why={why} />
           {item.name}
