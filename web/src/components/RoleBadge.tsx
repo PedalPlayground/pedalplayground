@@ -6,7 +6,7 @@ import { tip } from "./Tooltip";
  * on hover. Usernames are shown without an @.
  */
 export const userLink =
-  "underline decoration-wavy decoration-1 underline-offset-[3px] decoration-ink-muted/45 transition-colors hover:decoration-current";
+  "underline decoration-wavy decoration-1 underline-offset-[1px] decoration-ink-muted/45 transition-colors hover:decoration-current";
 
 /** Accounts that speak for Pedal Playground, by username (lowercase), and the label their posts carry. */
 const TEAM: Record<string, string> = { trav: "Creator" };
