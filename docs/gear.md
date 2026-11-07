@@ -17,8 +17,9 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
 - The grid shows 60 items and adds 60 more as you scroll.
 - **Over the full list** (no brand, type or search), on the left: **Trending gear**, a bento of 8 photo-first tiles
   (one big, one tall, six singles) taking turns between hot and new, each with its name and a new or hot mark; under
-  it **Newly added** (in the brand color), one row of the next 8 newest as square photo tiles, names on hover. Its eight
-  columns share the bento's gap, so each pair of tiles lines up with one bento column. On the right, **Popular brands**
+  it **Newly added** (in the brand color), one row of the next newest as square photo tiles, names on hover: 12 on laptops (three per
+  bento column), 8 on tablets (two per column), three rows of four on phones. It shares the bento's gap, so tiles line
+  up with the bento's columns. On the right, **Popular brands**
   (16 tiles, 8 on phones: name, item count, and a zoomed, cropped photo of the brand's most added item bleeding off
   the corner) stretches to the left side's height. Hot ranks this week's 100 most added by momentum (week adds squared
   over month adds, damped by size; see `fetchHot` in `lib/trending.ts`), lifts newer gear (added in the last year

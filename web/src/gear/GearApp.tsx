@@ -85,8 +85,11 @@ const ACCESSORY = /\b(mount|connector|coupler|cable|patch|zip|velcro|riser|brack
  */
 const BENTO_COUNT = 8;
 const BENTO = ["col-span-2 row-span-2", "sm:row-span-2", "", "", "", "", "", "max-sm:hidden"];
-/** Newly added: one row of eight under the bento, each pair lining up with one bento column (four rows of two on phones). */
-const NEWLY_COUNT = 8;
+/**
+ * Newly added: one row under the bento whose tiles line up with its columns. Twelve on laptops (three per bento column),
+ * eight on tablets (two per column), and three rows of four on phones.
+ */
+const NEWLY_COUNT = 12;
 /** Brands beside the bento: two columns of eight on laptops. */
 const BRAND_TILES = 16;
 
@@ -459,9 +462,9 @@ export function GearApp() {
                       </button>
                     )}
                   </div>
-                  <div className="mt-3 grid grid-cols-4 gap-3 sm:grid-cols-8">
-                    {shelves.newly.map((item) => (
-                      <PhotoTile key={item.image} item={item} kind={kind} manifest={manifest!} onOpen={openItem} />
+                  <div className="mt-3 grid grid-cols-4 gap-3 sm:grid-cols-8 xl:grid-cols-12">
+                    {shelves.newly.map((item, i) => (
+                      <PhotoTile key={item.image} item={item} kind={kind} manifest={manifest!} onOpen={openItem} className={i >= 8 ? "sm:max-xl:hidden" : ""} />
                     ))}
                   </div>
                 </section>
@@ -846,7 +849,19 @@ function BentoTile({
 }
 
 /** A Newly added tile: just the photo, with the name and brand showing on hover or keyboard focus. */
-function PhotoTile({ item, kind, manifest, onOpen }: { item: CatalogItem; kind: Kind; manifest: Manifest; onOpen: (kind: Kind, item: CatalogItem) => void }) {
+function PhotoTile({
+  item,
+  kind,
+  manifest,
+  onOpen,
+  className = "",
+}: {
+  item: CatalogItem;
+  kind: Kind;
+  manifest: Manifest;
+  onOpen: (kind: Kind, item: CatalogItem) => void;
+  className?: string;
+}) {
   const thumb = thumbUrl(manifest, kind, item.image);
   const full = canvasImageUrl(manifest, kind, item.image);
   return (
@@ -858,21 +873,21 @@ function PhotoTile({ item, kind, manifest, onOpen }: { item: CatalogItem; kind: 
         onOpen(kind, item);
       }}
       aria-label={`${item.name}, ${item.brand}`}
-      className="group relative aspect-square overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand"
+      className={`group relative aspect-square overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand ${className}`}
     >
       {thumb && (
         <img
           src={thumb}
           srcSet={full ? `${thumb} 128w, ${full} ${kind === "pedal" ? 1200 : 2400}w` : undefined}
-          sizes="(min-width: 640px) 10vw, 25vw"
+          sizes="(min-width: 1280px) 7vw, (min-width: 640px) 10vw, 25vw"
           alt=""
           loading="lazy"
           className="absolute inset-[14%] size-[72%] object-contain transition-[transform,opacity] duration-300 group-hover:scale-95 group-hover:opacity-25 group-focus-visible:opacity-25"
         />
       )}
       <span className="absolute inset-0 flex flex-col justify-end p-2.5 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
-        <span className="line-clamp-2 text-xs font-semibold leading-tight">{item.name}</span>
-        <span className="mt-0.5 truncate text-[11px] text-ink-muted">{item.brand}</span>
+        <span className="line-clamp-2 text-[11px] font-semibold leading-tight">{item.name}</span>
+        <span className="mt-0.5 truncate text-[10px] text-ink-muted">{item.brand}</span>
       </span>
     </a>
   );
