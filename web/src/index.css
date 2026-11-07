@@ -444,6 +444,40 @@ select {
 }
 
 /*
+ * The squiggle: an even, smooth wave under a word, drawn as a masked pseudo-element (the browser's own wavy underline
+ * can't be shaped). It takes the text color, faded to about half. .squiggle is always on; .squiggle-hover shows on
+ * hover and keyboard focus (linked names). Put it on inline text, not on something that clips its overflow.
+ * --squiggle-offset moves it down from the text's bottom edge.
+ */
+.squiggle,
+.squiggle-hover {
+  position: relative;
+}
+.squiggle::after,
+.squiggle-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(-1 * var(--squiggle-offset, 3px));
+  height: 4px;
+  background-color: color-mix(in srgb, currentColor 45%, transparent);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpath d='M0 2 Q2 0.4 4 2 T8 2' fill='none' stroke='%23000' stroke-width='1.1' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 8px 4px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpath d='M0 2 Q2 0.4 4 2 T8 2' fill='none' stroke='%23000' stroke-width='1.1' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 8px 4px;
+  pointer-events: none;
+}
+.squiggle-hover::after {
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.squiggle-hover:hover::after,
+.squiggle-hover:focus-visible::after,
+:focus-visible > .squiggle-hover::after,
+:hover > .squiggle-hover::after {
+  opacity: 1;
+}
+
+/*
  * Capped-width pages (Explore, Gear, the editor) put their content in .page-main, up to 1600px wide. On very wide
  * screens it's drawn 12.5% larger, about 2px more on body text. --page-zoom lets anything sized in viewport units
  * inside it divide the zoom back out (Gear's sidebar).

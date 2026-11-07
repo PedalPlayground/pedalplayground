@@ -520,7 +520,7 @@ function GearCard({
         </div>
         {isNew && (
           <span className="absolute left-2 top-2 rounded-full bg-brand px-2 pb-1 pt-0.5 text-[11px] font-semibold leading-3 text-brand-ink">
-            <span className={`${squiggle} underline-offset-2`}>New</span>
+            <span className={`${squiggle} [--squiggle-offset:1px]`}>New</span>
           </span>
         )}
       </div>
@@ -542,9 +542,10 @@ function GearCard({
         <button
           type="button"
           onClick={() => onBrand(item.brand)}
-          className={`relative z-10 self-start truncate pb-1 pt-0.5 text-left text-xs font-medium text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand ${nameLink}`}
+          className={`relative z-10 self-start truncate pb-1 pt-0.5 text-left text-xs font-medium text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand`}
         >
-          {item.brand}
+          {/* On a span: the button clips its overflow (truncate), which would cut the squiggle off. */}
+          <span className={nameLink}>{item.brand}</span>
         </button>
         <p className="mt-auto pt-1 text-xs tabular-nums text-ink-muted">
           {fmt(item.width)}″ × {fmt(item.height)}″

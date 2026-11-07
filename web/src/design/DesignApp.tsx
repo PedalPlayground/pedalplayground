@@ -338,7 +338,7 @@ export function DesignApp() {
           <Group title="Badges">
             <Demo label="New" code="bg-brand text-brand-ink">
               <span className="rounded-full bg-brand px-2 pb-1 pt-0.5 text-[11px] font-semibold leading-3 text-brand-ink">
-                <span className={`${squiggle} underline-offset-2`}>New</span>
+                <span className={`${squiggle} [--squiggle-offset:1px]`}>New</span>
               </span>
             </Demo>
             <Demo label="Count" code="Filters badge">
