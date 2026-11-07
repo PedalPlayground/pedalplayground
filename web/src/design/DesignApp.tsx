@@ -77,6 +77,7 @@ export function DesignApp() {
           <Group title="Surfaces" note="Back to front. Cards sit on page; the board and photo wells use canvas.">
             <Swatch token="page" use="Behind Explore, Gear and this page" />
             <Swatch token="card" use="Cards on those pages" />
+            <Swatch token="card-hover" use="A card under the pointer" />
             <Swatch token="canvas" use="The board area and photo wells" />
             <Swatch token="surface" use="Cards, panels, dialogs, menus" />
             <Swatch token="surface-hover" use="Hover rows and quiet fields" />
@@ -287,13 +288,13 @@ export function DesignApp() {
             </Demo>
           </Group>
 
-          <Group title="Cards" note="Tinted card on the white page, one shade throughout, with a hairline under the photo. Hover adds a hairline edge; keyboard focus adds the brand ring.">
+          <Group title="Cards" note="Tinted card on the white page, one shade throughout, with a hairline under the photo. Hover shifts it a shade darker (card-hover); keyboard focus adds the brand ring.">
             <div className="col-span-full grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-3">
               {[0, 1, 2].map((i) => (
                 <a
                   key={i}
                   href="#components"
-                  className="group flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand"
+                  className="group flex flex-col overflow-hidden rounded-panel bg-card outline-none transition-colors hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-brand"
                 >
                   <span className="aspect-[4/3] border-b border-chrome-line" />
                   <span className="px-3 pb-3 pt-2.5">

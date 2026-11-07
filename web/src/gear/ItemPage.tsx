@@ -208,7 +208,7 @@ function FeaturedCard({ board }: { board: FeaturedBoard }) {
   return (
     <a
       href={boardUrl(board.slug)}
-      className="group flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand"
+      className="group flex flex-col overflow-hidden rounded-panel bg-card outline-none transition-colors hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-brand"
     >
       <span className="aspect-[8/5] w-full border-b border-chrome-line p-3">
         {board.thumbnail && <img src={board.thumbnail} alt="" loading="lazy" className="size-full object-contain" />}

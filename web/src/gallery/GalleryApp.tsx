@@ -337,7 +337,7 @@ function BoardCard({
   const pill =
     "press relative z-10 flex h-7 items-center gap-1 rounded-full bg-surface/90 px-2.5 text-xs font-semibold shadow-chip backdrop-blur transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand";
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line transition-shadow focus-within:ring-2 focus-within:ring-brand hover:ring-1">
+    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-card transition-colors hover:bg-card-hover focus-within:ring-2 focus-within:ring-brand">
       <div className="aspect-[8/5] w-full border-b border-chrome-line p-3">
         {board.thumbnail && <img src={board.thumbnail} alt="" loading="lazy" className="size-full object-contain" />}
       </div>

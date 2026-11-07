@@ -14,6 +14,8 @@
      (the board area and photo wells), surface (panels, menus, dialogs, fields' backing), chrome (header and bars). */
   --color-page: #ffffff;
   --color-card: #f7f7fa;
+  /* A card under the pointer: tiles shift a shade instead of drawing an outline. */
+  --color-card-hover: #efeff6;
   --color-canvas: #f7f7fa;
   --color-surface: #ffffff;
   --color-surface-hover: #f1f1f7;
@@ -84,6 +86,7 @@
     color-scheme: dark;
     --color-page: #121319;
     --color-card: #1a1b23;
+    --color-card-hover: #22232d;
     --color-canvas: #282935;
     --color-surface: #1a1b23;
     --color-surface-hover: #252631;
@@ -122,6 +125,7 @@
   color-scheme: dark;
   --color-page: #121319;
   --color-card: #1a1b23;
+  --color-card-hover: #22232d;
   --color-canvas: #282935;
   --color-surface: #1a1b23;
   --color-surface-hover: #252631;
@@ -162,6 +166,7 @@
     color-scheme: dark;
     --color-page: #000000;
     --color-card: #0a0a0e;
+    --color-card-hover: #16161c;
     --color-canvas: #000000;
     --color-surface: #0a0a0e;
     --color-surface-hover: #18181f;
@@ -178,6 +183,7 @@
   color-scheme: dark;
   --color-page: #000000;
   --color-card: #0a0a0e;
+  --color-card-hover: #16161c;
   --color-canvas: #000000;
   --color-surface: #0a0a0e;
   --color-surface-hover: #18181f;

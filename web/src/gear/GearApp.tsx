@@ -632,7 +632,7 @@ function GearCard({
         }
       : { width: "100%", height: "100%" };
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line transition-shadow focus-within:ring-2 focus-within:ring-brand hover:ring-1">
+    <article className="group relative flex flex-col overflow-hidden rounded-panel bg-card transition-colors hover:bg-card-hover focus-within:ring-2 focus-within:ring-brand">
       <div className="relative aspect-[4/3] w-full border-b border-chrome-line">
         {/* Absolute, so a tall photo can't stretch the card. */}
         <div className="absolute inset-x-[10%] inset-y-[7%] flex items-center justify-center [container-type:size]">
@@ -820,7 +820,7 @@ function BentoTile({
         onOpen(kind, item);
       }}
       aria-label={`${item.brand} ${item.name}`}
-      className={`group relative flex flex-col overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand ${size}`}
+      className={`group relative flex flex-col overflow-hidden rounded-panel bg-card outline-none transition-colors hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-brand ${size}`}
     >
       <span className="relative min-h-0 flex-1">
         {thumb && (
@@ -869,7 +869,7 @@ function PhotoTile({
         onOpen(kind, item);
       }}
       aria-label={`${item.name}, ${item.brand}`}
-      className={`group relative aspect-square overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand ${className}`}
+      className={`group relative aspect-square overflow-hidden rounded-panel bg-card outline-none transition-colors hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-brand ${className}`}
     >
       {thumb && (
         <img
@@ -916,7 +916,7 @@ function BrandTile({
     <button
       type="button"
       onClick={onPick}
-      className={`group relative isolate flex min-h-0 items-center overflow-hidden rounded-panel bg-card px-3.5 text-left ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand ${className}`}
+      className={`group relative isolate flex min-h-0 items-center overflow-hidden rounded-panel bg-card px-3.5 text-left outline-none transition-colors hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-brand ${className}`}
     >
       <span className="relative z-10 min-w-0 pr-[38%]">
         <span className="block truncate text-[13px] font-semibold leading-tight">{brand}</span>

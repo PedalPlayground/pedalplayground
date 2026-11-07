@@ -5,12 +5,13 @@ The sizes the app already uses almost everywhere. Keep new UI to these so it sta
 The look itself (color, type, corners, shadows, borders, writing and access rules) is drawn live on the design
 reference page, `/design/` (`web/src/design/DesignApp.tsx`), with the tokens in `web/src/index.css`. In short:
 
-- **Flat but crisp.** Cards (tinted `card` on the white `page`), chips and fields are flat. Only what floats gets a shadow:
+- **Flat but crisp.** Cards (tinted `card` on the white `page`), chips and fields are flat. Tiles show hover by
+  shifting to `card-hover`, never with an outline. Only what floats gets a shadow:
   `shadow-float` (menus, popovers, tooltips, docked panels, floating bars) and `shadow-modal` (dialogs, sheets).
   `shadow-pop` is reserved for a button that should stand out (Add Gear on the board); use it rarely. Primary
   buttons are otherwise flat.
   Catalog photos' drop shadow is exempt.
-- **Colors are tokens only.** Brand-tinted grays (`page`, `card`, `canvas`, `surface`, `surface-hover`, `chrome`, `ink`,
+- **Colors are tokens only.** Brand-tinted grays (`page`, `card`, `card-hover`, `canvas`, `surface`, `surface-hover`, `chrome`, `ink`,
   `ink-muted`, `icon`, `icon-solo`, `line`, `chrome-line`, `soft`), `brand`, status (`positive`, `danger`, `warning`,
   `neutral`) and accents (`group`, `guide`, `tangerine`, `lagoon`). `#fff` and `#000` are the only neutral colors.
   No hex values or Tailwind palette colors in components (pedal art and board finishes excepted).
