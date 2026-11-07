@@ -8,8 +8,10 @@ import { tip } from "./Tooltip";
  * shows on hover and keyboard focus only. Usernames are shown without an @.
  * squiggle: always on, for a handful of accents: the New badge and the Back links on Gear and shared boards.
  */
-export const nameLink = "decoration-wavy decoration-1 underline-offset-[3px] hover:underline focus-visible:underline";
-export const squiggle = "underline decoration-wavy decoration-1 underline-offset-[3px]";
+/** The squiggle's color: the text color, faded to about half, so it sits a shade lighter than the words above it. */
+const squiggleColor = "decoration-[color-mix(in_srgb,currentColor_45%,transparent)]";
+export const nameLink = `decoration-wavy decoration-1 underline-offset-[3px] ${squiggleColor} hover:underline focus-visible:underline`;
+export const squiggle = `underline decoration-wavy decoration-1 underline-offset-[3px] ${squiggleColor}`;
 
 /** Accounts that speak for Pedal Playground, by username (lowercase), and the label their posts carry. */
 const TEAM: Record<string, string> = { trav: "Creator" };
