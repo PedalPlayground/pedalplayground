@@ -10,7 +10,7 @@ import { fetchGearUsage, fetchTrending, type TrendingEntry } from "../lib/trendi
 import type { CatalogItem } from "../lib/types";
 import { useAuth } from "../store/auth";
 import { ItemPage, itemHref } from "./ItemPage";
-import { nameLink, squiggle } from "../components/RoleBadge";
+import { nameLink, squiggle, squiggleRule } from "../components/RoleBadge";
 import { useCatalog } from "../store/catalog";
 
 type GearSort = "az" | "new" | "used";
@@ -344,7 +344,7 @@ export function GearApp() {
           <>
             <button type="button" onClick={() => pickBrand(null)} className="flex items-center gap-1 text-[13px] font-semibold text-brand">
               <ArrowLeft size={14} strokeWidth={2.5} />
-              <span className={squiggle}>All brands</span>
+              <span className="underline-offset-2 hover:underline">All brands</span>
             </button>
             <h1 className="mt-1 text-2xl font-bold tracking-[-0.01em]">{brand}</h1>
           </>
@@ -544,7 +544,6 @@ function GearCard({
           onClick={() => onBrand(item.brand)}
           className={`relative z-10 self-start truncate pb-1 pt-0.5 text-left text-xs font-medium text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand`}
         >
-          {/* On a span: the button clips its overflow (truncate), which would cut the squiggle off. */}
           <span className={nameLink}>{item.brand}</span>
         </button>
         <p className="mt-auto pt-1 text-xs tabular-nums text-ink-muted">
@@ -689,8 +688,8 @@ function FilterPanel({
 function Shelf({ title, action, children }: { title: string; action?: ReactNode; children: ReactNode }) {
   return (
     <section className="mt-8">
-      <div className="flex items-baseline justify-between gap-3">
-        <h2 className="text-lg font-bold tracking-[-0.01em]">{title}</h2>
+      <div className="flex items-center justify-between gap-3">
+        <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>{title}</h2>
         {action}
       </div>
       <div className="pointer-events-none -mx-4 mt-3 flex gap-3 overflow-x-auto px-4 pb-3 pt-1 [&>*]:pointer-events-auto">{children}</div>

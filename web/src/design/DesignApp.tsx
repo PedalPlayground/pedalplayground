@@ -1,9 +1,9 @@
-import { ArrowLeft, Check, Info, Plus, Share2, Trash2, TriangleAlert, X } from "lucide-react";
+import { Check, Info, Plus, Share2, Trash2, TriangleAlert, X } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { DensitySwitch, type Density } from "../components/DensitySwitch";
 import { fieldError, fieldHelp, fieldInput, fieldLabel, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { Meta } from "../components/Meta";
-import { RoleBadges, nameLink, squiggle } from "../components/RoleBadge";
+import { RoleBadges, nameLink, squiggle, squiggleRule } from "../components/RoleBadge";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { rowClass } from "../components/ContextMenu";
 import { Segmented } from "../components/SettingsMenu";
@@ -321,18 +321,10 @@ export function DesignApp() {
             </Demo>
           </Group>
 
-          <Group title="The squiggle" note="A wavy underline, used sparingly so it stays a treat: on hover for linked names, and always on for the New badge and Back links.">
-            <Demo label="Name link" code="nameLink (hover)">
-              <a href="#components" className={`text-sm font-medium text-ink-muted hover:text-ink ${nameLink}`}>
-                BOSS
-              </a>
-            </Demo>
-            <Demo label="Back link" code="squiggle">
-              <a href="#components" className="flex items-center gap-1 text-[13px] font-semibold text-brand">
-                <ArrowLeft size={14} strokeWidth={2.5} />
-                <span className={squiggle}>Back to Gear</span>
-              </a>
-            </Demo>
+          <Group title="The squiggle" note="An even wave, used sparingly so it stays a treat: as a rule after section headings, and under the New badge. Never on links.">
+            <div className="col-span-full">
+              <h4 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Trending this month</h4>
+            </div>
           </Group>
 
           <Group title="Badges">
@@ -426,7 +418,7 @@ const RADII: [string, string, string][] = [
 function Section({ id, title, lead, children }: { id: string; title: string; lead: string; children: ReactNode }) {
   return (
     <section id={id} className="mt-14 scroll-mt-20">
-      <h2 className="text-lg font-bold tracking-[-0.01em]">{title}</h2>
+      <h2 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>{title}</h2>
       <p className="mt-1 max-w-2xl text-sm text-ink-muted">{lead}</p>
       <div className="mt-5 grid gap-8">{children}</div>
     </section>

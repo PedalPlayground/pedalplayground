@@ -5,7 +5,7 @@ import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from ".
 import { boardUrl, fetchFeaturedOn, type FeaturedBoard } from "../lib/gallery";
 import { handoffHref } from "../lib/handoff";
 import { formatMa } from "../lib/specs";
-import { nameLink, RoleBadges, squiggle } from "../components/RoleBadge";
+import { nameLink, RoleBadges, squiggleRule } from "../components/RoleBadge";
 import type { CatalogItem } from "../lib/types";
 
 /** Link to one item's page. Boards say so, since a pedal and a board can share an image key. */
@@ -94,7 +94,7 @@ export function ItemPage({
     <>
       <button type="button" onClick={onBack} className="flex items-center gap-1 text-[13px] font-semibold text-brand">
         <ArrowLeft size={14} strokeWidth={2.5} />
-        <span className={squiggle}>Back to Gear</span>
+        <span className="underline-offset-2 hover:underline">Back to Gear</span>
       </button>
 
       <div className="mt-4 grid gap-6 md:grid-cols-[minmax(0,1fr)_320px] 2xl:grid-cols-[minmax(0,1fr)_380px] md:gap-8">
@@ -227,8 +227,8 @@ function FeaturedCard({ board }: { board: FeaturedBoard }) {
 function Related({ title, action, children, cols }: { title: string; action?: ReactNode; children: ReactNode; cols?: string }) {
   return (
     <section className="mt-12">
-      <div className="flex items-baseline justify-between gap-3">
-        <h2 className="text-lg font-bold tracking-[-0.01em]">{title}</h2>
+      <div className="flex items-center justify-between gap-3">
+        <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>{title}</h2>
         {action}
       </div>
       <div className={`mt-4 grid gap-3 ${cols ?? "grid-cols-2 min-[560px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"}`}>{children}</div>

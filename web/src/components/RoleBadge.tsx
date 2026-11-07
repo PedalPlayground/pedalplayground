@@ -1,14 +1,10 @@
 import { BadgeCheck } from "lucide-react";
 import { tip } from "./Tooltip";
 
-/**
- * The site's squiggle (drawn in index.css): a smooth wave under a word, used sparingly so it stays a treat.
- *
- * nameLink: a name that links somewhere, a username (their boards in Explore) or a brand (its Gear page). The squiggle
- * shows on hover and keyboard focus only. Usernames are shown without an @.
- * squiggle: always on, for a handful of accents: the New badge and the Back links on Gear and shared boards.
- */
-export const nameLink = "squiggle-hover";
+/** A name that links somewhere: a username (their boards in Explore) or a brand (its Gear page). Usernames show without an @. */
+export const nameLink = "underline-offset-2 hover:underline focus-visible:underline";
+/** The squiggle (drawn in index.css): `squiggleRule` after section headings, `squiggle` under the New badge. */
+export const squiggleRule = "squiggle-rule";
 export const squiggle = "squiggle";
 
 /** Accounts that speak for Pedal Playground, by username (lowercase), and the label their posts carry. */

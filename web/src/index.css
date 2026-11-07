@@ -444,37 +444,38 @@ select {
 }
 
 /*
- * The squiggle: an even, smooth wave under a word, drawn as a masked pseudo-element (the browser's own wavy underline
- * can't be shaped). It takes the text color, faded to about half. .squiggle is always on; .squiggle-hover shows on
- * hover and keyboard focus (linked names). Put it on inline text, not on something that clips its overflow.
- * --squiggle-offset moves it down from the text's bottom edge.
+ * The squiggle: an even, smooth wave, drawn as a masked pseudo-element in the text color (faded).
+ * .squiggle-rule: after a section heading, a wave runs from just past the words to the end of the row, centered on
+ * the text (Gear shelves, pedal page sections, the design page). Make the heading a flex item that can grow.
+ * .squiggle: under a word, for a rare accent (the New badge). --squiggle-offset moves it down from the text.
  */
-.squiggle,
-.squiggle-hover {
-  position: relative;
+.squiggle-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
 }
-.squiggle::after,
-.squiggle-hover::after {
+.squiggle-rule::after,
+.squiggle::after {
   content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: calc(-1 * var(--squiggle-offset, 2px));
   height: 4px;
-  background-color: color-mix(in srgb, currentColor 45%, transparent);
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpath d='M0 2 Q2 0 4 2 T8 2' fill='none' stroke='%23000' stroke-width='1.1' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 8px 4px;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpath d='M0 2 Q2 0 4 2 T8 2' fill='none' stroke='%23000' stroke-width='1.1' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 8px 4px;
   pointer-events: none;
 }
-.squiggle-hover::after {
-  opacity: 0;
-  transition: opacity 0.15s;
+.squiggle-rule::after {
+  flex: 1;
+  min-width: 2rem;
+  background-color: color-mix(in srgb, currentColor 22%, transparent);
 }
-.squiggle-hover:hover::after,
-.squiggle-hover:focus-visible::after,
-:focus-visible > .squiggle-hover::after,
-:hover > .squiggle-hover::after {
-  opacity: 1;
+.squiggle {
+  position: relative;
+}
+.squiggle::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(-1 * var(--squiggle-offset, 2px));
+  background-color: color-mix(in srgb, currentColor 45%, transparent);
 }
 
 /*
