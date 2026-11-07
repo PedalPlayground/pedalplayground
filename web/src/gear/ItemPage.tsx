@@ -108,14 +108,14 @@ export function ItemPage({
         </div>
 
         <div>
+          <h1 className="text-2xl font-bold leading-tight tracking-[-0.01em]">{item.name}</h1>
           <button
             type="button"
             onClick={() => onBrand(item.brand)}
-            className="text-sm font-medium text-ink-muted outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
+            className="mt-1 text-sm font-medium text-ink-muted outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
           >
             {item.brand}
           </button>
-          <h1 className="mt-0.5 text-2xl font-bold leading-tight tracking-[-0.01em]">{item.name}</h1>
 
           <a
             href={handoffHref({ kind: "add", id: `${kind}:${item.image}` })}

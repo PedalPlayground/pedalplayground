@@ -9,6 +9,7 @@ import { moderationError } from "../lib/moderation";
 import { useRestriction } from "../store/standing";
 import { useAuth } from "../store/auth";
 import { tip } from "../components/Tooltip";
+import { RoleBadges, teamRole } from "../components/RoleBadge";
 import { DensitySwitch, useDensity, type Density } from "../components/DensitySwitch";
 
 const TYPE_LABELS: Record<PlaygroundType, string> = {
@@ -189,7 +190,7 @@ export function GalleryApp() {
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search boards or people"
               aria-label="Search the gallery"
-              className="h-9 w-full rounded-control border border-chrome-line bg-surface pl-9 pr-3 text-sm outline-none focus:border-brand"
+              className="h-9 w-full rounded-control border border-chrome-line bg-surface pl-9 pr-3 text-sm outline-none focus:ring-2 focus:ring-brand"
             />
           </label>
           {/* Scrolls sideways on phones. A scroller clips what's outside it, so it gets room around the chips for their
@@ -352,6 +353,11 @@ function BoardCard({
               >
                 @{board.username}
               </button>
+            )}
+            {teamRole(board.username) && (
+              <span className="relative z-10 -ml-1 flex">
+                <RoleBadges username={board.username} />
+              </span>
             )}
             {pedals}
           </p>

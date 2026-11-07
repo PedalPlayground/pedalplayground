@@ -231,7 +231,7 @@ function GearRow({ row: r, catalog, onShow }: { row: Row; catalog: Manifest | nu
 
 const fieldLabel = `flex min-w-0 flex-col gap-1 ${fieldLabelText}`;
 const fieldBox =
-  "h-8 w-full rounded-control border border-line bg-surface px-2 text-sm text-ink outline-none transition-shadow focus:border-brand focus:ring-2 focus:ring-brand/30 pointer-coarse:h-10 max-sm:text-base";
+  "h-8 w-full rounded-control border border-line bg-surface px-2 text-sm text-ink outline-none transition-shadow focus:ring-2 focus:ring-brand pointer-coarse:h-10 max-sm:text-base";
 
 /** Specs for a pedal (type, voltage, current draw), its size, and a way back to it on the Playground. */
 function Details({ item, name, links, onShow }: { item: Item; name: string; links: BuyLink[]; onShow: () => void }) {
@@ -315,7 +315,7 @@ function MaField({ item, name }: { item: Item; name: string }) {
   return (
     <label className={`${fieldLabel} w-[110px] max-sm:flex-1`}>
       Current Draw
-      <span className={`${fieldBox} flex items-center gap-1 focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/30`}>
+      <span className={`${fieldBox} flex items-center gap-1 focus-within:ring-2 focus-within:ring-brand`}>
         <input
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
@@ -344,7 +344,7 @@ function PriceField({ item, name }: { item: Item; name: string }) {
     updateGear(item.id, { price });
   };
   return (
-    <label className="flex h-8 w-[84px] shrink-0 items-center gap-0.5 rounded-control border border-line bg-surface px-2 text-sm transition-shadow focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/30 pointer-coarse:h-10 max-sm:w-[88px] max-sm:px-1.5">
+    <label className="flex h-8 w-[84px] shrink-0 items-center gap-0.5 rounded-control border border-line bg-surface px-2 text-sm transition-shadow focus-within:ring-2 focus-within:ring-brand pointer-coarse:h-10 max-sm:w-[88px] max-sm:px-1.5">
       <span className="text-ink-muted">$</span>
       <input
         value={draft}

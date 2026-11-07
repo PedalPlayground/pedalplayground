@@ -280,7 +280,7 @@ export function GearApp() {
         onChange={(e) => setQuery(e.target.value)}
         placeholder={brand ? `Search ${brand}` : `Search ${noun}`}
         aria-label={`Search ${noun}`}
-        className="h-9 w-full rounded-control border border-chrome-line bg-surface pl-9 pr-3 text-sm outline-none focus:border-brand"
+        className="h-9 w-full rounded-control border border-chrome-line bg-surface pl-9 pr-3 text-sm outline-none focus:ring-2 focus:ring-brand"
       />
     </label>
   );
@@ -519,14 +519,7 @@ function GearCard({
         {isNew && <span className="absolute left-2 top-2 rounded-full bg-brand px-2 py-0.5 text-[11px] font-semibold text-brand-ink">New</span>}
       </div>
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5">
-        <button
-          type="button"
-          onClick={() => onBrand(item.brand)}
-          className="relative z-10 self-start truncate text-left text-xs font-medium text-ink-muted outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
-        >
-          {item.brand}
-        </button>
-        {/* The whole card opens the item (the link stretches over it); the brand button sits above. */}
+        {/* Name first, then brand. The whole card opens the item (the link stretches over it); the brand button sits above. */}
         <h2 className="line-clamp-2 text-[13px] font-semibold leading-snug">
           <a
             href={itemHref(kind, item)}
@@ -540,6 +533,13 @@ function GearCard({
             {item.name}
           </a>
         </h2>
+        <button
+          type="button"
+          onClick={() => onBrand(item.brand)}
+          className="relative z-10 mt-0.5 self-start truncate text-left text-xs font-medium text-ink-muted outline-none hover:text-ink hover:underline focus-visible:ring-2 focus-visible:ring-brand"
+        >
+          {item.brand}
+        </button>
         <p className="mt-auto pt-1 text-xs tabular-nums text-ink-muted">
           {fmt(item.width)}″ × {fmt(item.height)}″
         </p>
@@ -650,7 +650,7 @@ function FilterPanel({
           onChange={(e) => setFind(e.target.value)}
           placeholder={`Find a brand (${brands.length.toLocaleString("en-US")})`}
           aria-label="Find a brand"
-          className="mb-1.5 h-8 w-full rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:border-brand"
+          className="mb-1.5 h-8 w-full rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
         />
         <div role="radiogroup" aria-label="Brand" className="-mx-1 grid max-h-72 gap-0.5 overflow-y-auto px-1">
           {!find.trim() && (

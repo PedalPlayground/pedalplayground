@@ -27,6 +27,7 @@ import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
+import { RoleBadges, teamRole } from "./RoleBadge";
 import { tip } from "./Tooltip";
 
 const TYPE_LABELS = Object.fromEntries(PLAYGROUND_TYPES) as Record<string, string>;
@@ -247,6 +248,11 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
                 <a href={userGalleryUrl((info?.username ?? viewingOwner)!)} {...tip("Their boards in Explore")} className="hover:text-ink hover:underline">
                   {info?.username ?? viewingOwner}
                 </a>
+                {teamRole(info?.username ?? viewingOwner) && (
+                  <span className="ml-1.5 inline-flex -translate-y-px align-middle">
+                    <RoleBadges username={info?.username ?? viewingOwner} />
+                  </span>
+                )}
               </span>
             )}
           </h2>
@@ -481,6 +487,7 @@ function Social({
                       ) : (
                         <span className="font-semibold">Member</span>
                       )}
+                      <RoleBadges username={c.username} builder={(own && c.mine) || (!!c.username && c.username === info.username)} />
                       <span className="text-ink-muted" title={new Date(c.created_at).toLocaleString()}>
                         {timeAgo(c.created_at)}
                       </span>

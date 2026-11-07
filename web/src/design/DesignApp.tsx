@@ -3,6 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { DensitySwitch, type Density } from "../components/DensitySwitch";
 import { fieldError, fieldHelp, fieldInput, fieldLabel, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { Meta } from "../components/Meta";
+import { RoleBadges } from "../components/RoleBadge";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { rowClass } from "../components/ContextMenu";
 import { Segmented } from "../components/SettingsMenu";
@@ -242,7 +243,7 @@ export function DesignApp() {
               <label className="block sm:col-span-2">
                 <span className={fieldLabel}>On the page</span>
                 <span className={fieldHelp}>A field straight on the page is white with a hairline, since gray fields vanish there.</span>
-                <input className="h-9 w-full rounded-control border border-chrome-line bg-surface px-3 text-sm outline-none focus:border-brand" placeholder="Search pedals" />
+                <input className="h-9 w-full rounded-control border border-chrome-line bg-surface px-3 text-sm outline-none focus:ring-2 focus:ring-brand" placeholder="Search pedals" />
               </label>
             </div>
           </Group>
@@ -293,13 +294,28 @@ export function DesignApp() {
                 >
                   <span className="aspect-[4/3] border-b border-chrome-line" />
                   <span className="px-3 pb-3 pt-2.5">
-                    <span className="block text-xs font-medium text-ink-muted">BOSS</span>
                     <span className="block text-[13px] font-semibold">{["DS-1 Distortion", "BD-2 Blues Driver", "TU-3 Tuner"][i]}</span>
+                    <span className="mt-0.5 block text-xs font-medium text-ink-muted">BOSS</span>
                     <span className="block pt-1 text-xs tabular-nums text-ink-muted">2.88″ × 5.13″</span>
                   </span>
                 </a>
               ))}
             </div>
+          </Group>
+
+          <Group title="People" note="Name first, then who made it: a board's title, then @author; a pedal's name, then its brand. Labels after a username say who's speaking.">
+            <Demo label="Builder" code="RoleBadges builder">
+              <span className="flex items-center gap-2 text-xs">
+                <span className="font-semibold">@tonechaser</span>
+                <RoleBadges username="tonechaser" builder />
+              </span>
+            </Demo>
+            <Demo label="Creator" code="RoleBadges, TEAM">
+              <span className="flex items-center gap-2 text-xs">
+                <span className="font-semibold">@trav</span>
+                <RoleBadges username="trav" />
+              </span>
+            </Demo>
           </Group>
 
           <Group title="Badges">
@@ -335,7 +351,7 @@ export function DesignApp() {
         <Section id="access" title="Access" lead="Everything works from the keyboard and reads correctly to a screen reader.">
           <Rules
             items={[
-              "Tab moves through controls in reading order. Every focusable thing shows the brand focus ring; never remove it without a replacement.",
+              "Tab moves through controls in reading order. Every focusable thing shows the same 2px brand focus ring; never remove it without a replacement.",
               "Escape closes the top dialog, menu or sheet. Enter and Space press buttons. Arrow keys move within menus.",
               "Pages start with a Skip to content link, and each page has one main landmark (id content).",
               "Icon-only buttons have a name (aria-label) and a tooltip. Toggles and switches report their state (aria-pressed, aria-checked).",

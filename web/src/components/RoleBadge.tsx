@@ -1,0 +1,32 @@
+import { tip } from "./Tooltip";
+
+/** Accounts that speak for Pedal Playground, by username (lowercase), and the label their posts carry. */
+const TEAM: Record<string, string> = { trav: "Creator" };
+
+/** The team label for a username ("Creator"), or null for everyone else. */
+export const teamRole = (username: string | null | undefined) => (username ? (TEAM[username.toLowerCase()] ?? null) : null);
+
+const pill = "inline-flex h-[18px] shrink-0 items-center rounded-full px-1.5 text-[11px] font-semibold leading-none";
+
+/**
+ * Small labels after a username: Builder when it's the board's owner talking, and the team label (Creator) for
+ * Pedal Playground's own accounts. Renders nothing for anyone else.
+ */
+export function RoleBadges({ username, builder }: { username: string | null | undefined; builder?: boolean }) {
+  const role = teamRole(username);
+  if (!role && !builder) return null;
+  return (
+    <>
+      {builder && (
+        <span className={`${pill} bg-soft text-ink`} {...tip("Made this board")}>
+          Builder
+        </span>
+      )}
+      {role && (
+        <span className={`${pill} bg-brand text-brand-ink`} {...tip("Made Pedal Playground")}>
+          {role}
+        </span>
+      )}
+    </>
+  );
+}
