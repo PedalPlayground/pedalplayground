@@ -71,8 +71,6 @@ const GRID: Record<Density, string> = {
  * height (about three in four pedals are this size or smaller). Bigger ones are fit to it; boards always are.
  */
 const FILL_INCHES = 5.2;
-/** Newest items in the New in the catalog grid (two rows of eight on laptops, four rows of four on phones). */
-const NEW_COUNT = 16;
 /** How many of the hottest items get the hot mark on full cards. */
 const HOT_MARKED = 40;
 /** The month's most added items (after accessories and staple types) that sit out of Hot, as everyday staples. */
@@ -272,10 +270,19 @@ export function GearApp() {
         .slice(0, STAPLE_COUNT)
         .map((c) => c.image),
     );
+    // Newer gear gets a lift: added to the catalog in the last year counts 1.6x, in the last three years 1.3x.
+    const now = Date.now();
+    const recency = (c: CatalogItem) => {
+      const age = c.added ? (now - Date.parse(c.added)) / (365 * 864e5) : Infinity;
+      return age <= 1 ? 1.6 : age <= 3 ? 1.3 : 1;
+    };
     return hotList.rising
       .filter((h) => h.kind === kind && !staples.has(h.image))
-      .map((h) => byKey.get(h.image))
-      .filter(ok);
+      .map((h) => ({ c: byKey.get(h.image), score: h.score }))
+      .filter((h): h is { c: CatalogItem; score: number } => ok(h.c))
+      .map((h) => ({ c: h.c, score: h.score * recency(h.c) }))
+      .sort((a, b) => b.score - a.score)
+      .map((h) => h.c);
   }, [hotList, all, kind]);
   /** The hot set for marking full cards. */
   const hotKeys = useMemo(() => new Set(hotItems.slice(0, HOT_MARKED).map((c) => c.image)), [hotItems]);
@@ -288,7 +295,18 @@ export function GearApp() {
     const fresh = [...all]
       .filter((c) => c.added)
       .sort((a, b) => b.added!.localeCompare(a.added!))
-      .slice(0, NEW_COUNT);
+      .slice(0, BENTO_COUNT);
+    // Hot and new, taking turns, each item once.
+    const picks: { item: CatalogItem; why: "hot" | "new" }[] = [];
+    const seen = new Set<string>();
+    for (let n = 0; n < BENTO_COUNT && picks.length < BENTO_COUNT; n++) {
+      for (const [item, why] of [[hot[n], "hot"], [fresh[n], "new"]] as const) {
+        if (item && !seen.has(item.image) && picks.length < BENTO_COUNT) {
+          seen.add(item.image);
+          picks.push({ item, why });
+        }
+      }
+    }
     const brandUse = new Map<string, number>();
     for (const c of all) {
       const n = usage.get(`${kind}:${c.image}`);
@@ -304,8 +322,8 @@ export function GearApp() {
     const topBrands = [...brandUse]
       .sort((a, b) => b[1] - a[1])
       .slice(0, BRAND_TILES)
-      .map(([b]) => ({ brand: b, item: brandPhoto.get(b)!.item }));
-    return { topBrands, hot, fresh };
+      .map(([b]) => ({ brand: b, item: brandPhoto.get(b)!.item, count: all.filter((c) => c.brand === b).length }));
+    return { topBrands, picks };
   }, [manifest, browsing, all, hotItems, kind, usage]);
 
 
@@ -413,15 +431,20 @@ export function GearApp() {
             stretches to the bento's height, its tiles sharing the rows evenly. */}
         {shelves && (
           <div className="mt-8 grid gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] xl:gap-6">
-            {shelves.hot.length > 0 && (
+            {shelves.picks.length > 0 && (
               <section>
                 <div className="flex items-center justify-between gap-3">
-                  <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Hot right now</h2>
+                  <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Hot and new</h2>
+                  {sort !== "new" && (
+                    <button type="button" onClick={() => setSort("new")} className="text-[13px] font-semibold text-brand hover:underline">
+                      See all new
+                    </button>
+                  )}
                 </div>
                 {/* Bento: tiles of a few sizes, packed densely. Photo first, name only; the full cards are below. */}
                 <div className="mt-3 grid grid-flow-dense auto-rows-[8.5rem] grid-cols-2 gap-3 sm:grid-cols-4 2xl:auto-rows-[10rem]">
-                  {shelves.hot.map((item, i) => (
-                    <BentoTile key={item.image} item={item} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
+                  {shelves.picks.map(({ item, why }, i) => (
+                    <BentoTile key={item.image} item={item} why={why} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
                   ))}
                 </div>
               </section>
@@ -430,33 +453,14 @@ export function GearApp() {
               <section className="flex flex-col">
                 <h2 className={`text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>Popular brands</h2>
                 <div className="mt-3 grid flex-1 auto-rows-[3.5rem] grid-cols-2 gap-2 sm:grid-cols-4 xl:auto-rows-fr xl:grid-cols-2">
-                  {shelves.topBrands.map(({ brand: b, item }, i) => (
+                  {shelves.topBrands.map(({ brand: b, item, count }, i) => (
                     // Phones show the top eight.
-                    <BrandTile key={b} brand={b} item={item} kind={kind} manifest={manifest!} onPick={() => pickBrand(b)} className={i >= 8 ? "max-sm:hidden" : ""} />
+                    <BrandTile key={b} brand={b} item={item} count={count} kind={kind} manifest={manifest!} onPick={() => pickBrand(b)} className={i >= 8 ? "max-sm:hidden" : ""} />
                   ))}
                 </div>
               </section>
             )}
           </div>
-        )}
-
-        {/* The newest additions as a photo wall: no text until a tile is hovered or focused. */}
-        {shelves && shelves.fresh.length > 0 && (
-          <section className="mt-12">
-            <div className="flex items-center justify-between gap-3">
-              <h2 className={`min-w-0 flex-1 text-lg font-bold tracking-[-0.01em] ${squiggleRule}`}>New in the catalog</h2>
-              {sort !== "new" && (
-                <button type="button" onClick={() => setSort("new")} className="text-[13px] font-semibold text-brand hover:underline">
-                  See all new
-                </button>
-              )}
-            </div>
-            <div className="mt-3 grid grid-cols-4 gap-2 sm:gap-3 lg:grid-cols-8">
-              {shelves.fresh.map((item) => (
-                <PhotoTile key={item.image} item={item} kind={kind} manifest={manifest!} onOpen={openItem} />
-              ))}
-            </div>
-          </section>
         )}
 
         {/* The grid, with the filters beside it from laptop width. */}
@@ -772,15 +776,17 @@ function Mark({ why }: { why: "new" | "hot" }) {
   );
 }
 
-/** One Hot tile: the photo, fit to the tile, and just the name (the section says why it's here). */
+/** One Hot and new tile: the photo, fit to the tile, the name, and a new or hot mark. */
 function BentoTile({
   item,
+  why,
   kind,
   manifest,
   size,
   onOpen,
 }: {
   item: CatalogItem;
+  why: "hot" | "new";
   kind: Kind;
   manifest: Manifest;
   size: string;
@@ -814,38 +820,8 @@ function BentoTile({
       <span className="flex items-center gap-1.5 px-3 pb-2.5">
         <span className="min-w-0 truncate text-xs font-semibold">{item.name}</span>
       </span>
-    </a>
-  );
-}
-
-/** A New in the catalog tile: just the photo, with the name and brand showing on hover or keyboard focus. */
-function PhotoTile({ item, kind, manifest, onOpen }: { item: CatalogItem; kind: Kind; manifest: Manifest; onOpen: (kind: Kind, item: CatalogItem) => void }) {
-  const thumb = thumbUrl(manifest, kind, item.image);
-  const full = canvasImageUrl(manifest, kind, item.image);
-  return (
-    <a
-      href={itemHref(kind, item)}
-      onClick={(e) => {
-        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
-        e.preventDefault();
-        onOpen(kind, item);
-      }}
-      aria-label={`${item.name}, ${item.brand}`}
-      className="group relative aspect-square overflow-hidden rounded-panel bg-card ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand"
-    >
-      {thumb && (
-        <img
-          src={thumb}
-          srcSet={full ? `${thumb} 128w, ${full} ${kind === "pedal" ? 1200 : 2400}w` : undefined}
-          sizes="(min-width: 1024px) 12vw, 25vw"
-          alt=""
-          loading="lazy"
-          className="absolute inset-[12%] size-[76%] object-contain transition-[transform,opacity] duration-300 group-hover:scale-95 group-hover:opacity-30 group-focus-visible:opacity-30"
-        />
-      )}
-      <span className="absolute inset-0 flex flex-col justify-end p-2.5 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
-        <span className="line-clamp-2 text-xs font-semibold leading-tight">{item.name}</span>
-        <span className="mt-0.5 truncate text-[11px] text-ink-muted">{item.brand}</span>
+      <span className="absolute left-3 top-2.5">
+        <Mark why={why} />
       </span>
     </a>
   );
@@ -858,6 +834,7 @@ function PhotoTile({ item, kind, manifest, onOpen }: { item: CatalogItem; kind: 
 function BrandTile({
   brand,
   item,
+  count,
   kind,
   manifest,
   onPick,
@@ -865,6 +842,7 @@ function BrandTile({
 }: {
   brand: string;
   item: CatalogItem;
+  count: number;
   kind: Kind;
   manifest: Manifest;
   onPick: () => void;
@@ -878,7 +856,12 @@ function BrandTile({
       onClick={onPick}
       className={`group relative isolate flex min-h-0 items-center overflow-hidden rounded-panel bg-card px-3.5 text-left ring-chrome-line outline-none transition-shadow hover:ring-1 focus-visible:ring-2 focus-visible:ring-brand ${className}`}
     >
-      <span className="relative z-10 min-w-0 truncate pr-[38%] text-[13px] font-semibold">{brand}</span>
+      <span className="relative z-10 min-w-0 pr-[38%]">
+        <span className="block truncate text-[13px] font-semibold leading-tight">{brand}</span>
+        <span className="block truncate text-[11px] tabular-nums text-ink-muted">
+          {count.toLocaleString("en-US")} {kind === "pedal" ? (count === 1 ? "pedal" : "pedals") : count === 1 ? "board" : "boards"}
+        </span>
+      </span>
       {thumb && (
         <img
           src={full ?? thumb}

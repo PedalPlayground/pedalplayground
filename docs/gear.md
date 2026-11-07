@@ -15,13 +15,13 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   photo area's height (`FILL_INCHES`, sized in container units, so it follows the card size), and bigger ones are fit
   to it. Boards are fit to the card. Cards load the full photo when the 128px thumbnail would look soft.
 - The grid shows 60 items and adds 60 more as you scroll.
-- **Over the full list** (no brand, type or search):
-  - **Hot right now**, a bento of 11 photo-first tiles (name only), beside **Popular brands** (16 tiles, 8 on
-    phones, each with a zoomed, cropped photo of the brand's most added item bleeding off its bottom-right corner). Hot ranks this week's 100 most added by momentum (week adds squared over month adds, damped by size; see
-    `fetchHot` in `lib/trending.ts`), then sets aside the month's 30 most added real gear (everyday staples), tuners,
-    volume pedals, utilities and board accessories. The bento's sizes fill the grid exactly at 4 and 2 columns.
-  - **New in the catalog**, a wall of the 16 newest as square photo tiles (eight across on laptops, four on phones),
-    with the name and brand only on hover or keyboard focus.
+- **Over the full list** (no brand, type or search): **Hot and new**, a bento of 11 photo-first tiles taking turns
+  between hot and the newest additions, each with its name and a new or hot mark, beside **Popular brands** (16 tiles,
+  8 on phones: name, item count, and a zoomed, cropped photo of the brand's most added item bleeding off the corner).
+  Hot ranks this week's 100 most added by momentum (week adds squared over month adds, damped by size; see `fetchHot`
+  in `lib/trending.ts`), lifts newer gear (added in the last year 1.6x, last three years 1.3x), and sets aside the
+  month's 30 most added real gear (everyday staples), tuners, volume pedals, utilities and board accessories. The
+  bento's sizes fill the grid exactly at 4 and 2 columns.
 - **Marks on full cards:** a flamingo dot with "new" (added in the last 30 days) and a tangerine up chevron with "hot"
   (the 40 hottest), in light gray.
 - The photo at real proportions on the canvas color, with size in inches and mm, type, power and current draw when
