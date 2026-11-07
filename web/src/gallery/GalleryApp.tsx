@@ -9,6 +9,7 @@ import { moderationError } from "../lib/moderation";
 import { useRestriction } from "../store/standing";
 import { useAuth } from "../store/auth";
 import { tip } from "../components/Tooltip";
+import { DensitySwitch, useDensity, type Density } from "../components/DensitySwitch";
 
 const TYPE_LABELS: Record<PlaygroundType, string> = {
   guitar: "Guitar",
@@ -16,6 +17,13 @@ const TYPE_LABELS: Record<PlaygroundType, string> = {
   synth: "Synth",
   collection: "Collection",
   other: "Other",
+};
+
+/** Columns for each card size, from phones up. Medium is the original grid. */
+const GRID: Record<Density, string> = {
+  large: "grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3",
+  medium: "grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4",
+  small: "grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5",
 };
 
 const chip = (on: boolean) =>
@@ -45,6 +53,7 @@ export function GalleryApp() {
   const [more, setMore] = useState(false);
   const [failed, setFailed] = useState(false);
   const editor = useIsEditor();
+  const [density, setDensity] = useDensity("gallery");
   const [hidden, setHidden] = useState<GalleryBoard | null>(null);
   const request = useRef(0);
   const sentinel = useRef<HTMLDivElement>(null);
@@ -199,7 +208,8 @@ export function GalleryApp() {
               </button>
             ))}
           </div>
-          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 self-start rounded-control bg-ink/[0.06] p-0.5 sm:ml-auto sm:self-auto">
+          <div className="flex items-center gap-2 self-start sm:ml-auto sm:self-auto">
+          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 rounded-control bg-ink/[0.06] p-0.5">
             {(
               [
                 ["new", "Newest"],
@@ -217,6 +227,8 @@ export function GalleryApp() {
                 {label}
               </button>
             ))}
+          </div>
+          <DensitySwitch value={density} onChange={setDensity} />
           </div>
         </div>
 
@@ -255,9 +267,10 @@ export function GalleryApp() {
           </div>
         )}
 
-        <div className="mt-6 grid grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+        <div className={`mt-6 grid ${GRID[density]}`}>
           {boards.map((b) => (
             <BoardCard
+              compact={density === "small"}
               key={b.id}
               board={b}
               onLike={() => void toggleLike(b)}
@@ -294,7 +307,20 @@ export function GalleryApp() {
   );
 }
 
-function BoardCard({ board, onLike, onHide, onUser }: { board: GalleryBoard; onLike: () => void; onHide?: () => void; onUser: (username: string) => void }) {
+function BoardCard({
+  board,
+  onLike,
+  onHide,
+  onUser,
+  compact,
+}: {
+  board: GalleryBoard;
+  onLike: () => void;
+  onHide?: () => void;
+  onUser: (username: string) => void;
+  /** Small cards leave out the type tag and the description. */
+  compact?: boolean;
+}) {
   const pedals = board.pedal_count ? `${board.pedal_count} ${board.pedal_count === 1 ? "pedal" : "pedals"}` : null;
   const pill =
     "press relative z-10 flex h-7 items-center gap-1 rounded-full bg-surface/90 px-2.5 text-xs font-semibold shadow-chip backdrop-blur transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand";
@@ -311,7 +337,7 @@ function BoardCard({ board, onLike, onHide, onUser }: { board: GalleryBoard; onL
               {board.name}
             </a>
           </h2>
-          {board.playground_type && (
+          {board.playground_type && !compact && (
             <span className="shrink-0 rounded-full bg-surface-hover px-2 py-0.5 text-xs text-ink-muted">{TYPE_LABELS[board.playground_type]}</span>
           )}
         </div>
@@ -331,7 +357,7 @@ function BoardCard({ board, onLike, onHide, onUser }: { board: GalleryBoard; onL
             {pedals}
           </p>
         )}
-        {board.description && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
+        {board.description && !compact && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
       </div>
       <div className="pointer-events-none absolute inset-x-2 top-0 flex aspect-[8/5] items-end justify-end gap-1.5 pb-2">
         {board.comment_count !== undefined && (

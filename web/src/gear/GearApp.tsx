@@ -5,6 +5,7 @@ import { itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { indexItem, search as searchItems } from "../lib/search";
 import { PEDAL_TYPES } from "../lib/specs";
 import { Modal } from "../components/Modal";
+import { DensitySwitch, useDensity, type Density } from "../components/DensitySwitch";
 import { fetchGearUsage, fetchTrending, type TrendingEntry } from "../lib/trending";
 import type { CatalogItem } from "../lib/types";
 import { useAuth } from "../store/auth";
@@ -58,10 +59,16 @@ function writeFilters(f: Filters) {
 }
 
 const PAGE = 60;
+/** Columns for each card size, from phones up (next to the sidebar from laptop width). Medium is the original. */
+const GRID: Record<Density, string> = {
+  large: "grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4",
+  medium: "grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 xl:grid-cols-5",
+  small: "grid-cols-3 gap-2 min-[560px]:grid-cols-4 md:grid-cols-5 xl:grid-cols-7",
+};
+/** Pixels per inch for pedal photos at each card size, so pedals stay to scale with each other. */
+const SCALE: Record<Density, number> = { large: 22, medium: 16, small: 11 };
 /** Items per shelf (trending, newest). */
 const SHELF = 12;
-/** Pedals are drawn at one shared scale, so you can compare sizes at a glance (boards are fit to the card). */
-const PX_PER_INCH = 16;
 /** New for 30 days after it joins the catalog. */
 const NEW_DAYS = 30;
 
@@ -80,6 +87,7 @@ export function GearApp() {
   const [type, setType] = useState<string | null>(initial.type);
   /** Phones and tablets: the filters open in a sheet. */
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [density, setDensity] = useDensity("gear");
   const [query, setQuery] = useState(initial.query);
   const [search, setSearch] = useState(initial.query);
   const [sort, setSort] = useState<GearSort>(initial.sort);
@@ -408,21 +416,26 @@ export function GearApp() {
                 {shelves.fresh.map((c) => <div key={c.image} className="w-40 shrink-0 sm:w-44">{card(c)}</div>)}
               </Shelf>
             )}
-            <h2 className="mt-10 text-lg font-bold tracking-[-0.01em]">All {noun}</h2>
           </>
         )}
 
-        {search.trim() && manifest && (
-          <p className="mt-4 text-sm text-ink-muted">
-            {items.length
-              ? partial
-                ? `Nothing matched every word. Here are ${total} close matches.`
-                : `${total} ${items.length === 1 ? noun.slice(0, -1) : noun} found.`
-              : null}
-          </p>
-        )}
+        {/* What's listed, and the card size. */}
+        <div className={`flex min-h-8 items-center justify-between gap-3 ${shelves ? "mt-10" : "mt-4"}`}>
+          {shelves ? (
+            <h2 className="text-lg font-bold tracking-[-0.01em]">All {noun}</h2>
+          ) : (
+            <p className="text-sm text-ink-muted">
+              {search.trim() && manifest && items.length
+                ? partial
+                  ? `Nothing matched every word. Here are ${total} close matches.`
+                  : `${total} ${items.length === 1 ? noun.slice(0, -1) : noun} found.`
+                : null}
+            </p>
+          )}
+          <DensitySwitch value={density} onChange={setDensity} />
+        </div>
 
-        <div className={`${shelves ? "mt-3" : "mt-6"} grid grid-cols-2 gap-3 min-[560px]:grid-cols-3 md:grid-cols-4 xl:grid-cols-5`}>
+        <div className={`mt-3 grid ${GRID[density]}`}>
           {manifest
             ? items.slice(0, shown).map((item) => (
                 <GearCard
@@ -433,6 +446,7 @@ export function GearApp() {
                   isNew={!!item.added && item.added >= newSince}
                   onBrand={pickBrand}
                   onOpen={openItem}
+                  scale={SCALE[density]}
                 />
               ))
             : !error && Array.from({ length: 12 }, (_, i) => <CardSkeleton key={i} />)}
@@ -470,6 +484,7 @@ function GearCard({
   isNew,
   onBrand,
   onOpen,
+  scale = SCALE.medium,
 }: {
   item: CatalogItem;
   kind: Kind;
@@ -477,12 +492,14 @@ function GearCard({
   isNew: boolean;
   onBrand: (brand: string) => void;
   onOpen: (kind: Kind, item: CatalogItem) => void;
+  /** Pixels per inch for pedals, which share one scale so sizes compare at a glance (boards are fit to the card). */
+  scale?: number;
 }) {
   const src = thumbUrl(manifest, kind, item.image);
   // Pedals keep their real size against each other; anything too big for the card (and every board) is fit to it.
   const style =
     kind === "pedal"
-      ? { width: item.width * PX_PER_INCH, height: item.height * PX_PER_INCH, maxWidth: "100%", maxHeight: "100%" }
+      ? { width: item.width * scale, height: item.height * scale, maxWidth: "100%", maxHeight: "100%" }
       : { width: "100%", height: "100%" };
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-panel bg-surface shadow-panel transition-shadow focus-within:ring-2 focus-within:ring-brand hover:shadow-[0_8px_28px_rgb(16_18_27/0.14),0_0_0_1px_rgb(16_18_27/0.05)]">
