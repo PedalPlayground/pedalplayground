@@ -851,15 +851,15 @@ function HeroArt({ picks, kind, manifest }: { picks: CatalogItem[]; kind: Kind; 
     return (
       <div aria-hidden className="pointer-events-none absolute inset-y-5 right-5 hidden w-[36%] grid-cols-3 grid-rows-2 gap-2 lg:grid">
         {picks.slice(0, 6).map((c) => (
-          <span key={c.image} className="relative rounded-panel bg-surface">
-            <img src={src(c)} alt="" className="absolute inset-[12%] size-[76%] object-contain" />
+          <span key={c.image} className="relative">
+            <img src={src(c)} alt="" className="absolute inset-[6%] size-[88%] object-contain drop-shadow-[0_6px_14px_rgb(27_28_56/0.16)]" />
           </span>
         ))}
       </div>
     );
   const tile = (c: CatalogItem, extra = "") => (
-    <span key={c.image} className={`relative rounded-panel bg-surface ${extra}`}>
-      <img src={src(c)} alt="" className="absolute inset-[12%] size-[76%] object-contain" />
+    <span key={c.image} className={`relative ${extra}`}>
+      <img src={src(c)} alt="" className="absolute inset-[6%] size-[88%] object-contain drop-shadow-[0_6px_14px_rgb(27_28_56/0.16)]" />
     </span>
   );
   // Bigger tiles, three by two, running off the right and bottom edges.
@@ -889,8 +889,8 @@ function HeroArt({ picks, kind, manifest }: { picks: CatalogItem[]; kind: Kind; 
       <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 hidden h-[200%] w-[52%] lg:block">
         <div className="grid h-full -rotate-[10deg] grid-cols-4 grid-rows-4 gap-2.5">
           {Array.from({ length: 16 }, (_, i) => picks[i % picks.length]).map((c, i) => (
-            <span key={i} className="relative rounded-panel bg-surface">
-              <img src={src(c)} alt="" className="absolute inset-[12%] size-[76%] object-contain" />
+            <span key={i} className="relative">
+              <img src={src(c)} alt="" className="absolute inset-[6%] size-[88%] object-contain drop-shadow-[0_6px_14px_rgb(27_28_56/0.16)]" />
             </span>
           ))}
         </div>
