@@ -384,8 +384,9 @@ function BoardCard({
   compact?: boolean;
 }) {
   const pedals = board.pedal_count ? `${board.pedal_count} ${board.pedal_count === 1 ? "pedal" : "pedals"}` : null;
-  const pill =
-    "press relative z-10 flex h-7 items-center gap-1 rounded-full bg-surface/90 px-2.5 text-xs font-semibold shadow-chip backdrop-blur transition-colors outline-none focus-visible:ring-2 focus-visible:ring-brand";
+  /** Comments and likes: a bare icon and count in the meta row, like Gear's new and hot marks (no pill). */
+  const count =
+    "press relative z-10 -mx-1 flex items-center gap-1 rounded-inner px-1 py-0.5 text-xs font-medium tabular-nums outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand";
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-panel bg-card transition-colors hover:bg-card-hover focus-within:ring-2 focus-within:ring-brand">
       <div className="aspect-[8/5] w-full border-b border-chrome-line p-3">
@@ -403,8 +404,7 @@ function BoardCard({
             <span className="shrink-0 rounded-full bg-soft px-2 py-0.5 text-xs text-ink-muted">{TYPE_LABELS[board.playground_type]}</span>
           )}
         </div>
-        {(board.username || pedals) && (
-          <p className="flex items-center gap-2.5 text-xs text-ink-muted">
+        <div className="flex items-center gap-2.5 text-xs text-ink-muted">
             {board.username && (
               <button
                 type="button"
@@ -421,33 +421,32 @@ function BoardCard({
               </span>
             )}
             {pedals}
-          </p>
-        )}
+          <span className="ml-auto flex items-center gap-3">
+            {board.comment_count !== undefined && (
+              <a
+                href={`${boardUrl(board.slug)}#comments`}
+                aria-label={`${board.comment_count} ${board.comment_count === 1 ? "comment" : "comments"} on ${board.name}`}
+                {...tip("Comments")}
+                className={`${count} hover:text-ink`}
+              >
+                <MessageCircle size={13} strokeWidth={2.25} />
+                {board.comment_count > 0 && board.comment_count}
+              </a>
+            )}
+            <button
+              type="button"
+              onClick={onLike}
+              aria-pressed={board.liked}
+              aria-label={`${board.liked ? "Unlike" : "Like"} ${board.name}, ${board.like_count} ${board.like_count === 1 ? "like" : "likes"}`}
+              {...tip(board.liked ? "Unlike" : "Like")}
+              className={`${count} ${board.liked ? "text-danger" : "hover:text-ink"}`}
+            >
+              <Heart size={13} fill={board.liked ? "currentColor" : "none"} strokeWidth={2.25} />
+              {board.like_count > 0 && board.like_count}
+            </button>
+          </span>
+        </div>
         {board.description && !compact && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
-      </div>
-      <div className="pointer-events-none absolute inset-x-2 top-0 flex aspect-[8/5] items-end justify-end gap-1.5 pb-2">
-        {board.comment_count !== undefined && (
-          <a
-            href={`${boardUrl(board.slug)}#comments`}
-            aria-label={`${board.comment_count} ${board.comment_count === 1 ? "comment" : "comments"} on ${board.name}`}
-            {...tip("Comments")}
-            className={`${pill} pointer-events-auto text-ink-muted hover:text-ink`}
-          >
-            <MessageCircle size={14} strokeWidth={2.25} />
-            {board.comment_count > 0 && <span className="tabular-nums">{board.comment_count}</span>}
-          </a>
-        )}
-        <button
-          type="button"
-          onClick={onLike}
-          aria-pressed={board.liked}
-          aria-label={`${board.liked ? "Unlike" : "Like"} ${board.name}, ${board.like_count} ${board.like_count === 1 ? "like" : "likes"}`}
-          {...tip(board.liked ? "Unlike" : "Like")}
-          className={`${pill} pointer-events-auto ${board.liked ? "text-danger" : "text-ink-muted hover:text-ink"}`}
-        >
-          <Heart size={14} fill={board.liked ? "currentColor" : "none"} strokeWidth={2.25} />
-          {board.like_count > 0 && <span className="tabular-nums">{board.like_count}</span>}
-        </button>
       </div>
       {onHide && (
         <button
