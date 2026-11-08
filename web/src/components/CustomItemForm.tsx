@@ -315,8 +315,9 @@ export function CustomItemForm({
   const [jackSide, setJackSide] = useState(hasSideJacks(initialJacks));
   // Until the user picks jacks themselves, each style brings its usual ones.
   const [jacksPicked, setJacksPicked] = useState(!!item);
-  // Starts as the pedal's existing name, or the search text it was made from.
-  const [name, setName] = useState(item ? (item.kind === "pedal" ? item.label : "") : (initialName ?? ""));
+  // Starts as the item's existing name (boards saved before they had one say "Custom Pedalboard"), or the search
+  // text it was made from.
+  const [name, setName] = useState(item ? (item.label === "Custom Pedalboard" ? "" : item.label) : (initialName ?? ""));
   const [color, setColor] = useState(item?.color ?? NEW_PEDAL_COLOR);
   const [board, setBoard] = useState<BoardStyle>(boardStyle(item?.board));
   const patchBoard = (patch: Partial<BoardStyle>) => setBoard((b) => ({ ...b, ...patch }));
@@ -377,7 +378,8 @@ export function CustomItemForm({
       width: foot.width,
       height: foot.height,
       jacks,
-      label: kind === "pedal" ? name.trim() : "Custom Pedalboard",
+      // Empty is fine: unnamed gear is called "Custom Pedal" or "Custom Pedalboard" (itemName).
+      label: name.trim(),
       color: kind === "pedal" ? color : null,
       template: kind === "pedal" ? template : undefined,
       board: kind === "pedalboard" ? board : undefined,
@@ -415,21 +417,20 @@ export function CustomItemForm({
         </div>
       )}
 
-      {kind === "pedal" && (
-        <label className="block">
-          <span className={fieldLabel}>Name (optional)</span>
-          <input
-            className={`${fieldInput} max-sm:text-base`}
-            {...plainField}
-            autoCapitalize="words"
-            enterKeyHint="done"
-            value={name}
-            maxLength={40}
-            onChange={(e) => setName(e.target.value)}
-            autoFocus={!item}
-          />
-        </label>
-      )}
+      {/* Pedals print the name on their face; a board's shows only in its hover label and menus. */}
+      <label className="block">
+        <span className={fieldLabel}>Name (optional)</span>
+        <input
+          className={`${fieldInput} max-sm:text-base`}
+          {...plainField}
+          autoCapitalize="words"
+          enterKeyHint="done"
+          value={name}
+          maxLength={40}
+          onChange={(e) => setName(e.target.value)}
+          autoFocus={!item && kind === "pedal"}
+        />
+      </label>
 
       {kind === "pedal" && (
         <div>
