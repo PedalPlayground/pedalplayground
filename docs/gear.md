@@ -7,12 +7,13 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
 - **Layout:** a compact hero band at the top (card shade, container corners) with the heading, count and a large,
   left-aligned search, plus cropped pedal photos off its right edge on laptops (the brand's most added on a brand page,
   otherwise one photo from each boutique brand in `FEATURED_BRANDS`, in that list's order); then, over the full list, Trending and new and Popular brands
-  across the full width; then the grid with its filters. A full-width bar above the sidebar and grid holds the heading (All gear, or
-  what's filtered) with a result count, the sort and card size (and a Filters button below laptop width). The filters sit in a sticky left sidebar from laptop width and in
+  across the full width; then the grid with its filters. A full-width bar above the sidebar and grid holds the heading (All gear, or Results
+  when any filter or search is on) with a result count, the sort and card size (and a Filters button below laptop width). The filters sit in a sticky left sidebar from laptop width and in
   a Filters sheet below it, as two flat lists with no headings: the first row of each names it. The type list is All
   Gear (pedals and pedalboards together, the default), Pedals, Pedalboards, then each pedal type (picking a type lists
   pedals); it only shows types the catalog has, counted within the chosen brand. The brand list is All Brands (no count; a search icon in the count's place opens a Find
-  a brand field; Escape or the X closes and clears it), then the brands.
+  a brand field; Escape or the X closes and clears it), then the brands. Filters in effect (Pedals or Pedalboards, a type, a brand, the search) show as removable pills over the
+  grid, with Clear all when there's more than one.
 - **Filters live in the URL** and each new brand, type, kind or sort is a history step (search text isn't), so Back
   returns to the last view. A brand page is a link: `/gear/?brand=BOSS`, `/gear/?type=Fuzz`, `/gear/?kind=pedals`, `/gear/?kind=boards`,
   `/gear/?q=big+sky`, `/gear/?sort=new` or `sort=used`. A brand typed in another case is fixed to the catalog's.
