@@ -421,8 +421,12 @@ function BoardCard({
               </span>
             )}
             {pedals}
-          <span className="ml-auto flex items-center gap-3">
-            {board.comment_count !== undefined && (
+        </div>
+        {board.description && !compact && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
+      </div>
+      {/* Over the bottom-right corner of the image: likes, and comments when there are any. */}
+      <span className="pointer-events-none absolute inset-x-0 top-0 flex aspect-[8/5] items-end justify-end gap-3 px-3 pb-1.5 [&>*]:pointer-events-auto">
+            {!!board.comment_count && (
               <a
                 href={`${boardUrl(board.slug)}#comments`}
                 aria-label={`${board.comment_count} ${board.comment_count === 1 ? "comment" : "comments"} on ${board.name}`}
@@ -430,7 +434,7 @@ function BoardCard({
                 className={`${count} hover:text-ink`}
               >
                 <MessageCircle size={13} strokeWidth={2.25} />
-                {board.comment_count > 0 && board.comment_count}
+                {board.comment_count}
               </a>
             )}
             <button
@@ -445,9 +449,6 @@ function BoardCard({
               {board.like_count > 0 && board.like_count}
             </button>
           </span>
-        </div>
-        {board.description && !compact && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
-      </div>
       {onHide && (
         <button
           type="button"
