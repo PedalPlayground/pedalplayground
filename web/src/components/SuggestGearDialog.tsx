@@ -257,7 +257,7 @@ export function SuggestGearDialog({
 
         <div>
           <span className={fieldLabel}>Size</span>
-          <span className={fieldHelp}>The enclosure, without knobs or jacks. A spec sheet or a ruler both work.</span>
+          <span className={fieldHelp}>The whole footprint from above, including jacks, knobs and anything else that sticks out.</span>
           <div className="grid grid-cols-2 gap-2">
             {(
               [
@@ -316,7 +316,7 @@ export function SuggestGearDialog({
         <div>
           <span className={fieldLabel}>{tab === "fix" ? "New Photo" : "Photo"}</span>
           <span className={fieldHelp}>
-            {tab === "fix" ? "Optional, if the picture is wrong. " : ""}Straight on, from above. A PNG with a transparent background is ideal. 10 MB at most.
+            {tab === "fix" ? "Optional, if the picture is wrong. " : ""}Straight on from above, with the jacks and anything sticking out in the frame, cropped to match the size. A PNG with a transparent background is ideal. 10 MB at most.
           </span>
           <input
             ref={fileInput}
