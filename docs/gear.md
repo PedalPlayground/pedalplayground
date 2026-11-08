@@ -11,7 +11,7 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   what's filtered) with a result count, the sort and card size (and a Filters button below laptop width). The filters sit in a sticky left sidebar from laptop width and in
   a Filters sheet below it, as two flat lists with no headings: the first row of each names it. The type list is All
   Gear (pedals and pedalboards together, the default), Pedals, Pedalboards, then each pedal type (picking a type lists
-  pedals); it only shows types the catalog has, counted within the chosen brand. The brand list is All Brands (with a search icon at its right that opens a Find
+  pedals); it only shows types the catalog has, counted within the chosen brand. The brand list is All Brands (no count; a search icon in the count's place opens a Find
   a brand field; Escape or the X closes and clears it), then the brands.
 - **Filters live in the URL** and each new brand, type, kind or sort is a history step (search text isn't), so Back
   returns to the last view. A brand page is a link: `/gear/?brand=BOSS`, `/gear/?type=Fuzz`, `/gear/?kind=pedals`, `/gear/?kind=boards`,

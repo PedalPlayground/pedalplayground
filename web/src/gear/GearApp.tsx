@@ -840,10 +840,10 @@ function FilterPanel({
 
       {/* All Brands names the list; the brand list scrolls on its own, and past it the whole sidebar scrolls. */}
       <div role="radiogroup" aria-label="Brand" className="grid gap-0.5">
-        <div className="flex items-center gap-0.5">
-          <button type="button" role="radio" aria-checked={brand === null} onClick={() => setBrand(null)} className={`${listRow(brand === null)} min-w-0 flex-1`}>
+        {/* The search icon sits where the other rows show their count. */}
+        <div className="relative">
+          <button type="button" role="radio" aria-checked={brand === null} onClick={() => setBrand(null)} className={`${listRow(brand === null)} pr-9`}>
             <span className="truncate">All Brands</span>
-            {count(brands.reduce((n, [, c]) => n + c, 0))}
           </button>
           {/* The brand search hides behind an icon until it's wanted. */}
           <button
@@ -855,9 +855,9 @@ function FilterPanel({
               if (finding) setFind("");
               setFinding(!finding);
             }}
-            className="grid size-8 shrink-0 place-items-center rounded-control text-icon outline-none transition-colors hover:bg-soft hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+            className="absolute right-0.5 top-1/2 grid size-7 -translate-y-1/2 place-items-center rounded-inner text-icon outline-none transition-colors hover:bg-soft-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
           >
-            {finding ? <X size={15} strokeWidth={2} /> : <Search size={15} strokeWidth={2} />}
+            {finding ? <X size={14} strokeWidth={2} /> : <Search size={14} strokeWidth={2} />}
           </button>
         </div>
         {finding && (
