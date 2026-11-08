@@ -17,7 +17,7 @@ export function PedalboardIcon({ className }: LucideProps) {
   );
 }
 
-/** One look for Explore, Gear, My Playgrounds, Editor and Updates: an icon and a label (icons only below laptop width). */
+/** One look for Explore, Gear, My Playgrounds, Admin and What's New: an icon and a label (icons only below laptop width). */
 export function tabClass(here: boolean) {
   return `press relative flex h-9 shrink-0 items-center gap-2 rounded-inner p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     here ? "bg-soft" : "hover:bg-soft data-[state=open]:bg-soft"
@@ -29,7 +29,7 @@ export const tabLabel = "max-lg:sr-only";
 export type SitePage = "build" | "gallery" | "gear" | "editor" | null;
 
 /**
- * Explore, Gear, My Playgrounds, then Editor for catalog editors. `builds` is the playground's board menu; elsewhere it's a
+ * Explore, Gear, My Playgrounds, then Admin (the editor page) for catalog editors. `builds` is the playground's board menu; elsewhere it's a
  * link to the playground. The current page's tab is marked.
  */
 export function SiteTabs({ current, builds, after }: { current: SitePage; builds?: ReactNode; after?: ReactNode }) {
@@ -53,7 +53,7 @@ export function SiteTabs({ current, builds, after }: { current: SitePage; builds
       {editor && (
         <a href="/editor/" aria-current={current === "editor" ? "page" : undefined} className={tabClass(false)}>
           <PencilRuler {...tabIcon} className="text-ink-muted" />
-          <span className={tabLabel}>Editor</span>
+          <span className={tabLabel}>Admin</span>
         </a>
       )}
       {after}

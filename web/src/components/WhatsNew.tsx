@@ -1,7 +1,6 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { Megaphone, Sparkles } from "lucide-react";
-import { tabClass, tabIcon } from "./SiteTabs";
-import { tip } from "./Tooltip";
+import { tabClass, tabIcon, tabLabel } from "./SiteTabs";
 import { useEffect, useMemo, useState } from "react";
 import { buildFeed, fetchPosts, isUnread, markSeen, readSeen, type FeedEntry, type Post } from "../lib/announcements";
 import { track } from "../lib/analytics";
@@ -46,10 +45,13 @@ export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
         }
       }}
     >
-      <Dropdown.Trigger aria-label={unread ? "Updates (unread)" : "Updates"} {...tip("Updates", { side: "bottom" })} className={tabClass(false)}>
-        <Megaphone {...tabIcon} className="text-ink-muted" />
-        <span className="sr-only">Updates</span>
-        {unread && <span aria-hidden className="absolute right-1 top-1 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
+      {/* Like the other nav items: icon and label (icon only below laptop width), the unread dot on the icon. */}
+      <Dropdown.Trigger aria-label={unread ? "What's New (unread)" : "What's New"} className={tabClass(false)}>
+        <span className="relative flex">
+          <Megaphone {...tabIcon} className="text-ink-muted" />
+          {unread && <span aria-hidden className="absolute -right-1 -top-1 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
+        </span>
+        <span className={tabLabel}>What's New</span>
       </Dropdown.Trigger>
       <Dropdown.Portal>
         <Dropdown.Content
