@@ -75,7 +75,7 @@ export function DesignApp() {
 
         <Section id="color" title="Color" lead="A small, fixed set. Grays carry a little of the brand's blue-violet; #fff and #000 are the only fully neutral colors.">
           <Group title="Surfaces" note="Back to front. Cards sit on page; the board and photo wells use canvas.">
-            <Swatch token="page" use="Behind Explore, Gear and this page" />
+            <Swatch token="page" use="Behind the Gallery, Gear and this page" />
             <Swatch token="card" use="Cards on those pages" />
             <Swatch token="card-hover" use="A card under the pointer" />
             <Swatch token="canvas" use="The board area and photo wells" />

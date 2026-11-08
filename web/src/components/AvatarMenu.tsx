@@ -1,6 +1,5 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { tip } from "./Tooltip";
-import { ChevronDown } from "lucide-react";
 import { openBillingPortal } from "../lib/billing";
 import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
@@ -28,7 +27,10 @@ export function AvatarMenu({
         {...tip("Your Account")}
         className="press flex h-10 items-center gap-1 rounded-control px-1 text-ink-muted outline-none hover:bg-surface-hover active:bg-chrome-line focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:bg-surface-hover"
       >
-        <ChevronDown size={12} strokeWidth={2.5} />
+        {/* Two bars: a menu sits behind the avatar. */}
+        <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden className="shrink-0">
+          <path d="M2 4.5h10M2 9.5h10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
         <PedalAvatar pedalKey={avatar} height={32} />
       </Dropdown.Trigger>
       <Dropdown.Portal>

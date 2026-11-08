@@ -1,7 +1,7 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { useRef, useState, type ReactNode } from "react";
 import { tip } from "./Tooltip";
-import { ChevronDown, Copy, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
+import { Copy, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
 import { PedalboardIcon, tabClass, tabIcon, tabLabel } from "./SiteTabs";
 import type { PlaygroundSummary } from "../lib/cloud";
 import { handoffHref, type Handoff } from "../lib/handoff";
@@ -165,10 +165,9 @@ export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds, remote = false }: 
   const pending = useRef<{ open: () => void } | null>(null);
   return (
     <Dropdown.Root open={open} onOpenChange={setOpen}>
-      <Dropdown.Trigger data-tour="playgrounds" aria-label="My Playgrounds" className={tabClass(false)}>
+      <Dropdown.Trigger data-tour="playgrounds" aria-label="My Boards" className={tabClass(false)}>
         <PedalboardIcon {...tabIcon} className="text-ink-muted" />
-        <span className={tabLabel}>My Playgrounds</span>
-        <ChevronDown size={12} strokeWidth={2.5} className="-ml-0.5 shrink-0 text-ink-muted" />
+        <span className={tabLabel}>My Boards</span>
       </Dropdown.Trigger>
       <MenuContent
         remote={remote}

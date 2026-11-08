@@ -289,7 +289,7 @@ function RedrawThumbnails() {
     <section className="grid content-start gap-3">
       <h2 className="text-lg font-bold tracking-[-0.01em]">Gallery Thumbnails</h2>
       <p className="text-[13px] text-ink-muted">
-        Redraw every Explore board's picture at retina sharpness. Boards that already have a sharp picture are skipped, so it's safe to run again.
+        Redraw every Gallery board's picture at retina sharpness. Boards that already have a sharp picture are skipped, so it's safe to run again.
       </p>
       <div>
         <button type="button" className={secondaryButton} disabled={busy} onClick={() => void run()}>

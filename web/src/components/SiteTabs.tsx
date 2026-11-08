@@ -20,7 +20,7 @@ export function PedalboardIcon({ className, size = 24 }: LucideProps) {
   );
 }
 
-/** One look for Explore, Gear, My Playgrounds, Admin and What's New: an icon and a label (icons only below laptop width). */
+/** One look for Gallery, Gear, My Boards, Admin and What's New: an icon and a label (icons only below laptop width). */
 export function tabClass(here: boolean) {
   return `press relative flex h-9 shrink-0 items-center gap-2 rounded-inner p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     here ? "bg-soft" : "hover:bg-soft data-[state=open]:bg-soft"
@@ -42,7 +42,7 @@ export function SiteTabs({ current, builds, after }: { current: SitePage; builds
     <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-1 sm:gap-2">
       <a href="/gallery/" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
         <LayoutGrid {...tabIcon} fill="currentColor" className="text-ink-muted" />
-        <span className={tabLabel}>Explore</span>
+        <span className={tabLabel}>Gallery</span>
       </a>
       <a href="/gear/" aria-current={current === "gear" ? "page" : undefined} className={tabClass(false)}>
         <Guitar {...tabIcon} fill="currentColor" className="text-ink-muted" />
@@ -51,7 +51,7 @@ export function SiteTabs({ current, builds, after }: { current: SitePage; builds
       {builds ?? (
         <a href="/" className={tabClass(false)}>
           <PedalboardIcon {...tabIcon} className="text-ink-muted" />
-          <span className={tabLabel}>My Playgrounds</span>
+          <span className={tabLabel}>My Boards</span>
         </a>
       )}
       {editor && (

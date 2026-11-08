@@ -245,7 +245,7 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
               <span className="text-base text-ink-muted">
                 {" "}
                 by{" "}
-                <a href={userGalleryUrl((info?.username ?? viewingOwner)!)} {...tip("Their boards in Explore")} className={`hover:text-ink ${nameLink}`}>
+                <a href={userGalleryUrl((info?.username ?? viewingOwner)!)} {...tip("Their boards in the Gallery")} className={`hover:text-ink ${nameLink}`}>
                   {info?.username ?? viewingOwner}
                 </a>
                 {teamRole(info?.username ?? viewingOwner) && (
@@ -481,7 +481,7 @@ function Social({
                   <li key={c.id} className="group/comment">
                     <div className="flex items-center gap-2 text-xs">
                       {c.username ? (
-                        <a href={userGalleryUrl(c.username)} {...tip("Their boards in Explore")} className={`font-semibold ${nameLink}`}>
+                        <a href={userGalleryUrl(c.username)} {...tip("Their boards in the Gallery")} className={`font-semibold ${nameLink}`}>
                           {c.username}
                         </a>
                       ) : (

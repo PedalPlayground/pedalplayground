@@ -253,7 +253,7 @@ export function GalleryApp() {
             most liked board drawn big off its right edge (laptops and up). */}
         <header className="relative isolate overflow-hidden rounded-container bg-[color-mix(in_srgb,var(--color-brand)_9%,var(--color-card))] px-5 py-6 sm:px-8 sm:py-8">
           <div className="relative z-10 max-w-xl">
-            <h1 className="text-[28px] font-bold leading-tight tracking-[-0.02em] sm:text-3xl">Explore</h1>
+            <h1 className="text-[28px] font-bold leading-tight tracking-[-0.02em] sm:text-3xl">Gallery</h1>
             <p className="mt-1.5 text-sm text-ink-muted">Pedalboards shared by the community. Open one to look around or make it your own.</p>
             <label className="relative mt-5 block w-full max-w-md">
               <Search size={18} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-icon" />
@@ -473,7 +473,7 @@ function BoardCard({
         // Small icon buttons in the photo's top right corner, shown on hover (always on touch screens).
         <span className="absolute right-1.5 top-1.5 z-10 flex gap-0.5 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
           {onHide && (
-            <button type="button" onClick={onHide} aria-label="Hide from Explore" {...tip("Hide from Explore")} className={`${cardAction} text-danger`}>
+            <button type="button" onClick={onHide} aria-label="Hide from the Gallery" {...tip("Hide from the Gallery")} className={`${cardAction} text-danger`}>
               <EyeOff size={13} strokeWidth={2} />
             </button>
           )}
