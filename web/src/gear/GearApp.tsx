@@ -1125,9 +1125,10 @@ function SuggestTile({ className, onClick }: { className: string; onClick: () =>
     <button
       type="button"
       onClick={onClick}
-      className={`group flex flex-col justify-between rounded-panel border border-dashed border-chrome-line p-3 text-left outline-none transition-colors hover:bg-card focus-visible:ring-2 focus-visible:ring-brand ${className}`}
+      // The hero band's brand tint, a step stronger, so it stands apart from the gray photo tiles.
+      className={`group flex flex-col justify-between rounded-panel bg-[color-mix(in_srgb,var(--color-brand)_14%,var(--color-card))] p-3 text-left outline-none transition-colors hover:bg-[color-mix(in_srgb,var(--color-brand)_20%,var(--color-card))] focus-visible:ring-2 focus-visible:ring-brand ${className}`}
     >
-      <span className="grid size-8 place-items-center rounded-full bg-brand/10 text-brand transition-transform group-hover:scale-105">
+      <span className="grid size-8 place-items-center rounded-full bg-brand text-brand-ink transition-transform group-hover:scale-105">
         <Plus size={16} strokeWidth={2.5} />
       </span>
       <span>
