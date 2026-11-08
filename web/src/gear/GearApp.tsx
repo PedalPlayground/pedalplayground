@@ -76,10 +76,16 @@ const FILL_INCHES = 5.2;
 const HOT_MARKED = 40;
 /** The month's most added items (after accessories and staple types) that sit out of Hot, as everyday staples. */
 const STAPLE_COUNT = 30;
+/** Where the hero's photos sit: big ones cropped by the band's right and bottom edges, in a loose fan. */
+const HERO_SPOTS = [
+  "right-[3%] top-[16%] h-[115%] w-[28%] rotate-[4deg]",
+  "right-[34%] top-[26%] h-[105%] w-[26%] -rotate-[5deg]",
+  "right-[63%] top-[34%] h-[95%] w-[24%] rotate-[3deg]",
+];
 /** Types that are staples by nature, left out of Hot. */
 const STAPLE_TYPES = new Set(["Tuner", "Volume / Expression", "Utility"]);
-/** Board accessories, left out of Hot. */
-const ACCESSORY = /\b(mount|connector|coupler|cable|patch|zip|velcro|riser|bracket|power supply)\b/i;
+/** Board accessories and wireless systems, left out of Hot. */
+const ACCESSORY = /\b(mount|connector|coupler|cable|patch|zip|velcro|riser|bracket|power supply|wireless)\b/i;
 /**
  * The Trending gear bento: 8 tiles whose sizes fill the grid exactly (dense packing). Four columns: a big tile, a tall
  * one and six singles (3 full rows). Two columns: the tall one is single and the last tile hides (5 rows).
@@ -304,6 +310,13 @@ export function GearApp() {
       .sort((a, b) => b.score - a.score)
       .map((h) => h.c);
   }, [hotList, all, kind]);
+  /** A few photos for the hero: the brand's most added, or the hottest (of the chosen type), else the most added. */
+  const heroPicks = useMemo(() => {
+    const used = (c: CatalogItem) => usage.get(`${kind}:${c.image}`) ?? 0;
+    // Unfiltered, the next hottest after the ones in the bento, so the hero doesn't repeat it.
+    const pool = brand || type ? items : hotItems.length > BENTO_COUNT ? hotItems.slice(BENTO_COUNT) : items;
+    return (brand ? [...pool].sort((a, b) => used(b) - used(a)) : pool).slice(0, HERO_SPOTS.length);
+  }, [brand, type, items, hotItems, usage, kind]);
   /** The hot set for marking full cards. */
   const hotKeys = useMemo(() => new Set(hotItems.slice(0, HOT_MARKED).map((c) => c.image)), [hotItems]);
 
@@ -430,26 +443,35 @@ export function GearApp() {
 
       {/* Kept while an item is open, so its filters and loaded cards are there on Back. */}
       <main id={open ? undefined : "content"} className={`page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
-        {/* The heading, with a big search under it, left aligned. */}
-        <div className="flex flex-col gap-4">
-          <div className="min-w-0">
+        {/* The top of the page: a compact hero band with the heading, the count and a big search, and a few cropped
+            pedal photos spilling off its right edge (laptops and up). */}
+        <header className="relative isolate overflow-hidden rounded-container bg-card px-5 py-6 sm:px-8 sm:py-8">
+          <div className="relative z-10 max-w-xl">
             {brand && (
-              <button type="button" onClick={() => pickBrand(null)} className="mb-1 flex items-center gap-1 text-[13px] font-semibold text-brand">
+              <button type="button" onClick={() => pickBrand(null)} className="mb-1.5 flex items-center gap-1 text-[13px] font-semibold text-brand">
                 <ArrowLeft size={14} strokeWidth={2.5} />
                 <span className="underline-offset-2 hover:underline">All brands</span>
               </button>
             )}
-            <h1 className="text-2xl font-bold tracking-[-0.01em]">{brand ?? type ?? "Gear"}</h1>
-            <p className="mt-1 text-sm text-ink-muted">
+            <h1 className="text-[28px] font-bold leading-tight tracking-[-0.02em] sm:text-3xl">{brand ?? type ?? "Gear"}</h1>
+            <p className="mt-1.5 text-sm text-ink-muted">
               {manifest
                 ? brand || type
                   ? `${total} ${type && brand ? `${type.toLowerCase()} ` : ""}${noun}${brand ? ` from ${brand}` : ""} in the catalog.`
                   : `Every pedal and pedalboard in the catalog: ${manifest.pedals.length.toLocaleString("en-US")} pedals and ${manifest.pedalboards.length.toLocaleString("en-US")} boards from ${new Set(manifest.pedals.map((p) => p.brand)).size.toLocaleString("en-US")} brands.`
                 : "Every pedal and pedalboard in the catalog."}
             </p>
+            <div className="mt-5 w-full max-w-md">{searchBox}</div>
           </div>
-          <div className="w-full max-w-md">{searchBox}</div>
-        </div>
+          {manifest && heroPicks.length > 0 && (
+            <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 hidden w-[44%] lg:block">
+              {heroPicks.map((c, i) => {
+                const src = canvasImageUrl(manifest, kind, c.image) ?? thumbUrl(manifest, kind, c.image);
+                return src ? <img key={c.image} src={src} alt="" className={`absolute object-contain drop-shadow-[0_8px_18px_rgb(27_28_56/0.18)] ${HERO_SPOTS[i]}`} /> : null;
+              })}
+            </div>
+          )}
+        </header>
 
         {/* Trending gear and Newly added on the left, Popular brands on the right stretching to their height (stacked
             below laptop width). Newly added uses eight columns with the bento's gap, so each pair of tiles lines up with
