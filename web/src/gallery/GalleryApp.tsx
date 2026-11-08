@@ -1,4 +1,4 @@
-import { EyeOff, Flag, Heart, MessageCircle, Search } from "lucide-react";
+import { EyeOff, Flag, Heart, MessageCircle, Plus, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { fetchShared, PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { boardUrl, fetchGalleryBoards, searchedUser, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
@@ -255,7 +255,16 @@ export function GalleryApp() {
           <div className="relative z-10 max-w-xl">
             <h1 className="text-[28px] font-bold leading-tight tracking-[-0.02em] sm:text-3xl">Gallery</h1>
             <p className="mt-1.5 text-sm text-ink-muted">Pedalboards shared by the community. Open one to look around or make it your own.</p>
-            <label className="relative mt-5 block w-full max-w-md">
+            {/* The pitch: build your own, or find boards. */}
+            <div className="mt-5 flex w-full max-w-lg flex-wrap items-center gap-2.5">
+            <a
+              href="/"
+              className="btn-primary press flex h-11 shrink-0 items-center gap-1.5 rounded-control px-4 text-[15px] font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
+            >
+              <Plus size={18} strokeWidth={2.5} />
+              Start Building
+            </a>
+            <label className="relative block min-w-[12rem] flex-1">
               <Search size={18} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-icon" />
               <input
                 type="search"
@@ -270,6 +279,7 @@ export function GalleryApp() {
                 className="h-11 w-full rounded-control bg-surface pl-10 pr-3 text-[15px] outline-none focus:ring-2 focus:ring-brand"
               />
             </label>
+            </div>
           </div>
           {heroBoard && <HeroBoard board={heroBoard} />}
         </header>

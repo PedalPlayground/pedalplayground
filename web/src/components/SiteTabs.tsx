@@ -1,4 +1,5 @@
-import { Guitar, LayoutGrid, Wrench, type LucideProps } from "lucide-react";
+import { Guitar, LayoutGrid, Plus, Wrench, type LucideProps } from "lucide-react";
+import { useHasBoards } from "../lib/useHasBoards";
 import { useId, type ReactNode } from "react";
 import { useIsEditor } from "../lib/useIsEditor";
 import { Brand } from "./Logo";
@@ -32,6 +33,20 @@ export const tabLabel = "max-lg:sr-only";
 
 export type SitePage = "build" | "gallery" | "gear" | "editor" | null;
 
+/** The header's call to action for newcomers: a filled button to the builder (icon only on phones). */
+export function StartBuilding() {
+  return (
+    <a
+      href="/"
+      aria-label="Start Building"
+      className="btn-primary press flex h-8 shrink-0 items-center gap-1.5 rounded-control px-2.5 text-[13px] font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand max-sm:w-8 max-sm:justify-center max-sm:px-0"
+    >
+      <Plus size={16} strokeWidth={2.5} />
+      <span className="max-sm:sr-only">Start Building</span>
+    </a>
+  );
+}
+
 /** Admin (the editor page), for catalog editors only: its own boxed section between the nav and the account. */
 function AdminSection({ current }: { current: SitePage }) {
   const editor = useIsEditor();
@@ -51,6 +66,9 @@ function AdminSection({ current }: { current: SitePage }) {
  * link to the playground. The current page's tab is marked.
  */
 export function SiteTabs({ current, builds, after }: { current: SitePage; builds?: ReactNode; after?: ReactNode }) {
+  // Someone without a board yet (away from the builder) gets Start Building in place of My Boards.
+  const hasBoards = useHasBoards();
+  const newcomer = current !== "build" && !hasBoards;
   return (
     <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-1 sm:gap-2">
       <a href="/gallery/" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
@@ -61,13 +79,14 @@ export function SiteTabs({ current, builds, after }: { current: SitePage; builds
         <Guitar {...tabIcon} fill="currentColor" className="text-ink-muted" />
         <span className={tabLabel}>Gear</span>
       </a>
-      {builds ?? (
+      {newcomer ? null : builds ?? (
         <a href="/" className={tabClass(false)}>
           <PedalboardIcon {...tabIcon} className="text-ink-muted" />
           <span className={tabLabel}>My Boards</span>
         </a>
       )}
       {after}
+      {newcomer && <StartBuilding />}
     </nav>
   );
 }
