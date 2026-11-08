@@ -382,7 +382,7 @@ function BulkActions({
       aria-label={label}
       value=""
       onChange={(e) => e.target.value && run(e.target.value)}
-      className={`${inputClass} h-8 w-auto shrink-0 py-0 text-[13px]`}
+      className={`${secondaryButton} h-8 shrink-0 cursor-pointer text-[13px]`}
       disabled={disabled || !pedals}
     >
       <option value="">{label}…</option>
