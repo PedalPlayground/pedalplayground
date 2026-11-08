@@ -197,7 +197,9 @@ export function GearApp() {
       else writeFilters(f);
     }
     setShown(PAGE);
-    scroller.current?.scrollTo({ top: 0 });
+    // A new sort keeps your place (like the card size); a new filter or search starts at the top.
+    const sortOnly = prev && prev.scope === f.scope && prev.brand === f.brand && prev.type === f.type && prev.query === f.query && prev.sort !== f.sort;
+    if (!sortOnly) scroller.current?.scrollTo({ top: 0 });
   }, [scope, brand, type, search, sort]);
 
   // The browser's back and forward move between the grid and item pages.
