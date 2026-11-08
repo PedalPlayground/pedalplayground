@@ -71,7 +71,7 @@ export function SiteTabs({ current, builds, after }: { current: SitePage; builds
   const newcomer = current !== "build" && !hasBoards;
   return (
     <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-1 sm:gap-2">
-      <a href="/gallery/" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
+      <a href="/gallery/" data-tour="gallery" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
         <LayoutGrid {...tabIcon} fill="currentColor" className="text-ink-muted" />
         <span className={tabLabel}>Gallery</span>
       </a>

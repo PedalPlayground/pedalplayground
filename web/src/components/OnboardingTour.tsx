@@ -27,7 +27,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, bill
     {
       hero: "intro",
       title: "Welcome to Pedal Playground 2.0!",
-      body: "Plan, arrange and show off your pedalboard before you buy a thing. Get ideas from boards the community has shared in the Gallery, or jump in and start building your own.",
+      body: "Plan, arrange and show off your pedalboard or gear collection before you buy a thing. New in 2.0: sign in to keep your boards on every device, share them with a link, and build on a snappy canvas that zooms to any size.",
     },
     {
       target: "add",
@@ -52,7 +52,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, bill
             body: "Your playground is saved temporarily on this device. Sign in to save it to your account, open it anywhere, and share it with a link.",
           },
     );
-    // Last: Pro, with its own (quieter) hero.
+    // Then Pro, with its own (quieter) hero.
     if (billing && !pro) {
       steps.push({
         hero: "pro",
@@ -61,6 +61,12 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, bill
       });
     }
   }
+  // Last: the Gallery, with the choice of looking around there or building.
+  steps.push({
+    target: "gallery",
+    title: "Get Inspired",
+    body: "The Gallery is full of boards other players have shared. Look around for ideas, open any board up close, or make one your own.",
+  });
   return steps;
 }
 
@@ -297,8 +303,8 @@ export function OnboardingTour() {
               <span key={i} className={`h-1.5 rounded-full transition-all ${i === index ? "w-4 bg-brand" : "w-1.5 bg-line"}`} />
             ))}
           </div>
-          {/* The first card's two choices get their own full-width row on phones. */}
-          <div className={`ml-auto flex items-center gap-1 ${index === 0 ? "max-sm:w-full max-sm:gap-2 max-sm:[&>button]:flex-1" : ""}`}>
+          {/* The last card's two choices get their own full-width row on phones. */}
+          <div className={`ml-auto flex items-center gap-1 ${last ? "max-sm:w-full max-sm:gap-2 max-sm:[&>button]:flex-1" : ""}`}>
             {step.hero === "pro" ? (
               <button
                 onClick={() => {
@@ -309,8 +315,8 @@ export function OnboardingTour() {
               >
                 See Pro
               </button>
-            ) : index === 0 ? (
-              // The first choice: look around the Gallery (ends the tour), or build (the tour carries on).
+            ) : last ? (
+              // The last card's choice: look around the Gallery, or start building.
               <button
                 onClick={() => {
                   close();
@@ -318,7 +324,11 @@ export function OnboardingTour() {
                 }}
                 className="h-8 whitespace-nowrap rounded-control bg-soft px-3 text-sm font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand"
               >
-                Browse the Gallery
+                View Gallery
+              </button>
+            ) : index === 0 ? (
+              <button onClick={close} className="h-8 rounded-control px-3 text-sm text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand">
+                Skip
               </button>
             ) : (
               <button onClick={back} className="h-8 rounded-control px-3 text-sm text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand">
@@ -330,7 +340,7 @@ export function OnboardingTour() {
               onClick={next}
               className="btn-primary h-8 whitespace-nowrap px-3.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1"
             >
-              {index === 0 ? "Start Building" : last ? "Start Building" : "Next"}
+              {index === 0 ? "Show Me Around" : last ? "Start Building" : "Next"}
             </button>
           </div>
         </div>
