@@ -385,7 +385,7 @@ export function GearApp() {
         onChange={(e) => setQuery(e.target.value)}
         placeholder={brand ? `Search ${brand} gear` : "Search for gear"}
         aria-label={brand ? `Search ${brand} gear` : "Search for gear"}
-        className="h-11 w-full rounded-control border border-chrome-line bg-surface pl-10 pr-3 text-[15px] outline-none focus:ring-2 focus:ring-brand"
+        className="h-11 w-full rounded-control bg-surface pl-10 pr-3 text-[15px] outline-none focus:ring-2 focus:ring-brand"
       />
     </label>
   );
