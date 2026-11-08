@@ -532,7 +532,7 @@ export function GearApp() {
               onBack={closeItem}
               onBrand={brandFromItem}
               card={(c) => (
-                <GearCard key={c.image} item={c} kind={open.kind} manifest={manifest} isNew={!!c.added && c.added >= newSince} onBrand={brandFromItem} onOpen={openItem} />
+                <GearCard key={itemKey(c)} item={c} kind={open.kind} manifest={manifest} isNew={!!c.added && c.added >= newSince} onBrand={brandFromItem} onOpen={openItem} />
               )}
             />
           ) : (
@@ -592,7 +592,7 @@ export function GearApp() {
                   <h2 className="text-lg font-bold tracking-[-0.01em]">Trending gear</h2>
                   <div className="mt-3 grid grid-flow-dense auto-rows-[8.5rem] grid-cols-2 gap-3 sm:grid-cols-4 2xl:auto-rows-[10rem]">
                     {shelves.picks.map(({ item, why }, i) => (
-                      <BentoTile key={item.image} item={item} why={why} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
+                      <BentoTile key={itemKey(item)} item={item} why={why} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
                     ))}
                   </div>
                 </section>
@@ -609,7 +609,7 @@ export function GearApp() {
                   </div>
                   <div className="mt-3 grid grid-cols-4 gap-3 sm:grid-cols-8 xl:grid-cols-12">
                     {shelves.newly.map((item, i) => (
-                      <PhotoTile key={item.image} item={item} kind={kind} manifest={manifest!} onOpen={openItem} className={i >= 8 ? "sm:max-xl:hidden" : ""} />
+                      <PhotoTile key={itemKey(item)} item={item} kind={kind} manifest={manifest!} onOpen={openItem} className={i >= 8 ? "sm:max-xl:hidden" : ""} />
                     ))}
                   </div>
                 </section>
@@ -704,7 +704,7 @@ export function GearApp() {
               {manifest
                 ? items.slice(0, shown).map((item) => (
                     <GearCard
-                      key={`${kindOf(item)}:${item.image}`}
+                      key={`${kindOf(item)}:${itemKey(item)}`}
                       item={item}
                       kind={kindOf(item)}
                       manifest={manifest}
@@ -822,6 +822,12 @@ const listRow = (on: boolean) =>
   `flex w-full items-center justify-between gap-2 rounded-control px-2 py-1.5 text-left text-[13px] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     on ? "bg-soft font-semibold text-ink" : "text-ink-muted hover:bg-soft hover:text-ink"
   }`;
+
+/**
+ * A React key for a catalog item. Not the image alone: a few catalog entries share one image (variants), and duplicate
+ * keys leave stale cards behind when the list changes.
+ */
+const itemKey = (c: CatalogItem) => `${c.brand}|${c.name}|${c.image}`;
 
 /** Rows each filter list shows before "Show more". */
 const TYPES_COLLAPSED = 6;
@@ -994,7 +1000,7 @@ function HeroArt({ picks, kind, manifest }: { picks: CatalogItem[]; kind: Kind; 
       <div aria-hidden className={`${wrap} w-[48%] [container-type:size]`}>
         <div className="absolute -bottom-[14%] right-8 flex items-end gap-5">
           {picks.slice(0, 4).map((c) => (
-            <img key={c.image} src={src(c)} alt="" className={`w-auto object-contain ${shadow}`} style={{ height: `${Math.min((c.height / 6.5) * 100, 96)}cqh` }} />
+            <img key={itemKey(c)} src={src(c)} alt="" className={`w-auto object-contain ${shadow}`} style={{ height: `${Math.min((c.height / 6.5) * 100, 96)}cqh` }} />
           ))}
         </div>
       </div>
@@ -1011,14 +1017,14 @@ function HeroArt({ picks, kind, manifest }: { picks: CatalogItem[]; kind: Kind; 
     return (
       <div aria-hidden className="pointer-events-none absolute inset-y-5 right-5 hidden w-[36%] grid-cols-3 grid-rows-2 gap-2 lg:grid">
         {picks.slice(0, 6).map((c) => (
-          <span key={c.image} className="relative">
+          <span key={itemKey(c)} className="relative">
             <img src={src(c)} alt="" className="absolute inset-[6%] size-[88%] object-contain drop-shadow-[0_6px_14px_rgb(27_28_56/0.16)]" />
           </span>
         ))}
       </div>
     );
   const tile = (c: CatalogItem, extra = "") => (
-    <span key={c.image} className={`relative ${extra}`}>
+    <span key={itemKey(c)} className={`relative ${extra}`}>
       <img src={src(c)} alt="" className="absolute inset-[6%] size-[88%] object-contain drop-shadow-[0_6px_14px_rgb(27_28_56/0.16)]" />
     </span>
   );
@@ -1067,7 +1073,7 @@ function HeroArt({ picks, kind, manifest }: { picks: CatalogItem[]; kind: Kind; 
   return (
     <div aria-hidden className={`${wrap} w-[44%]`}>
       {picks.slice(0, 3).map((c, i) => (
-        <img key={c.image} src={src(c)} alt="" className={`absolute object-contain ${shadow} ${HERO_SPOTS[i]}`} />
+        <img key={itemKey(c)} src={src(c)} alt="" className={`absolute object-contain ${shadow} ${HERO_SPOTS[i]}`} />
       ))}
     </div>
   );
