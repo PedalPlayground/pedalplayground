@@ -10,7 +10,7 @@ import { EquipmentList } from "./components/EquipmentList";
 import { SignalPath } from "./components/SignalPath";
 import { startAvatarSync } from "./lib/avatar";
 import { AvatarDialog } from "./components/AvatarDialog";
-import { AvatarMenu } from "./components/AvatarMenu";
+import { AvatarMenu, GuestMenu } from "./components/AvatarMenu";
 import { SettingsMenu } from "./components/SettingsMenu";
 import { GuestButtons, SiteHeader } from "./components/SiteTabs";
 import { MadeBy } from "./components/MadeBy";
@@ -248,7 +248,10 @@ export function App() {
               <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
             </>
           ) : (
-            cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />
+            <>
+              {cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />}
+              <GuestMenu onSignIn={() => setDialog("account")} />
+            </>
           )
         }
       />

@@ -7,7 +7,7 @@ import { useCloud } from "../store/cloud";
 import { useUi } from "../store/ui";
 import { AccountDialog } from "./AccountDialog";
 import { AvatarDialog } from "./AvatarDialog";
-import { AvatarMenu } from "./AvatarMenu";
+import { AvatarMenu, GuestMenu } from "./AvatarMenu";
 import { BuildsMenu } from "./PlaygroundSwitcher";
 import { LegalDialog } from "./LegalDialog";
 import { SetPasswordDialog } from "./SetPasswordForm";
@@ -58,7 +58,10 @@ export function PageHeader({ current, dialog, setDialog }: { current: SitePage; 
           user ? (
             <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
           ) : (
-            cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />
+            <>
+              {cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />}
+              <GuestMenu onSignIn={() => setDialog("account")} />
+            </>
           )
         }
       />

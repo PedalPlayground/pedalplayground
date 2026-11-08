@@ -73,7 +73,7 @@ export function Segmented<T extends string>({
 
 /** The cog in the canvas's lower-right corner. `className` positions its floating panel. */
 export function SettingsMenu({ className = "" }: { className?: string }) {
-  const { units, setUnits, theme, setTheme, darkStyle, setDarkStyle, snapping, setSnapping, startTour } = useUi();
+  const { snapping, setSnapping, startTour } = useUi();
   const fileInput = useRef<HTMLInputElement>(null);
 
   const exportFile = () => {
@@ -137,23 +137,7 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
             Snapping
             <Switch on={snapping} label="Snapping" />
           </Dropdown.Item>
-          <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
-            Units
-            <Segmented label="Units" value={units} onChange={setUnits} options={[["in", "in"], ["mm", "mm"]]} />
-          </div>
-          <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
-            Appearance
-            <Segmented
-              label="Appearance"
-              value={theme}
-              onChange={setTheme}
-              options={[["light", "Light"], ["dark", "Dark"], ["system", "Auto"]]}
-            />
-          </div>
-          <div className="flex items-center justify-between gap-6 px-3 py-1.5 text-sm">
-            Dark Mode
-            <Segmented label="Dark Mode" value={darkStyle} onChange={setDarkStyle} options={[["dark", "Dark"], ["oled", "OLED"]]} />
-          </div>
+          {/* Units and appearance moved to the account menu (or the menu beside Sign in), so every page has them. */}
           <Dropdown.Separator className="my-1 h-px bg-line" />
           <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Help</Dropdown.Label>
           <Dropdown.Item className={menuItem} onSelect={startTour}>
