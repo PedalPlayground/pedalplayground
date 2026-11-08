@@ -638,7 +638,7 @@ export function GearApp() {
         {/* The grid, with the filters beside it from laptop width. */}
         <div className={`mt-4 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start lg:gap-8`}>
           {/* Laptops and up: the filters in a sidebar that stays in view while the grid scrolls. */}
-          <aside aria-label="Filters" className="hidden lg:sticky lg:top-[4.5rem] lg:-mx-1 lg:-mt-1 lg:block lg:pt-1 lg:max-h-[calc((100dvh-6rem)/var(--page-zoom,1))] lg:overflow-y-auto lg:px-1 lg:pb-4">
+          <aside aria-label="Filters" className="hidden lg:sticky lg:top-[4.5rem] lg:-mx-3 lg:-mt-1 lg:block lg:pt-1 lg:max-h-[calc((100dvh-6rem)/var(--page-zoom,1))] lg:overflow-y-auto lg:px-3 lg:pb-4">
             {filterPanel}
           </aside>
 
@@ -809,7 +809,8 @@ function FilterPanel({
   }, [brands, find]);
   const count = (n: number) => <span className="shrink-0 text-xs tabular-nums text-ink-muted">{n.toLocaleString("en-US")}</span>;
   return (
-    <div className="flex flex-col gap-5">
+    // Hanging outdent: rows reach 8px past the column on each side, so their text lines up with its edges.
+    <div className="-mx-2 flex flex-col gap-5">
       {/* All gear, pedals, pedalboards, then the pedal types, in one flat list. The first row names the list. */}
       <div role="radiogroup" aria-label="Type" className="grid gap-0.5">
         {(
@@ -874,7 +875,7 @@ function FilterPanel({
             }}
             placeholder={`Find a brand (${brands.length.toLocaleString("en-US")})`}
             aria-label="Find a brand"
-            className="my-1 h-8 w-full rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
+            className="mx-2 my-1 h-8 rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
           />
         )}
         <div className="-m-1 grid max-h-72 gap-0.5 overflow-y-auto p-1">
