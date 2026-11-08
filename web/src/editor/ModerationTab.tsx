@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { fetchShared, setGalleryThumbnail, uploadBoardThumbnail } from "../lib/cloud";
+import { fetchGalleryBoards, GALLERY_PAGE_SIZE } from "../lib/gallery";
+import { renderThumbnailFile } from "../lib/thumbnail";
 import { fieldBox, fieldError, fieldHelp, fieldInput, fieldLabel } from "../components/formText";
 import {
   closeReport,
@@ -235,7 +238,66 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
           />
         )}
       </section>
+
+      <RedrawThumbnails />
     </div>
+  );
+}
+
+/**
+ * Redraws every gallery board's thumbnail as a sharp 2× file (boards saved before the board_thumbnails migration keep
+ * a small inline picture until their owner saves again). Skips boards that already have a file. Safe to run again.
+ */
+function RedrawThumbnails() {
+  const [status, setStatus] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+  const run = async () => {
+    setBusy(true);
+    let done = 0;
+    let skipped = 0;
+    let failed = 0;
+    try {
+      for (let offset = 0; ; offset += GALLERY_PAGE_SIZE) {
+        const page = await fetchGalleryBoards({ type: null, search: "", sort: "new", offset, limit: GALLERY_PAGE_SIZE });
+        for (const b of page) {
+          setStatus(`Redrawing ${b.name}… (${done} done, ${skipped} already sharp, ${failed} failed)`);
+          if (b.thumbnail?.includes("/board-thumbnails/")) {
+            skipped++;
+            continue;
+          }
+          try {
+            const pg = await fetchShared(b.slug);
+            const file = pg && (await renderThumbnailFile(pg.doc.items));
+            if (!file) throw new Error("nothing to draw");
+            await setGalleryThumbnail(b.id, await uploadBoardThumbnail(b.id, file));
+            done++;
+          } catch (e) {
+            failed++;
+            console.warn(`Could not redraw the thumbnail for ${b.name}.`, e);
+          }
+        }
+        if (page.length < GALLERY_PAGE_SIZE) break;
+      }
+      setStatus(`Finished: ${done} redrawn, ${skipped} already sharp, ${failed} failed${failed ? " (details in the console)" : ""}.`);
+    } catch (e) {
+      setStatus(`Stopped: ${e instanceof Error ? e.message : String(e)}`);
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <section className="grid content-start gap-3">
+      <h2 className="text-lg font-bold tracking-[-0.01em]">Gallery Thumbnails</h2>
+      <p className="text-[13px] text-ink-muted">
+        Redraw every Explore board's picture at retina sharpness. Boards that already have a sharp picture are skipped, so it's safe to run again.
+      </p>
+      <div>
+        <button type="button" className={secondaryButton} disabled={busy} onClick={() => void run()}>
+          {busy ? "Redrawing…" : "Redraw All"}
+        </button>
+      </div>
+      {status && <p className="text-[13px] text-ink-muted" role="status">{status}</p>}
+    </section>
   );
 }
 

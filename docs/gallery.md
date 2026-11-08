@@ -11,8 +11,12 @@ recently updated first, or most liked first. Anyone can browse it signed out. A 
   username search, sorts by newest or most liked, and pages 24 at a time.
 - Likes: one per signed-in person per board, in `gallery_likes`, set through `gallery_set_like()`. Each card shows
   the count and whether you like it. Signed-out visitors who tap the heart are asked to sign in on the playground.
-- Cards use the small thumbnail saved on each playground row, not the share-image files, so the page doesn't load
-  anything from Supabase Storage.
+- Cards use each playground's thumbnail: a 720×450 (2×, for retina screens) WebP file in the public
+  `board-thumbnails` bucket, `<playground id>.webp` (`.png` where the browser can't encode WebP). The row's `thumbnail`
+  holds its URL with a `?v=` version, so the list stays small and the images load lazily and cache for a year. Boards
+  saved before the `board_thumbnails` migration still hold a small 360×225 inline data URL until their owner saves
+  again, or an editor runs Editor › Moderation › Gallery Thumbnails › Redraw All (gallery boards only). If the upload
+  fails, a save falls back to the small inline picture.
 
 ## Moderation
 
