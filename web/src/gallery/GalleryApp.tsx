@@ -1,10 +1,11 @@
-import { Heart, MessageCircle, Search } from "lucide-react";
+import { EyeOff, Flag, Heart, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { fetchShared, PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { boardUrl, fetchGalleryBoards, searchedUser, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
 import { supabase } from "../lib/supabase";
 import { drawLayout } from "../lib/thumbnail";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
+import { ReportDialog } from "../components/ReportDialog";
 import { useIsEditor } from "../lib/useIsEditor";
 import { moderationError } from "../lib/moderation";
 import { useRestriction } from "../store/standing";
@@ -63,6 +64,9 @@ export function GalleryApp() {
   const init = useAuth((s) => s.init);
   const user = useAuth((s) => s.user);
   const ready = useAuth((s) => s.ready);
+  const myName = useAuth((s) => s.username);
+  /** The board being reported, while the Report dialog is open. */
+  const [reporting, setReporting] = useState<GalleryBoard | null>(null);
   const [sort, setSort] = useState<GallerySort>(fromUrl.sort ?? returning?.sort ?? "new");
   /** A short message over the boards (e.g. likes are off during a timeout). */
   const [note, setNote] = useState<string | null>(null);
@@ -234,6 +238,7 @@ export function GalleryApp() {
     <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-page font-sans text-ink">
       {/* The same header as the playground. */}
       <PageHeader current="gallery" dialog={dialog} setDialog={setDialog} />
+      {reporting && <ReportDialog kind="board" target={reporting.id} what={reporting.name} onClose={() => setReporting(null)} />}
 
       {/* Opening a board saves this spot, so its "Back to Gallery" returns here. */}
       <main id="content"
@@ -355,6 +360,8 @@ export function GalleryApp() {
               board={b}
               onLike={() => void toggleLike(b)}
               onHide={editor ? () => void hide(b) : undefined}
+              // Anyone can report someone else's board; signed out, it asks them to sign in first.
+              onReport={b.username && b.username === myName ? undefined : () => (user ? setReporting(b) : setDialog("account"))}
               onUser={(name) => {
                 setByUser(name);
                 setQuery("");
@@ -388,16 +395,22 @@ export function GalleryApp() {
   );
 }
 
+/** A card's small icon button over the photo (Report, Hide). */
+const cardAction =
+  "flex size-7 items-center justify-center rounded-control bg-surface/90 shadow-chip outline-none hover:bg-surface focus-visible:ring-2 focus-visible:ring-brand";
+
 function BoardCard({
   board,
   onLike,
   onHide,
+  onReport,
   onUser,
   compact,
 }: {
   board: GalleryBoard;
   onLike: () => void;
   onHide?: () => void;
+  onReport?: () => void;
   onUser: (username: string) => void;
   /** Small cards leave out the type tag and the description. */
   compact?: boolean;
@@ -465,14 +478,20 @@ function BoardCard({
         </div>
         {board.description && !compact && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
       </div>
-      {onHide && (
-        <button
-          type="button"
-          onClick={onHide}
-          className="absolute right-2 top-2 z-10 rounded-control bg-surface/90 px-2 py-1 text-xs font-semibold text-danger opacity-0 shadow-chip transition-opacity focus:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100"
-        >
-          Hide
-        </button>
+      {(onHide || onReport) && (
+        // Small icon buttons in the photo's top right corner, shown on hover (always on touch screens).
+        <span className="absolute right-2 top-2 z-10 flex gap-1 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
+          {onHide && (
+            <button type="button" onClick={onHide} aria-label="Hide from Explore" {...tip("Hide from Explore")} className={`${cardAction} text-danger`}>
+              <EyeOff size={15} strokeWidth={2} />
+            </button>
+          )}
+          {onReport && (
+            <button type="button" onClick={onReport} aria-label="Report Board" {...tip("Report Board")} className={`${cardAction} text-icon hover:text-ink`}>
+              <Flag size={15} strokeWidth={2} />
+            </button>
+          )}
+        </span>
       )}
     </article>
   );
