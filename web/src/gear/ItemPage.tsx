@@ -1,4 +1,4 @@
-import { ArrowLeft, Plus } from "lucide-react";
+import { ArrowLeft, Pencil, Plus } from "lucide-react";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { affiliateProps, buyLinks, DISCLOSURE } from "../lib/affiliate";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
@@ -7,6 +7,7 @@ import { handoffHref } from "../lib/handoff";
 import { formatMa } from "../lib/specs";
 import { nameLink, RoleBadges } from "../components/RoleBadge";
 import type { CatalogItem } from "../lib/types";
+import { useIsEditor } from "../lib/useIsEditor";
 
 /** Link to one item's page. Boards say so, since a pedal and a board can share an image key. */
 export const itemHref = (kind: Kind, item: CatalogItem) => `/gear/?item=${encodeURIComponent(item.image)}${kind === "pedalboard" ? "&kind=boards" : ""}`;
@@ -80,7 +81,9 @@ export function ItemPage({
 
   const buy = buyLinks(item.brand, item.name);
   /** Facts as small tiles: a label, the value, and sometimes a quieter second line. Types span the full width. */
+  const types = itemTypes(item);
   const specs: { label: string; value: string; sub?: string; wide?: boolean }[] = [
+    ...(types.length ? [{ label: types.length > 1 ? "Types" : "Type", value: types.join(", "), wide: true }] : []),
     { label: "Size", value: `${fmtIn(item.width)}″ × ${fmtIn(item.height)}″`, sub: `${fmtMm(item.width)} × ${fmtMm(item.height)} mm` },
     ...(item.added
       ? [{ label: "Added", value: new Date(`${item.added}T12:00:00`).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) }]
@@ -88,7 +91,7 @@ export function ItemPage({
     ...(item.voltage ? [{ label: "Power", value: item.voltage }] : []),
     ...(item.ma ? [{ label: "Current draw", value: formatMa(item.ma) }] : []),
   ];
-  const types = itemTypes(item);
+  const editor = useIsEditor();
 
   return (
     <>
@@ -155,16 +158,7 @@ export function ItemPage({
             </div>
           )}
 
-          {types.length > 0 && (
-            <div className="mt-6 flex flex-wrap gap-1.5" aria-label={types.length > 1 ? "Types" : "Type"}>
-              {types.map((t) => (
-                <span key={t} className="rounded-full bg-soft px-2.5 py-1 text-xs font-semibold text-ink">
-                  {t}
-                </span>
-              ))}
-            </div>
-          )}
-          <dl className={`${types.length ? "mt-3" : "mt-6"} grid grid-cols-2 gap-2`}>
+          <dl className="mt-6 grid grid-cols-2 gap-2">
             {specs.map((sp) => (
               <div key={sp.label} className={`rounded-panel bg-card px-3.5 py-3 ${sp.wide ? "col-span-2" : ""}`}>
                 <dt className="text-xs text-ink-muted">{sp.label}</dt>
@@ -173,6 +167,15 @@ export function ItemPage({
               </div>
             ))}
           </dl>
+          {editor && (
+            <a
+              href={`/editor/#catalog?kind=${kind}&key=${encodeURIComponent(item.image)}`}
+              className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-brand hover:underline"
+            >
+              <Pencil size={13} strokeWidth={2.25} />
+              Edit in catalog
+            </a>
+          )}
         </div>
       </div>
 

@@ -4,6 +4,7 @@ import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelCla
 import { ScaleKey } from "../components/ScaleKey";
 import { tip } from "../components/Tooltip";
 import { canvasImageUrl, thumbUrl, type Manifest } from "../lib/catalog";
+import { TypeCombo } from "./TypeCombo";
 import { FEATURED_PEDALS } from "../lib/featuredPedals";
 import { fetchGearUsage } from "../lib/trending";
 import { PX_PER_INCH } from "../lib/geometry";
@@ -11,7 +12,7 @@ import { dotGridStyle } from "../lib/scale";
 import { brandSizes, brandSpelling, brandSuggestions, catalogBrands, copiedFields, copySources, imageStats, runChecks, type BrandSize, type Fields, type ImageStats, type Usage } from "../lib/editorChecks";
 import type { CatalogItem } from "../lib/types";
 import { plainField } from "../lib/inputProps";
-import { PEDAL_TYPES, VOLTAGES } from "../lib/specs";
+import { VOLTAGES } from "../lib/specs";
 
 /** Pixels per inch for the side-by-side preview. */
 const PREVIEW_PPI = 28;
@@ -225,20 +226,13 @@ export function ItemEditor({
               </div>
             </div>
             <div>
-              <label className={labelClass} htmlFor={`${id}-type`}>Type</label>
-              <select
-                id={`${id}-type`}
-                className={inputClass}
-                value={fields.type ?? ""}
-                onChange={(e) => set({ type: e.target.value || undefined, extraTypes: fields.extraTypes?.filter((t) => t !== e.target.value) })}
-              >
-                <option value="">Unknown</option>
-                {PEDAL_TYPES.map((t) => (
-                  <option key={t}>{t}</option>
-                ))}
-              </select>
+              <span className={labelClass}>Types</span>
+              <span className={fieldHelp}>The first is the main type. Drag to reorder.</span>
+              <TypeCombo
+                value={[...(fields.type ? [fields.type] : []), ...(fields.extraTypes ?? []).filter((t) => t !== fields.type)]}
+                onChange={(types) => set({ type: types[0], extraTypes: types.slice(1) })}
+              />
             </div>
-            {fields.type && <AlsoTypes main={fields.type} extra={fields.extraTypes ?? []} onChange={(extraTypes) => set({ extraTypes })} />}
           </>
         )}
         {onPickFile && (
@@ -599,34 +593,6 @@ function SizeStrip({
               </button>
             );
           })}
-      </div>
-    </div>
-  );
-}
-
-/**
- * Types besides the main one, as chips to tick ("Xotic BB Preamp": Overdrive, also Amp / Preamp). Shared by the
- * item form and the Types tab.
- */
-export function AlsoTypes({ main, extra, onChange, compact }: { main: string; extra: string[]; onChange: (extra: string[]) => void; compact?: boolean }) {
-  return (
-    <div>
-      {!compact && <span className={labelClass}>Also counts as</span>}
-      <div className={`flex flex-wrap gap-1 ${compact ? "" : "mt-1"}`} role="group" aria-label="Also counts as">
-        {PEDAL_TYPES.filter((t) => t !== main && t !== "Other").map((t) => {
-          const on = extra.includes(t);
-          return (
-            <button
-              key={t}
-              type="button"
-              aria-pressed={on}
-              onClick={() => onChange(on ? extra.filter((x) => x !== t) : [...extra, t])}
-              className={`h-6 rounded-full px-2 text-[11px] font-semibold transition-colors ${on ? "bg-ink text-surface" : "bg-soft text-ink-muted hover:text-ink"}`}
-            >
-              {t}
-            </button>
-          );
-        })}
       </div>
     </div>
   );

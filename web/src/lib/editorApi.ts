@@ -161,36 +161,44 @@ export async function setStatus(kind: Item["kind"], key: string, status: Item["s
   fail(error);
 }
 
-/** Catalog items whose brand or name contain every word typed, newest changes first when nothing is typed. */
-export async function searchItems(text: string, opts: { kind?: Item["kind"]; retired?: boolean } = {}): Promise<Item[]> {
+/** What the Catalog tab lists. `type` "none" means pedals with no type. */
+export interface CatalogFilter {
+  kind: Item["kind"] | null;
+  type: string | null;
+  brand: string | null;
+  text: string;
+  status: Item["status"] | "all";
+}
+
+/**
+ * Catalog items for the Catalog tab's filters, a page at a time: A–Z by brand and name, or most recently changed
+ * first when nothing narrows the list.
+ */
+export async function listCatalog(f: CatalogFilter, page: number, pageSize = 100): Promise<Item[]> {
   let q = db().from("catalog_items").select("*");
-  for (const word of text.trim().split(/\s+/).filter(Boolean).slice(0, 5)) {
+  if (f.kind) q = q.eq("kind", f.kind);
+  if (f.status !== "all") q = q.eq("status", f.status);
+  if (f.brand) q = q.eq("brand", f.brand);
+  // Quoted, since types have spaces and slashes ("Amp / Preamp").
+  if (f.type === "none") q = q.eq("kind", "pedal").is("type", null);
+  else if (f.type) q = q.or(`type.eq."${f.type}",extra_types.cs.{"${f.type}"}`);
+  for (const word of f.text.trim().split(/\s+/).filter(Boolean).slice(0, 5)) {
     // PostgREST's or() syntax treats , ( ) as separators, so they can't appear in a search word.
     const w = word.replace(/[,()%*\\]/g, "");
     if (w) q = q.or(`brand.ilike.*${w}*,name.ilike.*${w}*`);
   }
-  if (opts.kind) q = q.eq("kind", opts.kind);
-  if (!opts.retired) q = q.eq("status", "live");
-  const { data, error } = await q.order(text.trim() ? "brand" : "updated_at", { ascending: !!text.trim() }).limit(60);
+  const narrowed = f.kind || f.type || f.brand || f.text.trim();
+  q = narrowed ? q.order("brand").order("name") : q.order("updated_at", { ascending: false });
+  const { data, error } = await q.range(page * pageSize, page * pageSize + pageSize - 1);
   fail(error);
   return (data ?? []) as Item[];
 }
 
-/**
- * Live pedals of one type (main or extra), or with no type when `type` is null, A–Z by brand, a page at a time.
- * `text` narrows by brand or name words, like searchItems.
- */
-export async function listByType(type: string | null, text: string, page: number, pageSize = 100): Promise<Item[]> {
-  let q = db().from("catalog_items").select("*").eq("kind", "pedal").eq("status", "live");
-  // Quoted, since types have spaces and slashes ("Amp / Preamp").
-  q = type === null ? q.is("type", null) : q.or(`type.eq."${type}",extra_types.cs.{"${type}"}`);
-  for (const word of text.trim().split(/\s+/).filter(Boolean).slice(0, 5)) {
-    const w = word.replace(/[,()%*\\]/g, "");
-    if (w) q = q.or(`brand.ilike.*${w}*,name.ilike.*${w}*`);
-  }
-  const { data, error } = await q.order("brand").order("name").range(page * pageSize, page * pageSize + pageSize - 1);
+/** One catalog item by kind and key (for links like /editor/#catalog?kind=pedal&key=boss-ds1). */
+export async function getItem(kind: Item["kind"], key: string): Promise<Item | null> {
+  const { data, error } = await db().from("catalog_items").select("*").eq("kind", kind).eq("key", key).maybeSingle();
   fail(error);
-  return (data ?? []) as Item[];
+  return (data as Item | null) ?? null;
 }
 
 /** How many approved items are still waiting for their images to be built. */

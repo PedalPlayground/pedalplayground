@@ -178,7 +178,14 @@ Only accounts in `catalog_editors` get past the sign-in check; everyone else see
 - **Queue:** pending and sent-back submissions, oldest first. Fix any field or replace the photo, then Approve,
   Needs changes (the note goes to the submitter) or Reject. Empty until the submit form arrives in phase 4.
 - **Add:** a new pedal or pedalboard straight into the catalog.
-- **Catalog:** search by brand and name, then fix an item's fields or photo, or retire and restore it.
+- **Catalog** (the old Types tab is part of it; `#types` opens it): the Gear page's filters in a sidebar (All Items,
+  Pedals, Pedalboards, No type and each pedal type by count, Live / Retired, brands with a search icon, each list
+  collapsed with Show more), a search, and the matching items. Each pedal row has its types as a combo box (the first
+  chip is the main type; type to add, drag or Alt+arrow to reorder, X or Backspace to remove) that saves on change.
+  Tick items (or Select all shown) for bulk actions: Add type, Make main type, Remove type, Retire, Restore, each run
+  item by item and published once. Open an item to fix its fields or photo. The Gear page's **Edit in catalog** link
+  (editors only) opens an item directly: `/editor/#catalog?kind=pedal&key=<key>`. The item form uses the same type
+  combo box.
 
 Each one shows the photo at canvas scale beside the closest same-brand items, with checks for resolution, shape
 against the entered size, a transparent background and likely duplicates.

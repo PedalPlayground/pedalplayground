@@ -9,12 +9,16 @@ import { primaryButton, secondaryButton } from "./ItemEditor";
 import { ModerationTab } from "./ModerationTab";
 import { NewsTab } from "./NewsTab";
 import { QueueTab } from "./QueueTab";
-import { TypesTab } from "./TypesTab";
 
-type Tab = "queue" | "add" | "catalog" | "types" | "news" | "moderation";
-const TABS: Tab[] = ["queue", "add", "catalog", "types", "news", "moderation"];
+type Tab = "queue" | "add" | "catalog" | "news" | "moderation";
+const TABS: Tab[] = ["queue", "add", "catalog", "news", "moderation"];
 /** The tab in the address (/editor/#news, or #add?from=<key> for Duplicate), so links can open a tab and reloads stay on it. */
-const tabFromHash = (): Tab => TABS.find((t) => `#${t}` === window.location.hash.split("?")[0]) ?? "queue";
+const tabFromHash = (): Tab => {
+  const h = window.location.hash.split("?")[0];
+  // The Types tab is part of Catalog now.
+  if (h === "#types") return "catalog";
+  return TABS.find((t) => `#${t}` === h) ?? "queue";
+};
 
 export interface Notice {
   text: string;
@@ -120,7 +124,6 @@ export function EditorApp() {
             {tabButton("queue", "Queue")}
             {tabButton("add", "Add")}
             {tabButton("catalog", "Catalog")}
-            {tabButton("types", "Types")}
             {tabButton("news", "News")}
             {tabButton("moderation", "Moderation")}
           </nav>
@@ -152,7 +155,6 @@ export function EditorApp() {
       {tab === "add" && <AddTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
       {tab === "news" && <NewsTab setNotice={setNotice} />}
       {tab === "moderation" && <ModerationTab setNotice={setNotice} />}
-      {tab === "types" && <TypesTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
       {tab === "catalog" && <CatalogTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
     </Shell>
   );

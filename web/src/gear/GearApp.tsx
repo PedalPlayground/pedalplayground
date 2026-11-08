@@ -1,5 +1,6 @@
 import { ArrowLeft, Search, SlidersHorizontal, TrendingUp, X } from "lucide-react";
 import { tip } from "../components/Tooltip";
+import { filterMore, filterRow } from "../components/filterList";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { fetchGalleryBoards } from "../lib/gallery";
@@ -821,10 +822,7 @@ function GearCard({
   );
 }
 
-const listRow = (on: boolean) =>
-  `flex w-full items-center justify-between gap-2 rounded-control px-2 py-1.5 text-left text-[13px] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
-    on ? "bg-soft font-semibold text-ink" : "text-ink-muted hover:bg-soft hover:text-ink"
-  }`;
+const listRow = filterRow;
 
 /**
  * A React key for a catalog item. Not the image alone: a few catalog entries share one image (variants), and duplicate
@@ -876,7 +874,7 @@ function FilterPanel({
     return brands.filter(([b]) => top.has(b)).sort((a, b) => b[1] - a[1]);
   }, [brands, find, moreBrands, brand]);
   const moreLink = (open: boolean, toggle: () => void, hidden: number) => (
-    <button type="button" aria-expanded={open} onClick={toggle} className="justify-self-start px-2 py-1 text-[13px] font-semibold text-brand hover:underline">
+    <button type="button" aria-expanded={open} onClick={toggle} className={filterMore}>
       {open ? "Show less" : `Show ${hidden.toLocaleString("en-US")} more`}
     </button>
   );

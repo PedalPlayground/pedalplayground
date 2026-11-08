@@ -1,14 +1,34 @@
-import { ArrowLeft } from "lucide-react";
-import { useEffect, useState } from "react";
-import type { Manifest } from "../lib/catalog";
+import { ArrowLeft, Search, X } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { itemTypes, type Manifest } from "../lib/catalog";
+import { PEDAL_TYPES } from "../lib/specs";
+import { filterMore, filterRow } from "../components/filterList";
+import { TypeCombo } from "./TypeCombo";
 import { fieldProblems, type Fields } from "../lib/editorChecks";
-import { fieldsFrom, publicUrl, saveDirect, searchItems, setStatus, sourceUrl, uploadSource, type Item } from "../lib/editorApi";
+import { fieldsFrom, getItem, listCatalog, publicUrl, saveDirect, setStatus, sourceUrl, uploadSource, type CatalogFilter, type Item } from "../lib/editorApi";
 import { plainField } from "../lib/inputProps";
 import { withPublish, type PublishState, type SetNotice } from "./EditorApp";
 import { Meta } from "../components/Meta";
 import { inputClass, ItemEditor, primaryButton, secondaryButton } from "./ItemEditor";
 
-/** Search the live catalog (and retired items) to fix, re-photo, retire or restore an item. */
+const PAGE = 100;
+const TYPES_COLLAPSED = 6;
+const BRANDS_COLLAPSED = 10;
+
+type KindFilter = Item["kind"] | null;
+
+/** The item to open from the address: #catalog?kind=pedal&key=boss-ds1 (the Gear page's Edit in catalog link). */
+function linkedItem(): { kind: Item["kind"]; key: string } | null {
+  const p = new URLSearchParams(window.location.hash.split("?")[1] ?? "");
+  const key = p.get("key");
+  return key ? { kind: p.get("kind") === "pedalboard" ? "pedalboard" : "pedal", key } : null;
+}
+
+/**
+ * The catalog, with the Gear page's filters in a sidebar (kind, type, brand, status) and a search. Tick items to change
+ * their types or retire them in bulk; change one item's types right in its row; open an item to fix everything else.
+ * Each change saves straight away, filed and approved like any other edit; Publish puts them live together.
+ */
 export function CatalogTab({
   manifest,
   publisher,
@@ -20,33 +40,57 @@ export function CatalogTab({
   setNotice: SetNotice;
   userId: string;
 }) {
+  const [kind, setKind] = useState<KindFilter>(null);
+  const [type, setType] = useState<string | null>(null);
+  const [brand, setBrand] = useState<string | null>(null);
+  const [status, setStatusFilter] = useState<CatalogFilter["status"]>("live");
   const [text, setText] = useState("");
-  const [retired, setRetired] = useState(false);
-  const [results, setResults] = useState<Item[] | null>(null);
+  const [items, setItems] = useState<Item[] | null>(null);
+  const [more, setMore] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [open, setOpen] = useState<Item | null>(null);
+  /** Ticked items, by id. */
+  const [selected, setSelected] = useState<Set<number>>(new Set());
+  /** Rows saving right now, and rows that failed (by id). */
+  const [saving, setSaving] = useState<Set<number>>(new Set());
+  const [failed, setFailed] = useState<Map<number, string>>(new Map());
+  /** Changes saved since the last publish. */
+  const [unpublished, setUnpublished] = useState(0);
+  const [bulkBusy, setBulkBusy] = useState<string | null>(null);
+  const request = useRef(0);
 
+  const filter: CatalogFilter = { kind, type, brand, text, status };
+  const load = async (page: number) => {
+    const id = ++request.current;
+    try {
+      const rows = await listCatalog(filter, page, PAGE);
+      if (id !== request.current) return;
+      setItems((list) => (page === 0 ? rows : [...(list ?? []), ...rows]));
+      setMore(rows.length === PAGE);
+      setError(null);
+    } catch (e) {
+      if (id === request.current) setError((e as Error).message);
+    }
+  };
   useEffect(() => {
-    const t = setTimeout(() => {
-      searchItems(text, { retired }).then(
-        (r) => {
-          setResults(r);
-          setError(null);
-        },
-        (e: Error) => setError(e.message),
-      );
-    }, 250);
+    setItems(null);
+    setSelected(new Set());
+    const t = setTimeout(() => void load(0), 250);
     return () => clearTimeout(t);
-  }, [text, retired]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [kind, type, brand, status, text]);
 
-  // An open item is its own history step (#catalog?item=<id>), so Back closes it and returns to the results.
+  // An open item is its own history step (#catalog?item=<id>), so Back closes it and returns to the list.
   const openItem = (item: Item) => {
     history.pushState({ ppCatalogItem: true }, "", `#catalog?item=${item.id}`);
     setOpen(item);
   };
   const closeItem = () => {
     if ((history.state as { ppCatalogItem?: boolean } | null)?.ppCatalogItem) history.back();
-    else setOpen(null);
+    else {
+      history.replaceState(null, "", "#catalog");
+      setOpen(null);
+    }
   };
   useEffect(() => {
     const onPop = () => {
@@ -55,6 +99,102 @@ export function CatalogTab({
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
   }, []);
+  // Opened from a Gear page's Edit in catalog link.
+  useEffect(() => {
+    const link = linkedItem();
+    if (!link) return;
+    getItem(link.kind, link.key).then(
+      (item) => (item ? setOpen(item) : setNotice({ text: `No catalog item has the key ${link.key}.`, error: true })),
+      (e: Error) => setNotice({ text: e.message, error: true }),
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  /** Live counts for the sidebar, from the published catalog (within the chosen kind and brand). */
+  const counts = useMemo(() => {
+    const pedals = (manifest?.pedals ?? []).filter((c) => !brand || c.brand === brand);
+    const boards = (manifest?.pedalboards ?? []).filter((c) => !brand || c.brand === brand);
+    const byType = new Map<string, number>();
+    let untyped = 0;
+    for (const c of pedals) {
+      const ts = itemTypes(c);
+      if (!ts.length) untyped++;
+      for (const t of ts) byType.set(t, (byType.get(t) ?? 0) + 1);
+    }
+    const scoped = kind === "pedal" ? manifest?.pedals ?? [] : kind === "pedalboard" ? manifest?.pedalboards ?? [] : [...(manifest?.pedals ?? []), ...(manifest?.pedalboards ?? [])];
+    const byBrand = new Map<string, number>();
+    for (const c of scoped) byBrand.set(c.brand, (byBrand.get(c.brand) ?? 0) + 1);
+    return {
+      pedals: pedals.length,
+      boards: boards.length,
+      untyped,
+      types: PEDAL_TYPES.filter((t) => byType.has(t))
+        .map((t) => [t, byType.get(t)!] as [string, number])
+        .sort((a, b) => b[1] - a[1]),
+      brands: [...byBrand].sort((a, b) => a[0].localeCompare(b[0])),
+    };
+  }, [manifest, kind, brand]);
+
+  /** Saves one item's new types (first is the main one). */
+  const saveTypes = async (item: Item, types: string[]): Promise<boolean> => {
+    const next: Item = { ...item, type: types[0] ?? null, extra_types: types.slice(1) };
+    setItems((list) => list?.map((x) => (x.id === item.id ? next : x)) ?? list);
+    setSaving((s) => new Set(s).add(item.id));
+    try {
+      await saveDirect({ ...fieldsFrom(item), type: types[0], extraTypes: types.slice(1) }, { targetKey: item.key, note: "Type fix" });
+      setFailed((f) => {
+        const n = new Map(f);
+        n.delete(item.id);
+        return n;
+      });
+      setUnpublished((n) => n + 1);
+      return true;
+    } catch (e) {
+      setItems((list) => list?.map((x) => (x.id === item.id ? item : x)) ?? list);
+      setFailed((f) => new Map(f).set(item.id, (e as Error).message));
+      return false;
+    } finally {
+      setSaving((s) => {
+        const n = new Set(s);
+        n.delete(item.id);
+        return n;
+      });
+    }
+  };
+
+  const chosen = (items ?? []).filter((x) => selected.has(x.id));
+  /** Runs a change over every ticked item, one at a time, then publishes once. */
+  const bulk = async (label: string, fn: (item: Item) => Promise<boolean>) => {
+    let ok = 0;
+    for (const [i, item] of chosen.entries()) {
+      setBulkBusy(`${label}: ${i + 1} of ${chosen.length}…`);
+      if (await fn(item)) ok++;
+    }
+    setBulkBusy(null);
+    const missed = chosen.length - ok;
+    const n = await publisher.run();
+    setNotice({ text: `${label}: ${ok} ${ok === 1 ? "item" : "items"} changed${missed ? `, ${missed} didn't save` : ""}. ${n.text}`, error: n.error || missed > 0 });
+    if (!n.error) setUnpublished(0);
+    setSelected(new Set());
+  };
+  const typesOf = (item: Item) => [...(item.type ? [item.type] : []), ...(item.extra_types ?? []).filter((t) => t !== item.type)];
+  const setStatusOf = async (item: Item, s: Item["status"]) => {
+    if (item.status === s) return true;
+    try {
+      await setStatus(item.kind, item.key, s);
+      setItems((list) => list?.map((x) => (x.id === item.id ? { ...x, status: s } : x)) ?? list);
+      return true;
+    } catch (e) {
+      setFailed((f) => new Map(f).set(item.id, (e as Error).message));
+      return false;
+    }
+  };
+
+  const publishNow = async () => {
+    const n = await publisher.run();
+    setNotice(n);
+    if (!n.error) setUnpublished(0);
+  };
 
   if (open)
     return (
@@ -67,64 +207,336 @@ export function CatalogTab({
         onSaved={(n, updated) => {
           setNotice(n);
           closeItem();
-          if (updated) setResults((r) => r?.map((x) => (x.id === updated.id ? updated : x)) ?? r);
+          if (updated) setItems((r) => r?.map((x) => (x.id === updated.id ? updated : x)) ?? r);
         }}
         publisher={publisher}
       />
     );
 
+  const allTicked = !!items?.length && items.every((x) => selected.has(x.id));
   return (
-    <div className="grid gap-4">
-      <div className="flex flex-wrap items-center gap-3">
-        <input
-          {...plainField}
-          className={`${inputClass} max-w-sm`}
-          placeholder="Search brand or name"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          autoFocus
+    <div className="lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:items-start lg:gap-8">
+      <aside aria-label="Filters" className="mb-6 lg:sticky lg:top-28 lg:mb-0 lg:max-h-[calc(100dvh-8rem)] lg:overflow-y-auto lg:px-3 lg:-mx-3 lg:pb-4">
+        <CatalogFilters
+          kind={kind}
+          type={type}
+          brand={brand}
+          status={status}
+          counts={counts}
+          onKind={(k) => {
+            setKind(k);
+            if (k === "pedalboard") setType(null);
+          }}
+          onType={(t) => {
+            setType(t);
+            if (t) setKind("pedal");
+          }}
+          onBrand={setBrand}
+          onStatus={setStatusFilter}
         />
-        <label className="flex items-center gap-1.5 text-[13px] text-ink-muted">
-          <input type="checkbox" checked={retired} onChange={(e) => setRetired(e.target.checked)} /> Include retired
-        </label>
-      </div>
-      {error && <p className="text-[13px] text-danger">{error}</p>}
-      {!text.trim() && <p className="text-xs text-ink-muted">Most recently changed first.</p>}
-      {results && results.length === 0 && <p className="text-[13px] text-ink-muted">Nothing matches.</p>}
-      <ul className="grid gap-1 sm:grid-cols-2">
-        {results?.map((item) => (
-          <li key={item.id}>
-            <button
-              type="button"
-              onClick={() => openItem(item)}
-              className="flex w-full items-center gap-3 rounded-control px-2 py-1.5 text-left hover:bg-surface-hover"
-            >
-              <span className="grid size-10 shrink-0 place-items-center">
-                {item.thumb_path ? (
-                  <img src={publicUrl(item.thumb_path)} alt="" className="max-h-10 max-w-10 object-contain" loading="lazy" />
-                ) : (
-                  <span className="size-8 rounded-inner bg-soft" />
-                )}
-              </span>
-              <span className="min-w-0">
-                <span className="block truncate text-[13px] font-semibold">
-                  {item.brand} {item.name}
-                </span>
-                <span className="block truncate text-xs text-ink-muted">
-                  <Meta
-                    parts={[
-                      item.kind === "pedalboard" && "Pedalboard",
-                      `${+Number(item.width_in).toFixed(3)} × ${+Number(item.height_in).toFixed(3)} in`,
-                      item.status === "retired" && "Retired",
-                      item.needs_render && item.source_path && "Building",
-                    ]}
+      </aside>
+
+      <div className="grid min-w-0 content-start gap-3">
+        <div className="flex flex-wrap items-center gap-3">
+          <input {...plainField} className={`${inputClass} max-w-sm`} placeholder="Search brand or name" value={text} onChange={(e) => setText(e.target.value)} />
+          {unpublished > 0 && (
+            <span className="ml-auto flex items-center gap-2 text-[13px] text-ink-muted">
+              {unpublished} {unpublished === 1 ? "change" : "changes"} saved, not live yet
+              <button type="button" className={secondaryButton} onClick={() => void publishNow()}>
+                Publish
+              </button>
+            </span>
+          )}
+        </div>
+
+        {/* Bulk actions, once something is ticked. */}
+        <div className="sticky top-[6.5rem] z-10 flex min-h-11 flex-wrap items-center gap-x-3 gap-y-2 rounded-panel bg-card px-3 py-2">
+          <label className="flex items-center gap-2 text-[13px] font-semibold">
+            <input
+              type="checkbox"
+              checked={allTicked}
+              ref={(el) => {
+                if (el) el.indeterminate = selected.size > 0 && !allTicked;
+              }}
+              onChange={() => setSelected(allTicked ? new Set() : new Set(items?.map((x) => x.id)))}
+              className="size-4 accent-[var(--color-brand)]"
+              aria-label="Select all shown"
+            />
+            {selected.size ? `${selected.size} selected` : "Select all"}
+          </label>
+          {bulkBusy ? (
+            <span className="text-[13px] text-ink-muted" role="status">
+              {bulkBusy}
+            </span>
+          ) : (
+            selected.size > 0 && (
+              <BulkActions
+                pedals={chosen.filter((x) => x.kind === "pedal").length}
+                onAddType={(t) => void bulk(`Added ${t}`, (x) => (x.kind !== "pedal" || typesOf(x).includes(t) ? Promise.resolve(true) : saveTypes(x, [...typesOf(x), t])))}
+                onRemoveType={(t) => void bulk(`Removed ${t}`, (x) => (!typesOf(x).includes(t) ? Promise.resolve(true) : saveTypes(x, typesOf(x).filter((y) => y !== t))))}
+                onMainType={(t) => void bulk(`Made ${t} the main type`, (x) => (x.kind !== "pedal" ? Promise.resolve(true) : saveTypes(x, [t, ...typesOf(x).filter((y) => y !== t)])))}
+                onRetire={() => {
+                  if (window.confirm(`Retire ${selected.size} ${selected.size === 1 ? "item" : "items"}? They leave search, but saved boards still show them.`))
+                    void bulk("Retired", (x) => setStatusOf(x, "retired"));
+                }}
+                onRestore={() => void bulk("Restored", (x) => setStatusOf(x, "live"))}
+                onClear={() => setSelected(new Set())}
+              />
+            )
+          )}
+        </div>
+
+        {error && <p className="text-[13px] text-danger">{error}</p>}
+        {items && items.length === 0 && <p className="text-[13px] text-ink-muted">Nothing matches.</p>}
+        {!items && !error && <p className="text-[13px] text-ink-muted">Loading…</p>}
+
+        <ul className="grid divide-y divide-line rounded-panel border border-line">
+          {items?.map((item) => {
+            const problem = failed.get(item.id);
+            const on = selected.has(item.id);
+            return (
+              <li key={item.id} className={`grid items-start gap-2 px-3 py-2.5 md:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] md:gap-4 ${on ? "bg-soft/60" : ""}`}>
+                <div className="flex min-w-0 items-center gap-2.5">
+                  <input
+                    type="checkbox"
+                    checked={on}
+                    onChange={() =>
+                      setSelected((s) => {
+                        const n = new Set(s);
+                        if (n.has(item.id)) n.delete(item.id);
+                        else n.add(item.id);
+                        return n;
+                      })
+                    }
+                    aria-label={`Select ${item.brand} ${item.name}`}
+                    className="size-4 shrink-0 accent-[var(--color-brand)]"
                   />
-                </span>
-              </span>
+                  <button type="button" onClick={() => openItem(item)} className="group flex min-w-0 items-center gap-2.5 text-left">
+                    <span className="grid size-10 shrink-0 place-items-center">
+                      {item.thumb_path ? (
+                        <img src={publicUrl(item.thumb_path)} alt="" className="max-h-10 max-w-10 object-contain" loading="lazy" />
+                      ) : (
+                        <span className="size-8 rounded-inner bg-soft" />
+                      )}
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block truncate text-[13px] font-semibold group-hover:underline">{item.name}</span>
+                      <span className="block truncate text-xs text-ink-muted">
+                        <Meta
+                          parts={[
+                            item.brand,
+                            item.kind === "pedalboard" && "Pedalboard",
+                            `${+Number(item.width_in).toFixed(2)} × ${+Number(item.height_in).toFixed(2)} in`,
+                            item.status === "retired" && "Retired",
+                            item.needs_render && item.source_path && "Building",
+                          ]}
+                        />
+                      </span>
+                    </span>
+                  </button>
+                </div>
+                <div className="min-w-0">
+                  {item.kind === "pedal" ? (
+                    <TypeCombo compact value={typesOf(item)} disabled={saving.has(item.id)} label={`Types for ${item.brand} ${item.name}`} onChange={(t) => void saveTypes(item, t)} />
+                  ) : (
+                    <p className="pt-1.5 text-xs text-ink-muted">Pedalboards have no types.</p>
+                  )}
+                  {problem && <p className="mt-1 text-xs text-danger">Didn't save: {problem}</p>}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        {more && (
+          <button type="button" className={`${secondaryButton} justify-self-center`} onClick={() => void load(Math.ceil((items?.length ?? 0) / PAGE))}>
+            Show more
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/** The bulk actions for ticked items: types (pedals only), retire and restore. */
+function BulkActions({
+  pedals,
+  onAddType,
+  onRemoveType,
+  onMainType,
+  onRetire,
+  onRestore,
+  onClear,
+}: {
+  pedals: number;
+  onAddType: (t: string) => void;
+  onRemoveType: (t: string) => void;
+  onMainType: (t: string) => void;
+  onRetire: () => void;
+  onRestore: () => void;
+  onClear: () => void;
+}) {
+  const typeMenu = (label: string, run: (t: string) => void) => (
+    <select
+      aria-label={label}
+      value=""
+      onChange={(e) => e.target.value && run(e.target.value)}
+      className={`${inputClass} h-8 w-auto py-0 text-[13px]`}
+      disabled={!pedals}
+    >
+      <option value="">{label}…</option>
+      {PEDAL_TYPES.map((t) => (
+        <option key={t}>{t}</option>
+      ))}
+    </select>
+  );
+  return (
+    <>
+      {typeMenu("Add type", onAddType)}
+      {typeMenu("Make main type", onMainType)}
+      {typeMenu("Remove type", onRemoveType)}
+      <button type="button" className={`${secondaryButton} h-8 text-danger`} onClick={onRetire}>
+        Retire
+      </button>
+      <button type="button" className={`${secondaryButton} h-8`} onClick={onRestore}>
+        Restore
+      </button>
+      <button type="button" className="ml-auto text-[13px] font-semibold text-brand hover:underline" onClick={onClear}>
+        Clear selection
+      </button>
+    </>
+  );
+}
+
+/** The sidebar: kind, type, status and brand, laid out like the Gear page's filters. */
+function CatalogFilters({
+  kind,
+  type,
+  brand,
+  status,
+  counts,
+  onKind,
+  onType,
+  onBrand,
+  onStatus,
+}: {
+  kind: KindFilter;
+  type: string | null;
+  brand: string | null;
+  status: CatalogFilter["status"];
+  counts: { pedals: number; boards: number; untyped: number; types: [string, number][]; brands: [string, number][] };
+  onKind: (k: KindFilter) => void;
+  onType: (t: string | null) => void;
+  onBrand: (b: string | null) => void;
+  onStatus: (s: CatalogFilter["status"]) => void;
+}) {
+  const [moreTypes, setMoreTypes] = useState(false);
+  const [moreBrands, setMoreBrands] = useState(false);
+  const [find, setFind] = useState("");
+  const [finding, setFinding] = useState(false);
+  const n = (v: number) => <span className="shrink-0 text-xs tabular-nums text-ink-muted">{v.toLocaleString("en-US")}</span>;
+  const typeRows: [string, string, number][] = [["none", "No type", counts.untyped], ...counts.types.map(([t, c]) => [t, t, c] as [string, string, number])];
+  const shownTypes = moreTypes ? typeRows : typeRows.filter(([t], i) => i < TYPES_COLLAPSED || t === type);
+  const shownBrands = useMemo(() => {
+    const q = find.trim().toLowerCase();
+    if (q) return counts.brands.filter(([b]) => b.toLowerCase().includes(q));
+    if (moreBrands) return counts.brands;
+    const top = new Set([...counts.brands].sort((a, b) => b[1] - a[1]).slice(0, BRANDS_COLLAPSED).map(([b]) => b));
+    if (brand) top.add(brand);
+    return counts.brands.filter(([b]) => top.has(b)).sort((a, b) => b[1] - a[1]);
+  }, [counts.brands, find, moreBrands, brand]);
+
+  return (
+    <div className="-mx-2 flex flex-col gap-5">
+      <div role="radiogroup" aria-label="Kind and type" className="grid grid-cols-[minmax(0,1fr)] gap-0.5">
+        {(
+          [
+            [null, "All Items", counts.pedals + counts.boards],
+            ["pedal", "Pedals", counts.pedals],
+            ["pedalboard", "Pedalboards", counts.boards],
+          ] as const
+        ).map(([k, label, c]) => {
+          const on = kind === k && !type;
+          return (
+            <button key={label} type="button" role="radio" aria-checked={on} onClick={() => (onType(null), onKind(k))} className={filterRow(on)}>
+              <span className="truncate">{label}</span>
+              {n(c)}
             </button>
-          </li>
+          );
+        })}
+        {shownTypes.map(([t, label, c]) => {
+          const on = type === t;
+          return (
+            <button key={t} type="button" role="radio" aria-checked={on} onClick={() => onType(on ? null : t)} className={filterRow(on)}>
+              <span className="truncate">{label}</span>
+              {n(c)}
+            </button>
+          );
+        })}
+        {typeRows.length > TYPES_COLLAPSED && (
+          <button type="button" aria-expanded={moreTypes} className={filterMore} onClick={() => setMoreTypes(!moreTypes)}>
+            {moreTypes ? "Show less" : `Show ${typeRows.length - shownTypes.length} more`}
+          </button>
+        )}
+      </div>
+
+      <div role="radiogroup" aria-label="Status" className="grid grid-cols-[minmax(0,1fr)] gap-0.5">
+        {(
+          [
+            ["live", "Live"],
+            ["retired", "Retired"],
+            ["all", "Live and Retired"],
+          ] as const
+        ).map(([s, label]) => (
+          <button key={s} type="button" role="radio" aria-checked={status === s} onClick={() => onStatus(s)} className={filterRow(status === s)}>
+            <span className="truncate">{label}</span>
+          </button>
         ))}
-      </ul>
+      </div>
+
+      <div role="radiogroup" aria-label="Brand" className="grid grid-cols-[minmax(0,1fr)] gap-0.5">
+        <div className="relative">
+          <button type="button" role="radio" aria-checked={brand === null} onClick={() => onBrand(null)} className={`${filterRow(brand === null)} pr-9`}>
+            <span className="truncate">All Brands</span>
+          </button>
+          <button
+            type="button"
+            aria-label={finding ? "Close brand search" : "Find a brand"}
+            aria-expanded={finding}
+            onClick={() => {
+              if (finding) setFind("");
+              setFinding(!finding);
+            }}
+            className="absolute right-0.5 top-1/2 grid size-7 -translate-y-1/2 place-items-center rounded-inner text-icon outline-none hover:bg-soft-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+          >
+            {finding ? <X size={14} strokeWidth={2} /> : <Search size={14} strokeWidth={2} />}
+          </button>
+        </div>
+        {finding && (
+          <input
+            type="search"
+            autoFocus
+            value={find}
+            onChange={(e) => setFind(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Escape") (setFind(""), setFinding(false));
+            }}
+            placeholder={`Find a brand (${counts.brands.length.toLocaleString("en-US")})`}
+            aria-label="Find a brand"
+            className="mx-2 my-1 h-8 rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
+          />
+        )}
+        {shownBrands.map(([b, c]) => (
+          <button key={b} type="button" role="radio" aria-checked={brand === b} onClick={() => onBrand(brand === b ? null : b)} className={filterRow(brand === b)}>
+            <span className="truncate">{b}</span>
+            {n(c)}
+          </button>
+        ))}
+        {!find.trim() && counts.brands.length > BRANDS_COLLAPSED && (
+          <button type="button" aria-expanded={moreBrands} className={filterMore} onClick={() => setMoreBrands(!moreBrands)}>
+            {moreBrands ? "Show less" : `Show ${(counts.brands.length - shownBrands.length).toLocaleString("en-US")} more`}
+          </button>
+        )}
+      </div>
     </div>
   );
 }
