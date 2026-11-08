@@ -351,7 +351,7 @@ export function CatalogTab({
                   {problem && <p className="mt-1 text-xs text-danger">Didn't save: {problem}</p>}
                 </div>
                 {/* Edit, Copy (a new item from this one, on the Add tab), and Archive or Restore. */}
-                <div className="flex items-center gap-0.5">
+                <div className="flex items-center gap-1.5">
                   <button type="button" aria-label={`Edit ${item.brand} ${item.name}`} onClick={() => openItem(item)} className={rowLabeled}>
                     <Pencil size={14} strokeWidth={2} />
                     Edit
@@ -403,7 +403,7 @@ export function CatalogTab({
 
 /** A row's actions: Edit and Copy with labels, Archive (or Restore) as an icon. */
 const rowLabeled =
-  "flex h-8 items-center gap-1.5 rounded-control px-2 text-xs font-medium text-ink-muted outline-none transition-colors hover:bg-soft hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
+  "press flex h-7 items-center gap-1.5 whitespace-nowrap rounded-control bg-surface-hover px-2.5 text-xs font-medium text-ink outline-none transition-colors hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand";
 const rowAction =
   "grid size-8 place-items-center rounded-control outline-none transition-colors hover:bg-soft focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
