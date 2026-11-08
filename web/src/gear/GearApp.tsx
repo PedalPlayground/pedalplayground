@@ -451,6 +451,34 @@ export function GearApp() {
     ...(brand ? [{ label: brand, remove: () => pickBrand(null) }] : []),
     ...(search.trim() ? [{ label: `“${search.trim()}”`, remove: () => (setQuery(""), setSearch("")) }] : []),
   ];
+  const filterPills = (
+    <ul aria-label="Filters in effect" className="flex flex-wrap gap-1.5">
+      {chips.map((c) => (
+        <li key={c.label} className="min-w-0">
+          <button
+            type="button"
+            onClick={c.remove}
+            aria-label={`Remove ${c.label}`}
+            className="press flex h-7 max-w-full items-center gap-1 rounded-control bg-soft pl-2.5 pr-1.5 text-[13px] font-semibold outline-none transition-colors hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand"
+          >
+            <span className="truncate">{c.label}</span>
+            <X size={14} strokeWidth={2.25} className="shrink-0 text-icon" aria-hidden />
+          </button>
+        </li>
+      ))}
+      {chips.length > 1 && (
+        <li>
+          <button
+            type="button"
+            onClick={() => (clearFilters(), setQuery(""), setSearch(""))}
+            className="h-7 px-1 text-[13px] font-semibold text-brand hover:underline"
+          >
+            Clear all
+          </button>
+        </li>
+      )}
+    </ul>
+  );
   /** Filters on, for the badge on the phone's Filters button. */
   const activeFilters = (brand ? 1 : 0) + (type ? 1 : 0) + (scope !== "all" && !type ? 1 : 0);
 
@@ -606,7 +634,7 @@ export function GearApp() {
         <div className={`${shelves ? "mt-12" : "mt-8"} flex flex-wrap items-center gap-x-3 gap-y-2`}>
           {/* Phones: the card size shares the heading's row, so Filters and sort fit on the next. */}
           <div className="flex min-w-0 flex-1 items-center gap-3 max-sm:basis-full">
-            <h2 className="flex min-w-0 flex-1 items-baseline gap-2.5">
+            <h2 className={`flex min-w-0 items-baseline gap-2.5 ${chips.length ? "shrink-0 max-sm:flex-1" : "flex-1"}`}>
               <span className="truncate text-lg font-bold tracking-[-0.01em]">{chips.length ? "Results" : "All gear"}</span>
               {manifest && (
                 <span className="shrink-0 text-sm tabular-nums text-ink-muted">
@@ -615,6 +643,8 @@ export function GearApp() {
                 </span>
               )}
             </h2>
+            {/* The filters in effect sit in the bar beside the heading, so they add no height. */}
+            {chips.length > 0 && <div className="min-w-0 flex-1 max-sm:hidden">{filterPills}</div>}
             <div className="sm:hidden">
               <DensitySwitch value={density} onChange={setDensity} />
             </div>
@@ -666,30 +696,8 @@ export function GearApp() {
               </Modal>
             )}
 
-            {chips.length > 0 && (
-              <ul aria-label="Filters in effect" className="mb-4 flex flex-wrap gap-2">
-                {chips.map((c) => (
-                  <li key={c.label}>
-                    <button
-                      type="button"
-                      onClick={c.remove}
-                      aria-label={`Remove ${c.label}`}
-                      className="press flex h-8 max-w-full items-center gap-1.5 rounded-control bg-soft pl-3 pr-2 text-[13px] font-semibold outline-none transition-colors hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand"
-                    >
-                      <span className="truncate">{c.label}</span>
-                      <X size={14} strokeWidth={2.25} className="shrink-0 text-icon" aria-hidden />
-                    </button>
-                  </li>
-                ))}
-                {chips.length > 1 && (
-                  <li>
-                    <button type="button" onClick={() => (clearFilters(), setQuery(""), setSearch(""))} className="h-8 px-1 text-[13px] font-semibold text-brand hover:underline">
-                      Clear all
-                    </button>
-                  </li>
-                )}
-              </ul>
-            )}
+            {/* Phones: the pills get their own row over the grid (the bar is full there). */}
+            {chips.length > 0 && <div className="mb-4 sm:hidden">{filterPills}</div>}
 
             <div className={`grid ${GRID[density]}`}>
               {manifest
