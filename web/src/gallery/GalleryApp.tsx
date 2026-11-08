@@ -400,32 +400,8 @@ function BoardCard({
               {board.name}
             </a>
           </h2>
-          {board.playground_type && !compact && (
-            <span className="shrink-0 rounded-full bg-soft px-2 py-0.5 text-xs text-ink-muted">{TYPE_LABELS[board.playground_type]}</span>
-          )}
-        </div>
-        <div className="flex items-center gap-2.5 text-xs text-ink-muted">
-            {board.username && (
-              <button
-                type="button"
-                onClick={() => onUser(board.username!)}
-                {...tip(`Boards by ${board.username}`)}
-                className={`relative z-10 rounded-inner font-medium outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand ${nameLink}`}
-              >
-                {board.username}
-              </button>
-            )}
-            {teamRole(board.username) && (
-              <span className="relative z-10 -ml-1.5 flex">
-                <RoleBadges username={board.username} />
-              </span>
-            )}
-            {pedals}
-        </div>
-        {board.description && !compact && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
-      </div>
-      {/* Over the bottom-right corner of the image: likes, and comments when there are any. */}
-      <span className="pointer-events-none absolute inset-x-0 top-0 flex aspect-[8/5] items-end justify-end gap-3 px-3 pb-0.5 [&>*]:pointer-events-auto">
+          {/* Likes, and comments when there are any, where the type tag used to be. */}
+          <span className="flex shrink-0 items-center gap-3 text-ink-muted">
             {!!board.comment_count && (
               <a
                 href={`${boardUrl(board.slug)}#comments`}
@@ -448,7 +424,28 @@ function BoardCard({
               <Heart size={13} fill={board.liked ? "currentColor" : "none"} strokeWidth={2.25} />
               {board.like_count > 0 && board.like_count}
             </button>
-          </span>
+                    </span>
+        </div>
+        <div className="flex items-center gap-2.5 text-xs text-ink-muted">
+            {board.username && (
+              <button
+                type="button"
+                onClick={() => onUser(board.username!)}
+                {...tip(`Boards by ${board.username}`)}
+                className={`relative z-10 rounded-inner font-medium outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand ${nameLink}`}
+              >
+                {board.username}
+              </button>
+            )}
+            {teamRole(board.username) && (
+              <span className="relative z-10 -ml-1.5 flex">
+                <RoleBadges username={board.username} />
+              </span>
+            )}
+            {pedals}
+        </div>
+        {board.description && !compact && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
+      </div>
       {onHide && (
         <button
           type="button"
