@@ -1,8 +1,9 @@
 import { Heart, MessageCircle, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
+import { fetchShared, PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { boardUrl, fetchGalleryBoards, searchedUser, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
 import { supabase } from "../lib/supabase";
+import { drawLayout } from "../lib/thumbnail";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { useIsEditor } from "../lib/useIsEditor";
 import { moderationError } from "../lib/moderation";
@@ -85,12 +86,12 @@ export function GalleryApp() {
   const [failed, setFailed] = useState(false);
   const editor = useIsEditor();
   const [density, setDensity] = useDensity("gallery");
-  /** The most liked boards, for the hero's art. */
-  const [heroBoards, setHeroBoards] = useState<GalleryBoard[]>([]);
+  /** The most liked board, drawn big in the hero. */
+  const [heroBoard, setHeroBoard] = useState<GalleryBoard | null>(null);
   useEffect(() => {
     if (!supabase) return;
-    void fetchGalleryBoards({ type: null, search: "", sort: "liked", offset: 0, limit: 3 }).then(
-      (b) => setHeroBoards(b.filter((x) => x.thumbnail)),
+    void fetchGalleryBoards({ type: null, search: "", sort: "liked", offset: 0, limit: 1 }).then(
+      (b) => setHeroBoard(b[0] ?? null),
       () => undefined,
     );
   }, []);
@@ -243,7 +244,7 @@ export function GalleryApp() {
         }}
       >
         {/* The top of the page, like Gear's: a compact hero band with the heading and a big search, and a few of the
-            most liked boards peeking in from its right edge (laptops and up). */}
+            most liked board drawn big off its right edge (laptops and up). */}
         <header className="relative isolate overflow-hidden rounded-container bg-[color-mix(in_srgb,var(--color-brand)_9%,var(--color-card))] px-5 py-6 sm:px-8 sm:py-8">
           <div className="relative z-10 max-w-xl">
             <h1 className="text-[28px] font-bold leading-tight tracking-[-0.02em] sm:text-3xl">Explore</h1>
@@ -264,13 +265,7 @@ export function GalleryApp() {
               />
             </label>
           </div>
-          {heroBoards.length > 0 && (
-            <div aria-hidden className="pointer-events-none absolute -right-10 top-1/2 hidden h-[70%] -translate-y-1/2 gap-4 lg:flex">
-              {heroBoards.map((b) => (
-                <img key={b.id} src={b.thumbnail!} alt="" className="h-full w-auto rounded-panel bg-canvas object-contain p-2 shadow-float" />
-              ))}
-            </div>
-          )}
+          {heroBoard && <HeroBoard board={heroBoard} />}
         </header>
 
         {/* What's listed, the board types, then sort and card size, across the full width (like Gear's bar). */}
@@ -491,6 +486,47 @@ function CardSkeleton() {
         <div className="h-3.5 w-2/3 animate-pulse rounded-inner bg-surface-hover" />
         <div className="h-3 w-1/3 animate-pulse rounded-inner bg-surface-hover" />
       </div>
+    </div>
+  );
+}
+
+/** The hero's picture: the most liked board drawn large from its layout, cropped by the band's right and bottom edges. */
+function HeroBoard({ board }: { board: GalleryBoard }) {
+  const canvas = useRef<HTMLCanvasElement>(null);
+  const [drawn, setDrawn] = useState(false);
+  useEffect(() => {
+    let live = true;
+    void fetchShared(board.slug)
+      .then(async (pg) => {
+        const el = canvas.current;
+        if (!live || !pg || !el) return;
+        await drawLayout(el, pg.doc.items);
+        if (live) setDrawn(true);
+      })
+      .catch(() => undefined);
+    return () => {
+      live = false;
+    };
+  }, [board.slug]);
+  return (
+    <div className="absolute inset-y-0 right-0 hidden w-[46%] lg:block">
+      <canvas
+        ref={canvas}
+        width={1600}
+        height={1000}
+        aria-hidden
+        className={`absolute -right-[4%] top-6 w-full drop-shadow-[0_10px_24px_rgb(16_18_27/0.22)] transition-opacity duration-500 ${drawn ? "opacity-100" : "opacity-0"}`}
+      />
+      {drawn && (
+        <a
+          href={boardUrl(board.slug)}
+          className="absolute bottom-4 right-4 z-10 flex max-w-[80%] items-center gap-1.5 rounded-full bg-surface px-3 py-1.5 text-xs shadow-chip outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand"
+        >
+          <Heart size={12} strokeWidth={2.5} className="shrink-0 text-brand" />
+          <span className="shrink-0 text-ink-muted">Most liked</span>
+          <span className="truncate font-semibold">{board.name}</span>
+        </a>
+      )}
     </div>
   );
 }

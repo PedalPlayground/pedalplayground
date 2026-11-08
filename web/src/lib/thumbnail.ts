@@ -109,3 +109,16 @@ export async function renderThumbnail(items: Item[]): Promise<string | null> {
     return null; // tainted canvas (cross-origin images without CORS)
   }
 }
+
+/** Draws the layout onto a canvas element at its pixel size (for big, sharp pictures of a board, like Explore's hero). */
+export async function drawLayout(canvas: HTMLCanvasElement, items: Item[], pad = 0) {
+  if (!items.length) return;
+  const images = await loadItemImages(items);
+  // The canvas takes the layout's shape (keeping its width), so there's no empty band above or below.
+  const b = layoutBounds(items);
+  canvas.height = Math.round(Math.min(canvas.width, ((canvas.width - pad * 2) * (b.bottom - b.top)) / (b.right - b.left) + pad * 2));
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawItems(ctx, items, images, fitItems(items, { x: pad, y: pad, w: canvas.width - pad * 2, h: canvas.height - pad * 2 }));
+}
