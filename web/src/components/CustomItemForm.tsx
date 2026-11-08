@@ -31,7 +31,7 @@ import {
 import { PedalArt } from "./PedalArt";
 import { tip } from "./Tooltip";
 import { plainField } from "../lib/inputProps";
-import { fieldLabel, fieldLabelText } from "./formText";
+import { fieldInput, fieldLabel, fieldLabelText } from "./formText";
 import { hasProfanity, PROFANITY_MESSAGE } from "../lib/profanity";
 import { useAllowedNames } from "../lib/useAllowedNames";
 
@@ -315,8 +315,8 @@ export function CustomItemForm({
   const [jackSide, setJackSide] = useState(hasSideJacks(initialJacks));
   // Until the user picks jacks themselves, each style brings its usual ones.
   const [jacksPicked, setJacksPicked] = useState(!!item);
-  // No name field: a custom pedal keeps its existing name, or the search text it was made from.
-  const [name] = useState(item ? (item.kind === "pedal" ? item.label : "") : (initialName ?? ""));
+  // Starts as the pedal's existing name, or the search text it was made from.
+  const [name, setName] = useState(item ? (item.kind === "pedal" ? item.label : "") : (initialName ?? ""));
   const [color, setColor] = useState(item?.color ?? NEW_PEDAL_COLOR);
   const [board, setBoard] = useState<BoardStyle>(boardStyle(item?.board));
   const patchBoard = (patch: Partial<BoardStyle>) => setBoard((b) => ({ ...b, ...patch }));
@@ -415,6 +415,21 @@ export function CustomItemForm({
         </div>
       )}
 
+      {kind === "pedal" && (
+        <label className="block">
+          <span className={fieldLabel}>Name (optional)</span>
+          <input
+            className={`${fieldInput} max-sm:text-base`}
+            {...plainField}
+            autoCapitalize="words"
+            enterKeyHint="done"
+            value={name}
+            maxLength={40}
+            onChange={(e) => setName(e.target.value)}
+            autoFocus={!item}
+          />
+        </label>
+      )}
 
       {kind === "pedal" && (
         <div>
