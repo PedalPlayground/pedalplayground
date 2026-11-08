@@ -75,7 +75,7 @@ const section = "flex shrink-0 items-center";
 
 /**
  * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Gallery, Gear, My Boards
- * and Updates tabs at the right; then the account section behind a thin divider.
+ * What's New and Admin at the right; then the account section behind a thin divider.
  */
 export function SiteHeader({
   current,
@@ -110,20 +110,24 @@ export function SiteHeader({
         {nav}
         <div className="ml-auto flex shrink-0 items-center gap-3">
           {navEnd}
-          <SiteTabs current={current} builds={builds} />
+          {/* Gallery, Gear, My Boards, What's New, then Admin for catalog editors: one row. */}
+          <SiteTabs
+            current={current}
+            builds={builds}
+            after={
+              <>
+                {updates}
+                <AdminTab current={current} />
+              </>
+            }
+          />
         </div>
       </div>
-      {/* What's New gets its own section, like the account menu, with Admin after it for catalog editors. */}
-      {updates && (
-        <div className={`${section} gap-1 border-l border-chrome-line px-1.5 sm:gap-2`}>
-          {updates}
-          <AdminTab current={current} />
-        </div>
-      )}
       {account && (
         <div
           data-tour="account"
-          className={`${section} gap-[7px] border-l border-chrome-line pl-1.5 pr-[max(0.375rem,env(safe-area-inset-right))]`}
+          // The same 8px (phones) / 16px gap on both sides of the divider as the nav row has before it.
+          className={`${section} gap-[7px] border-l border-chrome-line pl-2 pr-[max(0.5rem,env(safe-area-inset-right))] sm:pl-4 sm:pr-[max(1rem,env(safe-area-inset-right))]`}
         >
           {account}
         </div>
@@ -137,9 +141,9 @@ const guestButton =
 
 /** Signed out: Register (phones skip it; the sign-in dialog has Create Account) and Sign in. */
 export function GuestButtons({ onRegister, onSignIn }: { onRegister: () => void; onSignIn: () => void }) {
-  // Extra room around the buttons (the section itself is tight for the avatar): 12px on phones, 16px from sm.
+  // The account section supplies the padding around them.
   return (
-    <span className="flex items-center gap-[7px] px-1.5 sm:px-2.5">
+    <span className="flex items-center gap-[7px]">
       <button
         type="button"
         onClick={onRegister}
