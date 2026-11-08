@@ -856,7 +856,7 @@ function FilterPanel({
     // Hanging outdent: rows reach 8px past the column on each side, so their text lines up with its edges.
     <div className="-mx-2 flex flex-col gap-5">
       {/* All gear, pedals, pedalboards, then the pedal types, in one flat list. The first row names the list. */}
-      <div role="radiogroup" aria-label="Type" className="grid gap-0.5">
+      <div role="radiogroup" aria-label="Type" className="grid grid-cols-[minmax(0,1fr)] gap-0.5">
         {(
           [
             ["all", "All Gear", kindCounts.pedal + kindCounts.pedalboard],
@@ -884,7 +884,7 @@ function FilterPanel({
       </div>
 
       {/* All Brands names the list; the brand list scrolls on its own, and past it the whole sidebar scrolls. */}
-      <div role="radiogroup" aria-label="Brand" className="grid gap-0.5">
+      <div role="radiogroup" aria-label="Brand" className="grid grid-cols-[minmax(0,1fr)] gap-0.5">
         {/* The search icon sits where the other rows show their count. */}
         <div className="relative">
           <button type="button" role="radio" aria-checked={brand === null} onClick={() => setBrand(null)} className={`${listRow(brand === null)} pr-9`}>
@@ -922,7 +922,7 @@ function FilterPanel({
             className="mx-2 my-1 h-8 rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
           />
         )}
-        <div className="-m-1 grid max-h-72 gap-0.5 overflow-y-auto p-1">
+        <div className="-m-1 grid max-h-72 grid-cols-[minmax(0,1fr)] gap-0.5 overflow-y-auto p-1">
           {shownBrands.map(([b, n]) => (
             <button key={b} type="button" role="radio" aria-checked={brand === b} onClick={() => setBrand(brand === b ? null : b)} className={listRow(brand === b)}>
               <span className="truncate">{b}</span>
