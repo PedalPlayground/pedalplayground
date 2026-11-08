@@ -479,6 +479,13 @@ select {
 .page-main {
   --page-zoom: 1;
 }
+/* Wider screens get more room at the sides (outside the layers, so it wins over each page's px-4). */
+@media (min-width: 1300px) {
+  .page-main {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
 @media (min-width: 1880px) {
   .page-main {
     --page-zoom: 1.125;
