@@ -2,6 +2,7 @@ import { ArrowLeft, Search, SlidersHorizontal, TrendingUp } from "lucide-react";
 import { tip } from "../components/Tooltip";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
+import { fetchGalleryBoards } from "../lib/gallery";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { indexItem, search as searchItems } from "../lib/search";
 import { PEDAL_TYPES } from "../lib/specs";
@@ -315,7 +316,7 @@ export function GearApp() {
     const used = (c: CatalogItem) => usage.get(`${kind}:${c.image}`) ?? 0;
     // Unfiltered, the next hottest after the ones in the bento, so the hero doesn't repeat it.
     const pool = brand || type ? items : hotItems.length > BENTO_COUNT ? hotItems.slice(BENTO_COUNT) : items;
-    return (brand ? [...pool].sort((a, b) => used(b) - used(a)) : pool).slice(0, HERO_SPOTS.length);
+    return (brand ? [...pool].sort((a, b) => used(b) - used(a)) : pool).slice(0, 6);
   }, [brand, type, items, hotItems, usage, kind]);
   /** The hot set for marking full cards. */
   const hotKeys = useMemo(() => new Set(hotItems.slice(0, HOT_MARKED).map((c) => c.image)), [hotItems]);
@@ -463,14 +464,7 @@ export function GearApp() {
             </p>
             <div className="mt-5 w-full max-w-md">{searchBox}</div>
           </div>
-          {manifest && heroPicks.length > 0 && (
-            <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 hidden w-[44%] lg:block">
-              {heroPicks.map((c, i) => {
-                const src = canvasImageUrl(manifest, kind, c.image) ?? thumbUrl(manifest, kind, c.image);
-                return src ? <img key={c.image} src={src} alt="" className={`absolute object-contain drop-shadow-[0_8px_18px_rgb(27_28_56/0.18)] ${HERO_SPOTS[i]}`} /> : null;
-              })}
-            </div>
-          )}
+          {manifest && heroPicks.length > 0 && <HeroArt picks={heroPicks} kind={kind} manifest={manifest} />}
         </header>
 
         {/* Trending gear and Newly added on the left, Popular brands on the right stretching to their height (stacked
@@ -806,6 +800,75 @@ function FilterPanel({
           Clear filters
         </button>
       )}
+    </div>
+  );
+}
+
+/** Hero art variants to compare, picked with ?hero= in the address (row, single, mosaic, board, fan). */
+type HeroVariant = "row" | "single" | "mosaic" | "board" | "fan";
+// Read when the page loads, before the filters rewrite the address.
+const HERO_VARIANT: HeroVariant = (() => {
+  const v = new URLSearchParams(window.location.search).get("hero");
+  return v === "single" || v === "mosaic" || v === "board" || v === "fan" ? v : "row";
+})();
+
+/** The picture side of the Gear hero (laptops and up). */
+function HeroArt({ picks, kind, manifest }: { picks: CatalogItem[]; kind: Kind; manifest: Manifest }) {
+  const variant = HERO_VARIANT;
+  const [board, setBoard] = useState<string | null>(null);
+  useEffect(() => {
+    if (variant !== "board") return;
+    void fetchGalleryBoards({ type: null, search: "", sort: "liked", offset: 0, limit: 1 }).then(
+      (b) => setBoard(b[0]?.thumbnail ?? null),
+      () => undefined,
+    );
+  }, [variant]);
+  const src = (c: CatalogItem) => canvasImageUrl(manifest, kind, c.image) ?? thumbUrl(manifest, kind, c.image) ?? "";
+  const shadow = "drop-shadow-[0_8px_18px_rgb(27_28_56/0.18)]";
+  const wrap = "pointer-events-none absolute inset-y-0 right-0 hidden lg:block";
+
+  // A row of four, to scale with each other, standing on the band's bottom edge and cropped by it.
+  if (variant === "row")
+    return (
+      <div aria-hidden className={`${wrap} w-[48%] [container-type:size]`}>
+        <div className="absolute -bottom-[14%] right-8 flex items-end gap-5">
+          {picks.slice(0, 4).map((c) => (
+            <img key={c.image} src={src(c)} alt="" className={`w-auto object-contain ${shadow}`} style={{ height: `${Math.min((c.height / 6.5) * 100, 96)}cqh` }} />
+          ))}
+        </div>
+      </div>
+    );
+  // One pedal, zoomed in and cropped off the right and bottom edges.
+  if (variant === "single")
+    return (
+      <div aria-hidden className={`${wrap} w-[40%]`}>
+        <img src={src(picks[0])} alt="" className={`absolute -right-[4%] top-[14%] h-[180%] w-[80%] object-contain object-left-top ${shadow}`} />
+      </div>
+    );
+  // Six small tiles, two rows of three, flush to the band's right side.
+  if (variant === "mosaic")
+    return (
+      <div aria-hidden className="pointer-events-none absolute inset-y-5 right-5 hidden w-[36%] grid-cols-3 grid-rows-2 gap-2 lg:grid">
+        {picks.slice(0, 6).map((c) => (
+          <span key={c.image} className="relative rounded-panel bg-surface">
+            <img src={src(c)} alt="" className="absolute inset-[12%] size-[76%] object-contain" />
+          </span>
+        ))}
+      </div>
+    );
+  // The most liked board in Explore, peeking in from the right edge.
+  if (variant === "board")
+    return board ? (
+      <div aria-hidden className={`${wrap} w-[46%]`}>
+        <img src={board} alt="" className="absolute -right-[8%] top-[12%] h-[110%] w-auto max-w-none object-contain object-left-top" />
+      </div>
+    ) : null;
+  // The first try: three tilted photos in a loose fan.
+  return (
+    <div aria-hidden className={`${wrap} w-[44%]`}>
+      {picks.slice(0, 3).map((c, i) => (
+        <img key={c.image} src={src(c)} alt="" className={`absolute object-contain ${shadow} ${HERO_SPOTS[i]}`} />
+      ))}
     </div>
   );
 }
