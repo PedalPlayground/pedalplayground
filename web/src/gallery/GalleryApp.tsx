@@ -397,7 +397,7 @@ export function GalleryApp() {
 
 /** A card's small icon button over the photo (Report, Hide). */
 const cardAction =
-  "flex size-7 items-center justify-center rounded-control bg-surface/90 shadow-chip outline-none hover:bg-surface focus-visible:ring-2 focus-visible:ring-brand";
+  "flex size-6 items-center justify-center rounded-control outline-none hover:bg-soft focus-visible:ring-2 focus-visible:ring-brand";
 
 function BoardCard({
   board,
@@ -480,15 +480,15 @@ function BoardCard({
       </div>
       {(onHide || onReport) && (
         // Small icon buttons in the photo's top right corner, shown on hover (always on touch screens).
-        <span className="absolute right-2 top-2 z-10 flex gap-1 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
+        <span className="absolute right-1.5 top-1.5 z-10 flex gap-0.5 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
           {onHide && (
             <button type="button" onClick={onHide} aria-label="Hide from Explore" {...tip("Hide from Explore")} className={`${cardAction} text-danger`}>
-              <EyeOff size={15} strokeWidth={2} />
+              <EyeOff size={13} strokeWidth={2} />
             </button>
           )}
           {onReport && (
             <button type="button" onClick={onReport} aria-label="Report Board" {...tip("Report Board")} className={`${cardAction} text-icon hover:text-ink`}>
-              <Flag size={15} strokeWidth={2} />
+              <Flag size={13} strokeWidth={2} />
             </button>
           )}
         </span>
