@@ -76,6 +76,7 @@ export function CatalogTab({
   useEffect(() => {
     setItems(null);
     setSelected(new Set());
+    anchor.current = null;
     const t = setTimeout(() => void load(0), 250);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -164,13 +165,25 @@ export function CatalogTab({
   };
 
   const chosen = (items ?? []).filter((x) => selected.has(x.id));
-  const toggle = (id: number) =>
+  /** The row last ticked or unticked without Shift: where a Shift-click range starts. */
+  const anchor = useRef<number | null>(null);
+  /** Ticks or unticks a row; with Shift, every row from the last one clicked to this one, to match this one. */
+  const toggle = (id: number, shift = false) => {
+    const list = items ?? [];
+    const to = list.findIndex((x) => x.id === id);
+    const from = shift && anchor.current !== null ? list.findIndex((x) => x.id === anchor.current) : -1;
     setSelected((s) => {
       const n = new Set(s);
-      if (n.has(id)) n.delete(id);
-      else n.add(id);
+      const tick = !n.has(id);
+      const ids = from >= 0 && to >= 0 ? list.slice(Math.min(from, to), Math.max(from, to) + 1).map((x) => x.id) : [id];
+      for (const x of ids) {
+        if (tick) n.add(x);
+        else n.delete(x);
+      }
       return n;
     });
+    if (!shift || from < 0) anchor.current = id;
+  };
   /** Runs a change over every ticked item, one at a time, then publishes once. */
   const bulk = async (label: string, fn: (item: Item) => Promise<boolean>) => {
     let ok = 0;
@@ -306,7 +319,11 @@ export function CatalogTab({
                 // A click on the row's blank space ticks it (anything you can click or type in keeps its own job).
                 onClick={(e) => {
                   if ((e.target as HTMLElement).closest("button, a, input, select, textarea, [data-row-control]")) return;
-                  toggle(item.id);
+                  toggle(item.id, e.shiftKey);
+                }}
+                // Shift-clicking a range shouldn't also select the text in between.
+                onMouseDown={(e) => {
+                  if (e.shiftKey && !(e.target as HTMLElement).closest("input, select, textarea, [data-row-control]")) e.preventDefault();
                 }}
                 className={`grid items-center gap-2 px-3 py-2.5 md:grid-cols-[minmax(0,18rem)_minmax(0,1fr)_auto] md:gap-4 ${on ? "bg-soft/60" : ""}`}
               >
@@ -314,7 +331,9 @@ export function CatalogTab({
                   <input
                     type="checkbox"
                     checked={on}
-                    onChange={() => toggle(item.id)}
+                    // onClick, not onChange, to see Shift.
+                    onChange={() => undefined}
+                    onClick={(e) => toggle(item.id, e.shiftKey)}
                     aria-label={`Select ${item.brand} ${item.name}`}
                     className="size-4 shrink-0 accent-[var(--color-brand)]"
                   />
