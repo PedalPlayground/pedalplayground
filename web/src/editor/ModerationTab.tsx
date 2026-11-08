@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchShared, setGalleryThumbnail, uploadBoardThumbnail } from "../lib/cloud";
-import { closeBugReport, listBugReports, type BugReport } from "../lib/editorApi";
+import { closeBugReport, listBugReports, listModerators, setModerator, type BugReport, type Moderator } from "../lib/editorApi";
 import { fetchGalleryBoards, GALLERY_PAGE_SIZE } from "../lib/gallery";
 import { renderThumbnailFile } from "../lib/thumbnail";
 import { fieldBox, fieldError, fieldHelp, fieldInput, fieldLabel } from "../components/formText";
@@ -54,7 +54,23 @@ const userFromHash = () => new URLSearchParams(window.location.hash.split("?")[1
  * username: their flags, and a form to flag them (warning,
  * timeout or ban, with the next step suggested from their history).
  */
-export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
+export function ModerationTab({ setNotice, canManage = true }: { setNotice: SetNotice; /** Editors: manage moderators, redraw thumbnails. */ canManage?: boolean }) {
+  /** Editors: who moderates (null while loading). */
+  const [mods, setMods] = useState<Moderator[] | null>(null);
+  const loadMods = () => {
+    if (canManage) void listModerators().then(setMods, () => setMods([]));
+  };
+  useEffect(loadMods, [canManage]); // eslint-disable-line react-hooks/exhaustive-deps
+  const toggleMod = async (userId: string, username: string, make: boolean) => {
+    if (!make && !window.confirm(`Stop ${username} being a moderator?`)) return;
+    try {
+      await setModerator(userId, make);
+      setNotice({ text: make ? `${username} is now a moderator. They'll see Admin › Moderation next time they load a page.` : `${username} is no longer a moderator.` });
+      loadMods();
+    } catch (e) {
+      setNotice({ text: (e as Error).message, error: true });
+    }
+  };
   const [reports, setReports] = useState<Report[] | null>(null);
   const [hidden, setHidden] = useState<HiddenBoard[] | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -238,10 +254,60 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
             setNotice={setNotice}
           />
         )}
+        {/* Editors: make this person a moderator, or stop them being one. */}
+        {user && canManage && mods && (
+          <div className="flex flex-wrap items-center justify-between gap-3 rounded-panel bg-card px-3 py-2.5">
+            <span className="text-[13px]">
+              {mods.some((m) => m.user_id === user.user_id) ? (
+                <>
+                  <span className="font-semibold">{user.username}</span> is a moderator.
+                </>
+              ) : (
+                <>Moderators can handle reports, flag users, hide boards and comments, and read bug reports. They can't edit the catalog.</>
+              )}
+            </span>
+            {mods.some((m) => m.user_id === user.user_id) ? (
+              <button type="button" className={`${secondaryButton} text-danger`} onClick={() => void toggleMod(user.user_id, user.username, false)}>
+                Remove Moderator
+              </button>
+            ) : (
+              <button type="button" className={primaryButton} onClick={() => void toggleMod(user.user_id, user.username, true)}>
+                Make Moderator
+              </button>
+            )}
+          </div>
+        )}
       </section>
 
+      {canManage && (
+        <section className="grid content-start gap-3">
+          <h2 className="text-lg font-bold tracking-[-0.01em]">Moderators</h2>
+          {mods === null ? (
+            <p className="text-[13px] text-ink-muted">Loading…</p>
+          ) : mods.length === 0 ? (
+            <p className="text-[13px] text-ink-muted">No moderators yet. Look up a user to make them one.</p>
+          ) : (
+            <ul className="grid gap-1">
+              {mods.map((m) => (
+                <li key={m.user_id} className="flex items-center justify-between gap-3 rounded-panel bg-card px-3 py-2">
+                  <button type="button" className="text-[13px] font-semibold hover:underline" onClick={() => m.username && void look(m.username)}>
+                    {m.username ?? "No username"}
+                  </button>
+                  <span className="flex items-center gap-3">
+                    <span className="text-xs text-ink-muted">Since {shortDate(m.added_at)}</span>
+                    <button type="button" className="text-xs font-semibold text-danger hover:underline" onClick={() => void toggleMod(m.user_id, m.username ?? "this user", false)}>
+                      Remove
+                    </button>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      )}
+
       <BugReports setNotice={setNotice} />
-      <RedrawThumbnails />
+      {canManage && <RedrawThumbnails />}
     </div>
   );
 }

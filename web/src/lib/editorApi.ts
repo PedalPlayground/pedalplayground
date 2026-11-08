@@ -75,6 +75,34 @@ export async function isEditor(): Promise<boolean> {
   return data === true;
 }
 
+/** Moderators and editors. Falls back to the editor check until the moderators migration is run. */
+export async function isModerator(): Promise<boolean> {
+  const { data, error } = await db().rpc("is_moderator");
+  if (error) return isEditor();
+  return data === true;
+}
+
+export interface Moderator {
+  user_id: string;
+  username: string | null;
+  added_at: string;
+}
+
+/** Editors: everyone who moderates (empty until the moderators migration is run). */
+export async function listModerators(): Promise<Moderator[]> {
+  const { data, error } = await db().rpc("list_moderators");
+  if (error && /list_moderators|schema cache|does not exist/i.test(error.message)) return [];
+  fail(error);
+  return (data ?? []) as Moderator[];
+}
+
+/** Editors: makes someone a moderator, or stops them being one. */
+export async function setModerator(userId: string, make: boolean): Promise<void> {
+  const { error } = await db().rpc("set_moderator", { target: userId, make });
+  if (error && /set_moderator|schema cache/i.test(error.message)) throw new Error("Moderators aren't set up yet. Run the moderators migration first.");
+  fail(error);
+}
+
 export const fieldsFrom = (r: Submission | Item): Fields => ({
   kind: r.kind,
   brand: r.brand,

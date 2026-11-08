@@ -1,7 +1,7 @@
 import { Guitar, LayoutGrid, Plus, Wrench, type LucideProps } from "lucide-react";
 import { useHasBoards } from "../lib/useHasBoards";
+import { useIsModerator } from "../lib/useIsEditor";
 import { useId, type ReactNode } from "react";
-import { useIsEditor } from "../lib/useIsEditor";
 import { Brand } from "./Logo";
 
 /**
@@ -47,10 +47,11 @@ export function StartBuilding() {
   );
 }
 
-/** Admin (the editor page), for catalog editors only: its own boxed section between the nav and the account. */
+/** Admin (the editor page), for catalog editors and moderators: its own boxed section between the nav and the account. */
 function AdminSection({ current }: { current: SitePage }) {
-  const editor = useIsEditor();
-  if (!editor) return null;
+  // Editors and moderators (who get the Moderation tab only).
+  const allowed = useIsModerator();
+  if (!allowed) return null;
   return (
     <div className={`${section} border-l border-chrome-line px-2 sm:px-4`}>
       <a href="/editor/" aria-current={current === "editor" ? "page" : undefined} className={tabClass(false)}>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../store/auth";
-import { isEditor } from "./editorApi";
+import { isEditor, isModerator } from "./editorApi";
 
 let cache: { userId: string; result: Promise<boolean> } | null = null;
 
@@ -18,4 +18,22 @@ export function useIsEditor(): boolean {
     };
   }, [userId]);
   return !!userId && editor;
+}
+
+let modCache: { userId: string; result: Promise<boolean> } | null = null;
+
+/** True for moderators and catalog editors (they can do everything moderators can). Checked once per account. */
+export function useIsModerator(): boolean {
+  const userId = useAuth((s) => s.user?.id ?? null);
+  const [mod, setMod] = useState(false);
+  useEffect(() => {
+    if (!userId) return setMod(false);
+    if (modCache?.userId !== userId) modCache = { userId, result: isModerator().catch(() => false) };
+    let live = true;
+    void modCache.result.then((v) => live && setMod(v));
+    return () => {
+      live = false;
+    };
+  }, [userId]);
+  return !!userId && mod;
 }
