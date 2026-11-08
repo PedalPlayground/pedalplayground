@@ -164,6 +164,13 @@ export function CatalogTab({
   };
 
   const chosen = (items ?? []).filter((x) => selected.has(x.id));
+  const toggle = (id: number) =>
+    setSelected((s) => {
+      const n = new Set(s);
+      if (n.has(id)) n.delete(id);
+      else n.add(id);
+      return n;
+    });
   /** Runs a change over every ticked item, one at a time, then publishes once. */
   const bulk = async (label: string, fn: (item: Item) => Promise<boolean>) => {
     let ok = 0;
@@ -294,19 +301,20 @@ export function CatalogTab({
             const problem = failed.get(item.id);
             const on = selected.has(item.id);
             return (
-              <li key={item.id} className={`grid items-start gap-2 px-3 py-2.5 md:grid-cols-[minmax(0,18rem)_minmax(0,1fr)_auto] md:gap-4 ${on ? "bg-soft/60" : ""}`}>
+              <li
+                key={item.id}
+                // A click on the row's blank space ticks it (anything you can click or type in keeps its own job).
+                onClick={(e) => {
+                  if ((e.target as HTMLElement).closest("button, a, input, select, textarea, [data-row-control]")) return;
+                  toggle(item.id);
+                }}
+                className={`grid items-center gap-2 px-3 py-2.5 md:grid-cols-[minmax(0,18rem)_minmax(0,1fr)_auto] md:gap-4 ${on ? "bg-soft/60" : ""}`}
+              >
                 <div className="flex min-w-0 items-center gap-2.5">
                   <input
                     type="checkbox"
                     checked={on}
-                    onChange={() =>
-                      setSelected((s) => {
-                        const n = new Set(s);
-                        if (n.has(item.id)) n.delete(item.id);
-                        else n.add(item.id);
-                        return n;
-                      })
-                    }
+                    onChange={() => toggle(item.id)}
                     aria-label={`Select ${item.brand} ${item.name}`}
                     className="size-4 shrink-0 accent-[var(--color-brand)]"
                   />
@@ -334,7 +342,7 @@ export function CatalogTab({
                     </span>
                   </button>
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0" data-row-control={item.kind === "pedal" ? "" : undefined}>
                   {item.kind === "pedal" ? (
                     <TypeCombo compact value={typesOf(item)} disabled={saving.has(item.id)} label={`Types for ${item.brand} ${item.name}`} onChange={(t) => void saveTypes(item, t)} />
                   ) : (
@@ -343,7 +351,7 @@ export function CatalogTab({
                   {problem && <p className="mt-1 text-xs text-danger">Didn't save: {problem}</p>}
                 </div>
                 {/* Edit, Copy (a new item from this one, on the Add tab), and Archive or Restore. */}
-                <div className="flex items-center gap-0.5 md:pt-0.5">
+                <div className="flex items-center gap-0.5">
                   <button type="button" aria-label={`Edit ${item.brand} ${item.name}`} onClick={() => openItem(item)} className={rowLabeled}>
                     <Pencil size={14} strokeWidth={2} />
                     Edit

@@ -183,7 +183,7 @@ Only accounts in `catalog_editors` get past the sign-in check; everyone else see
   collapsed with Show more), a search, and the matching items. Each pedal row has its types as a combo box (the first
   chip is the main type; type to add, drag or Alt+arrow to reorder, X or Backspace to remove) that saves on change.
   Tick items (or Select all shown) and the bulk actions appear beside Select all in the list's header row (small 28px controls, fixed height): Add type, Make main type, Remove type, Archive, Restore, each run
-  item by item and published once. Each row also has Edit (open it) and Copy (a new item from it on Add) as labeled buttons, and a red Archive icon (Restore once archived). Open an item to fix its fields or photo. The Gear page's **Edit in catalog** link
+  item by item and published once. Each row also has Edit (open it) and Copy (a new item from it on Add) as labeled buttons, and a red Archive icon (Restore once archived). Clicking a row's blank space ticks it. Open an item to fix its fields or photo. The Gear page's **Edit in catalog** link
   (editors only) opens an item directly: `/editor/#catalog?kind=pedal&key=<key>`. The item form uses the same type
   combo box.
 
