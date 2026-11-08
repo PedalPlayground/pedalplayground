@@ -18,7 +18,7 @@ import { galleryReturnUrl, userGalleryUrl } from "../lib/gallery";
 import { moderationError, shortDate } from "../lib/moderation";
 import { hasProfanity, PROFANITY_MESSAGE } from "../lib/profanity";
 import { useAllowedNames } from "../lib/useAllowedNames";
-import { useIsModerator } from "../lib/useIsEditor";
+import { useIsEditor } from "../lib/useIsEditor";
 import { useMediaQuery } from "../lib/viewport";
 import { useRestriction } from "../store/standing";
 import { ReportDialog } from "./ReportDialog";
@@ -419,8 +419,7 @@ function Social({
 }) {
   const list = useRef<HTMLDivElement>(null);
   const user = useAuth((s) => s.user);
-  // Moderators (and editors) get a link to the commenter's moderation page.
-  const editor = useIsModerator();
+  const editor = useIsEditor();
   const [reporting, setReporting] = useState<BoardComment | null>(null);
 
 

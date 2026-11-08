@@ -75,31 +75,32 @@ export async function isEditor(): Promise<boolean> {
   return data === true;
 }
 
-/** Moderators and editors. Falls back to the editor check until the moderators migration is run. */
-export async function isModerator(): Promise<boolean> {
-  const { data, error } = await db().rpc("is_moderator");
-  if (error) return isEditor();
+/** Admins (Trav, so far): they change permissions and post What's New. False until the admins migration is run. */
+export async function isAdmin(): Promise<boolean> {
+  const { data, error } = await db().rpc("is_admin");
+  if (error) return false;
   return data === true;
 }
 
-export interface Moderator {
+export interface EditorAccount {
   user_id: string;
   username: string | null;
   added_at: string;
+  admin: boolean;
 }
 
-/** Editors: everyone who moderates (empty until the moderators migration is run). */
-export async function listModerators(): Promise<Moderator[]> {
-  const { data, error } = await db().rpc("list_moderators");
-  if (error && /list_moderators|schema cache|does not exist/i.test(error.message)) return [];
+/** Admins: everyone who can edit (empty until the admins migration is run). */
+export async function listEditors(): Promise<EditorAccount[]> {
+  const { data, error } = await db().rpc("list_editors");
+  if (error && /list_editors|schema cache|does not exist/i.test(error.message)) return [];
   fail(error);
-  return (data ?? []) as Moderator[];
+  return (data ?? []) as EditorAccount[];
 }
 
-/** Editors: makes someone a moderator, or stops them being one. */
-export async function setModerator(userId: string, make: boolean): Promise<void> {
-  const { error } = await db().rpc("set_moderator", { target: userId, make });
-  if (error && /set_moderator|schema cache/i.test(error.message)) throw new Error("Moderators aren't set up yet. Run the moderators migration first.");
+/** Admins: makes someone an editor, or stops them being one. */
+export async function setEditor(userId: string, make: boolean): Promise<void> {
+  const { error } = await db().rpc("set_editor", { target: userId, make });
+  if (error && /set_editor|schema cache/i.test(error.message)) throw new Error("Roles aren't set up yet. Run the admins migration first.");
   fail(error);
 }
 

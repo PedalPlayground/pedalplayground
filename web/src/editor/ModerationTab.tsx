@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchShared, setGalleryThumbnail, uploadBoardThumbnail } from "../lib/cloud";
-import { closeBugReport, listBugReports, listModerators, setModerator, type BugReport, type Moderator } from "../lib/editorApi";
+import { closeBugReport, listBugReports, listEditors, setEditor, type BugReport, type EditorAccount } from "../lib/editorApi";
 import { fetchGalleryBoards, GALLERY_PAGE_SIZE } from "../lib/gallery";
 import { renderThumbnailFile } from "../lib/thumbnail";
 import { fieldBox, fieldError, fieldHelp, fieldInput, fieldLabel } from "../components/formText";
@@ -54,19 +54,19 @@ const userFromHash = () => new URLSearchParams(window.location.hash.split("?")[1
  * username: their flags, and a form to flag them (warning,
  * timeout or ban, with the next step suggested from their history).
  */
-export function ModerationTab({ setNotice, canManage = true }: { setNotice: SetNotice; /** Editors: manage moderators, redraw thumbnails. */ canManage?: boolean }) {
-  /** Editors: who moderates (null while loading). */
-  const [mods, setMods] = useState<Moderator[] | null>(null);
-  const loadMods = () => {
-    if (canManage) void listModerators().then(setMods, () => setMods([]));
+export function ModerationTab({ setNotice, isAdmin = false }: { setNotice: SetNotice; /** Admins manage who's an editor. */ isAdmin?: boolean }) {
+  /** Admins: who can edit (null while loading). */
+  const [editors, setEditors] = useState<EditorAccount[] | null>(null);
+  const loadEditors = () => {
+    if (isAdmin) void listEditors().then(setEditors, () => setEditors([]));
   };
-  useEffect(loadMods, [canManage]); // eslint-disable-line react-hooks/exhaustive-deps
-  const toggleMod = async (userId: string, username: string, make: boolean) => {
-    if (!make && !window.confirm(`Stop ${username} being a moderator?`)) return;
+  useEffect(loadEditors, [isAdmin]); // eslint-disable-line react-hooks/exhaustive-deps
+  const toggleEditor = async (userId: string, username: string, make: boolean) => {
+    if (!make && !window.confirm(`Stop ${username} being an editor?`)) return;
     try {
-      await setModerator(userId, make);
-      setNotice({ text: make ? `${username} is now a moderator. They'll see Admin › Moderation next time they load a page.` : `${username} is no longer a moderator.` });
-      loadMods();
+      await setEditor(userId, make);
+      setNotice({ text: make ? `${username} is now an editor. They'll see Admin in the header next time they load a page.` : `${username} is no longer an editor.` });
+      loadEditors();
     } catch (e) {
       setNotice({ text: (e as Error).message, error: true });
     }
@@ -254,50 +254,60 @@ export function ModerationTab({ setNotice, canManage = true }: { setNotice: SetN
             setNotice={setNotice}
           />
         )}
-        {/* Editors: make this person a moderator, or stop them being one. */}
-        {user && canManage && mods && (
-          <div className="flex flex-wrap items-center justify-between gap-3 rounded-panel bg-card px-3 py-2.5">
-            <span className="text-[13px]">
-              {mods.some((m) => m.user_id === user.user_id) ? (
-                <>
-                  <span className="font-semibold">{user.username}</span> is a moderator.
-                </>
-              ) : (
-                <>Moderators can handle reports, flag users, hide boards and comments, and read bug reports. They can't edit the catalog.</>
-              )}
-            </span>
-            {mods.some((m) => m.user_id === user.user_id) ? (
-              <button type="button" className={`${secondaryButton} text-danger`} onClick={() => void toggleMod(user.user_id, user.username, false)}>
-                Remove Moderator
-              </button>
-            ) : (
-              <button type="button" className={primaryButton} onClick={() => void toggleMod(user.user_id, user.username, true)}>
-                Make Moderator
-              </button>
-            )}
-          </div>
-        )}
+        {/* Admins: make this person an editor, or stop them being one. */}
+        {user && isAdmin && editors && (() => {
+          const role = editors.find((e) => e.user_id === user.user_id);
+          return (
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-panel bg-card px-3 py-2.5">
+              <span className="text-[13px]">
+                {role?.admin ? (
+                  <>
+                    <span className="font-semibold">{user.username}</span> is an admin.
+                  </>
+                ) : role ? (
+                  <>
+                    <span className="font-semibold">{user.username}</span> is an editor.
+                  </>
+                ) : (
+                  <>Editors can update the catalog, approve the queue and moderate. Only admins change permissions or post What's New.</>
+                )}
+              </span>
+              {!role?.admin &&
+                (role ? (
+                  <button type="button" className={`${secondaryButton} text-danger`} onClick={() => void toggleEditor(user.user_id, user.username, false)}>
+                    Remove Editor
+                  </button>
+                ) : (
+                  <button type="button" className={primaryButton} onClick={() => void toggleEditor(user.user_id, user.username, true)}>
+                    Make Editor
+                  </button>
+                ))}
+            </div>
+          );
+        })()}
       </section>
 
-      {canManage && (
+      {isAdmin && (
         <section className="grid content-start gap-3">
-          <h2 className="text-lg font-bold tracking-[-0.01em]">Moderators</h2>
-          {mods === null ? (
+          <h2 className="text-lg font-bold tracking-[-0.01em]">Editors</h2>
+          {editors === null ? (
             <p className="text-[13px] text-ink-muted">Loading…</p>
-          ) : mods.length === 0 ? (
-            <p className="text-[13px] text-ink-muted">No moderators yet. Look up a user to make them one.</p>
+          ) : editors.length === 0 ? (
+            <p className="text-[13px] text-ink-muted">Roles aren't set up yet. Run the admins migration.</p>
           ) : (
             <ul className="grid gap-1">
-              {mods.map((m) => (
+              {editors.map((m) => (
                 <li key={m.user_id} className="flex items-center justify-between gap-3 rounded-panel bg-card px-3 py-2">
                   <button type="button" className="text-[13px] font-semibold hover:underline" onClick={() => m.username && void look(m.username)}>
                     {m.username ?? "No username"}
                   </button>
                   <span className="flex items-center gap-3">
-                    <span className="text-xs text-ink-muted">Since {shortDate(m.added_at)}</span>
-                    <button type="button" className="text-xs font-semibold text-danger hover:underline" onClick={() => void toggleMod(m.user_id, m.username ?? "this user", false)}>
-                      Remove
-                    </button>
+                    <span className="text-xs text-ink-muted">{m.admin ? "Admin" : `Editor since ${shortDate(m.added_at)}`}</span>
+                    {!m.admin && (
+                      <button type="button" className="text-xs font-semibold text-danger hover:underline" onClick={() => void toggleEditor(m.user_id, m.username ?? "this user", false)}>
+                        Remove
+                      </button>
+                    )}
                   </span>
                 </li>
               ))}
@@ -307,7 +317,7 @@ export function ModerationTab({ setNotice, canManage = true }: { setNotice: SetN
       )}
 
       <BugReports setNotice={setNotice} />
-      {canManage && <RedrawThumbnails />}
+      <RedrawThumbnails />
     </div>
   );
 }

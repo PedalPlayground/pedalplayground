@@ -6,7 +6,7 @@ import { supabase } from "../lib/supabase";
 import { drawLayout } from "../lib/thumbnail";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { ReportDialog } from "../components/ReportDialog";
-import { useIsModerator } from "../lib/useIsEditor";
+import { useIsEditor } from "../lib/useIsEditor";
 import { moderationError } from "../lib/moderation";
 import { useRestriction } from "../store/standing";
 import { useAuth } from "../store/auth";
@@ -89,8 +89,7 @@ export function GalleryApp() {
   const [loading, setLoading] = useState(true);
   const [more, setMore] = useState(false);
   const [failed, setFailed] = useState(false);
-  // Moderators (and editors) can hide boards from the Gallery.
-  const editor = useIsModerator();
+  const editor = useIsEditor();
   const [density, setDensity] = useDensity("gallery");
   /** The most liked board, drawn big in the hero. */
   const [heroBoard, setHeroBoard] = useState<GalleryBoard | null>(null);

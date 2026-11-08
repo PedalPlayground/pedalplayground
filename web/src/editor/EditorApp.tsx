@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchManifest, type Manifest } from "../lib/catalog";
-import { isEditor, isModerator, pendingBuilds, publish } from "../lib/editorApi";
+import { isAdmin, isEditor, pendingBuilds, publish } from "../lib/editorApi";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { useAuth } from "../store/auth";
 import { AddTab } from "./AddTab";
@@ -42,8 +42,8 @@ export function EditorApp() {
   const ready = useAuth((s) => s.ready);
   const user = useAuth((s) => s.user);
   const [allowed, setAllowed] = useState<boolean | null>(null);
-  /** Moderators (not editors) get the Moderation tab only. */
-  const [modOnly, setModOnly] = useState(false);
+  /** Admins also get News and manage who's an editor. */
+  const [admin, setAdmin] = useState(false);
   const [tab, setTabState] = useState<Tab>(tabFromHash);
   const setTab = (t: Tab) => {
     setTabState(t);
@@ -68,19 +68,19 @@ export function EditorApp() {
   }, []);
   useEffect(() => {
     if (!user) return setAllowed(null);
-    Promise.all([isEditor().catch(() => false), isModerator().catch(() => false)]).then(([editor, mod]) => {
-      setModOnly(!editor && mod);
-      setAllowed(editor || mod);
+    Promise.all([isEditor().catch(() => false), isAdmin().catch(() => false)]).then(([editor, isAdminUser]) => {
+      setAdmin(isAdminUser);
+      setAllowed(editor || isAdminUser);
     });
   }, [user]);
   useEffect(() => {
-    if (!allowed || modOnly) return;
+    if (!allowed) return;
     fetchManifest().then(setManifest, () => setManifest(null));
     const refresh = () => pendingBuilds().then(setWaiting, () => undefined);
     refresh();
     const t = setInterval(refresh, 30_000);
     return () => clearInterval(t);
-  }, [allowed, modOnly]);
+  }, [allowed]);
 
   const runPublish = async (): Promise<Notice> => {
     const problem = await publish();
@@ -105,12 +105,12 @@ export function EditorApp() {
   if (!allowed)
     return (
       <Shell header={header}>
-        <p className="text-[15px]">This page is for catalog editors and moderators. Your account isn't one.</p>
+        <p className="text-[15px]">This page is for editors and admins. Your account isn't one.</p>
       </Shell>
     );
 
-  // Moderators only moderate.
-  const shown: Tab = modOnly ? "moderation" : tab;
+  // News is for admins.
+  const shown: Tab = tab === "news" && !admin ? "queue" : tab;
   const tabButton = (t: Tab, label: string) => (
     <button
       type="button"
@@ -128,17 +128,12 @@ export function EditorApp() {
       bar={
         <>
           <nav className="flex gap-1">
-            {!modOnly && (
-              <>
-                {tabButton("queue", "Queue")}
-                {tabButton("add", "Add")}
-                {tabButton("catalog", "Catalog")}
-                {tabButton("news", "News")}
-              </>
-            )}
+            {tabButton("queue", "Queue")}
+            {tabButton("add", "Add")}
+            {tabButton("catalog", "Catalog")}
+            {admin && tabButton("news", "News")}
             {tabButton("moderation", "Moderation")}
           </nav>
-          {!modOnly && (
           <div className="ml-auto flex items-center gap-3">
             {waiting !== null && waiting > 0 && (
               <span className="text-xs text-ink-muted">
@@ -149,7 +144,6 @@ export function EditorApp() {
               Publish now
             </button>
           </div>
-          )}
         </>
       }
     >
@@ -167,7 +161,7 @@ export function EditorApp() {
       {shown === "queue" && <QueueTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
       {shown === "add" && <AddTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
       {shown === "news" && <NewsTab setNotice={setNotice} />}
-      {shown === "moderation" && <ModerationTab setNotice={setNotice} canManage={!modOnly} />}
+      {shown === "moderation" && <ModerationTab setNotice={setNotice} isAdmin={admin} />}
       {shown === "catalog" && <CatalogTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
     </Shell>
   );

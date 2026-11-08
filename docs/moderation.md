@@ -46,18 +46,19 @@ changed, comments, likes, reports it sent and reports about it, and catalog sugg
 The tab's feed also lists boards hidden from the gallery (by an editor's Hide, or by a ban), newest first, with who hid
 them. **Unhide** puts a board back in the gallery; one hidden by a ban asks first.
 
-## Moderators
+## Roles
 
-Catalog editors can make anyone a **moderator** from Admin › Moderation › Look Up User (**Make Moderator** /
-**Remove Moderator**), and see them all under **Moderators**. Moderators can do the moderation work editors can:
-reports, flags, timeouts and bans, hiding boards from the Gallery and deleting comments, and reading bug reports.
-They see the Admin tab in the header, but only its Moderation tab, without the moderator list or Redraw All. They
-can't edit the catalog or post What's New. Only editors can make or remove moderators.
+Two roles (migration `20261108180000_admins.sql`):
 
-Behind it (migration `20261108180000_moderators.sql`): a `moderators` table read and written only through
-`is_moderator()` (true for moderators and editors), `set_moderator()` and `list_moderators()` (editors only). The
-migration rewrites each moderation function's `is_catalog_editor()` check as `is_moderator()`, and lets moderators
-read and close bug reports. In the app: `useIsModerator()` in `lib/useIsEditor.ts`.
+- **Admin** (Trav, so far; the `admins` table): everything. Changes permissions (Admin › Moderation › Look Up User:
+  **Make Editor** / **Remove Editor**, and the **Editors** list) and posts What's New (the News tab and "Post an
+  Update"). An admin counts as an editor everywhere.
+- **Editor** (`catalog_editors`): updates the catalog, approves the queue, and moderates (reports, flags, hiding
+  boards and comments, bug reports). Sees Admin in the header, without the News tab.
+
+Behind it: `is_admin()`, `is_catalog_editor()` (true for editors and admins), `set_editor()` and `list_editors()`
+(admins only). What's New posts are writable by admins only. In the app: `useIsEditor()` and `useIsAdmin()` in
+`lib/useIsEditor.ts`.
 
 ## Curse words
 

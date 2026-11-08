@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../store/auth";
-import { isEditor, isModerator } from "./editorApi";
+import { isAdmin, isEditor } from "./editorApi";
 
 let cache: { userId: string; result: Promise<boolean> } | null = null;
 
-/** True when the signed-in account is a catalog editor. Checked once per account and shared by everything that asks. */
+/** True when the signed-in account is an editor (admins are editors too). Checked once per account and shared by everything that asks. */
 export function useIsEditor(): boolean {
   const userId = useAuth((s) => s.user?.id ?? null);
   const [editor, setEditor] = useState(false);
@@ -20,20 +20,20 @@ export function useIsEditor(): boolean {
   return !!userId && editor;
 }
 
-let modCache: { userId: string; result: Promise<boolean> } | null = null;
+let adminCache: { userId: string; result: Promise<boolean> } | null = null;
 
-/** True for moderators and catalog editors (they can do everything moderators can). Checked once per account. */
-export function useIsModerator(): boolean {
+/** True for admins (they change permissions and post What's New). Checked once per account. */
+export function useIsAdmin(): boolean {
   const userId = useAuth((s) => s.user?.id ?? null);
-  const [mod, setMod] = useState(false);
+  const [admin, setAdmin] = useState(false);
   useEffect(() => {
-    if (!userId) return setMod(false);
-    if (modCache?.userId !== userId) modCache = { userId, result: isModerator().catch(() => false) };
+    if (!userId) return setAdmin(false);
+    if (adminCache?.userId !== userId) adminCache = { userId, result: isAdmin().catch(() => false) };
     let live = true;
-    void modCache.result.then((v) => live && setMod(v));
+    void adminCache.result.then((v) => live && setAdmin(v));
     return () => {
       live = false;
     };
   }, [userId]);
-  return !!userId && mod;
+  return !!userId && admin;
 }
