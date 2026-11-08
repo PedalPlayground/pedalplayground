@@ -10,7 +10,7 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   across the full width; then the grid with its filters. A full-width bar above the sidebar and grid holds the heading (All gear, or Results
   when any filter or search is on) with a result count, the sort and card size (and a Filters button below laptop width). The filters sit in a sticky left sidebar from laptop width and in
   a Filters sheet below it, as two flat lists with no headings: the first row of each names it. The type list is All
-  Gear (pedals and pedalboards together, the default), Pedals, Pedalboards, then each pedal type (picking a type lists
+  Gear (pedals and pedalboards together, the default), Pedals, Pedalboards, then each pedal type, most items first (picking a type lists
   pedals); it only shows types the catalog has, counted within the chosen brand. The brand list is All Brands (no count; a search icon in the count's place opens a Find
   a brand field; Escape or the X closes and clears it), then the brands. Collapsed, the type list shows its first 6 types and the brand list its 10 biggest brands (by item
   count), each with a "Show N more" link (the full list, brands A–Z) and "Show less"; a chosen type or brand always shows. Filters in effect (Pedals or Pedalboards, a type, a brand, the search) show as removable pills in the bar, starting at the tile grid's left edge on laptops (after the heading on tablets, their own row over the grid on phones)

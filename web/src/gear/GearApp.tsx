@@ -272,11 +272,14 @@ export function GearApp() {
   }, [brand, brands]);
 
   /** Types for the Type list, with counts, in the order of src/lib/specs.ts. Empty until the catalog has types. */
-  /** Pedal types for the Type list, with counts (within the chosen brand), in the order of src/lib/specs.ts. */
+  /** Pedal types for the Type list, with counts (within the chosen brand), most first. */
   const types = useMemo(() => {
     const counts = new Map<string, number>();
     for (const item of manifest?.pedals ?? []) if (!brand || item.brand === brand) for (const t of itemTypes(item)) counts.set(t, (counts.get(t) ?? 0) + 1);
-    return PEDAL_TYPES.filter((t) => counts.has(t)).map((t) => [t, counts.get(t)!] as [string, number]);
+    // Biggest first (ties in the order of src/lib/specs.ts).
+    return PEDAL_TYPES.filter((t) => counts.has(t))
+      .map((t) => [t, counts.get(t)!] as [string, number])
+      .sort((a, b) => b[1] - a[1]);
   }, [manifest, brand]);
   /** How many pedals and pedalboards (within the chosen brand), for the top and bottom of the Type list. */
   const kindCounts = useMemo(() => {
