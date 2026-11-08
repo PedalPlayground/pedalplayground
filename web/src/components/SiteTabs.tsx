@@ -32,12 +32,23 @@ export const tabLabel = "max-lg:sr-only";
 
 export type SitePage = "build" | "gallery" | "gear" | "editor" | null;
 
+/** Admin (the editor page), for catalog editors only. It sits after What's New. */
+export function AdminTab({ current }: { current: SitePage }) {
+  const editor = useIsEditor();
+  if (!editor) return null;
+  return (
+    <a href="/editor/" aria-current={current === "editor" ? "page" : undefined} className={tabClass(false)}>
+      <Wrench {...tabIcon} fill="currentColor" className="text-ink-muted" />
+      <span className={tabLabel}>Admin</span>
+    </a>
+  );
+}
+
 /**
- * Explore, Gear, My Playgrounds, then Admin (the editor page) for catalog editors. `builds` is the playground's board menu; elsewhere it's a
+ * Gallery, Gear and My Boards. `builds` is the playground's board menu; elsewhere it's a
  * link to the playground. The current page's tab is marked.
  */
 export function SiteTabs({ current, builds, after }: { current: SitePage; builds?: ReactNode; after?: ReactNode }) {
-  const editor = useIsEditor();
   return (
     <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-1 sm:gap-2">
       <a href="/gallery/" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
@@ -54,12 +65,6 @@ export function SiteTabs({ current, builds, after }: { current: SitePage; builds
           <span className={tabLabel}>My Boards</span>
         </a>
       )}
-      {editor && (
-        <a href="/editor/" aria-current={current === "editor" ? "page" : undefined} className={tabClass(false)}>
-          <Wrench {...tabIcon} fill="currentColor" className="text-ink-muted" />
-          <span className={tabLabel}>Admin</span>
-        </a>
-      )}
       {after}
     </nav>
   );
@@ -69,7 +74,7 @@ const section = "flex shrink-0 items-center";
 
 
 /**
- * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Explore, Gear, My Playgrounds
+ * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Gallery, Gear, My Boards
  * and Updates tabs at the right; then the account section behind a thin divider.
  */
 export function SiteHeader({
@@ -108,8 +113,13 @@ export function SiteHeader({
           <SiteTabs current={current} builds={builds} />
         </div>
       </div>
-      {/* Updates gets its own section, like the account menu. */}
-      {updates && <div className={`${section} border-l border-chrome-line px-1.5`}>{updates}</div>}
+      {/* What's New gets its own section, like the account menu, with Admin after it for catalog editors. */}
+      {updates && (
+        <div className={`${section} gap-1 border-l border-chrome-line px-1.5 sm:gap-2`}>
+          {updates}
+          <AdminTab current={current} />
+        </div>
+      )}
       {account && (
         <div
           data-tour="account"
