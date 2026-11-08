@@ -808,7 +808,7 @@ function FilterPanel({
   }, [brands, find]);
   const count = (n: number) => <span className="shrink-0 text-xs tabular-nums text-ink-muted">{n.toLocaleString("en-US")}</span>;
   return (
-    <div className="flex flex-col gap-5 pt-1">
+    <div className="flex flex-col gap-5">
       {/* All gear, pedals, pedalboards, then the pedal types, in one flat list. The first row names the list. */}
       <div role="radiogroup" aria-label="Type" className="grid gap-0.5">
         {(
