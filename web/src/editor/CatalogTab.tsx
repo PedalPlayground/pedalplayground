@@ -344,11 +344,13 @@ export function CatalogTab({
                 </div>
                 {/* Edit, Copy (a new item from this one, on the Add tab), and Archive or Restore. */}
                 <div className="flex items-center gap-0.5 md:pt-0.5">
-                  <button type="button" aria-label={`Edit ${item.brand} ${item.name}`} {...tip("Edit")} onClick={() => openItem(item)} className={rowAction}>
-                    <Pencil size={15} strokeWidth={2} />
+                  <button type="button" aria-label={`Edit ${item.brand} ${item.name}`} onClick={() => openItem(item)} className={rowLabeled}>
+                    <Pencil size={14} strokeWidth={2} />
+                    Edit
                   </button>
-                  <a href={`#add?from=${encodeURIComponent(item.key)}`} aria-label={`Copy ${item.brand} ${item.name} as a new item`} {...tip("Copy")} className={rowAction}>
-                    <Copy size={15} strokeWidth={2} />
+                  <a href={`#add?from=${encodeURIComponent(item.key)}`} aria-label={`Copy ${item.brand} ${item.name} as a new item`} {...tip("A new item from this one")} className={rowLabeled}>
+                    <Copy size={14} strokeWidth={2} />
+                    Copy
                   </a>
                   {item.status === "live" ? (
                     <button
@@ -360,7 +362,7 @@ export function CatalogTab({
                         if (!window.confirm(`Archive ${item.brand} ${item.name}? It leaves search, but saved boards still show it.`)) return;
                         void setStatusOf(item, "retired").then((ok) => (ok ? publishNow() : undefined));
                       }}
-                      className={rowAction}
+                      className={`${rowAction} text-danger`}
                     >
                       <Archive size={15} strokeWidth={2} />
                     </button>
@@ -370,7 +372,7 @@ export function CatalogTab({
                       aria-label={`Restore ${item.brand} ${item.name}`}
                       {...tip("Restore")}
                       onClick={() => void setStatusOf(item, "live").then((ok) => (ok ? publishNow() : undefined))}
-                      className={rowAction}
+                      className={`${rowAction} text-icon hover:text-ink`}
                     >
                       <ArchiveRestore size={15} strokeWidth={2} />
                     </button>
@@ -391,9 +393,11 @@ export function CatalogTab({
   );
 }
 
-/** A row's icon actions (Edit, Copy, Archive). */
+/** A row's actions: Edit and Copy with labels, Archive (or Restore) as an icon. */
+const rowLabeled =
+  "flex h-8 items-center gap-1.5 rounded-control px-2 text-xs font-medium text-ink-muted outline-none transition-colors hover:bg-soft hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
 const rowAction =
-  "grid size-8 place-items-center rounded-control text-icon outline-none transition-colors hover:bg-soft hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
+  "grid size-8 place-items-center rounded-control outline-none transition-colors hover:bg-soft focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
 /** The header row's small controls: a step down from the page's buttons (28px tall, 12px text). */
 // Its own classes rather than secondaryButton plus overrides: utilities like h-7 and h-9 would clash.
