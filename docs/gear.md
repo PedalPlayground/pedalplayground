@@ -22,7 +22,7 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   photo area's height (`FILL_INCHES`, sized in container units, so it follows the card size), and bigger ones are fit
   to it. Boards are fit to the card. Cards load the full photo when the 128px thumbnail would look soft.
 - The grid shows 60 items and adds 60 more as you scroll.
-- **Over the full list** (no brand, type or search), on the left: **Trending gear**, a bento of 8 photo-first tiles
+- **Over the full list** (All Gear with no brand, type or search; any filter, Pedals or Pedalboards included, hides them), on the left: **Trending gear**, a bento of 8 photo-first tiles
   (one big, one tall, six singles) taking turns between hot and new, each with its name and a new or hot icon before it; under
   it **Newly added** (in the brand color), one row of the next newest as square photo tiles, names on hover: 12 on laptops (three per
   bento column), 8 on tablets (two per column), three rows of four on phones. It shares the bento's gap, so tiles line
