@@ -99,6 +99,16 @@ const BENTO = ["col-span-2 row-span-2", "sm:row-span-2", "", "", "", "", "", "ma
  * eight on tablets (two per column), and three rows of four on phones.
  */
 const NEWLY_COUNT = 12;
+/**
+ * Big mass-market makers, left out of the brand tiles so they feature smaller, well-loved brands (they're still in the
+ * brand filter). Lowercase.
+ */
+const MASS_BRANDS = new Set([
+  "boss", "electro-harmonix", "mxr", "dunlop", "tc electronic", "ibanez", "line 6", "behringer", "digitech", "zoom",
+  "joyo", "mooer", "nux", "donner", "harley benton", "hotone", "m-vave", "valeton", "flamma", "caline", "ammoon",
+  "kmise", "rowin", "biyang", "fender", "vox", "korg", "yamaha", "danelectro", "dod", "ik multimedia", "peterson",
+  "ernie ball", "shure", "rockboard", "pedaltrain", "voodoo lab", "truetone", "cioks", "mosky", "sonicake", "amazon basics",
+]);
 /** Brands beside the bento: two columns of eight on laptops. */
 const BRAND_TILES = 16;
 
@@ -346,15 +356,21 @@ export function GearApp() {
       .filter((c) => c.added && !seen.has(c.image))
       .sort((a, b) => b.added!.localeCompare(a.added!))
       .slice(0, NEWLY_COUNT);
+    // Brands to explore: well-loved makers, not the mass-market names. Adds over the last year and month (each list
+    // is the top 100 items), weighed against how many items the brand has, so a smaller catalog of favorites counts.
+    const monthAdds = new Map(hotList.monthTop.filter((e) => e.kind === kind).map((e) => [e.image, Number(e.adds)]));
     const brandUse = new Map<string, number>();
+    const brandItems = new Map<string, number>();
     for (const c of all) {
-      const n = usage.get(`${kind}:${c.image}`);
-      if (n) brandUse.set(c.brand, (brandUse.get(c.brand) ?? 0) + n);
+      brandItems.set(c.brand, (brandItems.get(c.brand) ?? 0) + 1);
+      const n = (usage.get(`${kind}:${c.image}`) ?? 0) + (monthAdds.get(c.image) ?? 0);
+      if (n && !MASS_BRANDS.has(c.brand.toLowerCase())) brandUse.set(c.brand, (brandUse.get(c.brand) ?? 0) + n);
     }
+    for (const [b, n] of brandUse) brandUse.set(b, n / Math.sqrt(brandItems.get(b) ?? 1));
     // Each brand shown with its most added item's photo.
     const brandPhoto = new Map<string, { item: CatalogItem; n: number }>();
     for (const c of all) {
-      const n = usage.get(`${kind}:${c.image}`) ?? 0;
+      const n = (usage.get(`${kind}:${c.image}`) ?? 0) + (monthAdds.get(c.image) ?? 0);
       const best = brandPhoto.get(c.brand);
       if (n && (!best || n > best.n)) brandPhoto.set(c.brand, { item: c, n });
     }
@@ -363,7 +379,7 @@ export function GearApp() {
       .slice(0, BRAND_TILES)
       .map(([b]) => ({ brand: b, item: brandPhoto.get(b)!.item, count: all.filter((c) => c.brand === b).length }));
     return { topBrands, picks, newly };
-  }, [manifest, browsing, all, hotItems, kind, usage]);
+  }, [manifest, browsing, all, hotItems, hotList, kind, usage]);
 
 
   const noun = kind === "pedal" ? "pedals" : "pedalboards";
@@ -512,7 +528,7 @@ export function GearApp() {
             </div>
             {shelves.topBrands.length > 0 && (
               <section className="flex flex-col">
-                <h2 className="text-lg font-bold tracking-[-0.01em]">Popular brands</h2>
+                <h2 className="text-lg font-bold tracking-[-0.01em]">Brands to know</h2>
                 <div className="mt-3 grid flex-1 auto-rows-[3.5rem] grid-cols-2 gap-2 sm:grid-cols-4 xl:auto-rows-fr xl:grid-cols-2">
                   {shelves.topBrands.map(({ brand: b, item, count }, i) => (
                     // Phones show the top eight.

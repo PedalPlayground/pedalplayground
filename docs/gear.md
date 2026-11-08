@@ -22,8 +22,9 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   (one big, one tall, six singles) taking turns between hot and new, each with its name and a new or hot icon before it; under
   it **Newly added** (in the brand color), one row of the next newest as square photo tiles, names on hover: 12 on laptops (three per
   bento column), 8 on tablets (two per column), three rows of four on phones. It shares the bento's gap, so tiles line
-  up with the bento's columns. On the right, **Popular brands**
-  (16 tiles, 8 on phones: name, item count, and a zoomed, cropped photo of the brand's most added item bleeding off
+  up with the bento's columns. On the right, **Brands to know**
+  (16 tiles: well-loved makers, scored by the year's and month's adds over the square root of their item count, with
+  mass-market brands like BOSS, MXR and Electro-Harmonix left out (`MASS_BRANDS`); 8 on phones: name, item count, and a zoomed, cropped photo of the brand's most added item bleeding off
   the corner) stretches to the left side's height. Hot ranks this week's 100 most added by momentum (week adds squared
   over month adds, damped by size; see `fetchHot` in `lib/trending.ts`), lifts newer gear (added in the last year
   1.6x, last three years 1.3x), and sets aside the month's 30 most added real gear (everyday staples), tuners, volume
