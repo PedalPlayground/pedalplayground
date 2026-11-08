@@ -430,8 +430,8 @@ export function GearApp() {
 
       {/* Kept while an item is open, so its filters and loaded cards are there on Back. */}
       <main id={open ? undefined : "content"} className={`page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
-        {/* The heading, with a big search beside it (under it on phones). */}
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-8">
+        {/* The heading, with a big search under it, left aligned. */}
+        <div className="flex flex-col gap-4">
           <div className="min-w-0">
             {brand && (
               <button type="button" onClick={() => pickBrand(null)} className="mb-1 flex items-center gap-1 text-[13px] font-semibold text-brand">
@@ -448,7 +448,7 @@ export function GearApp() {
                 : "Every pedal and pedalboard in the catalog."}
             </p>
           </div>
-          <div className="w-full md:max-w-md">{searchBox}</div>
+          <div className="w-full max-w-md">{searchBox}</div>
         </div>
 
         {/* Trending gear and Newly added on the left, Popular brands on the right stretching to their height (stacked
