@@ -18,10 +18,12 @@ import { nameLink, squiggleRule } from "../components/RoleBadge";
 import { useCatalog } from "../store/catalog";
 
 type GearSort = "az" | "new" | "used";
+/** What the grid lists: all gear (pedals and pedalboards together), or just one kind. */
+type Scope = "all" | Kind;
 
 /** The filters live in the URL, so a brand page is just a link: /gear/?brand=Boss. */
 interface Filters {
-  kind: Kind;
+  scope: Scope;
   brand: string | null;
   /** Pedal type, as in src/lib/specs.ts ("Overdrive"). */
   type: string | null;
@@ -33,7 +35,7 @@ function readFilters(): Filters {
   const p = new URLSearchParams(window.location.search);
   const sort = p.get("sort");
   return {
-    kind: p.get("kind") === "boards" ? "pedalboard" : "pedal",
+    scope: p.get("kind") === "boards" ? "pedalboard" : p.get("kind") === "pedals" ? "pedal" : "all",
     brand: p.get("brand") || null,
     type: p.get("type") || null,
     query: p.get("q") ?? "",
@@ -50,7 +52,7 @@ function readItem(): { kind: Kind; key: string } | null {
 
 function filtersHref(f: Filters) {
   const p = new URLSearchParams();
-  if (f.kind === "pedalboard") p.set("kind", "boards");
+  if (f.scope !== "all") p.set("kind", f.scope === "pedalboard" ? "boards" : "pedals");
   if (f.brand) p.set("brand", f.brand);
   if (f.type) p.set("type", f.type);
   if (f.query.trim()) p.set("q", f.query.trim());
@@ -141,7 +143,9 @@ export function GearApp() {
   const error = useCatalog((s) => s.error);
   const [dialog, setDialog] = useState<PageDialog>(null);
   const [initial] = useState(readFilters);
-  const [kind, setKind] = useState<Kind>(initial.kind);
+  const [scope, setScope] = useState<Scope>(initial.scope);
+  /** The kind the shelves, hero and brand tiles show: pedals, unless the grid is just pedalboards. */
+  const kind: Kind = scope === "pedalboard" ? "pedalboard" : "pedal";
   const [brand, setBrand] = useState<string | null>(initial.brand);
   const [type, setType] = useState<string | null>(initial.type);
   /** Phones and tablets: the filters open in a sheet. */
@@ -178,7 +182,7 @@ export function GearApp() {
   useEffect(() => {
     // An item's page owns the URL while it's open.
     if (readItem()) return;
-    const f = { kind, brand, type, query: search, sort };
+    const f = { scope, brand, type, query: search, sort };
     const href = filtersHref(f);
     const prev = lastFilters.current;
     lastFilters.current = f;
@@ -187,13 +191,13 @@ export function GearApp() {
       // the address as you type.
       // (A brand respelled to the catalog's casing isn't a new view either.)
       const typingOnly =
-        prev && prev.kind === f.kind && prev.brand?.toLowerCase() === f.brand?.toLowerCase() && prev.type === f.type && prev.sort === f.sort;
+        prev && prev.scope === f.scope && prev.brand?.toLowerCase() === f.brand?.toLowerCase() && prev.type === f.type && prev.sort === f.sort;
       if (prev && !typingOnly) history.pushState(null, "", href);
       else writeFilters(f);
     }
     setShown(PAGE);
     scroller.current?.scrollTo({ top: 0 });
-  }, [kind, brand, type, search, sort]);
+  }, [scope, brand, type, search, sort]);
 
   // The browser's back and forward move between the grid and item pages.
   useEffect(() => {
@@ -201,7 +205,7 @@ export function GearApp() {
       const next = readItem();
       setOpen(next);
       const f = readFilters();
-      setKind(f.kind);
+      setScope(f.scope);
       if (!next) {
         setBrand(f.brand);
         setType(f.type);
@@ -227,22 +231,31 @@ export function GearApp() {
     if (pushed.current) return history.back();
     // Opened from a link: there's no grid behind it, so start one.
     setOpen(null);
-    writeFilters({ kind, brand, type, query: search, sort });
+    writeFilters({ scope, brand, type, query: search, sort });
   };
 
   /** A brand link on an item page: that brand's grid, as a new history step. */
   const brandFromItem = (b: string) => {
     const k = open?.kind ?? kind;
-    history.pushState(null, "", filtersHref({ kind: k, brand: b, type: null, query: "", sort }));
+    history.pushState(null, "", filtersHref({ scope: k, brand: b, type: null, query: "", sort }));
     setType(null);
     setOpen(null);
-    setKind(k);
+    setScope(k);
     pickBrand(b);
     setShown(PAGE);
     scroller.current?.scrollTo({ top: 0 });
   };
 
-  const all = useMemo(() => (manifest ? (kind === "pedal" ? manifest.pedals : manifest.pedalboards) : []), [manifest, kind]);
+  /** The grid's gear: everything, or one kind. */
+  const all = useMemo(
+    () => (manifest ? (scope === "all" ? [...manifest.pedals, ...manifest.pedalboards] : scope === "pedal" ? manifest.pedals : manifest.pedalboards) : []),
+    [manifest, scope],
+  );
+  /** One kind's gear, for the shelves (hot, new, brands): pedals unless the grid is just pedalboards. */
+  const kindList = useMemo(() => (manifest ? (kind === "pedal" ? manifest.pedals : manifest.pedalboards) : []), [manifest, kind]);
+  /** Which kind an item in the grid is (all gear mixes them). */
+  const boardSet = useMemo(() => new Set<CatalogItem>(manifest?.pedalboards ?? []), [manifest]);
+  const kindOf = (c: CatalogItem): Kind => (boardSet.has(c) ? "pedalboard" : "pedal");
 
   /** Brands for the picker, with how many items each has, A–Z. */
   const brands = useMemo(() => {
@@ -280,9 +293,9 @@ export function GearApp() {
     if (search.trim()) return found;
     const list = [...found.items];
     if (sort === "new") list.sort((a, b) => (b.added ?? "").localeCompare(a.added ?? ""));
-    if (sort === "used") list.sort((a, b) => (usage.get(`${kind}:${b.image}`) ?? 0) - (usage.get(`${kind}:${a.image}`) ?? 0));
+    if (sort === "used") list.sort((a, b) => (usage.get(`${kindOf(b)}:${b.image}`) ?? 0) - (usage.get(`${kindOf(a)}:${a.image}`) ?? 0));
     return { items: list, partial: false };
-  }, [index, brand, type, search, sort, usage, kind]);
+  }, [index, brand, type, search, sort, usage, boardSet]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Show the next page when the bottom of the grid scrolls into view.
   useEffect(() => {
@@ -315,7 +328,7 @@ export function GearApp() {
    * pedals, utilities) and board accessories (mounts, connectors, cables).
    */
   const hotItems = useMemo(() => {
-    const byKey = new Map(all.map((c) => [c.image, c]));
+    const byKey = new Map(kindList.map((c) => [c.image, c]));
     const ok = (c: CatalogItem | undefined): c is CatalogItem => !!c && !STAPLE_TYPES.has(c.type ?? "") && !ACCESSORY.test(c.name);
     // The month's most added real gear in this kind: everyday staples, so they sit out.
     const staples = new Set(
@@ -339,7 +352,7 @@ export function GearApp() {
       .map((h) => ({ c: h.c, score: h.score * recency(h.c) }))
       .sort((a, b) => b.score - a.score)
       .map((h) => h.c);
-  }, [hotList, all, kind]);
+  }, [hotList, kindList, kind]);
   /** A few photos for the hero: the brand's most added, or the hottest (of the chosen type), else the most added. */
   const heroPicks = useMemo(() => {
     const used = (c: CatalogItem) => usage.get(`${kind}:${c.image}`) ?? 0;
@@ -364,7 +377,7 @@ export function GearApp() {
   const shelves = useMemo(() => {
     if (!manifest || !browsing) return null;
     const hot = hotItems.slice(0, BENTO_COUNT);
-    const fresh = [...all]
+    const fresh = [...kindList]
       .filter((c) => c.added)
       .sort((a, b) => b.added!.localeCompare(a.added!))
       .slice(0, BENTO_COUNT);
@@ -379,7 +392,7 @@ export function GearApp() {
         }
       }
     }
-    const newly = [...all]
+    const newly = [...kindList]
       .filter((c) => c.added && !seen.has(c.image))
       .sort((a, b) => b.added!.localeCompare(a.added!))
       .slice(0, NEWLY_COUNT);
@@ -388,7 +401,7 @@ export function GearApp() {
     const monthAdds = new Map(hotList.monthTop.filter((e) => e.kind === kind).map((e) => [e.image, Number(e.adds)]));
     const brandUse = new Map<string, number>();
     const brandItems = new Map<string, number>();
-    for (const c of all) {
+    for (const c of kindList) {
       brandItems.set(c.brand, (brandItems.get(c.brand) ?? 0) + 1);
       const n = (usage.get(`${kind}:${c.image}`) ?? 0) + (monthAdds.get(c.image) ?? 0);
       if (n && !MASS_BRANDS.has(c.brand.toLowerCase())) brandUse.set(c.brand, (brandUse.get(c.brand) ?? 0) + n);
@@ -396,13 +409,13 @@ export function GearApp() {
     for (const [b, n] of brandUse) brandUse.set(b, n / Math.sqrt(brandItems.get(b) ?? 1));
     // Each brand shown with its most added item's photo.
     const brandPhoto = new Map<string, { item: CatalogItem; n: number }>();
-    for (const c of all) {
+    for (const c of kindList) {
       const n = (usage.get(`${kind}:${c.image}`) ?? 0) + (monthAdds.get(c.image) ?? 0);
       const best = brandPhoto.get(c.brand);
       if (n && showy(c) && (!best || n > best.n)) brandPhoto.set(c.brand, { item: c, n });
     }
     // Brands with no recent adds still get a photo: their newest item.
-    for (const c of all) {
+    for (const c of kindList) {
       const best = brandPhoto.get(c.brand);
       if (!best || (best.n === 0 && showy(c) && (!showy(best.item) || (c.added ?? "") > (best.item.added ?? "")))) brandPhoto.set(c.brand, { item: c, n: best?.n ?? 0 });
     }
@@ -418,10 +431,10 @@ export function GearApp() {
       .slice(0, BRAND_TILES)
       .map((b) => ({ brand: b, item: brandPhoto.get(b)!.item, count: brandItems.get(b) ?? 0 }));
     return { topBrands, picks, newly };
-  }, [manifest, browsing, all, hotItems, hotList, kind, usage]);
+  }, [manifest, browsing, kindList, hotItems, hotList, kind, usage]);
 
 
-  const noun = kind === "pedal" ? "pedals" : "pedalboards";
+  const noun = scope === "all" ? "items" : scope === "pedal" ? "pedals" : "pedalboards";
   const total = items.length.toLocaleString("en-US");
 
   const clearFilters = () => {
@@ -447,16 +460,15 @@ export function GearApp() {
 
   const filterPanel = (
     <FilterPanel
-      kind={kind}
+      scope={scope}
       kindCounts={kindCounts}
       types={types}
       type={type}
-      // Pedals, a pedal type, or pedalboards: one list. Boards have no types, and few pedal brands make boards.
-      onType={(k, t) => {
-        if (k !== kind) {
-          setKind(k);
-          pickBrand(null);
-        }
+      // All gear, pedals, pedalboards, or a pedal type: one list. Boards have no types.
+      onType={(sc, t) => {
+        // Boards have few brands in common with pedals, so switching to them starts over on brand.
+        if (sc !== scope && sc === "pedalboard") pickBrand(null);
+        setScope(sc);
         setType(t);
       }}
       brands={brands}
@@ -585,7 +597,7 @@ export function GearApp() {
           {/* Phones: the card size shares the heading's row, so Filters and sort fit on the next. */}
           <div className="flex min-w-0 flex-1 items-center gap-3 max-sm:basis-full">
             <h2 className="flex min-w-0 flex-1 items-baseline gap-2.5">
-              <span className="truncate text-lg font-bold tracking-[-0.01em]">{browsing ? `All ${noun}` : search.trim() ? "Results" : `${type ?? brand ?? "All"} ${type || !brand ? "" : noun}`.trim()}</span>
+              <span className="truncate text-lg font-bold tracking-[-0.01em]">{browsing ? (scope === "all" ? "All gear" : `All ${noun}`) : search.trim() ? "Results" : `${type ?? brand ?? "All"} ${type || !brand ? "" : scope === "all" ? "gear" : noun}`.trim()}</span>
               {manifest && (
                 <span className="shrink-0 text-sm tabular-nums text-ink-muted">
                   {total} {items.length === 1 ? noun.slice(0, -1) : noun}
@@ -648,9 +660,9 @@ export function GearApp() {
               {manifest
                 ? items.slice(0, shown).map((item) => (
                     <GearCard
-                      key={item.image}
+                      key={`${kindOf(item)}:${item.image}`}
                       item={item}
-                      kind={kind}
+                      kind={kindOf(item)}
                       manifest={manifest}
                       isNew={!!item.added && item.added >= newSince}
                       isHot={hotKeys.has(item.image)}
@@ -762,7 +774,6 @@ function GearCard({
   );
 }
 
-const filterHeading = "mb-1.5 text-xs font-semibold uppercase tracking-[0.04em] text-ink-muted";
 const listRow = (on: boolean) =>
   `flex w-full items-center justify-between gap-2 rounded-control px-2 py-1.5 text-left text-[13px] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     on ? "bg-soft font-semibold text-ink" : "text-ink-muted hover:bg-soft hover:text-ink"
@@ -770,7 +781,7 @@ const listRow = (on: boolean) =>
 
 /** Pedals or boards, sort, type and brand: the sidebar on laptops, the Filters sheet on phones and tablets. */
 function FilterPanel({
-  kind,
+  scope,
   kindCounts,
   types,
   type,
@@ -780,11 +791,11 @@ function FilterPanel({
   setBrand,
   onClear,
 }: {
-  kind: Kind;
+  scope: Scope;
   kindCounts: Record<Kind, number>;
   types: [string, number][];
   type: string | null;
-  onType: (kind: Kind, type: string | null) => void;
+  onType: (scope: Scope, type: string | null) => void;
   brands: [string, number][];
   brand: string | null;
   setBrand: (b: string | null) => void;
@@ -798,59 +809,53 @@ function FilterPanel({
   const count = (n: number) => <span className="shrink-0 text-xs tabular-nums text-ink-muted">{n.toLocaleString("en-US")}</span>;
   return (
     <div className="flex flex-col gap-5 pt-1">
-      {/* Every pedal, a pedal type, or pedalboards. */}
-      <div>
-        <h3 className={filterHeading}>Type</h3>
-        <div role="radiogroup" aria-label="Type" className="grid gap-0.5">
-          <button type="button" role="radio" aria-checked={kind === "pedal" && type === null} onClick={() => onType("pedal", null)} className={listRow(kind === "pedal" && type === null)}>
-            <span className="truncate">All pedals</span>
-            {count(kindCounts.pedal)}
-          </button>
-          {types.map(([t, n]) => {
-            const on = kind === "pedal" && type === t;
-            return (
-              <button key={t} type="button" role="radio" aria-checked={on} onClick={() => onType("pedal", on ? null : t)} className={`${listRow(on)} pl-4`}>
-                <span className="truncate">{t}</span>
-                {count(n)}
-              </button>
-            );
-          })}
-          {kindCounts.pedalboard > 0 && (
-            <button
-              type="button"
-              role="radio"
-              aria-checked={kind === "pedalboard"}
-              onClick={() => onType("pedalboard", null)}
-              className={`${listRow(kind === "pedalboard")} mt-1`}
-            >
-              <span className="truncate">Pedalboards</span>
-              {count(kindCounts.pedalboard)}
+      {/* All gear, pedals, pedalboards, then the pedal types, in one flat list. The first row names the list. */}
+      <div role="radiogroup" aria-label="Type" className="grid gap-0.5">
+        {(
+          [
+            ["all", "All Gear", kindCounts.pedal + kindCounts.pedalboard],
+            ["pedal", "Pedals", kindCounts.pedal],
+            ["pedalboard", "Pedalboards", kindCounts.pedalboard],
+          ] as const
+        ).map(([sc, label, n]) => {
+          const on = scope === sc && type === null;
+          return (
+            <button key={sc} type="button" role="radio" aria-checked={on} onClick={() => onType(sc, null)} className={listRow(on)}>
+              <span className="truncate">{label}</span>
+              {count(n)}
             </button>
-          )}
-        </div>
+          );
+        })}
+        {types.map(([t, n]) => {
+          const on = type === t;
+          return (
+            <button key={t} type="button" role="radio" aria-checked={on} onClick={() => onType(on ? "all" : "pedal", on ? null : t)} className={listRow(on)}>
+              <span className="truncate">{t}</span>
+              {count(n)}
+            </button>
+          );
+        })}
       </div>
 
-      {/* The brand list scrolls on its own; past it, the whole sidebar scrolls. */}
-      <div>
-        <h3 className={filterHeading}>Brand</h3>
+      {/* All Brands names the list; the brand list scrolls on its own, and past it the whole sidebar scrolls. */}
+      <div role="radiogroup" aria-label="Brand" className="grid gap-0.5">
+        <button type="button" role="radio" aria-checked={brand === null} onClick={() => setBrand(null)} className={listRow(brand === null)}>
+          <span className="truncate">All Brands</span>
+          {count(brands.reduce((n, [, c]) => n + c, 0))}
+        </button>
         <input
           type="search"
           value={find}
           onChange={(e) => setFind(e.target.value)}
           placeholder={`Find a brand (${brands.length.toLocaleString("en-US")})`}
           aria-label="Find a brand"
-          className="mb-1.5 h-8 w-full rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
+          className="my-1 h-8 w-full rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
         />
-        <div role="radiogroup" aria-label="Brand" className="-m-1 grid max-h-72 gap-0.5 overflow-y-auto p-1">
-          {!find.trim() && (
-            <button type="button" role="radio" aria-checked={brand === null} onClick={() => setBrand(null)} className={listRow(brand === null)}>
-              All brands
-            </button>
-          )}
+        <div className="-m-1 grid max-h-72 gap-0.5 overflow-y-auto p-1">
           {shownBrands.map(([b, n]) => (
             <button key={b} type="button" role="radio" aria-checked={brand === b} onClick={() => setBrand(brand === b ? null : b)} className={listRow(brand === b)}>
               <span className="truncate">{b}</span>
-              <span className="shrink-0 text-xs tabular-nums text-ink-muted">{n.toLocaleString("en-US")}</span>
+              {count(n)}
             </button>
           ))}
           {shownBrands.length === 0 && <p className="px-2 py-1.5 text-[13px] text-ink-muted">No brands match.</p>}
