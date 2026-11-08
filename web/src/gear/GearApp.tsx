@@ -986,15 +986,21 @@ function NewTag({ className = "" }: { className?: string }) {
   );
 }
 
+/**
+ * The mark's 14px icon, centered on the capital letters of the text beside it at any font size: the cap height is
+ * 0.7em in DM Sans, so the icon's middle sits 0.35em above the baseline.
+ */
+const markIcon = "inline-block size-[14px] align-[calc(0.35em-7px)]";
+
 function Mark({ why }: { why: "new" | "hot" }) {
   const label = why === "new" ? "New" : "Hot";
   // Inline before the name, so it wraps with the text; the hover label says what it means.
   return (
-    <span role="img" aria-label={label} {...tip(label)} className="relative z-10 mr-1.5 inline-flex h-[1em] items-center align-[-0.1em]">
+    <span role="img" aria-label={label} {...tip(label)} className="relative z-10 mr-1.5">
       {why === "new" ? (
-        <NewTag className="size-[14px] text-brand" />
+        <NewTag className={`${markIcon} text-brand`} />
       ) : (
-        <TrendingUp size={14} strokeWidth={2.5} className="text-tangerine" aria-hidden />
+        <TrendingUp size={14} strokeWidth={2.5} className={`${markIcon} text-tangerine`} aria-hidden />
       )}
     </span>
   );
