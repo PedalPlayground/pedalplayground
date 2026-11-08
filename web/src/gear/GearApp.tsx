@@ -823,6 +823,10 @@ const listRow = (on: boolean) =>
     on ? "bg-soft font-semibold text-ink" : "text-ink-muted hover:bg-soft hover:text-ink"
   }`;
 
+/** Rows each filter list shows before "Show more". */
+const TYPES_COLLAPSED = 6;
+const BRANDS_COLLAPSED = 10;
+
 /** Pedals or boards, sort, type and brand: the sidebar on laptops, the Filters sheet on phones and tablets. */
 function FilterPanel({
   scope,
@@ -847,10 +851,26 @@ function FilterPanel({
 }) {
   const [find, setFind] = useState("");
   const [finding, setFinding] = useState(false);
+  const [moreTypes, setMoreTypes] = useState(false);
+  const [moreBrands, setMoreBrands] = useState(false);
+  /** Collapsed, the types list its first few and the brands their biggest few (A–Z once expanded or searched). */
+  const shownTypes = useMemo(
+    () => (moreTypes ? types : types.filter(([t], i) => i < TYPES_COLLAPSED || t === type)),
+    [types, moreTypes, type],
+  );
   const shownBrands = useMemo(() => {
     const q = find.trim().toLowerCase();
-    return q ? brands.filter(([b]) => b.toLowerCase().includes(q)) : brands;
-  }, [brands, find]);
+    if (q) return brands.filter(([b]) => b.toLowerCase().includes(q));
+    if (moreBrands) return brands;
+    const top = new Set([...brands].sort((a, b) => b[1] - a[1]).slice(0, BRANDS_COLLAPSED).map(([b]) => b));
+    if (brand) top.add(brand);
+    return brands.filter(([b]) => top.has(b)).sort((a, b) => b[1] - a[1]);
+  }, [brands, find, moreBrands, brand]);
+  const moreLink = (open: boolean, toggle: () => void, hidden: number) => (
+    <button type="button" aria-expanded={open} onClick={toggle} className="justify-self-start px-2 py-1 text-[13px] font-semibold text-brand hover:underline">
+      {open ? "Show less" : `Show ${hidden.toLocaleString("en-US")} more`}
+    </button>
+  );
   const count = (n: number) => <span className="shrink-0 text-xs tabular-nums text-ink-muted">{n.toLocaleString("en-US")}</span>;
   return (
     // Hanging outdent: rows reach 8px past the column on each side, so their text lines up with its edges.
@@ -872,7 +892,7 @@ function FilterPanel({
             </button>
           );
         })}
-        {types.map(([t, n]) => {
+        {shownTypes.map(([t, n]) => {
           const on = type === t;
           return (
             <button key={t} type="button" role="radio" aria-checked={on} onClick={() => onType(on ? "all" : "pedal", on ? null : t)} className={listRow(on)}>
@@ -881,6 +901,7 @@ function FilterPanel({
             </button>
           );
         })}
+        {types.length > TYPES_COLLAPSED && moreLink(moreTypes, () => setMoreTypes(!moreTypes), types.length - shownTypes.length)}
       </div>
 
       {/* All Brands names the list; the brand list scrolls on its own, and past it the whole sidebar scrolls. */}
@@ -922,7 +943,7 @@ function FilterPanel({
             className="mx-2 my-1 h-8 rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
           />
         )}
-        <div className="-m-1 grid max-h-72 grid-cols-[minmax(0,1fr)] gap-0.5 overflow-y-auto p-1">
+        <div className="grid grid-cols-[minmax(0,1fr)] gap-0.5">
           {shownBrands.map(([b, n]) => (
             <button key={b} type="button" role="radio" aria-checked={brand === b} onClick={() => setBrand(brand === b ? null : b)} className={listRow(brand === b)}>
               <span className="truncate">{b}</span>
@@ -931,6 +952,7 @@ function FilterPanel({
           ))}
           {shownBrands.length === 0 && <p className="px-2 py-1.5 text-[13px] text-ink-muted">No brands match.</p>}
         </div>
+        {!find.trim() && brands.length > BRANDS_COLLAPSED && moreLink(moreBrands, () => setMoreBrands(!moreBrands), brands.length - shownBrands.length)}
       </div>
 
       {onClear && (
