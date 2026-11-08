@@ -316,7 +316,7 @@ export function SuggestGearDialog({
         <div>
           <span className={fieldLabel}>{tab === "fix" ? "New Photo" : "Photo"}</span>
           <span className={fieldHelp}>
-            {tab === "fix" ? "Optional, if the picture is wrong. " : ""}Straight on from above, showing the whole pedal: jacks, knobs and everything that sticks out, with little empty space around it. A PNG with a transparent background is ideal. 10 MB at most.
+            {tab === "fix" ? "Optional, if the picture is wrong. " : ""}Straight on from above, showing the whole pedal: jacks, knobs and everything that sticks out, with no empty space around it. A PNG with a transparent background is ideal. 10 MB at most.
           </span>
           <input
             ref={fileInput}
