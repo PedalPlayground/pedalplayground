@@ -1,3 +1,5 @@
+import { PlugsLayer } from "./PlugArt";
+import { PlugEditLayer } from "./PlugEditor";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { canvasImageUrl } from "../lib/catalog";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
@@ -170,6 +172,7 @@ function ItemView({ item }: { item: Item }) {
         ) : (
           <div className="size-full bg-surface-hover" />
         )}
+        {item.plugs && <PlugsLayer plugs={item.plugs} w={item.width} h={item.height} />}
       </div>
     </div>
   );
@@ -198,6 +201,9 @@ export function Canvas() {
   const tool = useUi((u) => u.tool);
   const dragging = useUi((u) => u.dragging);
   const units = useUi((u) => u.units);
+  // The pedal whose plugs are being edited gets the plug editing layer.
+  const plugEditing = useUi((u) => u.plugEditing);
+  const plugItem = usePlayground((s) => (plugEditing ? s.items.find((i) => i.id === plugEditing) : undefined));
 
   useEffect(() => {
     void useCatalog.getState().load();
@@ -594,6 +600,11 @@ export function Canvas() {
             {selected.includes(item.id) && !inShownGroup.has(item.id) && <SelectionHalo item={item} zoom={view.zoom} tour={selected.length === 1} />}
           </div>
         ))}
+        {plugItem && (
+          <div style={{ position: "absolute", zIndex: 99998 }}>
+            <PlugEditLayer item={plugItem} zoom={view.zoom} />
+          </div>
+        )}
         {selectedGroups.map((g) => (
           <div key={g[0].groupId} style={{ position: "absolute", zIndex: 99999 }}>
             <GroupHalo items={g} zoom={view.zoom} />

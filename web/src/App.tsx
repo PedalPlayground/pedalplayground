@@ -43,6 +43,7 @@ import { StandingNotice } from "./components/StandingNotice";
 import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { SpaceBetweenPanel } from "./components/SpaceBetweenPanel";
+import { PlugPanel } from "./components/PlugEditor";
 import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
 import { Toolbar } from "./components/Toolbar";
 import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
@@ -112,6 +113,7 @@ export function App() {
   const openUpgrade = useUi((u) => u.openUpgrade);
   const searchOpen = useUi((u) => u.searchOpen);
   const spacingOpen = useUi((u) => u.spacingOpen);
+  const plugEditing = useUi((u) => u.plugEditing);
   const replacing = useUi((u) => u.replacing);
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
@@ -288,14 +290,15 @@ export function App() {
               <ScaleKey end className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] right-[calc(max(1rem,env(safe-area-inset-right))+40px)] z-10 max-md:hidden" />
               {wide ? (
                 <>
-                  <ObjectStack />
+                  {!plugEditing && <ObjectStack />}
                   <CanvasStack viewOnly={viewing} onShare={() => setDialog("share")} />
                 </>
               ) : (
                 // Tablets keep the full bar; phones (and larger screens) use the little menu under the selection.
-                !phoneSized && <ObjectMenu />
+                !phoneSized && !plugEditing && <ObjectMenu />
               )}
-              <SelectionMiniMenu />
+              {/* While plugs are being edited, their panel takes the menus' place. */}
+              {plugEditing ? <PlugPanel /> : <SelectionMiniMenu />}
               <ContextMenu />
             </>
           )}

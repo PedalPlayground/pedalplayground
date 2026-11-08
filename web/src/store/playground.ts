@@ -1,3 +1,4 @@
+import type { Plug } from "../lib/plugs";
 import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { importAny, readLegacyLocalStorage } from "../lib/importers";
@@ -79,6 +80,10 @@ interface PlaygroundState {
   /** Changes a custom item's size, name, color or template, keeping its center. */
   updateCustomItem: (id: string, c: CustomFields) => void;
   select: (id: string, additive?: boolean) => void;
+  /**
+   * Sets a pedal's plugs. One undo step, unless `record` is false (a drag in progress: call beginTransaction first).
+   */
+  setPlugs: (id: string, plugs: Plug[], record?: boolean) => void;
   /** Changes an item's Equipment List details as one undo step. */
   updateGear: (id: string, patch: Partial<Pick<Item, "status" | "price" | "ma" | "voltage" | "pedalType">>) => void;
   /** Selects one item and moves the view just enough to show it. */
@@ -452,6 +457,16 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       if (!additive) return { selected: ids };
       const all = ids.every((x) => s.selected.includes(x));
       return { selected: all ? s.selected.filter((x) => !ids.includes(x)) : [...new Set([...s.selected, ...ids])] };
+    }),
+  setPlugs: (id, plugs, doRecord = true) =>
+    set((s) => {
+      const items = s.items.map((i) => {
+        if (i.id !== id) return i;
+        const next: Item = { ...i, plugs };
+        if (!plugs.length) delete next.plugs;
+        return next;
+      });
+      return doRecord ? { ...record(s), items } : { items };
     }),
   updateGear: (id, patch) =>
     set((s) => {
