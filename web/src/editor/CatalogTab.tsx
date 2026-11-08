@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { itemTypes, type Manifest } from "../lib/catalog";
 import { PEDAL_TYPES } from "../lib/specs";
 import { filterMore, filterRow } from "../components/filterList";
-import { TypeCombo } from "./TypeCombo";
+import { TypeCombo } from "../components/TypeCombo";
 import { fieldProblems, type Fields } from "../lib/editorChecks";
 import { fieldsFrom, getItem, listCatalog, publicUrl, saveDirect, setStatus, sourceUrl, uploadSource, type CatalogFilter, type Item } from "../lib/editorApi";
 import { plainField } from "../lib/inputProps";

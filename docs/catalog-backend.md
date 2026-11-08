@@ -176,7 +176,7 @@ Only accounts in `catalog_editors` get past the sign-in check; everyone else see
   size, plus power and type when ticked. On the Catalog tab, **Duplicate** opens Add (`/editor/#add?from=<key>`) with
   that item's kind, brand and size.
 - **Queue:** pending and sent-back submissions, oldest first. Fix any field or replace the photo, then Approve,
-  Needs changes (the note goes to the submitter) or Reject. Empty until the submit form arrives in phase 4.
+  Needs changes (the note goes to the submitter) or Reject. Players file these with **Suggest Gear** (`components/SuggestGearDialog.tsx`, `lib/suggestions.ts`): the Gear page's Suggest Gear bento tile and Add Gear's "Suggest it for the catalog" (under Make Your Own, and on a search with no matches). Same fields as the Admin form (kind, brand, name, size, power, types) plus a required photo and an optional note; signed out, it asks to sign in.
 - **Add:** a new pedal or pedalboard straight into the catalog.
 - **Catalog** (the old Types tab is part of it; `#types` opens it): the Gear page's filters in a sidebar (All Items,
   Pedals, Pedalboards, No type and each pedal type by count, Live / Archived, brands with a search icon, each list

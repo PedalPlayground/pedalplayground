@@ -322,7 +322,7 @@ export function App() {
 
           {/* Docked on the left on larger screens; phones open it as a bottom drawer (it portals itself there). */}
           {!covered && searchOpen && (
-            <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} />
+            <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} onSignIn={() => setDialog("account")} />
           )}
 
           {/* Docked on the left on larger screens; a bottom drawer on phones. */}

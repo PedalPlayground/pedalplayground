@@ -51,7 +51,7 @@ export function TypeCombo({
   return (
     <div className={`relative ${disabled ? "pointer-events-none opacity-60" : ""}`}>
       <div
-        className={`flex min-h-9 flex-wrap items-center gap-1 rounded-control border border-chrome-line bg-surface px-1.5 py-1 focus-within:ring-2 focus-within:ring-brand ${compact ? "min-h-8" : ""}`}
+        className={`flex min-h-9 flex-wrap items-center gap-1 rounded-control bg-surface-hover px-1.5 py-1 focus-within:ring-2 focus-within:ring-brand ${compact ? "min-h-8" : ""}`}
         onClick={() => input.current?.focus()}
       >
         <ul aria-label={label} className="contents">
@@ -69,7 +69,7 @@ export function TypeCombo({
                 }
               }}
               className={`flex cursor-grab items-center gap-0.5 rounded-full pl-2 pr-0.5 font-semibold active:cursor-grabbing ${chipSize} ${
-                i === 0 ? "bg-ink text-surface" : "bg-soft text-ink"
+                i === 0 ? "bg-ink text-surface" : "bg-surface text-ink shadow-chip"
               } ${dragging === i ? "opacity-50" : ""}`}
               title={i === 0 ? "Main type. Drag to reorder." : "Drag to reorder."}
             >
@@ -123,7 +123,7 @@ export function TypeCombo({
             else if (e.key === "Escape") setOpen(false);
             else if (e.key === "Backspace" && !text && value.length) remove(value.length - 1);
           }}
-          className={`min-w-[5rem] flex-1 bg-transparent px-1 outline-none ${compact ? "text-xs" : "text-[13px]"}`}
+          className={`min-w-[5rem] flex-1 bg-transparent px-1 outline-none placeholder:text-ink-muted ${compact ? "text-xs" : "text-sm"}`}
         />
       </div>
       {open && options.length > 0 && (

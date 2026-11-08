@@ -1,5 +1,6 @@
 import { Check, CornerDownLeft, Search, TrendingUp, X } from "lucide-react";
 import { NewTag } from "./NewTag";
+import { SuggestGearDialog } from "./SuggestGearDialog";
 import { tip } from "./Tooltip";
 import {
   useCallback,
@@ -126,7 +127,20 @@ function CustomThumb() {
  * Adds products to the canvas; with `replace`, picks a replacement for the selected product instead.
  * Larger screens get a panel docked down the canvas's left side; phones get a bottom drawer that slides closed.
  */
-export function SearchPanel({ onClose: close, replace = false, edit = false }: { onClose: () => void; replace?: boolean; edit?: boolean }) {
+export function SearchPanel({
+  onClose: close,
+  replace = false,
+  edit = false,
+  onSignIn,
+}: {
+  onClose: () => void;
+  replace?: boolean;
+  edit?: boolean;
+  /** Opens sign-in (Suggest Gear needs an account). */
+  onSignIn?: () => void;
+}) {
+  /** Suggest Gear is open, starting from what was typed. */
+  const [suggesting, setSuggesting] = useState(false);
   const phone = useMediaQuery(PHONE_QUERY);
   const { height: visibleHeight, keyboard } = useVisualViewport();
 
@@ -517,6 +531,15 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                   Make Your Own
                 </button>
               )}
+              {typed && !partial && (
+                <button
+                  onMouseDown={keepFocus}
+                  onClick={() => setSuggesting(true)}
+                  className="press h-8 rounded-control border border-line px-3 text-sm hover:bg-surface-hover"
+                >
+                  Suggest It for the Catalog
+                </button>
+              )}
             </div>
           </li>
         )}
@@ -575,9 +598,22 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         <div className="relative px-2 pb-2">
           <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-surface to-transparent" />
           <div className="rounded-control bg-surface-hover shadow-float [&>button:hover]:bg-soft-hover">{makeOwn}</div>
+          <button type="button" onClick={() => setSuggesting(true)} className="mt-1.5 w-full text-center text-xs text-ink-muted hover:text-ink">
+            Can't find it? <span className="font-semibold text-brand">Suggest it for the catalog</span>
+          </button>
         </div>
       )}
       </>
+      )}
+      {suggesting && (
+        <SuggestGearDialog
+          initialName={typed}
+          onClose={() => setSuggesting(false)}
+          onSignIn={() => {
+            setSuggesting(false);
+            onSignIn?.();
+          }}
+        />
       )}
     </>
   );

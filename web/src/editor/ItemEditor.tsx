@@ -4,7 +4,7 @@ import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelCla
 import { ScaleKey } from "../components/ScaleKey";
 import { tip } from "../components/Tooltip";
 import { canvasImageUrl, thumbUrl, type Manifest } from "../lib/catalog";
-import { TypeCombo } from "./TypeCombo";
+import { TypeCombo } from "../components/TypeCombo";
 import { FEATURED_PEDALS } from "../lib/featuredPedals";
 import { fetchGearUsage } from "../lib/trending";
 import { PX_PER_INCH } from "../lib/geometry";

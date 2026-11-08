@@ -1,6 +1,7 @@
-import { ArrowLeft, Search, SlidersHorizontal, TrendingUp, X } from "lucide-react";
+import { ArrowLeft, Plus, Search, SlidersHorizontal, TrendingUp, X } from "lucide-react";
 import { tip } from "../components/Tooltip";
 import { NewTag } from "../components/NewTag";
+import { SuggestGearDialog } from "../components/SuggestGearDialog";
 import { filterMore, filterRow } from "../components/filterList";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
@@ -144,6 +145,7 @@ export function GearApp() {
   const manifest = useCatalog((s) => s.manifest);
   const error = useCatalog((s) => s.error);
   const [dialog, setDialog] = useState<PageDialog>(null);
+  const [suggesting, setSuggesting] = useState(false);
   const [initial] = useState(readFilters);
   const [scope, setScope] = useState<Scope>(initial.scope);
   /** The kind the shelves, hero and brand tiles show: pedals, unless the grid is just pedalboards. */
@@ -391,9 +393,11 @@ export function GearApp() {
     // Trending gear: hot and new taking turns, each item once. The next newest fill the Newly added row.
     const picks: { item: CatalogItem; why: "hot" | "new" }[] = [];
     const seen = new Set<string>();
-    for (let n = 0; n < BENTO_COUNT && picks.length < BENTO_COUNT; n++) {
+    // One slot fewer than the bento has: its last tile is Suggest Gear.
+    const slots = BENTO_COUNT - 1;
+    for (let n = 0; n < slots && picks.length < slots; n++) {
       for (const [item, why] of [[hot[n], "hot"], [fresh[n], "new"]] as const) {
-        if (item && !seen.has(item.image) && picks.length < BENTO_COUNT) {
+        if (item && !seen.has(item.image) && picks.length < slots) {
           seen.add(item.image);
           picks.push({ item, why });
         }
@@ -527,6 +531,16 @@ export function GearApp() {
   return (
     <div ref={scroller} className="h-dvh overflow-y-auto overscroll-contain bg-page font-sans text-ink">
       <PageHeader current="gear" dialog={dialog} setDialog={setDialog} />
+      {suggesting && (
+        <SuggestGearDialog
+          onClose={() => setSuggesting(false)}
+          onSignIn={() => {
+            setSuggesting(false);
+            setDialog("account");
+          }}
+          initialName={search.trim()}
+        />
+      )}
 
       {open && (
         <main id="content" className="page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-6">
@@ -599,8 +613,10 @@ export function GearApp() {
                   <h2 className="text-lg font-bold tracking-[-0.01em]">Trending gear</h2>
                   <div className="mt-3 grid grid-flow-dense auto-rows-[8.5rem] grid-cols-2 gap-3 sm:grid-cols-4 2xl:auto-rows-[10rem]">
                     {shelves.picks.map(({ item, why }, i) => (
-                      <BentoTile key={itemKey(item)} item={item} why={why} kind={kind} manifest={manifest!} size={BENTO[i % BENTO.length]} onOpen={openItem} />
+                      // The last pick takes the slot phones hide, so Suggest Gear stays on every screen.
+                      <BentoTile key={itemKey(item)} item={item} why={why} kind={kind} manifest={manifest!} size={BENTO[i === BENTO_COUNT - 2 ? BENTO_COUNT - 1 : i]} onOpen={openItem} />
                     ))}
+                    <SuggestTile className={BENTO[BENTO_COUNT - 2]} onClick={() => setSuggesting(true)} />
                   </div>
                 </section>
               )}
@@ -1100,6 +1116,25 @@ function Mark({ why }: { why: "new" | "hot" }) {
         <TrendingUp size={14} strokeWidth={2.5} className="text-tangerine" aria-hidden />
       )}
     </span>
+  );
+}
+
+/** The bento's Suggest Gear tile: for gear the catalog doesn't have yet. */
+function SuggestTile({ className, onClick }: { className: string; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`group flex flex-col justify-between rounded-panel border border-dashed border-chrome-line p-3 text-left outline-none transition-colors hover:bg-card focus-visible:ring-2 focus-visible:ring-brand ${className}`}
+    >
+      <span className="grid size-8 place-items-center rounded-full bg-brand/10 text-brand transition-transform group-hover:scale-105">
+        <Plus size={16} strokeWidth={2.5} />
+      </span>
+      <span>
+        <span className="block text-xs font-semibold">Suggest Gear</span>
+        <span className="block text-[11px] leading-snug text-ink-muted">Missing a pedal? Tell us and we'll add it.</span>
+      </span>
+    </button>
   );
 }
 
