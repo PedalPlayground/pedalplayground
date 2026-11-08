@@ -5,8 +5,8 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
 `trending_gear` RPC (adds in the last year), like the search panel.
 
 - **Layout:** a compact hero band at the top (card shade, container corners) with the heading, count and a large,
-  left-aligned search, plus three cropped pedal photos fanned off its right edge on laptops (the brand's most added on a
-  brand page, otherwise the hottest after the bento's); then, over the full list, Trending and new and Popular brands
+  left-aligned search, plus cropped pedal photos off its right edge on laptops (the brand's most added on a brand page,
+  otherwise one photo from each boutique brand in `FEATURED_BRANDS`, in that list's order); then, over the full list, Trending and new and Popular brands
   across the full width; then the grid with its filters. A full-width bar above the sidebar and grid holds the heading (All pedals, or
   what's filtered) with a result count, the sort and card size (and a Filters button below laptop width). The filters (Type and Brand) sit in a sticky left sidebar from laptop width and in
   a Filters sheet below it. The Type list is All pedals, each pedal type, then Pedalboards (there's no separate
@@ -23,8 +23,10 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   it **Newly added** (in the brand color), one row of the next newest as square photo tiles, names on hover: 12 on laptops (three per
   bento column), 8 on tablets (two per column), three rows of four on phones. It shares the bento's gap, so tiles line
   up with the bento's columns. On the right, **Brands to know**
-  (16 tiles: well-loved makers, scored by the year's and month's adds over the square root of their item count, with
-  mass-market brands like BOSS, MXR and Electro-Harmonix left out (`MASS_BRANDS`); 8 on phones: name, item count, and a zoomed, cropped photo of the brand's most added item bleeding off
+  (16 tiles: Trav's hand-picked boutique brands first (`FEATURED_BRANDS`: OBNE, Spaceman, Cornerstone, Chase Bliss and
+  EAE lead, the rest of the list follows by use), then other well-loved makers scored by the year's and month's adds
+  over the square root of their item count, with mass-market brands left out (`MASS_BRANDS`). Photos skip switchers,
+  tuners, buffers and placeholders (`showy`); 8 on phones: name, item count, and a zoomed, cropped photo of the brand's most added item bleeding off
   the corner) stretches to the left side's height. Hot ranks this week's 100 most added by momentum (week adds squared
   over month adds, damped by size; see `fetchHot` in `lib/trending.ts`), lifts newer gear (added in the last year
   1.6x, last three years 1.3x), and sets aside the month's 30 most added real gear (everyday staples), tuners, volume

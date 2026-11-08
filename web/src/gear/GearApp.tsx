@@ -88,6 +88,9 @@ const HERO_SPOTS = [
 const STAPLE_TYPES = new Set(["Tuner", "Volume / Expression", "Utility"]);
 /** Board accessories and wireless systems, left out of Hot. */
 const ACCESSORY = /\b(mount|connector|coupler|cable|patch|zip|velcro|riser|bracket|power supply|wireless)\b/i;
+/** Switchers, loopers of loops, buffers and the like: fine gear, dull photos. Kept out of the hero and brand tiles. */
+const PLAIN = /\b(a\/?b(\/?y)?|aby|switch(er)?|loop(er)? switch|buffer|junction|router|splitter|tuner|di|mute)\b/i;
+const showy = (c: CatalogItem) => !/placeholder/i.test(c.image) && !STAPLE_TYPES.has(c.type ?? "") && !ACCESSORY.test(c.name) && !PLAIN.test(c.name);
 /**
  * The Trending gear bento: 8 tiles whose sizes fill the grid exactly (dense packing). Four columns: a big tile, a tall
  * one and six singles (3 full rows). Two columns: the tall one is single and the last tile hides (5 rows).
@@ -109,6 +112,19 @@ const MASS_BRANDS = new Set([
   "kmise", "rowin", "biyang", "fender", "vox", "korg", "yamaha", "danelectro", "dod", "ik multimedia", "peterson",
   "ernie ball", "shure", "rockboard", "pedaltrain", "voodoo lab", "truetone", "cioks", "mosky", "sonicake", "amazon basics",
 ]);
+/**
+ * Flashy boutique makers with great photos. They lead Brands to know (in this order, then by how much they're used)
+ * and fill the hero's photos when no filter is on.
+ */
+const FEATURED_BRANDS = [
+  "OBNE", "Spaceman", "Cornerstone", "Chase Bliss", "EAE", "Fairfield Circuitry", "Meris", "Hologram Electronics",
+  "Death By Audio", "Montreal Assembly", "Drolo", "Matthews Effects", "Beetronics", "Red Panda", "Benson",
+  "Jackson Audio", "Origin Effects", "Vemuram", "Collision Devices", "Gamechanger Audio", "Dr Scientist", "SolidGoldFX",
+  "Caroline", "KMA", "Rainger FX", "Pine Box Customs", "Wren And Cuff", "Empress", "Strymon", "EarthQuaker",
+  "Walrus Audio", "Mask Audio Electronics", "Hungry Robot", "JPTR FX", "Anasounds", "Fuzzrocious",
+];
+/** Trav's own picks, always first in Brands to know. */
+const LEAD_BRANDS = 5;
 /** Brands beside the bento: two columns of eight on laptops. */
 const BRAND_TILES = 16;
 
@@ -326,8 +342,17 @@ export function GearApp() {
   const heroPicks = useMemo(() => {
     const used = (c: CatalogItem) => usage.get(`${kind}:${c.image}`) ?? 0;
     // Unfiltered, the next hottest after the ones in the bento, so the hero doesn't repeat it.
-    const pool = brand || type ? items : hotItems.length > BENTO_COUNT ? hotItems.slice(BENTO_COUNT) : items;
-    return (brand ? [...pool].sort((a, b) => used(b) - used(a)) : pool).slice(0, 14);
+    if (brand || type) {
+      return (brand ? [...items].sort((a, b) => used(b) - used(a)) : items).slice(0, 14);
+    }
+    // Unfiltered: the most added pedal from each featured boutique brand, in the list's order.
+    const best = new Map<string, CatalogItem>();
+    for (const c of items) {
+      const b = best.get(c.brand);
+      if (FEATURED_BRANDS.includes(c.brand) && showy(c) && (!b || used(c) > used(b))) best.set(c.brand, c);
+    }
+    const picks = FEATURED_BRANDS.map((b) => best.get(b)).filter((c): c is CatalogItem => !!c);
+    return (picks.length ? picks : items).slice(0, 14);
   }, [brand, type, items, hotItems, usage, kind]);
   /** The hot set for marking full cards. */
   const hotKeys = useMemo(() => new Set(hotItems.slice(0, HOT_MARKED).map((c) => c.image)), [hotItems]);
@@ -372,12 +397,24 @@ export function GearApp() {
     for (const c of all) {
       const n = (usage.get(`${kind}:${c.image}`) ?? 0) + (monthAdds.get(c.image) ?? 0);
       const best = brandPhoto.get(c.brand);
-      if (n && (!best || n > best.n)) brandPhoto.set(c.brand, { item: c, n });
+      if (n && showy(c) && (!best || n > best.n)) brandPhoto.set(c.brand, { item: c, n });
     }
-    const topBrands = [...brandUse]
-      .sort((a, b) => b[1] - a[1])
+    // Brands with no recent adds still get a photo: their newest item.
+    for (const c of all) {
+      const best = brandPhoto.get(c.brand);
+      if (!best || (best.n === 0 && showy(c) && (!showy(best.item) || (c.added ?? "") > (best.item.added ?? "")))) brandPhoto.set(c.brand, { item: c, n: best?.n ?? 0 });
+    }
+    // The named picks first, then the rest of the featured list by use, then anyone else well used.
+    const featured = FEATURED_BRANDS.filter((b) => brandPhoto.has(b));
+    const byUse = (x: string, y: string) => (brandUse.get(y) ?? 0) - (brandUse.get(x) ?? 0);
+    const order = [
+      ...featured.slice(0, LEAD_BRANDS),
+      ...featured.slice(LEAD_BRANDS).sort(byUse),
+      ...[...brandUse.keys()].filter((b) => !featured.includes(b)).sort(byUse),
+    ];
+    const topBrands = order
       .slice(0, BRAND_TILES)
-      .map(([b]) => ({ brand: b, item: brandPhoto.get(b)!.item, count: all.filter((c) => c.brand === b).length }));
+      .map((b) => ({ brand: b, item: brandPhoto.get(b)!.item, count: brandItems.get(b) ?? 0 }));
     return { topBrands, picks, newly };
   }, [manifest, browsing, all, hotItems, hotList, kind, usage]);
 
