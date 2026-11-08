@@ -182,7 +182,7 @@ Only accounts in `catalog_editors` get past the sign-in check; everyone else see
   Pedals, Pedalboards, No type and each pedal type by count, Live / Retired, brands with a search icon, each list
   collapsed with Show more), a search, and the matching items. Each pedal row has its types as a combo box (the first
   chip is the main type; type to add, drag or Alt+arrow to reorder, X or Backspace to remove) that saves on change.
-  Tick items (or Select all shown) for bulk actions: Add type, Make main type, Remove type, Retire, Restore, each run
+  Tick items (or Select all shown) to enable the bulk actions, always in the bar so nothing shifts: Add type, Make main type, Remove type, Retire, Restore, each run
   item by item and published once. Open an item to fix its fields or photo. The Gear page's **Edit in catalog** link
   (editors only) opens an item directly: `/editor/#catalog?kind=pedal&key=<key>`. The item form uses the same type
   combo box.

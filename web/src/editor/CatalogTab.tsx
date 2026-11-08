@@ -250,8 +250,9 @@ export function CatalogTab({
         </div>
 
         {/* Bulk actions, once something is ticked. */}
-        <div className="sticky top-[6.5rem] z-10 flex min-h-11 flex-wrap items-center gap-x-3 gap-y-2 rounded-panel bg-card px-3 py-2">
-          <label className="flex items-center gap-2 text-[13px] font-semibold">
+        {/* Always the same controls, disabled until something is ticked, so ticking doesn't shift the layout. */}
+        <div className="sticky top-[6.5rem] z-10 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-panel bg-card px-3 py-2">
+          <label className="flex w-28 shrink-0 items-center gap-2 text-[13px] font-semibold tabular-nums">
             <input
               type="checkbox"
               checked={allTicked}
@@ -264,13 +265,9 @@ export function CatalogTab({
             />
             {selected.size ? `${selected.size} selected` : "Select all"}
           </label>
-          {bulkBusy ? (
-            <span className="text-[13px] text-ink-muted" role="status">
-              {bulkBusy}
-            </span>
-          ) : (
-            selected.size > 0 && (
-              <BulkActions
+          <BulkActions
+                busy={bulkBusy}
+                disabled={selected.size === 0 || !!bulkBusy}
                 pedals={chosen.filter((x) => x.kind === "pedal").length}
                 onAddType={(t) => void bulk(`Added ${t}`, (x) => (x.kind !== "pedal" || typesOf(x).includes(t) ? Promise.resolve(true) : saveTypes(x, [...typesOf(x), t])))}
                 onRemoveType={(t) => void bulk(`Removed ${t}`, (x) => (!typesOf(x).includes(t) ? Promise.resolve(true) : saveTypes(x, typesOf(x).filter((y) => y !== t))))}
@@ -282,8 +279,6 @@ export function CatalogTab({
                 onRestore={() => void bulk("Restored", (x) => setStatusOf(x, "live"))}
                 onClear={() => setSelected(new Set())}
               />
-            )
-          )}
         </div>
 
         {error && <p className="text-[13px] text-danger">{error}</p>}
@@ -359,6 +354,8 @@ export function CatalogTab({
 
 /** The bulk actions for ticked items: types (pedals only), retire and restore. */
 function BulkActions({
+  busy,
+  disabled,
   pedals,
   onAddType,
   onRemoveType,
@@ -367,6 +364,8 @@ function BulkActions({
   onRestore,
   onClear,
 }: {
+  busy: string | null;
+  disabled: boolean;
   pedals: number;
   onAddType: (t: string) => void;
   onRemoveType: (t: string) => void;
@@ -381,7 +380,7 @@ function BulkActions({
       value=""
       onChange={(e) => e.target.value && run(e.target.value)}
       className={`${inputClass} h-8 w-auto py-0 text-[13px]`}
-      disabled={!pedals}
+      disabled={disabled || !pedals}
     >
       <option value="">{label}…</option>
       {PEDAL_TYPES.map((t) => (
@@ -394,15 +393,22 @@ function BulkActions({
       {typeMenu("Add type", onAddType)}
       {typeMenu("Make main type", onMainType)}
       {typeMenu("Remove type", onRemoveType)}
-      <button type="button" className={`${secondaryButton} h-8 text-danger`} onClick={onRetire}>
+      <button type="button" className={`${secondaryButton} h-8 text-danger disabled:opacity-50`} disabled={disabled} onClick={onRetire}>
         Retire
       </button>
-      <button type="button" className={`${secondaryButton} h-8`} onClick={onRestore}>
+      <button type="button" className={`${secondaryButton} h-8 disabled:opacity-50`} disabled={disabled} onClick={onRestore}>
         Restore
       </button>
-      <button type="button" className="ml-auto text-[13px] font-semibold text-brand hover:underline" onClick={onClear}>
-        Clear selection
-      </button>
+      {/* Progress while a bulk change runs, else Clear selection; it keeps its space either way. */}
+      <span className="ml-auto text-[13px]" role="status">
+        {busy ? (
+          <span className="text-ink-muted">{busy}</span>
+        ) : (
+          <button type="button" className={`font-semibold text-brand hover:underline ${disabled ? "invisible" : ""}`} onClick={onClear}>
+            Clear selection
+          </button>
+        )}
+      </span>
     </>
   );
 }
