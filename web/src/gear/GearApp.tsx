@@ -7,6 +7,7 @@ import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from ".
 import { indexItem, search as searchItems } from "../lib/search";
 import { PEDAL_TYPES } from "../lib/specs";
 import { Modal } from "../components/Modal";
+import { Meta } from "../components/Meta";
 import { DensitySwitch, useDensity, type Density } from "../components/DensitySwitch";
 import { fetchGearUsage, fetchHot, type HotEntry, type TrendingEntry } from "../lib/trending";
 import type { CatalogItem } from "../lib/types";
@@ -459,8 +460,16 @@ export function GearApp() {
               {manifest
                 ? brand || type
                   ? `${total} ${type && brand ? `${type.toLowerCase()} ` : ""}${noun}${brand ? ` from ${brand}` : ""} in the catalog.`
-                  : `Every pedal and pedalboard in the catalog: ${manifest.pedals.length.toLocaleString("en-US")} pedals and ${manifest.pedalboards.length.toLocaleString("en-US")} boards from ${new Set(manifest.pedals.map((p) => p.brand)).size.toLocaleString("en-US")} brands.`
-                : "Every pedal and pedalboard in the catalog."}
+                  : (
+                    <Meta
+                      parts={[
+                        `${manifest.pedals.length.toLocaleString("en-US")} pedals`,
+                        `${manifest.pedalboards.length.toLocaleString("en-US")} pedalboards`,
+                        `${new Set([...manifest.pedals, ...manifest.pedalboards].map((p) => p.brand)).size.toLocaleString("en-US")} brands`,
+                      ]}
+                    />
+                  )
+                : null}
             </p>
             <div className="mt-5 w-full max-w-md">{searchBox}</div>
           </div>
