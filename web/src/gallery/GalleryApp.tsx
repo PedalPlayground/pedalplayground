@@ -12,6 +12,7 @@ import { useRestriction } from "../store/standing";
 import { useAuth } from "../store/auth";
 import { tip } from "../components/Tooltip";
 import { RoleBadges, teamRole, nameLink } from "../components/RoleBadge";
+import { LabeledSelect } from "../components/LabeledSelect";
 import { DensitySwitch, useDensity, type Density } from "../components/DensitySwitch";
 
 const TYPE_LABELS: Record<PlaygroundType, string> = {
@@ -292,26 +293,16 @@ export function GalleryApp() {
               </button>
             ))}
           </div>
-          <div className="ml-auto flex items-center gap-2">
-            <div role="radiogroup" aria-label="Sort" className="flex shrink-0 rounded-control bg-soft p-0.5">
-              {(
-                [
-                  ["new", "Newest"],
-                  ["liked", "Most liked"],
-                ] as const
-              ).map(([v, label]) => (
-                <button
-                  key={v}
-                  type="button"
-                  role="radio"
-                  aria-checked={sort === v}
-                  onClick={() => setSort(v)}
-                  className={`h-7 rounded-inner px-2.5 text-xs font-semibold transition-colors ${sort === v ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+          <div className="ml-auto flex items-center gap-6">
+            <LabeledSelect
+              label="Sort by"
+              value={sort}
+              options={[
+                ["new", "Newest"],
+                ["liked", "Most liked"],
+              ]}
+              onChange={setSort}
+            />
             <DensitySwitch value={density} onChange={setDensity} />
           </div>
         </div>

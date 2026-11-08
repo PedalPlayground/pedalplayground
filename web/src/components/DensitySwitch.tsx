@@ -1,15 +1,14 @@
-import { Grid2x2, Grid3x3, Square } from "lucide-react";
 import { useState } from "react";
-import { tip } from "./Tooltip";
+import { LabeledSelect } from "./LabeledSelect";
 
 /** How tightly a card grid packs: fewer, bigger cards (large) to more, smaller ones (small). */
 export type Density = "large" | "medium" | "small";
 
-const OPTIONS: [Density, string, typeof Square][] = [
-  ["large", "Large cards", Square],
-  ["medium", "Medium cards", Grid2x2],
-  ["small", "Small cards", Grid3x3],
-];
+const OPTIONS = [
+  ["large", "Large"],
+  ["medium", "Medium"],
+  ["small", "Small"],
+] as const;
 
 /** The viewer's choice for one page's grid (`key`: "gallery", "gear"), kept in this browser. Medium when unset. */
 export function useDensity(key: string): [Density, (d: Density) => void] {
@@ -33,24 +32,7 @@ export function useDensity(key: string): [Density, (d: Density) => void] {
   return [density, set];
 }
 
-/** Three icon buttons over a card grid (Explore, Gear), styled like the pages' sort control. */
+/** The "Card size" dropdown over a card grid (Explore, Gear), beside the "Sort by" one. */
 export function DensitySwitch({ value, onChange }: { value: Density; onChange: (d: Density) => void }) {
-  return (
-    <div role="radiogroup" aria-label="Card size" className="flex shrink-0 rounded-control bg-soft p-0.5">
-      {OPTIONS.map(([d, label, Icon]) => (
-        <button
-          key={d}
-          type="button"
-          role="radio"
-          aria-checked={value === d}
-          aria-label={label}
-          {...tip(label)}
-          onClick={() => onChange(d)}
-          className={`grid h-7 w-8 place-items-center rounded-inner transition-colors ${value === d ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`}
-        >
-          <Icon size={14} strokeWidth={2.25} />
-        </button>
-      ))}
-    </div>
-  );
+  return <LabeledSelect label="Card size" value={value} options={OPTIONS} onChange={onChange} />;
 }

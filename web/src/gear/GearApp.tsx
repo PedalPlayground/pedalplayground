@@ -8,6 +8,7 @@ import { indexItem, search as searchItems } from "../lib/search";
 import { PEDAL_TYPES } from "../lib/specs";
 import { Modal } from "../components/Modal";
 import { Meta } from "../components/Meta";
+import { LabeledSelect } from "../components/LabeledSelect";
 import { DensitySwitch, useDensity, type Density } from "../components/DensitySwitch";
 import { fetchGearUsage, fetchHot, type HotEntry, type TrendingEntry } from "../lib/trending";
 import type { CatalogItem } from "../lib/types";
@@ -607,20 +608,17 @@ export function GearApp() {
               <span className="grid size-[18px] place-items-center rounded-full bg-brand text-[11px] font-semibold text-brand-ink">{activeFilters}</span>
             )}
           </button>
-          <div role="radiogroup" aria-label="Sort" className={`${segmented} shrink-0`}>
-            {(
-              [
-                ["az", "A–Z"],
-                ["new", "Newest"],
-                ["used", "Most used"],
-              ] as const
-            ).map(([v, label]) => (
-              <button key={v} type="button" role="radio" aria-checked={sort === v} onClick={() => setSort(v)} className={`${segment(sort === v)} px-2.5`}>
-                {label}
-              </button>
-            ))}
-          </div>
-          <div className="max-sm:hidden">
+          <LabeledSelect
+            label="Sort by"
+            value={sort}
+            options={[
+              ["az", "A–Z"],
+              ["new", "Newest"],
+              ["used", "Most used"],
+            ]}
+            onChange={setSort}
+          />
+          <div className="ml-3 max-sm:hidden">
             <DensitySwitch value={density} onChange={setDensity} />
           </div>
         </div>
@@ -765,9 +763,6 @@ function GearCard({
 }
 
 const filterHeading = "mb-1.5 text-xs font-semibold uppercase tracking-[0.04em] text-ink-muted";
-const segmented = "flex rounded-control bg-soft p-0.5";
-const segment = (on: boolean) =>
-  `h-7 flex-1 whitespace-nowrap rounded-inner px-1.5 text-xs font-semibold transition-colors ${on ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`;
 const listRow = (on: boolean) =>
   `flex w-full items-center justify-between gap-2 rounded-control px-2 py-1.5 text-left text-[13px] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
     on ? "bg-soft font-semibold text-ink" : "text-ink-muted hover:bg-soft hover:text-ink"
