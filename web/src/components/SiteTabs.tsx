@@ -32,15 +32,17 @@ export const tabLabel = "max-lg:sr-only";
 
 export type SitePage = "build" | "gallery" | "gear" | "editor" | null;
 
-/** Admin (the editor page), for catalog editors only. It sits after What's New. */
-export function AdminTab({ current }: { current: SitePage }) {
+/** Admin (the editor page), for catalog editors only: its own boxed section between the nav and the account. */
+function AdminSection({ current }: { current: SitePage }) {
   const editor = useIsEditor();
   if (!editor) return null;
   return (
-    <a href="/editor/" aria-current={current === "editor" ? "page" : undefined} className={tabClass(false)}>
-      <Wrench {...tabIcon} fill="currentColor" className="text-ink-muted" />
-      <span className={tabLabel}>Admin</span>
-    </a>
+    <div className={`${section} border-l border-chrome-line px-2 sm:px-4`}>
+      <a href="/editor/" aria-current={current === "editor" ? "page" : undefined} className={tabClass(false)}>
+        <Wrench {...tabIcon} fill="currentColor" className="text-ink-muted" />
+        <span className={tabLabel}>Admin</span>
+      </a>
+    </div>
   );
 }
 
@@ -75,7 +77,7 @@ const section = "flex shrink-0 items-center";
 
 /**
  * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Gallery, Gear, My Boards
- * What's New and Admin at the right; then the account section behind a thin divider.
+ * What's New at the right; then Admin (catalog editors) and the account, each in a section behind a thin divider.
  */
 export function SiteHeader({
   current,
@@ -110,19 +112,11 @@ export function SiteHeader({
         {nav}
         <div className="ml-auto flex shrink-0 items-center gap-3">
           {navEnd}
-          {/* Gallery, Gear, My Boards, What's New, then Admin for catalog editors: one row. */}
-          <SiteTabs
-            current={current}
-            builds={builds}
-            after={
-              <>
-                {updates}
-                <AdminTab current={current} />
-              </>
-            }
-          />
+          {/* Gallery, Gear, My Boards and What's New: one row. */}
+          <SiteTabs current={current} builds={builds} after={updates} />
         </div>
       </div>
+      <AdminSection current={current} />
       {account && (
         <div
           data-tour="account"
