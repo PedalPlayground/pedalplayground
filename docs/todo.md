@@ -36,6 +36,7 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 22. Multiple languages (translate the site's UI). Post-MVP, not yet prioritized.
 23. Two tiered pedalboards with a hinged shelf. Post-MVP, not yet prioritized.
 24. A way to reset your password.
+25. Bug: some thumbnails in the My Playgrounds menu are blank (reported by Trav 2026-11-08).
 
 ## Done
 
