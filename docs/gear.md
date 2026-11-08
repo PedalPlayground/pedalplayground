@@ -26,7 +26,7 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   (16 tiles: Trav's hand-picked boutique brands first (`FEATURED_BRANDS`: OBNE, Spaceman, Cornerstone, Chase Bliss, EAE, then high-tech Meris, GFI System and
   Eventide lead, the rest of the list follows by use), then other well-loved makers scored by the year's and month's adds
   over the square root of their item count, with mass-market brands left out (`MASS_BRANDS`). Photos skip switchers,
-  tuners, buffers and placeholders (`showy`); 8 on phones: name, item count, and the name wrapping to two lines in the left half, and a zoomed, cropped photo of the brand's most added item bleeding off
+  tuners, buffers and placeholders (`showy`); 8 on phones: name (wrapping to two lines in the left half, never under the photo), item count, and a zoomed, cropped photo of the brand's most added item bleeding off
   the corner) stretches to the left side's height. Hot ranks this week's 100 most added by momentum (week adds squared
   over month adds, damped by size; see `fetchHot` in `lib/trending.ts`), lifts newer gear (added in the last year
   1.6x, last three years 1.3x), and sets aside the month's 30 most added real gear (everyday staples), tuners, volume
