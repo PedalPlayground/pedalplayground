@@ -425,7 +425,7 @@ function BoardCard({
         {board.description && !compact && <p className="mt-1 line-clamp-2 text-[13px] text-ink-muted">{board.description}</p>}
       </div>
       {/* Over the bottom-right corner of the image: likes, and comments when there are any. */}
-      <span className="pointer-events-none absolute inset-x-0 top-0 flex aspect-[8/5] items-end justify-end gap-3 px-3 pb-1.5 [&>*]:pointer-events-auto">
+      <span className="pointer-events-none absolute inset-x-0 top-0 flex aspect-[8/5] items-end justify-end gap-3 px-3 pb-0.5 [&>*]:pointer-events-auto">
             {!!board.comment_count && (
               <a
                 href={`${boardUrl(board.slug)}#comments`}
