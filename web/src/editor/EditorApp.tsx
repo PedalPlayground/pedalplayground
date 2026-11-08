@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchManifest, type Manifest } from "../lib/catalog";
-import { isEditor, pendingBuilds, publish } from "../lib/editorApi";
+import { isAdmin, isEditor, pendingBuilds, publish } from "../lib/editorApi";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { useAuth } from "../store/auth";
 import { AddTab } from "./AddTab";
@@ -42,6 +42,8 @@ export function EditorApp() {
   const ready = useAuth((s) => s.ready);
   const user = useAuth((s) => s.user);
   const [allowed, setAllowed] = useState<boolean | null>(null);
+  /** Admins also get News and manage who's an editor. */
+  const [admin, setAdmin] = useState(false);
   const [tab, setTabState] = useState<Tab>(tabFromHash);
   const setTab = (t: Tab) => {
     setTabState(t);
@@ -66,7 +68,10 @@ export function EditorApp() {
   }, []);
   useEffect(() => {
     if (!user) return setAllowed(null);
-    isEditor().then(setAllowed, () => setAllowed(false));
+    Promise.all([isEditor().catch(() => false), isAdmin().catch(() => false)]).then(([editor, isAdminUser]) => {
+      setAdmin(isAdminUser);
+      setAllowed(editor || isAdminUser);
+    });
   }, [user]);
   useEffect(() => {
     if (!allowed) return;
@@ -100,16 +105,18 @@ export function EditorApp() {
   if (!allowed)
     return (
       <Shell header={header}>
-        <p className="text-[15px]">This page is for catalog editors. Your account isn't one.</p>
+        <p className="text-[15px]">This page is for editors and admins. Your account isn't one.</p>
       </Shell>
     );
 
+  // News is for admins.
+  const shown: Tab = tab === "news" && !admin ? "queue" : tab;
   const tabButton = (t: Tab, label: string) => (
     <button
       type="button"
       onClick={() => setTab(t)}
-      aria-pressed={tab === t}
-      className={`press h-8 rounded-control px-3 text-[13px] font-semibold ${tab === t ? "bg-ink text-surface" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
+      aria-pressed={shown === t}
+      className={`press h-8 rounded-control px-3 text-[13px] font-semibold ${shown === t ? "bg-ink text-surface" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
     >
       {label}
     </button>
@@ -124,7 +131,7 @@ export function EditorApp() {
             {tabButton("queue", "Queue")}
             {tabButton("add", "Add")}
             {tabButton("catalog", "Catalog")}
-            {tabButton("news", "News")}
+            {admin && tabButton("news", "News")}
             {tabButton("moderation", "Moderation")}
           </nav>
           <div className="ml-auto flex items-center gap-3">
@@ -151,11 +158,11 @@ export function EditorApp() {
           </button>
         </div>
       )}
-      {tab === "queue" && <QueueTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
-      {tab === "add" && <AddTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
-      {tab === "news" && <NewsTab setNotice={setNotice} />}
-      {tab === "moderation" && <ModerationTab setNotice={setNotice} />}
-      {tab === "catalog" && <CatalogTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
+      {shown === "queue" && <QueueTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
+      {shown === "add" && <AddTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
+      {shown === "news" && <NewsTab setNotice={setNotice} />}
+      {shown === "moderation" && <ModerationTab setNotice={setNotice} isAdmin={admin} />}
+      {shown === "catalog" && <CatalogTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
     </Shell>
   );
 }

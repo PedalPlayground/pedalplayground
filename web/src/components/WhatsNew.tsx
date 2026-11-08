@@ -4,7 +4,7 @@ import { tabClass, tabIcon, tabLabel } from "./SiteTabs";
 import { useEffect, useMemo, useState } from "react";
 import { buildFeed, fetchPosts, isUnread, markSeen, readSeen, type FeedEntry, type Post } from "../lib/announcements";
 import { track } from "../lib/analytics";
-import { useIsEditor } from "../lib/useIsEditor";
+import { useIsAdmin } from "../lib/useIsEditor";
 import { useCatalog } from "../store/catalog";
 
 const dateLabel = (iso: string) =>
@@ -14,7 +14,8 @@ const dateLabel = (iso: string) =>
 /** `onNewGear` opens the Add Gear panel at its New list (the gallery sends you to the playground for that). */
 export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
   const manifest = useCatalog((s) => s.manifest);
-  const editor = useIsEditor();
+  // Only admins post updates.
+  const editor = useIsAdmin();
   const [posts, setPosts] = useState<Post[]>([]);
   const [seen, setSeen] = useState(readSeen);
   /** True while the panel is open: the dot goes away, but the "New" labels stay until it closes. */

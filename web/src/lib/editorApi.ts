@@ -75,6 +75,35 @@ export async function isEditor(): Promise<boolean> {
   return data === true;
 }
 
+/** Admins (Trav, so far): they change permissions and post What's New. False until the admins migration is run. */
+export async function isAdmin(): Promise<boolean> {
+  const { data, error } = await db().rpc("is_admin");
+  if (error) return false;
+  return data === true;
+}
+
+export interface EditorAccount {
+  user_id: string;
+  username: string | null;
+  added_at: string;
+  admin: boolean;
+}
+
+/** Admins: everyone who can edit (empty until the admins migration is run). */
+export async function listEditors(): Promise<EditorAccount[]> {
+  const { data, error } = await db().rpc("list_editors");
+  if (error && /list_editors|schema cache|does not exist/i.test(error.message)) return [];
+  fail(error);
+  return (data ?? []) as EditorAccount[];
+}
+
+/** Admins: makes someone an editor, or stops them being one. */
+export async function setEditor(userId: string, make: boolean): Promise<void> {
+  const { error } = await db().rpc("set_editor", { target: userId, make });
+  if (error && /set_editor|schema cache/i.test(error.message)) throw new Error("Roles aren't set up yet. Run the admins migration first.");
+  fail(error);
+}
+
 export const fieldsFrom = (r: Submission | Item): Fields => ({
   kind: r.kind,
   brand: r.brand,
