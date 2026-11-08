@@ -266,3 +266,29 @@ export async function deletePost(id: string): Promise<void> {
   const { error } = await db().from("announcements").delete().eq("id", id);
   fail(error);
 }
+
+// Bug reports ------------------------------------------------------------------------------------------------------
+
+export interface BugReport {
+  id: string;
+  details: string;
+  page: string | null;
+  user_agent: string | null;
+  status: "open" | "closed";
+  created_at: string;
+  reporter_id: string;
+}
+
+/** Open bug reports, newest first (empty, with no error, until the bug_reports migration is run). */
+export async function listBugReports(): Promise<BugReport[]> {
+  const { data, error } = await db().from("bug_reports").select("*").eq("status", "open").order("created_at", { ascending: false }).limit(200);
+  if (error && (error.code === "42P01" || /schema cache|does not exist/i.test(error.message))) return [];
+  fail(error);
+  return (data ?? []) as BugReport[];
+}
+
+export async function closeBugReport(id: string): Promise<void> {
+  const { data: u } = await db().auth.getUser();
+  const { error } = await db().from("bug_reports").update({ status: "closed", closed_by: u.user?.id ?? null, closed_at: new Date().toISOString() }).eq("id", id);
+  fail(error);
+}

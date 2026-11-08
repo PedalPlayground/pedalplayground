@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchShared, setGalleryThumbnail, uploadBoardThumbnail } from "../lib/cloud";
+import { closeBugReport, listBugReports, type BugReport } from "../lib/editorApi";
 import { fetchGalleryBoards, GALLERY_PAGE_SIZE } from "../lib/gallery";
 import { renderThumbnailFile } from "../lib/thumbnail";
 import { fieldBox, fieldError, fieldHelp, fieldInput, fieldLabel } from "../components/formText";
@@ -239,8 +240,66 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
         )}
       </section>
 
+      <BugReports setNotice={setNotice} />
       <RedrawThumbnails />
     </div>
+  );
+}
+
+/** Bug reports from players (Suggest Gear's Report a Bug tab), newest first, each with the page and browser. */
+function BugReports({ setNotice }: { setNotice: SetNotice }) {
+  const [reports, setReports] = useState<BugReport[] | null>(null);
+  const load = () =>
+    listBugReports().then(setReports, (e: Error) => {
+      setReports([]);
+      setNotice({ text: e.message, error: true });
+    });
+  useEffect(() => void load(), []); // eslint-disable-line react-hooks/exhaustive-deps
+  return (
+    <section className="grid content-start gap-3">
+      <h2 className="text-lg font-bold tracking-[-0.01em]">
+        Bug Reports {reports && reports.length > 0 && <span className="font-normal text-ink-muted">{reports.length}</span>}
+      </h2>
+      {reports === null ? (
+        <p className="text-[13px] text-ink-muted">Loading…</p>
+      ) : reports.length === 0 ? (
+        <p className="text-[13px] text-ink-muted">No open bug reports.</p>
+      ) : (
+        <ul className="grid gap-2">
+          {reports.map((r) => (
+            <li key={r.id} className="grid gap-1.5 rounded-panel bg-card p-3">
+              <p className="whitespace-pre-wrap text-[13px]">{r.details}</p>
+              <p className="text-xs text-ink-muted">
+                {shortDate(r.created_at)}
+                {r.page && (
+                  <>
+                    {" · "}
+                    <a href={r.page} target="_blank" rel="noreferrer" className="underline-offset-2 hover:underline">
+                      {r.page.replace(/^https?:\/\//, "")}
+                    </a>
+                  </>
+                )}
+              </p>
+              {r.user_agent && <p className="truncate text-[11px] text-ink-muted" title={r.user_agent}>{r.user_agent}</p>}
+              <div>
+                <button
+                  type="button"
+                  className={secondaryButton}
+                  onClick={() =>
+                    void closeBugReport(r.id).then(
+                      () => setReports((list) => list?.filter((x) => x.id !== r.id) ?? list),
+                      (e: Error) => setNotice({ text: e.message, error: true }),
+                    )
+                  }
+                >
+                  Close
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
   );
 }
 
