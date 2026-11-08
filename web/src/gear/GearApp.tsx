@@ -446,7 +446,7 @@ export function GearApp() {
       <main id={open ? undefined : "content"} className={`page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-8 ${open ? "hidden" : ""}`}>
         {/* The top of the page: a compact hero band with the heading, the count and a big search, and a few cropped
             pedal photos spilling off its right edge (laptops and up). */}
-        <header className="relative isolate overflow-hidden rounded-container bg-card px-5 py-6 sm:px-8 sm:py-8">
+        <header className="relative isolate overflow-hidden rounded-container bg-[color-mix(in_srgb,var(--color-brand)_9%,var(--color-card))] px-5 py-6 sm:px-8 sm:py-8">
           <div className="relative z-10 max-w-xl">
             {brand && (
               <button type="button" onClick={() => pickBrand(null)} className="mb-1.5 flex items-center gap-1 text-[13px] font-semibold text-brand">
