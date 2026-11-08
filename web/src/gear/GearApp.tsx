@@ -372,8 +372,8 @@ export function GearApp() {
   /** The hot set for marking full cards. */
   const hotKeys = useMemo(() => new Set(hotItems.slice(0, HOT_MARKED).map((c) => c.image)), [hotItems]);
 
-  /** The shelves over the full list (no brand or search): hot, newest, and the most used brands. */
-  const browsing = !brand && !type && !search.trim();
+  /** The shelves over the full list (All Gear, nothing filtered or searched): hot, newest, and brands to know. */
+  const browsing = scope === "all" && !brand && !type && !search.trim();
   const shelves = useMemo(() => {
     if (!manifest || !browsing) return null;
     const hot = hotItems.slice(0, BENTO_COUNT);
