@@ -706,6 +706,8 @@ export function startLocalAutosave() {
     if (useUi.getState().viewing) return;
     clearTimeout(timer);
     timer = setTimeout(() => {
+      // A shared playground may have opened since the edit.
+      if (useUi.getState().viewing) return;
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(usePlayground.getState().toDocument()));
       } catch {

@@ -119,12 +119,14 @@ async function updateShareImage(slug: string) {
   clearTimeout(shareImageTimer);
   shareImagePending = null;
   // The canvas must still hold this playground (not another one opened since, or someone else's shared board).
-  const { slug: openSlug, isPublic } = useCloud.getState();
+  const { slug: openSlug, isPublic, cloudId } = useCloud.getState();
   if (openSlug !== slug || !isPublic || useUi.getState().viewing) return;
+  const { items } = usePlayground.getState();
+  if (!cloudId || !inCloud(cloudId, items)) return;
   const key = `${slug}:${contentKey()}`;
   if (key === shareImageKey) return;
   try {
-    const image = await renderShareImage(usePlayground.getState().items);
+    const image = await renderShareImage(items);
     if (!image) return;
     await uploadShareImage(slug, image);
     shareImageKey = key;
@@ -156,6 +158,14 @@ let thumbSentAt = 0;
 let thumbTimer: ReturnType<typeof setTimeout> | undefined;
 
 const itemsKey = (items: unknown) => JSON.stringify(items);
+
+/**
+ * The layout last saved to (or loaded from) a cloud playground. A thumbnail or link preview is only ever drawn from
+ * the layout stored in that same playground, so a board that isn't the user's (a shared board, or a stale copy left
+ * in this device's storage) can never become another playground's picture.
+ */
+let cloudCopy: { id: string; key: string } | null = null;
+const inCloud = (id: string, items: unknown) => cloudCopy?.id === id && cloudCopy.key === itemsKey(items);
 
 /** Records that the stored thumbnail matches this layout (after a send, or when a saved board is opened). */
 function markThumbnail(id: string, items: unknown, sentNow: boolean) {
@@ -189,6 +199,8 @@ async function flushThumbnail(): Promise<void> {
   if (!supabase || !user || !cloudId || ownerId !== user.id || useUi.getState().viewing) return;
   const { items } = usePlayground.getState();
   if (thumbSent?.id === cloudId && thumbSent.key === itemsKey(items)) return;
+  // Not saved to this playground yet: the next save sends the thumbnail with the layout.
+  if (!inCloud(cloudId, items)) return;
   markThumbnail(cloudId, items, true);
   try {
     const thumbnail = await renderThumbnail(items);
@@ -203,6 +215,20 @@ async function flushThumbnail(): Promise<void> {
 /** Sends anything that was waiting (thumbnail, link preview) before the canvas changes to another board. */
 function flushPending(): Promise<void> {
   return Promise.all([flushThumbnail(), flushShareImage()]).then(() => undefined);
+}
+
+/** Leaves a shared playground for the board kept in this device's storage (signed out, or not saved to the cloud). */
+function restoreLocal() {
+  if (!useUi.getState().viewing) return;
+  useUi.getState().setViewing(null);
+  clearSharedParam();
+  usePlayground.getState().reset();
+  restorePlayground();
+  // Undo shouldn't step back into the shared board.
+  usePlayground.setState({ past: [], future: [] });
+  usePlayground.getState().fitToContent();
+  lastSavedKey = contentKey();
+  void reconcileWithCloud();
 }
 
 /** What was last persisted (or loaded), so we only save real changes. */
@@ -287,6 +313,7 @@ export const useCloud = create<CloudState>((set, get) => {
           if (sentThumbnail !== undefined || listed?.name !== pg.name) await touchPlayground(id, pg.name, sentThumbnail);
         }
         await insertVersion(id, doc);
+        cloudCopy = { id, key: itemsKey(doc.items) };
 
         lastSavedKey = contentKey();
         set({ status: "saved" });
@@ -333,13 +360,16 @@ export const useCloud = create<CloudState>((set, get) => {
       usePlayground.getState().loadDocument(doc, { undoable: true });
       // The stored thumbnail was drawn from this layout, so it isn't resent until the board changes.
       markThumbnail(id, usePlayground.getState().items, false);
+      cloudCopy = { id, key: itemsKey(usePlayground.getState().items) };
       if (row) usePlayground.getState().setName(row.name);
       lastSavedKey = contentKey();
+      // Reopening the same playground before the list has loaded keeps what's known about its sharing.
+      const same = get().cloudId === id;
       setMeta({
         cloudId: id,
         ownerId: useAuth.getState().user?.id ?? null,
-        slug: row?.slug ?? null,
-        isPublic: row?.is_public ?? false,
+        slug: row ? row.slug : same ? get().slug : null,
+        isPublic: row ? row.is_public : same ? get().isPublic : false,
         forkedFromId: null,
         pendingDetails: null,
       });
@@ -386,6 +416,9 @@ export const useCloud = create<CloudState>((set, get) => {
     },
 
     share: async () => {
+      // Shares what's on the screen: save it first if this playground in the cloud might hold something else.
+      const open = get().cloudId;
+      if (open && !inCloud(open, usePlayground.getState().items)) lastSavedKey = "";
       await get().saveNow();
       const { cloudId } = get();
       if (!cloudId) throw new Error("Sign in to share a playground.");
@@ -462,15 +495,23 @@ export const useCloud = create<CloudState>((set, get) => {
 
     leaveShared: () => {
       if (!useUi.getState().viewing) return;
-      useUi.getState().setViewing(null);
-      clearSharedParam();
-      usePlayground.getState().reset();
-      restorePlayground();
-      // Undo shouldn't step back into the shared board.
-      usePlayground.setState({ past: [], future: [] });
-      usePlayground.getState().fitToContent();
-      lastSavedKey = contentKey();
-      void reconcileWithCloud();
+      // Signed in with a saved playground open: bring it back from the cloud. This device's storage can hold another
+      // board by now (another tab, or a local save that landed just as the shared board opened), and treating that
+      // as this playground would save it, or its picture, over the user's own.
+      const user = useAuth.getState().user;
+      const { cloudId, ownerId } = get();
+      if (supabase && user && cloudId && ownerId === user.id) {
+        void get()
+          .openPlayground(cloudId)
+          // Undo shouldn't step back into the shared board.
+          .then(() => usePlayground.setState({ past: [], future: [] }))
+          .catch((e: unknown) => {
+            console.warn("Could not reopen the playground.", e);
+            restoreLocal();
+          });
+        return;
+      }
+      restoreLocal();
     },
 
     copyShared: () => {
@@ -583,7 +624,10 @@ export function startCloudSync() {
 
   // Leaving or hiding the page sends a waiting thumbnail or link preview, so they don't stay out of date.
   const onHide = () => {
-    if (document.visibilityState === "hidden") void flushPending();
+    if (document.visibilityState !== "hidden") return;
+    // Save a waiting edit first, so the thumbnail sent after it shows the saved layout.
+    clearTimeout(timer);
+    void useCloud.getState().saveNow().finally(() => void flushPending());
   };
   document.addEventListener("visibilitychange", onHide);
 
