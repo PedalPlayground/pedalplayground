@@ -316,7 +316,7 @@ export function GearApp() {
     const used = (c: CatalogItem) => usage.get(`${kind}:${c.image}`) ?? 0;
     // Unfiltered, the next hottest after the ones in the bento, so the hero doesn't repeat it.
     const pool = brand || type ? items : hotItems.length > BENTO_COUNT ? hotItems.slice(BENTO_COUNT) : items;
-    return (brand ? [...pool].sort((a, b) => used(b) - used(a)) : pool).slice(0, 6);
+    return (brand ? [...pool].sort((a, b) => used(b) - used(a)) : pool).slice(0, 14);
   }, [brand, type, items, hotItems, usage, kind]);
   /** The hot set for marking full cards. */
   const hotKeys = useMemo(() => new Set(hotItems.slice(0, HOT_MARKED).map((c) => c.image)), [hotItems]);
@@ -804,12 +804,13 @@ function FilterPanel({
   );
 }
 
-/** Hero art variants to compare, picked with ?hero= in the address (row, single, mosaic, board, fan). */
-type HeroVariant = "row" | "single" | "mosaic" | "board" | "fan";
+/** Hero art variants to compare, picked with ?hero= in the address. */
+const HERO_VARIANTS = ["row", "single", "mosaic", "mosaic-bleed", "mosaic-strip", "mosaic-bento", "mosaic-wall", "board", "fan"] as const;
+type HeroVariant = (typeof HERO_VARIANTS)[number];
 // Read when the page loads, before the filters rewrite the address.
 const HERO_VARIANT: HeroVariant = (() => {
   const v = new URLSearchParams(window.location.search).get("hero");
-  return v === "single" || v === "mosaic" || v === "board" || v === "fan" ? v : "row";
+  return (HERO_VARIANTS as readonly string[]).includes(v ?? "") ? (v as HeroVariant) : "row";
 })();
 
 /** The picture side of the Gear hero (laptops and up). */
@@ -854,6 +855,45 @@ function HeroArt({ picks, kind, manifest }: { picks: CatalogItem[]; kind: Kind; 
             <img src={src(c)} alt="" className="absolute inset-[12%] size-[76%] object-contain" />
           </span>
         ))}
+      </div>
+    );
+  const tile = (c: CatalogItem, extra = "") => (
+    <span key={c.image} className={`relative rounded-panel bg-surface ${extra}`}>
+      <img src={src(c)} alt="" className="absolute inset-[12%] size-[76%] object-contain" />
+    </span>
+  );
+  // Bigger tiles, three by two, running off the right and bottom edges.
+  if (variant === "mosaic-bleed")
+    return (
+      <div aria-hidden className="pointer-events-none absolute -bottom-10 -right-10 top-6 hidden w-[46%] grid-cols-3 grid-rows-2 gap-3 lg:grid">
+        {picks.slice(0, 6).map((c) => tile(c))}
+      </div>
+    );
+  // One row of square tiles, vertically centered, the last one cut by the right edge.
+  if (variant === "mosaic-strip")
+    return (
+      <div aria-hidden className="pointer-events-none absolute -right-12 top-1/2 hidden h-[62%] -translate-y-1/2 gap-3 lg:flex">
+        {picks.slice(0, 5).map((c) => tile(c, "aspect-square h-full"))}
+      </div>
+    );
+  // A little bento like Trending gear: one big tile and four small ones.
+  if (variant === "mosaic-bento")
+    return (
+      <div aria-hidden className="pointer-events-none absolute inset-y-5 right-5 hidden w-[40%] grid-cols-4 grid-rows-2 gap-2 lg:grid">
+        {picks.slice(0, 5).map((c, i) => tile(c, i === 0 ? "col-span-2 row-span-2" : ""))}
+      </div>
+    );
+  // A tilted wall of small tiles bleeding off the top, right and bottom edges.
+  if (variant === "mosaic-wall")
+    return (
+      <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 hidden h-[200%] w-[52%] lg:block">
+        <div className="grid h-full -rotate-[10deg] grid-cols-4 grid-rows-4 gap-2.5">
+          {Array.from({ length: 16 }, (_, i) => picks[i % picks.length]).map((c, i) => (
+            <span key={i} className="relative rounded-panel bg-surface">
+              <img src={src(c)} alt="" className="absolute inset-[12%] size-[76%] object-contain" />
+            </span>
+          ))}
+        </div>
       </div>
     );
   // The most liked board in Explore, peeking in from the right edge.
