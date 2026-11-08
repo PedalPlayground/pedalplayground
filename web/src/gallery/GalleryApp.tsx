@@ -85,6 +85,15 @@ export function GalleryApp() {
   const [failed, setFailed] = useState(false);
   const editor = useIsEditor();
   const [density, setDensity] = useDensity("gallery");
+  /** The most liked boards, for the hero's art. */
+  const [heroBoards, setHeroBoards] = useState<GalleryBoard[]>([]);
+  useEffect(() => {
+    if (!supabase) return;
+    void fetchGalleryBoards({ type: null, search: "", sort: "liked", offset: 0, limit: 3 }).then(
+      (b) => setHeroBoards(b.filter((x) => x.thumbnail)),
+      () => undefined,
+    );
+  }, []);
   const [hidden, setHidden] = useState<GalleryBoard | null>(null);
   const request = useRef(0);
   const sentinel = useRef<HTMLDivElement>(null);
@@ -233,29 +242,44 @@ export function GalleryApp() {
           saveGalleryReturn({ sort, type, query: q, count: boards.length, scroll: scroller.current?.scrollTop ?? 0 });
         }}
       >
-        <h1 className="text-2xl font-bold tracking-[-0.01em]">Gallery</h1>
-        <p className="mt-1 text-sm text-ink-muted">Pedalboards shared by the community. Open one to look around or make it your own.</p>
+        {/* The top of the page, like Gear's: a compact hero band with the heading and a big search, and a few of the
+            most liked boards peeking in from its right edge (laptops and up). */}
+        <header className="relative isolate overflow-hidden rounded-container bg-[color-mix(in_srgb,var(--color-brand)_9%,var(--color-card))] px-5 py-6 sm:px-8 sm:py-8">
+          <div className="relative z-10 max-w-xl">
+            <h1 className="text-[28px] font-bold leading-tight tracking-[-0.02em] sm:text-3xl">Explore</h1>
+            <p className="mt-1.5 text-sm text-ink-muted">Pedalboards shared by the community. Open one to look around or make it your own.</p>
+            <label className="relative mt-5 block w-full max-w-md">
+              <Search size={18} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-icon" />
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                  // Typing starts a new search over everyone's boards.
+                  setByUser(null);
+                }}
+                placeholder="Search boards or people"
+                aria-label="Search boards or people"
+                className="h-11 w-full rounded-control bg-surface pl-10 pr-3 text-[15px] outline-none focus:ring-2 focus:ring-brand"
+              />
+            </label>
+          </div>
+          {heroBoards.length > 0 && (
+            <div aria-hidden className="pointer-events-none absolute -right-10 top-1/2 hidden h-[70%] -translate-y-1/2 gap-4 lg:flex">
+              {heroBoards.map((b) => (
+                <img key={b.id} src={b.thumbnail!} alt="" className="h-full w-auto rounded-panel bg-canvas object-contain p-2 shadow-float" />
+              ))}
+            </div>
+          )}
+        </header>
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <label className="relative block sm:w-72">
-            <Search size={16} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-icon" />
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
-                // Typing starts a new search over everyone's boards.
-                setByUser(null);
-              }}
-              placeholder="Search boards or people"
-              aria-label="Search the gallery"
-              className="h-9 w-full rounded-control border border-chrome-line bg-surface pl-9 pr-3 text-sm outline-none focus:ring-2 focus:ring-brand"
-            />
-          </label>
+        {/* What's listed, the board types, then sort and card size, across the full width (like Gear's bar). */}
+        <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-3">
+          <h2 className="text-lg font-bold tracking-[-0.01em]">{type ? `${TYPE_LABELS[type]} boards` : filteredUser ? "Their boards" : search.trim() ? "Results" : "All boards"}</h2>
           {/* Scrolls sideways on phones. A scroller clips what's outside it, so it gets room around the chips for their
               shadows (padding, undone by negative margins so nothing moves); that room doesn't take clicks. */}
           <div
-            className="pointer-events-none -mx-4 -my-1 flex gap-2 overflow-x-auto px-4 py-1 sm:-mx-1 sm:px-1 [&>*]:pointer-events-auto"
+            className="pointer-events-none -mx-4 -my-1 flex gap-2 overflow-x-auto px-4 py-1 max-sm:order-last max-sm:basis-[calc(100%+2rem)] sm:-mx-1 sm:px-1 [&>*]:pointer-events-auto"
             role="group"
             aria-label="Board type"
           >
@@ -268,27 +292,27 @@ export function GalleryApp() {
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-2 self-start sm:ml-auto sm:self-auto">
-          <div role="radiogroup" aria-label="Sort" className="flex shrink-0 rounded-control bg-soft p-0.5">
-            {(
-              [
-                ["new", "Newest"],
-                ["liked", "Most liked"],
-              ] as const
-            ).map(([v, label]) => (
-              <button
-                key={v}
-                type="button"
-                role="radio"
-                aria-checked={sort === v}
-                onClick={() => setSort(v)}
-                className={`h-7 rounded-inner px-2.5 text-xs font-semibold transition-colors ${sort === v ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-          <DensitySwitch value={density} onChange={setDensity} />
+          <div className="ml-auto flex items-center gap-2">
+            <div role="radiogroup" aria-label="Sort" className="flex shrink-0 rounded-control bg-soft p-0.5">
+              {(
+                [
+                  ["new", "Newest"],
+                  ["liked", "Most liked"],
+                ] as const
+              ).map(([v, label]) => (
+                <button
+                  key={v}
+                  type="button"
+                  role="radio"
+                  aria-checked={sort === v}
+                  onClick={() => setSort(v)}
+                  className={`h-7 rounded-inner px-2.5 text-xs font-semibold transition-colors ${sort === v ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <DensitySwitch value={density} onChange={setDensity} />
           </div>
         </div>
 
