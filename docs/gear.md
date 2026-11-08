@@ -31,7 +31,7 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   over month adds, damped by size; see `fetchHot` in `lib/trending.ts`), lifts newer gear (added in the last year
   1.6x, last three years 1.3x), and sets aside the month's 30 most added real gear (everyday staples), tuners, volume
   pedals, utilities and board accessories.
-- **Marks:** icon only, just before an item's name on full cards and Trending gear tiles: a brand-colored dot for new
+- **Marks:** icon only, just before an item's name on full cards and Trending gear tiles: a brand-colored "NEW" tag icon for new (`NewTag`, Streamline Core's Tag New Square)
   (added in the last 30 days) and a tangerine trend line for hot (the 40 hottest). Hovering shows the word.
 - The photo at real proportions on the canvas color, with size in inches and mm, type, power and current draw when
   the catalog has them, and the date it was added.
