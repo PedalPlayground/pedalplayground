@@ -117,14 +117,15 @@ const MASS_BRANDS = new Set([
  * and fill the hero's photos when no filter is on.
  */
 const FEATURED_BRANDS = [
-  "OBNE", "Spaceman", "Cornerstone", "Chase Bliss", "EAE", "Fairfield Circuitry", "Meris", "Hologram Electronics",
+  "OBNE", "Spaceman", "Cornerstone", "Chase Bliss", "EAE", "Meris", "GFI System", "Eventide",
+  "Fairfield Circuitry", "Hologram Electronics", "Empress", "Source Audio", "Poly Effects", "Morningstar",
   "Death By Audio", "Montreal Assembly", "Drolo", "Matthews Effects", "Beetronics", "Red Panda", "Benson",
   "Jackson Audio", "Origin Effects", "Vemuram", "Collision Devices", "Gamechanger Audio", "Dr Scientist", "SolidGoldFX",
-  "Caroline", "KMA", "Rainger FX", "Pine Box Customs", "Wren And Cuff", "Empress", "Strymon", "EarthQuaker",
+  "Caroline", "KMA", "Rainger FX", "Pine Box Customs", "Wren And Cuff", "Strymon", "EarthQuaker",
   "Walrus Audio", "Mask Audio Electronics", "Hungry Robot", "JPTR FX", "Anasounds", "Fuzzrocious",
 ];
-/** Trav's own picks, always first in Brands to know. */
-const LEAD_BRANDS = 5;
+/** Trav's own picks (boutique, then high tech), always first in Brands to know. */
+const LEAD_BRANDS = 8;
 /** Brands beside the bento: two columns of eight on laptops. */
 const BRAND_TILES = 16;
 
@@ -1114,9 +1115,10 @@ function BrandTile({
       onClick={onPick}
       className={`group relative isolate flex min-h-0 items-center overflow-hidden rounded-panel bg-card px-3.5 text-left outline-none transition-colors hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-brand ${className}`}
     >
-      <span className="relative z-10 min-w-0 pr-[38%]">
-        <span className="block truncate text-[13px] font-semibold leading-tight">{brand}</span>
-        <span className="block truncate text-[11px] tabular-nums text-ink-muted">
+      {/* Text keeps to the left half and wraps, so it never runs under the photo. */}
+      <span className="relative z-10 w-[64%] min-w-0 sm:w-[56%]">
+        <span className="line-clamp-2 text-[13px] font-semibold leading-tight">{brand}</span>
+        <span className="mt-0.5 block truncate text-[11px] tabular-nums text-ink-muted">
           {count.toLocaleString("en-US")} {kind === "pedal" ? (count === 1 ? "pedal" : "pedals") : count === 1 ? "board" : "boards"}
         </span>
       </span>
@@ -1127,7 +1129,7 @@ function BrandTile({
           sizes="200px"
           alt=""
           loading="lazy"
-          className="pointer-events-none absolute -right-[8%] top-[18%] h-[220%] w-[50%] object-contain object-left-top transition-transform duration-300 group-hover:-translate-y-1"
+          className="pointer-events-none absolute -right-[6%] top-[18%] h-[220%] w-[36%] object-contain sm:w-[44%] object-left-top transition-transform duration-300 group-hover:-translate-y-1"
         />
       )}
     </button>
