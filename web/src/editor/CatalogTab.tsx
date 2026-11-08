@@ -250,45 +250,45 @@ export function CatalogTab({
         </div>
 
         {/* Bulk actions, once something is ticked. */}
-        {/* The bulk actions appear beside Select all once something is ticked, on the same fixed-height row, so the
-            list below never moves. (Narrow screens scroll the row sideways.) */}
-        <div className="sticky top-[6.5rem] z-10 flex h-12 flex-nowrap items-center gap-3 overflow-x-auto rounded-panel bg-card px-3">
-          <label className="flex w-28 shrink-0 items-center gap-2 text-[13px] font-semibold tabular-nums">
-            <input
-              type="checkbox"
-              checked={allTicked}
-              ref={(el) => {
-                if (el) el.indeterminate = selected.size > 0 && !allTicked;
-              }}
-              onChange={() => setSelected(allTicked ? new Set() : new Set(items?.map((x) => x.id)))}
-              className="size-4 accent-[var(--color-brand)]"
-              aria-label="Select all shown"
-            />
-            {selected.size ? `${selected.size} selected` : "Select all"}
-          </label>
-          {(selected.size > 0 || bulkBusy) && (
-            <BulkActions
-              busy={bulkBusy}
-              disabled={!!bulkBusy}
-              pedals={chosen.filter((x) => x.kind === "pedal").length}
-              onAddType={(t) => void bulk(`Added ${t}`, (x) => (x.kind !== "pedal" || typesOf(x).includes(t) ? Promise.resolve(true) : saveTypes(x, [...typesOf(x), t])))}
-              onRemoveType={(t) => void bulk(`Removed ${t}`, (x) => (!typesOf(x).includes(t) ? Promise.resolve(true) : saveTypes(x, typesOf(x).filter((y) => y !== t))))}
-              onMainType={(t) => void bulk(`Made ${t} the main type`, (x) => (x.kind !== "pedal" ? Promise.resolve(true) : saveTypes(x, [t, ...typesOf(x).filter((y) => y !== t)])))}
-              onRetire={() => {
-                if (window.confirm(`Retire ${selected.size} ${selected.size === 1 ? "item" : "items"}? They leave search, but saved boards still show them.`))
-                  void bulk("Retired", (x) => setStatusOf(x, "retired"));
-              }}
-              onRestore={() => void bulk("Restored", (x) => setStatusOf(x, "live"))}
-              onClear={() => setSelected(new Set())}
-            />
-          )}
-        </div>
-
         {error && <p className="text-[13px] text-danger">{error}</p>}
         {items && items.length === 0 && <p className="text-[13px] text-ink-muted">Nothing matches.</p>}
         {!items && !error && <p className="text-[13px] text-ink-muted">Loading…</p>}
 
-        <ul className="grid divide-y divide-line rounded-panel border border-line">
+        <div className="rounded-panel border border-line">
+          {/* The list's header row: Select all, and the bulk actions beside it once something is ticked, on the same
+              fixed-height row, so the list never moves. (Narrow screens scroll the row sideways.) */}
+          <div className="sticky top-[6.5rem] z-10 flex h-11 flex-nowrap items-center gap-2.5 overflow-x-auto rounded-t-panel border-b border-line bg-card px-3">
+            <label className="flex w-28 shrink-0 items-center gap-2 text-[13px] font-semibold tabular-nums">
+              <input
+                type="checkbox"
+                checked={allTicked}
+                ref={(el) => {
+                  if (el) el.indeterminate = selected.size > 0 && !allTicked;
+                }}
+                onChange={() => setSelected(allTicked ? new Set() : new Set(items?.map((x) => x.id)))}
+                className="size-4 accent-[var(--color-brand)]"
+                aria-label="Select all shown"
+              />
+              {selected.size ? `${selected.size} selected` : "Select all"}
+            </label>
+            {(selected.size > 0 || bulkBusy) && (
+              <BulkActions
+                busy={bulkBusy}
+                disabled={!!bulkBusy}
+                pedals={chosen.filter((x) => x.kind === "pedal").length}
+                onAddType={(t) => void bulk(`Added ${t}`, (x) => (x.kind !== "pedal" || typesOf(x).includes(t) ? Promise.resolve(true) : saveTypes(x, [...typesOf(x), t])))}
+                onRemoveType={(t) => void bulk(`Removed ${t}`, (x) => (!typesOf(x).includes(t) ? Promise.resolve(true) : saveTypes(x, typesOf(x).filter((y) => y !== t))))}
+                onMainType={(t) => void bulk(`Made ${t} the main type`, (x) => (x.kind !== "pedal" ? Promise.resolve(true) : saveTypes(x, [t, ...typesOf(x).filter((y) => y !== t)])))}
+                onRetire={() => {
+                  if (window.confirm(`Retire ${selected.size} ${selected.size === 1 ? "item" : "items"}? They leave search, but saved boards still show them.`))
+                    void bulk("Retired", (x) => setStatusOf(x, "retired"));
+                }}
+                onRestore={() => void bulk("Restored", (x) => setStatusOf(x, "live"))}
+                onClear={() => setSelected(new Set())}
+              />
+            )}
+          </div>
+          <ul className="grid divide-y divide-line">
           {items?.map((item) => {
             const problem = failed.get(item.id);
             const on = selected.has(item.id);
@@ -344,7 +344,8 @@ export function CatalogTab({
               </li>
             );
           })}
-        </ul>
+          </ul>
+        </div>
         {more && (
           <button type="button" className={`${secondaryButton} justify-self-center`} onClick={() => void load(Math.ceil((items?.length ?? 0) / PAGE))}>
             Show more
@@ -354,6 +355,11 @@ export function CatalogTab({
     </div>
   );
 }
+
+/** The header row's small controls: a step down from the page's buttons (28px tall, 12px text). */
+// Its own classes rather than secondaryButton plus overrides: utilities like h-7 and h-9 would clash.
+const barButton =
+  "press h-7 shrink-0 whitespace-nowrap rounded-control bg-surface-hover px-2.5 text-xs font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
 /** The bulk actions for ticked items: types (pedals only), retire and restore. */
 function BulkActions({
@@ -382,7 +388,7 @@ function BulkActions({
       aria-label={label}
       value=""
       onChange={(e) => e.target.value && run(e.target.value)}
-      className={`${secondaryButton} h-8 shrink-0 cursor-pointer text-[13px]`}
+      className={`${barButton} cursor-pointer`}
       disabled={disabled || !pedals}
     >
       <option value="">{label}…</option>
@@ -396,14 +402,14 @@ function BulkActions({
       {typeMenu("Add type", onAddType)}
       {typeMenu("Make main type", onMainType)}
       {typeMenu("Remove type", onRemoveType)}
-      <button type="button" className={`${secondaryButton} h-8 shrink-0 text-danger`} disabled={disabled} onClick={onRetire}>
+      <button type="button" className={`${barButton} text-danger`} disabled={disabled} onClick={onRetire}>
         Retire
       </button>
-      <button type="button" className={`${secondaryButton} h-8 shrink-0`} disabled={disabled} onClick={onRestore}>
+      <button type="button" className={barButton} disabled={disabled} onClick={onRestore}>
         Restore
       </button>
       {/* Progress while a bulk change runs, else Clear selection. */}
-      <span className="ml-auto shrink-0 whitespace-nowrap text-[13px]" role="status">
+      <span className="ml-auto shrink-0 whitespace-nowrap text-xs" role="status">
         {busy ? (
           <span className="text-ink-muted">{busy}</span>
         ) : (
