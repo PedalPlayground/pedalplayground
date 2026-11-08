@@ -1,4 +1,5 @@
 import {
+  Info,
   AlignHorizontalSpaceBetween,
   ArrowDownToLine,
   ArrowUpToLine,
@@ -24,6 +25,7 @@ import {
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { itemName } from "../lib/itemName";
+import { openGearInfo, placedItemHref } from "../lib/gearLink";
 import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
@@ -201,6 +203,7 @@ export function ObjectStack() {
         <Row {...row} icon={<Pencil size={15} />} label={single.kind === "pedalboard" ? "Edit Board" : "Edit"} onClick={() => setEditing(true)} />
       )}
       {single && !single.custom && <Row {...row} icon={<Replace size={15} />} label="Replace" onClick={() => setReplacing(true)} />}
+      {placedItemHref(single) && <Row {...row} icon={<Info size={16} />} label="Info" onClick={() => openGearInfo(single)} />}
       <Row {...row} icon={<Trash2 size={16} />} label="Remove" shortcut="Del" onClick={s.deleteSelected} danger />
     </Shell>
   );

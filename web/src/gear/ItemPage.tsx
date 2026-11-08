@@ -4,13 +4,14 @@ import { affiliateProps, buyLinks, DISCLOSURE } from "../lib/affiliate";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { boardUrl, fetchFeaturedOn, type FeaturedBoard } from "../lib/gallery";
 import { handoffHref } from "../lib/handoff";
+import { gearItemHref } from "../lib/gearLink";
 import { formatMa } from "../lib/specs";
 import { nameLink, RoleBadges } from "../components/RoleBadge";
 import type { CatalogItem } from "../lib/types";
 import { useIsEditor } from "../lib/useIsEditor";
 
 /** Link to one item's page. Boards say so, since a pedal and a board can share an image key. */
-export const itemHref = (kind: Kind, item: CatalogItem) => `/gear/?item=${encodeURIComponent(item.image)}${kind === "pedalboard" ? "&kind=boards" : ""}`;
+export const itemHref = (kind: Kind, item: CatalogItem) => gearItemHref(kind, item.image);
 
 /** Photo scale on the item page: big enough to read the knobs, shrunk to fit narrow screens. */
 const PX_PER_INCH = 56;
