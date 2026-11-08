@@ -1,6 +1,6 @@
 import { ArrowLeft, Search, SlidersHorizontal, TrendingUp } from "lucide-react";
 import { tip } from "../components/Tooltip";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { fetchGalleryBoards } from "../lib/gallery";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
@@ -723,6 +723,12 @@ function GearCard({
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-panel bg-card transition-colors hover:bg-card-hover focus-within:ring-2 focus-within:ring-brand">
       <div className="relative aspect-[4/3] w-full border-b border-chrome-line">
+        {(isNew || isHot) && (
+          <Marks>
+            {isNew && <Mark why="new" />}
+            {isHot && <Mark why="hot" />}
+          </Marks>
+        )}
         {/* Absolute, so a tall photo can't stretch the card. */}
         <div className="absolute inset-x-[10%] inset-y-[7%] flex items-center justify-center [container-type:size]">
           {src && <img src={src} srcSet={srcSet} sizes="(min-width: 768px) 15vw, 45vw" alt="" loading="lazy" style={style} className="object-contain" />}
@@ -731,8 +737,6 @@ function GearCard({
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5">
         {/* Name first, then brand. The whole card opens the item (the link stretches over it); the brand button sits above. */}
         <h2 className="line-clamp-2 text-[13px] font-semibold leading-snug">
-          {isNew && <Mark why="new" />}
-          {isHot && <Mark why="hot" />}
           <a
             href={itemHref(kind, item)}
             onClick={(e) => {
@@ -986,21 +990,20 @@ function NewTag({ className = "" }: { className?: string }) {
   );
 }
 
-/**
- * The mark's 14px icon, centered on the capital letters of the text beside it at any font size: the cap height is
- * 0.7em in DM Sans, so the icon's middle sits 0.35em above the baseline.
- */
-const markIcon = "inline-block size-[14px] align-[calc(0.35em-7px)]";
+/** New and hot marks in a card's or tile's top left corner. */
+function Marks({ children }: { children: ReactNode }) {
+  return <span className="absolute left-3 top-3 z-10 flex items-center gap-1.5">{children}</span>;
+}
 
 function Mark({ why }: { why: "new" | "hot" }) {
   const label = why === "new" ? "New" : "Hot";
-  // Inline before the name, so it wraps with the text; the hover label says what it means.
+  // The hover label says what it means.
   return (
-    <span role="img" aria-label={label} {...tip(label)} className="relative z-10 mr-1.5">
+    <span role="img" aria-label={label} {...tip(label)} className="flex">
       {why === "new" ? (
-        <NewTag className={`${markIcon} text-brand`} />
+        <NewTag className="size-[14px] text-brand" />
       ) : (
-        <TrendingUp size={14} strokeWidth={2.5} className={`${markIcon} text-tangerine`} aria-hidden />
+        <TrendingUp size={14} strokeWidth={2.5} className="text-tangerine" aria-hidden />
       )}
     </span>
   );
@@ -1035,6 +1038,9 @@ function BentoTile({
       aria-label={`${item.brand} ${item.name}`}
       className={`group relative flex flex-col overflow-hidden rounded-panel bg-card outline-none transition-colors hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-brand ${size}`}
     >
+      <Marks>
+        <Mark why={why} />
+      </Marks>
       {/* Halfway between centered in the tile and centered above the name: nudged up about 9px. */}
       {thumb && (
         <img
@@ -1048,7 +1054,6 @@ function BentoTile({
       )}
       <span className="absolute inset-x-0 bottom-0 flex items-center px-3 pb-2.5">
         <span className="min-w-0 truncate text-xs font-semibold">
-          <Mark why={why} />
           {item.name}
         </span>
       </span>
