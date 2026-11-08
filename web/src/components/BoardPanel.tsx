@@ -27,6 +27,7 @@ import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
+import { RoleBadges, teamRole, nameLink } from "./RoleBadge";
 import { tip } from "./Tooltip";
 
 const TYPE_LABELS = Object.fromEntries(PLAYGROUND_TYPES) as Record<string, string>;
@@ -91,7 +92,7 @@ function usePanelTarget(): { id: string | null; viewing: boolean } {
 }
 
 const field =
-  "w-full rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted/70 focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
+  "w-full rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
 
 /** Header button next to the board name: opens the board panel. Shows the comment count, and new comments on your own board. */
 export function BoardInfoButton() {
@@ -123,7 +124,7 @@ export function BoardInfoButton() {
       aria-label={label}
       aria-pressed={open}
       {...tip(count === null ? "Board Info" : "Info & Comments", { side: "bottom" })}
-      className={`press relative flex h-7 shrink-0 items-center gap-1 rounded-control ${viewing ? "sm:hidden" : ""} px-1.5 text-[13px] font-semibold tabular-nums outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${open ? "bg-brand/10 text-brand" : "text-icon-solo hover:bg-ink/5 hover:text-ink"}`}
+      className={`press relative flex h-7 shrink-0 items-center gap-1 rounded-control ${viewing ? "sm:hidden" : ""} px-1.5 text-[13px] font-semibold tabular-nums outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${open ? "bg-brand/10 text-brand" : "text-icon-solo hover:bg-soft hover:text-ink"}`}
     >
       <MessageSquare size={16} strokeWidth={2.25} />
       {!!count && <span>{count}</span>}
@@ -233,7 +234,7 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
     <aside
       aria-label="Board info and comments"
       data-clarity-mask="True"
-      className="max-sm:animate-enter fixed inset-x-0 bottom-0 z-40 flex max-h-[85dvh] flex-col rounded-t-panel bg-surface shadow-[var(--shadow-modal)] sm:static sm:z-auto sm:max-h-none sm:w-[300px] sm:shrink-0 sm:rounded-none sm:border-r sm:border-chrome-line sm:shadow-none"
+      className="max-sm:animate-enter fixed inset-x-0 bottom-0 z-40 flex max-h-[85dvh] flex-col rounded-t-panel bg-surface shadow-modal sm:static sm:z-auto sm:max-h-none sm:w-[300px] sm:shrink-0 sm:rounded-none sm:border-r sm:border-chrome-line sm:shadow-none"
     >
       {viewing && <BackToGallery />}
       <div className={`flex items-start gap-1 px-4 ${own ? "border-b border-line pb-3 pt-3.5" : "pt-1"}`}>
@@ -244,9 +245,14 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
               <span className="text-base text-ink-muted">
                 {" "}
                 by{" "}
-                <a href={userGalleryUrl((info?.username ?? viewingOwner)!)} {...tip("Their boards in Explore")} className="hover:text-ink hover:underline">
+                <a href={userGalleryUrl((info?.username ?? viewingOwner)!)} {...tip("Their boards in the Gallery")} className={`hover:text-ink ${nameLink}`}>
                   {info?.username ?? viewingOwner}
                 </a>
+                {teamRole(info?.username ?? viewingOwner) && (
+                  <span className="ml-1.5 inline-flex -translate-y-px align-middle">
+                    <RoleBadges username={info?.username ?? viewingOwner} />
+                  </span>
+                )}
               </span>
             )}
           </h2>
@@ -296,8 +302,8 @@ export function BoardPanel({ onSignIn, onEdit }: { onSignIn: () => void; onEdit:
 function Loading() {
   return (
     <div className="space-y-2 p-4" aria-hidden>
-      <div className="h-3 w-full animate-pulse rounded bg-surface-hover" />
-      <div className="h-3 w-2/3 animate-pulse rounded bg-surface-hover" />
+      <div className="h-3 w-full animate-pulse rounded-inner bg-surface-hover" />
+      <div className="h-3 w-2/3 animate-pulse rounded-inner bg-surface-hover" />
     </div>
   );
 }
@@ -459,7 +465,7 @@ function Social({
         )}
 
         {reporting && (
-          <ReportDialog kind="comment" target={reporting.id} what={`${reporting.username ? `@${reporting.username}: ` : ""}${reporting.body}`} onClose={() => setReporting(null)} />
+          <ReportDialog kind="comment" target={reporting.id} what={`${reporting.username ? `${reporting.username}: ` : ""}${reporting.body}`} onClose={() => setReporting(null)} />
         )}
         {showComments && (
           <section id="board-comments" className="mt-4" aria-label="Comments">
@@ -475,12 +481,13 @@ function Social({
                   <li key={c.id} className="group/comment">
                     <div className="flex items-center gap-2 text-xs">
                       {c.username ? (
-                        <a href={userGalleryUrl(c.username)} {...tip("Their boards in Explore")} className="font-semibold hover:underline">
-                          @{c.username}
+                        <a href={userGalleryUrl(c.username)} {...tip("Their boards in the Gallery")} className={`font-semibold ${nameLink}`}>
+                          {c.username}
                         </a>
                       ) : (
                         <span className="font-semibold">Member</span>
                       )}
+                      <RoleBadges username={c.username} builder={(own && c.mine) || (!!c.username && c.username === info.username)} />
                       <span className="text-ink-muted" title={new Date(c.created_at).toLocaleString()}>
                         {timeAgo(c.created_at)}
                       </span>
@@ -620,7 +627,7 @@ function Composer({ id, onSignIn, onPosted }: { id: string; onSignIn: () => void
       {error && <p className="mt-1 text-xs text-danger">{error}</p>}
       <div className="mt-1.5 flex items-center justify-between">
         <span className="text-[11px] text-ink-muted">{text.length > COMMENT_MAX - 100 ? `${COMMENT_MAX - text.length} left` : ""}</span>
-        <button type="submit" disabled={!text.trim() || posting} className="btn-primary h-8 rounded-[5px] px-3 text-[13px] disabled:opacity-50">
+        <button type="submit" disabled={!text.trim() || posting} className="btn-primary h-8 rounded-control px-3 text-[13px] disabled:opacity-50">
           Post
         </button>
       </div>

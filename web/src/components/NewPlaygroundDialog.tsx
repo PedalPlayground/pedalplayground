@@ -12,7 +12,7 @@ import { useAllowedNames } from "../lib/useAllowedNames";
 
 /** Shaded, borderless fields; focus shows a brand ring. Matches the Edit Playground dialog. */
 const field =
-  "rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted/70 focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
+  "rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
 
 /** Names and categorizes a signed-in user's new playground before its fresh canvas opens. Cancel keeps the current board. */
 export function NewPlaygroundDialog() {

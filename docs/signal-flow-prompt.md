@@ -44,7 +44,7 @@ Read these files before planning. Names below are real; check them before relyin
 | Pedal types | `web/src/lib/specs.ts` | `PEDAL_TYPES` includes "Tuner", "Volume / Expression", "Looper", "Multi-Effect", "Amp / Preamp", "Utility". Use these for smart defaults. |
 | Custom pedals | `web/src/lib/pedalTemplates.ts`, `web/src/components/CustomItem.tsx`, `PedalArt.tsx` | Custom pedals have a `template` (compact, hammond, wide, modeler, switcher, classic) and optional `jacks`. `CustomItemView` draws them at any size. |
 | Thumbnails | `thumbUrl()` in `lib/catalog.ts`, `PedalAvatar.tsx` | Use catalog thumbnails for tiles; use `CustomItemView` for custom pedals. |
-| Look and feel | `docs/ui-conventions.md`, `web/src/components/toolbarStyles.ts`, `web/src/index.css` | 36px controls, `text-sm` body, `rounded-control` (4px) / `rounded-panel` (12px), `shadow-panel`, color tokens `ink`, `ink-muted`, `surface`, `surface-hover`, `line`, `chrome-line`, `brand`, `canvas`, `danger`. Tooltips use `tip()` from `Tooltip.tsx`. |
+| Look and feel | `docs/ui-conventions.md`, `web/src/components/toolbarStyles.ts`, `web/src/index.css` | 36px controls, `text-sm` body, `rounded-control` (6px) / `rounded-panel` (10px), flat cards with `shadow-float` only on floating pieces (see `/design/`), color tokens `ink`, `ink-muted`, `surface`, `surface-hover`, `line`, `chrome-line`, `brand`, `canvas`, `danger`. Tooltips use `tip()` from `Tooltip.tsx`. |
 | Known bug | `docs/todo.md` item 18 | Clicking the Signal Path button in the mode rail hides its tooltip. Fix it while you are in `ModeRail.tsx`. |
 
 Conventions to keep:

@@ -248,7 +248,7 @@ export function SpaceBetweenPanel() {
   };
 
   const cell = (on: boolean) =>
-    `h-7 rounded-[5px] text-xs outline-none focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-brand/15 font-medium text-brand" : "bg-surface-hover text-ink hover:bg-ink/10"}`;
+    `h-7 rounded-control text-xs outline-none focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-brand/15 font-medium text-brand" : "bg-surface-hover text-ink hover:bg-soft-hover"}`;
   const size = (mm: number) => (units === "mm" ? `${mm} mm` : `${(mm / MM_PER_INCH).toFixed(2)} in`);
 
   const body = (
@@ -282,7 +282,7 @@ export function SpaceBetweenPanel() {
               role="radio"
               aria-checked={units === u}
               onClick={() => changeUnits(u)}
-              className={`rounded-[3px] px-1.5 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-brand ${units === u ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
+              className={`rounded-inner px-1.5 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-brand ${units === u ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`}
             >
               {u}
             </button>
@@ -310,7 +310,7 @@ export function SpaceBetweenPanel() {
         type="button"
         onClick={toggleGuide}
         aria-expanded={guideOpen}
-        className="mb-1 flex w-full items-center gap-1 rounded-[5px] text-xs text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+        className="mb-1 flex w-full items-center gap-1 rounded-control text-xs text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
       >
         <ChevronDown size={14} className={guideOpen ? "" : "-rotate-90"} />
         Plug guide
@@ -356,7 +356,7 @@ export function SpaceBetweenPanel() {
           ref={sheetRef}
           role="dialog"
           aria-label="Space Between"
-          className="animate-sheet absolute inset-x-0 flex flex-col rounded-t-[16px] bg-surface shadow-[0_-4px_24px_rgb(0_0_0/0.12)]"
+          className="animate-sheet absolute inset-x-0 flex flex-col rounded-t-container bg-surface shadow-[0_-8px_32px_rgb(27_28_56/0.12)]"
           style={{
             bottom: keyboard,
             maxHeight: visibleHeight - 56,
@@ -388,7 +388,7 @@ export function SpaceBetweenPanel() {
     <div
       role="dialog"
       aria-label="Space Between"
-      className="animate-dock pointer-events-auto flex max-h-full w-full flex-col overflow-y-auto rounded-panel bg-surface p-4 shadow-panel"
+      className="animate-dock pointer-events-auto flex max-h-full w-full flex-col overflow-y-auto rounded-panel bg-surface p-4 shadow-float"
     >
       {body}
     </div>

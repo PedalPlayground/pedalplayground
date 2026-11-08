@@ -12,6 +12,7 @@ What it does now:
   and when the playgrounds dialog opens.
 - **Thumbnail:** sent only when the layout changed, at most once a minute, plus when the page is hidden or another
   board is opened or started (`web/src/store/cloud.ts`, `THUMBNAIL_INTERVAL_MS`).
+  It's uploaded as a file to the `board-thumbnails` bucket and the row keeps only its URL (see `docs/gallery.md`).
 - **Row update:** the `playgrounds` row is only written for a rename or a new thumbnail. Saving the version
   touches `updated_at`.
 - **History:** `save_playground_version()` updates the newest version when it's under 5 minutes old, otherwise

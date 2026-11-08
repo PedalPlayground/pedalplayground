@@ -1,58 +1,92 @@
-import { LayoutGrid, PencilRuler, type LucideProps } from "lucide-react";
-import type { ReactNode } from "react";
+import { Guitar, LayoutGrid, Plus, Wrench, type LucideProps } from "lucide-react";
+import { useHasBoards } from "../lib/useHasBoards";
+import { useId, type ReactNode } from "react";
 import { useIsEditor } from "../lib/useIsEditor";
 import { Brand } from "./Logo";
 
-/** Trav's My Playgrounds icon: a frame with three stacked bars (drawn at 17×12, shown a bit larger), in the icon color. */
-export function PedalboardIcon({ className }: LucideProps) {
+/**
+ * My Playgrounds: a solid rounded board with two rails cut out (a mask, so the header shows through), drawn on Lucide's
+ * 24px grid to sit with the other solid header icons.
+ */
+export function PedalboardIcon({ className, size = 24 }: LucideProps) {
+  const id = useId();
   return (
-    <svg width={24} height={16} viewBox="0 0 17 11.333" fill="none" className={className} aria-hidden>
-      <path
-        d="M17 11.333H0V0H17V11.333ZM1.61914 8.0957V9.71387H15.3809V8.0957H1.61914ZM1.61914 6.47656H15.3809V4.85742H1.61914V6.47656ZM1.61914 3.23828H15.3809V1.61914H1.61914V3.23828Z"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        fill="currentColor"
-      />
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} aria-hidden>
+      <mask id={id}>
+        <rect x="1" y="4" width="22" height="16" rx="3" fill="white" />
+        <path d="M6 9.5h12M6 14.5h12" stroke="black" strokeWidth="2" strokeLinecap="round" />
+      </mask>
+      <rect x="1" y="4" width="22" height="16" rx="3" fill="currentColor" mask={`url(#${id})`} />
     </svg>
   );
 }
 
-/** One look for Explore, My Playgrounds, Editor and Updates: an icon and a label (icons only below laptop width). */
+/** One look for Gallery, Gear, My Boards, Admin and What's New: an icon and a label (icons only below laptop width). */
 export function tabClass(here: boolean) {
-  return `press relative flex h-9 shrink-0 items-center gap-2 rounded-[4px] p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
-    here ? "bg-ink/[0.06]" : "hover:bg-ink/5 data-[state=open]:bg-ink/5"
+  return `press relative flex h-9 shrink-0 items-center gap-2 rounded-inner p-2 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${
+    here ? "bg-soft" : "hover:bg-soft data-[state=open]:bg-soft"
   }`;
 }
+/** Header icons are solid: Lucide outlines filled with the icon color (and the custom board icon), all at 18px. */
 export const tabIcon = { size: 18, strokeWidth: 2 } as const;
 export const tabLabel = "max-lg:sr-only";
 
-export type SitePage = "build" | "gallery" | "editor" | null;
+export type SitePage = "build" | "gallery" | "gear" | "editor" | null;
+
+/** The header's call to action for newcomers: a filled button to the builder (icon only on phones). */
+export function StartBuilding() {
+  return (
+    <a
+      href="/"
+      aria-label="Start Building"
+      className="btn-primary press flex h-8 shrink-0 items-center gap-1.5 rounded-control px-2.5 text-[13px] font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand max-sm:w-8 max-sm:justify-center max-sm:px-0"
+    >
+      <Plus size={16} strokeWidth={2.5} />
+      <span className="max-sm:sr-only">Start Building</span>
+    </a>
+  );
+}
+
+/** Admin (the editor page), for catalog editors only: its own boxed section between the nav and the account. */
+function AdminSection({ current }: { current: SitePage }) {
+  const editor = useIsEditor();
+  if (!editor) return null;
+  return (
+    <div className={`${section} border-l border-chrome-line px-2 sm:px-4`}>
+      <a href="/editor/" aria-current={current === "editor" ? "page" : undefined} className={tabClass(false)}>
+        <Wrench {...tabIcon} fill="currentColor" className="text-ink-muted" />
+        <span className={tabLabel}>Admin</span>
+      </a>
+    </div>
+  );
+}
 
 /**
- * Explore, My Playgrounds, then Editor for catalog editors. `builds` is the playground's board menu; elsewhere it's a
+ * Gallery, Gear and My Boards. `builds` is the playground's board menu; elsewhere it's a
  * link to the playground. The current page's tab is marked.
  */
 export function SiteTabs({ current, builds, after }: { current: SitePage; builds?: ReactNode; after?: ReactNode }) {
-  const editor = useIsEditor();
+  // Someone without a board yet (away from the builder) gets Start Building in place of My Boards.
+  const hasBoards = useHasBoards();
+  const newcomer = current !== "build" && !hasBoards;
   return (
     <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-1 sm:gap-2">
-      <a href="/gallery/" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
+      <a href="/gallery/" data-tour="gallery" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>
         <LayoutGrid {...tabIcon} fill="currentColor" className="text-ink-muted" />
-        <span className={tabLabel}>Explore</span>
+        <span className={tabLabel}>Gallery</span>
       </a>
-      {builds ?? (
+      <a href="/gear/" aria-current={current === "gear" ? "page" : undefined} className={tabClass(false)}>
+        <Guitar {...tabIcon} fill="currentColor" className="text-ink-muted" />
+        <span className={tabLabel}>Gear</span>
+      </a>
+      {newcomer ? null : builds ?? (
         <a href="/" className={tabClass(false)}>
           <PedalboardIcon {...tabIcon} className="text-ink-muted" />
-          <span className={tabLabel}>My Playgrounds</span>
-        </a>
-      )}
-      {editor && (
-        <a href="/editor/" aria-current={current === "editor" ? "page" : undefined} className={tabClass(false)}>
-          <PencilRuler {...tabIcon} className="text-ink-muted" />
-          <span className={tabLabel}>Editor</span>
+          <span className={tabLabel}>My Boards</span>
         </a>
       )}
       {after}
+      {newcomer && <StartBuilding />}
     </nav>
   );
 }
@@ -61,8 +95,8 @@ const section = "flex shrink-0 items-center";
 
 
 /**
- * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Explore, My Playgrounds
- * and Updates tabs at the right; then the account section behind a thin divider.
+ * The header on every page: the brand and `nav` (beta links) at the left; `navEnd` (save status) and the Gallery, Gear, My Boards
+ * What's New at the right; then Admin (catalog editors) and the account, each in a section behind a thin divider.
  */
 export function SiteHeader({
   current,
@@ -97,15 +131,16 @@ export function SiteHeader({
         {nav}
         <div className="ml-auto flex shrink-0 items-center gap-3">
           {navEnd}
-          <SiteTabs current={current} builds={builds} />
+          {/* Gallery, Gear, My Boards and What's New: one row. */}
+          <SiteTabs current={current} builds={builds} after={updates} />
         </div>
       </div>
-      {/* Updates gets its own section, like the account menu. */}
-      {updates && <div className={`${section} border-l border-chrome-line px-1.5`}>{updates}</div>}
+      <AdminSection current={current} />
       {account && (
         <div
           data-tour="account"
-          className={`${section} gap-[7px] border-l border-chrome-line pl-1.5 pr-[max(0.375rem,env(safe-area-inset-right))]`}
+          // The same 8px (phones) / 16px gap on both sides of the divider as the nav row has before it.
+          className={`${section} gap-[7px] border-l border-chrome-line pl-2 pr-[max(0.5rem,env(safe-area-inset-right))] sm:pl-4 sm:pr-[max(1rem,env(safe-area-inset-right))]`}
         >
           {account}
         </div>
@@ -115,17 +150,17 @@ export function SiteHeader({
 }
 
 const guestButton =
-  "press flex h-[26px] items-center whitespace-nowrap rounded-[5px] px-3 text-[13px] font-semibold tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand";
+  "press flex h-[26px] items-center whitespace-nowrap rounded-control px-3 text-[13px] font-semibold tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand";
 
 /** Signed out: Register (phones skip it; the sign-in dialog has Create Account) and Sign in. */
 export function GuestButtons({ onRegister, onSignIn }: { onRegister: () => void; onSignIn: () => void }) {
-  // Extra room around the buttons (the section itself is tight for the avatar): 12px on phones, 16px from sm.
+  // The account section supplies the padding around them.
   return (
-    <span className="flex items-center gap-[7px] px-1.5 sm:px-2.5">
+    <span className="flex items-center gap-[7px]">
       <button
         type="button"
         onClick={onRegister}
-        className={`${guestButton} bg-[rgb(202_203_226/0.39)] text-ink hover:bg-[rgb(202_203_226/0.6)] active:bg-[rgb(202_203_226/0.8)] max-sm:hidden`}
+        className={`${guestButton} bg-soft text-ink hover:bg-soft-hover active:bg-soft-active max-sm:hidden`}
       >
         Register
       </button>

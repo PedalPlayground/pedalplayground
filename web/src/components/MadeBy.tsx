@@ -57,11 +57,11 @@ export function MadeBy({ className = "" }: { className?: string }) {
     <p className={`text-[11px] text-ink-muted opacity-70 transition-opacity hover:opacity-100 has-[[data-state=open]]:opacity-100 ${className}`}>
       Made with love by{" "}
       <Dropdown.Root>
-        <Dropdown.Trigger className="rounded-[3px] font-medium outline-none hover:text-brand focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:text-brand">
+        <Dropdown.Trigger className="rounded-inner font-medium outline-none hover:text-brand focus-visible:ring-2 focus-visible:ring-brand data-[state=open]:text-brand">
           @tehtrav
         </Dropdown.Trigger>
         <Dropdown.Portal>
-          <Dropdown.Content side="top" align="start" sideOffset={8} className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain">
+          <Dropdown.Content side="top" align="start" sideOffset={8} className="animate-menu z-50 min-w-48 rounded-panel bg-surface p-1.5 shadow-float max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain">
             <CreditMenuItems />
           </Dropdown.Content>
         </Dropdown.Portal>

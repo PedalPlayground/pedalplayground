@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import { fetchShared, setGalleryThumbnail, uploadBoardThumbnail } from "../lib/cloud";
+import { closeBugReport, listBugReports, type BugReport } from "../lib/editorApi";
+import { fetchGalleryBoards, GALLERY_PAGE_SIZE } from "../lib/gallery";
+import { renderThumbnailFile } from "../lib/thumbnail";
 import { fieldBox, fieldError, fieldHelp, fieldInput, fieldLabel } from "../components/formText";
 import {
   closeReport,
@@ -23,6 +27,7 @@ import {
 } from "../lib/moderation";
 import { boardUrl, setGalleryHidden } from "../lib/gallery";
 import type { SetNotice } from "./EditorApp";
+import { Meta } from "../components/Meta";
 import { primaryButton, secondaryButton } from "./ItemEditor";
 
 const ACTIONS: { action: FlagAction; label: string }[] = [
@@ -66,8 +71,10 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
       },
       (e: Error) => setError(e.message),
     );
-  const look = async (username: string, report: Report | null = null) => {
+  /** Looks up an account. A new lookup is a history step (#moderation?user=name), so Back returns to the last view. */
+  const look = async (username: string, report: Report | null = null, push = true) => {
     if (!username.trim()) return;
+    if (push && userFromHash() !== username) history.pushState(null, "", `#moderation?user=${encodeURIComponent(username)}`);
     setName(username);
     setFromReport(report);
     try {
@@ -80,18 +87,27 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
   useEffect(() => {
     void loadReports();
     const first = userFromHash();
-    if (first) void look(first);
+    if (first) void look(first, null, false);
     const onHash = () => {
+      if (!window.location.hash.startsWith("#moderation")) return;
       const u = userFromHash();
-      if (u) void look(u);
+      if (u) void look(u, null, false);
+      else {
+        setUser(undefined);
+        setName("");
+      }
     };
     window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
+    window.addEventListener("popstate", onHash);
+    return () => {
+      window.removeEventListener("hashchange", onHash);
+      window.removeEventListener("popstate", onHash);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const unhide = async (b: HiddenBoard) => {
-    if (b.by_ban && !window.confirm(`A ban on @${b.owner_username ?? "this account"} hid "${b.name}". Show it in the gallery anyway?`)) return;
+    if (b.by_ban && !window.confirm(`A ban on ${b.owner_username ?? "this account"} hid "${b.name}". Show it in the gallery anyway?`)) return;
     try {
       await setGalleryHidden(b.playground_id, false);
       setNotice({ text: `"${b.name}" is back in the gallery.` });
@@ -120,19 +136,23 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
         {reports?.length === 0 && <p className="text-[13px] text-ink-muted">No open reports.</p>}
         <ul className="grid gap-2">
           {reports?.map((r) => (
-            <li key={r.id} className="rounded-lg border border-line px-3 py-2.5 text-[13px]">
-              <div className="flex flex-wrap items-center gap-x-2 text-xs text-ink-muted">
+            <li key={r.id} className="rounded-panel border border-line px-3 py-2.5 text-[13px]">
+              <div className="flex flex-wrap items-center gap-x-2.5 text-xs text-ink-muted">
                 <span className="font-semibold text-ink">{reasonLabel(r.reason)}</span>
                 <span>
-                  {r.target_kind === "comment" ? "Comment" : r.target_kind === "board" ? "Board" : "User"} by @{r.target_username ?? "unknown"}
+                  {r.target_kind === "comment" ? "Comment" : r.target_kind === "board" ? "Board" : "User"} by {r.target_username ?? "unknown"}
                 </span>
-                <span>· {ago(r.created_at)}</span>
+                <span>{ago(r.created_at)}</span>
               </div>
               {r.target_text && <p className="mt-1 line-clamp-3 whitespace-pre-line break-words">“{r.target_text}”</p>}
               {r.details && <p className="mt-1 text-ink-muted">Reporter: {r.details}</p>}
               <p className="mt-1 text-xs text-ink-muted">
-                From @{r.reporter_username ?? "unknown"} · {r.open_against} open {r.open_against === 1 ? "report" : "reports"} and {r.flags_against}{" "}
-                {r.flags_against === 1 ? "flag" : "flags"} on this account
+                <Meta
+                  parts={[
+                    `From ${r.reporter_username ?? "unknown"}`,
+                    `${r.open_against} open ${r.open_against === 1 ? "report" : "reports"} and ${r.flags_against} ${r.flags_against === 1 ? "flag" : "flags"} on this account`,
+                  ]}
+                />
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {r.target_username && (
@@ -159,13 +179,13 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
         {hidden?.length === 0 && <p className="text-[13px] text-ink-muted">No hidden boards.</p>}
         <ul className="grid gap-2">
           {hidden?.map((b) => (
-            <li key={b.playground_id} className="rounded-lg border border-line px-3 py-2.5 text-[13px]">
-              <div className="flex flex-wrap items-center gap-x-2 text-xs text-ink-muted">
+            <li key={b.playground_id} className="rounded-panel border border-line px-3 py-2.5 text-[13px]">
+              <div className="flex flex-wrap items-center gap-x-2.5 text-xs text-ink-muted">
                 <span className="font-semibold text-ink">{b.by_ban ? "Hidden by a ban" : "Hidden"}</span>
-                <span>Board by @{b.owner_username ?? "unknown"}</span>
+                <span>Board by {b.owner_username ?? "unknown"}</span>
                 <span>
-                  · {ago(b.hidden_at)}
-                  {b.hidden_by_username && ` by @${b.hidden_by_username}`}
+                  {ago(b.hidden_at)}
+                  {b.hidden_by_username && ` by ${b.hidden_by_username}`}
                 </span>
               </div>
               <p className="mt-1 break-words">“{b.name}”</p>
@@ -219,7 +239,124 @@ export function ModerationTab({ setNotice }: { setNotice: SetNotice }) {
           />
         )}
       </section>
+
+      <BugReports setNotice={setNotice} />
+      <RedrawThumbnails />
     </div>
+  );
+}
+
+/** Bug reports from players (Suggest Gear's Report a Bug tab), newest first, each with the page and browser. */
+function BugReports({ setNotice }: { setNotice: SetNotice }) {
+  const [reports, setReports] = useState<BugReport[] | null>(null);
+  const load = () =>
+    listBugReports().then(setReports, (e: Error) => {
+      setReports([]);
+      setNotice({ text: e.message, error: true });
+    });
+  useEffect(() => void load(), []); // eslint-disable-line react-hooks/exhaustive-deps
+  return (
+    <section className="grid content-start gap-3">
+      <h2 className="text-lg font-bold tracking-[-0.01em]">
+        Bug Reports {reports && reports.length > 0 && <span className="font-normal text-ink-muted">{reports.length}</span>}
+      </h2>
+      {reports === null ? (
+        <p className="text-[13px] text-ink-muted">Loading…</p>
+      ) : reports.length === 0 ? (
+        <p className="text-[13px] text-ink-muted">No open bug reports.</p>
+      ) : (
+        <ul className="grid gap-2">
+          {reports.map((r) => (
+            <li key={r.id} className="grid gap-1.5 rounded-panel bg-card p-3">
+              <p className="whitespace-pre-wrap text-[13px]">{r.details}</p>
+              <p className="text-xs text-ink-muted">
+                {shortDate(r.created_at)}
+                {r.page && (
+                  <>
+                    {" · "}
+                    <a href={r.page} target="_blank" rel="noreferrer" className="underline-offset-2 hover:underline">
+                      {r.page.replace(/^https?:\/\//, "")}
+                    </a>
+                  </>
+                )}
+              </p>
+              {r.user_agent && <p className="truncate text-[11px] text-ink-muted" title={r.user_agent}>{r.user_agent}</p>}
+              <div>
+                <button
+                  type="button"
+                  className={secondaryButton}
+                  onClick={() =>
+                    void closeBugReport(r.id).then(
+                      () => setReports((list) => list?.filter((x) => x.id !== r.id) ?? list),
+                      (e: Error) => setNotice({ text: e.message, error: true }),
+                    )
+                  }
+                >
+                  Close
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  );
+}
+
+/**
+ * Redraws every gallery board's thumbnail as a sharp 2× file (boards saved before the board_thumbnails migration keep
+ * a small inline picture until their owner saves again). Skips boards that already have a file. Safe to run again.
+ */
+function RedrawThumbnails() {
+  const [status, setStatus] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+  const run = async () => {
+    setBusy(true);
+    let done = 0;
+    let skipped = 0;
+    let failed = 0;
+    try {
+      for (let offset = 0; ; offset += GALLERY_PAGE_SIZE) {
+        const page = await fetchGalleryBoards({ type: null, search: "", sort: "new", offset, limit: GALLERY_PAGE_SIZE });
+        for (const b of page) {
+          setStatus(`Redrawing ${b.name}… (${done} done, ${skipped} already sharp, ${failed} failed)`);
+          if (b.thumbnail?.includes("/board-thumbnails/")) {
+            skipped++;
+            continue;
+          }
+          try {
+            const pg = await fetchShared(b.slug);
+            const file = pg && (await renderThumbnailFile(pg.doc.items));
+            if (!file) throw new Error("nothing to draw");
+            await setGalleryThumbnail(b.id, await uploadBoardThumbnail(b.id, file));
+            done++;
+          } catch (e) {
+            failed++;
+            console.warn(`Could not redraw the thumbnail for ${b.name}.`, e);
+          }
+        }
+        if (page.length < GALLERY_PAGE_SIZE) break;
+      }
+      setStatus(`Finished: ${done} redrawn, ${skipped} already sharp, ${failed} failed${failed ? " (details in the console)" : ""}.`);
+    } catch (e) {
+      setStatus(`Stopped: ${e instanceof Error ? e.message : String(e)}`);
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <section className="grid content-start gap-3">
+      <h2 className="text-lg font-bold tracking-[-0.01em]">Gallery Thumbnails</h2>
+      <p className="text-[13px] text-ink-muted">
+        Redraw every Gallery board's picture at retina sharpness. Boards that already have a sharp picture are skipped, so it's safe to run again.
+      </p>
+      <div>
+        <button type="button" className={secondaryButton} disabled={busy} onClick={() => void run()}>
+          {busy ? "Redrawing…" : "Redraw All"}
+        </button>
+      </div>
+      {status && <p className="text-[13px] text-ink-muted" role="status">{status}</p>}
+    </section>
   );
 }
 
@@ -234,12 +371,12 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
   const status = user.banned ? "Banned" : user.restricted_until ? `In a timeout until ${shortDate(user.restricted_until)}` : "In good standing";
 
   const flag = async () => {
-    if (action === "ban" && !window.confirm(`Ban @${user.username}? They won't be able to sign in, and their gallery boards and comments will be hidden.`)) return;
+    if (action === "ban" && !window.confirm(`Ban ${user.username}? They won't be able to sign in, and their gallery boards and comments will be hidden.`)) return;
     setBusy(true);
     setError(null);
     try {
       await flagUser({ userId: user.user_id, reason, note, action, days, reportId: report?.id });
-      await onChanged(`Flagged @${user.username}: ${action === "timeout" ? `${days}-day timeout` : action}.`);
+      await onChanged(`Flagged ${user.username}: ${action === "timeout" ? `${days}-day timeout` : action}.`);
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -247,10 +384,10 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
     }
   };
   const lift = async (f: Flag) => {
-    if (!window.confirm(`Lift this ${f.action} on @${user.username}?`)) return;
+    if (!window.confirm(`Lift this ${f.action} on ${user.username}?`)) return;
     try {
       await liftFlag(f.id);
-      await onChanged(`Lifted the ${f.action} on @${user.username}.`);
+      await onChanged(`Lifted the ${f.action} on ${user.username}.`);
     } catch (e) {
       setNotice({ text: (e as Error).message, error: true });
     }
@@ -259,9 +396,9 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
   return (
     <div className="grid gap-4">
       <div>
-        <p className="text-[15px] font-semibold">@{user.username}</p>
+        <p className="text-[15px] font-semibold">{user.username}</p>
         <p className="text-xs text-ink-muted">
-          {status} · joined {shortDate(user.joined)} · {user.open_reports} open {user.open_reports === 1 ? "report" : "reports"}
+          <Meta parts={[status, `Joined ${shortDate(user.joined)}`, `${user.open_reports} open ${user.open_reports === 1 ? "report" : "reports"}`]} />
         </p>
       </div>
 
@@ -270,15 +407,15 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
       {user.flags.length > 0 && (
         <ul className="grid gap-1.5">
           {user.flags.map((f) => (
-            <li key={f.id} className={`rounded-lg border border-line px-3 py-2 text-[13px] ${f.lifted_at ? "opacity-60" : ""}`}>
-              <div className="flex flex-wrap items-center gap-x-2 text-xs text-ink-muted">
+            <li key={f.id} className={`rounded-panel border border-line px-3 py-2 text-[13px] ${f.lifted_at ? "opacity-60" : ""}`}>
+              <div className="flex flex-wrap items-center gap-x-2.5 text-xs text-ink-muted">
                 <span className="font-semibold text-ink">{flagResult(f)}</span>
                 <span>{reasonLabel(f.reason)}</span>
                 <span>
-                  · {shortDate(f.created_at)}
-                  {f.issued_by && ` by @${f.issued_by}`}
+                  {shortDate(f.created_at)}
+                  {f.issued_by && ` by ${f.issued_by}`}
                 </span>
-                <span>· {f.lifted_at ? `lifted ${shortDate(f.lifted_at)}` : f.seen_at ? "seen" : "not seen yet"}</span>
+                <span>{f.lifted_at ? `Lifted ${shortDate(f.lifted_at)}` : f.seen_at ? "Seen" : "Not seen yet"}</span>
                 {!f.lifted_at && (
                   <button type="button" onClick={() => void lift(f)} className="ml-auto font-semibold text-brand hover:underline">
                     Lift
@@ -292,13 +429,13 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
       )}
 
       <form
-        className="grid gap-3 rounded-lg border border-line p-3"
+        className="grid gap-3 rounded-panel border border-line p-3"
         onSubmit={(e) => {
           e.preventDefault();
           void flag();
         }}
       >
-        <h3 className="text-sm font-semibold">Flag @{user.username}</h3>
+        <h3 className="text-sm font-semibold">Flag {user.username}</h3>
         {report && <p className="text-xs text-ink-muted">Flagging resolves the report: “{reasonLabel(report.reason)}”.</p>}
         <div>
           <label className={fieldLabel} htmlFor="flag-reason">
@@ -314,7 +451,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
         </div>
         <div>
           <label className={fieldLabel} htmlFor="flag-note">
-            Note to @{user.username}
+            Note to {user.username}
           </label>
           <span id="flag-note-help" className={fieldHelp}>
             Shown in the popup they see on their next visit
@@ -332,7 +469,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
                 role="radio"
                 aria-checked={action === a.action}
                 onClick={() => setAction(a.action)}
-                className={`press h-9 flex-1 rounded-control text-sm font-medium ${action === a.action ? (a.action === "ban" ? "bg-danger/15 text-danger" : "bg-brand/10 text-brand") : "bg-surface-hover text-ink hover:bg-ink/10"}`}
+                className={`press h-9 flex-1 rounded-control text-sm font-medium ${action === a.action ? (a.action === "ban" ? "bg-danger/15 text-danger" : "bg-brand/10 text-brand") : "bg-surface-hover text-ink hover:bg-soft-hover"}`}
               >
                 {a.label}
                 {suggestion.action === a.action && <span className="ml-1 text-[11px] font-normal opacity-70">(suggested)</span>}
@@ -356,7 +493,7 @@ function UserPanel({ user, report, onChanged, setNotice }: { user: ModUser; repo
         )}
         {error && <span className={fieldError}>{error}</span>}
         <button type="submit" disabled={busy} className={`${primaryButton} justify-self-start`}>
-          {busy ? "Flagging…" : action === "ban" ? `Ban @${user.username}` : `Flag @${user.username}`}
+          {busy ? "Flagging…" : action === "ban" ? `Ban ${user.username}` : `Flag ${user.username}`}
         </button>
       </form>
     </div>
@@ -391,7 +528,7 @@ function ActivityList({ userId }: { userId: string }) {
       <h3 className="mb-1.5 text-sm font-semibold">
         Activity <span className="font-normal text-ink-muted">{items.length}</span>
       </h3>
-      <ul className="grid gap-px overflow-hidden rounded-lg border border-line">
+      <ul className="grid gap-px overflow-hidden rounded-panel border border-line">
         {shown.map((a, i) => (
           <li key={`${a.kind}-${a.happened_at}-${i}`} className="flex items-start gap-3 bg-surface px-3 py-2 text-[13px]">
             <span className="w-28 shrink-0 text-xs text-ink-muted">{ago(a.happened_at)}</span>

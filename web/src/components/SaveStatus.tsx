@@ -13,7 +13,7 @@ export function SaveStatus() {
     return (
       SHOW_PRO ? (
         <button onClick={() => useUi.getState().openUpgrade("save")} className="animate-enter text-sm text-danger hover:underline">
-          Not saved to your account · Upgrade
+          Not saved to your account. Upgrade
         </button>
       ) : (
         <span className="animate-enter text-sm text-danger">Not saved to your account</span>

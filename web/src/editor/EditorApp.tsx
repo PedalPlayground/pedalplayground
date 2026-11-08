@@ -13,7 +13,12 @@ import { QueueTab } from "./QueueTab";
 type Tab = "queue" | "add" | "catalog" | "news" | "moderation";
 const TABS: Tab[] = ["queue", "add", "catalog", "news", "moderation"];
 /** The tab in the address (/editor/#news, or #add?from=<key> for Duplicate), so links can open a tab and reloads stay on it. */
-const tabFromHash = (): Tab => TABS.find((t) => `#${t}` === window.location.hash.split("?")[0]) ?? "queue";
+const tabFromHash = (): Tab => {
+  const h = window.location.hash.split("?")[0];
+  // The Types tab is part of Catalog now.
+  if (h === "#types") return "catalog";
+  return TABS.find((t) => `#${t}` === h) ?? "queue";
+};
 
 export interface Notice {
   text: string;
@@ -40,7 +45,8 @@ export function EditorApp() {
   const [tab, setTabState] = useState<Tab>(tabFromHash);
   const setTab = (t: Tab) => {
     setTabState(t);
-    history.replaceState(null, "", t === "queue" ? window.location.pathname : `#${t}`);
+    // Each tab is a history step, so Back returns to the last one.
+    if (t !== tabFromHash()) history.pushState(null, "", t === "queue" ? window.location.pathname : `#${t}`);
   };
   const [dialog, setDialog] = useState<PageDialog>(null);
   const header = <PageHeader current="editor" dialog={dialog} setDialog={setDialog} />;
@@ -52,7 +58,11 @@ export function EditorApp() {
   useEffect(() => {
     const onHash = () => setTabState(tabFromHash());
     window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
+    window.addEventListener("popstate", onHash);
+    return () => {
+      window.removeEventListener("hashchange", onHash);
+      window.removeEventListener("popstate", onHash);
+    };
   }, []);
   useEffect(() => {
     if (!user) return setAllowed(null);
@@ -99,7 +109,7 @@ export function EditorApp() {
       type="button"
       onClick={() => setTab(t)}
       aria-pressed={tab === t}
-      className={`press h-8 rounded-[5px] px-3 text-[13px] font-semibold ${tab === t ? "bg-ink text-surface" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
+      className={`press h-8 rounded-control px-3 text-[13px] font-semibold ${tab === t ? "bg-ink text-surface" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
     >
       {label}
     </button>
@@ -133,7 +143,7 @@ export function EditorApp() {
       {notice && (
         <div
           role="status"
-          className={`mb-5 flex items-start justify-between gap-3 rounded-lg border px-3 py-2 text-[13px] ${notice.error ? "border-danger/40 text-danger" : "border-line text-ink"}`}
+          className={`mb-5 flex items-start justify-between gap-3 rounded-panel border px-3 py-2 text-[13px] ${notice.error ? "border-danger/40 text-danger" : "border-line text-ink"}`}
         >
           <span>{notice.text}</span>
           <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setNotice(null)} aria-label="Dismiss">
@@ -159,11 +169,11 @@ function Shell({ header, children, bar }: { header: React.ReactNode; children?: 
     <div className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       {header}
       {bar && (
-        <div className="sticky top-12 z-[9] border-b border-chrome-line bg-chrome/95 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
+        <div className="sticky top-12 z-20 border-b border-chrome-line bg-chrome/95 backdrop-blur">
+          <div className="page-main isolate mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
         </div>
       )}
-      <main className="mx-auto max-w-6xl px-4 py-6">{children}</main>
+      <main id="content" className="page-main isolate mx-auto max-w-[1600px] px-4 py-6">{children}</main>
     </div>
   );
 }

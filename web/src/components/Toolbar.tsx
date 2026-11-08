@@ -81,7 +81,7 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
 
   // Phones: one full-width row of larger icon buttons (no labels or separators), with Settings at the end. Pinch zooms.
   if (phone) {
-    const btn = "press grid h-11 min-w-0 flex-1 place-items-center rounded-[8px] outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-40";
+    const btn = "press grid h-11 min-w-0 flex-1 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-40";
     return (
       <div className={`flex w-full items-center ${barPanel}`}>
         {!viewOnly && (
@@ -105,7 +105,7 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
             </button>
           </>
         )}
-        <SettingsMenu className="flex min-w-0 flex-1 [&>button]:h-11 [&>button]:w-full [&>button]:rounded-[8px] [&_svg]:size-[22px]" />
+        <SettingsMenu className="flex min-w-0 flex-1 [&>button]:h-11 [&>button]:w-full [&>button]:rounded-control [&_svg]:size-[22px]" />
       </div>
     );
   }
@@ -118,9 +118,9 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
         onClick={onPlace}
         data-tour="add"
         {...tip("Add Gear", { shortcut: "+" })}
-        className="btn-primary flex h-[26px] shrink-0 items-center gap-2 whitespace-nowrap rounded-[5px] pl-1.5 pr-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
+        className="btn-primary flex h-[26px] shrink-0 items-center gap-2 whitespace-nowrap rounded-control pl-1.5 pr-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
       >
-        <span className="grid size-[18px] place-items-center rounded-[4px] bg-white/20">
+        <span className="grid size-[18px] place-items-center rounded-inner bg-white/20">
           <Plus size={13} strokeWidth={3} />
         </span>
         Add Gear

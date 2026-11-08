@@ -183,7 +183,7 @@ export function NewsTab({ setNotice }: { setNotice: SetNotice }) {
             {posts.map((p) => {
               const scheduled = new Date(p.published_at).getTime() > now;
               return (
-                <li key={p.id} className="rounded-lg border border-line px-3 py-2.5">
+                <li key={p.id} className="rounded-panel border border-line px-3 py-2.5">
                   <div className="flex items-center gap-2 text-xs text-ink-muted">
                     {new Date(p.published_at).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" })}
                     {scheduled && <span className="rounded-full bg-brand/10 px-1.5 text-[11px] font-semibold text-brand">Scheduled</span>}

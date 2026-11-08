@@ -16,12 +16,13 @@ import {
   touchPlayground,
   unsharePlayground,
   updateDetails,
+  uploadBoardThumbnail,
   uploadShareImage,
   type PlaygroundDetails,
   type PlaygroundSummary,
 } from "../lib/cloud";
 import { track } from "../lib/analytics";
-import { renderThumbnail } from "../lib/thumbnail";
+import { renderThumbnail, renderThumbnailFile } from "../lib/thumbnail";
 import { renderShareImage } from "../lib/shareImage";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "./auth";
@@ -166,6 +167,20 @@ function markThumbnail(id: string, items: unknown, sentNow: boolean) {
 }
 
 /**
+ * A playground's thumbnail for its row: the 2× file's URL once uploaded, or the small inline picture if the upload
+ * fails (say, before the board_thumbnails migration). Null when there's nothing to draw.
+ */
+async function boardThumbnail(id: string, items: Parameters<typeof renderThumbnail>[0]): Promise<string | null> {
+  try {
+    const file = await renderThumbnailFile(items);
+    if (file) return await uploadBoardThumbnail(id, file);
+  } catch (e) {
+    console.warn("Could not upload the playground thumbnail; storing the small one.", e);
+  }
+  return renderThumbnail(items);
+}
+
+/**
  * For a save of playground `id`: the thumbnail to send with it, or undefined to leave the stored one alone, either
  * because the layout looks the same or one was sent less than a minute ago (then a send is scheduled for later).
  */
@@ -177,7 +192,7 @@ async function thumbnailIfDue(id: string, items: Parameters<typeof renderThumbna
     return undefined;
   }
   markThumbnail(id, items, true);
-  return renderThumbnail(items);
+  return boardThumbnail(id, items);
 }
 
 /** Sends the open playground's thumbnail now if the stored one is out of date. Best effort. */
@@ -191,7 +206,7 @@ async function flushThumbnail(): Promise<void> {
   if (thumbSent?.id === cloudId && thumbSent.key === itemsKey(items)) return;
   markThumbnail(cloudId, items, true);
   try {
-    const thumbnail = await renderThumbnail(items);
+    const thumbnail = await boardThumbnail(cloudId, items);
     await setThumbnail(cloudId, thumbnail);
     useCloud.setState((s) => ({ list: s.list.map((p) => (p.id === cloudId ? { ...p, thumbnail } : p)) }));
   } catch (e) {
@@ -271,6 +286,15 @@ export const useCloud = create<CloudState>((set, get) => {
           id = row.id;
           created = true;
           markThumbnail(id, pg.items, true);
+          // The row starts with the small inline picture (the file needs the new id); swap in the sharp one.
+          const newId = id;
+          void boardThumbnail(newId, pg.items)
+            .then(async (t) => {
+              if (!t || t.startsWith("data:")) return;
+              await setThumbnail(newId, t);
+              useCloud.setState((s) => ({ list: s.list.map((p) => (p.id === newId ? { ...p, thumbnail: t } : p)) }));
+            })
+            .catch(() => undefined);
           if (row.name !== pg.name) usePlayground.getState().setName(row.name);
           const { pendingDetails } = meta;
           setMeta({ cloudId: id, ownerId: user.id, forkedFromId: null, slug: null, isPublic: false, pendingDetails: null });

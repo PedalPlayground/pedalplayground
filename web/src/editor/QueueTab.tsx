@@ -4,6 +4,7 @@ import { fieldProblems, type Fields } from "../lib/editorChecks";
 import { approve, fieldsFrom, listQueue, review, sourceUrl, updateSubmission, uploadSource, type Submission } from "../lib/editorApi";
 import { useAuth } from "../store/auth";
 import { withPublish, type Notice, type PublishState, type SetNotice } from "./EditorApp";
+import { Meta } from "../components/Meta";
 import { fieldBox, fieldHelp, ItemEditor, labelClass, primaryButton, secondaryButton } from "./ItemEditor";
 
 /** Pending submissions, oldest first. Pick one, fix it if needed, then approve, send back, or reject. */
@@ -41,14 +42,13 @@ export function QueueTab({ manifest, publisher, setNotice }: { manifest: Manifes
             <button
               type="button"
               onClick={() => setOpenId(s.id)}
-              className={`w-full rounded-[5px] px-2.5 py-2 text-left text-[13px] ${s.id === openId ? "bg-ink/[0.06] font-medium" : "hover:bg-surface-hover"}`}
+              className={`w-full rounded-control px-2.5 py-2 text-left text-[13px] ${s.id === openId ? "bg-soft font-medium" : "hover:bg-surface-hover"}`}
             >
               <span className="block truncate font-semibold">
                 {s.brand} {s.name}
               </span>
               <span className="block text-xs text-ink-muted">
-                {s.target_key ? "Correction" : "New"} · {new Date(s.created_at).toLocaleDateString()}
-                {s.status === "needs_changes" && " · sent back"}
+                <Meta parts={[s.target_key ? "Correction" : "New", new Date(s.created_at).toLocaleDateString(), s.status === "needs_changes" && "Sent back"]} />
               </span>
             </button>
           </li>

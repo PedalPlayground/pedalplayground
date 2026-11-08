@@ -36,6 +36,12 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 22. Multiple languages (translate the site's UI). Post-MVP, not yet prioritized.
 23. Two tiered pedalboards with a hinged shelf. Post-MVP, not yet prioritized.
 24. A way to reset your password.
+25. Bug: some thumbnails in the My Boards menu are blank (reported by Trav 2026-11-08).
+26. Bug: boards show the wrong image (reported by Trav 2026-11-08; where and which boards still to confirm).
+27. Bug: opening a playground briefly flashes an old board before the right one loads (reported by Trav 2026-11-08).
+28. Catalog: 11 entries share an image with another entry (pedalboards aclam-l2-free, aclam-s2-top; pedals barefoot-button,
+    ernie-ball-vp, zip-tie-mount-lg, mission-ep1, mission-ep1-black, mooer-leveline, mxr-csp102sl, mxr-csp026 and one more).
+    The second of each pair shows the other's photo, and its Gear page (`?item=<image>`) opens the first one instead.
 
 ## Done
 

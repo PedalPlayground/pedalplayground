@@ -1,7 +1,7 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { useRef, useState, type ReactNode } from "react";
 import { tip } from "./Tooltip";
-import { ChevronDown, Copy, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
+import { Copy, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
 import { PedalboardIcon, tabClass, tabIcon, tabLabel } from "./SiteTabs";
 import type { PlaygroundSummary } from "../lib/cloud";
 import { handoffHref, type Handoff } from "../lib/handoff";
@@ -10,6 +10,7 @@ import { useAuth } from "../store/auth";
 import { useBilling } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
+import { Meta } from "./Meta";
 import { useUi } from "../store/ui";
 
 const item =
@@ -20,7 +21,7 @@ type MenuProps = { onEdit: (target?: PlaygroundSummary) => void; onSignIn: () =>
 const go = (h: Handoff) => window.location.assign(handoffHref(h));
 
 const cardAction =
-  "grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/10 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
+  "grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-soft-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
 
 /** "Edited Oct 27", or with the year once it's not this year. */
 function edited(iso: string) {
@@ -52,7 +53,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
           sideOffset={6}
           collisionPadding={12}
           onCloseAutoFocus={onCloseAutoFocus}
-          className="animate-menu z-50 w-60 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
+          className="animate-menu z-50 w-60 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-float max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
         >
           <Dropdown.Item disabled={empty} className={`${item} data-[disabled]:cursor-default data-[disabled]:opacity-40`} onSelect={newPlayground}>
             <Plus size={14} />
@@ -80,7 +81,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
         sideOffset={6}
         collisionPadding={12}
         onCloseAutoFocus={onCloseAutoFocus}
-        className="animate-menu z-50 w-80 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
+        className="animate-menu z-50 w-80 max-w-[calc(100vw-24px)] rounded-panel bg-surface p-1.5 shadow-float max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain"
       >
         <Dropdown.Item className={item} onSelect={newPlayground}>
           <Plus size={14} />
@@ -99,19 +100,18 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
                     aria-current={current || undefined}
                     onSelect={() => (remote ? go({ kind: "open", id: p.id }) : void openPlayground(p.id))}
                     className={`flex cursor-pointer select-none items-center gap-2.5 rounded-control p-1.5 outline-none ${
-                      current ? "bg-surface-hover data-[highlighted]:bg-ink/10" : "data-[highlighted]:bg-surface-hover"
+                      current ? "bg-surface-hover data-[highlighted]:bg-soft-hover" : "data-[highlighted]:bg-surface-hover"
                     }`}
                   >
                     {p.thumbnail ? (
-                      <img src={p.thumbnail} alt="" className="aspect-[8/5] w-14 shrink-0 rounded-[3px] bg-canvas object-contain" />
+                      <img src={p.thumbnail} alt="" className="aspect-[8/5] w-14 shrink-0 rounded-inner bg-canvas object-contain" />
                     ) : (
-                      <span className="aspect-[8/5] w-14 shrink-0 rounded-[3px] bg-canvas" />
+                      <span className="aspect-[8/5] w-14 shrink-0 rounded-inner bg-canvas" />
                     )}
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-sm font-medium">{p.name}</span>
                       <span className="block truncate text-xs text-ink-muted">
-                        {current ? "Open now" : edited(p.updated_at)}
-                        {p.is_public && " · Shared"}
+                        <Meta parts={[current ? "Open now" : edited(p.updated_at), p.is_public && "Shared"]} />
                       </span>
                     </span>
                     {/* Its own click: don't also open the playground. */}
@@ -165,10 +165,9 @@ export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds, remote = false }: 
   const pending = useRef<{ open: () => void } | null>(null);
   return (
     <Dropdown.Root open={open} onOpenChange={setOpen}>
-      <Dropdown.Trigger data-tour="playgrounds" aria-label="My Playgrounds" className={tabClass(false)}>
+      <Dropdown.Trigger data-tour="playgrounds" aria-label="My Boards" className={tabClass(false)}>
         <PedalboardIcon {...tabIcon} className="text-ink-muted" />
-        <span className={tabLabel}>My Playgrounds</span>
-        <ChevronDown size={12} strokeWidth={2.5} className="-ml-0.5 shrink-0 text-ink-muted" />
+        <span className={tabLabel}>My Boards</span>
       </Dropdown.Trigger>
       <MenuContent
         remote={remote}
@@ -197,7 +196,7 @@ export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds, remote = false }: 
 }
 
 const labelButton =
-  "press grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-ink/5 hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
+  "press grid size-7 shrink-0 place-items-center rounded-control text-ink-muted outline-none hover:bg-soft hover:text-ink focus-visible:ring-2 focus-visible:ring-brand";
 
 /**
  * Over the canvas's top-left corner: the open board's name, with comments once it's shared and a pencil for Playground
@@ -255,7 +254,7 @@ function CopyButton({ onSignIn }: { onSignIn: () => void }) {
       type="button"
       onClick={createCopy}
       aria-label="Create a Copy"
-      className="press flex h-7 shrink-0 items-center gap-1.5 rounded-control px-1.5 outline-none hover:bg-ink/5 focus-visible:ring-2 focus-visible:ring-brand sm:-ml-1.5"
+      className="press flex h-7 shrink-0 items-center gap-1.5 rounded-control px-1.5 outline-none hover:bg-soft focus-visible:ring-2 focus-visible:ring-brand sm:-ml-1.5"
     >
       <Copy size={14} strokeWidth={2.25} />
       <span className="max-sm:hidden">Create a Copy</span>

@@ -1,5 +1,6 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import {
+  Info,
   AlignHorizontalSpaceBetween,
   Group,
   Ungroup,
@@ -27,6 +28,7 @@ import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { hideTip, platformKeys } from "./Tooltip";
 import { itemName } from "../lib/itemName";
+import { openGearInfo, placedItemHref } from "../lib/gearLink";
 
 type Kind = "canvas" | "object";
 
@@ -54,10 +56,10 @@ export function openContextMenu(menu: Omit<OpenMenu, "key">) {
 export const closeContextMenu = () => useContextMenu.setState({ open: null });
 
 /** Shared with other popover menus (the search filters) so they all look the same. */
-export const menuContentClass = "animate-menu z-50 min-w-48 rounded-[10px] border border-chrome-line bg-surface p-1 shadow-panel max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain";
+export const menuContentClass = "animate-menu z-50 min-w-48 rounded-panel bg-surface p-1 shadow-float max-h-[var(--radix-dropdown-menu-content-available-height)] overflow-y-auto overscroll-contain";
 
 export const rowClass =
-  "group flex h-7 cursor-default select-none items-center gap-2 rounded-[5px] pl-2 pr-2.5 text-[13px] tracking-[-0.01em] outline-none transition-colors duration-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-40 pointer-coarse:h-9";
+  "group flex h-7 cursor-default select-none items-center gap-2 rounded-control pl-2 pr-2.5 text-[13px] tracking-[-0.01em] outline-none transition-colors duration-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-40 pointer-coarse:h-9";
 
 function Row({
   icon,
@@ -145,6 +147,7 @@ function ObjectItems() {
       <Row icon={<SendToBack {...ICON} />} label="Move to Back" shortcut="⌘[" onSelect={s.sendToBack} />
       <Separator />
       {single && !single.custom && <Row icon={<Replace {...ICON} />} label="Replace" onSelect={() => setReplacing(true)} />}
+      {placedItemHref(single) && <Row icon={<Info {...ICON} />} label="Info" onSelect={() => openGearInfo(single)} />}
       <Row icon={<Trash2 {...ICON} />} label="Remove" shortcut="Delete" onSelect={s.deleteSelected} danger />
     </>
   );

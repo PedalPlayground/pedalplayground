@@ -14,6 +14,8 @@ export interface CatalogItem {
   ma?: number;
   voltage?: string;
   type?: string;
+  /** Every type, main first, when it has more than one ("Overdrive", "Amp / Preamp"). Use itemTypes() to read. */
+  types?: string[];
   /** The day it joined the catalog, "YYYY-MM-DD" (from git history at build time). */
   added?: string;
 }

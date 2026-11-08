@@ -29,7 +29,7 @@ import { useAllowedNames } from "../lib/useAllowedNames";
 
 /** Shaded, borderless fields; focus shows a brand ring. */
 const field =
-  "rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted/70 focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
+  "rounded-control bg-surface-hover text-sm outline-none placeholder:text-ink-muted focus-visible:ring-2 focus-visible:ring-brand focus:ring-2 focus:ring-brand";
 
 /**
  * Name, type, genres, description, share link, gallery listing, comments and delete for one playground. `target` is a saved playground picked from the menu;
@@ -301,8 +301,8 @@ function Switch({ on, onClick, title, hint, disabled }: { on: boolean; onClick: 
         <span className="block text-sm">{title}</span>
         <span className="block text-xs text-ink-muted">{hint}</span>
       </span>
-      <span className={`relative mt-0.5 inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${on ? "bg-brand" : "bg-ink/15"}`}>
-        <span className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white shadow-sm transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`} />
+      <span className={`relative mt-0.5 inline-flex h-[18px] w-8 shrink-0 rounded-full transition-colors duration-200 ${on ? "bg-brand" : "bg-soft-active"}`}>
+        <span className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`} />
       </span>
     </button>
   );

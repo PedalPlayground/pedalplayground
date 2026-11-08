@@ -1,4 +1,6 @@
-import { Check, CornerDownLeft, Flame, Search, Sparkles, X } from "lucide-react";
+import { Check, CornerDownLeft, Search, TrendingUp, X } from "lucide-react";
+import { NewTag } from "./NewTag";
+import { SuggestGearDialog } from "./SuggestGearDialog";
 import { tip } from "./Tooltip";
 import {
   useCallback,
@@ -27,11 +29,12 @@ import { PX_PER_INCH } from "../lib/geometry";
 import { templateInfo, type PedalTemplate } from "../lib/pedalTemplates";
 import { PedalArt } from "./PedalArt";
 import { FEATURED_PEDALS } from "../lib/featuredPedals";
+import { Meta } from "./Meta";
 import { fetchTrending, recordGearAdd, type TrendingEntry } from "../lib/trending";
 
 type Feed = "trending" | "new";
 const FEED_KEY = "pp:gear-feed";
-/** How many items Trending and What's New show. */
+/** How many items Trending and Newest show. */
 const FEED_SIZE = 30;
 const savedFeed = (): Feed => {
   try {
@@ -41,7 +44,7 @@ const savedFeed = (): Feed => {
   }
 };
 
-/** Opens Add Gear on its New list (the "new pedals added" posts in What's new link here). */
+/** Opens Add Gear on its Newest list (the "new pedals added" posts in What's new link here). */
 export function showNewGear() {
   try {
     localStorage.setItem(FEED_KEY, "new");
@@ -124,7 +127,20 @@ function CustomThumb() {
  * Adds products to the canvas; with `replace`, picks a replacement for the selected product instead.
  * Larger screens get a panel docked down the canvas's left side; phones get a bottom drawer that slides closed.
  */
-export function SearchPanel({ onClose: close, replace = false, edit = false }: { onClose: () => void; replace?: boolean; edit?: boolean }) {
+export function SearchPanel({
+  onClose: close,
+  replace = false,
+  edit = false,
+  onSignIn,
+}: {
+  onClose: () => void;
+  replace?: boolean;
+  edit?: boolean;
+  /** Opens sign-in (Suggest Gear needs an account). */
+  onSignIn?: () => void;
+}) {
+  /** Suggest Gear is open, starting from what was typed. */
+  const [suggesting, setSuggesting] = useState(false);
   const phone = useMediaQuery(PHONE_QUERY);
   const { height: visibleHeight, keyboard } = useVisualViewport();
 
@@ -283,7 +299,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     return search(pool, deferredQuery);
   }, [index, kind, sizes, deferredQuery]);
 
-  // Before any search or filter, the list shows Trending (most added lately) or What's New (newest in the catalog).
+  // Before any search or filter, the list shows Trending (most added lately) or Newest (newest in the catalog).
   const browsing = !target && !deferredQuery.trim() && !filtered;
   const [feed, setFeed] = useState<Feed>(savedFeed);
   const chooseFeed = (f: Feed) => {
@@ -447,8 +463,9 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
           <div role="radiogroup" aria-label="Sort" className="flex items-center gap-1 px-3 pt-2">
             {(
               [
-                ["trending", "Trending", <Flame key="t" size={14} strokeWidth={2.25} />],
-                ["new", "New", <Sparkles key="n" size={14} strokeWidth={2.25} />],
+                // The Gear page's hot and new marks.
+                ["trending", "Trending", <TrendingUp key="t" size={14} strokeWidth={2.5} />],
+                ["new", "Newest", <NewTag key="n" className="size-[14px]" />],
               ] as const
             ).map(([id, label, icon]) => (
               <button
@@ -514,6 +531,15 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
                   Make Your Own
                 </button>
               )}
+              {typed && !partial && (
+                <button
+                  onMouseDown={keepFocus}
+                  onClick={() => setSuggesting(true)}
+                  className="press h-8 rounded-control border border-line px-3 text-sm hover:bg-surface-hover"
+                >
+                  Suggest It for the Catalog
+                </button>
+              )}
             </div>
           </li>
         )}
@@ -542,8 +568,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
               <span className="min-w-0">
                 <span className="block truncate text-sm font-medium">{item.name}</span>
                 <span className="block truncate text-xs text-ink-muted">
-                  {item.brand} · {formatSize(item.width, item.height, units)}
-                  {!kind && entry.kind === "pedalboard" && " · Pedalboard"}
+                  <Meta parts={[item.brand, formatSize(item.width, item.height, units), !kind && entry.kind === "pedalboard" && "Pedalboard"]} />
                 </span>
               </span>
               {row === active && !isAdded && (
@@ -572,10 +597,23 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
       {!target && !phone && (
         <div className="relative px-2 pb-2">
           <div aria-hidden className="pointer-events-none absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-surface to-transparent" />
-          <div className="rounded-control bg-surface-hover shadow-[0_2px_12px_rgb(0_0_0/0.12)] [&>button:hover]:bg-ink/10">{makeOwn}</div>
+          <div className="rounded-control bg-surface-hover shadow-float [&>button:hover]:bg-soft-hover">{makeOwn}</div>
+          <button type="button" onClick={() => setSuggesting(true)} className="mt-1.5 w-full text-center text-xs text-ink-muted hover:text-ink">
+            Can't find it? <span className="font-semibold text-brand">Suggest it for the catalog</span>
+          </button>
         </div>
       )}
       </>
+      )}
+      {suggesting && (
+        <SuggestGearDialog
+          initialName={typed}
+          onClose={() => setSuggesting(false)}
+          onSignIn={() => {
+            setSuggesting(false);
+            onSignIn?.();
+          }}
+        />
       )}
     </>
   );
@@ -588,7 +626,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         ref={dockRef}
         role="dialog"
         aria-label={edit ? "Edit" : replace ? "Replace" : "Add Gear"}
-        className="animate-dock absolute bottom-3 left-3 top-3 z-40 flex w-[min(280px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-panel"
+        className="animate-dock absolute bottom-3 left-3 top-3 z-40 flex w-[min(280px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-panel bg-surface shadow-float"
       >
         {body}
       </div>
@@ -605,7 +643,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
         ref={sheetRef}
         role="dialog"
         aria-label={edit ? "Edit" : replace ? "Replace" : "Add Gear"}
-        className="animate-sheet absolute inset-x-0 flex flex-col rounded-t-[16px] bg-surface shadow-[0_-4px_24px_rgb(0_0_0/0.12)]"
+        className="animate-sheet absolute inset-x-0 flex flex-col rounded-t-container bg-surface shadow-[0_-8px_32px_rgb(27_28_56/0.12)]"
         style={{
           bottom: keyboard,
           height: Math.min(visibleHeight * 0.72, visibleHeight - 56),

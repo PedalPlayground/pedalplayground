@@ -120,6 +120,35 @@ export async function setThumbnail(id: string, thumbnail: string | null) {
   if (error) throw error;
 }
 
+/** Public bucket holding each playground's 2× thumbnail, `<id>.webp` or `.png` (see the board_thumbnails migration). */
+const BOARD_THUMBNAILS = "board-thumbnails";
+
+/**
+ * Uploads (or replaces) a playground's thumbnail file and returns its public URL, versioned so browsers and the CDN
+ * pick up the new picture. Its owner can write it, and editors can for gallery boards.
+ */
+export async function uploadBoardThumbnail(id: string, image: Blob): Promise<string> {
+  const ext = image.type === "image/png" ? "png" : "webp";
+  const path = `${id}.${ext}`;
+  const { error } = await db()
+    .storage.from(BOARD_THUMBNAILS)
+    // The ?v= in the URL changes with every upload, so the file itself can be cached for a long time.
+    .upload(path, image, { contentType: image.type || "image/webp", upsert: true, cacheControl: "31536000" });
+  if (error) throw error;
+  return `${db().storage.from(BOARD_THUMBNAILS).getPublicUrl(path).data.publicUrl}?v=${Date.now()}`;
+}
+
+/** Removes a playground's thumbnail files. Best effort. */
+async function deleteBoardThumbnail(id: string) {
+  await db().storage.from(BOARD_THUMBNAILS).remove([`${id}.webp`, `${id}.png`]);
+}
+
+/** Editors: points a gallery board's thumbnail at its redrawn file (see the board_thumbnails migration). */
+export async function setGalleryThumbnail(id: string, url: string) {
+  const { error } = await db().rpc("set_gallery_thumbnail", { playground_id: id, url });
+  if (error) throw error;
+}
+
 /** Renames a playground without touching its content or thumbnail (for ones that aren't open). */
 export async function renamePlayground(id: string, name: string) {
   const { error } = await db().from("playgrounds").update({ name }).eq("id", id);
@@ -232,6 +261,9 @@ export async function insertVersion(playgroundId: string, doc: PlaygroundDocumen
 }
 
 export async function deletePlayground(id: string) {
+  // Its thumbnail file first: once the row is gone, the storage rules can't tell it was ours. Only its owner can remove
+  // it, so this does nothing when the delete below would fail anyway.
+  await deleteBoardThumbnail(id).catch(() => undefined);
   // Row-level security makes a delete of someone else's row succeed with zero rows, so check the count.
   const { data, error } = await db().from("playgrounds").delete().eq("id", id).select("id");
   if (error) throw error;

@@ -25,7 +25,7 @@ export function BackToCenter() {
     <div className="pointer-events-none absolute inset-0 z-10 grid place-items-center">
       <button
         onClick={fit}
-        className="press animate-enter pointer-events-auto flex h-9 items-center gap-2 rounded-full border border-chrome-line bg-surface/80 px-4 text-[13px] font-semibold tracking-[-0.01em] text-ink shadow-[0_0_12px_rgb(0_0_0/0.08)] backdrop-blur-sm outline-none hover:bg-surface active:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10"
+        className="press animate-enter pointer-events-auto flex h-9 items-center gap-2 rounded-full bg-surface/90 shadow-float px-4 text-[13px] font-semibold tracking-[-0.01em] text-ink shadow-[0_0_12px_rgb(0_0_0/0.08)] backdrop-blur-sm outline-none hover:bg-surface active:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:h-10"
       >
         <LocateFixed size={15} strokeWidth={2.25} />
         Back to Center
