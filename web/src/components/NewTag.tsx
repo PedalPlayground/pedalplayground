@@ -1,6 +1,6 @@
 /**
  * A filled "NEW" tag (Streamline Core's Tag New Square), in the current text color: the new mark on the Gear page,
- * and Add Gear's Recently added list.
+ * and Add Gear's Newest list.
  */
 export function NewTag({ className = "" }: { className?: string }) {
   return (

@@ -8,7 +8,7 @@ A bell in the app header opens a short feed of news. A dot on the bell means the
   has a title, optional text, an optional link (`https://…` or a site path like `/gallery/`) and a publish time. A
   future publish time schedules the post; editors see it in the list, everyone else sees it once the time passes.
 - **New pedals**: built in the browser from the catalog's `added` dates, one entry per week for the last 6 weeks
-  ("12 new pedals added"). Tapping it opens Add Gear on its Recently added list. Nothing to write by hand.
+  ("12 new pedals added"). Tapping it opens Add Gear on its Newest list. Nothing to write by hand.
 
 ## Load and privacy
 

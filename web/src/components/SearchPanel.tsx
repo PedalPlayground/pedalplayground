@@ -33,7 +33,7 @@ import { fetchTrending, recordGearAdd, type TrendingEntry } from "../lib/trendin
 
 type Feed = "trending" | "new";
 const FEED_KEY = "pp:gear-feed";
-/** How many items Trending and Recently added show. */
+/** How many items Trending and Newest show. */
 const FEED_SIZE = 30;
 const savedFeed = (): Feed => {
   try {
@@ -43,7 +43,7 @@ const savedFeed = (): Feed => {
   }
 };
 
-/** Opens Add Gear on its Recently added list (the "new pedals added" posts in What's new link here). */
+/** Opens Add Gear on its Newest list (the "new pedals added" posts in What's new link here). */
 export function showNewGear() {
   try {
     localStorage.setItem(FEED_KEY, "new");
@@ -285,7 +285,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
     return search(pool, deferredQuery);
   }, [index, kind, sizes, deferredQuery]);
 
-  // Before any search or filter, the list shows Trending (most added lately) or Recently added (newest in the catalog).
+  // Before any search or filter, the list shows Trending (most added lately) or Newest (newest in the catalog).
   const browsing = !target && !deferredQuery.trim() && !filtered;
   const [feed, setFeed] = useState<Feed>(savedFeed);
   const chooseFeed = (f: Feed) => {
@@ -451,7 +451,7 @@ export function SearchPanel({ onClose: close, replace = false, edit = false }: {
               [
                 // The Gear page's hot and new marks.
                 ["trending", "Trending", <TrendingUp key="t" size={14} strokeWidth={2.5} />],
-                ["new", "Recently added", <NewTag key="n" className="size-[14px]" />],
+                ["new", "Newest", <NewTag key="n" className="size-[14px]" />],
               ] as const
             ).map(([id, label, icon]) => (
               <button
