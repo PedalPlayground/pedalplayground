@@ -27,7 +27,7 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, bill
     {
       hero: "intro",
       title: "Welcome to Pedal Playground 2.0!",
-      body: "Plan, arrange and show off your pedalboard or gear collection before you buy a thing. New in 2.0: sign in to keep your boards on every device, share them with a link, and build on a snappy canvas that zooms to any size.",
+      body: "Plan, arrange and show off your pedalboard before you buy a thing. Get ideas from boards the community has shared in the Gallery, or jump in and start building your own.",
     },
     {
       target: "add",
@@ -291,13 +291,14 @@ export function OnboardingTour() {
           {step.body}
         </p>
 
-        <div className="mt-4 flex items-center gap-2">
+        <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-3">
           <div className="flex gap-1" aria-label={`Step ${index + 1} of ${steps.length}`} role="img">
             {steps.map((_, i) => (
               <span key={i} className={`h-1.5 rounded-full transition-all ${i === index ? "w-4 bg-brand" : "w-1.5 bg-line"}`} />
             ))}
           </div>
-          <div className="ml-auto flex items-center gap-1">
+          {/* The first card's two choices get their own full-width row on phones. */}
+          <div className={`ml-auto flex items-center gap-1 ${index === 0 ? "max-sm:w-full max-sm:gap-2 max-sm:[&>button]:flex-1" : ""}`}>
             {step.hero === "pro" ? (
               <button
                 onClick={() => {
@@ -309,8 +310,15 @@ export function OnboardingTour() {
                 See Pro
               </button>
             ) : index === 0 ? (
-              <button onClick={close} className="h-8 rounded-control px-3 text-sm text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand">
-                Skip
+              // The first choice: look around the Gallery (ends the tour), or build (the tour carries on).
+              <button
+                onClick={() => {
+                  close();
+                  window.location.assign("/gallery/");
+                }}
+                className="h-8 whitespace-nowrap rounded-control bg-soft px-3 text-sm font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand"
+              >
+                Browse the Gallery
               </button>
             ) : (
               <button onClick={back} className="h-8 rounded-control px-3 text-sm text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand">
@@ -320,9 +328,9 @@ export function OnboardingTour() {
             <button
               ref={primary}
               onClick={next}
-              className="btn-primary h-8 px-3.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1"
+              className="btn-primary h-8 whitespace-nowrap px-3.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1"
             >
-              {index === 0 ? "Show Me Around" : last ? "Start Building" : "Next"}
+              {index === 0 ? "Start Building" : last ? "Start Building" : "Next"}
             </button>
           </div>
         </div>
