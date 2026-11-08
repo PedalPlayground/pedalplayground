@@ -1,4 +1,4 @@
-import { ArrowLeft, Search, SlidersHorizontal, TrendingUp } from "lucide-react";
+import { ArrowLeft, Search, SlidersHorizontal, TrendingUp, X } from "lucide-react";
 import { tip } from "../components/Tooltip";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
@@ -802,6 +802,7 @@ function FilterPanel({
   onClear?: () => void;
 }) {
   const [find, setFind] = useState("");
+  const [finding, setFinding] = useState(false);
   const shownBrands = useMemo(() => {
     const q = find.trim().toLowerCase();
     return q ? brands.filter(([b]) => b.toLowerCase().includes(q)) : brands;
@@ -839,18 +840,43 @@ function FilterPanel({
 
       {/* All Brands names the list; the brand list scrolls on its own, and past it the whole sidebar scrolls. */}
       <div role="radiogroup" aria-label="Brand" className="grid gap-0.5">
-        <button type="button" role="radio" aria-checked={brand === null} onClick={() => setBrand(null)} className={listRow(brand === null)}>
-          <span className="truncate">All Brands</span>
-          {count(brands.reduce((n, [, c]) => n + c, 0))}
-        </button>
-        <input
-          type="search"
-          value={find}
-          onChange={(e) => setFind(e.target.value)}
-          placeholder={`Find a brand (${brands.length.toLocaleString("en-US")})`}
-          aria-label="Find a brand"
-          className="my-1 h-8 w-full rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
-        />
+        <div className="flex items-center gap-0.5">
+          <button type="button" role="radio" aria-checked={brand === null} onClick={() => setBrand(null)} className={`${listRow(brand === null)} min-w-0 flex-1`}>
+            <span className="truncate">All Brands</span>
+            {count(brands.reduce((n, [, c]) => n + c, 0))}
+          </button>
+          {/* The brand search hides behind an icon until it's wanted. */}
+          <button
+            type="button"
+            aria-label={finding ? "Close brand search" : "Find a brand"}
+            aria-expanded={finding}
+            {...tip(finding ? "Close" : "Find a brand")}
+            onClick={() => {
+              if (finding) setFind("");
+              setFinding(!finding);
+            }}
+            className="grid size-8 shrink-0 place-items-center rounded-control text-icon outline-none transition-colors hover:bg-soft hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+          >
+            {finding ? <X size={15} strokeWidth={2} /> : <Search size={15} strokeWidth={2} />}
+          </button>
+        </div>
+        {finding && (
+          <input
+            type="search"
+            autoFocus
+            value={find}
+            onChange={(e) => setFind(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Escape") {
+                setFind("");
+                setFinding(false);
+              }
+            }}
+            placeholder={`Find a brand (${brands.length.toLocaleString("en-US")})`}
+            aria-label="Find a brand"
+            className="my-1 h-8 w-full rounded-control border border-chrome-line bg-surface px-2.5 text-[13px] outline-none focus:ring-2 focus:ring-brand"
+          />
+        )}
         <div className="-m-1 grid max-h-72 gap-0.5 overflow-y-auto p-1">
           {shownBrands.map(([b, n]) => (
             <button key={b} type="button" role="radio" aria-checked={brand === b} onClick={() => setBrand(brand === b ? null : b)} className={listRow(brand === b)}>
