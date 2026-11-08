@@ -12,7 +12,7 @@ reads the same `catalog.json` as the playground, so it needs no database pieces 
   a Filters sheet below it, as two flat lists with no headings: the first row of each names it. The type list is All
   Gear (pedals and pedalboards together, the default), Pedals, Pedalboards, then each pedal type (picking a type lists
   pedals); it only shows types the catalog has, counted within the chosen brand. The brand list is All Brands (no count; a search icon in the count's place opens a Find
-  a brand field; Escape or the X closes and clears it), then the brands. Filters in effect (Pedals or Pedalboards, a type, a brand, the search) show as removable pills in the bar beside the heading (their own row over the grid on phones)
+  a brand field; Escape or the X closes and clears it), then the brands. Filters in effect (Pedals or Pedalboards, a type, a brand, the search) show as removable pills in the bar, starting at the tile grid's left edge on laptops (after the heading on tablets, their own row over the grid on phones)
   , with Clear all when there's more than one.
 - **Filters live in the URL** and each new brand, type, kind or sort is a history step (search text isn't), so Back
   returns to the last view. A brand page is a link: `/gear/?brand=BOSS`, `/gear/?type=Fuzz`, `/gear/?kind=pedals`, `/gear/?kind=boards`,

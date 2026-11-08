@@ -633,7 +633,8 @@ export function GearApp() {
             full width above the sidebar and the grid. */}
         <div className={`${shelves ? "mt-12" : "mt-8"} flex flex-wrap items-center gap-x-3 gap-y-2`}>
           {/* Phones: the card size shares the heading's row, so Filters and sort fit on the next. */}
-          <div className="flex min-w-0 flex-1 items-center gap-3 max-sm:basis-full">
+          {/* Laptops and up: two columns like the sidebar and grid below, so the pills start where the tiles do. */}
+          <div className="flex min-w-0 flex-1 items-center gap-3 max-sm:basis-full lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-8">
             <h2 className={`flex min-w-0 items-baseline gap-2.5 ${chips.length ? "shrink-0 max-sm:flex-1" : "flex-1"}`}>
               <span className="truncate text-lg font-bold tracking-[-0.01em]">{chips.length ? "Results" : "All gear"}</span>
               {manifest && (
@@ -644,7 +645,7 @@ export function GearApp() {
               )}
             </h2>
             {/* The filters in effect sit in the bar beside the heading, so they add no height. */}
-            {chips.length > 0 && <div className="min-w-0 flex-1 max-sm:hidden">{filterPills}</div>}
+            {chips.length > 0 && <div className="min-w-0 flex-1 max-sm:hidden lg:col-start-2">{filterPills}</div>}
             <div className="sm:hidden">
               <DensitySwitch value={density} onChange={setDensity} />
             </div>
