@@ -43,7 +43,7 @@ Rules the database enforces:
 - At most 10 open submissions per player (editors aren't limited).
 - Only editors can read items, edit submissions, approve, reject or retire. Approval only goes through the function.
 - Item keys never change. A new item's key comes from its brand and name (`boss-ds-1`), with `-2` added if it's taken.
-- Retired items leave search but keep their images, so saved boards still draw them.
+- Retired items ("Archived" in the editor) leave search but keep their images, so saved boards still draw them.
 
 ## One-time setup
 
@@ -179,11 +179,11 @@ Only accounts in `catalog_editors` get past the sign-in check; everyone else see
   Needs changes (the note goes to the submitter) or Reject. Empty until the submit form arrives in phase 4.
 - **Add:** a new pedal or pedalboard straight into the catalog.
 - **Catalog** (the old Types tab is part of it; `#types` opens it): the Gear page's filters in a sidebar (All Items,
-  Pedals, Pedalboards, No type and each pedal type by count, Live / Retired, brands with a search icon, each list
+  Pedals, Pedalboards, No type and each pedal type by count, Live / Archived, brands with a search icon, each list
   collapsed with Show more), a search, and the matching items. Each pedal row has its types as a combo box (the first
   chip is the main type; type to add, drag or Alt+arrow to reorder, X or Backspace to remove) that saves on change.
-  Tick items (or Select all shown) and the bulk actions appear beside Select all in the list's header row (small 28px controls, fixed height): Add type, Make main type, Remove type, Retire, Restore, each run
-  item by item and published once. Open an item to fix its fields or photo. The Gear page's **Edit in catalog** link
+  Tick items (or Select all shown) and the bulk actions appear beside Select all in the list's header row (small 28px controls, fixed height): Add type, Make main type, Remove type, Archive, Restore, each run
+  item by item and published once. Each row also has Edit (open it), Copy (a new item from it on Add) and Archive (Restore once archived). Open an item to fix its fields or photo. The Gear page's **Edit in catalog** link
   (editors only) opens an item directly: `/editor/#catalog?kind=pedal&key=<key>`. The item form uses the same type
   combo box.
 

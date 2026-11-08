@@ -1,4 +1,5 @@
-import { ArrowLeft, Search, X } from "lucide-react";
+import { Archive, ArchiveRestore, ArrowLeft, Copy, Pencil, Search, X } from "lucide-react";
+import { tip } from "../components/Tooltip";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { itemTypes, type Manifest } from "../lib/catalog";
 import { PEDAL_TYPES } from "../lib/specs";
@@ -26,7 +27,7 @@ function linkedItem(): { kind: Item["kind"]; key: string } | null {
 
 /**
  * The catalog, with the Gear page's filters in a sidebar (kind, type, brand, status) and a search. Tick items to change
- * their types or retire them in bulk; change one item's types right in its row; open an item to fix everything else.
+ * their types or archive them in bulk; change one item's types right in its row; open an item to fix everything else.
  * Each change saves straight away, filed and approved like any other edit; Publish puts them live together.
  */
 export function CatalogTab({
@@ -279,9 +280,9 @@ export function CatalogTab({
                 onAddType={(t) => void bulk(`Added ${t}`, (x) => (x.kind !== "pedal" || typesOf(x).includes(t) ? Promise.resolve(true) : saveTypes(x, [...typesOf(x), t])))}
                 onRemoveType={(t) => void bulk(`Removed ${t}`, (x) => (!typesOf(x).includes(t) ? Promise.resolve(true) : saveTypes(x, typesOf(x).filter((y) => y !== t))))}
                 onMainType={(t) => void bulk(`Made ${t} the main type`, (x) => (x.kind !== "pedal" ? Promise.resolve(true) : saveTypes(x, [t, ...typesOf(x).filter((y) => y !== t)])))}
-                onRetire={() => {
-                  if (window.confirm(`Retire ${selected.size} ${selected.size === 1 ? "item" : "items"}? They leave search, but saved boards still show them.`))
-                    void bulk("Retired", (x) => setStatusOf(x, "retired"));
+                onArchive={() => {
+                  if (window.confirm(`Archive ${selected.size} ${selected.size === 1 ? "item" : "items"}? They leave search, but saved boards still show them.`))
+                    void bulk("Archived", (x) => setStatusOf(x, "retired"));
                 }}
                 onRestore={() => void bulk("Restored", (x) => setStatusOf(x, "live"))}
                 onClear={() => setSelected(new Set())}
@@ -293,7 +294,7 @@ export function CatalogTab({
             const problem = failed.get(item.id);
             const on = selected.has(item.id);
             return (
-              <li key={item.id} className={`grid items-start gap-2 px-3 py-2.5 md:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] md:gap-4 ${on ? "bg-soft/60" : ""}`}>
+              <li key={item.id} className={`grid items-start gap-2 px-3 py-2.5 md:grid-cols-[minmax(0,18rem)_minmax(0,1fr)_auto] md:gap-4 ${on ? "bg-soft/60" : ""}`}>
                 <div className="flex min-w-0 items-center gap-2.5">
                   <input
                     type="checkbox"
@@ -325,7 +326,7 @@ export function CatalogTab({
                             item.brand,
                             item.kind === "pedalboard" && "Pedalboard",
                             `${+Number(item.width_in).toFixed(2)} × ${+Number(item.height_in).toFixed(2)} in`,
-                            item.status === "retired" && "Retired",
+                            item.status === "retired" && "Archived",
                             item.needs_render && item.source_path && "Building",
                           ]}
                         />
@@ -340,6 +341,40 @@ export function CatalogTab({
                     <p className="pt-1.5 text-xs text-ink-muted">Pedalboards have no types.</p>
                   )}
                   {problem && <p className="mt-1 text-xs text-danger">Didn't save: {problem}</p>}
+                </div>
+                {/* Edit, Copy (a new item from this one, on the Add tab), and Archive or Restore. */}
+                <div className="flex items-center gap-0.5 md:pt-0.5">
+                  <button type="button" aria-label={`Edit ${item.brand} ${item.name}`} {...tip("Edit")} onClick={() => openItem(item)} className={rowAction}>
+                    <Pencil size={15} strokeWidth={2} />
+                  </button>
+                  <a href={`#add?from=${encodeURIComponent(item.key)}`} aria-label={`Copy ${item.brand} ${item.name} as a new item`} {...tip("Copy")} className={rowAction}>
+                    <Copy size={15} strokeWidth={2} />
+                  </a>
+                  {item.status === "live" ? (
+                    <button
+                      type="button"
+                      aria-label={`Archive ${item.brand} ${item.name}`}
+                      {...tip("Archive")}
+                      disabled={saving.has(item.id)}
+                      onClick={() => {
+                        if (!window.confirm(`Archive ${item.brand} ${item.name}? It leaves search, but saved boards still show it.`)) return;
+                        void setStatusOf(item, "retired").then((ok) => (ok ? publishNow() : undefined));
+                      }}
+                      className={rowAction}
+                    >
+                      <Archive size={15} strokeWidth={2} />
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      aria-label={`Restore ${item.brand} ${item.name}`}
+                      {...tip("Restore")}
+                      onClick={() => void setStatusOf(item, "live").then((ok) => (ok ? publishNow() : undefined))}
+                      className={rowAction}
+                    >
+                      <ArchiveRestore size={15} strokeWidth={2} />
+                    </button>
+                  )}
                 </div>
               </li>
             );
@@ -356,12 +391,16 @@ export function CatalogTab({
   );
 }
 
+/** A row's icon actions (Edit, Copy, Archive). */
+const rowAction =
+  "grid size-8 place-items-center rounded-control text-icon outline-none transition-colors hover:bg-soft hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
+
 /** The header row's small controls: a step down from the page's buttons (28px tall, 12px text). */
 // Its own classes rather than secondaryButton plus overrides: utilities like h-7 and h-9 would clash.
 const barButton =
   "press h-7 shrink-0 whitespace-nowrap rounded-control bg-surface-hover px-2.5 text-xs font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
-/** The bulk actions for ticked items: types (pedals only), retire and restore. */
+/** The bulk actions for ticked items: types (pedals only), archive and restore. */
 function BulkActions({
   busy,
   disabled,
@@ -369,7 +408,7 @@ function BulkActions({
   onAddType,
   onRemoveType,
   onMainType,
-  onRetire,
+  onArchive,
   onRestore,
   onClear,
 }: {
@@ -379,7 +418,7 @@ function BulkActions({
   onAddType: (t: string) => void;
   onRemoveType: (t: string) => void;
   onMainType: (t: string) => void;
-  onRetire: () => void;
+  onArchive: () => void;
   onRestore: () => void;
   onClear: () => void;
 }) {
@@ -402,8 +441,8 @@ function BulkActions({
       {typeMenu("Add type", onAddType)}
       {typeMenu("Make main type", onMainType)}
       {typeMenu("Remove type", onRemoveType)}
-      <button type="button" className={`${barButton} text-danger`} disabled={disabled} onClick={onRetire}>
-        Retire
+      <button type="button" className={`${barButton} text-danger`} disabled={disabled} onClick={onArchive}>
+        Archive
       </button>
       <button type="button" className={barButton} disabled={disabled} onClick={onRestore}>
         Restore
@@ -498,8 +537,8 @@ function CatalogFilters({
         {(
           [
             ["live", "Live"],
-            ["retired", "Retired"],
-            ["all", "Live and Retired"],
+            ["retired", "Archived"],
+            ["all", "Live and Archived"],
           ] as const
         ).map(([s, label]) => (
           <button key={s} type="button" role="radio" aria-checked={status === s} onClick={() => onStatus(s)} className={filterRow(status === s)}>
@@ -604,7 +643,7 @@ function EditItem({
         </button>
         <h2 className="text-lg font-bold tracking-[-0.01em]">{name}</h2>
         <span className="text-xs text-ink-muted">
-          <Meta parts={[`Key ${item.key}`, `Added ${item.added_on}`, item.status === "retired" && "Retired"]} />
+          <Meta parts={[`Key ${item.key}`, `Added ${item.added_on}`, item.status === "retired" && "Archived"]} />
         </span>
       </div>
       <ItemEditor
@@ -649,14 +688,14 @@ function EditItem({
             className={`${secondaryButton} text-danger`}
             disabled={busy}
             onClick={() => {
-              if (!window.confirm(`Retire ${name}? It leaves search, but saved boards still show it.`)) return;
+              if (!window.confirm(`Archive ${name}? It leaves search, but saved boards still show it.`)) return;
               void run(async () => {
                 await setStatus(item.kind, item.key, "retired");
-                onSaved(withPublish(`Retired ${name}.`, await publisher.run()), { ...item, status: "retired" });
+                onSaved(withPublish(`Archived ${name}.`, await publisher.run()), { ...item, status: "retired" });
               });
             }}
           >
-            Retire
+            Archive
           </button>
         ) : (
           <button
