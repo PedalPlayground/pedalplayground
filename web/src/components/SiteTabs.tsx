@@ -1,18 +1,21 @@
-import { Guitar, LayoutGrid, PencilRuler, type LucideProps } from "lucide-react";
-import type { ReactNode } from "react";
+import { Guitar, LayoutGrid, Wrench, type LucideProps } from "lucide-react";
+import { useId, type ReactNode } from "react";
 import { useIsEditor } from "../lib/useIsEditor";
 import { Brand } from "./Logo";
 
-/** Trav's My Playgrounds icon: a frame with three stacked bars (drawn at 17×12, shown a bit larger), in the icon color. */
-export function PedalboardIcon({ className }: LucideProps) {
+/**
+ * My Playgrounds: a solid rounded board with two rails cut out (a mask, so the header shows through), drawn on Lucide's
+ * 24px grid to sit with the other solid header icons.
+ */
+export function PedalboardIcon({ className, size = 24 }: LucideProps) {
+  const id = useId();
   return (
-    <svg width={24} height={16} viewBox="0 0 17 11.333" fill="none" className={className} aria-hidden>
-      <path
-        d="M17 11.333H0V0H17V11.333ZM1.61914 8.0957V9.71387H15.3809V8.0957H1.61914ZM1.61914 6.47656H15.3809V4.85742H1.61914V6.47656ZM1.61914 3.23828H15.3809V1.61914H1.61914V3.23828Z"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        fill="currentColor"
-      />
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} aria-hidden>
+      <mask id={id}>
+        <rect x="1" y="4" width="22" height="16" rx="3" fill="white" />
+        <path d="M6 9.5h12M6 14.5h12" stroke="black" strokeWidth="2" strokeLinecap="round" />
+      </mask>
+      <rect x="1" y="4" width="22" height="16" rx="3" fill="currentColor" mask={`url(#${id})`} />
     </svg>
   );
 }
@@ -23,6 +26,7 @@ export function tabClass(here: boolean) {
     here ? "bg-soft" : "hover:bg-soft data-[state=open]:bg-soft"
   }`;
 }
+/** Header icons are solid: Lucide outlines filled with the icon color (and the custom board icon), all at 18px. */
 export const tabIcon = { size: 18, strokeWidth: 2 } as const;
 export const tabLabel = "max-lg:sr-only";
 
@@ -41,7 +45,7 @@ export function SiteTabs({ current, builds, after }: { current: SitePage; builds
         <span className={tabLabel}>Explore</span>
       </a>
       <a href="/gear/" aria-current={current === "gear" ? "page" : undefined} className={tabClass(false)}>
-        <Guitar {...tabIcon} className="text-ink-muted" />
+        <Guitar {...tabIcon} fill="currentColor" className="text-ink-muted" />
         <span className={tabLabel}>Gear</span>
       </a>
       {builds ?? (
@@ -52,7 +56,7 @@ export function SiteTabs({ current, builds, after }: { current: SitePage; builds
       )}
       {editor && (
         <a href="/editor/" aria-current={current === "editor" ? "page" : undefined} className={tabClass(false)}>
-          <PencilRuler {...tabIcon} className="text-ink-muted" />
+          <Wrench {...tabIcon} fill="currentColor" className="text-ink-muted" />
           <span className={tabLabel}>Admin</span>
         </a>
       )}

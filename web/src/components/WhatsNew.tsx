@@ -48,7 +48,7 @@ export function WhatsNew({ onNewGear }: { onNewGear: () => void }) {
       {/* Like the other nav items: icon and label (icon only below laptop width), the unread dot on the icon. */}
       <Dropdown.Trigger aria-label={unread ? "What's New (unread)" : "What's New"} className={tabClass(false)}>
         <span className="relative flex">
-          <Megaphone {...tabIcon} className="text-ink-muted" />
+          <Megaphone {...tabIcon} fill="currentColor" className="text-ink-muted" />
           {unread && <span aria-hidden className="absolute -right-1 -top-1 size-2 rounded-full bg-brand ring-2 ring-chrome" />}
         </span>
         <span className={tabLabel}>What's New</span>
