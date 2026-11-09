@@ -28,6 +28,14 @@ const usePlugPick = create<Pick & { set: (p: Partial<Pick>) => void }>((set) => 
 const openHints = (hints: JackHint[], plugs: Plug[]) =>
   hints.filter((h) => !plugs.some((p) => p.side === h.side && Math.abs(p.at - h.at) < 0.4));
 
+/** No jacks found (or no photo to read): a + at the middle of each side instead. */
+const middles = (w: number, h: number): JackHint[] => [
+  { side: "top", at: snapAt(w / 2) },
+  { side: "right", at: snapAt(h / 2) },
+  { side: "bottom", at: snapAt(w / 2) },
+  { side: "left", at: snapAt(h / 2) },
+];
+
 /** Reads the pedal's photo for spots that stick out (likely jacks), to offer as + markers. */
 function useJackHints(item: Item | undefined) {
   const manifest = useCatalog((s) => s.manifest);
@@ -37,9 +45,12 @@ function useJackHints(item: Item | undefined) {
   const h = item?.height ?? 0;
   useEffect(() => {
     set({ hints: [] });
-    if (!src) return;
+    if (!src) {
+      set({ hints: middles(w, h) });
+      return;
+    }
     let live = true;
-    findJacks(src, w, h).then((hints) => live && set({ hints }));
+    findJacks(src, w, h).then((hints) => live && set({ hints: hints.length ? hints : middles(w, h) }));
     return () => {
       live = false;
     };
@@ -293,7 +304,7 @@ export function PlugPanel() {
               : plug
                 ? "Drag it along the edge to line it up."
                 : suggested.length
-                  ? "Click a + to add a plug where a jack seems to be, or click any edge."
+                  ? "Click a + or anywhere along an edge to add a plug."
                   : "Click an edge to add a plug, or another pedal to switch to it."}
           </span>
         </div>
