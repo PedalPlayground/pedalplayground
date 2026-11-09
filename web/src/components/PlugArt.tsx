@@ -17,8 +17,8 @@ const CABLE_COLOR = "#4a4a4a";
 
 /**
  * One plug drawn at real scale, pointing up out of an edge from (0, 0): the head, then a short cable that fades out.
- * Right-angle plugs use the plug-guide drawings and turn their cable sideways (mirrored when `flip`), or point it up
- * (`up`, drawn end-on). Inch units; the caller scales it.
+ * Right-angle plugs use the plug-guide drawings and turn their cable sideways (mirrored when `flip`), or point it down
+ * into the board (`down`, drawn as the cap seen from above). Inch units; the caller scales it.
  */
 export function PlugShape({ plug }: { plug: Plug }) {
   const type = knownType(plug.type);
@@ -30,18 +30,18 @@ export function PlugShape({ plug }: { plug: Plug }) {
   // A little barrel running into the jack: hidden under the pedal, except where the photo leaves it showing.
   const barrel = <rect x={-BARREL / 2} y={-0.05} width={BARREL} height={BARREL_STUB + 0.05} rx={0.03} fill={METAL} />;
 
-  if (spec.art && plug.up) {
-    // Cable up: the body seen end-on from above, with the cable rising out of the middle.
+  if (spec.art && plug.down) {
+    // Cable down: from above only the plug's cap shows; the cable drops away under it.
     const k = ART_INCH_PER_UNIT;
-    const half = (spec.art.upWidth / 2) * k;
+    const half = (spec.art.downWidth / 2) * k;
     return (
       <g>
         {barrel}
         <rect x={-half} y={-l} width={half * 2} height={l} rx={Math.min(half, l) * 0.35} fill={BODY} />
         <rect x={0} y={-l} width={half} height={l} rx={Math.min(half, l) * 0.35} fill={SHADE} />
         <rect x={0} y={-l} width={Math.min(half, l) * 0.35} height={l} fill={SHADE} />
-        <circle cx={0} cy={-l / 2} r={Math.min(half, l / 2) * 0.55} fill={CABLE_COLOR} />
-        <circle cx={-Math.min(half, l / 2) * 0.15} cy={-l / 2 - Math.min(half, l / 2) * 0.15} r={Math.min(half, l / 2) * 0.18} fill="#ffffff" opacity={0.15} />
+        {/* The cap's rounded top catching the light. */}
+        <rect x={-half + 0.05} y={-l + 0.05} width={half - 0.05} height={l - 0.1} rx={Math.min(half, l) * 0.3} fill="#ffffff" opacity={0.08} />
       </g>
     );
   }

@@ -1,4 +1,4 @@
-import { ArrowLeftRight, ArrowUpFromDot, Trash2 } from "lucide-react";
+import { ArrowLeftRight, ArrowDownToDot, Trash2 } from "lucide-react";
 import { useEffect, useRef, type PointerEvent as ReactPointerEvent } from "react";
 import { create } from "zustand";
 import { canvasImageUrl } from "../lib/catalog";
@@ -14,11 +14,11 @@ import { tip } from "./Tooltip";
 import { barPanel } from "./toolbarStyles";
 
 /** What the plug editor has picked: the selected plugs (like selecting gear), and the type new plugs get. */
-type Pick = { selected: string[]; type: PlugType; up: boolean; hints: JackHint[] };
+type Pick = { selected: string[]; type: PlugType; down: boolean; hints: JackHint[] };
 const usePlugPick = create<Pick & { set: (p: Partial<Pick>) => void }>((set) => ({
   selected: [],
   type: "straight",
-  up: false,
+  down: false,
   hints: [],
   set: (p) => set(p),
 }));
@@ -83,7 +83,7 @@ function nearestSide(p: { x: number; y: number }, w: number, h: number): { side:
  */
 export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
   const box = useRef<HTMLDivElement>(null);
-  const { selected, type, up, hints, set } = usePlugPick();
+  const { selected, type, down, hints, set } = usePlugPick();
   const drag = useRef<string | null>(null);
   const plugs = item.plugs ?? [];
   /** The plugs as they are right now (a drag can start before the screen catches up). */
@@ -128,7 +128,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     if (e.button !== 0) return;
     e.stopPropagation();
     e.preventDefault();
-    const plug: Plug = { id: newPlugId(), ...at(e), type, ...(up && PLUG_TYPES[type].sideways ? { up } : {}) };
+    const plug: Plug = { id: newPlugId(), ...at(e), type, ...(down && PLUG_TYPES[type].sideways ? { down } : {}) };
     usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
     // Keep dragging the new plug until the button comes up, to line it up in one go.
     capture(e);
@@ -142,7 +142,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     if (e.button !== 0) return;
     e.stopPropagation();
     e.preventDefault();
-    const plug: Plug = { id: newPlugId(), side: h.side, at: h.at, type, ...(up && PLUG_TYPES[type].sideways ? { up } : {}) };
+    const plug: Plug = { id: newPlugId(), side: h.side, at: h.at, type, ...(down && PLUG_TYPES[type].sideways ? { down } : {}) };
     usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
     set({ selected: [plug.id] });
   };
@@ -194,7 +194,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
           })}
           {/* Each plug's handle: its head, ringed in the brand color when picked. */}
           {plugs.map((p) => {
-            const box = plugBox(p.type, p.flip, p.up);
+            const box = plugBox(p.type, p.flip, p.down);
             const on = selected.includes(p.id);
             return (
               <g key={p.id} transform={`translate(${anchor(p).join(" ")}) rotate(${SIDE_ANGLE[p.side]})`}>
@@ -246,7 +246,7 @@ export function PlugPanel() {
   const editing = useUi((u) => u.plugEditing);
   const setEditing = useUi((u) => u.setPlugEditing);
   const item = usePlayground((s) => s.items.find((i) => i.id === editing));
-  const { selected, type, up, hints, set } = usePlugPick();
+  const { selected, type, down, hints, set } = usePlugPick();
   useJackHints(item);
   const suggested = openHints(hints, item?.plugs ?? []);
   const picked = item?.plugs?.filter((p) => selected.includes(p.id)) ?? [];
@@ -291,9 +291,9 @@ export function PlugPanel() {
 
   if (!editing || !item) return null;
   const current = plug ? knownType(plug.type) : type;
-  // Cable up applies to right-angle plugs: the picked ones, or the type new plugs get.
-  const angled = plug ? picked.filter((p) => PLUG_TYPES[knownType(p.type)].sideways) : PLUG_TYPES[type].sideways ? [{ up }] : [];
-  const isUp = angled.length > 0 && angled.every((p) => p.up);
+  // Cable down applies to right-angle plugs: the picked ones, or the type new plugs get.
+  const angled = plug ? picked.filter((p) => PLUG_TYPES[knownType(p.type)].sideways) : PLUG_TYPES[type].sideways ? [{ down }] : [];
+  const isDown = angled.length > 0 && angled.every((p) => p.down);
   return (
     <div
       role="dialog"
@@ -325,7 +325,7 @@ export function PlugPanel() {
               {...tip(PLUG_TYPES[t].label)}
               onClick={() => {
                 set({ type: t });
-                update((p) => ({ type: t, flip: PLUG_TYPES[t].sideways ? p.flip : undefined, up: PLUG_TYPES[t].sideways ? p.up : undefined }));
+                update((p) => ({ type: t, flip: PLUG_TYPES[t].sideways ? p.flip : undefined, down: PLUG_TYPES[t].sideways ? p.down : undefined }));
               }}
               className={`grid size-9 place-items-center rounded-control outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${current === t && picked.every((p) => knownType(p.type) === current) ? "bg-brand/15 ring-1 ring-brand" : "hover:bg-surface-hover"}`}
             >
@@ -338,25 +338,25 @@ export function PlugPanel() {
           type="button"
           aria-label="Flip direction"
           {...tip("Flip Direction")}
-          disabled={!picked.some((p) => PLUG_TYPES[knownType(p.type)].sideways && !p.up)}
-          onClick={() => update((p) => (PLUG_TYPES[knownType(p.type)].sideways && !p.up ? { flip: !p.flip } : {}))}
+          disabled={!picked.some((p) => PLUG_TYPES[knownType(p.type)].sideways && !p.down)}
+          onClick={() => update((p) => (PLUG_TYPES[knownType(p.type)].sideways && !p.down ? { flip: !p.flip } : {}))}
           className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35"
         >
           <ArrowLeftRight size={17} />
         </button>
         <button
           type="button"
-          aria-label="Cable up"
-          aria-pressed={isUp}
-          {...tip("Cable Up")}
+          aria-label="Cable down"
+          aria-pressed={isDown}
+          {...tip("Cable Down")}
           disabled={!angled.length}
           onClick={() => {
-            if (!plug) set({ up: !up });
-            else update((p) => (PLUG_TYPES[knownType(p.type)].sideways ? { up: !isUp || undefined } : {}));
+            if (!plug) set({ down: !down });
+            else update((p) => (PLUG_TYPES[knownType(p.type)].sideways ? { down: !isDown || undefined } : {}));
           }}
-          className={`grid size-9 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35 ${isUp ? "bg-brand/15 text-brand ring-1 ring-brand" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
+          className={`grid size-9 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35 ${isDown ? "bg-brand/15 text-brand ring-1 ring-brand" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
         >
-          <ArrowUpFromDot size={17} />
+          <ArrowDownToDot size={17} />
         </button>
         <button
           type="button"
