@@ -1,4 +1,4 @@
-import { RotateCw, Trash2 } from "lucide-react";
+import { ArrowDownToDot, ArrowRight, Trash2 } from "lucide-react";
 import { useEffect, useRef, type PointerEvent as ReactPointerEvent } from "react";
 import { create } from "zustand";
 import { canvasImageUrl } from "../lib/catalog";
@@ -17,9 +17,75 @@ import { barIconActive, barIconIdle, barPanel } from "./toolbarStyles";
 /** What the plug editor has picked: the selected plugs (like selecting gear), and the type new plugs get. */
 type Pick = { selected: string[]; type: PlugType; flip: boolean; down: boolean; hints: JackHint[] };
 
-/** Rotate on a right-angle plug: cable to one side, then down into the board, then to the other side, and round again. */
-const nextTurn = (p: { flip?: boolean; down?: boolean }) =>
-  p.down ? { flip: true, down: undefined } : p.flip ? { flip: undefined, down: undefined } : { flip: undefined, down: true };
+/** How a right-angle plug sits: cable to its own right (`+x`), down under the board, or to its left (`flip`). */
+type Turn = "a" | "down" | "b";
+const turnOf = (p: { flip?: boolean; down?: boolean }): Turn => (p.down ? "down" : p.flip ? "b" : "a");
+const TURNS: Record<Turn, { flip?: boolean; down?: boolean }> = { a: { flip: undefined, down: undefined }, down: { flip: undefined, down: true }, b: { flip: true, down: undefined } };
+
+/** The screen angle (degrees) of a plug's own right, on its side of a pedal that may be turned and flipped. */
+function sideAngle(side: PlugSide, item?: Item) {
+  const a = (SIDE_ANGLE[side] * Math.PI) / 180;
+  let [x, y] = [Math.cos(a), Math.sin(a)];
+  if (item?.flipX) x = -x;
+  const t = ((item?.rotation ?? 0) * Math.PI) / 180;
+  [x, y] = [x * Math.cos(t) - y * Math.sin(t), x * Math.sin(t) + y * Math.cos(t)];
+  return (Math.atan2(y, x) * 180) / Math.PI;
+}
+const DIRS = ["Right", "Down", "Left", "Up"];
+const dirName = (deg: number) => DIRS[((Math.round(deg / 90) % 4) + 4) % 4];
+
+/**
+ * Which way a right-angle plug's cable goes, as three buttons: one arrow each way along the edge (pointing where the
+ * cable really goes on screen) and cable down under the board between them.
+ */
+function TurnButtons({
+  value,
+  angle,
+  disabled,
+  onPick,
+  button,
+  idle,
+  active,
+  tipSide,
+  what,
+}: {
+  value?: Turn;
+  angle: number;
+  disabled: boolean;
+  onPick: (t: Turn) => void;
+  button: string;
+  idle: string;
+  active: string;
+  tipSide?: "top" | "bottom";
+  what: string;
+}) {
+  // Left (or up) first, so the arrows read in screen order.
+  const r = ((angle % 360) + 360) % 360;
+  const aFirst = r > 135 && r <= 315;
+  const sides: [Turn, number][] = aFirst ? [["a", angle], ["b", angle + 180]] : [["b", angle + 180], ["a", angle]];
+  const one = (t: Turn, label: string, icon: React.ReactNode) => (
+    <button
+      key={t}
+      type="button"
+      role="radio"
+      aria-checked={value === t}
+      aria-label={`${what}: ${label}`}
+      {...tip(label, { side: tipSide })}
+      disabled={disabled}
+      onClick={() => onPick(t)}
+      className={`${button} ${value === t ? active : idle} disabled:opacity-35`}
+    >
+      {icon}
+    </button>
+  );
+  return (
+    <div role="radiogroup" aria-label={what} className="flex gap-0.5">
+      {one(sides[0][0], `Cable ${dirName(sides[0][1])}`, <ArrowRight style={{ transform: `rotate(${sides[0][1]}deg)` }} />)}
+      {one("down", "Cable Under the Board", <ArrowDownToDot />)}
+      {one(sides[1][0], `Cable ${dirName(sides[1][1])}`, <ArrowRight style={{ transform: `rotate(${sides[1][1]}deg)` }} />)}
+    </div>
+  );
+}
 const usePlugPick = create<Pick & { set: (p: Partial<Pick>) => void }>((set) => ({
   selected: [],
   type: "straight",
@@ -335,19 +401,17 @@ export function PlugPanel() {
               </button>
             ))}
           </div>
-          <button
-            type="button"
-            aria-label="Rotate new plugs"
-            {...tip("Rotate New Plugs")}
+          <span className="mx-1 h-6 w-px bg-line" />
+          <TurnButtons
+            what="New plugs' cable"
+            value={newSideways ? turnOf({ flip, down }) : undefined}
+            angle={0}
             disabled={!newSideways}
-            onClick={() => {
-              const n = nextTurn({ flip, down });
-              set({ flip: !!n.flip, down: !!n.down });
-            }}
-            className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35"
-          >
-            <RotateCw size={17} />
-          </button>
+            onPick={(t) => set({ flip: !!TURNS[t].flip, down: !!TURNS[t].down })}
+            button="grid size-9 place-items-center rounded-control outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand [&_svg]:size-[17px]"
+            idle="text-ink-muted hover:bg-surface-hover hover:text-ink"
+            active="bg-brand/15 text-brand ring-1 ring-brand"
+          />
           <button
             type="button"
             onClick={() => setEditing(null)}
@@ -389,7 +453,7 @@ function jacksOnScreen(item: Item, plugs: Plug[], view: { x: number; y: number; 
 }
 
 /**
- * A little menu under the selected plugs, like the one under selected gear: their type, Rotate (right-angle plugs) and
+ * A little menu under the selected plugs, like the one under selected gear: their type, which way the cable goes (right-angle plugs) and
  * Remove. Above them when there's no room below; kept on screen.
  */
 function PlugMiniMenu({
@@ -410,12 +474,14 @@ function PlugMiniMenu({
   const b = jacksOnScreen(item, picked, view);
   const size = touch ? 44 : 28;
   const H = size + 8;
-  const halfW = (7 * size + 6 * 2 + 8 + 9) / 2;
+  const halfW = (9 * size + 8 * 2 + 8 + 18) / 2;
   const cx = Math.min(Math.max((b.left + b.right) / 2, halfW + 8), viewport.w - halfW - 8);
   const below = b.bottom + MENU_GAP;
   const y = below + H > viewport.h - (touch ? 84 : 8) ? Math.max(8, b.top - MENU_GAP - H) : below;
   const types = new Set(picked.map((p) => knownType(p.type)));
-  const angled = picked.some((p) => PLUG_TYPES[knownType(p.type)].sideways);
+  const sideways = picked.filter((p) => PLUG_TYPES[knownType(p.type)].sideways);
+  const angled = sideways.length > 0;
+  const turns = new Set(sideways.map(turnOf));
   return (
     <div
       role="toolbar"
@@ -441,16 +507,18 @@ function PlugMiniMenu({
         ))}
       </div>
       <span className="mx-0.5 h-5 w-px bg-line" />
-      <button
-        type="button"
-        aria-label="Rotate plug"
-        {...tip(picked.length > 1 ? "Rotate Plugs" : "Rotate Plug", { side: "bottom" })}
+      <TurnButtons
+        what={picked.length > 1 ? "Selected plugs' cable" : "Cable"}
+        value={turns.size === 1 ? [...turns][0] : undefined}
+        angle={sideAngle(picked[0].side, item)}
         disabled={!angled}
-        onClick={() => update((p) => (PLUG_TYPES[knownType(p.type)].sideways ? nextTurn(p) : {}))}
-        className={`${miniButton} ${barIconIdle} disabled:opacity-35`}
-      >
-        <RotateCw size={16} />
-      </button>
+        onPick={(t) => update((p) => (PLUG_TYPES[knownType(p.type)].sideways ? TURNS[t] : {}))}
+        button={miniButton}
+        idle={barIconIdle}
+        active={barIconActive}
+        tipSide="bottom"
+      />
+      <span className="mx-0.5 h-5 w-px bg-line" />
       <button
         type="button"
         aria-label={picked.length > 1 ? "Remove plugs" : "Remove plug"}
