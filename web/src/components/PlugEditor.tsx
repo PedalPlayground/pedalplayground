@@ -177,26 +177,20 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
           style={{ left: 0, top: 0, width: item.width * s, height: item.height * s }}
           viewBox={`0 0 ${item.width} ${item.height}`}
         >
-          {/* Suggested spots from the photo: faint dashed plugs to click. */}
+          {/* Suggested spots from the photo: a + just outside the edge, to click. Screen-sized, so it reads at any zoom. */}
           {openHints(hints, plugs).map((h) => {
-            const spec = PLUG_TYPES[type];
+            const r = 11 / zoom / s;
+            const arm = 5 / zoom / s;
             return (
-              <g key={`${h.side}-${h.at}`} transform={`translate(${anchor(h).join(" ")}) rotate(${SIDE_ANGLE[h.side]})`}>
-                <rect
-                  x={-spec.width / 2}
-                  y={-spec.length}
-                  width={spec.width}
-                  height={spec.length}
-                  rx={0.1}
-                  fill="color-mix(in srgb, var(--color-brand) 12%, transparent)"
-                  stroke="var(--color-brand)"
-                  strokeWidth={1.5 / zoom / s}
-                  strokeDasharray={`${4 / zoom / s} ${3 / zoom / s}`}
-                  className="pointer-events-auto cursor-copy"
+              <g key={`${h.side}-${h.at}`} transform={`translate(${anchor(h).join(" ")}) rotate(${SIDE_ANGLE[h.side]}) translate(0 ${-r - 4 / zoom / s})`}>
+                <g
+                  className="pointer-events-auto cursor-copy opacity-80 transition-opacity hover:opacity-100"
                   onPointerDown={(e) => addHint(e as unknown as ReactPointerEvent, h)}
                 >
-                  <title>Suggested jack: click to add a plug</title>
-                </rect>
+                  <title>Add a plug here</title>
+                  <circle r={r} fill="var(--color-brand)" stroke="white" strokeWidth={1.5 / zoom / s} />
+                  <path d={`M${-arm} 0H${arm}M0 ${-arm}V${arm}`} stroke="white" strokeWidth={2 / zoom / s} strokeLinecap="round" />
+                </g>
               </g>
             );
           })}
@@ -318,8 +312,8 @@ export function PlugPanel() {
             : plug
               ? "Drag it along the edge to line it up."
               : suggested.length
-                ? "Dashed spots look like jacks. Click one, or any edge, to add a plug."
-                : "Click an edge to add a plug. Click a plug to select it."}
+                ? "Click a + to add a plug where a jack seems to be, or click any edge."
+                : "Click an edge to add a plug, or another pedal to switch to it."}
         </span>
       </div>
       <div className="flex flex-wrap items-center gap-1">

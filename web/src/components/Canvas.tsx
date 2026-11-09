@@ -28,7 +28,7 @@ const LONG_PRESS_MS = 500;
 type Rect = { x: number; y: number; w: number; h: number };
 
 type Gesture =
-  | { type: "pan"; lastX: number; lastY: number; /** Touch: a tap that never moved clears the selection. */ tap?: boolean; moved?: boolean }
+  | { type: "pan"; lastX: number; lastY: number; /** Touch: a tap that never moved clears the selection. */ tap?: boolean; moved?: boolean; /** Editing plugs: a click on this other pedal switches to it. */ jumpTo?: string }
   | {
       type: "drag";
       origins: Record<string, { x: number; y: number }>;
@@ -439,8 +439,14 @@ export function Canvas() {
 
     // A press on the canvas (not on a plug) while editing plugs deselects them, like clicking empty space.
     if (plugMode) clearPlugSelection();
-    if (useUi.getState().viewing || plugMode) {
-      // View-only, or editing plugs: every drag pans (a touch tap does nothing).
+    if (plugMode) {
+      // Editing plugs: every drag pans; a click on another pedal moves the plug editing to it.
+      const id = itemEl?.dataset.itemId;
+      const other = id && id !== useUi.getState().plugEditing && s.items.find((i) => i.id === id)?.kind === "pedal" ? id : undefined;
+      gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: true, moved: false, jumpTo: other };
+      setPanning(!touch);
+    } else if (useUi.getState().viewing) {
+      // View-only: every drag pans (a touch tap does nothing).
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: touch, moved: false };
       setPanning(!touch);
     } else if (tool === "hand" || spaceDown.current || e.button === 1) {
@@ -577,7 +583,12 @@ export function Canvas() {
     cancelLongPress();
     setPanning(false);
     const g = gesture.current;
-    if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) usePlayground.getState().clearSelection();
+    if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) {
+      if (g.jumpTo) {
+        usePlayground.getState().select(g.jumpTo);
+        useUi.getState().setPlugEditing(g.jumpTo);
+      } else if (!useUi.getState().plugEditing) usePlayground.getState().clearSelection();
+    }
     if (ref.current?.hasPointerCapture(e.pointerId)) ref.current.releasePointerCapture(e.pointerId);
     if (useUi.getState().dragging) useUi.setState({ dragging: false });
     gesture.current = null; // a lifted pinch finger shouldn't turn into a drag, so just end
