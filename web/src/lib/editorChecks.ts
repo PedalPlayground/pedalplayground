@@ -29,6 +29,8 @@ export interface ImageStats {
 export interface Check {
   ok: boolean;
   text: string;
+  /** "shape": the photo's shape doesn't match the size, and the form offers to size it from the photo. */
+  fix?: "shape";
 }
 
 /** Below this many pixels per inch a photo looks soft at the canvas's zoomed-in sizes. */
@@ -175,6 +177,7 @@ export function runChecks(fields: Fields, stats: ImageStats | null, items: Catal
         : {
             ok: false,
             text: `Photo shape doesn't match the size: the photo is ${(photo).toFixed(2)}:1, the size is ${entered.toFixed(2)}:1. One of them is probably wrong.`,
+            fix: "shape",
           },
     );
     out.push(
