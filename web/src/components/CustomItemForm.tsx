@@ -1,3 +1,4 @@
+import { stepNumber } from "../lib/stepNumber";
 import { Check, RotateCcw } from "lucide-react";
 import { useState } from "react";
 import { NEW_PEDAL_COLOR, PEDAL_COLOR_PRESETS, readableOn } from "../lib/color";
@@ -520,6 +521,7 @@ export function CustomItemForm({
                 value={value}
                 placeholder={hint}
                 onChange={(e) => set(e.target.value)}
+                onKeyDown={(e) => stepNumber(e, (_, text) => set(text), { max: units === "mm" ? MAX_INCHES * MM_PER_INCH : MAX_INCHES })}
                 autoFocus={focus}
               />
               <span aria-hidden className="shrink-0 text-xs text-ink-muted">

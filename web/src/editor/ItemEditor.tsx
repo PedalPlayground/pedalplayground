@@ -1,5 +1,6 @@
-import { Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, TriangleAlert } from "lucide-react";
+import { ArrowLeftRight, Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { stepNumber } from "../lib/stepNumber";
 import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { ScaleKey } from "../components/ScaleKey";
 import { tip } from "../components/Tooltip";
@@ -37,6 +38,8 @@ export { fieldBox, fieldError, fieldHelp, fieldInput as inputClass, fieldLabel a
 export const primaryButton = "btn-primary h-9 whitespace-nowrap px-3 disabled:opacity-50";
 export const secondaryButton =
   "press h-9 whitespace-nowrap rounded-control bg-surface-hover px-3 text-sm font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
+
+const round2 = (n: number) => Math.round(n * 100) / 100;
 
 const num = (s: string) => {
   const n = parseFloat(s);
@@ -101,16 +104,16 @@ export function ItemEditor({
     const featured = new Set<string>(FEATURED_PEDALS);
     return (i) => (adds.get(`${fields.kind}:${i.image}`) ?? 0) + (featured.has(i.image) ? 0.5 : 0);
   }, [adds, fields.kind]);
-  // Every size the brand comes in, most used first, each shown by its most added pedal beside this one in the preview
+  // Every size the brand comes in, closest to this one first (then most used), each shown by its most added pedal in the preview
   // (the item being edited left out). Clicking one copies its size.
   const sizes = useMemo(
-    () => brandSizes(skipImage ? list.filter((i) => i.image !== skipImage) : list, fields.brand, 60, usage, 1),
-    [list, skipImage, fields.brand, usage],
+    () => brandSizes(skipImage ? list.filter((i) => i.image !== skipImage) : list, fields.brand, 60, usage, 1, { width: fields.width, height: fields.height }),
+    [list, skipImage, fields.brand, usage, fields.width, fields.height],
   );
   const sameSize = (w: number, h: number) => Math.abs(fields.width - w) < 0.005 && Math.abs(fields.height - h) < 0.005;
 
   return (
-    <div className="grid gap-5 md:grid-cols-[minmax(0,400px)_minmax(0,1fr)]">
+    <div className="grid gap-5 lg:grid-cols-[minmax(0,400px)_minmax(0,1fr)]">
       <div className="grid content-start gap-3">
         <div className="grid grid-cols-2 gap-3">
           <div>
@@ -135,7 +138,8 @@ export function ItemEditor({
           <label className={labelClass} htmlFor={`${id}-name`}>Name</label>
           <input id={`${id}-name`} {...plainField} className={inputClass} value={fields.name} onChange={(e) => set({ name: e.target.value })} />
         </div>
-        <div className="grid grid-cols-2 gap-3">
+        {/* Width, a swap button, Height. */}
+        <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-end gap-1.5">
           <div>
             <label className={labelClass} htmlFor={`${id}-width`}>Width</label>
             <label className={fieldWithUnit}>
@@ -148,12 +152,25 @@ export function ItemEditor({
                 key={`w${filled}`}
                 defaultValue={fields.width || ""}
                 onChange={(e) => set({ width: num(e.target.value) })}
+                onKeyDown={(e) => stepNumber(e, (v) => set({ width: v }))}
               />
               <span aria-hidden className={fieldUnit}>
                 in
               </span>
             </label>
           </div>
+          <button
+            type="button"
+            aria-label="Swap width and height"
+            {...tip("Swap Dimensions")}
+            onClick={() => {
+              set({ width: fields.height, height: fields.width });
+              setFilled((n) => n + 1);
+            }}
+            className="grid size-9 place-items-center rounded-control text-icon outline-none hover:bg-soft hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+          >
+            <ArrowLeftRight size={16} />
+          </button>
           <div>
             <label className={labelClass} htmlFor={`${id}-height`}>Height</label>
             <label className={fieldWithUnit}>
@@ -166,6 +183,7 @@ export function ItemEditor({
                 key={`h${filled}`}
                 defaultValue={fields.height || ""}
                 onChange={(e) => set({ height: num(e.target.value) })}
+                onKeyDown={(e) => stepNumber(e, (v) => set({ height: v }))}
               />
               <span aria-hidden className={fieldUnit}>
                 in
@@ -257,9 +275,10 @@ export function ItemEditor({
         )}
       </div>
 
-      <div className="grid content-start gap-4">
+      {/* min-w-0 all the way down: the size strip pages to fit, so this column can shrink instead of spilling over. */}
+      <div className="grid min-w-0 content-start gap-4">
         {/* Like the canvas: its color, its ½ in dots and its scale key, at the preview's scale. */}
-        <div>
+        <div className="min-w-0">
           <span className={labelClass}>Size Reference</span>
           <div className="overflow-hidden rounded-panel bg-canvas px-6 pb-5 pt-14" style={dotGridStyle(PREVIEW_ZOOM, "in", 24, 0)}>
             <div className="relative flex items-end gap-8">
@@ -292,7 +311,32 @@ export function ItemEditor({
               ) : (
                 <TriangleAlert size={15} className="mt-0.5 shrink-0 text-warning" />
               )}
-              <span>{c.text}</span>
+              <span>
+                {c.text}
+                {/* Size it from the photo's shape, keeping one side as entered. */}
+                {c.fix === "shape" && stats && fields.width > 0 && fields.height > 0 && (
+                  <span className="mt-1.5 flex flex-wrap gap-1.5">
+                    {(
+                      [
+                        ["Keep width", fields.width, round2(fields.width / (stats.width / stats.height))],
+                        ["Keep height", round2(fields.height * (stats.width / stats.height)), fields.height],
+                      ] as const
+                    ).map(([label, w, h]) => (
+                      <button
+                        key={label}
+                        type="button"
+                        onClick={() => {
+                          set({ width: w, height: h });
+                          setFilled((n) => n + 1);
+                        }}
+                        className="h-7 rounded-control bg-soft px-2.5 text-xs font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand"
+                      >
+                        Use photo's shape: {label.toLowerCase()} ({w} × {h} in)
+                      </button>
+                    ))}
+                  </span>
+                )}
+              </span>
             </li>
           ))}
           {!image && <li className="text-[13px] text-ink-muted">Add a photo to run the photo checks.</li>}
@@ -323,7 +367,11 @@ function Figure({
     <figure className="flex shrink-0 flex-col items-center" style={{ gap: FIGURE_GAP }}>
       <div className="relative" style={{ width: pw, height: ph }}>
         {src && !broken ? (
-          <img src={src} alt="" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />
+          <>
+            {/* A dashed line round the photo's edges, so transparent space around the pedal shows at a glance. */}
+            <img src={src} alt="" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />
+            <div aria-hidden className="pointer-events-none absolute -inset-px border border-dashed border-brand/70" />
+          </>
         ) : (
           <div className="absolute inset-0 grid place-items-center overflow-hidden rounded-inner bg-soft px-1 text-center text-[11px] leading-tight text-ink-muted">
             {broken ? "Can't load" : "No photo"}

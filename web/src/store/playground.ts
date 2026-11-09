@@ -1,3 +1,4 @@
+import type { Plug } from "../lib/plugs";
 import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { importAny, readLegacyLocalStorage } from "../lib/importers";
@@ -63,6 +64,8 @@ interface PlaygroundState {
   /** Zooms by `factor`, keeping the screen point (px, py) fixed. Defaults to viewport center. */
   zoomBy: (factor: number, px?: number, py?: number) => void;
   fitToContent: () => void;
+  /** Zooms in on one item with `margin` inches round it (plug editing). */
+  focusOn: (id: string, margin?: number) => void;
 
   /** Call once before a multi-step edit (e.g. a drag) so it undoes as a single step. */
   beginTransaction: () => void;
@@ -79,6 +82,10 @@ interface PlaygroundState {
   /** Changes a custom item's size, name, color or template, keeping its center. */
   updateCustomItem: (id: string, c: CustomFields) => void;
   select: (id: string, additive?: boolean) => void;
+  /**
+   * Sets a pedal's plugs. One undo step, unless `record` is false (a drag in progress: call beginTransaction first).
+   */
+  setPlugs: (id: string, plugs: Plug[], record?: boolean) => void;
   /** Changes an item's Equipment List details as one undo step. */
   updateGear: (id: string, patch: Partial<Pick<Item, "status" | "price" | "ma" | "voltage" | "pedalType">>) => void;
   /** Selects one item and moves the view just enough to show it. */
@@ -260,8 +267,8 @@ function fitPad(s: PlaygroundState) {
 }
 
 /** The view that fits all the gear in the open canvas, zoomed no further in than `maxZoom`. Null with no gear. */
-function fittedView(s: PlaygroundState, maxZoom: number): View | null {
-  const b = contentBounds(s.items);
+function fittedView(s: PlaygroundState, maxZoom: number, bounds?: ReturnType<typeof contentBounds>): View | null {
+  const b = bounds ?? contentBounds(s.items);
   if (!b || !s.viewport.w) return null;
   const pad = fitPad(s);
   // With the gear panel open, fit into the space beside it.
@@ -350,6 +357,17 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const zoom = clamp(s.view.zoom * factor, Math.min(minZoom(s), s.view.zoom), MAX_ZOOM);
       const k = zoom / s.view.zoom;
       return { autoFit: false, view: clampView(s, { zoom, x: cx - (cx - s.view.x) * k, y: cy - (cy - s.view.y) * k }) };
+    }),
+
+  focusOn: (id, margin = 2.5) =>
+    set((s) => {
+      const item = s.items.find((i) => i.id === id);
+      if (!item || !s.viewport.w) return {};
+      const b = itemBounds(item);
+      // Room around it (for plugs and their cables), zoomed in no further than the canvas allows.
+      const v = fittedView(s, MAX_ZOOM, { left: b.left - margin, top: b.top - margin, right: b.right + margin, bottom: b.bottom + margin });
+      // A fit still waiting for the canvas's size would undo this, so it's dropped.
+      return v ? { autoFit: false, pendingFit: false, view: v } : {};
     }),
 
   fitToContent: () =>
@@ -452,6 +470,16 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       if (!additive) return { selected: ids };
       const all = ids.every((x) => s.selected.includes(x));
       return { selected: all ? s.selected.filter((x) => !ids.includes(x)) : [...new Set([...s.selected, ...ids])] };
+    }),
+  setPlugs: (id, plugs, doRecord = true) =>
+    set((s) => {
+      const items = s.items.map((i) => {
+        if (i.id !== id) return i;
+        const next: Item = { ...i, plugs };
+        if (!plugs.length) delete next.plugs;
+        return next;
+      });
+      return doRecord ? { ...record(s), items } : { items };
     }),
   updateGear: (id, patch) =>
     set((s) => {
@@ -706,6 +734,8 @@ export function startLocalAutosave() {
     if (useUi.getState().viewing) return;
     clearTimeout(timer);
     timer = setTimeout(() => {
+      // A shared playground may have opened since the edit.
+      if (useUi.getState().viewing) return;
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(usePlayground.getState().toDocument()));
       } catch {

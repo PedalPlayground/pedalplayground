@@ -35,8 +35,10 @@ export function QueueTab({ manifest, publisher, setNotice }: { manifest: Manifes
 
   const open = queue.find((s) => s.id === openId) ?? null;
   return (
-    <div className="grid gap-6 md:grid-cols-[220px_minmax(0,1fr)]">
-      <ul className="grid content-start gap-1">
+    // items-start: the list and the form each keep their own height (a long list doesn't stretch the form's rows).
+    <div className="grid items-start gap-6 md:grid-cols-[220px_minmax(0,1fr)]">
+      {/* One column that never grows past 220px: long names truncate instead of running under the form. */}
+      <ul className="grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-1">
         {queue.map((s) => (
           <li key={s.id}>
             <button
@@ -112,7 +114,7 @@ function Review({
   };
 
   return (
-    <div className="grid gap-5">
+    <div className="grid min-w-0 content-start gap-5">
       <div>
         <h2 className="text-lg font-bold tracking-[-0.01em]">
           {submission.target_key ? `Correction to ${submission.target_key}` : "New item"}

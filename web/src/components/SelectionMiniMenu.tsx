@@ -1,4 +1,4 @@
-import { Ellipsis, Group, Lock, LockOpen, Pencil, Ruler, RotateCw, Ungroup } from "lucide-react";
+import { Cable, Ellipsis, Group, Lock, LockOpen, Pencil, Ruler, RotateCw, Ungroup } from "lucide-react";
 import { useRef } from "react";
 import { itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { isOneGroup, usePlayground } from "../store/playground";
@@ -10,14 +10,14 @@ import { barIconIdle, barIconActive } from "./toolbarStyles";
 
 const GAP = 12; // between the selection and the pill
 const GAP_BETWEEN = 2; // between buttons
-const PAD = 4; // inside the pill
+const PAD = 6; // inside the pill (as the side menus)
 /** Where the pill stops short of the bottom edge: touch screens have the full-width nav there. */
 const NAV_ROOM = 84;
 
 /** Icon buttons: bigger on touch screens. */
-const button = "press grid size-7 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 pointer-coarse:rounded-control [&_svg]:size-4 pointer-coarse:[&_svg]:size-[21px]";
+const button = "press grid size-8 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 pointer-coarse:rounded-control [&_svg]:size-4 pointer-coarse:[&_svg]:size-[21px]";
 
-/** A little menu that follows the selection: Lock, Rotate, Edit (custom gear) and ••• for the full right-click menu. Not on phones. */
+/** A little menu that follows the selection: Lock, Rotate, Plugs (one pedal), Edit (custom gear) and ••• for the full right-click menu. Not on phones. */
 export function SelectionMiniMenu() {
   const s = usePlayground();
   const touch = useMediaQuery("(pointer: coarse)");
@@ -44,8 +44,9 @@ export function SelectionMiniMenu() {
   const editable = chosen.length === 1 && chosen[0].custom ? chosen[0] : undefined;
   // Lock, Rotate/Group, (Edit), More.
   const spaceable = chosen.length > 1;
-  const buttons = 3 + (editable ? 1 : 0) + (spaceable ? 1 : 0);
-  const size = touch ? 44 : 28;
+  const pedal = chosen.length === 1 && chosen[0].kind === "pedal" ? chosen[0] : undefined;
+  const buttons = 3 + (editable ? 1 : 0) + (spaceable ? 1 : 0) + (pedal ? 1 : 0);
+  const size = touch ? 44 : 32;
   const H = size + PAD * 2;
   const halfW = (buttons * size + (buttons - 1) * GAP_BETWEEN + PAD * 2) / 2;
   const cx = Math.min(Math.max((left + right) / 2, s.coverLeft + halfW + 8), s.viewport.w - halfW - 8);
@@ -72,7 +73,7 @@ export function SelectionMiniMenu() {
   return (
     <div
       ref={wrap}
-      className="absolute z-10 flex -translate-x-1/2 items-center gap-0.5 rounded-panel bg-surface p-1 shadow-float"
+      className="absolute z-10 flex -translate-x-1/2 items-center gap-0.5 rounded-panel bg-surface p-1.5 shadow-float"
       style={{ left: cx, top: y }}
       // Clicks here are for the menu, not the canvas behind it.
       onPointerDown={(e) => e.stopPropagation()}
@@ -105,6 +106,11 @@ export function SelectionMiniMenu() {
       {spaceable && (
         <button aria-label="Space Between" {...tip("Space Between", { side: "bottom" })} onClick={() => setSpacing(true)} className={`${button} ${barIconIdle}`}>
           <Ruler size={16} />
+        </button>
+      )}
+      {pedal && (
+        <button aria-label="Plugs" {...tip("Plugs", { shortcut: "P", side: "bottom" })} onClick={() => useUi.getState().setPlugEditing(pedal.id)} className={`${button} ${barIconIdle}`}>
+          <Cable size={16} />
         </button>
       )}
       {editable && (

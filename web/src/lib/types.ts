@@ -1,5 +1,6 @@
 import type { BoardStyle } from "./boardStyles";
 import type { Jacks, PedalTemplate } from "./pedalTemplates";
+import type { Plug } from "./plugs";
 import type { SignalGraph } from "./signal";
 
 export interface CatalogItem {
@@ -47,6 +48,8 @@ export interface Item {
   jacks?: Jacks;
   /** Custom pedalboards: border, thickness, top surface and border finish. Missing means the original look. */
   board?: Partial<BoardStyle>;
+  /** Pedals: plugs (cable ends) on its edges, in its own unrotated frame (see lib/plugs.ts). Missing means none. */
+  plugs?: Plug[];
   /** Grouped items share a groupId: selecting one selects them all, so they move and edit together. */
   groupId?: string;
   /** Locked items stay put: they can be selected but not dragged, nudged or distributed. */

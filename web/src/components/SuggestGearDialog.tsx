@@ -4,6 +4,7 @@ import { catalogBrands, fieldProblems, type Fields } from "../lib/editorChecks";
 import { plainField } from "../lib/inputProps";
 import { VOLTAGES } from "../lib/specs";
 import { reportBug, submitSuggestion } from "../lib/suggestions";
+import { stepNumber } from "../lib/stepNumber";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind } from "../lib/catalog";
 import type { CatalogItem } from "../lib/types";
 import { useAuth } from "../store/auth";
@@ -274,6 +275,7 @@ export function SuggestGearDialog({
                   aria-label={`${label} (inches)`}
                   value={value}
                   onChange={(e) => set(e.target.value)}
+                  onKeyDown={(e) => stepNumber(e, (_, text) => set(text))}
                 />
                 <span aria-hidden className={fieldUnit}>
                   in
