@@ -1,7 +1,7 @@
 # Plugs
 
 Cable ends drawn on a pedal's edges, lined up with its jacks. Select one pedal and choose **Plugs** (left menu on large
-screens, the object bar on tablets, the right-click or ••• menu on phones), or press **P**.
+screens, the object bar on tablets, the right-click or ••• menu on phones, and the small bar under the selection), or press **P**.
 
 - **Opening it** zooms in on the pedal (with room for cables); **Done** puts the view back. The pedal shows no
   selection outline meanwhile.
@@ -21,7 +21,7 @@ screens, the object bar on tablets, the right-click or ••• menu on phones)
   selected, it changes that plug.
 - **Direction:** right-angle and pancake plugs turn their cable sideways; **Flip Direction** mirrors it.
 - **Removing:** the trash button, or Delete / Backspace.
-- **Switching pedals:** the other pedals sit at 80% opacity; hovering one brings it to full and shows an **Add
+- **Switching pedals:** the other pedals sit at 50% opacity; hovering one brings it to full and shows an **Add
   Plugs** pill (tooltip colors, screen-sized). Click it (without dragging) to move plug editing to it, zoomed in on it. Done
   still returns to the view from before plug mode opened.
 - **Done** is the only way out. Meanwhile the canvas only pans (no selecting, dragging gear or menus), keyboard shortcuts are off apart from Delete for a picked plug, and Add Gear waits.

@@ -169,7 +169,7 @@ function ItemView({ item }: { item: Item }) {
       }}
     >
       <div
-        className={`pointer-events-auto size-full ${other ? "peer cursor-pointer opacity-80 transition-opacity hover:opacity-100" : ""}`}
+        className={`pointer-events-auto size-full ${other ? "peer cursor-pointer opacity-50 transition-opacity hover:opacity-100" : ""}`}
         style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}
       >
         {src ? (
@@ -182,11 +182,11 @@ function ItemView({ item }: { item: Item }) {
         {item.plugs && <PlugsLayer plugs={item.plugs} w={item.width} h={item.height} />}
       </div>
       {other && (
-        <div className="pointer-events-none absolute inset-0 grid place-items-center opacity-0 transition-opacity peer-hover:opacity-100">
-          {/* Screen-sized whatever the zoom. */}
+        <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity peer-hover:opacity-100">
+          {/* Screen-sized whatever the zoom, and centered even when it's wider than the pedal. */}
           <span
-            className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-tip px-3 py-1.5 text-[13px] font-semibold text-tip-ink shadow-float"
-            style={{ transform: `scale(${1 / zoom})` }}
+            className="absolute left-1/2 top-1/2 flex items-center gap-1.5 whitespace-nowrap rounded-full bg-tip px-3 py-1.5 text-[13px] font-semibold text-tip-ink shadow-float"
+            style={{ transform: `translate(-50%, -50%) scale(${1 / zoom})` }}
           >
             <Cable size={15} />
             Add Plugs
