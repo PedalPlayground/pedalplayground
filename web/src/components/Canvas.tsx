@@ -155,8 +155,10 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
   useEffect(() => {
     if (selected) hideTip();
   }, [selected]);
-  // Editing another pedal's plugs: this one steps back a little, and hovering it offers to switch to it.
-  const other = useUi((u) => !!u.plugEditing && u.plugEditing !== item.id && item.kind === "pedal");
+  // Editing another pedal's plugs: everything else fades well back, so it's clear which pedal is being edited. Other
+  // pedals come back on hover and offer to switch to them.
+  const backdrop = useUi((u) => !!u.plugEditing && u.plugEditing !== item.id);
+  const other = backdrop && item.kind === "pedal";
   const zoom = usePlayground((s) => (other ? s.view.zoom : 1));
   return (
     <div
@@ -165,7 +167,7 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
       // Catalog photos get a drop shadow (--item-drop, per theme) that follows the image's own outline. It sits on this unrotated box so
       // the light always falls down and to the right, whatever the rotation. Custom styles draw their own shadows.
       // Taps go to the rotated inner box only, so the empty corners of this one never catch them.
-      className={`pointer-events-none absolute ${src ? "[filter:var(--item-drop)]" : ""}`}
+      className={`pointer-events-none absolute ${src ? "[filter:var(--item-drop)]" : ""} ${backdrop ? "opacity-30 transition-opacity" : ""} ${other ? "[&:has(>div:hover)]:opacity-100" : ""}`}
       style={{
         left: 0,
         top: 0,
@@ -176,7 +178,7 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
       }}
     >
       <div
-        className={`pointer-events-auto size-full ${other ? "peer cursor-pointer opacity-50 transition-opacity hover:opacity-100" : ""}`}
+        className={`pointer-events-auto size-full ${other ? "peer cursor-pointer" : ""}`}
         style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}
       >
         {/* Plugs go under the pedal: their barrels run into the jacks, showing only where the photo lets them. */}

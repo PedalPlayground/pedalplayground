@@ -296,12 +296,8 @@ export function PlugPanel() {
         onPointerDown={(e) => e.stopPropagation()}
       >
         <div className="flex items-center gap-3 pl-1">
-          <span className="text-[13px] text-ink-muted">
-            {picked.length > 1
-              ? `${picked.length} plugs selected.`
-              : plug
-                ? "Drag it along the edge to line it up."
-                : "Click a + or an edge to add a plug."}
+          <span className="text-[13px] font-medium">
+            {plug ? "Drag a plug to adjust its position." : "Click on a + to add a plug."}
           </span>
           <button
             type="button"
