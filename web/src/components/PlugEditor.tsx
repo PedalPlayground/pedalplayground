@@ -1,5 +1,5 @@
 import { ArrowLeftRight, Sparkles, Trash2 } from "lucide-react";
-import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import { useEffect, useRef, type PointerEvent as ReactPointerEvent } from "react";
 import { create } from "zustand";
 import { canvasImageUrl } from "../lib/catalog";
 import { PX_PER_INCH } from "../lib/geometry";
@@ -26,7 +26,7 @@ const usePlugPick = create<Pick & { set: (p: Partial<Pick>) => void }>((set) => 
 const openHints = (hints: JackHint[], plugs: Plug[]) =>
   hints.filter((h) => !plugs.some((p) => p.side === h.side && Math.abs(p.at - h.at) < 0.4));
 
-/** Reads the pedal's photo for spots that stick out (likely jacks), to offer as ghost plugs. */
+/** Reads the pedal's photo for spots that stick out (likely jacks), to offer as + markers. */
 function useJackHints(item: Item | undefined) {
   const manifest = useCatalog((s) => s.manifest);
   const set = usePlugPick((p) => p.set);
@@ -83,7 +83,6 @@ function nearestSide(p: { x: number; y: number }, w: number, h: number): { side:
 export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
   const box = useRef<HTMLDivElement>(null);
   const { selected, type, hints, set } = usePlugPick();
-  const [ghost, setGhost] = useState<{ side: PlugSide; at: number } | null>(null);
   const drag = useRef<string | null>(null);
   const plugs = item.plugs ?? [];
   /** The plugs as they are right now (a drag can start before the screen catches up). */
@@ -120,7 +119,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
       const pos = at(e);
       const id = drag.current;
       usePlayground.getState().setPlugs(item.id, latest().map((p) => (p.id === id ? { ...p, ...pos } : p)), false);
-    } else setGhost(at(e));
+    }
   };
   const onUp = () => (drag.current = null);
 
@@ -130,7 +129,6 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     e.preventDefault();
     const plug: Plug = { id: newPlugId(), ...at(e), type };
     usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
-    setGhost(null);
     // Keep dragging the new plug until the button comes up, to line it up in one go.
     capture(e);
     // Adding it was the undo step, so the drag that follows joins it.
@@ -158,7 +156,6 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
       style={{ left: item.x * s, top: item.y * s, width: item.width * s, height: item.height * s }}
       onPointerMove={onMove}
       onPointerUp={onUp}
-      onPointerLeave={() => setGhost(null)}
     >
       <div className="relative size-full" style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}>
         {/* The edge bands: outside each side, a click there adds a plug. */}
@@ -194,11 +191,6 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
               </g>
             );
           })}
-          {ghost && !drag.current && (
-            <g opacity={0.45} transform={`translate(${anchor(ghost).join(" ")}) rotate(${SIDE_ANGLE[ghost.side]})`}>
-              <PlugShape plug={{ id: "ghost", side: ghost.side, at: ghost.at, type }} />
-            </g>
-          )}
           {/* Each plug's handle: its head, ringed in the brand color when picked. */}
           {plugs.map((p) => {
             const spec = PLUG_TYPES[p.type];
