@@ -1,7 +1,7 @@
 import { Cable } from "lucide-react";
 import { PlugsLayer } from "./PlugArt";
 import { clearPlugSelection, PlugEditLayer } from "./PlugEditor";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { canvasImageUrl } from "../lib/catalog";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { dotGridStyle } from "../lib/scale";
@@ -142,7 +142,10 @@ function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
   );
 }
 
-function ItemView({ item }: { item: Item }) {
+/**
+ * One piece of gear. Memoized: a drag changes only the moved items' objects, so the rest skip re-rendering each frame.
+ */
+const ItemView = memo(function ItemView({ item }: { item: Item }) {
   const manifest = useCatalog((s) => s.manifest);
   const src = item.image ? canvasImageUrl(manifest, item.kind, item.image) : null;
   // A selected item has its menus; the name label is only for the ones that don't.
@@ -153,6 +156,9 @@ function ItemView({ item }: { item: Item }) {
   // Editing another pedal's plugs: this one steps back a little, and hovering it offers to switch to it.
   const other = useUi((u) => !!u.plugEditing && u.plugEditing !== item.id && item.kind === "pedal");
   const zoom = usePlayground((s) => (other ? s.view.zoom : 1));
+  // While it's being dragged, its own compositing layer lets Safari slide it instead of repainting it (and its drop
+  // shadow filter) every frame. Only during the drag: a layer for every item would use up iOS's layer memory.
+  const moving = useUi((u) => u.dragging) && selected;
   return (
     <div
       data-item-id={item.id}
@@ -162,8 +168,11 @@ function ItemView({ item }: { item: Item }) {
       // Taps go to the rotated inner box only, so the empty corners of this one never catch them.
       className={`pointer-events-none absolute ${src ? "[filter:var(--item-drop)]" : ""}`}
       style={{
-        left: item.x * PX_PER_INCH,
-        top: item.y * PX_PER_INCH,
+        left: 0,
+        top: 0,
+        // Placed with a transform, not left/top, so moving it doesn't trigger layout.
+        transform: `translate(${item.x * PX_PER_INCH}px, ${item.y * PX_PER_INCH}px)`,
+        willChange: moving ? "transform" : undefined,
         width: item.width * PX_PER_INCH,
         height: item.height * PX_PER_INCH,
       }}
@@ -199,7 +208,7 @@ function ItemView({ item }: { item: Item }) {
       )}
     </div>
   );
-}
+});
 
 /** Briefly marks "nudging" so the selection halo and the little menu step aside while arrow keys move gear. */
 let nudgeTimer: ReturnType<typeof setTimeout> | undefined;
@@ -660,21 +669,24 @@ export function Canvas() {
           </div>
         ))}
 
-        {guides.x.map((x, i) => (
-          <div
-            key={`gx${i}`}
-            className="pointer-events-none absolute bg-guide"
-            style={{ left: x * PX_PER_INCH, top: -5000, height: 10000, width: 1 / view.zoom, zIndex: 100000 }}
-          />
-        ))}
-        {guides.y.map((y, i) => (
-          <div
-            key={`gy${i}`}
-            className="pointer-events-none absolute bg-guide"
-            style={{ top: y * PX_PER_INCH, left: -5000, width: 10000, height: 1 / view.zoom, zIndex: 100000 }}
-          />
-        ))}
       </div>
+
+      {/* Snap guides, in screen space and only as long as the canvas: lines thousands of pixels long inside the zoomed
+          layer made iOS Safari drop tiles mid-drag. */}
+      {guides.x.map((x, i) => (
+        <div
+          key={`gx${i}`}
+          className="pointer-events-none absolute inset-y-0 w-px bg-guide"
+          style={{ left: view.x + x * PX_PER_INCH * view.zoom }}
+        />
+      ))}
+      {guides.y.map((y, i) => (
+        <div
+          key={`gy${i}`}
+          className="pointer-events-none absolute inset-x-0 h-px bg-guide"
+          style={{ top: view.y + y * PX_PER_INCH * view.zoom }}
+        />
+      ))}
 
       {marquee && (
         <div
