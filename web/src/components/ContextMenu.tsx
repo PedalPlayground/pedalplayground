@@ -148,7 +148,7 @@ function ObjectItems() {
       <Row icon={<SendToBack {...ICON} />} label="Move to Back" shortcut="⌘[" onSelect={s.sendToBack} />
       <Separator />
       {single && !single.custom && <Row icon={<Replace {...ICON} />} label="Replace" onSelect={() => setReplacing(true)} />}
-      {single?.kind === "pedal" && <Row icon={<Cable {...ICON} />} label="Plugs" onSelect={() => useUi.getState().setPlugEditing(single.id)} />}
+      {single?.kind === "pedal" && <Row icon={<Cable {...ICON} />} label="Plugs" shortcut="P" onSelect={() => useUi.getState().setPlugEditing(single.id)} />}
       {placedItemHref(single) && <Row icon={<Info {...ICON} />} label="Info" onSelect={() => openGearInfo(single)} />}
       <Row icon={<Trash2 {...ICON} />} label="Remove" shortcut="Delete" onSelect={s.deleteSelected} danger />
     </>

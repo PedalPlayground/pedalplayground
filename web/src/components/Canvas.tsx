@@ -328,6 +328,13 @@ export function Canvas() {
           e.preventDefault();
           ui.setSearchOpen(true);
         }
+      } else if (key === "p" && !mod && !e.altKey && s.selected.length === 1) {
+        // P opens plug editing for a single selected pedal.
+        const one = s.items.find((i) => i.id === s.selected[0]);
+        if (one?.kind === "pedal") {
+          e.preventDefault();
+          useUi.getState().setPlugEditing(one.id);
+        }
       } else if (key === "l" && has && !mod) {
         e.preventDefault();
         s.toggleLockSelected();

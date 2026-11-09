@@ -204,7 +204,7 @@ export function ObjectStack() {
         <Row {...row} icon={<Pencil size={15} />} label={single.kind === "pedalboard" ? "Edit Board" : "Edit"} onClick={() => setEditing(true)} />
       )}
       {single && !single.custom && <Row {...row} icon={<Replace size={15} />} label="Replace" onClick={() => setReplacing(true)} />}
-      {single?.kind === "pedal" && <Row {...row} icon={<Cable size={16} />} label="Plugs" onClick={() => useUi.getState().setPlugEditing(single.id)} />}
+      {single?.kind === "pedal" && <Row {...row} icon={<Cable size={16} />} label="Plugs" shortcut="P" onClick={() => useUi.getState().setPlugEditing(single.id)} />}
       {placedItemHref(single) && <Row {...row} icon={<Info size={16} />} label="Info" onClick={() => openGearInfo(single)} />}
       <Row {...row} icon={<Trash2 size={16} />} label="Remove" shortcut="Del" onClick={s.deleteSelected} danger />
     </Shell>

@@ -115,7 +115,7 @@ export function ObjectMenu() {
         </button>
       )}
       {single?.kind === "pedal" && (
-        <Action label="Plugs" onClick={() => useUi.getState().setPlugEditing(single.id)}>
+        <Action label="Plugs" shortcut="P" onClick={() => useUi.getState().setPlugEditing(single.id)}>
           <Cable size={18} />
         </Action>
       )}

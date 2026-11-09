@@ -1,7 +1,7 @@
 # Plugs
 
 Cable ends drawn on a pedal's edges, lined up with its jacks. Select one pedal and choose **Plugs** (left menu on large
-screens, the object bar on tablets, the right-click or ••• menu on phones).
+screens, the object bar on tablets, the right-click or ••• menu on phones), or press **P**.
 
 - **Opening it** zooms in on the pedal (with room for cables); **Done** puts the view back. The pedal shows no
   selection outline meanwhile.
