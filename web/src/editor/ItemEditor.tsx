@@ -367,7 +367,17 @@ function Figure({
     <figure className="flex shrink-0 flex-col items-center" style={{ gap: FIGURE_GAP }}>
       <div className="relative" style={{ width: pw, height: ph }}>
         {src && !broken ? (
-          <img src={src} alt="" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />
+          <>
+            {/* A checkerboard behind the photo and a dashed line round its edges, so transparent pixels (and a
+                background that isn't cut out) show at a glance. */}
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{ background: "repeating-conic-gradient(rgb(128 128 140 / 0.22) 0 25%, rgb(255 255 255 / 0.5) 0 50%) 0 0 / 10px 10px" }}
+            />
+            <img src={src} alt="" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />
+            <div aria-hidden className="pointer-events-none absolute -inset-px border border-dashed border-brand/70" />
+          </>
         ) : (
           <div className="absolute inset-0 grid place-items-center overflow-hidden rounded-inner bg-soft px-1 text-center text-[11px] leading-tight text-ink-muted">
             {broken ? "Can't load" : "No photo"}
