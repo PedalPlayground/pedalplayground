@@ -1,3 +1,4 @@
+import { Cable } from "lucide-react";
 import { PlugsLayer } from "./PlugArt";
 import { clearPlugSelection, PlugEditLayer } from "./PlugEditor";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -149,10 +150,13 @@ function ItemView({ item }: { item: Item }) {
   useEffect(() => {
     if (selected) hideTip();
   }, [selected]);
+  // Editing another pedal's plugs: this one steps back a little, and hovering it offers to switch to it.
+  const other = useUi((u) => !!u.plugEditing && u.plugEditing !== item.id && item.kind === "pedal");
+  const zoom = usePlayground((s) => (other ? s.view.zoom : 1));
   return (
     <div
       data-item-id={item.id}
-      {...(selected ? {} : tip(itemName(item), { canvas: true }))}
+      {...(selected || other ? {} : tip(itemName(item), { canvas: true }))}
       // Catalog photos get a drop shadow (--item-drop, per theme) that follows the image's own outline. It sits on this unrotated box so
       // the light always falls down and to the right, whatever the rotation. Custom styles draw their own shadows.
       // Taps go to the rotated inner box only, so the empty corners of this one never catch them.
@@ -164,7 +168,10 @@ function ItemView({ item }: { item: Item }) {
         height: item.height * PX_PER_INCH,
       }}
     >
-      <div className="pointer-events-auto size-full" style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}>
+      <div
+        className={`pointer-events-auto size-full ${other ? "peer cursor-pointer opacity-80 transition-opacity hover:opacity-100" : ""}`}
+        style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}
+      >
         {src ? (
           <img src={src} alt={itemName(item)} draggable={false} className="size-full select-none object-fill" />
         ) : item.custom ? (
@@ -174,6 +181,18 @@ function ItemView({ item }: { item: Item }) {
         )}
         {item.plugs && <PlugsLayer plugs={item.plugs} w={item.width} h={item.height} />}
       </div>
+      {other && (
+        <div className="pointer-events-none absolute inset-0 grid place-items-center opacity-0 transition-opacity peer-hover:opacity-100">
+          {/* Screen-sized whatever the zoom. */}
+          <span
+            className="flex items-center gap-1.5 whitespace-nowrap rounded-full bg-tip px-3 py-1.5 text-[13px] font-semibold text-tip-ink shadow-float"
+            style={{ transform: `scale(${1 / zoom})` }}
+          >
+            <Cable size={15} />
+            Add Plugs
+          </span>
+        </div>
+      )}
     </div>
   );
 }

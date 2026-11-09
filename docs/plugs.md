@@ -21,7 +21,8 @@ screens, the object bar on tablets, the right-click or ••• menu on phones)
   selected, it changes that plug.
 - **Direction:** right-angle and pancake plugs turn their cable sideways; **Flip Direction** mirrors it.
 - **Removing:** the trash button, or Delete / Backspace.
-- **Switching pedals:** click another pedal (without dragging) to move plug editing to it, zoomed in on it. Done
+- **Switching pedals:** the other pedals sit at 80% opacity; hovering one brings it to full and shows an **Add
+  Plugs** pill (tooltip colors, screen-sized). Click it (without dragging) to move plug editing to it, zoomed in on it. Done
   still returns to the view from before plug mode opened.
 - **Done** is the only way out. Meanwhile the canvas only pans (no selecting, dragging gear or menus), keyboard shortcuts are off apart from Delete for a picked plug, and Add Gear waits.
 
