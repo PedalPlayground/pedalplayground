@@ -110,7 +110,7 @@ export function ItemEditor({
   const sameSize = (w: number, h: number) => Math.abs(fields.width - w) < 0.005 && Math.abs(fields.height - h) < 0.005;
 
   return (
-    <div className="grid gap-5 md:grid-cols-[minmax(0,400px)_minmax(0,1fr)]">
+    <div className="grid gap-5 lg:grid-cols-[minmax(0,400px)_minmax(0,1fr)]">
       <div className="grid content-start gap-3">
         <div className="grid grid-cols-2 gap-3">
           <div>
@@ -257,9 +257,10 @@ export function ItemEditor({
         )}
       </div>
 
-      <div className="grid content-start gap-4">
+      {/* min-w-0 all the way down: the size strip pages to fit, so this column can shrink instead of spilling over. */}
+      <div className="grid min-w-0 content-start gap-4">
         {/* Like the canvas: its color, its ½ in dots and its scale key, at the preview's scale. */}
-        <div>
+        <div className="min-w-0">
           <span className={labelClass}>Size Reference</span>
           <div className="overflow-hidden rounded-panel bg-canvas px-6 pb-5 pt-14" style={dotGridStyle(PREVIEW_ZOOM, "in", 24, 0)}>
             <div className="relative flex items-end gap-8">
