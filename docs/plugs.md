@@ -16,8 +16,8 @@ screens, the object bar on tablets, the right-click or ••• menu on phones,
   as likely jacks. Each shows as a small + just outside the edge (screen-sized, so it reads at any zoom); click one
   to add a plug of the chosen type there. A + hides once a plug sits within
   0.4″ of it. The front edge is skipped (footswitch lips read as bumps). Photos with no cutout, or jacks that don't
-  stick out in the photo (Meris, many Eventide and Strymon), find nothing, and custom pedals have no photo to read; those get a + at the middle of
-  each side instead.
+  stick out in the photo (Meris, many Eventide and Strymon), find nothing, and custom pedals have no photo to read. Every side with no
+  suggestion gets a + at its middle instead (all four sides when nothing was found).
 - **Moving:** drag a plug along its edge, or round a corner onto another edge. Positions snap to 1/16″.
 - **Types** (`PLUG_TYPES` in `lib/plugs.ts`, drawn to scale by `PlugShape` in `components/PlugArt.tsx`): slim
   right-angle (SP400, the default), right-angle (Rean) and pancake. Every plug is shown from above with its cable

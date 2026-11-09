@@ -28,12 +28,12 @@ const usePlugPick = create<Pick & { set: (p: Partial<Pick>) => void }>((set) => 
 const openHints = (hints: JackHint[], plugs: Plug[]) =>
   hints.filter((h) => !plugs.some((p) => p.side === h.side && Math.abs(p.at - h.at) < 0.4));
 
-/** No jacks found (or no photo to read): a + at the middle of each side instead. */
-const middles = (w: number, h: number): JackHint[] => [
-  { side: "top", at: snapAt(w / 2) },
-  { side: "right", at: snapAt(h / 2) },
-  { side: "bottom", at: snapAt(w / 2) },
-  { side: "left", at: snapAt(h / 2) },
+/** The found jacks, plus a + at the middle of every side that has none (all four when nothing was found or there's no photo). */
+const withMiddles = (found: JackHint[], w: number, h: number): JackHint[] => [
+  ...found,
+  ...(["top", "right", "bottom", "left"] as const)
+    .filter((side) => !found.some((f) => f.side === side))
+    .map((side) => ({ side, at: snapAt((side === "top" || side === "bottom" ? w : h) / 2) })),
 ];
 
 /** Reads the pedal's photo for spots that stick out (likely jacks), to offer as + markers. */
@@ -46,11 +46,11 @@ function useJackHints(item: Item | undefined) {
   useEffect(() => {
     set({ hints: [] });
     if (!src) {
-      set({ hints: middles(w, h) });
+      set({ hints: withMiddles([], w, h) });
       return;
     }
     let live = true;
-    findJacks(src, w, h).then((hints) => live && set({ hints: hints.length ? hints : middles(w, h) }));
+    findJacks(src, w, h).then((hints) => live && set({ hints: withMiddles(hints, w, h) }));
     return () => {
       live = false;
     };
