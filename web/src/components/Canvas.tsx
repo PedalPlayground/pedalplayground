@@ -6,7 +6,7 @@ import { canvasImageUrl } from "../lib/catalog";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { dotGridStyle } from "../lib/scale";
 import { snapMove, type Guides } from "../lib/snap";
-import type { Item } from "../lib/types";
+import type { Item, View } from "../lib/types";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { openContextMenu, useContextMenu } from "./ContextMenu";
@@ -56,27 +56,28 @@ const GROUP_ICON = 15;
  * lock badge on a locked item always sits upright at the top center, in a break in the outline.
  */
 /** `tour` marks it as the onboarding tour's "selection" target. */
-function SelectionHalo({ item, zoom, tour }: { item: Item; zoom: number; tour?: boolean }) {
+function SelectionHalo({ item, view, tour }: { item: Item; view: View; tour?: boolean }) {
   // Steps aside (fades to nothing) while the gear is being moved.
   const moving = useUi((u) => u.dragging || u.nudging);
   const b = itemBounds(item);
-  const pad = (HALO_GAP + HALO_STROKE) / zoom;
-  const w = (b.right - b.left) * PX_PER_INCH + pad * 2;
-  const h = (b.bottom - b.top) * PX_PER_INCH + pad * 2;
-  const sw = HALO_STROKE / zoom;
-  const r = Math.min(HALO_RADIUS / zoom, w / 2, h / 2);
-  const g = item.locked ? LOCK_GAP / zoom : 0;
+  const k = view.zoom * PX_PER_INCH;
+  const pad = HALO_GAP + HALO_STROKE;
+  const w = (b.right - b.left) * k + pad * 2;
+  const h = (b.bottom - b.top) * k + pad * 2;
+  const sw = HALO_STROKE;
+  const r = Math.min(HALO_RADIUS, w / 2, h / 2);
+  const g = item.locked ? LOCK_GAP : 0;
   const [x0, y0, x1, y1, cx] = [sw / 2, sw / 2, w - sw / 2, h - sw / 2, w / 2];
   const d =
     `M${cx + g} ${y0}H${x1 - r}A${r} ${r} 0 0 1 ${x1} ${y0 + r}V${y1 - r}A${r} ${r} 0 0 1 ${x1 - r} ${y1}` +
     `H${x0 + r}A${r} ${r} 0 0 1 ${x0} ${y1 - r}V${y0 + r}A${r} ${r} 0 0 1 ${x0 + r} ${y0}H${cx - g}${g ? "" : "Z"}`;
-  const lock = LOCK_SIZE / zoom;
+  const lock = LOCK_SIZE;
   return (
     <svg
       aria-hidden
       data-tour={tour ? "selection" : undefined}
       className="animate-fade pointer-events-none absolute overflow-visible transition-opacity duration-150"
-      style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
+      style={{ left: view.x + b.left * k - pad, top: view.y + b.top * k - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
     >
       <path d={d} fill="none" stroke="var(--color-brand)" strokeWidth={sw} />
       {item.locked && (
@@ -91,28 +92,29 @@ function SelectionHalo({ item, zoom, tour }: { item: Item; zoom: number; tour?: 
 }
 
 /** One purple halo around a whole selected group, in place of its members' own halos. */
-function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
+function GroupHalo({ items, view }: { items: Item[]; view: View }) {
   const moving = useUi((u) => u.dragging || u.nudging);
   const b = contentBounds(items)!;
-  const pad = (HALO_GAP + HALO_STROKE + 5) / zoom;
-  const w = (b.right - b.left) * PX_PER_INCH + pad * 2;
-  const h = (b.bottom - b.top) * PX_PER_INCH + pad * 2;
-  const sw = HALO_STROKE / zoom;
-  const r = Math.min(12 / zoom, w / 2, h / 2);
+  const k = view.zoom * PX_PER_INCH;
+  const pad = HALO_GAP + HALO_STROKE + 5;
+  const w = (b.right - b.left) * k + pad * 2;
+  const h = (b.bottom - b.top) * k + pad * 2;
+  const sw = HALO_STROKE;
+  const r = Math.min(12, w / 2, h / 2);
   // The outline breaks at the top center for a small group badge, like the lock's.
   const locked = items.every((i) => i.locked);
   const badges = locked ? 2 : 1;
-  const g = ((badges * GROUP_ICON + (badges - 1) * 5) / 2 + 5) / zoom;
+  const g = (badges * GROUP_ICON + (badges - 1) * 5) / 2 + 5;
   const [x0, y0, x1, y1, cx] = [sw / 2, sw / 2, w - sw / 2, h - sw / 2, w / 2];
   const d =
     `M${cx + g} ${y0}H${x1 - r}A${r} ${r} 0 0 1 ${x1} ${y0 + r}V${y1 - r}A${r} ${r} 0 0 1 ${x1 - r} ${y1}` +
     `H${x0 + r}A${r} ${r} 0 0 1 ${x0} ${y1 - r}V${y0 + r}A${r} ${r} 0 0 1 ${x0 + r} ${y0}H${cx - g}`;
-  const icon = GROUP_ICON / zoom;
+  const icon = GROUP_ICON;
   return (
     <svg
       aria-hidden
       className="animate-fade pointer-events-none absolute overflow-visible transition-opacity duration-150"
-      style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
+      style={{ left: view.x + b.left * k - pad, top: view.y + b.top * k - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
     >
       <path d={d} fill="none" stroke="var(--color-group)" strokeWidth={sw} />
       {/* The Group glyph (corner brackets around two overlapping boxes), centered on the top edge. */}
@@ -133,7 +135,7 @@ function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
       </g>
       {/* Locked group: the lock sits beside it, drawn like a single locked item's. */}
       {locked && (
-        <g transform={`translate(${cx + (5 / 2) / zoom} ${y0 - icon / 2}) scale(${icon / 12})`} fill="none" stroke="var(--color-group)">
+        <g transform={`translate(${cx + 5 / 2} ${y0 - icon / 2}) scale(${icon / 12})`} fill="none" stroke="var(--color-group)">
           <path d="M3.5 5.5V4a2.5 2.5 0 0 1 5 0v1.5" strokeWidth={1.6} />
           <rect x={1.75} y={5} width={8.5} height={6.5} rx={1.5} fill="var(--color-group)" stroke="none" />
         </g>
@@ -156,9 +158,6 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
   // Editing another pedal's plugs: this one steps back a little, and hovering it offers to switch to it.
   const other = useUi((u) => !!u.plugEditing && u.plugEditing !== item.id && item.kind === "pedal");
   const zoom = usePlayground((s) => (other ? s.view.zoom : 1));
-  // While it's being dragged, its own compositing layer lets Safari slide it instead of repainting it (and its drop
-  // shadow filter) every frame. Only during the drag: a layer for every item would use up iOS's layer memory.
-  const moving = useUi((u) => u.dragging) && selected;
   return (
     <div
       data-item-id={item.id}
@@ -172,7 +171,6 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
         top: 0,
         // Placed with a transform, not left/top, so moving it doesn't trigger layout.
         transform: `translate(${item.x * PX_PER_INCH}px, ${item.y * PX_PER_INCH}px)`,
-        willChange: moving ? "transform" : undefined,
         width: item.width * PX_PER_INCH,
         height: item.height * PX_PER_INCH,
       }}
@@ -655,7 +653,6 @@ export function Canvas() {
         {items.map((item, index) => (
           <div key={item.id} style={{ position: "absolute", zIndex: index }}>
             <ItemView item={item} />
-            {selected.includes(item.id) && !inShownGroup.has(item.id) && item.id !== plugEditing && <SelectionHalo item={item} zoom={view.zoom} tour={selected.length === 1} />}
           </div>
         ))}
         {plugItem && (
@@ -663,13 +660,19 @@ export function Canvas() {
             <PlugEditLayer item={plugItem} zoom={view.zoom} />
           </div>
         )}
-        {selectedGroups.map((g) => (
-          <div key={g[0].groupId} style={{ position: "absolute", zIndex: 99999 }}>
-            <GroupHalo items={g} zoom={view.zoom} />
-          </div>
-        ))}
-
       </div>
+
+      {/* Selection outlines, in screen space: fading them in and out inside the zoomed layer left iOS Safari repainting
+          stale tiles when a drag ended or something was selected. */}
+      {items.map(
+        (item) =>
+          selected.includes(item.id) &&
+          !inShownGroup.has(item.id) &&
+          item.id !== plugEditing && <SelectionHalo key={item.id} item={item} view={view} tour={selected.length === 1} />,
+      )}
+      {selectedGroups.map((g) => (
+        <GroupHalo key={g[0].groupId} items={g} view={view} />
+      ))}
 
       {/* Snap guides, in screen space and only as long as the canvas: lines thousands of pixels long inside the zoomed
           layer made iOS Safari drop tiles mid-drag. */}
