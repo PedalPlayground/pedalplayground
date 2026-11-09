@@ -340,14 +340,21 @@ export function PlugPanel() {
   );
 }
 
-const MENU_GAP = 16; // between the jack points and the menu
+const MENU_GAP = 10; // between the plugs' room and the menu
 /** Mini-menu buttons, as in the selection's mini-menu: bigger on touch screens. */
 const miniButton =
   "press grid size-7 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 [&_svg]:size-4 pointer-coarse:[&_svg]:size-[21px]";
 
+/** Room any plug type takes at a jack (inches, in a plug's own frame): the menu keeps clear of it. */
+const ENVELOPE = (() => {
+  const boxes = PLUG_ORDER.map((t) => plugBox(t));
+  return { left: Math.min(...boxes.map((b) => b.left)), right: Math.max(...boxes.map((b) => b.right)), out: Math.max(...boxes.map((b) => b.out)) };
+})();
+
 /**
- * Where the selected plugs meet their jacks on screen (canvas pixels), turned and flipped with the pedal. The menu goes
- * by these points, not the drawings, so it stays put when a plug's type or way of sitting changes.
+ * The room the selected plugs could take on screen (canvas pixels), turned and flipped with the pedal: around each jack
+ * point, as much as the biggest plug type needs. The menu goes by this, not the drawings, so it stays put when a plug's
+ * type changes and still keeps clear of the plug.
  */
 function jacksOnScreen(item: Item, plugs: Plug[], view: { x: number; y: number; zoom: number }) {
   const k = view.zoom * PX_PER_INCH;
@@ -355,13 +362,21 @@ function jacksOnScreen(item: Item, plugs: Plug[], view: { x: number; y: number; 
   const xs: number[] = [];
   const ys: number[] = [];
   for (const p of plugs) {
+    const a = (SIDE_ANGLE[p.side] * Math.PI) / 180;
     const [ax, ay] = p.side === "top" ? [p.at, 0] : p.side === "bottom" ? [p.at, item.height] : p.side === "left" ? [0, p.at] : [item.width, p.at];
-    // The pedal's own frame, then its flip and turn about its center, then the screen.
-    let x = ax - item.width / 2;
-    const y = ay - item.height / 2;
-    if (item.flipX) x = -x;
-    xs.push(view.x + (item.x + item.width / 2 + x * Math.cos(t) - y * Math.sin(t)) * k);
-    ys.push(view.y + (item.y + item.height / 2 + x * Math.sin(t) + y * Math.cos(t)) * k);
+    for (const [bx, by] of [
+      [ENVELOPE.left, 0],
+      [ENVELOPE.right, 0],
+      [ENVELOPE.left, -ENVELOPE.out],
+      [ENVELOPE.right, -ENVELOPE.out],
+    ]) {
+      // Plug frame to the pedal's own frame, then its flip and turn about its center, then the screen.
+      let x = ax + bx * Math.cos(a) - by * Math.sin(a) - item.width / 2;
+      const y = ay + bx * Math.sin(a) + by * Math.cos(a) - item.height / 2;
+      if (item.flipX) x = -x;
+      xs.push(view.x + (item.x + item.width / 2 + x * Math.cos(t) - y * Math.sin(t)) * k);
+      ys.push(view.y + (item.y + item.height / 2 + x * Math.sin(t) + y * Math.cos(t)) * k);
+    }
   }
   return { left: Math.min(...xs), right: Math.max(...xs), top: Math.min(...ys), bottom: Math.max(...ys) };
 }
