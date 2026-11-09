@@ -7,8 +7,8 @@ screens, the object bar on tablets, the right-click or ••• menu on phones,
   selection outline meanwhile.
 - **Selecting:** like gear: click a plug to select it, Shift-click to add or remove one, click empty canvas (or press
   Escape) to deselect. Selected plugs get a mini-menu just clear of the room the biggest plug type takes at their jacks, so it stays put as the type changes and doesn't cover the plug (`PlugMiniMenu`, styled like the selection's
-  `SelectionMiniMenu`): their type and Remove, applied to every selected plug. The panel at the top only
-  sets up new plugs (their type, SP400 until another is picked) and holds Done.
+  `SelectionMiniMenu`): their type and Remove, applied to every selected plug. The panel at the top is just
+  a short hint and Done. New plugs are the last type picked in the mini-menu (SP400 to start).
 - **Adding:** click (or tap) just outside any edge; a plug of the chosen type drops there. Keep the button down to drag
   it into place in the same move.
 - **Suggested jacks:** when it opens, `findJacks` (`lib/jackFinder.ts`) reads a small copy of a catalog pedal's

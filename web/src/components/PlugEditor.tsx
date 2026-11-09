@@ -237,16 +237,15 @@ function TypeIcon({ type }: { type: PlugType }) {
 }
 
 /**
- * The panel while plugs are being edited: a hint, the type for new plugs, and Done (picked plugs get their own
- * mini-menu). It sits where the object menu does: across the top on larger screens, above the toolbar on phones.
+ * The panel while plugs are being edited: a short hint and Done (picked plugs get their own mini-menu; new plugs are
+ * the last type picked there, SP400 to start). It sits where the object menu does: across the top on larger screens, above the toolbar on phones.
  */
 export function PlugPanel() {
   const editing = useUi((u) => u.plugEditing);
   const setEditing = useUi((u) => u.setPlugEditing);
   const item = usePlayground((s) => s.items.find((i) => i.id === editing));
-  const { selected, type, hints, set } = usePlugPick();
+  const { selected, set } = usePlugPick();
   useJackHints(item);
-  const suggested = openHints(hints, item?.plugs ?? []);
   const picked = item?.plugs?.filter((p) => selected.includes(p.id)) ?? [];
   const plug = picked[0];
 
@@ -293,43 +292,21 @@ export function PlugPanel() {
       <div
         role="dialog"
         aria-label="Plugs"
-        className={`animate-enter absolute left-1/2 z-20 flex w-max max-w-[calc(100%-24px)] -translate-x-1/2 flex-col gap-2 p-2 ${barPanel} max-sm:bottom-[calc(74px+env(safe-area-inset-bottom))] sm:top-4`}
+        className={`animate-enter absolute left-1/2 z-20 flex w-max max-w-[calc(100%-24px)] -translate-x-1/2 flex-col p-2 ${barPanel} max-sm:bottom-[calc(74px+env(safe-area-inset-bottom))] sm:top-4`}
         onPointerDown={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between gap-3 px-1">
-          <span className="text-[13px] font-semibold">Plugs</span>
-          <span className="truncate text-xs text-ink-muted">
+        <div className="flex items-center gap-3 pl-1">
+          <span className="text-[13px] text-ink-muted">
             {picked.length > 1
-              ? `${picked.length} plugs selected`
+              ? `${picked.length} plugs selected.`
               : plug
                 ? "Drag it along the edge to line it up."
-                : suggested.length
-                  ? "Click a + or anywhere along an edge to add a plug."
-                  : "Click an edge to add a plug, or another pedal to switch to it."}
+                : "Click a + or an edge to add a plug."}
           </span>
-        </div>
-        {/* New plugs' type. A selected plug has its own menu, beside it. */}
-        <div className="flex flex-wrap items-center gap-1">
-          <div role="radiogroup" aria-label="Type for new plugs" className="flex gap-1">
-            {PLUG_ORDER.map((t) => (
-              <button
-                key={t}
-                type="button"
-                role="radio"
-                aria-checked={type === t}
-                aria-label={PLUG_TYPES[t].label}
-                {...tip(`New plugs: ${PLUG_TYPES[t].label}`)}
-                onClick={() => set({ type: t })}
-                className={`grid size-9 place-items-center rounded-control outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${type === t ? "bg-brand/15 ring-1 ring-brand" : "hover:bg-surface-hover"}`}
-              >
-                <TypeIcon type={t} />
-              </button>
-            ))}
-          </div>
           <button
             type="button"
             onClick={() => setEditing(null)}
-            className="btn-primary ml-1 flex h-9 items-center gap-1 rounded-control px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
+            className="btn-primary flex h-9 items-center gap-1 rounded-control px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
           >
             Done
           </button>
@@ -425,7 +402,11 @@ function PlugMiniMenu({
             aria-checked={types.size === 1 && types.has(t)}
             aria-label={PLUG_TYPES[t].label}
             {...tip(PLUG_TYPES[t].label, { side: "bottom" })}
-            onClick={() => update(() => ({ type: t }))}
+            onClick={() => {
+              update(() => ({ type: t }));
+              // New plugs follow the last type picked.
+              usePlugPick.getState().set({ type: t });
+            }}
             className={`${miniButton} ${types.size === 1 && types.has(t) ? barIconActive : barIconIdle}`}
           >
             <TypeIcon type={t} />
