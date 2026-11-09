@@ -17,9 +17,11 @@ screens, the object bar on tablets, the right-click or ••• menu on phones,
   stick out in the photo (Meris, many Eventide and Strymon), give no suggestions; custom pedals have no photo to read.
 - **Moving:** drag a plug along its edge, or round a corner onto another edge. Positions snap to 1/16″.
 - **Types** (`PLUG_TYPES` in `lib/plugs.ts`, drawn to scale by `PlugShape` in `components/PlugArt.tsx`): straight ¼″,
-  right-angle ¼″, pancake, DC power and MIDI. Picking a type with no plug selected sets it for new plugs; with one
+  right-angle (Rean), slim right-angle (SP400), pancake, DC power and MIDI. The three right-angle types use the same
+  drawings as Space Between's plug guide (`assets/plugs/*.svg`, 0.2 mm per unit, turned so the barrel goes into the
+  jack and cut off at the body); the others are drawn in code in the same grays. Picking a type with no plug selected sets it for new plugs; with one
   selected, it changes that plug.
-- **Direction:** right-angle and pancake plugs turn their cable sideways; **Flip Direction** mirrors it.
+- **Direction:** the right-angle plugs turn their cable sideways; **Flip Direction** mirrors it.
 - **Removing:** the trash button, or Delete / Backspace.
 - **Switching pedals:** the other pedals sit at 50% opacity; hovering one brings it to full and shows an **Add
   Plugs** pill (tooltip colors, screen-sized). Click it (without dragging) to move plug editing to it, zoomed in on it. Done

@@ -1,73 +1,88 @@
+import pancakeArt from "../assets/plugs/pancake.svg";
+import reanArt from "../assets/plugs/rean.svg";
+import sp400Art from "../assets/plugs/sp400.svg";
 import { PX_PER_INCH } from "../lib/geometry";
-import { PLUG_TYPES, SIDE_ANGLE, type Plug } from "../lib/plugs";
+import { ART_INCH_PER_UNIT, PLUG_TYPES, SIDE_ANGLE, type Plug } from "../lib/plugs";
+
+/** The same drawings as Space Between's plug guide. */
+export const ART_SRC = { rean: reanArt, sp400: sp400Art, pancake: pancakeArt };
 
 /** The cable's length past the plug head, in inches (it fades out). */
 const CABLE = 1.1;
-const BODY = "#1d1e22";
-const METAL = "#b9bbc2";
-const CABLE_COLOR = "#2a2b30";
+/** The drawings' grays, so the drawn-in-code plugs match them. */
+const BODY = "#6C6C6C";
+const SHADE = "#535353";
+const METAL = "#C4C4C4";
+const CABLE_COLOR = "#4a4a4a";
 
 /**
  * One plug drawn at real scale, pointing up out of an edge from (0, 0): the head, then a short cable that fades out.
- * Angled and pancake plugs turn their cable sideways (mirrored when `flip`). Inch units; the caller scales it.
+ * Right-angle plugs use the plug-guide drawings and turn their cable sideways (mirrored when `flip`). Inch units; the
+ * caller scales it.
  */
 export function PlugShape({ plug }: { plug: Plug }) {
   const spec = PLUG_TYPES[plug.type];
   const w = spec.width;
   const l = spec.length;
   const fade = `plug-fade-${plug.id}`;
-  const dir = plug.flip ? -1 : 1;
   const cable = (d: string) => <path d={d} stroke={`url(#${fade})`} strokeWidth={0.2} strokeLinecap="round" fill="none" />;
-  return (
-    <g>
-      <defs>
-        {spec.sideways ? (
-          <linearGradient id={fade} x1={0} x2={dir * (CABLE + w / 2)} y1={0} y2={0} gradientUnits="userSpaceOnUse">
-            <stop offset="0.35" stopColor={CABLE_COLOR} />
-            <stop offset="1" stopColor={CABLE_COLOR} stopOpacity={0} />
-          </linearGradient>
-        ) : (
-          <linearGradient id={fade} x1={0} x2={0} y1={-l} y2={-l - CABLE} gradientUnits="userSpaceOnUse">
+
+  if (spec.art) {
+    const a = spec.art;
+    const k = ART_INCH_PER_UNIT;
+    // The cable leaves the far end of the body, from the middle of its thickness.
+    const end = (a.h - a.cy) * k;
+    const mid = -((a.w - a.x0) / 2) * k;
+    return (
+      <g transform={plug.flip ? "scale(-1 1)" : undefined}>
+        <defs>
+          <linearGradient id={fade} x1={end} x2={end + CABLE} y1={0} y2={0} gradientUnits="userSpaceOnUse">
             <stop offset="0" stopColor={CABLE_COLOR} />
             <stop offset="1" stopColor={CABLE_COLOR} stopOpacity={0} />
           </linearGradient>
-        )}
+        </defs>
+        {cable(`M${end - 0.1} ${mid} H${end + CABLE}`)}
+        {/* The drawing turned so its barrel points into the pedal; the barrel itself is cut off (it's inside the jack). */}
+        <g transform={`scale(${k}) rotate(-90) translate(${-a.x0} ${-a.cy})`}>
+          <svg x={a.x0} y={0} width={a.w - a.x0} height={a.h} viewBox={`${a.x0} 0 ${a.w - a.x0} ${a.h}`} overflow="hidden">
+            <image href={ART_SRC[a.name]} x={0} y={0} width={a.w} height={a.h} />
+          </svg>
+        </g>
+      </g>
+    );
+  }
+
+  return (
+    <g>
+      <defs>
+        <linearGradient id={fade} x1={0} x2={0} y1={-l} y2={-l - CABLE} gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor={CABLE_COLOR} />
+          <stop offset="1" stopColor={CABLE_COLOR} stopOpacity={0} />
+        </linearGradient>
       </defs>
       {plug.type === "straight" && (
         <>
           {cable(`M0 ${-l} V${-l - CABLE}`)}
-          <rect x={-0.13} y={-l - 0.05} width={0.26} height={0.5} rx={0.06} fill={BODY} />
+          <rect x={-0.13} y={-l - 0.05} width={0.26} height={0.5} rx={0.06} fill={SHADE} />
           <rect x={-w / 2} y={-l + 0.35} width={w} height={l - 0.55} rx={0.1} fill={BODY} />
+          <rect x={0} y={-l + 0.35} width={w / 2} height={l - 0.55} fill={SHADE} />
           <rect x={-w / 2 + 0.03} y={-0.24} width={w - 0.06} height={0.24} rx={0.03} fill={METAL} />
-        </>
-      )}
-      {plug.type === "angle" && (
-        <>
-          {cable(`M0 ${-l + 0.22} H${dir * (CABLE + w / 2)}`)}
-          <rect x={-w / 2} y={-l} width={w} height={l - 0.18} rx={0.12} fill={BODY} />
-          <rect x={dir > 0 ? w / 2 - 0.05 : -w / 2 - 0.25} y={-l + 0.1} width={0.3} height={0.24} rx={0.05} fill={BODY} />
-          <rect x={-w / 2 + 0.06} y={-0.2} width={w - 0.12} height={0.2} rx={0.03} fill={METAL} />
-        </>
-      )}
-      {plug.type === "pancake" && (
-        <>
-          {cable(`M0 ${-l / 2} H${dir * (CABLE + w / 2)}`)}
-          <rect x={-w / 2} y={-l} width={w} height={l} rx={l / 2} fill={BODY} />
-          <circle cx={0} cy={-l / 2} r={0.08} fill={METAL} />
         </>
       )}
       {plug.type === "dc" && (
         <>
           {cable(`M0 ${-l} V${-l - CABLE}`)}
           <rect x={-w / 2} y={-l} width={w} height={l - 0.15} rx={0.08} fill={BODY} />
+          <rect x={0} y={-l + 0.05} width={w / 2} height={l - 0.2} fill={SHADE} />
           <rect x={-w / 2 + 0.06} y={-0.15} width={w - 0.12} height={0.15} fill={METAL} />
         </>
       )}
       {plug.type === "midi" && (
         <>
           {cable(`M0 ${-l} V${-l - CABLE}`)}
-          <rect x={-0.13} y={-l - 0.05} width={0.26} height={0.4} rx={0.06} fill={BODY} />
+          <rect x={-0.13} y={-l - 0.05} width={0.26} height={0.4} rx={0.06} fill={SHADE} />
           <rect x={-w / 2} y={-l + 0.25} width={w} height={l - 0.4} rx={0.18} fill={BODY} />
+          <rect x={0} y={-l + 0.3} width={w / 2 - 0.05} height={l - 0.5} fill={SHADE} />
           <rect x={-w / 2 + 0.04} y={-0.15} width={w - 0.08} height={0.15} rx={0.03} fill={METAL} />
         </>
       )}

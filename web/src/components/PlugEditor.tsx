@@ -4,12 +4,12 @@ import { create } from "zustand";
 import { canvasImageUrl } from "../lib/catalog";
 import { PX_PER_INCH } from "../lib/geometry";
 import { findJacks, type JackHint } from "../lib/jackFinder";
-import { newPlugId, PLUG_ORDER, PLUG_TYPES, SIDE_ANGLE, sideLength, snapAt, type Plug, type PlugSide, type PlugType } from "../lib/plugs";
+import { newPlugId, plugBox, PLUG_ORDER, PLUG_TYPES, SIDE_ANGLE, sideLength, snapAt, type Plug, type PlugSide, type PlugType } from "../lib/plugs";
 import type { Item } from "../lib/types";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
-import { PlugShape } from "./PlugArt";
+import { ART_SRC, PlugShape } from "./PlugArt";
 import { tip } from "./Tooltip";
 import { barPanel } from "./toolbarStyles";
 
@@ -193,15 +193,15 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
           })}
           {/* Each plug's handle: its head, ringed in the brand color when picked. */}
           {plugs.map((p) => {
-            const spec = PLUG_TYPES[p.type];
+            const box = plugBox(p.type, p.flip);
             const on = selected.includes(p.id);
             return (
               <g key={p.id} transform={`translate(${anchor(p).join(" ")}) rotate(${SIDE_ANGLE[p.side]})`}>
                 <rect
-                  x={-spec.width / 2 - 0.08}
-                  y={-spec.length - 0.08}
-                  width={spec.width + 0.16}
-                  height={spec.length + 0.16}
+                  x={box.left - 0.08}
+                  y={-box.out - 0.08}
+                  width={box.right - box.left + 0.16}
+                  height={box.out + 0.16}
                   rx={0.1}
                   fill={on ? "color-mix(in srgb, var(--color-brand) 18%, transparent)" : "transparent"}
                   stroke={on ? "var(--color-brand)" : "transparent"}
@@ -220,10 +220,18 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
 
 /** A plug type's little picture for the panel's buttons. */
 function TypeIcon({ type }: { type: PlugType }) {
-  const spec = PLUG_TYPES[type];
-  const extent = Math.max(spec.length + 0.3, 1.2);
+  // Right-angle plugs: the whole drawing, barrel and all, as in Space Between's plug guide.
+  const art = PLUG_TYPES[type].art;
+  if (art) return <img src={ART_SRC[art.name]} alt="" draggable={false} className="size-6 object-contain" />;
+  // A square around the head and the start of its cable, so every type fills its button alike.
+  const box = plugBox(type);
+  const sideways = PLUG_TYPES[type].sideways;
+  const [x0, x1] = [box.left, box.right + (sideways ? 0.4 : 0)];
+  const [y0, y1] = [-box.out - (sideways ? 0 : 0.4), 0.05];
+  const size = Math.max(x1 - x0, y1 - y0, 1.2) + 0.1;
+  const [cx, cy] = [(x0 + x1) / 2, (y0 + y1) / 2];
   return (
-    <svg viewBox={`-0.9 ${-extent} 1.8 ${extent + 0.1}`} className="h-6 w-6" aria-hidden>
+    <svg viewBox={`${cx - size / 2} ${cy - size / 2} ${size} ${size}`} className="h-6 w-6" aria-hidden>
       <PlugShape plug={{ id: `icon-${type}`, side: "top", at: 0, type }} />
     </svg>
   );

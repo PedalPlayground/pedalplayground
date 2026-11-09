@@ -366,7 +366,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const b = itemBounds(item);
       // Room around it (for plugs and their cables), zoomed in no further than the canvas allows.
       const v = fittedView(s, MAX_ZOOM, { left: b.left - margin, top: b.top - margin, right: b.right + margin, bottom: b.bottom + margin });
-      return v ? { autoFit: false, view: v } : {};
+      // A fit still waiting for the canvas's size would undo this, so it's dropped.
+      return v ? { autoFit: false, pendingFit: false, view: v } : {};
     }),
 
   fitToContent: () =>
