@@ -316,7 +316,7 @@ export function PlugPanel() {
 const MENU_GAP = 10; // between the plugs' room and the menu
 /** Mini-menu buttons, as in the selection's mini-menu: bigger on touch screens. */
 const miniButton =
-  "press grid size-7 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 [&_svg]:size-4 pointer-coarse:[&_svg]:size-[21px]";
+  "press grid size-8 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 [&_svg]:size-4 pointer-coarse:[&_svg]:size-[21px]";
 
 /** Room any plug type takes at a jack (inches, in a plug's own frame): the menu keeps clear of it. */
 const ENVELOPE = (() => {
@@ -374,9 +374,9 @@ function PlugMiniMenu({
   const touch = useMediaQuery("(pointer: coarse)");
   if (!viewport.w) return null;
   const b = jacksOnScreen(item, picked, view);
-  const size = touch ? 44 : 28;
+  const size = touch ? 44 : 32;
   const H = size + 8;
-  const halfW = (4 * size + 3 * 2 + 8 + 9) / 2;
+  const halfW = (4 * size + 3 * 2 + 12 + 9) / 2;
   const cx = Math.min(Math.max((b.left + b.right) / 2, halfW + 8), viewport.w - halfW - 8);
   const below = b.bottom + MENU_GAP;
   const y = below + H > viewport.h - (touch ? 84 : 8) ? Math.max(8, b.top - MENU_GAP - H) : below;
@@ -385,7 +385,7 @@ function PlugMiniMenu({
     <div
       role="toolbar"
       aria-label={picked.length > 1 ? "Selected plugs" : "Selected plug"}
-      className="absolute z-10 flex -translate-x-1/2 items-center gap-0.5 rounded-panel bg-surface p-1 shadow-float"
+      className="absolute z-10 flex -translate-x-1/2 items-center gap-0.5 rounded-panel bg-surface p-1.5 shadow-float"
       style={{ left: cx, top: y }}
       onPointerDown={(e) => e.stopPropagation()}
     >
