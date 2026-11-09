@@ -1,5 +1,6 @@
 import { ArrowLeftRight, Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { stepNumber } from "../lib/stepNumber";
 import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { ScaleKey } from "../components/ScaleKey";
 import { tip } from "../components/Tooltip";
@@ -39,6 +40,7 @@ export const secondaryButton =
   "press h-9 whitespace-nowrap rounded-control bg-surface-hover px-3 text-sm font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
 const round2 = (n: number) => Math.round(n * 100) / 100;
+
 const num = (s: string) => {
   const n = parseFloat(s);
   return Number.isFinite(n) ? n : 0;
@@ -150,6 +152,7 @@ export function ItemEditor({
                 key={`w${filled}`}
                 defaultValue={fields.width || ""}
                 onChange={(e) => set({ width: num(e.target.value) })}
+                onKeyDown={(e) => stepNumber(e, (v) => set({ width: v }))}
               />
               <span aria-hidden className={fieldUnit}>
                 in
@@ -180,6 +183,7 @@ export function ItemEditor({
                 key={`h${filled}`}
                 defaultValue={fields.height || ""}
                 onChange={(e) => set({ height: num(e.target.value) })}
+                onKeyDown={(e) => stepNumber(e, (v) => set({ height: v }))}
               />
               <span aria-hidden className={fieldUnit}>
                 in
