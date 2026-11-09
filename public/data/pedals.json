@@ -33188,6 +33188,13 @@
 		"Image": "lrbaggs-venue-di.png"
 	},
 	{
+		"Brand": "L.R. Baggs",
+		"Name": "Voiceprint D.I.",
+		"Width": 5,
+		"Height": 5.26,
+		"Image": "lrbaggs-voiceprint-di.png"
+	},
+	{
 		"Brand": "Lake Effects",
 		"Name": "FVD",
 		"Width": 3.68,
@@ -57067,6 +57074,13 @@
 	},
 	{
 		"Brand": "Umbrella Company",
+		"Name": "Hume",
+		"Width": 3.79,
+		"Height": 4.81,
+		"Image": "umbrella-company-hume.png"
+	},
+	{
+		"Brand": "Umbrella Company",
 		"Name": "Mayonaise Fuzz",
 		"Width": 2.8,
 		"Height": 5.05,
@@ -57617,6 +57631,13 @@
 		"Width": 7.8,
 		"Height": 5.31,
 		"Image": "valeton-gp100.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-180",
+		"Width": 7.13,
+		"Height": 5.43,
+		"Image": "valeton-gp180.png"
 	},
 	{
 		"Brand": "Valeton",
