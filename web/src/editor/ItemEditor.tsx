@@ -104,11 +104,11 @@ export function ItemEditor({
     const featured = new Set<string>(FEATURED_PEDALS);
     return (i) => (adds.get(`${fields.kind}:${i.image}`) ?? 0) + (featured.has(i.image) ? 0.5 : 0);
   }, [adds, fields.kind]);
-  // Every size the brand comes in, most used first, each shown by its most added pedal beside this one in the preview
+  // Every size the brand comes in, closest to this one first (then most used), each shown by its most added pedal in the preview
   // (the item being edited left out). Clicking one copies its size.
   const sizes = useMemo(
-    () => brandSizes(skipImage ? list.filter((i) => i.image !== skipImage) : list, fields.brand, 60, usage, 1),
-    [list, skipImage, fields.brand, usage],
+    () => brandSizes(skipImage ? list.filter((i) => i.image !== skipImage) : list, fields.brand, 60, usage, 1, { width: fields.width, height: fields.height }),
+    [list, skipImage, fields.brand, usage, fields.width, fields.height],
   );
   const sameSize = (w: number, h: number) => Math.abs(fields.width - w) < 0.005 && Math.abs(fields.height - h) < 0.005;
 
