@@ -362,34 +362,28 @@ export function PlugPanel() {
   );
 }
 
-const MENU_GAP = 12; // between the plugs and the menu
+const MENU_GAP = 16; // between the jack points and the menu
 /** Mini-menu buttons, as in the selection's mini-menu: bigger on touch screens. */
 const miniButton =
   "press grid size-7 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 [&_svg]:size-4 pointer-coarse:[&_svg]:size-[21px]";
 
-/** The selected plugs' box on screen (canvas pixels): each plug head's corners, turned and flipped with the pedal. */
-function plugsOnScreen(item: Item, plugs: Plug[], view: { x: number; y: number; zoom: number }) {
+/**
+ * Where the selected plugs meet their jacks on screen (canvas pixels), turned and flipped with the pedal. The menu goes
+ * by these points, not the drawings, so it stays put when a plug's type or way of sitting changes.
+ */
+function jacksOnScreen(item: Item, plugs: Plug[], view: { x: number; y: number; zoom: number }) {
   const k = view.zoom * PX_PER_INCH;
   const t = (item.rotation * Math.PI) / 180;
   const xs: number[] = [];
   const ys: number[] = [];
   for (const p of plugs) {
-    const box = plugBox(p.type, p.flip, p.down);
-    const a = (SIDE_ANGLE[p.side] * Math.PI) / 180;
     const [ax, ay] = p.side === "top" ? [p.at, 0] : p.side === "bottom" ? [p.at, item.height] : p.side === "left" ? [0, p.at] : [item.width, p.at];
-    for (const [bx, by] of [
-      [box.left, 0],
-      [box.right, 0],
-      [box.left, -box.out],
-      [box.right, -box.out],
-    ]) {
-      // Plug frame to the pedal's own frame, then its flip and turn about its center, then the screen.
-      let x = ax + bx * Math.cos(a) - by * Math.sin(a) - item.width / 2;
-      const y = ay + bx * Math.sin(a) + by * Math.cos(a) - item.height / 2;
-      if (item.flipX) x = -x;
-      xs.push(view.x + (item.x + item.width / 2 + x * Math.cos(t) - y * Math.sin(t)) * k);
-      ys.push(view.y + (item.y + item.height / 2 + x * Math.sin(t) + y * Math.cos(t)) * k);
-    }
+    // The pedal's own frame, then its flip and turn about its center, then the screen.
+    let x = ax - item.width / 2;
+    const y = ay - item.height / 2;
+    if (item.flipX) x = -x;
+    xs.push(view.x + (item.x + item.width / 2 + x * Math.cos(t) - y * Math.sin(t)) * k);
+    ys.push(view.y + (item.y + item.height / 2 + x * Math.sin(t) + y * Math.cos(t)) * k);
   }
   return { left: Math.min(...xs), right: Math.max(...xs), top: Math.min(...ys), bottom: Math.max(...ys) };
 }
@@ -413,7 +407,7 @@ function PlugMiniMenu({
   const viewport = usePlayground((s) => s.viewport);
   const touch = useMediaQuery("(pointer: coarse)");
   if (!viewport.w) return null;
-  const b = plugsOnScreen(item, picked, view);
+  const b = jacksOnScreen(item, picked, view);
   const size = touch ? 44 : 28;
   const H = size + 8;
   const halfW = (7 * size + 6 * 2 + 8 + 9) / 2;
