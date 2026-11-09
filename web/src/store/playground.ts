@@ -64,6 +64,8 @@ interface PlaygroundState {
   /** Zooms by `factor`, keeping the screen point (px, py) fixed. Defaults to viewport center. */
   zoomBy: (factor: number, px?: number, py?: number) => void;
   fitToContent: () => void;
+  /** Zooms in on one item with `margin` inches round it (plug editing). */
+  focusOn: (id: string, margin?: number) => void;
 
   /** Call once before a multi-step edit (e.g. a drag) so it undoes as a single step. */
   beginTransaction: () => void;
@@ -265,8 +267,8 @@ function fitPad(s: PlaygroundState) {
 }
 
 /** The view that fits all the gear in the open canvas, zoomed no further in than `maxZoom`. Null with no gear. */
-function fittedView(s: PlaygroundState, maxZoom: number): View | null {
-  const b = contentBounds(s.items);
+function fittedView(s: PlaygroundState, maxZoom: number, bounds?: ReturnType<typeof contentBounds>): View | null {
+  const b = bounds ?? contentBounds(s.items);
   if (!b || !s.viewport.w) return null;
   const pad = fitPad(s);
   // With the gear panel open, fit into the space beside it.
@@ -355,6 +357,16 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const zoom = clamp(s.view.zoom * factor, Math.min(minZoom(s), s.view.zoom), MAX_ZOOM);
       const k = zoom / s.view.zoom;
       return { autoFit: false, view: clampView(s, { zoom, x: cx - (cx - s.view.x) * k, y: cy - (cy - s.view.y) * k }) };
+    }),
+
+  focusOn: (id, margin = 2.5) =>
+    set((s) => {
+      const item = s.items.find((i) => i.id === id);
+      if (!item || !s.viewport.w) return {};
+      const b = itemBounds(item);
+      // Room around it (for plugs and their cables), zoomed in no further than the canvas allows.
+      const v = fittedView(s, MAX_ZOOM, { left: b.left - margin, top: b.top - margin, right: b.right + margin, bottom: b.bottom + margin });
+      return v ? { autoFit: false, view: v } : {};
     }),
 
   fitToContent: () =>

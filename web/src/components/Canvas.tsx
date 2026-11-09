@@ -1,5 +1,5 @@
 import { PlugsLayer } from "./PlugArt";
-import { PlugEditLayer } from "./PlugEditor";
+import { clearPlugSelection, PlugEditLayer } from "./PlugEditor";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { canvasImageUrl } from "../lib/catalog";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
@@ -430,6 +430,8 @@ export function Canvas() {
     // Touch: dragging a product moves it, dragging empty canvas pans (no marquee, no tool switching).
     const touch = e.pointerType === "touch";
 
+    // A press on the canvas (not on a plug) while editing plugs deselects them, like clicking empty space.
+    if (plugMode) clearPlugSelection();
     if (useUi.getState().viewing || plugMode) {
       // View-only, or editing plugs: every drag pans (a touch tap does nothing).
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: touch, moved: false };
@@ -603,7 +605,7 @@ export function Canvas() {
         {items.map((item, index) => (
           <div key={item.id} style={{ position: "absolute", zIndex: index }}>
             <ItemView item={item} />
-            {selected.includes(item.id) && !inShownGroup.has(item.id) && <SelectionHalo item={item} zoom={view.zoom} tour={selected.length === 1} />}
+            {selected.includes(item.id) && !inShownGroup.has(item.id) && item.id !== plugEditing && <SelectionHalo item={item} zoom={view.zoom} tour={selected.length === 1} />}
           </div>
         ))}
         {plugItem && (

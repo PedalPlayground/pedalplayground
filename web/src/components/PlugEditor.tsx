@@ -10,12 +10,15 @@ import { PlugShape } from "./PlugArt";
 import { tip } from "./Tooltip";
 import { barPanel } from "./toolbarStyles";
 
-/** What the plug editor has picked: the plug being edited, and the type new plugs get. */
-const usePlugPick = create<{ selected: string | null; type: PlugType; set: (p: Partial<{ selected: string | null; type: PlugType }>) => void }>((set) => ({
-  selected: null,
+/** What the plug editor has picked: the selected plugs (like selecting gear), and the type new plugs get. */
+const usePlugPick = create<{ selected: string[]; type: PlugType; set: (p: Partial<{ selected: string[]; type: PlugType }>) => void }>((set) => ({
+  selected: [],
   type: "straight",
   set: (p) => set(p),
 }));
+
+/** Deselects every plug (a click on empty canvas while editing plugs). */
+export const clearPlugSelection = () => usePlugPick.getState().set({ selected: [] });
 
 /** How far out from an edge a click still lands on it, in inches. */
 const EDGE_REACH = 0.7;
@@ -61,14 +64,27 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
   const s = PX_PER_INCH;
   const reach = EDGE_REACH * s;
 
+  /** Keeps the drag going when the pointer leaves the handle (skipped when the pointer's already gone). */
+  const capture = (e: ReactPointerEvent) => {
+    try {
+      (e.currentTarget as Element).setPointerCapture(e.pointerId);
+    } catch {
+      /* no live pointer to capture */
+    }
+  };
   const at = (e: ReactPointerEvent) => nearestSide(localPoint(e, box.current!.getBoundingClientRect(), item, zoom), item.width, item.height);
 
+  // Like selecting gear: a click picks the plug, Shift-click adds or removes it, and dragging moves the one grabbed.
   const startDrag = (e: ReactPointerEvent, id: string) => {
     e.stopPropagation();
     e.preventDefault();
-    (e.currentTarget as Element).setPointerCapture(e.pointerId);
+    if (e.shiftKey) {
+      set({ selected: selected.includes(id) ? selected.filter((x) => x !== id) : [...selected, id] });
+      return;
+    }
+    if (!selected.includes(id)) set({ selected: [id] });
+    capture(e);
     drag.current = id;
-    set({ selected: id });
     usePlayground.getState().beginTransaction();
   };
   const onMove = (e: ReactPointerEvent) => {
@@ -89,10 +105,10 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
     setGhost(null);
     // Keep dragging the new plug until the button comes up, to line it up in one go.
-    (e.currentTarget as Element).setPointerCapture(e.pointerId);
+    capture(e);
     // Adding it was the undo step, so the drag that follows joins it.
     drag.current = plug.id;
-    set({ selected: plug.id });
+    set({ selected: [plug.id] });
   };
 
   const anchor = (p: { side: PlugSide; at: number }) =>
@@ -119,9 +135,6 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
         ).map(([side, style]) => (
           <div key={side} className="absolute cursor-copy" style={style} onPointerDown={add} />
         ))}
-        {/* The outline of the pedal, so it's clear which one is being edited. */}
-        <div className="pointer-events-none absolute inset-0 rounded-sm ring-brand" style={{ boxShadow: `0 0 0 ${2 / zoom}px var(--color-brand)` }} />
-
         <svg
           className="pointer-events-none absolute overflow-visible"
           style={{ left: 0, top: 0, width: item.width * s, height: item.height * s }}
@@ -135,7 +148,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
           {/* Each plug's handle: its head, ringed in the brand color when picked. */}
           {plugs.map((p) => {
             const spec = PLUG_TYPES[p.type];
-            const on = p.id === selected;
+            const on = selected.includes(p.id);
             return (
               <g key={p.id} transform={`translate(${anchor(p).join(" ")}) rotate(${SIDE_ANGLE[p.side]})`}>
                 <rect
@@ -179,25 +192,36 @@ export function PlugPanel() {
   const setEditing = useUi((u) => u.setPlugEditing);
   const item = usePlayground((s) => s.items.find((i) => i.id === editing));
   const { selected, type, set } = usePlugPick();
-  const plug = item?.plugs?.find((p) => p.id === selected);
+  const picked = item?.plugs?.filter((p) => selected.includes(p.id)) ?? [];
+  const plug = picked[0];
 
   // Only Done ends the editing (the canvas and shortcuts are off meanwhile); a pedal that's gone (undone away) ends it too.
   useEffect(() => {
     if (editing && !item) setEditing(null);
   }, [editing, item, setEditing]);
-  useEffect(() => set({ selected: null }), [editing, set]);
+  useEffect(() => set({ selected: [] }), [editing, set]);
+  // Zoom in on the pedal while its plugs are edited, then put the view back on Done.
+  useEffect(() => {
+    if (!editing) return;
+    const before = usePlayground.getState().view;
+    usePlayground.getState().focusOn(editing);
+    return () => usePlayground.getState().setView(before);
+  }, [editing]);
 
-  const update = (patch: Partial<Plug>) => item && plug && usePlayground.getState().setPlugs(item.id, item.plugs!.map((p) => (p.id === plug.id ? { ...p, ...patch } : p)));
+  /** Changes every selected plug (one undo step). */
+  const update = (patch: (p: Plug) => Partial<Plug>) =>
+    item && picked.length && usePlayground.getState().setPlugs(item.id, item.plugs!.map((p) => (selected.includes(p.id) ? { ...p, ...patch(p) } : p)));
   const remove = () => {
-    if (!item || !plug) return;
-    usePlayground.getState().setPlugs(item.id, item.plugs!.filter((p) => p.id !== plug.id));
-    set({ selected: null });
+    if (!item || !picked.length) return;
+    usePlayground.getState().setPlugs(item.id, item.plugs!.filter((p) => !selected.includes(p.id)));
+    set({ selected: [] });
   };
 
   useEffect(() => {
     if (!editing) return;
     const onKey = (e: KeyboardEvent) => {
       if ((e.target as HTMLElement).closest("input, textarea")) return;
+      if (e.key === "Escape") set({ selected: [] });
       if ((e.key === "Delete" || e.key === "Backspace") && plug) {
         e.preventDefault();
         e.stopPropagation();
@@ -220,24 +244,28 @@ export function PlugPanel() {
       <div className="flex items-center justify-between gap-3 px-1">
         <span className="text-[13px] font-semibold">Plugs</span>
         <span className="truncate text-xs text-ink-muted">
-          {plug ? "Drag it along the edge to line it up." : "Click an edge to add a plug. Drag one to move it."}
+          {picked.length > 1
+            ? `${picked.length} plugs selected`
+            : plug
+              ? "Drag it along the edge to line it up."
+              : "Click an edge to add a plug. Click a plug to select it."}
         </span>
       </div>
       <div className="flex flex-wrap items-center gap-1">
-        <div role="radiogroup" aria-label={plug ? "This plug's type" : "Type for new plugs"} className="flex gap-1">
+        <div role="radiogroup" aria-label={plug ? "Selected plugs' type" : "Type for new plugs"} className="flex gap-1">
           {PLUG_ORDER.map((t) => (
             <button
               key={t}
               type="button"
               role="radio"
-              aria-checked={current === t}
+              aria-checked={current === t && picked.every((p) => p.type === current)}
               aria-label={PLUG_TYPES[t].label}
               {...tip(PLUG_TYPES[t].label)}
               onClick={() => {
                 set({ type: t });
-                if (plug) update({ type: t, flip: PLUG_TYPES[t].sideways ? plug.flip : undefined });
+                update((p) => ({ type: t, flip: PLUG_TYPES[t].sideways ? p.flip : undefined }));
               }}
-              className={`grid size-9 place-items-center rounded-control outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${current === t ? "bg-brand/15 ring-1 ring-brand" : "hover:bg-surface-hover"}`}
+              className={`grid size-9 place-items-center rounded-control outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${current === t && picked.every((p) => p.type === current) ? "bg-brand/15 ring-1 ring-brand" : "hover:bg-surface-hover"}`}
             >
               <TypeIcon type={t} />
             </button>
@@ -248,17 +276,17 @@ export function PlugPanel() {
           type="button"
           aria-label="Flip direction"
           {...tip("Flip Direction")}
-          disabled={!plug || !PLUG_TYPES[plug.type].sideways}
-          onClick={() => update({ flip: !plug?.flip })}
+          disabled={!picked.some((p) => PLUG_TYPES[p.type].sideways)}
+          onClick={() => update((p) => (PLUG_TYPES[p.type].sideways ? { flip: !p.flip } : {}))}
           className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35"
         >
           <ArrowLeftRight size={17} />
         </button>
         <button
           type="button"
-          aria-label="Remove plug"
-          {...tip("Remove Plug", { shortcut: "Delete" })}
-          disabled={!plug}
+          aria-label={picked.length > 1 ? "Remove plugs" : "Remove plug"}
+          {...tip(picked.length > 1 ? "Remove Plugs" : "Remove Plug", { shortcut: "Delete" })}
+          disabled={!picked.length}
           onClick={remove}
           className="grid size-9 place-items-center rounded-control text-danger outline-none hover:bg-danger/10 focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35"
         >

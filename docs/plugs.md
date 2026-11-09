@@ -3,6 +3,10 @@
 Cable ends drawn on a pedal's edges, lined up with its jacks. Select one pedal and choose **Plugs** (left menu on large
 screens, the object bar on tablets, the right-click or ••• menu on phones).
 
+- **Opening it** zooms in on the pedal (with room for cables); **Done** puts the view back. The pedal shows no
+  selection outline meanwhile.
+- **Selecting:** like gear: click a plug to select it, Shift-click to add or remove one, click empty canvas (or press
+  Escape) to deselect. Type, Flip Direction and remove apply to every selected plug.
 - **Adding:** click (or tap) just outside any edge; a plug of the chosen type drops there. Keep the button down to drag
   it into place in the same move.
 - **Moving:** drag a plug along its edge, or round a corner onto another edge. Positions snap to 1/16″.
