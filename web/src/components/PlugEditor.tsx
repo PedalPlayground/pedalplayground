@@ -6,12 +6,13 @@ import { PX_PER_INCH } from "../lib/geometry";
 import { findJacks, type JackHint } from "../lib/jackFinder";
 import { knownType, newPlugId, plugBox, PLUG_ORDER, PLUG_TYPES, SIDE_ANGLE, sideLength, snapAt, type Plug, type PlugSide, type PlugType } from "../lib/plugs";
 import type { Item } from "../lib/types";
+import { useMediaQuery } from "../lib/viewport";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { ART_SRC, PlugShape } from "./PlugArt";
 import { tip } from "./Tooltip";
-import { barPanel } from "./toolbarStyles";
+import { barIconActive, barIconIdle, barPanel } from "./toolbarStyles";
 
 /** What the plug editor has picked: the selected plugs (like selecting gear), and the type new plugs get. */
 type Pick = { selected: string[]; type: PlugType; flip: boolean; down: boolean; hints: JackHint[] };
@@ -295,82 +296,176 @@ export function PlugPanel() {
   });
 
   if (!editing || !item) return null;
-  const current = plug ? knownType(plug.type) : type;
-  // Rotate applies to right-angle plugs: the picked ones, or the type new plugs get.
-  const angled = plug ? picked.filter((p) => PLUG_TYPES[knownType(p.type)].sideways) : PLUG_TYPES[type].sideways ? [{}] : [];
+  const newSideways = PLUG_TYPES[type].sideways;
   return (
-    <div
-      role="dialog"
-      aria-label="Plugs"
-      className={`animate-enter absolute left-1/2 z-20 flex w-max max-w-[calc(100%-24px)] -translate-x-1/2 flex-col gap-2 p-2 ${barPanel} max-sm:bottom-[calc(74px+env(safe-area-inset-bottom))] sm:top-4`}
-      onPointerDown={(e) => e.stopPropagation()}
-    >
-      <div className="flex items-center justify-between gap-3 px-1">
-        <span className="text-[13px] font-semibold">Plugs</span>
-        <span className="truncate text-xs text-ink-muted">
-          {picked.length > 1
-            ? `${picked.length} plugs selected`
-            : plug
-              ? "Drag it along the edge to line it up."
-              : suggested.length
-                ? "Click a + to add a plug where a jack seems to be, or click any edge."
-                : "Click an edge to add a plug, or another pedal to switch to it."}
-        </span>
-      </div>
-      <div className="flex flex-wrap items-center gap-1">
-        <div role="radiogroup" aria-label={plug ? "Selected plugs' type" : "Type for new plugs"} className="flex gap-1">
-          {PLUG_ORDER.map((t) => (
-            <button
-              key={t}
-              type="button"
-              role="radio"
-              aria-checked={current === t && picked.every((p) => knownType(p.type) === current)}
-              aria-label={PLUG_TYPES[t].label}
-              {...tip(PLUG_TYPES[t].label)}
-              onClick={() => {
-                set({ type: t });
-                update((p) => ({ type: t, flip: PLUG_TYPES[t].sideways ? p.flip : undefined, down: PLUG_TYPES[t].sideways ? p.down : undefined }));
-              }}
-              className={`grid size-9 place-items-center rounded-control outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${current === t && picked.every((p) => knownType(p.type) === current) ? "bg-brand/15 ring-1 ring-brand" : "hover:bg-surface-hover"}`}
-            >
-              <TypeIcon type={t} />
-            </button>
-          ))}
+    <>
+      <div
+        role="dialog"
+        aria-label="Plugs"
+        className={`animate-enter absolute left-1/2 z-20 flex w-max max-w-[calc(100%-24px)] -translate-x-1/2 flex-col gap-2 p-2 ${barPanel} max-sm:bottom-[calc(74px+env(safe-area-inset-bottom))] sm:top-4`}
+        onPointerDown={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between gap-3 px-1">
+          <span className="text-[13px] font-semibold">Plugs</span>
+          <span className="truncate text-xs text-ink-muted">
+            {picked.length > 1
+              ? `${picked.length} plugs selected`
+              : plug
+                ? "Drag it along the edge to line it up."
+                : suggested.length
+                  ? "Click a + to add a plug where a jack seems to be, or click any edge."
+                  : "Click an edge to add a plug, or another pedal to switch to it."}
+          </span>
         </div>
-        <span className="mx-1 h-6 w-px bg-line" />
-        <button
-          type="button"
-          aria-label="Rotate plug"
-          {...tip("Rotate Plug")}
-          disabled={!angled.length}
-          onClick={() => {
-            if (!plug) {
+        {/* New plugs: their type and which way they sit. A selected plug has its own menu, beside it. */}
+        <div className="flex flex-wrap items-center gap-1">
+          <div role="radiogroup" aria-label="Type for new plugs" className="flex gap-1">
+            {PLUG_ORDER.map((t) => (
+              <button
+                key={t}
+                type="button"
+                role="radio"
+                aria-checked={type === t}
+                aria-label={PLUG_TYPES[t].label}
+                {...tip(`New plugs: ${PLUG_TYPES[t].label}`)}
+                onClick={() => set({ type: t })}
+                className={`grid size-9 place-items-center rounded-control outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${type === t ? "bg-brand/15 ring-1 ring-brand" : "hover:bg-surface-hover"}`}
+              >
+                <TypeIcon type={t} />
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            aria-label="Rotate new plugs"
+            {...tip("Rotate New Plugs")}
+            disabled={!newSideways}
+            onClick={() => {
               const n = nextTurn({ flip, down });
               set({ flip: !!n.flip, down: !!n.down });
-            } else update((p) => (PLUG_TYPES[knownType(p.type)].sideways ? nextTurn(p) : {}));
-          }}
-          className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35"
-        >
-          <RotateCw size={17} />
-        </button>
-        <button
-          type="button"
-          aria-label={picked.length > 1 ? "Remove plugs" : "Remove plug"}
-          {...tip(picked.length > 1 ? "Remove Plugs" : "Remove Plug", { shortcut: "Delete" })}
-          disabled={!picked.length}
-          onClick={remove}
-          className="grid size-9 place-items-center rounded-control text-danger outline-none hover:bg-danger/10 focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35"
-        >
-          <Trash2 size={17} />
-        </button>
-        <button
-          type="button"
-          onClick={() => setEditing(null)}
-          className="btn-primary ml-1 flex h-9 items-center gap-1 rounded-control px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
-        >
-          Done
-        </button>
+            }}
+            className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35"
+          >
+            <RotateCw size={17} />
+          </button>
+          <button
+            type="button"
+            onClick={() => setEditing(null)}
+            className="btn-primary ml-1 flex h-9 items-center gap-1 rounded-control px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
+          >
+            Done
+          </button>
+        </div>
       </div>
+      {picked.length > 0 && <PlugMiniMenu item={item} picked={picked} update={update} remove={remove} />}
+    </>
+  );
+}
+
+const MENU_GAP = 12; // between the plugs and the menu
+/** Mini-menu buttons, as in the selection's mini-menu: bigger on touch screens. */
+const miniButton =
+  "press grid size-7 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 [&_svg]:size-4 pointer-coarse:[&_svg]:size-[21px]";
+
+/** The selected plugs' box on screen (canvas pixels): each plug head's corners, turned and flipped with the pedal. */
+function plugsOnScreen(item: Item, plugs: Plug[], view: { x: number; y: number; zoom: number }) {
+  const k = view.zoom * PX_PER_INCH;
+  const t = (item.rotation * Math.PI) / 180;
+  const xs: number[] = [];
+  const ys: number[] = [];
+  for (const p of plugs) {
+    const box = plugBox(p.type, p.flip, p.down);
+    const a = (SIDE_ANGLE[p.side] * Math.PI) / 180;
+    const [ax, ay] = p.side === "top" ? [p.at, 0] : p.side === "bottom" ? [p.at, item.height] : p.side === "left" ? [0, p.at] : [item.width, p.at];
+    for (const [bx, by] of [
+      [box.left, 0],
+      [box.right, 0],
+      [box.left, -box.out],
+      [box.right, -box.out],
+    ]) {
+      // Plug frame to the pedal's own frame, then its flip and turn about its center, then the screen.
+      let x = ax + bx * Math.cos(a) - by * Math.sin(a) - item.width / 2;
+      const y = ay + bx * Math.sin(a) + by * Math.cos(a) - item.height / 2;
+      if (item.flipX) x = -x;
+      xs.push(view.x + (item.x + item.width / 2 + x * Math.cos(t) - y * Math.sin(t)) * k);
+      ys.push(view.y + (item.y + item.height / 2 + x * Math.sin(t) + y * Math.cos(t)) * k);
+    }
+  }
+  return { left: Math.min(...xs), right: Math.max(...xs), top: Math.min(...ys), bottom: Math.max(...ys) };
+}
+
+/**
+ * A little menu under the selected plugs, like the one under selected gear: their type, Rotate (right-angle plugs) and
+ * Remove. Above them when there's no room below; kept on screen.
+ */
+function PlugMiniMenu({
+  item,
+  picked,
+  update,
+  remove,
+}: {
+  item: Item;
+  picked: Plug[];
+  update: (patch: (p: Plug) => Partial<Plug>) => void;
+  remove: () => void;
+}) {
+  const view = usePlayground((s) => s.view);
+  const viewport = usePlayground((s) => s.viewport);
+  const touch = useMediaQuery("(pointer: coarse)");
+  if (!viewport.w) return null;
+  const b = plugsOnScreen(item, picked, view);
+  const size = touch ? 44 : 28;
+  const H = size + 8;
+  const halfW = (7 * size + 6 * 2 + 8 + 9) / 2;
+  const cx = Math.min(Math.max((b.left + b.right) / 2, halfW + 8), viewport.w - halfW - 8);
+  const below = b.bottom + MENU_GAP;
+  const y = below + H > viewport.h - (touch ? 84 : 8) ? Math.max(8, b.top - MENU_GAP - H) : below;
+  const types = new Set(picked.map((p) => knownType(p.type)));
+  const angled = picked.some((p) => PLUG_TYPES[knownType(p.type)].sideways);
+  return (
+    <div
+      role="toolbar"
+      aria-label={picked.length > 1 ? "Selected plugs" : "Selected plug"}
+      className="absolute z-10 flex -translate-x-1/2 items-center gap-0.5 rounded-panel bg-surface p-1 shadow-float"
+      style={{ left: cx, top: y }}
+      onPointerDown={(e) => e.stopPropagation()}
+    >
+      <div role="radiogroup" aria-label="Plug type" className="flex gap-0.5">
+        {PLUG_ORDER.map((t) => (
+          <button
+            key={t}
+            type="button"
+            role="radio"
+            aria-checked={types.size === 1 && types.has(t)}
+            aria-label={PLUG_TYPES[t].label}
+            {...tip(PLUG_TYPES[t].label, { side: "bottom" })}
+            onClick={() => update((p) => ({ type: t, flip: PLUG_TYPES[t].sideways ? p.flip : undefined, down: PLUG_TYPES[t].sideways ? p.down : undefined }))}
+            className={`${miniButton} ${types.size === 1 && types.has(t) ? barIconActive : barIconIdle}`}
+          >
+            <TypeIcon type={t} />
+          </button>
+        ))}
+      </div>
+      <span className="mx-0.5 h-5 w-px bg-line" />
+      <button
+        type="button"
+        aria-label="Rotate plug"
+        {...tip(picked.length > 1 ? "Rotate Plugs" : "Rotate Plug", { side: "bottom" })}
+        disabled={!angled}
+        onClick={() => update((p) => (PLUG_TYPES[knownType(p.type)].sideways ? nextTurn(p) : {}))}
+        className={`${miniButton} ${barIconIdle} disabled:opacity-35`}
+      >
+        <RotateCw size={16} />
+      </button>
+      <button
+        type="button"
+        aria-label={picked.length > 1 ? "Remove plugs" : "Remove plug"}
+        {...tip(picked.length > 1 ? "Remove Plugs" : "Remove Plug", { shortcut: "Delete", side: "bottom" })}
+        onClick={remove}
+        className={`${miniButton} text-danger hover:bg-danger/10`}
+      >
+        <Trash2 size={16} />
+      </button>
     </div>
   );
 }

@@ -6,7 +6,9 @@ screens, the object bar on tablets, the right-click or ••• menu on phones,
 - **Opening it** zooms in on the pedal (with room for cables); **Done** puts the view back. The pedal shows no
   selection outline meanwhile.
 - **Selecting:** like gear: click a plug to select it, Shift-click to add or remove one, click empty canvas (or press
-  Escape) to deselect. Type, Rotate Plug and remove apply to every selected plug.
+  Escape) to deselect. Selected plugs get a mini-menu under them (`PlugMiniMenu`, styled like the selection's
+  `SelectionMiniMenu`): their type, Rotate Plug and Remove, applied to every selected plug. The panel at the top only
+  sets up new plugs (type and Rotate New Plugs) and holds Done.
 - **Adding:** click (or tap) just outside any edge; a plug of the chosen type drops there. Keep the button down to drag
   it into place in the same move.
 - **Suggested jacks:** when it opens, `findJacks` (`lib/jackFinder.ts`) reads a small copy of a catalog pedal's
@@ -22,13 +24,12 @@ screens, the object bar on tablets, the right-click or ••• menu on phones,
   plug is drawn in code in the same grays. DC and MIDI plugs were dropped (Nov 2026); saved ones show as straight
   (`knownType`).
 - **Layering:** plugs are drawn under the pedal, each with a short stub of barrel (`BARREL_STUB`, 0.25″) running into
-  the jack, so a bit of barrel shows wherever the photo's jack leaves room for it. Picking a type with no plug selected sets it for new plugs; with one
-  selected, it changes that plug.
+  the jack, so a bit of barrel shows wherever the photo's jack leaves room for it.
 - **Direction:** right-angle plugs have three ways to sit, and **Rotate Plug** (rotate icon) steps through them: cable
   to one side, cable down into the board (for routing under it, drawn with Trav's top-down drawings,
   `assets/plugs/*-down.svg`, from the "Jacks" section of his Figma file, with no cable showing), then cable to the other
-  side (stored as `flip`). With no plug picked, it sets the way new plugs sit.
-- **Removing:** the trash button, or Delete / Backspace.
+  side (stored as `flip`). In the top panel, it sets the way new plugs sit.
+- **Removing:** the trash button in the mini-menu, or Delete / Backspace.
 - **Switching pedals:** the other pedals sit at 50% opacity; hovering one brings it to full and shows an **Add
   Plugs** pill (tooltip colors, screen-sized). Click it (without dragging) to move plug editing to it, zoomed in on it. Done
   still returns to the view from before plug mode opened.
