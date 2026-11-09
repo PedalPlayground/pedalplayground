@@ -27,31 +27,31 @@ export interface PlugSpec {
   sideways: boolean;
   /** A drawing from `assets/plugs` (shared with Space Between's plug guide), top-down with the barrel pointing left. */
   art?: PlugArtSpec;
+  /** The same plug turned cable-down, seen from above (no cable showing): `assets/plugs/*-down.svg`. */
+  downArt?: PlugArtSpec;
 }
 
 /** How a plug drawing sits: its size, where the body starts (the barrel's left of it goes into the jack), and the barrel's centerline. */
 export interface PlugArtSpec {
-  name: "rean" | "sp400" | "pancake";
+  name: "rean" | "sp400" | "pancake" | "rean-down" | "sp400-down" | "pancake-down";
   w: number;
   h: number;
   /** Where the body starts along the barrel: the edge of the pedal. */
   x0: number;
   /** The barrel's centerline: where the jack is. */
   cy: number;
-  /** Turned cable-down, how wide the body is across the edge (the drawings don't show this side; an estimate). */
-  downWidth: number;
 }
 
 /** The drawings' scale: 0.2 mm per unit (a Rean's thin side is 73 units, about 14.5 mm). */
 export const ART_INCH_PER_UNIT = 0.2 / 25.4;
 
-const art = (a: PlugArtSpec) => ({ art: a, width: a.h * ART_INCH_PER_UNIT, length: (a.w - a.x0) * ART_INCH_PER_UNIT, sideways: true });
+const art = (a: PlugArtSpec, down: PlugArtSpec) => ({ art: a, downArt: down, width: a.h * ART_INCH_PER_UNIT, length: (a.w - a.x0) * ART_INCH_PER_UNIT, sideways: true });
 
 export const PLUG_TYPES: Record<PlugType, PlugSpec> = {
   straight: { label: "Straight ¼″", width: 0.45, length: 1.5, sideways: false },
-  angle: { label: "Right-angle ¼″ (Rean)", ...art({ name: "rean", w: 217, h: 212, x0: 144, cy: 27.5, downWidth: 95 }) },
-  sp400: { label: "Slim right-angle (SP400)", ...art({ name: "sp400", w: 189, h: 133, x0: 144, cy: 37.5, downWidth: 70 }) },
-  pancake: { label: "Pancake", ...art({ name: "pancake", w: 203, h: 201, x0: 143.6, cy: 59.5, downWidth: 115 }) },
+  angle: { label: "Right-angle ¼″ (Rean)", ...art({ name: "rean", w: 217, h: 212, x0: 144, cy: 27.5 }, { name: "rean-down", w: 217, h: 57, x0: 145, cy: 28.5 }) },
+  sp400: { label: "Slim right-angle (SP400)", ...art({ name: "sp400", w: 189, h: 133, x0: 144, cy: 37.5 }, { name: "sp400-down", w: 189, h: 75, x0: 143, cy: 37.5 }) },
+  pancake: { label: "Pancake", ...art({ name: "pancake", w: 203, h: 201, x0: 143.6, cy: 59.5 }, { name: "pancake-down", w: 200, h: 115, x0: 143, cy: 57.5 }) },
 };
 export const PLUG_ORDER: PlugType[] = ["straight", "angle", "sp400", "pancake"];
 
@@ -71,9 +71,11 @@ export function plugBox(type: PlugType, flip?: boolean, down?: boolean) {
   const spec = PLUG_TYPES[knownType(type)];
   if (!spec.art) return { left: -spec.width / 2, right: spec.width / 2, out: spec.length };
   const k = ART_INCH_PER_UNIT;
-  if (down) return { left: (-spec.art.downWidth / 2) * k, right: (spec.art.downWidth / 2) * k, out: spec.length };
-  const [l, r] = [-spec.art.cy * k, (spec.art.h - spec.art.cy) * k];
-  return flip ? { left: -r, right: -l, out: spec.length } : { left: l, right: r, out: spec.length };
+  const a = down && spec.downArt ? spec.downArt : spec.art;
+  const out = (a.w - a.x0) * k;
+  const [l, r] = [-a.cy * k, (a.h - a.cy) * k];
+  if (down) return { left: l, right: r, out };
+  return flip ? { left: -r, right: -l, out } : { left: l, right: r, out };
 }
 
 /** Rotation that turns a plug drawn pointing up (off the top edge) to point off `side`. */

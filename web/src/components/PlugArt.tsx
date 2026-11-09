@@ -1,11 +1,21 @@
 import pancakeArt from "../assets/plugs/pancake.svg";
 import reanArt from "../assets/plugs/rean.svg";
+import pancakeDownArt from "../assets/plugs/pancake-down.svg";
+import reanDownArt from "../assets/plugs/rean-down.svg";
+import sp400DownArt from "../assets/plugs/sp400-down.svg";
 import sp400Art from "../assets/plugs/sp400.svg";
 import { PX_PER_INCH } from "../lib/geometry";
 import { ART_INCH_PER_UNIT, BARREL, BARREL_STUB, knownType, PLUG_TYPES, SIDE_ANGLE, type Plug } from "../lib/plugs";
 
-/** The same drawings as Space Between's plug guide. */
-export const ART_SRC = { rean: reanArt, sp400: sp400Art, pancake: pancakeArt };
+/** The same drawings as Space Between's plug guide, plus each one turned cable-down. */
+export const ART_SRC = {
+  rean: reanArt,
+  sp400: sp400Art,
+  pancake: pancakeArt,
+  "rean-down": reanDownArt,
+  "sp400-down": sp400DownArt,
+  "pancake-down": pancakeDownArt,
+};
 
 /** The cable's length past the plug head, in inches (it fades out). */
 const CABLE = 1.1;
@@ -18,7 +28,7 @@ const CABLE_COLOR = "#4a4a4a";
 /**
  * One plug drawn at real scale, pointing up out of an edge from (0, 0): the head, then a short cable that fades out.
  * Right-angle plugs use the plug-guide drawings and turn their cable sideways (mirrored when `flip`), or point it down
- * into the board (`down`, drawn as the cap seen from above). Inch units; the caller scales it.
+ * into the board (`down`, its own top-down drawing). Inch units; the caller scales it.
  */
 export function PlugShape({ plug }: { plug: Plug }) {
   const type = knownType(plug.type);
@@ -30,38 +40,24 @@ export function PlugShape({ plug }: { plug: Plug }) {
   // A little barrel running into the jack: hidden under the pedal, except where the photo leaves it showing.
   const barrel = <rect x={-BARREL / 2} y={-0.05} width={BARREL} height={BARREL_STUB + 0.05} rx={0.03} fill={METAL} />;
 
-  if (spec.art && plug.down) {
-    // Cable down: from above only the plug's cap shows; the cable drops away under it.
-    const k = ART_INCH_PER_UNIT;
-    const half = (spec.art.downWidth / 2) * k;
-    return (
-      <g>
-        {barrel}
-        <rect x={-half} y={-l} width={half * 2} height={l} rx={Math.min(half, l) * 0.35} fill={BODY} />
-        <rect x={0} y={-l} width={half} height={l} rx={Math.min(half, l) * 0.35} fill={SHADE} />
-        <rect x={0} y={-l} width={Math.min(half, l) * 0.35} height={l} fill={SHADE} />
-        {/* The cap's rounded top catching the light. */}
-        <rect x={-half + 0.05} y={-l + 0.05} width={half - 0.05} height={l - 0.1} rx={Math.min(half, l) * 0.3} fill="#ffffff" opacity={0.08} />
-      </g>
-    );
-  }
-
   if (spec.art) {
-    const a = spec.art;
+    // Cable down: the top-down drawing of the plug turned over, with no cable showing (it drops under the board).
+    const down = !!(plug.down && spec.downArt);
+    const a = down ? spec.downArt! : spec.art;
     const k = ART_INCH_PER_UNIT;
     // The cable leaves the far end of the body, from the middle of its thickness.
     const end = (a.h - a.cy) * k;
     const mid = -((a.w - a.x0) / 2) * k;
     const stub = BARREL_STUB / k;
     return (
-      <g transform={plug.flip ? "scale(-1 1)" : undefined}>
+      <g transform={plug.flip && !down ? "scale(-1 1)" : undefined}>
         <defs>
           <linearGradient id={fade} x1={end} x2={end + CABLE} y1={0} y2={0} gradientUnits="userSpaceOnUse">
             <stop offset="0" stopColor={CABLE_COLOR} />
             <stop offset="1" stopColor={CABLE_COLOR} stopOpacity={0} />
           </linearGradient>
         </defs>
-        {cable(`M${end - 0.1} ${mid} H${end + CABLE}`)}
+        {!down && cable(`M${end - 0.1} ${mid} H${end + CABLE}`)}
         {/* The drawing turned so its barrel points into the pedal, cut to a short stub of barrel. */}
         <g transform={`scale(${k}) rotate(-90) translate(${-a.x0} ${-a.cy})`}>
           <svg x={a.x0 - stub} y={0} width={a.w - a.x0 + stub} height={a.h} viewBox={`${a.x0 - stub} 0 ${a.w - a.x0 + stub} ${a.h}`} overflow="hidden">

@@ -25,9 +25,8 @@ screens, the object bar on tablets, the right-click or ••• menu on phones,
   the jack, so a bit of barrel shows wherever the photo's jack leaves room for it. Picking a type with no plug selected sets it for new plugs; with one
   selected, it changes that plug.
 - **Direction:** the right-angle plugs turn their cable sideways; **Flip Direction** mirrors it. **Cable Down** turns
-  them so the cable drops straight down into the board (for routing under it); from above only the cap shows, with no
-  cable (a code stand-in: the drawings don't show that side, so its width across the edge is an estimate,
-  `downWidth`). Flip Direction is off for these. With no plug picked, it sets it for new plugs.
+  them so the cable drops straight down into the board (for routing under it); it uses Trav's top-down drawings
+  (`assets/plugs/*-down.svg`, from the "Jacks" section of his Figma file), with no cable showing. Flip Direction is off for these. With no plug picked, it sets it for new plugs.
 - **Removing:** the trash button, or Delete / Backspace.
 - **Switching pedals:** the other pedals sit at 50% opacity; hovering one brings it to full and shows an **Add
   Plugs** pill (tooltip colors, screen-sized). Click it (without dragging) to move plug editing to it, zoomed in on it. Done
