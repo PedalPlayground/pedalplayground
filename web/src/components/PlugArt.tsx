@@ -2,7 +2,7 @@ import pancakeArt from "../assets/plugs/pancake.svg";
 import reanArt from "../assets/plugs/rean.svg";
 import sp400Art from "../assets/plugs/sp400.svg";
 import { PX_PER_INCH } from "../lib/geometry";
-import { ART_INCH_PER_UNIT, PLUG_TYPES, SIDE_ANGLE, type Plug } from "../lib/plugs";
+import { ART_INCH_PER_UNIT, BARREL, BARREL_STUB, knownType, PLUG_TYPES, SIDE_ANGLE, type Plug } from "../lib/plugs";
 
 /** The same drawings as Space Between's plug guide. */
 export const ART_SRC = { rean: reanArt, sp400: sp400Art, pancake: pancakeArt };
@@ -17,15 +17,34 @@ const CABLE_COLOR = "#4a4a4a";
 
 /**
  * One plug drawn at real scale, pointing up out of an edge from (0, 0): the head, then a short cable that fades out.
- * Right-angle plugs use the plug-guide drawings and turn their cable sideways (mirrored when `flip`). Inch units; the
- * caller scales it.
+ * Right-angle plugs use the plug-guide drawings and turn their cable sideways (mirrored when `flip`), or point it up
+ * (`up`, drawn end-on). Inch units; the caller scales it.
  */
 export function PlugShape({ plug }: { plug: Plug }) {
-  const spec = PLUG_TYPES[plug.type];
+  const type = knownType(plug.type);
+  const spec = PLUG_TYPES[type];
   const w = spec.width;
   const l = spec.length;
   const fade = `plug-fade-${plug.id}`;
   const cable = (d: string) => <path d={d} stroke={`url(#${fade})`} strokeWidth={0.2} strokeLinecap="round" fill="none" />;
+  // A little barrel running into the jack: hidden under the pedal, except where the photo leaves it showing.
+  const barrel = <rect x={-BARREL / 2} y={-0.05} width={BARREL} height={BARREL_STUB + 0.05} rx={0.03} fill={METAL} />;
+
+  if (spec.art && plug.up) {
+    // Cable up: the body seen end-on from above, with the cable rising out of the middle.
+    const k = ART_INCH_PER_UNIT;
+    const half = (spec.art.upWidth / 2) * k;
+    return (
+      <g>
+        {barrel}
+        <rect x={-half} y={-l} width={half * 2} height={l} rx={Math.min(half, l) * 0.35} fill={BODY} />
+        <rect x={0} y={-l} width={half} height={l} rx={Math.min(half, l) * 0.35} fill={SHADE} />
+        <rect x={0} y={-l} width={Math.min(half, l) * 0.35} height={l} fill={SHADE} />
+        <circle cx={0} cy={-l / 2} r={Math.min(half, l / 2) * 0.55} fill={CABLE_COLOR} />
+        <circle cx={-Math.min(half, l / 2) * 0.15} cy={-l / 2 - Math.min(half, l / 2) * 0.15} r={Math.min(half, l / 2) * 0.18} fill="#ffffff" opacity={0.15} />
+      </g>
+    );
+  }
 
   if (spec.art) {
     const a = spec.art;
@@ -33,6 +52,7 @@ export function PlugShape({ plug }: { plug: Plug }) {
     // The cable leaves the far end of the body, from the middle of its thickness.
     const end = (a.h - a.cy) * k;
     const mid = -((a.w - a.x0) / 2) * k;
+    const stub = BARREL_STUB / k;
     return (
       <g transform={plug.flip ? "scale(-1 1)" : undefined}>
         <defs>
@@ -42,9 +62,9 @@ export function PlugShape({ plug }: { plug: Plug }) {
           </linearGradient>
         </defs>
         {cable(`M${end - 0.1} ${mid} H${end + CABLE}`)}
-        {/* The drawing turned so its barrel points into the pedal; the barrel itself is cut off (it's inside the jack). */}
+        {/* The drawing turned so its barrel points into the pedal, cut to a short stub of barrel. */}
         <g transform={`scale(${k}) rotate(-90) translate(${-a.x0} ${-a.cy})`}>
-          <svg x={a.x0} y={0} width={a.w - a.x0} height={a.h} viewBox={`${a.x0} 0 ${a.w - a.x0} ${a.h}`} overflow="hidden">
+          <svg x={a.x0 - stub} y={0} width={a.w - a.x0 + stub} height={a.h} viewBox={`${a.x0 - stub} 0 ${a.w - a.x0 + stub} ${a.h}`} overflow="hidden">
             <image href={ART_SRC[a.name]} x={0} y={0} width={a.w} height={a.h} />
           </svg>
         </g>
@@ -60,32 +80,12 @@ export function PlugShape({ plug }: { plug: Plug }) {
           <stop offset="1" stopColor={CABLE_COLOR} stopOpacity={0} />
         </linearGradient>
       </defs>
-      {plug.type === "straight" && (
-        <>
-          {cable(`M0 ${-l} V${-l - CABLE}`)}
-          <rect x={-0.13} y={-l - 0.05} width={0.26} height={0.5} rx={0.06} fill={SHADE} />
-          <rect x={-w / 2} y={-l + 0.35} width={w} height={l - 0.55} rx={0.1} fill={BODY} />
-          <rect x={0} y={-l + 0.35} width={w / 2} height={l - 0.55} fill={SHADE} />
-          <rect x={-w / 2 + 0.03} y={-0.24} width={w - 0.06} height={0.24} rx={0.03} fill={METAL} />
-        </>
-      )}
-      {plug.type === "dc" && (
-        <>
-          {cable(`M0 ${-l} V${-l - CABLE}`)}
-          <rect x={-w / 2} y={-l} width={w} height={l - 0.15} rx={0.08} fill={BODY} />
-          <rect x={0} y={-l + 0.05} width={w / 2} height={l - 0.2} fill={SHADE} />
-          <rect x={-w / 2 + 0.06} y={-0.15} width={w - 0.12} height={0.15} fill={METAL} />
-        </>
-      )}
-      {plug.type === "midi" && (
-        <>
-          {cable(`M0 ${-l} V${-l - CABLE}`)}
-          <rect x={-0.13} y={-l - 0.05} width={0.26} height={0.4} rx={0.06} fill={SHADE} />
-          <rect x={-w / 2} y={-l + 0.25} width={w} height={l - 0.4} rx={0.18} fill={BODY} />
-          <rect x={0} y={-l + 0.3} width={w / 2 - 0.05} height={l - 0.5} fill={SHADE} />
-          <rect x={-w / 2 + 0.04} y={-0.15} width={w - 0.08} height={0.15} rx={0.03} fill={METAL} />
-        </>
-      )}
+      {cable(`M0 ${-l} V${-l - CABLE}`)}
+      {barrel}
+      <rect x={-0.13} y={-l - 0.05} width={0.26} height={0.5} rx={0.06} fill={SHADE} />
+      <rect x={-w / 2} y={-l + 0.35} width={w} height={l - 0.55} rx={0.1} fill={BODY} />
+      <rect x={0} y={-l + 0.35} width={w / 2} height={l - 0.55} fill={SHADE} />
+      <rect x={-w / 2 + 0.03} y={-0.24} width={w - 0.06} height={0.24} rx={0.03} fill={METAL} />
     </g>
   );
 }

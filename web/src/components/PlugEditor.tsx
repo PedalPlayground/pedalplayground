@@ -1,10 +1,10 @@
-import { ArrowLeftRight, Sparkles, Trash2 } from "lucide-react";
+import { ArrowLeftRight, ArrowUpFromDot, Trash2 } from "lucide-react";
 import { useEffect, useRef, type PointerEvent as ReactPointerEvent } from "react";
 import { create } from "zustand";
 import { canvasImageUrl } from "../lib/catalog";
 import { PX_PER_INCH } from "../lib/geometry";
 import { findJacks, type JackHint } from "../lib/jackFinder";
-import { newPlugId, plugBox, PLUG_ORDER, PLUG_TYPES, SIDE_ANGLE, sideLength, snapAt, type Plug, type PlugSide, type PlugType } from "../lib/plugs";
+import { knownType, newPlugId, plugBox, PLUG_ORDER, PLUG_TYPES, SIDE_ANGLE, sideLength, snapAt, type Plug, type PlugSide, type PlugType } from "../lib/plugs";
 import type { Item } from "../lib/types";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
@@ -14,10 +14,11 @@ import { tip } from "./Tooltip";
 import { barPanel } from "./toolbarStyles";
 
 /** What the plug editor has picked: the selected plugs (like selecting gear), and the type new plugs get. */
-type Pick = { selected: string[]; type: PlugType; hints: JackHint[] };
+type Pick = { selected: string[]; type: PlugType; up: boolean; hints: JackHint[] };
 const usePlugPick = create<Pick & { set: (p: Partial<Pick>) => void }>((set) => ({
   selected: [],
   type: "straight",
+  up: false,
   hints: [],
   set: (p) => set(p),
 }));
@@ -82,7 +83,7 @@ function nearestSide(p: { x: number; y: number }, w: number, h: number): { side:
  */
 export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
   const box = useRef<HTMLDivElement>(null);
-  const { selected, type, hints, set } = usePlugPick();
+  const { selected, type, up, hints, set } = usePlugPick();
   const drag = useRef<string | null>(null);
   const plugs = item.plugs ?? [];
   /** The plugs as they are right now (a drag can start before the screen catches up). */
@@ -127,7 +128,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     if (e.button !== 0) return;
     e.stopPropagation();
     e.preventDefault();
-    const plug: Plug = { id: newPlugId(), ...at(e), type };
+    const plug: Plug = { id: newPlugId(), ...at(e), type, ...(up && PLUG_TYPES[type].sideways ? { up } : {}) };
     usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
     // Keep dragging the new plug until the button comes up, to line it up in one go.
     capture(e);
@@ -141,7 +142,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     if (e.button !== 0) return;
     e.stopPropagation();
     e.preventDefault();
-    const plug: Plug = { id: newPlugId(), side: h.side, at: h.at, type };
+    const plug: Plug = { id: newPlugId(), side: h.side, at: h.at, type, ...(up && PLUG_TYPES[type].sideways ? { up } : {}) };
     usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
     set({ selected: [plug.id] });
   };
@@ -193,7 +194,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
           })}
           {/* Each plug's handle: its head, ringed in the brand color when picked. */}
           {plugs.map((p) => {
-            const box = plugBox(p.type, p.flip);
+            const box = plugBox(p.type, p.flip, p.up);
             const on = selected.includes(p.id);
             return (
               <g key={p.id} transform={`translate(${anchor(p).join(" ")}) rotate(${SIDE_ANGLE[p.side]})`}>
@@ -245,7 +246,7 @@ export function PlugPanel() {
   const editing = useUi((u) => u.plugEditing);
   const setEditing = useUi((u) => u.setPlugEditing);
   const item = usePlayground((s) => s.items.find((i) => i.id === editing));
-  const { selected, type, hints, set } = usePlugPick();
+  const { selected, type, up, hints, set } = usePlugPick();
   useJackHints(item);
   const suggested = openHints(hints, item?.plugs ?? []);
   const picked = item?.plugs?.filter((p) => selected.includes(p.id)) ?? [];
@@ -273,13 +274,6 @@ export function PlugPanel() {
     set({ selected: [] });
   };
 
-  const addSuggested = () => {
-    if (!item || !suggested.length) return;
-    const added = suggested.map((h): Plug => ({ id: newPlugId(), side: h.side, at: h.at, type }));
-    usePlayground.getState().setPlugs(item.id, [...(item.plugs ?? []), ...added]);
-    set({ selected: added.map((p) => p.id) });
-  };
-
   useEffect(() => {
     if (!editing) return;
     const onKey = (e: KeyboardEvent) => {
@@ -296,7 +290,10 @@ export function PlugPanel() {
   });
 
   if (!editing || !item) return null;
-  const current = plug?.type ?? type;
+  const current = plug ? knownType(plug.type) : type;
+  // Cable up applies to right-angle plugs: the picked ones, or the type new plugs get.
+  const angled = plug ? picked.filter((p) => PLUG_TYPES[knownType(p.type)].sideways) : PLUG_TYPES[type].sideways ? [{ up }] : [];
+  const isUp = angled.length > 0 && angled.every((p) => p.up);
   return (
     <div
       role="dialog"
@@ -323,14 +320,14 @@ export function PlugPanel() {
               key={t}
               type="button"
               role="radio"
-              aria-checked={current === t && picked.every((p) => p.type === current)}
+              aria-checked={current === t && picked.every((p) => knownType(p.type) === current)}
               aria-label={PLUG_TYPES[t].label}
               {...tip(PLUG_TYPES[t].label)}
               onClick={() => {
                 set({ type: t });
-                update((p) => ({ type: t, flip: PLUG_TYPES[t].sideways ? p.flip : undefined }));
+                update((p) => ({ type: t, flip: PLUG_TYPES[t].sideways ? p.flip : undefined, up: PLUG_TYPES[t].sideways ? p.up : undefined }));
               }}
-              className={`grid size-9 place-items-center rounded-control outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${current === t && picked.every((p) => p.type === current) ? "bg-brand/15 ring-1 ring-brand" : "hover:bg-surface-hover"}`}
+              className={`grid size-9 place-items-center rounded-control outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand ${current === t && picked.every((p) => knownType(p.type) === current) ? "bg-brand/15 ring-1 ring-brand" : "hover:bg-surface-hover"}`}
             >
               <TypeIcon type={t} />
             </button>
@@ -341,11 +338,25 @@ export function PlugPanel() {
           type="button"
           aria-label="Flip direction"
           {...tip("Flip Direction")}
-          disabled={!picked.some((p) => PLUG_TYPES[p.type].sideways)}
-          onClick={() => update((p) => (PLUG_TYPES[p.type].sideways ? { flip: !p.flip } : {}))}
+          disabled={!picked.some((p) => PLUG_TYPES[knownType(p.type)].sideways && !p.up)}
+          onClick={() => update((p) => (PLUG_TYPES[knownType(p.type)].sideways && !p.up ? { flip: !p.flip } : {}))}
           className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35"
         >
           <ArrowLeftRight size={17} />
+        </button>
+        <button
+          type="button"
+          aria-label="Cable up"
+          aria-pressed={isUp}
+          {...tip("Cable Up")}
+          disabled={!angled.length}
+          onClick={() => {
+            if (!plug) set({ up: !up });
+            else update((p) => (PLUG_TYPES[knownType(p.type)].sideways ? { up: !isUp || undefined } : {}));
+          }}
+          className={`grid size-9 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35 ${isUp ? "bg-brand/15 text-brand ring-1 ring-brand" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
+        >
+          <ArrowUpFromDot size={17} />
         </button>
         <button
           type="button"
@@ -357,17 +368,6 @@ export function PlugPanel() {
         >
           <Trash2 size={17} />
         </button>
-        {suggested.length > 0 && (
-          <button
-            type="button"
-            onClick={addSuggested}
-            {...tip("Add a plug at each spot that looks like a jack")}
-            className="flex h-9 items-center gap-1.5 rounded-control px-2.5 text-sm font-medium text-brand outline-none hover:bg-brand/10 focus-visible:ring-2 focus-visible:ring-brand"
-          >
-            <Sparkles size={16} />
-            Add {suggested.length} Suggested
-          </button>
-        )}
         <button
           type="button"
           onClick={() => setEditing(null)}

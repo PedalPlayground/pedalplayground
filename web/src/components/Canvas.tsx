@@ -172,14 +172,18 @@ function ItemView({ item }: { item: Item }) {
         className={`pointer-events-auto size-full ${other ? "peer cursor-pointer opacity-50 transition-opacity hover:opacity-100" : ""}`}
         style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}
       >
-        {src ? (
-          <img src={src} alt={itemName(item)} draggable={false} className="size-full select-none object-fill" />
-        ) : item.custom ? (
-          <CustomItemView item={item} />
-        ) : (
-          <div className="size-full bg-surface-hover" />
-        )}
+        {/* Plugs go under the pedal: their barrels run into the jacks, showing only where the photo lets them. */}
         {item.plugs && <PlugsLayer plugs={item.plugs} w={item.width} h={item.height} />}
+        {/* Positioned, so it paints over the (absolutely placed) plugs. */}
+        <div className="relative size-full">
+          {src ? (
+            <img src={src} alt={itemName(item)} draggable={false} className="size-full select-none object-fill" />
+          ) : item.custom ? (
+            <CustomItemView item={item} />
+          ) : (
+            <div className="size-full bg-surface-hover" />
+          )}
+        </div>
       </div>
       {other && (
         <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity peer-hover:opacity-100">
