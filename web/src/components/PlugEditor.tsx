@@ -275,8 +275,14 @@ export function PlugPanel() {
     if (!editing) return;
     const onKey = (e: KeyboardEvent) => {
       if ((e.target as HTMLElement).closest("input, textarea")) return;
-      if (e.key === "Escape") set({ selected: [] });
-      if ((e.key === "Delete" || e.key === "Backspace") && plug) {
+      // Escape deselects the picked plugs, or with none picked, leaves plug editing.
+      if (e.key === "Escape") {
+        if (picked.length) set({ selected: [] });
+        else setEditing(null);
+      }
+      // D removes, as it does for gear (and Delete / Backspace).
+      const d = e.key.toLowerCase() === "d" && !e.metaKey && !e.ctrlKey && !e.altKey;
+      if ((e.key === "Delete" || e.key === "Backspace" || d) && plug) {
         e.preventDefault();
         e.stopPropagation();
         remove();
