@@ -1,9 +1,12 @@
-import { ArrowLeftRight, Trash2 } from "lucide-react";
+import { ArrowLeftRight, Sparkles, Trash2 } from "lucide-react";
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { create } from "zustand";
+import { canvasImageUrl } from "../lib/catalog";
 import { PX_PER_INCH } from "../lib/geometry";
+import { findJacks, type JackHint } from "../lib/jackFinder";
 import { newPlugId, PLUG_ORDER, PLUG_TYPES, SIDE_ANGLE, sideLength, snapAt, type Plug, type PlugSide, type PlugType } from "../lib/plugs";
 import type { Item } from "../lib/types";
+import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { PlugShape } from "./PlugArt";
@@ -11,11 +14,35 @@ import { tip } from "./Tooltip";
 import { barPanel } from "./toolbarStyles";
 
 /** What the plug editor has picked: the selected plugs (like selecting gear), and the type new plugs get. */
-const usePlugPick = create<{ selected: string[]; type: PlugType; set: (p: Partial<{ selected: string[]; type: PlugType }>) => void }>((set) => ({
+type Pick = { selected: string[]; type: PlugType; hints: JackHint[] };
+const usePlugPick = create<Pick & { set: (p: Partial<Pick>) => void }>((set) => ({
   selected: [],
   type: "straight",
+  hints: [],
   set: (p) => set(p),
 }));
+
+/** The guessed jacks that don't have a plug on them yet. */
+const openHints = (hints: JackHint[], plugs: Plug[]) =>
+  hints.filter((h) => !plugs.some((p) => p.side === h.side && Math.abs(p.at - h.at) < 0.4));
+
+/** Reads the pedal's photo for spots that stick out (likely jacks), to offer as ghost plugs. */
+function useJackHints(item: Item | undefined) {
+  const manifest = useCatalog((s) => s.manifest);
+  const set = usePlugPick((p) => p.set);
+  const src = item?.kind === "pedal" && item.image ? canvasImageUrl(manifest, item.kind, item.image) : null;
+  const w = item?.width ?? 0;
+  const h = item?.height ?? 0;
+  useEffect(() => {
+    set({ hints: [] });
+    if (!src) return;
+    let live = true;
+    findJacks(src, w, h).then((hints) => live && set({ hints }));
+    return () => {
+      live = false;
+    };
+  }, [src, w, h, set]);
+}
 
 /** Deselects every plug (a click on empty canvas while editing plugs). */
 export const clearPlugSelection = () => usePlugPick.getState().set({ selected: [] });
@@ -55,7 +82,7 @@ function nearestSide(p: { x: number; y: number }, w: number, h: number): { side:
  */
 export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
   const box = useRef<HTMLDivElement>(null);
-  const { selected, type, set } = usePlugPick();
+  const { selected, type, hints, set } = usePlugPick();
   const [ghost, setGhost] = useState<{ side: PlugSide; at: number } | null>(null);
   const drag = useRef<string | null>(null);
   const plugs = item.plugs ?? [];
@@ -111,6 +138,16 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     set({ selected: [plug.id] });
   };
 
+  /** Clicking a suggested spot adds a plug of the chosen type there. */
+  const addHint = (e: ReactPointerEvent, h: JackHint) => {
+    if (e.button !== 0) return;
+    e.stopPropagation();
+    e.preventDefault();
+    const plug: Plug = { id: newPlugId(), side: h.side, at: h.at, type };
+    usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
+    set({ selected: [plug.id] });
+  };
+
   const anchor = (p: { side: PlugSide; at: number }) =>
     p.side === "top" ? [p.at, 0] : p.side === "bottom" ? [p.at, item.height] : p.side === "left" ? [0, p.at] : [item.width, p.at];
 
@@ -140,6 +177,29 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
           style={{ left: 0, top: 0, width: item.width * s, height: item.height * s }}
           viewBox={`0 0 ${item.width} ${item.height}`}
         >
+          {/* Suggested spots from the photo: faint dashed plugs to click. */}
+          {openHints(hints, plugs).map((h) => {
+            const spec = PLUG_TYPES[type];
+            return (
+              <g key={`${h.side}-${h.at}`} transform={`translate(${anchor(h).join(" ")}) rotate(${SIDE_ANGLE[h.side]})`}>
+                <rect
+                  x={-spec.width / 2}
+                  y={-spec.length}
+                  width={spec.width}
+                  height={spec.length}
+                  rx={0.1}
+                  fill="color-mix(in srgb, var(--color-brand) 12%, transparent)"
+                  stroke="var(--color-brand)"
+                  strokeWidth={1.5 / zoom / s}
+                  strokeDasharray={`${4 / zoom / s} ${3 / zoom / s}`}
+                  className="pointer-events-auto cursor-copy"
+                  onPointerDown={(e) => addHint(e as unknown as ReactPointerEvent, h)}
+                >
+                  <title>Suggested jack: click to add a plug</title>
+                </rect>
+              </g>
+            );
+          })}
           {ghost && !drag.current && (
             <g opacity={0.45} transform={`translate(${anchor(ghost).join(" ")}) rotate(${SIDE_ANGLE[ghost.side]})`}>
               <PlugShape plug={{ id: "ghost", side: ghost.side, at: ghost.at, type }} />
@@ -191,7 +251,9 @@ export function PlugPanel() {
   const editing = useUi((u) => u.plugEditing);
   const setEditing = useUi((u) => u.setPlugEditing);
   const item = usePlayground((s) => s.items.find((i) => i.id === editing));
-  const { selected, type, set } = usePlugPick();
+  const { selected, type, hints, set } = usePlugPick();
+  useJackHints(item);
+  const suggested = openHints(hints, item?.plugs ?? []);
   const picked = item?.plugs?.filter((p) => selected.includes(p.id)) ?? [];
   const plug = picked[0];
 
@@ -217,6 +279,13 @@ export function PlugPanel() {
     set({ selected: [] });
   };
 
+  const addSuggested = () => {
+    if (!item || !suggested.length) return;
+    const added = suggested.map((h): Plug => ({ id: newPlugId(), side: h.side, at: h.at, type }));
+    usePlayground.getState().setPlugs(item.id, [...(item.plugs ?? []), ...added]);
+    set({ selected: added.map((p) => p.id) });
+  };
+
   useEffect(() => {
     if (!editing) return;
     const onKey = (e: KeyboardEvent) => {
@@ -238,7 +307,7 @@ export function PlugPanel() {
     <div
       role="dialog"
       aria-label="Plugs"
-      className={`animate-enter absolute left-1/2 z-20 flex max-w-[calc(100%-24px)] -translate-x-1/2 flex-col gap-2 p-2 ${barPanel} max-sm:bottom-[calc(74px+env(safe-area-inset-bottom))] sm:top-4`}
+      className={`animate-enter absolute left-1/2 z-20 flex w-max max-w-[calc(100%-24px)] -translate-x-1/2 flex-col gap-2 p-2 ${barPanel} max-sm:bottom-[calc(74px+env(safe-area-inset-bottom))] sm:top-4`}
       onPointerDown={(e) => e.stopPropagation()}
     >
       <div className="flex items-center justify-between gap-3 px-1">
@@ -248,7 +317,9 @@ export function PlugPanel() {
             ? `${picked.length} plugs selected`
             : plug
               ? "Drag it along the edge to line it up."
-              : "Click an edge to add a plug. Click a plug to select it."}
+              : suggested.length
+                ? "Dashed spots look like jacks. Click one, or any edge, to add a plug."
+                : "Click an edge to add a plug. Click a plug to select it."}
         </span>
       </div>
       <div className="flex flex-wrap items-center gap-1">
@@ -292,6 +363,17 @@ export function PlugPanel() {
         >
           <Trash2 size={17} />
         </button>
+        {suggested.length > 0 && (
+          <button
+            type="button"
+            onClick={addSuggested}
+            {...tip("Add a plug at each spot that looks like a jack")}
+            className="flex h-9 items-center gap-1.5 rounded-control px-2.5 text-sm font-medium text-brand outline-none hover:bg-brand/10 focus-visible:ring-2 focus-visible:ring-brand"
+          >
+            <Sparkles size={16} />
+            Add {suggested.length} Suggested
+          </button>
+        )}
         <button
           type="button"
           onClick={() => setEditing(null)}

@@ -9,6 +9,12 @@ screens, the object bar on tablets, the right-click or ••• menu on phones)
   Escape) to deselect. Type, Flip Direction and remove apply to every selected plug.
 - **Adding:** click (or tap) just outside any edge; a plug of the chosen type drops there. Keep the button down to drag
   it into place in the same move.
+- **Suggested jacks:** when it opens, `findJacks` (`lib/jackFinder.ts`) reads a small copy of a catalog pedal's
+  cutout photo, finds each edge's enclosure line, and marks short bumps past it (0.2″ to 1″ wide, at least 0.05″ out)
+  as likely jacks. They show as dashed ghost plugs; click one to add a plug of the chosen type, or **Add N Suggested**
+  for all of them (one undo step, all selected so the type can be set at once). A ghost hides once a plug sits within
+  0.4″ of it. The front edge is skipped (footswitch lips read as bumps). Photos with no cutout, or jacks that don't
+  stick out in the photo (Meris, many Eventide and Strymon), give no suggestions; custom pedals have no photo to read.
 - **Moving:** drag a plug along its edge, or round a corner onto another edge. Positions snap to 1/16″.
 - **Types** (`PLUG_TYPES` in `lib/plugs.ts`, drawn to scale by `PlugShape` in `components/PlugArt.tsx`): straight ¼″,
   right-angle ¼″, pancake, DC power and MIDI. Picking a type with no plug selected sets it for new plugs; with one
