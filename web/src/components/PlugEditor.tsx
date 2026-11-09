@@ -178,14 +178,13 @@ export function PlugPanel() {
   const editing = useUi((u) => u.plugEditing);
   const setEditing = useUi((u) => u.setPlugEditing);
   const item = usePlayground((s) => s.items.find((i) => i.id === editing));
-  const stillSelected = usePlayground((s) => !!editing && s.selected.includes(editing));
   const { selected, type, set } = usePlugPick();
   const plug = item?.plugs?.find((p) => p.id === selected);
 
-  // Leaving the pedal (selecting something else, deleting it) ends the editing.
+  // Only Done ends the editing (the canvas and shortcuts are off meanwhile); a pedal that's gone (undone away) ends it too.
   useEffect(() => {
-    if (editing && (!item || !stillSelected)) setEditing(null);
-  }, [editing, item, stillSelected, setEditing]);
+    if (editing && !item) setEditing(null);
+  }, [editing, item, setEditing]);
   useEffect(() => set({ selected: null }), [editing, set]);
 
   const update = (patch: Partial<Plug>) => item && plug && usePlayground.getState().setPlugs(item.id, item.plugs!.map((p) => (p.id === plug.id ? { ...p, ...patch } : p)));
@@ -199,7 +198,6 @@ export function PlugPanel() {
     if (!editing) return;
     const onKey = (e: KeyboardEvent) => {
       if ((e.target as HTMLElement).closest("input, textarea")) return;
-      if (e.key === "Escape") setEditing(null);
       if ((e.key === "Delete" || e.key === "Backspace") && plug) {
         e.preventDefault();
         e.stopPropagation();

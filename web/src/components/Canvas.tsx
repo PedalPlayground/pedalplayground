@@ -262,6 +262,8 @@ export function Canvas() {
       if (useUi.getState().mode !== "playground") return;
       // The right-click menu has the keyboard while it's open (arrows move through it, Esc closes it).
       if (useContextMenu.getState().open) return;
+      // Editing plugs: the plug panel has the keyboard (Delete removes a plug); nothing else ends the editing.
+      if (useUi.getState().plugEditing) return;
       const s = usePlayground.getState();
       // A shared playground being viewed only pans and zooms.
       const viewOnly = !!useUi.getState().viewing;
@@ -395,6 +397,9 @@ export function Canvas() {
 
     // Right click (or Control-click on a Mac): pick what's under the pointer, then let the menu open.
     // A right click on something already selected keeps the whole selection, like Figma and Finder.
+    // Editing plugs: only Done ends it, so the canvas doesn't select, open menus or drag gear meanwhile (it still pans).
+    const plugMode = !!useUi.getState().plugEditing;
+    if (plugMode && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) return;
     if (e.pointerType !== "touch" && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) {
       // View-only boards can't be selected or changed, so a right click does nothing there.
       if (useUi.getState().viewing) return;
@@ -425,8 +430,8 @@ export function Canvas() {
     // Touch: dragging a product moves it, dragging empty canvas pans (no marquee, no tool switching).
     const touch = e.pointerType === "touch";
 
-    if (useUi.getState().viewing) {
-      // View-only: every drag pans (a touch tap does nothing).
+    if (useUi.getState().viewing || plugMode) {
+      // View-only, or editing plugs: every drag pans (a touch tap does nothing).
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: touch, moved: false };
       setPanning(!touch);
     } else if (tool === "hand" || spaceDown.current || e.button === 1) {
@@ -460,7 +465,7 @@ export function Canvas() {
     }
 
     // Touch: holding one finger still opens the right-click menu (iPhones and iPads have no right click).
-    if (touch && pointers.current.size === 1) {
+    if (touch && pointers.current.size === 1 && !plugMode) {
       const at = { x: e.clientX, y: e.clientY };
       const onItem = !!itemEl;
       longPress.current = {
@@ -481,6 +486,7 @@ export function Canvas() {
   const onContextMenu = (e: React.MouseEvent) => {
     e.preventDefault(); // never the browser's own menu on the canvas
     cancelLongPress();
+    if (useUi.getState().plugEditing) return;
     if (Date.now() - longPressAt.current < 1000) return; // a long press already opened it
     if (gesture.current?.type === "pan" || gesture.current?.type === "drag") gesture.current = null;
     openMenuAt(e.clientX, e.clientY, !!(e.target as HTMLElement).closest("[data-item-id]"));

@@ -203,7 +203,8 @@ export const useUi = create<UiState>((set) => ({
   setPlugEditing: (plugEditing) => set(plugEditing ? { plugEditing, searchOpen: false, replacing: false, editing: false, spacingOpen: false } : { plugEditing }),
   spacingOpen: false,
   setSpacingOpen: (spacingOpen) => set(spacingOpen ? { spacingOpen, searchOpen: false, replacing: false, editing: false } : { spacingOpen }),
-  setSearchOpen: (searchOpen) => set({ searchOpen, replacing: false, editing: false }),
+  // Add Gear waits while plugs are being edited (only Done ends that).
+  setSearchOpen: (searchOpen) => set((u) => (searchOpen && u.plugEditing ? {} : { searchOpen, replacing: false, editing: false })),
   replacing: false,
   setReplacing: (replacing) => set({ replacing, editing: false, searchOpen: replacing }),
   editing: false,

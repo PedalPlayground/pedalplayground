@@ -11,7 +11,7 @@ screens, the object bar on tablets, the right-click or ••• menu on phones)
   selected, it changes that plug.
 - **Direction:** right-angle and pancake plugs turn their cable sideways; **Flip Direction** mirrors it.
 - **Removing:** the trash button, or Delete / Backspace.
-- **Done**, Escape, or selecting something else ends editing.
+- **Done** is the only way out. Meanwhile the canvas only pans (no selecting, dragging gear or menus), keyboard shortcuts are off apart from Delete for a picked plug, and Add Gear waits.
 
 Plugs live on the item (`Item.plugs`: side, position along it in inches, type, flip) in its unrotated frame, so they
 move, rotate, flip, duplicate, undo and save with the pedal. Each add, change or removal is one undo step (an add and
