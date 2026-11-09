@@ -1,4 +1,4 @@
-import { ArrowLeftRight, ArrowDownToDot, Trash2 } from "lucide-react";
+import { RotateCw, Trash2 } from "lucide-react";
 import { useEffect, useRef, type PointerEvent as ReactPointerEvent } from "react";
 import { create } from "zustand";
 import { canvasImageUrl } from "../lib/catalog";
@@ -14,10 +14,15 @@ import { tip } from "./Tooltip";
 import { barPanel } from "./toolbarStyles";
 
 /** What the plug editor has picked: the selected plugs (like selecting gear), and the type new plugs get. */
-type Pick = { selected: string[]; type: PlugType; down: boolean; hints: JackHint[] };
+type Pick = { selected: string[]; type: PlugType; flip: boolean; down: boolean; hints: JackHint[] };
+
+/** Rotate on a right-angle plug: cable to one side, then down into the board, then to the other side, and round again. */
+const nextTurn = (p: { flip?: boolean; down?: boolean }) =>
+  p.down ? { flip: true, down: undefined } : p.flip ? { flip: undefined, down: undefined } : { flip: undefined, down: true };
 const usePlugPick = create<Pick & { set: (p: Partial<Pick>) => void }>((set) => ({
   selected: [],
   type: "straight",
+  flip: false,
   down: false,
   hints: [],
   set: (p) => set(p),
@@ -83,7 +88,7 @@ function nearestSide(p: { x: number; y: number }, w: number, h: number): { side:
  */
 export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
   const box = useRef<HTMLDivElement>(null);
-  const { selected, type, down, hints, set } = usePlugPick();
+  const { selected, type, flip, down, hints, set } = usePlugPick();
   const drag = useRef<string | null>(null);
   const plugs = item.plugs ?? [];
   /** The plugs as they are right now (a drag can start before the screen catches up). */
@@ -128,7 +133,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     if (e.button !== 0) return;
     e.stopPropagation();
     e.preventDefault();
-    const plug: Plug = { id: newPlugId(), ...at(e), type, ...(down && PLUG_TYPES[type].sideways ? { down } : {}) };
+    const plug: Plug = { id: newPlugId(), ...at(e), type, ...(PLUG_TYPES[type].sideways ? { ...(flip && !down ? { flip } : {}), ...(down ? { down } : {}) } : {}) };
     usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
     // Keep dragging the new plug until the button comes up, to line it up in one go.
     capture(e);
@@ -142,7 +147,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     if (e.button !== 0) return;
     e.stopPropagation();
     e.preventDefault();
-    const plug: Plug = { id: newPlugId(), side: h.side, at: h.at, type, ...(down && PLUG_TYPES[type].sideways ? { down } : {}) };
+    const plug: Plug = { id: newPlugId(), side: h.side, at: h.at, type, ...(PLUG_TYPES[type].sideways ? { ...(flip && !down ? { flip } : {}), ...(down ? { down } : {}) } : {}) };
     usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
     set({ selected: [plug.id] });
   };
@@ -239,14 +244,14 @@ function TypeIcon({ type }: { type: PlugType }) {
 }
 
 /**
- * The panel while plugs are being edited: the type for new plugs (or the picked plug), flip and remove for the picked
+ * The panel while plugs are being edited: the type for new plugs (or the picked plug), rotate and remove for the picked
  * plug, and Done. It sits where the object menu does: across the top on larger screens, above the toolbar on phones.
  */
 export function PlugPanel() {
   const editing = useUi((u) => u.plugEditing);
   const setEditing = useUi((u) => u.setPlugEditing);
   const item = usePlayground((s) => s.items.find((i) => i.id === editing));
-  const { selected, type, down, hints, set } = usePlugPick();
+  const { selected, type, flip, down, hints, set } = usePlugPick();
   useJackHints(item);
   const suggested = openHints(hints, item?.plugs ?? []);
   const picked = item?.plugs?.filter((p) => selected.includes(p.id)) ?? [];
@@ -291,9 +296,8 @@ export function PlugPanel() {
 
   if (!editing || !item) return null;
   const current = plug ? knownType(plug.type) : type;
-  // Cable down applies to right-angle plugs: the picked ones, or the type new plugs get.
-  const angled = plug ? picked.filter((p) => PLUG_TYPES[knownType(p.type)].sideways) : PLUG_TYPES[type].sideways ? [{ down }] : [];
-  const isDown = angled.length > 0 && angled.every((p) => p.down);
+  // Rotate applies to right-angle plugs: the picked ones, or the type new plugs get.
+  const angled = plug ? picked.filter((p) => PLUG_TYPES[knownType(p.type)].sideways) : PLUG_TYPES[type].sideways ? [{}] : [];
   return (
     <div
       role="dialog"
@@ -336,27 +340,18 @@ export function PlugPanel() {
         <span className="mx-1 h-6 w-px bg-line" />
         <button
           type="button"
-          aria-label="Flip direction"
-          {...tip("Flip Direction")}
-          disabled={!picked.some((p) => PLUG_TYPES[knownType(p.type)].sideways && !p.down)}
-          onClick={() => update((p) => (PLUG_TYPES[knownType(p.type)].sideways && !p.down ? { flip: !p.flip } : {}))}
-          className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35"
-        >
-          <ArrowLeftRight size={17} />
-        </button>
-        <button
-          type="button"
-          aria-label="Cable down"
-          aria-pressed={isDown}
-          {...tip("Cable Down")}
+          aria-label="Rotate plug"
+          {...tip("Rotate Plug")}
           disabled={!angled.length}
           onClick={() => {
-            if (!plug) set({ down: !down });
-            else update((p) => (PLUG_TYPES[knownType(p.type)].sideways ? { down: !isDown || undefined } : {}));
+            if (!plug) {
+              const n = nextTurn({ flip, down });
+              set({ flip: !!n.flip, down: !!n.down });
+            } else update((p) => (PLUG_TYPES[knownType(p.type)].sideways ? nextTurn(p) : {}));
           }}
-          className={`grid size-9 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35 ${isDown ? "bg-brand/15 text-brand ring-1 ring-brand" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
+          className="grid size-9 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-35"
         >
-          <ArrowDownToDot size={17} />
+          <RotateCw size={17} />
         </button>
         <button
           type="button"
