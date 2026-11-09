@@ -167,7 +167,7 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
       // Catalog photos get a drop shadow (--item-drop, per theme) that follows the image's own outline. It sits on this unrotated box so
       // the light always falls down and to the right, whatever the rotation. Custom styles draw their own shadows.
       // Taps go to the rotated inner box only, so the empty corners of this one never catch them.
-      className={`pointer-events-none absolute ${src ? "[filter:var(--item-drop)]" : ""} ${backdrop ? "opacity-30 transition-opacity" : ""} ${other ? "[&:has(>div:hover)]:opacity-100" : ""}`}
+      className={`pointer-events-none absolute ${src ? "[filter:var(--item-drop)]" : ""} ${backdrop ? "opacity-15 transition-opacity" : ""} ${other ? "[&:has(>div:hover)]:opacity-100" : ""}`}
       style={{
         left: 0,
         top: 0,

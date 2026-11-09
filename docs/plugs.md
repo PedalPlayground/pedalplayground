@@ -4,7 +4,7 @@ Cable ends drawn on a pedal's edges, lined up with its jacks. Select one pedal a
 screens, the object bar on tablets, the right-click or ••• menu on phones, and the small bar under the selection), or press **P**.
 
 - **Opening it** zooms in on the pedal (with room for cables); **Done** puts the view back. The pedal shows no
-  selection outline meanwhile, and everything else on the canvas (boards included) fades to 30% so it's clear which
+  selection outline meanwhile, and everything else on the canvas (boards included) fades to 15% so it's clear which
   pedal is being edited.
 - **Selecting:** like gear: click a plug to select it, Shift-click to add or remove one, click empty canvas (or press
   Escape) to deselect. Selected plugs get a mini-menu just clear of the room the biggest plug type takes at their jacks, so it stays put as the type changes and doesn't cover the plug (`PlugMiniMenu`, styled like the selection's
