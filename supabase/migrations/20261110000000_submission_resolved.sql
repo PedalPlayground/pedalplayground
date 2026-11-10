@@ -18,16 +18,16 @@ begin
   if not public.is_catalog_editor() then
     raise exception 'Only catalog editors can review submissions.' using errcode = '42501';
   end if;
-  if decision not in ('needs_changes', 'rejected', 'resolved') then
+  if review_catalog_submission.decision not in ('needs_changes', 'rejected', 'resolved') then
     raise exception 'Decision must be needs_changes, rejected or resolved.' using errcode = '22023';
   end if;
-  update public.catalog_submissions
-     set status = decision,
-         -- The parameter is qualified: catalog_submissions has its own "note" column (the submitter's).
-         editor_note = coalesce(nullif(left(review_catalog_submission.note, 1000), ''), editor_note),
+  -- Parameters are qualified: catalog_submissions has its own "note" column (the submitter's).
+  update public.catalog_submissions s
+     set status = review_catalog_submission.decision,
+         editor_note = coalesce(nullif(left(review_catalog_submission.note, 1000), ''), s.editor_note),
          reviewed_by = auth.uid(),
          reviewed_at = now()
-   where id = submission_id and status in ('pending', 'needs_changes');
+   where s.id = review_catalog_submission.submission_id and s.status in ('pending', 'needs_changes');
   if not found then
     raise exception 'Submission not found, or already decided.' using errcode = 'P0002';
   end if;
