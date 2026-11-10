@@ -1,4 +1,5 @@
 import { ArrowLeft, Pencil, Plus } from "lucide-react";
+import { PhotoViewer } from "../components/PhotoViewer";
 import { trackPage } from "../lib/analytics";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { affiliateProps, buyLinks, DISCLOSURE } from "../lib/affiliate";
@@ -44,6 +45,9 @@ export function ItemPage({
   const thumb = thumbUrl(manifest, kind, item.image);
   const [loaded, setLoaded] = useState(false);
   useEffect(() => setLoaded(false), [src]);
+  /** The photo enlarged over the page. */
+  const [zoomed, setZoomed] = useState(false);
+  useEffect(() => setZoomed(false), [src]);
   const used = (c: CatalogItem) => usage.get(`${kind}:${c.image}`) ?? 0;
 
   /** Public boards that use it (null while loading). */
@@ -107,22 +111,37 @@ export function ItemPage({
         {/* The photo at real proportions on the canvas color, shrunk to fit. */}
         <div className="flex min-h-[260px] items-center justify-center overflow-hidden rounded-container bg-canvas p-6 md:min-h-[420px]">
           {src && (
-            <img
+            // Click to see it bigger.
+            <button
+              type="button"
+              onClick={() => setZoomed(true)}
+              aria-label={`Enlarge photo of ${item.brand} ${item.name}`}
+              style={{ width: item.width * PX_PER_INCH, maxWidth: "min(100%, 520px)" }}
+              className="cursor-zoom-in rounded-inner outline-none focus-visible:ring-2 focus-visible:ring-brand"
+            >
+              <img
+                src={src}
+                alt={`${item.brand} ${item.name}`}
+                onLoad={() => setLoaded(true)}
+                style={{
+                  aspectRatio: `${item.width} / ${item.height}`,
+                  maxHeight: 420,
+                  // The thumbnail stands in while the full photo loads.
+                  backgroundImage: loaded || !thumb ? undefined : `url(${thumb})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+                className="w-full object-contain drop-shadow-[0_6px_14px_rgb(16_18_27/0.18)]"
+              />
+            </button>
+          )}
+          {zoomed && src && (
+            <PhotoViewer
               src={src}
               alt={`${item.brand} ${item.name}`}
-              onLoad={() => setLoaded(true)}
-              style={{
-                width: item.width * PX_PER_INCH,
-                maxWidth: "min(100%, 520px)",
-                aspectRatio: `${item.width} / ${item.height}`,
-                maxHeight: 420,
-                // The thumbnail stands in while the full photo loads.
-                backgroundImage: loaded || !thumb ? undefined : `url(${thumb})`,
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-              }}
-              className="object-contain drop-shadow-[0_6px_14px_rgb(16_18_27/0.18)]"
+              aspect={item.width / item.height}
+              onClose={() => setZoomed(false)}
             />
           )}
         </div>
