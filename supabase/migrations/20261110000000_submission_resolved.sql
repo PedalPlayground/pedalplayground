@@ -23,7 +23,8 @@ begin
   end if;
   update public.catalog_submissions
      set status = decision,
-         editor_note = coalesce(nullif(left(note, 1000), ''), editor_note),
+         -- The parameter is qualified: catalog_submissions has its own "note" column (the submitter's).
+         editor_note = coalesce(nullif(left(review_catalog_submission.note, 1000), ''), editor_note),
          reviewed_by = auth.uid(),
          reviewed_at = now()
    where id = submission_id and status in ('pending', 'needs_changes');
