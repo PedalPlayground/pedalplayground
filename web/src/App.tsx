@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { trackPage } from "./lib/analytics";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
 import { SetPasswordDialog } from "./components/SetPasswordForm";
@@ -127,6 +128,12 @@ export function App() {
   const mode = useUi((u) => (SHOW_MODES ? u.mode : "playground"));
   /** The Equipment List and Signal Path cover the canvas and hide its tools. */
   const covered = mode !== "playground";
+  // One page view per screen: your playground, a shared board (once it has loaded), or another mode.
+  const sharedOpen = useUi((u) => !!u.viewing);
+  useEffect(() => {
+    if (openingShared) return;
+    trackPage(sharedOpen ? "Shared Board" : mode === "signal" ? "Signal Path" : mode === "list" ? "Equipment List" : "Playground");
+  }, [openingShared, sharedOpen, mode]);
   const [dialog, setDialog] = useState<Dialog>(null);
   const close = () => setDialog(null);
   /** Edit Playground: the open playground, or another saved one picked from the menu. */

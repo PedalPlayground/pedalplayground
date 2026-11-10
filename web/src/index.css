@@ -284,18 +284,20 @@ select {
   .btn-primary:hover:not(:disabled) {
     background-color: var(--color-brand-hover);
   }
-  .btn-primary:active:not(:disabled) {
+  .btn-primary:active:not(:disabled):not([aria-expanded="true"]) {
     transform: scale(0.97);
   }
   .btn-primary:disabled {
     opacity: 0.5;
   }
 
-  /* Pressed state for buttons: a quick squeeze. Colors come from each button's own classes. */
+  /* Pressed state for buttons: a quick squeeze. Colors come from each button's own classes. A button whose menu is
+     open doesn't squeeze: the menu is placed from the button's size, and measuring it mid-squeeze nudged the menu
+     sideways (most visibly on the first open, which renders slower). */
   .press {
     transition: transform 0.12s ease-out, background-color 0.15s, color 0.15s;
   }
-  .press:active:not(:disabled) {
+  .press:active:not(:disabled):not([aria-expanded="true"]) {
     transform: scale(0.92);
   }
 }

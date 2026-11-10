@@ -1,6 +1,7 @@
 import { ArrowLeft, Copy, Flag, Heart, MessageSquare, Pencil, Trash2, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { create } from "zustand";
+import { track } from "../lib/analytics";
 import {
   addComment,
   COMMENT_MAX,
@@ -70,6 +71,7 @@ export const useBoardPanel = create<PanelState>((set) => ({
   open: rememberedOpen(),
   setOpen: (open) => {
     remember(open);
+    if (open) track("panel_open", { panel: "Board Details" });
     set({ open });
   },
   unseen: 0,
