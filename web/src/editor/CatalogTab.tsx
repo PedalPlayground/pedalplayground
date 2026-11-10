@@ -194,7 +194,7 @@ export function CatalogTab({
     setBulkBusy(null);
     const missed = chosen.length - ok;
     const n = await publisher.run();
-    setNotice({ text: `${label}: ${ok} ${ok === 1 ? "item" : "items"} changed${missed ? `, ${missed} didn't save` : ""}. ${n.text}`, error: n.error || missed > 0 });
+    setNotice({ ...n, text: `${label}: ${ok} ${ok === 1 ? "item" : "items"} changed${missed ? `, ${missed} didn't save` : ""}. ${n.text}`, error: n.error || missed > 0 });
     if (!n.error) setUnpublished(0);
     setSelected(new Set());
   };
