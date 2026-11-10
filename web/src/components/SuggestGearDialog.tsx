@@ -5,10 +5,12 @@ import { plainField } from "../lib/inputProps";
 import { VOLTAGES } from "../lib/specs";
 import { reportBug, submitSuggestion } from "../lib/suggestions";
 import { stepNumber } from "../lib/stepNumber";
-import { canvasImageUrl, itemTypes, thumbUrl, type Kind } from "../lib/catalog";
-import type { CatalogItem } from "../lib/types";
+import { canvasImageUrl, imageKey, itemTypes, thumbUrl, type Kind } from "../lib/catalog";
+import type { CatalogItem, Item } from "../lib/types";
 import { useAuth } from "../store/auth";
 import { useCatalog } from "../store/catalog";
+import { track } from "../lib/analytics";
+import { create } from "zustand";
 import { fieldError, fieldHelp, fieldInput, fieldLabel, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "./formText";
 import { Modal } from "./Modal";
 import { TypeCombo } from "./TypeCombo";
@@ -23,43 +25,60 @@ const TABS: [SuggestTab, string][] = [
   ["fix", "Wrong Info"],
   ["bug", "Report a Bug"],
 ];
+/** Wrong Info asks what's wrong first, then shows only those fields. Power and types are for pedals only. */
+type FixPart = "name" | "size" | "power" | "types" | "photo" | "other";
+const FIX_PARTS: [FixPart, string][] = [
+  ["name", "Brand or Name"],
+  ["size", "Size"],
+  ["power", "Power"],
+  ["types", "Types"],
+  ["photo", "Photo"],
+  ["other", "Something Else"],
+];
 const TITLES: Record<SuggestTab, string> = { new: "Suggest Gear", fix: "Fix Gear Info", bug: "Report a Bug" };
 
 /**
  * "Suggest Gear", in three tabs. New Gear: a pedal or pedalboard for the catalog, with the Admin form's fields (kind,
  * brand, name, size, power, types) plus a photo and a note. Wrong Info: pick a catalog item and correct its fields
  * (a new photo is optional). Both go to the Admin queue. Report a Bug: a description, filed with the page and browser
- * for the Admin page's Bug Reports. From the Gear page's Suggest tile and Add Gear's search. Signed out, it asks to
- * sign in first.
+ * for the Admin page's Bug Reports. From the Gear page's Suggest tile, Add Gear's search, the account menu, and
+ * Suggest a Fix (selection menus and a Gear item's page), which opens on Wrong Info with the item picked. Signed out,
+ * it asks to sign in first.
  */
 export function SuggestGearDialog({
   onClose,
   onSignIn,
   initialName = "",
   initialTab = "new",
+  fix,
 }: {
   onClose: () => void;
   onSignIn: () => void;
   initialName?: string;
   initialTab?: SuggestTab;
+  /** Opens on Wrong Info with this item already picked (Suggest a Fix). */
+  fix?: { kind: Kind; item: CatalogItem };
 }) {
-  const [tab, setTab] = useState<SuggestTab>(initialTab);
+  const [tab, setTab] = useState<SuggestTab>(fix ? "fix" : initialTab);
   /** Wrong Info: the item being corrected, and the search for it. */
-  const [fixing, setFixing] = useState<{ kind: Kind; item: CatalogItem } | null>(null);
+  const [fixing, setFixing] = useState<{ kind: Kind; item: CatalogItem } | null>(fix ?? null);
   const [find, setFind] = useState(initialName);
   const [bug, setBug] = useState("");
+  /** Wrong Info: what the person says is wrong. */
+  const [parts, setParts] = useState<FixPart[]>([]);
   const id = useId();
   const user = useAuth((s) => s.user);
   const manifest = useCatalog((s) => s.manifest);
   const brands = useMemo(() => (manifest ? catalogBrands([...manifest.pedals, ...manifest.pedalboards]) : []), [manifest]);
-  const [kind, setKind] = useState<Fields["kind"]>("pedal");
-  const [brand, setBrand] = useState("");
-  const [name, setName] = useState(initialName);
-  const [width, setWidth] = useState("");
-  const [height, setHeight] = useState("");
-  const [voltage, setVoltage] = useState("");
-  const [ma, setMa] = useState("");
-  const [types, setTypes] = useState<string[]>([]);
+  const it = fix?.item;
+  const [kind, setKind] = useState<Fields["kind"]>(fix?.kind ?? "pedal");
+  const [brand, setBrand] = useState(it?.brand ?? "");
+  const [name, setName] = useState(it?.name ?? initialName);
+  const [width, setWidth] = useState(it ? inches(it.width) : "");
+  const [height, setHeight] = useState(it ? inches(it.height) : "");
+  const [voltage, setVoltage] = useState(it?.voltage ?? "");
+  const [ma, setMa] = useState(it?.ma ? String(it.ma) : "");
+  const [types, setTypes] = useState<string[]>(it ? itemTypes(it) : []);
   const [photo, setPhoto] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [note, setNote] = useState("");
@@ -119,6 +138,13 @@ export function SuggestGearDialog({
     return out;
   })();
 
+  /** New Gear shows every field; Wrong Info only the parts picked as wrong. */
+  const show = (p: FixPart) => tab !== "fix" || parts.includes(p);
+  const toggle = (p: FixPart) => {
+    setParts((cur) => (cur.includes(p) ? cur.filter((x) => x !== p) : [...cur, p]));
+    setError(null);
+  };
+
   const fields: Fields = {
     kind,
     brand,
@@ -135,6 +161,9 @@ export function SuggestGearDialog({
       if (!bug.trim()) return setError("Tell us what went wrong.");
     } else {
       if (tab === "fix" && !fixing) return setError("Pick the gear to fix.");
+      if (tab === "fix" && !parts.length) return setError("Pick what needs fixing.");
+      if (tab === "fix" && parts.every((p) => p === "other") && !note.trim()) return setError("Tell us what's wrong in the note.");
+      if (tab === "fix" && parts.includes("photo") && !photo) return setError("Add the new photo.");
       const problems = fieldProblems(fields);
       if (tab === "new" && !photo) problems.push("Add a photo.");
       if (problems.length) return setError(problems.join(" "));
@@ -220,7 +249,7 @@ export function SuggestGearDialog({
             <span className="grid size-10 shrink-0 place-items-center">
               {manifest && <img src={canvasImageUrl(manifest, fixing.kind, fixing.item.image) ?? ""} alt="" className="max-h-10 max-w-10 object-contain" />}
             </span>
-            <span className="min-w-0 flex-1 text-xs text-ink-muted">Fixing <span className="font-semibold text-ink">{fixing.item.brand} {fixing.item.name}</span>. Change what's wrong below.</span>
+            <span className="min-w-0 flex-1 text-xs text-ink-muted">Fixing <span className="font-semibold text-ink">{fixing.item.brand} {fixing.item.name}</span></span>
             <button type="button" className="shrink-0 text-xs font-semibold text-brand hover:underline" onClick={() => setFixing(null)}>
               Change
             </button>
@@ -242,6 +271,28 @@ export function SuggestGearDialog({
         </div>
         )}
 
+        {tab === "fix" && (
+          <div>
+            <span className={fieldLabel}>What Needs Fixing?</span>
+            <span className={fieldHelp}>Pick all that apply.</span>
+            <div className="grid grid-cols-2 gap-1 min-[400px]:grid-cols-3" role="group" aria-label="What needs fixing">
+              {FIX_PARTS.filter(([p]) => kind === "pedal" || (p !== "power" && p !== "types")).map(([p, label]) => (
+                <button
+                  type="button"
+                  key={p}
+                  aria-pressed={parts.includes(p)}
+                  onClick={() => toggle(p)}
+                  className={`rounded-control py-1.5 text-sm ${parts.includes(p) ? "bg-brand/10 font-semibold text-brand" : "bg-surface-hover text-ink-muted hover:text-ink"}`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {show("name") && (
+          <>
         <label className="block">
           <span className={fieldLabel}>Brand</span>
           <input className={`${fieldInput} [&::-webkit-calendar-picker-indicator]:hidden`} {...plainField} list={`${id}-brands`} value={brand} onChange={(e) => setBrand(e.target.value)} maxLength={120} autoFocus={tab === "new"} />
@@ -255,7 +306,10 @@ export function SuggestGearDialog({
           <span className={fieldLabel}>Name</span>
           <input className={fieldInput} {...plainField} value={name} onChange={(e) => setName(e.target.value)} maxLength={200} />
         </label>
+          </>
+        )}
 
+        {show("size") && (
         <div>
           <span className={fieldLabel}>Size</span>
           <span className={fieldHelp}>The whole footprint from above, including jacks, knobs and anything else that sticks out.</span>
@@ -285,8 +339,11 @@ export function SuggestGearDialog({
           </div>
         </div>
 
+        )}
+
         {kind === "pedal" && (
           <>
+            {show("power") && (
             <div className="grid grid-cols-2 gap-2">
               <label className="block">
                 <span className={fieldLabel}>Power</span>
@@ -307,18 +364,22 @@ export function SuggestGearDialog({
                 </span>
               </label>
             </div>
+            )}
+            {show("types") && (
             <div>
               <span className={fieldLabel}>Types</span>
               <span className={fieldHelp}>The first is its main type. Optional.</span>
               <TypeCombo value={types} onChange={setTypes} />
             </div>
+            )}
           </>
         )}
 
+        {show("photo") && (
         <div>
           <span className={fieldLabel}>{tab === "fix" ? "New Photo" : "Photo"}</span>
           <span className={fieldHelp}>
-            {tab === "fix" ? "Optional, if the picture is wrong. " : ""}Straight on from above, showing the whole pedal: jacks, knobs and everything that sticks out, with no empty space around it. A PNG with a transparent background is ideal. 10 MB at most.
+            Straight on from above, showing the whole pedal: jacks, knobs and everything that sticks out, with no empty space around it. A PNG with a transparent background is ideal. 10 MB at most.
           </span>
           <input
             ref={fileInput}
@@ -345,13 +406,21 @@ export function SuggestGearDialog({
           </button>
         </div>
 
+        )}
+
+        {(tab !== "fix" || parts.length > 0) && (
         <label className="block">
           <span className={fieldLabel}>Note</span>
           <span className={fieldHelp}>
-            {tab === "fix" ? "What was wrong? A link to the maker's page helps us check." : "Optional. A link to the maker's page helps us check the size."}
+            {tab !== "fix"
+              ? "Optional. A link to the maker's page helps us check the size."
+              : parts.every((p) => p === "other")
+                ? "What's wrong? A link to the maker's page helps us check."
+                : "Optional. What was wrong? A link to the maker's page helps us check."}
           </span>
           <textarea className={`${fieldInput} h-16 resize-none py-2`} value={note} onChange={(e) => setNote(e.target.value)} maxLength={1000} />
         </label>
+        )}
           </>
         )}
 
@@ -361,5 +430,35 @@ export function SuggestGearDialog({
         </button>
       </form>
     </Modal>
+  );
+}
+
+/** Suggest a Fix from the playground's selection menus: the placed catalog item to correct, or null. */
+export const useSuggestFix = create<{ open: { kind: Kind; image: string } | null }>(() => ({ open: null }));
+
+/** Opens Suggest a Fix for a placed catalog item (custom gear has nothing to fix in the catalog). */
+export function openSuggestFix(item: Item | undefined) {
+  if (!item || item.custom || !item.image) return;
+  track("suggest_fix_open", { from: "playground", kind: item.kind });
+  useSuggestFix.setState({ open: { kind: item.kind, image: item.image } });
+}
+
+/** The playground's Suggest a Fix dialog, opened by `openSuggestFix`. */
+export function SuggestFixHost({ onSignIn }: { onSignIn: () => void }) {
+  const open = useSuggestFix((s) => s.open);
+  const manifest = useCatalog((s) => s.manifest);
+  if (!open || !manifest) return null;
+  const item = (open.kind === "pedal" ? manifest.pedals : manifest.pedalboards).find((i) => imageKey(i.image) === imageKey(open.image));
+  if (!item) return null;
+  const close = () => useSuggestFix.setState({ open: null });
+  return (
+    <SuggestGearDialog
+      fix={{ kind: open.kind, item }}
+      onClose={close}
+      onSignIn={() => {
+        close();
+        onSignIn();
+      }}
+    />
   );
 }

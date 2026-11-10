@@ -33,6 +33,7 @@ import { SearchPanel, showNewGear } from "./components/SearchPanel";
 import { SHOW_MODES, tourSeen, useUi } from "./store/ui";
 import { ObjectMenu } from "./components/ObjectMenu";
 import { ContextMenu } from "./components/ContextMenu";
+import { SuggestFixHost } from "./components/SuggestGearDialog";
 import { ActionToast } from "./components/ActionToast";
 import { BackToCenter } from "./components/BackToCenter";
 import { EmptyAddGear } from "./components/EmptyAddGear";
@@ -357,6 +358,7 @@ export function App() {
       <TooltipLayer />
       {billingReturn === "success" && <BillingReturn onDone={() => setBillingReturn(null)} />}
       <UpgradeDialog onSignIn={() => setDialog("account")} />
+      <SuggestFixHost onSignIn={() => setDialog("account")} />
       {/* Not over other dialogs or the sign-in confirmation. */}
       {!busy && <UsernamePrompt />}
       {confirming && emailLink && <ConfirmSignIn tokenHash={emailLink.tokenHash} type={emailLink.type} onDone={() => setConfirming(false)} />}

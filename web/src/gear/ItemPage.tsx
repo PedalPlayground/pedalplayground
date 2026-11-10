@@ -1,4 +1,4 @@
-import { ArrowLeft, Pencil, Plus } from "lucide-react";
+import { ArrowLeft, MessageSquareWarning, Pencil, Plus } from "lucide-react";
 import { PhotoViewer } from "../components/PhotoViewer";
 import { trackPage } from "../lib/analytics";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
@@ -30,6 +30,7 @@ export function ItemPage({
   usage,
   onBack,
   onBrand,
+  onSuggestFix,
   card,
 }: {
   kind: Kind;
@@ -38,6 +39,8 @@ export function ItemPage({
   usage: Map<string, number>;
   onBack: () => void;
   onBrand: (brand: string) => void;
+  /** Opens Suggest Gear on Wrong Info with this item picked. */
+  onSuggestFix: () => void;
   card: (item: CatalogItem) => ReactNode;
 }) {
   const all = kind === "pedal" ? manifest.pedals : manifest.pedalboards;
@@ -189,15 +192,25 @@ export function ItemPage({
               </div>
             ))}
           </dl>
-          {editor && (
-            <a
-              href={`/editor/#catalog?kind=${kind}&key=${encodeURIComponent(item.image)}`}
-              className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-brand hover:underline"
+          <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
+            <button
+              type="button"
+              onClick={onSuggestFix}
+              className="inline-flex items-center gap-1 text-[13px] font-semibold text-brand outline-none hover:underline focus-visible:ring-2 focus-visible:ring-brand"
             >
-              <Pencil size={13} strokeWidth={2.25} />
-              Edit in catalog
-            </a>
-          )}
+              <MessageSquareWarning size={13} strokeWidth={2.25} />
+              Suggest a fix
+            </button>
+            {editor && (
+              <a
+                href={`/editor/#catalog?kind=${kind}&key=${encodeURIComponent(item.image)}`}
+                className="inline-flex items-center gap-1 text-[13px] font-semibold text-brand hover:underline"
+              >
+                <Pencil size={13} strokeWidth={2.25} />
+                Edit in catalog
+              </a>
+            )}
+          </div>
         </div>
       </div>
 
