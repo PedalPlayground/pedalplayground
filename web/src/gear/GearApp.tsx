@@ -1,5 +1,6 @@
 import { ArrowLeft, Plus, Search, SlidersHorizontal, TrendingUp, X } from "lucide-react";
 import { tip } from "../components/Tooltip";
+import { track, trackPage } from "../lib/analytics";
 import { NewTag } from "../components/NewTag";
 import { SuggestGearDialog } from "../components/SuggestGearDialog";
 import { filterMore, filterRow } from "../components/filterList";
@@ -161,6 +162,8 @@ export function GearApp() {
   const [usage, setUsage] = useState<Map<string, number>>(new Map());
   const [shown, setShown] = useState(PAGE);
   const [open, setOpen] = useState(readItem);
+  // The grid's page view; an open item's page sends its own (ItemPage).
+  useEffect(() => void (open || trackPage("Gear")), [open]);
   /** Where the grid was scrolled when an item opened, to return to on Back. */
   const gridScroll = useRef(0);
   /** True once this visit opened an item from the grid, so Back can be the browser's back. */
@@ -196,8 +199,10 @@ export function GearApp() {
       // (A brand respelled to the catalog's casing isn't a new view either.)
       const typingOnly =
         prev && prev.scope === f.scope && prev.brand?.toLowerCase() === f.brand?.toLowerCase() && prev.type === f.type && prev.sort === f.sort;
-      if (prev && !typingOnly) history.pushState(null, "", href);
-      else writeFilters(f);
+      if (prev && !typingOnly) {
+        history.pushState(null, "", href);
+        track("gear_filter", { kind: f.scope, brand: f.brand ?? "all", type: f.type ?? "all", sort: f.sort });
+      } else writeFilters(f);
     }
     setShown(PAGE);
     // A new sort keeps your place (like the card size); a new filter or search starts at the top.

@@ -541,6 +541,7 @@ export const useCloud = create<CloudState>((set, get) => {
     copyShared: () => {
       const viewing = useUi.getState().viewing;
       if (!viewing) return;
+      track("shared_board_copied");
       useUi.getState().setViewing(null);
       clearSharedParam();
       // The copy becomes the open playground; the first save creates it and records where it came from.

@@ -112,11 +112,19 @@ export function startAnalytics() {
     window.dataLayer!.push(arguments);
   };
   window.gtag("js", new Date());
-  window.gtag("config", GA_ID, { allow_google_signals: false, allow_ad_personalization_signals: false });
+  // Page views are sent by trackPage, one per screen, so GA's own first one is off. Its address is cleaned too, so a
+  // sign-in link's token or a typed search never reaches GA.
+  window.gtag("config", GA_ID, {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+    send_page_view: false,
+    page_location: cleanLocation(),
+  });
   const script = document.createElement("script");
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_ID)}`;
   document.head.appendChild(script);
+  sendPage();
 }
 
 /** Records the visitor's choice. Yes starts analytics; no stops it at once. */
@@ -130,6 +138,47 @@ export function setAnalyticsOn(on: boolean) {
   if (on) startAnalytics();
   else window.clarity?.("stop");
   listeners.forEach((fn) => fn());
+}
+
+/** Address parts that say which screen this is. Everything else (sign-in tokens, search text) is left out. */
+const KEEP_PARAMS = ["p", "item", "kind", "brand", "type", "sort", "user"];
+
+/** This page's address with only KEEP_PARAMS, for GA's page_location. */
+function cleanLocation(): string {
+  const from = new URLSearchParams(location.search);
+  const kept = new URLSearchParams();
+  for (const k of KEEP_PARAMS) {
+    const v = from.get(k);
+    if (v) kept.set(k, v);
+  }
+  const qs = kept.toString();
+  return `${location.origin}${location.pathname}${qs ? `?${qs}` : ""}`;
+}
+
+/** The screen showing now, kept so its page view can go out once analytics starts (after a yes in the banner). */
+let page: string | null = null;
+/** The last page view sent, so a screen that re-renders isn't counted twice. */
+let sentPage: string | null = null;
+
+function sendPage() {
+  if (!page || !loaded || !analyticsOn() || !window.gtag || !GA_ID) return;
+  const page_location = cleanLocation();
+  const page_title = `${page} · Pedal Playground`;
+  const key = `${page_title}|${page_location}`;
+  if (key === sentPage) return;
+  sentPage = key;
+  // Later events (track) are filed under this screen too.
+  window.gtag("set", { page_location, page_title });
+  window.gtag("event", "page_view", { page_location, page_title });
+}
+
+/**
+ * Records a page view for the screen now showing ("Playground", "Shared Board", "Gallery", "Gear", or a gear item's
+ * name). Call it whenever the screen changes; GA's Pages and Screens report lists them by these titles.
+ */
+export function trackPage(title: string) {
+  page = title;
+  sendPage();
 }
 
 /** Sends a named event with small, non-identifying details (never names, emails or board contents). */
