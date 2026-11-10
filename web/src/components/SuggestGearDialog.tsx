@@ -5,10 +5,12 @@ import { plainField } from "../lib/inputProps";
 import { VOLTAGES } from "../lib/specs";
 import { reportBug, submitSuggestion } from "../lib/suggestions";
 import { stepNumber } from "../lib/stepNumber";
-import { canvasImageUrl, itemTypes, thumbUrl, type Kind } from "../lib/catalog";
-import type { CatalogItem } from "../lib/types";
+import { canvasImageUrl, imageKey, itemTypes, thumbUrl, type Kind } from "../lib/catalog";
+import type { CatalogItem, Item } from "../lib/types";
 import { useAuth } from "../store/auth";
 import { useCatalog } from "../store/catalog";
+import { track } from "../lib/analytics";
+import { create } from "zustand";
 import { fieldError, fieldHelp, fieldInput, fieldLabel, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "./formText";
 import { Modal } from "./Modal";
 import { TypeCombo } from "./TypeCombo";
@@ -29,37 +31,42 @@ const TITLES: Record<SuggestTab, string> = { new: "Suggest Gear", fix: "Fix Gear
  * "Suggest Gear", in three tabs. New Gear: a pedal or pedalboard for the catalog, with the Admin form's fields (kind,
  * brand, name, size, power, types) plus a photo and a note. Wrong Info: pick a catalog item and correct its fields
  * (a new photo is optional). Both go to the Admin queue. Report a Bug: a description, filed with the page and browser
- * for the Admin page's Bug Reports. From the Gear page's Suggest tile and Add Gear's search. Signed out, it asks to
- * sign in first.
+ * for the Admin page's Bug Reports. From the Gear page's Suggest tile, Add Gear's search, the account menu, and
+ * Suggest a Fix (selection menus and a Gear item's page), which opens on Wrong Info with the item picked. Signed out,
+ * it asks to sign in first.
  */
 export function SuggestGearDialog({
   onClose,
   onSignIn,
   initialName = "",
   initialTab = "new",
+  fix,
 }: {
   onClose: () => void;
   onSignIn: () => void;
   initialName?: string;
   initialTab?: SuggestTab;
+  /** Opens on Wrong Info with this item already picked (Suggest a Fix). */
+  fix?: { kind: Kind; item: CatalogItem };
 }) {
-  const [tab, setTab] = useState<SuggestTab>(initialTab);
+  const [tab, setTab] = useState<SuggestTab>(fix ? "fix" : initialTab);
   /** Wrong Info: the item being corrected, and the search for it. */
-  const [fixing, setFixing] = useState<{ kind: Kind; item: CatalogItem } | null>(null);
+  const [fixing, setFixing] = useState<{ kind: Kind; item: CatalogItem } | null>(fix ?? null);
   const [find, setFind] = useState(initialName);
   const [bug, setBug] = useState("");
   const id = useId();
   const user = useAuth((s) => s.user);
   const manifest = useCatalog((s) => s.manifest);
   const brands = useMemo(() => (manifest ? catalogBrands([...manifest.pedals, ...manifest.pedalboards]) : []), [manifest]);
-  const [kind, setKind] = useState<Fields["kind"]>("pedal");
-  const [brand, setBrand] = useState("");
-  const [name, setName] = useState(initialName);
-  const [width, setWidth] = useState("");
-  const [height, setHeight] = useState("");
-  const [voltage, setVoltage] = useState("");
-  const [ma, setMa] = useState("");
-  const [types, setTypes] = useState<string[]>([]);
+  const it = fix?.item;
+  const [kind, setKind] = useState<Fields["kind"]>(fix?.kind ?? "pedal");
+  const [brand, setBrand] = useState(it?.brand ?? "");
+  const [name, setName] = useState(it?.name ?? initialName);
+  const [width, setWidth] = useState(it ? inches(it.width) : "");
+  const [height, setHeight] = useState(it ? inches(it.height) : "");
+  const [voltage, setVoltage] = useState(it?.voltage ?? "");
+  const [ma, setMa] = useState(it?.ma ? String(it.ma) : "");
+  const [types, setTypes] = useState<string[]>(it ? itemTypes(it) : []);
   const [photo, setPhoto] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [note, setNote] = useState("");
@@ -361,5 +368,35 @@ export function SuggestGearDialog({
         </button>
       </form>
     </Modal>
+  );
+}
+
+/** Suggest a Fix from the playground's selection menus: the placed catalog item to correct, or null. */
+export const useSuggestFix = create<{ open: { kind: Kind; image: string } | null }>(() => ({ open: null }));
+
+/** Opens Suggest a Fix for a placed catalog item (custom gear has nothing to fix in the catalog). */
+export function openSuggestFix(item: Item | undefined) {
+  if (!item || item.custom || !item.image) return;
+  track("suggest_fix_open", { from: "playground", kind: item.kind });
+  useSuggestFix.setState({ open: { kind: item.kind, image: item.image } });
+}
+
+/** The playground's Suggest a Fix dialog, opened by `openSuggestFix`. */
+export function SuggestFixHost({ onSignIn }: { onSignIn: () => void }) {
+  const open = useSuggestFix((s) => s.open);
+  const manifest = useCatalog((s) => s.manifest);
+  if (!open || !manifest) return null;
+  const item = (open.kind === "pedal" ? manifest.pedals : manifest.pedalboards).find((i) => imageKey(i.image) === imageKey(open.image));
+  if (!item) return null;
+  const close = () => useSuggestFix.setState({ open: null });
+  return (
+    <SuggestGearDialog
+      fix={{ kind: open.kind, item }}
+      onClose={close}
+      onSignIn={() => {
+        close();
+        onSignIn();
+      }}
+    />
   );
 }

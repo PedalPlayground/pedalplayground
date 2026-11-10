@@ -2,6 +2,7 @@ import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import {
   Cable,
   Info,
+  MessageSquareWarning,
   AlignHorizontalSpaceBetween,
   Group,
   Ungroup,
@@ -30,6 +31,7 @@ import { useUi } from "../store/ui";
 import { hideTip, platformKeys } from "./Tooltip";
 import { itemName } from "../lib/itemName";
 import { openGearInfo, placedItemHref } from "../lib/gearLink";
+import { openSuggestFix } from "./SuggestGearDialog";
 
 type Kind = "canvas" | "object";
 
@@ -150,6 +152,7 @@ function ObjectItems() {
       {single && !single.custom && <Row icon={<Replace {...ICON} />} label="Replace" onSelect={() => setReplacing(true)} />}
       {single?.kind === "pedal" && <Row icon={<Cable {...ICON} />} label="Plugs" shortcut="P" onSelect={() => useUi.getState().setPlugEditing(single.id)} />}
       {placedItemHref(single) && <Row icon={<Info {...ICON} />} label="Info" onSelect={() => openGearInfo(single)} />}
+      {placedItemHref(single) && <Row icon={<MessageSquareWarning {...ICON} />} label="Suggest a Fix…" onSelect={() => openSuggestFix(single)} />}
       <Row icon={<Trash2 {...ICON} />} label="Remove" shortcut="Delete" onSelect={s.deleteSelected} danger />
     </>
   );
