@@ -1,6 +1,7 @@
 import {
   Cable,
   Info,
+  MessageSquareWarning,
   AlignHorizontalSpaceBetween,
   ArrowDownToLine,
   ArrowUpToLine,
@@ -27,6 +28,7 @@ import {
 import { useState, type ReactNode } from "react";
 import { itemName } from "../lib/itemName";
 import { openGearInfo, placedItemHref } from "../lib/gearLink";
+import { openSuggestFix } from "./SuggestGearDialog";
 import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
@@ -206,6 +208,7 @@ export function ObjectStack() {
       {single && !single.custom && <Row {...row} icon={<Replace size={15} />} label="Replace" onClick={() => setReplacing(true)} />}
       {single?.kind === "pedal" && <Row {...row} icon={<Cable size={16} />} label="Plugs" shortcut="P" onClick={() => useUi.getState().setPlugEditing(single.id)} />}
       {placedItemHref(single) && <Row {...row} icon={<Info size={16} />} label="Info" onClick={() => openGearInfo(single)} />}
+      {placedItemHref(single) && <Row {...row} icon={<MessageSquareWarning size={16} />} label="Suggest a Fix…" onClick={() => openSuggestFix(single)} />}
       <Row {...row} icon={<Trash2 size={16} />} label="Remove" shortcut="Del" onClick={s.deleteSelected} danger />
     </Shell>
   );

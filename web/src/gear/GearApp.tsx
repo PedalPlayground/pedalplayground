@@ -147,6 +147,8 @@ export function GearApp() {
   const error = useCatalog((s) => s.error);
   const [dialog, setDialog] = useState<PageDialog>(null);
   const [suggesting, setSuggesting] = useState(false);
+  /** Suggest a Fix from an item's page: the form opens on Wrong Info with that item picked. */
+  const [fixing, setFixing] = useState<{ kind: Kind; item: CatalogItem } | null>(null);
   const [initial] = useState(readFilters);
   const [scope, setScope] = useState<Scope>(initial.scope);
   /** The kind the shelves, hero and brand tiles show: pedals, unless the grid is just pedalboards. */
@@ -547,6 +549,17 @@ export function GearApp() {
         />
       )}
 
+      {fixing && (
+        <SuggestGearDialog
+          fix={fixing}
+          onClose={() => setFixing(null)}
+          onSignIn={() => {
+            setFixing(null);
+            setDialog("account");
+          }}
+        />
+      )}
+
       {open && (
         <main id="content" className="page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-6">
           {openEntry && manifest ? (
@@ -557,6 +570,10 @@ export function GearApp() {
               usage={usage}
               onBack={closeItem}
               onBrand={brandFromItem}
+              onSuggestFix={() => {
+                track("suggest_fix_open", { from: "gear_page", kind: open.kind });
+                setFixing({ kind: open.kind, item: openEntry });
+              }}
               card={(c) => (
                 <GearCard key={itemKey(c)} item={c} kind={open.kind} manifest={manifest} isNew={!!c.added && c.added >= newSince} onBrand={brandFromItem} onOpen={openItem} />
               )}

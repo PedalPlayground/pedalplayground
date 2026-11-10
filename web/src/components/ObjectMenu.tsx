@@ -1,10 +1,11 @@
-import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Cable, CopyPlus, Group, Info, Lock, LockOpen, Pencil, Replace, RotateCw, Trash2, Ungroup } from "lucide-react";
+import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Cable, CopyPlus, Group, Info, Lock, MessageSquareWarning, LockOpen, Pencil, Replace, RotateCw, Trash2, Ungroup } from "lucide-react";
 import type { ReactNode } from "react";
 import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { itemName } from "../lib/itemName";
 import { openGearInfo, placedItemHref } from "../lib/gearLink";
+import { openSuggestFix } from "./SuggestGearDialog";
 import { barDivider, barIconActive, barIconButton, barIconIdle, barPanel, barSoftButton, barSoftDangerButton } from "./toolbarStyles";
 
 function Action({
@@ -123,6 +124,11 @@ export function ObjectMenu() {
       {placedItemHref(single) && (
         <Action label="Info" onClick={() => openGearInfo(single)}>
           <Info size={18} />
+        </Action>
+      )}
+      {placedItemHref(single) && (
+        <Action label="Suggest a Fix…" onClick={() => openSuggestFix(single)}>
+          <MessageSquareWarning size={18} />
         </Action>
       )}
       {/* Phones: icon button. Tablet and desktop: icon and text, in a soft red version of the Replace style. */}
