@@ -33118,6 +33118,27 @@
 		"Image": "kyro-crunch.png"
 	},
 	{
+		"Brand": "Kz Guitar Works",
+		"Name": "BM Drive",
+		"Width": 1.91,
+		"Height": 3.7,
+		"Image": "kz-bm-drive.png"
+	},
+	{
+		"Brand": "Kz Guitar Works",
+		"Name": "Mid Booster/Buffer",
+		"Width": 1.91,
+		"Height": 3.7,
+		"Image": "kz-mid-booster-buffer.png"
+	},
+	{
+		"Brand": "Kz Guitar Works",
+		"Name": "Treble Booster",
+		"Width": 1.91,
+		"Height": 3.7,
+		"Image": "kz-treble-booster.png"
+	},
+	{
 		"Brand": "L.R. Baggs",
 		"Name": "Align Series Active DI",
 		"Width": 3.34,
