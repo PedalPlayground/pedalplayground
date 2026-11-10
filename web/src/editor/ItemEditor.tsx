@@ -1,5 +1,5 @@
-import { ArrowLeftRight, Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, TriangleAlert } from "lucide-react";
-import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { ArrowLeftRight, Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, Search, TriangleAlert } from "lucide-react";
+import { useEffect, useId, useMemo, useRef, useState, type ReactNode } from "react";
 import { stepNumber } from "../lib/stepNumber";
 import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { ScaleKey } from "../components/ScaleKey";
@@ -39,6 +39,29 @@ export const primaryButton = "btn-primary h-9 whitespace-nowrap px-3 disabled:op
 export const secondaryButton =
   "press h-9 whitespace-nowrap rounded-control bg-surface-hover px-3 text-sm font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
+/** Loads a photo and reads what the photo checks need (its pixel size and whether the background is cut out). */
+export function usePhotoStats(src: string | null): { stats: ImageStats | null; broken: boolean } {
+  const [state, setState] = useState<{ src: string | null; stats: ImageStats | null; broken: boolean }>({ src: null, stats: null, broken: false });
+  useEffect(() => {
+    if (!src) return;
+    let live = true;
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => live && setState({ src, stats: imageStats(img), broken: false });
+    img.onerror = () => live && setState({ src, stats: null, broken: true });
+    img.src = src;
+    return () => {
+      live = false;
+    };
+  }, [src]);
+  // A new photo starts with nothing read yet.
+  return state.src === src && src ? state : { stats: null, broken: false };
+}
+
+/** Google Images for an item's brand and name, PNGs only. */
+export const pngSearchUrl = (brand: string, name: string) =>
+  `https://www.google.com/search?tbm=isch&tbs=ift:png&q=${encodeURIComponent(`${brand.trim()} ${name.trim()}`.trim())}`;
+
 const round2 = (n: number) => Math.round(n * 100) / 100;
 
 const num = (s: string) => {
@@ -58,6 +81,8 @@ export function ItemEditor({
   manifest,
   skipImage,
   lockKind,
+  formEnd,
+  asideEnd,
 }: {
   fields: Fields;
   onChange: (f: Fields) => void;
@@ -67,9 +92,12 @@ export function ItemEditor({
   /** The item's own image key, so it isn't flagged as its own duplicate. */
   skipImage?: string;
   lockKind?: boolean;
+  /** Shown under the fields (the Queue's note and decision buttons), so the form column holds everything to act on. */
+  formEnd?: ReactNode;
+  /** Shown under the checks (the Queue's submitter history). */
+  asideEnd?: ReactNode;
 }) {
-  const [stats, setStats] = useState<ImageStats | null>(null);
-  const [imageError, setImageError] = useState(false);
+  const { stats, broken: imageError } = usePhotoStats(image);
   const fileInput = useRef<HTMLInputElement>(null);
   const set = (patch: Partial<Fields>) => onChange({ ...fields, ...patch });
   /** Bumped when sizes are filled in from elsewhere (a size chip, Copy From, a preview), so the number fields redraw. */
@@ -79,17 +107,6 @@ export function ItemEditor({
     setFilled((n) => n + 1);
   };
   const [copying, setCopying] = useState(false);
-
-  useEffect(() => {
-    setStats(null);
-    setImageError(false);
-    if (!image) return;
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.onload = () => setStats(imageStats(img));
-    img.onerror = () => setImageError(true);
-    img.src = image;
-  }, [image]);
 
   const list = manifest ? (fields.kind === "pedal" ? manifest.pedals : manifest.pedalboards) : [];
   const id = useId();
@@ -268,11 +285,26 @@ export function ItemEditor({
                 e.target.value = "";
               }}
             />
-            <button type="button" className={`${secondaryButton} flex items-center gap-1.5`} onClick={() => fileInput.current?.click()}>
-              <ImageUp size={15} /> {image ? "Replace photo" : "Choose photo"}
-            </button>
+            <div className="flex flex-wrap gap-2">
+              <button type="button" className={`${secondaryButton} flex items-center gap-1.5`} onClick={() => fileInput.current?.click()}>
+                <ImageUp size={15} /> {image ? "Replace photo" : "Choose photo"}
+              </button>
+              {/* Google Images for the brand and name, PNGs only (most cutouts are), in a new tab. */}
+              {fields.brand.trim() || fields.name.trim() ? (
+                <a
+                  href={pngSearchUrl(fields.brand, fields.name)}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={`${secondaryButton} flex items-center gap-1.5`}
+                  {...tip("Google Images, PNGs only, in a new tab")}
+                >
+                  <Search size={15} /> Find PNGs
+                </a>
+              ) : null}
+            </div>
           </div>
         )}
+        {formEnd}
       </div>
 
       {/* min-w-0 all the way down: the size strip pages to fit, so this column can shrink instead of spilling over. */}
@@ -341,6 +373,7 @@ export function ItemEditor({
           ))}
           {!image && <li className="text-[13px] text-ink-muted">Add a photo to run the photo checks.</li>}
         </ul>
+        {asideEnd}
       </div>
     </div>
   );

@@ -21,9 +21,14 @@ export interface Submission {
   extra_types?: string[];
   source_path: string | null;
   note: string | null;
-  status: "pending" | "needs_changes" | "approved" | "rejected";
+  /** "resolved": dealt with some other way (fixed by hand, already listed), so it leaves the queue. */
+  status: "pending" | "needs_changes" | "approved" | "rejected" | "resolved";
   editor_note: string | null;
   submitted_by: string;
+  reviewed_by?: string | null;
+  reviewed_at?: string | null;
+  /** The item it became, once approved. */
+  item_key?: string | null;
   created_at: string;
 }
 
@@ -140,6 +145,59 @@ export async function listQueue(): Promise<Submission[]> {
   return (data ?? []) as Submission[];
 }
 
+/** Short-lived links to several private source images at once, by path (paths that fail are left out). */
+export async function sourceUrls(paths: string[]): Promise<Map<string, string>> {
+  const out = new Map<string, string>();
+  const unique = [...new Set(paths)];
+  if (!unique.length) return out;
+  const { data, error } = await db().storage.from("catalog-sources").createSignedUrls(unique, 3600);
+  fail(error);
+  for (const d of data ?? []) if (d.path && d.signedUrl && !d.error) out.set(d.path, d.signedUrl);
+  return out;
+}
+
+/** Usernames by user id (people without one are left out). */
+export async function usernames(ids: string[]): Promise<Map<string, string>> {
+  const out = new Map<string, string>();
+  const unique = [...new Set(ids)];
+  if (!unique.length) return out;
+  const { data, error } = await db().from("profiles").select("user_id,username").in("user_id", unique);
+  // Profiles not set up: show no names rather than failing the queue.
+  if (error) return out;
+  for (const r of (data ?? []) as { user_id: string; username: string }[]) out.set(r.user_id, r.username);
+  return out;
+}
+
+/** Everything one person has submitted: totals by status, and their latest submissions, newest first. */
+export interface SubmitterHistory {
+  counts: Record<Submission["status"], number>;
+  total: number;
+  recent: Submission[];
+}
+
+export async function submitterHistory(userId: string, limit = 50): Promise<SubmitterHistory> {
+  const statuses: Submission["status"][] = ["pending", "needs_changes", "approved", "rejected", "resolved"];
+  const [recent, ...counts] = await Promise.all([
+    db()
+      .from("catalog_submissions")
+      .select("id,kind,target_key,brand,name,status,editor_note,submitted_by,reviewed_by,reviewed_at,item_key,created_at")
+      .eq("submitted_by", userId)
+      .order("created_at", { ascending: false })
+      .limit(limit),
+    ...statuses.map((st) =>
+      db().from("catalog_submissions").select("id", { count: "exact", head: true }).eq("submitted_by", userId).eq("status", st),
+    ),
+  ]);
+  fail(recent.error);
+  for (const c of counts) fail(c.error);
+  const byStatus = Object.fromEntries(statuses.map((st, i) => [st, counts[i].count ?? 0])) as SubmitterHistory["counts"];
+  return {
+    counts: byStatus,
+    total: statuses.reduce((n, st) => n + byStatus[st], 0),
+    recent: (recent.data ?? []) as Submission[],
+  };
+}
+
 /** Uploads an image to the editor's own folder in catalog-sources and returns its path. */
 export async function uploadSource(file: File, userId: string): Promise<string> {
   const ext = file.type === "image/png" ? "png" : file.type === "image/webp" ? "webp" : "jpg";
@@ -166,8 +224,9 @@ export async function approve(id: string): Promise<string> {
   return data as string;
 }
 
-export async function review(id: string, decision: "needs_changes" | "rejected", note: string): Promise<void> {
+export async function review(id: string, decision: "needs_changes" | "rejected" | "resolved", note: string): Promise<void> {
   const { error } = await db().rpc("review_catalog_submission", { submission_id: id, decision, note });
+  if (error && decision === "resolved" && /decision must be/i.test(error.message)) throw new Error("Resolve isn't set up yet. Run the submission_resolved migration first.");
   fail(error);
 }
 
