@@ -111,7 +111,10 @@ export const useAuth = create<AuthState>((set, get) => ({
   signInWithPassword: async (email, password) => {
     if (!supabase) return "Cloud sign-in is not configured.";
     const { error } = await supabase.auth.signInWithPassword({ email, password });
-    if (!error) return null;
+    if (!error) {
+      track("login", { method: "password" });
+      return null;
+    }
     return /invalid login credentials/i.test(error.message)
       ? "That email and password don't match. If you signed up with an email link, use a sign-in code instead."
       : friendly(error.message);
@@ -144,6 +147,7 @@ export const useAuth = create<AuthState>((set, get) => ({
     const { error } = await supabase.auth.verifyOtp({ email, token: code.replace(/\s/g, ""), type });
     if (error) return friendly(error.message);
     if (type === "recovery") set({ recovering: true });
+    else track("login", { method: "code" });
     return null;
   },
 
@@ -152,6 +156,7 @@ export const useAuth = create<AuthState>((set, get) => ({
     const { error } = await supabase.auth.verifyOtp({ token_hash: tokenHash, type });
     if (error) return friendly(error.message);
     if (type === "recovery") set({ recovering: true });
+    else track("login", { method: "email_link" });
     return null;
   },
 

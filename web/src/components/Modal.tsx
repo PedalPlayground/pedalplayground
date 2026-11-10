@@ -1,6 +1,7 @@
 import { X } from "lucide-react";
 import { useEffect, type ReactNode } from "react";
 import { createPortal } from "react-dom";
+import { track } from "../lib/analytics";
 
 /**
  * `closeX` adds an X button in the top-right corner, for dialogs without their own Close or Cancel button.
@@ -21,6 +22,8 @@ export function Modal({
   closeX?: boolean;
   footer?: ReactNode;
 }) {
+  // Every dialog is counted by its title (always fixed wording, never a board or person's name).
+  useEffect(() => track("dialog_open", { dialog: title }), [title]);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);

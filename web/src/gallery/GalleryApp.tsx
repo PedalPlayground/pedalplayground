@@ -11,6 +11,7 @@ import { moderationError } from "../lib/moderation";
 import { useRestriction } from "../store/standing";
 import { useAuth } from "../store/auth";
 import { tip } from "../components/Tooltip";
+import { track, trackPage } from "../lib/analytics";
 import { RoleBadges, teamRole, nameLink } from "../components/RoleBadge";
 import { LabeledSelect } from "../components/LabeledSelect";
 import { DensitySwitch, useDensity, type Density } from "../components/DensitySwitch";
@@ -62,6 +63,7 @@ export function GalleryApp() {
   const [returning] = useState(() => readGalleryReturn(true));
   /** Filters in this page's address (?type, ?sort, ?user, ?q), which win over the saved spot. */
   const [fromUrl] = useState(readGalleryUrl);
+  useEffect(() => trackPage("Gallery"), []);
   const init = useAuth((s) => s.init);
   const user = useAuth((s) => s.user);
   const ready = useAuth((s) => s.ready);
@@ -132,7 +134,10 @@ export function GalleryApp() {
     lastView.current = { type, sort, byUser };
     if (href === window.location.pathname + window.location.search) return;
     const sameView = prev && prev.type === type && prev.sort === sort && prev.byUser === byUser;
-    if (prev && !sameView) history.pushState(null, "", href);
+    if (prev && !sameView) {
+      history.pushState(null, "", href);
+      track("gallery_filter", { type: type ?? "all", sort, one_person: !!byUser });
+    }
     else history.replaceState(null, "", href);
   }, [type, sort, byUser, search]);
   useEffect(() => {

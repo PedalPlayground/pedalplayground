@@ -154,8 +154,22 @@ Supabase project and Stripe test data stay as they are.
 Set `VITE_GA_ID=G-XXXXXXXXXX` (the GA4 web stream's measurement ID) in the environment the build runs in, for example
 the `.env.production` that the deploy uses or the GitHub environment's variables. With no ID the build contains no
 analytics code at all. It never runs on localhost, and visitors can turn it off in Settings → Terms & Privacy.
-Events sent: `add_gear`, `custom_item_created`, `share_link_created`, `sign_up`, `upgrade_opened`. Mark
-`sign_up` and `upgrade_opened` as key events in GA4 if you want them as conversions.
+The playground, Gallery and Gear pages all load it; Admin (`/editor/`) doesn't, so editors' work isn't counted.
+
+**Page views.** GA's own page views are off (`send_page_view: false`). Instead `trackPage` in
+`web/src/lib/analytics.ts` sends one `page_view` per screen, titled "<screen> · Pedal Playground": Playground, Shared
+Board, Gallery, Gear, and "Gear: <brand> <name>" for each gear item. The address sent keeps only the parts that say
+which screen it is (`p`, `item`, `kind`, `brand`, `type`, `sort`, `user`), so sign-in tokens and typed searches never
+reach GA. In GA4, turn off Admin → Data streams → (the web stream) → Enhanced measurement → gear icon → "Page changes
+based on browser history events", or the Gallery and Gear filters get counted as extra page views.
+
+**Events.** `dialog_open` (`dialog`: the dialog's title, sent by `Modal` for every dialog), `panel_open` (`panel`: Add
+Gear or Board Details), `gallery_filter` (`type`, `sort`, `one_person`), `gear_filter` (`kind`, `brand`, `type`,
+`sort`), `login` (`method`), `sign_up`, `password_set`, `board_like`, `board_unlike`, `shared_board_copied`, `add_gear`,
+`custom_item_created`, `share_link_created`, `upgrade_opened`, `whats_new_open`, `whats_new_pedals`, `whats_new_link`.
+Never send names, emails, board contents or typed text. To see an event's details in reports, add each detail as an
+event-scoped custom dimension (Admin → Custom definitions). Mark `sign_up` and `upgrade_opened` as key events if you
+want them as conversions.
 
 ## Microsoft Clarity
 
