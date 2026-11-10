@@ -494,3 +494,11 @@ select {
     zoom: var(--page-zoom);
   }
 }
+
+/* Phones: room under each page's content for the floating tab bar (components/SiteTabs.tsx, TabBar). Unlayered, so it
+   wins over the pages' own bottom padding. */
+@media (max-width: 639.98px) {
+  body:has(.tab-bar) main.page-main {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+}

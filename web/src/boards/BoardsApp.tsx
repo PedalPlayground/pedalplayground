@@ -166,7 +166,7 @@ export function BoardsApp() {
               </span>
             )}
           </h1>
-          <div className="ml-auto flex w-full items-center gap-2.5 sm:w-auto">
+          <div className={`ml-auto flex items-center gap-2.5 ${!signedOut && mine.length > 0 ? "w-full sm:w-auto" : ""}`}>
             {!signedOut && mine.length > 0 && (
               // On the page itself, so a white field with a hairline (see Form backgrounds in docs/ui-conventions.md).
               <label className="relative block min-w-0 flex-1 sm:w-64 sm:flex-none">
@@ -183,7 +183,7 @@ export function BoardsApp() {
             )}
             <a
               href={user ? handoffHref({ kind: "new" }) : "/"}
-              className="btn-primary press flex h-9 shrink-0 items-center gap-1.5 rounded-control px-3.5 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand max-sm:ml-auto"
+              className="btn-primary press flex h-9 shrink-0 items-center gap-1.5 rounded-control px-3.5 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
             >
               <Plus size={16} strokeWidth={2.5} />
               {user ? "New Playground" : "Start Building"}
