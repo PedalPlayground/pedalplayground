@@ -1,3 +1,4 @@
+import { stepNumber } from "../lib/stepNumber";
 import { Check, RotateCcw } from "lucide-react";
 import { useState } from "react";
 import { NEW_PEDAL_COLOR, PEDAL_COLOR_PRESETS, readableOn } from "../lib/color";
@@ -31,7 +32,7 @@ import {
 import { PedalArt } from "./PedalArt";
 import { tip } from "./Tooltip";
 import { plainField } from "../lib/inputProps";
-import { fieldLabel, fieldLabelText } from "./formText";
+import { fieldInput, fieldLabel, fieldLabelText } from "./formText";
 import { hasProfanity, PROFANITY_MESSAGE } from "../lib/profanity";
 import { useAllowedNames } from "../lib/useAllowedNames";
 
@@ -142,9 +143,9 @@ function Toggle({ on, onChange, label }: { on: boolean; onChange: (on: boolean) 
       aria-checked={on}
       aria-label={label}
       onClick={() => onChange(!on)}
-      className={`relative inline-flex h-[18px] w-8 shrink-0 rounded-full outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-brand" : "bg-ink/15"}`}
+      className={`relative inline-flex h-[18px] w-8 shrink-0 rounded-full outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-brand ${on ? "bg-brand" : "bg-soft-active"}`}
     >
-      <span className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white shadow-sm transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`} />
+      <span className={`absolute left-0.5 top-0.5 size-3.5 rounded-full bg-white transition-transform duration-200 ease-out ${on ? "translate-x-3.5" : ""}`} />
     </button>
   );
 }
@@ -174,7 +175,7 @@ function BoardOptions({
         <div className="grid grid-cols-3 gap-1.5">
           {BOARD_TOPS.map((t) => (
             <button key={t.id} type="button" aria-pressed={board.top === t.id} onClick={() => onChange({ top: t.id })} className={tile(board.top === t.id)}>
-              <span className="h-7 w-full rounded-[3px]" style={topBackground(t.id)} />
+              <span className="h-7 w-full rounded-inner" style={topBackground(t.id)} />
               {t.name}
             </button>
           ))}
@@ -201,7 +202,7 @@ function BoardOptions({
                       role="radio"
                       aria-checked={units === u}
                       onClick={() => units !== u && onUnits()}
-                      className={`rounded-[3px] px-1.5 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-brand ${units === u ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
+                      className={`rounded-inner px-1.5 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-brand ${units === u ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`}
                     >
                       {u}
                     </button>
@@ -230,7 +231,7 @@ function BoardOptions({
               <div className="grid grid-cols-3 gap-1.5">
                 {BORDER_FINISHES.map((f) => (
                   <button key={f.id} type="button" aria-pressed={board.finish === f.id} onClick={() => onChange({ finish: f.id })} className={tile(board.finish === f.id)}>
-                    <span className="h-5 w-full rounded-[3px]" style={finishBackground(f.id)} />
+                    <span className="h-5 w-full rounded-inner" style={finishBackground(f.id)} />
                     {f.name}
                   </button>
                 ))}
@@ -315,8 +316,9 @@ export function CustomItemForm({
   const [jackSide, setJackSide] = useState(hasSideJacks(initialJacks));
   // Until the user picks jacks themselves, each style brings its usual ones.
   const [jacksPicked, setJacksPicked] = useState(!!item);
-  // No name field: a custom pedal keeps its existing name, or the search text it was made from.
-  const [name] = useState(item ? (item.kind === "pedal" ? item.label : "") : (initialName ?? ""));
+  // Starts as the item's existing name (boards saved before they had one say "Custom Pedalboard"), or the search
+  // text it was made from.
+  const [name, setName] = useState(item ? (item.label === "Custom Pedalboard" ? "" : item.label) : (initialName ?? ""));
   const [color, setColor] = useState(item?.color ?? NEW_PEDAL_COLOR);
   const [board, setBoard] = useState<BoardStyle>(boardStyle(item?.board));
   const patchBoard = (patch: Partial<BoardStyle>) => setBoard((b) => ({ ...b, ...patch }));
@@ -377,7 +379,8 @@ export function CustomItemForm({
       width: foot.width,
       height: foot.height,
       jacks,
-      label: kind === "pedal" ? name.trim() : "Custom Pedalboard",
+      // Empty is fine: unnamed gear is called "Custom Pedal" or "Custom Pedalboard" (itemName).
+      label: name.trim(),
       color: kind === "pedal" ? color : null,
       template: kind === "pedal" ? template : undefined,
       board: kind === "pedalboard" ? board : undefined,
@@ -415,6 +418,20 @@ export function CustomItemForm({
         </div>
       )}
 
+      {/* Pedals print the name on their face; a board's shows only in its hover label and menus. */}
+      <label className="block">
+        <span className={fieldLabel}>Name (optional)</span>
+        <input
+          className={`${fieldInput} max-sm:text-base`}
+          {...plainField}
+          autoCapitalize="words"
+          enterKeyHint="done"
+          value={name}
+          maxLength={40}
+          onChange={(e) => setName(e.target.value)}
+          autoFocus={!item && kind === "pedal"}
+        />
+      </label>
 
       {kind === "pedal" && (
         <div>
@@ -479,7 +496,7 @@ export function CustomItemForm({
                 role="radio"
                 aria-checked={units === u}
                 onClick={() => units !== u && switchUnits()}
-                className={`rounded-[3px] px-1.5 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-brand ${units === u ? "bg-surface text-ink shadow-sm" : "text-ink-muted hover:text-ink"}`}
+                className={`rounded-inner px-1.5 py-0.5 outline-none focus-visible:ring-2 focus-visible:ring-brand ${units === u ? "bg-surface text-ink" : "text-ink-muted hover:text-ink"}`}
               >
                 {u}
               </button>
@@ -496,7 +513,7 @@ export function CustomItemForm({
             <label key={labelText} className="flex h-9 min-w-0 items-center gap-1.5 rounded-control bg-surface-hover px-2.5 focus-within:ring-2 focus-within:ring-brand">
               <span className="shrink-0 text-xs text-ink-muted">{labelText}</span>
               <input
-                className="h-full min-w-0 flex-1 bg-transparent text-right text-sm outline-none placeholder:text-ink-muted/70 max-sm:text-base"
+                className="h-full min-w-0 flex-1 bg-transparent text-right text-sm outline-none placeholder:text-ink-muted max-sm:text-base"
                 {...plainField}
                 inputMode="decimal"
                 enterKeyHint="done"
@@ -504,6 +521,7 @@ export function CustomItemForm({
                 value={value}
                 placeholder={hint}
                 onChange={(e) => set(e.target.value)}
+                onKeyDown={(e) => stepNumber(e, (_, text) => set(text), { max: units === "mm" ? MAX_INCHES * MM_PER_INCH : MAX_INCHES })}
                 autoFocus={focus}
               />
               <span aria-hidden className="shrink-0 text-xs text-ink-muted">

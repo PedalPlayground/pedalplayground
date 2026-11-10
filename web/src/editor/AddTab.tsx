@@ -74,7 +74,7 @@ export function AddTab({
     <div className="grid gap-5">
       <h2 className="text-lg font-bold tracking-[-0.01em]">Add to the catalog</h2>
       {copiedFrom && (
-        <div role="status" className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-lg border border-line px-3 py-2 text-[13px]">
+        <div role="status" className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-panel border border-line px-3 py-2 text-[13px]">
           <span>
             Copied brand and size from {copiedFrom.item.brand} {copiedFrom.item.name}.
           </span>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { trackPage } from "./lib/analytics";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { AccountDialog } from "./components/AccountDialog";
 import { SetPasswordDialog } from "./components/SetPasswordForm";
-import { BoardInfoButton, BoardPanel } from "./components/BoardPanel";
+import { BoardInfoButton, BoardPanel, useBoardPanel } from "./components/BoardPanel";
 import { Canvas } from "./components/Canvas";
 import { BillingReturn } from "./components/BillingReturn";
 import { ConfirmSignIn } from "./components/ConfirmSignIn";
@@ -10,7 +11,7 @@ import { EquipmentList } from "./components/EquipmentList";
 import { SignalPath } from "./components/SignalPath";
 import { startAvatarSync } from "./lib/avatar";
 import { AvatarDialog } from "./components/AvatarDialog";
-import { AvatarMenu } from "./components/AvatarMenu";
+import { AvatarMenu, GuestMenu } from "./components/AvatarMenu";
 import { SettingsMenu } from "./components/SettingsMenu";
 import { GuestButtons, SiteHeader } from "./components/SiteTabs";
 import { MadeBy } from "./components/MadeBy";
@@ -18,6 +19,10 @@ import { ModeRail } from "./components/ModeRail";
 import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
 import { BoardLabel, BuildsMenu } from "./components/PlaygroundSwitcher";
 import { takeHandoff } from "./lib/handoff";
+import type { Kind } from "./lib/catalog";
+import { recordGearAdd } from "./lib/trending";
+import { useCatalog } from "./store/catalog";
+import { toast } from "./store/toast";
 import { requestNewPlayground } from "./lib/newPlayground";
 import { NewPlaygroundDialog } from "./components/NewPlaygroundDialog";
 import { EditPlaygroundDialog } from "./components/EditPlaygroundDialog";
@@ -39,6 +44,7 @@ import { StandingNotice } from "./components/StandingNotice";
 import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { SpaceBetweenPanel } from "./components/SpaceBetweenPanel";
+import { PlugPanel } from "./components/PlugEditor";
 import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
 import { Toolbar } from "./components/Toolbar";
 import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
@@ -85,6 +91,8 @@ async function openSharedFromUrl() {
   try {
     if (!slug || !useAuth.getState().cloudEnabled) return;
     if (!(await useCloud.getState().openShared(slug))) window.alert("That shared playground wasn't found or is no longer shared.");
+    // An Explore card's Comments button: open the board panel at its comments.
+    else if (window.location.hash === "#comments") useBoardPanel.getState().setOpen(true);
   } catch {
     window.alert("Could not open that shared playground.");
   } finally {
@@ -93,7 +101,7 @@ async function openSharedFromUrl() {
 }
 
 const headerButton =
-  "btn-primary h-[26px] whitespace-nowrap rounded-[5px] px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1";
+  "btn-primary h-[26px] whitespace-nowrap rounded-control px-3 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1";
 
 export function App() {
   const init = useAuth((s) => s.init);
@@ -106,6 +114,7 @@ export function App() {
   const openUpgrade = useUi((u) => u.openUpgrade);
   const searchOpen = useUi((u) => u.searchOpen);
   const spacingOpen = useUi((u) => u.spacingOpen);
+  const plugEditing = useUi((u) => u.plugEditing);
   const replacing = useUi((u) => u.replacing);
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
@@ -119,6 +128,12 @@ export function App() {
   const mode = useUi((u) => (SHOW_MODES ? u.mode : "playground"));
   /** The Equipment List and Signal Path cover the canvas and hide its tools. */
   const covered = mode !== "playground";
+  // One page view per screen: your playground, a shared board (once it has loaded), or another mode.
+  const sharedOpen = useUi((u) => !!u.viewing);
+  useEffect(() => {
+    if (openingShared) return;
+    trackPage(sharedOpen ? "Shared Board" : mode === "signal" ? "Signal Path" : mode === "list" ? "Equipment List" : "Playground");
+  }, [openingShared, sharedOpen, mode]);
   const [dialog, setDialog] = useState<Dialog>(null);
   const close = () => setDialog(null);
   /** Edit Playground: the open playground, or another saved one picked from the menu. */
@@ -154,6 +169,7 @@ export function App() {
   });
   const authReady = useAuth((s) => s.ready);
   const cloudList = useCloud((c) => c.list);
+  const manifest = useCatalog((c) => c.manifest);
   const billingKnown = useBilling((b) => !b.billingEnabled || !!b.entitlements);
   useEffect(() => {
     if (!handoff || !authReady) return;
@@ -163,6 +179,16 @@ export function App() {
       requestNewPlayground();
     } else if (handoff.kind === "playgrounds") {
       setDialog("playgrounds");
+    } else if (handoff.kind === "add") {
+      // Waits for the catalog, then drops the item onto the open board.
+      if (!manifest) return;
+      const [kind, key] = handoff.id.split(":") as [Kind, string];
+      const item = (kind === "pedalboard" ? manifest.pedalboards : manifest.pedals).find((c) => c.image === key);
+      if (item) {
+        usePlayground.getState().addCatalogItem(kind, item);
+        recordGearAdd(kind, item.image);
+        toast(`Added ${item.brand} ${item.name}`);
+      }
     } else if (handoff.kind === "edit") {
       const target = cloudList.find((p) => p.id === handoff.id);
       if (!target) return; // the list is still loading
@@ -170,7 +196,7 @@ export function App() {
     }
     setHandoff(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [handoff, authReady, user, billingKnown, cloudList]);
+  }, [handoff, authReady, user, billingKnown, cloudList, manifest]);
 
   useEffect(() => {
     restorePlayground();
@@ -198,7 +224,7 @@ export function App() {
         current={viewing ? null : "build"}
         builds={<BuildsMenu onEdit={editPlayground} onSignIn={() => setDialog("account")} onPlaygrounds={() => setDialog("playgrounds")} />}
         updates={<WhatsNew onNewGear={showNewGear} />}
-        brandExtra={pro && <span className="text-sm/4 font-semibold text-brand-top max-sm:hidden">Pro</span>}
+        brandExtra={pro && <span className="text-sm/4 font-semibold text-brand max-sm:hidden">Pro</span>}
         nav={
           <>
             {BETA && (
@@ -231,7 +257,10 @@ export function App() {
               <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
             </>
           ) : (
-            cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />
+            <>
+              {cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />}
+              <GuestMenu onSignIn={() => setDialog("account")} />
+            </>
           )
         }
       />
@@ -268,21 +297,22 @@ export function App() {
               <ScaleKey end className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] right-[calc(max(1rem,env(safe-area-inset-right))+40px)] z-10 max-md:hidden" />
               {wide ? (
                 <>
-                  <ObjectStack />
+                  {!plugEditing && <ObjectStack />}
                   <CanvasStack viewOnly={viewing} onShare={() => setDialog("share")} />
                 </>
               ) : (
                 // Tablets keep the full bar; phones (and larger screens) use the little menu under the selection.
-                !phoneSized && <ObjectMenu />
+                !phoneSized && !plugEditing && <ObjectMenu />
               )}
-              <SelectionMiniMenu />
+              {/* While plugs are being edited, their panel takes the menus' place. */}
+              {plugEditing ? <PlugPanel /> : <SelectionMiniMenu />}
               <ContextMenu />
             </>
           )}
           {SHOW_MODES && <ModeRail />}
 
           {/* Phones have no room for the save status in the header, so it floats just below it. */}
-          <div className="empty:hidden absolute right-3 top-3 z-20 rounded-control bg-surface/90 px-2 py-1 shadow-panel sm:hidden">
+          <div className="empty:hidden absolute right-3 top-3 z-20 rounded-control bg-surface/90 px-2 py-1 shadow-float sm:hidden">
             <SaveStatus />
           </div>
 
@@ -305,10 +335,11 @@ export function App() {
 
           {/* Docked on the left on larger screens; phones open it as a bottom drawer (it portals itself there). */}
           {!covered && searchOpen && (
-            <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} />
+            <SearchPanel key={editing ? "edit" : replacing ? "replace" : "add"} replace={replacing} edit={editing} onClose={() => setSearchOpen(false)} onSignIn={() => setDialog("account")} />
           )}
 
-          {wide && !covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
+          {/* Docked on the left on larger screens; a bottom drawer on phones. */}
+          {!covered && !viewing && spacingOpen && <SpaceBetweenPanel />}
 
 
           {/* Lower-right corner. Phones have it in the bottom bar instead. */}

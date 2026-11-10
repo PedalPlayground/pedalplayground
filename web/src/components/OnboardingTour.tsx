@@ -45,14 +45,14 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, bill
   if (cloudEnabled) {
     steps.push(
       signedIn
-        ? { target: "playgrounds", title: "Your Playgrounds", body: "Everything you build saves to your account. Open My Playgrounds to switch boards, start a new one or change its settings." }
+        ? { target: "playgrounds", title: "Your Boards", body: "Everything you build saves to your account. Open My Boards to switch boards, start a new one or change its settings." }
         : {
             target: "account",
             title: "Save Your Work",
             body: "Your playground is saved temporarily on this device. Sign in to save it to your account, open it anywhere, and share it with a link.",
           },
     );
-    // Last: Pro, with its own (quieter) hero.
+    // Then Pro, with its own (quieter) hero.
     if (billing && !pro) {
       steps.push({
         hero: "pro",
@@ -61,6 +61,12 @@ function buildSteps(signedIn: boolean, cloudEnabled: boolean, pro: boolean, bill
       });
     }
   }
+  // Last: the Gallery, with the choice of looking around there or building.
+  steps.push({
+    target: "gallery",
+    title: "Get Inspired",
+    body: "The Gallery is full of boards other players have shared. Look around for ideas, open any board up close, or make one your own.",
+  });
   return steps;
 }
 
@@ -233,13 +239,13 @@ export function OnboardingTour() {
       <div className="absolute inset-0" />
       <div
         aria-hidden
-        className="pointer-events-none absolute rounded-[10px] shadow-[0_0_0_9999px_rgb(10_11_16/0.75)] motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out"
+        className="pointer-events-none absolute rounded-panel shadow-[0_0_0_9999px_rgb(10_11_16/0.75)] motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out"
         style={{ left: spotlight.x, top: spotlight.y, width: spotlight.w, height: spotlight.h }}
       />
       {rect && (
         <div
           aria-hidden
-          className="pointer-events-none absolute rounded-[10px] ring-2 ring-brand motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out"
+          className="pointer-events-none absolute rounded-panel ring-2 ring-brand motion-safe:transition-all motion-safe:duration-300 motion-safe:ease-out"
           style={{ left: rect.x, top: rect.y, width: rect.w, height: rect.h }}
         />
       )}
@@ -253,7 +259,7 @@ export function OnboardingTour() {
         aria-modal="true"
         aria-labelledby="tour-title"
         aria-describedby="tour-body"
-        className={`absolute ${step.hero ? "w-[min(360px,calc(100vw-24px))] overflow-hidden" : "w-[min(320px,calc(100vw-24px))]"} rounded-panel bg-surface p-4 shadow-[var(--shadow-modal)] ${
+        className={`absolute ${step.hero ? "w-[min(360px,calc(100vw-24px))] overflow-hidden" : "w-[min(320px,calc(100vw-24px))]"} rounded-panel bg-surface p-4 shadow-modal ${
           cardSize ? `animate-enter ${arrow?.side === "bottom" ? "[--enter-y:6px]" : arrow ? "[--enter-y:-6px]" : "[--enter-y:8px]"}` : ""
         }`}
         style={{ left, top, opacity: cardSize ? 1 : 0 }}
@@ -291,13 +297,14 @@ export function OnboardingTour() {
           {step.body}
         </p>
 
-        <div className="mt-4 flex items-center gap-2">
+        <div className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-3">
           <div className="flex gap-1" aria-label={`Step ${index + 1} of ${steps.length}`} role="img">
             {steps.map((_, i) => (
               <span key={i} className={`h-1.5 rounded-full transition-all ${i === index ? "w-4 bg-brand" : "w-1.5 bg-line"}`} />
             ))}
           </div>
-          <div className="ml-auto flex items-center gap-1">
+          {/* The last card's two choices get their own full-width row on phones. */}
+          <div className={`ml-auto flex items-center gap-1 ${last ? "max-sm:w-full max-sm:gap-2 max-sm:[&>button]:flex-1" : ""}`}>
             {step.hero === "pro" ? (
               <button
                 onClick={() => {
@@ -307,6 +314,17 @@ export function OnboardingTour() {
                 className="h-8 rounded-control px-3 text-sm text-brand outline-none hover:underline focus-visible:ring-2 focus-visible:ring-brand"
               >
                 See Pro
+              </button>
+            ) : last ? (
+              // The last card's choice: look around the Gallery, or start building.
+              <button
+                onClick={() => {
+                  close();
+                  window.location.assign("/gallery/");
+                }}
+                className="h-8 whitespace-nowrap rounded-control bg-soft px-3 text-sm font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand"
+              >
+                View Gallery
               </button>
             ) : index === 0 ? (
               <button onClick={close} className="h-8 rounded-control px-3 text-sm text-ink-muted outline-none hover:text-ink focus-visible:ring-2 focus-visible:ring-brand">
@@ -320,7 +338,7 @@ export function OnboardingTour() {
             <button
               ref={primary}
               onClick={next}
-              className="btn-primary h-8 px-3.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1"
+              className="btn-primary h-8 whitespace-nowrap px-3.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1"
             >
               {index === 0 ? "Show Me Around" : last ? "Start Building" : "Next"}
             </button>

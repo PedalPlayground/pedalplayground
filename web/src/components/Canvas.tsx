@@ -1,9 +1,12 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Cable } from "lucide-react";
+import { PlugsLayer } from "./PlugArt";
+import { clearPlugSelection, PlugEditLayer } from "./PlugEditor";
+import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { canvasImageUrl } from "../lib/catalog";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { dotGridStyle } from "../lib/scale";
 import { snapMove, type Guides } from "../lib/snap";
-import type { Item } from "../lib/types";
+import type { Item, View } from "../lib/types";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
 import { openContextMenu, useContextMenu } from "./ContextMenu";
@@ -26,7 +29,7 @@ const LONG_PRESS_MS = 500;
 type Rect = { x: number; y: number; w: number; h: number };
 
 type Gesture =
-  | { type: "pan"; lastX: number; lastY: number; /** Touch: a tap that never moved clears the selection. */ tap?: boolean; moved?: boolean }
+  | { type: "pan"; lastX: number; lastY: number; /** Touch: a tap that never moved clears the selection. */ tap?: boolean; moved?: boolean; /** Editing plugs: a click on this other pedal switches to it. */ jumpTo?: string }
   | {
       type: "drag";
       origins: Record<string, { x: number; y: number }>;
@@ -53,27 +56,28 @@ const GROUP_ICON = 15;
  * lock badge on a locked item always sits upright at the top center, in a break in the outline.
  */
 /** `tour` marks it as the onboarding tour's "selection" target. */
-function SelectionHalo({ item, zoom, tour }: { item: Item; zoom: number; tour?: boolean }) {
+function SelectionHalo({ item, view, tour }: { item: Item; view: View; tour?: boolean }) {
   // Steps aside (fades to nothing) while the gear is being moved.
   const moving = useUi((u) => u.dragging || u.nudging);
   const b = itemBounds(item);
-  const pad = (HALO_GAP + HALO_STROKE) / zoom;
-  const w = (b.right - b.left) * PX_PER_INCH + pad * 2;
-  const h = (b.bottom - b.top) * PX_PER_INCH + pad * 2;
-  const sw = HALO_STROKE / zoom;
-  const r = Math.min(HALO_RADIUS / zoom, w / 2, h / 2);
-  const g = item.locked ? LOCK_GAP / zoom : 0;
+  const k = view.zoom * PX_PER_INCH;
+  const pad = HALO_GAP + HALO_STROKE;
+  const w = (b.right - b.left) * k + pad * 2;
+  const h = (b.bottom - b.top) * k + pad * 2;
+  const sw = HALO_STROKE;
+  const r = Math.min(HALO_RADIUS, w / 2, h / 2);
+  const g = item.locked ? LOCK_GAP : 0;
   const [x0, y0, x1, y1, cx] = [sw / 2, sw / 2, w - sw / 2, h - sw / 2, w / 2];
   const d =
     `M${cx + g} ${y0}H${x1 - r}A${r} ${r} 0 0 1 ${x1} ${y0 + r}V${y1 - r}A${r} ${r} 0 0 1 ${x1 - r} ${y1}` +
     `H${x0 + r}A${r} ${r} 0 0 1 ${x0} ${y1 - r}V${y0 + r}A${r} ${r} 0 0 1 ${x0 + r} ${y0}H${cx - g}${g ? "" : "Z"}`;
-  const lock = LOCK_SIZE / zoom;
+  const lock = LOCK_SIZE;
   return (
     <svg
       aria-hidden
       data-tour={tour ? "selection" : undefined}
       className="animate-fade pointer-events-none absolute overflow-visible transition-opacity duration-150"
-      style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
+      style={{ left: view.x + b.left * k - pad, top: view.y + b.top * k - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
     >
       <path d={d} fill="none" stroke="var(--color-brand)" strokeWidth={sw} />
       {item.locked && (
@@ -88,28 +92,29 @@ function SelectionHalo({ item, zoom, tour }: { item: Item; zoom: number; tour?: 
 }
 
 /** One purple halo around a whole selected group, in place of its members' own halos. */
-function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
+function GroupHalo({ items, view }: { items: Item[]; view: View }) {
   const moving = useUi((u) => u.dragging || u.nudging);
   const b = contentBounds(items)!;
-  const pad = (HALO_GAP + HALO_STROKE + 5) / zoom;
-  const w = (b.right - b.left) * PX_PER_INCH + pad * 2;
-  const h = (b.bottom - b.top) * PX_PER_INCH + pad * 2;
-  const sw = HALO_STROKE / zoom;
-  const r = Math.min(12 / zoom, w / 2, h / 2);
+  const k = view.zoom * PX_PER_INCH;
+  const pad = HALO_GAP + HALO_STROKE + 5;
+  const w = (b.right - b.left) * k + pad * 2;
+  const h = (b.bottom - b.top) * k + pad * 2;
+  const sw = HALO_STROKE;
+  const r = Math.min(12, w / 2, h / 2);
   // The outline breaks at the top center for a small group badge, like the lock's.
   const locked = items.every((i) => i.locked);
   const badges = locked ? 2 : 1;
-  const g = ((badges * GROUP_ICON + (badges - 1) * 5) / 2 + 5) / zoom;
+  const g = (badges * GROUP_ICON + (badges - 1) * 5) / 2 + 5;
   const [x0, y0, x1, y1, cx] = [sw / 2, sw / 2, w - sw / 2, h - sw / 2, w / 2];
   const d =
     `M${cx + g} ${y0}H${x1 - r}A${r} ${r} 0 0 1 ${x1} ${y0 + r}V${y1 - r}A${r} ${r} 0 0 1 ${x1 - r} ${y1}` +
     `H${x0 + r}A${r} ${r} 0 0 1 ${x0} ${y1 - r}V${y0 + r}A${r} ${r} 0 0 1 ${x0 + r} ${y0}H${cx - g}`;
-  const icon = GROUP_ICON / zoom;
+  const icon = GROUP_ICON;
   return (
     <svg
       aria-hidden
       className="animate-fade pointer-events-none absolute overflow-visible transition-opacity duration-150"
-      style={{ left: b.left * PX_PER_INCH - pad, top: b.top * PX_PER_INCH - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
+      style={{ left: view.x + b.left * k - pad, top: view.y + b.top * k - pad, width: w, height: h, opacity: moving ? 0 : 1 }}
     >
       <path d={d} fill="none" stroke="var(--color-group)" strokeWidth={sw} />
       {/* The Group glyph (corner brackets around two overlapping boxes), centered on the top edge. */}
@@ -130,7 +135,7 @@ function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
       </g>
       {/* Locked group: the lock sits beside it, drawn like a single locked item's. */}
       {locked && (
-        <g transform={`translate(${cx + (5 / 2) / zoom} ${y0 - icon / 2}) scale(${icon / 12})`} fill="none" stroke="var(--color-group)">
+        <g transform={`translate(${cx + 5 / 2} ${y0 - icon / 2}) scale(${icon / 12})`} fill="none" stroke="var(--color-group)">
           <path d="M3.5 5.5V4a2.5 2.5 0 0 1 5 0v1.5" strokeWidth={1.6} />
           <rect x={1.75} y={5} width={8.5} height={6.5} rx={1.5} fill="var(--color-group)" stroke="none" />
         </g>
@@ -139,7 +144,10 @@ function GroupHalo({ items, zoom }: { items: Item[]; zoom: number }) {
   );
 }
 
-function ItemView({ item }: { item: Item }) {
+/**
+ * One piece of gear. Memoized: a drag changes only the moved items' objects, so the rest skip re-rendering each frame.
+ */
+const ItemView = memo(function ItemView({ item }: { item: Item }) {
   const manifest = useCatalog((s) => s.manifest);
   const src = item.image ? canvasImageUrl(manifest, item.kind, item.image) : null;
   // A selected item has its menus; the name label is only for the ones that don't.
@@ -147,33 +155,60 @@ function ItemView({ item }: { item: Item }) {
   useEffect(() => {
     if (selected) hideTip();
   }, [selected]);
+  // Editing another pedal's plugs: everything else fades well back, so it's clear which pedal is being edited. Other
+  // pedals come back on hover and offer to switch to them.
+  const backdrop = useUi((u) => !!u.plugEditing && u.plugEditing !== item.id);
+  const other = backdrop && item.kind === "pedal";
+  const zoom = usePlayground((s) => (other ? s.view.zoom : 1));
   return (
     <div
       data-item-id={item.id}
-      {...(selected ? {} : tip(itemName(item), { canvas: true }))}
+      {...(selected || other ? {} : tip(itemName(item), { canvas: true }))}
       // Catalog photos get a drop shadow (--item-drop, per theme) that follows the image's own outline. It sits on this unrotated box so
       // the light always falls down and to the right, whatever the rotation. Custom styles draw their own shadows.
       // Taps go to the rotated inner box only, so the empty corners of this one never catch them.
-      className={`pointer-events-none absolute ${src ? "[filter:var(--item-drop)]" : ""}`}
+      className={`pointer-events-none absolute ${src ? "[filter:var(--item-drop)]" : ""} ${backdrop ? "opacity-15 transition-opacity" : ""} ${other ? "[&:has(>div:hover)]:opacity-100" : ""}`}
       style={{
-        left: item.x * PX_PER_INCH,
-        top: item.y * PX_PER_INCH,
+        left: 0,
+        top: 0,
+        // Placed with a transform, not left/top, so moving it doesn't trigger layout.
+        transform: `translate(${item.x * PX_PER_INCH}px, ${item.y * PX_PER_INCH}px)`,
         width: item.width * PX_PER_INCH,
         height: item.height * PX_PER_INCH,
       }}
     >
-      <div className="pointer-events-auto size-full" style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}>
-        {src ? (
-          <img src={src} alt={itemName(item)} draggable={false} className="size-full select-none object-fill" />
-        ) : item.custom ? (
-          <CustomItemView item={item} />
-        ) : (
-          <div className="size-full bg-surface-hover" />
-        )}
+      <div
+        className={`pointer-events-auto size-full ${other ? "peer cursor-pointer" : ""}`}
+        style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}
+      >
+        {/* Plugs go under the pedal: their barrels run into the jacks, showing only where the photo lets them. */}
+        {item.plugs && <PlugsLayer plugs={item.plugs} w={item.width} h={item.height} />}
+        {/* Positioned, so it paints over the (absolutely placed) plugs. */}
+        <div className="relative size-full">
+          {src ? (
+            <img src={src} alt={itemName(item)} draggable={false} className="size-full select-none object-fill" />
+          ) : item.custom ? (
+            <CustomItemView item={item} />
+          ) : (
+            <div className="size-full bg-surface-hover" />
+          )}
+        </div>
       </div>
+      {other && (
+        <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity peer-hover:opacity-100">
+          {/* Screen-sized whatever the zoom, and centered even when it's wider than the pedal. */}
+          <span
+            className="absolute left-1/2 top-1/2 flex items-center gap-1.5 whitespace-nowrap rounded-full bg-tip px-3 py-1.5 text-[13px] font-semibold text-tip-ink shadow-float"
+            style={{ transform: `translate(-50%, -50%) scale(${1 / zoom})` }}
+          >
+            <Cable size={15} />
+            Add Plugs
+          </span>
+        </div>
+      )}
     </div>
   );
-}
+});
 
 /** Briefly marks "nudging" so the selection halo and the little menu step aside while arrow keys move gear. */
 let nudgeTimer: ReturnType<typeof setTimeout> | undefined;
@@ -198,6 +233,9 @@ export function Canvas() {
   const tool = useUi((u) => u.tool);
   const dragging = useUi((u) => u.dragging);
   const units = useUi((u) => u.units);
+  // The pedal whose plugs are being edited gets the plug editing layer.
+  const plugEditing = useUi((u) => u.plugEditing);
+  const plugItem = usePlayground((s) => (plugEditing ? s.items.find((i) => i.id === plugEditing) : undefined));
 
   useEffect(() => {
     void useCatalog.getState().load();
@@ -256,6 +294,8 @@ export function Canvas() {
       if (useUi.getState().mode !== "playground") return;
       // The right-click menu has the keyboard while it's open (arrows move through it, Esc closes it).
       if (useContextMenu.getState().open) return;
+      // Editing plugs: the plug panel has the keyboard (Delete removes a plug); nothing else ends the editing.
+      if (useUi.getState().plugEditing) return;
       const s = usePlayground.getState();
       // A shared playground being viewed only pans and zooms.
       const viewOnly = !!useUi.getState().viewing;
@@ -319,6 +359,13 @@ export function Canvas() {
         if (!ui.viewing && !ui.searchOpen && !document.querySelector('[role="dialog"], [role="menu"]')) {
           e.preventDefault();
           ui.setSearchOpen(true);
+        }
+      } else if (key === "p" && !mod && !e.altKey && s.selected.length === 1) {
+        // P opens plug editing for a single selected pedal.
+        const one = s.items.find((i) => i.id === s.selected[0]);
+        if (one?.kind === "pedal") {
+          e.preventDefault();
+          useUi.getState().setPlugEditing(one.id);
         }
       } else if (key === "l" && has && !mod) {
         e.preventDefault();
@@ -389,6 +436,9 @@ export function Canvas() {
 
     // Right click (or Control-click on a Mac): pick what's under the pointer, then let the menu open.
     // A right click on something already selected keeps the whole selection, like Figma and Finder.
+    // Editing plugs: only Done ends it, so the canvas doesn't select, open menus or drag gear meanwhile (it still pans).
+    const plugMode = !!useUi.getState().plugEditing;
+    if (plugMode && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) return;
     if (e.pointerType !== "touch" && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) {
       // View-only boards can't be selected or changed, so a right click does nothing there.
       if (useUi.getState().viewing) return;
@@ -419,7 +469,15 @@ export function Canvas() {
     // Touch: dragging a product moves it, dragging empty canvas pans (no marquee, no tool switching).
     const touch = e.pointerType === "touch";
 
-    if (useUi.getState().viewing) {
+    // A press on the canvas (not on a plug) while editing plugs deselects them, like clicking empty space.
+    if (plugMode) clearPlugSelection();
+    if (plugMode) {
+      // Editing plugs: every drag pans; a click on another pedal moves the plug editing to it.
+      const id = itemEl?.dataset.itemId;
+      const other = id && id !== useUi.getState().plugEditing && s.items.find((i) => i.id === id)?.kind === "pedal" ? id : undefined;
+      gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: true, moved: false, jumpTo: other };
+      setPanning(!touch);
+    } else if (useUi.getState().viewing) {
       // View-only: every drag pans (a touch tap does nothing).
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: touch, moved: false };
       setPanning(!touch);
@@ -454,7 +512,7 @@ export function Canvas() {
     }
 
     // Touch: holding one finger still opens the right-click menu (iPhones and iPads have no right click).
-    if (touch && pointers.current.size === 1) {
+    if (touch && pointers.current.size === 1 && !plugMode) {
       const at = { x: e.clientX, y: e.clientY };
       const onItem = !!itemEl;
       longPress.current = {
@@ -475,6 +533,7 @@ export function Canvas() {
   const onContextMenu = (e: React.MouseEvent) => {
     e.preventDefault(); // never the browser's own menu on the canvas
     cancelLongPress();
+    if (useUi.getState().plugEditing) return;
     if (Date.now() - longPressAt.current < 1000) return; // a long press already opened it
     if (gesture.current?.type === "pan" || gesture.current?.type === "drag") gesture.current = null;
     openMenuAt(e.clientX, e.clientY, !!(e.target as HTMLElement).closest("[data-item-id]"));
@@ -556,7 +615,12 @@ export function Canvas() {
     cancelLongPress();
     setPanning(false);
     const g = gesture.current;
-    if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) usePlayground.getState().clearSelection();
+    if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) {
+      if (g.jumpTo) {
+        usePlayground.getState().select(g.jumpTo);
+        useUi.getState().setPlugEditing(g.jumpTo);
+      } else if (!useUi.getState().plugEditing) usePlayground.getState().clearSelection();
+    }
     if (ref.current?.hasPointerCapture(e.pointerId)) ref.current.releasePointerCapture(e.pointerId);
     if (useUi.getState().dragging) useUi.setState({ dragging: false });
     gesture.current = null; // a lifted pinch finger shouldn't turn into a drag, so just end
@@ -591,30 +655,43 @@ export function Canvas() {
         {items.map((item, index) => (
           <div key={item.id} style={{ position: "absolute", zIndex: index }}>
             <ItemView item={item} />
-            {selected.includes(item.id) && !inShownGroup.has(item.id) && <SelectionHalo item={item} zoom={view.zoom} tour={selected.length === 1} />}
           </div>
         ))}
-        {selectedGroups.map((g) => (
-          <div key={g[0].groupId} style={{ position: "absolute", zIndex: 99999 }}>
-            <GroupHalo items={g} zoom={view.zoom} />
+        {plugItem && (
+          <div style={{ position: "absolute", zIndex: 99998 }}>
+            <PlugEditLayer item={plugItem} zoom={view.zoom} />
           </div>
-        ))}
-
-        {guides.x.map((x, i) => (
-          <div
-            key={`gx${i}`}
-            className="pointer-events-none absolute bg-[#ff3b8d]"
-            style={{ left: x * PX_PER_INCH, top: -5000, height: 10000, width: 1 / view.zoom, zIndex: 100000 }}
-          />
-        ))}
-        {guides.y.map((y, i) => (
-          <div
-            key={`gy${i}`}
-            className="pointer-events-none absolute bg-[#ff3b8d]"
-            style={{ top: y * PX_PER_INCH, left: -5000, width: 10000, height: 1 / view.zoom, zIndex: 100000 }}
-          />
-        ))}
+        )}
       </div>
+
+      {/* Selection outlines, in screen space: fading them in and out inside the zoomed layer left iOS Safari repainting
+          stale tiles when a drag ended or something was selected. */}
+      {items.map(
+        (item) =>
+          selected.includes(item.id) &&
+          !inShownGroup.has(item.id) &&
+          item.id !== plugEditing && <SelectionHalo key={item.id} item={item} view={view} tour={selected.length === 1} />,
+      )}
+      {selectedGroups.map((g) => (
+        <GroupHalo key={g[0].groupId} items={g} view={view} />
+      ))}
+
+      {/* Snap guides, in screen space and only as long as the canvas: lines thousands of pixels long inside the zoomed
+          layer made iOS Safari drop tiles mid-drag. */}
+      {guides.x.map((x, i) => (
+        <div
+          key={`gx${i}`}
+          className="pointer-events-none absolute inset-y-0 w-px bg-guide"
+          style={{ left: view.x + x * PX_PER_INCH * view.zoom }}
+        />
+      ))}
+      {guides.y.map((y, i) => (
+        <div
+          key={`gy${i}`}
+          className="pointer-events-none absolute inset-x-0 h-px bg-guide"
+          style={{ top: view.y + y * PX_PER_INCH * view.zoom }}
+        />
+      ))}
 
       {marquee && (
         <div

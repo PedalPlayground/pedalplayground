@@ -15,6 +15,8 @@ export interface Fields {
   ma?: number;
   voltage?: string;
   type?: string;
+  /** Types besides the main one. Undefined until the database has the column (it's then left out of saves). */
+  extraTypes?: string[];
 }
 
 export interface ImageStats {
@@ -27,6 +29,8 @@ export interface ImageStats {
 export interface Check {
   ok: boolean;
   text: string;
+  /** "shape": the photo's shape doesn't match the size, and the form offers to size it from the photo. */
+  fix?: "shape";
 }
 
 /** Below this many pixels per inch a photo looks soft at the canvas's zoomed-in sizes. */
@@ -81,10 +85,18 @@ export type Usage = (item: CatalogItem) => number;
 const byUsage = (usage: Usage) => (a: CatalogItem, b: CatalogItem) => usage(b) - usage(a) || a.name.localeCompare(b.name);
 
 /**
- * The sizes a brand's items come in, most used first (sizes within 0.05 in count as one), for brands that build on
- * standard enclosures. Only sizes shared by at least `minCount` items, up to `n`.
+ * The sizes a brand's items come in (sizes within 0.05 in count as one), for brands that build on standard
+ * enclosures. Only sizes shared by at least `minCount` items, up to `n`. Closest to `near` first when it's given (the
+ * new item's size, either way round), then the most common.
  */
-export function brandSizes(items: CatalogItem[], brand: string, n = 6, usage: Usage = () => 0, minCount = 2): BrandSize[] {
+export function brandSizes(
+  items: CatalogItem[],
+  brand: string,
+  n = 6,
+  usage: Usage = () => 0,
+  minCount = 2,
+  near?: { width: number; height: number },
+): BrandSize[] {
   const key = norm(brand);
   if (!key) return [];
   const sizes: BrandSize[] = [];
@@ -96,9 +108,18 @@ export function brandSizes(items: CatalogItem[], brand: string, n = 6, usage: Us
       if (byUsage(usage)(i, same.example) < 0) same.example = i;
     } else sizes.push({ width: i.width, height: i.height, count: 1, example: i });
   }
+  const sized = near && near.width > 0 && near.height > 0;
+  // How far a size is from the new item's: the bigger of the two side differences, either way round.
+  const off = (s: BrandSize) =>
+    sized
+      ? Math.min(
+          Math.max(Math.abs(s.width - near.width), Math.abs(s.height - near.height)),
+          Math.max(Math.abs(s.width - near.height), Math.abs(s.height - near.width)),
+        )
+      : 0;
   return sizes
     .filter((s) => s.count >= minCount)
-    .sort((a, b) => b.count - a.count || a.width * a.height - b.width * b.height)
+    .sort((a, b) => off(a) - off(b) || b.count - a.count || a.width * a.height - b.width * b.height)
     .slice(0, n);
 }
 
@@ -119,7 +140,7 @@ export function copiedFields(from: CatalogItem, withSpecs: boolean): Partial<Fie
     brand: from.brand,
     width: from.width,
     height: from.height,
-    ...(withSpecs ? { ma: from.ma, voltage: from.voltage, type: from.type } : {}),
+    ...(withSpecs ? { ma: from.ma, voltage: from.voltage, type: from.type, extraTypes: from.types?.slice(1) ?? [] } : {}),
   };
 }
 
@@ -173,6 +194,7 @@ export function runChecks(fields: Fields, stats: ImageStats | null, items: Catal
         : {
             ok: false,
             text: `Photo shape doesn't match the size: the photo is ${(photo).toFixed(2)}:1, the size is ${entered.toFixed(2)}:1. One of them is probably wrong.`,
+            fix: "shape",
           },
     );
     out.push(

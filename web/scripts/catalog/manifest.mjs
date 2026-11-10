@@ -4,7 +4,7 @@
 const PLURAL = { pedal: "pedals", pedalboard: "pedalboards" };
 
 /**
- * rows: catalog_items rows ({ kind, key, brand, name, width_in, height_in, current_ma, voltage, type, status,
+ * rows: catalog_items rows ({ kind, key, brand, name, width_in, height_in, current_ma, voltage, type, extra_types, status,
  * added_on, thumb_path, img_path }). Live items go in search; retired ones keep only their images, so saved
  * boards still draw them. Items with no built images yet are left out.
  */
@@ -24,6 +24,8 @@ export function manifestFromRows(rows, generatedAt = new Date().toISOString()) {
       ...(r.current_ma != null && { ma: r.current_ma }),
       ...(r.voltage != null && { voltage: r.voltage }),
       ...(r.type != null && { type: r.type }),
+      // Every type, main first, only when there's more than one (type alone covers the rest).
+      ...(r.type != null && r.extra_types?.length > 0 && { types: [r.type, ...r.extra_types.filter((t) => t !== r.type)] }),
       ...(r.added_on != null && { added: String(r.added_on).slice(0, 10) }),
     });
   }

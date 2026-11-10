@@ -1,5 +1,7 @@
 import { X } from "lucide-react";
 import { useEffect, type ReactNode } from "react";
+import { createPortal } from "react-dom";
+import { track } from "../lib/analytics";
 
 /**
  * `closeX` adds an X button in the top-right corner, for dialogs without their own Close or Cancel button.
@@ -20,13 +22,16 @@ export function Modal({
   closeX?: boolean;
   footer?: ReactNode;
 }) {
+  // Every dialog is counted by its title (always fixed wording, never a board or person's name).
+  useEffect(() => track("dialog_open", { dialog: title }), [title]);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  return (
+  // Rendered on <body>, so it always stacks above the page (and isn't zoomed or clipped by whatever opened it).
+  return createPortal(
     <div className="animate-fade fixed inset-0 z-50 flex items-center justify-center modal-backdrop p-4" onClick={onClose}>
       <div className={`relative flex max-h-full w-full flex-col ${wide ? "max-w-2xl" : "max-w-sm"}`}>
         {/* min-h-0: the dialog shrinks to fit the screen and scrolls inside, rather than running off the bottom. */}
@@ -35,7 +40,7 @@ export function Modal({
           // Session recordings (Clarity) skip dialog contents: sign-in, usernames, board names and descriptions.
           data-clarity-mask="True"
           aria-label={title}
-          className="animate-enter relative min-h-0 w-full overflow-y-auto rounded-panel bg-surface p-5 shadow-[var(--shadow-modal)]"
+          className="animate-enter relative min-h-0 w-full overflow-y-auto rounded-container bg-surface p-5 shadow-modal"
           onClick={(e) => e.stopPropagation()}
         >
           <h2 className={`mb-3 text-base font-semibold ${closeX ? "pr-8" : ""}`}>{title}</h2>
@@ -59,6 +64,7 @@ export function Modal({
           </div>
         )}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

@@ -18,6 +18,7 @@ export interface Submission {
   current_ma: number | null;
   voltage: string | null;
   type: string | null;
+  extra_types?: string[];
   source_path: string | null;
   note: string | null;
   status: "pending" | "needs_changes" | "approved" | "rejected";
@@ -37,6 +38,7 @@ export interface Item {
   current_ma: number | null;
   voltage: string | null;
   type: string | null;
+  extra_types?: string[];
   source_path: string | null;
   thumb_path: string | null;
   img_path: string | null;
@@ -73,6 +75,35 @@ export async function isEditor(): Promise<boolean> {
   return data === true;
 }
 
+/** Admins (Trav, so far): they change permissions and post What's New. False until the admins migration is run. */
+export async function isAdmin(): Promise<boolean> {
+  const { data, error } = await db().rpc("is_admin");
+  if (error) return false;
+  return data === true;
+}
+
+export interface EditorAccount {
+  user_id: string;
+  username: string | null;
+  added_at: string;
+  admin: boolean;
+}
+
+/** Admins: everyone who can edit (empty until the admins migration is run). */
+export async function listEditors(): Promise<EditorAccount[]> {
+  const { data, error } = await db().rpc("list_editors");
+  if (error && /list_editors|schema cache|does not exist/i.test(error.message)) return [];
+  fail(error);
+  return (data ?? []) as EditorAccount[];
+}
+
+/** Admins: makes someone an editor, or stops them being one. */
+export async function setEditor(userId: string, make: boolean): Promise<void> {
+  const { error } = await db().rpc("set_editor", { target: userId, make });
+  if (error && /set_editor|schema cache/i.test(error.message)) throw new Error("Roles aren't set up yet. Run the admins migration first.");
+  fail(error);
+}
+
 export const fieldsFrom = (r: Submission | Item): Fields => ({
   kind: r.kind,
   brand: r.brand,
@@ -82,6 +113,7 @@ export const fieldsFrom = (r: Submission | Item): Fields => ({
   ma: r.current_ma ?? undefined,
   voltage: r.voltage ?? undefined,
   type: r.type ?? undefined,
+  extraTypes: r.extra_types,
 });
 
 const columns = (f: Fields) => ({
@@ -93,6 +125,8 @@ const columns = (f: Fields) => ({
   current_ma: f.ma ?? null,
   voltage: f.voltage || null,
   type: f.kind === "pedal" ? f.type || null : null,
+  // Only sent once the column exists (fieldsFrom fills it in from the row); boards never have extras.
+  ...(f.extraTypes !== undefined && { extra_types: f.kind === "pedal" && f.type ? [...new Set(f.extraTypes)].filter((t) => t !== f.type) : [] }),
 });
 
 /** Submissions waiting for an editor, oldest first. */
@@ -156,19 +190,44 @@ export async function setStatus(kind: Item["kind"], key: string, status: Item["s
   fail(error);
 }
 
-/** Catalog items whose brand or name contain every word typed, newest changes first when nothing is typed. */
-export async function searchItems(text: string, opts: { kind?: Item["kind"]; retired?: boolean } = {}): Promise<Item[]> {
+/** What the Catalog tab lists. `type` "none" means pedals with no type. */
+export interface CatalogFilter {
+  kind: Item["kind"] | null;
+  type: string | null;
+  brand: string | null;
+  text: string;
+  status: Item["status"] | "all";
+}
+
+/**
+ * Catalog items for the Catalog tab's filters, a page at a time: A–Z by brand and name, or most recently changed
+ * first when nothing narrows the list.
+ */
+export async function listCatalog(f: CatalogFilter, page: number, pageSize = 100): Promise<Item[]> {
   let q = db().from("catalog_items").select("*");
-  for (const word of text.trim().split(/\s+/).filter(Boolean).slice(0, 5)) {
+  if (f.kind) q = q.eq("kind", f.kind);
+  if (f.status !== "all") q = q.eq("status", f.status);
+  if (f.brand) q = q.eq("brand", f.brand);
+  // Quoted, since types have spaces and slashes ("Amp / Preamp").
+  if (f.type === "none") q = q.eq("kind", "pedal").is("type", null);
+  else if (f.type) q = q.or(`type.eq."${f.type}",extra_types.cs.{"${f.type}"}`);
+  for (const word of f.text.trim().split(/\s+/).filter(Boolean).slice(0, 5)) {
     // PostgREST's or() syntax treats , ( ) as separators, so they can't appear in a search word.
     const w = word.replace(/[,()%*\\]/g, "");
     if (w) q = q.or(`brand.ilike.*${w}*,name.ilike.*${w}*`);
   }
-  if (opts.kind) q = q.eq("kind", opts.kind);
-  if (!opts.retired) q = q.eq("status", "live");
-  const { data, error } = await q.order(text.trim() ? "brand" : "updated_at", { ascending: !!text.trim() }).limit(60);
+  const narrowed = f.kind || f.type || f.brand || f.text.trim();
+  q = narrowed ? q.order("brand").order("name") : q.order("updated_at", { ascending: false });
+  const { data, error } = await q.range(page * pageSize, page * pageSize + pageSize - 1);
   fail(error);
   return (data ?? []) as Item[];
+}
+
+/** One catalog item by kind and key (for links like /editor/#catalog?kind=pedal&key=boss-ds1). */
+export async function getItem(kind: Item["kind"], key: string): Promise<Item | null> {
+  const { data, error } = await db().from("catalog_items").select("*").eq("kind", kind).eq("key", key).maybeSingle();
+  fail(error);
+  return (data as Item | null) ?? null;
 }
 
 /** How many approved items are still waiting for their images to be built. */
@@ -234,5 +293,31 @@ export async function savePost(id: string | null, d: PostDraft): Promise<void> {
 
 export async function deletePost(id: string): Promise<void> {
   const { error } = await db().from("announcements").delete().eq("id", id);
+  fail(error);
+}
+
+// Bug reports ------------------------------------------------------------------------------------------------------
+
+export interface BugReport {
+  id: string;
+  details: string;
+  page: string | null;
+  user_agent: string | null;
+  status: "open" | "closed";
+  created_at: string;
+  reporter_id: string;
+}
+
+/** Open bug reports, newest first (empty, with no error, until the bug_reports migration is run). */
+export async function listBugReports(): Promise<BugReport[]> {
+  const { data, error } = await db().from("bug_reports").select("*").eq("status", "open").order("created_at", { ascending: false }).limit(200);
+  if (error && (error.code === "42P01" || /schema cache|does not exist/i.test(error.message))) return [];
+  fail(error);
+  return (data ?? []) as BugReport[];
+}
+
+export async function closeBugReport(id: string): Promise<void> {
+  const { data: u } = await db().auth.getUser();
+  const { error } = await db().from("bug_reports").update({ status: "closed", closed_by: u.user?.id ?? null, closed_at: new Date().toISOString() }).eq("id", id);
   fail(error);
 }

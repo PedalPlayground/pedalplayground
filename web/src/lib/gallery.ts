@@ -1,3 +1,4 @@
+import { track } from "./analytics";
 import { supabase } from "./supabase";
 import type { PlaygroundType } from "./cloud";
 
@@ -31,7 +32,28 @@ const db = () => {
 };
 
 /** One page of gallery boards. `offset` is how many boards are already showing. */
+/** "@name" in the gallery search: only that person's boards. Returns the username, or null for a normal search. */
+export const searchedUser = (search: string) => (/^@[A-Za-z0-9_-]+$/.test(search.trim()) ? search.trim().slice(1) : null);
+
+/** The gallery filtered to one person's boards (their username is a link to this). */
+export const userGalleryUrl = (username: string) => `/gallery/?user=${encodeURIComponent(username)}`;
+
 export async function fetchGalleryBoards(opts: { type: PlaygroundType | null; search: string; sort: GallerySort; offset: number; limit?: number }): Promise<GalleryBoard[]> {
+  // "@name": the database search also matches board names, so fetch what it finds and keep that person's boards.
+  const user = searchedUser(opts.search);
+  if (user) {
+    if (opts.offset > 0) return [];
+    const { data, error } = await db().rpc("gallery_boards", {
+      board_type: opts.type,
+      search: user,
+      sort: opts.sort,
+      page_offset: 0,
+      page_size: 200,
+      ...(SHOW_TEST_BOARDS ? { include_test: true } : {}),
+    });
+    if (error) throw error;
+    return (data as GalleryBoard[]).filter((b) => b.username?.toLowerCase() === user.toLowerCase());
+  }
   const { data, error } = await db().rpc("gallery_boards", {
     board_type: opts.type,
     search: opts.search.trim() || null,
@@ -49,6 +71,7 @@ export async function fetchGalleryBoards(opts: { type: PlaygroundType | null; se
 export async function setGalleryLike(id: string, liked: boolean): Promise<number> {
   const { data, error } = await db().rpc("gallery_set_like", { board: id, liked });
   if (error) throw error;
+  track(liked ? "board_like" : "board_unlike");
   return data as number;
 }
 
@@ -93,3 +116,25 @@ export function readGalleryReturn(take = false): GalleryReturn | null {
 
 /** True when "Back to Gallery" has a spot to go back to. */
 export const galleryReturnUrl = () => !!readGalleryReturn();
+
+/** A gallery board that uses a catalog item, for the Gear page's "Featured on". */
+export interface FeaturedBoard {
+  id: string;
+  slug: string;
+  name: string;
+  thumbnail: string | null;
+  updated_at: string;
+  username: string | null;
+  pedal_count: number;
+  like_count: number;
+}
+
+/**
+ * Public gallery boards that use this catalog item (kind and image key), most liked first. Empty when there are none,
+ * or before the gear_featured_on migration is applied.
+ */
+export async function fetchFeaturedOn(kind: "pedal" | "pedalboard", image: string, max = 12): Promise<FeaturedBoard[]> {
+  if (!supabase) return [];
+  const { data, error } = await supabase.rpc("gear_featured_on", { item_kind: kind, item_image: image, max_items: max });
+  return error || !Array.isArray(data) ? [] : (data as FeaturedBoard[]);
+}

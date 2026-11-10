@@ -4,6 +4,7 @@ import { fieldProblems, type Fields } from "../lib/editorChecks";
 import { approve, fieldsFrom, listQueue, review, sourceUrl, updateSubmission, uploadSource, type Submission } from "../lib/editorApi";
 import { useAuth } from "../store/auth";
 import { withPublish, type Notice, type PublishState, type SetNotice } from "./EditorApp";
+import { Meta } from "../components/Meta";
 import { fieldBox, fieldHelp, ItemEditor, labelClass, primaryButton, secondaryButton } from "./ItemEditor";
 
 /** Pending submissions, oldest first. Pick one, fix it if needed, then approve, send back, or reject. */
@@ -34,21 +35,22 @@ export function QueueTab({ manifest, publisher, setNotice }: { manifest: Manifes
 
   const open = queue.find((s) => s.id === openId) ?? null;
   return (
-    <div className="grid gap-6 md:grid-cols-[220px_minmax(0,1fr)]">
-      <ul className="grid content-start gap-1">
+    // items-start: the list and the form each keep their own height (a long list doesn't stretch the form's rows).
+    <div className="grid items-start gap-6 md:grid-cols-[220px_minmax(0,1fr)]">
+      {/* One column that never grows past 220px: long names truncate instead of running under the form. */}
+      <ul className="grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-1">
         {queue.map((s) => (
           <li key={s.id}>
             <button
               type="button"
               onClick={() => setOpenId(s.id)}
-              className={`w-full rounded-[5px] px-2.5 py-2 text-left text-[13px] ${s.id === openId ? "bg-ink/[0.06] font-medium" : "hover:bg-surface-hover"}`}
+              className={`w-full rounded-control px-2.5 py-2 text-left text-[13px] ${s.id === openId ? "bg-soft font-medium" : "hover:bg-surface-hover"}`}
             >
               <span className="block truncate font-semibold">
                 {s.brand} {s.name}
               </span>
               <span className="block text-xs text-ink-muted">
-                {s.target_key ? "Correction" : "New"} · {new Date(s.created_at).toLocaleDateString()}
-                {s.status === "needs_changes" && " · sent back"}
+                <Meta parts={[s.target_key ? "Correction" : "New", new Date(s.created_at).toLocaleDateString(), s.status === "needs_changes" && "Sent back"]} />
               </span>
             </button>
           </li>
@@ -112,7 +114,7 @@ function Review({
   };
 
   return (
-    <div className="grid gap-5">
+    <div className="grid min-w-0 content-start gap-5">
       <div>
         <h2 className="text-lg font-bold tracking-[-0.01em]">
           {submission.target_key ? `Correction to ${submission.target_key}` : "New item"}

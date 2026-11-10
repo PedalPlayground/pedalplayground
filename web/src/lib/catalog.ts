@@ -21,6 +21,9 @@ export interface AssetPaths {
   img: string;
 }
 
+/** A catalog item's types, main first: one, several, or none. */
+export const itemTypes = (c: CatalogItem): string[] => c.types ?? (c.type ? [c.type] : []);
+
 /** Documents store the original filename ("boss-ds1.png"); the manifest keys drop the extension. */
 export const imageKey = (image: string) => image.replace(/\.png$/i, "");
 

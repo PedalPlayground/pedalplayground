@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchManifest, type Manifest } from "../lib/catalog";
-import { isEditor, pendingBuilds, publish } from "../lib/editorApi";
+import { isAdmin, isEditor, pendingBuilds, publish } from "../lib/editorApi";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { useAuth } from "../store/auth";
 import { AddTab } from "./AddTab";
@@ -13,7 +13,12 @@ import { QueueTab } from "./QueueTab";
 type Tab = "queue" | "add" | "catalog" | "news" | "moderation";
 const TABS: Tab[] = ["queue", "add", "catalog", "news", "moderation"];
 /** The tab in the address (/editor/#news, or #add?from=<key> for Duplicate), so links can open a tab and reloads stay on it. */
-const tabFromHash = (): Tab => TABS.find((t) => `#${t}` === window.location.hash.split("?")[0]) ?? "queue";
+const tabFromHash = (): Tab => {
+  const h = window.location.hash.split("?")[0];
+  // The Types tab is part of Catalog now.
+  if (h === "#types") return "catalog";
+  return TABS.find((t) => `#${t}` === h) ?? "queue";
+};
 
 export interface Notice {
   text: string;
@@ -37,10 +42,13 @@ export function EditorApp() {
   const ready = useAuth((s) => s.ready);
   const user = useAuth((s) => s.user);
   const [allowed, setAllowed] = useState<boolean | null>(null);
+  /** Admins also get News and manage who's an editor. */
+  const [admin, setAdmin] = useState(false);
   const [tab, setTabState] = useState<Tab>(tabFromHash);
   const setTab = (t: Tab) => {
     setTabState(t);
-    history.replaceState(null, "", t === "queue" ? window.location.pathname : `#${t}`);
+    // Each tab is a history step, so Back returns to the last one.
+    if (t !== tabFromHash()) history.pushState(null, "", t === "queue" ? window.location.pathname : `#${t}`);
   };
   const [dialog, setDialog] = useState<PageDialog>(null);
   const header = <PageHeader current="editor" dialog={dialog} setDialog={setDialog} />;
@@ -52,11 +60,18 @@ export function EditorApp() {
   useEffect(() => {
     const onHash = () => setTabState(tabFromHash());
     window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
+    window.addEventListener("popstate", onHash);
+    return () => {
+      window.removeEventListener("hashchange", onHash);
+      window.removeEventListener("popstate", onHash);
+    };
   }, []);
   useEffect(() => {
     if (!user) return setAllowed(null);
-    isEditor().then(setAllowed, () => setAllowed(false));
+    Promise.all([isEditor().catch(() => false), isAdmin().catch(() => false)]).then(([editor, isAdminUser]) => {
+      setAdmin(isAdminUser);
+      setAllowed(editor || isAdminUser);
+    });
   }, [user]);
   useEffect(() => {
     if (!allowed) return;
@@ -90,16 +105,18 @@ export function EditorApp() {
   if (!allowed)
     return (
       <Shell header={header}>
-        <p className="text-[15px]">This page is for catalog editors. Your account isn't one.</p>
+        <p className="text-[15px]">This page is for editors and admins. Your account isn't one.</p>
       </Shell>
     );
 
+  // News is for admins.
+  const shown: Tab = tab === "news" && !admin ? "queue" : tab;
   const tabButton = (t: Tab, label: string) => (
     <button
       type="button"
       onClick={() => setTab(t)}
-      aria-pressed={tab === t}
-      className={`press h-8 rounded-[5px] px-3 text-[13px] font-semibold ${tab === t ? "bg-ink text-surface" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
+      aria-pressed={shown === t}
+      className={`press h-8 rounded-control px-3 text-[13px] font-semibold ${shown === t ? "bg-ink text-surface" : "text-ink-muted hover:bg-surface-hover hover:text-ink"}`}
     >
       {label}
     </button>
@@ -114,7 +131,7 @@ export function EditorApp() {
             {tabButton("queue", "Queue")}
             {tabButton("add", "Add")}
             {tabButton("catalog", "Catalog")}
-            {tabButton("news", "News")}
+            {admin && tabButton("news", "News")}
             {tabButton("moderation", "Moderation")}
           </nav>
           <div className="ml-auto flex items-center gap-3">
@@ -133,7 +150,7 @@ export function EditorApp() {
       {notice && (
         <div
           role="status"
-          className={`mb-5 flex items-start justify-between gap-3 rounded-lg border px-3 py-2 text-[13px] ${notice.error ? "border-danger/40 text-danger" : "border-line text-ink"}`}
+          className={`mb-5 flex items-start justify-between gap-3 rounded-panel border px-3 py-2 text-[13px] ${notice.error ? "border-danger/40 text-danger" : "border-line text-ink"}`}
         >
           <span>{notice.text}</span>
           <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setNotice(null)} aria-label="Dismiss">
@@ -141,11 +158,11 @@ export function EditorApp() {
           </button>
         </div>
       )}
-      {tab === "queue" && <QueueTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
-      {tab === "add" && <AddTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
-      {tab === "news" && <NewsTab setNotice={setNotice} />}
-      {tab === "moderation" && <ModerationTab setNotice={setNotice} />}
-      {tab === "catalog" && <CatalogTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
+      {shown === "queue" && <QueueTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
+      {shown === "add" && <AddTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
+      {shown === "news" && <NewsTab setNotice={setNotice} />}
+      {shown === "moderation" && <ModerationTab setNotice={setNotice} isAdmin={admin} />}
+      {shown === "catalog" && <CatalogTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
     </Shell>
   );
 }
@@ -159,11 +176,11 @@ function Shell({ header, children, bar }: { header: React.ReactNode; children?: 
     <div className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       {header}
       {bar && (
-        <div className="sticky top-12 z-[9] border-b border-chrome-line bg-chrome/95 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
+        <div className="sticky top-12 z-20 border-b border-chrome-line bg-chrome/95 backdrop-blur">
+          <div className="page-main isolate mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
         </div>
       )}
-      <main className="mx-auto max-w-6xl px-4 py-6">{children}</main>
+      <main id="content" className="page-main isolate mx-auto max-w-[1600px] px-4 py-6">{children}</main>
     </div>
   );
 }

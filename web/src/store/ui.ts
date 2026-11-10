@@ -59,6 +59,9 @@ interface UiState {
   avatar: string;
   setAvatar: (key: string) => void;
   searchOpen: boolean;
+  /** The pedal whose plugs are being edited (its edges take clicks to add and drag plugs), or null. */
+  plugEditing: string | null;
+  setPlugEditing: (id: string | null) => void;
   /** The docked Space Between drawer (larger screens). */
   spacingOpen: boolean;
   setSpacingOpen: (open: boolean) => void;
@@ -196,9 +199,17 @@ export const useUi = create<UiState>((set) => ({
     set({ avatar });
   },
   searchOpen: false,
+  plugEditing: null,
+  setPlugEditing: (plugEditing) => set(plugEditing ? { plugEditing, searchOpen: false, replacing: false, editing: false, spacingOpen: false } : { plugEditing }),
   spacingOpen: false,
   setSpacingOpen: (spacingOpen) => set(spacingOpen ? { spacingOpen, searchOpen: false, replacing: false, editing: false } : { spacingOpen }),
-  setSearchOpen: (searchOpen) => set({ searchOpen, replacing: false, editing: false }),
+  // Add Gear waits while plugs are being edited (only Done ends that).
+  setSearchOpen: (searchOpen) =>
+    set((u) => {
+      if (searchOpen && u.plugEditing) return {};
+      if (searchOpen && !u.searchOpen) track("panel_open", { panel: "Add Gear" });
+      return { searchOpen, replacing: false, editing: false };
+    }),
   replacing: false,
   setReplacing: (replacing) => set({ replacing, editing: false, searchOpen: replacing }),
   editing: false,

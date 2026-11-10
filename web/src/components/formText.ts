@@ -14,7 +14,7 @@ export const fieldError = "mt-1 block text-xs text-danger";
 
 /** A text field's look without its height, for text areas (add `h-*` and `py-2`). */
 export const fieldBox =
-  "w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted/70 focus:ring-2 focus:ring-brand";
+  "w-full rounded-control bg-surface-hover px-3 text-sm outline-none placeholder:text-ink-muted focus:ring-2 focus:ring-brand";
 /** The standard text field (also selects). */
 export const fieldInput = `h-9 ${fieldBox}`;
 
@@ -23,5 +23,5 @@ export const fieldInput = `h-9 ${fieldBox}`;
  * (`fieldWithUnitInput`) and the unit (`fieldUnit`, aria-hidden; put the unit in the input's accessible name instead).
  */
 export const fieldWithUnit = "flex h-9 w-full items-center gap-1 rounded-control bg-surface-hover px-3 focus-within:ring-2 focus-within:ring-brand";
-export const fieldWithUnitInput = "h-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted/70";
+export const fieldWithUnitInput = "h-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-ink-muted";
 export const fieldUnit = "shrink-0 text-sm text-ink-muted";

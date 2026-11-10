@@ -15,6 +15,7 @@ import { useUi } from "../store/ui";
 import { PedalArt } from "./PedalArt";
 import { CONTROL_LABEL, edit, openSignalMenu, SignalMenu, useSignalMenu, type SignalMenuTarget } from "./SignalMenu";
 import { barSoftButton } from "./toolbarStyles";
+import { Meta } from "./Meta";
 import { hideTip, tip } from "./Tooltip";
 
 const plural = (n: number, one: string) => `${n} ${one}${n === 1 ? "" : "s"}`;
@@ -187,7 +188,7 @@ export function SignalPath() {
           <div className="min-w-0 flex-1">
             <h2 className="text-lg font-semibold tracking-[-0.02em]">Signal Path</h2>
             <p className="truncate text-[13px] text-ink-muted">
-              {pedals.length === 0 ? "Nothing on this playground yet" : `${plural(inChain, "Pedal")} in Chain · ${trayItems.length} Not in Chain`}
+              {pedals.length === 0 ? "Nothing on this playground yet" : <Meta parts={[`${plural(inChain, "Pedal")} in Chain`, `${trayItems.length} Not in Chain`]} />}
             </p>
           </div>
           {pedals.length > 0 && (
@@ -199,14 +200,14 @@ export function SignalPath() {
         </header>
 
         {pedals.length === 0 && (
-          <div className="animate-enter flex flex-col items-center gap-3 rounded-panel bg-surface px-6 py-10 text-center shadow-panel">
+          <div className="animate-enter flex flex-col items-center gap-3 rounded-panel bg-surface px-6 py-10 text-center">
             <span className="grid size-10 place-items-center rounded-full bg-brand/10 text-brand">
               <Route size={18} />
             </span>
             <p className="max-w-xs text-sm text-ink-muted">Add pedals to your playground to wire them up here.</p>
             <button
               onClick={addGear}
-              className="btn-primary h-[30px] rounded-[5px] px-4 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
+              className="btn-primary h-[30px] rounded-control px-4 text-[13px] tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-1 pointer-coarse:h-10"
             >
               Add Gear
             </button>
@@ -219,7 +220,7 @@ export function SignalPath() {
           </p>
         )}
 
-        <div ref={box} className={`group/diagram animate-enter overflow-x-auto rounded-panel bg-surface shadow-panel ${pedals.length === 0 ? "hidden" : ""}`}>
+        <div ref={box} className={`group/diagram animate-enter overflow-x-auto rounded-panel bg-surface ${pedals.length === 0 ? "hidden" : ""}`}>
           {layout && (
             <div ref={diagram} className="relative" style={{ width: layout.width, height: layout.height }} aria-label={describe(signal.nodes, layout, byId)} role="group">
               <svg className="absolute inset-0 overflow-visible" width={layout.width} height={layout.height} aria-hidden>
@@ -296,7 +297,7 @@ export function SignalPath() {
                     {...tip(controller ? "Controller: pick what it controls" : "Add to the chain")}
                     onPointerDown={(e) => startDrag(e, item.id)}
                     onClick={(e) => openMenu({ kind: "tray", id: item.id }, e.currentTarget)}
-                    className={`press flex h-9 items-center gap-2 rounded-control bg-surface pl-1 pr-3 shadow-panel outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand ${drag?.started && drag.id === item.id ? "opacity-40" : ""}`}
+                    className={`press flex h-9 items-center gap-2 rounded-control bg-surface pl-1 pr-3 shadow-float outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand ${drag?.started && drag.id === item.id ? "opacity-40" : ""}`}
                   >
                     <Art item={item} manifest={manifest} size={28} />
                     <span className="max-w-40 truncate text-sm">{itemName(item)}</span>
@@ -310,7 +311,7 @@ export function SignalPath() {
       </div>
 
       {draggedItem && drag && (
-        <div className="pointer-events-none fixed z-50 flex h-9 -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-control bg-surface pl-1 pr-3 shadow-panel" style={{ left: drag.x, top: drag.y }}>
+        <div className="pointer-events-none fixed z-50 flex h-9 -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-control bg-surface pl-1 pr-3 shadow-float" style={{ left: drag.x, top: drag.y }}>
           <Art item={draggedItem} manifest={manifest} size={28} />
           <span className="max-w-40 truncate text-sm">{itemName(draggedItem)}</span>
         </div>
@@ -443,7 +444,7 @@ function Tile({
       aria-label={`${name}${badge ? `, ${badge}` : ""}${controller ? ", controller" : ""}`}
       onPointerDown={onPointerDown}
       onClick={onClick}
-      className={`press absolute flex flex-col items-center gap-1 rounded-[10px] border bg-surface px-1.5 pb-2 pt-2 text-center transition-[opacity,box-shadow] hover:bg-surface-hover ${focus} ${
+      className={`press absolute flex flex-col items-center gap-1 rounded-panel border bg-surface px-1.5 pb-2 pt-2 text-center transition-[opacity,box-shadow] hover:bg-surface-hover ${focus} ${
         controller ? "border-dashed border-brand/50" : "border-chrome-line"
       } ${target ? "ring-2 ring-brand" : ""} ${dragging ? "opacity-40" : ""}`}
       style={style}
@@ -460,7 +461,7 @@ function Tile({
 function Badge({ text }: { text: string }) {
   // Sits on the tile's top edge like a tag, clear of the pedal art.
   return (
-    <span className="absolute -top-2 right-2 rounded-[4px] border border-brand/30 bg-surface px-1 text-[10px] font-semibold leading-[14px] text-brand">
+    <span className="absolute -top-2 right-2 rounded-inner border border-brand/30 bg-surface px-1 text-[10px] font-semibold leading-[14px] text-brand">
       {text}
     </span>
   );
@@ -482,7 +483,7 @@ function Art({ item, manifest, size }: { item: Item; manifest: Manifest | null; 
   const h = item.height * PX_PER_INCH;
   const scale = Math.min(size / w, size / h);
   if (src) return <img src={src} alt="" draggable={false} className="select-none object-contain" style={{ width: w * scale, height: h * scale }} />;
-  if (!item.custom) return <span className="rounded-[4px] bg-surface-hover" style={{ width: w * scale, height: h * scale }} />;
+  if (!item.custom) return <span className="rounded-inner bg-surface-hover" style={{ width: w * scale, height: h * scale }} />;
   return (
     <span className="relative block" style={{ width: w * scale, height: h * scale }}>
       <span className="absolute left-0 top-0 origin-top-left" style={{ width: w, height: h, transform: `scale(${scale})` }}>

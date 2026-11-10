@@ -1,42 +1,79 @@
 @import "tailwindcss";
 
-/* Design tokens. Components use these via Tailwind utilities (bg-surface, text-ink-muted, ...). */
+/*
+ * Design tokens. Components use these via Tailwind utilities (bg-surface, text-ink-muted, rounded-panel, ...).
+ * The rules behind them, with every swatch, are on the design reference page (/design/, src/design/DesignApp.tsx).
+ *
+ * Grays carry a little of the brand's blue-violet, so they sit with it instead of against it. #fff and #000 are the
+ * only fully neutral colors. Status and accent colors are used for meaning, never for decoration alone.
+ */
 @theme {
   --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  --color-canvas: #f8f8f8;
+  /* Surfaces, back to front: page (behind Explore, Gear and the design page), card (cards on those pages), canvas
+     (the board area and photo wells), surface (panels, menus, dialogs, fields' backing), chrome (header and bars). */
+  --color-page: #ffffff;
+  --color-card: #f7f7fa;
+  /* A card under the pointer: tiles shift a shade instead of drawing an outline. */
+  --color-card-hover: #efeff6;
+  --color-canvas: #f7f7fa;
   --color-surface: #ffffff;
-  --color-surface-hover: #f1f2f6;
+  --color-surface-hover: #f1f1f7;
   --color-chrome: #ffffff;
-  --color-chrome-line: rgb(0 0 0 / 0.08);
-  --color-line: #e3e5ea;
-  --color-grid: #dedede;
-  --color-board: #2b2b30;
-  --color-ink: #1c1d22;
-  --color-ink-muted: #6b6f7b;
-  /* Icons next to text: a step from the text color (lighter in light mode, darker in dark mode). Icons paired with
-     a label are more muted; icons on their own are closer to the text color. */
-  --color-icon: #666a76;
-  --color-icon-solo: #4f525e;
+  /* Lines: chrome-line is the hairline for edges that need a touch more contrast (felt, not noticed); line is a
+     divider between rows or sections. */
+  --color-chrome-line: rgb(27 28 56 / 0.08);
+  --color-line: #e5e5ef;
+  --color-grid: #dbdbe6;
+  --color-board: #2b2c37;
+  /* Text and icons, in three steps: ink (titles, body), ink-muted (secondary), and the icon pair. */
+  --color-ink: #1b1c2b;
+  --color-ink-muted: #686a81;
+  /* Icons next to text: a step from the text color. Icons paired with a label are more muted; icons on their own
+     are closer to the text color. */
+  --color-icon: #696c84;
+  --color-icon-solo: #4d5068;
+  /* Soft fills for quiet buttons and the sort and size switches. */
+  --color-soft: rgb(88 92 156 / 0.11);
+  --color-soft-hover: rgb(88 92 156 / 0.17);
+  --color-soft-active: rgb(88 92 156 / 0.25);
+
   --color-brand: #5b61fb;
-  --color-brand-hover: #4a50ef;
-  --color-brand-top: #6d72f6;
+  --color-brand-hover: #4b51ee;
   --color-brand-ink: #ffffff;
-  /* Dialogs: a big soft shadow in light mode. Dark mode keeps it tighter, since a wide blur over a dark backdrop bands. */
-  --shadow-modal: 0 24px 80px rgb(0 0 0 / 0.3), 0 6px 20px rgb(0 0 0 / 0.15);
-  --color-danger: #d92d20;
-  /* Group halos: purple, a step from the blurple brand color. */
-  --color-group: #9a4fe6;
-  /* Catalog photos' drop shadow, which follows each photo's outline. */
-  --item-drop: drop-shadow(3px 5px 7px rgb(0 0 0 / 0.34));
+
+  /* Status: positive (jade), negative (rose vermilion), warning (marigold), neutral (harbor blue, for notices). */
+  --color-positive: #0b8462;
+  --color-danger: #d63d52;
+  --color-warning: #a86605;
+  --color-neutral: #2a78b5;
+  /* Accents: orchid (group halos), flamingo (snap and size guides), tangerine, lagoon. */
+  --color-group: #9b4ee0;
+  --color-guide: #f0458f;
+  --color-tangerine: #e8622c;
+  --color-lagoon: #0f97a8;
+
   /* Tooltips and action toasts. */
-  --color-tip: #1c1d22;
+  --color-tip: #1b1c2b;
   --color-tip-ink: #ffffff;
 
-  --radius-control: 4px;
-  --radius-panel: 12px;
+  /* Corners grow with the thing: inner (pieces inside a control), control (fields, buttons, menu rows), panel
+     (cards, panels, menus, popovers), container (dialogs, sheets, large photos). Pills stay round. */
+  --radius-inner: 4px;
+  --radius-control: 6px;
+  --radius-panel: 10px;
+  --radius-container: 16px;
 
-  --shadow-panel: 0 4px 16px rgb(16 18 27 / 0.08), 0 0 0 1px rgb(16 18 27 / 0.04);
+  /* Shadows only for what floats above the page: float for menus, popovers, docked panels and floating bars (a
+     hairline plus a soft lift), modal for dialogs, pop for a button that should stand out. Cards and chips are flat. */
+  --shadow-float: 0 0 0 1px rgb(27 28 56 / 0.06), 0 6px 20px rgb(27 28 56 / 0.08), 0 1px 3px rgb(27 28 56 / 0.05);
+  --shadow-modal: 0 0 0 1px rgb(27 28 56 / 0.05), 0 24px 64px rgb(27 28 56 / 0.18), 0 4px 12px rgb(27 28 56 / 0.06);
+  /* Pop: a stronger soft shadow for the few buttons that should stand out, like Add Gear on the board. Use rarely. */
+  --shadow-pop: 0 6px 20px rgb(27 28 56 / 0.25);
+  /* Chips on a page: just the hairline. */
+  --shadow-chip: 0 0 0 1px var(--color-chrome-line);
+  /* Catalog photos' drop shadow, which follows each photo's outline (exempt from the flat rules). */
+  --item-drop: drop-shadow(3px 5px 7px rgb(0 0 0 / 0.34));
 }
 
 /* Dark theme: follows the OS unless the user picks Light or Dark (data-theme on <html>). */
@@ -47,86 +84,125 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --color-canvas: #2a2b31;
-    --color-surface: #1b1c21;
-    --color-surface-hover: #26272e;
-    --color-chrome: #17181c;
-    --color-chrome-line: rgb(255 255 255 / 0.06);
-    --color-line: #31333b;
-    --color-grid: #40424b;
-    --color-board: #5b5d6b;
-    --color-ink: #ececf1;
-    --color-ink-muted: #9a9ca8;
-    --color-icon: #a9abb6;
-    --color-icon-solo: #c2c4ce;
+    --color-page: #121319;
+    --color-card: #1a1b23;
+    --color-card-hover: #22232d;
+    --color-canvas: #282935;
+    --color-surface: #1a1b23;
+    --color-surface-hover: #252631;
+    --color-chrome: #15161c;
+    --color-chrome-line: rgb(225 227 255 / 0.07);
+    --color-line: #30313e;
+    --color-grid: #3e3f4d;
+    --color-board: #5a5c6d;
+    --color-ink: #ecedf6;
+    --color-ink-muted: #9c9eb3;
+    --color-icon: #a8aabe;
+    --color-icon-solo: #c4c6d6;
+    --color-soft: rgb(200 204 255 / 0.1);
+    --color-soft-hover: rgb(200 204 255 / 0.15);
+    --color-soft-active: rgb(200 204 255 / 0.22);
     --color-brand: #6c6cff;
     --color-brand-hover: #8282ff;
-    --color-brand-top: #8a8eff;
-    --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5);
-    --color-danger: #f97066;
-    --color-group: #b784ff;
+    --color-positive: #3dcf9f;
+    --color-danger: #ff7b88;
+    --color-warning: #f3b53f;
+    --color-neutral: #6cb6ef;
+    --color-group: #c08bff;
+    --color-guide: #ff73ad;
+    --color-tangerine: #ff9566;
+    --color-lagoon: #4fd0de;
+    --color-tip: #464857;
+    --color-tip-ink: #f4f4f9;
+    --shadow-float: 0 0 0 1px rgb(225 227 255 / 0.07), 0 8px 24px rgb(0 0 0 / 0.4);
+    --shadow-modal: 0 0 0 1px rgb(225 227 255 / 0.07), 0 16px 40px rgb(0 0 0 / 0.5);
+    --shadow-pop: 0 6px 20px rgb(0 0 0 / 0.45);
     --item-drop: drop-shadow(3px 5px 8px rgb(0 0 0 / 0.55));
-    --color-tip: #4a4c55;
-    --color-tip-ink: #f4f4f6;
-    --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --color-canvas: #2a2b31;
-  --color-surface: #1b1c21;
-  --color-surface-hover: #26272e;
-  --color-chrome: #17181c;
-  --color-chrome-line: rgb(255 255 255 / 0.06);
-  --color-line: #31333b;
-  --color-grid: #40424b;
-  --color-board: #5b5d6b;
-  --color-ink: #ececf1;
-  --color-ink-muted: #9a9ca8;
-  --color-icon: #a9abb6;
-  --color-icon-solo: #c2c4ce;
+  --color-page: #121319;
+  --color-card: #1a1b23;
+  --color-card-hover: #22232d;
+  --color-canvas: #282935;
+  --color-surface: #1a1b23;
+  --color-surface-hover: #252631;
+  --color-chrome: #15161c;
+  --color-chrome-line: rgb(225 227 255 / 0.07);
+  --color-line: #30313e;
+  --color-grid: #3e3f4d;
+  --color-board: #5a5c6d;
+  --color-ink: #ecedf6;
+  --color-ink-muted: #9c9eb3;
+  --color-icon: #a8aabe;
+  --color-icon-solo: #c4c6d6;
+  --color-soft: rgb(200 204 255 / 0.1);
+  --color-soft-hover: rgb(200 204 255 / 0.15);
+  --color-soft-active: rgb(200 204 255 / 0.22);
   --color-brand: #6c6cff;
   --color-brand-hover: #8282ff;
-  --color-brand-top: #8a8eff;
-  --shadow-modal: 0 12px 32px rgb(0 0 0 / 0.5);
-  --color-danger: #f97066;
-  --color-group: #b784ff;
+  --color-positive: #3dcf9f;
+  --color-danger: #ff7b88;
+  --color-warning: #f3b53f;
+  --color-neutral: #6cb6ef;
+  --color-group: #c08bff;
+  --color-guide: #ff73ad;
+  --color-tangerine: #ff9566;
+  --color-lagoon: #4fd0de;
+  --color-tip: #464857;
+  --color-tip-ink: #f4f4f9;
+  --shadow-float: 0 0 0 1px rgb(225 227 255 / 0.07), 0 8px 24px rgb(0 0 0 / 0.4);
+  --shadow-modal: 0 0 0 1px rgb(225 227 255 / 0.07), 0 16px 40px rgb(0 0 0 / 0.5);
+  --shadow-pop: 0 6px 20px rgb(0 0 0 / 0.45);
   --item-drop: drop-shadow(3px 5px 8px rgb(0 0 0 / 0.55));
-  --color-tip: #4a4c55;
-  --color-tip-ink: #f4f4f6;
-  --shadow-panel: 0 4px 16px rgb(0 0 0 / 0.45), 0 0 0 1px rgb(255 255 255 / 0.06);
 }
 
-/* OLED dark: true black for the canvas and chrome, near-black panels with hairline edges (shadows can't show on
+/* OLED dark: true black for the canvas, page and chrome, near-black panels with hairline edges (shadows can't show on
    black). Applies whenever dark mode is on and Settings → Dark Mode is OLED (data-dark on <html>). */
 @media (prefers-color-scheme: dark) {
   :root[data-dark="oled"]:not([data-theme="light"]) {
     color-scheme: dark;
+    --color-page: #000000;
+    --color-card: #0a0a0e;
+    --color-card-hover: #16161c;
     --color-canvas: #000000;
-    --color-surface: #0b0b0d;
-    --color-surface-hover: #1a1a1e;
+    --color-surface: #0a0a0e;
+    --color-surface-hover: #18181f;
     --color-chrome: #000000;
-    --color-chrome-line: rgb(255 255 255 / 0.1);
-    --color-line: #26262b;
-    --color-grid: #1a1a1e;
-    --shadow-panel: 0 0 0 1px rgb(255 255 255 / 0.1);
-    --shadow-modal: 0 0 0 1px rgb(255 255 255 / 0.1);
+    --color-chrome-line: rgb(225 227 255 / 0.1);
+    --color-line: #25252e;
+    --color-grid: #18181f;
+    --shadow-float: 0 0 0 1px rgb(225 227 255 / 0.1);
+    --shadow-modal: 0 0 0 1px rgb(225 227 255 / 0.1);
     --item-drop: drop-shadow(0 0 0.75px rgb(255 255 255 / 0.5)) drop-shadow(0 0 14px rgb(255 255 255 / 0.1));
   }
 }
 :root[data-theme="dark"][data-dark="oled"] {
   color-scheme: dark;
+  --color-page: #000000;
+  --color-card: #0a0a0e;
+  --color-card-hover: #16161c;
   --color-canvas: #000000;
-  --color-surface: #0b0b0d;
-  --color-surface-hover: #1a1a1e;
+  --color-surface: #0a0a0e;
+  --color-surface-hover: #18181f;
   --color-chrome: #000000;
-  --color-chrome-line: rgb(255 255 255 / 0.1);
-  --color-line: #26262b;
-  --color-grid: #1a1a1e;
-  --shadow-panel: 0 0 0 1px rgb(255 255 255 / 0.1);
-  --shadow-modal: 0 0 0 1px rgb(255 255 255 / 0.1);
+  --color-chrome-line: rgb(225 227 255 / 0.1);
+  --color-line: #25252e;
+  --color-grid: #18181f;
+  --shadow-float: 0 0 0 1px rgb(225 227 255 / 0.1);
+  --shadow-modal: 0 0 0 1px rgb(225 227 255 / 0.1);
   --item-drop: drop-shadow(0 0 0.75px rgb(255 255 255 / 0.5)) drop-shadow(0 0 14px rgb(255 255 255 / 0.1));
+}
+
+/* Keyboard focus: anything focusable shows a brand ring, unless its own classes draw one (outline-none plus a
+   focus-visible:ring), which win because this sits in the base layer. */
+@layer base {
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
 }
 
 html,
@@ -195,30 +271,24 @@ select {
   }
 }
 
-/* Primary button, from the Figma design: a vertical purple gradient whose first ~1px is a lighter highlight
-   (the "gradient border"; background-origin lets it span the transparent border), a soft drop shadow and
-   a faint text shadow. */
+/* Primary button: flat brand color, white label. Hover darkens a step; pressing squeezes it a little. */
 @layer components {
   .btn-primary {
-    border: 1px solid transparent;
     border-radius: var(--radius-control);
-    background-image: linear-gradient(180deg, var(--color-brand-top) 0%, var(--color-brand) 2.886%, var(--color-brand) 100%);
-    background-origin: border-box;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 0.14);
+    background-color: var(--color-brand);
     color: var(--color-brand-ink);
     font-size: 14px;
     font-weight: 600;
-    text-shadow: 0 1px 1px rgb(0 0 0 / 0.06);
-  }
-  .btn-primary {
-    transition: transform 0.12s ease-out, filter 0.15s;
+    transition: transform 0.12s ease-out, background-color 0.15s;
   }
   .btn-primary:hover:not(:disabled) {
-    filter: brightness(0.94);
+    background-color: var(--color-brand-hover);
   }
   .btn-primary:active:not(:disabled) {
-    filter: brightness(0.86);
     transform: scale(0.97);
+  }
+  .btn-primary:disabled {
+    opacity: 0.5;
   }
 
   /* Pressed state for buttons: a quick squeeze. Colors come from each button's own classes. */
@@ -376,5 +446,49 @@ select {
 @media (display-mode: standalone) {
   .pwa-top-strip {
     display: block;
+  }
+}
+
+/*
+ * The squiggle: an even, smooth wave, drawn as a masked pseudo-element in the text color (faded).
+ * .squiggle-rule: after a heading, a wave runs from just past the words to the end of the row, centered on the text.
+ * Used only after Gear's Newly added heading. Make the heading a flex item that can grow.
+ */
+.squiggle-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+.squiggle-rule::after {
+  content: "";
+  height: 4px;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpath d='M0 2 Q2 0 4 2 T8 2' fill='none' stroke='%23000' stroke-width='1.1' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 8px 4px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpath d='M0 2 Q2 0 4 2 T8 2' fill='none' stroke='%23000' stroke-width='1.1' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 8px 4px;
+  pointer-events: none;
+}
+.squiggle-rule::after {
+  flex: 1;
+  min-width: 2rem;
+  background-color: color-mix(in srgb, currentColor 22%, transparent);
+}
+/*
+ * Capped-width pages (Explore, Gear, the editor) put their content in .page-main, up to 1600px wide. On very wide
+ * screens it's drawn 12.5% larger, about 2px more on body text. --page-zoom lets anything sized in viewport units
+ * inside it divide the zoom back out (Gear's sidebar).
+ */
+.page-main {
+  --page-zoom: 1;
+}
+/* Wider screens get more room at the sides (outside the layers, so it wins over each page's px-4). */
+@media (min-width: 1300px) {
+  .page-main {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media (min-width: 1880px) {
+  .page-main {
+    --page-zoom: 1.125;
+    zoom: var(--page-zoom);
   }
 }

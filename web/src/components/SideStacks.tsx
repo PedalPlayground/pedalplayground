@@ -1,4 +1,6 @@
 import {
+  Cable,
+  Info,
   AlignHorizontalSpaceBetween,
   ArrowDownToLine,
   ArrowUpToLine,
@@ -24,6 +26,7 @@ import {
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { itemName } from "../lib/itemName";
+import { openGearInfo, placedItemHref } from "../lib/gearLink";
 import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
@@ -79,7 +82,7 @@ function Row({ icon, label, shortcut, onClick, collapsed, side, danger, pressed,
       aria-pressed={pressed}
       data-tour={dataTour}
       {...(collapsed ? tip(label, { shortcut, side }) : {})}
-      className={`group press flex h-8 shrink-0 items-center rounded-[5px] text-[13px] font-medium tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-40 ${
+      className={`group press flex h-8 shrink-0 items-center rounded-control text-[13px] font-medium tracking-[-0.01em] outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-40 ${
         collapsed ? "w-8 justify-center" : "w-full gap-2.5 px-2"
       } ${
         danger
@@ -138,7 +141,7 @@ function Shell({
           aria-label={collapsed ? "Expand menu" : "Collapse menu"}
           aria-expanded={!collapsed}
           {...tip(collapsed ? "Expand" : "Collapse", { side: edge === "left" ? "right" : "left" })}
-          className="press grid size-8 place-items-center rounded-[5px] text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
+          className="press grid size-8 place-items-center rounded-control text-ink-muted outline-none hover:bg-surface-hover hover:text-ink focus-visible:ring-2 focus-visible:ring-brand"
         >
           <Chevron size={16} />
         </button>
@@ -201,6 +204,8 @@ export function ObjectStack() {
         <Row {...row} icon={<Pencil size={15} />} label={single.kind === "pedalboard" ? "Edit Board" : "Edit"} onClick={() => setEditing(true)} />
       )}
       {single && !single.custom && <Row {...row} icon={<Replace size={15} />} label="Replace" onClick={() => setReplacing(true)} />}
+      {single?.kind === "pedal" && <Row {...row} icon={<Cable size={16} />} label="Plugs" shortcut="P" onClick={() => useUi.getState().setPlugEditing(single.id)} />}
+      {placedItemHref(single) && <Row {...row} icon={<Info size={16} />} label="Info" onClick={() => openGearInfo(single)} />}
       <Row {...row} icon={<Trash2 size={16} />} label="Remove" shortcut="Del" onClick={s.deleteSelected} danger />
     </Shell>
   );
@@ -242,9 +247,9 @@ export function AddGearButton({ onClick }: { onClick: () => void }) {
       onClick={onClick}
       data-tour="add"
       {...tip("Add Gear", { shortcut: "+", side: "top" })}
-      className="btn-primary flex h-11 items-center gap-2.5 whitespace-nowrap rounded-[8px] pl-2.5 pr-5 text-[15px] font-semibold tracking-[-0.01em] shadow-[0_6px_20px_rgb(0_0_0/0.25)] outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+      className="btn-primary flex h-11 items-center gap-2.5 whitespace-nowrap rounded-control pl-2.5 pr-5 text-[15px] font-semibold tracking-[-0.01em] shadow-pop outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
     >
-      <span className="grid size-6 place-items-center rounded-[6px] bg-white/20">
+      <span className="grid size-6 place-items-center rounded-control bg-white/20">
         <Plus size={16} strokeWidth={2.75} />
       </span>
       Add Gear

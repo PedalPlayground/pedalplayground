@@ -1,9 +1,10 @@
-import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, CopyPlus, Group, Lock, LockOpen, Pencil, Replace, RotateCw, Trash2, Ungroup } from "lucide-react";
+import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Cable, CopyPlus, Group, Info, Lock, LockOpen, Pencil, Replace, RotateCw, Trash2, Ungroup } from "lucide-react";
 import type { ReactNode } from "react";
 import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { itemName } from "../lib/itemName";
+import { openGearInfo, placedItemHref } from "../lib/gearLink";
 import { barDivider, barIconActive, barIconButton, barIconIdle, barPanel, barSoftButton, barSoftDangerButton } from "./toolbarStyles";
 
 function Action({
@@ -112,6 +113,17 @@ export function ObjectMenu() {
           <Replace size={14} strokeWidth={2.25} className="max-sm:size-[18px] max-sm:stroke-2" />
           <span className="hidden sm:inline">Replace</span>
         </button>
+      )}
+      {single?.kind === "pedal" && (
+        <Action label="Plugs" shortcut="P" onClick={() => useUi.getState().setPlugEditing(single.id)}>
+          <Cable size={18} />
+        </Action>
+      )}
+      {/* Catalog gear: its page on the Gear site, in a new tab. */}
+      {placedItemHref(single) && (
+        <Action label="Info" onClick={() => openGearInfo(single)}>
+          <Info size={18} />
+        </Action>
       )}
       {/* Phones: icon button. Tablet and desktop: icon and text, in a soft red version of the Replace style. */}
       <span className="contents sm:hidden">

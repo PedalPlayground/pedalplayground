@@ -91,16 +91,37 @@ export function drawItems(ctx: CanvasRenderingContext2D, items: Item[], images: 
   });
 }
 
-/** Renders a small WebP (PNG where WebP can't be encoded) data URL of the layout, or null if there's nothing to draw. */
-export async function renderThumbnail(items: Item[]): Promise<string | null> {
+/** The thumbnail drawn on a canvas `k` times the base 360×225 size, or null if there's nothing to draw. */
+async function thumbnailCanvas(items: Item[], k: number): Promise<HTMLCanvasElement | null> {
   if (!items.length) return null;
-
   const canvas = document.createElement("canvas");
-  canvas.width = W;
-  canvas.height = H;
+  canvas.width = W * k;
+  canvas.height = H * k;
   const ctx = canvas.getContext("2d")!;
   // Transparent background: the UI puts a light tint behind it that works on light and dark menus.
-  drawItems(ctx, items, await loadItemImages(items), fitItems(items, { x: PAD, y: PAD, w: W - PAD * 2, h: H - PAD * 2 }));
+  const pad = PAD * k;
+  drawItems(ctx, items, await loadItemImages(items), fitItems(items, { x: pad, y: pad, w: canvas.width - pad * 2, h: canvas.height - pad * 2 }));
+  return canvas;
+}
+
+/**
+ * The thumbnail as an image file at 2× (720×450), sharp on retina screens: WebP, or PNG where the browser can't encode
+ * WebP. Null when there's nothing to draw or the images can't be read back.
+ */
+export async function renderThumbnailFile(items: Item[]): Promise<Blob | null> {
+  const canvas = await thumbnailCanvas(items, 2);
+  if (!canvas) return null;
+  try {
+    return await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/webp", 0.82));
+  } catch {
+    return null; // tainted canvas
+  }
+}
+
+/** Renders a small WebP (PNG where WebP can't be encoded) data URL of the layout, or null if there's nothing to draw. */
+export async function renderThumbnail(items: Item[]): Promise<string | null> {
+  const canvas = await thumbnailCanvas(items, 1);
+  if (!canvas) return null;
 
   try {
     // WebP keeps the transparency and stays small. Browsers that can't encode it return PNG instead.
@@ -108,4 +129,17 @@ export async function renderThumbnail(items: Item[]): Promise<string | null> {
   } catch {
     return null; // tainted canvas (cross-origin images without CORS)
   }
+}
+
+/** Draws the layout onto a canvas element at its pixel size (for big, sharp pictures of a board, like Explore's hero). */
+export async function drawLayout(canvas: HTMLCanvasElement, items: Item[], pad = 0) {
+  if (!items.length) return;
+  const images = await loadItemImages(items);
+  // The canvas takes the layout's shape (keeping its width), so there's no empty band above or below.
+  const b = layoutBounds(items);
+  canvas.height = Math.round(Math.min(canvas.width, ((canvas.width - pad * 2) * (b.bottom - b.top)) / (b.right - b.left) + pad * 2));
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawItems(ctx, items, images, fitItems(items, { x: pad, y: pad, w: canvas.width - pad * 2, h: canvas.height - pad * 2 }));
 }

@@ -7,7 +7,7 @@ import { useCloud } from "../store/cloud";
 import { useUi } from "../store/ui";
 import { AccountDialog } from "./AccountDialog";
 import { AvatarDialog } from "./AvatarDialog";
-import { AvatarMenu } from "./AvatarMenu";
+import { AvatarMenu, GuestMenu } from "./AvatarMenu";
 import { BuildsMenu } from "./PlaygroundSwitcher";
 import { LegalDialog } from "./LegalDialog";
 import { SetPasswordDialog } from "./SetPasswordForm";
@@ -42,16 +42,26 @@ export function PageHeader({ current, dialog, setDialog }: { current: SitePage; 
   const close = () => setDialog(null);
   return (
     <>
+      {/* First stop for keyboards: jump past the header to the page's main content (id="content"). */}
+      <a
+        href="#content"
+        className="sr-only z-50 rounded-control bg-brand px-3 py-2 text-sm font-semibold text-brand-ink focus:not-sr-only focus:fixed focus:left-3 focus:top-3"
+      >
+        Skip to content
+      </a>
       <SiteHeader
         current={current}
-        className="sticky top-0 z-10"
+        className="sticky top-0 z-30"
         builds={<BuildsMenu remote onEdit={() => undefined} onPlaygrounds={() => undefined} onSignIn={() => setDialog("account")} />}
         updates={<WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />}
         account={
           user ? (
             <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
           ) : (
-            cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />
+            <>
+              {cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />}
+              <GuestMenu onSignIn={() => setDialog("account")} />
+            </>
           )
         }
       />
