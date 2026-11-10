@@ -23,6 +23,8 @@ const tabFromHash = (): Tab => {
 export interface Notice {
   text: string;
   error?: boolean;
+  /** A link after the text, opened in a new tab (the publish run on GitHub). */
+  link?: { href: string; label: string };
 }
 
 export interface PublishState {
@@ -34,7 +36,7 @@ export interface PublishState {
 }
 
 /** "Approved X." plus how the publish went. */
-export const withPublish = (done: string, p: Notice): Notice => ({ text: `${done} ${p.text}`, error: p.error });
+export const withPublish = (done: string, p: Notice): Notice => ({ ...p, text: `${done} ${p.text}` });
 
 /** The catalog editor at /editor/: only accounts in catalog_editors get past the gate. */
 export function EditorApp() {
@@ -82,12 +84,16 @@ export function EditorApp() {
     return () => clearInterval(t);
   }, [allowed]);
 
+  const [publishing, setPublishing] = useState(false);
   const runPublish = async (): Promise<Notice> => {
-    const problem = await publish();
+    setPublishing(true);
+    const result = await publish().finally(() => setPublishing(false));
     pendingBuilds().then(setWaiting, () => undefined);
-    return problem
-      ? { text: `The publish didn't start (${problem}). Use Publish now to retry.`, error: true }
-      : { text: "Publishing now: it's live on the site in a few minutes." };
+    if ("error" in result) return { text: `The publish didn't start (${result.error}). Use Publish now to retry.`, error: true };
+    return {
+      text: "Publishing now: it's live on the site in a few minutes.",
+      link: result.runUrl ? { href: result.runUrl, label: "Watch it on GitHub" } : undefined,
+    };
   };
   const publisher: PublishState = { run: runPublish };
 
@@ -140,8 +146,8 @@ export function EditorApp() {
                 {waiting} {waiting === 1 ? "image" : "images"} waiting to build
               </span>
             )}
-            <button type="button" className={secondaryButton} onClick={() => runPublish().then(setNotice)}>
-              Publish now
+            <button type="button" className={secondaryButton} disabled={publishing} onClick={() => runPublish().then(setNotice)}>
+              {publishing ? "Publishing…" : "Publish now"}
             </button>
           </div>
         </>
@@ -152,7 +158,17 @@ export function EditorApp() {
           role="status"
           className={`mb-5 flex items-start justify-between gap-3 rounded-panel border px-3 py-2 text-[13px] ${notice.error ? "border-danger/40 text-danger" : "border-line text-ink"}`}
         >
-          <span>{notice.text}</span>
+          <span>
+            {notice.text}
+            {notice.link && (
+              <>
+                {" "}
+                <a href={notice.link.href} target="_blank" rel="noreferrer noopener" className="font-semibold text-brand underline underline-offset-2 hover:no-underline">
+                  {notice.link.label}
+                </a>
+              </>
+            )}
+          </span>
           <button type="button" className="text-ink-muted hover:text-ink" onClick={() => setNotice(null)} aria-label="Dismiss">
             ×
           </button>

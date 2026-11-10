@@ -33,6 +33,8 @@ The flow: a player inserts a `catalog_submissions` row and uploads its image to
 updates the `catalog_items` row with `needs_render = true`. The editor page then calls the `catalog-publish`
 function, which starts the workflow. The workflow builds the files into `catalog-public`, rewrites
 `catalog-public/catalog.json`, then copies the new images and `catalog.json` to `/catalog/` on each server.
+The function answers with the run's GitHub page (`run_url`), and the editor's "Publishing now" alert links to it
+("Watch it on GitHub"). If the run can't be found within a few seconds, the link goes to the workflow's list of runs.
 
 Why a GitHub Action and not an Edge Function for the images: image encoding uses sharp, a native library that
 can't run in Supabase's Deno functions, and the same code already builds the repo catalog.
