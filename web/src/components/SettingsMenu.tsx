@@ -72,7 +72,8 @@ export function Segmented<T extends string>({
 }
 
 /** The cog in the canvas's lower-right corner. `className` positions its floating panel. */
-export function SettingsMenu({ className = "" }: { className?: string }) {
+/** `label` and `triggerClassName`: the phone builder's dark bar shows it as an icon over a label, like its other buttons. */
+export function SettingsMenu({ className = "", triggerClassName, label }: { className?: string; triggerClassName?: string; label?: string }) {
   const { snapping, setSnapping, startTour } = useUi();
   const fileInput = useRef<HTMLInputElement>(null);
 
@@ -110,9 +111,13 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
       <Dropdown.Trigger
         aria-label="Preferences"
         {...tip("Preferences", { side: "top" })}
-        className={`${barIconButton} text-ink-muted hover:bg-surface-hover hover:text-ink active:bg-chrome-line data-[state=open]:bg-surface-hover data-[state=open]:text-ink`}
+        className={
+          triggerClassName ??
+          `${barIconButton} text-ink-muted hover:bg-surface-hover hover:text-ink active:bg-chrome-line data-[state=open]:bg-surface-hover data-[state=open]:text-ink`
+        }
       >
         <Settings size={18} />
+        {label}
       </Dropdown.Trigger>
       </div>
       <Dropdown.Portal>

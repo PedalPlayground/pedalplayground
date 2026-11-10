@@ -58,6 +58,8 @@ Known exceptions: the playground thumbnail in the switcher is 32px with a small 
 
 Phones (below 640px): floating glass bars (`glass`, `glass-sm` in index.css) with fully rounded ends; the Place button floats apart from the bar as a purple circle; the logo and zoom readout are hidden.
 
+The phone builder (from 2026-11-10) has no header. Top left: a round Back to My Boards button, then the board's name and pencil (`BoardLabel`). Top right: the save status and the account. Right side, centered: Add Gear as a round purple button (`PhoneAddButton`), with the selection's tools stacked under it (`SelectionMiniMenu rail`) instead of following the selection. Bottom: the canvas controls (Fit, Undo, Redo, Share, Settings) in the same dark pill as the browse pages' tab bar (`phoneBar` in `toolbarStyles.ts`).
+
 ## Keep it consistent
 
 When you change how something looks or behaves, find every other place that shows the same thing and change those
@@ -81,4 +83,5 @@ below is where this has bitten before. Add to it when you find another.
 | Enlarged photo | `components/PhotoViewer.tsx`: the photo fit to the screen, at most 900 × 900 with 40px of room around it (64px from `sm`), on the dialog backdrop, closed by a click anywhere, Esc or the round X top-right | Gear item pages (click the photo). It uses `.modal-backdrop` like `Modal`, so a backdrop change reaches both. Another place that enlarges a photo should reuse it |
 | Board cards | `BoardCard` in `gallery/GalleryApp.tsx` and in `boards/BoardsApp.tsx` (photo, name, then facts; small icon buttons over the photo's corner) | The two pages share columns per card size, skeletons and the hover buttons. Change one, check the other |
 | Saved boards count | `useBoardAllowance` in `store/billing.ts` ("2/4" on the Free plan, nothing on Pro) | My Boards' heading and the My Boards menu's Your Playgrounds label |
+| Phone dark bar | `phoneBar` in `components/toolbarStyles.ts` | The browse pages' `TabBar` and the phone builder's `Toolbar`. Change one, check both |
 | Floating pill text (toasts, canvas hints) | `components/ActionToast.tsx`, `components/Tooltip.tsx` | They use the same pill style. Change both. |

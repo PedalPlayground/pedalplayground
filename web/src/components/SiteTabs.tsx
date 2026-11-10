@@ -2,6 +2,7 @@ import { LayoutGrid, LogIn, Wrench, type LucideProps } from "lucide-react";
 import { useIsEditor } from "../lib/useIsEditor";
 import { useId, type ReactNode } from "react";
 import { useAuth } from "../store/auth";
+import { phoneBar } from "./toolbarStyles";
 import { Brand } from "./Logo";
 
 /**
@@ -136,7 +137,7 @@ export function TabBar({ current, onSignIn }: { current: SitePage; onSignIn: () 
   return (
     <nav
       aria-label="Pedal Playground"
-      className="tab-bar fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-40 mx-auto flex h-[60px] max-w-[400px] items-stretch rounded-full bg-tip px-2 shadow-float ring-1 ring-inset ring-tip-ink/10 sm:hidden"
+      className={`tab-bar fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-40 w-auto sm:hidden ${phoneBar}`}
     >
       <a href="/" aria-current={current === "build" ? "page" : undefined} className={barItem}>
         <BuildIcon size={22} className={icon(current === "build")} />

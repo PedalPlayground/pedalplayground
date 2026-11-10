@@ -17,8 +17,11 @@ const NAV_ROOM = 84;
 /** Icon buttons: bigger on touch screens. */
 const button = "press grid size-8 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand pointer-coarse:size-11 pointer-coarse:rounded-control [&_svg]:size-4 pointer-coarse:[&_svg]:size-[21px]";
 
-/** A little menu that follows the selection: Lock, Rotate, Plugs (one pedal), Edit (custom gear) and ••• for the full right-click menu. Not on phones. */
-export function SelectionMiniMenu() {
+/**
+ * A little menu that follows the selection: Lock, Rotate, Plugs (one pedal), Edit (custom gear) and ••• for the full
+ * right-click menu. On phones (`rail`) the same buttons stack in the right-hand rail under Add Gear instead.
+ */
+export function SelectionMiniMenu({ rail = false }: { rail?: boolean }) {
   const s = usePlayground();
   const touch = useMediaQuery("(pointer: coarse)");
   const setEditing = useUi((u) => u.setEditing);
@@ -30,6 +33,8 @@ export function SelectionMiniMenu() {
   const sheetOpen = useUi((u) => u.searchOpen || u.spacingOpen) && phone;
   const wrap = useRef<HTMLDivElement>(null);
   if (!s.selected.length || dragging || viewing || sheetOpen || !s.viewport.w) return null;
+  // Phones show it in the rail; elsewhere it follows the selection.
+  if (rail !== phone) return null;
   const chosen = s.items.filter((i) => s.selected.includes(i.id));
   if (!chosen.length) return null;
 
@@ -56,32 +61,34 @@ export function SelectionMiniMenu() {
   const several = chosen.length > 1;
   const grouped = several && isOneGroup(chosen);
 
+  const side = rail ? "left" : "bottom";
   const more = () => {
     const el = wrap.current;
     if (!el) return;
     const r = el.getBoundingClientRect();
-    const canvas = el.offsetParent?.getBoundingClientRect();
-    openContextMenu({
-      kind: "object",
-      x: r.right - 8,
-      y: r.bottom + 6,
-      canvasX: r.right - 8 - (canvas?.left ?? 0),
-      canvasY: r.bottom + 6 - (canvas?.top ?? 0),
-    });
+    const canvas = el.closest("main")?.getBoundingClientRect();
+    // In the rail the menu opens to its left; under the selection, below it.
+    const x = rail ? r.left - 8 : r.right - 8;
+    const y = rail ? r.top : r.bottom + 6;
+    openContextMenu({ kind: "object", x, y, canvasX: x - (canvas?.left ?? 0), canvasY: y - (canvas?.top ?? 0) });
   };
 
   return (
     <div
       ref={wrap}
-      className="absolute z-10 flex -translate-x-1/2 items-center gap-0.5 rounded-panel bg-surface p-1.5 shadow-float"
-      style={{ left: cx, top: y }}
+      className={
+        rail
+          ? "flex flex-col items-center gap-0.5 rounded-full bg-surface p-1.5 shadow-float"
+          : "absolute z-10 flex -translate-x-1/2 items-center gap-0.5 rounded-panel bg-surface p-1.5 shadow-float"
+      }
+      style={rail ? undefined : { left: cx, top: y }}
       // Clicks here are for the menu, not the canvas behind it.
       onPointerDown={(e) => e.stopPropagation()}
     >
       <button
         aria-label={locked ? "Unlock" : "Lock in Place"}
         aria-pressed={locked}
-        {...tip(locked ? "Unlock" : "Lock in Place", { shortcut: "L", side: "bottom" })}
+        {...tip(locked ? "Unlock" : "Lock in Place", { shortcut: "L", side })}
         onClick={s.toggleLockSelected}
         className={`${button} ${locked ? barIconActive : barIconIdle}`}
       >
@@ -92,38 +99,38 @@ export function SelectionMiniMenu() {
         <button
           aria-label={grouped ? "Ungroup" : "Group"}
           aria-pressed={grouped}
-          {...tip(grouped ? "Ungroup" : "Group", { shortcut: "G", side: "bottom" })}
+          {...tip(grouped ? "Ungroup" : "Group", { shortcut: "G", side })}
           onClick={s.toggleGroupSelected}
           className={`${button} ${grouped ? barIconActive : barIconIdle}`}
         >
           {grouped ? <Ungroup size={16} /> : <Group size={16} />}
         </button>
       ) : (
-        <button aria-label="Rotate 90°" {...tip("Rotate 90°", { shortcut: "R", side: "bottom" })} onClick={s.rotateSelected} className={`${button} ${barIconIdle}`}>
+        <button aria-label="Rotate 90°" {...tip("Rotate 90°", { shortcut: "R", side })} onClick={s.rotateSelected} className={`${button} ${barIconIdle}`}>
           <RotateCw size={16} />
         </button>
       )}
       {spaceable && (
-        <button aria-label="Space Between" {...tip("Space Between", { side: "bottom" })} onClick={() => setSpacing(true)} className={`${button} ${barIconIdle}`}>
+        <button aria-label="Space Between" {...tip("Space Between", { side })} onClick={() => setSpacing(true)} className={`${button} ${barIconIdle}`}>
           <Ruler size={16} />
         </button>
       )}
       {pedal && (
-        <button aria-label="Plugs" {...tip("Plugs", { shortcut: "P", side: "bottom" })} onClick={() => useUi.getState().setPlugEditing(pedal.id)} className={`${button} ${barIconIdle}`}>
+        <button aria-label="Plugs" {...tip("Plugs", { shortcut: "P", side })} onClick={() => useUi.getState().setPlugEditing(pedal.id)} className={`${button} ${barIconIdle}`}>
           <Cable size={16} />
         </button>
       )}
       {editable && (
         <button
           aria-label={editable.kind === "pedalboard" ? "Edit Board" : "Edit"}
-          {...tip(editable.kind === "pedalboard" ? "Edit Board" : "Edit", { side: "bottom" })}
+          {...tip(editable.kind === "pedalboard" ? "Edit Board" : "Edit", { side })}
           onClick={() => setEditing(true)}
           className={`${button} ${barIconIdle}`}
         >
           <Pencil size={15} />
         </button>
       )}
-      <button aria-label="More" aria-haspopup="menu" {...tip("More", { side: "bottom" })} onClick={more} className={`${button} ${barIconIdle}`}>
+      <button aria-label="More" aria-haspopup="menu" {...tip("More", { side })} onClick={more} className={`${button} ${barIconIdle}`}>
         <Ellipsis size={16} />
       </button>
     </div>

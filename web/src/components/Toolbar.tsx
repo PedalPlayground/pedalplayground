@@ -5,7 +5,7 @@ import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { SettingsMenu } from "./SettingsMenu";
 import { tip } from "./Tooltip";
-import { barDivider, barGhostButton, barIconActive, barIconButton, barIconIdle, barPanel } from "./toolbarStyles";
+import { barDivider, barGhostButton, barIconActive, barIconButton, barIconIdle, barPanel, phoneBar } from "./toolbarStyles";
 
 function IconButton({
   label,
@@ -60,6 +60,20 @@ export function AddGlyph() {
   );
 }
 
+/** Phones: Add Gear as a round purple button at the top of the right-hand rail. */
+export function PhoneAddButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      data-tour="add"
+      aria-label="Add Gear"
+      className="btn-primary press grid size-14 place-items-center rounded-full shadow-pop outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+    >
+      <Plus size={26} strokeWidth={2.75} />
+    </button>
+  );
+}
+
 /**
  * The hand/select tool buttons are hidden for now: select is the default, and space-drag or the middle mouse button
  * still pans. Set to true to bring them back.
@@ -79,33 +93,34 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
   const canRedo = usePlayground((s) => s.future.length > 0);
   const phone = useMediaQuery(PHONE_QUERY);
 
-  // Phones: one full-width row of larger icon buttons (no labels or separators), with Settings at the end. Pinch zooms.
+  // Phones: a floating dark bar like the browse pages' tab bar (icons over labels). Add Gear lives in the right-hand rail
+  // (PhoneRail) instead. Pinch zooms.
   if (phone) {
-    const btn = "press grid h-11 min-w-0 flex-1 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-40";
+    const btn =
+      "press flex min-w-0 flex-1 flex-col items-center justify-center gap-1 self-stretch rounded-full text-[11px] font-medium leading-none text-tip-ink outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-40 [&>svg]:opacity-80";
     return (
-      <div className={`flex w-full items-center ${barPanel}`}>
-        {!viewOnly && (
-          <button onClick={onPlace} data-tour="add" aria-label="Add Gear" className={`${btn} btn-primary max-w-14`}>
-            <Plus size={22} strokeWidth={2.75} />
-          </button>
-        )}
-        <button onClick={fit} aria-label="Center & Fit" className={`${btn} ${barIconIdle}`}>
-          <Fullscreen size={22} />
+      <div className={phoneBar}>
+        <button onClick={fit} aria-label="Center & Fit" className={btn}>
+          <Fullscreen size={20} />
+          Fit
         </button>
         {!viewOnly && (
           <>
-            <button onClick={undo} disabled={!canUndo} aria-label="Undo" className={`${btn} ${barIconIdle}`}>
-              <Undo2 size={22} />
+            <button onClick={undo} disabled={!canUndo} className={btn}>
+              <Undo2 size={20} />
+              Undo
             </button>
-            <button onClick={redo} disabled={!canRedo} aria-label="Redo" className={`${btn} ${barIconIdle}`}>
-              <Redo2 size={22} />
+            <button onClick={redo} disabled={!canRedo} className={btn}>
+              <Redo2 size={20} />
+              Redo
             </button>
-            <button onClick={onShare} data-tour="share" aria-label="Share" className={`${btn} ${barIconIdle}`}>
-              <SquareArrowOutUpRight size={21} />
+            <button onClick={onShare} data-tour="share" className={btn}>
+              <SquareArrowOutUpRight size={19} />
+              Share
             </button>
           </>
         )}
-        <SettingsMenu className="flex min-w-0 flex-1 [&>button]:h-11 [&>button]:w-full [&>button]:rounded-control [&_svg]:size-[22px]" />
+        <SettingsMenu className="flex min-w-0 flex-1 self-stretch" triggerClassName={`${btn} w-full [&_svg]:size-5`} label="Settings" />
       </div>
     );
   }

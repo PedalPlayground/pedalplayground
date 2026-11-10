@@ -46,7 +46,7 @@ import { ShareDialog } from "./components/ShareDialog";
 import { SpaceBetweenPanel } from "./components/SpaceBetweenPanel";
 import { PlugPanel } from "./components/PlugEditor";
 import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
-import { Toolbar } from "./components/Toolbar";
+import { PhoneAddButton, Toolbar } from "./components/Toolbar";
 import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
 import { UpgradeDialog } from "./components/UpgradeDialog";
 import { UsernamePrompt } from "./components/UsernamePrompt";
@@ -218,7 +218,9 @@ export function App() {
     <div className="flex h-full flex-col">
       {/* Works around iOS 27 blurring the top edge of home-screen web apps; see .pwa-top-strip in index.css. */}
       <div aria-hidden className="pwa-top-strip" />
+      {/* Phones have no header here: the board's name, a way back to My Boards and the account float over the canvas. */}
       <SiteHeader
+        className="max-sm:hidden"
         current={viewing ? null : "build"}
         builds={<BuildsMenu onEdit={editPlayground} onSignIn={() => setDialog("account")} />}
         updates={<WhatsNew onNewGear={showNewGear} />}
@@ -309,10 +311,30 @@ export function App() {
           )}
           {SHOW_MODES && <ModeRail />}
 
-          {/* Phones have no room for the save status in the header, so it floats just below it. */}
-          <div className="empty:hidden absolute right-3 top-3 z-20 rounded-control bg-surface/90 px-2 py-1 shadow-float sm:hidden">
-            <SaveStatus />
+          {/* Phones have no header here, so the save status and the account sit in the top-right corner. */}
+          <div className="absolute right-[max(0.75rem,env(safe-area-inset-right))] top-[max(0.75rem,env(safe-area-inset-top))] z-20 flex items-center gap-2 sm:hidden">
+            <div className="empty:hidden rounded-control bg-surface/90 px-2 py-1 shadow-float">
+              <SaveStatus />
+            </div>
+            <div className="flex h-9 items-center gap-[7px] rounded-full bg-surface px-1.5 shadow-float">
+              {user ? (
+                <AvatarMenu onAccount={() => setDialog("account")} onChangeAvatar={() => setDialog("avatar")} />
+              ) : (
+                <>
+                  {cloudEnabled && <GuestButtons onRegister={() => setDialog("register")} onSignIn={() => setDialog("account")} />}
+                  <GuestMenu onSignIn={() => setDialog("account")} />
+                </>
+              )}
+            </div>
           </div>
+
+          {/* Phones: Add Gear and the selection's tools in a rail down the right side, centered. */}
+          {!covered && !searchOpen && !spacingOpen && phoneSized && (
+            <div className="absolute right-[max(0.75rem,env(safe-area-inset-right))] top-1/2 z-20 flex -translate-y-1/2 flex-col items-center gap-3">
+              {!viewing && <PhoneAddButton onClick={() => setSearchOpen(replacing || editing ? true : !searchOpen)} />}
+              {!plugEditing && <SelectionMiniMenu rail />}
+            </div>
+          )}
 
           {/* Action confirmations pop up at the top center. On tablets they drop below the selection bar when it's showing. */}
           <ActionToast className={`absolute left-1/2 -translate-x-1/2 [--enter-y:-8px] ${hasSelection && !wide ? "top-3 sm:top-16" : "top-3"}`} />

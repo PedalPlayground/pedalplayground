@@ -1,7 +1,7 @@
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { useRef, useState, type ReactNode } from "react";
 import { tip } from "./Tooltip";
-import { Copy, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
+import { ChevronLeft, Copy, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
 import { PedalboardIcon, tabClass, tabIcon, tabLabel } from "./SiteTabs";
 import type { PlaygroundSummary } from "../lib/cloud";
 import { handoffHref, type Handoff } from "../lib/handoff";
@@ -214,8 +214,17 @@ export function BoardLabel({ comments, onEdit, onSignIn }: { comments?: ReactNod
   const user = useAuth((s) => s.user);
   if (opening) return null;
   return (
-    <div className="pointer-events-none absolute left-[max(1.1875rem,env(safe-area-inset-left))] right-[max(1rem,env(safe-area-inset-right))] top-[22px] z-20 flex max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:top-3">
+    // Phones: the top-right corner holds the save status and account, so the name stops short of it.
+    <div className="pointer-events-none absolute left-[max(1.1875rem,env(safe-area-inset-left))] right-[max(1rem,env(safe-area-inset-right))] top-[22px] z-20 flex max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[calc(max(0.75rem,env(safe-area-inset-right))+7.5rem)] max-sm:top-[max(0.75rem,env(safe-area-inset-top))]">
       <div className="pointer-events-auto flex min-w-0 items-center gap-1 text-sm/4 font-semibold tracking-[-0.01em] text-ink">
+        {/* Phones have no header on the builder: this is the way back to your boards. */}
+        <a
+          href="/boards/"
+          aria-label="Back to My Boards"
+          className="press -ml-1 mr-0.5 grid size-9 shrink-0 place-items-center rounded-full bg-surface text-ink shadow-float outline-none focus-visible:ring-2 focus-visible:ring-brand sm:hidden"
+        >
+          <ChevronLeft size={20} strokeWidth={2.25} />
+        </a>
         {viewing ? (
           <>
             <span className="min-w-0 truncate sm:hidden">
