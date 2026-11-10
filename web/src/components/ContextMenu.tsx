@@ -43,6 +43,8 @@ interface OpenMenu {
   /** The same point inside the canvas, so zooming from the menu zooms around where it was opened. */
   canvasX: number;
   canvasY: number;
+  /** Opened from the phone rail: it opens to the left of (x, y), bottom-aligned, and leaves out Remove (the rail has it). */
+  rail?: boolean;
   /** Changes on every open, so opening again somewhere else starts fresh. */
   key: number;
 }
@@ -112,7 +114,7 @@ const Separator = () => <Dropdown.Separator className="-mx-1 my-1 h-px bg-line" 
 const ICON = { size: 15, strokeWidth: 2 } as const;
 
 /** Actions for the selected object(s), with the same labels as the floating object menu. */
-function ObjectItems() {
+function ObjectItems({ rail = false }: { rail?: boolean }) {
   const s = usePlayground();
   const setReplacing = useUi((u) => u.setReplacing);
   const selected = s.items.filter((i) => s.selected.includes(i.id));
@@ -148,12 +150,13 @@ function ObjectItems() {
       <Row icon={<ArrowDownToLine {...ICON} />} label="Move Back" shortcut="[" onSelect={s.sendBackward} />
       <Row icon={<BringToFront {...ICON} />} label="Move to Front" shortcut="⌘]" onSelect={s.bringToFront} />
       <Row icon={<SendToBack {...ICON} />} label="Move to Back" shortcut="⌘[" onSelect={s.sendToBack} />
-      <Separator />
+      {/* From the rail Remove isn't here, so the last group can be empty (custom gear). */}
+      {(!rail || (single && !single.custom) || single?.kind === "pedal" || placedItemHref(single)) && <Separator />}
       {single && !single.custom && <Row icon={<Replace {...ICON} />} label="Replace" onSelect={() => setReplacing(true)} />}
       {single?.kind === "pedal" && <Row icon={<Cable {...ICON} />} label="Plugs" shortcut="P" onSelect={() => useUi.getState().setPlugEditing(single.id)} />}
       {placedItemHref(single) && <Row icon={<Info {...ICON} />} label="Info" onSelect={() => openGearInfo(single)} />}
       {placedItemHref(single) && <Row icon={<MessageSquareWarning {...ICON} />} label="Suggest a Fix…" onSelect={() => openSuggestFix(single)} />}
-      <Row icon={<Trash2 {...ICON} />} label="Remove" shortcut="Delete" onSelect={s.deleteSelected} danger />
+      {!rail && <Row icon={<Trash2 {...ICON} />} label="Remove" shortcut="Delete" onSelect={s.deleteSelected} danger />}
     </>
   );
 }
@@ -216,9 +219,9 @@ export function ContextMenu() {
       </Dropdown.Trigger>
       <Dropdown.Portal>
         <Dropdown.Content
-          side="bottom"
-          align="start"
-          sideOffset={2}
+          side={open.rail ? "left" : "bottom"}
+          align={open.rail ? "end" : "start"}
+          sideOffset={open.rail ? 8 : 2}
           collisionPadding={8}
           onCloseAutoFocus={(e) => e.preventDefault()}
           // Esc only closes the menu; without this the canvas would also take it as "clear the selection".
@@ -226,7 +229,7 @@ export function ContextMenu() {
           onContextMenu={(e) => e.preventDefault()}
           className={menuContentClass}
         >
-          {open.kind === "object" ? <ObjectItems /> : <CanvasItems canvasX={open.canvasX} canvasY={open.canvasY} />}
+          {open.kind === "object" ? <ObjectItems rail={open.rail} /> : <CanvasItems canvasX={open.canvasX} canvasY={open.canvasY} />}
         </Dropdown.Content>
       </Dropdown.Portal>
     </Dropdown.Root>

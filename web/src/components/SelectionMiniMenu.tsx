@@ -1,4 +1,4 @@
-import { Cable, Ellipsis, Group, Lock, LockOpen, Pencil, Ruler, RotateCw, Ungroup } from "lucide-react";
+import { Cable, Ellipsis, Group, Lock, LockOpen, Pencil, Ruler, RotateCw, Trash2, Ungroup } from "lucide-react";
 import { useRef } from "react";
 import { itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { isOneGroup, usePlayground } from "../store/playground";
@@ -19,7 +19,8 @@ const button = "press grid size-8 place-items-center rounded-control outline-non
 
 /**
  * A little menu that follows the selection: Lock, Rotate, Plugs (one pedal), Edit (custom gear) and ••• for the full
- * right-click menu. On phones (`rail`) the same buttons stack in the right-hand rail under Add Gear instead.
+ * right-click menu. On phones (`rail`) the same buttons stack in the right-hand rail above Add Gear instead, with Remove
+ * added (phones have no object bar), and ••• opens the menu to the rail's left at the full height of the screen.
  */
 export function SelectionMiniMenu({ rail = false }: { rail?: boolean }) {
   const s = usePlayground();
@@ -67,10 +68,10 @@ export function SelectionMiniMenu({ rail = false }: { rail?: boolean }) {
     if (!el) return;
     const r = el.getBoundingClientRect();
     const canvas = el.closest("main")?.getBoundingClientRect();
-    // In the rail the menu opens to its left; under the selection, below it.
-    const x = rail ? r.left - 8 : r.right - 8;
-    const y = rail ? r.top : r.bottom + 6;
-    openContextMenu({ kind: "object", x, y, canvasX: x - (canvas?.left ?? 0), canvasY: y - (canvas?.top ?? 0) });
+    // In the rail the menu opens to its left, its bottom level with the rail's; under the selection, below it.
+    const x = rail ? r.left : r.right - 8;
+    const y = rail ? r.bottom : r.bottom + 6;
+    openContextMenu({ kind: "object", x, y, canvasX: x - (canvas?.left ?? 0), canvasY: y - (canvas?.top ?? 0), rail });
   };
 
   return (
@@ -128,6 +129,11 @@ export function SelectionMiniMenu({ rail = false }: { rail?: boolean }) {
           className={`${button} ${barIconIdle}`}
         >
           <Pencil size={15} />
+        </button>
+      )}
+      {rail && (
+        <button aria-label="Remove" {...tip("Remove", { side })} onClick={s.deleteSelected} className={`${button} text-danger hover:bg-surface-hover`}>
+          <Trash2 size={16} />
         </button>
       )}
       <button aria-label="More" aria-haspopup="menu" {...tip("More", { side })} onClick={more} className={`${button} ${barIconIdle}`}>
