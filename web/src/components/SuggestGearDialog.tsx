@@ -25,6 +25,16 @@ const TABS: [SuggestTab, string][] = [
   ["fix", "Wrong Info"],
   ["bug", "Report a Bug"],
 ];
+/** Wrong Info asks what's wrong first, then shows only those fields. Power and types are for pedals only. */
+type FixPart = "name" | "size" | "power" | "types" | "photo" | "other";
+const FIX_PARTS: [FixPart, string][] = [
+  ["name", "Brand or Name"],
+  ["size", "Size"],
+  ["power", "Power"],
+  ["types", "Types"],
+  ["photo", "Photo"],
+  ["other", "Something Else"],
+];
 const TITLES: Record<SuggestTab, string> = { new: "Suggest Gear", fix: "Fix Gear Info", bug: "Report a Bug" };
 
 /**
@@ -54,6 +64,8 @@ export function SuggestGearDialog({
   const [fixing, setFixing] = useState<{ kind: Kind; item: CatalogItem } | null>(fix ?? null);
   const [find, setFind] = useState(initialName);
   const [bug, setBug] = useState("");
+  /** Wrong Info: what the person says is wrong. */
+  const [parts, setParts] = useState<FixPart[]>([]);
   const id = useId();
   const user = useAuth((s) => s.user);
   const manifest = useCatalog((s) => s.manifest);
@@ -126,6 +138,13 @@ export function SuggestGearDialog({
     return out;
   })();
 
+  /** New Gear shows every field; Wrong Info only the parts picked as wrong. */
+  const show = (p: FixPart) => tab !== "fix" || parts.includes(p);
+  const toggle = (p: FixPart) => {
+    setParts((cur) => (cur.includes(p) ? cur.filter((x) => x !== p) : [...cur, p]));
+    setError(null);
+  };
+
   const fields: Fields = {
     kind,
     brand,
@@ -142,6 +161,9 @@ export function SuggestGearDialog({
       if (!bug.trim()) return setError("Tell us what went wrong.");
     } else {
       if (tab === "fix" && !fixing) return setError("Pick the gear to fix.");
+      if (tab === "fix" && !parts.length) return setError("Pick what needs fixing.");
+      if (tab === "fix" && parts.every((p) => p === "other") && !note.trim()) return setError("Tell us what's wrong in the note.");
+      if (tab === "fix" && parts.includes("photo") && !photo) return setError("Add the new photo.");
       const problems = fieldProblems(fields);
       if (tab === "new" && !photo) problems.push("Add a photo.");
       if (problems.length) return setError(problems.join(" "));
@@ -227,7 +249,7 @@ export function SuggestGearDialog({
             <span className="grid size-10 shrink-0 place-items-center">
               {manifest && <img src={canvasImageUrl(manifest, fixing.kind, fixing.item.image) ?? ""} alt="" className="max-h-10 max-w-10 object-contain" />}
             </span>
-            <span className="min-w-0 flex-1 text-xs text-ink-muted">Fixing <span className="font-semibold text-ink">{fixing.item.brand} {fixing.item.name}</span>. Change what's wrong below.</span>
+            <span className="min-w-0 flex-1 text-xs text-ink-muted">Fixing <span className="font-semibold text-ink">{fixing.item.brand} {fixing.item.name}</span></span>
             <button type="button" className="shrink-0 text-xs font-semibold text-brand hover:underline" onClick={() => setFixing(null)}>
               Change
             </button>
@@ -249,6 +271,28 @@ export function SuggestGearDialog({
         </div>
         )}
 
+        {tab === "fix" && (
+          <div>
+            <span className={fieldLabel}>What Needs Fixing?</span>
+            <span className={fieldHelp}>Pick all that apply.</span>
+            <div className="grid grid-cols-2 gap-1 min-[400px]:grid-cols-3" role="group" aria-label="What needs fixing">
+              {FIX_PARTS.filter(([p]) => kind === "pedal" || (p !== "power" && p !== "types")).map(([p, label]) => (
+                <button
+                  type="button"
+                  key={p}
+                  aria-pressed={parts.includes(p)}
+                  onClick={() => toggle(p)}
+                  className={`rounded-control py-1.5 text-sm ${parts.includes(p) ? "bg-brand/10 font-semibold text-brand" : "bg-surface-hover text-ink-muted hover:text-ink"}`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {show("name") && (
+          <>
         <label className="block">
           <span className={fieldLabel}>Brand</span>
           <input className={`${fieldInput} [&::-webkit-calendar-picker-indicator]:hidden`} {...plainField} list={`${id}-brands`} value={brand} onChange={(e) => setBrand(e.target.value)} maxLength={120} autoFocus={tab === "new"} />
@@ -262,7 +306,10 @@ export function SuggestGearDialog({
           <span className={fieldLabel}>Name</span>
           <input className={fieldInput} {...plainField} value={name} onChange={(e) => setName(e.target.value)} maxLength={200} />
         </label>
+          </>
+        )}
 
+        {show("size") && (
         <div>
           <span className={fieldLabel}>Size</span>
           <span className={fieldHelp}>The whole footprint from above, including jacks, knobs and anything else that sticks out.</span>
@@ -292,8 +339,11 @@ export function SuggestGearDialog({
           </div>
         </div>
 
+        )}
+
         {kind === "pedal" && (
           <>
+            {show("power") && (
             <div className="grid grid-cols-2 gap-2">
               <label className="block">
                 <span className={fieldLabel}>Power</span>
@@ -314,18 +364,22 @@ export function SuggestGearDialog({
                 </span>
               </label>
             </div>
+            )}
+            {show("types") && (
             <div>
               <span className={fieldLabel}>Types</span>
               <span className={fieldHelp}>The first is its main type. Optional.</span>
               <TypeCombo value={types} onChange={setTypes} />
             </div>
+            )}
           </>
         )}
 
+        {show("photo") && (
         <div>
           <span className={fieldLabel}>{tab === "fix" ? "New Photo" : "Photo"}</span>
           <span className={fieldHelp}>
-            {tab === "fix" ? "Optional, if the picture is wrong. " : ""}Straight on from above, showing the whole pedal: jacks, knobs and everything that sticks out, with no empty space around it. A PNG with a transparent background is ideal. 10 MB at most.
+            Straight on from above, showing the whole pedal: jacks, knobs and everything that sticks out, with no empty space around it. A PNG with a transparent background is ideal. 10 MB at most.
           </span>
           <input
             ref={fileInput}
@@ -352,13 +406,21 @@ export function SuggestGearDialog({
           </button>
         </div>
 
+        )}
+
+        {(tab !== "fix" || parts.length > 0) && (
         <label className="block">
           <span className={fieldLabel}>Note</span>
           <span className={fieldHelp}>
-            {tab === "fix" ? "What was wrong? A link to the maker's page helps us check." : "Optional. A link to the maker's page helps us check the size."}
+            {tab !== "fix"
+              ? "Optional. A link to the maker's page helps us check the size."
+              : parts.every((p) => p === "other")
+                ? "What's wrong? A link to the maker's page helps us check."
+                : "Optional. What was wrong? A link to the maker's page helps us check."}
           </span>
           <textarea className={`${fieldInput} h-16 resize-none py-2`} value={note} onChange={(e) => setNote(e.target.value)} maxLength={1000} />
         </label>
+        )}
           </>
         )}
 
