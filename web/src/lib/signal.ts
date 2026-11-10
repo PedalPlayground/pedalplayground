@@ -6,6 +6,7 @@
  * the user says otherwise.
  */
 import type { Item } from "./types";
+import { uid } from "./uid";
 
 export type Channels = "mono" | "stereo";
 
@@ -44,7 +45,7 @@ export interface SignalGraph {
 /** A rule an edit would break. The store shows it as a toast and leaves the graph as it was. */
 export class SignalError extends Error {}
 
-const newId = () => crypto.randomUUID();
+const newId = () => uid();
 
 /** A new playground's chain: the guitar plugged straight into the amp. */
 export function defaultSignal(): SignalGraph {

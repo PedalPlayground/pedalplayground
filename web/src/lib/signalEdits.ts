@@ -18,8 +18,9 @@ import {
   type SignalNode,
 } from "./signal";
 import type { Item } from "./types";
+import { uid } from "./uid";
 
-const newId = () => crypto.randomUUID();
+const newId = () => uid();
 
 /** The first output, where "the end of the chain" is. */
 const mainOutput = (g: SignalGraph) => g.nodes.find((n) => n.type === "destination");
