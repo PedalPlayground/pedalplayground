@@ -179,7 +179,8 @@ Only accounts in `catalog_editors` get past the sign-in check; everyone else see
   keeps its photo shows the live one, faded), colored labels (New, Correction, Pedalboard, Sent back), the submitter's
   username and date, and the photo checks as icons (resolution, shape, cutout, duplicates: green passed, amber needs a
   look, faint not run). The open submission shows who sent it with their history (totals by outcome and their latest
-  submissions, approved ones linking to the item), and links in the submitter's note are clickable. Fix any field or
+  submissions, approved ones linking to the item), and links in the submitter's note are clickable. Beside the photo button, **Find PNGs** opens
+  Google Images for the brand and name, PNGs only (on Queue, Add and Catalog, since they share the form). Fix any field or
   replace the photo, then Approve, Needs changes (the note goes to the submitter), Resolved (dealt with another way, so
   it leaves the queue; the note is optional; needs migration `20261110000000_submission_resolved.sql`) or Reject. Players file these with **Suggest Gear** (`components/SuggestGearDialog.tsx`, `lib/suggestions.ts`): the Gear page's Suggest Gear bento tile and Add Gear's "Suggest it for the catalog" (under Make Your Own, and on a search with no matches). It has three tabs. **New Gear**: the Admin form's fields (kind, brand, name, size, power, types) plus a required photo and an optional note. **Wrong Info**: search the catalog, pick an item, and correct its prefilled fields (a new photo is optional); it's filed as a correction (`target_key`). **Report a Bug**: a description, saved with the page address and browser in `bug_reports` (migration `20261108120000_bug_reports.sql`), listed under Admin › Moderation › Bug Reports with a Close button. Signed out, it asks to sign in.
 - **Add:** a new pedal or pedalboard straight into the catalog.

@@ -1,4 +1,4 @@
-import { ArrowLeftRight, Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, TriangleAlert } from "lucide-react";
+import { ArrowLeftRight, Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, Search, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { stepNumber } from "../lib/stepNumber";
 import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
@@ -57,6 +57,10 @@ export function usePhotoStats(src: string | null): { stats: ImageStats | null; b
   // A new photo starts with nothing read yet.
   return state.src === src && src ? state : { stats: null, broken: false };
 }
+
+/** Google Images for an item's brand and name, PNGs only. */
+export const pngSearchUrl = (brand: string, name: string) =>
+  `https://www.google.com/search?tbm=isch&tbs=ift:png&q=${encodeURIComponent(`${brand.trim()} ${name.trim()}`.trim())}`;
 
 const round2 = (n: number) => Math.round(n * 100) / 100;
 
@@ -275,9 +279,23 @@ export function ItemEditor({
                 e.target.value = "";
               }}
             />
-            <button type="button" className={`${secondaryButton} flex items-center gap-1.5`} onClick={() => fileInput.current?.click()}>
-              <ImageUp size={15} /> {image ? "Replace photo" : "Choose photo"}
-            </button>
+            <div className="flex flex-wrap gap-2">
+              <button type="button" className={`${secondaryButton} flex items-center gap-1.5`} onClick={() => fileInput.current?.click()}>
+                <ImageUp size={15} /> {image ? "Replace photo" : "Choose photo"}
+              </button>
+              {/* Google Images for the brand and name, PNGs only (most cutouts are), in a new tab. */}
+              {fields.brand.trim() || fields.name.trim() ? (
+                <a
+                  href={pngSearchUrl(fields.brand, fields.name)}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={`${secondaryButton} flex items-center gap-1.5`}
+                  {...tip("Google Images, PNGs only, in a new tab")}
+                >
+                  <Search size={15} /> Find PNGs
+                </a>
+              ) : null}
+            </div>
           </div>
         )}
       </div>
