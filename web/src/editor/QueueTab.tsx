@@ -320,7 +320,10 @@ function Review({
   };
 
   return (
-    <div className="grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-5">
+    // Sticks under the header and tabs while the queue scrolls, scrolling on its own when it's taller than the screen.
+    // Sizes divide by --page-zoom (the page is drawn larger on very wide screens). The 4px padding, undone by the
+    // negative margin, keeps focus rings inside the scroll area visible.
+    <div className="grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-5 md:sticky md:top-[calc((var(--editor-top,6rem)+24px)/var(--page-zoom,1))] md:-m-1 md:max-h-[calc((100dvh-var(--editor-top,6rem)-24px)/var(--page-zoom,1))] md:overflow-y-auto md:overscroll-contain md:p-1 md:pb-6">
       <div>
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
           <h2 className="text-lg font-bold tracking-[-0.01em]">
