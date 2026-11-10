@@ -39,6 +39,25 @@ export const primaryButton = "btn-primary h-9 whitespace-nowrap px-3 disabled:op
 export const secondaryButton =
   "press h-9 whitespace-nowrap rounded-control bg-surface-hover px-3 text-sm font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
+/** Loads a photo and reads what the photo checks need (its pixel size and whether the background is cut out). */
+export function usePhotoStats(src: string | null): { stats: ImageStats | null; broken: boolean } {
+  const [state, setState] = useState<{ src: string | null; stats: ImageStats | null; broken: boolean }>({ src: null, stats: null, broken: false });
+  useEffect(() => {
+    if (!src) return;
+    let live = true;
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => live && setState({ src, stats: imageStats(img), broken: false });
+    img.onerror = () => live && setState({ src, stats: null, broken: true });
+    img.src = src;
+    return () => {
+      live = false;
+    };
+  }, [src]);
+  // A new photo starts with nothing read yet.
+  return state.src === src && src ? state : { stats: null, broken: false };
+}
+
 const round2 = (n: number) => Math.round(n * 100) / 100;
 
 const num = (s: string) => {
@@ -68,8 +87,7 @@ export function ItemEditor({
   skipImage?: string;
   lockKind?: boolean;
 }) {
-  const [stats, setStats] = useState<ImageStats | null>(null);
-  const [imageError, setImageError] = useState(false);
+  const { stats, broken: imageError } = usePhotoStats(image);
   const fileInput = useRef<HTMLInputElement>(null);
   const set = (patch: Partial<Fields>) => onChange({ ...fields, ...patch });
   /** Bumped when sizes are filled in from elsewhere (a size chip, Copy From, a preview), so the number fields redraw. */
@@ -79,17 +97,6 @@ export function ItemEditor({
     setFilled((n) => n + 1);
   };
   const [copying, setCopying] = useState(false);
-
-  useEffect(() => {
-    setStats(null);
-    setImageError(false);
-    if (!image) return;
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.onload = () => setStats(imageStats(img));
-    img.onerror = () => setImageError(true);
-    img.src = image;
-  }, [image]);
 
   const list = manifest ? (fields.kind === "pedal" ? manifest.pedals : manifest.pedalboards) : [];
   const id = useId();
