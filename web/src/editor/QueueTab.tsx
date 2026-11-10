@@ -68,8 +68,8 @@ export function QueueTab({ manifest, publisher, setNotice }: { manifest: Manifes
   const open = queue.find((s) => s.id === openId) ?? null;
   return (
     // items-start: the list and the form each keep their own height (a long list doesn't stretch the form's rows).
-    <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-6 md:grid-cols-[300px_minmax(0,1fr)]">
-      {/* One column that never grows past 300px: long names truncate instead of running under the form. */}
+    <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-6 md:grid-cols-[260px_minmax(0,1fr)] 2xl:grid-cols-[300px_minmax(0,1fr)]">
+      {/* One column that never grows past its width: long names truncate instead of running under the form. */}
       <ul className="grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-1">
         {queue.map((s) => (
           <li key={s.id}>
@@ -340,7 +340,6 @@ function Review({
           <p className="mt-1 text-[13px] text-ink-muted">This correction keeps the current photo.</p>
         )}
       </div>
-      <Submitter submission={submission} />
       <ItemEditor
         fields={fields}
         onChange={setFields}
@@ -352,89 +351,94 @@ function Review({
         manifest={manifest}
         skipImage={submission.target_key ?? undefined}
         lockKind={!!submission.target_key}
+        formEnd={
+          <>
+            <div>
+              <label className={labelClass} htmlFor="queue-note">
+                Note to the Submitter
+              </label>
+              <span id="queue-note-help" className={fieldHelp}>
+                Needed for Needs changes or Reject, optional for Resolved
+              </span>
+              <textarea id="queue-note" aria-describedby="queue-note-help" className={`${fieldBox} h-20 py-2`} maxLength={1000} value={note} onChange={(e) => setNote(e.target.value)} />
+            </div>
+            {problems.length > 0 && <p className="text-[13px] text-danger">{problems.join(" ")}</p>}
+            {error && <p className="text-[13px] text-danger">{error}</p>}
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                className={primaryButton}
+                disabled={busy || problems.length > 0}
+                onClick={() =>
+                  act(async () => {
+                    await save();
+                    const key = await approve(submission.id);
+                    return withPublish(`Approved ${fields.brand} ${fields.name} (${key}).`, await publisher.run());
+                  })
+                }
+              >
+                Approve
+              </button>
+              <button
+                type="button"
+                className={secondaryButton}
+                disabled={busy || problems.length > 0}
+                onClick={() =>
+                  act(async () => {
+                    await save();
+                    return { text: "Changes saved." };
+                  })
+                }
+              >
+                Save changes
+              </button>
+              <button
+                type="button"
+                className={secondaryButton}
+                disabled={busy || !note.trim()}
+                title={note.trim() ? undefined : "Write a note first"}
+                onClick={() =>
+                  act(async () => {
+                    await review(submission.id, "needs_changes", note.trim());
+                    return { text: "Sent back to the submitter with your note." };
+                  })
+                }
+              >
+                Needs changes
+              </button>
+              <button
+                type="button"
+                className={secondaryButton}
+                disabled={busy}
+                {...tip("Dealt with another way (fixed by hand, already listed). Takes it off the queue without approving or rejecting")}
+                onClick={() =>
+                  act(async () => {
+                    await review(submission.id, "resolved", note.trim());
+                    return { text: `Marked ${submission.brand} ${submission.name} resolved.` };
+                  })
+                }
+              >
+                Resolved
+              </button>
+              <button
+                type="button"
+                className={`${secondaryButton} text-danger`}
+                disabled={busy || !note.trim()}
+                title={note.trim() ? undefined : "Write a reason first"}
+                onClick={() =>
+                  act(async () => {
+                    await review(submission.id, "rejected", note.trim());
+                    return { text: "Rejected." };
+                  })
+                }
+              >
+                Reject
+              </button>
+            </div>
+          </>
+        }
+        asideEnd={<Submitter submission={submission} />}
       />
-      <div>
-        <label className={labelClass} htmlFor="queue-note">
-          Note to the Submitter
-        </label>
-        <span id="queue-note-help" className={fieldHelp}>
-          Needed for Needs changes or Reject, optional for Resolved
-        </span>
-        <textarea id="queue-note" aria-describedby="queue-note-help" className={`${fieldBox} h-20 py-2`} maxLength={1000} value={note} onChange={(e) => setNote(e.target.value)} />
-      </div>
-      {problems.length > 0 && <p className="text-[13px] text-danger">{problems.join(" ")}</p>}
-      {error && <p className="text-[13px] text-danger">{error}</p>}
-      <div className="flex flex-wrap gap-2">
-        <button
-          type="button"
-          className={primaryButton}
-          disabled={busy || problems.length > 0}
-          onClick={() =>
-            act(async () => {
-              await save();
-              const key = await approve(submission.id);
-              return withPublish(`Approved ${fields.brand} ${fields.name} (${key}).`, await publisher.run());
-            })
-          }
-        >
-          Approve
-        </button>
-        <button
-          type="button"
-          className={secondaryButton}
-          disabled={busy || problems.length > 0}
-          onClick={() =>
-            act(async () => {
-              await save();
-              return { text: "Changes saved." };
-            })
-          }
-        >
-          Save changes
-        </button>
-        <button
-          type="button"
-          className={secondaryButton}
-          disabled={busy || !note.trim()}
-          title={note.trim() ? undefined : "Write a note first"}
-          onClick={() =>
-            act(async () => {
-              await review(submission.id, "needs_changes", note.trim());
-              return { text: "Sent back to the submitter with your note." };
-            })
-          }
-        >
-          Needs changes
-        </button>
-        <button
-          type="button"
-          className={secondaryButton}
-          disabled={busy}
-          {...tip("Dealt with another way (fixed by hand, already listed). Takes it off the queue without approving or rejecting")}
-          onClick={() =>
-            act(async () => {
-              await review(submission.id, "resolved", note.trim());
-              return { text: `Marked ${submission.brand} ${submission.name} resolved.` };
-            })
-          }
-        >
-          Resolved
-        </button>
-        <button
-          type="button"
-          className={`${secondaryButton} text-danger`}
-          disabled={busy || !note.trim()}
-          title={note.trim() ? undefined : "Write a reason first"}
-          onClick={() =>
-            act(async () => {
-              await review(submission.id, "rejected", note.trim());
-              return { text: "Rejected." };
-            })
-          }
-        >
-          Reject
-        </button>
-      </div>
     </div>
   );
 }

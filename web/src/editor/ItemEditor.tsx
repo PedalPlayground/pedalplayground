@@ -1,5 +1,5 @@
 import { ArrowLeftRight, Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, Search, TriangleAlert } from "lucide-react";
-import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState, type ReactNode } from "react";
 import { stepNumber } from "../lib/stepNumber";
 import { fieldError, fieldHelp, fieldInput as inputClass, fieldLabel as labelClass, fieldLabelText, fieldUnit, fieldWithUnit, fieldWithUnitInput } from "../components/formText";
 import { ScaleKey } from "../components/ScaleKey";
@@ -81,6 +81,8 @@ export function ItemEditor({
   manifest,
   skipImage,
   lockKind,
+  formEnd,
+  asideEnd,
 }: {
   fields: Fields;
   onChange: (f: Fields) => void;
@@ -90,6 +92,10 @@ export function ItemEditor({
   /** The item's own image key, so it isn't flagged as its own duplicate. */
   skipImage?: string;
   lockKind?: boolean;
+  /** Shown under the fields (the Queue's note and decision buttons), so the form column holds everything to act on. */
+  formEnd?: ReactNode;
+  /** Shown under the checks (the Queue's submitter history). */
+  asideEnd?: ReactNode;
 }) {
   const { stats, broken: imageError } = usePhotoStats(image);
   const fileInput = useRef<HTMLInputElement>(null);
@@ -298,6 +304,7 @@ export function ItemEditor({
             </div>
           </div>
         )}
+        {formEnd}
       </div>
 
       {/* min-w-0 all the way down: the size strip pages to fit, so this column can shrink instead of spilling over. */}
@@ -366,6 +373,7 @@ export function ItemEditor({
           ))}
           {!image && <li className="text-[13px] text-ink-muted">Add a photo to run the photo checks.</li>}
         </ul>
+        {asideEnd}
       </div>
     </div>
   );
