@@ -50,6 +50,7 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 34. Launch supporter status.
 35. Signal Flow Mode.
 36. Inventory Mode.
+37. Clean up GitHub issues and PRs.
 
 ## Done
 
