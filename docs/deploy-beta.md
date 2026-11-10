@@ -154,7 +154,7 @@ Supabase project and Stripe test data stay as they are.
 Set `VITE_GA_ID=G-XXXXXXXXXX` (the GA4 web stream's measurement ID) in the environment the build runs in, for example
 the `.env.production` that the deploy uses or the GitHub environment's variables. With no ID the build contains no
 analytics code at all. It never runs on localhost, and visitors can turn it off in Settings → Terms & Privacy.
-The playground, Gallery and Gear pages all load it; Admin (`/editor/`) doesn't, so editors' work isn't counted.
+The playground, Gallery, My Boards and Gear pages all load it; Admin (`/editor/`) doesn't, so editors' work isn't counted.
 
 **Page views.** GA's own page views are off (`send_page_view: false`). Instead `trackPage` in
 `web/src/lib/analytics.ts` sends one `page_view` per screen, titled "<screen> · Pedal Playground": Playground, Shared

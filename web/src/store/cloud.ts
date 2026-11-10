@@ -27,7 +27,7 @@ import { renderShareImage } from "../lib/shareImage";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "./auth";
 import { useBilling } from "./billing";
-import { DEFAULT_NAME, restorePlayground, usePlayground } from "./playground";
+import { DEFAULT_NAME, restorePlayground, saveLocalNow, usePlayground } from "./playground";
 import { useUi } from "./ui";
 
 const META_KEY = "pp:cloud-meta";
@@ -492,7 +492,11 @@ export const useCloud = create<CloudState>((set, get) => {
       await deletePlayground(id);
       // Deleting the open playground also clears the canvas. Leaving its content behind would make the
       // sign-in sync upload it again as a new playground on the next load. (Clearing is undoable until reload.)
-      if (get().cloudId === id) get().newPlayground();
+      if (get().cloudId === id) {
+        get().newPlayground();
+        // Pages without the local autosave (My Boards) store the cleared board now.
+        saveLocalNow();
+      }
       await get().refreshList();
       void useBilling.getState().refresh();
     },

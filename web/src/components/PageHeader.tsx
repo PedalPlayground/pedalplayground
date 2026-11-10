@@ -13,7 +13,7 @@ import { LegalDialog } from "./LegalDialog";
 import { SetPasswordDialog } from "./SetPasswordForm";
 import { StandingNotice } from "./StandingNotice";
 import { TooltipLayer } from "./Tooltip";
-import { GuestButtons, SiteHeader, type SitePage } from "./SiteTabs";
+import { GuestButtons, SiteHeader, TabBar, type SitePage } from "./SiteTabs";
 import { UpgradeDialog } from "./UpgradeDialog";
 import { UsernamePrompt } from "./UsernamePrompt";
 import { WhatsNew } from "./WhatsNew";
@@ -52,7 +52,8 @@ export function PageHeader({ current, dialog, setDialog }: { current: SitePage; 
       <SiteHeader
         current={current}
         className="sticky top-0 z-30"
-        builds={<BuildsMenu remote onEdit={() => undefined} onPlaygrounds={() => undefined} onSignIn={() => setDialog("account")} />}
+        tabBar
+        builds={<BuildsMenu remote onEdit={() => undefined} onSignIn={() => setDialog("account")} />}
         updates={<WhatsNew onNewGear={() => window.location.assign("/#new-gear")} />}
         account={
           user ? (
@@ -65,6 +66,8 @@ export function PageHeader({ current, dialog, setDialog }: { current: SitePage; 
           )
         }
       />
+      {/* Phones: the nav moves to a floating bar along the bottom. */}
+      <TabBar current={current} onSignIn={() => setDialog("account")} />
       {dialog === "account" && <AccountDialog onClose={close} />}
       {dialog === "register" && <AccountDialog onClose={close} initialTab="create" />}
       {dialog === "avatar" && <AvatarDialog onClose={close} />}

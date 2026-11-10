@@ -31,7 +31,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss(), appIcons()],
   // host: true also serves on your local network, so a phone on the same Wi-Fi can open the dev server.
   server: { port: 5173, host: true, fs: { allow: [".."] } },
-  // Pages: the playground, the public gallery at /gallery/, the gear catalog at /gear/, the catalog editor at /editor/,
+  // Pages: the playground, the public gallery at /gallery/, your own boards at /boards/, the gear catalog at /gear/, the catalog editor at /editor/,
   // and the design reference at /design/ (each kept out of the playground's bundle).
   build: {
     rollupOptions: {
@@ -39,6 +39,7 @@ export default defineConfig({
         main: "index.html",
         editor: "editor/index.html",
         gallery: "gallery/index.html",
+        boards: "boards/index.html",
         gear: "gear/index.html",
         design: "design/index.html",
       },

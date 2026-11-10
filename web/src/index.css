@@ -494,3 +494,17 @@ select {
     zoom: var(--page-zoom);
   }
 }
+
+/* Phones: room under each page's content for the floating tab bar (components/SiteTabs.tsx, TabBar). Unlayered, so it
+   wins over the pages' own bottom padding. */
+@media (max-width: 639.98px) {
+  body:has(.tab-bar) main.page-main {
+    padding-bottom: calc(var(--phone-bar-bottom) + 60px + 24px);
+  }
+}
+
+/* Phones: where the dark bottom bar (the tab bar, and the builder's toolbar) sits. Like iOS's floating tab bar, it tucks
+   into the home-indicator area: about 22px up on a phone with one, 8px without. The builder's Add rail sits 12px above it. */
+:root {
+  --phone-bar-bottom: max(0.5rem, calc(env(safe-area-inset-bottom) - 0.75rem));
+}

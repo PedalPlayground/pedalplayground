@@ -11,3 +11,10 @@ export const barSoftButton = `${barSoftBase} bg-soft text-ink hover:bg-soft-hove
 export const barGhostButton = `${barSoftBase} text-ink hover:bg-surface-hover active:bg-chrome-line`;
 export const barSoftDangerButton = `${barSoftBase} bg-danger/10 text-danger hover:bg-danger/15 active:bg-danger/25`;
 export const barDivider = "mx-1 h-4 w-px shrink-0 bg-line";
+
+/**
+ * Phones: the dark floating bar from Trav's Tab Bar frame (60px, fully round, the tooltip colors). The browse pages'
+ * tab bar (`TabBar` in SiteTabs.tsx) and the builder's bottom toolbar (`Toolbar`) both use it.
+ */
+export const phoneBar =
+  "mx-auto flex h-[60px] w-full max-w-[400px] items-stretch rounded-full bg-tip px-2 shadow-float ring-1 ring-inset ring-tip-ink/10";

@@ -427,7 +427,7 @@ function BoardCard({
     "press relative z-10 -mx-1 flex items-center gap-1 rounded-inner px-1 py-0.5 text-xs font-medium tabular-nums outline-none transition-colors focus-visible:ring-2 focus-visible:ring-brand";
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-panel bg-card transition-colors hover:bg-card-hover focus-within:ring-2 focus-within:ring-brand">
-      <div className="aspect-[8/5] w-full border-b border-chrome-line p-3">
+      <div className="aspect-[8/5] w-full shrink-0 border-b border-chrome-line p-3">
         {board.thumbnail && <img src={board.thumbnail} alt="" loading="lazy" className="size-full object-contain" />}
       </div>
       <div className="flex flex-1 flex-col gap-1 px-3.5 pb-3.5 pt-3">

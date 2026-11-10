@@ -18,7 +18,7 @@ export function ModeRail() {
     // Phones get a row instead, tucked in the top-left corner.
     <nav
       aria-label="Modes"
-      className={`absolute left-[calc(max(1rem,env(safe-area-inset-left))-5px)] top-3 z-10 flex flex-col gap-1 ${barPanel} max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:flex-row`}
+      className={`absolute left-[calc(max(1rem,env(safe-area-inset-left))-5px)] top-[60px] z-10 flex flex-col gap-1 ${barPanel} max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:top-[calc(max(0.75rem,env(safe-area-inset-top))+3rem)] max-sm:flex-row`}
     >
       {modes.map((m) => (
         <button

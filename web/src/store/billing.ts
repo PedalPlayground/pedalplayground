@@ -19,15 +19,15 @@ export const useBilling = create<BillingState>((set, get) => ({
   // With Pro hidden, billing counts as off: the app shows no plans and gates nothing.
   billingEnabled: SHOW_PRO,
 
+  // Entitlements load even with Pro hidden, for the free plan's "2/4" board count; only SHOW_PRO turns gating on.
   refresh: async () => {
-    if (!SHOW_PRO) return null;
     if (!supabase || !useAuth.getState().user) {
       set({ entitlements: null });
       return null;
     }
     try {
       const entitlements = await fetchEntitlements();
-      set({ entitlements, billingEnabled: true });
+      set({ entitlements, billingEnabled: SHOW_PRO });
       return entitlements;
     } catch (e) {
       if (e instanceof BillingUnavailableError) set({ billingEnabled: false, entitlements: null });
@@ -46,3 +46,12 @@ export const useBilling = create<BillingState>((set, get) => ({
 
   clear: () => set({ entitlements: null }),
 }));
+
+/**
+ * "2/4": saved boards out of the plan's allowance, for plans with a limit (Free). Null for Pro (unlimited) or before
+ * the plan has loaded. Shown on My Boards and in the My Boards menu.
+ */
+export function useBoardAllowance(count: number): string | null {
+  const max = useBilling((b) => (b.entitlements && b.entitlements.plan !== "pro" ? b.entitlements.maxPlaygrounds : null));
+  return max === null ? null : `${count}/${max}`;
+}

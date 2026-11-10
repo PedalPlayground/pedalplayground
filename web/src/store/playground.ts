@@ -9,6 +9,7 @@ import type { BoardStyle } from "../lib/boardStyles";
 import { track } from "../lib/analytics";
 import { toast } from "./toast";
 import { useUi } from "./ui";
+import { uid } from "../lib/uid";
 
 const STORAGE_KEY = "pp:playground:v3";
 /** Zooming out stops here (8px per inch), so pedals never shrink to specks. */
@@ -177,7 +178,7 @@ function placeNew(s: PlaygroundState, n: NewItem): Partial<PlaygroundState> {
     x = ((s.coverLeft + s.viewport.w) / 2 - s.view.x) / s.view.zoom / PX_PER_INCH - n.width / 2;
     y = ((s.viewport.h - s.coverBottom) / 2 - s.view.y) / s.view.zoom / PX_PER_INCH - n.height / 2;
   }
-  const item: Item = { id: crypto.randomUUID(), ...n, x, y, rotation: 0, flipX: false };
+  const item: Item = { id: uid(), ...n, x, y, rotation: 0, flipX: false };
 
   // Pedalboards sit beneath every pedal; pedals go on top.
   const items = [...s.items];
@@ -585,8 +586,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const groups = new Map<string, string>();
       const copies = picked.map((i) => {
         const { locked: _locked, groupId, ...rest } = i;
-        if (groupId && !groups.has(groupId)) groups.set(groupId, crypto.randomUUID());
-        return { ...rest, id: crypto.randomUUID(), x: i.x + dx, ...(groupId ? { groupId: groups.get(groupId) } : {}) };
+        if (groupId && !groups.has(groupId)) groups.set(groupId, uid());
+        return { ...rest, id: uid(), x: i.x + dx, ...(groupId ? { groupId: groups.get(groupId) } : {}) };
       });
       // Boards stay beneath every pedal, like newly placed gear.
       const boards = copies.filter((i) => i.kind === "pedalboard");
@@ -608,7 +609,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const picked = s.items.filter((i) => s.selected.includes(i.id));
       if (picked.length < 2) return {};
       const one = isOneGroup(picked);
-      const id = crypto.randomUUID();
+      const id = uid();
       return {
         ...record(s),
         items: s.items.map((i) => {
@@ -723,6 +724,15 @@ export function restorePlayground() {
   }
   const legacy = readLegacyLocalStorage();
   if (legacy) usePlayground.getState().loadDocument(legacy);
+}
+
+/** Writes the board to this browser's save right away (pages without the autosave, like My Boards). */
+export function saveLocalNow() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(usePlayground.getState().toDocument()));
+  } catch {
+    /* storage full or unavailable */
+  }
 }
 
 /** Debounced local autosave. Returns an unsubscribe function. */
