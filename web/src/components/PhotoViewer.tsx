@@ -4,9 +4,12 @@ import { createPortal } from "react-dom";
 import { track } from "../lib/analytics";
 
 /**
- * A photo enlarged to fill the screen, on the same dotted backdrop as dialogs (`Modal`).
+ * A photo enlarged (up to 900 × 900) with room around it, on the same dotted backdrop as dialogs (`Modal`).
  * Click anywhere, press Esc or use the X to close. `aspect` is width / height, so the box is sized before the photo loads.
  */
+/** The biggest the photo gets, in CSS pixels, either way. */
+const MAX = 900;
+
 export function PhotoViewer({ src, alt, aspect, onClose }: { src: string; alt: string; aspect: number; onClose: () => void }) {
   const close = useRef<HTMLButtonElement>(null);
   /** The photo's own width, so a small photo isn't blown up past twice its size. */
@@ -27,15 +30,17 @@ export function PhotoViewer({ src, alt, aspect, onClose }: { src: string; alt: s
     };
   }, []);
 
-  // Fit the screen less the padding, keep the proportions, and cap at twice the photo's own width.
-  const fit = `min(calc(100vw - 2rem), calc((100dvh - 2rem) * ${aspect}))`;
+  // Fit a box of at most MAX × MAX inside the screen less the padding, keep the proportions,
+  // and cap at twice the photo's own width.
+  const side = (screen: string) => `min(calc(${screen} - var(--pad) * 2), ${MAX}px)`;
+  const fit = `min(${side("100vw")}, calc(${side("100dvh")} * ${aspect}))`;
   const width = natural ? `min(${fit}, ${natural * 2}px)` : fit;
 
   return createPortal(
     <div
       role="dialog"
       aria-label={alt}
-      className="animate-fade fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center modal-backdrop p-4"
+      className="animate-fade fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center modal-backdrop p-(--pad) [--pad:2.5rem] sm:[--pad:4rem]"
       onClick={onClose}
     >
       <img
