@@ -328,10 +328,10 @@ export function App() {
             </div>
           </div>
 
-          {/* Phones: a rail on the right. Add Gear stays put 200px above the bottom bar (its 12px inset + 60px height); the
-              selection's tools stack above it, so it never moves when they appear. */}
+          {/* Phones: a rail on the right. Add Gear stays put just above the bottom bar (12px gap); the selection's tools
+              stack above it, so it never moves when they appear. */}
           {!covered && !searchOpen && !spacingOpen && phoneSized && (
-            <div className="absolute bottom-[calc(max(0.75rem,env(safe-area-inset-bottom))+60px+200px)] right-[max(0.75rem,env(safe-area-inset-right))] z-20 flex flex-col items-center gap-3">
+            <div className="absolute bottom-[calc(var(--phone-bar-bottom)+60px+12px)] right-[max(0.75rem,env(safe-area-inset-right))] z-20 flex flex-col items-center gap-3">
               {!plugEditing && <SelectionMiniMenu rail />}
               {!viewing && <PhoneAddButton onClick={() => setSearchOpen(replacing || editing ? true : !searchOpen)} />}
             </div>
@@ -344,7 +344,7 @@ export function App() {
           {!covered && (
           <div
             // Stays put when the gear panel opens; the panel sits above it where the two meet on narrower screens.
-            className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 z-30 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
+            className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 z-30 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:bottom-[var(--phone-bar-bottom)] max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
             {wide ? (
               !viewing && <AddGearButton onClick={() => setSearchOpen(replacing || editing ? true : !searchOpen)} />

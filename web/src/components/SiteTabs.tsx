@@ -137,7 +137,7 @@ export function TabBar({ current, onSignIn }: { current: SitePage; onSignIn: () 
   return (
     <nav
       aria-label="Pedal Playground"
-      className={`tab-bar fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-40 w-auto sm:hidden ${phoneBar}`}
+      className={`tab-bar fixed inset-x-3 bottom-[var(--phone-bar-bottom)] z-40 w-auto sm:hidden ${phoneBar}`}
     >
       <a href="/" aria-current={current === "build" ? "page" : undefined} className={barItem}>
         <BuildIcon size={22} className={icon(current === "build")} />
