@@ -1,3 +1,4 @@
+import { track } from "./analytics";
 import { supabase } from "./supabase";
 import type { PlaygroundType } from "./cloud";
 
@@ -70,6 +71,7 @@ export async function fetchGalleryBoards(opts: { type: PlaygroundType | null; se
 export async function setGalleryLike(id: string, liked: boolean): Promise<number> {
   const { data, error } = await db().rpc("gallery_set_like", { board: id, liked });
   if (error) throw error;
+  track(liked ? "board_like" : "board_unlike");
   return data as number;
 }
 

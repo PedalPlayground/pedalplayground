@@ -204,7 +204,12 @@ export const useUi = create<UiState>((set) => ({
   spacingOpen: false,
   setSpacingOpen: (spacingOpen) => set(spacingOpen ? { spacingOpen, searchOpen: false, replacing: false, editing: false } : { spacingOpen }),
   // Add Gear waits while plugs are being edited (only Done ends that).
-  setSearchOpen: (searchOpen) => set((u) => (searchOpen && u.plugEditing ? {} : { searchOpen, replacing: false, editing: false })),
+  setSearchOpen: (searchOpen) =>
+    set((u) => {
+      if (searchOpen && u.plugEditing) return {};
+      if (searchOpen && !u.searchOpen) track("panel_open", { panel: "Add Gear" });
+      return { searchOpen, replacing: false, editing: false };
+    }),
   replacing: false,
   setReplacing: (replacing) => set({ replacing, editing: false, searchOpen: replacing }),
   editing: false,

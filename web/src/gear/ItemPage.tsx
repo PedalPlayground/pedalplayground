@@ -1,4 +1,5 @@
 import { ArrowLeft, Pencil, Plus } from "lucide-react";
+import { trackPage } from "../lib/analytics";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { affiliateProps, buyLinks, DISCLOSURE } from "../lib/affiliate";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
@@ -58,6 +59,7 @@ export function ItemPage({
 
   useEffect(() => {
     document.title = `${item.brand} ${item.name} · Pedal Playground`;
+    trackPage(`Gear: ${item.brand} ${item.name}`);
     return () => void (document.title = "Gear · Pedal Playground");
   }, [item]);
 
