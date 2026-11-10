@@ -328,11 +328,12 @@ export function App() {
             </div>
           </div>
 
-          {/* Phones: Add Gear and the selection's tools in a rail down the right side, centered. */}
+          {/* Phones: a rail on the right. Add Gear stays put 200px above the bottom bar (its 12px inset + 60px height); the
+              selection's tools stack above it, so it never moves when they appear. */}
           {!covered && !searchOpen && !spacingOpen && phoneSized && (
-            <div className="absolute right-[max(0.75rem,env(safe-area-inset-right))] top-1/2 z-20 flex -translate-y-1/2 flex-col items-center gap-3">
-              {!viewing && <PhoneAddButton onClick={() => setSearchOpen(replacing || editing ? true : !searchOpen)} />}
+            <div className="absolute bottom-[calc(max(0.75rem,env(safe-area-inset-bottom))+60px+200px)] right-[max(0.75rem,env(safe-area-inset-right))] z-20 flex flex-col items-center gap-3">
               {!plugEditing && <SelectionMiniMenu rail />}
+              {!viewing && <PhoneAddButton onClick={() => setSearchOpen(replacing || editing ? true : !searchOpen)} />}
             </div>
           )}
 

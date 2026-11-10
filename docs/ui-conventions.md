@@ -58,7 +58,7 @@ Known exceptions: the playground thumbnail in the switcher is 32px with a small 
 
 Phones (below 640px): floating glass bars (`glass`, `glass-sm` in index.css) with fully rounded ends; the Place button floats apart from the bar as a purple circle; the logo and zoom readout are hidden.
 
-The phone builder (from 2026-11-10) has no header. Top left: a round Back to My Boards button, then the board's name and pencil (`BoardLabel`). Top right: the save status and the account. Right side, centered: Add Gear as a round purple button (`PhoneAddButton`), with the selection's tools stacked under it (`SelectionMiniMenu rail`) instead of following the selection. Bottom: the canvas controls (Fit, Undo, Redo, Share, Settings) in the same dark pill as the browse pages' tab bar (`phoneBar` in `toolbarStyles.ts`).
+The phone builder (from 2026-11-10) has no header. Top left: a round Back to My Boards button, then the board's name and pencil (`BoardLabel`). Top right: the save status and the account. Right side: Add Gear as a round purple button (`PhoneAddButton`), fixed 200px above the bottom bar, with the selection's tools stacked above it (`SelectionMiniMenu rail`) instead of following the selection. Bottom: the canvas controls (Fit, Undo, Redo, Share, Settings) in the same dark pill as the browse pages' tab bar (`phoneBar` in `toolbarStyles.ts`).
 
 ## Keep it consistent
 
