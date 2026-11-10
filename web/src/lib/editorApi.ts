@@ -298,21 +298,22 @@ export async function pendingBuilds(): Promise<number> {
 
 /**
  * Starts the Catalog publish run, which builds new images and rewrites catalog.json (live within a few minutes).
- * Returns null when it started, or why it didn't.
+ * Says why it didn't start, or where to watch it on GitHub (the run's page, or the workflow's runs when the run
+ * couldn't be found yet).
  */
-export async function publish(): Promise<string | null> {
-  const { error } = await db().functions.invoke("catalog-publish");
-  if (!error) return null;
+export async function publish(): Promise<{ error: string } | { runUrl?: string }> {
+  const { data, error } = await db().functions.invoke<{ run_url?: string }>("catalog-publish");
+  if (!error) return { runUrl: typeof data?.run_url === "string" && data.run_url.startsWith("https://github.com/") ? data.run_url : undefined };
   const ctx = (error as { context?: Response }).context;
   if (ctx && typeof ctx.json === "function") {
     try {
       const body = (await ctx.json()) as { error?: string };
-      if (body?.error) return body.error;
+      if (body?.error) return { error: body.error };
     } catch {
       // fall through to the generic message
     }
   }
-  return error.message || "Couldn't start the publish.";
+  return { error: error.message || "Couldn't start the publish." };
 }
 
 // ---- What's New posts (announcements table) ----
