@@ -27,6 +27,7 @@ import {
 } from "../lib/moderation";
 import { boardUrl, setGalleryHidden } from "../lib/gallery";
 import type { SetNotice } from "./EditorApp";
+import { Linkified } from "../components/Linkified";
 import { Meta } from "../components/Meta";
 import { primaryButton, secondaryButton } from "./ItemEditor";
 
@@ -161,7 +162,11 @@ export function ModerationTab({ setNotice, isAdmin = false }: { setNotice: SetNo
                 <span>{ago(r.created_at)}</span>
               </div>
               {r.target_text && <p className="mt-1 line-clamp-3 whitespace-pre-line break-words">“{r.target_text}”</p>}
-              {r.details && <p className="mt-1 text-ink-muted">Reporter: {r.details}</p>}
+              {r.details && (
+                <p className="mt-1 text-ink-muted">
+                  Reporter: <Linkified text={r.details} />
+                </p>
+              )}
               <p className="mt-1 text-xs text-ink-muted">
                 <Meta
                   parts={[
@@ -344,7 +349,9 @@ function BugReports({ setNotice }: { setNotice: SetNotice }) {
         <ul className="grid gap-2">
           {reports.map((r) => (
             <li key={r.id} className="grid gap-1.5 rounded-panel bg-card p-3">
-              <p className="whitespace-pre-wrap text-[13px]">{r.details}</p>
+              <p className="whitespace-pre-wrap text-[13px]">
+                <Linkified text={r.details} />
+              </p>
               <p className="text-xs text-ink-muted">
                 {shortDate(r.created_at)}
                 {r.page && (

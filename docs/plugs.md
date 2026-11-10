@@ -29,11 +29,11 @@ screens, the object bar on tablets, the right-click or ••• menu on phones,
   dropped too; saved ones show as the default (`knownType`), and a saved `flip` or `down` is ignored.
 - **Layering:** plugs are drawn under the pedal, each with a short stub of barrel (`BARREL_STUB`, 0.25″) running into
   the jack, so a bit of barrel shows wherever the photo's jack leaves room for it.
-- **Removing:** the trash button in the mini-menu, or Delete / Backspace.
+- **Removing:** the trash button in the mini-menu, or D / Delete / Backspace (as for gear).
 - **Switching pedals:** hovering one of the faded pedals brings it back to full and shows an **Add
   Plugs** pill (tooltip colors, screen-sized). Click it (without dragging) to move plug editing to it, zoomed in on it. Done
   still returns to the view from before plug mode opened.
-- **Done** is the only way out. Meanwhile the canvas only pans (no selecting, dragging gear or menus), keyboard shortcuts are off apart from Delete for a picked plug, and Add Gear waits.
+- **Done**, or Escape with no plug selected (the first Escape deselects), leaves plug editing. Meanwhile the canvas only pans (no selecting, dragging gear or menus), keyboard shortcuts are off apart from removing a picked plug and Escape, and Add Gear waits.
 
 Plugs live on the item (`Item.plugs`: side, position along it in inches, type) in its unrotated frame, so they
 move, rotate, flip, duplicate, undo and save with the pedal. Each add, change or removal is one undo step (an add and

@@ -26,7 +26,11 @@ export interface ImageStats {
   hasAlpha: boolean;
 }
 
+/** Which check it is, so a list can show each one as its own icon. */
+export type CheckId = "resolution" | "shape" | "cutout" | "duplicate";
+
 export interface Check {
+  id: CheckId;
   ok: boolean;
   text: string;
   /** "shape": the photo's shape doesn't match the size, and the form offers to size it from the photo. */
@@ -182,16 +186,17 @@ export function runChecks(fields: Fields, stats: ImageStats | null, items: Catal
     const ppi = Math.max(stats.width, stats.height) / Math.max(fields.width, fields.height);
     out.push(
       ppi >= MIN_PPI
-        ? { ok: true, text: `Resolution: ${Math.round(ppi)} px per inch` }
-        : { ok: false, text: `Low resolution: ${Math.round(ppi)} px per inch (aim for ${MIN_PPI}+)` },
+        ? { id: "resolution", ok: true, text: `Resolution: ${Math.round(ppi)} px per inch` }
+        : { id: "resolution", ok: false, text: `Low resolution: ${Math.round(ppi)} px per inch (aim for ${MIN_PPI}+)` },
     );
     const photo = stats.width / stats.height;
     const entered = fields.width / fields.height;
     const drift = Math.abs(photo / entered - 1);
     out.push(
       drift <= SHAPE_TOLERANCE
-        ? { ok: true, text: "Photo shape matches the size" }
+        ? { id: "shape", ok: true, text: "Photo shape matches the size" }
         : {
+            id: "shape",
             ok: false,
             text: `Photo shape doesn't match the size: the photo is ${(photo).toFixed(2)}:1, the size is ${entered.toFixed(2)}:1. One of them is probably wrong.`,
             fix: "shape",
@@ -199,15 +204,15 @@ export function runChecks(fields: Fields, stats: ImageStats | null, items: Catal
     );
     out.push(
       stats.hasAlpha
-        ? { ok: true, text: "Background is cut out" }
-        : { ok: false, text: "No transparent background: it needs a cutout before approving" },
+        ? { id: "cutout", ok: true, text: "Background is cut out" }
+        : { id: "cutout", ok: false, text: "No transparent background: it needs a cutout before approving" },
     );
   }
   const dupes = possibleDuplicates(fields, items, skipImage);
   out.push(
     dupes.length
-      ? { ok: false, text: `Possible duplicate: ${dupes.slice(0, 3).map((d) => `${d.brand} ${d.name}`).join(", ")}` }
-      : { ok: true, text: "No duplicates found" },
+      ? { id: "duplicate", ok: false, text: `Possible duplicate: ${dupes.slice(0, 3).map((d) => `${d.brand} ${d.name}`).join(", ")}` }
+      : { id: "duplicate", ok: true, text: "No duplicates found" },
   );
   return out;
 }
