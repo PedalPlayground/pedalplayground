@@ -1,8 +1,7 @@
 import { Pencil, Plus, Search, Trash2 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { fetchLatestDocument, PLAYGROUND_TYPES, type PlaygroundSummary } from "../lib/cloud";
+import { PLAYGROUND_TYPES, type PlaygroundSummary } from "../lib/cloud";
 import { handoffHref } from "../lib/handoff";
-import { drawLayout } from "../lib/thumbnail";
 import { trackPage } from "../lib/analytics";
 import { supabase } from "../lib/supabase";
 import { useHasBoards } from "../lib/useHasBoards";
@@ -135,8 +134,6 @@ export function BoardsApp() {
     if (sort === "new") return [...shown].sort((a, b) => (b.created_at ?? b.updated_at).localeCompare(a.created_at ?? a.updated_at));
     return shown; // the list comes newest edit first
   }, [mine, show, query, sort]);
-  /** The last board edited, drawn big in the hero. */
-  const latest = mine[0] ?? null;
 
   const deleteBoard = async (p: PlaygroundSummary) => {
     const open = p.id === cloudId ? " It's open on the playground, so the canvas there will be cleared." : "";
@@ -158,42 +155,44 @@ export function BoardsApp() {
       <PageHeader current="boards" dialog={dialog} setDialog={setDialog} />
 
       <main id="content" className="page-main isolate mx-auto max-w-[1600px] px-4 pb-16 pt-8">
-        {/* The same hero band as Gallery and Gear: heading, one line, New Playground and a search, and your latest board
-            drawn big on the right (laptops and up). */}
-        <header className="relative isolate overflow-hidden rounded-container bg-[color-mix(in_srgb,var(--color-brand)_9%,var(--color-card))] px-5 py-6 sm:px-8 sm:py-8">
-          <div className="relative z-10 max-w-xl">
-            <h1 className="text-[28px] font-bold leading-tight tracking-[-0.02em] sm:text-3xl">My Boards</h1>
-            <p className="mt-1.5 text-sm text-ink-muted">
-              {signedOut ? "Sign in and every board you build is saved here, on any device." : "Everything you've built, saved to your account. Open one to keep building."}
-            </p>
-            <div className="mt-5 flex w-full max-w-lg flex-wrap items-center gap-2.5">
-              <a
-                href={user ? handoffHref({ kind: "new" }) : "/"}
-                className="btn-primary press flex h-11 shrink-0 items-center gap-1.5 rounded-control px-4 text-[15px] font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
-              >
-                <Plus size={18} strokeWidth={2.5} />
-                {user ? "New Playground" : "Start Building"}
-              </a>
-              {!signedOut && (
-                <label className="relative block min-w-[12rem] flex-1">
-                  <Search size={18} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-icon" />
-                  <input
-                    type="search"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search your boards"
-                    aria-label="Search your boards"
-                    className="h-11 w-full rounded-control bg-surface pl-10 pr-3 text-[15px] outline-none focus:ring-2 focus:ring-brand"
-                  />
-                </label>
-              )}
-            </div>
+        {/* No hero here (Trav, 2026-11-10): the heading with your count, then search and New Playground. */}
+        <header className="flex flex-wrap items-center gap-x-4 gap-y-3">
+          <h1 className="flex items-baseline gap-2.5 text-[28px] font-bold leading-tight tracking-[-0.02em]">
+            My Boards
+            {/* Filtered: how many match. Otherwise the free plan's "2/4", or just the count. */}
+            {!loading && mine.length > 0 && (
+              <span className="text-base font-medium tabular-nums tracking-normal text-ink-muted" {...(!filtering && allowance ? tip("Saved boards on the Free plan") : {})}>
+                {filtering ? boards.length : (allowance ?? mine.length)}
+              </span>
+            )}
+          </h1>
+          <div className="ml-auto flex w-full items-center gap-2.5 sm:w-auto">
+            {!signedOut && mine.length > 0 && (
+              // On the page itself, so a white field with a hairline (see Form backgrounds in docs/ui-conventions.md).
+              <label className="relative block min-w-0 flex-1 sm:w-64 sm:flex-none">
+                <Search size={16} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-icon" />
+                <input
+                  type="search"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search your boards"
+                  aria-label="Search your boards"
+                  className="h-9 w-full rounded-control border border-chrome-line bg-surface pl-9 pr-3 text-sm outline-none focus:ring-2 focus:ring-brand"
+                />
+              </label>
+            )}
+            <a
+              href={user ? handoffHref({ kind: "new" }) : "/"}
+              className="btn-primary press flex h-9 shrink-0 items-center gap-1.5 rounded-control px-3.5 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand max-sm:ml-auto"
+            >
+              <Plus size={16} strokeWidth={2.5} />
+              {user ? "New Playground" : "Start Building"}
+            </a>
           </div>
-          {latest && <HeroBoard board={latest} />}
         </header>
 
         {signedOut ? (
-          <div className="mx-auto mt-12 flex max-w-sm flex-col items-center text-center">
+          <div className="mx-auto mt-16 flex max-w-sm flex-col items-center text-center">
             <h2 className="text-lg font-bold tracking-[-0.01em]">Sign in to see your boards</h2>
             <p className="mt-1.5 text-sm text-ink-muted">
               {cloudEnabled
@@ -224,17 +223,8 @@ export function BoardsApp() {
           </div>
         ) : (
           <>
-            {/* What's listed, who can see it, then sort and card size (like the Gallery's bar). Hidden with no boards. */}
-            <div className={`mt-10 ${!loading && mine.length === 0 ? "hidden" : "flex"} flex-wrap items-center gap-x-4 gap-y-3`}>
-              <h2 className="text-lg font-bold tracking-[-0.01em]">
-                {query.trim() ? "Results" : "Your boards"}
-                {/* Filtered: how many match. Otherwise the free plan's "2/4", or just the count. */}
-                {!loading && mine.length > 0 && (
-                  <span className="ml-2 text-sm font-medium tabular-nums text-ink-muted" {...(!filtering && allowance ? tip("Saved boards on the Free plan") : {})}>
-                    {filtering ? boards.length : (allowance ?? mine.length)}
-                  </span>
-                )}
-              </h2>
+            {/* Who can see it, then sort and card size (like the Gallery's bar). Hidden with no boards. */}
+            <div className={`mt-6 ${!loading && mine.length === 0 ? "hidden" : "flex"} flex-wrap items-center gap-x-4 gap-y-3`}>
               <div
                 className="pointer-events-none -mx-4 -my-1 flex gap-2 overflow-x-auto px-4 py-1 max-sm:order-last max-sm:basis-[calc(100%+2rem)] sm:-mx-1 sm:px-1 [&>*]:pointer-events-auto"
                 role="group"
@@ -378,47 +368,6 @@ function CardSkeleton() {
         <div className="h-3.5 w-2/3 animate-pulse rounded-inner bg-surface-hover" />
         <div className="h-3 w-1/3 animate-pulse rounded-inner bg-surface-hover" />
       </div>
-    </div>
-  );
-}
-
-/** The hero's picture: your last edited board drawn large from its layout, cropped by the band (like the Gallery's). */
-function HeroBoard({ board }: { board: PlaygroundSummary }) {
-  const canvas = useRef<HTMLCanvasElement>(null);
-  const [drawn, setDrawn] = useState(false);
-  useEffect(() => {
-    let live = true;
-    setDrawn(false);
-    void fetchLatestDocument(board.id)
-      .then(async (doc) => {
-        const el = canvas.current;
-        if (!live || !el || !doc.items.length) return;
-        await drawLayout(el, doc.items);
-        if (live) setDrawn(true);
-      })
-      .catch(() => undefined);
-    return () => {
-      live = false;
-    };
-  }, [board.id]);
-  return (
-    <div className="absolute inset-y-0 right-0 hidden w-[46%] lg:block">
-      <canvas
-        ref={canvas}
-        width={1600}
-        height={1000}
-        aria-hidden
-        className={`absolute -right-[4%] top-6 w-full drop-shadow-[0_10px_24px_rgb(16_18_27/0.22)] transition-opacity duration-500 ${drawn ? "opacity-100" : "opacity-0"}`}
-      />
-      {drawn && (
-        <a
-          href={handoffHref({ kind: "open", id: board.id })}
-          className="absolute bottom-4 right-4 z-10 flex max-w-[80%] items-center gap-1.5 rounded-full bg-surface px-3 py-1.5 text-xs shadow-chip outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand"
-        >
-          <span className="shrink-0 text-ink-muted">Last edited</span>
-          <span className="truncate font-semibold">{board.name}</span>
-        </a>
-      )}
     </div>
   );
 }
