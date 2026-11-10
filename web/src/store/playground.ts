@@ -725,6 +725,15 @@ export function restorePlayground() {
   if (legacy) usePlayground.getState().loadDocument(legacy);
 }
 
+/** Writes the board to this browser's save right away (pages without the autosave, like My Boards). */
+export function saveLocalNow() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(usePlayground.getState().toDocument()));
+  } catch {
+    /* storage full or unavailable */
+  }
+}
+
 /** Debounced local autosave. Returns an unsubscribe function. */
 export function startLocalAutosave() {
   let timer: ReturnType<typeof setTimeout> | undefined;

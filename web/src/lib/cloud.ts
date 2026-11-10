@@ -9,6 +9,10 @@ export interface PlaygroundSummary {
   slug: string | null;
   is_public: boolean;
   thumbnail: string | null;
+  /** Read for the My Boards page; missing on databases from before those columns. */
+  created_at?: string;
+  in_gallery?: boolean;
+  playground_type?: PlaygroundType | null;
 }
 
 const db = () => {
@@ -43,7 +47,7 @@ export async function listPlaygrounds(ownerId: string): Promise<PlaygroundSummar
   if (thumbnailSupported) {
     const res = await db()
       .from("playgrounds")
-      .select(`${cols},thumbnail`)
+      .select(`${cols},thumbnail,created_at,in_gallery,playground_type`)
       .eq("owner_user_id", ownerId)
       .order("updated_at", { ascending: false });
     if (!res.error) return res.data as PlaygroundSummary[];

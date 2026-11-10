@@ -31,7 +31,7 @@ export function tabClass(here: boolean) {
 export const tabIcon = { size: 18, strokeWidth: 2 } as const;
 export const tabLabel = "max-lg:sr-only";
 
-export type SitePage = "build" | "gallery" | "gear" | "editor" | null;
+export type SitePage = "build" | "gallery" | "gear" | "boards" | "editor" | null;
 
 /** The header's call to action for newcomers: a filled button to the builder (icon only on phones). */
 export function StartBuilding() {
@@ -66,9 +66,9 @@ function AdminSection({ current }: { current: SitePage }) {
  * link to the playground. The current page's tab is marked.
  */
 export function SiteTabs({ current, builds, after }: { current: SitePage; builds?: ReactNode; after?: ReactNode }) {
-  // Someone without a board yet (away from the builder) gets Start Building in place of My Boards.
+  // Someone without a board yet (away from the builder and My Boards) gets Start Building in place of My Boards.
   const hasBoards = useHasBoards();
-  const newcomer = current !== "build" && !hasBoards;
+  const newcomer = current !== "build" && current !== "boards" && !hasBoards;
   return (
     <nav aria-label="Pedal Playground" className="flex shrink-0 items-center gap-1 sm:gap-2">
       <a href="/gallery/" data-tour="gallery" aria-current={current === "gallery" ? "page" : undefined} className={tabClass(false)}>

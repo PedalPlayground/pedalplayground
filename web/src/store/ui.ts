@@ -6,16 +6,24 @@ export type Mode = "playground" | "signal" | "list";
 /**
  * Signal Path and Equipment List are hidden for the Playground launch. Off hides the mode rail and keeps the app on
  * the Playground; their code and the data they edit stay in place, so turning this back on brings them back.
+ *
+ * Like SHOW_PRO below: on for the local dev server, off in beta and production builds. `VITE_SHOW_MODES=true` or
+ * `false` in an env file overrides either way.
  */
-export const SHOW_MODES = false;
+export const SHOW_MODES =
+  import.meta.env.VITE_SHOW_MODES === "true" || (import.meta.env.VITE_SHOW_MODES !== "false" && import.meta.env.DEV);
 
 /**
  * Pro is hidden for the launch: no Get Pro button, Pro badges, upgrade dialogs, plan details, or Pro step in the tour,
  * and nothing is gated in the app (avatar search and shared-board copies open to everyone). The billing code and
  * database stay in place, so turning this on brings it all back. Note the database still enforces the free playground
  * limit until `plan_limits` is changed.
+ *
+ * On for the local dev server (`npm run dev`) so Pro can be worked on there; beta and production builds keep it off.
+ * `VITE_SHOW_PRO=true` or `false` in an env file overrides either way.
  */
-export const SHOW_PRO = false;
+export const SHOW_PRO =
+  import.meta.env.VITE_SHOW_PRO === "true" || (import.meta.env.VITE_SHOW_PRO !== "false" && import.meta.env.DEV);
 export type Tool = "hand" | "select";
 export type Units = "in" | "mm";
 export type Theme = "system" | "light" | "dark";

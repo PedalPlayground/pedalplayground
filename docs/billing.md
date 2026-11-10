@@ -1,6 +1,6 @@
 # Billing and plans
 
-Free accounts keep **3 saved playgrounds**; Pro accounts keep **unlimited**. Payments run through
+Free accounts keep **4 saved playgrounds** (3 until 2026-11-10; `20261110120000_free_four_playgrounds.sql`); Pro accounts keep **unlimited**. Payments run through
 Stripe Checkout (hosted by Stripe, so card details never touch our code) and the Stripe customer portal
 (update card, switch plan, cancel, invoices).
 
@@ -27,7 +27,7 @@ App ◀── my_entitlements() (plan, limit, usage) ─────────
 
 | Rule | Where |
 | --- | --- |
-| Free = 3 playgrounds, Pro = unlimited | `plan_limits` table (edit the numbers, no deploy) |
+| Free = 4 playgrounds, Pro = unlimited | `plan_limits` table (edit the numbers, no deploy) |
 | Sharing and forking are free | nothing gates them; forks count toward the limit like any playground |
 | Downgrade or lapse | Existing playgrounds are never removed or locked; only *creating new* ones is blocked |
 | `past_due` keeps Pro while Stripe retries payment | `user_plan()` and `ACTIVE_STATUSES` in `_shared/clients.ts` (keep the two in sync) |
@@ -113,3 +113,9 @@ Leaving `current_period_end` null means it never expires. Set `status = 'cancele
 The migration was parsed with a real Postgres parser but not run against a database. The Edge Functions were
 type-checked against Stripe's and supabase-js's types but not run. Nothing has been exercised end to end against
 Stripe, so do the test-mode walkthrough above before trusting any of it.
+
+## Seeing Pro locally
+
+Pro is hidden on beta and production (`SHOW_PRO` in `web/src/store/ui.ts`), but on for the local dev server
+(`npm run dev`) so it can be worked on. `VITE_SHOW_PRO=true` or `false` in `web/.env.local` overrides that. Signal Path and
+Equipment List (`SHOW_MODES`) work the same way, with `VITE_SHOW_MODES`.

@@ -7,7 +7,7 @@ import type { PlaygroundSummary } from "../lib/cloud";
 import { handoffHref, type Handoff } from "../lib/handoff";
 import { requestNewPlayground } from "../lib/newPlayground";
 import { useAuth } from "../store/auth";
-import { useBilling } from "../store/billing";
+import { useBilling, useBoardAllowance } from "../store/billing";
 import { useCloud } from "../store/cloud";
 import { usePlayground } from "../store/playground";
 import { Meta } from "./Meta";
@@ -16,7 +16,7 @@ import { useUi } from "../store/ui";
 const item =
   "flex cursor-pointer select-none items-center gap-3 rounded-control px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
-type MenuProps = { onEdit: (target?: PlaygroundSummary) => void; onSignIn: () => void; onPlaygrounds: () => void };
+type MenuProps = { onEdit: (target?: PlaygroundSummary) => void; onSignIn: () => void };
 /** On other pages (the gallery), picks go to the playground instead; see lib/handoff. */
 const go = (h: Handoff) => window.location.assign(handoffHref(h));
 
@@ -31,14 +31,17 @@ function edited(iso: string) {
 }
 
 /**
- * The board hub: New Playground, the user's playgrounds as cards (open, settings), All Playgrounds and Playground Settings.
+ * The board hub: New Playground, the user's playgrounds as cards (open, settings), All My Boards (the /boards/ page) and
+ * Playground Settings.
  * Guests have New Playground and Sign In to Save.
  */
-function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote }: MenuProps & { onCloseAutoFocus: (e: Event) => void; remote: boolean }) {
+function MenuContent({ onEdit, onSignIn, onCloseAutoFocus, remote }: MenuProps & { onCloseAutoFocus: (e: Event) => void; remote: boolean }) {
   const user = useAuth((s) => s.user);
   const cloudEnabled = useAuth((s) => s.cloudEnabled);
   const { list, cloudId, openPlayground } = useCloud();
   const cards = user ? list.slice(0, 6) : [];
+  /** Free plan: "2/4" saved boards. */
+  const allowance = useBoardAllowance(list.length);
   // The gallery doesn't load your board, so New Playground is always offered there.
   const empty = usePlayground((s) => s.items.length === 0) && !remote;
   const newPlayground = remote ? () => go({ kind: "new" }) : requestNewPlayground;
@@ -90,7 +93,10 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
         <Dropdown.Separator className="my-1 h-px bg-line" />
         {cards.length > 0 && (
           <>
-            <Dropdown.Label className="px-2 pb-1.5 pt-1 text-xs text-ink-muted">Your Playgrounds</Dropdown.Label>
+            <Dropdown.Label className="flex justify-between px-2 pb-1.5 pt-1 text-xs text-ink-muted">
+              Your Playgrounds
+              {allowance && <span className="tabular-nums">{allowance}</span>}
+            </Dropdown.Label>
             <div className="flex flex-col gap-1">
               {cards.map((p) => {
                 const current = p.id === cloudId;
@@ -133,9 +139,11 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
             </div>
           </>
         )}
-        <Dropdown.Item className={item} onSelect={remote ? () => go({ kind: "playgrounds" }) : onPlaygrounds}>
-          <LayoutList size={14} />
-          All Playgrounds…
+        <Dropdown.Item asChild className={item}>
+          <a href="/boards/">
+            <LayoutList size={14} />
+            All My Boards
+          </a>
         </Dropdown.Item>
         {/* "The open board" only means something on the playground. */}
         {!remote && (
@@ -153,13 +161,13 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
 }
 
 /**
- * The My Playgrounds tab: your playgrounds' menu (New Playground, your boards, All Playgrounds, Playground Settings), styled like
+ * The My Boards tab: your playgrounds' menu (New Playground, your boards, All My Boards, Playground Settings), styled like
  * the Explore and Updates tabs beside it.
  */
-export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds, remote = false }: MenuProps & { remote?: boolean }) {
+export function BuildsMenu({ onEdit, onSignIn, remote = false }: MenuProps & { remote?: boolean }) {
   const [open, setOpen] = useState(false);
   /**
-   * The dialog to open once the menu has closed (Playground Settings, All Playgrounds or Sign In). It opens only then: opened sooner, the menu's focus trap and
+   * The dialog to open once the menu has closed (Playground Settings or Sign In). It opens only then: opened sooner, the menu's focus trap and
    * focus return pull focus out of the dialog's name field. `null` means nothing to open.
    */
   const pending = useRef<{ open: () => void } | null>(null);
@@ -177,10 +185,6 @@ export function BuildsMenu({ onEdit, onSignIn, onPlaygrounds, remote = false }: 
         }}
         onSignIn={() => {
           pending.current = { open: onSignIn };
-          setOpen(false);
-        }}
-        onPlaygrounds={() => {
-          pending.current = { open: onPlaygrounds };
           setOpen(false);
         }}
         onCloseAutoFocus={(e) => {

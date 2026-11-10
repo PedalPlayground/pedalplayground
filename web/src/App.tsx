@@ -16,7 +16,6 @@ import { SettingsMenu } from "./components/SettingsMenu";
 import { GuestButtons, SiteHeader } from "./components/SiteTabs";
 import { MadeBy } from "./components/MadeBy";
 import { ModeRail } from "./components/ModeRail";
-import { PlaygroundsDialog } from "./components/PlaygroundsDialog";
 import { BoardLabel, BuildsMenu } from "./components/PlaygroundSwitcher";
 import { takeHandoff } from "./lib/handoff";
 import type { Kind } from "./lib/catalog";
@@ -84,7 +83,7 @@ function stripEmailLinkParams() {
   window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""));
 }
 
-type Dialog = "account" | "register" | "share" | "playgrounds" | "avatar" | "edit" | null;
+type Dialog = "account" | "register" | "share" | "avatar" | "edit" | null;
 
 /** Opens `?p=<slug>` view-only. The param stays while viewing, so a reload shows it again. */
 async function openSharedFromUrl() {
@@ -178,8 +177,6 @@ export function App() {
       // Wait for the plan so the limit check is right.
       if (user && !billingKnown) return;
       requestNewPlayground();
-    } else if (handoff.kind === "playgrounds") {
-      setDialog("playgrounds");
     } else if (handoff.kind === "add") {
       // Waits for the catalog, then drops the item onto the open board.
       if (!manifest) return;
@@ -223,7 +220,7 @@ export function App() {
       <div aria-hidden className="pwa-top-strip" />
       <SiteHeader
         current={viewing ? null : "build"}
-        builds={<BuildsMenu onEdit={editPlayground} onSignIn={() => setDialog("account")} onPlaygrounds={() => setDialog("playgrounds")} />}
+        builds={<BuildsMenu onEdit={editPlayground} onSignIn={() => setDialog("account")} />}
         updates={<WhatsNew onNewGear={showNewGear} />}
         brandExtra={pro && <span className="text-sm/4 font-semibold text-brand max-sm:hidden">Pro</span>}
         nav={
@@ -369,7 +366,6 @@ export function App() {
       {newPlaygroundOpen && <NewPlaygroundDialog />}
       {dialog === "edit" && <EditPlaygroundDialog onClose={close} target={editingPlayground} />}
       {dialog === "share" && <ShareDialog onClose={close} onSignIn={() => setDialog("account")} />}
-      {dialog === "playgrounds" && <PlaygroundsDialog onClose={close} onSignIn={() => setDialog("account")} />}
     </div>
   );
 }
