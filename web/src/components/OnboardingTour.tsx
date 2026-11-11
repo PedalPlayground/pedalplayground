@@ -1,3 +1,4 @@
+import { track } from "../lib/analytics";
 import { X } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usableFeaturedPedals } from "../lib/featuredPedals";
@@ -175,14 +176,20 @@ export function OnboardingTour() {
 
   // Ending the tour takes the demo pedal back off. Finishing then drops the user straight into adding gear;
   // skipping just closes it.
-  const close = useCallback(() => {
-    removeDemoPedal();
-    endTour();
-  }, [endTour]);
+  // GA hears how far people get: the step they left on, and whether they finished.
+  const end = useCallback(
+    (finished: boolean) => {
+      track("tutorial_end", { step: index + 1, steps: steps.length, finished });
+      removeDemoPedal();
+      endTour();
+    },
+    [endTour, index, steps.length],
+  );
+  const close = useCallback(() => end(false), [end]);
   const finish = useCallback(() => {
-    close();
+    end(true);
     useUi.getState().setSearchOpen(true);
-  }, [close]);
+  }, [end]);
   const next = useCallback(() => (last ? finish() : setIndex((i) => i + 1)), [last, finish]);
   const back = useCallback(() => setIndex((i) => Math.max(0, i - 1)), []);
 
@@ -319,7 +326,7 @@ export function OnboardingTour() {
               // The last card's choice: look around the Gallery, or start building.
               <button
                 onClick={() => {
-                  close();
+                  end(true);
                   window.location.assign("/gallery/");
                 }}
                 className="h-8 whitespace-nowrap rounded-control bg-soft px-3 text-sm font-medium text-ink outline-none hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand"

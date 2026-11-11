@@ -1,3 +1,4 @@
+import { withTool } from "../lib/analytics";
 import { Cable, Ellipsis, Group, Lock, LockOpen, Pencil, Ruler, RotateCw, Ungroup } from "lucide-react";
 import { useRef } from "react";
 import { itemBounds, PX_PER_INCH } from "../lib/geometry";
@@ -82,7 +83,7 @@ export function SelectionMiniMenu() {
         aria-label={locked ? "Unlock" : "Lock in Place"}
         aria-pressed={locked}
         {...tip(locked ? "Unlock" : "Lock in Place", { shortcut: "L", side: "bottom" })}
-        onClick={s.toggleLockSelected}
+        onClick={withTool(locked ? "unlock" : "lock", "mini_menu", s.toggleLockSelected)}
         className={`${button} ${locked ? barIconActive : barIconIdle}`}
       >
         {locked ? <Lock size={16} /> : <LockOpen size={16} />}
@@ -93,23 +94,23 @@ export function SelectionMiniMenu() {
           aria-label={grouped ? "Ungroup" : "Group"}
           aria-pressed={grouped}
           {...tip(grouped ? "Ungroup" : "Group", { shortcut: "G", side: "bottom" })}
-          onClick={s.toggleGroupSelected}
+          onClick={withTool(grouped ? "ungroup" : "group", "mini_menu", s.toggleGroupSelected)}
           className={`${button} ${grouped ? barIconActive : barIconIdle}`}
         >
           {grouped ? <Ungroup size={16} /> : <Group size={16} />}
         </button>
       ) : (
-        <button aria-label="Rotate 90°" {...tip("Rotate 90°", { shortcut: "R", side: "bottom" })} onClick={s.rotateSelected} className={`${button} ${barIconIdle}`}>
+        <button aria-label="Rotate 90°" {...tip("Rotate 90°", { shortcut: "R", side: "bottom" })} onClick={withTool("rotate", "mini_menu", s.rotateSelected)} className={`${button} ${barIconIdle}`}>
           <RotateCw size={16} />
         </button>
       )}
       {spaceable && (
-        <button aria-label="Space Between" {...tip("Space Between", { side: "bottom" })} onClick={() => setSpacing(true)} className={`${button} ${barIconIdle}`}>
+        <button aria-label="Space Between" {...tip("Space Between", { side: "bottom" })} onClick={withTool("space_between", "mini_menu", () => setSpacing(true))} className={`${button} ${barIconIdle}`}>
           <Ruler size={16} />
         </button>
       )}
       {pedal && (
-        <button aria-label="Plugs" {...tip("Plugs", { shortcut: "P", side: "bottom" })} onClick={() => useUi.getState().setPlugEditing(pedal.id)} className={`${button} ${barIconIdle}`}>
+        <button aria-label="Plugs" {...tip("Plugs", { shortcut: "P", side: "bottom" })} onClick={withTool("plugs", "mini_menu", () => useUi.getState().setPlugEditing(pedal.id))} className={`${button} ${barIconIdle}`}>
           <Cable size={16} />
         </button>
       )}
@@ -117,13 +118,13 @@ export function SelectionMiniMenu() {
         <button
           aria-label={editable.kind === "pedalboard" ? "Edit Board" : "Edit"}
           {...tip(editable.kind === "pedalboard" ? "Edit Board" : "Edit", { side: "bottom" })}
-          onClick={() => setEditing(true)}
+          onClick={withTool("edit", "mini_menu", () => setEditing(true))}
           className={`${button} ${barIconIdle}`}
         >
           <Pencil size={15} />
         </button>
       )}
-      <button aria-label="More" aria-haspopup="menu" {...tip("More", { side: "bottom" })} onClick={more} className={`${button} ${barIconIdle}`}>
+      <button aria-label="More" aria-haspopup="menu" {...tip("More", { side: "bottom" })} onClick={withTool("more", "mini_menu", more)} className={`${button} ${barIconIdle}`}>
         <Ellipsis size={16} />
       </button>
     </div>
