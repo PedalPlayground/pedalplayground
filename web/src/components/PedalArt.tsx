@@ -140,17 +140,36 @@ function Led({ cx, cy, r, on = LED.green }: { cx: number; cy: number; r: number;
   );
 }
 
-/** A mini toggle: a black hex nut with a chrome bat, or with `chrome`, a chrome nut too. */
-function Toggle({ cx, cy, s, chrome }: { cx: number; cy: number; s: number; chrome?: boolean }) {
+/**
+ * A mini toggle seen from above: a chrome hex nut around a dark threaded bushing, and a tapered chrome bat ending in a
+ * ball tip, with a soft shadow falling down and to the right. Solid metal shading, no see-through layers.
+ */
+function Toggle({ cx, cy, s }: { cx: number; cy: number; s: number }) {
   const url = useUrl();
-  const hair = Math.max(0.5, s * 0.05);
+  const hair = Math.max(0.4, s * 0.05);
+  const len = s * 0.95;
+  const tipY = cy - len;
+  const b0 = s * 0.15;
+  const b1 = s * 0.1;
+  const tipR = s * 0.17;
   return (
     <g>
-      <Cast cx={cx} cy={cy} r={s * 0.6} />
-      <polygon points={polygon(cx, cy, s * 0.62, 6, Math.PI / 6)} fill={url(chrome ? "chromeRing" : "nut")} stroke="#000" strokeWidth={hair} />
-      <circle cx={cx} cy={cy} r={s * 0.3} fill={url("chromeRing")} />
-      <line x1={cx} y1={cy} x2={cx} y2={cy - s * 0.85} stroke="#000" strokeOpacity={0.6} strokeWidth={s * 0.22 + hair * 2} strokeLinecap="round" />
-      <line x1={cx} y1={cy} x2={cx} y2={cy - s * 0.85} stroke={url("chromeBar")} strokeWidth={s * 0.22} strokeLinecap="round" />
+      <Cast cx={cx} cy={cy} r={s * 0.62} />
+      {/* The bat's shadow. */}
+      <line x1={cx + s * 0.12} y1={cy + s * 0.14} x2={cx + s * 0.32} y2={tipY + s * 0.3} stroke="#000" strokeOpacity={0.4} strokeWidth={s * 0.3} strokeLinecap="round" filter={url("soft")} />
+      <polygon points={polygon(cx, cy, s * 0.62, 6, Math.PI / 6)} fill={url("chromeRing")} stroke="#3b3e44" strokeWidth={hair} strokeLinejoin="round" />
+      <polygon points={polygon(cx, cy, s * 0.5, 6, Math.PI / 6)} fill="none" stroke="#fdfdfe" strokeWidth={hair * 0.8} strokeLinejoin="round" />
+      <circle cx={cx} cy={cy} r={s * 0.3} fill="#25272b" stroke="#3b3e44" strokeWidth={hair} />
+      <circle cx={cx} cy={cy} r={s * 0.21} fill={url("chromeCap")} />
+      <polygon
+        points={`${cx - b0},${cy} ${cx - b1},${tipY} ${cx + b1},${tipY} ${cx + b0},${cy}`}
+        fill={url("chromeBar")}
+        stroke="#3b3e44"
+        strokeWidth={hair}
+        strokeLinejoin="round"
+      />
+      <circle cx={cx} cy={tipY} r={tipR} fill={url("chromeCap")} stroke="#3b3e44" strokeWidth={hair} />
+      <circle cx={cx - tipR * 0.3} cy={tipY - tipR * 0.3} r={tipR * 0.35} fill="#fff" />
     </g>
   );
 }
@@ -338,7 +357,7 @@ const wide: Draw = (w, h, u) => {
           <ChromeKnob key={`s${i}`} cx={cx} cy={rowY} r={r} turn={i + 5} />
         ))}
         {toggles.map((cx, i) => (
-          <Toggle key={i} cx={cx} cy={toggleY} s={s} chrome />
+          <Toggle key={i} cx={cx} cy={toggleY} s={s} />
         ))}
         {leds.map((l, i) => (
           <Led key={i} cx={l.x} cy={l.y} r={u * 0.02} />
