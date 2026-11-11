@@ -1,3 +1,4 @@
+import { trackTool } from "../lib/analytics";
 import { ChevronDown, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { createPortal } from "react-dom";
@@ -243,6 +244,7 @@ export function SpaceBetweenPanel() {
     if (!(gapInches >= 0)) return;
     revert();
     kept.current = true;
+    trackTool("space_between_apply", "panel", { plug_guide: !!(plug1 || plug2) });
     spaceByGap(gapInches);
     onClose();
   };

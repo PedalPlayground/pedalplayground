@@ -1,3 +1,4 @@
+import { trackTool } from "../lib/analytics";
 import { useEffect, useState } from "react";
 import { shareUrl } from "../lib/cloud";
 import { useAuth } from "../store/auth";
@@ -47,6 +48,7 @@ export function ShareDialog({ onClose, onSignIn }: { onClose: () => void; onSign
           <input readOnly value={url} {...plainField} aria-label="Share link" onFocus={(e) => e.target.select()} className="h-9 min-w-0 flex-1 rounded-control border border-line px-3 text-sm" />
           <button
             onClick={() => {
+              trackTool("share_copy_link", "dialog");
               void navigator.clipboard?.writeText(url);
               setCopied(true);
               setTimeout(() => setCopied(false), 1500);
@@ -60,7 +62,7 @@ export function ShareDialog({ onClose, onSignIn }: { onClose: () => void; onSign
       <div className="mt-4 flex items-center justify-between">
         {isPublic ? (
           <button
-            onClick={() => void stopSharing().then(onClose)}
+            onClick={() => (trackTool("share_stop", "dialog"), void stopSharing().then(onClose))}
             className="text-sm text-danger hover:underline"
           >
             Stop Sharing

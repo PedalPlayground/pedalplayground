@@ -1,3 +1,4 @@
+import { withTool } from "../lib/analytics";
 import {
   Cable,
   Info,
@@ -137,7 +138,7 @@ function Shell({
         {!collapsed && <span className="truncate text-[12px] font-semibold tracking-[-0.01em] text-ink-muted">{title}</span>}
         <button
           type="button"
-          onClick={onToggle}
+          onClick={withTool(collapsed ? "side_menu_expand" : "side_menu_collapse", "side_menu", onToggle)}
           aria-label={collapsed ? "Expand menu" : "Collapse menu"}
           aria-expanded={!collapsed}
           {...tip(collapsed ? "Expand" : "Collapse", { side: edge === "left" ? "right" : "left" })}
@@ -177,36 +178,36 @@ export function ObjectStack() {
       className="left-4"
       style={s.coverLeft ? { left: s.coverLeft + 16 } : undefined}
     >
-      <Row {...row} icon={locked ? <Lock size={16} /> : <LockOpen size={16} />} label={locked ? "Unlock" : "Lock in Place"} shortcut="L" onClick={s.toggleLockSelected} pressed={locked} />
-      <Row {...row} icon={<RotateCw size={16} />} label="Rotate 90°" shortcut="R" onClick={s.rotateSelected} />
-      <Row {...row} icon={<CopyPlus size={16} />} label="Duplicate" shortcut="⌘D" onClick={s.duplicateSelected} />
+      <Row {...row} icon={locked ? <Lock size={16} /> : <LockOpen size={16} />} label={locked ? "Unlock" : "Lock in Place"} shortcut="L" onClick={withTool(locked ? "unlock" : "lock", "side_menu", s.toggleLockSelected)} pressed={locked} />
+      <Row {...row} icon={<RotateCw size={16} />} label="Rotate 90°" shortcut="R" onClick={withTool("rotate", "side_menu", s.rotateSelected)} />
+      <Row {...row} icon={<CopyPlus size={16} />} label="Duplicate" shortcut="⌘D" onClick={withTool("duplicate", "side_menu", s.duplicateSelected)} />
       {s.selected.length >= 2 && (
         <Row
           {...row}
           icon={grouped ? <Ungroup size={16} /> : <Group size={16} />}
           label={grouped ? "Ungroup" : "Group"}
           shortcut="G"
-          onClick={s.toggleGroupSelected}
+          onClick={withTool(grouped ? "ungroup" : "group", "side_menu", s.toggleGroupSelected)}
           pressed={grouped}
         />
       )}
-      {s.selected.length >= 3 && <Row {...row} icon={<AlignHorizontalSpaceBetween size={16} />} label="Space Evenly" onClick={s.distributeHorizontally} />}
+      {s.selected.length >= 3 && <Row {...row} icon={<AlignHorizontalSpaceBetween size={16} />} label="Space Evenly" onClick={withTool("space_evenly", "side_menu", s.distributeHorizontally)} />}
       {s.selected.length >= 2 && (
         <>
-          <Row {...row} icon={<Ruler size={16} />} label="Space Between…" onClick={() => setSpacing(!spacing)} pressed={spacing} />
+          <Row {...row} icon={<Ruler size={16} />} label="Space Between…" onClick={withTool("space_between", "side_menu", () => setSpacing(!spacing))} pressed={spacing} />
         </>
       )}
       <Divider />
-      <Row {...row} icon={<ArrowUpToLine size={16} />} label="Move Forward" shortcut="]" onClick={s.bringForward} />
-      <Row {...row} icon={<ArrowDownToLine size={16} />} label="Move Back" shortcut="[" onClick={s.sendBackward} />
+      <Row {...row} icon={<ArrowUpToLine size={16} />} label="Move Forward" shortcut="]" onClick={withTool("move_forward", "side_menu", s.bringForward)} />
+      <Row {...row} icon={<ArrowDownToLine size={16} />} label="Move Back" shortcut="[" onClick={withTool("move_back", "side_menu", s.sendBackward)} />
       <Divider />
       {single?.custom && (
-        <Row {...row} icon={<Pencil size={15} />} label={single.kind === "pedalboard" ? "Edit Board" : "Edit"} onClick={() => setEditing(true)} />
+        <Row {...row} icon={<Pencil size={15} />} label={single.kind === "pedalboard" ? "Edit Board" : "Edit"} onClick={withTool("edit", "side_menu", () => setEditing(true))} />
       )}
-      {single && !single.custom && <Row {...row} icon={<Replace size={15} />} label="Replace" onClick={() => setReplacing(true)} />}
-      {single?.kind === "pedal" && <Row {...row} icon={<Cable size={16} />} label="Plugs" shortcut="P" onClick={() => useUi.getState().setPlugEditing(single.id)} />}
-      {placedItemHref(single) && <Row {...row} icon={<Info size={16} />} label="Info" onClick={() => openGearInfo(single)} />}
-      <Row {...row} icon={<Trash2 size={16} />} label="Remove" shortcut="Del" onClick={s.deleteSelected} danger />
+      {single && !single.custom && <Row {...row} icon={<Replace size={15} />} label="Replace" onClick={withTool("replace", "side_menu", () => setReplacing(true))} />}
+      {single?.kind === "pedal" && <Row {...row} icon={<Cable size={16} />} label="Plugs" shortcut="P" onClick={withTool("plugs", "side_menu", () => useUi.getState().setPlugEditing(single.id))} />}
+      {placedItemHref(single) && <Row {...row} icon={<Info size={16} />} label="Info" onClick={withTool("gear_info", "side_menu", () => openGearInfo(single))} />}
+      <Row {...row} icon={<Trash2 size={16} />} label="Remove" shortcut="Del" onClick={withTool("remove", "side_menu", s.deleteSelected)} danger />
     </Shell>
   );
 }
@@ -224,16 +225,16 @@ export function CanvasStack({ viewOnly, onShare }: { viewOnly: boolean; onShare:
   const mod = /Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Ctrl+";
   return (
     <Shell edge="right" title="Canvas" collapsed={collapsed} onToggle={toggle} className="right-4">
-      <Row {...row} icon={<ZoomIn size={17} />} label="Zoom In" shortcut={`${mod}+`} onClick={() => zoomBy(1.25)} />
-      <Row {...row} icon={<ZoomOut size={17} />} label="Zoom Out" shortcut={`${mod}−`} onClick={() => zoomBy(0.8)} />
-      <Row {...row} icon={<Fullscreen size={16} />} label="Center & Fit" shortcut="1" onClick={fit} />
+      <Row {...row} icon={<ZoomIn size={17} />} label="Zoom In" shortcut={`${mod}+`} onClick={withTool("zoom_in", "side_menu", () => zoomBy(1.25))} />
+      <Row {...row} icon={<ZoomOut size={17} />} label="Zoom Out" shortcut={`${mod}−`} onClick={withTool("zoom_out", "side_menu", () => zoomBy(0.8))} />
+      <Row {...row} icon={<Fullscreen size={16} />} label="Center & Fit" shortcut="1" onClick={withTool("fit", "side_menu", fit)} />
       {!viewOnly && (
         <>
           <Divider />
-          <Row {...row} icon={<Undo2 size={16} />} label="Undo" shortcut={`${mod}Z`} onClick={undo} disabled={!canUndo} />
-          <Row {...row} icon={<Redo2 size={16} />} label="Redo" shortcut={`⇧${mod}Z`} onClick={redo} disabled={!canRedo} />
+          <Row {...row} icon={<Undo2 size={16} />} label="Undo" shortcut={`${mod}Z`} onClick={withTool("undo", "side_menu", undo)} disabled={!canUndo} />
+          <Row {...row} icon={<Redo2 size={16} />} label="Redo" shortcut={`⇧${mod}Z`} onClick={withTool("redo", "side_menu", redo)} disabled={!canRedo} />
           <Divider />
-          <Row {...row} icon={<SquareArrowOutUpRight size={15} />} label="Share" onClick={onShare} dataTour="share" />
+          <Row {...row} icon={<SquareArrowOutUpRight size={15} />} label="Share" onClick={withTool("share", "side_menu", onShare)} dataTour="share" />
         </>
       )}
     </Shell>

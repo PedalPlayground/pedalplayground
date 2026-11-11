@@ -8,7 +8,8 @@ import { dotGridStyle } from "../lib/scale";
 import { snapMove, type Guides } from "../lib/snap";
 import type { Item, View } from "../lib/types";
 import { useCatalog } from "../store/catalog";
-import { usePlayground } from "../store/playground";
+import { isOneGroup, usePlayground } from "../store/playground";
+import { trackTool, trackToolBurst } from "../lib/analytics";
 import { openContextMenu, useContextMenu } from "./ContextMenu";
 import { CustomItemView } from "./CustomItem";
 import { hideTip, isMac, tip } from "./Tooltip";
@@ -274,8 +275,10 @@ export function Canvas() {
       const s = usePlayground.getState();
       if (e.ctrlKey || e.metaKey) {
         const r = el.getBoundingClientRect();
+        trackToolBurst("zoom_gesture", "gesture");
         s.zoomBy(Math.exp(-clamp(e.deltaY, -50, 50) * 0.01), e.clientX - r.left, e.clientY - r.top);
       } else {
+        trackToolBurst("pan", "gesture");
         s.panBy(-e.deltaX, -e.deltaY);
       }
     };
@@ -320,6 +323,7 @@ export function Canvas() {
         }
         x = clamp(x, 0, r.width);
         y = clamp(y, 0, r.height);
+        trackTool("context_menu", "shortcut");
         openContextMenu({ kind: has ? "object" : "canvas", x: r.left + x, y: r.top + y, canvasX: x, canvasY: y });
       } else if (e.code === "Space") {
         e.preventDefault();
@@ -327,37 +331,49 @@ export function Canvas() {
         spaceDown.current = true;
       } else if (mod && key === "z") {
         e.preventDefault();
+        trackTool(e.shiftKey ? "redo" : "undo", "shortcut");
         (e.shiftKey ? s.redo : s.undo)();
       } else if (mod && key === "y") {
         e.preventDefault();
+        trackTool("redo", "shortcut");
         s.redo();
       } else if (mod && key === "a") {
         e.preventDefault();
+        trackTool("select_all", "shortcut");
         s.selectMany(s.items.map((i) => i.id));
       } else if (key === "1" && !mod && !e.shiftKey && !e.altKey) {
         e.preventDefault();
+        trackTool("fit", "shortcut");
         s.fitToContent();
       } else if (mod && (key === "=" || key === "+")) {
         e.preventDefault();
+        trackTool("zoom_in", "shortcut");
         s.zoomBy(1.25);
       } else if (mod && key === "-") {
         e.preventDefault();
+        trackTool("zoom_out", "shortcut");
         s.zoomBy(0.8);
       } else if (key === "d" && mod && has) {
         e.preventDefault(); // ⌘D duplicates (the browser would bookmark the page)
+        trackTool("duplicate", "shortcut");
         s.duplicateSelected();
-      } else if (key === "r" && has && !mod) s.rotateSelected();
-      else if ((key === "delete" || key === "backspace" || (key === "d" && !mod)) && has) {
+      } else if (key === "r" && has && !mod) {
+        trackTool("rotate", "shortcut");
+        s.rotateSelected();
+      } else if ((key === "delete" || key === "backspace" || (key === "d" && !mod)) && has) {
         e.preventDefault();
+        trackTool("remove", "shortcut");
         s.deleteSelected();
       } else if (key === "g" && !mod && !e.altKey && s.selected.length > 1) {
         e.preventDefault(); // G groups the selection, or ungroups it when it's already one group
+        trackTool(isOneGroup(s.items.filter((i) => s.selected.includes(i.id))) ? "ungroup" : "group", "shortcut");
         s.toggleGroupSelected();
       } else if ((key === "+" || key === "=") && !mod && !e.altKey) {
         // + opens Add Gear, unless a dialog, menu or the panel already has the screen.
         const ui = useUi.getState();
         if (!ui.viewing && !ui.searchOpen && !document.querySelector('[role="dialog"], [role="menu"]')) {
           e.preventDefault();
+          trackTool("add_gear", "shortcut");
           ui.setSearchOpen(true);
         }
       } else if (key === "p" && !mod && !e.altKey && s.selected.length === 1) {
@@ -365,18 +381,30 @@ export function Canvas() {
         const one = s.items.find((i) => i.id === s.selected[0]);
         if (one?.kind === "pedal") {
           e.preventDefault();
+          trackTool("plugs", "shortcut");
           useUi.getState().setPlugEditing(one.id);
         }
       } else if (key === "l" && has && !mod) {
         e.preventDefault();
+        trackTool(s.items.filter((i) => s.selected.includes(i.id)).every((i) => i.locked) ? "unlock" : "lock", "shortcut");
         s.toggleLockSelected();
-      } else if (key === "]" && has) (mod ? s.bringToFront : s.bringForward)();
-      else if (key === "[" && has) (mod ? s.sendToBack : s.sendBackward)();
-      else if (key === "escape") s.clearSelection();
-      else if (key === "arrowleft" && has) (e.preventDefault(), pulseNudge(), s.nudgeSelected(-nudge, 0));
-      else if (key === "arrowright" && has) (e.preventDefault(), pulseNudge(), s.nudgeSelected(nudge, 0));
-      else if (key === "arrowup" && has) (e.preventDefault(), pulseNudge(), s.nudgeSelected(0, -nudge));
-      else if (key === "arrowdown" && has) (e.preventDefault(), pulseNudge(), s.nudgeSelected(0, nudge));
+      } else if (key === "]" && has) {
+        trackTool(mod ? "move_to_front" : "move_forward", "shortcut");
+        (mod ? s.bringToFront : s.bringForward)();
+      } else if (key === "[" && has) {
+        trackTool(mod ? "move_to_back" : "move_back", "shortcut");
+        (mod ? s.sendToBack : s.sendBackward)();
+      } else if (key === "escape") s.clearSelection();
+      else if (key.startsWith("arrow") && has) {
+        e.preventDefault();
+        // Held or tapped arrows count once per run of nudges.
+        trackToolBurst("nudge", "shortcut");
+        pulseNudge();
+        if (key === "arrowleft") s.nudgeSelected(-nudge, 0);
+        else if (key === "arrowright") s.nudgeSelected(nudge, 0);
+        else if (key === "arrowup") s.nudgeSelected(0, -nudge);
+        else if (key === "arrowdown") s.nudgeSelected(0, nudge);
+      }
     };
     const onKeyUp = (e: KeyboardEvent) => {
       if (e.code === "Space") {
@@ -424,6 +452,7 @@ export function Canvas() {
     if (useUi.getState().mode !== "playground" || useUi.getState().viewing) return;
     const p = local({ clientX, clientY });
     const kind = onItem && usePlayground.getState().selected.length ? "object" : "canvas";
+    trackTool("context_menu", "right_click");
     openContextMenu({ kind, x: clientX, y: clientY, canvasX: p.x, canvasY: p.y });
   };
 
@@ -550,12 +579,14 @@ export function Canvas() {
     if (g.type === "pinch") {
       if (pointers.current.size < 2) return;
       const next = pinchState();
+      trackToolBurst("zoom_gesture", "gesture");
       s.zoomBy(next.dist / g.dist, next.mx, next.my);
       s.panBy(next.mx - g.mx, next.my - g.my);
       gesture.current = { type: "pinch", ...next };
     } else if (g.type === "pan") {
       if (g.tap && !g.moved && Math.hypot(e.clientX - g.lastX, e.clientY - g.lastY) < TAP_SLOP_PX) return;
       g.moved = true;
+      trackToolBurst("pan", "gesture");
       s.panBy(e.clientX - g.lastX, e.clientY - g.lastY);
       g.lastX = e.clientX;
       g.lastY = e.clientY;
@@ -615,6 +646,8 @@ export function Canvas() {
     cancelLongPress();
     setPanning(false);
     const g = gesture.current;
+    if (g?.type === "drag" && g.started) trackTool("move", "gesture");
+    else if (g?.type === "marquee" && marquee && marquee.w + marquee.h > 4) trackTool("box_select", "gesture");
     if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) {
       if (g.jumpTo) {
         usePlayground.getState().select(g.jumpTo);
