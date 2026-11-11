@@ -5,7 +5,8 @@ import { hasSideJacks, hasTopJacks, JACK_DEPTH, JACK_LENGTH, type Jacks, type Pe
 
 /*
  * Custom pedal artwork, in a sleek industrial style (think Braun, Teenage Engineering, Apple): matte bodies under
- * soft light, brushed black cone knobs, black hex footswitches and small glowing LEDs, with crisp edges throughout.
+ * soft light, brushed black cone knobs (chrome on Wide Hammond), hex footswitches and small glowing LEDs, with crisp
+ * edges throughout.
  * Every template lays itself out in code at the pedal's real size (in canvas px), so knobs and footswitches keep
  * their shape while their spacing, and sometimes their count, follow the size.
  */
@@ -108,17 +109,17 @@ function polygon(cx: number, cy: number, r: number, n: number, rot = 0) {
   }).join(" ");
 }
 
-/** A footswitch: a black hex nut, a thin chrome ring and a satin black button. */
-function Footswitch({ cx, cy, r }: { cx: number; cy: number; r: number }) {
+/** A footswitch: a black hex nut, a thin chrome ring and a satin black button, or with `chrome`, all polished metal. */
+function Footswitch({ cx, cy, r, chrome }: { cx: number; cy: number; r: number; chrome?: boolean }) {
   const url = useUrl();
   const hair = Math.max(0.5, r * 0.03);
   return (
     <g>
       <Cast cx={cx} cy={cy} r={r} k={1.1} />
-      <polygon points={polygon(cx, cy, r, 6, Math.PI / 6)} fill={url("nut")} stroke="#000" strokeWidth={hair} strokeLinejoin="round" />
+      <polygon points={polygon(cx, cy, r, 6, Math.PI / 6)} fill={url(chrome ? "chromeRing" : "nut")} stroke="#000" strokeWidth={hair} strokeLinejoin="round" />
       <polygon points={polygon(cx, cy, r - hair * 1.5, 6, Math.PI / 6)} fill="none" stroke={url("rimLight")} strokeWidth={hair} strokeLinejoin="round" />
       <circle cx={cx} cy={cy} r={r * 0.7} fill={url("chromeRing")} />
-      <circle cx={cx} cy={cy} r={r * 0.58} fill={url("button")} stroke="#000" strokeWidth={hair} />
+      <circle cx={cx} cy={cy} r={r * 0.58} fill={url(chrome ? "chromeCap" : "button")} stroke="#000" strokeWidth={hair} />
       <ellipse cx={cx - r * 0.15} cy={cy - r * 0.2} rx={r * 0.26} ry={r * 0.14} fill="#fff" opacity={0.18} />
     </g>
   );
@@ -139,14 +140,14 @@ function Led({ cx, cy, r, on = LED.green }: { cx: number; cy: number; r: number;
   );
 }
 
-/** A mini toggle: a black hex nut with a chrome bat. */
-function Toggle({ cx, cy, s }: { cx: number; cy: number; s: number }) {
+/** A mini toggle: a black hex nut with a chrome bat, or with `chrome`, a chrome nut too. */
+function Toggle({ cx, cy, s, chrome }: { cx: number; cy: number; s: number; chrome?: boolean }) {
   const url = useUrl();
   const hair = Math.max(0.5, s * 0.05);
   return (
     <g>
       <Cast cx={cx} cy={cy} r={s * 0.6} />
-      <polygon points={polygon(cx, cy, s * 0.62, 6, Math.PI / 6)} fill={url("nut")} stroke="#000" strokeWidth={hair} />
+      <polygon points={polygon(cx, cy, s * 0.62, 6, Math.PI / 6)} fill={url(chrome ? "chromeRing" : "nut")} stroke="#000" strokeWidth={hair} />
       <circle cx={cx} cy={cy} r={s * 0.3} fill={url("chromeRing")} />
       <line x1={cx} y1={cy} x2={cx} y2={cy - s * 0.85} stroke="#000" strokeOpacity={0.6} strokeWidth={s * 0.22 + hair * 2} strokeLinecap="round" />
       <line x1={cx} y1={cy} x2={cx} y2={cy - s * 0.85} stroke={url("chromeBar")} strokeWidth={s * 0.22} strokeLinecap="round" />
@@ -278,43 +279,97 @@ const hammond: Draw = (w, h, u, _color, dark) => {
   };
 };
 
-/** A wide Hammond enclosure (1590BB), Chase Bliss / Walrus style: knobs in rows, toggles, LEDs and footswitches. */
-const wide: Draw = (w, h, u, _color, dark) => {
-  const labelH = h * 0.14;
-  const top = h * 0.04 + labelH + h * 0.02;
-  // Knobs and toggles sit high enough that the toggles stay clear of the footswitch LEDs.
-  const zoneH = h * 0.34;
-  const cols = clamp(Math.floor(w / (1.4 * IN)), 2, 8);
-  const rows = clamp(Math.floor(zoneH / (0.62 * IN)), 1, 2);
-  const cellW = (w * 0.9) / cols;
-  const cellH = zoneH / rows;
-  const r = Math.min(cellW, cellH, IN) * 0.33;
-  const s = Math.min(u * 0.1, 0.18 * IN);
-  const toggleY = top + zoneH + h * 0.06;
+/**
+ * A chrome knob, Cornerstone style: a polished cone skirt, a dark knurled grip ring and a brushed chrome cap with a
+ * pointer. Reads the same on any body color.
+ */
+function ChromeKnob({ cx, cy, r, turn = 0 }: { cx: number; cy: number; r: number; turn?: number }) {
+  const a = ((-135 + ((turn * 67) % 270)) * Math.PI) / 180;
+  const at = (k: number) => ({ x: cx + Math.sin(a) * r * k, y: cy - Math.cos(a) * r * k });
+  const hair = Math.max(0.5, r * 0.025);
+  const grip = r * 0.66;
+  const cap = r * 0.52;
+  const ribs = r > 14 ? 40 : 0;
+  const i1 = at(0.18);
+  const i2 = at(0.46);
+  return (
+    <g>
+      <Cast cx={cx} cy={cy} r={r} />
+      <Cone cx={cx} cy={cy} r={r} lo={108} hi={248} n={48} />
+      <circle cx={cx} cy={cy} r={r - hair / 2} fill="none" stroke="#000" strokeOpacity={0.4} strokeWidth={hair} />
+      <circle cx={cx} cy={cy} r={grip} fill="#16171a" />
+      {Array.from({ length: ribs }, (_, i) => {
+        const t = (i / ribs) * Math.PI * 2;
+        return (
+          <line
+            key={i}
+            x1={cx + Math.cos(t) * cap}
+            y1={cy + Math.sin(t) * cap}
+            x2={cx + Math.cos(t) * grip * 0.97}
+            y2={cy + Math.sin(t) * grip * 0.97}
+            stroke="#5a5d63"
+            strokeWidth={hair * 0.8}
+          />
+        );
+      })}
+      <Cone cx={cx} cy={cy} r={cap} lo={176} hi={252} n={36} />
+      <circle cx={cx} cy={cy} r={cap} fill="none" stroke="#000" strokeOpacity={0.5} strokeWidth={hair} />
+      <line x1={i1.x} y1={i1.y} x2={i2.x} y2={i2.y} stroke="#1d1f23" strokeOpacity={0.75} strokeWidth={Math.max(0.6, r * 0.05)} strokeLinecap="round" />
+    </g>
+  );
+}
+
+/**
+ * A wide Hammond enclosure (1590BB), laid out like the Cornerstone Gladio: a row of big chrome knobs across the top
+ * (split in two channels by an engraved line), a knob at each end of the second row with the toggles between them,
+ * the name in the middle, and chrome footswitches in the bottom corners with their LEDs just inside.
+ */
+const wide: Draw = (w, h, u, color) => {
+  const ink = readableOn(color);
+  const r = Math.min(w * 0.105, h * 0.135, 0.6 * IN);
+  // The outer knobs' centers sit about an eighth of the width in from the edges, as on the Gladio.
+  const edge = Math.max(w * 0.115, r * 1.06);
+  // Always an even count: half for each channel, either side of the center line.
+  const cols = 2 * clamp(Math.round(w / (2.36 * IN)), 1, 4);
+  const topY = h * 0.18;
+  const top = Array.from({ length: cols }, (_, i) => edge + ((w - edge * 2) * i) / (cols - 1));
+  const rowY = h * 0.52;
+  const sideX = [edge, w - edge];
+  const nT = clamp(Math.round((w * 0.5) / (0.9 * IN)), 1, 5);
+  const s = Math.min(u * 0.09, 0.2 * IN);
+  const toggleY = h * 0.46;
+  const toggles = nT === 1 ? [w / 2] : Array.from({ length: nT }, (_, i) => w * 0.3 + ((w * 0.4) * i) / (nT - 1));
   const nF = w >= 7.5 * IN ? 3 : w >= 3.4 * IN ? 2 : 1;
-  const fsR = Math.min(u * 0.14, (w / nF) * 0.2, 0.3 * IN);
-  const fsY = h * 0.95 - fsR;
-  const fx = spread(nF, w * 0.05, w * 0.95);
+  const fsR = Math.min(u * 0.095, (w / nF) * 0.2, 0.3 * IN);
+  const fsY = h * 0.885;
+  const fx = nF === 2 ? [w * 0.15, w * 0.85] : spread(nF, w * 0.05, w * 0.95);
+  // LEDs sit just inside the outer footswitches (above a lone one).
+  const leds = nF === 1 ? [{ x: fx[0], y: fsY - fsR - u * 0.08 }] : fx.map((x) => ({ x: x + (x < w / 2 ? 1 : x > w / 2 ? -1 : 0) * w * 0.16, y: fsY - fsR * 0.1 }));
+  const sw = Math.max(0.6, u * 0.006);
   return {
     parts: (
       <>
-        {Array.from({ length: rows }, (_, ri) =>
-          spread(cols, w * 0.05, w * 0.95).map((cx, i) => (
-            <Knob key={`${ri}-${i}`} cx={cx} cy={top + cellH * (ri + 0.5)} r={r} turn={ri * cols + i} light={dark} />
-          )),
-        )}
-        {spread(cols, w * 0.12, w * 0.88).map((cx, i) => (
-          <Toggle key={i} cx={cx} cy={toggleY} s={s} />
+        <line x1={w / 2} x2={w / 2} y1={h * 0.29} y2={h * 0.36} stroke={ink} strokeOpacity={0.45} strokeWidth={sw} />
+        {top.map((cx, i) => (
+          <ChromeKnob key={`t${i}`} cx={cx} cy={topY} r={r} turn={i} />
+        ))}
+        {sideX.map((cx, i) => (
+          <ChromeKnob key={`s${i}`} cx={cx} cy={rowY} r={r} turn={i + 5} />
+        ))}
+        {/* The middle toggle (the Gladio's Single / Double) sits in an engraved ring. */}
+        {nT % 2 === 1 && <circle cx={w / 2} cy={toggleY - s * 0.15} r={s * 1.35} fill="none" stroke={ink} strokeOpacity={0.4} strokeWidth={sw} />}
+        {toggles.map((cx, i) => (
+          <Toggle key={i} cx={cx} cy={toggleY} s={s} chrome />
+        ))}
+        {leds.map((l, i) => (
+          <Led key={i} cx={l.x} cy={l.y} r={u * 0.02} />
         ))}
         {fx.map((cx, i) => (
-          <Led key={i} cx={cx} cy={fsY - fsR - u * 0.08} r={u * 0.024} />
-        ))}
-        {fx.map((cx, i) => (
-          <Footswitch key={i} cx={cx} cy={fsY} r={fsR} />
+          <Footswitch key={i} cx={cx} cy={fsY} r={fsR} chrome />
         ))}
       </>
     ),
-    label: { x: w * 0.06, y: h * 0.04, w: w * 0.88, h: labelH },
+    label: { x: w * 0.27, y: h * 0.58, w: w * 0.46, h: h * 0.16 },
   };
 };
 
@@ -560,6 +615,11 @@ function Defs({ id, color, u, w, h, rx }: { id: string; color: string; u: number
         ],
         [0, 0, 1, 0],
       )}
+      {rad("chromeCap", [
+        [0, "#ffffff"],
+        [0.55, "#c9ccd2"],
+        [1, "#8a8f97"],
+      ])}
       {rad("button", [
         [0, "#45484e"],
         [0.6, "#1b1c1f"],
