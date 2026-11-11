@@ -280,40 +280,24 @@ const hammond: Draw = (w, h, u, _color, dark) => {
 };
 
 /**
- * A chrome knob, Cornerstone style: a polished cone skirt, a dark knurled grip ring and a brushed chrome cap with a
- * pointer. Reads the same on any body color.
+ * A chrome knob, Cornerstone style: a polished skirt, a dark knurled grip ring and a chrome cap with a pointer.
+ * Kept light: six shapes, with the metal done by gradients shared across the pedal. Reads the same on any body color.
  */
 function ChromeKnob({ cx, cy, r, turn = 0 }: { cx: number; cy: number; r: number; turn?: number }) {
+  const url = useUrl();
   const a = ((-135 + ((turn * 67) % 270)) * Math.PI) / 180;
   const at = (k: number) => ({ x: cx + Math.sin(a) * r * k, y: cy - Math.cos(a) * r * k });
   const hair = Math.max(0.5, r * 0.025);
-  const grip = r * 0.66;
-  const cap = r * 0.52;
-  const ribs = r > 14 ? 40 : 0;
-  const i1 = at(0.18);
-  const i2 = at(0.46);
+  const grip = r * 0.6;
+  const i1 = at(0.15);
+  const i2 = at(0.42);
   return (
     <g>
       <Cast cx={cx} cy={cy} r={r} />
-      <Cone cx={cx} cy={cy} r={r} lo={108} hi={248} n={48} />
-      <circle cx={cx} cy={cy} r={r - hair / 2} fill="none" stroke="#000" strokeOpacity={0.4} strokeWidth={hair} />
-      <circle cx={cx} cy={cy} r={grip} fill="#16171a" />
-      {Array.from({ length: ribs }, (_, i) => {
-        const t = (i / ribs) * Math.PI * 2;
-        return (
-          <line
-            key={i}
-            x1={cx + Math.cos(t) * cap}
-            y1={cy + Math.sin(t) * cap}
-            x2={cx + Math.cos(t) * grip * 0.97}
-            y2={cy + Math.sin(t) * grip * 0.97}
-            stroke="#5a5d63"
-            strokeWidth={hair * 0.8}
-          />
-        );
-      })}
-      <Cone cx={cx} cy={cy} r={cap} lo={176} hi={252} n={36} />
-      <circle cx={cx} cy={cy} r={cap} fill="none" stroke="#000" strokeOpacity={0.5} strokeWidth={hair} />
+      <circle cx={cx} cy={cy} r={r - hair / 2} fill={url("chromeSkirt")} stroke="#000" strokeOpacity={0.4} strokeWidth={hair} />
+      {/* The knurling is a dashed stroke over the dark grip. */}
+      <circle cx={cx} cy={cy} r={grip} fill="#16171a" stroke="#5a5d63" strokeWidth={r * 0.1} strokeDasharray={`${r * 0.03} ${r * 0.06}`} />
+      <circle cx={cx} cy={cy} r={r * 0.48} fill={url("chromeCap")} stroke="#000" strokeOpacity={0.5} strokeWidth={hair} />
       <line x1={i1.x} y1={i1.y} x2={i2.x} y2={i2.y} stroke="#1d1f23" strokeOpacity={0.75} strokeWidth={Math.max(0.6, r * 0.05)} strokeLinecap="round" />
     </g>
   );
@@ -609,6 +593,18 @@ function Defs({ id, color, u, w, h, rx }: { id: string; color: string; u: number
           [1, "#7c818a"],
         ],
         [0, 0, 1, 0],
+      )}
+      {lin(
+        "chromeSkirt",
+        [
+          [0, "#f7f8fa"],
+          [0.22, "#9a9fa7"],
+          [0.4, "#eef0f3"],
+          [0.58, "#7d828a"],
+          [0.78, "#e2e5e9"],
+          [1, "#8a8f97"],
+        ],
+        [0, 0, 1, 1],
       )}
       {rad("chromeCap", [
         [0, "#ffffff"],
