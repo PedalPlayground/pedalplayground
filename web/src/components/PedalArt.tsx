@@ -320,16 +320,15 @@ function ChromeKnob({ cx, cy, r, turn = 0 }: { cx: number; cy: number; r: number
 }
 
 /**
- * A wide Hammond enclosure (1590BB), laid out like the Cornerstone Gladio: a row of big chrome knobs across the top
- * (split in two channels by an engraved line), a knob at each end of the second row with the toggles between them,
+ * A wide Hammond enclosure (1590BB), laid out like the Cornerstone Gladio: a row of big chrome knobs across the top,
+ * a knob at each end of the second row with the toggles between them,
  * the name in the middle, and chrome footswitches in the bottom corners with their LEDs just inside.
  */
-const wide: Draw = (w, h, u, color) => {
-  const ink = readableOn(color);
+const wide: Draw = (w, h, u) => {
   const r = Math.min(w * 0.105, h * 0.135, 0.6 * IN);
   // The outer knobs' centers sit about an eighth of the width in from the edges, as on the Gladio.
   const edge = Math.max(w * 0.115, r * 1.06);
-  // Always an even count: half for each channel, either side of the center line.
+  // Always an even count: half for each channel.
   const cols = 2 * clamp(Math.round(w / (2.36 * IN)), 1, 4);
   const topY = h * 0.18;
   const top = Array.from({ length: cols }, (_, i) => edge + ((w - edge * 2) * i) / (cols - 1));
@@ -345,19 +344,15 @@ const wide: Draw = (w, h, u, color) => {
   const fx = nF === 2 ? [w * 0.15, w * 0.85] : spread(nF, w * 0.05, w * 0.95);
   // LEDs sit just inside the outer footswitches (above a lone one).
   const leds = nF === 1 ? [{ x: fx[0], y: fsY - fsR - u * 0.08 }] : fx.map((x) => ({ x: x + (x < w / 2 ? 1 : x > w / 2 ? -1 : 0) * w * 0.16, y: fsY - fsR * 0.1 }));
-  const sw = Math.max(0.6, u * 0.006);
   return {
     parts: (
       <>
-        <line x1={w / 2} x2={w / 2} y1={h * 0.29} y2={h * 0.36} stroke={ink} strokeOpacity={0.45} strokeWidth={sw} />
         {top.map((cx, i) => (
           <ChromeKnob key={`t${i}`} cx={cx} cy={topY} r={r} turn={i} />
         ))}
         {sideX.map((cx, i) => (
           <ChromeKnob key={`s${i}`} cx={cx} cy={rowY} r={r} turn={i + 5} />
         ))}
-        {/* The middle toggle (the Gladio's Single / Double) sits in an engraved ring. */}
-        {nT % 2 === 1 && <circle cx={w / 2} cy={toggleY - s * 0.15} r={s * 1.35} fill="none" stroke={ink} strokeOpacity={0.4} strokeWidth={sw} />}
         {toggles.map((cx, i) => (
           <Toggle key={i} cx={cx} cy={toggleY} s={s} chrome />
         ))}
