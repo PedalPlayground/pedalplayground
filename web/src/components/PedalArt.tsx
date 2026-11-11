@@ -39,7 +39,7 @@ const gray = (v: number) => `rgb(${v} ${v} ${v + 3})`;
 /** A soft shadow cast down and to the right, the way the light falls. */
 function Cast({ cx, cy, r, k = 1 }: { cx: number; cy: number; r: number; k?: number }) {
   const url = useUrl();
-  return <circle cx={cx + r * 0.14 * k} cy={cy + r * 0.22 * k} r={r * 1.02} fill="#000" opacity={0.42} filter={url("soft")} />;
+  return <circle cx={cx + r * 0.14 * k} cy={cy + r * 0.22 * k} r={r * 1.02} fill="#000" opacity={0.28} filter={url("soft")} />;
 }
 
 /**
@@ -130,7 +130,7 @@ function Led({ cx, cy, r, on = LED.green }: { cx: number; cy: number; r: number;
   const url = useUrl();
   return (
     <g>
-      <circle cx={cx + r * 0.2} cy={cy + r * 0.35} r={r * 1.9} fill="#000" opacity={0.35} filter={url("soft")} />
+      <circle cx={cx + r * 0.2} cy={cy + r * 0.35} r={r * 1.9} fill="#000" opacity={0.24} filter={url("soft")} />
       <circle cx={cx} cy={cy} r={r * 1.9} fill={url("bezel")} />
       <circle cx={cx} cy={cy} r={r * 1.9 - 0.5} fill="none" stroke={url("rimLight")} strokeWidth={Math.max(0.5, r * 0.12)} />
       <circle cx={cx} cy={cy} r={r * 1.5} fill={on} opacity={0.5} filter={url("glow")} />
@@ -156,7 +156,7 @@ function Toggle({ cx, cy, s }: { cx: number; cy: number; s: number }) {
     <g>
       <Cast cx={cx} cy={cy} r={s * 0.62} />
       {/* The bat's shadow. */}
-      <line x1={cx + s * 0.12} y1={cy + s * 0.14} x2={cx + s * 0.32} y2={tipY + s * 0.3} stroke="#000" strokeOpacity={0.4} strokeWidth={s * 0.3} strokeLinecap="round" filter={url("soft")} />
+      <line x1={cx + s * 0.12} y1={cy + s * 0.14} x2={cx + s * 0.32} y2={tipY + s * 0.3} stroke="#000" strokeOpacity={0.26} strokeWidth={s * 0.3} strokeLinecap="round" filter={url("soft")} />
       <polygon points={polygon(cx, cy, s * 0.62, 6, Math.PI / 6)} fill={url("chromeRing")} stroke="#3b3e44" strokeWidth={hair} strokeLinejoin="round" />
       <polygon points={polygon(cx, cy, s * 0.5, 6, Math.PI / 6)} fill="none" stroke="#fdfdfe" strokeWidth={hair * 0.8} strokeLinejoin="round" />
       <circle cx={cx} cy={cy} r={s * 0.3} fill="#25272b" stroke="#3b3e44" strokeWidth={hair} />
