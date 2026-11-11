@@ -1,3 +1,4 @@
+import { trackTool, withTool, type ToolVia } from "../lib/analytics";
 import { Trash2 } from "lucide-react";
 import { useEffect, useRef, type PointerEvent as ReactPointerEvent } from "react";
 import { create } from "zustand";
@@ -141,6 +142,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     e.stopPropagation();
     e.preventDefault();
     const plug: Plug = { id: newPlugId(), ...at(e), type };
+    trackTool("plug_add", "panel", { plug_type: type });
     usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
     // Keep dragging the new plug until the button comes up, to line it up in one go.
     capture(e);
@@ -155,6 +157,7 @@ export function PlugEditLayer({ item, zoom }: { item: Item; zoom: number }) {
     e.stopPropagation();
     e.preventDefault();
     const plug: Plug = { id: newPlugId(), side: h.side, at: h.at, type };
+    trackTool("plug_add", "panel", { plug_type: type, spot: "suggested" });
     usePlayground.getState().setPlugs(item.id, [...latest(), plug]);
     set({ selected: [plug.id] });
   };
@@ -265,8 +268,9 @@ export function PlugPanel() {
   /** Changes every selected plug (one undo step). */
   const update = (patch: (p: Plug) => Partial<Plug>) =>
     item && picked.length && usePlayground.getState().setPlugs(item.id, item.plugs!.map((p) => (selected.includes(p.id) ? { ...p, ...patch(p) } : p)));
-  const remove = () => {
+  const remove = (via: ToolVia = "panel") => {
     if (!item || !picked.length) return;
+    trackTool("plug_remove", via);
     usePlayground.getState().setPlugs(item.id, item.plugs!.filter((p) => !selected.includes(p.id)));
     set({ selected: [] });
   };
@@ -285,7 +289,7 @@ export function PlugPanel() {
       if ((e.key === "Delete" || e.key === "Backspace" || d) && plug) {
         e.preventDefault();
         e.stopPropagation();
-        remove();
+        remove("shortcut");
       }
     };
     window.addEventListener("keydown", onKey, true);
@@ -307,7 +311,7 @@ export function PlugPanel() {
           </span>
           <button
             type="button"
-            onClick={() => setEditing(null)}
+            onClick={withTool("plug_done", "panel", () => setEditing(null))}
             className="btn-primary flex h-9 items-center gap-1 rounded-control px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
           >
             Done
@@ -405,6 +409,7 @@ function PlugMiniMenu({
             aria-label={PLUG_TYPES[t].label}
             {...tip(PLUG_TYPES[t].label, { side: "bottom" })}
             onClick={() => {
+              trackTool("plug_type", "panel", { plug_type: t });
               update(() => ({ type: t }));
               // New plugs follow the last type picked.
               usePlugPick.getState().set({ type: t });
@@ -420,7 +425,7 @@ function PlugMiniMenu({
         type="button"
         aria-label={picked.length > 1 ? "Remove plugs" : "Remove plug"}
         {...tip(picked.length > 1 ? "Remove Plugs" : "Remove Plug", { shortcut: "Delete", side: "bottom" })}
-        onClick={remove}
+        onClick={() => remove()}
         className={`${miniButton} text-danger hover:bg-danger/10`}
       >
         <Trash2 size={16} />

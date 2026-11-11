@@ -8,9 +8,12 @@ export interface TrendingEntry {
   adds: number;
 }
 
-/** Records that a catalog item was added to a playground. Fire and forget: failures never reach the user. */
-export function recordGearAdd(kind: Kind, image: string) {
-  track("add_gear", { kind });
+/**
+ * Records that a catalog item was added to a playground. Fire and forget: failures never reach the user. `source` says
+ * how it was found, for GA: "search", "trending" or "new" in Add Gear, "replace", or "gear_page".
+ */
+export function recordGearAdd(kind: Kind, image: string, source?: string) {
+  track("add_gear", source ? { kind, source } : { kind });
   if (!supabase) return;
   void supabase.rpc("record_gear_add", { kind, image }).then(
     () => undefined,

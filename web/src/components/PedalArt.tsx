@@ -5,7 +5,8 @@ import { hasSideJacks, hasTopJacks, JACK_DEPTH, JACK_LENGTH, type Jacks, type Pe
 
 /*
  * Custom pedal artwork, in a sleek industrial style (think Braun, Teenage Engineering, Apple): matte bodies under
- * soft light, brushed black cone knobs, black hex footswitches and small glowing LEDs, with crisp edges throughout.
+ * soft light, brushed black cone knobs (chrome on Wide Hammond), hex footswitches and small glowing LEDs, with crisp
+ * edges throughout.
  * Every template lays itself out in code at the pedal's real size (in canvas px), so knobs and footswitches keep
  * their shape while their spacing, and sometimes their count, follow the size.
  */
@@ -38,7 +39,7 @@ const gray = (v: number) => `rgb(${v} ${v} ${v + 3})`;
 /** A soft shadow cast down and to the right, the way the light falls. */
 function Cast({ cx, cy, r, k = 1 }: { cx: number; cy: number; r: number; k?: number }) {
   const url = useUrl();
-  return <circle cx={cx + r * 0.14 * k} cy={cy + r * 0.22 * k} r={r * 1.02} fill="#000" opacity={0.42} filter={url("soft")} />;
+  return <circle cx={cx + r * 0.14 * k} cy={cy + r * 0.22 * k} r={r * 1.02} fill="#000" opacity={0.28} filter={url("soft")} />;
 }
 
 /**
@@ -108,17 +109,17 @@ function polygon(cx: number, cy: number, r: number, n: number, rot = 0) {
   }).join(" ");
 }
 
-/** A footswitch: a black hex nut, a thin chrome ring and a satin black button. */
-function Footswitch({ cx, cy, r }: { cx: number; cy: number; r: number }) {
+/** A footswitch: a black hex nut, a thin chrome ring and a satin black button, or with `chrome`, all polished metal. */
+function Footswitch({ cx, cy, r, chrome }: { cx: number; cy: number; r: number; chrome?: boolean }) {
   const url = useUrl();
   const hair = Math.max(0.5, r * 0.03);
   return (
     <g>
       <Cast cx={cx} cy={cy} r={r} k={1.1} />
-      <polygon points={polygon(cx, cy, r, 6, Math.PI / 6)} fill={url("nut")} stroke="#000" strokeWidth={hair} strokeLinejoin="round" />
+      <polygon points={polygon(cx, cy, r, 6, Math.PI / 6)} fill={url(chrome ? "chromeRing" : "nut")} stroke="#000" strokeWidth={hair} strokeLinejoin="round" />
       <polygon points={polygon(cx, cy, r - hair * 1.5, 6, Math.PI / 6)} fill="none" stroke={url("rimLight")} strokeWidth={hair} strokeLinejoin="round" />
       <circle cx={cx} cy={cy} r={r * 0.7} fill={url("chromeRing")} />
-      <circle cx={cx} cy={cy} r={r * 0.58} fill={url("button")} stroke="#000" strokeWidth={hair} />
+      <circle cx={cx} cy={cy} r={r * 0.58} fill={url(chrome ? "chromeCap" : "button")} stroke="#000" strokeWidth={hair} />
       <ellipse cx={cx - r * 0.15} cy={cy - r * 0.2} rx={r * 0.26} ry={r * 0.14} fill="#fff" opacity={0.18} />
     </g>
   );
@@ -129,7 +130,7 @@ function Led({ cx, cy, r, on = LED.green }: { cx: number; cy: number; r: number;
   const url = useUrl();
   return (
     <g>
-      <circle cx={cx + r * 0.2} cy={cy + r * 0.35} r={r * 1.9} fill="#000" opacity={0.35} filter={url("soft")} />
+      <circle cx={cx + r * 0.2} cy={cy + r * 0.35} r={r * 1.9} fill="#000" opacity={0.24} filter={url("soft")} />
       <circle cx={cx} cy={cy} r={r * 1.9} fill={url("bezel")} />
       <circle cx={cx} cy={cy} r={r * 1.9 - 0.5} fill="none" stroke={url("rimLight")} strokeWidth={Math.max(0.5, r * 0.12)} />
       <circle cx={cx} cy={cy} r={r * 1.5} fill={on} opacity={0.5} filter={url("glow")} />
@@ -139,17 +140,36 @@ function Led({ cx, cy, r, on = LED.green }: { cx: number; cy: number; r: number;
   );
 }
 
-/** A mini toggle: a black hex nut with a chrome bat. */
+/**
+ * A mini toggle seen from above: a chrome hex nut around a dark threaded bushing, and a tapered chrome bat ending in a
+ * ball tip, with a soft shadow falling down and to the right. Solid metal shading, no see-through layers.
+ */
 function Toggle({ cx, cy, s }: { cx: number; cy: number; s: number }) {
   const url = useUrl();
-  const hair = Math.max(0.5, s * 0.05);
+  const hair = Math.max(0.4, s * 0.05);
+  const len = s * 0.95;
+  const tipY = cy - len;
+  const b0 = s * 0.15;
+  const b1 = s * 0.1;
+  const tipR = s * 0.17;
   return (
     <g>
-      <Cast cx={cx} cy={cy} r={s * 0.6} />
-      <polygon points={polygon(cx, cy, s * 0.62, 6, Math.PI / 6)} fill={url("nut")} stroke="#000" strokeWidth={hair} />
-      <circle cx={cx} cy={cy} r={s * 0.3} fill={url("chromeRing")} />
-      <line x1={cx} y1={cy} x2={cx} y2={cy - s * 0.85} stroke="#000" strokeOpacity={0.6} strokeWidth={s * 0.22 + hair * 2} strokeLinecap="round" />
-      <line x1={cx} y1={cy} x2={cx} y2={cy - s * 0.85} stroke={url("chromeBar")} strokeWidth={s * 0.22} strokeLinecap="round" />
+      <Cast cx={cx} cy={cy} r={s * 0.62} />
+      {/* The bat's shadow. */}
+      <line x1={cx + s * 0.12} y1={cy + s * 0.14} x2={cx + s * 0.32} y2={tipY + s * 0.3} stroke="#000" strokeOpacity={0.26} strokeWidth={s * 0.3} strokeLinecap="round" filter={url("soft")} />
+      <polygon points={polygon(cx, cy, s * 0.62, 6, Math.PI / 6)} fill={url("chromeRing")} stroke="#3b3e44" strokeWidth={hair} strokeLinejoin="round" />
+      <polygon points={polygon(cx, cy, s * 0.5, 6, Math.PI / 6)} fill="none" stroke="#fdfdfe" strokeWidth={hair * 0.8} strokeLinejoin="round" />
+      <circle cx={cx} cy={cy} r={s * 0.3} fill="#25272b" stroke="#3b3e44" strokeWidth={hair} />
+      <circle cx={cx} cy={cy} r={s * 0.21} fill={url("chromeCap")} />
+      <polygon
+        points={`${cx - b0},${cy} ${cx - b1},${tipY} ${cx + b1},${tipY} ${cx + b0},${cy}`}
+        fill={url("chromeBar")}
+        stroke="#3b3e44"
+        strokeWidth={hair}
+        strokeLinejoin="round"
+      />
+      <circle cx={cx} cy={tipY} r={tipR} fill={url("chromeCap")} stroke="#3b3e44" strokeWidth={hair} />
+      <circle cx={cx - tipR * 0.3} cy={tipY - tipR * 0.3} r={tipR * 0.35} fill="#fff" />
     </g>
   );
 }
@@ -278,43 +298,76 @@ const hammond: Draw = (w, h, u, _color, dark) => {
   };
 };
 
-/** A wide Hammond enclosure (1590BB), Chase Bliss / Walrus style: knobs in rows, toggles, LEDs and footswitches. */
-const wide: Draw = (w, h, u, _color, dark) => {
-  const labelH = h * 0.14;
-  const top = h * 0.04 + labelH + h * 0.02;
-  // Knobs and toggles sit high enough that the toggles stay clear of the footswitch LEDs.
-  const zoneH = h * 0.34;
-  const cols = clamp(Math.floor(w / (1.4 * IN)), 2, 8);
-  const rows = clamp(Math.floor(zoneH / (0.62 * IN)), 1, 2);
-  const cellW = (w * 0.9) / cols;
-  const cellH = zoneH / rows;
-  const r = Math.min(cellW, cellH, IN) * 0.33;
-  const s = Math.min(u * 0.1, 0.18 * IN);
-  const toggleY = top + zoneH + h * 0.06;
+/**
+ * A chrome knob, Cornerstone style: a polished skirt, a dark knurled grip ring and a chrome cap with a pointer.
+ * Kept light: six shapes, with the metal done by gradients shared across the pedal. Reads the same on any body color.
+ */
+function ChromeKnob({ cx, cy, r, turn = 0 }: { cx: number; cy: number; r: number; turn?: number }) {
+  const url = useUrl();
+  const a = ((-135 + ((turn * 67) % 270)) * Math.PI) / 180;
+  const at = (k: number) => ({ x: cx + Math.sin(a) * r * k, y: cy - Math.cos(a) * r * k });
+  const hair = Math.max(0.5, r * 0.025);
+  const grip = r * 0.6;
+  const i1 = at(0.15);
+  const i2 = at(0.42);
+  return (
+    <g>
+      <Cast cx={cx} cy={cy} r={r} />
+      <circle cx={cx} cy={cy} r={r - hair / 2} fill={url("chromeSkirt")} stroke="#000" strokeOpacity={0.4} strokeWidth={hair} />
+      {/* The knurling is a dashed stroke over the dark grip. */}
+      <circle cx={cx} cy={cy} r={grip} fill="#16171a" stroke="#5a5d63" strokeWidth={r * 0.1} strokeDasharray={`${r * 0.03} ${r * 0.06}`} />
+      <circle cx={cx} cy={cy} r={r * 0.48} fill={url("chromeCap")} stroke="#000" strokeOpacity={0.5} strokeWidth={hair} />
+      <line x1={i1.x} y1={i1.y} x2={i2.x} y2={i2.y} stroke="#1d1f23" strokeOpacity={0.75} strokeWidth={Math.max(0.6, r * 0.05)} strokeLinecap="round" />
+    </g>
+  );
+}
+
+/**
+ * A wide Hammond enclosure (1590BB), laid out like the Cornerstone Gladio: a row of big chrome knobs across the top,
+ * a knob at each end of the second row with the toggles between them,
+ * the name in the middle, and chrome footswitches in the bottom corners with their LEDs just inside.
+ */
+const wide: Draw = (w, h, u) => {
+  const r = Math.min(w * 0.105, h * 0.135, 0.6 * IN);
+  // The outer knobs' centers sit about an eighth of the width in from the edges, as on the Gladio.
+  const edge = Math.max(w * 0.115, r * 1.06);
+  // Always an even count: half for each channel.
+  const cols = 2 * clamp(Math.round(w / (2.36 * IN)), 1, 4);
+  const topY = h * 0.18;
+  const top = Array.from({ length: cols }, (_, i) => edge + ((w - edge * 2) * i) / (cols - 1));
+  const rowY = h * 0.52;
+  const sideX = [edge, w - edge];
+  const nT = clamp(Math.round((w * 0.5) / (0.9 * IN)), 1, 5);
+  const s = Math.min(u * 0.09, 0.2 * IN);
+  const toggleY = h * 0.46;
+  const toggles = nT === 1 ? [w / 2] : Array.from({ length: nT }, (_, i) => w * 0.3 + ((w * 0.4) * i) / (nT - 1));
   const nF = w >= 7.5 * IN ? 3 : w >= 3.4 * IN ? 2 : 1;
-  const fsR = Math.min(u * 0.14, (w / nF) * 0.2, 0.3 * IN);
-  const fsY = h * 0.95 - fsR;
-  const fx = spread(nF, w * 0.05, w * 0.95);
+  const fsR = Math.min(u * 0.095, (w / nF) * 0.2, 0.3 * IN);
+  const fsY = h * 0.885;
+  const fx = nF === 2 ? [w * 0.15, w * 0.85] : spread(nF, w * 0.05, w * 0.95);
+  // LEDs sit just inside the outer footswitches (above a lone one).
+  const leds = nF === 1 ? [{ x: fx[0], y: fsY - fsR - u * 0.08 }] : fx.map((x) => ({ x: x + (x < w / 2 ? 1 : x > w / 2 ? -1 : 0) * w * 0.16, y: fsY - fsR * 0.1 }));
   return {
     parts: (
       <>
-        {Array.from({ length: rows }, (_, ri) =>
-          spread(cols, w * 0.05, w * 0.95).map((cx, i) => (
-            <Knob key={`${ri}-${i}`} cx={cx} cy={top + cellH * (ri + 0.5)} r={r} turn={ri * cols + i} light={dark} />
-          )),
-        )}
-        {spread(cols, w * 0.12, w * 0.88).map((cx, i) => (
+        {top.map((cx, i) => (
+          <ChromeKnob key={`t${i}`} cx={cx} cy={topY} r={r} turn={i} />
+        ))}
+        {sideX.map((cx, i) => (
+          <ChromeKnob key={`s${i}`} cx={cx} cy={rowY} r={r} turn={i + 5} />
+        ))}
+        {toggles.map((cx, i) => (
           <Toggle key={i} cx={cx} cy={toggleY} s={s} />
         ))}
-        {fx.map((cx, i) => (
-          <Led key={i} cx={cx} cy={fsY - fsR - u * 0.08} r={u * 0.024} />
+        {leds.map((l, i) => (
+          <Led key={i} cx={l.x} cy={l.y} r={u * 0.02} />
         ))}
         {fx.map((cx, i) => (
-          <Footswitch key={i} cx={cx} cy={fsY} r={fsR} />
+          <Footswitch key={i} cx={cx} cy={fsY} r={fsR} chrome />
         ))}
       </>
     ),
-    label: { x: w * 0.06, y: h * 0.04, w: w * 0.88, h: labelH },
+    label: { x: w * 0.27, y: h * 0.58, w: w * 0.46, h: h * 0.16 },
   };
 };
 
@@ -560,6 +613,23 @@ function Defs({ id, color, u, w, h, rx }: { id: string; color: string; u: number
         ],
         [0, 0, 1, 0],
       )}
+      {lin(
+        "chromeSkirt",
+        [
+          [0, "#f7f8fa"],
+          [0.22, "#9a9fa7"],
+          [0.4, "#eef0f3"],
+          [0.58, "#7d828a"],
+          [0.78, "#e2e5e9"],
+          [1, "#8a8f97"],
+        ],
+        [0, 0, 1, 1],
+      )}
+      {rad("chromeCap", [
+        [0, "#ffffff"],
+        [0.55, "#c9ccd2"],
+        [1, "#8a8f97"],
+      ])}
       {rad("button", [
         [0, "#45484e"],
         [0.6, "#1b1c1f"],

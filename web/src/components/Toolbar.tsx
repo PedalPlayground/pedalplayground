@@ -1,3 +1,4 @@
+import { withTool } from "../lib/analytics";
 import { Fullscreen, Hand, MousePointer2, Plus, Redo2, SquareArrowOutUpRight, Undo2, ZoomIn, ZoomOut } from "lucide-react";
 import type { ReactNode } from "react";
 import { PHONE_QUERY, useMediaQuery } from "../lib/viewport";
@@ -69,12 +70,14 @@ const SHOW_TOOL_SWITCH = false;
 const divider = <span className={barDivider} />;
 
 /** `viewOnly` (a shared playground being viewed) keeps just the zoom controls. */
-export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () => void; onShare: () => void; viewOnly?: boolean }) {
+export function Toolbar({ onPlace: place, onShare: share, viewOnly = false }: { onPlace: () => void; onShare: () => void; viewOnly?: boolean }) {
   const { tool, setTool } = useUi();
   const zoomBy = usePlayground((s) => s.zoomBy);
-  const fit = usePlayground((s) => s.fitToContent);
-  const undo = usePlayground((s) => s.undo);
-  const redo = usePlayground((s) => s.redo);
+  const onPlace = withTool("add_gear", "toolbar", place);
+  const onShare = withTool("share", "toolbar", share);
+  const fit = withTool("fit", "toolbar", usePlayground((s) => s.fitToContent));
+  const undo = withTool("undo", "toolbar", usePlayground((s) => s.undo));
+  const redo = withTool("redo", "toolbar", usePlayground((s) => s.redo));
   const canUndo = usePlayground((s) => s.past.length > 0);
   const canRedo = usePlayground((s) => s.future.length > 0);
   const phone = useMediaQuery(PHONE_QUERY);
@@ -131,10 +134,10 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
       {/* Touch screens pan and select automatically, so the tool switch is only for mouse and trackpad. */}
       {SHOW_TOOL_SWITCH && (
         <span className="contents pointer-coarse:hidden">
-          <IconButton label="Pan Around" shortcut="Space" active={tool === "hand"} onClick={() => setTool("hand")}>
+          <IconButton label="Pan Around" shortcut="Space" active={tool === "hand"} onClick={withTool("hand_tool", "toolbar", () => setTool("hand"))}>
             <Hand size={18} />
           </IconButton>
-          <IconButton label="Select and Move" active={tool === "select"} onClick={() => setTool("select")}>
+          <IconButton label="Select and Move" active={tool === "select"} onClick={withTool("select_tool", "toolbar", () => setTool("select"))}>
             <MousePointer2 size={18} />
           </IconButton>
           {divider}
@@ -142,7 +145,7 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
       )}
       {/* Phones zoom with a pinch, so only "zoom to fit" stays. */}
       <span className="contents max-sm:hidden">
-        <IconButton label="Zoom In" shortcut="⌘+" onClick={() => zoomBy(1.25)}>
+        <IconButton label="Zoom In" shortcut="⌘+" onClick={withTool("zoom_in", "toolbar", () => zoomBy(1.25))}>
           <ZoomIn size={20} />
         </IconButton>
       </span>
@@ -150,7 +153,7 @@ export function Toolbar({ onPlace, onShare, viewOnly = false }: { onPlace: () =>
         <Fullscreen size={17} />
       </IconButton>
       <span className="contents max-sm:hidden">
-        <IconButton label="Zoom Out" shortcut="⌘−" onClick={() => zoomBy(0.8)}>
+        <IconButton label="Zoom Out" shortcut="⌘−" onClick={withTool("zoom_out", "toolbar", () => zoomBy(0.8))}>
           <ZoomOut size={20} />
         </IconButton>
       </span>
