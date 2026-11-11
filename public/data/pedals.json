@@ -4509,6 +4509,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Jeez",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "benson-jeez.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Portable Distortion 424 MKII",
 		"Width": 2.74,
 		"Height": 4.5,
@@ -7860,6 +7867,13 @@
 		"Width": 5.1,
 		"Height": 2.6,
 		"Image": "browne-the-fixer.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Unit-13 Distortion",
+		"Width": 4.72,
+		"Height": 3.88,
+		"Image": "browne-unit-13-distortion.png"
 	},
 	{
 		"Brand": "Brunetti",
