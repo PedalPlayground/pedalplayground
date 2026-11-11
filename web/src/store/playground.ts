@@ -1,4 +1,4 @@
-import type { Plug, PlugEnd } from "../lib/plugs";
+import type { ManualLegs, Plug, PlugEnd } from "../lib/plugs";
 import { connectPlugs, unplug, withoutLinks } from "../lib/cables";
 import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
@@ -89,6 +89,11 @@ interface PlaygroundState {
   setPlugs: (id: string, plugs: Plug[], record?: boolean) => void;
   /** Wires two plugs together with a cable (one undo step), replacing any cable already on either. */
   connectPlugs: (a: PlugEnd, b: PlugEnd) => void;
+  /**
+   * Sets the hand-placed shape of the cable stored on this plug, or null to route it automatically again. One undo
+   * step, unless `record` is false (a drag in progress: call beginTransaction first).
+   */
+  setCableLegs: (stored: PlugEnd, legs: ManualLegs | null, record?: boolean) => void;
   /** Removes the cables on these plugs (one undo step). */
   unplug: (ends: PlugEnd[]) => void;
   /** Changes an item's Equipment List details as one undo step. */
@@ -490,6 +495,21 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
     set((s) => {
       const items = connectPlugs(s.items, a, b);
       return items === s.items ? {} : { ...record(s), items };
+    }),
+  setCableLegs: (stored, legs, doRecord = true) =>
+    set((s) => {
+      const items = s.items.map((i) => {
+        if (i.id !== stored.item || !i.plugs) return i;
+        return {
+          ...i,
+          plugs: i.plugs.map((p) => {
+            if (p.id !== stored.plug || !p.link) return p;
+            const { legs: _, ...link } = p.link;
+            return { ...p, link: legs ? { ...link, legs } : link };
+          }),
+        };
+      });
+      return doRecord ? { ...record(s), items } : { items };
     }),
   unplug: (ends) =>
     set((s) => {

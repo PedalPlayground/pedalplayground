@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { create } from "zustand";
 import { plugAnchor, roundedPath } from "../lib/cableRoute";
-import { routeBoardCables, sameEnd } from "../lib/cables";
+import { corners, moveLeg, routeBoardCables, sameEnd, toManual, type RoutedCable } from "../lib/cables";
+import type { Pt } from "../lib/cableRoute";
 import { PX_PER_INCH } from "../lib/geometry";
 import type { PlugEnd } from "../lib/plugs";
 import type { Item } from "../lib/types";
@@ -31,13 +32,92 @@ export const useCablePick = create<{ plug: PlugEnd | null; cable: string | null;
   set: (p) => set(p),
 }));
 
+/** The routes for this exact items array, worked out once and shared by the cables and their handles. */
+let cache: { items: Item[]; routes: RoutedCable[] } | null = null;
+function routesFor(items: Item[]) {
+  if (cache?.items !== items) cache = { items, routes: routeBoardCables(items, { spacing: SPACING }) };
+  return cache.routes;
+}
+
+/** A leg of a route is long enough to get a handle from this length, in inches. */
+const HANDLE_MIN_LEG = 0.9;
+/** A press has to travel this far, in screen px, before it drags a leg. */
+const DRAG_START_PX = 3;
+
+/** World inches under a pointer event. */
+function worldAt(e: { clientX: number; clientY: number }, canvas: Element): Pt {
+  const r = canvas.getBoundingClientRect();
+  const v = usePlayground.getState().view;
+  const k = v.zoom * PX_PER_INCH;
+  return [(e.clientX - r.left - v.x) / k, (e.clientY - r.top - v.y) / k];
+}
+
+/** The leg of `pts` nearest to `p`. */
+function nearestLeg(pts: Pt[], p: Pt) {
+  let best = 0;
+  let bestD = Infinity;
+  for (let k = 0; k < pts.length - 1; k++) {
+    const [a, b] = [pts[k], pts[k + 1]];
+    const x = Math.min(Math.max(p[0], Math.min(a[0], b[0])), Math.max(a[0], b[0]));
+    const y = Math.min(Math.max(p[1], Math.min(a[1], b[1])), Math.max(a[1], b[1]));
+    const d = Math.hypot(p[0] - x, p[1] - y);
+    if (d < bestD) [best, bestD] = [k, d];
+  }
+  return best;
+}
+
+/**
+ * Picks the cable and, if the press moves, drags leg `k` sideways (or the leg nearest the press when `k` is missing).
+ * The cable keeps the shape it's dragged into: it's stored as hand-placed legs, one undo step for the whole drag.
+ */
+function pressCable(e: React.PointerEvent<Element>, c: RoutedCable, k?: number) {
+  e.stopPropagation();
+  useCablePick.getState().set({ cable: c.id, plug: null });
+  if (e.button !== 0) return;
+  const canvas = e.currentTarget.closest("[data-canvas]");
+  if (!canvas) return;
+  const pts = corners(c.route.points);
+  const start = worldAt(e, canvas);
+  const leg = k ?? nearestLeg(pts, start);
+  const horizontal = Math.abs(pts[leg][1] - pts[leg + 1][1]) < 1e-6;
+  const from = horizontal ? pts[leg][1] : pts[leg][0];
+  const grab = (horizontal ? start[1] : start[0]) - from;
+  const x0 = e.clientX;
+  const y0 = e.clientY;
+  let started = false;
+  // Listens on the window, not the element: the handle being dragged can be replaced as the cable gains a jog.
+  const move = (ev: PointerEvent) => {
+    if (ev.pointerId !== e.pointerId) return;
+    if (!started) {
+      if (Math.hypot(ev.clientX - x0, ev.clientY - y0) < DRAG_START_PX) return;
+      started = true;
+      usePlayground.getState().beginTransaction();
+    }
+    const p = worldAt(ev, canvas);
+    // Snap to 1/16 inch, like plugs, so runs line up neatly.
+    const to = Math.round(((horizontal ? p[1] : p[0]) - grab) * 16) / 16;
+    let next = moveLeg(pts, leg, to);
+    // Stored from the plug the cable lives on, which may be its far end.
+    if (c.stored !== c.from) next = [...next].reverse();
+    usePlayground.getState().setCableLegs(c.stored, toManual(next), false);
+  };
+  const end = () => {
+    window.removeEventListener("pointermove", move);
+    window.removeEventListener("pointerup", end);
+    window.removeEventListener("pointercancel", end);
+  };
+  window.addEventListener("pointermove", move);
+  window.addEventListener("pointerup", end);
+  window.addEventListener("pointercancel", end);
+}
+
 /**
  * Every cable on the board, routed around the pedals. Drawn inside the zoomed layer, above pedalboards and below
  * pedals, so it reads as lying on the board. Only the Cables tool lets cables take the pointer.
  */
 export function CableLayer({ items }: { items: Item[] }) {
   const open = useUi((u) => u.cablesOpen);
-  const routes = useMemo(() => routeBoardCables(items, { spacing: SPACING }), [items]);
+  const routes = routesFor(items);
   const picked = useCablePick((p) => p.cable);
   const [hover, setHover] = useState<string | null>(null);
   if (!routes.length) return null;
@@ -69,10 +149,7 @@ export function CableLayer({ items }: { items: Item[] }) {
                   style={{ pointerEvents: "stroke" }}
                   onPointerEnter={() => setHover(c.id)}
                   onPointerLeave={() => setHover((h) => (h === c.id ? null : h))}
-                  onPointerDown={(e) => {
-                    e.stopPropagation();
-                    useCablePick.getState().set({ cable: c.id, plug: null });
-                  }}
+                  onPointerDown={(e) => pressCable(e, c)}
                 />
               )}
             </g>
@@ -80,6 +157,50 @@ export function CableLayer({ items }: { items: Item[] }) {
         })}
       </g>
     </svg>
+  );
+}
+
+/**
+ * Handles on the picked cable's long straight runs: drag one to move that run sideways. Drawn above the pedals,
+ * screen-sized whatever the zoom.
+ */
+export function LegHandles({ items, zoom }: { items: Item[]; zoom: number }) {
+  const picked = useCablePick((p) => p.cable);
+  const c = routesFor(items).find((r) => r.id === picked);
+  if (!c) return null;
+  const pts = corners(c.route.points);
+  const long = 28 / zoom;
+  const thin = 10 / zoom;
+  return (
+    <>
+      {pts.slice(0, -1).map((a, k) => {
+        const b = pts[k + 1];
+        if (Math.hypot(b[0] - a[0], b[1] - a[1]) < HANDLE_MIN_LEG) return null;
+        const horizontal = Math.abs(a[1] - b[1]) < 1e-6;
+        const [w, h] = horizontal ? [long, thin] : [thin, long];
+        return (
+          <div
+            key={k}
+            role="slider"
+            aria-label="Move this run"
+            aria-orientation={horizontal ? "vertical" : "horizontal"}
+            aria-valuenow={horizontal ? a[1] : a[0]}
+            className="absolute rounded-full border-brand bg-white shadow-sm"
+            style={{
+              left: ((a[0] + b[0]) / 2) * PX_PER_INCH - w / 2,
+              top: ((a[1] + b[1]) / 2) * PX_PER_INCH - h / 2,
+              width: w,
+              height: h,
+              borderWidth: 2 / zoom,
+              borderStyle: "solid",
+              cursor: horizontal ? "ns-resize" : "ew-resize",
+              touchAction: "none",
+            }}
+            onPointerDown={(e) => pressCable(e, c, k)}
+          />
+        );
+      })}
+    </>
   );
 }
 
@@ -161,6 +282,12 @@ export function CablePanel() {
   const setOpen = useUi((u) => u.setCablesOpen);
   const { plug, cable, set } = useCablePick();
   const anyPlugs = usePlayground((s) => s.items.some((i) => i.kind === "pedal" && i.plugs?.length));
+  // A picked cable that was moved by hand can go back to routing itself.
+  const manual = usePlayground((s) => {
+    if (!cable) return false;
+    const [item, p] = cable.split(":");
+    return !!s.items.find((i) => i.id === item)?.plugs?.find((x) => x.id === p)?.link?.legs;
+  });
 
   useEffect(() => {
     if (!open) set({ plug: null, cable: null });
@@ -199,7 +326,7 @@ export function CablePanel() {
     : plug
       ? "Now click the plug at the other end."
       : cable
-        ? "Press Delete to remove this cable."
+        ? "Drag a handle to move a run. Delete removes the cable."
         : "Click a plug, then another, to run a cable.";
   return (
     <div
@@ -210,6 +337,18 @@ export function CablePanel() {
     >
       <div className="flex items-center gap-3 pl-1">
         <span className="text-[13px] font-medium">{hint}</span>
+        {manual && (
+          <button
+            type="button"
+            onClick={() => {
+              const [item, p] = cable!.split(":");
+              usePlayground.getState().setCableLegs({ item, plug: p }, null);
+            }}
+            className="flex h-9 items-center rounded-control px-3 text-sm font-semibold outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand"
+          >
+            Auto Route
+          </button>
+        )}
         {cable && (
           <button
             type="button"

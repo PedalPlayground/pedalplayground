@@ -13,7 +13,22 @@ export interface Plug {
   at: number;
   type: PlugType;
   /** The plug at the other end of this plug's cable (see lib/cables.ts). A cable is stored on one of its ends only. */
-  link?: PlugEnd;
+  link?: PlugLink;
+}
+
+/** A cable's far end, and its shape if someone moved its runs by hand. */
+export interface PlugLink extends PlugEnd {
+  legs?: ManualLegs;
+}
+
+/**
+ * A hand-placed cable shape, from this plug to the other: the legs alternate horizontal and vertical starting with
+ * `first`, and `at` holds where each leg between the two end legs sits (the y of a horizontal leg, the x of a vertical
+ * one). The end legs line up with the plugs, so the shape holds when the pedals move.
+ */
+export interface ManualLegs {
+  first: "h" | "v";
+  at: number[];
 }
 
 /** One end of a cable: a plug on a pedal. */

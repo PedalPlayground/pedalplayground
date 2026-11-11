@@ -4,7 +4,8 @@
  * direction, for the board drawing and, later, the signal flow map. Pure functions, no React.
  */
 import { plugAnchor, routeCable, type CableRoute, type PlugAnchor, type RouteOptions } from "./cableRoute";
-import type { Plug, PlugEnd } from "./plugs";
+import type { ManualLegs, Plug, PlugEnd } from "./plugs";
+import type { Pt } from "./cableRoute";
 import type { Item } from "./types";
 
 /** A plug's role in the signal, read from where it sits on the pedal. */
@@ -16,6 +17,10 @@ export interface BoardCable {
   /** Signal runs from `from` to `to`. */
   from: PlugEnd;
   to: PlugEnd;
+  /** The plug the cable is stored on (its link points at the other end). */
+  stored: PlugEnd;
+  /** A hand-placed shape, from the stored plug to the other. */
+  legs?: ManualLegs;
 }
 
 export const sameEnd = (a: PlugEnd, b: PlugEnd) => a.item === b.item && a.plug === b.plug;
@@ -56,7 +61,13 @@ export function boardCables(items: Item[]): BoardCable[] {
       const a = plugRole(item, plug);
       const b = plugRole(byId.get(there.item)!, other);
       const reversed = (a === "in" && b !== "in") || (b === "out" && a !== "out");
-      out.push({ id: cableId(here), from: reversed ? there : here, to: reversed ? here : there });
+      out.push({
+        id: cableId(here),
+        from: reversed ? there : here,
+        to: reversed ? here : there,
+        stored: here,
+        ...(plug.link.legs ? { legs: plug.link.legs } : {}),
+      });
     }
   }
   return out;
@@ -82,7 +93,7 @@ export function unplug(items: Item[], ends: PlugEnd[]): Item[] {
 export function connectPlugs(items: Item[], a: PlugEnd, b: PlugEnd): Item[] {
   if (sameEnd(a, b)) return items;
   return unplug(items, [a, b]).map((i) =>
-    i.id === a.item && i.plugs ? { ...i, plugs: i.plugs.map((p) => (p.id === a.plug ? { ...p, link: { ...b } } : p)) } : i,
+    i.id === a.item && i.plugs ? { ...i, plugs: i.plugs.map((p) => (p.id === a.plug ? { ...p, link: { item: b.item, plug: b.plug } } : p)) } : i,
   );
 }
 
@@ -107,9 +118,17 @@ export function routeBoardCables(items: Item[], opts: Partial<RouteOptions> & { 
     const item = byId.get(e.item)!;
     return plugAnchor(item, item.plugs!.find((p) => p.id === e.plug)!);
   };
-  const routed = boardCables(items).map((c) => ({ ...c, route: routeCable(anchor(c.from), anchor(c.to), pedals, opts, boards) }));
+  const routed = boardCables(items).map((c) => {
+    if (!c.legs) return { ...c, route: routeCable(anchor(c.from), anchor(c.to), pedals, opts, boards) };
+    // A hand-placed shape is stored from the stored plug's end; draw it from `from` like the rest.
+    const reversed = c.from !== c.stored;
+    const pts = fromManual(anchor(c.stored).at, anchor(reversed ? c.from : c.to).at, c.legs);
+    if (reversed) pts.reverse();
+    return { ...c, route: { points: pts, under: pts.slice(1).map(() => false) } };
+  });
+  // Hand-placed cables stay exactly where they were put; only automatic ones step aside.
   separate(
-    routed.map((r) => r.route),
+    routed.filter((r) => !r.legs).map((r) => r.route),
     opts.spacing ?? 0.2,
   );
   return routed;
@@ -159,4 +178,65 @@ export function separate(routes: CableRoute[], spacing: number) {
       });
     }
   }
+}
+
+const EPS = 1e-6;
+
+/** Drops repeated points and points in the middle of a straight run, so legs alternate horizontal and vertical. */
+export function corners(points: Pt[]): Pt[] {
+  const pts: Pt[] = [];
+  for (const p of points) {
+    const last = pts[pts.length - 1];
+    if (last && Math.abs(last[0] - p[0]) < EPS && Math.abs(last[1] - p[1]) < EPS) continue;
+    pts.push(p);
+  }
+  return pts.filter((p, i) => {
+    if (i === 0 || i === pts.length - 1) return true;
+    const [px, py] = pts[i - 1];
+    const [nx, ny] = pts[i + 1];
+    return !((Math.abs(px - p[0]) < EPS && Math.abs(nx - p[0]) < EPS) || (Math.abs(py - p[1]) < EPS && Math.abs(ny - p[1]) < EPS));
+  });
+}
+
+/** A route's shape as hand-placed legs (see ManualLegs). Needs at least two legs. */
+export function toManual(points: Pt[]): ManualLegs {
+  const pts = corners(points);
+  const first = Math.abs(pts[0][1] - pts[1][1]) < EPS ? "h" : "v";
+  // Leg k runs from pts[k] to pts[k + 1]; a horizontal leg's place is its y, a vertical one's its x.
+  const at = pts.slice(1, -2).map((p, k) => (((k + 1) % 2 === 0) === (first === "h") ? p[1] : p[0]));
+  return { first, at };
+}
+
+/** Rebuilds a hand-placed shape between two plug ends, wherever they are now. */
+export function fromManual(start: Pt, end: Pt, legs: ManualLegs): Pt[] {
+  const horizontal = (k: number) => (k % 2 === 0) === (legs.first === "h");
+  const m = legs.at.length + 2;
+  const place = (k: number) => (k === 0 ? (horizontal(0) ? start[1] : start[0]) : k === m - 1 ? (horizontal(m - 1) ? end[1] : end[0]) : legs.at[k - 1]);
+  const pts: Pt[] = [start];
+  // The corner between leg k and leg k + 1 sits at the place of both.
+  for (let k = 0; k < m - 1; k++) pts.push(horizontal(k) ? [place(k + 1), place(k)] : [place(k), place(k + 1)]);
+  pts.push(end);
+  return corners(pts);
+}
+
+/**
+ * Moves leg `k` of a route sideways to `to` (a y for a horizontal leg, an x for a vertical one), keeping it orthogonal.
+ * The legs into the plugs keep a short straight `lead` out of the jack and gain a jog, so a cable never leaves a plug sideways.
+ */
+export function moveLeg(points: Pt[], k: number, to: number, lead = 0.25): Pt[] {
+  const pts = corners(points).map((p) => [...p] as Pt);
+  const n = pts.length;
+  const h = Math.abs(pts[k][1] - pts[k + 1][1]) < EPS;
+  const set = (p: Pt): Pt => (h ? [p[0], to] : [to, p[1]]);
+  /** A point `lead` along from a toward b. */
+  const toward = (a: Pt, b: Pt): Pt => {
+    const len = Math.hypot(b[0] - a[0], b[1] - a[1]) || 1;
+    const d = Math.min(lead, len / 3);
+    return [a[0] + ((b[0] - a[0]) / len) * d, a[1] + ((b[1] - a[1]) / len) * d];
+  };
+  const head: Pt[] = k === 0 ? [pts[0], toward(pts[0], pts[1])] : pts.slice(0, k);
+  const tail: Pt[] = k + 1 === n - 1 ? [toward(pts[n - 1], pts[n - 2]), pts[n - 1]] : pts.slice(k + 2);
+  const a = k === 0 ? head[1] : pts[k];
+  const b = k + 1 === n - 1 ? tail[0] : pts[k + 1];
+  return corners([...head, set(a), set(b), ...tail]);
 }

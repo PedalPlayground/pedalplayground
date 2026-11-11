@@ -1,6 +1,6 @@
 import { Cable } from "lucide-react";
 import { PlugsLayer } from "./PlugArt";
-import { CableHandles, CableLayer, useCablePick } from "./Cables";
+import { CableHandles, CableLayer, LegHandles, useCablePick } from "./Cables";
 import { clearPlugSelection, PlugEditLayer } from "./PlugEditor";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { canvasImageUrl } from "../lib/catalog";
@@ -705,6 +705,7 @@ export function Canvas() {
         {cablesOpen && (
           <div style={{ position: "absolute", zIndex: 99998 }}>
             <CableHandles items={items} zoom={view.zoom} />
+            <LegHandles items={items} zoom={view.zoom} />
           </div>
         )}
         {plugItem && (

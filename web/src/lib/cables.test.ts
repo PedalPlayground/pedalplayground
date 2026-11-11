@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { boardCables, connectPlugs, plugRole, routeBoardCables, unplug, withoutLinks } from "./cables";
+import { boardCables, connectPlugs, fromManual, moveLeg, plugRole, routeBoardCables, toManual, unplug, withoutLinks } from "./cables";
 import type { Plug } from "./plugs";
 import type { Item } from "./types";
 
@@ -92,5 +92,78 @@ describe("routeBoardCables", () => {
     const [r1, r2] = routeBoardCables(items).map((c) => c.route.points);
     const runY = (pts: [number, number][]) => Math.min(...pts.map((p) => p[1]));
     expect(Math.abs(runY(r1) - runY(r2))).toBeGreaterThan(0.1);
+  });
+});
+
+describe("hand-placed legs", () => {
+  const Z: [number, number][] = [
+    [0, 0],
+    [4, 0],
+    [4, 3],
+    [9, 3],
+  ];
+
+  it("moving a middle run keeps the route orthogonal and the ends fixed", () => {
+    const moved = moveLeg(Z, 1, 6);
+    expect(moved).toEqual([
+      [0, 0],
+      [6, 0],
+      [6, 3],
+      [9, 3],
+    ]);
+  });
+
+  it("moving a run into a plug adds a jog and keeps a straight lead out of the jack", () => {
+    const moved = moveLeg(Z, 0, 1);
+    expect(moved[0]).toEqual([0, 0]);
+    expect(moved[1]).toEqual([0.25, 0]);
+    expect(moved[2]).toEqual([0.25, 1]);
+    moved.slice(1).forEach(([x, y], i) => expect(x === moved[i][0] || y === moved[i][1]).toBe(true));
+  });
+
+  it("round-trips through the stored form, and follows the plugs when they move", () => {
+    const legs = toManual(Z);
+    expect(legs).toEqual({ first: "h", at: [4] });
+    expect(fromManual([0, 0], [9, 3], legs)).toEqual(Z);
+    // The far pedal moved down an inch: the middle run stays at x = 4.
+    expect(fromManual([0, 0], [9, 4], legs)).toEqual([
+      [0, 0],
+      [4, 0],
+      [4, 4],
+      [9, 4],
+    ]);
+  });
+
+  it("a straight cable can be pulled aside", () => {
+    const moved = moveLeg(
+      [
+        [0, 0],
+        [8, 0],
+      ],
+      0,
+      2,
+    );
+    expect(moved).toEqual([
+      [0, 0],
+      [0.25, 0],
+      [0.25, 2],
+      [7.75, 2],
+      [7.75, 0],
+      [8, 0],
+    ]);
+    expect(fromManual([0, 0], [8, 0], toManual(moved))).toEqual(moved);
+  });
+
+  it("stored shapes draw from the right end when the cable runs toward its stored plug", () => {
+    let items = [pedal("a", 0, io()), pedal("b", 6, io())];
+    // Stored on b's input; the signal runs a → b.
+    items = connectPlugs(items, { item: "b", plug: "in" }, { item: "a", plug: "out" });
+    const [auto] = routeBoardCables(items);
+    let pts = moveLeg(auto.route.points, 0, 7);
+    pts = [...pts].reverse();
+    items = items.map((i) => (i.id === "b" ? { ...i, plugs: i.plugs!.map((p) => (p.link ? { ...p, link: { ...p.link, legs: toManual(pts) } } : p)) } : i));
+    const [manual] = routeBoardCables(items);
+    expect(manual.route.points[0]).toEqual(auto.route.points[0]);
+    expect(manual.route.points.some(([, y]) => y === 7)).toBe(true);
   });
 });
