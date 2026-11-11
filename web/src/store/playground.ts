@@ -1,4 +1,5 @@
-import type { Plug } from "../lib/plugs";
+import type { Plug, PlugEnd } from "../lib/plugs";
+import { connectPlugs, unplug, withoutLinks } from "../lib/cables";
 import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { importAny, readLegacyLocalStorage } from "../lib/importers";
@@ -86,6 +87,10 @@ interface PlaygroundState {
    * Sets a pedal's plugs. One undo step, unless `record` is false (a drag in progress: call beginTransaction first).
    */
   setPlugs: (id: string, plugs: Plug[], record?: boolean) => void;
+  /** Wires two plugs together with a cable (one undo step), replacing any cable already on either. */
+  connectPlugs: (a: PlugEnd, b: PlugEnd) => void;
+  /** Removes the cables on these plugs (one undo step). */
+  unplug: (ends: PlugEnd[]) => void;
   /** Changes an item's Equipment List details as one undo step. */
   updateGear: (id: string, patch: Partial<Pick<Item, "status" | "price" | "ma" | "voltage" | "pedalType">>) => void;
   /** Selects one item and moves the view just enough to show it. */
@@ -481,6 +486,16 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       });
       return doRecord ? { ...record(s), items } : { items };
     }),
+  connectPlugs: (a, b) =>
+    set((s) => {
+      const items = connectPlugs(s.items, a, b);
+      return items === s.items ? {} : { ...record(s), items };
+    }),
+  unplug: (ends) =>
+    set((s) => {
+      const items = unplug(s.items, ends);
+      return items.every((i, n) => i === s.items[n]) ? {} : { ...record(s), items };
+    }),
   updateGear: (id, patch) =>
     set((s) => {
       const item = s.items.find((i) => i.id === id);
@@ -586,7 +601,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const copies = picked.map((i) => {
         const { locked: _locked, groupId, ...rest } = i;
         if (groupId && !groups.has(groupId)) groups.set(groupId, crypto.randomUUID());
-        return { ...rest, id: crypto.randomUUID(), x: i.x + dx, ...(groupId ? { groupId: groups.get(groupId) } : {}) };
+        // Copies start unwired: a jack takes one cable, and that one stays with the original.
+        return { ...rest, ...(rest.plugs ? { plugs: withoutLinks(rest.plugs) } : {}), id: crypto.randomUUID(), x: i.x + dx, ...(groupId ? { groupId: groups.get(groupId) } : {}) };
       });
       // Boards stay beneath every pedal, like newly placed gear.
       const boards = copies.filter((i) => i.kind === "pedalboard");

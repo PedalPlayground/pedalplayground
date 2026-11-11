@@ -12,6 +12,14 @@ export interface Plug {
   /** Where along the side, in inches: from the left end for top and bottom, from the top for left and right. */
   at: number;
   type: PlugType;
+  /** The plug at the other end of this plug's cable (see lib/cables.ts). A cable is stored on one of its ends only. */
+  link?: PlugEnd;
+}
+
+/** One end of a cable: a plug on a pedal. */
+export interface PlugEnd {
+  item: string;
+  plug: string;
 }
 
 /**

@@ -34,9 +34,11 @@ export interface RouteOptions {
   /** How much a leg costs per inch inside a pedal's clearance, and under a pedal. Finite, so a route always exists. */
   nearCost: number;
   underCost: number;
+  /** How much a leg costs per inch off the pedalboards (when there are any), so cables keep to the board. */
+  offBoardCost: number;
 }
 
-export const ROUTE_DEFAULTS: RouteOptions = { clearance: 0.25, lead: 0.25, bend: 1.5, nearCost: 4, underCost: 25 };
+export const ROUTE_DEFAULTS: RouteOptions = { clearance: 0.25, lead: 0.25, bend: 1.5, nearCost: 4, underCost: 25, offBoardCost: 2.5 };
 
 /** Turns a point in an item's own (unrotated, unflipped) box into world inches: flip about the center, then rotate. */
 function toWorld(item: Item, [x, y]: Pt, vector = false): Pt {
@@ -141,10 +143,11 @@ const dirIndex = ([x, y]: Dir) => DIRS.findIndex((d) => d[0] === Math.sign(x) &&
  * plugs exactly and run down the middle of gaps. Bends cost extra; running near or under a pedal costs more but is
  * allowed, so there's always a route, and the legs under a pedal are marked.
  */
-export function routeCable(from: PlugAnchor, to: PlugAnchor, obstacles: Item[], opts: Partial<RouteOptions> = {}): CableRoute {
+export function routeCable(from: PlugAnchor, to: PlugAnchor, obstacles: Item[], opts: Partial<RouteOptions> = {}, boards: Item[] = []): CableRoute {
   const o = { ...ROUTE_DEFAULTS, ...opts };
   const solid = obstacles.map(itemBounds);
   const padded = solid.map((b) => grow(b, o.clearance));
+  const decks = boards.map(itemBounds);
   const a: Pt = [from.at[0] + from.dir[0] * o.lead, from.at[1] + from.dir[1] * o.lead];
   const b: Pt = [to.at[0] + to.dir[0] * o.lead, to.at[1] + to.dir[1] * o.lead];
 
@@ -169,6 +172,7 @@ export function routeCable(from: PlugAnchor, to: PlugAnchor, obstacles: Item[], 
   const legCost = (x: number, y: number) => {
     if (solid.some((s) => inside(s, x, y))) return o.underCost;
     if (padded.some((s) => inside(s, x, y))) return o.nearCost;
+    if (decks.length && !decks.some((s) => inside(s, x, y))) return o.offBoardCost;
     return 1;
   };
 

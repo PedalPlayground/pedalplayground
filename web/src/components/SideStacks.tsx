@@ -1,5 +1,6 @@
 import { withTool } from "../lib/analytics";
 import {
+  Spline,
   Cable,
   Info,
   MessageSquareWarning,
@@ -31,7 +32,7 @@ import { itemName } from "../lib/itemName";
 import { openGearInfo, placedItemHref } from "../lib/gearLink";
 import { openSuggestFix } from "./SuggestGearDialog";
 import { isOneGroup, usePlayground } from "../store/playground";
-import { useUi } from "../store/ui";
+import { SHOW_CABLES, useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { barPanel } from "./toolbarStyles";
 
@@ -223,6 +224,8 @@ export function CanvasStack({ viewOnly, onShare }: { viewOnly: boolean; onShare:
   const redo = usePlayground((s) => s.redo);
   const canUndo = usePlayground((s) => s.past.length > 0);
   const canRedo = usePlayground((s) => s.future.length > 0);
+  const cablesOpen = useUi((u) => u.cablesOpen);
+  const setCablesOpen = useUi((u) => u.setCablesOpen);
   const [collapsed, toggle] = useCollapsed("right");
   const row = { collapsed, side: "left" as const };
   const mod = /Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Ctrl+";
@@ -233,6 +236,12 @@ export function CanvasStack({ viewOnly, onShare }: { viewOnly: boolean; onShare:
       <Row {...row} icon={<Fullscreen size={16} />} label="Center & Fit" shortcut="1" onClick={withTool("fit", "side_menu", fit)} />
       {!viewOnly && (
         <>
+          {SHOW_CABLES && (
+            <>
+              <Divider />
+              <Row {...row} icon={<Spline size={16} />} label="Cables" pressed={cablesOpen} onClick={withTool("cables", "side_menu", () => setCablesOpen(!cablesOpen))} />
+            </>
+          )}
           <Divider />
           <Row {...row} icon={<Undo2 size={16} />} label="Undo" shortcut={`${mod}Z`} onClick={withTool("undo", "side_menu", undo)} disabled={!canUndo} />
           <Row {...row} icon={<Redo2 size={16} />} label="Redo" shortcut={`⇧${mod}Z`} onClick={withTool("redo", "side_menu", redo)} disabled={!canRedo} />

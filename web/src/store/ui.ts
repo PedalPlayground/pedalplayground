@@ -8,6 +8,8 @@ export type Mode = "playground" | "signal" | "list";
  * the Playground; their code and the data they edit stay in place, so turning this back on brings them back.
  */
 export const SHOW_MODES = false;
+/** The Cables tool (wiring plugs together) is in progress: on in local dev only until it's ready. */
+export const SHOW_CABLES = import.meta.env.DEV;
 
 /**
  * Pro is hidden for the launch: no Get Pro button, Pro badges, upgrade dialogs, plan details, or Pro step in the tour,
@@ -62,6 +64,9 @@ interface UiState {
   /** The pedal whose plugs are being edited (its edges take clicks to add and drag plugs), or null. */
   plugEditing: string | null;
   setPlugEditing: (id: string | null) => void;
+  /** The Cables tool: plugs on every pedal take clicks to wire them together, and cables can be picked and removed. */
+  cablesOpen: boolean;
+  setCablesOpen: (open: boolean) => void;
   /** The docked Space Between drawer (larger screens). */
   spacingOpen: boolean;
   setSpacingOpen: (open: boolean) => void;
@@ -200,13 +205,17 @@ export const useUi = create<UiState>((set) => ({
   },
   searchOpen: false,
   plugEditing: null,
-  setPlugEditing: (plugEditing) => set(plugEditing ? { plugEditing, searchOpen: false, replacing: false, editing: false, spacingOpen: false } : { plugEditing }),
+  setPlugEditing: (plugEditing) =>
+    set(plugEditing ? { plugEditing, cablesOpen: false, searchOpen: false, replacing: false, editing: false, spacingOpen: false } : { plugEditing }),
+  cablesOpen: false,
+  setCablesOpen: (cablesOpen) =>
+    set(cablesOpen ? { cablesOpen, plugEditing: null, searchOpen: false, replacing: false, editing: false, spacingOpen: false } : { cablesOpen }),
   spacingOpen: false,
   setSpacingOpen: (spacingOpen) => set(spacingOpen ? { spacingOpen, searchOpen: false, replacing: false, editing: false } : { spacingOpen }),
   // Add Gear waits while plugs are being edited (only Done ends that).
   setSearchOpen: (searchOpen) =>
     set((u) => {
-      if (searchOpen && u.plugEditing) return {};
+      if (searchOpen && (u.plugEditing || u.cablesOpen)) return {};
       if (searchOpen && !u.searchOpen) track("panel_open", { panel: "Add Gear" });
       return { searchOpen, replacing: false, editing: false };
     }),

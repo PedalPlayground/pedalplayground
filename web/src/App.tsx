@@ -47,6 +47,7 @@ import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { SpaceBetweenPanel } from "./components/SpaceBetweenPanel";
 import { PlugPanel } from "./components/PlugEditor";
+import { CablePanel } from "./components/Cables";
 import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
 import { Toolbar } from "./components/Toolbar";
 import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
@@ -116,7 +117,9 @@ export function App() {
   const openUpgrade = useUi((u) => u.openUpgrade);
   const searchOpen = useUi((u) => u.searchOpen);
   const spacingOpen = useUi((u) => u.spacingOpen);
-  const plugEditing = useUi((u) => u.plugEditing);
+  // The Cables tool takes the menus' place the same way plug editing does.
+  const cablesOpen = useUi((u) => u.cablesOpen);
+  const plugEditing = useUi((u) => u.plugEditing) || (cablesOpen ? "cables" : null);
   const replacing = useUi((u) => u.replacing);
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
@@ -307,7 +310,7 @@ export function App() {
                 !phoneSized && !plugEditing && <ObjectMenu />
               )}
               {/* While plugs are being edited, their panel takes the menus' place. */}
-              {plugEditing ? <PlugPanel /> : <SelectionMiniMenu />}
+              {cablesOpen ? <CablePanel /> : plugEditing ? <PlugPanel /> : <SelectionMiniMenu />}
               <ContextMenu />
             </>
           )}

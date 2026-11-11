@@ -1,5 +1,6 @@
 import { Cable } from "lucide-react";
 import { PlugsLayer } from "./PlugArt";
+import { CableHandles, CableLayer, useCablePick } from "./Cables";
 import { clearPlugSelection, PlugEditLayer } from "./PlugEditor";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { canvasImageUrl } from "../lib/catalog";
@@ -237,6 +238,7 @@ export function Canvas() {
   // The pedal whose plugs are being edited gets the plug editing layer.
   const plugEditing = useUi((u) => u.plugEditing);
   const plugItem = usePlayground((s) => (plugEditing ? s.items.find((i) => i.id === plugEditing) : undefined));
+  const cablesOpen = useUi((u) => u.cablesOpen);
 
   useEffect(() => {
     void useCatalog.getState().load();
@@ -258,6 +260,7 @@ export function Canvas() {
   }, [items, selected]);
   const inShownGroup = useMemo(() => new Set(selectedGroups.flatMap((g) => g.map((i) => i.id))), [selectedGroups]);
   const view = usePlayground((s) => s.view);
+  const lastBoard = items.map((i) => i.kind).lastIndexOf("pedalboard");
 
   // Track viewport size so "place" and zoom buttons know the center.
   useEffect(() => {
@@ -299,6 +302,8 @@ export function Canvas() {
       if (useContextMenu.getState().open) return;
       // Editing plugs: the plug panel has the keyboard (Delete removes a plug); nothing else ends the editing.
       if (useUi.getState().plugEditing) return;
+      // The Cables tool has the keyboard too (Delete removes a cable, Escape steps back).
+      if (useUi.getState().cablesOpen) return;
       const s = usePlayground.getState();
       // A shared playground being viewed only pans and zooms.
       const viewOnly = !!useUi.getState().viewing;
@@ -466,7 +471,10 @@ export function Canvas() {
     // Right click (or Control-click on a Mac): pick what's under the pointer, then let the menu open.
     // A right click on something already selected keeps the whole selection, like Figma and Finder.
     // Editing plugs: only Done ends it, so the canvas doesn't select, open menus or drag gear meanwhile (it still pans).
-    const plugMode = !!useUi.getState().plugEditing;
+    // The Cables tool works the same way: the canvas only pans, and a press on it drops what's picked.
+    const cableMode = useUi.getState().cablesOpen;
+    if (cableMode) useCablePick.getState().set({ plug: null, cable: null });
+    const plugMode = !!useUi.getState().plugEditing || cableMode;
     if (plugMode && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) return;
     if (e.pointerType !== "touch" && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) {
       // View-only boards can't be selected or changed, so a right click does nothing there.
@@ -503,7 +511,7 @@ export function Canvas() {
     if (plugMode) {
       // Editing plugs: every drag pans; a click on another pedal moves the plug editing to it.
       const id = itemEl?.dataset.itemId;
-      const other = id && id !== useUi.getState().plugEditing && s.items.find((i) => i.id === id)?.kind === "pedal" ? id : undefined;
+      const other = !cableMode && id && id !== useUi.getState().plugEditing && s.items.find((i) => i.id === id)?.kind === "pedal" ? id : undefined;
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: true, moved: false, jumpTo: other };
       setPanning(!touch);
     } else if (useUi.getState().viewing) {
@@ -652,7 +660,7 @@ export function Canvas() {
       if (g.jumpTo) {
         usePlayground.getState().select(g.jumpTo);
         useUi.getState().setPlugEditing(g.jumpTo);
-      } else if (!useUi.getState().plugEditing) usePlayground.getState().clearSelection();
+      } else if (!useUi.getState().plugEditing && !useUi.getState().cablesOpen) usePlayground.getState().clearSelection();
     }
     if (ref.current?.hasPointerCapture(e.pointerId)) ref.current.releasePointerCapture(e.pointerId);
     if (useUi.getState().dragging) useUi.setState({ dragging: false });
@@ -685,11 +693,20 @@ export function Canvas() {
         className="absolute left-0 top-0 origin-top-left"
         style={{ transform: `translate(${view.x}px, ${view.y}px) scale(${view.zoom})` }}
       >
+        {/* Cables lie on the board: above the last pedalboard, below the pedals (z-indexes are doubled to make room). */}
         {items.map((item, index) => (
-          <div key={item.id} style={{ position: "absolute", zIndex: index }}>
+          <div key={item.id} style={{ position: "absolute", zIndex: index * 2 }}>
             <ItemView item={item} />
           </div>
         ))}
+        <div style={{ position: "absolute", zIndex: lastBoard * 2 + 1 }}>
+          <CableLayer items={items} />
+        </div>
+        {cablesOpen && (
+          <div style={{ position: "absolute", zIndex: 99998 }}>
+            <CableHandles items={items} zoom={view.zoom} />
+          </div>
+        )}
         {plugItem && (
           <div style={{ position: "absolute", zIndex: 99998 }}>
             <PlugEditLayer item={plugItem} zoom={view.zoom} />
