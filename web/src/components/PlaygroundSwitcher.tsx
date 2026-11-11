@@ -1,3 +1,4 @@
+import { trackTool, withTool } from "../lib/analytics";
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { useRef, useState, type ReactNode } from "react";
 import { tip } from "./Tooltip";
@@ -41,7 +42,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
   const cards = user ? list.slice(0, 6) : [];
   // The gallery doesn't load your board, so New Playground is always offered there.
   const empty = usePlayground((s) => s.items.length === 0) && !remote;
-  const newPlayground = remote ? () => go({ kind: "new" }) : requestNewPlayground;
+  const newPlayground = withTool("new_playground", "switcher", remote ? () => go({ kind: "new" }) : requestNewPlayground);
 
   // Guests have one board on this device: they can start it over, or sign in to save it.
   if (!user) {
@@ -98,7 +99,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
                   <Dropdown.Item
                     key={p.id}
                     aria-current={current || undefined}
-                    onSelect={() => (remote ? go({ kind: "open", id: p.id }) : void openPlayground(p.id))}
+                    onSelect={withTool("open_playground", "switcher", () => (remote ? go({ kind: "open", id: p.id }) : void openPlayground(p.id)))}
                     className={`flex cursor-pointer select-none items-center gap-2.5 rounded-control p-1.5 outline-none ${
                       current ? "bg-surface-hover data-[highlighted]:bg-soft-hover" : "data-[highlighted]:bg-surface-hover"
                     }`}
@@ -120,6 +121,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
                       {...tip("Playground Settings")}
                       onClick={(e) => {
                         e.stopPropagation();
+                        trackTool("playground_settings", "switcher");
                         if (remote) go({ kind: "edit", id: p.id });
                         else onEdit(p);
                       }}
@@ -133,7 +135,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
             </div>
           </>
         )}
-        <Dropdown.Item className={item} onSelect={remote ? () => go({ kind: "playgrounds" }) : onPlaygrounds}>
+        <Dropdown.Item className={item} onSelect={withTool("all_playgrounds", "switcher", remote ? () => go({ kind: "playgrounds" }) : onPlaygrounds)}>
           <LayoutList size={14} />
           All Playgrounds…
         </Dropdown.Item>
@@ -141,7 +143,7 @@ function MenuContent({ onEdit, onSignIn, onPlaygrounds, onCloseAutoFocus, remote
         {!remote && (
           <>
             <Dropdown.Separator className="my-1 h-px bg-line" />
-            <Dropdown.Item className={item} onSelect={() => onEdit()}>
+            <Dropdown.Item className={item} onSelect={withTool("playground_settings", "switcher", () => onEdit())}>
               <Settings2 size={14} />
               Playground Settings…
             </Dropdown.Item>
@@ -225,7 +227,7 @@ export function BoardLabel({ comments, onEdit, onSignIn }: { comments?: ReactNod
           <>
             <span className="min-w-0 truncate">{name}</span>
             {user && (
-              <button type="button" onClick={onEdit} aria-label="Playground Settings" {...tip("Playground Settings", { side: "bottom" })} className={labelButton}>
+              <button type="button" onClick={withTool("playground_settings", "canvas", onEdit)} aria-label="Playground Settings" {...tip("Playground Settings", { side: "bottom" })} className={labelButton}>
                 <Pencil size={14} strokeWidth={2} />
               </button>
             )}

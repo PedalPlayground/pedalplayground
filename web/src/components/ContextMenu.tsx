@@ -1,3 +1,4 @@
+import { withTool } from "../lib/analytics";
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import {
   Cable,
@@ -126,31 +127,31 @@ function ObjectItems() {
         icon={locked ? <Lock {...ICON} /> : <LockOpen {...ICON} />}
         label={locked ? "Unlock" : "Lock in Place"}
         shortcut="L"
-        onSelect={s.toggleLockSelected}
+        onSelect={withTool(locked ? "unlock" : "lock", "right_click", s.toggleLockSelected)}
       />
-      <Row icon={<RotateCw {...ICON} />} label="Rotate 90°" shortcut="R" onSelect={s.rotateSelected} />
-      <Row icon={<CopyPlus {...ICON} />} label="Duplicate" shortcut="⌘D" onSelect={s.duplicateSelected} />
+      <Row icon={<RotateCw {...ICON} />} label="Rotate 90°" shortcut="R" onSelect={withTool("rotate", "right_click", s.rotateSelected)} />
+      <Row icon={<CopyPlus {...ICON} />} label="Duplicate" shortcut="⌘D" onSelect={withTool("duplicate", "right_click", s.duplicateSelected)} />
       {selected.length >= 2 && (
         <Row
           icon={isOneGroup(selected) ? <Ungroup {...ICON} /> : <Group {...ICON} />}
           label={isOneGroup(selected) ? "Ungroup" : "Group"}
           shortcut="G"
-          onSelect={s.toggleGroupSelected}
+          onSelect={withTool(isOneGroup(selected) ? "ungroup" : "group", "right_click", s.toggleGroupSelected)}
         />
       )}
       {selected.length >= 3 && (
-        <Row icon={<AlignHorizontalSpaceBetween {...ICON} />} label="Space Evenly" onSelect={s.distributeHorizontally} />
+        <Row icon={<AlignHorizontalSpaceBetween {...ICON} />} label="Space Evenly" onSelect={withTool("space_evenly", "right_click", s.distributeHorizontally)} />
       )}
       <Separator />
-      <Row icon={<ArrowUpToLine {...ICON} />} label="Move Forward" shortcut="]" onSelect={s.bringForward} />
-      <Row icon={<ArrowDownToLine {...ICON} />} label="Move Back" shortcut="[" onSelect={s.sendBackward} />
-      <Row icon={<BringToFront {...ICON} />} label="Move to Front" shortcut="⌘]" onSelect={s.bringToFront} />
-      <Row icon={<SendToBack {...ICON} />} label="Move to Back" shortcut="⌘[" onSelect={s.sendToBack} />
+      <Row icon={<ArrowUpToLine {...ICON} />} label="Move Forward" shortcut="]" onSelect={withTool("move_forward", "right_click", s.bringForward)} />
+      <Row icon={<ArrowDownToLine {...ICON} />} label="Move Back" shortcut="[" onSelect={withTool("move_back", "right_click", s.sendBackward)} />
+      <Row icon={<BringToFront {...ICON} />} label="Move to Front" shortcut="⌘]" onSelect={withTool("move_to_front", "right_click", s.bringToFront)} />
+      <Row icon={<SendToBack {...ICON} />} label="Move to Back" shortcut="⌘[" onSelect={withTool("move_to_back", "right_click", s.sendToBack)} />
       <Separator />
-      {single && !single.custom && <Row icon={<Replace {...ICON} />} label="Replace" onSelect={() => setReplacing(true)} />}
-      {single?.kind === "pedal" && <Row icon={<Cable {...ICON} />} label="Plugs" shortcut="P" onSelect={() => useUi.getState().setPlugEditing(single.id)} />}
-      {placedItemHref(single) && <Row icon={<Info {...ICON} />} label="Info" onSelect={() => openGearInfo(single)} />}
-      <Row icon={<Trash2 {...ICON} />} label="Remove" shortcut="Delete" onSelect={s.deleteSelected} danger />
+      {single && !single.custom && <Row icon={<Replace {...ICON} />} label="Replace" onSelect={withTool("replace", "right_click", () => setReplacing(true))} />}
+      {single?.kind === "pedal" && <Row icon={<Cable {...ICON} />} label="Plugs" shortcut="P" onSelect={withTool("plugs", "right_click", () => useUi.getState().setPlugEditing(single.id))} />}
+      {placedItemHref(single) && <Row icon={<Info {...ICON} />} label="Info" onSelect={withTool("gear_info", "right_click", () => openGearInfo(single))} />}
+      <Row icon={<Trash2 {...ICON} />} label="Remove" shortcut="Delete" onSelect={withTool("remove", "right_click", s.deleteSelected)} danger />
     </>
   );
 }
@@ -161,22 +162,22 @@ function CanvasItems({ canvasX, canvasY }: { canvasX: number; canvasY: number })
   const empty = !s.items.length;
   return (
     <>
-      <Row icon={<Plus {...ICON} />} label="Add Gear" shortcut="+" onSelect={() => useUi.getState().setSearchOpen(true)} />
+      <Row icon={<Plus {...ICON} />} label="Add Gear" shortcut="+" onSelect={withTool("add_gear", "right_click", () => useUi.getState().setSearchOpen(true))} />
       <Separator />
-      <Row icon={<Undo2 {...ICON} />} label="Undo" shortcut="⌘Z" disabled={!s.past.length} onSelect={s.undo} />
-      <Row icon={<Redo2 {...ICON} />} label="Redo" shortcut="⇧⌘Z" disabled={!s.future.length} onSelect={s.redo} />
+      <Row icon={<Undo2 {...ICON} />} label="Undo" shortcut="⌘Z" disabled={!s.past.length} onSelect={withTool("undo", "right_click", s.undo)} />
+      <Row icon={<Redo2 {...ICON} />} label="Redo" shortcut="⇧⌘Z" disabled={!s.future.length} onSelect={withTool("redo", "right_click", s.redo)} />
       <Separator />
       <Row
         icon={<SquareDashedMousePointer {...ICON} />}
         label="Select All"
         shortcut="⌘A"
         disabled={empty}
-        onSelect={() => s.selectMany(s.items.map((i) => i.id))}
+        onSelect={withTool("select_all", "right_click", () => s.selectMany(s.items.map((i) => i.id)))}
       />
       <Separator />
-      <Row icon={<ZoomIn {...ICON} />} label="Zoom In" shortcut="⌘+" onSelect={() => s.zoomBy(1.25, canvasX, canvasY)} />
-      <Row icon={<ZoomOut {...ICON} />} label="Zoom Out" shortcut="⌘−" onSelect={() => s.zoomBy(0.8, canvasX, canvasY)} />
-      <Row icon={<Fullscreen {...ICON} />} label="Center & Fit" shortcut="1" disabled={empty} onSelect={s.fitToContent} />
+      <Row icon={<ZoomIn {...ICON} />} label="Zoom In" shortcut="⌘+" onSelect={withTool("zoom_in", "right_click", () => s.zoomBy(1.25, canvasX, canvasY))} />
+      <Row icon={<ZoomOut {...ICON} />} label="Zoom Out" shortcut="⌘−" onSelect={withTool("zoom_out", "right_click", () => s.zoomBy(0.8, canvasX, canvasY))} />
+      <Row icon={<Fullscreen {...ICON} />} label="Center & Fit" shortcut="1" disabled={empty} onSelect={withTool("fit", "right_click", s.fitToContent)} />
     </>
   );
 }

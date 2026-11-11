@@ -1,3 +1,4 @@
+import { withTool } from "../lib/analytics";
 import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Cable, CopyPlus, Group, Info, Lock, LockOpen, Pencil, Replace, RotateCw, Trash2, Ungroup } from "lucide-react";
 import type { ReactNode } from "react";
 import { isOneGroup, usePlayground } from "../store/playground";
@@ -62,40 +63,40 @@ export function ObjectMenu() {
       </div>
       <div className="flex items-center gap-1 sm:gap-1.5">
       <span className={`${barDivider} max-sm:hidden`} />
-      <Action label={locked ? "Unlock" : "Lock in Place"} shortcut="L" onClick={s.toggleLockSelected} pressed={locked}>
+      <Action label={locked ? "Unlock" : "Lock in Place"} shortcut="L" onClick={withTool(locked ? "unlock" : "lock", "object_menu", s.toggleLockSelected)} pressed={locked}>
         {locked ? <Lock size={18} /> : <LockOpen size={18} />}
       </Action>
-      <Action label="Rotate 90°" shortcut="R" onClick={s.rotateSelected}>
+      <Action label="Rotate 90°" shortcut="R" onClick={withTool("rotate", "object_menu", s.rotateSelected)}>
         <RotateCw size={18} />
       </Action>
-      <Action label="Duplicate" shortcut="⌘D" onClick={s.duplicateSelected}>
+      <Action label="Duplicate" shortcut="⌘D" onClick={withTool("duplicate", "object_menu", s.duplicateSelected)}>
         <CopyPlus size={18} />
       </Action>
       {s.selected.length >= 2 && (
         <Action
           label={isOneGroup(s.items.filter((i) => s.selected.includes(i.id))) ? "Ungroup" : "Group"}
           shortcut="G"
-          onClick={s.toggleGroupSelected}
+          onClick={withTool(isOneGroup(s.items.filter((i) => s.selected.includes(i.id))) ? "ungroup" : "group", "object_menu", s.toggleGroupSelected)}
         >
           {isOneGroup(s.items.filter((i) => s.selected.includes(i.id))) ? <Ungroup size={18} /> : <Group size={18} />}
         </Action>
       )}
       {s.selected.length >= 3 && (
-        <Action label="Space Evenly" onClick={s.distributeHorizontally}>
+        <Action label="Space Evenly" onClick={withTool("space_evenly", "object_menu", s.distributeHorizontally)}>
           <AlignHorizontalSpaceBetween size={18} />
         </Action>
       )}
       <span className={barDivider} />
-      <Action label="Move Forward" shortcut="]" onClick={s.bringForward}>
+      <Action label="Move Forward" shortcut="]" onClick={withTool("move_forward", "object_menu", s.bringForward)}>
         <ArrowUpToLine size={18} />
       </Action>
-      <Action label="Move Back" shortcut="[" onClick={s.sendBackward}>
+      <Action label="Move Back" shortcut="[" onClick={withTool("move_back", "object_menu", s.sendBackward)}>
         <ArrowDownToLine size={18} />
       </Action>
       <span className={barDivider} />
       {single?.custom && (
         <button
-          onClick={() => setEditing(true)}
+          onClick={withTool("edit", "object_menu", () => setEditing(true))}
           aria-label={single.kind === "pedalboard" ? "Edit Board" : "Edit Size, Color and Style"}
           {...tip(single.kind === "pedalboard" ? "Edit Board" : "Edit Size, Color and Style")}
           className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}
@@ -107,7 +108,7 @@ export function ObjectMenu() {
       {/* Custom items are edited instead; swapping one for catalog gear doesn't apply. */}
       {single && !single.custom && (
         <button
-          onClick={() => setReplacing(true)}
+          onClick={withTool("replace", "object_menu", () => setReplacing(true))}
           className={`max-sm:grid max-sm:size-10 max-sm:place-items-center max-sm:bg-transparent max-sm:px-0 ${barSoftButton}`}
         >
           <Replace size={14} strokeWidth={2.25} className="max-sm:size-[18px] max-sm:stroke-2" />
@@ -115,24 +116,24 @@ export function ObjectMenu() {
         </button>
       )}
       {single?.kind === "pedal" && (
-        <Action label="Plugs" shortcut="P" onClick={() => useUi.getState().setPlugEditing(single.id)}>
+        <Action label="Plugs" shortcut="P" onClick={withTool("plugs", "object_menu", () => useUi.getState().setPlugEditing(single.id))}>
           <Cable size={18} />
         </Action>
       )}
       {/* Catalog gear: its page on the Gear site, in a new tab. */}
       {placedItemHref(single) && (
-        <Action label="Info" onClick={() => openGearInfo(single)}>
+        <Action label="Info" onClick={withTool("gear_info", "object_menu", () => openGearInfo(single))}>
           <Info size={18} />
         </Action>
       )}
       {/* Phones: icon button. Tablet and desktop: icon and text, in a soft red version of the Replace style. */}
       <span className="contents sm:hidden">
-        <Action label="Remove" shortcut="Delete" onClick={s.deleteSelected} danger>
+        <Action label="Remove" shortcut="Delete" onClick={withTool("remove", "object_menu", s.deleteSelected)} danger>
           <Trash2 size={18} />
         </Action>
       </span>
       <button
-        onClick={s.deleteSelected}
+        onClick={withTool("remove", "object_menu", s.deleteSelected)}
         className={`${barSoftDangerButton} max-sm:hidden`}
       >
         <Trash2 size={14} strokeWidth={2.25} />
