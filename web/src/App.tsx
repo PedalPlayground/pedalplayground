@@ -188,7 +188,7 @@ export function App() {
       const item = (kind === "pedalboard" ? manifest.pedalboards : manifest.pedals).find((c) => c.image === key);
       if (item) {
         usePlayground.getState().addCatalogItem(kind, item);
-        recordGearAdd(kind, item.image, "gear_page");
+        recordGearAdd(kind, item, "gear_page");
         toast(`Added ${item.brand} ${item.name}`);
       }
     } else if (handoff.kind === "edit") {
