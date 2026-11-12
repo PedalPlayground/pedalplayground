@@ -44,7 +44,7 @@ import { knownType, plugBox, PLUG_TYPES, snapAt, type PlugSide, type PlugType } 
 /** Cable width: 5px at 100% zoom, in inches, so it scales with the board like the gear does. */
 const WIDTH = 5 / PX_PER_INCH;
 /** How far from a cable a press still picks it, in inches (wide, so thin cables are easy to hit). */
-const HIT_WIDTH = 0.45;
+const HIT_WIDTH = 0.6;
 /** Corner rounding, in inches. */
 const CORNER = 0.3;
 /** Side-by-side spacing for cables sharing a run. */
@@ -431,26 +431,49 @@ function edgeSpot(item: Item, side: PlugSide, at: number, off: number): Pt {
   return [a.at[0] - a.dir[0] * back, a.at[1] - a.dir[1] * back];
 }
 
-/** How close to a pedal's edge, inside or out, the pointer brings up the edge plus, in inches. */
-const EDGE_REACH = 0.45;
-/** The edge plus stays this far from a jack or + that's already there, in inches. */
+/**
+ * Where on a pedal a click starts a cable: a band along its edge, mostly inside it (`EDGE_IN` deep) and a little past
+ * it (`EDGE_OUT`), in inches. Cables and plugs nearby take the click first (see CableHandles).
+ */
+const EDGE_IN = 0.5;
+const EDGE_OUT = 0.2;
+/** The edge start point stays this far from a jack or start point that's already there, in inches. */
 const EDGE_ROOM = 0.35;
+/** How far from a cable, and around a plug's head, the pointer goes to them instead of the edge, in inches. */
+const CABLE_ROOM = 0.3;
+const PLUG_ROOM = 0.15;
 
-/** The nearest spot on a pedal's edge to `p` (in its own frame), if it's within EDGE_REACH. */
+/** The nearest spot on a pedal's edge to `p` (in its own frame), if `p` is in the edge band. */
 function nearestEdge(item: Item, p: Pt): { side: PlugSide; at: number } | null {
   const [x, y] = toLocal(item, p);
   const { width: w, height: h } = item;
   const clamp = (v: number, len: number) => snapAt(Math.min(Math.max(v, 0.2), len - 0.2));
+  // How far in from each side the point is (negative outside it), for the sides it's alongside.
   const options: [number, PlugSide, number][] = [];
-  if (x > -EDGE_REACH && x < w + EDGE_REACH) {
-    options.push([Math.abs(y), "top", clamp(x, w)], [Math.abs(y - h), "bottom", clamp(x, w)]);
-  }
-  if (y > -EDGE_REACH && y < h + EDGE_REACH) {
-    options.push([Math.abs(x), "left", clamp(y, h)], [Math.abs(x - w), "right", clamp(y, h)]);
-  }
+  if (x > -EDGE_OUT && x < w + EDGE_OUT) options.push([y, "top", clamp(x, w)], [h - y, "bottom", clamp(x, w)]);
+  if (y > -EDGE_OUT && y < h + EDGE_OUT) options.push([x, "left", clamp(y, h)], [w - x, "right", clamp(y, h)]);
   const best = options.sort((a, b) => a[0] - b[0])[0];
-  return best && best[0] <= EDGE_REACH ? { side: best[1], at: best[2] } : null;
+  return best && best[0] >= -EDGE_OUT && best[0] <= EDGE_IN ? { side: best[1], at: best[2] } : null;
 }
+
+/** Distance from `p` to the nearest leg of any route, in inches. */
+function distToRoutes(routes: RoutedCable[], p: Pt) {
+  let best = Infinity;
+  for (const r of routes) {
+    const pts = r.route.points;
+    for (let k = 0; k < pts.length - 1; k++) {
+      const [a, b] = [pts[k], pts[k + 1]];
+      const x = Math.min(Math.max(p[0], Math.min(a[0], b[0])), Math.max(a[0], b[0]));
+      const y = Math.min(Math.max(p[1], Math.min(a[1], b[1])), Math.max(a[1], b[1]));
+      best = Math.min(best, Math.hypot(p[0] - x, p[1] - y));
+    }
+  }
+  return best;
+}
+
+/** A box grown by `d` on every side. */
+const growBox = (b: { left: number; top: number; right: number; bottom: number }, d: number) => ({ left: b.left - d, top: b.top - d, right: b.right + d, bottom: b.bottom + d });
+const inBox = (b: { left: number; top: number; right: number; bottom: number }, [x, y]: Pt) => x >= b.left && x <= b.right && y >= b.top && y <= b.bottom;
 
 /** How far outside a pedal the pointer still counts as over it (its + points sit just past the edge), in inches. */
 const HOVER_REACH = 1;
@@ -505,7 +528,12 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
   // The edge plus: a + on the hovered pedal's edge right by the pointer, for a jack anywhere along it. It stays out of
   // the way of the plugs and +s already there.
   const overItem = pointer.over && (!focus || pointer.over === focus) ? items.find((i) => i.id === pointer.over) : undefined;
-  const near = overItem && pointer.at ? nearestEdge(overItem, pointer.at) : null;
+  // Cables and plugs come first: near one, the pointer is for it, not for a new jack.
+  const onOther =
+    !!pointer.at &&
+    (distToRoutes(routesFor(items), pointer.at) < CABLE_ROOM ||
+      items.some((i) => i.kind === "pedal" && (i.plugs ?? []).some((p) => inBox(growBox(plugHead(i, p), PLUG_ROOM), pointer.at!))));
+  const near = overItem && pointer.at && !onOther ? nearestEdge(overItem, pointer.at) : null;
   const taken =
     overItem &&
     near &&
@@ -546,7 +574,7 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
           const wired = connected.has(cableId(end));
           if (wired && !start) {
             // A plugged-in jack: the plug itself takes the click, to pick it (and change its plug).
-            const b = plugHead(item, p);
+            const b = growBox(plugHead(item, p), PLUG_ROOM);
             const picked = !!jackSel && sameEnd(jackSel, end);
             const lit = hover === key || picked;
             return (
@@ -569,7 +597,24 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
               />
             );
           }
-          return (
+          // The plug's head (and a little around it) takes the click too, like a plugged-in one.
+          const hb = growBox(plugHead(item, p), PLUG_ROOM);
+          const head = (
+            <button
+              key={`${key}-head`}
+              type="button"
+              aria-hidden
+              tabIndex={-1}
+              className="absolute cursor-pointer outline-none"
+              style={{ left: hb.left * PX_PER_INCH, top: hb.top * PX_PER_INCH, width: (hb.right - hb.left) * PX_PER_INCH, height: (hb.bottom - hb.top) * PX_PER_INCH }}
+              onPointerEnter={() => setHover(key)}
+              onPointerLeave={() => setHover((h) => (h === key ? null : h))}
+              onPointerDown={(e) => e.stopPropagation()}
+              onClick={() => pickEnd(end)}
+            />
+          );
+          return [
+            head,
             <button
               key={key}
               type="button"
@@ -582,8 +627,8 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
               onClick={() => pickEnd(end)}
             >
               <ArrowFace r={r} zoom={zoom} on={on} big={on || hover === key} dir={outDir(item, p.side)} way={on ? "out" : arrow} />
-            </button>
-          );
+            </button>,
+          ];
         });
         const plusses = openHints(hints[item.id] ?? [], plugs).map((h) => {
           const end = { item: item.id, side: h.side, at: h.at };
@@ -605,7 +650,7 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
             </button>
           );
         });
-        return [...dots, ...plusses];
+        return [...dots.flat(), ...plusses];
       })}
       {edge && !hover && (
         <EdgePlus
