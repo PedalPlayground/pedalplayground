@@ -4,7 +4,7 @@
  * flow map can share the same geometry. Drawing (rounded corners, color) is the caller's job; `roundedPath` helps.
  */
 import { itemBounds } from "./geometry";
-import { plugBox, type Plug } from "./plugs";
+import { ART_INCH_PER_UNIT, knownType, plugBox, PLUG_TYPES, type Plug } from "./plugs";
 import type { Item } from "./types";
 
 export type Pt = [number, number];
@@ -77,13 +77,11 @@ function toWorld(item: Item, [x, y]: Pt, vector = false): Pt {
   return vector ? [rx, ry] : [item.x + item.width / 2 + rx, item.y + item.height / 2 + ry];
 }
 
-/** How far back into the plug's head a cable starts, as a share of the head's length: it comes out from under the head. */
-export const CABLE_TUCK = 0.3;
-
-/** Where a cable leaves a plug: a little way back into the head from its end, so it reads as coming out of the plug. */
+/** Where a cable leaves a plug: back in the head at the line where its two tones meet, so it reads as coming out of the plug. */
 export function cableEnd(item: Item, plug: Plug): PlugAnchor {
   const a = plugAnchor(item, plug);
-  const back = plugBox(plug.type).out * CABLE_TUCK;
+  const art = PLUG_TYPES[knownType(plug.type)].art;
+  const back = (art.w - (art.seam ?? (art.x0 + art.w) / 2)) * ART_INCH_PER_UNIT;
   return { at: [a.at[0] - a.dir[0] * back, a.at[1] - a.dir[1] * back], dir: a.dir };
 }
 

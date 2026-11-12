@@ -65,15 +65,17 @@ export interface PlugArtSpec {
   x0: number;
   /** The barrel's centerline: where the jack is. */
   cy: number;
+  /** Where the head's two tones meet along the barrel: cables come out of the plug here. Defaults to mid-head. */
+  seam?: number;
 }
 
 /** The drawings' scale: 0.2 mm per unit (a Rean's thin side is 73 units, about 14.5 mm). */
 export const ART_INCH_PER_UNIT = 0.2 / 25.4;
 
 export const PLUG_TYPES: Record<PlugType, PlugSpec> = {
-  sp400: { label: "Slim right-angle (SP400)", art: { name: "sp400-down", w: 189, h: 75, x0: 143, cy: 37.5 } },
-  angle: { label: "Right-angle ¼″ (Rean)", art: { name: "rean-down", w: 217, h: 57, x0: 145, cy: 28.5 } },
-  pancake: { label: "Pancake", art: { name: "pancake-down", w: 200, h: 115, x0: 143, cy: 57.5 } },
+  sp400: { label: "Slim right-angle (SP400)", art: { name: "sp400-down", w: 189, h: 75, x0: 143, cy: 37.5, seam: 167 } },
+  angle: { label: "Right-angle ¼″ (Rean)", art: { name: "rean-down", w: 217, h: 57, x0: 145, cy: 28.5, seam: 185 } },
+  pancake: { label: "Pancake", art: { name: "pancake-down", w: 200, h: 115, x0: 143, cy: 57.5, seam: 174 } },
   // Placeholders until Trav's drawings: a 3.5 mm right-angle, a DC right-angle, a right-angle 5-pin MIDI.
   mini: { label: "Right-angle 3.5 mm", art: { name: "mini-down", w: 125, h: 45, x0: 75, cy: 22.5 } },
   barrel: { label: "DC right-angle (2.1 mm)", art: { name: "barrel-down", w: 112, h: 50, x0: 50, cy: 25 } },
