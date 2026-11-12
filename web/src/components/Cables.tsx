@@ -513,17 +513,22 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
               onPointerDown={(e) => e.stopPropagation()}
               onClick={() => pickEnd(end)}
             >
-              <span
-                className="block rounded-full transition-transform"
-                style={{
-                  width: r * 2,
-                  height: r * 2,
-                  background: on ? "var(--color-brand)" : "#fff",
-                  border: `${2 / zoom}px solid ${on ? "#fff" : "var(--color-brand)"}`,
-                  boxShadow: on ? `0 0 0 ${3 / zoom}px color-mix(in srgb, var(--color-brand) 35%, transparent)` : undefined,
-                  transform: on || hover === key ? "scale(1.25)" : undefined,
-                }}
-              />
+              {p.link ? (
+                <span
+                  className="block rounded-full transition-transform"
+                  style={{
+                    width: r * 2,
+                    height: r * 2,
+                    background: on ? "var(--color-brand)" : "#fff",
+                    border: `${2 / zoom}px solid ${on ? "#fff" : "var(--color-brand)"}`,
+                    boxShadow: on ? `0 0 0 ${3 / zoom}px color-mix(in srgb, var(--color-brand) 35%, transparent)` : undefined,
+                    transform: on || hover === key ? "scale(1.25)" : undefined,
+                  }}
+                />
+              ) : (
+                // A plug with no cable yet looks like any other place to start one.
+                <PlusFace r={r} zoom={zoom} on={on} big={on || hover === key} />
+              )}
             </button>
           );
         });
@@ -543,20 +548,7 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
               onPointerDown={(e) => e.stopPropagation()}
               onClick={() => pickEnd(end)}
             >
-              <span
-                className="grid place-items-center rounded-full transition-transform"
-                style={{
-                  width: r * 2.2,
-                  height: r * 2.2,
-                  background: on ? "var(--color-brand)" : "#fff",
-                  color: on ? "#fff" : "var(--color-brand)",
-                  border: `${1.5 / zoom}px solid var(--color-brand)`,
-                  boxShadow: on ? `0 0 0 ${3 / zoom}px color-mix(in srgb, var(--color-brand) 35%, transparent)` : "0 1px 3px rgb(0 0 0 / 0.3)",
-                  transform: on || hover === key ? "scale(1.25)" : undefined,
-                }}
-              >
-                <Plus size={r * 1.6} strokeWidth={3} />
-              </span>
+              <PlusFace r={r} zoom={zoom} on={on} big={on || hover === key} />
             </button>
           );
         });
@@ -910,5 +902,25 @@ export function ChosenMiniMenu() {
         <Trash2 size={16} />
       </button>
     </div>
+  );
+}
+
+/** The round + on a spot or a cable-less plug in Signal Flow: brand filled once it's where a cable starts. */
+function PlusFace({ r, zoom, on, big }: { r: number; zoom: number; on: boolean; big: boolean }) {
+  return (
+    <span
+      className="grid place-items-center rounded-full transition-transform"
+      style={{
+        width: r * 2.2,
+        height: r * 2.2,
+        background: on ? "var(--color-brand)" : "#fff",
+        color: on ? "#fff" : "var(--color-brand)",
+        border: `${1.5 / zoom}px solid var(--color-brand)`,
+        boxShadow: on ? `0 0 0 ${3 / zoom}px color-mix(in srgb, var(--color-brand) 35%, transparent)` : "0 1px 3px rgb(0 0 0 / 0.3)",
+        transform: big ? "scale(1.25)" : undefined,
+      }}
+    >
+      <Plus size={r * 1.6} strokeWidth={3} />
+    </span>
   );
 }
