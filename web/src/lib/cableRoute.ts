@@ -61,7 +61,7 @@ export function busyLegs(points: Pt[]): BusyLeg[] {
   return out;
 }
 
-export const ROUTE_DEFAULTS: RouteOptions = { clearance: 0.25, lead: 0, bend: 1.5, nearCost: 4, underCost: 25, offBoardCost: 2.5, busyCost: 3, lane: 0.42 };
+export const ROUTE_DEFAULTS: RouteOptions = { clearance: 0.25, lead: 0, bend: 1.5, nearCost: 4, underCost: 25, offBoardCost: 2.5, busyCost: 3, lane: 0.3 };
 
 /** Turns a point in an item's own (unrotated, unflipped) box into world inches: flip about the center, then rotate. */
 function toWorld(item: Item, [x, y]: Pt, vector = false): Pt {

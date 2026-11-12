@@ -41,17 +41,17 @@ import { tip } from "./Tooltip";
 import { jacksFor } from "../lib/jacks";
 import { knownType, plugBox, PLUG_TYPES, snapAt, type PlugSide, type PlugType } from "../lib/plugs";
 
-/** Audio cable width: 10px at 100% zoom, in inches, so it scales with the board like the gear does. */
-const WIDTH = 10 / PX_PER_INCH;
+/** Audio cable width: 5px at 100% zoom, in inches, so it scales with the board like the gear does. */
+const WIDTH = 5 / PX_PER_INCH;
 /** How far from a cable a press still picks it, in inches (wide, so thin cables are easy to hit). */
 const HIT_WIDTH = 0.6;
 /** Corner rounding, in inches. */
 const CORNER = 0.3;
 /** Side-by-side spacing for cables sharing a run. */
-const SPACING = 0.42;
+const SPACING = 0.3;
 
 /** How far the glow under a hovered or picked cable reaches past its edges, in inches. */
-const GLOW = 3 / PX_PER_INCH;
+const GLOW = 2 / PX_PER_INCH;
 
 /**
  * One cable's line in its type's style: solid, double (two thin lines, cut with a mask so the board shows between
