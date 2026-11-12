@@ -54,6 +54,19 @@ function toWorld(item: Item, [x, y]: Pt, vector = false): Pt {
   return vector ? [rx, ry] : [item.x + item.width / 2 + rx, item.y + item.height / 2 + ry];
 }
 
+/** The inverse of toWorld: a world point in an item's own (unrotated, unflipped) box. */
+export function toLocal(item: Item, [x, y]: Pt): Pt {
+  const rx = x - item.x - item.width / 2;
+  const ry = y - item.y - item.height / 2;
+  const t = (item.rotation * Math.PI) / 180;
+  const c = Math.round(Math.cos(t));
+  const s = Math.round(Math.sin(t));
+  let dx = rx * c + ry * s;
+  const dy = -rx * s + ry * c;
+  if (item.flipX) dx = -dx;
+  return [dx + item.width / 2, dy + item.height / 2];
+}
+
 /** The plug's cable end in world inches, and the direction it points. */
 export function plugAnchor(item: Item, plug: Plug): PlugAnchor {
   const { width: w, height: h } = item;

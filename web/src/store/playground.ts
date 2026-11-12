@@ -103,6 +103,8 @@ interface PlaygroundState {
   setCableLegs: (stored: PlugEnd, legs: ManualLegs | null, record?: boolean) => void;
   /** Removes the cables on these plugs (one undo step). */
   unplug: (ends: PlugEnd[]) => void;
+  /** Takes a plug off its pedal, with its cable (one undo step). */
+  removePlug: (end: PlugEnd) => void;
   /** Changes an item's Equipment List details as one undo step. */
   updateGear: (id: string, patch: Partial<Pick<Item, "status" | "price" | "ma" | "voltage" | "pedalType">>) => void;
   /** Selects one item and moves the view just enough to show it. */
@@ -538,6 +540,11 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       });
       return doRecord ? { ...record(s), items } : { items };
     }),
+  removePlug: (end) =>
+    set((s) => ({
+      ...record(s),
+      items: unplug(s.items, [end]).map((i) => (i.id === end.item && i.plugs ? { ...i, plugs: i.plugs.filter((p) => p.id !== end.plug) } : i)),
+    })),
   unplug: (ends) =>
     set((s) => {
       const items = unplug(s.items, ends);

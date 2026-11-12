@@ -1,6 +1,6 @@
 import { Cable } from "lucide-react";
 import { PlugsLayer } from "./PlugArt";
-import { CableHandles, CableLayer, LegHandles, useCablePick } from "./Cables";
+import { CableHandles, CableLayer, deleteChosen, LegHandles, PlugTargets, useCablePick } from "./Cables";
 import { clearPlugSelection, PlugEditLayer } from "./PlugEditor";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { canvasImageUrl } from "../lib/catalog";
@@ -154,9 +154,11 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
   const src = item.image ? canvasImageUrl(manifest, item.kind, item.image) : null;
   // A selected item has its menus; the name label is only for the ones that don't.
   const selected = usePlayground((s) => s.selected.includes(item.id));
+  // Signal Flow is about the jacks: no name labels on gear while it's open.
+  const quiet = useUi((u) => u.cablesOpen);
   useEffect(() => {
-    if (selected) hideTip();
-  }, [selected]);
+    if (selected || quiet) hideTip();
+  }, [selected, quiet]);
   // Editing another pedal's plugs: everything else fades well back, so it's clear which pedal is being edited. Other
   // pedals come back on hover and offer to switch to them.
   const backdrop = useUi((u) => !!u.plugEditing && u.plugEditing !== item.id);
@@ -165,7 +167,7 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
   return (
     <div
       data-item-id={item.id}
-      {...(selected || other ? {} : tip(itemName(item), { canvas: true }))}
+      {...(selected || other || quiet ? {} : tip(itemName(item), { canvas: true }))}
       // Catalog photos get a drop shadow (--item-drop, per theme) that follows the image's own outline. It sits on this unrotated box so
       // the light always falls down and to the right, whatever the rotation. Custom styles draw their own shadows.
       // Taps go to the rotated inner box only, so the empty corners of this one never catch them.
@@ -239,6 +241,8 @@ export function Canvas() {
   const plugEditing = useUi((u) => u.plugEditing);
   const plugItem = usePlayground((s) => (plugEditing ? s.items.find((i) => i.id === plugEditing) : undefined));
   const cablesOpen = useUi((u) => u.cablesOpen);
+  // Cables and plugs can be picked on the board itself, outside the editing tools and when not just viewing.
+  const pickable = useUi((u) => !u.cablesOpen && !u.plugEditing && !u.viewing && u.mode === "playground");
 
   useEffect(() => {
     void useCatalog.getState().load();
@@ -304,6 +308,18 @@ export function Canvas() {
       if (useUi.getState().plugEditing) return;
       // The Cables tool has the keyboard too (Delete removes a cable, Escape steps back).
       if (useUi.getState().cablesOpen) return;
+      // A cable or plug picked on the board: Delete removes it, Escape lets go.
+      if (useCablePick.getState().chosen) {
+        if (e.key === "Escape") {
+          useCablePick.getState().set({ chosen: null });
+          return;
+        }
+        if (e.key === "Delete" || e.key === "Backspace") {
+          e.preventDefault();
+          deleteChosen();
+          return;
+        }
+      }
       const s = usePlayground.getState();
       // A shared playground being viewed only pans and zooms.
       const viewOnly = !!useUi.getState().viewing;
@@ -473,6 +489,8 @@ export function Canvas() {
     // Editing plugs: only Done ends it, so the canvas doesn't select, open menus or drag gear meanwhile (it still pans).
     // The Cables tool works the same way: the canvas only pans, and a press on it drops what's picked.
     const cableMode = useUi.getState().cablesOpen;
+    // A cable or plug picked on the board is let go of (pressing one stops the press before it gets here).
+    useCablePick.getState().set({ chosen: null });
     if (cableMode) useCablePick.getState().set({ plug: null, cable: null });
     const plugMode = !!useUi.getState().plugEditing || cableMode;
     if (plugMode && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) return;
@@ -699,6 +717,15 @@ export function Canvas() {
             <ItemView item={item} />
           </div>
         ))}
+        {/* Plugs take clicks just above their own pedal, so gear stacked over them still comes first. */}
+        {pickable &&
+          items.map((item, index) =>
+            item.kind === "pedal" && item.plugs?.length ? (
+              <div key={`plugs-${item.id}`} style={{ position: "absolute", zIndex: index * 2 + 1 }}>
+                <PlugTargets item={item} />
+              </div>
+            ) : null,
+          )}
         <div style={{ position: "absolute", zIndex: lastBoard * 2 + 1 }}>
           <CableLayer items={items} />
         </div>

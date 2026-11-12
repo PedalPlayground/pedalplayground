@@ -47,7 +47,7 @@ import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { SpaceBetweenPanel } from "./components/SpaceBetweenPanel";
 import { PlugPanel } from "./components/PlugEditor";
-import { CablePanel } from "./components/Cables";
+import { CablePanel, ChosenMiniMenu } from "./components/Cables";
 import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
 import { Toolbar } from "./components/Toolbar";
 import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
@@ -310,7 +310,16 @@ export function App() {
                 !phoneSized && !plugEditing && <ObjectMenu />
               )}
               {/* While plugs are being edited, their panel takes the menus' place. */}
-              {cablesOpen ? <CablePanel /> : plugEditing ? <PlugPanel /> : <SelectionMiniMenu />}
+              {cablesOpen ? (
+                <CablePanel />
+              ) : plugEditing ? (
+                <PlugPanel />
+              ) : (
+                <>
+                  <SelectionMiniMenu />
+                  <ChosenMiniMenu />
+                </>
+              )}
               <ContextMenu />
             </>
           )}

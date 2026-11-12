@@ -29,10 +29,13 @@ const usePlugPick = create<Pick & { set: (p: Partial<Pick>) => void }>((set) => 
 export const openHints = (hints: JackHint[], plugs: Plug[]) =>
   hints.filter((h) => !plugs.some((p) => p.side === h.side && Math.abs(p.at - h.at) < 0.4));
 
-/** The found jacks, plus a + at the middle of every side that has none (all four when nothing was found or there's no photo). */
-export const withMiddles = (found: JackHint[], w: number, h: number): JackHint[] => [
+/**
+ * The found jacks, plus a + at the middle of every side in `sides` that has none (all four by default, when nothing
+ * was found or there's no photo).
+ */
+export const withMiddles = (found: JackHint[], w: number, h: number, sides: readonly PlugSide[] = ["top", "right", "bottom", "left"]): JackHint[] => [
   ...found,
-  ...(["top", "right", "bottom", "left"] as const)
+  ...sides
     .filter((side) => !found.some((f) => f.side === side))
     .map((side) => ({ side, at: snapAt((side === "top" || side === "bottom" ? w : h) / 2) })),
 ];

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { plugAnchor, roundedPath, routeCable, type CableRoute } from "./cableRoute";
+import { plugAnchor, roundedPath, routeCable, toLocal, type CableRoute } from "./cableRoute";
 import { plugBox, type Plug } from "./plugs";
 import type { Item } from "./types";
 
@@ -48,6 +48,20 @@ describe("plugAnchor", () => {
     const flipped = plugAnchor(pedal("p", 0, 0, 2, 4, { flipX: true }), plug("left", 1));
     expect(flipped.dir).toEqual([1, 0]);
     expect(flipped.at[0]).toBeCloseTo(2 + OUT);
+  });
+});
+
+describe("toLocal", () => {
+  it("undoes rotation and flip", () => {
+    for (const rotation of [0, 90, 180, 270] as const) {
+      for (const flipX of [false, true]) {
+        const p = pedal("p", 3, 1, 2, 4, { rotation, flipX });
+        const a = plugAnchor(p, { id: "x", side: "left", at: 1, type: "sp400" });
+        const [x, y] = toLocal(p, a.at);
+        expect(x).toBeCloseTo(-OUT);
+        expect(y).toBeCloseTo(1);
+      }
+    }
   });
 });
 
