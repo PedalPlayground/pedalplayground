@@ -316,7 +316,29 @@ export function routeCable(
     path.unshift([xs[node % nx], ys[Math.floor(node / nx)]]);
   }
   if (!path.length) path.push(a, b);
-  return finish([from.at, ...path, to.at], solid);
+  const route = finish([from.at, ...path, to.at], solid);
+  return finish(trimNubs(trimNubs(route.points).reverse()).reverse(), solid);
+}
+
+/** Shortest step out of a plug worth keeping before a turn; anything shorter just jogs off the plug's seam. */
+const NUB = 0.35;
+/** Longest run hugging the pedal's side that trimming a step may leave. */
+const HUG = 1.5;
+
+/**
+ * A route that steps a little way straight out of its first plug and then turns (out to a grid line clear of the pedal)
+ * turns right at the plug instead, so the cable leaves from the seam, not from past the head.
+ */
+function trimNubs(pts: Pt[]): Pt[] {
+  if (pts.length < 4) return pts;
+  const [a, b, c] = pts;
+  const h = Math.abs(a[1] - b[1]) < 1e-6;
+  const len = h ? Math.abs(a[0] - b[0]) : Math.abs(a[1] - b[1]);
+  // Keep the step when the turn would run a long way along the pedal's side.
+  const along = h ? Math.abs(b[1] - c[1]) : Math.abs(b[0] - c[0]);
+  if (len >= NUB || along > HUG) return pts;
+  const moved: Pt = h ? [a[0], c[1]] : [c[0], a[1]];
+  return [a, moved, ...pts.slice(3)];
 }
 
 /** Drops repeated and in-line points, keeping only corners, and marks the legs that run under a pedal. */
