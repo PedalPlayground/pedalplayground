@@ -92,9 +92,9 @@ interface PlaygroundState {
   connectPlugs: (a: PlugEnd, b: PlugEnd, style?: CableStyle) => void;
   /** Runs a cable between two ends, adding plugs where an end is just a spot on an edge. One undo step. Returns the cable's stored end. */
   wire: (a: WireEnd, b: WireEnd, style?: CableStyle) => PlugEnd;
-  /** Changes a cable's type or color (one undo step). `stored` is the plug the cable is stored on. */
+  /** Changes a cable's type (one undo step). `stored` is the plug the cable is stored on. */
   setCableStyle: (stored: PlugEnd, style: CableStyle) => void;
-  /** Changes the cable stored on this plug from its menu: type, color, its ends' plugs and jack labels (one undo step). */
+  /** Changes the cable stored on this plug from its menu: its type or its ends' plugs (one undo step). */
   editCable: (stored: PlugEnd, edit: CableEdit) => void;
   /**
    * Sets the hand-placed shape of the cable stored on this plug, or null to route it automatically again. One undo

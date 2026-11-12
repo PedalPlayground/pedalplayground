@@ -310,15 +310,16 @@ export function App() {
                 !phoneSized && !plugEditing && <ObjectMenu />
               )}
               {/* While plugs are being edited, their panel takes the menus' place. */}
-              {cablesOpen ? (
-                <CablePanel />
-              ) : plugEditing ? (
+              {/* Signal Flow's bar sits at the bottom, in Add Gear's place. */}
+              {plugEditing ? (
                 <PlugPanel />
               ) : (
-                <>
-                  <SelectionMiniMenu />
-                  <ChosenMiniMenu />
-                </>
+                !cablesOpen && (
+                  <>
+                    <SelectionMiniMenu />
+                    <ChosenMiniMenu />
+                  </>
+                )
               )}
               <ContextMenu />
             </>
@@ -339,8 +340,9 @@ export function App() {
             // Stays put when the gear panel opens; the panel sits above it where the two meet on narrower screens.
             className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 z-30 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
+            {cablesOpen && mode === "playground" && <CablePanel />}
             {wide ? (
-              !viewing && <AddGearButton onClick={withTool("add_gear", "toolbar", () => setSearchOpen(replacing || editing ? true : !searchOpen))} />
+              !viewing && !cablesOpen && <AddGearButton onClick={withTool("add_gear", "toolbar", () => setSearchOpen(replacing || editing ? true : !searchOpen))} />
             ) : (
               <Toolbar viewOnly={viewing} onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
             )}

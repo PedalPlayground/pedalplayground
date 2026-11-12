@@ -38,8 +38,8 @@ export const CABLE_KINDS: CableKindInfo[] = [
 ];
 export const cableKindInfo = (k: CableKind | undefined) => CABLE_KINDS.find((c) => c.kind === k) ?? CABLE_KINDS[0];
 
-/** A cable's type. */
-export type CableStyle = Pick<PlugLink, "kind">;
+/** A cable's type, and for a new cable, the plugs it gets (the type's usual one if it doesn't take this one). */
+export type CableStyle = Pick<PlugLink, "kind"> & { plug?: PlugType };
 
 /** A plug's role in the signal, read from where it sits on the pedal. */
 export type PlugRole = "in" | "out" | null;
@@ -126,7 +126,7 @@ export function wire(items: Item[], a: WireEnd, b: WireEnd, style: CableStyle = 
   const place = (e: WireEnd): PlugEnd => {
     if (isPlugEnd(e)) return e;
     const id = newPlugId();
-    next = next.map((i) => (i.id === e.item ? { ...i, plugs: [...(i.plugs ?? []), { id, side: e.side, at: e.at, type: defaultPlugFor(style.kind) }] } : i));
+    next = next.map((i) => (i.id === e.item ? { ...i, plugs: [...(i.plugs ?? []), { id, side: e.side, at: e.at, type: style.plug && cableKindInfo(style.kind).plugs.includes(style.plug) ? style.plug : defaultPlugFor(style.kind) }] } : i));
     return { item: e.item, plug: id };
   };
   const pa = place(a);
