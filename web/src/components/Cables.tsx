@@ -21,7 +21,7 @@ import {
   type RoutedCable,
   type WireEnd,
 } from "../lib/cables";
-import { Link2, Link2Off, Pencil, Plus, Trash2 } from "lucide-react";
+import { Link2, Link2Off, Pencil, Plus, Trash2, Unplug } from "lucide-react";
 import { canvasImageUrl } from "../lib/catalog";
 import { findJacks, type JackHint } from "../lib/jackFinder";
 import { useCatalog } from "../store/catalog";
@@ -375,6 +375,21 @@ function pickEnd(end: WireEnd) {
   }
 }
 
+/**
+ * Unplugs one end of a cable to move it: the cable comes out, and a new one in its type and color starts from its
+ * other end and follows the pointer until it's plugged in somewhere (Esc drops it; undo puts the old one back).
+ */
+function liftEnd(end: PlugEnd) {
+  const store = usePlayground.getState();
+  const cable = boardCables(store.items).find((c) => sameEnd(c.from, end) || sameEnd(c.to, end));
+  if (!cable) return;
+  const other = sameEnd(cable.from, end) ? cable.to : cable.from;
+  store.clearSelection();
+  store.unplug([cable.stored]);
+  const pick = useCablePick.getState();
+  pick.set({ plug: other, cable: null, style: { kind: cable.kind, color: cable.color } });
+}
+
 /** Where a wire end's cable leaves the pedal, in world inches, and which way. */
 function endAnchor(items: Item[], end: WireEnd) {
   const item = items.find((i) => i.id === end.item);
@@ -461,6 +476,8 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
   const r = HANDLE_PX / 2 / zoom;
   const box = (at: Pt) => ({ left: at[0] * PX_PER_INCH - r * 1.6, top: at[1] * PX_PER_INCH - r * 1.6, width: r * 3.2, height: r * 3.2 });
   // The hovered pedal shows its points, and so does the pedal the cable starts from.
+  // Plugs with a cable, either end, by cableId.
+  const connected = useMemo(() => new Set(boardCables(items).flatMap((c) => [cableId(c.from), cableId(c.to)])), [items]);
   // A picked pedal shows only its own points (and the start's); otherwise the hovered pedal does.
   const focus = useFocusPedal(items);
   const shown = new Set([focus ?? pointer.over, start?.item].filter(Boolean) as string[]);
@@ -501,30 +518,40 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
           const end: PlugEnd = { item: item.id, plug: p.id };
           const key = `${item.id}:${p.id}`;
           const on = !!start && sameWireEnd(start, end);
+          const wired = connected.has(cableId(end));
+          // A plugged-in jack offers to unplug: its icon sits on the middle of the plug head. Running a cable to it
+          // still connects there instead.
+          const lift = wired && !start;
+          const a = plugAnchor(item, p);
+          const mid: Pt = lift ? [a.at[0] - (a.dir[0] * plugBox(p.type).out) / 2, a.at[1] - (a.dir[1] * plugBox(p.type).out) / 2] : a.at;
           return (
             <button
               key={key}
               type="button"
-              aria-label={p.link ? "Rewire this plug" : "Wire this plug"}
+              aria-label={lift ? "Unplug and move this end" : wired ? "Connect here instead" : "Wire this plug"}
+              {...(lift ? tip("Unplug", { side: "bottom" }) : {})}
               className="absolute grid place-items-center rounded-full outline-none"
-              style={box(plugAnchor(item, p).at)}
+              style={box(mid)}
               onPointerEnter={() => setHover(key)}
               onPointerLeave={() => setHover((h) => (h === key ? null : h))}
               onPointerDown={(e) => e.stopPropagation()}
-              onClick={() => pickEnd(end)}
+              onClick={() => (lift ? liftEnd(end) : pickEnd(end))}
             >
-              {p.link ? (
+              {lift ? (
                 <span
-                  className="block rounded-full transition-transform"
+                  className="grid place-items-center rounded-full transition-transform"
                   style={{
-                    width: r * 2,
-                    height: r * 2,
-                    background: on ? "var(--color-brand)" : "#fff",
-                    border: `${2 / zoom}px solid ${on ? "#fff" : "var(--color-brand)"}`,
-                    boxShadow: on ? `0 0 0 ${3 / zoom}px color-mix(in srgb, var(--color-brand) 35%, transparent)` : undefined,
-                    transform: on || hover === key ? "scale(1.25)" : undefined,
+                    width: r * 2.2,
+                    height: r * 2.2,
+                    background: "#fff",
+                    color: "var(--color-brand)",
+                    border: `${1.5 / zoom}px solid var(--color-brand)`,
+                    boxShadow: "0 1px 3px rgb(0 0 0 / 0.3)",
+                    transform: hover === key ? "scale(1.25)" : undefined,
                   }}
-                />
+                >
+                  <Unplug size={r * 1.5} strokeWidth={2.5} />
+                </span>
               ) : (
                 // A plug with no cable yet looks like any other place to start one.
                 <PlusFace r={r} zoom={zoom} on={on} big={on || hover === key} />
