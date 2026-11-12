@@ -4,22 +4,36 @@
  * direction, for the board drawing and, later, the signal flow map. Pure functions, no React.
  */
 import { plugAnchor, routeCable, type CableRoute, type PlugAnchor, type RouteOptions } from "./cableRoute";
-import { DEFAULT_PLUG, newPlugId, type CableKind, type ManualLegs, type Plug, type PlugEnd, type PlugLink, type PlugSide } from "./plugs";
+import { jackLabel, jacksFor, matchingJack } from "./jacks";
+import { newPlugId, type CableKind, type ManualLegs, type Plug, type PlugEnd, type PlugLink, type PlugSide, type PlugType } from "./plugs";
 import type { Pt } from "./cableRoute";
 import type { Item } from "./types";
 
+export interface CableKindInfo {
+  kind: CableKind;
+  label: string;
+  line: "solid" | "double" | "dotted" | "dashdot" | "dashed";
+  /** Line width, as a share of an audio cable's. */
+  width: number;
+  /** The plugs this kind of cable comes with; the first is what new plugs get. */
+  plugs: PlugType[];
+}
+
+const QUARTER: PlugType[] = ["sp400", "angle", "pancake"];
+
 /**
  * Cable types and how each draws. Line style tells them apart, so color stays free for the user: audio is solid
- * (stereo doubled), control cables are dotted, MIDI is dash-dot and anything else dashed.
+ * (stereo doubled), control cables are dotted, MIDI is dash-dot and anything else dashed. Power is solid and thinner.
  */
-export const CABLE_KINDS: { kind: CableKind; label: string; line: "solid" | "double" | "dotted" | "dashdot" | "dashed" }[] = [
-  { kind: "mono", label: "Mono", line: "solid" },
-  { kind: "stereo", label: "Stereo", line: "double" },
-  { kind: "midi", label: "MIDI", line: "dashdot" },
-  { kind: "exp", label: "Expression", line: "dotted" },
-  { kind: "tap", label: "Tap Tempo", line: "dotted" },
-  { kind: "switching", label: "Switching", line: "dotted" },
-  { kind: "other", label: "Other", line: "dashed" },
+export const CABLE_KINDS: CableKindInfo[] = [
+  { kind: "mono", label: "Mono", line: "solid", width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "stereo", label: "Stereo", line: "double", width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "midi", label: "MIDI", line: "dashdot", width: 1, plugs: ["din", "sp400", "angle", "pancake", "mini"] },
+  { kind: "exp", label: "Expression", line: "dotted", width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "tap", label: "Tap Tempo", line: "dotted", width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "switching", label: "Switching", line: "dotted", width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "power", label: "Power", line: "solid", width: 0.7, plugs: ["barrel"] },
+  { kind: "other", label: "Other", line: "dashed", width: 1, plugs: [...QUARTER, "mini", "barrel", "din"] },
 ];
 export const cableKindInfo = (k: CableKind | undefined) => CABLE_KINDS.find((c) => c.kind === k) ?? CABLE_KINDS[0];
 
@@ -66,11 +80,17 @@ function across(item: Item, plug: Plug) {
   return x / item.width;
 }
 
+/** What new plugs on this kind of cable are. */
+export const defaultPlugFor = (kind: CableKind | undefined) => cableKindInfo(kind).plugs[0];
+
 /**
- * Pedals run right to left: the input on the right (right side, or the top's right half), the output on the left.
- * This reads the pedal's own face, so it holds whatever way the pedal is turned. A plug dead center can't tell.
+ * A labeled jack says which way it goes (an output, a MIDI In). Otherwise pedals run right to left: the input on the
+ * right (right side, or the top's right half), the output on the left. This reads the pedal's own face, so it holds
+ * whatever way the pedal is turned. An unlabeled plug dead center can't tell.
  */
 export function plugRole(item: Item, plug: Plug): PlugRole {
+  const label = jackLabel(plug.jack);
+  if (label) return label.role;
   const a = across(item, plug);
   if (Math.abs(a - 0.5) < 0.02) return null;
   return a > 0.5 ? "in" : "out";
@@ -122,7 +142,7 @@ export function wire(items: Item[], a: WireEnd, b: WireEnd, style: CableStyle = 
   const place = (e: WireEnd): PlugEnd => {
     if (isPlugEnd(e)) return e;
     const id = newPlugId();
-    next = next.map((i) => (i.id === e.item ? { ...i, plugs: [...(i.plugs ?? []), { id, side: e.side, at: e.at, type: DEFAULT_PLUG }] } : i));
+    next = next.map((i) => (i.id === e.item ? { ...i, plugs: [...(i.plugs ?? []), { id, side: e.side, at: e.at, type: defaultPlugFor(style.kind) }] } : i));
     return { item: e.item, plug: id };
   };
   const pa = place(a);
@@ -151,6 +171,82 @@ export function connectPlugs(items: Item[], a: PlugEnd, b: PlugEnd, style: Cable
   if (sameEnd(a, b)) return items;
   const link: PlugLink = { item: b.item, plug: b.plug, ...(style.kind && style.kind !== "mono" ? { kind: style.kind } : {}), ...(style.color ? { color: style.color } : {}) };
   return unplug(items, [a, b]).map((i) => (i.id === a.item && i.plugs ? { ...i, plugs: i.plugs.map((p) => (p.id === a.plug ? { ...p, link } : p)) } : i));
+}
+
+/** A change to one cable from its menu: any of its type, color, the ends' plugs and jack labels. */
+export interface CableEdit {
+  kind?: CableKind;
+  color?: string;
+  /** Set the two ends' plug types apart (true) or lock them together again (false: both take the stored end's). */
+  split?: boolean;
+  /** One end's plug type; both ends' while they're locked together. */
+  plug?: { end: PlugEnd; type: PlugType };
+  /** One end's jack label, or null to clear it. An unlabeled other end gets the matching label. */
+  jack?: { end: PlugEnd; id: string | null };
+}
+
+/**
+ * Applies a menu change to the cable stored on `stored`. A new type swaps out plugs and jack labels it doesn't take.
+ * Returns the items unchanged if the cable isn't there.
+ */
+export function editCable(items: Item[], stored: PlugEnd, edit: CableEdit): Item[] {
+  const host = items.find((i) => i.id === stored.item)?.plugs?.find((p) => p.id === stored.plug);
+  const link = host?.link;
+  if (!host || !link) return items;
+  const other: PlugEnd = { item: link.item, plug: link.plug };
+  const far = items.find((i) => i.id === other.item)?.plugs?.find((p) => p.id === other.plug);
+  if (!far) return items;
+  const kind = edit.kind ?? link.kind ?? "mono";
+  const allowed = cableKindInfo(kind).plugs;
+  const split = edit.split ?? !!link.split;
+
+  // Work out each end's new plug fields, then write them.
+  const ends = [
+    { end: stored, plug: host },
+    { end: other, plug: far },
+  ].map(({ end, plug }) => ({ end, type: plug.type, jack: plug.jack }));
+  const [a, b] = ends;
+  if (edit.plug) {
+    for (const e of ends) if (!split || sameEnd(e.end, edit.plug.end)) e.type = edit.plug.type;
+  }
+  if (edit.split === false) b.type = a.type;
+  for (const e of ends) if (!allowed.includes(e.type)) e.type = !split && allowed.includes(a.type) ? a.type : allowed[0];
+  if (edit.jack) {
+    const mine = ends.find((e) => sameEnd(e.end, edit.jack!.end));
+    const theirs = ends.find((e) => e !== mine);
+    if (mine && theirs) {
+      mine.jack = edit.jack.id ?? undefined;
+      const match = edit.jack.id ? matchingJack(edit.jack.id) : undefined;
+      if (!theirs.jack && match && jacksFor(kind).some((j) => j.id === match)) theirs.jack = match;
+    }
+  }
+  const fits = new Set(jacksFor(kind).map((j) => j.id));
+  for (const e of ends) if (e.jack && !fits.has(e.jack)) e.jack = undefined;
+
+  const newLink: PlugLink = { ...link };
+  if (edit.kind) {
+    if (edit.kind === "mono") delete newLink.kind;
+    else newLink.kind = edit.kind;
+  }
+  if (edit.color) newLink.color = edit.color;
+  if (split) newLink.split = true;
+  else delete newLink.split;
+
+  return items.map((i) => {
+    const mine = ends.filter((e) => e.end.item === i.id);
+    if (!mine.length || !i.plugs) return i;
+    return {
+      ...i,
+      plugs: i.plugs.map((p) => {
+        const e = mine.find((x) => x.end.plug === p.id);
+        if (!e) return p;
+        const { jack: _, ...rest } = p;
+        const next: Plug = { ...rest, type: e.type, ...(e.jack ? { jack: e.jack } : {}) };
+        if (sameEnd(e.end, stored)) next.link = newLink;
+        return next;
+      }),
+    };
+  });
 }
 
 /** Copies of plugs carry no cables (a copied pedal starts unwired). */

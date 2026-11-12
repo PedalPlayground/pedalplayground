@@ -10,17 +10,19 @@ import {
   isPlugEnd,
   corners,
   DEFAULT_CABLE_COLOR,
+  defaultPlugFor,
   moveLeg,
   routeBoardCables,
   toManual,
+  type BoardCable,
+  type CableEdit,
   type CableStyle,
   type RoutedCable,
   type WireEnd,
 } from "../lib/cables";
-import { Plus } from "lucide-react";
+import { Link2, Link2Off, Plus } from "lucide-react";
 import { canvasImageUrl } from "../lib/catalog";
 import { findJacks, type JackHint } from "../lib/jackFinder";
-import { DEFAULT_PLUG } from "../lib/plugs";
 import { useCatalog } from "../store/catalog";
 import { ColorSwatches } from "./CustomItemForm";
 import { LabeledSelect } from "./LabeledSelect";
@@ -33,7 +35,10 @@ import type { Item } from "../lib/types";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
 import { withTool } from "../lib/analytics";
-import { barPanel } from "./toolbarStyles";
+import { barIconActive, barIconIdle, barPanel } from "./toolbarStyles";
+import { tip } from "./Tooltip";
+import { jacksFor } from "../lib/jacks";
+import { knownType, PLUG_TYPES, type PlugType } from "../lib/plugs";
 
 /** Cable width: 5px at 100% zoom, in inches, so it scales with the board like the gear does. */
 const WIDTH = 5 / PX_PER_INCH;
@@ -52,8 +57,8 @@ const GLOW_WIDTH = 14 / PX_PER_INCH;
  * them), dotted, dash-dot or dashed. Dashes are in cable widths, so they keep their look at any zoom.
  */
 function CableLine({ id, d, kind, color }: { id: string; d: string; kind: CableKind; color: string }) {
-  const line = cableKindInfo(kind).line;
-  const w = WIDTH;
+  const { line, width } = cableKindInfo(kind);
+  const w = WIDTH * width;
   const common = { d, fill: "none", stroke: color, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
   if (line === "double") {
     const mask = `cable-gap-${id.replace(/[^a-z0-9-]/gi, "")}`;
@@ -312,7 +317,7 @@ function pickEnd(end: WireEnd) {
 function endAnchor(items: Item[], end: WireEnd) {
   const item = items.find((i) => i.id === end.item);
   if (!item) return null;
-  const plug = isPlugEnd(end) ? item.plugs?.find((p) => p.id === end.plug) : { id: "", side: end.side, at: end.at, type: DEFAULT_PLUG };
+  const plug = isPlugEnd(end) ? item.plugs?.find((p) => p.id === end.plug) : { id: "", side: end.side, at: end.at, type: defaultPlugFor(useCablePick.getState().style.kind) };
   return plug ? plugAnchor(item, plug) : null;
 }
 
@@ -478,7 +483,7 @@ export function CablePanel() {
   /** Sets the type or color: on the picked cable, and for the cables made next. */
   const restyle = (patch: Partial<Required<CableStyle>>) => {
     set({ style: { ...style, ...patch } });
-    if (picked) usePlayground.getState().setCableStyle(picked.stored, patch);
+    if (picked) usePlayground.getState().editCable(picked.stored, patch);
   };
 
   useEffect(() => {
@@ -560,7 +565,73 @@ export function CablePanel() {
           options={CABLE_KINDS.map((k) => [k.kind, k.label] as const)}
           onChange={(k) => restyle({ kind: k })}
         />
+      </div>
+      {picked && <CableEnds cable={picked} items={items} />}
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line px-1 pt-2">
         <ColorSwatches color={color} presets={CABLE_COLOR_PRESETS} onChange={(hex) => restyle({ color: hex })} />
+      </div>
+    </div>
+  );
+}
+
+/**
+ * The picked cable's two ends, under its type: each end's jack label, and the plugs. The plugs are locked together
+ * (one choice for both) until unlocked; the choices are the plugs the cable's type comes with.
+ */
+function CableEnds({ cable, items }: { cable: BoardCable; items: Item[] }) {
+  const edit = (e: CableEdit) => usePlayground.getState().editCable(cable.stored, e);
+  const plugOf = (end: PlugEnd) => items.find((i) => i.id === end.item)?.plugs?.find((p) => p.id === end.plug);
+  const nameOf = (end: PlugEnd) => items.find((i) => i.id === end.item)?.label ?? "";
+  const split = !!plugOf(cable.stored)?.link?.split;
+  const plugOptions = cableKindInfo(cable.kind).plugs.map((t) => [t, PLUG_TYPES[t].label] as const);
+  const jackOptions = [["", "Not set"] as const, ...jacksFor(cable.kind).map((j) => [j.id, j.label, j.group] as const)];
+  const ends = [
+    { title: "From", end: cable.from },
+    { title: "To", end: cable.to },
+  ];
+  const fromType = knownType(plugOf(cable.from)?.type ?? "sp400");
+  return (
+    <div className="flex flex-col gap-1.5 border-t border-line px-1 pt-2">
+      <div className="flex items-center gap-2">
+        {!split && <LabeledSelect<PlugType> label="Plugs" value={fromType} options={plugOptions} onChange={(t) => edit({ plug: { end: cable.from, type: t } })} />}
+        {split && <span className="text-sm font-semibold">Plugs:</span>}
+        <button
+          type="button"
+          aria-pressed={!split}
+          aria-label={split ? "Use the same plug on both ends" : "Pick each end's plug"}
+          {...tip(split ? "Same Plug on Both Ends" : "Pick Each End's Plug", { side: "bottom" })}
+          onClick={() => edit({ split: !split })}
+          className={`press grid size-7 place-items-center rounded-control outline-none focus-visible:ring-2 focus-visible:ring-brand ${split ? barIconIdle : barIconActive}`}
+        >
+          {split ? <Link2Off size={15} /> : <Link2 size={15} />}
+        </button>
+      </div>
+      <div className="flex flex-col gap-1">
+        {ends.map(({ title, end }) => {
+          const plug = plugOf(end);
+          return (
+            <div key={title} className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span className="flex w-28 min-w-0 items-baseline gap-2">
+                <span className="w-9 shrink-0 text-xs font-semibold uppercase tracking-wide text-ink-muted">{title}</span>
+                <span className="truncate text-sm">{nameOf(end)}</span>
+              </span>
+              <LabeledSelect<string>
+                label="Jack"
+                value={plug?.jack ?? ""}
+                options={jackOptions}
+                onChange={(id) => edit({ jack: { end, id: id || null } })}
+              />
+              {split && (
+                <LabeledSelect<PlugType>
+                  label="Plug"
+                  value={knownType(plug?.type ?? "sp400")}
+                  options={plugOptions}
+                  onChange={(t) => edit({ plug: { end, type: t } })}
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

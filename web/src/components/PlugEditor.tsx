@@ -393,7 +393,7 @@ function PlugMiniMenu({
   const b = jacksOnScreen(item, picked, view);
   const size = touch ? 44 : 32;
   const H = size + 8;
-  const halfW = (4 * size + 3 * 2 + 12 + 9) / 2;
+  const halfW = ((PLUG_ORDER.length + 1) * size + PLUG_ORDER.length * 2 + 12 + 9) / 2;
   const cx = Math.min(Math.max((b.left + b.right) / 2, halfW + 8), viewport.w - halfW - 8);
   const below = b.bottom + MENU_GAP;
   const y = below + H > viewport.h - (touch ? 84 : 8) ? Math.max(8, b.top - MENU_GAP - H) : below;

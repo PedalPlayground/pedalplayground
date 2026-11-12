@@ -4,7 +4,7 @@
  */
 
 export type PlugSide = "top" | "right" | "bottom" | "left";
-export type PlugType = "sp400" | "angle" | "pancake";
+export type PlugType = "sp400" | "angle" | "pancake" | "mini" | "barrel" | "din";
 
 export interface Plug {
   id: string;
@@ -12,6 +12,8 @@ export interface Plug {
   /** Where along the side, in inches: from the left end for top and bottom, from the top for left and right. */
   at: number;
   type: PlugType;
+  /** What the jack is, from JACK_LABELS in lib/jacks.ts (like "output.stereo.trs"). Missing means unlabeled. */
+  jack?: string;
   /** The plug at the other end of this plug's cable (see lib/cables.ts). A cable is stored on one of its ends only. */
   link?: PlugLink;
 }
@@ -23,9 +25,11 @@ export interface PlugLink extends PlugEnd {
   kind?: CableKind;
   /** The cable's color (hex). Missing means the default gray. */
   color?: string;
+  /** True once the two ends' plug types were set apart; until then changing one changes both. */
+  split?: boolean;
 }
 
-export type CableKind = "mono" | "stereo" | "midi" | "exp" | "tap" | "switching" | "other";
+export type CableKind = "mono" | "stereo" | "midi" | "exp" | "tap" | "switching" | "power" | "other";
 
 /**
  * A hand-placed cable shape, from this plug to the other: the legs alternate horizontal and vertical starting with
@@ -54,7 +58,7 @@ export interface PlugSpec {
 
 /** How a plug drawing sits: its size, where the body starts (the barrel's left of it goes into the jack), and the barrel's centerline. */
 export interface PlugArtSpec {
-  name: "rean-down" | "sp400-down" | "pancake-down";
+  name: "rean-down" | "sp400-down" | "pancake-down" | "mini-down" | "barrel-down" | "din-down";
   w: number;
   h: number;
   /** Where the body starts along the barrel: the edge of the pedal. */
@@ -70,12 +74,16 @@ export const PLUG_TYPES: Record<PlugType, PlugSpec> = {
   sp400: { label: "Slim right-angle (SP400)", art: { name: "sp400-down", w: 189, h: 75, x0: 143, cy: 37.5 } },
   angle: { label: "Right-angle ¼″ (Rean)", art: { name: "rean-down", w: 217, h: 57, x0: 145, cy: 28.5 } },
   pancake: { label: "Pancake", art: { name: "pancake-down", w: 200, h: 115, x0: 143, cy: 57.5 } },
+  // Placeholders until Trav's drawings: a 3.5 mm right-angle, a DC right-angle, a right-angle 5-pin MIDI.
+  mini: { label: "Right-angle 3.5 mm", art: { name: "mini-down", w: 125, h: 45, x0: 75, cy: 22.5 } },
+  barrel: { label: "DC right-angle (2.1 mm)", art: { name: "barrel-down", w: 112, h: 50, x0: 50, cy: 25 } },
+  din: { label: "MIDI 5-pin (DIN)", art: { name: "din-down", w: 170, h: 100, x0: 65, cy: 50 } },
 };
-export const PLUG_ORDER: PlugType[] = ["sp400", "angle", "pancake"];
+export const PLUG_ORDER: PlugType[] = ["sp400", "angle", "pancake", "mini", "barrel", "din"];
 /** What new plugs are until another type is picked. */
 export const DEFAULT_PLUG: PlugType = "sp400";
 
-/** A stored type that's no longer offered (straight, DC and MIDI, Nov 2026) shows as the default plug. */
+/** A stored type that's no longer offered (the old straight, "dc" and "midi" plugs, Nov 2026) shows as the default plug. */
 export const knownType = (t: string): PlugType => (t in PLUG_TYPES ? (t as PlugType) : DEFAULT_PLUG);
 
 /** How much barrel is drawn into the jack, in inches. Plugs sit under the pedal, so it shows only where the photo lets it. */

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { boardCables, connectPlugs, fromManual, moveLeg, plugRole, routeBoardCables, toManual, unplug, wire, withoutLinks } from "./cables";
+import { boardCables, connectPlugs, editCable, fromManual, moveLeg, plugRole, routeBoardCables, toManual, unplug, wire, withoutLinks } from "./cables";
 import type { Plug } from "./plugs";
 import type { Item } from "./types";
 
@@ -186,5 +186,36 @@ describe("wire", () => {
     const [c] = boardCables(items);
     expect(c.from.item).toBe("a");
     expect(c.to).toEqual({ item: "b", plug: "in" });
+  });
+});
+
+describe("editCable", () => {
+  const wired = () => connectPlugs([pedal("a", 0, io()), pedal("b", 5, io())], { item: "a", plug: "out" }, { item: "b", plug: "in" });
+  const types = (items: Item[]) => [items[0].plugs![1].type, items[1].plugs![0].type];
+
+  it("changes both plugs while locked, and one end once split", () => {
+    let items = editCable(wired(), { item: "a", plug: "out" }, { plug: { end: { item: "b", plug: "in" }, type: "pancake" } });
+    expect(types(items)).toEqual(["pancake", "pancake"]);
+    items = editCable(items, { item: "a", plug: "out" }, { split: true });
+    items = editCable(items, { item: "a", plug: "out" }, { plug: { end: { item: "b", plug: "in" }, type: "angle" } });
+    expect(types(items)).toEqual(["pancake", "angle"]);
+    items = editCable(items, { item: "a", plug: "out" }, { split: false });
+    expect(types(items)).toEqual(["pancake", "pancake"]);
+  });
+
+  it("a power cable takes power plugs and drops jack labels that don't fit", () => {
+    let items = editCable(wired(), { item: "a", plug: "out" }, { jack: { end: { item: "a", plug: "out" }, id: "output.mono" } });
+    items = editCable(items, { item: "a", plug: "out" }, { kind: "power" });
+    expect(types(items)).toEqual(["barrel", "barrel"]);
+    expect(items[0].plugs![1].jack).toBeUndefined();
+    expect(boardCables(items)[0].kind).toBe("power");
+  });
+
+  it("labels the other end to match, and the labels set the direction", () => {
+    // Labeled against where the plugs sit: b's right-side jack is the output.
+    let items = connectPlugs([pedal("a", 0, io()), pedal("b", 5, io())], { item: "a", plug: "in" }, { item: "b", plug: "in" }, { kind: "stereo" });
+    items = editCable(items, { item: "a", plug: "in" }, { jack: { end: { item: "b", plug: "in" }, id: "output.stereo.trs" } });
+    expect(items[0].plugs![0].jack).toBe("input.stereo.trs");
+    expect(boardCables(items)[0].from.item).toBe("b");
   });
 });
