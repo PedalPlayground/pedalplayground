@@ -50,8 +50,9 @@ const CORNER = 0.3;
 /** Side-by-side spacing for cables sharing a run. */
 const SPACING = 0.3;
 
-/** How far the glow under a hovered or picked cable reaches past its edges, in inches. */
-const GLOW = 2 / PX_PER_INCH;
+/** The halo around a hovered or picked cable or plug: a white line to set it apart, then a brand line, in inches. */
+const HALO_WHITE = 1.5 / PX_PER_INCH;
+const HALO_LINE = 2 / PX_PER_INCH;
 
 /**
  * One cable's line in its type's style: solid, double (two thin lines, cut with a mask so the board shows between
@@ -264,18 +265,19 @@ export function CableLayer({ items }: { items: Item[] }) {
           const lit = (open || pickable) && (hover === c.id || picked === c.id);
           return (
             <g key={c.id}>
-              {/* Hover and pick show as a soft glow under the cable, so it works for every color and line style. */}
-              {lit && (
-                <path
-                  d={d}
-                  fill="none"
-                  stroke="var(--color-brand)"
-                  strokeOpacity={picked === c.id ? 0.55 : 0.35}
-                  strokeWidth={WIDTH * cableKindInfo(c.kind).width + 2 * GLOW}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              )}
+              {/* Hover and pick show as a halo under the cable (white, then brand), so it works for every color and line style. */}
+              {lit &&
+                [HALO_WHITE + HALO_LINE, HALO_WHITE].map((out, k) => (
+                  <path
+                    key={k}
+                    d={d}
+                    fill="none"
+                    stroke={k ? "#fff" : "var(--color-brand)"}
+                    strokeWidth={WIDTH * cableKindInfo(c.kind).width + 2 * out}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                ))}
               <CableLine id={c.id} d={d} kind={c.kind} color={c.color} />
               {(open || pickable) && (
                 <path
@@ -594,19 +596,20 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
                 key={key}
                 type="button"
                 aria-label="Select this jack"
-                className="absolute cursor-pointer rounded-[3px] outline-none"
+                className="absolute cursor-pointer outline-none"
                 style={{
-                  left: b.left * PX_PER_INCH - 2 / zoom,
-                  top: b.top * PX_PER_INCH - 2 / zoom,
-                  width: (b.right - b.left) * PX_PER_INCH + 4 / zoom,
-                  height: (b.bottom - b.top) * PX_PER_INCH + 4 / zoom,
-                  boxShadow: lit ? `0 0 0 ${2 / zoom}px color-mix(in srgb, var(--color-brand) ${picked ? 85 : 45}%, transparent)` : undefined,
+                  left: b.left * PX_PER_INCH,
+                  top: b.top * PX_PER_INCH,
+                  width: (b.right - b.left) * PX_PER_INCH,
+                  height: (b.bottom - b.top) * PX_PER_INCH,
                 }}
                 onPointerEnter={() => setHover(key)}
                 onPointerLeave={() => setHover((h) => (h === key ? null : h))}
                 onPointerDown={(e) => e.stopPropagation()}
                 onClick={() => pickJack(end)}
-              />
+              >
+                {lit && <PlugHalo box={plugHead(item, p)} origin={b} />}
+              </button>
             );
           }
           // The plug's head (and a little around it) takes the click, with its arrow on the plug itself.
@@ -960,6 +963,30 @@ function EdgePlus({ at, pointer, r, zoom, dir, way, onPick }: { at: Pt; pointer:
 
 const plugRect = plugHead;
 
+type InchBox = { left: number; top: number; right: number; bottom: number };
+/**
+ * The halo around a hovered or picked plug, hugging its head like the gear's selection halo: a white line to part it
+ * from the pedal, then a brand line. `origin` is the box of the element it's drawn in.
+ */
+function PlugHalo({ box, origin }: { box: InchBox; origin: InchBox }) {
+  const s = PX_PER_INCH;
+  const white = HALO_WHITE * s;
+  return (
+    <span
+      aria-hidden
+      className="pointer-events-none absolute"
+      style={{
+        left: (box.left - origin.left) * s,
+        top: (box.top - origin.top) * s,
+        width: (box.right - box.left) * s,
+        height: (box.bottom - box.top) * s,
+        borderRadius: 3,
+        boxShadow: `0 0 0 ${white}px #fff, 0 0 0 ${white + HALO_LINE * s}px var(--color-brand)`,
+      }}
+    />
+  );
+}
+
 /** A pedal's plugs as click targets on the board (outside the tools): a click picks the plug. Shows hover and pick. */
 export function PlugTargets({ item }: { item: Item }) {
   const chosen = useCablePick((p) => p.chosen);
@@ -977,21 +1004,17 @@ export function PlugTargets({ item }: { item: Item }) {
             key={p.id}
             type="button"
             aria-label="Plug"
-            className="absolute cursor-pointer rounded-[3px] outline-none"
-            style={{
-              left: r.left * s - 2,
-              top: r.top * s - 2,
-              width: (r.right - r.left) * s + 4,
-              height: (r.bottom - r.top) * s + 4,
-              boxShadow: lit ? `0 0 0 2px color-mix(in srgb, var(--color-brand) ${on ? 80 : 45}%, transparent)` : undefined,
-            }}
+            className="absolute cursor-pointer outline-none"
+            style={{ left: r.left * s, top: r.top * s, width: (r.right - r.left) * s, height: (r.bottom - r.top) * s }}
             onPointerEnter={() => setHover(p.id)}
             onPointerLeave={() => setHover((h) => (h === p.id ? null : h))}
             onPointerDown={(e) => {
               e.stopPropagation();
               choose({ plug: { item: item.id, plug: p.id } });
             }}
-          />
+          >
+            {lit && <PlugHalo box={r} origin={r} />}
+          </button>
         );
       })}
     </>
