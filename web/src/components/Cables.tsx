@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { create } from "zustand";
-import { plugAnchor, roundedPath, toLocal } from "../lib/cableRoute";
+import { plugAnchor, plugHead, roundedPath, toLocal } from "../lib/cableRoute";
 import {
   boardCables,
   CABLE_COLOR_PRESETS,
@@ -31,7 +31,7 @@ import { openHints, withMiddles } from "./PlugEditor";
 import type { CableKind } from "../lib/plugs";
 import type { Pt } from "../lib/cableRoute";
 import { itemBounds, PX_PER_INCH } from "../lib/geometry";
-import type { Plug, PlugEnd } from "../lib/plugs";
+import type { PlugEnd } from "../lib/plugs";
 import type { Item } from "../lib/types";
 import { usePlayground } from "../store/playground";
 import { SHOW_CABLES, useUi } from "../store/ui";
@@ -188,6 +188,15 @@ function pressCable(e: React.PointerEvent<Element>, c: RoutedCable, k?: number) 
   if (!canvas) return;
   const pts = corners(c.route.points);
   const start = worldAt(e, canvas);
+  // Which way each end's plug points, so a moved end run can turn right at the plug when that's not into the jack.
+  const items = usePlayground.getState().items;
+  const dirOf = (end: PlugEnd) => {
+    const item = items.find((i) => i.id === end.item);
+    const plug = item?.plugs?.find((p) => p.id === end.plug);
+    return item && plug ? plugAnchor(item, plug).dir : undefined;
+  };
+  const [d0, d1] = [dirOf(c.from), dirOf(c.to)];
+  const plugDirs = d0 && d1 ? { start: d0, end: d1 } : undefined;
   const leg = k ?? nearestLeg(pts, start);
   const horizontal = Math.abs(pts[leg][1] - pts[leg + 1][1]) < 1e-6;
   const from = horizontal ? pts[leg][1] : pts[leg][0];
@@ -206,7 +215,7 @@ function pressCable(e: React.PointerEvent<Element>, c: RoutedCable, k?: number) 
     const p = worldAt(ev, canvas);
     // Snap to 1/16 inch, like plugs, so runs line up neatly.
     const to = Math.round(((horizontal ? p[1] : p[0]) - grab) * 16) / 16;
-    let next = moveLeg(pts, leg, to);
+    let next = moveLeg(pts, leg, to, 0.25, plugDirs);
     // Stored from the plug the cable lives on, which may be its far end.
     if (c.stored !== c.from) next = [...next].reverse();
     usePlayground.getState().setCableLegs(c.stored, toManual(next), false);
@@ -495,12 +504,15 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
     );
   const edge = overItem && near && !taken ? { item: overItem, ...near } : null;
   const from = start ? endAnchor(items, start) : null;
-  // The cable being run: straight out of its jack, then one corner to the pointer, in the type's style.
+  // The cable being run: one corner from the plug to the pointer, in the type's style.
   let preview: string | null = null;
   if (from && pointer.at) {
-    const lead: Pt = [from.at[0] + from.dir[0] * 0.25, from.at[1] + from.dir[1] * 0.25];
-    const corner: Pt = from.dir[0] !== 0 ? [pointer.at[0], lead[1]] : [lead[0], pointer.at[1]];
-    preview = roundedPath(corners([from.at, lead, corner, pointer.at]), CORNER);
+    // One corner from the plug's end, first along the plug unless that heads back into the jack.
+    const [fx, fy] = from.at;
+    const back = from.dir[0] !== 0 ? Math.sign(pointer.at[0] - fx) === -from.dir[0] : Math.sign(pointer.at[1] - fy) === -from.dir[1];
+    const alongX = (from.dir[0] !== 0) !== back;
+    const corner: Pt = alongX ? [pointer.at[0], fy] : [fx, pointer.at[1]];
+    preview = roundedPath(corners([from.at, corner, pointer.at]), CORNER);
   }
   return (
     <>
@@ -814,18 +826,7 @@ function EdgePlus({ at, pointer, r, zoom, on, onPick }: { at: Pt; pointer: Pt; r
   );
 }
 
-/** A plug head's box in world inches: from the pedal's edge out to the cable end, as wide as the head. */
-function plugRect(item: Item, plug: Plug) {
-  const a = plugAnchor(item, plug);
-  const box = plugBox(plug.type);
-  const half = Math.max(-box.left, box.right);
-  const e: Pt = [a.at[0] - a.dir[0] * box.out, a.at[1] - a.dir[1] * box.out];
-  const xs = [a.at[0], e[0]];
-  const ys = [a.at[1], e[1]];
-  if (a.dir[0] === 0) xs.push(a.at[0] - half, a.at[0] + half);
-  else ys.push(a.at[1] - half, a.at[1] + half);
-  return { left: Math.min(...xs), top: Math.min(...ys), right: Math.max(...xs), bottom: Math.max(...ys) };
-}
+const plugRect = plugHead;
 
 /** A pedal's plugs as click targets on the board (outside the tools): a click picks the plug. Shows hover and pick. */
 export function PlugTargets({ item }: { item: Item }) {

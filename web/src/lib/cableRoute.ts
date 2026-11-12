@@ -27,7 +27,7 @@ export interface CableRoute {
 export interface RouteOptions {
   /** How far cables keep from pedals, in inches. */
   clearance: number;
-  /** How far a cable runs straight out of the plug before it may turn. */
+  /** How far a cable runs straight out of the plug before it may turn (0: it may turn right at the plug's end). */
   lead: number;
   /** What a bend costs, in inches of extra cable: higher means fewer, longer legs. */
   bend: number;
@@ -38,7 +38,7 @@ export interface RouteOptions {
   offBoardCost: number;
 }
 
-export const ROUTE_DEFAULTS: RouteOptions = { clearance: 0.25, lead: 0.25, bend: 1.5, nearCost: 4, underCost: 25, offBoardCost: 2.5 };
+export const ROUTE_DEFAULTS: RouteOptions = { clearance: 0.25, lead: 0, bend: 1.5, nearCost: 4, underCost: 25, offBoardCost: 2.5 };
 
 /** Turns a point in an item's own (unrotated, unflipped) box into world inches: flip about the center, then rotate. */
 function toWorld(item: Item, [x, y]: Pt, vector = false): Pt {
@@ -52,6 +52,19 @@ function toWorld(item: Item, [x, y]: Pt, vector = false): Pt {
   const rx = dx * c - dy * s;
   const ry = dx * s + dy * c;
   return vector ? [rx, ry] : [item.x + item.width / 2 + rx, item.y + item.height / 2 + ry];
+}
+
+/** A plug head's box in world inches: from the pedal's edge out to the cable end, as wide as the head. */
+export function plugHead(item: Item, plug: Plug): Box {
+  const a = plugAnchor(item, plug);
+  const box = plugBox(plug.type);
+  const half = Math.max(-box.left, box.right);
+  const e: Pt = [a.at[0] - a.dir[0] * box.out, a.at[1] - a.dir[1] * box.out];
+  const xs = [a.at[0], e[0]];
+  const ys = [a.at[1], e[1]];
+  if (a.dir[0] === 0) xs.push(a.at[0] - half, a.at[0] + half);
+  else ys.push(a.at[1] - half, a.at[1] + half);
+  return { left: Math.min(...xs), top: Math.min(...ys), right: Math.max(...xs), bottom: Math.max(...ys) };
 }
 
 /** The inverse of toWorld: a world point in an item's own (unrotated, unflipped) box. */
@@ -84,7 +97,7 @@ export function plugAnchor(item: Item, plug: Plug): PlugAnchor {
   return { at: [e[0] + d[0] * out, e[1] + d[1] * out], dir: d };
 }
 
-interface Box {
+export interface Box {
   left: number;
   top: number;
   right: number;
@@ -94,12 +107,19 @@ interface Box {
 const inside = (b: Box, x: number, y: number) => x > b.left + 1e-9 && x < b.right - 1e-9 && y > b.top + 1e-9 && y < b.bottom - 1e-9;
 const grow = (b: Box, d: number): Box => ({ left: b.left - d, top: b.top - d, right: b.right + d, bottom: b.bottom + d });
 
+/** Sorted values with near-equal ones merged, keeping each first value exactly (so plug lines stay exact). */
+function dedupe(values: number[]) {
+  const out: number[] = [];
+  for (const n of [...values].sort((a, b) => a - b)) if (!out.length || n - out[out.length - 1] > 1e-6) out.push(n);
+  return out;
+}
+
 /** Sorted, de-duplicated coordinates, plus the middle of each gap so cables can run down the center of a channel. */
 function lines(values: number[]) {
-  const v = [...new Set(values.map((n) => Math.round(n * 1000) / 1000))].sort((a, b) => a - b);
+  const v = dedupe(values);
   const all = [...v];
   for (let i = 1; i < v.length; i++) all.push((v[i - 1] + v[i]) / 2);
-  return [...new Set(all)].sort((a, b) => a - b);
+  return dedupe(all);
 }
 
 /** A tiny binary heap of [cost, state] for the path search. */
@@ -156,7 +176,15 @@ const dirIndex = ([x, y]: Dir) => DIRS.findIndex((d) => d[0] === Math.sign(x) &&
  * plugs exactly and run down the middle of gaps. Bends cost extra; running near or under a pedal costs more but is
  * allowed, so there's always a route, and the legs under a pedal are marked.
  */
-export function routeCable(from: PlugAnchor, to: PlugAnchor, obstacles: Item[], opts: Partial<RouteOptions> = {}, boards: Item[] = []): CableRoute {
+export function routeCable(
+  from: PlugAnchor,
+  to: PlugAnchor,
+  obstacles: Item[],
+  opts: Partial<RouteOptions> = {},
+  boards: Item[] = [],
+  /** Other plugs' heads (see plugHead): cables keep off them like they keep clear of pedals. */
+  heads: Box[] = [],
+): CableRoute {
   const o = { ...ROUTE_DEFAULTS, ...opts };
   const solid = obstacles.map(itemBounds);
   const padded = solid.map((b) => grow(b, o.clearance));
@@ -167,7 +195,7 @@ export function routeCable(from: PlugAnchor, to: PlugAnchor, obstacles: Item[], 
   // The search area: everything involved, with room to go around the outside.
   const xsRaw = [a[0], b[0], from.at[0], to.at[0]];
   const ysRaw = [a[1], b[1], from.at[1], to.at[1]];
-  for (const p of padded) xsRaw.push(p.left, p.right), ysRaw.push(p.top, p.bottom);
+  for (const p of [...padded, ...heads]) xsRaw.push(p.left, p.right), ysRaw.push(p.top, p.bottom);
   const margin = 1;
   const minX = Math.min(...xsRaw) - margin;
   const maxX = Math.max(...xsRaw) + margin;
@@ -177,29 +205,34 @@ export function routeCable(from: PlugAnchor, to: PlugAnchor, obstacles: Item[], 
   const ys = lines([...ysRaw, minY, maxY]);
   const nx = xs.length;
   const ny = ys.length;
-  const find = (arr: number[], v: number) => arr.findIndex((n) => Math.abs(n - v) < 1e-3);
+  const find = (arr: number[], v: number) => arr.findIndex((n) => Math.abs(n - v) < 1e-6);
   const start = find(ys, a[1]) * nx + find(xs, a[0]);
   const goal = find(ys, b[1]) * nx + find(xs, b[0]);
 
   /** What a leg between two neighboring grid points costs per inch, and whether it's under a pedal. */
   const legCost = (x: number, y: number) => {
     if (solid.some((s) => inside(s, x, y))) return o.underCost;
-    if (padded.some((s) => inside(s, x, y))) return o.nearCost;
+    if (padded.some((s) => inside(s, x, y)) || heads.some((s) => inside(s, x, y))) return o.nearCost;
     if (decks.length && !decks.some((s) => inside(s, x, y))) return o.offBoardCost;
     return 1;
   };
 
+  // A cable may leave its plug any way but back into the jack, and arrive at the other from any side but out of its
+  // jack. With a lead, it first runs straight out, so it leaves heading that way.
   const startDir = dirIndex(from.dir);
-  // The cable must arrive heading into the end plug, the opposite of the way that plug points.
-  const endDir = dirIndex([-to.dir[0], -to.dir[1]]);
+  const intoStart = (startDir + 2) % 4;
+  const outOfEnd = dirIndex(to.dir);
+  const endDir = (outOfEnd + 2) % 4;
   const states = nx * ny * 4;
   const best = new Float64Array(states).fill(Infinity);
   const prev = new Int32Array(states).fill(-1);
   const heap = new Heap();
-  const s0 = start * 4 + startDir;
-  best[s0] = 0;
   const h = (node: number) => Math.abs(xs[node % nx] - b[0]) + Math.abs(ys[Math.floor(node / nx)] - b[1]);
-  heap.push(h(start), s0);
+  for (let d = 0; d < 4; d++) {
+    if (d === intoStart || (o.lead > 0 && d !== startDir)) continue;
+    best[start * 4 + d] = 0;
+    heap.push(h(start), start * 4 + d);
+  }
   let done = -1;
   while (heap.size) {
     const [f, s] = heap.pop();
@@ -207,7 +240,7 @@ export function routeCable(from: PlugAnchor, to: PlugAnchor, obstacles: Item[], 
     if (f - h(s >> 2) > g + 1e-9) continue;
     const node = s >> 2;
     const d = s & 3;
-    // Arriving facing the wrong way already paid for one more bend into the plug, so the first arrival is the best.
+    // Any extra bend into the plug was paid on arrival, so the first arrival is the best.
     if (node === goal) {
       done = s;
       break;
@@ -222,7 +255,10 @@ export function routeCable(from: PlugAnchor, to: PlugAnchor, obstacles: Item[], 
       const len = Math.abs(xs[jx] - xs[ix]) + Math.abs(ys[jy] - ys[iy]);
       const cost = len * legCost((xs[jx] + xs[ix]) / 2, (ys[jy] + ys[iy]) / 2) + (nd === d ? 0 : o.bend);
       const next = (jy * nx + jx) * 4 + nd;
-      const total = g + cost + (jy * nx + jx === goal && nd !== endDir ? o.bend : 0);
+      const atGoal = jy * nx + jx === goal;
+      // Never out of the end jack; with a lead, only straight into it (turning in costs a bend).
+      if (atGoal && nd === outOfEnd) continue;
+      const total = g + cost + (atGoal && o.lead > 0 && nd !== endDir ? o.bend : 0);
       if (total < best[next] - 1e-9) {
         best[next] = total;
         prev[next] = s;
@@ -231,7 +267,7 @@ export function routeCable(from: PlugAnchor, to: PlugAnchor, obstacles: Item[], 
     }
   }
 
-  // Walk back from the goal, then add the straight runs into each plug.
+  // Walk back from the goal, then add the straight runs into each plug (if there's a lead).
   const path: Pt[] = [];
   for (let s = done; s >= 0; s = prev[s]) {
     const node = s >> 2;

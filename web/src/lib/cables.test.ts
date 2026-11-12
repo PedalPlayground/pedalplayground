@@ -121,6 +121,21 @@ describe("hand-placed legs", () => {
     moved.slice(1).forEach(([x, y], i) => expect(x === moved[i][0] || y === moved[i][1]).toBe(true));
   });
 
+  it("moving an end run adds just one corner at the plug when the cable can leave that way", () => {
+    // The plug at (0, 0) points left, the one at (9, 3) right; moving the first run down to y = 1 turns at the plug.
+    const moved = moveLeg(Z, 0, 1, 0.25, { start: [-1, 0], end: [1, 0] });
+    expect(moved).toEqual([
+      [0, 0],
+      [0, 1],
+      [4, 1],
+      [4, 3],
+      [9, 3],
+    ]);
+    // A plug pointing up can't jog down, back into its jack: it keeps the lead.
+    const blocked = moveLeg(Z, 0, 1, 0.25, { start: [0, -1], end: [1, 0] });
+    expect(blocked[1]).toEqual([0.25, 0]);
+  });
+
   it("round-trips through the stored form, and follows the plugs when they move", () => {
     const legs = toManual(Z);
     expect(legs).toEqual({ first: "h", at: [4] });
@@ -159,7 +174,9 @@ describe("hand-placed legs", () => {
     // Stored on b's input; the signal runs a → b.
     items = connectPlugs(items, { item: "b", plug: "in" }, { item: "a", plug: "out" });
     const [auto] = routeBoardCables(items);
-    let pts = moveLeg(auto.route.points, 0, 7);
+    const route = auto.route.points;
+    const k = route.findIndex((p, i) => i < route.length - 1 && p[1] === route[i + 1][1]);
+    let pts = moveLeg(route, k, 7);
     pts = [...pts].reverse();
     items = items.map((i) => (i.id === "b" ? { ...i, plugs: i.plugs!.map((p) => (p.link ? { ...p, link: { ...p.link, legs: toManual(pts) } } : p)) } : i));
     const [manual] = routeBoardCables(items);

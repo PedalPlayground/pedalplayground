@@ -86,12 +86,12 @@ describe("routeCable", () => {
     expect(r.points.some(([, y]) => y < -1 || y > 6)).toBe(true);
   });
 
-  it("joins top jacks with a run above the pedals", () => {
+  it("joins top jacks with one straight run across their ends", () => {
     const a = pedal("a", 0, 0);
     const b = pedal("b", 4, 0);
     const r = routeCable(plugAnchor(a, plug("top", 1.3)), plugAnchor(b, plug("top", 1.3)), [a, b]);
     checkOrthogonal(r);
-    expect(r.points.length).toBe(4);
+    expect(r.points.length).toBe(2);
     expect(r.under.some(Boolean)).toBe(false);
   });
 
@@ -104,6 +104,16 @@ describe("routeCable", () => {
     checkOrthogonal(r);
     expect(r.under.some(Boolean)).toBe(true);
   });
+});
+
+it("leaves a plug sideways rather than adding corners", () => {
+  // A right jack and a bottom jack below it: one corner, turning at the right jack's end.
+  const a = pedal("a", 0, 0);
+  const b = pedal("b", 6, 8);
+  const r = routeCable(plugAnchor(a, plug("right", 2)), plugAnchor(b, plug("bottom", 1)), [a, b]);
+  checkOrthogonal(r);
+  expect(r.points.length).toBeLessThanOrEqual(4);
+  expect(r.under.some(Boolean)).toBe(false);
 });
 
 describe("roundedPath", () => {

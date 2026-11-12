@@ -3,7 +3,7 @@
  * it moves, saves and undoes with the items. This file turns those links into a plain list of cables with a signal
  * direction, for the board drawing and, later, the signal flow map. Pure functions, no React.
  */
-import { plugAnchor, routeCable, type CableRoute, type PlugAnchor, type RouteOptions } from "./cableRoute";
+import { plugAnchor, plugHead, routeCable, type CableRoute, type PlugAnchor, type RouteOptions } from "./cableRoute";
 import { jackLabel, jacksFor, matchingJack } from "./jacks";
 import { newPlugId, type CableKind, type ManualLegs, type Plug, type PlugEnd, type PlugLink, type PlugSide, type PlugType } from "./plugs";
 import type { Pt } from "./cableRoute";
@@ -270,8 +270,13 @@ export function routeBoardCables(items: Item[], opts: Partial<RouteOptions> & { 
     const item = byId.get(e.item)!;
     return plugAnchor(item, item.plugs!.find((p) => p.id === e.plug)!);
   };
+  // Every plug's head, so cables don't run over other plugs.
+  const heads = pedals.flatMap((i) => (i.plugs ?? []).map((p) => ({ id: cableId({ item: i.id, plug: p.id }), box: plugHead(i, p) })));
   const routed = boardCables(items).map((c) => {
-    if (!c.legs) return { ...c, route: routeCable(anchor(c.from), anchor(c.to), pedals, opts, boards) };
+    if (!c.legs) {
+      const others = heads.filter((h) => h.id !== cableId(c.from) && h.id !== cableId(c.to)).map((h) => h.box);
+      return { ...c, route: routeCable(anchor(c.from), anchor(c.to), pedals, opts, boards, others) };
+    }
     // A hand-placed shape is stored from the stored plug's end; draw it from `from` like the rest.
     const reversed = c.from !== c.stored;
     const pts = fromManual(anchor(c.stored).at, anchor(reversed ? c.from : c.to).at, c.legs);
@@ -287,9 +292,9 @@ export function routeBoardCables(items: Item[], opts: Partial<RouteOptions> & { 
 }
 
 /**
- * Cables that share a run would draw as one. This spreads overlapping inner legs (never the legs into the plugs)
- * side by side, `spacing` apart, centered on the shared line. Moving a leg sideways only stretches its neighbours,
- * so every route stays orthogonal. Changes the routes in place.
+ * Cables that share a run would draw as one. This spreads overlapping legs side by side, `spacing` apart, centered on
+ * the shared line. Moving a leg sideways only stretches its neighbours, so every route stays orthogonal; a leg that
+ * ends at a plug gets a short jog there, so the plug end stays put. Changes the routes in place.
  */
 export function separate(routes: CableRoute[], spacing: number) {
   for (const axis of [0, 1] as const) {
@@ -298,7 +303,7 @@ export function separate(routes: CableRoute[], spacing: number) {
     type Leg = { r: CableRoute; i: number; at: number; lo: number; hi: number };
     const legs: Leg[] = [];
     for (const r of routes) {
-      for (let i = 1; i < r.points.length - 2; i++) {
+      for (let i = 0; i < r.points.length - 1; i++) {
         const p = r.points[i];
         const q = r.points[i + 1];
         if (Math.abs(p[fixed] - q[fixed]) > 1e-6) continue;
@@ -307,6 +312,7 @@ export function separate(routes: CableRoute[], spacing: number) {
     }
     // Group legs on the same line whose spans overlap, then fan each group out.
     const seen = new Set<Leg>();
+    const moves: { leg: Leg; shift: number }[] = [];
     for (const leg of legs) {
       if (seen.has(leg)) continue;
       const group = [leg];
@@ -322,12 +328,26 @@ export function separate(routes: CableRoute[], spacing: number) {
       }
       if (group.length < 2) continue;
       // Order by where the legs come from, so neighbours don't cross on their way in.
-      group.sort((a, b) => a.r.points[a.i - 1][fixed] - b.r.points[b.i - 1][fixed]);
-      group.forEach((g, n) => {
-        const shift = (n - (group.length - 1) / 2) * spacing;
-        g.r.points[g.i] = (axis === 0 ? [g.r.points[g.i][0], g.at + shift] : [g.at + shift, g.r.points[g.i][1]]);
-        g.r.points[g.i + 1] = (axis === 0 ? [g.r.points[g.i + 1][0], g.at + shift] : [g.at + shift, g.r.points[g.i + 1][1]]);
-      });
+      const from = (g: Leg) => g.r.points[g.i > 0 ? g.i - 1 : g.i + 1][fixed];
+      group.sort((a, b) => from(a) - from(b));
+      group.forEach((g, n) => moves.push({ leg: g, shift: (n - (group.length - 1) / 2) * spacing }));
+    }
+    // Apply from the last leg of each route back, so adding a jog doesn't renumber legs still to move.
+    moves.sort((a, b) => b.leg.i - a.leg.i);
+    for (const { leg, shift } of moves) {
+      const pts = leg.r.points;
+      let i = leg.i;
+      // The jogs at the plugs are new legs of their own, out in the open.
+      if (i + 1 === pts.length - 1) {
+        pts.push([...pts[i + 1]] as Pt);
+        leg.r.under.push(false);
+      }
+      if (i === 0) {
+        pts.unshift([...pts[0]] as Pt);
+        leg.r.under.unshift(false);
+        i = 1;
+      }
+      for (const j of [i, i + 1]) pts[j] = axis === 0 ? [pts[j][0], leg.at + shift] : [leg.at + shift, pts[j][1]];
     }
   }
 }
@@ -373,9 +393,11 @@ export function fromManual(start: Pt, end: Pt, legs: ManualLegs): Pt[] {
 
 /**
  * Moves leg `k` of a route sideways to `to` (a y for a horizontal leg, an x for a vertical one), keeping it orthogonal.
- * The legs into the plugs keep a short straight `lead` out of the jack and gain a jog, so a cable never leaves a plug sideways.
+ * Moving a leg into a plug adds one corner at the plug, as long as that doesn't send the cable back into the jack;
+ * then it keeps a short straight `lead` out of the plug first. `plugs` gives the way each end's plug points; without
+ * it, every moved end leg gets the lead.
  */
-export function moveLeg(points: Pt[], k: number, to: number, lead = 0.25): Pt[] {
+export function moveLeg(points: Pt[], k: number, to: number, lead = 0.25, plugs?: { start: Pt; end: Pt }): Pt[] {
   const pts = corners(points).map((p) => [...p] as Pt);
   const n = pts.length;
   const h = Math.abs(pts[k][1] - pts[k + 1][1]) < EPS;
@@ -386,9 +408,18 @@ export function moveLeg(points: Pt[], k: number, to: number, lead = 0.25): Pt[] 
     const d = Math.min(lead, len / 3);
     return [a[0] + ((b[0] - a[0]) / len) * d, a[1] + ((b[1] - a[1]) / len) * d];
   };
-  const head: Pt[] = k === 0 ? [pts[0], toward(pts[0], pts[1])] : pts.slice(0, k);
-  const tail: Pt[] = k + 1 === n - 1 ? [toward(pts[n - 1], pts[n - 2]), pts[n - 1]] : pts.slice(k + 2);
-  const a = k === 0 ? head[1] : pts[k];
+  /** Whether a jog straight from plug end `p` to the moved line would head back into its jack (`dir` points out of it). */
+  const intoJack = (p: Pt, dir: Pt | undefined) => {
+    if (!dir) return true;
+    const q = set(p);
+    const [dx, dy] = [Math.sign(q[0] - p[0]), Math.sign(q[1] - p[1])];
+    return dx === -Math.sign(dir[0]) && dy === -Math.sign(dir[1]);
+  };
+  const leadStart = k === 0 && intoJack(pts[0], plugs?.start);
+  const leadEnd = k + 1 === n - 1 && intoJack(pts[n - 1], plugs?.end);
+  const head: Pt[] = k === 0 ? (leadStart ? [pts[0], toward(pts[0], pts[1])] : [pts[0]]) : pts.slice(0, k);
+  const tail: Pt[] = k + 1 === n - 1 ? (leadEnd ? [toward(pts[n - 1], pts[n - 2]), pts[n - 1]] : [pts[n - 1]]) : pts.slice(k + 2);
+  const a = k === 0 ? head[head.length - 1] : pts[k];
   const b = k + 1 === n - 1 ? tail[0] : pts[k + 1];
   return corners([...head, set(a), set(b), ...tail]);
 }
