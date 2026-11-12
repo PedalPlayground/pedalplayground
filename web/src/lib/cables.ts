@@ -4,7 +4,6 @@
  * direction, for the board drawing and, later, the signal flow map. Pure functions, no React.
  */
 import { ROUTE_DEFAULTS, busyLegs, cableEnd, plugHead, routeCable, type BusyLeg, type CableRoute, type PlugAnchor, type RouteOptions } from "./cableRoute";
-import { jackLabel, jacksFor, matchingJack } from "./jacks";
 import { newPlugId, type CableKind, type ManualLegs, type Plug, type PlugEnd, type PlugLink, type PlugSide, type PlugType } from "./plugs";
 import type { Pt } from "./cableRoute";
 import type { Item } from "./types";
@@ -12,7 +11,8 @@ import type { Item } from "./types";
 export interface CableKindInfo {
   kind: CableKind;
   label: string;
-  line: "solid" | "double" | "dotted" | "dashdot" | "dashed";
+  /** Every cable is one solid line in its type's color. */
+  color: string;
   /** Line width, as a share of an audio cable's. */
   width: number;
   /** The plugs this kind of cable comes with; the first is what new plugs get. */
@@ -21,38 +21,25 @@ export interface CableKindInfo {
 
 const QUARTER: PlugType[] = ["sp400", "angle", "pancake"];
 
-/**
- * Cable types and how each draws. Line style tells them apart, so color stays free for the user: audio is solid
- * (stereo doubled), control cables are dotted, MIDI is dash-dot and anything else dashed. Power is solid and thinner.
- */
+/** Gray for audio and control cables, red for power. */
+const GRAY = "#8b9099";
+const RED = "#e5484d";
+
+/** Cable types and how each draws: one solid line, gray, or red and thinner for power. */
 export const CABLE_KINDS: CableKindInfo[] = [
-  { kind: "mono", label: "Mono", line: "solid", width: 1, plugs: [...QUARTER, "mini"] },
-  { kind: "stereo", label: "Stereo", line: "double", width: 1, plugs: [...QUARTER, "mini"] },
-  { kind: "midi", label: "MIDI", line: "dashdot", width: 1, plugs: ["din", "sp400", "angle", "pancake", "mini"] },
-  { kind: "exp", label: "Expression", line: "dotted", width: 1, plugs: [...QUARTER, "mini"] },
-  { kind: "tap", label: "Tap Tempo", line: "dotted", width: 1, plugs: [...QUARTER, "mini"] },
-  { kind: "switching", label: "Switching", line: "dotted", width: 1, plugs: [...QUARTER, "mini"] },
-  { kind: "power", label: "Power", line: "solid", width: 0.5, plugs: ["barrel"] },
-  { kind: "other", label: "Other", line: "dashed", width: 1, plugs: [...QUARTER, "mini", "barrel", "din"] },
+  { kind: "mono", label: "Mono", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "stereo", label: "Stereo", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "midi", label: "MIDI", color: GRAY, width: 1, plugs: ["din", "sp400", "angle", "pancake", "mini"] },
+  { kind: "exp", label: "Expression", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "tap", label: "Tap Tempo", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "switching", label: "Switching", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "power", label: "Power", color: RED, width: 0.5, plugs: ["barrel"] },
+  { kind: "other", label: "Other", color: GRAY, width: 1, plugs: [...QUARTER, "mini", "barrel", "din"] },
 ];
 export const cableKindInfo = (k: CableKind | undefined) => CABLE_KINDS.find((c) => c.kind === k) ?? CABLE_KINDS[0];
 
-/** New cables are gray until the user picks a color. */
-export const DEFAULT_CABLE_COLOR = "#8b9099";
-export const CABLE_COLOR_PRESETS: { name: string; hex: string }[] = [
-  { name: "Gray", hex: DEFAULT_CABLE_COLOR },
-  { name: "Black", hex: "#25272c" },
-  { name: "White", hex: "#eceef1" },
-  { name: "Red", hex: "#e5484d" },
-  { name: "Orange", hex: "#f2883a" },
-  { name: "Yellow", hex: "#f2c94c" },
-  { name: "Green", hex: "#46a758" },
-  { name: "Blue", hex: "#3e8ee8" },
-  { name: "Purple", hex: "#8e6cef" },
-];
-
-/** A cable's look and type: what's set on it, with the defaults filled in. */
-export type CableStyle = Pick<PlugLink, "kind" | "color">;
+/** A cable's type. */
+export type CableStyle = Pick<PlugLink, "kind">;
 
 /** A plug's role in the signal, read from where it sits on the pedal. */
 export type PlugRole = "in" | "out" | null;
@@ -84,13 +71,10 @@ function across(item: Item, plug: Plug) {
 export const defaultPlugFor = (kind: CableKind | undefined) => cableKindInfo(kind).plugs[0];
 
 /**
- * A labeled jack says which way it goes (an output, a MIDI In). Otherwise pedals run right to left: the input on the
- * right (right side, or the top's right half), the output on the left. This reads the pedal's own face, so it holds
- * whatever way the pedal is turned. An unlabeled plug dead center can't tell.
+ * Pedals run right to left: the input on the right (right side, or the top's right half), the output on the left.
+ * This reads the pedal's own face, so it holds whatever way the pedal is turned. A plug dead center can't tell.
  */
 export function plugRole(item: Item, plug: Plug): PlugRole {
-  const label = jackLabel(plug.jack);
-  if (label) return label.role;
   const a = across(item, plug);
   if (Math.abs(a - 0.5) < 0.02) return null;
   return a > 0.5 ? "in" : "out";
@@ -121,7 +105,7 @@ export function boardCables(items: Item[]): BoardCable[] {
         to: reversed ? here : there,
         stored: here,
         kind: plug.link.kind ?? "mono",
-        color: plug.link.color ?? DEFAULT_CABLE_COLOR,
+        color: cableKindInfo(plug.link.kind).color,
         ...(plug.link.legs ? { legs: plug.link.legs } : {}),
       });
     }
@@ -166,27 +150,38 @@ export function unplug(items: Item[], ends: PlugEnd[]): Item[] {
   });
 }
 
-/** Wires two plugs together. A jack takes one cable, so any cable already on either plug is unplugged first. */
-export function connectPlugs(items: Item[], a: PlugEnd, b: PlugEnd, style: CableStyle = {}): Item[] {
-  if (sameEnd(a, b)) return items;
-  const link: PlugLink = { item: b.item, plug: b.plug, ...(style.kind && style.kind !== "mono" ? { kind: style.kind } : {}), ...(style.color ? { color: style.color } : {}) };
-  return unplug(items, [a, b]).map((i) => (i.id === a.item && i.plugs ? { ...i, plugs: i.plugs.map((p) => (p.id === a.plug ? { ...p, link } : p)) } : i));
+/**
+ * Takes out every cable on these plugs, with the plugs at both its ends: a cable and its plugs are one unit. Plugs in
+ * `keep` stay (unwired). Unchanged items keep their identity.
+ */
+export function removeCables(items: Item[], ends: PlugEnd[], keep: PlugEnd[] = []): Item[] {
+  const gone = boardCables(items).filter((c) => ends.some((e) => sameEnd(e, c.from) || sameEnd(e, c.to)));
+  if (!gone.length) return items;
+  const drop = gone.flatMap((c) => [c.from, c.to]).filter((e) => !keep.some((k) => sameEnd(k, e)));
+  const unwired = unplug(items, gone.map((c) => c.stored));
+  return unwired.map((i) =>
+    i.plugs && drop.some((d) => d.item === i.id) ? { ...i, plugs: i.plugs.filter((p) => !drop.some((d) => sameEnd(d, { item: i.id, plug: p.id }))) } : i,
+  );
 }
 
-/** A change to one cable from its menu: any of its type, color, the ends' plugs and jack labels. */
+/** Wires two plugs together. A jack takes one cable, so any cable already on either plug comes out first (with its far plug). */
+export function connectPlugs(items: Item[], a: PlugEnd, b: PlugEnd, style: CableStyle = {}): Item[] {
+  if (sameEnd(a, b)) return items;
+  const link: PlugLink = { item: b.item, plug: b.plug, ...(style.kind && style.kind !== "mono" ? { kind: style.kind } : {}) };
+  return removeCables(items, [a, b], [a, b]).map((i) => (i.id === a.item && i.plugs ? { ...i, plugs: i.plugs.map((p) => (p.id === a.plug ? { ...p, link } : p)) } : i));
+}
+
+/** A change to one cable from its menu: its type, or the ends' plugs. */
 export interface CableEdit {
   kind?: CableKind;
-  color?: string;
   /** Set the two ends' plug types apart (true) or lock them together again (false: both take the stored end's). */
   split?: boolean;
   /** One end's plug type; both ends' while they're locked together. */
   plug?: { end: PlugEnd; type: PlugType };
-  /** One end's jack label, or null to clear it. An unlabeled other end gets the matching label. */
-  jack?: { end: PlugEnd; id: string | null };
 }
 
 /**
- * Applies a menu change to the cable stored on `stored`. A new type swaps out plugs and jack labels it doesn't take.
+ * Applies a menu change to the cable stored on `stored`. A new type swaps out plugs it doesn't take.
  * Returns the items unchanged if the cable isn't there.
  */
 export function editCable(items: Item[], stored: PlugEnd, edit: CableEdit): Item[] {
@@ -204,31 +199,21 @@ export function editCable(items: Item[], stored: PlugEnd, edit: CableEdit): Item
   const ends = [
     { end: stored, plug: host },
     { end: other, plug: far },
-  ].map(({ end, plug }) => ({ end, type: plug.type, jack: plug.jack }));
+  ].map(({ end, plug }) => ({ end, type: plug.type }));
   const [a, b] = ends;
   if (edit.plug) {
     for (const e of ends) if (!split || sameEnd(e.end, edit.plug.end)) e.type = edit.plug.type;
   }
   if (edit.split === false) b.type = a.type;
   for (const e of ends) if (!allowed.includes(e.type)) e.type = !split && allowed.includes(a.type) ? a.type : allowed[0];
-  if (edit.jack) {
-    const mine = ends.find((e) => sameEnd(e.end, edit.jack!.end));
-    const theirs = ends.find((e) => e !== mine);
-    if (mine && theirs) {
-      mine.jack = edit.jack.id ?? undefined;
-      const match = edit.jack.id ? matchingJack(edit.jack.id) : undefined;
-      if (!theirs.jack && match && jacksFor(kind).some((j) => j.id === match)) theirs.jack = match;
-    }
-  }
-  const fits = new Set(jacksFor(kind).map((j) => j.id));
-  for (const e of ends) if (e.jack && !fits.has(e.jack)) e.jack = undefined;
 
   const newLink: PlugLink = { ...link };
   if (edit.kind) {
     if (edit.kind === "mono") delete newLink.kind;
     else newLink.kind = edit.kind;
   }
-  if (edit.color) newLink.color = edit.color;
+  // Colors come from the type now; drop any picked before.
+  delete newLink.color;
   if (split) newLink.split = true;
   else delete newLink.split;
 
@@ -241,7 +226,7 @@ export function editCable(items: Item[], stored: PlugEnd, edit: CableEdit): Item
         const e = mine.find((x) => x.end.plug === p.id);
         if (!e) return p;
         const { jack: _, ...rest } = p;
-        const next: Plug = { ...rest, type: e.type, ...(e.jack ? { jack: e.jack } : {}) };
+        const next: Plug = { ...rest, type: e.type };
         if (sameEnd(e.end, stored)) next.link = newLink;
         return next;
       }),
@@ -262,7 +247,16 @@ export interface RoutedCable extends BoardCable {
 }
 
 /** Routes every cable around the pedals, keeping to the pedalboards where it can, then eases apart runs that would lie on top of each other. */
-export function routeBoardCables(items: Item[], opts: Partial<RouteOptions> & { spacing?: number } = {}): RoutedCable[] {
+export function routeBoardCables(
+  items: Item[],
+  opts: Partial<RouteOptions> & {
+    spacing?: number;
+    /** Routes to keep as they are for automatic cables, by cable id (nothing they go around has moved). */
+    reuse?: Map<string, CableRoute>;
+    /** A rough, fast pass (while gear is dragged): one routing each, not around the other cables, not spread apart. */
+    quick?: boolean;
+  } = {},
+): RoutedCable[] {
   const byId = new Map(items.map((i) => [i.id, i]));
   const pedals = items.filter((i) => i.kind === "pedal");
   const boards = items.filter((i) => i.kind === "pedalboard");
@@ -288,12 +282,17 @@ export function routeBoardCables(items: Item[], opts: Partial<RouteOptions> & { 
   // Automatic cables keep out of each other's way: each is routed beside the ones already placed, then each again
   // beside all the others, so an early cable can make room for a later one.
   const legsOf = (skip: RoutedCable) => routed.filter((r) => r !== skip && r.route.points.length).flatMap((r) => busyLegs(r.route.points));
-  for (let pass = 0; pass < 2; pass++) for (const r of routed) if (!r.legs) r.route = auto(r, legsOf(r));
+  const fresh: RoutedCable[] = [];
+  for (const r of routed) {
+    if (r.legs) continue;
+    const kept = opts.reuse?.get(r.id);
+    if (kept) r.route = kept;
+    else fresh.push(r);
+  }
+  if (!fresh.length) return routed;
+  for (let pass = 0; pass < (opts.quick ? 1 : 2); pass++) for (const r of fresh) r.route = auto(r, opts.quick ? [] : legsOf(r));
   // Hand-placed cables stay exactly where they were put; only automatic ones step aside.
-  separate(
-    routed.filter((r) => !r.legs).map((r) => r.route),
-    opts.spacing ?? 0.2,
-  );
+  if (!opts.quick) separate(fresh.map((r) => r.route), opts.spacing ?? 0.2);
   return routed;
 }
 

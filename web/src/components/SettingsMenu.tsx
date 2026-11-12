@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { importAny } from "../lib/importers";
 import { usePlayground } from "../store/playground";
 import { BETA, FEEDBACK_URL } from "../lib/beta";
-import { useUi } from "../store/ui";
+import { SHOW_CABLES, useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { CreditMenuItems } from "./MadeBy";
 import { barIconButton } from "./toolbarStyles";
@@ -74,7 +74,7 @@ export function Segmented<T extends string>({
 
 /** The cog in the canvas's lower-right corner. `className` positions its floating panel. */
 export function SettingsMenu({ className = "" }: { className?: string }) {
-  const { snapping, setSnapping, startTour } = useUi();
+  const { snapping, setSnapping, startTour, show, setShow } = useUi();
   const fileInput = useRef<HTMLInputElement>(null);
 
   const exportFile = () => {
@@ -138,6 +138,24 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
             Snapping
             <Switch on={snapping} label="Snapping" />
           </Dropdown.Item>
+          {SHOW_CABLES && (
+            <>
+              <Dropdown.Separator className="my-1 h-px bg-line" />
+              <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Show</Dropdown.Label>
+              {(
+                [
+                  ["cables", "Cables"],
+                  ["plugs", "Plugs"],
+                  ["boards", "Pedalboards"],
+                ] as const
+              ).map(([layer, label]) => (
+                <Dropdown.Item key={layer} className={menuItem} onSelect={(e) => (e.preventDefault(), setShow(layer, !show[layer]))}>
+                  {label}
+                  <Switch on={show[layer]} label={label} />
+                </Dropdown.Item>
+              ))}
+            </>
+          )}
           {/* Units and appearance moved to the account menu (or the menu beside Sign in), so every page has them. */}
           <Dropdown.Separator className="my-1 h-px bg-line" />
           <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Help</Dropdown.Label>

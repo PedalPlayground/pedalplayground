@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { boardCables, connectPlugs, editCable, fromManual, moveLeg, plugRole, routeBoardCables, toManual, unplug, wire, withoutLinks } from "./cables";
+import { boardCables, connectPlugs, editCable, removeCables, fromManual, moveLeg, plugRole, routeBoardCables, toManual, unplug, wire, withoutLinks } from "./cables";
 import type { Plug } from "./plugs";
 import type { Item } from "./types";
 
@@ -186,11 +186,23 @@ describe("hand-placed legs", () => {
 });
 
 describe("cable style", () => {
-  it("defaults to gray mono and keeps a picked type and color", () => {
+  it("defaults to gray mono; power is red", () => {
     let items = connectPlugs([pedal("a", 0, io()), pedal("b", 5, io())], { item: "a", plug: "out" }, { item: "b", plug: "in" });
     expect(boardCables(items)[0]).toMatchObject({ kind: "mono", color: "#8b9099" });
-    items = connectPlugs(items, { item: "a", plug: "out" }, { item: "b", plug: "in" }, { kind: "stereo", color: "#e5484d" });
-    expect(boardCables(items)[0]).toMatchObject({ kind: "stereo", color: "#e5484d" });
+    items = connectPlugs(items, { item: "a", plug: "out" }, { item: "b", plug: "in" }, { kind: "power" });
+    expect(boardCables(items)[0]).toMatchObject({ kind: "power", color: "#e5484d" });
+  });
+});
+
+describe("removeCables", () => {
+  it("takes a cable out with the plugs at both ends, except ones kept", () => {
+    const items = connectPlugs([pedal("a", 0, io()), pedal("b", 5, io())], { item: "a", plug: "out" }, { item: "b", plug: "in" });
+    const gone = removeCables(items, [{ item: "b", plug: "in" }]);
+    expect(gone[0].plugs!.map((p) => p.id)).toEqual(["in"]);
+    expect(gone[1].plugs!.map((p) => p.id)).toEqual(["out"]);
+    const kept = removeCables(items, [{ item: "b", plug: "in" }], [{ item: "a", plug: "out" }]);
+    expect(kept[0].plugs!.map((p) => p.id)).toEqual(["in", "out"]);
+    expect(boardCables(kept)).toHaveLength(0);
   });
 });
 
@@ -220,19 +232,9 @@ describe("editCable", () => {
     expect(types(items)).toEqual(["pancake", "pancake"]);
   });
 
-  it("a power cable takes power plugs and drops jack labels that don't fit", () => {
-    let items = editCable(wired(), { item: "a", plug: "out" }, { jack: { end: { item: "a", plug: "out" }, id: "output.mono" } });
-    items = editCable(items, { item: "a", plug: "out" }, { kind: "power" });
+  it("a power cable takes power plugs", () => {
+    const items = editCable(wired(), { item: "a", plug: "out" }, { kind: "power" });
     expect(types(items)).toEqual(["barrel", "barrel"]);
-    expect(items[0].plugs![1].jack).toBeUndefined();
     expect(boardCables(items)[0].kind).toBe("power");
-  });
-
-  it("labels the other end to match, and the labels set the direction", () => {
-    // Labeled against where the plugs sit: b's right-side jack is the output.
-    let items = connectPlugs([pedal("a", 0, io()), pedal("b", 5, io())], { item: "a", plug: "in" }, { item: "b", plug: "in" }, { kind: "stereo" });
-    items = editCable(items, { item: "a", plug: "in" }, { jack: { end: { item: "b", plug: "in" }, id: "output.stereo.trs" } });
-    expect(items[0].plugs![0].jack).toBe("input.stereo.trs");
-    expect(boardCables(items)[0].from.item).toBe("b");
   });
 });

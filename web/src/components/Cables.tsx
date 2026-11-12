@@ -3,14 +3,12 @@ import { create } from "zustand";
 import { cableEnd, plugAnchor, plugHead, roundedPath, toLocal } from "../lib/cableRoute";
 import {
   boardCables,
-  CABLE_COLOR_PRESETS,
   CABLE_KINDS,
   cableId,
   cableKindInfo,
   isPlugEnd,
   sameEnd,
   corners,
-  DEFAULT_CABLE_COLOR,
   defaultPlugFor,
   moveLeg,
   routeBoardCables,
@@ -25,7 +23,6 @@ import { ArrowUp, Link2, Link2Off, Pencil, Trash2, Unplug } from "lucide-react";
 import { canvasImageUrl } from "../lib/catalog";
 import { findJacks, type JackHint } from "../lib/jackFinder";
 import { useCatalog } from "../store/catalog";
-import { ColorSwatches } from "./CustomItemForm";
 import { LabeledSelect } from "./LabeledSelect";
 import { openHints, withMiddles } from "./PlugEditor";
 import type { CableKind } from "../lib/plugs";
@@ -38,13 +35,10 @@ import { SHOW_CABLES, useUi } from "../store/ui";
 import { withTool } from "../lib/analytics";
 import { barIconActive, barIconIdle, barPanel } from "./toolbarStyles";
 import { tip } from "./Tooltip";
-import { jacksFor } from "../lib/jacks";
 import { knownType, plugBox, PLUG_TYPES, snapAt, type PlugSide, type PlugType } from "../lib/plugs";
 
 /** Audio cable width: 4px at 100% zoom, in inches, so it scales with the board like the gear does. */
 const WIDTH = 4 / PX_PER_INCH;
-/** The gap between a stereo cable's two lines, in screen pixels, so it shows at any zoom. */
-const STEREO_GAP_PX = 1;
 /** How far from a cable a press still picks it, in inches (wide, so thin cables are easy to hit). */
 const HIT_WIDTH = 0.6;
 /** Corner rounding, in inches. */
@@ -59,39 +53,10 @@ const SPACING = 0.3;
 const HALO_WHITE = 1.5;
 const HALO_LINE = 2;
 
-/**
- * One cable's line in its type's style: solid, double (two thin lines, cut with a mask so the board shows between
- * them), beaded (dotted), dash-dot or dashed. Dashes are in cable widths, so they keep their look at any zoom.
- */
-function CableLine({ id, d, kind, color }: { id: string; d: string; kind: CableKind; color: string }) {
-  const { line, width } = cableKindInfo(kind);
-  const w = WIDTH * width;
-  const zoom = usePlayground((st) => st.view.zoom);
-  const common = { d, fill: "none", stroke: color, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
-  if (line === "double") {
-    // Two lines with a hairline gap between them, where the board shows through.
-    const mask = `cable-gap-${id.replace(/[^a-z0-9-]/gi, "")}`;
-    return (
-      <>
-        <mask id={mask} maskUnits="userSpaceOnUse" x={-1e4} y={-1e4} width={2e4} height={2e4}>
-          <path d={d} fill="none" stroke="#fff" strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" />
-          <path d={d} fill="none" stroke="#000" strokeWidth={Math.min(STEREO_GAP_PX / (PX_PER_INCH * zoom), w * 0.5)} strokeLinecap="round" strokeLinejoin="round" />
-        </mask>
-        <path {...common} strokeWidth={w} mask={`url(#${mask})`} />
-      </>
-    );
-  }
-  if (line === "dotted") {
-    // Beads on a string: a thin core line with full-width dots along it, so it reads as one cable, not a trail of dots.
-    return (
-      <>
-        <path {...common} strokeWidth={w * 0.35} />
-        <path {...common} strokeWidth={w} strokeDasharray={`0 ${w * 1.5}`} />
-      </>
-    );
-  }
-  const dash = line === "dashdot" ? `${w * 2} ${w * 1.1} 0 ${w * 1.1}` : line === "dashed" ? `${w * 1.8} ${w * 1.1}` : undefined;
-  return <path {...common} strokeWidth={w} strokeDasharray={dash} />;
+/** One cable's line: a single solid stroke in its type's color and width (gray audio, thinner red power). */
+function CableLine({ d, kind }: { d: string; kind: CableKind }) {
+  const { color, width } = cableKindInfo(kind);
+  return <path d={d} fill="none" stroke={color} strokeWidth={WIDTH * width} strokeLinecap="round" strokeLinejoin="round" />;
 }
 
 /** A cable or plug picked on the board outside the Signal Flow tool (it gets the little Edit / Delete menu). */
@@ -106,7 +71,7 @@ type CablePick = {
   /** The end a cable is being run from (it follows the pointer until a second click). */
   plug: WireEnd | null;
   cable: string | null;
-  /** What new cables get: the last type and color picked, like new plugs follow the last plug type. */
+  /** What new cables get: the last type picked, like new plugs follow the last plug type. */
   style: Required<CableStyle>;
 };
 export const useCablePick = create<CablePick & { set: (p: Partial<CablePick>) => void }>((set) => ({
@@ -114,7 +79,7 @@ export const useCablePick = create<CablePick & { set: (p: Partial<CablePick>) =>
   jack: null,
   plug: null,
   cable: null,
-  style: { kind: "mono", color: DEFAULT_CABLE_COLOR },
+  style: { kind: "mono" },
   set: (p) => set(p),
 }));
 
@@ -160,10 +125,31 @@ function editChosen() {
   else pick.set({ chosen: null, cable: null, plug: null, jack: c.plug });
 }
 
-/** The routes for this exact items array, worked out once and shared by the cables and their handles. */
-let cache: { items: Item[]; routes: RoutedCable[] } | null = null;
+/** What a cable's route depends on for one item: where it is and its plugs (not the cables on them). */
+const shapeOf = (i: Item) =>
+  `${i.x},${i.y},${i.width},${i.height},${i.rotation},${i.flipX ? 1 : 0},${(i.plugs ?? []).map((p) => `${p.id}${p.side}${p.at}${p.type}`).join(";")}`;
+
+/**
+ * The routes for this exact items array, worked out once and shared by the cables and their handles. Routing every
+ * cable is the slow part, so it's done only when something they go around has moved: a change that only touches
+ * cables (a new one, a type, a hand-placed run) keeps the others' routes. While gear is dragged, only the cables on
+ * what's moving are routed again, quickly; the full routing waits until it's let go.
+ */
+let cache: { items: Item[]; routes: RoutedCable[]; shapes: Map<string, string>; settled: boolean } | null = null;
 function routesFor(items: Item[]) {
-  if (cache?.items !== items) cache = { items, routes: routeBoardCables(items, { spacing: SPACING }) };
+  const ui = useUi.getState();
+  const settled = !ui.dragging && !ui.nudging;
+  if (cache && cache.items === items && cache.settled === settled) return cache.routes;
+  const shapes = new Map(items.filter((i) => i.kind === "pedal" || i.kind === "pedalboard").map((i) => [i.id, shapeOf(i)]));
+  let reuse: Map<string, RoutedCable["route"]> | undefined;
+  if (cache) {
+    const moved = new Set([...shapes].filter(([id, sh]) => cache!.shapes.get(id) !== sh).map(([id]) => id));
+    for (const id of cache.shapes.keys()) if (!shapes.has(id)) moved.add(id);
+    const keep = (r: RoutedCable) => !r.legs && !moved.has(r.from.item) && !moved.has(r.to.item);
+    // Settled: keep routes only if nothing moved (and the last ones weren't the rough drag-time ones).
+    if (!settled || (cache.settled && !moved.size)) reuse = new Map(cache.routes.filter(keep).map((r) => [r.id, r.route]));
+  }
+  cache = { items, routes: routeBoardCables(items, { spacing: SPACING, reuse, quick: !settled }), shapes, settled };
   return cache.routes;
 }
 
@@ -262,6 +248,8 @@ export function CableLayer({ items }: { items: Item[] }) {
   const picked = open ? toolPick : chosen && "cable" in chosen ? chosen.cable : null;
   const [hover, setHover] = useState<string | null>(null);
   const zoom = usePlayground((st) => st.view.zoom);
+  // Re-routes properly once a drag ends (routesFor reads it).
+  useUi((u) => u.dragging || u.nudging);
   if (!routes.length) return null;
   const s = PX_PER_INCH;
   return (
@@ -285,7 +273,7 @@ export function CableLayer({ items }: { items: Item[] }) {
                     strokeLinejoin="round"
                   />
                 ))}
-              <CableLine id={c.id} d={d} kind={c.kind} color={c.color} />
+              <CableLine d={d} kind={c.kind} />
               {(open || pickable) && (
                 <path
                   d={d}
@@ -412,7 +400,7 @@ function pickJack(end: PlugEnd) {
 }
 
 /**
- * Unplugs one end of a cable to move it: the cable comes out, and a new one in its type and color starts from its
+ * Unplugs one end of a cable to move it: the cable comes out, and a new one of its type starts from its
  * other end and follows the pointer until it's plugged in somewhere (Esc drops it; undo puts the old one back).
  */
 function liftEnd(end: PlugEnd) {
@@ -421,9 +409,10 @@ function liftEnd(end: PlugEnd) {
   if (!cable) return;
   const other = sameEnd(cable.from, end) ? cable.to : cable.from;
   store.clearSelection();
-  store.unplug([cable.stored]);
+  // The lifted end's plug comes off with the cable; the other end's stays to start the new one.
+  store.unplug([cable.stored], [other]);
   const pick = useCablePick.getState();
-  pick.set({ plug: other, cable: null, jack: null, style: { kind: cable.kind, color: cable.color } });
+  pick.set({ plug: other, cable: null, jack: null, style: { kind: cable.kind } });
 }
 
 /** Where a wire end's cable leaves the pedal, in world inches, and which way. */
@@ -578,7 +567,7 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
       {preview && (
         <svg aria-hidden className="pointer-events-none absolute left-0 top-0 overflow-visible" width={1} height={1}>
           <g transform={`scale(${PX_PER_INCH})`} opacity={0.85}>
-            <CableLine id="preview" d={preview} kind={style.kind} color={style.color} />
+            <CableLine d={preview} kind={style.kind} />
           </g>
         </svg>
       )}
@@ -718,7 +707,7 @@ export function CablePanel() {
     usePlayground.getState().unplug([picked.stored]);
     set({ cable: null });
   };
-  /** Sets the type or color: on the picked cable, and for the cables made next. */
+  /** Sets the type: on the picked cable, and for the cables made next. */
   const restyle = (patch: Partial<Required<CableStyle>>) => {
     set({ style: { ...style, ...patch } });
     if (picked) usePlayground.getState().editCable(picked.stored, patch);
@@ -753,7 +742,6 @@ export function CablePanel() {
 
   if (!open) return null;
   const kind = picked?.kind ?? style.kind;
-  const color = picked?.color ?? style.color;
   const hint = !anyPedals
     ? "Add some pedals first."
     : plug
@@ -761,7 +749,7 @@ export function CablePanel() {
       : picked
         ? "Drag a handle to move a run. Delete removes the cable."
         : jack
-          ? "Change this jack's plug, or unplug it to move the cable."
+          ? "Change this plug, or unplug it to move the cable."
           : "Hover a pedal and click an arrow to start a cable.";
   return (
     <div
@@ -811,9 +799,6 @@ export function CablePanel() {
             />
           </div>
           {picked && <CableEnds cable={picked} items={items} />}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line px-1 pt-2">
-            <ColorSwatches color={color} presets={CABLE_COLOR_PRESETS} onChange={(hex) => restyle({ color: hex })} />
-          </div>
         </>
       )}
     </div>
@@ -821,8 +806,9 @@ export function CablePanel() {
 }
 
 /**
- * A picked jack in the tool: its plug (the ones its cable's type comes with) and what the jack is, with Unplug to
- * move its cable and Remove Plug to take the plug off. A plug unlike the other end's sets the cable's ends apart.
+ * A picked plug in the tool: its type (the ones its cable's type comes with), with Unplug to move its cable and Remove
+ * to take it off with its cable (and the plug at the cable's other end). A plug unlike the other end's sets the
+ * cable's ends apart.
  */
 function JackEdit({ end, items }: { end: PlugEnd; items: Item[] }) {
   const item = items.find((i) => i.id === end.item);
@@ -840,26 +826,12 @@ function JackEdit({ end, items }: { end: PlugEnd; items: Item[] }) {
     if (cable) store.editCable(cable.stored, { plug: { end, type: t }, ...(t !== otherType ? { split: true } : {}) });
     else store.setPlugs(item.id, item.plugs!.map((p) => (p.id === plug.id ? { ...p, type: t } : p)));
   };
-  const setJack = (id: string) => {
-    if (cable) store.editCable(cable.stored, { jack: { end, id: id || null } });
-    else
-      store.setPlugs(
-        item.id,
-        item.plugs!.map((p) => {
-          if (p.id !== plug.id) return p;
-          const { jack: _, ...rest } = p;
-          return id ? { ...rest, jack: id } : rest;
-        }),
-      );
-  };
   const plugOptions = cableKindInfo(kind).plugs.map((t) => [t, PLUG_TYPES[t].label] as const);
-  const jackOptions = [["", "Not set"] as const, ...jacksFor(kind).map((j) => [j.id, j.label, j.group] as const)];
   const button = "flex h-8 items-center rounded-control px-2.5 text-sm font-semibold outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand";
   return (
     <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line px-1 pt-2">
       <span className="max-w-40 truncate text-sm font-semibold">{item.label}</span>
       <LabeledSelect<PlugType> label="Plug" value={knownType(plug.type)} options={plugOptions} onChange={setType} />
-      <LabeledSelect<string> label="Jack" value={plug.jack ?? ""} options={jackOptions} onChange={setJack} />
       <span className="ml-auto flex items-center">
         {cable && (
           <button type="button" onClick={() => liftEnd(end)} className={button}>
@@ -875,7 +847,7 @@ function JackEdit({ end, items }: { end: PlugEnd; items: Item[] }) {
           }}
           className={`${button} text-danger`}
         >
-          Remove Plug
+          Remove
         </button>
       </span>
     </div>
@@ -883,7 +855,7 @@ function JackEdit({ end, items }: { end: PlugEnd; items: Item[] }) {
 }
 
 /**
- * The picked cable's two ends, under its type: each end's jack label, and the plugs. The plugs are locked together
+ * The picked cable's two ends, under its type, and their plugs. The plugs are locked together
  * (one choice for both) until unlocked; the choices are the plugs the cable's type comes with.
  */
 function CableEnds({ cable, items }: { cable: BoardCable; items: Item[] }) {
@@ -892,7 +864,6 @@ function CableEnds({ cable, items }: { cable: BoardCable; items: Item[] }) {
   const nameOf = (end: PlugEnd) => items.find((i) => i.id === end.item)?.label ?? "";
   const split = !!plugOf(cable.stored)?.link?.split;
   const plugOptions = cableKindInfo(cable.kind).plugs.map((t) => [t, PLUG_TYPES[t].label] as const);
-  const jackOptions = [["", "Not set"] as const, ...jacksFor(cable.kind).map((j) => [j.id, j.label, j.group] as const)];
   const ends = [
     { title: "From", end: cable.from },
     { title: "To", end: cable.to },
@@ -923,12 +894,6 @@ function CableEnds({ cable, items }: { cable: BoardCable; items: Item[] }) {
                 <span className="w-9 shrink-0 text-xs font-semibold uppercase tracking-wide text-ink-muted">{title}</span>
                 <span className="truncate text-sm">{nameOf(end)}</span>
               </span>
-              <LabeledSelect<string>
-                label="Jack"
-                value={plug?.jack ?? ""}
-                options={jackOptions}
-                onChange={(id) => edit({ jack: { end, id: id || null } })}
-              />
               {split && (
                 <LabeledSelect<PlugType>
                   label="Plug"

@@ -156,6 +156,7 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
   const selected = usePlayground((s) => s.selected.includes(item.id));
   // Signal Flow is about the jacks: no name labels on gear while it's open.
   const quiet = useUi((u) => u.cablesOpen);
+  const showPlugs = useUi((u) => u.show.plugs || u.cablesOpen || !!u.plugEditing);
   useEffect(() => {
     if (selected || quiet) hideTip();
   }, [selected, quiet]);
@@ -186,7 +187,7 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
         style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}
       >
         {/* Plugs go under the pedal: their barrels run into the jacks, showing only where the photo lets them. */}
-        {item.plugs && <PlugsLayer plugs={item.plugs} w={item.width} h={item.height} />}
+        {item.plugs && showPlugs && <PlugsLayer plugs={item.plugs} w={item.width} h={item.height} />}
         {/* Positioned, so it paints over the (absolutely placed) plugs. */}
         <div className="relative size-full">
           {src ? (
@@ -243,6 +244,10 @@ export function Canvas() {
   const cablesOpen = useUi((u) => u.cablesOpen);
   // Cables and plugs can be picked on the board itself, outside the editing tools and when not just viewing.
   const pickable = useUi((u) => !u.cablesOpen && !u.plugEditing && !u.viewing && u.mode === "playground");
+  // Layers hidden in Preferences. Signal Flow always shows cables and plugs; plug editing shows plugs.
+  const showCables = useUi((u) => u.show.cables || u.cablesOpen);
+  const showPlugs = useUi((u) => u.show.plugs || u.cablesOpen || !!u.plugEditing);
+  const showBoards = useUi((u) => u.show.boards);
 
   useEffect(() => {
     void useCatalog.getState().load();
@@ -665,6 +670,8 @@ export function Canvas() {
       const b = toWorld(rect.x + rect.w, rect.y + rect.h);
       const hits = s.items
         .filter((i) => {
+          // Hidden pedalboards can't be picked.
+          if (i.kind === "pedalboard" && !useUi.getState().show.boards) return false;
           const r = itemBounds(i);
           return r.left < b.x && r.right > a.x && r.top < b.y && r.bottom > a.y;
         })
@@ -718,13 +725,16 @@ export function Canvas() {
         style={{ transform: `translate(${view.x}px, ${view.y}px) scale(${view.zoom})` }}
       >
         {/* Cables lie on the board: above the last pedalboard, below the pedals (z-indexes are doubled to make room). */}
-        {items.map((item, index) => (
-          <div key={item.id} style={{ position: "absolute", zIndex: index * 2 }}>
-            <ItemView item={item} />
-          </div>
-        ))}
+        {items.map((item, index) =>
+          item.kind === "pedalboard" && !showBoards ? null : (
+            <div key={item.id} style={{ position: "absolute", zIndex: index * 2 }}>
+              <ItemView item={item} />
+            </div>
+          ),
+        )}
         {/* Plugs take clicks just above their own pedal, so gear stacked over them still comes first. */}
         {pickable &&
+          showPlugs &&
           items.map((item, index) =>
             item.kind === "pedal" && item.plugs?.length ? (
               <div key={`plugs-${item.id}`} style={{ position: "absolute", zIndex: index * 2 + 1 }}>
@@ -733,7 +743,7 @@ export function Canvas() {
             ) : null,
           )}
         <div style={{ position: "absolute", zIndex: lastBoard * 2 + 1 }}>
-          <CableLayer items={items} />
+          {showCables && <CableLayer items={items} />}
         </div>
         {cablesOpen && (
           <div style={{ position: "absolute", zIndex: 99998 }}>

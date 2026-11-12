@@ -55,6 +55,9 @@ interface UiState {
   /** Dragged items snap to other items' edges and centers. */
   snapping: boolean;
   setSnapping: (on: boolean) => void;
+  /** What the board shows outside Signal Flow (which always shows cables and plugs). */
+  show: BoardLayers;
+  setShow: (layer: keyof BoardLayers, on: boolean) => void;
   upgrade: UpgradeReason | null;
   /** The pedal search panel; the canvas closes it as soon as the user starts arranging. */
   /** Image key of the pedal used as the user's avatar. */
@@ -109,6 +112,22 @@ const savedSnapping = (): boolean => {
     return localStorage.getItem("pp:snap") !== "off";
   } catch {
     return true;
+  }
+};
+
+/** Layers of the board that can be hidden from the default view. */
+export interface BoardLayers {
+  cables: boolean;
+  plugs: boolean;
+  boards: boolean;
+}
+const SHOW_KEY = "pp:show";
+const savedShow = (): BoardLayers => {
+  const all = { cables: true, plugs: true, boards: true };
+  try {
+    return { ...all, ...JSON.parse(localStorage.getItem(SHOW_KEY) ?? "{}") };
+  } catch {
+    return all;
   }
 };
 
@@ -184,6 +203,17 @@ export const useUi = create<UiState>((set) => ({
     applyDarkStyle(darkStyle);
     set({ darkStyle });
   },
+  show: savedShow(),
+  setShow: (layer, on) =>
+    set((u) => {
+      const show = { ...u.show, [layer]: on };
+      try {
+        localStorage.setItem(SHOW_KEY, JSON.stringify(show));
+      } catch {
+        /* storage unavailable */
+      }
+      return { show };
+    }),
   snapping: savedSnapping(),
   setSnapping: (snapping) => {
     try {

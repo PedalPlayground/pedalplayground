@@ -1,6 +1,6 @@
 import { uuid } from "../lib/uuid";
 import type { ManualLegs, Plug, PlugEnd } from "../lib/plugs";
-import { connectPlugs, editCable, unplug, wire, withoutLinks, type CableEdit, type CableStyle, type WireEnd } from "../lib/cables";
+import { boardCables, connectPlugs, editCable, removeCables, wire, withoutLinks, type CableEdit, type CableStyle, type WireEnd } from "../lib/cables";
 import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { importAny, readLegacyLocalStorage } from "../lib/importers";
@@ -101,8 +101,8 @@ interface PlaygroundState {
    * step, unless `record` is false (a drag in progress: call beginTransaction first).
    */
   setCableLegs: (stored: PlugEnd, legs: ManualLegs | null, record?: boolean) => void;
-  /** Removes the cables on these plugs (one undo step). */
-  unplug: (ends: PlugEnd[]) => void;
+  /** Removes the cables on these plugs, with the plugs at both ends except `keep` (one undo step). */
+  unplug: (ends: PlugEnd[], keep?: PlugEnd[]) => void;
   /** Takes a plug off its pedal, with its cable (one undo step). */
   removePlug: (end: PlugEnd) => void;
   /** Changes an item's Equipment List details as one undo step. */
@@ -543,11 +543,11 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
   removePlug: (end) =>
     set((s) => ({
       ...record(s),
-      items: unplug(s.items, [end]).map((i) => (i.id === end.item && i.plugs ? { ...i, plugs: i.plugs.filter((p) => p.id !== end.plug) } : i)),
+      items: removeCables(s.items, [end]).map((i) => (i.id === end.item && i.plugs ? { ...i, plugs: i.plugs.filter((p) => p.id !== end.plug) } : i)),
     })),
-  unplug: (ends) =>
+  unplug: (ends, keep) =>
     set((s) => {
-      const items = unplug(s.items, ends);
+      const items = removeCables(s.items, ends, keep);
       return items.every((i, n) => i === s.items[n]) ? {} : { ...record(s), items };
     }),
   updateGear: (id, patch) =>
@@ -698,7 +698,11 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
   deleteSelected: () =>
     set((s) => ({
       ...record(s),
-      items: s.items.filter((i) => !s.selected.includes(i.id)),
+      // Cables to deleted gear come out with their plugs at the far end too.
+      items: removeCables(
+        s.items,
+        boardCables(s.items).flatMap((c) => [c.from, c.to]).filter((e) => s.selected.includes(e.item)),
+      ).filter((i) => !s.selected.includes(i.id)),
       // Deleted pedals leave the chain, and the pedals on either side are plugged into each other.
       signal: removeItems(s.signal, s.selected),
       selected: [],

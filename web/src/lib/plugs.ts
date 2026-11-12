@@ -12,7 +12,7 @@ export interface Plug {
   /** Where along the side, in inches: from the left end for top and bottom, from the top for left and right. */
   at: number;
   type: PlugType;
-  /** What the jack is, from JACK_LABELS in lib/jacks.ts (like "output.stereo.trs"). Missing means unlabeled. */
+  /** Old saves may carry a jack label here; it's no longer used. */
   jack?: string;
   /** The plug at the other end of this plug's cable (see lib/cables.ts). A cable is stored on one of its ends only. */
   link?: PlugLink;
@@ -23,7 +23,7 @@ export interface PlugLink extends PlugEnd {
   legs?: ManualLegs;
   /** What the cable carries (see CABLE_KINDS in lib/cables.ts). Missing means mono audio. */
   kind?: CableKind;
-  /** The cable's color (hex). Missing means the default gray. */
+  /** Old saves may carry a picked color; cables now take their type's color. */
   color?: string;
   /** True once the two ends' plug types were set apart; until then changing one changes both. */
   split?: boolean;
