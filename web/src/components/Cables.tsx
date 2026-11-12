@@ -552,7 +552,9 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
   const edge = overItem && near && !taken ? { item: overItem, ...near } : null;
   // Whether the hovered target starts or ends a cable (a plugged-in jack's plug picks it instead, so no label).
   const startKey = start ? (isPlugEnd(start) ? cableId(start) : `${start.item}+${start.side}${start.at}`) : null;
-  const startable = !!hover && hover !== startKey && !(connected.has(hover) && !start);
+  // Hovering a plug's head counts as hovering its point.
+  const hovered = hover?.replace(/-head$/, "") ?? null;
+  const startable = !!hovered && hovered !== startKey && !(connected.has(hovered) && !start);
   const from = start ? endAnchor(items, start) : null;
   // The cable being run: one corner from the plug to the pointer, in the type's style.
   let preview: string | null = null;
@@ -611,20 +613,25 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
           }
           // The plug's head (and a little around it) takes the click too, like a plugged-in one.
           const hb = growBox(plugHead(item, p), PLUG_ROOM);
+          // Over the head, the arrow moves onto the plug itself (and the edge one hides).
+          const onHead = hover === `${key}-head`;
           const head = (
             <button
               key={`${key}-head`}
               type="button"
               aria-hidden
               tabIndex={-1}
-              className="absolute cursor-pointer outline-none"
+              className="absolute flex cursor-pointer items-center justify-center outline-none"
               style={{ left: hb.left * PX_PER_INCH, top: hb.top * PX_PER_INCH, width: (hb.right - hb.left) * PX_PER_INCH, height: (hb.bottom - hb.top) * PX_PER_INCH }}
-              onPointerEnter={() => setHover(key)}
-              onPointerLeave={() => setHover((h) => (h === key ? null : h))}
+              onPointerEnter={() => setHover(`${key}-head`)}
+              onPointerLeave={() => setHover((h) => (h === `${key}-head` ? null : h))}
               onPointerDown={(e) => e.stopPropagation()}
               onClick={() => pickEnd(end)}
-            />
+            >
+              {onHead && <ArrowFace r={r} zoom={zoom} on={on} big dir={outDir(item, p.side)} way={on ? "out" : arrow} />}
+            </button>
           );
+          if (onHead) return [head];
           return [
             head,
             <button
