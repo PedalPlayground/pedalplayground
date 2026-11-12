@@ -36,9 +36,32 @@ export interface RouteOptions {
   underCost: number;
   /** How much a leg costs per inch off the pedalboards (when there are any), so cables keep to the board. */
   offBoardCost: number;
+  /** How much extra a leg costs per inch running along another cable (within `lane` of it), so cables don't stack. */
+  busyCost: number;
+  /** How far apart side-by-side cables sit, in inches. */
+  lane: number;
 }
 
-export const ROUTE_DEFAULTS: RouteOptions = { clearance: 0.25, lead: 0, bend: 1.5, nearCost: 4, underCost: 25, offBoardCost: 2.5 };
+/** A straight leg of another cable: horizontal (`h`) at y = `at`, or vertical at x = `at`, from `lo` to `hi`. */
+export interface BusyLeg {
+  h: boolean;
+  at: number;
+  lo: number;
+  hi: number;
+}
+
+/** A route's legs as BusyLegs. */
+export function busyLegs(points: Pt[]): BusyLeg[] {
+  const out: BusyLeg[] = [];
+  for (let k = 0; k < points.length - 1; k++) {
+    const [a, b] = [points[k], points[k + 1]];
+    const h = Math.abs(a[1] - b[1]) < 1e-6;
+    out.push(h ? { h, at: a[1], lo: Math.min(a[0], b[0]), hi: Math.max(a[0], b[0]) } : { h, at: a[0], lo: Math.min(a[1], b[1]), hi: Math.max(a[1], b[1]) });
+  }
+  return out;
+}
+
+export const ROUTE_DEFAULTS: RouteOptions = { clearance: 0.25, lead: 0, bend: 1.5, nearCost: 4, underCost: 25, offBoardCost: 2.5, busyCost: 3, lane: 0.42 };
 
 /** Turns a point in an item's own (unrotated, unflipped) box into world inches: flip about the center, then rotate. */
 function toWorld(item: Item, [x, y]: Pt, vector = false): Pt {
@@ -52,6 +75,16 @@ function toWorld(item: Item, [x, y]: Pt, vector = false): Pt {
   const rx = dx * c - dy * s;
   const ry = dx * s + dy * c;
   return vector ? [rx, ry] : [item.x + item.width / 2 + rx, item.y + item.height / 2 + ry];
+}
+
+/** How far back into the plug's head a cable starts, as a share of the head's length: it comes out from under the head. */
+export const CABLE_TUCK = 0.3;
+
+/** Where a cable leaves a plug: a little way back into the head from its end, so it reads as coming out of the plug. */
+export function cableEnd(item: Item, plug: Plug): PlugAnchor {
+  const a = plugAnchor(item, plug);
+  const back = plugBox(plug.type).out * CABLE_TUCK;
+  return { at: [a.at[0] - a.dir[0] * back, a.at[1] - a.dir[1] * back], dir: a.dir };
 }
 
 /** A plug head's box in world inches: from the pedal's edge out to the cable end, as wide as the head. */
@@ -184,6 +217,8 @@ export function routeCable(
   boards: Item[] = [],
   /** Other plugs' heads (see plugHead): cables keep off them like they keep clear of pedals. */
   heads: Box[] = [],
+  /** Other cables' legs: running along one costs extra, so this cable takes the next lane over if it can. */
+  busy: BusyLeg[] = [],
 ): CableRoute {
   const o = { ...ROUTE_DEFAULTS, ...opts };
   const solid = obstacles.map(itemBounds);
@@ -196,13 +231,17 @@ export function routeCable(
   const xsRaw = [a[0], b[0], from.at[0], to.at[0]];
   const ysRaw = [a[1], b[1], from.at[1], to.at[1]];
   for (const p of [...padded, ...heads]) xsRaw.push(p.left, p.right), ysRaw.push(p.top, p.bottom);
+  // Lanes beside other cables, so there's somewhere to run next to them.
+  const lanes = { xs: [] as number[], ys: [] as number[] };
+  for (const l of busy) (l.h ? lanes.ys : lanes.xs).push(l.at - o.lane, l.at + o.lane);
   const margin = 1;
   const minX = Math.min(...xsRaw) - margin;
   const maxX = Math.max(...xsRaw) + margin;
   const minY = Math.min(...ysRaw) - margin;
   const maxY = Math.max(...ysRaw) + margin;
-  const xs = lines([...xsRaw, minX, maxX]);
-  const ys = lines([...ysRaw, minY, maxY]);
+  const inside1 = (v: number, lo: number, hi: number) => v > lo && v < hi;
+  const xs = lines([...xsRaw, minX, maxX, ...lanes.xs.filter((v) => inside1(v, minX, maxX))]);
+  const ys = lines([...ysRaw, minY, maxY, ...lanes.ys.filter((v) => inside1(v, minY, maxY))]);
   const nx = xs.length;
   const ny = ys.length;
   const find = (arr: number[], v: number) => arr.findIndex((n) => Math.abs(n - v) < 1e-6);
@@ -253,7 +292,12 @@ export function routeCable(
       const jy = iy + DIRS[nd][1];
       if (jx < 0 || jy < 0 || jx >= nx || jy >= ny) continue;
       const len = Math.abs(xs[jx] - xs[ix]) + Math.abs(ys[jy] - ys[iy]);
-      const cost = len * legCost((xs[jx] + xs[ix]) / 2, (ys[jy] + ys[iy]) / 2) + (nd === d ? 0 : o.bend);
+      const mx = (xs[jx] + xs[ix]) / 2;
+      const my = (ys[jy] + ys[iy]) / 2;
+      // Running along another cable costs extra (crossing one doesn't).
+      const along = nd % 2 === 0;
+      const crowded = busy.some((l) => l.h === along && Math.abs(l.at - (along ? my : mx)) < o.lane * 0.75 && inside1(along ? mx : my, l.lo, l.hi));
+      const cost = len * (legCost(mx, my) + (crowded ? o.busyCost : 0)) + (nd === d ? 0 : o.bend);
       const next = (jy * nx + jx) * 4 + nd;
       const atGoal = jy * nx + jx === goal;
       // Never out of the end jack; with a lead, only straight into it (turning in costs a bend).

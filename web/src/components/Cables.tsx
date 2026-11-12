@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { create } from "zustand";
-import { plugAnchor, plugHead, roundedPath, toLocal } from "../lib/cableRoute";
+import { cableEnd, plugAnchor, plugHead, roundedPath, toLocal } from "../lib/cableRoute";
 import {
   boardCables,
   CABLE_COLOR_PRESETS,
@@ -41,41 +41,50 @@ import { tip } from "./Tooltip";
 import { jacksFor } from "../lib/jacks";
 import { knownType, plugBox, PLUG_TYPES, snapAt, type PlugSide, type PlugType } from "../lib/plugs";
 
-/** Cable width: 5px at 100% zoom, in inches, so it scales with the board like the gear does. */
-const WIDTH = 5 / PX_PER_INCH;
+/** Audio cable width: 10px at 100% zoom, in inches, so it scales with the board like the gear does. */
+const WIDTH = 10 / PX_PER_INCH;
 /** How far from a cable a press still picks it, in inches (wide, so thin cables are easy to hit). */
 const HIT_WIDTH = 0.6;
 /** Corner rounding, in inches. */
 const CORNER = 0.3;
 /** Side-by-side spacing for cables sharing a run. */
-const SPACING = 0.22;
+const SPACING = 0.42;
 
-/** The glow under a hovered or picked cable, in inches. */
-const GLOW_WIDTH = 14 / PX_PER_INCH;
+/** How far the glow under a hovered or picked cable reaches past its edges, in inches. */
+const GLOW = 3 / PX_PER_INCH;
 
 /**
  * One cable's line in its type's style: solid, double (two thin lines, cut with a mask so the board shows between
- * them), dotted, dash-dot or dashed. Dashes are in cable widths, so they keep their look at any zoom.
+ * them), beaded (dotted), dash-dot or dashed. Dashes are in cable widths, so they keep their look at any zoom.
  */
 function CableLine({ id, d, kind, color }: { id: string; d: string; kind: CableKind; color: string }) {
   const { line, width } = cableKindInfo(kind);
   const w = WIDTH * width;
   const common = { d, fill: "none", stroke: color, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
   if (line === "double") {
+    // Two lines, each 4/10 of the width, with the board showing through the gap between them.
     const mask = `cable-gap-${id.replace(/[^a-z0-9-]/gi, "")}`;
     return (
       <>
         <mask id={mask} maskUnits="userSpaceOnUse" x={-1e4} y={-1e4} width={2e4} height={2e4}>
-          <path d={d} fill="none" stroke="#fff" strokeWidth={w * 1.4} strokeLinecap="round" strokeLinejoin="round" />
-          <path d={d} fill="none" stroke="#000" strokeWidth={w * 0.5} strokeLinecap="round" strokeLinejoin="round" />
+          <path d={d} fill="none" stroke="#fff" strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" />
+          <path d={d} fill="none" stroke="#000" strokeWidth={w * 0.2} strokeLinecap="round" strokeLinejoin="round" />
         </mask>
-        <path {...common} strokeWidth={w * 1.4} mask={`url(#${mask})`} />
+        <path {...common} strokeWidth={w} mask={`url(#${mask})`} />
       </>
     );
   }
-  const dash =
-    line === "dotted" ? `0 ${w * 1.9}` : line === "dashdot" ? `${w * 2.6} ${w * 1.4} 0 ${w * 1.4}` : line === "dashed" ? `${w * 2.4} ${w * 1.6}` : undefined;
-  return <path {...common} strokeWidth={line === "dotted" ? w * 1.15 : w} strokeDasharray={dash} />;
+  if (line === "dotted") {
+    // Beads on a string: a thin core line with full-width dots along it, so it reads as one cable, not a trail of dots.
+    return (
+      <>
+        <path {...common} strokeWidth={w * 0.35} />
+        <path {...common} strokeWidth={w} strokeDasharray={`0 ${w * 1.5}`} />
+      </>
+    );
+  }
+  const dash = line === "dashdot" ? `${w * 2} ${w * 1.1} 0 ${w * 1.1}` : line === "dashed" ? `${w * 1.8} ${w * 1.1}` : undefined;
+  return <path {...common} strokeWidth={w} strokeDasharray={dash} />;
 }
 
 /** A cable or plug picked on the board outside the Signal Flow tool (it gets the little Edit / Delete menu). */
@@ -262,7 +271,7 @@ export function CableLayer({ items }: { items: Item[] }) {
                   fill="none"
                   stroke="var(--color-brand)"
                   strokeOpacity={picked === c.id ? 0.55 : 0.35}
-                  strokeWidth={GLOW_WIDTH}
+                  strokeWidth={WIDTH * cableKindInfo(c.kind).width + 2 * GLOW}
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
@@ -413,7 +422,7 @@ function endAnchor(items: Item[], end: WireEnd) {
   const item = items.find((i) => i.id === end.item);
   if (!item) return null;
   const plug = isPlugEnd(end) ? item.plugs?.find((p) => p.id === end.plug) : { id: "", side: end.side, at: end.at, type: defaultPlugFor(useCablePick.getState().style.kind) };
-  return plug ? plugAnchor(item, plug) : null;
+  return plug ? cableEnd(item, plug) : null;
 }
 
 /** The pedal picked in Signal Flow, if one is: a single selected pedal. */

@@ -3,7 +3,7 @@
  * it moves, saves and undoes with the items. This file turns those links into a plain list of cables with a signal
  * direction, for the board drawing and, later, the signal flow map. Pure functions, no React.
  */
-import { plugAnchor, plugHead, routeCable, type CableRoute, type PlugAnchor, type RouteOptions } from "./cableRoute";
+import { ROUTE_DEFAULTS, busyLegs, cableEnd, plugHead, routeCable, type BusyLeg, type CableRoute, type PlugAnchor, type RouteOptions } from "./cableRoute";
 import { jackLabel, jacksFor, matchingJack } from "./jacks";
 import { newPlugId, type CableKind, type ManualLegs, type Plug, type PlugEnd, type PlugLink, type PlugSide, type PlugType } from "./plugs";
 import type { Pt } from "./cableRoute";
@@ -32,7 +32,7 @@ export const CABLE_KINDS: CableKindInfo[] = [
   { kind: "exp", label: "Expression", line: "dotted", width: 1, plugs: [...QUARTER, "mini"] },
   { kind: "tap", label: "Tap Tempo", line: "dotted", width: 1, plugs: [...QUARTER, "mini"] },
   { kind: "switching", label: "Switching", line: "dotted", width: 1, plugs: [...QUARTER, "mini"] },
-  { kind: "power", label: "Power", line: "solid", width: 0.7, plugs: ["barrel"] },
+  { kind: "power", label: "Power", line: "solid", width: 0.5, plugs: ["barrel"] },
   { kind: "other", label: "Other", line: "dashed", width: 1, plugs: [...QUARTER, "mini", "barrel", "din"] },
 ];
 export const cableKindInfo = (k: CableKind | undefined) => CABLE_KINDS.find((c) => c.kind === k) ?? CABLE_KINDS[0];
@@ -268,21 +268,27 @@ export function routeBoardCables(items: Item[], opts: Partial<RouteOptions> & { 
   const boards = items.filter((i) => i.kind === "pedalboard");
   const anchor = (e: PlugEnd): PlugAnchor => {
     const item = byId.get(e.item)!;
-    return plugAnchor(item, item.plugs!.find((p) => p.id === e.plug)!);
+    return cableEnd(item, item.plugs!.find((p) => p.id === e.plug)!);
   };
   // Every plug's head, so cables don't run over other plugs.
   const heads = pedals.flatMap((i) => (i.plugs ?? []).map((p) => ({ id: cableId({ item: i.id, plug: p.id }), box: plugHead(i, p) })));
-  const routed = boardCables(items).map((c) => {
-    if (!c.legs) {
-      const others = heads.filter((h) => h.id !== cableId(c.from) && h.id !== cableId(c.to)).map((h) => h.box);
-      return { ...c, route: routeCable(anchor(c.from), anchor(c.to), pedals, opts, boards, others) };
-    }
+  const cables = boardCables(items);
+  const auto = (c: BoardCable, busy: BusyLeg[]) => {
+    const others = heads.filter((h) => h.id !== cableId(c.from) && h.id !== cableId(c.to)).map((h) => h.box);
+    return routeCable(anchor(c.from), anchor(c.to), pedals, { ...opts, lane: opts.spacing ?? ROUTE_DEFAULTS.lane }, boards, others, busy);
+  };
+  const routed: RoutedCable[] = cables.map((c) => {
+    if (!c.legs) return { ...c, route: { points: [], under: [] } };
     // A hand-placed shape is stored from the stored plug's end; draw it from `from` like the rest.
     const reversed = c.from !== c.stored;
     const pts = fromManual(anchor(c.stored).at, anchor(reversed ? c.from : c.to).at, c.legs);
     if (reversed) pts.reverse();
     return { ...c, route: { points: pts, under: pts.slice(1).map(() => false) } };
   });
+  // Automatic cables keep out of each other's way: each is routed beside the ones already placed, then each again
+  // beside all the others, so an early cable can make room for a later one.
+  const legsOf = (skip: RoutedCable) => routed.filter((r) => r !== skip && r.route.points.length).flatMap((r) => busyLegs(r.route.points));
+  for (let pass = 0; pass < 2; pass++) for (const r of routed) if (!r.legs) r.route = auto(r, legsOf(r));
   // Hand-placed cables stay exactly where they were put; only automatic ones step aside.
   separate(
     routed.filter((r) => !r.legs).map((r) => r.route),
