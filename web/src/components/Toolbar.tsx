@@ -133,7 +133,7 @@ export function Toolbar({ onPlace: place, onShare: share, viewOnly = false }: { 
       )}
       {SHOW_CABLES && !viewOnly && (
         <>
-          <IconButton label="Cables" active={cablesOpen} onClick={withTool("cables", "toolbar", () => setCablesOpen(!cablesOpen))}>
+          <IconButton label="Signal Flow" active={cablesOpen} onClick={withTool("cables", "toolbar", () => setCablesOpen(!cablesOpen))}>
             <Spline size={18} />
           </IconButton>
           {divider}

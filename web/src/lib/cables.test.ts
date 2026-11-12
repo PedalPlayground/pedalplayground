@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { boardCables, connectPlugs, fromManual, moveLeg, plugRole, routeBoardCables, toManual, unplug, withoutLinks } from "./cables";
+import { boardCables, connectPlugs, fromManual, moveLeg, plugRole, routeBoardCables, toManual, unplug, wire, withoutLinks } from "./cables";
 import type { Plug } from "./plugs";
 import type { Item } from "./types";
 
@@ -174,5 +174,17 @@ describe("cable style", () => {
     expect(boardCables(items)[0]).toMatchObject({ kind: "mono", color: "#8b9099" });
     items = connectPlugs(items, { item: "a", plug: "out" }, { item: "b", plug: "in" }, { kind: "stereo", color: "#e5484d" });
     expect(boardCables(items)[0]).toMatchObject({ kind: "stereo", color: "#e5484d" });
+  });
+});
+
+describe("wire", () => {
+  it("adds plugs at spot ends and connects them", () => {
+    const base = [pedal("a", 0, []), pedal("b", 5, io())];
+    const { items, stored } = wire(base, { item: "a", side: "left", at: 1 }, { item: "b", plug: "in" });
+    expect(items[0].plugs).toHaveLength(1);
+    expect(stored.item).toBe("a");
+    const [c] = boardCables(items);
+    expect(c.from.item).toBe("a");
+    expect(c.to).toEqual({ item: "b", plug: "in" });
   });
 });

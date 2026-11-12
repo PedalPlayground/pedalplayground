@@ -279,6 +279,13 @@ export function PlugPanel() {
     if (!editing) return;
     const onKey = (e: KeyboardEvent) => {
       if ((e.target as HTMLElement).closest("input, textarea")) return;
+      // The canvas's shortcuts are off while editing plugs, so undo and redo are handled here.
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "z") {
+        e.preventDefault();
+        if (e.shiftKey) usePlayground.getState().redo();
+        else usePlayground.getState().undo();
+        return;
+      }
       // Escape deselects the picked plugs, or with none picked, leaves plug editing.
       if (e.key === "Escape") {
         if (picked.length) set({ selected: [] });

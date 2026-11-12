@@ -1,6 +1,6 @@
 import { uuid } from "../lib/uuid";
 import type { ManualLegs, Plug, PlugEnd } from "../lib/plugs";
-import { connectPlugs, unplug, withoutLinks, type CableStyle } from "../lib/cables";
+import { connectPlugs, unplug, wire, withoutLinks, type CableStyle, type WireEnd } from "../lib/cables";
 import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { importAny, readLegacyLocalStorage } from "../lib/importers";
@@ -90,6 +90,8 @@ interface PlaygroundState {
   setPlugs: (id: string, plugs: Plug[], record?: boolean) => void;
   /** Wires two plugs together with a cable (one undo step), replacing any cable already on either. */
   connectPlugs: (a: PlugEnd, b: PlugEnd, style?: CableStyle) => void;
+  /** Runs a cable between two ends, adding plugs where an end is just a spot on an edge. One undo step. Returns the cable's stored end. */
+  wire: (a: WireEnd, b: WireEnd, style?: CableStyle) => PlugEnd;
   /** Changes a cable's type or color (one undo step). `stored` is the plug the cable is stored on. */
   setCableStyle: (stored: PlugEnd, style: CableStyle) => void;
   /**
@@ -499,6 +501,12 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const items = connectPlugs(s.items, a, b, style);
       return items === s.items ? {} : { ...record(s), items };
     }),
+  wire: (a, b, style) => {
+    const s = get();
+    const done = wire(s.items, a, b, style);
+    set({ ...record(s), items: done.items });
+    return done.stored;
+  },
   setCableStyle: (stored, style) =>
     set((s) => ({
       ...record(s),

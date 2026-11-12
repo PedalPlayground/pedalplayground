@@ -4,7 +4,7 @@
  * direction, for the board drawing and, later, the signal flow map. Pure functions, no React.
  */
 import { plugAnchor, routeCable, type CableRoute, type PlugAnchor, type RouteOptions } from "./cableRoute";
-import type { CableKind, ManualLegs, Plug, PlugEnd, PlugLink } from "./plugs";
+import { DEFAULT_PLUG, newPlugId, type CableKind, type ManualLegs, type Plug, type PlugEnd, type PlugLink, type PlugSide } from "./plugs";
 import type { Pt } from "./cableRoute";
 import type { Item } from "./types";
 
@@ -107,6 +107,27 @@ export function boardCables(items: Item[]): BoardCable[] {
     }
   }
   return out;
+}
+
+/** A cable end while wiring: a plug that's already there, or a spot on a pedal's edge to add one. */
+export type WireEnd = PlugEnd | { item: string; side: PlugSide; at: number };
+export const isPlugEnd = (e: WireEnd): e is PlugEnd => "plug" in e;
+
+/**
+ * Runs a cable between two ends, adding a plug (the default type) at any end that's just a spot on an edge. Returns
+ * the items and the stored end (the first one), whose id names the cable.
+ */
+export function wire(items: Item[], a: WireEnd, b: WireEnd, style: CableStyle = {}): { items: Item[]; stored: PlugEnd } {
+  let next = items;
+  const place = (e: WireEnd): PlugEnd => {
+    if (isPlugEnd(e)) return e;
+    const id = newPlugId();
+    next = next.map((i) => (i.id === e.item ? { ...i, plugs: [...(i.plugs ?? []), { id, side: e.side, at: e.at, type: DEFAULT_PLUG }] } : i));
+    return { item: e.item, plug: id };
+  };
+  const pa = place(a);
+  const pb = place(b);
+  return { items: connectPlugs(next, pa, pb, style), stored: pa };
 }
 
 /** The items with every cable on these plugs removed. Unchanged items keep their identity. */

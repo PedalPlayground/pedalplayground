@@ -239,7 +239,7 @@ export function CanvasStack({ viewOnly, onShare }: { viewOnly: boolean; onShare:
           {SHOW_CABLES && (
             <>
               <Divider />
-              <Row {...row} icon={<Spline size={16} />} label="Cables" pressed={cablesOpen} onClick={withTool("cables", "side_menu", () => setCablesOpen(!cablesOpen))} />
+              <Row {...row} icon={<Spline size={16} />} label="Signal Flow" pressed={cablesOpen} onClick={withTool("cables", "side_menu", () => setCablesOpen(!cablesOpen))} />
             </>
           )}
           <Divider />
