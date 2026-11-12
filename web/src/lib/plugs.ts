@@ -19,7 +19,13 @@ export interface Plug {
 /** A cable's far end, and its shape if someone moved its runs by hand. */
 export interface PlugLink extends PlugEnd {
   legs?: ManualLegs;
+  /** What the cable carries (see CABLE_KINDS in lib/cables.ts). Missing means mono audio. */
+  kind?: CableKind;
+  /** The cable's color (hex). Missing means the default gray. */
+  color?: string;
 }
+
+export type CableKind = "mono" | "stereo" | "midi" | "exp" | "tap" | "switching" | "other";
 
 /**
  * A hand-placed cable shape, from this plug to the other: the legs alternate horizontal and vertical starting with

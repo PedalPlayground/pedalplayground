@@ -26,11 +26,11 @@ const usePlugPick = create<Pick & { set: (p: Partial<Pick>) => void }>((set) => 
 }));
 
 /** The guessed jacks that don't have a plug on them yet. */
-const openHints = (hints: JackHint[], plugs: Plug[]) =>
+export const openHints = (hints: JackHint[], plugs: Plug[]) =>
   hints.filter((h) => !plugs.some((p) => p.side === h.side && Math.abs(p.at - h.at) < 0.4));
 
 /** The found jacks, plus a + at the middle of every side that has none (all four when nothing was found or there's no photo). */
-const withMiddles = (found: JackHint[], w: number, h: number): JackHint[] => [
+export const withMiddles = (found: JackHint[], w: number, h: number): JackHint[] => [
   ...found,
   ...(["top", "right", "bottom", "left"] as const)
     .filter((side) => !found.some((f) => f.side === side))

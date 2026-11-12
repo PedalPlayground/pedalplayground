@@ -1,6 +1,6 @@
 import { uuid } from "../lib/uuid";
 import type { ManualLegs, Plug, PlugEnd } from "../lib/plugs";
-import { connectPlugs, unplug, withoutLinks } from "../lib/cables";
+import { connectPlugs, unplug, withoutLinks, type CableStyle } from "../lib/cables";
 import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { importAny, readLegacyLocalStorage } from "../lib/importers";
@@ -89,7 +89,9 @@ interface PlaygroundState {
    */
   setPlugs: (id: string, plugs: Plug[], record?: boolean) => void;
   /** Wires two plugs together with a cable (one undo step), replacing any cable already on either. */
-  connectPlugs: (a: PlugEnd, b: PlugEnd) => void;
+  connectPlugs: (a: PlugEnd, b: PlugEnd, style?: CableStyle) => void;
+  /** Changes a cable's type or color (one undo step). `stored` is the plug the cable is stored on. */
+  setCableStyle: (stored: PlugEnd, style: CableStyle) => void;
   /**
    * Sets the hand-placed shape of the cable stored on this plug, or null to route it automatically again. One undo
    * step, unless `record` is false (a drag in progress: call beginTransaction first).
@@ -492,11 +494,20 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       });
       return doRecord ? { ...record(s), items } : { items };
     }),
-  connectPlugs: (a, b) =>
+  connectPlugs: (a, b, style) =>
     set((s) => {
-      const items = connectPlugs(s.items, a, b);
+      const items = connectPlugs(s.items, a, b, style);
       return items === s.items ? {} : { ...record(s), items };
     }),
+  setCableStyle: (stored, style) =>
+    set((s) => ({
+      ...record(s),
+      items: s.items.map((i) =>
+        i.id !== stored.item || !i.plugs
+          ? i
+          : { ...i, plugs: i.plugs.map((p) => (p.id === stored.plug && p.link ? { ...p, link: { ...p.link, ...style } } : p)) },
+      ),
+    })),
   setCableLegs: (stored, legs, doRecord = true) =>
     set((s) => {
       const items = s.items.map((i) => {

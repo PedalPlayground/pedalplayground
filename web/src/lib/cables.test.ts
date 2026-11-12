@@ -167,3 +167,12 @@ describe("hand-placed legs", () => {
     expect(manual.route.points.some(([, y]) => y === 7)).toBe(true);
   });
 });
+
+describe("cable style", () => {
+  it("defaults to gray mono and keeps a picked type and color", () => {
+    let items = connectPlugs([pedal("a", 0, io()), pedal("b", 5, io())], { item: "a", plug: "out" }, { item: "b", plug: "in" });
+    expect(boardCables(items)[0]).toMatchObject({ kind: "mono", color: "#8b9099" });
+    items = connectPlugs(items, { item: "a", plug: "out" }, { item: "b", plug: "in" }, { kind: "stereo", color: "#e5484d" });
+    expect(boardCables(items)[0]).toMatchObject({ kind: "stereo", color: "#e5484d" });
+  });
+});

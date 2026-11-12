@@ -4,9 +4,41 @@
  * direction, for the board drawing and, later, the signal flow map. Pure functions, no React.
  */
 import { plugAnchor, routeCable, type CableRoute, type PlugAnchor, type RouteOptions } from "./cableRoute";
-import type { ManualLegs, Plug, PlugEnd } from "./plugs";
+import type { CableKind, ManualLegs, Plug, PlugEnd, PlugLink } from "./plugs";
 import type { Pt } from "./cableRoute";
 import type { Item } from "./types";
+
+/**
+ * Cable types and how each draws. Line style tells them apart, so color stays free for the user: audio is solid
+ * (stereo doubled), control cables are dotted, MIDI is dash-dot and anything else dashed.
+ */
+export const CABLE_KINDS: { kind: CableKind; label: string; line: "solid" | "double" | "dotted" | "dashdot" | "dashed" }[] = [
+  { kind: "mono", label: "Mono", line: "solid" },
+  { kind: "stereo", label: "Stereo", line: "double" },
+  { kind: "midi", label: "MIDI", line: "dashdot" },
+  { kind: "exp", label: "Expression", line: "dotted" },
+  { kind: "tap", label: "Tap Tempo", line: "dotted" },
+  { kind: "switching", label: "Switching", line: "dotted" },
+  { kind: "other", label: "Other", line: "dashed" },
+];
+export const cableKindInfo = (k: CableKind | undefined) => CABLE_KINDS.find((c) => c.kind === k) ?? CABLE_KINDS[0];
+
+/** New cables are gray until the user picks a color. */
+export const DEFAULT_CABLE_COLOR = "#8b9099";
+export const CABLE_COLOR_PRESETS: { name: string; hex: string }[] = [
+  { name: "Gray", hex: DEFAULT_CABLE_COLOR },
+  { name: "Black", hex: "#25272c" },
+  { name: "White", hex: "#eceef1" },
+  { name: "Red", hex: "#e5484d" },
+  { name: "Orange", hex: "#f2883a" },
+  { name: "Yellow", hex: "#f2c94c" },
+  { name: "Green", hex: "#46a758" },
+  { name: "Blue", hex: "#3e8ee8" },
+  { name: "Purple", hex: "#8e6cef" },
+];
+
+/** A cable's look and type: what's set on it, with the defaults filled in. */
+export type CableStyle = Pick<PlugLink, "kind" | "color">;
 
 /** A plug's role in the signal, read from where it sits on the pedal. */
 export type PlugRole = "in" | "out" | null;
@@ -21,6 +53,8 @@ export interface BoardCable {
   stored: PlugEnd;
   /** A hand-placed shape, from the stored plug to the other. */
   legs?: ManualLegs;
+  kind: CableKind;
+  color: string;
 }
 
 export const sameEnd = (a: PlugEnd, b: PlugEnd) => a.item === b.item && a.plug === b.plug;
@@ -66,6 +100,8 @@ export function boardCables(items: Item[]): BoardCable[] {
         from: reversed ? there : here,
         to: reversed ? here : there,
         stored: here,
+        kind: plug.link.kind ?? "mono",
+        color: plug.link.color ?? DEFAULT_CABLE_COLOR,
         ...(plug.link.legs ? { legs: plug.link.legs } : {}),
       });
     }
@@ -90,11 +126,10 @@ export function unplug(items: Item[], ends: PlugEnd[]): Item[] {
 }
 
 /** Wires two plugs together. A jack takes one cable, so any cable already on either plug is unplugged first. */
-export function connectPlugs(items: Item[], a: PlugEnd, b: PlugEnd): Item[] {
+export function connectPlugs(items: Item[], a: PlugEnd, b: PlugEnd, style: CableStyle = {}): Item[] {
   if (sameEnd(a, b)) return items;
-  return unplug(items, [a, b]).map((i) =>
-    i.id === a.item && i.plugs ? { ...i, plugs: i.plugs.map((p) => (p.id === a.plug ? { ...p, link: { item: b.item, plug: b.plug } } : p)) } : i,
-  );
+  const link: PlugLink = { item: b.item, plug: b.plug, ...(style.kind && style.kind !== "mono" ? { kind: style.kind } : {}), ...(style.color ? { color: style.color } : {}) };
+  return unplug(items, [a, b]).map((i) => (i.id === a.item && i.plugs ? { ...i, plugs: i.plugs.map((p) => (p.id === a.plug ? { ...p, link } : p)) } : i));
 }
 
 /** Copies of plugs carry no cables (a copied pedal starts unwired). */

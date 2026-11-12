@@ -1,7 +1,29 @@
 import { useEffect, useMemo, useState } from "react";
 import { create } from "zustand";
 import { plugAnchor, roundedPath } from "../lib/cableRoute";
-import { corners, moveLeg, routeBoardCables, sameEnd, toManual, type RoutedCable } from "../lib/cables";
+import {
+  boardCables,
+  CABLE_COLOR_PRESETS,
+  CABLE_KINDS,
+  cableKindInfo,
+  corners,
+  DEFAULT_CABLE_COLOR,
+  moveLeg,
+  routeBoardCables,
+  sameEnd,
+  toManual,
+  type CableStyle,
+  type RoutedCable,
+} from "../lib/cables";
+import { Plus } from "lucide-react";
+import { canvasImageUrl } from "../lib/catalog";
+import { findJacks, type JackHint } from "../lib/jackFinder";
+import { DEFAULT_PLUG, newPlugId } from "../lib/plugs";
+import { useCatalog } from "../store/catalog";
+import { ColorSwatches } from "./CustomItemForm";
+import { LabeledSelect } from "./LabeledSelect";
+import { openHints, withMiddles } from "./PlugEditor";
+import type { CableKind } from "../lib/plugs";
 import type { Pt } from "../lib/cableRoute";
 import { PX_PER_INCH } from "../lib/geometry";
 import type { PlugEnd } from "../lib/plugs";
@@ -13,8 +35,6 @@ import { barPanel } from "./toolbarStyles";
 
 /** Cable width: 5px at 100% zoom, in inches, so it scales with the board like the gear does. */
 const WIDTH = 5 / PX_PER_INCH;
-/** Hovered cables get a touch wider as well as lighter, so the one under the pointer is obvious. */
-const HOVER_WIDTH = 6 / PX_PER_INCH;
 /** How far from a cable a press still picks it, in inches (wide, so thin cables are easy to hit). */
 const HIT_WIDTH = 0.45;
 /** Corner rounding, in inches. */
@@ -22,13 +42,45 @@ const CORNER = 0.3;
 /** Side-by-side spacing for cables sharing a run. */
 const SPACING = 0.22;
 
-const CABLE = "#3d7be0";
-const CABLE_HOVER = "#7aa9f5";
+/** The glow under a hovered or picked cable, in inches. */
+const GLOW_WIDTH = 14 / PX_PER_INCH;
+
+/**
+ * One cable's line in its type's style: solid, double (two thin lines, cut with a mask so the board shows between
+ * them), dotted, dash-dot or dashed. Dashes are in cable widths, so they keep their look at any zoom.
+ */
+function CableLine({ id, d, kind, color }: { id: string; d: string; kind: CableKind; color: string }) {
+  const line = cableKindInfo(kind).line;
+  const w = WIDTH;
+  const common = { d, fill: "none", stroke: color, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  if (line === "double") {
+    const mask = `cable-gap-${id.replace(/[^a-z0-9-]/gi, "")}`;
+    return (
+      <>
+        <mask id={mask} maskUnits="userSpaceOnUse" x={-1e4} y={-1e4} width={2e4} height={2e4}>
+          <path d={d} fill="none" stroke="#fff" strokeWidth={w * 1.4} strokeLinecap="round" strokeLinejoin="round" />
+          <path d={d} fill="none" stroke="#000" strokeWidth={w * 0.5} strokeLinecap="round" strokeLinejoin="round" />
+        </mask>
+        <path {...common} strokeWidth={w * 1.4} mask={`url(#${mask})`} />
+      </>
+    );
+  }
+  const dash =
+    line === "dotted" ? `0 ${w * 1.9}` : line === "dashdot" ? `${w * 2.6} ${w * 1.4} 0 ${w * 1.4}` : line === "dashed" ? `${w * 2.4} ${w * 1.6}` : undefined;
+  return <path {...common} strokeWidth={line === "dotted" ? w * 1.15 : w} strokeDasharray={dash} />;
+}
 
 /** What's picked in the Cables tool: a plug waiting for its other end, or a cable. */
-export const useCablePick = create<{ plug: PlugEnd | null; cable: string | null; set: (p: Partial<{ plug: PlugEnd | null; cable: string | null }>) => void }>((set) => ({
+type CablePick = {
+  plug: PlugEnd | null;
+  cable: string | null;
+  /** What new cables get: the last type and color picked, like new plugs follow the last plug type. */
+  style: Required<CableStyle>;
+};
+export const useCablePick = create<CablePick & { set: (p: Partial<CablePick>) => void }>((set) => ({
   plug: null,
   cable: null,
+  style: { kind: "mono", color: DEFAULT_CABLE_COLOR },
   set: (p) => set(p),
 }));
 
@@ -130,14 +182,19 @@ export function CableLayer({ items }: { items: Item[] }) {
           const lit = open && (hover === c.id || picked === c.id);
           return (
             <g key={c.id}>
-              <path
-                d={d}
-                fill="none"
-                stroke={picked === c.id && open ? "var(--color-brand)" : lit ? CABLE_HOVER : CABLE}
-                strokeWidth={lit ? HOVER_WIDTH : WIDTH}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+              {/* Hover and pick show as a soft glow under the cable, so it works for every color and line style. */}
+              {lit && (
+                <path
+                  d={d}
+                  fill="none"
+                  stroke="var(--color-brand)"
+                  strokeOpacity={picked === c.id ? 0.55 : 0.35}
+                  strokeWidth={GLOW_WIDTH}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              )}
+              <CableLine id={c.id} d={d} kind={c.kind} color={c.color} />
               {open && (
                 <path
                   d={d}
@@ -207,110 +264,178 @@ export function LegHandles({ items, zoom }: { items: Item[]; zoom: number }) {
 /** Size of a plug's handle in the Cables tool, in screen px whatever the zoom. */
 const HANDLE_PX = 14;
 
+/** Guessed jacks for every pedal (from its photo, or the middle of each side), worked out once per pedal and size. */
+function useJackHints(items: Item[]) {
+  const manifest = useCatalog((s) => s.manifest);
+  const [found, setFound] = useState<Record<string, JackHint[]>>({});
+  const pedals = items.filter((i) => i.kind === "pedal");
+  const key = pedals.map((i) => `${i.id}|${i.image}|${i.width}|${i.height}`).join(",");
+  useEffect(() => {
+    let live = true;
+    for (const item of pedals) {
+      const src = item.image ? canvasImageUrl(manifest, item.kind, item.image) : null;
+      const done = (hints: JackHint[]) => live && setFound((f) => ({ ...f, [item.id]: withMiddles(hints, item.width, item.height) }));
+      if (src) void findJacks(src, item.width, item.height).then(done);
+      else done([]);
+    }
+    return () => {
+      live = false;
+    };
+    // The key covers what the hints depend on.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key, manifest]);
+  return found;
+}
+
+/** Clicking a plug end: the first click picks it, the second (on another plug) runs a cable between them. */
+function pickEnd(end: PlugEnd) {
+  const pick = useCablePick.getState();
+  if (!pick.plug) pick.set({ plug: end, cable: null });
+  else if (sameEnd(pick.plug, end)) pick.set({ plug: null });
+  else {
+    usePlayground.getState().connectPlugs(pick.plug, end, pick.style);
+    pick.set({ plug: null, cable: `${pick.plug.item}:${pick.plug.plug}` });
+  }
+}
+
 /**
- * The Cables tool's handles: a dot at the end of every plug on every pedal. Click one, then another, to wire them.
- * Drawn above the pedals.
+ * The Cables tool's handles, drawn above the pedals: a dot at the end of every plug, and a + at every guessed jack
+ * that has no plug yet (the plug editor's same guesses). Click one, then another, to run a cable; a + gets a plug as
+ * it's clicked, so wiring and plugs are one step.
  */
 export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
   const plug = useCablePick((p) => p.plug);
   const [hover, setHover] = useState<string | null>(null);
-  const ends = items.flatMap((item) =>
-    item.kind === "pedal" ? (item.plugs ?? []).map((p) => ({ end: { item: item.id, plug: p.id }, at: plugAnchor(item, p).at })) : [],
-  );
-  const wired = useMemo(() => {
-    // A plug is wired when its own link or another plug's link points at it.
-    const set = new Set<string>();
-    for (const i of items) for (const p of i.plugs ?? []) if (p.link) set.add(`${i.id}:${p.id}`), set.add(`${p.link.item}:${p.link.plug}`);
-    return set;
-  }, [items]);
+  const hints = useJackHints(items);
+  const cables = useMemo(() => boardCables(items), [items]);
+  const colorOf = useMemo(() => {
+    // A plug wired to a cable shows the cable's color.
+    const m = new Map<string, string>();
+    for (const c of cables) m.set(`${c.from.item}:${c.from.plug}`, c.color), m.set(`${c.to.item}:${c.to.plug}`, c.color);
+    return m;
+  }, [cables]);
   const r = HANDLE_PX / 2 / zoom;
+  const box = (at: Pt) => ({ left: at[0] * PX_PER_INCH - r * 1.6, top: at[1] * PX_PER_INCH - r * 1.6, width: r * 3.2, height: r * 3.2 });
   return (
     <>
-      {ends.map(({ end, at }) => {
-        const key = `${end.item}:${end.plug}`;
-        const on = !!plug && sameEnd(plug, end);
-        const lit = on || hover === key;
-        return (
-          <button
-            key={key}
-            type="button"
-            aria-label={wired.has(key) ? "Rewire this plug" : "Wire this plug"}
-            className="absolute grid place-items-center rounded-full outline-none"
-            style={{
-              left: at[0] * PX_PER_INCH - r * 1.6,
-              top: at[1] * PX_PER_INCH - r * 1.6,
-              width: r * 3.2,
-              height: r * 3.2,
-            }}
-            onPointerEnter={() => setHover(key)}
-            onPointerLeave={() => setHover((h) => (h === key ? null : h))}
-            onPointerDown={(e) => e.stopPropagation()}
-            onClick={() => {
-              const pick = useCablePick.getState();
-              if (!pick.plug) pick.set({ plug: end, cable: null });
-              else if (sameEnd(pick.plug, end)) pick.set({ plug: null });
-              else {
-                usePlayground.getState().connectPlugs(pick.plug, end);
-                pick.set({ plug: null, cable: `${pick.plug.item}:${pick.plug.plug}` });
-              }
-            }}
-          >
-            <span
-              className="block rounded-full transition-transform"
-              style={{
-                width: r * 2,
-                height: r * 2,
-                background: on ? "var(--color-brand)" : wired.has(key) ? CABLE : "#fff",
-                border: `${2 / zoom}px solid ${on ? "#fff" : "var(--color-brand)"}`,
-                boxShadow: on ? `0 0 0 ${3 / zoom}px color-mix(in srgb, var(--color-brand) 35%, transparent)` : undefined,
-                transform: lit ? "scale(1.25)" : undefined,
+      {items.flatMap((item) => {
+        if (item.kind !== "pedal") return [];
+        const plugs = item.plugs ?? [];
+        const dots = plugs.map((p) => {
+          const end = { item: item.id, plug: p.id };
+          const key = `${item.id}:${p.id}`;
+          const on = !!plug && sameEnd(plug, end);
+          const wired = colorOf.get(key);
+          return (
+            <button
+              key={key}
+              type="button"
+              aria-label={wired ? "Rewire this plug" : "Wire this plug"}
+              className="absolute grid place-items-center rounded-full outline-none"
+              style={box(plugAnchor(item, p).at)}
+              onPointerEnter={() => setHover(key)}
+              onPointerLeave={() => setHover((h) => (h === key ? null : h))}
+              onPointerDown={(e) => e.stopPropagation()}
+              onClick={() => pickEnd(end)}
+            >
+              <span
+                className="block rounded-full transition-transform"
+                style={{
+                  width: r * 2,
+                  height: r * 2,
+                  background: on ? "var(--color-brand)" : (wired ?? "#fff"),
+                  border: `${2 / zoom}px solid ${on ? "#fff" : "var(--color-brand)"}`,
+                  boxShadow: on ? `0 0 0 ${3 / zoom}px color-mix(in srgb, var(--color-brand) 35%, transparent)` : undefined,
+                  transform: on || hover === key ? "scale(1.25)" : undefined,
+                }}
+              />
+            </button>
+          );
+        });
+        const plusses = openHints(hints[item.id] ?? [], plugs).map((h) => {
+          const key = `${item.id}+${h.side}${h.at}`;
+          const at = plugAnchor(item, { id: "", side: h.side, at: h.at, type: DEFAULT_PLUG }).at;
+          return (
+            <button
+              key={key}
+              type="button"
+              aria-label="Add a plug here"
+              className="absolute grid place-items-center rounded-full outline-none"
+              style={box(at)}
+              onPointerEnter={() => setHover(key)}
+              onPointerLeave={() => setHover((x) => (x === key ? null : x))}
+              onPointerDown={(e) => e.stopPropagation()}
+              onClick={() => {
+                // Adds the plug, then treats it as clicked; a cable made right after undoes as its own step.
+                const id = newPlugId();
+                usePlayground.getState().setPlugs(item.id, [...plugs, { id, side: h.side, at: h.at, type: DEFAULT_PLUG }]);
+                pickEnd({ item: item.id, plug: id });
               }}
-            />
-          </button>
-        );
+            >
+              <span
+                className="grid place-items-center rounded-full border-dashed bg-surface/80 text-brand transition-transform"
+                style={{
+                  width: r * 2,
+                  height: r * 2,
+                  borderWidth: 1.5 / zoom,
+                  borderColor: "var(--color-brand)",
+                  transform: hover === key ? "scale(1.25)" : undefined,
+                }}
+              >
+                <Plus size={r * 1.6} strokeWidth={3} />
+              </span>
+            </button>
+          );
+        });
+        return [...dots, ...plusses];
       })}
     </>
   );
 }
 
 /**
- * The panel while the Cables tool is open: a hint that follows what's picked, Remove for a picked cable, and Done.
- * It sits where the object menu does, like the plug panel.
+ * The panel while the Cables tool is open: a hint that follows what's picked, the cable's type and color (the picked
+ * cable's, or what new cables get), Auto Route for a moved cable, Remove, and Done. It sits where the object menu
+ * does, like the plug panel.
  */
 export function CablePanel() {
   const open = useUi((u) => u.cablesOpen);
   const setOpen = useUi((u) => u.setCablesOpen);
-  const { plug, cable, set } = useCablePick();
-  const anyPlugs = usePlayground((s) => s.items.some((i) => i.kind === "pedal" && i.plugs?.length));
-  // A picked cable that was moved by hand can go back to routing itself.
-  const manual = usePlayground((s) => {
-    if (!cable) return false;
-    const [item, p] = cable.split(":");
-    return !!s.items.find((i) => i.id === item)?.plugs?.find((x) => x.id === p)?.link?.legs;
-  });
+  const { plug, cable, style, set } = useCablePick();
+  const anyPedals = usePlayground((s) => s.items.some((i) => i.kind === "pedal"));
+  const items = usePlayground((s) => s.items);
+  const picked = useMemo(() => (cable ? boardCables(items).find((c) => c.id === cable) : undefined), [items, cable]);
 
   useEffect(() => {
     if (!open) set({ plug: null, cable: null });
     else usePlayground.getState().clearSelection();
   }, [open, set]);
+  // A picked cable that's gone (undone away, or its pedal deleted) is no longer picked.
+  useEffect(() => {
+    if (cable && !picked) set({ cable: null });
+  }, [cable, picked, set]);
 
   const remove = () => {
-    if (!cable) return;
-    const [item, p] = cable.split(":");
-    usePlayground.getState().unplug([{ item, plug: p }]);
+    if (!picked) return;
+    usePlayground.getState().unplug([picked.stored]);
     set({ cable: null });
+  };
+  /** Sets the type or color: on the picked cable, and for the cables made next. */
+  const restyle = (patch: Partial<Required<CableStyle>>) => {
+    set({ style: { ...style, ...patch } });
+    if (picked) usePlayground.getState().setCableStyle(picked.stored, patch);
   };
 
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement).closest("input, textarea")) return;
+      if ((e.target as HTMLElement).closest("input, textarea, select")) return;
       if (e.key === "Escape") {
         if (plug || cable) set({ plug: null, cable: null });
         else setOpen(false);
       }
       const d = e.key.toLowerCase() === "d" && !e.metaKey && !e.ctrlKey && !e.altKey;
-      if ((e.key === "Delete" || e.key === "Backspace" || d) && cable) {
+      if ((e.key === "Delete" || e.key === "Backspace" || d) && picked) {
         e.preventDefault();
         e.stopPropagation();
         remove();
@@ -321,35 +446,34 @@ export function CablePanel() {
   });
 
   if (!open) return null;
-  const hint = !anyPlugs
-    ? "Add plugs to your pedals first (Plugs, or press P)."
+  const kind = picked?.kind ?? style.kind;
+  const color = picked?.color ?? style.color;
+  const hint = !anyPedals
+    ? "Add some pedals first."
     : plug
-      ? "Now click the plug at the other end."
-      : cable
+      ? "Now click the other end: a plug or a +."
+      : picked
         ? "Drag a handle to move a run. Delete removes the cable."
-        : "Click a plug, then another, to run a cable.";
+        : "Click a plug or a +, then another, to run a cable.";
   return (
     <div
       role="dialog"
       aria-label="Cables"
-      className={`animate-enter absolute left-1/2 z-20 flex w-max max-w-[calc(100%-24px)] -translate-x-1/2 flex-col p-2 ${barPanel} max-sm:bottom-[calc(74px+env(safe-area-inset-bottom))] sm:top-4`}
+      className={`animate-enter absolute left-1/2 z-20 flex w-max max-w-[calc(100%-24px)] -translate-x-1/2 flex-col gap-2 p-2 ${barPanel} max-sm:bottom-[calc(74px+env(safe-area-inset-bottom))] sm:top-4`}
       onPointerDown={(e) => e.stopPropagation()}
     >
       <div className="flex items-center gap-3 pl-1">
         <span className="text-[13px] font-medium">{hint}</span>
-        {manual && (
+        {picked?.legs && (
           <button
             type="button"
-            onClick={() => {
-              const [item, p] = cable!.split(":");
-              usePlayground.getState().setCableLegs({ item, plug: p }, null);
-            }}
+            onClick={() => usePlayground.getState().setCableLegs(picked.stored, null)}
             className="flex h-9 items-center rounded-control px-3 text-sm font-semibold outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand"
           >
             Auto Route
           </button>
         )}
-        {cable && (
+        {picked && (
           <button
             type="button"
             onClick={remove}
@@ -361,10 +485,19 @@ export function CablePanel() {
         <button
           type="button"
           onClick={withTool("cables_done", "panel", () => setOpen(false))}
-          className="btn-primary flex h-9 items-center gap-1 rounded-control px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
+          className="btn-primary ml-auto flex h-9 items-center gap-1 rounded-control px-3 text-sm font-semibold outline-none focus-visible:ring-2 focus-visible:ring-brand"
         >
           Done
         </button>
+      </div>
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line px-1 pt-2">
+        <LabeledSelect
+          label={picked ? "Type" : "New Cables"}
+          value={kind}
+          options={CABLE_KINDS.map((k) => [k.kind, k.label] as const)}
+          onChange={(k) => restyle({ kind: k })}
+        />
+        <ColorSwatches color={color} presets={CABLE_COLOR_PRESETS} onChange={(hex) => restyle({ color: hex })} />
       </div>
     </div>
   );
