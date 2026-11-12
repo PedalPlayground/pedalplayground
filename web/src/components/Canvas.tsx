@@ -491,7 +491,11 @@ export function Canvas() {
     const cableMode = useUi.getState().cablesOpen;
     // A cable or plug picked on the board is let go of (pressing one stops the press before it gets here).
     useCablePick.getState().set({ chosen: null });
-    if (cableMode) useCablePick.getState().set({ plug: null, cable: null });
+    // A cable being run keeps going when a pedal is picked to show its + points.
+    if (cableMode) {
+      const onGear = !!(e.target as HTMLElement).closest("[data-item-id]");
+      useCablePick.getState().set(onGear ? { cable: null } : { plug: null, cable: null });
+    }
     const plugMode = !!useUi.getState().plugEditing || cableMode;
     if (plugMode && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) return;
     if (e.pointerType !== "touch" && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) {
@@ -529,7 +533,9 @@ export function Canvas() {
     if (plugMode) {
       // Editing plugs: every drag pans; a click on another pedal moves the plug editing to it.
       const id = itemEl?.dataset.itemId;
-      const other = !cableMode && id && id !== useUi.getState().plugEditing && s.items.find((i) => i.id === id)?.kind === "pedal" ? id : undefined;
+      // In Signal Flow a click picks a pedal (only its + points show) and a click off the gear lets it go.
+      const isPedal = !!id && s.items.find((i) => i.id === id)?.kind === "pedal";
+      const other = isPedal && (cableMode || id !== useUi.getState().plugEditing) ? id : undefined;
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: true, moved: false, jumpTo: other };
       setPanning(!touch);
     } else if (useUi.getState().viewing) {
@@ -677,8 +683,8 @@ export function Canvas() {
     if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) {
       if (g.jumpTo) {
         usePlayground.getState().select(g.jumpTo);
-        useUi.getState().setPlugEditing(g.jumpTo);
-      } else if (!useUi.getState().plugEditing && !useUi.getState().cablesOpen) usePlayground.getState().clearSelection();
+        if (!useUi.getState().cablesOpen) useUi.getState().setPlugEditing(g.jumpTo);
+      } else if (!useUi.getState().plugEditing) usePlayground.getState().clearSelection();
     }
     if (ref.current?.hasPointerCapture(e.pointerId)) ref.current.releasePointerCapture(e.pointerId);
     if (useUi.getState().dragging) useUi.setState({ dragging: false });

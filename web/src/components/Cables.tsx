@@ -365,6 +365,8 @@ const sameWireEnd = (a: WireEnd, b: WireEnd) =>
  */
 function pickEnd(end: WireEnd) {
   const pick = useCablePick.getState();
+  // A picked pedal is let go of, so every pedal's +s are back.
+  usePlayground.getState().clearSelection();
   if (!pick.plug) pick.set({ plug: end, cable: null });
   else if (sameWireEnd(pick.plug, end)) pick.set({ plug: null });
   else {
@@ -379,6 +381,13 @@ function endAnchor(items: Item[], end: WireEnd) {
   if (!item) return null;
   const plug = isPlugEnd(end) ? item.plugs?.find((p) => p.id === end.plug) : { id: "", side: end.side, at: end.at, type: defaultPlugFor(useCablePick.getState().style.kind) };
   return plug ? plugAnchor(item, plug) : null;
+}
+
+/** The pedal picked in Signal Flow, if one is: a single selected pedal. */
+function useFocusPedal(items: Item[]) {
+  const selected = usePlayground((s) => s.selected);
+  const one = selected.length === 1 ? items.find((i) => i.id === selected[0]) : undefined;
+  return one?.kind === "pedal" ? one.id : null;
 }
 
 /** A spot just outside a pedal's edge, `off` inches out, in world inches: where a + for that spot sits. */
@@ -452,12 +461,14 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
   const r = HANDLE_PX / 2 / zoom;
   const box = (at: Pt) => ({ left: at[0] * PX_PER_INCH - r * 1.6, top: at[1] * PX_PER_INCH - r * 1.6, width: r * 3.2, height: r * 3.2 });
   // The hovered pedal shows its points, and so does the pedal the cable starts from.
-  const shown = new Set([pointer.over, start?.item].filter(Boolean) as string[]);
+  // A picked pedal shows only its own points (and the start's); otherwise the hovered pedal does.
+  const focus = useFocusPedal(items);
+  const shown = new Set([focus ?? pointer.over, start?.item].filter(Boolean) as string[]);
   // The +s sit just past the edge, close enough to read as the pedal's but clear of its plugs' heads.
   const plusOff = (r * 1.2) / PX_PER_INCH;
   // The edge plus: a + on the hovered pedal's edge right by the pointer, for a jack anywhere along it. It stays out of
   // the way of the plugs and +s already there.
-  const overItem = pointer.over ? items.find((i) => i.id === pointer.over) : undefined;
+  const overItem = pointer.over && (!focus || pointer.over === focus) ? items.find((i) => i.id === pointer.over) : undefined;
   const near = overItem && pointer.at ? nearestEdge(overItem, pointer.at) : null;
   const taken =
     overItem &&
