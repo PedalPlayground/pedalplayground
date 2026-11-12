@@ -43,8 +43,8 @@ import { knownType, plugBox, PLUG_TYPES, snapAt, type PlugSide, type PlugType } 
 
 /** Audio cable width: 4px at 100% zoom, in inches, so it scales with the board like the gear does. */
 const WIDTH = 4 / PX_PER_INCH;
-/** The gap between a stereo cable's two lines: a hairline, 1/4px at 100% zoom. */
-const STEREO_GAP = 0.25 / PX_PER_INCH;
+/** The gap between a stereo cable's two lines, in screen pixels, so it shows at any zoom. */
+const STEREO_GAP_PX = 1;
 /** How far from a cable a press still picks it, in inches (wide, so thin cables are easy to hit). */
 const HIT_WIDTH = 0.6;
 /** Corner rounding, in inches. */
@@ -66,6 +66,7 @@ const HALO_LINE = 2;
 function CableLine({ id, d, kind, color }: { id: string; d: string; kind: CableKind; color: string }) {
   const { line, width } = cableKindInfo(kind);
   const w = WIDTH * width;
+  const zoom = usePlayground((st) => st.view.zoom);
   const common = { d, fill: "none", stroke: color, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
   if (line === "double") {
     // Two lines with a hairline gap between them, where the board shows through.
@@ -74,7 +75,7 @@ function CableLine({ id, d, kind, color }: { id: string; d: string; kind: CableK
       <>
         <mask id={mask} maskUnits="userSpaceOnUse" x={-1e4} y={-1e4} width={2e4} height={2e4}>
           <path d={d} fill="none" stroke="#fff" strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" />
-          <path d={d} fill="none" stroke="#000" strokeWidth={STEREO_GAP} strokeLinecap="round" strokeLinejoin="round" />
+          <path d={d} fill="none" stroke="#000" strokeWidth={Math.min(STEREO_GAP_PX / (PX_PER_INCH * zoom), w * 0.5)} strokeLinecap="round" strokeLinejoin="round" />
         </mask>
         <path {...common} strokeWidth={w} mask={`url(#${mask})`} />
       </>
