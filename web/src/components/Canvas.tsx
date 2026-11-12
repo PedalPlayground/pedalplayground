@@ -494,7 +494,7 @@ export function Canvas() {
     // A cable being run keeps going when a pedal is picked to show its + points.
     if (cableMode) {
       const onGear = !!(e.target as HTMLElement).closest("[data-item-id]");
-      useCablePick.getState().set(onGear ? { cable: null } : { plug: null, cable: null });
+      useCablePick.getState().set(onGear ? { cable: null, jack: null } : { plug: null, cable: null, jack: null });
     }
     const plugMode = !!useUi.getState().plugEditing || cableMode;
     if (plugMode && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) return;

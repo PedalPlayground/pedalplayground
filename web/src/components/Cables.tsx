@@ -21,7 +21,7 @@ import {
   type RoutedCable,
   type WireEnd,
 } from "../lib/cables";
-import { Link2, Link2Off, Pencil, Plus, Trash2, Unplug } from "lucide-react";
+import { ArrowUp, Link2, Link2Off, Pencil, Trash2, Unplug } from "lucide-react";
 import { canvasImageUrl } from "../lib/catalog";
 import { findJacks, type JackHint } from "../lib/jackFinder";
 import { useCatalog } from "../store/catalog";
@@ -85,6 +85,8 @@ export type Chosen = { cable: string } | { plug: PlugEnd };
 type CablePick = {
   /** Picked on the board outside the tool. */
   chosen: Chosen | null;
+  /** A plugged-in jack picked in the tool, to change its plug. */
+  jack: PlugEnd | null;
   /** The end a cable is being run from (it follows the pointer until a second click). */
   plug: WireEnd | null;
   cable: string | null;
@@ -93,6 +95,7 @@ type CablePick = {
 };
 export const useCablePick = create<CablePick & { set: (p: Partial<CablePick>) => void }>((set) => ({
   chosen: null,
+  jack: null,
   plug: null,
   cable: null,
   style: { kind: "mono", color: DEFAULT_CABLE_COLOR },
@@ -131,15 +134,14 @@ export function deleteChosen() {
   pick.set({ chosen: null });
 }
 
-/** Edit on a picked cable or plug: opens Signal Flow with its cable picked, or, for a plug with no cable, a cable started from it. */
+/** Edit on a picked cable or plug: opens Signal Flow with that cable, or that jack (to change its plug), picked. */
 function editChosen() {
   const pick = useCablePick.getState();
   const c = pick.chosen;
   if (!c) return;
-  const cable = chosenCable(usePlayground.getState().items, c);
   useUi.getState().setCablesOpen(true);
-  if (cable) pick.set({ chosen: null, cable: cable.id, plug: null });
-  else if ("plug" in c) pick.set({ chosen: null, cable: null, plug: c.plug });
+  if ("cable" in c) pick.set({ chosen: null, cable: c.cable, plug: null, jack: null });
+  else pick.set({ chosen: null, cable: null, plug: null, jack: c.plug });
 }
 
 /** The routes for this exact items array, worked out once and shared by the cables and their handles. */
@@ -182,7 +184,7 @@ function nearestLeg(pts: Pt[], p: Pt) {
  */
 function pressCable(e: React.PointerEvent<Element>, c: RoutedCable, k?: number) {
   e.stopPropagation();
-  useCablePick.getState().set({ cable: c.id, plug: null });
+  useCablePick.getState().set({ cable: c.id, plug: null, jack: null });
   if (e.button !== 0) return;
   const canvas = e.currentTarget.closest("[data-canvas]");
   if (!canvas) return;
@@ -374,14 +376,21 @@ const sameWireEnd = (a: WireEnd, b: WireEnd) =>
  */
 function pickEnd(end: WireEnd) {
   const pick = useCablePick.getState();
-  // A picked pedal is let go of, so every pedal's +s are back.
+  // A picked pedal is let go of, so every pedal's start points are back.
   usePlayground.getState().clearSelection();
+  pick.set({ jack: null });
   if (!pick.plug) pick.set({ plug: end, cable: null });
   else if (sameWireEnd(pick.plug, end)) pick.set({ plug: null });
   else {
     const stored = usePlayground.getState().wire(pick.plug, end, pick.style);
     pick.set({ plug: null, cable: cableId(stored) });
   }
+}
+
+/** Picks a plugged-in jack in the tool, in place of a cable. */
+function pickJack(end: PlugEnd) {
+  usePlayground.getState().clearSelection();
+  useCablePick.getState().set({ jack: end, cable: null, plug: null });
 }
 
 /**
@@ -396,7 +405,7 @@ function liftEnd(end: PlugEnd) {
   store.clearSelection();
   store.unplug([cable.stored]);
   const pick = useCablePick.getState();
-  pick.set({ plug: other, cable: null, style: { kind: cable.kind, color: cable.color } });
+  pick.set({ plug: other, cable: null, jack: null, style: { kind: cable.kind, color: cable.color } });
 }
 
 /** Where a wire end's cable leaves the pedal, in world inches, and which way. */
@@ -490,8 +499,9 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
   // A picked pedal shows only its own points (and the start's); otherwise the hovered pedal does.
   const focus = useFocusPedal(items);
   const shown = new Set([focus ?? pointer.over, start?.item].filter(Boolean) as string[]);
-  // The +s sit just past the edge, close enough to read as the pedal's but clear of its plugs' heads.
-  const plusOff = (r * 1.2) / PX_PER_INCH;
+  // How far inside the edge the start points sit, in inches: their centers just in from it.
+  const inset = (r * 0.5) / PX_PER_INCH;
+  const jackSel = useCablePick((p) => p.jack);
   // The edge plus: a + on the hovered pedal's edge right by the pointer, for a jack anywhere along it. It stays out of
   // the way of the plugs and +s already there.
   const overItem = pointer.over && (!focus || pointer.over === focus) ? items.find((i) => i.id === pointer.over) : undefined;
@@ -526,48 +536,52 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
       {items.flatMap((item) => {
         if (item.kind !== "pedal" || !shown.has(item.id)) return [];
         const plugs = item.plugs ?? [];
+        // Start points sit on the pedal's edge, just inside it, so they rarely land on a cable. They show an Out arrow
+        // for starting a cable and an In arrow while one is being run to them.
+        const arrow = start ? "in" : "out";
         const dots = plugs.map((p) => {
           const end: PlugEnd = { item: item.id, plug: p.id };
           const key = `${item.id}:${p.id}`;
           const on = !!start && sameWireEnd(start, end);
           const wired = connected.has(cableId(end));
-          // A plugged-in jack offers to unplug: its icon sits on the middle of the plug head. Running a cable to it
-          // still connects there instead.
-          const lift = wired && !start;
-          const a = plugAnchor(item, p);
-          const mid: Pt = lift ? [a.at[0] - (a.dir[0] * plugBox(p.type).out) / 2, a.at[1] - (a.dir[1] * plugBox(p.type).out) / 2] : a.at;
+          if (wired && !start) {
+            // A plugged-in jack: the plug itself takes the click, to pick it (and change its plug).
+            const b = plugHead(item, p);
+            const picked = !!jackSel && sameEnd(jackSel, end);
+            const lit = hover === key || picked;
+            return (
+              <button
+                key={key}
+                type="button"
+                aria-label="Select this jack"
+                className="absolute cursor-pointer rounded-[3px] outline-none"
+                style={{
+                  left: b.left * PX_PER_INCH - 2 / zoom,
+                  top: b.top * PX_PER_INCH - 2 / zoom,
+                  width: (b.right - b.left) * PX_PER_INCH + 4 / zoom,
+                  height: (b.bottom - b.top) * PX_PER_INCH + 4 / zoom,
+                  boxShadow: lit ? `0 0 0 ${2 / zoom}px color-mix(in srgb, var(--color-brand) ${picked ? 85 : 45}%, transparent)` : undefined,
+                }}
+                onPointerEnter={() => setHover(key)}
+                onPointerLeave={() => setHover((h) => (h === key ? null : h))}
+                onPointerDown={(e) => e.stopPropagation()}
+                onClick={() => pickJack(end)}
+              />
+            );
+          }
           return (
             <button
               key={key}
               type="button"
-              aria-label={lift ? "Unplug and move this end" : wired ? "Connect here instead" : "Wire this plug"}
-              {...(lift ? tip("Unplug", { side: "bottom" }) : {})}
+              aria-label={wired ? "Connect here instead" : start ? "Connect to this plug" : "Start a cable from this plug"}
               className="absolute grid place-items-center rounded-full outline-none"
-              style={box(mid)}
+              style={box(edgeSpot(item, p.side, p.at, -inset))}
               onPointerEnter={() => setHover(key)}
               onPointerLeave={() => setHover((h) => (h === key ? null : h))}
               onPointerDown={(e) => e.stopPropagation()}
-              onClick={() => (lift ? liftEnd(end) : pickEnd(end))}
+              onClick={() => pickEnd(end)}
             >
-              {lift ? (
-                <span
-                  className="grid place-items-center rounded-full transition-transform"
-                  style={{
-                    width: r * 2.2,
-                    height: r * 2.2,
-                    background: "#fff",
-                    color: "var(--color-brand)",
-                    border: `${1.5 / zoom}px solid var(--color-brand)`,
-                    boxShadow: "0 1px 3px rgb(0 0 0 / 0.3)",
-                    transform: hover === key ? "scale(1.25)" : undefined,
-                  }}
-                >
-                  <Unplug size={r * 1.5} strokeWidth={2.5} />
-                </span>
-              ) : (
-                // A plug with no cable yet looks like any other place to start one.
-                <PlusFace r={r} zoom={zoom} on={on} big={on || hover === key} />
-              )}
+              <ArrowFace r={r} zoom={zoom} on={on} big={on || hover === key} dir={outDir(item, p.side)} way={on ? "out" : arrow} />
             </button>
           );
         });
@@ -579,15 +593,15 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
             <button
               key={key}
               type="button"
-              aria-label="Add a plug here"
+              aria-label={start ? "Connect here" : "Start a cable here"}
               className="absolute grid place-items-center rounded-full outline-none"
-              style={box(edgeSpot(item, h.side, h.at, plusOff))}
+              style={box(edgeSpot(item, h.side, h.at, -inset))}
               onPointerEnter={() => setHover(key)}
               onPointerLeave={() => setHover((x) => (x === key ? null : x))}
               onPointerDown={(e) => e.stopPropagation()}
               onClick={() => pickEnd(end)}
             >
-              <PlusFace r={r} zoom={zoom} on={on} big={on || hover === key} />
+              <ArrowFace r={r} zoom={zoom} on={on} big={on || hover === key} dir={outDir(item, h.side)} way={on ? "out" : arrow} />
             </button>
           );
         });
@@ -595,11 +609,12 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
       })}
       {edge && !hover && (
         <EdgePlus
-          at={edgeSpot(edge.item, edge.side, edge.at, plusOff)}
+          at={edgeSpot(edge.item, edge.side, edge.at, -inset)}
           pointer={pointer.at!}
           r={r}
           zoom={zoom}
-          on={!!start && start.item === edge.item.id}
+          dir={outDir(edge.item, edge.side)}
+          way={start ? "in" : "out"}
           onPick={() => pickEnd({ item: edge.item.id, side: edge.side, at: edge.at })}
         />
       )}
@@ -615,13 +630,13 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
 export function CablePanel() {
   const open = useUi((u) => u.cablesOpen);
   const setOpen = useUi((u) => u.setCablesOpen);
-  const { plug, cable, style, set } = useCablePick();
+  const { plug, cable, jack, style, set } = useCablePick();
   const anyPedals = usePlayground((s) => s.items.some((i) => i.kind === "pedal"));
   const items = usePlayground((s) => s.items);
   const picked = useMemo(() => (cable ? boardCables(items).find((c) => c.id === cable) : undefined), [items, cable]);
 
   useEffect(() => {
-    if (!open) set({ plug: null, cable: null });
+    if (!open) set({ plug: null, cable: null, jack: null });
     else usePlayground.getState().clearSelection();
   }, [open, set]);
   // A picked cable that's gone (undone away, or its pedal deleted) is no longer picked.
@@ -653,7 +668,7 @@ export function CablePanel() {
         return;
       }
       if (e.key === "Escape") {
-        if (plug || cable) set({ plug: null, cable: null });
+        if (plug || cable || jack) set({ plug: null, cable: null, jack: null });
         else setOpen(false);
       }
       const d = e.key.toLowerCase() === "d" && !e.metaKey && !e.ctrlKey && !e.altKey;
@@ -673,10 +688,12 @@ export function CablePanel() {
   const hint = !anyPedals
     ? "Add some pedals first."
     : plug
-      ? "Click a + or a plug on another pedal to connect. Esc cancels."
+      ? "Click an arrow on another pedal to connect. Esc cancels."
       : picked
         ? "Drag a handle to move a run. Delete removes the cable."
-        : "Hover a pedal and click a + to start a cable.";
+        : jack
+          ? "Change this jack's plug, or unplug it to move the cable."
+          : "Hover a pedal and click an arrow to start a cable.";
   return (
     <div
       role="dialog"
@@ -712,18 +729,86 @@ export function CablePanel() {
           Done
         </button>
       </div>
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line px-1 pt-2">
-        <LabeledSelect
-          label={picked ? "Type" : "New Cables"}
-          value={kind}
-          options={CABLE_KINDS.map((k) => [k.kind, k.label] as const)}
-          onChange={(k) => restyle({ kind: k })}
-        />
-      </div>
-      {picked && <CableEnds cable={picked} items={items} />}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line px-1 pt-2">
-        <ColorSwatches color={color} presets={CABLE_COLOR_PRESETS} onChange={(hex) => restyle({ color: hex })} />
-      </div>
+      {jack ? (
+        <JackEdit end={jack} items={items} />
+      ) : (
+        <>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line px-1 pt-2">
+            <LabeledSelect
+              label={picked ? "Type" : "New Cables"}
+              value={kind}
+              options={CABLE_KINDS.map((k) => [k.kind, k.label] as const)}
+              onChange={(k) => restyle({ kind: k })}
+            />
+          </div>
+          {picked && <CableEnds cable={picked} items={items} />}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line px-1 pt-2">
+            <ColorSwatches color={color} presets={CABLE_COLOR_PRESETS} onChange={(hex) => restyle({ color: hex })} />
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+/**
+ * A picked jack in the tool: its plug (the ones its cable's type comes with) and what the jack is, with Unplug to
+ * move its cable and Remove Plug to take the plug off. A plug unlike the other end's sets the cable's ends apart.
+ */
+function JackEdit({ end, items }: { end: PlugEnd; items: Item[] }) {
+  const item = items.find((i) => i.id === end.item);
+  const plug = item?.plugs?.find((p) => p.id === end.plug);
+  const cable = boardCables(items).find((c) => sameEnd(c.from, end) || sameEnd(c.to, end));
+  useEffect(() => {
+    if (!plug) useCablePick.getState().set({ jack: null });
+  }, [plug]);
+  if (!item || !plug) return null;
+  const store = usePlayground.getState();
+  const kind = cable?.kind ?? "other";
+  const other = cable ? (sameEnd(cable.from, end) ? cable.to : cable.from) : null;
+  const otherType = other ? items.find((i) => i.id === other.item)?.plugs?.find((p) => p.id === other.plug)?.type : undefined;
+  const setType = (t: PlugType) => {
+    if (cable) store.editCable(cable.stored, { plug: { end, type: t }, ...(t !== otherType ? { split: true } : {}) });
+    else store.setPlugs(item.id, item.plugs!.map((p) => (p.id === plug.id ? { ...p, type: t } : p)));
+  };
+  const setJack = (id: string) => {
+    if (cable) store.editCable(cable.stored, { jack: { end, id: id || null } });
+    else
+      store.setPlugs(
+        item.id,
+        item.plugs!.map((p) => {
+          if (p.id !== plug.id) return p;
+          const { jack: _, ...rest } = p;
+          return id ? { ...rest, jack: id } : rest;
+        }),
+      );
+  };
+  const plugOptions = cableKindInfo(kind).plugs.map((t) => [t, PLUG_TYPES[t].label] as const);
+  const jackOptions = [["", "Not set"] as const, ...jacksFor(kind).map((j) => [j.id, j.label, j.group] as const)];
+  const button = "flex h-8 items-center rounded-control px-2.5 text-sm font-semibold outline-none hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-brand";
+  return (
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line px-1 pt-2">
+      <span className="max-w-40 truncate text-sm font-semibold">{item.label}</span>
+      <LabeledSelect<PlugType> label="Plug" value={knownType(plug.type)} options={plugOptions} onChange={setType} />
+      <LabeledSelect<string> label="Jack" value={plug.jack ?? ""} options={jackOptions} onChange={setJack} />
+      <span className="ml-auto flex items-center">
+        {cable && (
+          <button type="button" onClick={() => liftEnd(end)} className={button}>
+            <Unplug size={15} className="mr-1.5" />
+            Unplug
+          </button>
+        )}
+        <button
+          type="button"
+          onClick={() => {
+            store.removePlug(end);
+            useCablePick.getState().set({ jack: null });
+          }}
+          className={`${button} text-danger`}
+        >
+          Remove Plug
+        </button>
+      </span>
     </div>
   );
 }
@@ -792,31 +877,19 @@ function CableEnds({ cable, items }: { cable: BoardCable; items: Item[] }) {
 }
 
 /**
- * The + that follows the pointer along a hovered pedal's edge, so it's clear where a click puts the jack. The click
- * target sits under the pointer (which may be just inside the pedal); the + itself sits on the edge.
+ * The start point that follows the pointer along a hovered pedal's edge, so it's clear where a click puts the jack.
+ * The click target sits under the pointer (which may be just inside the pedal); the arrow itself sits on the edge.
  */
-function EdgePlus({ at, pointer, r, zoom, on, onPick }: { at: Pt; pointer: Pt; r: number; zoom: number; on: boolean; onPick: () => void }) {
+function EdgePlus({ at, pointer, r, zoom, dir, way, onPick }: { at: Pt; pointer: Pt; r: number; zoom: number; dir: Pt; way: "in" | "out"; onPick: () => void }) {
   const hit = 28 / zoom;
   return (
     <>
-      <span
-        aria-hidden
-        className="pointer-events-none absolute grid place-items-center rounded-full"
-        style={{
-          left: at[0] * PX_PER_INCH - r * 1.1,
-          top: at[1] * PX_PER_INCH - r * 1.1,
-          width: r * 2.2,
-          height: r * 2.2,
-          background: "var(--color-brand)",
-          color: "#fff",
-          boxShadow: `0 0 0 ${3 / zoom}px color-mix(in srgb, var(--color-brand) ${on ? 35 : 25}%, transparent)`,
-        }}
-      >
-        <Plus size={r * 1.6} strokeWidth={3} />
+      <span aria-hidden className="pointer-events-none absolute grid place-items-center" style={{ left: at[0] * PX_PER_INCH - r * 1.1, top: at[1] * PX_PER_INCH - r * 1.1 }}>
+        <ArrowFace r={r} zoom={zoom} on big={false} dir={dir} way={way} />
       </span>
       <button
         type="button"
-        aria-label="Add a plug at this spot"
+        aria-label={way === "in" ? "Connect at this spot" : "Start a cable at this spot"}
         className="absolute cursor-pointer rounded-full outline-none"
         style={{ left: pointer[0] * PX_PER_INCH - hit / 2, top: pointer[1] * PX_PER_INCH - hit / 2, width: hit, height: hit }}
         onPointerDown={(e) => e.stopPropagation()}
@@ -933,8 +1006,17 @@ export function ChosenMiniMenu() {
   );
 }
 
-/** The round + on a spot or a cable-less plug in Signal Flow: brand filled once it's where a cable starts. */
-function PlusFace({ r, zoom, on, big }: { r: number; zoom: number; on: boolean; big: boolean }) {
+/** The way out of a pedal's side, in world terms (turned and flipped with the pedal). */
+function outDir(item: Item, side: PlugSide): Pt {
+  return plugAnchor(item, { id: "", side, at: 0, type: defaultPlugFor(undefined) }).dir;
+}
+
+/**
+ * A round start point in Signal Flow: an arrow out of the pedal where a cable can start, or into it where a cable
+ * being run can plug in. Brand filled where the cable being run starts.
+ */
+function ArrowFace({ r, zoom, on, big, dir, way }: { r: number; zoom: number; on: boolean; big: boolean; dir: Pt; way: "in" | "out" }) {
+  const angle = (Math.atan2(dir[0], -dir[1]) * 180) / Math.PI + (way === "in" ? 180 : 0);
   return (
     <span
       className="grid place-items-center rounded-full transition-transform"
@@ -948,7 +1030,7 @@ function PlusFace({ r, zoom, on, big }: { r: number; zoom: number; on: boolean; 
         transform: big ? "scale(1.25)" : undefined,
       }}
     >
-      <Plus size={r * 1.6} strokeWidth={3} />
+      <ArrowUp size={r * 1.6} strokeWidth={3} style={{ transform: `rotate(${angle}deg)` }} />
     </span>
   );
 }
