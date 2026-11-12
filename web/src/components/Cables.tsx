@@ -541,6 +541,9 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
       (p) => p.side === near.side && Math.abs(p.at - near.at) < EDGE_ROOM,
     );
   const edge = overItem && near && !taken ? { item: overItem, ...near } : null;
+  // Whether the hovered target starts or ends a cable (a plugged-in jack's plug picks it instead, so no label).
+  const startKey = start ? (isPlugEnd(start) ? cableId(start) : `${start.item}+${start.side}${start.at}`) : null;
+  const startable = !!hover && hover !== startKey && !(connected.has(hover) && !start);
   const from = start ? endAnchor(items, start) : null;
   // The cable being run: one corner from the plug to the pointer, in the type's style.
   let preview: string | null = null;
@@ -652,6 +655,23 @@ export function CableHandles({ items, zoom }: { items: Item[]; zoom: number }) {
         });
         return [...dots.flat(), ...plusses];
       })}
+      {pointer.at && (startable || (edge && !hover)) && (
+        // Says what a click does here, beside the pointer.
+        <span
+          aria-hidden
+          className="pointer-events-none absolute whitespace-nowrap rounded-full bg-ink px-2 py-0.5 font-semibold text-surface shadow-float"
+          style={{
+            left: pointer.at[0] * PX_PER_INCH + 14 / zoom,
+            top: pointer.at[1] * PX_PER_INCH + 14 / zoom,
+            fontSize: 12 / zoom,
+            lineHeight: `${18 / zoom}px`,
+            paddingInline: 8 / zoom,
+            paddingBlock: 1 / zoom,
+          }}
+        >
+          {start ? "End cable here" : "Start cable here"}
+        </span>
+      )}
       {edge && !hover && (
         <EdgePlus
           at={edgeSpot(edge.item, edge.side, edge.at, -inset)}
