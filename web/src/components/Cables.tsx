@@ -50,9 +50,12 @@ const CORNER = 0.3;
 /** Side-by-side spacing for cables sharing a run. */
 const SPACING = 0.3;
 
-/** The halo around a hovered or picked cable or plug: a white line to set it apart, then a brand line, in inches. */
-const HALO_WHITE = 1.5 / PX_PER_INCH;
-const HALO_LINE = 2 / PX_PER_INCH;
+/**
+ * The halo around a hovered or picked cable or plug: a white line to set it apart, then a brand line. In screen pixels,
+ * like the gear's selection halo, so they match at any zoom (cables themselves scale with the board).
+ */
+const HALO_WHITE = 1.5;
+const HALO_LINE = 2;
 
 /**
  * One cable's line in its type's style: solid, double (two thin lines, cut with a mask so the board shows between
@@ -255,6 +258,7 @@ export function CableLayer({ items }: { items: Item[] }) {
   const chosen = useCablePick((p) => p.chosen);
   const picked = open ? toolPick : chosen && "cable" in chosen ? chosen.cable : null;
   const [hover, setHover] = useState<string | null>(null);
+  const zoom = usePlayground((st) => st.view.zoom);
   if (!routes.length) return null;
   const s = PX_PER_INCH;
   return (
@@ -273,7 +277,7 @@ export function CableLayer({ items }: { items: Item[] }) {
                     d={d}
                     fill="none"
                     stroke={k ? "#fff" : "var(--color-brand)"}
-                    strokeWidth={WIDTH * cableKindInfo(c.kind).width + 2 * out}
+                    strokeWidth={WIDTH * cableKindInfo(c.kind).width + (2 * out) / (s * zoom)}
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
@@ -970,7 +974,8 @@ type InchBox = { left: number; top: number; right: number; bottom: number };
  */
 function PlugHalo({ box, origin }: { box: InchBox; origin: InchBox }) {
   const s = PX_PER_INCH;
-  const white = HALO_WHITE * s;
+  const zoom = usePlayground((st) => st.view.zoom);
+  const white = HALO_WHITE / zoom;
   return (
     <span
       aria-hidden
@@ -980,8 +985,8 @@ function PlugHalo({ box, origin }: { box: InchBox; origin: InchBox }) {
         top: (box.top - origin.top) * s,
         width: (box.right - box.left) * s,
         height: (box.bottom - box.top) * s,
-        borderRadius: 3,
-        boxShadow: `0 0 0 ${white}px #fff, 0 0 0 ${white + HALO_LINE * s}px var(--color-brand)`,
+        borderRadius: 3 / zoom,
+        boxShadow: `0 0 0 ${white}px #fff, 0 0 0 ${white + HALO_LINE / zoom}px var(--color-brand)`,
       }}
     />
   );
