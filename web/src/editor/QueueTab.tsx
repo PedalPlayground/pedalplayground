@@ -1,140 +1,353 @@
-import { Copy, ImageOff, Ratio, ScanSearch, Scissors, type LucideIcon } from "lucide-react";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { ArrowLeft, Copy, ImageOff, Ratio, ScanSearch, Scissors, Search, type LucideIcon } from "lucide-react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { canvasImageUrl, type Manifest } from "../lib/catalog";
 import { fieldProblems, runChecks, type Check, type CheckId, type Fields } from "../lib/editorChecks";
 import {
   approve,
   fieldsFrom,
-  listQueue,
+  getSubmission,
+  listSubmissions,
   review,
   sourceUrls,
+  submissionCounts,
   submitterHistory,
   updateSubmission,
   uploadSource,
   usernames,
+  type QueueFilter,
+  type QueueStatus,
   type Submission,
   type SubmitterHistory,
 } from "../lib/editorApi";
 import { userGalleryUrl } from "../lib/gallery";
 import { useAuth } from "../store/auth";
 import { withPublish, type Notice, type PublishState, type SetNotice } from "./EditorApp";
+import { chip } from "../components/chip";
+import { LabeledSelect } from "../components/LabeledSelect";
 import { Linkified } from "../components/Linkified";
 import { Meta } from "../components/Meta";
 import { nameLink, RoleBadges } from "../components/RoleBadge";
 import { tip } from "../components/Tooltip";
-import { fieldBox, fieldHelp, ItemEditor, labelClass, primaryButton, secondaryButton, usePhotoStats } from "./ItemEditor";
+import { plainField } from "../lib/inputProps";
+import { fieldBox, fieldHelp, inputClass, ItemEditor, labelClass, primaryButton, secondaryButton, usePhotoStats } from "./ItemEditor";
 
-/** A queued submission with what the list shows: the submitter's username and a link to the uploaded photo. */
+/** A submission with what the list shows: the submitter's username and a link to the uploaded photo. */
 interface Queued extends Submission {
   username: string | null;
   photo: string | null;
 }
 
-/** Pending submissions, oldest first. Pick one, fix it if needed, then approve, send back, or reject. */
+/** Adds usernames and photo links. Both are extras: the list still shows if either fails. */
+async function withExtras(list: Submission[]): Promise<Queued[]> {
+  const [names, photos] = await Promise.all([
+    usernames(list.map((s) => s.submitted_by)).catch(() => new Map<string, string>()),
+    sourceUrls(list.flatMap((s) => (s.source_path ? [s.source_path] : []))).catch(() => new Map<string, string>()),
+  ]);
+  return list.map((s) => ({
+    ...s,
+    username: names.get(s.submitted_by) ?? null,
+    photo: s.source_path ? (photos.get(s.source_path) ?? null) : null,
+  }));
+}
+
+const PAGE = 100;
+const isOpen = (s: Submission["status"]) => s === "pending" || s === "needs_changes";
+
+/** The open submission from the address: /editor/#queue?id=<id>. */
+const idFromHash = () => new URLSearchParams(window.location.hash.split("?")[1] ?? "").get("id");
+
+const STATUSES: readonly (readonly [QueueStatus, string])[] = [
+  ["open", "Open"],
+  ["pending", "Waiting"],
+  ["needs_changes", "Sent back"],
+  ["approved", "Approved"],
+  ["rejected", "Rejected"],
+  ["resolved", "Resolved"],
+  ["all", "All"],
+];
+const SORTS = [
+  ["oldest", "Oldest"],
+  ["newest", "Newest"],
+  ["brand", "Brand"],
+  ["name", "Name"],
+] as const;
+
+/**
+ * Submissions from players: a full-width list with a search, status chips, filters and sort, and each submission on
+ * its own page (#queue?id=…, a history step, so Back returns to the list as it was). Open ones are fixed if needed,
+ * then approved, sent back, resolved or rejected; closed ones show how they ended.
+ */
 export function QueueTab({ manifest, publisher, setNotice }: { manifest: Manifest | null; publisher: PublishState; setNotice: SetNotice }) {
-  const [queue, setQueue] = useState<Queued[] | null>(null);
-  const [openId, setOpenId] = useState<string | null>(null);
+  const [filter, setFilter] = useState<QueueFilter>({
+    status: "open",
+    change: null,
+    kind: null,
+    text: "",
+    sort: "oldest",
+  });
+  const [items, setItems] = useState<Queued[] | null>(null);
+  const [more, setMore] = useState(false);
+  const [counts, setCounts] = useState<Record<Submission["status"], number> | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [openId, setOpenId] = useState<string | null>(idFromHash);
+  const request = useRef(0);
 
-  const load = useCallback(() => {
-    listQueue()
-      .then(async (q) => {
-        // Names and photo links are extras: the queue still shows if either fails.
-        const [names, photos] = await Promise.all([
-          usernames(q.map((s) => s.submitted_by)).catch(() => new Map<string, string>()),
-          sourceUrls(q.flatMap((s) => (s.source_path ? [s.source_path] : []))).catch(() => new Map<string, string>()),
-        ]);
-        return q.map((s) => ({ ...s, username: names.get(s.submitted_by) ?? null, photo: s.source_path ? (photos.get(s.source_path) ?? null) : null }));
-      })
-      .then(
-        (q) => {
-          setQueue(q);
-          setOpenId((id) => (id && q.some((s) => s.id === id) ? id : (q[0]?.id ?? null)));
-        },
-        (e: Error) => setError(e.message),
-      );
+  const load = async (page: number) => {
+    const id = ++request.current;
+    try {
+      const rows = await withExtras(await listSubmissions(filter, page, PAGE));
+      if (id !== request.current) return;
+      setItems((list) => (page === 0 ? rows : [...(list ?? []), ...rows]));
+      setMore(rows.length === PAGE);
+      setError(null);
+    } catch (e) {
+      if (id === request.current) setError((e as Error).message);
+    }
+  };
+  const refresh = () => {
+    void load(0);
+    submissionCounts().then(setCounts, () => setCounts(null));
+  };
+  useEffect(() => {
+    setItems(null);
+    // Typing waits a moment; the chips and menus load straight away.
+    const t = setTimeout(() => void load(0), filter.text ? 250 : 0);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filter]);
+  useEffect(() => {
+    submissionCounts().then(setCounts, () => setCounts(null));
   }, []);
-  useEffect(load, [load]);
 
-  if (error) return <p className="text-[13px] text-danger">Couldn't load the queue: {error}</p>;
-  if (!queue) return <p className="text-[13px] text-ink-muted">Loading…</p>;
-  if (!queue.length)
+  useEffect(() => {
+    const onPop = () => setOpenId(idFromHash());
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+  const openSubmission = (id: string) => {
+    history.pushState({ ppQueueItem: true }, "", `#queue?id=${id}`);
+    setOpenId(id);
+  };
+  const closeSubmission = () => {
+    if ((history.state as { ppQueueItem?: boolean } | null)?.ppQueueItem) history.back();
+    else {
+      history.replaceState(null, "", "#queue");
+      setOpenId(null);
+    }
+  };
+
+  if (openId)
     return (
-      <p className="text-[15px] text-ink-muted">
-        Nothing waiting. New submissions from players will appear here, oldest first.
-      </p>
+      <SubmissionPage
+        key={openId}
+        id={openId}
+        loaded={items?.find((s) => s.id === openId) ?? null}
+        manifest={manifest}
+        publisher={publisher}
+        onBack={closeSubmission}
+        onNotice={setNotice}
+        onDone={(n) => {
+          setNotice(n);
+          closeSubmission();
+          refresh();
+        }}
+      />
     );
 
-  const open = queue.find((s) => s.id === openId) ?? null;
+  const set = (patch: Partial<QueueFilter>) => setFilter((f) => ({ ...f, ...patch }));
+  const countFor = (st: QueueStatus) => {
+    if (!counts) return null;
+    if (st === "all") return Object.values(counts).reduce((a, b) => a + b, 0);
+    if (st === "open") return counts.pending + counts.needs_changes;
+    return counts[st];
+  };
+  const narrowed = filter.change || filter.kind || filter.text.trim();
   return (
-    // items-start: the list and the form each keep their own height (a long list doesn't stretch the form's rows).
-    <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-6 md:grid-cols-[260px_minmax(0,1fr)] 2xl:grid-cols-[300px_minmax(0,1fr)]">
-      {/* One column that never grows past its width: long names truncate instead of running under the form. */}
-      <ul className="grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-1">
-        {queue.map((s) => (
-          <li key={s.id}>
-            <QueueRow submission={s} manifest={manifest} selected={s.id === openId} onOpen={() => setOpenId(s.id)} />
-          </li>
-        ))}
-      </ul>
-      {open && (
-        <Review
-          key={open.id}
-          submission={open}
-          manifest={manifest}
-          onDone={(n) => {
-            setNotice(n);
-            load();
-          }}
-          publisher={publisher}
-        />
+    <div className="grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-4">
+      {/* Search, the status chips, then the filters and sort at the right, across the full width (like Gallery's bar). */}
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+        <div className="relative w-full sm:w-80">
+          <Search size={16} strokeWidth={2} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-icon" aria-hidden />
+          <input
+            type="search"
+            {...plainField}
+            aria-label="Search the queue"
+            className={`${inputClass} pl-9`}
+            placeholder="Search brand, name, note or user"
+            value={filter.text}
+            onChange={(e) => set({ text: e.target.value })}
+          />
+        </div>
+        {/* Scrolls sideways on phones, with room around the chips for their hairlines (like Gallery's type chips). */}
+        <div
+          className="pointer-events-none -mx-4 -my-1 flex gap-2 overflow-x-auto px-4 py-1 max-sm:basis-[calc(100%+2rem)] sm:-mx-1 sm:px-1 [&>*]:pointer-events-auto"
+          role="group"
+          aria-label="Status"
+        >
+          {STATUSES.map(([st, label]) => {
+            const n = countFor(st);
+            const on = filter.status === st;
+            return (
+              <button
+                key={st}
+                type="button"
+                className={chip(on)}
+                aria-pressed={on}
+                // Open ones read oldest first (first come, first served); finished ones newest first.
+                onClick={() =>
+                  set({
+                    status: st,
+                    sort:
+                      filter.sort === "oldest" || filter.sort === "newest"
+                        ? st === "open" || st === "pending" || st === "needs_changes"
+                          ? "oldest"
+                          : "newest"
+                        : filter.sort,
+                  })
+                }
+              >
+                {label}
+                {n !== null && <span className={`ml-1.5 tabular-nums ${on ? "opacity-70" : ""}`}>{n.toLocaleString("en-US")}</span>}
+              </button>
+            );
+          })}
+        </div>
+        <div className="ml-auto flex flex-wrap items-center gap-x-6 gap-y-2">
+          <LabeledSelect
+            label="Change"
+            value={filter.change ?? "any"}
+            options={[
+              ["any", "Any"],
+              ["new", "New items"],
+              ["correction", "Corrections"],
+            ]}
+            onChange={(v) => set({ change: v === "any" ? null : v })}
+          />
+          <LabeledSelect
+            label="Kind"
+            value={filter.kind ?? "any"}
+            options={[
+              ["any", "Any"],
+              ["pedal", "Pedals"],
+              ["pedalboard", "Pedalboards"],
+            ]}
+            onChange={(v) => set({ kind: v === "any" ? null : v })}
+          />
+          <LabeledSelect label="Sort by" value={filter.sort} options={SORTS} onChange={(v) => set({ sort: v })} />
+        </div>
+      </div>
+
+      {error && <p className="text-[13px] text-danger">Couldn't load the queue: {error}</p>}
+      {!items && !error && <p className="text-[13px] text-ink-muted">Loading…</p>}
+      {items && items.length === 0 && (
+        <p className="text-[15px] text-ink-muted">
+          {narrowed
+            ? "Nothing matches."
+            : filter.status === "open"
+              ? "Nothing waiting. New submissions from players will appear here, oldest first."
+              : "None yet."}
+          {narrowed && (
+            <button
+              type="button"
+              className="ml-3 text-[13px] font-semibold text-brand hover:underline"
+              onClick={() => set({ change: null, kind: null, text: "" })}
+            >
+              Clear filters
+            </button>
+          )}
+        </p>
+      )}
+
+      {items && items.length > 0 && (
+        <div className="rounded-panel border border-line">
+          {/* Column names on wider screens; phones stack each row instead. */}
+          <div
+            className={`${rowGrid} sticky top-[6.5rem] z-10 hidden h-10 items-center rounded-t-panel border-b border-line bg-card px-3 text-xs font-semibold text-ink-muted md:grid`}
+          >
+            <span className="pl-[4.25rem]">Item</span>
+            <span>From</span>
+            <span>Sent</span>
+            <span>Checks</span>
+            <span className="text-right">Status</span>
+          </div>
+          <ul className="grid divide-y divide-line">
+            {items.map((s) => (
+              <li key={s.id}>
+                <QueueRow submission={s} manifest={manifest} onOpen={() => openSubmission(s.id)} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {more && (
+        <button type="button" className={`${secondaryButton} justify-self-center`} onClick={() => void load(Math.ceil((items?.length ?? 0) / PAGE))}>
+          Show more
+        </button>
       )}
     </div>
   );
 }
 
-/** One submission in the list: its photo, name, labels, who sent it and when, and the photo checks as icons. */
-function QueueRow({ submission: s, manifest, selected, onOpen }: { submission: Queued; manifest: Manifest | null; selected: boolean; onOpen: () => void }) {
+/** The list's columns from md up: item, from, sent, checks, status. */
+const rowGrid = "md:grid-cols-[minmax(0,1fr)_minmax(0,11rem)_6rem_5.5rem_6rem] md:gap-4";
+
+/** One submission in the list: its photo, name, labels, who sent it and when, the photo checks as icons, and its status. */
+function QueueRow({ submission: s, manifest, onOpen }: { submission: Queued; manifest: Manifest | null; onOpen: () => void }) {
   // A correction that keeps its photo shows the live one (faded), and has no photo to check.
   const current = !s.source_path && s.target_key ? canvasImageUrl(manifest, s.kind, s.target_key) : null;
-  const { stats, broken } = usePhotoStats(s.photo);
+  const open = isOpen(s.status);
+  // Checks only matter while it's open (an approved item would match itself as a duplicate), so finished ones skip
+  // loading the photo's stats.
+  const { stats, broken } = usePhotoStats(open ? s.photo : null);
   const list = manifest ? (s.kind === "pedal" ? manifest.pedals : manifest.pedalboards) : null;
-  const checks = useMemo(
-    () => (list ? runChecks(fieldsFrom(s), stats, list, s.target_key ?? undefined) : []),
-    [s, stats, list],
-  );
+  const checks = useMemo(() => (open && list ? runChecks(fieldsFrom(s), stats, list, s.target_key ?? undefined) : []), [s, stats, list, open]);
   const photoPending = !!s.photo && !stats && !broken;
+  const date = new Date(s.created_at).toLocaleDateString();
   return (
-    <button
-      type="button"
-      onClick={onOpen}
-      aria-current={selected || undefined}
-      className={`flex w-full items-center gap-3 rounded-control p-2 text-left text-[13px] outline-none focus-visible:ring-2 focus-visible:ring-brand ${selected ? "bg-soft" : "hover:bg-surface-hover"}`}
+    // A real link, so it can open in a new tab; a plain click opens it here as a history step.
+    <a
+      href={`#queue?id=${s.id}`}
+      onClick={(e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+        e.preventDefault();
+        onOpen();
+      }}
+      className={`${rowGrid} group grid grid-cols-[3.5rem_minmax(0,1fr)] items-center gap-x-3 gap-y-1 px-3 py-2.5 text-[13px] outline-none transition-colors hover:bg-card-hover focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand`}
     >
-      <span className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-inner bg-canvas">
-        {s.photo && !broken ? (
-          <img src={s.photo} alt="" className="max-h-12 max-w-12 object-contain" />
-        ) : current ? (
-          <img src={current} alt="" className="max-h-12 max-w-12 object-contain opacity-50" {...tip("Keeps the current photo")} />
-        ) : (
-          <ImageOff size={18} className="text-icon" aria-label="No photo" />
-        )}
-      </span>
-      <span className="grid min-w-0 flex-1 gap-1">
-        <span className={`truncate ${selected ? "font-semibold" : "font-medium"}`}>
-          {s.brand} {s.name}
+      <span className="flex min-w-0 items-center gap-3 max-md:contents">
+        <span className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-inner bg-canvas max-md:row-span-3">
+          {s.photo && !broken ? (
+            <img src={s.photo} alt="" className="max-h-12 max-w-12 object-contain" loading="lazy" />
+          ) : current ? (
+            <img src={current} alt="" className="max-h-12 max-w-12 object-contain opacity-50" {...tip("Keeps the current photo")} />
+          ) : (
+            <ImageOff size={18} className="text-icon" aria-label="No photo" />
+          )}
         </span>
-        <span className="flex flex-wrap items-center gap-1">
-          <SubmissionLabels submission={s} />
-        </span>
-        <span className="flex items-center justify-between gap-2 text-xs text-ink-muted">
-          <span className="truncate">
-            <Meta parts={[s.username ?? "No username", new Date(s.created_at).toLocaleDateString()]} />
+        <span className="grid min-w-0 gap-1">
+          <span className="truncate font-semibold group-hover:underline">
+            {s.brand} {s.name}
           </span>
-          <CheckIcons checks={checks} photo={!!s.photo} pending={photoPending} />
+          <span className="flex flex-wrap items-center gap-1">
+            <SubmissionLabels submission={s} />
+          </span>
         </span>
       </span>
-    </button>
+      {/* Phones: who and when on one line, with the checks and status after it. */}
+      <span className="truncate text-ink-muted md:text-ink max-md:col-start-2 max-md:text-xs">
+        <span className="md:hidden">
+          <Meta parts={[s.username ?? "No username", date]} />
+        </span>
+        <span className="max-md:hidden">{s.username ?? <span className="text-ink-muted">No username</span>}</span>
+      </span>
+      <span className="tabular-nums text-ink-muted max-md:hidden">{date}</span>
+      <span className="flex items-center justify-between gap-2 max-md:col-start-2 md:contents">
+        <span>{open && <CheckIcons checks={checks} photo={!!s.photo} pending={photoPending} />}</span>
+        <span className="flex justify-end">
+          <StatusLabel status={s.status} />
+        </span>
+      </span>
+    </a>
   );
 }
 
@@ -155,13 +368,12 @@ function Label({ tone, children }: { tone: keyof typeof tones; children: string 
   return <span className={`${label} ${tones[tone]}`}>{children}</span>;
 }
 
-/** New or Correction, Pedalboard for boards, and Sent back once an editor has asked for changes. */
-function SubmissionLabels({ submission: s }: { submission: Pick<Submission, "target_key" | "kind" | "status"> }) {
+/** New or Correction, and Pedalboard for boards. (Where it stands is its StatusLabel.) */
+function SubmissionLabels({ submission: s }: { submission: Pick<Submission, "target_key" | "kind"> }) {
   return (
     <>
       {s.target_key ? <Label tone="correction">Correction</Label> : <Label tone="new">New</Label>}
       {s.kind === "pedalboard" && <Label tone="board">Pedalboard</Label>}
-      {s.status === "needs_changes" && <Label tone="sentBack">Sent back</Label>}
     </>
   );
 }
@@ -194,7 +406,13 @@ function CheckIcons({ checks, photo, pending }: { checks: Check[]; photo: boolea
         const text = c ? c.text : needsPhoto && !photo ? `${name}: no new photo to check` : `${name}: checking…`;
         const tone = c ? (c.ok ? "text-positive" : "text-warning") : "text-icon opacity-40";
         return (
-          <span key={id} role="img" aria-label={text} className={`grid size-4 place-items-center ${tone} ${pending && needsPhoto ? "animate-pulse" : ""}`} {...tip(text)}>
+          <span
+            key={id}
+            role="img"
+            aria-label={text}
+            className={`grid size-4 place-items-center ${tone} ${pending && needsPhoto ? "animate-pulse" : ""}`}
+            {...tip(text)}
+          >
             <Icon size={14} strokeWidth={2.25} aria-hidden />
           </span>
         );
@@ -253,14 +471,15 @@ function Submitter({ submission }: { submission: Queued }) {
             {shown.map((h) => (
               <li key={h.id} className="flex items-center gap-2 text-xs">
                 <span className={`min-w-0 flex-1 truncate ${h.id === submission.id ? "font-semibold" : ""}`}>
-                  {h.status === "approved" && h.item_key ? (
-                    <a href={`#catalog?kind=${h.kind}&key=${encodeURIComponent(h.item_key)}`} className={nameLink}>
-                      {h.brand} {h.name}
-                    </a>
-                  ) : (
+                  {/* Each one opens its own page here (an approved one links on to the Catalog from there). */}
+                  {h.id === submission.id ? (
                     <>
                       {h.brand} {h.name}
                     </>
+                  ) : (
+                    <a href={`#queue?id=${h.id}`} className={nameLink}>
+                      {h.brand} {h.name}
+                    </a>
                   )}
                   {h.id === submission.id && <span className="ml-1.5 font-normal text-ink-muted">This one</span>}
                 </span>
@@ -281,16 +500,66 @@ function Submitter({ submission }: { submission: Queued }) {
   );
 }
 
+/** One submission on its own page: the one already in the list, or fetched (opened from a link or after a reload). */
+function SubmissionPage({
+  id,
+  loaded,
+  manifest,
+  publisher,
+  onBack,
+  onDone,
+  onNotice,
+}: {
+  id: string;
+  loaded: Queued | null;
+  manifest: Manifest | null;
+  publisher: PublishState;
+  onBack: () => void;
+  onDone: (n: Notice) => void;
+  onNotice: (n: Notice) => void;
+}) {
+  const [submission, setSubmission] = useState<Queued | null>(loaded);
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {
+    if (loaded) return;
+    getSubmission(id)
+      .then(async (s) => (s ? (await withExtras([s]))[0] : null))
+      .then(
+        (s) => (s ? setSubmission(s) : setError("This submission doesn't exist (or was withdrawn).")),
+        (e: Error) => setError(e.message),
+      );
+  }, [id, loaded]);
+
+  const back = (
+    <button type="button" className={`${secondaryButton} flex shrink-0 items-center gap-1`} onClick={onBack}>
+      <ArrowLeft size={14} strokeWidth={2.5} />
+      Back
+    </button>
+  );
+  if (!submission)
+    return (
+      <div className="flex flex-wrap items-center gap-3">
+        {back}
+        {error ? <p className="text-[13px] text-danger">{error}</p> : <p className="text-[13px] text-ink-muted">Loading…</p>}
+      </div>
+    );
+  return <Review submission={submission} manifest={manifest} onDone={onDone} onNotice={onNotice} publisher={publisher} back={back} />;
+}
+
 function Review({
   submission,
   manifest,
   onDone,
   publisher,
+  back,
+  onNotice,
 }: {
   submission: Queued;
   manifest: Manifest | null;
   onDone: (n: Notice) => void;
   publisher: PublishState;
+  back: ReactNode;
+  onNotice: (n: Notice) => void;
 }) {
   const userId = useAuth((s) => s.user?.id);
   const [fields, setFields] = useState<Fields>(() => fieldsFrom(submission));
@@ -299,6 +568,8 @@ function Review({
   const [note, setNote] = useState(submission.editor_note ?? "");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  /** Approved, rejected or resolved: shown as it ended, nothing to change. */
+  const closed = !isOpen(submission.status);
 
   useEffect(() => () => void (newFile && image?.startsWith("blob:") && URL.revokeObjectURL(image)), [newFile, image]);
 
@@ -319,129 +590,175 @@ function Review({
     await updateSubmission(submission.id, fields, path);
   };
 
+  const outcome = closed && (
+    <div className="grid gap-1 rounded-panel bg-card p-3 text-[13px]">
+      <p className="flex flex-wrap items-center gap-2">
+        <StatusLabel status={submission.status} />
+        {submission.reviewed_at && <span className="text-xs text-ink-muted">{new Date(submission.reviewed_at).toLocaleDateString()}</span>}
+        {submission.status === "approved" && submission.item_key && (
+          <a
+            href={`#catalog?kind=${submission.kind}&key=${encodeURIComponent(submission.item_key)}`}
+            className="text-xs font-semibold text-brand hover:underline"
+          >
+            Open in Catalog
+          </a>
+        )}
+      </p>
+      {submission.editor_note && (
+        <p className="text-ink-muted">
+          <span className="font-semibold text-ink">Note to the submitter:</span> {submission.editor_note}
+        </p>
+      )}
+    </div>
+  );
+
   return (
-    // Sticks under the header and tabs while the queue scrolls, scrolling on its own when it's taller than the screen.
-    // Sizes divide by --page-zoom (the page is drawn larger on very wide screens). The 4px padding, undone by the
-    // negative margin, keeps focus rings inside the scroll area visible.
-    <div className="grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-5 md:sticky md:top-[calc((var(--editor-top,6rem)+24px)/var(--page-zoom,1))] md:-m-1 md:max-h-[calc((100dvh-var(--editor-top,6rem)-24px)/var(--page-zoom,1))] md:overflow-y-auto md:overscroll-contain md:p-1 md:pb-6">
-      <div>
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+    <div className="grid min-w-0 grid-cols-[minmax(0,1fr)] content-start gap-5">
+      <div className="grid gap-1">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+          {back}
           <h2 className="text-lg font-bold tracking-[-0.01em]">
-            {submission.target_key ? `Correction to ${submission.target_key}` : "New item"}
+            {submission.brand} {submission.name}
           </h2>
           <span className="flex items-center gap-1">
             <SubmissionLabels submission={submission} />
+            <StatusLabel status={submission.status} />
           </span>
-          <span className="text-xs text-ink-muted">{new Date(submission.created_at).toLocaleDateString()}</span>
+          <span className="text-xs text-ink-muted">
+            <Meta parts={[submission.target_key && `Correction to ${submission.target_key}`, `Sent ${new Date(submission.created_at).toLocaleDateString()}`]} />
+          </span>
         </div>
         {submission.note && (
           <p className="mt-1 text-[13px] text-ink-muted">
             <span className="font-semibold text-ink">Submitter's note:</span> <Linkified text={submission.note} />
           </p>
         )}
-        {submission.target_key && !submission.source_path && (
-          <p className="mt-1 text-[13px] text-ink-muted">This correction keeps the current photo.</p>
-        )}
+        {submission.target_key && !submission.source_path && <p className="mt-1 text-[13px] text-ink-muted">This correction keeps the current photo.</p>}
       </div>
-      <ItemEditor
-        fields={fields}
-        onChange={setFields}
-        image={image}
-        onPickFile={(f) => {
-          setNewFile(f);
-          setImage(URL.createObjectURL(f));
-        }}
-        manifest={manifest}
-        skipImage={submission.target_key ?? undefined}
-        lockKind={!!submission.target_key}
-        formEnd={
-          <>
-            <div>
-              <label className={labelClass} htmlFor="queue-note">
-                Note to the Submitter
-              </label>
-              <span id="queue-note-help" className={fieldHelp}>
-                Needed for Needs changes or Reject, optional for Resolved
-              </span>
-              <textarea id="queue-note" aria-describedby="queue-note-help" className={`${fieldBox} h-20 py-2`} maxLength={1000} value={note} onChange={(e) => setNote(e.target.value)} />
-            </div>
-            {problems.length > 0 && <p className="text-[13px] text-danger">{problems.join(" ")}</p>}
-            {error && <p className="text-[13px] text-danger">{error}</p>}
-            <div className="flex flex-wrap gap-2">
-              <button
-                type="button"
-                className={primaryButton}
-                disabled={busy || problems.length > 0}
-                onClick={() =>
-                  act(async () => {
-                    await save();
-                    const key = await approve(submission.id);
-                    return withPublish(`Approved ${fields.brand} ${fields.name} (${key}).`, await publisher.run());
-                  })
-                }
-              >
-                Approve
-              </button>
-              <button
-                type="button"
-                className={secondaryButton}
-                disabled={busy || problems.length > 0}
-                onClick={() =>
-                  act(async () => {
-                    await save();
-                    return { text: "Changes saved." };
-                  })
-                }
-              >
-                Save changes
-              </button>
-              <button
-                type="button"
-                className={secondaryButton}
-                disabled={busy || !note.trim()}
-                title={note.trim() ? undefined : "Write a note first"}
-                onClick={() =>
-                  act(async () => {
-                    await review(submission.id, "needs_changes", note.trim());
-                    return { text: "Sent back to the submitter with your note." };
-                  })
-                }
-              >
-                Needs changes
-              </button>
-              <button
-                type="button"
-                className={secondaryButton}
-                disabled={busy}
-                {...tip("Dealt with another way (fixed by hand, already listed). Takes it off the queue without approving or rejecting")}
-                onClick={() =>
-                  act(async () => {
-                    await review(submission.id, "resolved", note.trim());
-                    return { text: `Marked ${submission.brand} ${submission.name} resolved.` };
-                  })
-                }
-              >
-                Resolved
-              </button>
-              <button
-                type="button"
-                className={`${secondaryButton} text-danger`}
-                disabled={busy || !note.trim()}
-                title={note.trim() ? undefined : "Write a reason first"}
-                onClick={() =>
-                  act(async () => {
-                    await review(submission.id, "rejected", note.trim());
-                    return { text: "Rejected." };
-                  })
-                }
-              >
-                Reject
-              </button>
-            </div>
-          </>
-        }
-        asideEnd={<Submitter submission={submission} />}
-      />
+        <ItemEditor
+          fields={fields}
+          onChange={setFields}
+          image={image}
+          onPickFile={(f) => {
+            setNewFile(f);
+            setImage(URL.createObjectURL(f));
+          }}
+          manifest={manifest}
+          skipImage={submission.item_key ?? submission.target_key ?? undefined}
+          lockKind={!!submission.target_key}
+          formEnd={
+            closed ? (
+              outcome
+            ) : (
+              <>
+                <div>
+                  <label className={labelClass} htmlFor="queue-note">
+                    Note to the Submitter
+                  </label>
+                  <span id="queue-note-help" className={fieldHelp}>
+                    Needed for Needs changes or Reject, optional for Resolved
+                  </span>
+                  <textarea
+                    id="queue-note"
+                    aria-describedby="queue-note-help"
+                    className={`${fieldBox} h-20 py-2`}
+                    maxLength={1000}
+                    value={note}
+                    onChange={(e) => setNote(e.target.value)}
+                  />
+                </div>
+                {problems.length > 0 && <p className="text-[13px] text-danger">{problems.join(" ")}</p>}
+                {error && <p className="text-[13px] text-danger">{error}</p>}
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    className={primaryButton}
+                    disabled={busy || problems.length > 0}
+                    onClick={() =>
+                      act(async () => {
+                        await save();
+                        const key = await approve(submission.id);
+                        return withPublish(`Approved ${fields.brand} ${fields.name} (${key}).`, await publisher.run());
+                      })
+                    }
+                  >
+                    Approve
+                  </button>
+                  <button
+                    type="button"
+                    className={secondaryButton}
+                    disabled={busy || problems.length > 0}
+                    onClick={() =>
+                      void (async () => {
+                        // Saving keeps the page open; the decisions go back to the list.
+                        setBusy(true);
+                        setError(null);
+                        try {
+                          await save();
+                          onNotice({ text: "Changes saved." });
+                        } catch (e) {
+                          setError((e as Error).message);
+                        }
+                        setBusy(false);
+                      })()
+                    }
+                  >
+                    Save changes
+                  </button>
+                  <button
+                    type="button"
+                    className={secondaryButton}
+                    disabled={busy || !note.trim()}
+                    title={note.trim() ? undefined : "Write a note first"}
+                    onClick={() =>
+                      act(async () => {
+                        await review(submission.id, "needs_changes", note.trim());
+                        return {
+                          text: "Sent back to the submitter with your note.",
+                        };
+                      })
+                    }
+                  >
+                    Needs changes
+                  </button>
+                  <button
+                    type="button"
+                    className={secondaryButton}
+                    disabled={busy}
+                    {...tip("Dealt with another way (fixed by hand, already listed). Takes it off the queue without approving or rejecting")}
+                    onClick={() =>
+                      act(async () => {
+                        await review(submission.id, "resolved", note.trim());
+                        return {
+                          text: `Marked ${submission.brand} ${submission.name} resolved.`,
+                        };
+                      })
+                    }
+                  >
+                    Resolved
+                  </button>
+                  <button
+                    type="button"
+                    className={`${secondaryButton} text-danger`}
+                    disabled={busy || !note.trim()}
+                    title={note.trim() ? undefined : "Write a reason first"}
+                    onClick={() =>
+                      act(async () => {
+                        await review(submission.id, "rejected", note.trim());
+                        return { text: "Rejected." };
+                      })
+                    }
+                  >
+                    Reject
+                  </button>
+                </div>
+              </>
+            )
+          }
+          asideEnd={<Submitter submission={submission} />}
+          // A finished one can't be changed: its fields show as they were, switched off.
+          readOnly={closed}
+        />
     </div>
   );
 }

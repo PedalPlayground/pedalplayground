@@ -83,6 +83,7 @@ export function ItemEditor({
   lockKind,
   formEnd,
   asideEnd,
+  readOnly,
 }: {
   fields: Fields;
   onChange: (f: Fields) => void;
@@ -96,6 +97,8 @@ export function ItemEditor({
   formEnd?: ReactNode;
   /** Shown under the checks (the Queue's submitter history). */
   asideEnd?: ReactNode;
+  /** Shows the fields switched off (a finished submission in the Queue). */
+  readOnly?: boolean;
 }) {
   const { stats, broken: imageError } = usePhotoStats(image);
   const fileInput = useRef<HTMLInputElement>(null);
@@ -131,7 +134,7 @@ export function ItemEditor({
 
   return (
     <div className="grid gap-5 lg:grid-cols-[minmax(0,400px)_minmax(0,1fr)]">
-      <div className="grid content-start gap-3">
+      <fieldset disabled={readOnly} className="m-0 grid min-w-0 content-start gap-3 border-0 p-0">
         <div className="grid grid-cols-2 gap-3">
           <div>
             <label className={labelClass} htmlFor={`${id}-kind`}>Kind</label>
@@ -290,7 +293,7 @@ export function ItemEditor({
                 <ImageUp size={15} /> {image ? "Replace photo" : "Choose photo"}
               </button>
               {/* Google Images for the brand and name, PNGs only (most cutouts are), in a new tab. */}
-              {fields.brand.trim() || fields.name.trim() ? (
+              {!readOnly && (fields.brand.trim() || fields.name.trim()) ? (
                 <a
                   href={pngSearchUrl(fields.brand, fields.name)}
                   target="_blank"
@@ -305,7 +308,7 @@ export function ItemEditor({
           </div>
         )}
         {formEnd}
-      </div>
+      </fieldset>
 
       {/* min-w-0 all the way down: the size strip pages to fit, so this column can shrink instead of spilling over. */}
       <div className="grid min-w-0 content-start gap-4">

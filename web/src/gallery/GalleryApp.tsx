@@ -1,4 +1,5 @@
 import { EyeOff, Flag, Heart, MessageCircle, Plus, Search } from "lucide-react";
+import { chip } from "../components/chip";
 import { useEffect, useRef, useState } from "react";
 import { fetchShared, PLAYGROUND_TYPES, type PlaygroundType } from "../lib/cloud";
 import { boardUrl, fetchGalleryBoards, searchedUser, GALLERY_PAGE_SIZE, readGalleryReturn, saveGalleryReturn, setGalleryHidden, setGalleryLike, type GalleryBoard, type GallerySort } from "../lib/gallery";
@@ -30,9 +31,6 @@ const GRID: Record<Density, string> = {
   medium: "grid-cols-1 gap-4 min-[480px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5",
   small: "grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6",
 };
-
-const chip = (on: boolean) =>
-  `press h-8 shrink-0 rounded-full px-3 text-[13px] font-semibold transition-colors ${on ? "bg-ink text-surface" : "bg-surface text-ink-muted shadow-chip hover:text-ink"}`;
 
 /** Explore's filters from its address. Missing means not set (the saved spot or the default applies). */
 function readGalleryUrl(): { type?: PlaygroundType | null; sort?: GallerySort; user: string | null; query?: string } {
