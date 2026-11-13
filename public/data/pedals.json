@@ -4509,6 +4509,13 @@
 	},
 	{
 		"Brand": "Benson",
+		"Name": "Jeez",
+		"Width": 2.74,
+		"Height": 4.5,
+		"Image": "benson-jeez.png"
+	},
+	{
+		"Brand": "Benson",
 		"Name": "Portable Distortion 424 MKII",
 		"Width": 2.74,
 		"Height": 4.5,
@@ -6049,6 +6056,13 @@
 	},
 	{
 		"Brand": "BOSS",
+		"Name": "AW-2 Auto Wah",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-aw2.png"
+	},
+	{
+		"Brand": "BOSS",
 		"Name": "AW-3 Dynamic Wah",
 		"Width": 2.875,
 		"Height": 5.125,
@@ -6186,6 +6200,13 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-cp1x.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "CS-1 Compression Sustainer",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-cs1.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -6718,6 +6739,20 @@
 		"Width": 2.875,
 		"Height": 5.125,
 		"Image": "boss-hm2w.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "HM-3 Hyper Metal",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-hm3.png"
+	},
+	{
+		"Brand": "BOSS",
+		"Name": "HR-2 Harmonist",
+		"Width": 2.875,
+		"Height": 5.125,
+		"Image": "boss-hr2.png"
 	},
 	{
 		"Brand": "BOSS",
@@ -7832,6 +7867,13 @@
 		"Width": 5.1,
 		"Height": 2.6,
 		"Image": "browne-the-fixer.png"
+	},
+	{
+		"Brand": "Browne Amplification",
+		"Name": "Unit-13 Distortion",
+		"Width": 4.72,
+		"Height": 3.88,
+		"Image": "browne-unit-13-distortion.png"
 	},
 	{
 		"Brand": "Brunetti",
@@ -12123,6 +12165,13 @@
 		"Width": 3.62,
 		"Height": 5.5,
 		"Image": "daredevil-ten-tone.png"
+	},
+	{
+		"Brand": "Dark Devices",
+		"Name": "White Disto",
+		"Width": 3.7,
+		"Height": 4.9,
+		"Image": "dark-devices-white-disto.png"
 	},
 	{
 		"Brand": "Darkglass",
@@ -33083,6 +33132,27 @@
 		"Image": "kyro-crunch.png"
 	},
 	{
+		"Brand": "Kz Guitar Works",
+		"Name": "BM Drive",
+		"Width": 1.91,
+		"Height": 3.7,
+		"Image": "kz-bm-drive.png"
+	},
+	{
+		"Brand": "Kz Guitar Works",
+		"Name": "Mid Booster/Buffer",
+		"Width": 1.91,
+		"Height": 3.7,
+		"Image": "kz-mid-booster-buffer.png"
+	},
+	{
+		"Brand": "Kz Guitar Works",
+		"Name": "Treble Booster",
+		"Width": 1.91,
+		"Height": 3.7,
+		"Image": "kz-treble-booster.png"
+	},
+	{
 		"Brand": "L.R. Baggs",
 		"Name": "Align Series Active DI",
 		"Width": 3.34,
@@ -33151,6 +33221,13 @@
 		"Width": 7.63,
 		"Height": 7.34,
 		"Image": "lrbaggs-venue-di.png"
+	},
+	{
+		"Brand": "L.R. Baggs",
+		"Name": "Voiceprint D.I.",
+		"Width": 5,
+		"Height": 5.26,
+		"Image": "lrbaggs-voiceprint-di.png"
 	},
 	{
 		"Brand": "Lake Effects",
@@ -37351,6 +37428,13 @@
 		"Width": 2.6,
 		"Height": 5.06,
 		"Image": "monsterbox-gay-frog-mid-hump-overdrive.png"
+	},
+	{
+		"Brand": "Monsterbox Pedals",
+		"Name": "Straight Frog Distortion",
+		"Width": 2.72,
+		"Height": 4.53,
+		"Image": "monsterbox-straight-frog-distortion.png"
 	},
 	{
 		"Brand": "Montreal Assembly",
@@ -49954,6 +50038,13 @@
 	},
 	{
 		"Brand": "Silktone",
+		"Name": "Green Hell",
+		"Width": 3.7,
+		"Height": 5.97,
+		"Image": "silktone-green-hell.png"
+	},
+	{
+		"Brand": "Silktone",
 		"Name": "Overdrive+",
 		"Width": 4.7,
 		"Height": 3.73,
@@ -51295,6 +51386,13 @@
 		"Width": 4.2,
 		"Height": 2.5,
 		"Image": "soundsculpture-volcano.png"
+	},
+	{
+		"Brand": "Soundgas",
+		"Name": "Type 636P",
+		"Width": 5.01,
+		"Height": 7.4,
+		"Image": "soundsgas-type-636p.png"
 	},
 	{
 		"Brand": "Source Audio",
@@ -57011,6 +57109,13 @@
 	},
 	{
 		"Brand": "Umbrella Company",
+		"Name": "Hume",
+		"Width": 3.79,
+		"Height": 4.81,
+		"Image": "umbrella-company-hume.png"
+	},
+	{
+		"Brand": "Umbrella Company",
 		"Name": "Mayonaise Fuzz",
 		"Width": 2.8,
 		"Height": 5.05,
@@ -57561,6 +57666,13 @@
 		"Width": 7.8,
 		"Height": 5.31,
 		"Image": "valeton-gp100.png"
+	},
+	{
+		"Brand": "Valeton",
+		"Name": "GP-180",
+		"Width": 7.13,
+		"Height": 5.43,
+		"Image": "valeton-gp180.png"
 	},
 	{
 		"Brand": "Valeton",
