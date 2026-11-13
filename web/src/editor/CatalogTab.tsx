@@ -1,3 +1,4 @@
+import { EnlargeablePhoto } from "../components/PhotoViewer";
 import { Archive, ArchiveRestore, ArrowLeft, Copy, Pencil, Search, X } from "lucide-react";
 import { tip } from "../components/Tooltip";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -338,14 +339,22 @@ export function CatalogTab({
                     aria-label={`Select ${item.brand} ${item.name}`}
                     className="size-4 shrink-0 accent-[var(--color-brand)]"
                   />
-                  <button type="button" onClick={() => openItem(item)} className="group flex min-w-0 items-center gap-2.5 text-left">
+                  {/* The photo opens large; its name beside it opens the item. */}
+                  {item.thumb_path ? (
+                    <EnlargeablePhoto
+                      src={publicUrl(item.img_path ?? item.thumb_path)}
+                      alt={`${item.brand} ${item.name}`}
+                      aspect={item.img_path ? Number(item.width_in) / Number(item.height_in) || undefined : undefined}
+                      className="grid size-10 shrink-0 place-items-center"
+                    >
+                      <img src={publicUrl(item.thumb_path)} alt="" className="max-h-10 max-w-10 object-contain" loading="lazy" />
+                    </EnlargeablePhoto>
+                  ) : (
                     <span className="grid size-10 shrink-0 place-items-center">
-                      {item.thumb_path ? (
-                        <img src={publicUrl(item.thumb_path)} alt="" className="max-h-10 max-w-10 object-contain" loading="lazy" />
-                      ) : (
-                        <span className="size-8 rounded-inner bg-soft" />
-                      )}
+                      <span className="size-8 rounded-inner bg-soft" />
                     </span>
+                  )}
+                  <button type="button" onClick={() => openItem(item)} className="group flex min-w-0 items-center gap-2.5 text-left">
                     <span className="min-w-0">
                       <span className="block truncate text-[13px] font-semibold group-hover:underline">{item.name}</span>
                       <span className="block truncate text-xs text-ink-muted">
