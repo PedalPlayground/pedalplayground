@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchManifest, type Manifest } from "../lib/catalog";
 import { isAdmin, isEditor, pendingBuilds, publish } from "../lib/editorApi";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
@@ -190,25 +190,12 @@ export type SetNotice = (n: Notice | null) => void;
 
 /** The site header, then the editor's own tab bar under it (once you're in). */
 function Shell({ header, children, bar }: { header: React.ReactNode; children?: React.ReactNode; bar?: React.ReactNode }) {
-  const page = useRef<HTMLDivElement>(null);
-  const barRef = useRef<HTMLDivElement>(null);
-  // How far down the sticky header and tab bar reach (--editor-top, in screen pixels), so content can stick under them
-  // (the Queue's open submission). The tab bar wraps on narrow screens, so it's measured.
-  useEffect(() => {
-    const el = barRef.current;
-    if (!el) return;
-    const update = () => page.current?.style.setProperty("--editor-top", `${48 + el.getBoundingClientRect().height}px`);
-    update();
-    const ro = new ResizeObserver(update);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, [bar]);
   return (
     // The page locks body scrolling (for the playground), so this page scrolls inside its own container, like the gallery.
-    <div ref={page} className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
+    <div className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       {header}
       {bar && (
-        <div ref={barRef} className="sticky top-12 z-20 border-b border-chrome-line bg-chrome/95 backdrop-blur">
+        <div className="sticky top-12 z-20 border-b border-chrome-line bg-chrome/95 backdrop-blur">
           <div className="page-main isolate mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
         </div>
       )}
