@@ -3,7 +3,8 @@ import { useEffect, useMemo, useState } from "react";
 import { affiliateProps, BUY_LINKS, buyLinks, DISCLOSURE, type BuyLink } from "../lib/affiliate";
 import { imageKey, thumbUrl, type Manifest } from "../lib/catalog";
 import type { Item } from "../lib/types";
-import { formatMa, parseMa, PEDAL_TYPES, VOLTAGES } from "../lib/specs";
+import { usePedalTypes } from "../lib/pedalTypes";
+import { formatMa, parseMa, VOLTAGES } from "../lib/specs";
 import { formatSize } from "../lib/units";
 import { useCatalog } from "../store/catalog";
 import { usePlayground } from "../store/playground";
@@ -237,6 +238,7 @@ const fieldBox =
 function Details({ item, name, links, onShow }: { item: Item; name: string; links: BuyLink[]; onShow: () => void }) {
   const updateGear = usePlayground((p) => p.updateGear);
   const units = useUi((u) => u.units);
+  const pedalTypes = usePedalTypes((s) => s.types);
   const pedal = item.kind === "pedal";
   return (
     <div className="animate-enter flex flex-wrap items-end gap-3 px-3 pb-3 pt-1 [--enter-y:-4px] sm:pl-[68px]">
@@ -251,10 +253,11 @@ function Details({ item, name, links, onShow }: { item: Item; name: string; link
               className={fieldBox}
             >
               <option value="">Not Set</option>
-              {PEDAL_TYPES.map((t) => (
+              {pedalTypes.map((t) => (
                 <option key={t}>{t}</option>
               ))}
-              {item.pedalType && !(PEDAL_TYPES as readonly string[]).includes(item.pedalType) && <option>{item.pedalType}</option>}
+              {/* A type the list no longer has (renamed or removed in Admin) stays as it was on this board. */}
+              {item.pedalType && !pedalTypes.includes(item.pedalType) && <option>{item.pedalType}</option>}
             </select>
           </label>
           <label className={`${fieldLabel} w-[110px] max-sm:flex-1`}>

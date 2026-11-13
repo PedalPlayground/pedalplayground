@@ -51,6 +51,8 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 35. Signal Flow Mode.
 36. Inventory Mode.
 37. Clean up GitHub issues and PRs.
+29. Figure out which board to show when you sign in, so signing in doesn't create more Untitled boards
+    (reported by Trav 2026-11-12).
 
 ## Done
 

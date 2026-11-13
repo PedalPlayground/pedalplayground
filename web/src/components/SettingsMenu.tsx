@@ -1,3 +1,4 @@
+import { trackTool, withTool } from "../lib/analytics";
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { Settings } from "lucide-react";
 import { useRef } from "react";
@@ -124,26 +125,26 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
         >
           {SHOW_FILE_IO && (
             <>
-              <Dropdown.Item className={menuItem} onSelect={exportFile}>
+              <Dropdown.Item className={menuItem} onSelect={withTool("export_file", "settings", exportFile)}>
                 Export File
               </Dropdown.Item>
-              <Dropdown.Item className={menuItem} onSelect={() => fileInput.current?.click()}>
+              <Dropdown.Item className={menuItem} onSelect={withTool("import_file", "settings", () => fileInput.current?.click())}>
                 Import File…
               </Dropdown.Item>
               <Dropdown.Separator className="my-1 h-px bg-line" />
             </>
           )}
-          <Dropdown.Item className={menuItem} onSelect={(e) => (e.preventDefault(), setSnapping(!snapping))}>
+          <Dropdown.Item className={menuItem} onSelect={(e) => (e.preventDefault(), trackTool("snapping", "settings", { on: !snapping }), setSnapping(!snapping))}>
             Snapping
             <Switch on={snapping} label="Snapping" />
           </Dropdown.Item>
           {/* Units and appearance moved to the account menu (or the menu beside Sign in), so every page has them. */}
           <Dropdown.Separator className="my-1 h-px bg-line" />
           <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Help</Dropdown.Label>
-          <Dropdown.Item className={menuItem} onSelect={startTour}>
+          <Dropdown.Item className={menuItem} onSelect={withTool("tutorial", "settings", startTour)}>
             Show Tutorial Again
           </Dropdown.Item>
-          <Dropdown.Item className={menuItem} onSelect={() => useUi.getState().openLegal()}>
+          <Dropdown.Item className={menuItem} onSelect={withTool("terms_privacy", "settings", () => useUi.getState().openLegal())}>
             Terms &amp; Privacy
           </Dropdown.Item>
           {/* Small screens have no room for the credit line in the corner, so it lives here. */}
@@ -157,7 +158,7 @@ export function SettingsMenu({ className = "" }: { className?: string }) {
               <Dropdown.Separator className="my-1 h-px bg-line" />
               <Dropdown.Label className="px-3 py-1.5 text-xs text-ink-muted">Pedal Playground Beta</Dropdown.Label>
               {FEEDBACK_URL && (
-                <Dropdown.Item className={menuItem} onSelect={() => window.open(FEEDBACK_URL, "_blank", "noopener")}>
+                <Dropdown.Item className={menuItem} onSelect={withTool("send_feedback", "settings", () => window.open(FEEDBACK_URL, "_blank", "noopener"))}>
                   Send Feedback
                 </Dropdown.Item>
               )}

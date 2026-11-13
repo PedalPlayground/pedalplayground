@@ -167,9 +167,67 @@ based on browser history events", or the Gallery and Gear filters get counted as
 Gear or Board Details), `gallery_filter` (`type`, `sort`, `one_person`), `gear_filter` (`kind`, `brand`, `type`,
 `sort`), `login` (`method`), `sign_up`, `password_set`, `board_like`, `board_unlike`, `shared_board_copied`, `add_gear`,
 `custom_item_created`, `share_link_created`, `upgrade_opened`, `whats_new_open`, `whats_new_pedals`, `whats_new_link`.
+`add_gear` also says how the gear was found (`source`: `search`, `trending`, `new`, `replace` or `gear_page`).
+`view_gear` is sent when a Gear item page opens (from the Gear site or a playground's Info button). Both gear events
+carry `gearParams` from `web/src/lib/analytics.ts`: `gear_id` (the image key, as in `/gear/?item=`), `gear_name`
+("Brand Name"), `gear_brand`, `gear_type` (main type, or "Pedalboard") and `kind`. Catalog names are public, so they're
+fine to send; custom gear is never named. `board_view` is sent when someone opens another person's shared board, with
+`board_id` (the slug in its `/?p=` link, never the board's name) and `from` (`gallery`, `gear_page`, `site` or `link`).
+`board_like`, `board_unlike` and `shared_board_copied` carry the same `board_id`.
+`tutorial_end` (`step`, `steps`, `finished`) says how far people get through the tour.
 Never send names, emails, board contents or typed text. To see an event's details in reports, add each detail as an
 event-scoped custom dimension (Admin → Custom definitions). Mark `sign_up` and `upgrade_opened` as key events if you
 want them as conversions.
+
+**Playground tools.** Every playground control sends one event, `tool_use`, through `trackTool(tool, via)` (or the
+`withTool` wrapper for click handlers) in `web/src/lib/analytics.ts`. New controls should use it too, so one report
+ranks them all.
+
+- `tool`: which tool. Canvas: `add_gear`, `zoom_in`, `zoom_out`, `fit`, `back_to_center`, `undo`, `redo`, `share`,
+  `select_all`, `context_menu`, `more`, `pan`, `zoom_gesture`, `move` (dragging gear), `box_select`. Selected gear:
+  `lock`, `unlock`, `rotate`, `duplicate`, `group`, `ungroup`, `space_evenly`, `space_between`, `space_between_apply`,
+  `move_forward`, `move_back`, `move_to_front`, `move_to_back`, `edit`, `replace`, `plugs`, `gear_info`, `suggest_fix`,
+  `remove`, `nudge`. Plugs: `plug_add`, `plug_type`, `plug_remove`, `plug_done` (with `plug_type`). Add Gear panel:
+  `gear_search` (once per open panel, never the words), `gear_feed` (`feed`), `make_your_own`. Settings cog:
+  `snapping` (`on`), `tutorial`, `terms_privacy`, `send_feedback`, `export_file`, `import_file`. Playground menu:
+  `new_playground`, `open_playground`, `all_playgrounds`, `playground_settings`. Share dialog: `share_copy_link`,
+  `share_stop`. Side menus: `side_menu_expand`, `side_menu_collapse`.
+- `via`: where it was used from. `toolbar` (bottom bar, and the big Add Gear button on wide screens), `side_menu` (the
+  stacks down the sides on wide screens), `object_menu` (the bar across the top on tablets), `mini_menu` (the pill under
+  the selection), `right_click`, `shortcut`, `gesture` (wheel, trackpad, pinch, drag), `panel`, `settings`, `canvas`,
+  `switcher`, `dialog`.
+
+Nudges, pans and wheel or pinch zooms count once per burst (a burst ends after 2 seconds without another), so holding
+an arrow key is one `nudge`, not fifty.
+
+To see the ranking in GA4: register `tool` and `via` as event-scoped custom dimensions (Admin → Custom definitions →
+Create custom dimension, the "Event parameter" is `tool` or `via`), plus `source`, `feed`, `plug_type`, `on`, `step`
+and `finished` if you want those. Then Explore → Free form: dimensions Event name, tool, via; metric Event count;
+rows `tool`; filter Event name exactly matches `tool_use`. Add `via` as columns to see buttons against shortcuts.
+**Popularity reports.** Register these event-scoped custom dimensions too: `gear_name`, `gear_brand`, `gear_type`,
+`gear_id`, `kind`, `board_id`, `from`. Then build one Free form exploration per question (rows, metric Event count,
+filter on Event name):
+
+| Report | Event name | Rows | Columns |
+| --- | --- | --- | --- |
+| Most added gear | `add_gear` | `gear_name` | `source` |
+| Most viewed gear | `view_gear` | `gear_name` | |
+| Top brands | `add_gear` | `gear_brand` | |
+| Top pedal types | `add_gear` | `gear_type` | |
+| Most viewed boards | `board_view` | `board_id` | `from` |
+| Most liked boards | `board_like` | `board_id` | |
+| Most copied boards | `shared_board_copied` | `board_id` | |
+| Tool rank | `tool_use` | `tool` | `via` |
+
+Open a board from its `board_id` at `/?p=<board_id>`. GA's standard reports fold rare values into "(other)" once a
+dimension has thousands of values a day; explorations show them all.
+
+Dimensions only collect from the day they're registered, and reports lag by up to a day; Realtime and DebugView show
+events at once.
+
+**Checking events locally.** Analytics never sends from localhost, but `localStorage["pp:analytics-debug"] = "1"` (in
+the browser console) logs every event to the console as `[analytics] tool_use {tool: "rotate", via: "shortcut"}`,
+locally or on beta.
 
 ## Microsoft Clarity
 

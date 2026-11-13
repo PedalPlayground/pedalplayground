@@ -1,3 +1,4 @@
+import { trackTool, withTool } from "../lib/analytics";
 import { Check, CornerDownLeft, Search, TrendingUp, X } from "lucide-react";
 import { NewTag } from "./NewTag";
 import { SuggestGearDialog } from "./SuggestGearDialog";
@@ -245,6 +246,7 @@ export function SearchPanel({
 
   const { manifest: catalog, error, load } = useCatalog();
   const [query, setQuery] = useState("");
+  const searched = useRef(false);
   const searchInput = useRef<HTMLInputElement>(null);
   const deferredQuery = useDeferredValue(query);
   const units = useUi((u) => u.units);
@@ -303,6 +305,7 @@ export function SearchPanel({
   const browsing = !target && !deferredQuery.trim() && !filtered;
   const [feed, setFeed] = useState<Feed>(savedFeed);
   const chooseFeed = (f: Feed) => {
+    if (f !== feed) trackTool("gear_feed", "panel", { feed: f });
     setFeed(f);
     try {
       localStorage.setItem(FEED_KEY, f);
@@ -346,7 +349,7 @@ export function SearchPanel({
   useEffect(() => () => clearTimeout(addedTimer.current), []);
   const add = (entry: Entry, key: string) => {
     addCatalogItem(entry.kind, entry.item);
-    recordGearAdd(entry.kind, entry.item.image);
+    recordGearAdd(entry.kind, entry.item, browsing ? feed : "search");
     setAdded(key);
     clearTimeout(addedTimer.current);
     addedTimer.current = setTimeout(() => setAdded(null), 1200);
@@ -355,7 +358,7 @@ export function SearchPanel({
   const pick = (entry: Entry) => {
     if (target) {
       replaceItem(target.id, entry.item);
-      recordGearAdd(entry.kind, entry.item.image);
+      recordGearAdd(entry.kind, entry.item, "replace");
       onClose();
     } else add(entry, String(entry.id));
   };
@@ -396,7 +399,7 @@ export function SearchPanel({
   const makeOwn = (
     <button
       tabIndex={-1}
-      onClick={() => setCustom({ name: typed.slice(0, 40), kind: kindFilter ?? "pedal" })}
+      onClick={withTool("make_your_own", "panel", () => setCustom({ name: typed.slice(0, 40), kind: kindFilter ?? "pedal" }))}
       className="flex w-full items-center gap-3 rounded-control p-2 text-left transition-colors hover:bg-surface-hover active:bg-chrome-line"
     >
       <span className="size-16 shrink-0 overflow-hidden rounded-control bg-canvas">
@@ -438,6 +441,11 @@ export function SearchPanel({
               autoFocus={!phone}
               value={query}
               onChange={(e) => {
+                // Counts that a search happened (once per open panel), never what was typed.
+                if (!searched.current && e.target.value.trim()) {
+                  searched.current = true;
+                  trackTool("gear_search", "panel");
+                }
                 setQuery(e.target.value);
                 setCustom(null); // typing goes back to the results
               }}
@@ -525,7 +533,7 @@ export function SearchPanel({
               {phone && !target && typed && (
                 <button
                   onMouseDown={keepFocus}
-                  onClick={() => setCustom({ name: typed.slice(0, 40), kind: kindFilter ?? "pedal" })}
+                  onClick={withTool("make_your_own", "panel", () => setCustom({ name: typed.slice(0, 40), kind: kindFilter ?? "pedal" }))}
                   className="press h-8 rounded-control border border-line px-3 text-sm hover:bg-surface-hover"
                 >
                   Make Your Own

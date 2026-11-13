@@ -1,3 +1,4 @@
+import { withTool } from "../lib/analytics";
 import { Plus } from "lucide-react";
 import { usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -13,7 +14,7 @@ export function EmptyAddGear() {
     <div className="pointer-events-none absolute inset-0 z-10 grid place-items-center">
       {/* A bigger twin of the toolbar's Add Gear: a +, the same corners and type, outlined over a faint tint. */}
       <button
-        onClick={() => setSearchOpen(true)}
+        onClick={withTool("add_gear", "canvas", () => setSearchOpen(true))}
         className="press animate-enter pointer-events-auto flex h-11 items-center gap-2.5 rounded-control border-[1.5px] border-brand bg-brand/10 pl-2.5 pr-5 text-[15px] font-semibold tracking-[-0.01em] text-brand outline-none hover:bg-brand/15 active:bg-brand/20 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
       >
         <span className="grid size-6 place-items-center rounded-control bg-brand/15">

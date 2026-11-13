@@ -181,8 +181,103 @@ export function trackPage(title: string) {
   sendPage();
 }
 
+type Params = Record<string, string | number | boolean>;
+
+/** `localStorage["pp:analytics-debug"] = "1"` logs every event to the console, even on localhost where nothing is sent. */
+const debugging = (): boolean => {
+  try {
+    return localStorage.getItem("pp:analytics-debug") === "1";
+  } catch {
+    return false;
+  }
+};
+
 /** Sends a named event with small, non-identifying details (never names, emails or board contents). */
-export function track(event: string, params?: Record<string, string | number | boolean>) {
+export function track(event: string, params?: Params) {
+  if (debugging()) console.info("[analytics]", event, params ?? {});
   if (!loaded || !analyticsOn()) return;
   window.gtag?.("event", event, params);
+}
+
+/**
+ * The details every gear event carries, so GA can rank gear by name, brand and type: `gear_id` (the catalog's image
+ * key, the same as the Gear page's `?item=`), `gear_name` ("Brand Name", public catalog text), `gear_brand`,
+ * `gear_type` (its main type, or "Pedalboard") and `kind`.
+ */
+export function gearParams(kind: "pedal" | "pedalboard", item: { brand: string; name: string; image: string; type?: string }): Params {
+  return {
+    kind,
+    gear_id: item.image.replace(/\.png$/, ""),
+    gear_name: `${item.brand} ${item.name}`.slice(0, 100),
+    gear_brand: item.brand.slice(0, 100),
+    gear_type: kind === "pedalboard" ? "Pedalboard" : (item.type ?? "Unknown"),
+  };
+}
+
+/**
+ * Where a shared board was opened from, for `board_view`: "gallery", "gear_page" (a Gear page's "Featured on" list),
+ * "site" (anywhere else on the site) or "link" (a link from outside, or typed in).
+ */
+export function boardViewFrom(): string {
+  try {
+    const ref = document.referrer ? new URL(document.referrer) : null;
+    if (!ref || ref.origin !== location.origin) return "link";
+    if (ref.pathname.startsWith("/gallery")) return "gallery";
+    if (ref.pathname.startsWith("/gear")) return "gear_page";
+    return "site";
+  } catch {
+    return "link";
+  }
+}
+
+/**
+ * Where a playground tool was used from, so GA can show which controls people reach for. "toolbar" is the bottom bar
+ * (and the big Add Gear button on wide screens), "side_menu" the stacks down the sides on wide screens, "object_menu"
+ * the bar across the top on tablets, "mini_menu" the pill under the selection, "right_click" the context menu,
+ * "shortcut" a key, "gesture" a wheel, trackpad or pinch, "panel" a tool's own panel, "settings" the cog menu,
+ * "canvas" a button on the canvas itself, "switcher" the playground name menu, "dialog" a dialog's own buttons.
+ */
+export type ToolVia =
+  | "toolbar"
+  | "side_menu"
+  | "object_menu"
+  | "mini_menu"
+  | "right_click"
+  | "shortcut"
+  | "gesture"
+  | "panel"
+  | "settings"
+  | "canvas"
+  | "switcher"
+  | "dialog";
+
+/**
+ * Counts one use of a playground tool as a `tool_use` event: `tool` says which (rotate, zoom_in, plug_add...) and `via`
+ * where from. Every playground control goes through here, so one GA report ranks them all. `extra` is for small fixed
+ * values only (a plug type, on/off), never typed text.
+ */
+export function trackTool(tool: string, via: ToolVia, extra?: Params) {
+  track("tool_use", { tool, via, ...extra });
+}
+
+/** Wraps an action so using it is counted first. For onClick and onSelect handlers. */
+export const withTool =
+  (tool: string, via: ToolVia, fn: () => void, extra?: Params) =>
+  () => {
+    trackTool(tool, via, extra);
+    fn();
+  };
+
+const lastBurst = new Map<string, number>();
+
+/**
+ * For tools used in quick bursts (arrow-key nudges, wheel and pinch zoom): counts one use per burst, a burst ending
+ * after `gapMs` without another.
+ */
+export function trackToolBurst(tool: string, via: ToolVia, gapMs = 2000) {
+  const key = `${tool}|${via}`;
+  const now = Date.now();
+  const last = lastBurst.get(key) ?? 0;
+  lastBurst.set(key, now);
+  if (now - last > gapMs) trackTool(tool, via);
 }

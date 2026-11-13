@@ -1,3 +1,4 @@
+import { withTool } from "./lib/analytics";
 import { useEffect, useState } from "react";
 import { trackPage } from "./lib/analytics";
 import type { EmailOtpType } from "@supabase/supabase-js";
@@ -187,7 +188,7 @@ export function App() {
       const item = (kind === "pedalboard" ? manifest.pedalboards : manifest.pedals).find((c) => c.image === key);
       if (item) {
         usePlayground.getState().addCatalogItem(kind, item);
-        recordGearAdd(kind, item.image);
+        recordGearAdd(kind, item, "gear_page");
         toast(`Added ${item.brand} ${item.name}`);
       }
     } else if (handoff.kind === "edit") {
@@ -327,7 +328,7 @@ export function App() {
             className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 z-30 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
             {wide ? (
-              !viewing && <AddGearButton onClick={() => setSearchOpen(replacing || editing ? true : !searchOpen)} />
+              !viewing && <AddGearButton onClick={withTool("add_gear", "toolbar", () => setSearchOpen(replacing || editing ? true : !searchOpen))} />
             ) : (
               <Toolbar viewOnly={viewing} onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
             )}
