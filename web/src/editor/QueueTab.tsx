@@ -1,3 +1,4 @@
+import { EnlargeablePhoto } from "../components/PhotoViewer";
 import { ArrowLeft, Copy, ImageOff, Ratio, ScanSearch, Scissors, Search, type LucideIcon } from "lucide-react";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { canvasImageUrl, type Manifest } from "../lib/catalog";
@@ -316,10 +317,20 @@ function QueueRow({ submission: s, manifest, onOpen }: { submission: Queued; man
     >
       <span className="flex min-w-0 items-center gap-3 max-md:contents">
         <span className="grid size-14 shrink-0 place-items-center overflow-hidden rounded-inner bg-canvas max-md:row-span-3">
+          {/* Click the photo to see it large; the rest of the row opens the submission. */}
           {s.photo && !broken ? (
-            <img src={s.photo} alt="" className="max-h-12 max-w-12 object-contain" loading="lazy" />
+            <EnlargeablePhoto src={s.photo} alt={`${s.brand} ${s.name}`} nested className="grid size-full place-items-center">
+              <img src={s.photo} alt="" className="max-h-12 max-w-12 object-contain" loading="lazy" />
+            </EnlargeablePhoto>
           ) : current ? (
-            <img src={current} alt="" className="max-h-12 max-w-12 object-contain opacity-50" {...tip("Keeps the current photo")} />
+            <EnlargeablePhoto
+              src={current}
+              alt={`${s.brand} ${s.name}`}
+              nested
+              className="grid size-full place-items-center"
+            >
+              <img src={current} alt="" className="max-h-12 max-w-12 object-contain opacity-50" {...tip("Keeps the current photo")} />
+            </EnlargeablePhoto>
           ) : (
             <ImageOff size={18} className="text-icon" aria-label="No photo" />
           )}

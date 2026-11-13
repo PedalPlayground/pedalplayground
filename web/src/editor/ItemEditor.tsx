@@ -1,3 +1,4 @@
+import { EnlargeablePhoto } from "../components/PhotoViewer";
 import { ArrowLeftRight, Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, Search, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState, type ReactNode } from "react";
 import { stepNumber } from "../lib/stepNumber";
@@ -324,7 +325,7 @@ export function ItemEditor({
                   <span aria-hidden className={guide} style={{ bottom: FIGURE_CAPTION_H + FIGURE_GAP }} />
                 </>
               )}
-              <Figure label="This one" src={image} w={fields.width} h={fields.height} broken={imageError} />
+              <Figure label="This one" alt={[fields.brand, fields.name].filter(Boolean).join(" ") || "New photo"} src={image} w={fields.width} h={fields.height} broken={imageError} />
               {sizes.length > 0 && (
                 <SizeStrip
                   kind={fields.kind}
@@ -384,12 +385,15 @@ export function ItemEditor({
 
 function Figure({
   label,
+  alt,
   src,
   w,
   h,
   broken,
 }: {
   label: string;
+  /** What the photo shows, for the enlarged view. */
+  alt: string;
   src: string | null;
   w: number;
   h: number;
@@ -403,11 +407,12 @@ function Figure({
     <figure className="flex shrink-0 flex-col items-center" style={{ gap: FIGURE_GAP }}>
       <div className="relative" style={{ width: pw, height: ph }}>
         {src && !broken ? (
-          <>
+          // Click to see the photo large, at its own proportions.
+          <EnlargeablePhoto src={src} alt={alt} className="absolute inset-0 block">
             {/* A dashed line round the photo's edges, so transparent space around the pedal shows at a glance. */}
             <img src={src} alt="" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />
-            <div aria-hidden className="pointer-events-none absolute -inset-px border border-dashed border-brand/70" />
-          </>
+            <span aria-hidden className="pointer-events-none absolute -inset-px border border-dashed border-brand/70" />
+          </EnlargeablePhoto>
         ) : (
           <div className="absolute inset-0 grid place-items-center overflow-hidden rounded-inner bg-soft px-1 text-center text-[11px] leading-tight text-ink-muted">
             {broken ? "Can't load" : "No photo"}
