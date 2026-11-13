@@ -67,11 +67,11 @@ export async function fetchGalleryBoards(opts: { type: PlaygroundType | null; se
   return data as GalleryBoard[];
 }
 
-/** Likes or unlikes a board as the signed-in user. Returns the board's new like count. */
-export async function setGalleryLike(id: string, liked: boolean): Promise<number> {
+/** Likes or unlikes a board as the signed-in user. Returns the board's new like count. `slug` is for GA's board_id. */
+export async function setGalleryLike(id: string, liked: boolean, slug?: string): Promise<number> {
   const { data, error } = await db().rpc("gallery_set_like", { board: id, liked });
   if (error) throw error;
-  track(liked ? "board_like" : "board_unlike");
+  track(liked ? "board_like" : "board_unlike", slug ? { board_id: slug } : undefined);
   return data as number;
 }
 

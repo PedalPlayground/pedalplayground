@@ -231,7 +231,7 @@ export function GalleryApp() {
     // Show it right away, then settle on the server's count.
     patch({ liked, like_count: Math.max(0, b.like_count + (liked ? 1 : -1)) });
     try {
-      patch({ liked, like_count: await setGalleryLike(b.id, liked) });
+      patch({ liked, like_count: await setGalleryLike(b.id, liked, b.slug) });
     } catch {
       patch({ liked: b.liked, like_count: b.like_count });
     }

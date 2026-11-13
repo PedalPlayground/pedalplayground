@@ -1,6 +1,7 @@
-import { track } from "./analytics";
+import { gearParams, track } from "./analytics";
 import type { Kind } from "./catalog";
 import { supabase } from "./supabase";
+import type { CatalogItem } from "./types";
 
 export interface TrendingEntry {
   kind: Kind;
@@ -9,13 +10,14 @@ export interface TrendingEntry {
 }
 
 /**
- * Records that a catalog item was added to a playground. Fire and forget: failures never reach the user. `source` says
- * how it was found, for GA: "search", "trending" or "new" in Add Gear, "replace", or "gear_page".
+ * Records that a catalog item was added to a playground. Fire and forget: failures never reach the user. GA gets the
+ * item's name, brand and type (see gearParams) and `source`, how it was found: "search", "trending" or "new" in Add
+ * Gear, "replace", or "gear_page".
  */
-export function recordGearAdd(kind: Kind, image: string, source?: string) {
-  track("add_gear", source ? { kind, source } : { kind });
+export function recordGearAdd(kind: Kind, item: CatalogItem, source?: string) {
+  track("add_gear", { ...gearParams(kind, item), ...(source ? { source } : {}) });
   if (!supabase) return;
-  void supabase.rpc("record_gear_add", { kind, image }).then(
+  void supabase.rpc("record_gear_add", { kind, image: item.image }).then(
     () => undefined,
     () => undefined,
   );
