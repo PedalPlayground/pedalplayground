@@ -1,3 +1,4 @@
+import { setPedalTypes } from "./pedalTypes";
 import type { CatalogItem } from "./types";
 
 /**
@@ -10,6 +11,8 @@ export type Kind = "pedal" | "pedalboard";
 
 export interface Manifest {
   schema: number;
+  /** The pedal types in order (Admin > Types). Missing from catalogs published before the list could be edited. */
+  pedalTypes?: string[];
   pedals: CatalogItem[];
   pedalboards: CatalogItem[];
   /** image key -> hashed file paths relative to CATALOG_BASE */
@@ -36,6 +39,7 @@ export async function fetchManifest(): Promise<Manifest> {
   const byName = (a: CatalogItem, b: CatalogItem) => a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name);
   m.pedals.sort(byName);
   m.pedalboards.sort(byName);
+  setPedalTypes(m.pedalTypes);
   return m;
 }
 

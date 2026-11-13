@@ -381,3 +381,38 @@ export async function closeBugReport(id: string): Promise<void> {
   const { error } = await db().from("bug_reports").update({ status: "closed", closed_by: u.user?.id ?? null, closed_at: new Date().toISOString() }).eq("id", id);
   fail(error);
 }
+
+// Pedal types (admins only; the database checks too) ---------------------------------------------------------------
+
+/** The pedal types in order, or null when the pedal_types migration hasn't been run yet. */
+export async function listPedalTypes(): Promise<string[] | null> {
+  const { data, error } = await db().from("pedal_types").select("name").order("position").order("name");
+  if (error && (error.code === "42P01" || error.code === "PGRST205" || /schema cache|does not exist/i.test(error.message))) return null;
+  fail(error);
+  return (data ?? []).map((r: { name: string }) => r.name);
+}
+
+export async function addPedalType(name: string): Promise<void> {
+  const { error } = await db().rpc("add_pedal_type", { type_name: name });
+  fail(error);
+}
+
+/** Renames a type on the list and on every catalog item that has it. Returns how many items changed. */
+export async function renamePedalType(from: string, to: string): Promise<number> {
+  const { data, error } = await db().rpc("rename_pedal_type", { old_name: from, new_name: to });
+  fail(error);
+  return Number(data ?? 0);
+}
+
+/** Removes a type; its pedals move to `moveTo`, or just lose it when that's null. Returns how many items changed. */
+export async function removePedalType(name: string, moveTo: string | null): Promise<number> {
+  const { data, error } = await db().rpc("remove_pedal_type", { type_name: name, move_to: moveTo });
+  fail(error);
+  return Number(data ?? 0);
+}
+
+/** Saves the order: every type, first to last. */
+export async function reorderPedalTypes(names: string[]): Promise<void> {
+  const { error } = await db().rpc("reorder_pedal_types", { names });
+  fail(error);
+}

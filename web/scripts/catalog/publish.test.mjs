@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { publishCatalog } from "./publish.mjs";
 
 /** A stand-in for the parts of supabase-js the publisher uses, backed by arrays and maps. */
-function fakeDb(items, sources, { failDownload = [] } = {}) {
+function fakeDb(items, sources, { failDownload = [], types } = {}) {
   const uploads = new Map();
   const query = (rows) => {
     let filters = [];
@@ -25,7 +25,17 @@ function fakeDb(items, sources, { failDownload = [] } = {}) {
   };
   return {
     uploads,
-    from: () => query(items),
+    from: (table) =>
+      table === "pedal_types"
+        ? {
+            select: () => ({
+              order: () => ({
+                order: async () =>
+                  types ? { data: types.map((name) => ({ name })), error: null } : { data: null, error: { code: "PGRST205", message: "Could not find the table in the schema cache" } },
+              }),
+            }),
+          }
+        : query(items),
     storage: {
       from: (bucket) => ({
         download: async (path) =>
@@ -98,5 +108,13 @@ describe("publishCatalog", () => {
     const db = fakeDb([item()], new Map([["submissions/u/a.png", await png(100, 180)]]));
     await publishCatalog(db, { dryRun: true, log: quiet });
     expect(db.uploads.size).toBe(0);
+  });
+
+  it("puts the pedal types in the manifest, in order, once the table exists", async () => {
+    const items = [item({ needs_render: false, thumb_path: "thumb/a.1.webp", img_path: "img/a.1.webp" })];
+    const withTypes = await publishCatalog(fakeDb(items, new Map(), { types: ["Fuzz", "Boost"] }), { log: quiet, retry: noWait });
+    expect(withTypes.manifest.pedalTypes).toEqual(["Fuzz", "Boost"]);
+    const before = await publishCatalog(fakeDb(items, new Map()), { log: quiet, retry: noWait });
+    expect(before.manifest).not.toHaveProperty("pedalTypes");
   });
 });

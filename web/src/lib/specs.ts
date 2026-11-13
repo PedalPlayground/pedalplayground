@@ -1,5 +1,7 @@
 /**
  * Pedal specs for the Equipment List. The same lists are checked by scripts/catalog/validate.mjs, so keep them in step.
+ * PEDAL_TYPES is the built-in fallback: admins edit the live list in Admin > Types, and the app reads it with
+ * usePedalTypes() (src/lib/pedalTypes.ts).
  */
 export const PEDAL_TYPES = [
   "Boost",
