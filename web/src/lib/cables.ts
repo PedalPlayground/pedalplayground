@@ -4,7 +4,7 @@
  * direction, for the board drawing and, later, the signal flow map. Pure functions, no React.
  */
 import { ROUTE_DEFAULTS, busyLegs, cableEnd, plugHead, routeCable, type BusyLeg, type CableRoute, type PlugAnchor, type RouteOptions } from "./cableRoute";
-import { newPlugId, type CableKind, type ManualLegs, type Plug, type PlugEnd, type PlugLink, type PlugSide, type PlugType } from "./plugs";
+import { cableKind, newPlugId, type CableKind, type ManualLegs, type Plug, type PlugEnd, type PlugLink, type PlugSide, type PlugType } from "./plugs";
 import type { Pt } from "./cableRoute";
 import type { Item } from "./types";
 
@@ -27,16 +27,11 @@ const RED = "#e5484d";
 
 /** Cable types and how each draws: one solid line, gray, or red and thinner for power. */
 export const CABLE_KINDS: CableKindInfo[] = [
-  { kind: "mono", label: "Mono", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
-  { kind: "stereo", label: "Stereo", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
-  { kind: "midi", label: "MIDI", color: GRAY, width: 1, plugs: ["din", "sp400", "angle", "pancake", "mini"] },
-  { kind: "exp", label: "Expression", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
-  { kind: "tap", label: "Tap Tempo", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
-  { kind: "switching", label: "Switching", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
+  { kind: "audio", label: "Audio", color: GRAY, width: 1, plugs: [...QUARTER, "mini"] },
   { kind: "power", label: "Power", color: RED, width: 0.5, plugs: ["barrel"] },
   { kind: "other", label: "Other", color: GRAY, width: 1, plugs: [...QUARTER, "mini", "barrel", "din"] },
 ];
-export const cableKindInfo = (k: CableKind | undefined) => CABLE_KINDS.find((c) => c.kind === k) ?? CABLE_KINDS[0];
+export const cableKindInfo = (k: string | undefined) => CABLE_KINDS.find((c) => c.kind === cableKind(k))!;
 
 /** A cable's type, and for a new cable, the plugs it gets (the type's usual one if it doesn't take this one). */
 export type CableStyle = Pick<PlugLink, "kind"> & { plug?: PlugType };
@@ -68,7 +63,7 @@ function across(item: Item, plug: Plug) {
 }
 
 /** What new plugs on this kind of cable are. */
-export const defaultPlugFor = (kind: CableKind | undefined) => cableKindInfo(kind).plugs[0];
+export const defaultPlugFor = (kind: string | undefined) => cableKindInfo(kind).plugs[0];
 
 /**
  * Pedals run right to left: the input on the right (right side, or the top's right half), the output on the left.
@@ -104,7 +99,7 @@ export function boardCables(items: Item[]): BoardCable[] {
         from: reversed ? there : here,
         to: reversed ? here : there,
         stored: here,
-        kind: plug.link.kind ?? "mono",
+        kind: cableKind(plug.link.kind),
         color: cableKindInfo(plug.link.kind).color,
         ...(plug.link.legs ? { legs: plug.link.legs } : {}),
       });
@@ -167,7 +162,7 @@ export function removeCables(items: Item[], ends: PlugEnd[], keep: PlugEnd[] = [
 /** Wires two plugs together. A jack takes one cable, so any cable already on either plug comes out first (with its far plug). */
 export function connectPlugs(items: Item[], a: PlugEnd, b: PlugEnd, style: CableStyle = {}): Item[] {
   if (sameEnd(a, b)) return items;
-  const link: PlugLink = { item: b.item, plug: b.plug, ...(style.kind && style.kind !== "mono" ? { kind: style.kind } : {}) };
+  const link: PlugLink = { item: b.item, plug: b.plug, ...(style.kind && style.kind !== "audio" ? { kind: style.kind } : {}) };
   return removeCables(items, [a, b], [a, b]).map((i) => (i.id === a.item && i.plugs ? { ...i, plugs: i.plugs.map((p) => (p.id === a.plug ? { ...p, link } : p)) } : i));
 }
 
@@ -191,7 +186,7 @@ export function editCable(items: Item[], stored: PlugEnd, edit: CableEdit): Item
   const other: PlugEnd = { item: link.item, plug: link.plug };
   const far = items.find((i) => i.id === other.item)?.plugs?.find((p) => p.id === other.plug);
   if (!far) return items;
-  const kind = edit.kind ?? link.kind ?? "mono";
+  const kind = edit.kind ?? cableKind(link.kind);
   const allowed = cableKindInfo(kind).plugs;
   const split = edit.split ?? !!link.split;
 
@@ -209,7 +204,7 @@ export function editCable(items: Item[], stored: PlugEnd, edit: CableEdit): Item
 
   const newLink: PlugLink = { ...link };
   if (edit.kind) {
-    if (edit.kind === "mono") delete newLink.kind;
+    if (edit.kind === "audio") delete newLink.kind;
     else newLink.kind = edit.kind;
   }
   // Colors come from the type now; drop any picked before.

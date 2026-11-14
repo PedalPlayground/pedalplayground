@@ -72,7 +72,7 @@ export const useCablePick = create<CablePick & { set: (p: Partial<CablePick>) =>
   chosen: null,
   plug: null,
   cable: null,
-  style: { kind: "mono" },
+  style: { kind: "audio" },
   set: (p) => set(p),
 }));
 

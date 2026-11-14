@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { boardCables, connectPlugs, editCable, removeCables, fromManual, moveLeg, plugRole, routeBoardCables, toManual, unplug, wire, withoutLinks } from "./cables";
-import type { Plug } from "./plugs";
+import { cableKind, type Plug } from "./plugs";
 import type { Item } from "./types";
 
 const plug = (id: string, side: Plug["side"], at: number): Plug => ({ id, side, at, type: "sp400" });
@@ -186,11 +186,16 @@ describe("hand-placed legs", () => {
 });
 
 describe("cable style", () => {
-  it("defaults to gray mono; power is red", () => {
+  it("defaults to gray audio; power is red", () => {
     let items = connectPlugs([pedal("a", 0, io()), pedal("b", 5, io())], { item: "a", plug: "out" }, { item: "b", plug: "in" });
-    expect(boardCables(items)[0]).toMatchObject({ kind: "mono", color: "#8b9099" });
+    expect(boardCables(items)[0]).toMatchObject({ kind: "audio", color: "#8b9099" });
     items = connectPlugs(items, { item: "a", plug: "out" }, { item: "b", plug: "in" }, { kind: "power" });
     expect(boardCables(items)[0]).toMatchObject({ kind: "power", color: "#e5484d" });
+  });
+  it("reads old saved kinds as audio or other", () => {
+    expect(["mono", "stereo", undefined, "audio"].map(cableKind)).toEqual(["audio", "audio", "audio", "audio"]);
+    expect(["midi", "exp", "tap", "switching", "other"].map(cableKind)).toEqual(["other", "other", "other", "other", "other"]);
+    expect(cableKind("power")).toBe("power");
   });
 });
 

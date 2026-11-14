@@ -21,15 +21,22 @@ export interface Plug {
 /** A cable's far end, and its shape if someone moved its runs by hand. */
 export interface PlugLink extends PlugEnd {
   legs?: ManualLegs;
-  /** What the cable carries (see CABLE_KINDS in lib/cables.ts). Missing means mono audio. */
-  kind?: CableKind;
+  /**
+   * What the cable carries (see CABLE_KINDS in lib/cables.ts). Missing means audio. Older saves may hold a kind that's
+   * gone (mono, stereo, midi, exp, tap, switching, Nov 2026); `cableKind` reads those.
+   */
+  kind?: CableKind | string;
   /** Old saves may carry a picked color; cables now take their type's color. */
   color?: string;
   /** True once the two ends' plug types were set apart; until then changing one changes both. */
   split?: boolean;
 }
 
-export type CableKind = "mono" | "stereo" | "midi" | "exp" | "tap" | "switching" | "power" | "other";
+export type CableKind = "audio" | "power" | "other";
+
+/** A stored kind as one of today's: old mono and stereo are audio, and the other old kinds (MIDI, expression, tap tempo, switching) are other. */
+export const cableKind = (k: string | undefined): CableKind =>
+  k === "power" || k === "other" ? k : !k || k === "audio" || k === "mono" || k === "stereo" ? "audio" : "other";
 
 /**
  * A hand-placed cable shape, from this plug to the other: the legs alternate horizontal and vertical starting with
