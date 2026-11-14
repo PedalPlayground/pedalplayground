@@ -46,7 +46,7 @@ import { StandingNotice } from "./components/StandingNotice";
 import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { SpaceBetweenPanel } from "./components/SpaceBetweenPanel";
-import { PlugPanel } from "./components/PlugEditor";
+import { CableMiniMenu, CablePanel } from "./components/Cables";
 import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
 import { Toolbar } from "./components/Toolbar";
 import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
@@ -116,7 +116,8 @@ export function App() {
   const openUpgrade = useUi((u) => u.openUpgrade);
   const searchOpen = useUi((u) => u.searchOpen);
   const spacingOpen = useUi((u) => u.spacingOpen);
-  const plugEditing = useUi((u) => u.plugEditing);
+  // The Signal Flow tool takes the menus' place.
+  const cablesOpen = useUi((u) => u.cablesOpen);
   const replacing = useUi((u) => u.replacing);
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
@@ -299,15 +300,18 @@ export function App() {
               <ScaleKey end className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] right-[calc(max(1rem,env(safe-area-inset-right))+40px)] z-10 max-md:hidden" />
               {wide ? (
                 <>
-                  {!plugEditing && <ObjectStack />}
+                  {!cablesOpen && <ObjectStack />}
                   <CanvasStack viewOnly={viewing} onShare={() => setDialog("share")} />
                 </>
               ) : (
                 // Tablets keep the full bar; phones (and larger screens) use the little menu under the selection.
-                !phoneSized && !plugEditing && <ObjectMenu />
+                !phoneSized && !cablesOpen && <ObjectMenu />
               )}
-              {/* While plugs are being edited, their panel takes the menus' place. */}
-              {plugEditing ? <PlugPanel /> : <SelectionMiniMenu />}
+              {!cablesOpen && <SelectionMiniMenu />}
+              {/* A picked cable's menu, on the board and in Signal Flow. */}
+              <CableMiniMenu />
+              {/* Signal Flow's menu, at the top center (above the toolbar on phones). */}
+              {cablesOpen && <CablePanel />}
               <ContextMenu />
             </>
           )}
@@ -319,7 +323,7 @@ export function App() {
           </div>
 
           {/* Action confirmations pop up at the top center. On tablets they drop below the selection bar when it's showing. */}
-          <ActionToast className={`absolute left-1/2 -translate-x-1/2 [--enter-y:-8px] ${hasSelection && !wide ? "top-3 sm:top-16" : "top-3"}`} />
+          <ActionToast className={`absolute left-1/2 -translate-x-1/2 [--enter-y:-8px] ${cablesOpen ? "top-3 sm:top-[7.5rem]" : hasSelection && !wide ? "top-3 sm:top-16" : "top-3"}`} />
 
 
           {!covered && (
@@ -328,7 +332,7 @@ export function App() {
             className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 z-30 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
             {wide ? (
-              !viewing && <AddGearButton onClick={withTool("add_gear", "toolbar", () => setSearchOpen(replacing || editing ? true : !searchOpen))} />
+              !viewing && !cablesOpen && <AddGearButton onClick={withTool("add_gear", "toolbar", () => setSearchOpen(replacing || editing ? true : !searchOpen))} />
             ) : (
               <Toolbar viewOnly={viewing} onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
             )}

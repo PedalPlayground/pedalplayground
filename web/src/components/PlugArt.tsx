@@ -1,3 +1,6 @@
+import barrelDownArt from "../assets/plugs/barrel-down.svg";
+import dinDownArt from "../assets/plugs/din-down.svg";
+import miniDownArt from "../assets/plugs/mini-down.svg";
 import pancakeDownArt from "../assets/plugs/pancake-down.svg";
 import reanDownArt from "../assets/plugs/rean-down.svg";
 import sp400DownArt from "../assets/plugs/sp400-down.svg";
@@ -9,6 +12,10 @@ export const ART_SRC = {
   "rean-down": reanDownArt,
   "sp400-down": sp400DownArt,
   "pancake-down": pancakeDownArt,
+  // Placeholders until Trav's drawings.
+  "mini-down": miniDownArt,
+  "barrel-down": barrelDownArt,
+  "din-down": dinDownArt,
 };
 
 /**

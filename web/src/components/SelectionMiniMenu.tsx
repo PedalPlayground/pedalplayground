@@ -1,5 +1,5 @@
 import { withTool } from "../lib/analytics";
-import { Cable, Ellipsis, Group, Lock, LockOpen, Pencil, Ruler, RotateCw, Ungroup } from "lucide-react";
+import { Ellipsis, Group, Lock, LockOpen, Pencil, Ruler, RotateCw, Ungroup } from "lucide-react";
 import { useRef } from "react";
 import { itemBounds, PX_PER_INCH } from "../lib/geometry";
 import { isOneGroup, usePlayground } from "../store/playground";
@@ -107,11 +107,6 @@ export function SelectionMiniMenu() {
       {spaceable && (
         <button aria-label="Space Between" {...tip("Space Between", { side: "bottom" })} onClick={withTool("space_between", "mini_menu", () => setSpacing(true))} className={`${button} ${barIconIdle}`}>
           <Ruler size={16} />
-        </button>
-      )}
-      {pedal && (
-        <button aria-label="Plugs" {...tip("Plugs", { shortcut: "P", side: "bottom" })} onClick={withTool("plugs", "mini_menu", () => useUi.getState().setPlugEditing(pedal.id))} className={`${button} ${barIconIdle}`}>
-          <Cable size={16} />
         </button>
       )}
       {editable && (

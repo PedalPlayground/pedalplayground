@@ -1,9 +1,9 @@
 import { withTool } from "../lib/analytics";
-import { Fullscreen, Hand, MousePointer2, Plus, Redo2, SquareArrowOutUpRight, Undo2, ZoomIn, ZoomOut } from "lucide-react";
+import { Fullscreen, Cable, Hand, MousePointer2, Plus, Redo2, SquareArrowOutUpRight, Undo2, ZoomIn, ZoomOut } from "lucide-react";
 import type { ReactNode } from "react";
 import { PHONE_QUERY, useMediaQuery } from "../lib/viewport";
 import { usePlayground } from "../store/playground";
-import { useUi } from "../store/ui";
+import { SHOW_CABLES, useUi } from "../store/ui";
 import { SettingsMenu } from "./SettingsMenu";
 import { tip } from "./Tooltip";
 import { barDivider, barGhostButton, barIconActive, barIconButton, barIconIdle, barPanel } from "./toolbarStyles";
@@ -71,7 +71,7 @@ const divider = <span className={barDivider} />;
 
 /** `viewOnly` (a shared playground being viewed) keeps just the zoom controls. */
 export function Toolbar({ onPlace: place, onShare: share, viewOnly = false }: { onPlace: () => void; onShare: () => void; viewOnly?: boolean }) {
-  const { tool, setTool } = useUi();
+  const { tool, setTool, cablesOpen, setCablesOpen } = useUi();
   const zoomBy = usePlayground((s) => s.zoomBy);
   const onPlace = withTool("add_gear", "toolbar", place);
   const onShare = withTool("share", "toolbar", share);
@@ -130,6 +130,14 @@ export function Toolbar({ onPlace: place, onShare: share, viewOnly = false }: { 
       </button>
       {divider}
       </>
+      )}
+      {SHOW_CABLES && !viewOnly && (
+        <>
+          <IconButton label="Signal Flow" active={cablesOpen} onClick={withTool("cables", "toolbar", () => setCablesOpen(!cablesOpen))}>
+            <Cable size={18} />
+          </IconButton>
+          {divider}
+        </>
       )}
       {/* Touch screens pan and select automatically, so the tool switch is only for mouse and trackpad. */}
       {SHOW_TOOL_SWITCH && (
