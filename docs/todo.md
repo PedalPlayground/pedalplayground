@@ -42,6 +42,17 @@ The larger prioritized plan lives in `docs/handoff.md` ("Prioritized next steps"
 28. Catalog: 11 entries share an image with another entry (pedalboards aclam-l2-free, aclam-s2-top; pedals barefoot-button,
     ernie-ball-vp, zip-tie-mount-lg, mission-ep1, mission-ep1-black, mooer-leveline, mxr-csp102sl, mxr-csp026 and one more).
     The second of each pair shows the other's photo, and its Gear page (`?item=<image>`) opens the first one instead.
+29. Gallery: search boards by pedal.
+30. Image tools for catalog photos: knock out the background and trim transparent pixels.
+31. Admin Queue: download or open a submitted photo in Photoshop, then put the edited file in the file upload?
+32. Better Admin Queue management.
+33. Better My Boards flow.
+34. Launch supporter status.
+35. Signal Flow Mode.
+36. Inventory Mode.
+37. Clean up GitHub issues and PRs.
+29. Figure out which board to show when you sign in, so signing in doesn't create more Untitled boards
+    (reported by Trav 2026-11-12).
 
 ## Done
 

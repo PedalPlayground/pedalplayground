@@ -1,3 +1,4 @@
+import { EnlargeablePhoto } from "../components/PhotoViewer";
 import { ArrowLeftRight, Check as CheckIcon, ChevronLeft, ChevronRight, ImageUp, Search, TriangleAlert } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState, type ReactNode } from "react";
 import { stepNumber } from "../lib/stepNumber";
@@ -83,6 +84,7 @@ export function ItemEditor({
   lockKind,
   formEnd,
   asideEnd,
+  readOnly,
 }: {
   fields: Fields;
   onChange: (f: Fields) => void;
@@ -96,6 +98,8 @@ export function ItemEditor({
   formEnd?: ReactNode;
   /** Shown under the checks (the Queue's submitter history). */
   asideEnd?: ReactNode;
+  /** Shows the fields switched off (a finished submission in the Queue). */
+  readOnly?: boolean;
 }) {
   const { stats, broken: imageError } = usePhotoStats(image);
   const fileInput = useRef<HTMLInputElement>(null);
@@ -131,7 +135,7 @@ export function ItemEditor({
 
   return (
     <div className="grid gap-5 lg:grid-cols-[minmax(0,400px)_minmax(0,1fr)]">
-      <div className="grid content-start gap-3">
+      <fieldset disabled={readOnly} className="m-0 grid min-w-0 content-start gap-3 border-0 p-0">
         <div className="grid grid-cols-2 gap-3">
           <div>
             <label className={labelClass} htmlFor={`${id}-kind`}>Kind</label>
@@ -290,7 +294,7 @@ export function ItemEditor({
                 <ImageUp size={15} /> {image ? "Replace photo" : "Choose photo"}
               </button>
               {/* Google Images for the brand and name, PNGs only (most cutouts are), in a new tab. */}
-              {fields.brand.trim() || fields.name.trim() ? (
+              {!readOnly && (fields.brand.trim() || fields.name.trim()) ? (
                 <a
                   href={pngSearchUrl(fields.brand, fields.name)}
                   target="_blank"
@@ -305,7 +309,7 @@ export function ItemEditor({
           </div>
         )}
         {formEnd}
-      </div>
+      </fieldset>
 
       {/* min-w-0 all the way down: the size strip pages to fit, so this column can shrink instead of spilling over. */}
       <div className="grid min-w-0 content-start gap-4">
@@ -321,7 +325,7 @@ export function ItemEditor({
                   <span aria-hidden className={guide} style={{ bottom: FIGURE_CAPTION_H + FIGURE_GAP }} />
                 </>
               )}
-              <Figure label="This one" src={image} w={fields.width} h={fields.height} broken={imageError} />
+              <Figure label="This one" alt={[fields.brand, fields.name].filter(Boolean).join(" ") || "New photo"} src={image} w={fields.width} h={fields.height} broken={imageError} />
               {sizes.length > 0 && (
                 <SizeStrip
                   kind={fields.kind}
@@ -381,12 +385,15 @@ export function ItemEditor({
 
 function Figure({
   label,
+  alt,
   src,
   w,
   h,
   broken,
 }: {
   label: string;
+  /** What the photo shows, for the enlarged view. */
+  alt: string;
   src: string | null;
   w: number;
   h: number;
@@ -400,11 +407,12 @@ function Figure({
     <figure className="flex shrink-0 flex-col items-center" style={{ gap: FIGURE_GAP }}>
       <div className="relative" style={{ width: pw, height: ph }}>
         {src && !broken ? (
-          <>
+          // Click to see the photo large, at its own proportions.
+          <EnlargeablePhoto src={src} alt={alt} className="absolute inset-0 block">
             {/* A dashed line round the photo's edges, so transparent space around the pedal shows at a glance. */}
             <img src={src} alt="" className="absolute inset-0 size-full" style={{ objectFit: "fill" }} />
-            <div aria-hidden className="pointer-events-none absolute -inset-px border border-dashed border-brand/70" />
-          </>
+            <span aria-hidden className="pointer-events-none absolute -inset-px border border-dashed border-brand/70" />
+          </EnlargeablePhoto>
         ) : (
           <div className="absolute inset-0 grid place-items-center overflow-hidden rounded-inner bg-soft px-1 text-center text-[11px] leading-tight text-ink-muted">
             {broken ? "Can't load" : "No photo"}

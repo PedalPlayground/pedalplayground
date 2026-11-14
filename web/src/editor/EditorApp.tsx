@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchManifest, type Manifest } from "../lib/catalog";
 import { isAdmin, isEditor, pendingBuilds, publish } from "../lib/editorApi";
 import { PageHeader, type PageDialog } from "../components/PageHeader";
@@ -9,14 +9,15 @@ import { primaryButton, secondaryButton } from "./ItemEditor";
 import { ModerationTab } from "./ModerationTab";
 import { NewsTab } from "./NewsTab";
 import { QueueTab } from "./QueueTab";
+import { TypesTab } from "./TypesTab";
 
-type Tab = "queue" | "add" | "catalog" | "news" | "moderation";
-const TABS: Tab[] = ["queue", "add", "catalog", "news", "moderation"];
+type Tab = "queue" | "add" | "catalog" | "types" | "news" | "moderation";
+const TABS: Tab[] = ["queue", "add", "catalog", "types", "news", "moderation"];
+/** Tabs only admins get (the database checks too); editors who follow a link to one land on another. */
+const ADMIN_TABS: Partial<Record<Tab, Tab>> = { news: "queue", types: "catalog" };
 /** The tab in the address (/editor/#news, or #add?from=<key> for Duplicate), so links can open a tab and reloads stay on it. */
 const tabFromHash = (): Tab => {
   const h = window.location.hash.split("?")[0];
-  // The Types tab is part of Catalog now.
-  if (h === "#types") return "catalog";
   return TABS.find((t) => `#${t}` === h) ?? "queue";
 };
 
@@ -115,8 +116,8 @@ export function EditorApp() {
       </Shell>
     );
 
-  // News is for admins.
-  const shown: Tab = tab === "news" && !admin ? "queue" : tab;
+  // News and Types are for admins. (Editors with an old #types link, from when Types was part of Catalog, get Catalog.)
+  const shown: Tab = !admin && ADMIN_TABS[tab] ? ADMIN_TABS[tab] : tab;
   const tabButton = (t: Tab, label: string) => (
     <button
       type="button"
@@ -133,10 +134,11 @@ export function EditorApp() {
       header={header}
       bar={
         <>
-          <nav className="flex gap-1">
+          <nav className="flex flex-wrap gap-1">
             {tabButton("queue", "Queue")}
             {tabButton("add", "Add")}
             {tabButton("catalog", "Catalog")}
+            {admin && tabButton("types", "Types")}
             {admin && tabButton("news", "News")}
             {tabButton("moderation", "Moderation")}
           </nav>
@@ -177,6 +179,7 @@ export function EditorApp() {
       {shown === "queue" && <QueueTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
       {shown === "add" && <AddTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
       {shown === "news" && <NewsTab setNotice={setNotice} />}
+      {shown === "types" && <TypesTab manifest={manifest} publisher={publisher} setNotice={setNotice} />}
       {shown === "moderation" && <ModerationTab setNotice={setNotice} isAdmin={admin} />}
       {shown === "catalog" && <CatalogTab manifest={manifest} publisher={publisher} setNotice={setNotice} userId={user.id} />}
     </Shell>
@@ -187,25 +190,12 @@ export type SetNotice = (n: Notice | null) => void;
 
 /** The site header, then the editor's own tab bar under it (once you're in). */
 function Shell({ header, children, bar }: { header: React.ReactNode; children?: React.ReactNode; bar?: React.ReactNode }) {
-  const page = useRef<HTMLDivElement>(null);
-  const barRef = useRef<HTMLDivElement>(null);
-  // How far down the sticky header and tab bar reach (--editor-top, in screen pixels), so content can stick under them
-  // (the Queue's open submission). The tab bar wraps on narrow screens, so it's measured.
-  useEffect(() => {
-    const el = barRef.current;
-    if (!el) return;
-    const update = () => page.current?.style.setProperty("--editor-top", `${48 + el.getBoundingClientRect().height}px`);
-    update();
-    const ro = new ResizeObserver(update);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, [bar]);
   return (
     // The page locks body scrolling (for the playground), so this page scrolls inside its own container, like the gallery.
-    <div ref={page} className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
+    <div className="h-dvh overflow-y-auto overscroll-contain bg-chrome font-sans text-ink">
       {header}
       {bar && (
-        <div ref={barRef} className="sticky top-12 z-20 border-b border-chrome-line bg-chrome/95 backdrop-blur">
+        <div className="sticky top-12 z-20 border-b border-chrome-line bg-chrome/95 backdrop-blur">
           <div className="page-main isolate mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">{bar}</div>
         </div>
       )}

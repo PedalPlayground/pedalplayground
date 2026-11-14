@@ -134,15 +134,69 @@ const columns = (f: Fields) => ({
   ...(f.extraTypes !== undefined && { extra_types: f.kind === "pedal" && f.type ? [...new Set(f.extraTypes)].filter((t) => t !== f.type) : [] }),
 });
 
-/** Submissions waiting for an editor, oldest first. */
-export async function listQueue(): Promise<Submission[]> {
-  const { data, error } = await db()
-    .from("catalog_submissions")
-    .select("*")
-    .in("status", ["pending", "needs_changes"])
-    .order("created_at");
+/** What the Queue's list shows. "open" is everything still waiting on an editor: new ones and ones sent back. */
+export type QueueStatus = "open" | Submission["status"] | "all";
+export interface QueueFilter {
+  status: QueueStatus;
+  /** New items or corrections to live ones. */
+  change: "new" | "correction" | null;
+  kind: Submission["kind"] | null;
+  text: string;
+  sort: "oldest" | "newest" | "brand" | "name";
+}
+
+const statusesFor = (s: QueueStatus): Submission["status"][] | null =>
+  s === "all" ? null : s === "open" ? ["pending", "needs_changes"] : [s];
+
+/** Ids of people whose username contains the text (for the Queue's search). */
+async function usersMatching(text: string): Promise<string[]> {
+  const { data, error } = await db().from("profiles").select("user_id").ilike("username", `%${text}%`).limit(50);
+  if (error) return [];
+  return ((data ?? []) as { user_id: string }[]).map((r) => r.user_id);
+}
+
+/**
+ * Submissions for the Queue's filters, a page at a time. The search looks at the brand, name, the item a correction
+ * is for, the submitter's note and the submitter's username; every word has to match somewhere.
+ */
+export async function listSubmissions(f: QueueFilter, page: number, pageSize = 100): Promise<Submission[]> {
+  let q = db().from("catalog_submissions").select("*");
+  const statuses = statusesFor(f.status);
+  if (statuses) q = q.in("status", statuses);
+  if (f.kind) q = q.eq("kind", f.kind);
+  if (f.change === "new") q = q.is("target_key", null);
+  else if (f.change === "correction") q = q.not("target_key", "is", null);
+  for (const word of f.text.trim().split(/\s+/).filter(Boolean).slice(0, 5)) {
+    // PostgREST's or() syntax treats , ( ) as separators, so they can't appear in a search word.
+    const w = word.replace(/[,()%*\\"]/g, "");
+    if (!w) continue;
+    const people = await usersMatching(w);
+    const by = people.length ? `,submitted_by.in.(${people.join(",")})` : "";
+    q = q.or(`brand.ilike.*${w}*,name.ilike.*${w}*,target_key.ilike.*${w}*,note.ilike.*${w}*${by}`);
+  }
+  if (f.sort === "brand") q = q.order("brand").order("name");
+  else if (f.sort === "name") q = q.order("name").order("brand");
+  else q = q.order("created_at", { ascending: f.sort === "oldest" });
+  const { data, error } = await q.range(page * pageSize, page * pageSize + pageSize - 1);
   fail(error);
   return (data ?? []) as Submission[];
+}
+
+/** How many submissions have each status (for the Queue's filter counts). */
+export async function submissionCounts(): Promise<Record<Submission["status"], number>> {
+  const statuses: Submission["status"][] = ["pending", "needs_changes", "approved", "rejected", "resolved"];
+  const res = await Promise.all(
+    statuses.map((st) => db().from("catalog_submissions").select("id", { count: "exact", head: true }).eq("status", st)),
+  );
+  for (const r of res) fail(r.error);
+  return Object.fromEntries(statuses.map((st, i) => [st, res[i].count ?? 0])) as Record<Submission["status"], number>;
+}
+
+/** One submission by id (the Queue's detail page, /editor/#queue?id=…). */
+export async function getSubmission(id: string): Promise<Submission | null> {
+  const { data, error } = await db().from("catalog_submissions").select("*").eq("id", id).maybeSingle();
+  fail(error);
+  return (data as Submission | null) ?? null;
 }
 
 /** Short-lived links to several private source images at once, by path (paths that fail are left out). */
@@ -379,5 +433,40 @@ export async function listBugReports(): Promise<BugReport[]> {
 export async function closeBugReport(id: string): Promise<void> {
   const { data: u } = await db().auth.getUser();
   const { error } = await db().from("bug_reports").update({ status: "closed", closed_by: u.user?.id ?? null, closed_at: new Date().toISOString() }).eq("id", id);
+  fail(error);
+}
+
+// Pedal types (admins only; the database checks too) ---------------------------------------------------------------
+
+/** The pedal types in order, or null when the pedal_types migration hasn't been run yet. */
+export async function listPedalTypes(): Promise<string[] | null> {
+  const { data, error } = await db().from("pedal_types").select("name").order("position").order("name");
+  if (error && (error.code === "42P01" || error.code === "PGRST205" || /schema cache|does not exist/i.test(error.message))) return null;
+  fail(error);
+  return (data ?? []).map((r: { name: string }) => r.name);
+}
+
+export async function addPedalType(name: string): Promise<void> {
+  const { error } = await db().rpc("add_pedal_type", { type_name: name });
+  fail(error);
+}
+
+/** Renames a type on the list and on every catalog item that has it. Returns how many items changed. */
+export async function renamePedalType(from: string, to: string): Promise<number> {
+  const { data, error } = await db().rpc("rename_pedal_type", { old_name: from, new_name: to });
+  fail(error);
+  return Number(data ?? 0);
+}
+
+/** Removes a type; its pedals move to `moveTo`, or just lose it when that's null. Returns how many items changed. */
+export async function removePedalType(name: string, moveTo: string | null): Promise<number> {
+  const { data, error } = await db().rpc("remove_pedal_type", { type_name: name, move_to: moveTo });
+  fail(error);
+  return Number(data ?? 0);
+}
+
+/** Saves the order: every type, first to last. */
+export async function reorderPedalTypes(names: string[]): Promise<void> {
+  const { error } = await db().rpc("reorder_pedal_types", { names });
   fail(error);
 }

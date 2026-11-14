@@ -1,8 +1,9 @@
+import { EnlargeablePhoto } from "../components/PhotoViewer";
 import { Archive, ArchiveRestore, ArrowLeft, Copy, Pencil, Search, X } from "lucide-react";
 import { tip } from "../components/Tooltip";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { itemTypes, type Manifest } from "../lib/catalog";
-import { PEDAL_TYPES } from "../lib/specs";
+import { usePedalTypes } from "../lib/pedalTypes";
 import { filterMore, filterRow } from "../components/filterList";
 import { TypeCombo } from "../components/TypeCombo";
 import { fieldProblems, type Fields } from "../lib/editorChecks";
@@ -112,6 +113,7 @@ export function CatalogTab({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const typeList = usePedalTypes((s) => s.types);
   /** Live counts for the sidebar, from the published catalog (within the chosen kind and brand). */
   const counts = useMemo(() => {
     const pedals = (manifest?.pedals ?? []).filter((c) => !brand || c.brand === brand);
@@ -130,12 +132,12 @@ export function CatalogTab({
       pedals: pedals.length,
       boards: boards.length,
       untyped,
-      types: PEDAL_TYPES.filter((t) => byType.has(t))
+      types: typeList.filter((t) => byType.has(t))
         .map((t) => [t, byType.get(t)!] as [string, number])
         .sort((a, b) => b[1] - a[1]),
       brands: [...byBrand].sort((a, b) => a[0].localeCompare(b[0])),
     };
-  }, [manifest, kind, brand]);
+  }, [manifest, kind, brand, typeList]);
 
   /** Saves one item's new types (first is the main one). */
   const saveTypes = async (item: Item, types: string[]): Promise<boolean> => {
@@ -337,14 +339,22 @@ export function CatalogTab({
                     aria-label={`Select ${item.brand} ${item.name}`}
                     className="size-4 shrink-0 accent-[var(--color-brand)]"
                   />
-                  <button type="button" onClick={() => openItem(item)} className="group flex min-w-0 items-center gap-2.5 text-left">
+                  {/* The photo opens large; its name beside it opens the item. */}
+                  {item.thumb_path ? (
+                    <EnlargeablePhoto
+                      src={publicUrl(item.img_path ?? item.thumb_path)}
+                      alt={`${item.brand} ${item.name}`}
+                      aspect={item.img_path ? Number(item.width_in) / Number(item.height_in) || undefined : undefined}
+                      className="grid size-10 shrink-0 place-items-center"
+                    >
+                      <img src={publicUrl(item.thumb_path)} alt="" className="max-h-10 max-w-10 object-contain" loading="lazy" />
+                    </EnlargeablePhoto>
+                  ) : (
                     <span className="grid size-10 shrink-0 place-items-center">
-                      {item.thumb_path ? (
-                        <img src={publicUrl(item.thumb_path)} alt="" className="max-h-10 max-w-10 object-contain" loading="lazy" />
-                      ) : (
-                        <span className="size-8 rounded-inner bg-soft" />
-                      )}
+                      <span className="size-8 rounded-inner bg-soft" />
                     </span>
+                  )}
+                  <button type="button" onClick={() => openItem(item)} className="group flex min-w-0 items-center gap-2.5 text-left">
                     <span className="min-w-0">
                       <span className="block truncate text-[13px] font-semibold group-hover:underline">{item.name}</span>
                       <span className="block truncate text-xs text-ink-muted">
@@ -421,9 +431,9 @@ export function CatalogTab({
 }
 
 /** A row's actions: Edit and Copy with labels, Archive (or Restore) as an icon. */
-const rowLabeled =
+export const rowLabeled =
   "press flex h-7 items-center gap-1.5 whitespace-nowrap rounded-control bg-surface-hover px-2.5 text-xs font-medium text-ink outline-none transition-colors hover:bg-soft-hover focus-visible:ring-2 focus-visible:ring-brand";
-const rowAction =
+export const rowAction =
   "grid size-8 place-items-center rounded-control outline-none transition-colors hover:bg-soft focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50";
 
 /** The header row's small controls: a step down from the page's buttons (28px tall, 12px text). */
@@ -453,6 +463,7 @@ function BulkActions({
   onRestore: () => void;
   onClear: () => void;
 }) {
+  const types = usePedalTypes((s) => s.types);
   const typeMenu = (label: string, run: (t: string) => void) => (
     <select
       aria-label={label}
@@ -462,7 +473,7 @@ function BulkActions({
       disabled={disabled || !pedals}
     >
       <option value="">{label}…</option>
-      {PEDAL_TYPES.map((t) => (
+      {types.map((t) => (
         <option key={t}>{t}</option>
       ))}
     </select>

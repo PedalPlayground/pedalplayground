@@ -349,7 +349,7 @@ export function SearchPanel({
   useEffect(() => () => clearTimeout(addedTimer.current), []);
   const add = (entry: Entry, key: string) => {
     addCatalogItem(entry.kind, entry.item);
-    recordGearAdd(entry.kind, entry.item.image, browsing ? feed : "search");
+    recordGearAdd(entry.kind, entry.item, browsing ? feed : "search");
     setAdded(key);
     clearTimeout(addedTimer.current);
     addedTimer.current = setTimeout(() => setAdded(null), 1200);
@@ -358,7 +358,7 @@ export function SearchPanel({
   const pick = (entry: Entry) => {
     if (target) {
       replaceItem(target.id, entry.item);
-      recordGearAdd(entry.kind, entry.item.image, "replace");
+      recordGearAdd(entry.kind, entry.item, "replace");
       onClose();
     } else add(entry, String(entry.id));
   };
