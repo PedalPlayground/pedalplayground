@@ -2,7 +2,8 @@ import { trackTool, withTool } from "../lib/analytics";
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import { useRef, useState, type ReactNode } from "react";
 import { tip } from "./Tooltip";
-import { Copy, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
+import { ArrowLeft, Copy, LayoutList, Pencil, Plus, LogIn, Settings2 } from "lucide-react";
+import { modes } from "./ModeRail";
 import { PedalboardIcon, tabClass, tabIcon, tabLabel } from "./SiteTabs";
 import type { PlaygroundSummary } from "../lib/cloud";
 import { handoffHref, type Handoff } from "../lib/handoff";
@@ -210,7 +211,26 @@ export function BoardLabel({ comments, onEdit, onSignIn }: { comments?: ReactNod
   const opening = useUi((u) => u.openingShared);
   const name = usePlayground((s) => s.name);
   const user = useAuth((s) => s.user);
+  // In a mode (Signal Flow, or Signal Path and Equipment List when they're on), the mode's name and a way back.
+  const cablesOpen = useUi((u) => u.cablesOpen);
+  const mode = useUi((u) => u.mode);
+  const modeName = cablesOpen ? "Signal Flow" : mode !== "playground" ? modes.find((m) => m.id === mode)?.label : undefined;
   if (opening) return null;
+  if (modeName)
+    return (
+      <div className="pointer-events-none absolute left-[max(0.75rem,env(safe-area-inset-left))] top-4 z-20 flex max-sm:top-2">
+        <button
+          type="button"
+          onClick={withTool("mode_back", "canvas", () => (cablesOpen ? useUi.getState().setCablesOpen(false) : useUi.getState().setMode("playground")))}
+          aria-label={`Leave ${modeName}`}
+          {...tip("Back", { side: "bottom" })}
+          className="press pointer-events-auto flex h-8 items-center gap-1.5 rounded-control pl-1.5 pr-2.5 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-soft focus-visible:ring-2 focus-visible:ring-brand"
+        >
+          <ArrowLeft size={16} strokeWidth={2.25} />
+          {modeName}
+        </button>
+      </div>
+    );
   return (
     <div className="pointer-events-none absolute left-[max(1.1875rem,env(safe-area-inset-left))] right-[max(1rem,env(safe-area-inset-right))] top-[22px] z-20 flex max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:top-3">
       <div className="pointer-events-auto flex min-w-0 items-center gap-1 text-sm/4 font-semibold tracking-[-0.01em] text-ink">
