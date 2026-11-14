@@ -1,7 +1,5 @@
-import { Cable } from "lucide-react";
 import { PlugsLayer } from "./PlugArt";
 import { CableHandles, CableLayer, deleteChosen, LegHandles, PlugTargets, useCablePick } from "./Cables";
-import { clearPlugSelection, PlugEditLayer } from "./PlugEditor";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { canvasImageUrl } from "../lib/catalog";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
@@ -31,7 +29,7 @@ const LONG_PRESS_MS = 500;
 type Rect = { x: number; y: number; w: number; h: number };
 
 type Gesture =
-  | { type: "pan"; lastX: number; lastY: number; /** Touch: a tap that never moved clears the selection. */ tap?: boolean; moved?: boolean; /** Editing plugs: a click on this other pedal switches to it. */ jumpTo?: string }
+  | { type: "pan"; lastX: number; lastY: number; /** Touch: a tap that never moved clears the selection. */ tap?: boolean; moved?: boolean; /** Signal Flow: a click on this pedal picks it. */ jumpTo?: string }
   | {
       type: "drag";
       origins: Record<string, { x: number; y: number }>;
@@ -156,23 +154,18 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
   const selected = usePlayground((s) => s.selected.includes(item.id));
   // Signal Flow is about the jacks: no name labels on gear while it's open.
   const quiet = useUi((u) => u.cablesOpen);
-  const showPlugs = useUi((u) => u.show.plugs || u.cablesOpen || !!u.plugEditing);
+  const showPlugs = useUi((u) => u.show.plugs || u.cablesOpen);
   useEffect(() => {
     if (selected || quiet) hideTip();
   }, [selected, quiet]);
-  // Editing another pedal's plugs: everything else fades well back, so it's clear which pedal is being edited. Other
-  // pedals come back on hover and offer to switch to them.
-  const backdrop = useUi((u) => !!u.plugEditing && u.plugEditing !== item.id);
-  const other = backdrop && item.kind === "pedal";
-  const zoom = usePlayground((s) => (other ? s.view.zoom : 1));
   return (
     <div
       data-item-id={item.id}
-      {...(selected || other || quiet ? {} : tip(itemName(item), { canvas: true }))}
+      {...(selected || quiet ? {} : tip(itemName(item), { canvas: true }))}
       // Catalog photos get a drop shadow (--item-drop, per theme) that follows the image's own outline. It sits on this unrotated box so
       // the light always falls down and to the right, whatever the rotation. Custom styles draw their own shadows.
       // Taps go to the rotated inner box only, so the empty corners of this one never catch them.
-      className={`pointer-events-none absolute ${src ? "[filter:var(--item-drop)]" : ""} ${backdrop ? "opacity-15 transition-opacity" : ""} ${other ? "[&:has(>div:hover)]:opacity-100" : ""}`}
+      className={`pointer-events-none absolute ${src ? "[filter:var(--item-drop)]" : ""}`}
       style={{
         left: 0,
         top: 0,
@@ -183,7 +176,7 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
       }}
     >
       <div
-        className={`pointer-events-auto size-full ${other ? "peer cursor-pointer" : ""}`}
+        className="pointer-events-auto size-full"
         style={{ transform: `rotate(${item.rotation}deg) scaleX(${item.flipX ? -1 : 1})` }}
       >
         {/* Plugs go under the pedal: their barrels run into the jacks, showing only where the photo lets them. */}
@@ -199,18 +192,6 @@ const ItemView = memo(function ItemView({ item }: { item: Item }) {
           )}
         </div>
       </div>
-      {other && (
-        <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity peer-hover:opacity-100">
-          {/* Screen-sized whatever the zoom, and centered even when it's wider than the pedal. */}
-          <span
-            className="absolute left-1/2 top-1/2 flex items-center gap-1.5 whitespace-nowrap rounded-full bg-tip px-3 py-1.5 text-[13px] font-semibold text-tip-ink shadow-float"
-            style={{ transform: `translate(-50%, -50%) scale(${1 / zoom})` }}
-          >
-            <Cable size={15} />
-            Add Plugs
-          </span>
-        </div>
-      )}
     </div>
   );
 });
@@ -238,15 +219,12 @@ export function Canvas() {
   const tool = useUi((u) => u.tool);
   const dragging = useUi((u) => u.dragging);
   const units = useUi((u) => u.units);
-  // The pedal whose plugs are being edited gets the plug editing layer.
-  const plugEditing = useUi((u) => u.plugEditing);
-  const plugItem = usePlayground((s) => (plugEditing ? s.items.find((i) => i.id === plugEditing) : undefined));
   const cablesOpen = useUi((u) => u.cablesOpen);
   // Cables and plugs can be picked on the board itself, outside the editing tools and when not just viewing.
-  const pickable = useUi((u) => !u.cablesOpen && !u.plugEditing && !u.viewing && u.mode === "playground");
-  // Layers hidden in Preferences. Signal Flow always shows cables and plugs; plug editing shows plugs.
+  const pickable = useUi((u) => !u.cablesOpen && !u.viewing && u.mode === "playground");
+  // Layers hidden in Preferences. Signal Flow always shows cables and plugs.
   const showCables = useUi((u) => u.show.cables || u.cablesOpen);
-  const showPlugs = useUi((u) => u.show.plugs || u.cablesOpen || !!u.plugEditing);
+  const showPlugs = useUi((u) => u.show.plugs || u.cablesOpen);
   const showBoards = useUi((u) => u.show.boards);
 
   useEffect(() => {
@@ -309,8 +287,6 @@ export function Canvas() {
       if (useUi.getState().mode !== "playground") return;
       // The right-click menu has the keyboard while it's open (arrows move through it, Esc closes it).
       if (useContextMenu.getState().open) return;
-      // Editing plugs: the plug panel has the keyboard (Delete removes a plug); nothing else ends the editing.
-      if (useUi.getState().plugEditing) return;
       // The Cables tool has the keyboard too (Delete removes a cable, Escape steps back).
       if (useUi.getState().cablesOpen) return;
       // A cable or plug picked on the board: Delete removes it, Escape lets go.
@@ -401,14 +377,6 @@ export function Canvas() {
           e.preventDefault();
           trackTool("add_gear", "shortcut");
           ui.setSearchOpen(true);
-        }
-      } else if (key === "p" && !mod && !e.altKey && s.selected.length === 1) {
-        // P opens plug editing for a single selected pedal.
-        const one = s.items.find((i) => i.id === s.selected[0]);
-        if (one?.kind === "pedal") {
-          e.preventDefault();
-          trackTool("plugs", "shortcut");
-          useUi.getState().setPlugEditing(one.id);
         }
       } else if (key === "l" && has && !mod) {
         e.preventDefault();
@@ -501,8 +469,7 @@ export function Canvas() {
       const onGear = !!(e.target as HTMLElement).closest("[data-item-id]");
       useCablePick.getState().set(onGear ? { cable: null } : { plug: null, cable: null });
     }
-    const plugMode = !!useUi.getState().plugEditing || cableMode;
-    if (plugMode && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) return;
+    if (cableMode && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) return;
     if (e.pointerType !== "touch" && (e.button === 2 || (isMac && e.button === 0 && e.ctrlKey))) {
       // View-only boards can't be selected or changed, so a right click does nothing there.
       if (useUi.getState().viewing) return;
@@ -533,14 +500,11 @@ export function Canvas() {
     // Touch: dragging a product moves it, dragging empty canvas pans (no marquee, no tool switching).
     const touch = e.pointerType === "touch";
 
-    // A press on the canvas (not on a plug) while editing plugs deselects them, like clicking empty space.
-    if (plugMode) clearPlugSelection();
-    if (plugMode) {
-      // Editing plugs: every drag pans; a click on another pedal moves the plug editing to it.
+    if (cableMode) {
+      // In Signal Flow every drag pans; a click picks a pedal (only its + points show) and a click off the gear lets it go.
       const id = itemEl?.dataset.itemId;
-      // In Signal Flow a click picks a pedal (only its + points show) and a click off the gear lets it go.
       const isPedal = !!id && s.items.find((i) => i.id === id)?.kind === "pedal";
-      const other = isPedal && (cableMode || id !== useUi.getState().plugEditing) ? id : undefined;
+      const other = isPedal ? id : undefined;
       gesture.current = { type: "pan", lastX: e.clientX, lastY: e.clientY, tap: true, moved: false, jumpTo: other };
       setPanning(!touch);
     } else if (useUi.getState().viewing) {
@@ -578,7 +542,7 @@ export function Canvas() {
     }
 
     // Touch: holding one finger still opens the right-click menu (iPhones and iPads have no right click).
-    if (touch && pointers.current.size === 1 && !plugMode) {
+    if (touch && pointers.current.size === 1 && !cableMode) {
       const at = { x: e.clientX, y: e.clientY };
       const onItem = !!itemEl;
       longPress.current = {
@@ -599,7 +563,6 @@ export function Canvas() {
   const onContextMenu = (e: React.MouseEvent) => {
     e.preventDefault(); // never the browser's own menu on the canvas
     cancelLongPress();
-    if (useUi.getState().plugEditing) return;
     if (Date.now() - longPressAt.current < 1000) return; // a long press already opened it
     if (gesture.current?.type === "pan" || gesture.current?.type === "drag") gesture.current = null;
     openMenuAt(e.clientX, e.clientY, !!(e.target as HTMLElement).closest("[data-item-id]"));
@@ -688,10 +651,8 @@ export function Canvas() {
     if (g?.type === "drag" && g.started) trackTool("move", "gesture");
     else if (g?.type === "marquee" && marquee && marquee.w + marquee.h > 4) trackTool("box_select", "gesture");
     if (e.type === "pointerup" && g?.type === "pan" && g.tap && !g.moved) {
-      if (g.jumpTo) {
-        usePlayground.getState().select(g.jumpTo);
-        if (!useUi.getState().cablesOpen) useUi.getState().setPlugEditing(g.jumpTo);
-      } else if (!useUi.getState().plugEditing) usePlayground.getState().clearSelection();
+      if (g.jumpTo) usePlayground.getState().select(g.jumpTo);
+      else usePlayground.getState().clearSelection();
     }
     if (ref.current?.hasPointerCapture(e.pointerId)) ref.current.releasePointerCapture(e.pointerId);
     if (useUi.getState().dragging) useUi.setState({ dragging: false });
@@ -751,11 +712,6 @@ export function Canvas() {
             <LegHandles items={items} zoom={view.zoom} />
           </div>
         )}
-        {plugItem && (
-          <div style={{ position: "absolute", zIndex: 99998 }}>
-            <PlugEditLayer item={plugItem} zoom={view.zoom} />
-          </div>
-        )}
       </div>
 
       {/* Selection outlines, in screen space: fading them in and out inside the zoomed layer left iOS Safari repainting
@@ -763,8 +719,7 @@ export function Canvas() {
       {items.map(
         (item) =>
           selected.includes(item.id) &&
-          !inShownGroup.has(item.id) &&
-          item.id !== plugEditing && <SelectionHalo key={item.id} item={item} view={view} tour={selected.length === 1} />,
+          !inShownGroup.has(item.id) && <SelectionHalo key={item.id} item={item} view={view} tour={selected.length === 1} />,
       )}
       {selectedGroups.map((g) => (
         <GroupHalo key={g[0].groupId} items={g} view={view} />

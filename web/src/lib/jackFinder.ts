@@ -1,4 +1,4 @@
-import type { PlugSide } from "./plugs";
+import { snapAt, type Plug, type PlugSide } from "./plugs";
 
 /** A spot on an edge where the photo sticks out past the enclosure: probably a jack. */
 export interface JackHint {
@@ -100,3 +100,18 @@ async function scan(url: string, wIn: number, hIn: number): Promise<JackHint[]> 
   edge("right", h, fromRight, pxPerInY, pxPerInX, hIn);
   return out;
 }
+
+/** The guessed jacks that don't have a plug on them yet. */
+export const openHints = (hints: JackHint[], plugs: Plug[]) =>
+  hints.filter((h) => !plugs.some((p) => p.side === h.side && Math.abs(p.at - h.at) < 0.4));
+
+/**
+ * The found jacks, plus a + at the middle of every side in `sides` that has none (all four by default, when nothing
+ * was found or there's no photo).
+ */
+export const withMiddles = (found: JackHint[], w: number, h: number, sides: readonly PlugSide[] = ["top", "right", "bottom", "left"]): JackHint[] => [
+  ...found,
+  ...sides
+    .filter((side) => !found.some((f) => f.side === side))
+    .map((side) => ({ side, at: snapAt((side === "top" || side === "bottom" ? w : h) / 2) })),
+];

@@ -1,6 +1,5 @@
 import { withTool } from "../lib/analytics";
 import {
-  Spline,
   Cable,
   Info,
   MessageSquareWarning,
@@ -208,7 +207,6 @@ export function ObjectStack() {
         <Row {...row} icon={<Pencil size={15} />} label={single.kind === "pedalboard" ? "Edit Board" : "Edit"} onClick={withTool("edit", "side_menu", () => setEditing(true))} />
       )}
       {single && !single.custom && <Row {...row} icon={<Replace size={15} />} label="Replace" onClick={withTool("replace", "side_menu", () => setReplacing(true))} />}
-      {single?.kind === "pedal" && <Row {...row} icon={<Cable size={16} />} label="Plugs" shortcut="P" onClick={withTool("plugs", "side_menu", () => useUi.getState().setPlugEditing(single.id))} />}
       {placedItemHref(single) && <Row {...row} icon={<Info size={16} />} label="Info" onClick={withTool("gear_info", "side_menu", () => openGearInfo(single))} />}
       {placedItemHref(single) && <Row {...row} icon={<MessageSquareWarning size={16} />} label="Suggest a Fix…" onClick={withTool("suggest_fix", "side_menu", () => openSuggestFix(single))} />}
       <Row {...row} icon={<Trash2 size={16} />} label="Remove" shortcut="Del" onClick={withTool("remove", "side_menu", s.deleteSelected)} danger />
@@ -239,7 +237,7 @@ export function CanvasStack({ viewOnly, onShare }: { viewOnly: boolean; onShare:
           {SHOW_CABLES && (
             <>
               <Divider />
-              <Row {...row} icon={<Spline size={16} />} label="Signal Flow" pressed={cablesOpen} onClick={withTool("cables", "side_menu", () => setCablesOpen(!cablesOpen))} />
+              <Row {...row} icon={<Cable size={16} />} label="Signal Flow" pressed={cablesOpen} onClick={withTool("cables", "side_menu", () => setCablesOpen(!cablesOpen))} />
             </>
           )}
           <Divider />

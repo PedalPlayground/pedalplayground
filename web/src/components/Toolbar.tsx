@@ -1,5 +1,5 @@
 import { withTool } from "../lib/analytics";
-import { Fullscreen, Hand, Spline, MousePointer2, Plus, Redo2, SquareArrowOutUpRight, Undo2, ZoomIn, ZoomOut } from "lucide-react";
+import { Fullscreen, Cable, Hand, MousePointer2, Plus, Redo2, SquareArrowOutUpRight, Undo2, ZoomIn, ZoomOut } from "lucide-react";
 import type { ReactNode } from "react";
 import { PHONE_QUERY, useMediaQuery } from "../lib/viewport";
 import { usePlayground } from "../store/playground";
@@ -134,7 +134,7 @@ export function Toolbar({ onPlace: place, onShare: share, viewOnly = false }: { 
       {SHOW_CABLES && !viewOnly && (
         <>
           <IconButton label="Signal Flow" active={cablesOpen} onClick={withTool("cables", "toolbar", () => setCablesOpen(!cablesOpen))}>
-            <Spline size={18} />
+            <Cable size={18} />
           </IconButton>
           {divider}
         </>

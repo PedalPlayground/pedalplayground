@@ -46,7 +46,6 @@ import { StandingNotice } from "./components/StandingNotice";
 import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { SpaceBetweenPanel } from "./components/SpaceBetweenPanel";
-import { PlugPanel } from "./components/PlugEditor";
 import { CablePanel, ChosenMiniMenu } from "./components/Cables";
 import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
 import { Toolbar } from "./components/Toolbar";
@@ -117,9 +116,8 @@ export function App() {
   const openUpgrade = useUi((u) => u.openUpgrade);
   const searchOpen = useUi((u) => u.searchOpen);
   const spacingOpen = useUi((u) => u.spacingOpen);
-  // The Cables tool takes the menus' place the same way plug editing does.
+  // The Signal Flow tool takes the menus' place.
   const cablesOpen = useUi((u) => u.cablesOpen);
-  const plugEditing = useUi((u) => u.plugEditing) || (cablesOpen ? "cables" : null);
   const replacing = useUi((u) => u.replacing);
   const editing = useUi((u) => u.editing);
   const setSearchOpen = useUi((u) => u.setSearchOpen);
@@ -302,24 +300,19 @@ export function App() {
               <ScaleKey end className="absolute bottom-[calc(1rem+5px+env(safe-area-inset-bottom))] right-[calc(max(1rem,env(safe-area-inset-right))+40px)] z-10 max-md:hidden" />
               {wide ? (
                 <>
-                  {!plugEditing && <ObjectStack />}
+                  {!cablesOpen && <ObjectStack />}
                   <CanvasStack viewOnly={viewing} onShare={() => setDialog("share")} />
                 </>
               ) : (
                 // Tablets keep the full bar; phones (and larger screens) use the little menu under the selection.
-                !phoneSized && !plugEditing && <ObjectMenu />
+                !phoneSized && !cablesOpen && <ObjectMenu />
               )}
-              {/* While plugs are being edited, their panel takes the menus' place. */}
               {/* Signal Flow's bar sits at the bottom, in Add Gear's place. */}
-              {plugEditing ? (
-                <PlugPanel />
-              ) : (
-                !cablesOpen && (
-                  <>
-                    <SelectionMiniMenu />
-                    <ChosenMiniMenu />
-                  </>
-                )
+              {!cablesOpen && (
+                <>
+                  <SelectionMiniMenu />
+                  <ChosenMiniMenu />
+                </>
               )}
               <ContextMenu />
             </>

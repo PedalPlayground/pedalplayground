@@ -18,10 +18,9 @@ import {
 } from "../lib/cables";
 import { ArrowUp, Pencil, Trash2 } from "lucide-react";
 import { canvasImageUrl } from "../lib/catalog";
-import { findJacks, type JackHint } from "../lib/jackFinder";
+import { findJacks, openHints, withMiddles, type JackHint } from "../lib/jackFinder";
 import { useCatalog } from "../store/catalog";
 import { LabeledSelect } from "./LabeledSelect";
-import { openHints, withMiddles } from "./PlugEditor";
 import type { CableKind } from "../lib/plugs";
 import type { Pt } from "../lib/cableRoute";
 import { itemBounds, PX_PER_INCH } from "../lib/geometry";
@@ -234,7 +233,7 @@ function pressCable(e: React.PointerEvent<Element>, c: RoutedCable, k?: number) 
 export function CableLayer({ items }: { items: Item[] }) {
   const open = useUi((u) => u.cablesOpen);
   // Outside the tool, cables can be picked on the board too (not while editing plugs or just viewing).
-  const pickable = useUi((u) => SHOW_CABLES && !u.cablesOpen && !u.plugEditing && !u.viewing);
+  const pickable = useUi((u) => SHOW_CABLES && !u.cablesOpen && !u.viewing);
   const routes = routesFor(items);
   const toolPick = useCablePick((p) => p.cable);
   const chosen = useCablePick((p) => p.chosen);

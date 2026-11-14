@@ -66,7 +66,7 @@ interface PlaygroundState {
   /** Zooms by `factor`, keeping the screen point (px, py) fixed. Defaults to viewport center. */
   zoomBy: (factor: number, px?: number, py?: number) => void;
   fitToContent: () => void;
-  /** Zooms in on one item with `margin` inches round it (plug editing). */
+  /** Zooms in on one item with `margin` inches round it. */
   focusOn: (id: string, margin?: number) => void;
 
   /** Call once before a multi-step edit (e.g. a drag) so it undoes as a single step. */

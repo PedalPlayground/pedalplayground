@@ -64,9 +64,6 @@ interface UiState {
   avatar: string;
   setAvatar: (key: string) => void;
   searchOpen: boolean;
-  /** The pedal whose plugs are being edited (its edges take clicks to add and drag plugs), or null. */
-  plugEditing: string | null;
-  setPlugEditing: (id: string | null) => void;
   /** The Cables tool: plugs on every pedal take clicks to wire them together, and cables can be picked and removed. */
   cablesOpen: boolean;
   setCablesOpen: (open: boolean) => void;
@@ -234,18 +231,15 @@ export const useUi = create<UiState>((set) => ({
     set({ avatar });
   },
   searchOpen: false,
-  plugEditing: null,
-  setPlugEditing: (plugEditing) =>
-    set(plugEditing ? { plugEditing, cablesOpen: false, searchOpen: false, replacing: false, editing: false, spacingOpen: false } : { plugEditing }),
   cablesOpen: false,
   setCablesOpen: (cablesOpen) =>
-    set(cablesOpen ? { cablesOpen, plugEditing: null, searchOpen: false, replacing: false, editing: false, spacingOpen: false } : { cablesOpen }),
+    set(cablesOpen ? { cablesOpen, searchOpen: false, replacing: false, editing: false, spacingOpen: false } : { cablesOpen }),
   spacingOpen: false,
   setSpacingOpen: (spacingOpen) => set(spacingOpen ? { spacingOpen, searchOpen: false, replacing: false, editing: false } : { spacingOpen }),
   // Add Gear waits while plugs are being edited (only Done ends that).
   setSearchOpen: (searchOpen) =>
     set((u) => {
-      if (searchOpen && (u.plugEditing || u.cablesOpen)) return {};
+      if (searchOpen && u.cablesOpen) return {};
       if (searchOpen && !u.searchOpen) track("panel_open", { panel: "Add Gear" });
       return { searchOpen, replacing: false, editing: false };
     }),

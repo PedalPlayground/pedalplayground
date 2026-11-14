@@ -1,7 +1,6 @@
 import { withTool } from "../lib/analytics";
 import * as Dropdown from "@radix-ui/react-dropdown-menu";
 import {
-  Cable,
   Info,
   MessageSquareWarning,
   AlignHorizontalSpaceBetween,
@@ -151,7 +150,6 @@ function ObjectItems() {
       <Row icon={<SendToBack {...ICON} />} label="Move to Back" shortcut="⌘[" onSelect={withTool("move_to_back", "right_click", s.sendToBack)} />
       <Separator />
       {single && !single.custom && <Row icon={<Replace {...ICON} />} label="Replace" onSelect={withTool("replace", "right_click", () => setReplacing(true))} />}
-      {single?.kind === "pedal" && <Row icon={<Cable {...ICON} />} label="Plugs" shortcut="P" onSelect={withTool("plugs", "right_click", () => useUi.getState().setPlugEditing(single.id))} />}
       {placedItemHref(single) && <Row icon={<Info {...ICON} />} label="Info" onSelect={withTool("gear_info", "right_click", () => openGearInfo(single))} />}
       {placedItemHref(single) && <Row icon={<MessageSquareWarning {...ICON} />} label="Suggest a Fix…" onSelect={withTool("suggest_fix", "right_click", () => openSuggestFix(single))} />}
       <Row icon={<Trash2 {...ICON} />} label="Remove" shortcut="Delete" onSelect={withTool("remove", "right_click", s.deleteSelected)} danger />

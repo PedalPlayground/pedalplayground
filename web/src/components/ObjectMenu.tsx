@@ -1,5 +1,5 @@
 import { withTool } from "../lib/analytics";
-import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, Cable, CopyPlus, Group, Info, Lock, MessageSquareWarning, LockOpen, Pencil, Replace, RotateCw, Trash2, Ungroup } from "lucide-react";
+import { AlignHorizontalSpaceBetween, ArrowDownToLine, ArrowUpToLine, CopyPlus, Group, Info, Lock, MessageSquareWarning, LockOpen, Pencil, Replace, RotateCw, Trash2, Ungroup } from "lucide-react";
 import type { ReactNode } from "react";
 import { isOneGroup, usePlayground } from "../store/playground";
 import { useUi } from "../store/ui";
@@ -115,11 +115,6 @@ export function ObjectMenu() {
           <Replace size={14} strokeWidth={2.25} className="max-sm:size-[18px] max-sm:stroke-2" />
           <span className="hidden sm:inline">Replace</span>
         </button>
-      )}
-      {single?.kind === "pedal" && (
-        <Action label="Plugs" shortcut="P" onClick={withTool("plugs", "object_menu", () => useUi.getState().setPlugEditing(single.id))}>
-          <Cable size={18} />
-        </Action>
       )}
       {/* Catalog gear: its page on the Gear site, in a new tab. */}
       {placedItemHref(single) && (
