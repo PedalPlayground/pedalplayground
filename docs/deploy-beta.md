@@ -168,6 +168,12 @@ Gear or Board Details), `gallery_filter` (`type`, `sort`, `one_person`), `gear_f
 `sort`), `login` (`method`), `sign_up`, `password_set`, `board_like`, `board_unlike`, `shared_board_copied`, `add_gear`,
 `custom_item_created`, `share_link_created`, `upgrade_opened`, `whats_new_open`, `whats_new_pedals`, `whats_new_link`.
 `add_gear` also says how the gear was found (`source`: `search`, `trending`, `new`, `replace` or `gear_page`).
+`view_gear` is sent when a Gear item page opens (from the Gear site or a playground's Info button). Both gear events
+carry `gearParams` from `web/src/lib/analytics.ts`: `gear_id` (the image key, as in `/gear/?item=`), `gear_name`
+("Brand Name"), `gear_brand`, `gear_type` (main type, or "Pedalboard") and `kind`. Catalog names are public, so they're
+fine to send; custom gear is never named. `board_view` is sent when someone opens another person's shared board, with
+`board_id` (the slug in its `/?p=` link, never the board's name) and `from` (`gallery`, `gear_page`, `site` or `link`).
+`board_like`, `board_unlike` and `shared_board_copied` carry the same `board_id`.
 `tutorial_end` (`step`, `steps`, `finished`) says how far people get through the tour.
 Never send names, emails, board contents or typed text. To see an event's details in reports, add each detail as an
 event-scoped custom dimension (Admin → Custom definitions). Mark `sign_up` and `upgrade_opened` as key events if you
@@ -198,6 +204,24 @@ To see the ranking in GA4: register `tool` and `via` as event-scoped custom dime
 Create custom dimension, the "Event parameter" is `tool` or `via`), plus `source`, `feed`, `plug_type`, `on`, `step`
 and `finished` if you want those. Then Explore → Free form: dimensions Event name, tool, via; metric Event count;
 rows `tool`; filter Event name exactly matches `tool_use`. Add `via` as columns to see buttons against shortcuts.
+**Popularity reports.** Register these event-scoped custom dimensions too: `gear_name`, `gear_brand`, `gear_type`,
+`gear_id`, `kind`, `board_id`, `from`. Then build one Free form exploration per question (rows, metric Event count,
+filter on Event name):
+
+| Report | Event name | Rows | Columns |
+| --- | --- | --- | --- |
+| Most added gear | `add_gear` | `gear_name` | `source` |
+| Most viewed gear | `view_gear` | `gear_name` | |
+| Top brands | `add_gear` | `gear_brand` | |
+| Top pedal types | `add_gear` | `gear_type` | |
+| Most viewed boards | `board_view` | `board_id` | `from` |
+| Most liked boards | `board_like` | `board_id` | |
+| Most copied boards | `shared_board_copied` | `board_id` | |
+| Tool rank | `tool_use` | `tool` | `via` |
+
+Open a board from its `board_id` at `/?p=<board_id>`. GA's standard reports fold rare values into "(other)" once a
+dimension has thousands of values a day; explorations show them all.
+
 Dimensions only collect from the day they're registered, and reports lag by up to a day; Realtime and DebugView show
 events at once.
 

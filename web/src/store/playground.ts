@@ -1,3 +1,4 @@
+import { uuid } from "../lib/uuid";
 import type { Plug } from "../lib/plugs";
 import { create } from "zustand";
 import { clamp, contentBounds, itemBounds, PX_PER_INCH } from "../lib/geometry";
@@ -177,7 +178,7 @@ function placeNew(s: PlaygroundState, n: NewItem): Partial<PlaygroundState> {
     x = ((s.coverLeft + s.viewport.w) / 2 - s.view.x) / s.view.zoom / PX_PER_INCH - n.width / 2;
     y = ((s.viewport.h - s.coverBottom) / 2 - s.view.y) / s.view.zoom / PX_PER_INCH - n.height / 2;
   }
-  const item: Item = { id: crypto.randomUUID(), ...n, x, y, rotation: 0, flipX: false };
+  const item: Item = { id: uuid(), ...n, x, y, rotation: 0, flipX: false };
 
   // Pedalboards sit beneath every pedal; pedals go on top.
   const items = [...s.items];
@@ -585,8 +586,8 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const groups = new Map<string, string>();
       const copies = picked.map((i) => {
         const { locked: _locked, groupId, ...rest } = i;
-        if (groupId && !groups.has(groupId)) groups.set(groupId, crypto.randomUUID());
-        return { ...rest, id: crypto.randomUUID(), x: i.x + dx, ...(groupId ? { groupId: groups.get(groupId) } : {}) };
+        if (groupId && !groups.has(groupId)) groups.set(groupId, uuid());
+        return { ...rest, id: uuid(), x: i.x + dx, ...(groupId ? { groupId: groups.get(groupId) } : {}) };
       });
       // Boards stay beneath every pedal, like newly placed gear.
       const boards = copies.filter((i) => i.kind === "pedalboard");
@@ -608,7 +609,7 @@ export const usePlayground = create<PlaygroundState>((set, get) => ({
       const picked = s.items.filter((i) => s.selected.includes(i.id));
       if (picked.length < 2) return {};
       const one = isOneGroup(picked);
-      const id = crypto.randomUUID();
+      const id = uuid();
       return {
         ...record(s),
         items: s.items.map((i) => {

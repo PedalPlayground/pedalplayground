@@ -21,7 +21,7 @@ import {
   type PlaygroundDetails,
   type PlaygroundSummary,
 } from "../lib/cloud";
-import { track } from "../lib/analytics";
+import { boardViewFrom, track } from "../lib/analytics";
 import { renderThumbnail, renderThumbnailFile } from "../lib/thumbnail";
 import { renderShareImage } from "../lib/shareImage";
 import { supabase } from "../lib/supabase";
@@ -509,6 +509,8 @@ export const useCloud = create<CloudState>((set, get) => {
       }
       // View-only: the user's own board stays in storage and in the cloud, untouched, until they leave or copy.
       useUi.getState().setViewing({ id: shared.id, slug, name: shared.name, ownerId: shared.ownerId, ownerName: shared.ownerName });
+      // Board popularity in GA: the slug (the ?p= in its link), never its name.
+      track("board_view", { board_id: slug, from: boardViewFrom() });
       usePlayground.getState().loadDocument(shared.doc);
       usePlayground.getState().setName(shared.name);
       usePlayground.getState().fitToContent();
@@ -541,7 +543,7 @@ export const useCloud = create<CloudState>((set, get) => {
     copyShared: () => {
       const viewing = useUi.getState().viewing;
       if (!viewing) return;
-      track("shared_board_copied");
+      track("shared_board_copied", { board_id: viewing.slug });
       useUi.getState().setViewing(null);
       clearSharedParam();
       // The copy becomes the open playground; the first save creates it and records where it came from.

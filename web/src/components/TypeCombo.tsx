@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import { useId, useMemo, useRef, useState } from "react";
-import { PEDAL_TYPES } from "../lib/specs";
+import { usePedalTypes } from "../lib/pedalTypes";
 
 /**
  * A pedal's types as one combo box: the chosen types as chips in order (the first is the main type), and a text field
@@ -27,10 +27,11 @@ export function TypeCombo({
   const [dragging, setDragging] = useState<number | null>(null);
   const input = useRef<HTMLInputElement>(null);
 
+  const types = usePedalTypes((s) => s.types);
   const options = useMemo(() => {
     const q = text.trim().toLowerCase();
-    return PEDAL_TYPES.filter((t) => !value.includes(t) && (!q || t.toLowerCase().includes(q)));
-  }, [text, value]);
+    return types.filter((t) => !value.includes(t) && (!q || t.toLowerCase().includes(q)));
+  }, [text, value, types]);
 
   const add = (t: string) => {
     onChange([...value, t]);

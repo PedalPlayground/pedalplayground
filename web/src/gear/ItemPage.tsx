@@ -1,6 +1,6 @@
 import { ArrowLeft, MessageSquareWarning, Pencil, Plus } from "lucide-react";
 import { PhotoViewer } from "../components/PhotoViewer";
-import { trackPage } from "../lib/analytics";
+import { gearParams, track, trackPage } from "../lib/analytics";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { affiliateProps, buyLinks, DISCLOSURE } from "../lib/affiliate";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
@@ -67,8 +67,9 @@ export function ItemPage({
   useEffect(() => {
     document.title = `${item.brand} ${item.name} · Pedal Playground`;
     trackPage(`Gear: ${item.brand} ${item.name}`);
+    track("view_gear", gearParams(kind, item));
     return () => void (document.title = "Gear · Pedal Playground");
-  }, [item]);
+  }, [item]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const sameBrand = useMemo(() => all.filter((c) => c.brand === item.brand && c !== item), [all, item]);
   const fromBrand = useMemo(() => [...sameBrand].sort((a, b) => used(b) - used(a)).slice(0, RELATED), [sameBrand, usage]); // eslint-disable-line react-hooks/exhaustive-deps

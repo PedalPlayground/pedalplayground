@@ -9,7 +9,7 @@ import { PageHeader, type PageDialog } from "../components/PageHeader";
 import { fetchGalleryBoards } from "../lib/gallery";
 import { canvasImageUrl, itemTypes, thumbUrl, type Kind, type Manifest } from "../lib/catalog";
 import { indexItem, search as searchItems } from "../lib/search";
-import { PEDAL_TYPES } from "../lib/specs";
+import { usePedalTypes } from "../lib/pedalTypes";
 import { Modal } from "../components/Modal";
 import { Meta } from "../components/Meta";
 import { LabeledSelect } from "../components/LabeledSelect";
@@ -284,16 +284,16 @@ export function GearApp() {
     if (match) setBrand(match[0]);
   }, [brand, brands]);
 
-  /** Types for the Type list, with counts, in the order of src/lib/specs.ts. Empty until the catalog has types. */
-  /** Pedal types for the Type list, with counts (within the chosen brand), most first. */
+  /** Pedal types for the Type list, with counts (within the chosen brand), most first. Empty until the catalog has types. */
+  const typeList = usePedalTypes((s) => s.types);
   const types = useMemo(() => {
     const counts = new Map<string, number>();
     for (const item of manifest?.pedals ?? []) if (!brand || item.brand === brand) for (const t of itemTypes(item)) counts.set(t, (counts.get(t) ?? 0) + 1);
-    // Biggest first (ties in the order of src/lib/specs.ts).
-    return PEDAL_TYPES.filter((t) => counts.has(t))
+    // Biggest first (ties in the list's order, from Admin > Types).
+    return typeList.filter((t) => counts.has(t))
       .map((t) => [t, counts.get(t)!] as [string, number])
       .sort((a, b) => b[1] - a[1]);
-  }, [manifest, brand]);
+  }, [manifest, brand, typeList]);
   /** How many pedals and pedalboards (within the chosen brand), for the top and bottom of the Type list. */
   const kindCounts = useMemo(() => {
     const n = (list: CatalogItem[]) => (brand ? list.filter((c) => c.brand === brand).length : list.length);

@@ -6,10 +6,18 @@ const PLURAL = { pedal: "pedals", pedalboard: "pedalboards" };
 /**
  * rows: catalog_items rows ({ kind, key, brand, name, width_in, height_in, current_ma, voltage, type, extra_types, status,
  * added_on, thumb_path, img_path }). Live items go in search; retired ones keep only their images, so saved
- * boards still draw them. Items with no built images yet are left out.
+ * boards still draw them. Items with no built images yet are left out. pedalTypes: the pedal_types names in order
+ * (Admin > Types), or null to leave them out (the app then uses its built-in list).
  */
-export function manifestFromRows(rows, generatedAt = new Date().toISOString()) {
-  const manifest = { schema: 1, generatedAt, pedals: [], pedalboards: [], assets: { pedals: {}, pedalboards: {} } };
+export function manifestFromRows(rows, generatedAt = new Date().toISOString(), pedalTypes = null) {
+  const manifest = {
+    schema: 1,
+    generatedAt,
+    ...(pedalTypes?.length > 0 && { pedalTypes }),
+    pedals: [],
+    pedalboards: [],
+    assets: { pedals: {}, pedalboards: {} },
+  };
   for (const r of rows) {
     const list = PLURAL[r.kind];
     if (!list || !r.thumb_path || !r.img_path) continue;

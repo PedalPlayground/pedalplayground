@@ -61,4 +61,10 @@ describe("manifestFromRows", () => {
     expect(m.pedals).toEqual([]);
     expect(m.pedalboards.map((p) => p.image)).toEqual(["pedaltrain-classic-2"]);
   });
+
+  it("lists the pedal types when given them, and leaves them out otherwise", () => {
+    expect(manifestFromRows([], "t", ["Fuzz", "Boost"]).pedalTypes).toEqual(["Fuzz", "Boost"]);
+    expect(manifestFromRows([], "t")).not.toHaveProperty("pedalTypes");
+    expect(manifestFromRows([], "t", [])).not.toHaveProperty("pedalTypes");
+  });
 });

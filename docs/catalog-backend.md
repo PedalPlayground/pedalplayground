@@ -186,7 +186,16 @@ Only accounts in `catalog_editors` get past the sign-in check; everyone else see
   replace the photo, then Approve, Needs changes (the note goes to the submitter), Resolved (dealt with another way, so
   it leaves the queue; the note is optional; needs migration `20261110000000_submission_resolved.sql`) or Reject. Players file these with **Suggest Gear** (`components/SuggestGearDialog.tsx`, `lib/suggestions.ts`): the Gear page's Suggest Gear bento tile and Add Gear's "Suggest it for the catalog" (under Make Your Own, and on a search with no matches). It has three tabs. **New Gear**: the Admin form's fields (kind, brand, name, size, power, types) plus a required photo and an optional note. **Wrong Info**: search the catalog, pick an item, and correct its prefilled fields (a new photo is optional); it's filed as a correction (`target_key`). **Report a Bug**: a description, saved with the page address and browser in `bug_reports` (migration `20261108120000_bug_reports.sql`), listed under Admin › Moderation › Bug Reports with a Close button. Signed out, it asks to sign in.
 - **Add:** a new pedal or pedalboard straight into the catalog.
-- **Catalog** (the old Types tab is part of it; `#types` opens it): the Gear page's filters in a sidebar (All Items,
+- **Types** (admins only; editors following `#types` get Catalog): the pedal types list (`pedal_types`, migration
+  `20261113000000_pedal_types.sql`). Add a type (at the end), rename one, reorder with the arrows, or remove one and
+  move its pedals to another type (or let them just lose it). Rename and remove change every catalog item and
+  submission with that type, archived ones too, through admin-only functions (`add_pedal_type`, `rename_pedal_type`,
+  `remove_pedal_type`, `reorder_pedal_types`); a trigger checks every item's types against the table. Publish copies
+  the list into catalog.json (`pedalTypes`), and the app reads it from there with `usePedalTypes()`
+  (`lib/pedalTypes.ts`), falling back to `PEDAL_TYPES` in `lib/specs.ts` when it's missing. Boards that set a type
+  in their Equipment List keep the old name after a rename. The Gear page's code names Tuner, Volume / Expression and
+  Utility (kept out of Hot), so renaming those needs a code change too.
+- **Catalog**: the Gear page's filters in a sidebar (All Items,
   Pedals, Pedalboards, No type and each pedal type by count, Live / Archived, brands with a search icon, each list
   collapsed with Show more), a search, and the matching items. Each pedal row has its types as a combo box (the first
   chip is the main type; type to add, drag or Alt+arrow to reorder, X or Backspace to remove) that saves on change.

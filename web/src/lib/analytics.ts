@@ -200,6 +200,37 @@ export function track(event: string, params?: Params) {
 }
 
 /**
+ * The details every gear event carries, so GA can rank gear by name, brand and type: `gear_id` (the catalog's image
+ * key, the same as the Gear page's `?item=`), `gear_name` ("Brand Name", public catalog text), `gear_brand`,
+ * `gear_type` (its main type, or "Pedalboard") and `kind`.
+ */
+export function gearParams(kind: "pedal" | "pedalboard", item: { brand: string; name: string; image: string; type?: string }): Params {
+  return {
+    kind,
+    gear_id: item.image.replace(/\.png$/, ""),
+    gear_name: `${item.brand} ${item.name}`.slice(0, 100),
+    gear_brand: item.brand.slice(0, 100),
+    gear_type: kind === "pedalboard" ? "Pedalboard" : (item.type ?? "Unknown"),
+  };
+}
+
+/**
+ * Where a shared board was opened from, for `board_view`: "gallery", "gear_page" (a Gear page's "Featured on" list),
+ * "site" (anywhere else on the site) or "link" (a link from outside, or typed in).
+ */
+export function boardViewFrom(): string {
+  try {
+    const ref = document.referrer ? new URL(document.referrer) : null;
+    if (!ref || ref.origin !== location.origin) return "link";
+    if (ref.pathname.startsWith("/gallery")) return "gallery";
+    if (ref.pathname.startsWith("/gear")) return "gear_page";
+    return "site";
+  } catch {
+    return "link";
+  }
+}
+
+/**
  * Where a playground tool was used from, so GA can show which controls people reach for. "toolbar" is the bottom bar
  * (and the big Add Gear button on wide screens), "side_menu" the stacks down the sides on wide screens, "object_menu"
  * the bar across the top on tablets, "mini_menu" the pill under the selection, "right_click" the context menu,
