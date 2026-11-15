@@ -597,7 +597,7 @@ function Review({
   };
   /** Saves the editor's fixes (and a replaced photo) before a decision. */
   const save = async () => {
-    const path = newFile && userId ? await uploadSource(newFile, userId) : undefined;
+    const path = newFile && userId ? await uploadSource(newFile, userId, fields.brand, fields.name) : undefined;
     await updateSubmission(submission.id, fields, path);
   };
 

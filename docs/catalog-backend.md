@@ -29,7 +29,9 @@ files on the server don't touch the database.
 | Edge Function | `supabase/functions/catalog-publish` | Lets an editor start the publish workflow (the editor page calls it after approving) |
 
 The flow: a player inserts a `catalog_submissions` row and uploads its image to
-`catalog-sources/submissions/<their user id>/`. An editor calls `approve_catalog_submission(id)`, which creates or
+`catalog-sources/submissions/<their user id>/`, named `<brand>-<name>.<ext>` (lowercase, hyphenated, accents
+dropped; `-2`, `-3`, … when the name is taken, so nothing is overwritten). Photos editors upload in Admin (Queue,
+Add, Catalog) are named the same way in their own folder. An editor calls `approve_catalog_submission(id)`, which creates or
 updates the `catalog_items` row with `needs_render = true`. The editor page then calls the `catalog-publish`
 function, which starts the workflow. The workflow builds the files into `catalog-public`, rewrites
 `catalog-public/catalog.json`, then copies the new images and `catalog.json` to `/catalog/` on each server.

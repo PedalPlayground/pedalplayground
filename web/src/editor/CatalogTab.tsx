@@ -712,7 +712,7 @@ function EditItem({
           disabled={busy || problems.length > 0}
           onClick={() =>
             run(async () => {
-              const path = file ? await uploadSource(file, userId) : undefined;
+              const path = file ? await uploadSource(file, userId, fields.brand, fields.name) : undefined;
               await saveDirect(fields, { targetKey: item.key, sourcePath: path });
               onSaved(withPublish(`Saved ${fields.brand} ${fields.name}.`, await publisher.run()));
             })

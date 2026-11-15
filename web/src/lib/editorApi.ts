@@ -5,6 +5,7 @@
  */
 import type { Post } from "./announcements";
 import type { Fields } from "./editorChecks";
+import { uploadNamedSource } from "./sourceNames";
 import { supabase } from "./supabase";
 
 export interface Submission {
@@ -252,14 +253,12 @@ export async function submitterHistory(userId: string, limit = 50): Promise<Subm
   };
 }
 
-/** Uploads an image to the editor's own folder in catalog-sources and returns its path. */
-export async function uploadSource(file: File, userId: string): Promise<string> {
-  const ext = file.type === "image/png" ? "png" : file.type === "image/webp" ? "webp" : "jpg";
-  const base = file.name.replace(/\.[^.]+$/, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "image";
-  const path = `submissions/${userId}/${Date.now()}-${base.slice(0, 60)}.${ext}`;
-  const { error } = await db().storage.from("catalog-sources").upload(path, file, { contentType: file.type, upsert: false });
-  fail(error);
-  return path;
+/**
+ * Uploads an image to the editor's own folder in catalog-sources, named after the item (`<brand>-<name>.jpg`,
+ * with -2, -3, … when that name is taken), and returns its path.
+ */
+export async function uploadSource(file: File, userId: string, brand: string, name: string): Promise<string> {
+  return uploadNamedSource(db(), file, userId, brand, name);
 }
 
 /** Saves an editor's fixes to a submission before deciding on it. */
