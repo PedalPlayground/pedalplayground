@@ -4,6 +4,7 @@
  * At most 10 open suggestions per player (a database rule).
  */
 import type { Fields } from "./editorChecks";
+import { uploadNamedSource } from "./sourceNames";
 import { supabase } from "./supabase";
 
 function db() {
@@ -17,13 +18,7 @@ function db() {
  */
 export async function submitSuggestion(f: Fields, photo: File | null, userId: string, note: string, targetKey?: string): Promise<void> {
   let path: string | null = null;
-  if (photo) {
-    const ext = photo.type === "image/png" ? "png" : photo.type === "image/webp" ? "webp" : "jpg";
-    const base = `${f.brand}-${f.name}`.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || "photo";
-    path = `submissions/${userId}/${Date.now()}-${base}.${ext}`;
-    const up = await db().storage.from("catalog-sources").upload(path, photo, { contentType: photo.type, upsert: false });
-    if (up.error) throw new Error(up.error.message);
-  }
+  if (photo) path = await uploadNamedSource(db(), photo, userId, f.brand, f.name);
   const pedal = f.kind === "pedal";
   const { error } = await db()
     .from("catalog_submissions")

@@ -56,7 +56,7 @@ export function AddTab({
     setBusy(true);
     setError(null);
     try {
-      const path = await uploadSource(file!, userId);
+      const path = await uploadSource(file!, userId, fields.brand, fields.name);
       const key = await saveDirect(fields, { sourcePath: path });
       setNotice(withPublish(`Added ${fields.brand} ${fields.name} (${key}).`, await publisher.run()));
       setFields({ ...blank, kind: fields.kind, brand: fields.brand });
