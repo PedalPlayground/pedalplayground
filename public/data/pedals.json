@@ -8864,6 +8864,13 @@
 	},
 	{
 		"Brand": "Catalinbread",
+		"Name": "Early Verb FX90",
+		"Width": 2.7,
+		"Height": 4.5,
+		"Image": "catalinbread-early-verb-fx90.png"
+	},
+	{
+		"Brand": "Catalinbread",
 		"Name": "Echorec",
 		"Width": 2.7,
 		"Height": 4.5,
@@ -24894,6 +24901,20 @@
 	},
 	{
 		"Brand": "Guyatone",
+		"Name": "MM-X Metal Monster",
+		"Width": 3.5,
+		"Height": 5.33,
+		"Image": "guyatone-mmx-metal-monster.png"
+	},
+	{
+		"Brand": "Guyatone",
+		"Name": "PD-1 Power Drive",
+		"Width": 3.5,
+		"Height": 5.33,
+		"Image": "guyatone-pd1-power-drive.png"
+	},
+	{
+		"Brand": "Guyatone",
 		"Name": "PS-006 Analog Echo",
 		"Width": 3,
 		"Height": 4.72,
@@ -34477,6 +34498,13 @@
 	},
 	{
 		"Brand": "Lovetone",
+		"Name": "Doppelgänger 2",
+		"Width": 5,
+		"Height": 6.25,
+		"Image": "lovetone-doppelganger-2.png"
+	},
+	{
+		"Brand": "Lovetone",
 		"Name": "Flange",
 		"Width": 7.48,
 		"Height": 7.87,
@@ -34488,6 +34516,13 @@
 		"Width": 7.48,
 		"Height": 7.87,
 		"Image": "lovetone-meatball.png"
+	},
+	{
+		"Brand": "Lovetone",
+		"Name": "Meatball 2",
+		"Width": 5,
+		"Height": 6.25,
+		"Image": "lovetone-meatball-2.png"
 	},
 	{
 		"Brand": "Lovetone",
@@ -47721,6 +47756,13 @@
 	},
 	{
 		"Brand": "Rainger FX",
+		"Name": "Microphonic Fuzz",
+		"Width": 4.25,
+		"Height": 4.99,
+		"Image": "raingerfx-microphonic-fuzz.png"
+	},
+	{
+		"Brand": "Rainger FX",
 		"Name": "Mini Drone",
 		"Width": 1.7,
 		"Height": 4.15,
@@ -56385,6 +56427,13 @@
 		"Width": 7.2,
 		"Height": 5.67,
 		"Image": "toneking-royalist-preamp.png"
+	},
+	{
+		"Brand": "Tone King",
+		"Name": "Royce Preamp",
+		"Width": 7.2,
+		"Height": 5.67,
+		"Image": "toneking-royce-preamp.png"
 	},
 	{
 		"Brand": "ToneTuga FX",
