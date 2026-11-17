@@ -49,6 +49,22 @@ async function pool(items, size, fn, log) {
 }
 
 /**
+ * The pedal types in order (Admin > Types), or null when the pedal_types table isn't there yet (before its
+ * migration runs), so the app keeps its built-in list.
+ */
+async function pedalTypes(db, log, retry) {
+  const { data, error } = await withRetry(() => db.from("pedal_types").select("name").order("position").order("name"), retry);
+  if (error) {
+    if (error.code === "42P01" || error.code === "PGRST205" || /does not exist|schema cache/i.test(error.message ?? "")) {
+      log.log("pedal_types isn't set up yet; catalog.json keeps the built-in type list");
+      return null;
+    }
+    throw new Error(`pedal_types: ${error.message}`);
+  }
+  return data.map((r) => r.name);
+}
+
+/**
  * db: a supabase-js client with the service role. Returns what it did, for the CLI and tests.
  * Failed items keep needs_render, so the next run retries them; the manifest is still written for the rest.
  */
@@ -100,7 +116,7 @@ export async function publishCatalog(db, { dryRun = false, manifestOnly = false,
         .not("img_path", "is", null)
         .order("id"),
     );
-    manifest = manifestFromRows(rows);
+    manifest = manifestFromRows(rows, undefined, await pedalTypes(db, log, retry));
     await upload("catalog.json", JSON.stringify(manifest), "application/json", "300");
     log.log(`catalog.json: ${manifest.pedals.length} pedals, ${manifest.pedalboards.length} pedalboards`);
   }

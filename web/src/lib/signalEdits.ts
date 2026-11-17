@@ -2,6 +2,7 @@
  * The edits the Signal Path screen offers, built from the rules in signal.ts. Each takes a graph and returns
  * a new one, or throws a SignalError the store shows as a toast.
  */
+import { uuid } from "./uuid";
 import {
   addEndPoint,
   addItemNode,
@@ -19,7 +20,7 @@ import {
 } from "./signal";
 import type { Item } from "./types";
 
-const newId = () => crypto.randomUUID();
+const newId = () => uuid();
 
 /** The first output, where "the end of the chain" is. */
 const mainOutput = (g: SignalGraph) => g.nodes.find((n) => n.type === "destination");

@@ -51,10 +51,10 @@ them. **Unhide** puts a board back in the gallery; one hidden by a ban asks firs
 Two roles (migration `20261108180000_admins.sql`):
 
 - **Admin** (Trav, so far; the `admins` table): everything. Changes permissions (Admin › Moderation › Look Up User:
-  **Make Editor** / **Remove Editor**, and the **Editors** list) and posts What's New (the News tab and "Post an
-  Update"). An admin counts as an editor everywhere.
+  **Make Editor** / **Remove Editor**, and the **Editors** list), posts What's New (the News tab and "Post an
+  Update"), and edits the pedal types (the Types tab). An admin counts as an editor everywhere.
 - **Editor** (`catalog_editors`): updates the catalog, approves the queue, and moderates (reports, flags, hiding
-  boards and comments, bug reports). Sees Admin in the header, without the News tab.
+  boards and comments, bug reports). Sees Admin in the header, without the News and Types tabs.
 
 Behind it: `is_admin()`, `is_catalog_editor()` (true for editors and admins), `set_editor()` and `list_editors()`
 (admins only). What's New posts are writable by admins only. In the app: `useIsEditor()` and `useIsAdmin()` in

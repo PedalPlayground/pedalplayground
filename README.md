@@ -98,9 +98,9 @@ when the maker publishes them:
 
 - `Current`: current draw in milliamps, as a whole number.
 - `Voltage`: one of `9V DC`, `12V DC`, `18V DC`, `24V DC`, `9V AC`, `12V AC`, `5V USB`.
-- `Type`: one of `Boost`, `Overdrive`, `Distortion`, `Fuzz`, `Compressor`, `EQ`, `Modulation`, `Delay`, `Reverb`,
+- `Type`: one of the pedal types (admins edit the live list in Admin › Types; at the start it was `Boost`, `Overdrive`, `Distortion`, `Fuzz`, `Compressor`, `EQ`, `Modulation`, `Delay`, `Reverb`,
   `Pitch`, `Filter / Wah`, `Looper`, `Multi-Effect`, `Amp / Preamp`, `Tuner`, `Volume / Expression`,
-  `Noise Gate`, `Utility`, `Other`.
+  `Noise Gate`, `Utility`, `Other`).
 
 ## 3. Don't rename or remove existing images
 

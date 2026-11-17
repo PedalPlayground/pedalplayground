@@ -340,7 +340,7 @@ function Engagement({
     const liked = !info.liked;
     setInfo({ ...info, liked, like_count: Math.max(0, info.like_count + (liked ? 1 : -1)) });
     try {
-      setInfo({ ...info, liked, like_count: await setGalleryLike(id, liked) });
+      setInfo({ ...info, liked, like_count: await setGalleryLike(id, liked, useUi.getState().viewing?.slug ?? useCloud.getState().slug ?? undefined) });
     } catch {
       setInfo(info);
     }

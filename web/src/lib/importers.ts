@@ -1,8 +1,9 @@
+import { uuid } from "./uuid";
 import { DEFAULT_PEDAL_COLOR } from "./color";
 import { PX_PER_INCH } from "./geometry";
 import type { Item, LegacyDocV2, PlaygroundDocument, Rotation } from "./types";
 
-const newId = () => crypto.randomUUID();
+const newId = () => uuid();
 
 const ROTATION: Record<string, Rotation> = { "rotate-90": 90, "rotate-180": 180, "rotate-270": 270 };
 
