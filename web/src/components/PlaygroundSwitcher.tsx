@@ -211,17 +211,17 @@ export function BoardLabel({ comments, onEdit, onSignIn }: { comments?: ReactNod
   const opening = useUi((u) => u.openingShared);
   const name = usePlayground((s) => s.name);
   const user = useAuth((s) => s.user);
-  // In a mode (Signal Flow, or Signal Path and Equipment List when they're on), the mode's name and a way back.
-  const cablesOpen = useUi((u) => u.cablesOpen);
+  // In Signal Path or Equipment List (when they're on), the mode's name and a way back. Signal Flow has its Done
+  // button and the mode bar instead.
   const mode = useUi((u) => u.mode);
-  const modeName = cablesOpen ? "Signal Flow" : mode !== "playground" ? modes.find((m) => m.id === mode)?.label : undefined;
+  const modeName = mode !== "playground" ? modes.find((m) => m.id === mode)?.label : undefined;
   if (opening) return null;
   if (modeName)
     return (
       <div className="pointer-events-none absolute left-[max(0.75rem,env(safe-area-inset-left))] top-4 z-20 flex max-sm:top-2">
         <button
           type="button"
-          onClick={withTool("mode_back", "canvas", () => (cablesOpen ? useUi.getState().setCablesOpen(false) : useUi.getState().setMode("playground")))}
+          onClick={withTool("mode_back", "canvas", () => useUi.getState().setMode("playground"))}
           aria-label={`Leave ${modeName}`}
           {...tip("Back", { side: "bottom" })}
           className="press pointer-events-auto flex h-8 items-center gap-1.5 rounded-control pl-1.5 pr-2.5 text-sm/4 font-semibold tracking-[-0.01em] text-ink outline-none hover:bg-soft focus-visible:ring-2 focus-visible:ring-brand"

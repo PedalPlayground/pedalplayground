@@ -31,7 +31,7 @@ import type { PlaygroundSummary } from "./lib/cloud";
 import { SaveStatus } from "./components/SaveStatus";
 import { SelectionMiniMenu } from "./components/SelectionMiniMenu";
 import { SearchPanel, showNewGear } from "./components/SearchPanel";
-import { SHOW_MODES, tourSeen, useUi } from "./store/ui";
+import { SHOW_CABLES, SHOW_MODES, tourSeen, useUi } from "./store/ui";
 import { ObjectMenu } from "./components/ObjectMenu";
 import { ContextMenu } from "./components/ContextMenu";
 import { SuggestFixHost } from "./components/SuggestGearDialog";
@@ -47,6 +47,7 @@ import { OnboardingTour } from "./components/OnboardingTour";
 import { ShareDialog } from "./components/ShareDialog";
 import { SpaceBetweenPanel } from "./components/SpaceBetweenPanel";
 import { CableMiniMenu, CablePanel } from "./components/Cables";
+import { ModeBar } from "./components/ModeBar";
 import { AddGearButton, CanvasStack, ObjectStack, WIDE_QUERY } from "./components/SideStacks";
 import { Toolbar } from "./components/Toolbar";
 import { PHONE_QUERY, useMediaQuery } from "./lib/viewport";
@@ -323,7 +324,7 @@ export function App() {
           </div>
 
           {/* Action confirmations pop up at the top center. On tablets they drop below the selection bar when it's showing. */}
-          <ActionToast className={`absolute left-1/2 -translate-x-1/2 [--enter-y:-8px] ${cablesOpen ? "top-3 sm:top-[7.5rem]" : hasSelection && !wide ? "top-3 sm:top-16" : "top-3"}`} />
+          <ActionToast className={`absolute left-1/2 -translate-x-1/2 [--enter-y:-8px] ${cablesOpen ? "top-[11rem] sm:top-[10rem]" : hasSelection && !wide ? "top-3 sm:top-16" : "top-3"}`} />
 
 
           {!covered && (
@@ -331,11 +332,14 @@ export function App() {
             // Stays put when the gear panel opens; the panel sits above it where the two meet on narrower screens.
             className="absolute bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-1/2 z-30 flex max-w-[calc(100%-1rem)] -translate-x-1/2 flex-col items-center gap-2 max-sm:left-[max(0.75rem,env(safe-area-inset-left))] max-sm:right-[max(0.75rem,env(safe-area-inset-right))] max-sm:max-w-none max-sm:translate-x-0 sm:bottom-[calc(1rem+env(safe-area-inset-bottom))]">
             {!searchOpen && <ScaleKey className="self-start md:hidden" />}
+            {/* The board's modes, at the bottom center: under Add Gear on larger screens, above the toolbar on smaller ones. */}
+            {SHOW_CABLES && !viewing && mode === "playground" && !wide && <ModeBar onSettings={() => editPlayground()} />}
             {wide ? (
               !viewing && !cablesOpen && <AddGearButton onClick={withTool("add_gear", "toolbar", () => setSearchOpen(replacing || editing ? true : !searchOpen))} />
             ) : (
               <Toolbar viewOnly={viewing} onPlace={() => setSearchOpen(replacing || editing ? true : !searchOpen)} onShare={() => setDialog("share")} />
             )}
+            {SHOW_CABLES && !viewing && mode === "playground" && wide && <ModeBar onSettings={() => editPlayground()} />}
           </div>
           )}
 

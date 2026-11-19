@@ -29,7 +29,11 @@ import type { Item } from "../lib/types";
 import { usePlayground } from "../store/playground";
 import { SHOW_CABLES, useUi } from "../store/ui";
 import { withTool } from "../lib/analytics";
-import { barDivider, barIconIdle, barPanel, barSoftButton, barSoftDangerButton } from "./toolbarStyles";
+import { barDivider, barGhostButton, barIconIdle, barPanel } from "./toolbarStyles";
+
+/** A quiet red text button, like Remove All in the Signal Flow menu. */
+const ghostDanger =
+  "press flex h-9 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-control px-2.5 text-sm font-semibold text-danger outline-none hover:bg-danger/10 focus-visible:ring-2 focus-visible:ring-brand";
 import { tip } from "./Tooltip";
 import { knownType, plugBox, PLUG_TYPES, snapAt, type PlugSide, type PlugType } from "../lib/plugs";
 
@@ -791,25 +795,43 @@ export function CablePanel() {
     set({ style: { ...style, kind, plug: t } });
     if (picked) usePlayground.getState().editCable(picked.stored, { split: false, plug: { end: picked.from, type: t } });
   };
+  const all = boardCables(items);
+  const removeAll = () => {
+    if (!all.length) return;
+    usePlayground.getState().unplug(all.map((c) => c.stored));
+    set({ cable: null, at: null, plug: null });
+  };
   return (
     <div
-      className="animate-enter absolute left-1/2 z-20 flex w-max max-w-[calc(100%-24px)] -translate-x-1/2 flex-col items-center gap-2 max-sm:bottom-[calc(74px+env(safe-area-inset-bottom))] max-sm:flex-col-reverse sm:top-4"
+      className="animate-enter absolute left-1/2 top-4 z-20 flex w-max max-w-[calc(100%-24px)] -translate-x-1/2 flex-col items-center gap-2 max-sm:top-12"
       onPointerDown={(e) => e.stopPropagation()}
     >
-      <div role="toolbar" aria-label="Signal Flow" className={`flex max-w-full items-center gap-3 overflow-x-auto pl-3 ${barPanel}`}>
-      <LabeledSelect<CableKind> label="Cable Type" value={kind} options={CABLE_KINDS.map((k) => [k.kind, k.label] as const)} onChange={setKind} />
-      <LabeledSelect<PlugType> label="Plug" value={plugType} options={allowed.map((t) => [t, PLUG_TYPES[t].label] as const)} onChange={setPlug} />
-      <span className={barDivider} />
-      <button type="button" disabled={!picked?.legs} onClick={() => picked && usePlayground.getState().setCableLegs(picked.stored, null)} className={`${barSoftButton} disabled:opacity-40`}>
-        Reset Path
-      </button>
-      <button type="button" disabled={!picked} onClick={remove} className={`${barSoftDangerButton} disabled:opacity-40`}>
-        <Trash2 size={14} />
-        Delete
-      </button>
+      <div role="toolbar" aria-label={picked ? "Edit Cable" : "Add a Cable"} className={`flex max-w-full flex-col items-center gap-1 px-3 pb-1.5 pt-2 ${barPanel}`}>
+        <h2 className="text-[13px]/4 font-medium text-ink-muted">{picked ? "Edit Cable" : "Add a Cable"}</h2>
+        <div className="flex max-w-full items-center gap-3 overflow-x-auto">
+          <LabeledSelect<CableKind> label="Cable Type" value={kind} options={CABLE_KINDS.map((k) => [k.kind, k.label] as const)} onChange={setKind} />
+          <LabeledSelect<PlugType> label="Plug" value={plugType} options={allowed.map((t) => [t, PLUG_TYPES[t].label] as const)} onChange={setPlug} />
+          <span className={barDivider} />
+          {picked ? (
+            <>
+              <button type="button" disabled={!picked.legs} onClick={withTool("cable_reset", "panel", () => usePlayground.getState().setCableLegs(picked.stored, null))} className={`${barGhostButton} disabled:opacity-40`}>
+                Reset Path
+              </button>
+              <button type="button" onClick={withTool("cable_delete", "panel", remove)} className={ghostDanger}>
+                <Trash2 size={16} />
+                Delete
+              </button>
+            </>
+          ) : (
+            <button type="button" disabled={!all.length} onClick={withTool("cables_remove_all", "panel", removeAll)} className={`${ghostDanger} disabled:opacity-40`}>
+              <Trash2 size={16} />
+              Remove All
+            </button>
+          )}
+        </div>
       </div>
-      <div className="flex items-center gap-3">
-        <span className="text-[13px] font-medium text-ink">{plug ? "Click on a Plus icon to end the cable" : "Click on a Plus icon on any pedal to start a cable"}</span>
+      <div className={`flex items-center gap-3 pl-4 ${barPanel}`}>
+        <span className="text-sm font-medium text-ink">{plug ? "Click on a Plus icon to end the cable" : "Click on a Plus icon on any pedal to start a cable"}</span>
         <button
           type="button"
           onClick={withTool("cables_done", "panel", () => setOpen(false))}
@@ -974,22 +996,11 @@ export function CableMiniMenu() {
       style={{ left: cx, top: y }}
       onPointerDown={(e) => e.stopPropagation()}
     >
-      {open ? (
-        <button
-          type="button"
-          disabled={!picked?.legs}
-          onClick={withTool("cable_reset", "mini_menu", () => picked && usePlayground.getState().setCableLegs(picked.stored, null))}
-          className={`${miniText} ${barIconIdle} disabled:pointer-events-none disabled:opacity-40`}
-        >
-          Reset Path
+      {!open && !loose && (
+        <button type="button" onClick={withTool("cable_edit", "mini_menu", editChosen)} className={`${miniText} ${barIconIdle}`}>
+          <Cable size={16} />
+          Edit Cables
         </button>
-      ) : (
-        !loose && (
-          <button type="button" onClick={withTool("cable_edit", "mini_menu", editChosen)} className={`${miniText} ${barIconIdle}`}>
-            <Cable size={16} />
-            Edit Cables
-          </button>
-        )
       )}
       <button
         type="button"
