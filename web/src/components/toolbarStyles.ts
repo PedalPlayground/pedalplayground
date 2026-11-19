@@ -9,5 +9,8 @@ const barSoftBase =
 export const barSoftButton = `${barSoftBase} bg-soft text-ink hover:bg-soft-hover active:bg-soft-active`;
 /** Icon + text with no fill until hovered (the toolbar's Share). */
 export const barGhostButton = `${barSoftBase} text-ink hover:bg-surface-hover active:bg-chrome-line`;
+export const barGhostDangerButton = `${barSoftBase} text-danger hover:bg-danger/10 active:bg-danger/15`;
+/** The primary button in a bar (Done), the same size as the soft ones. */
+export const barPrimaryButton = `${barSoftBase} btn-primary`;
 export const barSoftDangerButton = `${barSoftBase} bg-danger/10 text-danger hover:bg-danger/15 active:bg-danger/25`;
 export const barDivider = "mx-1 h-4 w-px shrink-0 bg-line";

@@ -1,39 +1,24 @@
 # Plugs
 
-Cable ends drawn on a pedal's edges, lined up with its jacks. Select one pedal and choose **Plugs** (left menu on large
-screens, the object bar on tablets, the right-click or ••• menu on phones, and the small bar under the selection), or press **P**.
+Cable ends drawn on a pedal's edges, lined up with its jacks. They're added only through **Signal Flow** (the cable
+tool, `components/Cables.tsx`): starting or ending a cable at a + drops a plug there, and a cable and the plugs at its
+ends are one unit that deletes together. There's no separate plug editing mode any more (removed Nov 2026, along with
+its **Plugs** menu items and the P key).
 
-- **Opening it** zooms in on the pedal (with room for cables); **Done** puts the view back. The pedal shows no
-  selection outline meanwhile, and everything else on the canvas (boards included) fades to 15% so it's clear which
-  pedal is being edited.
-- **Selecting:** like gear: click a plug to select it, Shift-click to add or remove one, click empty canvas (or press
-  Escape) to deselect. Selected plugs get a mini-menu just clear of the room the biggest plug type takes at their jacks, so it stays put as the type changes and doesn't cover the plug (`PlugMiniMenu`, styled like the selection's
-  `SelectionMiniMenu`): their type and Remove, applied to every selected plug. The panel at the top is just
-  a short hint and Done: "Click on a + to add a plug." until a plug is selected, then "Drag a plug to adjust its
-  position." New plugs are the last type picked in the mini-menu (SP400 to start).
-- **Adding:** click (or tap) just outside any edge; a plug of the chosen type drops there. Keep the button down to drag
-  it into place in the same move.
-- **Suggested jacks:** when it opens, `findJacks` (`lib/jackFinder.ts`) reads a small copy of a catalog pedal's
+- **Suggested jacks:** `findJacks` (`lib/jackFinder.ts`) reads a small copy of a catalog pedal's
   cutout photo, finds each edge's enclosure line, and marks short bumps past it (0.2″ to 1″ wide, at least 0.05″ out)
-  as likely jacks. Each shows as a small + just outside the edge (screen-sized, so it reads at any zoom); click one
-  to add a plug of the chosen type there. A + hides once a plug sits within
-  0.4″ of it. The front edge is skipped (footswitch lips read as bumps). Photos with no cutout, or jacks that don't
-  stick out in the photo (Meris, many Eventide and Strymon), find nothing, and custom pedals have no photo to read. Every side with no
-  suggestion gets a + at its middle instead (all four sides when nothing was found).
-- **Moving:** drag a plug along its edge, or round a corner onto another edge. Positions snap to 1/16″.
+  as likely jacks, shown as + points in Signal Flow. A + hides once a plug sits within 0.4″ of it (`openHints`). The
+  front edge is skipped (footswitch lips read as bumps). Photos with no cutout, or jacks that don't stick out in the
+  photo (Meris, many Eventide and Strymon), find nothing, and custom pedals have no photo to read. Every side with no
+  suggestion gets a + at its middle instead (`withMiddles`).
 - **Types** (`PLUG_TYPES` in `lib/plugs.ts`, drawn to scale by `PlugShape` in `components/PlugArt.tsx`): slim
-  right-angle (SP400, the default), right-angle (Rean) and pancake. Every plug is shown from above with its cable
-  dropping under the board, so only the head shows, using Trav's top-down drawings of Space Between's plug guide
-  (`assets/plugs/*-down.svg`, from the "Jacks" section of his Figma file, 0.2 mm per unit, turned so the barrel goes
-  into the jack). There's no choosing which way a plug faces (dropped Nov 2026). Straight, DC and MIDI plugs were
-  dropped too; saved ones show as the default (`knownType`), and a saved `flip` or `down` is ignored.
+  right-angle (SP400, the default), right-angle (Rean) and pancake, picked on Signal Flow's bottom bar. Every plug is
+  shown from above with its cable dropping under the board, so only the head shows, using Trav's top-down drawings of
+  Space Between's plug guide (`assets/plugs/*-down.svg`, 0.2 mm per unit, turned so the barrel goes into the jack).
+  Straight, DC and MIDI plugs were dropped; saved ones show as the default (`knownType`), and a saved `flip` or `down`
+  is ignored.
 - **Layering:** plugs are drawn under the pedal, each with a short stub of barrel (`BARREL_STUB`, 0.25″) running into
   the jack, so a bit of barrel shows wherever the photo's jack leaves room for it.
-- **Removing:** the trash button in the mini-menu, or D / Delete / Backspace (as for gear).
-- **Switching pedals:** hovering one of the faded pedals brings it back to full and shows an **Add
-  Plugs** pill (tooltip colors, screen-sized). Click it (without dragging) to move plug editing to it, zoomed in on it. Done
-  still returns to the view from before plug mode opened.
-- **Done**, or Escape with no plug selected (the first Escape deselects), leaves plug editing. Meanwhile the canvas only pans (no selecting, dragging gear or menus), keyboard shortcuts are off apart from removing a picked plug and Escape, and Add Gear waits.
 
 Plugs live on the item (`Item.plugs`: side, position along it in inches, type) in its unrotated frame, so they
 move, rotate, flip, duplicate, undo and save with the pedal. Each add, change or removal is one undo step (an add and

@@ -31,7 +31,7 @@ import { itemName } from "../lib/itemName";
 import { openGearInfo, placedItemHref } from "../lib/gearLink";
 import { openSuggestFix } from "./SuggestGearDialog";
 import { isOneGroup, usePlayground } from "../store/playground";
-import { useUi } from "../store/ui";
+import { SHOW_CABLES, useUi } from "../store/ui";
 import { tip } from "./Tooltip";
 import { barPanel } from "./toolbarStyles";
 
@@ -207,7 +207,6 @@ export function ObjectStack() {
         <Row {...row} icon={<Pencil size={15} />} label={single.kind === "pedalboard" ? "Edit Board" : "Edit"} onClick={withTool("edit", "side_menu", () => setEditing(true))} />
       )}
       {single && !single.custom && <Row {...row} icon={<Replace size={15} />} label="Replace" onClick={withTool("replace", "side_menu", () => setReplacing(true))} />}
-      {single?.kind === "pedal" && <Row {...row} icon={<Cable size={16} />} label="Plugs" shortcut="P" onClick={withTool("plugs", "side_menu", () => useUi.getState().setPlugEditing(single.id))} />}
       {placedItemHref(single) && <Row {...row} icon={<Info size={16} />} label="Info" onClick={withTool("gear_info", "side_menu", () => openGearInfo(single))} />}
       {placedItemHref(single) && <Row {...row} icon={<MessageSquareWarning size={16} />} label="Suggest a Fix…" onClick={withTool("suggest_fix", "side_menu", () => openSuggestFix(single))} />}
       <Row {...row} icon={<Trash2 size={16} />} label="Remove" shortcut="Del" onClick={withTool("remove", "side_menu", s.deleteSelected)} danger />
@@ -223,6 +222,8 @@ export function CanvasStack({ viewOnly, onShare }: { viewOnly: boolean; onShare:
   const redo = usePlayground((s) => s.redo);
   const canUndo = usePlayground((s) => s.past.length > 0);
   const canRedo = usePlayground((s) => s.future.length > 0);
+  const cablesOpen = useUi((u) => u.cablesOpen);
+  const setCablesOpen = useUi((u) => u.setCablesOpen);
   const [collapsed, toggle] = useCollapsed("right");
   const row = { collapsed, side: "left" as const };
   const mod = /Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Ctrl+";
@@ -233,6 +234,12 @@ export function CanvasStack({ viewOnly, onShare }: { viewOnly: boolean; onShare:
       <Row {...row} icon={<Fullscreen size={16} />} label="Center & Fit" shortcut="1" onClick={withTool("fit", "side_menu", fit)} />
       {!viewOnly && (
         <>
+          {SHOW_CABLES && (
+            <>
+              <Divider />
+              <Row {...row} icon={<Cable size={16} />} label="Signal Flow" pressed={cablesOpen} onClick={withTool("cables", "side_menu", () => setCablesOpen(!cablesOpen))} />
+            </>
+          )}
           <Divider />
           <Row {...row} icon={<Undo2 size={16} />} label="Undo" shortcut={`${mod}Z`} onClick={withTool("undo", "side_menu", undo)} disabled={!canUndo} />
           <Row {...row} icon={<Redo2 size={16} />} label="Redo" shortcut={`⇧${mod}Z`} onClick={withTool("redo", "side_menu", redo)} disabled={!canRedo} />

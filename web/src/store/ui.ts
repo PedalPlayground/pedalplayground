@@ -8,6 +8,8 @@ export type Mode = "playground" | "signal" | "list";
  * the Playground; their code and the data they edit stay in place, so turning this back on brings them back.
  */
 export const SHOW_MODES = false;
+/** The Cables tool (wiring plugs together) is in progress: on in local dev only until it's ready. */
+export const SHOW_CABLES = import.meta.env.DEV;
 
 /**
  * Pro is hidden for the launch: no Get Pro button, Pro badges, upgrade dialogs, plan details, or Pro step in the tour,
@@ -53,15 +55,18 @@ interface UiState {
   /** Dragged items snap to other items' edges and centers. */
   snapping: boolean;
   setSnapping: (on: boolean) => void;
+  /** What the board shows outside Signal Flow (which always shows cables and plugs). */
+  show: BoardLayers;
+  setShow: (layer: keyof BoardLayers, on: boolean) => void;
   upgrade: UpgradeReason | null;
   /** The pedal search panel; the canvas closes it as soon as the user starts arranging. */
   /** Image key of the pedal used as the user's avatar. */
   avatar: string;
   setAvatar: (key: string) => void;
   searchOpen: boolean;
-  /** The pedal whose plugs are being edited (its edges take clicks to add and drag plugs), or null. */
-  plugEditing: string | null;
-  setPlugEditing: (id: string | null) => void;
+  /** The Cables tool: plugs on every pedal take clicks to wire them together, and cables can be picked and removed. */
+  cablesOpen: boolean;
+  setCablesOpen: (open: boolean) => void;
   /** The docked Space Between drawer (larger screens). */
   spacingOpen: boolean;
   setSpacingOpen: (open: boolean) => void;
@@ -104,6 +109,22 @@ const savedSnapping = (): boolean => {
     return localStorage.getItem("pp:snap") !== "off";
   } catch {
     return true;
+  }
+};
+
+/** Layers of the board that can be hidden from the default view. */
+export interface BoardLayers {
+  cables: boolean;
+  plugs: boolean;
+  boards: boolean;
+}
+const SHOW_KEY = "pp:show";
+const savedShow = (): BoardLayers => {
+  const all = { cables: true, plugs: true, boards: true };
+  try {
+    return { ...all, ...JSON.parse(localStorage.getItem(SHOW_KEY) ?? "{}") };
+  } catch {
+    return all;
   }
 };
 
@@ -179,6 +200,17 @@ export const useUi = create<UiState>((set) => ({
     applyDarkStyle(darkStyle);
     set({ darkStyle });
   },
+  show: savedShow(),
+  setShow: (layer, on) =>
+    set((u) => {
+      const show = { ...u.show, [layer]: on };
+      try {
+        localStorage.setItem(SHOW_KEY, JSON.stringify(show));
+      } catch {
+        /* storage unavailable */
+      }
+      return { show };
+    }),
   snapping: savedSnapping(),
   setSnapping: (snapping) => {
     try {
@@ -199,14 +231,15 @@ export const useUi = create<UiState>((set) => ({
     set({ avatar });
   },
   searchOpen: false,
-  plugEditing: null,
-  setPlugEditing: (plugEditing) => set(plugEditing ? { plugEditing, searchOpen: false, replacing: false, editing: false, spacingOpen: false } : { plugEditing }),
+  cablesOpen: false,
+  setCablesOpen: (cablesOpen) =>
+    set(cablesOpen ? { cablesOpen, searchOpen: false, replacing: false, editing: false, spacingOpen: false } : { cablesOpen }),
   spacingOpen: false,
   setSpacingOpen: (spacingOpen) => set(spacingOpen ? { spacingOpen, searchOpen: false, replacing: false, editing: false } : { spacingOpen }),
   // Add Gear waits while plugs are being edited (only Done ends that).
   setSearchOpen: (searchOpen) =>
     set((u) => {
-      if (searchOpen && u.plugEditing) return {};
+      if (searchOpen && u.cablesOpen) return {};
       if (searchOpen && !u.searchOpen) track("panel_open", { panel: "Add Gear" });
       return { searchOpen, replacing: false, editing: false };
     }),

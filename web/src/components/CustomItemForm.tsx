@@ -247,11 +247,19 @@ function BoardOptions({
 const RAINBOW = "conic-gradient(#ff4d4d, #ffd84d, #4dff88, #4dd8ff, #6b4dff, #ff4dd8, #ff4d4d)";
 
 /** Flat round swatches; a check marks the pick. The last is a color wheel for any color (showing it when picked). */
-function ColorSwatches({ color, onChange }: { color: string; onChange: (hex: string) => void }) {
-  const preset = PEDAL_COLOR_PRESETS.some((c) => c.hex === color);
+export function ColorSwatches({
+  color,
+  onChange,
+  presets = PEDAL_COLOR_PRESETS,
+}: {
+  color: string;
+  onChange: (hex: string) => void;
+  presets?: { name: string; hex: string }[];
+}) {
+  const preset = presets.some((c) => c.hex === color);
   return (
     <div className="flex flex-wrap items-center gap-1.5">
-      {PEDAL_COLOR_PRESETS.map((c) => (
+      {presets.map((c) => (
         <button
           type="button"
           key={c.hex}

@@ -249,6 +249,7 @@ export type ToolVia =
   | "settings"
   | "canvas"
   | "switcher"
+  | "mode_bar"
   | "dialog";
 
 /**
