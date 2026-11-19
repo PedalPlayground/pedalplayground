@@ -9,8 +9,11 @@ export function LabeledSelect<T extends string>({
   value,
   options,
   onChange,
+  small = false,
 }: {
   label: string;
+  /** 13px, for the floating bars on the canvas. */
+  small?: boolean;
   value: T;
   /** [value, text], or [value, text, group] to sort the menu under group headings (shown as "Group · text"). */
   options: readonly (readonly [T, string] | readonly [T, string, string])[];
@@ -20,7 +23,7 @@ export function LabeledSelect<T extends string>({
   const current = !hit ? value : hit[2] && hit[2] !== hit[1] ? `${hit[2]} · ${hit[1]}` : hit[1];
   const groups = [...new Set(options.map((o) => o[2]))];
   return (
-    <label className="relative flex shrink-0 cursor-pointer items-center gap-1.5 rounded-inner text-sm has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand">
+    <label className={`relative flex shrink-0 cursor-pointer items-center gap-1.5 rounded-inner ${small ? "text-[13px]" : "text-sm"} has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand`}>
       <span className="font-semibold text-ink">{label}:</span>
       <span className="flex items-center gap-0.5 text-ink-muted transition-colors hover:text-ink">
         {current}
