@@ -2688,6 +2688,34 @@
 		"Image": "animals-pedal-op-surfing-bear.png"
 	},
 	{
+		"Brand": "Antifōn Audio",
+		"Name": "Clopen Compressor",
+		"Width": 2.76,
+		"Height": 4.64,
+		"Image": "antifon-audio-clopen-compressor.png"
+	},
+	{
+		"Brand": "Antifōn Audio",
+		"Name": "Haptic Overdrive",
+		"Width": 2.76,
+		"Height": 4.64,
+		"Image": "antifon-audio-haptic-overdrive.png"
+	},
+	{
+		"Brand": "Antifōn Audio",
+		"Name": "Más y Más Distortion",
+		"Width": 2.76,
+		"Height": 4.64,
+		"Image": "antifon-audio-mas-y-mas-distortion.png"
+	},
+	{
+		"Brand": "Antifōn Audio",
+		"Name": "Ternion Discrete Drive",
+		"Width": 4.03,
+		"Height": 4.83,
+		"Image": "antifon-audio-ternion-discrete-drive.png"
+	},
+	{
 		"Brand": "API",
 		"Name": "TranZformer CMP",
 		"Width": 4.82,
@@ -24908,6 +24936,13 @@
 	},
 	{
 		"Brand": "Guyatone",
+		"Name": "OD-X Over Drive",
+		"Width": 3.5,
+		"Height": 5.33,
+		"Image": "guyatone-odx-over-drive.png"
+	},
+	{
+		"Brand": "Guyatone",
 		"Name": "PD-1 Power Drive",
 		"Width": 3.5,
 		"Height": 5.33,
@@ -46293,6 +46328,13 @@
 	},
 	{
 		"Brand": "Pettyjohn",
+		"Name": "Epic Drive",
+		"Width": 3.74,
+		"Height": 5.05,
+		"Image": "pettyjohn-epic-drive.png"
+	},
+	{
+		"Brand": "Pettyjohn",
 		"Name": "Fuze",
 		"Width": 2.7,
 		"Height": 4.72,
@@ -56931,6 +56973,13 @@
 		"Width": 4.5,
 		"Height": 2.57,
 		"Image": "tuesday-experiments-the-street-fuzz.png"
+	},
+	{
+		"Brand": "TWA",
+		"Name": "BB-01 Better Box",
+		"Width": 2.6,
+		"Height": 4.93,
+		"Image": "twa-bb-01-better-box.png"
 	},
 	{
 		"Brand": "TWA",
