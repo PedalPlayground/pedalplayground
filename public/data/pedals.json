@@ -24340,6 +24340,13 @@
 		"Image": "great-eastern-xo.png"
 	},
 	{
+		"Brand": "Great Eastern FX Co.",
+		"Name": "XO Variable Crossover v1.5",
+		"Width": 2.87,
+		"Height": 4.85,
+		"Image": "great-eastern-xo-v15.png"
+	},
+	{
 		"Brand": "Greenhouse Effects",
 		"Name": "Logos",
 		"Width": 2.5,
@@ -42652,6 +42659,13 @@
 		"Image": "normal-devices-delay-cascade.png"
 	},
 	{
+		"Brand": "Normal Devices",
+		"Name": "Whether",
+		"Width": 5.7,
+		"Height": 4.96,
+		"Image": "normal-devices-whether.png"
+	},
+	{
 		"Brand": "Oats and Molasses",
 		"Name": "VB-2",
 		"Width": 2.6,
@@ -58544,9 +58558,16 @@
 	},
 	{
 		"Brand": "VS Audio",
+		"Name": "Blackbird MKII",
+		"Width": 2.6,
+		"Height": 4.96,
+		"Image": "vsaudio-blackbird-mk2.png"
+	},
+	{
+		"Brand": "VS Audio",
 		"Name": "Jangle Master",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 4.96,
 		"Image": "vsaudio-jangle-master.png"
 	},
 	{
@@ -58560,7 +58581,7 @@
 		"Brand": "VS Audio",
 		"Name": "Platinum",
 		"Width": 2.6,
-		"Height": 4.93,
+		"Height": 4.96,
 		"Image": "vsaudio-platinum.png"
 	},
 	{
