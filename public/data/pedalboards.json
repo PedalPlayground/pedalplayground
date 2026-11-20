@@ -981,6 +981,27 @@
 	},
 	{
 		"Brand": "Oneset Audio",
+		"Name": "Pedalboard 4522LITE",
+		"Width": 19,
+		"Height": 8.89,
+		"Image": "oneset-audio-4522lite.png"
+	},
+	{
+		"Brand": "Oneset Audio",
+		"Name": "Pedalboard 4535PLUS",
+		"Width": 18.9,
+		"Height": 14.16,
+		"Image": "oneset-audio-4535plus.png"
+	},
+	{
+		"Brand": "Oneset Audio",
+		"Name": "Pedalboard 4535PLUS (Riser)",
+		"Width": 17.9,
+		"Height": 6.25,
+		"Image": "oneset-audio-4535plus-riser.png"
+	},
+	{
+		"Brand": "Oneset Audio",
 		"Name": "Pedalboard 4535STD",
 		"Width": 19,
 		"Height": 13.96,
@@ -988,10 +1009,31 @@
 	},
 	{
 		"Brand": "Oneset Audio",
+		"Name": "Pedalboard 4820PLUS",
+		"Width": 18.9,
+		"Height": 8.42,
+		"Image": "oneset-audio-4820plus.png"
+	},
+	{
+		"Brand": "Oneset Audio",
 		"Name": "Pedalboard 5030STD",
 		"Width": 21,
 		"Height": 12.17,
 		"Image": "oneset-audio-5030std.png"
+	},
+	{
+		"Brand": "Oneset Audio",
+		"Name": "Pedalboard 6535PLUS",
+		"Width": 26.8,
+		"Height": 14.16,
+		"Image": "oneset-audio-6535plus.png"
+	},
+	{
+		"Brand": "Oneset Audio",
+		"Name": "Pedalboard 6535PLUS (Riser)",
+		"Width": 20.6,
+		"Height": 6.22,
+		"Image": "oneset-audio-6535plus-riser.png"
 	},
 	{
 		"Brand": "Oneset Audio",
